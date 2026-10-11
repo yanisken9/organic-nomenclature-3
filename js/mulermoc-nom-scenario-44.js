@@ -62,7 +62,7 @@ function fScenarioPresent() {
   return p || fScenarioActive();
 }
 function fScenarioNew(title, silent) {
-  var scen = { id: fScenarioNewId(), title: title || ("scenario-" + (MuLERMoCScenario.seq)), steps: [], index: 0, menuPick: [] };
+  var scen = { id: fScenarioNewId(), title: title || ("scenario-" + (MuLERMoCScenario.seq)), steps: [], index: 0, menuPick: [], showStepNumbers: true, reserveTitleSpace: false };
   MuLERMoCScenario.scenarios.push(scen);
   MuLERMoCScenario.activeId = scen.id;
   fScenarioSyncLegacy();
@@ -541,7 +541,7 @@ function fScenarioValidate(obj) {
     steps.push(st);
   });
   if (!steps.length) return { ok: false, warnings: warnings.concat(["No valid steps left."]) };
-  return { ok: true, steps: steps, title: obj.title || obj.scenario || "scenario", warnings: warnings };
+  return { ok: true, steps: steps, title: obj.title || obj.scenario || "scenario", showStepNumbers: obj.showStepNumbers !== false, reserveTitleSpace: obj.reserveTitleSpace === true, warnings: warnings };
 }
 
 // ── apply ──────────────────────────────────────────────────────────────
@@ -1261,7 +1261,17 @@ function fScenarioHide(id, hide) {
 function fScenarioSyncPresentClass() {
   try {
     var pc = document.getElementById("pageContainer");
-    if (pc) pc.classList.toggle("presenting", !!MuLERMoCScenario.present);
+    if (pc) {
+      pc.classList.toggle("presenting", !!MuLERMoCScenario.present);
+      var reserve = MuLERMoCScenario.present && fScenarioPresent().reserveTitleSpace === true;
+      pc.classList.toggle("scReserveTitleSpace", !!reserve);
+      var bar = document.getElementById("scenarioPlayBar");
+      if (reserve && bar) {
+        pc.style.setProperty("--sc-playbar-height", bar.getBoundingClientRect().height + "px");
+      } else {
+        pc.style.removeProperty("--sc-playbar-height");
+      }
+    }
   } catch (e) {
     /* no DOM */
   }
@@ -1462,11 +1472,16 @@ function fScenarioFillStepPanel(step) {
   if (MuLERMoCScenario.present && step && step.n && showTextOn(step)) {
     if (step.title) {
       h1.textContent = "";
-      var numSpan = document.createElement("span");
-      numSpan.className = "scStepNumberTitle";
-      numSpan.textContent = step.n + ".";
-      h1.appendChild(numSpan);
-      h1.appendChild(document.createTextNode(" " + step.title));
+      // Scenario-level preference; existing scenarios keep numbered titles.
+      if (fScenarioPresent().showStepNumbers !== false) {
+        var numSpan = document.createElement("span");
+        numSpan.className = "scStepNumberTitle";
+        numSpan.textContent = step.n + ".";
+        h1.appendChild(numSpan);
+        h1.appendChild(document.createTextNode(" " + step.title));
+      } else {
+        h1.textContent = step.title;
+      }
     } else {
       h1.textContent = appTitle;
     }
@@ -1634,6 +1649,7 @@ function fScenarioChrome(show) {
   if (pb) pb.style.display = present ? "" : "none";
   // presentation CSS hook (self-heals on every step apply)
   fScenarioSyncPresentClass();
+  if (typeof fScheduleViewer3DResize === "function") fScheduleViewer3DResize();
 }
 
 // ── authoring mode (right-edge tab) ────────────────────────────────────
@@ -1711,6 +1727,8 @@ function fScenarioExport(id) {
     app: "mulermoc-nom-44",
     scenario: scen.title,
     title: scen.title,
+    showStepNumbers: scen.showStepNumbers !== false,
+    reserveTitleSpace: scen.reserveTitleSpace === true,
     steps: scen.steps,
   };
   var blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json;charset=utf-8" });
@@ -1733,6 +1751,8 @@ function fScenarioImportFile(file) {
       res.warnings.forEach(fScenarioToast);
       if (!res.ok) return;
       var scen = fScenarioNew(res.title || "imported-scenario", true);
+      scen.showStepNumbers = res.showStepNumbers;
+      scen.reserveTitleSpace = res.reserveTitleSpace;
       scen.steps = res.steps;
       scen.index = 0;
       fScenarioSyncLegacy();
@@ -2948,6 +2968,8 @@ function fScenarioBoot() {
           res.warnings.forEach(fScenarioToast);
           if (!res.ok) return;
           var scen = fScenarioNew(res.title || "imported-scenario", true);
+          scen.showStepNumbers = res.showStepNumbers;
+          scen.reserveTitleSpace = res.reserveTitleSpace;
           scen.steps = res.steps;
           scen.index = 0;
           fScenarioSyncLegacy();
@@ -2996,3 +3018,6 @@ if (document.readyState === "loading") {
 } else {
   fScenarioBoot();
 }
+
+// Re-measure the presentation bar when the viewport or browser zoom changes.
+window.addEventListener("resize", fScenarioSyncPresentClass);

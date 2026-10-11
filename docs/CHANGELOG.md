@@ -6,6 +6,22 @@ All notable changes to the Οργανική Ονοματολογία MuLERMoC.
 
 ## [Unreleased] (v44 working copy)
 
+### Namelecule interface refresh
+
+- Follow-up for cropped 3D scenario molecules: coalesced post-layout JSmol
+  resize after loads, step chrome, re-show and window resize. Pane height
+  follows half its width (minimum 240px); hidden panes skipped and camera
+  commands preserved. JavaScriptCore mock checks passed; browser verification pending.
+- App identity: Namelecule with a 3D methane logo, Greek subtitle and MuLERMoCs
+  platform credit; browser title and document language updated.
+- Separate `css/namelecule-44.css` theme: soft mint/teal/peach/blue palette,
+  white cards, rounded controls, readable typography and responsive columns.
+  Existing DOM IDs, scripts, handlers, chemistry colors and creator credits retained.
+- Replaced fixed 30px header layout; branded header hides during scenario
+  presentation and returns on exit. Scenario title remains player-owned.
+- Static HTML/assets/CSS and local serving verified. Interactive browser checks
+  for viewers, settings and scenario round-trips remain pending.
+
 ### Per-component name visibility (eye toggles)
 
 - Master eye-edit switch in `#nameSettingsPanel` (`#nameStyleEyeToggle`, live-only `window.nameEyeEdit`, never stored; single `eye-state-button` icon + `.active` highlight): reveals a small eye button above each name component (`js/mulermoc-nom-molview-44.js`, `js/mulermoc-nom-teaching-44.js`, `css/jsme-nick-44.css`). Eye artwork from the Industrial-Sharp set (`imgs/eye-*.svg`, inlined as consts with `currentColor` fills; uniform `-9 -244 800 800` viewBox).

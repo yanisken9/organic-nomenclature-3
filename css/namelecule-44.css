@@ -1,0 +1,177 @@
+/* Namelecule visual theme. Loaded last; chemistry/highlight colors stay intact. */
+:root {
+  --baseColor: #254c50;
+  --darkBlue: #254c50;
+  --lightBlue: #397b78;
+  --veryLightBlue: #e7eff7;
+  --darkEarth: #a46743;
+  --lightEarth: #f7dfcf;
+  --bgColor: #f5f8f5;
+  --nl-paper: #faf9f5;
+  --nl-mint: #e1efea;
+  --nl-line: #dce5df;
+  --nl-muted: #627777;
+}
+
+html { min-height: 100%; height: auto; }
+body {
+  height: auto;
+  min-height: 100vh;
+  background: var(--nl-paper);
+  color: var(--baseColor);
+  font-family: "Source Sans 3", "Roboto", system-ui, sans-serif;
+}
+.nameleculeHeader {
+  height: auto;
+  background: #fff;
+  border-bottom: 1px solid var(--nl-line);
+  padding: 14px max(24px, calc((100vw - 1480px) / 2));
+}
+.nameleculeBrand { width: 390px; max-width: 100%; }
+.nameleculeBrand img { display: block; width: 100%; height: auto; }
+.nameleculeBrand p {
+  margin: -4px 0 0;
+  padding-left: 23%;
+  color: var(--nl-muted);
+  font-size: 12px;
+}
+#pageContainer { height: auto; min-height: 65vh; }
+#panelContainer {
+  width: 100%;
+  max-width: 1480px;
+  padding: 24px 28px 36px;
+  margin: 0 auto;
+}
+#pageTitle {
+  font-family: "Source Sans 3", "Roboto", system-ui, sans-serif;
+  font-size: clamp(24px, 2.3vw, 34px);
+  font-weight: 650;
+  letter-spacing: -.6px;
+  text-align: left;
+  margin: 0 0 24px;
+}
+#panelContainer > .HFlex { gap: 20px; align-items: flex-start; }
+#menuCol, #analysisCol { margin: 0 !important; }
+#menuCol { width: 230px; }
+#viewerCol { border: 1px solid var(--nl-line); border-radius: 18px; }
+#viewerCol > .panelTitle { border-radius: 17px 17px 0 0; }
+#analysisCol { width: 350px; min-width: 300px; }
+#nameAnalysisContainer, #ruleTheoryContainer, #nomeclature2Menu {
+  background: #fff;
+  border: 1px solid var(--nl-line);
+  border-radius: 16px;
+  box-shadow: 0 6px 24px rgb(37 76 80 / 4%);
+}
+#ruleTheoryContainer:empty { display: none; }
+.panelTitle {
+  font-family: "Source Sans 3", "Roboto", system-ui, sans-serif;
+  background: var(--nl-mint);
+  color: var(--baseColor);
+  border-bottom: 1px solid var(--nl-line);
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+#nomeclature2Menu > .panelTitle, #nameAnalysisContainer .panelTitle,
+#ruleTheoryContainer .panelTitle { border-radius: 15px 15px 0 0; }
+.menuContainer, .menuListContainer { border-color: var(--nl-line); }
+.menuLi { border-radius: 8px; }
+.menuLi:hover { background: var(--nl-mint); }
+.menuLi.selectedLi { background: var(--nl-mint) !important; color: var(--baseColor); }
+.crossMenuLi { color: var(--baseColor); }
+.crossMenuLi.selectedLi { background: var(--baseColor) !important; color: #fff; }
+.settingsBtn, .narrateBtn, .nameStyleBox, .nameStyleCross,
+.nameStyleEye, .readNameBtn, .saveImgBtn { border-radius: 7px; }
+.panelTitle .settingsBtn { background: #fff; border-color: var(--nl-line); }
+.panelTitle .settingsBtn.active { background: var(--lightBlue); color: #fff; }
+button { border-radius: 8px; }
+button:focus-visible, [tabindex]:focus-visible, a:focus-visible,
+input:focus-visible, textarea:focus-visible, select:focus-visible {
+  outline: 3px solid var(--lightBlue);
+  outline-offset: 3px;
+}
+#viewerSettingsPanel, #nameSettingsPanel {
+  background: #f5f8f5;
+  border-color: var(--nl-line);
+  border-radius: 0 0 12px 12px;
+}
+#radio2DMode, #controls3D {
+  background: #f5f8f5;
+  border-top: 1px solid var(--nl-line);
+  padding: 12px 10px;
+}
+#controls3D { border-radius: 0 0 17px 17px; }
+#radio2DMode .radioGroupContainer, #controls3D,
+#controls3D > .HFlex, #radio2DMode .radioGroupContainer > .HFlex {
+  flex-wrap: wrap;
+  row-gap: 10px;
+}
+.nameContainer { padding: 12px 4px 16px; }
+.nameCompBox:not(.unboxed) { border-radius: 10px; }
+.nameCompBox.boxed:not(.selected):not(.comp-hidden) {
+  background: var(--nl-mint);
+  border-color: #b3d0c7;
+  color: var(--baseColor);
+}
+#ruleTheory .ruleTheoryTitle::before { border-color: var(--lightBlue); }
+.explainText {
+  background: var(--nl-mint);
+  color: var(--baseColor);
+  border-radius: 12px;
+  margin-top: 12px;
+  line-height: 1.5;
+  font-weight: 500;
+}
+.ruleText { line-height: 1.6; }
+.shadow1 { box-shadow: 0 4px 14px rgb(37 76 80 / 8%); }
+#scStepText { background: #fff; border-color: var(--nl-line); border-radius: 16px; }
+.scenarioDrawer { border-color: var(--nl-line); }
+.scenarioDrawer .scSteps { background: var(--nl-paper); }
+#scenarioPlayBar { background: var(--baseColor); flex-wrap: wrap; }
+#creditsUs {
+  background: #edf3ef;
+  color: var(--baseColor);
+  border-top: 1px solid var(--nl-line);
+  padding: 16px 24px;
+}
+#creditsUs a { color: var(--baseColor); }
+#menuToggle { background: var(--baseColor); border-radius: 10px; }
+#rotatePrompt { background: rgb(37 76 80 / 96%); }
+
+/* Keep the branding independent of scenario-owned titles and fixed playbar. */
+body:has(#pageContainer.presenting) .nameleculeHeader { display: none; }
+#pageContainer.presenting #panelContainer { padding-top: 64px; }
+#pageContainer.presenting.scReserveTitleSpace #panelContainer { padding-top: 12px; }
+#pageContainer.presenting #pageTitle { text-align: center; }
+
+@media (max-width: 1150px) {
+  #panelContainer { padding: 20px 16px; }
+  #panelContainer > .HFlex { gap: 12px; }
+  #menuCol { width: 180px; }
+  #analysisCol { width: 310px; min-width: 280px; }
+}
+@media (max-width: 999px) {
+  #panelContainer > .HFlex { flex-wrap: wrap; }
+  #menuCol { width: 180px; min-width: 120px; }
+  #viewerCol { flex: 1 1 340px; }
+  #analysisCol { width: 100%; min-width: 0; flex: 1 1 100%; }
+  .nameleculeBrand { width: 290px; }
+  .nameleculeHeader { padding: 8px 16px; }
+  #menuDrawer.menu-open { max-height: none; }
+}
+@media (max-width: 600px) {
+  #panelContainer { padding: 16px 12px 24px; }
+  #pageTitle { margin-bottom: 16px; }
+  #menuCol { width: 100%; }
+  #menuToggle { display: block; }
+  #viewerCol { flex-basis: 100%; }
+  .nameleculeBrand { width: 270px; }
+  .nameleculeBrand p { font-size: 10px; }
+}
+@media (max-height: 430px) and (orientation: landscape) {
+  .nameleculeBrand { width: 190px; }
+  .nameleculeBrand p { display: none; }
+  .nameleculeHeader { padding: 4px 12px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+}

@@ -1,4 +1,203 @@
-# Session notes — 2026-10-03 (resume point for next session)
+# Current resume point — 2026-10-11
+
+User approved Git identity yanisken9 / yanisken9@users.noreply.github.com;
+configured repo-local only. Preparing commit of the reviewed working copy
+and push of thesis-work to origin (user fork). Actual push outcome must be
+verified before claiming publication. Professor remote is upstream, untouched.
+
+SHARING IN PROGRESS: user chose an independent fork and supplied
+https://github.com/yanisken9/organic-nomenclature-3. Verified remote HEAD is
+9c5259e. Renamed professor remote origin to upstream, added user's fork as
+origin. Branch remains thesis-work; no professor remote writes performed.
+Preparing commit and push to user's fork only. Git user identity is unset;
+asked whether to use yanisken9 / yanisken9@users.noreply.github.com, awaiting
+answer before commit. Added docs/SHARING-WITH-PROFESSOR.md with review/run steps.
+No GitHub Pages activation or pull request yet.
+
+LATEST FIX (approved by user): added `fScheduleViewer3DResize` in
+`js/mulermoc-nom-molview-44.js`, called after molecule loads and 3D re-show,
+and from scenario chrome after layout changes; also on window resize.
+requestAnimationFrame coalescing, visible/nonzero-width guards, proportional
+height width/2 with 240px minimum; Jmol.resizeApplet only, no camera/zoom edits.
+`js/mulermoc-nom-scenario-44.js` gets one scheduling call; original pending
+scenario settings changes preserved. Diff whitespace check passed. Discovered
+system JavaScriptCore `jsc`: executable mock checks passed for coalescing,
+unchanged layout, hidden viewer, window resize, minimum height, zero width and
+no camera command. Test script `/tmp/namelecule-resize-check.js` is temporary.
+Actual JSmol/browser rendering remains unverified. Next: user hard-refreshes,
+imports the same external αλκάνια.json, checks cropped steps and exit. If
+cropping persists obtain affected step/screenshot and dimensions before zoom fixes.
+
+Read external scenario `/Users/yannisskendros/Desktop/αρχεία  json/αλκάνια.json`
+provided by user: 15 steps, all show 3D, all view3D.moveto=null. Thus custom
+per-step saved zoom is ruled out for this file; molecule data camera/default
+zoom still applies. Current Jmol pane has fixed 240px CSS height while new
+layout changes its width; fResizeViewers is defined but no active call found.
+Suspect viewport sizing/fit, not confirmed without browser screenshot/runtime.
+Proposed next fix plan: synchronize JSmol dimensions after scenario layout
+settles and on resize, preserve custom cameras, verify methane/pentane/
+2-methylpentane and Prev/Next/Exit. Await approval before code edits; ask
+which steps crop and whether screen/window itself cuts off the pane.
+
+USER BUG REPORT after refresh: running externally supplied `αλκάνια.json`,
+some presentation steps crop 3D molecules. File not in workspace (only ethene
+scenario found). Read-only inspection: stored view3D.moveto camera replay,
+viewer visibility resize handling, and width/layout changes could be relevant;
+cause not confirmed. Need affected step/file and screenshot to distinguish
+canvas/viewport mismatch from stored camera zoom. No fix implemented; respect
+plan approval before edits. Live integration interactive checks remain pending.
+
+LATEST: user approved live-app integration ("ναι, πάμε"). Implemented
+Namelecule in `mulermoc-nom-44.html` (lang/title/header/theme link), new
+`css/namelecule-44.css` and `assets/namelecule-methane-v1.png`. Theme follows
+accepted mockup, preserves existing IDs/handlers/scripts, chemistry highlights
+and creator credits, rounds cards/controls and adapts columns to narrow widths.
+Removed fixed header-height assumptions using CSS, hides brand header during
+presentation via :has and keeps scenario-owned #pageTitle. Existing pending
+scenario source changes were retained. README/CHANGELOG/plan updated.
+Verification: git diff --check, HTML parsing, exact existing-ID preservation,
+no duplicate IDs, local stylesheet/image existence, CSS balanced braces,
+successful local page fetch. No browser tools or Node runtime available;
+viewer/scenario interaction and visual checks remain pending (see interface plan).
+Next: user opens http://127.0.0.1:8001/mulermoc-nom-44.html and reviews actual
+app; verify molecule switching, 2D/3D, settings, highlights and scenario
+Present/Next/Exit plus import/export. No commit or deployment created.
+
+User authorized preparing the integration plan. Read live HTML/CSS selectors
+and title/credit dependencies; identified fixed 30px header and scenario title
+replacement as layout concerns. Wrote `docs/INTERFACE-REFRESH-PLAN.md`:
+live v44 header/logo plus separate theme CSS, preserved functional DOM/viewers
+and chemistry, responsive/presentation checks. Await approval of this concrete
+plan before application edits. No app source changes in this planning turn.
+
+DECISION: user reviewed the combined refreshed mockup and said "το κρατάμε".
+Accepted direction: Namelecule for the organic nomenclature app; clean matte
+3D methane logo without tag/halo, asset `design/assets/namelecule-methane-v1.png`;
+Greek subtitle and MuLERMoCs platform credit; soft mint/teal/peach/blue interface.
+Reference: `design/interface-proposal.html`. This accepts the design direction;
+implementation in the functional app still requires a concrete integration
+plan approved by the user. Next: investigate live CSS/DOM dependencies and
+present that plan when implementation is requested. No new code edits here.
+
+Latest completed work: user asked to see the methane logo in the refreshed
+page. Last interrupted generation did finish on disk; inspected
+`exec-ebc695b2-d1a1-4c40-82b2-e2d06af2b1d7.png`, clean matte logo without
+diffuse halo. Copied unchanged into `design/assets/namelecule-methane-v1.png`
+and integrated in `design/interface-proposal.html` header, with MuLERMoCs
+credit as HTML below. Responsive image width 510px max, scales on mobile.
+User authorization covers this mockup integration, not the live application.
+Checks: HTTP 200, HTML parsed and asset/alt verified. No browser layout QA.
+Next: user reviews entire mockup; approved plan required for live-app facelift.
+
+Latest feedback: user likes the tag-free methane logo and requested a slightly
+smaller molecule. Built-in imagegen edit requested ~80% molecule scale with
+wordmark/subtitle retained; returned a visibly smaller methane, shown inline.
+Latest preview-only file:
+`/Users/yannisskendros/.codex/generated_images/01a128bc-ff47-7b43-be2b-e514c0098f66/exec-4d4c884e-2e35-45f2-8895-1746993655c5.png`.
+No app/mockup integration. Await feedback; preserve all previous versions.
+
+Latest logo revision: user explicitly requested removing the peach tag behind
+methane. Edited the previous image with built-in imagegen; tag removed,
+molecule and Namelecule arrangement retained. Preview shown inline, not
+integrated. Latest file:
+`/Users/yannisskendros/.codex/generated_images/01a128bc-ff47-7b43-be2b-e514c0098f66/exec-a9637324-4bf2-436f-81d9-2c48a56c43fe.png`.
+Next: user feedback on this revision; no live-app changes authorized yet.
+
+User requested a more playful Namelecule logo using a 3D molecule, perhaps
+methane. Started a built-in imagegen preview-only concept: methane with one
+carbon and four tetrahedrally bonded hydrogens, soft teal/ivory clay styling,
+name-tag cue, Namelecule wordmark and Greek subtitle, transparent background.
+This is image exploration, not an approved live-app code change. Generation
+completed and displayed inline. Visual inspection: one carbon/four hydrogen
+spheres and readable Namelecule; Greek subtitle is small/low contrast in the
+render and should use HTML text if integrated. Preview-only output retained at
+`/Users/yannisskendros/.codex/generated_images/01a128bc-ff47-7b43-be2b-e514c0098f66/exec-96883298-4d05-4e90-a89c-ac9950600da0.png`.
+Await user feedback; no mockup or application integration done.
+
+Latest identity direction: user rejected all three app names, prefers an
+international clever name, proposed `Namelecule`, and authorized a visual trial.
+Updated only `design/interface-proposal.html`: Namelecule header wordmark,
+Name in dark teal and lecule in softer teal with a bond-chain underline and
+peach terminal node; retained Greek nomenclature subtitle and MuLERMoCs
+platform credit. Removed rejected three-option comparison from the preview.
+URL verified HTTP 200; no browser visual QA. Name is a trial, no availability
+research done and no live app changes. Next: user reviews identity; plan and
+approval required before any integration into the application.
+
+Clarification supersedes the initial logo feedback below: user meant the
+application name, not just the symbol. User wants MuLERMoCs retained for the
+broader platform and a separate organic-nomenclature app identity. Approved
+three name/logo mockups: Μόριο & Όνομα (molecule/tag), ΟργανοΌνομα
+(bonds transitioning to letters), ΟνοματοΧημεία (structure/name fragments).
+Updated `design/interface-proposal.html`; header uses the first provisionally
+and identifies it as an app of MuLERMoCs. No name selected as final, no live
+app changes. Preview HTTP 200; no browser visual check. Next: user selects
+or refines the identity, then approve a plan for live-app integration.
+
+Logo feedback: user likes the overall interface proposal but rejects the
+molecular M logo because it does not communicate nomenclature. User authorized
+three alternatives. Added a comparison section to `design/interface-proposal.html`:
+A molecule/name tag, B molecule/name speech bubble, C structure/name-fragment
+mapping (recommended). SVG/code-native artwork; no bitmap generation needed.
+Original header logo remains only as the initial mockup context, not accepted
+branding. Live app untouched. Await user's logo choice before integration.
+Local preview verified HTTP 200; no browser visual QA performed.
+
+User approved creating a separate visual proposal for an interface facelift,
+starting with an original logo and softer colors. Created
+`design/interface-proposal.html`: standalone Greek static mockup, molecular
+M logo in SVG, mint/teal/peach/blue palette, molecule library, illustrative
+ethanol 2D/3D and naming panel; responsive CSS. Controls are illustrative,
+not wired to the chemistry engine. Existing application files untouched.
+Read current HTML/CSS and Sites skill (local-only workflow). No browser visual
+QA available/performed; local preview URL verified HTTP 200. Next: user reviews the proposal; obtain approval of
+an integration plan before changing the live application. Original branding
+and credit ownership must be respected when integrating. No commit created.
+
+User shared https://orgchem101.uottawa.ca/nom/en/ as a comparable educational
+tool. Reviewed its public nomenclature page and the site's about/help pages,
+alongside README and project/layer plans. Observed quiz levels, configurable
+compound categories and three question types (functional groups, naming,
+drawing). Useful reference for future PRACTICE/PLAY; not an approved scope
+change. No interactive quiz was completed or code changed. About page cites
+Flynn et al., J. Chem. Educ. 2014, DOI 10.1021/ed500353a (paper not read).
+
+User requested reliable continuity between sessions. Root `AGENTS.md` now
+requires reading these notes on entry and updating the resume point after
+material work/decisions and before ending a work session.
+
+User explicitly approved the professor-inspired workflow: inspect relevant
+code and Markdown docs on session entry; maintain
+`docs/YANNIS-CONTRIBUTIONS.md`; present a plan and obtain user approval before
+every code intervention. These rules are now in `AGENTS.md`. This approval
+authorizes the documentation setup, not any pending source-code changes.
+
+Local run requested: started `python3 -m http.server 8001 --bind 127.0.0.1`
+from the project root (sandbox port binding required approved escalation).
+Open `http://127.0.0.1:8001/mulermoc-nom-44.html`. To restart from the VS Code
+terminal, run that same command; Ctrl+C stops it. Server lifetime is not
+guaranteed across sessions; verify before claiming it is running.
+
+Current baseline: v44, HEAD `9c5259e`. Existing uncommitted source changes:
+`css/mulermoc-nom-scenario-44.css` and `js/mulermoc-nom-scenario-44.js`.
+They add scenario-level `showStepNumbers` (default true) and
+`reserveTitleSpace` (default false), preserve both through validation,
+import/export and URL scenario loading, and reserve presentation heading
+space using the measured navigation-bar height, with resize updates.
+
+Verification this session: inspected git status, recent history and complete
+source diff. No runtime or browser checks performed. The original intent and
+acceptance criteria for these existing changes are unavailable in this chat;
+do not treat inferred requirements as user-confirmed.
+
+Next step: resume review of these pending presentation changes; verify title
+visibility and numbering, resize behavior, import/export defaults and exit
+restoration in the browser. Confirm missing acceptance criteria with the user
+only where necessary. No source changes or commits made this session.
+
+---
+
+# Session notes — 2026-10-03 (historical resume point)
 
 Working baseline: **v43**, `index.html` → `mulermoc-nom-43.html`. Tree clean at `cb2460c`.
 No JS runtime in the assistant environment — all changes were verified statically

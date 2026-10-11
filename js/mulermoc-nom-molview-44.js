@@ -379,6 +379,7 @@ function fToggleViewer3D() {
       } catch (eSize) {
         /* measure best-effort */
       }
+      fScheduleViewer3DResize();
       // One-shot reload after a no-3D presentation exit (flag set by
       // fScenarioExitPresent; the exit zapped the applet). Ordinary toggles
       // keep no model change and stay refresh-only/instant.
@@ -2561,6 +2562,7 @@ function fLoadMol3D() {
   if (!selectedExample) {
     return;
   }
+  fScheduleViewer3DResize();
 
   let myMol3D = selectedExample.file3D;
   let movetoCmd =
@@ -5763,6 +5765,37 @@ function fSetMolVis3D(theVisModel) {
 }
 
 // ── fResizeViewers ────────────────────────────────────────────────────────
+// Layout can widen the pane when a scenario hides the menu or naming panel.
+// Match the actual canvas to a proportional pane after those changes have
+// settled. Never resize a hidden applet or change its stored camera/zoom.
+var viewer3DResizeFrame = null;
+function fScheduleViewer3DResize() {
+  if (viewer3DResizeFrame !== null) cancelAnimationFrame(viewer3DResizeFrame);
+  viewer3DResizeFrame = requestAnimationFrame(function () {
+    viewer3DResizeFrame = null;
+    var pane = document.getElementById("nomeclature3D");
+    if (!pane || !pane.getClientRects().length || pane.clientWidth <= 0) return;
+    if (typeof Jmol === "undefined" || !Jmol.resizeApplet ||
+        typeof jmolAppletNomeclature === "undefined") return;
+    var width = pane.clientWidth;
+    var height = Math.max(240, Math.round(width / 2));
+    // Small landscape screens remain scrollable rather than squeezing
+    // the molecule into the old 120px viewport-height cap.
+    if (pane.clientHeight === height &&
+        pane.dataset.viewport3DWidth === String(width) &&
+        pane.dataset.viewport3DHeight === String(height)) return;
+    try {
+      pane.style.height = height + "px";
+      Jmol.resizeApplet(jmolAppletNomeclature, { width: width, height: height });
+      pane.dataset.viewport3DWidth = String(width);
+      pane.dataset.viewport3DHeight = String(height);
+    } catch (eSize) {
+      /* Applet may still be initializing; next load/layout event retries. */
+    }
+  });
+}
+window.addEventListener("resize", fScheduleViewer3DResize);
+
 function fResizeViewers() {
   const container = document.getElementById("nomeclature3D");
   if (!container) return;

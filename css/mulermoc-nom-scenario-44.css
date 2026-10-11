@@ -1160,3 +1160,12 @@
 #scStepText big {
    font-size: 1.2em;
 }
+/* Opt-in scenario layout: leave room for the fixed navigation bar. */
+#pageContainer.presenting.scReserveTitleSpace {
+   padding-top: calc(var(--sc-playbar-height, 50px) + 12px);
+}
+
+/* Keep the authored heading visible even in the compact landscape layout. */
+#pageContainer.presenting.scReserveTitleSpace #pageTitle {
+   display: block;
+}

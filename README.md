@@ -7,6 +7,11 @@ Desinged and developed by Nickolas Charistos
 **Current baseline:** v44 (released 2026-10-07; ongoing work is the *v44 working copy* — see [CHANGELOG](docs/CHANGELOG.md) `[Unreleased]`)
 **Entry point:** [index.html](index.html) → [mulermoc-nom-44.html](mulermoc-nom-44.html)
 
+**App identity:** **Namelecule — Ονοματολογία οργανικών ενώσεων**, an app of
+the MuLERMoCs platform. The v44 working copy uses the approved methane logo
+and a separate visual theme in `css/namelecule-44.css`; chemistry and scenario
+data contracts are unchanged. See [interface plan](docs/INTERFACE-REFRESH-PLAN.md).
+
 | Layer | File |
 |---|---|
 | Core engine (analysis + naming) | [js/mulermoc-nom-core-44.js](js/mulermoc-nom-core-44.js) |
