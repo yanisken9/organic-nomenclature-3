@@ -193,7 +193,7 @@ function jsmeOnLoad() {
     "#ff9999",
     "#33ccff",
     "#ff99ff",
-    "#79dc6d",
+    "#D8EEDC",
     "#ff8566",
     "#66ff66",
     "#93bfff",
@@ -215,7 +215,7 @@ function jsmeOnLoad() {
   jsmeNomeclatureAppletORGNL.setAtomMolecularAreaFontSize(9);
   jsmeNomeclatureAppletORGNL.setMolecularAreaLineWidth(0.6);
 
-  // let bgAtom = ["#7ddfff", "#ffc37d", "#00ffff", "#ffcc66", "#ffff00", "#ff9999", "#33ccff", "#ff99ff", "#79dc6d", "#ff8566", "#66ff66", "#93bfff"];
+  // let bgAtom = ["#7ddfff", "#ffc37d", "#00ffff", "#ffcc66", "#ffff00", "#ff9999", "#33ccff", "#ff99ff", "#D8EEDC", "#ff8566", "#66ff66", "#93bfff"];
   jsmeNomeclatureAppletORGNL.setBackGroundColorPalette(bgAtom);
 
   fInitData();
@@ -1747,10 +1747,10 @@ function fIsHighlightFillColor(fillValue) {
     return false;
   }
   const normalized = fillValue.replace(/\s+/g, "").toLowerCase();
-  if (normalized.indexOf("79dc6d") !== -1) {
+  if (normalized.indexOf("d8eedc") !== -1 || normalized.indexOf("79dc6d") !== -1) {
     return true;
   }
-  if (normalized.indexOf("121,220,109") !== -1) {
+  if (normalized.indexOf("216,238,220") !== -1 || normalized.indexOf("121,220,109") !== -1) {
     return true;
   }
   return false;
@@ -3753,7 +3753,7 @@ function fExplainNameComp() {
           ) {
             Jmol.script(
               jmolAppletNomeclature,
-              "select atomno=" + bondList3D[_eb][0] + ", atomno=" + bondList3D[_eb][1] + "; color bond [X79dc6d];",
+              "select atomno=" + bondList3D[_eb][0] + ", atomno=" + bondList3D[_eb][1] + "; color bond [XD8EEDC];",
             );
           }
         }
@@ -4393,7 +4393,7 @@ function fHighlightAtomChain3D(chainAtoms3D, skipH) {
   Jmol.script(
     jmolAppletNomeclature,
     "select all; selectionHalos off; color atoms none; color bonds none;" + arg +
-      ";color selectionHalos[X79dc6d]; selectionHalos on; color atoms [X79dc6d]; color bonds [X909090];",
+      ";color selectionHalos[XD8EEDC]; selectionHalos on; color atoms [XD8EEDC]; color bonds [X909090];",
   );
   JmolSelection = arg;
 }
@@ -4417,7 +4417,7 @@ function fColorFragmentBonds3D(fragAtoms, includeH) {
     const hBond = wantH && ((in1 && allAtomsTypeList3D[bondList3D[b][1] - 1] === "H") ||
       (in2 && allAtomsTypeList3D[bondList3D[b][0] - 1] === "H"));
     if ((in1 && in2) || hBond) {
-      script += "select atomno=" + bondList3D[b][0] + ", atomno=" + bondList3D[b][1] + "; color bond [X79dc6d];";
+      script += "select atomno=" + bondList3D[b][0] + ", atomno=" + bondList3D[b][1] + "; color bond [XD8EEDC];";
     }
   }
   if (script) {
@@ -4898,7 +4898,7 @@ function fHighlightFG3D(FGno) {
       jmolAppletNomeclature,
       "select all; selectionHalos off; color atoms none; color bonds none;" +
         highAtoms3DArg +
-        ";color selectionHalos[X79dc6d]; selectionHalos on; color atoms [X79dc6d];",
+        ";color selectionHalos[XD8EEDC]; selectionHalos on; color atoms [XD8EEDC];",
     );
     JmolSelection = highAtoms3DArg;
   } else {
@@ -4963,7 +4963,7 @@ function fHighlightFG3D(FGno) {
         jmolAppletNomeclature,
         "select all; selectionHalos off; color atoms none; color bonds none;" +
           highAtoms3DArg +
-          ";color selectionHalos[X79dc6d]; selectionHalos on; color atoms [X79dc6d];",
+          ";color selectionHalos[XD8EEDC]; selectionHalos on; color atoms [XD8EEDC];",
       );
       JmolSelection = highAtoms3DArg;
       return;
@@ -5203,7 +5203,7 @@ function fHighlightFG3D(FGno) {
       jmolAppletNomeclature,
       "select all; selectionHalos off; color atoms none; color bonds none;" +
         highAtoms3DArg +
-        ";color selectionHalos[X79dc6d]; selectionHalos on; color atoms [X79dc6d];",
+        ";color selectionHalos[XD8EEDC]; selectionHalos on; color atoms [XD8EEDC];",
     );
     JmolSelection = highAtoms3DArg;
     // IUPAC alkoxy prefix: the halo script colors atoms only — color the
@@ -5262,7 +5262,7 @@ function fShowNumbering(time, overrideAtoms, overrideAtoms3D) {
           : parseInt(currAtomTextElement.attr("x")) + numberOffset[0];
         y = parseInt(currAtomTextElement.attr("y")) + +numberOffset[1];
         r = 220;
-        numberString = `  <text id='number${i}' x='${x}' y='${y}' font-size='380px' font-weight='bold' font-family='Arial, sans-serif' fill='#193F8F' stroke='white' stroke-width='60px' paint-order='stroke'>${i + 1}</text> `;
+        numberString = `  <text id='number${i}' x='${x}' y='${y}' font-size='270px' font-weight='600' font-family='Arial, sans-serif' fill='#254C50' stroke='white' stroke-width='30px' paint-order='stroke'>${i + 1}</text> `;
         numbersSVGElements[i] = numberString;
       }
       break;
@@ -5289,7 +5289,7 @@ function fShowNumbering(time, overrideAtoms, overrideAtoms3D) {
         x = parseInt(currAtomTextElement.attr("x")) + numberOffset[0];
         y = parseInt(currAtomTextElement.attr("y")) + +numberOffset[1];
         r = 220;
-        numberString = `  <text id='number${i}' x='${x}' y='${y}' font-size='380px' font-weight='bold' font-family='Arial, sans-serif' fill='#193F8F' stroke='white' stroke-width='60px' paint-order='stroke'>${i + 1}</text> `;
+        numberString = `  <text id='number${i}' x='${x}' y='${y}' font-size='270px' font-weight='600' font-family='Arial, sans-serif' fill='#254C50' stroke='white' stroke-width='30px' paint-order='stroke'>${i + 1}</text> `;
         numbersSVGElements[i] = numberString;
       }
       break;
@@ -5316,7 +5316,7 @@ function fShowNumbering(time, overrideAtoms, overrideAtoms3D) {
         x = parseInt(currAtomTextElement.attr("x")) + numberOffset[0];
         y = parseInt(currAtomTextElement.attr("y")) + +numberOffset[1];
         r = 220;
-        numberString = `  <text id='number${i}' x='${x}' y='${y}' font-size='380px' font-weight='bold' font-family='Arial, sans-serif' fill='#193F8F' stroke='white' stroke-width='60px' paint-order='stroke'>${i + 1}</text> `;
+        numberString = `  <text id='number${i}' x='${x}' y='${y}' font-size='270px' font-weight='600' font-family='Arial, sans-serif' fill='#254C50' stroke='white' stroke-width='30px' paint-order='stroke'>${i + 1}</text> `;
         numbersSVGElements[i] = numberString;
       }
       break;
@@ -5363,7 +5363,7 @@ function fShowNumbering(time, overrideAtoms, overrideAtoms3D) {
         }
 
         r = 220;
-        numberString = `  <text id='number${i}' x='${x}' y='${y}' font-size='380px' font-weight='bold' font-family='Arial, sans-serif' fill='#193F8F' stroke='white' stroke-width='60px' paint-order='stroke'>${i + 1}</text> `;
+        numberString = `  <text id='number${i}' x='${x}' y='${y}' font-size='270px' font-weight='600' font-family='Arial, sans-serif' fill='#254C50' stroke='white' stroke-width='30px' paint-order='stroke'>${i + 1}</text> `;
         numbersSVGElements[i] = numberString;
       }
       break;
@@ -5444,14 +5444,14 @@ function fShowNumber3D(n, chain) {
   let num = n + 1;
   let d = 0.01; // stroke thickness in Å (tune this)
 
-  // Shadow echoes in 4 directions (black stroke)
+  // A subtle white edge keeps teal numbering legible over the model.
   let s = "";
   s +=
     " set echo " +
     id +
     " " +
     atom +
-    "; set echo offset {-1.1 1.1 3}; font echo 42 sansSerif bold; color echo[x193f8f]; echo " +
+    "; set echo offset {-1.1 1.1 3}; font echo 30 sansSerif bold; color echo[x254c50]; echo " +
     num +
     ";";
 
@@ -5464,7 +5464,7 @@ function fShowNumber3D(n, chain) {
     (-1.1 + d) +
     " " +
     (1.1 - d) +
-    " 3}; font echo 42 sansSerif bold; color echo black; echo " +
+    " 3}; font echo 30 sansSerif bold; color echo white; echo " +
     num +
     ";";
 
@@ -5596,14 +5596,14 @@ function fHighlightMultiBonds3D(bondCompPos) {
         highBonds3D[i][0] +
         ", atomno=" +
         highBonds3D[i][1] +
-        "; color bond [X79dc6d];",
+        "; color bond [XD8EEDC];",
     );
   }
 
   Jmol.script(
     jmolAppletNomeclature,
     highAtoms3DArg +
-      "; color selectionHalos[X79dc6d]; selectionHalos on; color atoms [X79dc6d];",
+      "; color selectionHalos[XD8EEDC]; selectionHalos on; color atoms [XD8EEDC];",
   );
   if (!fShowBondAtoms()) {
     // Bonds-only mode: undo the atom halo — keep just the green bonds above.
@@ -5717,13 +5717,13 @@ function fHighlightSingleBondsCC3D() {
         highBonds3D[i][0] +
         ", atomno=" +
         highBonds3D[i][1] +
-        "; color bond [X79dc6d];",
+        "; color bond [XD8EEDC];",
     );
   }
   Jmol.script(
     jmolAppletNomeclature,
     highAtoms3DArg +
-      "; color selectionHalos[X79dc6d]; selectionHalos on; color atoms [X79dc6d];",
+      "; color selectionHalos[XD8EEDC]; selectionHalos on; color atoms [XD8EEDC];",
   );
   if (!fShowBondAtoms()) {
     // Bonds-only mode: undo the atom halo — keep just the green bonds above.

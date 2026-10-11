@@ -8,6 +8,14 @@ All notable changes to the Οργανική Ονοματολογία MuLERMoC.
 
 ### Namelecule interface refresh
 
+- Atom numbering styling: dark teal `#254C50` paired with mint `#D8EEDC`
+  highlights (green trial blended into
+  highlights), smaller SVG numbers (380 → 270 units, weight 600,
+  white stroke 60 → 30) and JSmol echo numbers (42 → 30 bold,
+  white instead of black edge).
+  Numbering order/atom selection untouched; browser appearance pending review.
+  JSME palette and JSmol highlight colors match; SVG highlight detection
+  recognizes both the new mint and legacy green fills.
 - Follow-up for cropped 3D scenario molecules: coalesced post-layout JSmol
   resize after loads, step chrome, re-show and window resize. Pane height
   follows half its width (minimum 240px); hidden panes skipped and camera

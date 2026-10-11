@@ -1,5 +1,63 @@
 # Current resume point — 2026-10-11
 
+User requested uploading latest changes. Preparing commit/push to origin
+thesis-work only: mint #D8EEDC 2D/3D highlights, smaller teal #254C50 numbers,
+legacy-compatible SVG highlight detection and accumulated outcome notes.
+Reviewed complete source diff and git diff --check passed. No chemistry
+selection/order changes. Verify remote SHA after push; professor upstream
+must remain untouched. Visual appearance still requires user review.
+
+LATEST trial approved: mint #D8EEDC highlights + teal #254C50 numbers.
+Updated JSME palette slot 9 and all matching JSmol atom/bond/halo highlight
+commands in molview-44; SVG highlight-fill detection now recognizes new
+hex/RGB and legacy green so recoloring/highlight logic stays functional.
+Four SVG number fills and JSmol echo color changed to teal; sizes unchanged.
+Diff check passed; browser review pending. Local only, no commit/push.
+
+LATEST: user approved trial of dark golden ochre #9A6500 instead of plum
+for atom numbering. Changed four SVG fills and one JSmol echo color in
+molview-44, keeping sizes/weights/white edge unchanged. Diff check passed;
+user browser comparison pending. Local only, not committed/pushed.
+
+LATEST numbering revision: user screenshot showed green digits disappearing
+into green highlights; approved dark plum #6B365D and slightly fuller lettering.
+Changed four SVG templates to weight 600 (same 270px) and JSmol echo to bold
+(same 30); matching white edge weight. Appearance awaits browser review.
+Local only, not committed/pushed. Previous green notes below are superseded.
+
+LATEST: user approved smaller elegant green atom numbers in screenshot.
+Updated `js/mulermoc-nom-molview-44.js`: all four SVG representation numbering
+templates use 270px (from 380), weight 500, #28734F, white stroke 30px (from
+60). JSmol numbering echoes use 30 sansSerif plain (from 42 bold), same green,
+white edge instead of black. Numbering positions/order/selection logic intact.
+Diff check passed; need user hard-refresh and review 2D/3D plus other modes.
+Changes saved locally, not committed or pushed yet. Previous Namelecule work
+is already on fork thesis-work at 3de6e9e. Outcome notes also remain local.
+
+New requested visual change: screenshot shows large blue atom numbering in
+2D/3D; user wants smaller, elegant, green numbers. Read numbering code in
+molview-44 (SVG hardcoded 380px bold blue with white stroke; JSmol numbering
+has separate script styling). Prepare consistent 2D/3D style adjustment plan
+and obtain approval before edits. Preserve numbering order/highlight logic.
+
+UPLOAD CONFIRMED: remote refs/heads/thesis-work on the user's fork now equals
+local HEAD `3de6e9e385251eb4ad38e924e1530e758efd81d9`, verified with ls-remote
+after the user handled authentication/push. Professor repository untouched.
+Review URL: https://github.com/yanisken9/organic-nomenclature-3/tree/thesis-work.
+Only subsequent outcome notes in SESSION-NOTES and YANNIS-CONTRIBUTIONS remain
+local/uncommitted; app code and previously committed docs are uploaded.
+No GitHub Pages deployment configured. Next optional step: separate Pages
+preview on user's fork if requested, without touching professor's hosting.
+
+COMMIT CREATED: `3de6e9e` on thesis-work includes all reviewed working-copy
+changes and documentation. PUSH BLOCKED: `git push -u origin thesis-work`
+failed with "could not read Username for https://github.com: Device not
+configured". No upload succeeded. Need user to authenticate GitHub from
+VS Code/terminal; do not ask for passwords/tokens in chat. Fork origin verified,
+professor upstream untouched. These outcome notes are uncommitted after the
+implementation commit. Next: authenticate, commit updated outcome notes as
+appropriate, then retry push to user's fork and verify remote branch SHA.
+
 User approved Git identity yanisken9 / yanisken9@users.noreply.github.com;
 configured repo-local only. Preparing commit of the reviewed working copy
 and push of thesis-work to origin (user fork). Actual push outcome must be
