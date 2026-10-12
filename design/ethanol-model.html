@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="el"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Τρισδιάστατη αιθανόλη</title>
+<style>html,body{margin:0;width:100%;height:100%;overflow:hidden;background:white}#loading{font:12px system-ui;color:#627777;position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:10px}#loading[hidden]{display:none}#model{position:relative;width:100%;height:100%}</style>
+<script src="https://chemapps.stolaf.edu/jmol/jsmol/JSmol.min.js"></script></head>
+<body><div id="loading" role="status">Φόρτωση μοντέλου 3D…</div><div id="model"></div>
+<script>
+if(typeof Jmol !== 'undefined'){
+  const info={width:'100%',height:'100%',use:'HTML5',color:'#FFFFFF',j2sPath:'https://chemapps.stolaf.edu/jmol/jsmol/j2s',disableJ2SLoadMonitor:true,disableInitialConsole:true,
+    script:'load "../mols/nomeclature-moc2/ethanol_3D.sdf"; select all; center selected; spacefill 24%; wireframe 0.13; color cpk; background white; set antialiasDisplay true; frank off; moveto 0.0 { -56 994 -89 178.0} 75.0 0.0 0.0 {0.3654555555555556 -0.011722222222222214 0.08863333333333333} 3.2703980274730853 {0 0 0} 0 0 0 3.0 0.0 0.0; spin off;',
+    readyFunction:function(){document.getElementById('loading').hidden=true;}};
+  Jmol.setDocument(0);
+  document.getElementById('model').innerHTML=Jmol.getAppletHtml('ethanolWelcome',info);
+}else{document.getElementById('loading').textContent='Το μοντέλο 3D χρειάζεται σύνδεση στο διαδίκτυο.';}
+</script></body></html>

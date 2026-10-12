@@ -1,4 +1,74 @@
-# Current resume point — 2026-10-11
+# Current resume point — 2026-10-12
+
+User authorized committing and uploading the welcome-page work. Preparing
+snapshot of design/welcome-proposal.html, design/ethanol-model.html,
+docs/NAMELECULE-PRODUCT-STRUCTURE.md and session/contribution notes.
+Destination origin (yanisken9 fork), thesis-work only; verify remote SHA after
+push. Welcome remains a separate mockup, not root index. Latest agreed heading
+«Κάθε μόριο έχει ένα όνομα» / «Ανακάλυψέ το !»; descriptions without final
+periods, expanded ethanol and actual isolated JSmol model in bottom horizontal
+strip without visible molecule name. No live hosting changes intended.
+
+User requested a space before hero exclamation mark: now «Ανακάλυψέ το !».
+Used nonbreaking space in design/welcome-proposal.html to keep punctuation
+with the phrase. Local copy-only change.
+
+Hero wording now «Ανακάλυψέ το!» with exclamation mark, explicitly requested
+by user. Updated design/welcome-proposal.html only; local, not committed.
+
+Removed final periods from hero description and choose-start prompt per user
+screenshot. Only welcome mockup text changed; diff check passed, local only.
+
+Welcome copy refinement requested and applied: removed final periods from
+both hero heading lines; subtitle max-width increased 650→850px and joined
+γνώσεις/σου with nonbreaking space to avoid orphan σου. Mobile can still wrap
+naturally. Only design/welcome-proposal.html changed; diff check passed.
+
+LATEST welcome adjustment approved: removed visible ethanol name from example;
+representation strip now full-width below explanatory copy, three equal
+columns aligned horizontally. Captions exactly Συνεπτυγμένος συντακτικός /
+Ανεπτυγμένος συντακτικός / Τρισδιάστατο μοντέλο. Other content unchanged.
+File design/welcome-proposal.html; diff check passed. Narrow-screen columns
+also remain horizontal with smaller sizing. Await user visual check; local only.
+
+WELCOME correction approved: replaced skeletal ethanol SVG with full expanded
+structure (C2H6O, all atoms/bonds) in design/welcome-proposal.html. Replaced
+rough 3D SVG with isolated JSmol iframe design/ethanol-model.html loading
+actual mols/nomeclature-moc2/ethanol_3D.sdf and the existing ethanol camera
+orientation at reduced zoom. Standard atom colors, rotatable, loading message
+and network-library fallback. Representation strip wraps on narrow screens.
+HTML/JSC syntax checks passed; preview HTTP 200; no browser/JSmol runtime QA.
+Needs user visual review. Mockup only, no live app edits, commit or push.
+
+WELCOME MOCKUP: user approved separate preview with three routes. Created
+`design/welcome-proposal.html`, existing methane brand, warm pastel cards,
+theory/exercises-games/teacher workspace, same molecule in three representations.
+Buttons open accessible native dialogs explaining proposed destinations and
+current availability; real links to ethene scenario and molecule explorer.
+Teacher login/download required; student login undecided; scoring discussed.
+Root index and live app untouched. Checks: HTML/local links, JSC script syntax,
+diff whitespace. Browser visual QA not performed. Next: user review mockup;
+integration requires approval. No commit/push or hosting changes.
+
+PRODUCT DESIGN: user paused welcome-page mockup until offerings are organized.
+Confirmed ready-made theory scenarios + exercises/learning games for students
+and teachers, teacher creation of both, games based on multi-representational
+interaction. Teacher login/personal space explicitly required; student login
+still undecided. Recorded in docs/NAMELECULE-PRODUCT-STRUCTURE.md. No code
+changes authorized or made for welcome page/auth/games. Next: define user
+journeys and personal-space requirements, then approve a concrete page plan.
+
+Local preview restarted at user's request: Python server on 127.0.0.1:8001,
+application HTML fetched successfully. No direct VS Code browser-panel tool
+available; user can use Command Palette → Simple Browser: Show with
+http://127.0.0.1:8001/mulermoc-nom-44.html. No app source changes.
+
+User requested Namelecule availability research. Exact-match web searches,
+including indexed GitHub/App Store/Google Play/EUIPO pages, found no relevant
+existing usage. Broader search returned unrelated near-spellings. This is
+only an initial discoverability check, NOT trademark clearance or proof of
+domain availability. Verisign RDAP URL for namelecule.com was inaccessible
+via web tool, so registration status not confirmed. No purchase/actions.
 
 User requested uploading latest changes. Preparing commit/push to origin
 thesis-work only: mint #D8EEDC 2D/3D highlights, smaller teal #254C50 numbers,
