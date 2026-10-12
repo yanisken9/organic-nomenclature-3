@@ -22,12 +22,30 @@ body {
   font-family: "Source Sans 3", "Roboto", system-ui, sans-serif;
 }
 .nameleculeHeader {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px 24px;
   height: auto;
   background: #fff;
   border-bottom: 1px solid var(--nl-line);
   padding: 14px max(24px, calc((100vw - 1480px) / 2));
 }
 .nameleculeBrand { width: 390px; max-width: 100%; }
+.nameleculeHomeLink {
+  display: inline-block;
+  padding: 10px 16px;
+  border: 1px solid var(--nl-line);
+  border-radius: 12px;
+  color: var(--baseColor);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+}
+.nameleculeHomeLink:hover { background: var(--nl-mint); }
 .nameleculeBrand img { display: block; width: 100%; height: auto; }
 .nameleculeBrand p {
   margin: -4px 0 0;
@@ -95,6 +113,8 @@ input:focus-visible, textarea:focus-visible, select:focus-visible {
   border-radius: 0 0 12px 12px;
 }
 #radio2DMode, #controls3D {
+  height: auto;
+  min-height: 36px;
   background: #f5f8f5;
   border-top: 1px solid var(--nl-line);
   padding: 12px 10px;
@@ -107,6 +127,12 @@ input:focus-visible, textarea:focus-visible, select:focus-visible {
 }
 .nameContainer { padding: 12px 4px 16px; }
 .nameCompBox:not(.unboxed) { border-radius: 10px; }
+.nameCompBox.selected {
+  background-color: var(--lightBlue);
+  border-color: var(--lightBlue);
+  color: #fff;
+}
+.nameCompBox.selected::after { background-color: var(--lightBlue); }
 .nameCompBox.boxed:not(.selected):not(.comp-hidden) {
   background: var(--nl-mint);
   border-color: #b3d0c7;
@@ -174,4 +200,9 @@ body:has(#pageContainer.presenting) .nameleculeHeader { display: none; }
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition: none !important; animation: none !important; }
+}
+
+/* Reserve the fixed 40px scenario handle plus clearance at every breakpoint. */
+.nameleculeHeader {
+  padding-right: max(60px, calc((100vw - 1480px) / 2));
 }

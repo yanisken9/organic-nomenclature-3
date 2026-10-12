@@ -1,5 +1,55 @@
 # Current resume point — 2026-10-12
 
+Final user instruction supersedes earlier local-only closing note: commit and
+push all remaining session changes to personal fork origin/thesis-work only.
+Includes exploration/return navigation, selected-fragment teal styling,
+header overlap correction and wrapping toolbar height, plus session records.
+Reviewed status/diff check before commit. GitHub Pages remains deferred.
+Next session verify latest Git HEAD/status and resume from these decisions.
+
+END OF SESSION — user stops for today. Latest uploaded commit is 62a7e55
+(welcome mockup/product structure) on personal fork thesis-work. Later local
+changes: welcome exploration link below representations; live app return link;
+theme teal selected name fragment + connector; header 60px right reserve and
+border-box fix; auto-height 2D/3D control bars. Files: design/welcome-proposal.html,
+mulermoc-nom-44.html, css/namelecule-44.css, session/contribution docs.
+These changes are NOT committed/pushed yet. Diff checks passed; fixes need
+user visual confirmation where not supplied. Root index remains unchanged,
+welcome is separate preview. User deferred GitHub Pages publication; no hosting
+changes authorized now. Next session read these notes/status, review pending
+visual corrections and agree next work; commit/push only when requested.
+Local server should be run in user's VS Code terminal; agent-owned servers
+did not persist reliably. Open welcome via /design/welcome-proposal.html.
+
+Approved toolbar overflow fix: #radio2DMode and #controls3D now height:auto,
+min-height:36px in theme CSS. Base fixed 36px clipped wrapped controls (rotation
+crossed the footer color boundary). Existing flex-wrap/gaps retained.
+Local changes; visual browser check pending, no commit/push.
+
+Overlap correction follow-up: user screenshot showed padding fix ineffective.
+Found base header width:100% with content-box (only div globally border-box),
+so padding expanded header beyond viewport. Added explicit border-box and
+width:100% to .nameleculeHeader, keeping 60px right reserve inside its width.
+This continues approved overlap fix. Diff check; browser review pending.
+
+Approved overlap fix: theme header now reserves minimum 60px right padding
+after all media rules, keeping the return link clear of the fixed 40px
+scenario tab at every breakpoint. CSS only; user visual check pending.
+Local changes not yet committed/pushed.
+
+Approved naming-panel color refinement: selected name fragments and their
+connector now use theme teal #397B78 (var(--lightBlue)), white text, via
+css/namelecule-44.css. Applies to all selected fragments, not only αιθ;
+molecular highlights unchanged. Local only, no commit/push.
+
+Approved trial: previous app screen serves free molecule exploration. Moved
+welcome exploration link below full representation strip and renamed it
+«Εξερεύνησε ελεύθερα τα μόρια». Live app header now links back to the welcome
+mockup via «Επιστροφή στην υποδοχή», with responsive flex header CSS.
+Files: design/welcome-proposal.html, mulermoc-nom-44.html, css/namelecule-44.css.
+Root index stays redirecting to app; welcome not promoted to root yet.
+Local changes, no commit/push; browser navigation review needed.
+
 User authorized committing and uploading the welcome-page work. Preparing
 snapshot of design/welcome-proposal.html, design/ethanol-model.html,
 docs/NAMELECULE-PRODUCT-STRUCTURE.md and session/contribution notes.
