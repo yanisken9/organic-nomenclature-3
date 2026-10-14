@@ -1,5 +1,25 @@
 # Current resume point — 2026-10-14
 
+User visually accepted the actual JSmol PNG in welcome and authorized
+commit/push to personal fork thesis-work. Static PNG replaces slow live iframe;
+discarded experimental SVG is not used and should not be included in commit.
+Verify published welcome references ethanol-3d-jsmol.png after push.
+
+User rejected generated static SVG and approved actual JSmol PNG export.
+Provided /Users/yannisskendros/Desktop/αιθανόλη_3D.png; copied unchanged to
+design/assets/ethanol-3d-jsmol.png. Welcome now references this image in a
+CSS-clipped frame to exclude excess white margins and visible ethanol name,
+without editing source image. No JSmol load in welcome, interactive explorer
+unchanged. Local only; visual acceptance and commit/push pending.
+
+Welcome performance fix approved: replaced JSmol iframe with lightweight
+static SVG rendered deterministically from actual ethanol SDF coordinates
+(9 atoms/8 bonds, C2H6O), oblique projection/depth-sorted spheres/bonds.
+Asset design/assets/ethanol-3d-static.svg, referenced in welcome-proposal.html.
+No external library/model initialization in welcome example anymore; interactive
+v45 exploration untouched. Local only; user visual review needed before upload.
+Old ethanol-model.html retained but not loaded by welcome. Diff check passed.
+
 Public entry correction approved: index.html now redirects to
 design/welcome-proposal.html (meta, JS and fallback link), instead of direct
 v45 explorer. Welcome links onward to v45. User authorized commit/push and
