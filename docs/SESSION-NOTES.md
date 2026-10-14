@@ -1,5 +1,11 @@
 # Current resume point — 2026-10-14
 
+Public entry correction approved: index.html now redirects to
+design/welcome-proposal.html (meta, JS and fallback link), instead of direct
+v45 explorer. Welcome links onward to v45. User authorized commit/push and
+verification; professor remote untouched. v45 migration already uploaded as
+1a4f1d5. Next product work: select first new molecules; iPhone check deferred.
+
 User authorized commit/push of browser-checked v45 migration. Destination
 origin/thesis-work on personal fork only; GitHub Pages follows this branch.
 Preparing snapshot including v45 files, routes, documentation and recorded

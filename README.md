@@ -5,7 +5,8 @@ A Greek-first interactive learning platform for organic nomenclature, built arou
 Desinged and developed by Nickolas Charistos
 
 **Current baseline:** v45 (local migration from upstream; browser acceptance pending — see [CHANGELOG](docs/CHANGELOG.md)). Published fork remains at the last uploaded v44 commit until migration is reviewed.
-**Entry point:** [index.html](index.html) → [mulermoc-nom-45.html](mulermoc-nom-45.html)
+**Entry point:** [index.html](index.html) → [Namelecule welcome](design/welcome-proposal.html).
+The welcome page links to [v45 molecule exploration](mulermoc-nom-45.html).
 
 **Namelecule working version:** v45, imported from the professor's upstream
 commit `2b0e24c`, with local branding/theme and viewer fixes carried forward.
