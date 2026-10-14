@@ -1,4 +1,67 @@
-# Current resume point — 2026-10-12
+# Current resume point — 2026-10-14
+
+User authorized commit/push of browser-checked v45 migration. Destination
+origin/thesis-work on personal fork only; GitHub Pages follows this branch.
+Preparing snapshot including v45 files, routes, documentation and recorded
+user acceptance checks. Verify remote SHA and published root after push.
+Professor upstream remains read-only; iPhone validation still deferred.
+
+V45 ACCEPTANCE COMPLETED by user: creation/Update/Export/Import/presentation
+round-trip confirmed; welcome→explorer→welcome and narrower window layout
+confirmed OK. Earlier molecule/scenario checks also passed. This covers the
+agreed browser smoke checklist, not exhaustive chemistry/device validation.
+Migration is ready for commit/push when user requests publication; still
+local. Public Pages currently serves v44. iPhone testing remains deferred.
+
+V45 USER BROWSER CHECKS: initial screen/branding/viewers/no header overlap OK;
+3D drag confirmed working in Simple Browser and external browser (initial
+report retracted). Ethanol all 3 2D forms, 3D and αιθ/όλη highlights/explanations
+OK. 2-methylpentane representations/3D/numbering/highlights OK. External
+αλκάνια.json all 15 steps and Exit/title/tools restoration confirmed OK.
+Still pending: create/update step and export/import round-trip, welcome return
+navigation/narrow-window check. Migration remains local, uncommitted/unpushed.
+
+V45 MIGRATION IMPLEMENTED after user approval. Added all 8 upstream v45
+HTML/JS/CSS files plus default Greek scenario, new namelecule-45.css.
+Carried local branding, navigation, mint/teal number styles, 3D sizing,
+showStepNumbers/reserveTitleSpace into new version; upstream core/data/teaching
+retained verbatim. Root index/mockup links now target v45, v44 retained.
+JSC checks: all 5 JS parse, external alkane scenario retains 15 steps/title
+options, legacy diagramatic migrates to skeletal. HTML paths, CSS braces and
+diff check passed. No browser QA, commit, push or live deployment yet.
+Next: user local v45 run + scenarios/2D/3D/Exit acceptance, then decide upload
+and new molecule selection. See docs/V45-REVIEW.md for migration details.
+
+V45 REVIEW COMPLETED at user's request. Professor main now 2b0e24c, full v45
+file set. Temporary clone /tmp/namelecule-v45-review-20261014; no merge/live
+edits. Read rename and scenario fixes; JSC data inventory confirms same
+64 molecule keys as v44, 63 with 3 forms, methane lacks skeletal. Report:
+docs/V45-REVIEW.md. Our branding/theme/mint numbering/3D sizing/title options
+need targeted migration; absent from upstream v45. Next: user approves a
+concrete migration plan before code changes, then select new molecule list.
+iPhone check deferred by user. No commit/push this review.
+
+SESSION RESUMED: read AGENTS, README, latest notes and product structure;
+checked Git. HEAD a99b5d8, thesis-work, app sources clean; only hosting notes
+in SESSION-NOTES/YANNIS-CONTRIBUTIONS are uncommitted. Personal origin and
+professor upstream retained. Public welcome checked by curl: HTTP 200.
+Next: real iPhone visual/navigation/3D check with user feedback; no screenshots
+or actual device results yet. No code edits made; propose fix plan after
+specific issues are identified, per approval workflow.
+
+PUBLIC LINK VERIFIED: welcome page now HTTP 200 and downloaded HTML contains
+latest heading and exploration navigation. Public URL:
+https://yanisken9.github.io/organic-nomenclature-3/design/welcome-proposal.html.
+Actual browser/JSmol runtime interaction still not checked. Hosting is active
+on user fork only. These hosting outcome notes are local and uncommitted.
+
+User authorized public browser link. Configured GitHub Pages on PERSONAL fork
+yanisken9/organic-nomenclature-3 via authenticated GitHub API, source
+thesis-work /, build_type legacy. POST returned 201 with html_url
+https://yanisken9.github.io/organic-nomenclature-3/. Professor repo untouched.
+Welcome link /design/welcome-proposal.html; live app /mulermoc-nom-44.html.
+Root still redirects to app. Deployment verification underway; no source edits
+needed (.nojekyll already exists). Credentials never printed or saved.
 
 Final user instruction supersedes earlier local-only closing note: commit and
 push all remaining session changes to personal fork origin/thesis-work only.

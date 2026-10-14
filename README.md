@@ -4,23 +4,28 @@ A Greek-first interactive learning platform for organic nomenclature, built arou
 
 Desinged and developed by Nickolas Charistos
 
-**Current baseline:** v44 (released 2026-10-07; ongoing work is the *v44 working copy* — see [CHANGELOG](docs/CHANGELOG.md) `[Unreleased]`)
-**Entry point:** [index.html](index.html) → [mulermoc-nom-44.html](mulermoc-nom-44.html)
+**Current baseline:** v45 (local migration from upstream; browser acceptance pending — see [CHANGELOG](docs/CHANGELOG.md)). Published fork remains at the last uploaded v44 commit until migration is reviewed.
+**Entry point:** [index.html](index.html) → [mulermoc-nom-45.html](mulermoc-nom-45.html)
+
+**Namelecule working version:** v45, imported from the professor's upstream
+commit `2b0e24c`, with local branding/theme and viewer fixes carried forward.
+v44 remains available at `mulermoc-nom-44.html`. See
+[migration review](docs/V45-REVIEW.md). Browser acceptance checks are pending.
 
 **App identity:** **Namelecule — Ονοματολογία οργανικών ενώσεων**, an app of
-the MuLERMoCs platform. The v44 working copy uses the approved methane logo
-and a separate visual theme in `css/namelecule-44.css`; chemistry and scenario
+the MuLERMoCs platform. The v45 working copy uses the approved methane logo
+and a separate visual theme in `css/namelecule-45.css`; chemistry and scenario
 data contracts are unchanged. See [interface plan](docs/INTERFACE-REFRESH-PLAN.md).
 
 | Layer | File |
 |---|---|
-| Core engine (analysis + naming) | [js/mulermoc-nom-core-44.js](js/mulermoc-nom-core-44.js) |
-| Viewer (JSME / JSmol / Snap.svg) | [js/mulermoc-nom-molview-44.js](js/mulermoc-nom-molview-44.js) |
-| Teaching (rules, narration, UI wiring) | [js/mulermoc-nom-teaching-44.js](js/mulermoc-nom-teaching-44.js) |
-| Scenario module (LEARN authoring + presentation) | [js/mulermoc-nom-scenario-44.js](js/mulermoc-nom-scenario-44.js) |
+| Core engine (analysis + naming) | [js/mulermoc-nom-core-45.js](js/mulermoc-nom-core-45.js) |
+| Viewer (JSME / JSmol / Snap.svg) | [js/mulermoc-nom-molview-45.js](js/mulermoc-nom-molview-45.js) |
+| Teaching (rules, narration, UI wiring) | [js/mulermoc-nom-teaching-45.js](js/mulermoc-nom-teaching-45.js) |
+| Scenario module (LEARN authoring + presentation) | [js/mulermoc-nom-scenario-45.js](js/mulermoc-nom-scenario-45.js) |
 | Shared icon helper | [js/ui-icons.js](js/ui-icons.js) |
-| Molecule data (64 molecules) | [js/jsme-nick-nomeclature-moc2-data_44.js](js/jsme-nick-nomeclature-moc2-data_44.js) |
-| Styles | [css/jsme-nick-44.css](css/jsme-nick-44.css), [css/mulermoc-nom-scenario-44.css](css/mulermoc-nom-scenario-44.css) |
+| Molecule data (64 molecules) | [js/jsme-nick-nomeclature-moc2-data_45.js](js/jsme-nick-nomeclature-moc2-data_45.js) |
+| Styles | [css/jsme-nick-45.css](css/jsme-nick-45.css), [css/mulermoc-nom-scenario-45.css](css/mulermoc-nom-scenario-45.css) |
 | Stored scenarios | [scenarios/](scenarios/) (`ethene.scenario.json`) |
 
 ---

@@ -6,6 +6,14 @@ All notable changes to the Οργανική Ονοματολογία MuLERMoC.
 
 ## [Unreleased] (v44 working copy)
 
+### Namelecule migration to v45 (local working copy)
+
+- Added upstream v45 engine/data/teaching and scenario fixes from `2b0e24c`.
+- Carried Namelecule header/theme/navigation, mint highlights/teal numbering,
+  proportional 3D resizing and scenario title preferences into v45.
+- Root entry and mockup links now target v45; v44 remains available.
+- JSC syntax/legacy import checks passed. Browser checks pending; not deployed.
+
 ### Namelecule interface refresh
 
 - Atom numbering styling: dark teal `#254C50` paired with mint `#D8EEDC`
