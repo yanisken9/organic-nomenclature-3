@@ -1,5 +1,73 @@
 # Current resume point — 2026-10-14
 
+User authorized uploading all new-molecule files/data/documentation and
+updating public preview. Target personal origin/thesis-work only. Include
+three KingDraw source MOLs and PubChem 3D SDF. Static data/path checks passed;
+browser acceptance of new molecule still pending (do not claim chemistry
+engine verified). Public welcome and explorer URLs remain unchanged.
+
+FIRST MOLECULE INTEGRATED locally with approval: dimethyl_2_3_butane in
+data_45.js, formula CH3CH(CH3)CH(CH3)CH3, 3 V2000 strings + MOL2D registration.
+Reference chains Condensed [1,2,3,6], Expanded/Skeletal [1,2,3,4], 3D [3,1,2,5].
+All paths independently validated against respective file connectivity; symmetry
+allows equivalent chains, so algorithm diagnostics may choose another valid
+path. JSC data execution confirms 65 entries/3 forms. Source MOLs and SDF
+retained. No engine changes, no commit/push. Next user local hard-refresh:
+find molecule under alkanes/Όλα τα μόρια; verify name 2,3-διμεθυλοβουτάνιο,
+3 representations, 3D, main-chain numbers and two methyl highlights. Condensed
+layout/expanded-H spacing specifically need visual acceptance.
+
+3D SDF received from user Desktop and validated: V2000, C6H14, 20 atoms,
+19 single bonds, carbon degrees 1,1,1,1,3,3, correct valences, connected graph,
+varying Z coordinates, one record. Copied unchanged into
+mols/nomeclature-moc2/dimethyl_2_3_butane_3D.sdf. Three source 2D MOLs plus
+3D now available locally. Next: approve data-only integration in data_45.js,
+MOL2D registry + nameExamples formula; inspect main-chain numbering metadata
+then browser validation all modes/highlights. Not yet integrated/committed.
+
+Expanded KingDraw export validated: V2000, C6H14, 20 atoms/19 single bonds,
+connected graph, every C valence 4 and every H degree 1, carbon graph degrees
+1,1,1,1,3,3 matching 2,3-dimethylbutane. Copied unchanged into
+mols/source-2d/dimethyl_2_3_butane_2D_Expanded.mol. All three 2D source MOLs
+now saved locally. Next: obtain 3D SDF (PubChem 3D conformer), approve concrete
+data integration plan and check renderer/naming. No app integration or push.
+
+Second KingDraw export received at same external pathname; now genuine zigzag
+skeletal coordinates. Validated V2000, 6 C/5 single bonds, degrees 1,1,1,1,3,3.
+Copied unchanged into mols/source-2d/dimethyl_2_3_butane_2D_Skeletal.mol;
+previous Condensed copy retained. Need explicit-H Expanded (C6H14) and 3D SDF.
+Neither new molecule form is registered in app or committed/pushed yet.
+
+CORRECTION to initial molecule classification: supplied file has horizontal
+main chain/vertical branches; user intended condensed layout. Copied unchanged
+into mols/source-2d/dimethyl_2_3_butane_2D_Condensed.mol. Original external
+file untouched. Condensed suitability needs renderer check; missing explicit
+H is expected. Separate zigzag skeletal export and explicit-H expanded still
+needed, plus 3D. Not registered in application or committed/pushed yet.
+
+KingDraw condensed export concern investigated: existing v45 condensed and
+skeletal methyl_2_pentane MOL data both encode carbons without explicit H;
+fUpdateSVG invokes fAddHydrogens2SVG for condensed modes. Thus missing CHn
+text in MOL export is not itself failure; layout/atom connectivity matter.
+Need condensed-layout export rather than text labels; expanded must contain
+explicit H atoms/bonds. No code change or integration in this investigation.
+
+First new molecule asset received: external KingDraw file
+dimethyl_2_3_butane_2D_skeletal.mol in user's iCloud Χαριστός directory.
+Read file: V2000, 6 C atoms, 5 single bonds; central atoms 2 and 3 each degree
+3, four terminal C atoms; graph matches 2,3-dimethylbutane (implicit C6H14).
+No explicit H, all z=0: skeletal 2D. Not yet copied into repo or integrated.
+Next obtain condensed and expanded representations and 3D SDF. Final filename
+should use _2D_Skeletal capital S to match v45 identifiers.
+
+NEW MOLECULE SELECTION: user prefers one molecule initially and agreed to
+2,3-dimethylbutane. Searched v45 data keys/variables and mols filenames;
+no existing entry/file found under dimethyl/methyl-butane variants in this
+checkout. No integration yet. Next: plan three V2000 MOL representations,
+PubChem 3D SDF and data registry entry, then validate naming/highlights.
+Earlier proposed 2-methylbutane was rejected by user as already present;
+do not conflate user library with this checkout inventory.
+
 User visually accepted the actual JSmol PNG in welcome and authorized
 commit/push to personal fork thesis-work. Static PNG replaces slow live iframe;
 discarded experimental SVG is not used and should not be included in commit.

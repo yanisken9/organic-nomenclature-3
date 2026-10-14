@@ -6,6 +6,14 @@ All notable changes to the Οργανική Ονοματολογία MuLERMoC.
 
 ## [Unreleased] (v44 working copy)
 
+### First new v45 molecule: 2,3-dimethylbutane
+
+- Added `dimethyl_2_3_butane` with three user-authored KingDraw V2000 2D
+  forms, explicit main-chain reference paths and PubChem 3D SDF (CID 6589).
+- Source files retained in `mols/source-2d/`; 3D file follows existing lookup.
+- Data registry runs with 65 entries; representation availability and reference
+  path checks passed. Browser naming/highlight acceptance remains pending.
+
 ### Namelecule migration to v45 (local working copy)
 
 - Added upstream v45 engine/data/teaching and scenario fixes from `2b0e24c`.
