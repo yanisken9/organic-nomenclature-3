@@ -2426,6 +2426,68 @@ function fMarkExpandedHydrogens() {
 
 // ── fUpdateSVG ────────────────────────────────────────────────────────────
 
+// Fit the complete expanded drawing, including off-viewport atoms and labels.
+// Changing the viewBox leaves the molecular coordinates/highlight IDs intact.
+function fFitExpandedSVG() {
+  if (mode2D !== "expanded") return;
+  const svg = document.querySelector("#jsmeNomeclatureSVG svg");
+  if (!svg || !svg.getClientRects().length) return;
+  try {
+    const bounds = svg.getBBox();
+    if (!(bounds.width > 0 && bounds.height > 0)) return;
+    const padding = Math.max(bounds.width, bounds.height) * 0.06;
+    svg.setAttribute("viewBox", [bounds.x - padding, bounds.y - padding,
+      bounds.width + padding * 2, bounds.height + padding * 2].join(" "));
+    svg.setAttribute("preserveAspectRatio", "xMidYMid meet");
+    svg.style.width = "100%";
+    svg.style.height = "100%";
+  } catch (eBounds) {
+    /* Hidden/uninitialized drawings are fitted on the next visible render. */
+  }
+}
+
+function fCenterCondensedSVG() {
+  if (mode2D !== "condensed" || selectedMol !== "dimethyl_2_3_butane") return;
+  const svg = document.querySelector("#jsmeNomeclatureSVG svg");
+  if (!svg || !svg.getClientRects().length) return;
+  try {
+    // Ignore the canvas background; include bonds, labels and numbering.
+    const inverse = svg.getCTM().inverse();
+    let left = Infinity, top = Infinity, right = -Infinity, bottom = -Infinity;
+    svg.querySelectorAll("line, text, path, circle, ellipse").forEach(function (el) {
+      if (el.closest("defs")) return;
+      const box = el.getBBox();
+      const matrix = inverse.multiply(el.getCTM());
+      [[box.x, box.y], [box.x + box.width, box.y],
+       [box.x, box.y + box.height], [box.x + box.width, box.y + box.height]].forEach(function (xy) {
+        const p = svg.createSVGPoint();
+        p.x = xy[0]; p.y = xy[1];
+        const q = p.matrixTransform(matrix);
+        left = Math.min(left, q.x); right = Math.max(right, q.x);
+        top = Math.min(top, q.y); bottom = Math.max(bottom, q.y);
+      });
+    });
+    if (!Number.isFinite(left) || !(right > left && bottom > top)) return;
+    if (!svg.dataset.centerViewport) {
+      const box = svg.viewBox.baseVal;
+      svg.dataset.centerViewport = JSON.stringify([box.width || svg.width.baseVal.value,
+        box.height || svg.height.baseVal.value]);
+    }
+    const size = JSON.parse(svg.dataset.centerViewport);
+    if (!(size[0] > 0 && size[1] > 0)) return;
+    const fit = Math.max(1, (right - left) / (size[0] * 0.85),
+      (bottom - top) / (size[1] * 0.85));
+    const width = size[0] * fit, height = size[1] * fit;
+    svg.setAttribute("viewBox", [(left + right - width) / 2,
+      (top + bottom - height) / 2, width, height].join(" "));
+    svg.setAttribute("preserveAspectRatio", "xMidYMid meet");
+    svg.style.width = "100%";
+    svg.style.height = "100%";
+  } catch (eCenter) {
+    /* Unavailable SVG geometry will be retried on the next render. */
+  }
+}
+
 function fUpdateSVG() {
   if (!jsmeNomeclatureApplet) return;
   compactNumberingLabelMap = {};
@@ -2466,6 +2528,8 @@ function fUpdateSVG() {
     "svgAtomsColorized",
     svgAtomColors2DFlag,
   );
+  fFitExpandedSVG();
+  fCenterCondensedSVG();
 }
 
 // ── patchtheNitrogen ──────────────────────────────────────────────────────
@@ -3307,6 +3371,7 @@ function fExplainNameComp() {
           fHighlightFG3D(1);
         } else {
           if (nameComponentsList[0].includes(",")) {
+            const branchPositions = fGetBranchDisplayName();
             countSubs = (nameComponentsList[0].match(/,/g) || []).length;
             switch (countSubs) {
               case 1:
@@ -3320,6 +3385,9 @@ function fExplainNameComp() {
             }
 
             myText = ` Δηλώνει τις θέσεις των ${myCountText} δευτερευουσών  Χαρακτηριστικών Ομάδών${fGetSecondaryGroupNounSuffix(1)}.`;
+            if (branchPositions) {
+              myText = " Δηλώνει τις θέσεις των ανθρακικών διακλαδώσεων στην κύρια αλυσίδα.";
+            }
           } else {
             const branchPosName = fGetBranchDisplayName();
             if (branchPosName) {
@@ -3436,7 +3504,9 @@ function fExplainNameComp() {
         }
         const branchSubName = fGetBranchDisplayName();
         if (branchSubName) {
-          myText = ` Δηλώνει το όνομα της ανθρακικής διακλάδωσης (${branchSubName}).`;
+          myText = nameComponentsList[0] && nameComponentsList[0].includes(",")
+            ? ` Δηλώνει τις ίδιες ανθρακικές διακλαδώσεις και το πλήθος τους (${branchSubName}).`
+            : ` Δηλώνει το όνομα της ανθρακικής διακλάδωσης (${branchSubName}).`;
         } else {
           myText = ` Δηλώνει το όνομα της δευτερεύουσας Χαρακτηριστικής Ομάδας${fGetSecondaryGroupNounSuffix(1)}.`;
         }
@@ -5390,6 +5460,8 @@ function fShowNumber() {
   fShowNumber3D(currNumberEl);
   let numberElement = Snap.parse(numbersSVGElements[currNumberEl]);
   molSnap.select("g").append(numberElement);
+  fFitExpandedSVG();
+  fCenterCondensedSVG();
   currNumberEl += 1;
 
   if (currNumberEl >= numbersSVGElements.length) {

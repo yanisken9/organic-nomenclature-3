@@ -1750,8 +1750,11 @@ function fGuessName() {
         const sideBranches = fGetHydrocarbonSubstituentInfo()
         if (sideBranches.length > 0) {
             const branch = sideBranches[0]
-            comp0 = branch.locant + "-"
-            comp0Text = branch.name
+            const matchingBranches = sideBranches.filter((item) => item.name === branch.name)
+            comp0 = matchingBranches.map((item) => item.locant).sort((a, b) => a - b).join(",") + "-"
+            const multiplicity = matchingBranches.length > 1
+                ? (nameMultiPrefix[matchingBranches.length - 1] || "") : ""
+            comp0Text = multiplicity + branch.name
         }
     }
 

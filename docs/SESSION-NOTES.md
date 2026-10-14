@@ -1,5 +1,69 @@
 # Current resume point — 2026-10-14
 
+User authorized saving/uploading all latest molecule fixes to personal fork
+thesis-work and public preview opening at welcome. Includes repeated-branch
+naming/explanations, expanded SVG fit, adjusted condensed coordinates and
+centering, with source MOL/data kept synchronized. Automated naming/syntax/
+geometry checks passed; final browser appearance remains user-review pending.
+Root index already redirects to design/welcome-proposal.html; verify published
+root and updated source after push. Professor upstream untouched.
+
+Approved centering: new molecule Condensed SVG now centers actual molecular
+elements (bonds/text including numbering, excluding background) in its 2D
+viewport. Uses geometry transforms and viewBox, retains base scale unless
+fit needed; called after render and numbering. Only this molecule/mode.
+Syntax/diff passed, user visual acceptance pending. Vertical branches were
+already moved to -0.8; all recent fixes remain local and uncommitted.
+
+User requested vertical condensed bonds match horizontal visible lengths.
+Moved both branch C y from -1.0 to -0.8 in source Condensed MOL and data string,
+main-chain coordinates unchanged. Label offsets mean visual match still needs
+browser check. No topology change, local only.
+
+Condensed equal-visible-gap follow-up: screenshot confirmed final right bond
+short due to CH3 label shift. Adjusted source/data coordinates: center segment
+1.075 and right segment 1.30 versus left 1.0 to compensate label footprint;
+branches track their parent x. This replaces equal coordinate lengths in favor
+of rendered gaps. Needs user visual acceptance; topology unchanged, local only.
+
+Approved condensed-layout correction for new molecule only: normalized six
+carbon coordinates to horizontal main chain/vertical branches, all five
+coordinate bond lengths 1.0. Updated source Condensed MOL and matching data_45
+string, topology/atom numbers unchanged. Geometric lengths tested; final
+visible line lengths depend on CHn labels and need user browser check before
+claiming equal rendered gaps. Naming/expanded-fit fixes also remain local.
+
+PAUSE / EXACT RESUME POINT: user will return shortly and requested all
+continuity updates. New molecule dimethyl_2_3_butane and its four source files
+were uploaded at 83806a7. Two later fixes remain LOCAL, not committed/pushed:
+1. core-45.js repeated identical branches → all locants + multiplicity;
+   actual engine checks yield 2,3-διμεθυλοβουτάνιο in all 3 2D modes and retain
+   2-μεθυλοπεντάνιο. molview explanations updated for plural branches.
+2. molview-45.js fFitExpandedSVG uses full drawing bounds + 6% margin after
+   render/number insert; JSC mock/syntax checks pass. USER BROWSER VERIFICATION
+   STILL PENDING: hard-refresh LOCAL v45, select 2,3-dimethylbutane Expanded,
+   ensure terminal H/numbering are visible; verify name and two branch highlights.
+Files modified include core-45.js, molview-45.js, CHANGELOG, these notes and
+YANNIS-CONTRIBUTIONS. Public site still lacks these two fixes. No additional
+code/hosting changes needed for pause. On resume inspect Git, obtain browser
+result, fix remaining issues if any, then commit/push when authorized.
+
+Expanded clipping fix approved: added fFitExpandedSVG to molview-45.js,
+setting padded full SVG bounds viewBox and responsive width/height for
+expanded mode only; called after rendering and number insertion. Keeps atom
+coordinates/IDs unchanged. JSC syntax+mock bounds/mode/hidden guards passed;
+actual browser result pending. Naming fix also local, uncommitted/unpushed.
+
+NAMING FIX after user's report, approved: core fGuessName now groups repeated
+branches matching first branch name, sorted comma locants + multiplicity.
+Actual core run from supplied MOL graph with mocked JSME accessors produced
+2,3-/διμεθυλο/βουτ/άν/ιο in all 3 modes; 2-methylpentane remains 2-/μεθυλο.
+Viewer locant/substituent explanation now plural carbon branches for repeats.
+Existing 2D/3D branch highlight helpers collect all off-chain branches.
+Mixed substituent types NOT addressed (previous limitation retained).
+JSC syntax and diff checks passed. Local only; browser highlight/name review
+and commit/push pending. Files core-45.js, molview-45.js and docs.
+
 User authorized uploading all new-molecule files/data/documentation and
 updating public preview. Target personal origin/thesis-work only. Include
 three KingDraw source MOLs and PubChem 3D SDF. Static data/path checks passed;

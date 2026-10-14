@@ -8,6 +8,16 @@ All notable changes to the Οργανική Ονοματολογία MuLERMoC.
 
 ### First new v45 molecule: 2,3-dimethylbutane
 
+- Expanded display follow-up: padded full-drawing SVG viewBox after rendering
+  and numbering avoids relying solely on fixed JSME scale. Applies only to
+  expanded mode; hidden drawings skipped. JSC bounds/guards checks passed;
+  actual browser clipping verification pending. This and the naming fix below
+  are local changes not yet committed/deployed.
+- Follow-up naming fix: repeated identical alkyl branches contribute all
+  locants and multiplicity (2,3-/διμεθυλο), instead of first branch only.
+  Viewer explanations refer to plural carbon branches; existing highlight
+  helpers already collect all branch atoms. Mixed branch types remain outside
+  this fix. Actual core tests pass across 3 forms and single-branch regression.
 - Added `dimethyl_2_3_butane` with three user-authored KingDraw V2000 2D
   forms, explicit main-chain reference paths and PubChem 3D SDF (CID 6589).
 - Source files retained in `mols/source-2d/`; 3D file follows existing lookup.
