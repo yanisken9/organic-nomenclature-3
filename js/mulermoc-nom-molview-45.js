@@ -2426,65 +2426,59 @@ function fMarkExpandedHydrogens() {
 
 // ── fUpdateSVG ────────────────────────────────────────────────────────────
 
-// Fit the complete expanded drawing, including off-viewport atoms and labels.
-// Changing the viewBox leaves the molecular coordinates/highlight IDs intact.
-function fFitExpandedSVG() {
-  if (mode2D !== "expanded") return;
+// Use the same viewport policy for every 2D representation. Measure molecular
+// bonds/labels only: backgrounds and highlight shapes must not affect centering.
+// Reserve numbering room up front so its animation never moves the drawing.
+function fFit2DSVG() {
   const svg = document.querySelector("#jsmeNomeclatureSVG svg");
   if (!svg || !svg.getClientRects().length) return;
   try {
-    const bounds = svg.getBBox();
-    if (!(bounds.width > 0 && bounds.height > 0)) return;
-    const padding = Math.max(bounds.width, bounds.height) * 0.06;
-    svg.setAttribute("viewBox", [bounds.x - padding, bounds.y - padding,
-      bounds.width + padding * 2, bounds.height + padding * 2].join(" "));
-    svg.setAttribute("preserveAspectRatio", "xMidYMid meet");
-    svg.style.width = "100%";
-    svg.style.height = "100%";
-  } catch (eBounds) {
-    /* Hidden/uninitialized drawings are fitted on the next visible render. */
-  }
-}
-
-function fCenterCondensedSVG() {
-  if (mode2D !== "condensed" || selectedMol !== "dimethyl_2_3_butane") return;
-  const svg = document.querySelector("#jsmeNomeclatureSVG svg");
-  if (!svg || !svg.getClientRects().length) return;
-  try {
-    // Ignore the canvas background; include bonds, labels and numbering.
-    const inverse = svg.getCTM().inverse();
+    const rootMatrix = svg.getCTM();
+    if (!rootMatrix) return;
+    const inverse = rootMatrix.inverse();
     let left = Infinity, top = Infinity, right = -Infinity, bottom = -Infinity;
-    svg.querySelectorAll("line, text, path, circle, ellipse").forEach(function (el) {
-      if (el.closest("defs")) return;
+    svg.querySelectorAll("line, text, path").forEach(function (el) {
+      if (el.closest("defs") || (el.id || "").indexOf("number") === 0) return;
+      const matrix = el.getCTM();
+      if (!matrix) return;
       const box = el.getBBox();
-      const matrix = inverse.multiply(el.getCTM());
+      const transform = inverse.multiply(matrix);
       [[box.x, box.y], [box.x + box.width, box.y],
        [box.x, box.y + box.height], [box.x + box.width, box.y + box.height]].forEach(function (xy) {
         const p = svg.createSVGPoint();
         p.x = xy[0]; p.y = xy[1];
-        const q = p.matrixTransform(matrix);
+        const q = p.matrixTransform(transform);
         left = Math.min(left, q.x); right = Math.max(right, q.x);
         top = Math.min(top, q.y); bottom = Math.max(bottom, q.y);
       });
     });
-    if (!Number.isFinite(left) || !(right > left && bottom > top)) return;
-    if (!svg.dataset.centerViewport) {
+    // Single atoms and horizontal/vertical skeletal bonds are valid drawings.
+    if (![left, top, right, bottom].every(Number.isFinite)) return;
+    if (!svg.dataset.baseViewport) {
       const box = svg.viewBox.baseVal;
-      svg.dataset.centerViewport = JSON.stringify([box.width || svg.width.baseVal.value,
-        box.height || svg.height.baseVal.value]);
+      svg.dataset.baseViewport = JSON.stringify([
+        box.width || svg.width.baseVal.value,
+        box.height || svg.height.baseVal.value,
+      ]);
     }
-    const size = JSON.parse(svg.dataset.centerViewport);
+    const size = JSON.parse(svg.dataset.baseViewport);
     if (!(size[0] > 0 && size[1] > 0)) return;
-    const fit = Math.max(1, (right - left) / (size[0] * 0.85),
-      (bottom - top) / (size[1] * 0.85));
-    const width = size[0] * fit, height = size[1] * fit;
+    const viewport = svg.parentNode.getBoundingClientRect();
+    const aspect = viewport.width > 0 && viewport.height > 0
+      ? viewport.width / viewport.height : size[0] / size[1];
+    // Number labels use 270-unit type with offsets up to 280 units and a
+    // white outline. Keep symmetric clearance even while numbers are hidden.
+    const padding = Math.max(650, Math.max(right - left, bottom - top) * 0.06);
+    const width = Math.max(size[0], right - left + padding * 2,
+      (bottom - top + padding * 2) * aspect);
+    const height = width / aspect;
     svg.setAttribute("viewBox", [(left + right - width) / 2,
       (top + bottom - height) / 2, width, height].join(" "));
     svg.setAttribute("preserveAspectRatio", "xMidYMid meet");
     svg.style.width = "100%";
     svg.style.height = "100%";
-  } catch (eCenter) {
-    /* Unavailable SVG geometry will be retried on the next render. */
+  } catch (eFit) {
+    /* Hidden/uninitialized drawings are fitted on the next visible render. */
   }
 }
 
@@ -2528,8 +2522,7 @@ function fUpdateSVG() {
     "svgAtomsColorized",
     svgAtomColors2DFlag,
   );
-  fFitExpandedSVG();
-  fCenterCondensedSVG();
+  fFit2DSVG();
 }
 
 // ── patchtheNitrogen ──────────────────────────────────────────────────────
@@ -5460,8 +5453,7 @@ function fShowNumber() {
   fShowNumber3D(currNumberEl);
   let numberElement = Snap.parse(numbersSVGElements[currNumberEl]);
   molSnap.select("g").append(numberElement);
-  fFitExpandedSVG();
-  fCenterCondensedSVG();
+  // The viewport already reserves room for the entire numbering sequence.
   currNumberEl += 1;
 
   if (currNumberEl >= numbersSVGElements.length) {

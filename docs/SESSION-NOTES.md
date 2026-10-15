@@ -1,3 +1,74 @@
+# Current resume point — 2026-10-15 — commit/push authorized
+
+User explicitly requested both commit and push plus a public browser link.
+Target confirmed: personal origin yanisken9/organic-nomenclature-3, branch
+thesis-work. Preparing commit of shared 2D viewport and documentation;
+publication verification follows push. Initial visual feedback positive;
+full regression/resize/PNG checks remain unverified. Public preview expected
+at https://yanisken9.github.io/organic-nomenclature-3/ (verify remotely).
+
+# Current resume point — 2026-10-15 — initial visual feedback
+
+After the shared 2D viewport change, user reported «νομίζω είναι καλά».
+Record as tentative positive visual feedback on representation switching;
+exact molecules/modes tested were not specified. Do not infer full browser
+regression, resize or PNG export validation. Implementation and automated
+checks are recorded below. Changes remain local; no commit/push performed.
+
+# Current resume point — 2026-10-15 — shared 2D viewport implemented
+
+User approved the concrete plan to fix position jumps between 2D modes.
+Replaced expanded-only fitting and molecule-specific condensed centering with
+fFit2DSVG in js/mulermoc-nom-molview-45.js, called after SVG post-processing
+for all four modes. It measures transformed line/text/path geometry excluding
+defs and numbering, ignores background/highlight rectangles/circles, centers
+molecular bounds, uses container aspect ratio and consistent padding with
+650 SVG units minimum reserved for numbering. Base viewport size is retained
+as a minimum; drawings may still need different scale to fit their extents.
+Removed refitting after each animated number. Source MOLs, atom IDs and
+chemistry unchanged. Previous note describes pre-change investigation.
+Verification: complete viewer syntax via JSC checkSyntax, git diff --check,
+and temporary JSC geometry mocks passed (position/aspect, transformed bounds,
+number-overlay stability, padding, horizontal/vertical bonds, single atom,
+defs exclusion and hidden/empty guards). These are geometry mocks, not actual
+JSME/browser rendering. Browser visual checks, resize and PNG export remain
+pending; no browser automation available in this session. Next: hard-refresh
+local v45, switch same molecule across four forms, check numbering/highlights,
+then repeat on another branched molecule and a heteroatom-containing molecule.
+No commit/push performed. Local server previously verified HTTP 200 on 8001.
+
+# Current resume point — 2026-10-15 — 2D representation movement investigation
+
+User reports professor observed molecule position jumping between 2D modes
+for the same molecule; authorized read-only investigation and concrete plan.
+Confirmed viewer uses different viewport policies: fFitExpandedSVG fits root
+getBBox for all expanded drawings; fCenterCondensedSVG centers actual drawing
+only for dimethyl_2_3_butane condensed; skeletal/annotated modes retain JSME
+viewport. Both helpers rerun after individual numbering insertions, potentially
+moving/scaling the viewport during numbering. fLoadMol2D reloads separate MOL
+coordinates and applies JSME scale 2.4. No browser reproduction or measurement
+performed; code evidence identifies inconsistent policies, not a fully verified
+visual diagnosis. Proposed: shared drawing-bounds/centering policy for all four
+v45 modes, consistent padding, stable center/scale during highlight/numbering,
+reserve numbering space before animation; preserve molecular coordinates/IDs.
+Affected code: js/mulermoc-nom-molview-45.js plus continuity/contribution docs.
+Await plan approval before code edits per AGENTS.md. Next validate representative
+molecules across modes, numbering/highlights, resize and SVG/PNG export.
+Local Python server started on port 8001 this session; v45 returned HTTP 200.
+
+# Current resume point — 2026-10-15
+
+Session resumed to establish continuity, without code changes. Read README,
+previous resume notes, contribution record, development/interface plans and
+relevant viewer symbols. Git working tree was clean on thesis-work; HEAD
+`eb18986` (Fix repeated branch naming and refine molecule layout), matching
+local origin/thesis-work tracking ref. No network fetch or live-site/browser
+verification performed this session. This supersedes older statements that
+these fixes remain uncommitted. Final visual acceptance of 2,3-dimethylbutane
+remains pending: condensed centering/bond spacing, expanded H/number visibility,
+name and both methyl highlights. Next: browser acceptance of v45; if changes
+are needed, investigate read-only, present concrete plan and await approval.
+
 # Current resume point — 2026-10-14
 
 User authorized saving/uploading all latest molecule fixes to personal fork

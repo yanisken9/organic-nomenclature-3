@@ -6,6 +6,16 @@ All notable changes to the Οργανική Ονοματολογία MuLERMoC.
 
 ## [Unreleased] (v44 working copy)
 
+### Stable positioning across v45 2D representations
+
+- Shared molecular-bounds centering and viewport sizing for all four 2D
+  modes replaces expanded-only fitting and molecule-specific condensed logic.
+  Background/highlight shapes and numbers are excluded from molecular bounds.
+- Reserve numbering clearance before animation; inserting numbers no longer
+  refits the viewport. Source geometry and atom IDs remain unchanged.
+- JSC syntax and geometry mocks passed; actual browser appearance, resize,
+  highlight and PNG export checks remain pending. Local, not committed.
+
 ### First new v45 molecule: 2,3-dimethylbutane
 
 - Expanded display follow-up: padded full-drawing SVG viewBox after rendering
