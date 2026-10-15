@@ -2466,11 +2466,20 @@ function fFit2DSVG() {
     const viewport = svg.parentNode.getBoundingClientRect();
     const aspect = viewport.width > 0 && viewport.height > 0
       ? viewport.width / viewport.height : size[0] / size[1];
-    // Number labels use 270-unit type with offsets up to 280 units and a
-    // white outline. Keep symmetric clearance even while numbers are hidden.
-    const padding = Math.max(650, Math.max(right - left, bottom - top) * 0.06);
-    const width = Math.max(size[0], right - left + padding * 2,
-      (bottom - top + padding * 2) * aspect);
+    // Numbers are inserted in the first drawing group, whose coordinates
+    // JSME scales down. Convert their clearance into root SVG units too.
+    const numberGroup = svg.querySelector("g");
+    const numberMatrix = numberGroup && numberGroup.getCTM();
+    const numberTransform = numberMatrix ? inverse.multiply(numberMatrix) : null;
+    const numberPaddingX = numberTransform
+      ? 650 * (Math.abs(numberTransform.a) + Math.abs(numberTransform.c)) : 0;
+    const numberPaddingY = numberTransform
+      ? 650 * (Math.abs(numberTransform.b) + Math.abs(numberTransform.d)) : 0;
+    const margin = Math.max(right - left, bottom - top) * 0.06;
+    const paddingX = Math.max(numberPaddingX, margin);
+    const paddingY = Math.max(numberPaddingY, margin);
+    const width = Math.max(size[0], right - left + paddingX * 2,
+      (bottom - top + paddingY * 2) * aspect);
     const height = width / aspect;
     svg.setAttribute("viewBox", [(left + right - width) / 2,
       (top + bottom - height) / 2, width, height].join(" "));

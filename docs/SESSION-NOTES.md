@@ -1,3 +1,19 @@
+# Current resume point — 2026-10-15 — fix microscopic 2D regression
+
+User supplied screenshot of microscopic condensed ethane on published app.
+Root cause in previous shared fit: fixed 650 numbering padding was applied
+in root SVG units, although JSME wraps drawing and inserted numbering in a
+scaled group (confirmed scale export in bundled JSME code). Original mocks
+missed scaled numbering groups. Corrected padding in fFit2DSVG by converting
+650 through first drawing group's matrix relative to root; X/Y margins use
+absolute matrix components. Shared centering and stable numbering retained.
+JSC complete-viewer syntax and diff checks passed; extended temporary mocks
+pass scaled .01 group with 600x240 viewport, small molecule retains original
+zoom; expanded full-bounds and previous geometry cases also pass. Browser
+appearance remains pending. Publish this corrective fix under existing user
+commit/push authorization; no upstream changes. Next user hard refresh and
+confirm size and position across representations, especially ethane.
+
 # Current resume point — 2026-10-15 — pushed and public source verified
 
 Implementation committed as 2bcad6e and pushed successfully to personal

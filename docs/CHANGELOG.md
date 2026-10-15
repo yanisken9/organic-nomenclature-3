@@ -8,6 +8,10 @@ All notable changes to the Οργανική Ονοματολογία MuLERMoC.
 
 ### Stable positioning across v45 2D representations
 
+- Correct numbering clearance units: transform padding from JSME's scaled
+  drawing group to root SVG space. Fixes microscopic small-molecule regression.
+  Added scaled-group geometry mock covering preserved original viewport size.
+
 - Shared molecular-bounds centering and viewport sizing for all four 2D
   modes replaces expanded-only fitting and molecule-specific condensed logic.
   Background/highlight shapes and numbers are excluded from molecular bounds.
