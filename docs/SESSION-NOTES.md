@@ -1,3 +1,15 @@
+# Current resume point — 2026-10-15 — pushed and public source verified
+
+Implementation committed as 2bcad6e and pushed successfully to personal
+origin/thesis-work. GitHub Pages workflow for that SHA was observed running;
+subsequently public JS returned HTTP 200 and contained fFit2DSVG with its
+render call, confirming updated code is publicly served. Public root and v45
+HTML both returned HTTP 200. No interactive public browser test performed.
+Links: https://yanisken9.github.io/organic-nomenclature-3/ and direct
+https://yanisken9.github.io/organic-nomenclature-3/mulermoc-nom-45.html .
+This record supersedes older local/uncommitted statements below. Recording
+publication outcome in a separate docs commit. Upstream professor untouched.
+
 # Current resume point — 2026-10-15 — commit/push authorized
 
 User explicitly requested both commit and push plus a public browser link.
