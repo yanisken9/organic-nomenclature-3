@@ -1,3 +1,43 @@
+# Current resume point — 2026-10-18 — v48 commit/push authorized
+
+User explicitly approved proceeding with commit and upload after the local
+v48 migration. No detailed visual-test results were supplied; do not infer
+full browser acceptance. Target: personal origin yanisken9/organic-nomenclature-3,
+branch thesis-work. Commit migration and push, then verify public v48/theme
+and welcome links. Professor upstream is not a publication target.
+
+# Current resume point — 2026-10-18 — v48 migration implemented locally
+
+User approved the v48 migration plan. Added upstream aeb6bf0 v48 file set,
+Namelecule theme/branding, shared 2D fitting, mint/teal styling and scenario
+preferences; upstream core/data/teaching unchanged. Welcome links now use v48;
+v45 remains runnable. Upstream responsive sizing replaces old local 3D resize.
+69 molecules and all associated 3D files present. See docs/V48-REVIEW.md.
+JSC syntax, stored-scenario validation, export/validation roundtrip (custom
+preferences plus v48 settings), SVG geometry mocks, local HTML asset checks,
+CSS brace checks and diff checks passed. No browser interaction performed.
+Local Python preview started on 127.0.0.1:8001; v48 returned HTTP 200.
+No commit/push/publication.
+Next: user browser acceptance (2D forms/zoom/highlights, resize/PNG, 3D,
+scenario pin/unpin/Present/Exit). Earlier notes-only change was pre-existing
+at implementation start. Application changes in this session implement the
+approved plan; final browser acceptance remains pending.
+
+# Current resume point — 2026-10-18 — upstream v48 review
+
+User reported professor published v48. Read-only review in separate clone
+`/tmp/namelecule-v48-review-20261018`, upstream HEAD `aeb6bf0`.
+Confirmed full v48 HTML/JS/CSS set. Upstream changelog describes responsive
+2D/3D resize, pinned scenario authoring, viewer height settings, and v46/47
+chemistry/data/settings changes. These are source/document findings; no
+interactive browser verification. Local thesis-work remains clean at d45c7a1
+before this notes update. No application edits, merge, commit or push.
+Next: agree migration plan, compare upstream v45→v48 and local v45 deltas,
+carry Namelecule theme/welcome and scenario preferences selectively; evaluate
+local SVG fitting against upstream resize before porting. Preserve runnable
+v45; test molecules, representations, highlights, resize and scenario roundtrip.
+Code intervention requires plan approval under AGENTS.md.
+
 # Current resume point — 2026-10-15 — fix microscopic 2D regression
 
 User supplied screenshot of microscopic condensed ethane on published app.
@@ -1255,3 +1295,7 @@ Browser checklist for owner: cold load (empty profile) shows methane;
 `?scenario=scenarios/ethene.scenario.json&present=1` from empty state →
 step 1 2D-only → Next to 3D step renders intact; plain-load regression
 (methane selected, both viewers live).
+
+Pre-commit staged review: upstream imports contain trailing whitespace and
+blank EOF lines (including fixed-format MOL bond records). Preserved source
+formatting; the earlier unstaged diff check did not cover untracked imports.

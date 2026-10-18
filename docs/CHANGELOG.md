@@ -1,5 +1,14 @@
 # Changelog
 
+## [Unreleased] — 2026-10-18 — Namelecule v48 local migration
+
+- Import upstream aeb6bf0 v48 with responsive viewers, pinned authoring,
+  viewer height settings and 69 molecules; preserve runnable local v45.
+- Port Namelecule identity/theme, mint highlights, teal numbering, shared
+  2D centering and scenario title preferences. Welcome now links to v48.
+- Upstream chemistry/data/teaching retained unchanged. Browser acceptance
+  and publication pending; see V48-REVIEW.md for actual validation.
+
 All notable changes to the Οργανική Ονοματολογία MuLERMoC.
 
 ---
