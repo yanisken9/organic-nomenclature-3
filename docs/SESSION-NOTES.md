@@ -1,3 +1,11 @@
+# Current resume point — 2026-10-18 — v48 pushed
+
+Migration committed as 52fe2c2 and pushed to personal origin/thesis-work.
+GitHub Pages deployment run 39140199557 observed in progress for that SHA.
+Detailed browser acceptance remains unreported. Public v48, welcome and theme returned HTTP 200; public HTML loads the v48
+theme and welcome links target v48; public theme matches local bytes.
+No interactive browser test. Upstream professor repository untouched.
+
 # Current resume point — 2026-10-18 — v48 commit/push authorized
 
 User explicitly approved proceeding with commit and upload after the local
