@@ -6,7 +6,8 @@ Desinged and developed by Nickolas Charistos
 
 **Current baseline:** v48, migrated locally from the professor's upstream
 commit `aeb6bf0` on 2026-10-18. Published to the personal fork as `52fe2c2`;
-full browser acceptance remains pending.
+Latest molecule additions and naming fix published as `4919f99`;
+full user visual acceptance remains pending.
 **Entry point:** [index.html](index.html) → [Namelecule welcome](design/welcome-proposal.html)
 → [v48 molecule exploration](mulermoc-nom-48.html).
 
@@ -139,6 +140,5 @@ for full-app checks and removal instructions.
 
 Local v48 also includes 3-methyl-1-butene (71 total working entries), with
 KingDraw-reference layout and an approved naming fix retaining the -1- locant.
-Browser checks passed; user visual acceptance remains pending. Publication
-was authorized as part of saving the full snapshot.
+Browser checks passed; user visual acceptance remains pending. Published as part of snapshot `4919f99`.
 See [draft review](docs/METHYLBUTENE-TRIAL.md).

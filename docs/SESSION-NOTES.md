@@ -1,3 +1,14 @@
+# Current resume point — 2026-10-19 — two molecule changes committed/pushed
+
+Commit 4919f99 (Add two branched alkenes and preserve unsaturation locants)
+pushed successfully to personal origin/thesis-work. Includes all MOL/SDF,
+KingDraw reference copies, drawing-preference notes, screenshots, two registry
+entries and core fix. User explicitly authorized saving everywhere.
+Pages run 39242823954 completed successfully. Published data/core and both
+3D SDFs match local bytes; no public interactive browser test performed.
+Professor upstream untouched. Earlier notes
+below describe intermediate local/uncommitted states, now superseded.
+
 # Current resume point — 2026-10-19 — saving/publishing two molecule additions
 
 User explicitly requested saving changes everywhere. Authorized commit/push
