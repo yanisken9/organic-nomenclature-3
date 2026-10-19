@@ -1,3 +1,47 @@
+# Current resume point — 2026-10-19 — saving all scenario work
+
+User explicitly requested saving everything completed so far, including
+commit/push to personal origin/thesis-work. Deliverable: seven-step
+Αλκένια-Αιθένιο.scenario.json, reserveTitleSpace=true, in project scenarios
+and Desktop `/Users/yannisskendros/Desktop/αρχεία  json`. Byte equality and
+JSON structure verified. v48 validator previously passed seven steps with
+zero warnings; repeat validation follows. Browser confirmation of corrected
+title remains pending: Exit, import updated file, present again.
+Future scenario deliverables go to the Desktop folder, with project copies
+for version history. v48 already published (52fe2c2; publication notes
+ a50f647). No application-code edits in this scenario session.
+This snapshot records project state, decisions and next step, not full chat.
+
+# Current resume point — 2026-10-19 — alkene title spacing enabled
+
+User screenshot shows title behind fixed presentation bar. Alkene JSON had
+inherited reserveTitleSpace=false from supplied template. Enabled existing
+v48 spacing option (true) in project and Desktop scenario copies; verified
+identical bytes and flag. No application code change or publication needed;
+user must re-import updated JSON into a new/replacement card. Visual outcome
+not browser-verified. No commit/push.
+
+# Current resume point — 2026-10-19 — scenario output folder preference
+
+User requests saving scenarios in Desktop folder `αρχεία  json` (two spaces
+in actual path), `/Users/yannisskendros/Desktop/αρχεία  json`, going forward.
+Copied Αλκένια-Αιθένιο.scenario.json there with approved external write;
+verified bytes match the project copy. Existing project copy retained.
+Use this folder for future scenario deliverables; external writes may require
+sandbox approval. No application code change, commit or push.
+
+# Current resume point — 2026-10-19 — alkene scenario authored
+
+User requested an alkene counterpart to supplied external file
+`/Users/yannisskendros/Desktop/αρχεία  json/Αλκάνια-Αιθάνιο.scenario.json`.
+Created `scenarios/Αλκένια-Αιθένιο.scenario.json` as educational content, no
+application code changes. Preserved seven-step structure and UI settings;
+used ethene for scaffolded αιθ-/εν-/ιο, then ethene/propene/butene_1/butene_2
+for 2D/3D exploration and double-bond locants. Source untouched. Actual v48
+validator in JSC passed all seven steps with zero warnings; all menu molecule
+keys exist. Browser appearance/interaction unverified. No commit or push.
+Next: import new JSON through scenario Import and review in presentation.
+
 # Current resume point — 2026-10-18 — v48 pushed
 
 Migration committed as 52fe2c2 and pushed to personal origin/thesis-work.

@@ -1,5 +1,13 @@
 # Changelog
 
+## [Unreleased] — 2026-10-19 — Alkene teaching scenario
+
+- Add seven-step Αλκένια-Αιθένιο scenario based on the supplied alkane
+  template: ethene name components, four-alkene exploration, 2D/3D.
+- Enable reserveTitleSpace to leave clearance below the presentation bar.
+- Desktop scenario output folder preference recorded; identical deliverable
+  saved there. v48 validation passed; browser title confirmation pending.
+
 ## [Unreleased] — 2026-10-18 — Namelecule v48 local migration
 
 - Import upstream aeb6bf0 v48 with responsive viewers, pinned authoring,

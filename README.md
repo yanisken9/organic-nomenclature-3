@@ -5,7 +5,8 @@ A Greek-first interactive learning platform for organic nomenclature, built arou
 Desinged and developed by Nickolas Charistos
 
 **Current baseline:** v48, migrated locally from the professor's upstream
-commit `aeb6bf0` on 2026-10-18. Browser acceptance and publication are pending.
+commit `aeb6bf0` on 2026-10-18. Published to the personal fork as `52fe2c2`;
+full browser acceptance remains pending.
 **Entry point:** [index.html](index.html) → [Namelecule welcome](design/welcome-proposal.html)
 → [v48 molecule exploration](mulermoc-nom-48.html).
 
@@ -122,3 +123,10 @@ Out of scope for now: quiz SPA, participant logging, CSV export, server-side cla
 - Near-term: **scenario library verification on v44**
 - Rules: secondary explanatory layer; homologous series = database order
 - Research layer: active design (schema v1 in LAYERS-PLAN)
+
+## New teaching scenario — 2026-10-19
+
+[Αλκένια–Αιθένιο](scenarios/Αλκένια-Αιθένιο.scenario.json): seven steps,
+ethene naming and four-alkene 2D/3D exploration. Import through Scenarios.
+Updated title clearance requires re-importing the latest file. Desktop
+scenario deliverables are saved in `/Users/yannisskendros/Desktop/αρχεία  json`.
