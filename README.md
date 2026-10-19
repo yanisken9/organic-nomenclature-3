@@ -12,8 +12,8 @@ full browser acceptance remains pending.
 
 The v48 working copy preserves the Namelecule branding/theme, mint highlights,
 teal numbering, shared 2D centering and scenario title preferences. Upstream's
-responsive viewer sizing, pinned authoring, chemistry and 69-molecule data are
-retained. The previous [v45](mulermoc-nom-45.html) remains runnable.
+responsive viewer sizing and pinned authoring are retained. The current
+71-molecule data includes two local additions and a branch/bond-locant fix. The previous [v45](mulermoc-nom-45.html) remains runnable.
 See [migration review](docs/V48-REVIEW.md) for checks and pending acceptance.
 
 | Layer | File |
@@ -22,7 +22,7 @@ See [migration review](docs/V48-REVIEW.md) for checks and pending acceptance.
 | Viewer | [js/mulermoc-nom-molview-48.js](js/mulermoc-nom-molview-48.js) |
 | Teaching | [js/mulermoc-nom-teaching-48.js](js/mulermoc-nom-teaching-48.js) |
 | Scenarios | [js/mulermoc-nom-scenario-48.js](js/mulermoc-nom-scenario-48.js) |
-| Molecule data (69 molecules) | [js/jsme-nick-nomeclature-moc2-data_48.js](js/jsme-nick-nomeclature-moc2-data_48.js) |
+| Molecule data (71 molecules) | [js/jsme-nick-nomeclature-moc2-data_48.js](js/jsme-nick-nomeclature-moc2-data_48.js) |
 | Theme | [css/namelecule-48.css](css/namelecule-48.css) |
 
 The sections below describe the historical v44 feature baseline and broader
@@ -130,3 +130,15 @@ Out of scope for now: quiz SPA, participant logging, CSV export, server-side cla
 ethene naming and four-alkene 2D/3D exploration. Import through Scenarios.
 Updated title clearance requires re-importing the latest file. Desktop
 scenario deliverables are saved in `/Users/yannisskendros/Desktop/αρχεία  json`.
+
+## Local molecule trial — 2026-10-19
+
+The local v48 now includes **2-methylpropene**, bringing its data to 70 entries.
+This addition is included in the current publication snapshot. See [trial review](docs/METHYLPROPENE-TRIAL.md)
+for full-app checks and removal instructions.
+
+Local v48 also includes 3-methyl-1-butene (71 total working entries), with
+KingDraw-reference layout and an approved naming fix retaining the -1- locant.
+Browser checks passed; user visual acceptance remains pending. Publication
+was authorized as part of saving the full snapshot.
+See [draft review](docs/METHYLBUTENE-TRIAL.md).

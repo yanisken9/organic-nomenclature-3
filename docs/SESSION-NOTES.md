@@ -1,3 +1,125 @@
+# Current resume point — 2026-10-19 — saving/publishing two molecule additions
+
+User explicitly requested saving changes everywhere. Authorized commit/push
+of both molecule additions, KingDraw reference files/preferences, evidence,
+and approved core locant correction to personal origin/thesis-work. All files
+were already saved locally; source KingDraw originals untouched. Detailed
+user visual acceptance was not supplied. Prior actual checks recorded below.
+Preparing full snapshot and checking public deployment. Professor upstream
+is not modified. Preserve notes for next session and the Desktop JSON folder
+preference (scenario outputs only; MOLs live in project mols directories).
+
+# Current resume point — 2026-10-19 — methylbutene naming fix implemented
+
+User approved permanent core correction. In core_48.js/fGuessName,
+hydrocarbon sideBranches block now keeps bondPrefixDB/bondPrefixTB in
+comp1No before branch prefixes replace comp0. Correct name is now
+3-μεθυλο-1-βουτένιο. No other engine/UI edits. All local, uncommitted,
+unpublished (includes earlier two-molecule work).
+Full Firefox with cache bypass: four forms, four numbering labels each,
+methyl 2D/3D selection, stored/algorithmic chains, real menu selection and
+compBondPos click passed; name correct in every form. Existing ethene,
+1-butene, dimethylbutane and methylpropene names retained. Additional synthetic
+MOLs tested IN MEMORY ONLY: branched alkyne locant -1-, diene -1,4-,
+enyne -1- plus -4- retained. Diene test concerns locant slots, not validation
+of the complete existing diene naming engine (output εξδιένιο).
+Core JSC syntax and diff checks passed. Updated screenshots in design/assets.
+See METHYLBUTENE-TRIAL.md for history/provenance. Next user visual acceptance:
+http://127.0.0.1:8013/mulermoc-nom-48.html, hard-refresh, series→alkenes,
+CH2=CHCH(CH3)CH3. No commit/push requested for this change.
+
+# Current resume point — 2026-10-19 — methylbutene trial, naming fix approval pending
+
+User requested same KingDraw-reference style for 3-methyl-1-butene, then
+«πάμε». Created 3 MOLs using reference spacing (C-C1.17/C-H.78, orthogonal
+expanded, zigzag skeletal); added data_48.js registration and PubChem CID11239
+3D SDF. 71 entries. 2D chains [4,3,2,1], 3D [5,4,1,2]. All local/uncommitted.
+Full Firefox four-form numbering/highlight/stored-mode checks passed, but
+existing engine names it 3-μεθυλοβουτένιο, losing -1-. Do NOT mark complete.
+Read docs/METHYLBUTENE-TRIAL.md for exact files, source, tests and proposed
+core fix. Tested fix only in browser memory: preserve unsaturation locants
+in comp1No inside hydrocarbon sideBranches branch; correct name and compBondPos
+click, three old examples unchanged. Core file NOT edited. Await approval for
+material scope expansion to engine before applying permanent fix under AGENTS.
+Firefox test port9223, local v48 port8013. Screenshot evidence saved. No push.
+User's original KingDraw files and previous molecule retained unchanged.
+
+# Current resume point — 2026-10-19 — KingDraw replacements implemented
+
+User approved replacing trial forms with supplied KingDraw files. Updated
+three source MOLs byte-identically from preserved user references, re-embedded
+in data_48.js, stored chains now [3,2,1] in all 2D forms. 3D unchanged.
+JSC: 70 entries, embedded/source equality, syntax passed. Full Firefox app
+checks: correct name in all 4 forms, real menu selection, three numbers per
+form, methyl highlight (Expanded branch carbon 6), stored/algorithmic chains
+[3,2,1], 3D [4,1,2], three existing molecule naming regressions passed.
+Inspected screenshots of Expanded CH3 highlighting and Skeletal numbering;
+saved design/assets/methyl_2_propene-kingdraw-*.png. No engine/UI changes,
+commit or publication. Original user files and reference copies untouched.
+Local v48 at http://127.0.0.1:8013/mulermoc-nom-48.html . Next user refresh
+and inspect desired drawings. Drawing preferences preserved in
+MOLECULE-DRAWING-PREFERENCES.md. Earlier trial notes describe replaced forms.
+
+# Current resume point — 2026-10-19 — user's KingDraw references compared
+
+User disliked generated expanded/skeletal layout and provided 3 KingDraw
+MOLs, then asked to continue comparison. Read and chemically checked all;
+preserved exact reference copies in mols/references/yannis/methyl_propene/.
+See docs/MOLECULE-DRAWING-PREFERENCES.md for observations and future guidance.
+Important: user's double bond 2–3; terminal CH2=atom3, central=2, methyl=1.
+Branch carbon is atom4 in condensed/skeletal but atom6 in expanded. Stored
+2D chains should be [3,2,1], unlike old trial. 3D remains [4,1,2].
+Only reference assets and documentation added; active app still uses previous
+trial drawings. Present concrete replacement plan and await approval per
+AGENTS.md before data_48.js/source replacements. No commit/push.
+
+# Current resume point — 2026-10-19 — methylpropene integrated locally
+
+User approved explicit v48 trial-registration/3D/testing plan. Added only
+methyl_2_propene entry, 3 embedded MOLs and registry line in data_48.js;
+PubChem CID8255 3D SDF added. Existing source MOLs retained. No engine/UI code
+change, commit or publication. Local server on 127.0.0.1:8013 serves full app.
+Firefox headless full-app checks passed: real menu selection, alkenes group,
+2-μεθυλοπροπένιο in four representations, 3 numbering labels per form,
+methyl branch click/3D selection, stored mode, three naming regressions.
+JSC data validation: 70 molecules, embedded/source equality; SDF C4H8/valence.
+Screenshots inspected and saved. See docs/METHYLPROPENE-TRIAL.md for exact
+checks, atom IDs, PubChem source, limits and removal instructions.
+Next: user visual review in local v48 (series → alkenes → CH2=C(CH3)2).
+Public GitHub site does not contain this trial. Resize/export and all chain
+stepper candidates remain untested. Preserve previous scenario work/notes.
+
+# Current resume point — 2026-10-19 — methylpropene JSME rendering tested
+
+User asked to try the generated MOLs. Used isolated /tmp preview, bundled
+JSME, Firefox headless via WebDriver BiDi (no application code modifications).
+All three loaded; exported SVG/MOL for each. Condensed preview also uses exact
+v48 fMakeAnnotatedSkeletal and fAddHydrogens2SVG with carbon H counts [2,0,3,3],
+Snap.svg 0.5.1. Expanded uses v48 carbon annotation; skeletal uses raw MOL.
+Inspected screenshot: condensed CH2=C with two CH3 groups; explicit-H expanded
+and skeletal display. Evidence: design/assets/methyl_2_propene-mol-preview.png.
+Temporary harness/server at /tmp/namelecule-methylpropene-preview, port 8012;
+Firefox remote port 9222. This is isolated rendering, not full app integration,
+naming, highlights or 3D verification. MOLs unchanged. No commit/push.
+Next: present plan for v48 registration, 3D preparation and naming/highlight
+checks, and obtain code-change approval under AGENTS.md.
+
+# Current resume point — 2026-10-19 — 2-methylpropene MOL files generated
+
+User confirmed CH2=C(CH3)2 and requested generation of three MOL forms.
+Created mols/new_molecules/methyl_2_propene_2D_{Condensed,Expanded,Skeletal}.mol
+as source assets; no application code edits, registration, commit or push.
+Hand-authored V2000 coordinates, not ChemDraw/RDKit exports. Common carbon IDs:
+1 terminal CH2, 2 central C, 3 main-chain CH3, 4 methyl substituent;
+main chain [1,2,3]. Expanded H IDs 5–6 on C1, 7–9 on C3, 10–12 on C4.
+Independent fixed-column parsing checked carbon graph identity, C4H8 formula,
+valence (explicitly saturated in expanded), single double bond, atom/bond
+counts, connected tree topology and noncoincident coordinates. No external
+chemistry parser or JSME visual verification performed. No 3D SDF generated.
+Next: review visual rendering, prepare 3D and concrete registration/naming
+verification plan; obtain approval before application code integration per
+AGENTS.md. Scenario deliverable Desktop preference does not apply to MOLs.
+
 # Current resume point — 2026-10-19 — saving all scenario work
 
 User explicitly requested saving everything completed so far, including

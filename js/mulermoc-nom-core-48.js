@@ -2005,6 +2005,10 @@ function fGuessName(skipChainRecalc) {
     if (functionalGroupsList[0] === "hydrocarbon") {
         const sideBranches = fGetHydrocarbonSubstituentInfo()
         if (sideBranches.length > 0) {
+            // Branch locants replace comp0 below. Keep the unsaturation locants
+            // in their dedicated slot (e.g. 3-methyl-1-butene).
+            comp1No = (bondPrefixDB || bondPrefixTB)
+                ? "-" + (bondPrefixDB || bondPrefixTB) : null
             // Group identical alkyl substituents (e.g. two methyls): comma-joined
             // locants + δι-/τρι- count prefix, groups in Greek-alphabetical order
             // of substituent name (same convention as the halogen path below).

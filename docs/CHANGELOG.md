@@ -1,5 +1,27 @@
 # Changelog
 
+### 2026-10-19 — Branched hydrocarbon unsaturation locant fix (local)
+
+- Keep double/triple-bond locants in comp1No when alkyl branch locants
+  replace comp0, restoring 3-μεθυλο-1-βουτένιο and its bond-position UI slot.
+- Firefox checks passed for four forms, numbering, 2D/3D methyl highlights,
+  stored mode and existing examples; synthetic alkyne/diene/enyne locants
+  tested in memory. Core syntax/diff checks passed. Not published.
+
+### 2026-10-19 — User KingDraw forms replace generated trial drawings
+
+- Preserve supplied coordinates/atom IDs; use [3,2,1] stored 2D chains.
+- Rechecked four representations, naming, numbering and branch highlights
+  in Firefox, including the expanded form's branch carbon at atom 6.
+
+## [Unreleased] — 2026-10-19 — Local 2-methylpropene trial
+
+- Register methyl_2_propene with three 2D MOL forms and PubChem CID8255 3D.
+- Existing engine names it 2-μεθυλοπροπένιο and classifies it as an alkene.
+- Full-app Firefox checks cover all four forms, numbering and methyl
+  highlights, stored mode and selected existing molecules. See
+  METHYLPROPENE-TRIAL.md; not published yet.
+
 ## [Unreleased] — 2026-10-19 — Alkene teaching scenario
 
 - Add seven-step Αλκένια-Αιθένιο scenario based on the supplied alkane
@@ -374,3 +396,10 @@ New parallel file set `mulermoc-nom-44.html` + `js/*-44.js` + `css/*-44.css`, co
 
 - Initial upload: organic nomenclature 2 page with assets
 
+
+### Local draft: 3-methyl-1-butene — 2026-10-19
+
+71-entry working data includes new MOL/SDF set in user's reference style.
+Naming engine drops the alkene locant when branch prefixes replace comp0.
+Core fix proposed/tested in browser memory only; draft not release-ready.
+See METHYLBUTENE-TRIAL.md.
