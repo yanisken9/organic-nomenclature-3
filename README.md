@@ -150,3 +150,7 @@ alkyl highlights (72 entries). This and the 2026-10-20 upstream sync are part of
 
 Long molecule names now stay on one line using adaptive font fitting.
 Short names keep their original size. See [font fitting](docs/NAME-FONT-FIT.md).
+
+New local lesson: [Alkene nomenclature with branches](scenarios/Αλκένια-Ονοματολογία-Διακλαδώσεις.scenario.json),
+23 steps from ethene to the three branched alkenes, with 2D/3D exploration.
+Import the JSON; this lesson has not been published yet.

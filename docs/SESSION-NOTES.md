@@ -1,3 +1,186 @@
+# Current resume point - 2026-10-20 - all saves/publication authorized
+
+User requested save everything everywhere, authorizing commit/push/publication.
+Saving all accumulated lesson JSON versions, exact final Desktop original and
+stable library copy, eight-alkyl rule, library/welcome, Exit/Esc return and loading
+screen. Final Desktop and library JSON bytes match22steps. All JSON parses;
+previous actual Firefox feature/flow/error checks passed (details below).
+Preparing commit/push thesis-work to origin; professor upstream untouched.
+Publication verification still pending at time of this note.
+
+# Current resume point - 2026-10-20 - lesson startup loading screen
+
+User approved removing explorer flash when starting lesson. v48 HTML now sets
+lesson-loading class in early head for scenario+present URLs, before app
+scripts/paint. Fixed status overlay hides body siblings with visibility (keeps
+layout measurable). ScenarioGo removes class after successful apply/play menu
+via double RAF. Fetch/validation/apply errors retain overlay with Greek failure
+message and fixed library return link;90s timeout handles stalled initialization.
+Library launch version and scenario script version updated to bypass stale HTML/JS.
+Firefox tested interactive loading state: explorer hidden/overlay flex; successful
+ethene firststep22steps visible; Exit returns library. Missing JSON tested:
+error visible, explorer hidden, return link available. diff check passed.
+Changed v48 HTML, scenario48 JS, library HTML; all local/unpublished.
+
+# Current resume point - 2026-10-20 - user exact Exit URL investigated
+
+User still reports explorer after Exit. Supplied exact local8013 URL includes
+correct scenario,present=1,from=theory-library#step=1. Re-ran Firefox actual
+button/Esc/exact direct URL using default browser cache (not bypass); all
+returned to library. User issue not reproduced; cause remains unconfirmed.
+Added v=library-exit-2 to library launch URL to request fresh HTML. Give user
+fresh versioned direct lesson URL to distinguish an already-open/cached page.
+No publication or further logic changes. Await user result before claiming
+user's issue resolved.
+
+# Current resume point - 2026-10-20 - robust library Exit fallback
+
+User reported Exit still restored explorer (screenshot, URL unknown). Existing
+from flag implementation passed but stale link/cache suspected, not proven.
+Added recognition of stable library scenario path even without from marker.
+Versioned scenario script URL in v48 HTML to invalidate cached script on reload.
+Firefox Exit/Esc via library and old markerless lesson URL all returned to
+library. diff --check passed. Local only; user must reload local library and
+relaunch lesson. Public has not been updated; no commit or push requested.
+
+# Current resume point - 2026-10-20 - library lesson Exit/Esc return
+
+User approved Exit return to theory library. Library launch link adds
+from=theory-library. Scenario URL parser captures fixed flag; boot sets
+returnToTheoryLibrary only for scenario+present library links. Exit helper
+navigates to fixed design/theory-library.html when presenting that lesson;
+Esc uses same helper. No arbitrary redirect URL. Direct/author exits retain
+existing in-place behavior. Actual Firefox button and Escape both returned;
+direct lesson Exit stayed in app with present=false. diff --check passed.
+Changed design/theory-library.html and js/mulermoc-nom-scenario-48.js.
+All local/uncommitted/unpublished; user can refresh library to launch new link.
+
+# Current resume point - 2026-10-20 - library card category moved
+
+User requested ΑΛΚΕΝΙΑ in card mint header instead of ethene formula and
+removal of repeated category above lesson title. Updated only library HTML,
+verified single category occurrence and removed formula markup. Local only.
+
+# Current resume point - 2026-10-20 - theory library implemented locally
+
+User approved welcome → theory library → automatic lesson flow. New
+ design/theory-library.html (mint responsive card,22 steps, return welcome).
+Welcome theory CTA is now direct link instead of proposal dialog. Copied exact
+latest unnumbered Desktop lesson byte-for-byte to stable ASCII URL
+scenarios/alkenes-nomenclature-branches.scenario.json; source untouched.
+Uses existing ?scenario=...&present=1 engine; no engine changes. Firefox actual
+click flow passed, desktop1500/mobile390 no overflow, screenshots generated
+in /tmp/theory-library-{width}.png; mobile visually inspected. Lesson boots
+ethene/step1,22steps/present=true,step18 eight-alkyl table confirmed.
+All local, no commit/push. Next: user reviews local design/theory-library.html;
+publication only upon request. Earlier uncommitted alkyl-rule/scenarios retained.
+
+# Current resume point - 2026-10-20 - version4 step18 alkyl rule
+
+User supplied 4-prefixed lesson and requested alkyl table at18 like9.
+Changed only step18 show.rule=true; existing compSecondSub1/selectedRule=null
+selects contextual eight-alkyl table (ethyl row for this large molecule,
+previously browser-verified). All other JSON values preserved. Saved project
+and Desktop copies, verified byte equality. No app code or publication.
+Re-import version4 in local updated v48 to see table.
+
+# Current resume point - 2026-10-20 - version3 steps16 and17 horizontal chain
+
+User supplied 3-prefixed lesson. Changed only steps16 and17 chainIdx0 to1,
+selecting horizontal atoms1–6 for same large alkene and algorithmic mode
+previously checked in browser. All other values preserved,22 steps retained.
+Saved project and requested Desktop copies, byte equality verified. No app
+code changes, commit or push. Re-import version3 to see update.
+
+# Current resume point - 2026-10-20 - user version2 step15 updated
+
+User supplied 2-prefixed lesson export. Set only step15 chainIdx=1 (horizontal
+parent chain), preserving all other JSON values and22 steps. Saved same-name
+project copy and overwrote requested Desktop file; byte equality verified.
+No app code changes or publication. Re-import version2 JSON to view.
+
+# Current resume point - 2026-10-20 - horizontal parent chain in step15
+
+User requested horizontal six-carbon parent chain in step15. Changed only
+chainIdx from0 to1 in current 1-prefixed22-step lesson, preserving other steps.
+Firefox actual import/play step15 verified idx1 and atoms[1,2,3,4,5,6], with
+numbering from right (double bond2). Copied updated JSON to Desktop scenario
+folder. No application code changes, commit or push. Re-import to see change.
+
+# Current resume point - 2026-10-20 - alkyl reference rule implemented locally
+
+User approved adding reusable8-alkyl table and step9 wiring. teaching_48.js
+builds structures/prefixes/Greek traditional+IUPAC labels; molview chooses
+it for hydrocarbon prefix clicks and highlights current group. Theme CSS
+keeps table within naming column. Core/data unchanged. See ALKYL-RULE.md.
+Latest user Desktop file was renamed to start with1 (full Greek filename
+in /tmp/latest-alkene-lesson-paths.json and project scenarios). Read current
+22-step user export, enabled step9 show.rule, kept all other user edits;
+Desktop/project copies equal. Older user version1 path is no longer present.
+JSC syntax/JSON validation passed. Firefox steps2-4 retained; step9 eight
+rows,methyl highlight,expanded geometry677x346 inside350px panel; screenshot
+inspected/saved. Ethyl/methyl reference rows and Cl FG regression passed.
+Everything local/uncommitted; public remains d3db20e and has NO new alkyl
+table. User must use local v48 and re-import latest JSON. No push requested.
+
+# Current resume point - 2026-10-20 - user's version1 lesson reduced to22 steps
+
+User requested 3D in step22 and removal of step23. Updated exact Desktop
+user-exported version1 file and matching project copy: step22 both viewers
+and both controls enabled, title/note combine 2D/3D exploration; step23 removed.
+Earlier steps preserved, including step1 hidden components and rule panels2-4.
+22 sequential n values and identical copies verified; JSC validation follows.
+No app code changes, commit/push. User must re-import updated version1 JSON.
+Other historical lesson files remain separate and unchanged.
+
+# Current resume point - 2026-10-20 - user's exported lesson step1 name hidden
+
+User supplied Desktop file Alkenia-Onomatologia_kai_diakladoseis1 (Greek actual
+filename). Rules at steps2/3/4 already enabled and correct. User requested
+empty name fields at step1: set styleName.hidden=[comp5,comp6,comp9] and
+nameAnalysisMode=none in that exact Desktop file, preserving other steps.
+Copied updated user's version into project scenarios with same filename.
+Existing renderer shows hidden components as dashes, not literal empty text.
+Re-import required. No application code changes, commit or publication.
+
+# Current resume point - 2026-10-20 - rule panels enabled in lesson steps2-4
+
+User asked for respective first/second/third name-component rules in steps
+2/3/4. Enabled show.rule=true, kept selectedRule=null so contextual component
+rule/table is used (not unrelated general theory indices). Actual Firefox
+verified visible rule areas and selected rows r1-c2,r2-double,r3-hydrocarbons;
+step5 hides rule area as authored. Updated project/Desktop 23-step JSON copies
+verified identical. showStepNumbers=false/title reserve retained. No app code
+change, commit or push. User must re-import updated JSON. Rule title toggles
+open/closed through existing app behavior; no new auto-open implementation.
+
+# Current resume point - 2026-10-20 - lesson heading step numbers disabled
+
+User requested removing duplicated numbering from step headings; top playbar
+already shows progress. Set showStepNumbers=false in the NEW 23-step alkene
+branch lesson, both project and Desktop copies. Byte equality, flag and23-step
+count verified. Individual step n fields and playbar progress retained.
+No app code edits. User must exit/re-import updated JSON to see change.
+No commit/push. Previous notes below describe initial numbered draft.
+
+# Current resume point - 2026-10-20 - 23-step alkene/branch scenario created
+
+User requested an alkene counterpart to supplied Desktop alkane scenario,
+including naming branched alkenes using existing molecules. Created NEW
+scenarios/Alkenia-Onomatologia-Diakladoseis (actual filename is Greek).scenario.json,
+with exact copy in Desktop Greek `archeia  json` output folder. Existing short
+alkene and alkane scenarios untouched. Full filename appears in git status.
+23 steps: first5 ethene scaffold; butene bond locants; 2-methylpropene;
+3-methyl-1-butene; large C10 ethyl/dimethyl alkene group/locants/alphabetical
+order; final 2D exploration and 3D comparison. Progressive component reveals,
+auto group highlights, reserved title clearance. No app code changed.
+JSC:23 steps,no warnings,all keys. Firefox actual FileReader import/Present/
+fScenarioGo walked all23; each molecule/mode matched source, branched names
+correct. Step20 screenshot inspected/saved in design/assets. Wording of main
+chain rule clarified in two text notes after browser walk, then JSON validated
+again. Desktop/project bytes equal. No commit/push/publication requested.
+Next: user import Desktop new JSON into current public v48 and review lesson.
+
 # Current resume point - 2026-10-20 - accepted snapshot committed/pushed
 
 Commit f6916a8 saved the complete accepted snapshot and was pushed successfully

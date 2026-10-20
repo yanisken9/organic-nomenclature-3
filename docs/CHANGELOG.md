@@ -1,5 +1,12 @@
 # Changelog
 
+### 2026-10-20 - Alkyl prefix reference (local)
+
+- Add reusable eight-group alkyl table with structures, attachment bonds,
+  names/prefixes and systematic alternatives; highlight the selected group.
+- Enable it at step9 in latest user lesson. Preserve existing component/FG
+  rules. Syntax, lesson and full Firefox checks passed; see ALKYL-RULE.md.
+
 ### 2026-10-20 - Fit long names with adaptive font (local)
 
 - Keep names on one line; shrink component/plus fonts only as needed.
@@ -428,3 +435,8 @@ New parallel file set `mulermoc-nom-44.html` + `js/*-44.js` + `css/*-44.css`, co
 Naming engine drops the alkene locant when branch prefixes replace comp0.
 Core fix proposed/tested in browser memory only; draft not release-ready.
 See METHYLBUTENE-TRIAL.md.
+
+### 2026-10-20 — Local theory library
+- Welcome theory action opens responsive theory library with22-step alkene lesson.
+- Exact user scenario loads directly in presentation mode through existing URL support.
+- Browser verified desktop/mobile library and end-to-end lesson launch. Not published.

@@ -16,6 +16,7 @@ var MuLERMoCScenario = {
   presentId: null, // scenario being presented (set on Play, cleared on Exit)
   seq: 0, // scenario id sequence
   present: false,
+  returnToTheoryLibrary: false, // library-launched lessons return there on Exit/Esc
   ready: false,
   applyToken: 0, // S2: bumped per fScenarioApply; stale async follow-ups abort
   pending3D: null, // S2: {token, mol, step, done} — name click waits for 3D parse
@@ -2194,6 +2195,10 @@ function fScenarioImportFile(file) {
 // (menu menu-open + both viewers + all bars) via a transient clone — the
 // stored step keeps its authored show.* for a later Export.
 function fScenarioExitPresent() {
+  if (MuLERMoCScenario.present && MuLERMoCScenario.returnToTheoryLibrary) {
+    location.assign("design/theory-library.html");
+    return;
+  }
   MuLERMoCScenario.present = false;
   MuLERMoCScenario.presentId = null;
   MuLERMoCScenario.pending3D = null;
@@ -3333,6 +3338,7 @@ function fScenarioGo(i) {
     ok = false;
   }
   if (!ok) {
+    if (window.fLessonLoadingDone) window.fLessonLoadingDone(true);
     fScenarioToast("Could not apply step " + (i + 1) + ".");
     return;
   }
@@ -3355,6 +3361,7 @@ function fScenarioGo(i) {
   }
   fScenarioPlayUi();
   fScenarioRenderPresentMenu();
+  if (window.fLessonLoadingDone) window.fLessonLoadingDone(false);
 }
 
 // ── per-step Update (authoring): Go → tweak live view → Update ───────────
@@ -3459,7 +3466,7 @@ function fScenarioParseUrl() {
   } catch (e) {
     /* no hash */
   }
-  return { scenario: q.scenario || null, present: q.present === "1", step: step };
+  return { scenario: q.scenario || null, present: q.present === "1", fromTheoryLibrary: q.from === "theory-library", step: step };
 }
 
 function fScenarioBoot() {
@@ -3473,6 +3480,8 @@ function fScenarioBoot() {
   }
   var url = fScenarioParseUrl();
   MuLERMoCScenario.present = url.present;
+  MuLERMoCScenario.returnToTheoryLibrary = !!(url.scenario && url.present &&
+    (url.fromTheoryLibrary || url.scenario === "scenarios/alkenes-nomenclature-branches.scenario.json"));
   fScenarioWhenReady(function () {
     if (url.scenario) {
       // same-origin scenarios/*.json only (validated)
@@ -3488,7 +3497,10 @@ function fScenarioBoot() {
         .then(function (obj) {
           var res = fScenarioValidate(obj);
           res.warnings.forEach(fScenarioToast);
-          if (!res.ok) return;
+          if (!res.ok) {
+            if (window.fLessonLoadingDone) window.fLessonLoadingDone(true);
+            return;
+          }
           var scen = fScenarioNew(res.title || "imported-scenario", true);
       scen.showStepNumbers = res.showStepNumbers;
       scen.reserveTitleSpace = res.reserveTitleSpace;
@@ -3503,6 +3515,7 @@ function fScenarioBoot() {
           });
         })
         .catch(function (e) {
+          if (window.fLessonLoadingDone) window.fLessonLoadingDone(true);
           fScenarioToast("Could not load scenario (needs http(s); use Import on file://).");
         });
     } else {

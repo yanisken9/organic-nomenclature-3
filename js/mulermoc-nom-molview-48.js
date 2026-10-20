@@ -4321,6 +4321,7 @@ function fExplainNameComp() {
 
 function fShowRule(theRule) {
   let ruleText, ruleTable, ruleTitle, myStyle, myClass, myHTML;
+  let alkylRows = null;
   switch (theRule) {
     case "compNumber1":
       if (Object.keys(functionalGroupObj).length > 1) {
@@ -4334,10 +4335,20 @@ function fShowRule(theRule) {
       }
       break;
     case "compSecondSub1":
-      ruleText = namingRules.rule4;
-      ruleTable = namingRules.table4;
-      ruleTitle = "Σειρά ισχύος Χαρακτηριστικών Ομάδων";
+    case "compSecondSub2": {
+      const group = fGetHydrocarbonBranchGroup(theRule === "compSecondSub2" ? 2 : 1);
+      if (group) {
+        ruleText = namingRules.alkylRule;
+        ruleTable = namingRules.alkylTable;
+        ruleTitle = "Ονόματα αλκυλίων και προθέματα";
+        alkylRows = group.names.map(function (name) { return "alkyl-" + name; });
+      } else {
+        ruleText = namingRules.rule4;
+        ruleTable = namingRules.table4;
+        ruleTitle = "Σειρά ισχύος Χαρακτηριστικών Ομάδων";
+      }
       break;
+    }
     case "compCarbonsCount":
       ruleText = namingRules.rule1;
       ruleTable = namingRules.table1;
@@ -4393,6 +4404,12 @@ function fShowRule(theRule) {
   </div>`;
 
   $("#ruleTheoryContainer").html(myHTML);
+
+  if (alkylRows) {
+    alkylRows.forEach(function (key) {
+      $("#ruleContainer [data-row='" + key + "']").addClass("selected");
+    });
+  }
 
   // Key-based highlight: rows carry data-row="rN-key" (see fInitTheory tables).
   // Row order no longer matters — moves/additions need no code changes.

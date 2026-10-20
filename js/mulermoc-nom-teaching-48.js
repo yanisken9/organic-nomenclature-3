@@ -58,6 +58,26 @@ const chemicalClassLabels = {
 
 // ── fInitTheory ───────────────────────────────────────────────────────────
 
+// Reference table: terminal dash marks the bond to the parent chain.
+function fBuildAlkylRuleTable() {
+  const groups = [
+    ["μεθυλο", "–CH<sub>3</sub>", "Μεθύλιο", "μεθυλο-", "methyl"],
+    ["αιθυλο", "–CH<sub>2</sub>–CH<sub>3</sub>", "Αιθύλιο", "αιθυλο-", "ethyl"],
+    ["προπυλο", "–CH<sub>2</sub>–CH<sub>2</sub>–CH<sub>3</sub>", "Προπύλιο (n-)", "προπυλο-", "propyl"],
+    ["ισοπροπυλο", "–CH(CH<sub>3</sub>)<sub>2</sub>", "Ισοπροπύλιο", "ισοπροπυλο-", "propan-2-yl"],
+    ["βουτυλο", "–CH<sub>2</sub>–CH<sub>2</sub>–CH<sub>2</sub>–CH<sub>3</sub>", "Βουτύλιο (n-)", "βουτυλο-", "butyl"],
+    ["ισοβουτυλο", "–CH<sub>2</sub>–CH(CH<sub>3</sub>)<sub>2</sub>", "Ισοβουτύλιο", "ισοβουτυλο-", "2-methylpropyl"],
+    ["sec-βουτυλο", "–CH(CH<sub>3</sub>)–CH<sub>2</sub>–CH<sub>3</sub>", "sec-Βουτύλιο", "sec-βουτυλο-", "butan-2-yl"],
+    ["tert-βουτυλο", "–C(CH<sub>3</sub>)<sub>3</sub>", "tert-Βουτύλιο", "tert-βουτυλο-", "2-methylpropan-2-yl (tert-butyl)"],
+  ];
+  return "<table class='alkylRuleTable'><thead><tr><th scope='col'>Δομή / σύνδεση</th><th scope='col'>Αλκύλιο / πρόθεμα</th></tr></thead><tbody>" +
+    groups.map(function (g) {
+      return "<tr data-row='alkyl-" + g[0] + "'><td class='alkylFormula'>" + g[1] +
+        "</td><td><strong>" + g[2] + "</strong><span class='alkylPrefix'>" + g[3] +
+        "</span><small>IUPAC: " + g[4] + "</small></td></tr>";
+    }).join("") + "</tbody></table><p class='alkylRuleNote'>Τα ισο-, sec- και tert- εμφανίζονται εδώ ως συνήθεις ονομασίες, μαζί με τις αντίστοιχες συστηματικές.</p>";
+}
+
 function fInitTheory() {
   let r0, r1, r2, r3, r4, r1Table, r2Table, r3Table, r4Table;
   r0 =
@@ -249,6 +269,8 @@ function fInitTheory() {
     table2: r2Table,
     table3: r3Table,
     table4: r4Table,
+    alkylRule: "Τα αλκύλια προκύπτουν τυπικά με αφαίρεση ενός ατόμου Η από αλκάνιο. Για το πρόθεμα της διακλάδωσης, το μεθύλιο γίνεται μεθυλο-, το αιθύλιο αιθυλο- κ.ο.κ. Η παύλα αριστερά στον τύπο δείχνει τον δεσμό με την κύρια αλυσίδα, όχι αρνητικό φορτίο.",
+    alkylTable: fBuildAlkylRuleTable(),
     rulesTheory_1_8: rulesTheory_1_8,
   };
 }

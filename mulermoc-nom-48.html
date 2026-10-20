@@ -3,6 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      #lessonLoading { display:none; }
+      html.lesson-loading body > :not(#lessonLoading) { visibility:hidden !important; }
+      html.lesson-loading #lessonLoading { display:flex; position:fixed; inset:0; z-index:2147483647; align-items:center; justify-content:center; flex-direction:column; gap:20px; padding:28px; background:#faf9f5; color:#254c50; font:18px/1.6 system-ui,sans-serif; text-align:center; }
+      #lessonLoading a { color:#254c50; text-underline-offset:5px; }
+    </style>
+    <script>
+      // Runs before app scripts and first paint; preserves layout while loading.
+      (function () {
+        var q = new URLSearchParams(location.search);
+        if (!q.get("scenario") || q.get("present") !== "1") return;
+        document.documentElement.classList.add("lesson-loading");
+        var timer = setTimeout(function () { window.fLessonLoadingDone(true); }, 90000);
+        window.fLessonLoadingDone = function (failed) {
+          clearTimeout(timer);
+          if (failed) {
+            var text = document.getElementById("lessonLoadingText");
+            if (text) text.textContent = "Το μάθημα δεν μπόρεσε να φορτωθεί. Δοκίμασε ξανά από τη βιβλιοθήκη.";
+            return;
+          }
+          requestAnimationFrame(function () { requestAnimationFrame(function () {
+            document.documentElement.classList.remove("lesson-loading");
+          }); });
+        };
+      })();
+    </script>
     <!-- Google tag (gtag.js) -->
     <script
       async
@@ -64,6 +90,10 @@
   </head>
 
   <body>
+    <div id="lessonLoading" role="status" aria-live="polite">
+      <span id="lessonLoadingText">Φόρτωση μαθήματος…</span>
+      <a href="design/theory-library.html">← Επιστροφή στη βιβλιοθήκη</a>
+    </div>
     <!-- Rotate-device prompt (CSS shows this only on portrait phones) -->
     <div id="rotatePrompt">
       <svg
@@ -404,7 +434,7 @@
     <script src="js/mulermoc-nom-core-48.js"></script>
     <script src="js/mulermoc-nom-molview-48.js"></script>
     <script src="js/mulermoc-nom-teaching-48.js"></script>
-    <script src="js/mulermoc-nom-scenario-48.js"></script>
+    <script src="js/mulermoc-nom-scenario-48.js?v=lesson-loading-20261020"></script>
     <script>
       window.JSApplet = window.JSApplet || {};
     </script>

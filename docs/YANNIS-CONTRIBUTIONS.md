@@ -700,3 +700,109 @@ acceptance; actual tests documented in the corresponding review files.
 Accepted snapshot committed as `f6916a8` and pushed to personal
 origin/thesis-work. Published viewer/data/theme/HTML and new SDF match
 the local files. No interactive public-browser test repeated.
+
+## 2026-10-20 - 23-step alkene naming lesson with branches
+
+New scenario builds on supplied alkane scaffold and existing ethene lesson.
+It guides main chain, bond locants, methyl/ethyl groups, multiplicity and
+alphabetical order across all three existing branched alkenes. Existing
+lesson files preserved; new JSON saved in project scenarios and Desktop
+output folder with byte equality. JSC validation and actual Firefox 23-step
+presentation passed. Step20 screenshot saved. No app code, commit or push.
+
+2026-10-20: At user request, disabled heading numbers in the 23-step
+lesson via showStepNumbers=false; top progress remains. Updated Desktop
+and project copies verified identical. Re-import required. No app code change.
+
+2026-10-20: Enabled contextual rules in lesson steps2/3/4. Firefox verified
+correct rule panels and highlighted table rows; Desktop/project JSON copies
+match. Existing rule-title open/close behavior retained. No app code edits.
+
+2026-10-20: Updated user-exported lesson version1: step1 hides ethene
+name components via existing hidden flags. Desktop and project copy saved.
+Existing hidden-box dash rendering retained; other steps unchanged.
+
+2026-10-20: User version1 lesson now has22 steps; final step combines
+2D/3D exploration and controls, replacing separate former step23.
+Desktop and project copies updated; earlier steps preserved.
+
+## 2026-10-20 - Approved alkyl reference rule at step9
+
+Added eight structures/names/prefixes in teaching module, reusable rule
+routing and selected-row highlighting in viewer, compact theme table.
+Enabled step9 rule in latest user-renamed22-step Desktop/project lesson.
+JSC and actual Firefox rule visibility/highlight/geometry/regression passed.
+Source and details in ALKYL-RULE.md. All local, no commit/push.
+
+## 2026-10-20 — Horizontal parent chain at lesson step15
+
+Updated current 1-prefixed alkene lesson chainIdx=1 at step15, selecting the
+horizontal six-carbon chain. Actual Firefox import/play confirmed atoms1–6.
+Saved project and Desktop JSON copies; no app code change or publication.
+
+## 2026-10-20 — Apply step15 chain choice to user version2
+
+Changed only step15 chainIdx from0 to1 in supplied 2-prefixed22-step export.
+Preserved all other values; project/Desktop copies verified identical.
+No code change, commit or push.
+
+## 2026-10-20 — Version3 horizontal chain at steps16 and17
+
+Set chainIdx=1 only at steps16 and17 in supplied 3-prefixed lesson; retained
+all other values. Project/Desktop copies match;22 steps. No code or publication.
+
+## 2026-10-20 — Version4 step18 alkyl reference
+
+Enabled only step18 show.rule in supplied4-prefixed lesson. Existing prefix
+mode uses eight-alkyl table with ethyl selected. Preserved other values and
+verified project/Desktop copies identical. No application change or push.
+
+## 2026-10-20 — Theory library from welcome page
+
+User approved new design/theory-library.html and direct theory CTA in welcome.
+Single responsive alkene lesson card uses exact latest unnumbered Desktop
+export at scenarios/alkenes-nomenclature-branches.scenario.json, with existing
+URL loading/presentation. Welcome obsolete theory dialog entry removed.
+Firefox clicked full flow; desktop1500/mobile390 no overflow, mobile screenshot
+reviewed; automatic first step/ethene/22steps and step18 table verified.
+Source Desktop unchanged; no core changes, commit or publication.
+
+## 2026-10-20 — Library category placement
+
+Moved ΑΛΚΕΝΙΑ into mint card header replacing ethene formula, removed duplicate
+category above title. Checked single occurrence. Local only, no publication.
+
+## 2026-10-20 — Return from library lessons
+
+Approved library launch flag and scenario Exit/Esc fixed return destination.
+Updated library link and scenario48 module. Firefox confirmed Exit and Esc
+return to library, direct lesson exits remain in application. diff check passed.
+No commit or publication.
+
+## 2026-10-20 — Library Exit compatibility
+
+Reported explorer exit led to fixed library-scenario path fallback, alongside
+existing from marker; v48 script URL versioned to refresh cached JS. Browser
+verified button/Esc and older markerless URL return. Cause suspected stale
+link/cache, unconfirmed. No publication.
+
+## 2026-10-20 — Exact user Exit URL check
+
+Exact local URL tested with default cache: button/Esc return correctly in
+Firefox. User issue remains unreproduced. Added version query to library
+launch link to request fresh HTML; awaiting user result. No publication.
+
+## 2026-10-20 — Direct lesson startup without explorer flash
+
+Approved early loading screen for scenario+present links. v48 HTML gates initial
+paint, scenario module reveals after successful first step; errors/timeouts show
+Greek message and library link. Library/script version URLs refreshed. Firefox
+verified loading visibility, firststep ethene/22steps, Exit and missing-file error.
+No commit/publication.
+
+## 2026-10-20 — Save and publish theory library work
+
+User authorized all saves. Include final Desktop export (exact bytes), historical
+lesson versions, alkyl rule, responsive library, welcome links, Exit/Esc routing,
+and loading/error screen. Prior actual browser checks documented above; JSON
+parsing and diff check completed. Commit/push and public verification follow.

@@ -234,3 +234,14 @@ body.scPinned #analysisCol { width: 350px; min-width: 350px; }
   transition: background-color .3s, color .3s, border-color .3s;
 }
 #nameAnalysis .nameCompPlus { font-size: calc(1.5rem * var(--nl-name-scale)); }
+
+/* Alkyl reference uses compact two-column rows in the naming panel. */
+.alkylRuleTable { width: 100%; table-layout: fixed; border-collapse: collapse; font-size: .85rem; }
+.alkylRuleTable th, .alkylRuleTable td { padding: 7px 5px; border: 1px solid var(--nl-line); text-align: left; vertical-align: middle; }
+.alkylRuleTable th:first-child { width: 48%; }
+.alkylRuleTable th { background: var(--nl-mint); }
+.alkylRuleTable tr.selected td { background: var(--nl-mint); box-shadow: inset 0 2px var(--lightBlue), inset 0 -2px var(--lightBlue); }
+.alkylRuleTable .alkylFormula { font-size: .78rem; overflow-wrap: anywhere; }
+.alkylRuleTable .alkylPrefix, .alkylRuleTable small { display: block; margin-top: 3px; }
+.alkylRuleTable small { font-size: .7rem; overflow-wrap: anywhere; color: var(--nl-muted); }
+.alkylRuleNote { font-size: .8rem; line-height: 1.4; }
