@@ -29,6 +29,26 @@ let molZoom2D = MOL_ZOOM_DEFAULT;
 // fViewerHeights2D3D. Set by the Ρυθμίσεις control and per scenario step
 // (show.viewerMaxHeight); scenario owns persistence, this is the live value.
 let viewerMaxH = null;
+// Double-viewer height (v48): null = Auto (the equal split both viewers get
+// today); a number is the COMBINED 2D+3D height when two viewers are visible —
+// each viewer takes half. Applied only when exactly two viewers are visible,
+// in fViewerHeights2D3D. Set by the Ρυθμίσεις control and per scenario step
+// (show.viewerBothHeight); scenario owns persistence, this is the live value.
+let viewerBothH = null;
+// Manual double-viewer slider bounds (v48): the combined 2D+3D height is a
+// fixed 300–1000px range regardless of the live single-viewer ceiling.
+const VIEWER_BOTH_MIN = 300;
+const VIEWER_BOTH_MAX = 1000;
+// Shared viewer min-height floor (v48): a single 150px minimum for BOTH
+// viewers, so a long present note card can never squash them to an unusable
+// size (the page scrolls instead). Mirrored by the CSS min-heights
+// (.JmolContainer / #jsmeNomeclatureSVG) via the `--viewerMinH` custom
+// property, which is set from this constant just below so the two can never
+// drift; the CSS value is only a no-JS fallback.
+const VIEWER_MIN_H = 150;
+try {
+  document.documentElement.style.setProperty("--viewerMinH", VIEWER_MIN_H + "px");
+} catch (eMinH) { /* CSS custom property unavailable */ }
 // B2 owned-shared viewer state: current MOL strings (fDeselectMol/fLoadMol2D).
 let myMol2D = null;
 let myMol3D = null;
@@ -103,6 +123,7 @@ const svgSpeaker = (window.MuLERIcons && window.MuLERIcons.speaker) || "";
 const svgMute = (window.MuLERIcons && window.MuLERIcons.mute) || "";
 const svgStop = (window.MuLERIcons && window.MuLERIcons.stop) || "";
 const svgPlay = (window.MuLERIcons && window.MuLERIcons.playSm) || "";
+const svgAudioDesc = (window.MuLERIcons && window.MuLERIcons.audioDescription) || "";
 const svgNameBox = (window.MuLERIcons && window.MuLERIcons.nameBox) || "";
 const svgNameBoxOff = (window.MuLERIcons && window.MuLERIcons.nameBoxOff) || "";
 const svgNameCross = (window.MuLERIcons && window.MuLERIcons.nameCross) || "";
@@ -171,6 +192,7 @@ function fNameCompBox(boxId, boxClass, displayComp) {
 
 fInitViewerSettingsBtn();
 fInitViewerMaxHeight();
+fInitViewerBothHeight();
 
 // ── jsmeOnLoad ────────────────────────────────────────────────────────────
 
@@ -462,6 +484,7 @@ function fToggleViewerSettings() {
     panel.classList.add("open");
     btn.classList.add("active");
     try { fViewerMaxHeightSync(); } catch (eS) { /* slider sync best-effort */ }
+    try { fViewerBothHeightSync(); } catch (eS2) { /* slider sync best-effort */ }
   }
 }
 
@@ -485,8 +508,8 @@ document.addEventListener("click", function (e) {
 // slider value. Only the live global `viewerMaxH` is set here — scenario
 // steps own persistence (show.viewerMaxHeight). fResizeViewers() recomputes.
 function fViewerMaxHeightFull() {
-  try { return Math.max(200, Math.round(fViewerHeights2D3D(true).full || 0)); }
-  catch (eF) { return 200; }
+  try { return Math.max(VIEWER_MIN_H, Math.round(fViewerHeights2D3D(true).full || 0)); }
+  catch (eF) { return VIEWER_MIN_H; }
 }
 
 function fViewerMaxHeightSync() {
@@ -500,7 +523,7 @@ function fViewerMaxHeightSync() {
     chk.classList.toggle("unselectedCheck", !manual);
   } catch (eC) { /* class toggle best-effort */ }
   var full = fViewerMaxHeightFull();
-  rng.min = "200";
+  rng.min = String(VIEWER_MIN_H);
   rng.max = String(full);
   rng.disabled = !manual;
   var shown;
@@ -510,7 +533,7 @@ function fViewerMaxHeightSync() {
     var vh = fViewerHeights2D3D();
     shown = Math.round(vh.h2 || vh.h3 || Math.round(full / 2));
   }
-  if (shown < 200) shown = 200;
+  if (shown < VIEWER_MIN_H) shown = VIEWER_MIN_H;
   if (shown > full) shown = full;
   rng.value = String(shown);
   if (val) val.textContent = shown + "px";
@@ -522,8 +545,8 @@ function fViewerMaxHeightFromUi() {
   if (!chk || !rng) return;
   if (chk.classList.contains("selectedCheck")) {
     var v = parseInt(rng.value, 10);
-    if (isNaN(v)) v = 240;
-    if (v < 200) v = 200;
+    if (isNaN(v)) v = VIEWER_MIN_H;
+    if (v < VIEWER_MIN_H) v = VIEWER_MIN_H;
     var full = fViewerMaxHeightFull();
     if (v > full) v = full;
     viewerMaxH = v;
@@ -555,6 +578,80 @@ function fInitViewerMaxHeight() {
     rng.addEventListener("input", fViewerMaxHeightFromUi);
   }
   fViewerMaxHeightSync();
+}
+
+// ── double-viewer height control (v48) ───────────────────────────────────
+// Ρυθμίσεις row: a checkbox (unchecked = Auto = the equal split both viewers
+// get today, checked = Manual) plus a fixed slider (see VIEWER_BOTH_MIN/MAX).
+// When two viewers are visible, Manual sets their COMBINED height — each
+// viewer takes half.
+// Only the live global `viewerBothH` is set here — scenario steps own
+// persistence (show.viewerBothHeight). fResizeViewers() recomputes.
+function fViewerBothHeightSync() {
+  var chk = document.getElementById("viewerBothHeightCheck");
+  var rng = document.getElementById("viewerBothHeightRange");
+  var val = document.getElementById("viewerBothHeightVal");
+  if (!chk || !rng) return;
+  var manual = viewerBothH != null;
+  try {
+    chk.classList.toggle("selectedCheck", manual);
+    chk.classList.toggle("unselectedCheck", !manual);
+  } catch (eC) { /* class toggle best-effort */ }
+  rng.min = String(VIEWER_BOTH_MIN);
+  rng.max = String(VIEWER_BOTH_MAX);
+  rng.disabled = !manual;
+  var shown;
+  if (manual) {
+    shown = Math.round(viewerBothH);
+  } else {
+    // Auto: the combined height the equal split currently yields (2D + 3D).
+    var vh = fViewerHeights2D3D();
+    shown = Math.round((vh.h2 || 0) + (vh.h3 || 0) || VIEWER_BOTH_MIN);
+  }
+  if (shown < VIEWER_BOTH_MIN) shown = VIEWER_BOTH_MIN;
+  if (shown > VIEWER_BOTH_MAX) shown = VIEWER_BOTH_MAX;
+  rng.value = String(shown);
+  if (val) val.textContent = shown + "px";
+}
+
+function fViewerBothHeightFromUi() {
+  var chk = document.getElementById("viewerBothHeightCheck");
+  var rng = document.getElementById("viewerBothHeightRange");
+  if (!chk || !rng) return;
+  if (chk.classList.contains("selectedCheck")) {
+    var v = parseInt(rng.value, 10);
+    if (isNaN(v)) v = VIEWER_BOTH_MIN;
+    if (v < VIEWER_BOTH_MIN) v = VIEWER_BOTH_MIN;
+    if (v > VIEWER_BOTH_MAX) v = VIEWER_BOTH_MAX;
+    viewerBothH = v;
+  } else {
+    viewerBothH = null;
+  }
+  fViewerBothHeightSync();
+  try { fResizeViewers(); } catch (eR) { /* resize best-effort */ }
+}
+
+function fInitViewerBothHeight() {
+  var chk = document.getElementById("viewerBothHeightCheck");
+  var rng = document.getElementById("viewerBothHeightRange");
+  if (!chk || !rng) {
+    // Script may run before the static panel is parsed; retry once then bind.
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", fInitViewerBothHeight);
+    }
+    return;
+  }
+  // The generic .checkBoxContainer handler toggles the class on the same
+  // click; defer a tick so the post-toggle state is what we read.
+  if (!chk.dataset.vbhBound) {
+    chk.dataset.vbhBound = "1";
+    chk.addEventListener("click", function () { setTimeout(fViewerBothHeightFromUi, 0); });
+  }
+  if (rng && !rng.dataset.vbhBound) {
+    rng.dataset.vbhBound = "1";
+    rng.addEventListener("input", fViewerBothHeightFromUi);
+  }
+  fViewerBothHeightSync();
 }
 
 // ── fToggleNameSettings ────────────────────────────────────────────────
@@ -3176,6 +3273,58 @@ window.fSaveJmolPng = function () {
 
 // ── fShowNameAnalysis ─────────────────────────────────────────────────────
 
+// Fit the complete name without wrapping or changing its component IDs.
+// Fixed box padding/eye controls stay intact; only label/separator fonts shrink.
+var nameFitFrame = null;
+var nameFitObserver = null;
+var nameFitPanel = null;
+var nameFitFontsBound = false;
+function fFitNameToWidth() {
+  const host = document.querySelector("#nameAnalysis .nameContainer");
+  const row = host && host.querySelector(".nameCompContainer");
+  if (!row || !host.getClientRects().length || host.clientWidth <= 0) return;
+  const style = getComputedStyle(host);
+  const available = host.clientWidth - parseFloat(style.paddingLeft || 0)
+    - parseFloat(style.paddingRight || 0) - 4;
+  if (available <= 0) return;
+  row.style.setProperty("--nl-name-scale", "1");
+  if (row.getBoundingClientRect().width <= available) return;
+  let low = 0, high = 1;
+  for (let i = 0; i < 12; i++) {
+    const mid = (low + high) / 2;
+    row.style.setProperty("--nl-name-scale", String(mid));
+    if (row.getBoundingClientRect().width <= available) low = mid;
+    else high = mid;
+  }
+  row.style.setProperty("--nl-name-scale", String(low));
+}
+function fScheduleNameFit() {
+  const panel = document.getElementById("nameAnalysisContainer");
+  if (panel && panel !== nameFitPanel && typeof ResizeObserver !== "undefined") {
+    if (nameFitObserver) nameFitObserver.disconnect();
+    nameFitPanel = panel;
+    let lastWidth = -1;
+    nameFitObserver = new ResizeObserver(function (entries) {
+      const width = entries[0].contentRect.width;
+      // Font changes alter height; observing only width avoids resize loops.
+      if (width === lastWidth) return;
+      lastWidth = width;
+      fScheduleNameFit();
+    });
+    nameFitObserver.observe(panel);
+  }
+  if (!nameFitFontsBound && document.fonts) {
+    nameFitFontsBound = true;
+    document.fonts.ready.then(fScheduleNameFit);
+    document.fonts.addEventListener("loadingdone", fScheduleNameFit);
+  }
+  if (nameFitFrame !== null) cancelAnimationFrame(nameFitFrame);
+  nameFitFrame = requestAnimationFrame(function () {
+    nameFitFrame = null;
+    fFitNameToWidth();
+  });
+}
+
 function fShowNameAnalysis() {
   let compCount, currComp, displayComp, compBox, nameCompContainer;
   compCount = nameComponentsList.length;
@@ -3192,13 +3341,14 @@ function fShowNameAnalysis() {
   const boxTooltip = window.nameBoxFlag
     ? "Πλαίσια συνθετικών"
     : "Χωρίς πλαίσια συνθετικών";
+  const boxActiveClass = window.nameBoxFlag ? " active" : "";
 
   const toggleNameStyleCross = window.nameCrossFlag ? svgNameCross : svgNameCrossOff;
-  const crossClass = window.nameCrossFlag ? "nameCompPlus" : "nameCompPlus hide";
+  const crossClass = window.nameCrossFlag ? "nameCompPlus " : "nameCompPlus hide";
   const crossTooltip = window.nameCrossFlag
     ? "Διαχωρισμένα συνθετικά"
     : "Ενωμένα συνθετικά";
-
+  const crossActiveClass = window.nameCrossFlag ? " active" : "";
   // Master eye-edit switch: single icon + .active highlight (live-only
   // authoring aid; never stored in steps).
   const toggleNameStyleEye = svgEyeState;
@@ -3221,7 +3371,7 @@ function fShowNameAnalysis() {
   // - radios only (ether, no stepper): single row, radios left / buttons right.
   // - neither: single row, buttons right (as in frozen versions).
   const _stepperHTML = (typeof fChainStepperHTML === "function") ? fChainStepperHTML() : "";
-  const _buttonsHTML = `<button id='narrateAnalysisToggle' class='narrateBtn${narrateActiveClass}' data-tooltip='${toggleTitle}'>${toggleIcon}</button><button id='readNameBtn' class='readNameBtn' data-tooltip='Εκφώνηση ονόματος' >${svgPlay}</button><button id='nameStyleBoxToggle' class='nameStyleBox' data-tooltip='${boxTooltip}'>${toggleNameStyleBox}</button><button id='nameStyleCrossToggle' class='nameStyleCross' data-tooltip='${crossTooltip}'>${toggleNameStyleCross}</button><button id='nameStyleEyeToggle' class='nameStyleEye${eyeActiveClass}' data-tooltip='Ορατότητα συνθετικών'>${toggleNameStyleEye}</button>`;
+  const _buttonsHTML = `<button id='narrateAnalysisToggle' class='narrateBtn${narrateActiveClass}' data-tooltip='${toggleTitle}'>${toggleIcon}</button><button id='readNameBtn' class='readNameBtn' data-tooltip='Εκφώνηση ονόματος' >${svgAudioDesc}</button><button id='nameStyleBoxToggle' class='nameStyleBox ${boxActiveClass}' data-tooltip='${boxTooltip}'>${toggleNameStyleBox}</button><button id='nameStyleCrossToggle' class='nameStyleCross ${crossActiveClass}' data-tooltip='${crossTooltip}'>${toggleNameStyleCross}</button><button id='nameStyleEyeToggle' class='nameStyleEye${eyeActiveClass}' data-tooltip='Ορατότητα συνθετικών'>${toggleNameStyleEye}</button>`;
   var _panelInner = "";
   if (_stepperHTML && etherNamingToggle) {
     _panelInner = `<div id='nameSettingsRowTop'>${_stepperHTML}</div><div id='nameSettingsRowMain'><div class='nsLeft'>${etherNamingToggle}</div><div class='nsRight'>${_buttonsHTML}</div></div>`;
@@ -3403,6 +3553,7 @@ function fShowNameAnalysis() {
   } catch (e) {
     /* scenario absent */
   }
+  fScheduleNameFit();
 }
 
 // ── fClearHighlights ──────────────────────────────────────────────────────
@@ -3611,6 +3762,15 @@ function fExplainNameComp() {
     case "compNumber1":
       nStyle = "";
       myClass = "";
+      const branchGroup_compNumber1 = fGetHydrocarbonBranchGroup(1);
+      if (branchGroup_compNumber1) {
+        myText = fHydrocarbonBranchExplanation(branchGroup_compNumber1, true);
+        numberingFlag = true;
+        fHighlightFG(1);
+        fHighlightFG3D(1);
+        fShowNumbering(0);
+        break;
+      }
       if (nameComponentsList[1] !== null && nameComponentsList[1].length > 0) {
         if (
           nameComponentsList[3] !== null &&
@@ -3717,6 +3877,14 @@ function fExplainNameComp() {
       numberingFlag = false;
       nStyle = "";
       myClass = "";
+      const branchGroup_compSecondSub1 = fGetHydrocarbonBranchGroup(1);
+      if (branchGroup_compSecondSub1) {
+        myText = fHydrocarbonBranchExplanation(branchGroup_compSecondSub1, false);
+        numberingFlag = false;
+        fHighlightFG(1);
+        fHighlightFG3D(1);
+        break;
+      }
       if (
         functionalGroupsList.length === 1 &&
         functionalGroupsList[0] === "ether"
@@ -3760,6 +3928,15 @@ function fExplainNameComp() {
     case "compNumber2":
       nStyle = "";
       myClass = "";
+      const branchGroup_compNumber2 = fGetHydrocarbonBranchGroup(2);
+      if (branchGroup_compNumber2) {
+        myText = fHydrocarbonBranchExplanation(branchGroup_compNumber2, true);
+        numberingFlag = true;
+        fHighlightFG(2);
+        fHighlightFG3D(2);
+        fShowNumbering(0);
+        break;
+      }
       myText = ` Δηλώνει τη θέση της δεύτερης αλφαβητικά δευτερεύουσας Χαρακτηριστικής Ομάδας${fGetSecondaryGroupNounSuffix(2)}.`;
       numberingFlag = true;
 
@@ -3770,6 +3947,14 @@ function fExplainNameComp() {
     case "compSecondSub2":
       nStyle = "";
       myClass = "";
+      const branchGroup_compSecondSub2 = fGetHydrocarbonBranchGroup(2);
+      if (branchGroup_compSecondSub2) {
+        myText = fHydrocarbonBranchExplanation(branchGroup_compSecondSub2, false);
+        numberingFlag = false;
+        fHighlightFG(2);
+        fHighlightFG3D(2);
+        break;
+      }
       myText = ` Δηλώνει το όνομα  της δεύτερης αλφαβητικά δευτερεύουσας Χαρακτηριστικής Ομάδας${fGetSecondaryGroupNounSuffix(2)}.`;
       numberingFlag = false;
       fHighlightFG(2);
@@ -4129,6 +4314,7 @@ function fExplainNameComp() {
   fShowRule(nameAnalysisMode);
   myHTML = `<div class='explainText ${myClass} ' style='${nStyle}'  >${myText}</div>`;
   $("#nameAnalysisExplain").html(myHTML);
+  fScheduleNameFit();
 }
 
 // ── fShowRule ─────────────────────────────────────────────────────────────
@@ -4326,7 +4512,7 @@ function fHighLightMainChainBonds() {
 
 // ── Main-chain stepper (v47, in the name-settings panel) ───────────────────────
 // Compact block: fStepMainChain(dir) + fRenderChainStepper() (+ helpers).
-// Walks the FG-aware longest-chain pool (core mainChainPool, rank-parallel
+// Walks the FG-aware multiple-bond-first pool (core mainChainPool, rank-parallel
 // mainChainPool3D). Swaps the live chain globals and recomputes name +
 // substituents per candidate WITHOUT disturbing teaching state
 // (nameAnalysisMode, boxes, rule theory untouched — stepping only refreshes
@@ -4460,12 +4646,45 @@ function fChainStepperHTML() {
 
 // ── fGetHydrocarbonBranchHighlight ─────────────────────────────────────────
 
-function fGetHydrocarbonBranchHighlight() {
+// Match the same Greek-alphabetical prefix groups used by fGuessName.
+// Slot 2 represents all remaining groups, matching the fused comp2/comp3 boxes.
+function fGetHydrocarbonBranchGroup(slot) {
+  if (!functionalGroupObj || Object.keys(functionalGroupObj).length !== 1 ||
+      !functionalGroupObj.hydrocarbon) return null;
+  const branches = fGetHydrocarbonSubstituentInfo();
+  const names = [...new Set(branches.map(function (b) { return b.name; }))]
+    .sort(function (a, b) { return a < b ? -1 : a > b ? 1 : 0; });
+  const selected = slot === 2 ? names.slice(1) : names.slice(0, 1);
+  const members = branches.filter(function (b) { return selected.includes(b.name); });
+  return members.length ? { names: selected, members: members } : null;
+}
+
+function fHydrocarbonBranchSlot() {
+  return nameAnalysisMode === "compNumber2" || nameAnalysisMode === "compSecondSub2" ? 2 : 1;
+}
+
+function fHydrocarbonBranchExplanation(group, positions) {
+  const locants = [...new Set(group.members.map(function (b) { return b.locant; }))]
+    .sort(function (a, b) { return a - b; }).join(", ");
+  const names = group.names.map(function (name) { return alkylBranchNouns[name] || name; }).join(", ");
+  if (positions) {
+    return group.members.length === 1
+      ? `Δηλώνει τη θέση ${locants} της ανθρακικής διακλάδωσης (${names}).`
+      : `Δηλώνει τις θέσεις ${locants} των ανθρακικών διακλαδώσεων (${names}).`;
+  }
+  return group.members.length === 1
+    ? `Δηλώνει το όνομα της ανθρακικής διακλάδωσης (${names}).`
+    : `Δηλώνει το όνομα και το πλήθος (${group.members.length}) των ανθρακικών διακλαδώσεων (${names}).`;
+}
+
+function fGetHydrocarbonBranchHighlight(slot) {
   if (!Array.isArray(mainChainAtomsList) || mainChainAtomsList.length === 0) {
     return { atoms: [], bonds: [] };
   }
 
   const mainSet = new Set(mainChainAtomsList.map((n) => n - 1));
+  const group = slot ? fGetHydrocarbonBranchGroup(slot) : null;
+  if (slot && !group) return { atoms: [], bonds: [] };
   const atoms = new Set();
   const bonds = new Set();
 
@@ -4488,11 +4707,18 @@ function fGetHydrocarbonBranchHighlight() {
       for (let k = 0; k < ns.length; k++) {
         const nb = ns[k];
         if (nb === parent || allAtomsTypeList[nb] !== "C" || sideSet.has(nb))
-          continue; 
+          continue;
         sideSet.add(nb);
         stack.push(nb);
       }
     }
+
+    // Match by live parent locant and branch size, not by molecule-specific IDs.
+    // This also maps the 2D name groups to the separately numbered 3D SDF.
+    const locant = mainChainAtomsList.indexOf(parent + 1) + 1;
+    if (group && !group.members.some(function (b) {
+      return b.locant === locant && b.length === sideSet.size;
+    })) continue;
 
     for (const node of sideSet) {
       atoms.add(node + 1);
@@ -4544,12 +4770,14 @@ function fGetHydrocarbonBranchHighlight() {
 
 // ── fGetHydrocarbonBranchHighlight3D ──────────────────────────────────────
 
-function fGetHydrocarbonBranchHighlight3D() {
+function fGetHydrocarbonBranchHighlight3D(slot) {
   if (!Array.isArray(mainChainAtoms3D) || mainChainAtoms3D.length === 0) {
     return { atoms: [], bonds: [] };
   }
 
   const mainSet = new Set(mainChainAtoms3D.map((n) => n - 1));
+  const group = slot ? fGetHydrocarbonBranchGroup(slot) : null;
+  if (slot && !group) return { atoms: [], bonds: [] };
   const atoms = new Set();
   const bonds = new Set();
 
@@ -4577,6 +4805,13 @@ function fGetHydrocarbonBranchHighlight3D() {
         stack.push(nb);
       }
     }
+
+    // Match by live parent locant and branch size, not by molecule-specific IDs.
+    // This also maps the 2D name groups to the separately numbered 3D SDF.
+    const locant = mainChainAtoms3D.indexOf(parent + 1) + 1;
+    if (group && !group.members.some(function (b) {
+      return b.locant === locant && b.length === sideSet.size;
+    })) continue;
 
     for (const node of sideSet) {
       atoms.add(node + 1);
@@ -5075,7 +5310,7 @@ function fHighlightFG(FGno) {
   const fgKeys = Object.keys(functionalGroupObj).filter(function (k) {
     return k !== "hydrocarbon";
   });
-  const branch = fGetHydrocarbonBranchHighlight();
+  const branch = fGetHydrocarbonBranchHighlight(fHydrocarbonBranchSlot());
   const allowBranchFallback = [
     "compNumber1",
     "compNumber2",
@@ -5500,7 +5735,7 @@ function fHighlightFG3D(FGno) {
   const fgKeys = Object.keys(functionalGroupObj3D).filter(function (k) {
     return k !== "hydrocarbon";
   });
-  const branch = fGetHydrocarbonBranchHighlight3D();
+  const branch = fGetHydrocarbonBranchHighlight3D(fHydrocarbonBranchSlot());
   const allowBranchFallback = [
     "compNumber1",
     "compNumber2",
@@ -6427,8 +6662,9 @@ function fSetMolVis3D(theVisModel) {
 // heights — that would be circular). Total = viewport minus page chrome;
 // column chrome = every visible viewerCol child except the two viewer
 // hosts (generic, so per-step chrome toggles are honored). Visible viewers
-// split the remainder equally; floors mirror the CSS minimums, the phone
-// landscape cap stays as ceiling. Returns {h2, h3} (0 = hidden).
+// split the remainder equally; both viewers share the VIEWER_MIN_H floor
+// (mirrors the CSS minimums), the phone landscape cap stays as ceiling.
+// Returns {h2, h3} (0 = hidden).
 function fViewerHeights2D3D(raw) {
   var out = { h2: 0, h3: 0, full: 0 };
   try {
@@ -6437,6 +6673,20 @@ function fViewerHeights2D3D(raw) {
     if (h1 && h1.offsetParent !== null) total -= h1.offsetHeight;
     var cred = document.getElementById("creditsUs");
     if (cred && cred.offsetParent !== null) total -= cred.offsetHeight;
+    // Per-step note card (presentation only): a flow sibling above the app
+    // columns, so its full vertical footprint (incl. its net margins) must
+    // leave the viewer budget — otherwise a two-viewer present step with a
+    // note overflows the page. Hidden in authoring → offsetParent is null.
+    var stepTxt = document.getElementById("scStepText");
+    if (stepTxt && stepTxt.offsetParent !== null) {
+      var sTxtH = stepTxt.offsetHeight, sTxtMT = 0, sTxtMB = 0;
+      try {
+        var sTxtCs = window.getComputedStyle(stepTxt);
+        sTxtMT = parseFloat(sTxtCs.marginTop) || 0;
+        sTxtMB = parseFloat(sTxtCs.marginBottom) || 0;
+      } catch (eSTxt) { /* computed style unavailable */ }
+      total -= (sTxtH + sTxtMT + sTxtMB);
+    }
     total -= 30; // page margins / gaps
     var vc = document.getElementById("viewerCol");
     var chrome = 0;
@@ -6486,8 +6736,8 @@ function fViewerHeights2D3D(raw) {
     // right now — the slider ceiling in Ρυθμίσεις.
     var eachFull = shareFor(1);
     out.full = Math.max(
-      show2D ? Math.max(eachFull, 200) : 0,
-      show3D ? Math.max(eachFull, 120) : 0
+      show2D ? Math.max(eachFull, VIEWER_MIN_H) : 0,
+      show3D ? Math.max(eachFull, VIEWER_MIN_H) : 0
     );
     var maxViewerH =
       window.innerHeight < 430 ? Math.floor(window.innerHeight * 0.3) : Infinity;
@@ -6498,23 +6748,33 @@ function fViewerHeights2D3D(raw) {
     // nor exceed the space one viewer can actually take. `raw` skips the cap
     // (used to measure the full height for the slider ceiling).
     var cap2 = Infinity, cap3 = Infinity;
-    if (n === 1 && !raw) {
+    // Double visible viewers: an explicit COMBINED total overrides the equal
+    // split for BOTH — each viewer gets half the combined 2D+3D height (it can
+    // grow or shrink; the page scrolls if the total no longer fits). Auto
+    // (viewerBothH == null) keeps the split. The phone cap still trims.
+    var each2 = each, each3 = each;
+    if (!raw && n === 2 && viewerBothH != null) {
+      var total = Math.round(viewerBothH);
+      if (total < VIEWER_BOTH_MIN) total = VIEWER_BOTH_MIN;
+      if (total > VIEWER_BOTH_MAX) total = VIEWER_BOTH_MAX;
+      each2 = each3 = Math.round(total / 2);
+    } else if (n === 1 && !raw) {
       var autoCap = shareFor(2);
       if (show2D) {
         cap2 = viewerMaxH != null ? viewerMaxH : autoCap;
-        var single2 = Math.max(each, 200);
-        if (cap2 < 200) cap2 = 200;
+        var single2 = Math.max(each, VIEWER_MIN_H);
+        if (cap2 < VIEWER_MIN_H) cap2 = VIEWER_MIN_H;
         if (cap2 > single2) cap2 = single2;
       }
       if (show3D) {
         cap3 = viewerMaxH != null ? viewerMaxH : autoCap;
-        var single3 = Math.max(each, 120);
-        if (cap3 < 120) cap3 = 120;
+        var single3 = Math.max(each, VIEWER_MIN_H);
+        if (cap3 < VIEWER_MIN_H) cap3 = VIEWER_MIN_H;
         if (cap3 > single3) cap3 = single3;
       }
     }
-    if (show2D) out.h2 = Math.min(Math.max(each, 200), cap2, maxViewerH);
-    if (show3D) out.h3 = Math.min(Math.max(each, 120), cap3, maxViewerH);
+    if (show2D) out.h2 = Math.min(Math.max(each2, VIEWER_MIN_H), cap2, maxViewerH);
+    if (show3D) out.h3 = Math.min(Math.max(each3, VIEWER_MIN_H), cap3, maxViewerH);
   } catch (eH) { /* measuring unavailable */ }
   return out;
 }

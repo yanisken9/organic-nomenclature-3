@@ -165,6 +165,7 @@ function fScenarioG(name, fallback) {
       case "atomColorMode2D": return typeof atomColorMode2D !== "undefined" ? atomColorMode2D : fallback;
       case "molZoom2D": return typeof molZoom2D !== "undefined" ? molZoom2D : fallback;
       case "viewerMaxH": return typeof viewerMaxH !== "undefined" ? viewerMaxH : fallback;
+      case "viewerBothH": return typeof viewerBothH !== "undefined" ? viewerBothH : fallback;
       case "mainChainPoolIdx": return typeof mainChainPoolIdx !== "undefined" ? mainChainPoolIdx : fallback;
       case "nameSettingsFlag": return typeof nameSettingsFlag !== "undefined" ? nameSettingsFlag : fallback;
       case "narrateAnalysisFlag": return typeof narrateAnalysisFlag !== "undefined" ? narrateAnalysisFlag : fallback;
@@ -187,6 +188,72 @@ function fScenarioToast(msg) {
   setTimeout(function () {
     t.classList.remove("show");
   }, 2600);
+}
+
+// Destructive-action guard: a small modal confirm (singleton, like the toast).
+// ESC / overlay click / Άκυρο cancel; focus lands on the safe button first.
+// Used before deleting a scenario and before deleting a step.
+var fScenarioConfirmEl = null;
+var fScenarioConfirmKey = null;
+var fScenarioConfirmYes = null;
+function fScenarioConfirmClose() {
+  var ov = fScenarioConfirmEl;
+  if (ov) ov.classList.remove("show");
+  if (fScenarioConfirmKey) {
+    document.removeEventListener("keydown", fScenarioConfirmKey, true);
+    fScenarioConfirmKey = null;
+  }
+  fScenarioConfirmYes = null;
+}
+function fScenarioConfirmBuild() {
+  var ov = document.createElement("div");
+  ov.id = "scenarioConfirm";
+  ov.setAttribute("role", "dialog");
+  ov.setAttribute("aria-modal", "true");
+  ov.innerHTML =
+    "<div class='scConfirmPanel'>" +
+      "<div class='scConfirmMsg'></div>" +
+      "<div class='scConfirmBtns'>" +
+        "<button type='button' class='scConfirmNo'>Άκυρο</button>" +
+        "<button type='button' class='scConfirmYes'>Διαγραφή</button>" +
+      "</div>" +
+    "</div>";
+  document.body.appendChild(ov);
+  fScenarioConfirmEl = ov;
+  return ov;
+}
+function fScenarioConfirm(msg, onYes, yesLabel) {
+  var ov = fScenarioConfirmEl;
+  if (!ov || !document.body.contains(ov)) ov = fScenarioConfirmBuild();
+  var msgEl = ov.querySelector(".scConfirmMsg");
+  var noBtn = ov.querySelector(".scConfirmNo");
+  var yesBtn = ov.querySelector(".scConfirmYes");
+  if (msgEl) msgEl.textContent = msg || "";
+  if (yesBtn) yesBtn.textContent = yesLabel || "Διαγραφή";
+  fScenarioConfirmYes = (typeof onYes === "function") ? onYes : null;
+  if (yesBtn) yesBtn.onclick = function (e) {
+    if (e && e.stopPropagation) e.stopPropagation();
+    var fn = fScenarioConfirmYes;
+    fScenarioConfirmClose();
+    if (fn) fn();
+  };
+  if (noBtn) noBtn.onclick = function (e) {
+    if (e && e.stopPropagation) e.stopPropagation();
+    fScenarioConfirmClose();
+  };
+  // Click on the dim backdrop (not the panel) cancels.
+  ov.onclick = function (e) { if (e.target === ov) fScenarioConfirmClose(); };
+  // Capture phase so ESC cancels the dialog without also closing the author bar.
+  fScenarioConfirmKey = function (e) {
+    if (e.key === "Escape") {
+      if (e.preventDefault) e.preventDefault();
+      if (e.stopPropagation) e.stopPropagation();
+      fScenarioConfirmClose();
+    }
+  };
+  document.addEventListener("keydown", fScenarioConfirmKey, true);
+  ov.classList.add("show");
+  if (noBtn && noBtn.focus) noBtn.focus();
 }
 
 // ── readiness: wait for JSME applet + data + entry points ──────────────
@@ -352,6 +419,7 @@ function fScenarioCapture() {
       viewerSettings: false,
       viewers: { "2D": fScenarioViewerOn("2D"), "3D": fScenarioViewerOn("3D") },
       viewerMaxHeight: fScenarioValidViewerMaxHeight(fScenarioG("viewerMaxH", null)),
+      viewerBothHeight: fScenarioValidViewerBothHeight(fScenarioG("viewerBothH", null)),
       controls: { "2D": false, "3D": false },
       save: { "2D": false, "3D": false },
       naming: true,
@@ -432,6 +500,18 @@ function fScenarioValidViewerMaxHeight(v) {
   if (n > 800) return 800;
   return n;
 }
+// Double-viewer height (v48): additive optional show.viewerBothHeight. null/
+// empty = Auto (the equal split both viewers get today). COMBINED 2D+3D height
+// when two are visible (each viewer takes half), clamped to the VIEWER_BOTH_MIN
+// –VIEWER_BOTH_MAX range; invalid → null. No schema change (scenarioVersion 1).
+function fScenarioValidViewerBothHeight(v) {
+  if (v === null || typeof v === "undefined" || v === "") return null;
+  var n = parseInt(v, 10);
+  if (isNaN(n)) return null;
+  if (n < VIEWER_BOTH_MIN) return VIEWER_BOTH_MIN;
+  if (n > VIEWER_BOTH_MAX) return VIEWER_BOTH_MAX;
+  return n;
+}
 function fScenarioApplyStepFontSize(step) {
   var p = null;
   try { p = document.getElementById("scStepText"); } catch (e) { /* no DOM */ }
@@ -439,7 +519,7 @@ function fScenarioApplyStepFontSize(step) {
   var px = step && step.styleText ? fScenarioValidFontSizePx(step.styleText.fontSizePx) : null;
   p.style.fontSize = px ? px + "px" : "";
   var w = step && step.styleText ? fScenarioValidTextWidthPx(step.styleText.textWidthPx) : null;
-  p.style.maxWidth = w ? w + "px" : "";
+  p.style.width = w ? w + "px" : "";
   // Columns via class (not inline): the small-screen collapse lives in CSS
   // media queries, which cannot beat an inline column-count.
   var two = !!(step && step.styleText && fScenarioValidColumns(step.styleText.columns) === 2);
@@ -447,14 +527,18 @@ function fScenarioApplyStepFontSize(step) {
     if (p.classList) p.classList.toggle("scCols2", two);
   } catch (e) { /* no DOM */ }
 }
-// Apply a step's stored single-viewer max height to the live molview global
-// and re-fit the viewers. applyViewerMax(null) resets to Auto. Fsync mirrors
-// the value back into the Ρυθμίσεις control when it exists.
+// Apply a step's stored single-viewer max height and double-viewer height to
+// the live molview globals and re-fit the viewers. null resets each to Auto.
+// The Fsync calls mirror the values back into the Ρυθμίσεις controls when
+// they exist.
 function fScenarioApplyViewerMaxHeight(step) {
   var h = step && step.show ? fScenarioValidViewerMaxHeight(step.show.viewerMaxHeight) : null;
   try { viewerMaxH = h; } catch (eV) { /* global unavailable */ }
+  var hb = step && step.show ? fScenarioValidViewerBothHeight(step.show.viewerBothHeight) : null;
+  try { viewerBothH = hb; } catch (eVb) { /* global unavailable */ }
   try { if (typeof fResizeViewers === "function") fResizeViewers(); } catch (eR) { /* resize unavailable */ }
   try { if (typeof fViewerMaxHeightSync === "function") fViewerMaxHeightSync(); } catch (eU) { /* UI best-effort */ }
+  try { if (typeof fViewerBothHeightSync === "function") fViewerBothHeightSync(); } catch (eUb) { /* UI best-effort */ }
 }
 function fScenarioValidMenuGroups(g) {  var out = [];
   (Array.isArray(g) ? g : []).forEach(function (m) {
@@ -485,6 +569,7 @@ function fScenarioDefaults(step, i) {
       menu: false, viewerButtons: false, viewerSettings: false,
       viewers: { "2D": true, "3D": true },
       viewerMaxHeight: null,
+      viewerBothHeight: null,
       controls: { "2D": false, "3D": false },
       save: { "2D": false, "3D": false },
       naming: true, nameSettings: false, nameEye: false, audio: false, rule: false, text: true,
@@ -501,6 +586,11 @@ function fScenarioDefaults(step, i) {
   // path warns on non-empty invalid input.
   out.show.viewerMaxHeight = fScenarioValidViewerMaxHeight(
     out.show.viewerMaxHeight === undefined ? null : out.show.viewerMaxHeight
+  );
+  // Double-viewer height: normalize silently (null = Auto); the validate path
+  // warns on non-empty invalid input.
+  out.show.viewerBothHeight = fScenarioValidViewerBothHeight(
+    out.show.viewerBothHeight === undefined ? null : out.show.viewerBothHeight
   );
   // removed 2026-10-06 (not in this phase): legacy files may still carry
   // externalLinks / show.infoHost — strip silently, no warning.
@@ -552,7 +642,7 @@ function fScenarioValidate(obj) {
     }
     var _rawW = s && s.styleText ? s.styleText.textWidthPx : null;
     if (_rawW !== null && typeof _rawW !== "undefined" && String(_rawW) !== "" && fScenarioValidTextWidthPx(_rawW) === null) {
-      warnings.push("Step " + (i + 1) + ": invalid text width discarded (default 980px used).");
+      warnings.push("Step " + (i + 1) + ": invalid text width discarded (default auto used).");
     }
     var _rawC = s && s.styleText ? s.styleText.columns : null;
     if (_rawC !== null && typeof _rawC !== "undefined" && String(_rawC) !== "" && fScenarioValidColumns(_rawC) === null && String(_rawC) !== "1") {
@@ -561,6 +651,10 @@ function fScenarioValidate(obj) {
     var _rawVMH = s && s.show ? s.show.viewerMaxHeight : null;
     if (_rawVMH !== null && typeof _rawVMH !== "undefined" && String(_rawVMH) !== "" && fScenarioValidViewerMaxHeight(_rawVMH) === null) {
       warnings.push("Step " + (i + 1) + ": invalid viewer height discarded (Auto used).");
+    }
+    var _rawVBH = s && s.show ? s.show.viewerBothHeight : null;
+    if (_rawVBH !== null && typeof _rawVBH !== "undefined" && String(_rawVBH) !== "" && fScenarioValidViewerBothHeight(_rawVBH) === null) {
+      warnings.push("Step " + (i + 1) + ": invalid double-viewer height discarded (Auto used).");
     }
     var rawMoveto = st.view3D && st.view3D.moveto ? st.view3D.moveto : null;
     st.view3D.moveto = fScenarioValidMoveto(st.view3D.moveto);
@@ -731,6 +825,7 @@ function fScenarioStashAuthorSettings() {
     nameEyeEdit: window.nameEyeEdit === true,
     zoom: (typeof molZoom2D !== "undefined" ? molZoom2D : 2.0),
     viewerMaxHeight: (typeof viewerMaxH !== "undefined" ? viewerMaxH : null),
+    viewerBothHeight: (typeof viewerBothH !== "undefined" ? viewerBothH : null),
   };
 }
 
@@ -757,8 +852,10 @@ function fScenarioRestoreAuthorSettings() {
   // have overwritten it). Re-fit the viewers, then mirror into the control.
   try {
     if (typeof viewerMaxH !== "undefined") viewerMaxH = fScenarioValidViewerMaxHeight(a.viewerMaxHeight);
+    if (typeof viewerBothH !== "undefined") viewerBothH = fScenarioValidViewerBothHeight(a.viewerBothHeight);
     if (typeof fResizeViewers === "function") fResizeViewers();
     if (typeof fViewerMaxHeightSync === "function") fViewerMaxHeightSync();
+    if (typeof fViewerBothHeightSync === "function") fViewerBothHeightSync();
   } catch (eVMH) {
     /* viewer height restore best-effort */
   }
@@ -1770,8 +1867,15 @@ function fScenarioChrome(show) {
   var c3 = show.controls && show.controls["3D"] === true && show3D;
   fScenarioShowBar("radio2DMode", !(present && !c2));
   fScenarioShowBar("controls3D", !(present && !c3));
-  fScenarioHide("save2DBtn", present && !(show.save && show.save["2D"] === true && show2D));
-  fScenarioHide("save3DBtn", present && !(show.save && show.save["3D"] === true && show3D));
+  // Save-image buttons ride their control bar: the per-step "2D/3D ρυθμίσεις"
+  // checkbox (`show.controls`) is the only authoring UI, so a checked bar must
+  // also surface its save button. Legacy `show.save` stays an independent OR
+  // trigger. Class-aware like the bars above (a stale `hide` class from a
+  // no-viewer exit would otherwise defeat the inline-display restore).
+  var save2On = !!c2 || (show.save && show.save["2D"] === true && show2D);
+  var save3On = !!c3 || (show.save && show.save["3D"] === true && show3D);
+  fScenarioShowBar("save2DBtn", !(present && !save2On));
+  fScenarioShowBar("save3DBtn", !(present && !save3On));
   // title-bar chrome: always hidden in presentation
   fScenarioHide("viewerVisBtns", present);
   fScenarioHide("viewerSettingsBtnDiv", present);
@@ -1800,6 +1904,13 @@ function fScenarioChrome(show) {
   var _txtStep = fScenarioPresent().steps[fScenarioPresent().index];
   fScenarioFillStepPanel(_txtStep);
   fScenarioHide("scStepText", !present || !showNoteOn(_txtStep));
+  // The step apply fits the viewers earlier (fScenarioApplyViewerMaxHeight),
+  // before this step's text card is written — so re-fit now that the card's
+  // height (or its absence) is known, letting a two-viewer present step
+  // reserve room for the note. offsetHeight read forces the fresh layout.
+  if (present) {
+    try { if (typeof fResizeViewers === "function") fResizeViewers(); } catch (eRT) { /* resize best-effort */ }
+  }
   // own UI: author bar + drawer follow authoring mode; the edge tab
   // hides only in presentation (see fScenarioSyncAuthorUi)
   fScenarioSyncAuthorUi();
@@ -1817,18 +1928,32 @@ function fScenarioChrome(show) {
 function fScenarioSetAuthoring(on) {
   MuLERMoCScenario.authoring = !!on;
   if (!MuLERMoCScenario.authoring) {
-    if (MuLERMoCScenario.pinned) fScenarioSetPinned(false);
     MuLERMoCScenario.menuPickMode = false;
-    // Close the bar alone in this frame so its slide animates cleanly
-    // (same sequencing as the Play close); teardown after it lands.
-    fScenarioSyncAuthorUi(true);
-    setTimeout(function () {
+    var teardown = function () {
       var drs = document.querySelectorAll(".scenarioDrawer");
       for (var di = 0; di < drs.length; di++) drs[di].classList.remove("open");
       var lbs = document.querySelectorAll(".scList");
       for (var lbi = 0; lbi < lbs.length; lbi++) lbs[lbi].classList.remove("active");
       fScenarioPaintPickUi();
-    }, 260);
+    };
+    // Pinned close: slide the still-DOCKED bar out first (pinned CSS has
+    // transition:none, so there is no CSS race), then unpin + hide + teardown
+    // from the onDone callback while the bar is held off-screen. Keeping
+    // `.open` set for the whole slide (removing it only in onDone) is what
+    // avoids the old remove-then-re-add toggle that flashed close→open→close.
+    if (MuLERMoCScenario.pinned) {
+      if (fScenarioSlideBar(-1, function () {
+        fScenarioSetPinned(false);
+        fScenarioSyncAuthorUi(true);
+        teardown();
+      })) return;
+      // no WAAPI / reduced motion: fall back to the original unpin-then-CSS.
+      fScenarioSetPinned(false);
+    }
+    // Unpinned (or fallback): close the bar alone in this frame so its slide
+    // animates cleanly; teardown after it lands.
+    fScenarioSyncAuthorUi(true);
+    setTimeout(teardown, 260);
     return;
   }
   fScenarioSyncAuthorUi();
@@ -1898,6 +2023,51 @@ function fScenarioApplyPinPref() {
   if (!MuLERMoCScenario.pinPref || MuLERMoCScenario.pinned) return;
   if (!document.getElementById("scenarioAuthorBar")) return;
   fScenarioSetPinned(true);
+  // Dock reparents the bar and .open lands in the same task, so the CSS
+  // transition never sees a clean closed→open pair (reparenting suppresses
+  // it) — WAAPI drives the visible motion instead. Only bar-return paths call
+  // this helper; the direct pin-button dock stays instant (no animation).
+  fScenarioSlideBar(1);
+}
+
+function fScenarioReduceMotion() {
+  try { return window.matchMedia("(prefers-reduced-motion: reduce)").matches; }
+  catch (e) { return false; }
+}
+
+// Pinned bar slide (dir: 1 = in, -1 = out). WAAPI is imperative, so the
+// reparent/same-task .open timing that defeats the CSS transition can't
+// suppress it. `.open` stays the state authority (visibility + final
+// transform); unsupported/no-WAAPI or reduced-motion just snaps via CSS.
+// Returns true when the animation was started (callers fall back on false).
+// onDone (out only) runs while the fill still holds the off-screen end pose —
+// the caller flips pin/hidden state there so nothing re-appears mid-close.
+function fScenarioSlideBar(dir, onDone) {
+  var bar = document.getElementById("scenarioAuthorBar");
+  if (!bar) return false;
+  if (!window.Animation || !bar.animate || fScenarioReduceMotion()) return false;
+  var kf = dir < 0
+    ? [{ transform: "none" }, { transform: "translateX(100%)" }]
+    : [{ transform: "translateX(100%)" }, { transform: "none" }];
+  try {
+    // Disable the CSS transition FIRST (before any style flush) so toggling
+    // .open can never arm a parallel CSS transition alongside the WAAPI slide.
+    bar.style.transition = "none";
+    // Drop any in-flight slide (rapid reopen during a close) so a stale
+    // fill:forwards animation + its onfinish can't fight the new state.
+    try { bar.getAnimations().forEach(function (an) { an.cancel(); }); } catch (eAn) { /* older engines */ }
+    bar.classList.add("open");
+    // Out: hold the end pose (fill) so onDone's state flip (unpin + remove
+    // .open) happens off-screen with no flash; then cancel so the base closed
+    // CSS (translateX(100%) + hidden) takes over cleanly.
+    var a = bar.animate(kf, { duration: 250, easing: "ease", fill: dir < 0 ? "forwards" : "none" });
+    a.onfinish = function () {
+      try { if (dir < 0 && typeof onDone === "function") onDone(); } catch (eDone) { /* teardown best-effort */ }
+      try { a.cancel(); } catch (eCancel) { /* already gone */ }
+      bar.style.transition = "";
+    };
+    return true;
+  } catch (e) { bar.style.transition = ""; return false; /* leave to CSS */ }
 }
 
 // ── pinned scroll cues (v48) ────────────────────────────────────────────
@@ -2244,7 +2414,12 @@ function fScenarioBuildUi() {
     });
     $(document).on("click", ".scenarioPanel .scDelete", function () {
       var id = fScenarioPanelIdFromEl(this);
-      if (id) fScenarioDelete(id);
+      if (!id) return;
+      var sc = fScenarioGet(id);
+      var title = (sc && sc.title) ? sc.title : "χωρίς τίτλο";
+      fScenarioConfirm("Διαγραφή σεναρίου «" + title + "»; Τα βήματά του θα χαθούν.", function () {
+        fScenarioDelete(id);
+      });
     });
     $(document).on("click", ".scenarioPanel", function (e) {
       var id = this.getAttribute && this.getAttribute("data-scenario-id");
@@ -2284,6 +2459,10 @@ function fScenarioBuildUi() {
     // markup for no-registry resilience); tooltip + onclick below untouched.
     var _pinBtn = document.getElementById("scPin");
     if (_pinBtn && window.MuLERIcons && window.MuLERIcons.pin) _pinBtn.innerHTML = window.MuLERIcons.pin;
+    // Close-bar button: registry SVG replaces the text fallback (kept in the
+    // markup for no-registry resilience); tooltip + onclick below untouched.
+    var _closeBtn = document.getElementById("scCloseBar");
+    if (_closeBtn && window.MuLERIcons && window.MuLERIcons.closePanel) _closeBtn.innerHTML = window.MuLERIcons.closePanel;
     document.getElementById("scNew").onclick = function () {
       if (fScenarioEmptyCount() >= MuLERMoCScenario.maxEmptyScenarios) {
         fScenarioToast("Fill an empty scenario first (max " + MuLERMoCScenario.maxEmptyScenarios + " empty).");
@@ -2482,6 +2661,7 @@ function fScenarioBuildPanels() {
     fScenarioPaintIconTextBtn(panel.querySelector(".scSave"), "addTask", "Add step");
     fScenarioPaintIconTextBtn(panel.querySelector(".scExport"), "downloadList", "Export");
     fScenarioPaintIconTextBtn(panel.querySelector(".scPresent"), "screen", "Play");
+    fScenarioPaintIconBtn(panel.querySelector(".scDelete"), "deleteStep", "Διαγραφή σεναρίου");
     host.appendChild(panel);
   });
   fScenarioRenderList();
@@ -2597,7 +2777,7 @@ function fScenarioRenderOne(scen) {
       "<span id='scStep" + i + "' class='scStepNumberWrap'>" +
       "<span class='stepNumber'>" + st.n + "</span></span><span class='scStepTitleWrap'><span class='scStepTitleLabel'>Τίτλος βήματος</span><input type='text' class='scStepTitle' placeholder='Τίτλος βήματος' value=''></span>" +
       "<button data-tooltip='Προεπισκόπηση'>Go</button><button class='scUpdate' data-tooltip='Ενημέρωση βήματος από την τρέχουσα προβολή'>Update</button><button class='scDupe' data-tooltip='Διπλασιασμός βήματος'>⧉</button><button data-tooltip='Επάνω'>↑</button><button data-tooltip='Κάτω'>↓</button>" +
-      "<button data-tooltip='Διαγραφή'>✕</button>";
+      "<button class='delete' data-tooltip='Διαγραφή'>✕</button>";
     // Grip first so it leads the row; mousedown on it arms HTML5 drag
     // (row stays non-draggable otherwise so inputs/textareas keep working).
     if (row.firstChild) row.insertBefore(grip, row.firstChild);
@@ -2613,7 +2793,7 @@ function fScenarioRenderOne(scen) {
       var ab = row.querySelectorAll("button");
       var defs = [
         ["play", "Προεπισκόπηση"], ["reset", "Ενημέρωση βήματος από την τρέχουσα προβολή"], ["copy", "Διπλασιασμός βήματος"],
-        ["arrowUp", "Επάνω"], ["arrowDown", "Κάτω"], ["closeSmall", "Διαγραφή"]
+        ["arrowUp", "Επάνω"], ["arrowDown", "Κάτω"], ["deleteStep", "Διαγραφή"]
       ];
       for (var k = 0; k < defs.length && k < ab.length; k++) {
         var ic = (window.MuLERIcons && window.MuLERIcons[defs[k][0]]) || null;
@@ -2762,7 +2942,7 @@ function fScenarioRenderOne(scen) {
       wInput.title = "Πλάτος κειμένου στην παρουσίαση (px) (320–1200)";
       var curW = st.styleText ? fScenarioValidTextWidthPx(st.styleText.textWidthPx) : null;
       wInput.value = curW === null ? "" : String(curW);
-      wInput.placeholder = "980";
+      wInput.placeholder = "auto";
       wInput.onchange = function () {
         var raw = wInput.value;
         if (String(raw) === "") {
@@ -2935,9 +3115,11 @@ function fScenarioRenderOne(scen) {
         fScenarioRenumber(scenId);
       };
       btns[5].onclick = function () {
-        var s = fScenarioGet(scenId) || fScenarioActive();
-        s.steps.splice(idx, 1);
-        fScenarioRenumber(scenId);
+        fScenarioConfirm("Διαγραφή βήματος " + st.n + ";", function () {
+          var s = fScenarioGet(scenId) || fScenarioActive();
+          s.steps.splice(idx, 1);
+          fScenarioRenumber(scenId);
+        });
       };
     })(scen.id, i);
     row.addEventListener("dragstart", function (ev) { fScenarioStepDragStart(ev, scen.id); });

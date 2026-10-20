@@ -1,3 +1,104 @@
+# Current resume point - 2026-10-20 - accepted changes, save/publish authorized
+
+User reported "ola kala" after adaptive-font change and explicitly requested
+all saves and keeping the result. Preparing commit/push of entire current
+snapshot to personal origin/thesis-work: upstream f1ac038 synchronization,
+large C10 alkene (72 molecules), group-specific branch highlights/explanations,
+and adaptive single-line name font, plus sources/screenshots/project notes.
+Prior automated/browser checks remain recorded below; user acceptance is
+positive feedback, not evidence of exhaustive testing. Upstream professor
+repository is not modified. Public deployment verification follows push.
+Scenario output preference remains Desktop folder `archeia json` (actual
+Greek path recorded below). No scenario JSON changed in this snapshot.
+
+# Current resume point - 2026-10-20 - adaptive single-line name font implemented
+
+User rejected wrapping and approved adaptive font. Added CSS font scale and
+fFitNameToWidth/fScheduleNameFit in molview_48.js. Fits entire name row within
+host, never above original font. ResizeObserver watches panel width only;
+rebuilds/selection/font loads trigger refit. Chemistry and data unchanged.
+Firefox: 8 boxed/plus/eye combinations fit with no wrap or horizontal overflow;
+actual eye hide/show, prefix clicks, width300/700 and short-name reset passed.
+Normal350 long-name font16.08px (no plus); short names17.6px unchanged.
+All-boxes-plus mode can reach9px (documented tradeoff for single-line fit).
+Screenshot inspected/saved; docs/NAME-FONT-FIT.md has exact checks/limits.
+Everything remains local/uncommitted, including upstream sync and large
+alkene. Next user hard-refresh local v48 port8013 for visual acceptance.
+Public fork remains b9f3949. No publication requested this turn.
+
+# Current resume point - 2026-10-20 - large alkene group highlights fixed locally
+
+User approved viewer extension. Added group-specific carbon branch highlights
+and explanations in molview_48.js, mirroring core alphabetical grouping.
+Live parent locant/branch size map 2D groups to 3D; no molecule-specific IDs.
+No-slot helpers retain all-branch behavior. Correct large-alkene name,72 keys.
+Firefox real clicks: 4 forms, separate C2/C2 groups, expanded H5/H6, exact
+JSME paint IDs/Jmol selections, position/name text, all4 stepper chains and
+stored mode passed. Old methylpropene/methylbutene/dimethylbutane and Cl FG
+regression passed. Expanded screenshot inspected; evidence saved.
+See LARGE-ALKENE-TRIAL.md. JSC syntax/data/scenario roundtrip/diff passed.
+All local/uncommitted/unpublished, including earlier f1ac038 upstream sync.
+Next user visual review at local v48 port8013, series/alkenes/large C10 entry.
+Public fork remains b9f3949. No commit/push requested for this change.
+
+# Current resume point — 2026-10-20 — large alkene draft, branch grouping fix pending
+
+User approved 3-ethyl-2,5-dimethylhex-2-ene creation/local insertion plan.
+Added key ethyl_3_dimethyl_2_5_hexene_2, 3 orthogonal/zigzag MOLs in reference
+style, PubChem CID56988951 SDF; 72 entries. 2D chain[1..6], 3D[9,5,3,2,1,6].
+Chemical graph/formula/valence checks pass. Firefox: correct name,6 labels,
+4 forms and 3D load. Exact atom mapping/source/testing in LARGE-ALKENE-TRIAL.md.
+Observed viewer bug: ethyl and dimethyl clicks BOTH highlight ALL branches
+and call them functional groups. Existing hydrocarbon fallback ignores group
+index. Need user approval for material viewer scope: group-specific branch
+selection in fGetHydrocarbonBranchHighlight[/3D], consumers fHighlightFG[/3D]
+and relevant explanations, preserving real functional-group behavior.
+No viewer fix yet. Draft not complete; no commit/push. Previous upstream
+sync also remains local/uncommitted. Screenshots in design/assets/*draft.png.
+Next obtain approval then implement/test branch separation, H/bonds,stepper,
+stored mode and old examples. Public fork unchanged at b9f3949.
+
+# Current resume point — 2026-10-20 — latest professor v48 synchronized locally
+
+User approved sync plan after sharing professor message. Integrated upstream
+f1ac038 using previous upstream aeb6bf0 as 3-way base; pre-work local HEAD
+b9f3949. Updated v48 HTML/base CSS/core/molview/teaching/scenario/ui-icons,
+rebased data onto upstream while preserving two local molecule metadata
+entries. 71 keys, ALL MOL2D values same upstream/local; KingDraw geometry
+retained. SDF atom/bond records same, header timestamp only differs.
+Kept Namelecule theme/welcome, mint/teal styling, fFit2DSVG, scenario title
+flags/reserved space and branch bond-locant fix. See V48-SYNC-20261020.md.
+JSC syntax, three stored scenario validations, roundtrip including new
+viewerBothHeight, CSS/assets/diff checks passed. Full Firefox: both alkenes
+in four modes with correct names, numbering, two-chain pools, stepper, methyl
+clicks/stored mode. Combined640→320+320; actual FileReader import and
+Pin/Present/step7/Exit preserve settings. Title below playbar (54>=42),
+showStepNumbers=false honored. Delete cancel/confirm tested on scratch card.
+No commit/push/publication. All changes local. User visual review next:
+http://127.0.0.1:8013/mulermoc-nom-48.html . Firefox test port9225.
+Public fork still at b9f3949. Next molecule intentionally deferred for sync.
+Mobile/PNG export/all71 chemistry regressions not performed this session.
+
+# Current resume point — 2026-10-20 — refreshed upstream v48 reviewed
+
+User shared professor message requesting re-download/sync current v48 after
+many changes; defer next molecule. Read-only upstream clone at
+/tmp/namelecule-v48-sync-review-20261020, HEAD f1ac038; prior upstream base
+aeb6bf0 from /tmp/namelecule-v48-review-20261018. Personal working tree was
+clean at b9f3949 before this notes update. No application edits/merge/push.
+New upstream changelog: multiple-bond-first chain ranking, both local alkene
+keys now upstream (71 total; upstream stored chain arrays empty), deletion
+confirmation/icons, pinned bar animation, combined viewer height, reserved
+step-text fitting, common viewer floor, save-button control wiring.
+Affected upstream files: v48 HTML, both base CSS, 5 JS modules/data, ui-icons.
+Local styling/centering/scenario preferences and branch-unsaturation-locant
+fix require selective carryover; do not blindly overwrite or duplicate keys.
+Need compare embedded MOL coordinates to KingDraw references and preserve
+user-approved drawings where different. Present concrete sync plan and await
+approval under AGENTS before application edits. Validate both new molecules,
+chain stepper, 2D/3D highlights, scenarios/title clearance/new height settings,
+import/export and delete confirmation. No live browser test in this review.
+
 # Current resume point — 2026-10-19 — two molecule changes committed/pushed
 
 Commit 4919f99 (Add two branched alkenes and preserve unsaturation locants)

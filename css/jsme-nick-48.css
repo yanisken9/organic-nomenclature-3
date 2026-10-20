@@ -12,6 +12,8 @@
   --vibrantGreen: #5fad56;
   --veryLightEarth: #fff1de;
 
+  --redAlert: #b90000;
+
   --bodyBg: #faf7f5;
 
   /* Manual tune: MINIMUM viewer column width while the scenario bar is pinned
@@ -20,6 +22,12 @@
      the viewer keeps its original width when possible. Bounds min-width/
      max-width hold. */
   --viewerPinnedWidth: 400px;
+
+  /* Shared viewer min-height floor (v48). Single source of truth is the JS
+     `VIEWER_MIN_H` constant, pushed into this variable at load; the value here
+     is only the no-JS fallback. Consumed by .JmolContainer / #jsmeNomeclatureSVG
+     so the applet box and the DOM agree. */
+  --viewerMinH: 150px;
 }
 
 
@@ -144,9 +152,10 @@ header {
   /* line-height: 1; */
   border-radius: 4px;
   transition: all 0.2s;
-  /* display: flex; */
-  /* align-items: center; */
   z-index: 300;
+  width: 20px;
+  height: 20px;
+  box-sizing: content-box;
 }
 
 .settingsBtn:hover {
@@ -228,10 +237,12 @@ header {
   accent-color: var(--darkBlue);
   cursor: pointer;
 }
+
 .viewerHeightRange:disabled {
   cursor: default;
   opacity: 0.55;
 }
+
 .viewerHeightVal {
   font-family: "Roboto Condensed", sans-serif;
   font-size: 0.813rem;
@@ -262,8 +273,6 @@ header {
 .settingLabel {
   font-size: 0.813rem;
   color: #333;
-  margin-right: 2px;
-  margin-left: 6px;
   font-family: "Roboto Condensed", sans-serif;
 }
 
@@ -403,17 +412,19 @@ header {
 .nameStyleCross,
 .nameStyleEye,
 .readNameBtn {
-  width: 24px;
-  height: 24px;
+  width: 19px;
+  height: 19px;
   color: var(--darkBlue);
   background-color: var(--veryLightEarth);
-  border: 1px solid var(--darkEarth);
+  border: 2px solid var(--darkEarth);
   padding: 2px;
-  border-radius: 2px;
+  border-radius: 4px;
   cursor: pointer;
   transition: all 0.2s;
   position: relative;
   z-index: 300;
+  /* overflow: hidden; */
+  box-sizing: content-box;
 }
 
 .narrateBtn:hover,
@@ -425,15 +436,16 @@ header {
   background-color: var(--darkEarth);
 }
 
+.nameStyleCross.active,
+.nameStyleBox.active,
+.nameStyleEye.active,
 .narrateBtn.active {
   color: #fff;
-  background-color: var(--lightBlue);
+  background-color: var(--darkBlue);
+  border-color: var(--veryLightGray);
 }
 
-.nameStyleEye.active {
-  color: #fff;
-  background-color: var(--lightBlue);
-}
+
 
 .readNameBtn:disabled {
   opacity: 0.6;
@@ -1236,7 +1248,7 @@ header {
 .dropLi:first-of-type {
   /* border-top-left-radius: 4px;
   border-top-right-radius: 4px; */
-  
+
 }
 
 .dropLi:last-of-type {
@@ -1488,7 +1500,7 @@ header {
 }
 
 .compEye {
-  color: var(--lightBlue);
+  color: var(--darkBlue);
   background-color: transparent;
   border: 0;
   padding: 1px 3px;
@@ -1507,7 +1519,7 @@ header {
 .compEye.off-state {
   /* Dimmed via color, not opacity: opacity < 1 would create a stacking
      context on the button and trap its tooltip below the panel again. */
-  color: var(--veryLightBlue);
+  /* color: var(--veryLightBlue); */
 }
 
 .compEye.off-state:hover {
@@ -1555,16 +1567,16 @@ header {
 }
 
 .explainText {
-    padding: 10px 10px;
-    font-weight: bold;
-    font-size: 1rem;
-    color: var(--darkBlue);
-    background-color: #fff;
-    border: 3px solid var(--vibrantGreen);
-    z-index: 100;
-    position: relative;
-    border-radius: 5px;
-   
+  padding: 10px 10px;
+  font-weight: bold;
+  font-size: 1rem;
+  color: var(--darkBlue);
+  background-color: #fff;
+  border: 3px solid var(--vibrantGreen);
+  z-index: 100;
+  position: relative;
+  border-radius: 5px;
+
 }
 
 .shadow1 {
@@ -2047,14 +2059,17 @@ header {
 #viewerCol .settingLabel {
   font-size: clamp(0.75rem, 2.1cqi, 0.813rem);
 }
+
 #viewerCol .radioCheckContainer,
 #viewerCol .checkBoxContainer {
   font-size: clamp(0.75rem, 2.2cqi, 0.85rem);
 }
+
 #viewerCol #dropLabel,
 #viewerCol .dropLi {
   font-size: clamp(0.75rem, 2.2cqi, 0.85rem);
 }
+
 #viewerCol .viewerHeightVal {
   font-size: clamp(0.75rem, 2.1cqi, 0.813rem);
 }
@@ -2080,10 +2095,13 @@ header {
 }
 
 /* JSmol container — base height (220px) kept so JSmol inits at non-zero size.
-   fResizeViewers() corrects dimensions via Jmol.resizeApplet() after load. */
+   fResizeViewers() corrects dimensions via Jmol.resizeApplet() after load.
+   min-height mirrors the JS VIEWER_MIN_H floor (via --viewerMinH). */
 .JmolContainer {
   width: 100% !important;
-  min-height: 120px;
+  min-height: var(--viewerMinH, 150px);
+  overflow: hidden;
+  border-radius: inherit;
 }
 
 /* JSME SVG */
@@ -2091,7 +2109,7 @@ header {
   width: 100% !important;
   /* max-width: 450px; */
   height: auto;
-  min-height: 200px;
+  min-height: var(--viewerMinH, 150px);
 }
 
 /* ── "Rotate device" prompt ──────────────────────────────────────────── */
@@ -2290,46 +2308,60 @@ header {
 
 /* Main-chain stepper (v47, in the name-settings panel). */
 #chainStepperBox {
-	display: inline-flex;
-	align-items: center;
-	gap: 4px;
-	position: relative;
-	/* background: var(--veryLightGray); */
-	/* padding: 4px 4px; */
-	/* border-radius: 2px; */
+  display: inline-flex;
+  align-items: center;
+  gap: 0px;
+  position: relative;
+  /* background: var(--veryLightGray); */
+  /* padding: 4px 4px; */
+  /* border-radius: 2px; */
 }
 
 #chainStepperBox .settingLabel {
-	
-	/* color: var(--darkBlue); */
-  margin:0;
-	
+
+  margin-right: 5px;
+
 }
 
 #chainStepLabel {
-  /* min-width: 3em; */
   text-align: center;
   font-family: "Roboto Condensed", sans-serif;
   font-size: 0.813rem;
-  color: #333;
+  color: #fff;
   font-weight: bold;
+  background: var(--darkEarth);
+  padding: 3px 4px;
+  margin: 0;
+  border: 1px solid var(--darkEarth);
+  /* height: 22px; */
 }
 
 .stepBtn {
-	width: 18px;
-	height: 18px;
-	padding: 0;
-	box-sizing: border-box;
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	font-size: 1rem;
-	line-height: 1;
-	cursor: pointer;
-	background: var(--veryLightEarth);
-	border: 1px solid var(--darkEarth);
-	border-radius: 2px;
-	position: relative;
+  width: 18px;
+  height: 22px;
+  padding: 0;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  line-height: 1;
+  cursor: pointer;
+  background: var(--veryLightEarth);
+  border: 1px solid var(--darkEarth);
+  /* border-radius: 2px; */
+  position: relative;
+  transition: all 0.3s;
+}
+
+#chainPrevBtn.stepBtn {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+#chainNextBtn.stepBtn {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
 }
 
 .stepBtn:hover {

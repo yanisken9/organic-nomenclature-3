@@ -1,5 +1,30 @@
 # Changelog
 
+### 2026-10-20 - Fit long names with adaptive font (local)
+
+- Keep names on one line; shrink component/plus fonts only as needed.
+- Refit on panel width, content, selection and font loads; preserve original
+  size for short names and restore it when space increases.
+- Firefox style/eye/resize/click checks passed; see NAME-FONT-FIT.md.
+
+### 2026-10-20 - Large alkene and grouped branch highlights (local)
+
+- Add 3-ethyl-2,5-dimethylhex-2-ene MOLs and PubChem CID56988951 SDF
+  (72 entries), using reference spacing with separated side branches.
+- Select the clicked alkyl group in 2D/3D with explicit H, live chain mapping
+  and appropriate branch explanations. Functional-group behavior retained.
+- Full Firefox group/stepper/stored/regression checks passed; see
+  LARGE-ALKENE-TRIAL.md. Not published.
+
+## [Unreleased] — 2026-10-20 — Sync refreshed upstream v48 (f1ac038)
+
+- Import multiple-bond-first main-chain ranking, new two-viewer height,
+  presentation-fit and scenario authoring/delete-confirmation improvements.
+- Retain Namelecule identity, approved MOL drawings, stored chains,
+  branch-unsaturation locant fix and scenario title preferences. 71 entries.
+- JSC/roundtrip and full Firefox molecule/scenario checks passed. Local only;
+  see V48-SYNC-20261020.md for details and validation limits.
+
 ### 2026-10-19 — Branched hydrocarbon unsaturation locant fix (local)
 
 - Keep double/triple-bond locants in comp1No when alkyl branch locants

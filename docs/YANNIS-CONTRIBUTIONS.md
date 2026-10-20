@@ -654,3 +654,45 @@ JSC syntax και diff checks πέρασαν. Καμία δημοσίευση/co
 στο προσωπικό origin/thesis-work. Το Pages run 39242823954 ολοκληρώθηκε
 επιτυχώς. Τα δημόσια data/core και τα δύο SDF ταυτίζονται με τα τοπικά.
 Δεν έγινε διαδραστικός έλεγχος της δημόσιας έκδοσης.
+
+## 2026-10-20 — Συγχρονισμός ενημερωμένης v48 του καθηγητή
+
+Με έγκριση του Γιάννη ενσωματώθηκε upstream f1ac038, με διατήρηση
+Namelecule theme, KingDraw σχεδίων, stored chains, scenario flags και
+διόρθωσης bond locant. 71 μοναδικά μόρια. Νέα ranking/height/scenario
+controls και επιβεβαίωση διαγραφής μεταφέρθηκαν. JSC, scenario roundtrip
+και πραγματικός Firefox έλεγχοι πέρασαν· αναλυτικά V48-SYNC-20261020.md.
+Όλα τοπικά, χωρίς commit/push. Εκκρεμεί οπτική αποδοχή του Γιάννη.
+
+## 2026-10-20 — Μεγάλο αλκένιο, υπό δοκιμή
+
+Με έγκριση προστέθηκαν τρεις MOL, PubChem CID56988951 SDF και data entry
+για 3-αιθυλο-2,5-διμεθυλο-2-εξένιο. C10H20/σθένη/αντιστοίχιση C γράφου
+ελέγχθηκαν. Firefox: σωστό όνομα και 6 αριθμοί σε 4 μορφές. Εντοπίστηκε
+ότι ο viewer επισημαίνει όλους τους κλάδους και στα δύο συνθετικά· χρειάζεται
+εγκεκριμένη επέκταση ομαδοποίησης highlights. LARGE-ALKENE-TRIAL.md.
+Όλα τοπικά, χωρίς commit/push.
+
+## 2026-10-20 - Approved branch group viewer fix
+
+Group-specific carbon/H selections and explanations added to molview_48.js.
+Full Firefox checks: all four forms, exact painted IDs and 3D selections,
+expanded H5/H6, four chain candidates, stored mode, three prior branched
+molecules and chlorine FG regression passed. Sources and screenshot evidence
+are documented in LARGE-ALKENE-TRIAL.md. No commit/push.
+
+## 2026-10-20 - Adaptive name font
+
+User chose font sizing to prevent long-name overflow on one line. Theme CSS
+and viewer now fit label/plus fonts to available width, preserving normal
+size for shorter names. Firefox geometry, 8 style/eye combinations, real
+hide/show clicks and narrow/wide resizing passed. NAME-FONT-FIT.md records
+measurements and screenshot. No commit/push.
+
+## 2026-10-20 - Accepted snapshot and save/publication authorization
+
+User accepted the displayed result and requested saving all changes. Snapshot
+includes refreshed upstream v48, C10 alkene/source SDF and MOLs, separated
+branch highlights, adaptive name font, evidence and continuity records.
+Target is personal origin/thesis-work. No claim of full 72-molecule/mobile
+acceptance; actual tests documented in the corresponding review files.

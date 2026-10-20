@@ -4,18 +4,19 @@ A Greek-first interactive learning platform for organic nomenclature, built arou
 
 Desinged and developed by Nickolas Charistos
 
-**Current baseline:** v48, migrated locally from the professor's upstream
-commit `aeb6bf0` on 2026-10-18. Published to the personal fork as `52fe2c2`;
-Latest molecule additions and naming fix published as `4919f99`;
-full user visual acceptance remains pending.
+**Current baseline:** v48, synchronized locally with professor upstream
+`f1ac038` on 2026-10-20. The user accepted the current result and authorized
+commit/publication of the sync, 72-molecule data, grouped highlights and name
+font fitting. Publication verification is recorded in SESSION-NOTES.md.
+See [sync review](docs/V48-SYNC-20261020.md) for actual checks and limits.
 **Entry point:** [index.html](index.html) → [Namelecule welcome](design/welcome-proposal.html)
 → [v48 molecule exploration](mulermoc-nom-48.html).
 
 The v48 working copy preserves the Namelecule branding/theme, mint highlights,
 teal numbering, shared 2D centering and scenario title preferences. Upstream's
 responsive viewer sizing and pinned authoring are retained. The current
-71-molecule data includes two local additions and a branch/bond-locant fix. The previous [v45](mulermoc-nom-45.html) remains runnable.
-See [migration review](docs/V48-REVIEW.md) for checks and pending acceptance.
+72-molecule data includes three local additions and a branch/bond-locant fix. The previous [v45](mulermoc-nom-45.html) remains runnable.
+See [original migration review](docs/V48-REVIEW.md) for historical checks.
 
 | Layer | File |
 |---|---|
@@ -23,7 +24,7 @@ See [migration review](docs/V48-REVIEW.md) for checks and pending acceptance.
 | Viewer | [js/mulermoc-nom-molview-48.js](js/mulermoc-nom-molview-48.js) |
 | Teaching | [js/mulermoc-nom-teaching-48.js](js/mulermoc-nom-teaching-48.js) |
 | Scenarios | [js/mulermoc-nom-scenario-48.js](js/mulermoc-nom-scenario-48.js) |
-| Molecule data (71 molecules) | [js/jsme-nick-nomeclature-moc2-data_48.js](js/jsme-nick-nomeclature-moc2-data_48.js) |
+| Molecule data (72 molecules) | [js/jsme-nick-nomeclature-moc2-data_48.js](js/jsme-nick-nomeclature-moc2-data_48.js) |
 | Theme | [css/namelecule-48.css](css/namelecule-48.css) |
 
 The sections below describe the historical v44 feature baseline and broader
@@ -142,3 +143,9 @@ Local v48 also includes 3-methyl-1-butene (71 total working entries), with
 KingDraw-reference layout and an approved naming fix retaining the -1- locant.
 Browser checks passed; user visual acceptance remains pending. Published as part of snapshot `4919f99`.
 See [draft review](docs/METHYLBUTENE-TRIAL.md).
+
+Local working data also includes 3-ethyl-2,5-dimethylhex-2-ene and grouped
+alkyl highlights (72 entries). This and the 2026-10-20 upstream sync are part of the accepted snapshot. See [large-alkene review](docs/LARGE-ALKENE-TRIAL.md).
+
+Long molecule names now stay on one line using adaptive font fitting.
+Short names keep their original size. See [font fitting](docs/NAME-FONT-FIT.md).

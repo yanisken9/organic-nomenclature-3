@@ -219,3 +219,18 @@ body.scPinned #analysisCol { width: 350px; min-width: 350px; }
   padding-top: calc(var(--sc-playbar-height, 50px) + 12px);
 }
 #pageContainer.presenting.scReserveTitleSpace #pageTitle { display: block; }
+
+/* Keep the complete name on one line; JS reduces text only when necessary. */
+#nameAnalysis .nameContainer { width: 100%; min-width: 0; box-sizing: border-box; }
+#nameAnalysis .nameCompContainer {
+  --nl-name-scale: 1;
+  flex: 0 0 auto;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+}
+#nameAnalysis .nameCompWrap { flex: 0 0 auto; }
+#nameAnalysis .nameCompBox {
+  font-size: calc(1.1rem * var(--nl-name-scale));
+  transition: background-color .3s, color .3s, border-color .3s;
+}
+#nameAnalysis .nameCompPlus { font-size: calc(1.5rem * var(--nl-name-scale)); }
