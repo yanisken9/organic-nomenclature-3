@@ -806,3 +806,7 @@ User authorized all saves. Include final Desktop export (exact bytes), historica
 lesson versions, alkyl rule, responsive library, welcome links, Exit/Esc routing,
 and loading/error screen. Prior actual browser checks documented above; JSON
 parsing and diff check completed. Commit/push and public verification follow.
+
+Publication confirmed: complete snapshot d4d3030 pushed to origin/thesis-work.
+Eight public application/library/lesson files verified byte-identical to local.
+Final Desktop scenario equals library copy. Professor repository unchanged.

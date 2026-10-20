@@ -1,3 +1,16 @@
+# Current resume point - 2026-10-20 - library and lesson published
+
+User requested save everything everywhere. Complete snapshot committed as
+d4d3030 and pushed origin/thesis-work. GitHub Pages verified eight critical
+files byte-for-byte: welcome, library, v48 HTML, scenario/teaching/viewer JS,
+theme CSS and final22-step scenario. Exact Desktop export also archived under
+its Greek filename; original remains untouched and equals served lesson.
+Public https://yanisken9.github.io/organic-nomenclature-3/ now has theory
+library, alkyl table, Exit/Esc return, loading/error screen. All prior lesson
+versions/evidence/docs included. Professor upstream untouched. No pending
+implementation work; user can review public entry. Documentation publication
+record committed separately after this verification.
+
 # Current resume point - 2026-10-20 - all saves/publication authorized
 
 User requested save everything everywhere, authorizing commit/push/publication.
