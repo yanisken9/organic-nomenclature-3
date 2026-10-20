@@ -1,3 +1,13 @@
+# Current resume point - 2026-10-20 - accepted snapshot committed/pushed
+
+Commit f6916a8 saved the complete accepted snapshot and was pushed successfully
+to personal origin/thesis-work. Includes upstream sync f1ac038, large alkene
+(72 entries), grouped branch highlights, adaptive font, sources and evidence.
+Public viewer/data/theme/HTML and large-alkene SDF match local bytes.
+Public availability confirmed; no interactive public browser test repeated.
+Professor upstream untouched.
+Earlier local/uncommitted notes below are historical and superseded.
+
 # Current resume point - 2026-10-20 - accepted changes, save/publish authorized
 
 User reported "ola kala" after adaptive-font change and explicitly requested

@@ -7,7 +7,8 @@ Desinged and developed by Nickolas Charistos
 **Current baseline:** v48, synchronized locally with professor upstream
 `f1ac038` on 2026-10-20. The user accepted the current result and authorized
 commit/publication of the sync, 72-molecule data, grouped highlights and name
-font fitting. Publication verification is recorded in SESSION-NOTES.md.
+font fitting. Published as `f6916a8`; public files verified against local bytes.
+See SESSION-NOTES.md for the publication record.
 See [sync review](docs/V48-SYNC-20261020.md) for actual checks and limits.
 **Entry point:** [index.html](index.html) → [Namelecule welcome](design/welcome-proposal.html)
 → [v48 molecule exploration](mulermoc-nom-48.html).

@@ -696,3 +696,7 @@ includes refreshed upstream v48, C10 alkene/source SDF and MOLs, separated
 branch highlights, adaptive name font, evidence and continuity records.
 Target is personal origin/thesis-work. No claim of full 72-molecule/mobile
 acceptance; actual tests documented in the corresponding review files.
+
+Accepted snapshot committed as `f6916a8` and pushed to personal
+origin/thesis-work. Published viewer/data/theme/HTML and new SDF match
+the local files. No interactive public-browser test repeated.
