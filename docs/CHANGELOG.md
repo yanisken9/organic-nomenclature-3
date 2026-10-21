@@ -460,3 +460,8 @@ See METHYLBUTENE-TRIAL.md.
 - Saturated acyclic parent pools prefer maximum branches then lowest locant sets; newalkane6→4equivalent paths.
 -436available all73name regressions unchanged;20graph permutations and browser lesson/highlight checks passed.
 - Professor-facing record and patches in CORE-CHANGES-20261021.md. Local only.
+
+### 2026-10-21 — Daily snapshot published
+- All approved daily changes committed/pushed as48ca292;14critical public files byte-verified.
+- Public app now73molecules, updated lesson/cache flow and corrected branched alkane parent paths.
+- Professor-facing core report and standalone patch published; upstream repository untouched.

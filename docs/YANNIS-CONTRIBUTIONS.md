@@ -869,3 +869,12 @@ synthetic bond tests, browser old/new groups4modes/4paths and lesson22passed.
 CORE-CHANGES-20261021.md, standalone/session core patches and runnable test
 prepared. Standalone patch apply-check passed upstream1ac7636. No contact
 with professor, no commit/push; user forwards report at session end.
+
+## 2026-10-21 — Final daily publication
+
+User requested all saves. Snapshot48ca292 committed/pushed origin/thesis-work.
+14critical public files verified byte-for-byte including core,73moleculedata,
+updated22stepJSON,newSDF,report andpatch. Desktop unnumbered export (renamed
+from2-prefix) matches library/projectarchive. Full sessioncorepatch verified
+against1375772. Final documentation publication record follows separately.
+Professor upstream untouched; forwarding report remains user's action.

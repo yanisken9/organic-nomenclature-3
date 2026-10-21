@@ -64,3 +64,9 @@ all4modes/all4paths,2D/3D/H/paint sets and stored/regression checks passed;
 22-step lesson/rules/horizontal paths retained. See CORE-CHANGES-20261021.md
 and patch/test artifacts. Earlier outstanding section is historical, resolved.
 No commit/push/publication. Core change recorded for end-session reporting.
+
+## Publication —21/10/2026
+
+User requested all saves. Full daily snapshot committed/pushed as48ca292.
+Public core/data/scenario/newSDF/report/patch verified byte-identical to local.
+Current addition and parent-chain fix are published, not pending approval.

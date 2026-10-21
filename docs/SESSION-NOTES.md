@@ -1,3 +1,20 @@
+# Current resume point - 2026-10-21 - all work published and verified
+
+User requested save all changes everywhere. Full daily snapshot committed/pushed
+as48ca292 to origin/thesis-work.14public files byte-verified: welcome/library,
+v48HTML, core/viewer/scenario/data/icons, bothbaseCSS, final22stepJSON,new3DSDF,
+professor report and standalone patch. Public site now73molecules and newfix.
+Desktop folder now contains unnumbered lesson export (2-prefix renamed/removed
+by user); its bytes equal stable library and archived project2-prefix export.
+JSON parses, sessioncorepatch verified against1375772. Final documentation
+status/README/report/evidence updated after verification, committed separately.
+No app edits after published48ca292; professor upstream untouched. User should
+refresh public app. At session end explicitly report today's core changes:
+(1) selective sync/mixed-bond locants retaining3-methyl-1-butene;
+(2) graph-only alkane parent-count/locant filtering and2D/3Dbranch orientation.
+Forwardable CORE-CHANGES-20261021.md and standalone/session patches onGitHub.
+No messages sent to professor. Next work starts from this published snapshot.
+
 # Current resume point - 2026-10-21 - parent-chain fix completed; professor report ready
 
 User approved core fix and asked written record to give professor. Implemented

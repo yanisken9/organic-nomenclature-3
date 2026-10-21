@@ -8,8 +8,8 @@ Desinged and developed by Nickolas Charistos
 upstream `1ac7636` on 2026-10-21. Local naming keeps `3-μεθυλο-1-βουτένιο`,
 structural alkyl highlights, existing name fitting and theory library.
 Authoring, confirmation-dialog and viewer-height updates were tested in an
-isolated copy before transfer. This sync is not yet committed or published;
-public remains `1375772`. See [sync checks](docs/V48-SYNC-20261021.md)
+isolated copy before transfer. The full daily snapshot, including the new branched alkane and parent-chain
+fix, is published as `48ca292`; 14 public files were verified byte-for-byte. See [sync checks](docs/V48-SYNC-20261021.md)
 and [comparison](docs/UPSTREAM-COMPARISON-20261021.md).
 **Entry point:** [index.html](index.html) → [Namelecule welcome](design/welcome-proposal.html)
 → [v48 molecule exploration](mulermoc-nom-48.html).
