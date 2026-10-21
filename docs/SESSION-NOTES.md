@@ -1,3 +1,114 @@
+# Current resume point - 2026-10-21 - parent-chain fix completed; professor report ready
+
+User approved core fix and asked written record to give professor. Implemented
+fIsAcyclicHydrocarbonGraph/fCarbonBranchLocants/fCompareLocantSets, final-tier
+branch orientation2D/3D, saturated acyclic pool max branches/min locants. No
+new pool filtering for multiple bonds/heteroatoms. New alkane6→4equivalent
+paths, all3-ethyl-2,5-dimethylhexane. Syntax;436available all73name cases before/
+after unchanged;20permutations2D/3D and synthetic unsaturation regressions passed.
+Firefox newalkane+oldlargealkene4modes/all4paths disjoint highlights/H/3Dsets;
+stored chain/other molecules; lesson22steps/rules/chains15–17 passed.
+CORE-CHANGES-20261021.md contains Greek professor-forwardable text and technical
+scope, includes BOTH today's earlier sync and new fix. docs/patches has standalone
+parent fix (git apply --check passed upstream1ac7636) and complete local-session
+core diff from1375772. Runnable JSC test in docs/checks. Reports/data updated.
+All local/uncommitted/unpublished, per user defer saves until session end.
+Next user review newalkane in local8013; at final saves regenerate session diff
+if any subsequent core change, publish only when requested, give core report.
+
+# Current resume point - 2026-10-21 - new branched alkane added; core issue found
+
+User approved 3-ethyl-2,5-dimethylhexane addition. Added3MOLs+raw PubChem521421
+SDF,73rddata entry and registry, data-script cache version. Same style as large
+alkene; explicit22H/valences and heavy graph mapping verified. Default+stored
+names in3forms correct; prior72names unchanged. Browser4modes2D/3Dhighlight
+and regressions passed; screenshots saved, expanded inspected. See
+BRANCHED-HEXANE-TRIAL.md. No core edits for this addition (SHA recorded).
+Final audit found6candidate pool includes nonpreferred parent chains and one
+wrong orientation (4-ethyl instead of3), see report concrete paths/names.
+Need user approval before general core ranking/orientation fix (new code scope).
+Until fixed, default view works but alternative-chain experience not accepted.
+All local; no commit/push until user end-of-day instruction. Earlier core sync
+still included in end-session professor report. Scenario/library unchanged.
+
+# Current resume point - 2026-10-21 - fresh lesson JSON fetching
+
+User reported old lesson despite correct local8013 URL. Server bytes match
+new2-prefixed source; normal browser test loaded newstep1/5. Existing tabs keep
+in-memory scenario. User approved no-cache loading and refreshed launch links.
+Scenario deep-link fetch now uses cache:no-store. Library lesson launch version
+uses JSON SHA e6c55c218936, HTML scenario script query refreshed. Welcome and
+Exit/loading return links version the library HTML too (browser initially reused
+old library HTML). Actual default-cache Firefox with preload fetch instrumentation:
+two successive launches each requested stable JSON with no-store, showed exact
+updated step5 note, and Exit returned library. No core change for this task.
+All local; user deferred commit/push until end of day's session. Use library
+URL ?v=fresh-json-20261021 to leave an old tab. Today's earlier core sync still
+requires end-session professor summary.
+
+# Current resume point - 2026-10-21 - updated user lesson in library
+
+User supplied new Desktop2-prefixed export for replacing library content.
+Copied exact bytes to scenarios/alkenes-nomenclature-branches.scenario.json
+and project2-prefixed archive.22steps retained; only note fields changed at
+1,2,3,4,5,6,7,9,10,12,14,18,19,20,21,22. Module validator passed22steps/no
+warnings and step9 rule. Source Desktop untouched; core/HTML/JS unchanged by
+this update. Previous library copy backed up /tmp/latest-library-alkenes-before-update.json.
+Library original now corresponds to newer2-prefixed Desktop file, not older
+unnumbered Desktop export. All local; user deferred commit/push until end of day.
+Today's earlier core sync still needs session-end report to professor.
+
+# Standing user preference recorded - 2026-10-21
+
+At the end of every session explicitly report core changes (or none), with a
+short Greek professor-forwardable summary, exact file, behavior, reason, actual
+checks and local/publication status. Recorded in AGENTS.md. User will forward;
+no authorization to contact professor. Today's core sync described below.
+User deferred commit/push/publication until end of today's work; continue local.
+
+# Current resume point - 2026-10-21 - selective upstream sync completed locally
+
+User approved sync of other upstream changes, explicitly retain3-methyl-1-butene.
+Synced upstream1ac7636 via isolated tested/tmp/namelecule-sync-20261021 then
+transferred7changed app files; library launch version updated. See
+V48-SYNC-20261021.md and checks/sync-verification-20261021.json.
+Kept local naming terminal1 convention, structural alkyl groups, one local
+name fitter, data/SDF/storedchains byte-identical, library/lesson/loading/Exit.
+Imported per-step Present/drawer persistence, rollback, dialog a11y, height
+bounds/readouts, mixed-bond fix and plural FG explanation updates.
+Syntax and430available core cases unchanged; synthetic graph tests passed.
+Firefox tested22steps/rules/chains,4modes/4chain group highlighting2D/3D,
+namefit variants, Present/Play/drawer, confirm keys/inert, failed-present rollback,
+height bounds, loading/error/library Exit. Screenshot visually inspected.
+No commit/push/publication: public remains1375772. User can review local8013
+(server restarted for this workspace); tested isolated server8014 also available. Next save/publish
+only upon user request. Report/notes from earlier comparison also uncommitted.
+
+# Current resume point - 2026-10-21 - all72 molecule naming comparison
+
+User asked full comparison. Executed both pure cores, fresh state each case,
+all72molecules ×3MOL2D forms ×2chain modes (algorithmic/data)=432cases/version.
+430available successful;2unavailable methane skeletal (null in both data sets).
+424equal names;6differences all methyl_3_butene_1 across3forms/2modes:
+ours3-methyl-1-butene vs upstream3-methylbutene. Other71molecules same names.
+Mock JSME atom/bond API from MOL2D; no browser/3D/alternative chain walk or
+independent chemical correctness certification. Evidence JSON under docs/checks,
+comparison report appended. No app source edit, commit/push. Earlier selective
+sync recommendations still apply; no sync authorized yet.
+
+# Current resume point - 2026-10-21 - upstream comparison completed
+
+User requested comparison only. Compared ours1375772 to upstream1ac7636,
+basef1ac038 using isolated clone. See UPSTREAM-COMPARISON-20261021.md.
+4new commits. Pure core mock execution confirms ours3-methyl-1-butene versus
+upstream3-methylbutene; both same methylpropene/large name. 72same keys and
+all MOL2D identical. Metadata3molecules stored vs empty chains. Large SDF only
+header differs. Temp3way merge9conflict hunks viewer; text-clean data has
+duplicate large molecule key, core overlapping assignments, two fit mechanisms.
+Recommend selective sync retaining local terminal locants, branch groups, fit,
+library/loading/Exit/theory/custom flags. No source edits/sync/publication.
+Only report and continuity/contribution notes added. Await approval for code.
+
 # Current resume point - 2026-10-20 - library and lesson published
 
 User requested save everything everywhere. Complete snapshot committed as

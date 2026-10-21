@@ -1,0 +1,3464 @@
+{
+  "localCommit": "1375772",
+  "upstreamCommit": "1ac7636e49f538eafe14e05c81336335811e862c",
+  "method": "Pure core execution with fresh per-case state and JSME atom/bond API mock parsed from each version MOL2D. Not browser/3D validation.",
+  "molecules": 72,
+  "results": [
+    {
+      "molecule": "methane",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "μεθάνιο",
+      "upstream": "μεθάνιο"
+    },
+    {
+      "molecule": "methane",
+      "mode2D": "expanded",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "μεθάνιο",
+      "upstream": "μεθάνιο"
+    },
+    {
+      "molecule": "methane",
+      "mode2D": "skeletal",
+      "mainChainMode": "algorithmic",
+      "status": "unavailable",
+      "oursError": "Error: Missing MOL",
+      "upstreamError": "Error: Missing MOL"
+    },
+    {
+      "molecule": "methanoicacid",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "μεθανικό οξύ",
+      "upstream": "μεθανικό οξύ"
+    },
+    {
+      "molecule": "methanoicacid",
+      "mode2D": "expanded",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "μεθανικό οξύ",
+      "upstream": "μεθανικό οξύ"
+    },
+    {
+      "molecule": "methanoicacid",
+      "mode2D": "skeletal",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "μεθανικό οξύ",
+      "upstream": "μεθανικό οξύ"
+    },
+    {
+      "molecule": "ethane",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "αιθάνιο",
+      "upstream": "αιθάνιο"
+    },
+    {
+      "molecule": "ethane",
+      "mode2D": "expanded",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "αιθάνιο",
+      "upstream": "αιθάνιο"
+    },
+    {
+      "molecule": "ethane",
+      "mode2D": "skeletal",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "αιθάνιο",
+      "upstream": "αιθάνιο"
+    },
+    {
+      "molecule": "ethene",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "αιθένιο",
+      "upstream": "αιθένιο"
+    },
+    {
+      "molecule": "ethene",
+      "mode2D": "expanded",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "αιθένιο",
+      "upstream": "αιθένιο"
+    },
+    {
+      "molecule": "ethene",
+      "mode2D": "skeletal",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "αιθένιο",
+      "upstream": "αιθένιο"
+    },
+    {
+      "molecule": "ethanal",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "αιθανάλη",
+      "upstream": "αιθανάλη"
+    },
+    {
+      "molecule": "ethanal",
+      "mode2D": "expanded",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "αιθανάλη",
+      "upstream": "αιθανάλη"
+    },
+    {
+      "molecule": "ethanal",
+      "mode2D": "skeletal",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "αιθανάλη",
+      "upstream": "αιθανάλη"
+    },
+    {
+      "molecule": "ethanenitrile",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "αιθαννιτρίλιο",
+      "upstream": "αιθαννιτρίλιο"
+    },
+    {
+      "molecule": "ethanenitrile",
+      "mode2D": "expanded",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "αιθαννιτρίλιο",
+      "upstream": "αιθαννιτρίλιο"
+    },
+    {
+      "molecule": "ethanenitrile",
+      "mode2D": "skeletal",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "αιθαννιτρίλιο",
+      "upstream": "αιθαννιτρίλιο"
+    },
+    {
+      "molecule": "propane",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "προπάνιο",
+      "upstream": "προπάνιο"
+    },
+    {
+      "molecule": "propane",
+      "mode2D": "expanded",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "προπάνιο",
+      "upstream": "προπάνιο"
+    },
+    {
+      "molecule": "propane",
+      "mode2D": "skeletal",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "προπάνιο",
+      "upstream": "προπάνιο"
+    },
+    {
+      "molecule": "propene",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "προπένιο",
+      "upstream": "προπένιο"
+    },
+    {
+      "molecule": "propene",
+      "mode2D": "expanded",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "προπένιο",
+      "upstream": "προπένιο"
+    },
+    {
+      "molecule": "propene",
+      "mode2D": "skeletal",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "προπένιο",
+      "upstream": "προπένιο"
+    },
+    {
+      "molecule": "propadiene",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "προπδιένιο",
+      "upstream": "προπδιένιο"
+    },
+    {
+      "molecule": "propadiene",
+      "mode2D": "expanded",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "προπδιένιο",
+      "upstream": "προπδιένιο"
+    },
+    {
+      "molecule": "propadiene",
+      "mode2D": "skeletal",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "προπδιένιο",
+      "upstream": "προπδιένιο"
+    },
+    {
+      "molecule": "propionicacid",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "προπανικό οξύ",
+      "upstream": "προπανικό οξύ"
+    },
+    {
+      "molecule": "propionicacid",
+      "mode2D": "expanded",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "προπανικό οξύ",
+      "upstream": "προπανικό οξύ"
+    },
+    {
+      "molecule": "propionicacid",
+      "mode2D": "skeletal",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "προπανικό οξύ",
+      "upstream": "προπανικό οξύ"
+    },
+    {
+      "molecule": "butane",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "βουτάνιο",
+      "upstream": "βουτάνιο"
+    },
+    {
+      "molecule": "butane",
+      "mode2D": "expanded",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "βουτάνιο",
+      "upstream": "βουτάνιο"
+    },
+    {
+      "molecule": "butane",
+      "mode2D": "skeletal",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "βουτάνιο",
+      "upstream": "βουτάνιο"
+    },
+    {
+      "molecule": "butanal",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "βουτανάλη",
+      "upstream": "βουτανάλη"
+    },
+    {
+      "molecule": "butanal",
+      "mode2D": "expanded",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "βουτανάλη",
+      "upstream": "βουτανάλη"
+    },
+    {
+      "molecule": "butanal",
+      "mode2D": "skeletal",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "βουτανάλη",
+      "upstream": "βουτανάλη"
+    },
+    {
+      "molecule": "butanenitrile",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "βουταννιτρίλιο",
+      "upstream": "βουταννιτρίλιο"
+    },
+    {
+      "molecule": "butanenitrile",
+      "mode2D": "expanded",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "βουταννιτρίλιο",
+      "upstream": "βουταννιτρίλιο"
+    },
+    {
+      "molecule": "butanenitrile",
+      "mode2D": "skeletal",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "βουταννιτρίλιο",
+      "upstream": "βουταννιτρίλιο"
+    },
+    {
+      "molecule": "pentane",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "πεντάνιο",
+      "upstream": "πεντάνιο"
+    },
+    {
+      "molecule": "pentane",
+      "mode2D": "expanded",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "πεντάνιο",
+      "upstream": "πεντάνιο"
+    },
+    {
+      "molecule": "pentane",
+      "mode2D": "skeletal",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "πεντάνιο",
+      "upstream": "πεντάνιο"
+    },
+    {
+      "molecule": "butene_1",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "1-βουτένιο",
+      "upstream": "1-βουτένιο"
+    },
+    {
+      "molecule": "butene_1",
+      "mode2D": "expanded",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "1-βουτένιο",
+      "upstream": "1-βουτένιο"
+    },
+    {
+      "molecule": "butene_1",
+      "mode2D": "skeletal",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "1-βουτένιο",
+      "upstream": "1-βουτένιο"
+    },
+    {
+      "molecule": "propanol_1",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "1-προπανόλη",
+      "upstream": "1-προπανόλη"
+    },
+    {
+      "molecule": "propanol_1",
+      "mode2D": "expanded",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "1-προπανόλη",
+      "upstream": "1-προπανόλη"
+    },
+    {
+      "molecule": "propanol_1",
+      "mode2D": "skeletal",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "1-προπανόλη",
+      "upstream": "1-προπανόλη"
+    },
+    {
+      "molecule": "penten_4_ol_2",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "4-πεντεν-2-όλη",
+      "upstream": "4-πεντεν-2-όλη"
+    },
+    {
+      "molecule": "penten_4_ol_2",
+      "mode2D": "expanded",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "4-πεντεν-2-όλη",
+      "upstream": "4-πεντεν-2-όλη"
+    },
+    {
+      "molecule": "penten_4_ol_2",
+      "mode2D": "skeletal",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "4-πεντεν-2-όλη",
+      "upstream": "4-πεντεν-2-όλη"
+    },
+    {
+      "molecule": "penten_1_one_3",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "1-πεντεν-3-όνη",
+      "upstream": "1-πεντεν-3-όνη"
+    },
+    {
+      "molecule": "penten_1_one_3",
+      "mode2D": "expanded",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "1-πεντεν-3-όνη",
+      "upstream": "1-πεντεν-3-όνη"
+    },
+    {
+      "molecule": "penten_1_one_3",
+      "mode2D": "skeletal",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "1-πεντεν-3-όνη",
+      "upstream": "1-πεντεν-3-όνη"
+    },
+    {
+      "molecule": "butanol_1",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "1-βουτανόλη",
+      "upstream": "1-βουτανόλη"
+    },
+    {
+      "molecule": "butanol_1",
+      "mode2D": "expanded",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "1-βουτανόλη",
+      "upstream": "1-βουτανόλη"
+    },
+    {
+      "molecule": "butanol_1",
+      "mode2D": "skeletal",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "1-βουτανόλη",
+      "upstream": "1-βουτανόλη"
+    },
+    {
+      "molecule": "pentanone_2",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "2-πεντανόνη",
+      "upstream": "2-πεντανόνη"
+    },
+    {
+      "molecule": "pentanone_2",
+      "mode2D": "expanded",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "2-πεντανόνη",
+      "upstream": "2-πεντανόνη"
+    },
+    {
+      "molecule": "pentanone_2",
+      "mode2D": "skeletal",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "2-πεντανόνη",
+      "upstream": "2-πεντανόνη"
+    },
+    {
+      "molecule": "butene_2",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "2-βουτένιο",
+      "upstream": "2-βουτένιο"
+    },
+    {
+      "molecule": "butene_2",
+      "mode2D": "expanded",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "2-βουτένιο",
+      "upstream": "2-βουτένιο"
+    },
+    {
+      "molecule": "butene_2",
+      "mode2D": "skeletal",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "2-βουτένιο",
+      "upstream": "2-βουτένιο"
+    },
+    {
+      "molecule": "pentadiene_1_3",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "1,3-πεντδιένιο",
+      "upstream": "1,3-πεντδιένιο"
+    },
+    {
+      "molecule": "pentadiene_1_3",
+      "mode2D": "expanded",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "1,3-πεντδιένιο",
+      "upstream": "1,3-πεντδιένιο"
+    },
+    {
+      "molecule": "pentadiene_1_3",
+      "mode2D": "skeletal",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "1,3-πεντδιένιο",
+      "upstream": "1,3-πεντδιένιο"
+    },
+    {
+      "molecule": "propyne",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "προπίνιο",
+      "upstream": "προπίνιο"
+    },
+    {
+      "molecule": "propyne",
+      "mode2D": "expanded",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "προπίνιο",
+      "upstream": "προπίνιο"
+    },
+    {
+      "molecule": "propyne",
+      "mode2D": "skeletal",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "προπίνιο",
+      "upstream": "προπίνιο"
+    },
+    {
+      "molecule": "propanal",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "προπανάλη",
+      "upstream": "προπανάλη"
+    },
+    {
+      "molecule": "propanal",
+      "mode2D": "expanded",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "προπανάλη",
+      "upstream": "προπανάλη"
+    },
+    {
+      "molecule": "propanal",
+      "mode2D": "skeletal",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "προπανάλη",
+      "upstream": "προπανάλη"
+    },
+    {
+      "molecule": "butanoic_acid",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "βουτανικό οξύ",
+      "upstream": "βουτανικό οξύ"
+    },
+    {
+      "molecule": "butanoic_acid",
+      "mode2D": "expanded",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "βουτανικό οξύ",
+      "upstream": "βουτανικό οξύ"
+    },
+    {
+      "molecule": "butanoic_acid",
+      "mode2D": "skeletal",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "βουτανικό οξύ",
+      "upstream": "βουτανικό οξύ"
+    },
+    {
+      "molecule": "propanenitrile",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "προπαννιτρίλιο",
+      "upstream": "προπαννιτρίλιο"
+    },
+    {
+      "molecule": "propanenitrile",
+      "mode2D": "expanded",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "προπαννιτρίλιο",
+      "upstream": "προπαννιτρίλιο"
+    },
+    {
+      "molecule": "propanenitrile",
+      "mode2D": "skeletal",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "προπαννιτρίλιο",
+      "upstream": "προπαννιτρίλιο"
+    },
+    {
+      "molecule": "pentanoic_acid",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "πεντανικό οξύ",
+      "upstream": "πεντανικό οξύ"
+    },
+    {
+      "molecule": "pentanoic_acid",
+      "mode2D": "expanded",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "πεντανικό οξύ",
+      "upstream": "πεντανικό οξύ"
+    },
+    {
+      "molecule": "pentanoic_acid",
+      "mode2D": "skeletal",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "πεντανικό οξύ",
+      "upstream": "πεντανικό οξύ"
+    },
+    {
+      "molecule": "pentanal",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "πεντανάλη",
+      "upstream": "πεντανάλη"
+    },
+    {
+      "molecule": "pentanal",
+      "mode2D": "expanded",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "πεντανάλη",
+      "upstream": "πεντανάλη"
+    },
+    {
+      "molecule": "pentanal",
+      "mode2D": "skeletal",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "πεντανάλη",
+      "upstream": "πεντανάλη"
+    },
+    {
+      "molecule": "butene_3_ol_2",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "3-βουτεν-2-όλη",
+      "upstream": "3-βουτεν-2-όλη"
+    },
+    {
+      "molecule": "butene_3_ol_2",
+      "mode2D": "expanded",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "3-βουτεν-2-όλη",
+      "upstream": "3-βουτεν-2-όλη"
+    },
+    {
+      "molecule": "butene_3_ol_2",
+      "mode2D": "skeletal",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "3-βουτεν-2-όλη",
+      "upstream": "3-βουτεν-2-όλη"
+    },
+    {
+      "molecule": "penten_2_ol_1",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "2-πεντεν-1-όλη",
+      "upstream": "2-πεντεν-1-όλη"
+    },
+    {
+      "molecule": "penten_2_ol_1",
+      "mode2D": "expanded",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "2-πεντεν-1-όλη",
+      "upstream": "2-πεντεν-1-όλη"
+    },
+    {
+      "molecule": "penten_2_ol_1",
+      "mode2D": "skeletal",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "2-πεντεν-1-όλη",
+      "upstream": "2-πεντεν-1-όλη"
+    },
+    {
+      "molecule": "pentyn_4_one_2",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "4-πεντιν-2-όνη",
+      "upstream": "4-πεντιν-2-όνη"
+    },
+    {
+      "molecule": "pentyn_4_one_2",
+      "mode2D": "expanded",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "4-πεντιν-2-όνη",
+      "upstream": "4-πεντιν-2-όνη"
+    },
+    {
+      "molecule": "pentyn_4_one_2",
+      "mode2D": "skeletal",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "4-πεντιν-2-όνη",
+      "upstream": "4-πεντιν-2-όνη"
+    },
+    {
+      "molecule": "propenoic_acid",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "προπενικό οξύ",
+      "upstream": "προπενικό οξύ"
+    },
+    {
+      "molecule": "propenoic_acid",
+      "mode2D": "expanded",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "προπενικό οξύ",
+      "upstream": "προπενικό οξύ"
+    },
+    {
+      "molecule": "propenoic_acid",
+      "mode2D": "skeletal",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "προπενικό οξύ",
+      "upstream": "προπενικό οξύ"
+    },
+    {
+      "molecule": "propynal",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "προπινάλη",
+      "upstream": "προπινάλη"
+    },
+    {
+      "molecule": "propynal",
+      "mode2D": "expanded",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "προπινάλη",
+      "upstream": "προπινάλη"
+    },
+    {
+      "molecule": "propynal",
+      "mode2D": "skeletal",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "προπινάλη",
+      "upstream": "προπινάλη"
+    },
+    {
+      "molecule": "penten_3_yne_1",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "3-πεντεν-1-ίνιο",
+      "upstream": "3-πεντεν-1-ίνιο"
+    },
+    {
+      "molecule": "penten_3_yne_1",
+      "mode2D": "expanded",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "3-πεντεν-1-ίνιο",
+      "upstream": "3-πεντεν-1-ίνιο"
+    },
+    {
+      "molecule": "penten_3_yne_1",
+      "mode2D": "skeletal",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "3-πεντεν-1-ίνιο",
+      "upstream": "3-πεντεν-1-ίνιο"
+    },
+    {
+      "molecule": "hexen_1_yne_4",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "1-εξεν-4-ίνιο",
+      "upstream": "1-εξεν-4-ίνιο"
+    },
+    {
+      "molecule": "hexen_1_yne_4",
+      "mode2D": "expanded",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "1-εξεν-4-ίνιο",
+      "upstream": "1-εξεν-4-ίνιο"
+    },
+    {
+      "molecule": "hexen_1_yne_4",
+      "mode2D": "skeletal",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "1-εξεν-4-ίνιο",
+      "upstream": "1-εξεν-4-ίνιο"
+    },
+    {
+      "molecule": "buten_1_yne_3",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "1-βουτεν-3-ίνιο",
+      "upstream": "1-βουτεν-3-ίνιο"
+    },
+    {
+      "molecule": "buten_1_yne_3",
+      "mode2D": "expanded",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "1-βουτεν-3-ίνιο",
+      "upstream": "1-βουτεν-3-ίνιο"
+    },
+    {
+      "molecule": "buten_1_yne_3",
+      "mode2D": "skeletal",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "1-βουτεν-3-ίνιο",
+      "upstream": "1-βουτεν-3-ίνιο"
+    },
+    {
+      "molecule": "hexen_2_yne_4",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "2-εξεν-4-ίνιο",
+      "upstream": "2-εξεν-4-ίνιο"
+    },
+    {
+      "molecule": "hexen_2_yne_4",
+      "mode2D": "expanded",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "2-εξεν-4-ίνιο",
+      "upstream": "2-εξεν-4-ίνιο"
+    },
+    {
+      "molecule": "hexen_2_yne_4",
+      "mode2D": "skeletal",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "2-εξεν-4-ίνιο",
+      "upstream": "2-εξεν-4-ίνιο"
+    },
+    {
+      "molecule": "chlorobutane_1",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "1-χλωροβουτάνιο",
+      "upstream": "1-χλωροβουτάνιο"
+    },
+    {
+      "molecule": "chlorobutane_1",
+      "mode2D": "expanded",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "1-χλωροβουτάνιο",
+      "upstream": "1-χλωροβουτάνιο"
+    },
+    {
+      "molecule": "chlorobutane_1",
+      "mode2D": "skeletal",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "1-χλωροβουτάνιο",
+      "upstream": "1-χλωροβουτάνιο"
+    },
+    {
+      "molecule": "bromopropane_2",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "2-βρωμοπροπάνιο",
+      "upstream": "2-βρωμοπροπάνιο"
+    },
+    {
+      "molecule": "bromopropane_2",
+      "mode2D": "expanded",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "2-βρωμοπροπάνιο",
+      "upstream": "2-βρωμοπροπάνιο"
+    },
+    {
+      "molecule": "bromopropane_2",
+      "mode2D": "skeletal",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "2-βρωμοπροπάνιο",
+      "upstream": "2-βρωμοπροπάνιο"
+    },
+    {
+      "molecule": "bromo_4_butene_1",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "4-βρωμο-1-βουτένιο",
+      "upstream": "4-βρωμο-1-βουτένιο"
+    },
+    {
+      "molecule": "bromo_4_butene_1",
+      "mode2D": "expanded",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "4-βρωμο-1-βουτένιο",
+      "upstream": "4-βρωμο-1-βουτένιο"
+    },
+    {
+      "molecule": "bromo_4_butene_1",
+      "mode2D": "skeletal",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "4-βρωμο-1-βουτένιο",
+      "upstream": "4-βρωμο-1-βουτένιο"
+    },
+    {
+      "molecule": "bromo_3_chloropentane_1",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "3-βρωμο-1-χλωροπεντάνιο",
+      "upstream": "3-βρωμο-1-χλωροπεντάνιο"
+    },
+    {
+      "molecule": "bromo_3_chloropentane_1",
+      "mode2D": "expanded",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "3-βρωμο-1-χλωροπεντάνιο",
+      "upstream": "3-βρωμο-1-χλωροπεντάνιο"
+    },
+    {
+      "molecule": "bromo_3_chloropentane_1",
+      "mode2D": "skeletal",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "3-βρωμο-1-χλωροπεντάνιο",
+      "upstream": "3-βρωμο-1-χλωροπεντάνιο"
+    },
+    {
+      "molecule": "bromo_2_chlorobutane_3",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "2-βρωμο-3-χλωροβουτάνιο",
+      "upstream": "2-βρωμο-3-χλωροβουτάνιο"
+    },
+    {
+      "molecule": "bromo_2_chlorobutane_3",
+      "mode2D": "expanded",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "2-βρωμο-3-χλωροβουτάνιο",
+      "upstream": "2-βρωμο-3-χλωροβουτάνιο"
+    },
+    {
+      "molecule": "bromo_2_chlorobutane_3",
+      "mode2D": "skeletal",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "2-βρωμο-3-χλωροβουτάνιο",
+      "upstream": "2-βρωμο-3-χλωροβουτάνιο"
+    },
+    {
+      "molecule": "propanediol_1_2",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "1,2-προπανδιόλη",
+      "upstream": "1,2-προπανδιόλη"
+    },
+    {
+      "molecule": "propanediol_1_2",
+      "mode2D": "expanded",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "1,2-προπανδιόλη",
+      "upstream": "1,2-προπανδιόλη"
+    },
+    {
+      "molecule": "propanediol_1_2",
+      "mode2D": "skeletal",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "1,2-προπανδιόλη",
+      "upstream": "1,2-προπανδιόλη"
+    },
+    {
+      "molecule": "propanedioic_acid",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "προπανδιικό οξύ",
+      "upstream": "προπανδιικό οξύ"
+    },
+    {
+      "molecule": "propanedioic_acid",
+      "mode2D": "expanded",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "προπανδιικό οξύ",
+      "upstream": "προπανδιικό οξύ"
+    },
+    {
+      "molecule": "propanedioic_acid",
+      "mode2D": "skeletal",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "προπανδιικό οξύ",
+      "upstream": "προπανδιικό οξύ"
+    },
+    {
+      "molecule": "propanetriol",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "1,2,3-προπαντριόλη",
+      "upstream": "1,2,3-προπαντριόλη"
+    },
+    {
+      "molecule": "propanetriol",
+      "mode2D": "expanded",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "1,2,3-προπαντριόλη",
+      "upstream": "1,2,3-προπαντριόλη"
+    },
+    {
+      "molecule": "propanetriol",
+      "mode2D": "skeletal",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "1,2,3-προπαντριόλη",
+      "upstream": "1,2,3-προπαντριόλη"
+    },
+    {
+      "molecule": "dichlorobutane_2_2",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "2,2-διχλωροβουτάνιο",
+      "upstream": "2,2-διχλωροβουτάνιο"
+    },
+    {
+      "molecule": "dichlorobutane_2_2",
+      "mode2D": "expanded",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "2,2-διχλωροβουτάνιο",
+      "upstream": "2,2-διχλωροβουτάνιο"
+    },
+    {
+      "molecule": "dichlorobutane_2_2",
+      "mode2D": "skeletal",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "2,2-διχλωροβουτάνιο",
+      "upstream": "2,2-διχλωροβουτάνιο"
+    },
+    {
+      "molecule": "trichloropentane_1_1_2",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "1,1,2-τριχλωροπεντάνιο",
+      "upstream": "1,1,2-τριχλωροπεντάνιο"
+    },
+    {
+      "molecule": "trichloropentane_1_1_2",
+      "mode2D": "expanded",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "1,1,2-τριχλωροπεντάνιο",
+      "upstream": "1,1,2-τριχλωροπεντάνιο"
+    },
+    {
+      "molecule": "trichloropentane_1_1_2",
+      "mode2D": "skeletal",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "1,1,2-τριχλωροπεντάνιο",
+      "upstream": "1,1,2-τριχλωροπεντάνιο"
+    },
+    {
+      "molecule": "hydroxypropanoic_acid_2",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "2-υδροξυπροπανικό οξύ",
+      "upstream": "2-υδροξυπροπανικό οξύ"
+    },
+    {
+      "molecule": "hydroxypropanoic_acid_2",
+      "mode2D": "expanded",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "2-υδροξυπροπανικό οξύ",
+      "upstream": "2-υδροξυπροπανικό οξύ"
+    },
+    {
+      "molecule": "hydroxypropanoic_acid_2",
+      "mode2D": "skeletal",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "2-υδροξυπροπανικό οξύ",
+      "upstream": "2-υδροξυπροπανικό οξύ"
+    },
+    {
+      "molecule": "hydroxybutanenitrile_2",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "2-υδροξυβουταννιτρίλιο",
+      "upstream": "2-υδροξυβουταννιτρίλιο"
+    },
+    {
+      "molecule": "hydroxybutanenitrile_2",
+      "mode2D": "expanded",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "2-υδροξυβουταννιτρίλιο",
+      "upstream": "2-υδροξυβουταννιτρίλιο"
+    },
+    {
+      "molecule": "hydroxybutanenitrile_2",
+      "mode2D": "skeletal",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "2-υδροξυβουταννιτρίλιο",
+      "upstream": "2-υδροξυβουταννιτρίλιο"
+    },
+    {
+      "molecule": "Oxopropanoic_acid",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "κετοπροπανικό οξύ",
+      "upstream": "κετοπροπανικό οξύ"
+    },
+    {
+      "molecule": "Oxopropanoic_acid",
+      "mode2D": "expanded",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "κετοπροπανικό οξύ",
+      "upstream": "κετοπροπανικό οξύ"
+    },
+    {
+      "molecule": "Oxopropanoic_acid",
+      "mode2D": "skeletal",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "κετοπροπανικό οξύ",
+      "upstream": "κετοπροπανικό οξύ"
+    },
+    {
+      "molecule": "aminobutanoic_acid_3",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "3-αμινοβουτανικό οξύ",
+      "upstream": "3-αμινοβουτανικό οξύ"
+    },
+    {
+      "molecule": "aminobutanoic_acid_3",
+      "mode2D": "expanded",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "3-αμινοβουτανικό οξύ",
+      "upstream": "3-αμινοβουτανικό οξύ"
+    },
+    {
+      "molecule": "aminobutanoic_acid_3",
+      "mode2D": "skeletal",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "3-αμινοβουτανικό οξύ",
+      "upstream": "3-αμινοβουτανικό οξύ"
+    },
+    {
+      "molecule": "hydroxypropanenitrile_2",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "2-υδροξυπροπαννιτρίλιο",
+      "upstream": "2-υδροξυπροπαννιτρίλιο"
+    },
+    {
+      "molecule": "hydroxypropanenitrile_2",
+      "mode2D": "expanded",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "2-υδροξυπροπαννιτρίλιο",
+      "upstream": "2-υδροξυπροπαννιτρίλιο"
+    },
+    {
+      "molecule": "hydroxypropanenitrile_2",
+      "mode2D": "skeletal",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "2-υδροξυπροπαννιτρίλιο",
+      "upstream": "2-υδροξυπροπαννιτρίλιο"
+    },
+    {
+      "molecule": "oxobutanoic_acid",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "οξοβουτανικό οξύ",
+      "upstream": "οξοβουτανικό οξύ"
+    },
+    {
+      "molecule": "oxobutanoic_acid",
+      "mode2D": "expanded",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "οξοβουτανικό οξύ",
+      "upstream": "οξοβουτανικό οξύ"
+    },
+    {
+      "molecule": "oxobutanoic_acid",
+      "mode2D": "skeletal",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "οξοβουτανικό οξύ",
+      "upstream": "οξοβουτανικό οξύ"
+    },
+    {
+      "molecule": "dihydroxybutanedioic_acid_2_3",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "2,3-διυδροξυβουτανδιικό οξύ",
+      "upstream": "2,3-διυδροξυβουτανδιικό οξύ"
+    },
+    {
+      "molecule": "dihydroxybutanedioic_acid_2_3",
+      "mode2D": "expanded",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "2,3-διυδροξυβουτανδιικό οξύ",
+      "upstream": "2,3-διυδροξυβουτανδιικό οξύ"
+    },
+    {
+      "molecule": "dihydroxybutanedioic_acid_2_3",
+      "mode2D": "skeletal",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "2,3-διυδροξυβουτανδιικό οξύ",
+      "upstream": "2,3-διυδροξυβουτανδιικό οξύ"
+    },
+    {
+      "molecule": "ethanol",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "αιθανόλη",
+      "upstream": "αιθανόλη"
+    },
+    {
+      "molecule": "ethanol",
+      "mode2D": "expanded",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "αιθανόλη",
+      "upstream": "αιθανόλη"
+    },
+    {
+      "molecule": "ethanol",
+      "mode2D": "skeletal",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "αιθανόλη",
+      "upstream": "αιθανόλη"
+    },
+    {
+      "molecule": "propanone",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "προπανόνη",
+      "upstream": "προπανόνη"
+    },
+    {
+      "molecule": "propanone",
+      "mode2D": "expanded",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "προπανόνη",
+      "upstream": "προπανόνη"
+    },
+    {
+      "molecule": "propanone",
+      "mode2D": "skeletal",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "προπανόνη",
+      "upstream": "προπανόνη"
+    },
+    {
+      "molecule": "butanone",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "βουτανόνη",
+      "upstream": "βουτανόνη"
+    },
+    {
+      "molecule": "butanone",
+      "mode2D": "expanded",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "βουτανόνη",
+      "upstream": "βουτανόνη"
+    },
+    {
+      "molecule": "butanone",
+      "mode2D": "skeletal",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "βουτανόνη",
+      "upstream": "βουτανόνη"
+    },
+    {
+      "molecule": "nitroethane",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "νιτροαιθάνιο",
+      "upstream": "νιτροαιθάνιο"
+    },
+    {
+      "molecule": "nitroethane",
+      "mode2D": "expanded",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "νιτροαιθάνιο",
+      "upstream": "νιτροαιθάνιο"
+    },
+    {
+      "molecule": "nitroethane",
+      "mode2D": "skeletal",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "νιτροαιθάνιο",
+      "upstream": "νιτροαιθάνιο"
+    },
+    {
+      "molecule": "nitropropane_2",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "2-νιτροπροπάνιο",
+      "upstream": "2-νιτροπροπάνιο"
+    },
+    {
+      "molecule": "nitropropane_2",
+      "mode2D": "expanded",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "2-νιτροπροπάνιο",
+      "upstream": "2-νιτροπροπάνιο"
+    },
+    {
+      "molecule": "nitropropane_2",
+      "mode2D": "skeletal",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "2-νιτροπροπάνιο",
+      "upstream": "2-νιτροπροπάνιο"
+    },
+    {
+      "molecule": "methyl_2_pentane",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "2-μεθυλοπεντάνιο",
+      "upstream": "2-μεθυλοπεντάνιο"
+    },
+    {
+      "molecule": "methyl_2_pentane",
+      "mode2D": "expanded",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "2-μεθυλοπεντάνιο",
+      "upstream": "2-μεθυλοπεντάνιο"
+    },
+    {
+      "molecule": "methyl_2_pentane",
+      "mode2D": "skeletal",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "2-μεθυλοπεντάνιο",
+      "upstream": "2-μεθυλοπεντάνιο"
+    },
+    {
+      "molecule": "dimethyl_2_3_butane",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "2,3-διμεθυλοβουτάνιο",
+      "upstream": "2,3-διμεθυλοβουτάνιο"
+    },
+    {
+      "molecule": "dimethyl_2_3_butane",
+      "mode2D": "expanded",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "2,3-διμεθυλοβουτάνιο",
+      "upstream": "2,3-διμεθυλοβουτάνιο"
+    },
+    {
+      "molecule": "dimethyl_2_3_butane",
+      "mode2D": "skeletal",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "2,3-διμεθυλοβουτάνιο",
+      "upstream": "2,3-διμεθυλοβουτάνιο"
+    },
+    {
+      "molecule": "methyl_2_propene",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "2-μεθυλοπροπένιο",
+      "upstream": "2-μεθυλοπροπένιο"
+    },
+    {
+      "molecule": "methyl_2_propene",
+      "mode2D": "expanded",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "2-μεθυλοπροπένιο",
+      "upstream": "2-μεθυλοπροπένιο"
+    },
+    {
+      "molecule": "methyl_2_propene",
+      "mode2D": "skeletal",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "2-μεθυλοπροπένιο",
+      "upstream": "2-μεθυλοπροπένιο"
+    },
+    {
+      "molecule": "methyl_3_butene_1",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "status": "different",
+      "ours": "3-μεθυλο-1-βουτένιο",
+      "upstream": "3-μεθυλοβουτένιο"
+    },
+    {
+      "molecule": "methyl_3_butene_1",
+      "mode2D": "expanded",
+      "mainChainMode": "algorithmic",
+      "status": "different",
+      "ours": "3-μεθυλο-1-βουτένιο",
+      "upstream": "3-μεθυλοβουτένιο"
+    },
+    {
+      "molecule": "methyl_3_butene_1",
+      "mode2D": "skeletal",
+      "mainChainMode": "algorithmic",
+      "status": "different",
+      "ours": "3-μεθυλο-1-βουτένιο",
+      "upstream": "3-μεθυλοβουτένιο"
+    },
+    {
+      "molecule": "ethyl_3_dimethyl_2_5_hexene_2",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "3-αιθυλο-2,5-διμεθυλο-2-εξένιο",
+      "upstream": "3-αιθυλο-2,5-διμεθυλο-2-εξένιο"
+    },
+    {
+      "molecule": "ethyl_3_dimethyl_2_5_hexene_2",
+      "mode2D": "expanded",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "3-αιθυλο-2,5-διμεθυλο-2-εξένιο",
+      "upstream": "3-αιθυλο-2,5-διμεθυλο-2-εξένιο"
+    },
+    {
+      "molecule": "ethyl_3_dimethyl_2_5_hexene_2",
+      "mode2D": "skeletal",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "3-αιθυλο-2,5-διμεθυλο-2-εξένιο",
+      "upstream": "3-αιθυλο-2,5-διμεθυλο-2-εξένιο"
+    },
+    {
+      "molecule": "ethyl_methyl_ether",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "μεθοξυαιθάνιο",
+      "upstream": "μεθοξυαιθάνιο"
+    },
+    {
+      "molecule": "ethyl_methyl_ether",
+      "mode2D": "expanded",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "μεθοξυαιθάνιο",
+      "upstream": "μεθοξυαιθάνιο"
+    },
+    {
+      "molecule": "ethyl_methyl_ether",
+      "mode2D": "skeletal",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "μεθοξυαιθάνιο",
+      "upstream": "μεθοξυαιθάνιο"
+    },
+    {
+      "molecule": "dimethylether",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "μεθοξυμεθάνιο",
+      "upstream": "μεθοξυμεθάνιο"
+    },
+    {
+      "molecule": "dimethylether",
+      "mode2D": "expanded",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "μεθοξυμεθάνιο",
+      "upstream": "μεθοξυμεθάνιο"
+    },
+    {
+      "molecule": "dimethylether",
+      "mode2D": "skeletal",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "μεθοξυμεθάνιο",
+      "upstream": "μεθοξυμεθάνιο"
+    },
+    {
+      "molecule": "diethyl_ether",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "αιθοξυαιθάνιο",
+      "upstream": "αιθοξυαιθάνιο"
+    },
+    {
+      "molecule": "diethyl_ether",
+      "mode2D": "expanded",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "αιθοξυαιθάνιο",
+      "upstream": "αιθοξυαιθάνιο"
+    },
+    {
+      "molecule": "diethyl_ether",
+      "mode2D": "skeletal",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "αιθοξυαιθάνιο",
+      "upstream": "αιθοξυαιθάνιο"
+    },
+    {
+      "molecule": "isopropyl_methyl_ether",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "2-μεθοξυπροπάνιο",
+      "upstream": "2-μεθοξυπροπάνιο"
+    },
+    {
+      "molecule": "isopropyl_methyl_ether",
+      "mode2D": "expanded",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "2-μεθοξυπροπάνιο",
+      "upstream": "2-μεθοξυπροπάνιο"
+    },
+    {
+      "molecule": "isopropyl_methyl_ether",
+      "mode2D": "skeletal",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "2-μεθοξυπροπάνιο",
+      "upstream": "2-μεθοξυπροπάνιο"
+    },
+    {
+      "molecule": "ethanoic_methyl_ester",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "αιθανικόςμεθυλεστέρας",
+      "upstream": "αιθανικόςμεθυλεστέρας"
+    },
+    {
+      "molecule": "ethanoic_methyl_ester",
+      "mode2D": "expanded",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "αιθανικόςμεθυλεστέρας",
+      "upstream": "αιθανικόςμεθυλεστέρας"
+    },
+    {
+      "molecule": "ethanoic_methyl_ester",
+      "mode2D": "skeletal",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "αιθανικόςμεθυλεστέρας",
+      "upstream": "αιθανικόςμεθυλεστέρας"
+    },
+    {
+      "molecule": "propanoic_methyl_ester",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "προπανικόςμεθυλεστέρας",
+      "upstream": "προπανικόςμεθυλεστέρας"
+    },
+    {
+      "molecule": "propanoic_methyl_ester",
+      "mode2D": "expanded",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "προπανικόςμεθυλεστέρας",
+      "upstream": "προπανικόςμεθυλεστέρας"
+    },
+    {
+      "molecule": "propanoic_methyl_ester",
+      "mode2D": "skeletal",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "προπανικόςμεθυλεστέρας",
+      "upstream": "προπανικόςμεθυλεστέρας"
+    },
+    {
+      "molecule": "methyl_methanoate",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "μεθανικόςμεθυλεστέρας",
+      "upstream": "μεθανικόςμεθυλεστέρας"
+    },
+    {
+      "molecule": "methyl_methanoate",
+      "mode2D": "expanded",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "μεθανικόςμεθυλεστέρας",
+      "upstream": "μεθανικόςμεθυλεστέρας"
+    },
+    {
+      "molecule": "methyl_methanoate",
+      "mode2D": "skeletal",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "μεθανικόςμεθυλεστέρας",
+      "upstream": "μεθανικόςμεθυλεστέρας"
+    },
+    {
+      "molecule": "isopropyl_ethanoate",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "αιθανικόςισοπροπυλεστέρας",
+      "upstream": "αιθανικόςισοπροπυλεστέρας"
+    },
+    {
+      "molecule": "isopropyl_ethanoate",
+      "mode2D": "expanded",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "αιθανικόςισοπροπυλεστέρας",
+      "upstream": "αιθανικόςισοπροπυλεστέρας"
+    },
+    {
+      "molecule": "isopropyl_ethanoate",
+      "mode2D": "skeletal",
+      "mainChainMode": "algorithmic",
+      "status": "equal",
+      "ours": "αιθανικόςισοπροπυλεστέρας",
+      "upstream": "αιθανικόςισοπροπυλεστέρας"
+    },
+    {
+      "molecule": "methane",
+      "mode2D": "condensed",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "μεθάνιο",
+      "upstream": "μεθάνιο"
+    },
+    {
+      "molecule": "methane",
+      "mode2D": "expanded",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "μεθάνιο",
+      "upstream": "μεθάνιο"
+    },
+    {
+      "molecule": "methane",
+      "mode2D": "skeletal",
+      "mainChainMode": "data",
+      "status": "unavailable",
+      "oursError": "Error: Missing MOL",
+      "upstreamError": "Error: Missing MOL"
+    },
+    {
+      "molecule": "methanoicacid",
+      "mode2D": "condensed",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "μεθανικό οξύ",
+      "upstream": "μεθανικό οξύ"
+    },
+    {
+      "molecule": "methanoicacid",
+      "mode2D": "expanded",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "μεθανικό οξύ",
+      "upstream": "μεθανικό οξύ"
+    },
+    {
+      "molecule": "methanoicacid",
+      "mode2D": "skeletal",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "μεθανικό οξύ",
+      "upstream": "μεθανικό οξύ"
+    },
+    {
+      "molecule": "ethane",
+      "mode2D": "condensed",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "αιθάνιο",
+      "upstream": "αιθάνιο"
+    },
+    {
+      "molecule": "ethane",
+      "mode2D": "expanded",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "αιθάνιο",
+      "upstream": "αιθάνιο"
+    },
+    {
+      "molecule": "ethane",
+      "mode2D": "skeletal",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "αιθάνιο",
+      "upstream": "αιθάνιο"
+    },
+    {
+      "molecule": "ethene",
+      "mode2D": "condensed",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "αιθένιο",
+      "upstream": "αιθένιο"
+    },
+    {
+      "molecule": "ethene",
+      "mode2D": "expanded",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "αιθένιο",
+      "upstream": "αιθένιο"
+    },
+    {
+      "molecule": "ethene",
+      "mode2D": "skeletal",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "αιθένιο",
+      "upstream": "αιθένιο"
+    },
+    {
+      "molecule": "ethanal",
+      "mode2D": "condensed",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "αιθανάλη",
+      "upstream": "αιθανάλη"
+    },
+    {
+      "molecule": "ethanal",
+      "mode2D": "expanded",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "αιθανάλη",
+      "upstream": "αιθανάλη"
+    },
+    {
+      "molecule": "ethanal",
+      "mode2D": "skeletal",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "αιθανάλη",
+      "upstream": "αιθανάλη"
+    },
+    {
+      "molecule": "ethanenitrile",
+      "mode2D": "condensed",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "αιθαννιτρίλιο",
+      "upstream": "αιθαννιτρίλιο"
+    },
+    {
+      "molecule": "ethanenitrile",
+      "mode2D": "expanded",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "αιθαννιτρίλιο",
+      "upstream": "αιθαννιτρίλιο"
+    },
+    {
+      "molecule": "ethanenitrile",
+      "mode2D": "skeletal",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "αιθαννιτρίλιο",
+      "upstream": "αιθαννιτρίλιο"
+    },
+    {
+      "molecule": "propane",
+      "mode2D": "condensed",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "προπάνιο",
+      "upstream": "προπάνιο"
+    },
+    {
+      "molecule": "propane",
+      "mode2D": "expanded",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "προπάνιο",
+      "upstream": "προπάνιο"
+    },
+    {
+      "molecule": "propane",
+      "mode2D": "skeletal",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "προπάνιο",
+      "upstream": "προπάνιο"
+    },
+    {
+      "molecule": "propene",
+      "mode2D": "condensed",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "προπένιο",
+      "upstream": "προπένιο"
+    },
+    {
+      "molecule": "propene",
+      "mode2D": "expanded",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "προπένιο",
+      "upstream": "προπένιο"
+    },
+    {
+      "molecule": "propene",
+      "mode2D": "skeletal",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "προπένιο",
+      "upstream": "προπένιο"
+    },
+    {
+      "molecule": "propadiene",
+      "mode2D": "condensed",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "προπδιένιο",
+      "upstream": "προπδιένιο"
+    },
+    {
+      "molecule": "propadiene",
+      "mode2D": "expanded",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "προπδιένιο",
+      "upstream": "προπδιένιο"
+    },
+    {
+      "molecule": "propadiene",
+      "mode2D": "skeletal",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "προπδιένιο",
+      "upstream": "προπδιένιο"
+    },
+    {
+      "molecule": "propionicacid",
+      "mode2D": "condensed",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "προπανικό οξύ",
+      "upstream": "προπανικό οξύ"
+    },
+    {
+      "molecule": "propionicacid",
+      "mode2D": "expanded",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "προπανικό οξύ",
+      "upstream": "προπανικό οξύ"
+    },
+    {
+      "molecule": "propionicacid",
+      "mode2D": "skeletal",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "προπανικό οξύ",
+      "upstream": "προπανικό οξύ"
+    },
+    {
+      "molecule": "butane",
+      "mode2D": "condensed",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "βουτάνιο",
+      "upstream": "βουτάνιο"
+    },
+    {
+      "molecule": "butane",
+      "mode2D": "expanded",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "βουτάνιο",
+      "upstream": "βουτάνιο"
+    },
+    {
+      "molecule": "butane",
+      "mode2D": "skeletal",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "βουτάνιο",
+      "upstream": "βουτάνιο"
+    },
+    {
+      "molecule": "butanal",
+      "mode2D": "condensed",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "βουτανάλη",
+      "upstream": "βουτανάλη"
+    },
+    {
+      "molecule": "butanal",
+      "mode2D": "expanded",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "βουτανάλη",
+      "upstream": "βουτανάλη"
+    },
+    {
+      "molecule": "butanal",
+      "mode2D": "skeletal",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "βουτανάλη",
+      "upstream": "βουτανάλη"
+    },
+    {
+      "molecule": "butanenitrile",
+      "mode2D": "condensed",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "βουταννιτρίλιο",
+      "upstream": "βουταννιτρίλιο"
+    },
+    {
+      "molecule": "butanenitrile",
+      "mode2D": "expanded",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "βουταννιτρίλιο",
+      "upstream": "βουταννιτρίλιο"
+    },
+    {
+      "molecule": "butanenitrile",
+      "mode2D": "skeletal",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "βουταννιτρίλιο",
+      "upstream": "βουταννιτρίλιο"
+    },
+    {
+      "molecule": "pentane",
+      "mode2D": "condensed",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "πεντάνιο",
+      "upstream": "πεντάνιο"
+    },
+    {
+      "molecule": "pentane",
+      "mode2D": "expanded",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "πεντάνιο",
+      "upstream": "πεντάνιο"
+    },
+    {
+      "molecule": "pentane",
+      "mode2D": "skeletal",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "πεντάνιο",
+      "upstream": "πεντάνιο"
+    },
+    {
+      "molecule": "butene_1",
+      "mode2D": "condensed",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "1-βουτένιο",
+      "upstream": "1-βουτένιο"
+    },
+    {
+      "molecule": "butene_1",
+      "mode2D": "expanded",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "1-βουτένιο",
+      "upstream": "1-βουτένιο"
+    },
+    {
+      "molecule": "butene_1",
+      "mode2D": "skeletal",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "1-βουτένιο",
+      "upstream": "1-βουτένιο"
+    },
+    {
+      "molecule": "propanol_1",
+      "mode2D": "condensed",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "1-προπανόλη",
+      "upstream": "1-προπανόλη"
+    },
+    {
+      "molecule": "propanol_1",
+      "mode2D": "expanded",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "1-προπανόλη",
+      "upstream": "1-προπανόλη"
+    },
+    {
+      "molecule": "propanol_1",
+      "mode2D": "skeletal",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "1-προπανόλη",
+      "upstream": "1-προπανόλη"
+    },
+    {
+      "molecule": "penten_4_ol_2",
+      "mode2D": "condensed",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "4-πεντεν-2-όλη",
+      "upstream": "4-πεντεν-2-όλη"
+    },
+    {
+      "molecule": "penten_4_ol_2",
+      "mode2D": "expanded",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "4-πεντεν-2-όλη",
+      "upstream": "4-πεντεν-2-όλη"
+    },
+    {
+      "molecule": "penten_4_ol_2",
+      "mode2D": "skeletal",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "4-πεντεν-2-όλη",
+      "upstream": "4-πεντεν-2-όλη"
+    },
+    {
+      "molecule": "penten_1_one_3",
+      "mode2D": "condensed",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "1-πεντεν-3-όνη",
+      "upstream": "1-πεντεν-3-όνη"
+    },
+    {
+      "molecule": "penten_1_one_3",
+      "mode2D": "expanded",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "1-πεντεν-3-όνη",
+      "upstream": "1-πεντεν-3-όνη"
+    },
+    {
+      "molecule": "penten_1_one_3",
+      "mode2D": "skeletal",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "1-πεντεν-3-όνη",
+      "upstream": "1-πεντεν-3-όνη"
+    },
+    {
+      "molecule": "butanol_1",
+      "mode2D": "condensed",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "1-βουτανόλη",
+      "upstream": "1-βουτανόλη"
+    },
+    {
+      "molecule": "butanol_1",
+      "mode2D": "expanded",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "1-βουτανόλη",
+      "upstream": "1-βουτανόλη"
+    },
+    {
+      "molecule": "butanol_1",
+      "mode2D": "skeletal",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "1-βουτανόλη",
+      "upstream": "1-βουτανόλη"
+    },
+    {
+      "molecule": "pentanone_2",
+      "mode2D": "condensed",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "2-πεντανόνη",
+      "upstream": "2-πεντανόνη"
+    },
+    {
+      "molecule": "pentanone_2",
+      "mode2D": "expanded",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "2-πεντανόνη",
+      "upstream": "2-πεντανόνη"
+    },
+    {
+      "molecule": "pentanone_2",
+      "mode2D": "skeletal",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "2-πεντανόνη",
+      "upstream": "2-πεντανόνη"
+    },
+    {
+      "molecule": "butene_2",
+      "mode2D": "condensed",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "2-βουτένιο",
+      "upstream": "2-βουτένιο"
+    },
+    {
+      "molecule": "butene_2",
+      "mode2D": "expanded",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "2-βουτένιο",
+      "upstream": "2-βουτένιο"
+    },
+    {
+      "molecule": "butene_2",
+      "mode2D": "skeletal",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "2-βουτένιο",
+      "upstream": "2-βουτένιο"
+    },
+    {
+      "molecule": "pentadiene_1_3",
+      "mode2D": "condensed",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "1,3-πεντδιένιο",
+      "upstream": "1,3-πεντδιένιο"
+    },
+    {
+      "molecule": "pentadiene_1_3",
+      "mode2D": "expanded",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "1,3-πεντδιένιο",
+      "upstream": "1,3-πεντδιένιο"
+    },
+    {
+      "molecule": "pentadiene_1_3",
+      "mode2D": "skeletal",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "1,3-πεντδιένιο",
+      "upstream": "1,3-πεντδιένιο"
+    },
+    {
+      "molecule": "propyne",
+      "mode2D": "condensed",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "προπίνιο",
+      "upstream": "προπίνιο"
+    },
+    {
+      "molecule": "propyne",
+      "mode2D": "expanded",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "προπίνιο",
+      "upstream": "προπίνιο"
+    },
+    {
+      "molecule": "propyne",
+      "mode2D": "skeletal",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "προπίνιο",
+      "upstream": "προπίνιο"
+    },
+    {
+      "molecule": "propanal",
+      "mode2D": "condensed",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "προπανάλη",
+      "upstream": "προπανάλη"
+    },
+    {
+      "molecule": "propanal",
+      "mode2D": "expanded",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "προπανάλη",
+      "upstream": "προπανάλη"
+    },
+    {
+      "molecule": "propanal",
+      "mode2D": "skeletal",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "προπανάλη",
+      "upstream": "προπανάλη"
+    },
+    {
+      "molecule": "butanoic_acid",
+      "mode2D": "condensed",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "βουτανικό οξύ",
+      "upstream": "βουτανικό οξύ"
+    },
+    {
+      "molecule": "butanoic_acid",
+      "mode2D": "expanded",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "βουτανικό οξύ",
+      "upstream": "βουτανικό οξύ"
+    },
+    {
+      "molecule": "butanoic_acid",
+      "mode2D": "skeletal",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "βουτανικό οξύ",
+      "upstream": "βουτανικό οξύ"
+    },
+    {
+      "molecule": "propanenitrile",
+      "mode2D": "condensed",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "προπαννιτρίλιο",
+      "upstream": "προπαννιτρίλιο"
+    },
+    {
+      "molecule": "propanenitrile",
+      "mode2D": "expanded",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "προπαννιτρίλιο",
+      "upstream": "προπαννιτρίλιο"
+    },
+    {
+      "molecule": "propanenitrile",
+      "mode2D": "skeletal",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "προπαννιτρίλιο",
+      "upstream": "προπαννιτρίλιο"
+    },
+    {
+      "molecule": "pentanoic_acid",
+      "mode2D": "condensed",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "πεντανικό οξύ",
+      "upstream": "πεντανικό οξύ"
+    },
+    {
+      "molecule": "pentanoic_acid",
+      "mode2D": "expanded",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "πεντανικό οξύ",
+      "upstream": "πεντανικό οξύ"
+    },
+    {
+      "molecule": "pentanoic_acid",
+      "mode2D": "skeletal",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "πεντανικό οξύ",
+      "upstream": "πεντανικό οξύ"
+    },
+    {
+      "molecule": "pentanal",
+      "mode2D": "condensed",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "πεντανάλη",
+      "upstream": "πεντανάλη"
+    },
+    {
+      "molecule": "pentanal",
+      "mode2D": "expanded",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "πεντανάλη",
+      "upstream": "πεντανάλη"
+    },
+    {
+      "molecule": "pentanal",
+      "mode2D": "skeletal",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "πεντανάλη",
+      "upstream": "πεντανάλη"
+    },
+    {
+      "molecule": "butene_3_ol_2",
+      "mode2D": "condensed",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "3-βουτεν-2-όλη",
+      "upstream": "3-βουτεν-2-όλη"
+    },
+    {
+      "molecule": "butene_3_ol_2",
+      "mode2D": "expanded",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "3-βουτεν-2-όλη",
+      "upstream": "3-βουτεν-2-όλη"
+    },
+    {
+      "molecule": "butene_3_ol_2",
+      "mode2D": "skeletal",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "3-βουτεν-2-όλη",
+      "upstream": "3-βουτεν-2-όλη"
+    },
+    {
+      "molecule": "penten_2_ol_1",
+      "mode2D": "condensed",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "2-πεντεν-1-όλη",
+      "upstream": "2-πεντεν-1-όλη"
+    },
+    {
+      "molecule": "penten_2_ol_1",
+      "mode2D": "expanded",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "2-πεντεν-1-όλη",
+      "upstream": "2-πεντεν-1-όλη"
+    },
+    {
+      "molecule": "penten_2_ol_1",
+      "mode2D": "skeletal",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "2-πεντεν-1-όλη",
+      "upstream": "2-πεντεν-1-όλη"
+    },
+    {
+      "molecule": "pentyn_4_one_2",
+      "mode2D": "condensed",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "4-πεντιν-2-όνη",
+      "upstream": "4-πεντιν-2-όνη"
+    },
+    {
+      "molecule": "pentyn_4_one_2",
+      "mode2D": "expanded",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "4-πεντιν-2-όνη",
+      "upstream": "4-πεντιν-2-όνη"
+    },
+    {
+      "molecule": "pentyn_4_one_2",
+      "mode2D": "skeletal",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "4-πεντιν-2-όνη",
+      "upstream": "4-πεντιν-2-όνη"
+    },
+    {
+      "molecule": "propenoic_acid",
+      "mode2D": "condensed",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "προπενικό οξύ",
+      "upstream": "προπενικό οξύ"
+    },
+    {
+      "molecule": "propenoic_acid",
+      "mode2D": "expanded",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "προπενικό οξύ",
+      "upstream": "προπενικό οξύ"
+    },
+    {
+      "molecule": "propenoic_acid",
+      "mode2D": "skeletal",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "προπενικό οξύ",
+      "upstream": "προπενικό οξύ"
+    },
+    {
+      "molecule": "propynal",
+      "mode2D": "condensed",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "προπινάλη",
+      "upstream": "προπινάλη"
+    },
+    {
+      "molecule": "propynal",
+      "mode2D": "expanded",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "προπινάλη",
+      "upstream": "προπινάλη"
+    },
+    {
+      "molecule": "propynal",
+      "mode2D": "skeletal",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "προπινάλη",
+      "upstream": "προπινάλη"
+    },
+    {
+      "molecule": "penten_3_yne_1",
+      "mode2D": "condensed",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "3-πεντεν-1-ίνιο",
+      "upstream": "3-πεντεν-1-ίνιο"
+    },
+    {
+      "molecule": "penten_3_yne_1",
+      "mode2D": "expanded",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "3-πεντεν-1-ίνιο",
+      "upstream": "3-πεντεν-1-ίνιο"
+    },
+    {
+      "molecule": "penten_3_yne_1",
+      "mode2D": "skeletal",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "3-πεντεν-1-ίνιο",
+      "upstream": "3-πεντεν-1-ίνιο"
+    },
+    {
+      "molecule": "hexen_1_yne_4",
+      "mode2D": "condensed",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "1-εξεν-4-ίνιο",
+      "upstream": "1-εξεν-4-ίνιο"
+    },
+    {
+      "molecule": "hexen_1_yne_4",
+      "mode2D": "expanded",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "1-εξεν-4-ίνιο",
+      "upstream": "1-εξεν-4-ίνιο"
+    },
+    {
+      "molecule": "hexen_1_yne_4",
+      "mode2D": "skeletal",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "1-εξεν-4-ίνιο",
+      "upstream": "1-εξεν-4-ίνιο"
+    },
+    {
+      "molecule": "buten_1_yne_3",
+      "mode2D": "condensed",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "1-βουτεν-3-ίνιο",
+      "upstream": "1-βουτεν-3-ίνιο"
+    },
+    {
+      "molecule": "buten_1_yne_3",
+      "mode2D": "expanded",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "1-βουτεν-3-ίνιο",
+      "upstream": "1-βουτεν-3-ίνιο"
+    },
+    {
+      "molecule": "buten_1_yne_3",
+      "mode2D": "skeletal",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "1-βουτεν-3-ίνιο",
+      "upstream": "1-βουτεν-3-ίνιο"
+    },
+    {
+      "molecule": "hexen_2_yne_4",
+      "mode2D": "condensed",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "2-εξεν-4-ίνιο",
+      "upstream": "2-εξεν-4-ίνιο"
+    },
+    {
+      "molecule": "hexen_2_yne_4",
+      "mode2D": "expanded",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "2-εξεν-4-ίνιο",
+      "upstream": "2-εξεν-4-ίνιο"
+    },
+    {
+      "molecule": "hexen_2_yne_4",
+      "mode2D": "skeletal",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "2-εξεν-4-ίνιο",
+      "upstream": "2-εξεν-4-ίνιο"
+    },
+    {
+      "molecule": "chlorobutane_1",
+      "mode2D": "condensed",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "1-χλωροβουτάνιο",
+      "upstream": "1-χλωροβουτάνιο"
+    },
+    {
+      "molecule": "chlorobutane_1",
+      "mode2D": "expanded",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "1-χλωροβουτάνιο",
+      "upstream": "1-χλωροβουτάνιο"
+    },
+    {
+      "molecule": "chlorobutane_1",
+      "mode2D": "skeletal",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "1-χλωροβουτάνιο",
+      "upstream": "1-χλωροβουτάνιο"
+    },
+    {
+      "molecule": "bromopropane_2",
+      "mode2D": "condensed",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "2-βρωμοπροπάνιο",
+      "upstream": "2-βρωμοπροπάνιο"
+    },
+    {
+      "molecule": "bromopropane_2",
+      "mode2D": "expanded",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "2-βρωμοπροπάνιο",
+      "upstream": "2-βρωμοπροπάνιο"
+    },
+    {
+      "molecule": "bromopropane_2",
+      "mode2D": "skeletal",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "2-βρωμοπροπάνιο",
+      "upstream": "2-βρωμοπροπάνιο"
+    },
+    {
+      "molecule": "bromo_4_butene_1",
+      "mode2D": "condensed",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "4-βρωμο-1-βουτένιο",
+      "upstream": "4-βρωμο-1-βουτένιο"
+    },
+    {
+      "molecule": "bromo_4_butene_1",
+      "mode2D": "expanded",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "4-βρωμο-1-βουτένιο",
+      "upstream": "4-βρωμο-1-βουτένιο"
+    },
+    {
+      "molecule": "bromo_4_butene_1",
+      "mode2D": "skeletal",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "4-βρωμο-1-βουτένιο",
+      "upstream": "4-βρωμο-1-βουτένιο"
+    },
+    {
+      "molecule": "bromo_3_chloropentane_1",
+      "mode2D": "condensed",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "3-βρωμο-1-χλωροπεντάνιο",
+      "upstream": "3-βρωμο-1-χλωροπεντάνιο"
+    },
+    {
+      "molecule": "bromo_3_chloropentane_1",
+      "mode2D": "expanded",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "3-βρωμο-1-χλωροπεντάνιο",
+      "upstream": "3-βρωμο-1-χλωροπεντάνιο"
+    },
+    {
+      "molecule": "bromo_3_chloropentane_1",
+      "mode2D": "skeletal",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "3-βρωμο-1-χλωροπεντάνιο",
+      "upstream": "3-βρωμο-1-χλωροπεντάνιο"
+    },
+    {
+      "molecule": "bromo_2_chlorobutane_3",
+      "mode2D": "condensed",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "2-βρωμο-3-χλωροβουτάνιο",
+      "upstream": "2-βρωμο-3-χλωροβουτάνιο"
+    },
+    {
+      "molecule": "bromo_2_chlorobutane_3",
+      "mode2D": "expanded",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "2-βρωμο-3-χλωροβουτάνιο",
+      "upstream": "2-βρωμο-3-χλωροβουτάνιο"
+    },
+    {
+      "molecule": "bromo_2_chlorobutane_3",
+      "mode2D": "skeletal",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "2-βρωμο-3-χλωροβουτάνιο",
+      "upstream": "2-βρωμο-3-χλωροβουτάνιο"
+    },
+    {
+      "molecule": "propanediol_1_2",
+      "mode2D": "condensed",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "1,2-προπανδιόλη",
+      "upstream": "1,2-προπανδιόλη"
+    },
+    {
+      "molecule": "propanediol_1_2",
+      "mode2D": "expanded",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "1,2-προπανδιόλη",
+      "upstream": "1,2-προπανδιόλη"
+    },
+    {
+      "molecule": "propanediol_1_2",
+      "mode2D": "skeletal",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "1,2-προπανδιόλη",
+      "upstream": "1,2-προπανδιόλη"
+    },
+    {
+      "molecule": "propanedioic_acid",
+      "mode2D": "condensed",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "προπανδιικό οξύ",
+      "upstream": "προπανδιικό οξύ"
+    },
+    {
+      "molecule": "propanedioic_acid",
+      "mode2D": "expanded",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "προπανδιικό οξύ",
+      "upstream": "προπανδιικό οξύ"
+    },
+    {
+      "molecule": "propanedioic_acid",
+      "mode2D": "skeletal",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "προπανδιικό οξύ",
+      "upstream": "προπανδιικό οξύ"
+    },
+    {
+      "molecule": "propanetriol",
+      "mode2D": "condensed",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "1,2,3-προπαντριόλη",
+      "upstream": "1,2,3-προπαντριόλη"
+    },
+    {
+      "molecule": "propanetriol",
+      "mode2D": "expanded",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "1,2,3-προπαντριόλη",
+      "upstream": "1,2,3-προπαντριόλη"
+    },
+    {
+      "molecule": "propanetriol",
+      "mode2D": "skeletal",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "1,2,3-προπαντριόλη",
+      "upstream": "1,2,3-προπαντριόλη"
+    },
+    {
+      "molecule": "dichlorobutane_2_2",
+      "mode2D": "condensed",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "2,2-διχλωροβουτάνιο",
+      "upstream": "2,2-διχλωροβουτάνιο"
+    },
+    {
+      "molecule": "dichlorobutane_2_2",
+      "mode2D": "expanded",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "2,2-διχλωροβουτάνιο",
+      "upstream": "2,2-διχλωροβουτάνιο"
+    },
+    {
+      "molecule": "dichlorobutane_2_2",
+      "mode2D": "skeletal",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "2,2-διχλωροβουτάνιο",
+      "upstream": "2,2-διχλωροβουτάνιο"
+    },
+    {
+      "molecule": "trichloropentane_1_1_2",
+      "mode2D": "condensed",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "1,1,2-τριχλωροπεντάνιο",
+      "upstream": "1,1,2-τριχλωροπεντάνιο"
+    },
+    {
+      "molecule": "trichloropentane_1_1_2",
+      "mode2D": "expanded",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "1,1,2-τριχλωροπεντάνιο",
+      "upstream": "1,1,2-τριχλωροπεντάνιο"
+    },
+    {
+      "molecule": "trichloropentane_1_1_2",
+      "mode2D": "skeletal",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "1,1,2-τριχλωροπεντάνιο",
+      "upstream": "1,1,2-τριχλωροπεντάνιο"
+    },
+    {
+      "molecule": "hydroxypropanoic_acid_2",
+      "mode2D": "condensed",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "2-υδροξυπροπανικό οξύ",
+      "upstream": "2-υδροξυπροπανικό οξύ"
+    },
+    {
+      "molecule": "hydroxypropanoic_acid_2",
+      "mode2D": "expanded",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "2-υδροξυπροπανικό οξύ",
+      "upstream": "2-υδροξυπροπανικό οξύ"
+    },
+    {
+      "molecule": "hydroxypropanoic_acid_2",
+      "mode2D": "skeletal",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "2-υδροξυπροπανικό οξύ",
+      "upstream": "2-υδροξυπροπανικό οξύ"
+    },
+    {
+      "molecule": "hydroxybutanenitrile_2",
+      "mode2D": "condensed",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "2-υδροξυβουταννιτρίλιο",
+      "upstream": "2-υδροξυβουταννιτρίλιο"
+    },
+    {
+      "molecule": "hydroxybutanenitrile_2",
+      "mode2D": "expanded",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "2-υδροξυβουταννιτρίλιο",
+      "upstream": "2-υδροξυβουταννιτρίλιο"
+    },
+    {
+      "molecule": "hydroxybutanenitrile_2",
+      "mode2D": "skeletal",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "2-υδροξυβουταννιτρίλιο",
+      "upstream": "2-υδροξυβουταννιτρίλιο"
+    },
+    {
+      "molecule": "Oxopropanoic_acid",
+      "mode2D": "condensed",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "κετοπροπανικό οξύ",
+      "upstream": "κετοπροπανικό οξύ"
+    },
+    {
+      "molecule": "Oxopropanoic_acid",
+      "mode2D": "expanded",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "κετοπροπανικό οξύ",
+      "upstream": "κετοπροπανικό οξύ"
+    },
+    {
+      "molecule": "Oxopropanoic_acid",
+      "mode2D": "skeletal",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "κετοπροπανικό οξύ",
+      "upstream": "κετοπροπανικό οξύ"
+    },
+    {
+      "molecule": "aminobutanoic_acid_3",
+      "mode2D": "condensed",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "3-αμινοβουτανικό οξύ",
+      "upstream": "3-αμινοβουτανικό οξύ"
+    },
+    {
+      "molecule": "aminobutanoic_acid_3",
+      "mode2D": "expanded",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "3-αμινοβουτανικό οξύ",
+      "upstream": "3-αμινοβουτανικό οξύ"
+    },
+    {
+      "molecule": "aminobutanoic_acid_3",
+      "mode2D": "skeletal",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "3-αμινοβουτανικό οξύ",
+      "upstream": "3-αμινοβουτανικό οξύ"
+    },
+    {
+      "molecule": "hydroxypropanenitrile_2",
+      "mode2D": "condensed",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "2-υδροξυπροπαννιτρίλιο",
+      "upstream": "2-υδροξυπροπαννιτρίλιο"
+    },
+    {
+      "molecule": "hydroxypropanenitrile_2",
+      "mode2D": "expanded",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "2-υδροξυπροπαννιτρίλιο",
+      "upstream": "2-υδροξυπροπαννιτρίλιο"
+    },
+    {
+      "molecule": "hydroxypropanenitrile_2",
+      "mode2D": "skeletal",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "2-υδροξυπροπαννιτρίλιο",
+      "upstream": "2-υδροξυπροπαννιτρίλιο"
+    },
+    {
+      "molecule": "oxobutanoic_acid",
+      "mode2D": "condensed",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "οξοβουτανικό οξύ",
+      "upstream": "οξοβουτανικό οξύ"
+    },
+    {
+      "molecule": "oxobutanoic_acid",
+      "mode2D": "expanded",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "οξοβουτανικό οξύ",
+      "upstream": "οξοβουτανικό οξύ"
+    },
+    {
+      "molecule": "oxobutanoic_acid",
+      "mode2D": "skeletal",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "οξοβουτανικό οξύ",
+      "upstream": "οξοβουτανικό οξύ"
+    },
+    {
+      "molecule": "dihydroxybutanedioic_acid_2_3",
+      "mode2D": "condensed",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "2,3-διυδροξυβουτανδιικό οξύ",
+      "upstream": "2,3-διυδροξυβουτανδιικό οξύ"
+    },
+    {
+      "molecule": "dihydroxybutanedioic_acid_2_3",
+      "mode2D": "expanded",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "2,3-διυδροξυβουτανδιικό οξύ",
+      "upstream": "2,3-διυδροξυβουτανδιικό οξύ"
+    },
+    {
+      "molecule": "dihydroxybutanedioic_acid_2_3",
+      "mode2D": "skeletal",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "2,3-διυδροξυβουτανδιικό οξύ",
+      "upstream": "2,3-διυδροξυβουτανδιικό οξύ"
+    },
+    {
+      "molecule": "ethanol",
+      "mode2D": "condensed",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "αιθανόλη",
+      "upstream": "αιθανόλη"
+    },
+    {
+      "molecule": "ethanol",
+      "mode2D": "expanded",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "αιθανόλη",
+      "upstream": "αιθανόλη"
+    },
+    {
+      "molecule": "ethanol",
+      "mode2D": "skeletal",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "αιθανόλη",
+      "upstream": "αιθανόλη"
+    },
+    {
+      "molecule": "propanone",
+      "mode2D": "condensed",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "προπανόνη",
+      "upstream": "προπανόνη"
+    },
+    {
+      "molecule": "propanone",
+      "mode2D": "expanded",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "προπανόνη",
+      "upstream": "προπανόνη"
+    },
+    {
+      "molecule": "propanone",
+      "mode2D": "skeletal",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "προπανόνη",
+      "upstream": "προπανόνη"
+    },
+    {
+      "molecule": "butanone",
+      "mode2D": "condensed",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "βουτανόνη",
+      "upstream": "βουτανόνη"
+    },
+    {
+      "molecule": "butanone",
+      "mode2D": "expanded",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "βουτανόνη",
+      "upstream": "βουτανόνη"
+    },
+    {
+      "molecule": "butanone",
+      "mode2D": "skeletal",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "βουτανόνη",
+      "upstream": "βουτανόνη"
+    },
+    {
+      "molecule": "nitroethane",
+      "mode2D": "condensed",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "νιτροαιθάνιο",
+      "upstream": "νιτροαιθάνιο"
+    },
+    {
+      "molecule": "nitroethane",
+      "mode2D": "expanded",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "νιτροαιθάνιο",
+      "upstream": "νιτροαιθάνιο"
+    },
+    {
+      "molecule": "nitroethane",
+      "mode2D": "skeletal",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "νιτροαιθάνιο",
+      "upstream": "νιτροαιθάνιο"
+    },
+    {
+      "molecule": "nitropropane_2",
+      "mode2D": "condensed",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "2-νιτροπροπάνιο",
+      "upstream": "2-νιτροπροπάνιο"
+    },
+    {
+      "molecule": "nitropropane_2",
+      "mode2D": "expanded",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "2-νιτροπροπάνιο",
+      "upstream": "2-νιτροπροπάνιο"
+    },
+    {
+      "molecule": "nitropropane_2",
+      "mode2D": "skeletal",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "2-νιτροπροπάνιο",
+      "upstream": "2-νιτροπροπάνιο"
+    },
+    {
+      "molecule": "methyl_2_pentane",
+      "mode2D": "condensed",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "2-μεθυλοπεντάνιο",
+      "upstream": "2-μεθυλοπεντάνιο"
+    },
+    {
+      "molecule": "methyl_2_pentane",
+      "mode2D": "expanded",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "2-μεθυλοπεντάνιο",
+      "upstream": "2-μεθυλοπεντάνιο"
+    },
+    {
+      "molecule": "methyl_2_pentane",
+      "mode2D": "skeletal",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "2-μεθυλοπεντάνιο",
+      "upstream": "2-μεθυλοπεντάνιο"
+    },
+    {
+      "molecule": "dimethyl_2_3_butane",
+      "mode2D": "condensed",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "2,3-διμεθυλοβουτάνιο",
+      "upstream": "2,3-διμεθυλοβουτάνιο"
+    },
+    {
+      "molecule": "dimethyl_2_3_butane",
+      "mode2D": "expanded",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "2,3-διμεθυλοβουτάνιο",
+      "upstream": "2,3-διμεθυλοβουτάνιο"
+    },
+    {
+      "molecule": "dimethyl_2_3_butane",
+      "mode2D": "skeletal",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "2,3-διμεθυλοβουτάνιο",
+      "upstream": "2,3-διμεθυλοβουτάνιο"
+    },
+    {
+      "molecule": "methyl_2_propene",
+      "mode2D": "condensed",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "2-μεθυλοπροπένιο",
+      "upstream": "2-μεθυλοπροπένιο"
+    },
+    {
+      "molecule": "methyl_2_propene",
+      "mode2D": "expanded",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "2-μεθυλοπροπένιο",
+      "upstream": "2-μεθυλοπροπένιο"
+    },
+    {
+      "molecule": "methyl_2_propene",
+      "mode2D": "skeletal",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "2-μεθυλοπροπένιο",
+      "upstream": "2-μεθυλοπροπένιο"
+    },
+    {
+      "molecule": "methyl_3_butene_1",
+      "mode2D": "condensed",
+      "mainChainMode": "data",
+      "status": "different",
+      "ours": "3-μεθυλο-1-βουτένιο",
+      "upstream": "3-μεθυλοβουτένιο"
+    },
+    {
+      "molecule": "methyl_3_butene_1",
+      "mode2D": "expanded",
+      "mainChainMode": "data",
+      "status": "different",
+      "ours": "3-μεθυλο-1-βουτένιο",
+      "upstream": "3-μεθυλοβουτένιο"
+    },
+    {
+      "molecule": "methyl_3_butene_1",
+      "mode2D": "skeletal",
+      "mainChainMode": "data",
+      "status": "different",
+      "ours": "3-μεθυλο-1-βουτένιο",
+      "upstream": "3-μεθυλοβουτένιο"
+    },
+    {
+      "molecule": "ethyl_3_dimethyl_2_5_hexene_2",
+      "mode2D": "condensed",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "3-αιθυλο-2,5-διμεθυλο-2-εξένιο",
+      "upstream": "3-αιθυλο-2,5-διμεθυλο-2-εξένιο"
+    },
+    {
+      "molecule": "ethyl_3_dimethyl_2_5_hexene_2",
+      "mode2D": "expanded",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "3-αιθυλο-2,5-διμεθυλο-2-εξένιο",
+      "upstream": "3-αιθυλο-2,5-διμεθυλο-2-εξένιο"
+    },
+    {
+      "molecule": "ethyl_3_dimethyl_2_5_hexene_2",
+      "mode2D": "skeletal",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "3-αιθυλο-2,5-διμεθυλο-2-εξένιο",
+      "upstream": "3-αιθυλο-2,5-διμεθυλο-2-εξένιο"
+    },
+    {
+      "molecule": "ethyl_methyl_ether",
+      "mode2D": "condensed",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "μεθοξυαιθάνιο",
+      "upstream": "μεθοξυαιθάνιο"
+    },
+    {
+      "molecule": "ethyl_methyl_ether",
+      "mode2D": "expanded",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "μεθοξυαιθάνιο",
+      "upstream": "μεθοξυαιθάνιο"
+    },
+    {
+      "molecule": "ethyl_methyl_ether",
+      "mode2D": "skeletal",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "μεθοξυαιθάνιο",
+      "upstream": "μεθοξυαιθάνιο"
+    },
+    {
+      "molecule": "dimethylether",
+      "mode2D": "condensed",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "μεθοξυμεθάνιο",
+      "upstream": "μεθοξυμεθάνιο"
+    },
+    {
+      "molecule": "dimethylether",
+      "mode2D": "expanded",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "μεθοξυμεθάνιο",
+      "upstream": "μεθοξυμεθάνιο"
+    },
+    {
+      "molecule": "dimethylether",
+      "mode2D": "skeletal",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "μεθοξυμεθάνιο",
+      "upstream": "μεθοξυμεθάνιο"
+    },
+    {
+      "molecule": "diethyl_ether",
+      "mode2D": "condensed",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "αιθοξυαιθάνιο",
+      "upstream": "αιθοξυαιθάνιο"
+    },
+    {
+      "molecule": "diethyl_ether",
+      "mode2D": "expanded",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "αιθοξυαιθάνιο",
+      "upstream": "αιθοξυαιθάνιο"
+    },
+    {
+      "molecule": "diethyl_ether",
+      "mode2D": "skeletal",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "αιθοξυαιθάνιο",
+      "upstream": "αιθοξυαιθάνιο"
+    },
+    {
+      "molecule": "isopropyl_methyl_ether",
+      "mode2D": "condensed",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "2-μεθοξυπροπάνιο",
+      "upstream": "2-μεθοξυπροπάνιο"
+    },
+    {
+      "molecule": "isopropyl_methyl_ether",
+      "mode2D": "expanded",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "2-μεθοξυπροπάνιο",
+      "upstream": "2-μεθοξυπροπάνιο"
+    },
+    {
+      "molecule": "isopropyl_methyl_ether",
+      "mode2D": "skeletal",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "2-μεθοξυπροπάνιο",
+      "upstream": "2-μεθοξυπροπάνιο"
+    },
+    {
+      "molecule": "ethanoic_methyl_ester",
+      "mode2D": "condensed",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "αιθανικόςμεθυλεστέρας",
+      "upstream": "αιθανικόςμεθυλεστέρας"
+    },
+    {
+      "molecule": "ethanoic_methyl_ester",
+      "mode2D": "expanded",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "αιθανικόςμεθυλεστέρας",
+      "upstream": "αιθανικόςμεθυλεστέρας"
+    },
+    {
+      "molecule": "ethanoic_methyl_ester",
+      "mode2D": "skeletal",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "αιθανικόςμεθυλεστέρας",
+      "upstream": "αιθανικόςμεθυλεστέρας"
+    },
+    {
+      "molecule": "propanoic_methyl_ester",
+      "mode2D": "condensed",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "προπανικόςμεθυλεστέρας",
+      "upstream": "προπανικόςμεθυλεστέρας"
+    },
+    {
+      "molecule": "propanoic_methyl_ester",
+      "mode2D": "expanded",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "προπανικόςμεθυλεστέρας",
+      "upstream": "προπανικόςμεθυλεστέρας"
+    },
+    {
+      "molecule": "propanoic_methyl_ester",
+      "mode2D": "skeletal",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "προπανικόςμεθυλεστέρας",
+      "upstream": "προπανικόςμεθυλεστέρας"
+    },
+    {
+      "molecule": "methyl_methanoate",
+      "mode2D": "condensed",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "μεθανικόςμεθυλεστέρας",
+      "upstream": "μεθανικόςμεθυλεστέρας"
+    },
+    {
+      "molecule": "methyl_methanoate",
+      "mode2D": "expanded",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "μεθανικόςμεθυλεστέρας",
+      "upstream": "μεθανικόςμεθυλεστέρας"
+    },
+    {
+      "molecule": "methyl_methanoate",
+      "mode2D": "skeletal",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "μεθανικόςμεθυλεστέρας",
+      "upstream": "μεθανικόςμεθυλεστέρας"
+    },
+    {
+      "molecule": "isopropyl_ethanoate",
+      "mode2D": "condensed",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "αιθανικόςισοπροπυλεστέρας",
+      "upstream": "αιθανικόςισοπροπυλεστέρας"
+    },
+    {
+      "molecule": "isopropyl_ethanoate",
+      "mode2D": "expanded",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "αιθανικόςισοπροπυλεστέρας",
+      "upstream": "αιθανικόςισοπροπυλεστέρας"
+    },
+    {
+      "molecule": "isopropyl_ethanoate",
+      "mode2D": "skeletal",
+      "mainChainMode": "data",
+      "status": "equal",
+      "ours": "αιθανικόςισοπροπυλεστέρας",
+      "upstream": "αιθανικόςισοπροπυλεστέρας"
+    }
+  ]
+}

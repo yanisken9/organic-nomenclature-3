@@ -40,3 +40,16 @@
 - Update it after material contributions and before ending a work session.
   Distinguish pre-existing changes from contributions made in the session.
   Attribute earlier work only when evidence supports it; do not invent history.
+
+# End-of-session core change report
+
+- User request (2026-10-21): at the end of EVERY work session, explicitly
+  report whether any core.js/core-version file changed during that session.
+- If changed, provide a short Greek message ready for the user to forward to
+  the professor: exact core filename/version, concrete behavior changed, reason,
+  checks actually performed and whether local/committed/published.
+- If unchanged, explicitly state that no core changes were made that session.
+- Compare against the session-start baseline, not only the latest task or
+  uncommitted diff; distinguish upstream sync from locally authored changes.
+- Preserve this record in session/contribution notes. Do not send messages to
+  the professor; the user forwards the supplied text.

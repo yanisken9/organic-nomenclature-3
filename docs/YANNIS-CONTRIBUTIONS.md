@@ -810,3 +810,62 @@ parsing and diff check completed. Commit/push and public verification follow.
 Publication confirmed: complete snapshot d4d3030 pushed to origin/thesis-work.
 Eight public application/library/lesson files verified byte-identical to local.
 Final Desktop scenario equals library copy. Professor repository unchanged.
+
+## 2026-10-21 — Compare latest professor v48
+
+Compared upstream1ac7636 to local1375772/basef1ac038 in isolated /tmp clone.
+Report UPSTREAM-COMPARISON-20261021.md documents new authoring/accessibility/
+height fixes, naming-policy difference, competing fit/group implementations,
+72same molecules/all2D MOLs, and dry-run conflicts/duplicate data key. Actual
+pure-core mock tests for3alkenes and registry comparisons performed. No app
+source changes, merge into project, commit or push; report/notes only.
+
+## 2026-10-21 — All72 molecule names compared
+
+User requested complete naming comparison. Both cores executed with fresh state
+and atom/bond mock from real MOL2D, all3forms and2chain modes:432cases/version,
+430available,424same,6differences solely methyl_3_butene_1. Methane skeletal absent
+in both. Evidence docs/checks/naming-comparison-20261021.json; report updated.
+Not browser/3D or independent correctness validation. No source edit/commit/push.
+
+## 2026-10-21 — Approved selective synchronization with1ac7636
+
+User retained3-methyl-1-butene then authorized remaining sync. Imported authoring,
+dialog a11y/rollback, height controls, mixed-bond handling and FG plural text.
+Kept structural hydrocarbon groups, one existing fitter, molecule data, exact
+lesson, library/loading/Exit. Staged and tested first, then transferred7app files
+and refreshed library launch version. See V48-SYNC-20261021.md for actual syntax,
+430core-case, synthetic graph and browser checks/limits. No commit/push/publication.
+
+## 2026-10-21 — Updated library lesson from new user export
+
+Exact new Desktop2-prefixed export copied to stable library scenario and
+same-name project archive.22steps; changes only16note fields. Current scenario
+module validation passed without warnings. No core or app source changes for
+this update; local only, publication deferred until session-end saves.
+
+## 2026-10-21 — Fresh library lesson fetching
+
+Approved scenario URL fetch cache:no-store, refreshed launch/script URLs and
+versioned library links from welcome/Exit/loading fallback. Actual browser with
+default cache and fetch instrumentation confirmed two successive no-store JSON
+loads, updated step5 and return to library. No core edit; local/unpublished.
+
+## 2026-10-21 — Branched alkane trial addition
+
+Approved3MOLs/3D/integration for3-ethyl-2,5-dimethylhexane. Added73rdentry,
+C10H22/valences/graph mapping and raw PubChem521421SDF, source MOLs and
+screenshots. Default/stored3forms and browser4forms2D/3Dbranch checks passed;
+prior72names unchanged. Final audit found invalid alternative parents/orientation
+in generic core pool; awaiting separate fix approval. No core edit for addition;
+see BRANCHED-HEXANE-TRIAL.md. Local/uncommitted/unpublished.
+
+## 2026-10-21 — Approved core parent-chain correction and professor record
+
+General graph-only2D/3Dbranch locants/orientation and max-branch/min-locant
+filter for saturated acyclic hydrocarbon pools. Newalkane6→4valid equivalent
+paths.436available before/after73molecule names unchanged;20permutations and
+synthetic bond tests, browser old/new groups4modes/4paths and lesson22passed.
+CORE-CHANGES-20261021.md, standalone/session core patches and runnable test
+prepared. Standalone patch apply-check passed upstream1ac7636. No contact
+with professor, no commit/push; user forwards report at session end.

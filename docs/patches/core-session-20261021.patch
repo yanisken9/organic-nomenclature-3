@@ -1,0 +1,208 @@
+--- a/js/mulermoc-nom-core-48.js
++++ b/js/mulermoc-nom-core-48.js
+@@ -646,6 +646,52 @@
+ // ── fOrientChainPath ────────────────────────────────────────────────
+ // Extracted verbatim from fCalcMainChain Step 8 (v47 stepper): Rule A
+ // forced-C1 + Rule B lowest-locant tiers. Pure move — behavior identical.
++// Carbon-branch tiebreaks are graph-based and share the same 0-based contract
++// in 2D and 3D. Restrict them to connected acyclic C/H structures.
++function fIsAcyclicHydrocarbonGraph(connList, typeList) {
++    if (!Array.isArray(connList) || !Array.isArray(typeList) || !typeList.length) return false
++    if (typeList.some(function (t) { return t !== "C" && t !== "H" })) return false
++    const carbons = []
++    let edges = 0
++    for (let i = 0; i < typeList.length; i++) {
++        if (typeList[i] !== "C") continue
++        carbons.push(i)
++        const ns = Array.isArray(connList[i]) ? connList[i] : []
++        edges += ns.filter(function (n) { return typeList[n] === "C" }).length
++    }
++    if (!carbons.length || edges / 2 !== carbons.length - 1) return false
++    const seen = new Set([carbons[0]]), stack = [carbons[0]]
++    while (stack.length) {
++        const ns = connList[stack.pop()]
++        for (const n of (Array.isArray(ns) ? ns : [])) {
++            if (typeList[n] !== "C" || seen.has(n)) continue
++            seen.add(n); stack.push(n)
++        }
++    }
++    return seen.size === carbons.length
++}
++
++function fCarbonBranchLocants(path, connList, typeList) {
++    const main = new Set(path), locants = []
++    for (let i = 0; i < path.length; i++) {
++        const ns = Array.isArray(connList[path[i]]) ? connList[path[i]] : []
++        for (const n of ns) {
++            if (typeList[n] === "C" && !main.has(n)) locants.push(i + 1)
++        }
++    }
++    return locants
++}
++
++// First differing locant wins; never compare sums (e.g. 2,3,5 < 2,4,5).
++function fCompareLocantSets(a, b) {
++    for (let i = 0; i < Math.max(a.length, b.length); i++) {
++        const x = i < a.length ? a[i] : Infinity
++        const y = i < b.length ? b[i] : Infinity
++        if (x !== y) return x < y ? -1 : 1
++    }
++    return 0
++}
++
+ function fOrientChainPath(path) {
+     let oriented = path.slice()  // working copy; do not mutate input
+ 
+@@ -675,7 +721,7 @@
+         // Three-tier IUPAC priority for direction:
+         //   Tier 1 — principal characteristic groups (alcohol/ketone/amine): suffix FGs beat everything
+         //   Tier 2 — multiple bonds (C=C, C≡C): beat prefix substituents
+-        //   Tier 3 — detachable prefixes (halogen/nitro): lowest priority
++        //   Tier 3 — detachable prefixes / acyclic hydrocarbon alkyl branches
+         //   e.g. pent-4-en-2-ol:       FG(fwd)=[2] < FG(rev)=[4]  → tier 1 decides
+         //        4-bromo-but-1-ene:    FG tied=[]   → multiBond(fwd)=[1] < multiBond(rev)=[3] → tier 2 decides
+ 
+@@ -716,6 +762,9 @@
+                 if (principalFgCarbons[ac]) continue
+                 const pos = path.indexOf(ac)
+                 if (pos >= 0) locants.push(pos + 1)
++            }
++            if (fIsAcyclicHydrocarbonGraph(atomConnectivityList, allAtomsTypeList)) {
++                locants.push(...fCarbonBranchLocants(path, atomConnectivityList, allAtomsTypeList))
+             }
+             locants.sort(function(a, b) { return a - b })
+             return locants
+@@ -751,7 +800,7 @@
+                 if (lexLess(revDb, fwdDb)) {
+                     useForward = false
+                 } else if (!lexLess(fwdDb, revDb)) {
+-                    // Tier 2b tied → Tier 3: substituent (halogen/nitro) locants
++                    // Tier 2b tied → Tier 3: substituent locants (including carbon branches)
+                     const fwdSub = getSubstituentLocantSet(oriented)
+                     const revSub = getSubstituentLocantSet(rev)
+                     if (lexLess(revSub, fwdSub)) {
+@@ -1156,11 +1205,13 @@
+     // hydrocarbon unranked, ether recorded without requirement), then the best
+     // multiple-bond tier (most C=C/C≡C → most C=C → longest; fRankChainPool).
+     // Falls back to the best tier overall when nothing covers the anchors.
+-    // etherInfo/esterInfo above intentionally keep the legacy `oriented` pick.
++    // etherInfo/esterInfo above intentionally keep the legacy `oriented` pick;
++    // that pick is unfiltered, so it must never be used as the displayed main
++    // chain — pool[0] (Step 9) is authoritative.
+     mainChainPool = fRankChainPool(candidatePaths,
+         fTopFgAnchorSet(functionalGroupObj, atomConnectivityList, allAtomsTypeList),
+         function (p) { return [p.length, countAnchorsInPath(p), countMultiBonds(p), countDoubleBonds(p)] },
+-        fOrientChainPath)
++        fOrientChainPath, atomConnectivityList, allAtomsTypeList)
+ 
+     // ── Step 9: Write mainChainAtomsList (1-based JSME atom numbers) ─────────────
+     // v47: adopted pool entry at the live walk index. Fresh molecule loads land
+@@ -1337,6 +1388,9 @@
+                 if (principalFgCarbons3D[ac]) continue
+                 const pos = path.indexOf(ac)
+                 if (pos >= 0) locants.push(pos + 1)
++            }
++            if (fIsAcyclicHydrocarbonGraph(atomConnectivityList3D, allAtomsTypeList3D)) {
++                locants.push(...fCarbonBranchLocants(path, atomConnectivityList3D, allAtomsTypeList3D))
+             }
+             locants.sort(function(a, b) { return a - b })
+             return locants
+@@ -1370,7 +1424,7 @@
+                 if (lexLess3D(revDb3D, fwdDb3D)) {
+                     useForward3D = false
+                 } else if (!lexLess3D(fwdDb3D, revDb3D)) {
+-                    // Tier 2b tied → Tier 3: substituent (halogen/nitro) locants
++                    // Tier 2b tied → Tier 3: substituent locants (including carbon branches)
+                     const fwdSub3D = getSubstituentLocantSet3D(oriented3D)
+                     const revSub3D = getSubstituentLocantSet3D(rev3D)
+                     if (lexLess3D(revSub3D, fwdSub3D)) useForward3D = false
+@@ -1593,7 +1647,7 @@
+     mainChainPool3D = fRankChainPool(candidatePaths3D,
+         fTopFgAnchorSet(functionalGroupObj3D, atomConnectivityList3D, allAtomsTypeList3D),
+         function (p) { return [p.length, countAnchorsInPath3D(p), countMultiBonds3D(p), countDoubleBonds3D(p)] },
+-        fOrientChainPath3D)
++        fOrientChainPath3D, atomConnectivityList3D, allAtomsTypeList3D)
+     mainChainPool3DKey = (typeof selectedMol !== "undefined" ? selectedMol : null)
+ 
+     // ── Step 9: Write mainChainAtoms3D (1-based SDF atom numbers) ────────────────
+@@ -1732,9 +1786,10 @@
+ // covering all required anchors (when any), then keep the best multiple-bond
+ // tier (most C=C/C≡C → most C=C → longest chain), sorted by the same priority
+ // with FG anchors as the final tiebreak. All chains tied on the tier stay in
+-// the pool so the stepper can still explore equivalent alternatives. Each
++// the pool so the stepper can still explore equivalent alternatives. For
++// acyclic alkanes the final tier also checks branch count/locants. Each
+ // entry is oriented via orientFn and stored 1-based. Empty input → empty pool.
+-function fRankChainPool(paths, req, scoreFn, orientFn) {
++function fRankChainPool(paths, req, scoreFn, orientFn, connList, typeList) {
+     var i, a
+     var inScope = paths, usedFilter = false
+     if (req.anchors.length > 0) {
+@@ -1775,6 +1830,29 @@
+         }
+     }
+     scored = top
++
++    // Saturated acyclic hydrocarbons: among equally long eligible parents,
++    // maximize the number of branches, then minimize their oriented locants.
++    // Retain every graph-equivalent winner. Multiple-bond and FG parent-pool
++    // ranking deliberately keeps its existing priorities and behavior.
++    if (bestMu === 0 && fIsAcyclicHydrocarbonGraph(connList, typeList)) {
++        let bestBranches = -1
++        for (const candidate of scored) {
++            candidate.branchCount = fCarbonBranchLocants(candidate.p, connList, typeList).length
++            bestBranches = Math.max(bestBranches, candidate.branchCount)
++        }
++        scored = scored.filter(function (c) { return c.branchCount === bestBranches })
++        if (bestBranches > 0) {
++            let bestLocants = null
++            for (const candidate of scored) {
++                candidate.branchLocants = fCarbonBranchLocants(orientFn(candidate.p), connList, typeList)
++                if (bestLocants === null || fCompareLocantSets(candidate.branchLocants, bestLocants) < 0) {
++                    bestLocants = candidate.branchLocants
++                }
++            }
++            scored = scored.filter(function (c) { return fCompareLocantSets(c.branchLocants, bestLocants) === 0 })
++        }
++    }
+ 
+     scored.sort(function (x, y) {
+         if (y.mu !== x.mu) return y.mu - x.mu
+@@ -2026,10 +2104,6 @@
+     if (functionalGroupsList[0] === "hydrocarbon") {
+         const sideBranches = fGetHydrocarbonSubstituentInfo()
+         if (sideBranches.length > 0) {
+-            // Branch locants replace comp0 below. Keep the unsaturation locants
+-            // in their dedicated slot (e.g. 3-methyl-1-butene).
+-            comp1No = (bondPrefixDB || bondPrefixTB)
+-                ? "-" + (bondPrefixDB || bondPrefixTB) : null
+             // Group identical alkyl substituents (e.g. two methyls): comma-joined
+             // locants + δι-/τρι- count prefix, groups in Greek-alphabetical order
+             // of substituent name (same convention as the halogen path below).
+@@ -2051,6 +2125,17 @@
+                 const _countPrefix = nameMultiPrefix[_locants.length - 1]
+                 comp0NumberList.push(_locants.join(","))
+                 comp0TextList.push(_countPrefix + _bName)
++            }
++            // Branch positions replace comp0. Keep double-bond positions here;
++            // in mixed en-ynes the triple positions already occupy comp3.
++            // Local teaching convention retains terminal locant 1 too (e.g.
++            // 3-methyl-1-butene); an empty prefix still stays absent.
++            const _hasDouble = !!(sortedMultiDBonds && sortedMultiDBonds.length > 0)
++            const _hasTriple = !!(sortedMultiTBonds && sortedMultiTBonds.length > 0)
++            if (_hasDouble && bondPrefixDB) {
++                comp1No = "-" + bondPrefixDB
++            } else if (!_hasDouble && _hasTriple && bondPrefixTB) {
++                comp1No = "-" + bondPrefixTB
+             }
+         }
+     }
+@@ -2089,6 +2174,8 @@
+                 // comp0/comp0b assignment for any number of types happens below
+                 // (comp0NumberList block): first alphabetical type -> comp0,
+                 // remaining types joined -> comp0b
++                // Haloalkenes also keep the double-bond locant when it is 1
++                // (e.g. bromo_4_butene_1 -> 4-βρωμο-1-βουτενιο).
+                 if (bondPrefixDB !== "") {
+                     comp1No = "-" + bondPrefixDB
+                 } else {

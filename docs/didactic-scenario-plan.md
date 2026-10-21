@@ -409,3 +409,14 @@ LEARN is layer 1 of the twofold+1 vision (see `README.md`, `docs/LAYERS-PLAN.md`
 
 * Current states: default (`!authoring && !present`), authoring (`authoring && !present`), presentation (`present == true`, wins over authoring; `showBar = authoring && !present`; `#pageContainer.presenting` is the CSS hook).
 * Agreed direction: derived `fScenarioGetState()` getter as single authority; booleans stay as storage. No quiz planning now — quiz question as step + `itemType`/prompt/feedback reuse left open for PRACTICE/PLAY.
+
+## v48 local sync clarification — 2026-10-21
+
+Current app export tag is `mulermoc-nom-48`. `chainIdx` is captured in step
+snapshots and restored; the old note that it is never stored is historical.
+`show.viewerMaxHeight` is null/Auto or150–2000px (live ceiling may be lower).
+`show.viewerBothHeight` is null/Auto or300–1000px. Per-step Present starts
+at that row; card Play starts at1. Drawer state persists across author hide
+and Play/Exit. Library-launched lessons return to library on Exit/Esc rather
+than restoring author chrome. Local showStepNumbers/reserveTitleSpace and
+loading/error handling are retained. See V48-SYNC-20261021.md.

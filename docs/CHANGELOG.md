@@ -440,3 +440,23 @@ See METHYLBUTENE-TRIAL.md.
 - Welcome theory action opens responsive theory library with22-step alkene lesson.
 - Exact user scenario loads directly in presentation mode through existing URL support.
 - Browser verified desktop/mobile library and end-to-end lesson launch. Not published.
+
+### 2026-10-21 — Selective local upstream v48 sync (1ac7636)
+- Added per-step Present, persistent author drawer, failure rollback and dialog keyboard accessibility.
+- Updated viewer-height validation150–2000, live bounds and2D/3D readout sync.
+- Integrated mixed en-yne locants while retaining local terminal locant1 naming.
+- Retained one local name fitter, structural alkyl groups, exact molecule data and theory library flows.
+- Pure-core430available cases unchanged; synthetic mixed-bond/browser checks passed.
+- See V48-SYNC-20261021.md. Local only; not committed/published.
+
+### 2026-10-21 — Fresh lesson content on launch (local)
+- Deep-link lesson JSON requests use cache:no-store; library launch/script/library-return URLs refreshed.
+- Two normal-cache browser launches verified current step5 and library Exit.
+- Existing presentations retain their loaded snapshot until restarted; no core change.
+
+### 2026-10-21 — Branched alkane and parent-chain correction (local)
+- Added3-ethyl-2,5-dimethylhexane (73rdmolecule),3MOLforms and PubChem5214213D SDF.
+- Core2D/3Dorientation now considers carbon-branch locants after existing higher-priority tiers.
+- Saturated acyclic parent pools prefer maximum branches then lowest locant sets; newalkane6→4equivalent paths.
+-436available all73name regressions unchanged;20graph permutations and browser lesson/highlight checks passed.
+- Professor-facing record and patches in CORE-CHANGES-20261021.md. Local only.
