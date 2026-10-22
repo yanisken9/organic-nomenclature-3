@@ -25,7 +25,7 @@ The library offers the exact user-authored 22-step alkene lesson and a matching
 22-step alkane lesson, with rules, branched examples and 2D/3D exploration.
 A new22-step alkyne lesson starting with ethyne is ready for review at
 [its direct presentation link](mulermoc-nom-49.html?scenario=scenarios/alkynes-nomenclature-branches.scenario.json&present=1&from=theory-library);
-it is not yet listed as a library card. See [lesson details](docs/ALKYNES-SCENARIO-20261022.md).
+it is listed as the third card in the theory library. See [lesson details](docs/ALKYNES-SCENARIO-20261022.md).
 
 | Layer | File |
 |---|---|

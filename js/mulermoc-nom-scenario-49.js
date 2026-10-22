@@ -2249,7 +2249,7 @@ function fScenarioImportFile(file) {
 // stored step keeps its authored show.* for a later Export.
 function fScenarioExitPresent() {
   if (MuLERMoCScenario.present && MuLERMoCScenario.returnToTheoryLibrary) {
-    location.assign("design/theory-library.html?v=v49-20261022");
+    location.assign("design/theory-library.html?v=alkynes-library-20261022");
     return;
   }
   MuLERMoCScenario.present = false;

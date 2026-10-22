@@ -1,5 +1,11 @@
 # Changelog
 
+### 2026-10-22 - Add missing alkyne library card
+
+- Add the third lesson card for the existing 22-step alkynes scenario.
+- Refresh welcome/library and Exit navigation URLs to load the updated library.
+- Update the daily professor report. No core or scenario-content changes.
+
 ### 2026-10-22 - Ethyne and22-step alkyne lesson (local)
 
 - Append ethyne with three source/embedded2D MOLs and raw PubChem CID6326

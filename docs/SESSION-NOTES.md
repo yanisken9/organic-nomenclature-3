@@ -1,3 +1,18 @@
+# Current resume point - 2026-10-22 - alkyne library card correction
+
+The user reported that the published alkyne lesson was missing from the library.
+Added the third card, ALKYNES (ΑΛΚΙΝΙΑ), linking to the existing 22-step lesson.
+Updated navigation cache versions in welcome, library, lesson loading fallback
+and scenario Exit. Updated the daily report, README and lesson documentation.
+No scenario JSON or core changes for this correction. Today core49 remains
+an exact upstream copy, as recorded in the earlier daily core report.
+Local Firefox flow passed (welcome → three cards → alkyne lesson22/ethyne/hidden
+fields → Exit/library → welcome), desktop1500/mobile390 without overflow and
+no application JS errors. Evidence checks/alkynes-library-card-20261022.json.
+Publishing is being completed; previous published
+baseline is 8ca20eb6891d426f1eb10f820d75b4c6cd6d3023. Refresh the full local
+backup after the final commit. Earlier notes below are historical.
+
 # Current resume point - 2026-10-22 - all daily work/report published, final backup
 
 User requested fullsave everywhere, entireday professorreport and sharelinks.
