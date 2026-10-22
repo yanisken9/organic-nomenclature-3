@@ -53,3 +53,20 @@
   uncommitted diff; distinguish upstream sync from locally authored changes.
 - Preserve this record in session/contribution notes. Do not send messages to
   the professor; the user forwards the supplied text.
+
+# Start-of-session professor changelog review
+
+- User request (2026-10-22): begin EVERY work session by checking the current
+  professor upstream docs/CHANGELOG.md against the last synchronized upstream
+  revision recorded in session notes. Check current upstream HEAD/history too,
+  since a changelog may omit code changes. Do this before new implementation.
+- Report new entries/commits and overlaps with local customizations in Greek.
+  Distinguish the last checked revision from the last actually synchronized one.
+- Read-only comparison is authorized. Standing user authorization (2026-10-22):
+  routinely synchronize with each professor release after review, preserving
+  Namelecule customizations and validating the result. Present the intended
+  changes before implementation; do not ask again for routine sync approval.
+  Ask for approval for material new scope or unresolved conflicting behavior.
+  Publishing/committing still requires the user's save/publish instruction.
+- Record date, compared revisions, findings and any access failure in session
+  notes. Do not claim the changelog was checked if the remote read failed.

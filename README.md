@@ -4,30 +4,29 @@ A Greek-first interactive learning platform for organic nomenclature, built arou
 
 Desinged and developed by Nickolas Charistos
 
-**Current baseline:** v48, selectively synchronized locally with professor
-upstream `1ac7636` on 2026-10-21. Local naming keeps `3-μεθυλο-1-βουτένιο`,
-structural alkyl highlights, existing name fitting and theory library.
-Authoring, confirmation-dialog and viewer-height updates were tested in an
-isolated copy before transfer. The full daily snapshot, including the new branched alkane and parent-chain
-fix, is published as `48ca292`; 14 public files were verified byte-for-byte. See [sync checks](docs/V48-SYNC-20261021.md)
-and [comparison](docs/UPSTREAM-COMPARISON-20261021.md).
+**Current baseline:** local v49, synchronized with professor upstream
+`fe6d16a` on 2026-10-22. Core49 and data49 are byte-identical to upstream;
+Namelecule welcome/library/theme, local name fitting and scenario preferences
+are retained. All 73 molecules and 22 lesson steps passed the comparison/checks.
+The 2026-10-22 daily snapshot includes the v49 migration and both theory lessons.
+Publication verification is recorded in `docs/SESSION-NOTES.md`.
+See [migration checks](docs/V49-SYNC-20261022.md) and
+[core report](docs/CORE-CHANGES-20261022.md).
 **Entry point:** [index.html](index.html) → [Namelecule welcome](design/welcome-proposal.html)
-→ [v48 molecule exploration](mulermoc-nom-48.html).
+→ [v49 molecule exploration](mulermoc-nom-49.html).
 
-The v48 working copy preserves the Namelecule branding/theme, mint highlights,
-teal numbering, shared 2D centering and scenario title preferences. Upstream's
-responsive viewer sizing and pinned authoring are retained. The current
-73-molecule data includes four local additions and a branch/bond-locant fix. The previous [v45](mulermoc-nom-45.html) remains runnable.
-See [original migration review](docs/V48-REVIEW.md) for historical checks.
+The previous [v48](mulermoc-nom-48.html) remains runnable with its original files.
+The library offers the exact user-authored 22-step alkene lesson and a matching
+22-step alkane lesson, with rules, branched examples and 2D/3D exploration.
 
 | Layer | File |
 |---|---|
-| Core engine | [js/mulermoc-nom-core-48.js](js/mulermoc-nom-core-48.js) |
-| Viewer | [js/mulermoc-nom-molview-48.js](js/mulermoc-nom-molview-48.js) |
-| Teaching | [js/mulermoc-nom-teaching-48.js](js/mulermoc-nom-teaching-48.js) |
-| Scenarios | [js/mulermoc-nom-scenario-48.js](js/mulermoc-nom-scenario-48.js) |
-| Molecule data (73 molecules) | [js/jsme-nick-nomeclature-moc2-data_48.js](js/jsme-nick-nomeclature-moc2-data_48.js) |
-| Theme | [css/namelecule-48.css](css/namelecule-48.css) |
+| Core engine | [js/mulermoc-nom-core-49.js](js/mulermoc-nom-core-49.js) |
+| Viewer | [js/mulermoc-nom-molview-49.js](js/mulermoc-nom-molview-49.js) |
+| Teaching | [js/mulermoc-nom-teaching-49.js](js/mulermoc-nom-teaching-49.js) |
+| Scenarios | [js/mulermoc-nom-scenario-49.js](js/mulermoc-nom-scenario-49.js) |
+| Molecule data (73 molecules) | [js/jsme-nick-nomeclature-moc2-data_49.js](js/jsme-nick-nomeclature-moc2-data_49.js) |
+| Theme | [css/namelecule-49.css](css/namelecule-49.css) |
 
 The sections below describe the historical v44 feature baseline and broader
 project plans; the current migration status is recorded above.

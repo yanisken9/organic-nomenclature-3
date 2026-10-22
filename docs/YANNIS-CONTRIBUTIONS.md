@@ -878,3 +878,49 @@ updated22stepJSON,newSDF,report andpatch. Desktop unnumbered export (renamed
 from2-prefix) matches library/projectarchive. Full sessioncorepatch verified
 against1375772. Final documentation publication record follows separately.
 Professor upstream untouched; forwarding report remains user's action.
+
+## 2026-10-22 — Standing startup changelog review
+
+User requested every session begin with upstream CHANGELOG check. Recorded
+in AGENTS.md. Read current HEAD/history and diff1ac7636→fe6d16a: one newv49
+commit importing student core/data/lessons plus rule fixes, excluding product
+layer perCHANGELOG. No code comparison/sync yet; source/core unchanged today.
+
+## 2026-10-22 — Approved v49 migration and standing sync preference
+
+User approved routine synchronization with professor releases. Added parallel
+v49files and routes retaining Namelecule product customizations. Core/data49
+exact upstreamfe6d16a, originalv48files untouched. Newrule/divtable/locant fixes
+integrated, local fitter/structuralgroups/titleflags/loading/Exit preserved.
+436available comparative cases+graph/scenario/browser checks passed; evidence
+and reproducible tests underdocs/checks. See V49-SYNC-20261022.md and today's
+core report. No commit/push/publication; user review/save request pending.
+
+
+## 2026-10-22 — Αντίστοιχο σενάριο ονοματολογίας αλκανίων
+
+Δημιουργήθηκε το `scenarios/alkanes-nomenclature-branches.scenario.json`, με
+ακριβές πρότυπο το σενάριο αλκενίων της βιβλιοθήκης: 22 βήματα, ίδιες ρυθμίσεις
+εμφάνισης και χειριστηρίων, σταδιακή αποκάλυψη, κανόνες και πίνακες αλκυλίων.
+Η χημική προσαρμογή χρησιμοποιεί αιθάνιο, ευθύγραμμα αλκάνια,
+2-μεθυλοπεντάνιο, 2,3-διμεθυλοβουτάνιο και 3-αιθυλο-2,5-διμεθυλοεξάνιο.
+Η επιλογή και αρίθμηση αλυσίδας ακολουθεί τους κανόνες των αλκανίων.
+Τα βήματα 15–17 κρατούν την οριζόντια κύρια αλυσίδα. Οι ρυθμίσεις ελέγχθηκαν
+αυτόματα έναντι του πρωτοτύπου, το οποίο παρέμεινε αμετάβλητο.
+
+Αποθηκεύτηκε πανομοιότυπο ελληνικό αρχείο στον φάκελο «αρχεία json».
+Πέρασαν JSC validation/export/import και Firefox έλεγχοι όλων των βημάτων,
+κανόνων, κενών πεδίων, επισημάνσεων, τελικού μενού επτά μορίων και Exit.
+Τα αναπαραγώγιμα checks είναι στα `docs/checks/test-alkanes-*20261022.*`.
+Δεν προστέθηκε ακόμη κάρτα στη βιβλιοθήκη. Το σενάριο ανοίγει από δικό του URL.
+Καμία αλλαγή στον πυρήνα για αυτό το έργο· η προηγούμενη σημερινή εισαγωγή
+core49 από τον καθηγητή παραμένει καταγεγραμμένη στο CORE-CHANGES-20261022.md.
+Τοπικά αρχεία μόνο, χωρίς commit ή δημοσίευση.
+
+### 2026-10-22 — Προσθήκη μαθήματος αλκανίων στη βιβλιοθήκη
+
+Με ρητή εντολή του χρήστη προστέθηκε κάρτα ΑΛΚΑΝΙΑ στο
+`design/theory-library.html`, με περιγραφή, θεματικές και σύνδεσμο έναρξης των
+22 βημάτων. Διατηρήθηκε η κάρτα αλκενίων. Firefox: δύο κάρτες, προσαρμογή
+σε πλάτη 1500/390, σωστή έναρξη με αιθάνιο και Exit στη βιβλιοθήκη επιτυχώς,
+χωρίς σφάλματα JavaScript. Καμία αλλαγή core για την κάρτα. Τοπικά μόνο.

@@ -465,3 +465,15 @@ See METHYLBUTENE-TRIAL.md.
 - All approved daily changes committed/pushed as48ca292;14critical public files byte-verified.
 - Public app now73molecules, updated lesson/cache flow and corrected branched alkane parent paths.
 - Professor-facing core report and standalone patch published; upstream repository untouched.
+
+### 2026-10-22 — Local Namelecule v49 migration
+- Synchronized upstreamfe6d16a using parallel49files; existingv48remains unchanged.
+- Preserved welcome/library/theme/namefit/scenario flags/loading/Exit; adopted newalkyl and enyne rule fixes.
+- Core/data49exact upstream;436available comparison cases and22step/browser regressions passed.
+- Standing startup review/routine sync recorded. Local only, awaiting final save/publication instruction.
+
+### 2026-10-22 — Alkane lesson and daily save
+- Add a matching 22-step alkane lesson, preserving the alkene lesson presentation settings.
+- Add ALKANES library card, rules, branched examples and final seven-molecule 2D/3D exploration.
+- JSC roundtrip and browser22steps/rules/chains/navigation passed; Desktop JSON matches.
+- Daily snapshot includes the complete v49 migration and professor-facing core report.

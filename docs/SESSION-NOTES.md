@@ -1,3 +1,82 @@
+# Current resume point - 2026-10-22 - daily save authorized, publishing
+
+User requested all saves. Preparing full reviewed snapshot of v49 migration,
+22-step alkane lesson and library card, tests and professor-facing report.
+Desktop Greek alkane export already byte-identical; alkene source untouched.
+No additional core algorithm edit: core49 exact upstream, core48 unchanged.
+Next: commit/push origin thesis-work, verify GitHub Pages bytes and record result.
+
+# Current resume point - 2026-10-22 - alkane library card added
+
+User explicitly requested adding the new lesson to the library. Added matching
+ΑΛΚΑΝΙΑ card (22 steps) before ΑΛΚΕΝΙΑ in design/theory-library.html, linking
+v49 to alkanes-nomenclature-branches with present/from/version parameters.
+Firefox verified both cards, no overflow1500/390, correct22step ethane launch,
+and Exit back to library. No JS errors; diff check clean. No core edits in
+this task; earlier session upstream core49 migration remains as documented.
+Local only, no commit/publish. Prior lesson creation notes follow.
+
+# Current resume point - 2026-10-22 - alkane lesson created and verified
+
+User requested a complete alkane counterpart of the exact library alkene lesson.
+Created scenarios/alkanes-nomenclature-branches.scenario.json (22 steps, app49)
+by deep-copying the stable alkene JSON. All show/style/control/audio/3D settings
+and title flags preserved; notes, molecules, relevant component modes/hidden
+fields and menus adapted chemically. Ethane intro (methane explicitly simplest),
+straight alkanes, 2-methylpentane, 2,3-dimethylbutane, large branched alkane.
+Numbering uses first-differing locants rather than double-bond priority or sums.
+Rules2/3/4 and eight-alkyl tables9/18 retained; horizontal parent15–17 verified.
+Desktop αρχεία  json/Αλκάνια-Ονοματολογία_και_διακλαδώσεις.scenario.json
+is byte-identical. Stable alkene source SHA256 unchanged e6c55c218936b9cc...
+JSC validation/export-import passed. Firefox all22 steps, exact notes, hidden
+names, selected rule rows, seven final molecules2D3D and Exit/library passed;
+no JS errors. Screenshots1/16 inspected. Checks retained docs/checks/test-alkanes-*.
+No new library card or application/core edits in this task. Direct local route:
+http://127.0.0.1:8013/mulermoc-nom-49.html?scenario=scenarios/alkanes-nomenclature-branches.scenario.json&present=1&from=theory-library&v=alkanes-20261022
+Professor HEAD rechecked fe6d16ae82 (same synchronized revision); corresponding
+upstream CHANGELOG inspected from local review checkout. No newer commit.
+No commit/push/publication; v49 migration remains local. Session core report:
+core49 upstream sync earlier today, no local algorithm edit; this lesson adds no
+core changes. Next: user review; add library card if requested and publish only
+on save/publish instruction. User enabled Approve for me for automatic review.
+
+# Current resume point - 2026-10-22 - v49 migrated locally and verified
+
+User approved v49 plan and standing routine synchronization with professor
+releases (recorded in AGENTS; preserve customizations, publish only on request).
+Added9parallel v49HTML/JS/CSS files, updated welcome/library routes to49.
+Old9v48files byte-identical toHEADf3ad605. Core49+data49 exact upstreamfe6d16a;
+no local chemistry algorithm edit. Shared icons and JSON/MOL/SDF unchanged.
+Adopted v49divalkyltable withminttheme, branch-position rule/panel fixes,
+compBondType2/compEndNumber tables, triple-row highlight and hyphen locants.
+Retained one local fitter, structural groups, title flags, loading/error,
+no-store JSON and Exit/Esc/library navigation. See V49-SYNC-20261022.md.
+436available names/parts/chains/classifications identical across73molecules,
+438cases incl2missingmethaneskeletal.20graph permutations/synthetic tests,
+scenario49roundtrip, browser22steps/notes/rules/chains15–17/libraryflows,
+old/newlargegroups4modes/4parents2D3D,enyne rule fixes and namefit passed.
+No JS errors observed. Screenshots visually inspected. Reproducible tests
+and evidence underdocs/checks. CORE-CHANGES-20261022.md ready for professor:
+newcore49 copiedexactly, oldcore48unchanged, no new local algorithm change.
+Local only: no commit/push/publication; public remainsf3ad605/v48. Local8013server started for user
+review welcome?v=v49-20261022. LastSYNC/CHECKfe6d16ae82...
+
+# Current resume point - 2026-10-22 - standing changelog review + today check
+
+User requires every session start with professor upstream CHANGELOG review.
+Recorded in AGENTS.md (also check HEAD/history to catch omissions). Today's
+read-only check compared last synced1ac7636 to latestfe6d16ae82a6987de94932a1c6bb654da47a50cf.
+One new commit,21Oct2026: v49 student thesis-work import plus alkyl/locant fixes.
+CHANGELOG says imports our48ca292 core parent fix, explicit1convention,73rd
+molecule and lessons, but excludes Namelecule product layer/fitter. New fixes:
+alkyl table for branch positions, rule casescompBondType2/compEndNumber,
+comma/hyphen locant parsing. These are changelog claims, not code-compared yet.
+Last CHECKEDfe6d16a, last SYNCED1ac7636; do not conflate. Local/public ours
+stillf3ad605 (runtime48ca292),v48with73molecules. No source edit/sync/publish;
+only AGENTS/notes/contribution/check record. Core unchanged today so far.
+Next: present v49 comparison/plan if user wants synchronization; preserve
+Namelecule product customizations and verify claims against actual code.
+
 # Current resume point - 2026-10-21 - all work published and verified
 
 User requested save all changes everywhere. Full daily snapshot committed/pushed
