@@ -477,3 +477,8 @@ See METHYLBUTENE-TRIAL.md.
 - Add ALKANES library card, rules, branched examples and final seven-molecule 2D/3D exploration.
 - JSC roundtrip and browser22steps/rules/chains/navigation passed; Desktop JSON matches.
 - Daily snapshot includes the complete v49 migration and professor-facing core report.
+
+### 2026-10-22 — Publication verified
+- Daily snapshot5d5d0ce published successfully by GitHub Pages.
+- All14critical public files byte-identical; v49 and both22-step lessons live.
+- Core49 exact upstream, core48 unchanged; professor report published.

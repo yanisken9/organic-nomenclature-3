@@ -1,3 +1,20 @@
+# Current resume point - 2026-10-22 - all daily changes published and verified
+
+User requested all saves. Full daily snapshot committed/pushed to origin
+thesis-work as5d5d0ce343d6ae96ec2e05d7b977f403b54cc232. GitHub Pages run
+39722586519 succeeded. All14critical public files byte-identical to workspace:
+v49HTML/core/data/viewer/teaching/scenario/3CSS, welcome/library, both22step
+lesson JSONs and professor core report. Evidence: checks/publication-20261022.json.
+Greek alkane Desktop export also byte-identical. Original alkene unchanged.
+Public now v49 with ALKANES and ALKENES cards. No work left uncommitted after
+this documentation followup is committed/pushed. No professor messages sent.
+Session core report: added js/mulermoc-nom-core-49.js exact upstreamfe6d16a,
+no local algorithm modification, core48 unchanged. Report public at
+https://yanisken9.github.io/organic-nomenclature-3/docs/CORE-CHANGES-20261022.md
+Previous notes below are historical local/pending states superseded here.
+Next session: compare professor HEAD/CHANGELOG against syncedfe6d16ae82;
+continue user review from published49. Publish only on user instruction.
+
 # Current resume point - 2026-10-22 - daily save authorized, publishing
 
 User requested all saves. Preparing full reviewed snapshot of v49 migration,
