@@ -7,7 +7,7 @@ Desinged and developed by Nickolas Charistos
 **Current baseline:** local v49, synchronized with professor upstream
 `fe6d16a` on 2026-10-22. Core49 is byte-identical to upstream; local data49 additionally includes
 1-butyne, 2-butyne, 3-methyl-1-butyne, 3-methyl-1-pentyne, 4-methyl-2-pentyne
-4-ethyl-3,5-dimethylhept-1-yne and ethyne (80 molecules; last published: 73).
+4-ethyl-3,5-dimethylhept-1-yne and ethyne (80 molecules, published on2026-10-22).
 The large branched alkyne uses locally generated RDKit 3D; see
 [provenance and checks](docs/LARGE-ALKYNE-20261022.md).
 Namelecule welcome/library/theme, local name fitting and scenario preferences

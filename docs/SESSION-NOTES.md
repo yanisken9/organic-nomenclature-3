@@ -1,3 +1,17 @@
+# Current resume point - 2026-10-22 - full runtime published and55public files verified
+
+User authorized full finalsave/report/sharelinks. Runtime e0a3971c4807939bcb7d77661f1bbee7f7137d3e
+committed112files and pushed onlyorigin/thesis-work. Pages run39760884395
+completedSUCCESS. Public55criticalfiles (runtime/scenarios/MOL/SDF/provenance/
+report) byte-identical; public/local/upstreamcore49 also byte-identical.
+Evidence checks/publication-final-20261022.json. All3DesktopGreekexports equal
+scenarios. ProfessorHEAD unchangedfe6d16ae82; originwas41c3852beforepush.
+Report HTML/MD now references confirmedruntimee0a3971; mobile report longhash
+wrapping corrected; complete report links absolute so offlinecopy isusable.
+Final public browserflow and localZIPbackup still tofinish. No source/code
+changes since runtimecommit; documentationfollowup being prepared.
+Previous notes below historical.
+
 # Current resume point - 2026-10-22 - final daily save/report authorized, publishing
 
 User requested save everything everywhere, full report from earlymorning and
