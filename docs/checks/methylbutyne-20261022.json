@@ -1,0 +1,60 @@
+{
+  "key": "methyl_3_butyne_1",
+  "formula": "C5H8",
+  "pubchemCid": 69019,
+  "source": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/3-methyl-1-butyne/SDF?record_type=3d",
+  "sdfSha256": "3cf64cbe06b1a686e84d52c91971c7c4d0fbad768ef1a4c43056e7779ab5abd4",
+  "mainChain2D": [
+    4,
+    3,
+    2,
+    1
+  ],
+  "mainChain3D": [
+    5,
+    4,
+    1,
+    2
+  ],
+  "carbonGraphIsomorphism": true,
+  "structureChecks": [
+    {
+      "path": "mols/new_molecules/methyl_3_butyne_1_2D_Condensed.mol",
+      "atoms": {
+        "C": 5
+      },
+      "bonds": 4
+    },
+    {
+      "path": "mols/new_molecules/methyl_3_butyne_1_2D_Expanded.mol",
+      "atoms": {
+        "C": 5,
+        "H": 8
+      },
+      "bonds": 12
+    },
+    {
+      "path": "mols/new_molecules/methyl_3_butyne_1_2D_Skeletal.mol",
+      "atoms": {
+        "C": 5
+      },
+      "bonds": 4
+    },
+    {
+      "path": "mols/new_molecules/methyl_3_butyne_1_3D.sdf",
+      "atoms": {
+        "C": 5,
+        "H": 8
+      },
+      "bonds": 12
+    }
+  ],
+  "namingCases": 6,
+  "priorAvailableCasesUnchanged": 448,
+  "priorKeyIndicesPreserved": 75,
+  "browserModeChainVariants": 8,
+  "equivalentParentChainsChecked": 2,
+  "expandedMethylHydrogens": 3,
+  "coreChanged": false,
+  "publication": "local only"
+}

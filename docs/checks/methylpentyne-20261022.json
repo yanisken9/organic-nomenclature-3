@@ -1,0 +1,72 @@
+{
+  "key": "methyl_3_pentyne_1",
+  "formula": "C6H10",
+  "pubchemCid": 136704,
+  "source": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/3-methyl-1-pentyne/SDF?record_type=3d",
+  "sdfSha256": "daf5f1a86601db6c1dc80e5df3813ba27988bf6407b51f6495f721f076e19cf1",
+  "mainChain2D": [
+    5,
+    4,
+    3,
+    2,
+    1
+  ],
+  "mainChain3D": [
+    6,
+    5,
+    1,
+    2,
+    4
+  ],
+  "methylAtom2D": 6,
+  "methylAtom3D": 3,
+  "carbonGraphIsomorphism": true,
+  "structureChecks": [
+    {
+      "path": "mols/new_molecules/methyl_3_pentyne_1_2D_Condensed.mol",
+      "atoms": {
+        "C": 6
+      },
+      "bonds": 5
+    },
+    {
+      "path": "mols/new_molecules/methyl_3_pentyne_1_2D_Expanded.mol",
+      "atoms": {
+        "C": 6,
+        "H": 10
+      },
+      "bonds": 15
+    },
+    {
+      "path": "mols/new_molecules/methyl_3_pentyne_1_2D_Skeletal.mol",
+      "atoms": {
+        "C": 6
+      },
+      "bonds": 5
+    },
+    {
+      "path": "mols/new_molecules/methyl_3_pentyne_1_3D.sdf",
+      "atoms": {
+        "C": 6,
+        "H": 10
+      },
+      "bonds": 15
+    }
+  ],
+  "namingCases": 6,
+  "priorAvailableCasesUnchanged": 454,
+  "priorKeyIndicesPreserved": 76,
+  "browserModeChainVariants": 8,
+  "parentChainsChecked": 1,
+  "expandedMethylHydrogens": 3,
+  "skeletalCarbonLabels": 0,
+  "coreChanged": false,
+  "viewerChangedForThisAddition": false,
+  "publication": "local only",
+  "sharedSkeletalRegression": {
+    "alkynesChecked": 5,
+    "pngExportsChecked": 5,
+    "labelsAndBondGeometryAndNumbering": "passed",
+    "otherSeriesUnchanged": true
+  }
+}

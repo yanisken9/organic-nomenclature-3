@@ -1,0 +1,50 @@
+{
+  "date": "2026-10-22",
+  "alkynes": [
+    "propyne",
+    "butyne_1",
+    "butyne_2",
+    "methyl_3_butyne_1"
+  ],
+  "changedRuntimeFiles": [
+    "js/mulermoc-nom-molview-49.js",
+    "mulermoc-nom-49.html"
+  ],
+  "geometry": "all bond line coordinates unchanged from JSME SVG",
+  "labelsAndBackplatesRemoved": true,
+  "chainModes": [
+    "algorithmic",
+    "data"
+  ],
+  "checks": [
+    "atom/bond/branch highlights",
+    "numbering",
+    "CHn toggle",
+    "condensed and expanded labels restored",
+    "scale redraw",
+    "actual SVG-to-PNG export for all4",
+    "other series/heteroatom label and line equality"
+  ],
+  "javascriptErrors": 0,
+  "coreChanged": false,
+  "core49Sha256": "c61d6d9276f4901e5fad362cf32f73ca5995850e931306d051be33f4a67f81c6",
+  "publication": "local only",
+  "finalVerification": {
+    "date": "2026-10-22",
+    "molecules": [
+      "propyne",
+      "butyne_1",
+      "butyne_2",
+      "methyl_3_butyne_1",
+      "methyl_3_pentyne_1",
+      "methyl_4_pentyne_2",
+      "ethyl_4_dimethyl_3_5_heptyne_1",
+      "ethyne"
+    ],
+    "actualPngExports": 8,
+    "chainModes": 2,
+    "allPassed": true,
+    "javascriptErrors": 0,
+    "otherSeriesUnchanged": true
+  }
+}

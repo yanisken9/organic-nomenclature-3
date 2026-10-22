@@ -1,3 +1,320 @@
+# Current resume point - 2026-10-22 - final daily save/report authorized, publishing
+
+User requested save everything everywhere, full report from earlymorning and
+shareable professor link. Authorization includes commit/push/Pages verification.
+Prepared docs/REPORT-20261022.md +HTML full Greek dayreport and consolidated
+COREreport. Daybaseline f3ad605, morningruntime5d5d0ce, currentHEAD41c3852.
+Liveorigin41c3852 and professorHEADfe6d16ae82 rechecked sameassynced.
+All3DesktopGreekexports byte-identical to3scenarioJSONs. Newalkynelesson is
+DIRECTLINK only, library retains2cards; do not add unrequestedcard during save.
+Finalskeletaltest now all8alkynes ×2chainmodes, CHn/forms/highlights/numbering,
+8actualPNGexports and other-series equality PASSED withoutJSerrors. Prior
+validatorroundtrips foralkanes+alkynes passed; allprevious verification retained.
+No newcoreedits; exactcore49upstreamSHA unchanged,core48sameasdaybaseline.
+Next commitall reviewed files, pushonlyoriginthesis-work, verifyPages/source
+bytes and representativepublicflows, update reports toconfirmedpublication,
+commit/pushverificationdocs, create finalZIPbackupoutsiderepo underparent,
+copyreports foruser. Do notclaimpublication/backupbefore verified.
+Previous notes below historical.
+
+# Current resume point - 2026-10-22 - ethyne and22-step alkyne scenario ready
+
+User requested alkyne scenario closely imitating both lessons, no colons in
+prose; then requested addingethyne so all lessons start with2C. Completedboth.
+Data49appendethyne80thkey, formulaCH_CH, allchains[1,2],3sourceMOLs/embeds/
+registry. Source/runtime SDF rawPubChemCID6326 identical. Cachequerydata
+ethyne-lesson-20261022. No new core/viewer edits. RDKit4forms C2H2/valence/
+graphC#C/HCCHlinearity passed.6newnames αιθίνιο correct;472previousavailable
+79moleculecases unchanged, oldindices stable. Core49upstreamSHA unchanged.
+
+Created scenarios/alkynes-nomenclature-branches.scenario.json,22steps:
+1-5ethyne,6butynes1/2,7-10methyl3butyne1,11-14methyl4pentyne2,
+15-21ethyl4dimethyl3,5heptyne1,22all8localalkynes2D3D. Templatealkenes staged
+names/rules2/3/4/9/18; height420/840 fromupdatedalkanes; allchainindices0
+verifiedhorizontal. No colons in titles/notes. ExactGreekDesktopexport
+αρχεία  json/Αλκίνια-Ονοματολογία_και_διακλαδώσεις.scenario.json SHA256
+1fbc05d17b6bdb134893c1cc7f5a94ced6d637ac54b1be0a0b1ed0cc82ff97ca.
+JSCvalidator/export-import clean. Firefoxall22steps exactdata/names/rules/
+chains/branchC+6H,8skeletons,newethyne8formchainmodes/actualUI/3D4atoms/Exit
+library passed noJSerrors. Screensstep1/9/12/15/20,ethyneexpanded/skeletal
+saved; representativevisuals inspected. Earlyhidden3Dcount0 was test timing
+assumption, not sourcefailure; finaltestremoved diagnosticreload and passed.
+Docs ETHYNE-20261022.md,ALKYNES-SCENARIO-20261022.md,evidence/checkscript,
+README/CHANGELOG/COREreport/contribution updated. No librarycard added yet.
+Directpreview8013/mulermoc-nom-49.html?scenario=scenarios/alkynes-nomenclature-
+branches.scenario.json&present=1&from=theory-library. Prior2librarylessons intact.
+Local80/public73at41c3852. Sevennewalkynes,earlierskeletal/zoomfixes,alkane
+libraryupdate,newalkynelesson uncommitted/unpublished. No commit/push requested.
+Next:userreview or addlibrarycard/saveinstruction. Earlierupstreamcore49sync
+remains onlycorechange today; no locallyauthoredcorealgorithm changes.
+Previous notes below historical.
+
+# Current resume point - 2026-10-22 - library alkane lesson updated from exact user file
+
+User supplied unnumbered Desktop/αρχεία  json/Αλκάνια-Ονοματολογία_και_διακλαδώσεις.scenario.json
+and requested replacing the library alkane lesson with it. Read source: same
+bd9efa2ec21c4acb78b476e155669b6dd9b5b566ac8f1de0911b330ff01752d9 as prior
+updated numberedfile. Copied BYTE-IDENTICAL to scenarios/alkanes-nomenclature-
+branches.scenario.json.22steps,chains11/12index1,420singleheightallsteps,
+840combinedheightstep22. Raw previous library backup /tmp/library-alkanes-
+before-update-20261022.scenario.json. Existing library card already points to
+this stablepath; JSON loader already no-store, no HTML/JS changes necessary.
+JSC existing alkane validation/export-import roundtrip passed withoutwarnings.
+Firefox actual library button → lesson: full normalized22steps equal userfile,
+notes/settings/hiddenstep1/titleflags preserved, all22step molecules/heights,
+horizontalchains11/12/15-17,step22two viewers,Exit→library passed, noJSerrors.
+Only local library/data/docs updated; no commit/push/publication requested.
+No new core changes; today's earlier upstreamcore49sync remains sole corechange.
+All pending6alkynes/viewerfixes still local/unpublished. Next:userreview or
+save/publish instruction. Prior notes below preserve earlierwork.
+
+# Current resume point - 2026-10-22 - external alkane scenario sizes improved
+
+User reported smaller2Dlabels at14→15, then requested reference to library
+alkenes, then relaxed exact matching: at least avoid excessive shrinkage.
+URL provided http://127.0.0.1:8013/mulermoc-nom-49.html#step=15 (importedlesson).
+Read-only comparison: both lessons already zoom2/allheightsAuto; shrink comes
+from available height and molecular bounds, including reference alkene lesson.
+No renderer feature needed after relaxed requirement. Updated exact Desktop/
+αρχεία  json/2Αλκάνια-Ονοματολογία_και_διακλαδώσεις.scenario.json: all22steps
+show.viewerMaxHeight420;step22(both2D3D)show.viewerBothHeight840. Only23height
+values changed; all notes/formats/visibility/chainchoices11/12 preserved.
+Raw baseline /tmp/alkanes-size-adjustment-before.json; fileSHA256
+bd9efa2ec21c4acb78b476e155669b6dd9b5b566ac8f1de0911b330ff01752d9.
+Firefox presentation21molecule steps ×1500x1000/1440x900: labels18.117px all;
+1280x800:15.760px(expanded20)to18.117px (~13%shrink, previously7.856pxat20).
+No drawing clipped; horizontalchains11/12 preserved; step22 all7menu molecules
+with2D3D/combined840 passed; noJSerrors. Screens15/20 inspected. JSCvalidator
+22steps/no warnings/heights passed. Evidence docs/checks/alkanes-user-scenario-
+sizes-20261022.json. No app/core edits; library files unchanged. User must
+reimport externalfile. Earlier6alkynes/viewerfixes pending localunchanged.
+Unimplemented constant-height renderer experiment was runtimepreview only;
+no optional field/code introduced. Previous notes below preserve earlierwork.
+
+# Current resume point - 2026-10-22 - same straight chain at user scenario step12
+
+User requested same correction at step12 of the same Desktop/αρχεία  json/
+2Αλκάνια-Ονοματολογία_και_διακλαδώσεις.scenario.json. Same molecule/form/mode
+as the already inspected step11. Changed ONLY steps[11].chainIdx 0→1;
+step11 remains1; deep JSON equality confirms all other content unchanged.
+Raw backup /tmp/2-alkanes-before-step12.scenario.json; updated fileSHA256
+f03fd3cc97c469a5aea4ae5566b8178a13b1111ea1d5406ae0857823d45a2128.
+Existing browser inspection confirmed index1 is horizontal[1,2,3,4]. No new
+browser run needed for this identical selection. Scenario validation22steps
+and no warnings checked. Library file and app/core code unchanged. Prior
+pending work remains below. User must reimport updated external file.
+
+# Current resume point - 2026-10-22 - user alkane scenario step11 straight chain
+
+User supplied Desktop/αρχεία  json/2Αλκάνια-Ονοματολογία_και_διακλαδώσεις.scenario.json
+and requested horizontal mainchain in screenshot step11(dimethyl_2_3_butane).
+Firefox read-only chainpool inspection confirmed index0=[1,2,3,6], index1=
+[1,2,3,4] (four horizontal carbons). Applied index1 in runtime and inspected
+highlight screenshot /tmp/alkane-straight-step11.png; no JS errors.
+Updated the exact external user file with approved escalation: ONLY
+steps[10].chainIdx 0→1. Raw original backup /tmp/2-alkanes-before-step11.scenario.json.
+JSON deep comparison confirms all other contents/22steps unchanged. SHA256
+9dc64d294e969d0d015f2f8416d5b0b37d9f730c3ed1d32eb5874fc5fac5db4d.
+Other steps including12-14 and library scenario untouched (not requested).
+No application/core code changes for this edit. Prior pending6alkynes/viewer
+fixes localunpublished unchanged. User must reload/import this updatedfile.
+Previous resume points below retain all pending sourcework and core record.
+
+# Current resume point - 2026-10-22 - large alkyne initial 3D scale adjusted
+
+User approved optional per-model initial zoom after read-only diagnosis.
+Data49: initialZoom3D94.4 only for ethyl_4_dimethyl_3_5_heptyne_1, matching
+largealkene zoom80/modelRadius5.361384 vs new radius6.328114 (~0.027%error).
+Uses existing moveto for X95 then Z14 orientation to fit combined panels.
+Viewer49 fLoadMol3D appends finite positive numeric zoom after init-3.spt;
+other molecules retain80, manualzoom and later scenario cameras retaincontrol.
+HTML cachequeries both updated alkyne-3d-scale-20261022. No physical sphere,
+SDF/coordinates, global style or core changes. Carbon0.408A/H0.264A unchanged.
+Focused Firefox test: styles/reload/manualzoom, threeexistingreferences,
+invalidvaluesfallback, real scenario cameraoverride all passed. Finalframing
+screenshots at1500x1000,1280x800 and3Donly inspected; see checksevidence.
+Docs ALKYNE-3D-SCALE-20261022.md and professor COREreport updated. Localsource
+only; uncommitted/unpublished6alkynes+skeletalfix+newzoom remain. Public73 at
+41c3852/local79. Earlier today upstreamcore49sync remains only corechange,
+SHA256c61d6d9276f4901e5fad362cf32f73ca5995850e931306d051be33f4a67f81c6.
+Next: user review or next molecule; commit/publish only on save instruction.
+Previous notes below historical.
+
+Professor screenshot reviewed later in this session: single/double-viewer
+height settings with per-step persistence are already present in localv49.
+Confirmed HTML controls viewerMaxHeight*/viewerBothHeight*, viewer live state,
+scenario capture show.viewerMaxHeight/show.viewerBothHeight and apply/normalize.
+Read live upstream HEAD again: fe6d16ae82a6987de94932a1c6bb654da47a50cf,
+identical to last synchronized revision. Read raw upstream docs/CHANGELOG.md;
+height feature documented under v48 and inherited byv49. No newer upstream
+revision found, no sync/code changes needed. No runtime height test on this
+specific read-only review. Existing new3D initialzoom work unchanged.
+
+# Current resume point - 2026-10-22 - large branched alkyne added locally
+
+User specified4-ethyl-3,5-dimethylhept-1-yne. Added
+ethyl_4_dimethyl_3_5_heptyne_1 as79thkey; all78priorindices preserved.
+C11H20,3MOLs: horizontalparent1..7, methyl8/11 at3/5, ethyl9/10at4.
+PubChem namequeries failed, smilesreturnedCID0,3Dquery501(noexistingCID).
+User informed of local computational3D fallback. Created /tmp/namelecule-
+chemistry-venv withRDKit2024.9.6.ETKDGv3/seed20261022/24requested→22sampled,
+MMFF94s all22converged; selectedconf17(energy20.6184). LocalSDF explicitly
+notPubChem, noCID, source+runtime identical; provenanceJSON/methodscript saved.
+NoassignedR/S; oneillustrativeconfiguration.3DheavyIDs match2D1..11 exactly.
+All4forms C11H20/valence/graph/chain7/triple1/H5ethyl+H6methyl/sp angle passed.
+Sixnewnames correct;466prioravailable78moleculecases identical. Firefox8mode/
+chainvariants, exact2D3Dgroups/locants/rules, numbering7,parentpool1,Jmol31,
+namefitdefault300/700,actualUI/CHn,skeletalnoC,PNGexport andpriorcomplexmols
+passed withoutJSerrors. Expanded/skeletal screenshots inspected and saved.
+Detailed LARGE-ALKYNE-20261022.md; tests/checks/generator and sourceprovenance.
+No core/viewer edits for this addition. Local79/public73at41c3852;6newalkynes
+pluspreviousviewerfix remain UNCOMMITTED/UNPUBLISHED. Sharedskeletal test
+expectedlist extended to7; latest detailed new-molecule test passed, preceding
+6-alkyne sharedrun remains recorded separately (do not claim7sharedrun).
+Preview8013/mulermoc-nom-49.html?v=large-alkyne-20261022 →series/alkynes.
+Next:userreview;save/publish only on request. Earlier today upstreamcore49sync
+remains only corechange; preserve report. Previous notes below historical.
+
+# Current resume point - 2026-10-22 - 4-methyl-2-pentyne added locally
+
+User requested4-methyl-2-pentyne following approved molecule workflow.
+Added methyl_4_pentyne_2 as78thkey, all77oldindices preserved.3MOLsources,
+embeds/registry,dataquery methyl4pentyne2-20261022. RawPubChemCID140789SDF
+runtime/source.2Dchain[5,4,3,2,1] alternate[5,4,3,2,6],3D[6,5,4,1,2].
+C6H10/valence/graph/sp linearity/tripleat2/methylat4 passed.6newnames correct,
+460prioravailable77moleculecases identical. Firefox8form/chainmodes,2parents,
+methylH3/triple2D3D/rules,actualradio/CHn,Jmol16atoms and previous examples
+passed withoutJSerrors. Shared skeletal test all6alkynes incl6actualPNGexports
+and other-series equality passed. No core/viewer edits for this addition.
+METHYL4PENTYNE2-20261022.md, focusedchecks/evidence and screenshots maintained.
+Sixth alkynes item usesexisting menu scrolling (listmax-height150px).
+Local78/public73 at41c3852;5newalkynes+earlierviewerfix uncommitted/unpublished.
+Preview8013/mulermoc-nom-49.html?v=methyl4pentyne2-20261022 →series/alkynes.
+Next: userreview; save/publish on request only. Earlier upstreamcore49sync
+remains onlycorechange today. No 2-methyl-2-butene or duplicate alkene added.
+Previous notes below historical.
+
+# Current resume point - 2026-10-22 - 3-methyl-1-pentyne added locally
+
+User requested same procedure for3-methyl-1-pentyne. Added methyl_3_pentyne_1
+as77thkey; all76oldindices preserved.3MOLs follow agreedstyle/horizontal5C/
+methylbelow3/spcollinearity, pure skeletal noC viaexistingviewerfix.
+PubChemCID136704rawSDF runtime/source; source0defined/1undefinedstereocenter,
+noR/S name.2Dchain[5,4,3,2,1],3D[6,5,1,2,4]; branch2Datom6/3Datom3.
+C6H10/valence/graphisomorphism passed.6newnames correct;454prioravailablecases
+identical. Firefox8forms/chainvariants, methylH3/numbering/triple2D3D/rules,
+1parent,actualradio/CHn,Jmol16atoms,priorbutynes/branchedalkene passed noJSerrors.
+Expanded/skeletal screenshots visually inspected and saved design/assets.
+Shared skeletal regression expanded to all5alkynes and passed incl5actualPNG
+exports, linegeometry/numbering/CHn/highlights and other-series equality.
+METHYLPENTYNE-20261022.md pluschecks/test-methylpentyne-* and evidenceJSON.
+No core or viewer edits for this addition.4newalkynes+earlierviewerfix remain
+LOCAL ONLY, uncommitted/unpublished. Local77/public73 at41c3852.
+Preview8013/mulermoc-nom-49.html?v=methylpentyne-20261022 →series/alkynes.
+Next: userreview; publish/save only when requested. Earlier today's upstream
+core49sync remains only core change. Previous notes below are historical.
+
+# Current resume point - 2026-10-22 - alkyne skeletal C labels removed locally
+
+User approved display-only correction for ALL4alkynes (propyne,butyne1/2,
+methyl3butyne1). Added fHideAlkyneSkeletalCarbons to viewer49/fUpdateSVG,
+only mode skeletal+series alkynes. Removes C text and paired roundedrect;
+JSME lines already reach atom centers (white masks caused gaps), so no bond
+geometry modifications. Atom/bond highlight ellipses/polygons preserved.
+HTML viewerquery alkyne-skeletal-20261022; dataquery alkynes-20261022.
+Browser4alkynes×2chainmodes: exact linecoordinates, noC/masks, highlights,
+numbering, CHn/form restoration,scale redraw,actualPNGexports passed.
+Selected3alkenes/alcohol/nitrile/enyne label+line states equal with helper
+on/off. NoJSerrors. Viewer syntax and diffcheck passed. Screenshots and
+exportPNG visually inspected and saved; ALKYNE-SKELETAL-20261022.md,
+checks/test-alkyne-skeletal-20261022.py and evidenceJSON maintained.
+No core/MOL/SDF edits in this correction. Core49 equalsHEAD/upstream.
+Local76/public73; 3newalkynes+rendererfix remain uncommitted/unpublished.
+Preview8013/mulermoc-nom-49.html?v=alkyne-skeletal-20261022.
+Next: userreview, then save/publish only upon request. Today's earliercore49
+upstreamsync remains only core change. Previous notes are historical.
+
+# Current resume point - 2026-10-22 - alkynes skeletal carbon-label investigation
+
+User requests no visible C symbols in skeletal drawings of ALL alkynes,
+matching alkenes. Read-only Firefox confirms fourkeys: propyne,butyne_1,
+butyne_2,methyl_3_butyne_1. JSME automatically labels linear sp carbons
+(1,1,2,1 labels respectively); labels clip neighboring SVG bonds. Samples
+/tmp/skeletal-KEY.json include full SVG+getAtom coords. fLoadMol2D skeletal
+uses rawMOL (not annotated); condensedZigZag deliberately labels allC forCHn.
+Proposed display-only viewer49 correction in fUpdateSVG: hide neutral C labels
+in pure skeletal alkynes and extend connected bond lines to true atom centers
+so labels leave no gaps; retain sp linearity, highlights, numbering, exports.
+No core/MOL/SDF change intended. Check all4alkynes pure skeletal/textless,
+CHn toggle, condensed/expanded restore, triple/branch highlights, numbering,
+2DPNGexport and selected alkene/heteroatom regressions. AGENTS requires plan
+approval before renderer code intervention. No viewer edits made yet.
+Earlier uncommitted3alkyne additions remain intact; local76/public73.
+
+# Current resume point - 2026-10-22 - 3-methyl-1-butyne local addition verified
+
+User corrected invalid2-methyl-1-butyne to valid3-methyl-1-butyne and requested
+same approved procedure. Added methyl_3_butyne_1 as76thkey, all75oldindices
+unchanged. 3MOLs follow corresponding branchedalkene, sp centercollinear;
+rawPubChemCID69019SDF runtime/source.2Dchain[4,3,2,1],3D[5,4,1,2].
+C5H8/valences/triplegraph/2D3Disomorphism passed.6newnames correct explicit1;
+448available prior75cases identical. Firefox8form/chainmodes, tripleposition/type,
+2Dpaint/3Dselection, methylat3 +3H expanded, both2equivalentparents, actual
+radios/CHn,Jmol13atoms, priorbutynes/branchedalkene allpassed withoutJSerrors.
+Detailed METHYLBUTYNE-20261022.md; checks/test-methylbutyne-* and evidenceJSON.
+No core edits for molecule additions. Earlier today upstreamcore49sync only.
+Local76/public73 at41c3852. All3newalkynes remain uncommitted/unpublished.
+Preview8013/mulermoc-nom-49.html?v=alkynes-20261022 →series/alkynes.
+Next: visualreview, then save/publish on userinstruction. Previous notes below.
+
+# Current resume point - 2026-10-22 - both butynes added locally
+
+User corrected repeated1-butyne request to2-butyne, following approved same
+procedure. Added butyne_2 as75th key; all74priorindices preserved. ThreeMOL
+sources/embeds/registry, rawPubChemCID10419SDF runtime+source, HTML dataquery
+butynes-20261022. 2Dchain[1,2,3,4],3D[1,3,4,2]; centraltriple/Hdistribution
+[3,0,0,3],C4H6,valence,linearity verified.6new namingcases correct;442prior
+available cases identical to preaddition74snapshot including1-butyne.
+Firefox alkynesmenu,8form/chainvariants,2Dtriplepaint/3Dendpoints/rule rows,
+actual radios/CHn,Jmol10atoms and1-butyne/propyne/butene1 passed withoutJSerrors.
+Expanded/skeletal screenshots inspected and stored design/assets/butyne-2-*.
+Docs BUTYNE-2-20261022.md/checks/test-butyne2-* and evidenceJSON maintained.
+Core unchanged in this addition; earlier today upstreamcore49sync is recorded.
+Both butyne additions LOCAL ONLY, uncommitted/unpublished. Public41c3852has73;
+local75. Preview8013/mulermoc-nom-49.html?v=butynes-20261022 →series/alkynes.
+Next: uservisualreview and explicit save/publish instruction. Previous notes below.
+
+# Current resume point - 2026-10-22 - 1-butyne local addition completed
+
+User approved concrete plan to add 1-butyne under alkynes. Added butyne_1
+as74th metadata key (append preserves all73numeric rule references), 3embedded
+MOL2D forms+source MOLs, PubChemCID7846rawSDF runtime/source. HTML data query
+butyne1-20261022. 2Dchain[4,3,2,1],3D[4,3,1,2]. C4H6/valence/triplegraph
+and skeletal sp collinearity passed. JSC6new naming/chain/classification cases;
+436available oldcases identical. Firefox real alkynes menu,8mode/chainvariants,
+actual formradio/CHnclicks, position/type triple rules,2Dpaint/3Datomsets,
+Jmol10atomload and previouspropyne/butene1 passed withoutJSerrors.
+Expanded/skeletal screenshots inspected and retained design/assets/butyne-1-*.
+Core49 exactly unchanged from preaddition; no core edit for this molecule.
+Detailed record BUTYNE-1-20261022.md; checks under docs/checks/test-butyne-*.
+Local only, not committed/pushed/published. Public remains41c3852with73molecules.
+Sessioncore report still: earlier upstreamcore49sync, no authoredalgorithmchange.
+Preview http://127.0.0.1:8013/mulermoc-nom-49.html?v=butyne1-20261022
+select Ομόλογες Σειρές → Αλκίνια → CH3CH2C≡CH. Next: uservisualreview,
+then save/publish only when requested. Previous notes below are historical.
+
+# Current resume point - 2026-10-22 - 1-butyne investigation, plan awaiting approval
+
+User requests adding 1-butyne under alkynes. Clean app baseline41c3852.
+Not present in data49. Existing propyne provides linear triple-bond template.
+Downloaded PubChem3D CID7846 to /tmp/butyne_1_3D.sdf, 4C6H, chain[4,3,1,2].
+Plan: butyne_1 entry, 3MOL sources/embeds/registry, raw SDFruntime+source,
+HTML data query refresh; no core change intended. Match user-approved drawing
+style: horizontal condensed/expanded, skeletal sp atoms collinear. Verify
+C4H6/valence/bondorder and six naming cases, browser4forms/rules/2D3D.
+AGENTS plan-before-implementation requires approval before code edits; no app
+edits made yet. Only preparation and session note. No commit/publish requested.
+
 # Current resume point - 2026-10-22 - all daily changes published and verified
 
 User requested all saves. Full daily snapshot committed/pushed to origin

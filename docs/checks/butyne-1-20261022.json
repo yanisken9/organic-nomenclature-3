@@ -1,0 +1,56 @@
+{
+  "key": "butyne_1",
+  "formula": "C4H6",
+  "pubchemCid": 7846,
+  "source": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/1-butyne/SDF?record_type=3d",
+  "sdfSha256": "98882fbe0a438a8204a5949e2b3ce4db9e7c4f7f260ca68d498df69a5dfedd99",
+  "mainChain2D": [
+    4,
+    3,
+    2,
+    1
+  ],
+  "mainChain3D": [
+    4,
+    3,
+    1,
+    2
+  ],
+  "structureChecks": [
+    {
+      "path": "mols/new_molecules/butyne_1_2D_Skeletal.mol",
+      "atoms": {
+        "C": 4
+      },
+      "bonds": 3
+    },
+    {
+      "path": "mols/new_molecules/butyne_1_2D_Condensed.mol",
+      "atoms": {
+        "C": 4
+      },
+      "bonds": 3
+    },
+    {
+      "path": "mols/new_molecules/butyne_1_2D_Expanded.mol",
+      "atoms": {
+        "C": 4,
+        "H": 6
+      },
+      "bonds": 9
+    },
+    {
+      "path": "mols/new_molecules/butyne_1_3D.sdf",
+      "atoms": {
+        "C": 4,
+        "H": 6
+      },
+      "bonds": 9
+    }
+  ],
+  "namingCases": 6,
+  "priorCasesUnchanged": 436,
+  "browserModes": 8,
+  "coreChanged": false,
+  "publication": "local only"
+}

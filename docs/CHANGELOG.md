@@ -1,5 +1,30 @@
 # Changelog
 
+### 2026-10-22 - Ethyne and22-step alkyne lesson (local)
+
+- Append ethyne with three source/embedded2D MOLs and raw PubChem CID6326
+  3D SDF;80local molecules, all79previous indices/names preserved.
+- Add matching22-step alkyne lesson starting with ethyne, colon-free prose,
+  progressive name/rule panels, branched examples and8-molecule2D/3D exploration.
+- Preserve height420/840 settings. Greek export saved on Desktop. No library
+  card yet. Structural/naming/roundtrip and full Firefox checks passed.
+- No core/viewer changes for these additions; local, uncommitted/unpublished.
+
+### 2026-10-22 - Refresh library alkane lesson from user file (local)
+
+- Replace the stable22-step alkane scenario with the exact user JSON,
+  including horizontal chains11/12 and viewer height settings420/840.
+- Existing library link/no-store loading reused. Validator roundtrip and
+  real library-to-lesson22-step browser checks plus Exit passed. No core edits.
+
+### 2026-10-22 - Large alkyne initial 3D scale (local)
+
+- Add optional positive numeric initialZoom3D after the shared Jmol init.
+- Set only the new large alkyne to94.4, with a fitting initial orientation;
+  physical sphere radii, model coordinates and other defaults are preserved.
+- Browser zoom/style/reload/legacy/scenario-camera checks passed. See
+  ALKYNE-3D-SCALE-20261022.md. Local only; no core changes for this fix.
+
 ### 2026-10-20 - Alkyl prefix reference (local)
 
 - Add reusable eight-group alkyl table with structures, attachment bonds,
@@ -482,3 +507,48 @@ See METHYLBUTENE-TRIAL.md.
 - Daily snapshot5d5d0ce published successfully by GitHub Pages.
 - All14critical public files byte-identical; v49 and both22-step lessons live.
 - Core49 exact upstream, core48 unchanged; professor report published.
+
+### 2026-10-22 — Local 1-butyne addition
+- Add butyne_1 (74th molecule), three2D MOL drawings and raw PubChemCID7846 SDF.
+- Preserve prior metadata key indices and rule references; refresh HTML data query.
+- Name1-βουτίνιο/alkynes, C4H6/valences/graph and6naming cases passed.
+-436prior cases unchanged; Firefox menu/forms/numbering/triple rules/2D3D passed.
+- No core change for addition. Local only, awaiting user review/save instruction.
+
+### 2026-10-22 — Local 2-butyne addition
+- Add butyne_2, 75th molecule: three2D MOLs, PubChem10419rawSDF, data49 and HTML query.
+- Central triple bond and sp linearity preserved; all74previous key indices retained.
+- Six naming cases correct;442prioravailablecases unchanged; browser8variants/rules/2D3D passed.
+- No core edit. Both butyne additions remain local, pending save/publish instruction.
+
+### 2026-10-22 — Local 3-methyl-1-butyne addition
+- Add methyl_3_butyne_1, 76thmolecule,3MOLs and PubChem69019rawSDF.
+- Retain existing key indices; sp linearity and C5H8/graph/valence checks passed.
+- Sixnewnames correct;448priorcases unchanged; Firefox8variants/2parents/methylH3/triple2D3D passed.
+- No core change. Three new alkynes remain local, not committed/published.
+
+### 2026-10-22 — Skeletal alkynes without carbon symbols (local)
+- Viewer49 removes JSME linear-C labels and masking backplates in pure skeletal alkynes.
+- Original bond coordinates, highlights, numbering and CHn/form labels preserved.
+- All4alkynes/2chainmodes/redraw/PNG exports and other-series regressions passed.
+- No core/MOL/SDF change for this fix. Not committed or published yet.
+
+### 2026-10-22 — Local 3-methyl-1-pentyne addition
+- Add methyl_3_pentyne_1 (77thmolecule),3MOLs and PubChem136704rawSDF.
+- Preserve76prior key indices and existing no-C skeletal renderer behavior.
+- C6H10/valence/graph,parent5/methylat3,6newnames and454priorcases passed.
+- Browser8variants/highlights/rules/CHn/Jmol passed withoutJSerrors.
+- No core/viewer edit for this addition. Not committed/published.
+
+### 2026-10-22 — Local 4-methyl-2-pentyne addition
+- Add methyl_4_pentyne_2 (78thmolecule),3MOLs and PubChem140789rawSDF.
+- Six naming cases correct(tripleat2,methylat4);460priorcases and77keyindices unchanged.
+- Browser8variants/2parents/2D3D, shared6alkyne skeletal/PNG checks passed.
+- No core/viewer edit for addition. Not committed or published.
+
+### 2026-10-22 — Local 4-ethyl-3,5-dimethylhept-1-yne
+- Add79thmolecule,C11H20,parent7,ethyl4/methyl3,5,3MOLs/data/query.
+- PubChemhasnoavailableCID/3D; informeduser and generated RDKitETKDGv3/MMFF94s model.
+- Explicit local provenance, reproducible script,31atomSDF/source,nostereoassignment.
+- Sixnewnames/466priorcases/78indices and full2D3Dgroups/namefit/PNG checks passed.
+- No core/viewer edit for addition. Uncommitted/unpublished.

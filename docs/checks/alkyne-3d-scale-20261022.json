@@ -1,0 +1,48 @@
+{
+  "checks": [
+    "resize and 3D-only visibility preserve initial zoom; screenshots inspected separately",
+    "initial scale, orientation, physical radii, styles, manual zoom and reload",
+    "three existing comparison molecules retain default zoom and radii",
+    "invalid per-model zoom values fall back to shared default",
+    "scenario per-step camera overrides the model initial zoom"
+  ],
+  "screenshots": [
+    "design/assets/large-alkyne-3d.png"
+  ],
+  "large": {
+    "zoom": 94.4,
+    "modelRadius": 6.328114211858461,
+    "radii": {
+      "C": [
+        0.408
+      ],
+      "H": [
+        0.264
+      ]
+    }
+  },
+  "canvas": [
+    {
+      "id": "jmolAppletNomeclature_canvas2d",
+      "width": 618,
+      "height": 310,
+      "rect": {
+        "x": 381,
+        "y": 707,
+        "width": 618,
+        "height": 310,
+        "top": 707,
+        "right": 999,
+        "bottom": 1017,
+        "left": 381
+      }
+    }
+  ],
+  "manualZoom": 97.65517241379311,
+  "reference": {
+    "zoom": 80.0,
+    "modelRadius": 5.361384005433502
+  },
+  "projectedScaleRatio": 0.9997343465382186,
+  "jsErrors": []
+}

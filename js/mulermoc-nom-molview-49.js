@@ -2837,6 +2837,25 @@ function fFit2DSVG() {
   }
 }
 
+// JSME labels collinear sp carbons even in its skeletal depiction. Its bond
+// lines already reach the atom centers; the label backplates mask those lines.
+// Remove the paired labels/backplates, keeping the separate atom/bond highlights.
+function fHideAlkyneSkeletalCarbons() {
+  if (mode2D !== "skeletal" ||
+      nameExamples[selectedMol]?.classification?.seriesKey !== "alkynes") return;
+  const svg = document.querySelector("#jsmeNomeclatureSVG svg");
+  if (!svg) return;
+  svg.querySelectorAll("text").forEach(function (label) {
+    if (label.textContent.trim() !== "C") return;
+    const backplate = label.previousElementSibling;
+    if (backplate && backplate.localName === "rect" &&
+        backplate.hasAttribute("rx")) {
+      backplate.remove();
+    }
+    label.remove();
+  });
+}
+
 function fUpdateSVG() {
   if (!jsmeNomeclatureApplet) return;
   compactNumberingLabelMap = {};
@@ -2870,6 +2889,7 @@ function fUpdateSVG() {
   if (mode2D === "condensed") {
     fCompactFunctionalGroups2D();
   }
+  fHideAlkyneSkeletalCarbons();
   patchtheNitrogen();
   fWrapStandaloneHydrogenTextsAsTspan();
   fApplyAtomColors2DToSVGLabels();
@@ -2976,13 +2996,19 @@ function fLoadMol3D() {
     selectedExample.hasOwnProperty("moveto") && selectedExample.moveto
       ? selectedExample.moveto + "; "
       : "";
+  // Optional model framing, applied after init-3.spt's shared zoom 80.
+  // Later user zoom and scenario camera commands retain control.
+  const initialZoom = selectedExample.initialZoom3D;
+  const zoomCmd = Number.isFinite(initialZoom) && initialZoom > 0
+    ? "zoom " + initialZoom + ";"
+    : "";
   Jmol.script(
     jmolAppletNomeclature,
     "frank off;load " +
       myMol3D +
       ";  select all; center selected;" +
       movetoCmd +
-      "script spt/init-3.spt;",
+      "script spt/init-3.spt;" + zoomCmd,
   );
   fSetMolVis3D();
   // A fresh load satisfies any pending one-shot exit reload (e.g. molecule
