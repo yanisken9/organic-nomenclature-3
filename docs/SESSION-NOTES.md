@@ -1,3 +1,35 @@
+# Current resume point - 2026-10-22 - all daily work/report published, final backup
+
+User requested fullsave everywhere, entireday professorreport and sharelinks.
+DONE runtime e0a3971c4807939bcb7d77661f1bbee7f7137d3e and reportfollowup
+1f4cad61f0305191c025598b11d96da1632a114d both committed/pushed originthesis-work.
+Pages runs39760884395/39761551289 bothSUCCESS.55criticalpublicfiles byte-equal
+workspace inclallnewMOL/SDF/scenarios; public/local/upstreamcore49 identical.
+Evidence checks/publication-final-20261022.json tracksruntimeA; finalreportB
+bytecheck stored withbackup. Publicbrowser checkedreport desktop/mobile390,
+library2cards→updatedalkanes/chains11-12/height420/Exit, directalkynes22steps/
+ethyne start/hiddenfields/largecorrectname/eightmenuitems/height840, ethyne4atom
+3D/skeleton andlarge31atom3D/zoom94.4/Exit. No APPLICATION JSerrors; Firefox
+reported blockedexternalGA cookies andJSmoltrackeriframe, separately recorded
+in checks/public-browser-final-20261022.json and fullreport. No analyticsfix
+or otherunrequestedappchange made during save.
+
+All3canonicalDesktopGreekscenarioJSONs byte-identical. LocalZIPcreated/tested
+under ../Αποθηκεύσεις/2026-10-22/Namelecule-2026-10-22.zip (~13.4MB), includes
+trackedproject and3Greekexports; standaloneGreekHTML/MDreportcopies in same
+folder. backup-manifest.json recordscommit/hash. Archive is refreshed after
+finaldocumentationcommit so it matches finalHEAD. No pending app changes.
+Finaldocumentation records/publicbrowser evidence/report console note only.
+Report https://yanisken9.github.io/organic-nomenclature-3/docs/REPORT-20261022.html
+App https://yanisken9.github.io/organic-nomenclature-3/
+Alkyne directlink inreport; NOT yet a3rdlibrarycard (only2existingcards).
+Local/public80molecules,3lessons22steps. CoreSESSIONreport: todaycore49 added
+EXACTupstreamfe6d16a (SHA256c61d6d9276f4901e5fad362cf32f73ca5995850e931306d051be33f4a67f81c6),
+core48sameasdaystartf3ad605, no locallyauthoredalgorithmchange. Allnewmolecules/
+lessons/two viewerfixes addnocorechange. ProfessorHEADsamefe6d16arechecked.
+No messages sentto professor. Nextsession compareHEAD/CHANGELOGagainstfe6d16a,
+then userreview. Prior notes below historical and superseded forpublication.
+
 # Current resume point - 2026-10-22 - full runtime published and55public files verified
 
 User authorized full finalsave/report/sharelinks. Runtime e0a3971c4807939bcb7d77661f1bbee7f7137d3e
