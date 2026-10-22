@@ -9,9 +9,16 @@ an exact upstream copy, as recorded in the earlier daily core report.
 Local Firefox flow passed (welcome → three cards → alkyne lesson22/ethyne/hidden
 fields → Exit/library → welcome), desktop1500/mobile390 without overflow and
 no application JS errors. Evidence checks/alkynes-library-card-20261022.json.
-Publishing is being completed; previous published
-baseline is 8ca20eb6891d426f1eb10f820d75b4c6cd6d3023. Refresh the full local
-backup after the final commit. Earlier notes below are historical.
+Committed/pushed b20c1ebe9c0e29347b484667ee4672632b8deff2. Pages run
+39764675023 completed successfully. All 56 critical public files byte-equal
+local source; core49 also byte-equal upstream. Public browser flow passed,
+including three cards, lesson start, Exit and back; desktop/mobile no overflow.
+The first cold public load logged a JSmol setDisplay/viewer-null initialization
+error from the external viewer. All requested navigation assertions still
+passed; repeating the flow passed with no application errors. No viewer or
+core changes were made to address this separate intermittent initialization.
+Public verification copies are stored with the refreshed full backup in
+../Αποθηκεύσεις/2026-10-22/. Earlier notes below are historical.
 
 # Current resume point - 2026-10-22 - all daily work/report published, final backup
 
