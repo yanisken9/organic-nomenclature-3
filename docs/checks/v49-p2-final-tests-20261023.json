@@ -1,0 +1,28 @@
+{
+  "tests": [
+    {
+      "file": "docs/checks/test-alkanes-p2-v49.js",
+      "exit": 0,
+      "stdout": "PASS P2-1 straight propyl initial\nPASS P2-2 alphabetical numbering tie initial\nPASS P2-2 alphabetical numbering tie has parent paths\nPASS P2-2 alphabetical numbering tie path 1 [9,8,5,4,3,2,1]\nPASS P2-2 alphabetical numbering tie path 2 [7,6,5,4,3,2,1]\nPASS P2-2 alphabetical numbering tie reversed atom/bond order initial\nPASS P2-2 alphabetical numbering tie reversed atom/bond order has parent paths\nPASS P2-2 alphabetical numbering tie reversed atom/bond order path 1 [2,3,6,7,8,9,10]\nPASS P2-2 alphabetical numbering tie reversed atom/bond order path 2 [4,5,6,7,8,9,10]\nPASS P2-2 alphabetical numbering tie shuffled atom/bond order initial\nPASS P2-2 alphabetical numbering tie shuffled atom/bond order has parent paths\nPASS P2-2 alphabetical numbering tie shuffled atom/bond order path 1 [8,5,10,7,2,9,4]\nPASS P2-2 alphabetical numbering tie shuffled atom/bond order path 2 [6,1,10,7,2,9,4]\nPASS P2-3 branch locant/name pairing initial\nRESULT: 0 failures / 14 checks (original core49; all cases executed).\n",
+      "stderr": ""
+    },
+    {
+      "file": "docs/checks/test-alkanes-p2-extended-v49.js",
+      "exit": 0,
+      "stdout": "PASS straight propyl: 16 independent2D/3D permutations, explicitH, allwinningpaths, stepper, algorithm/data\nPASS isopropyl: 16 independent2D/3D permutations, explicitH, allwinningpaths, stepper, algorithm/data\nPASS alphabetical tie: 16 independent2D/3D permutations, explicitH, allwinningpaths, stepper, algorithm/data\nPASS three groups: 16 independent2D/3D permutations, explicitH, allwinningpaths, stepper, algorithm/data\nPASS four groups: 16 independent2D/3D permutations, explicitH, allwinningpaths, stepper, algorithm/data\nPASS neopentane: 16 independent2D/3D permutations, explicitH, allwinningpaths, stepper, algorithm/data\nPASS trimethyloctane: 16 independent2D/3D permutations, explicitH, allwinningpaths, stepper, algorithm/data\nPASS same-parent equal-size2D/3D identities+H, fixed grouped slots/explanations, ether/ester controls.\nRESULT 877 assertions passed.\n",
+      "stderr": ""
+    },
+    {
+      "file": "docs/checks/test-core-parent-chains-20261022-v49.js",
+      "exit": 0,
+      "stdout": "PASS: PubChem 2D/3D, 20 atom/bond permutations, all parent paths, three unsaturation regressions.\n",
+      "stderr": ""
+    },
+    {
+      "file": "docs/checks/test-v49-scenarios-20261022.js",
+      "exit": 0,
+      "stdout": "PASS v49 validation and export/import:22steps,chain choices,rule panels,title preferences.\n",
+      "stderr": ""
+    }
+  ]
+}

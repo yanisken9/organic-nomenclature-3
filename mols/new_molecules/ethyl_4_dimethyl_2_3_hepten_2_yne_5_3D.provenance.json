@@ -1,0 +1,51 @@
+{
+  "key": "ethyl_4_dimethyl_2_3_hepten_2_yne_5",
+  "formula": "C11H18",
+  "smiles": "CC(C)=C(C)C(CC)C#CC",
+  "stereochemistry": "Unspecified by the requested name; one illustrative conformer; no R/S or E/Z assignment",
+  "pubchemLookup": {
+    "key": "ethyl_4_dimethyl_2_3_hepten_2_yne_5",
+    "attempts": [
+      {
+        "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/4-ethyl-2%2C3-dimethylhept-2-en-5-yne/cids/JSON",
+        "error": "HTTP Error 404: PUGREST.NotFound"
+      },
+      {
+        "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/smiles/CC%28C%29%3DC%28C%29C%28CC%29C%23CC/cids/JSON",
+        "status": 200
+      }
+    ],
+    "cid": 0
+  },
+  "source": "local RDKit",
+  "rdkitVersion": "2024.09.6",
+  "method": "ETKDGv3, explicit H, MMFF94s; lowest energy converged sampled conformer",
+  "seed": 20261026,
+  "conformers": 11,
+  "converged": 11,
+  "energy": 22.87109236770255,
+  "atomMapping2Dto3D": {
+    "1": 1,
+    "2": 2,
+    "3": 3,
+    "4": 4,
+    "5": 5,
+    "6": 6,
+    "7": 7,
+    "8": 8,
+    "9": 9,
+    "10": 10,
+    "11": 11
+  },
+  "mainChain3D": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "sha256": "4dabae6a54d4ee970942078457a2e65e5c78231f8306b056b57985b6cfe67320",
+  "nonStereogenicDoubleBond": "Identical methyl groups on C2; no E/Z possible; V2000 double stereo0"
+}

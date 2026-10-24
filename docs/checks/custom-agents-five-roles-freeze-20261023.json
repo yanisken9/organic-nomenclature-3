@@ -1,0 +1,34 @@
+{
+  "date": "2026-10-23",
+  "base_head": "2de69f439dc3b709fc4658624ad98ee8d6ffe47e",
+  "frozen_files": {
+    ".codex/agents/planner.toml": "177def5a43a2680cb5ff526e6ca823f0ed3ad4ac24a9eff80b35d4f21ca081ad",
+    ".codex/agents/chemistry_validator.toml": "78535c20189d1cd2a42b74ac438732babe035478be8f148040ac8ccf48280c35",
+    ".codex/agents/learning_designer.toml": "f8130b42386e2d4da15524697c06d87d91854a26ba5e169a5e0ce9fae7eca5ad",
+    "docs/CUSTOM-AGENTS.md": "b324844cc65ab991d34f44ea131dc6fe15e0a54dd26cb28a0d3379053269a671",
+    "docs/checks/custom-agents-five-roles-20261023.json": "36a29b65451d37f6d75256208e97720327c2a6fc85ad3bae9fc361c62005ac44"
+  },
+  "preservation_before_review": {
+    "headUnchanged": true,
+    "changedExistingFiles": [
+      "docs/CUSTOM-AGENTS.md"
+    ],
+    "baselineFileCount": 643,
+    "protected": {
+      "AGENTS.md": "fa2b0b0b52d79538b5511056a40248dc13dbf472ca608a5e56617b3a544da28b",
+      "docs/REVIEW-CHECKLIST.md": "58d92372ac18e38de5db481e5151478383064752ebc991100efc5a32996343eb",
+      ".codex/agents/developer.toml": "ef27409ef00a51edbc07c1a7c38ef83ae26145470a88fdf3dbbcbf1bec3b9b4d",
+      ".codex/agents/reviewer.toml": "37cdee8c1d3f1dadcb7fa716b8589eebc80893670e4e02d87bfa7196e6e72096",
+      "js/mulermoc-nom-core-49.js": "ae85dd22b94292ed539ff2a858a1a6fe3672af90298662e5c6860fb411a65951",
+      "js/mulermoc-nom-molview-49.js": "6ba68e47541d7bc0a17e4d8771a5ce07d9d45e812386f6b798cc867d2975283c",
+      "mulermoc-nom-49.html": "e6ec8b2c2951f6a76b7cd2db5e5505b0a7740422f249107e310b82e97b7aed45"
+    }
+  },
+  "root_checks": [
+    "Five TOML definitions parse with required fields and unique names/identities",
+    "Actual three registered roles in fresh contexts, exact definition injection and read-only runtime verified",
+    "Local documentation links resolve",
+    "git diff --check passed"
+  ],
+  "review_scope": "Three new role definitions, updated collaboration documentation and bootstrap evidence. Existing AGENTS, checklist, Developer/Reviewer definitions and application files preserved. Operational session/contribution notes and derived final review report are outside this frozen target."
+}

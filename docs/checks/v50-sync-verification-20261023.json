@@ -1,0 +1,63 @@
+{
+  "upstream": "2b616f6cdc5b3c2d65b20d38b2e025e0d58ccfbb",
+  "baseCommit": "2de69f439dc3b709fc4658624ad98ee8d6ffe47e",
+  "targetHashesUnchanged": true,
+  "backup": "/tmp/namelecule-before-v50-20261023-235528",
+  "namingCasesCompared": 480,
+  "available": 478,
+  "allRowsEqual": true,
+  "P2checks": 14,
+  "extendedAssertions": 877,
+  "parentChainSuite": "passed,20permutations and unsaturation controls",
+  "metadataOrderMOL80": "equal v49/v50",
+  "syntaxAndAssetPaths": "passed",
+  "browserMigration": {
+    "checks": [
+      "index -> Namelecule welcome -> v50 links",
+      "three library lessons point to v50",
+      "persistent naming shell and empty hint",
+      "generalized sp-carbon skeletal labels and alkane/alkene controls",
+      "alkanes 22 steps and Exit to library",
+      "alkenes 22 steps and Exit to library",
+      "alkynes 22 steps and Exit to library",
+      "wide top/left/right text placement; title clears play bar",
+      "900x700 fallback and title clears play bar",
+      "resize restores rail; Exit clears rail",
+      "no application JavaScript errors; browser/resource diagnostics retained"
+    ],
+    "jsErrors": [
+      {
+        "type": "javascript",
+        "level": "error",
+        "source": {
+          "realm": "64bc13b9-756b-4c1c-8893-a4953eeabb46",
+          "context": "89a444d2-8973-4d31-9c2a-ee42f25f50a0",
+          "userContext": "default"
+        },
+        "text": "Η κωδικοποίηση χαρακτήρων του εγγράφου δεν δηλώθηκε, επομένως έγινε υπόθεσή της από το περιεχόμενο. Η κωδικοποίηση χαρακτήρων πρέπει να δηλωθεί στην κεφαλίδα «Content-Type HTTP» με μεταετικέτα ή σήμα σειράς byte.",
+        "timestamp": 1792789130948
+      }
+    ]
+  },
+  "browserP2": "passed3fixturesx3formsx2modes,clicks/2D3D/groups/hidden/mockednarration/permutedstepper",
+  "browserLargeAlkyne": "passed4formsx2modes,exactsets/H,numbering7,namefit300/700/default,PNG,controls",
+  "limitations": [
+    "No exhaustive visual inspection or audible speech/classroom tests",
+    "Existing index encoding diagnostic retained; first run also external font download failure"
+  ],
+  "independentReview": {
+    "reviewer": "/root/review_v50_sync",
+    "freshContext": true,
+    "completed": "2026-10-24",
+    "initialFinding": "P3 scenario export app49",
+    "resolution": "app50 literal; independently re-reviewed",
+    "outstandingActionableFindings": 0,
+    "report": "docs/V50-INDEPENDENT-REVIEW-20261024.md"
+  },
+  "exportUpdateRoundtrip": {
+    "app": "mulermoc-nom-50",
+    "updatedPosition": "right",
+    "roundtripValid": true,
+    "diagnostics": []
+  }
+}

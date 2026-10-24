@@ -1,0 +1,117 @@
+{
+  "date": "2026-10-23",
+  "cli_version": "0.162.0-alpha.17.2",
+  "parent": "01a1683f-aff5-7803-aa5d-205b9edcfab9",
+  "syntax": "All five standalone TOML files parsed; required string fields and matching role/filename checked; no unsupported sandbox/approval/provider overrides added.",
+  "spawn_calls": [
+    {
+      "role": "planner",
+      "fork_turns": "none"
+    },
+    {
+      "role": "chemistry_validator",
+      "fork_turns": "none"
+    },
+    {
+      "role": "learning_designer",
+      "fork_turns": "none"
+    }
+  ],
+  "roles": [
+    {
+      "role": "planner",
+      "thread_id": "01a1683f-d62d-7480-811c-f1eb03efe72d",
+      "agent_path": "/root/planner_smoke",
+      "definition_path": ".codex/agents/planner.toml",
+      "definition_sha256": "177def5a43a2680cb5ff526e6ca823f0ed3ad4ac24a9eff80b35d4f21ca081ad",
+      "exact_definition_injected": true,
+      "approval_mode": "never",
+      "effective_sandbox": {
+        "type": "managed",
+        "file_system": {
+          "type": "restricted",
+          "entries": [
+            {
+              "path": {
+                "type": "special",
+                "value": {
+                  "kind": "root"
+                }
+              },
+              "access": "read"
+            }
+          ]
+        },
+        "network": "restricted"
+      },
+      "report": "ROLE_ID=NAMELECULE_PLANNER_V1_20261023\n\nRead AGENTS.md, REVIEW-CHECKLIST.md, CUSTOM-AGENTS.md—including five-role collaboration—README and current resume notes. Existing local changes predate this inspection.\n\nHypothetical plan, requiring the user’s concrete approved molecule, theory objective, lesson and assets:\n\n1. Planner identifies exact target paths and acceptance criteria. Main conversation dispatches agents; this plan grants no implementation approval.\n2. Chemistry Validator inspects proposed molecular sources, naming, Greek conventions, MOL/SDF provenance and graph correspondence; returns findings and uncertainties.\n3. Learning Designer examines the selected scenario and approved teaching template; proposes one coherent step preserving Greek style and learning sequence. Independent preliminary inspections may run concurrently.\n4. One Developer exclusively owns all approved implementation files: data49 registry, explicitly selected molecular assets and scenario JSON. Exact asset/scenario paths remain unknown. Implement after approval in a write-enabled session; verify graphs, naming, highlights, loading, navigation and scenario round-trip.\n5. Freeze final targets. Independent Reviewer receives approved requirements, base commit, exact changed/untracked paths and hashes in fresh context. Resolve findings and re-review changed targets.\n\nAcceptance requires consistent representations, accurate provenance, correct step behavior and preserved existing examples. No classroom effectiveness claim.\n\nNo files/core changed, tests, network, delegation or publication performed. Git status triggered denied system-cache attempts; no deliberate cache creation. Notes remain untouched as instructed.",
+      "tool_names": [
+        "exec"
+      ]
+    },
+    {
+      "role": "chemistry_validator",
+      "thread_id": "01a1683f-ebe5-76e3-bc7f-bc0933f72be6",
+      "agent_path": "/root/chemistry_smoke",
+      "definition_path": ".codex/agents/chemistry_validator.toml",
+      "definition_sha256": "78535c20189d1cd2a42b74ac438732babe035478be8f148040ac8ccf48280c35",
+      "exact_definition_injected": true,
+      "approval_mode": "never",
+      "effective_sandbox": {
+        "type": "managed",
+        "file_system": {
+          "type": "restricted",
+          "entries": [
+            {
+              "path": {
+                "type": "special",
+                "value": {
+                  "kind": "root"
+                }
+              },
+              "access": "read"
+            }
+          ]
+        },
+        "network": "restricted"
+      },
+      "report": "ROLE_ID=NAMELECULE_CHEMISTRY_VALIDATOR_V1_20261023\n\nBootstrap inspection completed; read AGENTS.md, checklist, README/resume excerpts and requested source/report.\n\n- Observed boundary: `js/mulermoc-nom-core-49.js:1915–1918` counts carbon neighbours only inside the supplied fragment. Branch traversal excludes main-chain atoms and non-carbon atoms (`:1923–1931`); the caller converts one-based chain indices to zero-based (`:1953`). This supports the documented propyl/isopropyl boundary correction (`docs/V49-ALKANES-P2-20261023.md:17`).\n- Unsupported generalization: this does not establish arbitrary branched-substituent nomenclature or general chemical graph isomorphism. The explicit iso-name table contains only size three (`core:1908–1910`), while the signature is a rooted carbon-tree representation (`:1934–1939`). The report explicitly excludes recursive substituent naming and universal IUPAC certification (`report:65`).\n\nExecuted inspection commands only: `pwd`, `rg`, `cat`, `sed`, `nl`, `head`, `git status --short`. The Git invocation attempted temporary cache creation; sandbox errors denied it. No intentional writes or core changes were made.\n\nRights remain inspection/report only. No application tests, molecular generation, browser, network, external sources or chemical/visual/classroom validation performed. This smoke report does not replace independent Reviewer assessment or authorize implementation/publication.",
+      "tool_names": [
+        "exec"
+      ]
+    },
+    {
+      "role": "learning_designer",
+      "thread_id": "01a16840-0315-7910-a919-92646ca740bb",
+      "agent_path": "/root/learning_smoke",
+      "definition_path": ".codex/agents/learning_designer.toml",
+      "definition_sha256": "f8130b42386e2d4da15524697c06d87d91854a26ba5e169a5e0ce9fae7eca5ad",
+      "exact_definition_injected": true,
+      "approval_mode": "never",
+      "effective_sandbox": {
+        "type": "managed",
+        "file_system": {
+          "type": "restricted",
+          "entries": [
+            {
+              "path": {
+                "type": "special",
+                "value": {
+                  "kind": "root"
+                }
+              },
+              "access": "read"
+            }
+          ]
+        },
+        "network": "restricted"
+      },
+      "report": "ROLE_ID=NAMELECULE_LEARNING_DESIGNER_V1_20261023\n\nΔιάβασα AGENTS.md, REVIEW-CHECKLIST.md, τις οδηγίες συνεργασίας CUSTOM-AGENTS.md και μόνο τα βήματα `n=1–2` του σεναρίου.\n\nΠαρατηρούμενο διδακτικό στοιχείο — Το ίδιο μόριο `ethane` συνδέει την εισαγωγή στα αλκάνια με το πρώτο συνθετικό `αιθ-`. Στο δεύτερο βήμα ενεργοποιούνται `compCarbonsCount` και ο πίνακας κανόνα, ενώ παραμένει η συνεπτυγμένη 2D αναπαράσταση.\n\n**Πρόταση**, προφορικά πριν από τη μετάβαση στο δεύτερο βήμα\n\n«Μέτρησε τα άτομα άνθρακα στην αλυσίδα του αιθανίου. Ποιο πιστεύεις ότι θα είναι το πρώτο συνθετικό του ονόματος και γιατί;»\n\nΗ αιτιολόγηση θα έδινε παρατηρήσιμο τεκμήριο σύνδεσης πλήθους C και συνθετικού. Δεν αποτελεί μέτρηση μαθησιακής αποτελεσματικότητας.\n\nΔεν άλλαξα JSON, υπάρχον κείμενο, κρυφά πεδία, schema ή core. Η πρόταση απαιτεί έγκριση πριν ενσωματωθεί από τον Developer και δεν υποκαθιστά τον τελικό Reviewer.\n\nΕκτέλεσα μόνο αναγνώσεις. Το runtime απέρριψε προσωρινές εγγραφές εργαλείων με `Operation not permitted`· η ανάγνωση JSON πέτυχε με `python3 -B -c`. Δεν έγιναν δοκιμές εφαρμογής, browser, δικτύου ή τάξης, ούτε ανάγνωση TOML, εγκαταστάσεις ή αναθέσεις.",
+      "tool_names": [
+        "exec"
+      ]
+    }
+  ],
+  "scope": "Definition-loading and read-only behavior smoke only. No application/browser/visual/classroom validation or full chemistry audit. No write probe.",
+  "filesystem_evidence": "Runtime policy root read only, no writable entries. Agents reported denied macOS launcher cache attempts; these were not deliberate write probes."
+}

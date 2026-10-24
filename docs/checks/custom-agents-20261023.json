@@ -1,0 +1,145 @@
+{
+  "date": "2026-10-23",
+  "cliVersion": "0.162.0-alpha.17.2",
+  "definitionLoading": "project-scoped standalone TOML, no registration config or feature changes",
+  "runs": [
+    {
+      "role": "developer",
+      "parentThreadId": "01a166a6-995d-7503-95ad-baed55cac2fc",
+      "childThreadId": "01a166a6-b7e0-73c1-a132-c8d18c79e8aa",
+      "childAgentPath": "/root/developer_bootstrap_test",
+      "definition": ".codex/agents/developer.toml",
+      "definitionSha256": "ef27409ef00a51edbc07c1a7c38ef83ae26145470a88fdf3dbbcbf1bec3b9b4d",
+      "exactInstructionInjection": [
+        {
+          "eventType": "response_item",
+          "messageRole": "developer",
+          "exactInstructionsPresent": true
+        }
+      ],
+      "parentSpawnCalls": [
+        {
+          "tool": "spawn_agent",
+          "selectedRole": "developer",
+          "taskName": "developer_bootstrap_test",
+          "forkTurns": "none"
+        }
+      ],
+      "sandboxPolicy": {
+        "type": "managed",
+        "file_system": {
+          "type": "restricted",
+          "entries": [
+            {
+              "path": {
+                "type": "special",
+                "value": {
+                  "kind": "root"
+                }
+              },
+              "access": "read"
+            }
+          ]
+        },
+        "network": "restricted"
+      },
+      "approvalMode": "never",
+      "turnContexts": [
+        {
+          "sandbox_policy": {
+            "type": "read-only"
+          },
+          "approval_policy": "never",
+          "cwd": "/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3"
+        }
+      ],
+      "finalReport": "ROLE_ID=NAMELECULE_DEVELOPER_V1_20261023\n\nThe custom `developer` role loaded successfully in exactly one fresh-context subagent. It read `AGENTS.md` and `docs/REVIEW-CHECKLIST.md` and reported these checklist headings:\n\n1. Αντικείμενο και ανεξαρτησία\n2. Κώδικας και συμβατότητα\n3. Ονοματολογία και IUPAC\n4. MOL/SDF και προέλευση\n5. Απεικονίσεις 2D/3D\n6. Εκπαιδευτικά σενάρια και πλοήγηση\n7. Παλινδρομήσεις και συγχρονισμός\n8. Μορφή αναφοράς και ολοκλήρωση\n\nNo files changed, including core files or project notes. No reviewer was spawned; no tests, networking, commits, pushes, or publication occurred.",
+      "status": "PASS"
+    },
+    {
+      "role": "reviewer",
+      "parentThreadId": "01a166a6-8e25-7750-a393-3f470d4e1483",
+      "childThreadId": "01a166a6-affc-7a61-841b-f0985b40faff",
+      "childAgentPath": "/root/reviewer_bootstrap_test",
+      "definition": ".codex/agents/reviewer.toml",
+      "definitionSha256": "37cdee8c1d3f1dadcb7fa716b8589eebc80893670e4e02d87bfa7196e6e72096",
+      "exactInstructionInjection": [
+        {
+          "eventType": "response_item",
+          "messageRole": "developer",
+          "exactInstructionsPresent": true
+        }
+      ],
+      "parentSpawnCalls": [
+        {
+          "tool": "spawn_agent",
+          "selectedRole": "reviewer",
+          "taskName": "reviewer_bootstrap_test",
+          "forkTurns": "none"
+        }
+      ],
+      "sandboxPolicy": {
+        "type": "managed",
+        "file_system": {
+          "type": "restricted",
+          "entries": [
+            {
+              "path": {
+                "type": "special",
+                "value": {
+                  "kind": "root"
+                }
+              },
+              "access": "read"
+            }
+          ]
+        },
+        "network": "restricted"
+      },
+      "approvalMode": "never",
+      "turnContexts": [
+        {
+          "sandbox_policy": {
+            "type": "read-only"
+          },
+          "approval_policy": "never",
+          "cwd": "/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3"
+        }
+      ],
+      "finalReport": "Selected custom role: `reviewer`, with fresh context. Exactly one subagent spawned.\n\nChild role-identification header, verbatim:\n```text\nROLE_ID=NAMELECULE_REVIEWER_V1_20261023\n```\n\nActual child thread ID: **not exposed**. The tool returned canonical task name `/root/reviewer_bootstrap_test`; this is not a verified thread ID.\n\nThe child reported **no actionable findings** after reading the required instructions, checklist and both agent definitions. It performed read-only content, hash and Git inspections. No application tests, configuration edits, commits, pushes or publication occurred. No core files changed.\n\nPermission limitation: Git unexpectedly attempted temporary macOS cache writes, which were denied. Those specific denials were observed; universal read-only enforcement was **not tested**. The role header is self-reported identity, while selection of `reviewer` is evidenced by the successful spawn call.",
+      "status": "PASS"
+    }
+  ],
+  "workspaceFingerprintBeforeAndAfterTests": "52380b80b804e5ab53aea1d64f2e636906245a5d31e0052dd65c1d757734b29b",
+  "readonlyEnforcementProbe": {
+    "probe": "workspace-create-denial",
+    "status": "PASS",
+    "errno": 1,
+    "error": "[Errno 1] Operation not permitted: '/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/.namelecule-readonly-probe-20261023-58c9e3'",
+    "fileCreated": false,
+    "actor": "separate codex sandbox verification, not Reviewer"
+  },
+  "limitations": [
+    "The write-denial probe ran in a separate codex sandbox process, not in the Reviewer.",
+    "No browser, molecule correctness or application runtime tests; documentation/configuration only.",
+    "Initial ephemeral trial did not retain child metadata; persistent trials supplied the evidence."
+  ],
+  "applicationCodeChanged": false,
+  "commitPushPublication": false,
+  "checks": {
+    "tomlParser": "pip._vendor.tomli (already installed)",
+    "strictConfigBothClients": true,
+    "bothCustomRolesRecognizedAutomatically": true,
+    "bothExactInstructionBlocksLoaded": true,
+    "bothFreshContextSpawn": true,
+    "reviewerReadOnlyWorkOnly": true,
+    "noActionableReviewerFindings": true,
+    "applicationBrowserTests": "not run, outside documentation/configuration scope",
+    "developerWriteExecution": "not tested",
+    "ideUi": "not tested"
+  },
+  "preservedFiles": {
+    "AGENTS.md": "fa2b0b0b52d79538b5511056a40248dc13dbf472ca608a5e56617b3a544da28b",
+    "docs/REVIEW-CHECKLIST.md": "58d92372ac18e38de5db481e5151478383064752ebc991100efc5a32996343eb"
+  }
+}

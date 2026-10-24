@@ -1,0 +1,1794 @@
+{
+  "scenarioVersion": 1,
+  "app": "mulermoc-nom-50",
+  "scenario": "Ονοματολογία Αλκενινίων",
+  "title": "Ονοματολογία Αλκενινίων",
+  "showStepNumbers": false,
+  "reserveTitleSpace": true,
+  "steps": [
+    {
+      "n": 1,
+      "title": "Πώς ονομάζεται ένα αλκενίνιο;",
+      "note": "Θα σχηματίσουμε το όνομα του <b>1-βουτεν-3-ινίου</b> από τα συνθετικά του. Έχει τέσσερα άτομα άνθρακα, <b>έναν διπλό δεσμό C=C</b> και <b>έναν τριπλό δεσμό C≡C</b>, με μοριακό τύπο C<sub>4</sub>H<sub>4</sub>.\nΤα αλκενίνια που θα μελετήσουμε είναι <b>άκυκλοι ακόρεστοι υδρογονάνθρακες</b> με έναν διπλό και έναν τριπλό δεσμό και απλούς δεσμούς στο υπόλοιπο μόριο. Εντόπισε τους δύο πολλαπλούς δεσμούς στο σχέδιο.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "none",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": true,
+        "etherNaming": "iupac",
+        "panelOpen": true,
+        "hidden": [
+          "comp5",
+          "comp6",
+          "comp8",
+          "comp9"
+        ]
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": false,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": false,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": false
+      },
+      "selectedMol": "buten_1_yne_3"
+    },
+    {
+      "n": 2,
+      "title": "Πρώτο Συνθετικό",
+      "note": "Το <b>1<sup>ο</sup> συνθετικό</b> δείχνει τον αριθμό των ατόμων C της <b>κύριας</b> ανθρακικής αλυσίδας. Εδώ είναι <b>τέσσερα</b>, επομένως χρησιμοποιούμε το <b>βουτ-</b>.\nΚάνε κλικ στο <b>Κανόνας συνθετικού ανθρακικής αλυσίδας</b>, για να δεις τα συνθετικά και για άλλο αριθμό ατόμων C.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compCarbonsCount",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": true,
+        "etherNaming": "iupac",
+        "panelOpen": true,
+        "hidden": [
+          "comp6",
+          "comp8",
+          "comp9"
+        ]
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": false,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": false,
+        "nameEye": false,
+        "audio": false,
+        "rule": true,
+        "text": true,
+        "nameClick": false
+      },
+      "selectedMol": "buten_1_yne_3"
+    },
+    {
+      "n": 3,
+      "title": "Δεύτερο Συνθετικό",
+      "note": "Το συνθετικό που δηλώνει τον τύπο των δεσμών περιλαμβάνει τώρα δύο μέρη. Χρησιμοποιούμε το <b>-εν-</b> για τον διπλό δεσμό και το <b>-ιν-</b> για τον τριπλό, με αυτή τη σειρά στο όνομα.\nΤα άκυκλα αλκενίνια με έναν διπλό και έναν τριπλό δεσμό έχουν γενικό μοριακό τύπο <b>C<sub>ν</sub>H<sub>2ν−4</sub></b>, με <b>ν ≥ 4</b>. Για τέσσερις άνθρακες προκύπτει C<sub>4</sub>H<sub>4</sub>.\nΚάνε κλικ στο <b>Κανόνας συνθετικού τύπου δεσμών</b>, για να δεις τα συνθετικά των διαφορετικών τύπων δεσμών.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compBondType",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": true,
+        "etherNaming": "iupac",
+        "panelOpen": true,
+        "hidden": [
+          "comp9"
+        ]
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": false,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": false,
+        "nameEye": false,
+        "audio": false,
+        "rule": true,
+        "text": true,
+        "nameClick": false
+      },
+      "selectedMol": "buten_1_yne_3"
+    },
+    {
+      "n": 4,
+      "title": "Τρίτο Συνθετικό",
+      "note": "Το συνθετικό της χημικής τάξης δείχνει ότι η ένωση είναι <b>υδρογονάνθρακας</b>. Περιέχει μόνο άνθρακα και υδρογόνο και η κατάληξη είναι <b>-ιο</b>.\nΟ συνδυασμός των μερών γράφεται <b>-εν-ίνιο</b>, με αριθμό θέσης πριν από καθέναν από τους δύο τύπους δεσμών. Εδώ προκύπτει το <b>1-βουτεν-3-ίνιο</b>.\nΚάνε κλικ στο <b>Κανόνας συνθετικού χημικής τάξης</b>, για να δεις τις καταλήξεις και άλλων χημικών τάξεων.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compSuffix",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": true,
+        "etherNaming": "iupac",
+        "panelOpen": true,
+        "hidden": []
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": false,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": false,
+        "nameEye": false,
+        "audio": false,
+        "rule": true,
+        "text": true,
+        "nameClick": false
+      },
+      "selectedMol": "buten_1_yne_3"
+    },
+    {
+      "n": 5,
+      "title": "Διαφορετικές 2D Αναπαραστάσεις Μορίων",
+      "note": "Ένα μόριο μπορεί να αναπαρίσταται με διαφορετικές μορφές 2D συντακτικών τύπων.\n<b>α) συνεπτυγμένη</b>\n<b>β) ανεπτυγμένη</b>\n<b>γ) σκελετική μορφή</b>\nΕπίλεξε τις διαφορετικές αναπαραστάσεις του 1-βουτεν-3-ινίου. Εντόπισε τον διπλό και τον τριπλό δεσμό σε καθεμία. Επίλεξε χωριστά τα <b>εν</b> και <b>ίν</b> του ονόματος, για να δεις τον αντίστοιχο δεσμό, και τους αριθμούς <b>1-</b> και <b>-3-</b>, για να ελέγξεις τις θέσεις τους.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "none",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": true,
+        "hidden": []
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": 2
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": true,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": true,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": true
+      },
+      "selectedMol": "buten_1_yne_3"
+    },
+    {
+      "n": 6,
+      "title": "Πρώτα συγκρίνουμε όλες τις θέσεις",
+      "note": "Αριθμούμε συγκρίνοντας τις θέσεις <b>όλων των πολλαπλών δεσμών μαζί</b>, σε αύξουσα σειρά. Επιλέγουμε τον μικρότερο αριθμό στο πρώτο σημείο διαφοράς, όχι το μικρότερο άθροισμα.\nΣτο <b>3-πεντεν-1-ίνιο</b> οι δύο φορές δίνουν <b>1,3</b> ή <b>2,4</b>. Επιλέγουμε το 1,3, οπότε ο τριπλός παίρνει τη θέση 1 και ο διπλός τη θέση 3.\nΗ θέση κάθε δεσμού είναι ο μικρότερος αριθμός των δύο ατόμων C που τον σχηματίζουν. Το <b>-εν-</b> γράφεται πριν από το <b>-ίνιο</b>, ακόμη και όταν ο τριπλός έχει μικρότερη θέση. Επίλεξε τους αριθμούς του ονόματος και παρατήρησε την αντιστοίχισή τους.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compEndNumber",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": []
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": true,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": true,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": true
+      },
+      "selectedMol": "penten_3_yne_1"
+    },
+    {
+      "n": 7,
+      "title": "Η προτεραιότητα του διπλού στην ισοπαλία",
+      "note": "Στο <b>1-βουτεν-3-ίνιο</b> και οι δύο φορές αρίθμησης δίνουν στους πολλαπλούς δεσμούς τις θέσεις <b>1,3</b>, σε αύξουσα σειρά.\n<b>Μόνο σε αυτή την ισοπαλία</b> επιλέγουμε τη φορά που δίνει τη μικρότερη θέση στον διπλό δεσμό. Έτσι ο διπλός παίρνει τη θέση <b>1</b> και ο τριπλός τη θέση <b>3</b>.\nΗ προτεραιότητα αυτή δεν αλλάζει την προηγούμενη σύγκριση 1,3 με 2,4. Επίλεξε τις δύο θέσεις στο όνομα για να δεις τους αντίστοιχους δεσμούς.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compNumber1",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": []
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": true,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": true,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": true
+      },
+      "selectedMol": "buten_1_yne_3"
+    },
+    {
+      "n": 8,
+      "title": "Διακλαδισμένο αλκενίνιο",
+      "note": "Ξεκινάμε με ένα μόριο που έχει μία διακλάδωση. Η κύρια αλυσίδα εδώ έχει <b>τέσσερα άτομα C</b> και περιλαμβάνει <b>τον διπλό και τον τριπλό δεσμό</b>, γι’ αυτό χρησιμοποιούμε το <b>βουτ-</b>.\nΑνάμεσα στις ισομήκεις αλυσίδες επιλέγουμε εκείνη που περιλαμβάνει και τους δύο πολλαπλούς δεσμούς. Το μόριο έχει συνολικά <b>πέντε άνθρακες</b>. Ο πέμπτος ανήκει στη διακλάδωση. Ακολούθησε την οριζόντια κύρια αλυσίδα.",
+      "mode2D": "condensed",
+      "mainChainMode": "data",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compCarbonsCount",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": [
+          "comp0",
+          "comp1"
+        ]
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": true,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": false,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": true
+      },
+      "selectedMol": "methyl_2_buten_1_yne_3"
+    },
+    {
+      "n": 9,
+      "title": "Αρίθμηση και θέση διακλάδωσης",
+      "note": "Οι δύο φορές αρίθμησης δίνουν στους πολλαπλούς δεσμούς το ίδιο σύνολο θέσεων <b>1,3</b>. Επειδή υπάρχει ισοπαλία, δίνουμε στον <b>διπλό τη θέση 1</b> και στον τριπλό τη θέση 3.\nΜε αυτή την αρίθμηση η μεθυλομάδα συνδέεται με τον <b>άνθρακα 2</b>. Το <b>2-</b> μπροστά από το όνομά της δηλώνει τη θέση σύνδεσής της.\nΗ αρίθμηση στο συγκεκριμένο σχέδιο ξεκινά από δεξιά. Δεν καθορίζεται από τη φορά που διαβάζουμε τη σελίδα.",
+      "mode2D": "condensed",
+      "mainChainMode": "data",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compNumber1",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": [
+          "comp1"
+        ]
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": true,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": false,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": true
+      },
+      "selectedMol": "methyl_2_buten_1_yne_3"
+    },
+    {
+      "n": 10,
+      "title": "Πρόθεμα διακλάδωσης",
+      "note": "Η επισημασμένη διακλάδωση έχει <b>έναν άνθρακα</b> και είναι μεθυλομάδα, <b>–CH₃</b>. Η θέση και το πρόθεμά της γράφονται <b>2-μεθυλο-</b>.\nΚάνε κλικ στο <b>Ονόματα αλκυλίων και προθέματα</b>, για να δεις και τα προθέματα των άλλων αλκυλίων, που συνήθως εμφανίζονται σε οργανικά μόρια.",
+      "mode2D": "condensed",
+      "mainChainMode": "data",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compSecondSub1",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": []
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": true,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": false,
+        "nameEye": false,
+        "audio": false,
+        "rule": true,
+        "text": true,
+        "nameClick": true
+      },
+      "selectedMol": "methyl_2_buten_1_yne_3"
+    },
+    {
+      "n": 11,
+      "title": "Ολοκλήρωση ονόματος",
+      "note": "Το πλήρες όνομα είναι <b>2-μεθυλο-1-βουτεν-3-ίνιο</b>.\nΤο <b>2-</b> αφορά τη μεθυλομάδα, το <b>-1-</b> τον διπλό δεσμό και το <b>-3-</b> τον τριπλό. Η κύρια αλυσίδα έχει τέσσερα άτομα C.\nΕπίλεξε χωριστά αυτά τα μέρη του ονόματος και παρατήρησε την αντιστοίχισή τους.",
+      "mode2D": "condensed",
+      "mainChainMode": "data",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "none",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": []
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": true,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": false,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": true
+      },
+      "selectedMol": "methyl_2_buten_1_yne_3"
+    },
+    {
+      "n": 12,
+      "title": "Επιλογή κύριας αλυσίδας",
+      "note": "Στο επόμενο μόριο η μεγαλύτερη συνεχής ανθρακική αλυσίδα έχει <b>πέντε άτομα C</b> και περιλαμβάνει <b>τον διπλό και τον τριπλό δεσμό</b>, οπότε χρησιμοποιούμε το <b>πεντ-</b>.\nΑνάμεσα στις ισομήκεις αλυσίδες επιλέγουμε εκείνη που περιλαμβάνει και τους δύο πολλαπλούς δεσμούς. Το μόριο έχει συνολικά <b>επτά άνθρακες</b>. Οι άλλοι δύο ανήκουν σε δύο μεθυλομάδες.",
+      "mode2D": "condensed",
+      "mainChainMode": "data",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compCarbonsCount",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": [
+          "comp0",
+          "comp1",
+          "comp4"
+        ]
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": true,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": false,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": true
+      },
+      "selectedMol": "dimethyl_2_3_penten_1_yne_4"
+    },
+    {
+      "n": 13,
+      "title": "Αρίθμηση κύριας αλυσίδας",
+      "note": "Από οποιοδήποτε άκρο οι πολλαπλοί δεσμοί παίρνουν τις θέσεις <b>1,4</b>, αν τις γράψουμε σε αύξουσα σειρά. Η σύγκριση όλων των θέσεων μαζί καταλήγει σε ισοπαλία.\nΕπιλέγουμε λοιπόν τη φορά που δίνει στον <b>διπλό τη θέση 1</b> και στον <b>τριπλό τη θέση 4</b>.\nΚρατάμε αυτή την αρίθμηση για τις διακλαδώσεις. Επίλεξε και το <b>-4-</b> στο όνομα για να δεις τη θέση του τριπλού δεσμού.",
+      "mode2D": "condensed",
+      "mainChainMode": "data",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compBondPos",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": [
+          "comp0",
+          "comp1"
+        ]
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": true,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": false,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": true
+      },
+      "selectedMol": "dimethyl_2_3_penten_1_yne_4"
+    },
+    {
+      "n": 14,
+      "title": "Θέσεις και όνομα διακλαδώσεων",
+      "note": "Οι δύο μεθυλομάδες συνδέονται με τους άνθρακες <b>2</b> και <b>3</b>. Γράφουμε τις θέσεις ως <b>2,3-</b>, με κόμμα ανάμεσα στους αριθμούς.\nΕπειδή οι ομάδες είναι δύο και ίδιες, χρησιμοποιούμε το πολλαπλασιαστικό <b>δι-</b> και σχηματίζουμε το <b>2,3-διμεθυλο-</b>. Οι αριθμοί αυτοί αφορούν τις διακλαδώσεις, όχι τους πολλαπλούς δεσμούς.",
+      "mode2D": "condensed",
+      "mainChainMode": "data",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compNumber1",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": [
+          "comp1"
+        ]
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": true,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": false,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": true
+      },
+      "selectedMol": "dimethyl_2_3_penten_1_yne_4"
+    },
+    {
+      "n": 15,
+      "title": "Ολοκλήρωση ονόματος",
+      "note": "Το πλήρες όνομα είναι <b>2,3-διμεθυλο-1-πεντεν-4-ίνιο</b>.\nΕπίλεξε χωριστά τις θέσεις <b>2,3-</b>, τις <b>μεθυλομάδες</b>, τη θέση του διπλού <b>-1-</b> και τη θέση του τριπλού <b>-4-</b>. Παρατήρησε τι δηλώνει κάθε μέρος του ονόματος.",
+      "mode2D": "condensed",
+      "mainChainMode": "data",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "none",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": []
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": true,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": false,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": true
+      },
+      "selectedMol": "dimethyl_2_3_penten_1_yne_4"
+    },
+    {
+      "n": 16,
+      "title": "Περισσότερες διακλαδώσεις",
+      "note": "Το μεγάλο μόριο έχει συνολικά <b>έντεκα άτομα άνθρακα</b>. Η μεγαλύτερη συνεχής ανθρακική αλυσίδα έχει όμως <b>επτά</b> και περιλαμβάνει τον διπλό και τον τριπλό δεσμό. Χρησιμοποιούμε το <b>επτ-</b>.\nΑνάμεσα στις ισομήκεις αλυσίδες εφαρμόζουμε τους ίδιους κανόνες επιλογής. Οι υπόλοιποι τέσσερις άνθρακες ανήκουν στις διακλαδώσεις. Ακολούθησε τους επτά αριθμημένους άνθρακες της οριζόντιας αλυσίδας, από δεξιά προς τα αριστερά.",
+      "mode2D": "condensed",
+      "mainChainMode": "data",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compCarbonsCount",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": [
+          "comp0",
+          "comp1",
+          "comp2",
+          "comp3",
+          "comp4"
+        ]
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": true,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": false,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": true
+      },
+      "selectedMol": "ethyl_4_dimethyl_2_3_hepten_2_yne_5"
+    },
+    {
+      "n": 17,
+      "title": "Αρίθμηση κύριας αλυσίδας",
+      "note": "Και οι δύο φορές αρίθμησης δίνουν στους πολλαπλούς δεσμούς τις θέσεις <b>2,5</b>, σε αύξουσα σειρά. Επομένως υπάρχει ισοπαλία.\nΕπιλέγουμε τη φορά που δίνει στον <b>διπλό τη θέση 2</b> και στον <b>τριπλό τη θέση 5</b>, όχι την αντίθετη. Οι θέσεις των διακλαδώσεων ακολουθούν την αρίθμηση που ήδη επιλέξαμε.\nΤο όνομα της κύριας αλυσίδας είναι <b>2-επτεν-5-ίνιο</b>. Το <b>εν</b> γράφεται πριν από το <b>ίν</b>, όπως και όταν ο τριπλός έχει μικρότερη θέση.",
+      "mode2D": "condensed",
+      "mainChainMode": "data",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compBondPos",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": [
+          "comp0",
+          "comp1",
+          "comp2",
+          "comp3"
+        ]
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": true,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": false,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": true
+      },
+      "selectedMol": "ethyl_4_dimethyl_2_3_hepten_2_yne_5"
+    },
+    {
+      "n": 18,
+      "title": "Θέση διακλάδωσης",
+      "note": "Στον <b>άνθρακα 4</b> συνδέεται μία διακλάδωση με δύο άνθρακες. Ο αριθμός <b>4-</b> δηλώνει τη θέση σύνδεσής της με την κύρια αλυσίδα.\nΔεν δηλώνει πόσα άτομα άνθρακα έχει η διακλάδωση και δεν πρέπει να συγχέεται με τις θέσεις 2 και 5 των πολλαπλών δεσμών.",
+      "mode2D": "condensed",
+      "mainChainMode": "data",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compNumber1",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": [
+          "comp1",
+          "comp2",
+          "comp3"
+        ]
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": true,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": false,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": true
+      },
+      "selectedMol": "ethyl_4_dimethyl_2_3_hepten_2_yne_5"
+    },
+    {
+      "n": 19,
+      "title": "Πρόθεμα διακλάδωσης",
+      "note": "Η επισημασμένη ομάδα είναι <b>–CH₂–CH₃</b> και λέγεται αιθυλομάδα. Γράφουμε <b>4-αιθυλο-</b>.\nΟι δύο άνθρακές της δεν προστίθενται στους επτά της κύριας αλυσίδας.\nΚάνε κλικ στο <b>Ονόματα αλκυλίων και προθέματα</b>, για να δεις και τα προθέματα των άλλων αλκυλίων.",
+      "mode2D": "condensed",
+      "mainChainMode": "data",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compSecondSub1",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": [
+          "comp2",
+          "comp3"
+        ]
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": true,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": false,
+        "nameEye": false,
+        "audio": false,
+        "rule": true,
+        "text": true,
+        "nameClick": true
+      },
+      "selectedMol": "ethyl_4_dimethyl_2_3_hepten_2_yne_5"
+    },
+    {
+      "n": 20,
+      "title": "Θέσεις και όνομα των μεθυλομάδων",
+      "note": "Οι δύο μεθυλομάδες συνδέονται με τους άνθρακες <b>2</b> και <b>3</b>. Γράφουμε τις θέσεις τους ως <b>2,3-</b>.\nΑυτοί οι αριθμοί αφορούν τις μεθυλομάδες. Στο ίδιο όνομα, το χωριστό <b>-2-</b> αφορά τον διπλό δεσμό και το <b>-5-</b> τον τριπλό. Το κόμμα χωρίζει τις θέσεις των όμοιων διακλαδώσεων.\nΕπειδή οι μεθυλομάδες είναι <b>δύο και ίδιες</b>, χρησιμοποιούμε το πολλαπλασιαστικό <b>δι-</b> και γράφουμε <b>2,3-διμεθυλο-</b>.\nΣτον ανεπτυγμένο τύπο επισημαίνονται οι δύο μεθυλομάδες με τα Η τους. Επίλεξε και το <b>αιθυλο</b>, για να συγκρίνεις τις ομάδες.",
+      "mode2D": "expanded",
+      "mainChainMode": "data",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compSecondSub2",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": []
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": true,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": false,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": true
+      },
+      "selectedMol": "ethyl_4_dimethyl_2_3_hepten_2_yne_5"
+    },
+    {
+      "n": 21,
+      "title": "Αλφαβητική σειρά και πλήρες όνομα",
+      "note": "Γράφουμε τις διαφορετικές διακλαδώσεις σε αλφαβητική σειρά. Το <b>αιθυλο-</b> προηγείται του <b>μεθυλο-</b>. Το πολλαπλασιαστικό <b>δι-</b> δεν λαμβάνεται υπόψη σε αυτή τη σειρά.\nΤο πλήρες όνομα είναι <b>4-αιθυλο-2,3-διμεθυλο-2-επτεν-5-ίνιο</b>.\nΧρησιμοποιούμε κόμματα ανάμεσα σε αριθμούς και παύλες ανάμεσα σε αριθμούς και λέξεις.",
+      "mode2D": "condensed",
+      "mainChainMode": "data",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "none",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": []
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": true,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": false,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": true
+      },
+      "selectedMol": "ethyl_4_dimethyl_2_3_hepten_2_yne_5"
+    },
+    {
+      "n": 22,
+      "title": "Σύνθεση της ονοματολογίας σε 2D",
+      "note": "Στο <b>1-εξεν-4-ίνιο</b> οι θέσεις 1,4 προτιμώνται από τις 2,5. Εδώ προηγείται η σύγκριση όλων των θέσεων.\nΣύγκρινε από το μενού το <b>2-εξεν-4-ίνιο</b>. Και οι δύο φορές δίνουν 2,4, οπότε η ισοπαλία λύνεται με τη θέση 2 στον διπλό δεσμό. Η σειρά γραφής παραμένει -εν-ίνιο και στα δύο ονόματα.\nΕπίλεξε τα μέρη του ονόματος και παρατήρησε τη σύνδεσή τους με την κύρια αλυσίδα, τις θέσεις των δεσμών και τις διακλαδώσεις. Οι αριθμοί δηλώνουν θέσεις, ενώ τα συνθετικά δηλώνουν το μέγεθος της αλυσίδας, το είδος δεσμών και τις ομάδες.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "none",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": []
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "buten_1_yne_3",
+        "penten_3_yne_1",
+        "hexen_1_yne_4",
+        "hexen_2_yne_4",
+        "methyl_2_buten_1_yne_3",
+        "dimethyl_2_3_penten_1_yne_4",
+        "ethyl_4_dimethyl_2_3_hepten_2_yne_5"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": true,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": true,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": true,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": true
+      },
+      "selectedMol": "hexen_1_yne_4"
+    },
+    {
+      "n": 23,
+      "title": "Προαιρετική παρατήρηση σε 3D",
+      "note": "Η ονοματολογία έχει ολοκληρωθεί. <b>Αυτό το τελευταίο βήμα είναι προαιρετικό.</b>\nΠαρατήρησε το ίδιο μόριο σε 2D και 3D και περίστρεψε το 3D μοντέλο με το ποντίκι. Η συνδεσμολογία παραμένει ίδια, ενώ ο 2D συντακτικός τύπος δεν αποδίδει όλες τις γωνίες στον χώρο.\nΕπίλεξε εναλλάξ τα αιθυλο και διμεθυλο στο όνομα και παρατήρησε τις αντίστοιχες ομάδες στις δύο αναπαραστάσεις.",
+      "mode2D": "condensed",
+      "mainChainMode": "data",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "none",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": []
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "buten_1_yne_3",
+        "penten_3_yne_1",
+        "hexen_1_yne_4",
+        "hexen_2_yne_4",
+        "methyl_2_buten_1_yne_3",
+        "dimethyl_2_3_penten_1_yne_4",
+        "ethyl_4_dimethyl_2_3_hepten_2_yne_5"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": true,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": true
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": 840,
+        "controls": {
+          "2D": true,
+          "3D": true
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": true,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": true
+      },
+      "selectedMol": "ethyl_4_dimethyl_2_3_hepten_2_yne_5"
+    }
+  ]
+}

@@ -1,4 +1,570 @@
+# 2026-10-24 — Εγκεκριμένο τοπικό checkpoint
+
+Ο χρήστης εξουσιοδότησε αποθήκευση της συσσωρευμένης δουλειάς σε τοπικόcommit,
+χωρίςpush/δημοσίευση. Αναφορά είναι το commit που περιέχει αυτή την εγγραφή,
+με μήνυμα «Checkpoint Namelecule v50 molecules, theory lessons and validated workflow»,
+με προηγούμενη βάση 2de69f439dc3b709fc4658624ad98ee8d6ffe47e.
+Περιλαμβάνει και προϋπάρχουσες τεκμηριωμένες αλλαγές· δεν αποδίδονται όλες
+στην ενέργεια αποθήκευσης. Καμία νέα επεξεργασία core ή άλλου κώδικα τώρα.
+53JSON/24Python parsing, tracked diffcheck καθαρό· stagedcheck ανέφερε παλιά
+κενά σε νεοπροστιθέμεναv50/reportαρχεία, διατηρήθηκαν χωρίς άσχετη αλλαγή.
+Δεν έγινε νέοruntimevalidation.
+Η κοινή σύνοψη καθηγητή θα οριστικοποιηθεί μετά την αυριανή εργασία.
+
+# 2026-10-24 — Οριζόντια κύρια αλυσίδα και κανόνες πέντε σεναρίων
+
+Εγκεκριμένη γενική προτίμηση οριζόντιας χημικά ισοδύναμης αλυσίδας και επέκταση
+κλειστών πινάκων κανόνων στα πέντε μαθήματα. Αρχεία core50/viewer50/scenario50/HTML,
+έλεγχοι και report HORIZONTAL-CHAINS-AND-LESSON-RULES-20261024.md. Δεν άλλαξαν
+lessonJSON/MOL/SDF/Data50/teaching50. Πέρασαν532συγκρίσεις πριν/μετά,14+877P2,
+111βήματαFirefox/25κλικ/3Dlabel regressionfixture και ελεύθερη βιβλιοθήκη3μορφών.
+Διαλείποντα εξωτερικάJSmol σφάλματα αναφέρονται χωριστά, ίδιοείδος παλαιότερης
+baselineαναπαραγωγής. ΑνεξάρτητοςReviewer /root/review_horizontal_all βρήκεP2 για
+data-modeκαταναλωτές, διορθώθηκε και επανελέγχθηκε χωρίς άλλαευρήματα.
+CORE CHANGED js/mulermoc-nom-core-50.js (v50), τοπικά, χωρίςcommit/push/δημοσίευση.
+Το report περιέχει έτοιμο μήνυμα καθηγητή. Προϋπάρχουσες αλλαγές δεν αποδίδονται
+στην εργασία. Επόμενο βήμα οπτική αποδοχή χρήστη.
+
+# 2026-10-24 — Alkane tables collapsed by default
+
+User-approved correction: title visible, table closed on step/component change;
+manual title opening retained, alkane presentation only. Four productionfiles
+viewer/scenario/teaching50 and HTMLcache; no core/JSON/molecule changes.
+ActualFirefox21steps + fivecomponentmanualopen + open-to-nextstepcollapse +
+otherfourlessons/freeexplore isolation passed. Freshindependent Reviewer
+/root/review_alkane_manual_rules no actionablefindings, browser Developer evidence.
+Report ALKANE-MANUAL-RULES-20261024.md and scopedchecks. Localonly, no commit/push.
+
+# 2026-10-24 — Alkane rule-table pilot
+
+User-approved automatic existing rule tables on alkyl/principal-name selection,
+limited to existing alkane lesson presentation. Changed viewer50/scenario50/
+teaching50 and HTMLcache; no core/JSON/molecule changes. ActualFirefox21steps,
+fivecomponenttypes, manualclosing and otherfourlessons/freeexplore isolation pass;
+finalrun zeroJSerrors, earlier externalJSmol transient errors disclosed in report.
+Independent Reviewer /root/review_alkane_auto_rules foundP3 manualtoggle state,
+corrected and re-reviewed resolved. Report ALKANE-AUTO-RULES-20261024.md;
+checks/test-alkane-auto-rules-20261024.py and alkane-auto-rules-20261024.json.
+No corechanges againsttaskbaseline, no commit/push/publication. Next pilotacceptance.
+
+# 2026-10-24 — Progressive theory lessons
+
+Approved Learning Designer redesign implemented by main Developer, with no quizzes.
+Five lessons now21/22/22/23/23steps, final2D synthesis plus optional3D, targeted
+numbering and wording improvements. Files five canonicalscenarioJSON, library,
+README, focusedchecks/evidence and THEORY-PROGRESSIVE-20261024.md; Desktop copies
+updated identically. Actual111step Firefox check across88+23steps, validators/
+export/reimport passed; enyne replayfield correction rechecked. Librarycounts,
+componentclick explanations and Exit passed. Real independent Reviewer
+/root/review_theory_progressive reviewed seven frozen app/doc targets and two
+correction deltas, no actionablefindings. Developer browser evidence, not reviewer
+execution. Exacthighlightatomsets/classroom effectiveness not tested.
+Upstream unchanged2b616f6/changelog verified. No core/data/viewer/engine changes
+against sessionbaseline; preexisting dirtyfiles not attributed here. Local only,
+no commit/push/publication. Next visualacceptance and pilot; quizzes deferred.
+
+# Current resume point — 2026-10-24 — enyne lesson Desktop JSON copy saved
+
+User corrected missing Desktop delivery. Saved exact byte-identical22step copy of
+scenarios/enynes-nomenclature-branches.scenario.json in Desktop json folder as
+Αλκενίνια-Ονοματολογία_και_διακλαδώσεις.scenario.json, matching the four other
+lesson filenames. Internal requested title remains Ονοματολογία Αλκενινίων.
+SHA256 a68531b3bf3ed8fd237e91cf0d79e4038b9793c1ba7d87eeb4c05dc9c36339dd.
+Verified content identity and22steps. Other Desktop files preserved. No app/core
+changes, no commit/push/publication. Future requested lesson deliveries should
+include the established Desktop json folder, not just the project scenario path.
+
+# Current resume point — 2026-10-24 — enyne theory lesson complete
+
+User explicitly authorized direct implementation without intermediateapproval,
+exceptsubstantiveproblem. Created22step «Ονοματολογία Αλκενινίων» in scenarios/
+enynes-nomenclature-branches.scenario.json, fifthlibrarycard andREADMEreference.
+Studiedfourtemplates and reusedlatestdiene22step structure/settings. Exclusive
+acycliconeC=C/oneC#C,n>=4,CnH2n-4; no isomerismteaching,newfunctions orgrading.
+Sevenexistingmoleculesonly:buten1yne3,penten3yne1,hexen1yne4,hexen2yne4,
+threepreviouslyaddedbranched enynes. Penten3yne1 non-tieexample plusbuten1yne3tie;
+newbranched7–21authoredright-to-leftmainChain/chainIdx0, separateen/ynelocantboxes.
+IUPACP31.1.1.1 primaryrechecked, RDKitread-onlysevenruntimefiles confirmformula/
+oneC=C/oneC#C/acyclicC/H. NarrowLearningDesigner /root/enyne_lesson_numbering_design
+3–6/8/12/16 check no requireddesignchange. NoChemistryValidator/Planner/Developeragent.
+DeveloperactualFirefoxall22steps passednotesDOM/names/hiddenfields/rules/chains,
+realtype+locantcomponentclicks andcorrectexplanation/exact3Ddouble/tripleatomsets,
+branchC2D3D/6H20, actualexportBlobvalidatorroundtripnoWarnings,7molecules3formsand
+real3Dcounts,libraryExit and700pxdismiss. NoJSerrors. Initialtest-onlyexpectedheight
+mechanicalreplace520 correctedto420; finalfulltestpassed. Screenshots3/6/20/narrow
+visuallyinspected. Evidence checks/enynes-lesson-20261024.json.
+763protectedoldfiles +fourpreviousscenarioJSON/cards unchangedbefore records.
+Frozen5targets checks/enynes-lesson-freeze-20261024.json, basebackup
+/tmp/namelecule-before-enynes-lesson-20261024; Reviewer /root/review_enynes_theory_lesson
+freshcontext complete: no actionable P0–P3 findings. Independently checked5hashes,
+JSON/text/settings/AST andbaseline protection. Browser/chemistry/screenshot checks
+remain Developer evidence, not independently rerun. Record ENYNES-SCENARIO-20261024.md.
+UpstreamHEAD24Oct unchanged2b616f6cdc5b3c2d65b20d38b2e025e0d58ccfbb equalslastsync;
+completecurrentCHANGELOG121578bytes SHA25646de588394cf019759b0404838fa2f6505fa2ca4f27a8d150de78c087fdeb705,
+sameaslastcheck, no newrelease/overlap. No corechanges thissession, no appengine/
+moleculedata changes, no stage/commit/push/publication. Next: user refreshlibrary and open fifthlesson; no pending implementation.
+
+# Current resume point — 2026-10-24 — new enyne orientation corrected
+
+User-approved follow-up complete: onlythree newenynes display tripleleft/doubleright
+in all2Dforms, numberingstartsright, likeexistinglibrary. Nine2DMOL exactX-only
+mirrors; allY/Z/atom/bond/stereofields and pairdistances retained. Three menuformulas
+andnineembeds corrected; generator mirrors2D only after3Dserialization; HTMLcache
+andfocusedchecksupdated. No oldmolecules/scenarios/core/viewer or3D/provenance edits.
+Checks12chemicalforms/18productionnamingcases/24actualFirefoxformchaincases pass,
+includingtripleleft/doublerightSVG andstartatom1, C/H2D3D/highlights/parallels.
+Twoexistingenyne samplespass,noJSerrors. First/largestExpanded+3D/largestSkeletal
+screenshots visuallyinspected.748protectedhashes unchangedbefore recordupdates;
+oldmetadata/embeds outside scopednewentries byte-identical. Report ENYNES-20261024.md,
+checks/enynes-orientation-20261024.json and orientationfreeze. Baseline
+/tmp/namelecule-before-enyne-orientation-20261024. Noagents peruserinstruction,
+noindependentreview claimed. No corechanges thissession, no commit/push/publication.
+Next:userrefreshv50 and inspectright-to-leftnumbering inthree newenynes.
+
+# Current resume point — 2026-10-24 — new enyne orientation correction proposed
+
+User noticed existing enynes place triplebondleft/doubleright so numbering starts
+fromright. Confirmed oldbuten1yne3 formulaCH_CCH=CH2, mainChain[4,3,2,1]; oldhexen2yne4
+formulaCH3C_CCH=CHCH3, mainChain[6..1]. Newthreecurrentlydoubleleft/tripleright,
+chemicallycorrect but notmatching establishedvisualconvention. MainDeveloper
+acknowledgescompatibilitymiss. Proposed scope: reversehorizontal2Dorientation
+for onlythree newmolecules, matching condensedmenulabels, keepatomIDs/graphs/names/
+2D3Dmappings/3D/sourceprovenance unchanged. Update nine new2DMOL andembeds,
+threeformuladisplays, scopedgenerator/checks/HTMLcache; nooldmolecule/core/viewer/
+scenariochanges. Awaitcodeplanapproval before edits. No changes thisinvestigation
+exceptcontinuityrecords; noagents needed peruserinstruction.
+Next: approvedorientationfix and targeted numbering/right-to-left browserchecks.
+
+# Current resume point — 2026-10-24 — three branched enynes complete
+
+Approved batch implemented by mainDeveloper only; no agents used per latestuser
+instruction, no independent review claimed. New keys methyl_2_buten_1_yne_3 C5H6,
+dimethyl_2_3_penten_1_yne_4 C7H10,ethyl_4_dimethyl_2_3_hepten_2_yne_5 C11H18.
+Same3MOL/source3DSDF+provenance/runtimeSDF/MOL2Dregistry convention. Firsttwo3D
+rawPubChem CID62323/91259187 pass graph/H/geometry and preserve rawbytes; third
+name404/SMILES CID0 uses establishedRDKitETKDGv3/MMFF94s fallback. NoR/S/EZclaim.
+ExplicitH inExpanded/3D,1.17/.78orthogonallayout, terminalC#C-Hlinear; skeletalsp180.
+Thirdnewcompound serializationcorrected impossiblecrosseddoubleflag only (two
+identicalmethyls onC2, noEZpossible). No viewer/core changes or oldasset changes.
+Productiondata89keys:86oldmetadata/MOL2Dentries/order provenunchanged,3appended.
+Checks12forms graph/formula/H/valence/charges/bonds/coords/crossings/sp2sp3D;
+18JSCproductionnaming/2D3Dbondsequencecases pass. Firefox24cases total:16firsttwo
+beforethird-onlystereofix,8thirdafterfix; appropriateC/H2D3D/parallels/componentclicks,
+real3Datoms11/17/29; existing2enyne samplespass,noJSerrors. Screenshots3Expanded+
+3D/largestSkeletal visuallyinspected. FinaltargetedJSONonly8cases, notfullmatrixclaim.
+734protectedexistingfilehashes unchanged. Existingfilechangesonlydata50/HTMLcache/
+READMEcounts+link;25newassets/check/reportfiles. docs/ENYNES-20261024.md and
+checks/enynes-verification-20261024.json detail evidence/limits; freeze in
+checks/enynes-freeze-20261024.json. Baseline/tmp/namelecule-before-three-enynes-20261024.
+No chemical ambiguity requiredChemistryValidator; originalnamesvalidatedagainst
+IUPACP31.1.1.1. No core changes thissession, no stage/commit/push/publication.
+Next:userrefresh moleculelibrary and inspectthreeentries under enynes.
+
+# Current resume point — 2026-10-24 — three branched enynes preflight, plan pending
+
+User requests three enynes with absolute existing-format/rendering compatibility,
+minimumtokens, mainDeveloperonly; ChemistryValidatoronlyifsubstantiveambiguity,
+nootheragents (current explicit instruction overrides routineReviewerdelegation).
+No commits/push, oldmolecules/scenarios/unrelatedfiles preserved.
+Read narrowtemplates: existingbuten1yne3/hexen2yne4 metadata+ExpandedMOL,
+reviewedlargealkyne andnewdiene generator/layoutpreferences. Currentreviewed
+sourcepattern C-C1.17/C-H0.78 orthogonalexplicit-H expanded, normal skeletal
+sp180geometry; keep establishedMOL/embed/runtimeSDF/provenance integration.
+RDKitgraphpreflight:2methylbut1en3yne C5H6,2,3dimethylpent1en4yne C7H10,
+4ethyl2,3dimethylhept2en5yne C11H18; valence4C/1H, oneC=C/oneC#Ceach.
+ProductionJSCcore preflight6cases (3molecules x algorithmic/data) gives exact
+requestedGreeknames, correctparent4/5/7 and enynesclassification withoutcorechanges.
+No filesofmolecules generated, no app/sourcechanges yet. No chemicalambiguity
+requiringagent. IUPAC P31.1.1.1 checkedprimary https://iupac.qmul.ac.uk/BlueBook/P3.html:
+lowestmultiplelocantsasset, tie favorsdouble. Requestednames satisfy1,3/1,4/2,5.
+UpstreamHEADread24Oct unchanged2b616f6cdc5b3c2d65b20d38b2e025e0d58ccfbb,
+sameaslastsynced/checked; priorfullCHANGELOGread atthatrevisionremainsapplicable.
+Proposedimplementation: three3formMOLsources, explicitH3DSDFsource/runtime and
+provenance, additive data50metadata/embeds, HTMLdatacacheonly, batchedchecks.
+PubChemfirstifvalidatedgenericrecordexists; establishedRDKitfallbackotherwise.
+Preservealloldassetsandmetadata bytewise. Necessarychemical/2D/3D/naming/browser
+checks only; noagentsunlessnewchemicalambiguity. AwaitconcreteplanapprovalperAGENTS.
+No corechanges, no commit/push/publication. Next:userapprovesplanthenimplement3together.
+
+# Current resume point — 2026-10-24 — welcome explore arrow removed
+
+User approved removing only decorative arrow from welcome explore button.
+Changed design/welcome-proposal.html:22, sole deletion space+aria-hidden span
+containing rightarrow. Label/link/CSS and all other bytes preserved, checked
+against /tmp/namelecule-welcome-before-arrow-20261024.html. Independent Reviewer
+/root/review_welcome_arrow freshcontext verified diff/byte identity/frozenSHA256,
+no actionable findings. Final SHA256 a4a517eecc813ee04dba7823de6b6e086f27b7d3754e8e2e37db0a140a836bff.
+No runtime/browser tests needed or performed for this cosmetic deletion.
+No core changes, no commit/push/publication. Next: user refresh welcome page.
+
+# Current resume point — 2026-10-24 — alkadiene JSON Desktop copy saved
+
+User requested saving the22step alkadiene JSON beside the three existing lessons
+in Desktop folder matching json. Saved exact byte-identical copy named
+Αλκαδιένια-Ονοματολογία_και_διακλαδώσεις.scenario.json in Desktop/αρχεία  json
+(actual folder uses decomposed Greek accents). SHA256
+6a55f9316528a362829408b84836c59d55742da9b39e8f9db9aa29f8d3c68abd.
+Verified JSON22steps and byte identity. Existing three files preserved.
+No application/core changes, no commit/push/publication. Earlier records below.
+
+# Current resume point — 2026-10-24 — shared CHn clearance complete
+
+User approved global viewer fix: preserve genuine H-space shortening; remove
+unjustified shifts/masks. fAddHydrogens2SVG now keeps originalCanchor and uses
+actualglyphbounds+uniformclearance for whitebackplates. HTMLviewer cacheupdated.
+No moleculewhitelist, noMOL/SDF/3D/core/scenariochanges. Report LABEL-CLEARANCE-20261024.md.
+DeveloperactualFirefox86x4requestedforms comparesold/newinmemory:691Canchors,
+allnames/text/linegeometrysame, expanded/skeletalunchanged, noJSerrors; includes
+existingfallbacks. ActualtwoPNGBlob/exportSVGanchorchecks pass; screenshots of
+butadieneandlessoninspected. EarlyPNGtest synchronizationfailures fixedintestonly.
+Developer additional targeted hidden-SVG load/reopen-redraw check passed without JS errors; no frozen-target changes.
+202protectedhashesunchanged;5filefreeze checks/label-clearance-freeze-20261024.json.
+Reviewer /root/review_label_clearance freshcontext completed: no actionablefindings.
+Independently verified5hashes/202protectedfiles, renderer/compaction/cache/AST.
+Browser/PNG execution Developer-only; no full rastercomparison.
+Baseline/tmp/namelecule-before-label-clearance-20261024 (204files). Comparisontest
+requires archivedbaseline explicitlydocumented. Notes/reportoutsidefrozentarget.
+No corechanges thissession, no stage/commit/push/publication. Next: userrefresh and inspect correctedlabelspacing. Earliernotespreserved.
+
+# Current resume point — 2026-10-24 — global visible C=C length audit, plan pending
+
+User clarified: retain shortening caused by real H/CHn labels, remove unjustified
+visible-length differences in every affected molecule. User approved read-only
+broader investigation; code plan approval still required. No source changes.
+ActualFirefox audit86molecules x4requestedforms,100C=C views/25molecules,8with
+multipleC=C, no JSerrors. TemporaryrawSVGgeometry/labels/masks only in
+/tmp/namelecule-double-length-audit.json; script/tmp/audit-double-lengths.py.
+Confirmedbutadiene1,3condensed rawSVGboth750units but whitebackplates leave330vs100.
+fAddHydrogens2SVG moves CH2/CH3text -160 and hardcodedrect -120/600 vs CH+60/470.
+Therefore fix shared CHn anchoring/backplates, notblindlyequalizeallC=C lines.
+Plan: preserveoriginalcarbonanchor and boundwhiteplates toactualrenderedlabels+
+uniformclearance. Applysharedmechanismacrossmolecules/condensed+zigzag; retain
+necessaryHoccupation/diagonalorientation, noC-H/MOL/stereo/3D/corechanges. Audit
+expanded/skeletal; avoidchangeswhereunneeded. Files viewer50/HTMLcache/scopedtests;
+86x4regression, visible-lengthvslabelocclusion, highlight/zoom/PNG, independent
+Reviewer afterapprovedimplementation. Awaituserapproval concretebroaderplan.
+Earliernotespreserved; no core/source changes this investigation.
+
+# Current resume point — 2026-10-24 — equal visible butadiene double lengths requested
+
+User screenshot shows unequal visible C=C lengths in condensed1,3butadiene lesson.
+Read-only inspection: sourceCondensedMOL has equal1.17 spacing for allC-C;
+existing fDrawDieneParallelDoubleBonds only corrects crossings, not visible lengths.
+Propose scoped viewer-only normalization for this symmetric condensed molecule,
+preserving label clearance, rawMOL/stereo/3D/core. Expectedfiles viewer50,HTMLcache,
+focusedgeometry/browsercheck. Await codeplanapproval underAGENTS. No code changes
+in this investigation, no core changes. Next: approved targeted rendering fix,
+verify bothdoublelengths/labelclearance/highlights/PNG, independentReviewer.
+
+# Current resume point — 2026-10-24 — approved alkadiene theory lesson complete
+
+User approved22step theorylesson withgreatcare. MainDeveloper created scenario
+scenarios/alkadienes-nomenclature-branches.scenario.json, fourthlibrarycard and
+READMEentry, preservingthreeexistinglessons/core/viewer/data (17protectedhashes).
+RealLearningDesigner and ChemistryValidator read-only22textchecks no substantive
+findings; visibleβουτα/πεντα/εξα confirmed. Actualapp requirescompNumber1at6,
+compBondPos12/16, chainIdx1largest15–21 forhorizontalparent[1..6].
+DeveloperFirefox22steps pass notes/hiddenfields/names/chains/rules, exact3DC=C
+endpointsets6/12/16, branchC2D3D/6H20, actualexportBlobvalidatorroundtrip,
+8molecules3forms/real3Dcounts/libraryExit/noJSerrors. Separate final700pxcheck
+withactualrotatePromptDismiss passedoverlaygone/Exit (initialtextselector missed
+newline; onlynarrowportionrerun afterselectorcorrection). Screenshots1/20/narrow
+visually inspected. Evidence docs/checks/alkadienes-lesson-20261024.json.
+Frozen4filetarget checks/alkadienes-lesson-freeze-20261024.json, baseline
+/tmp/namelecule-before-diene-lesson-20261024; Reviewer /root/review_alkadiene_lesson
+freshcontext complete: no actionablefindings. Verified4hashes/17protectedfiles,
+old3cards,22texts/settings and allC-C2D3Dmapping forsixnewexamples.
+Browser/visualresults Developer-only. Report ALKADIENES-SCENARIO-20261024.md.
+No corechanges thissession, no stage/commit/push/publication. Next: user openslibraryfourthcard and inspectslesson. Previousnotesincludingupstreamcheck retainedbelow.
+
+# Current resume point — 2026-10-24 — alkadiene theory plan awaiting approval
+
+User requests fourth library theory lesson closely matching existing alkane/alkene/
+alkyne lessons, best quality with careful token use. Read scenario contracts,
+three22step lessons, library links, relevant records and gitstatus/diffs.
+Read-only real LearningDesigner /root/diene_lesson_design and ChemistryValidator
+/root/diene_lesson_chemistry consulted with separate narrow tasks, no Planner or
+Developer subagent. Proposed22step plan: ALKADIENES-SCENARIO-PLAN-20261024.md.
+Intro1,3butadiene (simplestpropadiene acknowledged), positioncomparison, single
+methyl, two methyls, ethyl+dimethyl, final8diene exploration. Chemical rule scope,
+allene limitation, formula ambiguity and unspecifiedstereo recorded in plan.
+Upstream HEAD checked2026-10-24=2b616f6cdc5b3c2d65b20d38b2e025e0d58ccfbb, same
+as last synchronized/checked, hence no intervening history/new release. Complete
+remote CHANGELOG read121578bytes SHA25646de588394cf019759b0404838fa2f6505fa2ca4f27a8d150de78c087fdeb705;
+local changelog differs (older retained file), not evidence of new upstream release.
+No application/scenario/core changes in this planning session; only plan and records.
+No browser/runtime tests performed for a new scenario yet, no commit/push/publication.
+Pre-existing dirtytracked/untracked work preserved. Next: user approves concrete
+plan, then mainconversation implements, tests and delegates independent final review.
+
+# Current resume point — 2026-10-24 — approved PubChem integration
+
+Five approved PubChem SDFs installed with graph-derived mainChain3D and provenance;
+1,2-butadiene retains RDKit because PubChem allene end planes were unsuitable.
+Chemical24/naming36/browser36 pass; independent review found only stale generator
+docstring P3, corrected and independently re-reviewed; no remaining findings. Report:
+PUBCHEM-DIENES-INTEGRATION-20261024.md. 2D/core/viewer unchanged against task backup.
+No commit/push/publication. Reviewer /root/review_pubchem_dienes verified21 frozen hashes/701 protectedfiles,
+independently ran chemistry24/naming36. Browser/generator checks Developer-only.
+Next: user refresh v50 and inspect updated3D.
+
+# Current resume point — 2026-10-24 — PubChem 3D audit, replacement plan pending
+
+User agreed PubChem-first when suitable, localRDKit fallback. Actual6PubChemAPI
+SDFdownloads only/tmp/namelecule-pubchem-dienes-20261024; no applicationchanges.
+IndependentChemistryValidator confirmedCID11535allene almostcoplanarendplanes
+~0.074deg vslocal~90deg, unsuitabledespitecorrectgraph/axis. KeepRDKitforallene.
+FiveotherPubChemcandidategraphs/formula/H/bonds pass boundedchecks. CID549148has
+oneundefinedstereocenter,3Dillustrative notgenericR/Sassignment. Report/URLs/hashes:
+PUBCHEM-DIENES-AUDIT-20261024.md. Awaituserapprovalfor5SDF/provenancereplacements,
+newmainChain3Dmaps/tests/browser/finalReviewer;2Dlayouts/core/viewerpreserved.
+No corechange, no commit/push/publication. Older notesbelow preserved.
+
+# Current resume point — 2026-10-24 — largest skeletal double bonds leveled
+
+User-approved smallrotation complete: bothdoublebonds oflargestnewdiene precisely
+horizontal, boundscentered. Replacedprincipalaxischoicewithfirstdoubleaxis in
+scopedgeneratorbranch; onlylargestSkeletalMOLcoords/oneembed,HTMLcache/test changed.
+SmallerMOL/core/viewer/otherforms/3D unchanged vsfollow-upbaseline. Allbond/atom/
+stereofields preserved,rigidproperrotation,no reflection. Fivefrozenpaths:
+checks/skeletal-level-freeze-20261024.json. Backup/tmp/namelecule-before-level-double-20261024.
+IndependentReviewer /root/review_expanded_layout nofindings,5hashes/2geometrychecks/
+noncoords/oneembed/235protectedverified. Developerbrowser2x3x2 andcentering PASS,
+noJSerrors;finalimagevisuallyinspected. Record SKELETAL-HORIZONTAL-20261024.md.
+No corechange in thisfollow-up, no stage/commit/push/publication. Next:userrefresh
+andvisualacceptance. Previousrecordsbelowpreserved.
+
+# Current resume point — 2026-10-24 — two skeletal drawings horizontal/centered
+
+User-approved layoutchangecomplete for dimethyl_2_3_pentadiene_1_3 and
+ethyl_3_dimethyl_4_5_hexadiene_1_4. Rigidproperrotation+translation only:
+smallerparenthorizontal,largestwhole-shape principalaxis horizontal; centeredbounds.
+2skeletalMOLcoords/2dataembeds,generatorhelper,HTMLdatacache,newread-onlycheck.
+Sixfrozenpaths/hashes checks/skeletal-horizontal-freeze-20261024.json; backup
+/tmp/namelecule-before-skeletal-horizontal-20261024. Allpairdistances<.0002rounding,
+rawatom/bond/stereofields unchanged. Core/viewer/otherforms/3D/scenarios unchanged.
+IndependentReviewer /root/review_expanded_layout: nofindings,6hashes/2geometrychecks/
+properrotation/noncollineartriples/embeds/235protectedhashes/generatorguardsverified.
+Developerfinalbrowser2x3x2+viewportcentering/names/components/branchC/H pass,noJSerrors.
+Bothfinalpreviews inspected. Report SKELETAL-HORIZONTAL-20261024.md.
+No corechanges in thisfollow-up; previouscore50fix pre-existing. No stage/commit/
+push/publication. Next:userrefreshv50 andvisualacceptance oflasttwo skeletalviews.
+Earliernotesbelowpreserved.
+
+# Current resume point — 2026-10-24 — parallel diene doubles in all2Dforms complete
+
+User approved SVGonly extension tocondensed+skeletal for sixnewdienes. Newviewer
+helper fDrawDieneParallelDoubleBonds supportsarbitrarybondangle/reversedendpoints,
+filters sixkeys/modes,mutatesonlyproperlycrossedSVGpairs. RawMOL/stereo/data/3D,
+corefiles andscenarios unchanged. Priorallene skeletaldecision preserved.
+Baseline/tmp/namelecule-before-parallel-allforms-20261024. Fourfrozenpaths/hashes:
+checks/parallel-allforms-freeze-20261024.json. Report PARALLEL-ALLFORMS-20261024.md.
+DeveloperactualFirefox6x3x2+parallelSVGafterclicks/branches/H and3PNGBlob/exportSVG
+passes,noJSerrors. Twofinalscreenshots inspected. IndependentReviewerfreshcontext
+/review_expanded_layout: noactionablefindings,own63geometry/scopeassertions and
+235protectedhashes verifyonlyviewerchanged. BrowserresultsDeveloper-only.
+No corechange in thisfollow-up;earliercore50namingfix separate/preserved.
+No stage/commit/push/publication. Next:userrefresh and inspect2Dforms.86molecules.
+
+# Contribution complete — 2026-10-24 — orthogonal expanded diagrams
+
+User-approved style for sixnewdienes: horizontalcarbonparent/cardinalH/branches,
+explicitallatoms,schematicconnectivity withoutsp2geometry. SixexpandedMOLcoords,
+data50embeds,generatorhelper,HTMLcache,prefs,newchecks changed; extraSVG-only
+parallelbond rendering explicitly approved after firstReviewerP2 inferredZ.
+P2fixed by restoringrawbondstereo3,not changingmodel; finalReviewer freshcontext
+found nonewactionable findings.13targets in checks/expanded-freeze-20261024.json.
+Independent6layout/stereo+24chemical+36namechecks pass;DeveloperFirefox6x3x2,
+highlights/H/parallelSVG/PNG/exportSVG and6visualpreviews pass. No core changes in
+this follow-up; earliercore50namingfix separate. Allotherforms/3D/provenance preserved.
+No commit/push/publication. Reports EXPANDED-ORTHOGONAL-20261024.md and
+EXPANDED-INDEPENDENT-REVIEW-20261024.md; next:userrefresh/visualacceptance.
+
+# Contribution complete — 2026-10-24 — six alkadienes
+
+Added six approved dienes to data50 (80->86),18MOL/6sourceSDF/6runtimeSDF/
+6provenance and generator/validation/browser harnesses. Core50 connector and
+viewer display corrected εξαδιένιο; HTML caches updated. No core49 changes in
+this task. Existing80assets/order/settings/scenarios preserved. Main Developer
+checks24forms/36newnames/480oldnames/14+877P2/browser6x3x2 passed; independent
+Chemistry Validator and fresh final Reviewer passed actualassets/diff within scope.
+User declined inheritedP2 allene depiction correction; limitation retained/disclosed.
+45frozen targets in checks/dienes-freeze-20261024.json. Reports DIENES-20261024.md
+and DIENES-INDEPENDENT-REVIEW-20261024.md include checks/limits/core message.
+No commit/push/publication. Existing v50migration/agent-workflow work pre-existing.
+Next:user visual review; commit/publication only on request. Older records below.
+
+# Contribution in progress — 2026-10-24 — six alkadienes
+
+User approved six molecules plus targeted core50 εξαδιένιο fix. Main conversation
+implemented additive data86,18MOL/6sourceSDF/6runtimeSDF/6provenance and generator/
+checks. Chemistry Validator independently passed24forms and provenance/stereo,
+confirmed P2 inherited allene depiction ambiguity. Actual browser all6x3formsx2modes
+passed names AND rendered component text, SDF load counts, branches andH checks;
+noJSerrors. Core50 connector and matching viewer display corrected εξο->εξα.
+480old namingcases unchanged;36new namingcases pass;14P2+877assertions pass.
+Backup/tmp/namelecule-before-dienes-20261024-001310. Details DIENES-20261024.md.
+Pending required user approval for new allene viewer exception (centralC), then
+frozen final independent Reviewer. No claim ready/published. No commit/push.
+Core50 changed locally; core49 unchanged in this task; earlier v50 migration and
+agent/workflow work pre-existed. Next: user decision on expanded display scope.
+
+# Follow-up — 2026-10-24 — visible scenario step counter
+
+User approved CSS-only fix for invisible counter between arrows. Added white
+#scenarioPlayBarNextPrevContainer #scPos in css/namelecule-50.css:158; upstream
+darkBlue counter matched local dark playbar. Actual Firefox computed white,
+1/22->2/22->1/22 clicks pass; screenshot /tmp/namelecule-counter-20261024.png.
+Independent Reviewer /root/review_v50_sync verified one-rule-only change,
+selector specificity/load order and SHA256b9cf2c7a2d980183f7730602f8a03fbf41d739df07f27e6a9f59657115201cdf;
+no actionable findings. Browser evidence supplied by Developer. Diffcheck pass.
+No core changes in this follow-up; earlier v50 migration added customized core50.
+No commit/push/publication. Earlier v50 freeze superseded ONLY for theme50 by
+this independently reviewed hash. Next:user refresh/visual review, then diene plan.
+
+# Contribution completed — 2026-10-24 — customized v50 sync
+
+Approved migration completed, no commit/push/publication. Main conversation
+implemented16frozen files listed in checks/v50-sync-freeze-20261023.json, with
+operational reports/notes/tests recorded separately. Preserved all80molecules,
+lessons, v49files and existing local changes. New core50 retains the three earlier
+local P2 fixes; core49 unchanged vs migration baseline. Changed existing files:
+README, welcome/library links, shared additive arrows; new v50 HTML/JS/CSS,
+upstream default scenario, two migration test harnesses. Tests:14P2/877assertions/
+parentchain/syntax/data80/480namingcases; real Firefox P2/largealkyne/PNG/66steps/
+rails/spcarbon/title/exportBlob pass. Independent Reviewer freshcontext completed;
+P3 export-version finding corrected/re-reviewed, no outstanding actionable findings.
+Details, limitations and forwardable Greek core message: V50-SYNC-20261023.md;
+independent record V50-INDEPENDENT-REVIEW-20261024.md. Pre-existing custom-agent
+work and v49fixes are not new contributions of this migration. Next: user visual
+review, then new diene plan. Older contribution records follow.
+
+# Contribution — 2026-10-23 — approved v50 migration (review pending)
+
+User objective: integrate professor release before adding new diene. Main agent
+implemented customized v50 from2b616f6, preserving80molecules, lessons and local
+core fixes. See V50-SYNC-20261023.md for file scope/tests/limitations/core message;
+checks/v50-sync-freeze-20261023.json lists exact16target hashes. Existing local
+core49/viewer49/HTML49 and custom-agent/workflow changes predate this migration.
+Core50 added; core49 unchanged. No commit/push/publication. Independent Reviewer
+/root/review_v50_sync in progress; final browser run pending. Next: close checks
+and review before reporting migration ready. Older contributions follow.
+
 # Συμβολή του Γιάννη στο έργο
+
+## 2026-10-23 — Πέντε μόνιμοι custom agents και επιβεβαιωμένη φόρτωση
+
+Με αποδοχή του Γιάννη δημιουργήθηκαν planner.toml, chemistry_validator.toml
+και learning_designer.toml στο .codex/agents. Το CUSTOM-AGENTS.md περιγράφει τη
+συνεργασία με τους υπάρχοντες Developer/Reviewer, με αναθέσεις από την κύρια
+συνομιλία, έναν υπεύθυνο υλοποίησης και ειδικούς μόνο ανάγνωσης. Δεν αλλάζουν
+μόνα τους τα TOML δικαιώματα ούτε εκκινούν όλοι οι ρόλοι σε κάθε μικρό αίτημα.
+
+Πέρασαν parsing/required-fields/unique-identities/link checks και πραγματικές
+εκκινήσεις και των3νέων registered roles σε fork_turns-none read-only contexts.
+Επιβεβαιώθηκαν ρόλοι, ακριβείς οδηγίες και runtime χωρίς writable entries.
+Evidence στο checks/custom-agents-five-roles-20261023.json. Δεν έγιναν write
+probe ή application/browser/χημική/εκπαιδευτική πιστοποίηση.
+
+Ο πραγματικός ανεξάρτητος Reviewer σε νέο read-only child
+01a16843-b2d9-7f53-933e-aed51cffcd13 επιβεβαίωσε5targethashes,7protectedhashes,
+HEAD,TOMLσύνταξη και links. Δεν ανέφερε διορθώσιμα P0/P1/P2/P3 εντός scope.
+Το παγωμένο target δεν τροποποιήθηκε μετά το review. Πλήρης έκθεση στο
+[CUSTOM-AGENTS-FIVE-REVIEW-20261023.md](CUSTOM-AGENTS-FIVE-REVIEW-20261023.md).
+
+Δεν έγιναν πρόσθετες αλλαγές core/εφαρμογής. AGENTS/checklist και οι υπάρχοντες
+Developer/Reviewer ορισμοί διατηρήθηκαν. Οι προηγούμενες τοπικές P2 αλλαγές
+παραμένουν ως είχαν. Δεν έγινε stage,commit,push,merge,publication,v50 sync,
+αλλαγή καθολικών ρυθμίσεων ή δημιουργία Roadmap. Οι άμεσες προτεραιότητες
+του Γιάννη παραμένουν μόρια και σενάρια θεωρίας.
+
+## 2026-10-23 — Ολοκλήρωση τριών P2 v49 και ανεξάρτητου review
+
+Ολοκληρώθηκε το εγκεκριμένο σχέδιο μέσω του μόνιμου custom Developer.
+Υπήρξε πλήρες backup πριν από αλλαγές και red regression evidence για όλα
+τα σφάλματα. Διορθώθηκαν προπύλιο/ισοπροπύλιο, αλφαβητικές ισοπαλίες
+και σύνθεση 3+ τύπων υποκαταστατών, με συμβατά highlights/stepper 2D/3D.
+Core49 και viewer49 άλλαξαν τοπικά, HTML49 μόνο asset queries. Δεδομένα,
+MOL/SDF, σενάρια και προηγούμενες οδηγίες/ορισμοί διατηρήθηκαν.
+
+Πέρασαν 14 αρχικοί έλεγχοι, 877 assertions, υπάρχουσες σουίτες και σύγκριση
+480 περιπτώσεων (478 διαθέσιμες, μηδέν διαφορές). Ο κύριος agent έτρεξε
+επιτυχώς πραγματικά browser tests των τριών σφαλμάτων και του μαθήματος
+αλκανίων στα 22 βήματα, μαζί με Exit στη βιβλιοθήκη, χωρίς JS errors.
+Οι ιστορικές παρακάτω σημειώσεις για αποκλεισμό browser πλέον επιλύθηκαν.
+
+Μόνιμος custom Reviewer σε νέο context και τεχνικά read-only client,
+child01a166d0-c898-7f91-88c6-d1149474e1dc, επιβεβαίωσε hashes και τέσσερις
+σουίτες ανεξάρτητα, πρόσθεσε ελέγχους μόνο στη μνήμη και δεν ανέφερε
+διορθώσιμα ευρήματα εντός αντικειμένου. Τα αρχεία παρέμειναν παγωμένα.
+Αναλυτική αναφορά, περιορισμοί και έτοιμο κείμενο καθηγητή στο
+[V49-ALKANES-P2-20261023.md](V49-ALKANES-P2-20261023.md).
+
+Δεν έγινε stage, commit, push, δημοσίευση ή ενσωμάτωση v50. Απαιτείται νέα
+ρητή έγκριση για αυτές τις ενέργειες. Δεν δημιουργήθηκε δημόσιος σύνδεσμος
+των τοπικών διορθώσεων. Οι προηγούμενες καταγραφές διατηρούνται παρακάτω.
+
+
+## 2026-10-23 — PHASE2: τρεις διορθώσεις P2 στην v49
+
+Εγκρίθηκε και υλοποιήθηκε από έναν πραγματικό custom Developer
+(`/root/phase2`, χωριστό context). Ο parent δεν επεξεργάστηκε εφαρμογή.
+Άλλαξαν core49, molview49 και μόνο asset queries στο HTML49. Προστέθηκαν
+τα test-alkanes-p2-extended-v49.js και test-alkanes-p2-browser-v49.py.
+Τα προϋπάρχοντα αρχεία workflow και το Phase1 test/red evidence διατηρήθηκαν.
+
+Διορθώθηκαν η διάκριση προπυλίου/ισοπροπυλίου μέσα στο παρακλάδι,
+οι αλφαβητικές ισοπαλίες αλκανίων και η σύνθεση 3+τύπων με σταθερές
+12 θέσεις. Προστέθηκε αντιστοίχιση 2D/3D και highlights βάσει γραφήματος.
+Developer evidence: 14/14 αρχικοί έλεγχοι,877 πρόσθετα assertions,
+υπάρχοντες έλεγχοι αλυσίδων/ακορεστότητας και 22 βήματα σεναρίων πέρασαν.
+Σύγκριση480περιπτώσεων/478διαθέσιμων: μηδέν σφάλματα/διαφορές.
+Ο parent επιβεβαίωσε τα frozen hashes. Browser προσπάθειες και των δύο
+μπλοκαρίστηκαν από EPERM στο localhost9225· δεν υπάρχει browser pass.
+
+Άλλαξε το js/mulermoc-nom-core-49.js v49, τοπικά, χωρίς commit/δημοσίευση.
+Εκκρεμούν ανεξάρτητος custom Reviewer σε νέο read-only client και πραγματικοί
+browser έλεγχοι. Δεν ξεκίνησε Reviewer σε αυτή τη φάση, όπως ζητήθηκε.
+Αναλυτικά όρια, αποτυπώματα και επόμενο βήμα στο SESSION-NOTES.md.
+
+## 2026-10-23 — Μόνιμοι custom agents και επιβεβαιωμένη φόρτωση
+
+Με έγκριση δημιουργήθηκαν `.codex/agents/developer.toml`,
+`.codex/agents/reviewer.toml` και `docs/CUSTOM-AGENTS.md`. Τα AGENTS.md και
+REVIEW-CHECKLIST.md διατηρήθηκαν ακριβώς όπως ήταν στην αρχή αυτής της εργασίας.
+Δεν άλλαξαν καθολικές ρυθμίσεις, flags ή αρχεία εφαρμογής.
+
+Πέρασαν TOML parsing και χωριστές εκκινήσεις των πραγματικών custom ρόλων
+από νέους τοπικούς Codex CLI clients. Επιβεβαιώθηκαν η επιλογή agent_type,
+το νέο context, τα child thread IDs, τα διαφορετικά ROLE_ID και η ακριβής
+εισαγωγή των οδηγιών TOML, χωρίς αντιγραφή τους στα prompts δοκιμής.
+Ο Reviewer εκτέλεσε μόνο αναγνώσεις. Η πολιτική του runtime ήταν read-only,
+χωρίς writable entries, και approvals never. Χωριστό codex sandbox probe
+απέρριψε εγγραφή με EPERM χωρίς να δημιουργήσει αρχείο· δεν το έκανε ο Reviewer.
+
+Καταγραφή στα `docs/checks/custom-agents-20261023.json` και
+`docs/checks/custom-agents-review-20261023.json`. Ο τελικός ανεξάρτητος custom
+Reviewer εξέτασε ορισμούς, οδηγίες και τεκμήρια χωρίς διορθώσιμα ευρήματα.
+Δεν εκτελέστηκαν application/browser/χημικά tests, εγγραφές Developer ή
+ξεχωριστός έλεγχος UI του IDE. Δεν άλλαξε core.js. Δεν έγινε commit, push ή
+δημοσίευση· οι αλλαγές παραμένουν τοπικές μέχρι νέα έγκριση του Γιάννη.
+
+## 2026-10-23 — Developer και ανεξάρτητος Reviewer
+
+Με ρητή έγκριση του Γιάννη προστέθηκαν οι δύο ρόλοι στο υπάρχον AGENTS.md,
+διατηρώντας αυτούσιες όλες τις προηγούμενες οδηγίες. Δημιουργήθηκε το
+`docs/REVIEW-CHECKLIST.md` για κώδικα, IUPAC, MOL/SDF, 2D/3D, εκπαιδευτικά
+σενάρια και παλινδρομήσεις. Προβλέπονται ξεχωριστό context, παγωμένο αντικείμενο,
+Reviewer χωρίς εγγραφές, τεκμηριωμένα ευρήματα και επανέλεγχος διορθώσεων.
+
+Δοκιμάστηκε πραγματικός subagent `/root/reviewer` με `fork_turns: none`.
+Διάβασε και έλεγξε ανεξάρτητα τα δύο παραδοτέα χωρίς διορθώσιμα ευρήματα.
+Το αποτύπωμα tracked/νέων μη αγνοούμενων αρχείων έμεινε ίδιο πριν/μετά.
+Οι έλεγχοι και οι περιορισμοί καταγράφονται στο
+`docs/REVIEWER-SMOKE-TEST-20261023.md`, που γράφτηκε από τον Developer.
+Δεν έγινε έλεγχος εφαρμογής/browser ούτε αλλαγή στον κώδικα ή στο core.
+Δεν άλλαξαν καθολικές ρυθμίσεις Codex. Δεν έγινε commit ή push· απαιτείται
+νέα έγκριση του χρήστη. Ενημερώθηκαν μόνο οδηγίες και καταγραφές έργου.
 
 ## 2026-10-22 — Προσθήκη αλκινίων στη βιβλιοθήκη
 

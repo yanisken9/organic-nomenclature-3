@@ -830,6 +830,12 @@ function fOrientChainPath(path) {
                             })
                             return pairs
                         }
+                        if (!Object.keys(ccDoubleBondKeys).length && !Object.keys(ccTripleBondKeys).length &&
+                            fIsAcyclicHydrocarbonGraph(atomConnectivityList, allAtomsTypeList)) {
+                            if (fCompareLocantSets(
+                                fCarbonBranchAlphabeticalKey(rev, atomConnectivityList, allAtomsTypeList),
+                                fCarbonBranchAlphabeticalKey(oriented, atomConnectivityList, allAtomsTypeList)) < 0) useForward = false
+                        }
                         const fwdAlpha = getSubstituentAlphaList(oriented)
                         const revAlpha = getSubstituentAlphaList(rev)
                         for (let ai = 0; ai < fwdAlpha.length && ai < revAlpha.length; ai++) {
@@ -1430,6 +1436,12 @@ function fOrientChainPath3D(path) {
                     const fwdSub3D = getSubstituentLocantSet3D(oriented3D)
                     const revSub3D = getSubstituentLocantSet3D(rev3D)
                     if (lexLess3D(revSub3D, fwdSub3D)) useForward3D = false
+                    else if (!lexLess3D(fwdSub3D, revSub3D) &&
+                        !Object.keys(ccDoubleBondKeys3D).length && !Object.keys(ccTripleBondKeys3D).length &&
+                        fIsAcyclicHydrocarbonGraph(atomConnectivityList3D, allAtomsTypeList3D) &&
+                        fCompareLocantSets(
+                            fCarbonBranchAlphabeticalKey(rev3D, atomConnectivityList3D, allAtomsTypeList3D),
+                            fCarbonBranchAlphabeticalKey(oriented3D, atomConnectivityList3D, allAtomsTypeList3D)) < 0) useForward3D = false
                 }
             }
         }
@@ -1853,6 +1865,12 @@ function fRankChainPool(paths, req, scoreFn, orientFn, connList, typeList) {
                 }
             }
             scored = scored.filter(function (c) { return fCompareLocantSets(c.branchLocants, bestLocants) === 0 })
+            let bestAlpha = null
+            for (const candidate of scored) {
+                candidate.branchAlpha = fCarbonBranchAlphabeticalKey(orientFn(candidate.p), connList, typeList)
+                if (bestAlpha === null || fCompareLocantSets(candidate.branchAlpha, bestAlpha) < 0) bestAlpha = candidate.branchAlpha
+            }
+            scored = scored.filter(c => fCompareLocantSets(c.branchAlpha, bestAlpha) === 0)
         }
     }
 
@@ -1883,67 +1901,69 @@ function fRankChainPool(paths, req, scoreFn, orientFn, connList, typeList) {
 
 // ── Branched-alkyl (iso-/sec-) naming ────────────────────────────────────────
 // Length-keyed alkyl tables cannot tell n-propyl from isopropyl. The fragment
-// atom sets in etherInfo/esterInfo (and sideSet below) carry shape: an attachment
-// carbon with 2+ carbon neighbors is branched. Table is extensible (iso-/sec-/
+// atom sets in etherInfo/esterInfo and carbon-branch descriptors carry shape:
+// an attachment carbon with 2+ carbon neighbors INSIDE the fragment is branched. Table is extensible (iso-/sec-/
 // tert-butyl have no molecules yet). Returns the iso form or null (caller falls
 // back to the straight tables, so straight-chain output is byte-identical).
 const isoAlkylNames = {
     3: { substituent: "ισοπροπυλο", alkoxy: "ισοπροποξυ" },
 };
-function fAlkylGroupName(len, attachC, kind) {
-    if (!isoAlkylNames[len] || typeof attachC === "undefined" || attachC === null) return null
-    const nbrs = Array.isArray(atomConnectivityList[attachC]) ? atomConnectivityList[attachC] : []
-    let cCount = 0
-    for (let i = 0; i < nbrs.length; i++) {
-        if (allAtomsTypeList[nbrs[i]] === "C") cCount++
-    }
-    if (cCount < 2) return null
-    return isoAlkylNames[len][kind] || null
+function fAlkylGroupName(len, attachC, kind, fragment, connList, typeList) {
+    if (!isoAlkylNames[len] || attachC == null || !fragment) return null
+    connList = connList || atomConnectivityList
+    typeList = typeList || allAtomsTypeList
+    const inside = new Set(fragment)
+    const nbrs = Array.isArray(connList[attachC]) ? connList[attachC] : []
+    const cCount = nbrs.filter(n => typeList[n] === "C" && inside.has(n)).length
+    return cCount >= 2 ? isoAlkylNames[len][kind] || null : null
 }
-function fGetHydrocarbonSubstituentInfo() {
-    if (!Array.isArray(mainChainAtomsList) || mainChainAtomsList.length === 0) return []
-
-    const mainSet = new Set(mainChainAtomsList.map((n) => n - 1))
-    const branchInfo = []
-    const visited = new Set()
-
-    for (let i = 0; i < atomsCount; i++) {
-        if (allAtomsTypeList[i] !== 'C' || mainSet.has(i) || visited.has(i)) continue
-
-        const neighbors = Array.isArray(atomConnectivityList[i]) ? atomConnectivityList[i] : []
-        const parent = neighbors.find((nb) => mainSet.has(nb))
-        if (parent === undefined) continue
-
-        const sideSet = new Set([i])
-        const stack = [i]
-        while (stack.length > 0) {
-            const node = stack.pop()
-            const ns = Array.isArray(atomConnectivityList[node]) ? atomConnectivityList[node] : []
-            for (let k = 0; k < ns.length; k++) {
-                const nb = ns[k]
-                if (nb === parent) continue
-                if (allAtomsTypeList[nb] !== 'C') continue
-                if (sideSet.has(nb)) continue
-                sideSet.add(nb)
-                stack.push(nb)
+// Graph-local descriptors work with independently numbered 2D/3D graphs.
+// Main-chain and explicit H atoms never enter a carbon branch fragment.
+function fDescribeCarbonBranches(path, connList, typeList) {
+    const main = new Set(path), branches = []
+    for (let pos = 0; pos < path.length; pos++) {
+        for (const attach of (connList[path[pos]] || [])) {
+            if (typeList[attach] !== "C" || main.has(attach)) continue
+            const side = new Set([attach]), stack = [attach]
+            while (stack.length) {
+                for (const n of (connList[stack.pop()] || [])) {
+                    if (typeList[n] !== "C" || main.has(n) || side.has(n)) continue
+                    side.add(n); stack.push(n)
+                }
             }
-        }
-
-        const locant = mainChainAtomsList.indexOf(parent + 1) + 1
-        const branchLength = sideSet.size
-
-        if (!Number.isNaN(locant)) {
-            branchInfo.push({
-                locant,
-                length: branchLength,
-                name: fAlkylGroupName(branchLength, i, "substituent") || alkylSubstituentNames[Math.min(branchLength, 8)] || 'αλκυλο'
+            // Rooted carbon-tree identity distinguishes equal-sized n-/iso groups.
+            function rooted(node, seen) {
+                const nextSeen = new Set(seen); nextSeen.add(node)
+                return "C(" + (connList[node] || [])
+                    .filter(n => side.has(n) && !nextSeen.has(n))
+                    .map(n => rooted(n, nextSeen)).sort().join("") + ")"
+            }
+            branches.push({
+                locant: pos + 1, length: side.size, attach: attach,
+                atoms: Array.from(side), signature: rooted(attach, new Set()),
+                name: fAlkylGroupName(side.size, attach, "substituent", side, connList, typeList)
+                    || alkylSubstituentNames[Math.min(side.size, 8)] || "αλκυλο"
             })
         }
-
-        for (const node of sideSet) visited.add(node)
     }
+    return branches
+}
+function fGetHydrocarbonSubstituentInfo() {
+    if (!Array.isArray(mainChainAtomsList)) return []
+    return fDescribeCarbonBranches(mainChainAtomsList.map(n => n - 1), atomConnectivityList, allAtomsTypeList)
+}
 
-    return branchInfo.sort((a, b) => a.locant - b.locant)
+function fCarbonBranchAlphabeticalKey(path, connList, typeList) {
+    return fDescribeCarbonBranches(path, connList, typeList)
+        .sort((a, b) => a.name < b.name ? -1 : a.name > b.name ? 1 : a.locant - b.locant)
+        .map(b => b.locant)
+}
+
+// Molecular numbering signature, independent of atom indices and pool order.
+function fCarbonChainSignature(chain, connList, typeList) {
+    const path = chain.map(n => n - 1)
+    return JSON.stringify([path.length, fDescribeCarbonBranches(path, connList, typeList)
+        .map(b => [b.locant, b.signature]).sort((a, b) => a[0] - b[0] || (a[1] < b[1] ? -1 : a[1] > b[1] ? 1 : 0))])
 }
 
 // ── fGuessName ────────────────────────────────────────────────────────────
@@ -2260,7 +2280,7 @@ function fGuessName(skipChainRecalc) {
                     const _parentLen = mainChainAtomsList.length
                     const _alkLen = _e && _e.alkoxyLen ? _e.alkoxyLen : 1
                     const _loc = _e && _e.locant ? _e.locant : 1
-                    comp0Text = fAlkylGroupName(_alkLen, _e && _e.alkoxyAttachC, "alkoxy") || alkoxyNames[_alkLen] || ("αλκοξυ")
+                    comp0Text = fAlkylGroupName(_alkLen, _e && _e.alkoxyAttachC, "alkoxy", _e && _e.alkoxyFrag) || alkoxyNames[_alkLen] || ("αλκοξυ")
                     if (_parentLen < 3) {
                         comp0 = ""
                     } else {
@@ -2268,15 +2288,15 @@ function fGuessName(skipChainRecalc) {
                     }
                     // comp4 already = "ιο" (suffix); single ether needs no multiplicative prefix
                     // Κοινή ονομασία: αλκυλ-αλκυλ-αιθέρας (αλφαβητικά), συμμετρικός: δι-αλκυλ-αιθέρας
-                    const _stemFor = function (n, attachC) {
-                        const _iso = fAlkylGroupName(n, attachC, "substituent")
+                    const _stemFor = function (n, attachC, fragment) {
+                        const _iso = fAlkylGroupName(n, attachC, "substituent", fragment)
                         const _full = _iso || ((typeof alkylSubstituentNames !== "undefined" && alkylSubstituentNames[n]) || (nameMainCompList1[n - 1] || ""))
                         return String(_full).replace(/ο$/, "")
                     }
                     if (_e && _e.symmetric) {
-                        currentMolCommonName = nameMultiPrefix[1] + _stemFor(_alkLen, _e.alkoxyAttachC) + "αιθέρας"
+                        currentMolCommonName = nameMultiPrefix[1] + _stemFor(_alkLen, _e.alkoxyAttachC, _e.alkoxyFrag) + "αιθέρας"
                     } else {
-                        const _sA = _stemFor(_parentLen, _e && _e.parentAttachC), _sB = _stemFor(_alkLen, _e && _e.alkoxyAttachC)
+                        const _sA = _stemFor(_parentLen, _e && _e.parentAttachC, _e && _e.parentFrag), _sB = _stemFor(_alkLen, _e && _e.alkoxyAttachC, _e && _e.alkoxyFrag)
                         const _pair = [_sA, _sB].sort()
                         currentMolCommonName = _joinEuphony(_pair.concat(["αιθέρας"]))
                     }
@@ -2304,7 +2324,7 @@ function fGuessName(skipChainRecalc) {
                     comp2 = "αν"
                     comp4 = nameMainCompObj3.ester.suffix // "ικός"
                     const _esAlcAttach = (_es && typeof _es.alcoholAttachC !== "undefined") ? _es.alcoholAttachC : null
-                    const _alcFull = fAlkylGroupName(_alcLen, _esAlcAttach, "substituent") || ((typeof alkylSubstituentNames !== "undefined" && alkylSubstituentNames[_alcLen]) || (nameMainCompList1[_alcLen - 1] || ""))
+                    const _alcFull = fAlkylGroupName(_alcLen, _esAlcAttach, "substituent", _es && _es.alcoholFrag) || ((typeof alkylSubstituentNames !== "undefined" && alkylSubstituentNames[_alcLen]) || (nameMainCompList1[_alcLen - 1] || ""))
                     compAlcoholEster = String(_alcFull).replace(/ο$/, "") // μεθυλο -> μεθυλ
                     compEsterNoun = "εστέρας"
                 }
@@ -2387,8 +2407,13 @@ function fGuessName(skipChainRecalc) {
     } else if (comp0NumberList.length > 1) {
         comp0 = comp0NumberList[0] + "-"
         comp0Text = comp0TextList[0]
-        comp0b = "-" + comp0NumberList.slice(1).join("-") + "-"
-        comp0bText = comp0TextList.slice(1).join("-")
+        comp0b = "-" + comp0NumberList[1] + "-"
+        comp0bText = comp0TextList[1]
+        // Fixed twelve-slot contract: the second label carries additional
+        // locant/name pairs in their correct interleaved order.
+        for (let i = 2; i < comp0NumberList.length; i++) {
+            comp0bText += "-" + comp0NumberList[i] + "-" + comp0TextList[i]
+        }
     }
 
     // console.log(comp0, comp0Text, comp0b, comp0bText, comp1No, comp1, comp2, comp3, comp2b, comp4)

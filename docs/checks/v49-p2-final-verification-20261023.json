@@ -1,0 +1,33 @@
+{
+  "head": "2de69f439dc3b709fc4658624ad98ee8d6ffe47e",
+  "comparison_against_pre_change_backup": {
+    "changed_existing_files": [
+      "docs/SESSION-NOTES.md",
+      "docs/YANNIS-CONTRIBUTIONS.md",
+      "js/mulermoc-nom-core-49.js",
+      "js/mulermoc-nom-molview-49.js",
+      "mulermoc-nom-49.html"
+    ],
+    "missing_files": [],
+    "archived_file_count": 633,
+    "unchanged_existing_files": 628
+  },
+  "frozen_hash_mismatches": [],
+  "syntax": "JSC checkSyntax core49/viewer49 and Python compile passed",
+  "git_diff_check": "Passed",
+  "additional_browser": {
+    "command": "python3 -B docs/checks/test-alkanes-browser-20261022.py",
+    "exit": 0,
+    "checks": [
+      "22 steps",
+      "exact scenario notes",
+      "hidden names",
+      "rule rows",
+      "horizontal parent chains15-17",
+      "seven molecules2D3D",
+      "Exit to library",
+      "zero JavaScript errors"
+    ],
+    "screenshots": "Captured /tmp/alkanes-step{1,9,16,21}.png. Root visually inspected step16 at1500x1000: horizontal numbered chain, title/note/name panel readable, no visible overlap. No exhaustive visual assessment."
+  }
+}

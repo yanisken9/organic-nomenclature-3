@@ -4,37 +4,42 @@ A Greek-first interactive learning platform for organic nomenclature, built arou
 
 Desinged and developed by Nickolas Charistos
 
-**Current baseline:** local v49, synchronized with professor upstream
-`fe6d16a` on 2026-10-22. Core49 is byte-identical to upstream; local data49 additionally includes
-1-butyne, 2-butyne, 3-methyl-1-butyne, 3-methyl-1-pentyne, 4-methyl-2-pentyne
-4-ethyl-3,5-dimethylhept-1-yne and ethyne (80 molecules, published on2026-10-22).
-The large branched alkyne uses locally generated RDKit 3D; see
-[provenance and checks](docs/LARGE-ALKYNE-20261022.md).
-Namelecule welcome/library/theme, local name fitting and scenario preferences
-are retained. All 73 molecules and 22 lesson steps passed the comparison/checks.
-The 2026-10-22 daily snapshot includes the v49 migration and both theory lessons.
-Publication verification is recorded in `docs/SESSION-NOTES.md`.
-See [migration checks](docs/V49-SYNC-20261022.md) and
-[core report](docs/CORE-CHANGES-20261022.md).
-[Full daily report,22 October2026](docs/REPORT-20261022.html).
+**Current baseline:** local v50, integrated from professor upstream
+`2b616f6` on 2026-10-23. The v50 core preserves the three locally reviewed
+v49 P2 fixes and the approved εξαδιένιο connector correction; it is not byte-identical
+to upstream. All 89 local molecules,
+their order, 2D assets, 3D files and lesson settings are preserved.
+Namelecule welcome/library/theme, name fitting, loading and Exit behavior remain.
+See [v50 integration report](docs/V50-SYNC-20261023.md) for checks and limitations.
+This migration is local and has not been committed or published.
+Six new alkadienes were added locally on 2026-10-24, with three 2D forms and
+explicit-H 3D assets: five validated PubChem conformers and one RDKit fallback
+(1,2-butadiene, after rejecting unsuitable PubChem allene geometry). See [diene checks](docs/DIENES-20261024.md).
+A fourth 23-step alkadiene theory lesson follows the same naming and branching
+progression, using the eight existing dienes. See [lesson record](docs/ALKADIENES-SCENARIO-20261024.md).
+Three branched enynes were added using the existing representations and data format.
+See [enyne validation](docs/ENYNES-20261024.md) for formulas, provenance and checks.
+A fifth 23-step theory lesson, «Ονοματολογία Αλκενινίων», uses the seven existing
+enynes and the same stepwise library format. See [lesson checks](docs/ENYNES-SCENARIO-20261024.md).
 **Entry point:** [index.html](index.html) → [Namelecule welcome](design/welcome-proposal.html)
-→ [v49 molecule exploration](mulermoc-nom-49.html).
+→ [v50 molecule exploration](mulermoc-nom-50.html).
+The prior [v49](mulermoc-nom-49.html) remains runnable with its local P2 fixes.
 
 The previous [v48](mulermoc-nom-48.html) remains runnable with its original files.
 The library offers the exact user-authored 22-step alkene lesson and a matching
-22-step alkane lesson, with rules, branched examples and 2D/3D exploration.
+21-step alkane lesson, with rules, branched examples and 2D/3D exploration.
 A new22-step alkyne lesson starting with ethyne is ready for review at
-[its direct presentation link](mulermoc-nom-49.html?scenario=scenarios/alkynes-nomenclature-branches.scenario.json&present=1&from=theory-library);
+[its direct presentation link](mulermoc-nom-50.html?scenario=scenarios/alkynes-nomenclature-branches.scenario.json&present=1&from=theory-library);
 it is listed as the third card in the theory library. See [lesson details](docs/ALKYNES-SCENARIO-20261022.md).
 
 | Layer | File |
 |---|---|
-| Core engine | [js/mulermoc-nom-core-49.js](js/mulermoc-nom-core-49.js) |
-| Viewer | [js/mulermoc-nom-molview-49.js](js/mulermoc-nom-molview-49.js) |
-| Teaching | [js/mulermoc-nom-teaching-49.js](js/mulermoc-nom-teaching-49.js) |
-| Scenarios | [js/mulermoc-nom-scenario-49.js](js/mulermoc-nom-scenario-49.js) |
-| Molecule data (80 molecules) | [js/jsme-nick-nomeclature-moc2-data_49.js](js/jsme-nick-nomeclature-moc2-data_49.js) |
-| Theme | [css/namelecule-49.css](css/namelecule-49.css) |
+| Core engine | [js/mulermoc-nom-core-50.js](js/mulermoc-nom-core-50.js) |
+| Viewer | [js/mulermoc-nom-molview-50.js](js/mulermoc-nom-molview-50.js) |
+| Teaching | [js/mulermoc-nom-teaching-50.js](js/mulermoc-nom-teaching-50.js) |
+| Scenarios | [js/mulermoc-nom-scenario-50.js](js/mulermoc-nom-scenario-50.js) |
+| Molecule data (89 molecules) | [js/jsme-nick-nomeclature-moc2-data_50.js](js/jsme-nick-nomeclature-moc2-data_50.js) |
+| Theme | [css/namelecule-50.css](css/namelecule-50.css) |
 
 The sections below describe the historical v44 feature baseline and broader
 project plans; the current migration status is recorded above.
@@ -162,3 +167,9 @@ Short names keep their original size. See [font fitting](docs/NAME-FONT-FIT.md).
 New local lesson: [Alkene nomenclature with branches](scenarios/Αλκένια-Ονοματολογία-Διακλαδώσεις.scenario.json),
 23 steps from ethene to the three branched alkenes, with 2D/3D exploration.
 Import the JSON; this lesson has not been published yet.
+
+## Theory lesson refinement — 2026-10-24
+
+The five theory lessons use progressive disclosure without quizzes. Current step
+counts are alkanes 21, alkenes 22, alkynes 22, alkadienes 23 and enynes 23, including
+a separate optional final 3D observation. Naming synthesis stays in 2D.

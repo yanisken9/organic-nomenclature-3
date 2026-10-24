@@ -1,0 +1,42 @@
+{
+  "date": "2026-10-23",
+  "head": "2de69f439dc3b709fc4658624ad98ee8d6ffe47e",
+  "frozen_files": {
+    "js/mulermoc-nom-core-49.js": "ae85dd22b94292ed539ff2a858a1a6fe3672af90298662e5c6860fb411a65951",
+    "js/mulermoc-nom-molview-49.js": "6ba68e47541d7bc0a17e4d8771a5ce07d9d45e812386f6b798cc867d2975283c",
+    "mulermoc-nom-49.html": "e6ec8b2c2951f6a76b7cd2db5e5505b0a7740422f249107e310b82e97b7aed45",
+    "docs/checks/test-alkanes-p2-v49.js": "5a997b4bb4f2e26390bc0dfb1af7eb386bc6193f4c6faa297d4293c9727c80ba",
+    "docs/checks/test-alkanes-p2-extended-v49.js": "cb4ddb9ac8597f763000a4a204f3bfac16c59e113248ec3c32eb036c76a1a37f",
+    "docs/checks/test-alkanes-p2-browser-v49.py": "82ad9d55d2a39ba081edf91d276231a61b7ed93be50b77c8bf1d814a37974008",
+    "docs/checks/v49-p2-red-20261023.json": "34bbcea32acd1ec82943bd633564e8405111c81e6df6581baec7c2ad7e5d9efa",
+    "docs/checks/v49-p2-final-tests-20261023.json": "3d5cf1c4ec650c7254b5cbde6588abbb6535f87a2a16a6f753037cad745fb18f"
+  },
+  "browser": {
+    "command": "python3 -B docs/checks/test-alkanes-p2-browser-v49.py",
+    "exit": 0,
+    "engine": "Firefox headless WebDriver BiDi localhost:9225",
+    "server": "localhost:8013",
+    "checks": [
+      "Three original regressions x3 representations x2 chain modes",
+      "visible/full name and twelve slots",
+      "2D/3D branch selections and grouped explanations",
+      "alkyl rule rows",
+      "hidden grouped field and mocked speech routing",
+      "actual next-chain click with permuted 3D and misordered pool",
+      "zero browser JavaScript errors"
+    ],
+    "harness_corrections": [
+      "Greek accented noun assertions",
+      "Complete fixture mainChain3D for data mode"
+    ],
+    "limitations": [
+      "No screenshot or visual design assessment",
+      "Speech routing mocked; no audible speech assessment"
+    ]
+  },
+  "baseline_comparison": {
+    "cases": 480,
+    "rows_equal": true,
+    "metadata": "coreSha256 differs as expected"
+  }
+}

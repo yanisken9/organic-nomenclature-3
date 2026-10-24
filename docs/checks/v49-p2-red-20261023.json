@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-23",
+  "phase": "red tests before application edits",
+  "coreSha256": "c61d6d9276f4901e5fad362cf32f73ca5995850e931306d051be33f4a67f81c6",
+  "command": [
+    "/System/Library/Frameworks/JavaScriptCore.framework/Versions/A/Helpers/jsc",
+    "docs/checks/test-alkanes-p2-v49.js"
+  ],
+  "exitCode": 3,
+  "failures": 8,
+  "checks": 14,
+  "allThreeDefectsReproduced": true,
+  "stdout": "FAIL P2-1 straight propyl initial\n  expected: 5-προπυλοδεκάνιο\n  actual:   5-ισοπροπυλοδεκάνιο\nFAIL P2-2 alphabetical numbering tie initial\n  expected: 3-αιθυλο-5-μεθυλοεπτάνιο\n  actual:   5-αιθυλο-3-μεθυλοεπτάνιο\nPASS P2-2 alphabetical numbering tie has parent paths\nFAIL P2-2 alphabetical numbering tie path 1 [1,2,3,4,5,8,9]\n  expected: 3-αιθυλο-5-μεθυλοεπτάνιο\n  actual:   5-αιθυλο-3-μεθυλοεπτάνιο\nFAIL P2-2 alphabetical numbering tie path 2 [1,2,3,4,5,6,7]\n  expected: 3-αιθυλο-5-μεθυλοεπτάνιο\n  actual:   5-αιθυλο-3-μεθυλοεπτάνιο\nPASS P2-2 alphabetical numbering tie reversed atom/bond order initial\nPASS P2-2 alphabetical numbering tie reversed atom/bond order has parent paths\nPASS P2-2 alphabetical numbering tie reversed atom/bond order path 1 [2,3,6,7,8,9,10]\nPASS P2-2 alphabetical numbering tie reversed atom/bond order path 2 [4,5,6,7,8,9,10]\nFAIL P2-2 alphabetical numbering tie shuffled atom/bond order initial\n  expected: 3-αιθυλο-5-μεθυλοεπτάνιο\n  actual:   5-αιθυλο-3-μεθυλοεπτάνιο\nPASS P2-2 alphabetical numbering tie shuffled atom/bond order has parent paths\nFAIL P2-2 alphabetical numbering tie shuffled atom/bond order path 1 [4,9,2,7,10,5,8]\n  expected: 3-αιθυλο-5-μεθυλοεπτάνιο\n  actual:   5-αιθυλο-3-μεθυλοεπτάνιο\nFAIL P2-2 alphabetical numbering tie shuffled atom/bond order path 2 [4,9,2,7,10,1,6]\n  expected: 3-αιθυλο-5-μεθυλοεπτάνιο\n  actual:   5-αιθυλο-3-μεθυλοεπτάνιο\nFAIL P2-3 branch locant/name pairing initial\n  expected: 4-αιθυλο-5-ισοπροπυλο-2-μεθυλοδεκάνιο\n  actual:   4-αιθυλο-5-2-ισοπροπυλο-μεθυλοδεκάνιο\nRESULT: 8 failures / 14 checks (original core49; all cases executed).\nException: Error: 8 alkane regression checks failed\nglobal code@docs/checks/test-alkanes-p2-v49.js:80:24\n",
+  "stderr": "",
+  "restorePoint": "../Αποθηκεύσεις/2026-10-23/before-v49-P2-031238-799488",
+  "baselineNamingCapture": "480 cases,478 available,0 execution errors; /tmp/namelecule-v49-p2-baseline-names.json"
+}

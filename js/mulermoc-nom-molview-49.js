@@ -4666,12 +4666,22 @@ function fApplyChainStep() {
   if (idx > pool.length - 1) idx = pool.length - 1;
   mainChainPoolIdx = idx;
   mainChainAtomsList = pool[idx].chain.slice();
-  // 3D rank-parallel, only when the 3D pool is fresh for this molecule
+  // Match alkane molecular numbering, only when the 3D pool is fresh for this molecule
   // (3D parse is async; otherwise the current 3D view is left untouched —
   // the replayed component path below repaints 3D from the live chain).
   try {
-    if (fChainStepper3DFresh() && idx < mainChainPool3D.length) {
-      mainChainAtoms3D = mainChainPool3D[idx].chain.slice();
+    if (fChainStepper3DFresh()) {
+      if (!Object.keys(ccDoubleBondKeys).length && !Object.keys(ccTripleBondKeys).length &&
+          !Object.keys(ccDoubleBondKeys3D).length && !Object.keys(ccTripleBondKeys3D).length &&
+          fIsAcyclicHydrocarbonGraph(atomConnectivityList, allAtomsTypeList) &&
+          fIsAcyclicHydrocarbonGraph(atomConnectivityList3D, allAtomsTypeList3D)) {
+        const signature = fCarbonChainSignature(mainChainAtomsList, atomConnectivityList, allAtomsTypeList);
+        const matches = mainChainPool3D.filter(p =>
+          fCarbonChainSignature(p.chain, atomConnectivityList3D, allAtomsTypeList3D) === signature);
+        if (matches.length) mainChainAtoms3D = matches[idx % matches.length].chain.slice();
+      } else if (idx < mainChainPool3D.length) {
+        mainChainAtoms3D = mainChainPool3D[idx].chain.slice();
+      }
     }
   } catch (e3) { /* 3D unavailable */ }
   // Naming runs ON the swapped chain: the `true` flag skips fGuessName's
@@ -4793,6 +4803,16 @@ function fHydrocarbonBranchExplanation(group, positions) {
   const locants = [...new Set(group.members.map(function (b) { return b.locant; }))]
     .sort(function (a, b) { return a - b; }).join(", ");
   const names = group.names.map(function (name) { return alkylBranchNouns[name] || name; }).join(", ");
+  if (group.names.length > 1) {
+    const pairs = group.names.map(name => {
+      const nums = group.members.filter(b => b.name === name).map(b => b.locant)
+        .sort((a, b) => a - b).join(", ");
+      return `${alkylBranchNouns[name] || name} στις θέσεις ${nums}`;
+    }).join(" · ");
+    return positions
+      ? `Δηλώνει τη θέση ή τις θέσεις της πρώτης από τις υπόλοιπες ομάδες. Οι επόμενες θέσεις περιλαμβάνονται στο διπλανό συνθετικό (${pairs}).`
+      : `Ομαδοποιημένο συνθετικό με τα ονόματα των υπόλοιπων διακλαδώσεων και τις ενδιάμεσες θέσεις τους (${pairs}).`;
+  }
   if (positions) {
     return group.members.length === 1
       ? `Δηλώνει τη θέση ${locants} της ανθρακικής διακλάδωσης (${names}).`
@@ -4839,11 +4859,13 @@ function fGetHydrocarbonBranchHighlight(slot) {
       }
     }
 
-    // Match by live parent locant and branch size, not by molecule-specific IDs.
-    // This also maps the 2D name groups to the separately numbered 3D SDF.
+    // Match the attachment-rooted carbon graph at its live parent locant.
+    // Equal-sized straight/branched groups must never cross-highlight.
     const locant = mainChainAtomsList.indexOf(parent + 1) + 1;
+    const branch = group ? fDescribeCarbonBranches(mainChainAtomsList.map(n => n - 1),
+      atomConnectivityList, allAtomsTypeList).find(d => d.attach === i) : null;
     if (group && !group.members.some(function (b) {
-      return b.locant === locant && b.length === sideSet.size;
+      return branch && b.locant === locant && b.signature === branch.signature;
     })) continue;
 
     for (const node of sideSet) {
@@ -4932,11 +4954,13 @@ function fGetHydrocarbonBranchHighlight3D(slot) {
       }
     }
 
-    // Match by live parent locant and branch size, not by molecule-specific IDs.
-    // This also maps the 2D name groups to the separately numbered 3D SDF.
+    // Match the attachment-rooted carbon graph at its live parent locant.
+    // Equal-sized straight/branched groups must never cross-highlight.
     const locant = mainChainAtoms3D.indexOf(parent + 1) + 1;
+    const branch = group ? fDescribeCarbonBranches(mainChainAtoms3D.map(n => n - 1),
+      atomConnectivityList3D, allAtomsTypeList3D).find(d => d.attach === i) : null;
     if (group && !group.members.some(function (b) {
-      return b.locant === locant && b.length === sideSet.size;
+      return branch && b.locant === locant && b.signature === branch.signature;
     })) continue;
 
     for (const node of sideSet) {
@@ -5105,8 +5129,8 @@ function fGetEtherCommonParts() {
   const parentLen = Array.isArray(mainChainAtomsList) ? mainChainAtomsList.length : 0;
   const alkLen = (typeof etherInfo !== "undefined" && etherInfo && etherInfo.alkoxyLen) || 1;
   const _eI = (typeof etherInfo !== "undefined" && etherInfo) ? etherInfo : null;
-  const stemFor = function (n, attachC) {
-    const iso = (typeof fAlkylGroupName !== "undefined") ? fAlkylGroupName(n, attachC, "substituent") : null;
+  const stemFor = function (n, attachC, fragment) {
+    const iso = (typeof fAlkylGroupName !== "undefined") ? fAlkylGroupName(n, attachC, "substituent", fragment) : null;
     const full = iso || ((typeof alkylSubstituentNames !== "undefined" && alkylSubstituentNames[n]) || (nameMainCompList1[n - 1] || ""));
     return String(full).replace(/ο$/, "");
   };
@@ -5116,7 +5140,7 @@ function fGetEtherCommonParts() {
   const alkoxyChain3D = fGetEtherAlkoxyChain3D() || [];
   const symmetric = (typeof etherInfo !== "undefined" && etherInfo) ? !!etherInfo.symmetric : parentLen === alkLen;
   if (symmetric) {
-    const alkyl = stemFor(alkLen, _eI && _eI.alkoxyAttachC);
+    const alkyl = stemFor(alkLen, _eI && _eI.alkoxyAttachC, _eI && _eI.alkoxyFrag);
     const both = parentChain.concat(alkoxyChain.filter(function (a) { return parentChain.indexOf(a) < 0; }));
     const both3D = parentChain3D.concat(alkoxyChain3D.filter(function (a) { return parentChain3D.indexOf(a) < 0; }));
     return {
@@ -5128,7 +5152,7 @@ function fGetEtherCommonParts() {
       ],
     };
   }
-  const sP = stemFor(parentLen, _eI && _eI.parentAttachC), sA = stemFor(alkLen, _eI && _eI.alkoxyAttachC);
+  const sP = stemFor(parentLen, _eI && _eI.parentAttachC, _eI && _eI.parentFrag), sA = stemFor(alkLen, _eI && _eI.alkoxyAttachC, _eI && _eI.alkoxyFrag);
   const mk = function (label, len) {
     const isParent = len === parentLen && (parentLen !== alkLen || label === sP);
     return {
