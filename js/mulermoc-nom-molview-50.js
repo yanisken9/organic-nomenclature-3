@@ -2927,12 +2927,13 @@ function fFit2DSVG() {
 // Remove the paired labels/backplates, keeping the separate atom/bond highlights.
 
 // User-approved connectivity diagrams: render unknown-E/Z crossed doubles
-// as parallel SVG lines in the six new dienes. Raw MOL/stereo remain intact.
+// as parallel SVG lines in the approved connectivity drawings. Raw MOL/stereo remain intact.
 function fDrawDieneParallelDoubleBonds() {
   if (!["expanded", "condensed", "condensedZigZag", "skeletal"].includes(mode2D) || ![
     "butadiene_1_3", "butadiene_1_2", "pentadiene_1_4",
     "methyl_3_pentadiene_1_3", "dimethyl_2_3_pentadiene_1_3",
-    "ethyl_3_dimethyl_4_5_hexadiene_1_4"
+    "ethyl_3_dimethyl_4_5_hexadiene_1_4",
+    "ethyl_3_methyl_4_hexen_3_yn_5_ol_2"
   ].includes(selectedMol)) return;
   const svg = document.querySelector("#jsmeNomeclatureSVG svg");
   if (!svg) return;
@@ -3946,6 +3947,22 @@ function fIsMultiLocantComponent(comp) {
   return fGetNameComponentLocants(comp).length > 1;
 }
 
+// Locate the OH-bearing component without confusing it with either C-C
+// multiple-bond locant. Mixed branched alcohols group OH locant with -όλη.
+function fAlcoholOHNameComponent() {
+  if (typeof functionalGroupObj === 'undefined' || !functionalGroupObj ||
+      !functionalGroupObj.alcohol || !fSupportsAlkylBranchPrefixes()) return null;
+  const branched = fGetHydrocarbonSubstituentInfo().length > 0;
+  const db = multiBondsObj.CCd.length, tb = multiBondsObj.CCt.length;
+  if (branched && db && tb) return 'compSuffix';
+  if (db || tb) return db && tb ? null : 'compEndNumber';
+  return branched ? 'compBondPos' : 'compNumber1';
+}
+function fAlcoholOHPositionText() {
+  return functionalGroupObj.alcohol.O.length > 1
+    ? ' Δηλώνει τις θέσεις των υδροξυλομάδων (–OH).'
+    : ' Δηλώνει τη θέση της υδροξυλομάδας (–OH).';
+}
 function fExplainNameComp() {
   let myText, myClass, nStyle, countSubs, myCountText, myFG0, myFG1, myHTML;
   switch (nameAnalysisMode) {
@@ -4176,6 +4193,14 @@ function fExplainNameComp() {
     case "compBondPos":
       nStyle = "";
       myClass = "";
+      if (fAlcoholOHNameComponent() === 'compBondPos') {
+        myText = fAlcoholOHPositionText();
+        ruleTableHighlight = "r3-alcohols";
+        fHighlightFG(); fHighlightFG3D();
+        numberingFlag = true; fShowNumbering(0);
+        $("#ruleTheoryContainer").show();
+        break;
+      }
       switch (nameComponentsList[6]) {
         case "έν":
         case "εν":
@@ -4340,10 +4365,11 @@ function fExplainNameComp() {
     case "compEndNumber":
       nStyle = "";
       myClass = "";
-      if (nameComponentsList[8].length === 0) {
+      if (fAlcoholOHNameComponent() === 'compEndNumber' || nameComponentsList[8].length === 0) {
         fHighlightFG();
         fHighlightFG3D();
-        myText = ` Δηλώνει τη θέση της  Χαρακτηριστικής Ομάδας${fGetPrincipalGroupNounSuffix(false)}.`;
+        myText = fAlcoholOHNameComponent() === 'compEndNumber' ? fAlcoholOHPositionText()
+          : ` Δηλώνει τη θέση της  Χαρακτηριστικής Ομάδας${fGetPrincipalGroupNounSuffix(false)}.`;
       } else {
         myText = " Δηλώνει τη θέση του τριπλού δεσμού.";
         ruleTableHighlight = "r2-triple";
@@ -4413,7 +4439,10 @@ function fExplainNameComp() {
         if (_seriesKey === "aldehyde") ruleTableHighlight = "r3-aldehydes";
         else if (_seriesKey === "ketone") ruleTableHighlight = "r3-ketones";
       }
-      numberingFlag = false;
+      numberingFlag = fAlcoholOHNameComponent() === 'compSuffix';
+      if (numberingFlag) {
+        myText += fAlcoholOHPositionText();
+      }
       if (molTaxonomy != "Υδρογονάνθρακες") {
         if (Object.keys(functionalGroupObj).length > 1) {
           fHighlightFG(2);
@@ -4423,6 +4452,7 @@ function fExplainNameComp() {
           fHighlightFG3D();
         }
       }
+      if (numberingFlag) fShowNumbering(0);
       $("#ruleTheoryContainer").show();
       break;
     case "commonAlkyl1":
@@ -4541,6 +4571,10 @@ function fExplainNameComp() {
 function fShowRule(theRule) {
   let ruleText, ruleTable, ruleTitle, myStyle, myClass, myHTML;
   let alkylRows = null;
+  if (theRule === fAlcoholOHNameComponent()) {
+    theRule = 'compSuffix';
+    ruleTableHighlight = 'r3-alcohols';
+  }
   switch (theRule) {
     case "compNumber1":
     case "compNumber2": {
@@ -4887,8 +4921,7 @@ function fChainStepperHTML() {
 // Match the same Greek-alphabetical prefix groups used by fGuessName.
 // Slot 2 represents all remaining groups, matching the fused comp2/comp3 boxes.
 function fGetHydrocarbonBranchGroup(slot) {
-  if (!functionalGroupObj || Object.keys(functionalGroupObj).length !== 1 ||
-      !functionalGroupObj.hydrocarbon) return null;
+  if (!functionalGroupObj || !fSupportsAlkylBranchPrefixes()) return null;
   const branches = fGetHydrocarbonSubstituentInfo();
   const names = [...new Set(branches.map(function (b) { return b.name; }))]
     .sort(function (a, b) { return a < b ? -1 : a > b ? 1 : 0; });
@@ -5570,7 +5603,8 @@ function fHighlightFG(FGno) {
     "compSecondSub2",
   ].includes(nameAnalysisMode);
 
-  if (fgKeys.length === 0) {
+  if (fgKeys.length === 0 || (allowBranchFallback &&
+      fSupportsAlkylBranchPrefixes() && branch.atoms.length > 0)) {
     if (!allowBranchFallback || branch.atoms.length === 0) {
       return;
     }
@@ -5997,7 +6031,8 @@ function fHighlightFG3D(FGno) {
 
   let highAtoms3D = [];
 
-  if (fgKeys.length === 0) {
+  if (fgKeys.length === 0 || (allowBranchFallback &&
+      fSupportsAlkylBranchPrefixes() && branch.atoms.length > 0)) {
     if (!allowBranchFallback || branch.atoms.length === 0) {
       // pure hydrocarbon or no branch match — clear any existing highlight
       Jmol.script(

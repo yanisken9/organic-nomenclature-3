@@ -1,0 +1,47 @@
+{
+  "source": "RDKit",
+  "rdkitVersion": "2024.09.6",
+  "method": "ETKDGv3 / MMFF94s, lowest converged among 24 sampled conformers",
+  "seed": 20261024,
+  "lookup": {
+    "source": null,
+    "nameLookupError": "HTTP404",
+    "smilesLookupError": "HTTP Error 400: PUGREST.BadRequest",
+    "querySMILES": "CC(O)C(C)C(C(C)C)C(C)CC",
+    "postLookupError": {
+      "status": 400,
+      "body": "Status: 400\nCode: PUGREST.BadRequest\nMessage: Invalid ID, must be positive integer\n"
+    }
+  },
+  "energyKcalMol": 35.16984809892529,
+  "key": "isopropyl_4_dimethyl_3_5_heptanol_2",
+  "name": "4-ισοπροπυλο-3,5-διμεθυλο-2-επτανόλη",
+  "formula": "C12H26O",
+  "retrievalDate": "2026-10-24",
+  "sha256": "5f91ff1622863383a670fb1e7c3b01c09c49e5aa20ea5d3b75be0aeb0ff95f77",
+  "atomMapping2Dto3D": {
+    "1": 1,
+    "2": 2,
+    "3": 3,
+    "4": 4,
+    "5": 5,
+    "6": 6,
+    "7": 7,
+    "8": 8,
+    "9": 9,
+    "10": 10,
+    "11": 11,
+    "12": 12,
+    "13": 13
+  },
+  "mainChain3D": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "stereochemistry": "Unspecified; illustrative conformer does not assign R/S"
+}

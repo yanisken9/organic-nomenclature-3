@@ -671,6 +671,33 @@ function fIsAcyclicHydrocarbonGraph(connList, typeList) {
     return seen.size === carbons.length
 }
 
+// Bounded extension: saturated acyclic C/H/O molecules with exactly one
+// terminal, singly bonded hydroxyl oxygen. Mixed functions/polyols stay unchanged.
+function fIsSaturatedMonoalcoholGraph(conn, types, bonds) {
+    if (!Array.isArray(types) || !Array.isArray(bonds)) return false
+    const oxygen = types.map((t, i) => t === 'O' ? i : -1).filter(i => i >= 0)
+    if (oxygen.length !== 1 || types.some(t => !['C', 'H', 'O'].includes(t))) return false
+    const neighbors = Array.isArray(conn[oxygen[0]]) ? conn[oxygen[0]] : []
+    return neighbors.length === 1 && types[neighbors[0]] === 'C' &&
+        bonds.every(b => b[2] === 1) &&
+        fIsAcyclicHydrocarbonGraph(conn, types.map(t => t === 'O' ? 'H' : t))
+}
+// Pure acyclic alcohols only: every O is a singly bonded terminal hydroxyl.
+// Carbon unsaturation and multiple OH groups are allowed; ethers/mixed FGs are not.
+function fIsAcyclicAlcoholGraph(conn, types, bonds) {
+    if (!Array.isArray(types) || !Array.isArray(bonds)) return false
+    const oxygens = types.map((t, i) => t === 'O' ? i : -1).filter(i => i >= 0)
+    return oxygens.length > 0 && !types.some(t => !['C', 'H', 'O'].includes(t)) &&
+        oxygens.every(i => Array.isArray(conn[i]) && conn[i].length === 1 && types[conn[i][0]] === 'C') &&
+        bonds.every(b => (types[b[0]-1] === 'C' && types[b[1]-1] === 'C') ? [1,2,3].includes(b[2]) : b[2] === 1) &&
+        fIsAcyclicHydrocarbonGraph(conn, types.map(t => t === 'O' ? 'H' : t))
+}
+function fSupportsAlkylBranchPrefixes() {
+    return functionalGroupsList.length === 1 && (functionalGroupsList[0] === 'hydrocarbon' ||
+        (functionalGroupsList[0] === 'alcohol' &&
+            fIsAcyclicAlcoholGraph(atomConnectivityList, allAtomsTypeList, bondList)))
+}
+
 function fCarbonBranchLocants(path, connList, typeList) {
     const main = new Set(path), locants = []
     for (let i = 0; i < path.length; i++) {
@@ -764,7 +791,7 @@ function fOrientChainPath(path) {
                 if (pos >= 0) locants.push(pos + 1)
             }
             // v49: acyclic hydrocarbon alkyl branches join the detachable-prefix tier
-            if (fIsAcyclicHydrocarbonGraph(atomConnectivityList, allAtomsTypeList)) {
+            if ((fIsAcyclicHydrocarbonGraph(atomConnectivityList, allAtomsTypeList) || fIsAcyclicAlcoholGraph(atomConnectivityList, allAtomsTypeList, bondList))) {
                 locants.push(...fCarbonBranchLocants(path, atomConnectivityList, allAtomsTypeList))
             }
             locants.sort(function(a, b) { return a - b })
@@ -831,7 +858,7 @@ function fOrientChainPath(path) {
                             return pairs
                         }
                         if (!Object.keys(ccDoubleBondKeys).length && !Object.keys(ccTripleBondKeys).length &&
-                            fIsAcyclicHydrocarbonGraph(atomConnectivityList, allAtomsTypeList)) {
+                            (fIsAcyclicHydrocarbonGraph(atomConnectivityList, allAtomsTypeList) || fIsAcyclicAlcoholGraph(atomConnectivityList, allAtomsTypeList, bondList))) {
                             if (fCompareLocantSets(
                                 fCarbonBranchAlphabeticalKey(rev, atomConnectivityList, allAtomsTypeList),
                                 fCarbonBranchAlphabeticalKey(oriented, atomConnectivityList, allAtomsTypeList)) < 0) useForward = false
@@ -1218,7 +1245,7 @@ function fCalcMainChain() {
     mainChainPool = fRankChainPool(candidatePaths,
         fTopFgAnchorSet(functionalGroupObj, atomConnectivityList, allAtomsTypeList),
         function (p) { return [p.length, countAnchorsInPath(p), countMultiBonds(p), countDoubleBonds(p)] },
-        fOrientChainPath, atomConnectivityList, allAtomsTypeList)
+        fOrientChainPath, atomConnectivityList, allAtomsTypeList, bondList)
 
     // ── Step 9: Write mainChainAtomsList (1-based JSME atom numbers) ─────────────
     // v47: adopted pool entry at the live walk index. Fresh molecule loads land
@@ -1399,7 +1426,7 @@ function fOrientChainPath3D(path) {
                 if (pos >= 0) locants.push(pos + 1)
             }
             // v49: acyclic hydrocarbon alkyl branches join the detachable-prefix tier
-            if (fIsAcyclicHydrocarbonGraph(atomConnectivityList3D, allAtomsTypeList3D)) {
+            if ((fIsAcyclicHydrocarbonGraph(atomConnectivityList3D, allAtomsTypeList3D) || fIsAcyclicAlcoholGraph(atomConnectivityList3D, allAtomsTypeList3D, bondList3D))) {
                 locants.push(...fCarbonBranchLocants(path, atomConnectivityList3D, allAtomsTypeList3D))
             }
             locants.sort(function(a, b) { return a - b })
@@ -1440,7 +1467,7 @@ function fOrientChainPath3D(path) {
                     if (lexLess3D(revSub3D, fwdSub3D)) useForward3D = false
                     else if (!lexLess3D(fwdSub3D, revSub3D) &&
                         !Object.keys(ccDoubleBondKeys3D).length && !Object.keys(ccTripleBondKeys3D).length &&
-                        fIsAcyclicHydrocarbonGraph(atomConnectivityList3D, allAtomsTypeList3D) &&
+                        (fIsAcyclicHydrocarbonGraph(atomConnectivityList3D, allAtomsTypeList3D) || fIsAcyclicAlcoholGraph(atomConnectivityList3D, allAtomsTypeList3D, bondList3D)) &&
                         fCompareLocantSets(
                             fCarbonBranchAlphabeticalKey(rev3D, atomConnectivityList3D, allAtomsTypeList3D),
                             fCarbonBranchAlphabeticalKey(oriented3D, atomConnectivityList3D, allAtomsTypeList3D)) < 0) useForward3D = false
@@ -1663,7 +1690,7 @@ function fCalcMainChain3D() {
     mainChainPool3D = fRankChainPool(candidatePaths3D,
         fTopFgAnchorSet(functionalGroupObj3D, atomConnectivityList3D, allAtomsTypeList3D),
         function (p) { return [p.length, countAnchorsInPath3D(p), countMultiBonds3D(p), countDoubleBonds3D(p)] },
-        fOrientChainPath3D, atomConnectivityList3D, allAtomsTypeList3D)
+        fOrientChainPath3D, atomConnectivityList3D, allAtomsTypeList3D, bondList3D)
     mainChainPool3DKey = (typeof selectedMol !== "undefined" ? selectedMol : null)
 
     // ── Step 9: Write mainChainAtoms3D (1-based SDF atom numbers) ────────────────
@@ -1806,7 +1833,7 @@ function fTopFgAnchorSet(fgObj, connList, typeList) {
 // the pool so the stepper can still explore equivalent alternatives. For
 // acyclic alkanes (v49) the final tier also checks branch count/locants. Each
 // entry is oriented via orientFn and stored 1-based. Empty input → empty pool.
-function fRankChainPool(paths, req, scoreFn, orientFn, connList, typeList) {
+function fRankChainPool(paths, req, scoreFn, orientFn, connList, typeList, bonds) {
     var i, a
     var inScope = paths, usedFilter = false
     if (req.anchors.length > 0) {
@@ -1852,7 +1879,29 @@ function fRankChainPool(paths, req, scoreFn, orientFn, connList, typeList) {
     // maximize the number of carbon branches, then minimize their oriented
     // locants. Retain every graph-equivalent winner. Multiple-bond and FG
     // parent-pool ranking deliberately keeps its existing priorities.
-    if (bestMu === 0 && fIsAcyclicHydrocarbonGraph(connList, typeList)) {
+    const alcohol = fIsAcyclicAlcoholGraph(connList, typeList, bonds)
+    if (alcohol) {
+        const oxygens = typeList.map((t, i) => t === 'O' ? i : -1).filter(i => i >= 0)
+        const key = c => oxygens.map(o => orientFn(c.p).indexOf(connList[o][0]) + 1).sort((a,b) => a-b)
+        let best = key(scored[0])
+        for (const c of scored) if (fCompareLocantSets(key(c), best) < 0) best = key(c)
+        scored = scored.filter(c => fCompareLocantSets(key(c), best) === 0)
+        // Multiple-bond locants precede branch locants when OH positions tie.
+        for (const order of [0, 2]) {
+            const multiKey = c => {
+                const path = orientFn(c.p), out = []
+                for (let i = 0; i < path.length-1; i++) {
+                    const bond = bonds.find(b => (b[0]-1 === path[i] && b[1]-1 === path[i+1]) || (b[1]-1 === path[i] && b[0]-1 === path[i+1]))
+                    if (bond && (order ? bond[2] === order : bond[2] > 1)) out.push(i+1)
+                }
+                return out.sort((a,b) => a-b)
+            }
+            let bestMulti = multiKey(scored[0])
+            for (const c of scored) if (fCompareLocantSets(multiKey(c), bestMulti) < 0) bestMulti = multiKey(c)
+            scored = scored.filter(c => fCompareLocantSets(multiKey(c), bestMulti) === 0)
+        }
+    }
+    if ((bestMu === 0 && fIsAcyclicHydrocarbonGraph(connList, typeList)) || alcohol) {
         let bestBranches = -1
         for (const candidate of scored) {
             candidate.branchCount = fCarbonBranchLocants(candidate.p, connList, typeList).length
@@ -2214,7 +2263,7 @@ function fGuessName(skipChainRecalc) {
     comp0TextList = [] // ονόματα πολλων υποκαταστατών για το comp0Text
     subPrefix = "" // συνθετικό υποκαταστατων
 
-    if (functionalGroupsList[0] === "hydrocarbon") {
+    if (fSupportsAlkylBranchPrefixes()) {
         const sideBranches = fGetHydrocarbonSubstituentInfo()
         if (sideBranches.length > 0) {
             // Group identical alkyl substituents (e.g. two methyls): comma-joined
@@ -2490,6 +2539,11 @@ function fGuessName(skipChainRecalc) {
         comp0Text = XOPrefix;
 
     }
+    // Branched monoalcohol: preserve the OH locant before prefix slots replace
+    // comp0. Existing Greek convention places it before the parent stem.
+    if (functionalGroupsList[0] === 'alcohol' && comp0NumberList.length &&
+        fSupportsAlkylBranchPrefixes()) comp1No = '-' + comp0
+
     // Alkyl-halide prefix slots: first alphabetical halogen type -> comp0,
     // any remaining types joined into comp0b (generalizes the old 2-type patch)
     if (comp0NumberList.length === 1) {
@@ -2504,6 +2558,30 @@ function fGuessName(skipChainRecalc) {
         // locant/name pairs in their correct interleaved order.
         for (let i = 2; i < comp0NumberList.length; i++) {
             comp0bText += "-" + comp0NumberList[i] + "-" + comp0TextList[i]
+        }
+    }
+
+    // Keep all locants for branched pure alcohols, including polyols/enynols.
+    // The twelve-slot contract has two multiple-bond positions; mixed alcohols
+    // carry the OH locant with the suffix rather than overwrite the triple locant.
+    if (functionalGroupsList[0] === 'alcohol' && fSupportsAlkylBranchPrefixes() && comp0NumberList.length) {
+        const oh = functionalGroupObj.alcohol.O.map(o => mainChainAtomsList.indexOf(atomConnectivityList[o][0] + 1) + 1).sort((a,b) => a-b).join(',')
+        const suffix = nameMultiPrefix[functionalGroupObj.alcohol.O.length - 1] + 'όλη'
+        const db = sortedMultiDBonds && sortedMultiDBonds.length, tb = sortedMultiTBonds && sortedMultiTBonds.length
+        if (db && tb) {
+            comp1No = '-' + bondPrefixDB
+            comp3 = '-' + bondPrefixTB
+            comp4 = '-' + oh + '-' + suffix
+        } else if (db || tb) {
+            comp1No = '-' + (db ? bondPrefixDB : bondPrefixTB)
+            comp3 = '-' + oh + '-'
+            comp2b = ''
+            comp4 = suffix
+        } else {
+            comp1No = '-' + oh + '-'
+            comp3 = null
+            comp2b = ''
+            comp4 = suffix
         }
     }
 

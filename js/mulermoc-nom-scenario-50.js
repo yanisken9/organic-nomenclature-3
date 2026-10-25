@@ -65,7 +65,7 @@ function fScenarioPresent() {
   var p = MuLERMoCScenario.presentId ? fScenarioGet(MuLERMoCScenario.presentId) : null;
   return p || fScenarioActive();
 }
-// Corresponding rule titles in the five existing theory presentations.
+// Corresponding rule titles in the supported theory presentations.
 // Keep the corresponding rule title available; its table opens only by request.
 function fScenarioShowComponentRule(mode) {
   if (!MuLERMoCScenario.present) return false;
@@ -75,7 +75,9 @@ function fScenarioShowComponentRule(mode) {
     "Αλκένια-Ονοματολογία και διακλαδώσεις",
     "Αλκίνια-Ονοματολογία και διακλαδώσεις",
     "Αλκαδιένια-Ονοματολογία και διακλαδώσεις",
-    "Ονοματολογία Αλκενινίων"
+    "Ονοματολογία Αλκενινίων",
+    "Κορεσμένες μονοσθενείς αλκοόλες",
+    "Άλλες αλκοόλες"
   ].indexOf(lesson.title) !== -1 &&
     /^(compCarbonsCount|compBondType|compSuffix|compSecondSub1|compSecondSub2|compNumber1|compNumber2|compBondType2|compBondPos|compEndNumber)$/.test(mode || "");
 }

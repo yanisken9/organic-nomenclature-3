@@ -1,3 +1,360 @@
+# Current resume point — 2026-10-25 — authorized full save/report/publication in progress
+
+User explicitly asks saveeverythingeverywhere, consolidated professorreport Friday23Oct
+throughnow25Oct and sharelink MUSTopenwelcome. AuthorizationcoversGitcommit/pushand
+existingGitHubPagespublication onorigin/thesis-work; do notmodifyorigin/main.
+StartHEAD e76eae87772f4cd2d52a751eed76d32b9b1a7c98, remote thesis-work2de69f4,
+main9c5259e (publicindexalreadyNameleculewelcome,Pageshistoricallythesis-work).
+Upstream rechecked25Oct HEAD34eb8b5unchanged, CHANGELOGSHA256
+9df4cfbed196efb053069d349b97396fad30521a2659985181e88585bcfb4234.
+Lastactualsync2b616f6; parallelv51separatepending, no newappintervention.
+New report docs/REPORT-20261023-25.md/.html:98molecules,18new,7lessons153steps,
+14PubChem4RDKit,newlessons/progressivepedagogy/core49+50/workflow/tests/limits.
+IndependentReviewer /root/review_professor_report_release freshcontext verified
+factualcounts/provenance/MDHTML/links/corehistory, nofindings; frozenhashmanifest
+/tmp/report-20261025-review.json. RuntimehistorynotindependentlyrerunbyReviewer.
+Newdocs/checks/test-public-release-20261025.py willcheckpublicwelcome/library153steps/
+7PrevExit/report390px, evidencewillfollowactualdeployment.
+Allscenario/checkJSON+PythonAST and fouractiveJSsyntaxPASS,diffcheckPASS.
+All7DesktopJSONssynchronizedbyteexact. LocalZIP881workspacefiles+7exports tested,
+reportHTML/MDcopiesin ../Αποθηκεύσεις/2026-10-25; refresharchiveafterfinalcommit,
+addGitbundlehistory. Personalglobalconfignotpublished. No app/corechangedbythis
+saveoperation; periodcore49/core50changesarefullyreported,notclaimedunchanged.
+Nextcommit/push,verifypublicbytes/browser,recordactualresults,finalbackuprefresh.
+
+# 2026-10-25 — Συμβολικός τύπος στις «Άλλες αλκοόλες»
+
+Userapprovedpreview: κάτω από τον τίτλο προστέθηκε μόνο CxHy(OH)n με HTML
+subscripts και υπάρχον series-formula styling, χωρίς περιορισμό n≥1.
+Μόνο design/theory-library.html, άμεση βάση /tmp/other-alcohols-formula-before.html.
+Ακριβής inverse-replacement έλεγχος και git diff --check PASS. Δεν εκτελέστηκε
+νέος browser έλεγχος για τη στατική γραμμή με υπάρχον styling.
+Core/μόρια/JSON αμετάβλητα σε αυτή την παρέμβαση· προηγούμενο core50 ιστορικό
+συνεδρίας διατηρείται παρακάτω. Χωρίς commit/push/δημοσίευση.
+Ανεξάρτητος /root/review_other_alcohols_formula σε νέο context επιβεβαίωσε
+το μοναδικό diff, SHA256 και υπάρχον styling, χωρίς ευρήματα. Επόμενο βήμα οπτική αποδοχή χρήστη.
+
+# 2026-10-25 — Περιγραφή καρτέλας «Άλλες αλκοόλες»
+
+Με ρητή έγκριση προστέθηκε μόνο «ή και τα δύο» στο τέλος της περιγραφής
+στο design/theory-library.html. Ακριβής έλεγχος έναντι άμεσου αντιγράφου
+/tmp/library-description-before.html και git diff --check PASS.
+Δεν άλλαξαν JSON, μόρια ή core σε αυτή την παρέμβαση. Οι προγενέστερες
+αλλαγές core50 της συνεδρίας παραμένουν καταγεγραμμένες παρακάτω.
+Χωρίς commit/push. Ανεξάρτητος Reviewer /root/review_alcohol_card_wording σε νέο context
+επιβεβαίωσε το μοναδικό diff και SHA256, χωρίς ευρήματα. Επόμενο βήμα
+ανανέωση βιβλιοθήκης για προβολή της τελικής περιγραφής.
+
+# Current resume point — 2026-10-25 — other alcohols theory completed and reviewed
+
+User approved22-step plan. Created scenarios/other-alcohols-nomenclature.scenario.json
+«Άλλες αλκοόλες», all10 existing other alcohols, progressive reveal/noquiz/noisomerism.
+1–5polyols,6–13alkenols,14–15alkynol,16–20enynols,21synthesis2D,22optional3D.
+Activated existingsecondAlcoholsection in design/theory-library.html (22count/link),
+addedtitleto scenario50manualruleallowlist, bumpedonlyscenario50JSqueryinHTML.
+No new molecules or core/viewer/oldscenario changes vs /tmp/other-theory-baseline.
+22Firefoxsteps validator+exportroundtrip/exactnames/visibility/closedrulesmanualtoggle
+PASS0JSerrors;library21Next/Prev/Exit+triolOH3Dselection6atomsPASS0JSerrors.
+Developer visually inspected21/22screenshots1500x1000,notallsteps/viewports.
+Desktopbyteexact Άλλες_αλκοόλες-Ονοματολογία.scenario.json saved in αρχεία  json;
+SHA256 65ed393a9378d5fd6bc4ed28cec3e73cde20650f3fc24403f866d428a9c477f6.
+Frozen7filemanifest /tmp/other-alcohols-theory-review.json; independent freshcontext
+Reviewer /root/review_other_alcohols_theory independentlyreviewedreadonly.
+OneP3 note/displaywordingfixed(ανεπτυγμένος→2Dτύπος);narrowre-reviewclosed,
+final22runtime rerunPASS0JSerrors;resultsagreewithrecordedevidence.
+Finalmanifest docs/checks/other-alcohols-theory-reviewed-target-20261025.json;
+report docs/OTHER-ALCOHOLS-THEORY-20261025.md. Nextuserpreviewlesson.
+No commit/push/publication. Core unchanged in THIS lesson task; earlier25Octcore50
+moleculeextension remains documented below (do not erase whole-sessioncorehistory).
+Upstream status unchanged from earlierthissession:checked34eb8b5,actualsync2b616f6;
+v51migrationseparatepending.
+
+# Current resume point — 2026-10-25 — other alcohols theory plan awaiting approval
+
+User asks theoryscenario for all10otheralcohols +activate correspondinglibrary
+section. Read-only inspected existingmonoalcohol20steps, rule-titleallowlist,
+componentmappingand library. LearningDesigner /root/plan_other_alcohols_theory
+read-only proposal22steps:1–5 twoexistingdiols+triol (maxOHparent/di-/tri-),
+6–13 allfouralkenols (OHpriority/multiplelocants/branch),14–15newalkynol,
+16–20bothnewenynols (separateOH/double/triple/branches/alphabetic),21guided2D
+synthesis withmenu10,22optional3D initiallypropanetriol. Noquiz/isomerism or
+singleformulaall10. Everyguidedstephasonefixedmolecule. Current12slotcontract
+mixedbranchedOHlocant+suffixcomp9 respected, notcopiedfromsimplealcohols.
+Proposednew scenarios/other-alcohols-nomenclature.scenario.json titleΆλλεςαλκοόλες;
+activateonlysecondAlcoholslibrarysection,addtitle scenario50ruleallowlist,
+HTMLcache+checks+DesktopJSONmatchingexistingdeliveryfolder. No core/viewer/
+MOL/SDF/oldlessonchangesplanned. AwaituserapprovalunderAGENTS beforecoding.
+Checksplanned22steps/exactnames/visibility/rules+OH/CCdouble/CCtriple+numbering,
+validator/export/import/libraryNextPrevExit+reviewerindependentfinal.
+No app/core/moleculefilechanges inthisplanningturn. Earlier25Octcore50change
+forfiveotheralcohols remainsasrecordedbelow (notnewplanningcontribution).
+No commit/push/publication.
+
+# Current resume point — 2026-10-25 — five other alcohols completed/reviewed
+
+Userapprovedaddingfiveotheralcohols+necessarycore/viewerextension, explicitly
+NOlocantomissionpolicychange. Addedfullnames asrequested/corrected:
+2-methylpropane1,2diol C4H10O2;3-methylbut3en2ol C5H10O;
+3-methylpent4yn2ol C6H10O;4-methylpent4en2yn1ol C6H8O;
+3-ethyl4-methylhex3en5yn2ol C9H14O. Registry98. New15MOL2D+5sourceSDF+
+5provenance+5runtimeSDF. SourcesPubChem68410/66329/11550005/10887835;
+lastRDKitETKDGv3/MMFF94s24confs seed20261025 after503/400lookupfailure,
+noabsenceclaim. UnknownR/S/EZ; representative3D, notstereoisomeridentity.
+
+Core50localauthoredextension pureacyclic alcoholbranchprefixes+polyols/unsat,
+OH-firstlocantranking, separatemultiple/OHlocants. Mixedbranchedalcoholretains
+12slotswithOHlocant+suffixcombinedcomp9. Viewer50 dispatch/highlights/rules/
+numberingfixed; finalunknownEZparallelrendereronlylastnewkey,rawstereopreserved.
+HTMLcache/READMEupdated. No oldmolecular/scenariochanges oromissionpolicychange.
+Allolddata contentpreservedapartfromnewentries/append;old93orderingretained.
+
+Checks20chemicalforms/110naming(30forms+80atomorders),556old93regressions,
+14+877P2assertions PASS. RealFirefox40cases+16affectedrerunafteraxialHfix
+PASS0JSerrors:4forms×2chainmodes,realmenus/components,allHlabels/nonoverlap,
+parentgraphmapping,branch/CCdouble/CCtriple/OHgroups+rules/numbering.
+DevelopervisualinspectionallfiveExpanded+actual3D,first/largestSkeletal,
+finaltwoExpanded;1500x1000,notallviewports.3Dspangles179.33..179.97degrees.
+InitialbrowserfoundnewundefinedFGinitabort, explicitOHtextgap andSVGnumbering
+erasedbyhighlightredraw, allresolved. TerminalalkyneHsin2newExpandedfixedaxial
+bycomparisonoldalkynes. Checkerinitialnewangles-variable shadowing corrected;
+final20chemicalrerunPASS. Recordfailureshonestly,notonlyfinalsuccess.
+
+ChemistryValidator /root/validate_locant_omission confirmed5names/graphs/formulas
+read-only. IndependentReviewer /root/review_five_other_alcohols freshcontext,
+no-write, final43hashes+20chemical+110namingindependentlyPASS,15embeddedMOLexact.
+Narrowre-reviewinit/numbering/Hfixclosed,40+16browserDeveloper evidenceinspected,
+nooutstandingactionablefindings. Noenforcedreadonlyfilesystemclaim.
+Reviewmanifest/evidence docs/checks/other-alcohols-*20261025.json, detailedreport
+OTHER-ALCOHOLS-20261025.md withprofessor-readyGreekcoremessage.
+
+Core changed this25Octsession: ONLYjs/mulermoc-nom-core-50.js locallyauthored,
+newchange distinctfromprior24Octuncommittedfouralcoholpatch. Immediatetaskbaseline
+/tmp/other-alcohols-baseline,GitHEADstill e76eae8. No commit/push/publication.
+Upstreamlastchecked34eb8b5v51parallel,lastactualsync2b616f6 earlierthisday;
+separatemigrationstillpending. Nextstepuserrefresh/visualacceptance; otheralcohol
+THEORYlessonnotcreated, onlymolecules. Preserveallprioruncommittedwork.
+
+# Current resume point — 2026-10-25 — five other alcohols preflight blocker/plan
+
+Userexplicitlyrejects locantomissionchange, asks continuefivealcoholintegration.
+No omission/core/source/moleculechanges performed. Interpreted nochangeas no
+locantomissionpolicychange; preservefullcurrentconvention (first2-methyl1,2diol).
+Read-onlyRDKit/JSC actualcoreprobes5graphs (in-memoryonly) yielded:
+OCC(O)(C)C C4H10O2 ->1,2-προπανοδιόλη (missingmethyl);
+CC(O)C(C)=C C5H10O ->3-βουτεν-2-όλη (missingmethyl);
+CC(O)C(C)C#C C6H10O ->4-πεντιν-2-όλη (missingmethyl);
+OCC#CC(C)=C C6H8O ->4-πεντεν-1-ινόλη (missingmethyl, triple2overwrittenOH1);
+CC(O)C(CC)=C(C)C#C C9H14O ->3-εξεν-2-ινόλη (missingethyl/methyl,
+triple5overwrittenOH2). Cleartechnicalblocker; no fakeintegration accepted.
+Needuserapprovalconcreteboundedcore/viewerextension forbranchedpolyols,
+unsaturatedalcohols,anddistinctdouble/triple/OHlocants+highlights, notomission.
+Then fiveassets withestablished2D3D/explicitH/cardinalExpanded/nocloseH,
+PubChemwherevalid/RDKitfallbackprovenance, dataregistry/HTMLcache, relevant
+regressionbrowserchecks+independentReviewer. Existingmolecules/scenarioskeep.
+Sourcefilesproposedcore50/viewer50/data50/HTML50,newassets/checks; no commitpush.
+Currentpreflight names/scientificgraphsvalid butappnamingunsupported.
+No corechanges in25Octsession, prior24Octcore50diff remains separate.
+
+# Current resume point — 2026-10-25 — locant omission investigation only
+
+User requestedcheckbeforepossiblealgorithmchange. No code/core/molecular/scenario
+changes. ChemistryValidator /root/validate_locant_omission freshreadonly research:
+IUPAC P14.3.3 requiresallnecessarylocants withspecifiedexceptions; P14.3.4.4 not
+sameasuniquevalidlongestparent. PIN2-methylpropane-1,2-diol, notprovenomissible2.
+MainDeveloper foundofficialGreekschoolbook §1.4 explicituniqueBRANCHlocantmay
+beomitted (examplesmethylbutane/dimethylpropane); noexactmethyldiolexamplefound.
+Thus previouscategoricalrejectionofschoolomissionmustbecorrected, whilePINis
+separate. Sources https://iupac.qmul.ac.uk/BlueBook/P1.html and
+https://www.ebooks.edu.gr/ebooks/v/html/8547/2670/Chimeia_B-Lykeiou_html-empl/index1_4.html.
+ReadenginefGuessName: existinglocalomissionrules, no genericuniquegraphpolicy;
+fSupportsAlkylBranchPrefixes limitedtosaturatedmonoalcohol, excludesdiols.
+Read-onlyJavaScriptCore7actualcases: ethanolαιθανόλη,propanol1 1-προπανόλη,
+propanoneπροπανόνη,butanoneβουτανόνη,propadieneπροπαδιένιο,
+propanediol1,2 1,2-προπανοδιόλη,propanetriol1,2,3 1,2,3-προπανοτριόλη.
+No generalclaimofPINcompliance: ketone/propadiene outputs areschoolconvention.
+Proposalonly: explicitschoolbranchomissionpolicy, retaininternallocants for
+numbering/highlights; donotdeletearbitraryuniquenumbers globally. Needsconcrete
+planapprovalbeforecode. Fiveotheralcoholadditions notimplemented; firstname
+schoolomissiondecisionpending, correctedthird3-methylpent4yn2ol accepted.
+No corechanges inthis25Octsession,no commit/push/publication.
+
+# Current resume point — 2026-10-25 — formulas extended across library
+
+User likedalkanespreview andapprovedextendtoothers. Onlytheory-libraryHTML:
+alkenesCnH2nν≥2, alkynesCnH2n-2ν≥2,dienesCnH2n-2ν≥3,enynesCnH2n-4ν≥4;
+CnH2n+2Oν≥1ONLYunder saturatedmonoalcoholsubsection, notgenericAlcoholsheader.
+Scopedheaderwrapavoidslongtitle/badgeclipping. ActualFirefox1500/390 verifies
+sixexactformulae,bounds,nooverflow,zeroJSerrorsPASS; Developerdesktopvisual
+inspection. Evidence checks/library-series-formulas-20261025.json.
+IndependentReviewer /root/review_all_series_formulas source/hash/formula/scope
+checks found no actionablefindings; browserDeveloper evidence. No core/scenario/molecular changes thisturn;
+no commit/push/publication. Nextstep userrefresh/visualacceptance.
+
+# Current resume point — 2026-10-25 — alkane library formula preview
+
+UserrequestedtrialonlyALKANEScard, generalformula plusνrestrictionbelowtitle.
+Updatedonlydesign/theory-library.html withsmallmuted CνH2ν+2 andν≥1 alongside;
+scopedwrapper/CSS. Othercards/lessons unchanged. ActualFirefox1500/390px bounds,
+oneformula,nooverflow,zeroJSerrors PASS; Developervisualinspectionbothscreens.
+Evidence checks/alkane-card-formula-20261025.json; independentReviewer /root/review_alkane_formula_preview
+source/hash/scope/formulacheck nofindings; browserDeveloper evidence.
+No corechanges, no commit/push/publication. Nextstep uservisualacceptancebefore
+extendingtootherseries, whichisnotyetimplemented.
+
+# Current resume point — 2026-10-25 — monoalcohol theory implemented/reviewed
+
+Userapproved20stepplan implemented. Newscenario
+scenarios/saturated-monoalcohols-nomenclature.scenario.json, title
+Κορεσμένες μονοσθενείς αλκοόλες, sevenexistingIDs only. Progressiveknowledge,
+noquiz/isomerism, manualcollapsedrules,2Dmain+optional3D. FirstAlcoholslibrary
+sectionactive20steps, otheralcohols remainsunderpreparation. Scenario50allowlist
+addsnewtitle,HTMLcacheupdated. Viewer50boundedfix OHlocantcompNumber1 in
+unbranchedsaturatedacyclicmonoalcohol nowchemicalclassrule/r3alcohols, resolving
+ReviewerP2. No core/molecular/oldfiveJSONchanges inthis25Octsession.
+
+ActualFirefox20steps exactnames/notes/visibility/ruleopenclose/semanticOHrule,
+validatorno warnings/exportrevalidationexactsteps PASS0JSerrors. JSsyntax
+JavaScriptCore newFunction PASS,diffcheckPASS. Actualnavigation19Next/Prev/
+Exitlibrary/3Dselectedgroups10/8/2 functionalassertionspassed, butstrict no-error
+harness FAILEDtwo runs: externalJSmolsetDisplay viewer=null, run2oneerror.
+Knownpriorbaselinefamily; nofreshbaselinecomparisonforthislesson. Record honestly,
+no blanket all-tests-passclaim. Developervisualinspection final2D/3D/screenshots.
+Evidence docs/checks/monoalcohol-theory-20261025.json and report
+MONOALCOHOLS-THEORY-20261025.md. IndependentReviewer /root/review_monoalcohol_theory
+freshcontext/read-only verifiedfinal7hashes/settings/content/guards/harnessAST;
+P2closed,nootheractionablefindings; browserDeveloper evidence, navigationlimit
+independentlyread/acknowledged; stackalsoincludesappcalls, rootcausenotproven. No dependenceinstallation/core/scientificassetedits.
+
+ExactDesktopcopy saved in established αρχεία  json folder:
+Κορεσμένες_μονοσθενείς_αλκοόλες-Ονοματολογία.scenario.json,
+SHA25697d363aba6792f079d1349ca3660e1320c9e20f62404939ac5edcadb2982fc39.
+No commit/push/publication. Pre-existing24Octcore50diff notthissessionauthorship.
+Nextstep uservisualacceptance; externalJSmol investigation onlyasaseparatetask,
+otheralcoholslesson notimplemented. Upstreamv51sameearlierchecked34eb8b5,
+lastactualsync2b616f6; pendingseparatemigration, notsilentactivation.
+
+# Current resume point — 2026-10-25 — monoalcohol theory plan awaiting approval
+
+User requests theorylesson using allsevenexisting saturatedmonoalcohols, same
+existingstyle. Readonly fivecanonicalscenarios and relevantcomponentrulehelper.
+LearningDesigner /root/plan_monoalcohol_theory read-only proposed19steps, but
+itsstep6 combinespropanol+butanol; Developer proposes20steps splittingthem so
+eachfixedstep hasonevisiblemolecule andallsevenareused. Progressiveknowledge,
+noquiz/isomerism. Ethanolintro/3components/2Dforms, propanol,butanol,OHlocant2,
+4methylpentan2olparent/OHpriority/branch,2,2dimethylpentan3olOHtie+di,
+complexheptanolparent/OH/isopropyl/methyl/alpha,2Dsynthesis+optional3D.
+NewJSON scenarios/saturated-monoalcohols-nomenclature.scenario.json proposed;
+activateonlyfirstAlcoholslibrarysection. Addnewtitle toscenario50manualrule
+allowlist andHTMLcachequery; otheralcohols remainsunderpreparation.
+No application/scenario/corechanges performed inthisplanningturn.
+Waituserplanapproval underAGENTS workflow, then implement/checkallsteps/7IDs,
+collapsedrules/highlights/navigation+independentReviewer. NewLDfindings are
+pedagogicalproposals, notempiricallearningevidence. Coreunchangedthisturn.
+
+# Current resume point — 2026-10-25 — alcohol library card
+
+User approved creating shownAlcoholscard withtwo theorylesson sections.
+Updated onlydesign/theory-library.html: saturatedmonoalcohols/otheralcohols,
+bothclearlyunderpreparation (no corresponding scenarios yet, no deadlinks).
+Existingfivecards unchanged. Scopedheaderwrap/short2lessonbadge preventsclipping;
+initialclippingfixedaftervisualinspection. Browser1500/390 widthchecks PASS:
+6cards,2pendingsections,nooverflow/headerclipping,0JSerrors. Developer screenshot
+inspection; evidencechecks/alcohol-library-card-20261025.json.
+IndependentReviewer /root/review_alcohol_library_card freshcontext verified
+finalhash/oldfivecards/IDs; initialP2badgeclipping resolved, finalreview nofindings.
+BrowserDeveloper evidence, Reviewer inspectedmobile screenshot. No corefile changed inthis25Octsession; prior24Oct
+core50diff remains. No commit/push/publication. Nextstep finalreview anduser
+visualacceptance; actualtwoalcoholtheorylessons remainfuturework, notimplemented.
+
+# Current resume point — 2026-10-25 — user-selected longer isopropyl attachment
+
+User rejected rotatedH and explicitly approved lengthening only the attachment
+bond, keepingHcardinal. Restored originalHfan; translated wholeisopropyl+C/H
+upward1.17 in largestExpanded only. C4-C10 now2.34drawingunits vs1.17;
+allotherlengths/angles/carbonparent/graph and3D unchanged. Generator+standalone
+Expanded+embeddeddata50 updated; checker allows preciselythisbondexception and
+assertscardinalExpanded bonds. Initial+.39trial failedcheck HHcollision, discarded;
+itsbrowserrun interrupted, notPASS evidence. Final16chemical and8actualbrowser
+cases PASS0JSerrors; Developer visuallyinspected separatedH/fullstructurefit.
+Evidence checks/alcohol-long-bond-20261025.json. IndependentReviewer /root/review_alcohol_h_spacing freshcontext read-only:
+4hashes/graph/onlyattachmentlength/cardinal/reproduction/crossings and16chemical
+checks independentlyPASS, no actionablefindings; browserDeveloper evidence.
+Earlier rotationproposal superseded, notcurrent. No corechanges in25October
+session; prior24Oct core50diff remains. No commit/push/publication.
+Nextstep finalreview, userrefresh/visualacceptance. Upstreamv51 reviewstatus
+and pendingintegration detailedbelow; lastactualsync2b616f6,lastchecked34eb8b5.
+
+# Current resume point — 2026-10-25 — local Expanded H-label spacing correction
+
+User reported touchingH in largestalcohol Expanded and approved trying localfix.
+Read README/currentnotes/status; priorfouralcoholchanges remain uncommitted,
+not attributed to thiscorrection. Immediatebaseline hashes saved /tmp/alcohol-H-fix-baseline.
+Changed onlythreeH coordinates (atoms36/37/38) rotating terminalmethylHfan45deg
+aboutC12; carbonframework/graph/CHlengths unchanged. Updated generator,
+standaloneExpandedMOL and matchingembeddeddata50. Otherforms/3D untouched.
+ReportedHpair20/36 distance .39→.57466; minHHafter .55154. Earlier .3-unit
+chemicalclearancethreshold did notcatch labelnearcontact; priorvisualreview missed it.
+16chemicalchecks PASS, actualFirefox8form/chaincases PASS0JSerrors;
+Developer visuallyinspected actualExpanded image showing separatedlabels.
+Evidence docs/checks/alcohol-H-spacing-20261025.json. Independentreview /root/review_alcohol_h_spacing found no actionable findings;
+user subsequently rejected rotatedH appearance. Superseded by attachmentbond trial.
+No corefile changed in this25October correction; pre-existingcore50diff is24October.
+No commit/push/publication. Nextstep finishreview and uservisualacceptance.
+
+Upstream read: initialsandboxDNSfailure, successful elevatedls-remote/raw/API.
+Lastactuallysynced2b616f6cdc5b3c2d65b20d38b2e025e0d58ccfbb; lastcheckedHEAD
+34eb8b5da54a4025c1d63e39b64d1259b86a6063 (onecommit v51richnotes).
+CHANGELOG SHA2569df4cfbed196efb053069d349b97396fad30521a2659985181e88585bcfb4234.
+23changedupstreamfiles, nonev50; upstream explicitlykeepsindexonv50pendingbrowser
+verification. v51parallelmigration remains separate scope, no silentactivationorclaimofsync.
+Reviewremainingv51integration afterthislocalfix; preserveallNameleculecustomizations.
+
+# Current resume point — 2026-10-24 — four alcohols completed locally
+
+User approved adding four alcohols after read-only plan, including necessary
+bounded core50/viewer50 support for saturated acyclic monoalcohol branches.
+Base e76eae87772f4cd2d52a751eed76d32b9b1a7c98, initially clean.
+Added butanol_2 C4H10O, methyl_4_pentanol_2 C6H14O,
+dimethyl_2_2_pentanol_3 C7H16O,
+isopropyl_4_dimethyl_3_5_heptanol_2 C12H26O. Library now93.
+12new2DMOL +4sourceSDF+4provenance+4runtimeSDF. AllH explicit in Expanded/3D,
+right-to-left horizontal parent in Condensed/Expanded, regular120deg Skeletal.
+Three raw PubChem sources CID6568/7910/19871; largest RDKitETKDGv3/MMFF94s
+24conformers seed20261024, lookup404/400 technical failures, no absenceclaim.
+No stereoisomer/R/S assigned. Largest initialZoom3D65 uses existingmetadata
+for fullframe fit. Core50 changed locally: bounded monoalcohol branchprefixes,
+OHlocant priority, corresponding viewer alkyl/OH highlights/rules. HTML50cache,
+data50/README updated; no old molecule/scenario/core49/index changes.
+
+Checks actually performed:16chemical forms,152naming (128atomorder),532old
+name/pool/2D3D regressions;14+877 adaptedP2 assertions PASS. ActualFirefox
+32form/chain cases plus8largest afterzoom PASS,0JSerrors; expandedH/O counts,
+actualmenu/component clicks, Jmolgroup counts, parentmapping/numbering.
+Visual Developer inspection allfourExpanded+real3D, methyl/largestSkeletal;
+final largest3D fits. Tests/report under docs/checks/*alcohol*20261024* and
+[ALCOHOLS-20261024.md](ALCOHOLS-20261024.md). Initial harness-only failures
+(Greekdiacritics/seriesKey/SDFproperties/table scope) corrected and recorded;
+temporary cross-origin3D preview failure not used as acceptance evidence.
+
+Independent Reviewer /root/review_four_alcohols,
+ROLE_ID=NAMELECULE_REVIEWER_V1_20261023, freshcontext, no writes.
+36targetSHA256 verified; independently16chemical/152naming/532oldregressions,
+12embeddedMOL comparisons/diffcheck passed. P2harnessGreeksubstring resolved;
+narrowre-review finaltest+largestzoom found no actionable findings.
+Browser evidence supplied by Developer, no independent browser/remotePubChem
+retrieval/allviewport/export/import assertion. Finalreview manifest copied to
+checks; later records/evidence documentation not partof36frozenproductiontarget.
+
+Upstream HEAD2b616f6cdc5b3c2d65b20d38b2e025e0d58ccfbb sameas lastsync;
+CHANGELOGSHA25646de588394cf019759b0404838fa2f6505fa2ca4f27a8d150de78c087fdeb705
+unchanged. InitialDNSfailure followed successful network read. No syncneeded.
+Core change thissession: js/mulermoc-nom-core-50.js, authoredlocal, no othercore.
+Professor-ready Greekmessage in report. No commit/push/publication authorized
+or performed for thisaddition. Source/files saved locally; nextstep user visual
+acceptance, then checkpoint only on explicitinstruction. Earlier request for
+consolidated professor summary after tomorrow remains pending; don't invent
+futurework. Localapp server8013 remains available.
+
 # Current resume point — 2026-10-24 — authorized local Git checkpoint
 
 Ο χρήστης ενέκρινε τοπικό commit για τη συσσωρευμένη εργασία, χωρίς push ή

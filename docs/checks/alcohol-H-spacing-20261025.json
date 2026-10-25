@@ -1,0 +1,606 @@
+{
+  "target": {
+    "docs/checks/generate-alcohols-20261024.py": "8e609053ec410f87f9d76164fb6727ecd1aa613dd391be0dcc66029dfc7e1289",
+    "js/jsme-nick-nomeclature-moc2-data_50.js": "2c396787c7f97476ffbb5568912bcbc4dcdad40ac6d0ffedefe9906cd34d21a3",
+    "mols/new_molecules/isopropyl_4_dimethyl_3_5_heptanol_2_2D_Expanded.mol": "9368d3b8d6108b67d97f2d715d54d2b2a15167d7c3c27e5cf19021de1a5d1bfa"
+  },
+  "chemical": {
+    "forms": [
+      {
+        "key": "butanol_2",
+        "form": "Condensed",
+        "formula": "C4H10O",
+        "atoms": 5,
+        "explicitH": 0,
+        "minimumClearance": 1.17,
+        "source": "Authored 2D"
+      },
+      {
+        "key": "butanol_2",
+        "form": "Expanded",
+        "formula": "C4H10O",
+        "atoms": 15,
+        "explicitH": 10,
+        "minimumClearance": 0.78,
+        "source": "Authored 2D"
+      },
+      {
+        "key": "butanol_2",
+        "form": "Skeletal",
+        "formula": "C4H10O",
+        "atoms": 5,
+        "explicitH": 0,
+        "minimumClearance": 1.1699428062943933,
+        "source": "Authored 2D"
+      },
+      {
+        "key": "butanol_2",
+        "form": "3D",
+        "formula": "C4H10O",
+        "atoms": 15,
+        "explicitH": 10,
+        "minimumClearance": 0.9723586066878824,
+        "source": "PubChem"
+      },
+      {
+        "key": "methyl_4_pentanol_2",
+        "form": "Condensed",
+        "formula": "C6H14O",
+        "atoms": 7,
+        "explicitH": 0,
+        "minimumClearance": 1.17,
+        "source": "Authored 2D"
+      },
+      {
+        "key": "methyl_4_pentanol_2",
+        "form": "Expanded",
+        "formula": "C6H14O",
+        "atoms": 21,
+        "explicitH": 14,
+        "minimumClearance": 0.5515432893255068,
+        "source": "Authored 2D"
+      },
+      {
+        "key": "methyl_4_pentanol_2",
+        "form": "Skeletal",
+        "formula": "C6H14O",
+        "atoms": 7,
+        "explicitH": 0,
+        "minimumClearance": 1.1699569393785398,
+        "source": "Authored 2D"
+      },
+      {
+        "key": "methyl_4_pentanol_2",
+        "form": "3D",
+        "formula": "C6H14O",
+        "atoms": 21,
+        "explicitH": 14,
+        "minimumClearance": 0.9723413855225952,
+        "source": "PubChem"
+      },
+      {
+        "key": "dimethyl_2_2_pentanol_3",
+        "form": "Condensed",
+        "formula": "C7H16O",
+        "atoms": 8,
+        "explicitH": 0,
+        "minimumClearance": 1.17,
+        "source": "Authored 2D"
+      },
+      {
+        "key": "dimethyl_2_2_pentanol_3",
+        "form": "Expanded",
+        "formula": "C7H16O",
+        "atoms": 24,
+        "explicitH": 16,
+        "minimumClearance": 0.3899999999999999,
+        "source": "Authored 2D"
+      },
+      {
+        "key": "dimethyl_2_2_pentanol_3",
+        "form": "Skeletal",
+        "formula": "C7H16O",
+        "atoms": 8,
+        "explicitH": 0,
+        "minimumClearance": 1.1699053124078034,
+        "source": "Authored 2D"
+      },
+      {
+        "key": "dimethyl_2_2_pentanol_3",
+        "form": "3D",
+        "formula": "C7H16O",
+        "atoms": 24,
+        "explicitH": 16,
+        "minimumClearance": 0.9719599477344731,
+        "source": "PubChem"
+      },
+      {
+        "key": "isopropyl_4_dimethyl_3_5_heptanol_2",
+        "form": "Condensed",
+        "formula": "C12H26O",
+        "atoms": 13,
+        "explicitH": 0,
+        "minimumClearance": 1.17,
+        "source": "Authored 2D"
+      },
+      {
+        "key": "isopropyl_4_dimethyl_3_5_heptanol_2",
+        "form": "Expanded",
+        "formula": "C12H26O",
+        "atoms": 39,
+        "explicitH": 26,
+        "minimumClearance": 0.3899999999999999,
+        "source": "Authored 2D"
+      },
+      {
+        "key": "isopropyl_4_dimethyl_3_5_heptanol_2",
+        "form": "Skeletal",
+        "formula": "C12H26O",
+        "atoms": 13,
+        "explicitH": 0,
+        "minimumClearance": 1.1699569393785396,
+        "source": "Authored 2D"
+      },
+      {
+        "key": "isopropyl_4_dimethyl_3_5_heptanol_2",
+        "form": "3D",
+        "formula": "C12H26O",
+        "atoms": 39,
+        "explicitH": 26,
+        "minimumClearance": 0.9718455329937984,
+        "source": "RDKit"
+      }
+    ],
+    "failures": []
+  },
+  "browser": {
+    "cases": [
+      {
+        "key": "isopropyl_4_dimethyl_3_5_heptanol_2",
+        "mode": "condensed",
+        "chainMode": "algorithmic",
+        "name": "4-ισοπροπυλο-3,5-διμεθυλο-2-επτανόλη",
+        "atoms3D": 39,
+        "parent": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "parent3D": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "groups": [
+          {
+            "slot": 1,
+            "carbons2D": [
+              10,
+              11,
+              12
+            ],
+            "carbons3D": [
+              10,
+              11,
+              12
+            ],
+            "hydrogens": 7
+          },
+          {
+            "slot": 2,
+            "carbons2D": [
+              8,
+              9
+            ],
+            "carbons3D": [
+              8,
+              9
+            ],
+            "hydrogens": 6
+          }
+        ],
+        "OHselected": true
+      },
+      {
+        "key": "isopropyl_4_dimethyl_3_5_heptanol_2",
+        "mode": "condensed",
+        "chainMode": "data",
+        "name": "4-ισοπροπυλο-3,5-διμεθυλο-2-επτανόλη",
+        "atoms3D": 39,
+        "parent": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "parent3D": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "groups": [
+          {
+            "slot": 1,
+            "carbons2D": [
+              10,
+              11,
+              12
+            ],
+            "carbons3D": [
+              10,
+              11,
+              12
+            ],
+            "hydrogens": 7
+          },
+          {
+            "slot": 2,
+            "carbons2D": [
+              8,
+              9
+            ],
+            "carbons3D": [
+              8,
+              9
+            ],
+            "hydrogens": 6
+          }
+        ],
+        "OHselected": true
+      },
+      {
+        "key": "isopropyl_4_dimethyl_3_5_heptanol_2",
+        "mode": "expanded",
+        "chainMode": "algorithmic",
+        "name": "4-ισοπροπυλο-3,5-διμεθυλο-2-επτανόλη",
+        "atoms3D": 39,
+        "parent": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "parent3D": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "groups": [
+          {
+            "slot": 1,
+            "carbons2D": [
+              10,
+              11,
+              12
+            ],
+            "carbons3D": [
+              10,
+              11,
+              12
+            ],
+            "hydrogens": 7
+          },
+          {
+            "slot": 2,
+            "carbons2D": [
+              8,
+              9
+            ],
+            "carbons3D": [
+              8,
+              9
+            ],
+            "hydrogens": 6
+          }
+        ],
+        "OHselected": true
+      },
+      {
+        "key": "isopropyl_4_dimethyl_3_5_heptanol_2",
+        "mode": "expanded",
+        "chainMode": "data",
+        "name": "4-ισοπροπυλο-3,5-διμεθυλο-2-επτανόλη",
+        "atoms3D": 39,
+        "parent": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "parent3D": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "groups": [
+          {
+            "slot": 1,
+            "carbons2D": [
+              10,
+              11,
+              12
+            ],
+            "carbons3D": [
+              10,
+              11,
+              12
+            ],
+            "hydrogens": 7
+          },
+          {
+            "slot": 2,
+            "carbons2D": [
+              8,
+              9
+            ],
+            "carbons3D": [
+              8,
+              9
+            ],
+            "hydrogens": 6
+          }
+        ],
+        "OHselected": true
+      },
+      {
+        "key": "isopropyl_4_dimethyl_3_5_heptanol_2",
+        "mode": "skeletal",
+        "chainMode": "algorithmic",
+        "name": "4-ισοπροπυλο-3,5-διμεθυλο-2-επτανόλη",
+        "atoms3D": 39,
+        "parent": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "parent3D": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "groups": [
+          {
+            "slot": 1,
+            "carbons2D": [
+              10,
+              11,
+              12
+            ],
+            "carbons3D": [
+              10,
+              11,
+              12
+            ],
+            "hydrogens": 7
+          },
+          {
+            "slot": 2,
+            "carbons2D": [
+              8,
+              9
+            ],
+            "carbons3D": [
+              8,
+              9
+            ],
+            "hydrogens": 6
+          }
+        ],
+        "OHselected": true
+      },
+      {
+        "key": "isopropyl_4_dimethyl_3_5_heptanol_2",
+        "mode": "skeletal",
+        "chainMode": "data",
+        "name": "4-ισοπροπυλο-3,5-διμεθυλο-2-επτανόλη",
+        "atoms3D": 39,
+        "parent": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "parent3D": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "groups": [
+          {
+            "slot": 1,
+            "carbons2D": [
+              10,
+              11,
+              12
+            ],
+            "carbons3D": [
+              10,
+              11,
+              12
+            ],
+            "hydrogens": 7
+          },
+          {
+            "slot": 2,
+            "carbons2D": [
+              8,
+              9
+            ],
+            "carbons3D": [
+              8,
+              9
+            ],
+            "hydrogens": 6
+          }
+        ],
+        "OHselected": true
+      },
+      {
+        "key": "isopropyl_4_dimethyl_3_5_heptanol_2",
+        "mode": "condensedZigZag",
+        "chainMode": "algorithmic",
+        "name": "4-ισοπροπυλο-3,5-διμεθυλο-2-επτανόλη",
+        "atoms3D": 39,
+        "parent": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "parent3D": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "groups": [
+          {
+            "slot": 1,
+            "carbons2D": [
+              10,
+              11,
+              12
+            ],
+            "carbons3D": [
+              10,
+              11,
+              12
+            ],
+            "hydrogens": 7
+          },
+          {
+            "slot": 2,
+            "carbons2D": [
+              8,
+              9
+            ],
+            "carbons3D": [
+              8,
+              9
+            ],
+            "hydrogens": 6
+          }
+        ],
+        "OHselected": true
+      },
+      {
+        "key": "isopropyl_4_dimethyl_3_5_heptanol_2",
+        "mode": "condensedZigZag",
+        "chainMode": "data",
+        "name": "4-ισοπροπυλο-3,5-διμεθυλο-2-επτανόλη",
+        "atoms3D": 39,
+        "parent": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "parent3D": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "groups": [
+          {
+            "slot": 1,
+            "carbons2D": [
+              10,
+              11,
+              12
+            ],
+            "carbons3D": [
+              10,
+              11,
+              12
+            ],
+            "hydrogens": 7
+          },
+          {
+            "slot": 2,
+            "carbons2D": [
+              8,
+              9
+            ],
+            "carbons3D": [
+              8,
+              9
+            ],
+            "hydrogens": 6
+          }
+        ],
+        "OHselected": true
+      }
+    ],
+    "javascriptErrors": []
+  },
+  "coordinateChanges1Based": [
+    36,
+    37,
+    38
+  ],
+  "reportedPair1Based": [
+    20,
+    36
+  ],
+  "pairDistanceBefore": 0.39,
+  "pairDistanceAfter": 0.5746603344585389,
+  "minimumHDistanceAfter": 0.5515432893255068,
+  "visualInspection": "Developer actualExpanded screenshot1500x1000, separatedH; no exhaustiveviewport claim"
+}

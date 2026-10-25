@@ -7,11 +7,12 @@ Desinged and developed by Nickolas Charistos
 **Current baseline:** local v50, integrated from professor upstream
 `2b616f6` on 2026-10-23. The v50 core preserves the three locally reviewed
 v49 P2 fixes and the approved εξαδιένιο connector correction; it is not byte-identical
-to upstream. All 89 local molecules,
+to upstream. All 98 local molecules,
 their order, 2D assets, 3D files and lesson settings are preserved.
 Namelecule welcome/library/theme, name fitting, loading and Exit behavior remain.
 See [v50 integration report](docs/V50-SYNC-20261023.md) for checks and limitations.
-This migration is local and has not been committed or published.
+The previous v50 work is saved in local checkpoint `e76eae8`; the four-alcohol
+addition below is not committed or published.
 Six new alkadienes were added locally on 2026-10-24, with three 2D forms and
 explicit-H 3D assets: five validated PubChem conformers and one RDKit fallback
 (1,2-butadiene, after rejecting unsuitable PubChem allene geometry). See [diene checks](docs/DIENES-20261024.md).
@@ -38,7 +39,7 @@ it is listed as the third card in the theory library. See [lesson details](docs/
 | Viewer | [js/mulermoc-nom-molview-50.js](js/mulermoc-nom-molview-50.js) |
 | Teaching | [js/mulermoc-nom-teaching-50.js](js/mulermoc-nom-teaching-50.js) |
 | Scenarios | [js/mulermoc-nom-scenario-50.js](js/mulermoc-nom-scenario-50.js) |
-| Molecule data (89 molecules) | [js/jsme-nick-nomeclature-moc2-data_50.js](js/jsme-nick-nomeclature-moc2-data_50.js) |
+| Molecule data (98 molecules) | [js/jsme-nick-nomeclature-moc2-data_50.js](js/jsme-nick-nomeclature-moc2-data_50.js) |
 | Theme | [css/namelecule-50.css](css/namelecule-50.css) |
 
 The sections below describe the historical v44 feature baseline and broader
@@ -173,3 +174,20 @@ Import the JSON; this lesson has not been published yet.
 The five theory lessons use progressive disclosure without quizzes. Current step
 counts are alkanes 21, alkenes 22, alkynes 22, alkadienes 23 and enynes 23, including
 a separate optional final 3D observation. Naming synthesis stays in 2D.
+
+## Four alcohols — 2026-10-24
+
+Added 2-butanol (C4H10O), 4-methyl-2-pentanol (C6H14O),
+2,2-dimethyl-3-pentanol (C7H16O) and
+4-isopropyl-3,5-dimethyl-2-heptanol (C12H26O). Saturated acyclic monoalcohol
+branch prefixes and corresponding highlights are supported by the scoped v50
+extension. Expanded and 3D include all H, including O–H. Three PubChem SDFs
+and one explicitly documented RDKit fallback; no stereoisomer identity assigned.
+
+## Five other alcohols — 2026-10-25
+
+Added one branched diol and four branched unsaturated alcohols (C4H10O2,
+C5H10O, C6H10O, C6H8O, C9H14O), using existing 2D/3D asset conventions.
+Pure acyclic alcohol branch prefixes and distinct en/yne/OH locants are supported.
+Four raw PubChem 3Ds and one documented RDKit conformer; stereochemistry is
+unspecified. No locant-omission policy change.
