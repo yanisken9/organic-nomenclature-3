@@ -1,3 +1,16 @@
+# 2026-10-25 — Δημοσίευση συγκεντρωτικής εργασίας 23–25/10
+
+Runtimecommit6402b30δημοσιεύτηκεorigin/thesis-work,346publicSHA256PASS.
+ReportREPORT-20261023-25.md/.html,υποδοχήμέσωdesign/welcome-proposal.html.
+ΠραγματικόςpublicFirefox153βήματα/7PrevExit/report390ολοκληρώθηκαν,αλλά51events:
+11JSmolviewer-nullTypeErrors/33GAcookies/7trackeriframe. Αναφέρονταιρητάστοreport,
+χωρίςισχυρισμόκαθολικούpass/μηδένσφαλμάτωνήαποκλειστικάεξωτερικήςαιτίας.
+Δεντροποποιήθηκεεφαρμογή/coreκατάτηναποθήκευση. Τριήμεροcore49/core50αλλαγές
+αποθηκεύτηκαν/δημοσιεύτηκανκαιπεριγράφονταιμεπηγές/ελέγχους.
+ΑνεξάρτητοςReviewerεπανέλεγξετελικάreport+evidenceχωρίςευρήματατεκμηρίωσης.
+7DesktopJSONsκαιZIP/Gitbundleverified·τελικόHEAD/ZIPκαιδημόσιαmetadataεπαλήθευση
+στοεξωτερικόbackup-manifest.json/public-final-metadata.json. ΣτοιχείαSESSION.
+
 # 2026-10-25 — Συγκεντρωτική αναφορά 23–25/10 και εξουσιοδοτημένη δημοσίευση
 
 Ρητό αίτημα πλήρους αποθήκευσης/δημοσίευσης. Νέο REPORT-20261023-25.md/.html,

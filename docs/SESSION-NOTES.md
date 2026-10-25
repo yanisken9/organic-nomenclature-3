@@ -1,3 +1,42 @@
+# Current resume point — 2026-10-25 — full save/publication completed, JSmol limitation recorded
+
+Userauthorizedfullsave/report/publication. Runtime6402b30a8edc22a8538e85c3b8241b5e5cf59d6f
+committed103files/pushedoriginthesis-work (previous2de69f4),includingpriorlocale76eae8.
+Originmainuntouched. Public346filesSHA256matchruntimeincludingall98runtime3D,
+index→welcome,7scenarios/core50/data/viewer/report. PublicappURL
+https://yanisken9.github.io/organic-nomenclature-3/design/welcome-proposal.html?v=20261025-final
+Report https://yanisken9.github.io/organic-nomenclature-3/docs/REPORT-20261023-25.html
+ReportcoversFri23–Sun25Oct:98molecules,18new,7lessons153steps,14PubChem4RDKit,
+core49P2/core50customsync/horizontal/connector/alcohols,progressivepedagogy,limits.
+
+PublicFirefox153functionalsteps/7PrevExit/welcome/report390px completed, BUTnotclean:
+11JSmolthis.viewer-nullTypeErrors (stackincludesappcalls),33GAcookierejections,
+7JmolTrackeriframeblocks. Raw evidence docs/checks/public-browser-20261025.json;
+bytesandruntime record publication-final-20261025.json. Notfull3Drevalidation,
+notzeroJSerrorpass,notrootcauseproof; earlierknownJSmolstabilityissue remains.
+Noappfixattemptinthissaveoperation. Publicwelcomeimagefulldecode+logoGETidentity
+passed; initiallypartialscreenshotnotusedasfinalvisualevidence. Developerinspected
+finalwelcomescreenshotandreportmobile(fullpagecapturelimitedreadability).
+
+Independent freshReviewer /root/review_professor_report_release originallyclean
+2reportfiles; updatedreport+2evidencefiles4hashnarrowre-reviewCLEAN,manifest
+/tmp/report-20261025-final-review.json. Reportsnowexplicitlydisclosepublicconsoleevents.
+7DesktopJSONbyteexact. ZIP881workspacefiles+7exportsverifiedandGitbundlecomplete
+historyverified in ../Αποθηκεύσεις/2026-10-25; refreshafterfinaldocumentationcommit
+andcopypublicscreenshots. Finalmetadata commit identifiedby message
+“Record verified public release and disclose JSmol console limitations”.
+FinalarchiveHEAD/ZIPSHA/exports recordedoutsideGit in backup-manifest.json;
+public-final-metadata.json recordsactualpostpushreport/evidencebytechecks.
+Nextsession inspecttheseexternalrecordsandnewupstream; anyJSmolfixneedsseparate
+read-onlyinvestigation/approvedplan. Noadditionaluserapproval
+requiredforauthorizedsave. Nooutboundmessagetoprofessor.
+
+CoreCURRENTsaveoperationunchanged; FULL23–25Octperiodcore49andcore50changed,
+readyGreekprofessormessageinREPORTsection2/lastsection. Alreadyreviewedchanges
+committed/published6402b30,chemical/naming/browsercheckslinked,limitationsdisclosed.
+Upstream25OctHEAD34eb8b5andchangelog9df4cfbeunchangedlastcheck;actualsync2b616f6,
+v51notintegrated. Nochangesglobalconfig/privatefilespublished.
+
 # Current resume point — 2026-10-25 — authorized full save/report/publication in progress
 
 User explicitly asks saveeverythingeverywhere, consolidated professorreport Friday23Oct
