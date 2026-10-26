@@ -420,3 +420,14 @@ at that row; card Play starts at1. Drawer state persists across author hide
 and Play/Exit. Library-launched lessons return to library on Exit/Esc rather
 than restoring author chrome. Local showStepNumbers/reserveTitleSpace and
 loading/error handling are retained. See V48-SYNC-20261021.md.
+
+
+## Upstream v51 image authoring update — 2026-10-26
+
+Integrated runtime patch from professor commit dc02933358a19f792c1a393fbdc2c15c2aba573f
+(last previous runtime sync6e29bd5c). Existing local scenario-plan text is preserved.
+The note image helper opens a native PNG/JPEG/GIF/WebP picker, with a512000-byte
+file cap and required alternative text, embedding a capped raster data URI.
+A separate URL action preserves existing relative/HTTPS/data-URI policies.
+The async insert dispatches input to synchronize inline and expanded note editors.
+See Presentation-Step-Rich-Text-PLAN.md and the dated upstream handoff.

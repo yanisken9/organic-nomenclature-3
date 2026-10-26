@@ -1,5 +1,18 @@
 # Changelog
 
+### 2026-10-26 — Isolated React welcome/library pilot (local)
+
+- Add react-preview/ with pinned React/Vite, generated source-content snapshot and common UI components; retain nine cards/twelve links and the current molecular player.
+- Build and focused Firefox desktop/mobile, dialog, history and lesson-entry checks passed; no core/molecule/lesson changes.
+- Current public welcome/library are unchanged. Not committed or published; see REACT-PILOT-20261026.md.
+
+### 2026-10-26 — Upstream v51 note image file picker (local)
+
+- Port professor commit dc02933358a19f792c1a393fbdc2c15c2aba573f: raster image file picker, size/alt checks, separate URL action and inline/modal synchronization.
+- Preserve Namelecule component rules, twelve lesson titles and library Exit behavior.
+- Add upstream rich-note plan/handoff; retain local scenario-plan history. Core and molecular data unchanged.
+- Verification and publication status are recorded in SESSION-NOTES.md.
+
 ### 2026-10-22 - Add missing alkyne library card
 
 - Add the third lesson card for the existing 22-step alkynes scenario.

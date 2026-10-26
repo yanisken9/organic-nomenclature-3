@@ -1,3 +1,134 @@
+# Current resume point — 2026-10-26 — local React pilot complete, independent review clean
+
+User approved the proposed separate React welcome/library trial. Implemented and
+built under react-preview/; local entry http://127.0.0.1:8013/react-preview/dist/
+(library #/library). Existing appearance/content kept; actual React owns shell,
+hash routing, dialogs and rendering with shared components. A documented trusted
+source-node bridge avoids a second manually maintained syllabus; it is not a full
+normalized React architecture or a migration of chemistry/player/viewers.
+Nine cards/twelve links correspond to the unchanged twelve lesson JSONs /283steps;
+126 molecules, all molecular assets, current welcome/library and core are unchanged.
+Legacy player entry and its existing library Exit remain the pilot boundary.
+
+Professor update: last prior sync6e29bd5c89872665ec9cd45f9f80fd2d9bd91d6e;
+current upstream HEADdc02933358a19f792c1a393fbdc2c15c2aba573f was checked successfully
+against actual history and changelog (one 'file selection window for images' commit).
+Standing-authorized exact scenario51 runtime patch integrated and validated locally,
+with local rules/title allowlist/Exit retained, active HTML cache updated, upstream
+reference plan/handoff added and local plan/changelog preserved additively. Upstream
+session notes did not overwrite local records. New last content-synchronized revision
+is dc029333 in this working tree; last committed/published release still3673c390 /
+its previously synchronized6e29bd5c content. No merge commit or new publication claimed.
+
+React/React DOM19.3.1 and Vite8.3.5 pinned with lock; portable official Node24.22.1
+archive checksum verified, isolated/tmp installation. No system-wide install.
+Npm install --ignore-scripts reported0 vulnerabilities; production build passed.
+Node_modules/dist ignored; React MIT notice included in generated build. Rebuild
+requires Node24+/npm/Python3.9+, with instructions react-preview/README.md.
+Source report docs/REACT-PILOT-20261026.md accurately describes bridge and limits.
+
+Independent Reviewer /root/review_other_ketones,
+ROLE_ID=NAMELECULE_REVIEWER_V1_20261023, reused separate context without Developer
+implementation history: no actionable P0/P1/P2/P3 findings. All23source/doc/evidence
+and4generated build hashes matched before/after review; manifest SHA256
+c872e2daa27003dba5e0dfd465a99dd140a04f9bc9ade08e5d1dcd8533c9c1db.
+Identical manifest persisted as docs/checks/react-preview-reviewed-target-20261026.json
+as a review record. Developer rechecked all27 target hashes after review; no reviewed
+source/build content was changed afterward. Journals are outside frozen targets.
+
+Reviewer independently inspected routing/URLs/rendering/dialog lifecycle/AST bridge,
+CSS/package-lock/licenses/ignore policy; executed read-only extractor --check and
+18 actual upstream-picker/URL VM cases; verified exact upstream runtime delta and
+the two new upstream docs byte-for-byte;1234 protected baseline hashes, AST/diff PASS.
+No Reviewer writes or independent browser/build/deployment execution; enforced
+read-only filesystem isolation was not established. Chemical review N/A: content
+unchanged. Build/audit and browser results below are Developer evidence.
+
+Developer Firefox1500/390 checks:9cards12links/cardtext+URL parity, image decoding/
+SVGviewBox/nooverflow,3dialogs+Escape/focus, back/forward/hash-refresh, actual old
+lesson entry/Next/Exit,126mols and real PNG FileReader with expanded/inline/state
+synchronization. Final focused run0JSerrors. Native OS picker itself not automated;
+no full283step/other-browser/Drupal/offline/full-React-viewer claim. Known JSmol
+viewer-null issues in other previously documented paths remain unresolved.
+Evidence docs/checks/react-preview-{static,browser,upstream-picker}-20261026.json,
+reproduction scripts in docs/checks/ and react-preview/tools/; screenshots/tmp.
+
+Core status: no core49/50/51 changes in this pilot/sync scope. Core51 SHA256
+096d617853646de0dfd67bcbde3e32252aebcb98e7525b05e6f7e71ccb48a5fc equals baseline.
+Earlier approved core work remains in the saved/published preceding release.
+No new commit/push/publication; current public professor links retain saved release.
+Next: user inspects local React trial and decides whether to extend the migration.
+External default-browser launch via open completed successfully (exit0) for the
+local preview URL. Actual preview behavior was verified in the recorded Firefox
+run; no claim is made about which tab is currently visible on the user display.
+
+# Current resume point — 2026-10-26 — React pilot implemented; independent review running
+
+Approved separate pilot implemented under react-preview/: actual React rendering,
+hash navigation, shared UI components and information dialogs. Deterministic trusted
+source-page extraction preserves welcome/library text, formulas, CSS, assets and
+nine cards/twelve existing lesson URLs. Existing welcome/library and all126molecule
+records/assets plus12scenarioJSONs are unchanged. Legacy player/viewers remain
+outside React; starting a lesson navigates normally and Exit keeps the old library.
+No new login/quiz/backend/content or publication. React19.3.1/React DOM19.3.1 and
+Vite8.3.5 pinned; Node24.22.1 checksum-verified portable download only in/tmp.
+Npm install --ignore-scripts audit0 vulnerabilities; Vite production build PASS.
+Generated dist/node_modules ignored; React MIT notice included. Preview URL:
+http://127.0.0.1:8013/react-preview/dist/
+
+Standing-authorized routine professor runtime sync from6e29bd5c to dc029333
+verified: exact upstream scenario51 picker patch, active HTML cache, upstream
+reference plan/handoff and additive local docs. Current upstream HEAD/history and
+changelog read successfully. Existing local scenario rules/title allowlist/Exit
+preserved. Upstream journals not copied. Content synchronized in local working tree,
+not committed or published; last saved/published snapshot remains3673c390.
+Core51 SHA096d617853646de0dfd67bcbde3e32252aebcb98e7525b05e6f7e71ccb48a5fc unchanged.
+
+Developer checks:1234 pre-existing tracked files protected, exact upstream diff
+addition/deletion parity, package/lock versions, source snapshot --check, all12JSONs
+and283steps, two Python ASTs, scenario Node syntax, diff whitespace,18 actual-picker
+VM cases. Firefox1500/390: no overflow, images+SVG,9cards12links/source text+URL
+parity,3dialogs+Escape/focus, back/forward/refresh, old lesson entry/Next/Exit,
+126mols and genuine PNG FileReader including expanded/inline/state synchronization.
+Final focused run0JSerrors; native OS file picker itself not automated. Old JSmol
+issues remain open; no fresh all283step matrix/Drupal/other-browser claim.
+Evidence docs/checks/react-preview-{static,browser,upstream-picker}-20261026.json;
+report docs/REACT-PILOT-20261026.md. Screenshots/tmp/react-preview-*-20261026.png.
+
+Independent Reviewer /root/review_other_ketones inspects frozen23source/doc/evidence
+and4generated-build hashes, /tmp/react-preview-reviewed-target-20261026.json SHA
+c872e2daa27003dba5e0dfd465a99dd140a04f9bc9ade08e5d1dcd8533c9c1db, base3673c390.
+No target edits during review; journals excluded. Next: resolve findings/re-review
+if needed, verify final hashes and open local preview in external browser.
+No commit, push or publication in this pilot; no additional core changes.
+
+# Current resume point — 2026-10-26 — approved isolated React pilot in progress
+
+User approved trying the proposed separate welcome/library React pilot. Scope:
+react-preview/ with React/Vite, existing content/assets and links to unchanged
+chemistry application; no molecule/lesson/core migration. Local preview only,
+no new commit/push/publication authorization for this pilot. Main conversation
+is Developer; final independent Reviewer required. Baseline1240tracked hashes
+in /tmp/namelecule-before-react-pilot-20261026/baseline.json, HEAD3673c390.
+
+Required professor read-only check: upstream HEADdc02933358a19f792c1a393fbdc2c15c2aba573f,
+one commit after last synchronized6e29bd5c89872665ec9cd45f9f80fd2d9bd91d6e,
+message 'file selection window for images'. Changelog and actual history compared
+successfully through GitHub API plus git fetch; overlaps only scenario51 and docs.
+Presented routine-sync intent before applying the standing-authorized runtime
+patch: raster picker/size+alt checks/separate URL action/live inline-modal sync.
+Runtime patch applied cleanly with local rules/title allowlist/Exit preserved.
+Upstream rich-note plan and handoff added; local didactic plan/changelog preserved
+with additive sync record. Upstream SESSION-NOTES was not copied over local notes.
+Active HTML scenario cache key updated. Verification pending; don't yet claim
+the new runtime fully validated. No core/data/MOL/SDF/lesson changes.
+
+No Node/npm initially on PATH. Downloaded portable official Node24.22.1 to
+/tmp/namelecule-react-tools and verified archive SHA256 against official sums.
+No system installation. React/Vite package versions being pinned for pilot.
+Next: implement separate preview, build and browser checks, upstream image-picker
+checks, independent frozen-target review. No commit/push/publication performed.
+
 # Current resume point — 2026-10-26 — final save and public release verified
 
 User request completed: save all work and provide two professor links in Desktop

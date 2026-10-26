@@ -1,0 +1,13 @@
+.react-preview-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  padding: 10px max(18px, calc((100% - 1144px) / 2));
+  border-bottom: 1px solid #dce5df;
+  background: #edf3ef;
+  color: #254c50;
+  font: 12px/1.5 system-ui, sans-serif;
+}
+.react-preview-banner a { text-underline-offset: 3px; }
