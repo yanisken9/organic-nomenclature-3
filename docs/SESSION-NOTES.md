@@ -1,3 +1,49 @@
+# Current resume point — 2026-10-26 — full save/publication verified, professor report deferred
+
+Userauthorizedsaveeverythingeverywhere. Runtimecheckpoint
+74e381c7decc839b05719400ffdeab59303917b6 committed296files/pushedoriginthesis-work,
+from5fe4006;originmain9c5259euntouched. IncludesyesterdayMOL-onlySVGfunction
+removalandtodayv51/23newmolecules/4newlessons/customizations. Library121molecules,
+11lessons255steps. No functionalapp/corechangebythesaveoperationitself.
+
+AssemblyReviewer /root/review_save_checkpoint ROLE_ID=NAMELECULE_REVIEWER_V1_20261023
+foundP1missingignoredjQuerydependency. Explicitlyforce-addedexisting
+js/vendor/jquery/jquery-4.0.0.min.js+LICENSE.txt (no source/ignoreedits),
+294frozencontenttargets+2journalscommitted. Re-reviewconfirmedP1resolved,
+294hashes/indexdependencyinclusionPASS, noresidualP1/P2. Cosmeticwhitespace
+fromupstreamnewfilesnotfunctionaldefect,leftunchanged. READMEcurrentcheckpoint
+statusheaderreviewedseparatelyandclean;historical-localstatuscontextclarified.
+Developer9JSsyntax+modified/newPythonASTPASS;priorfeaturetests/reviewsretained.
+
+Public156filesSHA256matchruntimecommitincludingall121runtimeSDF/11scenarios,
+index->welcome->v51/newcard/assets/vendor. PublicFirefox functionalwelcome/
+image.decodebothimages/library9cards11links/new25stepketonelessonNextExit/
+121mols/largestnewketone3D40atomsPASS. ConsoleNOTclean:3knownviewernullerrors,
+6GAcookiepolicyentries,2JmolTrackerframeblocks;rootnotisolated/notfixed.
+InitialsmokealsologgedImagecorrupt/truncatedandfailedconsolecheck;rawinitial
+recordretained. Secondexplicitfullwelcomeimage.decodepassedbothPNGsandnoimage
+errorrecurred;notrootcauseproof. Noall255stepspublicorall3Drevalidationclaimed.
+EvidenceoutsideGit ../Αποθηκεύσεις/2026-10-26/public-verification.json,
+public-browser-smoke.json,public-browser-smoke-initial.json,public-v51-ketone.png.
+
+11DesktopJSONbyte-identicalinαρχεία  json. FullZIP1158workspacefiles+11exports
+verifiedbeforefinalmetadata;finalrefreshbelowwillupdateZIP/manifesttofinalHEAD.
+SeparateGitbundlehistoryverified,validation-baselinesZIP15directories/4790files
+170.9MiBuncompressed,preview-evidenceZIP121screenshots. Backuplocation
+../Αποθηκεύσεις/2026-10-26. FinalHEAD/ZIP/bundle hashes recordedtherein
+backup-manifest.json/final-save-state.json, notinventedbeforecommit.
+Finalmetadata-onlycommitmessage "Record verified Namelecule checkpoint and defer professor report".
+
+ConsolidatedprofessorreportEXPLICITLYDEFERRED untilafterlaterwork. Startwith
+2026-10-25MOL-onlydoublebond/SVGfunctionremoval(documented
+ docs/MOL-ONLY-DOUBLE-BONDS-20261025.md),thenall2026-10-26workandfuturechanges.
+No newprofessorreportcreatedorsent;oldREPORT23-25retainedasdatedhistory.
+Temporarybreakcontinues;do notstartnewimplementationwithoutuserrequest.
+Core51current38920161500f7fbbf66d7037b2a5fe0780b01a821f9643be918ccde79325a2f3,
+earlierapprovedether/aldehyde/ketoneextensionsnowcommitted/publishedin74e381c.
+Upstreamlastchecked/actuallysynced6e29bd5earliersamesession,no newremotecheck.
+Nextonreturn:readthispointandexternalfinal-save-state,thenuserpriority.
+
 # Current resume point — 2026-10-26 — authorized full save in progress, professor report deferred
 
 User explicitly requests saveeverythingeverywhere duringtemporarybreak.

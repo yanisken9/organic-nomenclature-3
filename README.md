@@ -4,6 +4,14 @@ A Greek-first interactive learning platform for organic nomenclature, built arou
 
 Desinged and developed by Nickolas Charistos
 
+**Saved checkpoint — 2026-10-26:** runtime commit
+`74e381c7decc839b05719400ffdeab59303917b6` is saved on `origin/thesis-work`
+and verified on the personal GitHub Pages site, with121molecules and11lessons
+(255steps). All121runtime3Dfiles and11scenariofiles matched the committed bytes.
+The dated local-only statements below describe implementation stages before
+this save. See `docs/SESSION-NOTES.md` for current publication and backup status.
+The consolidated professor report is deferred until after the next work period.
+
 **Current baseline:** local v51, integrated from professor upstream
 `6e29bd5c89872665ec9cd45f9f80fd2d9bd91d6e` on 2026-10-26.
 Core51 now includes the approved local branched-ether naming extension. Namelecule preserves
