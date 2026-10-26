@@ -4,15 +4,64 @@ A Greek-first interactive learning platform for organic nomenclature, built arou
 
 Desinged and developed by Nickolas Charistos
 
-**Current baseline:** local v50, integrated from professor upstream
-`2b616f6` on 2026-10-23. The v50 core preserves the three locally reviewed
-v49 P2 fixes and the approved εξαδιένιο connector correction; it is not byte-identical
-to upstream. All 98 local molecules,
-their order, 2D assets, 3D files and lesson settings are preserved.
-Namelecule welcome/library/theme, name fitting, loading and Exit behavior remain.
-See [v50 integration report](docs/V50-SYNC-20261023.md) for checks and limitations.
-The previous v50 work is saved in local checkpoint `e76eae8`; the four-alcohol
-addition below is not committed or published.
+**Current baseline:** local v51, integrated from professor upstream
+`6e29bd5c89872665ec9cd45f9f80fd2d9bd91d6e` on 2026-10-26.
+Core51 now includes the approved local branched-ether naming extension. Namelecule preserves
+its welcome page, theme, eleven theory lessons (255 steps), all 98 pre-existing molecule records,
+2D MOL coordinates/explicit hydrogens, original 3D sources/provenance and cameras.
+The v51 viewer uses the upstream native SVG renderer and rich-note support while
+retaining local fitting, label spacing, highlights, manual rule panels and library Exit.
+The approved MOL-only double-bond correction is retained; its SVG override is absent.
+The previous customized v50 remains runnable and is unchanged by this migration.
+This v51 integration is local and has not been committed or published.
+See the [v51 integration record](docs/V51-SYNC-20261026.md) for checks and limitations.
+
+Seven ethers were added locally on 2026-10-26, taking the library to 105 molecules.
+Each uses the existing common/systematic naming toggle, three 2D MOL forms and
+an explicit-H, graph-matched PubChem 3D source. The core/viewer extension handles
+branched C4 alkyl groups, parent methyl prefixes and complete group highlights.
+The previous 98 molecules and all theory scenarios are unchanged by this addition.
+See [ether checks](docs/ETHERS-20261026.md). The approved follow-up arranges
+ethers horizontally around O and uses a common default atom-label scale across
+the 2D library; see [2D layout/typography checks](docs/2D-LAYOUT-TYPOGRAPHY-20261026.md).
+
+A 27-step saturated monoether theory lesson uses all 11 existing ethers in ascending
+carbon count, teaching common and school systematic naming through progressive
+disclosure. See [lesson record](docs/MONOETHERS-SCENARIO-20261026.md).
+
+Five aldehydes were added locally on 2026-10-26, taking the current library to110
+molecules. Methanal detection and existing alkyl-prefix handling were extended
+within the approved saturated acyclic monoaldehyde scope; its twoH are preserved
+in the condensed viewer. Four3D sources are PubChem and one is documented RDKit.
+See [aldehyde checks](docs/ALDEHYDES-20261026.md).
+
+A25-step saturated monoketone theory lesson uses all seven existing eligible
+molecules, progressive disclosure, optional closed rules and final3D.
+The new double KETONES card reserves other ketones for a future lesson.
+See [ketone lesson checks](docs/MONOKETONES-SCENARIO-20261026.md).
+
+Four saturated monoketones were added locally on2026-10-26, taking the library
+to121molecules. Bounded core51 support preserves carbonyl locants and alkyl
+prefixes, selects equivalent parents by the approved naming rules, and reuses
+existing2D/3D highlights. Three3D sources are PubChem and one is documented RDKit.
+See [ketone checks](docs/KETONES-20261026.md).
+
+Seven other aldehydes were added locally on 2026-10-26, taking the library to117
+molecules. The approved core51 extension handles alkyl prefixes for acyclic
+mono-/dialdehydes with C-C unsaturation and numbering with two terminal CHO groups.
+All previous molecules and scenarios remain unchanged. Five3D sources are PubChem,
+two are documented RDKit conformers. School parent-chain naming is retained for
+4-ethylpent-4-en-2-ynal, distinct from current preferred IUPAC chain selection.
+See [other aldehyde checks](docs/OTHER-ALDEHYDES-20261026.md).
+
+A 24-step saturated monoaldehyde lesson uses the nine existing saturated aldehydes,
+with the established progressive disclosure, C1 numbering and optional final3D.
+The double aldehyde library card also offers the26-step other-aldehyde lesson,
+using all eight existing unsaturated/dialdehyde examples through progressive
+disclosure, optional closed rules and final3D. No quizzes or isomerism teaching.
+See [other aldehyde lesson checks](docs/OTHER-ALDEHYDES-SCENARIO-20261026.md).
+See [lesson record](docs/MONOALDEHYDES-SCENARIO-20261026.md).
+
 Six new alkadienes were added locally on 2026-10-24, with three 2D forms and
 explicit-H 3D assets: five validated PubChem conformers and one RDKit fallback
 (1,2-butadiene, after rejecting unsuitable PubChem allene geometry). See [diene checks](docs/DIENES-20261024.md).
@@ -23,7 +72,7 @@ See [enyne validation](docs/ENYNES-20261024.md) for formulas, provenance and che
 A fifth 23-step theory lesson, «Ονοματολογία Αλκενινίων», uses the seven existing
 enynes and the same stepwise library format. See [lesson checks](docs/ENYNES-SCENARIO-20261024.md).
 **Entry point:** [index.html](index.html) → [Namelecule welcome](design/welcome-proposal.html)
-→ [v50 molecule exploration](mulermoc-nom-50.html).
+→ [v51 molecule exploration](mulermoc-nom-51.html).
 The prior [v49](mulermoc-nom-49.html) remains runnable with its local P2 fixes.
 
 The previous [v48](mulermoc-nom-48.html) remains runnable with its original files.
@@ -35,12 +84,12 @@ it is listed as the third card in the theory library. See [lesson details](docs/
 
 | Layer | File |
 |---|---|
-| Core engine | [js/mulermoc-nom-core-50.js](js/mulermoc-nom-core-50.js) |
-| Viewer | [js/mulermoc-nom-molview-50.js](js/mulermoc-nom-molview-50.js) |
-| Teaching | [js/mulermoc-nom-teaching-50.js](js/mulermoc-nom-teaching-50.js) |
-| Scenarios | [js/mulermoc-nom-scenario-50.js](js/mulermoc-nom-scenario-50.js) |
-| Molecule data (98 molecules) | [js/jsme-nick-nomeclature-moc2-data_50.js](js/jsme-nick-nomeclature-moc2-data_50.js) |
-| Theme | [css/namelecule-50.css](css/namelecule-50.css) |
+| Core engine | [js/mulermoc-nom-core-51.js](js/mulermoc-nom-core-51.js) |
+| Viewer | [js/mulermoc-nom-molview-51.js](js/mulermoc-nom-molview-51.js) |
+| Teaching | [js/mulermoc-nom-teaching-51.js](js/mulermoc-nom-teaching-51.js) |
+| Scenarios | [js/mulermoc-nom-scenario-51.js](js/mulermoc-nom-scenario-51.js) |
+| Molecule data (121 molecules) | [js/jsme-nick-nomeclature-moc2-data_51.js](js/jsme-nick-nomeclature-moc2-data_51.js) |
+| Theme | [css/namelecule-51.css](css/namelecule-51.css) |
 
 The sections below describe the historical v44 feature baseline and broader
 project plans; the current migration status is recorded above.

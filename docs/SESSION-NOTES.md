@@ -1,3 +1,1002 @@
+# Current resume point — 2026-10-26 — authorized full save in progress, professor report deferred
+
+User explicitly requests saveeverythingeverywhere duringtemporarybreak.
+Priorfullsaveworkflow reused: Desktopexports/localZIP+Gitbundle/originthesis-work
+commitpush/existingGitHubPagespublication. Remoteoriginthesis-work5fe4006matches
+localHEAD;originmain9c5259eunchanged. No unrelatedbranch/upstreamwrites.
+Consolidatedprofessorreport isEXPLICITLYDEFERRED untilafterlaterwork,starting
+2026-10-25MOL-onlydoublebond/SVGfunctionremoval (docs/MOL-ONLY-DOUBLE-BONDS-20261025.md),
+then2026-10-26v51/ethers/aldehydes/ketones/lessons/animationandfuturechanges.
+Do notgeneratenewprofessorreportorsendanythingnow;previousreportkeptasdatedhistory.
+Releaseinventory121molecules,11activelessons255steps. Syntax9JS+modified/newPython
+ASTPASS. Existingreviewedchecksretained;knownJSmolthis.viewerisnullremainsdisclosed.
+Planbackup ../Αποθηκεύσεις/2026-10-26 and11byte-identicalDesktopJSONexports.
+No app/corechangesforthissave. Currentcore51SHA38920161500f7fbbf66d7037b2a5fe0780b01a821f9643be918ccde79325a2f3.
+Earlierapprovedcoreextensionssavedaspartofrelease,notclaimedunchangedoversession.
+Nextfinishbackups/commitpush/publicbyteverificationandrecordactualresults.
+
+# Current resume point — 2026-10-26 — user-requested temporary break
+
+UserexplicitlypausesworkandaskswhichJSmolerrorswerereported. Read-onlyinspection
+of docs/checks/monoketones-lesson-browser-20261026.json confirms3events:
+1xTypeError cannotaccesssetDisplay,this.viewerisnull;2xupdateJS,this.viewerisnull.
+StacksincludeJSmol.min.js/corejmol/corescript;a.repaint. RuntimecompletedTrue,
+25stepsfinishedincludingfinal3Dchecks. Nullviewerattimeofcallconfirmed;
+synchronization/lifecyclecauseonlyhypothesis,rootnotisolated. Sameerrorsrecorded
+earlierlessons,notclaimednewregressionorharmless/fixed. No codechangednow.
+Allapprovedworklocal/saved,121molecules,11lessons255steps,new25stepketonelesson
+andDesktopJSONcomplete/independentlyreviewed. KnownJSmolissueremainsdisclosed.
+No autonomousimplementationduringbreak;no JSmolfixapproved.
+Sessioncorechangesauthoredhere: core51extensionforunsaturatedmono-/dialdehyde
+alkylprefixes/twoCHOorientation andsaturatedmonoketoneprefixes/carbonylpositions/
+equivalentparents. Actualassets/naming/permutation/oldlibrary/browserchecksand
+independentreviewsrecordedbelow. Finalcore51SHA38920161500f7fbbf66d7037b2a5fe0780b01a821f9643be918ccde79325a2f3.
+No furthercorechangesforlessonsoranimationfix. Localonly,no commit/push/publication.
+Lastupstreamchecked/synced6e29bd5earliersamesession,no newremotecheck.
+Nextonreturn: askuserpriority;JSmolread-onlydiagnosisifrequested,planapproval
+beforefix. Allfrozenreviewedtargetsunchanged.
+
+# Current resume point — 2026-10-26 — saturated ketone theory complete and independently reviewed
+
+UserapproveddoubleKETONEScardand25steptheoryusingALL7eligibleexistingmols:
+propanone,butanone,pentanone_2,pentanone_3,dimethyl_2_4_pentanone_3,
+trimethyl_3_4_4_pentanone_2,diethyl_4_5_dimethyl_2_6_heptanone_3.
+Newscenarios/saturated-monoketones-nomenclature.scenario.json titled
+Κορεσμένες μονοσθενείς κετόνες. Progressiveknowledge,noquiz/noisomerism,
+CnH2nO n>=3acyclic,FGpriority/locants/di/tri/repeatedlocants/alphabeticalgroups,
+closedmanualrules,existingcumulativeanimationpreserved,25optional3D.
+Dualcardactive25steps+otherketonespending(noaction).2unsaturatedoldketones
+excluded. Minimumscenario51titleallowlist,HTML/welcomecaches,README11lessons
+255steps. No core/viewer/teaching/data/MOL/SDF/oldscenariochange.
+Desktopbyteidentical αρχεία  json/Κορεσμένες_μονοσθενείς_κετόνες-Ονοματολογία.scenario.json.
+StaticactualJSCoreinventory121=>7eligible,25refs/activecomponents/settings/
+1145protectedfilesunchangedPASS. PythonAST2scripts+DesktopidentityPASS.
+Firefox25naturalNext/name/hidden/closedrules/openclose/waitnumbering/noSVGclip/
+menu7/Prev/Exit/export-validation-roundtrip/final3D40atoms/chainmapping/
+library390pxPASS.3knownJSmolthis.viewerisnullerrors,othererrorsnone,rootnot
+isolatedandnotclaimedfixed. Developervisualstep22andmobilelibraryPASS.
+Notallresize/devices/PNGexport/3Dindividualselectionstested.
+Report docs/MONOKETONES-SCENARIO-20261026.md;checks/evidence *monoketones*.
+Immediatebaseline /tmp/namelecule-before-ketones-lesson-20261026,
+GitHEAD5fe400612f094fff3bcc73a335e2add41e3b5076 withpriorworkpreserved.
+Frozen11targets inclDesktopJSON docs/checks/monoketones-reviewed-target-20261026.json.
+FreshReviewer /root/review_monoketones_lessonrunningread-only;no targetediting.
+Core51unchanged38920161500f7fbbf66d7037b2a5fe0780b01a821f9643be918ccde79325a2f3;
+earlierapprovedcorechangesretained. Upstreamlastchecked/synced6e29bd5earlier
+same session,no newremotecheck. Localonly,no commit/push/publication.
+NextresolveReviewerandreportuser.
+
+FinalReviewer /root/review_monoketones_lesson,
+ROLE_ID=NAMELECULE_REVIEWER_V1_20261023,independentfreshcontext/read-only.
+Independentactualdiffs/25texts/sequencing/allowlist/links/staticJSCoreinventory/
+25steps7molecules1145protectedfiles+AST2scriptsPASS,11hashesbeforeafterPASS.
+OneP3 docs/MONOKETONES-SCENARIO-20261026.md:75wrongevidencepath.
+Correctedonlyreportlinkto docs/checks/monoketones-lesson-browser-20261026.json,
+updatedreportSHA889cdfee4bdda1a0745de1d8f307f5cefc3a2548abf5b15f8f310f076f3b610c.
+Limitedindependentre-reviewconfirmedP3resolved,11updatedhashesPASS,
+no remainingactionablefindings. Developerfinal11hashesPASS.
+Browser25steps/3JSmolerrors Developer evidenceonly,notindependentruntime.
+No targetchangesafterre-review. No corechangesforthislesson;earlierapproved
+core51workretained. Localonly,no commit/push/publication. Taskcomplete.
+Next userrefreshlibraryandinspectdoubleKETONEScard;DesktopJSONavailable.
+
+# Current resume point — 2026-10-26 — double ketone card and saturated lesson, investigation only
+
+UserrequestsdoubleKETONESlibrarycard(saturatedmonohydricketones/otherketones),
+andtheorylessonusingALLexistingsaturatedmonoketones. Actualread-onlyJSCore
+inventoryoflibrary121/classificationandboundedgraphguardfinds7eligible:
+propanone,butanone,pentanone_2,pentanone_3,dimethyl_2_4_pentanone_3,
+trimethyl_3_4_4_pentanone_2,diethyl_4_5_dimethyl_2_6_heptanone_3.
+Otherketones2unsaturated:penten_1_one_3,pentyn_4_one_2;excludefromsatlesson.
+Proposed25steps:1-4propanone/generalCnH2nO,n>=3,threecomponents;
+5-6butanone/uniqueimplicitlocant/2D;7-10twoexistingpentanones/carbonylpositions;
+11-15dimethyl/parent/FGpriority/2,4/di/fullname;16-19trimethyl/FG2/repeated
+locants3,4,4/tri/full;20-23largest7Cparent4branches/FG3/alphabetical/full;
+24recap2Dall7menu,25optional3D. Progressiveknowledge,noquiz/noisomerism,
+existingclosedmanualrulesandcumulativenumberingpreserved.
+Plan:cloneexistingmonoaldehydelessonformat,newJSON,saturatedketonessection
+formulaCnuH2nuO nu>=3,othersectionpending;minimumscenario51titleallowlist,
+HTML/welcome/librarycache/README/notes,DesktopexactJSONcopy;allstepbrowser/
+refs/export/navigation/protectionchecksandindependentReviewerafterapproval.
+No application/core/data/MOL/SDF/scenarioeditsyet. Needpresentplanandwaitapproval.
+Currentcore51unchanged38920161500f7fbbf66d7037b2a5fe0780b01a821f9643be918ccde79325a2f3.
+Upstreamlastchecked/synced6e29bd5earliersamesession,no newremotecheck.
+No commit/push/publication. Priorworkpreserved.
+
+# Current resume point — 2026-10-26 — ketone cumulative numbering complete and independently reviewed
+
+Approvedcumulative1,1-2,1-2-3...,onlyfournewketones,existing400mstimer.
+Viewer51helperroutesallnamecomponentnumberingforthesefourtotimer,
+clearspreviousSVGnumbers/3Dechoes/counteratstart;prior3Dallnumberrestore
+suppressedonlyduringhighlightclearforthesefour. Othersandoverridearrays
+passthroughunchanged;zoom/resizeinstantrestorefunctionsuntouched.HTMLcache.
+No core/data/name/MOL/SDF/scenariochanges.
+Finalstatic8policy/overridecases+AST/cache+1143protectedfilesunchangedPASS.
+FinalFirefox26cumulative2D/3DcasesPASS(all4*3forms*2components+2prefixpositions),
+rapidselection/midmodechange/moleculecancellation/instantzoom/oldmolecule
+instantregressionPASS0JSerrors. Firsttestmode-switchsetupwastogglingselected
+componentoff;correctedtesttoclickdifferentcomponent,thenfullrerunPASS.
+Report docs/KETONE-NUMBERING-20261026.md;checks/evidence *ketone-numbering*.
+Runtime3DviarealJSmolwithper-tickfShowNumber3Dtrace;notrasterframeanalysis.
+Actualresize/allPNGexport/devicesnotchecked;existingresizepathunchanged.
+Immediatebaseline /tmp/namelecule-before-ketone-numbering-20261026,
+GitHEAD5fe400612f094fff3bcc73a335e2add41e3b5076,earlierworkpreserved.
+Frozen6targets docs/checks/ketone-numbering-reviewed-target-20261026.json;
+freshReviewer /root/review_ketone_numberingrunningread-only;no targetedits.
+Core51unchanged38920161500f7fbbf66d7037b2a5fe0780b01a821f9643be918ccde79325a2f3;
+earliercoreworkretained. Upstreamlastchecked/synced6e29bd5earliersamesession,
+no newremotecheck. No commit/push/publication. NextresolveReviewerandreport.
+
+FinalReviewer /root/review_ketone_numbering,
+ROLE_ID=NAMELECULE_REVIEWER_V1_20261023: no actionableP0/P1/P2/P3findings.
+Independentactualdiff/timer/reset/overrides/zoominspectionandstatic8policy/
+1143protectedfilesPASS.6hashesbefore/afterReviewerandDeveloperfinalPASS.
+Browser26casesandrapid/mode/molecule/zoom/oldregressionDeveloper evidenceonly,
+notindependentvisual/rastervalidation. No correctionsrequired,targetunchanged.
+Taskcomplete,localonly,no commit/push/publication. Coreunchangedforthisfix;
+earlierapprovedcore51changesretained. Next userrefreshlocalv51andinspect.
+
+# Current resume point — 2026-10-26 — ketone cumulative numbering implemented, verification running
+
+Userapprovedcumulative1,1-2,1-2-3...,400msexistingtimer,onlyfournewketones.
+Viewer51adds fSequentialKetoneNumberingTarget/fShowAnalysisNumbering;
+explicitnamecomponentanalysisusesexistingtimer,clearsoldSVGnumberoverlays/
+3Dechoesandresetscounter. Othermolecules/overridespreservepriorbehavior.
+showAtomSymbols3D optionalrestoreNumbering flag suppresses prematurefull3D
+numberingduringfClearHighlightsforthesefour. Zoom/resizeinstantrestoration
+functionsunchanged. HTMLviewer-cacheupdated. No core/data/MOL/SDF/scenarioedits.
+Check8policy/overridecases+AST/cache+1143protectedfilesunchangedPASS.
+ActualFirefox full26casecumulative2D/3Dtiminggridpassedinitialrun; rapid
+componentselectionpassed. Testmode-switchsetupclickedalreadyselectedcomponent,
+whichcorrectlytoggleditoff;fixedtesttoclickdifferentcomponent(nocodechange),
+fullcorrectedruninprogress. Do notdeclarefinalruntimePASSyet.
+Scripts/checks/report docs/checks/*ketone-numbering* and
+ docs/KETONE-NUMBERING-20261026.md. Noindependentreviewyet.
+Immediatebaseline /tmp/namelecule-before-ketone-numbering-20261026,
+GitHEAD5fe400612f094fff3bcc73a335e2add41e3b5076 withpriorworkpreserved.
+Core51unchanged38920161500f7fbbf66d7037b2a5fe0780b01a821f9643be918ccde79325a2f3.
+Upstreamlastchecked/synced6e29bd5earliersamesession,no newremotecheck.
+No commit/push/publication. Nextfinishruntime,freezeandindependentReviewer.
+
+# Current resume point — 2026-10-26 — ketone numbering animation investigation, awaiting approval
+
+Userreportsnewketonemainchainnumbersappearalltogether. Read-onlyactualFirefox
+traceon dimethyl_2_4_pentanone_3 confirmscomp5(parentstem)alreadysequential:
+0numbersat63ms,1at516ms,2at970ms,3Dticks428/830ms.
+comp4(carbonylposition)instantall5at48ms;fExplainNameComp newketonecasecalls
+fShowNumbering(0). Switchingfromparentstemalsotriggersinstant3Dnumberrestore
+fromfClearHighlights/showAtomSymbols3D beforethenewcomponentanalysis.
+No code/core/data/assets changed inthisinvestigation. Needpresenttargetedplan
+forsequentialexplicitcomponentnumberingonfournewketones(400msexistingtimer),
+clear stale3Dnumbers/start clean/canceloldanimationonmoleculeormodechange,
+retaininstantrestorationonzoom/resize. Viewer51+HTMLcache+focusedruntime
+checks+independentReviewer;no moleculargraph/name/corechangesplanned.
+Temporaryread-onlybrowsertrace /tmp/trace-ketone-numbering.py, no reposcript.
+Earliercompletedketonecorechangesremain38920161500f7fbbf66d7037b2a5fe0780b01a821f9643be918ccde79325a2f3.
+Upstreamlastchecked/synced6e29bd5earlier samesession,no newremotecheck.
+No commit/push/publication. Next obtainplanapprovalbeforeimplementation.
+
+# Current resume point — 2026-10-26 — four ketones complete and independently reviewed
+
+Userapproved4moleculesandcorrectionoflastnamefromisopropylversionto
+4,5-diethyl-2,6-dimethylheptan-3-one,samegraph,longest7Cparent4branchestier.
+Addedpentanone_3 C5H10O,dimethyl_2_4_pentanone_3 C7H14O,
+trimethyl_3_4_4_pentanone_2 C8H16O,
+diethyl_4_5_dimethyl_2_6_heptanone_3 C13H26O. Library121.
+Core51boundedacyclicsaturatedmonoketoneguard/reusealkylprefixes/preserve
+carbonylposition/rankequivalentparentsin2D3D. Viewer51newbranchedketone
+positioncomponenthighlightsFGandusestable3. No oldmol/scenario/teachingedits.
+New24assets(12MOL,4sourceSDF,4runtimeSDF,4provenance),3PubChem+1RDKit.
+Generatorreusesexistingformats/explicitExpandedH/horizontalparent/orthogonal
+formaldiagram. CondensedXstep1.872;oneExpandedC4branchstem4.095 avoidsHH
+contactwithoutrotatingH;runtimeoverlapCH3/Calsocorrectedbeforefreeze.
+LastrecordinitialZoom3D60fitswhole3Dmodel;globalfonts/camerasofoldmolsunchanged.
+Checksassets12forms/graphs/formulas/H/valence/2Dgeometry/3Dcarbonylplanarity/
+mapping/provenance1102protectedfilesPASS;actual117oldJSrecords/embeddedMOL
+identical,new12embeddedMOLmatch. JSCore72new(24forms+48permutations),8guards,
+700oldcasesunchangedPASS. Firefox32desktop+12narrow390px+4actualcarbonyl3D
+colorsPASS0JSerrors;actualmodebuttons/zoom60,explicitH/overlapclip/branch3D
+highlightsinclH/positiontext+table. Developerinspected3screenshotsincluding
+final3Dframing. Notallresize/devices/PNGexport/individualatomselectiontested.
+ExistingknownJSmolscenarioissuenotclaimedfixed. PythonAST6scriptsPASS.
+Report docs/KETONES-20261026.md;specs/scripts/evidence docs/checks/*ketones*.
+Immediatebaseline /tmp/namelecule-before-ketones-20261026,
+GitHEAD5fe400612f094fff3bcc73a335e2add41e3b5076,priorworkpreserved.
+Frozen42targets docs/checks/ketones-reviewed-target-20261026.json;
+freshReviewer /root/review_ketonesrunningread-only,no targetediting.
+Core51beforecf2c92f85624dd8e66e2d6eae71e6cca6064b2f6e30b97e6a18cd87f33466e98,
+after38920161500f7fbbf66d7037b2a5fe0780b01a821f9643be918ccde79325a2f3.
+Localonly,no commit/push/publication. Lastupstreamchecked/synced6e29bd5earlier
+same session,no newremotecheck. Nextresolveindependentreviewthenuserreport.
+
+FinalindependentReviewer /root/review_ketones
+ROLE_ID=NAMELECULE_REVIEWER_V1_20261023: no actionableP0/P1/P2/P3findings.
+Independentlyinspectedactualdiffs/specs/chemistry/sourceIUPACP45.2.1,
+ranAST-adaptedasset/namingchecksremovingonlyoutputwrite_text:12MOL/3D/
+provenance1102protectedfiles/117oldrecords+embeddedMOLPASS,72new+8guards+
+700oldcasesPASS;AST6scriptsPASS. All42hashesbefore/afterReviewerandDeveloper
+finalcheckidentical. Browser32+12+4Developer evidenceonly,notindependentruntime.
+No writesbyReviewer,no targetchangesafterfreeze. Taskcomplete.
+Professor-readycoremessage: js/mulermoc-nom-core-51.js wasextendedonlyfor
+acyclicsaturatedmonoketones,soalkylprefixesandcarbonylpositionsarepreserved
+andgraph-equivalentparentchainsarecorrectlyrankedin2D/3D. Previouslybranches
+wereomitted. Verified72newnaming/order+8guard+700oldcases,12MOL/3Dchecks,
+32+12+4browsercases0JSerrorsandcleanindependentreview. Localonly,notcommitted
+orpublished. Earliercorechangesretained;thisisadditionalapprovedcorework.
+Next userinspectnewketonesinlocalv51;no newlessonrequested.
+
+# Current resume point — 2026-10-26 — ketone addition investigation only, nomenclature issue4
+
+User requests pentan-3-one,2,4-dimethylpentan-3-one,
+3,4,4-trimethylpentan-2-one,4-ethyl-5-isopropyl-2-methylheptan-3-one.
+Read-only RDKit/JSC probes confirm formulas C5H10O,C7H14O,C8H16O,C13H26O.
+Currentcore names firstcorrectly but omits all alkylprefixes for otherthree.
+Lastgraph has longest7Ccarbonyl-containingpaths with3or4branches. Selecting
+maximumsubstituents gives4,5-diethyl-2,6-dimethylheptan-3-one (samegraph),
+not requestedisopropylname. Primary IUPACBlueBookP45.2.1 verifiedonline.
+No implementation approval yet, no code/core/assets changed. Needpresent
+bounded saturatedacyclicmonoketone extension plan andaskuseraboutcorrectname4.
+Allpreviouswork retained;no commit/push/publication;upstreamlastchecked/synced
+6e29bd5 earlierthissession,no newupstreamcheck.
+
+# Current resume point — 2026-10-26 — other aldehyde theory complete and independently reviewed
+
+Userapproved26-stepplan; new scenarios/other-aldehydes-nomenclature.scenario.json,
+Άλλες αλδεΰδες,8existingmolecules (7recent+propynal). Progressive disclosure,
+noquiz/noisomerism;1-6singleunsaturation,7-8methyl,9-11dialdehyde,12-14mixed,
+15-17isopropyl/tiednumbering,18-21enynal,22-24finaldialdehyde/doubletiebreak,
+25recap2D,26optional3D. Rulesclosed/manual,existingcomponent/alkyl tables.
+Onlyscenario51titleallowlist added;dualaldehydecardnow2lessons,HTML/welcomecaches,
+README10lessons230steps. No core/viewer/teaching/data/MOL/SDF/oldlessonchange.
+Desktopfinalbytecopy αρχεία  json/Άλλες_αλδεΰδες-Ονοματολογία.scenario.json.
+SHA256JSONb085a5075401aa03026709570ad7effb6fbdccf7a59fadeac41dc59742c5ebca.
+Static26steps/8refs/settings/manualrules/1096protectedfilesPASS;PythonAST2scripts.
+Firefox26naturalNext/names/hidden/rules/openclose/menuorder/Prev/Exit/export/
+validationroundtrip/final3D/390pxlibraryPASS.3knownJSmolthis.viewerisnullerrors,
+nootherJSerrors;notfixed/rootnotisolated. Developervisualstep23PASS. Afterruntime
+onlynote18duplicatedκαι removed,static+Desktopidentityrechecked. Existingmolecule
+browser56casesalsoPASS0JSerrors;originalevidencebyteidenticalretainedseparately.
+Report docs/OTHER-ALDEHYDES-SCENARIO-20261026.md;tests/evidence *other-aldehydes-lesson*.
+Immediatebaseline /tmp/namelecule-before-other-aldehydes-lesson-20261026,
+GitHEAD5fe400612f094fff3bcc73a335e2add41e3b5076 priorworkpreserved.
+11frozenfilesincludingDesktopcopy in other-aldehydes-lesson-reviewed-target manifest.
+FreshReviewer /root/review_other_aldehydes_lesson runningread-only;no targetedits.
+Core51unchangedforthistaskcf2c92f85624dd8e66e2d6eae71e6cca6064b2f6e30b97e6a18cd87f33466e98;
+earlierapprovedcorechangesretained. Upstreamlastchecked/synced6e29bd5earliersame
+session,no newremotecheck. Localonly,no commit/push/publication.
+Nextresolveindependentreviewandreportuser.
+
+FinalReviewer /root/review_other_aldehydes_lesson
+ROLE_ID=NAMELECULE_REVIEWER_V1_20261023: no actionableP0/P1/P2/P3findings.
+Independently inspected26notes/8molecules/progression/closedrules/schoolconvention,
+actualdiffs/11hashes/Desktopidentity/AST2scripts and ranstatic26/8/1096PASS.
+BrowserDeveloper evidenceonly;3knownJSmolerrors/rootnotindependentlyisolated.
+No writesbyReviewer;no targetchangesafterfreeze;Developerfinal11hashesPASS.
+Developer additionally visually inspectedfinal3Dscreenshot,modelvisible.
+No additionalcorechangesforthislesson;earliercore51moleculeextension retained.
+Localonly,no commit/push/publication. Taskcomplete.
+Next userinspectlibraryALDEHYDESsecondlesson26steps;DesktopJSONavailable.
+
+# Current resume point — 2026-10-26 — seven other aldehydes complete and independently reviewed
+
+User approved preceding plan including school parent-chain convention for compound5.
+Added propenal C3H4O,2-methylpropenal C4H6O,propanedial C3H4O2,
+3-methylpent-2-enedial C6H8O2,4-ethylpent-4-en-2-ynal C7H8O,
+2-isopropylbut-2-enedial C7H10O2,2-ethyl-3-methylhex-2-en-4-ynedial C9H10O2.
+Library117. New42assets:21MOL,7sourceSDF,7runtimeSDF,7provenance.
+FivePubChem,twoRDKitETKDGv3/MMFF94s,24conformers,seed20261026.
+Core51 bounded acyclic C/H/O mono-/dialdehyde guard enables existing alkyl
+prefix path; two equivalent terminalCHO use multiple-bond/double/branch locants
+instead of arbitrary atomID. Actual permutations exposed defect and now pass.
+No viewer/scenario/teaching/oldMOL/SDF modifications. Existing MOL-only double
+stereo0 display convention retained, no SVG override; external geometry inference
+possible, no stereoisomerism taught or universalPINclaim. Compound5 school
+parent5 approved versus preferred modernIUPAC parent6; source BlueBookP44.3.2.
+Specs/generator/tests/evidence docs/checks/*other-aldehydes*;
+report docs/OTHER-ALDEHYDES-20261026.md. README andHTMLdata/corecacheupdated.
+Checks Developer:RDKit21forms graphs/formulas/valence/H/clearance/no crosses/
+horizontalparents/3Dlengths/spangles/C1carbonylplanarity/mapping/provenancePASS;
+1043protectedfiles unchanged. JSCore126cases(42forms/chain+84atompermutations),
+8guardboundaries,658previouslibrarycasesunchangedPASS. Firefox56cases7*4*2
+names/2D3Dchains/H/overlap/clipping/branch3DhighlightsinclH PASS0JSerrors.
+Additional21cases390pxPASS0JSerrors. Developer visually inspected3screenshots.
+Known preceding JSmol scenario issue not claimed fixed. PNGexport/allresize/
+eachatomselection not tested. PythonAST5scriptsPASS.
+Immediate baseline /tmp/namelecule-before-other-aldehydes-20261026;
+GitHEAD5fe400612f094fff3bcc73a335e2add41e3b5076 with earlierworkpreserved.
+Frozen57targets docs/checks/other-aldehydes-reviewed-target-20261026.json;
+Reviewer /root/review_other_aldehydes freshcontext read-only running.
+No targeteditingduringreview. Onlynotesoutsidefreeze mayupdate.
+Core51 before0ad850d4978e6b22df14c14e13c9489eab91f665f89627387bc985db0cc06245,
+aftercf2c92f85624dd8e66e2d6eae71e6cca6064b2f6e30b97e6a18cd87f33466e98.
+Localonly,no commit/push/publication. Lastupstreamchecked/actuallysynced6e29bd5
+earlier same session,no newremotecheck. Next resolveindependentreview thenuserreport.
+
+Final independent Reviewer /root/review_other_aldehydes,
+ROLE_ID=NAMELECULE_REVIEWER_V1_20261023: no actionable P0/P1/P2/P3 findings.
+Independently ran AST-adapted asset/naming scripts read-only, removing onlyoutput
+write_text:21MOL/3D/provenance/1043protectedfiles,126naming/order+8guards+
+658oldcomparisonsPASS. ActualJSobjects110oldrecordsidentical,7added,
+21embeddedMOL-sourceidentitiesPASS.57hashesverifiedbefore/afterReviewerand
+Developerfinalcheck. Browser56+21andvisuals Developer evidence only.
+No targetchangesafterfreeze; no commit/push/publication. Taskcomplete.
+Professor-ready core report: js/mulermoc-nom-core-51.js extends bounded acyclic
+mono-/dialdehyde alkyl-prefix support and corrects direction numbering when
+both terminalCHO are equivalent. Reason: new unsaturated/branched aldehydes
+previously lost prefixes and some directions depended onatomorder. Verified
+126newnaming/order+8guards+658oldcomparisons,21MOL/3Dchecks,56+21browsercases,
+independentreviewclean. Localonly,notcommitted/published.
+Next:userinspectlocalv51aldehydegroup; no newlessonrequested.
+
+# Current resume point — 2026-10-26 — seven other aldehydes, investigation only
+
+User requests propenal, methylpropenal, propanedial, 3-methylpent-2-enedial,
+4-ethylpent-4-en-2-ynal, 2-isopropylbut-2-enedial and
+2-ethyl-3-methylhex-2-en-4-ynedial. No implementation approval yet.
+Read-only actual core51/JSC probes on seven RDKit heavy-atom graphs confirm
+aldehyde detection and dialdehyde suffixes work, but all five branched inputs
+lose their alkyl prefixes under the existing saturated-monoaldehyde guard.
+RDKit formulas respectively C3H4O,C4H6O,C3H4O2,C6H8O2,C7H8O,C7H10O2,C9H10O2.
+Proposed methylpropenal explicit school locant is 2; no global omission change.
+Compound5 requires explicit distinction between existing school maximum-multiple-
+bond parent convention (pent chain) and current preferred IUPAC longest parent
+(hex chain with methylidene substituent); primary source BlueBook P44.3.2 read.
+Next present bounded plan and request approval, including school convention5.
+No source/assets/core changed; no commit/push/publication. Earlier local work
+and upstream last-checked/actually-synced6e29bd5 remain unchanged.
+
+# Current resume point — 2026-10-26 — aldehyde layout complete and independently reviewed, local only
+
+Userapproved25percentshorter verticalbranchbonds in4newaldehydeCondensedforms,
+horizontalmethanalHCHO and ExpandedH-C=O+HaboveC. Six2DMOLcoordinatechanges,
+embeddeddata51;onlymethanaldisplayformula/specHCH=O→HCHO;generatorreproducible.
+Viewer51 usesexistingcompactionforstrictCH2Olocalgraph(soleheavyneighborO,
+heavyvalence2),retainsbothH,HCHOlabelgeometry/numberingoffset. NormalHCHO
+mustnotcreatefilledrectfromdarktextwhennoactualhighlightrect/circle;visual
+blackrectwasfoundafterinitialgeometricPASSandfixed,addednormal/highlightchecks.
+No core/graph/Skeletal/3D/scenario/othermoleculechanges. HTMLdataviewercache.
+ChecksassetsPASS15forms/graphs/H/valence/2Dclearance/3D/provenance/coordinate
+transform/1026protectedfiles;JSCore90namingorder+7guardboundaries+658old110mol
+casesunchangedPASS. ActualFirefox40cases5mols4modes2chainmodes/names/fullH/
+HCHO/Expandedpositions/nooverlapclip/branch3Dcolors/pass0JSerrors;normal/HCHO
+comp5comp9selectednoDarkRectassertPASS. LaststrictCH2Opredicateisbehaviorally
+sameforsupportedfivecases;final4methanallessonstepsNext/Exit/HCHO/nodarkrect
+PASS0JSerrorsafterpredicate. DeveloperinspectedHCHO,Expanded,shortermethylbranch,
+lesson screenshots. DoesnotclaimallpreviousJSmolissuesfixed.
+Report docs/ALDEHYDE-LAYOUT-20261026.md;testsevidence *aldehyde-layout*.
+Immediatebaseline /tmp/namelecule-before-aldehyde-layout-20261026 allmanifest,
+sourcecopies/MOLs;Git5fe4006withpriorworkpreserved. Frozen20targets
+ docs/checks/aldehyde-layout-reviewed-target-20261026.json.
+Freshcontext /root/review_aldehyde_layout independentlyreviewingread-only;
+no targeteditingduringreview. Core51unchanged0ad850d4978e6b22df14c14e13c9489eab91f665f89627387bc985db0cc06245.
+Upstreamlastchecked/actuallysynced6e29bd5earlier same session,no newremotecheck.
+FinalReviewer /root/review_aldehyde_layout ROLE_ID=NAMELECULE_REVIEWER_V1_20261023
+noactionableP0/P1/P2/P3findings. Independentlyverified20hashes,diffs,15MOLforms
+graphs/H/valence/geometry/3Dmapping/provenance/25percentcoords/1026protected
+files,15embedded-sourceMOLidentities,90namingorder+7guards+658oldcasesusing
+ASTinmemoryremovingonlyoutputwrite_text. Browser40+4 Developer evidence only,
+notReviewerexecution/screenshots;notallresize/export/devices/atomselections.
+20finalhashesconfirmedunchangedafterreview;no targeteditsafterfreeze.
+No commit/push/publication. Next: userinspectlocalv51;taskcomplete.
+NoDesktopJSONchangesneeded:lessonfilesunchanged/useexistingkeysupdatedMOLs.
+Noadditionalcorechangeforthistask;earlierapprovedcore51changespreserved.
+
+# Current resume point — 2026-10-26 — alkoxy references complete and independently reviewed, local only
+
+Userapproved five-row alkoxytable and per-stepnotesreferences inetherlesson,
+initiallyclosed,appropriatecontextrowselection,preserveotherchain/alkylrules.
+Implemented teaching51table/rule+independenttoggle;viewer51choosesmainalkoxy
+ruleforpurealkoxyselectedslot,otherwisesupplementandkeepsprimaryrule;sameCSS
+asalkyls. Scenario51optionalshow.alkoxyRuleflag,presentonlyhelper,normalization
+onlywhenpresent,rulearea+Updatepreservation. No core/data/MOL/SDFchanges.
+JSON27steps/order/allotherfields unchanged;19flags/notesat4,5,6,8,9,10,11,12,
+14,15,16,17,19,20,22,23,25,26,27. Tablemethoxy/ethoxy/propoxy/isopropoxy/butoxy
+withleftOconnectiondash,nofalsenegativecharge/PINclaim. HTML3modulecache+
+libraryetherlinkcacheupdated. DesktopexactJSONcopyupdatedatαρχεία  json/
+Κορεσμένοι_μονοαιθέρες-Ονοματολογία.scenario.json.
+Checksstatic19refs/27otherwiseidentical/1026protectedfilesPASS;PythonASTand
+DesktopidentityPASS;actualFirefox27steps/19tablesclosed+click+height>120after
+animation/selectedrow/all5rows/primaryrulespreserved/Updateflag/export-schema
+roundtrip19flags/3otherlessonregressionsPASS,0JSerrorsinthisrun. Doesnotclaim
+previousJSmolissuefixed. Developerinspectedisopropoxytablescreenshot.
+Report docs/ALKOXY-RULE-20261026.md;checks/evidence underdocs/checks/*alkoxy*.
+Immediatebaseline /tmp/namelecule-before-alkoxy-rule-20261026 +allhashmanifest,
+Git5fe4006. Frozen10targets docs/checks/alkoxy-rule-reviewed-target-20261026.json.
+Freshcontext /root/review_alkoxy_rule independentlyreviewing actualtargetread-only.
+No additionalcorechangesforthistask;previouscore51aldehydeimplementation remains
+0ad850d4978e6b22df14c14e13c9489eab91f665f89627387bc985db0cc06245.
+Upstreamlastchecked/synced6e29bd5earlier samesession,no newremotecheckclaimed.
+FinalReviewer /root/review_alkoxy_rule ROLE_ID=NAMELECULE_REVIEWER_V1_20261023
+noactionableP0/P1/P2/P3findings. Independentlyverified10hashes/staticprotection
+1026files/19refs/27otherwiseidentical/AST/Desktopidentity/sourcecontext/Update/
+strictflag/cache. BrowserrunandvisualinspectionDeveloper evidence,notReviewer.
+Nodeunavailable; nofreshMOL/IUPACcertificationneededforunchangedassets.
+No targetchangesafterreview;final10hashescheckedunchanged.
+No commit/push/publication. Next: userinspectlocaletherlesson;futurechanges
+requireplanapproval. Currenttaskcomplete,noadditionalcorechanges.
+
+# Current resume point — 2026-10-26 — monoaldehyde lesson complete, scoped independent review clean, local only
+
+User approved24step progressive theory lesson and doubleALDEHYDEScard with
+saturatedmonoaldehydesactive/otheraldehydespending. NewscenarioJSON nineexisting
+saturatedacyclicmonoaldehydes ascendingC1,2,3,4,4,5,6,8,12;propynalexcluded.
+Samegradualnameparts/manualclosedrules/finaloptional3D asprecedinglessons.
+Onlyscenario51titleallowlistentry,HTMLscenariocache,librarycard/welcomecache,
+README9lessons204steps changed besides newscenario/checks/report/records.
+No core/data/viewer/teaching/MOL/SDF/prior8lessonchanges. Immediatebaseline
+/tmp/namelecule-before-aldehyde-lesson-20261026/manifest.json,Git5fe4006.
+Desktopbytecopy saved αρχεία  json/Κορεσμένες_μονοσθενείς_αλδεΰδες-Ονοματολογία.scenario.json.
+StaticchecksPASS. FirstrapidFirefox24steps/names/hiddenfields/manualrules openclose/
+Next/Prev/export-schema/menuorder/final3D/Exit/library390px allfunctionalassertions
+passed, but3externalJSmolTypeErrors this.viewerisnull (setDisplay/updateJS) ->
+initialcompletedfalse duezeroerrorgate. Evidence preserved as
+monoaldehydes-rapid-browser-20261026.json. ExistingV51-SYNC reportlines63ff
+alreadyrecords12sameTypeErrors onprior7lessons,notintroducedJSmolcodehere.
+ImprovedtestusesNextonly(noextrafScenarioGoperstep),recordsallsameknownerrors
+explicitly andfails anyunexpectederrors;naturalNextnavigationcompletedPASS24steps;3sameknownJSmolErrorspersisted,
+noothererrors. Evidence completedtrue with explicitknown-errorclassification,
+notconsoleclean. Final3D37atoms/parentsignature/menu9order/export-schema/Exit/
+closedrulesactualopenclose/library390pxpassed. Developerinspectedfinalscreenshot.
+Report docs/MONOALDEHYDES-SCENARIO-20261026.md. Frozen11targets docs/checks/monoaldehydes-reviewed-target-20261026.json;
+freshcontext /root/review_monoaldehyde_lesson independentlyreviewing read-only.
+Staticrepeat/AST/DesktopbyteidentityPASS;previouscore/data/viewer/MOL/scenariossame.
+No commit/push/publication. Noadditionalcorechangesforthislesson;priorapproved
+aldehydecore51changespreservedSHA0ad850d4978e6b22df14c14e13c9489eab91f665f89627387bc985db0cc06245.
+Upstreamlastchecked/synced6e29bd5earlier same session,no newremotecheckclaimed.
+FinalReviewer /root/review_monoaldehyde_lesson ROLE_ID=NAMELECULE_REVIEWER_V1_20261023
+noactionableP0/P1/P2/P3findings. Independentlychecked11hashes/staticchecker/
+AST/Desktopidentity/allnotesandsettings/fivenewExpandedgraphs. BrowserDeveloper
+evidence only;notfullvisual/eachatomselection/IUPACrecertification. Prior
+JSmolthis.viewerisnullstacksincludeappcallers;rootcausenotisolatedandexclusive
+externalcausenotproven. No regressionidentifiedfromnewlessonlimitedchanges.
+Reportwordingclarified+finalreviewrecordadded,onlyreporthashupdated;brief
+documentationre-reviewCOMPLETE,noadditionalfindings;all11updatedhashesverified
+byReviewer. No targetchangesafterfinalreview.
+Next: userinspectlocalnewcard/lesson;futureotheraldehydeslessonnotcreated.
+Known3JSmolwarningsretained;noadditionalcorechangesforthislesson,priorcore51
+aldehydeimplementationpreserved. No commit/push/publication.
+
+# Current resume point — 2026-10-26 — double aldehyde theory card/lesson plan awaiting approval
+
+User requests alcohol-style double ALDEHYDES card, saturated monoaldehydes lesson,
+other aldehydes subsection reserved for later. Brief externalbrowseropeningv51
+completed between request and continuation. Read-only actualcore/viewer registry
+classification found10aldehydes total:9saturatedacyclicmonoaldehydes methanal,
+ethanal,propanal,butanal,methyl_2_propanal,pentanal,dimethyl_2_3_butanal,
+ethyl_2_methyl_3_pentanal,ethyl_4_isopropyl_3_methyl_2_hexanal. Otherpropynal
+isunsaturated;exclude fromnewlesson. Confirmednames/graphguard/carboncounts.
+Propose24progressivedisclosuresteps orderedC1,C2,C3,C4,C4,C5,C6,C8,C12;
+CnuH2nuO nu>=1,CHOfunctionalgroup/CCsaturation/threeparentparts,C1numbering,
+parentCHOcarbonincluded/locant1omission/branches/multipliers/alpha/finaloptional3D.
+Otheraldehydescardpending,notdeadlink/noinventedlesson. Files newscenarioJSON,
+librarydoublecard,scenario51titleallowlist+HTMLcache,welcomecache,README/records,
+DesktopexactJSONcopy. No core/data/viewer/MOL/SDFchangesplanned. Samecollapsed
+optionalrules,noquiz/isomerism;allprior8lessonsunchanged;focusedbrowser/schema/
+refs/order/export/Exit+independentReviewer afterapproval. No codechangedfortask.
+Next: obtainapprovalforconcrete24stepplan perAGENTS,thenimplement/review.
+Priorcorechangesrecordedbelow; noadditionalcorechangesforthisplanningtask.
+
+# Current resume point — 2026-10-26 — five aldehydes complete, independent review clean, local only
+
+User approved fivealdehydes and methanal correction, then separately approved
+bounded saturatedacyclic monoaldehyde alkylbranch extension after actual naming
+test exposed missing prefixes. MainDeveloper implemented core51 CH2O detection
+2D+3D,guarded branch support/parent preferences. Viewer51 skips CHO compaction
+for carbonylC with noCneighbors, preservingtwoH and fittingO. Added15MOL,5SDF,
+5provenanceJSON and5runtimeSDF;newrecords/dataregistry/HTMLcache/README110mols.
+Files specs/generator/check/naming/browser under docs/checks/*aldehydes*20261026.
+Report docs/ALDEHYDES-20261026.md; ETHERSreport confirmed byteunchanged.
+Names/formulas CH2O,C4H8O,C6H12O,C8H16O,C12H24O; firstfour rawPubChem3D
+CID712/6561/102752/3016346. Last3DqueryHTTP501,identityCID0 -> documentedRDKit
+ETKDGv3/MMFF94s24conformersseed20261026. Graph/explicitH/2Dclearance/3Dmapping
+checksPASS;90naming/ordercases+7guardboundariesPASS,628oldlibrarycasesunchanged.
+Firefox40cases4modes*2chainmodes*5PASS,0JSerrors;actualmenu/names/2D3Dsignatures/
+fullH/labeloverlap+clipping/branch3DcolorsinclH. Testexpected3D corrected toincludeH,
+notapplicationchange.2Dfontall13.537975px. NewCondensedx*1.2avoidsCH3touching;
+Expanded/Skeletalpreserved. Branchvertical2.34whereHclearance needed.
+Developer inspected methanalCondensed andlargestExpanded screenshot. Largest3D
+was oversized atdefaultzoom80;existingper-recordinitialZoom3D60usedonlyfornew
+largestrecord;focusedactual3radios/initialzoom60/narrow900+390checksPASS,30cases,0JSerrors.
+Property used orientationInfo.zoom;removed unnecessarytest-onlyundefinedfunction.
+Developerinspectedfinal3D screenshot: allmodelwithinviewport.
+Baseline /tmp/namelecule-before-aldehydes-20261026 + manifest,Git5fe4006;
+preexisting8lessons/MOL/SDF/datarecords untouched. Core51changedthisrequest;
+core49/core50unchanged;no commit/push/publication. Upstreamlastchecked/synced
+6e29bd5earlier same session,no new remotecheckclaimed. Frozen46targets docs/checks/aldehydes-reviewed-target-20261026.json;
+independentfresh-context /root/review_aldehydes reviewing actualcontents read-only.
+Finalcore51SHA256 0ad850d4978e6b22df14c14e13c9489eab91f665f89627387bc985db0cc06245.
+Final Reviewer /root/review_aldehydes ROLE_ID=NAMELECULE_REVIEWER_V1_20261023
+noactionableP0/P1/P2/P3findings. Independently reran asset/naming checks viaAST
+inmemory withoutwrite_text;15MOL/3D/valence/angles/sourcehashes/978protectedfiles
+PASS;90newcases+7guards+628oldcasesPASS. IndependentlycheckedactualJSregistries
+all105oldrecords/MOLexact,110total,15embeddedMOL=source. Browser40+30 Developer
+evidence only;Reviewer didnotbrowser/screenshots/remotePubChem/reallessons.
+46hashesverifiedunchanged except subsequent finalreviewparagraph inreport;
+report-only finaldocumentationre-review COMPLETE withnofindings;Reviewer
+verifiedall46updatedhashes. No targetchangesafterfinalreview.
+Next: userinspectlocalv51;save/publishonlyuponexplicitrequest. No commit/push.
+Professor-readycoremessage inALDEHYDESreport. Core51modifiedthisrequest,
+core49/core50unchanged; earlierupstreamsync/localetherwork remainpreserved.
+
+# Current resume point — 2026-10-26 — five aldehydes requested, plan awaiting approval
+
+User requests methanal,2-methylpropanal,2,3-dimethylbutanal,
+2-ethyl-3-methylpentanal,4-ethyl-3-isopropyl-2-methylhexanal.
+Read-only focused registry inspection: existing aldehydes ethanal/propanal/
+butanal/pentanal; none of requested five present. Formula counts CH2O,C4H8O,
+C6H12O,C8H16O,C12H24O. Existing core51 aldehyde detection requires carbonyl
+C heavy-atom valence3, missing formaldehyde valence2. Actual current core/viewer
+read-only JavaScriptCore graph probe types[C,O],double bond1-2 returns name
+μεθανόνη and classification ketone. Probe reused existingethanal MOL only to
+initialize mock; replaced graph before actual analysis, no asset/code writes.
+Propose minimal special-case recognition methanal as aldehyde, plus five assets
+using existing conventions and focused regression/browser checks/independent
+Reviewer. Core modification is material and awaits explicit plan approval.
+No implementation/core/molecule changes for this request, no commit/push.
+Next: user approve scoped plan including methanal detection correction; then
+implement allfive with validated source3D/provenance and horizontal2D/explicitH.
+Prior lesson completion/review records preserved below.
+
+# Current resume point — 2026-10-26 — saturated monoether lesson complete and independently reviewed, local only
+
+User approved 27-step progressive theory lesson, card ΚΟΡΕΣΜΕΝΟΙ ΜΟΝΟΑΙΘΕΡΕΣ,
+all11 existing ethers ordered C2→C7, common/school systematic names emphasized.
+Main Developer created scenarios/saturated-monoethers-nomenclature.scenario.json;
+added library card/formula ν≥2, scenario51 title registration for existing manual
+component rules, scenario cache HTML51, welcome library cache, README8lessons180steps.
+No core/data/viewer/teaching/MOL/SDF or previous scenario changes against immediate
+baseline /tmp/namelecule-before-ether-lesson-20261026/manifest.json (Git5fe4006).
+Desktop byte copy saved: αρχεία  json/Κορεσμένοι_μονοαιθέρες-Ονοματολογία.scenario.json.
+Static protection/sequence checks PASS. Initial actual Firefox27steps/Next/Prev/
+export-validation/Exit/library390px PASS,0JSerrors. Expanded actual toggle test22displayednames PASS,0JSerrors; existing plus
+separators between name boxes excluded from text comparison. Desktopcopy byteexact.
+Report docs/MONOETHERS-SCENARIO-20261026.md. Frozen10file target docs/checks/monoethers-reviewed-target-20261026.json;
+independent fresh-context /root/review_monoether_lesson reviewing read-only.
+No commit/push/publication. No core change for this task; earlier this session
+upstreamcore51 integration/branchedether extension preserved (see older notes).
+Upstream lastchecked/actuallysynced6e29bd5earlier same session, no new remotecheck.
+Reviewer first pass found only P3 authoring-style colons (checklist§6). Fixed
+scenario title/note wording only, added no-colon static assertion, report resolution,
+updated Desktopcopy and re-froze10hashes. StaticchecksPASS; finalre-reviewpending.
+Browser evidence is before punctuation-only correction, no structural/runtimechange.
+Final re-review /root/review_monoether_lesson ROLE_ID=NAMELECULE_REVIEWER_V1_20261023:
+P3 resolved, no new actionable findings. Reviewer independently verified10hashes,
+staticchecks/baselineprotection,27notes/titles and Desktopidentity; browser supplied
+Developer evidence, not independent execution. Final10hashes checked unchanged.
+Next: user inspect library/newlesson locally; save/publish only on explicitrequest.
+
+# Current resume point — 2026-10-26 — approved +15% 2D size complete and independently reviewed, local only
+
+Userapprovedcommon2Dsizeincrease~15%. MainDeveloper changedonlyviewer51scale
+pixels*1.15,numberclearance650→350nativeunits,proportionalmargin6→4%,andHTML51
+viewercachelarger-2d-20261026. Pure15%trialcappedlargestExpanded;420clearance
+fixeddesktopbutnarrowheptynecapped.Final350/4%passesallavailablelibraryforms.
+No core/data/MOL/3D/scenariochanges. Baseline975filesunder
+/tmp/namelecule-before-2d-size-20261026 (manifest.json),Gitbase5fe4006. Initial
+protection973/975exact,onlyviewer/HTMLchangedbeforeauthorizeddocs/notesupdates.
+Reusedall-librarybrowsercheck,newfocusedcopyaddsall2Dnumberingwith3Decho
+suppressiononlyinthetestgrid(restoredafter),allfonts+clippingassertions.
+942Firefoxcases314forms/105mols*1500/900/390widthsPASS;allfontsuniform,
+noletterornumberclipping,0JSerrors. Actualradio3forms/zoom1.25inout/PNGvalidSVG
+PASS. Largestmoleculethreeforms/numberingscreenshotscaptured;Developerinspected
+Expanded. Measuredfontsize13.537975desktop,10.450484narrow;Developercompared
+allavailableglyphsizeswithpreviousactual942results:ratios1.15..1.15000004.
+NotindependentReviewerexecution. No chemicaltestsneededforunchangedassetbytes.
+Report docs/2D-SIZE-20261026.md; evidence docs/checks/larger-2d-20261026.json;
+manifest docs/checks/larger-2d-reviewed-target-20261026.json. 6frozenfiles incl
+report/evidence/check/historical2Dreportlink;noeditsafterfreeze.
+FreshreadonlyReviewer /root/review_larger_2d,
+ROLE_ID=NAMELECULE_REVIEWER_V1_20261023: noP0/P1/P2/P3findings on6frozenfiles.
+Independentlyverified6hashes/baseline/sourcefit/numberingpaths,coreMOLdata3D
+scenarioidentity,scriptAST,raw-persistedevidenceexact,942counts+noletter/number
+clips;recomputed6306beforeafterglyphratios1.15..1.15000003845;inspectedlargest
+Expandedimage. FirefoxUI/zoom/exportexecutionDeveloper evidence. Nootherbrowser/
+arbitraryeditor/full-lessontests. No6targetchangesafterfreeze.
+Core51remains68cde20ad20dc34b2a07121f07da9069d1c45eaf14856b9cf6190a5076f21934;
+core49/core50same. Earlierthissessionupstreamcore51importandetherextension
+preserved;noadditionalcorechangeshere. Lastupstreamcheck/sync6e29bd5earlier
+thissession,noaddednetworksync. Priorv51/ethers/MOL/typographyworkpreserved.
+No commit/push/publication. Publicstillv50/5fe4006. Nextuserinspectupdatedlocalv51;implementation/reviewcomplete. Updatedexternal
+browserpreviewrequestedviaOSopen. Save/publishonlyonexplicitinstruction.
+
+# Current resume point — 2026-10-26 — ether formula/horizontal-arm refinement complete, local only
+
+Userapprovedplanimplemented: equivalentlibraryformulas (CH3)2CHOCH2CH3 and
+CH3CH2CH(CH3)OCH2CH3; previousparenthesizedethoxyformswerechemicallyvalid,
+notgrapherrors. ExplicitChemistryValidator /root/validate_ether_formulas_layout
+confirmedbeforeapproval. sec-butylleft3Chorizontal+1vertical; ethylisopropylleft
+andtertbutylisopropylright2Chorizontal+1vertical. Only6Condensed/ExpandedMOL
+coordinatechanges,6embeddedMOL,2formula metadata+specs,HTML51cache
+ether-horizontal-branches-20261026. Allskeletal/core/viewer/3D/scenarios/names/
+generatorcodeunchanged. Allprioruncommittedv51/ethers/MOL/typographyworkpreserved.
+Baseline /tmp/namelecule-before-ether-refinement-20261026 (969files+manifest),
+Gitbase5fe400612f094fff3bcc73a335e2add41e3b5076. Report
+ docs/ETHER-REFINEMENT-20261026.md; evidence docs/checks/ether-refinement-20261026.json;
+reviewmanifest docs/checks/ether-refinement-reviewed-target-20261026.json.
+Threefocusedchecksreuseexistingchemistry/browsertransport/inkhelper.
+RDKit21forms:graph/valence/formula/fullH/lengths/noatom-bondcrossingsPASS;
+6coordinateonlyMOL atomorder/bonds/noncoordinatebytesexact,105metadataexcept
+2formulas/6embeds exact,maximumhorizontalC counts3/2/2,commonfontreference
+framenumericallyidentical.960protectedfilesatfirstcheck,beforedocs/notesupdates.
+266new+586oldJSCnames/components/chainsPASS. Firefox48cases=3molecules*4forms*
+2chainmodes*2widths1500/390,actualformulalabel/commonIUPACbuttons/allgroup
+highlights/fullH/2D3Dparents/clippingPASS0JSerrors. Modes/chainviaAPI in48.
+InitialexpandednarrowbboxcheckreportedtwoHfont-cellrectanglescornerintersection;
+actualCanvasglyphinkrectanglesseparate,implementationunchanged. Main48uses1px
+boundsintersectiontolerance; extra6Expandedcaseactualradioclicks+zero-positive
+inkrectangleintersectionPASS0JSerrors. Extrahelperdismissesexistingportrait
+messageviarealrotatePromptDismiss ID;first48selectorfailedembeddednewlines,
+recordedlimitation,notappdefect. StaticcheckinitialJScodewrappertestsyntaxfixed.
+DeveloperinspectedwideethylisopropylCondensed,secbutylCondensed/Expanded,
+andclean390secbutylExpanded. No fullcross-browser/fonts/zoom/153lessonretest.
+FreshindependentReviewer /root/review_ether_refinement,
+ROLE_ID=NAMELECULE_REVIEWER_V1_20261023: noP0-P3findings on12functionaltargets;
+read-onlyadaptedchemicalcheck,6MOL/8datareplacedlines/105metadata/restembeds/
+commonfontframeexact,hashes,providedimages. Finalfollowup15targets inclnew
+supplementtest/report/evidencePASS;48+6JSONexact,scriptAST/realradio/overlayID/
+zerotolerance/sourcecorrect,cleannarrowscreenshotinspected. Browser andnaming
+executionDeveloper evidence,notindependent. No15targeteditsafterfreeze.
+Core49/core50/core51 unchanged vsrefinementbaseline;core51SHA
+68cde20ad20dc34b2a07121f07da9069d1c45eaf14856b9cf6190a5076f21934.
+Earlierthissessioncore51hadupstreamsync+etherextension,notchangedbythisfollowup.
+Lastupstreamchecked/actuallysynced6e29bd5earlierthissession;noaddednetwork
+syncforthisfollowup. No commit/push/publication. Publicstillv50/5fe4006.
+Nextuserinspectlocalv51;noimplementationworkpending. Save/publishonlyonnew
+explicitinstruction. Updatedv51URLsenttoOSdefault externalbrowser successfully;
+notclaimuserhasviewedit.
+
+# Current resume point — 2026-10-26 — approved ether formula/layout refinement in progress
+
+User approved concreteplan afterChemistryValidator: twoequivalentdisplayformulas
+(R-O-R),sec-butyl3Chorizontal+1vertical,betterisopropylhorizontalarm placement.
+MainDeveloper modified only6Condensed/ExpandedMOL coordinateblocks,6embeds,
+2formula registrystrings,specs andHTML51cache ether-horizontal-branches-20261026.
+Generatoralreadyreproducesnewxy,sourceunchanged. AllskeletalMOL/core/viewer/3D/
+scenarios/namesunchanged. Immediatebaseline969files under
+/tmp/namelecule-before-ether-refinement-20261026 (manifest.json),Gitbase5fe4006.
+Newcheck reusesexisting21formchemicalvalidation,checks2Dcoordinate-onlydiff,
+105metadataexcept2formulas+allotherembeds exact,maxhorizontalC counts3/2/2,
+andcommonfontreferenceframeidentical. Newbrowserreuse3affectedmolecules,
+4forms*2chainmodes*2widths1500/390=48cases, actualformulalabel/overlap/clipping/
+fullH/names/commonbuttons/2D3Dprefixandalkylhighlights. Browserinprogress.
+266new/586oldJSCnamingcomparisonsPASS. AssetcheckinitialJSwrapperhadtest-only
+syntaxerror,fixedwrapper,noappfix. Finalassetcheckstatuspendingpoll. Nextfreeze
+functional12files,independentReviewer,finalbrowserevidence/docs/notes/preview.
+No commit/push/publication. Lastupstreamcheckandsync6e29bd5earlierthissession;
+priorv51/MOL/ether/fontworkpreserved. Core51unchangedsha68cde20ad20dc34b...
+
+# Current resume point — 2026-10-26 — ether formula/layout refinement, planning only
+
+User requests Chemistry Validator for parentheses in ether library formulas and
+maximum horizontal carbon placement, especially sec-butyl3C horizontal+1vertical.
+Explicit delegated readonly /root/validate_ether_formulas_layout,
+ROLE_ID=NAMELECULE_CHEMISTRY_VALIDATOR_V1_20261023 confirmed existing
+CH3CH(OCH2CH3)CH3 and CH3CH(OCH2CH3)CH2CH3 chemically valid, not grapherrors.
+Proposed presentation (CH3)2CHOCH2CH3 and CH3CH2CH(CH3)OCH2CH3 better showsR-O-R.
+All7formulas/21MOL graphs/valences/formulas passed readonlystdlibchecks, notbrowser.
+sec-butyl proposed specxy C1(0,0),C2(0,1),C3(1,1),C4(2,1),C5(-2,1),C6(-3,1),O7(-1,1);
+physicalx=-1.17specx givesC4-C3-C2-O7-C5-C6 horizontal, C1verticalbranch.
+MainchainIDs[1,2,3,4] retained evenifnotallfourhorizontal. Applymaxhorizontal
+rulealsoisopropylparts:ethylisopropylleft2Chorizontal+1vertical;tertbutylisopropyl
+right2Chorizontal+1vertical;tertleftalreadymaximum2horizontal+2vertical.
+Proposedminimum twoformula metadata+specchanges,threeetherCondensed/Expanded
+coordinateupdates+embeds/specs,necessarychecks/cache. Skeletalangles retained;
+no core/3D/scenario/name changes planned. MustcheckfullH/crossings/labels,
+2D3Dmainchain/highlights andbrowser. No implementationyet; nextpresentconcrete
+planandawaitapprovalperAGENTS. Previouscompletedworkpreservedbelow.
+
+# Current resume point — 2026-10-26 — horizontal ethers and uniform 2D labels complete, local only
+
+User approved horizontal ether layouts plus consistent C/H/O size across all
+library molecules and three2Dforms. MainDeveloper implemented. Report:
+docs/2D-LAYOUT-TYPOGRAPHY-20261026.md. Evidence:
+docs/checks/horizontal-uniform-2d-20261026.json.
+13 existing new-ether MOL coordinate changes, matching data51 embeds,
+ether specs/generator + establishedassetchecker updated; added reusedgeometry
+protectionchecker and all-librarybrowsercheck. Four older ethers already
+horizontal and untouched. Core/names/3D/scenarios untouched. Viewer51common
+geometryframe cached overMOL2D andviewport drives a common defaultvisible
+fontsize, respectzoom, fitfallback for freeeditoroutliers. Defaultsimple
+molecules smaller thanbefore to matchlargest; thistradeoff inreport. Small
+viewportreducesall together. Nativeglyphlayout/subscripts/colors preserved.
+HTML51cache query horizontal-uniform-2d-20261026. README + ETHERSfollowup link.
+Checkscompleted: RDKit21etherforms/13modifiedMOL atomorder/bonds/noncoordinate
+content exact, chemistry/fullH/lengths/nooverlap/COCaxis+skeletalanglessafe,
+3Dmapping PASS. JSC266new/586oldname/component/chain comparisonsPASS.
+Firefox942cases=314availableforms*3viewportwidths1500/900/390 across105mols;
+actualfonts11.772152desktop and9.087378narrow, uniformwithin.02px,nocutlabels,
+zeroJSerrors. Methane preexistingno standalone skeletalMOL,fallbackunchanged.
+Real mode-radio clicks all3forms,zoomin1.25/outrestore,PNG+validstandaloneSVG
+exportPASS. Additional56ethersbrowsercases afterlayout/font changesPASS0JSerrors,
+actualcommon/IUPACbuttons/allprefixandcommongroupcoloredatomsets/fullH/2D3Dparent.
+DevelopervisuallyinspectedhorizontalethylisopropylExpanded;Reviewerinspected
+threeprovidedCondensed/Expanded/Skeletal screenshots. Notclaimallbrowsers/
+arbitraryviewport+zoom/freeeditor/full153lesson interactions independently.
+IndependentfreshReviewer /root/review_horizontal_uniform_2d,
+ROLE_ID=NAMELECULE_REVIEWER_V1_20261023: noP0/P1/P2/P3functionalfindings on23
+frozen targets. Independently checked23hashes, chemistry/protection,13embedded
+sourceidentities/restdataexact,coreSHA,942protectedbaselinefiles. Browser and
+namingexecutionDeveloper evidence. Final25targetdoc/evidence followupcomplete,
+noactionablefindings;Reviewerconfirmedmanifestpath/byteidentity/25hashes.
+Finalbaseline941filesidenticalafterauthorizedcontributionnotesupdate.
+No functionaltargetchangesafterfreeze.
+Baseline /tmp/namelecule-before-2d-layout-20261026 (964files+manifest),Gitbase
+5fe400612f094fff3bcc73a335e2add41e3b5076. Final25manifest archivedas
+ docs/checks/horizontal-uniform-2d-reviewed-target-20261026.json.
+Core49/core50/core51 unchanged vs thisfollowupbaseline;core51SHA256
+68cde20ad20dc34b2a07121f07da9069d1c45eaf14856b9cf6190a5076f21934.
+Earlierthissessioncore51hadupstreamimportthenlocaletherextension;thisfollowup
+changesonlyviewer/data/MOL/tests/docs,doesnotundoorthirdmodifycore.
+Lastupstreamchecked/actuallysynced6e29bd5 earlierthissession,noaddednetwork
+syncinthisfollowup. Allpreexistinguncommittedv51/MOL/ethersworkpreserved.
+No commit/push/publication. Publicstillv50/5fe4006. Nextuserinspectlocalv51;
+requiresnewexplicitinstructionforGit/publishing. HTTP200previewverifiedand
+updatedv51openedviaOSdefault externalbrowser;notclaimuseractuallyviewedit.
+
+# Current resume point — 2026-10-26 — horizontal ethers / uniform 2D typography in progress
+
+User approved joint plan: all ethers arranged left/right of O in2D; consistent
+visible C/H/O font size across all library molecules and three2Dforms. Main
+Developer implements; finalindependentReviewer required;no commit/push/publication.
+Immediate baseline /tmp/namelecule-before-2d-layout-20261026 (964files+manifest).
+Core51baseline68cde20ad20dc34b2a07121f07da9069d1c45eaf14856b9cf6190a5076f21934.
+Existingv51/7ether additions/MOLonlypatch preserved. Lastupstreamcheckandsync
+6e29bd5 earlierthissession;notrepeatednetworkcheckduringapprovedfollowup.
+Rotated3verticalnewetherCondensed/Expanded layouts;7skeletalCOCchords now
+horizontal while native angles retained.13MOL changes plusmatchingdata51;
+noatom/bondorder/connectivitychanges or3DSDFedits. Existing4ethersalready
+havehorizontalCOC axis,keepunchanged. Specxy+generatorupdatedforreproduction.
+Viewer fFit2DSVG uses cached commonlibrarygeometryframe and currentviewport
+for commonvisualfontsize, preservesfitfallback for freeeditoroutliers and zoom.
+HTML51cacheupdated. Validationinprogress, do notclaimfinalfontuniformityyet.
+Newbrowsercheck all105/threeforms/1500,900,390 widths;newgeometry/protection
+check covershorizontalCOC, chemistry,3Dunchanged,coreunchanged. Nextfinish
+checks,inspectimages,resolvefindings,freeze/review,finalnotes.
+
+# Current resume point — 2026-10-26 — seven ethers implemented and checked, local only
+
+Approved scope completed by main Developer: seven new ethers, both common and
+school-systematic names via existing toggle. Registry105(previous98unchanged).
+Full names/formulas/CIDs/files/checks: docs/ETHERS-20261026.md; machine evidence
+in docs/checks/ethers-20261026.json. 21new2DMOL,7PubChemraw3DSDF+7identical
+runtimecopies+7provenanceJSON, data51/core51/viewer51/HTMLcache/README,
+focused specs/generator/checkscripts. No old molecule/lesson/v50 asset edits.
+PubChemCIDs11182/12340/12256/12338/14671559/17586/28488; noRDKitfallbackused.
+sec-butyl center remains unspecified,3Dillustrative,0defined/1undefined atsource;
+noR/Sname orisomerismteaching. Lastcommontert-βουτυλοϊσοπροπυλαιθέρας approved.
+266newJSCcases(42form/chain+224permutations),586oldname/common/components/chains,
+98oldmetadata+embeddedMOLexact PASS. RDKit21MOL/7SDFgraph/formula/fullH/valence/
+2Dgeometry/bondlengths/3DmappingPASS;907protectedfilesexact. Firefox56newcases,
+actualIUPAC/commonbuttonclicks/allprefix&commongroupactualcoloredatomIDs/fullH/
+2D3DparentPASS with0JSerrors. Mode/chain changesuseappAPI,1500x1000only;
+notclaimallmanualUI/offline/export/mobileflows. Developer inspected5screenshots
+(methylpropylExpanded,isobutylisopropylExpanded/Skeletal,tertbutylisopropylExpanded/Skeletal).
+Initialtestassumptions corrected: JSmolfinalselectedpairislastcolored bond, so
+checkactualatomInfo.color; etherOlabelcanhaveroundedrectunlikehydrocarbon.
+Noappchangesfortheseharnessissues. Generatorfirst RDKitassert incorrectly used
+inferred3Dchiral tags; nowchecksPubChemdefinedstereocount0 likeexistingworkflow,
+retainsraw3D. Firsttempoutputpartial; finalcompleteoutputintegratedfromseparate
+/tmp/namelecule-generated-ethers-final only. Finalrepoassetsallverified.
+FreshreadonlyReviewer /root/review_seven_ethers,
+ROLE_ID=NAMELECULE_REVIEWER_V1_20261023: noP0/P1/P2/P3functional findings on52
+frozen targets; independently reran266/586/98metadata/21MOL/7SDF/907protected,
+42commonfragment semanticchecks,21embedded-sourceidentity,52hashes. Browser
+isDeveloper evidence, Reviewerread56results+2screenshots. Finaldoconlyfollowup
+on report/evidence completed: no actionable findings, all54 hashes verified;
+README report link and persisted JSON accuracy confirmed.
+Baseline /tmp/namelecule-before-ethers-20261026 (914files), Gitbase
+5fe400612f094fff3bcc73a335e2add41e3b5076. Manifest
+ docs/checks/ethers-reviewed-target-20261026.json (52functional+2report/evidence).
+All52functionalhashesstillidentical atdocfollowup. Prioruncommittedv51/MOL-only
+workpreserved;thisetherworkmustnotbeattributedtothosepreviouspatches.
+Core51 locally changed from upstream-identical172d2775... to SHA256
+68cde20ad20dc34b2a07121f07da9069d1c45eaf14856b9cf6190a5076f21934.
+Core49/core50 unchanged vs ether-task baseline. Professor-ready Greek message
+in docs/ETHERS-20261026.md. Earlierthissessionv51importwasupstreamsync;this
+etherextensionislocallyauthored. Lastchecked/actuallysyncedupstream6e29bd5;
+noadditionalupstreamsyncduringetherwork. Publicstillv50/5fe4006.
+No commit/push/publication. Next: userinspectlocalv51; anysave/publishrequires
+explicitinstruction. No pending functional or documentation work for this scope.
+
+# Current resume point — 2026-10-26 — seven ethers approved, implementation and checks in progress
+
+User approved the concrete seven-ether plan, including scoped core51/viewer51
+support, common and school-systematic names, and independent final Reviewer.
+Main conversation owns implementation. No commit/push/publication authorized.
+Pre-task snapshot: /tmp/namelecule-before-ethers-20261026 (914 files + manifest),
+Git base 5fe400612f094fff3bcc73a335e2add41e3b5076. Pre-existing v51 migration
+and MOL-only corrections preserved, not authored by this ether task.
+Added seven records to data51 (105 total),21 MOL,7 raw PubChem SDF,7 identical
+runtime SDF copies,7 provenance JSONs. PubChem CIDs11182/12340/12256/12338/
+14671559/17586/28488. ETKDG fallback implemented but not used. sec-butyl
+source has0 defined/1 undefined atom stereo center; 3D parity/coordinates are
+illustrative and no R/S descriptor assigned. Used existing source convention.
+Core51 now locally customized: rooted C3/C4 group names; saturated acyclic
+monoether parent component/path; joint alkoxy/alkyl prefix slots; common-name
+alphabetical order ignoring sec/tert and school connectors before iso/sec.
+Viewer51 highlights full alkyl fragments in common names, resolves branch
+prefix slot2 and independent 3D numbering. HTML51 cache updated; README105.
+Actual JSC266 new cases(42forms/chain+224permutations),586old naming/common/
+parts/chain comparisons PASS;98old metadata and embedded MOL exact. RDKit
+21forms/7SDF formula/graph/valence/fullH/mapping/length/2Dgeometry PASS;
+907protected existing files exact. Browser checks in progress; initial harness
+wrongly measured final bond selection instead of actual atom coloring, fixed
+by reading JSmol atomInfo color; no app correction for that test assumption.
+Also removed hydrocarbon-only rect assertion from ether skeletal test: O label
+background can legitimately be present. Do not claim completed browser review.
+Next: finish actual browser/screenshot checks, freeze target+hashes, independent
+fresh-context Reviewer, resolve findings, final report+core professor text.
+Last upstream check/sync6e29bd5 recorded below, no new sync in ether task.
+
+# Current resume point — 2026-10-26 — seven ethers preflight complete, plan awaiting approval
+
+Userrequests7ethers: methylpropyl,ethylpropyl,ethylisopropyl,butylmethyl,
+isobutylisopropyl,ethyl-sec-butyl,isopropyl-tert-butyl. Noapplication/molecular/
+coreeditsforthisrequest; scratchsyntheticgraphJSCprobe /tmp/probe-seven-ethers.py.
+Actualcurrentcore51 supportsfirst4systematicnames; last3lackC4shape/common/
+parentbranchsupport: isobutylmisses2methyl,seccommonlosessec,tertwrongalkoxy/parent.
+ChemistryValidator /root/validate_seven_ethers_plan freshreadonly confirmed
+SMILES COCCC/CCOCCC/CCOC(C)C/CCCCOC/CC(C)COC(C)C/CCOC(C)CC/CC(C)OC(C)(C)C,
+formulas C4H10O/C5H12O/C5H12O/C5H12O/C7H16O/C6H14O/C7H16O, neutralacyclic.
+Expectedschoolsubstitutive1methoxypropane/1ethoxypropane/2ethoxypropane/
+1methoxybutane/1isopropoxy2methylpropane/2ethoxybutane/2isopropoxy2methylpropane.
+Isopropoxy isgeneralnomenclature, notPINclaim. secbutyl hasunspecifiedstereocenter,
+noisomerismteaching/assignmentneeded. IUPACP63.2.2.2/P63.2.4/P14.5 primaryread.
+CommonGreekalphabeticalplan ignoressec/tertbutcountsiso; propose finalcommon
+tert-βουτυλοϊσοπροπυλαιθέρας (sameuserstructure,differentgrouporder),explicitly
+presentbeforeimplementationratherthansilentlychange. OthercommonjoiningGreek
+vowelconventioncurrentlydropsο; requirescarewithuserrequesteddiacritics.
+ExistingfAlkylGroupName onlyC3; commonparts usesmainchainlen ratherthanfragment
+Ccount; existingequalfragmentCcount symmetric flagnotgraphidentity. Needbounded
+pureacyclicethergraphsupport/branchfragments/sharedhelperregressions ifchanged,
+correct2D3Dfragmenthighlighting (wholealkylnotjustlongestchain).
+Proposedfilescore51/viewer51/data51/HTMLcache,21new2DMOL+7SDFsource+7runtime+
+7provenance,focusedgenerator/tests/report/notes;preserveold98/molecularfiles/
+scenarios/v50. PubChemvalidated3Dpreferred,documentedRDKitfallbackonlywhenneeded.
+PlanneedsuserapprovalunderAGENTS beforeanycodeintervention; nextpresentconcise
+7moleculeformula table+necessaryengineextension+lastnamealphabeticnote andask.
+FinalindependentReviewerrequiredafterapprovedimplementation. No commit/push.
+CurrentnewetherpreflightcoreUNCHANGED;earlierv51core51importpreservedbelow.
+
+# Current resume point — 2026-10-26 — v51 integration complete and independently reviewed (local)
+
+Userexplicitlyrequestedv51integrationafterCHANGELOGcheck. Standingroutine-sync
+approval+thisrequestauthorizeimplementation; concreteplanpresentedinGreekbefore
+sourceedits, no repeatedapprovalasked. No commit/push/publicationauthorized.
+Pinnedupstream6e29bd5c89872665ec9cd45f9f80fd2d9bd91d6e downloadedunder
+/tmp/namelecule-upstream-v51; complete891filetaskbaselinewithhashes under
+/tmp/namelecule-before-v51-20261026. PreexistingreviewedMOL-onlypatch preserved.
+AddedparallelHTML51,6JS51,3CSS51,vendoredjQuery4/DOMPurify+licenses;ui-iconsupdated.
+Core51 andnote51/baseCSS51 byteexactupstream;localdata50copiedto51preserving
+all98records/order/MOL/metadata/3Dmapping/cameras. NOsharedSDFoverwrite(4known
+upstreambyteconflicts),noMOL/provenance/oldversion/scenarioJSONchanges.
+Viewer3waymergeafterSnap→MuSVGnormalization,retainednativeparseradoptNodefix,
+local2Dfit/labelspacing/OHdispatch/numbering/cameras/namefit/manualrules.
+Scenario3waymergeconflictfree combinesrichnoteswithloading/Exit/preferences;
+teaching51useslocalnamefitandmanualruleflagcorrection. Existing2DdoubleSVG
+helperNOTreintroduced. SevenJSONsremainbyteidentical(theirapp50tagaccepted).
+Welcome/librarylinksnow51,indexstillNameleculewelcome. READMEcurrentmapupdated.
+Static885protectedfiles/98dataidentity/coreexact/assetrefs PASS. 586actualJSC
+v50→51name/parts/chaincomparisonsPASS. 153Firefoxsteps/7exportroundtrips/rules/
+7PrevExit/library390/nativeSVG/noSnap/richHTMLsanitizer/include testsPASS,
+12JSmolviewer-nullTypeErrorscaptured(sameclasshistoricallyknown,notzeroerror).
+First153runfailedtest-onlyassumptionruletableisHTMLtable;actualdivrows verified,
+fixedtestandreranfullsuite. 56nativeSVGmoleculecasesPASS0JSerrors;authoringmodalPASS0JSerrors
+(livesync/five-rulemenu/closefocus/Update/exportHTML). No fullRDKitregenerationneededforbyteidenticalmolecularassets.
+InitialinstallerlookedforunusedignoredSVGsourceicon;actualiconembeddedinui-icons,
+removedunneededcopy. StaticregexinitiallymatchedJSdocument.writeexpression,
+replacedwithHTMLParserassetcheck. Noappfixfortheseharness/installerassumptions.
+Evidence docs/checks/v51-sync-20261026.json andreportV51-SYNC-20261026.md
+complete. Developerinspectedtwoactualv51screenshots(expandeddiene/skeletalenynol).
+Frozen26filemanifest /tmp/v51-final-review-manifest.json, independentfresh
+Reviewer /root/review_v51_integration completedreadonlyreview,nofindings.
+IndependentlyPASS885protected/98dataidentity/586naming/coreexact/14additiveicons;
+browserresultsDeveloperonly,nofullRDKit/offline/allviewportclaim. Final26hashes
+unchanged, copied docs/checks/v51-reviewed-target-20261026.json.
+Sharediconscompatcheck noexistingkey/valuechanges,14additions.
+Nextuserinspectlocalv51;commit/push/publicationonlyonexplicitsaveinstruction.
+JSmol12viewer-nullconsoleeventsremainrecorded,notprovenrootcauseorall-regressions
+excluded. HTMLauthoringinitialracewithdefaultpreloadwasnotchanged,finaltestwaits.
+Coreprofessor-readyGreekmessage in docs/V51-SYNC-20261026.md.
+Corechangedthismigration:NEWjs/mulermoc-nom-core-51.js upstreamcopySHA256
+172d277580d4ceb62b77e4113448046f5c0a03fd17c1e2e46b92edf719dad8f3;
+core49/core50unchangedvs891filebaseline. Lastchecked6e29bd5;lastACTUALlocal
+syncNOW6e29bd5(v51),previous2b616f6(v50). Publicstaysv50/5fe4006.
+No commit/push/publication. PersonalconfigandallpreexistingMOL-onlyworkpreserved.
+
+# Current resume point — 2026-10-26 — CHANGELOG/history check completed, no newer commits
+
+UserrequestedcurrentprofessorCHANGELOGcheck. ReadREADME/currentresume/gitstatus/
+relevantdiffs;preservedallpreexistinguncommittedMOL-onlychangesandnotes.
+Livegitls-remoteHEAD6e29bd5c89872665ec9cd45f9f80fd2d9bd91d6e equalslastchecked
+25Oct. GitHubcompare6e29bd5...main statusidentical,0commits/0files. Actualcurrent
+CHANGELOGSHA25627ae863177d411b72cc7e653c279339f69f8ad63ab92e96a3864c7ff4027787d
+alsoidentical. Networkreadssucceeded. LastACTUALsyncstill2b616f6 (customv50).
+Readv51section:richHTMLnotes/ruleembeds/modaleditor;Snap-freeMuSVG;98molecules/
+18imports;stereo3→0 12new2Ddoubles (293blocks/210DBstereo0) andupstreamalso
+3Dnormalization;OOM/XMLparseradoptNodefix;upstreamv51live. Reportedchecksare
+professorreported,notnewlocalruntimeverification;128/130matrixwith2known
+skeletalJSmolcases isnotunqualifiedfullPASS. OurMOL-only12formsconvergeswith
+upstream2Dpolicy;4sharedSDFbyteoverlapsremainpriorrecorded. OurNamelecule
+welcome/theme/lessonsettings/fit/labelspacing/3Dzoomneedpreservationonv51;
+CHANGELOGexplicitlynotalllocalviewerpatchesimported. Noautomaticversionmigration
+or3Doverwriteduringthisread-onlyrequest;materialv51transitionrequiresconcrete
+planunderAGENTS. No app/core/MOL/SDF/scenarioedits,commit,push,publication.
+Core hashes atthischeck: mulermoc-nom-core-49.js ae85dd22b94292ed539ff2a858a1a6fe3672af90298662e5c6860fb411a65951; mulermoc-nom-core-50.js 0f79b5af20b9c3b4504673876abc03b6c162af316c33dff55fd55e0c22a43fd9.
+Nextuserdecisiononplannedv51migration;preserveexistingreviewedlocalMOLpatch.
+Temporaryreadcopies /tmp/namelecule-changelog-20261026.md and
+/tmp/namelecule-upstream-20261026.json. Priorresume/historybelow.
+
+# Upstream check — 2026-10-25 — newer v51 discovered during final closeout
+
+Comparedpreviouschecked34eb8b5da54a4025c1d63e39b64d1259b86a6063 withliveHEAD
+6e29bd5c89872665ec9cd45f9f80fd2d9bd91d6e. ReadactualcurrentCHANGELOG,
+SHA25627ae863177d411b72cc7e653c279339f69f8ad63ab92e96a3864c7ff4027787d,
+andGitHubcomparehistory/files. Newcommits1c814335 adds18molecules tov51/docs;
+6e29bd5c Snap-freev51live/indexswitch/MuSVGparserOOM/XMLfix. Activev50JSnot
+changedupstreaminthesetwocommits; index/v51rendererandsharedruntimeSDFoverlap
+localcustomizations. Of19sharedSDFs,15Gitblobidentical;4differ:dimethyl2,3pentadiene,
+3-methyl1,3pentadiene,largestenynol,propadiene. DoNOToverwritewithoutsource/
+graph/provenance/3Dmappingreview. Actualsyncstill2b616f6;lastcheckedNOW6e29bd5c.
+No syncperformed inMOL-onlytask: newversion/renderertransitionplus4sharedSDF
+conflictsarematerialseparatescope,needconcretev51planbeforeintegration under
+AGENTS. ReportednewcommitsandseparationinGreek. Upstreamreadsuccess;noaccessfailure.
+Temporarycomparison /tmp/mol-only-upstream-compare.json +SDF-comparison.json.
+Published23–25reportdocumentsearlierpublicationcheck34eb8b5,notlatestcloseout;
+nohistoricalreportrewrite/publicationinthislocalMOL-onlytask.
+
+# Current resume point — 2026-10-25 — MOL-only doubles completed and independently reviewed
+
+UserapprovedreplaceSVGparallelhelperwithMOL-onlysolutionforitsaffectedmolecules.
+BaselineGit5fe400612f094fff3bcc73a335e2add41e3b5076, immediatecopy
+/tmp/mol-files-only-baseline (preexistingdirtynotesfromtrialonly).
+Sevenoldhelperkeyschecked;only4have3→0 fields:3-methyl1,3pentadiene,
+2,3-dimethyl1,3pentadiene,3-ethyl4,5-dimethyl1,4hexadiene,largestnewenynol.
+Changed12MOL+12embeddedstrings;removedfDrawDieneParallelDoubleBonds+callfrom
+viewer50;HTMLdata/viewercachebumped. Generator2Dserializationnormalizedonly
+approvedscope,actual_2D_titles,explicit3Dguard;noassetregeneration.
+Policyintentional:2Dconnectivity-only0dropsrawexplicitunknown3;notclaiming
+universalequivalentEZinterpretationinotherreaders. NoEZteaching/namingadded.
+Core/allSDF/provenance/scenarioJSONandunaffectedmoleculesbyteidentical.
+Static21forms/12edits/297protectedfilesPASS;586actualJSCbeforeafternames/parts/
+chainsPASS;56Firefoxcases7keys×4forms×2chainmodesnativeparallels/highlights/
+2D3Dparent/real3Datomcount+PNGBlob/exportSVGPASS0JSerrors. JSsyntax/PythonAST/
+diffcheckPASS. FullRDKitnotrerun(absentoldvenv);rawfield/formula/valencechecks
+areindependentofRDKit. ActualserializerASTmockoutputtestsarenotfullgeneration.
+Developerinspectedexpandedbranchdiene/largestenynolskeletal at1500x1000;
+formsselectedviaglobalsAPI,radiosnotasserted. Initialconst/letmutationreader
+assumptioncorrectedfrombaseline;generatorcalltitle/3Dguardcheckedandfixed.
+Reportdocs/MOL-ONLY-DOUBLE-BONDS-20261025.md, evidencechecks/mol-only-doubles-
+20261025.json,3focusedchecks/scripts. Frozen22filemanifest
+/tmp/mol-only-review-manifest.json;freshReviewer /root/review_mol_only_double_bonds
+completedreadonlyreview:22hashes/raw12fielddiffs/297protectedfiles/staticchecks/
+586namingcasesindependentlyPASS,nofindings. Narrowreportrecordre-reviewCLEAN.
+Finalmanifestdocs/checks/mol-only-doubles-reviewed-target-20261025.json.
+Nextuserrefreshlocalapp;commit/pushonlyonnewsaveinstruction.
+No commit/push/publicationforthisnewchange;publicapp/reportremainprior5fe4006.
+No corechangeTHISsessiontask;previous23–25Octcorehistorypreservedbelow.
+
+# 2026-10-25 — Προσωρινή δοκιμή MOL αντί γραφικής function
+
+Userrequestedone-moleculetrialafterprofessorprefersMOL-onlysolution. Tested
+methyl_3_pentadiene_1_3 (3-μεθυλο-1,3-πενταδιένιο), three2Dforms, inisolated
+Firefox9237/localserver8013. Noapp/MOL/SDF/corefilesedited; inbrowsermemoryonly
+replaced one doublebondstereo3→0 perMOL anddisabledfDrawDieneParallelDoubleBonds.
+Before:doubleSVGparallelflags[true,false] inall3forms. After:[true,true] all3,
+unchangedGreekname,0JSerrors. Developerinspectedall3editedscreenshots.
+ExactfieldcomparisonverifiedONLYbondstereofieldchanged;atomcoordinates,
+connectivity,bondordersandallotherfieldsidentical. No3Dclaim:3Dnotloadedfor
+selectedtrialmolecule (existinginitialmodelmayremain). Repositorycleanbefore
+noteswrite; no commit/push/publication. CoreUNCHANGEDthistrial.
+Temporaryfixtures/results/screenshots /tmp/mol-only-* andsourceconstruction
+/tmp/test-mol-only-double.py. Earlier /tmp RDKitvenvabsent;noRDKitreparseinthis
+trial, noassumptionthat0preservesunspecifiedEZunderotherreaders. Earlierknown
+stereoinferencecaveatstillapplies. Browserinitiallyunavailable, restartedtemporary
+serverandFirefox; final6casespassed. Trial establishesappearanceonlyforone
+molecule, notblanketvalidationofalllibraryorremovalofproductionfunction.
+Next presentresult; permanentMOL/embedchange+scopedviewerexceptionremovalneeds
+concreteplan/userapproval andindependentReviewer beforehandoff.
+
 # Current resume point — 2026-10-25 — full save/publication completed, JSmol limitation recorded
 
 Userauthorizedfullsave/report/publication. Runtime6402b30a8edc22a8538e85c3b8241b5e5cf59d6f

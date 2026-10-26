@@ -20,11 +20,20 @@ def graph(s):
  return m
 
 def block(m,key):
- # Explicit unknown E/Z, never infer an isomer from this educational layout.
+ # Default unknown E/Z; the approved connectivity-only exception is below.
  copy=Chem.Mol(m)
  for info in Chem.FindPotentialStereo(copy):
   if info.type==Chem.StereoType.Bond_Double:copy.GetBondWithIdx(info.centeredOn).SetStereo(Chem.BondStereo.STEREOANY)
  text=Chem.MolToMolBlock(copy,includeStereo=True)
+ if key.startswith('ethyl_3_methyl_4_hexen_3_yn_5_ol_2_2D_'):
+  # Connectivity-only educational 2D files: parallel doubles come from MOL,
+  # not a viewer override. This does not encode an E/Z assignment.
+  lines=text.splitlines(keepends=True)
+  na=int(lines[3][:3]);nb=int(lines[3][3:6])
+  for i in range(4+na,4+na+nb):
+   if int(lines[i][6:9])==2 and int(lines[i][9:12])==3:
+    lines[i]=lines[i][:9]+'  0'+lines[i][12:]
+  text=''.join(lines)
  return key+'\n'+text.split('\n',1)[1]
 
 def forms(s):

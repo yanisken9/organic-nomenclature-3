@@ -28,6 +28,15 @@ def graph(spec):
 
 def block(mol,key):
  text=Chem.MolToMolBlock(mol,includeStereo=False)
+ if '_2D_' in key:
+  # Connectivity-only educational 2D files: parallel doubles come from MOL,
+  # not a viewer override. This does not encode an E/Z assignment.
+  lines=text.splitlines(keepends=True)
+  na=int(lines[3][:3]);nb=int(lines[3][3:6])
+  for i in range(4+na,4+na+nb):
+   if int(lines[i][6:9])==2 and int(lines[i][9:12])==3:
+    lines[i]=lines[i][:9]+'  0'+lines[i][12:]
+  text=''.join(lines)
  return key+'\n'+text.split('\n',1)[1]
 
 def orthogonal_expanded(mol):

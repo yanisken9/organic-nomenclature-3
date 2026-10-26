@@ -1,0 +1,2255 @@
+{
+  "scenarioVersion": 1,
+  "app": "mulermoc-nom-51",
+  "scenario": "Άλλες αλδεΰδες",
+  "title": "Άλλες αλδεΰδες",
+  "showStepNumbers": false,
+  "reserveTitleSpace": true,
+  "steps": [
+    {
+      "n": 1,
+      "title": "Αλδεΰδες με περισσότερα χαρακτηριστικά",
+      "note": "Συνεχίζουμε από τις κορεσμένες μονοσθενείς αλδεΰδες. Εδώ μελετάμε άκυκλες αλδεΰδες με <b>πολλαπλούς δεσμούς μεταξύ ατόμων C</b> ή με <b>δύο αλδεϋδομάδες –CHO</b> ή και τα δύο. Δεν έχουν όλες έναν κοινό γενικό μοριακό τύπο.\nΘα ξεκινήσουμε από την προπενάλη και θα αποκαλύπτουμε σταδιακά τα συνθετικά του ονόματος.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "none",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": [
+          "comp5",
+          "comp6",
+          "comp9"
+        ]
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "propenal",
+        "propynal",
+        "methyl_2_propenal",
+        "propanedial",
+        "methyl_3_penten_2_dial",
+        "isopropyl_2_buten_2_dial",
+        "ethyl_4_penten_4_yn_2_al",
+        "ethyl_2_methyl_3_hexen_2_yn_4_dial"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": false,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": false,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": false
+      },
+      "selectedMol": "propenal"
+    },
+    {
+      "n": 2,
+      "title": "Η κύρια αλυσίδα περιλαμβάνει το C της –CHO",
+      "note": "Η κύρια ανθρακική αλυσίδα έχει <b>τρία άτομα C</b>, μαζί με τον άνθρακα της αλδεϋδομάδας. Το πρώτο συνθετικό είναι <b>προπ-</b>.\nΑριθμούμε από το άκρο της <b>–CHO</b>, ώστε ο άνθρακας της ομάδας να είναι ο <b>C1</b>.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compCarbonsCount",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": [
+          "comp6",
+          "comp9"
+        ]
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "propenal",
+        "propynal",
+        "methyl_2_propenal",
+        "propanedial",
+        "methyl_3_penten_2_dial",
+        "isopropyl_2_buten_2_dial",
+        "ethyl_4_penten_4_yn_2_al",
+        "ethyl_2_methyl_3_hexen_2_yn_4_dial"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": false,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": false,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": false
+      },
+      "selectedMol": "propenal"
+    },
+    {
+      "n": 3,
+      "title": "Ο διπλός δεσμός μεταξύ ατόμων C",
+      "note": "Ο δεσμός <b>C=C</b> συνδέει τους άνθρακες <b>2 και 3</b> και δίνει το συνθετικό <b>-εν-</b>. Ο διαφορετικός διπλός δεσμός <b>C=O</b> ανήκει στην αλδεϋδομάδα και δεν μετριέται ως C=C.\nΣε αυτή την αλυσίδα τριών C η θέση του C=C είναι μοναδική και δεν γράφεται χωριστά στο όνομα.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compBondType",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": [
+          "comp9"
+        ]
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "propenal",
+        "propynal",
+        "methyl_2_propenal",
+        "propanedial",
+        "methyl_3_penten_2_dial",
+        "isopropyl_2_buten_2_dial",
+        "ethyl_4_penten_4_yn_2_al",
+        "ethyl_2_methyl_3_hexen_2_yn_4_dial"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": false,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": false,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": false
+      },
+      "selectedMol": "propenal"
+    },
+    {
+      "n": 4,
+      "title": "Η κατάληξη ολοκληρώνει την προπενάλη",
+      "note": "Η μία αλδεϋδομάδα δίνει την κατάληξη <b>-άλη</b>. Συνδυάζουμε <b>προπ- + -εν- + -άλη</b> και σχηματίζουμε <b>προπενάλη</b>, με μοριακό τύπο <b>C<sub>3</sub>H<sub>4</sub>O</b>.\nΔεν χρειάζεται να γράψουμε θέση 1 για την τελική –CHO.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compSuffix",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": []
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "propenal",
+        "propynal",
+        "methyl_2_propenal",
+        "propanedial",
+        "methyl_3_penten_2_dial",
+        "isopropyl_2_buten_2_dial",
+        "ethyl_4_penten_4_yn_2_al",
+        "ethyl_2_methyl_3_hexen_2_yn_4_dial"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": false,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": false,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": true
+      },
+      "selectedMol": "propenal"
+    },
+    {
+      "n": 5,
+      "title": "Τριπλός δεσμός και προπινάλη",
+      "note": "Η <b>προπινάλη</b> έχει επίσης τρία C και μία τελική –CHO. Από τον C1 της αλδεϋδομάδας, ο τριπλός δεσμός <b>C≡C</b> βρίσκεται ανάμεσα στους <b>C2 και C3</b>.\nΤο δεύτερο συνθετικό γίνεται <b>-ιν-</b> και το όνομα είναι <b>προπινάλη</b>. Η θέση του τριπλού είναι μοναδική για αυτή την αλυσίδα και παραλείπεται στο όνομα.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compBondType",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": []
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "propenal",
+        "propynal",
+        "methyl_2_propenal",
+        "propanedial",
+        "methyl_3_penten_2_dial",
+        "isopropyl_2_buten_2_dial",
+        "ethyl_4_penten_4_yn_2_al",
+        "ethyl_2_methyl_3_hexen_2_yn_4_dial"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": false,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": false,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": true
+      },
+      "selectedMol": "propynal"
+    },
+    {
+      "n": 6,
+      "title": "Το ίδιο μόριο σε διαφορετικούς 2D τύπους",
+      "note": "Παρατήρησε την προπινάλη σε συνεπτυγμένο, ανεπτυγμένο και σκελετικό τύπο, χρησιμοποιώντας τις επιλογές κάτω από το μόριο. Η συνδεσμολογία και το όνομα παραμένουν ίδια.\nΣτον ανεπτυγμένο φαίνονται όλα τα Η. Η αλδεϋδομάδα εξακολουθεί να ορίζει τον C1, όποια αναπαράσταση κι αν επιλέξεις.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "none",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": []
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "propenal",
+        "propynal",
+        "methyl_2_propenal",
+        "propanedial",
+        "methyl_3_penten_2_dial",
+        "isopropyl_2_buten_2_dial",
+        "ethyl_4_penten_4_yn_2_al",
+        "ethyl_2_methyl_3_hexen_2_yn_4_dial"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": true,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": true,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": true
+      },
+      "selectedMol": "propynal"
+    },
+    {
+      "n": 7,
+      "title": "Κύρια αλυσίδα και μεθυλομάδα",
+      "note": "Επιλέγουμε αλυσίδα <b>τριών C</b> που περιλαμβάνει τον άνθρακα της –CHO και τον διπλό δεσμό. Η –CHO ορίζει τον <b>C1</b>.\nΤο επιπλέον C δεν μεγαλώνει αυτή την αλυσίδα αλλά σχηματίζει <b>μεθυλομάδα στον C2</b>.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compCarbonsCount",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": [
+          "comp0",
+          "comp1"
+        ]
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "propenal",
+        "propynal",
+        "methyl_2_propenal",
+        "propanedial",
+        "methyl_3_penten_2_dial",
+        "isopropyl_2_buten_2_dial",
+        "ethyl_4_penten_4_yn_2_al",
+        "ethyl_2_methyl_3_hexen_2_yn_4_dial"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": true,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": true,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": false
+      },
+      "selectedMol": "methyl_2_propenal"
+    },
+    {
+      "n": 8,
+      "title": "Η διακλάδωση συμπληρώνει το όνομα",
+      "note": "Προσθέτουμε το πρόθεμα <b>2-μεθυλο-</b> στο όνομα προπενάλη. Προκύπτει <b>2-μεθυλοπροπενάλη</b>.\nΟ αριθμός 2 εδώ δηλώνει τη θέση της <b>μεθυλομάδας</b>, όχι χωριστή δήλωση της θέσης του διπλού δεσμού. Στον προαιρετικό πίνακα των αλκυλίων μπορείς να συγκρίνεις το μεθυλο- με τα άλλα προθέματα.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compSecondSub1",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": []
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "propenal",
+        "propynal",
+        "methyl_2_propenal",
+        "propanedial",
+        "methyl_3_penten_2_dial",
+        "isopropyl_2_buten_2_dial",
+        "ethyl_4_penten_4_yn_2_al",
+        "ethyl_2_methyl_3_hexen_2_yn_4_dial"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": true,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": true,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": true
+      },
+      "selectedMol": "methyl_2_propenal"
+    },
+    {
+      "n": 9,
+      "title": "Δύο τελικές αλδεϋδομάδες",
+      "note": "Η <b>προπανοδιάλη</b> έχει μία –CHO σε κάθε άκρο. Η κύρια αλυσίδα πρέπει να περιλαμβάνει <b>τους άνθρακες και των δύο αλδεϋδομάδων</b>.\nΜετράμε τρία C συνολικά και σχηματίζουμε το πρώτο συνθετικό <b>προπ-</b>. Οι δύο C=O δεν είναι διπλοί δεσμοί μεταξύ ατόμων C.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compCarbonsCount",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": [
+          "comp6",
+          "comp9"
+        ]
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "propenal",
+        "propynal",
+        "methyl_2_propenal",
+        "propanedial",
+        "methyl_3_penten_2_dial",
+        "isopropyl_2_buten_2_dial",
+        "ethyl_4_penten_4_yn_2_al",
+        "ethyl_2_methyl_3_hexen_2_yn_4_dial"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": true,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": true,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": false
+      },
+      "selectedMol": "propanedial"
+    },
+    {
+      "n": 10,
+      "title": "Μόνο απλοί δεσμοί μεταξύ των C",
+      "note": "Στην κύρια αλυσίδα της προπανοδιάλης όλοι οι δεσμοί <b>C–C είναι απλοί</b>. Το δεύτερο συνθετικό είναι <b>-αν-</b>, παρότι υπάρχουν δύο καρβονυλικοί δεσμοί C=O.\nΞεχωρίζουμε πάντοτε τους δεσμούς μεταξύ C από τους δεσμούς των χαρακτηριστικών ομάδων.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compBondType",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": [
+          "comp9"
+        ]
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "propenal",
+        "propynal",
+        "methyl_2_propenal",
+        "propanedial",
+        "methyl_3_penten_2_dial",
+        "isopropyl_2_buten_2_dial",
+        "ethyl_4_penten_4_yn_2_al",
+        "ethyl_2_methyl_3_hexen_2_yn_4_dial"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": true,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": true,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": false
+      },
+      "selectedMol": "propanedial"
+    },
+    {
+      "n": 11,
+      "title": "Η κατάληξη -διάλη",
+      "note": "Οι <b>δύο αλδεϋδομάδες</b> δίνουν την κατάληξη <b>-διάλη</b>. Συνδυάζουμε τα συνθετικά και γράφουμε <b>προπανοδιάλη</b>.\nΟι ομάδες βρίσκονται στα δύο άκρα, στους C1 και C3, και οι θέσεις τους δεν γράφονται χωριστά στην κατάληξη. Σε αυτό το συμμετρικό παράδειγμα η αρίθμηση από οποιοδήποτε άκρο δίνει το ίδιο όνομα.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compSuffix",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": []
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "propenal",
+        "propynal",
+        "methyl_2_propenal",
+        "propanedial",
+        "methyl_3_penten_2_dial",
+        "isopropyl_2_buten_2_dial",
+        "ethyl_4_penten_4_yn_2_al",
+        "ethyl_2_methyl_3_hexen_2_yn_4_dial"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": true,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": true,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": true
+      },
+      "selectedMol": "propanedial"
+    },
+    {
+      "n": 12,
+      "title": "Διαλδεΰδη με διπλό δεσμό",
+      "note": "Επιλέγουμε κύρια αλυσίδα <b>πέντε C</b> που συνδέει τις δύο τελικές –CHO και περιλαμβάνει τον διπλό δεσμό. Το πρώτο συνθετικό είναι <b>πεντ-</b>.\nΗ μεθυλομάδα μένει έξω από την κύρια αλυσίδα και θα προστεθεί ως διακλάδωση.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compCarbonsCount",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": [
+          "comp0",
+          "comp1",
+          "comp4",
+          "comp6",
+          "comp9"
+        ]
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "propenal",
+        "propynal",
+        "methyl_2_propenal",
+        "propanedial",
+        "methyl_3_penten_2_dial",
+        "isopropyl_2_buten_2_dial",
+        "ethyl_4_penten_4_yn_2_al",
+        "ethyl_2_methyl_3_hexen_2_yn_4_dial"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": true,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": true,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": false
+      },
+      "selectedMol": "methyl_3_penten_2_dial"
+    },
+    {
+      "n": 13,
+      "title": "Ποιο άκρο δίνει τη μικρότερη θέση",
+      "note": "Και από τα δύο άκρα οι αλδεϋδομάδες παίρνουν θέσεις <b>1 και 5</b>. Η επιλογή κρίνεται λοιπόν από τον διπλό δεσμό.\nΑριθμούμε ώστε ο C=C να συνδέει τους <b>C2 και C3</b>, αντί τους C3 και C4. Δηλώνουμε τη μικρότερη θέση του δεσμού, δηλαδή <b>2</b>.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compBondPos",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": [
+          "comp0",
+          "comp1"
+        ]
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "propenal",
+        "propynal",
+        "methyl_2_propenal",
+        "propanedial",
+        "methyl_3_penten_2_dial",
+        "isopropyl_2_buten_2_dial",
+        "ethyl_4_penten_4_yn_2_al",
+        "ethyl_2_methyl_3_hexen_2_yn_4_dial"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": true,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": true,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": false
+      },
+      "selectedMol": "methyl_3_penten_2_dial"
+    },
+    {
+      "n": 14,
+      "title": "Μεθυλομάδα και πλήρες όνομα",
+      "note": "Με αυτή την αρίθμηση η μεθυλομάδα βρίσκεται στον <b>C3</b>. Γράφουμε <b>3-μεθυλο-</b>, τη θέση <b>2</b> του διπλού και την κατάληξη <b>-διάλη</b>.\nΤο πλήρες όνομα είναι <b>3-μεθυλο-2-πεντενοδιάλη</b>. Το 3 αφορά τη διακλάδωση, ενώ το 2 τον C=C.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compSecondSub1",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": []
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "propenal",
+        "propynal",
+        "methyl_2_propenal",
+        "propanedial",
+        "methyl_3_penten_2_dial",
+        "isopropyl_2_buten_2_dial",
+        "ethyl_4_penten_4_yn_2_al",
+        "ethyl_2_methyl_3_hexen_2_yn_4_dial"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": true,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": true,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": true
+      },
+      "selectedMol": "methyl_3_penten_2_dial"
+    },
+    {
+      "n": 15,
+      "title": "Η αλυσίδα πρέπει να περιλαμβάνει και τις δύο –CHO",
+      "note": "Στο επόμενο μόριο η κύρια αλυσίδα έχει <b>τέσσερα C</b> και περιλαμβάνει τους άνθρακες και των δύο –CHO. Δεν επιλέγουμε μεγαλύτερη διαδρομή που αφήνει μία αλδεϋδομάδα έξω από την κύρια αλυσίδα.\nΤο ανθρακικό τμήμα που απομένει αποτελεί διακλάδωση.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compCarbonsCount",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": [
+          "comp0",
+          "comp1"
+        ]
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "propenal",
+        "propynal",
+        "methyl_2_propenal",
+        "propanedial",
+        "methyl_3_penten_2_dial",
+        "isopropyl_2_buten_2_dial",
+        "ethyl_4_penten_4_yn_2_al",
+        "ethyl_2_methyl_3_hexen_2_yn_4_dial"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": true,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": true,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": false
+      },
+      "selectedMol": "isopropyl_2_buten_2_dial"
+    },
+    {
+      "n": 16,
+      "title": "Όταν η θέση του διπλού δεσμού ισοπαλεί",
+      "note": "Οι –CHO έχουν θέσεις <b>1 και 4</b> και ο διπλός δεσμός θέση <b>2</b>, όποιο άκρο κι αν επιλέξουμε για αρχή.\nΤώρα συγκρίνουμε τις θέσεις της διακλάδωσης. Επιλέγουμε την αρίθμηση που τη φέρνει στον <b>C2 αντί στον C3</b>.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compNumber1",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": [
+          "comp1"
+        ]
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "propenal",
+        "propynal",
+        "methyl_2_propenal",
+        "propanedial",
+        "methyl_3_penten_2_dial",
+        "isopropyl_2_buten_2_dial",
+        "ethyl_4_penten_4_yn_2_al",
+        "ethyl_2_methyl_3_hexen_2_yn_4_dial"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": true,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": true,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": false
+      },
+      "selectedMol": "isopropyl_2_buten_2_dial"
+    },
+    {
+      "n": 17,
+      "title": "Αναγνώριση της ισοπροπυλομάδας",
+      "note": "Η διακλάδωση <b>–CH(CH<sub>3</sub>)<sub>2</sub></b> είναι ισοπροπυλομάδα. Με θέση 2 σχηματίζει το πρόθεμα <b>2-ισοπροπυλο-</b>.\nΤο όνομα ολοκληρώνεται ως <b>2-ισοπροπυλο-2-βουτενοδιάλη</b>. Ο πρώτος αριθμός 2 αφορά το αλκύλιο, ενώ ο δεύτερος τον διπλό δεσμό. Μπορείς να συμβουλευτείς τον προαιρετικό πίνακα αλκυλίων.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compSecondSub1",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": []
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "propenal",
+        "propynal",
+        "methyl_2_propenal",
+        "propanedial",
+        "methyl_3_penten_2_dial",
+        "isopropyl_2_buten_2_dial",
+        "ethyl_4_penten_4_yn_2_al",
+        "ethyl_2_methyl_3_hexen_2_yn_4_dial"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": true,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": true,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": true
+      },
+      "selectedMol": "isopropyl_2_buten_2_dial"
+    },
+    {
+      "n": 18,
+      "title": "Αλδεΰδη με διπλό και τριπλό δεσμό",
+      "note": "Στη σχολική σύμβαση που ακολουθούμε επιλέγουμε κύρια αλυσίδα <b>πέντε C</b> που περιλαμβάνει τον άνθρακα της –CHO και <b>τους δύο πολλαπλούς δεσμούς</b>.\nΑριθμούμε από την αλδεϋδομάδα, άρα ο άνθρακας της –CHO είναι ο <b>C1</b>. Η αιθυλομάδα θα γραφτεί ως διακλάδωση.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compCarbonsCount",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": [
+          "comp0",
+          "comp1",
+          "comp4",
+          "comp6",
+          "comp7",
+          "comp8",
+          "comp9"
+        ]
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "propenal",
+        "propynal",
+        "methyl_2_propenal",
+        "propanedial",
+        "methyl_3_penten_2_dial",
+        "isopropyl_2_buten_2_dial",
+        "ethyl_4_penten_4_yn_2_al",
+        "ethyl_2_methyl_3_hexen_2_yn_4_dial"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": true,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": true,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": false
+      },
+      "selectedMol": "ethyl_4_penten_4_yn_2_al"
+    },
+    {
+      "n": 19,
+      "title": "Οι θέσεις των δύο πολλαπλών δεσμών",
+      "note": "Από τον C1 της –CHO, ο τριπλός δεσμός συνδέει τους <b>C2 και C3</b> και ο διπλός τους <b>C4 και C5</b>. Οι θέσεις τους είναι λοιπόν <b>2 και 4</b> αντίστοιχα.\nΗ θέση της αλδεϋδομάδας καθορίζει την αρχή της αρίθμησης. Δεν αντιστρέφουμε την αλυσίδα μόνο για να πάρει ο διπλός μικρότερο αριθμό.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compBondPos",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": [
+          "comp0",
+          "comp1",
+          "comp9"
+        ]
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "propenal",
+        "propynal",
+        "methyl_2_propenal",
+        "propanedial",
+        "methyl_3_penten_2_dial",
+        "isopropyl_2_buten_2_dial",
+        "ethyl_4_penten_4_yn_2_al",
+        "ethyl_2_methyl_3_hexen_2_yn_4_dial"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": true,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": true,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": false
+      },
+      "selectedMol": "ethyl_4_penten_4_yn_2_al"
+    },
+    {
+      "n": 20,
+      "title": "Πρώτα -εν- και μετά -ιν-",
+      "note": "Στη γραφή του ονόματος το <b>-εν- προηγείται του -ιν-</b>, ακόμη κι όταν ο τριπλός δεσμός έχει μικρότερο αριθμό θέσης.\nΓια τον κύριο κορμό γράφουμε <b>4-πεντεν-2-ινάλη</b>. Το 4 αφορά τον διπλό, το 2 τον τριπλό και το -άλη τη μία αλδεϋδομάδα.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compSuffix",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": [
+          "comp0",
+          "comp1"
+        ]
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "propenal",
+        "propynal",
+        "methyl_2_propenal",
+        "propanedial",
+        "methyl_3_penten_2_dial",
+        "isopropyl_2_buten_2_dial",
+        "ethyl_4_penten_4_yn_2_al",
+        "ethyl_2_methyl_3_hexen_2_yn_4_dial"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": true,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": true,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": false
+      },
+      "selectedMol": "ethyl_4_penten_4_yn_2_al"
+    },
+    {
+      "n": 21,
+      "title": "Προσθήκη της αιθυλομάδας",
+      "note": "Στον <b>C4</b> συνδέεται αιθυλομάδα <b>–CH<sub>2</sub>CH<sub>3</sub></b>. Προσθέτουμε το πρόθεμα <b>4-αιθυλο-</b>.\nΤο πλήρες σχολικό όνομα είναι <b>4-αιθυλο-4-πεντεν-2-ινάλη</b>. Οι δύο εμφανίσεις του 4 δηλώνουν διαφορετικά στοιχεία, την αιθυλομάδα και τον διπλό δεσμό.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compSecondSub1",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": []
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "propenal",
+        "propynal",
+        "methyl_2_propenal",
+        "propanedial",
+        "methyl_3_penten_2_dial",
+        "isopropyl_2_buten_2_dial",
+        "ethyl_4_penten_4_yn_2_al",
+        "ethyl_2_methyl_3_hexen_2_yn_4_dial"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": true,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": true,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": true
+      },
+      "selectedMol": "ethyl_4_penten_4_yn_2_al"
+    },
+    {
+      "n": 22,
+      "title": "Συνδυασμός δύο –CHO και δύο πολλαπλών δεσμών",
+      "note": "Η κύρια αλυσίδα έχει <b>έξι C</b> και περιλαμβάνει τους άνθρακες και των δύο –CHO, τον διπλό και τον τριπλό δεσμό. Το πρώτο συνθετικό είναι <b>εξ-</b>.\nΟι αλδεϋδομάδες βρίσκονται στα άκρα, στις θέσεις <b>1 και 6</b>. Τα δύο αλκύλια θα προστεθούν αφού καθορίσουμε την αρίθμηση.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compCarbonsCount",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": [
+          "comp0",
+          "comp1",
+          "comp2",
+          "comp3",
+          "comp4",
+          "comp6",
+          "comp7",
+          "comp8",
+          "comp9"
+        ]
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "propenal",
+        "propynal",
+        "methyl_2_propenal",
+        "propanedial",
+        "methyl_3_penten_2_dial",
+        "isopropyl_2_buten_2_dial",
+        "ethyl_4_penten_4_yn_2_al",
+        "ethyl_2_methyl_3_hexen_2_yn_4_dial"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": true,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": true,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": false
+      },
+      "selectedMol": "ethyl_2_methyl_3_hexen_2_yn_4_dial"
+    },
+    {
+      "n": 23,
+      "title": "Στην ισοπαλία προηγείται ο διπλός δεσμός",
+      "note": "Και οι δύο κατευθύνσεις δίνουν στις –CHO θέσεις <b>1 και 6</b> και στους πολλαπλούς δεσμούς το ίδιο σύνολο θέσεων <b>2 και 4</b>.\nΣε αυτή την ισοπαλία ο <b>διπλός δεσμός παίρνει τη μικρότερη θέση</b>. Επιλέγουμε C=C στη θέση <b>2</b> και C≡C στη θέση <b>4</b>. Ο κύριος κορμός γίνεται <b>2-εξεν-4-ινοδιάλη</b>.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compBondPos",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": [
+          "comp0",
+          "comp1",
+          "comp2",
+          "comp3"
+        ]
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "propenal",
+        "propynal",
+        "methyl_2_propenal",
+        "propanedial",
+        "methyl_3_penten_2_dial",
+        "isopropyl_2_buten_2_dial",
+        "ethyl_4_penten_4_yn_2_al",
+        "ethyl_2_methyl_3_hexen_2_yn_4_dial"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": true,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": true,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": false
+      },
+      "selectedMol": "ethyl_2_methyl_3_hexen_2_yn_4_dial"
+    },
+    {
+      "n": 24,
+      "title": "Αλφαβητική σειρά και σύνθεση του ονόματος",
+      "note": "Με την επιλεγμένη αρίθμηση η <b>αιθυλομάδα</b> βρίσκεται στον C2 και η <b>μεθυλομάδα</b> στον C3. Γράφουμε αιθυλο- πριν από μεθυλο-, σύμφωνα με την αλφαβητική σειρά.\nΤο πλήρες όνομα είναι <b>2-αιθυλο-3-μεθυλο-2-εξεν-4-ινοδιάλη</b>. Ο προαιρετικός πίνακας αλκυλίων βοηθά στη σύγκριση των προθεμάτων.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compSecondSub1",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": []
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "propenal",
+        "propynal",
+        "methyl_2_propenal",
+        "propanedial",
+        "methyl_3_penten_2_dial",
+        "isopropyl_2_buten_2_dial",
+        "ethyl_4_penten_4_yn_2_al",
+        "ethyl_2_methyl_3_hexen_2_yn_4_dial"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": true,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": true,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": true
+      },
+      "selectedMol": "ethyl_2_methyl_3_hexen_2_yn_4_dial"
+    },
+    {
+      "n": 25,
+      "title": "Σύνθεση των κανόνων σε 2D",
+      "note": "Περιλαμβάνουμε στην κύρια αλυσίδα τους άνθρακες των –CHO και εφαρμόζουμε τη σχολική επιλογή για τους πολλαπλούς δεσμούς. Με μία –CHO αρχίζουμε από το άκρο της. Με δύο τελικές –CHO συγκρίνουμε τις θέσεις των πολλαπλών δεσμών, δίνουμε προτεραιότητα στον διπλό στην ισοπαλία και έπειτα εξετάζουμε τις διακλαδώσεις.\nΓράφουμε τα αλκύλια αλφαβητικά, τα συνθετικά -εν- πριν από -ιν- και την κατάλληλη κατάληξη -άλη ή -διάλη. Μπορείς να επιστρέψεις στα παραδείγματα από τη λίστα και να συγκρίνεις τις 2D αναπαραστάσεις.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "none",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": []
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "propenal",
+        "propynal",
+        "methyl_2_propenal",
+        "propanedial",
+        "methyl_3_penten_2_dial",
+        "isopropyl_2_buten_2_dial",
+        "ethyl_4_penten_4_yn_2_al",
+        "ethyl_2_methyl_3_hexen_2_yn_4_dial"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": true,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": true,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": true,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": true
+      },
+      "selectedMol": "ethyl_2_methyl_3_hexen_2_yn_4_dial"
+    },
+    {
+      "n": 26,
+      "title": "Προαιρετική παρατήρηση σε 3D",
+      "note": "Η ονοματολογία έχει ολοκληρωθεί. <b>Αυτό το τελευταίο βήμα είναι προαιρετικό.</b>\nΠαρατήρησε το ίδιο μόριο σε 2D και 3D. Εντόπισε τις δύο αλδεϋδομάδες, τον διπλό και τον τριπλό δεσμό και τα δύο αλκύλια. Η τρισδιάστατη διαμόρφωση δεν αλλάζει τη συνδεσμολογία ή τους κανόνες ονομασίας που μελετήσαμε.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "none",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": []
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "propenal",
+        "propynal",
+        "methyl_2_propenal",
+        "propanedial",
+        "methyl_3_penten_2_dial",
+        "isopropyl_2_buten_2_dial",
+        "ethyl_4_penten_4_yn_2_al",
+        "ethyl_2_methyl_3_hexen_2_yn_4_dial"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": true,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": true
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": 840,
+        "controls": {
+          "2D": true,
+          "3D": true
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": true,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": true
+      },
+      "selectedMol": "ethyl_2_methyl_3_hexen_2_yn_4_dial"
+    }
+  ]
+}

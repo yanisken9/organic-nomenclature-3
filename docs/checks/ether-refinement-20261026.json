@@ -1,0 +1,614 @@
+{
+  "date": "2026-10-26",
+  "baseCommit": "5fe400612f094fff3bcc73a335e2add41e3b5076",
+  "baseline": "/tmp/namelecule-before-ether-refinement-20261026",
+  "assets": {
+    "changedMOL": [
+      "mols/new_molecules/ethyl_isopropyl_ether_2D_Condensed.mol",
+      "mols/new_molecules/tert_butyl_isopropyl_ether_2D_Expanded.mol",
+      "mols/new_molecules/ethyl_sec_butyl_ether_2D_Expanded.mol",
+      "mols/new_molecules/ethyl_isopropyl_ether_2D_Expanded.mol",
+      "mols/new_molecules/ethyl_sec_butyl_ether_2D_Condensed.mol",
+      "mols/new_molecules/tert_butyl_isopropyl_ether_2D_Condensed.mol"
+    ],
+    "protectedFilesUnchanged": 960,
+    "molecules": [
+      {
+        "key": "methyl_propyl_ether",
+        "formula": "C4H10O",
+        "forms": {
+          "Condensed": {
+            "atoms": 5,
+            "nearestNonbonded": 2.34
+          },
+          "Expanded": {
+            "atoms": 15,
+            "nearestNonbonded": 1.1030865786510144
+          },
+          "Skeletal": {
+            "atoms": 5,
+            "nearestNonbonded": 2.0265
+          }
+        },
+        "source": "PubChem",
+        "cid": 11182
+      },
+      {
+        "key": "ethyl_propyl_ether",
+        "formula": "C5H12O",
+        "forms": {
+          "Condensed": {
+            "atoms": 6,
+            "nearestNonbonded": 2.34
+          },
+          "Expanded": {
+            "atoms": 18,
+            "nearestNonbonded": 1.1030865786510144
+          },
+          "Skeletal": {
+            "atoms": 6,
+            "nearestNonbonded": 2.0264
+          }
+        },
+        "source": "PubChem",
+        "cid": 12340
+      },
+      {
+        "key": "ethyl_isopropyl_ether",
+        "formula": "C5H12O",
+        "forms": {
+          "Condensed": {
+            "atoms": 6,
+            "nearestNonbonded": 1.6546298679765212
+          },
+          "Expanded": {
+            "atoms": 18,
+            "nearestNonbonded": 0.551543289325507
+          },
+          "Skeletal": {
+            "atoms": 6,
+            "nearestNonbonded": 2.0264
+          }
+        },
+        "source": "PubChem",
+        "cid": 12256
+      },
+      {
+        "key": "butyl_methyl_ether",
+        "formula": "C5H12O",
+        "forms": {
+          "Condensed": {
+            "atoms": 6,
+            "nearestNonbonded": 2.34
+          },
+          "Expanded": {
+            "atoms": 18,
+            "nearestNonbonded": 1.1030865786510144
+          },
+          "Skeletal": {
+            "atoms": 6,
+            "nearestNonbonded": 2.0264
+          }
+        },
+        "source": "PubChem",
+        "cid": 12338
+      },
+      {
+        "key": "isobutyl_isopropyl_ether",
+        "formula": "C7H16O",
+        "forms": {
+          "Condensed": {
+            "atoms": 8,
+            "nearestNonbonded": 1.6546298679765212
+          },
+          "Expanded": {
+            "atoms": 24,
+            "nearestNonbonded": 0.5515432893255068
+          },
+          "Skeletal": {
+            "atoms": 8,
+            "nearestNonbonded": 2.0264745840991933
+          }
+        },
+        "source": "PubChem",
+        "cid": 14671559
+      },
+      {
+        "key": "ethyl_sec_butyl_ether",
+        "formula": "C6H14O",
+        "forms": {
+          "Condensed": {
+            "atoms": 7,
+            "nearestNonbonded": 1.6546298679765212
+          },
+          "Expanded": {
+            "atoms": 21,
+            "nearestNonbonded": 0.551543289325507
+          },
+          "Skeletal": {
+            "atoms": 7,
+            "nearestNonbonded": 2.0264
+          }
+        },
+        "source": "PubChem",
+        "cid": 17586
+      },
+      {
+        "key": "tert_butyl_isopropyl_ether",
+        "formula": "C7H16O",
+        "forms": {
+          "Condensed": {
+            "atoms": 8,
+            "nearestNonbonded": 1.6546298679765212
+          },
+          "Expanded": {
+            "atoms": 24,
+            "nearestNonbonded": 0.5515432893255069
+          },
+          "Skeletal": {
+            "atoms": 8,
+            "nearestNonbonded": 1.3034596464793224
+          }
+        },
+        "source": "PubChem",
+        "cid": 28488
+      }
+    ],
+    "metadataOnlyTwoFormulaChanges": true,
+    "uniformFontFrameUnchanged": {
+      "width": 34.333333333333336,
+      "height": 26.333333333333336
+    },
+    "allChecksPassed": true
+  },
+  "browser": {
+    "cases": [
+      {
+        "width": 1500,
+        "molecule": "ethyl_isopropyl_ether",
+        "mode": "condensed",
+        "chainMode": "algorithmic",
+        "name": "2-αιθοξυπροπάνιο",
+        "common": "αιθυλοϊσοπροπυλαιθέρας"
+      },
+      {
+        "width": 1500,
+        "molecule": "ethyl_isopropyl_ether",
+        "mode": "condensed",
+        "chainMode": "data",
+        "name": "2-αιθοξυπροπάνιο",
+        "common": "αιθυλοϊσοπροπυλαιθέρας"
+      },
+      {
+        "width": 1500,
+        "molecule": "ethyl_isopropyl_ether",
+        "mode": "expanded",
+        "chainMode": "algorithmic",
+        "name": "2-αιθοξυπροπάνιο",
+        "common": "αιθυλοϊσοπροπυλαιθέρας"
+      },
+      {
+        "width": 1500,
+        "molecule": "ethyl_isopropyl_ether",
+        "mode": "expanded",
+        "chainMode": "data",
+        "name": "2-αιθοξυπροπάνιο",
+        "common": "αιθυλοϊσοπροπυλαιθέρας"
+      },
+      {
+        "width": 1500,
+        "molecule": "ethyl_isopropyl_ether",
+        "mode": "skeletal",
+        "chainMode": "algorithmic",
+        "name": "2-αιθοξυπροπάνιο",
+        "common": "αιθυλοϊσοπροπυλαιθέρας"
+      },
+      {
+        "width": 1500,
+        "molecule": "ethyl_isopropyl_ether",
+        "mode": "skeletal",
+        "chainMode": "data",
+        "name": "2-αιθοξυπροπάνιο",
+        "common": "αιθυλοϊσοπροπυλαιθέρας"
+      },
+      {
+        "width": 1500,
+        "molecule": "ethyl_isopropyl_ether",
+        "mode": "condensedZigZag",
+        "chainMode": "algorithmic",
+        "name": "2-αιθοξυπροπάνιο",
+        "common": "αιθυλοϊσοπροπυλαιθέρας"
+      },
+      {
+        "width": 1500,
+        "molecule": "ethyl_isopropyl_ether",
+        "mode": "condensedZigZag",
+        "chainMode": "data",
+        "name": "2-αιθοξυπροπάνιο",
+        "common": "αιθυλοϊσοπροπυλαιθέρας"
+      },
+      {
+        "width": 1500,
+        "molecule": "ethyl_sec_butyl_ether",
+        "mode": "condensed",
+        "chainMode": "algorithmic",
+        "name": "2-αιθοξυβουτάνιο",
+        "common": "αιθυλο-sec-βουτυλαιθέρας"
+      },
+      {
+        "width": 1500,
+        "molecule": "ethyl_sec_butyl_ether",
+        "mode": "condensed",
+        "chainMode": "data",
+        "name": "2-αιθοξυβουτάνιο",
+        "common": "αιθυλο-sec-βουτυλαιθέρας"
+      },
+      {
+        "width": 1500,
+        "molecule": "ethyl_sec_butyl_ether",
+        "mode": "expanded",
+        "chainMode": "algorithmic",
+        "name": "2-αιθοξυβουτάνιο",
+        "common": "αιθυλο-sec-βουτυλαιθέρας"
+      },
+      {
+        "width": 1500,
+        "molecule": "ethyl_sec_butyl_ether",
+        "mode": "expanded",
+        "chainMode": "data",
+        "name": "2-αιθοξυβουτάνιο",
+        "common": "αιθυλο-sec-βουτυλαιθέρας"
+      },
+      {
+        "width": 1500,
+        "molecule": "ethyl_sec_butyl_ether",
+        "mode": "skeletal",
+        "chainMode": "algorithmic",
+        "name": "2-αιθοξυβουτάνιο",
+        "common": "αιθυλο-sec-βουτυλαιθέρας"
+      },
+      {
+        "width": 1500,
+        "molecule": "ethyl_sec_butyl_ether",
+        "mode": "skeletal",
+        "chainMode": "data",
+        "name": "2-αιθοξυβουτάνιο",
+        "common": "αιθυλο-sec-βουτυλαιθέρας"
+      },
+      {
+        "width": 1500,
+        "molecule": "ethyl_sec_butyl_ether",
+        "mode": "condensedZigZag",
+        "chainMode": "algorithmic",
+        "name": "2-αιθοξυβουτάνιο",
+        "common": "αιθυλο-sec-βουτυλαιθέρας"
+      },
+      {
+        "width": 1500,
+        "molecule": "ethyl_sec_butyl_ether",
+        "mode": "condensedZigZag",
+        "chainMode": "data",
+        "name": "2-αιθοξυβουτάνιο",
+        "common": "αιθυλο-sec-βουτυλαιθέρας"
+      },
+      {
+        "width": 1500,
+        "molecule": "tert_butyl_isopropyl_ether",
+        "mode": "condensed",
+        "chainMode": "algorithmic",
+        "name": "2-ισοπροποξυ-2-μεθυλοπροπάνιο",
+        "common": "tert-βουτυλοϊσοπροπυλαιθέρας"
+      },
+      {
+        "width": 1500,
+        "molecule": "tert_butyl_isopropyl_ether",
+        "mode": "condensed",
+        "chainMode": "data",
+        "name": "2-ισοπροποξυ-2-μεθυλοπροπάνιο",
+        "common": "tert-βουτυλοϊσοπροπυλαιθέρας"
+      },
+      {
+        "width": 1500,
+        "molecule": "tert_butyl_isopropyl_ether",
+        "mode": "expanded",
+        "chainMode": "algorithmic",
+        "name": "2-ισοπροποξυ-2-μεθυλοπροπάνιο",
+        "common": "tert-βουτυλοϊσοπροπυλαιθέρας"
+      },
+      {
+        "width": 1500,
+        "molecule": "tert_butyl_isopropyl_ether",
+        "mode": "expanded",
+        "chainMode": "data",
+        "name": "2-ισοπροποξυ-2-μεθυλοπροπάνιο",
+        "common": "tert-βουτυλοϊσοπροπυλαιθέρας"
+      },
+      {
+        "width": 1500,
+        "molecule": "tert_butyl_isopropyl_ether",
+        "mode": "skeletal",
+        "chainMode": "algorithmic",
+        "name": "2-ισοπροποξυ-2-μεθυλοπροπάνιο",
+        "common": "tert-βουτυλοϊσοπροπυλαιθέρας"
+      },
+      {
+        "width": 1500,
+        "molecule": "tert_butyl_isopropyl_ether",
+        "mode": "skeletal",
+        "chainMode": "data",
+        "name": "2-ισοπροποξυ-2-μεθυλοπροπάνιο",
+        "common": "tert-βουτυλοϊσοπροπυλαιθέρας"
+      },
+      {
+        "width": 1500,
+        "molecule": "tert_butyl_isopropyl_ether",
+        "mode": "condensedZigZag",
+        "chainMode": "algorithmic",
+        "name": "2-ισοπροποξυ-2-μεθυλοπροπάνιο",
+        "common": "tert-βουτυλοϊσοπροπυλαιθέρας"
+      },
+      {
+        "width": 1500,
+        "molecule": "tert_butyl_isopropyl_ether",
+        "mode": "condensedZigZag",
+        "chainMode": "data",
+        "name": "2-ισοπροποξυ-2-μεθυλοπροπάνιο",
+        "common": "tert-βουτυλοϊσοπροπυλαιθέρας"
+      },
+      {
+        "width": 390,
+        "molecule": "ethyl_isopropyl_ether",
+        "mode": "condensed",
+        "chainMode": "algorithmic",
+        "name": "2-αιθοξυπροπάνιο",
+        "common": "αιθυλοϊσοπροπυλαιθέρας"
+      },
+      {
+        "width": 390,
+        "molecule": "ethyl_isopropyl_ether",
+        "mode": "condensed",
+        "chainMode": "data",
+        "name": "2-αιθοξυπροπάνιο",
+        "common": "αιθυλοϊσοπροπυλαιθέρας"
+      },
+      {
+        "width": 390,
+        "molecule": "ethyl_isopropyl_ether",
+        "mode": "expanded",
+        "chainMode": "algorithmic",
+        "name": "2-αιθοξυπροπάνιο",
+        "common": "αιθυλοϊσοπροπυλαιθέρας"
+      },
+      {
+        "width": 390,
+        "molecule": "ethyl_isopropyl_ether",
+        "mode": "expanded",
+        "chainMode": "data",
+        "name": "2-αιθοξυπροπάνιο",
+        "common": "αιθυλοϊσοπροπυλαιθέρας"
+      },
+      {
+        "width": 390,
+        "molecule": "ethyl_isopropyl_ether",
+        "mode": "skeletal",
+        "chainMode": "algorithmic",
+        "name": "2-αιθοξυπροπάνιο",
+        "common": "αιθυλοϊσοπροπυλαιθέρας"
+      },
+      {
+        "width": 390,
+        "molecule": "ethyl_isopropyl_ether",
+        "mode": "skeletal",
+        "chainMode": "data",
+        "name": "2-αιθοξυπροπάνιο",
+        "common": "αιθυλοϊσοπροπυλαιθέρας"
+      },
+      {
+        "width": 390,
+        "molecule": "ethyl_isopropyl_ether",
+        "mode": "condensedZigZag",
+        "chainMode": "algorithmic",
+        "name": "2-αιθοξυπροπάνιο",
+        "common": "αιθυλοϊσοπροπυλαιθέρας"
+      },
+      {
+        "width": 390,
+        "molecule": "ethyl_isopropyl_ether",
+        "mode": "condensedZigZag",
+        "chainMode": "data",
+        "name": "2-αιθοξυπροπάνιο",
+        "common": "αιθυλοϊσοπροπυλαιθέρας"
+      },
+      {
+        "width": 390,
+        "molecule": "ethyl_sec_butyl_ether",
+        "mode": "condensed",
+        "chainMode": "algorithmic",
+        "name": "2-αιθοξυβουτάνιο",
+        "common": "αιθυλο-sec-βουτυλαιθέρας"
+      },
+      {
+        "width": 390,
+        "molecule": "ethyl_sec_butyl_ether",
+        "mode": "condensed",
+        "chainMode": "data",
+        "name": "2-αιθοξυβουτάνιο",
+        "common": "αιθυλο-sec-βουτυλαιθέρας"
+      },
+      {
+        "width": 390,
+        "molecule": "ethyl_sec_butyl_ether",
+        "mode": "expanded",
+        "chainMode": "algorithmic",
+        "name": "2-αιθοξυβουτάνιο",
+        "common": "αιθυλο-sec-βουτυλαιθέρας"
+      },
+      {
+        "width": 390,
+        "molecule": "ethyl_sec_butyl_ether",
+        "mode": "expanded",
+        "chainMode": "data",
+        "name": "2-αιθοξυβουτάνιο",
+        "common": "αιθυλο-sec-βουτυλαιθέρας"
+      },
+      {
+        "width": 390,
+        "molecule": "ethyl_sec_butyl_ether",
+        "mode": "skeletal",
+        "chainMode": "algorithmic",
+        "name": "2-αιθοξυβουτάνιο",
+        "common": "αιθυλο-sec-βουτυλαιθέρας"
+      },
+      {
+        "width": 390,
+        "molecule": "ethyl_sec_butyl_ether",
+        "mode": "skeletal",
+        "chainMode": "data",
+        "name": "2-αιθοξυβουτάνιο",
+        "common": "αιθυλο-sec-βουτυλαιθέρας"
+      },
+      {
+        "width": 390,
+        "molecule": "ethyl_sec_butyl_ether",
+        "mode": "condensedZigZag",
+        "chainMode": "algorithmic",
+        "name": "2-αιθοξυβουτάνιο",
+        "common": "αιθυλο-sec-βουτυλαιθέρας"
+      },
+      {
+        "width": 390,
+        "molecule": "ethyl_sec_butyl_ether",
+        "mode": "condensedZigZag",
+        "chainMode": "data",
+        "name": "2-αιθοξυβουτάνιο",
+        "common": "αιθυλο-sec-βουτυλαιθέρας"
+      },
+      {
+        "width": 390,
+        "molecule": "tert_butyl_isopropyl_ether",
+        "mode": "condensed",
+        "chainMode": "algorithmic",
+        "name": "2-ισοπροποξυ-2-μεθυλοπροπάνιο",
+        "common": "tert-βουτυλοϊσοπροπυλαιθέρας"
+      },
+      {
+        "width": 390,
+        "molecule": "tert_butyl_isopropyl_ether",
+        "mode": "condensed",
+        "chainMode": "data",
+        "name": "2-ισοπροποξυ-2-μεθυλοπροπάνιο",
+        "common": "tert-βουτυλοϊσοπροπυλαιθέρας"
+      },
+      {
+        "width": 390,
+        "molecule": "tert_butyl_isopropyl_ether",
+        "mode": "expanded",
+        "chainMode": "algorithmic",
+        "name": "2-ισοπροποξυ-2-μεθυλοπροπάνιο",
+        "common": "tert-βουτυλοϊσοπροπυλαιθέρας"
+      },
+      {
+        "width": 390,
+        "molecule": "tert_butyl_isopropyl_ether",
+        "mode": "expanded",
+        "chainMode": "data",
+        "name": "2-ισοπροποξυ-2-μεθυλοπροπάνιο",
+        "common": "tert-βουτυλοϊσοπροπυλαιθέρας"
+      },
+      {
+        "width": 390,
+        "molecule": "tert_butyl_isopropyl_ether",
+        "mode": "skeletal",
+        "chainMode": "algorithmic",
+        "name": "2-ισοπροποξυ-2-μεθυλοπροπάνιο",
+        "common": "tert-βουτυλοϊσοπροπυλαιθέρας"
+      },
+      {
+        "width": 390,
+        "molecule": "tert_butyl_isopropyl_ether",
+        "mode": "skeletal",
+        "chainMode": "data",
+        "name": "2-ισοπροποξυ-2-μεθυλοπροπάνιο",
+        "common": "tert-βουτυλοϊσοπροπυλαιθέρας"
+      },
+      {
+        "width": 390,
+        "molecule": "tert_butyl_isopropyl_ether",
+        "mode": "condensedZigZag",
+        "chainMode": "algorithmic",
+        "name": "2-ισοπροποξυ-2-μεθυλοπροπάνιο",
+        "common": "tert-βουτυλοϊσοπροπυλαιθέρας"
+      },
+      {
+        "width": 390,
+        "molecule": "tert_butyl_isopropyl_ether",
+        "mode": "condensedZigZag",
+        "chainMode": "data",
+        "name": "2-ισοπροποξυ-2-μεθυλοπροπάνιο",
+        "common": "tert-βουτυλοϊσοπροπυλαιθέρας"
+      }
+    ],
+    "javascriptErrors": []
+  },
+  "strictInkBrowser": {
+    "cases": [
+      {
+        "width": 1500,
+        "molecule": "ethyl_isopropyl_ether",
+        "noGlyphInkOverlap": true,
+        "actualExpandedRadioClick": true
+      },
+      {
+        "width": 1500,
+        "molecule": "ethyl_sec_butyl_ether",
+        "noGlyphInkOverlap": true,
+        "actualExpandedRadioClick": true
+      },
+      {
+        "width": 1500,
+        "molecule": "tert_butyl_isopropyl_ether",
+        "noGlyphInkOverlap": true,
+        "actualExpandedRadioClick": true
+      },
+      {
+        "width": 390,
+        "molecule": "ethyl_isopropyl_ether",
+        "noGlyphInkOverlap": true,
+        "actualExpandedRadioClick": true
+      },
+      {
+        "width": 390,
+        "molecule": "ethyl_sec_butyl_ether",
+        "noGlyphInkOverlap": true,
+        "actualExpandedRadioClick": true
+      },
+      {
+        "width": 390,
+        "molecule": "tert_butyl_isopropyl_ether",
+        "noGlyphInkOverlap": true,
+        "actualExpandedRadioClick": true
+      }
+    ],
+    "javascriptErrors": []
+  },
+  "naming": {
+    "newCases": 266,
+    "formChainCases": 42,
+    "permutations": 224,
+    "oldCases": 586
+  },
+  "coreChanged": false,
+  "viewerChanged": false,
+  "threeDChanged": false,
+  "scenariosChanged": false,
+  "committed": false,
+  "published": false,
+  "reviewer": "/root/review_ether_refinement",
+  "limitations": [
+    "Main48cases use API mode/chain changes; real IUPAC/common buttons clicked",
+    "Main screenshot portrait overlay dismissal unsuccessful; supplementary6 use actual Expanded radio and dismiss by rotatePromptDismiss ID",
+    "Canvas glyph bounds approximate ink; supplementary6 reject any positive rectangle intersection",
+    "Browser single Firefox,1500/390widths; not all browsers,fonts,zoom/viewport states",
+    "Protected count960 recorded before final docs/notes updates"
+  ]
+}

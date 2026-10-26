@@ -2926,51 +2926,6 @@ function fFit2DSVG() {
 // lines already reach the atom centers; the label backplates mask those lines.
 // Remove the paired labels/backplates, keeping the separate atom/bond highlights.
 
-// User-approved connectivity diagrams: render unknown-E/Z crossed doubles
-// as parallel SVG lines in the approved connectivity drawings. Raw MOL/stereo remain intact.
-function fDrawDieneParallelDoubleBonds() {
-  if (!["expanded", "condensed", "condensedZigZag", "skeletal"].includes(mode2D) || ![
-    "butadiene_1_3", "butadiene_1_2", "pentadiene_1_4",
-    "methyl_3_pentadiene_1_3", "dimethyl_2_3_pentadiene_1_3",
-    "ethyl_3_dimethyl_4_5_hexadiene_1_4",
-    "ethyl_3_methyl_4_hexen_3_yn_5_ol_2"
-  ].includes(selectedMol)) return;
-  const svg = document.querySelector("#jsmeNomeclatureSVG svg");
-  if (!svg) return;
-  const lines = svg.querySelectorAll("line");
-  const cross = (a, b, c) => (b[0]-a[0])*(c[1]-a[1])-(b[1]-a[1])*(c[0]-a[0]);
-  for (let b = 0; b < bondList.length; b++) {
-    if (bondList[b][2] !== 2) continue;
-    const first = svgBondList[b] - 1;
-    const pair = [lines[first], lines[first + 1]];
-    if (pair.some(line => !line)) continue;
-    const p = pair.map(line => ["x1", "y1", "x2", "y2"].map(k => Number(line.getAttribute(k))));
-    if (p.some(v => v.some(n => !Number.isFinite(n)))) continue;
-    const a = [p[0].slice(0,2), p[0].slice(2)], c = [p[1].slice(0,2), p[1].slice(2)];
-    if (cross(a[0],a[1],c[0])*cross(a[0],a[1],c[1]) >= 0 ||
-        cross(c[0],c[1],a[0])*cross(c[0],c[1],a[1]) >= 0) continue;
-    // Align segment directions, then offset along the bond-axis normal.
-    // This preserves diagonal/vertical bonds rather than flattening them.
-    if ((a[1][0]-a[0][0])*(c[1][0]-c[0][0]) +
-        (a[1][1]-a[0][1])*(c[1][1]-c[0][1]) < 0) c.reverse();
-    const start = a[0].map((v,i) => (v+c[0][i])/2);
-    const end = a[1].map((v,i) => (v+c[1][i])/2);
-    const dx = end[0]-start[0], dy = end[1]-start[1], length = Math.hypot(dx,dy);
-    if (length < 1e-6) continue;
-    const normal = [-dy/length, dx/length];
-    const gap = (Math.abs((a[0][0]-c[0][0])*normal[0]+(a[0][1]-c[0][1])*normal[1]) +
-                 Math.abs((a[1][0]-c[1][0])*normal[0]+(a[1][1]-c[1][1])*normal[1]))/4;
-    if (gap < 1e-6) continue;
-    pair.forEach((line,i) => {
-      const sign = i ? 1 : -1;
-      ["x1","y1","x2","y2"].forEach((key,j) => {
-        const point = j < 2 ? start : end, coord = j % 2;
-        line.setAttribute(key, point[coord]+sign*gap*normal[coord]);
-      });
-    });
-  }
-}
-
 function fUpdateSVG() {
   if (!jsmeNomeclatureApplet) return;
   compactNumberingLabelMap = {};
@@ -3001,7 +2956,6 @@ function fUpdateSVG() {
   if (mode2D === "expanded") {
     fMarkExpandedHydrogens();
   }
-  fDrawDieneParallelDoubleBonds();
   if (mode2D === "condensed") {
     fCompactFunctionalGroups2D();
   }

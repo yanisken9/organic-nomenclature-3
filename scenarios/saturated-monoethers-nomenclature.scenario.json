@@ -1,0 +1,2393 @@
+{
+  "scenarioVersion": 1,
+  "app": "mulermoc-nom-51",
+  "scenario": "Ονοματολογία Κορεσμένων Μονοαιθέρων",
+  "title": "Ονοματολογία Κορεσμένων Μονοαιθέρων",
+  "showStepNumbers": false,
+  "reserveTitleSpace": true,
+  "steps": [
+    {
+      "n": 1,
+      "title": "Πώς ονομάζεται ένας αιθέρας;",
+      "note": "Στους αιθέρες ένα άτομο <b>Ο συνδέει δύο ανθρακικές ομάδες</b>. C–O–C. Μελετάμε άκυκλους κορεσμένους μονοαιθέρες, με ένα Ο και μόνο απλούς δεσμούς. Ο γενικός μοριακός τύπος είναι <b>C<sub>ν</sub>H<sub>2ν+2</sub>O, ν ≥ 2</b>. Το ν μετρά όλους τους άνθρακες του μορίου.\nΤο απλούστερο μέλος, C<sub>2</sub>H<sub>6</sub>O, λέγεται <b>διμεθυλαιθέρας</b> με κοινή ονομασία και <b>μεθοξυμεθάνιο</b> με συστηματική. Θα σχηματίσουμε σταδιακά και τα δύο ονόματα.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "common",
+      "nameAnalysisMode": "none",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": true,
+        "etherNaming": "common",
+        "panelOpen": false,
+        "hidden": [
+          "comp10",
+          "comp11",
+          "comp12"
+        ]
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "dimethylether",
+        "ethyl_methyl_ether",
+        "diethyl_ether",
+        "methyl_propyl_ether",
+        "isopropyl_methyl_ether",
+        "ethyl_propyl_ether",
+        "butyl_methyl_ether",
+        "ethyl_isopropyl_ether",
+        "ethyl_sec_butyl_ether",
+        "isobutyl_isopropyl_ether",
+        "tert_butyl_isopropyl_ether"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": false,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": true,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": false
+      },
+      "selectedMol": "dimethylether"
+    },
+    {
+      "n": 2,
+      "title": "Κοινή ονομασία με δύο ίδια αλκύλια",
+      "note": "Αριστερά και δεξιά του Ο υπάρχει από ένα <b>μεθύλιο, CH<sub>3</sub>–</b>. Στην κοινή ονομασία αναγνωρίζουμε ολόκληρα τα δύο αλκύλια που συνδέονται με το Ο.\nΌταν είναι ίδια, χρησιμοποιούμε το <b>δι-</b> μία φορά, πριν από το όνομα του αλκυλίου. <b>διμεθυλ-</b>.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "common",
+      "nameAnalysisMode": "commonAlkyl2",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": true,
+        "etherNaming": "common",
+        "panelOpen": true,
+        "hidden": [
+          "comp12"
+        ]
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "dimethylether",
+        "ethyl_methyl_ether",
+        "diethyl_ether",
+        "methyl_propyl_ether",
+        "isopropyl_methyl_ether",
+        "ethyl_propyl_ether",
+        "butyl_methyl_ether",
+        "ethyl_isopropyl_ether",
+        "ethyl_sec_butyl_ether",
+        "isobutyl_isopropyl_ether",
+        "tert_butyl_isopropyl_ether"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": false,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": true,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": false
+      },
+      "selectedMol": "dimethylether"
+    },
+    {
+      "n": 3,
+      "title": "Η κοινή ονομασία ολοκληρώνεται",
+      "note": "Στο <b>διμεθυλ-</b> προσθέτουμε τη λέξη <b>αιθέρας</b>. <b>διμεθυλαιθέρας</b>. Έτσι δηλώνονται τα δύο μεθύλια και η χημική τάξη.\nΗ κοινή ονομασία περιγράφει τα αλκύλια εκατέρωθεν του Ο. Η συστηματική ονομασία του ίδιου μορίου είναι <b>μεθοξυμεθάνιο</b>.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "common",
+      "nameAnalysisMode": "commonEther",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "common",
+        "panelOpen": true,
+        "hidden": []
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "dimethylether",
+        "ethyl_methyl_ether",
+        "diethyl_ether",
+        "methyl_propyl_ether",
+        "isopropyl_methyl_ether",
+        "ethyl_propyl_ether",
+        "butyl_methyl_ether",
+        "ethyl_isopropyl_ether",
+        "ethyl_sec_butyl_ether",
+        "isobutyl_isopropyl_ether",
+        "tert_butyl_isopropyl_ether"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": false,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": true,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": true
+      },
+      "selectedMol": "dimethylether"
+    },
+    {
+      "n": 4,
+      "title": "Η κύρια αλυσίδα στη συστηματική ονομασία",
+      "note": "Στη συστηματική ονομασία θεωρούμε τον αιθέρα <b>αλκοξυπαράγωγο αλκανίου</b>. Η κύρια ανθρακική αλυσίδα δεν συνεχίζεται μέσα από το Ο. Εδώ τα δύο τμήματα είναι ίδια και επιλέγουμε ένα ως κύριο.\nΈχει ένα άτομο C, άρα το κύριο όνομα είναι <b>μεθ-άν-ιο</b>. ένας άνθρακας, απλοί δεσμοί και κατάληξη του αλκανίου. Το άλλο τμήμα μαζί με το Ο θα ονομαστεί ως αλκοξυομάδα.\nΆνοιξε τον πίνακα <b>Ονόματα αλκοξυομάδων και προθέματα</b>, για να δεις τους τύπους σύνδεσης και τα προθέματα των αλκοξυομάδων.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compCarbonsCount",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": true,
+        "etherNaming": "iupac",
+        "panelOpen": true,
+        "hidden": [
+          "comp1"
+        ]
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "dimethylether",
+        "ethyl_methyl_ether",
+        "diethyl_ether",
+        "methyl_propyl_ether",
+        "isopropyl_methyl_ether",
+        "ethyl_propyl_ether",
+        "butyl_methyl_ether",
+        "ethyl_isopropyl_ether",
+        "ethyl_sec_butyl_ether",
+        "isobutyl_isopropyl_ether",
+        "tert_butyl_isopropyl_ether"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": false,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": true,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": false,
+        "alkoxyRule": true
+      },
+      "selectedMol": "dimethylether"
+    },
+    {
+      "n": 5,
+      "title": "Αλκοξυομάδα και πλήρες όνομα",
+      "note": "Το άλλο μεθύλιο μαζί με το Ο σχηματίζει την ομάδα <b>CH<sub>3</sub>O–, μεθοξυ-</b>. Η αλκοξυομάδα περιλαμβάνει το Ο, ενώ το αλκύλιο της κοινής ονομασίας δεν το περιλαμβάνει.\n<b>μεθοξυ- + μεθάνιο → μεθοξυμεθάνιο</b>. Πρόκειται για το ίδιο μόριο που ονομάσαμε <b>διμεθυλαιθέρα</b>. Επίλεξε τα μέρη του ονόματος για να δεις τις αντίστοιχες ομάδες.\nΆνοιξε τον πίνακα <b>Ονόματα αλκοξυομάδων και προθέματα</b>, για να δεις τους τύπους σύνδεσης και τα προθέματα των αλκοξυομάδων.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compSecondSub1",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": true,
+        "hidden": []
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "dimethylether",
+        "ethyl_methyl_ether",
+        "diethyl_ether",
+        "methyl_propyl_ether",
+        "isopropyl_methyl_ether",
+        "ethyl_propyl_ether",
+        "butyl_methyl_ether",
+        "ethyl_isopropyl_ether",
+        "ethyl_sec_butyl_ether",
+        "isobutyl_isopropyl_ether",
+        "tert_butyl_isopropyl_ether"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": false,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": true,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": true,
+        "alkoxyRule": true
+      },
+      "selectedMol": "dimethylether"
+    },
+    {
+      "n": 6,
+      "title": "Το ίδιο μόριο σε τρεις 2D τύπους",
+      "note": "Άλλαξε ανάμεσα σε συνεπτυγμένο, ανεπτυγμένο και σκελετικό τύπο. Οι συνδέσεις παραμένουν ίδιες· στον ανεπτυγμένο τύπο εμφανίζονται όλα τα Η.\nΜε τις επιλογές <b>Κοινή</b> και <b>IUPAC</b> παρατήρησε τις δύο ονομασίες. <b>διμεθυλαιθέρας ↔ μεθοξυμεθάνιο</b>. Η αλλαγή ονομασίας δεν αλλάζει το μόριο.\nΆνοιξε τον πίνακα <b>Ονόματα αλκοξυομάδων και προθέματα</b>, για να δεις τους τύπους σύνδεσης και τα προθέματα των αλκοξυομάδων.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "none",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": []
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "dimethylether",
+        "ethyl_methyl_ether",
+        "diethyl_ether",
+        "methyl_propyl_ether",
+        "isopropyl_methyl_ether",
+        "ethyl_propyl_ether",
+        "butyl_methyl_ether",
+        "ethyl_isopropyl_ether",
+        "ethyl_sec_butyl_ether",
+        "isobutyl_isopropyl_ether",
+        "tert_butyl_isopropyl_ether"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": true,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": true,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": true,
+        "alkoxyRule": true
+      },
+      "selectedMol": "dimethylether"
+    },
+    {
+      "n": 7,
+      "title": "Δύο διαφορετικά αλκύλια",
+      "note": "Το μόριο έχει <b>αιθύλιο</b> και <b>μεθύλιο</b>, δηλαδή συνολικά τρεις άνθρακες. Στην κοινή ονομασία γράφουμε τα αλκύλια σε <b>αλφαβητική σειρά</b> και προσθέτουμε «αιθέρας».\nΤο αιθυλο- προηγείται του μεθυλο-. <b>αιθυλομεθυλαιθέρας</b>. Δεν χρησιμοποιούμε δι-, επειδή τα δύο αλκύλια είναι διαφορετικά.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "common",
+      "nameAnalysisMode": "commonAlkyl1",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "common",
+        "panelOpen": true,
+        "hidden": []
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "dimethylether",
+        "ethyl_methyl_ether",
+        "diethyl_ether",
+        "methyl_propyl_ether",
+        "isopropyl_methyl_ether",
+        "ethyl_propyl_ether",
+        "butyl_methyl_ether",
+        "ethyl_isopropyl_ether",
+        "ethyl_sec_butyl_ether",
+        "isobutyl_isopropyl_ether",
+        "tert_butyl_isopropyl_ether"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": true,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": true,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": true
+      },
+      "selectedMol": "ethyl_methyl_ether"
+    },
+    {
+      "n": 8,
+      "title": "Το μεγαλύτερο τμήμα ως κύρια αλυσίδα",
+      "note": "Από τα δύο ανθρακικά τμήματα επιλέγουμε εδώ το μεγαλύτερο ως κύριο. έχει δύο C και δίνει το <b>αιθάνιο</b>. Το άλλο τμήμα μαζί με το Ο είναι <b>μεθοξυ-</b>.\nΗ κύρια ανθρακική αλυσίδα έχει δύο C, παρότι το μόριο έχει συνολικά τρία. Δεν μετράμε μέσα από το Ο για να σχηματίσουμε μεγαλύτερη ανθρακική αλυσίδα.\nΆνοιξε τον πίνακα <b>Ονόματα αλκοξυομάδων και προθέματα</b>, για να δεις τους τύπους σύνδεσης και τα προθέματα των αλκοξυομάδων.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compCarbonsCount",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": true,
+        "etherNaming": "iupac",
+        "panelOpen": true,
+        "hidden": [
+          "comp1"
+        ]
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "dimethylether",
+        "ethyl_methyl_ether",
+        "diethyl_ether",
+        "methyl_propyl_ether",
+        "isopropyl_methyl_ether",
+        "ethyl_propyl_ether",
+        "butyl_methyl_ether",
+        "ethyl_isopropyl_ether",
+        "ethyl_sec_butyl_ether",
+        "isobutyl_isopropyl_ether",
+        "tert_butyl_isopropyl_ether"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": true,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": true,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": false,
+        "alkoxyRule": true
+      },
+      "selectedMol": "ethyl_methyl_ether"
+    },
+    {
+      "n": 9,
+      "title": "Αιθυλομεθυλαιθέρας ή μεθοξυαιθάνιο",
+      "note": "Συνδυάζουμε <b>μεθοξυ- + αιθάνιο → μεθοξυαιθάνιο</b>. Στο αιθάνιο δεν χρειάζεται αριθμός θέσης, επειδή τα δύο άκρα του είναι ισοδύναμα.\nΜε <b>κοινή ονομασία</b>, αιθυλομεθυλαιθέρας. Με <b>συστηματική ονομασία</b>, μεθοξυαιθάνιο. Στη μία ονομασία αναγνωρίζουμε δύο αλκύλια, στην άλλη μία αλκοξυομάδα και ένα κύριο αλκάνιο.\nΆνοιξε τον πίνακα <b>Ονόματα αλκοξυομάδων και προθέματα</b>, για να δεις τους τύπους σύνδεσης και τα προθέματα των αλκοξυομάδων.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compSecondSub1",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": true,
+        "hidden": []
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "dimethylether",
+        "ethyl_methyl_ether",
+        "diethyl_ether",
+        "methyl_propyl_ether",
+        "isopropyl_methyl_ether",
+        "ethyl_propyl_ether",
+        "butyl_methyl_ether",
+        "ethyl_isopropyl_ether",
+        "ethyl_sec_butyl_ether",
+        "isobutyl_isopropyl_ether",
+        "tert_butyl_isopropyl_ether"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": true,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": true,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": true,
+        "alkoxyRule": true
+      },
+      "selectedMol": "ethyl_methyl_ether"
+    },
+    {
+      "n": 10,
+      "title": "Από το μεθοξυ- στο αιθοξυ-",
+      "note": "Το Ο συνδέεται τώρα με δύο ίδια <b>αιθύλια</b>. Η κοινή ονομασία είναι <b>διαιθυλαιθέρας</b>.\nΣτη συστηματική ονομασία ένα τμήμα δίνει το <b>αιθάνιο</b> και το άλλο μαζί με το Ο δίνει το <b>αιθοξυ-, CH<sub>3</sub>CH<sub>2</sub>O–</b>. <b>αιθοξυαιθάνιο</b>. Το μόριο έχει συνολικά τέσσερα C. Άλλαξε τρόπο ονομασίας για να συγκρίνεις τις ομάδες.\nΆνοιξε τον πίνακα <b>Ονόματα αλκοξυομάδων και προθέματα</b>, για να δεις τους τύπους σύνδεσης και τα προθέματα των αλκοξυομάδων.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compSecondSub1",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": true,
+        "hidden": []
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "dimethylether",
+        "ethyl_methyl_ether",
+        "diethyl_ether",
+        "methyl_propyl_ether",
+        "isopropyl_methyl_ether",
+        "ethyl_propyl_ether",
+        "butyl_methyl_ether",
+        "ethyl_isopropyl_ether",
+        "ethyl_sec_butyl_ether",
+        "isobutyl_isopropyl_ether",
+        "tert_butyl_isopropyl_ether"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": true,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": true,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": true,
+        "alkoxyRule": true
+      },
+      "selectedMol": "diethyl_ether"
+    },
+    {
+      "n": 11,
+      "title": "Μεθύλιο και προπύλιο",
+      "note": "Προχωράμε σε μόριο με τέσσερα C και δύο διαφορετικά αλκύλια. <b>μεθύλιο</b> και ευθύγραμμο <b>προπύλιο</b>. Η κοινή ονομασία είναι <b>μεθυλοπροπυλαιθέρας</b>.\nΓια τη συστηματική ονομασία επιλέγουμε την αλυσίδα με τρία C, το <b>προπάνιο</b>. Η ομάδα που περιέχει το Ο είναι μεθοξυ-.\nΆνοιξε τον πίνακα <b>Ονόματα αλκοξυομάδων και προθέματα</b>, για να δεις τους τύπους σύνδεσης και τα προθέματα των αλκοξυομάδων.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "common",
+      "nameAnalysisMode": "commonAlkyl2",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "common",
+        "panelOpen": true,
+        "hidden": []
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "dimethylether",
+        "ethyl_methyl_ether",
+        "diethyl_ether",
+        "methyl_propyl_ether",
+        "isopropyl_methyl_ether",
+        "ethyl_propyl_ether",
+        "butyl_methyl_ether",
+        "ethyl_isopropyl_ether",
+        "ethyl_sec_butyl_ether",
+        "isobutyl_isopropyl_ether",
+        "tert_butyl_isopropyl_ether"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": true,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": true,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": true,
+        "alkoxyRule": true
+      },
+      "selectedMol": "methyl_propyl_ether"
+    },
+    {
+      "n": 12,
+      "title": "Η θέση της αλκοξυομάδας",
+      "note": "Αριθμούμε το προπάνιο από το άκρο που δίνει τη μικρότερη θέση στη μεθοξυομάδα. <b>1 αντί 3</b>. Η συστηματική ονομασία είναι <b>1-μεθοξυπροπάνιο</b>.\nΜε <b>κοινή ονομασία</b>, μεθυλοπροπυλαιθέρας. Με <b>συστηματική ονομασία</b>, 1-μεθοξυπροπάνιο. Ο αριθμός δείχνει τον άνθρακα της κύριας αλυσίδας στον οποίο συνδέεται το Ο.\nΆνοιξε τον πίνακα <b>Ονόματα αλκοξυομάδων και προθέματα</b>, για να δεις τους τύπους σύνδεσης και τα προθέματα των αλκοξυομάδων.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compNumber1",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": true,
+        "hidden": []
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "dimethylether",
+        "ethyl_methyl_ether",
+        "diethyl_ether",
+        "methyl_propyl_ether",
+        "isopropyl_methyl_ether",
+        "ethyl_propyl_ether",
+        "butyl_methyl_ether",
+        "ethyl_isopropyl_ether",
+        "ethyl_sec_butyl_ether",
+        "isobutyl_isopropyl_ether",
+        "tert_butyl_isopropyl_ether"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": true,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": true,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": true,
+        "alkoxyRule": true
+      },
+      "selectedMol": "methyl_propyl_ether"
+    },
+    {
+      "n": 13,
+      "title": "Όταν το αλκύλιο είναι ισοπροπύλιο",
+      "note": "Το αλκύλιο <b>(CH<sub>3</sub>)<sub>2</sub>CH–</b> ονομάζεται <b>ισοπροπύλιο</b>. η σύνδεση με το Ο γίνεται από τον μεσαίο άνθρακα των τριών. Το άλλο αλκύλιο είναι μεθύλιο.\nΣτην κοινή ονομασία το ισοπροπυλο- προηγείται αλφαβητικά του μεθυλο-. <b>ισοπροπυλομεθυλαιθέρας</b>. Αναγνωρίζουμε ολόκληρο το ισοπροπύλιο, μαζί με τους δύο ακραίους άνθρακές του.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "common",
+      "nameAnalysisMode": "commonAlkyl1",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "common",
+        "panelOpen": true,
+        "hidden": []
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "dimethylether",
+        "ethyl_methyl_ether",
+        "diethyl_ether",
+        "methyl_propyl_ether",
+        "isopropyl_methyl_ether",
+        "ethyl_propyl_ether",
+        "butyl_methyl_ether",
+        "ethyl_isopropyl_ether",
+        "ethyl_sec_butyl_ether",
+        "isobutyl_isopropyl_ether",
+        "tert_butyl_isopropyl_ether"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": true,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": true,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": true
+      },
+      "selectedMol": "isopropyl_methyl_ether"
+    },
+    {
+      "n": 14,
+      "title": "Η μεθοξυομάδα στον άνθρακα 2",
+      "note": "Η κύρια αλυσίδα έχει τρία C και το Ο συνδέεται με τον άνθρακα <b>2</b>. Άρα η συστηματική ονομασία είναι <b>2-μεθοξυπροπάνιο</b>.\nΜε <b>κοινή ονομασία</b>, ισοπροπυλομεθυλαιθέρας. Με <b>συστηματική ονομασία</b>, 2-μεθοξυπροπάνιο. Ο αριθμός 2 αφορά τη θέση της μεθοξυομάδας πάνω στο προπάνιο.\nΆνοιξε τον πίνακα <b>Ονόματα αλκοξυομάδων και προθέματα</b>, για να δεις τους τύπους σύνδεσης και τα προθέματα των αλκοξυομάδων.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compNumber1",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": true,
+        "hidden": []
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "dimethylether",
+        "ethyl_methyl_ether",
+        "diethyl_ether",
+        "methyl_propyl_ether",
+        "isopropyl_methyl_ether",
+        "ethyl_propyl_ether",
+        "butyl_methyl_ether",
+        "ethyl_isopropyl_ether",
+        "ethyl_sec_butyl_ether",
+        "isobutyl_isopropyl_ether",
+        "tert_butyl_isopropyl_ether"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": true,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": true,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": true,
+        "alkoxyRule": true
+      },
+      "selectedMol": "isopropyl_methyl_ether"
+    },
+    {
+      "n": 15,
+      "title": "Αιθύλιο και προπύλιο",
+      "note": "Με πέντε συνολικά C, αναγνωρίζουμε αιθύλιο και προπύλιο. <b>αιθυλοπροπυλαιθέρας</b>.\nΣυστηματικά, επιλέγουμε το προπάνιο ως κύριο και την ομάδα <b>αιθοξυ-</b> στον άνθρακα 1. <b>1-αιθοξυπροπάνιο</b>. Η κοινή ονομασία δίνει τα δύο αλκύλια· η συστηματική δίνει αλκοξυομάδα, θέση και κύριο αλκάνιο.\nΆνοιξε τον πίνακα <b>Ονόματα αλκοξυομάδων και προθέματα</b>, για να δεις τους τύπους σύνδεσης και τα προθέματα των αλκοξυομάδων.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compSecondSub1",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": true,
+        "hidden": []
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "dimethylether",
+        "ethyl_methyl_ether",
+        "diethyl_ether",
+        "methyl_propyl_ether",
+        "isopropyl_methyl_ether",
+        "ethyl_propyl_ether",
+        "butyl_methyl_ether",
+        "ethyl_isopropyl_ether",
+        "ethyl_sec_butyl_ether",
+        "isobutyl_isopropyl_ether",
+        "tert_butyl_isopropyl_ether"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": true,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": true,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": true,
+        "alkoxyRule": true
+      },
+      "selectedMol": "ethyl_propyl_ether"
+    },
+    {
+      "n": 16,
+      "title": "Κύρια αλυσίδα με τέσσερις άνθρακες",
+      "note": "Τα αλκύλια είναι βουτύλιο και μεθύλιο. Με αλφαβητική σειρά προκύπτει <b>βουτυλομεθυλαιθέρας</b>.\nΗ μεγαλύτερη ανθρακική αλυσίδα είναι το βουτάνιο, με τέσσερα C. Η μεθοξυομάδα βρίσκεται στον άνθρακα 1. <b>1-μεθοξυβουτάνιο</b>. Το μόριο έχει συνολικά πέντε C, αλλά το κύριο όνομα βασίζεται στους τέσσερις.\nΆνοιξε τον πίνακα <b>Ονόματα αλκοξυομάδων και προθέματα</b>, για να δεις τους τύπους σύνδεσης και τα προθέματα των αλκοξυομάδων.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compCarbonsCount",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": true,
+        "hidden": []
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "dimethylether",
+        "ethyl_methyl_ether",
+        "diethyl_ether",
+        "methyl_propyl_ether",
+        "isopropyl_methyl_ether",
+        "ethyl_propyl_ether",
+        "butyl_methyl_ether",
+        "ethyl_isopropyl_ether",
+        "ethyl_sec_butyl_ether",
+        "isobutyl_isopropyl_ether",
+        "tert_butyl_isopropyl_ether"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": true,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": true,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": true,
+        "alkoxyRule": true
+      },
+      "selectedMol": "butyl_methyl_ether"
+    },
+    {
+      "n": 17,
+      "title": "Η αιθοξυομάδα στον άνθρακα 2",
+      "note": "Στην κοινή ονομασία αναγνωρίζουμε αιθύλιο και ισοπροπύλιο. <b>αιθυλοϊσοπροπυλαιθέρας</b>.\nΣυστηματικά, το κύριο όνομα είναι προπάνιο και το Ο της αιθοξυομάδας συνδέεται με τον άνθρακα 2. <b>2-αιθοξυπροπάνιο</b>. Άλλαξε ανάμεσα στους δύο τρόπους ονομασίας και παρατήρησε ποια ομάδα περιλαμβάνει το Ο.\nΆνοιξε τον πίνακα <b>Ονόματα αλκοξυομάδων και προθέματα</b>, για να δεις τους τύπους σύνδεσης και τα προθέματα των αλκοξυομάδων.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compNumber1",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": true,
+        "hidden": []
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "dimethylether",
+        "ethyl_methyl_ether",
+        "diethyl_ether",
+        "methyl_propyl_ether",
+        "isopropyl_methyl_ether",
+        "ethyl_propyl_ether",
+        "butyl_methyl_ether",
+        "ethyl_isopropyl_ether",
+        "ethyl_sec_butyl_ether",
+        "isobutyl_isopropyl_ether",
+        "tert_butyl_isopropyl_ether"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": true,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": true,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": true,
+        "alkoxyRule": true
+      },
+      "selectedMol": "ethyl_isopropyl_ether"
+    },
+    {
+      "n": 18,
+      "title": "Η κοινή ονομασία με sec-βουτύλιο",
+      "note": "Το μόριο έχει έξι C. Το αλκύλιο <b>CH<sub>3</sub>CH<sub>2</sub>CH(CH<sub>3</sub>)–</b> λέγεται <b>sec-βουτύλιο</b>. το άτομο C που συνδέεται με το Ο συνδέεται με δύο άλλα C. Το δεύτερο αλκύλιο είναι αιθύλιο.\nΗ κοινή ονομασία είναι <b>αιθυλο-sec-βουτυλαιθέρας</b>. Στην αλφαβητική ταξινόμηση δεν λαμβάνουμε υπόψη το sec-· συγκρίνουμε αιθυλο- και βουτυλο-.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "common",
+      "nameAnalysisMode": "commonAlkyl2",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "common",
+        "panelOpen": true,
+        "hidden": []
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "dimethylether",
+        "ethyl_methyl_ether",
+        "diethyl_ether",
+        "methyl_propyl_ether",
+        "isopropyl_methyl_ether",
+        "ethyl_propyl_ether",
+        "butyl_methyl_ether",
+        "ethyl_isopropyl_ether",
+        "ethyl_sec_butyl_ether",
+        "isobutyl_isopropyl_ether",
+        "tert_butyl_isopropyl_ether"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": true,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": true,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": true
+      },
+      "selectedMol": "ethyl_sec_butyl_ether"
+    },
+    {
+      "n": 19,
+      "title": "Αρίθμηση του βουτανίου",
+      "note": "Για τη συστηματική ονομασία διατηρούμε την αλυσίδα των τεσσάρων C ως <b>βουτάνιο</b>. Η ομάδα που περιέχει το Ο είναι <b>αιθοξυ-</b>.\nΑριθμούμε από το κατάλληλο άκρο ώστε η αιθοξυομάδα να πάρει τη θέση <b>2 αντί 3</b>. Η ονομασία sec-βουτύλιο δεν χρειάζεται στη συστηματική περιγραφή του κύριου αλκανίου.\nΆνοιξε τον πίνακα <b>Ονόματα αλκοξυομάδων και προθέματα</b>, για να δεις τους τύπους σύνδεσης και τα προθέματα των αλκοξυομάδων.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compNumber1",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": true,
+        "etherNaming": "iupac",
+        "panelOpen": true,
+        "hidden": [
+          "comp1"
+        ]
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "dimethylether",
+        "ethyl_methyl_ether",
+        "diethyl_ether",
+        "methyl_propyl_ether",
+        "isopropyl_methyl_ether",
+        "ethyl_propyl_ether",
+        "butyl_methyl_ether",
+        "ethyl_isopropyl_ether",
+        "ethyl_sec_butyl_ether",
+        "isobutyl_isopropyl_ether",
+        "tert_butyl_isopropyl_ether"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": true,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": true,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": false,
+        "alkoxyRule": true
+      },
+      "selectedMol": "ethyl_sec_butyl_ether"
+    },
+    {
+      "n": 20,
+      "title": "Δύο ονόματα για το ίδιο μόριο",
+      "note": "Η συστηματική ονομασία ολοκληρώνεται ως <b>2-αιθοξυβουτάνιο</b>. Η κοινή είναι <b>αιθυλο-sec-βουτυλαιθέρας</b>.\nΗ πρώτη δηλώνει αιθοξυομάδα στη θέση 2 του βουτανίου. Η δεύτερη δηλώνει τα δύο αλκύλια που ενώνονται με το Ο. Επίλεξε τα συνθετικά και παρατήρησε τη διαφορετική οργάνωση της ίδιας συνδεσμολογίας.\nΆνοιξε τον πίνακα <b>Ονόματα αλκοξυομάδων και προθέματα</b>, για να δεις τους τύπους σύνδεσης και τα προθέματα των αλκοξυομάδων.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compSecondSub1",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": true,
+        "hidden": []
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "dimethylether",
+        "ethyl_methyl_ether",
+        "diethyl_ether",
+        "methyl_propyl_ether",
+        "isopropyl_methyl_ether",
+        "ethyl_propyl_ether",
+        "butyl_methyl_ether",
+        "ethyl_isopropyl_ether",
+        "ethyl_sec_butyl_ether",
+        "isobutyl_isopropyl_ether",
+        "tert_butyl_isopropyl_ether"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": true,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": true,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": true,
+        "alkoxyRule": true
+      },
+      "selectedMol": "ethyl_sec_butyl_ether"
+    },
+    {
+      "n": 21,
+      "title": "Ισοβουτύλιο και ισοπροπύλιο",
+      "note": "Με επτά C, το μόριο περιλαμβάνει <b>ισοβουτύλιο, (CH<sub>3</sub>)<sub>2</sub>CHCH<sub>2</sub>–</b>, και <b>ισοπροπύλιο, (CH<sub>3</sub>)<sub>2</sub>CH–</b>.\nΗ κοινή ονομασία είναι <b>ισοβουτυλοϊσοπροπυλαιθέρας</b>. Το ισο- λαμβάνεται υπόψη στην αλφαβητική σειρά. ισοβουτυλο- πριν από ισοπροπυλο-. Κάθε όνομα αναφέρεται σε ολόκληρο το αντίστοιχο αλκύλιο.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "common",
+      "nameAnalysisMode": "commonAlkyl1",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "common",
+        "panelOpen": true,
+        "hidden": []
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "dimethylether",
+        "ethyl_methyl_ether",
+        "diethyl_ether",
+        "methyl_propyl_ether",
+        "isopropyl_methyl_ether",
+        "ethyl_propyl_ether",
+        "butyl_methyl_ether",
+        "ethyl_isopropyl_ether",
+        "ethyl_sec_butyl_ether",
+        "isobutyl_isopropyl_ether",
+        "tert_butyl_isopropyl_ether"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": true,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": true,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": true
+      },
+      "selectedMol": "isobutyl_isopropyl_ether"
+    },
+    {
+      "n": 22,
+      "title": "Κύρια αλυσίδα και ισοπροποξυομάδα",
+      "note": "Στο τμήμα του ισοβουτυλίου η μεγαλύτερη συνεχής ανθρακική αλυσίδα έχει <b>τρία C</b>. Το κύριο όνομα είναι προπάνιο, με μία μεθυλοδιακλάδωση. Δεν μπορούν να χωρέσουν και τα τέσσερα C σε μία συνεχή αλυσίδα.\nΤο ισοπροπύλιο μαζί με το Ο σχηματίζει την <b>ισοπροποξυομάδα</b>. Βρίσκεται στη θέση 1 της κύριας αλυσίδας. Χρησιμοποιούμε εδώ τη σχολική συστηματική ονομασία που εφαρμόζει η βιβλιοθήκη.\nΆνοιξε τον πίνακα <b>Ονόματα αλκοξυομάδων και προθέματα</b>, για να δεις τους τύπους σύνδεσης και τα προθέματα των αλκοξυομάδων.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compSecondSub1",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": true,
+        "etherNaming": "iupac",
+        "panelOpen": true,
+        "hidden": [
+          "comp2",
+          "comp3"
+        ]
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "dimethylether",
+        "ethyl_methyl_ether",
+        "diethyl_ether",
+        "methyl_propyl_ether",
+        "isopropyl_methyl_ether",
+        "ethyl_propyl_ether",
+        "butyl_methyl_ether",
+        "ethyl_isopropyl_ether",
+        "ethyl_sec_butyl_ether",
+        "isobutyl_isopropyl_ether",
+        "tert_butyl_isopropyl_ether"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": true,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": true,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": false,
+        "alkoxyRule": true
+      },
+      "selectedMol": "isobutyl_isopropyl_ether"
+    },
+    {
+      "n": 23,
+      "title": "Η μεθυλοδιακλάδωση στη θέση 2",
+      "note": "Η μεθυλοδιακλάδωση βρίσκεται στον άνθρακα <b>2</b>. Με αλφαβητική σειρά των προθεμάτων προκύπτει <b>1-ισοπροποξυ-2-μεθυλοπροπάνιο</b>.\nΜε <b>κοινή ονομασία</b>, ισοβουτυλοϊσοπροπυλαιθέρας. Με <b>συστηματική ονομασία</b>, 1-ισοπροποξυ-2-μεθυλοπροπάνιο. Η θέση 1 αφορά την ισοπροποξυομάδα και η θέση 2 το μεθύλιο.\nΆνοιξε τον πίνακα <b>Ονόματα αλκοξυομάδων και προθέματα</b>, για να δεις τους τύπους σύνδεσης και τα προθέματα των αλκοξυομάδων.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compSecondSub2",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": true,
+        "hidden": []
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "dimethylether",
+        "ethyl_methyl_ether",
+        "diethyl_ether",
+        "methyl_propyl_ether",
+        "isopropyl_methyl_ether",
+        "ethyl_propyl_ether",
+        "butyl_methyl_ether",
+        "ethyl_isopropyl_ether",
+        "ethyl_sec_butyl_ether",
+        "isobutyl_isopropyl_ether",
+        "tert_butyl_isopropyl_ether"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": true,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": true,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": true,
+        "alkoxyRule": true
+      },
+      "selectedMol": "isobutyl_isopropyl_ether"
+    },
+    {
+      "n": 24,
+      "title": "Η κοινή ονομασία με tert-βουτύλιο",
+      "note": "Το <b>tert-βουτύλιο, (CH<sub>3</sub>)<sub>3</sub>C–</b>, συνδέεται με το Ο μέσω άνθρακα που ενώνεται με τρία άλλα C. Το άλλο αλκύλιο είναι ισοπροπύλιο.\nΗ κοινή ονομασία είναι <b>tert-βουτυλοϊσοπροπυλαιθέρας</b>. Στην αλφαβητική σειρά δεν υπολογίζουμε το tert-, ενώ υπολογίζουμε το ισο-. βουτυλο- πριν από ισοπροπυλο-.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "common",
+      "nameAnalysisMode": "commonAlkyl1",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "common",
+        "panelOpen": true,
+        "hidden": []
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "dimethylether",
+        "ethyl_methyl_ether",
+        "diethyl_ether",
+        "methyl_propyl_ether",
+        "isopropyl_methyl_ether",
+        "ethyl_propyl_ether",
+        "butyl_methyl_ether",
+        "ethyl_isopropyl_ether",
+        "ethyl_sec_butyl_ether",
+        "isobutyl_isopropyl_ether",
+        "tert_butyl_isopropyl_ether"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": true,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": true,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": true
+      },
+      "selectedMol": "tert_butyl_isopropyl_ether"
+    },
+    {
+      "n": 25,
+      "title": "Δύο ομάδες στον ίδιο άνθρακα",
+      "note": "Η κύρια αλυσίδα είναι προπάνιο. Στον άνθρακα <b>2</b> συνδέονται τόσο η ισοπροποξυομάδα όσο και ένα μεθύλιο. Κάθε πρόθεμα διατηρεί τον δικό του αριθμό θέσης.\nΜε <b>συστηματική ονομασία</b>, 2-ισοπροποξυ-2-μεθυλοπροπάνιο. Με <b>κοινή ονομασία</b>, tert-βουτυλοϊσοπροπυλαιθέρας. Ο επαναλαμβανόμενος αριθμός 2 περιγράφει δύο διαφορετικές ομάδες στον ίδιο άνθρακα.\nΆνοιξε τον πίνακα <b>Ονόματα αλκοξυομάδων και προθέματα</b>, για να δεις τους τύπους σύνδεσης και τα προθέματα των αλκοξυομάδων.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compSecondSub2",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": true,
+        "hidden": []
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "dimethylether",
+        "ethyl_methyl_ether",
+        "diethyl_ether",
+        "methyl_propyl_ether",
+        "isopropyl_methyl_ether",
+        "ethyl_propyl_ether",
+        "butyl_methyl_ether",
+        "ethyl_isopropyl_ether",
+        "ethyl_sec_butyl_ether",
+        "isobutyl_isopropyl_ether",
+        "tert_butyl_isopropyl_ether"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": true,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": true,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": true,
+        "alkoxyRule": true
+      },
+      "selectedMol": "tert_butyl_isopropyl_ether"
+    },
+    {
+      "n": 26,
+      "title": "Σύνθεση των δύο τρόπων ονομασίας",
+      "note": "Στην <b>κοινή ονομασία</b> αναγνωρίζουμε τα δύο αλκύλια, τα τοποθετούμε αλφαβητικά και προσθέτουμε «αιθέρας». Για δύο ίδια αλκύλια χρησιμοποιούμε δι-.\nΣτη <b>συστηματική ονομασία</b> επιλέγουμε την κατάλληλη κύρια ανθρακική αλυσίδα, αναγνωρίζουμε την αλκοξυομάδα και τυχόν διακλαδώσεις, αριθμούμε για τις μικρότερες θέσεις και συνθέτουμε το όνομα. Το Ο δεν ενώνει δύο τμήματα σε μία ανθρακική αλυσίδα.\nΕξερεύνησε τα μόρια από το μικρότερο προς το μεγαλύτερο, άλλαξε τρόπο ονομασίας και επίλεξε τα συνθετικά. Οι πίνακες κανόνων ανοίγουν μόνο αν το θελήσεις.\nΆνοιξε τον πίνακα <b>Ονόματα αλκοξυομάδων και προθέματα</b>, για να δεις τους τύπους σύνδεσης και τα προθέματα των αλκοξυομάδων.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "none",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": []
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "dimethylether",
+        "ethyl_methyl_ether",
+        "diethyl_ether",
+        "methyl_propyl_ether",
+        "isopropyl_methyl_ether",
+        "ethyl_propyl_ether",
+        "butyl_methyl_ether",
+        "ethyl_isopropyl_ether",
+        "ethyl_sec_butyl_ether",
+        "isobutyl_isopropyl_ether",
+        "tert_butyl_isopropyl_ether"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": true,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": true,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": true,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": true,
+        "alkoxyRule": true
+      },
+      "selectedMol": "tert_butyl_isopropyl_ether"
+    },
+    {
+      "n": 27,
+      "title": "Προαιρετική παρατήρηση σε 3D",
+      "note": "Η θεωρία ονοματολογίας έχει ολοκληρωθεί. <b>Αυτό το βήμα είναι προαιρετικό.</b> Παρατήρησε το ίδιο μόριο σε 2D και 3D και περίστρεψε το 3D μοντέλο. Η οριζόντια διάταξη στον 2D τύπο εξυπηρετεί την ανάγνωση και δεν αποδίδει τις πραγματικές γωνίες στον χώρο.\nΕναλλάσσοντας <b>Κοινή</b> και <b>IUPAC</b>, παρατήρησε πώς τα δύο αλκύλια της κοινής ονομασίας και η αλκοξυομάδα της συστηματικής αντιστοιχούν στο ίδιο μόριο.\nΆνοιξε τον πίνακα <b>Ονόματα αλκοξυομάδων και προθέματα</b>, για να δεις τους τύπους σύνδεσης και τα προθέματα των αλκοξυομάδων.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "none",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": []
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "dimethylether",
+        "ethyl_methyl_ether",
+        "diethyl_ether",
+        "methyl_propyl_ether",
+        "isopropyl_methyl_ether",
+        "ethyl_propyl_ether",
+        "butyl_methyl_ether",
+        "ethyl_isopropyl_ether",
+        "ethyl_sec_butyl_ether",
+        "isobutyl_isopropyl_ether",
+        "tert_butyl_isopropyl_ether"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": true,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": true
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": 840,
+        "controls": {
+          "2D": true,
+          "3D": true
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": true,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": true,
+        "alkoxyRule": true
+      },
+      "selectedMol": "tert_butyl_isopropyl_ether"
+    }
+  ]
+}

@@ -1,0 +1,2125 @@
+{
+  "scenarioVersion": 1,
+  "app": "mulermoc-nom-51",
+  "scenario": "Κορεσμένες μονοσθενείς κετόνες",
+  "title": "Κορεσμένες μονοσθενείς κετόνες",
+  "showStepNumbers": false,
+  "reserveTitleSpace": true,
+  "steps": [
+    {
+      "n": 1,
+      "title": "Πώς ονομάζεται μια κετόνη;",
+      "note": "Θα σχηματίσουμε το όνομα της <b>προπανόνης</b> από τρία συνθετικά. Είναι η απλούστερη κετόνη, με μοριακό τύπο <b>C<sub>3</sub>H<sub>6</sub>O</b>. Ο άνθρακας της καρβονυλομάδας <b>&gt;C=O</b> συνδέεται με δύο άλλους άνθρακες, γι’ αυτό χρειάζονται τουλάχιστον τρία C.\nΜελετάμε <b>άκυκλες κορεσμένες μονοσθενείς κετόνες</b>, με μία καρβονυλομάδα και μόνο απλούς δεσμούς μεταξύ των ατόμων C. Έχουν γενικό μοριακό τύπο <b>C<sub>ν</sub>H<sub>2ν</sub>O</b>, με <b>ν ≥ 3</b>.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "none",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": [
+          "comp5",
+          "comp6",
+          "comp9"
+        ]
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "propanone",
+        "butanone",
+        "pentanone_2",
+        "pentanone_3",
+        "dimethyl_2_4_pentanone_3",
+        "trimethyl_3_4_4_pentanone_2",
+        "diethyl_4_5_dimethyl_2_6_heptanone_3"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": false,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": false,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": false
+      },
+      "selectedMol": "propanone"
+    },
+    {
+      "n": 2,
+      "title": "Πρώτο Συνθετικό",
+      "note": "Το <b>1<sup>ο</sup> συνθετικό</b> δείχνει τον αριθμό των ατόμων C της κύριας ανθρακικής αλυσίδας. Μετράμε <b>τρία C</b>, μαζί με τον άνθρακα της καρβονυλομάδας.\nΤο πρώτο συνθετικό είναι <b>προπ-</b>. Ο άνθρακας του C=O ανήκει στην κύρια αλυσίδα και περιλαμβάνεται στην αρίθμησή της.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compCarbonsCount",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": [
+          "comp6",
+          "comp9"
+        ]
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "propanone",
+        "butanone",
+        "pentanone_2",
+        "pentanone_3",
+        "dimethyl_2_4_pentanone_3",
+        "trimethyl_3_4_4_pentanone_2",
+        "diethyl_4_5_dimethyl_2_6_heptanone_3"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": false,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": false,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": false
+      },
+      "selectedMol": "propanone"
+    },
+    {
+      "n": 3,
+      "title": "Δεύτερο Συνθετικό",
+      "note": "Το <b>2<sup>ο</sup> συνθετικό</b> αφορά τους δεσμούς <b>μεταξύ ατόμων C</b>. Εδώ όλοι οι δεσμοί C–C είναι απλοί, άρα χρησιμοποιούμε το <b>-αν-</b>.\nΟ διπλός δεσμός <b>C=O</b> είναι μέρος της καρβονυλομάδας και δεν αναιρεί τον χαρακτηρισμό «κορεσμένη».",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compBondType",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": [
+          "comp9"
+        ]
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "propanone",
+        "butanone",
+        "pentanone_2",
+        "pentanone_3",
+        "dimethyl_2_4_pentanone_3",
+        "trimethyl_3_4_4_pentanone_2",
+        "diethyl_4_5_dimethyl_2_6_heptanone_3"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": false,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": false,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": false
+      },
+      "selectedMol": "propanone"
+    },
+    {
+      "n": 4,
+      "title": "Τρίτο Συνθετικό",
+      "note": "Το <b>3<sup>ο</sup> συνθετικό</b> δηλώνει τη χημική τάξη. Οι κετόνες έχουν κατάληξη <b>-όνη</b>. Συνδυάζουμε <b>προπ- + -αν- + -όνη</b> και σχηματίζουμε <b>προπανόνη</b>.\nΤο καρβονύλιο μπορεί να βρίσκεται μόνο στον μεσαίο άνθρακα αυτής της αλυσίδας, γι’ αυτό δεν γράφουμε χωριστά αριθμό θέσης.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compSuffix",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": []
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "propanone",
+        "butanone",
+        "pentanone_2",
+        "pentanone_3",
+        "dimethyl_2_4_pentanone_3",
+        "trimethyl_3_4_4_pentanone_2",
+        "diethyl_4_5_dimethyl_2_6_heptanone_3"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": false,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": false,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": true
+      },
+      "selectedMol": "propanone"
+    },
+    {
+      "n": 5,
+      "title": "Μεγαλώνει η κύρια αλυσίδα",
+      "note": "Η <b>βουτανόνη</b> έχει κύρια αλυσίδα <b>τεσσάρων C</b> που περιλαμβάνει τον άνθρακα του C=O. Έτσι σχηματίζεται το βουτ- και το όνομα <b>βουτανόνη</b>.\nΑριθμούμε από το πλησιέστερο άκρο προς το καρβονύλιο. Η θέση του είναι μοναδική για αυτή την αλυσίδα, αν λάβουμε υπόψη ότι αριθμούμε από το κατάλληλο άκρο, και δεν δηλώνεται χωριστά στο όνομα της εφαρμογής.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compCarbonsCount",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": []
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "propanone",
+        "butanone",
+        "pentanone_2",
+        "pentanone_3",
+        "dimethyl_2_4_pentanone_3",
+        "trimethyl_3_4_4_pentanone_2",
+        "diethyl_4_5_dimethyl_2_6_heptanone_3"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": false,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": false,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": true
+      },
+      "selectedMol": "butanone"
+    },
+    {
+      "n": 6,
+      "title": "Διαφορετικές 2D Αναπαραστάσεις Μορίων",
+      "note": "Παρατήρησε τη βουτανόνη σε συνεπτυγμένο, ανεπτυγμένο και σκελετικό τύπο, χρησιμοποιώντας τις επιλογές κάτω από το μόριο. Η συνδεσμολογία και το όνομα παραμένουν ίδια.\nΣτον ανεπτυγμένο φαίνονται όλα τα Η. Σε κάθε αναπαράσταση ο άνθρακας της καρβονυλομάδας περιλαμβάνεται στην κύρια αλυσίδα.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "none",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": []
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "propanone",
+        "butanone",
+        "pentanone_2",
+        "pentanone_3",
+        "dimethyl_2_4_pentanone_3",
+        "trimethyl_3_4_4_pentanone_2",
+        "diethyl_4_5_dimethyl_2_6_heptanone_3"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": true,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": true,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": true
+      },
+      "selectedMol": "butanone"
+    },
+    {
+      "n": 7,
+      "title": "Κύρια αλυσίδα πέντε ανθράκων",
+      "note": "Η επόμενη κετόνη έχει κύρια αλυσίδα <b>πέντε C</b>, μαζί με τον άνθρακα της καρβονυλομάδας. Το πρώτο συνθετικό γίνεται <b>πεντ-</b>.\nΓια αυτή την αλυσίδα θα δηλώσουμε και τη θέση του καρβονυλίου, ώστε το όνομα να προσδιορίζει σωστά τη δομή.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compCarbonsCount",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": [
+          "comp0"
+        ]
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "propanone",
+        "butanone",
+        "pentanone_2",
+        "pentanone_3",
+        "dimethyl_2_4_pentanone_3",
+        "trimethyl_3_4_4_pentanone_2",
+        "diethyl_4_5_dimethyl_2_6_heptanone_3"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": true,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": true,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": false
+      },
+      "selectedMol": "pentanone_2"
+    },
+    {
+      "n": 8,
+      "title": "Προτεραιότητα στη θέση του καρβονυλίου",
+      "note": "Αριθμούμε από το άκρο που δίνει στον άνθρακα της καρβονυλομάδας τη <b>μικρότερη θέση</b>. Εδώ επιλέγουμε <b>2 αντί 4</b>.\nΟ αριθμός <b>2</b> δηλώνει τον άνθρακα της κύριας αλυσίδας που συμμετέχει στον δεσμό C=O.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compNumber1",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": []
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "propanone",
+        "butanone",
+        "pentanone_2",
+        "pentanone_3",
+        "dimethyl_2_4_pentanone_3",
+        "trimethyl_3_4_4_pentanone_2",
+        "diethyl_4_5_dimethyl_2_6_heptanone_3"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": true,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": true,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": true
+      },
+      "selectedMol": "pentanone_2"
+    },
+    {
+      "n": 9,
+      "title": "Σύνθεση του ονόματος",
+      "note": "Γράφουμε τη θέση <b>2</b> και συνδυάζουμε <b>πεντ- + -αν- + -όνη</b>. Το πλήρες όνομα είναι <b>2-πεντανόνη</b>.\nΗ παύλα χωρίζει τον αριθμό από το όνομα. Η θέση αφορά το καρβονύλιο, ενώ το -αν- εξακολουθεί να δηλώνει τους απλούς δεσμούς μεταξύ των C.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compSuffix",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": []
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "propanone",
+        "butanone",
+        "pentanone_2",
+        "pentanone_3",
+        "dimethyl_2_4_pentanone_3",
+        "trimethyl_3_4_4_pentanone_2",
+        "diethyl_4_5_dimethyl_2_6_heptanone_3"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": true,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": true,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": true
+      },
+      "selectedMol": "pentanone_2"
+    },
+    {
+      "n": 10,
+      "title": "Καρβονύλιο στον μεσαίο άνθρακα",
+      "note": "Στην <b>3-πεντανόνη</b> το καρβονύλιο βρίσκεται στον μεσαίο άνθρακα. Από οποιοδήποτε άκρο κι αν αριθμήσουμε, παίρνει θέση <b>3</b>.\nΚρατάμε τον αριθμό στο όνομα, επειδή η θέση του καρβονυλίου πρέπει να προσδιορίζεται σε αυτή την αλυσίδα των πέντε C.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compNumber1",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": []
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "propanone",
+        "butanone",
+        "pentanone_2",
+        "pentanone_3",
+        "dimethyl_2_4_pentanone_3",
+        "trimethyl_3_4_4_pentanone_2",
+        "diethyl_4_5_dimethyl_2_6_heptanone_3"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": true,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": true,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": true
+      },
+      "selectedMol": "pentanone_3"
+    },
+    {
+      "n": 11,
+      "title": "Κύρια αλυσίδα διακλαδισμένης κετόνης",
+      "note": "Επιλέγουμε τη μεγαλύτερη κατάλληλη κύρια αλυσίδα που περιλαμβάνει τον <b>άνθρακα της καρβονυλομάδας</b>. Εδώ έχει <b>πέντε C</b> και δίνει το πεντ-.\nΤα δύο επιπλέον C σχηματίζουν μεθυλομάδες έξω από την κύρια αλυσίδα. Θα τις προσθέσουμε αφού καθορίσουμε την αρίθμηση.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compCarbonsCount",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": [
+          "comp0",
+          "comp1",
+          "comp4"
+        ]
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "propanone",
+        "butanone",
+        "pentanone_2",
+        "pentanone_3",
+        "dimethyl_2_4_pentanone_3",
+        "trimethyl_3_4_4_pentanone_2",
+        "diethyl_4_5_dimethyl_2_6_heptanone_3"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": true,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": true,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": false
+      },
+      "selectedMol": "dimethyl_2_4_pentanone_3"
+    },
+    {
+      "n": 12,
+      "title": "Πρώτα η θέση της καρβονυλομάδας",
+      "note": "Το καρβονύλιο βρίσκεται στον <b>C3</b> και από τις δύο κατευθύνσεις αρίθμησης. Στο συγκεκριμένο μόριο και οι θέσεις των διακλαδώσεων παραμένουν ίδιες.\nΗ θέση <b>3</b> γράφεται πριν από το κύριο όνομα και αφορά το C=O.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compBondPos",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": [
+          "comp0",
+          "comp1"
+        ]
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "propanone",
+        "butanone",
+        "pentanone_2",
+        "pentanone_3",
+        "dimethyl_2_4_pentanone_3",
+        "trimethyl_3_4_4_pentanone_2",
+        "diethyl_4_5_dimethyl_2_6_heptanone_3"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": true,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": true,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": false
+      },
+      "selectedMol": "dimethyl_2_4_pentanone_3"
+    },
+    {
+      "n": 13,
+      "title": "Θέσεις των δύο διακλαδώσεων",
+      "note": "Οι δύο μεθυλομάδες συνδέονται στους άνθρακες <b>2 και 4</b> της κύριας αλυσίδας. Γράφουμε τις θέσεις ως <b>2,4-</b>, με κόμμα ανάμεσα στους αριθμούς.\nΟι αριθμοί αυτοί αφορούν τις διακλαδώσεις. Ο χωριστός αριθμός 3 εξακολουθεί να δηλώνει τη θέση του καρβονυλίου.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compNumber1",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": [
+          "comp1"
+        ]
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "propanone",
+        "butanone",
+        "pentanone_2",
+        "pentanone_3",
+        "dimethyl_2_4_pentanone_3",
+        "trimethyl_3_4_4_pentanone_2",
+        "diethyl_4_5_dimethyl_2_6_heptanone_3"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": true,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": true,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": false
+      },
+      "selectedMol": "dimethyl_2_4_pentanone_3"
+    },
+    {
+      "n": 14,
+      "title": "Δύο όμοιες διακλαδώσεις",
+      "note": "Οι διακλαδώσεις είναι δύο και είναι ίδιες, γι’ αυτό χρησιμοποιούμε το πολλαπλασιαστικό <b>δι-</b>. Το πρόθεμα γίνεται <b>2,4-διμεθυλο-</b>.\nΣτον προαιρετικό πίνακα των αλκυλίων μπορείς να συγκρίνεις το μεθυλο- με τα άλλα προθέματα και τα πολλαπλασιαστικά.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compSecondSub1",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": []
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "propanone",
+        "butanone",
+        "pentanone_2",
+        "pentanone_3",
+        "dimethyl_2_4_pentanone_3",
+        "trimethyl_3_4_4_pentanone_2",
+        "diethyl_4_5_dimethyl_2_6_heptanone_3"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": true,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": true,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": true
+      },
+      "selectedMol": "dimethyl_2_4_pentanone_3"
+    },
+    {
+      "n": 15,
+      "title": "Ολοκλήρωση ονόματος",
+      "note": "Συνδυάζουμε το <b>2,4-διμεθυλο-</b>, τη θέση <b>3</b> της καρβονυλομάδας και το κύριο όνομα πεντανόνη.\nΤο πλήρες όνομα είναι <b>2,4-διμεθυλο-3-πεντανόνη</b>. Κάθε αριθμός και κάθε συνθετικό αντιστοιχεί σε συγκεκριμένο τμήμα του μορίου.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "none",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": []
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "propanone",
+        "butanone",
+        "pentanone_2",
+        "pentanone_3",
+        "dimethyl_2_4_pentanone_3",
+        "trimethyl_3_4_4_pentanone_2",
+        "diethyl_4_5_dimethyl_2_6_heptanone_3"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": true,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": true,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": true
+      },
+      "selectedMol": "dimethyl_2_4_pentanone_3"
+    },
+    {
+      "n": 16,
+      "title": "Κύρια αλυσίδα με τρεις διακλαδώσεις",
+      "note": "Στο επόμενο μόριο επιλέγουμε πάλι κύρια αλυσίδα <b>πέντε C</b> που περιλαμβάνει το καρβονύλιο. Τα τρία επιπλέον C σχηματίζουν <b>τρεις μεθυλομάδες</b>.\nΠριν γράψουμε τις θέσεις τους, καθορίζουμε την κατεύθυνση της αρίθμησης με βάση την καρβονυλομάδα.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compCarbonsCount",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": [
+          "comp0",
+          "comp1",
+          "comp4"
+        ]
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "propanone",
+        "butanone",
+        "pentanone_2",
+        "pentanone_3",
+        "dimethyl_2_4_pentanone_3",
+        "trimethyl_3_4_4_pentanone_2",
+        "diethyl_4_5_dimethyl_2_6_heptanone_3"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": true,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": true,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": false
+      },
+      "selectedMol": "trimethyl_3_4_4_pentanone_2"
+    },
+    {
+      "n": 17,
+      "title": "Η καρβονυλομάδα προηγείται των αλκυλίων",
+      "note": "Αριθμούμε ώστε η καρβονυλομάδα να έχει θέση <b>2 αντί 4</b>. Αυτή η προτεραιότητα καθορίζει την κατεύθυνση.\nΔεν αλλάζουμε την αρίθμηση για να πάρουν μικρότερους αριθμούς οι διακλαδώσεις. Η κύρια χαρακτηριστική ομάδα προηγείται των αλκυλίων.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compBondPos",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": [
+          "comp0",
+          "comp1"
+        ]
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "propanone",
+        "butanone",
+        "pentanone_2",
+        "pentanone_3",
+        "dimethyl_2_4_pentanone_3",
+        "trimethyl_3_4_4_pentanone_2",
+        "diethyl_4_5_dimethyl_2_6_heptanone_3"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": true,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": true,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": false
+      },
+      "selectedMol": "trimethyl_3_4_4_pentanone_2"
+    },
+    {
+      "n": 18,
+      "title": "Κρατάμε και τις επαναλαμβανόμενες θέσεις",
+      "note": "Με την επιλεγμένη αρίθμηση οι μεθυλομάδες βρίσκονται στους <b>C3, C4 και C4</b>. Γράφουμε <b>3,4,4-</b>.\nΤο 4 γράφεται δύο φορές, επειδή δύο διαφορετικές μεθυλομάδες συνδέονται στον ίδιο άνθρακα της κύριας αλυσίδας.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compNumber1",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": [
+          "comp1"
+        ]
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "propanone",
+        "butanone",
+        "pentanone_2",
+        "pentanone_3",
+        "dimethyl_2_4_pentanone_3",
+        "trimethyl_3_4_4_pentanone_2",
+        "diethyl_4_5_dimethyl_2_6_heptanone_3"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": true,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": true,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": false
+      },
+      "selectedMol": "trimethyl_3_4_4_pentanone_2"
+    },
+    {
+      "n": 19,
+      "title": "Τρεις μεθυλομάδες και πλήρες όνομα",
+      "note": "Οι τρεις όμοιες μεθυλομάδες χρειάζονται το πολλαπλασιαστικό <b>τρι-</b>. Το πρόθεμα είναι <b>3,4,4-τριμεθυλο-</b>.\nΤο πλήρες όνομα γίνεται <b>3,4,4-τριμεθυλο-2-πεντανόνη</b>. Ο προαιρετικός πίνακας αλκυλίων βοηθά στη σύνδεση των προθεμάτων με τις αντίστοιχες ομάδες.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compSecondSub1",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": []
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "propanone",
+        "butanone",
+        "pentanone_2",
+        "pentanone_3",
+        "dimethyl_2_4_pentanone_3",
+        "trimethyl_3_4_4_pentanone_2",
+        "diethyl_4_5_dimethyl_2_6_heptanone_3"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": true,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": true,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": true
+      },
+      "selectedMol": "trimethyl_3_4_4_pentanone_2"
+    },
+    {
+      "n": 20,
+      "title": "Επιλογή αλυσίδας στο μεγαλύτερο παράδειγμα",
+      "note": "Επιλέγουμε κύρια αλυσίδα <b>επτά C</b> που περιλαμβάνει τον άνθρακα της καρβονυλομάδας. Το πρώτο συνθετικό είναι <b>επτ-</b>.\nΜεταξύ ισομήκων κατάλληλων αλυσίδων που δίνουν την ίδια θέση στην καρβονυλομάδα, επιλέγουμε εδώ εκείνη με <b>περισσότερες διακλαδώσεις</b>. Η επιλεγμένη αλυσίδα έχει τέσσερις.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compCarbonsCount",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": [
+          "comp0",
+          "comp1",
+          "comp2",
+          "comp3",
+          "comp4"
+        ]
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "propanone",
+        "butanone",
+        "pentanone_2",
+        "pentanone_3",
+        "dimethyl_2_4_pentanone_3",
+        "trimethyl_3_4_4_pentanone_2",
+        "diethyl_4_5_dimethyl_2_6_heptanone_3"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": true,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": true,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": false
+      },
+      "selectedMol": "diethyl_4_5_dimethyl_2_6_heptanone_3"
+    },
+    {
+      "n": 21,
+      "title": "Αρίθμηση της επταμελούς αλυσίδας",
+      "note": "Αριθμούμε την κύρια αλυσίδα ώστε ο άνθρακας του C=O να έχει θέση <b>3 αντί 5</b>. Ο κύριος κορμός του ονόματος είναι <b>3-επτανόνη</b>.\nΑφού σταθεροποιηθεί αυτή η αρίθμηση, προσδιορίζουμε τις θέσεις όλων των αλκυλίων.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compBondPos",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": [
+          "comp0",
+          "comp1",
+          "comp2",
+          "comp3"
+        ]
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "propanone",
+        "butanone",
+        "pentanone_2",
+        "pentanone_3",
+        "dimethyl_2_4_pentanone_3",
+        "trimethyl_3_4_4_pentanone_2",
+        "diethyl_4_5_dimethyl_2_6_heptanone_3"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": true,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": true,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": false
+      },
+      "selectedMol": "diethyl_4_5_dimethyl_2_6_heptanone_3"
+    },
+    {
+      "n": 22,
+      "title": "Δύο διαφορετικά είδη αλκυλίων",
+      "note": "Οι δύο <b>αιθυλομάδες</b> βρίσκονται στους <b>C4 και C5</b>, ενώ οι δύο <b>μεθυλομάδες</b> στους <b>C2 και C6</b>. Σχηματίζουμε τα προθέματα <b>4,5-διαιθυλο-</b> και <b>2,6-διμεθυλο-</b>.\nΓράφουμε αιθυλο- πριν από μεθυλο-, σύμφωνα με την αλφαβητική σειρά, και όχι με βάση το μέγεθος των αριθμών θέσης. Μπορείς να συμβουλευτείς τον προαιρετικό πίνακα αλκυλίων.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compSecondSub1",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": []
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "propanone",
+        "butanone",
+        "pentanone_2",
+        "pentanone_3",
+        "dimethyl_2_4_pentanone_3",
+        "trimethyl_3_4_4_pentanone_2",
+        "diethyl_4_5_dimethyl_2_6_heptanone_3"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": true,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": true,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": true
+      },
+      "selectedMol": "diethyl_4_5_dimethyl_2_6_heptanone_3"
+    },
+    {
+      "n": 23,
+      "title": "Σύνθεση του πλήρους ονόματος",
+      "note": "Γράφουμε τα δύο είδη αλκυλίων με τις θέσεις τους και προσθέτουμε το <b>3-επτανόνη</b>. Το πλήρες όνομα είναι <b>4,5-διαιθυλο-2,6-διμεθυλο-3-επτανόνη</b>.\nΤα κόμματα χωρίζουν αριθμούς της ίδιας ομάδας, ενώ οι παύλες χωρίζουν αριθμούς και ονομαστικά τμήματα.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "none",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": []
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "propanone",
+        "butanone",
+        "pentanone_2",
+        "pentanone_3",
+        "dimethyl_2_4_pentanone_3",
+        "trimethyl_3_4_4_pentanone_2",
+        "diethyl_4_5_dimethyl_2_6_heptanone_3"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": true,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": true,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": true
+      },
+      "selectedMol": "diethyl_4_5_dimethyl_2_6_heptanone_3"
+    },
+    {
+      "n": 24,
+      "title": "Σύνθεση των κανόνων σε 2D",
+      "note": "Επιλέγουμε τη μεγαλύτερη κατάλληλη κύρια αλυσίδα που περιλαμβάνει τον άνθρακα της καρβονυλομάδας. Αριθμούμε για τη μικρότερη θέση του καρβονυλίου και έπειτα προσδιορίζουμε τις διακλαδώσεις.\nΓράφουμε τα αλκύλια αλφαβητικά, με τα κατάλληλα πολλαπλασιαστικά, και σχηματίζουμε το κύριο όνομα με -αν- και -όνη. Η θέση του καρβονυλίου δηλώνεται όπου χρειάζεται. Μπορείς να επιστρέψεις σε όλα τα παραδείγματα από τη λίστα και να συγκρίνεις τις 2D αναπαραστάσεις.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "none",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": []
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "propanone",
+        "butanone",
+        "pentanone_2",
+        "pentanone_3",
+        "dimethyl_2_4_pentanone_3",
+        "trimethyl_3_4_4_pentanone_2",
+        "diethyl_4_5_dimethyl_2_6_heptanone_3"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": true,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": true,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": true,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": true
+      },
+      "selectedMol": "diethyl_4_5_dimethyl_2_6_heptanone_3"
+    },
+    {
+      "n": 25,
+      "title": "Προαιρετική παρατήρηση σε 3D",
+      "note": "Η ονοματολογία έχει ολοκληρωθεί. <b>Αυτό το τελευταίο βήμα είναι προαιρετικό.</b>\nΠαρατήρησε το ίδιο μόριο σε 2D και 3D. Εντόπισε την καρβονυλομάδα, την κύρια ανθρακική αλυσίδα και τα δύο είδη αλκυλίων. Η τρισδιάστατη διαμόρφωση δεν αλλάζει τη συνδεσμολογία ή τους κανόνες ονομασίας που μελετήσαμε.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "none",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": []
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "propanone",
+        "butanone",
+        "pentanone_2",
+        "pentanone_3",
+        "dimethyl_2_4_pentanone_3",
+        "trimethyl_3_4_4_pentanone_2",
+        "diethyl_4_5_dimethyl_2_6_heptanone_3"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": true,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": true
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": 840,
+        "controls": {
+          "2D": true,
+          "3D": true
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": true,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": true
+      },
+      "selectedMol": "diethyl_4_5_dimethyl_2_6_heptanone_3"
+    }
+  ]
+}
