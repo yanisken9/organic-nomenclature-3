@@ -1,3 +1,71 @@
+# Current resume point — 2026-10-26 — final save and public release verified
+
+User request completed: save all work and provide two professor links in Desktop
+«αρχεία  json», covering evening 25 October MOL-only function removal through
+all work to the final other-ketone skeleton alignment. Report HTML/Markdown and
+README snapshot committed with the previously reviewed molecules/lesson/runtime
+changes in d53ba25fce40e8c30ef501c057030666f40439eb, pushed to origin/thesis-work.
+Origin/main remains 9c5259e3cd7d2e699c6e5ea90bf5fd3564eb53aa.
+Professor upstream last checked/synchronized earlier this session at 6e29bd5c
+(v51); no new professor-upstream check was performed in this final save segment.
+
+Public report:
+https://yanisken9.github.io/organic-nomenclature-3/docs/UPDATE-20261025-26.html?v=20261026-final
+Public welcome:
+https://yanisken9.github.io/organic-nomenclature-3/design/welcome-proposal.html?v=20261026-final
+Desktop contains 12 byte-identical active scenario JSONs, 01_Ενημέρωση_καθηγητή_25-26_10_2026.webloc,
+02_Namelecule_Σελίδα_υποδοχής.webloc and Σύνδεσμοι_για_τον_καθηγητή_25-26_10_2026.txt.
+No messages were sent to the professor.
+
+Independent final assembly Reviewer /root/review_other_ketones,
+ROLE_ID=NAMELECULE_REVIEWER_V1_20261023: no actionable P0/P1/P2/P3 findings;
+90 repository + 15 Desktop target hashes unchanged before/after review.
+Manifest SHA256 0bfb51fa79cbe35fc4d4c58fb06502e9c657e61d26b819718ac5a54fc90c134f.
+Inventories/references/report limitations/tracked dependencies independently checked.
+Browser and publication verification below are Developer evidence, not independent
+Reviewer execution. Reviewer did not write files; enforced filesystem isolation
+was not established.
+
+Public verification: 160 fetched files matched d53ba25 exactly, including all126
+runtime SDFs, all12 active scenario JSONs, active scripts, welcome and report.
+Limited public Firefox smoke passed report28 molecule rows /12lesson rows,
+390px layout, welcome image decoding, library9cards/12links, app126molecules,
+new lesson start/Next/final28, final3D33atoms and Exit. This is not a fresh traversal
+of all283steps. Public console: 0 unexpected runtime errors, 0 viewer-null events
+in this limited run; 3 rejected analytics-cookie messages and 1 external
+JmolTracker X-Frame-Options block retained in raw evidence. Initial test reached
+all navigation assertions but its generic error filter also counted those browser
+security diagnostics; initial evidence preserved and classification made explicit.
+The previous full28-step lesson run still records 3 known JSmol viewer-null events;
+root cause remains unisolated. No app changes were made to mask these messages.
+
+Backups created and verified in ../Αποθηκεύσεις/2026-10-26-final:
+- Full workspace plus Desktop exports ZIP, 1255 entries; each archived entry SHA
+  checked against source and ZIP integrity passed.
+- Validation baseline ZIP,25entries; verification evidence ZIP,41entries.
+- Complete Git-history bundle, verified by git bundle verify.
+Older ../Αποθηκεύσεις/2026-10-26 checkpoint preserved. backup-manifest.json includes
+hashes, runtime commit, source/remote refs, public evidence and Desktop identities.
+This final journal record is saved in a metadata-only commit; the workspace ZIP
+and Git bundle are refreshed to include that commit, without rebuilding unchanged
+evidence/baselines. Exact final metadata HEAD and completion state are recorded
+in external final-save-state.json. Runtime publication remains d53ba25 content.
+
+Core report for forwarding to professor:
+«Στην παρούσα περίοδο άλλαξε το js/mulermoc-nom-core-51.js: περιορισμένη
+υποστήριξη διακλαδισμένων αιθέρων, άκυκλων αλδεϋδών και μονο-/δικετονών, ώστε
+να παράγονται σωστές σχολικές ονομασίες, θέσεις και επισημάνσεις. Οι έλεγχοι
+περιλαμβάνουν χημική/γεωμετρική επικύρωση και 754 περιπτώσεις ονομασίας/αλυσίδας,
+ανεξάρτητη ανασκόπηση και στοχευμένους browser ελέγχους, με τα καταγεγραμμένα
+όριά τους. Οι αλλαγές είναι αποθηκευμένες, committed και δημοσιευμένες. Η τελική
+αποθήκευση, το νέο μάθημα και οι τελευταίες περιστροφές δεν πρόσθεσαν αλλαγή
+στον core. Η αφαίρεση της συνάρτησης διπλών δεσμών έγινε στον viewer.»
+Core51 SHA256 still 096d617853646de0dfd67bcbde3e32252aebcb98e7525b05e6f7e71ccb48a5fc,
+identical to immediate final-save baseline. No core49/core50 change in this save.
+Current final inventory126molecules /12lessons /283steps /9cards.
+Next: user may send either saved link later; no further feature work requested.
+Known JSmol/tracker limitations remain disclosed; no new fix authorized here.
+
 # Current resume point — 2026-10-26 — final assembly review clean; saving and publishing
 
 Independent Reviewer /root/review_other_ketones,
