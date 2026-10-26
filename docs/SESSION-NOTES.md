@@ -1,3 +1,191 @@
+# Current resume point — 2026-10-26 — local checkpoint saved for later continuation
+
+Ο χρήστης ζήτησε αποθήκευση μέχρι εδώ και συνέχεια αργότερα. Η ελεγμένη δοκιμή
+αιθανόλης αποθηκεύτηκε στο τοπικό commit
+`94cc4694ce7c267fba5f83d83ab2742d4ad2df1e` στο branch `react-library-pilot`.
+Περιλαμβάνει και τα 13 αρχεία πηγής/τεκμηρίωσης/ελέγχων/manifest της αλλαγής.
+Οι παρούσες σημειώσεις αποθηκεύονται χωριστά ως metadata στο ίδιο branch.
+Δεν έγινε push ή δημοσίευση. Η Κύρια έκδοση στο `thesis-work` παραμένει
+`3673c390c1fb1b7cbcc79411a6e1e3720e97f7ab` και οι δημοσιευμένοι σύνδεσμοι δεν άλλαξαν.
+
+Πριν την αποθήκευση επαληθεύτηκαν και τα 19 hashes του τελικού review target,
+η σταθερή έκδοση και το `git diff --check`. Δεν άλλαξε κώδικας ούτε επαναλήφθηκαν
+άσκοπα τα ήδη επιτυχή runtime tests. Το ανεξάρτητο review και η διόρθωση P2
+προσβασιμότητας ισχύουν για ακριβώς το αποθηκευμένο περιεχόμενο· αναλυτικά παρακάτω.
+Τα παραγόμενα `react-preview/dist/` και `public/viewer-host.html` παραμένουν
+αγνοημένα από το Git και αναδημιουργούνται με `npm run build` στο react-preview.
+Οι απαιτήσεις Node24+/Python3.9+ και η εξυπηρέτηση από τη ρίζα του repository
+περιγράφονται στο `react-preview/README.md`.
+
+Συνέχεια: ανοίγουμε τη React έκδοση στη δοκιμή αιθανόλης:
+http://127.0.0.1:8013/react-preview/dist/#/viewer
+(αν έχει σταματήσει ο server, από τη ρίζα: python3 -m http.server 8013 --bind 127.0.0.1).
+Έχουμε τρεις 2D μορφές και zoom με τον υπάρχοντα renderer. Η απομάκρυνση των
+παλιών JSmol/3D εξαρτήσεων ή επέκταση σε άλλα μόρια απαιτεί επόμενο συγκεκριμένο
+σχέδιο και έγκριση. Δεν ξεκινά νέα υλοποίηση από μόνη της.
+
+Ο τελευταίος επιτυχής έλεγχος professor upstream σε αυτή τη συνεδρία ήταν
+`dc02933358a19f792c1a393fbdc2c15c2aba573f`, ίδιο με τον τελευταίο συγχρονισμό
+περιεχομένου. Στην αποθήκευση δεν έγινε νέος δικτυακός έλεγχος ή συγχρονισμός.
+Core: καμία αλλαγή από την παρούσα αποθήκευση ή τη δοκιμή React. Core51 SHA256
+`096d617853646de0dfd67bcbde3e32252aebcb98e7525b05e6f7e71ccb48a5fc`.
+
+# Current resume point — 2026-10-26 — reviewed React ethanol viewer pilot ready locally
+
+User-approved one-molecule React integration is implemented and independently
+reviewed. Agreed names: **Namelecule — Κύρια έκδοση** and **Namelecule React —
+Δοκιμαστική έκδοση**. Main conversation acted as Developer. No additional
+chemistry/learning agents were needed because molecular/educational data did not
+change. Local URL: http://127.0.0.1:8013/react-preview/dist/?v=ethanol-20261026#/viewer
+External browser open command succeeded at handoff (exit0); OS success is not
+a claim that a particular user-visible tab was inspected. Actual rendering was tested in Firefox.
+
+Branch react-library-pilot, base/HEAD 428254373936cfe3dfdbf03e879c654c25eb0747.
+Changes saved as working-tree files; no new commit, push or publication in this
+stage. Stable thesis-work remains 3673c390c1fb1b7cbcc79411a6e1e3720e97f7ab;
+published main application/professor URLs unchanged. Before-task planning-only
+journal edits preserved below. Final target hashes and all 1254 protected original
+non-React files rechecked unchanged after independent re-review.
+
+Changed scope: react-preview/src/MoleculePreview.jsx, main.jsx, preview.css,
+public/viewer-host-bridge.js, tools/build-viewer-host.py, package.json build script,
+.gitignore and README; new docs/REACT-VIEWER-20261026.md and focused test/evidence
+under docs/checks/react-viewer-*. New generated host/dist are ignored/rebuildable.
+Original core/data/viewer/HTML/teaching/lessons/MOL/SDF files were not changed.
+React controls condensed/expanded/skeletal ethanol and zoom through checked
+origin/source/session/id messages. Loading/failure/retry/deadlines and cleanup
+included. Same-origin frame provides DOM/lifecycle separation, not a security
+sandbox. Existing legacy JSmol/3D startup/CDN dependencies and uniform fit rules
+remain; this is not a native React renderer, 2D-only bundle or JSmol repair.
+Small mobile molecules can be enlarged using the retained zoom behavior.
+
+Developer verification: Vite build PASS (19 modules, JS266.31kB/80.43kB gzip,
+CSS3.25kB/1.02kB gzip); host/content parity, Python AST, bridge syntax, whitespace,
+protected hashes and stable branch PASS. Existing 20 library-search cases PASS.
+Final Firefox 1500/390 run PASS: modes, zoom0.5..6, rapid commands, invalid messages,
+resize/no overflow, library9cards/12links, fresh remount and unmount while loading,
+error/retry and deadline. All three raw MOLs and exact SVG geometry/text/styles/
+viewBox equal unchanged renderer at matched958x420. Expanded source has5explicitH
+and implicit O-H retained; visible labels5H+OH=6H. No MOL regeneration.
+Failure tests disclose injected native error event/captured real timeout callback,
+not an actual CDN outage. Final run0JSerrors, reused-profile ready1.49s/31 completed
+resources (22local,9chemapps), not a cold-start benchmark. No new full283-step,
+all-molecule chemistry, Safari/Drupal/offline or screen-reader certification.
+
+Independent Reviewer /root/review_other_ketones,
+ROLE_ID=NAMELECULE_REVIEWER_V1_20261023, separate existing context without Developer
+implementation history. Initial P2: failed state remained aria-busy=true; fixed to
+loading-only and covered in both failure assertions. Complete targeted browser run
+repeated; final re-review reports previousP2 resolved and no remaining actionable
+findings. Reviewer independently inspected source/protocol/legacy calls, exact
+12source+7generated hashes, AST/host parity/diff; initial review also contentparity,
+bridge syntax,20searchcases,1254protected hashes/stable branch. Browser/build/AT
+results were supplied Developer evidence, not independent execution. No Reviewer
+writes; enforced read-only sandbox isolation was not established.
+Frozen manifest docs/checks/react-viewer-reviewed-target-20261026.json SHA256
+7fe02abdd867a2195914a27daf893fe7b0111876002fcc4e724135f9157e281f.
+No target edits after clean re-review; journals excluded from that target.
+
+Upstream HEAD/main/history and raw changelog successfully checked this session:
+dc02933358a19f792c1a393fbdc2c15c2aba573f, same as last checked/content sync. No new
+release. Changelog SHA256 eb54faf3308c29c143d816b76399f1cd6ad373223de8a28f56b3b3253a875c0d.
+Core report: **Δεν έγιναν αλλαγές σε κανένα core σε αυτή την εργασία**. Core51SHA
+096d617853646de0dfd67bcbde3e32252aebcb98e7525b05e6f7e71ccb48a5fc equals the
+session-start baseline. Earlier saved core contributions are not new changes here.
+Next: user inspects the ethanol controls; broader viewer migration/dependency
+reduction requires a concrete next plan. No further implementation assumed.
+
+# Current resume point — 2026-10-26 — React ethanol pilot implemented; independent review pending
+
+Approved by user after the concrete read-only proposal. Names agreed: Namelecule
+— Κύρια έκδοση (stable); Namelecule React — Δοκιμαστική έκδοση (local feature).
+Base428254373936cfe3dfdbf03e879c654c25eb0747, branchreact-library-pilot; stable
+thesis-work3673c390 unchanged. No new commit/push/publication in this stage.
+Upstream HEAD/main+raw changelog checked successfully this session:dc029333,
+unchanged from last checked/content-sync; SHA eb54faf3308c29c143d816b76399f1cd6ad373223de8a28f56b3b3253a875c0d.
+
+Implemented one-molecule ethanol2D control integration: newMoleculePreview,
+generated same-origin host from untouched v51HTML, classic bridge, build step,
+route/banners/CSS/docs/focused test. Original runtime/data/MOLs/lesson sources
+remain untouched. Source expandedethanol has5explicitH plus originalOimplicitH;
+existing renderer displays5H+OH (six total). No chemical regeneration.
+DOM/lifecycle isolation, not security sandbox or nativeReact drawing; startup
+still includes legacyJSmol/3D/CDNs, not fixed or removed. Originalsmallmobilefont
+rules remain; zoom available. No new dependencies or educational content.
+
+Developer tests PASS: build19modules266.29kBJS/80.43gzip, source9cards/12lessons,
+20existing searchcases; Firefox1500/390 modes,zoom0.5..6,rapidchanges,badmessages,
+mobileoverflow/library/unmount/remount andunmountduringloading,error/retry/deadline.
+Failuretests injectnativeerrorevent/captureactual90sdeadlinecallback; notCDNoutage.
+All3rawMOLs+exactSVGgeometry/text/styles/viewBox match original atmatched958x420.
+Finalready1.77s reusedcache31resources(22local9chemapps),0JSerrors; notcoldbenchmark
+or JSmolfix. 1254protected original files+stablebranch unchanged, AST/syntax/diff
+and generators--checkPASS. Evidence docs/checks/react-viewer-{browser,static}-20261026.json;
+script test-react-viewer-browser-20261026.py; report docs/REACT-VIEWER-20261026.md.
+Initial CSS helperDOM hiding defect corrected in generator; full targetedrerunPASS.
+
+Frozen12source/doc/evidence+7generated target hashes in
+ docs/checks/react-viewer-reviewed-target-20261026.json (manifest c021054507b5f84e2d68abaacb1fe6f06e934a7e5e2408e43b55e7a8a6537d76).
+Reviewer /root/review_other_ketones asked for independent read-only review of
+finalworkingtree; target not edited during review. This record excluded fromtarget.
+Review pending; do not claim finalreadiness yet. Next: address anyfindings in scope,
+re-review ifchanged, finalhashcheck, externalbrowser and shortGreekhandoff.
+Core unchanged thisstage:51SHA096d617853646de0dfd67bcbde3e32252aebcb98e7525b05e6f7e71ccb48a5fc.
+No fullchemistry/283steps/allbrowser/Drupal/offline certification.
+
+# Current resume point — 2026-10-26 — approved ethanol React viewer pilot in progress
+
+User approved the bounded one-molecule bridge plan and names: Namelecule —
+Κύρια έκδοση; Namelecule React — Δοκιμαστική έκδοση. Main Developer implements
+React controls around an unchanged v51 renderer in a generated same-origin host.
+No original core/data/viewer/HTML/MOL/lesson modifications authorized or needed.
+Startup still loads JSmol; no native viewer rewrite/3D fix/publication claim.
+Baseline:4282543 on react-library-pilot; stable thesis-work3673c390. Existing
+planning-only journal edits preserved. 1273 hashes captured in
+/tmp/namelecule-before-react-viewer-20261026/baseline.json.
+Upstream HEAD/main+changelog successfully checked this session:dc029333, unchanged
+from last checked/content-sync; changelogSHA eb54faf3308c29c143d816b76399f1cd6ad373223de8a28f56b3b3253a875c0d.
+Implementation/testing/review pending. Core unchanged at start; final comparison
+required. No commit/push/publication in this stage yet. Next: build and test host,
+three representations/zoom/lifecycle/failure/legacy parity, independent Reviewer.
+
+# Current resume point — 2026-10-26 — proposed one-molecule React viewer bridge, awaiting approval
+
+User asked whether to continue after the structured React library. Read-only
+investigation performed; no new viewer implementation approved or applied.
+Working tree was clean at entry, HEAD428254373936cfe3dfdbf03e879c654c25eb0747
+on react-library-pilot; stable thesis-work remains3673c390. Read README/current
+notes/relevant layer plan, preview code, actual JSME initialization and viewer paths.
+Upstream HEAD/main and current changelog checked successfully: stilldc029333,
+matching last checked/local-content-synchronized revision; no new release.
+ChangelogSHA eb54faf3308c29c143d816b76399f1cd6ad373223de8a28f56b3b3253a875c0d.
+
+Finding: viewer51 is tightly coupled to global state/DOM and its startup plus
+fSelectMol/fClearHighlights invoke both2D and3D. Directly importing the complete
+viewer into React risks shared-DOM/lifecycle conflicts. Existing custom SVG steps
+include explicit-H/functional-group labels/font/fitting; raw JSME replacement would
+not establish parity with the current checked representation.
+
+Proposed bounded next plan: one ethanol(key ethanol) viewer-control trial in the
+React branch, with condensed/expanded/skeletal and zoom, retaining original MOLs
+and exact existing renderer. Use a dedicated generated same-origin host/iframe
+plus explicit checked command/status bridge for isolation, controlled by a React
+component; this is an integration pilot, not a completed native viewer migration.
+Original core/data/viewer/app/lesson files stay unchanged. The host initially
+loads legacy startup dependencies including3D; no claim of a2D-only bundle or
+JSmol fix. Cost/errors and render parity must be checked, not assumed.
+Planned files: react-preview/src/MoleculePreview.jsx, new isolated host/bridge
+files and generation tool, main.jsx/preview.css, focused browser checks/docs.
+Checks: same three source MOLs/explicitH, comparable SVG rendering, mode/zoom/
+resize, loading/failure, rapid switches/unmount/remount, existing library regression
+and independent Reviewer after implementation. No new curriculum/quiz/login.
+
+Await user approval of this concrete viewer plan before code changes per AGENTS.
+No new commit/push/publication; only continuity/contribution records updated.
+Core unchanged in this planning turn; SHA256 096d617853646de0dfd67bcbde3e32252aebcb98e7525b05e6f7e71ccb48a5fc.
+Next: user approves/adjusts bounded viewer pilot, then Developer implements and
+validates the approved scope. Previous React library remains saved and usable.
+
 # Current resume point — 2026-10-26 — structured React library saved locally, ready for user inspection
 
 User-approved next React stage complete: normalized library catalog, real React
