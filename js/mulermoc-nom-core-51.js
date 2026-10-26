@@ -714,6 +714,25 @@ function fIsAcyclicSaturatedMonoketoneGraph(conn, types, bonds) {
     return ob.length === 1 && ob[0][2] === 2 && bonds.every(b => b === ob[0] || b[2] === 1) &&
         fIsAcyclicHydrocarbonGraph(conn, types.map(t => t === 'O' ? 'H' : t))
 }
+// Acyclic C/H/O mono-/diketones only; every O is an internal carbonyl.
+// Retain the original saturated-monoketone path byte-for-byte above.
+function fIsAcyclicKetoneGraph(conn, types, bonds) {
+    if (fIsAcyclicSaturatedMonoketoneGraph(conn, types, bonds)) return true
+    if (!Array.isArray(types) || !Array.isArray(bonds) || types.some(t => !['C','H','O'].includes(t))) return false
+    const os = types.map((t,i) => t === 'O' ? i : -1).filter(i => i >= 0)
+    if (os.length < 1 || os.length > 2) return false
+    for (const o of os) {
+        const ns = conn[o] || []
+        if (ns.length !== 1 || types[ns[0]] !== 'C' ||
+            (conn[ns[0]] || []).filter(n => types[n] === 'C').length !== 2) return false
+    }
+    if (!bonds.every(b => {
+        const a = types[b[0]-1], c = types[b[1]-1]
+        if (a === 'O' || c === 'O') return b[2] === 2
+        return a === 'C' && c === 'C' ? [1,2,3].includes(b[2]) : b[2] === 1
+    })) return false
+    return fIsAcyclicHydrocarbonGraph(conn, types.map(t => t === 'O' ? 'H' : t))
+}
 // Bounded support: one acyclic, saturated C-O-C ether, no other elements.
 function fIsAcyclicMonoetherGraph(conn, types, bonds) {
     const heavy = types.map((t,i) => t !== 'H' ? i : -1).filter(i => i >= 0)
@@ -779,7 +798,7 @@ function fSupportsAlkylBranchPrefixes() {
         (functionalGroupsList[0] === 'aldehyde' &&
             fIsAcyclicAldehydeGraph(atomConnectivityList, allAtomsTypeList, bondList)) ||
         (functionalGroupsList[0] === 'ketone' &&
-            fIsAcyclicSaturatedMonoketoneGraph(atomConnectivityList, allAtomsTypeList, bondList)) ||
+            fIsAcyclicKetoneGraph(atomConnectivityList, allAtomsTypeList, bondList)) ||
         (functionalGroupsList[0] === 'alcohol' &&
             fIsAcyclicAlcoholGraph(atomConnectivityList, allAtomsTypeList, bondList)))
 }
@@ -880,7 +899,7 @@ function fOrientChainPath(path) {
                 if (pos >= 0) locants.push(pos + 1)
             }
             // v49: acyclic hydrocarbon alkyl branches join the detachable-prefix tier
-            if ((fIsAcyclicHydrocarbonGraph(atomConnectivityList, allAtomsTypeList) || fIsAcyclicAlcoholGraph(atomConnectivityList, allAtomsTypeList, bondList) || fIsAcyclicMonoetherGraph(atomConnectivityList, allAtomsTypeList, bondList) || fIsAcyclicAldehydeGraph(atomConnectivityList, allAtomsTypeList, bondList) || fIsAcyclicSaturatedMonoketoneGraph(atomConnectivityList, allAtomsTypeList, bondList))) {
+            if ((fIsAcyclicHydrocarbonGraph(atomConnectivityList, allAtomsTypeList) || fIsAcyclicAlcoholGraph(atomConnectivityList, allAtomsTypeList, bondList) || fIsAcyclicMonoetherGraph(atomConnectivityList, allAtomsTypeList, bondList) || fIsAcyclicAldehydeGraph(atomConnectivityList, allAtomsTypeList, bondList) || fIsAcyclicKetoneGraph(atomConnectivityList, allAtomsTypeList, bondList))) {
                 locants.push(...fCarbonBranchLocants(path, atomConnectivityList, allAtomsTypeList))
             }
             locants.sort(function(a, b) { return a - b })
@@ -947,7 +966,7 @@ function fOrientChainPath(path) {
                             return pairs
                         }
                         if (!Object.keys(ccDoubleBondKeys).length && !Object.keys(ccTripleBondKeys).length &&
-                            (fIsAcyclicHydrocarbonGraph(atomConnectivityList, allAtomsTypeList) || fIsAcyclicAlcoholGraph(atomConnectivityList, allAtomsTypeList, bondList) || fIsAcyclicMonoetherGraph(atomConnectivityList, allAtomsTypeList, bondList) || fIsAcyclicAldehydeGraph(atomConnectivityList, allAtomsTypeList, bondList) || fIsAcyclicSaturatedMonoketoneGraph(atomConnectivityList, allAtomsTypeList, bondList))) {
+                            (fIsAcyclicHydrocarbonGraph(atomConnectivityList, allAtomsTypeList) || fIsAcyclicAlcoholGraph(atomConnectivityList, allAtomsTypeList, bondList) || fIsAcyclicMonoetherGraph(atomConnectivityList, allAtomsTypeList, bondList) || fIsAcyclicAldehydeGraph(atomConnectivityList, allAtomsTypeList, bondList) || fIsAcyclicKetoneGraph(atomConnectivityList, allAtomsTypeList, bondList))) {
                             if (fCompareLocantSets(
                                 fCarbonBranchAlphabeticalKey(rev, atomConnectivityList, allAtomsTypeList),
                                 fCarbonBranchAlphabeticalKey(oriented, atomConnectivityList, allAtomsTypeList)) < 0) useForward = false
@@ -1529,7 +1548,7 @@ function fOrientChainPath3D(path) {
                 if (pos >= 0) locants.push(pos + 1)
             }
             // v49: acyclic hydrocarbon alkyl branches join the detachable-prefix tier
-            if ((fIsAcyclicHydrocarbonGraph(atomConnectivityList3D, allAtomsTypeList3D) || fIsAcyclicAlcoholGraph(atomConnectivityList3D, allAtomsTypeList3D, bondList3D) || fIsAcyclicMonoetherGraph(atomConnectivityList3D, allAtomsTypeList3D, bondList3D) || fIsAcyclicAldehydeGraph(atomConnectivityList3D, allAtomsTypeList3D, bondList3D) || fIsAcyclicSaturatedMonoketoneGraph(atomConnectivityList3D, allAtomsTypeList3D, bondList3D))) {
+            if ((fIsAcyclicHydrocarbonGraph(atomConnectivityList3D, allAtomsTypeList3D) || fIsAcyclicAlcoholGraph(atomConnectivityList3D, allAtomsTypeList3D, bondList3D) || fIsAcyclicMonoetherGraph(atomConnectivityList3D, allAtomsTypeList3D, bondList3D) || fIsAcyclicAldehydeGraph(atomConnectivityList3D, allAtomsTypeList3D, bondList3D) || fIsAcyclicKetoneGraph(atomConnectivityList3D, allAtomsTypeList3D, bondList3D))) {
                 locants.push(...fCarbonBranchLocants(path, atomConnectivityList3D, allAtomsTypeList3D))
             }
             locants.sort(function(a, b) { return a - b })
@@ -1993,7 +2012,7 @@ function fRankChainPool(paths, req, scoreFn, orientFn, connList, typeList, bonds
     // locants. Retain every graph-equivalent winner. Multiple-bond and FG
     // parent-pool ranking deliberately keeps its existing priorities.
     const alcohol = fIsAcyclicAlcoholGraph(connList, typeList, bonds)
-    const ketone = fIsAcyclicSaturatedMonoketoneGraph(connList, typeList, bonds)
+    const ketone = fIsAcyclicKetoneGraph(connList, typeList, bonds)
     if (alcohol || ketone) {
         const oxygens = typeList.map((t, i) => t === 'O' ? i : -1).filter(i => i >= 0)
         const key = c => oxygens.map(o => orientFn(c.p).indexOf(connList[o][0]) + 1).sort((a,b) => a-b)
@@ -2015,7 +2034,7 @@ function fRankChainPool(paths, req, scoreFn, orientFn, connList, typeList, bonds
             scored = scored.filter(c => fCompareLocantSets(multiKey(c), bestMulti) === 0)
         }
     }
-    if ((bestMu === 0 && fIsAcyclicHydrocarbonGraph(connList, typeList)) || alcohol || fIsAcyclicAldehydeGraph(connList, typeList, bonds) || fIsAcyclicSaturatedMonoketoneGraph(connList, typeList, bonds)) {
+    if ((bestMu === 0 && fIsAcyclicHydrocarbonGraph(connList, typeList)) || alcohol || fIsAcyclicAldehydeGraph(connList, typeList, bonds) || fIsAcyclicKetoneGraph(connList, typeList, bonds)) {
         let bestBranches = -1
         for (const candidate of scored) {
             candidate.branchCount = fCarbonBranchLocants(candidate.p, connList, typeList).length
@@ -2699,6 +2718,32 @@ function fGuessName(skipChainRecalc) {
             comp3 = null
             comp2b = ''
             comp4 = suffix
+        }
+    }
+
+    // Separate C-C locants from carbonyl locants in the existing twelve slots.
+    // Keep all pre-existing saturated monoketone names/components unchanged.
+    if (functionalGroupsList.length === 1 && functionalGroupsList[0] === 'ketone' &&
+        fIsAcyclicKetoneGraph(atomConnectivityList, allAtomsTypeList, bondList) &&
+        !fIsAcyclicSaturatedMonoketoneGraph(atomConnectivityList, allAtomsTypeList, bondList)) {
+        const os = functionalGroupObj.ketone.O
+        const loc = os.map(o => mainChainAtomsList.indexOf(atomConnectivityList[o][0]+1)+1).sort((a,b)=>a-b).join(',')
+        const suffix = nameMultiPrefix[os.length-1] + 'όνη'
+        const db = sortedMultiDBonds && sortedMultiDBonds.length, tb = sortedMultiTBonds && sortedMultiTBonds.length
+        const branched = comp0NumberList.length > 0
+        if (db || tb) {
+            if (branched) comp1No = '-' + (db ? bondPrefixDB : bondPrefixTB)
+            else { comp0 = (db ? bondPrefixDB : bondPrefixTB); comp1No = null }
+            if (db && tb) {
+                comp3 = '-' + bondPrefixTB
+                comp4 = '-' + loc + '-' + suffix
+            } else {
+                comp3 = '-' + loc + '-'; comp2b = ''; comp4 = suffix
+            }
+        } else {
+            if (branched) comp1No = '-' + loc + '-'
+            else { comp0 = loc + '-'; comp1No = null }
+            comp3 = null; comp2b = ''; comp4 = suffix
         }
     }
 

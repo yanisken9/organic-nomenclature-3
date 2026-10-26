@@ -1,3 +1,55 @@
+# Current resume point — 2026-10-26 — final assembly review clean; saving and publishing
+
+Independent Reviewer /root/review_other_ketones,
+ROLE_ID=NAMELECULE_REVIEWER_V1_20261023, completed final assembly/report review
+without actionable P0/P1/P2/P3 findings. All 90 repository and 15 Desktop targets
+matched frozen hashes before/after; manifest SHA256
+0bfb51fa79cbe35fc4d4c58fb06502e9c657e61d26b819718ac5a54fc90c134f.
+Reviewer independently confirmed inventories, report claims and limitations,
+references, tracked dependencies, Desktop copies/shortcuts, immediate-save runtime
+baseline and diff whitespace. Browser results remain supplied Developer evidence;
+public deployment not yet checked. Review result preserved in final backup evidence.
+
+User authorized full save/push/personal publication. Commit target: frozen content
+plus these journals on thesis-work; origin/main untouched. Next: public byte match,
+public browser smoke, metadata record and verified final backups. No additional
+core edits in this save; earlier same-session core51 changes included in payload.
+
+# Contribution — 2026-10-26 — final save/report prepared, independent assembly review running
+
+User authorized saving all work, publishing the updated personal Namelecule site,
+and preparing two professor links in Desktop «αρχεία  json»: cumulative update
+from evening 25 October MOL-only function removal, and current welcome page.
+Prepared docs/UPDATE-20261025-26.html and matching Markdown, README current
+snapshot, refreshed all 12 Desktop scenario JSON copies, two .webloc shortcuts
+and a labeled TXT containing both URLs. Current inventory: 126 molecules,
+12 lessons / 283 steps / 9 cards; 28 additions since the 98-molecule baseline,
+with 21 PubChem and 7 documented RDKit 3D sources.
+
+No additional core/runtime code changes during this save. Core51 was changed
+in earlier approved work this session (ethers/aldehydes/ketones); baseline SHA
+for this final save remains 096d617853646de0dfd67bcbde3e32252aebcb98e7525b05e6f7e71ccb48a5fc.
+Current source is not yet committed/published: HEAD and origin/thesis-work were
+0214183a16ce09eb77d9936ae91a5d18ee69258d; origin/main remains 9c5259e3.
+Professor upstream was previously checked/synchronized at 6e29bd5c (v51);
+no additional professor upstream check is claimed in this save segment.
+
+Developer checks: diff whitespace, 17 Python ASTs, 4 JS syntax checks, 5 HTML
+entry/report dependency sets (20 local assets), 12 byte-identical Desktop JSONs.
+Limited final local Firefox smoke passed report (28 molecule rows / 12 lessons),
+390px report, welcome/image decoding, library, application126, new lesson
+start/Next/final28, final3D33 atoms and Exit; zero JS errors in this limited run.
+Evidence /tmp/namelecule-final-save-local.json. The full earlier 28-step lesson
+run had 3 known JSmol viewer-null events, explicitly retained as a limitation.
+
+Independent Reviewer /root/review_other_ketones now inspecting the frozen final
+assembly/report, manifest /tmp/namelecule-final-save-reviewed-target-20261026.json
+(90 repository content targets + 15 external files; journals excluded), base0214183.
+Source targets remain frozen. Next: resolve any findings, commit/push thesis-work,
+verify public files and browser navigation, record actual publication evidence,
+create verified final workspace/Git-history/evidence backups, then return links.
+No messages sent to the professor.
+
 # 2026-10-26 — Κοντύτεροι κατακόρυφοι δεσμοί και οριζόντια μεθανάλη
 
 Εγκεκριμένο25%μείωσηςσε4Condensedaldehydes,μεθανάληHCHOκαιExpandedH-C=O
@@ -2427,3 +2479,138 @@ Core51current38920161500f7fbbf66d7037b2a5fe0780b01a821f9643be918ccde79325a2f3,
 earlierapprovedether/aldehyde/ketoneextensionsnowcommitted/publishedin74e381c.
 Upstreamlastchecked/actuallysynced6e29bd5earliersamesession,no newremotecheck.
 Nextonreturn:readthispointandexternalfinal-save-state,thenuserpriority.
+
+## 2026-10-26 — Other aldehydes card formula
+
+Approved one-line CxHy(CHO)n subscript formula in design/theory-library.html.
+Exact baseline comparison and diff --check PASS; independent Reviewer
+/root/review_aldehyde_formula found no issues. No runtime test for static text.
+Local only; no commit/push/publication or core changes. Professor report deferred.
+
+## 2026-10-26 — Other ketones card formula
+
+Added approved CxHy(CO)n subscript formula under Άλλες κετόνες in
+design/theory-library.html; no restrictions. Single-line comparison, whitespace
+and local HTTP content checks PASS. Independent Reviewer /root/review_ketone_formula
+found no issues. No visual runtime test, core edits, commit/push or publication.
+
+## 2026-10-26 — Four other ketones, implementation and review pending
+
+User approved core51 expansion for acyclic C/H/O mono-/diketones and four new
+records. Formulae C5H4O,C8H10O,C8H12O2,C11H14O2. Source/runtime assets,
+data51/core51/viewer51/cache/README, docs/OTHER-KETONES-20261026.md and new
+checks/specs. No existing record/MOL/scenario modified. Prior card formula work
+separate. Checks:12MOL4SDF/1151protected121oldrecords,72new724oldnamecases11guards,
+32desktop12narrow8numbering11actualhighlight browsercases PASS0JSerrors.
+Independent Reviewer /root/review_other_ketones reviewing44frozen targets
+(manifest docs/checks/other-ketones-reviewed-target-20261026.json).
+Core51 changed to separate bond/carbonyl locants and route parent/branches;
+local only, no commit/push/publication. Consolidated professor report deferred.
+
+### Final independent review — four other ketones
+
+Reviewer /root/review_other_ketones ROLE_ID=NAMELECULE_REVIEWER_V1_20261023,
+fresh context, no actionable findings.44frozen hashes confirmed before/after;
+manifest SHA256 7c9f9204b2102a2eacb6d53062761bf8e9c1877329b6656b0fb1ef4d65ff806a.
+Independent read-only asset/naming execution:12MOL4SDF/1151protected121oldrecords/
+72new724oldcases11guards PASS; mapped element identities, AST, diff and primary
+IUPAC rules checked. Browser evidence remained Developer-supplied. No target
+changed after review. No all-lessons/export/all-devices validation claimed.
+Core51 changed locally as approved; no commit/push/publication. Consolidated
+professor report remains deferred. Work complete, pending user visual feedback.
+
+## 2026-10-26 — Fifth other ketone, independent review pending
+
+Approved4-ισοπροπυλο-3,6-διμεθυλο-3-οκτεν-7-ιν-2,5-διόνη C13H18O2,
+newrecord3MOL1RDKitSDF/provenance/runtimecopy. Coreunchanged; viewer adds only
+numberingwhitelistkey;data/cache/README/report/spec/checkwrapper. All125oldrecords
+and1191protectedfilesunchanged.18new748oldJSCcases11guards;8desktop3narrow2timing
+3actual3DhighlightcasesPASS0JSerrors. FinalExpanded2Dinspected. Reviewer
+/root/review_other_ketones reviewing20frozenfiles againstimmediate125recordbaseline.
+No commit/push/publication. Professorreport remains deferred.
+
+### Fifth ketone — final review complete
+
+Independent Reviewer /root/review_other_ketones (ROLE_ID=NAMELECULE_REVIEWER_V1_20261023),
+reused independent context, no Developer history; no actionable findings.
+20frozen hashes verified; manifestSHA256
+abeba42138fa037ff5550d57af4245e5d690045b84daf1e2e1c2fd697615b94a.
+Independent non-writing assets/naming checks passed3MOL1SDF/18H/1191protected/
+125oldrecords/18new748oldcases11guards;AST/mappedidentities/diffcheckPASS.
+Browser evidence remains Developer-supplied; export/resize/allscenario traversal
+not independently executed. Generator old source not snapshotted (hash retained),
+current optional-specs implementation inspected without findings. Final target
+unchanged after review. No new core change for this addition; earlier approved
+core51changes remain local. No commit/push/publication. Professor report deferred.
+
+## 2026-10-26 — Other ketones theory, independent review pending
+
+Approved Άλλες κετόνες28progressive/noquizsteps/all7existingeligiblemols.
+NewscenarioJSON/activeotherketonescard/scenario51titleallowlist/cache/README;
+no core/viewer/data/MOL/oldscenariochanges.12lessons283steps126molecules.
+Static126actualinventory7eligible,1207protectedfilesPASS. Firefoxall28steps,
+names/hidden/closedrules/openclose/numbering/namefit/noSVGclipping/menu/Prev/
+exportvalidate/Exit/library390/final3D33atomsPASS;3knownJSmolviewernull errors
+remainwithnootherJSerrors,rootnotisolated. DesktopJSONbyteidentical.
+Reviewer /root/review_other_ketones reviewing12repo+1externalfrozenfiles,manifest
+ docs/checks/other-ketones-lesson-reviewed-target-20261026.json.
+Localonly,no commit/push/publication. Professorreportdeferred.
+
+### Other ketones theory — final independent review complete
+
+Reviewer /root/review_other_ketones ROLE_ID=NAMELECULE_REVIEWER_V1_20261023,
+reused independentcontext without Developerhistory, no actionablefindings.
+12repo+1DesktopJSON hashes matched; manifestSHA256
+ d086ed2b1747e7424cfebf0b19917b0ae51eab5838888bd8f857774e816b8ad3.
+Reviewerreadfullsequence/scientificcontent/mols andindependentlyran staticcheck
+withoutwrites:28steps7eligible1207protectedPASS.11oldlessons/core/viewer/data/assets
+andoldketonesubsectionunchanged. Desktopidentity/AST/diffcheckPASS.
+BrowserresultsremainDeveloperevidence;3knownJSmolnullerrors/rootunisolateddisclosed.
+No fulloldlesson/device/resize/PNGexportclaims. Finaltargetunchangedafterreview.
+No additionalcorechangeforthislesson;previoussessioncoreextensionsstilllocal.
+No commit/push/publication. Professorreport remains deferred.
+
+## 2026-10-26 — Horizontal skeletal other ketones, review pending
+
+Approved3rigidMOL2Drotations/data51+2MOLfiles/HTMLcache;4other skeletons already
+optimal unchanged. No core/viewer/other2D/3D/scenario change.7geometrychecks,
+126record/otherMOLpreservation,754name/chaincases,1216protectedfiles PASS.
+Firefox17skeletal/chain/narrowcases/names/numbering/nooverlapclipping PASS0JSerrors.
+3screenshotsinspected. Reviewer /root/review_other_ketones reviewing11frozenfiles
+manifestdocs/checks/horizontal-ketones-reviewed-target-20261026.json.
+No commit/push/publication;professorreportdeferred.
+
+### Horizontal skeletons — final independent review complete
+
+Reviewer /root/review_other_ketones ROLE_ID=NAMELECULE_REVIEWER_V1_20261023,
+reusedindependentcontext, no actionablefindings.11hashesverified;manifestSHA256
+ ea4304f48ab2353f125840abe1cfd0fe1047fd5fb4fa94dbf0d24d829954d88e.
+IndependentQC PASS7geometries/replay/idempotence/126records/754namechaincases/
+1216protectedfiles/atom-bond-stereo-preservation/AST/whitespace. Unrestricted
+orientationcandidatecheckconfirmedminimumspanand4unchangedoptimalcases.
+Browser17cases0JSerrors remainDeveloperevidence. Finaltargetsunchangedafterreview.
+No additionalcorechange;no commit/push/publication. Professorreportdeferred.
+
+## 2026-10-26 — Revised visual alignment of other ketone skeletons
+
+User screenshot showedpreviousmin-heightresultvisuallyskewed. Approvedreplacement
+criterionverticalC=O/standarddrawingaxes,rigidrotationonly.5skeletalMOLsrotated,
+2alreadyalignedunchanged;data51+4sourceMOLs+HTMLdatacache/newtools/docs/evidence.
+No core/viewer/other2D/3D/scenariochanges.10carbonylsverticalwithin.02deg;
+6drawings±30axes,legacyChemDrawpentyn4one2inherited15axes/internalanglepreserved.
+QC7geometries/126records/754names/1222protectedfilesPASS;browser19cases0JSerrors.
+3screenshotsinspected.13frozentargetsunderReviewer /root/review_other_ketones,
+manifestdocs/checks/canonical-ketones-reviewed-target-20261026.json.
+No commit/push/publication;professorreportdeferred.
+
+### Canonical skeletal alignment — final independent review complete
+
+Reviewer /root/review_other_ketones ROLE_ID=NAMELECULE_REVIEWER_V1_20261023,
+reusedindependentcontext;no actionablefindings.13hashesmatched;manifestSHA256
+ 68808339c739548663f2daeac784aaafc12b89f7cee3b0f19a71a9c3b66fe330.
+IndependentQC7geometries/replay/idempotence/126records/754names/1222protectedfiles
+PASS;direct10carbonylangles<.02deg,6drawings±30andlegacyinternalanglespreserved.
+Reviewerinspectedcomplaintmoleculescreenshotandconfirmedrevisedvisualcriterion.
+Browser19cases0JSerrorsremainDeveloperevidence;noindependentbrowser/export/resize/
+lessontraversal. Final13targetsunchangedafterreview. No additionalcorechange,
+no commit/push/publication. Professorreportdeferred.

@@ -4115,7 +4115,10 @@ function fAlcoholOHPositionText() {
 function fSequentialKetoneNumberingTarget() {
   return ['pentanone_3', 'dimethyl_2_4_pentanone_3',
     'trimethyl_3_4_4_pentanone_2',
-    'diethyl_4_5_dimethyl_2_6_heptanone_3'].includes(selectedMol);
+    'diethyl_4_5_dimethyl_2_6_heptanone_3',
+    'penten_1_yn_4_one_3', 'dimethyl_4_5_hexen_5_yn_1_one_3',
+    'methyl_6_hepten_3_dione_2_5', 'ethyl_3_methyl_4_octen_3_yn_5_dione_2_7',
+    'isopropyl_4_dimethyl_3_6_octen_3_yn_7_dione_2_5'].includes(selectedMol);
 }
 function fShowAnalysisNumbering(time, overrideAtoms, overrideAtoms3D) {
   if (fSequentialKetoneNumberingTarget() && !Array.isArray(overrideAtoms)) {
@@ -4537,6 +4540,17 @@ function fExplainNameComp() {
     case "compEndNumber":
       nStyle = "";
       myClass = "";
+      if (functionalGroupsList.length === 1 && functionalGroupsList[0] === 'ketone' &&
+          fIsAcyclicKetoneGraph(atomConnectivityList, allAtomsTypeList, bondList) &&
+          !fIsAcyclicSaturatedMonoketoneGraph(atomConnectivityList, allAtomsTypeList, bondList) &&
+          nameComponentsList[8].length === 0) {
+        myText = ' Δηλώνει ' + (functionalGroupObj.ketone.O.length > 1 ? 'τις θέσεις των καρβονυλομάδων' : 'τη θέση της καρβονυλομάδας') + ' (>C=O).';
+        ruleTableHighlight = 'r3-ketones';
+        fHighlightFG(); fHighlightFG3D();
+        numberingFlag = true; fShowAnalysisNumbering(0);
+        $('#ruleTheoryContainer').show();
+        break;
+      }
       if (fAlcoholOHNameComponent() === 'compEndNumber' || nameComponentsList[8].length === 0) {
         fHighlightFG();
         fHighlightFG3D();
@@ -4611,8 +4625,12 @@ function fExplainNameComp() {
         if (_seriesKey === "aldehyde") ruleTableHighlight = "r3-aldehydes";
         else if (_seriesKey === "ketone") ruleTableHighlight = "r3-ketones";
       }
-      numberingFlag = fAlcoholOHNameComponent() === 'compSuffix';
-      if (numberingFlag) {
+      const ketoneSuffixLocants = functionalGroupsList.length === 1 && functionalGroupsList[0] === 'ketone' &&
+        fIsAcyclicKetoneGraph(atomConnectivityList, allAtomsTypeList, bondList) &&
+        multiBondsObj.CCd.length > 0 && multiBondsObj.CCt.length > 0;
+      numberingFlag = fAlcoholOHNameComponent() === 'compSuffix' || ketoneSuffixLocants;
+      if (ketoneSuffixLocants) myText += ' Δηλώνει ' + (functionalGroupObj.ketone.O.length > 1 ? 'τις θέσεις των καρβονυλομάδων' : 'τη θέση της καρβονυλομάδας') + ' (>C=O).';
+      if (fAlcoholOHNameComponent() === 'compSuffix') {
         myText += fAlcoholOHPositionText();
       }
       if (molTaxonomy != "Υδρογονάνθρακες") {

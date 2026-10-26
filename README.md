@@ -4,6 +4,13 @@ A Greek-first interactive learning platform for organic nomenclature, built arou
 
 Desinged and developed by Nickolas Charistos
 
+**Current source snapshot — 2026-10-26:**126molecules,12active theory lessons,
+283steps. The [consolidated professor update](docs/UPDATE-20261025-26.html)
+covers work from the25October MOL-only double-bond/function removal through
+v51 integration,28molecule additions,five new lessons and the final skeletal
+alignment. Earlier dated local-only/release notes below are historical snapshots;
+see `docs/SESSION-NOTES.md` for actual save/publication verification.
+
 **Saved checkpoint — 2026-10-26:** runtime commit
 `74e381c7decc839b05719400ffdeab59303917b6` is saved on `origin/thesis-work`
 and verified on the personal GitHub Pages site, with121molecules and11lessons
@@ -11,6 +18,25 @@ and verified on the personal GitHub Pages site, with121molecules and11lessons
 The dated local-only statements below describe implementation stages before
 this save. See `docs/SESSION-NOTES.md` for current publication and backup status.
 The consolidated professor report is deferred until after the next work period.
+
+**Additional local lesson — 2026-10-26:** «Άλλες κετόνες»,28progressive steps,
+all7existing eligible molecules, no quiz/isomerism; the dual ketone card now has
+two active lessons. Local total126molecules/12lessons/283steps. Prior11scenarios,
+core51 and molecule files unchanged by this lesson. Not yet published.
+See [lesson checks](docs/OTHER-KETONES-SCENARIO-20261026.md).
+
+**Additional local molecule — 2026-10-26:**
+4-ισοπροπυλο-3,6-διμεθυλο-3-οκτεν-7-ιν-2,5-διόνη (C13H18O2) brings the local
+library to126molecules. Existing core51 names it without changes. Three2DMOLs
+and an explicit-H RDKit3D conformer follow the checked ketone conventions.
+See [single ketone checks](docs/FIFTH-KETONE-20261026.md). Local, not published.
+
+**Local addition — 2026-10-26:** four other ketones bring the local library to
+125 molecules. Bounded acyclic mono-/diketone naming preserves distinct C=C,
+C≡C and carbonyl locants and existing 2D/3D conventions. Two 3D sources are
+PubChem; two are documented RDKit conformers. Previous molecule records and
+all eleven scenarios remain unchanged. This addition is not yet published.
+See [other ketone checks](docs/OTHER-KETONES-20261026.md).
 
 **Current baseline:** local v51, integrated from professor upstream
 `6e29bd5c89872665ec9cd45f9f80fd2d9bd91d6e` on 2026-10-26.

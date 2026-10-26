@@ -81,7 +81,8 @@ function fScenarioShowComponentRule(mode) {
     "Ονοματολογία Κορεσμένων Μονοαιθέρων",
     "Κορεσμένες μονοσθενείς αλδεΰδες",
     "Άλλες αλδεΰδες",
-    "Κορεσμένες μονοσθενείς κετόνες"
+    "Κορεσμένες μονοσθενείς κετόνες",
+    "Άλλες κετόνες"
   ].indexOf(lesson.title) !== -1 &&
     /^(compCarbonsCount|compBondType|compSuffix|compSecondSub1|compSecondSub2|compNumber1|compNumber2|compBondType2|compBondPos|compEndNumber)$/.test(mode || "");
 }

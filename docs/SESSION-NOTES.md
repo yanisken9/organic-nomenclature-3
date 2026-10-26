@@ -1,3 +1,451 @@
+# Current resume point — 2026-10-26 — final assembly review clean; saving and publishing
+
+Independent Reviewer /root/review_other_ketones,
+ROLE_ID=NAMELECULE_REVIEWER_V1_20261023, completed final assembly/report review
+without actionable P0/P1/P2/P3 findings. All 90 repository and 15 Desktop targets
+matched frozen hashes before/after; manifest SHA256
+0bfb51fa79cbe35fc4d4c58fb06502e9c657e61d26b819718ac5a54fc90c134f.
+Reviewer independently confirmed inventories, report claims and limitations,
+references, tracked dependencies, Desktop copies/shortcuts, immediate-save runtime
+baseline and diff whitespace. Browser results remain supplied Developer evidence;
+public deployment not yet checked. Review result preserved in final backup evidence.
+
+User authorized full save/push/personal publication. Commit target: frozen content
+plus these journals on thesis-work; origin/main untouched. Next: public byte match,
+public browser smoke, metadata record and verified final backups. No additional
+core edits in this save; earlier same-session core51 changes included in payload.
+
+# Current resume point — 2026-10-26 — final save/report prepared, independent assembly review running
+
+User authorized saving all work, publishing the updated personal Namelecule site,
+and preparing two professor links in Desktop «αρχεία  json»: cumulative update
+from evening 25 October MOL-only function removal, and current welcome page.
+Prepared docs/UPDATE-20261025-26.html and matching Markdown, README current
+snapshot, refreshed all 12 Desktop scenario JSON copies, two .webloc shortcuts
+and a labeled TXT containing both URLs. Current inventory: 126 molecules,
+12 lessons / 283 steps / 9 cards; 28 additions since the 98-molecule baseline,
+with 21 PubChem and 7 documented RDKit 3D sources.
+
+No additional core/runtime code changes during this save. Core51 was changed
+in earlier approved work this session (ethers/aldehydes/ketones); baseline SHA
+for this final save remains 096d617853646de0dfd67bcbde3e32252aebcb98e7525b05e6f7e71ccb48a5fc.
+Current source is not yet committed/published: HEAD and origin/thesis-work were
+0214183a16ce09eb77d9936ae91a5d18ee69258d; origin/main remains 9c5259e3.
+Professor upstream was previously checked/synchronized at 6e29bd5c (v51);
+no additional professor upstream check is claimed in this save segment.
+
+Developer checks: diff whitespace, 17 Python ASTs, 4 JS syntax checks, 5 HTML
+entry/report dependency sets (20 local assets), 12 byte-identical Desktop JSONs.
+Limited final local Firefox smoke passed report (28 molecule rows / 12 lessons),
+390px report, welcome/image decoding, library, application126, new lesson
+start/Next/final28, final3D33 atoms and Exit; zero JS errors in this limited run.
+Evidence /tmp/namelecule-final-save-local.json. The full earlier 28-step lesson
+run had 3 known JSmol viewer-null events, explicitly retained as a limitation.
+
+Independent Reviewer /root/review_other_ketones now inspecting the frozen final
+assembly/report, manifest /tmp/namelecule-final-save-reviewed-target-20261026.json
+(90 repository content targets + 15 external files; journals excluded), base0214183.
+Source targets remain frozen. Next: resolve any findings, commit/push thesis-work,
+verify public files and browser navigation, record actual publication evidence,
+create verified final workspace/Git-history/evidence backups, then return links.
+No messages sent to the professor.
+
+# Current resume point — 2026-10-26 — canonical other-ketone skeleton alignment complete, review clean
+
+Userapprovedreplacementofprior min-parent-height criterion aftervisuallyskewed
+example. Complete5rigidrotations/2alreadyalignedunchanged:verticalC=Oandfamiliar
+zigzag. Data51xyonly5skeletalMOLs+4sourceMOLs/HTMLdatacache. Report
+ docs/CANONICAL-OTHER-KETONES-20261026.md supersedesoldvisualcriterion. Oldreports
+retainedashistory. No core/viewer/other2D/3D/scenario/recordchanges.
+All10carbonylswithin.02degvertical;6drawings±30parentaxes;legacyChemDraw
+pentyn4one2retainsoriginal15axes/internal135angletohonorpreserveangles.
+
+IndependentReviewer /root/review_other_ketones ROLE_ID=NAMELECULE_REVIEWER_V1_20261023,
+reusedindependentcontextwithoutDeveloperhistory;noP0/P1/P2/P3findings.
+13frozenhashesmatchedbefore/after;manifestSHA256
+ 68808339c739548663f2daeac784aaafc12b89f7cee3b0f19a71a9c3b66fe330
+in docs/checks/canonical-ketones-reviewed-target-20261026.json.
+ReviewerindependentlyranQCinmemorywithoutwrites(-B):7geometries/exactreplay/
+idempotence/atom-bondorder/elements/z/stereo/distance-anglelimits/126records/
+754namechaincases/1222protectedfilesPASS. Directall10carbonylanglesconfirmed<.02deg,
+6drawingaxes±30andlegacyinternalanglesunchanged. Complaintmoleculescreenshot
+independentlyinspectedandmeetsnewcriterion. AST/diffcheckPASS.
+Browser19cases7*2chainmodes+5narrow390/names/numbering/2D3Dsignatures/nooverlap
+orclipping/0JSerrorsremainDeveloperevidence,notindependentlyexecuted. Noexport/
+resize/lessontraversalclaim. Final13hashesrecheckedbyDeveloperafterreview.
+
+No commit/push/publication. No additionalcorechangeforthisfix;earliercore51
+same-sessionextensionremainslocal. Professorreportdeferredfrom2026-10-25
+MOL-onlyfunctionremoval. Next:userrefreshlocalappandreinspectskeletalexample;
+thennewtask/saveinstruction. No requiredworkremainsforthisapprovedchange.
+
+# Current resume point — 2026-10-26 — canonical skeletal alignment implemented, review running
+
+User approved replacing min-parent-height criterion after dimethyl screenshot
+lookedskewed. Applied5rigidrotations toverticalcarbonyls;2alreadyalignedunchanged.
+Data51xy5skeletalMOLs,4matching2DMOLfiles/HTMLdatacache. Newalign/QC/browser
+scripts and docs/CANONICAL-OTHER-KETONES-20261026.md explicitly supersede old
+visualcriterion. No core/viewer/other2D/3D/scenario/recordchanges.
+
+All10C=Obonds within.02degvertical;6parentdrawingsaxes±30deg. LegacyChemDraw
+pentyn4one2 includes15degaxes/internal135deg;preservedratherthanreshaped,
+inaccordancewithapprovedpreserveangles. FirstQCassumedall30,correctedtest
+forthelegacygeometrywithoutmolecule/internalanglechange.
+DeveloperQC7geometries/exactreplay/idempotence/atomsbondsstereoorder/pairdist<.0002/
+internalangles<.03/126records/allotherMOLs/754namechaincases/1222protectedfilesPASS.
+Firefox19cases7*2chainmodes+5narrow390/names/numbering/2D3Dsignatures/nooverlap
+orclippingPASS0JSerrors.3screenshots(complaintmolecule+2largest)inspected.
+ThreePythonAST/dataJSsyntax/diffcheckPASS. Nofullscenario/device/export/resizeclaim.
+
+IndependentReviewer /root/review_other_ketones reviewing13frozenfilehashes+manifest
+ docs/checks/canonical-ketones-reviewed-target-20261026.json; immediatebaseline
+/tmp/namelecule-before-canonical-ketones-20261026,Gitbase0214183. Reusedindependent
+contextwithoutDeveloperhistory;targetsnoteditedpendingreview,journalsexcluded.
+No commit/push/publication. No additionalcorechange;earliersame-sessioncore51
+extensionremainslocal. Professorreportdeferredfrom2026-10-25functionremoval.
+Next:respondtoreviewerthenfinaluserrefreshinstructions.
+
+# Current resume point — 2026-10-26 — visual alignment concern, awaiting revised-plan approval
+
+User screenshot shows dimethyl4,5hexen5yn1one3 visually skewed. Confirmed current
+branch/C=O directions83.414/-96.586deg; a+6.586deg rigidrotation restores vertical
+branches/C=O and canonicalzigzag bonds150/-150deg. Previousminimumparentheight
+criterion was mathematicallyverified but didnot satisfy desired visualalignment.
+No newcode/coordinatechanges. Proposed replacingpreviouscriterion for all7other
+ketones with canonicaldrawingaxes:carbonyls/parallelbranchesvertical, parentzigzag
+bondsstandard30deg,spstraight,rigidrotationonly. Fivewouldrotatefromcurrentstate:
+pentyn4one2 -4.205deg; penten1yn4one3 +10.898deg; dimethyl4,5hexen5yn1one3
++6.586deg; ethyl3methyl4octen3yn5dione2_7 approx-10.895deg; isopropyl4dimethyl3,6
+octen3yn7dione2_5 approx-4.714deg. Penten1one3/methyl6hepten3dione2,5 already
+verticalcarbonyls,unchanged. Tiny0.006degdifferencesareMOLrounding.
+Waitapprovalforrevised5skeletalcoordinatechanges/toolcriterion andscopedchecks/
+independentreview;preserveother2D/3D/core/scenarios. Priorresultnotclaimedvisually
+satisfactory. Professorreportdeferred;no commit/push/publication.
+
+# Current resume point — 2026-10-26 — horizontal other-ketone skeletons complete, review clean
+
+Approved3skeletalrigidrotationscomplete:pentyn4one2+4.201deg,penten1yn4one3+5.208deg,
+ethyl3methyl4octen3yn5dione2_7+6.178deg. Minimumparentverticalspan/leastrotationtie;
+remaining4alreadyoptimalandunchanged. Data51only3skeletalx/y,2sourceMOLs,
+HTMLdatacache,rotation/QC/browsertools/docs. No additionalcore/viewer/other2D/
+3D/scenariochanges. Priorlocalworkretained;126molecules12lessons283steps.
+
+IndependentReviewer /root/review_other_ketones ROLE_ID=NAMELECULE_REVIEWER_V1_20261023,
+reusedindependentcontextwithoutDeveloperhistory;noP0/P1/P2/P3findings.
+11frozenhashesmatchedbefore/after;manifestSHA256
+ ea4304f48ab2353f125840abe1cfd0fe1047fd5fb4fa94dbf0d24d829954d88e
+in docs/checks/horizontal-ketones-reviewed-target-20261026.json.
+ReviewerindependentlyranQCinmemorywithoutwrites(-B):7geometries/exactreplay/
+idempotence/atoms,bonds,stereoflags/distance<.0002/angles<.03/126records/
+754namingchaincases/1216protectedfilesPASS. Unrestrictedparent-paircandidatecheck
+independentlyconfirmedminimumverticalspananglesand4unchangedoptimalcases.
+AST/diffcheckPASS. Browser17cases0JSerrors/screenshotappearance remainDeveloper
+suppliedevidence,notindependentlyexecuted. No all-device/export/resizeclaim.
+Final11hashesrecheckedbyDeveloperafterreview. Report
+ docs/HORIZONTAL-OTHER-KETONES-20261026.md;checks/evidencehorizontal-ketones*.
+
+No commit/push/publication. No furtherrequiredworkforthischange. Next:userrefresh
+localapplicationandswitchskeletal,thennewtask/saveinstruction. Coreunchangedin
+thisrotation;earliercore51extensionforsame-sessionketonesremainslocal.
+Professorreportstilldeferredfrom2026-10-25MOL-onlyfunctionremoval.
+
+# Current resume point — 2026-10-26 — horizontal other-ketone skeletons implemented, review running
+
+Approvedrigidrotations appliedto3skeletal2D only:pentyn4one2+4.201deg,
+penten1yn4one3+5.208deg,ethyl3methyl4octen3yn5dione2_7+6.178deg.
+Criterionminimumparentverticalspan/leastrotationtie;remaining4alreadyoptimal
+unchanged. Data51coordinatesonly/2matchingnew_moleculesMOLs/HTMLdatacache.
+No core/viewer/other2D/3D/scenariochanges. PreservedMOLlineformat/atomandbondorder/
+element/z/stereoflags. Rotationtool generatesfrombaselineandisidempotentafter.
+Reportdocs/HORIZONTAL-OTHER-KETONES-20261026.md,evidence/checks horizontal-ketones*.
+
+DeveloperQC7geometries/maxpairdistancechange<.0002/angles<.03degree/exactreplay/
+idempotence;126recordsandallotherembeddedMOLsame;754actualJSCname/chaincomparisons
+unchanged;1216protectedfilesincluding12scenarios/core/viewer/3D PASS.
+Firefox17cases7skeletal*2chainmodes+3narrow390/names/numbering/2D3Dsignatures/
+nooverlaporclipping PASS0JSerrors.3screenshotsinspected. Initialreusedtest
+assumednoSVGrect[rx],foundoneinunchangedoldmolecule;removedirrelevantassumption,
+keptchemical-labelandactualgeometrychecks. Noappfixforthattestassumption.
+ThreePythonAST/dataJSsyntax/diffcheckPASS. Nofullscenario/device/exportchecks.
+
+Reviewer /root/review_other_ketones (reusedindependentcontextnoDeveloperhistory)
+reviewing11frozenfilehashes+manifestdocs/checks/horizontal-ketones-reviewed-target-20261026.json.
+Immediatebaseline/tmp/namelecule-before-horizontal-ketones-20261026 afterreviewedlesson,
+Gitbase0214183. Journalsexcluded;waitfindingsbeforeanytargetedit.
+No commit/push/publication. Coreunchangedforthisrotation;priorcoreextensionstilllocal.
+Professorreportremainsdeferredfrom2026-10-25functionremoval.
+
+# Current resume point — 2026-10-26 — horizontal other-ketone skeletons, planning only
+
+User requests most-horizontal basic orientation of all7otherketone skeletons.
+Read-only coordinate analysis of current embeddedMOL and numbered mainChain_Skeletal.
+Finds4already at minimum verticalspan under rigidrotation. Three can improve,
+choosing minimumparentverticalspan and smallest rotation for tied solutions:
+pentyn_4_one_2 +4.201deg, height0.6406->0.4637;
+penten_1_yn_4_one_3 +5.208deg, height0.8431->0.7660;
+ethyl_3_methyl_4_octen_3_yn_5_dione_2_7 +6.178deg,height1.4992->1.1489.
+Remainingpenten_1_one_3/dimethyl_4_5_hexen_5_yn_1_one_3/
+methyl_6_hepten_3_dione_2_5/isopropyl_4_dimethyl_3_6_octen_3_yn_7_dione_2_5
+alreadyoptimalwithinthisrigidrotationcriterion. Nochangeimplemented.
+Planrotateallatomcoordinates togetherforthose3skeletalMOLonly;preserve
+bondlengths/angles/sp/connectivity/stereoflags/atomordering. Updatecurrentdata51
+embeddings,2existingnew_moleculesSkeletalMOLsources (oldpentynembeddedonly),
+HTMLcache and reproduciblerotation/checks/docs; no core/viewer/condensed/expanded/
+3D/scenarioschanges. Testall7skeletal/names/numbering/labelclearanceandotherdata
+protection;independentReviewer. Awaituserplanapprovalbeforeedits.
+Professorreport remainsdeferred. No commit/push/publication.
+
+# Current resume point — 2026-10-26 — other ketone theory complete and independently reviewed
+
+Approved28-step Άλλες κετόνες complete locally. Usesall7existingeligiblemols;
+progressive/noquiz/noisomerism,manualclosedrules/alkylrefs,optional3Dlast.
+Newscenarios/other-ketones-nomenclature.scenario.json,activeexistingOtherketones
+card(2lessons),scenario51titleallowlistonly,HTML/welcomecache/README.
+Local126mols12lessons283steps. No core/viewer/data/MOL/old11scenariochanges.
+Desktopαρχεία  json/Άλλες_κετόνες-Ονοματολογία.scenario.json byteidentical,
+SHA25657799506d9d28348a12c6e61f1d4eef044d3ebca9e0357c8d1b6c760070a6bf9.
+
+IndependentReviewer /root/review_other_ketones ROLE_ID=NAMELECULE_REVIEWER_V1_20261023,
+reusedindependentcontextwithoutDeveloperhistory, noP0/P1/P2/P3findings.
+All12repo+1externalhashesmatchedbefore/after. ManifestSHA256
+ d086ed2b1747e7424cfebf0b19917b0ae51eab5838888bd8f857774e816b8ad3
+in docs/checks/other-ketones-lesson-reviewed-target-20261026.json.
+Reviewerreadcompleteauthoredsequence/JSON/integration,runtimeand7referencedmols;
+scientificnumbering/en-yn/branchcontent/Greekconventioncoherent;progressivedisclosure/
+focusedcomponents/closedrules/alkylrefs/template/optional3Dchecked.
+Independentstaticexecutioninmemorywithoutwrite(-B) PASS28steps7eligible1207protected;
+11oldlessons/core/viewer/data/assets/oldketonesubsectionunchanged;AST/diffcheckPASS.
+Desktopbyteidentityindependentlyconfirmed. FinalhashesrecheckedbyDeveloperafterreview.
+
+DeveloperFirefoxall28stepsnaturalNext,actualnames/hidden/closedrulesopenclose/
+numbering/namefit/noSVGclipping,7menuorder,Prev/exportvalidate/Exit/library390/
+final3D33atomsmappedchainPASS.3knownJSmolthis.viewernullerrorsremain,nootherJSerrors;
+rootnotisolated/notfixed. Reviewerinspectedbrowser evidence butdidnotrerunbrowser.
+FinalnamefitsafterexistingrAF;noviewerchange. Screenshots26/28/libraryinspected.
+Noalloldlessontraversal/all-device/resize/PNGexportclaim. Details
+ docs/OTHER-KETONES-SCENARIO-20261026.md and docs/checks/*other-ketones-lesson*.
+
+No commit/push/publication. No additionalcorechangeforthislesson;earliercore51
+extensionfor4ketonesstilllocal. Professorreportstilldeferredfrom2026-10-25
+MOL-onlydoublebondfunctionremoval. Next:userinspectlocalOtherketoneslesson,
+thennewtask/saveinstruction. No requiredimplementationworkremains.
+
+# Current resume point — 2026-10-26 — other ketone theory implemented, review running
+
+Approved28step progressive lesson Άλλες κετόνες uses all7actualeligiblemols.
+Newscenarios/other-ketones-nomenclature.scenario.json, existingdualcardactivated,
+scenario51titleallowlistonly,HTML/welcomecache/README.12lessons283steps126mols.
+No core/viewer/data/MOL/SDF orprevious11lessonchanges. Existingmonoketonesubsection
+byteidentical. Author/static/browser scripts+docs/OTHER-KETONES-SCENARIO-20261026.md.
+Manualclosedrules/alkylrefs,hiddenpartsprogressive,noquiz/isomerism,3Doptionalstep28.
+Desktopcopyαρχεία  json/Άλλες_κετόνες-Ονοματολογία.scenario.json byteidentical,
+SHA25657799506d9d28348a12c6e61f1d4eef044d3ebca9e0357c8d1b6c760070a6bf9.
+
+DeveloperactualJSCinventory126findsexact7,28sequentialsteps/focusedslotsexistvisible,
+1207protectedfilesPASS. Firefox28naturalNextsteps/names/hidden/ruleopenclose/
+numbering/namefits/SVGclipping/7menuorder/Prev/exportvalidateroundtrip/Exit/
+library390/final3D33atomsmappedchainPASS.3knownJSmolthis.viewernullerrors remain,
+chemappsstacks, nootherJSerrors. Rootnotisolated/notfixed. Initialscreenshot
+beforeexistingrAFnamefitshowedtransientoverflow;testnowwaits/assertsnamefitallsteps,
+finalscreenshotfitswithoutviewerchange. ThreePythonAST/scenarioJSsyntaxPASS.
+Screenshotsstep26/final28/library390inspected. Nofulloldlessons/device/exportPNGchecks.
+
+IndependentReviewer /root/review_other_ketones reviewing12repotargets+1DesktopJSON,
+manifestdocs/checks/other-ketones-lesson-reviewed-target-20261026.json anditself.
+Immediatebaseline/tmp/namelecule-before-other-ketones-lesson-20261026 afterfifthketone,
+base0214183. ReusedindependentcontextwithoutDeveloperhistory. Targets frozen;
+journals excluded. Awaitfindings/correctandrerereviewifneeded.
+No commit/push/publication. Coreunchangedforthislesson;earliercore51extensionin
+samesessionremainslocal. Professorreportdeferredfrom2026-10-25functionremoval.
+
+# Current resume point — 2026-10-26 — other ketone theory plan, awaiting approval
+
+User requests theory scenario for other ketones, existing progressive-disclosure
+pattern (no quiz/isomerism). Read actual saturated-ketone/other-alcohol/other-
+aldehyde lesson structures and card/scenario-rule allowlist. Current actual JSC
+inventory126molecules has14ketones:7saturatedmono and7others. Eligible otherkeys:
+penten_1_one_3,pentyn_4_one_2,penten_1_yn_4_one_3,
+dimethyl_4_5_hexen_5_yn_1_one_3,methyl_6_hepten_3_dione_2_5,
+ethyl_3_methyl_4_octen_3_yn_5_dione_2_7,
+isopropyl_4_dimethyl_3_6_octen_3_yn_7_dione_2_5. Actualnames/componentsconfirmed.
+Proposed28steps:1-4enone5C;5-7ynone5C+2Dcomparison;8-10enynone5C;
+11-14branchedmono8C;15-18branchedenedione8C;19-22enynedione11C;
+23-26isopropyl/dimethylenynedione13C;27synthesis2D;28optional3D.
+Rulesmanualclosed,hiddennamepartsgraduallyrevealed,horizontalnumberedparents,
+C=OnotCCdouble/carbonylpriority/en-before-yn/lowestCClocants+doubletie/alkyl-
+multipliers+alphabeticalorder. Coverall7existingeligiblemols,nonewstructures.
+ProposedscenarioJSON+activateexistingOtherketonescard(2lessons),scenario51title
+allowlist/cachelinks/README/docs/checks,DesktopJSONcopyunderexistingconvention.
+No core/data/MOL/otherlessonchangesexpected. Waitapprovalbeforecode. MainDeveloper,
+independentfinalReviewerrequired;noextraspecialistneededfornow.
+No commit/push/publication;consolidatedprofessorreportremainsdeferred.
+
+# Current resume point — 2026-10-26 — fifth other ketone complete, independent review clean
+
+Approved4-ισοπροπυλο-3,6-διμεθυλο-3-οκτεν-7-ιν-2,5-διόνη C13H18O2 added
+locally.126molecules. Three2DMOL/full18H andRDKit3D/provenance/runtimecopy,
+data51/cache/README;vieweronlynewnumberingwhitelistkey. No additionalcore51change.
+All125previousrecords/embeddedMOL/scenarios unchanged. Report
+ docs/FIFTH-KETONE-20261026.md; evidence/specs docs/checks/fifth-ketone-*.
+
+IndependentReviewer /root/review_other_ketones ROLE_ID=NAMELECULE_REVIEWER_V1_20261023,
+reusedprecedingindependentcontextwithoutDeveloperhistory;noP0/P1/P2/P3findings.
+20hashesverifiedbefore/after;manifestSHA256
+abeba42138fa037ff5550d57af4245e5d690045b84daf1e2e1c2fd697615b94a.
+Reviewerindependentlyranasset/namingwrapperinmemorywithoutwrites(-B),passed
+3MOL1SDF/18H/1191protectedincludingcore/125oldrecords/18new748oldcases11guards;
+mappedidentities/AST/diffcheckalsoPASS. Browser8desktop3narrow2numbering3highlight
+PASS0JSerrors remainsDeveloper evidence; noindependentbrowser/fullscenario/export/
+resize claim. Generatorbaselinetextnotcopied (hashretained),optional--specscurrent
+implementationinspected;no functionaldefectfound. Final20targethashescheckedby
+Developerafterreview. No further changes required.
+
+No commit/push/publication. Prior4otherketones/coreextension stilllocal.
+Core51 changedearlierthissession for4ketones,butnotforthisfifthaddition.
+Professorreport remainsdeferred,starting2026-10-25MOL-onlyfunctionremoval.
+Next:userinspectlocalketonelist,thennewapprovedtask/saveinstruction.
+
+# Current resume point — 2026-10-26 — fifth other ketone implemented, review running
+
+User approved4-isopropyl-3,6-dimethyl-3-octen-7-yn-2,5-dione C13H18O2.
+Addedone record/3MOL/3DSDF+provenance/runtimecopy,125->126molecules. Core51
+UNCHANGED from precedingreviewed4ketones; actualname alreadycorrect.
+Vieweronlyaddsnewkeytoexistingcumulative400mswhitelist;data51/cache/README.
+Generator accepts optional--specs,olddefaultunchanged;singlecheckwrapperreuses
+existingtestswithimmediatebaseline/125oldcount/isolatedresults. Specs/report
+ docs/FIFTH-KETONE-20261026.md. PubChem3DHTTP501,documentedRDKit2025.09.2
+ETKDGv3/MMFF94s seed20261026/24conformers; no experimental/isomerassignmentclaim.
+Final2D isopropylstem2.34 (initial3.51shortened),Hs.78unrotated;clearancelayoutPASS.
+
+Developerfinalchecks3MOL1SDF/graphs/valence/C13H18O2/18explicitH/2Dclearance/
+spangle/3Dlengths/bothcarbonylplanarity/provenance/mapping PASS.
+1191protectedfilesincludingcore51 and125oldrecords+embeddedMOLunchanged.
+18newactualJSCcases/748oldregressions/11guardboundaries PASS.
+Firefoxfinal8desktop3narrow390px2cumulative2D/3D3actualhighlightcasesPASS0JSerrors;
+finalExpanded screenshotinspected. PythonAST/changedJSsyntax/whitespacePASS.
+Noalllessons/export/everydevicechecksclaimed. No commit/push/publication.
+
+IndependentReviewer /root/review_other_ketones (existingindependentcontext,
+noDeveloperhistory) reviewing20frozenhashes andmanifest
+ docs/checks/fifth-ketone-reviewed-target-20261026.json; immediatebaseline
+/tmp/namelecule-before-fifth-ketone-20261026, Gitbase0214183. Journalsexcluded.
+Awaitfindings;do noteditreviewtargetuntilreply. Professorreportstilldeferred.
+
+# Current resume point — 2026-10-26 — fifth other ketone investigated, awaiting plan approval
+
+User requests4-isopropyl-3,6-dimethyl-3-octen-7-yn-2,5-dione.
+Read-only RDKit SMILES CC(=O)C(C)=C(C(C)C)C(=O)C(C)C#C validates C13H18O2.
+Actual current core51 graph probe gives exact requested Greek school name and
+8Cparent; no further core naming change appears necessary. No new assets yet.
+Proposed one record/3MOL/3DSDF+provenance, reuse current generator/checks,
+horizontalparent/fullH/clearance, add key to existing viewer numbering whitelist,
+data/cache, documentation and independent review. Await planapproval beforecode.
+Prior125molecules/coreextension intact; no core changes during this investigation.
+No commit/push/publication. Professor report remains deferred.
+
+# Current resume point — 2026-10-26 — four other ketones complete and independently reviewed
+
+Approved addition complete locally:125molecules,4newotherketones with formulae
+C5H4O,C8H10O,C8H12O2,C11H14O2;12new2DMOL4SDF/provenance,2PubChem2RDKit.
+Core51boundedmono/diketoneparent/branchrouting and distinct C=C/C≡C/carbonyl
+locants;viewer51explanations/highlights/cumulative numbering;data51/cache/README.
+Previous121records/embeddedMOL and11scenarios remain unchanged.
+
+Independent Reviewer /root/review_other_ketones ROLE_ID=NAMELECULE_REVIEWER_V1_20261023,
+freshcontext, noP0/P1/P2/P3findings. All44targethashes matched before/after,
+manifestSHA256 7c9f9204b2102a2eacb6d53062761bf8e9c1877329b6656b0fb1ef4d65ff806a.
+Reviewerindependently executed asset/naming checks in memory without outputwrites:
+12MOL4SDF,1151protectedfiles121oldrecords,72new724oldcases11guards PASS;
+mapped2D/3Delementidentities/PythonAST/whitespace/IUPACnumbering also checked.
+Browser32desktop12narrow8numbering11highlightcases remain Developer evidence,
+allPASS0JSerrors;no allscenario/export/everydevice validation claimed.
+Developer verifiedfinaltargethashes afterreview; no reviewtargetedits since.
+PubChem both atom/bonddefinedstereocount0 confirmed. Details and evidence
+ docs/OTHER-KETONES-20261026.md and docs/checks/*other-ketones*.
+
+Corechange this task:js/mulermoc-nom-core-51.js, approved boundedsupport above,
+reason prior missingbranches/collidinglocants. Local/uncommitted/unpublished.
+No commit/push or publicsiteupdate. Previouslocalcardformula additions retained.
+Professor report explicitly deferred from2026-10-25functionremoval, includeabove
+corechange/checks when later requested. Next: userinspectlocalapplication,
+then nextapprovedtask/save/publishinstruction. No further changes required here.
+
+# Current resume point — 2026-10-26 — four other ketones implemented, independent review running
+
+User approved bounded core51 extension and four other ketones. Added4records,
+12MOLs,4runtimeSDF+sourceSDF/provenance; library121->125. TwoPubChemCID21275073/
+71435313, twoRDKit2025.09.2 ETKDGv3/MMFF94s seed20261026/24conformers after
+HTTP5013Drequests (not proof of absence). Formulae C5H4O/C8H10O/C8H12O2/C11H14O2.
+Core51 routes bounded acyclic C/H/Omono/diketones through existing parent/branch
+logic and separates C-C and carbonyl locants within12slots. Existing saturated
+monoketone predicate retained. Viewer51 adapts carbonyl-position explanation/
+FGhighlight and adds4keys to existing cumulative400msnumbering policy.
+Data51/HTMLcache/README; new specs/generator reuses prior ketone generator.
+No old molecule/scenario changed; prior2libraryformula additions retained.
+
+Developer checks:12MOL/4SDF graphs/formulae/valence/explicitH,2Dclearance/angles/
+no crossing,3Dlengths/sp/eachcarbonylplanarity/provenance/mapping PASS.
+1151protectedfiles and121oldrecords/embeddedMOLunchanged.72newactualJSCcases,
+724oldname/components/signaturecomparisons,11guardboundaries PASS.
+Firefox32desktop+12narrow390px+8cumulative2D/3Dtiming+11actual3Dhighlightcases
+PASS,0JSerrors perexecution. Three screenshots inspected.3JSsyntax/7PythonAST
+PASS. Initial highlight tests needed actualclicks and explicit bond-atoms option;
+fixedtest assumptions, noappchangefor that failure. No255stepfullruntime rerun.
+
+Independent Reviewer /root/review_other_ketones freshcontext reviewing44frozen
+files listed/hash in docs/checks/other-ketones-reviewed-target-20261026.json,
+base0214183a16ce09eb77d9936ae91a5d18ee69258d, immediatebaseline
+/tmp/namelecule-before-other-ketones-20261026. Journals and earliercardchanges
+excludedfromnewtarget; noeditingreviewtargetuntilreply. Main report
+ docs/OTHER-KETONES-20261026.md. Await findings; then corrections/re-reviewifneeded.
+No commit/push/publication. Core51CHANGED locally for above behavior; professor
+report explicitly deferred, include thischange later from2026-10-25functionremoval.
+Upstreamlastchecked/synced6e29bd5 earlier same session; no new remotecheckclaimed.
+
+# Current resume point — 2026-10-26 — four other ketones investigated, awaiting core-scope approval
+
+Requested: 1-penten-4-yn-3-one; 4,5-dimethyl-5-hexen-1-yn-3-one;
+6-methyl-3-hepten-2,5-dione; 3-ethyl-4-methyl-3-octen-5-yn-2,7-dione.
+Valence-sum graph checks give C5H4O, C8H10O, C8H12O2, C11H14O2.
+Read-only actual core51/viewer51 JavaScriptCore graph probes show names:
+1-πεντεν-3-ινόνη; 5-εξεν-3-ινόνη; 3-επτεν-2,5-διόνη;
+3-οκτεν-2,7-ινοδιόνη. Missing branches and colliding alkyne/carbonyl locants.
+Existing saturated-monoketone guard explicitly excludes new scope.
+Consulted primary IUPAC BlueBook P3/P6 for numbering/suffix precedence.
+No new molecules/code changes. Proposed bounded acyclic C/H/O ketone extension,
+4 new records with 3 MOL forms/runtime SDF/provenance, reuse generators/tests,
+regression/protected old data checks and independent final review after approval.
+Previous local card formulas and journals retained, no commits/push/publication.
+Prior RDKit /tmp/namelecule-ethers-venv/bin/python unavailable now; do not claim
+RDKit validation in this investigation. Tool environment must be restored at implementation.
+Core unchanged in this task. Professor report deferred. Next: obtain approval
+for necessary core51 extension, then implement approved plan.
+
+# Current resume point — 2026-10-26 — other ketones card formula added locally
+
+User repeated the previously proposed exact ketone formula change, authorizing it.
+Added CxHy(CO)n under Άλλες κετόνες in design/theory-library.html using existing
+series-formula styling, x/y/n subscripts, no restriction. Prior aldehyde formula
+retained. Exact before/after comparison: only requested line added; diff --check
+PASS; local HTTP8013 returns new formula. Independent fresh-context Reviewer
+/root/review_ketone_formula found no actionable issues; target SHA256
+6b9f627211afbd21fa02e6b5ca0d99e904ee47d9916a7491e586aedf886f6e27.
+No browser visual test for static text. Local only; no commit/push/publication.
+No core changes. Professor report remains deferred from 2026-10-25 function removal.
+Next: user visual confirmation in local library; publish only when authorized.
+
+# Current resume point — 2026-10-26 — other aldehydes card formula added locally
+
+User approved CxHy(CHO)n below Άλλες αλδεΰδες. Added one series-formula
+paragraph with x/y/n subscripts, no restriction, in design/theory-library.html.
+Developer exact baseline comparison confirms only this line added; diff --check PASS.
+Independent Reviewer /root/review_aldehyde_formula, fresh context, no findings;
+reviewed SHA256 cb63a11890792afd64d2bfd2b9ec7a3ab8b00c8872afba5df81fc20c840f2b2b,
+base 0214183a16ce09eb77d9936ae91a5d18ee69258d. Runtime not run for static text.
+Local only, no commit/push/publication. No core changes. Professor report remains
+deferred, starting with 2026-10-25 function removal. Next: user visual confirmation;
+public browser still shows saved previous version until publication authorized.
+
 # Current resume point — 2026-10-26 — full save/publication verified, professor report deferred
 
 Userauthorizedsaveeverythingeverywhere. Runtimecheckpoint
