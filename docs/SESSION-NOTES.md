@@ -1,3 +1,68 @@
+# Current resume point — 2026-10-26 — structured React library saved locally, ready for user inspection
+
+User-approved next React stage complete: normalized library catalog, real React
+card/lesson/formula components, Greek summary search and category filters. Final
+reviewed source saved in local feature commit d6e25caac8bf97fce703e3bc5913042f2aca2098
+on react-library-pilot; previous reviewed pilot is checkpoint e8d9bb406bc8172095a09cc8a46ba330dfb22922.
+Stable thesis-work remains3673c390c1fb1b7cbcc79411a6e1e3720e97f7ab; no push or
+publication. Working tree was clean after feature commit, before this final
+metadata-only record. All19source/build review-target hashes rechecked unchanged.
+This final record is saved separately as metadata on the same React branch.
+
+Preview opened via external-default-browser open command successfully (exit0):
+http://127.0.0.1:8013/react-preview/dist/?v=library-20261026#/library
+OS launch success is not a claim about which user tab is currently visible; actual
+page behavior was tested in the recorded Firefox run. Old welcome remains
+design/welcome-proposal.html and published professor URLs retain the saved release.
+
+Current upstream HEAD/main and changelog rechecked successfully dc029333 (same as
+last local content sync; no new release/port). ChangelogSHA256
+eb54faf3308c29c143d816b76399f1cd6ad373223de8a28f56b3b3253a875c0d.
+Prior image-picker sync belongs to the first checkpoint, not new work in this stage.
+No old app/player/viewer/core/data/MOL/SDF/scenarioJSON source changed here.
+
+Library uses semantic categories/lessons/formula tokens, derived at build from the
+existing HTML/JSON authoring authority; no second manually maintained syllabus.
+Nine cards/twelve links/283steps preserve original titles/descriptions/topics/
+formulas/restrictions/counts/URLs/order. Welcome/shared shell bridge remains.
+Search ignores Greek accents/case/final sigma, matches all terms in category/lesson
+summary fields and combines with category selection. Matching lessons only appear
+inside dual cards, with partial count. Live totals/empty state/clearfocus and native
+labeled controls included. Filter state persists within welcome/library navigation,
+resets on refresh/legacy navigation; no storage/account/progress added.
+Viewer migration remains deferred. No new dependencies or global Node installation.
+
+Independent Reviewer /root/review_other_ketones,
+ROLE_ID=NAMELECULE_REVIEWER_V1_20261023: no actionable P0/P1/P2/P3 findings.
+15source/doc/evidence+4generated files matched frozen hashes before/after; manifest
+docs/checks/react-library-reviewed-target-20261026.json SHA256
+bc486d669e27030a139e865643fb560bc3471f1d8d63ac070f443dd3d5d49562.
+Reviewer independently inspected code/model/state/controls/CSS/docs, ran read-only
+extractor --check and20Node behavioral cases, checked9/12/283/source scenarios/
+URLs/1252protected baseline hashes/unchanged deps/stable branch/AST/diff. No writes,
+no independent browser/build/deployment execution; enforced read-only isolation
+not established. Chemistry/learning-design review N/A because content unchanged.
+No reviewed source/build edits after clean review.
+
+Developer checks: final build byte-identical to browser-tested output;18modules,
+JS262.54kB/79.22kB gzip,CSS1.63kB/.66kB gzip. Source extraction/20search cases/
+AST/JSsyntax/whitespace/protection PASS. Firefox1500/390 source semantic/formula/
+count/link parity,9category choices,Greek queries/topics/combined filters/partial
+counts/empty/clearfocus/textsafety/Enterprevented/internalnavigation/reloadreset/
+nooverflow/dialogEscape and oldlesson entry/Next/Exit/126mols PASS. React0console
+errors;1known-type legacy JSmol viewer-null retained fullstack,0unexpected errors;
+classification checked explicitly after run without retry. Root cause remains
+unisolated; no fix/full283step/allbrowser/Drupal/offline/viewermigration claim.
+Evidence docs/checks/react-library-{static,search,browser}-20261026.json; report
+docs/REACT-LIBRARY-20261026.md; scripts in docs/checks/, screenshots/tmp.
+
+Core report: no core49/50/51 intervention in this stage. Core51 SHA256 remains
+096d617853646de0dfd67bcbde3e32252aebcb98e7525b05e6f7e71ccb48a5fc, equal to the
+before-task baseline. Earlier approved/saved core work is not re-authored here.
+Next: user tries search/category UI; decide separately whether to plan one-viewer
+React integration. No further implementation authorized by inference from that
+future proposal. Local commits can be published later only by user instruction.
+
 # Current resume point — 2026-10-26 — structured React review clean, local save in progress
 
 Independent Reviewer /root/review_other_ketones,
