@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "baselineHead": "428254373936cfe3dfdbf03e879c654c25eb0747",
+  "stableHead": "3673c390c1fb1b7cbcc79411a6e1e3720e97f7ab",
+  "protectedFileCount": 1254,
+  "changedProtectedFiles": [],
+  "core51SHA256": "096d617853646de0dfd67bcbde3e32252aebcb98e7525b05e6f7e71ccb48a5fc",
+  "sourceMOLHashes": {
+    "Condensed": "50bb53019ddcc9c3057bb9888749fe461f6a34fecb12ffa71e7ce6ea918338e3",
+    "Expanded": "61662174e15fe0f7a80962870f6a902514b77baa718010c9742c959f9617b3c3",
+    "Skeletal": "95925874d854ca5143596ad0ae45720f21c1d7464917bc36b3c252f3258445ea"
+  },
+  "checks": [
+    "Vite build",
+    "host generation parity",
+    "9-card/12-lesson source parity",
+    "20 library search behavior cases",
+    "Python AST",
+    "bridge JS syntax",
+    "git diff --check",
+    "protected file hashes",
+    "stable branch unchanged"
+  ]
+}

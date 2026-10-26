@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import content from './content.json';
 import LibraryPage from './LibraryPage.jsx';
+import MoleculePreview from './MoleculePreview.jsx';
 import './preview.css';
 
 // dist/ is served under the existing repository: both hosting subpaths and
@@ -91,7 +92,8 @@ function App() {
   const [panel, setPanel] = useState(null);
   const [filters, setFilters] = useState({ query: '', categoryId: '' });
   const library = route === '#/library';
-  const page = library ? content.library : content.welcome;
+  const viewer = route === '#/viewer';
+  const page = library || viewer ? content.library : content.welcome;
   useEffect(() => {
     const onHashChange = () => {
       setRoute(window.location.hash);
@@ -102,27 +104,29 @@ function App() {
     return () => window.removeEventListener('hashchange', onHashChange);
   }, []);
   useEffect(() => {
-    document.title = page.title + ' — React preview';
-  }, [page]);
+    document.title = (viewer ? 'Αιθανόλη' : page.title) + ' — Namelecule React';
+  }, [page, viewer]);
   function openPanel(name, trigger) { setPanel({ name, trigger }); }
   function closePanel() {
     panel?.trigger?.focus();
     setPanel(null);
   }
   // Welcome contains its footer within main; the library puts it after main.
-  const hasFooterInMain = !library && page.main.children.some(node => typeof node !== 'string' && node.tag === 'footer');
+  const hasFooterInMain = !library && !viewer && page.main.children.some(node => typeof node !== 'string' && node.tag === 'footer');
   return <>
     <style>{page.styles}</style>
     <aside className="react-preview-banner" aria-label="Δοκιμαστική έκδοση">
-      <span>Δοκιμαστική έκδοση React · Υποδοχή & βιβλιοθήκη</span>
-      <a href={new URL('design/welcome-proposal.html', projectRoot).href}>Τρέχουσα έκδοση</a>
+      <span>Namelecule React — Δοκιμαστική έκδοση</span>
+      <a href="#/viewer">2D δοκιμή · Αιθανόλη</a>
+      <a href={new URL('design/welcome-proposal.html', projectRoot).href}>Κύρια έκδοση</a>
     </aside>
     <SiteHeader page={page} openPanel={openPanel} />
-    {library ? <LibraryPage catalog={content.library} filters={filters} setFilters={setFilters}
+    {viewer ? <MoleculePreview mainUrl={new URL('design/welcome-proposal.html', projectRoot).href} />
+      : library ? <LibraryPage catalog={content.library} filters={filters} setFilters={setFilters}
       resolveHref={href => resolveUrl(href, content.library)} />
       : renderNode(page.main, 'main', page, openPanel)}
     {!hasFooterInMain && <SiteFooter page={page} openPanel={openPanel} />}
-    {!library && <div className="preview-note">Η βιβλιοθήκη θεωρίας είναι διαθέσιμη. Η σύνδεση και τα παιχνίδια είναι υπό σχεδιασμό.</div>}
+    {!library && !viewer && <div className="preview-note">Η βιβλιοθήκη θεωρίας είναι διαθέσιμη. Η σύνδεση και τα παιχνίδια είναι υπό σχεδιασμό.</div>}
     <PanelDialog panel={panel} onClose={closePanel} />
   </>;
 }

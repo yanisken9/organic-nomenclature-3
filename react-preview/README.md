@@ -82,3 +82,34 @@ on that branch. No push/publication is implied by a local save.
 
 Scope and verification: [structured library](../docs/REACT-LIBRARY-20261026.md).
 The [first pilot record](../docs/REACT-PILOT-20261026.md) is historical.
+## Ethanol 2D integration pilot
+
+The agreed names are **Namelecule — Κύρια έκδοση** for the established application
+and **Namelecule React — Δοκιμαστική έκδοση** for this local branch.
+Open `react-preview/dist/#/viewer` for the single existing ethanol molecule.
+React owns its mode/zoom controls, loading/error/retry state and mount lifecycle.
+`MoleculePreview` sends only whitelisted mode/zoom messages to a dedicated
+same-origin iframe. Both sides check origin, source window, protocol/session;
+request IDs discard stale replies. Cleanup removes listeners/timers and unloads
+the frame. This is lifecycle/DOM separation, **not a security sandbox**.
+
+`tools/build-viewer-host.py` generates ignored `public/viewer-host.html` from the
+unchanged `mulermoc-nom-51.html`, adds relative base/layout CSS and the classic
+`public/viewer-host-bridge.js`, and strips analytics from this generated copy.
+The original page, engine/viewer/data/teaching/scripts/MOLs remain unchanged.
+The bridge uses existing mode controls, `fSelectMol`, `fZoom2D`, sizing and the
+complete SVG post-processing pipeline; it does not draw a replacement molecule.
+The generated page hides authoring controls but retains JSME's text-measurement
+DOM. Do not hide all body children: doing so changes atom-label metrics.
+Read-only host parity: `python3 tools/build-viewer-host.py --check`.
+
+This is **not a native React renderer or a 2D-only dependency bundle**. The legacy
+startup still primes/loads JSmol and 3D resources before the bridge hides 3D.
+Existing network/CDN dependencies and possible legacy JSmol failures remain.
+Loading has a 90-second deadline and commands a 10-second deadline, with explicit
+retry/fallback. A retry/remount starts a fresh condensed/default-zoom session.
+The legacy uniform atom-size/fit rules also remain; a small mobile molecule can
+be enlarged with the existing zoom. No offline, Safari/all-browser or full-library
+viewer certification is claimed by this one-molecule pilot.
+
+Focused verification/report: [ethanol viewer](../docs/REACT-VIEWER-20261026.md).

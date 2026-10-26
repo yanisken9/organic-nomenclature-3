@@ -1,0 +1,168 @@
+{
+  "completed": true,
+  "checks": [
+    "loading disables controls; ready selects only ethanol",
+    "all three modes and expanded five explicit MOL H plus existing O–H label (six H displayed)",
+    "zoom changes actual renderer and clamps 0.5..6",
+    "rapid mode commands end consistently",
+    "wrong source/token/origin/mode/id rejected",
+    "390px resize and three modes; no horizontal overflow",
+    "library 9 cards/12 links; unmount/remount fresh session/defaults",
+    "missing document/native error UI and retry recovery (error event injected)",
+    "loading deadline and terminal failure reject late ready; retry succeeds (deadline callback fired by test)",
+    "unmount during loading and remount recover without stale error",
+    "three raw source MOLs and exact SVG geometry/text/styles match unchanged renderer at same viewport"
+  ],
+  "readySeconds": 1.49,
+  "sourceMOLs": {
+    "Condensed": "nomenclature_moc2-1c.sdf\n  ChemDraw04102417352D\n\n  3  2  0  0  0  0  0  0  0  0999 V2000\n   -0.8250    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.0000    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.8250    0.0000    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0      \n  2  3  1  0      \nM  END\n$$$$\n",
+    "Expanded": "nomenclature_moc2-3c_2D.cdx\n  ChemDraw04102417352D\n\n  8  7  0  0  0  0  0  0  0  0999 V2000\n   -0.4125    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.4125    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.2375    0.0000    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n    0.4125   -0.8250    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.4125    0.8250    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.2375    0.0000    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.4125   -0.8250    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.4125    0.8250    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0      \n  2  3  1  0      \n  2  4  1  0      \n  2  5  1  0      \n  1  6  1  0      \n  1  7  1  0      \n  1  8  1  0      \nM  END\n$$$$\n",
+    "Skeletal": "Untitled Document-2\n  ChemDraw04102419402D\n\n  3  2  0  0  0  0  0  0  0  0999 V2000\n   -0.6545    0.2461    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.0026   -0.2528    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.6545    0.2528    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0      \n  2  3  1  0      \nM  END\n$$$$\n"
+  },
+  "iframeSize": {
+    "width": 958,
+    "height": 420
+  },
+  "expandedLabels": [
+    "C",
+    "C",
+    "OH",
+    "H",
+    "H",
+    "H",
+    "H",
+    "H"
+  ],
+  "exactSVGParity": {
+    "condensed": true,
+    "expanded": true,
+    "skeletal": true
+  },
+  "resources": [
+    {
+      "name": "http://127.0.0.1:8013/css/jsme-nick-51.css?v=v51-sync-20261026",
+      "duration": 0
+    },
+    {
+      "name": "http://127.0.0.1:8013/css/mulermoc-nom-scenario-51.css?v=v51-sync-20261026",
+      "duration": 0
+    },
+    {
+      "name": "http://127.0.0.1:8013/css/namelecule-51.css?v=v51-sync-20261026",
+      "duration": 0
+    },
+    {
+      "name": "http://127.0.0.1:8013/jsme/jsme.nocache.js",
+      "duration": 13
+    },
+    {
+      "name": "http://127.0.0.1:8013/js/vendor/jquery/jquery-4.0.0.min.js",
+      "duration": 14
+    },
+    {
+      "name": "http://127.0.0.1:8013/js/vendor/dompurify/dompurify-3.4.17.min.js",
+      "duration": 15
+    },
+    {
+      "name": "http://127.0.0.1:8013/js/jsme-nick-nomeclature-moc2-data_51.js?v=canonical-ketones-20261026",
+      "duration": 16
+    },
+    {
+      "name": "http://127.0.0.1:8013/js/ui-icons.js?v=v51-sync-20261026",
+      "duration": 16
+    },
+    {
+      "name": "http://127.0.0.1:8013/js/mulermoc-nom-core-51.js?v=fifth-ketone-20261026",
+      "duration": 18
+    },
+    {
+      "name": "http://127.0.0.1:8013/js/mulermoc-nom-molview-51.js?v=fifth-ketone-20261026",
+      "duration": 17
+    },
+    {
+      "name": "http://127.0.0.1:8013/js/mulermoc-nom-teaching-51.js?v=alkoxy-rule-20261026",
+      "duration": 17
+    },
+    {
+      "name": "http://127.0.0.1:8013/js/mulermoc-nom-note-51.js?v=v51-sync-20261026",
+      "duration": 18
+    },
+    {
+      "name": "http://127.0.0.1:8013/js/mulermoc-nom-scenario-51.js?v=upstream-image-picker-20261026",
+      "duration": 18
+    },
+    {
+      "name": "http://127.0.0.1:8013/jsme/96E40B969193BD74B8A621486920E79C.cache.js",
+      "duration": 37
+    },
+    {
+      "name": "http://127.0.0.1:8013/jsme/jsa.css",
+      "duration": 0
+    },
+    {
+      "name": "http://127.0.0.1:8013/jsme/gwt/chrome/chrome.css",
+      "duration": 0
+    },
+    {
+      "name": "http://127.0.0.1:8013/jsme/gwt/chrome/mosaic.css",
+      "duration": 0
+    },
+    {
+      "name": "http://127.0.0.1:8013/jsme/FEB169D74546A3B279D22AE09AFB86BD.cache.js",
+      "duration": 17
+    },
+    {
+      "name": "https://chemapps.stolaf.edu/jmol/jsmol/JSmol.min.js",
+      "duration": 11
+    },
+    {
+      "name": "http://127.0.0.1:8013/mols/nomeclature-moc2/methane_3D.sdf",
+      "duration": 2
+    },
+    {
+      "name": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/package.js",
+      "duration": 2
+    },
+    {
+      "name": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/package.js",
+      "duration": 2
+    },
+    {
+      "name": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corejmol.z.js",
+      "duration": 5
+    },
+    {
+      "name": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/J/translation/PO.js",
+      "duration": 2
+    },
+    {
+      "name": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corescript.z.js",
+      "duration": 1
+    },
+    {
+      "name": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/J/api/JmolSelectionListener.js",
+      "duration": 3
+    },
+    {
+      "name": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/J/translation/JmolApplet/el.po",
+      "duration": 2
+    },
+    {
+      "name": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/coretext.z.js",
+      "duration": 2
+    },
+    {
+      "name": "http://127.0.0.1:8013/react-preview/dist/mols/nomeclature-moc2/methane_3D.sdf",
+      "duration": 2
+    },
+    {
+      "name": "http://127.0.0.1:8013/mols/nomeclature-moc2/ethanol_3D.sdf",
+      "duration": 2
+    },
+    {
+      "name": "http://127.0.0.1:8013/scenarios/%CE%91%CE%BB%CE%BA%CE%AC%CE%BD%CE%B9%CE%B1-%CE%91%CE%B9%CE%B8%CE%AC%CE%BD%CE%B9%CE%BF-%CF%84%CE%B5%CF%83%CF%84.scenario.json",
+      "duration": 2
+    }
+  ],
+  "javascriptErrors": []
+}

@@ -57,3 +57,21 @@
   .catalog-controls { padding: 16px; }
   .catalog-search-field, .catalog-category-field { flex-basis: 100%; }
 }
+.molecule-preview { max-width: 1000px; margin: 36px auto; padding: 0 20px; color: var(--ink); }
+.molecule-preview h1 { font-size: 32px; margin: 24px 0 8px; }
+.molecule-formula { font-weight: 400; font-size: 22px; color: var(--muted); margin-left: 12px; white-space: nowrap; }
+.molecule-panel { margin-top: 24px; border: 1px solid var(--line); border-radius: 20px; overflow: hidden; background: white; }
+.molecule-stage { position: relative; height: 420px; }
+.molecule-stage iframe { width: 100%; height: 100%; border: 0; }
+.molecule-stage iframe[hidden] { display: block; visibility: hidden; }
+.molecule-status { position: absolute; inset: 0; display: flex; flex-direction: column; gap: 16px; align-items: center; justify-content: center; text-align: center; padding: 20px; }
+.molecule-controls { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; padding: 16px; border-top: 1px solid var(--line); background: var(--mint); }
+.molecule-controls fieldset { border: 0; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 16px; }
+.molecule-controls legend { font-size: 12px; margin-bottom: 8px; }
+.molecule-controls label { display: flex; align-items: center; gap: 6px; cursor: pointer; font-size: 15px; }
+.molecule-controls input { accent-color: var(--teal); width: 18px; height: 18px; }
+.molecule-zoom { display: flex; gap: 8px; }
+.molecule-preview button { border: 1px solid #b3c9c3; border-radius: 10px; background: white; color: var(--ink); padding: 8px 16px; min-height: 44px; font: inherit; cursor: pointer; }
+.molecule-preview button:disabled { opacity: .45; cursor: default; }
+.molecule-preview :focus-visible { outline: 3px solid var(--teal); outline-offset: 3px; }
+@media (max-width: 550px) { .molecule-stage { height: 320px; } .molecule-controls fieldset { flex-direction: column; } }
