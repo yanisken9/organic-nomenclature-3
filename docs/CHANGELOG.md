@@ -1,5 +1,13 @@
 # Changelog
 
+### 2026-10-26 — Structured React library with search and category filters
+
+- Save the prior reviewed pilot on local react-library-pilot at e8d9bb4; preserve stable thesis-work at3673c390. No push/publication.
+- Render normalized category/lesson/formula data in React components; retain checked source content and all12existing lesson URLs.
+- Add Greek accent/case/final-sigma search, combined category filter, partial dual cards, result/empty states and Clear.
+- Build,20search cases and Firefox desktop/mobile/legacy-entry checks passed. React console0errors;1known-type JSmol viewer-null event in the old player is retained in evidence.
+- Existing core/molecules/lessons/player source unchanged; see REACT-LIBRARY-20261026.md.
+
 ### 2026-10-26 — Isolated React welcome/library pilot (local)
 
 - Add react-preview/ with pinned React/Vite, generated source-content snapshot and common UI components; retain nine cards/twelve links and the current molecular player.

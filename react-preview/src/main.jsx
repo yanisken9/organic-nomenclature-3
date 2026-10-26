@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import content from './content.json';
+import LibraryPage from './LibraryPage.jsx';
 import './preview.css';
 
 // dist/ is served under the existing repository: both hosting subpaths and
@@ -33,12 +34,6 @@ function reactProps(attrs, page) {
   return props;
 }
 
-function LessonCard({ node, page, openPanel }) {
-  return <article {...reactProps(node.attrs, page)}>
-    {renderChildren(node, page, openPanel)}
-  </article>;
-}
-
 function FeatureCard({ node, page, openPanel }) {
   return <article {...reactProps(node.attrs, page)}>
     {renderChildren(node, page, openPanel)}
@@ -57,8 +52,7 @@ function renderNode(node, key, page, openPanel) {
     props.onClick = event => openPanel(node.attrs['data-panel'], event.currentTarget);
   }
   if (node.tag === 'article') {
-    const Card = node.attrs.class === 'lesson' ? LessonCard : FeatureCard;
-    return <Card key={key} node={node} page={page} openPanel={openPanel} />;
+    return <FeatureCard key={key} node={node} page={page} openPanel={openPanel} />;
   }
   const children = renderChildren(node, page, openPanel);
   return React.createElement(node.tag, props, ...(children.length ? children : []));
@@ -95,6 +89,7 @@ function PanelDialog({ panel, onClose }) {
 function App() {
   const [route, setRoute] = useState(() => window.location.hash);
   const [panel, setPanel] = useState(null);
+  const [filters, setFilters] = useState({ query: '', categoryId: '' });
   const library = route === '#/library';
   const page = library ? content.library : content.welcome;
   useEffect(() => {
@@ -115,7 +110,7 @@ function App() {
     setPanel(null);
   }
   // Welcome contains its footer within main; the library puts it after main.
-  const hasFooterInMain = page.main.children.some(node => typeof node !== 'string' && node.tag === 'footer');
+  const hasFooterInMain = !library && page.main.children.some(node => typeof node !== 'string' && node.tag === 'footer');
   return <>
     <style>{page.styles}</style>
     <aside className="react-preview-banner" aria-label="Δοκιμαστική έκδοση">
@@ -123,7 +118,9 @@ function App() {
       <a href={new URL('design/welcome-proposal.html', projectRoot).href}>Τρέχουσα έκδοση</a>
     </aside>
     <SiteHeader page={page} openPanel={openPanel} />
-    {renderNode(page.main, 'main', page, openPanel)}
+    {library ? <LibraryPage catalog={content.library} filters={filters} setFilters={setFilters}
+      resolveHref={href => resolveUrl(href, content.library)} />
+      : renderNode(page.main, 'main', page, openPanel)}
     {!hasFooterInMain && <SiteFooter page={page} openPanel={openPanel} />}
     {!library && <div className="preview-note">Η βιβλιοθήκη θεωρίας είναι διαθέσιμη. Η σύνδεση και τα παιχνίδια είναι υπό σχεδιασμό.</div>}
     <PanelDialog panel={panel} onClose={closePanel} />

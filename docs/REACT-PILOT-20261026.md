@@ -1,5 +1,10 @@
 # Namelecule — React welcome/library pilot — 2026-10-26
 
+Historical first-pilot record, preserved in local checkpoint e8d9bb4. The later
+normalized catalog/search stage is documented in REACT-LIBRARY-20261026.md;
+its current checks supersede this stage's library-rendering checks. References
+below to uncommitted status describe the time this initial record was written.
+
 User approved a separate trial after the proposed gradual migration. The main
 conversation implements as Developer; the frozen result receives independent
 Reviewer inspection. This is a local prototype, without commit/push/publication.

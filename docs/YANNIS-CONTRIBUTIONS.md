@@ -1,3 +1,91 @@
+# Current resume point — 2026-10-26 — structured React review clean, local save in progress
+
+Independent Reviewer /root/review_other_ketones,
+ROLE_ID=NAMELECULE_REVIEWER_V1_20261023: no actionable P0/P1/P2/P3 findings.
+15source/doc/evidence+4build hashes verified before/after; manifest SHA256
+bc486d669e27030a139e865643fb560bc3471f1d8d63ac070f443dd3d5d49562.
+Identical manifest persisted under docs/checks/react-library-reviewed-target-20261026.json.
+Reviewer independently inspected extraction/catalog/components/filters/state/CSS/docs,
+executed read-only extractor check and20Node cases, confirmed9categories/12lessons/
+283steps/source URLs/1252protected hashes/dependencies/stable thesis-work/AST/diff.
+No Reviewer writes; browser/build results remain Developer evidence. One known-type
+legacy JSmol event retained;0React/unexpected errors. No core or scientific-content
+changes. No enforced read-only filesystem isolation claimed.
+
+Approved local save now: reviewed targets plus journals and review manifest, on
+react-library-pilot. Stable thesis-work stays3673c390, previous pilot checkpointe8d9bb4.
+No push/publication. Next: save actual feature commit reference in final metadata,
+verify clean branch/unchanged target hashes and open local library preview.
+
+# Current resume point — 2026-10-26 — structured React library complete, independent review running
+
+Approved normalized library/search/category filters implemented; old application
+core/viewer/player/data/MOL/SDF and all scenarioJSONs unchanged. Local branch
+react-library-pilot checkpoint e8d9bb406bc8172095a09cc8a46ba330dfb22922 preserves
+first reviewed pilot; stable thesis-work remains3673c390. No push/publication.
+Professor current HEAD/history/changelog rechecked dc029333, no new changes since
+last local content sync; previous image-picker integration belongs to checkpoint.
+
+Normalized categories/lessons/formula tokens replace library DOM replay; welcome/
+shared shell bridge retained. All9categories/12lessons/283steps and source fields/
+URLs preserved. Greek accent/case/final-sigma all-term search combines with category,
+partial dual cards, result count/empty state/Clear focus. State lasts through in-app
+navigation, resets on reload; no account/storage/new curriculum. No new dependencies.
+
+Developer: final Vite build byte-identical to browser-tested output;18modules,
+JS262.54kB/79.22kB gzip,CSS1.63kB/.66kB gzip. Read-only snapshot check,20actual
+search cases,2PythonASTs/JSsyntax/diff PASS.1252before-task hashes protected, old
+welcome/panels/inventory preserved, no library main AST. Source model authoring
+remains existing HTML/JSON; generated catalog is not manually maintained.
+Firefox1500/390: source semantic/formula/count/link parity,9category options,
+Greek queries/topic terms/combined filters/partialcard/counts/empty/clearfocus,
+text safety/Enterprevented/historyretain/reloadreset/nooverflow/dialogEscape,
+actual oldlesson entry/Next/Exit/126mols PASS. React console0errors;1known-type
+JSmol viewer-null in oldplayer transition retained with fullstack;0unexpected
+errors, classified explicitly after run without retry. Root cause unisolated;
+no JSmol fix or full283step/otherbrowser/Drupal/viewermigration claim.
+
+Evidence docs/checks/react-library-{static,search,browser}-20261026.json, report
+docs/REACT-LIBRARY-20261026.md; screenshots/tmp/react-library-*-20261026.png.
+Independent Reviewer /root/review_other_ketones receives frozen15source/doc/evidence
+and4generated files; /tmp/react-library-reviewed-target-20261026.json
+SHA256 bc486d669e27030a139e865643fb560bc3471f1d8d63ac070f443dd3d5d49562.
+Journals excluded; target edits stopped. Next: resolve findings/review, verify
+final target hashes, local feature save on React branch, open preview. No core
+changes vs before-task baseline; earlier already saved core work not re-authored.
+
+# Current resume point — 2026-10-26 — approved structured React library/search in progress
+
+User approved preserving the previous version, saving the React trial separately,
+normalizing the library model and adding search/category filters. Viewer migration
+remains a later phase. Scope presented: react-preview/ components/extractor/data/CSS
+and focused tests/docs only; old application/core/molecules/lesson content preserved.
+
+Created local branch react-library-pilot and checkpoint e8d9bb406bc8172095a09cc8a46ba330dfb22922
+with the previously independently reviewed pilot and its existing upstream image
+picker sync. Stable thesis-work remains3673c390c1fb1b7cbcc79411a6e1e3720e97f7ab.
+No push/publication authorized or performed. Before-task1264file hashes/source
+snapshots in /tmp/namelecule-before-react-library-20261026. Previous pilot reviewed
+23source+4build hashes confirmed unchanged before checkpoint.
+
+Required professor check: remote HEAD/main still dc02933358a19f792c1a393fbdc2c15c2aba573f.
+Current changelog successfully fetched and byte-compared to that Git revision;
+SHA256 eb54faf3308c29c143d816b76399f1cd6ad373223de8a28f56b3b3253a875c0d.
+No new commits/release since last checked/content-synchronized dc029333; no new
+upstream port needed. Published release remains the previously saved main app.
+
+Implemented normalized categories/lesson/formula metadata extracted from existing
+source pages and checked lesson JSONs. React LibraryPage/LessonCard/Formula render
+the catalog directly; welcome/shared shell remain the earlier compatibility bridge.
+Search normalizes Greek accents/case/final sigma, matches all terms across catalog
+titles/descriptions/topics, combines with category filter, shows matching lessons
+inside dual cards, result count/empty state and clear/focus. State stays in the
+React app while navigating welcome/library; full reload resets it. No persistence.
+Production build passed; functional/static tests and independent review pending.
+No changes to core or the current non-React app in this phase. Next: focused query/
+category/browser/parity/protection checks, freeze for independent Reviewer, resolve
+findings, save final reviewed result locally on the React branch and open preview.
+
 # Current resume point — 2026-10-26 — local React pilot complete, independent review clean
 
 User approved the proposed separate React welcome/library trial. Implemented and

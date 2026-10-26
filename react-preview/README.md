@@ -29,23 +29,41 @@ relative paths and assume this two-level location under the repository root.
 
 ## What is actually React
 
-React owns the preview root, route state, modal state and rendering. Shared
-`SiteHeader`, `SiteFooter`, `FeatureCard`, `LessonCard` and `PanelDialog` components
-render the existing page content. A small node renderer bridges trusted source
-HTML to React elements; it does not use `dangerouslySetInnerHTML`, mount the old
-pages in iframes, or run their embedded script.
+React owns the preview root, route state, modal state and rendering. The library
+uses `LibraryPage`, `LessonCard`, `Lesson` and `Formula` components with semantic
+categories/lessons/formula data, rather than a replay of the old library DOM tree.
+`SiteHeader`, `SiteFooter`, `FeatureCard` and `PanelDialog` retain the original
+welcome/shared-shell bridge. That bridge creates React elements from trusted
+node data without raw HTML injection, iframes or execution of embedded scripts.
 
 `tools/sync-content.py` extracts the checked source pages into `src/content.json`
-at build time, including formulas, text, CSS, links and source hashes. The legacy
-welcome panels are parsed as a data literal, without executing JavaScript.
-The snapshot is generated data: edit the established source pages, then rebuild.
+at build time. The library catalog has stable category/lesson IDs, titles,
+descriptions, formula tokens/restrictions, topics, player URLs and actual step
+counts checked against the existing scenario JSONs. The legacy welcome panels
+are parsed as a data literal, without executing JavaScript. Styles and source
+hashes are retained. The snapshot is generated data: edit the established source
+pages and lesson files, then rebuild. Do not maintain a separate React syllabus.
 Read-only parity check: `python3 tools/sync-content.py --check`.
 
-This compatibility bridge is a pilot, not the final normalized content model
-for a full React migration. Existing app viewers/player remain outside React.
+The catalog is the normalized part of this pilot; the welcome/shared shell still
+uses the compatibility bridge. Existing app viewers/player remain outside React.
 Starting a lesson performs normal navigation to the v51 application; Exit still
 returns to the established library. No progress or account storage is added.
 Current source scope: nine cards, twelve active lessons; no new educational content.
+
+## Search and category filters
+
+The library searches its titles, descriptions and listed topics, ignoring Greek
+accents, letter case and final-sigma spelling. All entered words must match the
+combined category/lesson summary. It does not search all lesson-step text.
+The category selector combines with search. Dual cards show only matching lessons
+and indicate a partial result; unfiltered cards retain the established summaries.
+Counts, no-results feedback and a clear control support keyboard/screen-reader use.
+Filters remain while navigating welcome/library inside the React app. Refresh or
+leaving for the legacy player resets app state; no local storage/account is added.
+
+Read-only behavior check, from repository root:
+`node docs/checks/test-react-library-search-20261026.mjs`.
 
 ## Tooling and distribution
 
@@ -58,4 +76,9 @@ dependency; the requirements above describe rebuilding on another machine.
 `public/THIRD-PARTY-NOTICES.txt` is copied into the build. Build output can be
 reviewed locally; publication needs a separate user instruction.
 
-Scope and actual verification: [pilot record](../docs/REACT-PILOT-20261026.md).
+The stable `thesis-work` branch remains at3673c390. The first reviewed pilot is
+saved locally at e8d9bb4 on `react-library-pilot`; subsequent reviewed work stays
+on that branch. No push/publication is implied by a local save.
+
+Scope and verification: [structured library](../docs/REACT-LIBRARY-20261026.md).
+The [first pilot record](../docs/REACT-PILOT-20261026.md) is historical.
