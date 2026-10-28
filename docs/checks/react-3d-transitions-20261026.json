@@ -1,0 +1,32 @@
+{
+  "completed": true,
+  "checks": [
+    "overlapping native zoom in/out followed immediately by 2D: ordered ACKs and restored 80% camera, no deadlock",
+    "actual 9s incorrect-model gate fails closed; retry loads fresh valid ethanol in 2D",
+    "unmount during pending 3D readiness then remount gives clean default session"
+  ],
+  "zoomAcknowledgements": [
+    {
+      "id": 1,
+      "type": "state",
+      "view": "3d"
+    },
+    {
+      "id": 2,
+      "type": "state",
+      "view": "3d"
+    },
+    {
+      "id": 3,
+      "type": "state",
+      "view": "3d"
+    },
+    {
+      "id": 4,
+      "type": "state",
+      "view": "2d"
+    }
+  ],
+  "modelMismatchFailureSeconds": 9.31,
+  "javascriptErrors": []
+}

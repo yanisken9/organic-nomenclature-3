@@ -1,0 +1,70 @@
+--- before/js/mulermoc-nom-molview-52.js
++++ after/js/mulermoc-nom-molview-52.js
+@@ -3636,7 +3636,7 @@
+ // ── fShowNameAnalysis ─────────────────────────────────────────────────────
+ 
+ // Fit the complete name without wrapping or changing its component IDs.
+-// Fixed box padding/eye controls stay intact; only label/separator fonts shrink.
++// Main can tighten overflowing box padding before shrinking label/separator fonts.
+ var nameFitFrame = null;
+ var nameFitObserver = null;
+ var nameFitPanel = null;
+@@ -3649,8 +3649,13 @@
+   const available = host.clientWidth - parseFloat(style.paddingLeft || 0)
+     - parseFloat(style.paddingRight || 0) - 4;
+   if (available <= 0) return;
++  row.classList.remove("nl-name-tight");
+   row.style.setProperty("--nl-name-scale", "1");
+   if (row.getBoundingClientRect().width <= available) return;
++  if (document.documentElement.dataset.nameleculeCompactNamePadding === "true") {
++    row.classList.add("nl-name-tight");
++    if (row.getBoundingClientRect().width <= available) return;
++  }
+   let low = 0, high = 1;
+   for (let i = 0; i < 12; i++) {
+     const mid = (low + high) / 2;
+--- before/css/namelecule-52.css
++++ after/css/namelecule-52.css
+@@ -235,6 +235,10 @@
+   transition: background-color .3s, color .3s, border-color .3s;
+ }
+ #nameAnalysis .nameCompPlus { font-size: calc(1.5rem * var(--nl-name-scale)); }
++html[data-namelecule-compact-name-padding="true"] #nameAnalysis .nl-name-tight .nameCompBox.boxed {
++  padding-left: 4.5px;
++  padding-right: 4.5px;
++}
+ 
+ /* Alkyl reference uses compact two-column rows in the naming panel. */
+ .ruleAlkyl { width: 100%; font-size: .85rem; }
+--- before/mulermoc-nom-52.html
++++ after/mulermoc-nom-52.html
+@@ -1,5 +1,5 @@
+ <!doctype html>
+-<html lang="el" data-namelecule-2d-font-size="22" data-namelecule-acid-prefix-boxes="true">
++<html lang="el" data-namelecule-2d-font-size="22" data-namelecule-acid-prefix-boxes="true" data-namelecule-compact-name-padding="true">
+ 
+ <head>
+   <meta charset="UTF-8" />
+@@ -47,7 +47,7 @@
+   <link rel="stylesheet" href="css/jsme-nick-52.css?v=v52-sync-20261027-r2" />
+   <link rel="stylesheet" href="css/mulermoc-nom-scenario-52.css?v=v52-sync-20261027-r2" />
+ 
+-  <link rel="stylesheet" href="css/namelecule-52.css?v=v52-sync-20261027-r2" />
++  <link rel="stylesheet" href="css/namelecule-52.css?v=name-font-20261028" />
+   <script src="jsme/jsme.nocache.js"></script>
+   <script src="js/vendor/jquery/jquery-4.0.0.min.js"></script>
+   <script>
+@@ -331,7 +331,7 @@
+   <script src="js/jsme-nick-nomeclature-moc2-data_52.js?v=acid-layout-20261028"></script>
+   <script src="js/ui-icons.js?v=v52-sync-20261027-r2"></script>
+   <script src="js/mulermoc-nom-core-52.js?v=acids-20261028"></script>
+-  <script src="js/mulermoc-nom-molview-52.js?v=acid-condensed-gap-20261028"></script>
++  <script src="js/mulermoc-nom-molview-52.js?v=name-font-20261028"></script>
+   <script src="js/mulermoc-nom-teaching-52.js?v=acid-prefix-boxes-20261028"></script>
+   <script src="js/mulermoc-nom-note-52.js?v=v52-sync-20261027-r2"></script>
+   <script src="js/mulermoc-nom-scenario-52.js?v=monoacids-theory-20261028"></script>
+@@ -359,4 +359,4 @@
+   </script>
+ </body>
+ 
+-</html>+</html>

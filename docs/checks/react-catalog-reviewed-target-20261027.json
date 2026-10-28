@@ -1,0 +1,47 @@
+{
+  "date": "2026-10-27",
+  "scope": "Approved expansion of React viewer to all126existing molecules, Greek/formula search and series grouping, preserving main edition byte-for-byte. No core/chemistry/lesson modifications, commit/push/publication.",
+  "baseCommit": "168e3cec01f941a84d40bbe0dc07156e7baa35d0",
+  "stableCommit": "3673c390c1fb1b7cbcc79411a6e1e3720e97f7ab",
+  "taskBaseline": "docs/checks/react-catalog-before-20261027.json",
+  "files": {
+    "docs/REACT-CATALOG-20261027.md": "c0cc2a9637aab6fbce22fa70eff8b7e8a60b59a862af95ca6a31323a05a680e8",
+    "docs/checks/react-catalog-before-20261027.json": "5202687f70a3c6fe4a73d9292eff3025ee2fe0a5f9ca24a0296059470267f541",
+    "docs/checks/react-catalog-browser-20261027.json": "91663a80df52f4abfcabd879102d399f7f2d9c19233a27dec331a00fc4c530ca",
+    "docs/checks/react-catalog-capture-20261027.json.gz": "a5e547836ca5bea053a060d617c6d9ae1ee259c13e61435403f49ccd86fc41b5",
+    "docs/checks/react-catalog-routes-20261027.json": "4bf51a587a6d3d07c2086cf4f9db0a2255e43e57127ffdb1f9fd44fdfe1d50d0",
+    "docs/checks/react-catalog-static-20261027.json": "a5e8b2a114b3f41bf2922c5bcee9a3015668d5450859189e4750486407317230",
+    "docs/checks/react-catalog-transitions-20261027.json": "d83346856c55e20f756072464e85a4b8d61646522f99178c37fc515b59d9b0d2",
+    "docs/checks/test-react-catalog-browser-20261027.py": "97867be89114dc8ae1a09f4838d04bcdc6fab9a2e8257ef035ebe570055f7928",
+    "docs/checks/test-react-catalog-preservation-20261027.py": "18da3fb4420723b26759c4b4774186203bb1699342bb91dfa8dcd2afc489ce06",
+    "docs/checks/test-react-catalog-routes-20261027.py": "c824dc162e242b5368201915dcfce68736552c5f40c4311d396b8a9258377072",
+    "docs/checks/test-react-catalog-search-20261027.mjs": "fec8c9698d0019689993641207ec2e39b137eb9f4021dc9ec57b38cc6804de63",
+    "react-preview/README.md": "201c29deb4c70ab51d5c9602ae152ebfc9b716c6c4a20de1f0bf2442129cb91e",
+    "react-preview/package.json": "2ffea4c240c7806360c194098c6262439ff144bd7b8da335043a57cbba41abda",
+    "react-preview/public/viewer-host-bridge.js": "90796a3b64262e2296f4e64f78906ecacfa8cc6a12ce938469dc44e967229db3",
+    "react-preview/src/MoleculePreview.jsx": "affbaeff56b02cb23f3666878b8d11108aba1c7a1da160f9258658fa0c31fff3",
+    "react-preview/src/main.jsx": "6dbbd05f62cb21cbefc0177c1ad2be2d009f48c1878faee6159b89e8e59630aa",
+    "react-preview/src/molecule-search.js": "0f211cf3e4896f8f05298b3483346815ffb9349c5941eafdfac321a9aa491e6a",
+    "react-preview/src/molecules.json": "6d9a394210fd58e5709fb04cb70c00711e9d2fd91e9197a0ad8b88aedcf48d63",
+    "react-preview/src/preview.css": "24fee861df0c24640520293f69fefff03ebf0f8019be6cfd24382e0fc018b90d",
+    "react-preview/tools/build-viewer-host.py": "ec7e86388352455afa6b25bfb57c5cbdfa34e47a1bc279e0a1882f9d9312ff1e",
+    "react-preview/tools/sync-molecules.mjs": "06e551388cadd4c4c17b8646215fc55c5541c3492d4232e48c0de4841e6a71ad"
+  },
+  "generated": {
+    "react-preview/dist/THIRD-PARTY-NOTICES.txt": "ea9f83b17ee2014ae8f56cec22ea28925717bb6677b75b58b418a27776383ddc",
+    "react-preview/dist/assets/index-CtUyxCmg.css": "afc59816b12a5cb9aa01db3505154082c955e820d00db3fe8aeb86e53d82511a",
+    "react-preview/dist/assets/index-D1GgN_d4.js": "9c21146329ee4a990c479f334be700bd7d49822ed1802a058535a39f0340bcf8",
+    "react-preview/dist/index.html": "e15a8a8639b56505bfa2c1c4e46b3d2ca0b95cd4db4e0a8f4becc181f5f8cde8",
+    "react-preview/dist/viewer-host-bridge.js": "90796a3b64262e2296f4e64f78906ecacfa8cc6a12ce938469dc44e967229db3",
+    "react-preview/dist/viewer-host.html": "c9d1a1c293da0dce0d58dd71eab54329a35c4502290f22147cf2fcfa56f11343",
+    "react-preview/public/viewer-host.html": "c9d1a1c293da0dce0d58dd71eab54329a35c4502290f22147cf2fcfa56f11343"
+  },
+  "excludedMutableJournals": [
+    "docs/SESSION-NOTES.md",
+    "docs/YANNIS-CONTRIBUTIONS.md"
+  ],
+  "protectedOutsideReactCount": 1316,
+  "preExisting": "Earlier uncommitted three-molecule/name/3D/P2/v52 changes predate this task. Git HEAD diff includes them. Baseline hashes distinguish actual current-task changes; prior review evidence is historical.",
+  "developerEvidence": "126actual SDF loads;377exact main/React2D/name/graph/parent/base-analysis comparisons; visible3D/component toggles across19series; desktop/mobile; transition/errors/retry/routes tests; build/static. Captured377states retained compressed and resumed on unchanged runtime after harness-only corrections; fingerprint attached after capture, not a pre-capture independent attestation.",
+  "limitations": "No independent/native renderer, common-name toggle, optional rule tables, speech, image export or lesson migration added. Main runtime and all126SDFs unchanged; known pre-existing JSmol lesson lifecycle issue not fixed. No full1263Dvisual, AT, Safari, offline, OSclipboard or Drupal certification."
+}

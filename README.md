@@ -4,6 +4,28 @@ A Greek-first interactive learning platform for organic nomenclature, built arou
 
 Desinged and developed by Nickolas Charistos
 
+**Local theory addition — 2026-10-28:** «Κορεσμένα μονοκαρβοξυλικά οξέα»,28
+progressive steps using all8eligible existing molecules, is linked from the acid
+card. The Main library now has13active lessons/311steps. Optional rule tables
+start closed; the last3D step is optional. Player52 supports replay of the
+existing third-acid-prefix boxes. Previous12scenarioJSONs, core52, molecular
+assets and React files remain unchanged by this lesson. Local, not published.
+See [lesson record](docs/MONOACIDS-SCENARIO-20261028.md) for verification status.
+
+**Local addition — 2026-10-28:** four saturated monocarboxylic acids bring the
+Main library to130molecules. Bounded core52 alkyl-prefix support, three2D forms
+and graph-matched explicit-H3D follow existing conventions. All126oldrecords
+and12scenarioJSONs remain unchanged; React is preserved without a rebuild.
+See [acid addition and checks](docs/ACIDS-20261028.md). Local, not committed/published.
+
+**Current local integration — 2026-10-27:** v52 from professor upstream
+`93b759f5891d7b5a1172646032d83215d60b7604`, with Namelecule layout, all126molecules
+and12lessons/283steps retained. The previous v51 remains runnable. Welcome/library
+and the React trial now target v52; stable/published Git checkpoints are unchanged.
+No commit or publication is implied. See [v52 integration and checks](docs/V52-SYNC-20261027.md)
+and the current resume point for validation/review status. Older entries below
+describe their original implementation stages.
+
 **Current source snapshot — 2026-10-26:**126molecules,12active theory lessons,
 283steps. The [consolidated professor update](docs/UPDATE-20261025-26.html)
 covers work from the25October MOL-only double-bond/function removal through
