@@ -1,5 +1,34 @@
 # Changelog
 
+### 2026-10-27 — Local v52 integration and React host update
+
+- Integrate professor v52 at93b759f with the unified rich-note editor, HTML source mode, sanitizer and compact toolbar.
+- Keep the checked Namelecule126-entry data/MOLs/cameras/order, all SDFs and12lesson JSONs, theme/fitting/name sizing/palette/manual rules. Previous v51 remains intact.
+- Add upstream core52 with the monoether array guard; retain existing naming behavior.
+- Route welcome/library and the React host/catalog through v52. No commit/push/publication.
+- Actual verification and independent review status: V52-SYNC-20261027.md and SESSION-NOTES.md.
+
+### 2026-10-26 — Structured React library with search and category filters
+
+- Save the prior reviewed pilot on local react-library-pilot at e8d9bb4; preserve stable thesis-work at3673c390. No push/publication.
+- Render normalized category/lesson/formula data in React components; retain checked source content and all12existing lesson URLs.
+- Add Greek accent/case/final-sigma search, combined category filter, partial dual cards, result/empty states and Clear.
+- Build,20search cases and Firefox desktop/mobile/legacy-entry checks passed. React console0errors;1known-type JSmol viewer-null event in the old player is retained in evidence.
+- Existing core/molecules/lessons/player source unchanged; see REACT-LIBRARY-20261026.md.
+
+### 2026-10-26 — Isolated React welcome/library pilot (local)
+
+- Add react-preview/ with pinned React/Vite, generated source-content snapshot and common UI components; retain nine cards/twelve links and the current molecular player.
+- Build and focused Firefox desktop/mobile, dialog, history and lesson-entry checks passed; no core/molecule/lesson changes.
+- Current public welcome/library are unchanged. Not committed or published; see REACT-PILOT-20261026.md.
+
+### 2026-10-26 — Upstream v51 note image file picker (local)
+
+- Port professor commit dc02933358a19f792c1a393fbdc2c15c2aba573f: raster image file picker, size/alt checks, separate URL action and inline/modal synchronization.
+- Preserve Namelecule component rules, twelve lesson titles and library Exit behavior.
+- Add upstream rich-note plan/handoff; retain local scenario-plan history. Core and molecular data unchanged.
+- Verification and publication status are recorded in SESSION-NOTES.md.
+
 ### 2026-10-22 - Add missing alkyne library card
 
 - Add the third lesson card for the existing 22-step alkynes scenario.

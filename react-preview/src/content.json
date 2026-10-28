@@ -1,0 +1,1427 @@
+{
+  "welcome": {
+    "source": "design/welcome-proposal.html",
+    "sourceSha256": "6158b66367af903011ffe5cb28851e8713fa4fd6d0bf0fd42d292112750ac71a",
+    "title": "Namelecule — Καλώς ήρθες",
+    "styles": "\n:root{--ink:#254c50;--muted:#627777;--paper:#faf9f5;--mint:#e1efea;--sky:#e7eff7;--peach:#f7dfcf;--line:#dce5df;--teal:#397b78}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 system-ui,-apple-system,sans-serif}a{color:inherit}button{font:inherit;cursor:pointer}header{background:#fff;border-bottom:1px solid var(--line)}.top{max-width:1200px;margin:auto;padding:14px 28px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{max-width:360px}.brand img{width:100%;height:auto;display:block}.brand small{display:block;padding-left:23%;font-size:10px;color:var(--muted);margin-top:-8px}.login{background:transparent;border:1px solid #b3c9c3;border-radius:30px;padding:10px 22px;font-weight:600}.login:hover{background:var(--mint)}main{max-width:1200px;margin:auto;padding:0 28px}.hero{text-align:center;padding:55px 0 36px;position:relative}.eyebrow{font-size:11px;letter-spacing:2px;font-weight:700;color:var(--teal)}h1{font-size:clamp(34px,4.5vw,56px);line-height:1.2;letter-spacing:-1.8px;margin:17px 0 20px;font-weight:700}h1 span{color:var(--teal)}.hero p{max-width:850px;margin:auto;color:var(--muted);font-size:18px}.choose{text-align:center;font-size:14px;color:var(--muted);margin:0 0 20px}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.card{padding:28px;border:1px solid var(--line);border-radius:23px;background:#fff;display:flex;flex-direction:column;align-items:flex-start;position:relative}.card.one{background:linear-gradient(150deg,#e1efea 0%,#f5faf6 100%)}.card.two{background:linear-gradient(150deg,#e7eff7 0%,#f5f8fc 100%)}.card.three{background:linear-gradient(150deg,#f7dfcf 0%,#fcf6f0 100%)}.icon{width:55px;height:55px;display:grid;place-items:center;border-radius:17px;background:#ffffffb0;margin-bottom:22px}.icon svg{width:30px;height:30px;stroke:var(--ink);stroke-width:1.7;fill:none;stroke-linecap:round;stroke-linejoin:round}.label{font-size:10px;letter-spacing:1.3px;font-weight:700;color:var(--muted);margin-bottom:9px}.card h2{font-size:24px;letter-spacing:-.6px;line-height:1.25;margin:0 0 14px}.card p{font-size:15px;color:#516c6d;margin:0 0 20px;flex:1}.card ul{list-style:none;padding:0;margin:0 0 26px;font-size:13px;color:#516c6d}.card li{margin:6px 0}.card li::before{content:'✓';margin-right:9px;color:var(--teal)}.action{width:100%;padding:12px 16px;background:var(--ink);border:0;border-radius:12px;color:white;font-size:14px;font-weight:600;display:flex;align-items:center;justify-content:space-between}.action:hover{background:var(--teal)}.card small{margin-top:12px;color:var(--muted);font-size:11px}.representations{margin:44px 0 36px;display:grid;grid-template-columns:1fr 1.15fr;gap:35px;align-items:center;border-top:1px solid var(--line);padding-top:36px}.representations h2{font-size:27px;letter-spacing:-.7px;line-height:1.3;margin:10px 0 15px}.representations p{color:var(--muted);font-size:15px}.rep-art{display:flex;align-items:center;justify-content:space-around;gap:12px;background:white;border:1px solid var(--line);border-radius:20px;padding:23px 16px}.rep{display:flex;flex-direction:column;align-items:center;gap:8px;min-width:0}.rep svg{height:75px;width:110px}.rep small{font-size:11px;color:var(--muted)}.formula{height:75px;display:flex;align-items:center;font-size:21px;white-space:nowrap}.formula b{color:#a54e40;font-weight:500}.equal{color:#9aada7}.molecule-name{font-size:14px;color:var(--teal);font-weight:650;text-align:center;margin-top:12px}.footer{border-top:1px solid var(--line);padding:20px 0;display:flex;justify-content:space-between;gap:20px;color:var(--muted);font-size:11px}.footer a{text-decoration:none}.preview-note{max-width:1200px;margin:0 auto;padding:12px 28px;color:var(--muted);font-size:11px;text-align:center;background:#edf3ef}dialog{border:1px solid var(--line);border-radius:22px;max-width:480px;width:calc(100% - 32px);padding:28px;color:var(--ink);background:var(--paper)}dialog::backdrop{background:#254c5066}dialog h2{margin:0 0 12px;font-size:23px}dialog p{color:var(--muted);font-size:15px}dialog a{display:inline-block;margin:8px 0 18px}dialog button{border:0;border-radius:10px;padding:10px 18px;background:var(--ink);color:white}button:focus-visible,a:focus-visible{outline:3px solid var(--teal);outline-offset:4px}@media(max-width:900px){.cards{grid-template-columns:1fr}.card{padding:24px}.card p{max-width:650px}.card ul{margin-bottom:18px}.icon{margin-bottom:14px}.representations{grid-template-columns:1fr}.action{max-width:350px}.hero{padding:35px 0 28px}.brand{max-width:300px}}@media(max-width:550px){.top{padding:12px 16px;gap:12px}.brand{max-width:245px}.brand small{font-size:8px;margin-top:0}.login{padding:8px 12px;font-size:12px}main{padding:0 18px}h1{letter-spacing:-1px}.hero p{font-size:16px}.rep-art{gap:4px;padding:16px 8px}.rep svg{width:80px}.formula{font-size:16px}.footer{flex-direction:column;gap:8px}}@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto}}\n\n.rep-art{flex-wrap:wrap;row-gap:20px}.rep .expanded-ethanol{width:155px;height:120px}.ethanol-model{width:190px;height:150px;border:0;background:#fff;border-radius:12px}.formula{height:120px}.rep{flex:0 0 auto}@media(max-width:550px){.rep-art{gap:14px}.rep .expanded-ethanol{width:140px}.ethanol-model{width:210px;height:165px}}\n\n.representations{grid-template-columns:1fr;gap:24px}\n.rep-art{justify-content:space-evenly;flex-wrap:nowrap;padding:24px;gap:16px}\n.rep{flex:1 1 0;min-width:0}\n.rep small{text-align:center}\n.rep .formula,.rep .expanded-ethanol,.rep .ethanol-model{height:165px}\n.rep .ethanol-model{max-width:100%}\n@media(max-width:550px){.rep-art{padding:14px 8px;gap:4px}.rep .formula{font-size:14px}.rep .expanded-ethanol{width:100%;max-width:140px}.rep small{font-size:10px;line-height:1.4}.rep .formula,.rep .expanded-ethanol,.rep .ethanol-model{height:125px}.rep .ethanol-model{width:100%}.equal{font-size:12px}}\n\n.explore-entry{text-align:center;margin-top:24px}.explore-entry a{display:inline-block;padding:12px 22px;border:1px solid #b3c9c3;border-radius:12px;text-decoration:none;font-size:15px;font-weight:600;background:var(--mint)}.explore-entry a:hover{background:#d2e6dd}\n.rep img.ethanol-model{display:block;object-fit:contain;background:transparent}\n.ethanol-static{position:relative;overflow:hidden;flex-shrink:0}.ethanol-static img{position:absolute;width:170%;max-width:none;height:auto;left:-35%;top:-50%;display:block}",
+    "header": {
+      "tag": "header",
+      "attrs": {},
+      "children": [
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "top"
+          },
+          "children": [
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "brand"
+              },
+              "children": [
+                {
+                  "tag": "img",
+                  "attrs": {
+                    "src": "assets/namelecule-methane-v1.png",
+                    "width": "2172",
+                    "height": "724",
+                    "alt": "Namelecule — Ονοματολογία οργανικών ενώσεων"
+                  },
+                  "children": []
+                },
+                {
+                  "tag": "small",
+                  "attrs": {},
+                  "children": [
+                    "Μια εφαρμογή της πλατφόρμας ",
+                    {
+                      "tag": "strong",
+                      "attrs": {},
+                      "children": [
+                        "MuLERMoCs"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "button",
+              "attrs": {
+                "class": "login",
+                "data-panel": "login"
+              },
+              "children": [
+                "Σύνδεση"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "main": {
+      "tag": "main",
+      "attrs": {},
+      "children": [
+        {
+          "tag": "section",
+          "attrs": {
+            "class": "hero"
+          },
+          "children": [
+            {
+              "tag": "span",
+              "attrs": {
+                "class": "eyebrow"
+              },
+              "children": [
+                "ΜΑΘΑΙΝΩ · ΣΥΝΔΕΩ · ΑΝΑΚΑΛΥΠΤΩ"
+              ]
+            },
+            {
+              "tag": "h1",
+              "attrs": {},
+              "children": [
+                "Κάθε μόριο έχει ένα όνομα",
+                {
+                  "tag": "br",
+                  "attrs": {},
+                  "children": []
+                },
+                {
+                  "tag": "span",
+                  "attrs": {},
+                  "children": [
+                    "Ανακάλυψέ το !"
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "Σύνδεσε τη δομή με την ονομασία, μάθε βήμα βήμα και δοκίμασε τις γνώσεις σου"
+              ]
+            }
+          ]
+        },
+        {
+          "tag": "p",
+          "attrs": {
+            "class": "choose"
+          },
+          "children": [
+            "Διάλεξε από πού θέλεις να ξεκινήσεις"
+          ]
+        },
+        "\n",
+        {
+          "tag": "section",
+          "attrs": {
+            "class": "cards",
+            "aria-label": "Επιλογές εφαρμογής"
+          },
+          "children": [
+            "\n",
+            {
+              "tag": "article",
+              "attrs": {
+                "class": "card one"
+              },
+              "children": [
+                {
+                  "tag": "div",
+                  "attrs": {
+                    "class": "icon"
+                  },
+                  "children": [
+                    {
+                      "tag": "svg",
+                      "attrs": {
+                        "viewbox": "0 0 32 32",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        {
+                          "tag": "path",
+                          "attrs": {
+                            "d": "M16 9C12 6 7 6 3 7v19c5-1 9-1 13 2 4-3 8-3 13-2V7c-4-1-9-1-13 2v19M7 12h5m-5 5h5m8-5h5m-5 5h5"
+                          },
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "span",
+                  "attrs": {
+                    "class": "label"
+                  },
+                  "children": [
+                    "ΘΕΩΡΙΑ"
+                  ]
+                },
+                {
+                  "tag": "h2",
+                  "attrs": {},
+                  "children": [
+                    "Μαθαίνω βήμα βήμα"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "Ανακάλυψε τους κανόνες ονοματολογίας μέσα από καθοδηγούμενα σενάρια και διαφορετικές εικόνες του ίδιου μορίου."
+                  ]
+                },
+                {
+                  "tag": "ul",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "li",
+                      "attrs": {},
+                      "children": [
+                        "Έτοιμα σενάρια θεωρίας"
+                      ]
+                    },
+                    {
+                      "tag": "li",
+                      "attrs": {},
+                      "children": [
+                        "Για μελέτη ή για το μάθημα στην τάξη"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "a",
+                  "attrs": {
+                    "class": "action",
+                    "style": "text-decoration:none",
+                    "href": "theory-library.html?v=other-ketones-theory-20261026"
+                  },
+                  "children": [
+                    "Δες τη θεωρία ",
+                    {
+                      "tag": "span",
+                      "attrs": {
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        "↗"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "small",
+                  "attrs": {},
+                  "children": [
+                    "Για μαθητές και εκπαιδευτικούς"
+                  ]
+                }
+              ]
+            },
+            "\n",
+            {
+              "tag": "article",
+              "attrs": {
+                "class": "card two"
+              },
+              "children": [
+                {
+                  "tag": "div",
+                  "attrs": {
+                    "class": "icon"
+                  },
+                  "children": [
+                    {
+                      "tag": "svg",
+                      "attrs": {
+                        "viewbox": "0 0 32 32",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        {
+                          "tag": "path",
+                          "attrs": {
+                            "d": "M11 10h10c6 0 9 13 5 15-3 1-5-5-8-5h-4c-3 0-5 6-8 5-4-2-1-15 5-15ZM10 13v7m-3-3.5h6"
+                          },
+                          "children": []
+                        },
+                        {
+                          "tag": "circle",
+                          "attrs": {
+                            "cx": "22",
+                            "cy": "14",
+                            "r": "1"
+                          },
+                          "children": []
+                        },
+                        {
+                          "tag": "circle",
+                          "attrs": {
+                            "cx": "25",
+                            "cy": "18",
+                            "r": "1"
+                          },
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "span",
+                  "attrs": {
+                    "class": "label"
+                  },
+                  "children": [
+                    "ΑΣΚΗΣΕΙΣ & ΠΑΙΧΝΙΔΙΑ"
+                  ]
+                },
+                {
+                  "tag": "h2",
+                  "attrs": {},
+                  "children": [
+                    "Συνδέω και εξασκούμαι"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "Σύνδεσε ονόματα και δομές, αναγνώρισε το ίδιο μόριο σε άλλες αναπαραστάσεις και δοκίμασε όσα έμαθες."
+                  ]
+                },
+                {
+                  "tag": "ul",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "li",
+                      "attrs": {},
+                      "children": [
+                        "Εξάσκηση με βοήθεια και εξηγήσεις"
+                      ]
+                    },
+                    {
+                      "tag": "li",
+                      "attrs": {},
+                      "children": [
+                        "Προκλήσεις με σκορ"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "button",
+                  "attrs": {
+                    "class": "action",
+                    "data-panel": "games"
+                  },
+                  "children": [
+                    "Δες τις δραστηριότητες ",
+                    {
+                      "tag": "span",
+                      "attrs": {
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        "↗"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "small",
+                  "attrs": {},
+                  "children": [
+                    "Για μαθητές και εκπαιδευτικούς"
+                  ]
+                }
+              ]
+            },
+            "\n",
+            {
+              "tag": "article",
+              "attrs": {
+                "class": "card three"
+              },
+              "children": [
+                {
+                  "tag": "div",
+                  "attrs": {
+                    "class": "icon"
+                  },
+                  "children": [
+                    {
+                      "tag": "svg",
+                      "attrs": {
+                        "viewbox": "0 0 32 32",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        {
+                          "tag": "path",
+                          "attrs": {
+                            "d": "M18 5H6v23h20V16M15 19l2-6L26 4l4 4-9 9-6 2ZM24 6l4 4M10 23h10"
+                          },
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "span",
+                  "attrs": {
+                    "class": "label"
+                  },
+                  "children": [
+                    "ΓΙΑ ΕΚΠΑΙΔΕΥΤΙΚΟΥΣ"
+                  ]
+                },
+                {
+                  "tag": "h2",
+                  "attrs": {},
+                  "children": [
+                    "Δημιουργώ το μάθημά μου"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "Βρες έτοιμο υλικό για την τάξη σου ή φτιάξε τα δικά σου σενάρια θεωρίας και μαθησιακά παιχνίδια."
+                  ]
+                },
+                {
+                  "tag": "ul",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "li",
+                      "attrs": {},
+                      "children": [
+                        "Ο προσωπικός σου χώρος υλικού"
+                      ]
+                    },
+                    {
+                      "tag": "li",
+                      "attrs": {},
+                      "children": [
+                        "Αποθήκευση και λήψη των δημιουργιών σου"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "button",
+                  "attrs": {
+                    "class": "action",
+                    "data-panel": "teacher"
+                  },
+                  "children": [
+                    "Χώρος εκπαιδευτικού ",
+                    {
+                      "tag": "span",
+                      "attrs": {
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        "↗"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "small",
+                  "attrs": {},
+                  "children": [
+                    "Σύνδεση για τον προσωπικό σου χώρο"
+                  ]
+                }
+              ]
+            },
+            "\n"
+          ]
+        },
+        "\n",
+        {
+          "tag": "section",
+          "attrs": {
+            "class": "representations"
+          },
+          "children": [
+            {
+              "tag": "div",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "span",
+                  "attrs": {
+                    "class": "eyebrow"
+                  },
+                  "children": [
+                    "Η ΙΔΙΑ ΔΟΜΗ, ΑΛΛΗ ΟΠΤΙΚΗ"
+                  ]
+                },
+                {
+                  "tag": "h2",
+                  "attrs": {},
+                  "children": [
+                    "Ένα μόριο.",
+                    {
+                      "tag": "br",
+                      "attrs": {},
+                      "children": []
+                    },
+                    "Πολλοί τρόποι να το καταλάβεις."
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "Από τον χημικό τύπο στο τρισδιάστατο μοντέλο και από τη δομή στο όνομα: κάθε αναπαράσταση σε βοηθά να δεις μια άλλη πλευρά του μορίου."
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "div",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "div",
+                  "attrs": {
+                    "class": "rep-art"
+                  },
+                  "children": [
+                    {
+                      "tag": "div",
+                      "attrs": {
+                        "class": "rep"
+                      },
+                      "children": [
+                        {
+                          "tag": "div",
+                          "attrs": {
+                            "class": "formula"
+                          },
+                          "children": [
+                            "CH₃–CH₂–",
+                            {
+                              "tag": "b",
+                              "attrs": {},
+                              "children": [
+                                "OH"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "small",
+                          "attrs": {},
+                          "children": [
+                            "Συνεπτυγμένος συντακτικός"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "span",
+                      "attrs": {
+                        "class": "equal",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        "↔"
+                      ]
+                    },
+                    {
+                      "tag": "div",
+                      "attrs": {
+                        "class": "rep"
+                      },
+                      "children": [
+                        {
+                          "tag": "svg",
+                          "attrs": {
+                            "class": "expanded-ethanol",
+                            "viewbox": "0 0 180 115",
+                            "role": "img",
+                            "aria-label": "Ανεπτυγμένος συντακτικός τύπος αιθανόλης: δύο άνθρακες, έξι υδρογόνα και ένα οξυγόνο"
+                          },
+                          "children": [
+                            {
+                              "tag": "g",
+                              "attrs": {
+                                "stroke": "#254c50",
+                                "stroke-width": "2"
+                              },
+                              "children": [
+                                {
+                                  "tag": "path",
+                                  "attrs": {
+                                    "d": "M26 59H41M59 59H81M99 59H121M140 59H155M50 45V28M50 73V91M90 45V28M90 73V91"
+                                  },
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "tag": "g",
+                              "attrs": {
+                                "fill": "#254c50",
+                                "font-family": "system-ui,sans-serif",
+                                "font-size": "18",
+                                "text-anchor": "middle"
+                              },
+                              "children": [
+                                {
+                                  "tag": "text",
+                                  "attrs": {
+                                    "x": "16",
+                                    "y": "65"
+                                  },
+                                  "children": [
+                                    "H"
+                                  ]
+                                },
+                                {
+                                  "tag": "text",
+                                  "attrs": {
+                                    "x": "50",
+                                    "y": "65"
+                                  },
+                                  "children": [
+                                    "C"
+                                  ]
+                                },
+                                {
+                                  "tag": "text",
+                                  "attrs": {
+                                    "x": "90",
+                                    "y": "65"
+                                  },
+                                  "children": [
+                                    "C"
+                                  ]
+                                },
+                                {
+                                  "tag": "text",
+                                  "attrs": {
+                                    "x": "166",
+                                    "y": "65"
+                                  },
+                                  "children": [
+                                    "H"
+                                  ]
+                                },
+                                {
+                                  "tag": "text",
+                                  "attrs": {
+                                    "x": "50",
+                                    "y": "23"
+                                  },
+                                  "children": [
+                                    "H"
+                                  ]
+                                },
+                                {
+                                  "tag": "text",
+                                  "attrs": {
+                                    "x": "90",
+                                    "y": "23"
+                                  },
+                                  "children": [
+                                    "H"
+                                  ]
+                                },
+                                {
+                                  "tag": "text",
+                                  "attrs": {
+                                    "x": "50",
+                                    "y": "110"
+                                  },
+                                  "children": [
+                                    "H"
+                                  ]
+                                },
+                                {
+                                  "tag": "text",
+                                  "attrs": {
+                                    "x": "90",
+                                    "y": "110"
+                                  },
+                                  "children": [
+                                    "H"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "tag": "text",
+                              "attrs": {
+                                "x": "130",
+                                "y": "65",
+                                "fill": "#a54e40",
+                                "font-family": "system-ui,sans-serif",
+                                "font-size": "18",
+                                "text-anchor": "middle"
+                              },
+                              "children": [
+                                "O"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "small",
+                          "attrs": {},
+                          "children": [
+                            "Ανεπτυγμένος συντακτικός"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "span",
+                      "attrs": {
+                        "class": "equal",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        "↔"
+                      ]
+                    },
+                    {
+                      "tag": "div",
+                      "attrs": {
+                        "class": "rep"
+                      },
+                      "children": [
+                        {
+                          "tag": "div",
+                          "attrs": {
+                            "class": "ethanol-model ethanol-static"
+                          },
+                          "children": [
+                            {
+                              "tag": "img",
+                              "attrs": {
+                                "src": "assets/ethanol-3d-jsmol.png",
+                                "width": "1200",
+                                "height": "1200",
+                                "alt": "Τρισδιάστατο μοντέλο του ίδιου μορίου, εξαγμένο από το JSmol",
+                                "decoding": "async"
+                              },
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "small",
+                          "attrs": {},
+                          "children": [
+                            "Τρισδιάστατο μοντέλο"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "div",
+                  "attrs": {
+                    "class": "explore-entry"
+                  },
+                  "children": [
+                    {
+                      "tag": "a",
+                      "attrs": {
+                        "href": "../mulermoc-nom-52.html"
+                      },
+                      "children": [
+                        "Εξερεύνησε ελεύθερα τα μόρια"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "\n",
+        {
+          "tag": "footer",
+          "attrs": {
+            "class": "footer"
+          },
+          "children": [
+            {
+              "tag": "span",
+              "attrs": {},
+              "children": [
+                "Namelecule · Μια εφαρμογή της πλατφόρμας MuLERMoCs"
+              ]
+            },
+            {
+              "tag": "a",
+              "attrs": {
+                "href": "../mulermoc-nom-52.html"
+              },
+              "children": [
+                "Συντελεστές στην εφαρμογή ↗"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "footer": {
+      "tag": "footer",
+      "attrs": {
+        "class": "footer"
+      },
+      "children": [
+        {
+          "tag": "span",
+          "attrs": {},
+          "children": [
+            "Namelecule · Μια εφαρμογή της πλατφόρμας MuLERMoCs"
+          ]
+        },
+        {
+          "tag": "a",
+          "attrs": {
+            "href": "../mulermoc-nom-52.html"
+          },
+          "children": [
+            "Συντελεστές στην εφαρμογή ↗"
+          ]
+        }
+      ]
+    }
+  },
+  "library": {
+    "source": "design/theory-library.html",
+    "sourceSha256": "5556a63e2d4492566d481d4be66d6f039c165cc967a8189203b6408eb177b44a",
+    "title": "Namelecule — Βιβλιοθήκη θεωρίας",
+    "styles": "\n    :root{--ink:#254c50;--muted:#627777;--paper:#faf9f5;--mint:#e1efea;--line:#dce5df;--teal:#397b78}\n    *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 system-ui,-apple-system,sans-serif}a{color:inherit}header{background:white;border-bottom:1px solid var(--line)}.top{max-width:1200px;margin:auto;padding:14px 28px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:block;max-width:360px}.brand img{display:block;width:100%;height:auto}.back{font-size:14px;text-underline-offset:4px}main{max-width:1200px;margin:auto;padding:40px 28px 64px}.eyebrow{font-size:11px;letter-spacing:2px;font-weight:700;color:var(--teal)}h1{font-size:clamp(32px,4.5vw,48px);line-height:1.2;letter-spacing:-1px;margin:12px 0 18px}.intro{color:var(--muted);max-width:720px;margin:0 0 32px;font-size:18px}.lessons{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:24px}.lesson{max-width:560px;border:1px solid var(--line);border-radius:24px;overflow:hidden;background:white}.illustration{padding:24px;background:linear-gradient(135deg,var(--mint),#f3f8f4);display:flex;align-items:center;justify-content:space-between;gap:16px}.formula{font-size:clamp(27px,4vw,38px);font-weight:650;letter-spacing:1px}.count{font-size:13px;padding:6px 12px;background:white;border:1px solid var(--line);border-radius:24px;white-space:nowrap}.content{padding:28px}.content h2{font-size:25px;line-height:1.3;margin:8px 0 14px;letter-spacing:-.4px}.content p{color:var(--muted);margin:0 0 20px}.topics{padding-left:22px;margin:0 0 26px;color:#516c6d}.topics li{margin:6px 0}.action{display:flex;align-items:center;justify-content:space-between;gap:16px;text-decoration:none;background:var(--ink);color:white;font-weight:650;padding:13px 18px;border-radius:12px}.action:hover{background:var(--teal)}a:focus-visible{outline:3px solid var(--teal);outline-offset:5px}footer{max-width:1200px;margin:auto;padding:20px 28px;border-top:1px solid var(--line);color:var(--muted);font-size:12px}@media(max-width:550px){.top{padding:12px 18px;flex-wrap:wrap;gap:10px}.brand{max-width:260px}.back{font-size:13px}main{padding:30px 18px 44px}.intro{font-size:16px}.content{padding:22px}.illustration{padding:22px}footer{padding:20px 18px}}\n    .alcohols-header{flex-wrap:wrap}\n    .series-header{flex-wrap:wrap}.series-heading{min-width:0}.series-heading .formula{display:block}.series-formula{margin:3px 0 0;color:var(--muted);font-size:15px;font-weight:400;line-height:1.5;white-space:nowrap}.series-formula .restriction{margin-left:10px;font-size:13px}\n    .lesson-part + .lesson-part{margin-top:26px;padding-top:24px;border-top:1px solid var(--line)}.lesson-part h3{font-size:20px;line-height:1.4;margin:0 0 12px}.lesson-part p{margin-bottom:14px}.lesson-part .series-formula{margin:-5px 0 14px}.pending{display:block;padding:12px 18px;border-radius:12px;background:var(--mint);color:var(--ink);font-weight:650}\n  ",
+    "header": {
+      "tag": "header",
+      "attrs": {},
+      "children": [
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "top"
+          },
+          "children": [
+            "\n    ",
+            {
+              "tag": "a",
+              "attrs": {
+                "class": "brand",
+                "href": "welcome-proposal.html?v=alkynes-library-20261022",
+                "aria-label": "Namelecule — Αρχική σελίδα"
+              },
+              "children": [
+                {
+                  "tag": "img",
+                  "attrs": {
+                    "src": "assets/namelecule-methane-v1.png",
+                    "width": "2172",
+                    "height": "724",
+                    "alt": "Namelecule — Ονοματολογία οργανικών ενώσεων"
+                  },
+                  "children": []
+                }
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "a",
+              "attrs": {
+                "class": "back",
+                "href": "welcome-proposal.html?v=alkynes-library-20261022"
+              },
+              "children": [
+                "← Σελίδα υποδοχής"
+              ]
+            },
+            "\n  "
+          ]
+        }
+      ]
+    },
+    "footer": {
+      "tag": "footer",
+      "attrs": {},
+      "children": [
+        "Namelecule · Μια εφαρμογή της πλατφόρμας MuLERMoCs"
+      ]
+    },
+    "catalogVersion": 1,
+    "eyebrow": "ΜΑΘΑΙΝΩ ΒΗΜΑ ΒΗΜΑ",
+    "heading": "Βιβλιοθήκη θεωρίας",
+    "intro": "Διάλεξε ένα μάθημα και ανακάλυψε τους κανόνες ονοματολογίας μέσα από καθοδηγούμενα βήματα και διαφορετικές αναπαραστάσεις των μορίων.",
+    "categories": [
+      {
+        "id": "alkanes",
+        "title": "ΑΛΚΑΝΙΑ",
+        "formula": {
+          "parts": [
+            {
+              "kind": "text",
+              "value": "C"
+            },
+            {
+              "kind": "subscript",
+              "value": "ν"
+            },
+            {
+              "kind": "text",
+              "value": "H"
+            },
+            {
+              "kind": "subscript",
+              "value": "2ν+2"
+            }
+          ],
+          "restriction": "ν ≥ 1"
+        },
+        "summaryLabel": "21 βήματα",
+        "lessons": [
+          {
+            "id": "alkanes",
+            "title": "Ονοματολογία και διακλαδώσεις",
+            "description": "Από το αιθάνιο στα διακλαδισμένα αλκάνια: σχημάτισε το όνομα κάθε μορίου, έναν κανόνα τη φορά.",
+            "formula": null,
+            "steps": 21,
+            "topics": [
+              "Τα τρία συνθετικά του ονόματος",
+              "Επιλογή και αρίθμηση κύριας αλυσίδας",
+              "Αλκύλια, διακλαδώσεις και αλφαβητική σειρά",
+              "Διερεύνηση σε 2D και 3D"
+            ],
+            "href": "../mulermoc-nom-52.html?scenario=scenarios/alkanes-nomenclature-branches.scenario.json&present=1&from=theory-library&v=theory-progressive-20261024",
+            "scenario": "scenarios/alkanes-nomenclature-branches.scenario.json",
+            "actionLabel": "Ξεκίνα το μάθημα"
+          }
+        ]
+      },
+      {
+        "id": "alkenes",
+        "title": "ΑΛΚΕΝΙΑ",
+        "formula": {
+          "parts": [
+            {
+              "kind": "text",
+              "value": "C"
+            },
+            {
+              "kind": "subscript",
+              "value": "ν"
+            },
+            {
+              "kind": "text",
+              "value": "H"
+            },
+            {
+              "kind": "subscript",
+              "value": "2ν"
+            }
+          ],
+          "restriction": "ν ≥ 2"
+        },
+        "summaryLabel": "22 βήματα",
+        "lessons": [
+          {
+            "id": "alkenes",
+            "title": "Ονοματολογία και διακλαδώσεις",
+            "description": "Από το αιθένιο στα διακλαδισμένα αλκένια: σχημάτισε το όνομα κάθε μορίου, έναν κανόνα τη φορά.",
+            "formula": null,
+            "steps": 22,
+            "topics": [
+              "Τα τρία συνθετικά του ονόματος",
+              "Κύρια αλυσίδα και θέση διπλού δεσμού",
+              "Αλκύλια, διακλαδώσεις και αλφαβητική σειρά",
+              "Διερεύνηση σε 2D και 3D"
+            ],
+            "href": "../mulermoc-nom-52.html?scenario=scenarios/alkenes-nomenclature-branches.scenario.json&present=1&from=theory-library&v=theory-progressive-20261024",
+            "scenario": "scenarios/alkenes-nomenclature-branches.scenario.json",
+            "actionLabel": "Ξεκίνα το μάθημα"
+          }
+        ]
+      },
+      {
+        "id": "alkynes",
+        "title": "ΑΛΚΙΝΙΑ",
+        "formula": {
+          "parts": [
+            {
+              "kind": "text",
+              "value": "C"
+            },
+            {
+              "kind": "subscript",
+              "value": "ν"
+            },
+            {
+              "kind": "text",
+              "value": "H"
+            },
+            {
+              "kind": "subscript",
+              "value": "2ν−2"
+            }
+          ],
+          "restriction": "ν ≥ 2"
+        },
+        "summaryLabel": "22 βήματα",
+        "lessons": [
+          {
+            "id": "alkynes",
+            "title": "Ονοματολογία και διακλαδώσεις",
+            "description": "Από το αιθίνιο στα διακλαδισμένα αλκίνια. Σχημάτισε το όνομα κάθε μορίου, έναν κανόνα τη φορά.",
+            "formula": null,
+            "steps": 22,
+            "topics": [
+              "Τα τρία συνθετικά του ονόματος",
+              "Κύρια αλυσίδα και θέση τριπλού δεσμού",
+              "Αλκύλια, διακλαδώσεις και αλφαβητική σειρά",
+              "Διερεύνηση σε 2D και 3D"
+            ],
+            "href": "../mulermoc-nom-52.html?scenario=scenarios/alkynes-nomenclature-branches.scenario.json&present=1&from=theory-library&v=theory-progressive-20261024",
+            "scenario": "scenarios/alkynes-nomenclature-branches.scenario.json",
+            "actionLabel": "Ξεκίνα το μάθημα"
+          }
+        ]
+      },
+      {
+        "id": "alkadienes",
+        "title": "ΑΛΚΑΔΙΕΝΙΑ",
+        "formula": {
+          "parts": [
+            {
+              "kind": "text",
+              "value": "C"
+            },
+            {
+              "kind": "subscript",
+              "value": "ν"
+            },
+            {
+              "kind": "text",
+              "value": "H"
+            },
+            {
+              "kind": "subscript",
+              "value": "2ν−2"
+            }
+          ],
+          "restriction": "ν ≥ 3"
+        },
+        "summaryLabel": "23 βήματα",
+        "lessons": [
+          {
+            "id": "alkadienes",
+            "title": "Ονοματολογία και διακλαδώσεις",
+            "description": "Από το 1,3-βουταδιένιο στα διακλαδισμένα αλκαδιένια. Σχημάτισε το όνομα κάθε μορίου, έναν κανόνα τη φορά.",
+            "formula": null,
+            "steps": 23,
+            "topics": [
+              "Τα τρία συνθετικά του ονόματος",
+              "Κύρια αλυσίδα και θέσεις δύο διπλών δεσμών",
+              "Αλκύλια, διακλαδώσεις και αλφαβητική σειρά",
+              "Διερεύνηση σε 2D και 3D"
+            ],
+            "href": "../mulermoc-nom-52.html?scenario=scenarios/alkadienes-nomenclature-branches.scenario.json&present=1&from=theory-library&v=theory-progressive-20261024",
+            "scenario": "scenarios/alkadienes-nomenclature-branches.scenario.json",
+            "actionLabel": "Ξεκίνα το μάθημα"
+          }
+        ]
+      },
+      {
+        "id": "enynes",
+        "title": "ΑΛΚΕΝΙΝΙΑ",
+        "formula": {
+          "parts": [
+            {
+              "kind": "text",
+              "value": "C"
+            },
+            {
+              "kind": "subscript",
+              "value": "ν"
+            },
+            {
+              "kind": "text",
+              "value": "H"
+            },
+            {
+              "kind": "subscript",
+              "value": "2ν−4"
+            }
+          ],
+          "restriction": "ν ≥ 4"
+        },
+        "summaryLabel": "23 βήματα",
+        "lessons": [
+          {
+            "id": "enynes",
+            "title": "Ονοματολογία Αλκενινίων",
+            "description": "Από το 1-βουτεν-3-ίνιο στα διακλαδισμένα αλκενίνια. Σχημάτισε το όνομα κάθε μορίου, έναν κανόνα τη φορά.",
+            "formula": null,
+            "steps": 23,
+            "topics": [
+              "Διπλός και τριπλός δεσμός και τα συνθετικά του ονόματος",
+              "Κύρια αλυσίδα, αρίθμηση και ισοπαλία θέσεων",
+              "Αλκύλια, διακλαδώσεις και αλφαβητική σειρά",
+              "Διερεύνηση σε 2D και 3D"
+            ],
+            "href": "../mulermoc-nom-52.html?scenario=scenarios/enynes-nomenclature-branches.scenario.json&present=1&from=theory-library&v=theory-progressive-20261024",
+            "scenario": "scenarios/enynes-nomenclature-branches.scenario.json",
+            "actionLabel": "Ξεκίνα το μάθημα"
+          }
+        ]
+      },
+      {
+        "id": "alcohols",
+        "title": "ΑΛΚΟΟΛΕΣ",
+        "formula": null,
+        "summaryLabel": "2 μαθήματα",
+        "lessons": [
+          {
+            "id": "monoalcohols",
+            "title": "Κορεσμένες μονοσθενείς αλκοόλες",
+            "description": "Μία υδροξυλομάδα και μόνο απλοί δεσμοί μεταξύ των ατόμων άνθρακα.",
+            "formula": {
+              "parts": [
+                {
+                  "kind": "text",
+                  "value": "C"
+                },
+                {
+                  "kind": "subscript",
+                  "value": "ν"
+                },
+                {
+                  "kind": "text",
+                  "value": "H"
+                },
+                {
+                  "kind": "subscript",
+                  "value": "2ν+2"
+                },
+                {
+                  "kind": "text",
+                  "value": "O"
+                }
+              ],
+              "restriction": "ν ≥ 1"
+            },
+            "steps": 20,
+            "topics": [],
+            "href": "../mulermoc-nom-52.html?scenario=scenarios/saturated-monoalcohols-nomenclature.scenario.json&present=1&from=theory-library&v=monoalcohol-theory-20261025",
+            "scenario": "scenarios/saturated-monoalcohols-nomenclature.scenario.json",
+            "actionLabel": "Ξεκίνα το μάθημα"
+          },
+          {
+            "id": "other-alcohols",
+            "title": "Άλλες αλκοόλες",
+            "description": "Αλκοόλες με περισσότερες υδροξυλομάδες ή με πολλαπλούς δεσμούς ή και τα δύο.",
+            "formula": {
+              "parts": [
+                {
+                  "kind": "text",
+                  "value": "C"
+                },
+                {
+                  "kind": "subscript",
+                  "value": "x"
+                },
+                {
+                  "kind": "text",
+                  "value": "H"
+                },
+                {
+                  "kind": "subscript",
+                  "value": "y"
+                },
+                {
+                  "kind": "text",
+                  "value": "(OH)"
+                },
+                {
+                  "kind": "subscript",
+                  "value": "n"
+                }
+              ],
+              "restriction": null
+            },
+            "steps": 22,
+            "topics": [],
+            "href": "../mulermoc-nom-52.html?scenario=scenarios/other-alcohols-nomenclature.scenario.json&present=1&from=theory-library&v=other-alcohols-theory-20261025",
+            "scenario": "scenarios/other-alcohols-nomenclature.scenario.json",
+            "actionLabel": "Ξεκίνα το μάθημα"
+          }
+        ]
+      },
+      {
+        "id": "monoethers",
+        "title": "ΚΟΡΕΣΜΕΝΟΙ ΜΟΝΟΑΙΘΕΡΕΣ",
+        "formula": {
+          "parts": [
+            {
+              "kind": "text",
+              "value": "C"
+            },
+            {
+              "kind": "subscript",
+              "value": "ν"
+            },
+            {
+              "kind": "text",
+              "value": "H"
+            },
+            {
+              "kind": "subscript",
+              "value": "2ν+2"
+            },
+            {
+              "kind": "text",
+              "value": "O"
+            }
+          ],
+          "restriction": "ν ≥ 2"
+        },
+        "summaryLabel": "27 βήματα",
+        "lessons": [
+          {
+            "id": "monoethers",
+            "title": "Κοινή και συστηματική ονομασία",
+            "description": "Άκυκλοι κορεσμένοι μονοαιθέρες: από το μικρότερο μόριο στα διακλαδισμένα παραδείγματα, με δύο τρόπους ονομασίας.",
+            "formula": null,
+            "steps": 27,
+            "topics": [
+              "Ομάδα C–O–C και γενικός μοριακός τύπος",
+              "Κοινή ονομασία: αλκύλια και αλφαβητική σειρά",
+              "Συστηματική ονομασία: αλκοξυομάδες, κύρια αλυσίδα και θέσεις",
+              "Διερεύνηση σε 2D και προαιρετικά σε 3D"
+            ],
+            "href": "../mulermoc-nom-52.html?scenario=scenarios/saturated-monoethers-nomenclature.scenario.json&present=1&from=theory-library&v=alkoxy-rule-20261026",
+            "scenario": "scenarios/saturated-monoethers-nomenclature.scenario.json",
+            "actionLabel": "Ξεκίνα το μάθημα"
+          }
+        ]
+      },
+      {
+        "id": "aldehydes",
+        "title": "ΑΛΔΕΫΔΕΣ",
+        "formula": null,
+        "summaryLabel": "2 διαθέσιμα μαθήματα",
+        "lessons": [
+          {
+            "id": "monoaldehydes",
+            "title": "Κορεσμένες μονοσθενείς αλδεΰδες",
+            "description": "Άκυκλες αλδεΰδες με μία αλδεϋδομάδα και μόνο απλούς δεσμούς μεταξύ των ατόμων C.",
+            "formula": {
+              "parts": [
+                {
+                  "kind": "text",
+                  "value": "C"
+                },
+                {
+                  "kind": "subscript",
+                  "value": "ν"
+                },
+                {
+                  "kind": "text",
+                  "value": "H"
+                },
+                {
+                  "kind": "subscript",
+                  "value": "2ν"
+                },
+                {
+                  "kind": "text",
+                  "value": "O"
+                }
+              ],
+              "restriction": "ν ≥ 1"
+            },
+            "steps": 24,
+            "topics": [],
+            "href": "../mulermoc-nom-52.html?scenario=scenarios/saturated-monoaldehydes-nomenclature.scenario.json&present=1&from=theory-library&v=monoaldehydes-theory-20261026",
+            "scenario": "scenarios/saturated-monoaldehydes-nomenclature.scenario.json",
+            "actionLabel": "Ξεκίνα το μάθημα"
+          },
+          {
+            "id": "other-aldehydes",
+            "title": "Άλλες αλδεΰδες",
+            "description": "Αλδεΰδες με περισσότερες αλδεϋδομάδες ή με πολλαπλούς δεσμούς μεταξύ ατόμων C ή και τα δύο.",
+            "formula": {
+              "parts": [
+                {
+                  "kind": "text",
+                  "value": "C"
+                },
+                {
+                  "kind": "subscript",
+                  "value": "x"
+                },
+                {
+                  "kind": "text",
+                  "value": "H"
+                },
+                {
+                  "kind": "subscript",
+                  "value": "y"
+                },
+                {
+                  "kind": "text",
+                  "value": "(CHO)"
+                },
+                {
+                  "kind": "subscript",
+                  "value": "n"
+                }
+              ],
+              "restriction": null
+            },
+            "steps": 26,
+            "topics": [],
+            "href": "../mulermoc-nom-52.html?scenario=scenarios/other-aldehydes-nomenclature.scenario.json&present=1&from=theory-library&v=other-aldehydes-theory-20261026",
+            "scenario": "scenarios/other-aldehydes-nomenclature.scenario.json",
+            "actionLabel": "Ξεκίνα το μάθημα"
+          }
+        ]
+      },
+      {
+        "id": "ketones",
+        "title": "ΚΕΤΟΝΕΣ",
+        "formula": null,
+        "summaryLabel": "2 διαθέσιμα μαθήματα",
+        "lessons": [
+          {
+            "id": "monoketones",
+            "title": "Κορεσμένες μονοσθενείς κετόνες",
+            "description": "Άκυκλες κετόνες με μία καρβονυλομάδα και μόνο απλούς δεσμούς μεταξύ των ατόμων C.",
+            "formula": {
+              "parts": [
+                {
+                  "kind": "text",
+                  "value": "C"
+                },
+                {
+                  "kind": "subscript",
+                  "value": "ν"
+                },
+                {
+                  "kind": "text",
+                  "value": "H"
+                },
+                {
+                  "kind": "subscript",
+                  "value": "2ν"
+                },
+                {
+                  "kind": "text",
+                  "value": "O"
+                }
+              ],
+              "restriction": "ν ≥ 3"
+            },
+            "steps": 25,
+            "topics": [],
+            "href": "../mulermoc-nom-52.html?scenario=scenarios/saturated-monoketones-nomenclature.scenario.json&present=1&from=theory-library&v=monoketones-theory-20261026",
+            "scenario": "scenarios/saturated-monoketones-nomenclature.scenario.json",
+            "actionLabel": "Ξεκίνα το μάθημα"
+          },
+          {
+            "id": "other-ketones",
+            "title": "Άλλες κετόνες",
+            "description": "Κετόνες με περισσότερες καρβονυλομάδες ή με πολλαπλούς δεσμούς μεταξύ ατόμων C ή και τα δύο.",
+            "formula": {
+              "parts": [
+                {
+                  "kind": "text",
+                  "value": "C"
+                },
+                {
+                  "kind": "subscript",
+                  "value": "x"
+                },
+                {
+                  "kind": "text",
+                  "value": "H"
+                },
+                {
+                  "kind": "subscript",
+                  "value": "y"
+                },
+                {
+                  "kind": "text",
+                  "value": "(CO)"
+                },
+                {
+                  "kind": "subscript",
+                  "value": "n"
+                }
+              ],
+              "restriction": null
+            },
+            "steps": 28,
+            "topics": [],
+            "href": "../mulermoc-nom-52.html?scenario=scenarios/other-ketones-nomenclature.scenario.json&present=1&from=theory-library&v=other-ketones-theory-20261026",
+            "scenario": "scenarios/other-ketones-nomenclature.scenario.json",
+            "actionLabel": "Ξεκίνα το μάθημα"
+          }
+        ]
+      }
+    ]
+  },
+  "panels": {
+    "games": [
+      "Ασκήσεις & παιχνίδια",
+      "Εδώ σχεδιάζουμε εξάσκηση με βοήθεια και προκλήσεις με σκορ, βασισμένες στη σύνδεση διαφορετικών αναπαραστάσεων. Οι δραστηριότητες δεν έχουν υλοποιηθεί ακόμη."
+    ],
+    "teacher": [
+      "Χώρος εκπαιδευτικού",
+      "Ο προσωπικός χώρος με σύνδεση, αποθήκευση και λήψη υλικού είναι υπό σχεδιασμό. Σήμερα μπορείς να ανοίξεις την εφαρμογή και να χρησιμοποιήσεις το εργαλείο σεναρίων.",
+      "Άνοιγμα εφαρμογής",
+      "../mulermoc-nom-52.html"
+    ],
+    "login": [
+      "Σύνδεση",
+      "Η σύνδεση εκπαιδευτικών είναι υπό σχεδιασμό. Για τους μαθητές δεν έχει αποφασιστεί ακόμη αν θα υπάρχει λογαριασμός."
+    ]
+  },
+  "inventory": {
+    "cards": 9,
+    "lessonLinks": [
+      "../mulermoc-nom-52.html?scenario=scenarios/alkanes-nomenclature-branches.scenario.json&present=1&from=theory-library&v=theory-progressive-20261024",
+      "../mulermoc-nom-52.html?scenario=scenarios/alkenes-nomenclature-branches.scenario.json&present=1&from=theory-library&v=theory-progressive-20261024",
+      "../mulermoc-nom-52.html?scenario=scenarios/alkynes-nomenclature-branches.scenario.json&present=1&from=theory-library&v=theory-progressive-20261024",
+      "../mulermoc-nom-52.html?scenario=scenarios/alkadienes-nomenclature-branches.scenario.json&present=1&from=theory-library&v=theory-progressive-20261024",
+      "../mulermoc-nom-52.html?scenario=scenarios/enynes-nomenclature-branches.scenario.json&present=1&from=theory-library&v=theory-progressive-20261024",
+      "../mulermoc-nom-52.html?scenario=scenarios/saturated-monoalcohols-nomenclature.scenario.json&present=1&from=theory-library&v=monoalcohol-theory-20261025",
+      "../mulermoc-nom-52.html?scenario=scenarios/other-alcohols-nomenclature.scenario.json&present=1&from=theory-library&v=other-alcohols-theory-20261025",
+      "../mulermoc-nom-52.html?scenario=scenarios/saturated-monoethers-nomenclature.scenario.json&present=1&from=theory-library&v=alkoxy-rule-20261026",
+      "../mulermoc-nom-52.html?scenario=scenarios/saturated-monoaldehydes-nomenclature.scenario.json&present=1&from=theory-library&v=monoaldehydes-theory-20261026",
+      "../mulermoc-nom-52.html?scenario=scenarios/other-aldehydes-nomenclature.scenario.json&present=1&from=theory-library&v=other-aldehydes-theory-20261026",
+      "../mulermoc-nom-52.html?scenario=scenarios/saturated-monoketones-nomenclature.scenario.json&present=1&from=theory-library&v=monoketones-theory-20261026",
+      "../mulermoc-nom-52.html?scenario=scenarios/other-ketones-nomenclature.scenario.json&present=1&from=theory-library&v=other-ketones-theory-20261026"
+    ]
+  }
+}
