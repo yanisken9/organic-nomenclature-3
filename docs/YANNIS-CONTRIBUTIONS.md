@@ -1,4 +1,76 @@
+# Contribution — 2026-10-28 — Local backups verified; GitHub push blocked pending explicit authorization
+
+Ο χρήστης ζήτησε πλήρη αποθήκευση. Ολοκληρώθηκαν τα τοπικά αντίγραφα της
+κύριας v52(130μόρια/13μαθήματα/311βήματα) και της υπάρχουσας δοκιμαστικής React.
+Δεν άλλαξε λειτουργικός κώδικας, MOL/SDF, σενάριο ή React build κατά το save.
+
+- Τοπικό source/WIP commit: b3f5f504425258f3885c7300567da0d320794976,
+  χωριστή branch checkpoint/namelecule-20261028-021615. Η τρέχουσα branch
+  react-library-pilot/HEAD168e3ce και το πραγματικό staging διατηρούνται.
+- Και τα13ενεργά JSON είναι byte-identical στο Desktop «αρχεία  json».
+  Το νέο Κορεσμένα_μονοκαρβοξυλικά_οξέα-Ονοματολογία.scenario.json αποθηκεύτηκε
+  τώρα ως WIP snapshot28βημάτων. Τα προηγούμενα12ήταν ήδη ακριβή.
+- Πλήρες ZIP κώδικα/υπάρχοντος Reactdist/σημειώσεων/13JSON:
+  communication/checkpoints/Namelecule-20261028-021615.zip.
+  Εξωτερικό ακριβές αντίγραφο στον καθιερωμένο φάκελο:
+  ../Αποθηκεύσεις/2026-10-28-021615/.
+- Πρώτος έλεγχος ZIP:1601αρχεία,CRCκαι κάθε SHA256PASS,ακριβής αντιγραφή.
+  Στον ίδιο εξωτερικό φάκελο:verification-evidence-20261028.zip(131τεκμήρια),
+  Namelecule-git-history.bundle(gitbundleverifyPASS),preserved-checkpoints/
+  με τα δύο προηγούμενα React ZIP,backup-manifest.json,final-save-state.json.
+  Δεν αντιγράφονται node_modules/.git σταZIP· το ιστορικό υπάρχει στοbundle.
+  Δεν πρόκειται για αυτάρκη offline διανομή λόγω υφιστάμενων CDNεξαρτήσεων.
+- Η τελική αυτή καταγραφή αποθηκεύεται σε metadata-only checkpoint και τα
+  ZIP/bundle ανανεώνονται ώστε να την περιλαμβάνουν. Πραγματικό τελικό commit,
+  hashes/μέγεθος ZIP/bundle και κατάσταση δικτύου γράφονται στο εξωτερικό
+  final-save-state.json, χωρίς ισχυρισμό αυτοαναφορικού commit μέσα στο ίδιο.
+
+Ανεξάρτητο assemblyreview /root/review_monoacid_lesson,
+ROLE_ID=NAMELECULE_REVIEWER_V1_20261023:1576project+8Reactdist,13DesktopJSON,
+311steps/130records,10font hashes και source baselinePASS,χωρίς actionable
+ευρήματα. Read-only ανεξάρτητη εκτέλεση· ZIP/bundle έλεγχοι Developer evidence.
+Frozenmanifest5b7612a1eb2471676ec810f4c22d9a8c4c0501e5852cf0a538c125f8b0e3e69e.
+
+Το push στο προσωπικό origin GitHub ΑΠΟΡΡΙΦΘΗΚΕ πριν εκτελεστεί από automatic
+approval review: γενικό save δεν θεωρήθηκε επαρκής συγκεκριμένη εξουσιοδότηση
+για ολόκληρο πιθανώς ιδιωτικό WIP payload/προορισμό· ιδιοκτησία remote δεν
+επιβεβαιώθηκε. Δεν έγινε retry ή παράκαμψη. Εκκρεμεί ρητή έγκριση για push
+της χωριστής checkpoint branch στο
+https://github.com/yanisken9/organic-nomenclature-3.git.
+Η δημοσιευμένη εφαρμογή/React δεν ενημερώθηκαν. Δεν αποστέλλεται report/message
+στον καθηγητή· παλιοί σύνδεσμοι παραμένουν ως είχαν.
+
+Γνωστές εκκρεμότητες: HCOOH σκοτεινό rectangle(P2) χρειάζεται χωριστή έγκριση
+στοχευμένου viewerfix. Η μικρή αύξηση ονομάτων δεν εξαλείφει τη μικρή γραμματοσειρά
+σε στενό χώρο. Το νέο μάθημα δεν δηλώνεται συνολικά οπτικά έτοιμο. Η React
+παραμένει μη ολοκληρωμένη δοκιμή. Επόμενο: χρήστης εγκρίνει συγκεκριμένο remote
+backup αν επιθυμεί· τότε push μόνο αυτής της branch/έλεγχος refs,χωρίς Pagesdeploy.
+Μετά την επιστροφή διαβάζουμε αυτή τη σημείωση και το external final-save-state.
+
+Έτοιμη ενημέρωση core για προώθηση από τον χρήστη:
+«Στη συνεδρία28/10 τροποποιήθηκε το js/mulermoc-nom-core-52.js για αλκυλικά
+προθέματα και ισοδύναμες κύριες αλυσίδες μόνο σε άκυκλα κορεσμένα
+μονοκαρβοξυλικά οξέα, επειδή οι διακλαδώσεις παραλείπονταν. Πέρασαν72έλεγχοι
+ονομασίας/αναδιάταξης,12όριαguard,754συγκρίσεις παλιών περιπτώσεων, χημικοί
+έλεγχοι12MOL/4SDF,24Firefoxμορφές και ανεξάρτητο review. Οι μεταγενέστερες
+αλλαγές εμφάνισης/μαθήματος και η αποθήκευση δεν πρόσθεσαν αλλαγή στον core.
+Η εργασία είναι αποθηκευμένη σε τοπικό Gitcheckpoint/επαληθευμένα αντίγραφα·
+το push εκκρεμεί έγκριση και η ενημερωμένη εφαρμογή δεν δημοσιεύτηκε.»
+Core52 SHA25697ae0466558eb954b810352d5f135fd4958e94a71c4a0cfef09fcf104085f78a.
+Η παλιότερη upstreamv52ενσωμάτωση διακρίνεται από την τοπική επέκταση οξέων.
+Upstream ήδη ελέγχθηκε5903c76...,πραγματικάsynced93b759f...,όχι νέο sync στοsave.
+
 # Contribution — 2026-10-28 — User-authorized full checkpoint save in progress
+
+Local runtime/WIP checkpoint created: b3f5f504425258f3885c7300567da0d320794976
+on checkpoint/namelecule-20261028-021615. Current branchHEAD/staging unchanged.
+Attempted push command was REJECTED before execution by automatic approval:
+full potentially private WIP payload to unverified GitHub destination, general
+save request not accepted as specific payload/destination authorization; ownership
+not established. No retry/workaround. Remote push remains pending explicit user
+approval for https://github.com/yanisken9/organic-nomenclature-3.git and this
+checkpoint branch. Main/thesis-work publication unchanged; no React deploy.
+Continue local ZIP/external backup/Gitbundle verification before final question.
 
 Ανεξάρτητο save assembly review ολοκληρώθηκε χωρίς actionable ευρήματα:
 /root/review_monoacid_lesson,ROLE_ID=NAMELECULE_REVIEWER_V1_20261023.
