@@ -1,7 +1,7 @@
 {
   "welcome": {
     "source": "design/welcome-proposal.html",
-    "sourceSha256": "1da072c211934702b167c33d40b0d091e1da439d6916ad214dec68e3106b2b5b",
+    "sourceSha256": "6158b66367af903011ffe5cb28851e8713fa4fd6d0bf0fd42d292112750ac71a",
     "title": "Namelecule — Καλώς ήρθες",
     "styles": "\n:root{--ink:#254c50;--muted:#627777;--paper:#faf9f5;--mint:#e1efea;--sky:#e7eff7;--peach:#f7dfcf;--line:#dce5df;--teal:#397b78}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 system-ui,-apple-system,sans-serif}a{color:inherit}button{font:inherit;cursor:pointer}header{background:#fff;border-bottom:1px solid var(--line)}.top{max-width:1200px;margin:auto;padding:14px 28px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{max-width:360px}.brand img{width:100%;height:auto;display:block}.brand small{display:block;padding-left:23%;font-size:10px;color:var(--muted);margin-top:-8px}.login{background:transparent;border:1px solid #b3c9c3;border-radius:30px;padding:10px 22px;font-weight:600}.login:hover{background:var(--mint)}main{max-width:1200px;margin:auto;padding:0 28px}.hero{text-align:center;padding:55px 0 36px;position:relative}.eyebrow{font-size:11px;letter-spacing:2px;font-weight:700;color:var(--teal)}h1{font-size:clamp(34px,4.5vw,56px);line-height:1.2;letter-spacing:-1.8px;margin:17px 0 20px;font-weight:700}h1 span{color:var(--teal)}.hero p{max-width:850px;margin:auto;color:var(--muted);font-size:18px}.choose{text-align:center;font-size:14px;color:var(--muted);margin:0 0 20px}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.card{padding:28px;border:1px solid var(--line);border-radius:23px;background:#fff;display:flex;flex-direction:column;align-items:flex-start;position:relative}.card.one{background:linear-gradient(150deg,#e1efea 0%,#f5faf6 100%)}.card.two{background:linear-gradient(150deg,#e7eff7 0%,#f5f8fc 100%)}.card.three{background:linear-gradient(150deg,#f7dfcf 0%,#fcf6f0 100%)}.icon{width:55px;height:55px;display:grid;place-items:center;border-radius:17px;background:#ffffffb0;margin-bottom:22px}.icon svg{width:30px;height:30px;stroke:var(--ink);stroke-width:1.7;fill:none;stroke-linecap:round;stroke-linejoin:round}.label{font-size:10px;letter-spacing:1.3px;font-weight:700;color:var(--muted);margin-bottom:9px}.card h2{font-size:24px;letter-spacing:-.6px;line-height:1.25;margin:0 0 14px}.card p{font-size:15px;color:#516c6d;margin:0 0 20px;flex:1}.card ul{list-style:none;padding:0;margin:0 0 26px;font-size:13px;color:#516c6d}.card li{margin:6px 0}.card li::before{content:'✓';margin-right:9px;color:var(--teal)}.action{width:100%;padding:12px 16px;background:var(--ink);border:0;border-radius:12px;color:white;font-size:14px;font-weight:600;display:flex;align-items:center;justify-content:space-between}.action:hover{background:var(--teal)}.card small{margin-top:12px;color:var(--muted);font-size:11px}.representations{margin:44px 0 36px;display:grid;grid-template-columns:1fr 1.15fr;gap:35px;align-items:center;border-top:1px solid var(--line);padding-top:36px}.representations h2{font-size:27px;letter-spacing:-.7px;line-height:1.3;margin:10px 0 15px}.representations p{color:var(--muted);font-size:15px}.rep-art{display:flex;align-items:center;justify-content:space-around;gap:12px;background:white;border:1px solid var(--line);border-radius:20px;padding:23px 16px}.rep{display:flex;flex-direction:column;align-items:center;gap:8px;min-width:0}.rep svg{height:75px;width:110px}.rep small{font-size:11px;color:var(--muted)}.formula{height:75px;display:flex;align-items:center;font-size:21px;white-space:nowrap}.formula b{color:#a54e40;font-weight:500}.equal{color:#9aada7}.molecule-name{font-size:14px;color:var(--teal);font-weight:650;text-align:center;margin-top:12px}.footer{border-top:1px solid var(--line);padding:20px 0;display:flex;justify-content:space-between;gap:20px;color:var(--muted);font-size:11px}.footer a{text-decoration:none}.preview-note{max-width:1200px;margin:0 auto;padding:12px 28px;color:var(--muted);font-size:11px;text-align:center;background:#edf3ef}dialog{border:1px solid var(--line);border-radius:22px;max-width:480px;width:calc(100% - 32px);padding:28px;color:var(--ink);background:var(--paper)}dialog::backdrop{background:#254c5066}dialog h2{margin:0 0 12px;font-size:23px}dialog p{color:var(--muted);font-size:15px}dialog a{display:inline-block;margin:8px 0 18px}dialog button{border:0;border-radius:10px;padding:10px 18px;background:var(--ink);color:white}button:focus-visible,a:focus-visible{outline:3px solid var(--teal);outline-offset:4px}@media(max-width:900px){.cards{grid-template-columns:1fr}.card{padding:24px}.card p{max-width:650px}.card ul{margin-bottom:18px}.icon{margin-bottom:14px}.representations{grid-template-columns:1fr}.action{max-width:350px}.hero{padding:35px 0 28px}.brand{max-width:300px}}@media(max-width:550px){.top{padding:12px 16px;gap:12px}.brand{max-width:245px}.brand small{font-size:8px;margin-top:0}.login{padding:8px 12px;font-size:12px}main{padding:0 18px}h1{letter-spacing:-1px}.hero p{font-size:16px}.rep-art{gap:4px;padding:16px 8px}.rep svg{width:80px}.formula{font-size:16px}.footer{flex-direction:column;gap:8px}}@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto}}\n\n.rep-art{flex-wrap:wrap;row-gap:20px}.rep .expanded-ethanol{width:155px;height:120px}.ethanol-model{width:190px;height:150px;border:0;background:#fff;border-radius:12px}.formula{height:120px}.rep{flex:0 0 auto}@media(max-width:550px){.rep-art{gap:14px}.rep .expanded-ethanol{width:140px}.ethanol-model{width:210px;height:165px}}\n\n.representations{grid-template-columns:1fr;gap:24px}\n.rep-art{justify-content:space-evenly;flex-wrap:nowrap;padding:24px;gap:16px}\n.rep{flex:1 1 0;min-width:0}\n.rep small{text-align:center}\n.rep .formula,.rep .expanded-ethanol,.rep .ethanol-model{height:165px}\n.rep .ethanol-model{max-width:100%}\n@media(max-width:550px){.rep-art{padding:14px 8px;gap:4px}.rep .formula{font-size:14px}.rep .expanded-ethanol{width:100%;max-width:140px}.rep small{font-size:10px;line-height:1.4}.rep .formula,.rep .expanded-ethanol,.rep .ethanol-model{height:125px}.rep .ethanol-model{width:100%}.equal{font-size:12px}}\n\n.explore-entry{text-align:center;margin-top:24px}.explore-entry a{display:inline-block;padding:12px 22px;border:1px solid #b3c9c3;border-radius:12px;text-decoration:none;font-size:15px;font-weight:600;background:var(--mint)}.explore-entry a:hover{background:#d2e6dd}\n.rep img.ethanol-model{display:block;object-fit:contain;background:transparent}\n.ethanol-static{position:relative;overflow:hidden;flex-shrink:0}.ethanol-static img{position:absolute;width:170%;max-width:none;height:auto;left:-35%;top:-50%;display:block}",
     "header": {
@@ -747,7 +747,7 @@
                     {
                       "tag": "a",
                       "attrs": {
-                        "href": "../mulermoc-nom-51.html"
+                        "href": "../mulermoc-nom-52.html"
                       },
                       "children": [
                         "Εξερεύνησε ελεύθερα τα μόρια"
@@ -776,7 +776,7 @@
             {
               "tag": "a",
               "attrs": {
-                "href": "../mulermoc-nom-51.html"
+                "href": "../mulermoc-nom-52.html"
               },
               "children": [
                 "Συντελεστές στην εφαρμογή ↗"
@@ -802,7 +802,7 @@
         {
           "tag": "a",
           "attrs": {
-            "href": "../mulermoc-nom-51.html"
+            "href": "../mulermoc-nom-52.html"
           },
           "children": [
             "Συντελεστές στην εφαρμογή ↗"
@@ -813,7 +813,7 @@
   },
   "library": {
     "source": "design/theory-library.html",
-    "sourceSha256": "00348f39b7f93966b4195163126572d11c8333080c771906720a3261967de088",
+    "sourceSha256": "5556a63e2d4492566d481d4be66d6f039c165cc967a8189203b6408eb177b44a",
     "title": "Namelecule — Βιβλιοθήκη θεωρίας",
     "styles": "\n    :root{--ink:#254c50;--muted:#627777;--paper:#faf9f5;--mint:#e1efea;--line:#dce5df;--teal:#397b78}\n    *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 system-ui,-apple-system,sans-serif}a{color:inherit}header{background:white;border-bottom:1px solid var(--line)}.top{max-width:1200px;margin:auto;padding:14px 28px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:block;max-width:360px}.brand img{display:block;width:100%;height:auto}.back{font-size:14px;text-underline-offset:4px}main{max-width:1200px;margin:auto;padding:40px 28px 64px}.eyebrow{font-size:11px;letter-spacing:2px;font-weight:700;color:var(--teal)}h1{font-size:clamp(32px,4.5vw,48px);line-height:1.2;letter-spacing:-1px;margin:12px 0 18px}.intro{color:var(--muted);max-width:720px;margin:0 0 32px;font-size:18px}.lessons{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:24px}.lesson{max-width:560px;border:1px solid var(--line);border-radius:24px;overflow:hidden;background:white}.illustration{padding:24px;background:linear-gradient(135deg,var(--mint),#f3f8f4);display:flex;align-items:center;justify-content:space-between;gap:16px}.formula{font-size:clamp(27px,4vw,38px);font-weight:650;letter-spacing:1px}.count{font-size:13px;padding:6px 12px;background:white;border:1px solid var(--line);border-radius:24px;white-space:nowrap}.content{padding:28px}.content h2{font-size:25px;line-height:1.3;margin:8px 0 14px;letter-spacing:-.4px}.content p{color:var(--muted);margin:0 0 20px}.topics{padding-left:22px;margin:0 0 26px;color:#516c6d}.topics li{margin:6px 0}.action{display:flex;align-items:center;justify-content:space-between;gap:16px;text-decoration:none;background:var(--ink);color:white;font-weight:650;padding:13px 18px;border-radius:12px}.action:hover{background:var(--teal)}a:focus-visible{outline:3px solid var(--teal);outline-offset:5px}footer{max-width:1200px;margin:auto;padding:20px 28px;border-top:1px solid var(--line);color:var(--muted);font-size:12px}@media(max-width:550px){.top{padding:12px 18px;flex-wrap:wrap;gap:10px}.brand{max-width:260px}.back{font-size:13px}main{padding:30px 18px 44px}.intro{font-size:16px}.content{padding:22px}.illustration{padding:22px}footer{padding:20px 18px}}\n    .alcohols-header{flex-wrap:wrap}\n    .series-header{flex-wrap:wrap}.series-heading{min-width:0}.series-heading .formula{display:block}.series-formula{margin:3px 0 0;color:var(--muted);font-size:15px;font-weight:400;line-height:1.5;white-space:nowrap}.series-formula .restriction{margin-left:10px;font-size:13px}\n    .lesson-part + .lesson-part{margin-top:26px;padding-top:24px;border-top:1px solid var(--line)}.lesson-part h3{font-size:20px;line-height:1.4;margin:0 0 12px}.lesson-part p{margin-bottom:14px}.lesson-part .series-formula{margin:-5px 0 14px}.pending{display:block;padding:12px 18px;border-radius:12px;background:var(--mint);color:var(--ink);font-weight:650}\n  ",
     "header": {
@@ -913,7 +913,7 @@
               "Αλκύλια, διακλαδώσεις και αλφαβητική σειρά",
               "Διερεύνηση σε 2D και 3D"
             ],
-            "href": "../mulermoc-nom-51.html?scenario=scenarios/alkanes-nomenclature-branches.scenario.json&present=1&from=theory-library&v=theory-progressive-20261024",
+            "href": "../mulermoc-nom-52.html?scenario=scenarios/alkanes-nomenclature-branches.scenario.json&present=1&from=theory-library&v=theory-progressive-20261024",
             "scenario": "scenarios/alkanes-nomenclature-branches.scenario.json",
             "actionLabel": "Ξεκίνα το μάθημα"
           }
@@ -957,7 +957,7 @@
               "Αλκύλια, διακλαδώσεις και αλφαβητική σειρά",
               "Διερεύνηση σε 2D και 3D"
             ],
-            "href": "../mulermoc-nom-51.html?scenario=scenarios/alkenes-nomenclature-branches.scenario.json&present=1&from=theory-library&v=theory-progressive-20261024",
+            "href": "../mulermoc-nom-52.html?scenario=scenarios/alkenes-nomenclature-branches.scenario.json&present=1&from=theory-library&v=theory-progressive-20261024",
             "scenario": "scenarios/alkenes-nomenclature-branches.scenario.json",
             "actionLabel": "Ξεκίνα το μάθημα"
           }
@@ -1001,7 +1001,7 @@
               "Αλκύλια, διακλαδώσεις και αλφαβητική σειρά",
               "Διερεύνηση σε 2D και 3D"
             ],
-            "href": "../mulermoc-nom-51.html?scenario=scenarios/alkynes-nomenclature-branches.scenario.json&present=1&from=theory-library&v=theory-progressive-20261024",
+            "href": "../mulermoc-nom-52.html?scenario=scenarios/alkynes-nomenclature-branches.scenario.json&present=1&from=theory-library&v=theory-progressive-20261024",
             "scenario": "scenarios/alkynes-nomenclature-branches.scenario.json",
             "actionLabel": "Ξεκίνα το μάθημα"
           }
@@ -1045,7 +1045,7 @@
               "Αλκύλια, διακλαδώσεις και αλφαβητική σειρά",
               "Διερεύνηση σε 2D και 3D"
             ],
-            "href": "../mulermoc-nom-51.html?scenario=scenarios/alkadienes-nomenclature-branches.scenario.json&present=1&from=theory-library&v=theory-progressive-20261024",
+            "href": "../mulermoc-nom-52.html?scenario=scenarios/alkadienes-nomenclature-branches.scenario.json&present=1&from=theory-library&v=theory-progressive-20261024",
             "scenario": "scenarios/alkadienes-nomenclature-branches.scenario.json",
             "actionLabel": "Ξεκίνα το μάθημα"
           }
@@ -1089,7 +1089,7 @@
               "Αλκύλια, διακλαδώσεις και αλφαβητική σειρά",
               "Διερεύνηση σε 2D και 3D"
             ],
-            "href": "../mulermoc-nom-51.html?scenario=scenarios/enynes-nomenclature-branches.scenario.json&present=1&from=theory-library&v=theory-progressive-20261024",
+            "href": "../mulermoc-nom-52.html?scenario=scenarios/enynes-nomenclature-branches.scenario.json&present=1&from=theory-library&v=theory-progressive-20261024",
             "scenario": "scenarios/enynes-nomenclature-branches.scenario.json",
             "actionLabel": "Ξεκίνα το μάθημα"
           }
@@ -1132,7 +1132,7 @@
             },
             "steps": 20,
             "topics": [],
-            "href": "../mulermoc-nom-51.html?scenario=scenarios/saturated-monoalcohols-nomenclature.scenario.json&present=1&from=theory-library&v=monoalcohol-theory-20261025",
+            "href": "../mulermoc-nom-52.html?scenario=scenarios/saturated-monoalcohols-nomenclature.scenario.json&present=1&from=theory-library&v=monoalcohol-theory-20261025",
             "scenario": "scenarios/saturated-monoalcohols-nomenclature.scenario.json",
             "actionLabel": "Ξεκίνα το μάθημα"
           },
@@ -1171,7 +1171,7 @@
             },
             "steps": 22,
             "topics": [],
-            "href": "../mulermoc-nom-51.html?scenario=scenarios/other-alcohols-nomenclature.scenario.json&present=1&from=theory-library&v=other-alcohols-theory-20261025",
+            "href": "../mulermoc-nom-52.html?scenario=scenarios/other-alcohols-nomenclature.scenario.json&present=1&from=theory-library&v=other-alcohols-theory-20261025",
             "scenario": "scenarios/other-alcohols-nomenclature.scenario.json",
             "actionLabel": "Ξεκίνα το μάθημα"
           }
@@ -1219,7 +1219,7 @@
               "Συστηματική ονομασία: αλκοξυομάδες, κύρια αλυσίδα και θέσεις",
               "Διερεύνηση σε 2D και προαιρετικά σε 3D"
             ],
-            "href": "../mulermoc-nom-51.html?scenario=scenarios/saturated-monoethers-nomenclature.scenario.json&present=1&from=theory-library&v=alkoxy-rule-20261026",
+            "href": "../mulermoc-nom-52.html?scenario=scenarios/saturated-monoethers-nomenclature.scenario.json&present=1&from=theory-library&v=alkoxy-rule-20261026",
             "scenario": "scenarios/saturated-monoethers-nomenclature.scenario.json",
             "actionLabel": "Ξεκίνα το μάθημα"
           }
@@ -1262,7 +1262,7 @@
             },
             "steps": 24,
             "topics": [],
-            "href": "../mulermoc-nom-51.html?scenario=scenarios/saturated-monoaldehydes-nomenclature.scenario.json&present=1&from=theory-library&v=monoaldehydes-theory-20261026",
+            "href": "../mulermoc-nom-52.html?scenario=scenarios/saturated-monoaldehydes-nomenclature.scenario.json&present=1&from=theory-library&v=monoaldehydes-theory-20261026",
             "scenario": "scenarios/saturated-monoaldehydes-nomenclature.scenario.json",
             "actionLabel": "Ξεκίνα το μάθημα"
           },
@@ -1301,7 +1301,7 @@
             },
             "steps": 26,
             "topics": [],
-            "href": "../mulermoc-nom-51.html?scenario=scenarios/other-aldehydes-nomenclature.scenario.json&present=1&from=theory-library&v=other-aldehydes-theory-20261026",
+            "href": "../mulermoc-nom-52.html?scenario=scenarios/other-aldehydes-nomenclature.scenario.json&present=1&from=theory-library&v=other-aldehydes-theory-20261026",
             "scenario": "scenarios/other-aldehydes-nomenclature.scenario.json",
             "actionLabel": "Ξεκίνα το μάθημα"
           }
@@ -1344,7 +1344,7 @@
             },
             "steps": 25,
             "topics": [],
-            "href": "../mulermoc-nom-51.html?scenario=scenarios/saturated-monoketones-nomenclature.scenario.json&present=1&from=theory-library&v=monoketones-theory-20261026",
+            "href": "../mulermoc-nom-52.html?scenario=scenarios/saturated-monoketones-nomenclature.scenario.json&present=1&from=theory-library&v=monoketones-theory-20261026",
             "scenario": "scenarios/saturated-monoketones-nomenclature.scenario.json",
             "actionLabel": "Ξεκίνα το μάθημα"
           },
@@ -1383,7 +1383,7 @@
             },
             "steps": 28,
             "topics": [],
-            "href": "../mulermoc-nom-51.html?scenario=scenarios/other-ketones-nomenclature.scenario.json&present=1&from=theory-library&v=other-ketones-theory-20261026",
+            "href": "../mulermoc-nom-52.html?scenario=scenarios/other-ketones-nomenclature.scenario.json&present=1&from=theory-library&v=other-ketones-theory-20261026",
             "scenario": "scenarios/other-ketones-nomenclature.scenario.json",
             "actionLabel": "Ξεκίνα το μάθημα"
           }
@@ -1400,7 +1400,7 @@
       "Χώρος εκπαιδευτικού",
       "Ο προσωπικός χώρος με σύνδεση, αποθήκευση και λήψη υλικού είναι υπό σχεδιασμό. Σήμερα μπορείς να ανοίξεις την εφαρμογή και να χρησιμοποιήσεις το εργαλείο σεναρίων.",
       "Άνοιγμα εφαρμογής",
-      "../mulermoc-nom-51.html"
+      "../mulermoc-nom-52.html"
     ],
     "login": [
       "Σύνδεση",
@@ -1410,18 +1410,18 @@
   "inventory": {
     "cards": 9,
     "lessonLinks": [
-      "../mulermoc-nom-51.html?scenario=scenarios/alkanes-nomenclature-branches.scenario.json&present=1&from=theory-library&v=theory-progressive-20261024",
-      "../mulermoc-nom-51.html?scenario=scenarios/alkenes-nomenclature-branches.scenario.json&present=1&from=theory-library&v=theory-progressive-20261024",
-      "../mulermoc-nom-51.html?scenario=scenarios/alkynes-nomenclature-branches.scenario.json&present=1&from=theory-library&v=theory-progressive-20261024",
-      "../mulermoc-nom-51.html?scenario=scenarios/alkadienes-nomenclature-branches.scenario.json&present=1&from=theory-library&v=theory-progressive-20261024",
-      "../mulermoc-nom-51.html?scenario=scenarios/enynes-nomenclature-branches.scenario.json&present=1&from=theory-library&v=theory-progressive-20261024",
-      "../mulermoc-nom-51.html?scenario=scenarios/saturated-monoalcohols-nomenclature.scenario.json&present=1&from=theory-library&v=monoalcohol-theory-20261025",
-      "../mulermoc-nom-51.html?scenario=scenarios/other-alcohols-nomenclature.scenario.json&present=1&from=theory-library&v=other-alcohols-theory-20261025",
-      "../mulermoc-nom-51.html?scenario=scenarios/saturated-monoethers-nomenclature.scenario.json&present=1&from=theory-library&v=alkoxy-rule-20261026",
-      "../mulermoc-nom-51.html?scenario=scenarios/saturated-monoaldehydes-nomenclature.scenario.json&present=1&from=theory-library&v=monoaldehydes-theory-20261026",
-      "../mulermoc-nom-51.html?scenario=scenarios/other-aldehydes-nomenclature.scenario.json&present=1&from=theory-library&v=other-aldehydes-theory-20261026",
-      "../mulermoc-nom-51.html?scenario=scenarios/saturated-monoketones-nomenclature.scenario.json&present=1&from=theory-library&v=monoketones-theory-20261026",
-      "../mulermoc-nom-51.html?scenario=scenarios/other-ketones-nomenclature.scenario.json&present=1&from=theory-library&v=other-ketones-theory-20261026"
+      "../mulermoc-nom-52.html?scenario=scenarios/alkanes-nomenclature-branches.scenario.json&present=1&from=theory-library&v=theory-progressive-20261024",
+      "../mulermoc-nom-52.html?scenario=scenarios/alkenes-nomenclature-branches.scenario.json&present=1&from=theory-library&v=theory-progressive-20261024",
+      "../mulermoc-nom-52.html?scenario=scenarios/alkynes-nomenclature-branches.scenario.json&present=1&from=theory-library&v=theory-progressive-20261024",
+      "../mulermoc-nom-52.html?scenario=scenarios/alkadienes-nomenclature-branches.scenario.json&present=1&from=theory-library&v=theory-progressive-20261024",
+      "../mulermoc-nom-52.html?scenario=scenarios/enynes-nomenclature-branches.scenario.json&present=1&from=theory-library&v=theory-progressive-20261024",
+      "../mulermoc-nom-52.html?scenario=scenarios/saturated-monoalcohols-nomenclature.scenario.json&present=1&from=theory-library&v=monoalcohol-theory-20261025",
+      "../mulermoc-nom-52.html?scenario=scenarios/other-alcohols-nomenclature.scenario.json&present=1&from=theory-library&v=other-alcohols-theory-20261025",
+      "../mulermoc-nom-52.html?scenario=scenarios/saturated-monoethers-nomenclature.scenario.json&present=1&from=theory-library&v=alkoxy-rule-20261026",
+      "../mulermoc-nom-52.html?scenario=scenarios/saturated-monoaldehydes-nomenclature.scenario.json&present=1&from=theory-library&v=monoaldehydes-theory-20261026",
+      "../mulermoc-nom-52.html?scenario=scenarios/other-aldehydes-nomenclature.scenario.json&present=1&from=theory-library&v=other-aldehydes-theory-20261026",
+      "../mulermoc-nom-52.html?scenario=scenarios/saturated-monoketones-nomenclature.scenario.json&present=1&from=theory-library&v=monoketones-theory-20261026",
+      "../mulermoc-nom-52.html?scenario=scenarios/other-ketones-nomenclature.scenario.json&present=1&from=theory-library&v=other-ketones-theory-20261026"
     ]
   }
 }

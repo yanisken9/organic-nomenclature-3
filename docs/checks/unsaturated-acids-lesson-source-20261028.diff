@@ -1,0 +1,1958 @@
+--- before/scenarios/other-carboxylic-acids-nomenclature.scenario.json
++++ after/scenarios/other-carboxylic-acids-nomenclature.scenario.json
+@@ -8,8 +8,8 @@
+   "steps": [
+     {
+       "n": 1,
+-      "title": "Πέρα από τα κορεσμένα μονοκαρβοξυλικά οξέα",
+-      "note": "Μελετάμε <b>13 καρβοξυλικά οξέα</b> με C=C ή C≡C, περισσότερες –COOH ή πρόσθετες χαρακτηριστικές ομάδες. Οι κατηγορίες μπορούν να συνδυάζονται. Ξεκινάμε από το προπενικό οξύ, CH₂=CH–COOH. Το C=O της –COOH δεν είναι ο δεσμός που χαρακτηρίζει ένα οξύ ως ακόρεστο.",
++      "title": "Ακόρεστα μονοκαρβοξυλικά και δικαρβοξυλικά οξέα",
++      "note": "Μελετάμε <b>7 ακόρεστα καρβοξυλικά οξέα</b> με τουλάχιστον έναν C=C ή C≡C και <b>μία ή δύο –COOH</b>, χωρίς άλλες χαρακτηριστικές ομάδες. Ξεκινάμε από το προπενικό οξύ, CH₂=CH–COOH. Το C=O της –COOH δεν αρκεί για να χαρακτηριστεί ένα οξύ ακόρεστο. Οι ανθρακικές διακλαδώσεις μπορούν να υπάρχουν και δεν αποτελούν πρόσθετες χαρακτηριστικές ομάδες.",
+       "mode2D": "condensed",
+       "mainChainMode": "algorithmic",
+       "chainIdx": 0,
+@@ -48,12 +48,6 @@
+       },
+       "menuSubset": [
+         "propenoic_acid",
+-        "propanedioic_acid",
+-        "hydroxypropanoic_acid_2",
+-        "Oxopropanoic_acid",
+-        "aminobutanoic_acid_3",
+-        "oxobutanoic_acid",
+-        "dihydroxybutanedioic_acid_2_3",
+         "methyl_2_propenoic_acid",
+         "penten_2_yn_4_oic_acid",
+         "hexen_2_yn_4_dioic_acid",
+@@ -140,12 +134,6 @@
+       },
+       "menuSubset": [
+         "propenoic_acid",
+-        "propanedioic_acid",
+-        "hydroxypropanoic_acid_2",
+-        "Oxopropanoic_acid",
+-        "aminobutanoic_acid_3",
+-        "oxobutanoic_acid",
+-        "dihydroxybutanedioic_acid_2_3",
+         "methyl_2_propenoic_acid",
+         "penten_2_yn_4_oic_acid",
+         "hexen_2_yn_4_dioic_acid",
+@@ -231,12 +219,6 @@
+       },
+       "menuSubset": [
+         "propenoic_acid",
+-        "propanedioic_acid",
+-        "hydroxypropanoic_acid_2",
+-        "Oxopropanoic_acid",
+-        "aminobutanoic_acid_3",
+-        "oxobutanoic_acid",
+-        "dihydroxybutanedioic_acid_2_3",
+         "methyl_2_propenoic_acid",
+         "penten_2_yn_4_oic_acid",
+         "hexen_2_yn_4_dioic_acid",
+@@ -320,12 +302,6 @@
+       },
+       "menuSubset": [
+         "propenoic_acid",
+-        "propanedioic_acid",
+-        "hydroxypropanoic_acid_2",
+-        "Oxopropanoic_acid",
+-        "aminobutanoic_acid_3",
+-        "oxobutanoic_acid",
+-        "dihydroxybutanedioic_acid_2_3",
+         "methyl_2_propenoic_acid",
+         "penten_2_yn_4_oic_acid",
+         "hexen_2_yn_4_dioic_acid",
+@@ -373,1364 +349,6 @@
+     },
+     {
+       "n": 5,
+-      "title": "Δύο καρβοξυλομάδες στην ίδια αλυσίδα",
+-      "note": "Στο HOOC–CH₂–COOH η κύρια αλυσίδα περιλαμβάνει <b>και τα δύο καρβοξυλικά C</b>. Μετράμε τρία C συνολικά και κρατάμε <b>προπ-</b>. Κάθε άκρο δίνει την ίδια αρίθμηση.",
+-      "mode2D": "condensed",
+-      "mainChainMode": "algorithmic",
+-      "chainIdx": 0,
+-      "etherNamingMode": "iupac",
+-      "nameAnalysisMode": "compCarbonsCount",
+-      "selectedRule": null,
+-      "style2D": {
+-        "atomColors": true,
+-        "colorMode": "atom",
+-        "zigzag": false,
+-        "zoom": 2
+-      },
+-      "styleName": {
+-        "box": true,
+-        "cross": true,
+-        "etherNaming": "iupac",
+-        "panelOpen": false,
+-        "hidden": [
+-          "comp6",
+-          "comp9"
+-        ]
+-      },
+-      "styleHighlight": {
+-        "bondAtoms": false,
+-        "numberingAtoms": true,
+-        "numberingBonds": true
+-      },
+-      "styleText": {
+-        "fontSizePx": null,
+-        "textWidthPx": null,
+-        "columns": null
+-      },
+-      "audio": {
+-        "narrate": false
+-      },
+-      "menuSubset": [
+-        "propenoic_acid",
+-        "propanedioic_acid",
+-        "hydroxypropanoic_acid_2",
+-        "Oxopropanoic_acid",
+-        "aminobutanoic_acid_3",
+-        "oxobutanoic_acid",
+-        "dihydroxybutanedioic_acid_2_3",
+-        "methyl_2_propenoic_acid",
+-        "penten_2_yn_4_oic_acid",
+-        "hexen_2_yn_4_dioic_acid",
+-        "ethyl_2_methyl_3_penten_2_yn_4_oic_acid",
+-        "ethyl_3_isopropyl_2_dimethyl_4_5_hexadien_2_4_dioic_acid",
+-        "ethyl_2_isopropyl_3_dimethyl_6_6_hepten_2_yn_4_dioic_acid"
+-      ],
+-      "menuGroups": [
+-        "molecules"
+-      ],
+-      "view3D": {
+-        "style": "ballnstick",
+-        "spin": false,
+-        "showH": true,
+-        "atomSymbols": true,
+-        "moveto": null
+-      },
+-      "show": {
+-        "menu": false,
+-        "viewerButtons": false,
+-        "viewerSettings": false,
+-        "viewers": {
+-          "2D": true,
+-          "3D": false
+-        },
+-        "viewerMaxHeight": 420,
+-        "viewerBothHeight": null,
+-        "controls": {
+-          "2D": false,
+-          "3D": false
+-        },
+-        "save": {
+-          "2D": false,
+-          "3D": false
+-        },
+-        "naming": true,
+-        "nameSettings": false,
+-        "nameEye": false,
+-        "audio": false,
+-        "rule": false,
+-        "text": true,
+-        "nameClick": false
+-      },
+-      "selectedMol": "propanedioic_acid"
+-    },
+-    {
+-      "n": 6,
+-      "title": "Απλοί δεσμοί μεταξύ των C",
+-      "note": "Οι δεσμοί C–C είναι απλοί και το δεύτερο συνθετικό είναι <b>-αν-</b>. Τα δύο C=O ανήκουν στις καρβοξυλομάδες. Πρόκειται για κορεσμένο δικαρβοξυλικό οξύ.",
+-      "mode2D": "condensed",
+-      "mainChainMode": "algorithmic",
+-      "chainIdx": 0,
+-      "etherNamingMode": "iupac",
+-      "nameAnalysisMode": "compBondType",
+-      "selectedRule": null,
+-      "style2D": {
+-        "atomColors": true,
+-        "colorMode": "atom",
+-        "zigzag": false,
+-        "zoom": 2
+-      },
+-      "styleName": {
+-        "box": true,
+-        "cross": true,
+-        "etherNaming": "iupac",
+-        "panelOpen": false,
+-        "hidden": [
+-          "comp9"
+-        ]
+-      },
+-      "styleHighlight": {
+-        "bondAtoms": false,
+-        "numberingAtoms": true,
+-        "numberingBonds": true
+-      },
+-      "styleText": {
+-        "fontSizePx": null,
+-        "textWidthPx": null,
+-        "columns": null
+-      },
+-      "audio": {
+-        "narrate": false
+-      },
+-      "menuSubset": [
+-        "propenoic_acid",
+-        "propanedioic_acid",
+-        "hydroxypropanoic_acid_2",
+-        "Oxopropanoic_acid",
+-        "aminobutanoic_acid_3",
+-        "oxobutanoic_acid",
+-        "dihydroxybutanedioic_acid_2_3",
+-        "methyl_2_propenoic_acid",
+-        "penten_2_yn_4_oic_acid",
+-        "hexen_2_yn_4_dioic_acid",
+-        "ethyl_2_methyl_3_penten_2_yn_4_oic_acid",
+-        "ethyl_3_isopropyl_2_dimethyl_4_5_hexadien_2_4_dioic_acid",
+-        "ethyl_2_isopropyl_3_dimethyl_6_6_hepten_2_yn_4_dioic_acid"
+-      ],
+-      "menuGroups": [
+-        "molecules"
+-      ],
+-      "view3D": {
+-        "style": "ballnstick",
+-        "spin": false,
+-        "showH": true,
+-        "atomSymbols": true,
+-        "moveto": null
+-      },
+-      "show": {
+-        "menu": false,
+-        "viewerButtons": false,
+-        "viewerSettings": false,
+-        "viewers": {
+-          "2D": true,
+-          "3D": false
+-        },
+-        "viewerMaxHeight": 420,
+-        "viewerBothHeight": null,
+-        "controls": {
+-          "2D": false,
+-          "3D": false
+-        },
+-        "save": {
+-          "2D": false,
+-          "3D": false
+-        },
+-        "naming": true,
+-        "nameSettings": false,
+-        "nameEye": false,
+-        "audio": false,
+-        "rule": false,
+-        "text": true,
+-        "nameClick": false
+-      },
+-      "selectedMol": "propanedioic_acid"
+-    },
+-    {
+-      "n": 7,
+-      "title": "Το -διικό οξύ μετρά καρβοξυλομάδες",
+-      "note": "Δύο –COOH δίνουν <b>-διικό οξύ</b> και το πλήρες όνομα είναι <b>προπανοδιικό οξύ</b>. Το δι- εδώ μετρά καρβοξυλομάδες, όχι διπλούς δεσμούς.",
+-      "mode2D": "condensed",
+-      "mainChainMode": "algorithmic",
+-      "chainIdx": 0,
+-      "etherNamingMode": "iupac",
+-      "nameAnalysisMode": "compSuffix",
+-      "selectedRule": null,
+-      "style2D": {
+-        "atomColors": true,
+-        "colorMode": "atom",
+-        "zigzag": false,
+-        "zoom": 2
+-      },
+-      "styleName": {
+-        "box": true,
+-        "cross": false,
+-        "etherNaming": "iupac",
+-        "panelOpen": false,
+-        "hidden": []
+-      },
+-      "styleHighlight": {
+-        "bondAtoms": false,
+-        "numberingAtoms": true,
+-        "numberingBonds": true
+-      },
+-      "styleText": {
+-        "fontSizePx": null,
+-        "textWidthPx": null,
+-        "columns": null
+-      },
+-      "audio": {
+-        "narrate": false
+-      },
+-      "menuSubset": [
+-        "propenoic_acid",
+-        "propanedioic_acid",
+-        "hydroxypropanoic_acid_2",
+-        "Oxopropanoic_acid",
+-        "aminobutanoic_acid_3",
+-        "oxobutanoic_acid",
+-        "dihydroxybutanedioic_acid_2_3",
+-        "methyl_2_propenoic_acid",
+-        "penten_2_yn_4_oic_acid",
+-        "hexen_2_yn_4_dioic_acid",
+-        "ethyl_2_methyl_3_penten_2_yn_4_oic_acid",
+-        "ethyl_3_isopropyl_2_dimethyl_4_5_hexadien_2_4_dioic_acid",
+-        "ethyl_2_isopropyl_3_dimethyl_6_6_hepten_2_yn_4_dioic_acid"
+-      ],
+-      "menuGroups": [
+-        "molecules"
+-      ],
+-      "view3D": {
+-        "style": "ballnstick",
+-        "spin": false,
+-        "showH": true,
+-        "atomSymbols": true,
+-        "moveto": null
+-      },
+-      "show": {
+-        "menu": false,
+-        "viewerButtons": false,
+-        "viewerSettings": false,
+-        "viewers": {
+-          "2D": true,
+-          "3D": false
+-        },
+-        "viewerMaxHeight": 420,
+-        "viewerBothHeight": null,
+-        "controls": {
+-          "2D": false,
+-          "3D": false
+-        },
+-        "save": {
+-          "2D": false,
+-          "3D": false
+-        },
+-        "naming": true,
+-        "nameSettings": false,
+-        "nameEye": false,
+-        "audio": false,
+-        "rule": false,
+-        "text": true,
+-        "nameClick": false
+-      },
+-      "selectedMol": "propanedioic_acid"
+-    },
+-    {
+-      "n": 8,
+-      "title": "Η –COOH καθορίζει την αρίθμηση",
+-      "note": "Στο CH₃–CH(OH)–COOH η κύρια αλυσίδα έχει τρία C. Ξεκινάμε από το C της –COOH ώστε να είναι <b>C1</b>, ακόμη και όταν υπάρχει πρόσθετη –OH.",
+-      "mode2D": "condensed",
+-      "mainChainMode": "algorithmic",
+-      "chainIdx": 0,
+-      "etherNamingMode": "iupac",
+-      "nameAnalysisMode": "compCarbonsCount",
+-      "selectedRule": null,
+-      "style2D": {
+-        "atomColors": true,
+-        "colorMode": "atom",
+-        "zigzag": false,
+-        "zoom": 2
+-      },
+-      "styleName": {
+-        "box": true,
+-        "cross": true,
+-        "etherNaming": "iupac",
+-        "panelOpen": false,
+-        "hidden": [
+-          "comp0",
+-          "comp1"
+-        ]
+-      },
+-      "styleHighlight": {
+-        "bondAtoms": false,
+-        "numberingAtoms": true,
+-        "numberingBonds": true
+-      },
+-      "styleText": {
+-        "fontSizePx": null,
+-        "textWidthPx": null,
+-        "columns": null
+-      },
+-      "audio": {
+-        "narrate": false
+-      },
+-      "menuSubset": [
+-        "propenoic_acid",
+-        "propanedioic_acid",
+-        "hydroxypropanoic_acid_2",
+-        "Oxopropanoic_acid",
+-        "aminobutanoic_acid_3",
+-        "oxobutanoic_acid",
+-        "dihydroxybutanedioic_acid_2_3",
+-        "methyl_2_propenoic_acid",
+-        "penten_2_yn_4_oic_acid",
+-        "hexen_2_yn_4_dioic_acid",
+-        "ethyl_2_methyl_3_penten_2_yn_4_oic_acid",
+-        "ethyl_3_isopropyl_2_dimethyl_4_5_hexadien_2_4_dioic_acid",
+-        "ethyl_2_isopropyl_3_dimethyl_6_6_hepten_2_yn_4_dioic_acid"
+-      ],
+-      "menuGroups": [
+-        "molecules"
+-      ],
+-      "view3D": {
+-        "style": "ballnstick",
+-        "spin": false,
+-        "showH": true,
+-        "atomSymbols": true,
+-        "moveto": null
+-      },
+-      "show": {
+-        "menu": false,
+-        "viewerButtons": false,
+-        "viewerSettings": false,
+-        "viewers": {
+-          "2D": true,
+-          "3D": false
+-        },
+-        "viewerMaxHeight": 420,
+-        "viewerBothHeight": null,
+-        "controls": {
+-          "2D": false,
+-          "3D": false
+-        },
+-        "save": {
+-          "2D": false,
+-          "3D": false
+-        },
+-        "naming": true,
+-        "nameSettings": false,
+-        "nameEye": false,
+-        "audio": false,
+-        "rule": false,
+-        "text": true,
+-        "nameClick": false
+-      },
+-      "selectedMol": "hydroxypropanoic_acid_2"
+-    },
+-    {
+-      "n": 9,
+-      "title": "Η πρόσθετη –OH βρίσκεται στο C2",
+-      "note": "Η ομάδα –OH έξω από την καρβοξυλομάδα συνδέεται με το <b>C2</b>. Ο αριθμός 2 δηλώνει τη θέση της πρόσθετης ομάδας και δεν αλλάζει τη θέση του καρβοξυλίου.",
+-      "mode2D": "condensed",
+-      "mainChainMode": "algorithmic",
+-      "chainIdx": 0,
+-      "etherNamingMode": "iupac",
+-      "nameAnalysisMode": "compNumber1",
+-      "selectedRule": null,
+-      "style2D": {
+-        "atomColors": true,
+-        "colorMode": "atom",
+-        "zigzag": false,
+-        "zoom": 2
+-      },
+-      "styleName": {
+-        "box": true,
+-        "cross": true,
+-        "etherNaming": "iupac",
+-        "panelOpen": false,
+-        "hidden": [
+-          "comp1"
+-        ]
+-      },
+-      "styleHighlight": {
+-        "bondAtoms": false,
+-        "numberingAtoms": true,
+-        "numberingBonds": true
+-      },
+-      "styleText": {
+-        "fontSizePx": null,
+-        "textWidthPx": null,
+-        "columns": null
+-      },
+-      "audio": {
+-        "narrate": false
+-      },
+-      "menuSubset": [
+-        "propenoic_acid",
+-        "propanedioic_acid",
+-        "hydroxypropanoic_acid_2",
+-        "Oxopropanoic_acid",
+-        "aminobutanoic_acid_3",
+-        "oxobutanoic_acid",
+-        "dihydroxybutanedioic_acid_2_3",
+-        "methyl_2_propenoic_acid",
+-        "penten_2_yn_4_oic_acid",
+-        "hexen_2_yn_4_dioic_acid",
+-        "ethyl_2_methyl_3_penten_2_yn_4_oic_acid",
+-        "ethyl_3_isopropyl_2_dimethyl_4_5_hexadien_2_4_dioic_acid",
+-        "ethyl_2_isopropyl_3_dimethyl_6_6_hepten_2_yn_4_dioic_acid"
+-      ],
+-      "menuGroups": [
+-        "molecules"
+-      ],
+-      "view3D": {
+-        "style": "ballnstick",
+-        "spin": false,
+-        "showH": true,
+-        "atomSymbols": true,
+-        "moveto": null
+-      },
+-      "show": {
+-        "menu": false,
+-        "viewerButtons": false,
+-        "viewerSettings": false,
+-        "viewers": {
+-          "2D": true,
+-          "3D": false
+-        },
+-        "viewerMaxHeight": 420,
+-        "viewerBothHeight": null,
+-        "controls": {
+-          "2D": false,
+-          "3D": false
+-        },
+-        "save": {
+-          "2D": false,
+-          "3D": false
+-        },
+-        "naming": true,
+-        "nameSettings": false,
+-        "nameEye": false,
+-        "audio": false,
+-        "rule": false,
+-        "text": true,
+-        "nameClick": false
+-      },
+-      "selectedMol": "hydroxypropanoic_acid_2"
+-    },
+-    {
+-      "n": 10,
+-      "title": "Το υδροξύλιο γίνεται πρόθεμα",
+-      "note": "Η πρόσθετη –OH δηλώνεται με <b>υδροξυ-</b>, ενώ η –COOH κρατά την κατάληξη του οξέος. Το όνομα είναι <b>2-υδροξυπροπανικό οξύ</b>. Η –OH της ίδιας της –COOH δεν προσμετράται στο πρόθεμα.",
+-      "mode2D": "condensed",
+-      "mainChainMode": "algorithmic",
+-      "chainIdx": 0,
+-      "etherNamingMode": "iupac",
+-      "nameAnalysisMode": "compSecondSub1",
+-      "selectedRule": null,
+-      "style2D": {
+-        "atomColors": true,
+-        "colorMode": "atom",
+-        "zigzag": false,
+-        "zoom": 2
+-      },
+-      "styleName": {
+-        "box": true,
+-        "cross": false,
+-        "etherNaming": "iupac",
+-        "panelOpen": false,
+-        "hidden": []
+-      },
+-      "styleHighlight": {
+-        "bondAtoms": false,
+-        "numberingAtoms": true,
+-        "numberingBonds": true
+-      },
+-      "styleText": {
+-        "fontSizePx": null,
+-        "textWidthPx": null,
+-        "columns": null
+-      },
+-      "audio": {
+-        "narrate": false
+-      },
+-      "menuSubset": [
+-        "propenoic_acid",
+-        "propanedioic_acid",
+-        "hydroxypropanoic_acid_2",
+-        "Oxopropanoic_acid",
+-        "aminobutanoic_acid_3",
+-        "oxobutanoic_acid",
+-        "dihydroxybutanedioic_acid_2_3",
+-        "methyl_2_propenoic_acid",
+-        "penten_2_yn_4_oic_acid",
+-        "hexen_2_yn_4_dioic_acid",
+-        "ethyl_2_methyl_3_penten_2_yn_4_oic_acid",
+-        "ethyl_3_isopropyl_2_dimethyl_4_5_hexadien_2_4_dioic_acid",
+-        "ethyl_2_isopropyl_3_dimethyl_6_6_hepten_2_yn_4_dioic_acid"
+-      ],
+-      "menuGroups": [
+-        "molecules"
+-      ],
+-      "view3D": {
+-        "style": "ballnstick",
+-        "spin": false,
+-        "showH": true,
+-        "atomSymbols": true,
+-        "moveto": null
+-      },
+-      "show": {
+-        "menu": false,
+-        "viewerButtons": false,
+-        "viewerSettings": false,
+-        "viewers": {
+-          "2D": true,
+-          "3D": false
+-        },
+-        "viewerMaxHeight": 420,
+-        "viewerBothHeight": null,
+-        "controls": {
+-          "2D": false,
+-          "3D": false
+-        },
+-        "save": {
+-          "2D": false,
+-          "3D": false
+-        },
+-        "naming": true,
+-        "nameSettings": false,
+-        "nameEye": false,
+-        "audio": false,
+-        "rule": false,
+-        "text": true,
+-        "nameClick": false
+-      },
+-      "selectedMol": "hydroxypropanoic_acid_2"
+-    },
+-    {
+-      "n": 11,
+-      "title": "Πρόσθετο καρβονύλιο στο C2",
+-      "note": "Το CH₃–CO–COOH έχει κύρια αλυσίδα τριών C. Με το καρβοξύλιο στο C1, το <b>πρόσθετο κετονικό C=O βρίσκεται στο C2</b>. Ξεχώρισέ το από το C=O της –COOH.",
+-      "mode2D": "condensed",
+-      "mainChainMode": "algorithmic",
+-      "chainIdx": 0,
+-      "etherNamingMode": "iupac",
+-      "nameAnalysisMode": "compCarbonsCount",
+-      "selectedRule": null,
+-      "style2D": {
+-        "atomColors": true,
+-        "colorMode": "atom",
+-        "zigzag": false,
+-        "zoom": 2
+-      },
+-      "styleName": {
+-        "box": true,
+-        "cross": true,
+-        "etherNaming": "iupac",
+-        "panelOpen": false,
+-        "hidden": [
+-          "comp1"
+-        ]
+-      },
+-      "styleHighlight": {
+-        "bondAtoms": false,
+-        "numberingAtoms": true,
+-        "numberingBonds": true
+-      },
+-      "styleText": {
+-        "fontSizePx": null,
+-        "textWidthPx": null,
+-        "columns": null
+-      },
+-      "audio": {
+-        "narrate": false
+-      },
+-      "menuSubset": [
+-        "propenoic_acid",
+-        "propanedioic_acid",
+-        "hydroxypropanoic_acid_2",
+-        "Oxopropanoic_acid",
+-        "aminobutanoic_acid_3",
+-        "oxobutanoic_acid",
+-        "dihydroxybutanedioic_acid_2_3",
+-        "methyl_2_propenoic_acid",
+-        "penten_2_yn_4_oic_acid",
+-        "hexen_2_yn_4_dioic_acid",
+-        "ethyl_2_methyl_3_penten_2_yn_4_oic_acid",
+-        "ethyl_3_isopropyl_2_dimethyl_4_5_hexadien_2_4_dioic_acid",
+-        "ethyl_2_isopropyl_3_dimethyl_6_6_hepten_2_yn_4_dioic_acid"
+-      ],
+-      "menuGroups": [
+-        "molecules"
+-      ],
+-      "view3D": {
+-        "style": "ballnstick",
+-        "spin": false,
+-        "showH": true,
+-        "atomSymbols": true,
+-        "moveto": null
+-      },
+-      "show": {
+-        "menu": false,
+-        "viewerButtons": false,
+-        "viewerSettings": false,
+-        "viewers": {
+-          "2D": true,
+-          "3D": false
+-        },
+-        "viewerMaxHeight": 420,
+-        "viewerBothHeight": null,
+-        "controls": {
+-          "2D": false,
+-          "3D": false
+-        },
+-        "save": {
+-          "2D": false,
+-          "3D": false
+-        },
+-        "naming": true,
+-        "nameSettings": false,
+-        "nameEye": false,
+-        "audio": false,
+-        "rule": false,
+-        "text": true,
+-        "nameClick": false
+-      },
+-      "selectedMol": "Oxopropanoic_acid"
+-    },
+-    {
+-      "n": 12,
+-      "title": "Η εμφανιζόμενη και η συστηματική ονομασία",
+-      "note": "Η εφαρμογή εμφανίζει τη συμβατική ονομασία <b>κετοπροπανικό οξύ</b>. Η πλήρης συστηματική ονομασία είναι <b>2-οξοπροπανικό οξύ</b>. Το πρόσθετο C=O βρίσκεται στο C2 και δηλώνεται συστηματικά με 2-οξο-. Η παράλειψη του αριθμού και η χρήση κετο- στο συγκεκριμένο όνομα της εφαρμογής δεν αποτελούν γενικό κανόνα συστηματικής ονοματολογίας.",
+-      "mode2D": "condensed",
+-      "mainChainMode": "algorithmic",
+-      "chainIdx": 0,
+-      "etherNamingMode": "iupac",
+-      "nameAnalysisMode": "compSecondSub1",
+-      "selectedRule": null,
+-      "style2D": {
+-        "atomColors": true,
+-        "colorMode": "atom",
+-        "zigzag": false,
+-        "zoom": 2
+-      },
+-      "styleName": {
+-        "box": true,
+-        "cross": false,
+-        "etherNaming": "iupac",
+-        "panelOpen": false,
+-        "hidden": []
+-      },
+-      "styleHighlight": {
+-        "bondAtoms": false,
+-        "numberingAtoms": true,
+-        "numberingBonds": true
+-      },
+-      "styleText": {
+-        "fontSizePx": null,
+-        "textWidthPx": null,
+-        "columns": null
+-      },
+-      "audio": {
+-        "narrate": false
+-      },
+-      "menuSubset": [
+-        "propenoic_acid",
+-        "propanedioic_acid",
+-        "hydroxypropanoic_acid_2",
+-        "Oxopropanoic_acid",
+-        "aminobutanoic_acid_3",
+-        "oxobutanoic_acid",
+-        "dihydroxybutanedioic_acid_2_3",
+-        "methyl_2_propenoic_acid",
+-        "penten_2_yn_4_oic_acid",
+-        "hexen_2_yn_4_dioic_acid",
+-        "ethyl_2_methyl_3_penten_2_yn_4_oic_acid",
+-        "ethyl_3_isopropyl_2_dimethyl_4_5_hexadien_2_4_dioic_acid",
+-        "ethyl_2_isopropyl_3_dimethyl_6_6_hepten_2_yn_4_dioic_acid"
+-      ],
+-      "menuGroups": [
+-        "molecules"
+-      ],
+-      "view3D": {
+-        "style": "ballnstick",
+-        "spin": false,
+-        "showH": true,
+-        "atomSymbols": true,
+-        "moveto": null
+-      },
+-      "show": {
+-        "menu": false,
+-        "viewerButtons": false,
+-        "viewerSettings": false,
+-        "viewers": {
+-          "2D": true,
+-          "3D": false
+-        },
+-        "viewerMaxHeight": 420,
+-        "viewerBothHeight": null,
+-        "controls": {
+-          "2D": false,
+-          "3D": false
+-        },
+-        "save": {
+-          "2D": false,
+-          "3D": false
+-        },
+-        "naming": true,
+-        "nameSettings": false,
+-        "nameEye": false,
+-        "audio": false,
+-        "rule": false,
+-        "text": true,
+-        "nameClick": false
+-      },
+-      "selectedMol": "Oxopropanoic_acid"
+-    },
+-    {
+-      "n": 13,
+-      "title": "Τέσσερα C με αφετηρία το καρβοξύλιο",
+-      "note": "Στο CH₃–CH(NH₂)–CH₂–COOH αριθμούμε την κύρια αλυσίδα από το C της –COOH. Έχει τέσσερα C και η πρόσθετη –NH₂ συνδέεται με το <b>C3</b>.",
+-      "mode2D": "condensed",
+-      "mainChainMode": "algorithmic",
+-      "chainIdx": 0,
+-      "etherNamingMode": "iupac",
+-      "nameAnalysisMode": "compCarbonsCount",
+-      "selectedRule": null,
+-      "style2D": {
+-        "atomColors": true,
+-        "colorMode": "atom",
+-        "zigzag": false,
+-        "zoom": 2
+-      },
+-      "styleName": {
+-        "box": true,
+-        "cross": true,
+-        "etherNaming": "iupac",
+-        "panelOpen": false,
+-        "hidden": [
+-          "comp0",
+-          "comp1"
+-        ]
+-      },
+-      "styleHighlight": {
+-        "bondAtoms": false,
+-        "numberingAtoms": true,
+-        "numberingBonds": true
+-      },
+-      "styleText": {
+-        "fontSizePx": null,
+-        "textWidthPx": null,
+-        "columns": null
+-      },
+-      "audio": {
+-        "narrate": false
+-      },
+-      "menuSubset": [
+-        "propenoic_acid",
+-        "propanedioic_acid",
+-        "hydroxypropanoic_acid_2",
+-        "Oxopropanoic_acid",
+-        "aminobutanoic_acid_3",
+-        "oxobutanoic_acid",
+-        "dihydroxybutanedioic_acid_2_3",
+-        "methyl_2_propenoic_acid",
+-        "penten_2_yn_4_oic_acid",
+-        "hexen_2_yn_4_dioic_acid",
+-        "ethyl_2_methyl_3_penten_2_yn_4_oic_acid",
+-        "ethyl_3_isopropyl_2_dimethyl_4_5_hexadien_2_4_dioic_acid",
+-        "ethyl_2_isopropyl_3_dimethyl_6_6_hepten_2_yn_4_dioic_acid"
+-      ],
+-      "menuGroups": [
+-        "molecules"
+-      ],
+-      "view3D": {
+-        "style": "ballnstick",
+-        "spin": false,
+-        "showH": true,
+-        "atomSymbols": true,
+-        "moveto": null
+-      },
+-      "show": {
+-        "menu": false,
+-        "viewerButtons": false,
+-        "viewerSettings": false,
+-        "viewers": {
+-          "2D": true,
+-          "3D": false
+-        },
+-        "viewerMaxHeight": 420,
+-        "viewerBothHeight": null,
+-        "controls": {
+-          "2D": false,
+-          "3D": false
+-        },
+-        "save": {
+-          "2D": false,
+-          "3D": false
+-        },
+-        "naming": true,
+-        "nameSettings": false,
+-        "nameEye": false,
+-        "audio": false,
+-        "rule": false,
+-        "text": true,
+-        "nameClick": false
+-      },
+-      "selectedMol": "aminobutanoic_acid_3"
+-    },
+-    {
+-      "n": 14,
+-      "title": "Η αμινομάδα δηλώνεται ως 3-αμινο-",
+-      "note": "Η –NH₂ δίνει το πρόθεμα <b>3-αμινο-</b>. Η –COOH παραμένει η κύρια χαρακτηριστική ομάδα και το πλήρες όνομα είναι <b>3-αμινοβουτανικό οξύ</b>.",
+-      "mode2D": "condensed",
+-      "mainChainMode": "algorithmic",
+-      "chainIdx": 0,
+-      "etherNamingMode": "iupac",
+-      "nameAnalysisMode": "compSecondSub1",
+-      "selectedRule": null,
+-      "style2D": {
+-        "atomColors": true,
+-        "colorMode": "atom",
+-        "zigzag": false,
+-        "zoom": 2
+-      },
+-      "styleName": {
+-        "box": true,
+-        "cross": false,
+-        "etherNaming": "iupac",
+-        "panelOpen": false,
+-        "hidden": []
+-      },
+-      "styleHighlight": {
+-        "bondAtoms": false,
+-        "numberingAtoms": true,
+-        "numberingBonds": true
+-      },
+-      "styleText": {
+-        "fontSizePx": null,
+-        "textWidthPx": null,
+-        "columns": null
+-      },
+-      "audio": {
+-        "narrate": false
+-      },
+-      "menuSubset": [
+-        "propenoic_acid",
+-        "propanedioic_acid",
+-        "hydroxypropanoic_acid_2",
+-        "Oxopropanoic_acid",
+-        "aminobutanoic_acid_3",
+-        "oxobutanoic_acid",
+-        "dihydroxybutanedioic_acid_2_3",
+-        "methyl_2_propenoic_acid",
+-        "penten_2_yn_4_oic_acid",
+-        "hexen_2_yn_4_dioic_acid",
+-        "ethyl_2_methyl_3_penten_2_yn_4_oic_acid",
+-        "ethyl_3_isopropyl_2_dimethyl_4_5_hexadien_2_4_dioic_acid",
+-        "ethyl_2_isopropyl_3_dimethyl_6_6_hepten_2_yn_4_dioic_acid"
+-      ],
+-      "menuGroups": [
+-        "molecules"
+-      ],
+-      "view3D": {
+-        "style": "ballnstick",
+-        "spin": false,
+-        "showH": true,
+-        "atomSymbols": true,
+-        "moveto": null
+-      },
+-      "show": {
+-        "menu": false,
+-        "viewerButtons": false,
+-        "viewerSettings": false,
+-        "viewers": {
+-          "2D": true,
+-          "3D": false
+-        },
+-        "viewerMaxHeight": 420,
+-        "viewerBothHeight": null,
+-        "controls": {
+-          "2D": false,
+-          "3D": false
+-        },
+-        "save": {
+-          "2D": false,
+-          "3D": false
+-        },
+-        "naming": true,
+-        "nameSettings": false,
+-        "nameEye": false,
+-        "audio": false,
+-        "rule": false,
+-        "text": true,
+-        "nameClick": false
+-      },
+-      "selectedMol": "aminobutanoic_acid_3"
+-    },
+-    {
+-      "n": 15,
+-      "title": "Το αλδεϋδικό άκρο βρίσκεται στο C4",
+-      "note": "Στο OHC–CH₂–CH₂–COOH η –COOH έχει προτεραιότητα για την κατάληξη και την αρίθμηση. Το C της –COOH είναι C1 και το <b>πρόσθετο αλδεϋδικό καρβονύλιο είναι στο C4</b>. Η κύρια αλυσίδα έχει τέσσερα C.",
+-      "mode2D": "condensed",
+-      "mainChainMode": "algorithmic",
+-      "chainIdx": 0,
+-      "etherNamingMode": "iupac",
+-      "nameAnalysisMode": "compCarbonsCount",
+-      "selectedRule": null,
+-      "style2D": {
+-        "atomColors": true,
+-        "colorMode": "atom",
+-        "zigzag": false,
+-        "zoom": 2
+-      },
+-      "styleName": {
+-        "box": true,
+-        "cross": true,
+-        "etherNaming": "iupac",
+-        "panelOpen": false,
+-        "hidden": [
+-          "comp1"
+-        ]
+-      },
+-      "styleHighlight": {
+-        "bondAtoms": false,
+-        "numberingAtoms": true,
+-        "numberingBonds": true
+-      },
+-      "styleText": {
+-        "fontSizePx": null,
+-        "textWidthPx": null,
+-        "columns": null
+-      },
+-      "audio": {
+-        "narrate": false
+-      },
+-      "menuSubset": [
+-        "propenoic_acid",
+-        "propanedioic_acid",
+-        "hydroxypropanoic_acid_2",
+-        "Oxopropanoic_acid",
+-        "aminobutanoic_acid_3",
+-        "oxobutanoic_acid",
+-        "dihydroxybutanedioic_acid_2_3",
+-        "methyl_2_propenoic_acid",
+-        "penten_2_yn_4_oic_acid",
+-        "hexen_2_yn_4_dioic_acid",
+-        "ethyl_2_methyl_3_penten_2_yn_4_oic_acid",
+-        "ethyl_3_isopropyl_2_dimethyl_4_5_hexadien_2_4_dioic_acid",
+-        "ethyl_2_isopropyl_3_dimethyl_6_6_hepten_2_yn_4_dioic_acid"
+-      ],
+-      "menuGroups": [
+-        "molecules"
+-      ],
+-      "view3D": {
+-        "style": "ballnstick",
+-        "spin": false,
+-        "showH": true,
+-        "atomSymbols": true,
+-        "moveto": null
+-      },
+-      "show": {
+-        "menu": false,
+-        "viewerButtons": false,
+-        "viewerSettings": false,
+-        "viewers": {
+-          "2D": true,
+-          "3D": false
+-        },
+-        "viewerMaxHeight": 420,
+-        "viewerBothHeight": null,
+-        "controls": {
+-          "2D": false,
+-          "3D": false
+-        },
+-        "save": {
+-          "2D": false,
+-          "3D": false
+-        },
+-        "naming": true,
+-        "nameSettings": false,
+-        "nameEye": false,
+-        "audio": false,
+-        "rule": false,
+-        "text": true,
+-        "nameClick": false
+-      },
+-      "selectedMol": "oxobutanoic_acid"
+-    },
+-    {
+-      "n": 16,
+-      "title": "Το πρόθεμα οξο- χρειάζεται σαφή θέση",
+-      "note": "Η εφαρμογή εμφανίζει <b>οξοβουτανικό οξύ</b> για αυτό το συγκεκριμένο μόριο. Η πλήρης συστηματική ονομασία είναι <b>4-οξοβουτανικό οξύ</b>. Ο αριθμός 4 προσδιορίζει το πρόσθετο C=O. Μην γενικεύεις την παράλειψη της θέσης από την εμφανιζόμενη συμβατική ονομασία σε άλλα οξοοξέα.",
+-      "mode2D": "condensed",
+-      "mainChainMode": "algorithmic",
+-      "chainIdx": 0,
+-      "etherNamingMode": "iupac",
+-      "nameAnalysisMode": "compSecondSub1",
+-      "selectedRule": null,
+-      "style2D": {
+-        "atomColors": true,
+-        "colorMode": "atom",
+-        "zigzag": false,
+-        "zoom": 2
+-      },
+-      "styleName": {
+-        "box": true,
+-        "cross": false,
+-        "etherNaming": "iupac",
+-        "panelOpen": false,
+-        "hidden": []
+-      },
+-      "styleHighlight": {
+-        "bondAtoms": false,
+-        "numberingAtoms": true,
+-        "numberingBonds": true
+-      },
+-      "styleText": {
+-        "fontSizePx": null,
+-        "textWidthPx": null,
+-        "columns": null
+-      },
+-      "audio": {
+-        "narrate": false
+-      },
+-      "menuSubset": [
+-        "propenoic_acid",
+-        "propanedioic_acid",
+-        "hydroxypropanoic_acid_2",
+-        "Oxopropanoic_acid",
+-        "aminobutanoic_acid_3",
+-        "oxobutanoic_acid",
+-        "dihydroxybutanedioic_acid_2_3",
+-        "methyl_2_propenoic_acid",
+-        "penten_2_yn_4_oic_acid",
+-        "hexen_2_yn_4_dioic_acid",
+-        "ethyl_2_methyl_3_penten_2_yn_4_oic_acid",
+-        "ethyl_3_isopropyl_2_dimethyl_4_5_hexadien_2_4_dioic_acid",
+-        "ethyl_2_isopropyl_3_dimethyl_6_6_hepten_2_yn_4_dioic_acid"
+-      ],
+-      "menuGroups": [
+-        "molecules"
+-      ],
+-      "view3D": {
+-        "style": "ballnstick",
+-        "spin": false,
+-        "showH": true,
+-        "atomSymbols": true,
+-        "moveto": null
+-      },
+-      "show": {
+-        "menu": false,
+-        "viewerButtons": false,
+-        "viewerSettings": false,
+-        "viewers": {
+-          "2D": true,
+-          "3D": false
+-        },
+-        "viewerMaxHeight": 420,
+-        "viewerBothHeight": null,
+-        "controls": {
+-          "2D": false,
+-          "3D": false
+-        },
+-        "save": {
+-          "2D": false,
+-          "3D": false
+-        },
+-        "naming": true,
+-        "nameSettings": false,
+-        "nameEye": false,
+-        "audio": false,
+-        "rule": false,
+-        "text": true,
+-        "nameClick": false
+-      },
+-      "selectedMol": "oxobutanoic_acid"
+-    },
+-    {
+-      "n": 17,
+-      "title": "Τέσσερα C και δύο –COOH",
+-      "note": "Στο HOOC–CH(OH)–CH(OH)–COOH η κύρια αλυσίδα έχει <b>τέσσερα C</b>, μαζί με τα δύο καρβοξυλικά C στα άκρα. Οι δεσμοί C–C είναι απλοί.",
+-      "mode2D": "condensed",
+-      "mainChainMode": "algorithmic",
+-      "chainIdx": 0,
+-      "etherNamingMode": "iupac",
+-      "nameAnalysisMode": "compCarbonsCount",
+-      "selectedRule": null,
+-      "style2D": {
+-        "atomColors": true,
+-        "colorMode": "atom",
+-        "zigzag": false,
+-        "zoom": 2
+-      },
+-      "styleName": {
+-        "box": true,
+-        "cross": true,
+-        "etherNaming": "iupac",
+-        "panelOpen": false,
+-        "hidden": [
+-          "comp0",
+-          "comp1",
+-          "comp9"
+-        ]
+-      },
+-      "styleHighlight": {
+-        "bondAtoms": false,
+-        "numberingAtoms": true,
+-        "numberingBonds": true
+-      },
+-      "styleText": {
+-        "fontSizePx": null,
+-        "textWidthPx": null,
+-        "columns": null
+-      },
+-      "audio": {
+-        "narrate": false
+-      },
+-      "menuSubset": [
+-        "propenoic_acid",
+-        "propanedioic_acid",
+-        "hydroxypropanoic_acid_2",
+-        "Oxopropanoic_acid",
+-        "aminobutanoic_acid_3",
+-        "oxobutanoic_acid",
+-        "dihydroxybutanedioic_acid_2_3",
+-        "methyl_2_propenoic_acid",
+-        "penten_2_yn_4_oic_acid",
+-        "hexen_2_yn_4_dioic_acid",
+-        "ethyl_2_methyl_3_penten_2_yn_4_oic_acid",
+-        "ethyl_3_isopropyl_2_dimethyl_4_5_hexadien_2_4_dioic_acid",
+-        "ethyl_2_isopropyl_3_dimethyl_6_6_hepten_2_yn_4_dioic_acid"
+-      ],
+-      "menuGroups": [
+-        "molecules"
+-      ],
+-      "view3D": {
+-        "style": "ballnstick",
+-        "spin": false,
+-        "showH": true,
+-        "atomSymbols": true,
+-        "moveto": null
+-      },
+-      "show": {
+-        "menu": false,
+-        "viewerButtons": false,
+-        "viewerSettings": false,
+-        "viewers": {
+-          "2D": true,
+-          "3D": false
+-        },
+-        "viewerMaxHeight": 420,
+-        "viewerBothHeight": null,
+-        "controls": {
+-          "2D": false,
+-          "3D": false
+-        },
+-        "save": {
+-          "2D": false,
+-          "3D": false
+-        },
+-        "naming": true,
+-        "nameSettings": false,
+-        "nameEye": false,
+-        "audio": false,
+-        "rule": false,
+-        "text": true,
+-        "nameClick": false
+-      },
+-      "selectedMol": "dihydroxybutanedioic_acid_2_3"
+-    },
+-    {
+-      "n": 18,
+-      "title": "Δύο πρόσθετα υδροξύλια στις θέσεις 2 και 3",
+-      "note": "Οι πρόσθετες –OH συνδέονται με τα <b>C2 και C3</b> και δίνουν <b>2,3-διυδροξυ-</b>. Το δι- εδώ μετρά υδροξύλια. Δεν μετρά τα –OH που αποτελούν μέρος των –COOH.",
+-      "mode2D": "condensed",
+-      "mainChainMode": "algorithmic",
+-      "chainIdx": 0,
+-      "etherNamingMode": "iupac",
+-      "nameAnalysisMode": "compSecondSub1",
+-      "selectedRule": null,
+-      "style2D": {
+-        "atomColors": true,
+-        "colorMode": "atom",
+-        "zigzag": false,
+-        "zoom": 2
+-      },
+-      "styleName": {
+-        "box": true,
+-        "cross": true,
+-        "etherNaming": "iupac",
+-        "panelOpen": false,
+-        "hidden": [
+-          "comp9"
+-        ]
+-      },
+-      "styleHighlight": {
+-        "bondAtoms": false,
+-        "numberingAtoms": true,
+-        "numberingBonds": true
+-      },
+-      "styleText": {
+-        "fontSizePx": null,
+-        "textWidthPx": null,
+-        "columns": null
+-      },
+-      "audio": {
+-        "narrate": false
+-      },
+-      "menuSubset": [
+-        "propenoic_acid",
+-        "propanedioic_acid",
+-        "hydroxypropanoic_acid_2",
+-        "Oxopropanoic_acid",
+-        "aminobutanoic_acid_3",
+-        "oxobutanoic_acid",
+-        "dihydroxybutanedioic_acid_2_3",
+-        "methyl_2_propenoic_acid",
+-        "penten_2_yn_4_oic_acid",
+-        "hexen_2_yn_4_dioic_acid",
+-        "ethyl_2_methyl_3_penten_2_yn_4_oic_acid",
+-        "ethyl_3_isopropyl_2_dimethyl_4_5_hexadien_2_4_dioic_acid",
+-        "ethyl_2_isopropyl_3_dimethyl_6_6_hepten_2_yn_4_dioic_acid"
+-      ],
+-      "menuGroups": [
+-        "molecules"
+-      ],
+-      "view3D": {
+-        "style": "ballnstick",
+-        "spin": false,
+-        "showH": true,
+-        "atomSymbols": true,
+-        "moveto": null
+-      },
+-      "show": {
+-        "menu": false,
+-        "viewerButtons": false,
+-        "viewerSettings": false,
+-        "viewers": {
+-          "2D": true,
+-          "3D": false
+-        },
+-        "viewerMaxHeight": 420,
+-        "viewerBothHeight": null,
+-        "controls": {
+-          "2D": false,
+-          "3D": false
+-        },
+-        "save": {
+-          "2D": false,
+-          "3D": false
+-        },
+-        "naming": true,
+-        "nameSettings": false,
+-        "nameEye": false,
+-        "audio": false,
+-        "rule": false,
+-        "text": true,
+-        "nameClick": false
+-      },
+-      "selectedMol": "dihydroxybutanedioic_acid_2_3"
+-    },
+-    {
+-      "n": 19,
+-      "title": "Δύο διαφορετικοί ρόλοι για το δι-",
+-      "note": "Το πλήρες όνομα είναι <b>2,3-διυδροξυβουτανοδιικό οξύ</b>. Το διυδροξυ- μετρά τις δύο πρόσθετες –OH, ενώ το -διικό οξύ μετρά τις δύο –COOH.",
+-      "mode2D": "condensed",
+-      "mainChainMode": "algorithmic",
+-      "chainIdx": 0,
+-      "etherNamingMode": "iupac",
+-      "nameAnalysisMode": "compSuffix",
+-      "selectedRule": null,
+-      "style2D": {
+-        "atomColors": true,
+-        "colorMode": "atom",
+-        "zigzag": false,
+-        "zoom": 2
+-      },
+-      "styleName": {
+-        "box": true,
+-        "cross": false,
+-        "etherNaming": "iupac",
+-        "panelOpen": false,
+-        "hidden": []
+-      },
+-      "styleHighlight": {
+-        "bondAtoms": false,
+-        "numberingAtoms": true,
+-        "numberingBonds": true
+-      },
+-      "styleText": {
+-        "fontSizePx": null,
+-        "textWidthPx": null,
+-        "columns": null
+-      },
+-      "audio": {
+-        "narrate": false
+-      },
+-      "menuSubset": [
+-        "propenoic_acid",
+-        "propanedioic_acid",
+-        "hydroxypropanoic_acid_2",
+-        "Oxopropanoic_acid",
+-        "aminobutanoic_acid_3",
+-        "oxobutanoic_acid",
+-        "dihydroxybutanedioic_acid_2_3",
+-        "methyl_2_propenoic_acid",
+-        "penten_2_yn_4_oic_acid",
+-        "hexen_2_yn_4_dioic_acid",
+-        "ethyl_2_methyl_3_penten_2_yn_4_oic_acid",
+-        "ethyl_3_isopropyl_2_dimethyl_4_5_hexadien_2_4_dioic_acid",
+-        "ethyl_2_isopropyl_3_dimethyl_6_6_hepten_2_yn_4_dioic_acid"
+-      ],
+-      "menuGroups": [
+-        "molecules"
+-      ],
+-      "view3D": {
+-        "style": "ballnstick",
+-        "spin": false,
+-        "showH": true,
+-        "atomSymbols": true,
+-        "moveto": null
+-      },
+-      "show": {
+-        "menu": false,
+-        "viewerButtons": false,
+-        "viewerSettings": false,
+-        "viewers": {
+-          "2D": true,
+-          "3D": false
+-        },
+-        "viewerMaxHeight": 420,
+-        "viewerBothHeight": null,
+-        "controls": {
+-          "2D": false,
+-          "3D": false
+-        },
+-        "save": {
+-          "2D": false,
+-          "3D": false
+-        },
+-        "naming": true,
+-        "nameSettings": false,
+-        "nameEye": false,
+-        "audio": false,
+-        "rule": false,
+-        "text": true,
+-        "nameClick": false
+-      },
+-      "selectedMol": "dihydroxybutanedioic_acid_2_3"
+-    },
+-    {
+-      "n": 20,
+       "title": "Τέσσερα C συνολικά, τρία στην κύρια αλυσίδα",
+       "note": "Στο διακλαδισμένο αυτό οξύ η κύρια αλυσίδα περιλαμβάνει τη –COOH και τον διπλό δεσμό. Έχει <b>τρία C</b>, ενώ το τέταρτο C ανήκει στο μεθύλιο. Επιλέγουμε <b>προπ-</b>, όχι βουτ-.",
+       "mode2D": "condensed",
+@@ -1772,12 +390,6 @@
+       },
+       "menuSubset": [
+         "propenoic_acid",
+-        "propanedioic_acid",
+-        "hydroxypropanoic_acid_2",
+-        "Oxopropanoic_acid",
+-        "aminobutanoic_acid_3",
+-        "oxobutanoic_acid",
+-        "dihydroxybutanedioic_acid_2_3",
+         "methyl_2_propenoic_acid",
+         "penten_2_yn_4_oic_acid",
+         "hexen_2_yn_4_dioic_acid",
+@@ -1824,7 +436,7 @@
+       "selectedMol": "methyl_2_propenoic_acid"
+     },
+     {
+-      "n": 21,
++      "n": 6,
+       "title": "Δύο αριθμοί 2 με διαφορετική σημασία",
+       "note": "Ο διπλός δεσμός αρχίζει στο <b>C2</b> και το μεθύλιο συνδέεται επίσης στο <b>C2</b>. Στο 2-μεθυλο-2-προπενικό οξύ ο πρώτος αριθμός αφορά τη διακλάδωση και ο δεύτερος τον διπλό δεσμό.",
+       "mode2D": "condensed",
+@@ -1863,12 +475,6 @@
+       },
+       "menuSubset": [
+         "propenoic_acid",
+-        "propanedioic_acid",
+-        "hydroxypropanoic_acid_2",
+-        "Oxopropanoic_acid",
+-        "aminobutanoic_acid_3",
+-        "oxobutanoic_acid",
+-        "dihydroxybutanedioic_acid_2_3",
+         "methyl_2_propenoic_acid",
+         "penten_2_yn_4_oic_acid",
+         "hexen_2_yn_4_dioic_acid",
+@@ -1915,7 +521,7 @@
+       "selectedMol": "methyl_2_propenoic_acid"
+     },
+     {
+-      "n": 22,
++      "n": 7,
+       "title": "Μεθύλιο και πλήρες όνομα",
+       "note": "Η διακλάδωση είναι μεθύλιο στη θέση 2. Το πλήρες όνομα είναι <b>2-μεθυλο-2-προπενικό οξύ</b>. Η θέση του C=C και η θέση της διακλάδωσης πρέπει να διαβάζονται χωριστά.",
+       "mode2D": "condensed",
+@@ -1952,12 +558,6 @@
+       },
+       "menuSubset": [
+         "propenoic_acid",
+-        "propanedioic_acid",
+-        "hydroxypropanoic_acid_2",
+-        "Oxopropanoic_acid",
+-        "aminobutanoic_acid_3",
+-        "oxobutanoic_acid",
+-        "dihydroxybutanedioic_acid_2_3",
+         "methyl_2_propenoic_acid",
+         "penten_2_yn_4_oic_acid",
+         "hexen_2_yn_4_dioic_acid",
+@@ -2004,7 +604,7 @@
+       "selectedMol": "methyl_2_propenoic_acid"
+     },
+     {
+-      "n": 23,
++      "n": 8,
+       "title": "Πέντε C και δύο είδη πολλαπλού δεσμού",
+       "note": "Η κύρια αλυσίδα του HOOC–CH=CH–C≡CH έχει <b>πέντε C</b> και αρχίζει από το καρβοξυλικό C1. Περιλαμβάνει και τον διπλό και τον τριπλό δεσμό.",
+       "mode2D": "condensed",
+@@ -2047,12 +647,6 @@
+       },
+       "menuSubset": [
+         "propenoic_acid",
+-        "propanedioic_acid",
+-        "hydroxypropanoic_acid_2",
+-        "Oxopropanoic_acid",
+-        "aminobutanoic_acid_3",
+-        "oxobutanoic_acid",
+-        "dihydroxybutanedioic_acid_2_3",
+         "methyl_2_propenoic_acid",
+         "penten_2_yn_4_oic_acid",
+         "hexen_2_yn_4_dioic_acid",
+@@ -2099,7 +693,7 @@
+       "selectedMol": "penten_2_yn_4_oic_acid"
+     },
+     {
+-      "n": 24,
++      "n": 9,
+       "title": "Ο διπλός δεσμός αρχίζει στο C2",
+       "note": "Ο C=C ενώνει τα <b>C2 και C3</b>. Η θέση 2 δηλώνεται πριν από το τμήμα πεντεν-. Ακολούθησε τους αριθμούς της κύριας αλυσίδας.",
+       "mode2D": "condensed",
+@@ -2140,12 +734,6 @@
+       },
+       "menuSubset": [
+         "propenoic_acid",
+-        "propanedioic_acid",
+-        "hydroxypropanoic_acid_2",
+-        "Oxopropanoic_acid",
+-        "aminobutanoic_acid_3",
+-        "oxobutanoic_acid",
+-        "dihydroxybutanedioic_acid_2_3",
+         "methyl_2_propenoic_acid",
+         "penten_2_yn_4_oic_acid",
+         "hexen_2_yn_4_dioic_acid",
+@@ -2192,7 +780,7 @@
+       "selectedMol": "penten_2_yn_4_oic_acid"
+     },
+     {
+-      "n": 25,
++      "n": 10,
+       "title": "Ο τριπλός δεσμός αρχίζει στο C4",
+       "note": "Ο C≡C ενώνει τα <b>C4 και C5</b> και δηλώνεται με <b>-4-ιν-</b>. Τα άτομα C του τριπλού έχουν γραμμική τοπική γεωμετρία. Η φορά της αρίθμησης έχει ήδη οριστεί από τη –COOH.",
+       "mode2D": "condensed",
+@@ -2231,12 +819,6 @@
+       },
+       "menuSubset": [
+         "propenoic_acid",
+-        "propanedioic_acid",
+-        "hydroxypropanoic_acid_2",
+-        "Oxopropanoic_acid",
+-        "aminobutanoic_acid_3",
+-        "oxobutanoic_acid",
+-        "dihydroxybutanedioic_acid_2_3",
+         "methyl_2_propenoic_acid",
+         "penten_2_yn_4_oic_acid",
+         "hexen_2_yn_4_dioic_acid",
+@@ -2283,7 +865,7 @@
+       "selectedMol": "penten_2_yn_4_oic_acid"
+     },
+     {
+-      "n": 26,
++      "n": 11,
+       "title": "Σύνθεση του ενινικού ονόματος",
+       "note": "Στο όνομα γράφουμε το τμήμα του διπλού πριν από το τμήμα του τριπλού. Προκύπτει <b>2-πεντεν-4-ινικό οξύ</b>. Το -ικό οξύ δηλώνει μία –COOH.",
+       "mode2D": "condensed",
+@@ -2320,12 +902,6 @@
+       },
+       "menuSubset": [
+         "propenoic_acid",
+-        "propanedioic_acid",
+-        "hydroxypropanoic_acid_2",
+-        "Oxopropanoic_acid",
+-        "aminobutanoic_acid_3",
+-        "oxobutanoic_acid",
+-        "dihydroxybutanedioic_acid_2_3",
+         "methyl_2_propenoic_acid",
+         "penten_2_yn_4_oic_acid",
+         "hexen_2_yn_4_dioic_acid",
+@@ -2372,9 +948,9 @@
+       "selectedMol": "penten_2_yn_4_oic_acid"
+     },
+     {
+-      "n": 27,
++      "n": 12,
+       "title": "Έξι C με καρβοξύλια και στα δύο άκρα",
+-      "note": "Το HOOC–CH=CH–C≡C–COOH έχει <b>έξι C</b> στην κύρια αλυσίδα, μαζί με τα δύο καρβοξυλικά C. Οι –COOH παίρνουν θέσεις 1 και 6 από οποιοδήποτε άκρο.",
++      "note": "Το HOOC–CH=CH–C≡C–COOH έχει <b>δύο καρβοξυλομάδες</b>. Η κύρια αλυσίδα περιλαμβάνει και τα δύο καρβοξυλικά C και έχει <b>έξι C</b>. Οι –COOH παίρνουν θέσεις 1 και 6 από οποιοδήποτε άκρο. Επειδή υπάρχουν δύο –COOH, η κατάληξη θα είναι <b>-διικό οξύ</b>, αντί για -ικό οξύ του προηγούμενου μονοκαρβοξυλικού παραδείγματος.",
+       "mode2D": "condensed",
+       "mainChainMode": "algorithmic",
+       "chainIdx": 0,
+@@ -2415,12 +991,6 @@
+       },
+       "menuSubset": [
+         "propenoic_acid",
+-        "propanedioic_acid",
+-        "hydroxypropanoic_acid_2",
+-        "Oxopropanoic_acid",
+-        "aminobutanoic_acid_3",
+-        "oxobutanoic_acid",
+-        "dihydroxybutanedioic_acid_2_3",
+         "methyl_2_propenoic_acid",
+         "penten_2_yn_4_oic_acid",
+         "hexen_2_yn_4_dioic_acid",
+@@ -2467,7 +1037,7 @@
+       "selectedMol": "hexen_2_yn_4_dioic_acid"
+     },
+     {
+-      "n": 28,
++      "n": 13,
+       "title": "Σύγκριση των δύο κατευθύνσεων",
+       "note": "Αφού οι –COOH ισοβαθμούν, συγκρίνουμε τους πολλαπλούς δεσμούς. Και οι δύο κατευθύνσεις δίνουν το σύνολο <b>2,4</b>. Στην ισοβαθμία ο διπλός παίρνει τον μικρότερο αριθμό, άρα <b>C=C στη θέση 2</b>. Αυτό δεν σημαίνει ότι ο διπλός προηγείται πάντοτε του τριπλού στην αρίθμηση.",
+       "mode2D": "condensed",
+@@ -2508,12 +1078,6 @@
+       },
+       "menuSubset": [
+         "propenoic_acid",
+-        "propanedioic_acid",
+-        "hydroxypropanoic_acid_2",
+-        "Oxopropanoic_acid",
+-        "aminobutanoic_acid_3",
+-        "oxobutanoic_acid",
+-        "dihydroxybutanedioic_acid_2_3",
+         "methyl_2_propenoic_acid",
+         "penten_2_yn_4_oic_acid",
+         "hexen_2_yn_4_dioic_acid",
+@@ -2560,7 +1124,7 @@
+       "selectedMol": "hexen_2_yn_4_dioic_acid"
+     },
+     {
+-      "n": 29,
++      "n": 14,
+       "title": "Ο τριπλός δεσμός στη θέση 4",
+       "note": "Με την επιλεγμένη αρίθμηση ο C≡C ενώνει τα <b>C4 και C5</b> και δίνει <b>-4-ιν-</b>. Ο δεύτερος καρβοξυλικός C είναι το C6.",
+       "mode2D": "condensed",
+@@ -2599,12 +1163,6 @@
+       },
+       "menuSubset": [
+         "propenoic_acid",
+-        "propanedioic_acid",
+-        "hydroxypropanoic_acid_2",
+-        "Oxopropanoic_acid",
+-        "aminobutanoic_acid_3",
+-        "oxobutanoic_acid",
+-        "dihydroxybutanedioic_acid_2_3",
+         "methyl_2_propenoic_acid",
+         "penten_2_yn_4_oic_acid",
+         "hexen_2_yn_4_dioic_acid",
+@@ -2651,7 +1209,7 @@
+       "selectedMol": "hexen_2_yn_4_dioic_acid"
+     },
+     {
+-      "n": 30,
++      "n": 15,
+       "title": "Ενίνιο και δύο καρβοξυλομάδες",
+       "note": "Συνθέτουμε <b>2-εξεν-4-ινοδιικό οξύ</b>. Το -εν- και το -ιν- δηλώνουν τους πολλαπλούς δεσμούς, ενώ το -διικό οξύ δηλώνει τις δύο –COOH.",
+       "mode2D": "condensed",
+@@ -2688,12 +1246,6 @@
+       },
+       "menuSubset": [
+         "propenoic_acid",
+-        "propanedioic_acid",
+-        "hydroxypropanoic_acid_2",
+-        "Oxopropanoic_acid",
+-        "aminobutanoic_acid_3",
+-        "oxobutanoic_acid",
+-        "dihydroxybutanedioic_acid_2_3",
+         "methyl_2_propenoic_acid",
+         "penten_2_yn_4_oic_acid",
+         "hexen_2_yn_4_dioic_acid",
+@@ -2740,7 +1292,7 @@
+       "selectedMol": "hexen_2_yn_4_dioic_acid"
+     },
+     {
+-      "n": 31,
++      "n": 16,
+       "title": "Οκτώ C συνολικά, πέντε στην κύρια αλυσίδα",
+       "note": "Η κύρια αλυσίδα περιλαμβάνει τη –COOH και τους δύο πολλαπλούς δεσμούς και έχει <b>πέντε C</b>. Από τα οκτώ C του μορίου, δύο ανήκουν στο αιθύλιο και ένα στο μεθύλιο.",
+       "mode2D": "condensed",
+@@ -2782,12 +1334,6 @@
+       },
+       "menuSubset": [
+         "propenoic_acid",
+-        "propanedioic_acid",
+-        "hydroxypropanoic_acid_2",
+-        "Oxopropanoic_acid",
+-        "aminobutanoic_acid_3",
+-        "oxobutanoic_acid",
+-        "dihydroxybutanedioic_acid_2_3",
+         "methyl_2_propenoic_acid",
+         "penten_2_yn_4_oic_acid",
+         "hexen_2_yn_4_dioic_acid",
+@@ -2834,7 +1380,7 @@
+       "selectedMol": "ethyl_2_methyl_3_penten_2_yn_4_oic_acid"
+     },
+     {
+-      "n": 32,
++      "n": 17,
+       "title": "Θέσεις πολλαπλών δεσμών και διακλαδώσεων",
+       "note": "Με αφετηρία το καρβοξυλικό C1, ο διπλός αρχίζει στο C2 και ο τριπλός στο C4. Το <b>αιθύλιο συνδέεται στο C2</b> και το μεθύλιο στο C3. Οι αριθμοί των διακλαδώσεων δεν αντικαθιστούν τους αριθμούς των πολλαπλών δεσμών.",
+       "mode2D": "condensed",
+@@ -2874,12 +1420,6 @@
+       },
+       "menuSubset": [
+         "propenoic_acid",
+-        "propanedioic_acid",
+-        "hydroxypropanoic_acid_2",
+-        "Oxopropanoic_acid",
+-        "aminobutanoic_acid_3",
+-        "oxobutanoic_acid",
+-        "dihydroxybutanedioic_acid_2_3",
+         "methyl_2_propenoic_acid",
+         "penten_2_yn_4_oic_acid",
+         "hexen_2_yn_4_dioic_acid",
+@@ -2926,7 +1466,7 @@
+       "selectedMol": "ethyl_2_methyl_3_penten_2_yn_4_oic_acid"
+     },
+     {
+-      "n": 33,
++      "n": 18,
+       "title": "Αλφαβητική σειρά των διαφορετικών αλκυλίων",
+       "note": "Το αιθυλο- προηγείται αλφαβητικά του μεθυλο-. Το πλήρες όνομα είναι <b>2-αιθυλο-3-μεθυλο-2-πεντεν-4-ινικό οξύ</b>. Το πεντ- εξακολουθεί να μετρά μόνο την κύρια αλυσίδα.",
+       "mode2D": "condensed",
+@@ -2963,12 +1503,6 @@
+       },
+       "menuSubset": [
+         "propenoic_acid",
+-        "propanedioic_acid",
+-        "hydroxypropanoic_acid_2",
+-        "Oxopropanoic_acid",
+-        "aminobutanoic_acid_3",
+-        "oxobutanoic_acid",
+-        "dihydroxybutanedioic_acid_2_3",
+         "methyl_2_propenoic_acid",
+         "penten_2_yn_4_oic_acid",
+         "hexen_2_yn_4_dioic_acid",
+@@ -3015,7 +1549,7 @@
+       "selectedMol": "ethyl_2_methyl_3_penten_2_yn_4_oic_acid"
+     },
+     {
+-      "n": 34,
++      "n": 19,
+       "title": "Δεκατρία C συνολικά, έξι στην κύρια αλυσίδα",
+       "note": "Η κύρια αλυσίδα περιλαμβάνει τις δύο –COOH και τους δύο διπλούς δεσμούς και έχει <b>έξι C</b>. Τα υπόλοιπα επτά C ανήκουν σε αιθύλιο, ισοπροπύλιο και δύο μεθύλια.",
+       "mode2D": "condensed",
+@@ -3059,12 +1593,6 @@
+       },
+       "menuSubset": [
+         "propenoic_acid",
+-        "propanedioic_acid",
+-        "hydroxypropanoic_acid_2",
+-        "Oxopropanoic_acid",
+-        "aminobutanoic_acid_3",
+-        "oxobutanoic_acid",
+-        "dihydroxybutanedioic_acid_2_3",
+         "methyl_2_propenoic_acid",
+         "penten_2_yn_4_oic_acid",
+         "hexen_2_yn_4_dioic_acid",
+@@ -3111,7 +1639,7 @@
+       "selectedMol": "ethyl_3_isopropyl_2_dimethyl_4_5_hexadien_2_4_dioic_acid"
+     },
+     {
+-      "n": 35,
++      "n": 20,
+       "title": "Δύο διπλοί δεσμοί στις θέσεις 2 και 4",
+       "note": "Οι C=C βρίσκονται μεταξύ C2–C3 και C4–C5 και δίνουν <b>-2,4-εξαδιεν-</b>. Οι πολλαπλοί δεσμοί ισοβαθμούν στις δύο κατευθύνσεις. Οι διακλαδώσεις δίνουν 2,3,4,5 αντί για 2,3,4,5 και η ισοβαθμία λύνεται με μικρότερη θέση στο αλφαβητικά πρώτο αιθύλιο, <b>3 αντί 4</b>.",
+       "mode2D": "condensed",
+@@ -3155,12 +1683,6 @@
+       },
+       "menuSubset": [
+         "propenoic_acid",
+-        "propanedioic_acid",
+-        "hydroxypropanoic_acid_2",
+-        "Oxopropanoic_acid",
+-        "aminobutanoic_acid_3",
+-        "oxobutanoic_acid",
+-        "dihydroxybutanedioic_acid_2_3",
+         "methyl_2_propenoic_acid",
+         "penten_2_yn_4_oic_acid",
+         "hexen_2_yn_4_dioic_acid",
+@@ -3207,7 +1729,7 @@
+       "selectedMol": "ethyl_3_isopropyl_2_dimethyl_4_5_hexadien_2_4_dioic_acid"
+     },
+     {
+-      "n": 36,
++      "n": 21,
+       "title": "Πρόθεμα δι- και αλφαβητική σειρά",
+       "note": "Το όνομα είναι <b>3-αιθυλο-2-ισοπροπυλο-4,5-διμεθυλο-2,4-εξαδιενοδιικό οξύ</b>. Στη χρησιμοποιούμενη σύμβαση αιθυλο-, ισοπροπυλο-, μεθυλο- μπαίνουν αλφαβητικά, χωρίς να μετρά το πολλαπλασιαστικό δι- του διμεθυλο-. Το διεν- μετρά C=C και το -διικό οξύ μετρά –COOH.",
+       "mode2D": "condensed",
+@@ -3244,12 +1766,6 @@
+       },
+       "menuSubset": [
+         "propenoic_acid",
+-        "propanedioic_acid",
+-        "hydroxypropanoic_acid_2",
+-        "Oxopropanoic_acid",
+-        "aminobutanoic_acid_3",
+-        "oxobutanoic_acid",
+-        "dihydroxybutanedioic_acid_2_3",
+         "methyl_2_propenoic_acid",
+         "penten_2_yn_4_oic_acid",
+         "hexen_2_yn_4_dioic_acid",
+@@ -3296,7 +1812,7 @@
+       "selectedMol": "ethyl_3_isopropyl_2_dimethyl_4_5_hexadien_2_4_dioic_acid"
+     },
+     {
+-      "n": 37,
++      "n": 22,
+       "title": "Δεκατέσσερα C συνολικά, επτά στην κύρια αλυσίδα",
+       "note": "Η κύρια αλυσίδα έχει <b>επτά C</b> και περιλαμβάνει τις δύο –COOH, τον C=C και τον C≡C. Τα υπόλοιπα επτά C ανήκουν στις διακλαδώσεις. Το επτ- δεν προκύπτει από το συνολικό πλήθος C του μορίου.",
+       "mode2D": "condensed",
+@@ -3340,12 +1856,6 @@
+       },
+       "menuSubset": [
+         "propenoic_acid",
+-        "propanedioic_acid",
+-        "hydroxypropanoic_acid_2",
+-        "Oxopropanoic_acid",
+-        "aminobutanoic_acid_3",
+-        "oxobutanoic_acid",
+-        "dihydroxybutanedioic_acid_2_3",
+         "methyl_2_propenoic_acid",
+         "penten_2_yn_4_oic_acid",
+         "hexen_2_yn_4_dioic_acid",
+@@ -3392,7 +1902,7 @@
+       "selectedMol": "ethyl_2_isopropyl_3_dimethyl_6_6_hepten_2_yn_4_dioic_acid"
+     },
+     {
+-      "n": 38,
++      "n": 23,
+       "title": "Οι πολλαπλοί δεσμοί προηγούνται των διακλαδώσεων",
+       "note": "Οι –COOH βρίσκονται στα C1 και C7. Οι πολλαπλοί δεσμοί παίρνουν <b>2,4 αντί για 3,5</b>. Έτσι ο C=C αρχίζει στο C2, ο C≡C στο C4 και τα δύο μεθύλια συνδέονται στο <b>C6</b>, δίνοντας 6,6-. Δεν αντιστρέφουμε την αρίθμηση για να μικρύνουν οι θέσεις των μεθυλίων.",
+       "mode2D": "condensed",
+@@ -3431,12 +1941,6 @@
+       },
+       "menuSubset": [
+         "propenoic_acid",
+-        "propanedioic_acid",
+-        "hydroxypropanoic_acid_2",
+-        "Oxopropanoic_acid",
+-        "aminobutanoic_acid_3",
+-        "oxobutanoic_acid",
+-        "dihydroxybutanedioic_acid_2_3",
+         "methyl_2_propenoic_acid",
+         "penten_2_yn_4_oic_acid",
+         "hexen_2_yn_4_dioic_acid",
+@@ -3483,7 +1987,7 @@
+       "selectedMol": "ethyl_2_isopropyl_3_dimethyl_6_6_hepten_2_yn_4_dioic_acid"
+     },
+     {
+-      "n": 39,
++      "n": 24,
+       "title": "Σύνθεση του μεγαλύτερου παραδείγματος",
+       "note": "Το πλήρες όνομα είναι <b>2-αιθυλο-3-ισοπροπυλο-6,6-διμεθυλο-2-επτεν-4-ινοδιικό οξύ</b>. Διάβασε χωριστά τις θέσεις των διακλαδώσεων, των πολλαπλών δεσμών και την κατάληξη για τις δύο –COOH.",
+       "mode2D": "condensed",
+@@ -3520,12 +2024,6 @@
+       },
+       "menuSubset": [
+         "propenoic_acid",
+-        "propanedioic_acid",
+-        "hydroxypropanoic_acid_2",
+-        "Oxopropanoic_acid",
+-        "aminobutanoic_acid_3",
+-        "oxobutanoic_acid",
+-        "dihydroxybutanedioic_acid_2_3",
+         "methyl_2_propenoic_acid",
+         "penten_2_yn_4_oic_acid",
+         "hexen_2_yn_4_dioic_acid",
+@@ -3572,9 +2070,9 @@
+       "selectedMol": "ethyl_2_isopropyl_3_dimethyl_6_6_hepten_2_yn_4_dioic_acid"
+     },
+     {
+-      "n": 40,
++      "n": 25,
+       "title": "Μία συνεπής σειρά για την ονοματολογία",
+-      "note": "Εντοπίζουμε τις –COOH, επιλέγουμε την κατάλληλη κύρια αλυσίδα, ορίζουμε την αρίθμηση και διαβάζουμε πολλαπλούς δεσμούς και πρόσθετες ομάδες. Έπειτα συνθέτουμε προθέματα, κύρια αλυσίδα και κατάληξη. Το συνολικό πλήθος C δεν ταυτίζεται πάντα με το πλήθος C της κύριας αλυσίδας. Μπορείς να συγκρίνεις τις διαθέσιμες αναπαραστάσεις 2D.",
++      "note": "Εντοπίζουμε τη μία ή τις δύο –COOH, επιλέγουμε την κατάλληλη κύρια αλυσίδα και ορίζουμε την αρίθμηση. Διαβάζουμε τις θέσεις των C=C και C≡C και των ανθρακικών διακλαδώσεων και συνθέτουμε το όνομα. Μία –COOH δίνει -ικό οξύ και δύο –COOH δίνουν -διικό οξύ. Το συνολικό πλήθος C δεν ταυτίζεται πάντα με το πλήθος C της κύριας αλυσίδας. Μπορείς να συγκρίνεις τις διαθέσιμες αναπαραστάσεις 2D.",
+       "mode2D": "condensed",
+       "mainChainMode": "algorithmic",
+       "chainIdx": 0,
+@@ -3609,12 +2107,6 @@
+       },
+       "menuSubset": [
+         "propenoic_acid",
+-        "propanedioic_acid",
+-        "hydroxypropanoic_acid_2",
+-        "Oxopropanoic_acid",
+-        "aminobutanoic_acid_3",
+-        "oxobutanoic_acid",
+-        "dihydroxybutanedioic_acid_2_3",
+         "methyl_2_propenoic_acid",
+         "penten_2_yn_4_oic_acid",
+         "hexen_2_yn_4_dioic_acid",
+@@ -3661,7 +2153,7 @@
+       "selectedMol": "ethyl_2_isopropyl_3_dimethyl_6_6_hepten_2_yn_4_dioic_acid"
+     },
+     {
+-      "n": 41,
++      "n": 26,
+       "title": "Προαιρετική παρατήρηση σε 3D",
+       "note": "Η ονοματολογία έχει ολοκληρωθεί. Προαιρετικά παρατήρησε τη δομή σε 3D και εντόπισε τη γραμμική περιοχή C–C≡C–C. Το 3D βοηθά στην παρατήρηση της γεωμετρίας και δεν αλλάζει τη συνδεσιμότητα, την αρίθμηση ή το όνομα. Δεν αποδίδουμε εδώ στερεοχημικό προσδιορισμό από τη συγκεκριμένη απεικόνιση.",
+       "mode2D": "condensed",
+@@ -3698,12 +2190,6 @@
+       },
+       "menuSubset": [
+         "propenoic_acid",
+-        "propanedioic_acid",
+-        "hydroxypropanoic_acid_2",
+-        "Oxopropanoic_acid",
+-        "aminobutanoic_acid_3",
+-        "oxobutanoic_acid",
+-        "dihydroxybutanedioic_acid_2_3",
+         "methyl_2_propenoic_acid",
+         "penten_2_yn_4_oic_acid",
+         "hexen_2_yn_4_dioic_acid",
+--- before/design/theory-library.html
++++ after/design/theory-library.html
+@@ -175,10 +175,10 @@
+           </section>
+           <section class="lesson-part" aria-labelledby="other-carboxylic-acids-title">
+             <h3 id="other-carboxylic-acids-title">Άλλα καρβοξυλικά οξέα</h3>
+-            <p class="series-formula">Μία ή περισσότερες –COOH</p>
+-            <p>Οξέα με πολλαπλούς δεσμούς μεταξύ ατόμων C, περισσότερες καρβοξυλομάδες ή πρόσθετες χαρακτηριστικές ομάδες.</p>
+-            <p><span class="count">41 βήματα · 13 μόρια</span></p>
+-            <a class="action" href="../mulermoc-nom-52.html?scenario=scenarios/other-carboxylic-acids-nomenclature.scenario.json&amp;present=1&amp;from=theory-library&amp;v=other-acids-theory-20261028">Ξεκίνα το μάθημα <span aria-hidden="true">→</span></a>
++            <p class="series-formula">C=C ή C≡C · Μία ή δύο –COOH</p>
++            <p>Ακόρεστα μονοκαρβοξυλικά και δικαρβοξυλικά οξέα, χωρίς άλλες χαρακτηριστικές ομάδες.</p>
++            <p><span class="count">26 βήματα · 7 μόρια</span></p>
++            <a class="action" href="../mulermoc-nom-52.html?scenario=scenarios/other-carboxylic-acids-nomenclature.scenario.json&amp;present=1&amp;from=theory-library&amp;v=unsaturated-acids-theory-20261028">Ξεκίνα το μάθημα <span aria-hidden="true">→</span></a>
+           </section>
+         </div>
+       </article>
+--- before/README.md
++++ after/README.md
+@@ -1,9 +1,9 @@
+-**Local theory addition — 2026-10-28:** «Άλλα καρβοξυλικά οξέα», 41 progressive
+-steps using all 13 other existing acids, is linked from the theory library.
+-There are now 14 active lessons / 352 steps. Additional carbonyl examples explain
+-the legacy display names alongside their explicit systematic locants.
+-Core, molecular sources and previous lessons are unchanged by this addition.
+-See [lesson record](docs/OTHER-ACIDS-SCENARIO-20261028.md). Local, not published.
++**Corrected theory scope — 2026-10-28:** «Άλλα καρβοξυλικά οξέα» now uses only
++7 existing unsaturated mono-/dicarboxylic acids with C=C or C≡C and no other
++functional groups, in 26 progressive steps. The library has 14 active lessons /
++337 steps. Removed examples remain in the general molecule library. No core,
++player, viewer or molecular data changes. Local, not committed or published.
++See [corrected lesson record](docs/UNSATURATED-ACIDS-SCENARIO-20261028.md).
+ 
+ **Local addition — 2026-10-28:** 2-πεντεν-4-ινικό οξύ (C5H4O2) and
+ 2-εξεν-4-ινοδιικό οξύ (C6H4O4) bring the Main library to136molecules.
+--- before/docs/OTHER-ACIDS-SCENARIO-20261028.md
++++ after/docs/OTHER-ACIDS-SCENARIO-20261028.md
+@@ -1,3 +1,9 @@
++> Superseded scope — 28/10/2026. The user clarified that this lesson must contain
++> only unsaturated mono-/dicarboxylic acids without other functional groups.
++> The current lesson has 7 molecules / 26 steps. This report below records the
++> earlier 13-molecule / 41-step version, not the current release. See
++> [corrected lesson](UNSATURATED-ACIDS-SCENARIO-20261028.md).
++
+ # Άλλα καρβοξυλικά οξέα — θεωρία, 28/10/2026
+ 
+ Εγκεκριμένη προσθήκη 41 βημάτων με όλα τα 13 υπάρχοντα οξέα εκτός των

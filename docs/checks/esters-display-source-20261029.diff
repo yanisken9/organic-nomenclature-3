@@ -1,0 +1,208 @@
+--- before/js/mulermoc-nom-molview-52.js
++++ js/mulermoc-nom-molview-52.js
+@@ -1063,7 +1063,7 @@
+ // Pure V2000 display transform. Topology, atom order, stereo fields and z stay
+ // unchanged. A proper rotation preserves the authored layout wherever possible.
+ // BEGIN SKELETAL GEOMETRY
+-function fSkeletalLayoutMol(mol, chain) {
++function fSkeletalLayoutMol(mol, chain, esterFragments = null) {
+   const unchanged = {mol, rotation: 0, repairs: [], skipped: []};
+   if (typeof mol !== "string" || !Array.isArray(chain)) return unchanged;
+   const lines = mol.split(/\r?\n/), counts = lines[3] || "";
+@@ -1197,7 +1197,19 @@
+       if (better) best={angle,score};
+     }
+   }
+-  const angle=best ? best.angle : 0;
++  let angle=best ? best.angle : 0;
++  // Ester display convention takes precedence over C1-left progression.
++  // Choose the half-turn inside this same pipeline, retaining every local
++  // angle/length and its repair safeguards. Naming/numbering are unchanged.
++  if (esterFragments) {
++    const groups = [esterFragments.acidFrag, esterFragments.alcoholFrag];
++    if (groups.every(ids => Array.isArray(ids) && ids.length &&
++        ids.every(i => Number.isInteger(i) && i >= 0 && i < n && types[i] === 'C'))) {
++      const mean = ids => ids.reduce((sum,i) => sum +
++        points[i][0]*Math.cos(angle)-points[i][1]*Math.sin(angle),0)/ids.length;
++      if (mean(groups[0]) > mean(groups[1]) + 1e-6) angle=wrap(angle+Math.PI);
++    }
++  }
+   turn(all,[0,0],angle);
+   // Center coordinates of the complete molecule, not just its parent. The
+   // final SVG fit separately includes the actual rendered labels and strokes.
+@@ -1218,7 +1230,10 @@
+       skeletalLayoutSource.key !== selectedMol) return;
+   const key=mainChainAtomsList.join(',');
+   if (skeletalLayoutApplied === key) return;
+-  const layout=fSkeletalLayoutMol(skeletalLayoutSource.mol,mainChainAtomsList);
++  const fragments = fIsSingleEster() &&
++    fIsAcyclicSaturatedMonoesterGraph(atomConnectivityList,allAtomsTypeList,bondList)
++      ? esterInfo : null;
++  const layout=fSkeletalLayoutMol(skeletalLayoutSource.mol,mainChainAtomsList,fragments);
+   myMol2D=layout.mol;
+   jsmeNomeclatureApplet.readMolFile(myMol2D);
+   jsmeNomeclatureApplet.setMolecularAreaScale(molZoom2D);
+@@ -1227,6 +1242,35 @@
+     jsmeNomeclatureAppletORGNL.setMolecularAreaScale(molZoom2D);
+   }
+   skeletalLayoutApplied=key;
++}
++
++// School expanded form: terminal formyl H left of C for the requested ester.
++// Start from the saved string each load; only this H's transient XY changes.
++function fFormylHydrogenLeftMol(mol) {
++  if (selectedMol !== 'tert_butyl_methanoate' || typeof mol !== 'string') return mol;
++  const lines=mol.split('\n'), n=Number((lines[3] || '').slice(0,3));
++  const nb=Number((lines[3] || '').slice(3,6));
++  if (!(lines[3] || '').includes('V2000') || !(n > 0) || !(nb > 0)) return mol;
++  const atoms=lines.slice(4,4+n).map(l => ({x:Number(l.slice(0,10)),
++    y:Number(l.slice(10,20)), type:l.slice(31,34).trim()}));
++  const bonds=lines.slice(4+n,4+n+nb).map(l =>
++    [Number(l.slice(0,3))-1,Number(l.slice(3,6))-1,Number(l.slice(6,9))]);
++  for (const [a,b,order] of bonds) {
++    if (order !== 2 || !atoms[a] || !atoms[b]) continue;
++    const carbon=atoms[a].type === 'C' && atoms[b].type === 'O' ? a :
++      atoms[b].type === 'C' && atoms[a].type === 'O' ? b : -1;
++    if (carbon < 0) continue;
++    const hs=bonds.filter(e => e[2] === 1 && (e[0] === carbon || e[1] === carbon))
++      .map(e => e[0] === carbon ? e[1] : e[0]).filter(i => atoms[i]?.type === 'H');
++    if (hs.length !== 1) return mol;
++    const h=hs[0], c=atoms[carbon], length=Math.hypot(atoms[h].x-c.x,atoms[h].y-c.y);
++    if (!(length > 0) || !Number.isFinite(length)) return mol;
++    const x=(c.x-length).toFixed(4), y=c.y.toFixed(4);
++    if (x.length > 10 || y.length > 10) return mol;
++    lines[4+h]=x.padStart(10)+y.padStart(10)+lines[4+h].slice(20);
++    return lines.join('\n');
++  }
++  return mol;
+ }
+ 
+ function fLoadMol2D() {
+@@ -1279,8 +1323,8 @@
+       myMol2D = fMakeAnnotatedSkeletal(selectedExample.structure2D_Condensed);
+       break;
+     case "expanded":
+-      rawMol2D = selectedExample.structure2D_Expanded;
+-      myMol2D = fMakeAnnotatedSkeletal(selectedExample.structure2D_Expanded);
++      rawMol2D = fFormylHydrogenLeftMol(selectedExample.structure2D_Expanded);
++      myMol2D = fMakeAnnotatedSkeletal(rawMol2D);
+       break;
+     case "skeletal":
+       rawMol2D = selectedExample.structure2D_Skeletal;
+@@ -1375,6 +1419,18 @@
+ 
+ // ── fAddHydrogens2SVG ─────────────────────────────────────────────────────
+ 
++function fRemainingImplicitCarbonHydrogens(atomIdx) {
++  const explicit=bondList.filter(([a,b,order]) => order === 1 &&
++    ((a-1 === atomIdx && allAtomsTypeList[b-1] === 'H') ||
++     (b-1 === atomIdx && allAtomsTypeList[a-1] === 'H'))).length;
++  const remaining=carbonHydrogens[atomIdx]-explicit;
++  if (!Number.isInteger(remaining) || remaining < 0 || remaining > 4) {
++    console.warn('Invalid display hydrogen count', selectedMol, atomIdx, remaining);
++    return null;
++  }
++  return remaining;
++}
++
+ function fAddHydrogens2SVG() {
+   let tmpTexts, tmpRects, tmpBonds;
+   let currText, currElement, currID, currHydrogensCount;
+@@ -1392,7 +1448,8 @@
+     if (currText === "C") {
+       currID = currText + (i + 1);
+ 
+-      currHydrogensCount = carbonHydrogens[i];
++      currHydrogensCount = fRemainingImplicitCarbonHydrogens(i);
++      if (currHydrogensCount === null) continue;
+       switch (currHydrogensCount) {
+         case 0:
+           myLabel = "C";
+@@ -1429,6 +1486,18 @@
+       const label = molSvg.select("#" + currID);
+       const backplate = tmpRects[i + 1];
+       if (label && backplate) {
++        if (selectedMol === 'tert_butyl_methanoate' && fIsSingleEster() &&
++            i === esterInfo.carbonylC && currHydrogensCount === 1) {
++          // H precedes C, while C keeps the native atom anchor.
++          const carbon=label.node.firstElementChild, hydrogen=carbon?.nextElementSibling;
++          if (carbon && hydrogen) {
++            const x=Number(label.attr('x'));
++            const pad=parseFloat(label.attr('font-size'))*.06;
++            hydrogen.setAttribute('x',x-hydrogen.getComputedTextLength()-pad);
++            carbon.setAttribute('x',x);
++            label.node.insertBefore(hydrogen,carbon);
++          }
++        }
+         const bounds = label.node.getBBox();
+         const fontSize = parseFloat(label.attr("font-size"));
+         const padding = Number.isFinite(fontSize) && fontSize > 0 ? fontSize * 0.06 : 20;
+@@ -3216,6 +3285,39 @@
+   });
+ }
+ 
++// Match explicit H by its actual chemical bond's native SVG endpoints and
++// paired backplate, never by text ordinal (skeletal carbons have no text).
++// Keep hidden nodes in the DOM so existing bond/atom indices stay stable.
++function fHideEsterSkeletalCarbonHydrogens() {
++  if (mode2D !== 'skeletal' || !fIsSingleEster()) return;
++  const svg=document.querySelector('#jsmeNomeclatureSVG svg');
++  if (!svg) return;
++  const lines=[...svg.querySelectorAll('line')];
++  for (let i=0;i<bondList.length;i++) {
++    const [a,b,order]=bondList[i], ta=allAtomsTypeList[a-1], tb=allAtomsTypeList[b-1];
++    if (order !== 1 || !((ta === 'C' && tb === 'H') || (ta === 'H' && tb === 'C'))) continue;
++    const line=lines[svgBondList[i]-1];
++    if (!line) continue;
++    const ends=[1,2].map(k => [Number(line.getAttribute('x'+k)),Number(line.getAttribute('y'+k))]);
++    const matches=[...svg.querySelectorAll('text')].filter(label => {
++      if (label.textContent.trim() !== 'H') return false;
++      const r=label.previousElementSibling;
++      if (!r || r.localName !== 'rect' || !r.hasAttribute('rx')) return false;
++      const x=Number(r.getAttribute('x')), y=Number(r.getAttribute('y'));
++      const w=Number(r.getAttribute('width')), h=Number(r.getAttribute('height'));
++      return ends.some(p => p[0]>=x && p[0]<=x+w && p[1]>=y && p[1]<=y+h);
++    });
++    if (matches.length !== 1) {
++      console.warn('Unmatched skeletal ester H',selectedMol,ta === 'H' ? a : b);
++      continue;
++    }
++    for (const el of [line,matches[0],matches[0].previousElementSibling]) {
++      el.setAttribute('visibility','hidden');
++      el.setAttribute('data-hidden-carbon-h','true');
++    }
++  }
++}
++
+ // ── fUpdateSVG ────────────────────────────────────────────────────────────
+ 
+ // Use the same viewport policy for every 2D representation. Measure molecular
+@@ -3268,6 +3370,7 @@
+     let left = Infinity, top = Infinity, right = -Infinity, bottom = -Infinity;
+     svg.querySelectorAll("line, text, path").forEach(function (el) {
+       if (el.closest("defs") || (el.id || "").indexOf("number") === 0) return;
++      if (el.hasAttribute('data-hidden-carbon-h')) return;
+       const matrix = el.getCTM();
+       if (!matrix) return;
+       const box = el.getBBox();
+@@ -3391,6 +3494,9 @@
+   fWrapStandaloneHydrogenTextsAsTspan();
+   fApplyAtomColors2DToSVGLabels();
+   fApplyCHBondColors2D();
++  // Hydrogen wrapping may replace the text node, so hide only after labels
++  // and colors are finalized, before fitting the visible drawing.
++  fHideEsterSkeletalCarbonHydrogens();
+   $("#jsmeNomeclatureSVG").toggleClass(
+     "svgAtomsColorized",
+     svgAtomColors2DFlag,
+--- before/mulermoc-nom-52.html
++++ mulermoc-nom-52.html
+@@ -331,7 +331,7 @@
+   <script src="js/jsme-nick-nomeclature-moc2-data_52.js?v=esters-mol-20261029"></script>
+   <script src="js/ui-icons.js?v=v52-sync-20261027-r2"></script>
+   <script src="js/mulermoc-nom-core-52.js?v=esters-20261029"></script>
+-  <script src="js/mulermoc-nom-molview-52.js?v=restore-ester-viewer-20261029"></script>
++  <script src="js/mulermoc-nom-molview-52.js?v=ester-display-20261029"></script>
+   <script src="js/mulermoc-nom-teaching-52.js?v=acid-prefix-boxes-20261028"></script>
+   <script src="js/mulermoc-nom-note-52.js?v=v52-sync-20261027-r2"></script>
+   <script src="js/mulermoc-nom-scenario-52.js?v=other-acids-theory-20261028"></script>

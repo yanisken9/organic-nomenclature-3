@@ -1,0 +1,114 @@
+--- before/design/theory-library.html
++++ after/design/theory-library.html
+@@ -23,7 +23,7 @@
+     <p class="intro">Διάλεξε ένα μάθημα και ανακάλυψε τους κανόνες ονοματολογίας μέσα από καθοδηγούμενα βήματα και διαφορετικές αναπαραστάσεις των μορίων.</p>
+     <section class="lessons" aria-label="Μαθήματα θεωρίας">
+       <article class="lesson" aria-labelledby="alkanes-title">
+-        <div class="illustration series-header"><div class="series-heading"><span class="formula">ΑΛΚΑΝΙΑ</span><p class="series-formula">C<sub>ν</sub>H<sub>2ν+2</sub><span class="restriction">ν ≥ 1</span></p></div><span class="count">21 βήματα</span></div>
++        <div class="illustration series-header"><div class="series-heading"><span class="formula">ΑΛΚΑΝΙΑ</span><p class="series-formula">C<sub>ν</sub>H<sub>2ν+2</sub><span class="restriction">ν ≥ 1</span></p></div><span class="count">21 βήματα · 5 μόρια</span></div>
+         <div class="content">
+           <h2 id="alkanes-title">Ονοματολογία και διακλαδώσεις</h2>
+           <p>Από το αιθάνιο στα διακλαδισμένα αλκάνια: σχημάτισε το όνομα κάθε μορίου, έναν κανόνα τη φορά.</p>
+@@ -37,7 +37,7 @@
+         </div>
+       </article>
+       <article class="lesson" aria-labelledby="alkenes-title">
+-        <div class="illustration series-header"><div class="series-heading"><span class="formula">ΑΛΚΕΝΙΑ</span><p class="series-formula">C<sub>ν</sub>H<sub>2ν</sub><span class="restriction">ν ≥ 2</span></p></div><span class="count">22 βήματα</span></div>
++        <div class="illustration series-header"><div class="series-heading"><span class="formula">ΑΛΚΕΝΙΑ</span><p class="series-formula">C<sub>ν</sub>H<sub>2ν</sub><span class="restriction">ν ≥ 2</span></p></div><span class="count">22 βήματα · 5 μόρια</span></div>
+         <div class="content">
+           <h2 id="alkenes-title">Ονοματολογία και διακλαδώσεις</h2>
+           <p>Από το αιθένιο στα διακλαδισμένα αλκένια: σχημάτισε το όνομα κάθε μορίου, έναν κανόνα τη φορά.</p>
+@@ -51,7 +51,7 @@
+         </div>
+       </article>
+       <article class="lesson" aria-labelledby="alkynes-title">
+-        <div class="illustration series-header"><div class="series-heading"><span class="formula">ΑΛΚΙΝΙΑ</span><p class="series-formula">C<sub>ν</sub>H<sub>2ν−2</sub><span class="restriction">ν ≥ 2</span></p></div><span class="count">22 βήματα</span></div>
++        <div class="illustration series-header"><div class="series-heading"><span class="formula">ΑΛΚΙΝΙΑ</span><p class="series-formula">C<sub>ν</sub>H<sub>2ν−2</sub><span class="restriction">ν ≥ 2</span></p></div><span class="count">22 βήματα · 5 μόρια</span></div>
+         <div class="content">
+           <h2 id="alkynes-title">Ονοματολογία και διακλαδώσεις</h2>
+           <p>Από το αιθίνιο στα διακλαδισμένα αλκίνια. Σχημάτισε το όνομα κάθε μορίου, έναν κανόνα τη φορά.</p>
+@@ -65,7 +65,7 @@
+         </div>
+       </article>
+       <article class="lesson" aria-labelledby="alkadienes-title">
+-        <div class="illustration series-header"><div class="series-heading"><span class="formula">ΑΛΚΑΔΙΕΝΙΑ</span><p class="series-formula">C<sub>ν</sub>H<sub>2ν−2</sub><span class="restriction">ν ≥ 3</span></p></div><span class="count">23 βήματα</span></div>
++        <div class="illustration series-header"><div class="series-heading"><span class="formula">ΑΛΚΑΔΙΕΝΙΑ</span><p class="series-formula">C<sub>ν</sub>H<sub>2ν−2</sub><span class="restriction">ν ≥ 3</span></p></div><span class="count">23 βήματα · 6 μόρια</span></div>
+         <div class="content">
+           <h2 id="alkadienes-title">Ονοματολογία και διακλαδώσεις</h2>
+           <p>Από το 1,3-βουταδιένιο στα διακλαδισμένα αλκαδιένια. Σχημάτισε το όνομα κάθε μορίου, έναν κανόνα τη φορά.</p>
+@@ -79,7 +79,7 @@
+         </div>
+       </article>
+       <article class="lesson" aria-labelledby="enynes-title">
+-        <div class="illustration series-header"><div class="series-heading"><span class="formula">ΑΛΚΕΝΙΝΙΑ</span><p class="series-formula">C<sub>ν</sub>H<sub>2ν−4</sub><span class="restriction">ν ≥ 4</span></p></div><span class="count">23 βήματα</span></div>
++        <div class="illustration series-header"><div class="series-heading"><span class="formula">ΑΛΚΕΝΙΝΙΑ</span><p class="series-formula">C<sub>ν</sub>H<sub>2ν−4</sub><span class="restriction">ν ≥ 4</span></p></div><span class="count">23 βήματα · 6 μόρια</span></div>
+         <div class="content">
+           <h2 id="enynes-title">Ονοματολογία Αλκενινίων</h2>
+           <p>Από το 1-βουτεν-3-ίνιο στα διακλαδισμένα αλκενίνια. Σχημάτισε το όνομα κάθε μορίου, έναν κανόνα τη φορά.</p>
+@@ -99,20 +99,20 @@
+             <h3 id="monoalcohols-title">Κορεσμένες μονοσθενείς αλκοόλες</h3>
+             <p class="series-formula">C<sub>ν</sub>H<sub>2ν+2</sub>O<span class="restriction">ν ≥ 1</span></p>
+             <p>Μία υδροξυλομάδα και μόνο απλοί δεσμοί μεταξύ των ατόμων άνθρακα.</p>
+-            <p><span class="count">20 βήματα</span></p>
++            <p><span class="count">20 βήματα · 7 μόρια</span></p>
+             <a class="action" href="../mulermoc-nom-52.html?scenario=scenarios/saturated-monoalcohols-nomenclature.scenario.json&amp;present=1&amp;from=theory-library&amp;v=monoalcohol-theory-20261025">Ξεκίνα το μάθημα <span aria-hidden="true">→</span></a>
+           </section>
+           <section class="lesson-part" aria-labelledby="other-alcohols-title">
+             <h3 id="other-alcohols-title">Άλλες αλκοόλες</h3>
+             <p class="series-formula">C<sub>x</sub>H<sub>y</sub>(OH)<sub>n</sub></p>
+             <p>Αλκοόλες με περισσότερες υδροξυλομάδες ή με πολλαπλούς δεσμούς ή και τα δύο.</p>
+-            <p><span class="count">22 βήματα</span></p>
++            <p><span class="count">22 βήματα · 10 μόρια</span></p>
+             <a class="action" href="../mulermoc-nom-52.html?scenario=scenarios/other-alcohols-nomenclature.scenario.json&amp;present=1&amp;from=theory-library&amp;v=other-alcohols-theory-20261025">Ξεκίνα το μάθημα <span aria-hidden="true">→</span></a>
+           </section>
+         </div>
+       </article>
+       <article class="lesson" aria-labelledby="monoethers-title">
+-        <div class="illustration series-header"><div class="series-heading"><span class="formula">ΚΟΡΕΣΜΕΝΟΙ ΜΟΝΟΑΙΘΕΡΕΣ</span><p class="series-formula">C<sub>ν</sub>H<sub>2ν+2</sub>O<span class="restriction">ν ≥ 2</span></p></div><span class="count">27 βήματα</span></div>
++        <div class="illustration series-header"><div class="series-heading"><span class="formula">ΚΟΡΕΣΜΕΝΟΙ ΜΟΝΟΑΙΘΕΡΕΣ</span><p class="series-formula">C<sub>ν</sub>H<sub>2ν+2</sub>O<span class="restriction">ν ≥ 2</span></p></div><span class="count">27 βήματα · 11 μόρια</span></div>
+         <div class="content">
+           <h2 id="monoethers-title">Κοινή και συστηματική ονομασία</h2>
+           <p>Άκυκλοι κορεσμένοι μονοαιθέρες: από το μικρότερο μόριο στα διακλαδισμένα παραδείγματα, με δύο τρόπους ονομασίας.</p>
+@@ -132,14 +132,14 @@
+             <h3 id="monoaldehydes-title">Κορεσμένες μονοσθενείς αλδεΰδες</h3>
+             <p class="series-formula">C<sub>ν</sub>H<sub>2ν</sub>O<span class="restriction">ν ≥ 1</span></p>
+             <p>Άκυκλες αλδεΰδες με μία αλδεϋδομάδα και μόνο απλούς δεσμούς μεταξύ των ατόμων C.</p>
+-            <p><span class="count">24 βήματα</span></p>
++            <p><span class="count">24 βήματα · 9 μόρια</span></p>
+             <a class="action" href="../mulermoc-nom-52.html?scenario=scenarios/saturated-monoaldehydes-nomenclature.scenario.json&amp;present=1&amp;from=theory-library&amp;v=monoaldehydes-theory-20261026">Ξεκίνα το μάθημα <span aria-hidden="true">→</span></a>
+           </section>
+           <section class="lesson-part" aria-labelledby="other-aldehydes-title">
+             <h3 id="other-aldehydes-title">Άλλες αλδεΰδες</h3>
+             <p class="series-formula">C<sub>x</sub>H<sub>y</sub>(CHO)<sub>n</sub></p>
+             <p>Αλδεΰδες με περισσότερες αλδεϋδομάδες ή με πολλαπλούς δεσμούς μεταξύ ατόμων C ή και τα δύο.</p>
+-            <p><span class="count">26 βήματα</span></p>
++            <p><span class="count">26 βήματα · 8 μόρια</span></p>
+             <a class="action" href="../mulermoc-nom-52.html?scenario=scenarios/other-aldehydes-nomenclature.scenario.json&amp;present=1&amp;from=theory-library&amp;v=other-aldehydes-theory-20261026">Ξεκίνα το μάθημα <span aria-hidden="true">→</span></a>
+           </section>
+         </div>
+@@ -151,14 +151,14 @@
+             <h3 id="monoketones-title">Κορεσμένες μονοσθενείς κετόνες</h3>
+             <p class="series-formula">C<sub>ν</sub>H<sub>2ν</sub>O<span class="restriction">ν ≥ 3</span></p>
+             <p>Άκυκλες κετόνες με μία καρβονυλομάδα και μόνο απλούς δεσμούς μεταξύ των ατόμων C.</p>
+-            <p><span class="count">25 βήματα</span></p>
++            <p><span class="count">25 βήματα · 7 μόρια</span></p>
+             <a class="action" href="../mulermoc-nom-52.html?scenario=scenarios/saturated-monoketones-nomenclature.scenario.json&amp;present=1&amp;from=theory-library&amp;v=monoketones-theory-20261026">Ξεκίνα το μάθημα <span aria-hidden="true">→</span></a>
+           </section>
+           <section class="lesson-part" aria-labelledby="other-ketones-title">
+             <h3 id="other-ketones-title">Άλλες κετόνες</h3>
+             <p class="series-formula">C<sub>x</sub>H<sub>y</sub>(CO)<sub>n</sub></p>
+             <p>Κετόνες με περισσότερες καρβονυλομάδες ή με πολλαπλούς δεσμούς μεταξύ ατόμων C ή και τα δύο.</p>
+-            <p><span class="count">28 βήματα</span></p>
++            <p><span class="count">28 βήματα · 7 μόρια</span></p>
+             <a class="action" href="../mulermoc-nom-52.html?scenario=scenarios/other-ketones-nomenclature.scenario.json&amp;present=1&amp;from=theory-library&amp;v=other-ketones-theory-20261026">Ξεκίνα το μάθημα <span aria-hidden="true">→</span></a>
+           </section>
+         </div>
+@@ -170,7 +170,7 @@
+             <h3 id="saturated-monocarboxylic-acids-title">Κορεσμένα μονοκαρβοξυλικά οξέα</h3>
+             <p class="series-formula">C<sub>ν</sub>H<sub>2ν</sub>O<sub>2</sub><span class="restriction">ν ≥ 1</span></p>
+             <p>Από την καρβοξυλομάδα και τα συνθετικά του ονόματος στις διακλαδώσεις.</p>
+-            <p><span class="count">28 βήματα</span></p>
++            <p><span class="count">28 βήματα · 8 μόρια</span></p>
+             <a class="action" href="../mulermoc-nom-52.html?scenario=scenarios/saturated-monocarboxylic-acids-nomenclature.scenario.json&amp;present=1&amp;from=theory-library&amp;v=monoacids-theory-20261028">Ξεκίνα το μάθημα <span aria-hidden="true">→</span></a>
+           </section>
+           <section class="lesson-part" aria-labelledby="other-carboxylic-acids-title">

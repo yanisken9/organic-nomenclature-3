@@ -86,7 +86,7 @@
   changed/untracked file list, and revision or content hashes being reviewed.
   Review the final working-tree content, including untracked deliverables;
   review does not require creating a commit. Do not edit that target while the
-  Reviewer is inspecting it. Any later target changes require review again.
+  Reviewer is inspecting it. Any later target changes require targeted verification under the protocol below.
 - Start the Reviewer in a separate context without inheriting the Developer's
   conversation (use `fork_turns: "none"` when supported). Supply requirements
   and source references, not a prewritten verdict. The Reviewer reads this
@@ -102,13 +102,14 @@
   runtime tests unless they alter a functional contract requiring validation.
   Chemistry or viewer changes need relevant molecular and browser checks.
   Always distinguish completed checks, supplied evidence, and untested areas.
-- Report actionable findings with severity, exact file/line, violated
+- Report actionable findings with P0/P1/P2/P3 severity, exact file/line, violated
   requirement, observed behavior, impact, and reproduction/evidence. Separate
   existing issues from regressions introduced by the change. Do not invent
   findings to fill a quota or treat style preferences as functional defects.
-- The Developer addresses findings and returns changed content for independent
-  re-review. Unresolved blocking/high-severity findings prevent declaring the
-  change ready to publish; disclose any other residual findings and limitations.
+- The Developer addresses findings and provides the changed content for targeted
+  final verification under the protocol below. Unresolved P0/P1 findings prevent
+  declaring the work complete or ready to publish; disclose other residual findings
+  and limitations.
   User authorization for publication remains required even after a clean review.
 - The Developer records the review target, Reviewer identity, findings,
   resolutions, checks and limitations in project notes or a review report.
@@ -120,3 +121,76 @@
   access is required, use a separately configured read-only session. If actual
   subagents are unavailable, disclose that fact and propose a separate review
   session; never describe Developer self-review as independent review.
+
+# Namelecule Codex Cost Optimization Protocol v1.0
+
+Adopted 2026-10-28. This protocol refines activation and review scope; it preserves
+all five roles, approval boundaries, permissions and scientific requirements.
+Where older workflow text implies a full review after every correction, use the
+bounded review cycle below.
+
+- Developer is the primary implementation role; the main agent may perform it
+  without spawning a duplicate Developer. Never activate all roles by default.
+- Activate Chemistry Validator when chemical rules, molecular structures or
+  nomenclature are affected. Activate Learning Designer when educational scenarios
+  or learning sequences are affected. Activate Planner only for complex
+  architecture or design changes; ordinary planning stays with the Developer.
+- Use Developer → one consolidated independent Reviewer after a logical unit is
+  complete → Developer corrections → targeted final verification. The Reviewer
+  starts in fresh context and inspects the relevant diff, new deliverables and
+  directly affected dependencies. Expand only for concrete risks or evidence.
+- Report actionable findings as P0 critical, P1 high, P2 medium or P3 low, with
+  file/line, requirement, impact and reproducible evidence. Track resolution by
+  finding ID; do not repeat resolved findings unless new evidence reopens them.
+- Freeze each review target and identify the base, exact paths and hashes. After
+  corrections, identify the new hashes and verify changed paths and their effects.
+  P0/P1 fixes require independent targeted verification before work is complete;
+  Developer verification alone is insufficient. For P2/P3, Developer checks may
+  close isolated fixes; retain independent targeted re-review when correctness or
+  chemical/pedagogical uncertainty requires it. Never describe self-checks as
+  independent review. Disclose remaining findings and untested areas.
+- A second full review is warranted only for substantial new changes or serious
+  unresolved risks. Any target change needs verification, not automatic repetition
+  of the entire checklist. No endless review/correction loops: record a persistent
+  blocker and its next diagnostic step instead of repeating unchanged checks.
+- Read only necessary files/sections and reuse verified context within the session;
+  reread when content changes or uncertainty requires it. Keep handoffs and reports
+  concise, with source paths and evidence instead of duplicated history. Keep the
+  current resume point short and preserve historical records below it.
+- Prefer bounded tasks and existing suitable tests. Repeat or broaden checks only
+  for new changes, failures, affected dependencies or unresolved risks. Pure
+  documentation changes need no application tests unless a functional contract
+  changes. Agent loading tests are not routine checks for every instruction edit.
+- Cost savings must not weaken chemical correctness, naming reliability,
+  pedagogical quality, independent review of critical changes or documentation
+  of significant decisions. General core changes still need broad relevant
+  regression coverage. Record limitations and uncertainty; no savings percentage
+  may be claimed without measurements. Do not change models/settings or introduce
+  test quotas as an implied part of this protocol.
+- For adoption of v1.0 only, the user explicitly waived all subagents, including
+  Reviewer. Validate this documentation locally; this is not a standing exemption
+  from independent review of subsequent work.
+
+# Permanent skeletal geometry and framing rule
+
+- Apply one reusable display pipeline to every available library skeletal form,
+  including future imports and lesson/embedded viewers: chemical geometry first,
+  horizontal parent development second, readability and complete-label framing.
+- Resolve the numbered parent from nomenclature before changing display geometry.
+  Prefer C1 towards the left and progression to the right, minimizing needless
+  vertical spread. Try a proper whole-molecule rotation before local corrections;
+  never flatten a zigzag, mirror a molecule or distort valid bond angles/lengths.
+- Triple-bond sp centers must be linear. Where rotation cannot repair a bent
+  degree-two sp carbon, rotate a complete separable side about that center;
+  preserve topology, bond lengths and other local angles. Do not break rings or
+  force unsafe geometry. Keep branch/functional-group labels readable.
+- Keep saved records, embedded/source MOLs, atom IDs and 3D files unchanged for a
+  display-only task. Rebuild transient geometry from original input, preventing
+  cumulative rotations on molecule/chain changes, highlights, zoom or resize.
+- After geometry and label generation, fit the bounding box of the entire visible
+  molecular drawing, including labels, to the actual 2D viewport with margins.
+  Center the whole structure, not C1 or the parent alone. Verify desktop/mobile,
+  resize and molecule switches. Other representation modes and naming are invariant.
+- Validate all available skeletal forms plus representative straight, branched,
+  multifunctional and triple-bond cases. Report missing forms and unsafe skipped
+  repairs explicitly; a central hook alone is not evidence of universal success.

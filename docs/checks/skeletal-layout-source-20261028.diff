@@ -1,0 +1,292 @@
+--- before/js/mulermoc-nom-molview-52.js
++++ after/js/mulermoc-nom-molview-52.js
+@@ -58,6 +58,9 @@
+ let myMol2D = null;
+ let myMol3D = null;
+ let molSvg;
++// Display-only geometry: never replace a library record or a 3D source.
++let skeletalLayoutSource = null;
++let skeletalLayoutApplied = null;
+ 
+ // ── MuSVG: minimal native SVG DOM helper (replaces the former SVG library) ──
+ const MuSVG = (function () {
+@@ -1057,7 +1060,178 @@
+ 
+ // ── fLoadMol2D ────────────────────────────────────────────────────────────
+ 
++// Pure V2000 display transform. Topology, atom order, stereo fields and z stay
++// unchanged. A proper rotation preserves the authored layout wherever possible.
++// BEGIN SKELETAL GEOMETRY
++function fSkeletalLayoutMol(mol, chain) {
++  const unchanged = {mol, rotation: 0, repairs: [], skipped: []};
++  if (typeof mol !== "string" || !Array.isArray(chain)) return unchanged;
++  const lines = mol.split(/\r?\n/), counts = lines[3] || "";
++  const n = Number(counts.slice(0, 3)), nb = Number(counts.slice(3, 6));
++  if (!counts.includes("V2000") || !(n > 0) || !(nb >= 0) ||
++      lines.length < 4 + n + nb) return unchanged;
++  const points = lines.slice(4, 4+n).map(l => [Number(l.slice(0,10)), Number(l.slice(10,20))]);
++  const types = lines.slice(4, 4+n).map(l => l.slice(31,34).trim());
++  if (points.some(p => !p.every(Number.isFinite))) return unchanged;
++  const parent = chain.map(i => i-1);
++  if (new Set(parent).size !== parent.length || parent.some(i =>
++      !Number.isInteger(i) || i < 0 || i >= n || types[i] !== 'C')) return unchanged;
++  const bonds = lines.slice(4+n,4+n+nb).map(l =>
++    [Number(l.slice(0,3))-1, Number(l.slice(3,6))-1, Number(l.slice(6,9))]);
++  if (bonds.some(([a,b,o]) => !Number.isInteger(a) || !Number.isInteger(b) ||
++      a < 0 || b < 0 || a >= n || b >= n || a === b || !(o > 0))) return unchanged;
++  const adj = points.map(() => []), sp = new Set();
++  bonds.forEach(([a,b,o]) => {
++    adj[a].push(b); adj[b].push(a);
++    if (o === 3) { sp.add(a); sp.add(b); }
++  });
++  function turn(ids, pivot, angle) {
++    const co = Math.cos(angle), si = Math.sin(angle);
++    for (const i of ids) {
++      const x = points[i][0]-pivot[0], y = points[i][1]-pivot[1];
++      points[i] = [pivot[0]+x*co-y*si, pivot[1]+x*si+y*co];
++    }
++  }
++  function wrap(angle) { return Math.atan2(Math.sin(angle), Math.cos(angle)); }
++  function cross(p,a,b,c) {
++    return (p[b][0]-p[a][0])*(p[c][1]-p[a][1])-(p[b][1]-p[a][1])*(p[c][0]-p[a][0]);
++  }
++  function crosses(p,a,b,c,d) {
++    return cross(p,a,b,c)*cross(p,a,b,d) < -1e-10 &&
++      cross(p,c,d,a)*cross(p,c,d,b) < -1e-10;
++  }
++  function atomBondDistance(p,i,a,b) {
++    const dx=p[b][0]-p[a][0], dy=p[b][1]-p[a][1], length=dx*dx+dy*dy;
++    const t=length ? Math.max(0,Math.min(1,
++      ((p[i][0]-p[a][0])*dx+(p[i][1]-p[a][1])*dy)/length)) : 0;
++    return Math.hypot(p[i][0]-p[a][0]-t*dx,p[i][1]-p[a][1]-t*dy);
++  }
++  function safeRepair(previous) {
++    const lengths=bonds.map(([a,b]) => Math.hypot(previous[a][0]-previous[b][0],previous[a][1]-previous[b][1])).sort((a,b)=>a-b);
++    const unit=lengths[Math.floor(lengths.length/2)] || 1;
++    const clearance=unit*0.45;
++    const linked=new Set(bonds.map(([a,b]) => [Math.min(a,b),Math.max(a,b)].join(',')));
++    for (let a=0; a<n; a++) for (let b=0; b<a; b++) {
++      if (linked.has([b,a].join(','))) continue;
++      const old=Math.hypot(previous[a][0]-previous[b][0],previous[a][1]-previous[b][1]);
++      const now=Math.hypot(points[a][0]-points[b][0],points[a][1]-points[b][1]);
++      if (now < clearance && now < old-1e-6) return false;
++    }
++    // Strict crossings miss endpoint-on-bond and collinear contacts. Test
++    // every nonincident atom against each segment too, with bond-scaled space.
++    for (const [a,b] of bonds) for (let i=0; i<n; i++) {
++      if (i===a || i===b) continue;
++      const old=atomBondDistance(previous,i,a,b), now=atomBondDistance(points,i,a,b);
++      if (now < unit*0.12 && now < old-1e-6) return false;
++    }
++    for (let i=0; i<bonds.length; i++) for (let j=0; j<i; j++) {
++      const [a,b]=bonds[i], [c,d]=bonds[j];
++      if (a===c || a===d || b===c || b===d) continue;
++      if (crosses(points,a,b,c,d) && !crosses(previous,a,b,c,d)) return false;
++    }
++    return true;
++  }
++  const all = points.map((_,i) => i), repairs = [], skipped = [];
++  // A bent, degree-two sp carbon needs a local angle repair; global rotation
++  // cannot fix it. Only move a whole acyclic side, retaining all bond lengths
++  // and every other local angle. Never tear apart a ring or reflect a fragment.
++  for (const center of sp) {
++    if (types[center] !== 'C' || adj[center].length !== 2) continue;
++    const sides = adj[center].map(start => {
++      const seen = new Set([center]), ids = [], todo = [start];
++      while (todo.length) {
++        const i = todo.pop(); if (seen.has(i)) continue;
++        seen.add(i); ids.push(i);
++        adj[i].forEach(j => { if (!seen.has(j)) todo.push(j); });
++      }
++      return {start, ids};
++    });
++    // Prefer the side outside the numbered parent; otherwise its downstream
++    // side, so corrections propagate from C1 towards the end of the chain.
++    sides.sort((a,b) => {
++      const ia = parent.indexOf(a.start), ib = parent.indexOf(b.start);
++      return (ia < 0 ? -1 : 0)-(ib < 0 ? -1 : 0) || ib-ia || a.ids.length-b.ids.length;
++    });
++    const moving = sides[0], fixed = adj[center].find(i => i !== moving.start);
++    const c = points[center], a = points[moving.start], b = points[fixed];
++    if (Math.hypot(a[0]-c[0],a[1]-c[1]) < 1e-8 ||
++        Math.hypot(b[0]-c[0],b[1]-c[1]) < 1e-8) continue;
++    const angle = wrap(Math.atan2(b[1]-c[1],b[0]-c[0])+Math.PI-
++      Math.atan2(a[1]-c[1],a[0]-c[0]));
++    if (Math.abs(angle) < Math.PI/3600) continue; // <=0.05 degree input rounding
++    if (moving.ids.includes(fixed)) { skipped.push(center+1); continue; }
++    const previous=points.map(p=>p.slice());
++    turn(moving.ids, c, angle);
++    if (!safeRepair(previous)) {
++      previous.forEach((p,i)=>{ points[i]=p; });
++      skipped.push(center+1); continue;
++    }
++    repairs.push({atom: center+1, degrees: angle*180/Math.PI});
++  }
++  function bounds(ids, angle) {
++    const co = Math.cos(angle), si = Math.sin(angle);
++    const xs = ids.map(i => points[i][0]*co-points[i][1]*si);
++    const ys = ids.map(i => points[i][0]*si+points[i][1]*co);
++    return {width: Math.max(...xs)-Math.min(...xs), height: Math.max(...ys)-Math.min(...ys)};
++  }
++  const before = parent.length ? bounds(parent,0) : {height:0};
++  let best = null;
++  // Minimum-height strip: an optimum is parallel to an edge of the parent's
++  // convex hull. Pair directions include those edges, without a hull dependency.
++  // Degenerate/single-C parents keep their existing orientation.
++  if (parent.length >= 2) {
++    const angles = [0];
++    for (let i=0; i<parent.length; i++) for (let j=0; j<i; j++) {
++      const a=points[parent[j]], b=points[parent[i]];
++      if (Math.hypot(b[0]-a[0],b[1]-a[1]) > 1e-8) angles.push(-Math.atan2(b[1]-a[1],b[0]-a[0]));
++    }
++    for (let angle of angles) {
++      const first=points[parent[0]], last=points[parent[parent.length-1]];
++      const dx=(last[0]-first[0])*Math.cos(angle)-(last[1]-first[1])*Math.sin(angle);
++      if (dx < -1e-8) angle += Math.PI;
++      angle=wrap(angle);
++      const box=bounds(parent,angle), whole=bounds(all,angle);
++      const score=[box.height, whole.height, Math.abs(angle)];
++      const better=!best || score.some((v,i) =>
++        score.slice(0,i).every((x,j) => Math.abs(x-best.score[j]) < 1e-6) && v < best.score[i]-1e-6);
++      if (better) best={angle,score};
++    }
++  }
++  const angle=best ? best.angle : 0;
++  turn(all,[0,0],angle);
++  // Center coordinates of the complete molecule, not just its parent. The
++  // final SVG fit separately includes the actual rendered labels and strokes.
++  const cx=(Math.min(...points.map(p=>p[0]))+Math.max(...points.map(p=>p[0])))/2;
++  const cy=(Math.min(...points.map(p=>p[1]))+Math.max(...points.map(p=>p[1])))/2;
++  for (let i=0; i<n; i++) {
++    const x=(points[i][0]-cx).toFixed(4), y=(points[i][1]-cy).toFixed(4);
++    if (x.length > 10 || y.length > 10) return unchanged;
++    lines[4+i]=x.padStart(10)+y.padStart(10)+lines[4+i].slice(20);
++  }
++  return {mol:lines.join('\n'), rotation:angle*180/Math.PI, repairs, skipped,
++    parentHeightBefore:before.height, parentHeightAfter:parent.length ? bounds(parent,0).height : 0};
++}
++// END SKELETAL GEOMETRY
++
++function fApplySkeletalLayout() {
++  if (mode2D !== 'skeletal' || !skeletalLayoutSource ||
++      skeletalLayoutSource.key !== selectedMol) return;
++  const key=mainChainAtomsList.join(',');
++  if (skeletalLayoutApplied === key) return;
++  const layout=fSkeletalLayoutMol(skeletalLayoutSource.mol,mainChainAtomsList);
++  myMol2D=layout.mol;
++  jsmeNomeclatureApplet.readMolFile(myMol2D);
++  jsmeNomeclatureApplet.setMolecularAreaScale(molZoom2D);
++  if (jsmeNomeclatureAppletORGNL) {
++    jsmeNomeclatureAppletORGNL.readMolFile(myMol2D);
++    jsmeNomeclatureAppletORGNL.setMolecularAreaScale(molZoom2D);
++  }
++  skeletalLayoutApplied=key;
++}
++
+ function fLoadMol2D() {
++  skeletalLayoutSource = null;
++  skeletalLayoutApplied = null;
+   const selectedExample = nameExamples[selectedMol];
+   if (!selectedExample) {
+     myMol2D = null;
+@@ -1129,6 +1303,9 @@
+     return;
+   }
+ 
++  if (mode2D === "skeletal" && myMol2D) {
++    skeletalLayoutSource = {key: selectedMol, mol: myMol2D};
++  }
+   jsmeNomeclatureApplet.readMolFile(myMol2D);
+   jsmeNomeclatureApplet.setMolecularAreaScale(molZoom2D);
+   if (jsmeNomeclatureAppletORGNL && rawMol2D) {
+@@ -3175,6 +3352,9 @@
+ 
+ function fUpdateSVG() {
+   if (!jsmeNomeclatureApplet) return;
++  // Stage 1 precedes native label layout. Stage 2 is fFit2DSVG below, after
++  // functional labels are finalized. Numbering/highlights reuse stable atom IDs.
++  fApplySkeletalLayout();
+   compactNumberingLabelMap = {};
+   let mySVG = jsmeNomeclatureApplet.getMolecularAreaGraphicsString();
+   // Fix JSME highlight malformation BEFORE HTML parsing
+--- before/mulermoc-nom-52.html
++++ after/mulermoc-nom-52.html
+@@ -331,7 +331,7 @@
+   <script src="js/jsme-nick-nomeclature-moc2-data_52.js?v=other-acids-20261028-h2"></script>
+   <script src="js/ui-icons.js?v=v52-sync-20261027-r2"></script>
+   <script src="js/mulermoc-nom-core-52.js?v=other-acids-20261028-h2"></script>
+-  <script src="js/mulermoc-nom-molview-52.js?v=other-acids-20261028-h2"></script>
++  <script src="js/mulermoc-nom-molview-52.js?v=skeletal-layout-20261028-r3"></script>
+   <script src="js/mulermoc-nom-teaching-52.js?v=acid-prefix-boxes-20261028"></script>
+   <script src="js/mulermoc-nom-note-52.js?v=v52-sync-20261027-r2"></script>
+   <script src="js/mulermoc-nom-scenario-52.js?v=monoacids-theory-20261028"></script>
+--- before/AGENTS.md
++++ after/AGENTS.md
+@@ -170,3 +170,27 @@
+ - For adoption of v1.0 only, the user explicitly waived all subagents, including
+   Reviewer. Validate this documentation locally; this is not a standing exemption
+   from independent review of subsequent work.
++
++# Permanent skeletal geometry and framing rule
++
++- Apply one reusable display pipeline to every available library skeletal form,
++  including future imports and lesson/embedded viewers: chemical geometry first,
++  horizontal parent development second, readability and complete-label framing.
++- Resolve the numbered parent from nomenclature before changing display geometry.
++  Prefer C1 towards the left and progression to the right, minimizing needless
++  vertical spread. Try a proper whole-molecule rotation before local corrections;
++  never flatten a zigzag, mirror a molecule or distort valid bond angles/lengths.
++- Triple-bond sp centers must be linear. Where rotation cannot repair a bent
++  degree-two sp carbon, rotate a complete separable side about that center;
++  preserve topology, bond lengths and other local angles. Do not break rings or
++  force unsafe geometry. Keep branch/functional-group labels readable.
++- Keep saved records, embedded/source MOLs, atom IDs and 3D files unchanged for a
++  display-only task. Rebuild transient geometry from original input, preventing
++  cumulative rotations on molecule/chain changes, highlights, zoom or resize.
++- After geometry and label generation, fit the bounding box of the entire visible
++  molecular drawing, including labels, to the actual 2D viewport with margins.
++  Center the whole structure, not C1 or the parent alone. Verify desktop/mobile,
++  resize and molecule switches. Other representation modes and naming are invariant.
++- Validate all available skeletal forms plus representative straight, branched,
++  multifunctional and triple-bond cases. Report missing forms and unsafe skipped
++  repairs explicitly; a central hook alone is not evidence of universal success.
+--- before/docs/REVIEW-CHECKLIST.md
++++ after/docs/REVIEW-CHECKLIST.md
+@@ -90,6 +90,15 @@
+   mocks ή απλή ανάγνωση κώδικα δεν παρουσιάζονται ως οπτικός έλεγχος.
+   Αστοχίες εξωτερικών βιβλιοθηκών καταγράφονται, ακόμη κι αν είναι διαλείπουσες.
+ 
++- [ ] Για σκελετικούς, η γεωμετρία προηγείται του framing: κύρια αλυσίδα από
++  ονοματολογία, προτίμηση C1 αριστερά/ελάχιστης κατακόρυφης ανάπτυξης, γραμμικά
++  sp. Πρώτα εξετάζεται άκαμπτη περιστροφή· τοπική διόρθωση μόνο χωρίς αλλοίωση
++  συνδεσιμότητας, μηκών και άλλων έγκυρων γωνιών. Δεν παραμορφώνεται ζιγκζαγκ.
++- [ ] Το τελικό bounding box περιλαμβάνει όλη τη δομή και τις ετικέτες, με
++  περιθώρια/κεντράρισμα σε desktop/mobile και μετά από resize/εναλλαγή μορίου.
++  Ελέγχονται όλα τα διαθέσιμα σκελετικά, η μη συσσώρευση μετασχηματισμών και
++  η διατήρηση άλλων μορφών, ονομάτων, αποθηκευμένων εγγραφών και 3D.
++
+ ## 6. Εκπαιδευτικά σενάρια και πλοήγηση
+ 
+ - [ ] Το κείμενο, το μόριο, ο κανόνας και τα ορατά/κρυφά πεδία συμφωνούν
+--- before/react-preview/public/viewer-host.html
++++ after/react-preview/public/viewer-host.html
+@@ -336,7 +336,7 @@
+   <script src="js/jsme-nick-nomeclature-moc2-data_52.js?v=canonical-ketones-20261026"></script>
+   <script src="js/ui-icons.js?v=v52-sync-20261027-r2"></script>
+   <script src="js/mulermoc-nom-core-52.js?v=fifth-ketone-20261026"></script>
+-  <script src="js/mulermoc-nom-molview-52.js?v=fifth-ketone-20261026"></script>
++  <script src="js/mulermoc-nom-molview-52.js?v=skeletal-layout-20261028-r3"></script>
+   <script src="js/mulermoc-nom-teaching-52.js?v=alkoxy-rule-20261026"></script>
+   <script src="js/mulermoc-nom-note-52.js?v=v52-sync-20261027-r2"></script>
+   <script src="js/mulermoc-nom-scenario-52.js?v=upstream-image-picker-20261026"></script>
+--- before/react-preview/public/lesson-host.html
++++ after/react-preview/public/lesson-host.html
+@@ -328,7 +328,7 @@
+   <script src="js/jsme-nick-nomeclature-moc2-data_52.js?v=canonical-ketones-20261026"></script>
+   <script src="js/ui-icons.js?v=v52-sync-20261027-r2"></script>
+   <script src="js/mulermoc-nom-core-52.js?v=fifth-ketone-20261026"></script>
+-  <script src="js/mulermoc-nom-molview-52.js?v=fifth-ketone-20261026"></script>
++  <script src="js/mulermoc-nom-molview-52.js?v=skeletal-layout-20261028-r3"></script>
+   <script src="js/mulermoc-nom-teaching-52.js?v=alkoxy-rule-20261026"></script>
+   <script src="js/mulermoc-nom-note-52.js?v=v52-sync-20261027-r2"></script>
+   <script src="js/mulermoc-nom-scenario-52.js?v=upstream-image-picker-20261026"></script>

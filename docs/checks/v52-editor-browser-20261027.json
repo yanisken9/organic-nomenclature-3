@@ -1,0 +1,13 @@
+{
+  "completed": true,
+  "checks": [
+    "real inline contenteditable and modal; legacy literal < preserved; untouched source toggle/cancel does not mutate or prompt",
+    "source edit upgrades on Apply; sanitizer strips script/event/javascript URL; alkoxy include renders noneditable and serializes as placeholder; inline refreshes",
+    "modified Cancel confirms and discards draft without changing step",
+    "controlled missing-sanitizer fault fails closed without committing draft",
+    "inline input commits HTML through existing handler; obsolete inline format toggle absent",
+    "new exports identify v52 while scenarioVersion stays1",
+    "modal fits 390px viewport"
+  ],
+  "javascriptErrors": []
+}

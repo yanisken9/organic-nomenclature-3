@@ -1,0 +1,752 @@
+<!doctype html>
+<html lang="el">
+
+<head>
+  <base href="../../" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      #lessonLoading { display:none; }
+      html.lesson-loading body > :not(#lessonLoading) { visibility:hidden !important; }
+      html.lesson-loading #lessonLoading { display:flex; position:fixed; inset:0; z-index:2147483647; align-items:center; justify-content:center; flex-direction:column; gap:20px; padding:28px; background:#faf9f5; color:#254c50; font:18px/1.6 system-ui,sans-serif; text-align:center; }
+      #lessonLoading a { color:#254c50; text-underline-offset:5px; }
+    </style>
+    <script>
+      // Runs before app scripts and first paint; preserves layout while loading.
+      (function () {
+        var q = new URLSearchParams(location.search);
+        if (!q.get("scenario") || q.get("present") !== "1") return;
+        document.documentElement.classList.add("lesson-loading");
+        var timer = setTimeout(function () { window.fLessonLoadingDone(true); }, 90000);
+        window.fLessonLoadingDone = function (failed) {
+          clearTimeout(timer);
+          if (failed) {
+            var text = document.getElementById("lessonLoadingText");
+            if (text) text.textContent = "Το μάθημα δεν μπόρεσε να φορτωθεί. Δοκίμασε ξανά από τη βιβλιοθήκη.";
+            return;
+          }
+          requestAnimationFrame(function () { requestAnimationFrame(function () {
+            document.documentElement.classList.remove("lesson-loading");
+          }); });
+        };
+      })();
+    </script>
+  <title>Namelecule — Ονοματολογία Οργανικών Ενώσεων</title>
+
+  <link rel="stylesheet" href="css/jsme-nick-52.css?v=v52-sync-20261027-r2" />
+  <link rel="stylesheet" href="css/mulermoc-nom-scenario-52.css?v=v52-sync-20261027-r2" />
+
+  <link rel="stylesheet" href="css/namelecule-52.css?v=v52-sync-20261027-r2" />
+  <script src="jsme/jsme.nocache.js"></script>
+  <script src="js/vendor/jquery/jquery-4.0.0.min.js"></script>
+  <script>
+    (function () {
+      var mode = "cdn";
+      try {
+        var m = /[?&]libs=(local|cdn)\b/.exec(location.search);
+        if (m) mode = m[1];
+      } catch (e) { /* no location */ }
+      window.MULER_LIBS_MODE = mode;
+      var src = mode === "local"
+        ? "JSmol.min.js"
+        : "https://chemapps.stolaf.edu/jmol/jsmol/JSmol.min.js";
+      document.write('<script src="' + src + '"><\/script>');
+    })();
+  </script>
+  <script src="js/vendor/dompurify/dompurify-3.4.17.min.js"></script>
+
+  <script>
+    // S3: JSmol readiness flag for scenario deep links (?scenario&present).
+    // fScenarioBoot waits for this before applying the first step so the
+    // per-step camera is not lost on a cold applet; author mode is unaffected.
+    jmol_isReady = function (applet) {
+      try {
+        window.JSmolReadyFlag = true;
+      } catch (e) {
+        /* no window */
+      }
+    };
+    var JSmol_Applet = {
+      width: "100%",
+      height: "100%",
+      debug: false,
+      color: "#FFFFFF",
+      use: "HTML5",
+      j2sPath: window.MULER_LIBS_MODE === "local" ? "j2s" : "https://chemapps.stolaf.edu/jmol/jsmol/j2s",
+      serverURL: window.MULER_LIBS_MODE === "local" ? "" : "https://chemapps.stolaf.edu/jmol/jsmol/php/jsmol.php",
+      readyFunction: jmol_isReady,
+      disableJ2SLoadMonitor: true,
+      disableInitialConsole: true,
+    };
+  </script>
+<style>
+
+html, body { margin:0!important; padding:0!important; width:100%!important; height:100%!important; overflow:hidden!important; min-width:0!important; background:white!important; }
+.nameleculeHeader, #rotatePrompt, #creditsUs, #lessonLoading, #scenarioAuthorBar, #scenarioPlayBar,
+#pageContainer > :not(#authorLayout), #authorLayout > :not(#mainAppContainer),
+.mainApp3Columns > :not(#viewerCol), #viewerCol > :not(#jsmeNomeclatureDIV):not(#nomeclature3D) { display:none!important; }
+#pageContainer, #authorLayout, #mainAppContainer, .mainApp3Columns, #viewerCol { display:block!important; position:relative!important; margin:0!important; padding:0!important; width:100%!important; height:100%!important; max-width:none!important; min-width:0!important; border:0!important; }
+#jsmeNomeclatureDIV { position:absolute!important; inset:0!important; margin:0!important; width:100%!important; height:100%!important; border:0!important; }
+#jsmeNomeclatureSVG { width:100%!important; height:100%!important; }
+/* Preserve the existing startup 3D viewport until initialization is complete. */
+#nomeclature3D { position:absolute!important; left:-10000px!important; top:0!important; width:600px!important; height:300px!important; }
+html[data-view="3d"] #nomeclature3D { left:0!important; width:100%!important; height:100%!important; }
+html[data-view="3d"] #jsmeNomeclatureDIV { left:-10000px!important; right:auto!important; visibility:hidden!important; }
+
+</style>
+<script>JSmol_Applet.script = "set defaultDirectory " + JSON.stringify(new URL("../../", location.href).href) + ";";</script>
+</head>
+
+<body>
+    <div id="lessonLoading" role="status" aria-live="polite">
+      <span id="lessonLoadingText">Φόρτωση μαθήματος…</span>
+      <a href="design/theory-library.html?v=other-ketones-theory-20261026">← Επιστροφή στη βιβλιοθήκη</a>
+    </div>
+
+  <!-- Rotate-device prompt (CSS shows this only on portrait phones) -->
+  <div id="rotatePrompt">
+    <svg id="rotatePromptIcon" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M16.48 2.52c3.27 1.55 5.61 4.72 5.97 8.48h1.5C23.44 4.84 18.29 0 12 0l-.66.03 3.81 3.81 1.33-1.32zm-6.25-.77c-.59-.59-1.54-.59-2.12 0L1.75 8.11c-.59.59-.59 1.54 0 2.12l12.02 12.02c.59.59 1.54.59 2.12 0l6.36-6.36c.59-.59.59-1.54 0-2.12L10.23 1.75zm4.6 19.44L2.81 9.17l6.36-6.36 12.02 12.02-6.36 6.36zm-7.31.29C4.25 19.94 1.91 16.76 1.55 13H.05C.56 19.16 5.71 24 12 24l.66-.03-3.81-3.81-1.33 1.32z" />
+    </svg>
+    <p>
+      &#931;&#964;&#961;&#941;&#968;&#949; &#964;&#951;
+      &#963;&#965;&#963;&#954;&#949;&#965;&#942;
+      &#959;&#961;&#953;&#950;&#972;&#957;&#964;&#953;&#945;<br />&#947;&#953;&#945;
+      &#954;&#945;&#955;&#973;&#964;&#949;&#961;&#951;
+      &#949;&#956;&#966;&#940;&#957;&#953;&#963;&#951;
+    </p>
+    <button id="rotatePromptDismiss" onclick="fDismissRotatePrompt()">
+      &#931;&#965;&#957;&#941;&#967;&#949;&#953;&#945; &#969;&#962;
+      &#941;&#967;&#949;&#953;
+    </button>
+  </div>
+
+    <header class="nameleculeHeader">
+      <div class="nameleculeBrand">
+        <img src="assets/namelecule-methane-v1.png"
+             alt="Namelecule — Ονοματολογία οργανικών ενώσεων"
+             width="2172" height="724" />
+        <p>Μια εφαρμογή της πλατφόρμας <strong>MuLERMoCs</strong></p>
+      </div>
+      <a class="nameleculeHomeLink" href="design/welcome-proposal.html">← Επιστροφή στην υποδοχή</a>
+    </header>
+
+  <div id="pageContainer">
+    <h1 id="pageTitle">Ονοματολογία Οργανικών Ενώσεων</h1>
+    <div id="authorLayout">
+      <div id="mainAppContainer">
+        <div class="mainApp3Columns">
+          <!-- left column: MENU -->
+          <div id="menuCol" class="VFlex">
+            <button id="menuToggle" onclick="fToggleMenu()">☰ Μενού</button>
+            <div id="menuDrawer" class="menu-open">
+              <div id="nomeclature2Menu"></div>
+            </div>
+          </div>
+
+          <!-- middle column -->
+          <div id="viewerCol" class="VFlex">
+            <div class="panelTitle">
+              <div id="viewerVisBtns"></div>
+              <span>Μόριο</span>
+              <div id="viewerSettingsBtnDiv"></div>
+
+              <div id="viewerSettingsPanel">
+                <div class="settingTitle">Ρυθμίσεις</div>
+                <div id="radioChainMode" class="settingRow">
+                  <div class="settingLabel">Υπολογισμός κύριας αλυσίδας:</div>
+                  <div class="radioGroupContainer HFlex" style="align-items: center; gap: 0">
+                    <div class="radioCheckContainer unselectedRadio">
+                      Από δεδομένα<span class="radioCheck"></span>
+                    </div>
+                    <div class="radioCheckContainer selectedRadio">
+                      Αλγοριθμικά<span class="radioCheck"></span>
+                    </div>
+                  </div>
+                </div>
+                <div id="originalJSME" class="settingRow">
+                  <div class="settingLabel">
+                    Εμφάνιση αρχικής 2D αναπαράστασης JSME:
+                  </div>
+                  <div id="originalJSMECheck" class="checkBoxContainer unselectedCheck">
+                    &nbsp;<span class="checkBox"></span>
+                  </div>
+                </div>
+
+                <div id="highlightNumberingSetting" class="settingRow">
+                  <div class="settingLabel">
+                    Επισήμανση ατόμων κατά την αρίθμηση:
+                  </div>
+                  <div id="highlightNumberingCheck" class="checkBoxContainer selectedCheck">
+                    &nbsp;<span class="checkBox"></span>
+                  </div>
+                </div>
+                <div id="highlightNumberingBondsSetting" class="settingRow">
+                  <div class="settingLabel">
+                    Επισήμανση δεσμών κατά την αρίθμηση:
+                  </div>
+                  <div id="highlightNumberingBondsCheck" class="checkBoxContainer selectedCheck">
+                    &nbsp;<span class="checkBox"></span>
+                  </div>
+                </div>
+                <div id="bondAtomsSetting" class="settingRow">
+                  <div class="settingLabel">
+                    Επισήμανση ατόμων δεσμών:
+                  </div>
+                  <div id="bondAtomsCheck" class="checkBoxContainer unselectedCheck">
+                    &nbsp;<span class="checkBox"></span>
+                  </div>
+                </div>
+                <div id="atomColorModeRow" class="settingRow">
+                  <div class="settingLabel">Χρωματισμός ατόμων 2D:</div>
+                  <div id="svgAtomColorCheck" class="checkBoxContainer selectedCheck">
+                    &nbsp;<span class="checkBox"></span>
+                  </div>
+                  <div id="atomColorMode" class="HFlex" style="align-items: center">
+                    <div class="radioCheckContainer atomColorModeRadio selectedRadio" data-color-mode="atom">
+                      Κατά άτομο<span class="radioCheck"></span>
+                    </div>
+                    <div class="radioCheckContainer atomColorModeRadio unselectedRadio" data-color-mode="group">
+                      Κατά ομάδα<span class="radioCheck"></span>
+                    </div>
+                  </div>
+                </div>
+                <div id="atomSymbolsSetting" class="settingRow">
+                  <div class="settingLabel">Σύμβολα ατόμων 3D:</div>
+                  <div id="atomSymbolsCheck" class="checkBoxContainer selectedCheck">
+                    &nbsp;<span class="checkBox"></span>
+                  </div>
+                </div>
+                <div id="viewerMaxHeightSetting" class="settingRow">
+                  <div class="settingLabel">Όριο ύψους μεμονωμένου viewer:</div>
+                  <div id="viewerMaxHeightCheck" class="checkBoxContainer unselectedCheck">
+                    &nbsp;<span class="checkBox"></span>
+                  </div>
+                  <input id="viewerMaxHeightRange" class="viewerHeightRange" type="range" min="150" max="520" step="10"
+                    value="150" disabled />
+                  <span id="viewerMaxHeightVal" class="viewerHeightVal">Auto</span>
+                </div>
+                <div id="viewerBothHeightSetting" class="settingRow">
+                  <div class="settingLabel">Ύψος δύο viewers (σύνολο):</div>
+                  <div id="viewerBothHeightCheck" class="checkBoxContainer unselectedCheck">
+                    &nbsp;<span class="checkBox"></span>
+                  </div>
+                  <input id="viewerBothHeightRange" class="viewerHeightRange" type="range" min="300" max="1000"
+                    step="10" value="300" disabled />
+                  <span id="viewerBothHeightVal" class="viewerHeightVal">Auto</span>
+                </div>
+              </div>
+            </div>
+
+            <!--JSME 2D -->
+            <div id="jsmeNomeclatureDIV">
+              <div id="jsmeNomeclatureORGNL" class="hide"></div>
+              <div id="jsmeNomeclature" class="hide"></div>
+              <div id="jsmeNomeclatureSVG"></div>
+            </div>
+            <div id="radio2DMode">
+              <div class="radioGroupContainer HFlex">
+                <div class="HFlex" style="align-items: center">
+                  <div class="radioCheckContainer mode2DOption selectedRadio">
+                    Συνεπτυγμένος<span class="radioCheck"></span>
+                  </div>
+                  <div class="radioCheckContainer mode2DOption unselectedRadio">
+                    Ανεπτυγμένος<span class="radioCheck"></span>
+                  </div>
+                  <div class="radioCheckContainer mode2DOption unselectedRadio">
+                    Σκελετικός<span class="radioCheck"></span>
+                  </div>
+                  <div id="zigzagCheck" class="checkBoxContainer unselectedCheck" style="margin-left: 10px">
+                    Σύμβολα CH<sub>n</sub><span class="checkBox"></span>
+                  </div>
+                </div>
+                <div id="view2DTools" class="HFlex">
+                  <button id="zoomOutBtn" class="viewerToolBtn" onclick="fZoom2D(-1)" data-tooltip="Σμίκρυνση 2D">
+                    <span class="zoomIcon" data-icon="zoomOut"></span>
+                  </button>
+                  <button id="zoomInBtn" class="viewerToolBtn" onclick="fZoom2D(1)" data-tooltip="Μεγέθυνση 2D">
+                    <span class="zoomIcon" data-icon="zoomIn"></span>
+                  </button>
+                  <div id="save2DBtn" class="viewerToolBtn" onclick="fSave2DPng()" data-tooltip="Αποθήκευση εικόνας 2D">
+                    <span class="saveImgIcon" data-icon="saveImage"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div id="nomeclature3D" class="JmolContainer">
+              <script>
+                jmolAppletNomeclature = Jmol.getApplet(
+                  "jmolAppletNomeclature",
+                  JSmol_Applet,
+                );
+                Jmol.script(jmolAppletNomeclature, "frank off");
+              </script>
+            </div>
+            <div id="controls3D" class="HFlex">
+              <div class="HFlex" style="align-items: center">
+                <div id="hydrogensCheck" class="checkBoxContainer selectedCheck">
+                  Υδρογόνα <span style="color: #666">C</span>-H<span class="checkBox"></span>
+                </div>
+                <div id="dropMenu" style="margin-top: 2px"></div>
+                <div id="rotateCheck" class="checkBoxContainer unselectedCheck">
+                  Περιστροφή <span class="checkBox"></span>
+                </div>
+              </div>
+              <div id="view3DTools" class="HFlex">
+                <button id="zoomOut3DBtn" class="viewerToolBtn" onclick="fZoom3D(-1)" data-tooltip="Σμίκρυνση 3D">
+                  <span class="zoomIcon" data-icon="zoomOut"></span>
+                </button>
+                <button id="zoomIn3DBtn" class="viewerToolBtn" onclick="fZoom3D(1)" data-tooltip="Μεγέθυνση 3D">
+                  <span class="zoomIcon" data-icon="zoomIn"></span>
+                </button>
+                <div id="save3DBtn" class="viewerToolBtn" onclick="fSaveJmolPng()" data-tooltip="Αποθήκευση εικόνας 3D">
+                  <span class="saveImgIcon" data-icon="saveImage"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- right column -->
+          <div id="analysisCol" class="VFlex">
+            <div>
+              <div id="nameAnalysisContainer">
+                <div id="ruleTheory"></div>
+                <div id="nameAnalysis"></div>
+              </div>
+              <div id="nameAnalysisExplain"></div>
+              <div id="ruleTheoryContainer"></div>
+            </div>
+          </div>
+
+          <!-- debug -->
+          <!-- <div id="debug" style="max-height: 600px; overflow: auto;"></div> -->
+        </div>
+      </div>
+      <!-- <div id="scScrollFade" aria-hidden="true"></div> -->
+      <button id="scScrollLeft" data-tooltip="Κύλιση αριστερά">‹</button>
+      <button id="scScrollRight" data-tooltip="Κύλιση δεξιά">›</button>
+    </div>
+
+    <!-- <div id="creditsLib"></div> -->
+    <div id="creditsUs"></div>
+  </div>
+
+  <script src="js/jsme-nick-nomeclature-moc2-data_52.js?v=canonical-ketones-20261026"></script>
+  <script src="js/ui-icons.js?v=v52-sync-20261027-r2"></script>
+  <script src="js/mulermoc-nom-core-52.js?v=fifth-ketone-20261026"></script>
+  <script src="js/mulermoc-nom-molview-52.js?v=skeletal-layout-20261028-r3"></script>
+  <script src="js/mulermoc-nom-teaching-52.js?v=alkoxy-rule-20261026"></script>
+  <script src="js/mulermoc-nom-note-52.js?v=v52-sync-20261027-r2"></script>
+  <script src="js/mulermoc-nom-scenario-52.js?v=upstream-image-picker-20261026"></script>
+  <script>
+    window.JSApplet = window.JSApplet || {};
+  </script>
+  <script src="jsme/96E40B969193BD74B8A621486920E79C.cache.js"></script>
+
+  <script>
+    function fToggleMenu() {
+      var drawer = document.getElementById("menuDrawer");
+      if (drawer.classList.contains("menu-open")) {
+        drawer.classList.remove("menu-open");
+        drawer.classList.add("menu-closed");
+      } else {
+        drawer.classList.remove("menu-closed");
+        drawer.classList.add("menu-open");
+      }
+    }
+
+    function fDismissRotatePrompt() {
+      var el = document.getElementById("rotatePrompt");
+      if (el) el.style.display = "none";
+    }
+  </script>
+<script>
+/* Classic script: access existing lexical app state without changing its engine. */
+(() => {
+  'use strict';
+  const channel = 'namelecule-viewer-v4';
+  // Injected from the same catalog imported by React, at host generation.
+  const moleculeIds = ["methane", "methanoicacid", "methanal", "ethane", "ethene", "ethanal", "ethanenitrile", "ethanol", "nitroethane", "dimethylether", "methyl_methanoate", "ethyne", "propenal", "propanedial", "propane", "propene", "propadiene", "propionicacid", "propanol_1", "propyne", "propanal", "propanenitrile", "propenoic_acid", "propynal", "bromopropane_2", "propanediol_1_2", "propanedioic_acid", "propanetriol", "hydroxypropanoic_acid_2", "Oxopropanoic_acid", "hydroxypropanenitrile_2", "propanone", "nitropropane_2", "ethyl_methyl_ether", "ethanoic_methyl_ester", "methyl_2_propenal", "methyl_2_propanal", "butane", "butanal", "butanenitrile", "butene_1", "butanol_1", "butene_2", "butanoic_acid", "butene_3_ol_2", "buten_1_yne_3", "chlorobutane_1", "bromo_4_butene_1", "bromo_2_chlorobutane_3", "dichlorobutane_2_2", "hydroxybutanenitrile_2", "aminobutanoic_acid_3", "oxobutanoic_acid", "dihydroxybutanedioic_acid_2_3", "butanone", "methyl_2_propene", "methyl_propyl_ether", "diethyl_ether", "isopropyl_methyl_ether", "propanoic_methyl_ester", "butyne_1", "butyne_2", "butadiene_1_3", "butadiene_1_2", "butanol_2", "methyl_2_propanediol_1_2", "penten_1_yn_4_one_3", "pentanone_3", "pentane", "penten_4_ol_2", "penten_1_one_3", "pentanone_2", "pentadiene_1_3", "pentanoic_acid", "pentanal", "penten_2_ol_1", "pentyn_4_one_2", "penten_3_yne_1", "bromo_3_chloropentane_1", "trichloropentane_1_1_2", "methyl_3_butene_1", "ethyl_propyl_ether", "ethyl_isopropyl_ether", "butyl_methyl_ether", "isopropyl_ethanoate", "methyl_3_butyne_1", "pentadiene_1_4", "methyl_2_buten_1_yne_3", "methyl_3_buten_3_ol_2", "methyl_3_penten_2_dial", "dimethyl_2_3_butanal", "hexen_1_yne_4", "hexen_2_yne_4", "methyl_2_pentane", "dimethyl_2_3_butane", "ethyl_sec_butyl_ether", "methyl_3_pentyne_1", "methyl_4_pentyne_2", "methyl_3_pentadiene_1_3", "methyl_4_pentanol_2", "methyl_3_pentyn_4_ol_2", "methyl_4_penten_4_yn_2_ol_1", "dimethyl_2_4_pentanone_3", "ethyl_4_penten_4_yn_2_al", "isopropyl_2_buten_2_dial", "isobutyl_isopropyl_ether", "tert_butyl_isopropyl_ether", "dimethyl_2_3_pentadiene_1_3", "dimethyl_2_3_penten_1_yne_4", "dimethyl_2_2_pentanol_3", "dimethyl_4_5_hexen_5_yn_1_one_3", "methyl_6_hepten_3_dione_2_5", "trimethyl_3_4_4_pentanone_2", "ethyl_2_methyl_3_pentanal", "ethyl_2_methyl_3_hexen_2_yn_4_dial", "ethyl_3_methyl_4_hexen_3_yn_5_ol_2", "ethyl_3_dimethyl_2_5_hexene_2", "ethyl_3_dimethyl_2_5_hexane", "ethyl_3_dimethyl_4_5_hexadiene_1_4", "ethyl_3_methyl_4_octen_3_yn_5_dione_2_7", "ethyl_4_dimethyl_3_5_heptyne_1", "ethyl_4_dimethyl_2_3_hepten_2_yne_5", "ethyl_4_isopropyl_3_methyl_2_hexanal", "isopropyl_4_dimethyl_3_5_heptanol_2", "isopropyl_4_dimethyl_3_6_octen_3_yn_7_dione_2_5", "diethyl_4_5_dimethyl_2_6_heptanone_3"];
+  const ruleSchema = {"tags": ["div", "sup", "br", "sub", "span", "strong", "small", "p"], "classes": ["VFlex", "HFlex", "namingRuleTable", "rule1", "rule2", "rule3", "rule4", "ruleRow", "ruleCase", "ruleName", "ruleTableTitle", "orderNo", "ruleAlkyl", "alkylFormula", "alkylPrefix", "alkylRuleNote", "ruleAlkoxy", "selected", "selectedA", "selectedB", "hideTopRow"], "maxDepth": 12, "maxNodes": 600, "maxText": 20000};
+  const session = new URLSearchParams(location.search).get('session');
+  if (!session || parent === window) return;
+  let ready = false;
+  let lastId = 0;
+  let stopped = false;
+  let view = '2d';
+  let modelReady = false;
+  let revision = 0;
+  let waitTimer = null;
+  let resizeFrame = 0;
+  let commandRunning = false;
+  let activeExport = null;
+  let restoreExportPrompt = () => {};
+  const commands = [];
+  const styles3D = ['ballnstick', 'spacefill', 'sticks'];
+  const toggles3D = { hydrogens3d: '#hydrogensCheck', labels3d: '#atomSymbolsCheck', rotation3d: '#rotateCheck' };
+  function controls3D() {
+    return { hydrogens: hydrogens3DFlag, labels: atomSymbols3DFlag, rotating: rotateFlag, style: vis3D };
+  }
+  function canChange3D(d) {
+    return modelReady && view === '3d' && d.molecule === selectedMol &&
+      (d.command === 'style3d' ? styles3D.includes(d.value) :
+        Object.hasOwn(toggles3D, d.command) && typeof d.value === 'boolean');
+  }
+  function resize3D() {
+    resizeFrame = 0;
+    if (stopped || view !== '3d') return;
+    const host = document.getElementById('nomeclature3D');
+    const canvas = document.getElementById('jmolAppletNomeclature_canvas2d');
+    if (host && canvas && (canvas.clientWidth !== host.clientWidth || canvas.clientHeight !== host.clientHeight)) {
+      Jmol.resizeApplet(jmolAppletNomeclature, { width: host.clientWidth, height: host.clientHeight });
+    }
+  }
+  function scheduleResize() {
+    if (!resizeFrame) resizeFrame = requestAnimationFrame(resize3D);
+  }
+  const resizeObserver = new ResizeObserver(scheduleResize);
+  window.addEventListener('resize', scheduleResize);
+  function applyView() {
+    document.documentElement.dataset.view = view;
+    document.getElementById('nomeclature3D').style.display = view === '3d' ? 'block' : 'none';
+    fResizeViewers();
+    resize3D();
+    if (view === '3d') Jmol.script(jmolAppletNomeclature, 'refresh;');
+  }
+  function currentModel() {
+    const models = Jmol.getPropertyAsArray(jmolAppletNomeclature, 'modelInfo').models || [];
+    const file = new URL(nameExamples[selectedMol].file3D, document.baseURI).href;
+    if (models.length !== 1 || models[0].file !== file) return null;
+    const atoms = Jmol.getPropertyAsArray(jmolAppletNomeclature, 'atomInfo', 'all');
+    const bonds = Jmol.getPropertyAsArray(jmolAppletNomeclature, 'bondInfo', 'all');
+    if (atoms.length !== allAtomsTypeList3D.length || !atoms.length || bonds.length !== bondList3D.length ||
+        atoms.some((a, i) => a.atomno !== i + 1 || a.sym !== allAtomsTypeList3D[i])) return null;
+    const edge = (a, b, order) => [Math.min(a, b), Math.max(a, b), order].join(':');
+    const parsed = new Set(bondList3D.map(b => edge(...b)));
+    if (bonds.some(b => !parsed.has(edge(b.atom1.atomno, b.atom2.atomno, b.order)))) return null;
+    return { file, atoms: atoms.length, bonds: bonds.length };
+  }
+  function synchronize(type, id, complete = () => {}, extra = {}) {
+    clearTimeout(waitTimer);
+    const ticket = ++revision;
+    const deadline = Date.now() + (type === 'ready' ? 80000 : 9000);
+    // Ordered after the legacy load/style scripts, not merely applet-ready.
+    Jmol.script(jmolAppletNomeclature, 'reactPreviewRevision = ' + ticket + ';');
+    function check() {
+      if (stopped || ticket !== revision) return;
+      try {
+        const model = currentModel();
+        if (model && +Jmol.evaluateVar(jmolAppletNomeclature, 'reactPreviewRevision') === ticket) {
+          modelReady = true;
+          ready = true;
+          send({ type, ...(id === undefined ? {} : { id }), ...state(), model, ...extra });
+          complete();
+          return;
+        }
+        if (Date.now() >= deadline) return fail();
+        waitTimer = setTimeout(check, 50);
+      } catch (error) {
+        console.error('Molecule preview 3D readiness failed', error);
+        fail();
+      }
+    }
+    check();
+  }
+  const send = data => parent.postMessage({ channel, session, ...data }, location.origin);
+  function componentElement(id) {
+    if (typeof id !== 'string' || !/^comp(?:[0-9]|1[0-2])$/.test(id)) return null;
+    const element = document.getElementById(id);
+    return element?.matches('#nameAnalysis .nameCompBox:not(.comp-hidden)') ? element : null;
+  }
+  function state() {
+    const components = [...document.querySelectorAll('#nameAnalysis .nameCompBox:not(.comp-hidden)')]
+      .map(element => ({ id: element.id, label: element.textContent, selected: element.classList.contains('selected') }));
+    return { mode: mode2D === 'condensedZigZag' ? 'skeletal' : mode2D, symbols: mode2D === 'condensedZigZag',
+      zoom: molZoom2D, molecule: selectedMol, view, naming: etherNamingMode, controls3D: controls3D(),
+      analysis: { components, explanation: document.querySelector('#nameAnalysisExplain .explainText')?.textContent || '', rules: readRules() } };
+  }
+  function readRules() {
+    let count = 0, textLength = 0;
+    function children(parent, depth = 0) {
+      if (depth > ruleSchema.maxDepth) throw new Error('Rule markup too deep');
+      return [...parent.childNodes].flatMap(node => {
+        if (node.nodeType !== 1 && node.nodeType !== 3) return [];
+        if (++count > ruleSchema.maxNodes) throw new Error('Rule markup too large');
+        if (node.nodeType === 3) {
+          textLength += node.textContent.length;
+          if (textLength > ruleSchema.maxText) throw new Error('Rule text too large');
+          return [node.textContent];
+        }
+        const tag = node.tagName.toLowerCase();
+        if (!ruleSchema.tags.includes(tag)) throw new Error('Unsupported rule element');
+        return [{ tag, classes: [...node.classList].filter(name => ruleSchema.classes.includes(name)),
+          row: node.getAttribute('data-row'), children: children(node, depth + 1) }];
+      });
+    }
+    return [...document.querySelectorAll('#ruleTheoryContainer > .ruleTheory')].flatMap(panel => {
+      const title = panel.querySelector('.ruleTile');
+      if (!title?.textContent.trim()) return [];
+      count = 0; textLength = 0;
+      const text = panel.querySelector('.ruleText'), table = panel.querySelector('.ruleTable');
+      return [{ id: title.id === 'alkoxyRuleTitle' ? 'alkoxy' : 'component', title: title.textContent.trim(),
+        text: text ? children(text) : [], textClasses: text ? [...text.classList].filter(name => ruleSchema.classes.includes(name)) : [],
+        table: table ? children(table) : [] }];
+    });
+  }
+  function fail(reason) {
+    stopped = true;
+    restoreExportPrompt();
+    commands.length = 0;
+    clearInterval(poll);
+    clearTimeout(waitTimer);
+    send({ type: 'failed', ...(reason === 'export' ? { reason } : {}) });
+  }
+  function canChangeSymbols(d) {
+    return modelReady && view === '2d' && d.molecule === selectedMol &&
+      typeof d.value === 'boolean' && ['skeletal', 'condensedZigZag'].includes(mode2D) &&
+      !!nameExamples[selectedMol]?.structure2D_Skeletal &&
+      !!document.querySelector('#zigzagCheck:not(.disabledCheck)');
+  }
+  function exportTarget(d) {
+    return d.value === 'png' && modelReady && d.view === view && ['2d', '3d'].includes(view) && d.molecule === selectedMol &&
+      d.mode === (mode2D === 'condensedZigZag' ? 'skeletal' : mode2D) &&
+      d.symbols === (mode2D === 'condensedZigZag') && d.naming === etherNamingMode &&
+      (view === '2d' || (d.controls3D && Object.keys(controls3D()).every(key => d.controls3D[key] === controls3D()[key]))) &&
+      d.component === (document.querySelector('#nameAnalysis .nameCompBox.selected:not(.comp-hidden)')?.id || null);
+  }
+  function onPNGDownload(event) {
+    const anchor = event.target;
+    if (!activeExport || !(anchor instanceof HTMLAnchorElement) ||
+        anchor.download !== activeExport.filename || !(activeExport.view === '3d'
+          // JSmol derives the MIME label from the chosen extension; observe
+          // the actual PNG signature even when the user omits an extension.
+          ? /^data:[^,]*;base64,iVBORw0KGgo/.test(anchor.href) : anchor.href.startsWith('blob:'))) return;
+    // On timeout the viewer stays failed until retry unloads this document;
+    // prevent a delayed native callback from starting an obsolete download.
+    if (stopped) return event.preventDefault();
+    if (activeExport.view === '3d') {
+      activeExport.requested = true;
+      // The native function queues a delayed echo cleanup. Finish after it,
+      // before allowing the next model/name/highlight command to run.
+      activeExport.settleAt = Date.now() + 550;
+      return;
+    }
+    clearTimeout(waitTimer);
+    const pending = activeExport;
+    activeExport = null;
+    synchronize('state', pending.id, pending.complete, { exportStatus: 'requested' });
+  }
+  function export2D(d, complete) {
+    const deadline = Date.now() + 8000;
+    function check() {
+      if (stopped) return;
+      // Cancel a newer-action superseded request before it takes a snapshot.
+      if (d.id !== lastId) return complete();
+      try {
+        const numbered = nameAnalysisMode === 'none' || !numberingFlag ||
+          document.querySelectorAll('#jsmeNomeclatureSVG text[id^="number"]').length === numbersSVGElements.filter(Boolean).length;
+        if (exportTarget(d) && currentModel() && numbered && document.querySelector('#jsmeNomeclatureSVG svg')) {
+          activeExport = { id: d.id, complete,
+            filename: (currentMolName || selectedMol || 'molecule').replace(/\s+/g, '_') + '_2D.png' };
+          // Hold the command queue through the native async PNG callback: its
+          // filename still reads legacy globals. An anchor click requests a
+          // browser download; it does not prove the file was saved on disk.
+          waitTimer = setTimeout(() => fail('export'), Math.max(0, deadline - Date.now()));
+          try { window.fSave2DPng(); } catch {
+            clearTimeout(waitTimer);
+            activeExport = null;
+            synchronize('state', d.id, complete, { exportStatus: 'failed' });
+          }
+          return;
+        }
+        if (Date.now() >= deadline) return synchronize('state', d.id, complete, { exportStatus: 'failed' });
+        waitTimer = setTimeout(check, 50);
+      } catch (error) {
+        console.error('PNG export readiness failed', error);
+        fail();
+      }
+    }
+    check();
+  }
+  function export3D(d, complete) {
+    if (d.id !== lastId) return complete();
+    if (!exportTarget(d) || !currentModel()) return synchronize('state', d.id, complete, { exportStatus: 'failed' });
+    const pending = { id: d.id, view: '3d', filename: null, requested: false, cancelled: false, settleAt: Infinity };
+    activeExport = pending;
+    const nativePrompt = window.prompt;
+    function exportPrompt(...args) {
+      const answer = nativePrompt.apply(window, args);
+      if (answer === null && activeExport === pending) {
+        pending.cancelled = true;
+        pending.settleAt = Date.now() + 550;
+      }
+      return answer;
+    }
+    window.prompt = exportPrompt;
+    restoreExportPrompt = () => {
+      if (window.prompt === exportPrompt) window.prompt = nativePrompt;
+      restoreExportPrompt = () => {};
+    };
+    const deadline = Date.now() + 90000;
+    const marker = ++revision;
+    function finish(status) {
+      restoreExportPrompt();
+      activeExport = null;
+      synchronize('state', d.id, complete, { exportStatus: status });
+    }
+    function check() {
+      if (stopped) return;
+      try {
+        // A cancelled native write may discard its queued marker. After the
+        // native cleanup delay, synchronize with a fresh marker instead.
+        if (Date.now() >= pending.settleAt && (pending.cancelled ||
+            +Jmol.evaluateVar(jmolAppletNomeclature, 'reactPreviewExportRevision') === marker)) {
+          return finish(pending.requested ? 'requested' : 'failed');
+        }
+        if (Date.now() >= deadline) return fail('export');
+        waitTimer = setTimeout(check, 50);
+      } catch (error) {
+        console.error('3D PNG readiness failed', error);
+        fail('export');
+      }
+    }
+    try {
+      // Keep the original prompt, filename, image bytes, footer and 1200px
+      // renderer. The queue stays held until a real native download request.
+      window.fSaveJmolPng();
+      Jmol.script(jmolAppletNomeclature, 'reactPreviewExportRevision = ' + marker + ';');
+      check();
+    } catch {
+      finish('failed');
+    }
+  }
+  function onMessage(event) {
+    const d = event.data;
+    if (!ready || stopped || event.origin !== location.origin || event.source !== parent ||
+        !d || d.channel !== channel || d.session !== session ||
+        !Number.isSafeInteger(d.id) || d.id <= lastId) return;
+    if (!(d.command === 'mode' && ['condensed', 'expanded', 'skeletal'].includes(d.value)) &&
+        !canChange3D(d) &&
+        !(d.command === 'symbols' && canChangeSymbols(d)) &&
+        !(d.command === 'export' && exportTarget(d)) &&
+        !(d.command === 'zoom' && (d.value === 1 || d.value === -1) && (view === '2d' || modelReady)) &&
+        !(d.command === 'molecule' && moleculeIds.includes(d.value)) &&
+        !(d.command === 'naming' && modelReady && d.molecule === selectedMol &&
+          nameExamples[selectedMol]?.classification?.chemicalClass === 'ethers' && ['iupac', 'common'].includes(d.value)) &&
+        !(d.command === 'component' && modelReady && d.molecule === selectedMol && componentElement(d.value)) &&
+        !(d.command === 'view' && ['2d', '3d'].includes(d.value))) return;
+    lastId = d.id;
+    commands.push(d);
+    runNext();
+  }
+  function runNext() {
+    if (stopped || commandRunning || !commands.length) return;
+    commandRunning = true;
+    const d = commands.shift();
+    try {
+      if (d.command === 'export') return (d.view === '3d' ? export3D : export2D)(d, () => {
+        commandRunning = false;
+        runNext();
+      });
+      if (d.command === 'mode') {
+        const index = ['condensed', 'expanded', 'skeletal'].indexOf(d.value);
+        $('#radio2DMode .mode2DOption').eq(index).trigger('click');
+      } else if (d.command === 'molecule') {
+        modelReady = false;
+        selectedMol = d.value;
+        fSelectMol();
+        applyView();
+      } else if (d.command === 'view') {
+        view = d.value;
+        applyView();
+      } else if (d.command === 'style3d' || Object.hasOwn(toggles3D, d.command)) {
+        // Recheck queued targets, and use the original UI handlers. Neither
+        // molecular coordinates nor a second Jmol styling algorithm live here.
+        if (canChange3D(d)) {
+          if (d.command === 'style3d') {
+            if (vis3D !== d.value) $('#dropLi' + styles3D.indexOf(d.value)).trigger('click');
+          } else {
+            const key = { hydrogens3d: 'hydrogens', labels3d: 'labels', rotation3d: 'rotating' }[d.command];
+            if (controls3D()[key] !== d.value) $(toggles3D[d.command]).trigger('click');
+          }
+        }
+      } else if (d.command === 'component') {
+        $(componentElement(d.value)).trigger('click');
+      } else if (d.command === 'symbols') {
+        // A queued model/view/mode change may have invalidated this target.
+        // The native handler owns both the depiction and its checkbox state.
+        if (canChangeSymbols(d) && d.value !== (mode2D === 'condensedZigZag')) {
+          $('#zigzagCheck').trigger('click');
+        }
+      } else if (d.command === 'naming') {
+        // Recheck the target after queued model/view changes; never mutate the
+        // naming preference from a stale command belonging to another molecule.
+        if (d.molecule === selectedMol && nameExamples[selectedMol]?.classification?.chemicalClass === 'ethers') {
+          $('#radioEtherNaming .etherNamingRadio[data-naming-mode="' + d.value + '"]').trigger('click');
+        }
+      } else if (view === '3d') fZoom3D(d.value);
+      else fZoom2D(d.value);
+      synchronize('state', d.id, () => {
+        commandRunning = false;
+        runNext();
+      });
+    } catch (error) {
+      console.error('Molecule preview command failed', error);
+      fail();
+    }
+  }
+  document.addEventListener('click', onPNGDownload, true);
+  window.addEventListener('message', onMessage);
+  const started = Date.now();
+  const poll = setInterval(() => {
+    if (Date.now() - started > 85000) return fail();
+    if (typeof jsmeNomeclatureApplet === 'undefined' || !jsmeNomeclatureApplet ||
+        typeof nameExamples === 'undefined' || !moleculeIds.every(id => nameExamples[id]?.classification) ||
+        !window.JSmolReadyFlag || typeof selectedMol === 'undefined' || !selectedMol) return;
+    clearInterval(poll);
+    try {
+      const nativeLocalSave = Jmol._localFileSaveFunction;
+      Jmol._localFileSaveFunction = function (filename, data) {
+        // Native JSmol calls this after its Save Image prompt, before making
+        // the download anchor. Returning false leaves its encoding/save path
+        // intact, including a user-chosen filename. Block obsolete callbacks.
+        if (stopped) return true;
+        if (activeExport?.view === '3d') {
+          if (activeExport.cancelled) return true;
+          if (typeof filename === 'string') activeExport.filename = filename.substring(filename.lastIndexOf('/') + 1);
+        }
+        return typeof nativeLocalSave === 'function' ? nativeLocalSave.apply(this, arguments) : false;
+      };
+      selectedMol = 'ethanol';
+      fSelectMol();
+      applyView();
+      resizeObserver.observe(document.getElementById('nomeclature3D'));
+      const canvas = document.getElementById('jmolAppletNomeclature_canvas2d');
+      if (canvas) resizeObserver.observe(canvas);
+      if (!document.querySelector('#jsmeNomeclatureSVG svg text')) return fail();
+      synchronize('ready');
+    } catch (error) {
+      console.error('Molecule preview initialization failed', error);
+      fail();
+    }
+  }, 100);
+  window.addEventListener('pagehide', () => {
+    stopped = true;
+    restoreExportPrompt();
+    commands.length = 0;
+    clearInterval(poll);
+    clearTimeout(waitTimer);
+    cancelAnimationFrame(resizeFrame);
+    resizeObserver.disconnect();
+    window.removeEventListener('resize', scheduleResize);
+    window.removeEventListener('message', onMessage);
+    document.removeEventListener('click', onPNGDownload, true);
+  }, { once: true });
+})();
+
+</script>
+</body>
+
+</html>
