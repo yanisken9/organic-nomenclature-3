@@ -1,3 +1,26 @@
+# Current resume point — 2026-10-29 — Publication and full save completed
+
+User explicitly approved option1 for publishing the full WIP/internal-notes checkpoint,
+after automatic approval review initially blocked it. Push then succeeded: checkpoint
+branch checkpoint/namelecule-20261029-103322 at ceffd207af4e6713e21c55afbb13b6e5974509a6.
+Main/report public release cc2b6116a6c95b59ba9b20ee55ea6194a406f541 is live; exact Pages build and8HTTP
+hashes verified. Firefox5 functional groups passed; strict console gate exited1 for
+3external analytics cookies +3JmolTracker blocks (raw evidence retained).
+FullZIP1813files CRC/allSHA256 verified; Gitbundle verified; external copies identical.
+Desktop14activeJSON/report matched source. These final records get a metadata checkpoint
+and refreshed archives; exact final checkpoint/archive/bundle hashes and remote checks
+are in external final-save-state.json. Backup folder: /Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/Αποθηκεύσεις/2026-10-29-103322.
+Main141/9esters,14lessons/337steps; React126/12 preserved without rebuild. Independent
+publication review94paths: no findings. See PUBLICATION-REVIEW-20261029.md and professor
+HTML. Known old H overlap/HCOOH rectangle and mobile/export limits disclosed there.
+Active react-library-pilot HEAD168e3ce and original index unchanged; main9c5259e protected.
+Core52 earlier approved ester naming/acid-parent extension published incc2b611;
+110new/814old/16guard cases passed. No additional core change during MOL correction/save.
+Current core SHA256 d2138418ff630ab77e578b80ca8ba3a10cc1b877c3ab8c0e5c2735ffcd1f24a2.
+Professor last sync93b759f/last checked6f55eb5; no new upstream sync during saving.
+Only isolated testFirefox and temporary8024server stopped; user preview8013 retained.
+No message sent to professor. Next: user reviews public Main and forwards report.
+
 # Save status update — 2026-10-29 — Specific checkpoint push approval pending
 
 Reviewed Main/report public release cc2b611 is live and verified. Automatic approval
