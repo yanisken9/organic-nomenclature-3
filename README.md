@@ -1,3 +1,23 @@
+**Namelecule v52 — 29/10/2026:**141molecules, including nine esters;
+14active lessons/337steps. [Main welcome](https://yanisken9.github.io/organic-nomenclature-3/design/welcome-proposal.html?v=release-20261029),
+[professor report](https://yanisken9.github.io/organic-nomenclature-3/docs/professor-20261029/main-esters-update.html).
+The five new expanded MOLs use orthogonal bonds. Known rendering limits are
+listed in the report. React build/catalog remains the previous126molecule release.
+
+**Local expanded MOL correction — 2026-10-29:** The five new esters now have
+only horizontal/vertical bonds in their expanded source MOLs and embedded data.
+Crowding is handled with spacing, not diagonal C–H fans. The generator preserves
+this convention. Other2D forms, old esters,3D, core and viewer are unchanged by
+this correction. Local, not committed/published; see [orthogonal MOL report](docs/ESTERS-ORTHOGONAL-MOL-20261029.md).
+
+**Local ester display fixes — 2026-10-29:** Main v52 has141molecules.
+The approved viewer fixes avoid duplicate formyl H, place ester acid fragments
+left in skeletal mode, suppress skeletal carbon-bound H with their strokes,
+and put tert-butyl formate's formyl H left in condensed/expanded views.
+Source MOL/SDF, embedded data and core remain unchanged by these display fixes.
+Local, without a commit or publication; checks, review status and one unchanged
+legacy expanded-label overlap are recorded in [display report](docs/ESTERS-DISPLAY-20261029.md).
+
 **Public review release - 2026-10-28:** [Main v52 welcome](https://yanisken9.github.io/organic-nomenclature-3/design/welcome-proposal.html?v=release-20261028) and
 [React trial welcome](https://yanisken9.github.io/organic-nomenclature-3/react-preview/dist/?v=release-20261028#/). Main136molecules/14lessons337steps;
 React126molecules/12lessons283steps. Reviewed runtime/build retained, without
