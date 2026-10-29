@@ -41,3 +41,7 @@ Developer prefix Firefox: five functional groups, zero diagnostics. Public Firef
 No runtime edits after review. Final publication/backup notes are documentary records outside the frozen release. Known old isopropyl ethanoate expanded H overlap and HCOOH rectangle remain; physical mobile/other browsers/export not certified. React source WIP is backed up separately and was not rebuilt into the public release.
 
 Full checkpoint/archive completion and exact hashes are recorded separately in external final-save-state.json to avoid self-referential archive hashes.
+
+## Full save verification
+
+Initial checkpoint 70f9f26395742bdb2433e13f617588e6593244b2; branch checkpoint/namelecule-20261029-103322. ZIP1813 source files CRC and all SHA256 passed; Git bundle verify passed; external copies byte identical. Desktop14 active scenario JSONs and report matched sources. Final documentary checkpoint and refreshed archives are identified in external final-save-state.json. Original branch/HEAD/index and protected main preserved. No further runtime/core changes in saving.

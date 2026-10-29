@@ -1,3 +1,35 @@
+# Current resume point — 2026-10-29 — Main published; full save verified
+
+Public release cc2b6116a6c95b59ba9b20ee55ea6194a406f541 pushed to thesis-work; Pages built exact commit.
+Main141 molecules/9 esters/double ESTERS card,14 lessons/337 steps; preserved React
+126/12 without rebuild. Professor report: docs/professor-20261029/main-esters-update.html.
+Independent publication Reviewer /root/publication_20261029_review:94 paths, no findings.
+Developer public HTTP8 hashes PASS; public Firefox5 functional groups PASS. Strict
+console gate exit1:3 Google Analytics cookie-domain rejections +3external JmolTracker
+frame blocks. Raw evidence retained; see PUBLICATION-REVIEW-20261029.md. No app
+exception observed; no claim of error-free public console. Known old isopropyl-H
+text overlap/HCOOH rectangle remain; physical mobile/other browsers/export untested.
+
+All working source, including pre-existing React/agent WIP, saved on separate branch
+checkpoint/namelecule-20261029-103322; initial checkpoint 70f9f26395742bdb2433e13f617588e6593244b2.
+ZIP1813 files (~20.9MB) CRC/all SHA256 verified; Gitbundle verified; identical copies
+in /Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/Αποθηκεύσεις/2026-10-29-103322.
+14 active scenario JSONs and professor report byte-compared with Desktop αρχεία  json/
+Namelecule_29-10-2026. Final checkpoint adds these final records; archive/bundle are
+refreshed afterward. Exact final commits/hashes/remote verification are in external
+final-save-state.json (avoids self-referential archive hashes). Source branch
+react-library-pilot HEAD168e3cec/index SHA25c212... preserved; origin/main9c5259e unchanged.
+No professor message sent. User receives public application/report links.
+
+Core report: earlier approved five-ester work changed js/mulermoc-nom-core-52.js
+for bounded branched saturated acyclic monoester naming and acid-parent selection.
+Checks110new/814old/16guards; independently reviewed in ester unit. Published in
+cc2b611. Final expanded MOL fixes and saving added no further core changes; SHA256
+d2138418ff630ab77e578b80ca8ba3a10cc1b877c3ab8c0e5c2735ffcd1f24a2. Forwardable report in core-update.txt/public HTML.
+Professor last actual sync93b759f; last checked6f55eb5 in continuous session; no new
+sync during saving. Next: use published Main link for user review; track existing
+viewer limitations separately. Preserve working branch/staging on resume.
+
 # Current resume point — 2026-10-29 — Published esters; full backup finalization
 
 User authorized full save, public link and professor report. Published reviewed commit
