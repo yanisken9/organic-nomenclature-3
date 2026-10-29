@@ -1,3 +1,15 @@
+# Save status update — 2026-10-29 — Specific checkpoint push approval pending
+
+Reviewed Main/report public release cc2b611 is live and verified. Automatic approval
+review rejected the full working-state checkpoint push: pre-existing WIP/internal
+notes might be exposed at a destination not confirmed private, and general full
+backup instruction was judged insufficiently specific for this exposure. No bypass
+attempted. Asked user explicitly via async question to approve full checkpoint GitHub
+publication or keep it local. Full local checkpoint, ZIP and external Gitbundle
+remain authorized and verified; final copies include this record. Exact final refs
+and hashes are in external final-save-state.json. Pending: user-specific approval
+for checkpoint push only; public app/report delivery is not blocked. No new core edits.
+
 # Current resume point — 2026-10-29 — Main published; full save verified
 
 Public release cc2b6116a6c95b59ba9b20ee55ea6194a406f541 pushed to thesis-work; Pages built exact commit.
