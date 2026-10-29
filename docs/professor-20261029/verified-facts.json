@@ -1,32 +1,17 @@
 {
-  "mainMolecules": 141,
-  "esters": 9,
-  "newEsters": 5,
-  "activeLessons": 14,
-  "steps": 337,
-  "reactMolecules": 126,
-  "reactBuildRegenerated": false,
-  "runtimeFiles": 772,
-  "activeScenarios": [
-    "scenarios/alkanes-nomenclature-branches.scenario.json",
-    "scenarios/alkenes-nomenclature-branches.scenario.json",
-    "scenarios/alkynes-nomenclature-branches.scenario.json",
-    "scenarios/alkadienes-nomenclature-branches.scenario.json",
-    "scenarios/enynes-nomenclature-branches.scenario.json",
-    "scenarios/saturated-monoalcohols-nomenclature.scenario.json",
-    "scenarios/other-alcohols-nomenclature.scenario.json",
-    "scenarios/saturated-monoethers-nomenclature.scenario.json",
-    "scenarios/saturated-monoaldehydes-nomenclature.scenario.json",
-    "scenarios/other-aldehydes-nomenclature.scenario.json",
-    "scenarios/saturated-monoketones-nomenclature.scenario.json",
-    "scenarios/other-ketones-nomenclature.scenario.json",
-    "scenarios/saturated-monocarboxylic-acids-nomenclature.scenario.json",
-    "scenarios/other-carboxylic-acids-nomenclature.scenario.json"
-  ],
-  "links": {
-    "welcome": "https://yanisken9.github.io/organic-nomenclature-3/design/welcome-proposal.html?v=release-20261029",
-    "viewer": "https://yanisken9.github.io/organic-nomenclature-3/mulermoc-nom-52.html?v=release-20261029",
-    "library": "https://yanisken9.github.io/organic-nomenclature-3/design/theory-library.html?v=release-20261029#esters-card",
-    "report": "https://yanisken9.github.io/organic-nomenclature-3/docs/professor-20261029/main-esters-update.html"
-  }
+  "scope": "core-only",
+  "file": "js/mulermoc-nom-core-52.js",
+  "baseCommit": "aae82c875532aad892337dcea608fc81c6503aa4",
+  "publishedCodeCommit": "cc2b6116a6c95b59ba9b20ee55ea6194a406f541",
+  "coreSha256": "d2138418ff630ab77e578b80ca8ba3a10cc1b877c3ab8c0e5c2735ffcd1f24a2",
+  "patchSha256": "0badb7fa51245813e030d1aac7950868f07fe0d09ce6f43d048b0aa9cd97be68",
+  "insertions": 46,
+  "deletions": 5,
+  "previouslyExecutedChecks": {
+    "new": 110,
+    "regression": 814,
+    "guards": 16
+  },
+  "evidence": "docs/checks/esters-orthogonal-naming-20261029.json",
+  "codeChangedByThisReportUpdate": false
 }
