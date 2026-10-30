@@ -1,0 +1,37 @@
+--- before/mulermoc-nom-52.html
++++ after/mulermoc-nom-52.html
+@@ -1,5 +1,5 @@
+ <!doctype html>
+-<html lang="el" data-namelecule-2d-scale="1.15">
++<html lang="el" data-namelecule-2d-font-size="22">
+ 
+ <head>
+   <meta charset="UTF-8" />
+@@ -331,7 +331,7 @@
+   <script src="js/jsme-nick-nomeclature-moc2-data_52.js?v=canonical-ketones-20261026"></script>
+   <script src="js/ui-icons.js?v=v52-sync-20261027-r2"></script>
+   <script src="js/mulermoc-nom-core-52.js?v=fifth-ketone-20261026"></script>
+-  <script src="js/mulermoc-nom-molview-52.js?v=main-2d-scale-20261027"></script>
++  <script src="js/mulermoc-nom-molview-52.js?v=readable-2d-20261028"></script>
+   <script src="js/mulermoc-nom-teaching-52.js?v=alkoxy-rule-20261026"></script>
+   <script src="js/mulermoc-nom-note-52.js?v=v52-sync-20261027-r2"></script>
+   <script src="js/mulermoc-nom-scenario-52.js?v=upstream-image-picker-20261026"></script>
+--- before/js/mulermoc-nom-molview-52.js
++++ after/js/mulermoc-nom-molview-52.js
+@@ -3089,11 +3089,13 @@
+       const local=matrix && inverse.multiply(matrix);
+       const fontInRoot=local && fontSize*Math.hypot(local.a,local.b);
+       const zoom=molZoom2D/MOL_ZOOM_DEFAULT;
+-      // Only the Main entry opts into the larger scale; existing embedded
+-      // hosts keep their framing until an explicit synchronization.
++      // Main can request readable labels, with the bounds below fitting large
++      // drawings. Saved embedded hosts retain their existing common scale.
+       const pageScale=Number(document.documentElement.getAttribute("data-namelecule-2d-scale"));
+       const initialScale=Number.isFinite(pageScale) && pageScale > 0 ? pageScale : 1;
+-      const pixels=Math.min(18,viewport.width/frame.width,viewport.height/frame.height)*zoom*1.15*initialScale;
++      const pageFont=Number(document.documentElement.getAttribute("data-namelecule-2d-font-size"));
++      const pixels=Number.isFinite(pageFont) && pageFont > 0 ? pageFont*zoom
++        : Math.min(18,viewport.width/frame.width,viewport.height/frame.height)*zoom*1.15*initialScale;
+       if (fontInRoot > 0 && pixels > 0) {
+         desiredWidth=viewport.width*fontInRoot/pixels;
+         svg.dataset.uniformAtomFontPixels=String(pixels);

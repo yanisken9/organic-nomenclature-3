@@ -1,0 +1,114 @@
+{
+  "baseCommit": "168e3cec01f941a84d40bbe0dc07156e7baa35d0",
+  "beforeHTMLSHA256": "c55ec107a7c6bec83305114b78c5a0558411e56da01fd600ec7ff65ab1669282",
+  "files": {
+    "design/theory-library.html": "c5cf051a2bb8479b282ed6694c700a83c2fe2b0e8c851edfecce682310a2b5f6"
+  },
+  "protected": {
+    "js/mulermoc-nom-core-52.js": "7e944c6f30abd4cae66a4c1ee0f413f21582b2058b7d3c7679a7a1a463d8a998",
+    "js/mulermoc-nom-scenario-52.js": "b47770cf126554918fb38e2b22e1e2a2937f9755ccac261fddc633298c78bed6",
+    "js/mulermoc-nom-molview-52.js": "c13509685119e3e3fad0055086c417a3923c794236553887784165e3c0ec2ecb",
+    "js/jsme-nick-nomeclature-moc2-data_52.js": "f21a0ca3f5e844a2bee906e1ea3366ed9ba390491476be1d553f74df89514dfb",
+    "scenarios/alkanes-nomenclature-branches.scenario.json": "2b0a48bf9fc7255dd5d474a8b193c03db06f0d7c37f3b87669872b632f930552",
+    "scenarios/alkenes-nomenclature-branches.scenario.json": "457138e71a7d7d4e17db22c38bc0b10fcd6b152d404d03d8fabe829b7bf70af1",
+    "scenarios/alkynes-nomenclature-branches.scenario.json": "4aaea4d408e7cd381b90cfa0b1a52f17803f3a4f6761d1e312b80490d2cb77cf",
+    "scenarios/alkadienes-nomenclature-branches.scenario.json": "a13371932d0ac50de541cba79fe0cc1e2c074398791cd4c13646f03d0e19272a",
+    "scenarios/enynes-nomenclature-branches.scenario.json": "f5c10d8d07bcbaeab334a48be90192708508e9fc980cfa58daf4cad6490776b7",
+    "scenarios/saturated-monoalcohols-nomenclature.scenario.json": "97d363aba6792f079d1349ca3660e1320c9e20f62404939ac5edcadb2982fc39",
+    "scenarios/other-alcohols-nomenclature.scenario.json": "65ed393a9378d5fd6bc4ed28cec3e73cde20650f3fc24403f866d428a9c477f6",
+    "scenarios/saturated-monoethers-nomenclature.scenario.json": "acc364d556205bca1980ef907ddf7b130eedc61f105a70b6aa8eece3e7a38feb",
+    "scenarios/saturated-monoaldehydes-nomenclature.scenario.json": "37eb173f4e372e372bfaf240bb6f48a46456e6c3b53978293901241734b47906",
+    "scenarios/other-aldehydes-nomenclature.scenario.json": "b085a5075401aa03026709570ad7effb6fbdccf7a59fadeac41dc59742c5ebca",
+    "scenarios/saturated-monoketones-nomenclature.scenario.json": "65a5345b35e056b99e02db4014f86554dbdeeac8197f0599d607a8cc6b271922",
+    "scenarios/other-ketones-nomenclature.scenario.json": "57799506d9d28348a12c6e61f1d4eef044d3ebca9e0357c8d1b6c760070a6bf9",
+    "scenarios/saturated-monocarboxylic-acids-nomenclature.scenario.json": "d0cb2fd998a247289de45a5a526c895f606359c60262e6b33fc5b5aa34258b11",
+    "scenarios/other-carboxylic-acids-nomenclature.scenario.json": "66dfb342351bd64d62a22afb4693b60a697cd249ade5796cbec6418a55edd7cb"
+  },
+  "lessons": [
+    {
+      "scenario": "scenarios/alkanes-nomenclature-branches.scenario.json",
+      "title": "Αλκάνια-Ονοματολογία και διακλαδώσεις",
+      "steps": 21,
+      "molecules": 5
+    },
+    {
+      "scenario": "scenarios/alkenes-nomenclature-branches.scenario.json",
+      "title": "Αλκένια-Ονοματολογία και διακλαδώσεις",
+      "steps": 22,
+      "molecules": 5
+    },
+    {
+      "scenario": "scenarios/alkynes-nomenclature-branches.scenario.json",
+      "title": "Αλκίνια-Ονοματολογία και διακλαδώσεις",
+      "steps": 22,
+      "molecules": 5
+    },
+    {
+      "scenario": "scenarios/alkadienes-nomenclature-branches.scenario.json",
+      "title": "Αλκαδιένια-Ονοματολογία και διακλαδώσεις",
+      "steps": 23,
+      "molecules": 6
+    },
+    {
+      "scenario": "scenarios/enynes-nomenclature-branches.scenario.json",
+      "title": "Ονοματολογία Αλκενινίων",
+      "steps": 23,
+      "molecules": 6
+    },
+    {
+      "scenario": "scenarios/saturated-monoalcohols-nomenclature.scenario.json",
+      "title": "Κορεσμένες μονοσθενείς αλκοόλες",
+      "steps": 20,
+      "molecules": 7
+    },
+    {
+      "scenario": "scenarios/other-alcohols-nomenclature.scenario.json",
+      "title": "Άλλες αλκοόλες",
+      "steps": 22,
+      "molecules": 10
+    },
+    {
+      "scenario": "scenarios/saturated-monoethers-nomenclature.scenario.json",
+      "title": "Ονοματολογία Κορεσμένων Μονοαιθέρων",
+      "steps": 27,
+      "molecules": 11
+    },
+    {
+      "scenario": "scenarios/saturated-monoaldehydes-nomenclature.scenario.json",
+      "title": "Κορεσμένες μονοσθενείς αλδεΰδες",
+      "steps": 24,
+      "molecules": 9
+    },
+    {
+      "scenario": "scenarios/other-aldehydes-nomenclature.scenario.json",
+      "title": "Άλλες αλδεΰδες",
+      "steps": 26,
+      "molecules": 8
+    },
+    {
+      "scenario": "scenarios/saturated-monoketones-nomenclature.scenario.json",
+      "title": "Κορεσμένες μονοσθενείς κετόνες",
+      "steps": 25,
+      "molecules": 7
+    },
+    {
+      "scenario": "scenarios/other-ketones-nomenclature.scenario.json",
+      "title": "Άλλες κετόνες",
+      "steps": 28,
+      "molecules": 7
+    },
+    {
+      "scenario": "scenarios/saturated-monocarboxylic-acids-nomenclature.scenario.json",
+      "title": "Κορεσμένα μονοκαρβοξυλικά οξέα",
+      "steps": 28,
+      "molecules": 8
+    },
+    {
+      "scenario": "scenarios/other-carboxylic-acids-nomenclature.scenario.json",
+      "title": "Άλλα καρβοξυλικά οξέα",
+      "steps": 26,
+      "molecules": 7
+    }
+  ],
+  "changedBadges": 13
+}

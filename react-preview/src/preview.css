@@ -70,8 +70,87 @@
 .molecule-controls legend { font-size: 12px; margin-bottom: 8px; }
 .molecule-controls label { display: flex; align-items: center; gap: 6px; cursor: pointer; font-size: 15px; }
 .molecule-controls input { accent-color: var(--teal); width: 18px; height: 18px; }
+.molecule-controls .molecule-controls-3d { flex-basis: 100%; }
+.molecule-controls-3d select { min-width: 0; max-width: 100%; min-height: 44px; font: inherit; color: var(--ink); background: white; border: 1px solid var(--line); border-radius: 8px; padding: 4px; }
 .molecule-zoom { display: flex; gap: 8px; }
 .molecule-preview button { border: 1px solid #b3c9c3; border-radius: 10px; background: white; color: var(--ink); padding: 8px 16px; min-height: 44px; font: inherit; cursor: pointer; }
 .molecule-preview button:disabled { opacity: .45; cursor: default; }
 .molecule-preview :focus-visible { outline: 3px solid var(--teal); outline-offset: 3px; }
 @media (max-width: 550px) { .molecule-stage { height: 320px; } .molecule-controls fieldset { flex-direction: column; } }
+
+.molecule-picker { margin-top: 20px; display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+.molecule-picker label { font-size: 15px; font-weight: 600; }
+.molecule-picker select { max-width: 100%; min-height: 44px; padding: 8px 12px; border: 1px solid #b3c9c3; border-radius: 10px; background: white; color: var(--ink); font: inherit; }
+@media (max-width: 550px) { .molecule-preview h1 { overflow-wrap: anywhere; } .molecule-picker select { width: 100%; } }
+
+.molecule-preview { max-width: 1200px; }
+.molecule-workspace { display: grid; grid-template-columns: minmax(0, 1fr) 350px; align-items: start; gap: 24px; margin-top: 24px; }
+.molecule-workspace .molecule-panel { margin-top: 0; }
+.react-name-analysis { min-width: 0; padding: 20px; border: 1px solid var(--line); border-radius: 20px; background: white; }
+.react-name-analysis h2 { font-size: 22px; margin: 0 0 24px; }
+.react-name-components { display: flex; flex-wrap: wrap; gap: 4px; }
+.molecule-preview .react-name-components button { min-height: 48px; min-width: 44px; padding: 10px 8px; border: 2px solid #b3d0c7; background: #e1efea; color: #254c50; font-weight: 700; }
+.molecule-preview .react-name-components button[aria-pressed="true"] { background: #397b78; border-color: #397b78; color: white; }
+.react-name-explanation { margin: 24px 0 0; padding: 16px; border-left: 4px solid #397b78; border-radius: 8px; background: #e1efea; font-size: 14px; line-height: 1.7; overflow-wrap: anywhere; }
+.react-name-hint { color: var(--muted); font-size: 14px; line-height: 1.6; }
+@media (max-width: 950px) { .molecule-workspace { grid-template-columns: minmax(0, 1fr); } }
+
+.molecule-views { display:flex; gap:8px; margin-top:20px; }
+.molecule-views button[aria-pressed="true"] { background:#397b78; color:white; border-color:#397b78; }
+.molecule-filters { display:flex; flex-wrap:wrap; align-items:end; gap:12px; margin-top:24px; }
+.molecule-filters label { display:flex; flex:1 1 240px; flex-direction:column; gap:6px; font-size:15px; font-weight:600; min-width:0; }
+.molecule-filters input, .molecule-filters select { min-height:44px; width:100%; min-width:0; padding:8px 12px; border:1px solid #b3c9c3; border-radius:10px; color:var(--ink); background:white; font:inherit; font-weight:400; }
+.molecule-picker select { flex:1 1 260px; min-width:0; }
+.react-ether-naming { display:flex; flex-wrap:wrap; gap:16px; margin:0 0 20px; padding:0; border:0; }
+.react-ether-naming legend { margin-bottom:8px; font-size:13px; }
+.react-ether-naming label { display:flex; align-items:center; gap:6px; min-height:44px; cursor:pointer; }
+.react-ether-naming input { width:18px; height:18px; accent-color:var(--teal); }
+.react-rule-panel { margin-top:16px; min-width:0; }
+.molecule-preview .react-rule-toggle { display:flex; align-items:center; gap:8px; width:100%; text-align:left; font-size:14px; font-weight:600; }
+.react-rule-toggle span { flex:0 0 16px; }
+.react-rule-body { --rule-blue:#1b275d; --rule-light-blue:#779ace; --rule-pale-blue:#c8d9ec; margin-top:8px; font-size:14px; line-height:1.5; overflow-wrap:anywhere; }
+.react-rule-body[hidden] { display:none; }
+.react-rule-body .ruleText { padding:12px; border:1px solid #b3c9c3; border-radius:8px 8px 0 0; }
+.react-rule-body .ruleText.hideTopRow { padding:0; border-width:1px 0 0; }
+.react-rule-body .ruleTable { border:1px solid #b3c9c3; border-top:0; }
+.react-rule-body .HFlex { display:flex; }
+.react-rule-body .VFlex { display:flex; flex-direction:column; }
+.react-rule-body .ruleRow { padding:5px; border-bottom:1px solid #ddd; }
+.react-rule-body .ruleCase, .react-rule-body .ruleName { display:flex; align-items:center; justify-content:center; width:50%; min-width:0; padding:4px; text-align:center; }
+.react-rule-body .rule2 .ruleCase, .react-rule-body .rule4 .ruleCase { width:60%; }
+.react-rule-body .rule2 .ruleName, .react-rule-body .rule4 .ruleName { width:40%; }
+.react-rule-body .rule3 .ruleCase { width:67%; }
+.react-rule-body .rule3 .ruleName { width:33%; }
+.react-rule-body .ruleRow.selected { background:var(--rule-blue); font-weight:bold; }
+.react-rule-body .ruleRow.selected .ruleCase, .react-rule-body .ruleRow.selected .ruleName { color:white; }
+.react-rule-body .ruleRow.selectedA { background:var(--rule-pale-blue); }
+.react-rule-body .ruleRow.selectedA .ruleCase, .react-rule-body .ruleRow.selectedA .ruleName { color:var(--rule-blue); }
+.react-rule-body .ruleRow.selectedA, .react-rule-body .ruleRow.selectedB { position:relative; }
+.react-rule-body .ruleRow.selectedA::before, .react-rule-body .ruleRow.selectedB::before { position:absolute; left:6px; top:calc(50% - 10px); width:20px; height:20px; text-align:center; border-radius:50%; font-weight:bold; color:white; line-height:20px; }
+.react-rule-body .ruleRow.selectedA::before { content:'A'; background:var(--rule-blue); }
+.react-rule-body .ruleRow.selectedB::before { content:'B'; background:var(--rule-light-blue); }
+.react-rule-body .rule4 .ruleCase { padding-left:32px; text-align:left; }
+.react-rule-body .orderNo { font-weight:bold; color:var(--rule-blue); }
+.react-rule-body .selectedB .orderNo { color:white; }
+.react-rule-body .ruleAlkyl .ruleRow { padding:0; border:0; }
+.react-rule-body .ruleAlkyl .ruleCase, .react-rule-body .ruleAlkyl .ruleName { display:block; padding:7px 5px; border:1px solid #dce5df; text-align:left; width:50%; }
+.react-rule-body .ruleAlkyl .ruleTableTitle, .react-rule-body .ruleAlkyl .ruleRow.selected .ruleCase, .react-rule-body .ruleAlkyl .ruleRow.selected .ruleName { background:#e1efea; color:#254c50; }
+.react-rule-body .ruleAlkyl .ruleRow.selected { box-shadow:inset 0 2px var(--rule-light-blue),inset 0 -2px var(--rule-light-blue); }
+.react-rule-body .alkylPrefix, .react-rule-body small { display:block; margin-top:3px; }
+.react-rule-body small { font-size:11px; color:var(--muted); }
+.react-rule-body .alkylFormula { font-size:12px; }
+.react-rule-body .alkylRuleNote { padding:8px; font-size:12px; }
+.molecule-export-status { margin:0; padding:0 16px 12px; background:var(--mint); font-size:14px; }
+.lesson-preview { max-width:1600px; margin:0 auto; padding:24px; }
+.lesson-preview h1 { font-size:clamp(24px,4vw,38px); overflow-wrap:anywhere; }
+.lesson-navigation { display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:12px; padding:12px; border:1px solid var(--line); border-radius:12px; background:var(--mint); }
+.lesson-navigation button, .lesson-status button { min-height:44px; padding:8px 12px; border:1px solid #b3c9c3; border-radius:10px; background:white; color:var(--ink); font:inherit; cursor:pointer; }
+.lesson-navigation button:disabled { opacity:.45; cursor:default; }
+.lesson-navigation a { padding:10px; }
+.lesson-preview :focus-visible { outline:3px solid var(--teal); outline-offset:3px; }
+.lesson-step-summary { position:absolute; width:1px; height:1px; overflow:hidden; clip-path:inset(50%); white-space:nowrap; }
+.lesson-stage { position:relative; min-height:420px; }
+.lesson-stage iframe { display:block; width:100%; border:0; background:white; }
+.lesson-stage iframe[hidden] { visibility:hidden; }
+.lesson-status { position:absolute; inset:0; display:flex; align-items:center; justify-content:flex-start; flex-direction:column; gap:16px; padding:48px 16px; text-align:center; }
+@media (max-width:550px) { .lesson-preview { padding:16px 8px; } .lesson-navigation { gap:6px; font-size:14px; } }

@@ -1,0 +1,53 @@
+{
+  "base_commit": "168e3cec01f941a84d40bbe0dc07156e7baa35d0",
+  "automated_tests": "6 passed; test-launcher.py; first start, reuse, occupied foreign port, concurrent starts, missing project/Firefox and malformed/truncated foreign HTTP response",
+  "desktop_app": "/Users/yannisskendros/Desktop/Namelecule.app",
+  "welcome": {
+    "status": 200,
+    "matches_source": true
+  },
+  "owned_server_count_after_repeated_launches": 1,
+  "bundle_signature": "codesign --verify --deep passed after final icon update",
+  "strict_signature_note": "Finder/fileprovider restores top-level FinderInfo metadata after initial strict verification; normal deep verification passes. No sealed content changes outside recorded updates.",
+  "protected_unchanged": {
+    "index.html": true,
+    "mulermoc-nom-52.html": true,
+    "js/mulermoc-nom-core-52.js": true,
+    "js/mulermoc-nom-molview-52.js": true,
+    "design/welcome-proposal.html": true,
+    "design/theory-library.html": true,
+    "AGENTS.md": true
+  },
+  "source_and_bundle_sha256": {
+    "tools/namelecule-launcher/launch.applescript": "6a2729b89960f6bd4c5e585f2790217c9de51b2d525a7b384149a61d7838c153",
+    "tools/namelecule-launcher/test-launcher.py": "d65942a72555bfdd44647f0a7921536ca894e2f64e48826ccf6e20fed434e297",
+    "tools/namelecule-launcher/make-icon.js": "a836cfb86947f0571d52e024ff9abe5f90f3057764b96f37909bf278906bdb56",
+    "tools/namelecule-launcher/README.md": "7c0c6c47092951a6fb31f3d9cddc78aa9e2cfe9f989bef5c57a415d0982379c8",
+    "tools/namelecule-launcher/launcher.py": "f3593ffeb0397ae75d42358b0cbedd775595d059d63aa8d500731f2db5e957cf",
+    "tools/namelecule-launcher/build-app.py": "a841c2d001f98f51b5af6f33905b2f77d2d1f58f7bf2985cdfaf69a4e9d212b8",
+    "/Users/yannisskendros/Desktop/Namelecule.app/Contents/Info.plist": "eb2fa4b17e649c827137f8ceb8b61ec05124a9dcaf989666583522676a350dc1",
+    "/Users/yannisskendros/Desktop/Namelecule.app/Contents/PkgInfo": "412d70757c4fdecdd73355ac4bb3ba80c6705110d15cfbc9fe925e7b4faf7962",
+    "/Users/yannisskendros/Desktop/Namelecule.app/Contents/_CodeSignature/CodeResources": "bcf7e702012cc8830159693ddac4cc3a43515d888600e16a36d38d507e63b2fe",
+    "/Users/yannisskendros/Desktop/Namelecule.app/Contents/MacOS/applet": "903706b75fcae965e73f6a081ce5f5da672d3952575ed0627e27cc24732c95bc",
+    "/Users/yannisskendros/Desktop/Namelecule.app/Contents/Resources/project.json": "5d3709f71a7a707ac8fe4554b51cb488571d5a15c0a3e3c3defca78ed99fbc78",
+    "/Users/yannisskendros/Desktop/Namelecule.app/Contents/Resources/applet.rsrc": "355d9d34bc20ca457b6967d3072c1420b040f4b89d97b179d4fae4430efb49b3",
+    "/Users/yannisskendros/Desktop/Namelecule.app/Contents/Resources/namelecule.icns": "d1305b6c457233396fbdd266e4b3cc48b78f98df0c01694fa9a3955a2781e74e",
+    "/Users/yannisskendros/Desktop/Namelecule.app/Contents/Resources/launcher.py": "f3593ffeb0397ae75d42358b0cbedd775595d059d63aa8d500731f2db5e957cf",
+    "/Users/yannisskendros/Desktop/Namelecule.app/Contents/Resources/applet.icns": "27bc1e67abe59eff6bdf6b52e4715ccae3d79764ad7439df7a92f1022c65af29",
+    "/Users/yannisskendros/Desktop/Namelecule.app/Contents/Resources/Scripts/main.scpt": "652f384b66164bb44af3f0691b8becc490c27660a3582ffd84fcd6e24df83d43"
+  },
+  "browser_evidence": "Actual app launch and Firefox activation via NSWorkspace; exact welcome HTTP200. No visual/DOM page inspection claimed.",
+  "icon_evidence": "Existing v1 logo methane emblem isolated with native AppKit, preserving aspect/alpha; ICNS variants16..1024 generated; Developer viewed ICNS preview and final NSWorkspace.iconForFile output. Reviewer viewed source logo and that supplied final image. Original logo unchanged.",
+  "review": {
+    "reviewer": "/root/review_desktop_launcher",
+    "initial_frozen_evidence_sha256": "bc9c551ec41515f21237a97f0853e0d6af249d9b05ae907a215e193ae4090dbd",
+    "DL-01": {
+      "severity": "P2",
+      "status": "closed; Developer tests and independent targeted verification completed",
+      "change": "Treat http.client.HTTPException as identity mismatch; coverage for BadStatusLine and IncompleteRead"
+    },
+    "final_icon_target": "Independent targeted verification completed: source/bundle hashes, Python AST, plist/icon sizes, proportional crop and signature checked; no new actionable findings. Runtime test/app-launch evidence supplied by Developer.",
+    "final_frozen_evidence_sha256": "aa91ed4c3827e1d574339a97822582e49f9369d2b39736cbc09f7439b4da754e"
+  },
+  "initial_issue": "Desktop read404 resolved with explicit parent/child preflight, system Python path and completed ad-hoc signature; freshly restarted real server returned exact welcome200."
+}

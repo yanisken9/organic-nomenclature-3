@@ -1,0 +1,2239 @@
+{
+  "scenarioVersion": 1,
+  "app": "mulermoc-nom-52",
+  "scenario": "Άλλα καρβοξυλικά οξέα",
+  "title": "Άλλα καρβοξυλικά οξέα",
+  "showStepNumbers": false,
+  "reserveTitleSpace": true,
+  "steps": [
+    {
+      "n": 1,
+      "title": "Ακόρεστα μονοκαρβοξυλικά και δικαρβοξυλικά οξέα",
+      "note": "Μελετάμε <b>7 ακόρεστα καρβοξυλικά οξέα</b> με τουλάχιστον έναν C=C ή C≡C και <b>μία ή δύο –COOH</b>, χωρίς άλλες χαρακτηριστικές ομάδες. Ξεκινάμε από το προπενικό οξύ, CH₂=CH–COOH. Το C=O της –COOH δεν αρκεί για να χαρακτηριστεί ένα οξύ ακόρεστο. Οι ανθρακικές διακλαδώσεις μπορούν να υπάρχουν και δεν αποτελούν πρόσθετες χαρακτηριστικές ομάδες.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "none",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": true,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": [
+          "comp5",
+          "comp6",
+          "comp9"
+        ]
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "propenoic_acid",
+        "methyl_2_propenoic_acid",
+        "penten_2_yn_4_oic_acid",
+        "hexen_2_yn_4_dioic_acid",
+        "ethyl_2_methyl_3_penten_2_yn_4_oic_acid",
+        "ethyl_3_isopropyl_2_dimethyl_4_5_hexadien_2_4_dioic_acid",
+        "ethyl_2_isopropyl_3_dimethyl_6_6_hepten_2_yn_4_dioic_acid"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": false,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": false,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": false
+      },
+      "selectedMol": "propenoic_acid"
+    },
+    {
+      "n": 2,
+      "title": "Η κύρια αλυσίδα περιλαμβάνει το C της –COOH",
+      "note": "Η κύρια αλυσίδα έχει <b>τρία C</b> και δίνει το συνθετικό <b>προπ-</b>. Το C της καρβοξυλομάδας είναι το C1. Ακολούθησε την αρίθμηση προς το άκρο CH₂.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compCarbonsCount",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": true,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": [
+          "comp6",
+          "comp9"
+        ]
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "propenoic_acid",
+        "methyl_2_propenoic_acid",
+        "penten_2_yn_4_oic_acid",
+        "hexen_2_yn_4_dioic_acid",
+        "ethyl_2_methyl_3_penten_2_yn_4_oic_acid",
+        "ethyl_3_isopropyl_2_dimethyl_4_5_hexadien_2_4_dioic_acid",
+        "ethyl_2_isopropyl_3_dimethyl_6_6_hepten_2_yn_4_dioic_acid"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": false,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": false,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": false
+      },
+      "selectedMol": "propenoic_acid"
+    },
+    {
+      "n": 3,
+      "title": "Ο διπλός δεσμός δίνει το -εν-",
+      "note": "Ο διπλός δεσμός βρίσκεται μεταξύ <b>C2 και C3</b> και δηλώνεται με <b>-εν-</b>. Στο συγκεκριμένο απλό παράδειγμα η εφαρμογή εμφανίζει προπενικό οξύ χωρίς αριθμό θέσης. Η πλήρης θέση του διπλού είναι 2.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compBondType",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": true,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": [
+          "comp9"
+        ]
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "propenoic_acid",
+        "methyl_2_propenoic_acid",
+        "penten_2_yn_4_oic_acid",
+        "hexen_2_yn_4_dioic_acid",
+        "ethyl_2_methyl_3_penten_2_yn_4_oic_acid",
+        "ethyl_3_isopropyl_2_dimethyl_4_5_hexadien_2_4_dioic_acid",
+        "ethyl_2_isopropyl_3_dimethyl_6_6_hepten_2_yn_4_dioic_acid"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": false,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": false,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": false
+      },
+      "selectedMol": "propenoic_acid"
+    },
+    {
+      "n": 4,
+      "title": "Η κατάληξη του μονοκαρβοξυλικού οξέος",
+      "note": "Μία –COOH δίνει <b>-ικό οξύ</b>. Συνθέτουμε <b>προπενικό οξύ</b>. Η καρβοξυλομάδα περιλαμβάνει μαζί το C=O και το O–H και δεν αναλύεται ως ξεχωριστή κετόνη και αλκοόλη.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compSuffix",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": []
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "propenoic_acid",
+        "methyl_2_propenoic_acid",
+        "penten_2_yn_4_oic_acid",
+        "hexen_2_yn_4_dioic_acid",
+        "ethyl_2_methyl_3_penten_2_yn_4_oic_acid",
+        "ethyl_3_isopropyl_2_dimethyl_4_5_hexadien_2_4_dioic_acid",
+        "ethyl_2_isopropyl_3_dimethyl_6_6_hepten_2_yn_4_dioic_acid"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": false,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": false,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": false
+      },
+      "selectedMol": "propenoic_acid"
+    },
+    {
+      "n": 5,
+      "title": "Τέσσερα C συνολικά, τρία στην κύρια αλυσίδα",
+      "note": "Στο διακλαδισμένο αυτό οξύ η κύρια αλυσίδα περιλαμβάνει τη –COOH και τον διπλό δεσμό. Έχει <b>τρία C</b>, ενώ το τέταρτο C ανήκει στο μεθύλιο. Επιλέγουμε <b>προπ-</b>, όχι βουτ-.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compCarbonsCount",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": true,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": [
+          "comp0",
+          "comp1",
+          "comp4",
+          "comp6"
+        ]
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "propenoic_acid",
+        "methyl_2_propenoic_acid",
+        "penten_2_yn_4_oic_acid",
+        "hexen_2_yn_4_dioic_acid",
+        "ethyl_2_methyl_3_penten_2_yn_4_oic_acid",
+        "ethyl_3_isopropyl_2_dimethyl_4_5_hexadien_2_4_dioic_acid",
+        "ethyl_2_isopropyl_3_dimethyl_6_6_hepten_2_yn_4_dioic_acid"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": false,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": false,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": false
+      },
+      "selectedMol": "methyl_2_propenoic_acid"
+    },
+    {
+      "n": 6,
+      "title": "Δύο αριθμοί 2 με διαφορετική σημασία",
+      "note": "Ο διπλός δεσμός αρχίζει στο <b>C2</b> και το μεθύλιο συνδέεται επίσης στο <b>C2</b>. Στο 2-μεθυλο-2-προπενικό οξύ ο πρώτος αριθμός αφορά τη διακλάδωση και ο δεύτερος τον διπλό δεσμό.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compBondType",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": true,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": [
+          "comp1"
+        ]
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "propenoic_acid",
+        "methyl_2_propenoic_acid",
+        "penten_2_yn_4_oic_acid",
+        "hexen_2_yn_4_dioic_acid",
+        "ethyl_2_methyl_3_penten_2_yn_4_oic_acid",
+        "ethyl_3_isopropyl_2_dimethyl_4_5_hexadien_2_4_dioic_acid",
+        "ethyl_2_isopropyl_3_dimethyl_6_6_hepten_2_yn_4_dioic_acid"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": false,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": false,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": false
+      },
+      "selectedMol": "methyl_2_propenoic_acid"
+    },
+    {
+      "n": 7,
+      "title": "Μεθύλιο και πλήρες όνομα",
+      "note": "Η διακλάδωση είναι μεθύλιο στη θέση 2. Το πλήρες όνομα είναι <b>2-μεθυλο-2-προπενικό οξύ</b>. Η θέση του C=C και η θέση της διακλάδωσης πρέπει να διαβάζονται χωριστά.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compSecondSub1",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": []
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "propenoic_acid",
+        "methyl_2_propenoic_acid",
+        "penten_2_yn_4_oic_acid",
+        "hexen_2_yn_4_dioic_acid",
+        "ethyl_2_methyl_3_penten_2_yn_4_oic_acid",
+        "ethyl_3_isopropyl_2_dimethyl_4_5_hexadien_2_4_dioic_acid",
+        "ethyl_2_isopropyl_3_dimethyl_6_6_hepten_2_yn_4_dioic_acid"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": false,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": false,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": false
+      },
+      "selectedMol": "methyl_2_propenoic_acid"
+    },
+    {
+      "n": 8,
+      "title": "Πέντε C και δύο είδη πολλαπλού δεσμού",
+      "note": "Η κύρια αλυσίδα του HOOC–CH=CH–C≡CH έχει <b>πέντε C</b> και αρχίζει από το καρβοξυλικό C1. Περιλαμβάνει και τον διπλό και τον τριπλό δεσμό.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compCarbonsCount",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": true,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": [
+          "comp0",
+          "comp6",
+          "comp7",
+          "comp8",
+          "comp9"
+        ]
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "propenoic_acid",
+        "methyl_2_propenoic_acid",
+        "penten_2_yn_4_oic_acid",
+        "hexen_2_yn_4_dioic_acid",
+        "ethyl_2_methyl_3_penten_2_yn_4_oic_acid",
+        "ethyl_3_isopropyl_2_dimethyl_4_5_hexadien_2_4_dioic_acid",
+        "ethyl_2_isopropyl_3_dimethyl_6_6_hepten_2_yn_4_dioic_acid"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": false,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": false,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": false
+      },
+      "selectedMol": "penten_2_yn_4_oic_acid"
+    },
+    {
+      "n": 9,
+      "title": "Ο διπλός δεσμός αρχίζει στο C2",
+      "note": "Ο C=C ενώνει τα <b>C2 και C3</b>. Η θέση 2 δηλώνεται πριν από το τμήμα πεντεν-. Ακολούθησε τους αριθμούς της κύριας αλυσίδας.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compBondType",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": true,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": [
+          "comp7",
+          "comp8",
+          "comp9"
+        ]
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "propenoic_acid",
+        "methyl_2_propenoic_acid",
+        "penten_2_yn_4_oic_acid",
+        "hexen_2_yn_4_dioic_acid",
+        "ethyl_2_methyl_3_penten_2_yn_4_oic_acid",
+        "ethyl_3_isopropyl_2_dimethyl_4_5_hexadien_2_4_dioic_acid",
+        "ethyl_2_isopropyl_3_dimethyl_6_6_hepten_2_yn_4_dioic_acid"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": false,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": false,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": false
+      },
+      "selectedMol": "penten_2_yn_4_oic_acid"
+    },
+    {
+      "n": 10,
+      "title": "Ο τριπλός δεσμός αρχίζει στο C4",
+      "note": "Ο C≡C ενώνει τα <b>C4 και C5</b> και δηλώνεται με <b>-4-ιν-</b>. Τα άτομα C του τριπλού έχουν γραμμική τοπική γεωμετρία. Η φορά της αρίθμησης έχει ήδη οριστεί από τη –COOH.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compBondType2",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": true,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": [
+          "comp9"
+        ]
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "propenoic_acid",
+        "methyl_2_propenoic_acid",
+        "penten_2_yn_4_oic_acid",
+        "hexen_2_yn_4_dioic_acid",
+        "ethyl_2_methyl_3_penten_2_yn_4_oic_acid",
+        "ethyl_3_isopropyl_2_dimethyl_4_5_hexadien_2_4_dioic_acid",
+        "ethyl_2_isopropyl_3_dimethyl_6_6_hepten_2_yn_4_dioic_acid"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": false,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": false,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": false
+      },
+      "selectedMol": "penten_2_yn_4_oic_acid"
+    },
+    {
+      "n": 11,
+      "title": "Σύνθεση του ενινικού ονόματος",
+      "note": "Στο όνομα γράφουμε το τμήμα του διπλού πριν από το τμήμα του τριπλού. Προκύπτει <b>2-πεντεν-4-ινικό οξύ</b>. Το -ικό οξύ δηλώνει μία –COOH.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compSuffix",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": []
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "propenoic_acid",
+        "methyl_2_propenoic_acid",
+        "penten_2_yn_4_oic_acid",
+        "hexen_2_yn_4_dioic_acid",
+        "ethyl_2_methyl_3_penten_2_yn_4_oic_acid",
+        "ethyl_3_isopropyl_2_dimethyl_4_5_hexadien_2_4_dioic_acid",
+        "ethyl_2_isopropyl_3_dimethyl_6_6_hepten_2_yn_4_dioic_acid"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": false,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": false,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": false
+      },
+      "selectedMol": "penten_2_yn_4_oic_acid"
+    },
+    {
+      "n": 12,
+      "title": "Έξι C με καρβοξύλια και στα δύο άκρα",
+      "note": "Το HOOC–CH=CH–C≡C–COOH έχει <b>δύο καρβοξυλομάδες</b>. Η κύρια αλυσίδα περιλαμβάνει και τα δύο καρβοξυλικά C και έχει <b>έξι C</b>. Οι –COOH παίρνουν θέσεις 1 και 6 από οποιοδήποτε άκρο. Επειδή υπάρχουν δύο –COOH, η κατάληξη θα είναι <b>-διικό οξύ</b>, αντί για -ικό οξύ του προηγούμενου μονοκαρβοξυλικού παραδείγματος.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compCarbonsCount",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": true,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": [
+          "comp0",
+          "comp6",
+          "comp7",
+          "comp8",
+          "comp9"
+        ]
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "propenoic_acid",
+        "methyl_2_propenoic_acid",
+        "penten_2_yn_4_oic_acid",
+        "hexen_2_yn_4_dioic_acid",
+        "ethyl_2_methyl_3_penten_2_yn_4_oic_acid",
+        "ethyl_3_isopropyl_2_dimethyl_4_5_hexadien_2_4_dioic_acid",
+        "ethyl_2_isopropyl_3_dimethyl_6_6_hepten_2_yn_4_dioic_acid"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": false,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": false,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": false
+      },
+      "selectedMol": "hexen_2_yn_4_dioic_acid"
+    },
+    {
+      "n": 13,
+      "title": "Σύγκριση των δύο κατευθύνσεων",
+      "note": "Αφού οι –COOH ισοβαθμούν, συγκρίνουμε τους πολλαπλούς δεσμούς. Και οι δύο κατευθύνσεις δίνουν το σύνολο <b>2,4</b>. Στην ισοβαθμία ο διπλός παίρνει τον μικρότερο αριθμό, άρα <b>C=C στη θέση 2</b>. Αυτό δεν σημαίνει ότι ο διπλός προηγείται πάντοτε του τριπλού στην αρίθμηση.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compBondType",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": true,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": [
+          "comp7",
+          "comp8",
+          "comp9"
+        ]
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "propenoic_acid",
+        "methyl_2_propenoic_acid",
+        "penten_2_yn_4_oic_acid",
+        "hexen_2_yn_4_dioic_acid",
+        "ethyl_2_methyl_3_penten_2_yn_4_oic_acid",
+        "ethyl_3_isopropyl_2_dimethyl_4_5_hexadien_2_4_dioic_acid",
+        "ethyl_2_isopropyl_3_dimethyl_6_6_hepten_2_yn_4_dioic_acid"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": false,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": false,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": false
+      },
+      "selectedMol": "hexen_2_yn_4_dioic_acid"
+    },
+    {
+      "n": 14,
+      "title": "Ο τριπλός δεσμός στη θέση 4",
+      "note": "Με την επιλεγμένη αρίθμηση ο C≡C ενώνει τα <b>C4 και C5</b> και δίνει <b>-4-ιν-</b>. Ο δεύτερος καρβοξυλικός C είναι το C6.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compBondType2",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": true,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": [
+          "comp9"
+        ]
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "propenoic_acid",
+        "methyl_2_propenoic_acid",
+        "penten_2_yn_4_oic_acid",
+        "hexen_2_yn_4_dioic_acid",
+        "ethyl_2_methyl_3_penten_2_yn_4_oic_acid",
+        "ethyl_3_isopropyl_2_dimethyl_4_5_hexadien_2_4_dioic_acid",
+        "ethyl_2_isopropyl_3_dimethyl_6_6_hepten_2_yn_4_dioic_acid"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": false,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": false,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": false
+      },
+      "selectedMol": "hexen_2_yn_4_dioic_acid"
+    },
+    {
+      "n": 15,
+      "title": "Ενίνιο και δύο καρβοξυλομάδες",
+      "note": "Συνθέτουμε <b>2-εξεν-4-ινοδιικό οξύ</b>. Το -εν- και το -ιν- δηλώνουν τους πολλαπλούς δεσμούς, ενώ το -διικό οξύ δηλώνει τις δύο –COOH.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compSuffix",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": []
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "propenoic_acid",
+        "methyl_2_propenoic_acid",
+        "penten_2_yn_4_oic_acid",
+        "hexen_2_yn_4_dioic_acid",
+        "ethyl_2_methyl_3_penten_2_yn_4_oic_acid",
+        "ethyl_3_isopropyl_2_dimethyl_4_5_hexadien_2_4_dioic_acid",
+        "ethyl_2_isopropyl_3_dimethyl_6_6_hepten_2_yn_4_dioic_acid"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": false,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": false,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": false
+      },
+      "selectedMol": "hexen_2_yn_4_dioic_acid"
+    },
+    {
+      "n": 16,
+      "title": "Οκτώ C συνολικά, πέντε στην κύρια αλυσίδα",
+      "note": "Η κύρια αλυσίδα περιλαμβάνει τη –COOH και τους δύο πολλαπλούς δεσμούς και έχει <b>πέντε C</b>. Από τα οκτώ C του μορίου, δύο ανήκουν στο αιθύλιο και ένα στο μεθύλιο.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compCarbonsCount",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": true,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": [
+          "comp0",
+          "comp1",
+          "comp2",
+          "comp3"
+        ]
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "propenoic_acid",
+        "methyl_2_propenoic_acid",
+        "penten_2_yn_4_oic_acid",
+        "hexen_2_yn_4_dioic_acid",
+        "ethyl_2_methyl_3_penten_2_yn_4_oic_acid",
+        "ethyl_3_isopropyl_2_dimethyl_4_5_hexadien_2_4_dioic_acid",
+        "ethyl_2_isopropyl_3_dimethyl_6_6_hepten_2_yn_4_dioic_acid"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": false,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": false,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": false
+      },
+      "selectedMol": "ethyl_2_methyl_3_penten_2_yn_4_oic_acid"
+    },
+    {
+      "n": 17,
+      "title": "Θέσεις πολλαπλών δεσμών και διακλαδώσεων",
+      "note": "Με αφετηρία το καρβοξυλικό C1, ο διπλός αρχίζει στο C2 και ο τριπλός στο C4. Το <b>αιθύλιο συνδέεται στο C2</b> και το μεθύλιο στο C3. Οι αριθμοί των διακλαδώσεων δεν αντικαθιστούν τους αριθμούς των πολλαπλών δεσμών.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compSecondSub1",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": true,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": [
+          "comp2",
+          "comp3"
+        ]
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "propenoic_acid",
+        "methyl_2_propenoic_acid",
+        "penten_2_yn_4_oic_acid",
+        "hexen_2_yn_4_dioic_acid",
+        "ethyl_2_methyl_3_penten_2_yn_4_oic_acid",
+        "ethyl_3_isopropyl_2_dimethyl_4_5_hexadien_2_4_dioic_acid",
+        "ethyl_2_isopropyl_3_dimethyl_6_6_hepten_2_yn_4_dioic_acid"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": false,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": false,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": false
+      },
+      "selectedMol": "ethyl_2_methyl_3_penten_2_yn_4_oic_acid"
+    },
+    {
+      "n": 18,
+      "title": "Αλφαβητική σειρά των διαφορετικών αλκυλίων",
+      "note": "Το αιθυλο- προηγείται αλφαβητικά του μεθυλο-. Το πλήρες όνομα είναι <b>2-αιθυλο-3-μεθυλο-2-πεντεν-4-ινικό οξύ</b>. Το πεντ- εξακολουθεί να μετρά μόνο την κύρια αλυσίδα.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compSecondSub2",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": []
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "propenoic_acid",
+        "methyl_2_propenoic_acid",
+        "penten_2_yn_4_oic_acid",
+        "hexen_2_yn_4_dioic_acid",
+        "ethyl_2_methyl_3_penten_2_yn_4_oic_acid",
+        "ethyl_3_isopropyl_2_dimethyl_4_5_hexadien_2_4_dioic_acid",
+        "ethyl_2_isopropyl_3_dimethyl_6_6_hepten_2_yn_4_dioic_acid"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": false,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": false,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": false
+      },
+      "selectedMol": "ethyl_2_methyl_3_penten_2_yn_4_oic_acid"
+    },
+    {
+      "n": 19,
+      "title": "Δεκατρία C συνολικά, έξι στην κύρια αλυσίδα",
+      "note": "Η κύρια αλυσίδα περιλαμβάνει τις δύο –COOH και τους δύο διπλούς δεσμούς και έχει <b>έξι C</b>. Τα υπόλοιπα επτά C ανήκουν σε αιθύλιο, ισοπροπύλιο και δύο μεθύλια.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compCarbonsCount",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": true,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": [
+          "comp0",
+          "comp1",
+          "comp2",
+          "comp3",
+          "acidPrefixNumber3",
+          "acidPrefixSub3"
+        ]
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "propenoic_acid",
+        "methyl_2_propenoic_acid",
+        "penten_2_yn_4_oic_acid",
+        "hexen_2_yn_4_dioic_acid",
+        "ethyl_2_methyl_3_penten_2_yn_4_oic_acid",
+        "ethyl_3_isopropyl_2_dimethyl_4_5_hexadien_2_4_dioic_acid",
+        "ethyl_2_isopropyl_3_dimethyl_6_6_hepten_2_yn_4_dioic_acid"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": false,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": false,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": false
+      },
+      "selectedMol": "ethyl_3_isopropyl_2_dimethyl_4_5_hexadien_2_4_dioic_acid"
+    },
+    {
+      "n": 20,
+      "title": "Δύο διπλοί δεσμοί στις θέσεις 2 και 4",
+      "note": "Οι C=C βρίσκονται μεταξύ C2–C3 και C4–C5 και δίνουν <b>-2,4-εξαδιεν-</b>. Οι πολλαπλοί δεσμοί ισοβαθμούν στις δύο κατευθύνσεις. Οι διακλαδώσεις δίνουν 2,3,4,5 αντί για 2,3,4,5 και η ισοβαθμία λύνεται με μικρότερη θέση στο αλφαβητικά πρώτο αιθύλιο, <b>3 αντί 4</b>.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compBondType",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": true,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": [
+          "comp0",
+          "comp1",
+          "comp2",
+          "comp3",
+          "acidPrefixNumber3",
+          "acidPrefixSub3"
+        ]
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "propenoic_acid",
+        "methyl_2_propenoic_acid",
+        "penten_2_yn_4_oic_acid",
+        "hexen_2_yn_4_dioic_acid",
+        "ethyl_2_methyl_3_penten_2_yn_4_oic_acid",
+        "ethyl_3_isopropyl_2_dimethyl_4_5_hexadien_2_4_dioic_acid",
+        "ethyl_2_isopropyl_3_dimethyl_6_6_hepten_2_yn_4_dioic_acid"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": false,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": false,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": false
+      },
+      "selectedMol": "ethyl_3_isopropyl_2_dimethyl_4_5_hexadien_2_4_dioic_acid"
+    },
+    {
+      "n": 21,
+      "title": "Πρόθεμα δι- και αλφαβητική σειρά",
+      "note": "Το όνομα είναι <b>3-αιθυλο-2-ισοπροπυλο-4,5-διμεθυλο-2,4-εξαδιενοδιικό οξύ</b>. Στη χρησιμοποιούμενη σύμβαση αιθυλο-, ισοπροπυλο-, μεθυλο- μπαίνουν αλφαβητικά, χωρίς να μετρά το πολλαπλασιαστικό δι- του διμεθυλο-. Το διεν- μετρά C=C και το -διικό οξύ μετρά –COOH.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compAcidSub3",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": []
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "propenoic_acid",
+        "methyl_2_propenoic_acid",
+        "penten_2_yn_4_oic_acid",
+        "hexen_2_yn_4_dioic_acid",
+        "ethyl_2_methyl_3_penten_2_yn_4_oic_acid",
+        "ethyl_3_isopropyl_2_dimethyl_4_5_hexadien_2_4_dioic_acid",
+        "ethyl_2_isopropyl_3_dimethyl_6_6_hepten_2_yn_4_dioic_acid"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": false,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": false,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": false
+      },
+      "selectedMol": "ethyl_3_isopropyl_2_dimethyl_4_5_hexadien_2_4_dioic_acid"
+    },
+    {
+      "n": 22,
+      "title": "Δεκατέσσερα C συνολικά, επτά στην κύρια αλυσίδα",
+      "note": "Η κύρια αλυσίδα έχει <b>επτά C</b> και περιλαμβάνει τις δύο –COOH, τον C=C και τον C≡C. Τα υπόλοιπα επτά C ανήκουν στις διακλαδώσεις. Το επτ- δεν προκύπτει από το συνολικό πλήθος C του μορίου.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compCarbonsCount",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": true,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": [
+          "comp0",
+          "comp1",
+          "comp2",
+          "comp3",
+          "acidPrefixNumber3",
+          "acidPrefixSub3"
+        ]
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "propenoic_acid",
+        "methyl_2_propenoic_acid",
+        "penten_2_yn_4_oic_acid",
+        "hexen_2_yn_4_dioic_acid",
+        "ethyl_2_methyl_3_penten_2_yn_4_oic_acid",
+        "ethyl_3_isopropyl_2_dimethyl_4_5_hexadien_2_4_dioic_acid",
+        "ethyl_2_isopropyl_3_dimethyl_6_6_hepten_2_yn_4_dioic_acid"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": false,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": false,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": false
+      },
+      "selectedMol": "ethyl_2_isopropyl_3_dimethyl_6_6_hepten_2_yn_4_dioic_acid"
+    },
+    {
+      "n": 23,
+      "title": "Οι πολλαπλοί δεσμοί προηγούνται των διακλαδώσεων",
+      "note": "Οι –COOH βρίσκονται στα C1 και C7. Οι πολλαπλοί δεσμοί παίρνουν <b>2,4 αντί για 3,5</b>. Έτσι ο C=C αρχίζει στο C2, ο C≡C στο C4 και τα δύο μεθύλια συνδέονται στο <b>C6</b>, δίνοντας 6,6-. Δεν αντιστρέφουμε την αρίθμηση για να μικρύνουν οι θέσεις των μεθυλίων.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compAcidNumber3",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": true,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": [
+          "acidPrefixSub3"
+        ]
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "propenoic_acid",
+        "methyl_2_propenoic_acid",
+        "penten_2_yn_4_oic_acid",
+        "hexen_2_yn_4_dioic_acid",
+        "ethyl_2_methyl_3_penten_2_yn_4_oic_acid",
+        "ethyl_3_isopropyl_2_dimethyl_4_5_hexadien_2_4_dioic_acid",
+        "ethyl_2_isopropyl_3_dimethyl_6_6_hepten_2_yn_4_dioic_acid"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": false,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": false,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": false
+      },
+      "selectedMol": "ethyl_2_isopropyl_3_dimethyl_6_6_hepten_2_yn_4_dioic_acid"
+    },
+    {
+      "n": 24,
+      "title": "Σύνθεση του μεγαλύτερου παραδείγματος",
+      "note": "Το πλήρες όνομα είναι <b>2-αιθυλο-3-ισοπροπυλο-6,6-διμεθυλο-2-επτεν-4-ινοδιικό οξύ</b>. Διάβασε χωριστά τις θέσεις των διακλαδώσεων, των πολλαπλών δεσμών και την κατάληξη για τις δύο –COOH.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "compAcidSub3",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": []
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "propenoic_acid",
+        "methyl_2_propenoic_acid",
+        "penten_2_yn_4_oic_acid",
+        "hexen_2_yn_4_dioic_acid",
+        "ethyl_2_methyl_3_penten_2_yn_4_oic_acid",
+        "ethyl_3_isopropyl_2_dimethyl_4_5_hexadien_2_4_dioic_acid",
+        "ethyl_2_isopropyl_3_dimethyl_6_6_hepten_2_yn_4_dioic_acid"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": false,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": false,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": false
+      },
+      "selectedMol": "ethyl_2_isopropyl_3_dimethyl_6_6_hepten_2_yn_4_dioic_acid"
+    },
+    {
+      "n": 25,
+      "title": "Μία συνεπής σειρά για την ονοματολογία",
+      "note": "Εντοπίζουμε τη μία ή τις δύο –COOH, επιλέγουμε την κατάλληλη κύρια αλυσίδα και ορίζουμε την αρίθμηση. Διαβάζουμε τις θέσεις των C=C και C≡C και των ανθρακικών διακλαδώσεων και συνθέτουμε το όνομα. Μία –COOH δίνει -ικό οξύ και δύο –COOH δίνουν -διικό οξύ. Το συνολικό πλήθος C δεν ταυτίζεται πάντα με το πλήθος C της κύριας αλυσίδας. Μπορείς να συγκρίνεις τις διαθέσιμες αναπαραστάσεις 2D.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "none",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": []
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "propenoic_acid",
+        "methyl_2_propenoic_acid",
+        "penten_2_yn_4_oic_acid",
+        "hexen_2_yn_4_dioic_acid",
+        "ethyl_2_methyl_3_penten_2_yn_4_oic_acid",
+        "ethyl_3_isopropyl_2_dimethyl_4_5_hexadien_2_4_dioic_acid",
+        "ethyl_2_isopropyl_3_dimethyl_6_6_hepten_2_yn_4_dioic_acid"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": false
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": true,
+          "3D": false
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": false,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": false
+      },
+      "selectedMol": "ethyl_2_isopropyl_3_dimethyl_6_6_hepten_2_yn_4_dioic_acid"
+    },
+    {
+      "n": 26,
+      "title": "Προαιρετική παρατήρηση σε 3D",
+      "note": "Η ονοματολογία έχει ολοκληρωθεί. Προαιρετικά παρατήρησε τη δομή σε 3D και εντόπισε τη γραμμική περιοχή C–C≡C–C. Το 3D βοηθά στην παρατήρηση της γεωμετρίας και δεν αλλάζει τη συνδεσιμότητα, την αρίθμηση ή το όνομα. Δεν αποδίδουμε εδώ στερεοχημικό προσδιορισμό από τη συγκεκριμένη απεικόνιση.",
+      "mode2D": "condensed",
+      "mainChainMode": "algorithmic",
+      "chainIdx": 0,
+      "etherNamingMode": "iupac",
+      "nameAnalysisMode": "none",
+      "selectedRule": null,
+      "style2D": {
+        "atomColors": true,
+        "colorMode": "atom",
+        "zigzag": false,
+        "zoom": 2
+      },
+      "styleName": {
+        "box": true,
+        "cross": false,
+        "etherNaming": "iupac",
+        "panelOpen": false,
+        "hidden": []
+      },
+      "styleHighlight": {
+        "bondAtoms": false,
+        "numberingAtoms": true,
+        "numberingBonds": true
+      },
+      "styleText": {
+        "fontSizePx": null,
+        "textWidthPx": null,
+        "columns": null
+      },
+      "audio": {
+        "narrate": false
+      },
+      "menuSubset": [
+        "propenoic_acid",
+        "methyl_2_propenoic_acid",
+        "penten_2_yn_4_oic_acid",
+        "hexen_2_yn_4_dioic_acid",
+        "ethyl_2_methyl_3_penten_2_yn_4_oic_acid",
+        "ethyl_3_isopropyl_2_dimethyl_4_5_hexadien_2_4_dioic_acid",
+        "ethyl_2_isopropyl_3_dimethyl_6_6_hepten_2_yn_4_dioic_acid"
+      ],
+      "menuGroups": [
+        "molecules"
+      ],
+      "view3D": {
+        "style": "ballnstick",
+        "spin": false,
+        "showH": true,
+        "atomSymbols": true,
+        "moveto": null
+      },
+      "show": {
+        "menu": false,
+        "viewerButtons": false,
+        "viewerSettings": false,
+        "viewers": {
+          "2D": true,
+          "3D": true
+        },
+        "viewerMaxHeight": 420,
+        "viewerBothHeight": null,
+        "controls": {
+          "2D": true,
+          "3D": true
+        },
+        "save": {
+          "2D": false,
+          "3D": false
+        },
+        "naming": true,
+        "nameSettings": false,
+        "nameEye": false,
+        "audio": false,
+        "rule": false,
+        "text": true,
+        "nameClick": false
+      },
+      "selectedMol": "ethyl_2_isopropyl_3_dimethyl_6_6_hepten_2_yn_4_dioic_acid"
+    }
+  ]
+}

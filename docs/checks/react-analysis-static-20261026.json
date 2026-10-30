@@ -1,0 +1,32 @@
+{
+  "passed": true,
+  "baseHEAD": "168e3cec01f941a84d40bbe0dc07156e7baa35d0",
+  "stableHead": "3673c390c1fb1b7cbcc79411a6e1e3720e97f7ab",
+  "protectedFiles": 1266,
+  "changedProtectedFiles": [],
+  "core51SHA256": "096d617853646de0dfd67bcbde3e32252aebcb98e7525b05e6f7e71ccb48a5fc",
+  "checks": [
+    "Vitebuild21modules",
+    "33active-state exactDOM/SVGparity",
+    "9baseSVG/sourceMOLparity",
+    "6finalCSSlayoutcases",
+    "CSS-only change retains byte-identical tested JS",
+    "20existingsearchcases",
+    "host/source --check",
+    "PythonAST",
+    "bridge JSsyntax",
+    "git diff --check",
+    "1266protectednonReactfiles unchanged"
+  ],
+  "testedJSBeforeFinalCSS": {
+    "react-preview/dist/assets/index-DFYUGVQd.js": "22b1592f6fbb6d6ba77815383f18be223729b63708fdf5e830570bd7677295cd"
+  },
+  "finalGeneratedJS": {
+    "react-preview/dist/assets/index-CfHiTO7a.js": "22b1592f6fbb6d6ba77815383f18be223729b63708fdf5e830570bd7677295cd"
+  },
+  "limits": [
+    "Firefox runtime is Developer evidence",
+    "no new full126molecule/283step suite",
+    "no Safari/Drupal/offline/screen-reader execution"
+  ]
+}

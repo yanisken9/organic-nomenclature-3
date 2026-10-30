@@ -1,0 +1,365 @@
+{
+  "completed": true,
+  "checks": [
+    "loading disables controls; ready defaults to ethanol",
+    "three molecules x three modes; displayed H counts6/14/6; same iframe document",
+    "33 component selections: React labels/euphony/explanations/pressed state equal sourceDOM; all deselect cleanly",
+    "Enter/Space, cumulative numbering0/1/2, mode/zoom keep selection, rapid component toggles, molecule change resets analysis",
+    "zoom changes actual renderer and clamps 0.5..6",
+    "rapid mode commands end consistently",
+    "molecule preserves mode/resets zoom; rapid interleaved molecule/mode commands agree without reload",
+    "wrong source/token/origin/mode/id rejected",
+    "390px resize and three modes; no horizontal overflow",
+    "library 9 cards/12 links; unmount/remount fresh session/defaults",
+    "missing document/native error UI and retry recovery (error event injected)",
+    "loading deadline and terminal failure reject late ready; retry succeeds (deadline callback fired by test)",
+    "unmount during loading and remount recover without stale error",
+    "molecule ack withheld: pending graph hidden, wrong-molecule reply rejected, real10s deadline, late ack ignored, retry defaults restored",
+    "33 active states match original explanations/selection/highlight colors/SVG geometry and numbering exactly",
+    "all nine raw MOLs and exact SVG geometry/text/styles match unchanged renderer at same viewport"
+  ],
+  "readySeconds": 2.16,
+  "iframeSize": {
+    "width": 784,
+    "height": 420
+  },
+  "sourceMOLs": {
+    "ethanol": {
+      "Condensed": "nomenclature_moc2-1c.sdf\n  ChemDraw04102417352D\n\n  3  2  0  0  0  0  0  0  0  0999 V2000\n   -0.8250    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.0000    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.8250    0.0000    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0      \n  2  3  1  0      \nM  END\n$$$$\n",
+      "Expanded": "nomenclature_moc2-3c_2D.cdx\n  ChemDraw04102417352D\n\n  8  7  0  0  0  0  0  0  0  0999 V2000\n   -0.4125    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.4125    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.2375    0.0000    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n    0.4125   -0.8250    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.4125    0.8250    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.2375    0.0000    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.4125   -0.8250    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.4125    0.8250    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0      \n  2  3  1  0      \n  2  4  1  0      \n  2  5  1  0      \n  1  6  1  0      \n  1  7  1  0      \n  1  8  1  0      \nM  END\n$$$$\n",
+      "Skeletal": "Untitled Document-2\n  ChemDraw04102419402D\n\n  3  2  0  0  0  0  0  0  0  0999 V2000\n   -0.6545    0.2461    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.0026   -0.2528    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.6545    0.2528    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0      \n  2  3  1  0      \nM  END\n$$$$\n"
+    },
+    "dimethyl_2_3_butane": {
+      "Condensed": "dimethyl_2_3_butane_2D_Condensed.mol\n  ChemDraw10152618512D\n\n  6  5  0  0  0  0  0  0  0  0999 V2000\n   -1.2740   -0.0066    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.4490    0.0026    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.4490   -0.0026    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.2740   -0.0066    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.4479   -0.8224    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.4327    0.8224    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0      \n  2  3  1  0      \n  3  4  1  0      \n  2  5  1  0      \n  3  6  1  0      \nM  END\n\n",
+      "Expanded": "dimethyl_2_3_butane_2D_Expanded.mol\n  ChemDraw10152618582D\n\n 20 19  0  0  0  0  0  0  0  0999 V2000\n   -1.6988   -0.0089    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.5987    0.0033    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.5987   -0.0037    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.6988   -0.0089    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.5972   -1.0968    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.5976    1.0964    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.5238   -0.0097    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.6846    0.8161    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.6923   -0.7790    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.5238    0.0108    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.6972   -0.8338    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.6949    0.7611    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.6065    1.9214    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.1725    1.0900    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.3554    1.0954    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.5923   -1.9214    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.3672   -1.0932    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.1727   -1.0867    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.6009    0.8283    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.5943   -0.8287    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0      \n  2  3  1  0      \n  3  4  1  0      \n  2  5  1  0      \n  3  6  1  0      \n  1  7  1  0      \n  1  8  1  0      \n  1  9  1  0      \n  4 10  1  0      \n  4 11  1  0      \n  4 12  1  0      \n  6 13  1  0      \n  6 14  1  0      \n  6 15  1  0      \n  5 16  1  0      \n  5 17  1  0      \n  5 18  1  0      \n  2 19  1  0      \n  3 20  1  0      \nM  END\n\n",
+      "Skeletal": "KingDraw KingDraw.mol\nKingDraw2D\n\n  6  5  0  0  0  0  0  0  0  0999 V2000\n    0.8533   -3.1443    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.5288   -3.5343    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.2043   -3.1443    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.8798   -3.5343    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.5291   -4.3143    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.2040   -2.3643    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0\n  2  3  1  0\n  3  4  1  0\n  2  5  1  0\n  3  6  1  0\nM  END\n\n"
+    },
+    "propanone": {
+      "Condensed": "nomenclature_moc2-1c.sdf\n  ChemDraw04102417352D\n\n  4  3  0  0  0  0  0  0  0  0999 V2000\n   -0.8250    0.4125    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.0000    0.4125    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.8250    0.4125    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.0000   -0.4125    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0      \n  2  3  1  0      \n  2  4  2  0      \nM  END\n$$$$\n",
+      "Expanded": "nomenclature_moc2-3c_2D.cdx\n  ChemDraw04102417352D\n\n 10  9  0  0  0  0  0  0  0  0999 V2000\n   -0.8250    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.0000    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.8250    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.8250   -0.8250    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.6500    0.0000    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.8250    0.8250    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.8250    0.8250    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.6500    0.0000    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.8250   -0.8250    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.0000   -0.8250    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0      \n  2  3  1  0      \n  1  4  1  0      \n  1  5  1  0      \n  1  6  1  0      \n  3  7  1  0      \n  3  8  1  0      \n  3  9  1  0      \n  2 10  2  0      \nM  END\n$$$$\n",
+      "Skeletal": "Untitled Document-2\n  ChemDraw04102419402D\n\n  4  3  0  0  0  0  0  0  0  0999 V2000\n   -0.7145    0.6188    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.0000    0.2062    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.7145    0.6188    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.0000   -0.6188    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0      \n  2  3  1  0      \n  2  4  2  0      \nM  END\n$$$$\n"
+    }
+  },
+  "expandedLabels": {
+    "ethanol": [
+      "C",
+      "C",
+      "OH",
+      "H",
+      "H",
+      "H",
+      "H",
+      "H"
+    ],
+    "dimethyl_2_3_butane": [
+      "C",
+      "C",
+      "C",
+      "C",
+      "C",
+      "C",
+      "H",
+      "H",
+      "H",
+      "H",
+      "H",
+      "H",
+      "H",
+      "H",
+      "H",
+      "H",
+      "H",
+      "H",
+      "H",
+      "H"
+    ],
+    "propanone": [
+      "C",
+      "C",
+      "C",
+      "H",
+      "H",
+      "H",
+      "H",
+      "H",
+      "H",
+      "O"
+    ]
+  },
+  "analysisExplanations": {
+    "ethanol": {
+      "condensed": {
+        "comp5": "Η κύρια αλυσίδα έχει 2 άτομα άνθρακα C",
+        "comp6": "Έχει μόνο απλούς δεσμούς μεταξύ των ατόμων άνθρακα",
+        "comp9": "Ανήκει στη Χημική Τάξη Αλκοόλες."
+      },
+      "expanded": {
+        "comp5": "Η κύρια αλυσίδα έχει 2 άτομα άνθρακα C",
+        "comp6": "Έχει μόνο απλούς δεσμούς μεταξύ των ατόμων άνθρακα",
+        "comp9": "Ανήκει στη Χημική Τάξη Αλκοόλες."
+      },
+      "skeletal": {
+        "comp5": "Η κύρια αλυσίδα έχει 2 άτομα άνθρακα C",
+        "comp6": "Έχει μόνο απλούς δεσμούς μεταξύ των ατόμων άνθρακα",
+        "comp9": "Ανήκει στη Χημική Τάξη Αλκοόλες."
+      }
+    },
+    "dimethyl_2_3_butane": {
+      "condensed": {
+        "comp0": "Δηλώνει τις θέσεις 2, 3 των ανθρακικών διακλαδώσεων (μεθύλιο).",
+        "comp1": "Δηλώνει το όνομα και το πλήθος (2) των ανθρακικών διακλαδώσεων (μεθύλιο).",
+        "comp5": "Η κύρια αλυσίδα έχει 4 άτομα άνθρακα C",
+        "comp6": "Έχει μόνο απλούς δεσμούς μεταξύ των ατόμων άνθρακα",
+        "comp9": "Ανήκει στη Χημική Τάξη Υδρογονάνθρακες και στην Ομόλογη Σειρά Αλκάνια."
+      },
+      "expanded": {
+        "comp0": "Δηλώνει τις θέσεις 2, 3 των ανθρακικών διακλαδώσεων (μεθύλιο).",
+        "comp1": "Δηλώνει το όνομα και το πλήθος (2) των ανθρακικών διακλαδώσεων (μεθύλιο).",
+        "comp5": "Η κύρια αλυσίδα έχει 4 άτομα άνθρακα C",
+        "comp6": "Έχει μόνο απλούς δεσμούς μεταξύ των ατόμων άνθρακα",
+        "comp9": "Ανήκει στη Χημική Τάξη Υδρογονάνθρακες και στην Ομόλογη Σειρά Αλκάνια."
+      },
+      "skeletal": {
+        "comp0": "Δηλώνει τις θέσεις 2, 3 των ανθρακικών διακλαδώσεων (μεθύλιο).",
+        "comp1": "Δηλώνει το όνομα και το πλήθος (2) των ανθρακικών διακλαδώσεων (μεθύλιο).",
+        "comp5": "Η κύρια αλυσίδα έχει 4 άτομα άνθρακα C",
+        "comp6": "Έχει μόνο απλούς δεσμούς μεταξύ των ατόμων άνθρακα",
+        "comp9": "Ανήκει στη Χημική Τάξη Υδρογονάνθρακες και στην Ομόλογη Σειρά Αλκάνια."
+      }
+    },
+    "propanone": {
+      "condensed": {
+        "comp5": "Η κύρια αλυσίδα έχει 3 άτομα άνθρακα C",
+        "comp6": "Έχει μόνο απλούς δεσμούς μεταξύ των ατόμων άνθρακα",
+        "comp9": "Ανήκει στη Χημική Τάξη Καρβονυλικές Ενώσεις και στην Ομόλογη Σειρά Κετόνες."
+      },
+      "expanded": {
+        "comp5": "Η κύρια αλυσίδα έχει 3 άτομα άνθρακα C",
+        "comp6": "Έχει μόνο απλούς δεσμούς μεταξύ των ατόμων άνθρακα",
+        "comp9": "Ανήκει στη Χημική Τάξη Καρβονυλικές Ενώσεις και στην Ομόλογη Σειρά Κετόνες."
+      },
+      "skeletal": {
+        "comp5": "Η κύρια αλυσίδα έχει 3 άτομα άνθρακα C",
+        "comp6": "Έχει μόνο απλούς δεσμούς μεταξύ των ατόμων άνθρακα",
+        "comp9": "Ανήκει στη Χημική Τάξη Καρβονυλικές Ενώσεις και στην Ομόλογη Σειρά Κετόνες."
+      }
+    }
+  },
+  "numberingSequence": [
+    {
+      "count": 0,
+      "seconds": 0.01
+    },
+    {
+      "count": 1,
+      "seconds": 0.44
+    },
+    {
+      "count": 2,
+      "seconds": 0.85
+    }
+  ],
+  "exactAnalysisParity": {
+    "ethanol": {
+      "condensed": {
+        "comp5": true,
+        "comp6": true,
+        "comp9": true
+      },
+      "expanded": {
+        "comp5": true,
+        "comp6": true,
+        "comp9": true
+      },
+      "skeletal": {
+        "comp5": true,
+        "comp6": true,
+        "comp9": true
+      }
+    },
+    "dimethyl_2_3_butane": {
+      "condensed": {
+        "comp0": true,
+        "comp1": true,
+        "comp5": true,
+        "comp6": true,
+        "comp9": true
+      },
+      "expanded": {
+        "comp0": true,
+        "comp1": true,
+        "comp5": true,
+        "comp6": true,
+        "comp9": true
+      },
+      "skeletal": {
+        "comp0": true,
+        "comp1": true,
+        "comp5": true,
+        "comp6": true,
+        "comp9": true
+      }
+    },
+    "propanone": {
+      "condensed": {
+        "comp5": true,
+        "comp6": true,
+        "comp9": true
+      },
+      "expanded": {
+        "comp5": true,
+        "comp6": true,
+        "comp9": true
+      },
+      "skeletal": {
+        "comp5": true,
+        "comp6": true,
+        "comp9": true
+      }
+    }
+  },
+  "exactSVGParity": {
+    "ethanol": {
+      "condensed": true,
+      "expanded": true,
+      "skeletal": true
+    },
+    "dimethyl_2_3_butane": {
+      "condensed": true,
+      "expanded": true,
+      "skeletal": true
+    },
+    "propanone": {
+      "condensed": true,
+      "expanded": true,
+      "skeletal": true
+    }
+  },
+  "resources": [
+    {
+      "name": "http://127.0.0.1:8013/css/jsme-nick-51.css?v=v51-sync-20261026",
+      "duration": 0
+    },
+    {
+      "name": "http://127.0.0.1:8013/css/mulermoc-nom-scenario-51.css?v=v51-sync-20261026",
+      "duration": 0
+    },
+    {
+      "name": "http://127.0.0.1:8013/css/namelecule-51.css?v=v51-sync-20261026",
+      "duration": 0
+    },
+    {
+      "name": "http://127.0.0.1:8013/jsme/jsme.nocache.js",
+      "duration": 12
+    },
+    {
+      "name": "http://127.0.0.1:8013/js/vendor/jquery/jquery-4.0.0.min.js",
+      "duration": 13
+    },
+    {
+      "name": "http://127.0.0.1:8013/js/vendor/dompurify/dompurify-3.4.17.min.js",
+      "duration": 13
+    },
+    {
+      "name": "http://127.0.0.1:8013/js/jsme-nick-nomeclature-moc2-data_51.js?v=canonical-ketones-20261026",
+      "duration": 15
+    },
+    {
+      "name": "http://127.0.0.1:8013/js/ui-icons.js?v=v51-sync-20261026",
+      "duration": 15
+    },
+    {
+      "name": "http://127.0.0.1:8013/js/mulermoc-nom-core-51.js?v=fifth-ketone-20261026",
+      "duration": 16
+    },
+    {
+      "name": "http://127.0.0.1:8013/js/mulermoc-nom-molview-51.js?v=fifth-ketone-20261026",
+      "duration": 16
+    },
+    {
+      "name": "http://127.0.0.1:8013/js/mulermoc-nom-teaching-51.js?v=alkoxy-rule-20261026",
+      "duration": 16
+    },
+    {
+      "name": "http://127.0.0.1:8013/js/mulermoc-nom-note-51.js?v=v51-sync-20261026",
+      "duration": 16
+    },
+    {
+      "name": "http://127.0.0.1:8013/js/mulermoc-nom-scenario-51.js?v=upstream-image-picker-20261026",
+      "duration": 16
+    },
+    {
+      "name": "http://127.0.0.1:8013/jsme/96E40B969193BD74B8A621486920E79C.cache.js",
+      "duration": 36
+    },
+    {
+      "name": "http://127.0.0.1:8013/jsme/jsa.css",
+      "duration": 0
+    },
+    {
+      "name": "http://127.0.0.1:8013/jsme/gwt/chrome/chrome.css",
+      "duration": 0
+    },
+    {
+      "name": "http://127.0.0.1:8013/jsme/gwt/chrome/mosaic.css",
+      "duration": 0
+    },
+    {
+      "name": "http://127.0.0.1:8013/jsme/FEB169D74546A3B279D22AE09AFB86BD.cache.js",
+      "duration": 13
+    },
+    {
+      "name": "https://chemapps.stolaf.edu/jmol/jsmol/JSmol.min.js",
+      "duration": 18
+    },
+    {
+      "name": "http://127.0.0.1:8013/mols/nomeclature-moc2/methane_3D.sdf",
+      "duration": 2
+    },
+    {
+      "name": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/package.js",
+      "duration": 2
+    },
+    {
+      "name": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/package.js",
+      "duration": 4
+    },
+    {
+      "name": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corejmol.z.js",
+      "duration": 2
+    },
+    {
+      "name": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/J/translation/PO.js",
+      "duration": 4
+    },
+    {
+      "name": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corescript.z.js",
+      "duration": 2
+    },
+    {
+      "name": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/J/api/JmolSelectionListener.js",
+      "duration": 2
+    },
+    {
+      "name": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/J/translation/JmolApplet/el.po",
+      "duration": 2
+    },
+    {
+      "name": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/coretext.z.js",
+      "duration": 2
+    },
+    {
+      "name": "http://127.0.0.1:8013/react-preview/dist/mols/nomeclature-moc2/methane_3D.sdf",
+      "duration": 2
+    },
+    {
+      "name": "http://127.0.0.1:8013/mols/nomeclature-moc2/ethanol_3D.sdf",
+      "duration": 3
+    },
+    {
+      "name": "http://127.0.0.1:8013/scenarios/%CE%91%CE%BB%CE%BA%CE%AC%CE%BD%CE%B9%CE%B1-%CE%91%CE%B9%CE%B8%CE%AC%CE%BD%CE%B9%CE%BF-%CF%84%CE%B5%CF%83%CF%84.scenario.json",
+      "duration": 14
+    }
+  ],
+  "javascriptErrors": []
+}

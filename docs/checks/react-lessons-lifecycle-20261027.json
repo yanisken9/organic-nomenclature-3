@@ -1,0 +1,114 @@
+{
+  "completed": true,
+  "checks": [
+    "12cross-course sessions remount independently; stale/wrong-course/wrong-source messages rejected; all12upper bounds and malformed/prototype/encoded routes rejected; optional tables open manually and close on next",
+    "Ether common→IUPAC with manual authored alkoxy table; next closes table; cross-course Back/Forward/reload retain course/step",
+    "Authored Auto retained; height-only1000→700→1100resize without feedback; invalid viewport commands rejected; next step resets internal scroll",
+    "Actual15swrong-model gate in otherketones; retry retains course28; pending3D→differentlesson isolates late callbacks; Exit returns React library"
+  ],
+  "crossLesson": [
+    "alkanes",
+    "alkenes",
+    "alkynes",
+    "alkadienes",
+    "enynes",
+    "monoalcohols",
+    "other-alcohols",
+    "monoethers",
+    "monoaldehydes",
+    "other-aldehydes",
+    "monoketones",
+    "other-ketones"
+  ],
+  "manualRules": [
+    "alkanes",
+    "alkenes",
+    "alkynes",
+    "alkadienes",
+    "enynes",
+    "monoalcohols",
+    "other-alcohols",
+    "monoaldehydes",
+    "other-aldehydes",
+    "monoketones",
+    "other-ketones"
+  ],
+  "alkoxyTable": "Η αλκοξυομάδα έχει τη μορφή –O–R, όπου R είναι αλκύλιο, και συνδέεται με την κύρια αλυσίδα μέσω του Ο. Το πρόθεμα ονομάζει ολόκληρη την αλκοξυομάδα, μαζί με το Ο. Η παύλα αριστερά δείχνει δεσμό σύνδεσης και όχι αρνητικό φορτίο. Τα προποξυ- και βουτοξυ- του πίνακα αφορούν ευθύγραμμα αλκύλια, ενώ το ισοπροποξυ- διατηρεί τη σχολική ονομασία της εφαρμογής.Δομή / σύνδεσηΑλκοξυομάδα / πρόθεμα–O–CH3Μεθοξυομάδαμεθοξυ-–O–CH2–CH3Αιθοξυομάδααιθοξυ-–O–CH2–CH2–CH3Προποξυομάδαπροποξυ-–O–CH(CH3)2Ισοπροποξυομάδαισοπροποξυ-–O–CH2–CH2–CH2–CH3Βουτοξυομάδαβουτοξυ-",
+  "autoViewportHeights": [
+    1000,
+    700,
+    1100
+  ],
+  "wrongModelTimeoutSeconds": 15.23,
+  "javascriptErrors": [
+    {
+      "type": "javascript",
+      "level": "error",
+      "source": {
+        "realm": "27187f2f-c179-46a0-a7e9-7a861382d0df",
+        "context": "36507222056",
+        "userContext": "default"
+      },
+      "text": "TypeError: can't access property \"setDisplay\", this.viewer is null",
+      "timestamp": 1793111967271,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 320,
+            "functionName": "",
+            "lineNumber": 1835,
+            "url": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corejmol.z.js"
+          },
+          {
+            "columnNumber": 391,
+            "functionName": "a.repaint",
+            "lineNumber": 109,
+            "url": "https://chemapps.stolaf.edu/jmol/jsmol/JSmol.min.js"
+          },
+          {
+            "columnNumber": 144,
+            "functionName": "a._jsSetPrototype/c._resize/a[b]<",
+            "lineNumber": 109,
+            "url": "https://chemapps.stolaf.edu/jmol/jsmol/JSmol.min.js"
+          }
+        ]
+      }
+    }
+  ],
+  "knownJSmolTeardownErrors": [
+    {
+      "type": "javascript",
+      "level": "error",
+      "source": {
+        "realm": "27187f2f-c179-46a0-a7e9-7a861382d0df",
+        "context": "36507222056",
+        "userContext": "default"
+      },
+      "text": "TypeError: can't access property \"setDisplay\", this.viewer is null",
+      "timestamp": 1793111967271,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 320,
+            "functionName": "",
+            "lineNumber": 1835,
+            "url": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corejmol.z.js"
+          },
+          {
+            "columnNumber": 391,
+            "functionName": "a.repaint",
+            "lineNumber": 109,
+            "url": "https://chemapps.stolaf.edu/jmol/jsmol/JSmol.min.js"
+          },
+          {
+            "columnNumber": 144,
+            "functionName": "a._jsSetPrototype/c._resize/a[b]<",
+            "lineNumber": 109,
+            "url": "https://chemapps.stolaf.edu/jmol/jsmol/JSmol.min.js"
+          }
+        ]
+      }
+    }
+  ],
+  "unexpectedJavascriptErrors": []
+}

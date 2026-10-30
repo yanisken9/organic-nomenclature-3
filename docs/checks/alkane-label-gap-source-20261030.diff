@@ -1,0 +1,81 @@
+--- a/js/mulermoc-nom-molview-52.js
++++ b/js/mulermoc-nom-molview-52.js
+@@ -3208,6 +3208,55 @@
+   }
+ }
+ 
++function fPadExpandedAlkaneBranchLabels() {
++  // Keep native atom anchors/bond geometry. Only the existing white masks at
++  // vertical C-C endpoints need a small clearance around the rendered C.
++  if (mode2D !== "expanded" ||
++      nameExamples[selectedMol]?.classification?.seriesKey !== "alkanes") return;
++  const texts = fGetRenderedAtomTextMap(false, true);
++  const rects = fGetRenderedAtomRectMap(false, true);
++  const endpoints = new Set();
++  for (const [a, b, order] of bondList) {
++    if (order !== 1 || allAtomsTypeList[a - 1] !== "C" ||
++        allAtomsTypeList[b - 1] !== "C") continue;
++    const first = texts[a - 1], second = texts[b - 1];
++    if (!first || !second) continue;
++    const dx = Number(first.attr("x")) - Number(second.attr("x"));
++    const dy = Number(first.attr("y")) - Number(second.attr("y"));
++    if (Math.abs(dx) < 0.01 && Math.abs(dy) > 0.01) {
++      endpoints.add(a - 1);
++      endpoints.add(b - 1);
++    }
++  }
++  for (const atomIdx of endpoints) {
++    const label = texts[atomIdx], backplate = rects[atomIdx];
++    if (!label || !backplate || label.node.textContent.trim() !== "C") continue;
++    // Convert actual font bounds back into JSME's local drawing coordinates,
++    // as for expanded carboxyl labels. Recomputed on every rebuild/fit.
++    const screen = label.node.getBoundingClientRect();
++    const matrix = label.node.getScreenCTM();
++    if (!matrix) continue;
++    const inverse = matrix.inverse();
++    const corners = [[screen.left, screen.top], [screen.right, screen.top],
++      [screen.left, screen.bottom], [screen.right, screen.bottom]].map(xy => {
++      const point = label.node.ownerSVGElement.createSVGPoint();
++      point.x = xy[0]; point.y = xy[1];
++      return point.matrixTransform(inverse);
++    });
++    const left = Math.min(...corners.map(p => p.x));
++    const top = Math.min(...corners.map(p => p.y));
++    const right = Math.max(...corners.map(p => p.x));
++    const bottom = Math.max(...corners.map(p => p.y));
++    const fontSize = parseFloat(label.attr("font-size"));
++    if (!Number.isFinite(fontSize) || fontSize <= 0 ||
++        ![left, top, right, bottom].every(Number.isFinite) ||
++        right <= left || bottom <= top) continue;
++    const padding = fontSize * 0.06;
++    // Preserve horizontal masking; only the vertical clearance is adjusted.
++    backplate.attr({y: top - padding, height: bottom - top + 2 * padding});
++  }
++}
++
+ // ── fMolHasSpCarbon ────────────────────────────────────────────────────────
+ // True when the parsed 2D structure contains at least one sp-hybridised
+ // carbon: a carbon in a triple bond (C≡C or C≡N) or in cumulated double bonds
+@@ -3443,7 +3492,10 @@
+     svg.style.width = "100%";
+     svg.style.height = "100%";
+     // Font bounds depend on the final viewBox (including browser hinting).
+-    if (mode2D === "expanded") fPadExpandedCarboxylLabels();
++    if (mode2D === "expanded") {
++      fPadExpandedCarboxylLabels();
++      fPadExpandedAlkaneBranchLabels();
++    }
+   } catch (eFit) {
+     /* Hidden/uninitialized drawings are fitted on the next visible render. */
+   }
+--- a/mulermoc-nom-52.html
++++ b/mulermoc-nom-52.html
+@@ -331,7 +331,7 @@
+   <script src="js/jsme-nick-nomeclature-moc2-data_52.js?v=esters-orthogonal-20261029"></script>
+   <script src="js/ui-icons.js?v=v52-sync-20261027-r2"></script>
+   <script src="js/mulermoc-nom-core-52.js?v=esters-20261029"></script>
+-  <script src="js/mulermoc-nom-molview-52.js?v=ester-display-20261029"></script>
++  <script src="js/mulermoc-nom-molview-52.js?v=alkane-label-gap-20261030"></script>
+   <script src="js/mulermoc-nom-teaching-52.js?v=acid-prefix-boxes-20261028"></script>
+   <script src="js/mulermoc-nom-note-52.js?v=v52-sync-20261027-r2"></script>
+   <script src="js/mulermoc-nom-scenario-52.js?v=other-acids-theory-20261028"></script>
