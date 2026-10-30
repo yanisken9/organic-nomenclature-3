@@ -1,15 +1,19 @@
-# Contribution — 2026-10-30 — Full save and professor report in progress
+# Contribution — 2026-10-30 — Published Main, professor report and full backup
 
-Με εντολή χρήστη ετοιμάστηκε νέα αναφορά30/10 και κείμενο copy-paste με σύνδεσμο
-υποδοχής. Αφορά την ομοιογένεια δύο νέων αλκανίων, κοινή Expanded προβολή8,
-ελέγχους/rollback/τοπική εκκίνηση· core σήμερα αμετάβλητος, χθεσινός χωριστά.
-Isolated publication από3f046ad,12ελεγμέναruntimepaths,772matches/35Reactίδια,
-141stagedpaths, prefixFirefox12checks/noJSerrors. Independent publication review
-σε εξέλιξη. Πλήρες ξεχωριστό checkpoint κρατά preexisting React/agent WIP και
-notes, δεν τα δηλώνει νέα ελεγμένη δημόσια υλοποίηση. ZIP/bundle/externalcopies
-καιDesktopJSON/report/links ετοιμάζονται. Δεν έγινε ακόμη push/δημοσίευση.
-SourceHEAD/branch/staging/main προστατεύονται· καμία επιπλέον αλλαγή runtime/core.
-Βλ.docs/SAVE-PUBLISH-20261030.md και publication-20261030 evidence.
+Με ρητή εντολή χρήστη δημοσιεύθηκε η ελεγμένη κύριαd670f009 και τελικόreport
+39ccedff, με copy-paste μήνυμα/links.12runtimepaths αλλάζουν από3f046ad,
+772approvedmatches/35Reactruntimeίδια. Fresh ανεξάρτητο review141paths και
+στοχευμένα2reportpaths χωρίς ευρήματα. PrefixFirefox12PASS/0JSerrors, public12PASS
+με48diagnostics·3readiness-gated3DmodelsPASS/0null-viewer/4cookie-tracker.
+Η αβεβαιότητα rapid-switch δηλώνεται στο report, δεν αλλάξαμε JSmol/core.
+19HTTP/hashmatches+2τελικάreportHTTP/hashmatches. Βλ.PUBLICATION-REVIEW-20261030.md.
+Προϋπάρχον React WIP/notes παραμένει ανεξάρτητο από ελεγμένο publicruntime.
+Πλήρεςcheckpoint αρχικά3b6848c27b2dc2d60b0a13c191f1490b32dcdca3,1960files,
+ελεγμένοZIP/bundle καιδύοexternalcopies. Τελικό metadatacheckpoint/remote refs/
+SHA και επαλήθευση στο external final-save-state.json (final:true/verified:true),
+στους φακέλους που καταγράφει SAVE-PUBLISH-20261030.md.14scenarioJSON,reportlinks,
+Desktopapp και rollback snapshots/tags διατηρούνται. Sourcebranch/index/main ίδια.
+Καμία αλλαγή core στη συνεδρία. Δεν αποστάλθηκε μήνυμα στον καθηγητή.
 
 # Contribution record — 2026-10-30 — Read-only alkane recovery audit
 

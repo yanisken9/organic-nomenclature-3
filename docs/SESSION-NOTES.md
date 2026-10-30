@@ -1,20 +1,26 @@
-# Current resume point — 2026-10-30 — Full save/report/publication in progress
+# Current resume point — 2026-10-30 — Main and professor report published; final save receipt
 
-Ο χρήστης ενέκρινε πλήρη αποθήκευση παντού και report/σύνδεσμο καθηγητή.
-Προετοιμάστηκε isolated release /tmp/namelecule-save-20261030/release από
-origin/thesis-work3f046ad, διατηρεί core-only report29/10 και35Reactruntimehashes.
-12runtimepaths αλλάζουν (data/viewer/HTML52+9MOL),772matches,141stagedpaths.
-Report docs/professor-20261030/update.html με welcome/button, links/message/facts/
-rollback. README ενημερώθηκε. PrefixFirefox12checks PASS/noJSerrors. Fresh
-Reviewer /root/review_publication_20261030 σε εξέλιξη, stagedmanifestSHA
- a37edbd673cfb0f4af4330810bfc6c3ecd15c1d7d98be021e692c7e0a0816c3c.
-Πλήρες checkpoint checkpoint/namelecule-20261030-090336 ετοιμάζεται, ZIP/bundle/δύοexternalcopies
-και14scenarioJSON+DesktopNamelecule.appbackup. Δεν έγινε push/publication ακόμη.
-Η προηγούμενη συγκεκριμένη έγκριση πλήρους GitHub checkpoint με WIP/notes
-διατηρείται από29/10· δεν απαιτείται επανάληψη. SourceHEAD168e3cec/branch/index
-καιmain9c5259e διατηρούνται. Core52 ίδιο d2138418..., καμία αλλαγή σήμερα.
-Ακριβή τελικά hashes/commits θα μπουν στο external final-save-state.json.
-Επόμενο: checkpoint, cleanreview→publish→publicchecks→finalbackupverification.
+Εντολή χρήστη: πλήρης αποθήκευση παντού και report/copy-paste σύνδεσμος.
+Κύρια runtime d670f009, τελικό report39ccedff στο origin/thesis-work· liveHTTP
+19paths και2τελικάreportpaths PASS. Welcome/report links και έτοιμο μήνυμα:
+docs/professor-20261030/.35Reactruntimepaths διατηρήθηκαν, χωρίς rebuild/sync.
+Independent Reviewer /root/review_publication_20261030: frozen141paths και
+στοχευμένα2reportpaths χωρίς ευρήματα. Developerprefix12/0JSerrors· public12PASS
+αλλά48JSmoldiagnostics, readinessfollowup3modelsPASS/0null-viewer/4cookie-tracker.
+Rapid-switch αιτία ανεξακρίβωτη, καταγράφηκε δημόσια· καμία διόρθωση προεξοφλείται.
+Βλ.PUBLICATION-REVIEW-20261030.md και SAVE-PUBLISH-20261030.md.
+Αρχικόfullcheckpoint3b6848c27b2dc2d60b0a13c191f1490b32dcdca3/1960files,
+ZIP/bundle/δύοexternalcopies ελέγχθηκαν. Τελικόmetadata checkpoint/push και
+refresh αντιγράφων καταγράφονται με ακριβή SHA/status στο final-save-state.json:
+../Αποθηκεύσεις/2026-10-30-090336/ και Desktop/αρχεία  json/Namelecule_30-10-2026/.
+Το receipt final:true/verified:true είναι το τελικό τεκμήριο ολοκλήρωσης.
+14scenarioJSON/report/links/Namelecule.app διατηρούνται στα αντίγραφα.
+Rollback before-alkanes tag→3f046ad και παλιά snapshots διατηρούνται.
+Sourcebranch react-library-pilot HEAD168e3cec/index25c212... καιmain9c5259e ίδια.
+Upstream checked a9284c5f ίδιο, lastactuallysynced93b759f. Core52 d2138418...:
+καμία αλλαγή core στη σημερινή συνεδρία. Δεν στάλθηκε μήνυμα καθηγητή.
+Επόμενο μετά το verified receipt: ο χρήστης στέλνει report/welcome· νέο scope
+μόνο κατόπιν αιτήματός του. Δεν επαναλαμβάνουμε ελέγχους που έχουν περάσει.
 
 # Current resume point — 2026-10-30 — Alkane rollback capability verified; save question only
 

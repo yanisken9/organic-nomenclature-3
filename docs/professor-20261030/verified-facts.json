@@ -16,5 +16,23 @@
     "numberingHighlights": 10
   },
   "reactBuildRebuilt": false,
-  "rollbackAvailable": true
+  "rollbackAvailable": true,
+  "publicSmoke": {
+    "functionalChecks": 12,
+    "passed": true,
+    "rawJavaScriptDiagnostics": 48,
+    "nativeJSmolNullViewerMessages": 36,
+    "strictConsoleClean": false
+  },
+  "public3DReadinessFollowUp": {
+    "passed": true,
+    "models": {
+      "methane": 5,
+      "methyl_2_pentane": 20,
+      "ethyl_3_dimethyl_2_5_hexane": 32
+    },
+    "nativeJSmolNullViewerMessages": 0,
+    "cookieTrackerDiagnostics": 4,
+    "causalityOfFirstCapture": "not established"
+  }
 }
