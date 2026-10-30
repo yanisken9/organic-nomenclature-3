@@ -1,3 +1,10 @@
+**Namelecule — 30/10/2026:** Ενιαία παρουσίαση των οκτώ ανεπτυγμένων αλκανίων,
+με C–H0,3094 και C–C0,6188 στα MOL, κοινή πολιτική χαρακτήρων/κενών και
+ελεγμένη αρίθμηση. Διατηρούνται141μόρια,14μαθήματα/337βήματα και προηγούμενα
+σημεία επαναφοράς. Καμία σημερινή αλλαγή core ή React build.
+[Αναφορά καθηγητή](https://yanisken9.github.io/organic-nomenclature-3/docs/professor-20261030/update.html),
+[σελίδα υποδοχής](https://yanisken9.github.io/organic-nomenclature-3/design/welcome-proposal.html?v=release-20261030).
+
 **Namelecule v52 — 29/10/2026:**141molecules, including nine esters;
 14active lessons/337steps. [Main welcome](https://yanisken9.github.io/organic-nomenclature-3/design/welcome-proposal.html?v=release-20261029),
 [professor report](https://yanisken9.github.io/organic-nomenclature-3/docs/professor-20261029/main-esters-update.html).

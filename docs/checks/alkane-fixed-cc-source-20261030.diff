@@ -1,0 +1,251 @@
+--- before/js/jsme-nick-nomeclature-moc2-data_52.js
++++ after/js/jsme-nick-nomeclature-moc2-data_52.js
+@@ -5353,20 +5353,20 @@
+   "    1.2375    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n"+
+   "   -0.4125   -0.8250    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n"+
+   "    0.4125    0.8250    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n"+
+-  "   -1.4695    0.0000    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n"+
+-  "   -1.2375    0.2321    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n"+
+-  "   -1.2375   -0.2321    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n"+
+-  "    1.4695    0.0000    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n"+
+-  "    1.2375   -0.2321    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n"+
+-  "    1.2375    0.2321    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n"+
+-  "    0.4125    1.0261    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n"+
+-  "    0.2219    0.8250    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n"+
+-  "    0.6031    0.8250    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n"+
+-  "   -0.4125   -1.0261    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n"+
+-  "   -0.6031   -0.8250    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n"+
+-  "   -0.2219   -0.8250    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n"+
+-  "   -0.4125    0.2321    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n"+
+-  "    0.4125   -0.2321    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n"+
++  "   -1.5469    0.0000    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n"+
++  "   -1.2375    0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n"+
++  "   -1.2375   -0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n"+
++  "    1.5469    0.0000    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n"+
++  "    1.2375   -0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n"+
++  "    1.2375    0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n"+
++  "    0.4125    1.1344    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n"+
++  "    0.1031    0.8250    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n"+
++  "    0.7219    0.8250    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n"+
++  "   -0.4125   -1.1344    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n"+
++  "   -0.7219   -0.8250    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n"+
++  "   -0.1031   -0.8250    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n"+
++  "   -0.4125    0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n"+
++  "    0.4125   -0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n"+
+   "  1  2  1  0      \n"+
+   "  2  3  1  0      \n"+
+   "  3  4  1  0      \n"+
+--- before/js/mulermoc-nom-molview-52.js
++++ after/js/mulermoc-nom-molview-52.js
+@@ -3229,8 +3229,18 @@
+     const x = Number(label.attr("x")), y = Number(label.attr("y"));
+     if (![scale, fontSize, x, y].every(Number.isFinite) ||
+         scale <= 0 || fontSize <= 0) continue;
+-    // Measure at the final on-screen font size (including browser hinting),
+-    // then return the ink extents to JSME's local coordinates and baseline.
++    const prototype = label.node.ownerSVGElement.dataset.alkaneFixedCCScale;
++    if (prototype) {
++      // Equal, centered square masks keep the visible C-H and C-C strokes
++      // equal in both directions; the MOL still supplies every atom anchor.
++      const cx = Number(label.node.dataset.fixedCCAtomX);
++      const cy = Number(label.node.dataset.fixedCCAtomY);
++      if (![cx, cy].every(Number.isFinite)) continue;
++      const half = fontSize * 0.52;
++      backplate.attr({x: cx - half, y: cy - half, width: 2 * half,
++        height: 2 * half, rx: 0, ry: 0});
++      continue;
++    }
+     context.font = `${style.fontStyle} ${style.fontWeight} ${fontSize * scale}px ${style.fontFamily}`;
+     const ink = context.measureText(symbol);
+     const left = x - ink.actualBoundingBoxLeft / scale;
+@@ -3371,6 +3381,59 @@
+ // A shared library frame prevents molecule-by-molecule label magnification.
+ // Cache geometry only; the pixel size is recomputed for each visible viewport.
+ let uniform2DLibraryFrame = null;
++function fPrepareFixedCCAlkanePrototype() {
++  if (mode2D !== "expanded" || selectedMol !== "dimethyl_2_3_butane") return;
++  const svg = molSvg?.node;
++  if (!svg || svg.dataset.alkaneFixedCCScale) return;
++  const lines = [...svg.querySelectorAll("line")];
++  if (lines.length !== bondList.length) return;
++  const anchors = new Map(), lengths = [];
++  for (let i = 0; i < bondList.length; i++) {
++    const [a, b, order] = bondList[i], line = lines[i];
++    const p = {x: Number(line.getAttribute("x1")), y: Number(line.getAttribute("y1"))};
++    const q = {x: Number(line.getAttribute("x2")), y: Number(line.getAttribute("y2"))};
++    if (order !== 1 || ![p.x, p.y, q.x, q.y].every(Number.isFinite)) return;
++    for (const [atom, point] of [[a - 1, p], [b - 1, q]]) {
++      const previous = anchors.get(atom);
++      if (previous && Math.hypot(previous.x - point.x, previous.y - point.y) > 0.01) return;
++      anchors.set(atom, point);
++    }
++    if (allAtomsTypeList[a - 1] === "C" && allAtomsTypeList[b - 1] === "C") {
++      lengths.push(Math.hypot(q.x - p.x, q.y - p.y));
++    }
++  }
++  if (!lengths.length || anchors.size !== allAtomsTypeList.length) return;
++  lengths.sort((a, b) => a - b);
++  // Professor's original 2-methylpentane: C-C/font = 3.488636..., rounded.
++  // Change label size around native atom anchors, never molecular geometry.
++  const font = lengths[Math.floor(lengths.length / 2)] / 3.49;
++  if (!(font > 0)) return;
++  const context = document.createElement("canvas").getContext("2d");
++  if (!context) return;
++  const texts = fGetRenderedAtomTextMap(false, true), changes = [];
++  for (const [atom, anchor] of anchors) {
++    const label = texts[atom];
++    if (!label || label.node.textContent.trim() !== allAtomsTypeList[atom]) return;
++    const originalFont = parseFloat(label.attr("font-size"));
++    const x = Number(label.attr("x")), y = Number(label.attr("y"));
++    if (!(originalFont > 0) || ![x, y].every(Number.isFinite)) return;
++    const style = getComputedStyle(label.node);
++    context.font = `${style.fontStyle} ${style.fontWeight} ${font}px ${style.fontFamily}`;
++    const ink = context.measureText(allAtomsTypeList[atom]);
++    const cx = (ink.actualBoundingBoxRight - ink.actualBoundingBoxLeft) / 2;
++    const cy = (ink.actualBoundingBoxAscent - ink.actualBoundingBoxDescent) / 2;
++    if (![cx, cy].every(Number.isFinite)) return;
++    changes.push([label, {x: anchor.x - cx, y: anchor.y + cy,
++      "font-size": font + "px"}, anchor]);
++  }
++  changes.forEach(([label, attributes, anchor]) => {
++    label.attr(attributes);
++    label.node.dataset.fixedCCAtomX = String(anchor.x);
++    label.node.dataset.fixedCCAtomY = String(anchor.y);
++  });
++  svg.dataset.alkaneFixedCCScale = String(font / 270);
++}
++
+ function fGetUniform2DLibraryFrame() {
+   if (uniform2DLibraryFrame) return uniform2DLibraryFrame;
+   let spanX = 1, spanY = 1;
+@@ -3450,10 +3513,11 @@
+     const numberTransform = numberMatrix ? inverse.multiply(numberMatrix) : null;
+     // Reserve numbering clearance without forcing the largest library drawing
+     // back to a smaller label size (all numbered forms are browser-checked).
++    const prototypeNumberScale = Number(svg.dataset.alkaneFixedCCScale) || 1;
+     const numberPaddingX = numberTransform
+-      ? 350 * (Math.abs(numberTransform.a) + Math.abs(numberTransform.c)) : 0;
++      ? 350 * prototypeNumberScale * (Math.abs(numberTransform.a) + Math.abs(numberTransform.c)) : 0;
+     const numberPaddingY = numberTransform
+-      ? 350 * (Math.abs(numberTransform.b) + Math.abs(numberTransform.d)) : 0;
++      ? 350 * prototypeNumberScale * (Math.abs(numberTransform.b) + Math.abs(numberTransform.d)) : 0;
+     const margin = Math.max(right - left, bottom - top) * 0.04;
+     const paddingX = Math.max(numberPaddingX, margin);
+     const paddingY = Math.max(numberPaddingY, margin);
+@@ -3545,6 +3609,7 @@
+   // Hydrogen wrapping may replace the text node, so hide only after labels
+   // and colors are finalized, before fitting the visible drawing.
+   fHideEsterSkeletalCarbonHydrogens();
++  fPrepareFixedCCAlkanePrototype();
+   $("#jsmeNomeclatureSVG").toggleClass(
+     "svgAtomsColorized",
+     svgAtomColors2DFlag,
+@@ -7155,7 +7220,9 @@
+         },
+       );
+       const expandedAtomTextMap = fGetRenderedAtomTextMap(false, true);
+-      numberOffset = [-120, -280];
++      const fixedCCNumberScale = Number(molSvg.node.dataset.alkaneFixedCCScale) || 1;
++      numberOffset = [(molSvg.node.dataset.alkaneFixedCCScale ? -230 : -120) * fixedCCNumberScale,
++        -280 * fixedCCNumberScale];
+       for (let i = 0; i < highAtoms.length; i++) {
+         currAtomTextElement = expandedAtomTextMap[highAtoms[i] - 1];
+         if (!currAtomTextElement) {
+@@ -7164,7 +7231,7 @@
+         x = parseInt(currAtomTextElement.attr("x")) + numberOffset[0];
+         y = parseInt(currAtomTextElement.attr("y")) + +numberOffset[1];
+         r = 220;
+-        numberString = `  <text id='number${i}' x='${x}' y='${y}' font-size='270px' font-weight='600' font-family='Arial, sans-serif' fill='#254C50' stroke='white' stroke-width='30px' paint-order='stroke'>${i + 1}</text> `;
++        numberString = `  <text id='number${i}' x='${x}' y='${y}' font-size='${270 * fixedCCNumberScale}px' font-weight='600' font-family='Arial, sans-serif' fill='#254C50' stroke='white' stroke-width='${30 * fixedCCNumberScale}px' paint-order='stroke'>${i + 1}</text> `;
+         numbersSVGElements[i] = numberString;
+       }
+       break;
+--- before/mulermoc-nom-52.html
++++ after/mulermoc-nom-52.html
+@@ -328,10 +328,10 @@
+     <div id="creditsUs"></div>
+   </div>
+ 
+-  <script src="js/jsme-nick-nomeclature-moc2-data_52.js?v=esters-orthogonal-20261029"></script>
++  <script src="js/jsme-nick-nomeclature-moc2-data_52.js?v=alkane-fixed-cc-20261030"></script>
+   <script src="js/ui-icons.js?v=v52-sync-20261027-r2"></script>
+   <script src="js/mulermoc-nom-core-52.js?v=esters-20261029"></script>
+-  <script src="js/mulermoc-nom-molview-52.js?v=alkane-clearance-v2-20261030"></script>
++  <script src="js/mulermoc-nom-molview-52.js?v=alkane-fixed-cc-20261030"></script>
+   <script src="js/mulermoc-nom-teaching-52.js?v=acid-prefix-boxes-20261028"></script>
+   <script src="js/mulermoc-nom-note-52.js?v=v52-sync-20261027-r2"></script>
+   <script src="js/mulermoc-nom-scenario-52.js?v=other-acids-theory-20261028"></script>
+--- before/mols/new_molecules/dimethyl_2_3_butane_2D_Expanded.mol
++++ after/mols/new_molecules/dimethyl_2_3_butane_2D_Expanded.mol
+@@ -8,20 +8,20 @@
+     1.2375    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    -0.4125   -0.8250    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+     0.4125    0.8250    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+-   -1.4695    0.0000    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+-   -1.2375    0.2321    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+-   -1.2375   -0.2321    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+-    1.4695    0.0000    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+-    1.2375   -0.2321    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+-    1.2375    0.2321    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+-    0.4125    1.0261    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+-    0.2219    0.8250    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+-    0.6031    0.8250    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+-   -0.4125   -1.0261    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+-   -0.6031   -0.8250    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+-   -0.2219   -0.8250    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+-   -0.4125    0.2321    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+-    0.4125   -0.2321    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
++   -1.5469    0.0000    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
++   -1.2375    0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
++   -1.2375   -0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
++    1.5469    0.0000    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
++    1.2375   -0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
++    1.2375    0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
++    0.4125    1.1344    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
++    0.1031    0.8250    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
++    0.7219    0.8250    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
++   -0.4125   -1.1344    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
++   -0.7219   -0.8250    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
++   -0.1031   -0.8250    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
++   -0.4125    0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
++    0.4125   -0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+   1  2  1  0      
+   2  3  1  0      
+   3  4  1  0      
+--- before/mols/source-2d/dimethyl_2_3_butane_2D_Expanded.mol
++++ after/mols/source-2d/dimethyl_2_3_butane_2D_Expanded.mol
+@@ -8,20 +8,20 @@
+     1.2375    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+     0.4125    0.8250    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    -0.4125   -0.8250    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+-    1.4695    0.0000    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+-    1.2375   -0.2321    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+-    1.2375    0.2321    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+-    0.4125   -0.2321    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+-   -0.4125    0.2321    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+-   -0.6031   -0.8250    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+-   -0.2219   -0.8250    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+-   -0.4125   -1.0261    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+-    0.4125    1.0261    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+-    0.6031    0.8250    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+-    0.2219    0.8250    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+-   -1.4695    0.0000    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+-   -1.2375    0.2321    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+-   -1.2375   -0.2321    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
++    1.5469    0.0000    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
++    1.2375   -0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
++    1.2375    0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
++    0.4125   -0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
++   -0.4125    0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
++   -0.7219   -0.8250    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
++   -0.1031   -0.8250    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
++   -0.4125   -1.1344    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
++    0.4125    1.1344    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
++    0.7219    0.8250    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
++    0.1031    0.8250    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
++   -1.5469    0.0000    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
++   -1.2375    0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
++   -1.2375   -0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+   1  2  1  0
+   2  3  1  0
+   3  4  1  0

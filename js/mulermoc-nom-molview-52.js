@@ -3208,6 +3208,61 @@ function fPadExpandedCarboxylLabels() {
   }
 }
 
+function fPadExpandedAlkaneLabels() {
+  // Keep native atom centers and bond lines. Mask only glyph ink plus a small
+  // clearance: the font's full line box would hide short explicit C-H strokes.
+  if (mode2D !== "expanded" ||
+      nameExamples[selectedMol]?.classification?.seriesKey !== "alkanes") return;
+  const context = document.createElement("canvas").getContext("2d");
+  if (!context) return;
+  const texts = fGetRenderedAtomTextMap(false, true);
+  const rects = fGetRenderedAtomRectMap(false, true);
+  for (const [atomIdx, label] of Object.entries(texts)) {
+    const backplate = rects[atomIdx], symbol = allAtomsTypeList[atomIdx];
+    if (!backplate || !["C", "H"].includes(symbol) ||
+        label.node.textContent.trim() !== symbol) continue;
+    const matrix = label.node.getScreenCTM();
+    if (!matrix) continue;
+    const scale = Math.hypot(matrix.c, matrix.d);
+    const style = getComputedStyle(label.node);
+    const fontSize = parseFloat(style.fontSize);
+    const x = Number(label.attr("x")), y = Number(label.attr("y"));
+    if (![scale, fontSize, x, y].every(Number.isFinite) ||
+        scale <= 0 || fontSize <= 0) continue;
+    const prototype = label.node.ownerSVGElement.dataset.alkaneFixedCCScale;
+    if (prototype) {
+      // Equal, centered square masks keep the visible C-H and C-C strokes
+      // equal in both directions; the MOL still supplies every atom anchor.
+      const cx = Number(label.node.dataset.fixedCCAtomX);
+      const cy = Number(label.node.dataset.fixedCCAtomY);
+      if (![cx, cy].every(Number.isFinite)) continue;
+      const half = fontSize * 0.52;
+      backplate.attr({x: cx - half, y: cy - half, width: 2 * half,
+        height: 2 * half, rx: 0, ry: 0});
+      continue;
+    }
+    context.font = `${style.fontStyle} ${style.fontWeight} ${fontSize * scale}px ${style.fontFamily}`;
+    const ink = context.measureText(symbol);
+    const left = x - ink.actualBoundingBoxLeft / scale;
+    const right = x + ink.actualBoundingBoxRight / scale;
+    const top = y - ink.actualBoundingBoxAscent / scale;
+    const bottom = y + ink.actualBoundingBoxDescent / scale;
+    if (![left, top, right, bottom].every(Number.isFinite) ||
+        right <= left || bottom <= top) continue;
+    const stroke = style.stroke === "none" ? 0 : parseFloat(style.strokeWidth) / 2;
+    // At tiny zoom, shrink the pixel floor with the glyph so that short C-H
+    // strokes remain visible. Normal-size labels retain the 1.5px floor.
+    const pixelFloor = Math.min(1.5 / scale, fontSize * 0.18);
+    const padding = Math.max(fontSize * 0.08, pixelFloor) +
+      (Number.isFinite(stroke) ? stroke : 0);
+    // Recompute from glyphs, never from previously padded masks. Square,
+    // opaque bounds also protect off-center stroke edges at label corners.
+    backplate.attr({x: left - padding, y: top - padding,
+      width: right - left + 2 * padding, height: bottom - top + 2 * padding,
+      rx: 0, ry: 0});
+  }
+}
+
 // ── fMolHasSpCarbon ────────────────────────────────────────────────────────
 // True when the parsed 2D structure contains at least one sp-hybridised
 // carbon: a carbon in a triple bond (C≡C or C≡N) or in cumulated double bonds
@@ -3326,6 +3381,69 @@ function fHideEsterSkeletalCarbonHydrogens() {
 // A shared library frame prevents molecule-by-molecule label magnification.
 // Cache geometry only; the pixel size is recomputed for each visible viewport.
 let uniform2DLibraryFrame = null;
+function fPrepareFixedCCAlkanePrototype() {
+  if (mode2D !== "expanded" ||
+      !["methane", "ethane", "propane", "butane", "pentane",
+        "methyl_2_pentane", "dimethyl_2_3_butane", "ethyl_3_dimethyl_2_5_hexane"].includes(selectedMol)) return;
+  const svg = molSvg?.node;
+  if (!svg || svg.dataset.alkaneFixedCCScale) return;
+  const lines = [...svg.querySelectorAll("line")];
+  if (lines.length !== bondList.length) return;
+  const anchors = new Map(), lengths = [], hydrogenLengths = [];
+  for (let i = 0; i < bondList.length; i++) {
+    const [a, b, order] = bondList[i], line = lines[i];
+    const p = {x: Number(line.getAttribute("x1")), y: Number(line.getAttribute("y1"))};
+    const q = {x: Number(line.getAttribute("x2")), y: Number(line.getAttribute("y2"))};
+    if (order !== 1 || ![p.x, p.y, q.x, q.y].every(Number.isFinite)) return;
+    for (const [atom, point] of [[a - 1, p], [b - 1, q]]) {
+      const previous = anchors.get(atom);
+      if (previous && Math.hypot(previous.x - point.x, previous.y - point.y) > 0.01) return;
+      anchors.set(atom, point);
+    }
+    if (allAtomsTypeList[a - 1] === "C" && allAtomsTypeList[b - 1] === "C") {
+      lengths.push(Math.hypot(q.x - p.x, q.y - p.y));
+    } else if ((allAtomsTypeList[a - 1] === "C" && allAtomsTypeList[b - 1] === "H") ||
+        (allAtomsTypeList[a - 1] === "H" && allAtomsTypeList[b - 1] === "C")) {
+      hydrogenLengths.push(Math.hypot(q.x - p.x, q.y - p.y));
+    }
+  }
+  // Methane has no C-C. Its C-H/font uses half the common C-C/font unit.
+  // This is a calibration value only; native atom anchors and bonds stay intact.
+  if (!lengths.length && selectedMol === "methane") {
+    lengths.push(...hydrogenLengths.map(length => length * 2));
+  }
+  if (!lengths.length || anchors.size !== allAtomsTypeList.length) return;
+  lengths.sort((a, b) => a - b);
+  // Original reference C-C/font 3.49, shortened by the approved 25%.
+  // Change label size around native atom anchors, never molecular geometry.
+  const font = lengths[Math.floor(lengths.length / 2)] / 2.6175;
+  if (!(font > 0)) return;
+  const context = document.createElement("canvas").getContext("2d");
+  if (!context) return;
+  const texts = fGetRenderedAtomTextMap(false, true), changes = [];
+  for (const [atom, anchor] of anchors) {
+    const label = texts[atom];
+    if (!label || label.node.textContent.trim() !== allAtomsTypeList[atom]) return;
+    const originalFont = parseFloat(label.attr("font-size"));
+    const x = Number(label.attr("x")), y = Number(label.attr("y"));
+    if (!(originalFont > 0) || ![x, y].every(Number.isFinite)) return;
+    const style = getComputedStyle(label.node);
+    context.font = `${style.fontStyle} ${style.fontWeight} ${font}px ${style.fontFamily}`;
+    const ink = context.measureText(allAtomsTypeList[atom]);
+    const cx = (ink.actualBoundingBoxRight - ink.actualBoundingBoxLeft) / 2;
+    const cy = (ink.actualBoundingBoxAscent - ink.actualBoundingBoxDescent) / 2;
+    if (![cx, cy].every(Number.isFinite)) return;
+    changes.push([label, {x: anchor.x - cx, y: anchor.y + cy,
+      "font-size": font + "px"}, anchor]);
+  }
+  changes.forEach(([label, attributes, anchor]) => {
+    label.attr(attributes);
+    label.node.dataset.fixedCCAtomX = String(anchor.x);
+    label.node.dataset.fixedCCAtomY = String(anchor.y);
+  });
+  svg.dataset.alkaneFixedCCScale = String(font / 270);
+}
+
 function fGetUniform2DLibraryFrame() {
   if (uniform2DLibraryFrame) return uniform2DLibraryFrame;
   let spanX = 1, spanY = 1;
@@ -3405,10 +3523,11 @@ function fFit2DSVG() {
     const numberTransform = numberMatrix ? inverse.multiply(numberMatrix) : null;
     // Reserve numbering clearance without forcing the largest library drawing
     // back to a smaller label size (all numbered forms are browser-checked).
+    const prototypeNumberScale = Number(svg.dataset.alkaneFixedCCScale) || 1;
     const numberPaddingX = numberTransform
-      ? 350 * (Math.abs(numberTransform.a) + Math.abs(numberTransform.c)) : 0;
+      ? 350 * prototypeNumberScale * (Math.abs(numberTransform.a) + Math.abs(numberTransform.c)) : 0;
     const numberPaddingY = numberTransform
-      ? 350 * (Math.abs(numberTransform.b) + Math.abs(numberTransform.d)) : 0;
+      ? 350 * prototypeNumberScale * (Math.abs(numberTransform.b) + Math.abs(numberTransform.d)) : 0;
     const margin = Math.max(right - left, bottom - top) * 0.04;
     const paddingX = Math.max(numberPaddingX, margin);
     const paddingY = Math.max(numberPaddingY, margin);
@@ -3443,7 +3562,10 @@ function fFit2DSVG() {
     svg.style.width = "100%";
     svg.style.height = "100%";
     // Font bounds depend on the final viewBox (including browser hinting).
-    if (mode2D === "expanded") fPadExpandedCarboxylLabels();
+    if (mode2D === "expanded") {
+      fPadExpandedCarboxylLabels();
+      fPadExpandedAlkaneLabels();
+    }
   } catch (eFit) {
     /* Hidden/uninitialized drawings are fitted on the next visible render. */
   }
@@ -3497,6 +3619,7 @@ function fUpdateSVG() {
   // Hydrogen wrapping may replace the text node, so hide only after labels
   // and colors are finalized, before fitting the visible drawing.
   fHideEsterSkeletalCarbonHydrogens();
+  fPrepareFixedCCAlkanePrototype();
   $("#jsmeNomeclatureSVG").toggleClass(
     "svgAtomsColorized",
     svgAtomColors2DFlag,
@@ -7107,7 +7230,9 @@ function fShowNumbering(time, overrideAtoms, overrideAtoms3D) {
         },
       );
       const expandedAtomTextMap = fGetRenderedAtomTextMap(false, true);
-      numberOffset = [-120, -280];
+      const fixedCCNumberScale = Number(molSvg.node.dataset.alkaneFixedCCScale) || 1;
+      numberOffset = [(molSvg.node.dataset.alkaneFixedCCScale ? -230 : -120) * fixedCCNumberScale,
+        -280 * fixedCCNumberScale];
       for (let i = 0; i < highAtoms.length; i++) {
         currAtomTextElement = expandedAtomTextMap[highAtoms[i] - 1];
         if (!currAtomTextElement) {
@@ -7116,7 +7241,7 @@ function fShowNumbering(time, overrideAtoms, overrideAtoms3D) {
         x = parseInt(currAtomTextElement.attr("x")) + numberOffset[0];
         y = parseInt(currAtomTextElement.attr("y")) + +numberOffset[1];
         r = 220;
-        numberString = `  <text id='number${i}' x='${x}' y='${y}' font-size='270px' font-weight='600' font-family='Arial, sans-serif' fill='#254C50' stroke='white' stroke-width='30px' paint-order='stroke'>${i + 1}</text> `;
+        numberString = `  <text id='number${i}' x='${x}' y='${y}' font-size='${270 * fixedCCNumberScale}px' font-weight='600' font-family='Arial, sans-serif' fill='#254C50' stroke='white' stroke-width='${30 * fixedCCNumberScale}px' paint-order='stroke'>${i + 1}</text> `;
         numbersSVGElements[i] = numberString;
       }
       break;
