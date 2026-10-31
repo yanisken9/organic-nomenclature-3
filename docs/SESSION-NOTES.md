@@ -1,3 +1,27 @@
+# Current resume point — 2026-10-31 — Publication and full recovery copies verified
+
+User approved React preservation and public full-checkpoint export explicitly.
+Main/report published at release 0969f46205c5317ee22c8b28dabe21880a4fb270; public report/welcome/Main assets checked
+by HTTP SHA and actual Firefox Main/React navigation. Main 141 molecules/14 lessons/
+337 steps; React previous126 catalog, no rebuild, frozen data52/viewer52, four host
+references only. Independent publication review: /root/review_publication_final_20261031. Actual verification
+and limits: docs/checks/publication-20261031/publication-result.json. Public strict zero-console tests exited1 from external tracker/cookie diagnostics
+(Main10/React2), with all16functional checks complete; raw records retained. Historical
+viewBox redraw concern remains open; no full mobile/Safari/offline certification.
+
+Full checkpoint 3165bb0af1a382ae498b63f3005d93927fac84bc pushed to checkpoint/namelecule-20261031-221614.
+Published-generation ZIP (2620 source files), verified bundle and recovery ZIP,
+14 active JSONs, report/links, 10 launcher files saved to both external folders.
+Final hashes/receipts: communication/checkpoints/final-save-state-20261031-221614.json
+and final-save-state.json in each folder. This resume block and the final receipt
+are post-snapshot bookkeeping, copied separately; all snapshot hashes verified.
+Active react-library-pilot HEAD168e3cec/index25c21223 preserved. No core changes
+in this save session or versus publicBase39ccedff; core52 d2138418… unchanged.
+Professor upstream HEAD4e1190ab unchanged; last actually synchronized93b759f.
+Owned testserver8051/headlessFirefox9237 closed after checks; user8013PID890/browser preserved.
+Next: user may forward links from Desktop αρχεία  json/Namelecule_31-10-2026/links.txt.
+Do not resume molecular edits automatically.
+
 # Current resume point — 2026-10-31 — Public URLs verified; final backup generation underway
 
 Release0969f46205c5317ee22c8b28dabe21880a4fb270 is live on personal thesis-work;
