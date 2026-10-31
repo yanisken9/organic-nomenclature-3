@@ -1,3 +1,54 @@
+# Current resume point — 2026-10-31 — Save/report prepared; two required user decisions pending
+
+User: «αποθήκευσε τα πάντα κ παντού. ετοίμασε report και σύνδεσμο για τον καθηγητή».
+Continuing established save workflow: preserve active react-library-pilot HEAD168e3cec
+and index25c21223, personal origin/thesis-work publicBase39ccedff, full checkpoint
+from prior5230897, ZIP+bundle+recovery ZIP, two external destinations. Upstream remote
+HEAD/main4e1190ab checked again + actual CHANGELOG/history; unchanged since last check,
+last actual synchronized93b759f. No new upstream synchronization or core changes.
+
+Prepared docs/professor-20261031/update.html, facts JSON, links JSON/TXT, ready message.
+Report covers since30Oct: SVG producer/metrics fix, JSmol lifecycle repair,47Expanded
+in5classes(7/8/8/7/17),verifiedresultsandlimits. Banner says LOCAL/NOTPUBLISHED;
+plannedpublicreport/welcomeURLs unverified. README updated. Fresh readonly Reviewer
+/root/review_professor_report_20261031 completed frozen7paths ee93f39d… CLEAN/no
+actionableP0-P3. Actual14JSON337steps/141molecules/core/10relativepaths checked.
+This is docs-only, not publication readiness; report-independent-review.json.
+
+REQUIRED CHOICE1 pending (asyncquestion): source/candidate investigation showed
+oldReacthosts share rootviewer52, but do notload NameleculeLabelMetrics/newproducer.
+Actualisolatedcandidate oldviewerhost: label-error=true,hasSVG=false,metrics=false.
+Needapprovalto preserveoldReact bypinning olddata52/viewer52 frompublic39ccedff
+in versionedReact folder andupdating4public/dist hostHTMLpaths, withoutbuild/core/
+componentschanges. NOReactcodeisolation implementedyet. Maincandidateprefix tests
+8PASS:report1500/390/nooverflow,welcome,141names,propene9/largest39/ethyne4atoms,
+expandedSVGandprefixedlessonback/next/exit,0JS. Do notpublishbrokenoldReact.
+
+REQUIRED CHOICE2 pending (asyncquestion): auto-review REJECTED fullcheckpointGHpush
+(publicWIP/internalnotesexportnotexplicit). Useraskedexplicitlyauthorizeupload to
+GitHubyanisken9/organic-nomenclature-3 checkpoint/namelecule-20261031-221614 orlocalonly.
+No workaround/retry; no remotecheckpointpush and noMainpublication performed.
+Initial localcheckpoint86a54768f1e337298aa89a74fa1a516e333a0ffe,2598files. InitialZIP
+CRC/all2598hashesverified(56.8MB),bundle52MBverified,recovery186filesZIP3.05MB.
+GitnormalizesonlynewLICENSE-JSME.txtCRLF;sourceZIPpreservesexactoriginalbytes.
+Two externalcopies byte-identical,14activeJSON,10Namelecule.appfilesverified:
+../Αποθηκεύσεις/2026-10-31-221614/ and Desktop/αρχεία  json/Namelecule_31-10-2026/.
+External READ FIRST sayspending/no publiclinksready. Source/fullcheckpoint includes
+ReactWIP/notes but curatedpubliccandidate preservesReactpathssofar. No secretsfound
+byboundedrecognized-tokenpatternscan; notuniversalguarantee.
+
+Resumable state: communication/checkpoints/save-publish-20261031-state.json.
+Isolatedpubclone,checkpointclone andserverroot paths in state.job under tempfolder.
+Owned prefixserver8051PID1569 andFirefox9237PID1570 closed after checks;
+user8013PID890 and userFirefox preserved. Testserver/Firefox can be restarted
+if choices arrive; no production deployment has happened.
+Currentmain/core remains reviewedalcoholfinal0.98. Next receive reportreview; refresh
+local reportcopies/backups/bookkeeping. Await explicitchoices; ifapprovedisolate
+Reactonlyunderapprovedplan,verifyoldReactviewer/lesson+Main,consolidatedpublication
+reviewthencommit/pushpersonalpublicbranch,verifyactualpublicHTTP/browserlinks,
+completefinalcheckpoint/archive/copies and receipts. Ifdeclinedkeep localandreport
+publicationpending truthfully. Never claimplannedURLspublished. No needuserreconstruct.
+
 # Current resume point — 2026-10-31 — 17 alcohols complete; 0.98 installed and reviewed
 
 User accepted the exact 0.98 preview connector. Main largest expanded MOL now
