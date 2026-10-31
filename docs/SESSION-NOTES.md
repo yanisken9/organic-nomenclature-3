@@ -1,3 +1,1407 @@
+# Current resume point — 2026-10-31 — 17 alcohols complete; 0.98 installed and reviewed
+
+User accepted the exact 0.98 preview connector. Main largest expanded MOL now
+matches accepted c504fdaf… byte-for-byte; 17 alcohols have H=.3094, other heavy
+bonds=.6188, with C4–C10=.98 only in the largest. All 21 OH groups are explicit;
+11 O-bound H appended in the earlier16 stage. Source generator and guarded
+12-file restore are recorded. 842 protected files unchanged. No core, React, 3D
+or scenario JSON changes; no commit/push/publication.
+
+Final independent Reviewer /root/review_alcohol_final098_20261031 (fresh context)
+reviewed47 paths including38untracked at manifest d5410136…; no productionP0/P1/P2.
+One P3 AF-01: direct-setter test screenshot left stale UI/3D. Corrected harness to
+actual molecule/mode clicks, checked radio and awaited matching 39-atom3D;
+11 cases rerun PASS and new screenshot visually inspected. IsolatedP3 closed by
+Developer verification as Reviewer permitted; no independent rerun claimed.
+12 reviewed application hashes unchanged after review,842 protected rechecked.
+Reports: docs/checks/alcohol-uniform-20261031/{summary-final,independent-review-final,
+final-verification}.json. Full earlier scientific validation reused, final targeted
+largest validation clean. Runtime179 control states(all17,2widths,4fullrepresentatives),
+92 lesson states(20+22steps,back/replay/exit),11 real-UI forms/guards,3exports,
+8 numbering/OH3D selections: no contacts/hidden lines/clipping/JS in tested states.
+
+Reported JSmol error: system reboot21:56:16 after application edit21:52:34 left
+8013 absent. SDF unchanged. Existing Desktop Namelecule.app restarted serverPID890
+(parent1) at22:01:38. HTTP17SDF200 byte-exact; actual target JSmol24atoms/CID19871.
+Exact failed screenshot request not captured. User advised start Desktop icon
+following reboot. No molecular/3D source fix. Owned test FirefoxPID896 closed;
+preserve user Firefox and launcher server8013PID890. Previous control test lost
+on reboot not counted; missing TMP snapshot path retry retained/fixed; final179
+resumed36 saved states. Old artifacts/checkpoints preserved.
+
+Historical16-stage redraw viewBox discrepancy remains OPEN, not fixed. It did not
+reproduce in final controls or new4-condition trace; parent heights before/after
+310/272 differ, so no matched optical comparison or root-cause conclusion.
+Conference/offline readiness not claimed; no Safari/physicalmobile/full3D claim.
+Next: user refreshes Firefox and inspects chosen layout. Future fit investigation
+needs actual failing live conditions before proposing a common-renderer change;
+no such fix approved. HEAD168e3cec/index unchanged; upstream last checked4e1190ab,
+last actually synced93b759f. Καμία αλλαγή σε core.js/core-version αυτή τη συνεδρία.
+
+# Current resume point — 2026-10-31 — 17 alcohols installed; final independent review in progress
+
+User approved the visual 0.98 connector («ναι, αυτό είναι καλό»). Largest embedded
+and physical expanded MOL now exactly match approved preview c504fdaf…; existing
+calibration whitelist adds this molecule, two Main cache URLs updated. All 17
+MOLs exactly reproduce from frozen sources with H=.3094, heavy=.6188, largest
+C4–C10=.98. Eleven O-bound H appended in earlier 16-stage; 21 explicit OH total.
+12 application files differ from original 17-plan baseline; 842 protected files,
+core, React, 3D and scenario JSON unchanged. Guarded 12-file rollback verified
+in isolation; Main remains installed. No commit/push/publication.
+
+Independent Chemistry Validator final follow-up clean; original 16 checks reused,
+new largest 3×2D/SDF graph/parent/fields and 6 naming cases before/after passed.
+Developer runtime: 179 states, all 17 default/min/max/OH at1500/390; full controls
+four representative molecules, 8 numbering/OH3D selections, 3 PNG exports. Zero
+contacts/hidden lines/clipping/JS. Lessons20+22 saved condensed steps replayed at
+both widths with back/replay/exit, 92 states. Six largest-form cases plus five
+older-category guards passed; actual largest 3D visibility toggle/count39 passed.
+Shared library frame identical before/after for141 molecules. New baseline-fit
+trace4conditions×4redraws stable within each condition, old fFit unchanged. Before/
+after parent heights310/272 differ; not matched optical comparison. Historical
+16-stage root-viewBox diagnostic remains OPEN, not reproduced or solved here.
+
+User screenshot: JSmol could not load dimethyl_2_2_pentanol_3 SDF. At investigation
+8013 absent; original control process also lost. System boot21:56:16 followed
+application edit21:52:34, consistent with old server termination on reboot. Launched
+existing Desktop Namelecule.app at22:01:38; serverPID890,parent1. HTTP17SDFs200,
+byte-exact disk; target real JSmol24atoms/CID19871/0JS. Exact failed browser request
+not captured. No SDF/3D source fix. User advised start Desktop icon after reboot.
+Original interrupted test not counted; retry36 states then missing TMP screenshot
+path, retained failure; harness changed to repository artifacts, resumed36 states,
+final179 passed. Incremental progress saved to survive interruption.
+
+Fresh independent Reviewer /root/review_alcohol_final098_20261031 inspects frozen
+47-path manifest d54101361c6269612cdcee3406d61ada27976560800f148b2bbcff005ff643fb,
+including38untracked. DO NOT edit target while review active. Developer noticed
+largest-applied-expanded.png has correct 2D but stale UI/methane3D due direct global
+setters in test-forms-final; told Reviewer. Regenerate through real UI click and
+await39atommodel after review, then targeted verification; do not use this current
+artifact as faithful whole-app flow evidence. Current owned Firefox9237PID896
+still running for correction; preserve user launcher server8013PID890/Firefox.
+Preview page now correctly labels before/after and applied option3; acceptedr3
+historical snapshot preserved checkpoint. Core unchanged in this session.
+Next: receive Reviewer report, correct screenshot harness within approved scope,
+verify changed artifacts and findings, record review, close ONLY owned Firefox896.
+HEAD168e3cec/indexunchanged; upstream last checked4e1190ab, last synced93b759f.
+
+# Current resume point — 2026-10-31 — Approved0.98 applied to largest; final alcohol checks ongoing
+
+User accepted preview «ναι,αυτόείναικαλό», authorizingchosen.98stem within17plan.
+Applied exactreviewedMOL c504fdaf… embedded+physicallargest; addedsamekeytoexisting
+fixedCCcalibration andbumped2HTMLcacheURLsfinal-098. Immediate4filebaseline
+communication/checkpoints/alcohol-largest-before-apply-098-20261031. All17sources
+nowexactgeneratedfromoriginalvia transform(mol,True,.98);842protectedunchanged,
+12appfilesmodifiedsince17baseline. Core/React/3D/scenarioJSON unchanged. Generator
+optionalapprovedstemlength added; guarded12file rollbackmanifest updated+isolated
+restore/newereditrefusal verified. ChemistryValidatorfinalfollowupclean:largest
+3x2D/SDFgraph/numberedparent,6namingcasesbeforeafter,allfields/lengths/indices;
+previous16scientificchecks reused. App12paths frozenchemistry-target-final.json
+SHA0e7ee5904f56cc92d22211de25b64da30120891e8a4bdd68165510554cc110bb.
+Userthenreported3Dunrecognizedfileformat(dimethyl_2_2_pentanol_3). Investigation
+found8013/9237bothnolisteners,HTTPconnectionrefused;originalcontrolrunalsoabruptly
+lostwithoutfinalevidence. SDF3595bytesmatchesbaselinebdca64d…,notcorrupt/changed.
+StartedexistingDesktopNamelecule.app;HTTP200SDFexactdisk;freshisolatedFirefox
+JSmolloads24atomsCID19871/noJSerror. Serverexitcauseandexactstateatscreenshot
+notknown;restartisrecovery,notpermanentfix. Evidence3d-recovery/server-recovery.
+Rerunboundedcontrols all17default/min/max/OH,4representativefullcontrols/2widths.
+Firstretry36statespassedbutartifactTMPdirectorymissing;preservedfailurefile,
+changedharnesstoHERE,incrementalstatewrites, resumedwithoutrepeating36. Runtime
+exec21460 active,isolatedFirefox9237(exec61742). Do notstopuserlauncherserver.
+LargestdesktopcontrolsPASSincludingnumbering;remainingmobile/exportpending.
+KnownredrawrootviewBoxdifferencesrecordedunresolved;childinvarianceNOToptical
+proof. No commonfitfixapproved/applied. Furtheractualbaselinefittrace script
+preparedbutnotrun,2theorylessons20+22steps+largestforms/previouscategoryguards
+preparedbutnotrun;independentconsolidatedReviewerpending. No complete/readinessclaim.
+JSCnewFunctionparse2appfilesPASS,3PythonASTPASS;initialunsupported--check-syntax
+attemptfailedandwasreplaced,notsuccessclaim. Sharedlibraryframebefore/afterchecked
+separately. HEAD168e3cec/indexunchanged;no commit/push/publication. Nextfinish
+runtimecontrols,lessonreplay,fitbaselineclassification,consolidatedfreshReviewer.
+
+# Current resume point — 2026-10-31 — User clarified absolute0.98 preview connector
+
+User «ελαφρώςμικρότεροακόμη;ίσως9,08» was initially interpretedas9.08%, but
+interruptedbeforeanyedit; userclarified «όχι,εννοούσα0,98». Implemented ONLY
+preview option3absoluteMOLstem.98, from1.0829; complete10atomC10subtree moved
+(0,-.1029), internalheavy.6188/H.3094/glyphscale preserved. H20H36gap.3612,
+no coincidences. Mainlargestoriginal/854applicationhashes unchanged; largest
+productionexceptionstill NOTapproved. Previouspreview preserved communication/
+checkpoints/alcohol-stem-preview-before-098-20261031; currentreports-r3suffix.
+Developer3nativeFirefoxcaptures stem1.583483/Hsep.583483regularunits/rasterPASS
+0contact/hidden/clipped/JS;6pagecases1500/390PASS,desktop/mobilevisuals inspected;
+3PythonASTPASS. ChemistryValidator targetedindependentcheckclean. r3Reviewer
+targetedfollowupCLEAN,noactionableP0-P3;frozen13paths targetmanifest c623b341e58bcb4d08aeb5206edec7823a31a35a51819ec978380846ab189f90.
+ExternalFirefoxopenedindex.html?v=stem-098-r3 in same stem-comparisonfolder;
+ownheadless9237PID28720closed,user8013/Firefoxremain. NoMain/core/React/3D/JSON
+changes,commit/push/publication. Existing16alcoholunitcontrols/lessons/fitdiagnostic
+remainpending. HEAD168e3cec; priorupstreamchecked4e1190ab,lastactualsync93b759f;
+no additionalsync. NextwaitvisualdecisionbeforeMainedit.
+
+# Current resume point — 2026-10-31 — Option3 preview connector shortened12.5%; production unchanged
+
+User asked «το3λίγομικρότερο;». Developer communicated interpretation: shorten
+orange connector only, same glyphs/other bonds, preview only. New option3 C4–C10
+1.0829 (1.75×.6188), down12.5% from1.2376; translates complete10atomC10subtree
+(0,-.1547). H20–H36gap.4641; no coincident atoms. Main largest remains original,
+no approval to apply exception;16earlier alcohol changes and unfinished controls/
+lessons/redrawviewBox diagnostic remain pending. No Main/core/3D/React/JSON changes.
+Previous full preview saved communication/checkpoints/alcohol-stem-preview-before-
+shorter-20261031. r2 target16paths SHA58510b2c521b44345b49f60c9d46dd93bc8fb62516a3d19a5fc966493193fd37.
+Developer3actualFirefox nativecaptures+rasterPASS,6pagecases1500/390PASS0JS/
+overflow, desktop/mobile screenshots visually inspected,854applicationhashes
+unchanged,3PythonAST checks. Native proposedstem1.749774/Hgap.749774regularunits.
+Independent ChemistryValidator targetedfollowupclean(graph/fields/lengths/gap/
+sourceinvariants); Reviewer targetedfollowup CLEAN, no actionableP0-P3;16frozenhashes verified unchanged. Unsuffixed
+reports describe initial2xpreview; current evidence/reviewtarget uses-r2suffix.
+Opened externalFirefox URLindex.html?v=shorter-r2 (same stem-comparison folder).
+Own headless9237PID28465 closed; user8013/Firefox untouchedexceptrequestednewtab.
+HEAD168e3cec,upstreampreviouschecked4e1190ab,lastactualsync93b759f; no new sync,
+commit/push/publication. No core changes this turn. Next wait user decision on visual proposal before changing largest Main MOL.
+
+# Current resume point — 2026-10-31 — Stem comparison delivered in external Firefox; apply approval still absent
+
+UserchoseVISUALCOMPARISON FIRST. OpenedexternalFirefox(localopen-aexit0) at
+http://127.0.0.1:8013/docs/checks/alcohol-uniform-20261031/stem-comparison/index.html.
+Threebuttons current/invalidallCCequal/proposed2:1stem,commonfont/frame,orangeC4C10,
+redH20H36collision/detail,sidebyside. MainlargestMOL/calibrationremainoriginal.
+All854apphashesunchangedthispreview. Noapprovaltoapplyexception; waituserdecision.
+FreshindependentReviewer /root/review_alcohol_stem_preview_20261031 CLEAN(no
+ actionableP0-P3),26pathsmanifest03c70689b9ac20ee15d4bbaa7804eab71f3668e14ccebcca85ed9de80e1b38b3.
+Independentlycheckedhashes/MOLfields/graphs/units/actualSVGfidelity/fontnorm/
+annotations/paths/JS+3desktopand1mobilevisuals. Browser3captures/6UIcases/raster
+areDeveloperevidence; geometryalsoChemistryValidatorclean. ReviewscopeONLYpreview,
+notunfinished17alcoholwork; retained16implementation/controls/lessons/viewBoxissue
+remainpending. PreviewdoesNOTfixappfit. Sourcebigstill2.34stem/1.17heavy/.78H;
+proposal1.2376stem/.6188otherheavy/.3094H; equalheavycounterexampleinvalidtwoHsamepoint.
+CaptureharnessinitialregistrybindingandouterCTMerrorscorrectedbeforefinaldelivery;
+initialmisboundresultretained+notclaimedfinalevidence. Actualnativegeometryassertions
+confirmcase2/1/2stemunits andHsep.667/0/1. NativeSVGnormalizationartifactonly.
+No app/core/MOLlibrary/3D/scenarioJSON/React modifications thispreviewturn.
+No commit/push/publication. Ownheadless9237PID28078 closedbeforeexternalopen;
+user8013/Firefox untouchedexceptauthorizedcomparisonnewtab. Upstreamchecked4e1190ab
+unchanged; lastactualsync93b759f. HEAD168e3cec,indexunchanged. Next waituserchoice,
+applylargestonlyifapproved; thenfinishalcoholchecks anddiagnosecapturedfitissue
+underseparateapprovalifcommonrendererchangesneeded. Previewrecords in samefolder.
+
+# Current resume point — 2026-10-31 — User requested stem visual comparison first; preview only
+
+Useransweredexceptionquestion: wants VISUALCOMPARISON FIRST. Longstemexception
+NOTapproved. MainlargestMOL/calibrationremainoriginal; all854appsourcehashes
+unchangedthispreviewturn.16previousalcoholchangesremain; controls/lessons/full17
+ReviewerandcapturedviewBoxdiagnosticstillpending. Do notapplyproposalwithoutanswer.
+Newpreview docs/checks/alcohol-uniform-20261031/stem-comparison/index.html has3
+switchablecases:current,uniformCCinvalid(H20/H36coincide),proposedpreserved2:1stem.
+OrangeC4-C10marksconnector; commonfont-normalizedSVGframe/parentalignment and
+invalidredcircle/zoom. ActualisolatedFirefox3MOLcaptures(memory-onlyoverrides),
+6pagecases1500/390/sidebyside/images/nooverflow/0JS. Actualnativeasserts stem2/1/2,
+Hseparationregularunits~.667/0/1 preventmismatchedpreview. Finalfiguresvisually
+inspectedDeveloper. Initialharnessregistrybinding/CTMnormalizationerrorscorrected
+beforeuserdelivery; initialmisboundcapture retained+explanation,notfinalevidence.
+ChemistryValidator targeted3MOLcheckclean:fields/graph39atoms38bonds/directions/
+lengths/collision/source854unchanged. ProposedSHA b1d82d0d…; previewnotapplyapproval.
+Previewsharedframeisartifact-only,NOTfixforapp'sopenfFitdiagnostic. No app/core/
+React/3D/scenarioJSON changes, no commit/push/publication.
+Next freezepreviewtarget/freshboundedReviewer, thenopenlocalcomparison inexternal
+userFirefox. Ownheadless9237PID28078 useduser8013server(readonly); closeownPID
+whenfinished,leaveuser8013/Firefox. UpstreamremoteHEAD4e1190abunchanged,checkedagain;
+lastactualsync93b759f. CurrentHEAD168e3cec/index25c21223unchanged.
+
+# Current resume point — 2026-10-31 — Alcohol16 partial; largest decision and final checks pending
+
+REQUIRED USER ANSWER STILL PENDING: preserve existing2:1C4-C10isopropylstem in
+largest alcohol at1.2376 (otherheavy.6188), orshowvisualcomparisonfirst. User17plan
+approved earlier, butthisoneexceptionnotapproved. Neverinferapprovalfromelapsedtime.
+Largest isopropyl_4_dimethyl_3_5_heptanol_2 embedded/physicalMOL/calibrationremain
+byteexactbaseline. Uniform.6188wouldcoincideH20(C5)withH36(C12), independently
+confirmedChemistryValidator.16othersimplemented:CH/OH.3094,CC/CO/multiples.6188;
+11OHhydrogens appendedto8originalExpandedMOLs,oldIDs/fields/bondsretained.
+All21OHgroupsacross17areexplicitnow,includingexistinglargest;42O-Hlinechecks
+across2widths visible. Before102/after-16same102(all17x3formsx2widths)PASS0contact/
+hiddenlines/clipping/JS. Otherforms/3D/JSON/React/core untouched.11appfileschanged
+of12planned;baseline854files atcommunication/checkpoints/alcohol-uniform-20261031.
+FreshChemistryValidator /root/validate_alcohol_uniform_20261031 clean16scope:
+68formgraphs/21OH/11appendedH/842protected;204productionnamingexecutionsbeforeafter;
+largestcollisionandproposed2:1solutionread-onlyverified,notauthorizednorbrowsertested.
+Report docs/checks/alcohol-uniform-20261031/chemistry-validation-16.json.
+
+CONTROL TEST INCOMPLETE: controls-16-initial.json.gz failsstrictSVGredrawbytecheck
+onfirstpropanol_1desktopafter8successfulUIstates,0JS. UnlikeearlierEunknownfailure,
+actualfirst/secondSVGpairretained:onlyrootviewBoxdiffers;all45descendantnodesidentical.
+Diagnosticclonesatfixedsame618x287.1667viewportgiveeffective scale.732628 vs.678666,
+so opticalequivalence NOTestablished; doNOTrelaxassertasfalsepositive. fFit2DSVG
+measuresparentviewportbeforeapplying100%SVGstylesatend; thisiscausalhypothesisonly,
+needtraceactualbeforeafterviewport/livebaseline BEFOREproposinganysharedfitfix.
+No sharedframingfixapprovedorapplied; noadditionalapprovalquestionyetonthisissue.
+Allactualevidence,status,failedpairs retained docs/checks/alcohol-uniform-20261031/.
+16controls/2lessons20+22steps/finalReviewerNOTcompleted, notreadyclaim. Baseline/
+partialinstalledhashes/guarded12filerestore testedindry+isolatedapply+newereditrefusal;
+MainNOTrolledback; no commit/push/publication/corechanges.
+OwnedtestPIDs27481/27482 closedafterpartialchecks; user8013/Firefoxuntouched.
+Next:firstresolvependinglargestanswer; beforeeditingmolecularsourcekeepcurrenthashes,
+sourceAgentfinished. Afterapprovalapplyonlylargestfromfrozenoriginal,extendwhitelist/
+cache andtargetedchemfollowup. Diagnosecapturedfitdifferencewithoutchangingcommon
+rendererwithoutnewmaterialscopeapproval. Thenrequiredcontrols/lessons/consolidated
+Reviewer. Upstreamchecked4e1190abunchanged;lastsynced93b759f. HEAD168e3cec/index25c21223.
+
+# Current resume point — 2026-10-31 — Approved16 alcohols applied; largest exception awaiting user
+
+User approved17Expanded/O-Hexplicitplan; subsequent exceptionquestion remains
+UNANSWERED: largest isopropyl_4_dimethyl_3_5_heptanol_2 originalC4-C10stem2.34
+(2xregular1.17) cannot simply become.6188 without H20/H36coincidence. Proposed
+preserve2:1ratio→1.2376 onlystem; do NOT applythisexceptionbeforeanswer. Largest
+MOL andcalibration currentlyUNCHANGED; originalapproval coversremaining16.
+Implemented16expandedMOLs(embedded16+physical8):CH/OH.3094,CC/CO/multiples.6188;
+added11explicitOH-Hto8professor originals, preservedoldindices/fields/bonds. All21
+OHgroups across17nowexplicit,includinglargestalreadyexplicit. Source16staticPASS,
+842protected/core/3D/scenarioJSON/React unchanged. MainHTMLalcoholr1/cache/viewer
+whitelist includesonly16;11actualappfileschangedofplanned12.
+Before102(actual17x3formsx2widths)/after-16same102 PASS0contact/hidden/clipped/JS.
+42OHedges(actualbothwidths)recordedvisible;newO/Hseparatetext,notfakehyphen.
+Controls16running ownFirefoxisolated, execsession53439. All17initialbaseline saved
+communication/checkpoints/alcohol-uniform-20261031; sourcehashes854/HEAD168e3cec/
+index25c21223. FreshChemistryValidator /root/validate_alcohol_uniform_20261031
+inspects frozen10molecularpaths chemistry-target-16.json in/tmp/namelecule-alcohol-
+uniform-20261031; do NOT editmolecularsourcewhileinspectionunfinished. Preliminary
+independent68formgraphs/fields/valence/21OH/11appendedH/842protected pass; finalpending.
+Own8032PID27481,Firefox9237PID27482 active; preserveuser8013/browser.
+Next:finish16controls/lessons,recordevidence; waitrequiredlargestexceptionanswer,
+thenonlynecessarytargetedtransform/checks andoneconsolidatedfinalReviewer.
+No commit/push/publication/corechanges; no finalindependentreview/readinessclaim.
+Upstreamchecked4e1190abunchanged vs lastchecked; lastsynced93b759f.
+
+# Current resume point — 2026-10-31 — 17alcohol plan approved; one geometry exception awaiting answer
+
+User requested same expandedbondchanges foralcohols, explicitly O-H separated by
+visiblebond. Read-onlygraphinventory:17purealcohols(7saturatedmono+10other),21OH.
+8originalprofessorExpandedMOLs have11implicitO-boundH missing as explicitatoms;
+9ownMOLs alreadyexplicitOH. Original8 exactpre4919f99/data45; physicalExpanded9.
+User approved concrete17plan: CH/OH.3094,CC/COinclmultiple.6188, append11OH-H
+preserveexistingIDs/metadata/otherforms/core/3D/scenarios/React;2lessons20+22steps,
+controls/chemicalchecks/independentReviewer. Baseline854sourcehashes/12apppaths
+saved communication/checkpoints/alcohol-uniform-20261031; inventory/approval in
+docs/checks/alcohol-uniform-20261031. NOappsourcechangesyet.
+Feasibilitysimulationfound uniformCC inlargest isopropyl_4_dimethyl_3_5_heptanol_2
+makes H20(onC5) andH36(onC12) coincident. ExistingC4-C10isopropylstem2.34 vsregular
+1.17 intentionallyseparatesgroup. Asyncquestionpending: preserve2:1ratio stem1.2376
+onlythere/rest.6188, orvisualcomparisonfirst. Do notmutatelargestuntilanswered;
+other16/snapshot/baselinechecks authorized. Alloldsourcebondsorthogonal.
+NewsourceOH shouldbe explicitatom/bond; no fakehyphenlabel. Existingviewer merely
+colors combinedOH labels; sameactualpriorFirefoxethanolevidencehasOHtextwithout
+OHedge. Commoncalibrationcanreuse singleCO/OHanchors afterMOLexpansion; no core
+changeexpected. Need verify O-H lineactuallyvisible,notmerelypresentinsource.
+Upstreamchecked2026-10-31: remoteHEAD/localupstream4e1190ab unchangedsinceprevious
+check; readactualupstreamCHANGELOG/history,nonewentries/commits. Lastactuallysynced
+93b759f; no syncnow. CurrentHEAD168e3cec,indexexpected25c21223; no corechanges.
+Next: resolveonegeometryquestion, baselinebrowser17allforms/2widths, implement
+approvedscope, ChemValidator thenoneconsolidatedfreshReviewer. User8013/Firefox
+mustremainuntouched; ownprior8032/9237processeswereclosed,notyetrestarted.
+
+# Current resume point — 2026-10-31 — Eight dienes and seven enynes complete; independent review clean
+
+Finalexpanded15molecules follow alkane units CH.3094/allCC.6188. Originalprofessor
+references preserved structurally; x/yonly changes, no core/3D/scenarioJSON/React.
+InventoryE6→7 corrected afteruserphoto of3-penten-1-yne; source[H] untouched,
+analyticalnormalization+categoryinventory regressionguard prevents thisomission.
+Final12applicationpaths at docs/checks/dienes-enynes-uniform-20261031/runtime-freeze.json.
+FreshReviewer /root/review_dienes_enynes_uniform_20261031: NO actionableP0/P1/P2/P3;
+140frozenhashes verified before/after; manifest a108adc90db83765e20ba019fa18719c417d8261bad5b3ee7f0e0bff2915aa20.
+Independently checked finalsource/diff/MOLs/842protected,64+56savedSVGstroke states,
+JSCactualfallbackpositive+4negativeatomicfixtures,5matchedviewportpairs/5PNGs,
+12filedryrestore. Browserandfullchemicalgraphs remainDeveloper/Validator evidence.
+Fullrecord independent-review.json. Afterreviewonlystatus/report/notes updated;
+applicationruntime hashes unchanged. Developer checks90before/90after,231UIstates,
+100lessonstates(all23stepsforeachlesson/2widths),120exactstrokes,62old31guards.
+No newfull844run aftertheseunits; lastfull844afteralkenes. Frameinvariant.
+Open diagnostic: firststrictSVGbyteequalityassertfailedonceat390withoutstoredpair;
+rootcauseUNKNOWN; instrumentedrerun15states+180pairspassedwithoutappchange. Reviewer
+allowsboundedunitclosurewithdisclosure; preservepaircaptureifrecurs,donotclaimfix.
+Report http://127.0.0.1:8013/docs/checks/dienes-enynes-uniform-20261031/report.html.
+User8013 servedfinalr2HTML/data/viewer byteexactHTTP200; own8032PID24839/isolated
+Firefox9237PID24840 terminated afterreview; user8013/Firefox untouched.
+12fileguardedrollback ZIP/dry/isolatedapply/newereditrefusal verifiedfinalr2;
+checkpoint communication/checkpoints/dienes-enynes-uniform-20261031 restores
+pre-diene/post-independently-reviewed-alkyne state; Mainneverrolledback.
+No core changes duringthissession/day. No stage/commit/push/publication; localonly.
+Upstream checked4e1190ab, actuallysynced93b759f; unchanged thissessioncheck.
+Next: userrefreshFirefox andinspectupdatedmolecules; ifredrawdifference recurs,
+retaininstrumentedSVGpair/viewport/zoom andcomparebefore proposingnewscope.
+No pendingimplementation withinapprovedscope; no offline/conferencecertification.
+
+# Current resume point — 2026-10-31 — Dienes/enynes implemented and tested; consolidated Reviewer pending
+
+Approved expanded8dienes +enynes extension implemented. Final inventory is7enynes,
+not6: user screenshot exposed original penten_3_yne_1 whose raw [H] was excluded
+by initial analyticalfilter. Corrected check/transformparser normalizes [H] only
+analytically; sourcefield untouched. Added fullcategory inventoryassertion.
+Userphoto steers samecategory/same6apppaths, no additional representation or mechanism.
+All15targetMOLs CH.3094/allCC(incldouble/triple).6188; orthogonaldirections/IDs/
+fields/graphs/linearsp preserved. Finalruntime r2;12app paths (3shared+9physical).
+Dieneonlyshared mechanism addition validates symmetricparallel doublepairs to
+find missingcentralcumuleneC anchors; unsafe3negativefixtures returnunmodified.
+Enynes reuse calibration viawhitelist, no newruntimeparser/corepatch.
+
+D:48before/48after,122controls,23lessonsteps→50states/2models/2exits,64exactstroke,
+4anchor-guards,46old23guards. E:42before/42after (original36+targetedseventh6),
+109controls(94+15),23lessonsteps→50states/2models/2exits,56exactstrokes/sp;
+62old31guards,5matchedviewportpairs(10captures)rawexact,5PNGsCRC/decode/visual.
+No contacts<=.5CSSpx/hiddenlines/clipping/JS in successful browsermatrices.
+Sharedactualframe invariant42.333333333333336x34.333333333333336;842protected
+sourcefiles/core/3D/scenarios/React untouched cumulatively. Sourcecheck-final passes
+15literals/9physical/HEADindex. Native rounding measured; nopixelperfectclaim.
+No freshfull844aftertheseunits; previousfull844was afteralkenes. Boundedguards
+justified by scope/frame/sourceinvariants. Some historicalcaptureSVGs hadviewport
+size/translation/1nativeunitlabelrounding differences; freshsameviewportpairsrawexact.
+Importantdiagnostic: seventhcontrols initialstrictconsecutiveSVGbyteassertfailedonce
+at390; initialharnessdidnotcapturepair so causeUNKNOWN. Instrumentedrerun15states
+and180targetedpairs(2widths/3zooms/3rounds)PASS withoutappchange. Evidence retained;
+notclaimed asrootcausefixed/no assertionrelaxation. FinalReviewer mustassesslimit.
+
+ChemistryValidator /root/validate_alkadiene_uniform_20261031 clean8D exactgraphs
+24forms2D+8SDF; /root/validate_enyne_uniform_20261031 clean7E exactgraphs28forms,
+42productionnamingcases incltargetedseventhfollowup. [H]neutral/nonisotopic preserved.
+Allprior6E/8D bytes verified unchanged byseventh addition. StageD hashes legitimately
+superseded byE; chainofinvariants documented. Evidence/reports docs/checks/
+{alkadiene,enyne,dienes-enynes}-uniform-20261031/. Combined checkpoint communication/
+checkpoints/dienes-enynes-uniform-20261031 preserves post-cleanreviewedalkyne state.
+12filerestore dry/isolatedapply/newer-edit-refusal/ZIP passed againstfinalr2;
+Mainneverrolledback. No commit/push/publication, no offlinepackage.
+No core changes throughoutthissession/day. HEAD168e3cec; indexSHA25c21223 unchanged.
+Upstream checked4e1190ab3d58f5eb384f1583bfe05e37242bef61, synced93b759f5891d7b5a1172646032d83215d60b7604.
+Next: freeze exactfinaltarget includingnewdeliverables/notes; onefreshindependent
+Reviewer from pre-diene/post-reviewed-alkyne baseline; correctfindingsifany,
+recordverdict/finalhashverification; close onlyown8032PID24839/Firefox9237PID24840.
+Preserveuser8013/Firefox. Runtime frozen: no furthercodeeditsduringreview.
+
+# Current resume point — 2026-10-31 — Six enynes approved/implemented; combined diene/en yne checks in progress
+
+User explicitly approved all6expanded enynes, after8approveddienes. Same original
+professor reference convention and target CH.3094/allCC(incldouble/triple).6188;
+only data52/viewer whitelist/HTMLcache +3physicalExpandedMOLs (6app paths).
+Snapshot communication/checkpoints/enyne-uniform-20261031 is post-diene Developer
+validation, not separately independent-reviewed. Diene before48/after48,122controls,
+all23lessonsteps in50states,64exactstroke/centralsp,4anchor-guards and46old23runtime
+cases passed0JS; oldguardSVGdeltas3mobile cases still being normalized.
+DieneChemistryValidator clean. Final logicalunit review will combineD+E, using
+pre-diene/post-clean-reviewed-alkyne baseline and12applicationpaths. Nofinalreviewyet.
+Enyne static passes6embedded+3sources/848protected/other135records,graph/fields/
+CnH2n-4/linearsp. Before36passed; after/controls/lesson pending.
+ChemistryValidator /root/validate_enyne_uniform_20261031 inspecting4frozenpaths at
+/tmp/namelecule-enyne-uniform-20261031/chemistry-target.json. Noadditionalmechanism
+forenynes; existing reviewed calibration whitelist extended6keys. Diene missing
+centralcumulene-anchor pairvalidation is onlysharedmechanism addition inthisunit.
+No core changes throughouttoday; no commit/push/publication/React/offlinepackage.
+Upstream checked4e1190ab, actuallysynced93b759f. Own8032PID24839/Firefox9237PID24840
+remain; preserveuser8013/browser. Next finishbounded Etests/regressions/evidence,
+combinedguardedrollback andonefreshindependentReviewer, updatecontributions.
+
+# Current resume point — 2026-10-31 — Approved eight-diene implementation; validation in progress
+
+Userapprovedall8expandedalkadienes includingnativeparallel-paircenterfallback.
+Implemented9applicationpaths atopclean-reviewedalkene/alkyneunits:8embeddedMOLs,
+6physicalExpandedMOLs,existingviewerhelper+HTML2cachekeys. SourceCH.3094 and
+CC/C=C.6188,2doublebonds/IDs/fields/directions/linearcentralcumulene preserved.
+Nativehelperpreferssingleanchors, onlyifincomplete validatesparallel/order/length/
+orientation of doublepairs andchecksaveragesagainsteveryexistinganchor (1native
+roundingunit). MissingcentralC2resolvedwithoutmovinglines/atomgeometry;no offset
+exceptions. Existing23helpersskipfallbackwhenanchorscomplete.
+
+Immutablebaseline854files/9originals communication/checkpoints/alkadiene-uniform-20261031.
+StaticPASS8embedded+6physical,x/yonlyfields/graphs/valences/CnH2n-2/centralsp,
+845protectedfiles/other133records/targetotherforms/metadata/HEADindex unchanged.
+Before48/after48Firefox3formsx2widths passed0fail/JS. Controls inprogress.
+FreshChemistryValidator /root/validate_alkadiene_uniform_20261031 inspectingfrozen
+7molecularsourcepaths /tmp/namelecule-alkadiene-uniform-20261031/chemistry-target.json;
+9runtimepaths frozenruntime-freeze.json. No corechanges throughouttoday;no commit/
+push/publication. Next:controls/active22steplesson/old23guards/identicalframe,
+rollback/evidence andfreshconsolidatedReviewer. Own8032PID24839/Firefox9237PID24840
+remain;preserveuser8013/browser. No more permission needed withinapproveddieneplan.
+
+# Current resume point — 2026-10-31 — Alkynes complete/clean; eight-diene plan approved
+
+FreshReviewer /root/review_alkyne_uniform_20261031 completed55pathmanifest146a9b0e…
+review with NO actionableP0/P1/P2/P3. Actual10filediff/hashbeforeafter/sourcegraphs/
+fields/units/sp/protected844/HEADindex,64exactstrokechecks,124SVGprimitives/anchors/
+masks,identicalsharedframe,48invariants/32otherforms/30previousguards,original
+propynehistory/PNGZIP checks andsuppliedvisuals independentlychecked. Browser
+execution remainsDeveloper evidence. Boundedregression judgedproportionate;no
+freshfull844afteralkynes claimed. Fullrecord docs/checks/alkyne-uniform-20261031/.
+Runtimecheckedunchangedafterreviewbefore nextunit. Coreunchangedtoday;localonly,
+no commit/push/publication. Prioralkeneunit also complete/cleanReviewer.
+
+Userexplicitapproved8expandedalkadienes plan includingvalidatedparallel-stroke
+midpoint recognition forcentralcumuleneC withoutsinglebondanchors. Original2
+professorreferences propadiene/pentadiene_1_3 pinnedpre4919f99;6ownadditions e76eae8.
+Target CH.3094/CCandC=C.6188,sourceIDs/fields/2doublebonds/directions/linearcentralsp
+preserved, samefontcalibration withfallbackonlyformissingcenters; no per-molecule
+offsets. Scope data52/viewer52/MainHTMLcache +6physicalExpandedMOLs=9appfiles.
+Nootherforms/core/3D/scenarioJSON/React changes. ActualstoredSVGread-onlyanalysis
+showsC2missing singlebondanchor only inpropadiene/butadiene_1_2, bothdoublepairs
+agree exactlyatcenter. Userapproval in docs/checks/alkadiene-uniform-20261031/approval.json.
+Next: immutablepost-alkynebaseline, implementapproveddieneunit,boundedcontrols/
+lesson/old23guards, ChemistryValidator/freshReviewer. Own8032PID24839andFirefox9237
+PID24840remain; preserveuser8013/browser. Upstreamchecked4e1190ab, synced93b759f.
+
+# Current resume point — 2026-10-31 — Alkynes implemented/validated; Reviewer next; dienes requested
+
+Userapproved8expandedalkyne scope implemented (10applicationpaths) atop completed
+clean-reviewed7alkenes. CoordinateMOLCH.3094/CCandC≡C.6188; samecalibration helper
+accepts3, uses singlebondnativeanchors; triple3primitives/sp-linearity retained.
+Before48/after48,124UIstates/zooms/numbering/highlights/PNG,48lessonstates(all22
+activealkynesteps at1500/390+ExpandedPrev/Next),2terminalmodels/2Exit,64exactstroke/
+nativespchecks passed0contacts/hiddenlines/clipping/JS. Sourceexactunits;native
+rounding atzoom6 givesmaxCHvisiblevariation.15356CSSpx (oneintegernativeunit),
+CC.06695. Testfixed.12CSSboundwasinappropriateforzoom6;replacedbyderived2native
+endpointunitsatactualCSSscale, no runtimechange fordiagnostic. Originalfailure
+andmeasurednative563vs562data retained. No perfectequalityclaim.
+
+FreshChemistryValidator /root/validate_alkyne_uniform_20261031 independently
+verified8hashes,8embedded+7physicalMOLxy-onlyfields/directions/lengths/valences/
+CnH2n-2/linearsp+terminalH, exact2D3forms/3Dgraphmatches/parentlocants, original
+propynepre4919f99 and7ownadditionse0a3971,844protectedfiles/other133records/
+metadata/old15expanded forms unchanged. NO actionablechemicalfindings.
+30runtimeguardcases old15alkanes+alkenes passed0JS/name/graph/textdiff;28SVGexact,
+2mobileviewportheight-onlychanges normalizedequivalent (<4.55e-13nativefloat).
+All32targetcondensed/skeletalSVGexact. Sharedall141libraryframe measuredsame
+before/after(42.3333x34.3333); otherclasses unaffectedsource/guard. Priorfull844
+catalogwasAFTERALKENES; notfreshlyrerunafteralkynes. Boundedregression justified
+by identicalsharedframe,844protectedsources andold15runtimeguards. Reports/evidence
+in docs/checks/alkyne-uniform-20261031/. Guarded10filerestore testedisolatedcopy,
+newereditrefusedbeforewrites; Mainnotrolledback. No corechanges today; no commit/
+push/publication. Runtimefrozen forfinalfreshReviewer; stopeditingreviewtarget.
+
+Latest user: next applysameprocedure toalkadienes. Read-onlyinventory/reference/
+planpending; no approvalyetfordieneimplementation. Finishalkyneconsolidatedreview
+whileinvestigatingdienes. Own8032PID24839/Firefox9237PID24840remain, preserveuser8013.
+Upstreamchecked4e1190abunchanged,actuallysynced93b759f. Next: freezealkynetarget/
+Reviewer; read-onlydieneinventory andconcreteapprovalquestionbeforeadditionalcode.
+
+# Current resume point — 2026-10-31 — Approved eight-alkyne implementation; checks in progress
+
+Alkeneunit complete/cleanReviewer recorded below. Userexplicitapproved8expanded
+alkynes based on originalprofessorpropyne. Newbaseline854files/10applicationpaths
+in communication/checkpoints/alkyne-uniform-20261031 (includes completedalkene
+state). Implemented8embedded+7physicalExpandedxychanges CH.3094/CCandC≡C.6188;
+sharedexistingviewer calibration accepts3 and derives centersfromsinglebond
+anchors, preserving3nativeprimitives. HTMLcachekeysupdated. Staticpass8MOLs/
+7copies: indexedgraphs/fields/directions/valences/CnH2n-2/sp-linearity/sourcecopy
+match;844protectedfiles unchanged,other133records/metadata/targetotherforms/
+core/3D/scenarios/React/previous15expandedmolecules preserved. No core changes
+throughouttoday, no commit/push/publication.
+
+Before48Firefoxcases passed; after48inprogress. FreshChemistryValidator
+/root/validate_alkyne_uniform_20261031 inspecting8frozenmolecularsourcepaths at
+/tmp/namelecule-alkyne-uniform-20261031/chemistry-target.json. Runtime10paths
+frozen at runtime-freeze.json. Next: finishafter/controls/activealkynelesson,
+regression/rollback/evidence andfreshconsolidatedReviewer. Reusing own8032server
+PID24839andFirefox9237PID24840; preserveuser8013/browser. Noofflinetask.
+
+# Current resume point — 2026-10-31 — Alkene unit complete; eight-alkyne plan approved
+
+Alkene unit completed locally with clean fresh Reviewer /root/review_alkene_uniform_20261031
+ROLE_ID NAMELECULE_REVIEWER_V1_20261023. Frozen51paths manifestc75ac67a… matchedbefore/
+after; independentlyrechecked6filediff,7MOLs/3copies/848protectedfiles/JSC/HEAD/index,
+original4templates,108savedSVGanchors/primitives/calibration,56exactstrokechecks,
+844invariants,PNG and suppliedvisualevidence. NO actionableP0/P1/P2/P3. Browser
+runsDeveloper evidence (42before/42after/108controls/48lesson/844catalog). No core
+changes today; no commit/push/publication. Fullrecord docs/checks/alkene-uniform-20261031/.
+Runtimehasheschecked unchanged afterreview in final-verification.json; nextunit
+maylegitimatelysupersedeshareddata/viewer/HTML, preserve thischeckpoint/evidence.
+
+User explicitly approved sameprocedure for all8expandedalkynes: originalpropyne
+reference (bytespinned to4919f99^/data45) +7ownadditions e0a3971. Current propyne
+CC/CtripleC/CH.825, sevenothers1.17/.78; spcentersalreadylinear. Approvedfinal
+CH.3094,CCandC≡C.6188; preserve sp-linearity/threeprimitives/IDs/order/fields/graphs.
+Change data52,viewer52/MainHTMLcache +7physicalExpandedMOLs (10applicationpaths).
+Preserve condensed/skeletal/core/3D/scenarios/React/previousalkane+alkeneresults.
+Neednewimmutablebaseline AFTERcleanalkenereview, then sameboundedchecks/Chemistry
+Validator/consolidatedfreshReviewer. Ownserver8032PID24839/Firefox9237PID24840
+remain fornextunit; preserveuser8013/browser. Upstreamlastchecked4e1190ab unchanged;
+actuallysynced93b759f. Next: capturealkynebaseline and implementapprovedscope.
+
+# Current resume point — 2026-10-31 — Alkene implementation passed; independent Reviewer next; alkynes requested
+
+User approved exact7expandedalkene plan. Sixapplicationfiles changed (data52,
+viewer52,MainHTML and3physicalExpandedMOLs); CH.3094/CCandC=C.6188 preserve all
+IDs/graphs/orders/fields/directions. Originalprofessor4 reference bytes pinned to
+4919f99^/data45; own3 additions4919f99/f6916a8. Source-coordinate transforms and
+existing sharedfixedCCcalibration extended using singlebond anchors/svgBondList,
+so two offsetdoubleprimitives are not mistaken for atomcenters. No runtimeedit
+since freeze. Coreunchangedtoday. Other134records/targetcondensed+skeletal/
+scenarioJSON/3D/React/nativeglyphservice/JSmol preserved.
+
+Developer before42/after42,108UIstates/zooms.5/2/6/numbering/highlight/hideshow/
+idempotence/PNG passed0contact/hiddenline/clipping/JS. Fullactivealkenelesson22steps
+at1500/390 plusback/replayExpandedstep19=48states,2terminalmodels/2exits0JS.
+Finalcatalog844forms/widthcases passed0fail/JS,0name/text/element/graphdifferences;
+8alkaneexpandedguards16retaincalibration.829SVGexactlyidentical;14intendedexpanded
+changes +1ethynemobileviewportheighttimingchange, independentlynormalizedline/
+text/backplateattributes equivalentmodulotranslation/floatnoise<1e-7nativeunits. Targetotherforms28SVGexact.
+56exactstrokeintervalcases: maxsame-typeCCvariation.09925CSSpx,CH.07869(native
+rounding); pixeloracle sampling haslargeruncertainty, no perfectequalityclaim.
+Initialminzoomtest flagged overlappingFirefoxlayoutrectangles despite noactual
+inkcontact/collision. Harnesscorrectedtoactualglyphbounds+independentpixeloracle;
+productioncodeunchanged, originaldiagnosticsretained.
+
+ChemistryValidator /root/validate_alkene_uniform_20261031 freshread-only verified
+4hashes,7MOLfields/valences/CnH2n/directions/lengths/graph+3sourcecopies;canonical
+2D3forms/3Dgraphmatchall7,848protectedfiles unchanged. Noactionablefindings.
+FullindependentReviewer next; see docs/checks/alkene-uniform-20261031/ report,
+source.diff,baselines,results,reviewtargetwhenwritten. Guarded6filerestoreZIP
+isolatedrestored/newereditrefusaltested; Mainnotrolledback. Ownserver8032PID24839,
+Firefox9237PID24840; preserveuser8013/browser. No commit/push/publication.
+
+Latestusersteering: apply same procedure toalkynes too. Continueclosingalkene
+review, while investigating originalalkyneMOLs read-only. Alkynes are material
+additionaltargets beyond7approvedalkenes; present concreteplan/receiveapproval
+before data/viewer edits. Preserve tripleorder/threeprimitives and linearsp.
+Upstreamlastchecked4e1190ab unchanged thisunit; lastactuallysynced93b759f.
+Next: consolidatedfreshReviewer frozenalkeneunit and boundedalkyneinventory/plan.
+
+# Current resume point — 2026-10-31 — Approved alkene lengths implemented; verification in progress
+
+User approved the exact7expanded-alkene plan. Implemented coordinate-only target
+CH.3094/CCandC=C.6188 in7embedded and3physicalMOLs; sharedexistingviewer
+calibration extended via single-bond nativeanchors and svgBondList, preserving
+double primitives. HTMLcache keys updated. Baseline854files/6changedpaths and
+originals communication/checkpoints/alkene-uniform-20261031. Static checks pass:
+848otherfiles unchanged, indexedgraphs/fields/directions/valences/CnH2n/names/
+metadata/other134records/targetotherforms preserved. ActualFirefoxbefore42/after42
+passed0contacts/hiddenlines/clipping/JS. Controls/lessons/finalregression/review
+pending. ChemistryValidator inspecting frozen4molecularsourcepaths at
+/tmp/namelecule-alkene-uniform-20261031/chemistry-target.json. Own8032serverPID24839,
+isolatedFirefox9237PID24840; preserve user8013/browser. Coreunchanged.
+
+Earlier planning record (superseded by approval):
+User requests the recent alkane bond-length treatment for alkenes, clarifying
+that existing professor MOLs must be the basis, as for alkanes. Read-only
+investigation only; no source/geometry changes in this unit. Earlier complete
+reviewed general2D glyph/JSmol integrations preserved; extensive WIP untouched.
+History verifies4originals ethene/propene/butene_1/butene_2 (pre4919f99 data45),
+3assistant additions methyl_2_propene/methyl_3_butene_1 (4919f99) and
+ethyl_3_dimethyl_2_5_hexene_2 (f6916a8; docs/LARGE-ALKENE-TRIAL.md).
+Recent upstream already contains these additions: presence in93b759f does NOT
+make them original professor molecules. Current7expandedMOLs equal93b759f bytes.
+Original4 C-C/C=C/C-H .825; newer3 C-C/C=C about1.17, C-H about.78.
+Final approved alkane target is C-C.6188/C-H.3094,CC/font2.6175,centeredglyphs;
+newer alkane MOLs first inherited original methylpentane reference. Alkenes have
+seven expanded forms and3physicalsourcecopies in mols/new_molecules; original4
+are embedded-only. Existing fixedCC helper accepts only8alkanes/singlelines;
+naive reuse rejects double-bond primitives and native normalization can undo
+source shortening. Need measured native anchors/calibration adapted for C=C.
+
+Concrete proposed scope awaiting approval: original professor propene/butenes
+as per-category layout/reference; final same expanded coordinate lengths.3094CH,
+.6188CCandC=C, horizontal/vertical equality preserving current directions/IDs/
+bond orders; shared viewer calibration for these7, no regeneration or individual
+molecule cosmetic offsets. Change data52/viewer52/MainHTML cache keys +3physical
+Expanded MOLs only; preserve condensed/skeletal, core,3D,scenarios,React and
+reviewed glyph service. Save pre-change baseline; before/after7 browsercases
+bothwidths and zoom, gap/hiddenbond/numbering/highlight/framing/PNG/lessonreplay,
+unchangedalkane/otherforms guards; ChemistryValidator then consolidated fresh
+Reviewer. User approval required before source edits perAGENTS.
+
+Upstream read-only2026-10-31: ls-remoteHEAD4e1190ab unchanged vs lastchecked;
+local upstream/main samehash, changelog/history reviewed. No new entries/commits
+since previous check; lastactuallysynced93b759f remains, no new sync this unit.
+Todaycoreunchanged: d2138418ff630ab77e578b80ca8ba3a10cc1b877c3ab8c0e5c2735ffcd1f24a2.
+No commit/push/publication. Next: receive concrete plan approval, then immutable
+baseline/implementation and proportionate molecular/browser/review checks.
+
+# Current resume point — 2026-10-31 — General 2D glyph integration complete; independent review clean
+
+Main v52/lessons use shared real-glyph metrics and explicit atom-owned label
+backplates, fixing letter/bond contact and both compaction/oversized-mask causes.
+Local only; no commit/push/publication. No core changes throughout today; core52
+SHA d2138418ff630ab77e578b80ca8ba3a10cc1b877c3ab8c0e5c2735ffcd1f24a2.
+OriginalMOL/SDF/embeddeddata/scenarioJSON/React/JSME and prior JSmol d99 preserved.
+Actual3working-treechanges HTML/viewer/vendorREADME +75new runtime/support paths.
+
+Developer final844captures=422forms/141molecules x1500/390 passed0contact<=.5CSSpx,
+0fullyhiddenline/0clipping/0JS;0name/label/element/bondGraph differences. Controls98,
+alkane48, native92, lessons14/70sampledstates/14terminalmodels/14exits, actual2D/3D
+PNG, future18(6crowded safelyrefused), actualFontFace/metricrecovery/fontlifecycle,
+loadernormal/cdn/prefix/reload/lessonExit/DPR2six, nativeWKWebView28 passed within
+recorded scope. Not all337steps/all1413Dmodels/Chrome/Windows/Safariapp/fullBFCache.
+Pure2Dfontcallback fix postdates controls/WebKit; targeted lifecycle/loader and
+complete844catalog rerun on final frozen runtime. Details/initialfailures/fixes
+and exact test evidence: docs/checks/svg-integration-20261031/summary.json.
+
+Fresh Reviewer /root/review_svg_main_integration_20261031, ROLE_ID
+NAMELECULE_REVIEWER_V1_20261023: NO actionable P0/P1/P2/P3. Frozen137targets/78runtime
+hashes matched, manifest57e289e626c343d5d0efcac6cc54520165822339fe847e04b13ce6436e9bce20.
+Independentlychecked actualdiff, source739only3plannedchanges, HEAD/index,
+reproduciblebuilder/JSC/PythonAST,844owner/backplate and baseline invariants.
+Browser evidence supplied byDeveloper, not independently executed. Full review
+record independent-review.json. Afterreview: documentation/report status only;
+runtime frozen unchanged. Finalreconciliation/cleanup recorded in final-verification.json.
+
+Visual before/after: http://127.0.0.1:8013/docs/checks/svg-integration-20261031/report.html
+Refresh existingFirefox Main to see integration. Guarded selective rollbackZIP
+retains3originals/75new hashes; isolatedrestore/refusaltested; Mainnotrolledback.
+Pre-existingWIP/HEAD168e3cec/indexpreserved. Upstream lastchecked4e1190ab unchanged;
+lastactuallysynced93b759f. Offline deferred; February reminder unconfirmed.
+Next: user visual confirmation; future imports can run tools/check-2d-labels.py.
+Publication/save remains separate explicit instruction. Preserve user's8013server.
+
+# Current resume point — 2026-10-31 — General 2D integration implemented; final independent review pending
+
+User explicitly approved the concrete integration plan. Main v52 now uses shared
+real-glyph metrics, explicit native atom ownership and versioned JSME2023-07-31
+standards module (FEB SHA399be5b9…). Original JSME/core/MOL/SDF/scenarioJSON/React
+and prior reviewed JSmol d99b1168… preserved. No core changes throughout today.
+Runtime changes: MainHTML, viewer52, vendorREADME;75new runtime/support files.
+Exact78-path freeze and checkpoint originals in docs/checks/svg-integration-20261031/;
+selective rollback ZIP verified in isolated copy; Main not rolled back.
+
+Final844captures=422forms/141molecules x1500/390:0contacts<=.5CSSpx,0hiddenline
+primitives,0clipping,0JS,0name/label/atom-symbol/bond-graph differences. Controls98,
+alkane ratio/equal-stroke48, actual2DPNG2 and native3DPNG1200 passed. Producer92
+cases preserves original atomIDs/charge/isotope/relativecoords/MOLbody. All14
+lessons70sampledstates/14terminalmodels/14exits0JS; not all337steps. Future18:
+12accepted,6extremelycrowded safely refused. Metrics fallback/failure/recovery and
+real lateFontFace invalidation passed. NativeWKWebView28cases0contacts/hidden/
+clipping/JS (not Safari-app certification); normal/prefix/cdn loaders/reload and
+DPR2sixcases0JS. WebKit/normal controls predate final font callback correction;
+final callback targeted-tested and all844forms rerun afterward.
+
+Developer findings fixed: generic mask floor1.2->.6px (minimumzoom pentanoic bond);
+font redraw used to call3D numbering after applet teardown, now pure2D preserving
+progress/timer with owned RAF cancellation; probe freezes line geometry before
+await to avoid detached-node readings. Initial diagnostics retained, not final
+proof. Font-lifecycle pagehide/show test synthetic; fullBFCache untested.
+Visual before/after report and bounded evidence/test sources:
+docs/checks/svg-integration-20261031/report.html. Current status: review pending.
+Next: finish report browser check, freeze all deliverables, one fresh independent
+Reviewer; resolve findings/targetedchecks then final notes and own-process cleanup.
+Own temporary server8031 PID22376 and isolatedFirefox9237 PID22377; preserve user8013.
+
+Upstream re-read at unit start:4e1190ab3d58f5eb384f1583bfe05e37242bef61 unchanged;
+last actually synchronized93b759f5891d7b5a1172646032d83215d60b7604. No new upstream
+sync/commit/push/publication. HEAD168e3cec unchanged, index unchanged. Offline
+package remains deferred; February reminder creation remains unconfirmed.
+
+# Current resume point — 2026-10-31 — General 2D text integration requested; concrete plan awaiting approval
+
+Verification update: final739-baseline sources preserved except planned3 files;
+current final catalog844captures=422forms x1500/390 has0contacts<=.5CSSpx,
+0hiddenprimitives/0clipping/0JS and0name/label/atom-symbol/bond-graph differences.
+Shared pixel-floor corrected1.2->.6CSS to preserve pentanoic-acid bond atzoom.5;
+initial failure retained. Diagnostic oracle now freezes line coverage beforeawait
+(previous live-node read could observe a detached SVG). Final catalog usesfixed
+oracle and source hashes; old initial counters are not final evidence.
+Controls98states+48alkane ratio/equal-stroke cases+2nativePNG passed0JS. Native
+producer92cases/fonts9/12/14/16 passed raster and original atom/charge/isotope/
+relativecoords/MOLbody invariants. All14lessons70states14terminalmodels14exits0JS.
+Future/recovery/CLI/prefix/report tests and independentReview stillpending.
+NativeWebKit harness nowcompiles throughObjectiveC; Swift attemptfailed dueSDK
+mismatch (no SDK modifications). Do not claimWebKit results until actualrunends.
+Core unchanged. Main integration remainsinprogress, notcommitted/published.
+
+Implementation update — user approved concrete plan. Local implementation/tests
+in progress; do not declare complete. Initial backup at communication/checkpoints/
+svg-integration-20261031,739protected hashes in /tmp/namelecule-svg-integration-20261031.
+Shared metrics and versioned JSME FEB module/native atom-owner attributes installed;
+viewer uses explicit ownership and final masks; syntax passed. Actual browser
+checks beginning. Owned server8031 PID22376 / Firefox9237 PID22377. Core unchanged.
+Upstream re-read4e1190ab unchanged; no sync. Next: all-form audit/corrections,
+metrics failure/recovery/controls/lesson/browser checks and independent review.
+
+User requested integration of the 2D glyph/backplate correction into Main.
+Read-only investigation reused independently reviewed prototype/general audit,
+inspected active loader/modules and viewer producers/compaction/masks. No code
+implementation yet. Audit explicitly says prototype must NOT ship as-is: residual
+wrong backplate ownership in CHO compaction and oversized CHn masks hiding a
+pentanoic-acid C–C, plus missing-metrics crash/untested font recovery. JSmol
+lifecycle integration already complete and must remain preserved.
+
+Presented concrete scope: shared real-glyph bounds service for nativeJSME and
+viewer CHn/functional labels with safe metric/font/cache handling; explicit
+atom/label/backplate ownership for compaction; preserve approved alkane uniform
+stroke policy, remove superseded compensations only after comparison; versioned
+JSME copy with reproducible builder/provenance, actual Main/lesson loader URLs;
+guarded selective rollback. Files: mulermoc-nom-52.html,
+js/mulermoc-nom-molview-52.js, new js/namelecule-label-metrics.js,
+new js/vendor/jsme/namelecule-20261031-r1/, tools/build-jsme-labels.py and bounded
+validation tools/evidence/docs/vendor-policy record as needed. Original jsme,
+core/MOL/scenarioJSON/React preserved; no publication/commit/offline work.
+
+Acceptance: all422forms141molecules desktop/mobile, contact AND hidden-bond/
+clipping/atom-graph invariants; both residual causal examples; future stress inputs,
+sub/super labels, metrics failure/recovery, late fonts/cache, real zoom extremes,
+resize/switches/numbering/highlights/PNG, all14boundedlessonflows and existing3D
+fix smoke. Actual browser support/untested paths explicitly disclosed. One
+consolidated fresh Reviewer after unit; no automatic full-review repetition.
+Await specific plan approval per AGENTS before source edits. Read-only work and
+continuity notes authorized. No core changes today; upstream last checked4e1190ab,
+last actually synced93b759f remains. Offline deferred to near conference;
+February reminder request recorded below; actual reminder creation unconfirmed.
+
+Planning baseline SHA256:
+mulermoc-nom-52.html: 14860cfff5fcb3d5ded4a547bea88e1877201498c746760904e870f094357602
+js/mulermoc-nom-molview-52.js: 04c488613ac45e3e08686948e3633a771dd30641eb3c0a8e9e9aa90b34d4dc15
+js/mulermoc-nom-core-52.js: d2138418ff630ab77e578b80ca8ba3a10cc1b877c3ab8c0e5c2735ffcd1f24a2
+jsme/FEB169D74546A3B279D22AE09AFB86BD.cache.js: 93c3116d5e0775b9fe6953c79102813dac966f7589414ad52509f0c1e254b789
+
+# Current resume point — 2026-10-31 — Main JSmol integration complete and independently reviewed
+
+Reminder request — 2026-10-31: User now explicitly requested a February reminder
+for the deferred offline package. Proposed default1Feb2027 10:00Europe/Athens.
+No chat scheduling tool available. Native Mac Reminders creation and exact-title
+reconciliation both timed out (AppleEvent -1712); creation/notification NOT
+confirmed. Do not claim an active reminder or retry blindly. Prepared importable
+Calendar file communication/reminders/namelecule-offline-20270201.ics with one
+VEVENT at08:00UTC/10:00EET and DISPLAY alarm atstart; user import still required.
+No permission for automatic future code implementation. Application/core unchanged.
+
+Scheduling decision — 2026-10-31: The user explicitly deferred the offline
+package until closer to the April2027 conference. It is not immediate work;
+do not begin offline packaging now. This is a saved decision, not a scheduled
+reminder or authorization to implement it automatically later. Only continuity
+notes changed for this decision; no application/core changes or new tests.
+
+User-approved concrete integration finished locally. Main v52 exploration and14lessons
+share versioned local exact-reviewed JSmol d99b1168… +SRI, provenance/licenses and
+reproducible builder. Existingchanges3files: MainHTML/.gitignore/vendorREADME;
+new6runtime/supportfiles in js/vendor/jsmol/namelecule-20261031-r1/ andtools.
+Pre-existing unrelated WIP preserved. Technical record docs/JSMOL-INTEGRATION-20261031.md,
+visual report/evidence/testsources in docs/checks/jsmol-integration-20261031/.
+Selectiveguardedrollback checkpoint+archivedZIP preserve3originals/6newfilehashes.
+Dryrun/isolatedrestore/newereditrefusalpassed; Mainnotrolledback. NoGitcommitbackup.
+
+Developer20causal cases:10/10baseline fail vs0/10Main;14uncaught+4caughtbaseline,
+pageRAF/timerspreserved. All14lessons70sampledstates/14terminalmodels/14exits0JS;
+12actualrapidpicks+toggle/resize0JS; actual3Dnumberingcoords/highlights/zoom/labels;
+nativePNG1200square viarealSaveImageprompt/encoder, CRC/decode/visualpassed.
+FirstPNGharnesslackedpromptanswer, retainedtimeout; harnesscorrectedonly.
+Loadernormal/libs=cdn/prefix/reload/prefixlessonpassed.422forms141mols names/
+labeltextsunchanged.734protectedfilesonlyHTML/vendorREADMEchanged;732unchanged.
+Core/MOL/scenarios/React/HEAD/indexpreserved; JSC7inlines+bundle/build/ignorepassed.
+
+FreshReviewer /root/review_jsmol_main_integration_20261031: NO actionableP0/P1/P2/P3.
+Frozen44targets+8deps manifest48220a2bfd444e9dae08956f590ecbc5475fc797923073ae64858e9115b96544
+allmatched; independentlyreconstructedbundle/SRI/diff, checked734sources/HEAD/index,
+rollbackdryrun/guards, detailedevidence/lessonselections andnativePNGCRC/decode/image.
+Browsers/JSC/appliedisolatedrollback remainDeveloperexecutionevidence. No-source
+correctionsneeded. Afterreviewonlyreport/summary/continuitystatusupdated; targeted
+finalhashverificationrecordedseparately. Independent-review/final/cleanupJSONsaved.
+Owned21431server8030/21432headlessFirefox9237verifiedexited; user8013/profilepreserved.
+HTTP8013servesexactnewHTML/bundle; userrefreshsuffices. Visualreportdesktop1500/
+mobile390fitandimagesloaded0JS. Report-overviewscreenshotcapturedbeforereview.
+
+No corechangesinENTIREtoday'ssession: core52SHA
+d2138418ff630ab77e578b80ca8ba3a10cc1b877c3ab8c0e5c2735ffcd1f24a2.
+No commit/push/publication/newsync. CheckedupstreamHEAD4e1190abunchanged; lastactual
+sync93b759f. Remainingj2sCDN/notoffline, currentmodel-completion/hiddenload-zap,
+all337steps/all1413Dmodels, Safari/BFCache/outage/conferencerehearsal notcovered.
+2Dtextprototype remainsunintegrated. Next: presentconcreteapprovedscopeplan for
+next root-cause unit (modelcompletion or general2Dtextintegration); no silent
+implementation/publication. Do not claimconferencecertification.
+
+# Current resume point — 2026-10-31 — Main integration complete; independent review pending
+
+User-approved concrete plan implemented: shared v52 loader now loads exact reviewed
+JSmol d99b1168… at js/vendor/jsmol/namelecule-20261031-r1/ with SRI. New local
+licenses/provenance/notice and deterministic tools/build-jsmol-lifecycle.py; narrow
+.gitignore exception and vendor README policy. Three original files/six new runtime
+and support files; pre-existing unrelated WIP preserved. Guarded rollback backup in
+communication/checkpoints/jsmol-integration-20261031; durable rollback-source.zip
+under new docs/checks/jsmol-integration-20261031. Main not rolled back.
+
+Developer checks passed:20causal cases (baseline10failing, Main10zero; baseline14
+uncaught+4caught), unrelated pageRAF/timer preserved; all14lessons70sampledstates,
+14correctterminalmodels/14exits0errors;12rapidactualpicks+hide/show/resize0errors;
+realcomp5numbering2D/3Dmatchedcoordinates+highlightcolors; actualzoom/labels;
+nativeSaveImageprompt accepted viaBiDi, actualPNG1200square verifiedCRC/decoded/
+visuallyinspected. FirstPNG harness omittedprompt handling andtimedout; initiallog
+retained, harnessonlycorrected. Loader normal/libs=cdn/prefix/reload/prefixlesson
+passed. All422forms141molecules names/labeltexts unchanged fromcaptured baseline.
+Of734protectedpreexistingfiles onlyHTML/vendorREADMEchanged, other732unchanged;
+core/MOL/scenarios/React/HEAD/index unchanged. JSCbundle+7inlines, deterministic
+rebuild/corrupttargetrefusal/ignoreexception/isolatedguardedrollbackpassed.
+
+New docs/JSMOL-INTEGRATION-20261031.md +checks/jsmol-integration-20261031/ contain
+actualevidence/testsources/summary/visualreport. One fresh Reviewer next; freeze
+exactcontent/hashes beforehandoff. Noeditingreviewtargetduringreview. Scopeexcludes
+fullj2spinning/offline,model-completion/hidden-load-zap,2Dprototypeintegration,
+all337steps/all1413Dmodels andconference/Safari/BFCache/networkfailurerehearsal.
+Upstreamchecked4e1190abunchanged;lastactualsync93b759f. No newsync/commit/push/publish.
+Core unchanged ALLtoday: core52 d2138418ff630ab77e578b80ca8ba3a10cc1b877c3ab8c0e5c2735ffcd1f24a2.
+Ownedtmpserver8030 PID21431/headlessFirefox9237 PID21432 stillrunning forchecks;
+user8013/profileuntouched. Next: independentreview, resolvefindings, finalhashcheck,
+cleanupownedprocesses, updatecontinuityrecords. Localintegration notconferencecertified.
+
+# Current resume point — 2026-10-31 — Main JSmol integration approved; implementation/checks in progress
+
+User approved the concrete plan below. Installed exact reviewed d99b1168… bundle
+under js/vendor/jsmol/namelecule-20261031-r1 with SRI/provenance/licenses and
+reproducible tools/build-jsmol-lifecycle.py. Main v52 HTML loads this relative
+versioned asset; j2s/server mode config preserved. Narrow .gitignore exception
+and vendor policy updated. No core/MOL/scenario/React changes; no commit/publish.
+Selective guarded rollback under communication/checkpoints/jsmol-integration-20261031
+backs up three existing files and records six new files. Dry-run and isolated
+restore passed, including refusal of newer edits before any write. Main not rolled back.
+Builder/hash, JSC bundle/seven HTML script syntax and ignore exception passed.
+20 causal cases: baseline 10/10 reproduce errors; integrated Main 10/10 zero,
+covering RAF/resize/repaint entry/late delivered callback/post-destroy resize.
+Unrelated page work preserved. All14 bounded lesson checks now running; actual
+controls, prefix hosting, 2D/name invariants and independent final review remain.
+Temporary owned server8030 PID21431 / headlessFirefox9237 PID21432;
+work/evidence in /tmp/namelecule-jsmol-integration-20261031. User8013 untouched.
+Upstream HEAD re-read 4e1190ab3d58f5eb384f1583bfe05e37242bef61, unchanged from
+last checked; changelog/history reviewed. Last actually synchronized remains
+93b759f5891d7b5a1172646032d83215d60b7604. No new upstream sync.
+Core52 d2138418ff630ab77e578b80ca8ba3a10cc1b877c3ab8c0e5c2735ffcd1f24a2
+unchanged all today. Model-completion/hidden load-zap, offline packaging and 2D
+text prototype remain separate. Next: finish acceptance tests, archive report and
+freeze hashes for one fresh independent Reviewer; do not claim conference readiness.
+
+# Current resume point — 2026-10-31 — Concrete Main JSmol integration plan; approval pending
+
+User said yes to preparing the next concrete integration plan. Read-only
+inspection completed; NO production implementation authorized/performed yet.
+734 Main hashes unchanged from independently reviewed prototype baseline;
+HEAD168e3cec/index25c212 unchanged. Core unchanged ALLtoday (d2138418...).
+Main HTML loads unversioned CDN JSmol; local JSmol.min.js/j2s absent. .gitignore
+excludes those basenames globally and vendor README explicitly keeps JSmol out
+of Git. Prototype candidateSHA d99b1168acbbd55d59073943e6fde174513e8b815ddb88ae8f1bfa927961b323 is reviewed.
+
+Concrete proposed scope for user approval:
+- Local pre-change copies+hashes of touched files and explicit new-file inventory
+  under communication/checkpoints; selective rollback must not reset unrelatedWIP.
+- Add exact reviewed bundle at js/vendor/jsmol/namelecule-20261031-r1/JSmol.min.js,
+  source/license/provenance metadata with original/candidate hashes; preserve
+  archived base/helper/diff. Add a reproducible build/check tool under tools/.
+- Update mulermoc-nom-52.html shared script source to relative versioned bundle
+  for normal exploration and all lessons; retain existing j2s/server mode config.
+  New immutable asset path avoids old JSmol cache once HTML is reloaded. Test
+  project-subpath hosting as well as local8013. No silent unpatched-CDN fallback.
+- Narrow .gitignore exception and vendor README policy amendment, so dependency
+  is eligible for eventual save/publication; no commit/push/publication implied.
+- Use exactly tested patch, not an engine upgrade. j2s remains existing CDN in
+  this bounded step; not full runtime pin/offline guarantee. Complete dependency
+  packaging and conference rehearsal remain separate approved work.
+- Tests: build/hash/prefix asset paths, five causal failure paths, all14bounded
+  lesson navigation+exits, real rapid picks, hide/show/resize, targeted actual3D
+  numbering/highlights/camera/PNG smoke, 2D/naming/content invariants, rollback.
+  One consolidated fresh Reviewer of final integration and evidence; corrections
+  within approved scope. Source/core/MOL/scenario/React unchanged.
+
+Planned source paths: mulermoc-nom-52.html, .gitignore, js/vendor/README.md,
+new js/vendor/jsmol/namelecule-20261031-r1/ and tools/build-jsmol-lifecycle.py;
+new integration report/checks and continuity/contribution records. Exact metadata
+filenames/license notices determined from pinned source without changing patch.
+Next: present this plan and request code-change approval per AGENTS. After approval,
+check professor upstream/current overlaps before implementation as required; last
+checked4e1190ab, actuallysynced93b759f. No new sync/check claimed in this step.
+Model-completion/hiddenload-zap, earlier2D fixes and production publication stay
+outside this integration. Prototype/video still available and independentlyreviewed.
+
+# Current resume point — 2026-10-31 — JSmol prototype and video complete, independently reviewed
+
+Approved scope achieved: isolated lifecycle prototype plus requested before/after
+video. Main production integration remains NOT approved. Main/core/MOL/scenarios/
+React untouched. Report docs/JSMOL-LIFECYCLE-PROTOTYPE-20261031.md; deliverables
+under docs/checks/jsmol-lifecycle-prototype-20261031/. watch.html opened in external
+Firefox via open -a (exit0; user display not independently observed). MP4 is
+21.8217s,1280x800,859039bytes,noaudio;105 actual browser captures and105 decoded
+samples/source timestamps verified; Firefox playback/seeks4/12/20passed.
+
+Candidate SHA d99b1168acbbd55d59073943e6fde174513e8b815ddb88ae8f1bfa927961b323.
+WeakMap per applet owns/cancels RAF+resize, closes before native destroy, guards
+repaint entry before synchronous panel access and late callbacks. Five controlled
+paths x2 repeats:10baseline failing cases/10candidate zero; unrelated page work
+preserved. Mock two-owner unit passed (not two live engines).28 bounded lesson
+runs/140states/28exits: correct models,0errors bothversions.24 actual rapid picks,
+hide/show and resize pass. No full337/all141/camera-highlight pixel certification.
+Model-completion/hidden-load-zap behavior unchanged; Safari/BFCache/offline/cold
+conference rehearsal untested. Video honestly labels deliberate teardown and
+isolated prototype; no fabricated Main freeze. Source/code/evidence archived.
+
+Fresh Reviewer /root/review_jsmol_prototype_video_20261031: NO actionable findings.
+Verified40targets+7deps+734sources/HEAD/index; reconstructed candidate/diff in
+memory; exact summary; JSC ownership tests;105frame ZIP/timestamps; independently
+parsedMP4 105samples/timescale600. Browser/media execution remains Developer
+evidence. Manifest82e2cacb338ce18d37378b5b187c1042bbb183dad72961452487ddc9ee830b6a.
+All frozen targets unchanged at final check. independent-review/final-verification/
+cleanup JSON saved. Owned20762server8029/20763Firefox9237 verified exited;
+user8013/browser preserved. No commit/push/publication/upstream sync.
+Core52SHA d2138418ff630ab77e578b80ca8ba3a10cc1b877c3ab8c0e5c2735ffcd1f24a2 unchanged ALLtoday.
+Last checked upstream4e1190ab; actual sync93b759f remains.
+
+Next requires concrete plan/approval: production dependency version/loading/cache/
+rollback integration and relevant acceptance tests; separately current-model
+completion/hidden-load-zap lifecycle contract. Previous 2D prototype also remains
+unintegrated. Do not silently merge either prototype or claim conference readiness.
+
+# Current resume point — 2026-10-31 — JSmol prototype/video complete; independent review pending
+
+User approved isolatedJSmol lifecycleprototype andrequested before/aftervideo.
+Productionintegration NOTapproved. New docs/JSMOL-LIFECYCLE-PROTOTYPE-20261031.md
++checks/jsmol-lifecycle-prototype-20261031/. Frozen40targets+7deps; manifest
+82e2cacb338ce18d37378b5b187c1042bbb183dad72961452487ddc9ee830b6a. Reviewer
+/root/review_jsmol_prototype_video_20261031 inspecting; doNOTeditfrozen targets.
+734Main-sourcehashes/HEAD/index intact. Candidate d99b1168acbbd55d59073943e6fde174513e8b815ddb88ae8f1bfa927961b323,
+deterministicrebuildsame. WeakMapownsRAF/resize perapplet,closesbefore native
+_destroy; repaintentry/panel/callbackguards coverlateworkandcontinuing-script
+entryafterdestroy. Main/core/MOL/React/scenarios untouched; no generalcatch.
+
+20controlledcases:5paths2versions2repeats.10/10baselineflagged;10/10candidate0.
+Includes latecallback/newrepaint/newresize afterdestroy. Unrelatedpageworkruns.
+Mockownershipunitchecks A/B/pageisolation/newobjectsameid/reentrantclose; NOT
+2liveengines.28lessonruns140states28exits14/14modelsperversion0errorsboth under
+SDF/SPT+.5sdelay.24actualpicks (3x4eachversion)+hide/show+resize0errors37atoms.
+Notall337steps/all141models/camera-highlightpixelcertification. Modelcompletion
+contract/hiddenload-zap unchanged. Safari/BFCache/offline/conference untested.
+
+Video actual105browserPNGcaptures~5fps, threecontrolledsamecases eachbaseline1/
+candidate0. MP4 H264 21.8217s1280x800noaudio859039bytes,105/105decoded/sourcePTS
+allmatched; exact-timeencodedposterinspected. Firefoxplayback+seek4/12/20pass0JS.
+watch.htmllocalplayer; MP4+frameZIP/hashes+metadataarchived. No fakeMainfreezeclaim.
+Firstlayout828pxandinitialtimestamp/paddingchecksuperseded; final800pxnormalized.
+NativeAVFoundationencodingoutside sandbox authorized by video request; no installs.
+Ownprocesses20762server8029/20763isolatedFirefox9237 cleanupnext, user8013unchanged.
+Next: Reviewer findings/corrections, records/cleanup, openlocalwatchinexternal
+Firefox andprovidevideo. Core52SHA d2138418ff630ab77e578b80ca8ba3a10cc1b877c3ab8c0e5c2735ffcd1f24a2 unchangedALLtoday;no commit/push/publish/sync.
+
+# Current resume point — 2026-10-31 — Approved JSmol isolated prototype + video IN PROGRESS
+
+User approved tmp-only lifecycle prototype, then explicitly requested before/after
+video. Production integration NOTapproved. Root /tmp/namelecule-jsmol-lifecycle-
+prototype-20261031;734Main-sourcehashbaseline+HEAD/index preserved. Candidate
+JSmolSHA d99b1168acbbd55d59073943e6fde174513e8b815ddb88ae8f1bfa927961b323.
+HelperWeakMapperapplet ownsRAF/resize;disposeclosesbeforecancellation;repaintentry
+andcallbackcheckclosedowner/panel. Nativeactivegeometry/model/cameralogiсunchanged.
+Onlycandidatevendor+HTMLcopies modified; sourceapp/core/MOL/React untouched.
+
+Controlled20cases:5paths x2versions x2repeats. All10baselinecases fail through
+uncaughtorcaughtTypeError;all10candidatezero. Postdestroyrepaintentry andlate
+callbackdelivery included, plusresizerequestafterdestroy. Unrelatedpageworkruns.
+JSC mockedownershipunit passes A/B/page isolation/newobjectsameid/reentrantclose.
+28lessonruns140states/28exits withslowSDF/SPT:14/14terminalmodels eachversion,
+0errorsboth. Not337fullsteps. Actualactive3x4pickseachversion+hide/show+900/1500
+resize correct37atom finalmodel0errors. Video3controlledside-by-sidecases recorded:
+baseline1/candidate0 each.105actualbrowserPNGs1280x800 ~22s, nofalseMainfreezeclaim.
+NativeAVFoundationMP4encoder (noffmpeg/install) producedinitialvalidvideo but
+strictframecountcheckfoundonepaddingframe; normalizeinitialtimestamp/recheckall
+sourcetimestamps inprogress. Initial828pxrecording supersededfor800pxlayout.
+Video userdelivery andindependentreview pending, do notdeclarecompleteyet.
+
+Ownserver8029PID20762, isolatedFirefox9237PID20763; user8013/Firefox preserved.
+Next: finishencode+decode/posterinspection, archiveevidence/builddeterminism,
+consolidatedindependentReviewer, corrections/records/cleanup, provideMP4+viewerlink.
+Productionintegration/model-completioncontract/hiddenloadzap scope stayseparate.
+No corechangesALLtoday;no commit/push/publish/sync. Upstreamchecksame4e1190ab,
+lastactualsync93b759f. Previousinvestigation independentlyreviewed JSL-01closed.
+
+# Current resume point — 2026-10-31 — JSmol investigation independently reviewed
+
+User authorized read-only 3D investigation. COMPLETE; production/prototype fix
+NOTapproved or implemented. Report docs/JSMOL-LIFECYCLE-INVESTIGATION-20261031.md;
+evidence docs/checks/jsmol-lifecycle-20261031/. Main/core/MOL/React unchanged.
+19focusedflows95states,8controlledteardowns,3x4actualpicks+hide/show/resize+PNG.
+43newnaturalerrors all AFTERdestroy/departing. RAF callbacksurvives destruction;
+naturalsetScreenDimension comesfrom CONTINUING SCRIPT into repaint, notresize
+timer. Inducedresize reproduces separately. CancellingknownRAF/resize2/2perkind
+removescontrollederrors; notcompletefix orproofscriptcontinuationcovered.
+Oneimmediateemptyread, notfollowedtorecovery.6separatefollowups24laterreadscorrect
+URL37atoms;olderload/zapcallbackscompleteafterstepchange. Nopermanentblankclaim.
+
+FreshReviewer review_jsmol_lifecycle_20261031 verified24targets/5deps/734sources/
+HEAD/index,43timingclassifications+realm/context,8controls,exactsummary. JSL-01/P2
+requiredseparatingnaturalscriptcontinuationfrominducedresize andcoveringrepaint
+entryafterdestroybefore synchronoussetScreenDimension. Report+plan corrected;
+Developer targetedstack/proseverificationclosed; noadditionalruntime rerun.
+Frozenmanifest30b57e5844a0d76761bbb00c5edc775c55079f9ba56f98cc43f709e270f0f9ff;
+23targetsunchanged,onlyMDcorrected. independent-review/final-verification/cleanup
+JSONsaved. OwnedPIDs20346/20347/20429verifiedexited, user8013/Firefoxpreserved.
+
+Next concrete plan needs approval perAGENTS: isolatedcandidateJSmol.min.js+HTML
+under/tmp/namelecule-jsmol-lifecycle-prototype-20261031, perappletownership/cancel
+RAF+resize andlifecycleguardonrepaintentrybeforeanyaccess, includingcontinuing
+scripts. VerifycausalRAF/resize/postdestroyentry plusrealexits/activeflows;
+no globalexceptioncatch orarbitrarydelay. Productionintegrationseparateapproval.
+Modelcompletion/currentselection contract andhiddenload+zap separateboundedstep.
+Earlier2D audit complete andNOTintegrated. Safari/BFCache/offline/all14/337/cold
+conference rehearsal untested. No guarantee. UpstreamHEAD4e1190abunchangedlast
+checked; actualsync93b759f remains. Core52SHA d2138418ff630ab77e578b80ca8ba3a10cc1b877c3ab8c0e5c2735ffcd1f24a2 unchangedALLtoday. No commit/push/publish/sync.
+
+# Current resume point — 2026-10-31 — JSmol investigation complete; independent review pending
+
+User approved read-only 3D instability investigation, not production implementation.
+New docs/JSMOL-LIFECYCLE-INVESTIGATION-20261031.md + checks/jsmol-lifecycle-20261031/.
+24new files frozen; manifest30b57e5844a0d76761bbb00c5edc775c55079f9ba56f98cc43f709e270f0f9ff.
+Fresh independent Reviewer /root/review_jsmol_lifecycle_20261031 running. Do not
+edit frozen targets. Main/core/MOL/React and734sourcehashes/HEAD/index unchanged.
+
+Confirmed new natural nullviewererrors occur AFTERdestroy duringdeparture:
+faithful6runs1error; slow3runs42errors (41updateJS+1setScreenDimension). Native
+RAF and100msresize callbacks survive_destroy. Eightcontrolledtests:2repeats
+per RAF/resize x cancel/noCancel: native1error each, cancelownedwork0 each.
+Not symptomcatching, no reusableproductionfixyet. Priorold42+4errorlogs cannot
+allberetroclassified.19focusedlessonflows95states total, not14/337replay.
+Oneimmediatemodelread in slow3was0afterpriorcorrectURL; notfollowedtorecovery.
+6separatefollowups/24latersamples correctfile37atoms; callbacksproveolderload/zap
+work completesaftervisible stepchange. No FIFO-inversion/permanentblankclaim.
+Active3x4realpicks +hide/show+900/1500resize correctfinal37atoms0JSerrors; PNGseen.
+InstrumentedFirefox159/macOS/Jmol16.4.23 viaexistingCDN, notoffline/Safaricertified.
+Initialharnesssyntax3errors andgetVersiondiagnosticfailure disclosed/excluded.
+Sourceexcerpts/provenance andactualfunctionstrings distinguishpartialnative
+matches fromfullbytepinning. Observerevolved;earlierruns fewerloggedkindsexplicit.
+
+Proposednextplan (NOTapproved): tmp-onlycandidate JSmol+HTML toown/cancelRAF and
+resize work perapplet atdestroy, lifecycle epochguard; regressionactualnavigation.
+Model-completion/hiddenload+zap contract separate nextboundedstep. Need user
+approval before prototype/productionpatch; auditdiagnosticcancellationisnotequivalent.
+Ownprocesses20346server8027/20347Firefox9237/20429delayserver8028cleanupnext;
+user8013/Firefox untouched. UpstreamHEAD reconfirmed4e1190ab, sameaslastchecked;
+readthatCHANGELOG, nonewsincecheck;actualsync93b759f remains. No new sync/commit/
+push/publication. Core52SHA d2138418ff630ab77e578b80ca8ba3a10cc1b877c3ab8c0e5c2735ffcd1f24a2 unchanged ALLtoday.
+Next: Reviewer findings, boundedcorrectionsifneeded, finalrecords/cleanup; explain
+causeandproposeapprovednextscope. Earlier2D audit complete, integrationNOTapproved.
+
+# Current resume point — 2026-10-31 — JSmol lifecycle read-only investigation IN PROGRESS
+
+User approved investigation/reproduction of 3D null-viewer instability; NOT a
+production fix. Main/core/MOL/React untouched. New diagnostics only under
+/tmp/namelecule-jsmol-lifecycle-20261031;734source hashes+HEAD/index baseline.
+Own server8027PID20346, isolatedheadlessFirefox9237PID20347; user8013 unaffected.
+4initial+6faithfulflows complete. Faithful6 correct37atom final3D;1natural
+updateJSerror afterdestroy/beforepagehide. Slow3flow run:42errors allAFTERdestroy
+(1setScreenDimension+41updateJS);one immediate modelread37→0 transient, later
+settlementnowtesting. Controlled8tests (2repeats x RAF/resize x native/cancel):
+nativeRAF2/2 updateJSerror;native resize2/2 setScreenDimensionerror;cancelonly
+knownpendingwork4/4zeroerrors. Strongcausal evidence: scheduledwork survives
+destroy. CancellationdiagnosticONLY, no productionfix. Slow6settlementflowsnow
+running with loadStructcallbacks/atom-count timestamps.
+Initialpreload harness syntaxfailure kept separately (3diagnosticSyntaxErrors);
+not applicationregressions. CDN sources captured withheaders/hashes. Jmol
+GenericApplet.destroy nullsviewer; wrappers continueaccess unguarded; no proof
+thiscauses activepage failureyet. Actualreadinessflag isapplet-levelnotmodelready.
+UpstreamHEAD read-onlyremote check still4e1190ab (unchanged lastchecked); last
+actualsync93b759f. No codeintegration/sync/commit/publication/corechange today.
+Next: finish faithfulreproduction, test controlleddelayifneeded, record exact
+causalevidence+uncertainty; independentReviewer ofcompletedinvestigation; concrete
+fixplanonlyifjustified, approval beforeproductioncode. Previous2Daudit complete
+and separate, productionintegrationstillNOTapproved. No automatic2Dimplementation.
+
+# Current resume point — 2026-10-31 — Generalization audit independently reviewed
+
+User objective: safe shared glyph/bond solution for all current/future Main
+molecules, with conference collateral checks and visual browser findings.
+Audit COMPLETE; production integration NOT approved or implemented. Visual
+report: docs/checks/svg-general-audit-20261031/report.html (6references/14SVGs).
+Technical report: docs/SVG-GENERAL-AUDIT-20261031.md. Main/core/MOL/React unchanged.
+
+Confirmed final oracle: 141molecules/422forms;1266appcaptures;1402faithful replays.
+Desktop contact-or-gap≤0.5CSSpx forms199→1, candidate390also1; one existing hidden
+line each.198improved forms,0newdesktopcontact/hiddenprimitive,0name/graph/text
+changes. Initial235→42 counters withdrawn (mask discovery/font replay corrected).
+Causeconfirmed: CHOcollector removes unrelated C9mask in complexaldehyde;
+getBBoxovercoverage hides pentanoicacid CC. Both fixed only in scratchdiagnostics,
+NO MOL changes or production exceptions.120controlstates,2PNG,16overlapchecks,
+36futurestresscases,28lessonruns140states28exits,6warmstarts,6DPR2samples.
+Futurecrowding stillhidesbonds; injectedmissingmetrics throws. Baseline lesson
+42JSmolerrors/1unstableterminal3Dread; candidate pass does NOTprovefix. Startup
+has4ADDITIONALnullviewererrors (1setScreenDimension,3updateJS), UNKNOWNrun/version.
+Safari/full337steps/zoomextremes/latefonts/offline/coldmachine notcertified.
+
+Fresh independent Reviewer /root/review_svg_general_audit_20261031 verified frozen
+33files+4deps,734productionhashes,HEAD/index,1402capturelinks and exactsummary.
+Only AUDIT-F01/P2: missing4startup-error disclosure. Corrected technicalMD,
+HTMLgenerator/report; Developer targetedverification closed. FinalHTMLdiff is
+ONLYdisclosureparagraph; scripts/SVGs unchanged. No runtime rerun afterprosefix.
+Reviewmanifest c686e0fa170f8c632c416ac7d6ad1fb64cbb3c7966bd24e1e2032b83f79fb14e.
+independent-review.json/final-verification.json/cleanup.json record scope/evidence.
+Ownserver8026PID19347/isolatedFirefox9237PID19348 verifiedexited;user8013 preserved.
+ExternalFirefox visualreport opened via open -a Firefox (exit0); user display
+not independently observed.
+No core changes ALLtoday;core52SHA d2138418ff630ab77e578b80ca8ba3a10cc1b877c3ab8c0e5c2735ffcd1f24a2.
+HEAD168e3cec/index25c212 unchanged;no commit/push/publication/upstreamsync.
+Lastcheckedprofessor4e1190a, actuallysynced93b759f (earlier review in this session).
+Next: concrete approved-scope plan for shared accurate label geometry, mask
+ownership, fontfailurefallback/cache/versioning and new-input guard. Separate
+JSmol lifecycle/recovery investigation before conference rehearsal. Priorpropene
+mitigation remains; priorisolatedprototype not integrated. No universal guarantee.
+
+# Current resume point — 2026-10-31 — Generalization audit complete; independent review pending
+
+User asks allcurrent/futuremolecule checks, collateral/conference risk and visual
+browser findings. MAIN141molecules/422forms; integration NOTapproved. New report
+SVG-GENERAL-AUDIT-20261031.md; docs/checks/svg-general-audit-20261031/report.html
+sixvisualreferences/14SVGs/12viewbuttons, tested0JSerrors, focusfits. Need open
+report in externalFirefox AFTER review. Production/core/MOL/React untouched.
+
+Developer1266actualappcaptures:422baseline1500,422candidate1500,422candidate390.
+Corrected1402SVG replays (catalog1266+controls120+overlap16) reproduce fonts/boxes
+max7e-5px; finalpixeloracle actualdocfonts+SVGcharpositions, noTextMetricsforink.
+Initial235→42 counters SUPERSEDED: ordinalrectmap skippedrealfirstmask after
+background removal. Firstreplay also stoppedat182 due inheritedNH2font; recorded.
+Final199→1contact-or-near≤.5CSSpx forms desktop;candidate390also1;1existinghidden
+line both.0newdesktop flags,0name/graph/text changes,0clipping.16bboxfollowups
+show0actualglyph overlap.120controlstates allcorrectnumbercounts,PNG2valid.
+
+Causaldiagnostics confirmed BOTHversions: proximitycollector erroneouslyremoves
+unrelatedC9mask in ethyl_4_isopropyl_3_methyl_2_hexanal/condensed;keepingit in
+scratchDOM removes97/90→0flags. pentanoic_acid/condensedgetBBox masks hidefinalCC;
+actualinkbounds C4/C5+samepadding recover4.95644CSSpx,0contact, NO MOL change.
+Diagnostics NOTproductionfixes/per-moleculeexceptionproposals. Nativeprototype
+still tmp-only, priorpropene mitigation remains, no automaticrollback/removal.
+
+36futurestresscases:CHfactor.1 hides6lines in6cases PERversion;0contactalone
+is insufficient. Injectedmissingmetrics makescandidate throw, notproduction-safe.
+6DPR2targetcases matchknownfindings;otherbrowsers/latefonts/fullzoomuntested.
+28lessonentries/140states/28exits:baseline monoaldehydes1unstable3Dpropertysnapshot
++42null-viewererrors, candidate14/14terminalreads0errors inthissingleflow. Not
+proofJSmolfixed orpermanentlyblankbaseline. Needseparate lifecyclecause+recovery.
+337fullsteps/offline/coldmachine/conference notcertified.6warmHTTPpagestarts
+show no clear slowdown; no acceleration/benchmarkclaim.
+
+Frozen33NEWfiles,4deps;manifest c686e0fa170f8c632c416ac7d6ad1fb64cbb3c7966bd24e1e2032b83f79fb14e.
+Fresh Reviewer /root/review_svg_general_audit_20261031 inspecting; do NOTedit
+frozen targets. Source734hashes and HEAD168e3cec/index25c212... allpreserved.
+Core52d2138418... unchanged ALLtoday. No commit/push/publication/sync. Upstream
+lastchecked4e1190a, actualsync93b759f. Own8026/9237cleanup next;user8013 untouched.
+Next: Reviewer verdict/correctionsifneeded, finalize records, externalFirefox
+visualreport. Then concrete sharedmetrics+maskownership+futureguard/cache/fallback
+implementationplan for approval; JSmol conference risk separate boundedtask.
+
+# Current resume point — 2026-10-31 — Whole-catalog collateral-effects audit IN PROGRESS
+
+User requests necessary checks before eventual general use for all current and
+future molecules, emphasizing no conference flow regressions. Audit authorized;
+production integration still NOT approved. Current primary app141molecules/422
+available forms. Runtime734files+HEAD/index baseline saved under
+/tmp/namelecule-svg-general-audit-20261031/production-baseline.json. No production
+source edits. Audit scripts/evidence docs/checks/svg-general-audit-20261031/.
+
+Copied app uses original viewer/core/data, candidate only approved tmp JSME
+prototype. Baseline route points original repo; candidate root uses read-only
+symlinks except vendor redirect to isolated prototype. Server8026PID19347;
+isolatedFirefox9237PID19348, profile within tmp audit directory. User8013 untouched.
+Whole final-SVG raster catalog COMPLETED1266cases/0JSerrors: baseline1500
+235/422contact-or-near(.5CSSpx), candidate1500+39042/422 each, all42condensed.
+No new desktop contact/hiddenline flags. All422names/graph/labelstrings same.
+Desktopboth2potentialoverlaps/1hiddenline; candidate3906potentialoverlaps need
+targeted baseline390+pixel confirmation.0clipping. Sourceallunchanged.
+Future-input36cases: candidate6unsafeCHfactor.1 cases eachhide6lines (no contact);
+missingCanvasbounds injected onnewfont13 makescandidate throw, baselinestill
+renders. These BLOCK production generalization. Scripts/data undertmp.
+Controls job test-controls.py running (baseline10selections finished,candidate
+running); not yet verdict. Needfinish realcontrols and14lessonboundednav, then
+visualreport+independentReviewer. User requests conclusions with visualbrowser
+references. Latest question answered: vieweradds H/subscript to C→CHn and
+coalesces group labels; this preserves molecular graph.
+Smoke4cases perversion completed0JSerrors; prototype fixes nitro skeletal in
+sample, propene/shortalkanes still subject to existing viewer mitigations.
+CompactHCOOH no lines/no backplates: uncovered-ink flag alone NOT a defect.
+Need classify actual contact/new vs existing issues, clipping/overlap/hiddenline,
+not blindly treat every font rectangle overlap or undercoverage as failure.
+
+Read-only trace confirms viewer changes labels AFTER native producer (CHn,
+COOH/NH2/nitro compaction), fixedalkane calibration + species masks. Need final
+pipeline checks and future-input stress cases, not raw-native success alone.
+Loader actualmapping: standardHTML FEB169 with Firefox soft0/Safari soft1;
+quirks uses870EF. Do not equate whole FEBfile exclusively with Firefox.
+React host is a separate saved runtime; React remains outside primary-only
+work per user decision. Need disclose untouched copies before global claim.
+
+Next: finish catalog; inspect exact before/after failures and targeted real
+controls/theory/PNG+3D lifecycle; test rawfullcatalog/futureunsafegeometry/failure
+behavior as needed by findings; one consolidated fresh Reviewer after audit.
+Do not promise no future bug or conference readiness. Core52d2138418... unchanged
+ALLtoday, no commit/push/publication/sync. Lastcheckedupstream4e1190a, actualsync93b759f.
+
+# Current resume point — 2026-10-31 — Isolated producer prototype independently reviewed
+
+User approved isolated JSME producer prototype ("ας τη δοκιμάσουμε"), NOT app
+integration. Built only /tmp/namelecule-svg-prototype-20261031/{baseline,candidate}.
+Pin source FEB169 permutation SHA93c3116...; candidate19823458... . EQ cap/baseline
+and pre-render label bounds use actual glyph metrics/sub/super positions, native
+2-unit padding; global CQ unchanged. No viewer/postprocessed masks in experiment.
+
+Developer184native raster cases =23fixtures×4fonts×2versions: candidate92/92 no
+uncovered ink/contact within2rasterpixels/fullyhidden bond line; original86/92
+uncovered,58/92contact. Raster64px perfontem, NOT productionCSSzoom validation.
+Second184snapshots: same IDs/graph/charges/isotopes/MOLbody excluding JME timestamp;
+relativeatom maxdelta5.69e-14. Native SVG recenters/rounds, vector delta≤sqrt2units.
+Labels/font/colors/script ranges same; baseline/backplate intentionally changed.
+4deterministic rebuilds1500/390/JSME600/360;0JSerrors. NoJSmol loaded/tested.
+Report docs/SVG-TEXT-PROTOTYPE-20261031.md + checks/svg-text-prototype-20261031/.
+Offline comparison.html/png saved. Prototype scripts/evidence reproducible.
+
+Frozen15newdeliverables +4isolatedruntimehashes, manifest9e22fe3728fe95a5c0f1eb79b6d508e896c62bba6655a69127f1640df9ef3816.
+Fresh independent Reviewer /root/review_producer_prototype_20261031, ROLE_ID
+NAMELECULE_REVIEWER_V1_20261023: no findings. Independently checked19frozen+5source
+hashes, decoded/reconstructed exactvendorpatch,184SVGtables,summary/coverage/graph
+claims,AST/JSCsyntax andPNG; runtime executions remainDeveloper evidence. Records
+independent-review.json/final-verification.json. Frozen targets unchanged after
+review. No production integration approval. Need otherpermutations/browser/fontloading/fallback, numbering/highlight/
+appfit/export/lessons/fullcatalog before production readiness. Prototype hardcodes
+SVGscale30, throws on missingmetrics; not conference certification. Existing
+propene mitigation retained, all-alkene maskextension remains paused.
+
+Productionvendor/core52/viewer52/data52/HTML hashes unchanged from prototype start.
+Core52d2138418... unchanged ALLtoday. HEAD168e3cec/index25c212... same, no commit/
+push/publication/sync. Lastcheckedupstream4e1190a, actualsync93b759f. Own8025/9237
+processes receivedSIGTERM after matching their exactcmd/profile; userFirefox/
+server8013 untouched. Offlinecomparison remains usable without prototype server.
+Next: present a concrete maintainable integration plan and get approval before
+changing production; include fallback/fontloading/permutations and fullaffected
+app checks, no silent integration. Isolated prototype unit complete.
+
+# Current resume point — 2026-10-31 — Native JSME root mechanism verified; no new app fix
+
+PrimaryDeveloper completed authorized root investigation; freshReviewer
+/root/review_svg_root_20261031, ROLE_ID NAMELECULE_REVIEWER_V1_20261023, nofindings.
+Report docs/SVG-TEXT-ROOT-CAUSE-20261031.md; evidence/checks/svg-text-root-20261031/.
+ManifestSHA b2f9119f5da07e0f912f1de9619826bd59c0674efba79f827eb0bb7dfad1b6f6.
+Reviewer independently confirmed12deliverable/5runtime/5externalsourcehashes,
+stringliteraldecode,actualformula and23case arithmetic; browser Developer evidence.
+
+Same annotated propene in minimalJSME with NONameleculeviewer/core/JSmol orCSS
+reproduces rawmask. Font9ascent6/descent2→c4, height240,baseline-masktop180SVG
+units; realCTextMetricsascent200.414. Common CQ/EQ fontheight/baseline formula
+underestimatesglyphbounds in this case.15CSS/font/lineheight+8installed2023/
+official2024checks reproduce; font12marginallyfits but14/16fail. Merely changing
+font size/upgrading sampledofficialversion is not durable. Does not explain
+professor's unknown actualruntime or prove everyOS/browser/resolvedfont case.
+
+No new runtime/vendor/MOL/core change. Existing reviewed propene mitigation
+retained; all-alkene paddingextension paused. No rootfixprototype yet. Next
+concrete plan: isolated producer-level text/backplate geometry prototype first,
+with actualglyphmetrics and representativefonts/atoms/modes; production changes
+only after explicit scope approval and broadaffectedverification/review.
+Do not rebrand per-moleculemaskpadding as rootfix. Need preserve realatomIDs/
+chemical/naming/shortenedalkanes and symbol sub/superscripts in future work.
+
+Nativeprobe0JSerrors does not testJSmol; previous38null-viewererrors stillopen.
+Temporary8024/isolatedFirefox closed, userFirefox/server8013 untouched. Core52
+d2138418... unchanged whole session;HEAD168e3cec/index25c212... same. No commit/
+push/publication/upstreamsync. Lastchecked4e1190a,lastactuallysynced93b759f.
+
+# Current resume point — 2026-10-31 — Root-cause requirement; alkene extension paused
+
+Latest user instruction applies generally to ALL agents: solve demonstrated
+root causes, prevent recurrence, avoid unexplained symptom patches. Permanent
+section added toAGENTS.md, preserving conference/cost/approval/scientific rules.
+Facts/hypotheses/unknowns, real artifact/environment, causal shared fix, before/
+after regression evidence, truthful verified limits; no unconditional guarantee.
+Only documentation changed in this step.
+
+All-alkene mask-extension proposal is PAUSED, not approved. Existing reviewed
+propene-only local mitigation remains present; no implicit rollback/removal.
+It achieves measured gaps but has NOT established/fixed the originating JSME
+font/backplate mismatch. Next authorized read-only investigation: trace original
+MOL→JSME SVG generation→native mask/text dimensions→computed browser typography;
+identify first divergence and evaluate supported settings before proposing new
+implementation. Do not extend masks or claim a root-cause solution meanwhile.
+
+7alkenes audited previously,6others show contact; no category fix implemented.
+Propene review/evidence remains in PROPENE-GAP-FIX-20261031.md. Known38JSmol
+null-viewer diagnostics in supplementary navigation/audit remain unresolved,
+separate from initial bounded0errorrun. Not conference-ready certification.
+SourceHEAD168e3cec/index25c212... same, core52d2138418... unchanged allsession.
+Lastcheckedupstream4e1190a, actualsync93b759f; no sync/commit/push/publication.
+Policy review is bounded to documentation; no new app tests needed for thisstep.
+
+Policy independently reviewed by /root/review_root_cause_policy_20261031
+(ROLE_ID NAMELECULE_REVIEWER_V1_20261023), fresh context, no findings. Exact
+3file additions/hashes and runtime identity verified; runtime tests N/A.
+Record docs/checks/root-cause-policy-review-20261031.json + scoped.diff.
+After review only these status notes were added; AGENTS/runtime stay frozen.
+Developer source leads, not established cause: actual JSME API/export/font
+logic is in FEB169D74546A3B279D22AE09AFB86BD.cache.js and870EF2BAB6A388B0F864EB54CB3F82A8.cache.js
+plusdeferredjs/.../8.cache.js. Previously sampled96E40B...cache.js is Inchi
+auxiliary code; its hash alone does not verify the full active JSME runtime.
+Next investigation must identify the browser-loaded permutation and parameters.
+
+# Current resume point — 2026-10-31 — Propene correction reviewed; six more alkenes audited
+
+User prioritizes ENEPHET presentation23–25April2027Volos; permanent all-agent
+instruction now at topAGENTS.md (official https://synedrio2027.enephet.gr/).
+Prior propene-only plan renewed by user and implemented: existing glyph padding
+gate includes propeneExpanded;1viewerHTMLcache. Core/MOL/data/3D/JSON/React unchanged.
+Developer422guards/24rastercases/6interactions/12lessonvisits PASS,0JSerrors;
+min gap0.825CSSpx. Fresh Reviewer /root/review_propene_conference_20261031,
+ROLE_ID NAMELECULE_REVIEWER_V1_20261023:13frozenpaths/exactdiff/770protectedfiles/
+JSC/AST/screenshots independently checked, no findings. ManifestSHA
+68ed8ee6e279768f83cce6eb7c6b4c89b968bfbcff63806c6fa2aa507405923f.
+Only report status changed after review; frozen runtime/policy/tests unchanged.
+Unit report docs/PROPENE-GAP-FIX-20261031.md; final-verification JSON records hashes.
+
+Supplemental real scNext/scPrev6clicks +scExit→library passed. BUT combined
+nav+categoryaudit logged38nativeJSmol null-viewer errors (2setDisplay,36updateJS),
+not localized/causally explained. Do not call console clean/conference ready;
+noJSmolfix. Earlier bounded0errorrun remains separate evidence. Next diagnostic
+for this risk is scoped baseline/current lifecycle comparison, not blind repeats.
+
+Latest user asks check/fix allExpandedalkenes. READ-ONLY audit14cases at1500/390
+includes both C=Cprimitives:7alkenes;propene no flags, all6others haveC/Hcontact:
+ethene,butene_1,butene_2,methyl_2_propene,methyl_3_butene_1,ethyl_3_dimethyl_2_5_hexene_2.
+Artifacts docs/checks/alkenes-gap-audit-and-navigation-20261031.py/.json +summary.
+Concrete extension plan pending: same mask helper for classification alkenes
+(plus unchanged alkanes), viewer52+singleHTMLcache, no MOL/core/geometry changes;
+all7raster includingdoublelines/zoom/resize/highlight/presentation +422guards
+and1consolidatedReviewer. Do not imply all6alreadyfixed. Follow plan approval
+workflow before material category extension.
+
+Core52d2138418... unchanged throughouttoday. SourceHEAD168e3cec/index25c212... same.
+No commit/push/publication. User server8013 confirmed serves correctedpropene
+HTML/viewer bytes. Lastupstreamchecked4e1190a, lastactualsync93b759f, no new sync.
+Previous professor demonstrated gap accepted but exact runtime unknown; not
+explained by thisfix. Next: user approval of categoryextension, then implement.
+
+# Current resume point — 2026-10-31 — Propene safe correction approved; conference priority
+
+User moves past comparison and authorizes previously described propene-only
+Expanded gap correction, prioritizing reliable conference presentation. Official
+https://synedrio2027.enephet.gr/ checked:23–25April2027Volos. Permanent all-agent
+instruction added at top ofAGENTS.md: bounded/reversible changes, relevant real
+interaction/scenario checks, independent review, honest limits, verified recovery;
+no guarantee/offline-ready claim without evidence and no automatic publication.
+Viewer52 now reuses existing glyph-padding branch for propene only, alongside
+unchanged alkanes; HTML viewer cache updated. No MOL/core change. Baseline
+docs/checks/propene-gap-before-20261031.json.gz with770protectedruntimehashes.
+Test workdir /tmp/namelecule-propene-fix-20261031. Need real browser endpoints/
+zoom/resize/switches/numbering/export/presentation guards, then frozen review.
+Earlier actual professor demonstration difference remains unexplained; fix does
+not assert its cause. Upstream4e1190a checked, actualsync93b759f unchanged.
+No commit/push/publication. Core52baseline d2138418..., sourceHEAD168e3cec.
+Next: finish bounded verification, one fresh Reviewer, fix actionable findings.
+
+# Current resume point — 2026-10-31 — Strict comparison only; no changes requested
+
+User explicitly declines changes, wants strict comparison; confirms professor
+showed a visible gap. Accept observation. Exact demonstrated URL/browser unknown.
+Previous git-archive comparison cannot explain that screen; no fix approved.
+Opened actual professor public v52 inFirefox: propene/Expanded; screenshot saved.
+7served files HTTP200/hashmatch upstream4e1190a, expandedMOL same as local.
+Current public/Firefox centerline pixel samples show contact too; observed
+demonstration difference remains unexplained, not contradicted. NativeORGNL
+full-edit hidesC labels and cannot resolve this comparison. No causal claim.
+Details/evidence docs/PROPENE-GAP-INVESTIGATION-20261031.md + checks directory.
+No app/MOL/core edits, sync, commit or publication. Core52 d2138418... unchanged.
+Next: compare demonstrated runtime if identified; do not implement earlier plan.
+
+# Current resume point — 2026-10-31 — Propene upper C–H gap investigated; plan pending
+
+User screenshot=προπένιο. Μόνο read-only εφαρμογής + σημειώσεις/evidence.
+SameFirefox σύγκριση τοπικής και professor4e1190a με ακριβώς ίδιο ExpandedMOL:
+ίδια native masks/labelrelativepositions και raw/final SVG. Mask top κόβει
+τα ink bounds του C (local−1,663px/upstream−1,361px στα αρχικά μεγέθη).
+Κοινή κλίμακα47px αναπαράγει επαφή και στις δύο πηγές. Δεν τεκμηριώνεται
+αποκλειστική localregression· πραγματικό link/browser καθηγητή άγνωστα.
+Αλκάνια helper δεν εφαρμόζεται στο προπένιο. Προτεινόμενο, μη εγκεκριμένο:
+δοκιμή Expanded propene μόνο, glyph-based mask clearance στον viewer52 και
+HTMLcache, με MOL/lines/anchors ίδια, bounded browser/guards και1Reviewer.
+Βλ.docs/PROPENE-GAP-INVESTIGATION-20261031.md και checks/propene-gap-investigation-20261031/.
+Upstream changelog/history ελέγχθηκαν/fetched:4commits απόchecked a9284c5
+έως4e1190ab3d58f5eb384f1583bfe05e37242bef61 (narration/reviewfollowups/locant
+emphasis), overlapscore/viewer/teaching/scenario. Lastactualsync93b759f ίδιο,
+κανένα νέο sync υλοποιημένο. Πρέπει να παρουσιαστεί χωριστό πλάνο διατήρησης.
+SourceHEAD/index ίδιο· core52d2138418... αμετάβλητος, καμία αλλαγή core σήμερα.
+Χωρίς commit/push/publication. Επόμενο: έγκριση δοκιμής προπενίου από χρήστη.
+
 # Current resume point — 2026-10-30 — Main and professor report published; final save receipt
 
 Εντολή χρήστη: πλήρης αποθήκευση παντού και report/copy-paste σύνδεσμος.

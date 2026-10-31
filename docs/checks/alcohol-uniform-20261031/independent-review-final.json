@@ -1,0 +1,48 @@
+{
+  "date": "2026-10-31",
+  "reviewer": "/root/review_alcohol_final098_20261031",
+  "roleID": "NAMELECULE_REVIEWER_V1_20261023",
+  "freshContext": true,
+  "baseHEAD": "168e3cec01f941a84d40bbe0dc07156e7baa35d0",
+  "manifestSHA256": "d54101361c6269612cdcee3406d61ada27976560800f148b2bbcff005ff643fb",
+  "reviewedPaths": 47,
+  "hashesMatchedBeforeAfter": true,
+  "independentChecks": [
+    "AGENTS/checklist/sourcebaseline/diff/affectedtests",
+    "All17MOLsindependentparser:oldIDs/fields/header/tail/bondspreserved;11OH-Happend;21OHvalence/direction/collision/lengths",
+    "All9physicalembeddedagreement;dataidenticalafterremoving17targetliterals",
+    "854baseline:12appchanges/842protectedincludingcoreunchanged",
+    "Vieweronly17allowlistadditions;HTMLonly2cacheURLs",
+    "7PythonASTchecks;guarded12filerestoredryrun;HEAD/indexunchanged"
+  ],
+  "findings": [
+    {
+      "id": "AF-01",
+      "severity": "P3",
+      "path": "docs/checks/alcohol-uniform-20261031/test-forms-final.py",
+      "line": 14,
+      "issue": "DirectsettersleavestaleUI/3Dinwholeappscreenshot;notproductiondefect",
+      "requestedFix": "RealUIclicksandawait39atomsbeforecapture",
+      "status": "closedByDeveloperTargetedVerification",
+      "closureProtocol": "IsolatedP3DeveloperverificationallowedbyReviewerandcostprotocol",
+      "resolution": "Actualmolecule/modeclicks,checkedradio,awaitmatching3Dkeyand39atoms;11casesandtogglePASS;newwholeappscreenshotvisuallychecked",
+      "changedPaths": {
+        "docs/checks/alcohol-uniform-20261031/test-forms-final.py": "64d5ab1c2a0ad12b0c09d83bd914add7c02911f6216d955d57ff86e7925096f8",
+        "docs/checks/alcohol-uniform-20261031/forms-final.json.gz": "86d647395f2faa6ee10fba2b24bb6e451e083c445e3017456ce33f8ea824e000",
+        "docs/checks/alcohol-uniform-20261031/largest-applied-expanded.png": "f5f856211c931ba776e2becb8cf714950155ef6e23fb05b9c1d35a49056e556f"
+      },
+      "oldArtifactsCheckpoint": "communication/checkpoints/alcohol-review-AF01-20261031",
+      "independentReReviewPerformed": false
+    }
+  ],
+  "noActionableProductionP0P1P2": true,
+  "browserExecuted": false,
+  "suppliedBrowserEvidence": "179controls/92lesson/11forms/OH3D/exports/recovery",
+  "limits": [
+    "HistoricalviewBoxdiagnosticunresolved;beforeafterparentheights310/272notmatched",
+    "3Drecoverynotpermanentappfix",
+    "NoSafari/physicalmobile/comprehensive3D/conference/offlineverification",
+    "Read-onlyrestrictionbehavioralnotfilesystemenforced"
+  ],
+  "coreChanged": false
+}

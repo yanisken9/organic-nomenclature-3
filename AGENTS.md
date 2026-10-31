@@ -1,3 +1,47 @@
+# Conference presentation priority — April 2027
+
+- User instruction (2026-10-31), applicable to every agent: Namelecule is intended
+  for presentation at the ENEPHET conference, 23–25 April 2027 in Volos.
+  Official reference: https://synedrio2027.enephet.gr/ . Treat reliable presentation
+  flow as a continuing acceptance criterion for relevant changes.
+- Prefer bounded, reversible changes with a recorded baseline. Verify affected
+  user interactions and scenario replay, not only isolated output or syntax.
+  For viewer changes, include relevant molecule/mode switches, zoom, resize,
+  numbering/highlights and presentation navigation; scale checks to actual impact.
+- Preserve chemical and educational correctness and the independent review
+  protocol. Disclose failures, untested areas and external-service dependencies;
+  do not equate a passing smoke check with a guarantee of uninterrupted operation.
+- Keep a known verified recovery point. Before a conference release, validate the
+  agreed demonstration sequence on the intended machine/browser, including cold
+  startup and recovery. A stable release and an Internet-independent fallback
+  require their own preparation and verification; do not claim either exists
+  without evidence. This priority does not authorize unrelated refactors,
+  automatic publication, or activating all agent roles for each task.
+
+# Root-cause solutions and prevention of recurrence
+
+- User instruction (2026-10-31), applicable to every agent: prefer durable fixes
+  at the demonstrated cause of a problem. Do not present symptom suppression,
+  cosmetic compensation or a passing narrow test as proof of a root-cause fix.
+- Before proposing implementation, reproduce the failure and trace the relevant
+  data, settings and processing stages to identify where expected and actual
+  behavior first diverge. Separate measured facts, hypotheses and unknowns.
+  A repository revision or local copy does not establish what another person
+  saw in a different live deployment, browser or configuration.
+- Fix the causal component using a supported setting or a shared mechanism
+  where appropriate. Do not accumulate molecule-specific exceptions to hide an
+  unexplained failure. If only a temporary mitigation is justified, explain its
+  limits and obtain approval for that scope; do not silently call it permanent.
+- Verification should reproduce the original failure before the change, confirm
+  its resolution afterward, and cover relevant variations and affected flows.
+  Preserve scientific correctness and add meaningful regression protection
+  against recurrence, proportionate to the actual change and existing tests.
+- State the verified operating conditions and remaining uncertainties. Reliability
+  is established with evidence and independent review, not an unconditional
+  promise that a solution will always work. Existing workarounds may need later
+  reassessment; this instruction does not authorize automatic removal, broad
+  rewrites or changes outside an approved plan. Keep the cost protocol in force.
+
 # Session continuity
 
 - At session start, read `README.md`, the current session notes, and relevant

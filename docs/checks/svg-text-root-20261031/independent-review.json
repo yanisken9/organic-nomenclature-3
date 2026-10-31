@@ -1,0 +1,42 @@
+{
+  "date": "2026-10-31",
+  "reviewer": "/root/review_svg_root_20261031",
+  "roleIdentity": "NAMELECULE_REVIEWER_V1_20261023",
+  "freshContext": true,
+  "manifestSHA256": "b2f9119f5da07e0f912f1de9619826bd59c0674efba79f827eb0bb7dfad1b6f6",
+  "reviewedFiles": {
+    "docs/SVG-TEXT-ROOT-CAUSE-20261031.md": "a2d377681e09ccba4657c81e2e28c890ce9173046119f98804ddd2acfbc37f2a",
+    "docs/checks/svg-text-root-20261031/summary.json": "4cc495b81f4af956804a30b194c19e33f80be9cc388330555465133ec1089d24",
+    "docs/checks/svg-text-root-20261031/producer-source-excerpts.json": "78bb27b414feafed6fcd9483a437571691f3685eccd4d86ec291c0ff9f932a07",
+    "docs/checks/svg-text-root-20261031/official-source-check.json": "6d26fddcfd3fef4c5bd8b03e571b639a8044a24673b541259d2023b24c4826d6",
+    "docs/checks/svg-text-root-20261031/official-permutations.json": "05436abe86591a7bfab071948379b21ba9370c05099b45b77d37b2ecfe5a7d67",
+    "docs/checks/svg-text-root-20261031/baseline.json": "14011b88b584fd5542ef877ab713e7b17312349c2643502b178cce53c166ae9c",
+    "docs/checks/svg-text-root-20261031/probe.json": "58f4f644ff1ce015209023741881cc9572f0a40331738ba2c7a4dae487d51345",
+    "docs/checks/svg-text-root-20261031/probe.py": "540cc084e1e73b7564d979d04e6afed3d7f10cd22a6567ee43df80153d462f40",
+    "docs/checks/svg-text-root-20261031/propene.json": "fd0ee2a0dbeb4ffd8a900664a0e6f7db3a3877151b8e2934b657665874013444",
+    "docs/checks/svg-text-root-20261031/versions-and-fonts.json": "db22e470f2ac5b404383177872b9b7767134f7e8445a69acc28a56b8e2ae34ba",
+    "docs/checks/svg-text-root-20261031/versions-and-fonts.py": "0a447bdfaff66ebaa66f1d8955c110e006131207cfc33703a975856c3a779647",
+    "docs/checks/svg-text-root-20261031/minimal.html": "d2dd0380dd97da60805e64eacaca67f5875edc960f8df195b2d23ce89eaf4f24"
+  },
+  "findings": [],
+  "independentlyVerified": [
+    "All12deliverable+5runtime+5temporarysourcehashes beginning/end",
+    "23case arithmetic matches renderer formulas",
+    "Vendor string literal decode equals decodedsource",
+    "Source function trace and output bounds",
+    "Official atombgsize/API distinction"
+  ],
+  "developerEvidence": [
+    "23nativeFirefoxcases",
+    "Actuallyloadedpermutationresources",
+    "ZeroJSerrors in finalnativeprobes"
+  ],
+  "limitations": [
+    "No independent browser/raster run",
+    "No otherplatform/font demonstration reproduction",
+    "No implementedrootfix",
+    "JSmol issue open",
+    "No conference-readiness guarantee"
+  ],
+  "coreChangedThisSession": false
+}

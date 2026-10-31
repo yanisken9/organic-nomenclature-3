@@ -1,0 +1,54 @@
+{
+  "date": "2026-10-31",
+  "state": "local implementation complete; independent review no findings",
+  "coreChangedToday": false,
+  "changedApplicationPaths": [
+    "js/jsme-nick-nomeclature-moc2-data_52.js",
+    "js/mulermoc-nom-molview-52.js",
+    "mulermoc-nom-52.html",
+    "mols/new_molecules/methyl_2_propene_2D_Expanded.mol",
+    "mols/new_molecules/methyl_3_butene_1_2D_Expanded.mol",
+    "mols/new_molecules/ethyl_3_dimethyl_2_5_hexene_2_2D_Expanded.mol"
+  ],
+  "coordinateLengths": {
+    "CH": 0.3094,
+    "CC": 0.6188,
+    "C=C": 0.6188
+  },
+  "CCPerFont": 2.6175,
+  "CHPerFont": 1.30875,
+  "beforeCases": 42,
+  "afterCases": 42,
+  "controlStates": 108,
+  "lessonSteps": 22,
+  "lessonStates": 48,
+  "chemistryReviewFindings": [],
+  "independentFinalReview": "independent-review.json",
+  "committed": false,
+  "published": false,
+  "limitations": [
+    "Firefox on this Mac only;390px emulation",
+    "Active lesson fully replayed; historical copies not individually replayed",
+    "3D engine still uses existing j2s dependency",
+    "Diagnostic layout-rectangle overlaps at minimum zoom are not actual glyph collisions; actual glyph and raster checks used"
+  ],
+  "catalog": {
+    "cases": 844,
+    "forms": 422,
+    "molecules": 141,
+    "widths": [
+      1500,
+      390
+    ],
+    "failures": 0,
+    "javascriptErrors": 0,
+    "dataNameDifferences": 0
+  },
+  "alkaneGuardCases": 16,
+  "strokeEqualityExact": {
+    "states": 56,
+    "maxCCVariationCSS": 0.09925,
+    "maxCHVariationCSS": 0.07869,
+    "note": "Native rounding; exact source distances, not pixel-perfect equality"
+  }
+}

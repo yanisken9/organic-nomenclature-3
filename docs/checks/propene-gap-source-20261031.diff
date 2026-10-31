@@ -1,0 +1,52 @@
+--- before/AGENTS.md
++++ after/AGENTS.md
+@@ -1,3 +1,23 @@
++# Conference presentation priority — April 2027
++
++- User instruction (2026-10-31), applicable to every agent: Namelecule is intended
++  for presentation at the ENEPHET conference, 23–25 April 2027 in Volos.
++  Official reference: https://synedrio2027.enephet.gr/ . Treat reliable presentation
++  flow as a continuing acceptance criterion for relevant changes.
++- Prefer bounded, reversible changes with a recorded baseline. Verify affected
++  user interactions and scenario replay, not only isolated output or syntax.
++  For viewer changes, include relevant molecule/mode switches, zoom, resize,
++  numbering/highlights and presentation navigation; scale checks to actual impact.
++- Preserve chemical and educational correctness and the independent review
++  protocol. Disclose failures, untested areas and external-service dependencies;
++  do not equate a passing smoke check with a guarantee of uninterrupted operation.
++- Keep a known verified recovery point. Before a conference release, validate the
++  agreed demonstration sequence on the intended machine/browser, including cold
++  startup and recovery. A stable release and an Internet-independent fallback
++  require their own preparation and verification; do not claim either exists
++  without evidence. This priority does not authorize unrelated refactors,
++  automatic publication, or activating all agent roles for each task.
++
+ # Session continuity
+ 
+ - At session start, read `README.md`, the current session notes, and relevant
+--- before/js/mulermoc-nom-molview-52.js
++++ after/js/mulermoc-nom-molview-52.js
+@@ -3211,8 +3211,11 @@
+ function fPadExpandedAlkaneLabels() {
+   // Keep native atom centers and bond lines. Mask only glyph ink plus a small
+   // clearance: the font's full line box would hide short explicit C-H strokes.
++  // The same padding is enabled for the approved propene trial only; other
++  // alkenes and representation modes retain their existing native masks.
+   if (mode2D !== "expanded" ||
+-      nameExamples[selectedMol]?.classification?.seriesKey !== "alkanes") return;
++      (nameExamples[selectedMol]?.classification?.seriesKey !== "alkanes" &&
++       selectedMol !== "propene")) return;
+   const context = document.createElement("canvas").getContext("2d");
+   if (!context) return;
+   const texts = fGetRenderedAtomTextMap(false, true);
+--- before/mulermoc-nom-52.html
++++ after/mulermoc-nom-52.html
+@@ -331,7 +331,7 @@
+   <script src="js/jsme-nick-nomeclature-moc2-data_52.js?v=alkane-all-uniform-20261030"></script>
+   <script src="js/ui-icons.js?v=v52-sync-20261027-r2"></script>
+   <script src="js/mulermoc-nom-core-52.js?v=esters-20261029"></script>
+-  <script src="js/mulermoc-nom-molview-52.js?v=alkane-all-uniform-20261030"></script>
++  <script src="js/mulermoc-nom-molview-52.js?v=propene-gap-20261031"></script>
+   <script src="js/mulermoc-nom-teaching-52.js?v=acid-prefix-boxes-20261028"></script>
+   <script src="js/mulermoc-nom-note-52.js?v=v52-sync-20261027-r2"></script>
+   <script src="js/mulermoc-nom-scenario-52.js?v=other-acids-theory-20261028"></script>

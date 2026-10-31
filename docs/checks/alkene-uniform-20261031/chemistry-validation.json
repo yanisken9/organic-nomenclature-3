@@ -1,0 +1,40 @@
+{
+  "date": "2026-10-31",
+  "validator": "/root/validate_alkene_uniform_20261031",
+  "roleID": "NAMELECULE_CHEMISTRY_VALIDATOR_V1_20261023",
+  "findings": [],
+  "target": {
+    "baseHEAD": "168e3cec01f941a84d40bbe0dc07156e7baa35d0",
+    "before": "communication/checkpoints/alkene-uniform-20261031/original",
+    "files": {
+      "js/jsme-nick-nomeclature-moc2-data_52.js": "b2b99dba0dd1e73f647ce622daa192502f0b9de794be1ca173ae82a4ce0396e5",
+      "mols/new_molecules/methyl_2_propene_2D_Expanded.mol": "8914f83784c5f24cf140c7a51bccd4b45a2faa583d55c6974f012ec51fc8f82b",
+      "mols/new_molecules/methyl_3_butene_1_2D_Expanded.mol": "fc503c5a28370a4b2449690d389a14ce388f4c2e6894a47f3480ced4e4a1cae6",
+      "mols/new_molecules/ethyl_3_dimethyl_2_5_hexene_2_2D_Expanded.mol": "21fb5dc251fa2c25cffb4db678f11c45e8411d0e2e15a29a4c413351edd2d861"
+    },
+    "keys": [
+      "ethene",
+      "propene",
+      "butene_1",
+      "butene_2",
+      "methyl_2_propene",
+      "methyl_3_butene_1",
+      "ethyl_3_dimethyl_2_5_hexene_2"
+    ]
+  },
+  "independentChecks": [
+    "All4SHA256 and baseline originals",
+    "7embeddedExpandedMOL changes x/y only; same indexed bonds/orders/IDs/z/charges/stereo/headers/non-xy fields",
+    "All directions preserved; CH.3094 and CC/C=C.6188; connected acyclic CnH2n with one double; C4/H1valences",
+    "3physical MOLs agree with embedded before and after",
+    "Canonical molecular-tree comparison with bond orders/implicit-explicit H: condensed/expanded/skeletal/3D graph agreement all7 regardless atom order",
+    "Longest C=C-containing parents/minimum double-bond locants agree with existing names; Greek educational conventions preserved",
+    "Other134records/metadata/targetotherforms/848protectedfiles unchanged",
+    "History pre-addition vs4919f99/f6916a8 checked; upstream membership not mistaken for original authorship"
+  ],
+  "browserExecuted": false,
+  "limitations": [
+    "No new E/Z assignment or external PubChem/IUPAC certification",
+    "No writes; read-only behavior, not enforced filesystem isolation claim"
+  ]
+}

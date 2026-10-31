@@ -1,0 +1,65 @@
+--- baseline/EQ-native
++++ isolated/EQ-metrics
+@@ -789,9 +789,60 @@
+ (nO(),sO)[a.b[b].c])}return e!=a.b[b].p||f!=a.b[b].k}function GS(a,b,c){var d,e,f,g,h;g=51;h=0;for(f=1;f<=c;++f)b!=f&&(d=a.b[b].s-a.b[f].s,e=a.b[b].u-a.b[f].u,d=d*d+e*e,50>d&&d<g&&(g=d,h=f));return h}function JO(a,b){dZ(a);eZ(a,b)}
+ function eZ(a,b){var c,d,e,f,g;for(g=1;g<=a.r;++g){e=a.c[g];c=e.j;d=e.k;f=e.d;if(1==a.b[c].p&&-1==a.b[d].p||-1==a.b[c].p&&1==a.b[d].p)if(1==f||2==f){if(3!=a.b[c].c&&3!=a.b[d].c&&b)continue;if(1==a.b[c].c||1==a.b[d].c)continue;if(2==a.b[c].c||2==a.b[d].c)continue;if(9==a.b[c].c||10==a.b[c].c||11==a.b[c].c||12==a.b[c].c||9==a.b[d].c||10==a.b[d].c||11==a.b[d].c||12==a.b[d].c)continue;a.b[c].p=0;a.b[d].p=0;++f;e.d=f;dZ(a)}1==a.b[c].p&&1==a.b[d].p&&(2==f?f=1:3==f&&(f=2),e.d=f,dZ(a));4==f&&(f=1);e.d=f}}
+ function TQ(a,b,c){var d,e,f;e=1.7976931348623157E308;for(d=1;d<=a.q;++d)f=XQ(b,c,a.b[d].s,a.b[d].u),f<e&&(e=f);return Math.sqrt(e)}function RY(a,b,c,d){var e,f;f=e=0;0<=a&&0<=b?e=1:0<=a&&0>b?e=2:0>a&&0>b?e=3:0>a&&0<=b&&(e=4);0<=c&&0<=d?f=1:0<=c&&0>d?f=2:0>c&&0>d?f=3:0>c&&0<=d&&(f=4);if(e<f)return 1;if(e>f)return-1;switch(e){case 1:case 4:return a<c?1:-1;case 2:case 3:return a>c?1:-1}return 0}function YY(a,b){fZ(a);gZ(a);b&&dZ(a)}
+-function EQ(a){var b,c,d,e,f,g,h,j,l,n,q,r,u;r=pN(a.q+1);q=pN(a.q+1);for(n=1;n<=a.r;++n)b=a.c[n].j,d=a.c[n].k,c=a.b[b].s,e=a.b[d].s,++q[b],++q[d],r[b]=r[b]/q[b]+e/q[b],r[d]=r[d]/q[d]+c/q[d];c=9;a.n&&(c=CQ(a.n.F));for(n=1;n<=a.q;++n){g=QU(a,n);(null==g||1>g.length)&&(g=Tb);b=a.b[n];b.b=new wX;3==a.b[n].c&&0<a.b[n].n&&0==a.b[n].p&&0==b.f&&!(4<=b.q&&2==b.n)?b.b.i=!0:b.b.i=!1;e=g;d=r[n]<a.b[n].s;l=!0;1<q[n]&&8.333333333333334>Qq(r[n]-a.b[n].s)&&(l=!1);2<q[n]&&(l=!1);1==q[n]&&2.5>Qq(r[n]-a.b[n].s)&&(d=
++/* ISOLATED EXPERIMENT ONLY. Called inside JSME EQ, before native rendering.
++   Pin to the reviewed Firefox permutation; not a production vendor update. */
++var nProtoMetrics = {cache:Object.create(null), measures:0, hits:0};
++function nProtoMeasure(font, label) {
++  var scale=30, size=Math.round(font.b*scale), key=JSON.stringify([font.a,font.c,size,label.n,label.j,label.k]);
++  if(nProtoMetrics.cache[key]) {nProtoMetrics.hits++;return nProtoMetrics.cache[key];}
++  var ns='http://www.w3.org/2000/svg', svg=document.createElementNS(ns,'svg'), text=document.createElementNS(ns,'text');
++  svg.style.cssText='position:absolute;left:-100000px;top:0;opacity:0;pointer-events:none';
++  svg.setAttribute('width','10000');svg.setAttribute('height','10000');
++  text.setAttribute('x','0');text.setAttribute('y','0');text.setAttribute('font-family',font.a);
++  text.setAttribute('font-size',size+'px');
++  if(font.c&1)text.setAttribute('font-weight','bold');
++  if(font.c&2)text.setAttribute('font-style','italic');
++  var str=label.n, ranges=[[-1,label.j],[1,label.k]], prev=99, span;
++  for(var i=0;i<str.length;i++) {
++    var shift=0;
++    for(var r=0;r<ranges.length;r++) for(var j=0;j<(ranges[r][1]||[]).length;j++) {
++      var range=ranges[r][1][j];if(i>=range[0]&&i<range[0]+range[1])shift=ranges[r][0];
++    }
++    if(shift!==prev){span=document.createElementNS(ns,'tspan');if(shift)span.setAttribute('baseline-shift',shift<0?'sub':'super');text.appendChild(span);prev=shift;}
++    span.appendChild(document.createTextNode(str[i]));
++  }
++  svg.appendChild(text);document.body.appendChild(svg);
++  try {
++    var canvas=nProtoMetrics.canvas||(nProtoMetrics.canvas=document.createElement('canvas').getContext('2d'));
++    var css=getComputedStyle(text);canvas.font=css.fontStyle+' '+css.fontWeight+' '+size+'px '+css.fontFamily;
++    var left=Infinity,right=-Infinity,top=Infinity,bottom=-Infinity;
++    for(var k=0;k<str.length;k++) {
++      var p=text.getStartPositionOfChar(k), m=canvas.measureText(str[k]);
++      if(!Number.isFinite(m.actualBoundingBoxAscent)||!Number.isFinite(m.actualBoundingBoxLeft))throw Error('Missing actual glyph bounds');
++      left=Math.min(left,p.x-m.actualBoundingBoxLeft);right=Math.max(right,p.x+m.actualBoundingBoxRight);
++      top=Math.min(top,p.y-m.actualBoundingBoxAscent);bottom=Math.max(bottom,p.y+m.actualBoundingBoxDescent);
++    }
++    var cap=canvas.measureText('H');
++    var out={left:left/scale,right:right/scale,top:top/scale,bottom:bottom/scale,cap:(cap.actualBoundingBoxAscent-cap.actualBoundingBoxDescent)/scale};
++    if(!Number.isFinite(out.cap)||out.cap<=0)throw Error('Invalid font metrics');
++    nProtoMetrics.measures++;return nProtoMetrics.cache[key]=out;
++  } finally {svg.remove();}
++}
++function nProtoCap(font){return nProtoMeasure(font,{n:'H',j:null,k:null}).cap;}
++function nProtoLabel(label,font){
++  var m=nProtoMeasure(font,label), pad=2;
++  // Same native label coordinates feed the painter and molecular framing.
++  // Outward rounding accounts for JSME integer SVG coordinate serialization.
++  var x=Math.floor((label.d+m.left-pad)*30)/30;
++  var y=Math.floor((label.e+m.top-pad)*30)/30;
++  var right=Math.ceil((label.d+m.right+pad)*30)/30;
++  var bottom=Math.ceil((label.e+m.bottom+pad)*30)/30;
++  label.a=new hR(x,y,right-x,bottom-y);
++}
++
++function EQ(a){var b,c,d,e,f,g,h,j,l,n,q,r,u;r=pN(a.q+1);q=pN(a.q+1);for(n=1;n<=a.r;++n)b=a.c[n].j,d=a.c[n].k,c=a.b[b].s,e=a.b[d].s,++q[b],++q[d],r[b]=r[b]/q[b]+e/q[b],r[d]=r[d]/q[d]+c/q[d];c=9;a.n&&(c=nProtoCap(a.n.F.a));for(n=1;n<=a.q;++n){g=QU(a,n);(null==g||1>g.length)&&(g=Tb);b=a.b[n];b.b=new wX;3==a.b[n].c&&0<a.b[n].n&&0==a.b[n].p&&0==b.f&&!(4<=b.q&&2==b.n)?b.b.i=!0:b.b.i=!1;e=g;d=r[n]<a.b[n].s;l=!0;1<q[n]&&8.333333333333334>Qq(r[n]-a.b[n].s)&&(l=!1);2<q[n]&&(l=!1);1==q[n]&&2.5>Qq(r[n]-a.b[n].s)&&(d=
+ !0);f=m;a.p.b.f&&(j=a.b[n].k,0<j&&(f+=Gf,1<j&&(f+=j)));b.b.i&&(f=m);h=m;0!=b.f&&(h=yh+b.f+Gh);j=m;0!=a.b[n].p&&(1<ur(a.b[n].p)&&(j+=ur(a.b[n].p)),0<a.b[n].p?j+=Ub:j+=bc);d||!l?g=h+g+f+j+m:g=j+f+m+h+g;l||(e=g);b.b.n=g;l=OL(e,a.n.F.a);e=OL(g,a.n.F.a);u=b.b;var x;x=e;var v=void 0,t=void 0,v=a.b[n].s-l/2;d||(v-=x-l);t=a.b[n].u-c/2;v-=1;x+=1;x=new hR(v-2,t-2,x+4,c+4);u.a=x;b.b.f=null;b.b.d=b.b.a.d+2+1;b.b.e=b.b.a.e+c+2;1<f.length&&(u=g.indexOf(f),f=A(B,w,-1,[u+1,f.length-1]),b.b.j=A(No,sn,93,[f]));0<j.length&&
+-(u=g.indexOf(j),f=A(B,w,-1,[u,j.length]),b.b.k=A(No,sn,93,[f]));0<h.length&&(u=g.indexOf(h),f=A(B,w,-1,[u,h.length]),null==b.b.k?b.b.k=A(No,sn,93,[f]):b.b.k=A(No,sn,93,[b.b.k[0],f]));if((!a.p.e||a.p.i)&&-99199!=b.j)h=b.b.a,j=da+(-99199!=b.j?b.j:0),b.b.i?(g=a.b[n].u-0.1*c,d=a.b[n].s+l/4):(f=OL(j,a.n.H.a),u=0.3*c,g=a.b[n].u-u,h.e-=u,h.b+=u,h.c+=f,d?d=a.b[n].s-l/2+e:(h.d-=f,d=a.b[n].s+l/2-e-f)),b.b.b=d,b.b.c=g,b.b.f=j}}
++(u=g.indexOf(j),f=A(B,w,-1,[u,j.length]),b.b.k=A(No,sn,93,[f]));0<h.length&&(u=g.indexOf(h),f=A(B,w,-1,[u,h.length]),null==b.b.k?b.b.k=A(No,sn,93,[f]):b.b.k=A(No,sn,93,[b.b.k[0],f]));nProtoLabel(b.b,a.n.F.a);if((!a.p.e||a.p.i)&&-99199!=b.j)h=b.b.a,j=da+(-99199!=b.j?b.j:0),b.b.i?(g=a.b[n].u-0.1*c,d=a.b[n].s+l/4):(f=OL(j,a.n.H.a),u=0.3*c,g=a.b[n].u-u,h.e-=u,h.b+=u,h.c+=f,d?d=a.b[n].s-l/2+e:(h.d-=f,d=a.b[n].s+l/2-e-f)),b.b.b=d,b.b.c=g,b.b.f=j}}
+ function vQ(a){var b,c,d,e,f,g;if(0==a.q)return null;EQ(a);f=1.7976931348623157E308;d=4.9E-324;g=1.7976931348623157E308;e=4.9E-324;for(c=1;c<=a.q;++c)b=a.b[c].b,b=b.a,b.d<f&&(f=b.d),d=Np(b.d+b.c,d),b.e<g&&(g=b.e),e=Np(b.e+b.b,e);a=new bR;a.d=f;a.e=g;a.c=d-f;a.b=e-g;return a}
+ function hZ(a){var b,c,d,e,f,g,h;if(0==a.q)return null;e=1.7976931348623157E308;c=4.9E-324;f=1.7976931348623157E308;d=4.9E-324;for(b=1;b<=a.q;++b)g=a.b[b].s,h=a.b[b].u,g<e&&(e=g),c=g>c?g:c,h<f&&(f=h),d=h>d?h:d;a=new bR;a.d=e;a.e=f;a.c=c-e;a.b=d-f;return a}
+ function JQ(a,b){var c,d,e,f,g,h;h=0;for(c=1;c<=a.q;++c)a.b[c].o=0;for(e=1;e<=a.r;++e)a.c[e].f=0;a:for(;;){g=!1;for(c=1;c<=a.q;++c)if(d=a.b[c],0==d.o){d.o=++h;g=!0;break}if(!g)break a;for(;g;){g=!1;for(e=1;e<=a.r;++e)e!=b&&(f=a.c[e],0<f.f||(c=a.b[f.j],d=a.b[f.k],c.o!=d.o?(f.f=c.o=d.o=h,g=!0):f.f=c.o))}}return h}function XY(a,b){var c;++a.r;c=b?b.lh():new GN;Aq(a.c,a.r,c);return c}function LS(a,b,c,d){var e;e=XY(a,null);wN(a.b[b],c);wN(a.b[c],b);e.j=b;e.k=c;EN(e,a.b);e.d=d;return e}

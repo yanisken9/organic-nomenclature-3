@@ -1,0 +1,17 @@
+{
+  "server": {
+    "pid": 20762,
+    "command": "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python -B /tmp/namelecule-jsmol-lifecycle-prototype-20261031/server.py",
+    "signal": "SIGTERM"
+  },
+  "firefox": {
+    "pid": 20763,
+    "command": "/Applications/Firefox.app/Contents/MacOS/firefox --headless --no-remote --profile /tmp/namelecule-jsmol-lifecycle-prototype-20261031/firefox-profile --remote-debugging-port 9237 about:blank",
+    "signal": "SIGTERM"
+  },
+  "verifiedExitedPIDs": [
+    20762,
+    20763
+  ],
+  "verification": "ps returned exit1/no rows; user server8013 and externalFirefox preserved"
+}

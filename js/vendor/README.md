@@ -1,8 +1,49 @@
 # Vendored small libraries
 
 Committed so the app works without third-party CDNs for security- and
-compatibility-critical dependencies. Large, actively updated libraries (JSmol,
-`j2s/`) stay outside Git; see the project README for the local/CDN policy.
+compatibility-critical dependencies. The reviewed Namelecule JSmol entry bundle
+is versioned locally as the explicit exception described below. The large
+`j2s/` runtime still uses the existing CDN/local-path configuration and remains
+outside Git. This is not a fully offline runtime.
+
+## Namelecule JSmol lifecycle bundle — 2026-10-31 r1
+
+`jsmol/namelecule-20261031-r1/JSmol.min.js` is the exact independently reviewed
+candidate from the isolated lifecycle prototype. It owns/cancels applet repaint
+and resize work and rejects repaint after applet destruction. v52 exploration
+and lessons share this relative, versioned URL with SHA-384 integrity. Neither
+`libs=cdn` nor `libs=local` replaces it with an unpatched entry bundle; those
+options still select the existing j2s/server paths. Local j2s is not supplied.
+
+- SHA-256: `d99b1168acbbd55d59073943e6fde174513e8b815ddb88ae8f1bfa927961b323`.
+- Provenance, upstream notices and license texts: adjacent `PROVENANCE.json`,
+  `NOTICE.txt`, `LICENSE-Jmol.txt` and `LICENSE-jQuery.txt`.
+- Read-only reconstruction/check: `python3 -B tools/build-jsmol-lifecycle.py --check`.
+- Intentional reconstruction: the same command with `--write`. A different
+  implementation must use a new reviewed version/path rather than replacing
+  the bytes at this URL.
+- Archived source/helper/diff and review:
+  `docs/checks/jsmol-lifecycle-prototype-20261031/`.
+
+No unpatched CDN fallback is used for the entry bundle. The 3D engine j2s still
+comes from the configured external service by default; a complete pinned/offline
+distribution and conference rehearsal remain separate work.
+
+## Namelecule JSME label geometry — 2026-10-31 r1
+
+`jsme/namelecule-20261031-r1/` copies the pinned installed JSME2023-07-31 assets.
+The active standards-mode FEB169 module uses the shared
+`js/namelecule-label-metrics.js` service before native painting/framing and emits
+explicit atom IDs on text/backplates. Main52 exploration and lessons share it.
+The original `jsme/` and auxiliary/deferred bytes remain unchanged. The copied
+quirks module is unchanged; no corrected BackCompat or general JSME upgrade claim.
+See adjacent provenance/notice/BSD license and the integration report.
+
+Read-only reconstruction check: `python3 -B tools/build-jsme-labels.py --check`.
+Explicit reconstruction: `--write`. Inputs are pinned in
+`tools/jsme-label-inputs.json`. A future different reviewed version needs a new
+asset path/cache version. The shared service must load before this loader.
+This is unrelated to the separately deferred offline package.
 
 ## Contents
 
