@@ -1,0 +1,407 @@
+{
+  "scope": "Read-only Main-source investigation; isolated Firefox/macOS; no production fix",
+  "navigation": {
+    "reproduction": {
+      "runs": 4,
+      "states": 20,
+      "errors": 0,
+      "errorSignatures": {},
+      "errorTiming": [],
+      "firstTerminalAtoms": [
+        37,
+        37,
+        37,
+        37
+      ]
+    },
+    "faithful-exit": {
+      "runs": 6,
+      "states": 30,
+      "errors": 1,
+      "errorSignatures": {
+        "TypeError: can't access property \"updateJS\", this.viewer is null": 1
+      },
+      "errorTiming": [
+        {
+          "errorTime": 1793425874011,
+          "epoch": "1793425869405-e58l0tik717",
+          "millisecondsAfterDestroy": 6
+        }
+      ],
+      "firstTerminalAtoms": [
+        37,
+        37,
+        37,
+        37,
+        37,
+        37
+      ]
+    },
+    "slow-load": {
+      "runs": 3,
+      "states": 15,
+      "errors": 42,
+      "errorSignatures": {
+        "TypeError: can't access property \"setScreenDimension\", this.viewer is null": 1,
+        "TypeError: can't access property \"updateJS\", this.viewer is null": 41
+      },
+      "errorTiming": [
+        {
+          "errorTime": 1793425918377,
+          "epoch": "1793425916145-e6fioxt9ybt",
+          "millisecondsAfterDestroy": 4
+        },
+        {
+          "errorTime": 1793425918378,
+          "epoch": "1793425916145-e6fioxt9ybt",
+          "millisecondsAfterDestroy": 5
+        },
+        {
+          "errorTime": 1793425918379,
+          "epoch": "1793425916145-e6fioxt9ybt",
+          "millisecondsAfterDestroy": 6
+        },
+        {
+          "errorTime": 1793425918379,
+          "epoch": "1793425916145-e6fioxt9ybt",
+          "millisecondsAfterDestroy": 6
+        },
+        {
+          "errorTime": 1793425918380,
+          "epoch": "1793425916145-e6fioxt9ybt",
+          "millisecondsAfterDestroy": 7
+        },
+        {
+          "errorTime": 1793425918380,
+          "epoch": "1793425916145-e6fioxt9ybt",
+          "millisecondsAfterDestroy": 7
+        },
+        {
+          "errorTime": 1793425918380,
+          "epoch": "1793425916145-e6fioxt9ybt",
+          "millisecondsAfterDestroy": 7
+        },
+        {
+          "errorTime": 1793425918381,
+          "epoch": "1793425916145-e6fioxt9ybt",
+          "millisecondsAfterDestroy": 8
+        },
+        {
+          "errorTime": 1793425918381,
+          "epoch": "1793425916145-e6fioxt9ybt",
+          "millisecondsAfterDestroy": 8
+        },
+        {
+          "errorTime": 1793425918381,
+          "epoch": "1793425916145-e6fioxt9ybt",
+          "millisecondsAfterDestroy": 8
+        },
+        {
+          "errorTime": 1793425918381,
+          "epoch": "1793425916145-e6fioxt9ybt",
+          "millisecondsAfterDestroy": 8
+        },
+        {
+          "errorTime": 1793425918381,
+          "epoch": "1793425916145-e6fioxt9ybt",
+          "millisecondsAfterDestroy": 8
+        },
+        {
+          "errorTime": 1793425918382,
+          "epoch": "1793425916145-e6fioxt9ybt",
+          "millisecondsAfterDestroy": 9
+        },
+        {
+          "errorTime": 1793425918382,
+          "epoch": "1793425916145-e6fioxt9ybt",
+          "millisecondsAfterDestroy": 9
+        },
+        {
+          "errorTime": 1793425918383,
+          "epoch": "1793425916145-e6fioxt9ybt",
+          "millisecondsAfterDestroy": 10
+        },
+        {
+          "errorTime": 1793425918383,
+          "epoch": "1793425916145-e6fioxt9ybt",
+          "millisecondsAfterDestroy": 10
+        },
+        {
+          "errorTime": 1793425918383,
+          "epoch": "1793425916145-e6fioxt9ybt",
+          "millisecondsAfterDestroy": 10
+        },
+        {
+          "errorTime": 1793425918384,
+          "epoch": "1793425916145-e6fioxt9ybt",
+          "millisecondsAfterDestroy": 11
+        },
+        {
+          "errorTime": 1793425918384,
+          "epoch": "1793425916145-e6fioxt9ybt",
+          "millisecondsAfterDestroy": 11
+        },
+        {
+          "errorTime": 1793425918393,
+          "epoch": "1793425916145-e6fioxt9ybt",
+          "millisecondsAfterDestroy": 21
+        },
+        {
+          "errorTime": 1793425918394,
+          "epoch": "1793425916145-e6fioxt9ybt",
+          "millisecondsAfterDestroy": 21
+        },
+        {
+          "errorTime": 1793425918394,
+          "epoch": "1793425916145-e6fioxt9ybt",
+          "millisecondsAfterDestroy": 21
+        },
+        {
+          "errorTime": 1793425918394,
+          "epoch": "1793425916145-e6fioxt9ybt",
+          "millisecondsAfterDestroy": 21
+        },
+        {
+          "errorTime": 1793425918395,
+          "epoch": "1793425916145-e6fioxt9ybt",
+          "millisecondsAfterDestroy": 22
+        },
+        {
+          "errorTime": 1793425918395,
+          "epoch": "1793425916145-e6fioxt9ybt",
+          "millisecondsAfterDestroy": 22
+        },
+        {
+          "errorTime": 1793425918395,
+          "epoch": "1793425916145-e6fioxt9ybt",
+          "millisecondsAfterDestroy": 22
+        },
+        {
+          "errorTime": 1793425918395,
+          "epoch": "1793425916145-e6fioxt9ybt",
+          "millisecondsAfterDestroy": 22
+        },
+        {
+          "errorTime": 1793425918395,
+          "epoch": "1793425916145-e6fioxt9ybt",
+          "millisecondsAfterDestroy": 22
+        },
+        {
+          "errorTime": 1793425918396,
+          "epoch": "1793425916145-e6fioxt9ybt",
+          "millisecondsAfterDestroy": 23
+        },
+        {
+          "errorTime": 1793425918396,
+          "epoch": "1793425916145-e6fioxt9ybt",
+          "millisecondsAfterDestroy": 23
+        },
+        {
+          "errorTime": 1793425918396,
+          "epoch": "1793425916145-e6fioxt9ybt",
+          "millisecondsAfterDestroy": 23
+        },
+        {
+          "errorTime": 1793425918396,
+          "epoch": "1793425916145-e6fioxt9ybt",
+          "millisecondsAfterDestroy": 23
+        },
+        {
+          "errorTime": 1793425918397,
+          "epoch": "1793425916145-e6fioxt9ybt",
+          "millisecondsAfterDestroy": 24
+        },
+        {
+          "errorTime": 1793425918397,
+          "epoch": "1793425916145-e6fioxt9ybt",
+          "millisecondsAfterDestroy": 24
+        },
+        {
+          "errorTime": 1793425918397,
+          "epoch": "1793425916145-e6fioxt9ybt",
+          "millisecondsAfterDestroy": 24
+        },
+        {
+          "errorTime": 1793425918397,
+          "epoch": "1793425916145-e6fioxt9ybt",
+          "millisecondsAfterDestroy": 24
+        },
+        {
+          "errorTime": 1793425918397,
+          "epoch": "1793425916145-e6fioxt9ybt",
+          "millisecondsAfterDestroy": 24
+        },
+        {
+          "errorTime": 1793425918398,
+          "epoch": "1793425916145-e6fioxt9ybt",
+          "millisecondsAfterDestroy": 25
+        },
+        {
+          "errorTime": 1793425918398,
+          "epoch": "1793425916145-e6fioxt9ybt",
+          "millisecondsAfterDestroy": 25
+        },
+        {
+          "errorTime": 1793425918398,
+          "epoch": "1793425916145-e6fioxt9ybt",
+          "millisecondsAfterDestroy": 25
+        },
+        {
+          "errorTime": 1793425918398,
+          "epoch": "1793425916145-e6fioxt9ybt",
+          "millisecondsAfterDestroy": 25
+        },
+        {
+          "errorTime": 1793425918398,
+          "epoch": "1793425916145-e6fioxt9ybt",
+          "millisecondsAfterDestroy": 25
+        }
+      ],
+      "firstTerminalAtoms": [
+        37,
+        37,
+        0
+      ]
+    },
+    "slow-settle": {
+      "runs": 6,
+      "states": 30,
+      "errors": 0,
+      "errorSignatures": {},
+      "errorTiming": [],
+      "firstTerminalAtoms": [
+        37,
+        37,
+        37,
+        37,
+        37,
+        37
+      ]
+    }
+  },
+  "settlement": {
+    "samples": 24,
+    "allFinalAtoms37AndExpectedFile": true,
+    "cumulativeWaitSeconds": [
+      0.1,
+      0.5,
+      1.5,
+      3.0
+    ],
+    "lateZapCallbacksAtFinalVisibleStepPerRun": [
+      2,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "note": "The one immediate empty read in slow-load was not itself followed to recovery; six separate follow-up runs settled correctly."
+  },
+  "controlledTeardown": [
+    {
+      "kind": "raf",
+      "cancelPending": false,
+      "repeats": 2,
+      "errorCounts": [
+        1,
+        1
+      ]
+    },
+    {
+      "kind": "raf",
+      "cancelPending": true,
+      "repeats": 2,
+      "errorCounts": [
+        0,
+        0
+      ]
+    },
+    {
+      "kind": "resize",
+      "cancelPending": false,
+      "repeats": 2,
+      "errorCounts": [
+        1,
+        1
+      ]
+    },
+    {
+      "kind": "resize",
+      "cancelPending": true,
+      "repeats": 2,
+      "errorCounts": [
+        0,
+        0
+      ]
+    }
+  ],
+  "activeFlows": {
+    "rapidFourMoleculeSequences": 3,
+    "selectionClicks": 12,
+    "toggleHideShow": true,
+    "resizeWidths": [
+      900,
+      1500
+    ],
+    "errors": 0,
+    "finalAtoms": 37,
+    "environment": {
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:159.0) Gecko/20100101 Firefox/159.0",
+      "jsmolVersion": "2022-06-24 05:54:49 (JSmol/j2s)",
+      "engine": {
+        "codeBase": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/",
+        "date": "2026-08-24 10:15",
+        "documentBase": "http://127.0.0.1:8028/slow/app/mulermoc-nom-52.html?audit=active-switches",
+        "fullName": "jmolAppletNomeclature__4881213112821714__",
+        "htmlName": "jmolAppletNomeclature",
+        "javaVendor": "Java2Script (HTML5)",
+        "javaVersion": "2022-06-24 05:54:49 (JSmol/j2s)(HTML5)",
+        "operatingSystem": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:159.0) Gecko/20100101 Firefox/159.0",
+        "registry": {
+          "jmolAppletNomeclature__4881213112821714__": "[J.appletjs.Jmol object]"
+        },
+        "syncId": "4881213112821714",
+        "version": "16.4.23"
+      },
+      "jquery": "3.7.1",
+      "resources": [
+        {
+          "name": "https://chemapps.stolaf.edu/jmol/jsmol/JSmol.min.js",
+          "start": 358,
+          "end": 368
+        },
+        {
+          "name": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/img/JSmol_spinner.gif",
+          "start": 396,
+          "end": 398
+        },
+        {
+          "name": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corejmol.z.js",
+          "start": 612,
+          "end": 614
+        },
+        {
+          "name": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corescript.z.js",
+          "start": 788,
+          "end": 790
+        }
+      ]
+    }
+  },
+  "initialDiagnosticFailure": {
+    "file": "reproduction-initial-preload-failure.json.gz",
+    "cause": "Incorrect preload functionDeclaration syntax",
+    "errors": 3,
+    "applicationRegression": false
+  },
+  "limits": [
+    "Instrumentation may change timing; measured frequencies are not estimates",
+    "No permanent blank active-page failure reproduced",
+    "Cannot retrospectively attribute all older audit errors without lifecycle timestamps",
+    "One focused lesson, not all14 lessons/337steps",
+    "Safari/other browsers, offline, intended-machine cold rehearsal and BFCache Back/Forward not tested",
+    "Cancellation only diagnostic and owned-work-specific; no production implementation",
+    "No 2D/core/React/MOL edits or chemical certification"
+  ]
+}

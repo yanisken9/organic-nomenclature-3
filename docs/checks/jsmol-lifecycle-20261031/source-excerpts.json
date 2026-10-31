@@ -1,0 +1,22 @@
+[
+  {
+    "source": "JSmol.min.js",
+    "line": 65,
+    "text": "a._setDestroy=function(c){a.featureDetection.allowDestroy&&a.$windowOn(\"beforeunload\",function(){a._destroy(c)})};\na._destroy=function(c){try{c._appletPanel&&c._appletPanel.destroy();c._applet=null;a._unsetMouse(c._canvas);c._canvas=null;for(var e=0,h=0;h<a._syncedApplets.length;h++)a._syncedApplets[h]==c&&(a._syncedApplets[h]=null),a._syncedApplets[h]&&e++;0<e||a._clearVars()}catch(b){}}"
+  },
+  {
+    "source": "JSmol.min.js",
+    "line": 110,
+    "text": "c._resize=function(){var b=\"__resizeTimeout_\"+this._id;a[b]&&clearTimeout(a[b]);var c=this;a[b]=setTimeout(function(){a.repaint(c,!0);a[b]=null},100)};return c};a.repaint=function(b,c){if(b&&b._appletPanel){var d=a.$(b,\"appletdiv\"),f=Math.round(d.width()),d=Math.round(d.height());if(b._is2D&&(b._canvas.width!=f||b._canvas.height!=d))b._newCanvas(!0),b._appletPanel.setDisplay(b._canvas);b._appletPanel.setScreenDimension(f,d);f=function(){b._appletPanel.paint?b._appletPanel.paint(null):\nb._appletPanel.update(null)};c?requestAnimationFrame(f):f()}}"
+  },
+  {
+    "source": "corejmol.z.js",
+    "line": 1844,
+    "text": "j(b,\"destroy\",function(){this.gRight=null;this.viewer.notifyStatusReady(!1);this.viewer=null;JU.GenericApplet.checkOut(this.fullName)})"
+  },
+  {
+    "source": "corejmol.z.js",
+    "line": 2547,
+    "text": "j(b,\"dispose\",function(){this.gRight=null;null!=this.mouse&&(this.acm.dispose(),this.mouse.dispose(),this.mouse=null);this.clearScriptQueue();this.clearThreads();this.haltScriptExecution();null!=this.scm&&this.scm.clear(!0);this.gdata.destroy();null!=this.jmolpopup&&this.jmolpopup.jpiDispose();null!=this.modelkit&&this.modelkit.dispose();try{null!=this.appConsole&&(this.appConsole.dispose(),this.appConsole=null),null!=this.scriptEditor&&(this.scriptEditor.dispose(),this.scriptEditor=null)}catch(a){if(!H(a,\nException))throw a;}})"
+  }
+]

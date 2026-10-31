@@ -1,0 +1,82 @@
+{
+  "name": "Namelecule JSmol lifecycle entry bundle",
+  "version": "20261031-r1",
+  "modifiedDate": "2026-10-31",
+  "sourceURL": "https://chemapps.stolaf.edu/jmol/jsmol/JSmol.min.js",
+  "upstreamProject": "https://jmol.sourceforge.net/",
+  "upstreamSource": "https://svn.code.sf.net/p/jmol/code/trunk/Jmol/",
+  "baseSHA256": "7ade5bf896b800582acd0067d2f669433a501d2c450c8c4a176604a379f771a6",
+  "bundleSHA256": "d99b1168acbbd55d59073943e6fde174513e8b815ddb88ae8f1bfa927961b323",
+  "integritySHA384": "sha384-y4u4hIq8Whzghkk/SjuVpro+EDm44cNe8bcclNCCcWzLmJpnALhyjwGit8tMghR/",
+  "engineObservedDuringPrototype": "16.4.23",
+  "j2sPinned": false,
+  "j2sDefaultURL": "https://chemapps.stolaf.edu/jmol/jsmol/j2s",
+  "changes": [
+    "Per-applet WeakMap ownership of repaint/resize work",
+    "Close and cancel owned work before native destruction",
+    "Guard repaint entry and callbacks after destruction"
+  ],
+  "review": {
+    "reviewer": "/root/review_jsmol_prototype_video_20261031",
+    "manifestSHA256": "82e2cacb338ce18d37378b5b187c1042bbb183dad72961452487ddc9ee830b6a",
+    "findings": []
+  },
+  "rebuildTool": "tools/build-jsmol-lifecycle.py",
+  "archivedInputs": "docs/checks/jsmol-lifecycle-prototype-20261031",
+  "upstreamLicensePage": "https://wiki.jmol.org/index.php/License",
+  "licenseSources": [
+    {
+      "name": "Jmol-LICENSE.txt",
+      "url": "https://svn.code.sf.net/p/jmol/code/trunk/Jmol/LICENSE.txt",
+      "bytes": 26432,
+      "headers": {
+        "Server": "nginx",
+        "Date": "Sat, 31 Oct 2026 06:21:20 GMT",
+        "Content-Type": "text/plain; charset=UTF-8",
+        "Content-Length": "26432",
+        "Connection": "close",
+        "last-modified": "Tue, 07 Jun 2005 14:58:10 GMT",
+        "etag": "\"3701//trunk/Jmol/LICENSE.txt\"",
+        "cache-control": "max-age=604800",
+        "Accept-Ranges": "bytes"
+      }
+    },
+    {
+      "name": "jQuery-LICENSE.txt",
+      "url": "https://raw.githubusercontent.com/jquery/jquery/3.7.1/LICENSE.txt",
+      "bytes": 1097,
+      "headers": {
+        "Connection": "close",
+        "Content-Length": "1097",
+        "Cache-Control": "max-age=300",
+        "Content-Security-Policy": "default-src 'none'; style-src 'unsafe-inline'; sandbox",
+        "Content-Type": "text/plain; charset=utf-8",
+        "ETag": "\"53d540840d549fbb0e819a797c8fcb64e40308850e73b4b9da703ed9deb2b71d\"",
+        "Strict-Transport-Security": "max-age=31536000",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "deny",
+        "X-XSS-Protection": "1; mode=block",
+        "X-GitHub-Request-Id": "1646:2243DC:21D5E:2329E:6AE4BE64",
+        "x-github-edge-region": "fra",
+        "Accept-Ranges": "bytes",
+        "Date": "Sat, 31 Oct 2026 06:21:20 GMT",
+        "Via": "1.1 varnish",
+        "X-Served-By": "cache-fra-eddf8230111-FRA",
+        "X-Cache": "HIT",
+        "X-Cache-Hits": "0",
+        "X-Timer": "S1793427681.580234,VS0,VE228",
+        "Vary": "Authorization,Accept-Encoding",
+        "Access-Control-Allow-Origin": "*",
+        "Cross-Origin-Resource-Policy": "cross-origin",
+        "X-Fastly-Request-ID": "77ea9742219b6645c662043b70fd2f20d7ec168d",
+        "Expires": "Sat, 31 Oct 2026 06:26:20 GMT",
+        "Source-Age": "0"
+      }
+    }
+  ],
+  "licenseFiles": {
+    "LICENSE-Jmol.txt": "6095e9ffa777dd22839f7801aa845b31c9ed07f3d6bf8a26dc5d2dec8ccc0ef3",
+    "LICENSE-jQuery.txt": "d4db9ebe6f29f5168eac45ad713f055623ac5d0dcd5ba92da23d650ae012020d"
+  },
+  "publication": "Local integration; not committed or published"
+}

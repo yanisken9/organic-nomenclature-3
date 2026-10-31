@@ -1,0 +1,22 @@
+Jmol / JSmol — upstream Jmol project and contributors
+Project: https://jmol.sourceforge.net/
+Source: https://svn.code.sf.net/p/jmol/code/trunk/Jmol/
+License reference: https://wiki.jmol.org/index.php/License
+The official project identifies JSmol, including JSmol.min.js, as LGPL software.
+The included LICENSE-Jmol.txt is the Version2.1 text obtained from the official
+Jmol source repository LICENSE.txt; its exact source/hash is in PROVENANCE.json.
+
+The distributed entry bundle also includes jQuery3.7.1. Its original header is
+preserved byte-for-byte. LICENSE-jQuery.txt is the upstream jQuery3.7.1 MIT text.
+
+Namelecule modifications — 2026-10-31, r1
+Per-applet lifecycle ownership, cancellation before native destruction, and
+repaint entry/callback guards. Source/helper/diff are archived under
+/docs/checks/jsmol-lifecycle-prototype-20261031/. Rebuild/check with
+python3 -B tools/build-jsmol-lifecycle.py --check
+The tool applies the reviewed textual patch to the pinned distributed bundle.
+It does not rebuild the entire upstream Java/Java2Script distribution.
+
+The normal v52 entry bundle is local/versioned; remaining j2s files use the
+existing configured CDN/local paths. A complete offline distribution is not
+included in this integration. See PROVENANCE.json for hashes and source records.

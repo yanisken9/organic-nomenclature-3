@@ -1,0 +1,23 @@
+{
+  "server": {
+    "pid": 20346,
+    "command": "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python -B -m http.server 8027 --bind 127.0.0.1 --directory /tmp/namelecule-jsmol-lifecycle-20261031",
+    "signal": "SIGTERM"
+  },
+  "firefox": {
+    "pid": 20347,
+    "command": "/Applications/Firefox.app/Contents/MacOS/firefox --headless --no-remote --profile /tmp/namelecule-jsmol-lifecycle-20261031/firefox-profile --remote-debugging-port 9237 about:blank",
+    "signal": "SIGTERM"
+  },
+  "slowServer": {
+    "pid": 20429,
+    "command": "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python -B /tmp/namelecule-jsmol-lifecycle-20261031/slow-server.py",
+    "signal": "SIGTERM"
+  },
+  "verifiedExitedPIDs": [
+    20346,
+    20347,
+    20429
+  ],
+  "verification": "ps -p returned exit1/no rows; user8013/externalFirefox preserved"
+}

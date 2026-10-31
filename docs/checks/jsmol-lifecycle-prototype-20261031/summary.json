@@ -1,0 +1,173 @@
+{
+  "scope": "Isolated JSmol lifecycle prototype; production source unchanged; not integrated",
+  "causal": [
+    {
+      "kind": "raf",
+      "version": "baseline",
+      "repeats": 2,
+      "failedCases": 2,
+      "uncaughtExceptions": 6,
+      "caughtExceptions": 0
+    },
+    {
+      "kind": "raf",
+      "version": "candidate",
+      "repeats": 2,
+      "failedCases": 0,
+      "uncaughtExceptions": 0,
+      "caughtExceptions": 0
+    },
+    {
+      "kind": "resize",
+      "version": "baseline",
+      "repeats": 2,
+      "failedCases": 2,
+      "uncaughtExceptions": 2,
+      "caughtExceptions": 0
+    },
+    {
+      "kind": "resize",
+      "version": "candidate",
+      "repeats": 2,
+      "failedCases": 0,
+      "uncaughtExceptions": 0,
+      "caughtExceptions": 0
+    },
+    {
+      "kind": "entryAfterDestroy",
+      "version": "baseline",
+      "repeats": 2,
+      "failedCases": 2,
+      "uncaughtExceptions": 0,
+      "caughtExceptions": 2
+    },
+    {
+      "kind": "entryAfterDestroy",
+      "version": "candidate",
+      "repeats": 2,
+      "failedCases": 0,
+      "uncaughtExceptions": 0,
+      "caughtExceptions": 0
+    },
+    {
+      "kind": "lateDeliveredFrame",
+      "version": "baseline",
+      "repeats": 2,
+      "failedCases": 2,
+      "uncaughtExceptions": 0,
+      "caughtExceptions": 2
+    },
+    {
+      "kind": "lateDeliveredFrame",
+      "version": "candidate",
+      "repeats": 2,
+      "failedCases": 0,
+      "uncaughtExceptions": 0,
+      "caughtExceptions": 0
+    },
+    {
+      "kind": "resizeAfterDestroy",
+      "version": "baseline",
+      "repeats": 2,
+      "failedCases": 2,
+      "uncaughtExceptions": 2,
+      "caughtExceptions": 0
+    },
+    {
+      "kind": "resizeAfterDestroy",
+      "version": "candidate",
+      "repeats": 2,
+      "failedCases": 0,
+      "uncaughtExceptions": 0,
+      "caughtExceptions": 0
+    }
+  ],
+  "unrelatedPageRAFAndTimerPreserved": true,
+  "mockedOwnershipUnit": {
+    "passed": true,
+    "ownedCancellation": true,
+    "otherOwnerAndPageSurvive": true,
+    "lateCallbackGuard": true,
+    "newObjectSameID": true,
+    "liveSyncPaint": true,
+    "postDestroyEntry": true,
+    "reentrantCloseDuringMeasure": true,
+    "counts": {
+      "A": 0,
+      "B": 2,
+      "page": 1,
+      "newA": 1
+    }
+  },
+  "lessonCoverage": {
+    "versions": 2,
+    "lessonsPerVersion": 14,
+    "states": 140,
+    "libraryExits": 28,
+    "correctTerminalModels": 28,
+    "errors": 0,
+    "pairedStateAndFinalAtomCountsEqual": true,
+    "full337Steps": false
+  },
+  "activeFlows": [
+    {
+      "version": "baseline",
+      "selectionClicks": 12,
+      "rapidSequences": 3,
+      "hideShowAndResize": true,
+      "errors": 0,
+      "finalAtoms": 37
+    },
+    {
+      "version": "candidate",
+      "selectionClicks": 12,
+      "rapidSequences": 3,
+      "hideShowAndResize": true,
+      "errors": 0,
+      "finalAtoms": 37
+    }
+  ],
+  "video": {
+    "sourceFrames": 105,
+    "seconds": 21.821666666666665,
+    "dimensions": [
+      1280,
+      800
+    ],
+    "bytes": 859039,
+    "cases": [
+      {
+        "kind": "raf",
+        "counts": {
+          "baseline": 1,
+          "candidate": 0
+        }
+      },
+      {
+        "kind": "resize",
+        "counts": {
+          "baseline": 1,
+          "candidate": 0
+        }
+      },
+      {
+        "kind": "entryAfterDestroy",
+        "counts": {
+          "baseline": 1,
+          "candidate": 0
+        }
+      }
+    ],
+    "fullDecodeCompleted": true,
+    "allSourceTimestampsPresent": true,
+    "browserPlaybackAndSeeks": true,
+    "method": "Sequential actual Firefox viewport captures at approximately5fps, monotonic times normalized by first capture; no generated intermediate frames. Controlled illustration, not a claimed Main crash."
+  },
+  "limitations": [
+    "Firefox/macOS/currentCDN j2s only; other browsers/offline not certified",
+    "No complete lesson replay, all141-model 3D audit, camera/selection/numbering pixel certification or conference rehearsal",
+    "Two-owner isolation uses mocked unit, not two live Jmol engines",
+    "Initial model-ready/hidden-load-zap behavior not changed",
+    "No production integration, core/MOL/React change, commit or publication"
+  ]
+}

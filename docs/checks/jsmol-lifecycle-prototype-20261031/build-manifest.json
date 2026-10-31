@@ -1,0 +1,14 @@
+{
+  "sourceSHA256": "7ade5bf896b800582acd0067d2f669433a501d2c450c8c4a176604a379f771a6",
+  "candidateSHA256": "d99b1168acbbd55d59073943e6fde174513e8b815ddb88ae8f1bfa927961b323",
+  "helperSHA256": "fe038bc9bb7754e9d3e822b123fc1673ccc2c7184e3d6d68311703bfdbc91a48",
+  "sourceURL": "https://chemapps.stolaf.edu/jmol/jsmol/JSmol.min.js",
+  "changedSites": [
+    "lifecycle helper before _setDestroy",
+    "_destroy prefix",
+    "_resize body",
+    "repaint body"
+  ],
+  "oldResize": "c._resize=function(){var b=\"__resizeTimeout_\"+this._id;a[b]&&clearTimeout(a[b]);var c=this;a[b]=setTimeout(function(){a.repaint(c,!0);a[b]=null},100)}",
+  "oldPaint": "a.repaint=function(b,c){if(b&&b._appletPanel){var d=a.$(b,\"appletdiv\"),f=Math.round(d.width()),d=Math.round(d.height());if(b._is2D&&(b._canvas.width!=f||b._canvas.height!=d))b._newCanvas(!0),b._appletPanel.setDisplay(b._canvas);b._appletPanel.setScreenDimension(f,d);f=function(){b._appletPanel.paint?b._appletPanel.paint(null):\nb._appletPanel.update(null)};c?requestAnimationFrame(f):f()}}"
+}

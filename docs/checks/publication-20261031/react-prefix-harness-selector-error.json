@@ -1,0 +1,22 @@
+{
+  "checks": [
+    {
+      "molecule": "ethanol",
+      "3DAtoms": 9,
+      "has2DSVG": true,
+      "hasMetrics": false
+    },
+    {
+      "catalog126": true
+    },
+    {
+      "ReactExpandedMode": true
+    }
+  ],
+  "completed": false,
+  "base": "http://127.0.0.1:8051/organic-nomenclature-3/",
+  "failure": "{'columnNumber': 39, 'exception': {'type': 'error'}, 'lineNumber': 305, 'stackTrace': {'callFrames': []}, 'text': 'SyntaxError: identifier starts immediately after numeric literal'}",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/publication-20261031/test-react-browser.py\", line 20, in <module>\n    ev('document.querySelector(\"[data-view=\\\"3d\\\"]\").click();true');until(ready);assert ev('document.getElementById(\"style-3d\")!==null');out['checks'].append({'React3DView':True})\n  File \"bidi\", line 43, in ev\nRuntimeError: {'columnNumber': 39, 'exception': {'type': 'error'}, 'lineNumber': 305, 'stackTrace': {'callFrames': []}, 'text': 'SyntaxError: identifier starts immediately after numeric literal'}\n",
+  "javascriptErrors": [],
+  "allDiagnosticEntries": []
+}

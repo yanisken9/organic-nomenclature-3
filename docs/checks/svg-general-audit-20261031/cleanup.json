@@ -1,0 +1,17 @@
+{
+  "server": {
+    "pid": 19347,
+    "command": "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python -m http.server 8026 --bind 127.0.0.1 --directory /tmp/namelecule-svg-general-audit-20261031",
+    "signal": "SIGTERM"
+  },
+  "firefox": {
+    "pid": 19348,
+    "command": "/Applications/Firefox.app/Contents/MacOS/firefox --headless --no-remote --profile /tmp/namelecule-svg-general-audit-20261031/firefox-profile --remote-debugging-port 9237 about:blank",
+    "signal": "SIGTERM"
+  },
+  "verifiedExitedPIDs": [
+    19347,
+    19348
+  ],
+  "verification": "ps -p 19347,19348 returned exit1 and no rows; user Firefox/server8013 untouched"
+}

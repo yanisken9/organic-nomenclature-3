@@ -1,0 +1,6 @@
+<!doctype html><html lang="el"><head><meta charset="utf-8"><script>
+const params=new URLSearchParams(location.search);const css=params.get('css');
+if(css==='local'||css==='upstream'){const prefix=css==='local'?'project':'upstream';document.write('<link rel="stylesheet" href="/'+prefix+'/css/jsme-nick-52.css">');if(css==='local')document.write('<link rel="stylesheet" href="/project/css/namelecule-52.css">')}
+if(params.get('lineheight'))document.write('<style>body{line-height:'+params.get('lineheight')+'!important}</style>');
+window.loaded=false;window.jsmeOnLoad=()=>{window.a=new JSApplet.JSME('host','600px','400px',{options:'depict,marker',depictbg:'#fff',atombgsize:'0.6'});window.loaded=true;};
+</script><script>document.write('<script src="'+(params.get("lib")==="official"?"https://jsme-editor.github.io/dist/jsme/jsme.nocache.js":"/project/jsme/jsme.nocache.js")+'"></scr'+'ipt>');</script></head><body><div id="host"></div><div id="export"></div></body></html>

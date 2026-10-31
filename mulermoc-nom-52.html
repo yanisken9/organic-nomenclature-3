@@ -48,7 +48,8 @@
   <link rel="stylesheet" href="css/mulermoc-nom-scenario-52.css?v=v52-sync-20261027-r2" />
 
   <link rel="stylesheet" href="css/namelecule-52.css?v=name-font-20261028" />
-  <script src="jsme/jsme.nocache.js"></script>
+  <script src="js/namelecule-label-metrics.js?v=20261031-r1"></script>
+  <script src="js/vendor/jsme/namelecule-20261031-r1/jsme.nocache.js"></script>
   <script src="js/vendor/jquery/jquery-4.0.0.min.js"></script>
   <script>
     (function () {
@@ -58,10 +59,11 @@
         if (m) mode = m[1];
       } catch (e) { /* no location */ }
       window.MULER_LIBS_MODE = mode;
-      var src = mode === "local"
-        ? "JSmol.min.js"
-        : "https://chemapps.stolaf.edu/jmol/jsmol/JSmol.min.js";
-      document.write('<script src="' + src + '"><\/script>');
+      // Shared, reviewed lifecycle fix for exploration and every v52 lesson.
+      // `libs` continues to select j2s/server paths below, not an unpatched bundle.
+      var src = "js/vendor/jsmol/namelecule-20261031-r1/JSmol.min.js";
+      var integrity = "sha384-y4u4hIq8Whzghkk/SjuVpro+EDm44cNe8bcclNCCcWzLmJpnALhyjwGit8tMghR/";
+      document.write('<script src="' + src + '" integrity="' + integrity + '"><\/script>');
     })();
   </script>
   <script src="js/vendor/dompurify/dompurify-3.4.17.min.js"></script>
@@ -328,17 +330,17 @@
     <div id="creditsUs"></div>
   </div>
 
-  <script src="js/jsme-nick-nomeclature-moc2-data_52.js?v=alkane-all-uniform-20261030"></script>
+  <script src="js/jsme-nick-nomeclature-moc2-data_52.js?v=alcohol-uniform-20261031-final-098"></script>
   <script src="js/ui-icons.js?v=v52-sync-20261027-r2"></script>
   <script src="js/mulermoc-nom-core-52.js?v=esters-20261029"></script>
-  <script src="js/mulermoc-nom-molview-52.js?v=alkane-all-uniform-20261030"></script>
+  <script src="js/mulermoc-nom-molview-52.js?v=alcohol-uniform-20261031-final-098"></script>
   <script src="js/mulermoc-nom-teaching-52.js?v=acid-prefix-boxes-20261028"></script>
   <script src="js/mulermoc-nom-note-52.js?v=v52-sync-20261027-r2"></script>
   <script src="js/mulermoc-nom-scenario-52.js?v=other-acids-theory-20261028"></script>
   <script>
     window.JSApplet = window.JSApplet || {};
   </script>
-  <script src="jsme/96E40B969193BD74B8A621486920E79C.cache.js"></script>
+  <script src="js/vendor/jsme/namelecule-20261031-r1/96E40B969193BD74B8A621486920E79C.cache.js"></script>
 
   <script>
     function fToggleMenu() {

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="el">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Namelecule · Σύγκριση διακλάδωσης αλκοόλης</title>
+<style>
+:root{font-family:system-ui,-apple-system,sans-serif;color:#254b50;background:#faf9f5}*{box-sizing:border-box}body{margin:0}main{max-width:1240px;padding:22px;margin:auto}h1{font-size:clamp(1.4rem,3vw,2rem);margin:10px 0}p{line-height:1.5;margin:.6rem 0}.badge{display:inline-block;background:#e1eee8;border-radius:20px;padding:6px 13px;font-size:.9rem}.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin:20px 0 12px}button{font:inherit;font-weight:650;padding:11px 15px;background:white;color:#254b50;border:2px solid #bfd4cd;border-radius:10px;cursor:pointer}button[aria-pressed=true]{background:#285b5e;color:white;border-color:#285b5e}button:focus-visible,a:focus-visible{outline:3px solid #c17e49;outline-offset:3px}figure{margin:0;background:white;border:1px solid #d4e0da;border-radius:15px;overflow:hidden}figcaption{padding:12px 18px;background:#edf4ef;font-weight:700;font-size:1.1rem}#drawing{display:block;width:100%;max-height:66vh;object-fit:contain;background:white}.info{min-height:84px;padding:14px 18px;background:#f2f6f2;border-top:1px solid #d4e0da}.info p{margin:0}.warning{color:#963340}.legend{display:flex;gap:9px;align-items:center;font-size:.95rem}.line{display:inline-block;width:27px;height:3px;background:#a45f36}#detail{margin:16px 0;padding:14px;background:#fff4f2;border:1px solid #ecc9c8;border-radius:12px}#detail[hidden]{display:none}#detail img{display:block;width:260px;max-width:100%;background:white}.comparison{display:grid;grid-template-columns:1fr 1fr;gap:12px}.comparison img{width:100%;display:block}details{margin:22px 0}summary{cursor:pointer;font-weight:650;padding:10px 0}.foot{font-size:.9rem;color:#617475}a{color:#286668}footer{padding:14px 0}@media(max-width:700px){main{padding:14px}.toolbar button{flex:1 1 140px}.comparison{grid-template-columns:1fr}#drawing{max-height:60vh}}
+</style>
+</head>
+<body><main>
+<span class="badge">Εγκεκριμένη διάταξη · η επιλογή 3 εφαρμόστηκε στην κύρια έκδοση</span>
+<h1>4-ισοπροπυλο-3,5-διμεθυλο-2-επτανόλη</h1>
+<p>Πάτησε τις επιλογές για να συγκρίνεις την προηγούμενη διάταξη με τις δύο δοκιμές. Όλες οι εικόνες έχουν κοινή κλίμακα χαρακτήρων και κοινό πλαίσιο.</p>
+<div class="toolbar" role="group" aria-label="Επιλογή διάταξης">
+<button type="button" data-case="current" aria-pressed="true" aria-controls="comparison-figure">1. Πριν από την αλλαγή</button>
+<button type="button" data-case="equal-invalid" aria-pressed="false" aria-controls="comparison-figure">2. Όλοι οι C–C ίσοι</button>
+<button type="button" data-case="proposed" aria-pressed="false" aria-controls="comparison-figure">3. Επιλεγμένη διάταξη · 0,98</button>
+</div>
+<p class="legend"><span class="line" aria-hidden="true"></span> Ο πορτοκαλί δεσμός είναι ο σύνδεσμος της ισοπροπυλομάδας με την κύρια αλυσίδα.</p>
+<figure id="comparison-figure">
+<figcaption id="caption">Πριν από την αλλαγή</figcaption>
+<img id="drawing" src="current.svg?v=stem-098-applied" alt="Προηγούμενος ανεπτυγμένος τύπος της αλκοόλης">
+<div class="info" aria-live="polite"><p id="explanation">Τυπικός C–C/C–O: 1,17 · πορτοκαλί σύνδεσμος: 2,34 · C–H/O–H: 0,78.</p></div>
+</figure>
+<aside id="detail" hidden><strong class="warning">Δύο διαφορετικά H βρίσκονται στην ίδια θέση.</strong><p>Ο κύκλος σημειώνει τη σύμπτωση. Αυτή η δοκιμαστική διάταξη δεν είναι αποδεκτή.</p><img src="collision-detail.svg?v=stem-098-applied" alt="Μεγέθυνση του σημείου όπου συμπίπτουν τα δύο υδρογόνα"></aside>
+<details><summary>Δες «Πριν» και «Μετά» μαζί</summary><div class="comparison"><figure><figcaption>Πριν</figcaption><img src="current.svg?v=stem-098-applied" alt="Πριν από την αλλαγή"></figure><figure><figcaption>Μετά</figcaption><img src="proposed.svg?v=stem-098-applied" alt="Προτεινόμενη διάταξη με κοντύτερο σύνδεσμο"></figure></div></details>
+<p class="foot">Οι αριθμοί είναι μονάδες σχεδίασης MOL, όχι μετρήσεις πραγματικών χημικών δεσμών. Η σύγκριση αφορά μόνο την ανεπτυγμένη 2D διάταξη. Η διάταξη της επιλογής 3 έχει ενσωματωθεί στη μεγαλύτερη αλκοόλη της κύριας εφαρμογής.</p>
+<footer><a href="../../../../mulermoc-nom-52.html">Άνοιγμα Namelecule</a></footer>
+</main>
+<script>
+const options={
+ current:{title:'Πριν από την αλλαγή',text:'Τυπικός C–C/C–O: 1,17 · πορτοκαλί σύνδεσμος: 2,34 · C–H/O–H: 0,78.'},
+ 'equal-invalid':{title:'Ίσοι C–C — σύγκρουση δύο υδρογόνων',text:'Όλοι οι C–C/C–O: 0,6188 · C–H/O–H: 0,3094. Τα δύο H στο σημείο του κύκλου συμπίπτουν. Αυτή η διάταξη απορρίπτεται.'},
+ proposed:{title:'Επιλεγμένη διάταξη: σύνδεσμος 0,98',text:'Τυπικός C–C/C–O: 0,6188 · πορτοκαλί σύνδεσμος: 0,98 · C–H/O–H: 0,3094. Ο σύνδεσμος έχει μήκος 0,98 μονάδες MOL. Τα δύο υδρογόνα παραμένουν χωριστά και το O–H έχει ορατό δεσμό.'}
+};
+for(const button of document.querySelectorAll('[data-case]'))button.addEventListener('click',()=>{
+ const key=button.dataset.case,option=options[key];
+ for(const b of document.querySelectorAll('[data-case]'))b.setAttribute('aria-pressed',String(b===button));
+ document.getElementById('drawing').src=key+'.svg?v=stem-098-applied';document.getElementById('drawing').alt=option.title;
+ document.getElementById('caption').textContent=option.title;document.getElementById('explanation').textContent=option.text;
+ document.getElementById('detail').hidden=key!=='equal-invalid';
+});
+</script>
+</body></html>

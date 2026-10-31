@@ -1,0 +1,97 @@
+--- pinned-JSmol.min.js
++++ candidate-JSmol.min.js
+@@ -62,8 +62,70 @@
+ h.console;c._cacheFiles=!!h.cacheFiles;c._viewSet=null==h.viewSet||c._isJava?null:"Set"+h.viewSet;null!=c._viewSet&&(a.View.__init(c),c._currentView=null);!a._fileCache&&c._cacheFiles&&(a._fileCache={});c._console||(c._console=c._id+"_infodiv");"none"==c._console&&(c._console=null);c._color=h.color?h.color.replace(/0x/,"#"):"#FFFFFF";c._disableInitialConsole=h.disableInitialConsole;c._noMonitor=h.disableJ2SLoadMonitor;a._j2sPath&&(h.j2sPath=a._j2sPath);c._j2sPath=h.j2sPath;c._coverImage=h.coverImage;
+ c._makeLiveImage=h.makeLiveImage||h.j2sPath+"/img/play_make_live.jpg";c._isCovered=!!c._coverImage;c._deferApplet=h.deferApplet||c._isCovered&&c._isJava;c._deferUncover=h.deferUncover&&!c._isJava;c._coverScript=h.coverScript;c._coverTitle=h.coverTitle;c._coverTitle||(c._coverTitle=c._deferApplet?"activate 3D model":"3D model is loading...");c._containerWidth=c._width+(c._width==parseFloat(c._width)?"px":"");c._containerHeight=c._height+(c._height==parseFloat(c._height)?"px":"");c._info="";c._infoHeader=
+ c._jmolType+' "'+c._id+'"';c._hasOptions=h.addSelectionOptions;c._defaultModel=h.defaultModel;c._readyScript=h.script?h.script:"";c._readyFunction=h.readyFunction;c._coverImage&&!c._deferApplet&&(c._readyScript+=";javascript "+e+"._displayCoverImage(false)");c._src=h.src};a._addDefaultInfo=function(c,e){for(var h in e)"undefined"==typeof c[h]&&(c[h]=e[h]);a._use&&(c.use=a._use);0<=c.use.indexOf("SIGNED")&&(0>c.jarFile.indexOf("Signed")&&(c.jarFile=c.jarFile.replace(/Applet/,"AppletSigned")),c.use=
+-c.use.replace(/SIGNED/,"JAVA"),c.isSigned=!0)};a._syncedApplets=[];a._syncedCommands=[];a._syncedReady=[];a._syncReady=!1;a._isJmolJSVSync=!1;a._setReady=function(c){a._syncedReady[c]=1;for(var e=0,h=0;h<a._syncedApplets.length;h++){if(a._syncedApplets[h]==c._id)a._syncedApplets[h]=c,a._syncedReady[h]=1;else if(!a._syncedReady[h])continue;e++}e==a._syncedApplets.length&&a._setSyncReady()};a._setDestroy=function(c){a.featureDetection.allowDestroy&&a.$windowOn("beforeunload",function(){a._destroy(c)})};
+-a._destroy=function(c){try{c._appletPanel&&c._appletPanel.destroy();c._applet=null;a._unsetMouse(c._canvas);c._canvas=null;for(var e=0,h=0;h<a._syncedApplets.length;h++)a._syncedApplets[h]==c&&(a._syncedApplets[h]=null),a._syncedApplets[h]&&e++;0<e||a._clearVars()}catch(b){}};a._setSyncReady=function(){a._syncReady=!0;if(a._isJmolJSVSync)for(var c=a._syncedApplets,e=0;e<c.length-1;e+=2)c[e]._linkedApplet=c[e+1],c[e+1]._linkedApplet=c[e];c="";for(e=0;e<a._syncedApplets.length;e++)a._syncedCommands[e]&&
++c.use.replace(/SIGNED/,"JAVA"),c.isSigned=!0)};a._syncedApplets=[];a._syncedCommands=[];a._syncedReady=[];a._syncReady=!1;a._isJmolJSVSync=!1;a._setReady=function(c){a._syncedReady[c]=1;for(var e=0,h=0;h<a._syncedApplets.length;h++){if(a._syncedApplets[h]==c._id)a._syncedApplets[h]=c,a._syncedReady[h]=1;else if(!a._syncedReady[h])continue;e++}e==a._syncedApplets.length&&a._setSyncReady()};// Isolated prototype. State belongs to the applet object, not its DOM id.
++a._nameleculeLifecycle = (function () {
++  var states = new WeakMap();
++  function state(applet) {
++    var value = states.get(applet);
++    if (!value) {
++      value = { closed: false, frames: new Set(), resize: null };
++      states.set(applet, value);
++    }
++    return value;
++  }
++  function live(applet, panel) {
++    return !!applet && !state(applet).closed &&
++      (!panel || applet._appletPanel === panel);
++  }
++  return {
++    version: "20261031-v1",
++    live: live,
++    paint: function (applet, panel, deferred, draw) {
++      if (!live(applet, panel)) return;
++      var value = state(applet), handle = null;
++      function run() {
++        if (handle !== null) value.frames.delete(handle);
++        if (live(applet, panel)) draw();
++      }
++      if (deferred) {
++        handle = requestAnimationFrame(run);
++        value.frames.add(handle);
++      } else {
++        run();
++      }
++    },
++    resize: function (applet) {
++      if (!live(applet)) return;
++      var value = state(applet), key = "__resizeTimeout_" + applet._id;
++      if (value.resize !== null) clearTimeout(value.resize);
++      var handle = setTimeout(function () {
++        if (value.resize !== handle) return;
++        value.resize = null;
++        if (a[key] === handle) a[key] = null;
++        if (live(applet)) a.repaint(applet, true);
++      }, 100);
++      value.resize = handle;
++      a[key] = handle;
++    },
++    dispose: function (applet) {
++      if (!applet) return;
++      var value = state(applet);
++      // Close first: teardown can re-enter through native script/paint code.
++      value.closed = true;
++      value.frames.forEach(function (handle) { cancelAnimationFrame(handle); });
++      value.frames.clear();
++      if (value.resize !== null) {
++        clearTimeout(value.resize);
++        var key = "__resizeTimeout_" + applet._id;
++        if (a[key] === value.resize) a[key] = null;
++        value.resize = null;
++      }
++    }
++  };
++})();
++
++a._setDestroy=function(c){a.featureDetection.allowDestroy&&a.$windowOn("beforeunload",function(){a._destroy(c)})};
++a._destroy=function(c){a._nameleculeLifecycle.dispose(c);try{c._appletPanel&&c._appletPanel.destroy();c._applet=null;a._unsetMouse(c._canvas);c._canvas=null;for(var e=0,h=0;h<a._syncedApplets.length;h++)a._syncedApplets[h]==c&&(a._syncedApplets[h]=null),a._syncedApplets[h]&&e++;0<e||a._clearVars()}catch(b){}};a._setSyncReady=function(){a._syncReady=!0;if(a._isJmolJSVSync)for(var c=a._syncedApplets,e=0;e<c.length-1;e+=2)c[e]._linkedApplet=c[e+1],c[e+1]._linkedApplet=c[e];c="";for(e=0;e<a._syncedApplets.length;e++)a._syncedCommands[e]&&
+ (c+="Jmol.script(Jmol._syncedApplets["+e+"], Jmol._syncedCommands["+e+"]);");setTimeout(c,50)};a._mySyncCallback=function(c,e){app=a._applets[c];if(app._viewSet)a.View.updateFromSync(app,e);else{if(!a._syncReady||!a._isJmolJSVSync)return 1;app._linkedApplet&&0<=e.indexOf(app._linkedApplet._syncKeyword)&&app._linkedApplet._syncScript(e);return 0}};a._getElement=function(a,e){return document.getElementById(a._id+"_"+e)||{}};a._evalJSON=function(a,e){a+="";if(!a)return[];if("{"!=a.charAt(0))return 0<=
+ a.indexOf(" | ")&&(a=a.replace(/\ \|\ /g,"\n")),a;var h=(new Function("return "+a))();return!h?null:e&&void 0!=h[e]?h[e]:h};a._sortMessages=function(a){function e(a,c){return a[0]<c[0]?1:a[0]>c[0]?-1:0}if(!a||"object"!=typeof a)return[];for(var h=[],b=a.length-1;0<=b;b--)for(var d=0,f=a[b].length;d<f;d++)h[h.length]=a[b][d];if(0!=h.length)return h=h.sort(e)};a._setMouseOwner=function(c,e){null==c||e?(a._mouseOwner=c)&&c._applet&&(a._lastAppletID=c._applet._id):a._mouseOwner==c&&(a._mouseOwner=null)};
+ a._jsGetMouseModifiers=function(a){var e=0;switch(a.button){case 0:e=16;break;case 1:e=8;break;case 2:e=4}a.shiftKey&&(e+=1);a.altKey&&(e+=8);a.ctrlKey&&(e+=2);return e};a._jsGetXY=function(c,e){if(!c.applet._ready||a._touching&&0>e.type.indexOf("touch"))return!1;var b=a.$offset(c.id),d,f=e.originalEvent;e.pageX||(e.pageX=f.pageX);e.pageY||(e.pageY=f.pageY);a._mousePageX=e.pageX;a._mousePageY=e.pageY;f.targetTouches&&f.targetTouches[0]?(d=f.targetTouches[0].pageX-b.left,b=f.targetTouches[0].pageY-
+@@ -107,8 +169,19 @@
+ b._startupScript&&c.put("script",b._startupScript);a._syncedApplets.length&&c.put("synccallback","Jmol._mySyncCallback");c.put("signedApplet","true");c.put("platform",b._platform);b._is2D&&c.put("display",b._id+"_canvas2d");c.put("documentBase",document.location.href);var d=b._j2sPath+"/";if(0>d.indexOf("://")){var e=document.location.href.split("#")[0].split("?")[0].split("/");0==d.indexOf("/")?e=[e[0],d.substring(1)]:e[e.length-1]=d;d=e.join("/")}b._j2sFullPath=d.substring(0,d.length-1);c.put("codePath",
+ d);a._registerApplet(b._id,b);try{b._newApplet(c)}catch(f){b=(a._isAsync?"normal async abort? from ":"")+f;a._debugCode&&alert(b);System.out.println(b);return}b._jsSetScreenDimensions();l()};c._restoreState||(c._restoreState=function(){});c._jsSetScreenDimensions=function(){if(this._appletPanel){var b=a._getElement(this,this._is2D?"canvas2d":"canvas");this._appletPanel.setScreenDimension(b.width,b.height)}};c._show=function(b){a.$setVisible(a.$(this,"appletdiv"),b);b&&a.repaint(this,!0)};c._canScript=
+ function(){return!0};c.equals=function(a){return this==a};c.clone=function(){return this};c.hashCode=function(){return parseInt(this._uniqueId)};c._processGesture=function(a){return this._appletPanel.processTwoPointGesture(a)};c._processEvent=function(a,b){this._appletPanel.processMouseEvent(a,b[0],b[1],b[2],System.currentTimeMillis())};c._processKeyEvent=function(a,b,c){this._appletPanel.processKeyEvent({getID:function(){return a},getKeyCode:function(){return c.keyCode},getModifiers:function(){return b[2]},
+-consume:function(){}})};c._resize=function(){var b="__resizeTimeout_"+this._id;a[b]&&clearTimeout(a[b]);var c=this;a[b]=setTimeout(function(){a.repaint(c,!0);a[b]=null},100)};return c};a.repaint=function(b,c){if(b&&b._appletPanel){var d=a.$(b,"appletdiv"),f=Math.round(d.width()),d=Math.round(d.height());if(b._is2D&&(b._canvas.width!=f||b._canvas.height!=d))b._newCanvas(!0),b._appletPanel.setDisplay(b._canvas);b._appletPanel.setScreenDimension(f,d);f=function(){b._appletPanel.paint?b._appletPanel.paint(null):
+-b._appletPanel.update(null)};c?requestAnimationFrame(f):f()}};a.loadImage=function(b,c,d,f,g,k){var j="echo_"+c+d+(f?"_"+f.length:""),l=a.getHiddenCanvas(b.vwr.html5Applet,j,0,0,!1,!0);if(null==l){if(null==k){k=new Image;if(null==f)return k.onload=function(){a.loadImage(b,c,d,null,g,k)},k.src=d,null;System.out.println("Jsmol.js Jmol.loadImage using data URI for "+j);k.src="string"==typeof f?f:"data:"+JU.Rdr.guessMimeTypeForBytes(f)+";base64,"+JU.Base64.getBase64(f)}var m=k.width,u=k.height;"webgl"==
++consume:function(){}})};c._resize=function(){a._nameleculeLifecycle.resize(this)};return c};a.repaint=function(b,c){
++if(!b||!b._appletPanel||!a._nameleculeLifecycle.live(b))return;
++var panel=b._appletPanel,d=a.$(b,"appletdiv"),f=Math.round(d.width()),h=Math.round(d.height());
++if(!a._nameleculeLifecycle.live(b,panel))return;
++if(b._is2D&&(b._canvas.width!=f||b._canvas.height!=h)){
++  b._newCanvas(!0);
++  if(!a._nameleculeLifecycle.live(b,panel))return;
++  panel.setDisplay(b._canvas);
++}
++if(!a._nameleculeLifecycle.live(b,panel))return;
++panel.setScreenDimension(f,h);
++a._nameleculeLifecycle.paint(b,panel,c,function(){panel.paint?panel.paint(null):panel.update(null)});
++};a.loadImage=function(b,c,d,f,g,k){var j="echo_"+c+d+(f?"_"+f.length:""),l=a.getHiddenCanvas(b.vwr.html5Applet,j,0,0,!1,!0);if(null==l){if(null==k){k=new Image;if(null==f)return k.onload=function(){a.loadImage(b,c,d,null,g,k)},k.src=d,null;System.out.println("Jsmol.js Jmol.loadImage using data URI for "+j);k.src="string"==typeof f?f:"data:"+JU.Rdr.guessMimeTypeForBytes(f)+";base64,"+JU.Base64.getBase64(f)}var m=k.width,u=k.height;"webgl"==
+ c&&(m/=2,u/=2);l=a.getHiddenCanvas(b.vwr.html5Applet,j,m,u,!0,!1);l.imageWidth=m;l.imageHeight=u;l.id=j;l.image=k;a.setCanvasImage(l,m,u)}else System.out.println("Jsmol.js Jmol.loadImage reading cached image for "+j);return null==f?g(l,d):l};a._canvasCache={};a.getHiddenCanvas=function(b,c,d,f,g,k){c=b._id+"_"+c;b=a._canvasCache[c];if(k)return b;if(g||!b||b.width!=d||b.height!=f)b=document.createElement("canvas"),b.width=b.style.width=d,b.height=b.style.height=f,b.id=c,a._canvasCache[c]=b;return b};
+ a.setCanvasImage=function(a,b,c){a.buf32=null;a.width=b;a.height=c;a.getContext("2d").drawImage(a.image,0,0,a.image.width,a.image.height,0,0,b,c)};a.applyFunc=function(a,b){return a(b)}})(Jmol);
+ (function(a,j){a._Applet=function(b,d,g){window[b]=this;this._jmolType="Jmol._Applet"+(d.isSigned?" (signed)":"");this._viewType="Jmol";this._isJava=!0;this._syncKeyword="Select:";this._availableParams=";progressbar;progresscolor;boxbgcolor;boxfgcolor;allowjavascript;boxmessage;\t\t\t;animframecallback;appletreadycallback;atommovedcallback;audiocallback;\t\t\t;clickcallback;dragdropcallback;echocallback;errorcallback;evalcallback;hovercallback;\t\t\t;imagecallback;loadstructcallback;measurecallback;messagecallback;minimizationcallback;modelkitcallback;pickcallback;\t\t\t;resizecallback;scriptcallback;selectcallback;servicecallback;structuremodifiedcallback;synccallback;\t\t\t;statusform;statustext;statustextarea;usecommandthread;syncid;appletid;startupscript;language;menufile;";if(g)return this;
