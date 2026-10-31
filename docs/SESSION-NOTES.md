@@ -1,3 +1,80 @@
+# Current resume point — 2026-10-31 — Public URLs verified; final backup generation underway
+
+Release0969f46205c5317ee22c8b28dabe21880a4fb270 is live on personal thesis-work;
+GitHub Pages workflow41241394126 success. 19ordinary public HTTP paths match
+reviewedSHAbytes, including report/welcome/Main/newbundles/Reactpins/hosts/core.
+Actual Firefox Main8andReact8functional checks completed,2D/3D/molecule/lesson
+navigation. Strict zero-console harness exited1: Main10andReact2error entries
+are precisely externalJmolTracker X-Frame-Options/analyticscookie domain rejections;
+no unclassified/application errors in observed flows. Do not claim zero console errors.
+Raw evidence and classification retained in docs/checks/publication-20261031/
+publication-result.json,main-public.json,react-public.json,public-http.json.
+
+Next: run approved final save script /tmp/namelecule-final-save-20261031.py;
+creates new -published ZIP/bundle/recovery, updates full checkpoint and both external
+copies/receipts, preserving old archives and active sourcebranch/head/index.
+After completion verify remote checkpoint matches and copiednotes/receipt hashes;
+close only owned testserver8051/headlessFirefox9237, never user8013/browser.
+No core changes; historical viewBox issue and externalCDN/offline/Safari limits remain.
+
+# Current resume point — 2026-10-31 — Approved React preservation; public release pushed, live verification underway
+
+User explicitly approved both pending choices: preserve React and upload full checkpoint publicly.
+Full checkpoint4886c921 pushed; authorization rejection resolved by explicit approval.
+React now pins previous39ccedff data52/viewer52 under preserved-main-20261030; only two
+script refs in each of fourpublic/dist hosts changed, no build/components/core changes.
+Provenance records exact hashes. Scoped .gitattributes -text preserves original JSME license
+bytes. Curated public legacyv51 remains publicBase, local cache variant retained only in fullsave.
+Main8prefix checks and React8realUI checks passed,0JS. Fresh independent Reviewer
+/root/review_publication_final_20261031 checked687stagedpaths,820runtime hashes,React
+32unchangedpaths/4host-only changes,report links/core; noP0–P3findings. Target06d44e95…
+Frozen throughout review. Evidence: docs/checks/publication-20261031/.
+
+Public release 0969f46205c5317ee22c8b28dabe21880a4fb270 and tagnamelecule-20261031-221614 pushed to
+personal origin/thesis-work. Actual Pages deploy/HTTP/browser links NOT YET verified.
+Do not claim completion until public-http/main-public/react-public pass. Then create
+fresh published-generation source ZIP/Gitbundle/recoveryZIP/fullcheckpoint and update
+both external directories/receipts, removing old pending warnings. Existing initial
+archives remain intact. Temp job/state in communication/checkpoints/save-publish-20261031-state.json.
+Owned server8051PID4824/headlessFirefox9237PID4825; preserve user's8013/browser.
+Active source branch/head/index unchanged. No core changes in this save session.
+Upstream HEAD4e1190ab reconfirmed unchanged (source upstream remote); isolated public
+clone has no upstream remote, an attempted query there failed before correct source check.
+Last actual sync93b759f remains unchanged. Historical viewBox issue remains open.
+
+# Current resume point — 2026-10-31 — Local save verified; publication awaits two user choices
+
+Τοπική αποθήκευση ολοκληρώθηκε: checkpoint4886c921b1a97284f0cccd1ed557ec42a3ec891f
+στο checkpoint/namelecule-20261031-221614, ZIP2.601 πηγών με πλήρη CRC/SHA,
+ελεγμένο Git bundle, ZIP186 σημείων επαναφοράς. Και τα δύο εξωτερικά αντίγραφα
+επαληθεύτηκαν, μαζί με14 ενεργά JSON και10 αρχεία Namelecule.app. Ακριβή hashes,
+προορισμοί και flags στο communication/checkpoints/final-save-state-20261031-221614.json
+και final-save-state.json σε κάθε εξωτερικό φάκελο. Αυτή η τελική σημείωση/receipt
+είναι μεταγενέστερη καταγραφή έξω από τα αρχεία ZIP· αντιγράφεται και χωριστά.
+
+Η αναφορά docs/professor-20261031/update.html ετοιμάστηκε και πέρασε ανεξάρτητο
+review7 αρχείων χωρίς ευρήματα. ΔΗΜΟΣΙΕΥΣΗ ΔΕΝ ΕΓΙΝΕ, δημόσιοι σύνδεσμοι31/10
+δεν επαληθεύτηκαν. Το HTML/JSON/README των αντιγράφων προειδοποιεί να μη σταλούν.
+
+Εκκρεμεί ρητή απάντηση σε δύο async ερωτήσεις. Ο χρήστης ζήτησε διευκρίνιση:
+εξηγήθηκε ότι(1) η παλιάReact χρειάζεται τα δικά της παλιά data52/viewer52 για να
+μη χαλάσει το2D από τον νέο κοινόviewer τηςMain, χωρίς νέοbuild/components/core,
+και(2) πλήρες GitHubbackup μεReactWIP/εσωτερικές σημειώσεις είναι χωριστή επιλογή
+και δεν απαιτείται για δημοσίευση κύριας/report. Δεν θεωρούμε τη διευκρίνιση έγκριση.
+Η αλλαγήReact ΔΕΝ υλοποιήθηκε. Το πλήρες checkpointGHpush απορρίφθηκε από automatic
+approval review· δεν επαναλήφθηκε/παρακάμφθηκε. Νέα ρητή εξουσιοδότηση εκκρεμεί.
+
+Απομονωμέναpub/checkpointclones και πλάνο στο save-publish-20261031-state.json.
+Αν εγκρίνει(1): διατήρηση παλιών2JS απόpublic39ccedff, αλλαγή4ReacthostHTML
+public/dist μόνο, νέοςprefixReactviewer/lesson+Main έλεγχος, ανεξάρτητοpublication
+review, μετάpersonalorigin/thesis-workpublish/actualHTTP/browserverification.
+Αν εγκρίνει(2): πλήρεςremotecheckpoint επιτρέπεται τότε, όχιπριν. Ανlocalonly,
+διατηρούνται τα επαληθευμένατοπικά αντίγραφα χωρίς export. Μετά απαιτούνται
+φρέσκαfinalarchives/receipts με πραγματικέςδημοσιεύσεις, όχι τα σημερινάpendingflags.
+Ownedtestserver8051PID1569/Firefox9237PID1570 κλειστά, user8013/Firefox διατηρούνται.
+Activebranchreact-library-pilot/HEAD168e3cec/index25c21223 ίδια. Καμία αλλαγήcore,
+ReactκώδικαήMainruntimeστην αποθήκευση. Upstreamchecked4e1190abunchanged,lastsync93b759f.
+
 # Current resume point — 2026-10-31 — Save/report prepared; two required user decisions pending
 
 User: «αποθήκευσε τα πάντα κ παντού. ετοίμασε report και σύνδεσμο για τον καθηγητή».

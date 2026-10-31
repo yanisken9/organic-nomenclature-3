@@ -1,3 +1,32 @@
+# 2026-10-31 — Actual public deployment verification
+
+Curated public release0969f46205c5317ee22c8b28dabe21880a4fb270/tagnamelecule-20261031-221614
+confirmed GitHub Pages workflow41241394126success. Ordinary publicHTTP19paths
+SHA-identical reviewed files. Main8+React8actualFirefox functional checks completed;
+strict zero-console test scripts exit1 becauseMain10/React2externaltrackerframe and
+analyticscookie errors were recorded. Retained raw entries and explicit classification,
+no application/unclassified errors in observed flows. No suppression or runtimechange
+was made for these diagnostics. Details/limits in publication-result.json.
+Full archive refresh follows; no core changes.
+
+# 2026-10-31 — Approved preservation and publication packaging
+
+User approved preservation of the previous React release and full public checkpoint
+export after clarification. Added two exact public39ccedff JS copies plus PROVENANCE
+under react-preview/preserved-main-20261030; changed only their two references in
+four public/dist host HTMLs. No React build/components/core changed in this unit.
+Added one .gitattributes -text rule for original third-party JSME license bytes.
+Prepared professor report/links and retained legacyv51 unchanged in curated release.
+Developer evidence:8Main prefix+8React realUI checks passed with0JS, source/index
+runtime equality820paths. Independent Reviewer /root/review_publication_final_20261031
+reviewed frozen687paths06d44e95…; no actionableP0–P3, browser/deployment/backups not
+independently executed. Published release 0969f46205c5317ee22c8b28dabe21880a4fb270 to personal
+origin/thesis-work with recovery tagnamelecule-20261031-221614; live verification
+and final refreshed archives follow in publication-result.json/final receipt.
+Full checkpoint4886c921 already uploaded under explicit authorization. Existing
+Main changes were previous reviewed contributions, not newly authored in this save.
+No core changes this save session; core52 d2138418… identical previous public release.
+
 # Preview final review — 2026-10-31 — Comparison shown, application unchanged
 
 
