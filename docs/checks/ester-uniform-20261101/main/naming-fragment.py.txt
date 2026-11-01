@@ -1,0 +1,24 @@
+prefix='var window={addEventListener(){}},console={log(){},warn(){},error(){}},document={getElementById(){return null},addEventListener(){}};'
+core=(ROOT/'js/mulermoc-nom-core-52.js').read_text();viewer=(ROOT/'js/mulermoc-nom-molview-52.js').read_text()
+tail=r'''
+var MOL2D=window.MOL2D;selectedMol=key;mode2D=mode;mainChainMode=chainMode;
+var text=MOL2D[key][mode],ls=text.split('\n'),na=Number(ls[3].slice(0,3)),nb=Number(ls[3].slice(3,6));
+var aa=ls.slice(4,4+na).map(l=>({label:l.slice(31,34).trim()})),bb=ls.slice(4+na,4+na+nb).map(l=>({atoms:[Number(l.slice(0,3)),Number(l.slice(3,6))],order:Number(l.slice(6,9))}));
+jsmeNomeclatureApplet={totalNumberOfAtoms:()=>na,totalNumberOfBonds:()=>nb,getAtom:(m,i)=>aa[i-1],getBond:(m,i)=>bb[i-1],molFile:()=>text};
+fInitNamingProps();fAnalyseStructure();fDetectMolType();fGuessName();
+nameExamples[key].classification=fGetMoleculeClassification();
+var out={name:currentMolName,common:currentMolCommonName,parts:nameComponentsList,chain:mainChainAtomsList,classification:nameExamples[key].classification};
+if(sdf){fParseSDF3D(sdf);fDetectMolType3D();fCalcMainChain3D();out.chain3D=mainChainAtoms3D;out.signature=fNumberedChainSignature(mainChainAtomsList,allAtomsTypeList,bondList);out.signature3D=fNumberedChainSignature(mainChainAtoms3D,allAtomsTypeList3D,bondList3D);}
+return out;
+'''
+js='var before=new Function("key","mode","chainMode","sdf",'+json.dumps(prefix+old[data]+core+old['js/mulermoc-nom-molview-52.js']+tail)+'),after=new Function("key","mode","chainMode","sdf",'+json.dumps(prefix+current+core+viewer+tail)+');'
+js+='var registry=(new Function("var window={};"+'+json.dumps(current)+'+";return {metadata:nameExamples,mols:window.MOL2D};"))();var total=0,affected=[];'
+sdfs={k:(ROOT/'mols/nomeclature-moc2'/(k+'_3D.sdf')).read_text()for k in keys}
+js+='var sdfs='+json.dumps(sdfs)+';'
+js+='''for(var[k,forms]of Object.entries(registry.mols))for(var[mode,text]of Object.entries(forms))if(text)for(var chain of ['algorithmic','data']){
+var args=[k,mode,chain,sdfs[k]||''],a=before(...args),b=after(...args);if(JSON.stringify(a)!==JSON.stringify(b))throw Error(JSON.stringify([k,mode,chain,a,b]));total++;
+if(sdfs[k]){if(b.signature!==b.signature3D)throw Error('2D3D parent '+k);affected.push({key:k,mode,chain,result:b});}}
+print(JSON.stringify({total,affected}));'''
+jsc='/System/Library/Frameworks/JavaScriptCore.framework/Versions/A/Helpers/jsc'
+r=subprocess.run([jsc,'-e','eval(JSON.parse(readline()))'],input=json.dumps(js)+'\n',capture_output=True,text=True);assert r.returncode==0,(r.stdout[:2500],r.stderr)
+names=json.loads(r.stdout);assert len(names['affected'])==54

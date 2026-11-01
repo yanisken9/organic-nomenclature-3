@@ -1,3 +1,502 @@
+# 2026-11-01 - Consolidated30Oct–1Nov report andsave prepared
+
+User requestedfullsave/publicationandoneprofessorreport. Draftcovers127Expanded
+forms/11classes,2DtextandJSmollifecycle,localrunner,Reactpreservation,actualtests/
+exceptions/openlimits. Fridaycore52/14activeJSON unchangedconfirmed. Publiccandidate
+isolatedfromactiveworktree:50reviewedruntimepaths,exact72Expandedchanges,lastpublic
+React39files/core/otherforms preserved;docs/report/evidence included. Mainprefix
+10checks0JS andassemblylink/hashcheckspass. FinalReviewer/publication/fullbackup
+stillpending. No core.js/core-version edits. No message sent toprofessor.
+
+# 2026-11-01 - Main9 ester integration complete after independent review
+
+Reviewer /root/review_ester_main9 verified70frozenpaths at manifest174cc003e0743840
+0b0b0f00743e226c4a46d7c3f87a57386b30142abd5bb6dd with no actionablefindings.
+Independent10outputrebuild/9MOLs/7sources/4accepted/2937protected guards,844names/
+54affected2D3Dcases,175nativeaudits/166ratios/36unchangedotherform arrays, syntax,
+cache and visualexportchecks passed. Browser andfullSDF evidence remain correctly
+attributed. Complete locally; no core.js/core-version/React/scenario/other2D/3D
+changes, commit/push/publication. ExistingacidPNGlongnameclipping and untested
+Safari/physicalmobile/offline/conferencesequence remain disclosed. Recovery and
+finalhashverification are in ester-uniform-20261101/main/.
+
+# 2026-11-01 - Main9 ester verification completed; final review pending
+
+Ten approvedappfiles integrated;4acceptedMOLs exact,7sources preserve ownnonXY/
+suffixes.54before/54after forms,36otherformcomparisons,844names/54affected2D3D,
+157controls/4alternatechains/9unrelatedsmokes,18modelmatches/36toggles,175native
+mask/length audits and2actualPNGexports passed. PNGimages inspected complete.
+IndependentChemistryValidator9SDFgraphs/5provenancemaps; actual10outputhashes
+match expectedmap205e03f0... .2937protectedfiles unchanged. No existinglessonkeys
+refer to9esters; no lessonreplay. Startup test-onlyendpoint race and existing
+acidlongnameexportlimit recorded separately. FreshReviewerpending; no core.js/
+core-version/React/scenario/other2D/3D edits, commit/push/publication.
+
+# 2026-11-01 - Accepted ester comparison integrated locally; verification running
+
+User accepted isolated preview. Applied10boundedappfiles:9Expanded literals,
+7existing sourceMOLs,sharedviewer eligibility/COcalibration,HTMLcacheSHAkeys.
+Four accepted previews exact and2old sourcefinalblanklines preserved. Static844
+naming/54affected2D3D,2937protected files passed; independentChemistryValidator9
+SDFfullgraphs and Developer actual10outputs match expectedcanonical205e03f0... .
+Before54browserstates captured; afterforms/controls/exports/Reviewer pending.
+No core.js/core-version/React/scenario/other2D/3D edits, commit/push/publication.
+
+# 2026-11-01 - Ester isolated preview independent review completed
+
+Reviewer /root/review_ester_uniform_preview independently inspected47frozenpaths,
+manifest0a55aec6a186280f02aa36aee2a0d82c7d7af6c7d88507aee32bb62a12c30a3c.
+No actionable findings;4MOLpairs/72nativeaudits/2898protected paths, calibration,
+6byteexact rebuilt galleryoutputs, syntax and screenshots independently checked.
+Two comparison pairs ready for user visual acceptance; byte-verified gallery URL
+opened via external Firefox launch command (exit0), recorded in external-open.json. Main9ester integration
+still unapplied. Final records distinguish supplied browser evidence and explicit
+limits. No core.js/core-version/sourceMOL/Main/React/scenario/3D changes, commit,
+push or publication. Existing long-name PNG limitation remains separate.
+
+# 2026-11-01 - Approved isolated ester comparison prepared
+
+Two fair before/after gallery pairs plus2calibration controls under ester-uniform-
+20261101/comparison/. Changes limited to new preview files and these records;
+Main/sourceMOL/core/React/scenarios/3D unchanged. User approved preview first;
+Main integration still requires visual acceptance. FourMOLpairs independently
+validated chemically;16Maincaptures/64controls/72nativeaudits/14gallery states/
+8figureaudits and8contentSHAchecks passed. Limitations and baseline DOM-only
+candidate explicitly recorded in summary.json. Fresh Reviewer pending. No core
+changes, commit/push/publication.
+
+# 2026-11-01 - Read-only ester preflight for queued work
+
+Confirmed9 esters/7 source Expanded MOLs. Chemistry Validator independently
+simulated proposed lengths and explicit axis reconstruction for2old off-axis
+layouts; no center/bond collisions, but actual browser labels still need checks.
+Four old active embeds match professor93b759f;5 later additions retain recorded
+provenance. Two source/embed differences are final blank lines only. Proposed
+isolated comparison before Main integration; plan approval and visual acceptance
+pending. No ester code/core edits, commit/push/publication.
+
+# 2026-11-01 - Main52 independent review completed
+
+Fresh Reviewer /root/review_carbonyl_acid_main52 reviewed114 frozen paths at
+manifest dedd9700504822c3e86d6e15e9602416d3f4fef0a4451dee26fa06127fd60d12.
+No new actionable findings. Independent graph/field/length/factory/protected-file,
+414 native SVG audit, saved-comparison, lesson-scope and syntax checks passed.
+Browser and fullSDF correspondence evidence is correctly attributed to Developer
+and Chemistry Validator. Existing EX-01/P2 long-name PNG clipping is disclosed;
+no new export or molecular clipping regression was found in inspected images.
+Review report and final verification: carbonyl-acid-uniform-20261101/.
+
+Integration is complete locally, with52 expanded forms/31 sources/8 exactaccepted
+layouts. No core.js/core-version, React, scenario, other2D or3D changes this unit.
+No commit/push/publication. Esters are queued; only read-only preflight has begun.
+
+# 2026-11-01 - Final Main52 checks and export limitation
+
+Approved 52 expanded forms /31 source MOLs are locally integrated. Final checks
+and independent chemistry evidence are summarized in carbonyl-acid-uniform-
+20261101/summary.json: 136 after forms, 194 controls, 338 authored lesson states,
+24 manual Expanded/restored lesson states, 414 native stroke audits, 844 naming
+comparisons. Eight accepted layouts preserved. Compound OH/NH2 masks now retain
+complete measured ink bounds; final uncovered-ink checks pass. Small-font DOM
+box false positives are distinguished from independently painted glyph pixels.
+
+Three actual PNGs generated. A long name is clipped in both original and final
+exports because unchanged name boxes exceed fixed canvas width; no molecular
+top clipping confirmed in inspected images. Separate export scope remains open.
+Fresh independent Reviewer pending; no completion/publication claim. No core.js/
+core-version, React, scenario or 3D changes, commit, push or publication.
+User requested esters next, after completing this review; no ester edits yet.
+
+# 2026-11-01 - Main52 verification and compound-label backplate correction
+
+Six existing lessons:157steps twice/338states/12exits and terminal3DURLmatches
+passed. Extremezoom test exposed inflatedFirefox DOM boxes, not visible contact;
+added independently pixel-painted overlap oracle and4positive/negative controls.
+Retained test-only globalconst and numbering-wait failedattempts with corrections.
+Detected actual OH/NH2 tailink outside normalized squarebackplates in3acids;
+sharedviewer now retains square forsingleelements and full measuredink forcompound
+labels. New tests require0uncoveredink. SourceMOL/core unchanged by correction;
+MainHTMLdata/viewer cache keys nowcontentSHA based. Fullfinalforms rerun inprogress,
+controls/exports/Reviewer pending. No core.js/core-version/React/scenario/3D changes,
+commit/push/publication. Sourcegeometry52/31/8remains validated.
+
+# 2026-11-01 - Approved52 expanded Main integration applied
+
+Updated data52expanded52entries,31existing sourceMOLs, sharedviewer52calibration
+(CO including noCC cases, implicitOH/NH2) and MainHTML52cache URLs. Eightaccepted
+MOLs copiedexact,44others rebuilt from frozen baseline. Recovery and scripts:
+docs/checks/carbonyl-acid-uniform-20261101/. No core/React/other2D/scenario/3D edits.
+Static52/31/8geometry,844naming/312affected2D3D and2782protected checks passed.
+Firefox136before+136after cases at1500/390passed. Independent ChemistryValidator
+52fullgraph/SDFisomorphism/parentmaps and actual32outputbytes verified. Lessons,
+controls,exports and independent Reviewer pending. No core.js/core-version change,
+commit/push/publication. OwnisolatedFirefox14301 active; userbrowser/server retained.
+
+# 2026-11-01 - User accepts both acid layouts; Main status clarified
+
+Recorded acceptance of both acid previews in comparison/summary.json. Allsix
+carbonyl previews are also accepted. Main integrations are not applied; explicitly
+clarified this in response to the user. Only metadata/notes changed and four Main
+hashes match. Next combined52expanded/31sourceMOL integration plan for approval,
+with shared calibration/cache updates and six-lesson157step verification/review.
+No core.js/core-version changes, commit/push/publication.
+
+# 2026-11-01 - Acid isolated preview: independent review and delivery
+
+Fresh Reviewer /root/review_acid_uniform_preview inspected49frozen paths,
+manifest34cc3dd0..., with no P0-P3findings. Independent reconstruction, graph/IDs/
+nonxy/lengths/orientations/primitive/frame/URL/mask checks and screenshots are
+separated from Developer browser evidence. Review found2766protected paths and
+Gitindex unchanged. Report: acid-uniform-20261101/comparison/independent-review.json.
+Opened byte-verified two-pair gallery in external Firefox; visual decision pending.
+Only completionmetadata/notes updated after review; final functional hashes checked.
+No Main/core/sourceMOL/React/scenario/3D changes, commit/push/publication.
+No core.js/core-version changes. Main21acid and31carbonyl integrations remain
+unapplied. No lesson54step/Safari/offline/conference or new PNG-export certification.
+
+# 2026-11-01 - Approved isolated acid preview implementation
+
+Created docs/checks/acid-uniform-20261101/comparison/ with two native-rendered
+before/after pairs, a versioned gallery, six frozen input/proposed MOL pairs,
+transient calibration for compound OH/NH2 labels and reproducible checks.
+All proposed heavy bonds .6188, C-H/O-H .3094; two terminal rotations avoid
+coincidences without longer stems. No Main/sourceMOL/core/React/scenario/3D edits.
+Developer 18native +40controls +14UI +8figure +8HTTPdigest checks passed with
+0JS/overlap/inkcontact/clipping; eight real3Dmodel URLs matched. Initial direct
+redraw test failure retained; supported font-refresh test passes. Offline XML
+analysis uses the existing export orphan-attribute scrub, preserving line/rect
+bytes. Chemistry Validator actual six-MOL check clean, Reviewer pending.
+2766 protected files and four Main hashes unchanged. No core.js/core-version
+changes, commit/push/publication. Own isolatedFirefox13851closed. Next independent
+review and external Firefox preview; all21acid/31carbonyl integration still pending.
+
+# 2026-11-01 - Carboxylic acid expanded bond-length preflight
+
+Read-only Developer inventory and Chemistry Validator assessment: 21 acids /
+26 COOH groups, 10 matching source Expanded MOLs, two lessons / 54 steps.
+Uniform shortening produces hydrogen coincidences in two complex branched acids;
+19 others pass the coordinate-level overlap/crossing checks. All original COOH
+orientations already match the user convention. Existing multifunctional OH/NH2
+labels need targeted renderer calibration checks; no new atoms are proposed.
+
+Only project notes updated. No acid MOL/application code edited and no browser
+proof yet. Plan isolated visual comparison before Main integration. The accepted
+six carbonyl previews are preserved; their 31-molecule Main plan remains pending.
+Four protected Main hashes verified unchanged. No core.js/core-version changes,
+commit, push or publication.
+
+# 2026-11-01 - All six carbonyl preview layouts accepted
+
+The user accepted the final fourth RIGHT layout; all six previews are now
+visually accepted. Updated comparison/summary.json and session records only.
+No geometry or application code changed; the four protected Main hashes were
+checked and match. Existing independent preview review remains applicable.
+The final integration plan for 31 expanded aldehydes/ketones is pending approval.
+No core.js/core-version changes, commit, push or publication in this turn.
+
+# 2026-11-01 - Fourth RIGHT restoration: review and completion
+
+Completedonly4RIGHTmethyl/H13LEFTrestoration andopenedverifiedgallery+directSVG
+externalFirefox. AcceptedotherfiveMOL/SVGexactunchanged;allbeforeunchanged.
+FreshReviewer /root/review_fourth_right_restore,64pathmanifest8bf1e799...,noP0-P3.
+Independenttargetedgeometry/build/bytepreservation/mask/URL/protectedMainchecks
+separatedfromDeveloper3fresh+15reusednative/22UI/24figure/24HTTPdigestexecution.
+ChemistryValidator byteidentityrecoverspriorvalidgeometry. Completionmetadataonly
+postreview,targetedhashesverified. OwnFirefox13125stopped;userbrowser/serverretained.
+No Main/core/React/sourceMOL/scenario/3Dchanges orcommit/push/publication.
+No core.js/core-version changes. Nextfourthvisualacceptance; Main31notapplied.
+
+# 2026-11-01 - Approved fourth RIGHT restoration implementation
+
+Restoredonly4horizontalCH3RIGHT/H13LEFT afteruserclarification. Acceptedotherfive
+MOL/SVGexactunchanged;allbeforeMOL/SVGsame,only4proposedURLchanges. Updatedcomparison
+generator/check/template/derivedfiles andnewtargetedreplay;recoveryarchivekept.
+ChemistryValidator actual4byteexactpreviousreviewedrightshape;cachedgeometryproof.
+Developer3fresh+15reusednative,18mask0issues,22UI/24figure/24HTTPdigest0JS;3PythonASTs/
+2655Mainpathschecked. FinaltargetedReviewer pending. No Main/core/React/sourceMOL/
+scenario/3Dchanges orpublish. No core.js/core-version changes.
+
+# 2026-11-01 - Clarification: fourth horizontal branch RIGHT
+
+UsercorrectedLEFTtoRIGHT. Read-onlycandidateexactlymatchespreviousreviewedright
+layout;alllengths/orthogonalitypreserved,minnonbond.2786. Planpendingapprovalto
+restoreonly4rightCH3/H13left, preserveaccepted1/2/3/5/6. No code/MOL/corechanges.
+
+# 2026-11-01 - User accepts five previews; fourth needs clarification
+
+Useraccepted1/2/3/5/6. Supplied4photoalreadyhorizontalbranchleft asimplemented;
+newrepeatedleftrequestisambiguous. No code/MOL/Main/corechanges. Clarification
+neededbeforeanyadditionalgeometrychange;preserveacceptedfivecurrentproposals.
+
+# 2026-11-01 - Isopropyl2/4 adjustments: review and completion
+
+Completedapproved2upperorange.9000/horizontalCC.6188 and4horizontalCH3LEFT/H13RIGHT;
+openedbyteverifiedversionedcomparisonexternalFirefox. Accepted5/6and1/3MOL/SVGexact
+unchanged;allbeforeMOL/SVGunchanged;only2proposed/4proposedURLschanged.
+FreshReviewer /root/review_carbonyl_isopropyl,63pathmanifestecf66146...,noP0-P3findings.
+Independentgeometry/build/hash/mask/AST/protectedpaths/screenshotchecks separated
+fromDeveloper6fresh+12reusednative/22UI/24figure/24HTTPdigestexecution. Chemistry
+Validatorclean. Completionmetadataonlyafterreview, hashesverified. Recoveryretained.
+OwnFirefox12636closed;userbrowser/serverpreserved. No Main/core/React/sourceMOL/
+scenario/3Dchanges orcommit/push/publication. No core.js/core-version changes.
+Nextuservisualdecisionon2/4; Main31integrationnotapplied/authorizedbythisdelivery.
+
+# 2026-11-01 - Approved combined isopropyl2/4 implementation
+
+2upperorange.9000/horizontalCC.6188;4horizontalCH3left/H13right. Onlyisolatedpreview
+scripts/template/2MOLs/derivedSVG/page changed;accepted5/6and1/3MOL+SVGexactunchanged,
+allbeforeMOL/SVGsame. VersionedURLschangeonlytwoaffectedimages. Recoveryarchive
+retained. ChemistryValidator final2/4geometryclean. Developer6fresh+12unchanged
+nativecases/18mask0issues/22UI24figure24HTTPdigest0JS.3PythonASTs/2655Mainpathschecked.
+IndependentReviewer pending. No Main/core/React/sourceMOL/scenario/3Dchanges orpublish.
+No core.js/core-version changes. NextreviewandexternalFirefoxforvisualdecision.
+
+# 2026-11-01 - Accept fifth/sixth; combined second/fourth layout plan
+
+Useraccepted5/6visualproposals. Read-only4layoutpreflight+independentChemistry
+Validator: movehorizontalCH3leftwithproper180rotation,H13right,alllengths/orthogonal
+preserved,minnonbond.2786,noconflicts. Combinewithpending2stem.9000/arm.6188plan.
+No code/MOL/Main/core changes; combinedapprovalpending. Preserveaccepted5/6.
+
+# 2026-11-01 - Second isopropyl rebalance: read-only plan
+
+Userrequestsupperorangestemlonger/horizontalCCnormal. ProposedC3C8.9000,
+C8C10.6188 independentlyvalidatedinmemory; minnonbond.2812,allorthogonal/clear.
+Onlyisopropylgrouptranslationsneeded. Browserandimplementationpendingplanapproval.
+No code/MOL/Main/core changes orcommit/push/publication.
+
+# 2026-11-01 - Versioned image delivery: review and completion
+
+Completedapprovedcomparison-onlySHA256imageURLmechanism, openedbyteverifiedpage+
+12versionedimagesinexternalFirefox. AllSVG/MOL/native/calibration/Mainunchanged.
+FreshReviewer /root/review_carbonyl_asset_versioning,41pathmanifest024c9e8d..., no
+P0-P3findings. Independentbuild/URL/pathvalidation/bytepreservation/recovery/AST/
+screenshotchecks distinguishedfromDeveloper22UI/24figure/24HTTPdigestexecution.
+Completionmetadataonlyafterreview, targetedhashesverified. Originaldisplaycache
+originunproven; oldopentabsneedrefresh. No core.js/core-version/React/chemistry
+changes, no commit/push/publication. OwnFirefox12174closed;userbrowser/serverretained.
+Recoveryfilesretained. NextuservisualdecisiononproposalsbeforeMainintegration.
+
+# 2026-11-01 - Approved content-hashed comparison image URLs
+
+Changedcomparisonbuild.py,generatedframing/index andtest-page.py; newisolated
+asset-versioning-regression.py. All12SVGbytes/MOLs/nativecapture/calibration/Main
+unchanged. RegressionprovesstableURLs/onechangedassetonlynewURL. ActualFirefox24
+responsehashchecks(default+force-cache),22UI/24figure0JS/clipping/inkcontact.
+3PythonASTs/2655protectedMainpathschecked. IndependentReviewer pending.
+Exactoldtab/cachecauseunproven;updatedpagesgetnewURLswhencontentchanges, existing
+oldpagesnotliveupdated. No core.js/core-version/React/chemistrychanges orpublish.
+
+# 2026-11-01 - User confirms first current direct SVG
+
+Useracceptednewdirectfirstimage; geometricchangeisvisiblecorrectly. Exactcauseof
+oldergallerydisplayunknown. Planpendingforcontent-hashedSVGURLsincomparisonbuilder
+andmatchingtestupdates/browserdeliveryreview. No code/MOL/Main/corechanges.
+
+# 2026-11-01 - First molecule display discrepancy: read-only diagnosis
+
+Userphotoorangeapproximately1.6xnormal, currentMOLheavy.6188 andservedSVGorange
+1125/1126 vsblack1125nativeunits. Photo differs fromcurrentfile; exactoldtab/cache
+causeunknown. OpenedbyteverifiedSVGwithuniquecontenthashquery inexternalFirefox.
+OnlydiagnosticJSON/noteswritten, no code/MOL/Main/core changes. PossiblegalleryURL
+versioningplanpendingnewimagefeedback/approval. No commit/push/publication.
+
+# 2026-11-01 - Equal CC previews1/3/6: review and completion
+
+Completedapprovedisolatedincrement, openedverifiedpage+12SVGs inexternalFirefox.
+#1/#3/#6allheavy.6188/CH.3094;#2/#4/#5MOLandproposedSVGbyteunchanged;allorthogonal.
+FreshReviewer /root/review_carbonyl_equal_cc,62pathmanifest526a1bf6...,noP0-P3findings.
+Independentgeometry/build/mask/hash/screenshotevidence distinguishedfromDeveloper
+9fresh+9reusednative/22UI/24figureexecution. Auxiliaryexactscaleratioassertionfailed
+onintegerquantizationandisnotpassingproof; separateMOLlength/maskchecks passed.
+ChemistryValidator clean. Completionmetadataonlyafterreview; hashesverified.
+No Main/core/React/sourceMOL/scenario/3D change orcommit/push/publication. No core.js/
+core-version changes. Recoveryarchive retained. OwnFirefox11805stopped;userpreserved.
+NextuservisualdecisionbeforeMainintegration; no wider31/lesson/3Dclaim.
+
+# 2026-11-01 - Approved equal CC previews1/3/6 implementation
+
+ChangedonlyisolatedprevieworangeCC#1/#3/#6to.6188;#2/#4/#5exactunchanged. Allsix
+orthogonal/CH.3094. Updatedgenerator,geometrycheck,template,derivedfiles andnew
+recapture-equal-cc.py. Previouscompleteverifiedpreview archived/hashed.
+ChemistryValidator actual3geometryclean. Developer9freshnative+9exactinputreused,
+18mask/orthogonalitycases0issues,22UI/24figure0JS/inkcontact/clipping.7PythonASTs.
+2655protectedfiles/Main4hashes/HEAD/indexsame. FinalindependentReviewer pending.
+No Main/core/React/sourceMOL/scenario/3D change orcommit/push/publication.
+No core.js/core-version changes this workunit. NextfinalreviewandexternalFirefox.
+
+# 2026-11-01 - Equal CC request: read-only plan
+
+UserrequestsorangeCC#1/#3/#6=.6188; #2/#4orthogonaliso+leftH#4 already matchcurrent
+rightproposedcolumn; #5unchanged. Developer andindependentChemistryValidator memory
+checks show no conflicts/minnonbond.437558/.437558/.3094, allorthogonal, CH.3094.
+No code/MOL/Main/core edits. Planapprovalpendingbefore isolatedpreviewupdates.
+No commit/push/publication; no core.js/core-version changes.
+
+# 2026-11-01 - All-orthogonal spacing previews: independent review and completion
+
+Completed approved six-preview revision and opened verified page+12SVGs in external
+Firefox. Fivechangedspacingcandidates/#5unchanged, #2approvedone lateralBLACK.9282,
+allbondsorthogonal. Main/core/React/sourceMOL/scenarios/3D remain unchanged.
+IndependentReviewer /root/review_carbonyl_orthogonal_spacing(freshcontext),93path
+manifest12226080..., noP0-P3 findings. Independent geometry/orthogonality/mask/build/
+protectedhash/screenshot checks distinguished from suppliedruntime3fresh+15reused/
+22UI/24figure evidence in independent-review.json. ChemistryValidator clean.
+Completionmetadata/notes only changed afterreview, targetedhashverification passed.
+Recoveryarchives retained. OwnFirefox11340 stopped; userbrowser/server preserved.
+No commit/push/publication; no core.js/core-version changes in session. FullMain31
+integration remains pending uservisualdecision; widerlessons/3D testsnotclaimed.
+
+# 2026-11-01 - Approved all-orthogonal spacing preview option A
+
+Replaced rejectedV/#2 with approved orthogonal geometry: onevertical methyl,
+onehorizontal methyl and lateralBLACKC8-C10 .9282; allorange#2 .588. Preserved
+otherfivecandidates/userHpositions/#5unchanged. Activegenerator and geometry/native
+strokechecks now reject diagonals. Main/core/React/sourceMOLs/scenarios/3D untouched.
+Changed comparison scripts/template/derived page+MOL/SVG/evidence only; retained
+priortrial as hashedtar. ChemistryValidator finalgeometry read-only clean. Developer
+3targetednative+15unchangedinputcases,22UI/24figure0JS; native18backplateaudit0cuts/
+0diagonals.7Python ASTsparsed. Final independentReviewer pending. No commit/push/
+publication; no core.js/core-version changes in this work session.
+
+# 2026-11-01 - Spacing trial interrupted by orthogonal-only correction
+
+Implemented approved six-preview spacing experiment only (prepare/build/template,
+MOL/SVG/page/evidence;Main unchanged). Saved full prior preview as hashed tar.gz.
+Added geometric/backplate regression and targeted second recapture. Found/reproduced
+four non-endpoint mask cuts in initial V; H correction cleared them.18native cases
+(15reusedunchanged+3recaptured),22UI/24figure0JS; all results Developer evidence,
+Chemistry Validator read-only geometry checked separately. Final independentreview
+not yet done. User then explicitly rejected all diagonal bonds; current V/fan is
+incomplete/unaccepted and has not been opened as finalexternalpreview.
+Read-only orthogonal #2 alternatives verified: Aallorange.588/oneBLACK.9282;
+BisoORANGE.98/black.6188; bothallorthogonal andclear. Newlengthexceptionapproval
+pending. No Main/core/React/sourceMOL/scenario/3D change, no commit/push/publication.
+No core.js/core-version changes this session. OwnFirefox11020 stopped, userpreserved.
+
+# 2026-11-01 - Requested shorter preview stems: read-only preflight
+
+Investigated six requested layouts/numeric interpretations without code/MOL edits.
+Verified professorremoteHEAD/changelog/history unchanged4e1190ab; lastsync93b759f.
+Chemistry Validator identified #2 H/Handbond overlaps under simple .588 shortening;
+#1/#3 and #6 .3713 clear. #4 identifiedscreen-leftH12/second-leftH11 and viable
+Hplacements/oneverticalarm. Alternative #2 Vcarbonarms with reorientedH under
+planning: independent geometry check passed(min.320314); explicit userplanapproval
+and browser verification remain pending.
+No core/Main/React changes, no commit/push/publication. Browsernotrerun forthisplan.
+
+# 2026-10-31 - Vertical carbonyl previews: review and completion
+
+Completed approved isolated revision and opened it in external Firefox. Updated
+only comparison artifacts/scripts/geometry/page/tests under carbonyl-uniform-
+20261031/comparison; previous version preserved as hashed tar.gz. Five ethyl ends
+vertical in four candidates, two candidates unchanged; length/graph/ID invariants
+preserved. Fresh independent Reviewer /root/review_carbonyl_vertical_preview,
+59path manifest343a0330..., no P0-P3 findings. Independently checked geometry/SVGs/
+frames/fonts/screenshots/protected hashes; runtime18/22/24 checks supplied Developer
+evidence. Chemistry Validator clean separately. Targeted postreview verification
+covers completion metadata only; reviewed functional content unchanged.
+No Main/core/React/sourceMOL/scenario/3D edits, no commit/push/publication. Main31
+integration pending user visual decision. Owned isolated Firefox9373 stopped;
+user's browser/server preserved. No core.js/core-version change this unit.
+
+# 2026-10-31 - Approved vertical branch preview implementation
+
+Revised only six-preview deliverables: five ethyl continuations made vertical in
+four candidates using rigid terminal rotations and CH2 H slot swaps. Two candidates
+already vertical unchanged. Main/React/source MOLs/3D/scenarios/core untouched.
+Previous preview retained as hashed tar.gz. Added bounded geometry regression;
+independent Chemistry Validator final check clean. Developer18native/22UI/24figure
+checks zero JS errors and no ink-bond contacts; five Python scripts parsed.
+Fresh independent Reviewer pending. User must inspect before Main implementation.
+No commit/push/publication or core.js/core-version change.
+
+# 2026-10-31 - Vertical branch request: investigation and plan only
+
+User requested maximum vertical branch development in six previews. Read-only MOL
+inspection confirmed parent attachment stems already vertical; remaining bends are
+inside ethyl/isopropyl groups. Plan to change ethyl continuation and affected H
+positions in isolated previews pending user approval. No code/MOL/core changes.
+
+# 2026-10-31 - Six carbonyl previews: completed independent review
+
+Completed approved isolated visual comparison only; opened the verified local
+comparison URL in external Firefox. New comparison artifacts are under
+`docs/checks/carbonyl-uniform-20261031/comparison/`. Fresh read-only Reviewer
+/root/review_carbonyl_six_preview reviewed 51 frozen paths at manifest680fd51f...,
+no actionable P0-P3 findings. Independent geometry/hash/SVG/screenshot inspections
+and Developer browser evidence are distinguished in independent-review.json.
+Only completion metadata and notes changed after review; targeted hashes verified.
+Owned headless Firefox closed; user's browser/server preserved. No Main/core52,
+React, source MOL, scenario JSON or 3D change; no commit, push or publication.
+Next: user visual decision on six spacings before implementing all31. Main lesson
+and 3D integration checks remain pending. No core.js/core-version changes in unit.
+
+# 2026-10-31 — Six isolated aldehyde/ketone visual comparisons
+
+User approved firstpreview6. Added only comparison artifacts/scripts/page under
+checks/carbonyl-uniform-20261031/comparison/, with actualMainSVGbefore/candidates
+in disposablebrowsercontext. Mainfiles remain byte-identical. SixproposedMOLs
+geometry/IDs/fields/directions verified byindependentChemistryValidator;2657
+existingpathsunchangedbeforebookkeeping. Developer18renderer/22UI/24standalone
+figureinkchecks0JS. Commonfont/frame/parentalignment verified. Retainedharness
+height-equalityprecisionfailure;final.001CSSpxbound. No Mainimplementationof31,
+no 3D/React/scenario/corechanges orpublication. FinalReviewer pending.
+
+# 2026-10-31 — Aldehyde/ketone preflight only
+
+User asks sameexpanded treatment for17aldehydes+14ketones. Developer actualcore
+classification/source/viewer/docs/upstream inspection andfreshread-onlyChemistry
+Validator /root/carbonyl_geometry_preflight identified6geometricallycolliding
+uniformcandidates versus25clear; originalstructures unaffected. Measured feasible
+branchspacingcandidates recordedin checks/carbonyl-uniform-20261031/preflight.json.
+No app/core/React/JSON edits; no browserreadabilityorfinalimplementationclaim.
+Approvalpendingfor visualcomparison6beforefinal31geometry/calibrationunit.
+Currentbaseline retains prior completedethers. No commit/push/publication.
+
+# 2026-10-31 — Ether unit final independent review and completion
+
+Completed approved11ethercoordinate/calibrationunit. IndependentReviewer
+/root/review_ethers_uniform_20261031(freshcontext) reviewed47frozenpaths,c4764343...
+against03c2d138, noP0-P3findings. Independently checked original/currenthashes,
+MOLfields/graphs/directions/valence/formula/lengths,9sourceMOLs,newlines,2606protected
+files,HEAD/index,JSC/Python syntax,Developerassertions and4images. Didnotexecute
+browser/namingmatrix; recordedasDeveloper evidence. ChemistryValidatorseparate
+final44representationcheck clean. Counts/limits in summary.json and taskreport.
+Onlycompletionmetadata/report/notes changed afterreview; targetedhashverification
+confirms12runtimefiles unchanged and no new functional edits. Ownedtestprocesses
+closed,user8013/browserpreserved. Originalsources/recoverypoints retained.
+Allcodechanges local/uncommitted/unpublished. No core.js/core-version change in
+thisunit;core52 SHA256d2138418ff630ab77e578b80ca8ba3a10cc1b877c3ab8c0e5c2735ffcd1f24a2.
+
+# 2026-10-31 — Eleven expanded ethers, approved implementation
+
+User approved CH.3094/CCCO.6188drawingunits for all11ethers. Added guarded
+coordinate-only generator from frozenoriginals, changing11embeddedMOLs/nineexisting
+sources; preserved nonxyfields/IDs/directions and originalnewlineconventions.
+Extended existing viewer52font/number calibration to11knownethers includingCOfor
+dimethylether; HTML52two cacheURLs. No core/3D/React/JSON/other-form changes.
+See docs/ETHERS-UNIFORM-20261031.md and checks/ether-uniform-20261031/summary.json.
+ActualDeveloperchecks:844naming comparisons/66ether2D3D,2606protectedfiles;66before+
+66afterforms,204controls,22realmodels,3exports,58lessonstates/27steps/twoexits,0JS.
+FreshChemistryValidatorread-onlyfinal44representations/geometrychecks clean.
+FinalindependentReviewer pending. Oneunchanged nativeviewBoxdelta retained; actual
+44unchanged-form glyphboxes/fonts exactsame. Historicalframingissue notclosed.
+Changes local, uncommitted, unpublished. Core52unchanged d2138418...
+
+# 2026-10-31 — Ether geometry preflight (no implementation)
+
+User asked same expanded bond-length treatment as previous classes. Developer read
+source/viewer/scenario and checked upstreamHEAD/changelog/history unchanged4e1190ab.
+11ether forms and27step existinglesson identified. Four old embedded originals match
+professor upstreamdata50 byte-for-byte;7newether lengths differ. Fresh read-only
+Chemistry Validator /root/ether_geometry_preflight validated source/embed differences
+are trailingnewlinesonly and direction-preserving targetgeometry feasibilityall11.
+Original isopropylmethyl slightangles are retained in proposedplan. Plan awaits user
+approval before code edits; no app/core/React/scenario or publication changes.
+Documentation-only files changed: SESSION-NOTES.md and YANNIS-CONTRIBUTIONS.md.
+No browser or post-change verification claimed.
+
 # 2026-10-31 — Save completed and verified
 
 Published release0969f46205c5317ee22c8b28dabe21880a4fb270 independently reviewed,

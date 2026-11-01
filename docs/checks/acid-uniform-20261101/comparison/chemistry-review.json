@@ -1,0 +1,49 @@
+{
+  "date": "2026-11-01",
+  "validator": "/root/acid_uniform_preflight",
+  "role": "NAMELECULE_CHEMISTRY_VALIDATOR_V1_20261023",
+  "readOnly": true,
+  "findings": [],
+  "checks": [
+    "Independent fixed-column parsing and coordinate reconstruction",
+    "Six graphs, IDs, orders and non-xy fields unchanged",
+    "Two C9/C11 proper rotations and H slot moves match recipe",
+    "CH/OH .3094, heavy .6188; all bonds orthogonal",
+    "Eight COOH orientations preserved",
+    "No coincident atoms, atom-on-unrelated-bond or crossings",
+    "Implicit OH/NH2 retained; zero added atoms",
+    "Two supplied comparison screenshots inspected"
+  ],
+  "molecules": [
+    {
+      "key": "ethyl_3_isopropyl_2_dimethyl_4_5_hexanoic_acid",
+      "proposedMOLSHA256": "85e92fab9eef5f53e72ccf6c2d5d899242521143f3cf51b5f9b0cd484e4323d0"
+    },
+    {
+      "key": "ethyl_3_isopropyl_2_dimethyl_4_5_hexadien_2_4_dioic_acid",
+      "proposedMOLSHA256": "efb9273e8862eceaef46c53e733967a1b96fb28a9d0018f10034b6a1a66bd85b"
+    },
+    {
+      "key": "methanoicacid",
+      "proposedMOLSHA256": "5153a282033459de39f991fb0a34c5f95536bc495dc0fd20a8ff770ec68e264b"
+    },
+    {
+      "key": "hydroxypropanoic_acid_2",
+      "proposedMOLSHA256": "6ffd1cc2d8ebbdec9576e10ae5d679cc133c73d1a96ec8d623fb8abb6becf0e1"
+    },
+    {
+      "key": "aminobutanoic_acid_3",
+      "proposedMOLSHA256": "755d62c561b73782172cfb8625b835b5d281ddc14dd821e8dea7d5dd94549c35"
+    },
+    {
+      "key": "dihydroxybutanedioic_acid_2_3",
+      "proposedMOLSHA256": "d9ce20323457a77c082dcb8cdfa083ec128e2914c44596de4299c414984f25c3"
+    }
+  ],
+  "browserExecutionByValidator": false,
+  "limits": [
+    "Browser runs are Developer evidence",
+    "No all-21 integration or lesson replay"
+  ],
+  "calibrationFinalization": "After chemical review, numeric tspan offset writes were deferred until all labels validate; six MOLs unchanged."
+}

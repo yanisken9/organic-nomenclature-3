@@ -1,0 +1,22 @@
+{
+  "date": "2026-11-01",
+  "cause": "Normalized compound OH/NH2 labels entered the single-element centered-square policy, leaving tail ink outside the backplate.",
+  "observedUncoveredBefore": {
+    "hydroxypropanoic_acid_2": 1161,
+    "aminobutanoic_acid_3": 1788,
+    "dihydroxybutanedioic_acid_2_3": 2313
+  },
+  "bondInkContactsBefore": 0,
+  "fix": "Keep centered squares only for single-element labels; compound labels reuse complete measured ink bounds and existing padding.",
+  "affectedCurrentMolecules": [
+    "hydroxypropanoic_acid_2",
+    "aminobutanoic_acid_3",
+    "dihydroxybutanedioic_acid_2_3"
+  ],
+  "MainGeometryAndCoreChangedByCorrection": false,
+  "currentViewerSHA256": "f5351df8c1c2993d1a1d7f62bd53a704f971d7779ddbafc1d0cc0151d54922f2",
+  "regression": "Full136post-fix forms and194actualcontrols reject uncoveredink; allpassed.",
+  "finalFormsVerified": 136,
+  "afterUncoveredInk": 0,
+  "afterBondInkContacts": 0
+}

@@ -1,0 +1,113 @@
+{
+  "date": "2026-10-31",
+  "status": "ReadOnlyPreflight;AwaitingApprovedPreviewPlan",
+  "implementationApproved": false,
+  "aldehydes": 17,
+  "ketones": 14,
+  "expandedForms": 31,
+  "existingSourceExpandedMOLs": 21,
+  "lessons": {
+    "saturated-monoaldehydes": 24,
+    "other-aldehydes": 26,
+    "saturated-monoketones": 25,
+    "other-ketones": 28
+  },
+  "professorOriginalsMatchingUpstreamData50": 10,
+  "upstreamChecked": "4e1190ab3d58f5eb384f1583bfe05e37242bef61",
+  "lastActuallySynced": "93b759f5891d7b5a1172646032d83215d60b7604",
+  "candidateTargets": {
+    "CH": 0.3094,
+    "normalCCAndCO": 0.6188
+  },
+  "uniformCandidateGeometricallyClear": 25,
+  "uniformCandidateCoincidencesMOL1Based": {
+    "ethyl_2_methyl_3_pentanal": [
+      [
+        12,
+        21
+      ]
+    ],
+    "ethyl_4_isopropyl_3_methyl_2_hexanal": [
+      [
+        15,
+        27
+      ],
+      [
+        17,
+        30
+      ],
+      [
+        18,
+        36
+      ]
+    ],
+    "ethyl_4_penten_4_yn_2_al": [
+      [
+        10,
+        15
+      ]
+    ],
+    "isopropyl_2_buten_2_dial": [
+      [
+        11,
+        18
+      ]
+    ],
+    "trimethyl_3_4_4_pentanone_2": [
+      [
+        18,
+        25
+      ]
+    ],
+    "diethyl_4_5_dimethyl_2_6_heptanone_3": [
+      [
+        10,
+        14
+      ],
+      [
+        21,
+        36
+      ]
+    ]
+  },
+  "uniformCandidateOtherProblems": {
+    "diethyl_4_5_dimethyl_2_6_heptanone_3": "H30liesonunrelatedC3=O14"
+  },
+  "existingOriginalMOLsHaveTheseProblems": false,
+  "possiblePreviewCandidates": {
+    "fourBranchedAldehydes": {
+      "originalLongStems": 0.98,
+      "otherHeavy": 0.6188,
+      "CH": 0.3094,
+      "minimumNonbondedDistance": 0.3612
+    },
+    "trimethyl_3_4_4_pentanone_2": {
+      "onlyOriginalC4C8Stem": 0.98,
+      "otherHeavy": 0.6188,
+      "CH": 0.3094,
+      "minimumNonbondedDistance": 0.313706
+    },
+    "diethyl_4_5_dimethyl_2_6_heptanone_3": {
+      "original2xStems": 0.9282,
+      "original3xStems": 1.2376,
+      "otherHeavy": 0.6188,
+      "CH": 0.3094,
+      "minimumNonbondedDistance": 0.3094
+    }
+  },
+  "validator": "/root/carbonyl_geometry_preflight",
+  "validatorRole": "NAMELECULE_CHEMISTRY_VALIDATOR_V1_20261023",
+  "validatorReadOnly": true,
+  "browserVerificationDone": false,
+  "previewCandidateReadabilityNotYetVerified": true,
+  "originalFieldsIDsBondOrdersAndDirectionsToBePreserved": true,
+  "next": "Approveboundedvisualpreviewforsixbeforefinal31implementation;noactiveappcodeeditsyet",
+  "activeHEAD": "168e3cec01f941a84d40bbe0dc07156e7baa35d0",
+  "currentBaselineHashes": {
+    "js/jsme-nick-nomeclature-moc2-data_52.js": "97dc05a98ef5e5fb33f9034b8060b860395891e5e94ff5af6e361163c991efe2",
+    "js/mulermoc-nom-molview-52.js": "5268ad62b13b1ef3e2851bbb79b45d664ac0c8a678b194d07a6d2901d9af49ef",
+    "mulermoc-nom-52.html": "8a054dddefcc1061d90671ce22c38121bb98a98f976ab827219b1ce8015d036b",
+    "js/mulermoc-nom-core-52.js": "d2138418ff630ab77e578b80ca8ba3a10cc1b877c3ab8c0e5c2735ffcd1f24a2"
+  },
+  "coreChanged": false
+}

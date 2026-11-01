@@ -1,0 +1,127 @@
+{
+  "previewOnly": true,
+  "normalHeavy": 0.6188,
+  "CHAndOH": 0.3094,
+  "molecules": [
+    {
+      "key": "ethyl_3_isopropyl_2_dimethyl_4_5_hexanoic_acid",
+      "stems": [
+        {
+          "atoms": [
+            2,
+            7
+          ],
+          "original": 4.095,
+          "proposed": 0.6188
+        },
+        {
+          "atoms": [
+            3,
+            10
+          ],
+          "original": 2.34,
+          "proposed": 0.6188
+        },
+        {
+          "atoms": [
+            4,
+            12
+          ],
+          "original": 1.755,
+          "proposed": 0.6188
+        },
+        {
+          "atoms": [
+            5,
+            13
+          ],
+          "original": 1.755,
+          "proposed": 0.6188
+        }
+      ],
+      "verticalEthylTurns": [],
+      "layoutAdjustments": [
+        {
+          "kind": "isopropyl",
+          "center": 7,
+          "horizontalTerminal": 8,
+          "horizontalDirection": "right",
+          "verticalTerminal": 9,
+          "verticalDirection": "down",
+          "centralHydrogen": 23,
+          "HDirection": "left"
+        },
+        {
+          "kind": "ethyl",
+          "center": 10,
+          "terminal": 11,
+          "direction": "up",
+          "hydrogenMovedRight": 30
+        }
+      ]
+    },
+    {
+      "key": "ethyl_3_isopropyl_2_dimethyl_4_5_hexadien_2_4_dioic_acid",
+      "stems": [
+        {
+          "atoms": [
+            2,
+            7
+          ],
+          "original": 3.51,
+          "proposed": 0.6188
+        },
+        {
+          "atoms": [
+            3,
+            10
+          ],
+          "original": 2.34,
+          "proposed": 0.6188
+        },
+        {
+          "atoms": [
+            4,
+            12
+          ],
+          "original": 1.755,
+          "proposed": 0.6188
+        },
+        {
+          "atoms": [
+            5,
+            13
+          ],
+          "original": 1.755,
+          "proposed": 0.6188
+        }
+      ],
+      "verticalEthylTurns": [],
+      "layoutAdjustments": [
+        {
+          "kind": "isopropyl",
+          "center": 7,
+          "horizontalTerminal": 8,
+          "horizontalDirection": "right",
+          "verticalTerminal": 9,
+          "verticalDirection": "down",
+          "centralHydrogen": 18,
+          "HDirection": "left"
+        },
+        {
+          "kind": "ethyl",
+          "center": 10,
+          "terminal": 11,
+          "direction": "up",
+          "hydrogenMovedRight": 25
+        }
+      ]
+    }
+  ],
+  "calibrationCheckKeys": [
+    "methanoicacid",
+    "hydroxypropanoic_acid_2",
+    "aminobutanoic_acid_3",
+    "dihydroxybutanedioic_acid_2_3"
+  ]
+}

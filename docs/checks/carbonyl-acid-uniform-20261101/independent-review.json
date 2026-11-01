@@ -1,0 +1,47 @@
+{
+  "date": "2026-11-01",
+  "Reviewer": "/root/review_carbonyl_acid_main52",
+  "ROLE_ID": "NAMELECULE_REVIEWER_V1_20261023",
+  "freshContext": true,
+  "readOnly": true,
+  "enforcedReadOnlyFilesystemIsolationVerified": false,
+  "manifestSHA256": "dedd9700504822c3e86d6e15e9602416d3f4fef0a4451dee26fa06127fd60d12",
+  "targetFiles": 114,
+  "baseHEAD": "168e3cec01f941a84d40bbe0dc07156e7baa35d0",
+  "newActionableFindings": [],
+  "existingFindings": [
+    {
+      "id": "EX-01",
+      "severity": "P2",
+      "file": "js/mulermoc-nom-molview-52.js",
+      "line": 3979,
+      "behavior": "Unchanged export name boxes centered without fitting to 1200px canvas. Recorded long name width 1458.70px; visibly truncated before and after.",
+      "status": "Disclosed existing issue; separate scoped export correction pending."
+    }
+  ],
+  "independentChecks": [
+    "All114 hashes, HEAD/index and final target recheck",
+    "52 drawings/836 bonds fixed-column graph, IDs, orders, nonXY and approved lengths",
+    "31 source/embed and8 exact accepted MOLs",
+    "Data outside52 literals and2782 protected paths unchanged",
+    "Both guarded factories reproduce actual application files",
+    "414 native stroke/backplate audits recomputed from Developer-captured SVGs",
+    "136 before/after identity comparisons and32 other-form geometry comparisons",
+    "Six lessons157steps, no authored Expanded states or three compound-label acids",
+    "Python AST and JavaScriptCore syntax parsing; source/diff inspection",
+    "Supplied amino-acid screenshot and before/after export PNGs inspected"
+  ],
+  "suppliedEvidenceNotIndependentlyExecuted": [
+    "194 browser controls",
+    "338 authored lesson replay states",
+    "24 additional manual Expanded/restored lesson states",
+    "PNG generation",
+    "Chemistry Validator52 fullSDF isomorphisms"
+  ],
+  "limitations": [
+    "No independent browser launch",
+    "No Safari/physical mobile/offline/conference certification",
+    "Absence of findings does not guarantee absence of defects"
+  ],
+  "conclusion": "No review-blocking finding within approved integration scope."
+}

@@ -1,3 +1,6 @@
+**Namelecule — 1/11/2026:** Συνολική αναφορά από Παρασκευή30/10 έως σήμερα, με κοινή πολιτική127ανεπτυγμένων τύπων σε11κατηγορίες, ελεγμένα γράμματα2D και στοχευμένη διόρθωση κύκλου ζωήςJSmol. Παραμένουν141μόρια/14μαθήματα/337βήματα. Το core52 και τα ενεργάscenarioJSON δεν άλλαξαν στην περίοδο. React χωρίς νέο build.
+[Συνολική αναφορά καθηγητή](https://yanisken9.github.io/organic-nomenclature-3/docs/professor-20261101/update.html), [ενημερωμένη υποδοχή](https://yanisken9.github.io/organic-nomenclature-3/design/welcome-proposal.html?v=release-20261101). Οι εξαιρέσεις και οι περιορισμοί παρατίθενται στην αναφορά.
+
 **Namelecule — 31/10/2026:** Διόρθωση γραμμάτων 2D, ελεγχόμενη διόρθωση κύκλου ζωής JSmol και ομοιογένεια 47 ανεπτυγμένων τύπων. Παραμένουν 141 μόρια / 14 μαθήματα / 337 βήματα. Καμία σημερινή αλλαγή core. Η React διατηρείται χωρίς νέο build, με απομόνωση δύο παλιών εξαρτήσεων για συμβατότητα.
 [Αναφορά καθηγητή](https://yanisken9.github.io/organic-nomenclature-3/docs/professor-20261031/update.html), [σελίδα υποδοχής](https://yanisken9.github.io/organic-nomenclature-3/design/welcome-proposal.html?v=release-20261031). Τα όρια και η ανοικτή διερεύνηση του κάδρου αναφέρονται στην αναφορά.
 

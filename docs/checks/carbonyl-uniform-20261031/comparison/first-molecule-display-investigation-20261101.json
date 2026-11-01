@@ -1,0 +1,31 @@
+{
+  "date": "2026-11-01",
+  "scope": "Read-only investigation of user screenshot first proposed molecule",
+  "userScreenshotObservation": "Orange center distances approximately1.6x parent C-C, matching earlier long-stem appearance; manual visual estimate",
+  "currentMOLHeavyLengths": 0.6188,
+  "currentSVGParentCCNativeLengths": [
+    1125,
+    1125,
+    1125,
+    1125
+  ],
+  "currentSVGOrangeNativeLengths": [
+    1125,
+    1126
+  ],
+  "currentSVGBlackBranchNativeLength": 1125,
+  "nativeDifference": "1 native unit rounding, about0.06 CSSpx at26px glyph font; cannot explain screenshot1.6ratio",
+  "servedSVGVerifiedByteExact": true,
+  "openedExternalFirefoxURL": "http://127.0.0.1:8013/docs/checks/carbonyl-uniform-20261031/comparison/ethyl_2_methyl_3_pentanal-proposed.svg?verified=c9b60bdc97774f99",
+  "sha256": "c9b60bdc97774f99009ad457dc9fa7e81df73af346f31a5bf32a24476186aae5",
+  "confirmed": "User confirmed current content-hashed direct SVG is correct; earlier screenshot differs",
+  "hypotheses": [
+    "Old Firefox image cache",
+    "Older comparison tab or different document address"
+  ],
+  "unknown": "Exact origin of earlier display remains unknown (old tab/document or cached image); no live Firefox cache inspection",
+  "codeChanged": false,
+  "coreChanged": false,
+  "possibleNext": "Proposed plan pending approval: content-hashed SVG query URLs in build.py/generated framing/index; adapt test-page.py path resolution and digest assertions; existing gallery browser checks plus independent review, no molecular/native/core edits",
+  "userConfirmedNewDirectImageCorrect": true
+}
