@@ -1,3 +1,19 @@
+# 2026-11-01 — Final consolidated publication and save completed
+
+Public 74a9e3ea395eb79ffa6d6d72bdcb6275e10c93a7 and professor report verified; runtime db08d20
+unchanged after review. Full source snapshot 5eb89f0f7acd2a7bdb26f58fb42e6c2d4ffce14f, 3059 files,
+ZIP CRC/everySHA, Git bundle and recovery verified; two external copies plus 14 active
+JSONs/337 steps and 10 launcher files verified. Full checkpoint branch uploaded;
+latest two notes saved as post-snapshot bookkeeping and in refreshed Git bundle,
+with exact hashes/refs in final-save-state-20261101-085010.json. Old backups retained.
+73 public runtime/10 final metadata HTTP checks and Main10/React8 live functional
+checks complete. External console errors and unexplained first Main timeout retained
+and disclosed, not silently dismissed. Independent reviews passed; no application
+fixes in this save task. Core52 and active scenarios unchanged since Friday; no
+core.js/core-version changes this session. Active source HEAD/index preserved.
+Professor links/ready text saved in both destinations; no message sent. Existing
+PNG/framing/external-service/untested-platform and conference limits remain open.
+
 # 2026-11-01 — Consolidated Friday-to-now report published and live checks recorded
 
 Public 74a9e3ea395eb79ffa6d6d72bdcb6275e10c93a7 documents reviewed runtime db08d20;

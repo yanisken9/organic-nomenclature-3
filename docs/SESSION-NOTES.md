@@ -1,3 +1,43 @@
+# Current resume point — 2026-11-01 — Consolidated report and full save completed
+
+User requested one professor report for Friday 30 October midday through 1 November,
+plus saving everything everywhere. Public report/app verified at release
+74a9e3ea395eb79ffa6d6d72bdcb6275e10c93a7; reviewed runtime db08d20a7d5c0cfce194edd80ad3a7439d1f3e44.
+Report: https://yanisken9.github.io/organic-nomenclature-3/docs/professor-20261101/update.html
+Welcome: https://yanisken9.github.io/organic-nomenclature-3/design/welcome-proposal.html?v=release-20261101
+Ready-to-forward text and links saved beside report and in both external folders.
+No message sent to professor. No further work remains within this save/report request.
+
+Final full source snapshot: 5eb89f0f7acd2a7bdb26f58fb42e6c2d4ffce14f (3059 files).
+Branch checkpoint/namelecule-20261101-085010 uploaded. ZIP CRC/every-file SHA, Git
+bundle and recovery ZIP verified; copies verified in both established destinations:
+Desktop/Διπλωματική - Ονοματολογία/Αποθηκεύσεις/2026-11-01-085010 and
+Desktop/αρχεία  json/Namelecule_01-11-2026. Old backups retained. Latest session/
+contribution bookkeeping is committed separately on the same branch and included
+in the refreshed bundle; ZIP remains the exact snapshot above, latest notes copied
+separately. Final bookkeeping commit/remote refs/archive hashes are recorded in
+communication/checkpoints/final-save-state-20261101-085010.json and both external
+final-save-state.json receipts. Source active HEAD/index preserved, no checkout/stage.
+Full checkpoint preserves local React WIP; only reviewed Main and documentation
+published. Public React's 39 files byte-preserved with no new build.
+
+Verification: 73 exact runtime/public HTTP hashes plus 10 exact final documentary
+HTTP hashes. Live Main retry completed 10 functional checks, React completed 8.
+Main's 8 and React's 2 raw external tracker/cookie errors remain; strict clean-console
+checks fail. Initial Main timeout after 4 checks has unknown cause and is retained,
+not declared fixed. Two existing atom-ID warnings independently proved symmetry-
+equivalent with full explicit-H SDF automorphisms and old/current JSC reproduction.
+Independent Reviewer /root/review_publication_20261101 passed initial and targeted
+reviews; evidence/limits in docs/checks/publication-20261101/. No new app fixes here.
+127 Expanded forms/11 classes reported; 141 molecules/14 lessons/337 steps preserved.
+Core52 and all active scenario JSONs byte-equal to Friday baseline 3f046ad8.
+No core.js/core-version changes this session or reported period.
+Upstream CHANGELOG checked against 4e1190ab (unchanged); last actual sync 93b759f5.
+Owned test server/Firefox closed; user 8013 and normal Firefox left running.
+Known long acid-name PNG clipping, framing uncertainty, CDN dependencies and untested
+Safari/physical mobile/offline/conference demonstration sequence remain disclosed.
+Next: user may forward report/app links; future work requires its own approved scope.
+
 # Current resume point — 2026-11-01 — Consolidated report published and verified; final backup generation underway
 
 User requested one professor report for Friday 30 October midday through 1 November,
