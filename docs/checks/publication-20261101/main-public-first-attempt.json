@@ -1,0 +1,115 @@
+{
+  "base": "https://yanisken9.github.io/organic-nomenclature-3/",
+  "checks": [
+    {
+      "reportWidth": 1500,
+      "noOverflow": true
+    },
+    {
+      "reportWidth": 390,
+      "noOverflow": true
+    },
+    {
+      "welcome": true
+    },
+    {
+      "MainMolecules": 141,
+      "newMetrics": true
+    }
+  ],
+  "completed": false,
+  "failure": "Timed out: selectedMol===\"propene\"&&mode2D===\"expanded\"",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/publication-20261101/test-main.py\", line 16, in <module>\n    until('selectedMol==='+json.dumps(key)+'&&mode2D===\"expanded\"');until('(()=>{const m=Jmol.getPropertyAsArray(jmolAppletNomeclature,\"modelInfo\").models;return m&&m.length===1&&m[0].file===new URL(nameExamples[selectedMol].file3D,document.baseURI).href})()');count=ev('Number(Jmol.evaluateVar(jmolAppletNomeclature,\"{*}.count\"))')\n  File \"bidi\", line 51, in until\nAssertionError: Timed out: selectedMol===\"propene\"&&mode2D===\"expanded\"\n",
+  "javascriptErrors": [
+    {
+      "type": "javascript",
+      "level": "error",
+      "source": {
+        "realm": "6ed6081b-232f-40cb-9014-46a9df3e697a",
+        "context": "94a7b5f8-51cf-4d98-89bb-2bdddc26c302",
+        "userContext": "default"
+      },
+      "text": "Η φόρτωση του «https://chemapps.stolaf.edu/jmol/JmolTracker.php?id=UA-45940799-1&applet=Jmol._Canvas2D%20(Jmol)&version=2022-06-24%2005:54:49%20(JSmol/j2s)&appver=16.4.23&url=https%3A%2F%2Fyanisken9.github.io%2Forganic-nomenclature-3%2Fmulermoc-nom-52.html» σε ένα πλαίσιο απορρίπτεται από την οδηγία «X-Frame-Options» που έχει οριστεί σε «sameorigin».",
+      "timestamp": 1793516598687
+    },
+    {
+      "type": "javascript",
+      "level": "error",
+      "source": {
+        "realm": "6ed6081b-232f-40cb-9014-46a9df3e697a",
+        "context": "94a7b5f8-51cf-4d98-89bb-2bdddc26c302",
+        "userContext": "default"
+      },
+      "text": "Το cookie «_ga_1V8NWYY46Y» έχει απορριφθεί λόγω μη έγκυρου τομέα.",
+      "timestamp": 1793516599210
+    },
+    {
+      "type": "javascript",
+      "level": "error",
+      "source": {
+        "realm": "6ed6081b-232f-40cb-9014-46a9df3e697a",
+        "context": "94a7b5f8-51cf-4d98-89bb-2bdddc26c302",
+        "userContext": "default"
+      },
+      "text": "Το cookie «_ga_1V8NWYY46Y» έχει απορριφθεί λόγω μη έγκυρου τομέα.",
+      "timestamp": 1793516599211
+    },
+    {
+      "type": "javascript",
+      "level": "error",
+      "source": {
+        "realm": "6ed6081b-232f-40cb-9014-46a9df3e697a",
+        "context": "94a7b5f8-51cf-4d98-89bb-2bdddc26c302",
+        "userContext": "default"
+      },
+      "text": "Το cookie «_ga» έχει απορριφθεί λόγω μη έγκυρου τομέα.",
+      "timestamp": 1793516599211
+    }
+  ],
+  "allDiagnosticEntries": [
+    {
+      "type": "javascript",
+      "level": "error",
+      "source": {
+        "realm": "6ed6081b-232f-40cb-9014-46a9df3e697a",
+        "context": "94a7b5f8-51cf-4d98-89bb-2bdddc26c302",
+        "userContext": "default"
+      },
+      "text": "Η φόρτωση του «https://chemapps.stolaf.edu/jmol/JmolTracker.php?id=UA-45940799-1&applet=Jmol._Canvas2D%20(Jmol)&version=2022-06-24%2005:54:49%20(JSmol/j2s)&appver=16.4.23&url=https%3A%2F%2Fyanisken9.github.io%2Forganic-nomenclature-3%2Fmulermoc-nom-52.html» σε ένα πλαίσιο απορρίπτεται από την οδηγία «X-Frame-Options» που έχει οριστεί σε «sameorigin».",
+      "timestamp": 1793516598687
+    },
+    {
+      "type": "javascript",
+      "level": "error",
+      "source": {
+        "realm": "6ed6081b-232f-40cb-9014-46a9df3e697a",
+        "context": "94a7b5f8-51cf-4d98-89bb-2bdddc26c302",
+        "userContext": "default"
+      },
+      "text": "Το cookie «_ga_1V8NWYY46Y» έχει απορριφθεί λόγω μη έγκυρου τομέα.",
+      "timestamp": 1793516599210
+    },
+    {
+      "type": "javascript",
+      "level": "error",
+      "source": {
+        "realm": "6ed6081b-232f-40cb-9014-46a9df3e697a",
+        "context": "94a7b5f8-51cf-4d98-89bb-2bdddc26c302",
+        "userContext": "default"
+      },
+      "text": "Το cookie «_ga_1V8NWYY46Y» έχει απορριφθεί λόγω μη έγκυρου τομέα.",
+      "timestamp": 1793516599211
+    },
+    {
+      "type": "javascript",
+      "level": "error",
+      "source": {
+        "realm": "6ed6081b-232f-40cb-9014-46a9df3e697a",
+        "context": "94a7b5f8-51cf-4d98-89bb-2bdddc26c302",
+        "userContext": "default"
+      },
+      "text": "Το cookie «_ga» έχει απορριφθεί λόγω μη έγκυρου τομέα.",
+      "timestamp": 1793516599211
+    }
+  ]
+}

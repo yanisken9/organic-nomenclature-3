@@ -1,3 +1,27 @@
+# 2026-11-01 — Consolidated Friday-to-now report published and live checks recorded
+
+Public 74a9e3ea395eb79ffa6d6d72bdcb6275e10c93a7 documents reviewed runtime db08d20;
+73 runtime and 10 final metadata URLs matched exact hashes. Main live retry 10 and
+React 8 functional checks completed. Raw external console errors and the unknown
+first-attempt propene timeout remain explicitly disclosed. Two existing core-ID
+warnings proved equivalent through independent chemistry/JSC review, not silenced.
+Independent publication and targeted reviews passed without actionable findings.
+127 Expanded forms/11 classes reported; 141 molecules/14 lessons/337 steps preserved.
+Core52/all active JSON unchanged since Friday; no core changes in this save session.
+Public React preserved without build; full local WIP separately saved. Initial
+checkpoint 1a26e93a uploaded and external copies verified; final generation underway.
+Owned test processes closed; user 8013/browser untouched. Exact evidence and known
+limits in docs/checks/publication-20261101/ and consolidated professor report.
+
+# 2026-11-01 - Consolidated report/reviewed Main pushed; final verification pending
+
+Publicrelease db08d20a7d5c0cfce194edd80ad3a7439d1f3e44 contains475reviewedpaths.
+Independentpublication/targetedwarningreview passed;2corewarningcases independently
+proved equivalent via explicitHautomorphisms andold/currentJSC beforeafter evidence.
+Report discloses them; no corefix/cleanconsoleclaim. Initialfullsave3037files and
+2externalcopies verified. PublicliveHTTP/browser/finalbackupgeneration pending.
+No core.js/core-version changes or message sent toprofessor.
+
 # 2026-11-01 - Consolidated30Oct–1Nov report andsave prepared
 
 User requestedfullsave/publicationandoneprofessorreport. Draftcovers127Expanded

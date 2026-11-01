@@ -28,7 +28,9 @@
     "docs/checks/ether-uniform-20261031/summary.json",
     "docs/checks/carbonyl-acid-uniform-20261101/summary.json",
     "docs/checks/ester-uniform-20261101/main/summary.json",
-    "docs/checks/publication-20261101/period-check.json"
+    "docs/checks/publication-20261101/period-check.json",
+    "docs/checks/publication-20261101/chain-warning-diagnostic.json",
+    "docs/checks/publication-20261101/chain-warning-chemistry.json"
   ],
   "publicReleaseTag": "namelecule-20261101-085010",
   "links": {
@@ -41,5 +43,22 @@
     "Evidence from successive units, not a new full127/all337-step final pass",
     "Existing long-name acid PNG clipping and historical framing issue remain open",
     "No offline/Safari/physicalmobile/conferencecertification"
-  ]
+  ],
+  "prefixConsoleWarnings": {
+    "count": 2,
+    "type": "ATOM MISMATCH",
+    "analysis": "Existing ID-only false positives for two graph-equivalent parent ends; independently verified full SDF automorphisms. No core modification."
+  },
+  "publicVerification": {
+    "runtimeReleaseCommit": "db08d20a7d5c0cfce194edd80ad3a7439d1f3e44",
+    "HTTPExactSHA": 73,
+    "MainFunctionalChecks": 10,
+    "ReactFunctionalChecks": 8,
+    "externalJavaScriptDiagnosticCounts": {
+      "Main": 8,
+      "React": 2
+    },
+    "strictConsoleClean": false,
+    "firstPublicAttemptTimeoutRootCause": "Not established; retained evidence; no app fix claimed."
+  }
 }

@@ -1,0 +1,481 @@
+{
+  "passed": true,
+  "publicBase": "0969f46205c5317ee22c8b28dabe21880a4fb270",
+  "beforeAfterNamingAndWarningsIdentical": true,
+  "orderedStoredAndComputedParentSignaturesMatch": true,
+  "cases": [
+    {
+      "key": "ethyl_4_isopropyl_3_methyl_2_hexanal",
+      "chainMode": "algorithmic",
+      "before": {
+        "name": "4-αιθυλο-3-ισοπροπυλο-2-μεθυλοεξανάλη",
+        "common": "",
+        "parts": [
+          "4-",
+          "αιθυλο",
+          "-3-",
+          "ισοπροπυλο-2-μεθυλο",
+          null,
+          "εξ",
+          "αν",
+          null,
+          "",
+          "άλη",
+          null,
+          null
+        ],
+        "chain": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "classification": {
+          "taxonomy": "Αλδεϋδες",
+          "carbonCount": 12,
+          "principalFunctionalGroup": "aldehyde",
+          "bondSeries": "alkanes",
+          "seriesKey": "aldehyde",
+          "chemicalClass": "carbonylCompounds",
+          "functionalGroups": [
+            "aldehyde"
+          ]
+        },
+        "chain3D": [
+          1,
+          2,
+          3,
+          4,
+          11,
+          12
+        ],
+        "signature": "[[\"C\",1,[\"2:O()\"]],[\"C\",1,[\"1:C()\"]],[\"C\",1,[\"1:C(1:C(),1:C())\"]],[\"C\",1,[\"1:C(1:C())\"]],[\"C\",1,[]],[\"C\",0,[]]]",
+        "signature3D": "[[\"C\",1,[\"2:O()\"]],[\"C\",1,[\"1:C()\"]],[\"C\",1,[\"1:C(1:C(),1:C())\"]],[\"C\",1,[\"1:C(1:C())\"]],[\"C\",1,[]],[\"C\",0,[]]]",
+        "warnings": [
+          "viewerSettings init failed TypeError: document.querySelectorAll is not a function. (In 'document.querySelectorAll(\"[data-icon]\")', 'document.querySelectorAll' is undefined)",
+          "[fCalcMainChain3D] ATOM MISMATCH  \"ethyl_4_isopropyl_3_methyl_2_hexanal\"  calc=[1,2,3,4,11,12]  stored=[1,2,3,4,5,6]"
+        ],
+        "stored3D": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "storedSignature3D": "[[\"C\",1,[\"2:O()\"]],[\"C\",1,[\"1:C()\"]],[\"C\",1,[\"1:C(1:C(),1:C())\"]],[\"C\",1,[\"1:C(1:C())\"]],[\"C\",1,[]],[\"C\",0,[]]]"
+      },
+      "after": {
+        "name": "4-αιθυλο-3-ισοπροπυλο-2-μεθυλοεξανάλη",
+        "common": "",
+        "parts": [
+          "4-",
+          "αιθυλο",
+          "-3-",
+          "ισοπροπυλο-2-μεθυλο",
+          null,
+          "εξ",
+          "αν",
+          null,
+          "",
+          "άλη",
+          null,
+          null
+        ],
+        "chain": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "classification": {
+          "taxonomy": "Αλδεϋδες",
+          "carbonCount": 12,
+          "principalFunctionalGroup": "aldehyde",
+          "bondSeries": "alkanes",
+          "seriesKey": "aldehyde",
+          "chemicalClass": "carbonylCompounds",
+          "functionalGroups": [
+            "aldehyde"
+          ]
+        },
+        "chain3D": [
+          1,
+          2,
+          3,
+          4,
+          11,
+          12
+        ],
+        "signature": "[[\"C\",1,[\"2:O()\"]],[\"C\",1,[\"1:C()\"]],[\"C\",1,[\"1:C(1:C(),1:C())\"]],[\"C\",1,[\"1:C(1:C())\"]],[\"C\",1,[]],[\"C\",0,[]]]",
+        "signature3D": "[[\"C\",1,[\"2:O()\"]],[\"C\",1,[\"1:C()\"]],[\"C\",1,[\"1:C(1:C(),1:C())\"]],[\"C\",1,[\"1:C(1:C())\"]],[\"C\",1,[]],[\"C\",0,[]]]",
+        "warnings": [
+          "viewerSettings init failed TypeError: document.querySelectorAll is not a function. (In 'document.querySelectorAll(\"[data-icon]\")', 'document.querySelectorAll' is undefined)",
+          "[fCalcMainChain3D] ATOM MISMATCH  \"ethyl_4_isopropyl_3_methyl_2_hexanal\"  calc=[1,2,3,4,11,12]  stored=[1,2,3,4,5,6]"
+        ],
+        "stored3D": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "storedSignature3D": "[[\"C\",1,[\"2:O()\"]],[\"C\",1,[\"1:C()\"]],[\"C\",1,[\"1:C(1:C(),1:C())\"]],[\"C\",1,[\"1:C(1:C())\"]],[\"C\",1,[]],[\"C\",0,[]]]"
+      }
+    },
+    {
+      "key": "ethyl_4_isopropyl_3_methyl_2_hexanal",
+      "chainMode": "data",
+      "before": {
+        "name": "4-αιθυλο-3-ισοπροπυλο-2-μεθυλοεξανάλη",
+        "common": "",
+        "parts": [
+          "4-",
+          "αιθυλο",
+          "-3-",
+          "ισοπροπυλο-2-μεθυλο",
+          null,
+          "εξ",
+          "αν",
+          null,
+          "",
+          "άλη",
+          null,
+          null
+        ],
+        "chain": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "classification": {
+          "taxonomy": "Αλδεϋδες",
+          "carbonCount": 12,
+          "principalFunctionalGroup": "aldehyde",
+          "bondSeries": "alkanes",
+          "seriesKey": "aldehyde",
+          "chemicalClass": "carbonylCompounds",
+          "functionalGroups": [
+            "aldehyde"
+          ]
+        },
+        "chain3D": [
+          1,
+          2,
+          3,
+          4,
+          11,
+          12
+        ],
+        "signature": "[[\"C\",1,[\"2:O()\"]],[\"C\",1,[\"1:C()\"]],[\"C\",1,[\"1:C(1:C(),1:C())\"]],[\"C\",1,[\"1:C(1:C())\"]],[\"C\",1,[]],[\"C\",0,[]]]",
+        "signature3D": "[[\"C\",1,[\"2:O()\"]],[\"C\",1,[\"1:C()\"]],[\"C\",1,[\"1:C(1:C(),1:C())\"]],[\"C\",1,[\"1:C(1:C())\"]],[\"C\",1,[]],[\"C\",0,[]]]",
+        "warnings": [
+          "viewerSettings init failed TypeError: document.querySelectorAll is not a function. (In 'document.querySelectorAll(\"[data-icon]\")', 'document.querySelectorAll' is undefined)",
+          "[fCalcMainChain3D] ATOM MISMATCH  \"ethyl_4_isopropyl_3_methyl_2_hexanal\"  calc=[1,2,3,4,11,12]  stored=[1,2,3,4,5,6]"
+        ],
+        "stored3D": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "storedSignature3D": "[[\"C\",1,[\"2:O()\"]],[\"C\",1,[\"1:C()\"]],[\"C\",1,[\"1:C(1:C(),1:C())\"]],[\"C\",1,[\"1:C(1:C())\"]],[\"C\",1,[]],[\"C\",0,[]]]"
+      },
+      "after": {
+        "name": "4-αιθυλο-3-ισοπροπυλο-2-μεθυλοεξανάλη",
+        "common": "",
+        "parts": [
+          "4-",
+          "αιθυλο",
+          "-3-",
+          "ισοπροπυλο-2-μεθυλο",
+          null,
+          "εξ",
+          "αν",
+          null,
+          "",
+          "άλη",
+          null,
+          null
+        ],
+        "chain": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "classification": {
+          "taxonomy": "Αλδεϋδες",
+          "carbonCount": 12,
+          "principalFunctionalGroup": "aldehyde",
+          "bondSeries": "alkanes",
+          "seriesKey": "aldehyde",
+          "chemicalClass": "carbonylCompounds",
+          "functionalGroups": [
+            "aldehyde"
+          ]
+        },
+        "chain3D": [
+          1,
+          2,
+          3,
+          4,
+          11,
+          12
+        ],
+        "signature": "[[\"C\",1,[\"2:O()\"]],[\"C\",1,[\"1:C()\"]],[\"C\",1,[\"1:C(1:C(),1:C())\"]],[\"C\",1,[\"1:C(1:C())\"]],[\"C\",1,[]],[\"C\",0,[]]]",
+        "signature3D": "[[\"C\",1,[\"2:O()\"]],[\"C\",1,[\"1:C()\"]],[\"C\",1,[\"1:C(1:C(),1:C())\"]],[\"C\",1,[\"1:C(1:C())\"]],[\"C\",1,[]],[\"C\",0,[]]]",
+        "warnings": [
+          "viewerSettings init failed TypeError: document.querySelectorAll is not a function. (In 'document.querySelectorAll(\"[data-icon]\")', 'document.querySelectorAll' is undefined)",
+          "[fCalcMainChain3D] ATOM MISMATCH  \"ethyl_4_isopropyl_3_methyl_2_hexanal\"  calc=[1,2,3,4,11,12]  stored=[1,2,3,4,5,6]"
+        ],
+        "stored3D": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "storedSignature3D": "[[\"C\",1,[\"2:O()\"]],[\"C\",1,[\"1:C()\"]],[\"C\",1,[\"1:C(1:C(),1:C())\"]],[\"C\",1,[\"1:C(1:C())\"]],[\"C\",1,[]],[\"C\",0,[]]]"
+      }
+    },
+    {
+      "key": "isopropyl_2_3_dimethylbutanoate",
+      "chainMode": "algorithmic",
+      "before": {
+        "name": "2,3-διμεθυλοβουτανικός ισοπροπυλεστέρας",
+        "common": "",
+        "parts": [
+          "2,3-",
+          "διμεθυλο",
+          null,
+          null,
+          null,
+          "βουτ",
+          "αν",
+          null,
+          "",
+          "ικός",
+          "ισοπροπυλ",
+          "εστέρας"
+        ],
+        "chain": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "classification": {
+          "taxonomy": "Εστέρες",
+          "carbonCount": 9,
+          "principalFunctionalGroup": "ester",
+          "bondSeries": "alkanes",
+          "seriesKey": "ester",
+          "chemicalClass": "esters",
+          "functionalGroups": [
+            "ester"
+          ]
+        },
+        "chain3D": [
+          1,
+          2,
+          3,
+          6
+        ],
+        "signature": "[[\"C\",1,[\"1:O(1:C(1:C(),1:C()))\",\"2:O()\"]],[\"C\",1,[\"1:C()\"]],[\"C\",1,[\"1:C()\"]],[\"C\",0,[]]]",
+        "signature3D": "[[\"C\",1,[\"1:O(1:C(1:C(),1:C()))\",\"2:O()\"]],[\"C\",1,[\"1:C()\"]],[\"C\",1,[\"1:C()\"]],[\"C\",0,[]]]",
+        "warnings": [
+          "viewerSettings init failed TypeError: document.querySelectorAll is not a function. (In 'document.querySelectorAll(\"[data-icon]\")', 'document.querySelectorAll' is undefined)",
+          "[fCalcMainChain3D] ATOM MISMATCH  \"isopropyl_2_3_dimethylbutanoate\"  calc=[1,2,3,6]  stored=[1,2,3,4]"
+        ],
+        "stored3D": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "storedSignature3D": "[[\"C\",1,[\"1:O(1:C(1:C(),1:C()))\",\"2:O()\"]],[\"C\",1,[\"1:C()\"]],[\"C\",1,[\"1:C()\"]],[\"C\",0,[]]]"
+      },
+      "after": {
+        "name": "2,3-διμεθυλοβουτανικός ισοπροπυλεστέρας",
+        "common": "",
+        "parts": [
+          "2,3-",
+          "διμεθυλο",
+          null,
+          null,
+          null,
+          "βουτ",
+          "αν",
+          null,
+          "",
+          "ικός",
+          "ισοπροπυλ",
+          "εστέρας"
+        ],
+        "chain": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "classification": {
+          "taxonomy": "Εστέρες",
+          "carbonCount": 9,
+          "principalFunctionalGroup": "ester",
+          "bondSeries": "alkanes",
+          "seriesKey": "ester",
+          "chemicalClass": "esters",
+          "functionalGroups": [
+            "ester"
+          ]
+        },
+        "chain3D": [
+          1,
+          2,
+          3,
+          6
+        ],
+        "signature": "[[\"C\",1,[\"1:O(1:C(1:C(),1:C()))\",\"2:O()\"]],[\"C\",1,[\"1:C()\"]],[\"C\",1,[\"1:C()\"]],[\"C\",0,[]]]",
+        "signature3D": "[[\"C\",1,[\"1:O(1:C(1:C(),1:C()))\",\"2:O()\"]],[\"C\",1,[\"1:C()\"]],[\"C\",1,[\"1:C()\"]],[\"C\",0,[]]]",
+        "warnings": [
+          "viewerSettings init failed TypeError: document.querySelectorAll is not a function. (In 'document.querySelectorAll(\"[data-icon]\")', 'document.querySelectorAll' is undefined)",
+          "[fCalcMainChain3D] ATOM MISMATCH  \"isopropyl_2_3_dimethylbutanoate\"  calc=[1,2,3,6]  stored=[1,2,3,4]"
+        ],
+        "stored3D": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "storedSignature3D": "[[\"C\",1,[\"1:O(1:C(1:C(),1:C()))\",\"2:O()\"]],[\"C\",1,[\"1:C()\"]],[\"C\",1,[\"1:C()\"]],[\"C\",0,[]]]"
+      }
+    },
+    {
+      "key": "isopropyl_2_3_dimethylbutanoate",
+      "chainMode": "data",
+      "before": {
+        "name": "2,3-διμεθυλοβουτανικός ισοπροπυλεστέρας",
+        "common": "",
+        "parts": [
+          "2,3-",
+          "διμεθυλο",
+          null,
+          null,
+          null,
+          "βουτ",
+          "αν",
+          null,
+          "",
+          "ικός",
+          "ισοπροπυλ",
+          "εστέρας"
+        ],
+        "chain": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "classification": {
+          "taxonomy": "Εστέρες",
+          "carbonCount": 9,
+          "principalFunctionalGroup": "ester",
+          "bondSeries": "alkanes",
+          "seriesKey": "ester",
+          "chemicalClass": "esters",
+          "functionalGroups": [
+            "ester"
+          ]
+        },
+        "chain3D": [
+          1,
+          2,
+          3,
+          6
+        ],
+        "signature": "[[\"C\",1,[\"1:O(1:C(1:C(),1:C()))\",\"2:O()\"]],[\"C\",1,[\"1:C()\"]],[\"C\",1,[\"1:C()\"]],[\"C\",0,[]]]",
+        "signature3D": "[[\"C\",1,[\"1:O(1:C(1:C(),1:C()))\",\"2:O()\"]],[\"C\",1,[\"1:C()\"]],[\"C\",1,[\"1:C()\"]],[\"C\",0,[]]]",
+        "warnings": [
+          "viewerSettings init failed TypeError: document.querySelectorAll is not a function. (In 'document.querySelectorAll(\"[data-icon]\")', 'document.querySelectorAll' is undefined)",
+          "[fCalcMainChain3D] ATOM MISMATCH  \"isopropyl_2_3_dimethylbutanoate\"  calc=[1,2,3,6]  stored=[1,2,3,4]"
+        ],
+        "stored3D": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "storedSignature3D": "[[\"C\",1,[\"1:O(1:C(1:C(),1:C()))\",\"2:O()\"]],[\"C\",1,[\"1:C()\"]],[\"C\",1,[\"1:C()\"]],[\"C\",0,[]]]"
+      },
+      "after": {
+        "name": "2,3-διμεθυλοβουτανικός ισοπροπυλεστέρας",
+        "common": "",
+        "parts": [
+          "2,3-",
+          "διμεθυλο",
+          null,
+          null,
+          null,
+          "βουτ",
+          "αν",
+          null,
+          "",
+          "ικός",
+          "ισοπροπυλ",
+          "εστέρας"
+        ],
+        "chain": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "classification": {
+          "taxonomy": "Εστέρες",
+          "carbonCount": 9,
+          "principalFunctionalGroup": "ester",
+          "bondSeries": "alkanes",
+          "seriesKey": "ester",
+          "chemicalClass": "esters",
+          "functionalGroups": [
+            "ester"
+          ]
+        },
+        "chain3D": [
+          1,
+          2,
+          3,
+          6
+        ],
+        "signature": "[[\"C\",1,[\"1:O(1:C(1:C(),1:C()))\",\"2:O()\"]],[\"C\",1,[\"1:C()\"]],[\"C\",1,[\"1:C()\"]],[\"C\",0,[]]]",
+        "signature3D": "[[\"C\",1,[\"1:O(1:C(1:C(),1:C()))\",\"2:O()\"]],[\"C\",1,[\"1:C()\"]],[\"C\",1,[\"1:C()\"]],[\"C\",0,[]]]",
+        "warnings": [
+          "viewerSettings init failed TypeError: document.querySelectorAll is not a function. (In 'document.querySelectorAll(\"[data-icon]\")', 'document.querySelectorAll' is undefined)",
+          "[fCalcMainChain3D] ATOM MISMATCH  \"isopropyl_2_3_dimethylbutanoate\"  calc=[1,2,3,6]  stored=[1,2,3,4]"
+        ],
+        "stored3D": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "storedSignature3D": "[[\"C\",1,[\"1:O(1:C(1:C(),1:C()))\",\"2:O()\"]],[\"C\",1,[\"1:C()\"]],[\"C\",1,[\"1:C()\"]],[\"C\",0,[]]]"
+      }
+    }
+  ],
+  "conditions": "Actual unchanged naming/core/viewer functions executed in JSC using existing MOL adapter and SDF parser. This is not a baseline browser rerun."
+}

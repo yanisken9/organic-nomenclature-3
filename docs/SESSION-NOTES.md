@@ -1,3 +1,71 @@
+# Current resume point — 2026-11-01 — Consolidated report published and verified; final backup generation underway
+
+User requested one professor report for Friday 30 October midday through 1 November,
+plus saving everything everywhere; publication/full checkpoint explicitly authorized.
+Public personal thesis-work release: 74a9e3ea395eb79ffa6d6d72bdcb6275e10c93a7
+(final documentation); reviewed runtime: db08d20a7d5c0cfce194edd80ad3a7439d1f3e44.
+Tags: namelecule-20261101-085010 and corresponding -final. Report and ready-to-forward
+links/text: docs/professor-20261101/. No message was sent to the professor.
+
+Evidence: 73 runtime/public URLs exact SHA; final 10 documentary URLs exact SHA.
+Actual live Main retry completed 10 functional checks; React completed 8. Raw console
+errors remain: Main 8 external tracker/cookie entries, React 2 tracker entries.
+Strict zero-console checks do not pass. First Main attempt stopped after 4 checks
+with a propene/expanded timeout of unknown cause; retained, not claimed fixed.
+Two pre-existing core atom-ID warnings independently proved symmetry-equivalent
+by full explicit-H SDF automorphisms; old/current core produce same warnings.
+See publication-result.json and final-public-http.json under publication-20261101.
+Independent Reviewer /root/review_publication_20261101: initial 472 paths, targeted
+6 warning-disclosure paths and final 10 public-result paths; no actionable findings.
+Latest target manifest 6956bd9d804404fd5e3dc303901a859a4566504eb9a2d855b59bb30c2ea44a6c.
+
+Report covers 127 Expanded forms/11 classes; library 141 molecules/14 lessons/337 steps.
+Core52 and all 14 active scenario JSONs byte-equal to Friday baseline 3f046ad8.
+No core.js/core-version changes in this save session or reported period. Public
+React's 39 files preserved, no new build; local WIP belongs to full checkpoint.
+Upstream CHANGELOG actually read: checked 4e1190ab unchanged; last actual sync
+93b759f5. No new upstream synchronization. Active source react-library-pilot HEAD
+168e3cec/index 25c21223 preserved; no checkout/stage of source workspace.
+
+Initial checkpoint 1a26e93a15ad0d45b543bf8a06d07b58122e217c uploaded on
+checkpoint/namelecule-20261101-085010; 3037-file ZIP/bundle/recovery and both external
+copies verified. Final generation pending; receipts in communication/checkpoints/
+save-publish-20261101-state.json and final-save-state-20261101-085010.json.
+Owned test server 8051 and isolated Firefox closed after ownership checks; user
+8013 still HTTP 200 and normal Firefox untouched. Existing long acid-name PNG
+clipping, framing uncertainty, external/CDN dependencies and untested Safari,
+physical mobile, offline and conference sequence remain disclosed.
+Next: complete final archive/bundle/checkpoint upload and two external copies,
+record exact final commits/receipts, then give user consolidated report/app links.
+
+# Current resume point - 2026-11-01 - Consolidated report pushed; live verification and final save pending
+
+User requested consolidated30October-midday-to-nowreport and reiterated saveall.
+Reviewed Main/report pushed to personalorigin/thesis-work at db08d20a7d5c0cfce194
+edd80ad3a7439d1f3e44, tagnamelecule-20261101-085010. PublicURLs not yet declared
+verified; waitingPagesdeployment via /tmp/namelecule-verify-public-20261101.py.
+Report path docs/professor-20261101/update.html; allforwardlinks/message besideit.
+
+IndependentpublicationReviewer /root/review_publication_20261101 verified472initial
+files, then6targetedwarning-disclosurepaths; final475stagedfiles reviewed. No new
+findings. Two coreATOMwarnings chemically provedfalsepositiveIDcomparisons via
+fullSDFautomorphisms; identical old/currentJSCdiagnostics. Disclosed inreport;
+core unchanged, notsilenced. Mainprefix10/Reactprefix8functionalchecks0JS, but2
+corewarnings so no cleanconsoleclaim. Sourcecore/14JSON unchanged sinceFriday.
+
+Initialfullsave checkpoint1a26e93a15ad0d45b543bf8a06d07b58122e217c has3037files,
+verifiedZIP95MB/bundle/recoveryand2externalcopies/14JSON/10launcherfiles. Fullbranch
+checkpoint/namelecule-20261101-085010 upload underway; check SPbeforeclaimingremote.
+Oldarchivesretained. FinalgenerationmustrefreshafterpublicHTTP/browser checks.
+Receipts: communication/checkpoints/save-publish-20261101-state.json and
+final-save-state-20261101-085010.json. No activebranchcheckout/indexchange.
+
+Ownedpublicationserver8051PID15949/Firefox15950active, user8013/browser untouched.
+Next verifyliveHTTP+Main/Reactbrowser,recordactualdiagnostics;writefinalsavegeneration,
+pushfullcheckpoint,refreshZIP/bundle/externalreceipts/notes,cleanupownedprocesses.
+No core.js/core-version changes thissaveperiod; no messagetoprofessor. Existing
+acidPNGlongname/framing/CDN/Safari/mobile/offline/conferencelimits remain explicit.
+
 # Current resume point - 2026-11-01 - Consolidated Friday-to-now report and full save in progress
 
 User requested one report for Friday30October midday throughnow, plus saveeverything
@@ -16,7 +84,7 @@ check:exactly72Expanded changed vs lastpublic;metadata/otherforms unchanged.
 Report coversFridayalkanes andSaturday2D/JSmol too, withexceptions/limits explicit.
 UpstreamrawCHANGELOG actuallyread,HEADunchanged4e1190ab;lastactualsync93b759f.
 
-Maincandidate prefixbrowser10checks passed/0JS;Reactprefixcheck running. Assembly
+Maincandidate prefixbrowser10checks andReactprefix8checks passed,0JS. Assembly
 checks pass,allrelativereportlinksresolve. Testdiagnostics:macOS/privatepathalias
 fixed inlink-check root;rawdiffcheck flags intentionallypreservedfixedMOLpadding/
 archiveddiffbytes,scopednonMOL/nonDiff check passes. No productfix for either.

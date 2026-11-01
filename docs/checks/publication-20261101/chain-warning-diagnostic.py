@@ -1,0 +1,13 @@
+from pathlib import Path
+import json,subprocess,ast
+R=Path.cwd();H=R/'docs/checks/publication-20261101';B=json.loads((H/'baseline.json').read_text());P=Path(B['publicationClone'])
+tree=ast.parse((R/'docs/checks/ester-uniform-20261101/main/naming-fragment.py.txt').read_text());tail=next(ast.literal_eval(n.value)for n in tree.body if isinstance(n,ast.Assign)and any(isinstance(t,ast.Name)and t.id=='tail'for t in n.targets));tail=tail.replace('return out;','out.warnings=diagnostics;out.stored3D=nameExamples[key].mainChain3D;out.storedSignature3D=fNumberedChainSignature(out.stored3D,allAtomsTypeList3D,bondList3D);return out;')
+prefix='var diagnostics=[],window={addEventListener(){}},console={log(){},warn(...v){diagnostics.push(v.join(" "))},error(){}},document={getElementById(){return null},addEventListener(){}};'
+files=['js/jsme-nick-nomeclature-moc2-data_52.js','js/mulermoc-nom-core-52.js','js/mulermoc-nom-molview-52.js'];functions=[]
+for phase in ['old','current']:
+ texts=[subprocess.check_output(['git','-C',str(P),'show',B['publicBase']+':'+p]).decode()if phase=='old'else(R/p).read_text()for p in files]
+ functions.append(phase+'=new Function("key","mode","chainMode","sdf",'+json.dumps(prefix+''.join(texts)+tail)+')')
+keys=['ethyl_4_isopropyl_3_methyl_2_hexanal','isopropyl_2_3_dimethylbutanoate'];sdfs={k:(R/'mols/nomeclature-moc2'/(k+'_3D.sdf')).read_text()for k in keys}
+js='var '+','.join(functions)+';var sdfs='+json.dumps(sdfs)+';var rows=[];for(var k of Object.keys(sdfs))for(var m of ["algorithmic","data"]){var a=old(k,"expanded",m,sdfs[k]),b=current(k,"expanded",m,sdfs[k]);if(JSON.stringify(a)!==JSON.stringify(b))throw Error("Before/after difference");if(a.signature!==a.signature3D||a.signature3D!==a.storedSignature3D)throw Error("Signature differs");rows.push({key:k,chainMode:m,before:a,after:b});}print(JSON.stringify(rows));'
+jsc='/System/Library/Frameworks/JavaScriptCore.framework/Versions/A/Helpers/jsc';r=subprocess.run([jsc,'-e','eval(JSON.parse(readline()))'],input=json.dumps(js)+'\n',capture_output=True,text=True);assert r.returncode==0,(r.stdout,r.stderr);rows=json.loads(r.stdout)
+out={'passed':True,'publicBase':B['publicBase'],'beforeAfterNamingAndWarningsIdentical':True,'orderedStoredAndComputedParentSignaturesMatch':True,'cases':rows,'conditions':'Actual unchanged naming/core/viewer functions executed in JSC using existing MOL adapter and SDF parser. This is not a baseline browser rerun.'};(H/'chain-warning-diagnostic.json').write_text(json.dumps(out,ensure_ascii=False,indent=2)+'\n');print('Both warnings reproduced identically before/after; parent signatures match in4modes/keycases.')
