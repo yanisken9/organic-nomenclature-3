@@ -1,0 +1,20 @@
+{
+  "visuallyInspected": [
+    "export-before-diagnostic.png",
+    "export-after-diagnostic.png",
+    "ethyl_3_isopropyl_2_dimethyl_4_5_hexadien_2_4_dioic_acid-export.png",
+    "aminobutanoic_acid_3-export.png"
+  ],
+  "molecularTopClippingConfirmed": false,
+  "moleculeCompleteInInspectedImages": true,
+  "preExistingLongNameOverflow": {
+    "beforeWidth": 1458.7000045776367,
+    "afterWidth": 1458.7000045776367,
+    "canvasWidth": 1200,
+    "sameClippedNameBeforeAndAfter": true,
+    "cause": "Unchanged fDrawNameBoxes uses bold 40px Arial, fixed horizontal padding and centered total width without fitting to the 1200px canvas.",
+    "scope": "Not changed in this integration; separate approved export fix needed.",
+    "severity": "P2 existing limitation"
+  },
+  "conditions": "Firefox isolated, 390px browser viewport, same molecule and zoom6; controls PNG at the final controls-run state also visually inspected. Does not certify all exports or browsers."
+}

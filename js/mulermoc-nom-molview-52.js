@@ -3167,8 +3167,10 @@ function fRefreshLabelBackplates() {
     if (!box || !matrix) throw new Error("Label bounds unavailable: " + owner);
     const scale = Math.hypot(matrix.a,matrix.b), font = parseFloat(getComputedStyle(text).fontSize);
     if (!(scale > 0 && font > 0)) continue;
-    // Preserve the approved centered square policy for shortened expanded alkanes.
-    if (svg.dataset.alkaneFixedCCScale && text.dataset.fixedCCAtomX) {
+    // Single-element labels retain the approved centered square. Compound
+    // OH/NH2 labels need their complete measured ink bounds, including H/tails.
+    const singleElement = text.textContent.replace(/\s+/g, "") === allAtomsTypeList[index];
+    if (svg.dataset.alkaneFixedCCScale && text.dataset.fixedCCAtomX && singleElement) {
       const half=font*.52, x=Number(text.dataset.fixedCCAtomX), y=Number(text.dataset.fixedCCAtomY);
       for (const [key,value] of Object.entries({x:x-half,y:y-half,width:2*half,height:2*half,rx:0,ry:0})) rect.setAttribute(key,value);
       continue;
@@ -3331,8 +3333,14 @@ function fHideEsterSkeletalCarbonHydrogens() {
 // Cache geometry only; the pixel size is recomputed for each visible viewport.
 let uniform2DLibraryFrame = null;
 function fPrepareFixedCCAlkanePrototype() {
+  const esterScale = ["ethanoic_methyl_ester", "propanoic_methyl_ester", "methyl_methanoate", "isopropyl_ethanoate", "sec_butyl_ethanoate", "butyl_propanoate", "tert_butyl_methanoate", "isobutyl_2_methylpropanoate", "isopropyl_2_3_dimethylbutanoate"].includes(selectedMol);
+  const carbonylScale = ["ethanal", "butanal", "propanal", "propynal", "pentanal", "methanal", "methyl_2_propanal", "dimethyl_2_3_butanal", "ethyl_2_methyl_3_pentanal", "ethyl_4_isopropyl_3_methyl_2_hexanal", "propenal", "methyl_2_propenal", "propanedial", "methyl_3_penten_2_dial", "ethyl_4_penten_4_yn_2_al", "isopropyl_2_buten_2_dial", "ethyl_2_methyl_3_hexen_2_yn_4_dial", "penten_1_one_3", "pentanone_2", "pentyn_4_one_2", "butanone", "propanone", "pentanone_3", "dimethyl_2_4_pentanone_3", "trimethyl_3_4_4_pentanone_2", "diethyl_4_5_dimethyl_2_6_heptanone_3", "penten_1_yn_4_one_3", "dimethyl_4_5_hexen_5_yn_1_one_3", "methyl_6_hepten_3_dione_2_5", "ethyl_3_methyl_4_octen_3_yn_5_dione_2_7", "isopropyl_4_dimethyl_3_6_octen_3_yn_7_dione_2_5", "methanoicacid", "propionicacid", "butanoic_acid", "propenoic_acid", "propanedioic_acid", "hydroxypropanoic_acid_2", "Oxopropanoic_acid", "aminobutanoic_acid_3", "pentanoic_acid", "oxobutanoic_acid", "dihydroxybutanedioic_acid_2_3", "methyl_2_propanoic_acid", "dimethyl_2_2_propanoic_acid", "ethyl_2_methyl_3_pentanoic_acid", "ethyl_3_isopropyl_2_dimethyl_4_5_hexanoic_acid", "methyl_2_propenoic_acid", "ethyl_2_methyl_3_penten_2_yn_4_oic_acid", "ethyl_3_isopropyl_2_dimethyl_4_5_hexadien_2_4_dioic_acid", "ethyl_2_isopropyl_3_dimethyl_6_6_hepten_2_yn_4_dioic_acid", "penten_2_yn_4_oic_acid", "hexen_2_yn_4_dioic_acid"].includes(selectedMol);
+  const etherScale = ["dimethylether", "ethyl_methyl_ether", "diethyl_ether",
+    "isopropyl_methyl_ether", "methyl_propyl_ether", "ethyl_propyl_ether",
+    "ethyl_isopropyl_ether", "butyl_methyl_ether", "ethyl_sec_butyl_ether",
+    "isobutyl_isopropyl_ether", "tert_butyl_isopropyl_ether"].includes(selectedMol);
   if (mode2D !== "expanded" ||
-      !["methane", "ethane", "propane", "butane", "pentane",
+      (!etherScale && !carbonylScale && !esterScale && !["methane", "ethane", "propane", "butane", "pentane",
         "methyl_2_pentane", "dimethyl_2_3_butane", "ethyl_3_dimethyl_2_5_hexane",
         "ethene", "propene", "butene_1", "butene_2", "methyl_2_propene",
         "methyl_3_butene_1", "ethyl_3_dimethyl_2_5_hexene_2",
@@ -3344,7 +3352,7 @@ function fPrepareFixedCCAlkanePrototype() {
         "penten_3_yne_1", "hexen_1_yne_4", "buten_1_yne_3", "hexen_2_yne_4",
         "methyl_2_buten_1_yne_3", "dimethyl_2_3_penten_1_yne_4",
         "ethyl_4_dimethyl_2_3_hepten_2_yne_5",
-        "propanol_1", "penten_4_ol_2", "butanol_1", "butene_3_ol_2", "penten_2_ol_1", "propanediol_1_2", "propanetriol", "ethanol", "butanol_2", "methyl_4_pentanol_2", "dimethyl_2_2_pentanol_3", "methyl_2_propanediol_1_2", "methyl_3_buten_3_ol_2", "methyl_3_pentyn_4_ol_2", "methyl_4_penten_4_yn_2_ol_1", "ethyl_3_methyl_4_hexen_3_yn_5_ol_2", "isopropyl_4_dimethyl_3_5_heptanol_2"].includes(selectedMol)) return;
+        "propanol_1", "penten_4_ol_2", "butanol_1", "butene_3_ol_2", "penten_2_ol_1", "propanediol_1_2", "propanetriol", "ethanol", "butanol_2", "methyl_4_pentanol_2", "dimethyl_2_2_pentanol_3", "methyl_2_propanediol_1_2", "methyl_3_buten_3_ol_2", "methyl_3_pentyn_4_ol_2", "methyl_4_penten_4_yn_2_ol_1", "ethyl_3_methyl_4_hexen_3_yn_5_ol_2", "isopropyl_4_dimethyl_3_5_heptanol_2"].includes(selectedMol))) return;
   const svg = molSvg?.node;
   if (!svg || svg.dataset.alkaneFixedCCScale) return;
   const lines = [...svg.querySelectorAll("line")];
@@ -3404,7 +3412,14 @@ function fPrepareFixedCCAlkanePrototype() {
   }
   if (anchors.size !== allAtomsTypeList.length) return;
   for (const [a,b] of bondList) {
-    if (allAtomsTypeList[a-1] !== "C" || allAtomsTypeList[b-1] !== "C") continue;
+    const first=allAtomsTypeList[a-1], second=allAtomsTypeList[b-1];
+    // Normalized drawings share the same heavy-bond unit. C-O includes
+    // C=O, so methanal and methanoic acid also calibrate without any C-C.
+    if (!(first === "C" && second === "C") &&
+        !((etherScale || carbonylScale || esterScale) &&
+          ((first === "C" && second === "O") || (first === "O" && second === "C"))) &&
+        !(carbonylScale &&
+          ((first === "C" && second === "N") || (first === "N" && second === "C")))) continue;
     const p=anchors.get(a-1),q=anchors.get(b-1);
     lengths.push(Math.hypot(q.x-p.x,q.y-p.y));
   }
@@ -3426,7 +3441,11 @@ function fPrepareFixedCCAlkanePrototype() {
   const texts = fGetRenderedAtomTextMap(false, true), changes = [];
   for (const [atom, anchor] of anchors) {
     const label = texts[atom];
-    if (!label || label.node.textContent.trim() !== allAtomsTypeList[atom]) return;
+    const symbol = allAtomsTypeList[atom];
+    const raw = label?.node.textContent.replace(/\s+/g, "");
+    if (!label || !(raw === symbol || (carbonylScale &&
+        ((symbol === "O" && ["OH", "HO"].includes(raw)) ||
+         (symbol === "N" && raw === "NH2"))))) return;
     const originalFont = parseFloat(label.attr("font-size"));
     const x = Number(label.attr("x")), y = Number(label.attr("y"));
     if (!(originalFont > 0) || ![x, y].every(Number.isFinite)) return;
@@ -3436,11 +3455,21 @@ function fPrepareFixedCCAlkanePrototype() {
     const cx = (ink.actualBoundingBoxRight - ink.actualBoundingBoxLeft) / 2;
     const cy = (ink.actualBoundingBoxAscent - ink.actualBoundingBoxDescent) / 2;
     if (![cx, cy].every(Number.isFinite)) return;
-    changes.push([label, {x: anchor.x - cx, y: anchor.y + cy,
-      "font-size": font + "px"}, anchor]);
+    const prefix = raw === "HO" ? context.measureText("H").width : 0;
+    // Keep implicit-H labels intact. Queue all changes, including numeric
+    // subscript offsets, so a later validation failure leaves the drawing intact.
+    const offsets = [];
+    for (const tspan of label.node.querySelectorAll("tspan[dy]")) {
+      const dy = tspan.getAttribute("dy");
+      if (/^-?\d+(?:\.\d+)?$/.test(dy))
+        offsets.push([tspan, String(Number(dy) * font / originalFont)]);
+    }
+    changes.push([label, {x: anchor.x - cx - prefix, y: anchor.y + cy,
+      "font-size": font + "px"}, anchor, offsets]);
   }
-  changes.forEach(([label, attributes, anchor]) => {
+  changes.forEach(([label, attributes, anchor, offsets]) => {
     label.attr(attributes);
+    offsets.forEach(([node, dy]) => node.setAttribute("dy", dy));
     label.node.dataset.fixedCCAtomX = String(anchor.x);
     label.node.dataset.fixedCCAtomY = String(anchor.y);
   });

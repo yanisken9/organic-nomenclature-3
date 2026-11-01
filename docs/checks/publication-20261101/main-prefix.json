@@ -1,0 +1,108 @@
+{
+  "base": "http://127.0.0.1:8051/organic-nomenclature-3/",
+  "checks": [
+    {
+      "reportWidth": 1500,
+      "noOverflow": true
+    },
+    {
+      "reportWidth": 390,
+      "noOverflow": true
+    },
+    {
+      "welcome": true
+    },
+    {
+      "MainMolecules": 141,
+      "newMetrics": true
+    },
+    {
+      "key": "propene",
+      "3Datoms": 9,
+      "expandedSVG": true
+    },
+    {
+      "key": "dimethylether",
+      "3Datoms": 9,
+      "expandedSVG": true
+    },
+    {
+      "key": "ethyl_4_isopropyl_3_methyl_2_hexanal",
+      "3Datoms": 37,
+      "expandedSVG": true
+    },
+    {
+      "key": "ethyl_3_isopropyl_2_dimethyl_4_5_hexadien_2_4_dioic_acid",
+      "3Datoms": 37,
+      "expandedSVG": true
+    },
+    {
+      "key": "isopropyl_2_3_dimethylbutanoate",
+      "3Datoms": 29,
+      "expandedSVG": true
+    },
+    {
+      "publicLessonNavigationExit": true
+    }
+  ],
+  "completed": true,
+  "javascriptErrors": [],
+  "allDiagnosticEntries": [
+    {
+      "type": "console",
+      "method": "warn",
+      "source": {
+        "realm": "710c17ec-0363-42ca-8f62-3d715d09a65c",
+        "context": "d2f0cf7c-15a0-414a-bdd7-1bef0f2d0017",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "[fCalcMainChain3D] ATOM MISMATCH  \"ethyl_4_isopropyl_3_methyl_2_hexanal\"  calc=[1,2,3,4,11,12]  stored=[1,2,3,4,5,6]"
+        }
+      ],
+      "level": "warn",
+      "text": "[fCalcMainChain3D] ATOM MISMATCH  \"ethyl_4_isopropyl_3_methyl_2_hexanal\"  calc=[1,2,3,4,11,12]  stored=[1,2,3,4,5,6]",
+      "timestamp": 1793515964009,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 16,
+            "functionName": "fValidateMainChain3D",
+            "lineNumber": 1993,
+            "url": "http://127.0.0.1:8051/organic-nomenclature-3/js/mulermoc-nom-core-52.js?v=esters-20261029"
+          }
+        ]
+      }
+    },
+    {
+      "type": "console",
+      "method": "warn",
+      "source": {
+        "realm": "710c17ec-0363-42ca-8f62-3d715d09a65c",
+        "context": "d2f0cf7c-15a0-414a-bdd7-1bef0f2d0017",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "[fCalcMainChain3D] ATOM MISMATCH  \"isopropyl_2_3_dimethylbutanoate\"  calc=[1,2,3,6]  stored=[1,2,3,4]"
+        }
+      ],
+      "level": "warn",
+      "text": "[fCalcMainChain3D] ATOM MISMATCH  \"isopropyl_2_3_dimethylbutanoate\"  calc=[1,2,3,6]  stored=[1,2,3,4]",
+      "timestamp": 1793515967398,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 16,
+            "functionName": "fValidateMainChain3D",
+            "lineNumber": 1993,
+            "url": "http://127.0.0.1:8051/organic-nomenclature-3/js/mulermoc-nom-core-52.js?v=esters-20261029"
+          }
+        ]
+      }
+    }
+  ]
+}

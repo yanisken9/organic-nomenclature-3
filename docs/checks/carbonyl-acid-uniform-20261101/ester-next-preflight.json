@@ -1,0 +1,49 @@
+{
+  "date": "2026-11-01",
+  "status": "Read-only preflight; implementation not approved or started",
+  "requestedNext": "Same expanded bond normalization for esters after Main52 completion",
+  "ChemistryValidator": "/root/acid_uniform_preflight",
+  "ROLE_ID": "NAMELECULE_CHEMISTRY_VALIDATOR_V1_20261023",
+  "esters": 9,
+  "existingExpandedSourceMOLs": 7,
+  "professorOriginalEmbeds": {
+    "revision": "93b759f5891d7b5a1172646032d83215d60b7604",
+    "byteIdenticalKeys": [
+      "ethanoic_methyl_ester",
+      "propanoic_methyl_ester",
+      "methyl_methanoate",
+      "isopropyl_ethanoate"
+    ],
+    "attributionLimit": "Repository origin, not proof of personal authorship"
+  },
+  "addedEsters": 5,
+  "oldSourceDifferences": "methyl_methanoate/isopropyl_ethanoate sources differ from active embeds only by one final blank line after M END; geometry and fields identical.",
+  "offAxis": {
+    "methyl_methanoate": {
+      "bonds": 7,
+      "maximumDegrees": 1.309656
+    },
+    "isopropyl_ethanoate": {
+      "bonds": 16,
+      "maximumDegrees": 1.375168
+    }
+  },
+  "inMemoryProposal": {
+    "CH": 0.3094,
+    "CC_CO_CdoubleO": 0.6188,
+    "axisPolicy": "Preserve exact cardinal directions for7; explicit nearest-cardinal reconstruction only for2 old slightly off-axis Expanded forms. Do not weaken general strict uniform() guard.",
+    "coincidentAtoms": 0,
+    "atomsOnNonincidentBond": 0,
+    "crossings": 0,
+    "minimumNonbondedAtomDistance": 0.437558,
+    "minimumAtomToNonincidentBondDistance": 0.3094,
+    "longBranchExceptionsNeeded": false,
+    "formylH": "methyl_methanoate H4 and tert_butyl_methanoate H8 left",
+    "COO": "C=O vertical; C-O-C horizontal"
+  },
+  "nextPlan": "Isolated before/after preview of two old slightly off-axis esters, plus tert-butyl formate and largest ester calibration/control probes. Preserve Main until visual acceptance. Then integrate9 embeds/7sourceMOLs with shared calibration/cache, chemistry/controls/naming/2D3D checks and consolidated independent review.",
+  "knownRisk": "Historic isopropyl ethanoate H13/H17 label overlap requires actual browser label audit; collision-free atom centers alone do not establish fix.",
+  "appCodeChanged": false,
+  "coreChanged": false,
+  "checks": "Chemistry Validator read-only Python in-memory simulation; no browser execution or external download."
+}

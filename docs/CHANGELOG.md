@@ -1,5 +1,12 @@
 # Changelog
 
+### 2026-11-01 — Consolidated30Oct–1Nov report and completed expanded-form normalization
+
+- Complete11ethers,31aldehydes/ketones,21acids and9esters after last public31October release;72additional Expanded entries bring reviewed category coverage to127molecules.
+- Preserve molecular identities, other2Dforms,3Dfiles,core52 and14activeJSON/337steps. Keep approved spacingexceptions and full compound-label ink masks.
+- Publish consolidated professor report with review evidence, original snapshots and disclosed PNG/framing/CDN/browser limits; preserve public React without rebuild.
+- Runtime hashes/review and actual save/publication results: checks/publication-20261101/ and SESSION-NOTES.md.
+
 ### 2026-10-27 — Local v52 integration and React host update
 
 - Integrate professor v52 at93b759f with the unified rich-note editor, HTML source mode, sanitizer and compact toolbar.

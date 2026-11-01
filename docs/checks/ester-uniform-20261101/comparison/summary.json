@@ -1,0 +1,44 @@
+{
+  "date": "2026-11-01",
+  "status": "Independently reviewed isolated preview; user visual acceptance pending",
+  "MainApplied": false,
+  "coreChanged": false,
+  "previewPairs": 2,
+  "additionalCalibrationControls": 2,
+  "CH": 0.3094,
+  "CC_CO_CdoubleO": 0.6188,
+  "checks": {
+    "actualMainCapturesBeforeAfterTwoWidths": 16,
+    "proposedControlStates": 64,
+    "actual3DFileURLMatches": 8,
+    "nativeProposedStrokeBackplateAudits": 72,
+    "galleryUIStates": 14,
+    "standaloneFigureRasterAudits": 8,
+    "contentSHAAssetChecks": 8,
+    "protectedFilesUnchanged": 2898,
+    "JavaScriptErrors": 0,
+    "proposedVisibleGlyphOverlaps": 0,
+    "proposedBondInkContacts": 0,
+    "proposedUncoveredInkPixels": 0
+  },
+  "visualInspections": [
+    "methyl_methanoate-comparison.png",
+    "isopropyl_ethanoate-comparison.png"
+  ],
+  "baselineLimit": "Historic isopropyl H13/H17 overlap not reproduced as painted glyph contact in current standalone before image; one inflated DOM candidate at18px, zero per-label pixel intersections. Do not claim this proves a historical visible overlap fix.",
+  "limitations": [
+    "Preview overrides exist only in disposable test browser context. Main data/viewer/sourceMOL/core/React/scenarios/3D unchanged.",
+    "Four molecules checked, not final all9 integration.",
+    "8 actual3D model fileURL matches, but no interactive3D toggle/rotation test in this isolated preview.",
+    "No application PNG export in this preview; existing long-name export clipping remains separately disclosed.",
+    "No Safari/physical mobile/offline/conference certification."
+  ],
+  "committed": false,
+  "published": false,
+  "next": "Independent review then open gallery in external Firefox for user visual acceptance; do not integrate Main before that acceptance.",
+  "independentReview": {
+    "Reviewer": "/root/review_ester_uniform_preview",
+    "manifestSHA256": "0a55aec6a186280f02aa36aee2a0d82c7d7af6c7d88507aee32bb62a12c30a3c",
+    "findings": 0
+  }
+}
