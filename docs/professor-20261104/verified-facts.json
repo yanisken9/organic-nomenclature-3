@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "date": "2026-11-04",
-  "status": "verified local publication candidate; full save, final copies and public verification pending",
+  "status": "runtime published and publicly verified; first complete backup verified locally, remotely and in both external folders; later documentary receipts recorded separately",
   "periodStart": "after the published 2026-11-01 report",
   "periodEnd": "2026-11-04",
   "previousReportForwardedByUser": "unknown; not claimed",
@@ -107,7 +107,10 @@
       "shared skeletal generator: normalized branch vectors, 120-degree degree-two C/O, linear triple/two-double carbon sp; proper separable-component rotations"
     ],
     "storedMOLSDFAndEmbeddedDataChangedByLatestSync": false,
-    "generatedLengthConvention": "L=1.17; repair preserves generated lengths and other local angles, not every authored source length"
+    "generatedLengthConvention": "L=1.17; repair preserves generated lengths and other local angles, not every authored source length",
+    "runtimeReleaseCommit": "ddc3c80ce643b11a9089012fd312d9853ae1d85b",
+    "status": "saved and published in verified runtime release",
+    "firstV54IntegrationChangedMetadata": true
   },
   "checks": {
     "firstV54Integration": {
@@ -248,21 +251,110 @@
     "changedByReportWork": false
   },
   "publication": {
-    "status": "pending",
+    "status": "runtime published and public verification completed",
     "releaseQuery": "release-20261104",
-    "runtimeCommit": null,
-    "fullCheckpoint": null,
-    "publicHTTPAndHashVerification": null,
-    "functionalVerification": null
+    "runtimeCommit": "ddc3c80ce643b11a9089012fd312d9853ae1d85b",
+    "publicationCommit": "ddc3c80ce643b11a9089012fd312d9853ae1d85b",
+    "runtimeTag": "namelecule-20261104-runtime",
+    "fullCheckpoint": "https://github.com/yanisken9/organic-nomenclature-3/tree/checkpoint/namelecule-20261104-143518",
+    "publicHTTPAndHashVerification": {
+      "checks": 221,
+      "passed": true,
+      "source": "docs/checks/publication-20261104/public-http.json",
+      "scope": "published runtime release; this later documentary update has separate receipts"
+    },
+    "functionalVerification": {
+      "Main": 11,
+      "React": 8,
+      "functionalFailures": 0,
+      "rawStrictScriptExit": {
+        "Main": 1,
+        "React": 1
+      },
+      "consoleDiagnostics": {
+        "Main": 10,
+        "React": 2
+      },
+      "allDiagnosticFamiliesPresentInPreviousRelease": true,
+      "unclassifiedDiagnostics": 0,
+      "strictCleanConsole": false
+    },
+    "prefixFunctionalVerification": {
+      "Main": 11,
+      "React": 8,
+      "JavaScriptErrors": 0
+    },
+    "independentPublicationReviewer": "/root/review_publication_20261104",
+    "resolvedPublicationFinding": {
+      "id": "PUB-DOC01",
+      "severity": "P3",
+      "resolution": "unchanged embedded-data statement explicitly scoped to latest35/generator unit",
+      "status": "closed independently targeted"
+    },
+    "thisDocumentaryUpdate": "prepared after verified runtime release and first complete save; final documentary publication/snapshot receipts are recorded separately; no future commit claimed"
   },
   "save": {
-    "status": "pending",
-    "checkpoint": null,
-    "ZIP": null,
-    "GitBundle": null,
-    "externalCopies": null,
-    "plannedCheckpointBranch": "checkpoint/namelecule-20261104-143518",
-    "plannedExternalCopyDestinationCount": 2
+    "status": "first complete backup verified and uploaded; later documentary receipts separate",
+    "checkpointBranch": "checkpoint/namelecule-20261104-143518",
+    "checkpointRemoteVerified": "ac348f5fd6b8ac3ee5305637ce26308415ba5af3",
+    "snapshotCommit": "ac348f5fd6b8ac3ee5305637ce26308415ba5af3",
+    "sourceFileCount": 3868,
+    "ZIP": {
+      "path": "communication/checkpoints/Namelecule-20261104-143518-verified-base.zip",
+      "SHA256": "0e818b28ee94b52a0b58d5726ad8301637da7ef5c6e5b7f5896ea543c54982af",
+      "allEntryCRCAndSHA256Verified": true
+    },
+    "GitBundle": {
+      "path": "communication/checkpoints/Namelecule-20261104-143518-verified-base.bundle",
+      "SHA256": "cab706abd4dfb640dac5dfff285288417f5eb7e2d4278384b71feae047d3b00a",
+      "verified": true
+    },
+    "recoveryZIP": {
+      "path": "communication/checkpoints/Namelecule-20261104-143518-verified-base-recovery.zip",
+      "SHA256": "103fbc9905308532abb14a87baadd22df3b66e2e69d3e4bda39c005883625e73",
+      "files": 198
+    },
+    "externalCopies": [
+      {
+        "directory": "/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/Αποθηκεύσεις/2026-11-04-143518",
+        "allHashesVerified": true,
+        "activeScenarioJSON": 14,
+        "activeTheorySteps": 337,
+        "separatePilotJSON": "scenarios/alkanes-name-repair-pilot.scenario.json",
+        "launcherFiles": 10,
+        "launcherPresent": true,
+        "linksAndPortableReportSaved": true,
+        "reportCopyTiming": "report version at verified-base snapshot; later documentary edits have separate receipts"
+      },
+      {
+        "directory": "/Users/yannisskendros/Desktop/αρχεία  json/Namelecule_04-11-2026",
+        "allHashesVerified": true,
+        "activeScenarioJSON": 14,
+        "activeTheorySteps": 337,
+        "separatePilotJSON": "scenarios/alkanes-name-repair-pilot.scenario.json",
+        "launcherFiles": 10,
+        "launcherPresent": true,
+        "linksAndPortableReportSaved": true,
+        "reportCopyTiming": "report version at verified-base snapshot; later documentary edits have separate receipts"
+      }
+    ],
+    "verifiedBaseSnapshot": {
+      "checkpointSnapshotCommit": "ac348f5fd6b8ac3ee5305637ce26308415ba5af3",
+      "sourceFileCount": 3868,
+      "archive": "communication/checkpoints/Namelecule-20261104-143518-verified-base.zip",
+      "archiveSHA256": "0e818b28ee94b52a0b58d5726ad8301637da7ef5c6e5b7f5896ea543c54982af",
+      "bundle": "communication/checkpoints/Namelecule-20261104-143518-verified-base.bundle",
+      "bundleSHA256": "cab706abd4dfb640dac5dfff285288417f5eb7e2d4278384b71feae047d3b00a",
+      "recoveryArchive": "communication/checkpoints/Namelecule-20261104-143518-verified-base-recovery.zip",
+      "recoveryArchiveSHA256": "103fbc9905308532abb14a87baadd22df3b66e2e69d3e4bda39c005883625e73",
+      "sourceZIPAllHashesAndCRCVerified": true,
+      "bundleVerified": true,
+      "remoteUploaded": true
+    },
+    "verifiedBaseSnapshotIsImmutableRecoveryPoint": true,
+    "verifiedBaseReceipt": "communication/checkpoints/Namelecule-20261104-143518-verified-base-save-state.json",
+    "laterFinalDocumentarySnapshot": "not claimed here; receipts recorded separately after completion",
+    "sourceBackupCertifiesOfflinePresentation": false
   },
   "limitations": [
     "External JSmol j2s CDN, PubChem and CIR; recorded CIR/CORS404 and pre-existing mapping diagnostics",
@@ -276,7 +368,8 @@
     "Source backup is not a verified self-contained offline presentation package",
     "Inherited English nitro multiplicity omission persists (2,10-nitro instead of 2,10-dinitro); numeric locants corrected, multiplicity not fixed",
     "Non-C/O and degree-three/four angle conventions lie outside the bounded generator repair; guarded checks do not remove all pre-existing crowding",
-    "Fallback echo matching uses one exact symmetric graph correspondence; no universal geometric-isomorphism or asynchronous applet guarantee"
+    "Fallback echo matching uses one exact symmetric graph correspondence; no universal geometric-isomorphism or asynchronous applet guarantee",
+    "Published public Main/React strict scripts exited 1 on 10/2 cookie/JmolTracker diagnostics, all known families from the prior public release; no clean-console claim"
   ],
   "reportSourceFiles": [
     "docs/professor-20261101/update.html",
@@ -303,8 +396,18 @@
     "docs/checks/v54-upstream-20261104/geometry/geometry-results.json",
     "docs/checks/v54-upstream-20261104/geometry/mechanics-results.json",
     "docs/checks/v54-upstream-20261104/geometry/acceptance-results.json",
-    "docs/checks/v54-upstream-20261104/browser/generated-geometry-browser.json"
+    "docs/checks/v54-upstream-20261104/browser/generated-geometry-browser.json",
+    "communication/checkpoints/save-publish-20261104-state.json",
+    "communication/checkpoints/Namelecule-20261104-143518-verified-base-save-state.json",
+    "docs/checks/publication-20261104/public-http.json",
+    "docs/checks/publication-20261104/main-public.json",
+    "docs/checks/publication-20261104/react-public.json",
+    "docs/checks/publication-20261104/main-prefix.json",
+    "docs/checks/publication-20261104/react-prefix.json",
+    "docs/checks/publication-20261104/public-error-classification.json",
+    "docs/checks/publication-20261104/publication-independent-review.json"
   ],
   "pendingSourceFiles": [],
-  "linksFile": "links.json"
+  "linksFile": "links.json",
+  "publicationCommit": "ddc3c80ce643b11a9089012fd312d9853ae1d85b"
 }

@@ -1,0 +1,40 @@
+{
+  "Reviewer": "/root/review_publication_20261104",
+  "roleID": "NAMELECULE_REVIEWER_V1_20261023",
+  "writes": false,
+  "targetedDocumentaryManifestSHA256": "98a181548b7a1c82a69afc9574b7c7d261dd40ea1a0edae3e5718495984b6840",
+  "findings": [
+    {
+      "id": "PUB-LINK02",
+      "severity": "P2",
+      "issue": "Evidence links pointed to intentionally excluded Pages folder",
+      "resolution": "Immutable checkpoint GitHub blob links; exact saved bytes verified",
+      "status": "closed by independent targeted verification"
+    },
+    {
+      "id": "PUB-DOC03",
+      "severity": "P3",
+      "issue": "README/contributions implied future final snapshot already existed",
+      "resolution": "Explicit pending status at documentary cutoff",
+      "status": "closed by independent targeted verification"
+    }
+  ],
+  "priorFinding": "PUB-DOC01 remains closed",
+  "openFindings": [],
+  "independentChecks": [
+    "7source/clone/documentary hashes",
+    "3441 exact tree/protected hashes",
+    "221recordedHTTP hashes match initial runtime files",
+    "Raw Main11/React8 and10/2diagnostics classified same families as previous release",
+    "45external-file hashes in each of2destinations",
+    "3868source and198recovery files actualZIP SHA/CRC",
+    "Read-only git bundle verify, correct snapshot included",
+    "Evidence files exist at immutable ac348f5 checkpoint with exact hashes"
+  ],
+  "limits": [
+    "No independent browser, full restore or new chemistry evaluation",
+    "Independent remote ls-remote failed DNS; remote upload is Developer evidence",
+    "Final documentary deployment/additional snapshot still require actual execution"
+  ],
+  "coreChangedByReviewer": false
+}

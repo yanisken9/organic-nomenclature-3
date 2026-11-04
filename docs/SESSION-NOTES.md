@@ -1,3 +1,32 @@
+# Current resume point — 2026-11-04 — Final public report verified; final full snapshot next
+
+The consolidated report is public at commit 19b58f200deb4358e6cc556e47bf7a78459e4d9a.
+Runtime commit remains ddc3c80ce643b11a9089012fd312d9853ae1d85b; no application code changed
+in the documentary update. Final24 critical/documentary HTTP hashes and3immutable
+checkpoint evidence links passed, supplementing the initial221public hashes.
+Actual public Main11/React8 functional checks completed;10/2known cookie/tracker
+diagnostics remain, strict exit1 disclosed. No clean-console or offline claim.
+Independent publication Reviewer closed PUB-DOC01, PUB-LINK02 and PUB-DOC03;
+final documentary manifest98a181548b7a1c82a69afc9574b7c7d261dd40ea1a0edae3e5718495984b6840.
+
+Verified-base full snapshotac348f5fd6b8ac3ee5305637ce26308415ba5af3/3868files,
+ZIP every-fileSHA/CRC,bundle,recovery andtwoexternalcopies are complete andremote
+checkpoint branch verified. Final report truthfully cites that first immutable
+recovery point; additional final snapshot now follows to include completed report.
+Next run save-helper generation final, then push final checkpoint/bookkeeping,
+create separate latest-notes bundle and refresh exact external receipts. Preserve
+immutable ZIP cutoff and existing backups. No current-final-generation completion
+claim yet; first verified-base save is genuinely complete.
+
+Core54 changed in this report/session period:3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306,
+published and independently checked. Core52d2138418ff630ab77e578b80ca8ba3a10cc1b877c3ab8c0e5c2735ffcd1f24a2
+unchanged. Source HEAD168e3cec/index25c21223 preserved; source branch remains
+react-library-pilot. Full checkpoint preserves local React WIP; public39Reactfiles
+and old52 unchanged. Owned test processes stopped; user Firefox/8013 untouched.
+Report https://yanisken9.github.io/organic-nomenclature-3/docs/professor-20261104/update.html
+Welcome https://yanisken9.github.io/organic-nomenclature-3/design/welcome-proposal.html?v=release-20261104
+No message sent to professor. User will forward the two links and supplied text.
+
 # Current resume point — 2026-11-04 — Public runtime verified; first complete backup next
 
 The reviewed Main54/workshop/pilot/report candidate was committed and published as

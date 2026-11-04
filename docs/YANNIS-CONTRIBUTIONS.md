@@ -1,26 +1,45 @@
-# 2026-11-04 — Professor35 integration and shared skeletal generation corrected
+# 2026-11-04 — Professor35 integration, independent review and verified delivery
 
-Compared actual upstream02dbcfaf→35d791ee (onecommit/sixpaths;CHANGELOGunchanged).
-Integrated six teacher paths preserving Namelecule customizations, GreekC9 and
-old52/React/sourceassets. Core54now3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306.
-UpstreamC11–20 tables/drawingdefault/Beautify and deterministicfirstAccept merged;
-authorednumericlocants, validatedlinearC9–20alkylguard/unsupportedmarker,
-completeENlonggroup/ether names, safeperrungacceptance/restoration andcommon
-fZigzagMoldegree2/spwhole-siderotation/vectornormalization corrections. Stored
-MOL/SDFandcore52 unchanged. Exact6paths/checks/limitsin
-checks/v54-upstream-20261104/REPORT.md andfrozenreviewmanifest.
+Integrated professor commit 35d791ee after comparing it with the previously
+verified 02dbcfaf: one commit, six paths, unchanged upstream CHANGELOG. The six
+runtime paths and exact changes are listed in
+[the integration report](checks/v54-upstream-20261104/REPORT.md). Preserved local
+Namelecule behavior, Greek C9, old52, React and stored molecular sources.
 
-IndependentReviewerinitialP2NUM02/GEOM01 reproducedandclosedafterapprovedfixes;
-independent1084naming/844oldunchanged,228accept,all422inventory421pass/1old[H]skip,
-2309length/2218angle/1922orientationinvariants. Domainindependent10sourceforms.
-DeveloperfinalFirefox25authoring/22geometry/45pilot/60sets0JSexceptions;
-full14/337replay9780functionallypassedbeforegeneratorwith4oldCIRerrors/rawexit1.
-ENnitromultiplierandGreek/C20/geometry/external/conferencelimitsdisclosed.
+Upstream additions include C11–20 naming tables, enabled drawing controls,
+Beautify visibility and builtin-first acceptance. Locally authored corrections
+cover numeric locants, validated endpoint-attached linear C9–20 alkyl groups,
+explicit unsupported-group markers, complete English long-group names, candidate
+validation/restoration, and common skeletal branch-direction/angle repair.
+Core54 SHA256 is 3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306.
+Core52 remains unchanged. These core changes belong to this integration/report
+period; report preparation and saving do not introduce another core edit.
 
-Core54changedTHISintegration/reportperiod (upstream+localauthoredfixes);core52
-unchanged. No currentcommit/push/publicationyet. Originalsave/reportrequest
-continueswithcuratedpublication+fullcheckpoint/twoexternalcopies. Sourceactive
-HEAD/indexretained. Reportdraft/localchecks aredistinctfromverifiedpubliclinks.
+Independent Reviewer closed U35-NUM02 andU35-GEOM01 after reproducing both causes
+and verifying approved corrections: 1084 naming assertions/844 unchanged library
+states, 228 acceptance assertions, and 422 source forms (421 supported passes;
+one inherited literal[H] skip). Mechanical checks preserve 2309 lengths, 2218 other
+angles and 1922 orientations. ChemistryValidator independently checked ten forms.
+Developer Firefox checks completed 25 authoring, 22 geometry, 45 pilot and 60 game
+assertions. Full 337-step replay preceded the final generator correction and has
+four known CIR errors despite 9780 functional successes. Limits are disclosed.
+
+Published runtime commit ddc3c80ce643b11a9089012fd312d9853ae1d85b on personal
+thesis-work. 221 public exact HTTP/SHA checks passed; actual public Main 11/React 8
+functional checks completed. Strict clean-console checks fail on 10/2 known browser
+cookie/JmolTracker diagnostics; no suppression or unconditional reliability claim.
+Fresh publication Reviewer closed documentary P3PUB-DOC01 after clarifying that
+unchanged embedded data refers specifically to the latest35/generator unit.
+
+Verified full recovery snapshot ac348f5fd6b8ac3ee5305637ce26308415ba5af3 contains 3868
+files on checkpoint/namelecule-20261104-143518. ZIP every-file SHA/CRC, Git bundle,
+recovery ZIP, 14 active JSONs/337 steps, separate pilot and 10 launcher files were
+verified in both established external folders. Earlier backups remain. At this documentary cutoff, the final report metadata is prepared and an
+additional final snapshot remains pending. Its verification and receipts will be
+recorded separately, avoiding claims about future self-referencing commit hashes.
+Source active HEAD/index are preserved; only personal origin is written. No
+message was sent to the professor. React's 39 public files remain byte-identical,
+without a build; full checkpoint also preserves local experimental React work.
 
 # 2026-11-04 — Approved game welcome connection and full v54 migration (in progress)
 
