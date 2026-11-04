@@ -1,3 +1,22 @@
+# 2026-11-04 — Completed final publication, full snapshots and recovery delivery
+
+Published runtimeddc3c80ce643b11a9089012fd312d9853ae1d85b and documentary19b58f200deb4358e6cc556e47bf7a78459e4d9a.
+Final full source snapshot59af0e8f6ae24a1991c4cbec0388a2b7cd9facbc, 3878files; immutable ZIP
+everySHA/CRC, bundle/recovery andtwoexternalcopies verified. Earlier verified-base
+ac348f5/3868files retained. Latest two notes are separately committed after the
+snapshot and included in an additional bookkeeping bundle/external receipts;
+exact final commit/ref hashes are in final-save-state-20261104-143518.json.
+
+221 initial public and24final critical/documentary HTTP hashes plus3immutable
+checkpoint evidence links verified. Main11/React8 functional checks complete;
+10/2known external cookie/tracker diagnostics and strict exit1 disclosed.
+Independent reviews closed all bounded findings. Core54changed in this period
+and is committed/published with the approved fixes; SHA3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306.
+Core52 unchanged. Source HEAD/index retained,39publicReact files preserved/no
+build, localReact WIP fully saved,14originalJSON337steps+separatepilot+10launcher
+files copied. Ready report/links delivered, no message sent to professor.
+Earlier detailed contributions, test timing and limitations remain below.
+
 # 2026-11-04 — Professor35 integration, independent review and verified delivery
 
 Integrated professor commit 35d791ee after comparing it with the previously

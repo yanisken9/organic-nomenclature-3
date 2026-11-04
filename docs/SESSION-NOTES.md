@@ -1,3 +1,56 @@
+# Current resume point — 2026-11-04 — Full save and professor delivery completed
+
+User request completed: latest professor35 integrated first, then consolidated
+report, personal publication and full backups. Public runtime commit
+ddc3c80ce643b11a9089012fd312d9853ae1d85b; final documentary commit19b58f200deb4358e6cc556e47bf7a78459e4d9a.
+Report: https://yanisken9.github.io/organic-nomenclature-3/docs/professor-20261104/update.html
+Welcome: https://yanisken9.github.io/organic-nomenclature-3/design/welcome-proposal.html?v=release-20261104
+Ready-to-forward text/links are beside the report and in both external folders.
+No message sent to professor; user forwards the links.
+
+Known recovery snapshots: verified-base ac348f5fd6b8ac3ee5305637ce26308415ba5af3
+(3868 files), and final59af0e8f6ae24a1991c4cbec0388a2b7cd9facbc (3878 files). Both ZIP cutoffs
+are immutable. Every source-file SHA and ZIP CRC, Git bundles and recovery ZIPs
+were verified; copies in both established destinations were verified, including
+14 active JSONs/337steps, separate21step pilot and10launcher files. Final folder:
+Αποθηκεύσεις/2026-11-04-143518 and Desktop/αρχεία  json/Namelecule_04-11-2026.
+Earlier backups retained. Final notes are separate post-snapshot bookkeeping;
+its actual commit/ref and refreshed bundle hashes are recorded in the final
+save-state receipts, avoiding self-referencing commit claims. The ZIP remains
+exactly its captured snapshot. Latest notes/bundle are also copied externally.
+
+Public221 exact HTTP hashes plus final24 critical/documentary and3immutable
+evidence links passed. Actual public Main11/React8 functional checks completed;
+strict clean-console scripts exit1 on10/2known cookie/JmolTracker diagnostics,
+all matching prior-release families. Prefix checks11/8 had0JSerrors. Final source
+checks include1084naming/844unchanged,422forms (421supported+1old[H]skip),228accept,
+25ordinary authoring,22geometry browser,45pilot and60sets. Full14lesson/337step
+replay completed9780functional assertions before final generator correction,
+with4knownCIRerrors/rawexit1. These are distinct runs; no clean-console guarantee.
+
+Independent core Reviewer closed U35-NUM02/GEOM01; publication Reviewer closed
+PUB-DOC01/PUB-LINK02/PUB-DOC03. Reviewer independently checked the verified-base
+archives/external hashes; final generation uses the same reviewed helper with
+Developer verification. ChemistryValidator checked ten final source forms.
+All39publicReact files/old52 preserved without rebuild; fullcheckpoint preserves
+local React WIP. Source active HEAD168e3cec/index25c21223 preserved. Owned Firefox
+and prefix server stopped; user Firefox/server8013 not targeted.
+
+CORE REPORT: js/mulermoc-nom-core-54.js DID change in this session/report period:
+professor35/C11–20 tables, numeric locants, safe linearC9–20 groups, common
+whole-side skeletal angle/branch-vector correction, retaining local charge/
+isotope/map fixes. Final SHA2563f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306. Committed/published in runtime
+ddc3c80ce643b11a9089012fd312d9853ae1d85b, fully checkpointed. Core52 unchanged SHA256
+d2138418ff630ab77e578b80ca8ba3a10cc1b877c3ab8c0e5c2735ffcd1f24a2. Saving/report writing added no further core change.
+
+Upstream HEAD/CHANGELOG rechecked35d791ee, latest actual sync35; CHANGELOG unchanged
+versus02. Known ENnitro multiplier/Greek/C20 conventions, unsupported[H], geometry
+scope, echo/asynchronous/external-service limits remain in report. Safari,
+physical mobile/AT, full restore, conference-machine sequence and offline package
+not certified. Next: user forwards links/tests workshop; further features follow
+user direction and a concrete approved plan. No required save work remains once
+final receipt/remote-ref verification below completes.
+
 # Current resume point — 2026-11-04 — Final public report verified; final full snapshot next
 
 The consolidated report is public at commit 19b58f200deb4358e6cc556e47bf7a78459e4d9a.
