@@ -1,0 +1,2030 @@
+{
+  "runtime": "JavaScriptCore actual Accept/Update with mocked external/app inputs",
+  "checks": [
+    {
+      "label": "reproduced upstream equal-sum false rejection",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "reproduced upstream invalid builtin blocks next rung",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "reproduced upstream translated echo false acceptance",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "equal sums changed geometry accepts",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "equal sums changed geometry chooses equalSum",
+      "ok": true,
+      "detail": [
+        "[draft] skeletal: builtin ok heavy=4 x=600 y=0",
+        "[draft] slots variant=condensed skelSrc=builtin C:[heavy=4 x=600 y=0] E:[heavy=4 x=600 y=0] S:[heavy=4 x=600 y=0] draw:[heavy=4 x=600 y=0]"
+      ]
+    },
+    {
+      "label": "equal sums changed geometry preserves engine lists/cache",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "builtin fixed point update accepts",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "builtin fixed point update chooses builtinZig",
+      "ok": true,
+      "detail": [
+        "[draft] skeletal: builtin ok heavy=4 x=608 y=118",
+        "[draft] slots variant=skeletal skelSrc=builtin C:[heavy=4 x=702 y=0] E:[heavy=4 x=702 y=0] S:[heavy=4 x=608 y=118] draw:[heavy=4 x=608 y=118]"
+      ]
+    },
+    {
+      "label": "builtin fixed point update preserves engine lists/cache",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "builtin fixed point update restores applet 0",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "label": "builtin fixed point update restores applet 1",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "label": "fixed point wins builtin before applet fallbacks",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "same custom molecule update keeps registry identity/key/history",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "changed custom molecule forks accepts",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "changed custom molecule forks chooses builtinZig",
+      "ok": true,
+      "detail": [
+        "[draft] skeletal: builtin ok heavy=4 x=608 y=118",
+        "[draft] slots variant=condensed skelSrc=builtin C:[heavy=4 x=600 y=0] E:[heavy=4 x=600 y=0] S:[heavy=4 x=608 y=118] draw:[heavy=4 x=600 y=0]"
+      ]
+    },
+    {
+      "label": "changed custom molecule forks preserves engine lists/cache",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "changed custom molecule forks restores applet 0",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "label": "changed custom molecule forks restores applet 1",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "label": "fork preserves template and creates fresh key",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "single heavy atom fixed point accepts",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "single heavy atom fixed point chooses one",
+      "ok": true,
+      "detail": [
+        "[draft] skeletal: builtin ok heavy=1 x=0 y=0",
+        "[draft] slots variant=skeletal skelSrc=builtin C:[heavy=1 x=0 y=0] E:[heavy=1 x=0 y=0] S:[heavy=1 x=0 y=0] draw:[heavy=1 x=0 y=0]"
+      ]
+    },
+    {
+      "label": "single heavy atom fixed point preserves engine lists/cache",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "single heavy atom fixed point restores applet 0",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "label": "single heavy atom fixed point restores applet 1",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "label": "explicit H source maps to heavy-only builtin accepts",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "explicit H source maps to heavy-only builtin chooses builtinZig",
+      "ok": true,
+      "detail": [
+        "[draft] skeletal: builtin ok heavy=4 x=608 y=118",
+        "[draft] slots variant=condensed skelSrc=builtin C:[heavy=4 x=600 y=0] E:[heavy=4 x=600 y=0] S:[heavy=4 x=608 y=118] draw:[heavy=4 x=600 y=0]"
+      ]
+    },
+    {
+      "label": "explicit H source maps to heavy-only builtin preserves engine lists/cache",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "explicit H source maps to heavy-only builtin restores applet 0",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "label": "explicit H source maps to heavy-only builtin restores applet 1",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "label": "isotope fixed point preserves isotope accepts",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "isotope fixed point preserves isotope chooses wrongIsotope",
+      "ok": true,
+      "detail": [
+        "[draft] skeletal: builtin ok heavy=4 x=600 y=0",
+        "[draft] slots variant=condensed skelSrc=builtin C:[heavy=4 x=600 y=0] E:[heavy=4 x=600 y=0] S:[heavy=4 x=600 y=0] draw:[heavy=4 x=600 y=0]"
+      ]
+    },
+    {
+      "label": "isotope fixed point preserves isotope preserves engine lists/cache",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "isotope fixed point preserves isotope restores applet 0",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "label": "isotope fixed point preserves isotope restores applet 1",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "label": "charge fixed point preserves charge accepts",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "charge fixed point preserves charge chooses wrongCharge",
+      "ok": true,
+      "detail": [
+        "[draft] skeletal: builtin ok heavy=4 x=600 y=0",
+        "[draft] slots variant=condensed skelSrc=builtin C:[heavy=4 x=600 y=0] E:[heavy=4 x=600 y=0] S:[heavy=4 x=600 y=0] draw:[heavy=4 x=600 y=0]"
+      ]
+    },
+    {
+      "label": "charge fixed point preserves charge preserves engine lists/cache",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "charge fixed point preserves charge restores applet 0",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "label": "charge fixed point preserves charge restores applet 1",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "label": "invalid builtin invalid proceeds to display accepts",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "invalid builtin invalid proceeds to display chooses equalSum",
+      "ok": true,
+      "detail": [
+        "[draft] skeletal: builtin rejected (unsupported/invalid MOL)",
+        "[draft] skeletal: display ok heavy=4 x=600 y=0",
+        "[draft] slots variant=condensed skelSrc=display C:[heavy=4 x=600 y=0] E:[heavy=4 x=600 y=0] S:[heavy=4 x=600 y=0] draw:[heavy=4 x=600 y=0]"
+      ]
+    },
+    {
+      "label": "invalid builtin invalid proceeds to display preserves engine lists/cache",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "invalid builtin invalid proceeds to display restores applet 0",
+      "ok": true,
+      "detail": [
+        "mol",
+        "clear",
+        "mol",
+        "import",
+        "deferred",
+        "mol",
+        "restore",
+        "scale"
+      ]
+    },
+    {
+      "label": "invalid invalid actually imports next rung",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "invalid builtin nan proceeds to display accepts",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "invalid builtin nan proceeds to display chooses equalSum",
+      "ok": true,
+      "detail": [
+        "[draft] skeletal: builtin rejected (unsupported/invalid MOL)",
+        "[draft] skeletal: display ok heavy=4 x=600 y=0",
+        "[draft] slots variant=condensed skelSrc=display C:[heavy=4 x=600 y=0] E:[heavy=4 x=600 y=0] S:[heavy=4 x=600 y=0] draw:[heavy=4 x=600 y=0]"
+      ]
+    },
+    {
+      "label": "invalid builtin nan proceeds to display preserves engine lists/cache",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "invalid builtin nan proceeds to display restores applet 0",
+      "ok": true,
+      "detail": [
+        "mol",
+        "clear",
+        "mol",
+        "import",
+        "deferred",
+        "mol",
+        "restore",
+        "scale"
+      ]
+    },
+    {
+      "label": "invalid nan actually imports next rung",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "invalid builtin collapsed proceeds to display accepts",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "invalid builtin collapsed proceeds to display chooses equalSum",
+      "ok": true,
+      "detail": [
+        "[draft] skeletal: builtin rejected (collapsed bond)",
+        "[draft] skeletal: display ok heavy=4 x=600 y=0",
+        "[draft] slots variant=condensed skelSrc=display C:[heavy=4 x=600 y=0] E:[heavy=4 x=600 y=0] S:[heavy=4 x=600 y=0] draw:[heavy=4 x=600 y=0]"
+      ]
+    },
+    {
+      "label": "invalid builtin collapsed proceeds to display preserves engine lists/cache",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "invalid builtin collapsed proceeds to display restores applet 0",
+      "ok": true,
+      "detail": [
+        "mol",
+        "clear",
+        "mol",
+        "import",
+        "deferred",
+        "mol",
+        "restore",
+        "scale"
+      ]
+    },
+    {
+      "label": "invalid collapsed actually imports next rung",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "invalid builtin wrongHeavy proceeds to display accepts",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "invalid builtin wrongHeavy proceeds to display chooses equalSum",
+      "ok": true,
+      "detail": [
+        "[draft] skeletal: builtin rejected (heavy graph/charge/isotope mismatch)",
+        "[draft] skeletal: display ok heavy=4 x=600 y=0",
+        "[draft] slots variant=condensed skelSrc=display C:[heavy=4 x=600 y=0] E:[heavy=4 x=600 y=0] S:[heavy=4 x=600 y=0] draw:[heavy=4 x=600 y=0]"
+      ]
+    },
+    {
+      "label": "invalid builtin wrongHeavy proceeds to display preserves engine lists/cache",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "invalid builtin wrongHeavy proceeds to display restores applet 0",
+      "ok": true,
+      "detail": [
+        "mol",
+        "clear",
+        "mol",
+        "import",
+        "deferred",
+        "mol",
+        "restore",
+        "scale"
+      ]
+    },
+    {
+      "label": "invalid wrongHeavy actually imports next rung",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "invalid builtin wrongBonds proceeds to display accepts",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "invalid builtin wrongBonds proceeds to display chooses equalSum",
+      "ok": true,
+      "detail": [
+        "[draft] skeletal: builtin rejected (heavy graph/charge/isotope mismatch)",
+        "[draft] skeletal: display ok heavy=4 x=600 y=0",
+        "[draft] slots variant=condensed skelSrc=display C:[heavy=4 x=600 y=0] E:[heavy=4 x=600 y=0] S:[heavy=4 x=600 y=0] draw:[heavy=4 x=600 y=0]"
+      ]
+    },
+    {
+      "label": "invalid builtin wrongBonds proceeds to display preserves engine lists/cache",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "invalid builtin wrongBonds proceeds to display restores applet 0",
+      "ok": true,
+      "detail": [
+        "mol",
+        "clear",
+        "mol",
+        "import",
+        "deferred",
+        "mol",
+        "restore",
+        "scale"
+      ]
+    },
+    {
+      "label": "invalid wrongBonds actually imports next rung",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "invalid builtin wrongTopology proceeds to display accepts",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "invalid builtin wrongTopology proceeds to display chooses equalSum",
+      "ok": true,
+      "detail": [
+        "[draft] skeletal: builtin rejected (heavy graph/charge/isotope mismatch)",
+        "[draft] skeletal: display ok heavy=4 x=600 y=0",
+        "[draft] slots variant=condensed skelSrc=display C:[heavy=4 x=600 y=0] E:[heavy=4 x=600 y=0] S:[heavy=4 x=600 y=0] draw:[heavy=4 x=600 y=0]"
+      ]
+    },
+    {
+      "label": "invalid builtin wrongTopology proceeds to display preserves engine lists/cache",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "invalid builtin wrongTopology proceeds to display restores applet 0",
+      "ok": true,
+      "detail": [
+        "mol",
+        "clear",
+        "mol",
+        "import",
+        "deferred",
+        "mol",
+        "restore",
+        "scale"
+      ]
+    },
+    {
+      "label": "invalid wrongTopology actually imports next rung",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "invalid builtin wrongCharge proceeds to display accepts",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "invalid builtin wrongCharge proceeds to display chooses equalSum",
+      "ok": true,
+      "detail": [
+        "[draft] skeletal: builtin rejected (heavy graph/charge/isotope mismatch)",
+        "[draft] skeletal: display ok heavy=4 x=600 y=0",
+        "[draft] slots variant=condensed skelSrc=display C:[heavy=4 x=600 y=0] E:[heavy=4 x=600 y=0] S:[heavy=4 x=600 y=0] draw:[heavy=4 x=600 y=0]"
+      ]
+    },
+    {
+      "label": "invalid builtin wrongCharge proceeds to display preserves engine lists/cache",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "invalid builtin wrongCharge proceeds to display restores applet 0",
+      "ok": true,
+      "detail": [
+        "mol",
+        "clear",
+        "mol",
+        "import",
+        "deferred",
+        "mol",
+        "restore",
+        "scale"
+      ]
+    },
+    {
+      "label": "invalid wrongCharge actually imports next rung",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "invalid builtin wrongIsotope proceeds to display accepts",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "invalid builtin wrongIsotope proceeds to display chooses equalSum",
+      "ok": true,
+      "detail": [
+        "[draft] skeletal: builtin rejected (heavy graph/charge/isotope mismatch)",
+        "[draft] skeletal: display ok heavy=4 x=600 y=0",
+        "[draft] slots variant=condensed skelSrc=display C:[heavy=4 x=600 y=0] E:[heavy=4 x=600 y=0] S:[heavy=4 x=600 y=0] draw:[heavy=4 x=600 y=0]"
+      ]
+    },
+    {
+      "label": "invalid builtin wrongIsotope proceeds to display preserves engine lists/cache",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "invalid builtin wrongIsotope proceeds to display restores applet 0",
+      "ok": true,
+      "detail": [
+        "mol",
+        "clear",
+        "mol",
+        "import",
+        "deferred",
+        "mol",
+        "restore",
+        "scale"
+      ]
+    },
+    {
+      "label": "invalid wrongIsotope actually imports next rung",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "invalid builtin wrongMass proceeds to display accepts",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "invalid builtin wrongMass proceeds to display chooses equalSum",
+      "ok": true,
+      "detail": [
+        "[draft] skeletal: builtin rejected (heavy graph/charge/isotope mismatch)",
+        "[draft] skeletal: display ok heavy=4 x=600 y=0",
+        "[draft] slots variant=condensed skelSrc=display C:[heavy=4 x=600 y=0] E:[heavy=4 x=600 y=0] S:[heavy=4 x=600 y=0] draw:[heavy=4 x=600 y=0]"
+      ]
+    },
+    {
+      "label": "invalid builtin wrongMass proceeds to display preserves engine lists/cache",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "invalid builtin wrongMass proceeds to display restores applet 0",
+      "ok": true,
+      "detail": [
+        "mol",
+        "clear",
+        "mol",
+        "import",
+        "deferred",
+        "mol",
+        "restore",
+        "scale"
+      ]
+    },
+    {
+      "label": "invalid wrongMass actually imports next rung",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "display translated echo proceeds to edit accepts",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "display translated echo proceeds to edit chooses equalSum",
+      "ok": true,
+      "detail": [
+        "[draft] skeletal: builtin failed Error: builtin injected",
+        "[draft] skeletal: display rejected (unchanged internal geometry)",
+        "[draft] skeletal: edit ok heavy=4 x=600 y=0",
+        "[draft] slots variant=condensed skelSrc=edit C:[heavy=4 x=600 y=0] E:[heavy=4 x=600 y=0] S:[heavy=4 x=600 y=0] draw:[heavy=4 x=600 y=0]"
+      ]
+    },
+    {
+      "label": "display translated echo proceeds to edit preserves engine lists/cache",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "display translated echo proceeds to edit restores applet 0",
+      "ok": true,
+      "detail": [
+        "mol",
+        "clear",
+        "mol",
+        "import",
+        "deferred",
+        "mol",
+        "restore",
+        "scale"
+      ]
+    },
+    {
+      "label": "display translated echo proceeds to edit restores applet 1",
+      "ok": true,
+      "detail": [
+        "mol",
+        "clear",
+        "mol",
+        "import",
+        "deferred",
+        "mol",
+        "restore",
+        "scale"
+      ]
+    },
+    {
+      "label": "echo diagnosis translated",
+      "ok": true,
+      "detail": [
+        "[draft] skeletal: builtin failed Error: builtin injected",
+        "[draft] skeletal: display rejected (unchanged internal geometry)",
+        "[draft] skeletal: edit ok heavy=4 x=600 y=0",
+        "[draft] slots variant=condensed skelSrc=edit C:[heavy=4 x=600 y=0] E:[heavy=4 x=600 y=0] S:[heavy=4 x=600 y=0] draw:[heavy=4 x=600 y=0]"
+      ]
+    },
+    {
+      "label": "display formatted echo proceeds to edit accepts",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "display formatted echo proceeds to edit chooses equalSum",
+      "ok": true,
+      "detail": [
+        "[draft] skeletal: builtin failed Error: builtin injected",
+        "[draft] skeletal: display rejected (unchanged internal geometry)",
+        "[draft] skeletal: edit ok heavy=4 x=600 y=0",
+        "[draft] slots variant=condensed skelSrc=edit C:[heavy=4 x=600 y=0] E:[heavy=4 x=600 y=0] S:[heavy=4 x=600 y=0] draw:[heavy=4 x=600 y=0]"
+      ]
+    },
+    {
+      "label": "display formatted echo proceeds to edit preserves engine lists/cache",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "display formatted echo proceeds to edit restores applet 0",
+      "ok": true,
+      "detail": [
+        "mol",
+        "clear",
+        "mol",
+        "import",
+        "deferred",
+        "mol",
+        "restore",
+        "scale"
+      ]
+    },
+    {
+      "label": "display formatted echo proceeds to edit restores applet 1",
+      "ok": true,
+      "detail": [
+        "mol",
+        "clear",
+        "mol",
+        "import",
+        "deferred",
+        "mol",
+        "restore",
+        "scale"
+      ]
+    },
+    {
+      "label": "echo diagnosis formatted",
+      "ok": true,
+      "detail": [
+        "[draft] skeletal: builtin failed Error: builtin injected",
+        "[draft] skeletal: display rejected (unchanged internal geometry)",
+        "[draft] skeletal: edit ok heavy=4 x=600 y=0",
+        "[draft] slots variant=condensed skelSrc=edit C:[heavy=4 x=600 y=0] E:[heavy=4 x=600 y=0] S:[heavy=4 x=600 y=0] draw:[heavy=4 x=600 y=0]"
+      ]
+    },
+    {
+      "label": "display rotated echo proceeds to edit accepts",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "display rotated echo proceeds to edit chooses equalSum",
+      "ok": true,
+      "detail": [
+        "[draft] skeletal: builtin failed Error: builtin injected",
+        "[draft] skeletal: display rejected (unchanged internal geometry)",
+        "[draft] skeletal: edit ok heavy=4 x=600 y=0",
+        "[draft] slots variant=condensed skelSrc=edit C:[heavy=4 x=600 y=0] E:[heavy=4 x=600 y=0] S:[heavy=4 x=600 y=0] draw:[heavy=4 x=600 y=0]"
+      ]
+    },
+    {
+      "label": "display rotated echo proceeds to edit preserves engine lists/cache",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "display rotated echo proceeds to edit restores applet 0",
+      "ok": true,
+      "detail": [
+        "mol",
+        "clear",
+        "mol",
+        "import",
+        "deferred",
+        "mol",
+        "restore",
+        "scale"
+      ]
+    },
+    {
+      "label": "display rotated echo proceeds to edit restores applet 1",
+      "ok": true,
+      "detail": [
+        "mol",
+        "clear",
+        "mol",
+        "import",
+        "deferred",
+        "mol",
+        "restore",
+        "scale"
+      ]
+    },
+    {
+      "label": "echo diagnosis rotated",
+      "ok": true,
+      "detail": [
+        "[draft] skeletal: builtin failed Error: builtin injected",
+        "[draft] skeletal: display rejected (unchanged internal geometry)",
+        "[draft] skeletal: edit ok heavy=4 x=600 y=0",
+        "[draft] slots variant=condensed skelSrc=edit C:[heavy=4 x=600 y=0] E:[heavy=4 x=600 y=0] S:[heavy=4 x=600 y=0] draw:[heavy=4 x=600 y=0]"
+      ]
+    },
+    {
+      "label": "display clearThrows restores and continues accepts",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "display clearThrows restores and continues chooses equalSum",
+      "ok": true,
+      "detail": [
+        "[draft] skeletal: builtin rejected (unsupported/invalid MOL)",
+        "[draft] skeletal: display rejected (unsupported/invalid MOL)",
+        "[draft] skeletal: edit ok heavy=4 x=600 y=0",
+        "[draft] slots variant=condensed skelSrc=edit C:[heavy=4 x=600 y=0] E:[heavy=4 x=600 y=0] S:[heavy=4 x=600 y=0] draw:[heavy=4 x=600 y=0]"
+      ]
+    },
+    {
+      "label": "display clearThrows restores and continues preserves engine lists/cache",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "display clearThrows restores and continues restores applet 0",
+      "ok": true,
+      "detail": [
+        "mol",
+        "clear",
+        "restore",
+        "scale"
+      ]
+    },
+    {
+      "label": "display clearThrows restores and continues restores applet 1",
+      "ok": true,
+      "detail": [
+        "mol",
+        "clear",
+        "mol",
+        "import",
+        "deferred",
+        "mol",
+        "restore",
+        "scale"
+      ]
+    },
+    {
+      "label": "display importThrows restores and continues accepts",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "display importThrows restores and continues chooses equalSum",
+      "ok": true,
+      "detail": [
+        "[draft] skeletal: builtin rejected (unsupported/invalid MOL)",
+        "[draft] skeletal: display rejected (unsupported/invalid MOL)",
+        "[draft] skeletal: edit ok heavy=4 x=600 y=0",
+        "[draft] slots variant=condensed skelSrc=edit C:[heavy=4 x=600 y=0] E:[heavy=4 x=600 y=0] S:[heavy=4 x=600 y=0] draw:[heavy=4 x=600 y=0]"
+      ]
+    },
+    {
+      "label": "display importThrows restores and continues preserves engine lists/cache",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "display importThrows restores and continues restores applet 0",
+      "ok": true,
+      "detail": [
+        "mol",
+        "clear",
+        "mol",
+        "import",
+        "restore",
+        "scale"
+      ]
+    },
+    {
+      "label": "display importThrows restores and continues restores applet 1",
+      "ok": true,
+      "detail": [
+        "mol",
+        "clear",
+        "mol",
+        "import",
+        "deferred",
+        "mol",
+        "restore",
+        "scale"
+      ]
+    },
+    {
+      "label": "display repaintThrows restores and continues accepts",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "display repaintThrows restores and continues chooses equalSum",
+      "ok": true,
+      "detail": [
+        "[draft] skeletal: builtin rejected (unsupported/invalid MOL)",
+        "[draft] skeletal: display rejected (unsupported/invalid MOL)",
+        "[draft] skeletal: edit ok heavy=4 x=600 y=0",
+        "[draft] slots variant=condensed skelSrc=edit C:[heavy=4 x=600 y=0] E:[heavy=4 x=600 y=0] S:[heavy=4 x=600 y=0] draw:[heavy=4 x=600 y=0]"
+      ]
+    },
+    {
+      "label": "display repaintThrows restores and continues preserves engine lists/cache",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "display repaintThrows restores and continues restores applet 0",
+      "ok": true,
+      "detail": [
+        "mol",
+        "clear",
+        "mol",
+        "import",
+        "deferred",
+        "restore",
+        "scale"
+      ]
+    },
+    {
+      "label": "display repaintThrows restores and continues restores applet 1",
+      "ok": true,
+      "detail": [
+        "mol",
+        "clear",
+        "mol",
+        "import",
+        "deferred",
+        "mol",
+        "restore",
+        "scale"
+      ]
+    },
+    {
+      "label": "display clearNoop restores and continues accepts",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "display clearNoop restores and continues chooses equalSum",
+      "ok": true,
+      "detail": [
+        "[draft] skeletal: builtin rejected (unsupported/invalid MOL)",
+        "[draft] skeletal: display rejected (unsupported/invalid MOL)",
+        "[draft] skeletal: edit ok heavy=4 x=600 y=0",
+        "[draft] slots variant=condensed skelSrc=edit C:[heavy=4 x=600 y=0] E:[heavy=4 x=600 y=0] S:[heavy=4 x=600 y=0] draw:[heavy=4 x=600 y=0]"
+      ]
+    },
+    {
+      "label": "display clearNoop restores and continues preserves engine lists/cache",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "display clearNoop restores and continues restores applet 0",
+      "ok": true,
+      "detail": [
+        "mol",
+        "clear",
+        "mol",
+        "repaint",
+        "clear",
+        "mol",
+        "restore",
+        "scale"
+      ]
+    },
+    {
+      "label": "display clearNoop restores and continues restores applet 1",
+      "ok": true,
+      "detail": [
+        "mol",
+        "clear",
+        "mol",
+        "import",
+        "deferred",
+        "mol",
+        "restore",
+        "scale"
+      ]
+    },
+    {
+      "label": "silent clear failure cannot import over stale applet",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "display noop restores and continues accepts",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "display noop restores and continues chooses equalSum",
+      "ok": true,
+      "detail": [
+        "[draft] skeletal: builtin rejected (unsupported/invalid MOL)",
+        "[draft] skeletal: display rejected (unsupported/invalid MOL)",
+        "[draft] skeletal: edit ok heavy=4 x=600 y=0",
+        "[draft] slots variant=condensed skelSrc=edit C:[heavy=4 x=600 y=0] E:[heavy=4 x=600 y=0] S:[heavy=4 x=600 y=0] draw:[heavy=4 x=600 y=0]"
+      ]
+    },
+    {
+      "label": "display noop restores and continues preserves engine lists/cache",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "display noop restores and continues restores applet 0",
+      "ok": true,
+      "detail": [
+        "mol",
+        "clear",
+        "mol",
+        "import",
+        "deferred",
+        "mol",
+        "repaint",
+        "clear",
+        "mol",
+        "import",
+        "deferred",
+        "mol",
+        "restore",
+        "scale"
+      ]
+    },
+    {
+      "label": "display noop restores and continues restores applet 1",
+      "ok": true,
+      "detail": [
+        "mol",
+        "clear",
+        "mol",
+        "import",
+        "deferred",
+        "mol",
+        "restore",
+        "scale"
+      ]
+    },
+    {
+      "label": "synchronous immediate retry exercised",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "display read exception 1 safe accepts",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "display read exception 1 safe chooses equalSum",
+      "ok": true,
+      "detail": [
+        "[draft] skeletal: builtin rejected (unsupported/invalid MOL)",
+        "[draft] skeletal: display rejected (unsupported/invalid MOL)",
+        "[draft] skeletal: edit ok heavy=4 x=600 y=0",
+        "[draft] slots variant=condensed skelSrc=edit C:[heavy=4 x=600 y=0] E:[heavy=4 x=600 y=0] S:[heavy=4 x=600 y=0] draw:[heavy=4 x=600 y=0]"
+      ]
+    },
+    {
+      "label": "display read exception 1 safe preserves engine lists/cache",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "display read exception 1 safe restores applet 0",
+      "ok": true,
+      "detail": [
+        "mol"
+      ]
+    },
+    {
+      "label": "display read exception 1 safe restores applet 1",
+      "ok": true,
+      "detail": [
+        "mol",
+        "clear",
+        "mol",
+        "import",
+        "deferred",
+        "mol",
+        "restore",
+        "scale"
+      ]
+    },
+    {
+      "label": "display read exception 2 safe accepts",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "display read exception 2 safe chooses equalSum",
+      "ok": true,
+      "detail": [
+        "[draft] skeletal: builtin rejected (unsupported/invalid MOL)",
+        "[draft] skeletal: display rejected (unsupported/invalid MOL)",
+        "[draft] skeletal: edit ok heavy=4 x=600 y=0",
+        "[draft] slots variant=condensed skelSrc=edit C:[heavy=4 x=600 y=0] E:[heavy=4 x=600 y=0] S:[heavy=4 x=600 y=0] draw:[heavy=4 x=600 y=0]"
+      ]
+    },
+    {
+      "label": "display read exception 2 safe preserves engine lists/cache",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "display read exception 2 safe restores applet 0",
+      "ok": true,
+      "detail": [
+        "mol",
+        "clear",
+        "mol",
+        "restore",
+        "scale"
+      ]
+    },
+    {
+      "label": "display read exception 2 safe restores applet 1",
+      "ok": true,
+      "detail": [
+        "mol",
+        "clear",
+        "mol",
+        "import",
+        "deferred",
+        "mol",
+        "restore",
+        "scale"
+      ]
+    },
+    {
+      "label": "display read exception 3 safe accepts",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "display read exception 3 safe chooses equalSum",
+      "ok": true,
+      "detail": [
+        "[draft] skeletal: builtin rejected (unsupported/invalid MOL)",
+        "[draft] skeletal: display rejected (unsupported/invalid MOL)",
+        "[draft] skeletal: edit ok heavy=4 x=600 y=0",
+        "[draft] slots variant=condensed skelSrc=edit C:[heavy=4 x=600 y=0] E:[heavy=4 x=600 y=0] S:[heavy=4 x=600 y=0] draw:[heavy=4 x=600 y=0]"
+      ]
+    },
+    {
+      "label": "display read exception 3 safe preserves engine lists/cache",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "display read exception 3 safe restores applet 0",
+      "ok": true,
+      "detail": [
+        "mol",
+        "clear",
+        "mol",
+        "import",
+        "deferred",
+        "mol",
+        "restore",
+        "scale"
+      ]
+    },
+    {
+      "label": "display read exception 3 safe restores applet 1",
+      "ok": true,
+      "detail": [
+        "mol",
+        "clear",
+        "mol",
+        "import",
+        "deferred",
+        "mol",
+        "restore",
+        "scale"
+      ]
+    },
+    {
+      "label": "display read exception 4 safe accepts",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "display read exception 4 safe chooses equalSum",
+      "ok": true,
+      "detail": [
+        "[draft] skeletal: builtin rejected (unsupported/invalid MOL)",
+        "[draft] skeletal: display ok heavy=4 x=600 y=0",
+        "[draft] slots variant=condensed skelSrc=display C:[heavy=4 x=600 y=0] E:[heavy=4 x=600 y=0] S:[heavy=4 x=600 y=0] draw:[heavy=4 x=600 y=0]"
+      ]
+    },
+    {
+      "label": "display read exception 4 safe preserves engine lists/cache",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "display read exception 4 safe restores applet 0",
+      "ok": true,
+      "detail": [
+        "mol",
+        "clear",
+        "mol",
+        "import",
+        "deferred",
+        "mol",
+        "restore",
+        "scale"
+      ]
+    },
+    {
+      "label": "display read exception 4 safe restores applet 1",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "label": "invalid display graph proceeds to edit accepts",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "invalid display graph proceeds to edit chooses equalSum",
+      "ok": true,
+      "detail": [
+        "[draft] skeletal: builtin rejected (unsupported/invalid MOL)",
+        "[draft] skeletal: display rejected (heavy graph/charge/isotope mismatch)",
+        "[draft] skeletal: edit ok heavy=4 x=600 y=0",
+        "[draft] slots variant=condensed skelSrc=edit C:[heavy=4 x=600 y=0] E:[heavy=4 x=600 y=0] S:[heavy=4 x=600 y=0] draw:[heavy=4 x=600 y=0]"
+      ]
+    },
+    {
+      "label": "invalid display graph proceeds to edit preserves engine lists/cache",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "invalid display graph proceeds to edit restores applet 0",
+      "ok": true,
+      "detail": [
+        "mol",
+        "clear",
+        "mol",
+        "import",
+        "deferred",
+        "mol",
+        "restore",
+        "scale"
+      ]
+    },
+    {
+      "label": "invalid display graph proceeds to edit restores applet 1",
+      "ok": true,
+      "detail": [
+        "mol",
+        "clear",
+        "mol",
+        "import",
+        "deferred",
+        "mol",
+        "restore",
+        "scale"
+      ]
+    },
+    {
+      "label": "skeletal edit regenerates via builtin accepts",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "skeletal edit regenerates via builtin chooses builtinZig",
+      "ok": true,
+      "detail": [
+        "[draft] skeletal: builtin ok heavy=4 x=608 y=118",
+        "[draft] slots variant=skeletal skelSrc=builtin C:[heavy=4 x=702 y=0] E:[heavy=4 x=702 y=0] S:[heavy=4 x=608 y=118] draw:[heavy=4 x=600 y=0]"
+      ]
+    },
+    {
+      "label": "skeletal edit regenerates via builtin preserves engine lists/cache",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "skeletal edit regenerates via builtin restores applet 0",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "label": "skeletal edit regenerates via builtin restores applet 1",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "label": "valid builtin leaves applets untouched",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "annotated skeletal edit regenerates accepts",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "annotated skeletal edit regenerates chooses builtinZig",
+      "ok": true,
+      "detail": [
+        "[draft] skeletal: builtin ok heavy=4 x=608 y=118",
+        "[draft] slots variant=condensedZigZag skelSrc=builtin C:[heavy=4 x=702 y=0] E:[heavy=4 x=702 y=0] S:[heavy=4 x=608 y=118] draw:[heavy=4 x=600 y=0]"
+      ]
+    },
+    {
+      "label": "annotated skeletal edit regenerates preserves engine lists/cache",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "annotated skeletal edit regenerates restores applet 0",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "label": "annotated skeletal edit regenerates restores applet 1",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "label": "mapper exceptions preserve engine state accepts",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "mapper exceptions preserve engine state chooses line",
+      "ok": true,
+      "detail": [
+        "[draft] skeletal: builtin rejected (unsupported/invalid MOL)",
+        "[draft] skeletal: display rejected (mapper injected)",
+        "[draft] skeletal: edit rejected (mapper injected)",
+        "[draft] skeletal fallback: drawn geometry",
+        "[draft] slots variant=condensed skelSrc=- C:[heavy=4 x=600 y=0] E:[heavy=4 x=600 y=0] S:[heavy=4 x=600 y=0] draw:[heavy=4 x=600 y=0]"
+      ]
+    },
+    {
+      "label": "mapper exceptions preserve engine state preserves engine lists/cache",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "mapper exceptions preserve engine state restores applet 0",
+      "ok": true,
+      "detail": [
+        "mol",
+        "clear",
+        "mol",
+        "import",
+        "deferred",
+        "mol",
+        "restore",
+        "scale"
+      ]
+    },
+    {
+      "label": "mapper exceptions preserve engine state restores applet 1",
+      "ok": true,
+      "detail": [
+        "mol",
+        "clear",
+        "mol",
+        "import",
+        "deferred",
+        "mol",
+        "restore",
+        "scale"
+      ]
+    },
+    {
+      "label": "stale guard prevents derivation",
+      "ok": true,
+      "detail": [
+        "Drawing changed — press Submit again."
+      ]
+    },
+    {
+      "label": "stale guard keeps engine state",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "no3d guard prevents derivation",
+      "ok": true,
+      "detail": [
+        "Acceptance requires a PubChem record with 3D — coming back with RDKit."
+      ]
+    },
+    {
+      "label": "no3d guard keeps engine state",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "pending guard prevents derivation",
+      "ok": true,
+      "detail": [
+        "Still looking up PubChem — wait a moment."
+      ]
+    },
+    {
+      "label": "pending guard keeps engine state",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "duplicate guard prevents derivation",
+      "ok": true,
+      "detail": [
+        "Already exists — pick it from the menu. (existing)"
+      ]
+    },
+    {
+      "label": "duplicate guard keeps engine state",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "expanded drawn slot preserved accepts",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "expanded drawn slot preserved preserves engine lists/cache",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "expanded drawn slot preserved restores applet 0",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "label": "expanded drawn slot preserved restores applet 1",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "label": "expanded source retained verbatim",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "condensed drawn slot preserved accepts",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "condensed drawn slot preserved preserves engine lists/cache",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "condensed drawn slot preserved restores applet 0",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "label": "condensed drawn slot preserved restores applet 1",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "label": "condensed source retained verbatim",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "butyne_1 Accept wins deterministic builtin",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "butyne_1 Accept has correct C/O/sp angles",
+      "ok": true,
+      "detail": [
+        {
+          "atom": 2,
+          "angle": 120.00001350229738,
+          "target": 120,
+          "error": 1.3502297377954164e-05
+        },
+        {
+          "atom": 3,
+          "angle": 179.99755146321618,
+          "target": 180,
+          "error": 0.002448536783816735
+        }
+      ]
+    },
+    {
+      "label": "butyne_1 Accept preserves live engine mapping state",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "butyne_1 Accept preserves update contract",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "butyne_1 Update wins deterministic builtin",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "butyne_1 Update has correct C/O/sp angles",
+      "ok": true,
+      "detail": [
+        {
+          "atom": 2,
+          "angle": 120.00001350229738,
+          "target": 120,
+          "error": 1.3502297377954164e-05
+        },
+        {
+          "atom": 3,
+          "angle": 179.99755146321618,
+          "target": 180,
+          "error": 0.002448536783816735
+        }
+      ]
+    },
+    {
+      "label": "butyne_1 Update preserves live engine mapping state",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "butyne_1 Update preserves update contract",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "propadiene Accept wins deterministic builtin",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "propadiene Accept has correct C/O/sp angles",
+      "ok": true,
+      "detail": [
+        {
+          "atom": 2,
+          "angle": 179.99755146321618,
+          "target": 180,
+          "error": 0.002448536783816735
+        }
+      ]
+    },
+    {
+      "label": "propadiene Accept preserves live engine mapping state",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "propadiene Accept preserves update contract",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "propadiene Update wins deterministic builtin",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "propadiene Update has correct C/O/sp angles",
+      "ok": true,
+      "detail": [
+        {
+          "atom": 2,
+          "angle": 179.99755146321618,
+          "target": 180,
+          "error": 0.002448536783816735
+        }
+      ]
+    },
+    {
+      "label": "propadiene Update preserves live engine mapping state",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "propadiene Update preserves update contract",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "diethyl_ether Accept wins deterministic builtin",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "diethyl_ether Accept has correct C/O/sp angles",
+      "ok": true,
+      "detail": [
+        {
+          "atom": 1,
+          "angle": 120.0012175171427,
+          "target": 120,
+          "error": 0.001217517142706015
+        },
+        {
+          "atom": 2,
+          "angle": 119.99756496571455,
+          "target": 120,
+          "error": 0.0024350342854546625
+        },
+        {
+          "atom": 4,
+          "angle": 120.0012175171427,
+          "target": 120,
+          "error": 0.001217517142706015
+        }
+      ]
+    },
+    {
+      "label": "diethyl_ether Accept preserves live engine mapping state",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "diethyl_ether Accept preserves update contract",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "diethyl_ether Update wins deterministic builtin",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "diethyl_ether Update has correct C/O/sp angles",
+      "ok": true,
+      "detail": [
+        {
+          "atom": 1,
+          "angle": 120.0012175171427,
+          "target": 120,
+          "error": 0.001217517142706015
+        },
+        {
+          "atom": 2,
+          "angle": 119.99756496571455,
+          "target": 120,
+          "error": 0.0024350342854546625
+        },
+        {
+          "atom": 4,
+          "angle": 120.0012175171427,
+          "target": 120,
+          "error": 0.001217517142706015
+        }
+      ]
+    },
+    {
+      "label": "diethyl_ether Update preserves live engine mapping state",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "diethyl_ether Update preserves update contract",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "butadiene_1_2 Accept wins deterministic builtin",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "butadiene_1_2 Accept has correct C/O/sp angles",
+      "ok": true,
+      "detail": [
+        {
+          "atom": 2,
+          "angle": 179.99755146321618,
+          "target": 180,
+          "error": 0.002448536783816735
+        },
+        {
+          "atom": 3,
+          "angle": 119.99876898055987,
+          "target": 120,
+          "error": 0.0012310194401266017
+        }
+      ]
+    },
+    {
+      "label": "butadiene_1_2 Accept preserves live engine mapping state",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "butadiene_1_2 Accept preserves update contract",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "butadiene_1_2 Update wins deterministic builtin",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "butadiene_1_2 Update has correct C/O/sp angles",
+      "ok": true,
+      "detail": [
+        {
+          "atom": 2,
+          "angle": 179.99755146321618,
+          "target": 180,
+          "error": 0.002448536783816735
+        },
+        {
+          "atom": 3,
+          "angle": 119.99876898055987,
+          "target": 120,
+          "error": 0.0012310194401266017
+        }
+      ]
+    },
+    {
+      "label": "butadiene_1_2 Update preserves live engine mapping state",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "butadiene_1_2 Update preserves update contract",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "ethyl_propyl_ether Accept wins deterministic builtin",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "ethyl_propyl_ether Accept has correct C/O/sp angles",
+      "ok": true,
+      "detail": [
+        {
+          "atom": 1,
+          "angle": 119.99756496571455,
+          "target": 120,
+          "error": 0.0024350342854546625
+        },
+        {
+          "atom": 2,
+          "angle": 120.00001350229742,
+          "target": 120,
+          "error": 1.3502297420586729e-05
+        },
+        {
+          "atom": 4,
+          "angle": 119.99876898055987,
+          "target": 120,
+          "error": 0.0012310194401266017
+        },
+        {
+          "atom": 6,
+          "angle": 120.0012175171427,
+          "target": 120,
+          "error": 0.001217517142706015
+        }
+      ]
+    },
+    {
+      "label": "ethyl_propyl_ether Accept preserves live engine mapping state",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "ethyl_propyl_ether Accept preserves update contract",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "ethyl_propyl_ether Update wins deterministic builtin",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "ethyl_propyl_ether Update has correct C/O/sp angles",
+      "ok": true,
+      "detail": [
+        {
+          "atom": 1,
+          "angle": 119.99756496571455,
+          "target": 120,
+          "error": 0.0024350342854546625
+        },
+        {
+          "atom": 2,
+          "angle": 120.00001350229742,
+          "target": 120,
+          "error": 1.3502297420586729e-05
+        },
+        {
+          "atom": 4,
+          "angle": 119.99876898055987,
+          "target": 120,
+          "error": 0.0012310194401266017
+        },
+        {
+          "atom": 6,
+          "angle": 120.0012175171427,
+          "target": 120,
+          "error": 0.001217517142706015
+        }
+      ]
+    },
+    {
+      "label": "ethyl_propyl_ether Update preserves live engine mapping state",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "label": "ethyl_propyl_ether Update preserves update contract",
+      "ok": true,
+      "detail": null
+    }
+  ],
+  "representative": [
+    {
+      "key": "butyne_1",
+      "update": false,
+      "angles": [
+        {
+          "atom": 2,
+          "angle": 120.00001350229738,
+          "target": 120,
+          "error": 1.3502297377954164e-05
+        },
+        {
+          "atom": 3,
+          "angle": 179.99755146321618,
+          "target": 180,
+          "error": 0.002448536783816735
+        }
+      ],
+      "source": "[draft] skeletal: builtin ok heavy=4 x=608 y=235"
+    },
+    {
+      "key": "butyne_1",
+      "update": true,
+      "angles": [
+        {
+          "atom": 2,
+          "angle": 120.00001350229738,
+          "target": 120,
+          "error": 1.3502297377954164e-05
+        },
+        {
+          "atom": 3,
+          "angle": 179.99755146321618,
+          "target": 180,
+          "error": 0.002448536783816735
+        }
+      ],
+      "source": "[draft] skeletal: builtin ok heavy=4 x=608 y=235"
+    },
+    {
+      "key": "propadiene",
+      "update": false,
+      "angles": [
+        {
+          "atom": 2,
+          "angle": 179.99755146321618,
+          "target": 180,
+          "error": 0.002448536783816735
+        }
+      ],
+      "source": "[draft] skeletal: builtin ok heavy=3 x=304 y=176"
+    },
+    {
+      "key": "propadiene",
+      "update": true,
+      "angles": [
+        {
+          "atom": 2,
+          "angle": 179.99755146321618,
+          "target": 180,
+          "error": 0.002448536783816735
+        }
+      ],
+      "source": "[draft] skeletal: builtin ok heavy=3 x=304 y=176"
+    },
+    {
+      "key": "diethyl_ether",
+      "update": false,
+      "angles": [
+        {
+          "atom": 1,
+          "angle": 120.0012175171427,
+          "target": 120,
+          "error": 0.001217517142706015
+        },
+        {
+          "atom": 2,
+          "angle": 119.99756496571455,
+          "target": 120,
+          "error": 0.0024350342854546625
+        },
+        {
+          "atom": 4,
+          "angle": 120.0012175171427,
+          "target": 120,
+          "error": 0.001217517142706015
+        }
+      ],
+      "source": "[draft] skeletal: builtin ok heavy=5 x=-101 y=528"
+    },
+    {
+      "key": "diethyl_ether",
+      "update": true,
+      "angles": [
+        {
+          "atom": 1,
+          "angle": 120.0012175171427,
+          "target": 120,
+          "error": 0.001217517142706015
+        },
+        {
+          "atom": 2,
+          "angle": 119.99756496571455,
+          "target": 120,
+          "error": 0.0024350342854546625
+        },
+        {
+          "atom": 4,
+          "angle": 120.0012175171427,
+          "target": 120,
+          "error": 0.001217517142706015
+        }
+      ],
+      "source": "[draft] skeletal: builtin ok heavy=5 x=-101 y=528"
+    },
+    {
+      "key": "butadiene_1_2",
+      "update": false,
+      "angles": [
+        {
+          "atom": 2,
+          "angle": 179.99755146321618,
+          "target": 180,
+          "error": 0.002448536783816735
+        },
+        {
+          "atom": 3,
+          "angle": 119.99876898055987,
+          "target": 120,
+          "error": 0.0012310194401266017
+        }
+      ],
+      "source": "[draft] skeletal: builtin ok heavy=4 x=507 y=410"
+    },
+    {
+      "key": "butadiene_1_2",
+      "update": true,
+      "angles": [
+        {
+          "atom": 2,
+          "angle": 179.99755146321618,
+          "target": 180,
+          "error": 0.002448536783816735
+        },
+        {
+          "atom": 3,
+          "angle": 119.99876898055987,
+          "target": 120,
+          "error": 0.0012310194401266017
+        }
+      ],
+      "source": "[draft] skeletal: builtin ok heavy=4 x=507 y=410"
+    },
+    {
+      "key": "ethyl_propyl_ether",
+      "update": false,
+      "angles": [
+        {
+          "atom": 1,
+          "angle": 119.99756496571455,
+          "target": 120,
+          "error": 0.0024350342854546625
+        },
+        {
+          "atom": 2,
+          "angle": 120.00001350229742,
+          "target": 120,
+          "error": 1.3502297420586729e-05
+        },
+        {
+          "atom": 4,
+          "angle": 119.99876898055987,
+          "target": 120,
+          "error": 0.0012310194401266017
+        },
+        {
+          "atom": 6,
+          "angle": 120.0012175171427,
+          "target": 120,
+          "error": 0.001217517142706015
+        }
+      ],
+      "source": "[draft] skeletal: builtin ok heavy=6 x=-101 y=528"
+    },
+    {
+      "key": "ethyl_propyl_ether",
+      "update": true,
+      "angles": [
+        {
+          "atom": 1,
+          "angle": 119.99756496571455,
+          "target": 120,
+          "error": 0.0024350342854546625
+        },
+        {
+          "atom": 2,
+          "angle": 120.00001350229742,
+          "target": 120,
+          "error": 1.3502297420586729e-05
+        },
+        {
+          "atom": 4,
+          "angle": 119.99876898055987,
+          "target": 120,
+          "error": 0.0012310194401266017
+        },
+        {
+          "atom": 6,
+          "angle": 120.0012175171427,
+          "target": 120,
+          "error": 0.001217517142706015
+        }
+      ],
+      "source": "[draft] skeletal: builtin ok heavy=6 x=-101 y=528"
+    }
+  ],
+  "observed": [
+    {
+      "label": "different zigzag shares coordinate sums",
+      "upstreamSlot": "drawn fallback",
+      "upstreamLogs": [
+        "[draft] skeletal: builtin ok heavy=4 x=600 y=0",
+        "[draft] skeletal: unchanged geometry (builtin), discarding",
+        "[draft] skeletal fallback: drawn geometry",
+        "[draft] slots variant=condensed skelSrc=- C:[heavy=4 x=600 y=0] E:[heavy=4 x=600 y=0] S:[heavy=4 x=600 y=0] draw:[heavy=4 x=600 y=0]"
+      ],
+      "beforeSlot": "expected"
+    },
+    {
+      "label": "invalid builtin blocks valid display",
+      "upstreamSlot": "drawn fallback",
+      "upstreamLogs": [
+        "[draft] skeletal: builtin ok unparseable",
+        "[draft] skeletal: validation failed (heavy 0 vs 0, zeroCoords true, src builtin)",
+        "[draft] skeletal fallback: drawn geometry",
+        "[draft] slots variant=condensed skelSrc=- C:[heavy=4 x=600 y=0] E:[heavy=4 x=600 y=0] S:[heavy=4 x=600 y=0] draw:[heavy=4 x=600 y=0]"
+      ],
+      "beforeSlot": "expected"
+    },
+    {
+      "label": "translated echo masks unchanged geometry",
+      "upstreamSlot": "drawn fallback",
+      "upstreamLogs": [
+        "[draft] skeletal: builtin ok unparseable",
+        "[draft] skeletal: validation failed (heavy 0 vs 0, zeroCoords true, src builtin)",
+        "[draft] skeletal fallback: drawn geometry",
+        "[draft] slots variant=condensed skelSrc=- C:[heavy=4 x=600 y=0] E:[heavy=4 x=600 y=0] S:[heavy=4 x=600 y=0] draw:[heavy=4 x=600 y=0]"
+      ],
+      "beforeSlot": "expected"
+    },
+    {
+      "label": "translated echo direct rung",
+      "upstreamAcceptedEcho": true,
+      "logs": [
+        "[draft] skeletal: built-in zigzag failed",
+        "[draft] skeletal: display rung won heavy=4 x=4600 y=2000",
+        "[draft] skeletal from display",
+        "[draft] slots variant=condensed skelSrc=display C:[heavy=4 x=600 y=0] E:[heavy=4 x=600 y=0] S:[heavy=4 x=4600 y=2000] draw:[heavy=4 x=600 y=0]"
+      ]
+    }
+  ],
+  "coreSHA256": "3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306"
+}

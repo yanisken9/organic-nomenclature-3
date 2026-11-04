@@ -1,0 +1,990 @@
+# Changelog
+
+All notable changes to the Οργανική Ονοματολογία MuLERMoC.
+
+---
+
+## [v54] (molecule edit/create draft flow; LIVE, `index.html` → v54)
+
+New parallel file set `mulermoc-nom-54.html` + `js/*-54.js` + `css/*-54.css`, forked from v53. v54 went live 2026-11-04 (was authoring-only before).
+
+### Draft editor applet (v54)
+- Dedicated `jsmeEditDraft` applet in pure edit mode by construction (next to the depict-only display applet). Runtime `options()` cannot flip depict/edit (proven in-browser against the bundled JSME), so there is no mode flipping anywhere: the display pipeline never leaves depict, drafts live entirely in the edit applet. The earlier single-applet `options()` enforcement pair was removed.
+- Title-bar Edit/New buttons (new `editMolecule`/`newMolecule` icons in `js/ui-icons.js`, left of the gear; `.active` entry, mutual `.btnInactive`, hidden in Present; Edit dimmed with no selection). New `#viewerSettingsBtnDiv` flex row (the shared `.settingsBtn` absolute rule used to stack them).
+
+### Draft session (v54 Stage 2)
+- Enter Edit (template = visible variant's MOL) or New (blank canvas); `selectedMol` never touched, Cancel restores via full `fSelectMol`. Sandbox runs algorithmic-or-nothing (stored chains belong to the old atom order); 3D hidden not zapped; naming cleared to a placeholder; radios locked; functional guards in `fSelectMol`/name boxes/step capture plus page-wide `.drafting` dim. Present forces read-only.
+- Submit → engine + PubChem preview: empty/cyclic guard (union-find cycle check — core only warns-and-falls back), engine name, verbatim PubChem rows (IUPAC/ether-Common/Systematic, same verbatim-only rule), PubChem SDF 3D via inline `load data` (blob: URLs are rejected by JSmol's file loader online — `fJSmolLoadInlineSDF`; record-without-3D and novel drawings stay 2D-only with an explanatory note, never a failure). Preview renders in the depict SVG view; a Draw button flips back to the editor. Submit/Accept/Draw/Cancel form a freshness state machine with stale detection (live JSME callbacks + authoritative Accept-time SMILES re-check with self-heal).
+- Accept: forks stored templates into `custom_*`, updates custom templates in place (key stable, history appended). Readable keys (`custom_2_methylpropane`, systematic preferred, Greek-letter expansion, collision suffix, hash fallback). Duplicate guard (normalized SMILES + PubChem CID). PubChem-3D gate blocks 3D-less accepts (RDKit TODO for local ETKDG generation).
+- Manual per-molecule save from a new Ρυθμίσεις row (`MULERMOC_<name>_data.js`, merge-safe `Object.assign` so collected files coexist); boot merge folds them into `nameExamples`. No auto-download; no schema change.
+- Expanded structural formula generator for menu labels (`CH3CH(Br)CH3`, `HOOC`/`COOH` end rules, `CH=O`/`O=CH`, keto `CO` drop, `NO2` merge; 24-vector headless matrix green). Menu renders a key fallback for formula-less entries and rebuilds on Accept (grouping switches already did).
+
+### Draft flow fixes (v54, live day)
+- Inline SDF 3D for drafts and accepted customs (`fJSmolLoadInlineSDF`, `load data ... end`): JSmol's `load <url>` rejects `blob:` URLs online (remote `j2sPath`/`serverURL`), so Blob-URL loading was replaced everywhere SDF text is at hand.
+- Edit identity rule: an Edit that redraws the SAME molecule updates the custom entry in place (CID-first, normalized-SMILES fallback); an Edit producing a different molecule always forks a new `custom_*`; stored (141) templates are never overwritten (same-molecule redraw of stored blocks as a duplicate). Accept-button label (`Update`/`Accept`) follows the runtime decision; the dup guard excludes self only on the true update path.
+- Draft bar state machine, hardened: Submit dims once a fresh preview is up and re-lights on Draw; Accept and the Draw flip are lit only in preview view (edit mode dims them); Draw returns to the editor and hides 3D like Edit entry; `molDraftDrawBtn` reads Επεξεργασία; draft-status names the edited variant. The strand this fixes: Submit can never be dead while drawing is possible (every drawable state goes through Draw).
+- Toasts: overlapping toasts no longer hide each other early (pending timer cleared on re-toast); `#scenarioToast` is `pointer-events: none` so the faded notice never blocks clicks behind it.
+- Chain stepper 3D tracking: per-molecule 2D↔3D heavy-atom isomorphism map translates the adopted chain atom-by-atom (symmetry-safe — neopentane's 6 identical C–C–C paths cycle correctly); signature match then ordinal are fallbacks. Also applied at load-time snap.
+- Draft preview now shows the predicted EN name under the GR engine name (sandbox-safe transliteration, PubChem systematic fallback for Greek-common esters/complex ethers) under a "Πρόβλεψη Ονομασίας" title.
+- Tri-state name verdicts (`[✓|?|✕]` per predicted name, correct/wrong/unconfirmed): EN auto-checks via the shared oracle comparator when untouched (human always wins); tints (green/red/neutral); reset on resubmit; persisted as `nameCheck` (+ history + save-file header line) so each saved file is labeled eval data for engine work. Accept stays non-blocking with an outcome toast.
+- Three-slot 2D derivation at Accept (drawn variant verbatim + generated siblings): drawn MOL in its slot, school-condensed via main-chain linearization, expanded via topped-up explicit H, skeletal via JSME zigzag ladder (display applet → edit applet → built-in, validated, logged) with drawn-geometry fallback; update-in-place rewrites all three slots; the accepted menu row is marked, grouped open, and scrolled into view.
+- Beautify button (`Ομορφοποίηση`, school slots only): rewrites the canvas with the linearizer, marks stale so resubmit recaptures. Shares one sandbox engine pass with Submit (`fMolDraftSandboxAnalyse`, chain rebuild included) — the earlier split caused pre-submit beautify to lay out on the template's stale chain.
+- Drawing master switch: the old `Επεξεργασία/Σχεδίαση 2D` Ρυθμίσεις checkbox is now "Σχεδίαση και προσθήκη μορίων" (default off); Edit/New entries exist only while enabled, mid-draft toggle blocked, Enter refuses while off.
+
+## [v53] (English version: full UI + molecule naming in English, Greek default preserved)
+
+New parallel file set `mulermoc-nom-53.html` + `js/*-53.js` + `css/*-53.css`, forked from v52. Single codebase with `?lang=` toggle (no `-en` file fork); Greek remains the default. Scenarios stay author-language; new EN scenarios to be authored later by teachers/MSc students.
+
+### Molecule info panel (v53)
+- Info button left of the naming gear (icon from `imgs/info-svgrepo-com.svg`): opens `#moleculeInfo` with the cached SMILES (copy button included), the verbatim PubChem IUPAC name, a gated systematic row (locant-shaped `systematicEN` only, e.g. `methanoic acid` but never `*yndioic`-style artifacts), and — for ethers — a Common row showing the verbatim PubChem Title *only* when it actually looks like a common ether name (ends in "ether"); systematicTitles are skipped, never translated or locally reconstructed. Pending (`fetching…`), no-record and offline states; in-place refresh on fetch resolve, molecule-guarded. Live-only toggle, no scenario-schema change. GR/EN labels via `lang-53.js`.
+- Sits above the name boxes, so opening it re-pins the floating Explain sheet (same helper as the settings panel).
+
+### JSmol cold-boot robustness (v53)
+- All `Jmol.*` calls go through fail-closed `fJSmol*` wrappers (pending-3D note instead of throwing), so a slow/blocked CDN can no longer abort molecule loading after the 2D paint — naming, menu and selection always complete. A readiness-gated resend in the `jmol_isReady` hook replays the pending 3D load (plus scenario highlight) once the applet reports ready.
+- Root-fixed the cold-boot abort the wrappers exposed: naming tables (`nameMainCompObj3` et al.) were only populated by teaching's `$(document).ready`, while the JSME-boot `fSelectMol` doesn't wait for it — `fGuessName` threw on the empty tables (`TypeError: reading 'suffix'`) after the 2D paint but before naming/menu/3D. `fInitNamingProps()` now runs in `jsmeOnLoad` and defensively at `fGuessName` entry (idempotent), so every path is order-independent. Verified with cold hard-reloads: full app, no `[COLD-BOOT]` errors.
+- Applet creation stays parse-time (`Jmol.getApplet` writes via `document.write`, unsafe post-parse); the library keeps its parse-time `document.write` include with the `?libs=` switch. The applet binding is conditional (`typeof` guard) so the molview declaration can never wipe the live applet object. A hard CDN failure toasts once ("3D unavailable") and the app continues 2D-only.
+- Cold-boot diagnostics + recovery: `fGuessName`/`fUpdateSVG`/`fShowNameAnalysis` in the select path are tagged (`[COLD-BOOT] … failed`) and fail open instead of aborting the select; the ready-hook resend replays the *full* select when the naming panel never rendered. First-party `js/*`/`css/*` includes carry `?v=` cache-busters.
+
+### Language switch keeps menu state (v53)
+- Header toggle reloads, so the menu rebuild used to lose everything except the mode. Now: `?grouping=` travels on toggle (validated, non-default only) and is restored once at boot; in-place repaints preserve selection visuals, scroll and group header (tracked live, visual-only, no reload); the boot `?mol=` path marks the group header too.
+- Methane boot default no longer marks the menu or force-opens Alkanes (the JSmol warm-up load itself is kept); `?mol=` is carried only for explicitly chosen molecules (row click, deep link, scenario step), never the silent default.
+
+### UI translation (chrome)
+- 207-string `?lang=` table (`mulermoc-nom-lang-53.js`), every Greek value source-verified. Value-based `data-tooltip`/`aria-label`/`title`/`placeholder` translation with debounced MutationObserver, dynamic-prefix rules, dialog/bar/menu/step text nodes. All render paths translate at build time (no Greek-first flip; verified observer-neutered); GR output byte-identical, no EN leakage.
+- Header GR/EN two-button switch (`#langSwitch`, plain `langButtonClass` buttons, `selected` on the active language; clicking the active side is a no-op). Toggle carries the selected molecule (`?mol=`, dropped when a scenario owns the selection); boot restores viewer + menu highlight + group open via the normal click path. Also enables `?lang=…&mol=…` deep links.
+- Per-step scenario language (`step.lang`, EN/GR badge on step rows): applying/presenting a step re-renders naming + UI in its creation language (in-memory override read by `fMulerLang()`); present exit restores session language. Legacy steps without the field default to Greek.
+
+### EN molecule naming + explanations
+- Slot-transliterated systematic English names (`fPopulateEngineENFromGreek`) with per-box EN layout reusing stable Greek box ids (`fNameENBoxes`); PubChem/CIR as oracle (`fValidateENAgainstOracle`, stereo prefixes stripped) — validation only, except Greek-common esters/complex ethers which fall back to the audited `systematicEN` (flagged `engineDelegated`).
+- Ester fix: suffix component is `-oate` not `-anoate` (`methyl methanoate`, not `*methananoate`); alcohol word leads (`isobutyl 2-methylpropanoate`).
+- Oxocarboxylic merge per IUPAC: acid+ketone now classifies as `oxoCarboxylicAcids` (ketoAcids series retired, label kept as harmless alias); substitutive prefix `κετο-` → systematic `οξο-` with derived chain-position locant (`2-οξοπροπανικό οξύ` / `2-oxopropanoic acid`, `4-oxobutanoic acid`). Locant suppression is lifted only under carboxylic principal; group nouns (`Κετονομάδα`) unchanged.
+- P-14.4 terminal-`e` fusion at EN box seams (`fFuseEnInfixSuffix`): `en`/`yn` directly before a consonant-initial suffix box regains its `e` (`hex-2-en-4-ynedioic acid`, not `*yndioic`); vowel-initial suffixes fuse bare. Engine path was already correct — boxes now match it. 19 `FUSE` unit vectors in `zz-test-en53.html`.
+- `fIsSystematicName` now accepts systematic esters (`anoate`/`enoate`/`ynoate`/`dioate` endings): the molecule-info Systematic row appears for retained-name esters (row 2 verbatim “methyl formate” + row 3 “methyl methanoate”); same fix benefits oracle resolution of raw systematic ester names.
+- Explain line, rule panel (titles/texts/tables via 91-pair `RULE_GR2EN`), rule theory (9 texts) and alkyl/alkoxy systematic tables fully translated; EN rule narration with en-US voice.
+
+### Live oracle verdicts (EN panel)
+- Each name carries a verdict: plain = engine agrees with PubChem/CIR (systematic/retained/Title); red = differs; amber = fetch done, no record; lavender = fetch itself failed; blue = oracle-supplied display or Greek fallback. Shared comparator (`fMatchEngineEN`) feeds validator and live marker alike; fetch completion updates the marker in place (molecule-guarded, no rebuild; pending fetch never flashes). Console logs predicted vs displayed (`[EN-CHECK]`); the full oracle strings live in the molecule info panel. Live-only common-name reprieve for ethers: when the engine mismatches but the locally built common name matches the PubChem title, the red is withheld (plain + explanatory tooltip).
+- Live full run: 100 match (92 systematic + 8 retained), 10 mismatch (implied-locant omissions + retained common groups/names, §B/§C/P3 queue), 34 missing (15 novel §E molecules + 19 bulk-run throttled), 0 pending/delegated/Greek-fallback.
+
+### Docs
+- `docs/REVIEW-EN-53.md`: human-review handoff (§A–§E oracle queues, §F–§N validation log).
+- `docs/TEACHER-GUIDE-EN-53.md`: short teacher guide (switching, authoring, per-step language, marker legend).
+- `docs/CHEM-LIBRARIES.md`: evaluated 2D/3D/cheminformatics/naming libraries with links, pros/cons, project fit.
+
+## [v52] (unified rich note editor: inline WYSIWYG, modal WYSIWYG + HTML source, lazy legacy text upgrade; was live, `index.html` → v52 before v53)
+
+New parallel file set `mulermoc-nom-52.html` + `js/*-52.js` + `css/*-52.css`, forked from v51. v52 was live until v53: `index.html` pointed to `mulermoc-nom-52.html`; v51 and earlier remain runnable at root. No scenario-schema change (`scenarioVersion` stays 1); `noteFormat` remains `"text"` / `"html"`.
+
+### 2026-10-30 — Review follow-ups (v52)
+- Locant number emphasis (`molview-52.js`): clicking a locant/position component keeps its number(s) blue (`#193F8F`) and dims the rest to light blue (`#9ac1ed`) in 2D (all viewer modes) and 3D (echo color, black shadow kept). Applies to main-chain locant modes (`compBondPos`, `compEndNumber`, `compSuffixLocants`, `compNumber1/2`, `compBranchLocN`); whole-chain and override-chain modes stay all-blue. Parse failures fall back to all-blue. Browser verify pending.
+- Ester acid length (`core-52.js`): the name stem now uses `mainChainAtomsList` only when the chain is rooted at the carbonyl C and contained in the acid fragment, else `esterInfo.acidLen` (mirrors the `fGetEsterAcidParentChain` viewer guard). VERIFY pending: headless 141-name re-check, 136 old names byte-identical.
+- Explain reserve (`molview-52.js`): dropped the `(sheetH - 1)` fallback `top` (it ignored `#ruleTheory` height); rect-only pinning, keeps previous `top` when rect math is unavailable.
+- Narration (`teaching-52.js`): extracted shared `fPickGreekVoice()` used by `fSpeakGreek` and `fSpeakNameWithPauses` (behavior-identical).
+- Viewer heights (`scenario-52.js`): new steps now default to `"full"` for `viewerMaxHeight`/`viewerBothHeight`, matching the live v52 default (was `null` = Auto). `overflow-y: hidden` on the name row is intentional (single nowrap row; vertical overflow clipped).
+- Checks: brace/paren balance + `git diff --check` clean (no Node runtime for `node --check`); browser + headless naming matrices pending.
+
+### 2026-10-30 — Name narration pacing (v52)
+- `#readNameBtn` now narrates visible name components as a single utterance (space-joined), avoiding browser-added inter-utterance boundary delays.
+- Read-name pacing is adaptive by component count: short names stay near normal speed, while long names are slowed (components remain space-joined).
+- Adaptive read-name rates are now exposed as named constants in `teaching-52.js` (`NAME_RATE_SHORT`, `NAME_RATE_MEDIUM`, `NAME_RATE_LONG`) for easy tuning.
+- Component visibility rules are preserved: hidden name boxes are skipped, and full-name fallback remains when component boxes are unavailable.
+- Change is scoped to v52 read-name narration only; other TTS flows (for example rule explanation narration) are unchanged.
+- Name narration helpers were moved from `core-52.js` to `teaching-52.js` so narration behavior stays in the UI/teaching layer.
+
+### Rich note editor (`scenario-52.js`, `note-52.js`, `scenario-52.css`)
+- The inline drawer is now a compact WYSIWYG `contenteditable` editor, not a textarea. It renders sanitized HTML via `renderEditable`, writes `st.note` live, and uses the existing expand button for the full modal. Long notes scroll inside a capped height.
+- The expanded modal has one WYSIWYG editor and one `WYSIWYG` / `HTML` source toggle. The earlier **Simple** / **Rich** modes are removed; Simple was only the legacy text storage/rendering path, not a meaningful authoring mode.
+- New steps default to `noteFormat: "html"`. Existing `noteFormat: "text"` notes render through a safe legacy conversion (literal `<` escaped, allowed simple tags preserved, newlines to `<br>`) without mutating the step. The first real edit upgrades the note to HTML; opening/closing or toggling source without editing leaves it as text.
+- WYSIWYG formatting uses the live DOM selection: `B`, `I`, `U`, `sup`, and `sub` map to `execCommand` where available, with a Range-based fallback that wraps or unwraps the selected nodes; `✕` unwraps formatting inside the preview.
+- The modal is staged: **Apply** commits the draft to the step, **Cancel** discards it, and Esc/close asks before discarding real changes. The confirm compares the current draft with the opening snapshot only after a real edit, so legacy notes and source-view toggles do not raise false dirty prompts. Focus returns to the expand button after close.
+- HTML source editing sanitizes when switching back to WYSIWYG and again on Apply. Apply fails closed if DOMPurify is unavailable. Pasting into the preview sanitizes clipboard HTML (plain text is escaped) before insertion.
+- Rule-table includes stay as `<div data-note-include="...">` placeholders in stored HTML; rendered embeds are `contenteditable="false"`, and `.note-table-scroll` wrappers are removed on serialization.
+- The inline drawer and modal share the context-based rich toolbar. Image file and table inserts take the editing context, so async file inserts are dropped safely if the target editor has closed. The inline `TXT` / `HTML` toggle is gone.
+- The modal source toggle is icon-only: `code` while HTML source mode is active and `itemDetails` while WYSIWYG is active, with Greek tooltips/aria that describe the click action; the modal title, footer, and placeholders remain Greek. New `code`, `orderedList`, `alignLeft`, `alignCenter`, and `alignRight` icons were added.
+- `note-52.js` adds `sanitizeHtml`, `renderEditable`, `serializeEditable`, and `legacyTextToHtml`; `cleanNoteFragment` unwraps table-scroll wrappers and accepts `expandIncludes` / `wrapTables` options. Editable rendering skips the image-error fallback so broken image sources survive editing and serialization.
+- Removed the obsolete textarea-format helpers and Simple-mode functions; `fScenarioSetNoteFormat` / `fScenarioNoteHtmlToText` are no longer used.
+
+### CSS
+- Added the compact inline `.snoteRich` editor (max-height, internal scroll, placeholder, focus ring) and the modal body/preview/source/footer layout with the WYSIWYG/HTML source toggle. Removed the Simple/Rich segmented-control and Simple-textarea styles. The existing `.mu-note` typography is reused for both editable surfaces.
+
+### Checks
+- `esprima` parse passes for `scenario-52.js`, `note-52.js`, and `core-52.js`; `molview-52.js` / `teaching-52.js` report the same pre-existing modern-syntax parse failures as their v51 copies and were not modified for v52. No Node runtime is installed in the environment.
+- Headless Chrome (file URL, no build step) loaded v52 with no JavaScript exceptions and passed smoke coverage for: legacy literal-`<` conversion, inline live upgrade, inline rule-table insert + non-editable embed, modal with no Simple/Rich controls, untouched legacy close without prompt, source toggle without upgrade/prompt, source edit upgrade, drawer live editing, and modal Apply refreshing the inline editor. A 1200×900 screenshot of the modal was visually checked.
+- v51 files are untouched. Manual browser click-through for real scenarios, touch devices, and Firefox remains pending.
+
+### 2026-10-26 — Note toolbar/layout refinement (v52, live)
+- Removed the whole-note `Font Size` and `Width` inputs. The shared inline/modal toolbar now has UL/OL list buttons, a per-block font-size dropdown (`14/18/22/26`), and a left/center/right alignment dropdown. Alignment is WYSIWYG-only; source mode disables size/alignment but keeps lists.
+- List alignment targets the list container: a selection inside an `<li>` applies `note-align-*` to its containing `ul`/`ol`, deduplicates multiple selected items from the same list, and clears stale per-item alignment classes. Font size still applies to the selected `<li>`. Centered lists use `list-style-position: inside` so bullets/numbers center with the text; left/right alignment is unchanged.
+- New rich helpers: `fScenarioRichBlockTargets`, `fScenarioRichSetBlockFontSize`, `fScenarioRichAlignBlocks`, `fScenarioRichAlignTargets`, `fScenarioRichClearAlign`, `fScenarioRichMakeList`, and `fScenarioRichLiftLists` (lifts `execCommand` lists out of invalid `<p>`/`<div>` wrappers). `fScenarioRichClean` strips the new classes too.
+- Image file insertion now opens a compact `<dialog>` with required alt and optional width/height (`16–2000` integer, blank = auto); the URL image tool and `fScenarioInsertNoteImageByUrl` are removed. `note-52.js` validates dimensions and removes invalid ones during sanitization.
+- Stored `note-fs-*` / `note-align-*` classes are allowlisted; images keep explicit `height` (CSS only forces `height:auto` when no height attribute exists).
+- Layout: the presentation top card now spans the union of the visible app columns (menu only when the step shows it, plus viewer + analysis) using measured `--scStepTextFitWidth` / `--scStepTextFitLeft` CSS vars, with a full-width fallback and the existing 1600px cap. Menu show/hide, viewer changes, and window resizes recompute it; the viewers refit when the card width changes. Side rails keep `align-self:stretch`, internal scrolling, and a JS max-height from the app row (no viewport cap). `styleText.textWidthPx` is still parsed for compatibility but no longer applied; `styleText.fontSizePx` remains the legacy base for old scenarios.
+- Source toggle is now an icon button showing the current mode: `code` in HTML source mode and `itemDetails` in WYSIWYG mode. New `code`, `orderedList`, `unorderedList`, `alignLeft`, `alignCenter`, and `alignRight` icons are registered. The ordered-list icon was refreshed from `imgs/ordered-list-svgrepo-com.svg`; the bullet-list button now uses `imgs/unordered-list-svgrepo-com.svg` instead of the generic `list` icon.
+- Inline toolbar scope: UL/OL stay inline; image, table, and predefined-content controls are now built only in the expanded modal (conditionally omitted, not CSS-hidden). The expand tooltip names the moved actions and now ends with “, κώδικας”; its bubble is left-anchored and wraps inside the step row. Inline spacing is compacted (`gap: 2px`) so the lighter toolbar stays on one row at the pinned 480px bar width.
+- Modal toolbar tooltips now use the shared tooltip skin/geometry; source-button bubbles are left-anchored and align-menu option bubbles open to the right.
+- The note font-size `<select>` is wrapped in `.scNoteFontSizeWrap` with the shared dark tooltip (native `title` removed); per-step `.sshow` toggles now use `data-tooltip` inside a new `.scShowRow` flex container, with wrapped left-anchored bubbles.
+- Toolbar icons: re-synced `orderedList` from the updated `imgs/ordered-list-svgrepo-com.svg`; `columns1` / `columns2` now use the new outline `imgs/one-columns-svgrepo-com.svg` / `imgs/two-columns-svgrepo-com.svg` sources with the white knockout rects dropped.
+- Verification: esprima parse OK for `scenario-52.js`, `note-52.js`, `ui-icons.js`; CSS braces `340/340` scenario / `305/305` main; headless Chrome at 1920×1080, 1400×900, and 1100×800 passed top-card column alignment with the menu hidden/shown, side-rail fallback, and 50+ earlier checks covering drawer/modal controls, font size, alignment, list lifting, source-mode disabling, image dialog insert, sanitizer classes/dimensions, list-container alignment, top-card fallback, and side-rail stretch; inline, modal, image-dialog, and right-rail screenshots were visually checked. Toolbar-scope checks: all 7 inline note bars had 2 list / 0 insert / 0 component controls; the modal had 2 list / 2 insert / 1 component; inline list clicks and modal image/component handlers fired; the pinned 480px inline toolbar measured 20px high on one row; actual inline and modal screenshots were checked. Centered-list checks passed for `#scStepText` and `.mu-note`: computed `list-style-position: inside`, zero left margin, and center text for UL/OL, with normal lists still outside/left; screenshot checked. Source-toggle check passed: WYSIWYG shows `itemDetails`, source mode shows `code`; active/`aria-pressed` and action tooltips follow the mode. Tooltip checks: the inline expand bubble is 320px wide, wraps to two lines, and stays within the pinned step row; modal source/component bubbles render with the expected left/centered geometry; the font-size wrapper and four `.sshow` hints use the dark skin with no native `title`; screenshots checked. Icon rendering was checked at 16px/64px on normal and white-currentColor hover backgrounds. Firefox/touch/screen-reader and real-scenario click-through remain pending.
+
+
+### 2026-10-26 — Thesis-work data/engine port (v52, live)
+- Data: 98 → **126 `nameExamples` keys**. Added 9 ketones/diones/ynones, 12 aldehydes/dials and 7 monoethers, each with three embedded 2D forms plus `mols/nomeclature-moc2/<key>_3D.sdf`; existing keys and order are unchanged.
+- Core (`core-52.js`): ported acyclic aldehyde/ketone/monoether graph guards, ketone-locant preservation, C4 alkyl names (iso-/sec-/tert-), ether prefix/common-label grouping, and candidate-path filtering. Existing v52 ether naming remains covered by the new rooted-fragment logic.
+- Viewer (`molview-52.js`): methanal (`HCHO`) keeps both hydrogens and avoids phantom compact-label rectangles; sequential ketone numbering wrapper plus ketone explanation/rule cases; ether branch groups, `etherInfo`-based common-name parts, and ether branch-highlight fallbacks; optional `initialZoom3D`; 3D atom-symbol restoration guard. Fitting/uniform-frame and palette experiments from thesis-work were not ported.
+- Teaching (`teaching-52.js`): added the alkoxy rule table alongside the existing alkyl table; both remain available through `namingRules`. The note editor now exposes `rule-table:alkoxy` as a sixth predefined component.
+- Docs: added `docs/THESIS-WORK-V52-STEP-TEXT.md` (Greek feature brief for the thesis-work line, focused on the step-text/authoring upgrade) and refreshed current-state docs.
+- Verification: data loads as 126/126 `nameExamples` + `window.MOL2D` keys with no missing MOL registrations; headless Chrome named all 28 additions without exceptions (ketones/diones, aldehydes/dials, ethers), methanal renders `HCHO` and explains as an aldehyde, and the alkoxy/alkyl tables resolve. Ether click checks: all 7 new monoethers render correct common names (including `ισοβουτυλοϊσοπροπυλαιθέρας`), IUPAC locant/prefix and common alkyl clicks produce 2D highlights/numbering, and alkoxy prefix selections populate/select the alkoxy table with the same collapsed-until-opened tile behavior as other rule tables. Hardened `fIsAcyclicMonoetherGraph` plus the `fShowRule` alkoxy call site against missing analysis arrays; cold page load and non-ether prefix clicks are clean. `git diff --check` clean.
+
+### 2026-10-28 — Carboxylic-acid extension (v52, live)
+- Data: 126 → **136 `nameExamples` keys**. Added 10 carboxylic acids (4 saturated mono, 4 unsaturated mono/di, 2 unbranched enynoic), each with three embedded 2D forms plus `mols/nomeclature-moc2/<key>_3D.sdf` (byte-identical to thesis-work sources); existing keys, order and MOL bytes are unchanged.
+- Core (`core-52.js`): ported `fIsAcyclicSaturatedMonoacidGraph`, `fIsAcyclicUnsaturatedAcidGraph` and `fSupportsAcyclicAcidGraph` plus 8 integration sites (alkyl branch-prefix gate with off-parent unsaturation refusal, branch-locant tiers, diacid `forcedC1` tie-break, alphabetical ties, `fRankChainPool`, C3 multiple-bond-locant exception). File is byte-identical to the thesis-work core for these regions.
+- Viewer (`molview-52.js`): extended `fSequentialKetoneNumberingTarget` with the 10 acid keys so analysis numbering animates; all existing highlight/label code is reused. Skeletal auto-layout, uniform-frame/`fFit2DSVG`, font-target/scale parameters, name-fit replacement, carboxyl backplate/mask tweaks and split acid-prefix boxes from thesis-work were deliberately not ported.
+- Verification: `esprima` parse passes for data/core; 30/30 embedded MOLs (V2000 counts, `M END`, C/H/O only), 10/10 runtime SDFs (V2000, 3D coordinates, hashes match upstream), guard preconditions hold for all forms (4 saturated: 1 COOH + no C–C multiple bond; 6 unsaturated: 1–2 COOH + C–C multiple bond); `git diff --check` clean, data diff is purely additive. Real-browser naming/highlight/JSmol click-through remains pending (no JS runtime in this environment).
+
+### 2026-10-27 — Scenario author + creation date (v52, live)
+- Scenario cards carry two additive top-level metadata fields (no `scenarioVersion` bump, `scenarioVersion` stays 1): `author` (free text, optional) and `created` (ISO timestamp).
+- `scenarioPanel` gains a compact `Author:` row under the header (`.scenarioMeta` / `.scenarioAuthor`); the field is optional and its placeholder reads `Unknown`. Typing keeps the card live (`input`), blurring normalizes the visible value (`change`).
+- Blank, whitespace-only, non-string, or missing `author` stores `"Unknown"`; values are trimmed and capped at 120 characters. `created` is stamped with `new Date().toISOString()` when a card is created (`+ New`/Import/deep-link load) and replaced by the file's value when an import carries a valid date.
+- Export emits `author` and `created` at the top level of the scenario JSON next to `scenarioVersion`/`app`/`scenario`/`title`; an empty author always exports as `Unknown`.
+- Import (`fScenarioImportFile`, `?scenario=` deep link, default preload) applies the file's `author`/`created` to the created card; `fScenarioValidate` returns both, warns on a non-string author or an unparseable date, and silently defaults legacy files without either field (author → `Unknown`, created → card creation time).
+- `MuLERMoCScenario.author` / `.created` join the legacy singleton mirrors next to `steps`/`index`/`title`/`menuPick`.
+- **Export now opens a Save window where the browser allows it** (v52, additive): `fScenarioSaveBlob` uses the File System Access API (`window.showSaveFilePicker`) on Chromium secure origins, so the author picks the folder and edits the filename in the native dialog; the JSON filter is `application/json`/`.json` and cancelling (`AbortError`) is a silent no-op. Firefox, Safari, genuinely insecure origins, or any picker error fall back to the unchanged `<a download>` blob click, so the offline/Import flow is untouched. `fScenarioSuggestFilename` derives the name from the card title, replacing filesystem-reserved and control characters (`\ / : * ? " < > |`) and whitespace runs with `_`, trimming edges, and falling back to `scenario.scenario.json`; the `.scenario.json` suffix is always kept. `fScenarioExport` now returns the delivery promise (call sites may ignore it).
+- Checks: `node --check` passes; CSS braces `344/344` scenario (`305/305` main); jsdom runtime harness 30/30 for the metadata fields plus 24/24 for file delivery — filename sanitization (Greek, spaces, reserved chars, empty/null, Windows paths), download fallback when the picker is missing, picker write/close with the correct suggested name and MIME type, no double-download on the picker path, silent cancel, download fallback on `SecurityError`, insecure-context and missing-picker fallbacks, and payload integrity. Headless Chrome over `http://127.0.0.1` (secure context): the picker is offered with the sanitized Greek name, the written JSON keeps author/title/created/steps, and a cancelled dialog downloads nothing. `file://` also reaches the picker and falls back to the download path when it fails. Manual browser click-through pending.
+
+### 2026-10-27 — Name components: locants split from suffix, always one line (v52, live)
+- The suffix slot fused locants with the suffix on db+tb ketones/polyols (`-2,7-διόνη` in one box), and the comma/hyphen gave the flex row a soft wrap opportunity — the wrapped row then defeated `fFitNameComponents` measurement, so the box stayed two lines. The render now splits that shape into two boxes (locants `comp9loc` + suffix keeping `comp9`); the locants box uses the new `compSuffixLocants` mode (positions sentence with group count + numbering), the suffix keeps `compSuffix` as a class-only statement, and highlight/narration/PNG export/eye toggles/hidden sets behave as before with a byte-identical joined name. All other series already kept locants separate (verified on mono/di-ketones incl. db-only diones, single-bond-type unsaturated, esters); the same split also covers enyn-ols (`-2-` + `όλη`, OH positions sentence), confirmed by a 48-key ketone/alcohol render scan (suffix slot never fused, zero wrapped boxes); the `comp0bText` multi-pair fusion stays fused by design.
+- `.nameCompBox` (plus the `+`/space separators) is `white-space:nowrap`, so no component can ever wrap: overflow resolves through the existing 1→0.7 scale-down and the `nameOverflow` horizontal scroll.
+- Checks: `node --check` passes on molview/teaching; CSS braces `309/309` main (`354/354` scenario); headless-Chrome 40/40 — both fused diones split (`comp9loc=-2,7-`/`-2,5-` + `comp9=διόνη`), db-only dione and mono-ketone/ester controls unchanged, every box single-line, joined boxes equal `currentMolName`, locants box clicks to the new `compSuffixLocants` mode (exact positions sentence incl. group count + numbering) while the suffix keeps `compSuffix` as a class-only statement, joined boxes equal `currentMolName`, a 48-key ketone/alcohol scan finds no fused suffix and zero wrapped boxes, analysis-row screenshot checked, zero page errors. (The `comp0bText` multi-pair fusion noted here was split next, 2026-10-28 below.)
+
+### 2026-10-27 — Viewer heights: fixed px ceilings + relative Full (v52, live)
+- The single-viewer slider no longer follows the screen height: fixed `150–1000px` range (`VIEWER_SINGLE_MAX`; HTML `max` updated to match). The both-viewers slider stays fixed `300–1000px` combined. Stored values above the slider range (up to the `VIEWER_MAX_H = 2000` validation ceiling) keep working — the slider just can't author above 1000 anymore.
+- New relative `Full` toggle beside each height slider (`#viewerMaxHeightFull` / `#viewerBothHeightFull`, built in JS, `.viewerFullBtn` skin in `jsme-nick-52.css`): stores the string `"full"` instead of px. Single-visible + `"full"` resolves to the whole live single share; two-visible + `"full"` splits the available viewport (`total − chrome`) between the viewers — recomputed on whatever screen plays the step. Validators, capture, export/import, and `fScenarioApplyViewerMaxHeight` carry `"full"` with no schema bump (invalid values still warn and fall back to Auto).
+- The viewport budget in `fViewerHeights2D3D` additionally subtracts the visible fixed `#scenarioPlayBar` while presenting, so `Full` clears the h1, the presentation navigation, and the `#creditsUs` footer.
+- The window `resize` handler now refits viewers unconditionally (rAF-coalesced): height-only drags mid-step resize the viewers live instead of waiting for the next step turn — the rail cap already tracked resizes, now both do.
+- Checks: `node --check` passes; CSS braces `349/349` scenario (`309/309` main, +4 `viewerFullBtn` rules); headless-Chrome 18/18 — slider `max` identical (`1000`) at 950px and 700px viewport heights, both `Full` buttons present, `"full"` validates (numbers/legacy/clamps/bad-input unchanged, zero warnings), toggle on/off round-trips live/label/slider/aria, capture + export carry `"full"`, a `Full` single-viewer present step renders 647px ending 21px above credits, and height-only window drags mid-step refit the viewers live (366 → 241 → 441px across 950 → 700 → 1100px viewports, rail gap pinned at 20) with zero page errors.
+
+### 2026-10-27 — Inline note-toolbar edge tooltips (v52, live)
+- The two rightmost inline-drawer controls (columns toggle `.scColsToggle`, alignment trigger `.scNoteAlignBtn`, text-position trigger `.scTextPosBtn`) had centered `::after` bubbles that spilled past the drawer/panel clip box (`.scenarioDrawer` / `.scenarioPanel{overflow:hidden}`), so the right half of the hint was cut off.
+- CSS-only fix in `css/mulermoc-nom-scenario-52.css`: those three buttons' bubbles are now right-anchored (`left:auto; right:0; transform:none`, arrow at `right:calc(50% - 6px)`) following the existing `.scDelete` right-edge precedent. Vertical placement stays below the button; no `overflow` loosening, so the expand-button and `.sshow` left-anchor geometry is untouched. Scoped to `#scenarioAuthorBar .scenarioDrawer .scNoteToolbar` (inline drawer only, not the modal toolbar).
+- Checks: `node --check` passes; CSS braces `346/346` scenario (`305/305` main); headless-Chrome geometry at 1500/1100/800/500px viewports — all inline toolbar bubbles (including 152px align, 159px columns, 104px text-position) sit fully inside the drawer and panel rects with zero page errors; hover screenshots of the columns, alignment, and text-position bubbles visually checked.
+
+### 2026-10-27 — Present bar scenario identity (v52, live)
+- `#scenarioPlayBar` now opens full left with `#scScenarioId`: the scenario name followed by the author (`Title · Author`, author through `fScenarioValidAuthor`, full string in the `title` attribute). Built in `fScenarioBuildUi`, filled in `fScenarioPlayUi` on begin + every step turn via `textContent` only, absolutely positioned mirroring `#scExit` so the centered step controls never shift; long names ellipsis-truncate, and under 700px only the name shows.
+- Checks: `node --check` passes; CSS braces `354/354` scenario; headless-Chrome 9/9 — exact `Title · Author` text + hover title, left-20px placement clear of the controls, controls still bar-centered, Exit undisturbed, hidden with the bar on Exit, narrow viewport keeps the name with the author `display:none` and no overlap; zero page errors.
+
+### 2026-10-27 — Presentation full-height rail (v52, live)
+- In presentation the `authorLayout > mainAppContainer > mainApp3Columns` chain is now `flex:1` (`#pageContainer.presenting` keeps `min-height:calc(100vh - 30px)`), so the row fills the viewport down to `#creditsUs`. The left/right `#scStepText` rail (`align-self:flex-start`, `height:auto`, sticky below the fixed play bar) fits its content up to a max-height cap and internal-scrolls there — it never pushes the footer down.
+- `fScenarioSyncStepTextHeight` sets the rail's inline `max-height` to the larger of the tallest visible app column and the scroll-invariant available space (`window.innerHeight` minus rail document-top minus footer height minus a 20px gap). Top-card mode and the `<1200px` fallback are untouched (inline cap cleared when the card leaves the row); authoring mode keeps the base non-flex chain.
+- Checks: `node --check` passes; CSS braces `349/349` scenario (`305/305` main); headless Chrome at 1500px — left/right rails with long notes measure rail bottom 20±1px above credits (cap `738px` at 950px viewport, scrollable, taller than the 407px tallest column); short rails (2 paras) fit their content (`rail h=130`, no scroll) instead of stretching; height-only window drags resize the rail live both ways (`738 → 488 → 888px` across 950 → 700 → 1100px viewports, gap pinned); top-card mode keeps no inline cap; 1100px falls back to the top card with the cap cleared; zero page errors; full-page and mid-scroll rail screenshots visually checked.
+
+### 2026-10-27 — 3D camera capture fix + instant moveto (v52, live)
+- Capture was always `null`: `Jmol.scriptWait(applet,"show moveto")` alone returns `""` on some builds. `fScenarioGetMoveto()` (`scenario-52.js`) now tries `Jmol.getPropertyAsArray(applet,"orientationInfo","info").moveTo` first (the same API JSmol uses internally for `_saveOrientation`), then `scriptWait("show moveto")`, then `scriptEcho("show moveto")`, via a shared `fScenarioExtractMoveto()` that unwraps quoted/JSON-escaped payloads and rejects `getProperty ERROR` dumps. Capture validates with `fScenarioValidMoveto()` before storing and toasts when a live view fails validation.
+- Stored cameras are always instant: new `fScenarioMovetoInstant()` rewrites the first token after `moveto` (flight time, JSmol default `1.0`) to `0.0` in the getter, extractor, and validator, so captures and legacy `1.0` imports play with no animation. `data_52.js` entries already use `0.0` and are unchanged.
+- `fLoadMol3D()` (`molview-52.js`) ordering fix: `data-file moveto` used to run before `script spt/init-3.spt` (which ends with `zoom 50`), so the zoom part of the stored view was overwritten. Order is now `load; center; script init-3.spt; [zoom]; [moveto]` — `moveto` last, and `initialZoom3D` is skipped when `moveto` is present since `moveto` already encodes zoom.
+- Step JSON unchanged (`view3D.moveto`, `scenarioVersion` stays 1): capture → defaults/validate → export/import → gated apply already round-trip the field.
+- Owner CSS tweak carried in this commit: `body.scPinned #scenarioAuthorBar` `top: 0` → `-31px` (`css/mulermoc-nom-scenario-52.css`).
+- Checks: `git diff --check` clean; JS brace/paren balance `0/0` on both edited files (no Node runtime for `node --check`); manual browser verification pending (console `fScenarioGetMoveto()`, capture → export `view3D.moveto`, molecule switch keeps stored framing, step apply jumps instantly).
+
+### 2026-10-30 — Name expand state saved per scenario step (v52)
+- New per-step `show.nameExpanded` (default `false`, no schema bump): capture
+  stores the live expand state (menu-only steps store `false`); apply opens or
+  closes the overlay after the naming rebuild and before the highlight replay;
+  Update refreshes it from the live view like the hidden set; Exit stashes and
+  restores the author's live state. Go/Present flow through apply unchanged.
+- Checks: `node --check` clean. Browser: capture open → Present shows open,
+  step turns, Update round-trip, Exit restores author state, legacy import
+  stays closed.
+
+### 2026-10-30 — Explain sheet tracks the name settings panel (v52)
+- The gear panel sits above the name boxes and animates (0.25s), which left the
+  rect-pinned Explain `top` stale on open/close. New `fNameExpandRepinDelayed()`
+  (pin now + once after the transition, collapsing timers, no-op unless
+  expanded), called from `fToggleNameSettings()` and the scenario-chrome panel
+  close. Rebuilds already re-pinned after render.
+- Checks: `node --check` clean. Browser: expanded sheet open → gear toggle →
+  Explain stays glued during and after the animation.
+
+### 2026-10-30 — Name expand button: visible tooltip + fullscreen icons (v52)
+- `#nameExpandBtn` had `data-tooltip` but the shared tooltip skin never listed
+  `.nameStyleExpand`, so no bubble rendered; fixed by adding it to all 5
+  tooltip selector groups (same below-centered bubble + arrow as siblings).
+- The button now uses the note editor's `fullScreen` / `fullScreenExit` icon
+  pair (toggle with state, Greek action tooltips, legacy glyph fallback);
+  `fullScreenExit` normalized 22px → 16px to match button size.
+- Checks: `node --check` clean. Browser: hover bubble closed + open, icon swap
+  both ways, Esc/molecule-switch restore.
+
+### 2026-10-30 — JSME split mode: depict restored on main applet (v52)
+- `6f55eb5` had removed `depict` from both JSME applets (`"depict, marker"` →
+  `"marker"`), which broke all 2D highlights: `fUpdateSVG()` reads highlights
+  back from `getMolecularAreaGraphicsString()`, and that pipeline needs the
+  depiction mode (3D JSmol was unaffected). Symptom: even ethene `εν` painted
+  no double bond in 2D.
+- Fix: main `jsmeNomeclatureApplet` back to `"depict, marker"`;
+  `jsmeNomeclatureAppletORGNL` stays `"marker"` full-edit for future
+  user/teacher structure input (it never serves highlights or graphics-string
+  reads). Constraint documented at `jsmeOnLoad` in `molview-52.js`.
+- Checks: `node --check` clean. Browser re-verify: ethene `εν` + ester `αν` /
+  acid-stem count in condensed/expanded/skeletal.
+
+### 2026-10-30 — Five thesis-work esters ported (v52, 136 → 141)
+- Data (`data_52.js` + 5 runtime `mols/nomeclature-moc2/*_3D.sdf`, byte-identical
+  to `yianni/thesis-work`): `sec_butyl_ethanoate`, `butyl_propanoate`,
+  `tert_butyl_methanoate`, `isobutyl_2_methylpropanoate`,
+  `isopropyl_2_3_dimethylbutanoate` (existing 136 keys/order untouched).
+- Core (`core-52.js`): ported `fIsAcyclicSaturatedMonoesterGraph` + 6 sites
+  (branch-prefix tier, orient 2D x2 + 3D, rank-pool tie-break, ester acidLen).
+- Viewer (`molview-52.js`): ported `fGetEsterAcidParentChain()/3D` + ester
+  `compCarbonsCount` conditional text/highlight/numbering on the named parent
+  (branched: `Η κύρια αλυσίδα του όξινου τμήματος…`, e.g. 4 not 6 for
+  2,3-dimethylbutanoate). Teaching routing needed no change.
+- Still pending from thesis-work: 4 display fixes (`fRemainingImplicitCarbon-
+  Hydrogens`, skeletal acid-left, formyl-H left, skeletal C-H hide).
+- Checks: `node --check` passes on data/core/molview/teaching;
+  `git diff --check` clean. Browser naming/highlight/numbering matrix for the
+  5 new esters + 136-molecule regression pending.
+
+### 2026-10-29 — Explain floating sheet under expanded name (v52, live)
+- `#nameAnalysisExplain` now portals inside `#nameAnalysisContainer` while expanded, sharing the sheet's right anchor (`z-index:801` over the `800` name sheet) so it extends left outside the 350px column under the expanded components; restored on close/molecule-switch.
+- Geometry is JS-pinned: Explain width = sheet width, top = `sheetRect.bottom - hostRect.top - 1` (rect math, `-1` overlap), reserve `#nameAnalysis min-height = sheetH - 1 + explainH + 6`; re-pinned on open/render/rebuild/debounced resize.
+- Explain box is shrink-wrapped (`fit-content`) and centered under the selected `.nameCompBox` via live `getBoundingClientRect` clamp; sheet scroll re-anchors (rAF); no selection docks left.
+- Carried working-tree polish in this commit: viewer defaults `viewerMaxH/viewerBothH` `null` → `"full"`, sheet `overflow-y:hidden`, padding `0 15px 18px`, stronger shadow, `explainText` `#000`.
+- Checks: `node --check` passes; CSS braces `314/314`. Browser click-through pending (open/click left-mid-right, sheet scroll, resize, close/reopen, molecule-switch restore).
+
+### 2026-10-28 — Full-name floating overlay (v52, live)
+- Long names shrink to 14px then scroll; a new expand button (visible only when shrunk/scrolled) floats the existing boxes over the app at fit-content width and default size with a drop shadow — same nodes, so clicks/eyes/narration keep working, no backdrop/dimming, app fully live underneath. Single nowrap row with horizontal scroll inside the sheet; right-anchored to the host, growing left outside the 350px column (viewport-capped).
+- Height reserve: the sheet is absolute (out of flow), so `#nameAnalysis` is pinned to the measured sheet height (+6 breathing room) keeping `#nameAnalysisExplain` below instead of behind; re-pinned on same-molecule rebuilds and debounced resize.
+- Close contract: toggle, `Esc`, or rebuild for another molecule (same-molecule mode/chain/eye/scenario rebuilds preserve it). Fitter skips while expanded; close restores the exact prior state.
+- Checks: `node --check` passes; DOM-stub logic test (open/close/refit/sync); CSS braces balanced; `git diff --check` clean. Browser matrix pending (overlay over viewer, live clicks inside, molecule-switch close, narrow scroll, short-name untouched).
+
+### 2026-10-28 — Name-component minimum font size (v52, live)
+- `.nameCompBox` is now `max(14px, calc(1.1rem * var(--nameCompScale, 1)))`: long names shrink to 14px and then resolve through the existing horizontal-scroll fallback instead of shrinking further. Short names and the fitter are untouched; `+` separators keep their 1.5rem scale.
+- Checks: CSS braces balanced; browser check pending (longest acid name at 14px + scroll, short names unchanged).
+
+### 2026-10-28 — Instant numbering on component click (v52, live)
+- Numbering policy: `fShowAnalysisNumbering(0)` (or bare) renders all 2D/3D numbers synchronously; only `time > 0` animates, and only the main-chain carbon-count component (`compCarbonsCount`, explicit `400`) uses it. The sequential-target wrapper now passes `time` through (keeping its old-number cleanup) instead of forcing the interval, so locant clicks on ketones/acids are instant like everything else; the stem box keeps the number-by-number reveal.
+- Checks: `node --check` passes; routing unit test (sequential/normal × 0/400/undefined, overrides passthrough) plus interval-branch test on the extracted `fShowNumbering` (`undefined`/`null` → 400ms interval, `0` → sync loop, explicit intervals honored — this caught that a bare `400` previously hit neither branch and rendered nothing); `git diff --check` clean. Browser click-through pending.
+
+### 2026-10-28 — Branch-prefix boxes: locants split from fused labels (v52, live)
+- Slot 3 (`comp0bText`) fused the 2nd and later substituent groups once three substituent types exist (e.g. `ισοπροπυλο-4,5-διμεθυλο` on the complex C8/C13/C14 acids and one branched aldehyde). It now renders as alternating boxes at render time — `ισοπροπυλο` + `-4,5-` + `διμεθυλο` (names bare; dashes live in locants boxes only, trailing-only if a locants piece ever leads the panel) — mirroring the `comp9loc` suffix split: core list, euphony and the joined name are byte-identical.
+- Per-piece click scope: name pieces explain/highlight only their substituent (`compBranchSub{k}`), locants pieces number (`compBranchLoc{k}`); `comp3` keeps the slot-level mode while unfused. Threaded through the restore map, teaching click dispatch, scenario comp map, rule panel (scoped alkyl rows) and 2D/3D highlight scoping; eye toggles, fitter, narration and PNG export work generically by box id.
+- The `-2-`-style locants box (`compNumber2`) highlights only the first of the remaining groups (matching its explanation text); single-name slots and the unfused path are unchanged. Verified headless: isopropyl-only atoms vs whole-group before.
+- Checks: `node --check` passes on molview/teaching/scenario; headless engine names 136/136 with zero diffs on the 126 old molecules; splitter round-trips all 4 real fused labels; 4/136 molecules affected, all 3-piece. Real-browser click/numbering/highlight pending.
+
+### 2026-10-27 — Data moveto disabled, step moveto kept (v52, live)
+- All 61 active `moveto` entries in `js/jsme-nick-nomeclature-moc2-data_52.js` are now `//` comments (values preserved in place with a `disabled 2026-10-27` note; 3 already-commented entries left as-is). Molecule loads fall back to the shared `spt/init-3.spt` framing (`zoom 50`) via the existing `hasOwnProperty("moveto")` guard in `fLoadMol3D()` — no logic change needed.
+- Custom cameras stay available as the per-step `view3D.moveto` parameter (capture/validate/export/apply unchanged, always instant `0.0`).
+- Checks: `git diff --check` clean; data-file brace/paren/bracket balance `0/0/0`, zero active `moveto:` lines; manual browser check pending (molecule switch uses `zoom 50`, step with `view3D.moveto` still applies).
+
+---
+
+## [v51] (rich presentation notes, safe HTML, rule-table components, authoring note dialog, Snap-free viewer; previous live, `index.html` → v51 before v52)
+
+New parallel file set `mulermoc-nom-51.html` + `js/*-51.js` + `css/*-51.css`, forked from v50. v51 was live until v52: `index.html` pointed to `mulermoc-nom-51.html`; v50 and earlier remain runnable at root.
+
+### Rich notes (`mulermoc-nom-note-51.js`, `scenario-51.js`, `scenario-51.css`)
+- Additive per-step `noteFormat`: missing/`"text"` keeps the escape-first simple-HTML renderer byte-for-byte; `"html"` uses DOMPurify 3.4.17 with an explicit tag/attribute/class allowlist.
+- HTML notes support paragraphs, lists, links, tables, figures, images, `note-*` styles, and a fixed component vocabulary. No scripts, event handlers, inline styles/IDs, iframes, forms, inline SVG, or raw HTML.
+- Links: relative/`http`/`https`/`mailto`/`tel`; external links get `target="_blank"` + `rel="noopener noreferrer"`; `javascript:`, `data:`, `file:`, `blob:`, and protocol-relative links are rejected.
+- Images: `<img>` only; relative/same-origin and `https:` allowed; `https:` gets `referrerpolicy="no-referrer"`; `data:image/png|jpeg|gif|webp;base64` allowed with a ~500 KB cap; `http:`, `file:`, `blob:`, protocol-relative, and SVG data URIs rejected. Broken images become an accessible fallback; a load-error listener replaces them at runtime.
+- Fail closed: if DOMPurify is unavailable or throws, the note renders through the legacy escaped renderer.
+- `showNoteOn` now treats image/component-only notes as content; the play-bar note is plain text only.
+- Step defaults, capture, validation, Update, Duplicate, Import/Export preserve `noteFormat`; invalid values fall back to `text` with a warning.
+
+### Components and actions
+- `data-note-include="rule-table:1|2|3|4|alkyl"` resolves the five `namingRules` tables by reference (no copied HTML), sanitizes the component with its own allowlist, and wraps it in `note-embed--rule`; missing keys show a visible fallback.
+- `MuLERMoCNote.registerAction(name, handler)` + delegated `[data-note-action]` handling are in place with zero public actions. Buttons without a valid/registered action are unwrapped or marked unavailable. The renderer keeps an optional strip-actions mode for reading-only contexts; v51 ships no presentation focus UI.
+
+### Presentation and authoring
+- Presentation keeps the v50 top/left/right text rails. The intermediate wide/focus presentation controls were removed; there is no separate wide or reading-focus mode in v51.
+- Authoring note toolbar adds a TXT/HTML toggle, `B I sup sub` formatting, clear, image/table inserts, and a five-key rule-table dropdown. Text→HTML converts line breaks; HTML→text converts back to plain text (image alt text and component keys become markers). Image insert rejects `http://`, protocol-relative, non-raster data URIs, and oversized data URIs, and warns on external `https:` images. The stored note remains a single string.
+- The toolbar is flattened inline: expand first, then content controls, then layout (columns/position/size/width). Expand opens a content-only modal note editor that live-syncs with the inline textarea; no preview/Apply/Cancel. Esc or close restores focus to the expand button and the authoring step remains live.
+- The predefined-content control is an icon-only dropdown using `addPredefinedItem` from `imgs/add-predifined-item-svgrepo-com.svg`, with the five rule-table options. The existing component select is gone.
+- Step actions are icon-only; `Go` now uses the new `skip` icon. The new `addDocumentNote`, `book`, `details`, `infoFeed`, `ingestionReport`, `itemDetails`, and `monitor` icons are registered in `js/ui-icons.js`.
+- Note CSS adds table scrolling, image sizing, blockquote/code/link/figure styling, `note-*` callouts, embed cards, the authoring modal editor, and two-column flow inside the note body (not the chrome).
+
+### Dependencies / runtime
+- Vendored under `js/vendor/`: jQuery 4.0.0, DOMPurify 3.4.17, licenses and hashes in `js/vendor/README.md`; `.gitignore` keeps the directory tracked.
+- Local JSmol updated to 16.4.23 (`JSmol.min.js` + `j2s/`, 48 MB, still Git-ignored). Public loads use the CDN; `?libs=local` switches the script, `j2sPath`, and `serverURL` to the local copy.
+- Snap.svg has been removed from v51; the 2D overlay now uses the native `MuSVG` helper. jQuery 4.0.0 is vendored but needs a browser compatibility pass (no removed APIs were found by static grep).
+
+### Docs / checks
+- Added `docs/Presentation-Step-Rich-Text-PLAN.md` (locked decisions, security model, phases) and refreshed `docs/didactic-scenario-plan.md`.
+- Static: `node --check` passes on all v51 JS; CSS brace balance `305/305` (`jsme-nick-51.css`) and `275/275` (`scenario-51.css`); local v51 HTML asset refs resolve; no duplicate ids in the v51 HTML.
+- Earlier runtime suite (Node 22 + jsdom 26 + the vendored DOMPurify/jQuery): 95/95 sanitizer checks and 38/38 scenario-integration checks passed before the presentation wide/focus controls were removed. Those tests still reference the removed `openFocus`/wide APIs, so update and rerun them before reuse. Coverage included tag/attribute/class stripping, links and images (including control-character and encoded `javascript:` variants), table wrapping, all five component keys, missing components, image error fallback, action registry, text/legacy fallback, fail-closed without DOMPurify, plain-text conversion, and jQuery 4 basics.
+- Fixed during the runtime suite: remove `USE_PROFILES` so `ALLOWED_TAGS` is a strict allowlist (`<h2>` was previously retained); separate block/`<br>` text nodes with spaces (or newlines) in `toPlainText` (`<p>a</p><p>b</p>` was `ab`); reject control characters in note URLs; fail closed if post-clean/component expansion throws; title-only steps no longer render an empty note body; keep image alt text and component markers when converting a rich note to text.
+- Automated Chrome/Firefox matrices now cover all 98 molecules in condensed mode plus the mode sample sweep; remaining manual coverage: 3D/highlights for the 18 new molecules, real 2D/3D refit, JSmol local/CDN loader, jQuery 4 in the complete app, rich notes, the authoring note dialog, and the icon dropdown/skip icons. The two pre-existing skeletal JSmol failures (`butadiene_1_3`, `propadiene`) remain open.
+
+### 2026-10-25 — Additive 18-molecule import (v51, promoted live later that day)
+- `js/jsme-nick-nomeclature-moc2-data_51.js`: **80 → 98 `nameExamples` keys**. Added 9 alcohols, 6 dienes and 3 enynes, each with the three embedded 2D MOL forms plus a runtime `mols/nomeclature-moc2/<key>_3D.sdf`; the existing 80 entries and their order are unchanged.
+- `js/mulermoc-nom-core-51.js`: bounded alcohol/branch support. Added `fIsAcyclicAlcoholGraph`, `fSupportsAlkylBranchPrefixes`, `fDescribeCarbonBranches`, `fCarbonBranchAlphabeticalKey`, `fNumberedChainSignature`, `fHorizontalEquivalentIndex`, `fMatchNumberedMainChain3D`; updated `fAlkylGroupName` (fragment-aware propyl/isopropyl), `fGetHydrocarbonSubstituentInfo`, `fRankChainPool` (OH locants, multiple-bond locants, branch alphabetization), `fCalcMainChain`/`fCalcMainChain3D`, `fOrientChainPath`/`fOrientChainPath3D`, and `fGuessName` (branched-alcohol slots plus `ξ+δ→α` euphony). Scope remains pure acyclic hydrocarbon/acyclic-alcohol; other homologous-series branch support is deferred.
+- `js/mulermoc-nom-molview-51.js`: added `fAlcoholOHNameComponent` / `fAlcoholOHPositionText`; updated alcohol explanation/rule handling, branch grouping and signature-based highlighting/explanations, `fHighlightFG`/`fHighlightFG3D` branch fallback, `fShowNameAnalysis` euphony, and `fGetEtherCommonParts` for the new alkyl-fragment argument. Kept v51 palette and `fFitNameComponents`; did not import `fFit2DSVG`, diene parallel-line drawing, `fLoadMol3D` zoom, or `fAddHydrogens2SVG` label changes.
+- Double-bond stereo normalization: the 12 crossed double bonds in the new 2D forms were changed from `3` to `0`; all **293 embedded 2D blocks / 210 double bonds** now have stereo `0`. The same normalization was applied to **9 double bonds in six 3D SDFs** (including the tracked runtime propadiene and Git-ignored local `mols/homo`/`mols/nomeclature` copies); all **175 local `.mol`/`.sdf` files / 213 records / 127 double bonds** now have stereo `0`.
+- Checks: 98 keys, no duplicate keys, all 18 have a MOL2D registration and 3D SDF; data/double-bond scans clean. No JS runtime was available in that environment, so `node --check` was not run for this import; browser click-through remained pending. `index.html` was still on **v50** at import time.
+
+### 2026-10-25 — Snap.svg removed from v51 (promoted live later that day)
+- Replaced the Snap wrapper in `js/mulermoc-nom-molview-51.js` with a native `MuSVG` helper: `select`, `selectAll`, `attr` (`text` ↔ `textContent`), `remove`, `append`, `.node`, `.toString()`, and `parse` (SVG-namespaced `DocumentFragment`).
+- Renamed the live SVG wrapper `molSnap` → `molSvg`; replaced all `Snap(...)`/`Snap.parse(...)` calls and removed Snap labels/comments.
+- Removed the vendored Snap script from `mulermoc-nom-51.html` and deleted `js/vendor/snap/`; updated `js/vendor/README.md`.
+- v50, older runnable versions, archive files, and the Git-ignored root `snap/` are untouched. `index.html` was still on v50 at removal time.
+- Verification: `node --check` passed on all v51 JS after migration; headless Chrome loaded the page with no JS exceptions, rendered the 2D SVG, and applied the colored-symbol class. Full 2D interaction matrix/browser click-through remained pending.
+
+### 2026-10-25 — v51 promoted live; `MuSVG.parse()` OOM/XML fix
+- Root cause of the reported Firefox tab crash: `MuSVG.parse()` moved XML-parsed label nodes with `document.importNode()`, which copies rather than removes the source node. The `while (doc.documentElement.firstChild)` loop never advanced and allocated until the content process hit `JSOutOfMemory` (`MozCrashReason: out of memory: 0x0000000000000080 bytes requested`).
+- The XML parser also logged `XML Parsing Error: not well-formed` for malformed JSME label markup; the calls returned `null`, but Firefox still reported the parse error.
+- Fix in `js/mulermoc-nom-molview-51.js`: parse generated markup with the tolerant `"text/html"` parser and move nodes with `document.adoptNode()`. Malformed labels are recovered instead of skipped, and the node-moving loop terminates.
+- Verification: `node --check` passes. Chrome CDP matrix: 98/98 condensed + mode sample sweep (128/130; the two failures are pre-existing skeletal JSmol errors). Firefox 158.0.1 headless WebDriver BiDi: same 128/130, zero XML/OOM/runtime errors. The same two pre-existing failures (`butadiene_1_3`, `propadiene` with `mode2D: "skeletal"`) occur on the Snap baseline at `1c81433`.
+- Owner promoted v51: `index.html` now points to `mulermoc-nom-51.html`; v50 and earlier remain runnable.
+
+### 2026-10-25 — Step-note image file picker
+- The note image tool now opens a native file picker for PNG/JPEG/GIF/WebP files (≤500 KB) and embeds the selected image as a data URI; `alt` text remains required.
+- URL image insertion remains available from the adjacent URL tool in v51 (relative/`https:` sources, same policies); the v52 refinement removes it in favour of the image sizing dialog.
+- SVG, unsupported types, oversized files, and missing `alt` are rejected; the inserted image is kept in sync with the inline/modal note editor.
+
+---
+
+## [v50] (presentation text rails left/right + persistent naming shell; previous live, `index.html` → v50 before v51)
+
+New parallel file set `mulermoc-nom-50.html` + `js/*-50.js` + `css/*-50.css`, forked from v49 (the HTML row class was renamed `.HFlex` → `.mainApp3Columns`, inline styles moved to CSS, and the 7 asset refs updated). Adds per-step presentation text placement and a persistent naming shell; the chemistry engine is unchanged, and the molecule data was unchanged at fork time (a later additive update in this version adds 7 alkynes, 73 → 80 keys — see the 2026-10-22 entry below). v50 was live until v51: `index.html` pointed to `mulermoc-nom-50.html`; v49 remains runnable at root. Browser click-through is still pending for the v50 additions (see Checks).
+
+### Default scenario
+- `MuLERMoCScenario.defaultScenarioUrl` now points to `scenarios/Αλκάνια-Αιθάνιο-τεστ.scenario.json` (7 steps; steps 5–7 place the note in a left rail with longer text). The previous `scenarios/Αλκάνια-Αιθάνιο.scenario.json` stays on disk for explicit `?scenario=` deep links but is no longer preloaded.
+
+### Per-step text placement (`scenario-50.js`, `scenario-50.css`)
+- Additive `styleText.position`: `null`/missing = **Πάνω** (current top card), `"left"` or `"right"` = sticky side reading rail. No schema-version bump; invalid values coerce to top, Export stays minimal, Update preserves the choice, and legacy scenarios load unchanged.
+- Step drawer gets an icon dropdown `Θέση: Πάνω / Αριστερά / Δεξιά` beside the existing columns/size/width controls.
+- Side layout at ≥1200px: `#scStepText` becomes a **fourth flex item** inside `#mainAppContainer > .mainApp3Columns`, inserted first for `left` and last for `right`, so it shares the row's 8px gap. `#pageContainer`/`#mainAppContainer` widen to `calc(1600px + clamp(300px, 24vw, 420px) + 8px)`; menu/analysis widths use matching clamps. Below 1200px the card returns to the top slot before `#mainAppContainer`.
+- The rail is sticky (`top: 50px`, clear of the fixed play bar) and internally scrolling, width `clamp(300px, 24vw, 420px)`, with height capped to the tallest visible app column and the viewport (`min(column height, 100vh - 80px)`), resynced by `ResizeObserver` and window resize. The row switches to `align-items: flex-start` while a rail is active, so the cap measures the app columns rather than a rail-stretched row. Title and credits still span the page.
+- Side rails always render one column; a stored 2-column choice returns when the step is placed back on top. The stored `textWidthPx` also applies to top mode only (an inline 980px width would overflow the rail).
+- `fViewerHeights2D3D()` skips subtracting the note-card height only while the side layout is actually applied (parent-class probe, so narrow-screen fallback still subtracts). Top↔left/right switches request an `fResizeViewers()` refit after placement settles.
+- New rail/class/dropdown styling in `css/mulermoc-nom-scenario-50.css`; version/path comments refreshed in the copied JS/CSS headers.
+
+### Persistent naming shell (`molview-50.js`, `teaching-50.js`, `jsme-nick-50.css`)
+- `fDeselectMol()` now clears `nameComponentsList` and calls `fShowNameAnalysis()` instead of emptying `#nameAnalysis`; with no molecule selected, `compCount` is forced to 0 and the container renders a muted `.nameEmptyHint` (“Επιλέξτε μόριο για ανάλυση ονόματος”).
+- The naming shell (title + gear + settings panel) renders on page ready via `fShowNameAnalysis()` after `fInitTheory()`, so it is present before any molecule is loaded. The settings panel still opens/closes on demand.
+- The shell is always available in full-app/authoring/no-molecule states. In presentation, `show.nameSettings` keeps its existing gate: unchecked still hides the gear + panel + voice buttons, but the `Ονομασία` title remains (legacy `show.naming`/`show.nameClick` untouched).
+- `fScenarioApplyNamingChrome` counts actual visible boxes (`.nameCompContainer .nameCompBox:not(.comp-hidden)`) and hides the explain line at zero; a menu-only step's hint only returns after free browse has rendered boxes, so no dead hint points at an empty naming row.
+- `.nameEmptyHint` styling lives in `css/jsme-nick-50.css` (full-width, muted italic placeholder).
+
+### Checks
+- Static: `node --check` on `molview-50.js`/`teaching-50.js`/`scenario-50.js`; CSS brace balance at the initial check `214/214` scenario + `305/305` main (the scenario file is now `217/217` after the play-bar CSS/icon, `#scPos`, and presentation-title additions); all v50 HTML asset refs resolve. At check time `index.html` still pointed to v49; it now points to v50. Headless DOM smoke check confirmed the persistent `panelTitle`/gear shell renders; the no-molecule placeholder was not browser-validated because the headless applet left component data empty. Static checks were not rerun after the default-scenario and status edits.
+- Owner browser click-through pending (wide/narrow, top/left/right switching, menu steps, long notes, 2D/3D refit, no-molecule placeholder, `Name controls` behavior).
+
+### 2026-10-22 — Additive alkyne data + skeletal C labels (still v50)
+- Added the 7 missing alkynes to `js/jsme-nick-nomeclature-moc2-data_50.js` (73 → 80 keys): `ethyne`, `butyne_1`, `butyne_2`, `methyl_3_butyne_1`, `methyl_3_pentyne_1`, `methyl_4_pentyne_2`, `ethyl_4_dimethyl_3_5_heptyne_1`. Each gets the three embedded 2D MOL forms plus `mols/nomeclature-moc2/<key>_3D.sdf`; existing 73 entries and their order are unchanged.
+- Added `fHideAlkyneSkeletalCarbons()` to `js/mulermoc-nom-molview-50.js`, called from `fUpdateSVG()` before `patchtheNitrogen()`. In `skeletal` mode for `seriesKey === "alkynes"` it removed the `C` label and its rounded backplate; bonds, highlights and numbering untouched. (Superseded the same day — see the generalised entry below.)
+- 3D intentionally untouched: no `initialZoom3D`, no `moveto` camera on the new entries, no `spt/init-3.spt` or `fLoadMol3D` change. The large alkyne uses the current v50 default 3D scale/orientation; framing is deferred to a later 3D pass.
+- Not imported: remote `fFit2DSVG`, color remapping, name-fitting and scenario changes.
+
+### 2026-10-22 — Skeletal C labels hidden for any sp carbon (still v50)
+- `fHideAlkyneSkeletalCarbons()` renamed to `fHideSkeletalSpCarbons()` (`js/mulermoc-nom-molview-50.js`, called from `fUpdateSVG()`). The trigger no longer keys on `seriesKey === "alkynes"`, which skipped every molecule carrying a hetero group: enynes (`seriesKey "enynes"`: `penten_3_yne_1`, `hexen_1_yne_4`, `buten_1_yne_3`, `hexen_2_yne_4`), the yne-ketone/aldehyde (`pentyn_4_one_2`, `propynal`), nitriles and the allene all still showed bare `C` labels in `skeletal` mode.
+- New `fMolHasSpCarbon()` reads the parsed core graph (`bondList` + `allAtomsTypeList`): true when a carbon has a triple bond (`C≡C` or `C≡N`) or cumulated double bonds (`C=C=C`, allene). In `skeletal` mode the `C` label and its rounded backplate are removed whenever that holds; plain alkanes/alkenes/alcohols etc. are untouched, so the label removal is a no-op there. Bonds, highlights and numbering unchanged.
+- Browser click-through pending for the newly covered cases (enynes, yne-ketone/aldehyde, nitrile, allene) alongside the rest of the v50 checks.
+
+### 2026-10-23 — Owner CSS tweak (still v50)
+
+- `css/mulermoc-nom-scenario-50.css` (commit `845208f`): the scenario play bar is now white with `--darkBlue` text and a `--lightBlue` bottom border (was `--lightBlue` with white text); `#authorLayout` gains a base `0 10px` margin and the pinned margin becomes `0 2px 0 10px`.
+- Kept intentionally: the v49 confirm-dialog hover edit in `css/mulermoc-nom-scenario-49.css` (shipped in `24a5ae9`) is the only intentional change to an earlier runnable version; earlier versions are otherwise untouched.
+- Checks: the owner's manual check on 2026-10-23 found `214/214` scenario + `305/305` main; the scenario file is now `217/217` after the play-bar icon/`#scPos` additions and the presentation-title fix. Browser click-through still pending.
+
+### 2026-10-23 — Play-bar prev/next icons (still v50)
+
+- `js/ui-icons.js`: added `arrowLeft`/`arrowRight` (from `imgs/arrow-left|right-svgrepo-com.svg`; 22px, `fill` → `currentColor`, viewBox/transform kept, inlined because `imgs/` is gitignored).
+- `js/mulermoc-nom-scenario-50.js`: `#scPrev`/`#scNext` are painted with the arrows via `fScenarioPaintIconBtn`, with aria-labels; the `◀`/`▶` text remains the fallback when `ui-icons.js` is unavailable.
+- `css/mulermoc-nom-scenario-50.css` (same commit): play-bar/steps borders switch `--darkEarth` → `--lightBlue` (plus the `scList`/`scPresent` hover borders) and a dark `#scenarioPlayBarNextPrevContainer button` rule is added.
+
+### 2026-10-23 — Play-bar Exit spacing (still v50)
+
+- `css/mulermoc-nom-scenario-50.css` (commit `c730ea6`): `#scExit` right offset `10px` → `20px` and `font-size: 1rem`.
+
+### 2026-10-23 — Post-review fixes (still v50)
+
+- `css/mulermoc-nom-scenario-50.css`: side-rail sticky `top` `10px` → `50px` (clears the fixed play bar); rail-active rows use `align-items: flex-start` so the JS height cap measures the app columns instead of a rail-stretched row; `#pageTitle` is forced visible in presentation so the ≤999px landscape h1 hide no longer drops the step title or tucks the top text card under the play bar; UTF-8 BOM removed. The same change also includes the `#scPos` play-bar readout styling and whitespace cleanup.
+- `js/mulermoc-nom-scenario-50.js`: `fScenarioSyncStepTextLayout()` now owns the `scTextLeft`/`scTextRight` classes (cleared on the <1200px fallback, Exit, and resize); `fScenarioApplyStepFontSize()` keeps only the refit-on-switch check.
+- Docs: v50 canonical URL corrected to `-50`; arrow icons documented as 22px; HTML-copy wording fixed; commit lists and brace counts refreshed.
+- Checks: CSS braces `217/217` scenario + `305/305` main; no JS runtime in the review environment, so the two guarded class-toggle edits are static-only verified. Headless 900×700 landscape presentation shows the step title and the top text card below the play bar; full browser click-through still pending.
+
+---
+
+## [v49] (student thesis-work import + alkyl reference table/locant fixes; previous live, `index.html` → v49 before v50)
+
+New parallel file set `mulermoc-nom-49.html` + `js/*-49.js` + `css/*-49.css`, forked from v48 (the html copy changes only the 7 asset refs; the JS/data/CSS files were then edited as described below). Folds in the MSc student's `thesis-work` upgrades (fork `yanisken9/organic-nomenclature-3`, tip `48ca292`): the generic main-chain parent-selection fix, the explicit-`1` unsaturation-locant convention, one new molecule, the alkene lesson scenarios, and an adapted alkyl reference table shown for branch/locant components. Namelecule product-layer files are deliberately **not** imported (see below). At release, `index.html` redirected to v49; v50 now supersedes it, and `*48*` and earlier remain runnable at root.
+
+### Main-chain parent selection for acyclic alkanes (`core-49.js`)
+- New graph helpers `fIsAcyclicHydrocarbonGraph`, `fCarbonBranchLocants`, `fCompareLocantSets` (0-based graph indices, 1-based locants; first-differing-locant compare, never sums).
+- `fRankChainPool(paths, req, scoreFn, orientFn, connList, typeList)`: after the existing eligible/multiple-bond/length/FG-anchor tier, **only when `bestMu === 0` and the graph is a connected acyclic all-C/H structure**, keep the candidates with the most carbon branches, then the lowest oriented branch-locant set; all graph-equivalent ties retained.
+- `fOrientChainPath` / `fOrientChainPath3D`: carbon-branch locants join the tier-3 detachable-prefix set for those graphs. Both `fRankChainPool` call sites pass the 2D/3D connectivity/type arrays.
+- Effect: `ethyl_3_dimethyl_2_5_hexane` offered 6 candidate paths (some producing `4-αιθυλο…`); now 4 equivalent paths, all `3-αιθυλο-2,5-διμεθυλοεξάνιο`. Multiple-bond/FG/ring/heteroatom molecules keep their existing ranking.
+
+### Explicit terminal unsaturation locant (`core-49.js` `fGuessName`)
+- Branched hydrocarbons with a single multiple-bond type now always keep the bond locant in `comp1No`, **including position 1** (teaching convention): `3-μεθυλο-1-βουτένιο` (was `3-μεθυλοβουτένιο`). Mixed en-yne keeps the double locant in `comp1No` and the triple in `comp3`. Consistent with the existing haloalkene behavior (`4-βρωμο-1-βουτενιο`).
+
+### Data (`data_49.js` → 73 keys)
+- New `ethyl_3_dimethyl_2_5_hexane` (C10H22, PubChem CID 521421): three embedded 2D MOL forms + `mols/nomeclature-moc2/ethyl_3_dimethyl_2_5_hexane_3D.sdf` + `mols/new_molecules/` sources.
+- Stored `mainChain_*` filled for `methyl_2_propene`, `methyl_3_butene_1`, `ethyl_3_dimethyl_2_5_hexene_2` (this activates the "Από δεδομένα" bullet for them, per the v48 non-empty-array rule); `methyl_2_propene` formula normalized to `CH2=C(CH3)2`.
+
+### Scenarios
+- Imported `Αλκένια-Ονοματολογία_και_διακλαδώσεις.scenario.json` (22 steps) and `Αλκένια-Αιθένιο.scenario.json` (7 steps) from the student's set. The numbered/English lesson drafts and the old `ethene.scenario.json` were not imported.
+
+### Deliberately not imported
+- Namelecule product layer (`css/namelecule-*.css`, `design/*`, `assets/*`, `AGENTS.md`, welcome/library, theory library, loading/error screen, `showStepNumbers`/`reserveTitleSpace`, mint/teal theme). The alkyl table was reimplemented locally with nested divs and the existing palette (see below), not copied with the product layer.
+- Their `fFitNameToWidth` / `--nl-name-scale` name fitter — v48's `fFitNameComponents` (0.7 scale floor + horizontal-scroll fallback) is kept as the better (legible, floored) behavior.
+- Their text-parsing branch highlight/explain — v48's structural highlight is kept.
+
+### Alkyl reference table + locant rule-table fixes
+- Converted the alkyl reference table from a `<table>` to the shared nested `ruleRow` divs, so it uses the existing rule-table palette and `.ruleRow.selected` highlight instead of a separate table stylesheet.
+- Branch locants (`compNumber1` / `compNumber2`) now select the alkyl table as well as branch names; the branch early-return paths reveal the rule panel instead of leaving `#ruleTheoryContainer` hidden.
+- Added the missing `compBondType2` / `compEndNumber` rule cases, fixing the `undefined` rule tile/table on enyne `-ιν-` selections.
+- `fGetNameComponentLocants` now splits comma- and hyphen-joined locants, covering the extra-group `comp0b` form.
+
+### Checks
+- JS syntax checked on the changed `*-49.js` files (esprima); CSS braces balanced (301/301); no leftover `alkylRuleTable`/`tr.selected`/`table-layout` selectors; every scenario `selectedMol` key exists in the 73-key set; 73/73 data keys and `reg()` calls. Owner browser click-through pending.
+
+---
+
+## [v48] (fluid viewers + authoring pin-dock + single/double-viewer height; live, `index.html` → v48)
+
+New parallel file set `mulermoc-nom-48.html` + `js/*-48.js` + `css/*-48.css`, copied byte-identically from v47 (only the 7 asset refs in the html differ). `index.html` now redirects to v48 (owner flipped it live); `*47*`/`*46*` remain runnable at root, untouched. All work below is `*48*`-only (plus the shared `js/ui-icons.js` icon keys `pin`, `closePanel`, `deleteStep`). Pre-fork owner tweak carried over: `body`/`html` `overflow-x` handling in the v47 stylesheet.
+
+### v48 review fixes (code + docs)
+
+- **Naming** (`core-48.js` `fGuessName`): mixed en-yne **with** an alkyl branch now keeps an internal double-bond locant in `comp1No` (the branch locants overwrite `comp0`; the triple locant was already in `comp3`). A terminal double bond (locant set all `1`) stays unlocanted, matching the single-type hydrocarbon path. The haloalkene path is unchanged and intentionally retains the double-bond locant even at position 1 (owner-confirmed: `bromo_4_butene_1` → `4-βρωμο-1-βουτενιο`).
+- **Present-start failure** (`scenario-48.js` `fScenarioPresentBegin`): when `fScenarioApply` cannot start the step, the stashed author settings are restored and the URL is reset to the bare path (the `#step=` marker and `?scenario/?present` query are cleared), so a retry cannot re-stash partially applied state.
+- **Confirm dialog a11y** (`scenario-48.js`): `fScenarioConfirm` now traps Tab inside the panel and marks the rest of `body` `inert` while open (tab trap is the fallback where `inert` is unsupported); focus restore unchanged.
+- **Viewer-height controls** (`molview-48.js`): both Auto readouts resync after a title-bar 2D/3D toggle (220 ms, after the slide), and the single-viewer slider `max` is now `min(live full height, VIEWER_MAX_H)`; the live value is clamped to the same ceiling.
+- **Docs/comments**: `didactic-scenario-plan.md` sample now uses the exported `"app": "mulermoc-nom-44"`, documents `viewerBothHeight`, and states that `chainIdx` **is** captured (the stale "stepper walk index never stored" note and the matching `molview-48.js` comment are corrected). Several stale `-44`/`-45` header comments, the pinned `540px`→`480px` band comment, and an orphan `deleteScenario` icon comment were refreshed; a few `-44`/`-45`/`-46` references remain in comments only (no runtime effect).
+- **Known limitations (not changed in this pass)**: `fGetNameComponentLocants` splits only on commas while `comp0b` joins extra alkyl groups with `-`, so slot-1 branch highlight/explanation (`compNumber2`/`compSecondSub2`) sees only the first locant when 3+ distinct alkyl groups exist; `fGetNameComponentMultiplier` uses a leading `δι-/τρι-/…` heuristic, so a single substituent whose name starts that way (e.g. τριφθορομεθυλο) can be described as a count; no bundled molecule exercises mixed en-yne **with** an alkyl branch (existing `hexen_1_yne_4`/`hexen_2_yne_4` are unbranched), so the new `comp1No` path is inspection-verified only.
+- **Checks**: `git diff --check` clean; CSS braces and static refs re-checked. `node --check` is unavailable in this environment; owner browser click-through pending.
+
+### Local alkene trial molecule + locant/highlight fixes + name auto-fit
+
+- **New data** (`js/jsme-nick-nomeclature-moc2-data_48.js` + `mols/nomeclature-moc2/ethyl_3_dimethyl_2_5_hexene_2_3D.sdf`): added `ethyl_3_dimethyl_2_5_hexene_2` (3-ethyl-2,5-dimethylhex-2-ene, `C10H20`, PubChem CID 56988951) with three 2D MOL forms and a 3D SDF; stored `mainChain_*` arrays are empty → algorithmic (72 total `nameExamples` keys).
+- **Naming fix** (`core-48.js` `fGuessName`): substituted hydrocarbons with an internal double/triple bond dropped the bond locant because the substituent locants overwrote the `comp0` bond prefix. A guarded `comp1No` fill now preserves the locant only when a single bond type is present and its locant set is not all `1`; terminal alkene names stay unchanged (e.g. `2-μεθυλοπροπένιο`, `3-μεθυλοβουτένιο`). The new molecule now renders `3-αιθυλο-2,5-διμεθυλο-2-εξένιο`.
+- **Highlight fix** (`molview-48.js` `fGetHydrocarbonBranchHighlight[/3D]` + `fHighlightFG[/3D]`): clicking an alkyl name/number component highlighted every side branch. The helpers now accept a group slot and filter side branches by the locants in `nameComponentsList[slot*2]`; `FGno`/name-component mode selects the slot (`comp0/1` → first alphabetically, `comp2/3` → second). For the trial molecule `3-`/`αιθυλο` highlights only the ethyl branch and `-2,5-`/`διμεθυλο` only the two methyls, in 2D and 3D.
+- **Branch explanation fix** (`molview-48.js` `fExplainNameComp`): on branched hydrocarbons the alkyl number/name components now explain the alkyl branch instead of a generic secondary functional group. The branch check runs before the `nameComponentsList[3]` (second substituent group) test, and `compNumber2`/`compSecondSub2` gain the same per-slot (`fGetBranchDisplayName(1)`) branch text. Singular components keep the position/name wording (`Δηλώνει τη θέση…` / `Δηλώνει το όνομα…`), while multiple locants (`-2,5-`) switch numbering components to `Δηλώνει τις θέσεις…` and multiplier prefixes (`δι-/τρι-/τετρα-…`) switch substituent name components to `Δηλώνει το πλήθος των…` (alkyl branches and secondary characteristic groups, 2D/3D).
+- **Name auto-fit** (`css/jsme-nick-48.css` + `molview-48.js` + `teaching-48.js`): the name component row could exceed `#analysisCol`. `fFitNameComponents()` binary-searches a `--nameCompScale` on `.nameCompContainer` (boxes and `+` signs scale; transitions disabled while measuring) and toggles a `.nameOverflow` horizontal-scroll fallback (`justify-content: flex-start`) at the `0.7` scale floor. Re-runs after every `fShowNameAnalysis`, box/cross toggles, name-box selection, and on a debounced `#analysisCol` `ResizeObserver`.
+- Checks: headless local-HTTP harness (long names, boxes/`+` toggles, 120px column, `comp0`/`comp2` highlight) passes with no JS errors; `node --check` on the five `*-48.js` files; `git diff --check` clean. Owner browser click-through pending.
+- Docs synced to 72 keys; the 71-key entry below remains historical.
+
+### Main-chain multiple-bond priority + alkene test molecules
+
+- **Ranking** (`mulermoc-nom-core-48.js`): Step 7 and `fRankChainPool` now choose terminal-to-terminal paths by max CC multiple bonds (C=C + C≡C) → max C=C → longest chain → most FG anchors. The FG-anchor cover filter remains first (top-priority FG anchors), and all chains tied on the winning tier stay in the stepper pool. Orientation/numbering (`fOrientChainPath[/3D]`) is unchanged, preserving stored-data/FG behavior.
+- **New data** (`js/jsme-nick-nomeclature-moc2-data_48.js` + `mols/nomeclature-moc2/`): added `methyl_2_propene` (`CH2=C(CH3)CH3`, PubChem CID 8255) and `methyl_3_butene_1` (`CH2=CHCH(CH3)CH3`, CID 11239) with three 2D MOL forms each and 3D SDFs; stored `mainChain_*` arrays are empty → algorithmic (71 total `nameExamples` keys).
+- **Result**: `methyl_2_propene` stepper now offers **2** chains (both contain C=C; the saturated `CH3–C–CH3` path is gone); `methyl_3_butene_1` remains 2. Static regression over all 2D representations: only `methyl_2_propene` pool changes (3 → 2), no selected-chain changes; FG + multiple-bond molecules (`penten_1_one_3`, `pentyn_4_one_2`, etc.) have a single carbon path and are unchanged. Owner browser-tested the stepper.
+- **Repo**: `archive/Giannis_Skendros/` ignored via `.gitignore` (contributor archive, not published).
+- Docs synced to 71 keys; historical 69-molecule references left unchanged.
+
+### Scenario/step delete: dedicated icons + red danger hover + confirm dialog
+
+- **Icons** (shared `js/ui-icons.js` + `scenario-48.js`): three new registry keys originally added — `deleteScenario` (`imgs/delete-scenario-svgrepo-com.svg`, Illustrator `-9 -244 800 800` set, beside `columns1/2`), `closePanel` (`imgs/close-panel-svgrepo-com.svg`, same set), `deleteStep` (`imgs/clear-svgrepo-com.svg`, `0 0 512 512`, beside `closeSmall`) — all `fill → currentColor`, 16px, source `<title>`/ids/`enable-background` stripped. The `imgs/*` SVGs are **gitignored** (`.gitignore:69`), so the art ships **inlined** in `ui-icons.js` exactly like `pin`/`saveImage`. Wiring: the scenario-card `.scDelete` is painted icon-only via `fScenarioPaintIconBtn(…, "deleteStep", "Διαγραφή σεναρίου")` (icon-only helper; the `✕`/tooltip stays as the no-registry fallback; the card briefly used the `deleteScenario` key before the owner's icon tweak, `11685fb`, and that key was dropped in review as unused); `#scCloseBar` gets `closePanel` (mirror of the `#scPin` hydration — registry-first, `✕` fallback, onclick untouched); the step-row `Διαγραφή` action switches its icon key `closeSmall` → `deleteStep` (key only — label/aria unchanged). `#scCloseBar svg` joins the shared 16px sizing rule. `--redAlert: #b90000` added to `jsme-nick-48.css` `:root` (used by the danger hover and the dialog).
+- **Red danger hover** (`scenario-48.js` + `mulermoc-nom-scenario-48.css`): the step-row delete button takes a `delete` class; new `#scenarioAuthorBar .scenarioDrawer .srow .scIconBtn.delete:hover { background/border-color: var(--redAlert); color: #fff }` — **id-qualified** so it out-specifies the generic `#scenarioAuthorBar button:hover` (`(1,5,1)` beats `(1,1,1)`; a bare `.srow … .delete` selector would lose). Mirrors the existing `#scenarioAuthorBar .scPresent.scIconBtn:hover` override pattern.
+- **Confirm before delete** (`scenario-48.js` + `mulermoc-nom-scenario-48.css`): both destructive deletes (scenario card, step row) now route through a small modal — `fScenarioConfirm(msg, onYes, yesLabel)` builds a singleton `#scenarioConfirm` (lazy, like `#scenarioToast`) fixed backdrop (z-index **700**, above the toast at 600) with a `role="dialog"` `aria-modal` panel: message + `Άκυρο` + a red `Διαγραφή`. **Άκυρο** gets the initial focus (safe default); ESC (capture-phase listener, so it cancels the dialog and does **not** also close the author bar via the document keydown at `:2468`) / backdrop click / `Άκυρο` cancel; `Διαγραφή` closes then runs the delete. Scenario message names the card (`Διαγραφή σεναρίου «title»; Τα βήματά του θα χαθούν.`, title fallback `«χωρίς τίτλο»`), step message the number (`Διαγραφή βήματος N;`). **Always** confirms (even a step-less card). No schema change.
+
+### Scenario authoring: per-step Present + persistent drawer
+
+- **Per-step Present** (`scenario-48.js` + `css/mulermoc-nom-scenario-48.css`): each step row carries a `.scPresentStep` button (`screen` registry icon, dark-blue chrome) between Go and Update. It calls `fScenarioPresentBegin(scenId, idx)` with the row's 0-based index, so playback can start mid-scenario; the card's `Play ▶` calls the same helper without an index, which defaults/clamps to step 1. `fScenarioPresentBegin` moves to top level (it was nested inside `fScenarioBuildUi`), defaults `startIdx = 0`, clamps it to the step range, and writes `#step=<start + 1>`. The temporary start-at step number input and its clamp/sync helpers are removed; row Present is the targeted entry point and card Play is always step 1. Button-panel gap is back to `10px`, keeping the four actions on one row.
+- **Drawer state survives authoring hide and Play → Exit** (`scenario-48.js` + CSS): authoring-off and present entry no longer strip `.scenarioDrawer.open` or `.scList.active`; a CSS rule hides the still-open drawer while `#scenarioAuthorBar` is closed or presenting (`visibility:hidden` + `pointer-events:none`, delayed to ride out the bar slide), so close → reopen and Play → Exit return to the same card and scroll position. The Steps button and bar-gap click still close it deliberately. After Exit, `fScenarioScrollDrawerToStep` scrolls only that drawer to the presented row (`requestAnimationFrame` + a 120ms second pass, since the pin-dock reflow can settle late).
+- **Step Delete at the row corner** (`scenario-48.js` + CSS): the step-row Διαγραφή moves to the row's top-right corner as a transparent close affordance (red on hover). Row action wiring is now class-bound (`.scGo`, `.scPresentStep`, `.scUpdate`, `.scDupe`, `.scUp`, `.scDown`, `.delete`) instead of positional `button:not(.scNoteBtn)` indices, so adding Present cannot shift the other handlers.
+- **Checks**: `node --check`, balanced CSS braces, `git diff --check`; headless integration: card Play at index 20 starts at index 0, row Present starts at index 10, drawer stays open and Exit scrolls to the presented row, no console errors. Owner browser click-through pending.
+
+### Authoring pin-dock (scenario bar beside the app)
+
+- **Pin-dock (current design)** (`scenario-48.js` + `mulermoc-nom-scenario-48.css` + `mulermoc-nom-48.html` + shared `js/ui-icons.js`): pin button (`#scPin`, registry `MuLERIcons.pin` from `imgs/pin-svgrepo-com.svg`, emoji fallback) in the scenario title row; pinned, `fScenarioSetPinned()` reparents the bar into `#pageContainer` (absolute, `top/bottom/right: 0`, so it always equals the page container's height from title zone to footer and can never drive layout height). Structure: `#pageTitle` above, `#authorLayout` (thin `relative` wrapper, renamed `#panelContainer` → `#mainAppContainer` holding exactly the three app columns), `#creditsUs` footer; pinned, `#pageContainer` is a centered `1600px + 480px` unit (`min-height`, not fixed height), `#pageTitle` and `#creditsUs` (also `width: auto`) yield the 480px band via right margin, and `#mainAppContainer` is the horizontal scroller. The viewer is frozen from a **pre-dock** width read (measuring after the class toggle locked stretched wide-screen pixels — order matters); the row keeps its inline `justify-content: safe center`; edge tab hidden, pin button lit; bar look: 10px navy border, no shadow, square corners. Live-only `MuLERMoCScenario.pinned` flag (never in step JSON); authoring-off (✕/ESC) and Present entry force-unpin (Exit returns to the overlay bar).
+- **Pinned viewer width knob** (CSS only): `--viewerPinnedWidth` (`:root` in `jsme-nick-48.css`, default `400px`) consumed as a `max-width` ceiling over the inline measured lock — wide viewers shrink to the tuned value, narrow ones never forced wider; `min-width: 290px` / `max-width: 620px` bounds hold; the fluid pipeline follows with no JS change. Retune: one `:root` line + hard refresh.
+- **Pin preference persists across close/reopen** (`scenario-48.js` only): new session-scoped `MuLERMoCScenario.pinPref` records the author's pin choice (set by the pin button; never in step JSON, no `localStorage`). Internal forced unpins (✕/ESC authoring-off, Present entry) leave the preference untouched, so `fScenarioApplyPinPref()` re-docks the bar when authoring reopens via the `Σενάρια` tab and on Present → Exit; presentation itself always hides the bar (unchanged). A deep-link present (`?scenario=…&present=1`, authoring off) exits with no bar/pin. The scenario panel still starts **closed** on page load; the preference **defaults to pinned**, so the first `Σενάρια` open docks the bar (only `pinPref` defaults true — `pinned` stays false so the dock is actually applied on open). A session unpin is remembered until reload, which restores the pinned default.
+- **Row centering via `safe center`** (`48.html` + `scenario-48.js`): the app row (`#mainAppContainer > .HFlex`) now carries inline `justify-content: safe center` instead of `center`, and `fScenarioSetPinned()` no longer rewrites the row's `justify-content` (the old `flex-start`-while-pinned workaround and its unpin clear are removed). The columns stay centered when they fit and auto-left-align only when pinned content overflows the horizontal scroller, so the left menu column stays scroll-reachable; `fScenarioSyncScroller()`'s end-states stay truthful. Also fixes unpin not restoring center (the clear previously dropped the inline value). `safe` fallback: Chrome/Edge 115+, Firefox 63+, Safari 17.6+; older browsers drop the declaration and left-align.
+- **Pinned drawer fill** (CSS only): the accordion-open card becomes a flex column claiming leftover bar height (`:has()`, no JS; `min-height: 85vh`) and the open drawer scrolls internally; grow animation is instant-tall + fade when pinned, slide-down kept unpinned.
+- **Pinned scroll cues** (`48.html` + `scenario-48.js/css`): the container's native bottom scrollbar sits below the fold (a native top bar is impossible; `direction`/`rotate` hacks rejected — they threaten Snap coordinate mapping), so edge `‹ ›` buttons (viewport-anchored `top: 40vh`, shown only when pinned AND overflowing, end-disabled, 0.8-viewport smooth steps, reduced-motion aware, registry chevrons with text fallback), a branded scrollbar thumb, and a managed `tabindex` carry discoverability; `fScenarioSyncScroller()` owns the states (pin toggles, passive scroll, container observer, post-pin re-check). (Edge fade veil retired — see tuning bullet.)
+- **Pinned bar slide via WAAPI** (`scenario-48.js` + `mulermoc-nom-scenario-48.css`): opening Σενάρια with the pin preference on (and Present → Exit) **snapped** the docked bar instead of sliding it in. Root cause: docking **reparents** the bar into `#pageContainer` and `.open` lands in the same task, so the CSS `transform` transition never sees a clean closed→open pair (reparenting suppresses it) — CSS-only attempts (dropping the pinned `transition:none`/`transform:none` overrides, then a reflow + single/double-`requestAnimationFrame` nudge) still snapped. Fix: the motion is driven imperatively by the **Web Animations API** — `fScenarioSlideBar(dir, onDone)` runs `bar.animate([{transform:'translateX(100%)'},{transform:'none'}], {duration:250, easing:'ease'})` (reverse for out, `fill:'forwards'` + `.cancel()` on finish), which no reparent/timing can suppress. `.open` stays the state authority (visibility + final transform); `body.scPinned #scenarioAuthorBar` keeps `transition: none` (so CSS never races WAAPI) plus the geometry/`border`/`max-height`/shadow (transform/visibility/pointer-events still dropped so `.open` controls them). **Open** (`fScenarioApplyPinPref`) adds `.open` once → slide-in. **Close** (pinned) slides the still-docked bar out *first* (staying `.open`), then unpins + hides + tears down from `onDone` while `fill:forwards` holds the off-screen pose — this avoids the remove-then-re-add of `.open` that previously flashed close→open→close; the helper returns `false` under reduced-motion/no-WAAPI so the close falls back to the original unpin-then-CSS path. The direct pin-button dock stays instant. Unpinned open/close is untouched (still the CSS overlay slide).
+- **Pinned layout tuning (owner styling)** (`scenario-48.css` + `jsme-nick-48.css` + `mulermoc-nom-48.html`): pinned band narrowed **540px → 480px** (`#pageContainer` `calc(1600px + 480px)`; `#pageTitle`/`#creditsUs`/`#mainAppContainer` `margin-right: 480px`; `#scenarioAuthorBar` `width`/`max-width: 480px`) and the cue column offset follows (`#scScrollRight` `548px → 488px`). `#scPin` takes a `2px solid var(--veryLightBlue)` border (was 1px transparent) and `#scPin.active` fills `var(--vibrantGreen)`/white (was `var(--darkEarth)` + white border). Pinned title row fills dark — new `body.scPinned #scenarioPlayBarTitle { background: var(--darkBlue); margin-bottom: 10px; padding-top: 0 }` — and the base `.scTitleText`/title rules are simplified (font-family, margins, padding, background, border, radius dropped). Open pinned drawer card `min-height` 60vh → **85vh** (`.scenarioDrawer.open` 80vh commented, fills via flex). **Fade veil retired**: `#scScrollFade` block + its show rule commented in CSS and the div commented in `mulermoc-nom-48.html`. `css/jsme-nick-48.css` `.JmolContainer { height: 240px }` commented so the 3D container height is fluid (follows the v48 native `setSize` pipeline).
+
+### Adaptive pinned viewer width (CSS `clamp`, no JS)
+
+- **Problem**: while docked, `body.scPinned #viewerCol { max-width: var(--viewerPinnedWidth, 400px) }` forced the viewer to ≤400px on **every** screen — wasting width on large monitors (the row `#menuCol` 230 + gaps 20 + viewer + `#analysisCol` 350 plus the 480px band has ample room) while common 1366–1440 laptops still overflowed and showed the scroll cues.
+- **Change** (`mulermoc-nom-scenario-48.css` + `jsme-nick-48.css`): the pinned `#pageContainer` becomes an inline-size query container (`container-type: inline-size`; safe — it is already `position:relative` and the only `position:fixed` element, `#rotatePrompt`, is a direct `body` child). The pinned viewer cap becomes fluid:
+  `body.scPinned #viewerCol { max-width: clamp(var(--viewerPinnedWidth, 400px), calc(100cqw - 1090px), 620px) }`.
+  The inline pre-dock flex-basis measured in `fScenarioSetPinned` remains the upper bound (620px), so the viewer keeps its **original** width when the screen has room; it eases down only as needed so the row plus the 480px band fits, with `--viewerPinnedWidth` (now documented as the clamp **floor**, default 400px) as the minimum. `100cqw` = page-container content width (already excludes the scrollbar); `1090px` = band 480 + menu 230 + gaps 20 + analysis 350 + border/rounding slack.
+- **No JS**: resize is handled natively and the existing `#viewerCol` ResizeObserver (fluid viewers) and `#mainAppContainer` ResizeObserver (scroll cues) follow through the verified pipeline. Unpinned layout is untouched. Behavior: viewport ≳1730px → original width; ~1500–1730px → eases 620→400; below → pinned at 400 with cues if it still overflows.
+
+### Main-chain "Από δεδομένα" bullet inactive without stored data
+
+- **Bug** (`molview-48.js` `fUpdateChainModeButton`): the "Από δεδομένα" bullet of the `Υπολογισμός κύριας αλυσίδας:` row was gated with `!!nameExamples[selectedMol]?.["mainChain" + suffix]`, and `!![]` is `true` — so molecules with **empty** stored chain arrays still showed the option active. (Missing **keys** were already handled; empty arrays were not.) Found in ten molecules in `jsme-nick-nomeclature-moc2-data_48.js`: the ethers/esters (`dimethylether`, `ethyl_methyl_ether`, `diethyl_ether`, `isopropyl_methyl_ether`, `ethanoic_methyl_ester`, `propanoic_methyl_ester`, `methyl_methanoate`, `isopropyl_ethanoate`) plus the placeholders `methyl_2_pentane`/`dimethyl_2_3_butane`, all `mainChain_*: []`.
+- **Fix**: `hasChainData` now requires a **non-empty array** (and treats **no selected molecule** as no data, so the bullet starts inactive on load). Empty/missing → `disabledRadio` (`.disabledRadio`: `opacity:.35` + `pointer-events:none`, already guarded by the click handler) and `mainChainMode` auto-falls back from `data` to `algorithmic` (pre-existing `else` branch). An init call in the `$(document).ready` block (`teaching-48.js`) sets the landing state.
+- **Scenario sync**: `fScenarioSyncControlUi` (`scenario-48.js`) now calls the guarded `fUpdateChainModeButton()` (after the `fUpdateDiagr2DButton()` pass, so `mode2D` is resolved) — mirrors `fSyncAtomColorModeDisabled()` added last commit; runs at both `fScenarioApply` call sites, so a step applied with `mainChainMode: "data"` on a no-data molecule re-syncs the bullet and the mode.
+- **Consistency hardening** (`molview-48.js`): `fHighLightMainChain`, `fHighLightMainChainBonds` and the skeletal case of `fShowNumbering` used the same truthiness test, so an empty stored chain was treated as valid and produced an **empty** highlight. They now fall back to the algorithmic chain when the stored array is missing/empty.
+- No CSS/HTML change; `scenarioVersion` unchanged (live-only UI state).
+
+### Save-image buttons follow the 2D/3D ρυθμίσεις checkbox (per-step)
+
+- **Bug** (`scenario-48.js` `fScenarioChrome`): in playback `#save2DBtn`/`#save3DBtn` were gated on `show.save["2D"/"3D"]`, but **no authoring UI writes `show.save`** (the per-step drawer only carries the `2D/3D ρυθμίσεις` checkboxes, which write `show.controls`), so the save-image buttons never appeared even with a checked ρυθμίσεις bar.
+- **Fix**: the two buttons now ride their control bar — shown whenever `show.controls["2D"/"3D"]` is checked (and that viewer visible) — driven by the class-aware `fScenarioShowBar` (a stale `hide` class from a no-viewer exit could otherwise defeat the inline-display restore). A stored `show.save` stays an independent OR trigger for legacy files. No schema change; "Update" already preserves `show.controls`. (v48 files only.)
+
+### Present step-text reserved in the viewer height fit
+
+- **Bug** (`molview-48.js` `fViewerHeights2D3D`): the viewer budget subtracted the header, `#pageTitle` and `#creditsUs` but **not `#scStepText`** — the per-step note card, a normal-flow sibling above the app columns. So in presentation, a two-viewer step carrying a note sized the viewers to the full height and the note pushed the page into scroll.
+- **Fix**: subtract the visible step-text card's full footprint (its `offsetHeight` plus computed top/bottom margins; `margin: -10px auto 20px auto` → net + 10px) from `total`, so the equal split (and the single-viewer Όριο ύψους ceiling) leaves room for the note. Authoring is untouched (`#scStepText` is `display:none` → `offsetParent` null). (`scenario-48.js` `fScenarioChrome`): the step apply fits the viewers *before* `fScenarioChrome` writes the new card, so a re-fit now runs right after `fScenarioFillStepPanel`/`fScenarioHide("scStepText")` while presenting — `offsetHeight` forces the fresh layout. Width-driven re-fits still come from the `#viewerCol` observer.
+
+### Shared 240px viewer min-height floor
+
+- **Change** (`molview-48.js` + `jsme-nick-48.css` + `mulermoc-nom-48.html`): the two viewer floors (**2D 200 / 3D 120**) are unified into a single **240px** minimum, `const VIEWER_MIN_H`, applied in `fViewerHeights2D3D` (the `out.full` / single-viewer cap math and the final `h2`/`h3` clamps). With a long present note card the viewers now stop at 240px instead of the old 120px 3D floor; the page scrolls rather than squashing them further. The CSS min-heights mirror it (`.JmolContainer`, `#jsmeNomeclatureSVG` → 240px) so the applet box and DOM agree. The max-height control follows the same floor (`fViewerMaxHeightFull` ceiling, `#viewerMaxHeightRange` `min`). The tiny-screen phone cap (`innerHeight < 430` → 30%) is unchanged and still wins as the final ceiling. (Live value later tuned down by the owner to **150**, and the CSS floor is now driven by the JS constant via the `--viewerMinH` variable — see "Double-viewer height".)
+
+### Double-viewer height (Ρυθμίσεις control, per-step)
+
+- **Control** (`mulermoc-nom-48.html` + `molview-48.js`): new `#viewerBothHeightSetting` row in the viewer-settings panel — label `Ύψος δύο viewers (σύνολο):` + `#viewerBothHeightCheck` (generic `.checkBoxContainer`, unchecked by default) + `#viewerBothHeightRange` (fixed `min 300`, `max 1000`, `step 10`) + `#viewerBothHeightVal` readout. **Unchecked = Auto** (the equal split both viewers get today), **checked = Manual**. The number is the **combined 2D+3D height**; each viewer takes half. `fViewerBothHeightSync()` mirrors state into the control (Auto shows the current combined height), `fViewerBothHeightFromUi()` writes the live global and re-fits on every slider `input`, `fInitViewerBothHeight()` binds (deferred-tick read of the generic checkbox toggle; re-binds on `DOMContentLoaded` if the panel isn't parsed yet) — parallel to the single-viewer max-height trio. Reuses the existing `.settingRow`/`.viewerHeightRange`/`.viewerHeightVal` classes.
+- **Engine** (`molview-48.js`): new live global `viewerBothH` (px | `null` = Auto; never `localStorage`) plus constants `VIEWER_BOTH_MIN = 300` / `VIEWER_BOTH_MAX = 1000`. When **two** viewers are visible and `!raw`, `fViewerHeights2D3D` **overrides** each viewer's height with `round(clamp(viewerBothH, 300, 1000) / 2)` (so 300 → 150px each, 1000 → 500px each) — an override, not a cap, so the viewers both grow and shrink as the slider moves (`cap` math could only shrink, which is why the first cut appeared to do nothing when the auto split was already below the slider). Auto (`viewerBothH == null`) leaves the equal split byte-for-byte unchanged; `raw` skips it. The phone cap still trims. Independent of the single-viewer cap — each governs its own visibility case.
+- **Floor alignment** (`css/jsme-nick-48.css` + `molview-48.js`): the viewer CSS `min-height` (`.JmolContainer` / `#jsmeNomeclatureSVG`) is now `min-height: var(--viewerMinH, 150px)`, and `molview-48.js` pushes the live `VIEWER_MIN_H` (150) into `--viewerMinH` at load — so the DOM floor follows the single JS constant instead of a hand-copied literal (which had drifted: 240 vs 200, then 200 vs 150). The bottom of the combined range (300 → 150px each) is therefore actually reachable instead of being clipped by the DOM floor.
+- **Scenario** (`scenario-48.js`): per-step `show.viewerBothHeight` (additive, no schema change). `fScenarioValidViewerBothHeight` (null/empty → `null`; `parseInt`, clamp the combined 300–1000; invalid → `null`), captured via `fScenarioG("viewerBothH")`, defaulted/normalized in `fScenarioDefaults`, warned in `fScenarioValidate` on non-empty invalid input. `fScenarioApplyViewerMaxHeight` (called at both apply sites) now also sets `viewerBothH` and syncs the control; the value is stashed/restored around Present via `fScenarioStashAuthorSettings`/`fScenarioRestoreAuthorSettings`.
+
+### Single-viewer max height (Ρυθμίσεις control, per-step)
+
+- **Control** (`mulermoc-nom-48.html` + `jsme-nick-48.css` + `molview-48.js`): new `#viewerMaxHeightSetting` row in the viewer-settings panel — label `Όριο ύψους μεμονωμένου viewer:` + `#viewerMaxHeightCheck` (generic `.checkBoxContainer`, unchecked by default) + `#viewerMaxHeightRange` (`min 150`, dynamic `max`, `step 10`) + `#viewerMaxHeightVal` readout. **Unchecked = Auto**, **checked = Manual**. `fViewerMaxHeightSync()` mirrors state into the control, `fViewerMaxHeightFromUi()` writes the live global, `fInitViewerMaxHeight()` binds (deferred-tick read of the generic checkbox toggle; re-binds on `DOMContentLoaded` if the panel isn't parsed yet), `fViewerMaxHeightFull()` returns the dynamic ceiling (`max(VIEWER_MIN_H, fViewerHeights2D3D(true).full)`). The panel's `.open` now scrolls internally (`overflow-y:auto`, `max-height: min(70vh, 400px)`) so added rows never clip.
+- **Engine** (`molview-48.js`): new live global `viewerMaxH` (px | `null` = Auto; never `localStorage`). `fViewerHeights2D3D(raw)` now also returns `full` (single-viewer height, independent of current visibility) and, when **one** viewer is visible and `!raw`, caps the survivor at Auto = `shareFor(2)` (both-visible height, so hiding the other viewer never resizes it) or the explicit `viewerMaxH`, clamped into `[floor, single share]`. `raw` skips the cap (the slider-ceiling measurement). The 2D CSS floor drops **244 → 200px** (`#jsmeNomeclatureSVG`), matching the engine's 2D floor (3D stays 120).
+- **Persistence** (`scenario-48.js` + `molview-48.js`): additive optional `show.viewerMaxHeight` (number px | `null`; default `null`, no `scenarioVersion` bump). `fScenarioValidViewerMaxHeight(v)` (null/empty → `null`, `parseInt`, clamp **150–2000** (`VIEWER_MIN_H`–`VIEWER_MAX_H`), invalid → `null`) with a validate-time warning for non-empty invalid input. Captured via `fScenarioG("viewerMaxH")` on Save/Update; applied by `fScenarioApplyViewerMaxHeight(step)` in **both** `fScenarioApply` branches (menu-only + full) — sets `viewerMaxH`, `fResizeViewers()`, then syncs the control — and **in presentation too**. Present entry stashes the author's live `viewerMaxH` and Exit restores it (`fScenarioStashAuthorSettings`/`fScenarioRestoreAuthorSettings`), re-fitting the viewers.
+
+### Ρυθμίσεις panel: 2D/3D detail toggles moved in
+
+- **Moved into the gear panel** (`mulermoc-nom-48.html` + `jsme-nick-48.css` + `molview-48.js` + `teaching-48.js` + `scenario-48.js`): `Έγχρωμα Σύμβολα` (`#svgAtomColorCheck`) leaves the 2D bar and merges into the existing `Χρωματισμός ατόμων 2D` row (on/off checkbox + the atom/group radios); `Σύμβολα ατόμων` (`#atomSymbolsCheck`) leaves the 3D bar into a new `Σύμβολα ατόμων 3D` row. IDs are unchanged, so every ID-based handler, per-step `style2D.atomColors`/`view3D.atomSymbols` capture/apply, and `fScenarioSyncControlUi` are untouched (no schema change). New `fSyncAtomColorModeDisabled()` dims and `pointer-events:none`s the `Κατά άτομο / Κατά ομάδα` radios while `Έγχρωμα Σύμβολα` is off (reusing the existing `.disabledRadio` convention), synced on load, on toggle, and on per-step apply. `#viewerSettingsPanel.open` scrolls internally so the two extra rows never clip. The two bars keep their remaining controls (2D: mode radios + `Σύμβολα CHn`; 3D: `Υδρογόνα C-H` + style + `Περιστροφή`).
+
+### Narrow-viewer fluid UI text (container query, `jsme-nick-48.css`)
+
+- **Container query instead of a media query** (`jsme-nick-48.css`): the viewer column (`#viewerCol`, 290–620px; ~400px pinned) is decoupled from viewport width, so a viewport media query would never fire in the pinned case. `#viewerCol` becomes a query container (`container-type: inline-size; container-name: viewer`); its containing-block behaviour is unchanged (`.panelTitle` is nearer/positioned, so the settings panel's `top:100%` anchoring holds) and height containment is untouched (resize pipeline unaffected). The settings/control text now eases via `clamp(0.75rem, ~2.1–2.2cqi, <current>)` on `.settingLabel`, the panel/bars' `.radioCheckContainer`/`.checkBoxContainer`, `#dropLabel`/`.dropLi`, and `.viewerHeightVal` — at the 620px max the clamps land on the current sizes (wide layout unchanged), easing to a **0.75rem floor** as the column/pinned width shrinks. Scoped to `#viewerCol` (left/right menus and the scenario bar, which share these classes, are untouched); `.settingTitle` keeps its size for hierarchy. Browsers without container units ignore the declarations → base sizes (no breakage).
+
+### Settings panel no longer clipped when the viewer column is short
+
+- **Bug** (`jsme-nick-48.css`): `#viewerCol` had `overflow: hidden` solely to clip its children to the column's `border-radius: 5px`. The settings dropdown (`#viewerSettingsPanel`) is `position: absolute; top: 100%` inside `.panelTitle` (the column's first child), so it renders **below** the column's content box. With both viewers hidden (`fToggleViewer2D`/`fToggleViewer3D`) the column collapses to just the title bar and the clip cut the panel off.
+- **Fix** (CSS only): `#viewerCol` `overflow: hidden` → `visible`, and the column's bottom rounding is enforced on the **last visible bar** instead of by clipping — `#controls3D` (always last when 3D is visible) and `#radio2DMode` when `#controls3D` is hidden (`#viewerCol:has(#controls3D.hide) #radio2DMode`), each with `border-bottom-{left,right}-radius: 4px` (= the column's `5px` radius minus its `1px` border). With no viewer visible the column's own rounded background/border renders the corners. The tooltips that were positioned to respect the old clip are unchanged (they were already placed inward).
+- **Caveat**: in pinned mode `#mainAppContainer { overflow-x: auto }` computes `overflow-y: auto`, a second clip ancestor; the no-viewer **and** pinned combination can still clip/scroll there (a viewer-visible pinned panel fits the row and is unaffected). Unpinned is fully fixed.
+
+### Fluid viewers — responsive foundation (`molview-48.js` + `jsme-nick-48.css`)
+
+- **Fluid 2D**: revived `fResizeViewers` fits both JSME applets to the viewer column width via native `setSize` (re-depict; coordinates correct by construction — no zoom-factor machinery; upstream JSME sanctions resize/autoresize patterns), then `fReapplyZoomScale2D()` re-fits the depiction (`setSize` alone left a small stale molecule until any zoom press; also fixed the small methane on load) and rebuilds the Snap overlay + replays numbering. Highlights survive. Debounced `ResizeObserver` on `#viewerCol` (~150ms; width **and** height; replaces the retired window listener); one initial fit at `jsmeOnLoad`; constructor stays `590×240`; zoom (`molZoom2D`, stored per step) composes on top untouched. `#viewerCol` bounds: `max-width: 620px` (the old `width: 620px` was dead code under `flex-basis: 0`), `min-width: 290px`.
+- **Container-derived heights**: `fViewerHeights2D3D()` (viewport minus page chrome and measured column chrome, visible viewers split equally, CSS-minimum floors 200/120, phone-landscape cap as ceiling, sibling-column dead-space top-up — never the viewers' own heights, avoiding circularity) replaces the width-ratio formulas; 3D asserts the same height on `Jmol.resizeApplet` and `#jmolAppletNomeclature_appletinfotablediv`; container divs never take explicit heights. Visibility is read off the actually-toggled units (the nested `#jsmeNomeclatureSVG` lives *inside* `#jsmeNomeclatureDIV`, invisible to a `viewerCol.children` loop — found via the debug line).
+- **Diagnostics + robustness**: `window.MuLERmoCDebugResize` flag → one `[resize]` console line per run (helper values, fallback usage, applied sizes, visibility; window vars don't survive reload — set it, then trigger a resize); 3D resize re-sent once via the `jmol_isReady` handshake (the initial fit can land before the applet is live); 3D path guarded (`typeof Jmol` + try/catch).
+
+### Misc UI polish (v48)
+
+- **Narrate icon** (`js/mulermoc-nom-molview-48.js` + shared `js/ui-icons.js`): `#readNameBtn` now renders the `audioDescription` registry glyph (`svgAudioDesc`) instead of `svgPlay`.
+- **Name-style toggles** (`css/jsme-nick-48.css` + `js/mulermoc-nom-teaching-48.js`): the box/cross/eye/narrate buttons shrink to 20px with a 2px border, and the box/cross toggles add/remove `.active` on click (dark-blue fill, very-light-gray border) so their state reads like the eye toggle.
+
+---
+
+## [v47] — 2026-10-16 (`index.html` → 47; v46 frozen, runnable at root)
+
+New parallel file set `mulermoc-nom-47.html` + `js/*-47.js` + `css/*-47.css`, copied from v46 (`index.html` → `mulermoc-nom-47.html`; `*46*`/`*45*` runnable at root, untouched). All stepper work below is `*47*`-only.
+
+### Main-chain stepper (FG-aware longest-chain pool, rank-parallel 2D+3D)
+
+- Core (`core-47.js`): Rule A/B orientation extracted verbatim into `fOrientChainPath[/3D]` (shared with the pool builder); new `fTopFgAnchorSet` (top `gFunctionalGroupsOrder` FG's anchor carbons; halogen/hydrocarbon unranked, ether recorded without requirement) + `fRankChainPool` (FG-cover filter → max-length tier → legacy comparator, stable sort → per-entry orientation). Pools persisted as `mainChainPool[/3D]` (+3D owner key); Step 9 adopts the live walk index (fresh loads land on pool[0]; same-molecule rebuilds keep the stepped chain). All fallbacks seed single-entry pools; `terminalFgCarbons[/3D]` globalized.
+- Step index stored in step JSON: additive top-level `chainIdx` (default 0, no version bump) — silent capture on Save/Update, validated on import (invalid → 0 with warning, clamped to the live pool at apply), re-asserted after the step load with naming/boxes winner-based and highlight replay on the stored chain; 3D follows via the shared index at parse time (no separate hook needed). Exit keeps the exit step's chain (no author-chain stash, same contract as `selectedMol`).
+- Stepper UI (name-settings panel, `molview-47.js` + `jsme-nick-47.css`): `‹ n/N ›` group in one `#chainStepperBox` container div, interpolated into the panel template left of the narrate toggle with live counter/disabled states (truthful across naming rebuilds); renders only with 2+ chains (algorithmic mode, molecule loaded). Owner-styled caption label under the box. No reset button, no reason row (owner cut). Per step swaps the live chain globals, recomputes name/substituents, then refreshes only the selected component via the click sequence (`fClearHighlights` + rebuild + `fExplainNameComp`, no toggle, no narration); with nothing selected the counter alone updates. Validation bypassed while stepping; algorithmic mode only; walk index survives same-molecule rebuilds (mode switches, naming recomputes adopt the stepped chain — only fresh molecule loads reset to pool[0]); rank-parallel 3D only when the 3D pool is fresh (async parse), else 2D-only.
+- Stepper UI layout per molecule case (name-settings panel, `molview-47.js` + `jsme-nick-47.css`): the panel is now a column of two spread rows (`#nameSettingsRowTop` + `#nameSettingsRowMain` with `.nsLeft`/`.nsRight` groups) — ether + stepper renders the stepper alone on top with radios left / buttons right below; stepper-only (non-ether) and radios-only (ether, no stepper) share one row left/right; neither keeps buttons right as in frozen versions. No empty half-rows; single-row cases emit no extra row. `fRenderChainStepper()` collapses the top row or the inline left group when the stepper hides. Stepper tooltips (`‹`/`›`) render above the row below (`z-index: 400`, same level as save/zoom/settings bubbles); disabled stepper buttons take    `pointer-events: none` (same convention as `readNameBtn:disabled`), so no tooltip shows on an inactive step.
+- Numbering-bonds setting (viewer settings, `molview-47.js` + `teaching-47.js` + `mulermoc-nom-47.html` + `scenario-47.js`): new `Επισήμανση δεσμών κατά την αρίθμηση` checkbox (`#highlightNumberingBondsCheck`, default on) next to the atoms toggle — main-chain/acid-fragment numbering clicks highlight the C–C bonds only when enabled (atoms + numbers unaffected). Wired via `fShowNumberingBonds()` + opt-out `skipBonds` params on `fHighlightAtomChain[/3D]` (alkyl-rule callers keep bonds always on);    toggling with the chain component selected re-applies live (bond-atoms pattern). Stored per step as additive `styleHighlight.numberingBonds` (legacy → on, no version bump), with Present stash / Exit restore. Follow-up fix: the 2D main-chain path (`fHighLightMainChain`) painted atoms only, so 2D bonds never lit — it now also paints every bond with both ends in the resolved chain (any order, green `9`, 3D parity), under the same setting, so default-on truly highlights bonds in both viewers. Follow-up fix 2: 3D numbering bonds were grey (`[X909090]`, reading as dimmed/off next to green atoms) — now green (`[X79dc6d]`) like the atoms when checked; alkyl paths already overpainted green via `fColorFragmentBonds3D`, so their pixels are unchanged. Follow-up fix 3: atoms and bonds gate independently (previously bonds hid under the atoms `if`, so atoms-off killed bonds too) — `fHighLightMainChain[/Bonds]` split in 2D, `skipAtoms` 4th params on `fHighlightAtomChain[/3D]`; the 3D off-state paints explicit neutral grey (plain `none` inherits the atom color in Jmol, which had made unchecked bonds render green); one combined live re-apply covers both checkboxes.
+- CSS color naming (behavior-identical, `*47*` stylesheets only): `--baseColor` → `--darkBlue`, `--guiColor` → `--vibrantGreen`, `--bgColor` → `--veryLightEarth`, `--lightGrayNick` → `--veryLightGray` (values unchanged; frozen `*42–46*` + archive keep the old names).
+
+---
+
+## [v46] — 2026-10-15 (`index.html` → 46; v45 frozen, runnable at root)
+
+Earlier entries below were written against `*44*` paths; the same behaviors now ship in the `*45*` set (mechanical copy + the rename below). v45 is frozen at 65 keys with its pre-formate core; v46 is a mechanical `*45*` → `*46*` copy carrying the 4 molecules + formate fix below.
+
+### MOL re-embed round: redrawn geometry + title-line fix (v46-only data)
+
+- Owner redrew the 2D MOLs in ChemDraw (alignment + new geometry): all 12 new-molecule blocks (`diethyl_ether`, `isopropyl_methyl_ether`, `methyl_methanoate`, `isopropyl_ethanoate` × Condensed/Expanded/Skeletal) plus `dimethyl_2_3_butane` Condensed/Expanded re-embedded in `js/jsme-nick-nomeclature-moc2-data_46.js` (LF-normalized; `*45*` files and `data_45.js` untouched).
+- Root-cause fix (2026-10-15): the first import had dropped the filename title line, shifting the V2000 counts line from index 3 → 2 — JSME parsed 0 atoms (empty viewer + `fCalcMainChain: cyclic molecule` console fallback). Titles restored; full 195-block audit passes (counts at index 3 everywhere). CORRECTION to the earlier "no SMILES title" note below: V2000's 3 header lines *include* the title — dropping it was a mistake, not a rule.
+- Two redraws landed short on hydrogens and were fixed at source before import: `dimethyl_2_3_butane_2D_Expanded` (18→20 atoms, the two methine H's) and `isopropyl_methyl_ether_2D_Expanded` (14→15 atoms, the central CH hydrogen). Per-carbon H/valence gates pass (`[3,1,1,3,3,3]` and `[1,3,3,3]`).
+- ChemDraw re-exports write CRLF; the embed normalizes to LF (asserted no-CR in `data_46.js`). Working-copy `.mol` files keep CRLF on disk; `* text=auto eol=lf` normalizes them on commit.
+- Owner browser-verified: both esters load (`μεθανικός μεθυλεστέρας`, `αιθανικός ισοπροπυλεστέρας`), warning gone.
+
+### Grey C–H bonds in expanded mode (v46-only viewer)
+
+- New `fApplyCHBondColors2D()` (`js/mulermoc-nom-molview-46.js`, called from `fUpdateSVG()` after the atom-color pass): when `Έγχρωμα Σύμβολα` is on and `mode2D === "expanded"`, C–H bond lines take `atomColors2D.H` (`#909090`, same as the H labels). Fresh JSME SVG is black each rebuild so toggle-off needs no reset; green highlight backgrounds are separate attributes and win where applied. Condensed/skeletal untouched (no explicit H lines). Browser check pending.
+
+### 3D default zoom 80 → 50 (`spt/init-3.spt`)
+
+- Shared JSmol init script now opens at `zoom 50` (was 80). Applies to all versions loading 3D (owner change, committed with this batch).
+
+### Icon consolidation into `js/ui-icons.js` (v46-only consumers)
+
+- All 12 molview SVG consts (`settings/speaker/mute/stop/playSm/nameBox/…/eyeState`) moved to the shared registry, markup byte-identical; `molview-46.js` keeps guarded lexical aliases so every use site (`teaching-46`, `scenario-46` included) works unchanged. `playSm` naming avoids the existing 512-viewBox scenario `play` icon. `*42–45*` sets keep local copies (frozen).
+- Save-image icon (`saveImage`, from `imgs/image-svgrepo-Industrial-Sharp.svg`, ids stripped) inlined for v46: both save buttons use registry-filled placeholders + a generic `[data-icon]` hydration; the `.svg` file stays on disk for the frozen pages.
+- `zoomIn`/`zoomOut` (Industrial-Sharp) added to the registry for later use.
+
+### 2D zoom controls (v46-only)
+
+- New `molZoom2D` state (default 2.0, the long-standing load value) applied by `fLoadMol2D` on both JSME applets; `fZoom2D(dir)` steps ×1.25 clamped 0.5–6.0, then re-renders + replays numbering. −/+ buttons docked left of the 2D save button.
+- Zoom resets to default on every molecule load (`fInitProps`); mode/chain switches keep it for comparison.
+- Steps capture additive `style2D.zoom` (legacy → 2.0, no version bump): Save/Update carry it, apply re-asserts it after the step load, Present entry stashes / Exit restores the author's live zoom (same pattern as the eye/hidden stash).
+
+### 3D zoom controls (v46-only, live-only)
+
+- New `fZoom3D(dir)` sending owner-provided `zoomTo IN;` / `zoomTo OUT;` to JSmol (guarded); −/+ buttons in a `#view3DTools` cluster symmetric with 2D. No state, no capture: JSmol `load` resets framing per molecule, and per-step cameras remain moveto's job (capture/apply follow-up pending, out of scope here).
+
+### Viewer tool-button merge (v46-only chrome)
+
+- 2D zoom pair + save share one `#view2DTools` container and one `.viewerToolBtn` class (3D: `#view3DTools` + reclassed save); the hand-synced `right:36px` offset and duplicated CSS are gone, zoom buttons join the save-button tooltip clip-avoidance geometry. Pixel-identical layout.
+
+### Per-molecule SMILES at boot (v46-only, storage-only)
+
+- `fClassifyAllMolecules()` now also reads `getSmiles()` (with `smiles()` fallback) off the already-loaded condensed structure and stores it on `nameExamples[key].smiles` — no new loop, no extra `readMolFile`, no perf cost, miss → `null` (never a boot failure). No UI and no logging changes yet; reserved as a future canonical molecule id (research logging, menu search, mol-info display).
+
+### Four new molecules (66th–69th: 2 ethers + 2 esters)
+
+- New `nameExamples` keys `diethyl_ether` (`CH3CH2OCH2CH3`), `isopropyl_methyl_ether` (`CH3OCH(CH3)2`), `methyl_methanoate` (`HCOOCH3`), `isopropyl_ethanoate` (`CH3COOCH(CH3)2`) — all `mainChain_*`/`mainChain3D` empty → algorithmic chain, no `moveto` yet — in `js/jsme-nick-nomeclature-moc2-data_46.js` (65 → 69 keys).
+- New 2D MOLs `<key>_2D_Condensed/_Expanded/_Skeletal` (exact `mols/new_molecules/` file bytes, v45 case; V2000 3-header rule, no SMILES title) + 4 `reg()` lines; 3D `mols/nomeclature-moc2/<key>_3D.sdf` (PubChem CIDs 3283/11721/7865/7915, inbox copies kept). Menu grouping automatic via engine.
+- Headless-verified all 3 modes: `αιθοξυαιθάνιο` / `διαιθυλαιθέρας`, `2-μεθοξυπροπάνιο` / `μεθυλπροπυλαιθέρας`, `μεθανικός μεθυλεστέρας`, `αιθανικός προπυλεστέρας`; full 69×3 regression: 0 name changes among the 195 pre-existing combos. Browser name-box/highlight check pending.
+
+### Formate-ester engine fix (v46 carries it; v45 core untouched)
+
+- Bug: `methyl_methanoate` named `1-αλκοξυμεθάνάλη` — the formyl carbonyl C (explicit H in KingDraw MOLs is skipped in `atomValenceList`, so valence 3) was classified `aldehyde`, and the ester reclassification only consumed `ketone` O. Same latent issue in 3D (`fDetectMolType3D`).
+- Fix (`js/mulermoc-nom-core-46.js`): new ether+aldehyde → ester pass in `fDetectMolType`/`fDetectMolType3D`, mirroring the HCOOH alcohol+aldehyde acid check — an aldehyde O whose C neighbors the ether O (`O=C(H)-O`) is by definition a formate ester. Now `μεθανικός μεθυλεστέρας`. No false positives possible (a free aldehyde C never bonds an ether O); real aldehydes (e.g. ethanal) verified unchanged.
+- Known nit carried: `isopropyl_methyl_ether_2D_Expanded.mol` counts `17 14` vs PubChem 3D `15 14` (C4H10O = 15 atoms correct) — embedded as-is, 2D review pending.
+
+### Iso-alkyl prefix upgrade (v46-only engine + COMMON labels)
+
+- Bug: branched alkyl fragments were named by carbon count only — isopropyl rendered `προπυλ` (`αιθανικός προπυλεστέρας`, common `μεθυλπροπυλαιθέρας`).
+- Fix (`js/mulermoc-nom-core-46.js`): new `isoAlkylNames` table + `fAlkylGroupName(len, attachC, kind)` shape check (attachment C with 2+ carbon neighbors → branched; straight output byte-identical), wired into all four alkyl slots — ether systematic prefix, ether common stems, ester alcohol part, hydrocarbon branch names. COMMON box labels (`js/mulermoc-nom-molview-46.js` `fGetEtherCommonParts`, which carries its own stem copy) routed through the same helper; `alkylBranchNouns` gains `ισοπροπυλο: "ισοπροπύλιο"`. Table extensible to iso-/sec-/tert-butyl (no molecules yet).
+- Now `αιθανικός ισοπροπυλεστέρας`, common boxes `ισοπροπυλ + μεθυλ + αιθέρας` (existing alphabetical sort puts `ισοπροπυλ` first); systematic `2-μεθοξυπροπάνιο` and symmetric `διαιθυλαιθέρας` unchanged. Names-only change — 3D highlight sets untouched. Headless 69×3 gate: exactly 6 changed lines (2 isopropyl molecules × 3 modes), COMMON boxes verified for all 3 ethers, 3D classification snapshot identical. Browser name-box/highlight check pending.
+
+### Common-ether euphony: connecting ο on consonant+consonant joints
+
+- Bug: the fused common name concatenated alkyl stems raw — `αιθυλμεθυλαιθέρας`, `ισοπροπυλμεθυλαιθέρας` — while the systematic assembler (`_joinEuphony`) has always inserted connecting `ο` on C+C joints (e.g. `αιθαν+νιτρίλιο → αιθανονιτρίλιο`).
+- Fix (`js/mulermoc-nom-core-46.js`): hoisted `_gkVowels`/`_isGkConsonant`/`_joinEuphony` to `fGuessName` top (same scope/values, pure move) and routed the asymmetric common fusion (`_pair + αιθέρας`) through it; the symmetric `δι-` path is vowel-led and provably unaffected. COMMON chips stay bare stems (morpheme boxes); only the fused "Κοινή ονομασία" string gains the vowel.
+- Now `αιθυλομεθυλαιθέρας`, `ισοπροπυλομεθυλαιθέρας`; `διαιθυλαιθέρας` and every systematic name unchanged. Headless 69×3 gate: exactly 6 changed lines (2 asymmetric ethers × 3 modes, common slot only), COMMON boxes + 3D snapshot identical. Browser check pending.
+
+### Ester highlight override: acid fragment for αιθ-/−αν− clicks (v46-only)
+
+- Bug: on `αιθανικός ισοπροπυλεστέρας`, the `αιθ-` box highlighted the isopropyl group and `-αν-` lit every C–C single bond. Root causes: the main-chain scorer is length-primary, so the 3-C alcohol fragment beat the 2-C acid fragment (`terminalFgCarbons` only orients); and `fHighlightSingleBondsCC/3D` is molecule-wide by design. Older esters masked both (acid fragment happened to be longest / sole C–C bond).
+- Fix (`js/mulermoc-nom-molview-46.js`, `mainChainAtomsList` untouched): new `fGetEsterAcidChain[3D]()` + `fIsSingleEster()` guard (sole-FG esters only). `αιθ-` click now reports acid length (`r1-c{acidLen}`), highlights + numbers the acid chain; `-αν-` lights only acid C–C singles via an optional atom-set filter on the existing highlight functions (default stays molecule-wide). Formyl esters correctly light zero C–C bonds.
+- Headless-verified derivations (2D + 3D, all 3 modes × 3 esters); naming output byte-identical (core untouched). Browser click-through pending.
+
+### New molecule: dimethyl_2_3_butane (65th, branched alkane)
+
+- New `nameExamples` key `dimethyl_2_3_butane` (2,3-dimethylbutane, `CH3CH(CH3)CH(CH3)CH3`; `mainChain_*`/`mainChain3D` empty → algorithmic chain, no `moveto` yet) in `js/jsme-nick-nomeclature-moc2-data_45.js` (64 → 65 keys).
+- New 2D MOLs `dimethyl_2_3_butane_2D_Condensed/_Expanded/_Skeletal` (exact `mols/new_molecules/` file bytes, filenames normalized to v45 case; no SMILES title line — V2000 demands exactly 3 header lines, SMILES later via JSME) + `reg()` line; 3D `mols/nomeclature-moc2/dimethyl_2_3_butane_3D.sdf` (PubChem CID 6589 copy, inbox original kept). Menu grouping automatic via engine.
+
+### Branched-alkane naming: multiple identical substituents (v45-only engine fix)
+
+- Bug: `dimethyl_2_3_butane` named `2-μεθυλοβουτάνιο` — `fGuessName()` (`js/mulermoc-nom-core-45.js`) took only `sideBranches[0]`, dropping the second methyl (highlighting already found both via the v39.1 union path). Single-branch molecules (e.g. `methyl_2_pentane`) were unaffected.
+- Fix: group `fGetHydrocarbonSubstituentInfo()` branches by substituent name — comma-joined locants + `δι-/τρι-` count prefix (`nameMultiPrefix`), groups in Greek-alphabetical order (halogen-path convention), fed through the existing `comp0NumberList/TextList` fusion. Now `2,3-διμεθυλοβουτάνιο`; single-branch output byte-identical. Headless-verified (`dimethyl_2_3_butane`, `methyl_2_pentane`, `butane`, `pentane`, `propane`); browser name-box/highlight check pending.
+
+### v45 file set + 2D naming rename (code-only, behavior-identical)
+
+- New parallel file set `mulermoc-nom-45.html` + `js/*-45.js` + `css/*-45.css`, copied from v44 (`index.html` → v45; `*44*` runnable at root, `*42*`/`*43*`/archive untouched).
+- Meaningful 2D representation names: MOL variables `<mol>_2D` → `<mol>_2D_Condensed`, `<mol>_2D_E` → `<mol>_2D_Expanded`, `<mol>_diagr2D` → `<mol>_2D_Skeletal`; `MOL2D` registry `{std, exp, diagr}` → `{condensed, expanded, skeletal}`; `nameExamples` fields `structure2D[_E|_D]` → `structure2D_[Condensed|Expanded|Skeletal]`, `mainChain[_E|_diagr]` → `mainChain_[Condensed|Expanded|Skeletal]`; `modeSuffix` values `""`/`"_E"`/`"_diagr2D"` → `"_2D_Condensed"`/`"_2D_Expanded"`/`"_2D_Skeletal"`; new `fMainChainKeySuffix()` helper for chain lookups (molview).
+- Misspelled `mode2D` value `diagramatic` → `skeletal` (core/molview/teaching/scenario); `condensedZigZag` kept as-is. Legacy scenario files with `diagramatic` coerce on import (`fScenarioValidate`, warning + in-memory migration, same pattern as the `moveto` quarantine). No schema change (`scenarioVersion` stays 1).
+- Static audit: braces balanced 44→45 on all five JS files; zero legacy identifiers outside the intentional coercion lines; two composite-key bugs (`"mainChain_Condensed" + suffix` double-prefix in `fHighLightMainChain`/`fUpdateChainModeButton`) caught and fixed in review. Known nit: scenario exports still stamp `"app": "mulermoc-nom-44"` (informational only — validation ignores it).
+
+### Menu-only validation note silenced (boot/import)
+
+- Valid menu-only steps no longer push the informational `"Step N: menu-only step (no molecule)."` warning, so the default S1 preload boots silently; the genuinely-broken case (no molecule *and* no subset → step skipped) still warns, and the save-time `"Saved menu-only step"` confirmation is unchanged. Owner-verified on reload.
+
+### Shared tooltip skin + scenario-bar coverage + Greek tooltips
+
+- One shared skin (single copy in `css/jsme-nick-45.css`): navy `baseColor` bubble (owner restyle), white `Roboto Condensed` `0.75rem` normal text; arrows follow the skin (eye/author-tab/pick arrows fixed to match). Geometry stays per family: button-panel bubbles above (panel `overflow:hidden` clips below-bubbles when the drawer is shut), save buttons left (`#viewerCol` clipping), `[2D]` left-aligned, edge buttons Save-left-aligned/Delete-right-aligned (panel-side clipping); `position: relative` anchors added (no visual change).
+- Scenario buttons converted from native `title` to `data-tooltip`: title row, play bar, panel, step rows (Go=`Προεπισκόπηση`/Update/Duplicate/Up/Down/Delete), note toolbar, type badge, drag handle; `#scNew` unlock path restores (not strips) its hint. Inputs keep native `title` (`::after` cannot render on form controls).
+- All tooltip/`aria-label` texts Greek (14 strings; molecule keys stay Latin identifiers; visible button labels out of scope). Owner hover checks pending.
+
+### Default authoring preload (S1 + empty S2)
+
+- Authoring boots with two cards: S1 preloaded from `scenarios/Αλκάνια-Αιθάνιο.scenario.json` (`MuLERMoCScenario.defaultScenarioUrl`, fetched + `fScenarioValidate`d, warnings toasted; the empty boot card is reused as S1 so ids stay stable) and S2 a fresh empty `untitled-scenario` (1 filled + 1 empty keeps `+ New` unlocked under `maxEmptyScenarios = 3`). S1 is the active card. `?scenario=` deep links skip the preload; `file://` fetch failure falls back silently to today's single empty card (Import remains the offline path); bare `?present=1` presents the preloaded S1, else keeps the "needs ?scenario=" toast. No schema change (`scenarioVersion` stays 1).
+
+### Present control bars survive a no-viewer exit (stale `hide` class)
+
+- Bug: exiting from a step with no 3D viewer, then Playing again, lost the `controls3D` bar even when the step's `3D ρυθμίσεις` checkbox was checked (same latent issue for `radio2DMode` after a no-2D exit). Cause: two hiding mechanisms — the viewer toggles / `fScenarioRestoreChrome` add the `hide` class (`display:none !important`) while `fScenarioChrome` (via `fScenarioHide`) cleared only inline `display`, so the stale class survived step entry and `!important` won.
+- Fix (`js/mulermoc-nom-scenario-44.js`): new `fScenarioShowBar(id, show)` helper drives both inline display and the `hide` class; `fScenarioChrome` uses it for `radio2DMode` + `controls3D`, so a checked bar is always available in presentation. Authoring callers are all followed by `fScenarioRestoreChrome(viewers)`, which re-applies viewer-based hiding — author-toggled bars stay as left.
+
+### Per-component name visibility (eye toggles)
+
+- Master eye-edit switch in `#nameSettingsPanel` (`#nameStyleEyeToggle`, live-only `window.nameEyeEdit`, never stored; single `eye-state-button` icon + `.active` highlight): reveals a small eye button above each name component (`js/mulermoc-nom-molview-44.js`, `js/mulermoc-nom-teaching-44.js`, `css/jsme-nick-44.css`). Eye artwork from the Industrial-Sharp set (`imgs/eye-*.svg`, inlined as consts with `currentColor` fills; uniform `-9 -244 800 800` viewBox).
+- Hidden boxes render a dash on a `lightBlue` fill (`.comp-hidden`), stay inert (no highlight/explanation; stored highlight replay skips them), and masking applies at box-construction time so every rebuild honors it.
+- Narration follows visibility (`#readNameBtn`, `fSpeakNameWithPauses`); PNG export shows the dash boxes as displayed (DOM clone, no code change).
+- Scenario steps store `styleName.hidden` (comp ids) + `show.nameEye` (per-step drawer checkbox `Ορατότητα συνθετικών`, default off, molecule steps only): checked steps keep live eye toggles in presentation (step data untouched); unchecked steps render dashes with no toggles. `Update` refreshes `hidden` from the live view and preserves `nameEye`; legacy files default to all-visible. Present entry stashes / Exit restores the author's live hidden set + edit mode.
+- New-molecule reset: selecting a molecule clears the hidden set (all visible); scenario steps re-assert their stored set after the load. In presentation, per-box eyes follow the master switch while the naming settings gear is shown (master seeded from `show.nameEye` on step entry, so `Ορατότητα συνθετικών` sets the initial on/off and the switch toggles live); without the gear, eyes follow `show.nameEye` directly and the authoring master flag is ignored.
+- Exit restores interactivity: `fScenarioApplyNamingChrome` actively clears a leaked `.locked` class + hidden explain line outside presentation (a locked present step no longer leaves boxes dead in authoring).
+- Hiding the selected component clears its highlights + rule theory first (deselect mirror) and repaints the 2D SVG (`fUpdateSVG` — applet color reset alone left the stale green + numbering painted); hiding a non-selected box leaves the live selection untouched.
+- Narration toggle carries `.active` when on (`#narrateAnalysisToggle`: render-time class in `fShowNameAnalysis`, click-time toggle, control-UI mirror — same convention as `#nameStyleEyeToggle`; styling owner-side).
+- Zero visible components hides the explain line (restored on reveal; menu-only present steps keep their hint by design). The non-present chrome hook applies the same verdict so it can't resurrect a hidden line on authoring rebuilds.
+- Eye tooltips paint above the naming panel (z-index over the panel buttons). Stacking constraint: nothing on `.compEye` may create a stacking context (no `z-index`, no `opacity`/`filter` — off-state dims via `color`), or tooltips sink behind the panel again.
+- Layout contract: fixed-height eye slot above each box (never collapse it), `+`/space separators outside the wrap and bottom-aligned to the fixed-height box. Step drawers render the `Ταξινομήσεις Μένου` set (title + 3 checkboxes) on one nowrap line; `.compEye` buttons are flat white and borderless.
+- Step heading number in its own span: `#pageTitle` renders `<span class="scStepNumberTitle">N.</span> Title` (DOM-built, no space inside the span; untitled steps and Exit restore the plain app title). Pill styling in `css/mulermoc-nom-scenario-44.css` (owner-side). NOTE 2026-10-11: the pill append is currently commented out (`fScenarioFillStepPanel`), so headings render title-only; span construction + pill CSS kept for an easy revert.
+- Present typography pass: `#scStepText` as a centered card (justified) in `css/mulermoc-nom-scenario-44.css` (card max-width now 980px via `styleText.textWidthPx` default, was 600px); `.compEye` recolored to `lightBlue` (off-state `veryLightBlue`) in `css/jsme-nick-44.css`.
+- First stored scenario (SUPERSEDED 2026-10-12, files removed): `scenarios/ethene.scenario.json` (5-step walkthrough; step 5 enables naming settings + interaction + visibility). NOTE: file title is ethene but all steps currently select ethane (content gap, see Known gaps in README). Second stored scenario: `scenarios/ethene-2.scenario.json` (6 steps, all condensed 2D, ethane throughout, ethane-first menu order on the menu steps). Both replaced by `scenarios/Αλκάνια-Αιθάνιο.scenario.json` (7 steps); this entry kept as history.
+- Docs-only: future state-machine note (derived `fScenarioGetState()`, `quiz-author`/`quiz-present` reserved; no code change — see `docs/LAYERS-PLAN.md` §7, `docs/didactic-scenario-plan.md` §10).
+- Step text toolbar (T1): per-step `B I sup sub`, clean; whole-text size via per-step `Size (px)` input `styleText.fontSizePx` (12–28, empty = 18px) and width via `Width (px)` input `styleText.textWidthPx` (320–1200, empty = 980px card default, was 600px) and 1↔2 column toggle `styleText.columns` (toolbar icon button before clean, default 1; `scCols2` class, `break-inside` lists, ≤700px collapse). Allowlist in `fScenarioRenderNote` extended (attributeless, escape-first unchanged; `<ul>`/`<ol>`/`<small>`/`<big>` still render legacy notes, toolbar no longer inserts them); unbalanced-tag hint. Duplicate step (F1): `⧉` deep-clones after with ` (αντίγραφο)` title suffix; renumber gap-free. No schema change (`scenarioVersion` stays 1).
+- Scenario icon buttons: new shared `js/ui-icons.js` (`window.MuLERIcons`, version-independent for future quiz layers); 12 buttons icon-only (Save/add-task-list, Steps/list+count badge, Export/download-list, Play/screen, +New/library-new, Import/upload, Go/play, Update/reset, Duplicate/copy, Up/Down arrows, Delete/close-small) with `title`+`aria-label` kept; bar buttons icon+text. Icon refresh: revised columns1/columns2 geometry + formatClear icon on the toolbar clean button (text `✕` fallback kept). No schema change.
+- Step drag reorder (authoring, desktop HTML5 DnD): dedicated `⠿` grip per `.srow` (span, keeps the step-action button index stable); row stays non-draggable otherwise so inputs keep working; drop reuses the splice + `fScenarioRenumber` path; scroll position restored and moved grip focused. Up/Down buttons remain the touch/keyboard fallback. No schema change.
+- Drawer toggle: Steps button toggles (`fScenarioToggleDrawer`); clicking the button-bar gaps toggles too (action buttons keep their clicks: Add opens-only, Export/Play inert to the panel). Generic panel-background clicks still open-only.
+- Add scrolls to the new step: after Save, the drawer scroller pins to the last `.srow` (rAF + 280ms delayed pass for the `.open` transition; scroll-only, no focus steal).
+- Disabled button freeze (`css/mulermoc-nom-scenario-44.css`): all `button:disabled(+:hover)` keep base text (no white-on-hover); Steps/Play disabled stay dark `baseColor` with white text (shared appearance, no hover change); empty-panel Export disabled stays light (`bgColor`, dimmed). Fixes the disabled Play flashing `guiColor`/`bgColor` via `.scPresent.scIconBtn:hover`.
+- Exit-viewer alignment: `fScenarioRestoreChrome(viewers)` + exit keeps the exit step's stored viewers (a no-3D exit returns to a no-3D authoring view); one-shot 3D reload (`MuLERMoCScenario.reload3DOnce`) after a no-3D exit zaps the applet — ordinary toggles stay refresh-only.
+- Methane on startup (no-3D external-scenario bug patch): `jsmeOnLoad` (`js/mulermoc-nom-molview-44.js`) loads methane on page load again (direct `fSelectMol()`, menu marking best-effort). A cold boot with no molecule ever loaded left the JSmol applet without a valid viewport, so an external scenario with a 2D-only first step (`?scenario=…&present=1`) corrupted all later 3D; one visible startup load primes it. Landing page opens with methane selected.
+- CSS dead-color cleanup (`css/jsme-nick-44.css`): removed unused `:root` vars (`cyanNick`, `cyanDarkNick`, `darkBlueNick`, `orangeNick`, `orange2Nick`, `darkGrayNick`, `test`, `highlightColor2`) + dead commented palette; `darkBlue` consolidated into `baseColor` (value-identical); dead `medBlue` ref removed. New `--bodyBg: #faf7f5` page background. Remaining palette: `lightGrayNick/lightBlue/veryLightBlue/darkEarth/lightEarth/baseColor/guiColor/bgColor/bodyBg` (all live).
+- Merged scenario header: `#scenarioGlobalBar` retired — `+ New`/`Import` live left in the dark `#scenarioPlayBarTitle` row (title center, `✕` in-flow right; ids preserved so wiring + empty-cap sync untouched). All `#scenarioGlobalBar` CSS deleted; header buttons use the cream/base/earth button language.
+- Hint + card transparency: `explainText` hint state (`nameAnalysisMode none`) `background-color:#fff → transparent` (`molview-44.js`); `#scStepText` cream → `#fff` on the warm page; `.compEye`/`.ruleTile` `#fff → transparent`; `#menuToggle` medBlue line deleted.
+- Light-blue framing pass (owner styling, `css/jsme-nick-44.css` + `css/mulermoc-nom-scenario-44.css`): `.panelTitle`/scenario title/menu + viewer frames → `lightBlue`; selection hues swapped (row `.selectedLi` → dark `baseColor`, group `.crossMenuLi.selectedLi` → `lightBlue`); all tooltips (+ arrows) → `darkEarth`; settings dropdowns → `veryLightBlue` + bottom rounding; `#viewerCol` full 5px radius + `overflow: hidden` (watch gear/tooltip clipping at the column edge); `.menuLiCounter`/rule tiles follow `baseColor`. Known drift: `.scPresentGroup.open` still carries the old dark fill while its model (`.crossMenuLi.selectedLi`) went light — re-mirror or restyle in the UI pass.
+- Title-button border contract (`view2DBtn`/`view3DBtn`/gear `.settingsBtn`): single 2px `veryLightBlue` rim (was 1px earth); active keeps the light rim on navy; `:focus-visible` white ring + offset (no more UA-outline doubling). `#scPickToggle` aligned to the same tokens (cream check, navy on-box, white focus, earth tooltip) but stays borderless — a chip border nested a second rectangle around the check box (fixed the same day).
+- Exit settings-panel restore: `fScenarioRestoreChrome` id-list gains `viewerSettingsPanel` + `nameSettingsPanel` — the viewer gear dropdown previously stayed `display:none` after Exit (present hides it inline; static HTML never rebuilds it).
+- Go/Jump pick alignment (authoring, `fScenarioGoAlignPick`): after a successful preview the live pick mirrors the step — subset-carrying steps (menu-only or molecule+menu) restore picks with pick mode on; menu-less molecule steps clear silently (bypasses the toggle's clear-toast). Go → tweak → Update round-trips now keep the menu (previously lost it: capture reads live picks). Present navigation (Prev/Next/Play/deep links) never touches picks. Unknown subset keys filtered with a toast.
+- Row Go activates its card first (`fScenarioSetActive(scenId)`): Go previously applied the active card's step even from another card's row, while Update/Dupe/Up/Down/Delete all honor the row card.
+- Go viewer-chrome alignment (authoring): `fScenarioGo` reuses `fScenarioRestoreChrome(step.show.viewers)` after apply — `fScenarioChrome` hides nothing while `!present`, so panes + `[2D][3D]` actives + control bars kept the live states (e.g. 3D up on a 2D-only step). Exit already had this; Go was missing it. Present path skips it (chrome owns that).
+
+## [v44] — 2026-10-07 (index →44; v43 frozen at tag `v43`)
+
+New parallel file set `mulermoc-nom-44.html` + `js/*-44.js` + `css/*-44.css`, copied from v43 (`index.html` → v44 since `905946e`; browser verification pending). All fixes below are `*44*`-only; `*43*` untouched.
+
+### Engine (`js/mulermoc-nom-core-44.js`)
+- N-table rewrite (2D `fDetectMolType` + 3D mirror): non-terminal N classified by bond-order counts instead of valence sum — tertiary amine R3N → amine (was: misclassified imine), R-NO2 → nitro incl. JSME charge-separated form (1 C-single + 1 O-single + 1 O-double; was: stale-group leak + crash); every branch sets taxonomy explicitly; terminal-N `default → amine` guard.
+- Principal functional group by priority rank (`gFunctionalGroupsOrder`), not insertion order (stable sort; unranked buckets tie after ranked ones).
+- `functionalGroupsOrder` no longer mutated per `fGuessName()` call (local `fgOrder` copy in multi-FG branch).
+- Stored-chain override guarded (unknown molecule falls through to algorithmic chain instead of `TypeError`); aldehyde/ketone carbonyl index fixed (`[0]`, parity with 3D).
+- Halogen prefixes generalized to N types (explicit Greek-alphabetical order; old reverse-iterate + 2-type patch dropped — 1/2-type output byte-identical, 3+ types no longer drop a halogen); polyfunctional `di-/tri-` accumulated per group (single-group output unchanged).
+- Defensive suffix fallback (`hydrocarbon`) for buckets without a naming entry; cyclic C-skeleton early-out (console warning + deterministic fallback, 2D + 3D).
+
+### Viewer (`js/mulermoc-nom-molview-44.js`)
+- Numbering: `fShowNumber` off-by-one (`>=`), diagrammatic no-match `continue` (no stale coords), `fShowNumbering3D` no longer mutates global `mainChainAtoms3D` (local copy + optional chain param on `fShowNumber3D`).
+- `fUpdateSVG` null guards (empty SVG / logo); `carbonHydrogens.fill(0)`; `JmolSelection` join contract normalized; `fClassifyAllMolecules` snapshots/restores core globals in `finally`.
+
+### Deferred to a later phase (Greek-convention decision)
+- Ketone/alcohol/nitro locant suppression thresholds (`butan-2-one` without `2-` etc.) kept as-is — Greek convention differs from English; revisit separately.
+
+## [Unreleased] (v43 working copy — splits committed vs uncommitted 2026-10-06)
+
+### Committed (hashes in git log)
+- S1–S4 JSmol scenario repair (`js/mulermoc-nom-scenario-43.js`, `js/mulermoc-nom-molview-43.js`, `mulermoc-nom-43.html`): `scriptWait("show moveto")`-only capture (poisoned `getPropertyAsString` branch deleted), strict numeric `moveto` grammar with import-time quarantine (`moveto: null` + warning), per-step token gating the camera (+400ms) and the name-box click (on `fFetchAndParse3D` completion via `fScenarioOn3DParsed`, 2s fallback), `jmol_isReady` handshake (`window.JSmolReadyFlag`) for `?scenario&present` deep links, `" compSecondSub*"` mode-key normalization; `zap` guard fixed (`!show3D`); Exit restores full chrome (menu `menu-open` + both viewers) via a transient clone so stored `show.*` survives for Export. Closes `didactic-scenario-plan.md` §8 `moveto`-timing question.
+- Fixed duplicated `mulermoc-nom-43.html` document (stray `>` + full second `<head><body>` copy, commit `49aead3`): single `pageContainer`, single JSmol applet init, single `</html>` — duplicate IDs had desynced viewer capture/apply/toggles (`2D-only → 2D+3D` saved as 3D-only).
+- Vision twofold+1 with LEARN-first layers (LEARN → EXPLORE-lite → PRACTICE → PLAY); embedded static in Drupal; research-primary logging. See `README.md` and new `docs/LAYERS-PLAN.md` (contracts, exercise types v1, event schema v1, timeline, P1–P6 ownership).
+- Scenario exit now restores full chrome (menu `menu-open` + both viewers + all bars) in `js/mulermoc-nom-scenario-43.js`.
+- LEARN v1.1: stored `scenarios/` library plan + two-level EPAL/Lyceum `note` convention (`docs/didactic-scenario-plan.md` §9).
+- EN upgrade recorded as conditional Phase 5 (`docs/LAYERS-PLAN.md` §8); `lang` reserved in schema/events, not implemented.
+
+### Working copy (uncommitted batches — verify with `git status` before release)
+- Deduped stylesheets (paste-accident copies, render-identical): `css/jsme-nick-43.css` 3845 → 1922 lines (exact 2× copy) and `css/mulermoc-nom-scenario-43.css` 3226 → 810 lines (`[X][Y][X][Y]` quadruplication; kept the X superset copy so no rule lost — verified zero non-blank lines dropped, braces balanced, LF no-BOM preserved).
+- Presentation CSS hook: new `#pageContainer.presenting` class (flipped by `fScenarioSyncPresentClass()` on every step apply + Exit + failed-start rollback, so it self-heals across navigation and survives menu/name rebuilds); first override is a taller present-mode `.menuListContainer` (`max-height: 350px` vs the 150px author default) in `css/mulermoc-nom-scenario-43.css` — the pattern for future present-only styling without JS churn.
+- Empty-scenario cap: `MuLERMoCScenario.maxEmptyScenarios = 3` (adjustable) — `scNew` locks with a toast while the cap is reached, and a panel's Delete locks when it is the last remaining card and empty (one empty card is always kept); synced in `fScenarioRenderOne()` so every mutation path stays consistent, imports always land untouched (`js/mulermoc-nom-scenario-43.js`, `css/mulermoc-nom-scenario-43.css`).
+- Per-step menu grouping (Ταξινομήσεις Μένου): new additive `menuGroups` step field (`molecules` default/flat fallback, `chemclass`, ` series`; no version bump) with 3 drawer checkboxes per menu-step row (pure molecule steps show none); presentation renders the picked subset flat, single-grouped (collapsible scenario-owned headers, carbon-count sorted, local numbering), or — when 2+ checked — with a present grouping switcher (default view = molecules when checked); free-browse rows keep working in all   views (`js/mulermoc-nom-scenario-43.js`, `css/mulermoc-nom-scenario-43.css`, `docs/didactic-scenario-plan.md` §2). Classified present groups start shut (headers mirror `.crossMenuLi`, open header + body take its `--baseColor` selected chrome/border); the group holding the selected molecule renders open. Headers run a main-app-identical accordion (open shuts the rest, explicit slideUp/slideDown, selection preserved); the grouping switcher lays its radios in one column.
+- Removed PubChem/molInfo placeholders (not in this phase): `molInfoBtn`/`molInfoPanel` dead code (`fToggleMolInfo`, `svgInfo`, panel/button builders) from `js/mulermoc-nom-molview-43.js`, molInfo CSS from `css/jsme-nick-43.css`, `molInfoPanelSlot` host + `externalLinks`/`show.infoHost` from `js/mulermoc-nom-scenario-43.js` (capture/defaults stripped; legacy files load with them silently ignored, `scenarioVersion` stays 1); deleted `docs/PUBCHEM_HYBRID_PLAN.md`; docs updated (`README.md`, `docs/LAYERS-PLAN.md`, `docs/didactic-scenario-plan.md` §1/§2/§5/§6/§7/§8/§9). v42 copies frozen untouched.
+- Menu-only naming hint follows the lock: hidden only when `Name interact` is off; when interaction is on it shows on step entry and reappears after free-browse selection via new `fScenarioOnPresentBrowse()` (flat-menu click hook; `fExplainNameComp` only sets HTML, never display, so the step-apply hide persisted) (`js/mulermoc-nom-scenario-43.js`, `js/mulermoc-nom-teaching-43.js`, `docs/didactic-scenario-plan.md` §2).
+- Naming-controls steps open without a flash: `fScenarioApply` forces `nameSettingsFlag = false` before `fSelectMol()` when `show.nameSettings !== true` in presentation, so the rebuilt `#nameSettingsPanel` renders closed on first paint instead of a visible open→close fade; `fScenarioChrome` remains the authority afterwards (`js/mulermoc-nom-scenario-43.js`).
+- Naming chrome re-asserted after rebuilds: new `fScenarioApplyNamingChrome()` (extracted from `fScenarioChrome`, same logic, display-only) re-hides the naming gear/panel + voice buttons whenever `fShowNameAnalysis()` recreates them without the presentation hides — free-browse row clicks (via `fScenarioOnPresentBrowse()`, now step-kind-agnostic) and 2D/chain/ether control switches (guarded tail hook in `fShowNameAnalysis()`); fixes the gear reappearing on menu-type steps with `Name controls` unchecked (`js/mulermoc-nom-scenario-43.js`, `js/mulermoc-nom-molview-43.js`).
+- Per-step Update button: each drawer step row gains `Update` (after `Go`) — `Go` previews the step, the author tweaks the live view, `Update` rewrites the stored view snapshot via new `fScenarioUpdateStep()` (reuses `fScenarioCapture()` guards/derivation; preserves step `title`/`note` + 4 chrome checkboxes `show.controls/nameSettings/nameClick`; refreshes molecule, 2D/3D modes + styles, naming selection/toggle/chrome visuals, `selectedRule`, highlight/audio settings, `moveto` camera, `menuSubset`/`show.menu`/`show.viewers`; toasts kind/subset changes; no schema bump, `scenarioVersion` stays 1) (`js/mulermoc-nom-scenario-43.js`, `docs/didactic-scenario-plan.md` §3).
+- Empty scenario panels gate Steps/Export/Play: `fScenarioRenderOne()` sets `disabled` on `.scList`/`.scExport`/`.scPresent` at 0 steps (cleared on first save); Save step + Delete stay live; gated buttons render at 0.7 opacity with `not-allowed` cursor and no hover response (`js/mulermoc-nom-scenario-43.js`, `css/mulermoc-nom-scenario-43.css`). Empty panels also never drop the drawer: `fScenarioOpenDrawer()` returns early at 0 steps (accordion still collapses the other cards; the clicked card activates but shows nothing until its first save).
+
+- New steps default their title to the live Greek IUPAC name (`currentMolName` via `fScenarioG`, used only when the loaded molecule matches the capture; key fallback for adopted picks, `"menu"` for menu-only; imports unchanged) (`js/mulermoc-nom-scenario-43.js`).
+- Step notes support a safe formatting subset: `<b>`, `<sup>`, `<sub>` (attributeless; everything else stays escaped, so no injection surface) in `#scStepText` + play-bar note via new `fScenarioRenderNote()`; authors type tags in the plain drawer textarea (placeholder hints it); tag-free notes render byte-identically, no schema change (`js/mulermoc-nom-scenario-43.js`, `docs/didactic-scenario-plan.md` §2).
+- Multi-scenario authoring: `#scenarioAuthorBar` is now a global shell (`Σενάρια Παρουσίασης` title + `+ New` / `Import`, Import adds a panel) owning `#scenarioPanels`; each `.scenarioPanel[data-scenario-id]` has its own button panel (Save/Steps/Export/Play, no Import) + in-flow `.scenarioDrawer` (down/up via `.open`, no fixed positioning); explicit active card drives Save/pick/Present, per-card Export (v1 schema unchanged), delete + title rename, legacy singletons mirror the active card (`js/mulermoc-nom-scenario-43.js`, `css/mulermoc-nom-scenario-43.css`).
+- Step drawers drop down/up inside their own scenario panel (in-flow `.scenarioDrawer` via `.open`: `max-height` + fade, no fixed positioning; `fScenarioPositionDrawer()` retired to a no-op); accordion — opening one scenario's Steps closes the others; drawer follows the card via `fScenarioOpenDrawer()` (panel-background click or Save opens it, Steps on the open card shuts everything); panels never shrink (`flex: 0 0 auto`) so the `#scenarioPanels` list scrolls under the 85vh bar cap; single column enforced (`nowrap` + `stretch`) (`js/mulermoc-nom-scenario-43.js`, `css/mulermoc-nom-scenario-43.css`).
+- Step rows: type-only badge (`molecule`/`menu` driven by `show.menu`, molecule key + subset size in the tooltip, menu tint via `.is-menu`, housed in `.scStepNumberWrap` under the step number); scenario headers lead with a positional counter pill (`S1`, `S2`, … — index-based, gap-free across add/delete; internal ids untouched); empty scenarios (0 steps) flag `.is-empty` on the card, count pills, and Steps button; step title input gains `scStepTitle` class + persistent `Τίτλος βήματος` label above it; Steps header prefixed with the live scenario name; `Text` checkbox removed — heading + text show automatically iff the step carries title or note (legacy `show.text` ignored, self-healing); 3D custom-view badge + per-step re-capture button removed while JSmol `moveto` is broken (`view3D.moveto` schema/capture/validation kept, UI returns with the fix) (`js/mulermoc-nom-scenario-43.js`, `css/mulermoc-nom-scenario-43.css`).
+- Authoring handle docked to the bar: `#scenarioAuthorTab` is the bar's first child (`width:40px; left:-40px; top:0`), bar closes fully off-screen (`translateX(100%)`, shadow off) with only the handle visible; authoring-off defers drawer/pick teardown past the slide (`skipDrawers`) so the toggle frame carries only the bar animation; open: still under investigation (Play close glides, tab-toggle close snaps — console-triplet diagnostics pending, WAAPI fallback queued) (`js/mulermoc-nom-scenario-43.js`, `css/mulermoc-nom-scenario-43.css`).
+- Page `h1` top margin removed to tighten the title + step-text stack (`css/jsme-nick-43.css`).
+- Obvious bar close: ✕ button in the scenario title bar (`#scCloseBar`), handle keeps its ✎ icon (highlighted via `.active` while open), ESC closes the bar when not typing or presenting (`js/mulermoc-nom-scenario-43.js`, `css/mulermoc-nom-scenario-43.css`).
+- Presentation keyboard controls: `←`/`→` walk steps (clamped at the ends, no wrap; `preventDefault` vs page scroll), `ESC` exits via the extracted `fScenarioExitPresent()` (shared with the Exit button); all keys ignore modifiers and typing focus; Prev/Next/Exit buttons carry key-hint tooltips (`js/mulermoc-nom-scenario-43.js`, `docs/didactic-scenario-plan.md` §4).
+- Authoring mode behind a `Σενάρια` handle: the author bar, panels, and Pick checkbox stay hidden until the vertical tab (docked top-left of the bar, icon + tooltip) enables authoring; the bar slides as one rigid unit and presentation hides the whole unit via bar-level `.is-hidden` (all class-based, `prefers-reduced-motion` respected; classes are the sole visibility authority — no inline `display`); scratch (picks, steps) survives toggling. Author panel restyled (light 540px panel with title header, per-scenario cards with `Play ▶`, matching drawers, step-number badges, lightBlue drawer checkboxes, `border-box` throughout, row separators from step 2 on) (`js/mulermoc-nom-scenario-43.js`, `js/mulermoc-nom-teaching-43.js`, `css/mulermoc-nom-scenario-43.css`, `docs/didactic-scenario-plan.md` §3).
+- Presentation applies the stored control selections to the bars: new `fScenarioSyncControlUi()` mirrors restored globals onto the 2D mode radios, atom-color checkbox + atom/group radios, 3D checkboxes, and style dropdown (all previously kept the author's live states); menu-only steps assign display prefs without loading so visible bars match and carry into flat-menu browsing. Storage was already complete — no schema change (`js/mulermoc-nom-scenario-43.js`).
+- Presentation always starts from the applied step 1: `Present`, `Go`/Prev/Next, and hash jumps honor `fScenarioApply`'s result (toast + abort instead of a half-applied stale view). Step rows show a type badge (`molecule`/`menu`) and menu-only saves get their own toast, so an accidental molecule-less step 1 is visible at a glance (`js/mulermoc-nom-scenario-43.js`, `css/mulermoc-nom-scenario-43.css`).
+- Step drawer gains per-step chrome checkboxes (all default unchecked): `2D controls` / `3D controls` (write `show.controls`, disabled unless that step's viewer is visible) and `Name controls` (`show.nameSettings`: gear + panel + voice buttons) / `Name interact` (new `show.nameClick`: unchecked locks name-box mouse clicks via a `locked` class while the stored highlight + explanation still replay; explain line hides only when locked with no stored highlight; absent in legacy files = unlocked, no version bump) (`js/mulermoc-nom-scenario-43.js`, `css/mulermoc-nom-scenario-43.css`, `docs/didactic-scenario-plan.md` §2).
+- Menu-only scenario steps: a picked set of 2+ with no molecule selected now saves (`selectedMol: null`, title `"menu"`); presentation deselects first (`fDeselectMol`, so no previous molecule lingers) and shows the flat pick menu; validation accepts them iff the subset is non-empty. Pick↔selection coupling in authoring: selecting a row in pick mode also picks it; unpicking the selected molecule (row or group box) deselects it via `fDeselectMol` (`js/mulermoc-nom-scenario-43.js`, `js/mulermoc-nom-teaching-43.js`, `docs/didactic-scenario-plan.md` §2).
+- Per-step menu subsets for scenarios: authors tick molecules / whole tri-state groups via a Pick toggle in the menu title (live pick, per-step copy on Save; no Menu checkbox — menu derived: 2+ picks show it, single pick collapses to the step molecule with an "adopted" toast when nothing is selected, selection wins over a stray pick); presentation renders a simple flat menu per step (local 1..N numbering, no headers/switcher/checkboxes, rows browsable; unknown molecules dropped and step molecule auto-included with warnings, legacy files migrate on import with stored `show.menu` ignored, no version bump); Exit rebuilds the pristine author menu (`js/mulermoc-nom-scenario-43.js`, `js/mulermoc-nom-teaching-43.js`, `css/mulermoc-nom-scenario-43.css`, `docs/didactic-scenario-plan.md` §2/§4/§9).
+- Χημικές Τάξεις menu groups now list molecules in ascending carbon order like the other classifications (`fSortPropsByCarbonCount` extended from series-only; rule mode keeps its pedagogical order) (`js/mulermoc-nom-teaching-43.js`).
+- Ether/ester alkyl highlights follow the alkyl rule (CnH2n+1: all C + connected H + C–C/C–H bonds, green, both viewers): explicit 3D bond coloring via new `fColorFragmentBonds3D` (+ `fGetEtherGroupFragment3D` for C–O–C) and `includeH` on `fHighlightAtomChain`; IUPAC alkoxy prefix highlights the full chain in 3D (was: attachment C only); `-ιο`/`αιθέρας` highlights bare C–O–C (no H); 2D expanded mode included, condensed/skeletal auto-no-op (`js/mulermoc-nom-molview-43.js`).
+- Scenario Exit force-restores all control bars (`#radio2DMode`, `#controls3D`, save buttons, viewers, menu): new `fScenarioRestoreChrome()` clears both inline `display` and the `!important` `hide` class left by viewer toggles, and re-activates the 2D/3D buttons so the next snapshot captures them truthfully (`js/mulermoc-nom-scenario-43.js`).
+- Bond-component clicks (αν/εν/ιν) highlight bonds only by default; new `Επισήμανση ατόμων δεσμών` settings checkbox (`#bondAtomsCheck`, default off) opts endpoint C atoms back in, with live re-apply (`js/mulermoc-nom-molview-43.js`, `js/mulermoc-nom-teaching-43.js`, `mulermoc-nom-43.html`).
+- Snapshots capture all applied settings: new additive `styleHighlight` group (`bondAtoms`, `numberingAtoms`; defaults for legacy files, no version bump); step apply also re-syncs the `Έγχρωμα Σύμβολα` checkbox and atom/group radios from `style2D` (render already followed the flag); Present stashes the author's live checkbox states and Exit restores them (`js/mulermoc-nom-scenario-43.js`, `docs/didactic-scenario-plan.md` §2).
+- Scenario steps gain heading + text: per-step `title` replaces the page `#pageTitle` in presentation (restored on exit) and `note` renders as an educational paragraph in `#scStepText` below it (safe subset `<b>`/`<sup>`/`<sub>`; heading + text show automatically iff title/note present, legacy `show.text` ignored; drawer textarea, no visibility checkbox; `noteFormat` reserved). `#menuCol` hidden wholesale in presentation so content centers.
+
+---
+
+## [v43] — 2026-10-02
+
+**Didactic scenarios scaffold — last suffixed copy**
+
+- New parallel file set `mulermoc-nom-43.html` + `js/*-43.js` + `css/jsme-nick-43.css`, copied from v42 (path renames + `state-43.js`/`scenario-43.js` includes + `JSmolReadyFlag` handshake + `bondAtoms` UI). Tag-time `core-43` differed from `core-42` only by `let`-scoping hygiene plus `esterInfo`/`alkylSubstituentNames` declarations (no logic change); `molview/teaching/data/css-43` diverged further in the working copy (see [Unreleased]). Chemistry parity at tag: `43-no-params == 42`.
+- New additive module `js/mulermoc-nom-scenario-43.js` (off by default): snapshot capture (molecule, 2D/3D modes, chain/naming modes, styles, audio flag, 3D `moveto` via `show moveto`), `scenarioVersion: 1` validation with legacy/future policy, apply through the standard `fSelectMol` + name-box click path, per-step `show.*` chrome matrix, memory + JSON file export/import (decision A), `?scenario=…&present=1` + `#step=N` playback URLs. See `docs/didactic-scenario-plan.md`.
+- Museum moved to `archive/` (non-runnable reference); runnable history via tags `v41`/`v42`. v43 is the last suffixed copy; v44 introduces the canonical un-suffixed set.
+- Repositories split: `organic-nomenclature-2` frozen serving v42 (`index.html` → `mulermoc-nom-42.html`); `organic-nomenclature-3` (this repo) serves v43 (`index.html` → `mulermoc-nom-43.html`). All new work happens here.
+
+---
+
+## [v42] — 2026-10-01
+
+**v42 baseline: ester 3D + template literals + r4 row (scaffold from v41)**
+
+- Scaffold v42 file set from v41 (`mulermoc-nom-42.html` + `js/*-42.js`); `index.html` redirected to v42 at the time.
+- Ester noun click now highlights fragment bonds in 3D (ester-only).
+- Convert HTML/SVG builders to template literals (v41-parity verified).
+- Wire r4-alkoxycarbonyl row via `r4KeyForFG` ester mapping.
+- Docs: v41 CHANGELOG entry + README baseline (esters, viewer/menu updates).
+
+---
+
+## [v41] — 2026-09-30
+
+**Esters: naming + first molecules — plus viewer and menu improvements**
+
+- Added the first two ester molecules, `ethanoic_methyl_ester` (CH3COOCH3) and `propanoic_methyl_ester` (CH3CH2COOCH3), with condensed, expanded (`_2D_E`) and skeletal (`_diagr2D`) representations plus 3D SDFs. They run in algorithmic main-chain mode; stored `mainChain`/`moveto` data remains optional.
+- Ester detection in 2D and 3D: an ether oxygen adjacent to a carbonyl carbon (ketone oxygen) is reclassified as one ester group (`functionalGroupObj.ester = [ketoneO, etherO]`), replacing the buggy v40 2D-only path; full 3D mirror added.
+- Two-fragment ester analysis: `fCalcMainChain[3D]` computes `esterInfo` (`oDouble, oSingle, carbonylC, alcoholAttachC, acidFrag, alcoholFrag`) via BFS on the carbon-only graph; the carbonyl carbon anchors and outranks acid (`terminal = 4`).
+- Ester naming: two-word Greek IUPAC assembly, e.g. `προπανοϊκός μεθυλεστέρας` (acid stem from `acidLen` + `οϊκός`, fused tail `μεθυλ + εστέρας`), with ester-aware euphony (no connector across the acid|alcohol word boundary, blank space instead of `+`, no trailing `+` after the last box).
+- Ester highlight/numbering: alcohol-chain click (`esterAlkyl`, comp10) highlights and numbers only the alcohol fragment; ester-word click (`esterEster`, comp11) highlights the `O-C(=O)-O` triad via `fGetEsterAlcoholChain/Triad/GroupFragment[3D]`; chain-only 3D halos via `skipH`.
+- Teaching layer: new `Εστέρες (R-COO-R')` row in the rule-3 table, `Εστερομάδα` nouns, `r3` table rewritten around the chemical-class taxonomy (drops hydroxy/amino-acid rows); all rule tables carry `data-row` keys and numeric highlights map to keys (`r1-cN`, `r2-single|double|…`, `r3-esters`, …).
+- Chemical-class taxonomy: `ester → esters`, `aldehyde|ketone → carbonylCompounds`, `hydroxyAcids + aminoAcids → carboxylicAcids`; menu labels updated (`Χημικές Τάξεις`, `Αιθέρες`, `Εστέρες`).
+- Molecule menu: new flat `Όλα τα μόρια` grouping mode (all molecules sorted by carbon count via `fSortPropsByCarbonCount`); `crossMenuLi` items toggle shut and clear `selectedRule`/speech/`#ruleTheory` in rule mode.
+- Viewer title bar: new `[2D][3D]` visibility toggle buttons (`#viewerVisBtns`, `fInitViewerSettingsBtn`, `fToggleViewer2D|3D`); legacy `viewFinalJSME`/`viewJSmol` settings commented out.
+- Viewer settings: new `Επισήμανση ατόμων κατά την αρίθμηση` toggle (`#highlightNumberingCheck`, on by default) — main-chain atoms highlight while numbering runs; 2D atom colors on by default (`svgAtomColors2DFlag = true`, `#svgAtomColorCheck` selected).
+- Molecule info button + panel (`molInfoBtn`/`molInfoPanel`, chemical class + series) added but disabled by default (`molInfoEnabled = false`).
+- Note: the symmetric ether example `dimethylether` (CH3OCH3) was added to the v40 data set after the v40 entry below was written; v41 carries both ethers unchanged.
+- Fix: ester name boxes no longer render a trailing `+`/space after the last component.
+
+---
+
+## [v40] — 2026-09-29
+
+**Ethers: first molecule + systematic and common naming**
+
+- Added the first ether molecule, `ethyl_methyl_ether` (CH3OCH2CH3), with condensed 2D data and 3D SDF. Missing expanded/skeletal representations no longer crash the viewer (see tolerant loading below).
+- Tolerant 2D loading: `fInitData` accepts molecules with only a subset of representations; the mode radios for missing representations are disabled and the viewer falls back to the first available one (condensed > expanded > skeletal). `fLoadMol2D` never calls `readMolFile(null)`.
+- Two-chain ether detection: `fCalcMainChain` splits R-O-R' into parent + alkoxy fragments via BFS on the carbon-only graph (`etherInfo`); both O-bonded carbons anchor and orient the parent chain.
+- Systematic (IUPAC) naming: alkoxy prefix (`μεθοξυ-`, `αιθοξυ-`, …) + parent alkane (`-άνιο`), with locant omitted for parent chains under 3 carbons. Common name also generated (`αιθυλμεθυλαιθέρας`, symmetric `διαιθυλαιθέρας`).
+- IUPAC/COMMON toggle in the name-explanation panel (ethers only). COMMON name renders as clickable boxes: each alkyl highlights and numbers only its own chain (chain-only, no bridging O); `αιθέρας` highlights C-O-C with no numbering. Alkyl explanations state Greek alphabetical order («πρώτο/δεύτερο αλφαβητικά αλκύλιο»).
+- IUPAC prefix click (`μεθοξυ`) highlights O + alkoxy fragment (C-O) and numbers the alkoxy chain; suffix click highlights the whole C-O-C group. Switching IUPAC/COMMON clears all highlights.
+- Teaching layer: new `Αιθέρες (R-O-R') → -ιο` row in the rule-3 table, `Αλκοξυομάδα → -O-` row in the rule-4 table, suffix highlight index 11, `Αλκοξυομάδα` nouns for explanations.
+- Scope: saturated acyclic mono-ethers. Still open: expanded/skeletal MOLs + stored `mainChain` data for the ether, a symmetric ether example, unsaturated ether chains.
+
+---
+
+## [v39.1] — 2026-09-23
+
+**Branch highlighting and expanded-hydrogen selection**
+
+- Fixed the hydrocarbon branch highlight path so a selected alkyl side chain is highlighted correctly in both 2D and 3D views.
+- Generalized the side-branch detection so it still works when the same molecule also contains other functional groups.
+- Corrected the branch fallback so a carbon branch is treated as a valid highlight target even when no explicit FG entry matches the selected name component.
+- In expanded 2D mode, the parent carbon and its attached hydrogen label nodes are now highlighted together, preserving the expected visual selection behavior for methyl and other alkyl branches.
+
+---
+
+## [v39] — 2026-09-23
+
+**Molecule grouping and navigation**
+
+- Homologous series are now the default molecule-menu grouping.
+- Rule-based grouping remains available as an alternate menu mode.
+- Molecules are classified through the existing structure-analysis pipeline,
+  without requiring new metadata in the data file.
+- Added special series classification for amino acids, hydroxy acids, keto
+  acids, hydroxy nitriles, and oxo carboxylic acids.
+- Homologous-series groups follow the declared `homologousSeriesLabels` order.
+- Molecules within each homologous-series group are ordered by increasing total
+  carbon count, with stable ordering for equal counts.
+- Switching grouping modes preserves the selected molecule and opens its new
+  group. With no selected molecule, all groups remain closed and no molecule is
+  selected.
+- Rule theory is hidden in homologous-series mode and shown in rule mode.
+- Methane is selected and its group opened on initial page load.
+
+## [v37] — 2026-04-16
+
+**Major refactor:Algorithmic main chain (+ UI improvements)**
+
+### Core logic
+- **Tier 2b tie-breaker**: double bonds beat triple bonds in `fCalcMainChain` and `fCalcMainChain3D` (IUPAC rule 2b compliance)
+- **Algorithmic main chain mode** (`mainChainMode = 'algorithmic'`): main chain now computed entirely by the algorithm by default; user can switch to `'data'` mode via the settings panel
+
+### UI — settings panel
+- Gear button (`#viewerSettingsBtn`) added to middle column `.panelTitle`; toggles animated dropdown (`#viewerSettingsPanel`) via `fToggleViewerSettings()`
+- Outside-click listener closes the panel automatically
+- Chain mode radio (Από δεδομένα / Αλγοριθμικά) moved inside settings panel, wrapped in `.radioGroupContainer` for correct deselection logic
+- Tooltip on gear button: left-pointing (avoids clipping by right column), `z-index: 400`
+
+### UI — teaching layer
+- Mode-switch (2D ↔ chain view) now calls `fShowNameAnalysis()` — name component boxes refresh on every mode change
+- `.selected` name component box preserved across rebuilds via `_modeToCompId` reverse lookup in `fShowNameAnalysis`
+
+### UI — CSS (`jsme-nick-37.css`)
+- Tap-target sizing: `.settingsBtn` padding `6px 8px`, `.settingRow` min-height `36px`, `.dropLi` min-height `36px` with flex align-center
+- Unified UI text size: `.radioCheckContainer`, `.checkBoxContainer`, `#dropLabel`, `.dropLi` all set to `0.85rem`
+- `#viewerCol` changed from `overflow: hidden` → `overflow: visible` — fixes dropdown and tooltip clipping
+
+---
+
+## [v36] — 2026-04-16
+
+- Responsive viewer resizing: `fResizeViewers()` in `mulermoc-nom-molview-36.js`
+  - Listens to `window resize` (debounced 150ms)
+  - On small landscape screens (viewport height < 430px): caps each viewer at 30% of viewport height
+  - Resizes JSmol applet and JSME SVG div together to keep aspect ratios
+  - Triggers once on JSmol ready (`jmol_isReady` hook + 300ms delay)
+
+---
+
+## [v35] — 2026-04-16
+
+**Major refactor: monolithic JS split into 4 files**
+
+- `mulermoc-nom-core-35.js` (943 lines) — pure analysis engine, no DOM or jQuery
+  - All analysis globals declared at top level
+  - `fAnalyseStructure`, `fDetectMolType`, `fGuessName` (2D)
+  - `fAnalyseStructure3D`, `fDetectMolType3D`, `fGuessName3D`, `fFetchAndParse3D` (3D, async SDF)
+  - `fInitNamingProps`, `fInitProps`
+- `mulermoc-nom-molview-35.js` (1325 lines) — viewer layer (JSME, JSmol, Snap.svg, jQuery)
+  - `jsmeOnLoad`, `fInitData`, `fSelectMol`, `fLoadMol2D/3D`, `fUpdateSVG`
+  - `fHighlightFG`, `fHighlightFG3D`, `fShowNumbering`, `fClearHighlights`
+  - `fSave2DPng`, `fSaveJmolPng`, `fUpdateDiagr2DButton`
+  - SVG icon constants: `svgSpeaker`, `svgMute`, `svgStop`, `svgPlay`
+- `mulermoc-nom-teaching-35.js` (547 lines) — teaching layer
+  - `fInitTheory`, rule text/tables, `$(document).ready` jQuery event handlers
+  - `fSpeakGreek`, `fNarrateRule`, `fShowRuleTheory`, `fShowNameAnalysis`, `fExplainNameComp`
+- `jsme-nick-nomeclature-moc2-data_35.js` (3846 lines) — all molecule data
+  - `nameExamples` object: 59 molecules with `formula`, `mainChain`, `mainChain_E`, `mainChain3D`, `moveto`
+  - 2D SMILES-like strings (`*_2D`, `*_2D_E`, `*_diagr2D`) and 3D SDF file paths
+
+---
+
+## [v34] — 2026-04-13
+
+- (Version created; details carried from v33 refactor work — see v33 entry)
+
+---
+
+## [v33] — 2026-04-13 · `6140142`
+
+**Major upgrade**
+
+- 3D structure analysis: atom/bond highlighting in JSmol (`fHighlightFG3D()`)
+- Minimal external data file (`jsme-nick-nomeclature-moc2-data_6.js`) — most properties now algorithmically generated
+- All compound properties (FG detection, locants, substituents, unsaturation) algorithmic — only main chain remains data-driven (TBD)
+- Fix: wrong halogen atom highlighted in 2D/3D for molecules with two different halogens (e.g. 2-βρωμο-3-χλωροβουτάνιο) — sort in `fHighlightFG`/`fHighlightFG3D` now uses canonical `nameMainCompObj3.halogen.substitute` key order as tiebreak
+
+---
+
+## [v32] — 2026 · `180e26f`
+
+- TTS rule narration: `fNarrateRule()` reads selected rule aloud in Greek
+- Greek TTS helper `fSpeakGreek(text)` — prefers female voice (Eleni/Nefeli/Maria/Sofia)
+- Name analysis narration: toggle + play button (`#narrateAnalysisToggle`, `#readNameBtn`)
+- SVG icon constants: `svgSpeaker`, `svgMute`, `svgStop`, `svgPlay` — no emoji dependency
+- Audio button on by default at page load
+- Chevron accordion symbol with animated rotation
+- CSS-styled tooltips with delay (no native browser tooltip)
+- Drop-down menu: SVG arrow (Android-safe), larger triangle, event delegation fix, close-on-select fix
+- Fix: strip dashes from TTS narration (prevent reading as "minus")
+- Fix: strip standalone "C" from carbon count narration
+- Fix: typo καβροξυ → καρβοξυ in carboxylicAcid substitute
+
+---
+
+## [v31] — earlier · `d0666ce`
+
+- 2D/3D PNG export with assembled name boxes (`fSave2DPng`, `fSaveJmolPng`)
+- Increased PNG export size to 1200px
+- Fix: guard against undefined `jsmeNomeclatureApplet` in `fDeselectMol`, `fUpdateSVG`, `fClearHighlights`
+- Fix: JSME NH2 highlight SVG bug (stroke-width attribute swallowing tspan content)
+- Fix: page jump when selecting name component
+- Radio scoping, save button alignment, checkbox/radio styles, credits links
+- Auto-select first molecule on page load
+- Google Analytics tracking added
+
+---
+
+## [Initial] — earlier · `cb66337`
+
+- Initial upload: organic nomenclature 2 page with assets

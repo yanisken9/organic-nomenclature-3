@@ -1,0 +1,13 @@
+{
+  "completed": false,
+  "checks": [
+    {
+      "label": "Main welcome no longer advertises removed rehearsal",
+      "detail": null
+    }
+  ],
+  "failure": "'disabled'",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/workshop-hub-20261104/browser/test-hub.py\", line 21, in <module>\n    click('.card.two a.action');until('location.pathname.endsWith(\"/games/name-repair.html\")');hub_ready()\n  File \"support\", line 18, in click\n    try:\nKeyError: 'disabled'\n",
+  "javascriptErrors": [],
+  "diagnostics": []
+}

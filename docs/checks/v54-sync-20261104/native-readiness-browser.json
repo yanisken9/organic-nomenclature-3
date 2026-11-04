@@ -1,0 +1,56 @@
+{
+  "completed": true,
+  "checks": [
+    {
+      "actualRegisteredVendorCallbackHeld": true,
+      "2Dname": "μεθάνιο"
+    },
+    {
+      "pendingPropeneDuringActualCallbackDelay": true
+    },
+    {
+      "registeredDelegateReplayedActual9AtomPropene": {
+        "ready": true,
+        "live": true,
+        "pending": null,
+        "model": {
+          "canSkipLoad": true,
+          "isTainted": false,
+          "modelCount": 1,
+          "modelCountSelected": 1,
+          "modelIndex": 0,
+          "modelSetHasVibrationVectors": false,
+          "modelSetName": "8252",
+          "modelSetProperties": {
+            "PATH_KEY": ".PATH",
+            "PATH_SEPARATOR": "/"
+          },
+          "models": [
+            {
+              "_ipt": 0,
+              "atomCount": 9,
+              "bondCount": 8,
+              "chainCount": 1,
+              "file": "http://127.0.0.1:8013/mols/nomeclature-moc2/propene_3D.sdf",
+              "file_model": "1.1",
+              "groupCount": 1,
+              "moleculeCount": 1,
+              "name": "8252",
+              "num": 1,
+              "title": "8252",
+              "vibrationVectors": false
+            }
+          ],
+          "modelsSelected": [
+            0
+          ]
+        }
+      }
+    },
+    {
+      "subsequentSelectionLoadsActualEthane": true
+    }
+  ],
+  "instrumentation": "Holds the vendor-invoked registered callback, then releases its exact delegate; real JSmol engine/models. No direct globaljmol_isReady invocation and no vendor source edit. Controlledcallbackdelay, not network/CDNoutage.",
+  "javascriptErrors": []
+}

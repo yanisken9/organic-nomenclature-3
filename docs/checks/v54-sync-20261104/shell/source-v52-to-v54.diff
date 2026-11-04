@@ -1,0 +1,3524 @@
+--- mulermoc-nom-52.html
++++ mulermoc-nom-54.html
+@@ -44,14 +44,19 @@
+ 
+   <title>Namelecule — Ονοματολογία Οργανικών Ενώσεων</title>
+ 
+-  <link rel="stylesheet" href="css/jsme-nick-52.css?v=v52-sync-20261027-r2" />
+-  <link rel="stylesheet" href="css/mulermoc-nom-scenario-52.css?v=v52-sync-20261027-r2" />
+-
+-  <link rel="stylesheet" href="css/namelecule-52.css?v=name-font-20261028" />
++  <link rel="stylesheet" href="css/jsme-nick-54.css?v=v54-sync-20261104-r1" />
++  <link rel="stylesheet" href="css/mulermoc-nom-scenario-54.css?v=v54-sync-20261104-r1" />
++
++  <link rel="stylesheet" href="css/namelecule-54.css?v=v54-sync-20261104-r1" />
+   <script src="js/namelecule-label-metrics.js?v=20261031-r1"></script>
+   <script src="js/vendor/jsme/namelecule-20261031-r1/jsme.nocache.js"></script>
+   <script src="js/vendor/jquery/jquery-4.0.0.min.js"></script>
+   <script>
++    // JSmol library loads synchronously at parse time: Jmol.getApplet writes
++    // the applet HTML via document.write, which is only safe during parsing
++    // (a post-parse call wipes the page to just the applet table). The
++    // document.write warning in the console stays a warning; actual CDN
++    // failures are handled gracefully by the fail-closed JSmol wrappers.
+     (function () {
+       var mode = "cdn";
+       try {
+@@ -59,7 +64,7 @@
+         if (m) mode = m[1];
+       } catch (e) { /* no location */ }
+       window.MULER_LIBS_MODE = mode;
+-      // Shared, reviewed lifecycle fix for exploration and every v52 lesson.
++      // Shared, reviewed lifecycle fix for exploration and every v54 lesson.
+       // `libs` continues to select j2s/server paths below, not an unpatched bundle.
+       var src = "js/vendor/jsmol/namelecule-20261031-r1/JSmol.min.js";
+       var integrity = "sha384-y4u4hIq8Whzghkk/SjuVpro+EDm44cNe8bcclNCCcWzLmJpnALhyjwGit8tMghR/";
+@@ -126,11 +131,12 @@
+              width="2172" height="724" />
+         <p>Μια εφαρμογή της πλατφόρμας <strong>MuLERMoCs</strong></p>
+       </div>
++      <div  class="langSwitchContainer" ><div id="langSwitch" role="group" aria-label="Γλώσσα / Language"><button type="button" class="langButtonClass" data-lang="gr" aria-pressed="false" data-tooltip="Ελληνικά" aria-label="Ελληνικά">GR</button><button type="button" class="langButtonClass" data-lang="en" aria-pressed="false" data-tooltip="English" aria-label="English">EN</button></div></div>
+       <a class="nameleculeHomeLink" href="design/welcome-proposal.html">← Επιστροφή στην υποδοχή</a>
+     </header>
+ 
+   <div id="pageContainer">
+-    <h1 id="pageTitle">Ονοματολογία Οργανικών Ενώσεων</h1>
++    <h1 id="pageTitle">Ονοματολογία Άκυκλων Οργανικών Ενώσεων</h1>
+     <div id="authorLayout">
+       <div id="mainAppContainer">
+         <div class="mainApp3Columns">
+@@ -164,7 +170,7 @@
+                 </div>
+                 <div id="originalJSME" class="settingRow">
+                   <div class="settingLabel">
+-                    Εμφάνιση αρχικής 2D αναπαράστασης JSME:
++                    Σχεδίαση και προσθήκη μορίων:
+                   </div>
+                   <div id="originalJSMECheck" class="checkBoxContainer unselectedCheck">
+                     &nbsp;<span class="checkBox"></span>
+@@ -220,7 +226,7 @@
+                   <div id="viewerMaxHeightCheck" class="checkBoxContainer unselectedCheck">
+                     &nbsp;<span class="checkBox"></span>
+                   </div>
+-                  <input id="viewerMaxHeightRange" class="viewerHeightRange" type="range" min="150" max="520" step="10"
++                  <input id="viewerMaxHeightRange" class="viewerHeightRange" type="range" min="150" max="1000" step="10"
+                     value="150" disabled />
+                   <span id="viewerMaxHeightVal" class="viewerHeightVal">Auto</span>
+                 </div>
+@@ -233,13 +239,21 @@
+                     step="10" value="300" disabled />
+                   <span id="viewerBothHeightVal" class="viewerHeightVal">Auto</span>
+                 </div>
++                <div id="customMolSetting" class="settingRow">
++                  <div class="settingLabel">Προσαρμοσμένα μόρια:</div>
++                  <button type="button" id="customMolSaveBtn" class="viewerFullBtn" onclick="fMolDraftSaveSelected()">Λήψη .js</button>
++                  <span id="customMolCount" class="viewerHeightVal">0 στη συνεδρία</span>
++                </div>
+               </div>
+             </div>
+ 
+             <!--JSME 2D -->
+             <div id="jsmeNomeclatureDIV">
++              <!-- ORGNL retired 2026-11-02 (v54 Stage 1): single-applet depict+toggle covers edit/draw; restore if needed.
+               <div id="jsmeNomeclatureORGNL" class="hide"></div>
++              -->
+               <div id="jsmeNomeclature" class="hide"></div>
++              <div id="jsmeEditDraft" class="hide"></div>
+               <div id="jsmeNomeclatureSVG"></div>
+             </div>
+             <div id="radio2DMode">
+@@ -330,13 +344,20 @@
+     <div id="creditsUs"></div>
+   </div>
+ 
+-  <script src="js/jsme-nick-nomeclature-moc2-data_52.js?v=ester-uniform-20261101-f7e0f9cd800f"></script>
+-  <script src="js/ui-icons.js?v=v52-sync-20261027-r2"></script>
+-  <script src="js/mulermoc-nom-core-52.js?v=esters-20261029"></script>
+-  <script src="js/mulermoc-nom-molview-52.js?v=ester-uniform-20261101-5d2d34510f01"></script>
+-  <script src="js/mulermoc-nom-teaching-52.js?v=acid-prefix-boxes-20261028"></script>
+-  <script src="js/mulermoc-nom-note-52.js?v=v52-sync-20261027-r2"></script>
+-  <script src="js/mulermoc-nom-scenario-52.js?v=other-acids-theory-20261028"></script>
++  <script src="js/jsme-nick-nomeclature-moc2-data_54.js?v=v54-sync-20261104-r1"></script>
++  <!-- Accepted custom molecules (v54 Stage 2): save one MULERMOC_<name>_data.js
++       per molecule from Ρυθμίσεις → Προσαρμοσμένα μόρια. Drop collected
++       files next to the data file and register each one, e.g.:
++       <script src="js/MULERMOC_dimethyl_ether_data.js?v=54.1"></script> -->
++  <script src="js/ui-icons-54.js?v=v54-sync-20261104-r1"></script>
++  <script src="js/mulermoc-nom-core-54.js?v=v54-sync-20261104-r1"></script>
++  <script src="js/mulermoc-nom-molview-54.js?v=v54-sync-20261104-r1"></script>
++  <script src="js/mulermoc-nom-teaching-54.js?v=v54-sync-20261104-r1"></script>
++  <script src="js/mulermoc-nom-note-54.js?v=v54-sync-20261104-r1"></script>
++  <script src="js/mulermoc-nom-scenario-54.js?v=v54-sync-20261104-r1"></script>
++  <script src="js/mulermoc-nom-iupac-54.js?v=v54-sync-20261104-r1"></script>
++  <script src="js/mulermoc-nom-lang-54.js?v=v54-sync-20261104-r1"></script>
++  <script src="js/mulermoc-nom-name-en-54.js?v=v54-sync-20261104-r1"></script>
+   <script>
+     window.JSApplet = window.JSApplet || {};
+   </script>
+--- js/mulermoc-nom-teaching-52.js
++++ js/mulermoc-nom-teaching-54.js
+@@ -1,7 +1,7 @@
+-// mulermoc-nom-teaching-52.js
++// mulermoc-nom-teaching-54.js
+ // Teaching / implementation layer.
+ // Contains ruleExamples, menu setup, credit display, and all jQuery event handlers.
+-// Depends on: data_52.js (nameExamples), mulermoc-nom-core-52.js (analysis), mulermoc-nom-molview-52.js (viewer).
++// Depends on: data_54.js (nameExamples), mulermoc-nom-core-54.js (analysis), mulermoc-nom-molview-54.js (viewer).
+ 
+ // ── ruleExamples ──────────────────────────────────────────────────────────
+ 
+@@ -70,18 +70,27 @@
+     ["sec-βουτυλο", "–CH(CH<sub>3</sub>)–CH<sub>2</sub>–CH<sub>3</sub>", "sec-Βουτύλιο", "sec-βουτυλο-", "butan-2-yl"],
+     ["tert-βουτυλο", "–C(CH<sub>3</sub>)<sub>3</sub>", "tert-Βουτύλιο", "tert-βουτυλο-", "2-methylpropan-2-yl (tert-butyl)"],
+   ];
++  var _enAlk = false;
++  try { _enAlk = typeof fMulerLang === "function" && fMulerLang() === "en"; } catch (e) {}
++  // EN: systematic names throughout (display + prefix), no common-name note.
++  var _cap = function (s) { s = String(s); return s.charAt(0).toUpperCase() + s.slice(1); };
+   return "<div class='VFlex namingRuleTable ruleAlkyl'>" +
+     "<div class='HFlex ruleRow'>" +
+-    "<div class='ruleCase ruleTableTitle'>Δομή / σύνδεση</div>" +
+-    "<div class='ruleName ruleTableTitle'>Αλκύλιο / πρόθεμα</div>" +
++    "<div class='ruleCase ruleTableTitle'>" + (_enAlk ? "Structure / linkage" : "Δομή / σύνδεση") + "</div>" +
++    "<div class='ruleName ruleTableTitle'>" + (_enAlk ? "Alkyl / prefix" : "Αλκύλιο / πρόθεμα") + "</div>" +
+     "</div>" +
+     groups.map(function (g) {
++      var _nm = _enAlk ? _cap(g[4]) : g[2];
++      var _pf = _enAlk ? g[4] + "-" : g[3];
++      var _small = _enAlk ? "" : "<small>IUPAC: " + g[4] + "</small>";
+       return "<div class='HFlex ruleRow' data-row='alkyl-" + g[0] + "'>" +
+         "<div class='ruleCase alkylFormula'>" + g[1] + "</div>" +
+-        "<div class='ruleName'><strong>" + g[2] + "</strong><span class='alkylPrefix'>" + g[3] +
+-        "</span><small>IUPAC: " + g[4] + "</small></div></div>";
++        "<div class='ruleName'><strong>" + _nm + "</strong><span class='alkylPrefix'>" + _pf +
++        "</span>" + _small + "</div></div>";
+     }).join("") +
+-    "</div><p class='alkylRuleNote'>Τα ισο-, sec- και tert- εμφανίζονται εδώ ως συνήθεις ονομασίες, μαζί με τις αντίστοιχες συστηματικές.</p>";
++    "</div>" + (_enAlk
++      ? "<p class='alkylRuleNote'>Systematic (substitutive) names.</p>"
++      : "<p class='alkylRuleNote'>Τα ισο-, sec- και tert- εμφανίζονται εδώ ως συνήθεις ονομασίες, μαζί με τις αντίστοιχες συστηματικές.</p>");
+ }
+ 
+ // Same reference-table layout as alkyls; the left dash bonds through O.
+@@ -93,13 +102,20 @@
+     ["ισοπροποξυ", "–O–CH(CH<sub>3</sub>)<sub>2</sub>", "Ισοπροποξυομάδα", "ισοπροποξυ-"],
+     ["βουτοξυ", "–O–CH<sub>2</sub>–CH<sub>2</sub>–CH<sub>2</sub>–CH<sub>3</sub>", "Βουτοξυομάδα", "βουτοξυ-"],
+   ];
++  // EN systematic names parallel to the Greek school names (same row order).
++  const groupsEN = ["Methoxy", "Ethoxy", "Propoxy", "Isopropoxy", "Butoxy"];
++  const prefixEN = ["methoxy-", "ethoxy-", "propoxy-", "isopropoxy-", "butoxy-"];
++  var _enAlx = false;
++  try { _enAlx = typeof fMulerLang === "function" && fMulerLang() === "en"; } catch (e) {}
+   return "<div class='VFlex namingRuleTable ruleAlkyl ruleAlkoxy'>" +
+-    "<div class='HFlex ruleRow'><div class='ruleCase ruleTableTitle'>Δομή / σύνδεση</div>" +
+-    "<div class='ruleName ruleTableTitle'>Αλκοξυομάδα / πρόθεμα</div></div>" +
+-    groups.map(function (g) {
++    "<div class='HFlex ruleRow'><div class='ruleCase ruleTableTitle'>" + (_enAlx ? "Structure / linkage" : "Δομή / σύνδεση") + "</div>" +
++    "<div class='ruleName ruleTableTitle'>" + (_enAlx ? "Alkoxy group / prefix" : "Αλκοξυομάδα / πρόθεμα") + "</div></div>" +
++    groups.map(function (g, i) {
++      var _nm = _enAlx ? (groupsEN[i] + " group") : g[2];
++      var _pf = _enAlx ? prefixEN[i] : g[3];
+       return "<div class='HFlex ruleRow' data-row='alkoxy-" + g[0] + "'>" +
+         "<div class='ruleCase alkylFormula'>" + g[1] + "</div>" +
+-        "<div class='ruleName'><strong>" + g[2] + "</strong><span class='alkylPrefix'>" + g[3] + "</span></div></div>";
++        "<div class='ruleName'><strong>" + _nm + "</strong><span class='alkylPrefix'>" + _pf + "</span></div></div>";
+     }).join("") + "</div>";
+ }
+ 
+@@ -307,8 +323,10 @@
+ function fShowRuleTheory() {
+   window.speechSynthesis.cancel();
+   let ruleTitle, ruleTheory;
+-  ruleTitle = `${selectedRule + 1}<sup>ος</sup> Κανόνας`;
+-  ruleTheory = `<div class='panelTitle ruleTheoryTitle open'><button class='ruleTheoryToggleBtn' data-tooltip='Εμφάνιση/Απόκρυψη'></button>${ruleTitle}<button id='narrateBtn' class='narrateBtn' data-tooltip='Ανάγνωση κανόνα'>${svgPlay}</button></div><div class='ruleText'>${namingRules.rulesTheory_1_8[selectedRule]}</div>`;
++  ruleTitle = (typeof fRuleTheoryTitleEN === "function") ? fRuleTheoryTitleEN(selectedRule + 1) : `${selectedRule + 1}<sup>ος</sup> Κανόνας`;
++  const _theoryGR = namingRules.rulesTheory_1_8[selectedRule];
++  const _theory = (typeof fTranslateRuleHTML === "function") ? fTranslateRuleHTML(_theoryGR) : _theoryGR;
++  ruleTheory = `<div class='panelTitle ruleTheoryTitle open'><button class='ruleTheoryToggleBtn' data-tooltip='` + ((typeof fMulerT === "function") ? fMulerT("showHide") : "Εμφάνιση/Απόκρυψη") + `'></button>${ruleTitle}<button id='narrateBtn' class='narrateBtn' data-tooltip='` + ((typeof fMulerT === "function") ? fMulerT("ruleNarrate") : "Ανάγνωση κανόνα") + `'>${svgPlay}</button></div><div class='ruleText'>${_theory}</div>`;
+   $("#ruleTheory").html(ruleTheory);
+ }
+ 
+@@ -328,25 +346,41 @@
+     $("#narrateBtn").html(svgPlay);
+     return;
+   }
+-  const rawText = namingRules.rulesTheory_1_8[selectedRule];
+-  const plainText = rawText
++  const rawGR = namingRules.rulesTheory_1_8[selectedRule];
++  let _lang = "gr";
++  try { _lang = (typeof fMulerLang === "function") ? fMulerLang() : "gr"; } catch (e) {}
++  const rawText = (_lang === "en" && typeof fTranslateRuleHTML === "function") ? fTranslateRuleHTML(rawGR) : rawGR;
++  let plainText = rawText
+     .replace(/<[^>]*>/g, "")
+-    .replace(/\s*\(-[^)]*\)/g, "")
+-    .replace(/3o/g, "τρίτο")
+-    .replace(/δι-,?\s*τρι-,?/g, "δί, τρί")
+-    .replace(/κ\.λ\.π\.?/g, "και τα λοιπά");
++    .replace(/\s*\(-[^)]*\)/g, "");
++  if (_lang !== "en") {
++    plainText = plainText
++      .replace(/3o/g, "τρίτο")
++      .replace(/δι-,?\s*τρι-,?/g, "δί, τρί")
++      .replace(/κ\.λ\.π\.?/g, "και τα λοιπά");
++  }
+   const utterance = new SpeechSynthesisUtterance(plainText);
+-  utterance.lang = "el-GR";
+   utterance.rate = 0.9;
+   const voices = window.speechSynthesis.getVoices();
+-  const greekVoices = voices.filter((v) => v.lang.startsWith("el"));
+-  const femaleNames = /eleni|nefeli|maria|sofia|female/i;
+-  const maleNames = /stefanos|nikos|kostas|giorgos|male/i;
+-  const femaleVoice =
+-    greekVoices.find((v) => femaleNames.test(v.name)) ||
+-    greekVoices.find((v) => !maleNames.test(v.name)) ||
+-    greekVoices[0];
+-  if (femaleVoice) utterance.voice = femaleVoice;
++  if (_lang === "en") {
++    utterance.lang = "en-US";
++    try {
++      if (typeof fPickEnglishVoice === "function") {
++        const _ev = fPickEnglishVoice(voices);
++        if (_ev) utterance.voice = _ev;
++      }
++    } catch (e) {}
++  } else {
++    utterance.lang = "el-GR";
++    const greekVoices = voices.filter((v) => v.lang.startsWith("el"));
++    const femaleNames = /eleni|nefeli|maria|sofia|female/i;
++    const maleNames = /stefanos|nikos|kostas|giorgos|male/i;
++    const femaleVoice =
++      greekVoices.find((v) => femaleNames.test(v.name)) ||
++      greekVoices.find((v) => !maleNames.test(v.name)) ||
++      greekVoices[0];
++    if (femaleVoice) utterance.voice = femaleVoice;
++  }
+   utterance.onstart = function () {
+     $("#narrateBtn").html(svgStop);
+   };
+@@ -357,6 +391,90 @@
+     $("#narrateBtn").html(svgPlay);
+   };
+   window.speechSynthesis.speak(utterance);
++}
++
++// ── Name narration helpers (UI-level) ─────────────────────────────────────
++const NAME_RATE_SHORT = 0.8;
++const NAME_RATE_MEDIUM = 0.7;
++const NAME_RATE_LONG = 0.6;
++
++// Shared Greek-voice pick: female Greek voice preferred, else any non-male
++// Greek voice, else the first Greek voice, else undefined (browser default).
++function fPickGreekVoice(voices) {
++  var list = Array.isArray(voices) ? voices : [];
++  var greekVoices = list.filter(function (v) { return v && typeof v.lang === "string" && v.lang.indexOf("el") === 0; });
++  if (!greekVoices.length) return undefined;
++  var femaleNames = /eleni|nefeli|maria|sofia|female/i;
++  var maleNames = /stefanos|nikos|kostas|giorgos|male/i;
++  return greekVoices.find(function (v) { return femaleNames.test(v.name); }) ||
++    greekVoices.find(function (v) { return !maleNames.test(v.name); }) ||
++    greekVoices[0];
++}
++
++function fSpeakGreek(text) {
++  window.speechSynthesis.cancel();
++  const cleanText = text.replace(/-/g, " ").replace(/\s+/g, " ").trim();
++  const utterance = new SpeechSynthesisUtterance(cleanText);
++  utterance.lang = "el-GR";
++  utterance.rate = 0.9;
++  const voice = fPickGreekVoice(window.speechSynthesis.getVoices());
++  if (voice) utterance.voice = voice;
++  window.speechSynthesis.speak(utterance);
++}
++
++function fSpeakNameWithPauses() {
++  // Narration follows component visibility: hidden (dash) boxes are skipped.
++  // Rendered boxes (any naming mode) drive the parts; data-list/full-name
++  // fallback is used when boxes are unavailable. Parts are merged into one
++  // utterance so browser inter-utterance boundary gaps are eliminated.
++  var hidden = (typeof window !== "undefined" && Array.isArray(window.nameHiddenComps))
++    ? window.nameHiddenComps
++    : [];
++  var parts = null;
++  try {
++    var boxes = (typeof document !== "undefined")
++      ? document.querySelectorAll(".nameCompContainer .nameCompBox")
++      : null;
++    if (boxes && boxes.length) {
++      parts = [];
++      for (var bi = 0; bi < boxes.length; bi++) {
++        var box = boxes[bi];
++        if (box.classList && box.classList.contains("comp-hidden")) continue;
++        var token = (box.textContent || "").replace(/-/g, " ").replace(/\s+/g, " ").trim();
++        if (token) parts.push(token);
++      }
++    }
++  } catch (e) { parts = null; }
++  if (!parts) {
++    parts = nameComponentsList
++      .filter(function (c, i) { return c && c !== "" && hidden.indexOf("comp" + i) < 0; })
++      .map(function (c) { return String(c).replace(/<[^>]*>/g, ""); });
++  }
++  if (!parts || !parts.length) {
++    const fallback = (typeof currentMolName === "string" ? currentMolName : "")
++      .replace(/<[^>]*>/g, "")
++      .trim();
++    parts = fallback ? [fallback] : [];
++  }
++  if (!parts.length) return;
++
++  window.speechSynthesis.cancel();
++  const voice = fPickGreekVoice(window.speechSynthesis.getVoices());
++  const normalizedParts = parts
++    .map(function (p) { return String(p).replace(/<[^>]*>/g, "").replace(/-/g, " ").replace(/\s+/g, " ").trim(); })
++    .filter(function (p) { return !!p; });
++  const partCount = normalizedParts.length;
++  if (!partCount) return;
++  const rate = partCount <= 4
++    ? NAME_RATE_SHORT
++    : (partCount <= 8 ? NAME_RATE_MEDIUM : NAME_RATE_LONG);
++  const merged = normalizedParts.join(" ");
++  if (!merged) return;
++  const utt = new SpeechSynthesisUtterance(merged);
++  utt.lang = "el-GR";
++  utt.rate = rate;
++  if (voice) utt.voice = voice;
++  window.speechSynthesis.speak(utt);
+ }
+ 
+ // ── fSortPropsByCarbonCount ─────────────────────────────────────────────────
+@@ -386,6 +504,22 @@
+ // ── fInitNomeclatureMenu ──────────────────────────────────────────────────
+ 
+ function fInitNomeclatureMenu() {
++  // One-time grouping restore from ?grouping= (set by the header language
++  // toggle, which reloads the page). Later in-place switches own the global.
++  try {
++    if (!window.__mulerGroupingBooted) {
++      window.__mulerGroupingBooted = true;
++      var _gg = null;
++      try { _gg = new URL(window.location.href).searchParams.get("grouping"); }
++      catch (eU) {
++        try {
++          var _gm = /[?&]grouping=([^&#]*)/.exec(String(window.location.href));
++          _gg = _gm ? decodeURIComponent(_gm[1]) : null;
++        } catch (eM) { _gg = null; }
++      }
++      if (_gg === "chemclass" || _gg === "series" || _gg === "rule" || _gg === "all") moleculeGroupingMode = _gg;
++    }
++  } catch (eB) { /* best-effort */ }
+   const names = Object.keys(nameExamples);
+   const groups = {};
+   const groupLabels = {};
+@@ -396,7 +530,7 @@
+       groups[key] = ruleExamples[ruleKey]
+         .map((index) => names[index - 1])
+         .filter(Boolean);
+-      groupLabels[key] = `${ruleIndex + 1}<sup>ος</sup> Κανόνας`;
++      groupLabels[key] = (typeof fRuleTheoryTitleEN === "function") ? fRuleTheoryTitleEN(ruleIndex + 1) : `${ruleIndex + 1}<sup>ος</sup> Κανόνας`;
+     });
+   } else if (moleculeGroupingMode !== "all") {
+     names.forEach((name) => {
+@@ -408,11 +542,13 @@
+       if (!groups[key]) groups[key] = [];
+       groups[key].push(name);
+       groupLabels[key] =
+-        (moleculeGroupingMode === "chemclass"
+-          ? chemicalClassLabels[key]
+-          : homologousSeriesLabels[key]) ||
+-        classification?.taxonomy ||
+-        "Μη ταξινομημένα";
++        (typeof fTaxonomyEN === "function")
++          ? (fTaxonomyEN((moleculeGroupingMode === "chemclass" ? chemicalClassLabels[key] : homologousSeriesLabels[key]) || classification?.taxonomy) || fTaxonomyEN("Μη ταξινομημένα"))
++          : ((moleculeGroupingMode === "chemclass"
++            ? chemicalClassLabels[key]
++            : homologousSeriesLabels[key]) ||
++          classification?.taxonomy ||
++          "Μη ταξινομημένα");
+     });
+   }
+ 
+@@ -422,18 +558,18 @@
+     });
+   }
+ 
+-  let myHTML = `<div class='panelTitle'> Παραδείγματα </div>
+-    <div class='groupingMode' role='group' aria-label='Ομαδοποίηση μορίων'>
+-    <div class='radioCheckContainer ${moleculeGroupingMode === "all" ? "selectedRadio" : "unselectedRadio"}' data-grouping-mode='all'>Όλα τα μόρια<span class='radioCheck'></span></div>
+-    <div class='radioCheckContainer ${moleculeGroupingMode === "chemclass" ? "selectedRadio" : "unselectedRadio"}' data-grouping-mode='chemclass'>Χημικές Τάξεις<span class='radioCheck'></span></div>
+-    <div class='radioCheckContainer ${moleculeGroupingMode === "series" ? "selectedRadio" : "unselectedRadio"}' data-grouping-mode='series'>Ομόλογες Σειρές<span class='radioCheck'></span></div>
+-    <div class='radioCheckContainer ${moleculeGroupingMode === "rule" ? "selectedRadio" : "unselectedRadio"}' data-grouping-mode='rule'>Κανόνες Ονοματολογίας<span class='radioCheck'></span></div>
++  let myHTML = `<div class='panelTitle'>${(typeof fMulerT === "function") ? fMulerT("examples") : "Παραδείγματα"}</div>
++    <div class='groupingMode' role='group' aria-label='${(typeof fMulerT === "function") ? fMulerT("molGrouping") : "Ομαδοποίηση μορίων"}'>
++    <div class='radioCheckContainer ${moleculeGroupingMode === "all" ? "selectedRadio" : "unselectedRadio"}' data-grouping-mode='all'>${(typeof fMulerT === "function") ? fMulerT("allMolecules") : "Όλα τα μόρια"}<span class='radioCheck'></span></div>
++    <div class='radioCheckContainer ${moleculeGroupingMode === "chemclass" ? "selectedRadio" : "unselectedRadio"}' data-grouping-mode='chemclass'>${(typeof fMulerT === "function") ? fMulerT("chemClasses") : "Χημικές Τάξεις"}<span class='radioCheck'></span></div>
++    <div class='radioCheckContainer ${moleculeGroupingMode === "series" ? "selectedRadio" : "unselectedRadio"}' data-grouping-mode='series'>${(typeof fMulerT === "function") ? fMulerT("homolSeries") : "Ομόλογες Σειρές"}<span class='radioCheck'></span></div>
++    <div class='radioCheckContainer ${moleculeGroupingMode === "rule" ? "selectedRadio" : "unselectedRadio"}' data-grouping-mode='rule'>${(typeof fMulerT === "function") ? fMulerT("nomenclatureRules") : "Κανόνες Ονοματολογίας"}<span class='radioCheck'></span></div>
+     </div><div class='menuNomeclature2Container'>`;
+ 
+   if (moleculeGroupingMode === "all") {
+     let counter = 0;
+     fSortPropsByCarbonCount(names).forEach((prop) => {
+-      let myMolFormula = nameExamples[prop].formula.replace(
++      let myMolFormula = (nameExamples[prop].formula || prop).replace(
+         /(\d+)/g,
+         "<sub>$1</sub>",
+       );
+@@ -462,7 +598,7 @@
+     myHTML += `<div class='crossMenuLi' data-group-key='${groupKey}'> ${groupLabels[groupKey]}</div>
+       <div class='exmplContainer closed'><div class='menuListContainer'>`;
+     groups[groupKey].forEach((prop) => {
+-      let myMolFormula = nameExamples[prop].formula.replace(
++      let myMolFormula = (nameExamples[prop].formula || prop).replace(
+         /(\d+)/g,
+         "<sub>$1</sub>",
+       );
+@@ -489,6 +625,67 @@
+   } catch (e) {
+     /* scenario absent */
+   }
++}
++
++// Visual-only menu selection restore (no reload): re-marks the selected row,
++// reopens its group and restores scroll after a bare menu rebuild (e.g. the
++// language toggle, which must not reload the already-loaded molecule).
++// Pass the scroller's scrollTop captured BEFORE the rebuild. The selected
++// group header is re-marked too (row's group wins; else the last
++// header-clicked group). Visual classes only — never triggers clicks (a
++// header click would deselect the molecule / clear rule state).
++function fRestoreMenuSelection(prevScrollTop, hadRowSel, hadHdrSel) {
++  try {
++    var row = null;
++    try {
++      row = (typeof selectedMol !== "undefined" && selectedMol) ? document.getElementById(selectedMol) : null;
++    } catch (eR) { row = null; }
++    // Only re-mark a row that was marked before the rebuild (an untouched
++    // boot default stays clean).
++    var showRow = !!hadRowSel && !!row;
++    var hdr = null;
++    try {
++      if (showRow && row.closest) {
++        var cont = row.closest(".exmplContainer");
++        hdr = cont && cont.previousElementSibling && cont.previousElementSibling.classList &&
++          cont.previousElementSibling.classList.contains("crossMenuLi") ? cont.previousElementSibling : null;
++      }
++      if (!hdr && !!hadHdrSel) {
++        var gk = null;
++        try { gk = window.__mulerSelGroupKey || null; } catch (eG) { gk = null; }
++        if (gk) hdr = document.querySelector('.crossMenuLi[data-group-key="' + gk + '"]');
++      }
++      document.querySelectorAll(".crossMenuLi.selectedLi").forEach(function (h) { h.classList.remove("selectedLi"); });
++      if (hdr && hdr.classList) hdr.classList.add("selectedLi");
++    } catch (eH) { /* best-effort */ }
++    if (showRow) {
++      try { row.classList.add("selectedLi"); } catch (eC) { /* best-effort */ }
++      try {
++        var cont2 = row.closest ? row.closest(".exmplContainer") : null;
++        if (cont2) {
++          cont2.classList.remove("closed");
++          cont2.classList.add("open");
++          try { cont2.style.display = ""; } catch (eD) { /* best-effort */ }
++        }
++      } catch (eO) { /* best-effort */ }
++    } else if (hdr) {
++      // Header-only selection (no molecule): reopen its group.
++      try {
++        var cont3 = hdr.nextElementSibling;
++        if (cont3 && cont3.classList && cont3.classList.contains("exmplContainer")) {
++          cont3.classList.remove("closed");
++          cont3.classList.add("open");
++          try { cont3.style.display = ""; } catch (eD2) { /* best-effort */ }
++        }
++      } catch (eO2) { /* best-effort */ }
++    }
++    if (typeof prevScrollTop === "number") {
++      try {
++        var scroller = document.querySelector(".menuNomeclature2Container") || document.getElementById("menuDrawer");
++        if (scroller) scroller.scrollTop = prevScrollTop;
++      } catch (eS) { /* best-effort */ }
++    }
++  } catch (e) { /* best-effort */ }
+ }
+ 
+ // ── showRadio ─────────────────────────────────────────────────────────────
+@@ -603,6 +800,10 @@
+ 
+   $(document).on("click", "#readNameBtn", function () {
+     if (!selectedMol || !nameExamples[selectedMol]) return;
++    if (typeof fSpeakNameWithPauses === "function") {
++      fSpeakNameWithPauses();
++      return;
++    }
+     // Narration follows component visibility: hidden (dash) boxes are
+     // skipped; falls back to the full name when no boxes are rendered.
+     var vis = [];
+@@ -628,18 +829,30 @@
+   // Ensure read button remains enabled/visible even if other scripts attempt to disable it
+   $("#readNameBtn").prop("disabled", false);
+ 
++  // Expanded-name floating overlay: same nodes, non-modal (app stays live).
++  $(document).on("click", "#nameExpandBtn", function () {
++    if (window.nameExpanded) fNameExpandClose(true);
++    else fNameExpandOpen();
++  });
++  $(document).on("keydown", function (e) {
++    if ((e.key === "Escape" || e.key === "Esc") && window.nameExpanded) {
++      fNameExpandClose(true);
++      try { $("#nameExpandBtn").focus(); } catch (eF) { /* best-effort */ }
++    }
++  });
++
+   $(document).on("click", "#nameStyleBoxToggle", function () {
+     window.nameBoxFlag = !window.nameBoxFlag;
+     if (window.nameBoxFlag) {
+       $(".nameCompBox ").removeClass("unboxed").addClass("boxed");
+        $(this).addClass("active");
+-      $(this).html(svgNameBox).attr("data-tooltip", "Πλαίσια συνθετικών");
++      $(this).html(svgNameBox).attr("data-tooltip", ((typeof fMulerT === "function") ? fMulerT("showBoxes") : "Πλαίσια συνθετικών"));
+     } else {
+       $(".nameCompBox ").removeClass("boxed").addClass("unboxed");
+        $(this).removeClass("active");
+       $(this)
+         .html(svgNameBoxOff)
+-        .attr("data-tooltip", "Χωρίς πλαίσια συνθετικών");
++        .attr("data-tooltip", ((typeof fMulerT === "function") ? fMulerT("hideBoxes") : "Χωρίς πλαίσια συνθετικών"));
+     }
+     if (typeof fScheduleNameFit === "function") fScheduleNameFit();
+   });
+@@ -649,11 +862,11 @@
+     if (window.nameCrossFlag) {
+       $(".nameCompPlus ").removeClass("hide");
+        $(this).addClass("active");
+-      $(this).html(svgNameCross).attr("data-tooltip", "Διαχωρισμένα συνθετικά");
++      $(this).html(svgNameCross).attr("data-tooltip", ((typeof fMulerT === "function") ? fMulerT("splitComps") : "Διαχωρισμένα συνθετικά"));
+     } else {
+        $(this).removeClass("active");
+       $(".nameCompPlus ").addClass("hide");
+-      $(this).html(svgNameCrossOff).attr("data-tooltip", "Ενωμένα συνθετικά");
++      $(this).html(svgNameCrossOff).attr("data-tooltip", ((typeof fMulerT === "function") ? fMulerT("joinedComps") : "Ενωμένα συνθετικά"));
+     }
+     if (typeof fScheduleNameFit === "function") fScheduleNameFit();
+   });
+@@ -668,7 +881,7 @@
+     $(this)
+       .html(svgEyeState)
+       .toggleClass("active", window.nameEyeEdit)
+-      .attr("data-tooltip", "Ορατότητα συνθετικών");
++      .attr("data-tooltip", ((typeof fMulerT === "function") ? fMulerT("compVisibility") : "Ορατότητα συνθετικών"));
+     if (typeof fShowNameAnalysis === "function") fShowNameAnalysis();
+   });
+ 
+@@ -711,6 +924,12 @@
+   let selectedLabel;
+ 
+   let menuItmes = ["Σφαίρες και Ράβδοι", "Χωροπληρωτικό", "Ράβδοι"];
++  try {
++    if (typeof fVisStyleLabels === "function" && typeof fMulerLang === "function" && fMulerLang() === "en") {
++      const _vl = fVisStyleLabels();
++      menuItmes = [_vl.ballnstick, _vl.spacefill, _vl.sticks];
++    }
++  } catch (e) {}
+   fCreateDropMenu(menuItmes);
+ 
+   $("html").on("click", function () {
+@@ -764,6 +983,12 @@
+ 
+   $("#radio2DMode").on("click", ".mode2DOption", function () {
+     if ($(this).hasClass("disabledRadio")) {
++      return;
++    }
++    // Draft session (v54 Stage 2): radios are hidden while editing; guard in
++    // case the bar is reached anyway — finish the draft first.
++    if (typeof window !== "undefined" && window.MulerDraft) {
++      try { if (typeof fScenarioToast === "function") fScenarioToast(fMolDraftT("draftLocked", "Finish the draft first (Submit/Cancel).")); } catch (eD) {}
+       return;
+     }
+     let currMode2DNo = $(this)
+@@ -811,6 +1036,11 @@
+     if ($(this).hasClass("disabledCheck")) {
+       return;
+     }
++    // Draft session (v54 Stage 2): see the mode2DOption guard above.
++    if (typeof window !== "undefined" && window.MulerDraft) {
++      try { if (typeof fScenarioToast === "function") fScenarioToast(fMolDraftT("draftLocked", "Finish the draft first (Submit/Cancel).")); } catch (eD) {}
++      return;
++    }
+     // Generic .checkBoxContainer handler fires after this and toggles the class,
+     // so read the CURRENT class to determine what state we are moving TO.
+     if ($(this).hasClass("unselectedCheck")) {
+@@ -864,15 +1094,23 @@
+     fShowNameAnalysis();
+   });
+ 
++  // v54 Stage 2: drawing master switch — checked = show the Edit/New
++  // title-bar entries (authoring drafts); unchecked = hidden, default. The
++  // old single-applet show/hide behavior is gone (the dedicated edit applet
++  // owns the canvas now). Mid-draft toggle is blocked: the bar's Cancel
++  // owns exit while a draft is live.
+   $("#originalJSME").on("click", ".checkBoxContainer", function () {
+-    const enableOriginal = $("#originalJSMECheck").hasClass("unselectedCheck");
+-    if (enableOriginal) {
+-      $("#jsmeNomeclatureORGNL").addClass("hide");
+-      // $("#jsmeNomeclatureORGNL").removeClass("hide");
+-    } else {
+-      $("#jsmeNomeclatureORGNL").removeClass("hide");
+-      // $("#jsmeNomeclatureORGNL").addClass("hide");
+-    }
++    var draftLive = false;
++    try { draftLive = !!(typeof window !== "undefined" && window.MulerDraft); } catch (eD) {}
++    if (draftLive) {
++      // Generic toggler already flipped the class: flip it back + toast.
++      try {
++        $("#originalJSMECheck").removeClass("selectedCheck").addClass("unselectedCheck");
++      } catch (eRv) {}
++      try { if (typeof fScenarioToast === "function") fScenarioToast(fMolDraftT("draftLocked", "Finish the draft first (Submit/Cancel).")); } catch (eT) {}
++      return;
++    }
++    try { if (typeof fMolDraftSyncEntryButtons === "function") fMolDraftSyncEntryButtons(); } catch (eSy) {}
+   });
+ 
+   $("#viewFinalJSMESetting").on("click", ".checkBoxContainer", function () {
+@@ -897,11 +1135,11 @@
+     } else {
+       $("#nomeclature3D").slideToggle(200, function () {
+         // if (window.jmolAppletNomeclature)
+-        Jmol.script(jmolAppletNomeclature, "refresh");
++        fJSmolScript(jmolAppletNomeclature, "refresh");
+       });
+       // $("#nomeclature3D").removeClass("hide");
+       $("#controls3D").removeClass("hide");
+-      // Jmol.script(jmolAppletNomeclature, "refresh");
++      // fJSmolScript(jmolAppletNomeclature, "refresh");
+     }
+   });
+ 
+@@ -914,6 +1152,12 @@
+   $(document).on("click", ".nameCompBox", function (event) {
+     event.preventDefault();
+     event.stopPropagation();
++    // Draft session (v54 Stage 2): naming is cleared to a placeholder; box
++    // clicks must not re-highlight or explain.
++    if (typeof window !== "undefined" && window.MulerDraft) {
++      try { if (typeof fScenarioToast === "function") fScenarioToast(fMolDraftT("draftLocked", "Finish the draft first (Submit/Cancel).")); } catch (eD) {}
++      return;
++    }
+     // Hidden (dash) boxes are inert: no highlight, no explanation change.
+     if ($(this).hasClass("comp-hidden")) return;
+     const scrollX = window.scrollX;
+@@ -937,7 +1181,15 @@
+       $(".nameCompBox").removeClass("selected");
+       $(this).addClass("selected");
+ 
+-      switch ($(this).attr("id")) {
++      // Split branch-label pieces (slot 3, comp0bText): per-piece modes.
++      // comp3 keeps the slot-level mode while the slot is unfused.
++      var _bid = "";
++      try { _bid = $(this).attr("id") || ""; } catch (eBid) { _bid = ""; }
++      var _bpxm = /^comp3(b|loc)(\d*)$/.exec(_bid);
++      if (_bpxm && fSplitBranchPiecesActive()) {
++        var _bk = _bpxm[2] === "" ? 2 : parseInt(_bpxm[2], 10) + 1;
++        nameAnalysisMode = _bpxm[1] === "b" ? "compBranchSub" + _bk : "compBranchLoc" + _bk;
++      } else switch ($(this).attr("id")) {
+         case "comp0":
+           nameAnalysisMode = "compNumber1";
+           break;
+@@ -948,7 +1200,7 @@
+           nameAnalysisMode = "compNumber2";
+           break;
+         case "comp3":
+-          nameAnalysisMode = "compSecondSub2";
++          nameAnalysisMode = fSplitBranchPiecesActive() ? "compBranchSub1" : "compSecondSub2";
+           break;
+         case "acidPrefixNumber3":
+           nameAnalysisMode = fSeparateAcidPrefixBoxes() ? "compAcidNumber3" : "none";
+@@ -973,6 +1225,11 @@
+           break;
+         case "comp9":
+           nameAnalysisMode = "compSuffix";
++          break;
++        case "comp9loc":
++          // Split-off suffix locants (e.g. "-2,7-"): positions mode — the
++          // class sentence stays on the suffix box (comp9 → compSuffix).
++          nameAnalysisMode = "compSuffixLocants";
+           break;
+         case "comp10":
+           nameAnalysisMode =
+@@ -1006,14 +1263,6 @@
+     if (typeof fScheduleNameFit === "function") fScheduleNameFit();
+   });
+ 
+-  // Supplemental reference remains independent of the selected component rule.
+-  $(document).on("click", "#alkoxyRuleTitle", function () {
+-    const title = $(this), content = $("#alkoxyRuleContainer");
+-    const open = content.is(":visible");
+-    content.stop(true, true).slideToggle();
+-    title.toggleClass("open", !open).toggleClass("closed", open);
+-    title.attr("aria-expanded", String(!open));
+-  });
+ 
+   $(document).on("click", "#ruleTitle", function () {
+     const pilot = typeof fScenarioShowComponentRule === "function" &&
+@@ -1043,7 +1292,16 @@
+   $(document).on("click", ".menuLi", function (event) {
+     // Scenario pick checkboxes live inside rows — they manage themselves.
+     if (event && event.target && $(event.target).closest(".scPickBox").length) return;
++    // A normal molecule choice leaves an authored Go-preview's box contract.
++    // In-presentation browsing continues to use that step's layout semantics.
++    if (typeof fScenarioClearNameBoxLayout === "function" &&
++      (typeof MuLERMoCScenario === "undefined" || !MuLERMoCScenario.present)) {
++      fScenarioClearNameBoxLayout();
++    }
+     selectedMol = $(this).attr("id");
++    // Explicit user choice (vs the silent methane boot default): the header
++    // language toggle carries ?mol= only for explicitly chosen molecules.
++    try { window.__mulerUserPickedMol = true; } catch (eUp) { /* best-effort */ }
+ 
+     $(".menuLi").removeClass("selectedLi");
+     $(this).addClass("selectedLi");
+@@ -1080,6 +1338,7 @@
+       ) {
+         fDeselectMol();
+         $(this).removeClass("selectedLi");
++        try { window.__mulerSelGroupKey = null; } catch (eGk) { /* best-effort */ }
+         $(this).next(".exmplContainer").slideUp();
+         $(this).next(".exmplContainer").removeClass("open").addClass("closed");
+         // Rule mode: closing the group clears its theory (mirrors molecule deselect).
+@@ -1095,6 +1354,10 @@
+ 
+       $(".crossMenuLi").removeClass("selectedLi");
+       $(this).addClass("selectedLi");
++      try {
++        var _gk = $(this).attr("data-group-key") || $(this).data("group-key") || null;
++        window.__mulerSelGroupKey = _gk || null;
++      } catch (eGk2) { /* best-effort */ }
+ 
+       $(".exmplContainer.open").slideUp();
+       $(this).next(".exmplContainer").slideDown();
+@@ -1297,4 +1560,3 @@
+     fUpdateSVG();
+   });
+ });
+-
+--- js/mulermoc-nom-scenario-52.js
++++ js/mulermoc-nom-scenario-54.js
+@@ -1,4 +1,4 @@
+-// mulermoc-nom-scenario-52.js
++// mulermoc-nom-scenario-54.js
+ // Didactic scenarios — linear snapshot sequences (additive module, since v44).
+ // Drives the core/molview/teaching layers through their public entry points;
+ // modifies no layer logic.
+@@ -10,6 +10,8 @@
+   steps: [], // legacy mirror of the active scenario (kept in sync; use fScenarioActive())
+   index: 0, // legacy mirror of active.index
+   title: "untitled-scenario", // legacy mirror of active.title
++  author: "Unknown", // legacy mirror of active.author
++  created: null, // legacy mirror of active.created (ISO timestamp)
+   menuPick: [], // legacy mirror of active.menuPick
+   scenarios: [], // multi-scenario: [{id, title, steps[], index, menuPick[]}]
+   activeId: null, // explicit active card; Save/pick/Present follow it
+@@ -21,6 +23,7 @@
+   applyToken: 0, // S2: bumped per fScenarioApply; stale async follow-ups abort
+   pending3D: null, // S2: {token, mol, step, done} — name click waits for 3D parse
+   authorSettings: null, // pre-Present checkbox states, restored on Exit
++  nameBoxLayoutContext: null, // live render context: null = normal v54, 1 = legacy, 2 = v54
+   menuPickMode: false, // authoring: show pick checkboxes in the left menu
+   authoring: false, // authoring mode: bar + panels + pick UI (off by default)
+   pinned: false, // authoring pin-dock: bar docked in-flow at the row's right end (live-only, never in step JSON)
+@@ -30,9 +33,77 @@
+ };
+ 
+ // ── multi-scenario state manager ─────────────────────────────────────
+-// Each scenario card: {id, title, steps[], index, menuPick[]}.
++// Each scenario card: {id, title, author, created, steps[], index, menuPick[]}.
+ // The legacy singletons (MuLERMoCScenario.steps/title/index/menuPick)
+ // mirror the active card so older playback paths keep working.
++
++// Scenario metadata (v52, additive — no scenarioVersion bump):
++// `author` is free text, blank/absent → "Unknown"; `created` is the ISO
++// timestamp stamped when the card is created (New/Import) and preserved on
++// import when the file carries a valid one.
++function fScenarioNowIso() {
++  try {
++    return new Date().toISOString();
++  } catch (e) {
++    return null;
++  }
++}
++function fScenarioValidAuthor(v) {
++  if (typeof v !== "string") return "Unknown";
++  var s = v.replace(/^\s+|\s+$/g, "");
++  if (!s) return "Unknown";
++  return s.length > 120 ? s.slice(0, 120) : s;
++}
++function fScenarioValidCreated(v) {
++  if (typeof v !== "string" || !v) return null;
++  var d = new Date(v);
++  if (isNaN(d.getTime())) return null;
++  return d.toISOString();
++}
++
++// Name-box identities are an authored contract (including hidden groups and
++// replayed highlights). Old snapshots predate the v54 split pieces; preserve
++// their slot semantics without changing the saved source JSON. The version is
++// additive within scenarioVersion 1 and follows the step through export/import.
++function fScenarioValidNameBoxLayout(v, step) {
++  if (v === 1 || v === 2) return v;
++  // Imported upstream v53/v54 snapshots may already use split-piece IDs
++  // without this local compatibility marker. Their explicit semantics win.
++  if (typeof v === "undefined" && step) {
++    var mode = step.nameAnalysisMode || "";
++    if (/^compBranch(Sub|Loc)\d+$/.test(mode) || mode === "compSuffixLocants") return 2;
++    var hidden = step.styleName && step.styleName.hidden;
++    if (Array.isArray(hidden) && hidden.some(function (id) {
++      return /^comp3(loc|b)\d*$/.test(id) || id === "comp9loc";
++    })) return 2;
++  }
++  return 1;
++}
++function fScenarioUseLegacyNameBoxes() {
++  return MuLERMoCScenario.nameBoxLayoutContext === 1;
++}
++function fScenarioClearNameBoxLayout() {
++  MuLERMoCScenario.nameBoxLayoutContext = null;
++}
++
++// After returning from a fused legacy view, an old group selection must not
++// silently acquire the meaning of the first newly split piece. Inspect the
++// rendered contract rather than guessing from molecule-specific cases.
++function fScenarioInvalidateChangedNameBoxSelection(previousLayout) {
++  if (previousLayout !== 1 || fScenarioUseLegacyNameBoxes()) return;
++  try {
++    var splitBranch = nameAnalysisMode === "compSecondSub2" &&
++      typeof fSplitBranchPiecesActive === "function" && fSplitBranchPiecesActive();
++    var splitSuffix = nameAnalysisMode === "compSuffix" &&
++      typeof fSplitSuffixLocantsActive === "function" && fSplitSuffixLocantsActive();
++    if (!splitBranch && !splitSuffix) return;
++    nameAnalysisMode = "none";
++    $(".nameCompBox").removeClass("selected");
++    if (typeof fClearHighlights === "function") fClearHighlights();
++    if (typeof fUpdateSVG === "function") fUpdateSVG();
++    if (typeof fExplainNameComp === "function") fExplainNameComp();
++  } catch (eLayout) { /* naming layer unavailable */ }
++}
+ function fScenarioNewId() {
+   MuLERMoCScenario.seq = (MuLERMoCScenario.seq || 0) + 1;
+   return "s" + MuLERMoCScenario.seq;
+@@ -49,6 +120,8 @@
+   MuLERMoCScenario.steps = a.steps;
+   MuLERMoCScenario.index = a.index;
+   MuLERMoCScenario.title = a.title;
++  MuLERMoCScenario.author = a.author;
++  MuLERMoCScenario.created = a.created;
+   MuLERMoCScenario.menuPick = a.menuPick;
+ }
+ function fScenarioActive() {
+@@ -97,7 +170,17 @@
+ }
+ 
+ function fScenarioNew(title, silent) {
+-  var scen = { id: fScenarioNewId(), title: title || ("scenario-" + (MuLERMoCScenario.seq)), steps: [], index: 0, menuPick: [], showStepNumbers: true, reserveTitleSpace: false };
++  var scen = {
++    id: fScenarioNewId(),
++    title: title || ("scenario-" + (MuLERMoCScenario.seq)),
++    author: "Unknown",
++    created: fScenarioNowIso(),
++    steps: [],
++    index: 0,
++    menuPick: [],
++    showStepNumbers: true,
++    reserveTitleSpace: false
++  };
+   MuLERMoCScenario.scenarios.push(scen);
+   MuLERMoCScenario.activeId = scen.id;
+   fScenarioSyncLegacy();
+@@ -140,7 +223,7 @@
+ }
+ 
+ // nameAnalysisMode -> name-box id (reverse of the .nameCompBox click map
+-// in mulermoc-nom-teaching-52.js). comp10/11 depend on chemical class;
++// in mulermoc-nom-teaching-53.js). comp10/11 depend on chemical class;
+ // verified after triggering, mismatch falls back to "none".
+ var fScenarioModeToCompId = {
+   compNumber1: "comp0",
+@@ -155,6 +238,10 @@
+   compEndNumber: "comp7",
+   compBondType2: "comp8",
+   compSuffix: "comp9",
++  compSuffixLocants: "comp9loc",
++  compBranchSub1: "comp3",
++  compBranchLoc2: "comp3loc",
++  compBranchSub2: "comp3b",
+   commonAlkyl1: "comp10",
+   esterAlkyl: "comp10",
+   commonAlkyl2: "comp11",
+@@ -217,11 +304,23 @@
+ function fScenarioToast(msg) {
+   var t = document.getElementById("scenarioToast");
+   if (!t) return;
++  try { if (typeof fMulerTByGr === "function") msg = fMulerTByGr(msg); } catch (e) {}
+   t.textContent = msg;
+   t.classList.add("show");
+-  setTimeout(function () {
+-    t.classList.remove("show");
+-  }, 2600);
++  // Overlapping toasts share one element: a stale timer from an earlier
++  // toast must not hide its replacement early (e.g. dup notice right after
++  // a stale notice).
++  try { if (window.__scToastTimer) clearTimeout(window.__scToastTimer); } catch (eC) {}
++  try {
++    window.__scToastTimer = setTimeout(function () {
++      t.classList.remove("show");
++      try { window.__scToastTimer = null; } catch (eN) {}
++    }, 2600);
++  } catch (eT) {
++    setTimeout(function () {
++      t.classList.remove("show");
++    }, 2600);
++  }
+ }
+ 
+ // Destructive-action guard: a small modal confirm (singleton, like the toast).
+@@ -277,8 +376,8 @@
+     "<div class='scConfirmPanel'>" +
+     "<div class='scConfirmMsg' id='scConfirmMsg'></div>" +
+     "<div class='scConfirmBtns'>" +
+-    "<button type='button' class='scConfirmNo'>Άκυρο</button>" +
+-    "<button type='button' class='scConfirmYes'>Διαγραφή</button>" +
++    "<button type='button' class='scConfirmNo'>" + ((typeof fMulerT === "function") ? fMulerT("cancel") : "Άκυρο") + "</button>" +
++    "<button type='button' class='scConfirmYes'>" + ((typeof fMulerT === "function") ? fMulerT("confirmDelete") : "Διαγραφή") + "</button>" +
+     "</div>" +
+     "</div>";
+   document.body.appendChild(ov);
+@@ -295,7 +394,7 @@
+   var noBtn = ov.querySelector(".scConfirmNo");
+   var yesBtn = ov.querySelector(".scConfirmYes");
+   if (msgEl) msgEl.textContent = msg || "";
+-  if (yesBtn) yesBtn.textContent = yesLabel || "Διαγραφή";
++  if (yesBtn) yesBtn.textContent = yesLabel || ((typeof fMulerT === "function") ? fMulerT("confirmDelete") : "Διαγραφή");
+   fScenarioConfirmYes = (typeof onYes === "function") ? onYes : null;
+   if (yesBtn) yesBtn.onclick = function (e) {
+     if (e && e.stopPropagation) e.stopPropagation();
+@@ -380,22 +479,81 @@
+   })();
+ }
+ 
+-// ── 3D camera via `show moveto` (S1: scriptWait-only) ────────────────────
+-// The old Jmol.getPropertyAsString(applet, "show moveto") branch is gone on
+-// purpose: the property API answered with a `getProperty ERROR … Options
+-// include: …` dump starting with `moveto\t"` that passed the old prefix
+-// check and poisoned stored steps ("always loads the default").
+-// scriptWait("show moveto") returns the real script output ("" when 3D is
+-// unavailable). Capture with `rotate off` — a spinning view drifts.
++// ── 3D camera via orientationInfo.moveTo + `show moveto` fallback ─────────
++// Primary source is JSmol's own orientation API (the same one JSmol uses
++// internally for _saveOrientation): Jmol.getPropertyAsArray(applet,
++// "orientationInfo", "info").moveTo. It is synchronous and does not depend
++// on parsing `show` console output, which is why `scriptWait("show moveto")`
++// alone kept returning "" (capture always null) on some builds.
++// Fallbacks: scriptWait("show moveto") and scriptEcho("show moveto").
++// The old Jmol.getPropertyAsString(applet, "show moveto") branch stays gone:
++// the property API answered with a `getProperty ERROR … Options
++// include: …` dump that poisoned stored steps.
++// Capture with `rotate off` — a spinning view drifts.
++// Stored cameras are always instant: the first token after `moveto` is the
++// flight time in seconds (JSmol defaults it to 1.0); we rewrite it to 0.0.
++function fScenarioMovetoInstant(s) {
++  if (typeof s !== "string") return s;
++  return s.replace(/^(\s*moveto\s+)\S+/i, "$10.0");
++}
++function fScenarioExtractMoveto(raw) {
++  if (raw == null) return null;
++  var s = String(raw);
++  // Unwrap JSON-stringified payloads (\" , \n, outer quotes).
++  if (s.indexOf('\\"') >= 0 || s.indexOf("\\n") >= 0) {
++    try {
++      var un = JSON.parse('"' + s.replace(/"/g, '\\"').replace(/\n/g, "\\n") + '"');
++      if (typeof un === "string" && un) s = un;
++    } catch (eJson) {
++      s = s.replace(/\\n/g, "\n").replace(/\\"/g, '"');
++    }
++  }
++  var lines = s.replace(/\r/g, "").split("\n");
++  for (var i = 0; i < lines.length; i++) {
++    var l = lines[i].trim().replace(/^"+|"+$/g, "").trim();
++    if (/^moveto\b/i.test(l) && /getProperty\s+ERROR/i.test(l) === false) {
++      var cand = l.trim();
++      if (cand && /;?\s*$/.test(cand)) return fScenarioMovetoInstant(cand);
++    }
++  }
++  return null;
++}
+ function fScenarioGetMoveto() {
+   try {
+-    if (typeof Jmol === "undefined" || typeof Jmol.scriptWait === "undefined" ||
+-      typeof jmolAppletNomeclature === "undefined") return null;
+-    var w = String(Jmol.scriptWait(jmolAppletNomeclature, "show moveto") || "").trim();
+-    var line = w.split("\n").filter(function (l) {
+-      return /^moveto\b/i.test(l.trim());
+-    })[0];
+-    if (line) return line.trim();
++    if (typeof Jmol === "undefined" ||
++      typeof jmolAppletNomeclature === "undefined" || !jmolAppletNomeclature) return null;
++    // 1. orientationInfo.moveTo — most reliable.
++    try {
++      if (typeof Jmol.getPropertyAsArray !== "undefined") {
++        var info = fJSmolGetPropertyAsArray(jmolAppletNomeclature, "orientationInfo", "info");
++        var mt = info && info.moveTo;
++        if (typeof mt === "string" && /^moveto\b/i.test(mt.trim())) return fScenarioMovetoInstant(mt.trim());
++        if (info && typeof info === "object" && typeof info["moveTo"] === "string" &&
++          /^moveto\b/i.test(info["moveTo"].trim())) return fScenarioMovetoInstant(info["moveTo"].trim());
++      }
++    } catch (eInfo) {
++      /* fall through to show moveto */
++    }
++    // 2. scriptWait("show moveto").
++    try {
++      if (typeof Jmol.scriptWait !== "undefined") {
++        var w = String(fJSmolScriptWait(jmolAppletNomeclature, "show moveto") || "");
++        var line = fScenarioExtractMoveto(w);
++        if (line) return line;
++      }
++    } catch (eWait) {
++      /* fall through */
++    }
++    // 3. scriptEcho channel — `show` output sometimes lands here.
++    try {
++      if (typeof Jmol.scriptEcho !== "undefined") {
++        var ec = String(fJSmolScriptEcho(jmolAppletNomeclature, "show moveto") || "");
++        var line2 = fScenarioExtractMoveto(ec);
++        if (line2) return line2;
++      }
++    } catch (eEcho) {
++      /* 3D unavailable */
++    }
+   } catch (e) {
+     /* 3D unavailable */
+   }
+@@ -417,7 +575,7 @@
+   if (/[a-df-zA-DF-Z]/.test(body)) return null; // letters other than e/E
+   var nums = body.match(/-?\d(\.\d+)?([eE][+\-]?\d+)?/g) || [];
+   if (nums.length < 5) return null; // not a real camera vector
+-  return line;
++  return fScenarioMovetoInstant(line);
+ }
+ 
+ // ── capture ────────────────────────────────────────────────────────────
+@@ -435,6 +593,16 @@
+ }
+ 
+ function fScenarioCapture() {
++  // Draft session (v54 Stage 2): a mid-draft save would store the OLD
++  // molecule (selectedMol is untouched by design) — block with a toast.
++  if (typeof window !== "undefined" && window.MulerDraft) {
++    try {
++      var _dl = "Finish the draft first (Submit/Cancel).";
++      try { if (typeof fMulerT === "function") { var _t = fMulerT("draftLocked"); if (_t && _t !== "draftLocked") _dl = _t; } } catch (eT) {}
++      fScenarioToast(_dl);
++    } catch (eD) {}
++    return null;
++  }
+   if (!MuLERMoCScenario.ready) {
+     fScenarioToast("Scenario: app not ready yet.");
+     return null;
+@@ -463,14 +631,25 @@
+   var subset = showMenu ? pick.slice() : [];
+   if (showMenu && mol && subset.indexOf(mol) < 0) subset.unshift(mol);
+   var spin = !!fScenarioG("rotateFlag", false);
+-  var moveto = !menuOnly && !adopted && fScenarioViewerOn("3D") ? fScenarioGetMoveto() : null;
++  var moveto = null;
++  try {
++    var _rawMoveto = (!menuOnly && !adopted && fScenarioViewerOn("3D")) ? fScenarioGetMoveto() : null;
++    moveto = fScenarioValidMoveto(_rawMoveto);
++    if (_rawMoveto && !moveto) fScenarioToast("3D view not captured — re-capture with rotate off.");
++  } catch (eCap) { moveto = null; }
+   // Default step title: the live Greek IUPAC name when the loaded
+   // molecule matches the capture (fresh `currentMolName`); the dataset
+   // key when nothing is loaded (adopted pick); "menu" for menu-only.
+   var _liveMol = fScenarioG("selectedMol", null);
+   var _greek = fScenarioG("currentMolName", null);
++  // Step language: the effective UI language at capture time.
++  var _capLang = "gr";
++  try { _capLang = (typeof fMulerLang === "function") ? fMulerLang() : "gr"; } catch (e) {}
++  if (_capLang !== "en" && _capLang !== "gr") _capLang = "gr";
+   var step = {
+     n: act.steps.length + 1,
++    nameBoxLayout: fScenarioUseLegacyNameBoxes() ? 1 : 2,
++    lang: _capLang,
+     title: !mol ? "menu" : (_liveMol === mol && _greek ? _greek : mol),
+     note: "",
+     noteFormat: "html",
+@@ -523,6 +702,7 @@
+       nameSettings: false,
+       nameClick: false,
+       nameEye: false,
++      nameExpanded: !menuOnly && !!window.nameExpanded,
+       audio: false,
+       rule: false,
+       text: true,
+@@ -594,10 +774,13 @@
+ }
+ // Single-viewer max height (v48): additive optional show.viewerMaxHeight.
+ // null/empty = Auto (cap a lone viewer at the both-visible height). Absolute
+-// px, clamped to the live floor/ceiling (VIEWER_MIN_H–VIEWER_MAX_H); invalid
+-// → null. No schema change (scenarioVersion 1).
++// px, clamped to the live floor/ceiling (VIEWER_MIN_H–VIEWER_MAX_H); the
++// string "full" fills the live viewport on whatever screen plays the step
++// (resolved per screen, never stored as px). Invalid → null. No schema
++// change (scenarioVersion 1).
+ function fScenarioValidViewerMaxHeight(v) {
+   if (v === null || typeof v === "undefined" || v === "") return null;
++  if (typeof v === "string" && v.trim().toLowerCase() === "full") return "full";
+   var n = parseInt(v, 10);
+   if (isNaN(n)) return null;
+   if (n < VIEWER_MIN_H) return VIEWER_MIN_H;
+@@ -607,9 +790,11 @@
+ // Double-viewer height (v48): additive optional show.viewerBothHeight. null/
+ // empty = Auto (the equal split both viewers get today). COMBINED 2D+3D height
+ // when two are visible (each viewer takes half), clamped to the VIEWER_BOTH_MIN
+-// –VIEWER_BOTH_MAX range; invalid → null. No schema change (scenarioVersion 1).
++// –VIEWER_BOTH_MAX range; "full" fills the live viewport instead (resolved
++// per playback screen). Invalid → null. No schema change (scenarioVersion 1).
+ function fScenarioValidViewerBothHeight(v) {
+   if (v === null || typeof v === "undefined" || v === "") return null;
++  if (typeof v === "string" && v.trim().toLowerCase() === "full") return "full";
+   var n = parseInt(v, 10);
+   if (isNaN(n)) return null;
+   if (n < VIEWER_BOTH_MIN) return VIEWER_BOTH_MIN;
+@@ -682,7 +867,31 @@
+     try { h = el.getBoundingClientRect().height; } catch (eH) { h = 0; }
+     if (h > maxH) maxH = h;
+   }
+-  var next = maxH > 0 ? Math.round(maxH) + "px" : "";
++  // Full-height rail: fit content up to a viewport-derived cap, then
++  // internal-scroll. The flex chain (#pageContainer.presenting > #authorLayout
++  // > #mainAppContainer > .mainApp3Columns) fills the viewport, so the free
++  // space below the tallest column belongs to the rail too. Available is
++  // measured scroll-invariant — rail document-top plus footer height against
++  // window.innerHeight — so shrinking the window shrinks the cap even while
++  // the page scrolls (live viewport rects would freeze: a scrolled layout
++  // recomputes the same creditsTop − railTop, a ratchet that grows but never
++  // shrinks). Take the larger of columns vs available so short columns still
++  // reach the footer while tall columns keep working.
++  var avail = 0;
++  try {
++    var r = p.getBoundingClientRect();
++    var railTopDoc = (r.top || 0) + (window.scrollY || window.pageYOffset || 0);
++    var credH = 80;
++    try {
++      var cred = document.getElementById("creditsUs");
++      if (cred && cred.offsetHeight) credH = cred.offsetHeight;
++    } catch (eCred) { /* no DOM */ }
++    var vh = window.innerHeight || 0;
++    if (vh > 0) avail = Math.round(vh - railTopDoc - credH - 20);
++  } catch (eA) { avail = 0; }
++  var target = maxH;
++  if (avail > target) target = avail;
++  var next = target > 0 ? Math.round(target) + "px" : "";
+   try {
+     if (p.style.maxHeight !== next) p.style.maxHeight = next;
+   } catch (eS) { /* no style */ }
+@@ -859,10 +1068,16 @@
+   try {
+     window.addEventListener("resize", function () {
+       fScenarioSyncStepTextLayout();
++      // Height-only drags move neither the card nor its fit width, but the
++      // viewer budget is viewport-derived — refit unconditionally (rAF-
++      // coalesced inside) so viewers track the window live, exactly like
++      // the rail cap already does via the layout sync above.
++      try { fScenarioScheduleStepTextRefit(); } catch (eRe) { /* refit best-effort */ }
+       if (timer) clearTimeout(timer);
+       timer = setTimeout(function () {
+         timer = null;
+         fScenarioSyncStepTextLayout();
++        try { fScenarioScheduleStepTextRefit(); } catch (eRe2) { /* refit best-effort */ }
+       }, 120);
+     });
+   } catch (eRz) { /* resize unavailable */ }
+@@ -890,6 +1105,8 @@
+ function fScenarioDefaults(step, i) {
+   var d = {
+     n: i + 1,
++    nameBoxLayout: 1,
++    lang: "gr",
+     title: step.selectedMol || "step " + (i + 1),
+     note: "",
+     noteFormat: "text",
+@@ -910,11 +1127,11 @@
+     show: {
+       menu: false, viewerButtons: false, viewerSettings: false,
+       viewers: { "2D": true, "3D": true },
+-      viewerMaxHeight: null,
+-      viewerBothHeight: null,
++      viewerMaxHeight: "full",
++      viewerBothHeight: "full",
+       controls: { "2D": false, "3D": false },
+       save: { "2D": false, "3D": false },
+-      naming: true, nameSettings: false, nameEye: false, audio: false, rule: false, text: true,
++      naming: true, nameSettings: false, nameEye: false, nameExpanded: false, audio: false, rule: false, text: true,
+     },
+   };
+   var out = Object.assign({}, d, step);
+@@ -955,6 +1172,11 @@
+     position: fScenarioValidTextPosition(out.styleText ? out.styleText.position : null)
+   };
+   out.n = i + 1;
++  out.nameBoxLayout = fScenarioValidNameBoxLayout(step.nameBoxLayout, step);
++  // Step language (additive, no version bump): en|gr, legacy/unknown → gr.
++  // Silent here; fScenarioValidate warns on invalid present values.
++  var _rawLang = step ? step.lang : undefined;
++  out.lang = (_rawLang === "en" || _rawLang === "gr") ? _rawLang : "gr";
+   return out;
+ }
+ 
+@@ -978,6 +1200,9 @@
+       return;
+     }
+     var st = fScenarioDefaults(s, steps.length);
++    if (typeof s.nameBoxLayout !== "undefined" && s.nameBoxLayout !== 1 && s.nameBoxLayout !== 2) {
++      warnings.push("Step " + (i + 1) + ": invalid name-box layout discarded (legacy layout used).");
++    }
+     var _rawNF = s && typeof s.noteFormat !== "undefined" ? s.noteFormat : null;
+     if (_rawNF !== null && _rawNF !== "" && _rawNF !== "text" && _rawNF !== "html") {
+       warnings.push("Step " + (i + 1) + ": invalid note format discarded (text used).");
+@@ -1023,6 +1248,11 @@
+     st.chainIdx = fScenarioValidChainIdx(_rawChain);
+     if (_rawChain !== null && st.chainIdx === 0 && String(_rawChain) !== "0") {
+       warnings.push("Step " + (i + 1) + ": invalid chain step discarded (default used).");
++    }
++    // Step language: en|gr kept, legacy/unknown → Greek default.
++    var _rawLang = s && typeof s.lang !== "undefined" ? s.lang : null;
++    if (_rawLang !== "en" && _rawLang !== "gr" && _rawLang !== null && _rawLang !== "" && typeof _rawLang !== "undefined") {
++      warnings.push("Step " + (i + 1) + ": invalid language discarded (Greek used).");
+     }
+     // menu derivation (mirrors fScenarioCapture; stored show.menu is
+     // ignored so legacy files migrate): single pick collapses to the
+@@ -1062,9 +1292,57 @@
+     steps.push(st);
+   });
+   if (!steps.length) return { ok: false, warnings: warnings.concat(["No valid steps left."]) };
+-  return { ok: true, steps: steps, title: obj.title || obj.scenario || "scenario", showStepNumbers: obj.showStepNumbers !== false, reserveTitleSpace: obj.reserveTitleSpace === true, warnings: warnings };
+-}
+-
++  // Scenario metadata (additive, no version bump): author defaults to
++  // "Unknown" when blank/absent/invalid; a valid creation date is kept,
++  // an invalid one is dropped with a warning (the card stamps its own).
++  var _author = fScenarioValidAuthor(obj.author);
++  if (typeof obj.author !== "undefined" && obj.author !== null &&
++    typeof obj.author !== "string") {
++    warnings.push("Invalid author discarded (Unknown used).");
++  }
++  var _created = fScenarioValidCreated(obj.created);
++  if (typeof obj.created !== "undefined" && obj.created !== null &&
++    obj.created !== "" && !_created) {
++    warnings.push("Invalid creation date discarded.");
++  }
++  return {
++    ok: true,
++    steps: steps,
++    title: obj.title || obj.scenario || "scenario",
++    author: _author,
++    created: _created,
++    showStepNumbers: obj.showStepNumbers !== false,
++    reserveTitleSpace: obj.reserveTitleSpace === true,
++    warnings: warnings
++  };
++}
++
++// One-time bar chrome repaint (no rebuild → no state loss): author bar,
++// play bar, scenario tab. Panels/rows rebuild via fScenarioRenderList.
++function fScenarioRepaintStaticChrome() {
++  var T = function (k, gr) { try { return (typeof fMulerT === "function") ? fMulerT(k) : gr; } catch (e) { return gr; } };
++  var setT = function (id, k, gr) {
++    try { var el = document.getElementById(id); if (el) el.setAttribute("data-tooltip", T(k, gr)); } catch (e) {}
++  };
++  var setA = function (id, k, gr) {
++    try { var el = document.getElementById(id); if (el) el.setAttribute("aria-label", T(k, gr)); } catch (e) {}
++  };
++  setT("scNew", "newScenario", "Νέο κενό σενάριο");
++  setT("scImport", "uploadScenario", "Φόρτωση σεναρίου (JSON)");
++  try { var tt = document.querySelector("#scenarioAuthorBar .scTitleText"); if (tt) tt.textContent = T("scenarios", "Σενάρια Παρουσίασης"); } catch (e) {}
++  setT("scPin", "pinAside", "Καρφίτσωμα δίπλα στο περιεχόμενο");
++  setT("scCloseBar", "close", "Κλείσιμο (ESC)");
++  setT("scPrev", "prevStep", "Προηγούμενο βήμα"); setA("scPrev", "prevStep", "Προηγούμενο βήμα");
++  setT("scNext", "nextStep", "Επόμενο βήμα"); setA("scNext", "nextStep", "Επόμενο βήμα");
++  setT("scExit", "exit", "Έξοδος (ESC)");
++  setA("scScenarioId", "scenarioLabel", "Σενάριο παρουσίασης");
++  try {
++    var tab = document.querySelector(".scTabText");
++    if (tab) tab.textContent = T("scenariosShort", "Σενάρια");
++    var tabBtn = tab && tab.closest ? tab.closest("[data-tooltip]") : null;
++    if (tabBtn) tabBtn.setAttribute("data-tooltip", T("teachingScenarios", "Σενάρια διδασκαλίας"));
++  } catch (e) {}
++}
+ // ── apply ──────────────────────────────────────────────────────────────
+ function fScenarioSetCheck(id, on, selectedCls, unselectedCls) {
+   var el = document.getElementById(id);
+@@ -1127,7 +1405,7 @@
+   }
+   try {
+     // Same labels as fCreateDropMenu (teaching layer).
+-    var visLabels = { ballnstick: "Σφαίρες και Ράβδοι", spacefill: "Χωροπληρωτικό", sticks: "Ράβδοι" };
++    var visLabels = (typeof fVisStyleLabels === "function") ? fVisStyleLabels() : { ballnstick: "Σφαίρες και Ράβδοι", spacefill: "Χωροπληρωτικό", sticks: "Ράβδοι" };
+     var dl = document.getElementById("dropLabel");
+     if (dl && typeof vis3D !== "undefined" && visLabels[vis3D]) dl.innerHTML = visLabels[vis3D];
+   } catch (e) {
+@@ -1173,6 +1451,7 @@
+ // can restore the author's working settings instead of the step's values.
+ function fScenarioStashAuthorSettings() {
+   MuLERMoCScenario.authorSettings = {
++    nameBoxLayoutContext: MuLERMoCScenario.nameBoxLayoutContext,
+     bondAtoms: fScenarioCheck("bondAtomsCheck", false),
+     numberingAtoms: fScenarioCheck("highlightNumberingCheck", true),
+     numberingBonds: fScenarioCheck("highlightNumberingBondsCheck", true),
+@@ -1181,12 +1460,24 @@
+     zoom: (typeof molZoom2D !== "undefined" ? molZoom2D : 2.0),
+     viewerMaxHeight: (typeof viewerMaxH !== "undefined" ? viewerMaxH : null),
+     viewerBothHeight: (typeof viewerBothH !== "undefined" ? viewerBothH : null),
++    nameExpanded: !!window.nameExpanded,
+   };
+ }
+ 
+ function fScenarioRestoreAuthorSettings() {
+   var a = MuLERMoCScenario.authorSettings;
+-  if (!a) return;
++  var previousLayout = MuLERMoCScenario.nameBoxLayoutContext;
++  if (!a) {
++    fScenarioClearNameBoxLayout();
++    try {
++      if (typeof fShowNameAnalysis === "function") fShowNameAnalysis();
++      fScenarioInvalidateChangedNameBoxSelection(previousLayout);
++    } catch (eLayout) { /* naming unavailable */ }
++    return;
++  }
++  MuLERMoCScenario.nameBoxLayoutContext =
++    a.nameBoxLayoutContext === 1 || a.nameBoxLayoutContext === 2
++      ? a.nameBoxLayoutContext : null;
+   fScenarioSetCheck("bondAtomsCheck", !!a.bondAtoms, "selectedCheck", "unselectedCheck");
+   fScenarioSetCheck("highlightNumberingCheck", a.numberingAtoms !== false, "selectedCheck", "unselectedCheck");
+   fScenarioSetCheck("highlightNumberingBondsCheck", a.numberingBonds !== false, "selectedCheck", "unselectedCheck");
+@@ -1219,9 +1510,19 @@
+   // outside presentation.
+   try {
+     if (typeof fShowNameAnalysis === "function") fShowNameAnalysis();
++    fScenarioInvalidateChangedNameBoxSelection(previousLayout);
+   } catch (e) {
+     /* naming unavailable */
+   }
++  // Author's live expanded-name state comes back too (step applies overwrote
++  // it). Runs after the rebuild above, which preserves same-molecule opens
++  // and closes stale ones.
++  try {
++    if (typeof fNameExpandOpen === "function" && typeof fNameExpandClose === "function") {
++      if (a.nameExpanded) fNameExpandOpen();
++      else fNameExpandClose();
++    }
++  } catch (eExp) { /* expand best-effort */ }
+   MuLERMoCScenario.authorSettings = null;
+ }
+ 
+@@ -1330,7 +1631,7 @@
+         btn.classList.toggle("unselectedCheck", !on);
+         btn.setAttribute("aria-checked", on ? "true" : "false");
+         btn.removeAttribute("title");
+-        btn.setAttribute("data-tooltip", "Επιλογή μορίων για το στιγμιότυπο" + (n ? " (" + n + ")" : ""));
++        btn.setAttribute("data-tooltip", ((typeof fMulerPre === "function") ? fMulerPre("Επιλογή μορίων για το στιγμιότυπο", "Select molecules for the snapshot", (n ? " (" + n + ")" : "")) : ("Επιλογή μορίων για το στιγμιότυπο" + (n ? " (" + n + ")" : ""))));
+         var badge = btn.querySelector(".scPickCount");
+         if (badge) {
+           badge.textContent = n ? String(n) : "";
+@@ -1422,6 +1723,16 @@
+   }
+ }
+ var SCENARIO_MENU_GROUP_LABELS = { molecules: "Μόρια", chemclass: "Χημικές Τάξεις", series: "Ομόλογες Σειρές" };
++function fScenarioMenuGroupLabel(g) {
++  try {
++    if (typeof fMulerT === "function" && typeof fMulerLang === "function" && fMulerLang() === "en") {
++      if (g === "molecules") return fMulerT("moleculesPlural");
++      if (g === "chemclass") return fMulerT("chemClasses");
++      if (g === "series") return fMulerT("homolSeries");
++    }
++  } catch (e) {}
++  return SCENARIO_MENU_GROUP_LABELS[g] || g;
++}
+ function fScenarioPresentGroupsHtml(subset, mode, counter) {
+   var isChem = mode === "chemclass";
+   var buckets = {}, labels = {}, order = [];
+@@ -1434,7 +1745,7 @@
+       var lab = isChem
+         ? ((typeof chemicalClassLabels !== "undefined" && chemicalClassLabels[key]) || cl.taxonomy)
+         : ((typeof homologousSeriesLabels !== "undefined" && homologousSeriesLabels[key]) || cl.taxonomy);
+-      labels[key] = lab || "Μη ταξινομημένα";
++      labels[key] = lab || ((typeof fMulerT === "function") ? fMulerT("unclassified") : "Μη ταξινομημένα");
+       order.push(key);
+     }
+     buckets[key].push(prop);
+@@ -1487,11 +1798,11 @@
+     if (!view || groups.indexOf(view) < 0) {
+       view = groups.indexOf("molecules") >= 0 ? "molecules" : groups[0];
+     }
+-    var html = "<div class='panelTitle'> Παραδείγματα </div>";
++    var html = "<div class='panelTitle'>" + ((typeof fMulerT === "function") ? fMulerT("examples") : "Παραδείγματα") + " </div>";
+     if (groups.length > 1) {
+-      html += "<div class='scPresentGrouping' role='group' aria-label='Ομαδοποίηση μενού'>";
++      html += "<div class='scPresentGrouping' role='group' aria-label='" + ((typeof fMulerT === "function") ? fMulerT("menuGrouping") : "Ομαδοποίηση μενού") + "'>";
+       groups.forEach(function (g) {
+-        html += "<div class='radioCheckContainer " + (g === view ? "selectedRadio" : "unselectedRadio") + "' data-pgroup='" + g + "'>" + (SCENARIO_MENU_GROUP_LABELS[g] || g) + "<span class='radioCheck'></span></div>";
++        html += "<div class='radioCheckContainer " + (g === view ? "selectedRadio" : "unselectedRadio") + "' data-pgroup='" + g + "'>" + ((typeof fScenarioMenuGroupLabel === "function") ? fScenarioMenuGroupLabel(g) : (SCENARIO_MENU_GROUP_LABELS[g] || g)) + "<span class='radioCheck'></span></div>";
+       });
+       html += "</div>";
+     }
+@@ -1636,6 +1947,13 @@
+ 
+ function fScenarioApply(step) {
+   if (!MuLERMoCScenario.ready || !step) return false;
++  // Set before any load or naming repaint, in presentation and Go preview.
++  MuLERMoCScenario.nameBoxLayoutContext = fScenarioValidNameBoxLayout(step.nameBoxLayout, step);
++  // Step language: the step shows naming + UI in its creation language.
++  // Single chokepoint — present navigation, authoring preview, exit align.
++  try {
++    window.__mulerStepLang = (step.lang === "en" || step.lang === "gr") ? step.lang : "gr";
++  } catch (e) { /* private-mode: session language applies */ }
+   try {
+     window.speechSynthesis && window.speechSynthesis.cancel();
+   } catch (e) {
+@@ -1667,10 +1985,15 @@
+     fScenarioApplyViewerMaxHeight(step);
+     // author's live selectedRule untouched on menu-only steps
+     fScenarioChrome(step.show);
++    try { if (typeof fMulerRefreshStepChrome === "function") fMulerRefreshStepChrome(); } catch (e) {}
+     return true;
+   }
+   // 1. state globals (same scope as molview/teaching layers)
+   selectedMol = step.selectedMol;
++  // Scenario-driven selection counts as explicit (like a row click), so the
++  // header language toggle keeps carrying it — unlike the silent methane
++  // boot default, which must not force ?mol= on toggle.
++  try { window.__mulerUserPickedMol = true; } catch (eUp) { /* best-effort */ }
+   mode2D = step.mode2D;
+   modeSuffix = mode2D === "expanded" ? "_2D_Expanded" : mode2D === "condensed" ? "_2D_Condensed" : "_2D_Skeletal";
+   if (step.style2D.zigzag) mode2D = "condensedZigZag";
+@@ -1776,6 +2099,18 @@
+   } catch (e) {
+     /* naming unavailable */
+   }
++  // Per-step expanded-name state: set AFTER the naming rebuild above (a
++  // molecule switch closes a stale overlay; same-molecule rebuilds preserve
++  // it) and BEFORE the highlight replay below, whose reserve/anchor calls
++  // observe window.nameExpanded. Skipped when the naming shell is hidden.
++  try {
++    if (typeof fNameExpandOpen === "function" && typeof fNameExpandClose === "function") {
++      var _wantExpand = !!(step.show && step.show.nameExpanded === true) && !!step.selectedMol &&
++        !(MuLERMoCScenario.present && step.show && step.show.naming === false);
++      if (_wantExpand) fNameExpandOpen();
++      else fNameExpandClose();
++    }
++  } catch (eExp) { /* expand best-effort */ }
+   try {
+     if (typeof fUpdateSVG === "function") fUpdateSVG();
+   } catch (eZoomSvg) {
+@@ -1794,7 +2129,7 @@
+       setTimeout(function () {
+         if (tok !== MuLERMoCScenario.applyToken) return; // stale
+         try {
+-          Jmol.script(jmolAppletNomeclature, mv);
++          fJSmolScript(jmolAppletNomeclature, mv);
+         } catch (e) {
+           /* 3D unavailable */
+         }
+@@ -1845,6 +2180,7 @@
+ 
+   // 7. chrome per show.*
+   fScenarioChrome(step.show);
++  try { if (typeof fMulerRefreshStepChrome === "function") fMulerRefreshStepChrome(); } catch (e) {}
+   return true;
+ }
+ 
+@@ -1953,9 +2289,9 @@
+         var _w3 = (_ap3 && _ap3.clientWidth) || 480;
+         var _h3 = (_ap3 && _ap3.clientHeight) || 240;
+         if (Jmol.resizeApplet && typeof jmolAppletNomeclature !== "undefined") {
+-          Jmol.resizeApplet(jmolAppletNomeclature, { width: _w3, height: _h3 });
++          fJSmolResizeApplet(jmolAppletNomeclature, { width: _w3, height: _h3 });
+         }
+-        Jmol.script(jmolAppletNomeclature, "refresh");
++        fJSmolScript(jmolAppletNomeclature, "refresh");
+       } catch (e3) {
+         /* 3D unavailable */
+       }
+@@ -2189,12 +2525,12 @@
+   var title = document.createElement("h2");
+   title.id = "scNoteImageTitle";
+   title.className = "scNoteImageTitle";
+-  title.textContent = "Εικόνα";
++  title.textContent = ((typeof fMulerT === "function") ? fMulerT("imageDlg") : "Εικόνα");
+   var body = document.createElement("div");
+   body.className = "scNoteImageBody";
+   var altLabel = document.createElement("label");
+   altLabel.className = "scNoteImageField";
+-  altLabel.appendChild(document.createTextNode("Εναλλακτική περιγραφή"));
++  altLabel.appendChild(document.createTextNode(((typeof fMulerT === "function") ? fMulerT("altText") : "Εναλλακτική περιγραφή")));
+   var alt = document.createElement("input");
+   alt.type = "text";
+   alt.className = "scNoteImageAlt";
+@@ -2203,7 +2539,8 @@
+   body.appendChild(altLabel);
+   var dims = document.createElement("div");
+   dims.className = "scNoteImageDims";
+-  [["Πλάτος (px)", "scNoteImageWidth"], ["Ύψος (px)", "scNoteImageHeight"]].forEach(function (def) {
++  var _dimDefs = ((typeof fMulerIsEN === "function") && fMulerIsEN()) ? [["Width (px)", "scNoteImageWidth"], ["Height (px)", "scNoteImageHeight"]] : [["Πλάτος (px)", "scNoteImageWidth"], ["Ύψος (px)", "scNoteImageHeight"]];
++  _dimDefs.forEach(function (def) {
+     var label = document.createElement("label");
+     label.className = "scNoteImageField";
+     label.appendChild(document.createTextNode(def[0]));
+@@ -2220,14 +2557,14 @@
+   body.appendChild(dims);
+   var hint = document.createElement("p");
+   hint.className = "scNoteImageHint";
+-  hint.textContent = "Κενό = αυτόματο. Προαιρετικά 16–2000 px.";
++  hint.textContent = ((typeof fMulerT === "function") ? fMulerT("sizeAutoHint") : "Κενό = αυτόματο. Προαιρετικά 16–2000 px.");
+   body.appendChild(hint);
+   var foot = document.createElement("div");
+   foot.className = "scNoteImageFoot";
+   var cancel = document.createElement("button");
+   cancel.type = "button";
+   cancel.className = "scNoteImageBtn";
+-  cancel.textContent = "Άκυρο";
++  cancel.textContent = ((typeof fMulerT === "function") ? fMulerT("cancel") : "Άκυρο");
+   cancel.onclick = function (ev) {
+     if (ev && ev.preventDefault) ev.preventDefault();
+     fScenarioNoteImageDialogClose();
+@@ -2235,7 +2572,7 @@
+   var insert = document.createElement("button");
+   insert.type = "button";
+   insert.className = "scNoteImageBtn scNoteImageInsert";
+-  insert.textContent = "Εισαγωγή";
++  insert.textContent = ((typeof fMulerT === "function") ? fMulerT("insert") : "Εισαγωγή");
+   insert.onclick = function (ev) {
+     if (ev && ev.preventDefault) ev.preventDefault();
+     fScenarioNoteImageDialogSubmit();
+@@ -2318,10 +2655,10 @@
+ }
+ function fScenarioInsertNoteTable(ctx) {
+   if (!ctx) return;
+-  var rows = parseInt(window.prompt("Γραμμές πίνακα (1–8)", "3"), 10);
++  var rows = parseInt(window.prompt(typeof fMulerTByGr === "function" ? fMulerTByGr("Γραμμές πίνακα (1–8)") : "Γραμμές πίνακα (1–8)", "3"), 10);
+   if (isNaN(rows)) return;
+   rows = Math.max(1, Math.min(8, rows));
+-  var cols = parseInt(window.prompt("Στήλες πίνακα (1–8)", "2"), 10);
++  var cols = parseInt(window.prompt(typeof fMulerTByGr === "function" ? fMulerTByGr("Στήλες πίνακα (1–8)") : "Στήλες πίνακα (1–8)", "2"), 10);
+   if (isNaN(cols)) return;
+   cols = Math.max(1, Math.min(8, cols));
+   var html = '<table class="note-table"><thead><tr>';
+@@ -2351,7 +2688,7 @@
+     if (open !== shut) { bad = true; break; }
+   }
+   noteInput.classList.toggle("tag-warn", bad);
+-  noteInput.title = bad ? "Μη κλεισμένη ετικέτα — ελέγξτε τα <...>." : "";
++  noteInput.title = bad ? ((typeof fMulerT === "function") ? fMulerT("unclosedTag") : "Μη κλεισμένη ετικέτα — ελέγξτε τα <...>.") : "";
+ }
+ function fScenarioNoteContentBar(ctx, opts) {
+   opts = opts || {};
+@@ -2383,20 +2720,20 @@
+     if (formatBtn) {
+       formatBtn.textContent = html ? "HTML" : "TXT";
+       if (formatBtn.classList) formatBtn.classList.toggle("active", html);
+-      formatBtn.setAttribute("data-tooltip", html ? "Μορφή HTML — κλικ για απλό κείμενο" : "Απλό κείμενο — κλικ για HTML");
+-      formatBtn.setAttribute("aria-label", html ? "Μορφή HTML — κλικ για απλό κείμενο" : "Απλό κείμενο — κλικ για HTML");
++      formatBtn.setAttribute("data-tooltip", html ? ((typeof fMulerT === "function") ? fMulerT("toPlainText") : "Μορφή HTML — κλικ για απλό κείμενο") : ((typeof fMulerT === "function") ? fMulerT("toHtml") : "Απλό κείμενο — κλικ για HTML"));
++      formatBtn.setAttribute("aria-label", html ? ((typeof fMulerT === "function") ? fMulerT("toPlainText") : "Μορφή HTML — κλικ για απλό κείμενο") : ((typeof fMulerT === "function") ? fMulerT("toHtml") : "Απλό κείμενο — κλικ για HTML"));
+     }
+     if (sizeSelect) {
+       sizeSelect.disabled = !rich;
+-      sizeSelect.setAttribute("aria-label", rich ? "Μέγεθος επιλεγμένου κειμένου" : "Διαθέσιμο στην οπτική επεξεργασία");
++      sizeSelect.setAttribute("aria-label", rich ? ((typeof fMulerT === "function") ? fMulerT("fontSizeSel") : "Μέγεθος επιλεγμένου κειμένου") : ((typeof fMulerT === "function") ? fMulerT("visualOnly") : "Διαθέσιμο στην οπτική επεξεργασία"));
+     }
+     if (sizeWrap) {
+-      sizeWrap.setAttribute("data-tooltip", rich ? "Μέγεθος επιλεγμένου κειμένου" : "Διαθέσιμο στην οπτική επεξεργασία");
++      sizeWrap.setAttribute("data-tooltip", rich ? ((typeof fMulerT === "function") ? fMulerT("fontSizeSel") : "Μέγεθος επιλεγμένου κειμένου") : ((typeof fMulerT === "function") ? fMulerT("visualOnly") : "Διαθέσιμο στην οπτική επεξεργασία"));
+     }
+     if (alignBtn) {
+       alignBtn.disabled = !rich;
+-      alignBtn.setAttribute("data-tooltip", rich ? "Στοίχιση επιλεγμένου κειμένου" : "Διαθέσιμο στην οπτική επεξεργασία");
+-      alignBtn.setAttribute("aria-label", rich ? "Στοίχιση επιλεγμένου κειμένου" : "Διαθέσιμο στην οπτική επεξεργασία");
++      alignBtn.setAttribute("data-tooltip", rich ? ((typeof fMulerT === "function") ? fMulerT("alignSel") : "Στοίχιση επιλεγμένου κειμένου") : ((typeof fMulerT === "function") ? fMulerT("visualOnly") : "Διαθέσιμο στην οπτική επεξεργασία"));
++      alignBtn.setAttribute("aria-label", rich ? ((typeof fMulerT === "function") ? fMulerT("alignSel") : "Στοίχιση επιλεγμένου κειμένου") : ((typeof fMulerT === "function") ? fMulerT("visualOnly") : "Διαθέσιμο στην οπτική επεξεργασία"));
+     }
+     if (opts.onPaint) opts.onPaint(html);
+   }
+@@ -2416,11 +2753,11 @@
+     bar.appendChild(formatBtn);
+   }
+   var noteBtns = [
+-    ["B", "b", "Έντονα"],
+-    ["I", "i", "Πλάγια"],
+-    ["x²", "sup", "Εκθέτης"],
+-    ["x₂", "sub", "Δείκτης"],
+-    ["✕", null, "Καθαρισμός μορφοποίησης"]
++    ["B", "b", ((typeof fMulerT === "function") ? fMulerT("bold") : "Έντονα")],
++    ["I", "i", ((typeof fMulerT === "function") ? fMulerT("italic") : "Πλάγια")],
++    ["x²", "sup", ((typeof fMulerT === "function") ? fMulerT("superscript") : "Εκθέτης")],
++    ["x₂", "sub", ((typeof fMulerT === "function") ? fMulerT("subscript") : "Δείκτης")],
++    ["✕", null, ((typeof fMulerT === "function") ? fMulerT("clearFormat") : "Καθαρισμός μορφοποίησης")]
+   ];
+   noteBtns.forEach(function (def) {
+     var b = document.createElement("button");
+@@ -2443,8 +2780,8 @@
+     bar.appendChild(b);
+   });
+   if (showLists) {
+-    [["ul", "Λίστα με κουκκίδες", "unorderedList"],
+-      ["ol", "Αριθμημένη λίστα", "orderedList"]].forEach(function (def) {
++    [["ul", ((typeof fMulerT === "function") ? fMulerT("bulletList") : "Λίστα με κουκκίδες"), "unorderedList"],
++      ["ol", ((typeof fMulerT === "function") ? fMulerT("numberedList") : "Αριθμημένη λίστα"), "orderedList"]].forEach(function (def) {
+       var b = document.createElement("button");
+       b.type = "button";
+       b.className = "scNoteBtn scNoteListBtn";
+@@ -2465,8 +2802,8 @@
+   }
+   sizeSelect = document.createElement("select");
+   sizeSelect.className = "scNoteFontSize";
+-  sizeSelect.setAttribute("aria-label", "Μέγεθος επιλεγμένου κειμένου");
+-  var sizeDefs = [["", "Μέγεθος"], ["14", "Μικρό 14"], ["18", "Κανονικό 18"], ["22", "Μεγάλο 22"], ["26", "Πολύ μεγάλο 26"]];
++  sizeSelect.setAttribute("aria-label", ((typeof fMulerT === "function") ? fMulerT("fontSizeSel") : "Μέγεθος επιλεγμένου κειμένου"));
++  var sizeDefs = ((typeof fMulerIsEN === "function") && fMulerIsEN()) ? [["", "Size"], ["14", "Small 14"], ["18", "Normal 18"], ["22", "Large 22"], ["26", "Extra large 26"]] : [["", "Μέγεθος"], ["14", "Μικρό 14"], ["18", "Κανονικό 18"], ["22", "Μεγάλο 22"], ["26", "Πολύ μεγάλο 26"]];
+   sizeDefs.forEach(function (def) {
+     var opt = document.createElement("option");
+     opt.value = def[0];
+@@ -2488,9 +2825,9 @@
+   bar.appendChild(sizeWrap);
+   (function () {
+     var defs = [
+-      ["left", "alignLeft", "Αριστερά"],
+-      ["center", "alignCenter", "Κέντρο"],
+-      ["right", "alignRight", "Δεξιά"]
++      ["left", "alignLeft", ((typeof fMulerT === "function") ? fMulerT("alignLeft") : "Αριστερά")],
++      ["center", "alignCenter", ((typeof fMulerT === "function") ? fMulerT("alignCenter") : "Κέντρο")],
++      ["right", "alignRight", ((typeof fMulerT === "function") ? fMulerT("alignRight") : "Δεξιά")]
+     ];
+     var alignValue = "left";
+     var wrap = document.createElement("span");
+@@ -2503,7 +2840,7 @@
+     var menu = document.createElement("div");
+     menu.className = "scTextPosMenu scNoteAlignMenu";
+     menu.setAttribute("role", "menu");
+-    menu.setAttribute("aria-label", "Στοίχιση κειμένου");
++    menu.setAttribute("aria-label", ((typeof fMulerT === "function") ? fMulerT("alignMenu") : "Στοίχιση κειμένου"));
+     var caret = document.createElement("span");
+     caret.className = "scTextPosCaret";
+     caret.setAttribute("aria-hidden", "true");
+@@ -2620,8 +2957,8 @@
+     paintAlign();
+   })();
+   if (showInsert) {
+-    [["image", "Εικ.", "Εικόνα από αρχείο (PNG/JPEG/GIF/WebP, ≤500 KB)", fScenarioInsertNoteImage],
+-      ["table", "Πίν.", "Εισαγωγή πίνακα", fScenarioInsertNoteTable]].forEach(function (def) {
++    [["image", ((typeof fMulerT === "function") ? fMulerT("imgShort") : "Εικ."), ((typeof fMulerT === "function") ? fMulerT("imageFromFile") : "Εικόνα από αρχείο (PNG/JPEG/GIF/WebP, ≤500 KB)"), fScenarioInsertNoteImage],
++      ["table", ((typeof fMulerT === "function") ? fMulerT("tblShort") : "Πίν."), ((typeof fMulerT === "function") ? fMulerT("insertTable") : "Εισαγωγή πίνακα"), fScenarioInsertNoteTable]].forEach(function (def) {
+       var b = document.createElement("button");
+       b.type = "button";
+       b.className = "scNoteBtn scNoteInsertBtn";
+@@ -2645,12 +2982,12 @@
+   (function () {
+     if (!showComponent) return;
+     var defs = [
+-      ["rule-table:1", "1ο συνθετικό"],
+-      ["rule-table:2", "2ο συνθετικό"],
+-      ["rule-table:3", "3ο συνθετικό"],
+-      ["rule-table:4", "Σειρά ομάδων"],
+-      ["rule-table:alkyl", "Αλκύλια"],
+-      ["rule-table:alkoxy", "Αλκοξυομάδες"]
++      ["rule-table:1", ((typeof fMulerT === "function") ? fMulerT("comp1Menu") : "1ο συνθετικό")],
++      ["rule-table:2", ((typeof fMulerT === "function") ? fMulerT("comp2Menu") : "2ο συνθετικό")],
++      ["rule-table:3", ((typeof fMulerT === "function") ? fMulerT("comp3Menu") : "3ο συνθετικό")],
++      ["rule-table:4", ((typeof fMulerT === "function") ? fMulerT("groupOrderMenu") : "Σειρά ομάδων")],
++      ["rule-table:alkyl", ((typeof fMulerT === "function") ? fMulerT("alkylMenu") : "Αλκύλια")],
++      ["rule-table:alkoxy", ((typeof fMulerT === "function") ? fMulerT("alkoxyMenu") : "Αλκοξυομάδες")]
+     ];
+     var icon = (window.MuLERIcons && (window.MuLERIcons.addPredefinedItem || window.MuLERIcons.book)) || null;
+     var wrap = document.createElement("span");
+@@ -2663,7 +3000,7 @@
+     var menu = document.createElement("div");
+     menu.className = "scNoteComponentMenu";
+     menu.setAttribute("role", "menu");
+-    menu.setAttribute("aria-label", "Έτοιμο περιεχόμενο");
++    menu.setAttribute("aria-label", ((typeof fMulerT === "function") ? fMulerT("readyContent") : "Έτοιμο περιεχόμενο"));
+     var itemEls = [];
+     defs.forEach(function (def) {
+       var opt = document.createElement("button");
+@@ -2684,7 +3021,7 @@
+       caret.className = "scNoteComponentCaret";
+       caret.setAttribute("aria-hidden", "true");
+       btn.appendChild(caret);
+-      var label = "Έτοιμο περιεχόμενο";
++      var label = ((typeof fMulerT === "function") ? fMulerT("readyContent") : "Έτοιμο περιεχόμενο");
+       btn.setAttribute("data-tooltip", label);
+       btn.setAttribute("aria-label", label);
+     }
+@@ -3266,8 +3603,8 @@
+     else state.sourceBtn.textContent = sourceView ? "HTML" : "WYSIWYG";
+     state.sourceBtn.classList.toggle("active", sourceView);
+     state.sourceBtn.setAttribute("aria-pressed", sourceView ? "true" : "false");
+-    state.sourceBtn.setAttribute("data-tooltip", sourceView ? "Επιστροφή στην οπτική επεξεργασία" : "Επεξεργασία HTML πηγής");
+-    state.sourceBtn.setAttribute("aria-label", sourceView ? "Επιστροφή στην οπτική επεξεργασία" : "Επεξεργασία HTML πηγής");
++    state.sourceBtn.setAttribute("data-tooltip", sourceView ? ((typeof fMulerT === "function") ? fMulerT("backToVisual") : "Επιστροφή στην οπτική επεξεργασία") : ((typeof fMulerT === "function") ? fMulerT("editHtmlSource") : "Επεξεργασία HTML πηγής"));
++    state.sourceBtn.setAttribute("aria-label", sourceView ? ((typeof fMulerT === "function") ? fMulerT("backToVisual") : "Επιστροφή στην οπτική επεξεργασία") : ((typeof fMulerT === "function") ? fMulerT("editHtmlSource") : "Επεξεργασία HTML πηγής"));
+   }
+   if (state.contentBar && state.contentBar.paint) state.contentBar.paint();
+ }
+@@ -3449,7 +3786,7 @@
+         state.draft.noteFormat !== state.snapshot.noteFormat;
+     }
+     if (changed) {
+-      var ok = window.confirm("Υπάρχουν μη αποθηκευμένες αλλαγές. Να απορριφθούν;");
++      var ok = window.confirm(typeof fMulerTByGr === "function" ? fMulerTByGr("Υπάρχουν μη αποθηκευμένες αλλαγές. Να απορριφθούν;") : "Υπάρχουν μη αποθηκευμένες αλλαγές. Να απορριφθούν;");
+       if (!ok) return;
+     }
+   }
+@@ -3471,8 +3808,8 @@
+   var close = document.createElement("button");
+   close.type = "button";
+   close.className = "scNoteEditorClose";
+-  close.setAttribute("data-tooltip", "Έξοδος από τον μεγάλο επεξεργαστή");
+-  close.setAttribute("aria-label", "Έξοδος από τον μεγάλο επεξεργαστή");
++  close.setAttribute("data-tooltip", ((typeof fMulerT === "function") ? fMulerT("exitBigEditor") : "Έξοδος από τον μεγάλο επεξεργαστή"));
++  close.setAttribute("aria-label", ((typeof fMulerT === "function") ? fMulerT("exitBigEditor") : "Έξοδος από τον μεγάλο επεξεργαστή"));
+   if (window.MuLERIcons && window.MuLERIcons.fullScreenExit) close.innerHTML = window.MuLERIcons.fullScreenExit;
+   else close.textContent = "✕";
+   close.onclick = function (ev) {
+@@ -3489,11 +3826,11 @@
+   preview.className = "scNoteEditorPreview";
+   preview.setAttribute("role", "textbox");
+   preview.setAttribute("aria-multiline", "true");
+-  preview.setAttribute("aria-label", "Πλούσιο κείμενο");
+-  preview.setAttribute("data-placeholder", "Γράψτε το κείμενο του βήματος…");
++  preview.setAttribute("aria-label", ((typeof fMulerT === "function") ? fMulerT("richText") : "Πλούσιο κείμενο"));
++  preview.setAttribute("data-placeholder", ((typeof fMulerT === "function") ? fMulerT("notePlaceholder") : "Γράψτε το κείμενο του βήματος…"));
+   var source = document.createElement("textarea");
+   source.className = "scNoteEditorSource";
+-  source.placeholder = "HTML πηγής";
++  source.placeholder = ((typeof fMulerT === "function") ? fMulerT("htmlSource") : "HTML πηγής");
+   source.spellcheck = false;
+   body.appendChild(preview);
+   body.appendChild(source);
+@@ -3502,7 +3839,7 @@
+   var cancel = document.createElement("button");
+   cancel.type = "button";
+   cancel.className = "scNoteEditorBtn";
+-  cancel.textContent = "Άκυρο";
++  cancel.textContent = ((typeof fMulerT === "function") ? fMulerT("cancel") : "Άκυρο");
+   cancel.onclick = function (ev) {
+     if (ev && ev.preventDefault) ev.preventDefault();
+     fScenarioNoteEditorRequestClose(false);
+@@ -3510,7 +3847,7 @@
+   var apply = document.createElement("button");
+   apply.type = "button";
+   apply.className = "scNoteEditorBtn scNoteEditorApply";
+-  apply.textContent = "Εφαρμογή";
++  apply.textContent = ((typeof fMulerT === "function") ? fMulerT("applyBtn") : "Εφαρμογή");
+   apply.onclick = function (ev) {
+     if (ev && ev.preventDefault) ev.preventDefault();
+     fScenarioNoteEditorApply();
+@@ -3544,7 +3881,7 @@
+   var source = d.querySelector(".scNoteEditorSource");
+   var tools = d.querySelector(".scNoteEditorToolbar");
+   var title = d.querySelector(".scNoteEditorTitle");
+-  if (title) title.textContent = "Κείμενο βήματος " + (st.n || "") + (st.title ? " — " + st.title : "");
++  if (title) title.textContent = ((typeof fMulerPre === "function") ? fMulerPre("Κείμενο βήματος ", "Step text ", (st.n || "") + (st.title ? " — " + st.title : "")) : ("Κείμενο βήματος " + (st.n || "") + (st.title ? " — " + st.title : "")));
+   tools.innerHTML = "";
+   var snapshot = {
+     note: String(st.note || ""),
+@@ -3642,7 +3979,7 @@
+   } catch (e) {
+     return;
+   }
+-  copy.title = (src.title || "step") + " (αντίγραφο)";
++  copy.title = (src.title || "step") + " " + ((typeof fMulerT === "function") ? fMulerT("stepCopy") : "(αντίγραφο)");
+   s.steps.splice(idx + 1, 0, copy);
+   fScenarioRenumber(scenId);
+   fScenarioToast("Duplicated step " + src.n + " as step " + (idx + 2) + ".");
+@@ -3768,6 +4105,9 @@
+     fScenarioHide("nameSettingsBtnDiv", present && !ns);
+     var panel = document.getElementById("nameSettingsPanel");
+     if (panel && present && !ns) panel.classList.remove("open");
++    // The panel sits above the name boxes: re-pin the floating Explain sheet
++    // when chrome mutates it (no-op unless expanded; covers the 0.25s close).
++    try { if (typeof fNameExpandRepinDelayed === "function") fNameExpandRepinDelayed(); } catch (eExp) { /* best-effort */ }
+     // voice buttons: visible with audio on, or with the naming controls
+     var audioOn = !(present && show.audio !== true && show.nameSettings !== true);
+     ["narrateAnalysisToggle", "readNameBtn"].forEach(function (id) {
+@@ -3792,7 +4132,7 @@
+   // 2D must not clear the 3D model.
+   if (!show3D && typeof Jmol !== "undefined") {
+     try {
+-      Jmol.script(jmolAppletNomeclature, "zap");
++      fJSmolScript(jmolAppletNomeclature, "zap");
+     } catch (e) {
+       /* 3D unavailable */
+     }
+@@ -4073,28 +4413,89 @@
+ 
+ // ── file export / import (memory + file, decision A) ────────────────────
+ // Export is per scenario card (v1 schema unchanged); Import adds a panel.
++
++// Suggested download name: title → filesystem-safe stem + .scenario.json.
++// Sanitizes the characters Windows/macOS reject so the Save window and the
++// download fallback both start from a valid name.
++function fScenarioSuggestFilename(title) {
++  var stem = String(title == null ? "" : title)
++    .replace(/[\\/:*?"<>|\u0000-\u001f]+/g, "_")
++    .replace(/\s+/g, "_")
++    .replace(/_+/g, "_")
++    .replace(/^_+|_+$/g, "");
++  if (!stem) stem = "scenario";
++  return stem + ".scenario.json";
++}
++
++// Original delivery path: <a download> blob click. Used everywhere the Save
++// picker is unavailable (Firefox, Safari, file://, insecure origins) and as
++// the fallback when the picker throws. Unchanged behavior for offline/Import.
++function fScenarioSaveBlobDownload(filename, blob) {
++  try {
++    var a = document.createElement("a");
++    a.href = URL.createObjectURL(blob);
++    a.download = filename;
++    document.body.appendChild(a);
++    a.click();
++    setTimeout(function () {
++      URL.revokeObjectURL(a.href);
++      a.remove();
++    }, 500);
++    return true;
++  } catch (e) {
++    return false;
++  }
++}
++
++// Save delivery (v52): on Chromium over http(s) the File System Access API
++// opens the real Save window (folder + editable name). Cancelling it is a
++// silent no-op; any other failure falls back to the download path so Export
++// never loses the file. Same JSON bytes either way — no schema change.
++function fScenarioSaveBlob(filename, blob) {
++  var usePicker = false;
++  try {
++    // The API itself only exists in secure contexts; `isSecureContext !== false`
++    // keeps jsdom/older engines (property undefined) on the picker path while
++    // honouring an explicit insecure report (file://).
++    usePicker = typeof window.showSaveFilePicker === "function" && window.isSecureContext !== false;
++  } catch (e) {
++    usePicker = false;
++  }
++  if (!usePicker) return Promise.resolve(fScenarioSaveBlobDownload(filename, blob));
++  return window.showSaveFilePicker({
++    suggestedName: filename,
++    types: [{ description: "Scenario JSON", accept: { "application/json": [".json"] } }],
++  }).then(function (handle) {
++    return handle.createWritable().then(function (writable) {
++      return writable.write(blob).then(function () {
++        return writable.close();
++      });
++    });
++  }).then(function () {
++    return true;
++  }).catch(function (err) {
++    // AbortError: the author dismissed the Save window on purpose.
++    if (err && err.name === "AbortError") return false;
++    return fScenarioSaveBlobDownload(filename, blob);
++  });
++}
++
+ function fScenarioExport(id) {
+   var scen = (id && fScenarioGet(id)) || fScenarioActive();
+   if (!scen) return;
+   var data = {
+     scenarioVersion: MuLERMoCScenario.SUPPORTED_VERSION,
+-    app: "mulermoc-nom-52",
++    app: "mulermoc-nom-54",
+     scenario: scen.title,
+     title: scen.title,
+     showStepNumbers: scen.showStepNumbers !== false,
+     reserveTitleSpace: scen.reserveTitleSpace === true,
++    author: fScenarioValidAuthor(scen.author),
++    created: scen.created || fScenarioNowIso(),
+     steps: scen.steps,
+   };
+   var blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json;charset=utf-8" });
+-  var a = document.createElement("a");
+-  a.href = URL.createObjectURL(blob);
+-  a.download = String(scen.title || "scenario").replace(/\s+/g, "_") + ".scenario.json";
+-  document.body.appendChild(a);
+-  a.click();
+-  setTimeout(function () {
+-    URL.revokeObjectURL(a.href);
+-    a.remove();
+-  }, 500);
++  return fScenarioSaveBlob(fScenarioSuggestFilename(scen.title), blob);
+ }
+ 
+ function fScenarioImportFile(file) {
+@@ -4109,6 +4510,8 @@
+       scen.reserveTitleSpace = res.reserveTitleSpace;
+       scen.steps = res.steps;
+       scen.index = 0;
++      scen.author = res.author || "Unknown";
++      scen.created = res.created || scen.created;
+       fScenarioSyncLegacy();
+       fScenarioBuildPanels();
+       fScenarioToast("Imported " + res.steps.length + " steps as '" + scen.title + "'.");
+@@ -4181,6 +4584,7 @@
+     // ... and the author's own checkbox settings, not the step's
+     fScenarioRestoreAuthorSettings();
+   } else {
++    fScenarioClearNameBoxLayout();
+     fScenarioChrome(null);
+     fScenarioRestoreChrome();
+     fScenarioRestoreAuthorMenu();
+@@ -4196,6 +4600,9 @@
+   if (MuLERMoCScenario.authoring) {
+     fScenarioScrollDrawerToStep(_psx.id, _psx.index);
+   }
++  // Leave the step language behind: authoring continues in session language.
++  try { window.__mulerStepLang = null; } catch (e) {}
++  try { if (typeof fMulerRefreshStepChrome === "function") fMulerRefreshStepChrome(); } catch (e2) {}
+ }
+ 
+ // Scroll only the card's open drawer to a step row (never the page/bar).
+@@ -4405,8 +4812,8 @@
+       var id = fScenarioPanelIdFromEl(this);
+       if (!id) return;
+       var sc = fScenarioGet(id);
+-      var title = (sc && sc.title) ? sc.title : "χωρίς τίτλο";
+-      fScenarioConfirm("Διαγραφή σεναρίου «" + title + "»; Τα βήματά του θα χαθούν.", function () {
++      var title = (sc && sc.title) ? sc.title : ((typeof fMulerT === "function") ? fMulerT("untitledDoc") : "χωρίς τίτλο");
++      fScenarioConfirm(((typeof fMulerIsEN === "function") && fMulerIsEN() ? "Delete scenario «" + title + "»; its steps will be lost." : "Διαγραφή σεναρίου «" + title + "»; Τα βήματά του θα χαθούν."), function () {
+         fScenarioDelete(id);
+       });
+     });
+@@ -4428,6 +4835,17 @@
+         fScenarioSyncLegacy();
+       }
+     });
++    // Author is optional: blank → "Unknown" (stored, so Export never emits
++    // an empty author). `input` keeps an in-focus field in sync with the
++    // card while typing; `change` normalizes the visible value on blur.
++    $(document).on("change input", ".scenarioPanel .scenarioAuthor", function (e) {
++      var id = fScenarioPanelIdFromEl(this);
++      var s = (id && fScenarioGet(id)) || fScenarioActive();
++      if (!s) return;
++      s.author = fScenarioValidAuthor(this.value);
++      if (e && e.type === "change" && this.value !== s.author) this.value = s.author;
++      fScenarioSyncLegacy();
++    });
+   }
+   if (!document.getElementById("scenarioAuthorBar")) {
+     var bar = document.createElement("div");
+@@ -4436,10 +4854,10 @@
+     // Inline display is never used here: it would beat the animation classes.
+     bar.style.display = "";
+     bar.innerHTML =
+-      "<div id='scenarioPlayBarTitle'><span class='scTitleBtns'><button id='scNew' data-tooltip='Νέο κενό σενάριο'>+ New</button>" +
+-      "<button id='scImport' data-tooltip='Φόρτωση σεναρίου (JSON)'>Import</button>" +
++      "<div id='scenarioPlayBarTitle'><span class='scTitleBtns'><button id='scNew' data-tooltip='" + ((typeof fMulerT === "function") ? fMulerT("newScenario") : "Νέο κενό σενάριο") + "'>+ New</button>" +
++      "<button id='scImport' data-tooltip='" + ((typeof fMulerT === "function") ? fMulerT("uploadScenario") : "Φόρτωση σεναρίου (JSON)") + "'>Import</button>" +
+       "<input type='file' id='scFile' accept='.json,application/json' style='display:none'></span>" +
+-      "<span class='scTitleText'>Σενάρια Παρουσίασης</span><button id='scPin' data-tooltip='Καρφίτσωμα δίπλα στο περιεχόμενο'>📌</button><button id='scCloseBar' data-tooltip='Κλείσιμο (ESC)'>✕</button></div>" +
++      "<span class='scTitleText'>" + ((typeof fMulerT === "function") ? fMulerT("scenarios") : "Σενάρια Παρουσίασης") + "</span><button id='scPin' data-tooltip='" + ((typeof fMulerT === "function") ? fMulerT("pinAside") : "Καρφίτσωμα δίπλα στο περιεχόμενο") + "'>📌</button><button id='scCloseBar' data-tooltip='" + ((typeof fMulerT === "function") ? fMulerT("close") : "Κλείσιμο (ESC)") + "'>✕</button></div>" +
+       "<div id='scenarioPanels'></div>";
+     document.body.appendChild(bar);
+     fScenarioPaintIconTextBtn(document.getElementById("scNew"), "libraryNew", "+ New");
+@@ -4506,8 +4924,8 @@
+       var tab = document.createElement("button");
+       tab.id = "scenarioAuthorTab";
+       tab.type = "button";
+-      tab.setAttribute("data-tooltip", "Σενάρια διδασκαλίας");
+-      tab.innerHTML = '<span class="scTabIcon">✎</span><span class="scTabText">Σενάρια</span>';
++      tab.setAttribute("data-tooltip", ((typeof fMulerT === "function") ? fMulerT("teachingScenarios") : "Σενάρια διδασκαλίας"));
++      tab.innerHTML = '<span class="scTabIcon">✎</span><span class="scTabText">' + ((typeof fMulerT === "function") ? fMulerT("scenariosShort") : "Σενάρια") + '</span>';
+       tab.onclick = function () {
+         fScenarioSetAuthoring(!MuLERMoCScenario.authoring);
+       };
+@@ -4598,14 +5016,15 @@
+     pb.id = "scenarioPlayBar";
+     pb.style.display = "none";
+     pb.innerHTML =
++      "<span id='scScenarioId' aria-label='" + ((typeof fMulerT === "function") ? fMulerT("scenarioLabel") : "Σενάριο παρουσίασης") + "'></span>" +
+       "<div id='scenarioPlayBarNextPrevContainer'>" +
+-      "<button id='scPrev' data-tooltip='Προηγούμενο βήμα'>◀</button><span id='scPos'>1/1</span><button id='scNext' data-tooltip='Επόμενο βήμα'>▶</button>" +
++      "<button id='scPrev' data-tooltip='" + ((typeof fMulerT === "function") ? fMulerT("prevStep") : "Προηγούμενο βήμα") + "'>◀</button><span id='scPos'>1/1</span><button id='scNext' data-tooltip='" + ((typeof fMulerT === "function") ? fMulerT("nextStep") : "Επόμενο βήμα") + "'>▶</button>" +
+       "</div>" +
+       // "<b id='scStepTitle'></b><span class='snote' id='scStepNote'></span>" +
+-      "<button id='scExit' data-tooltip='Έξοδος (ESC)'>Exit ✕</button>";
++      "<button id='scExit' data-tooltip='" + ((typeof fMulerT === "function") ? fMulerT("exit") : "Έξοδος (ESC)") + "'>Exit ✕</button>";
+     document.body.appendChild(pb);
+-    fScenarioPaintIconBtn(document.getElementById("scPrev"), "arrowLeft", "Προηγούμενο βήμα");
+-    fScenarioPaintIconBtn(document.getElementById("scNext"), "arrowRight", "Επόμενο βήμα");
++    fScenarioPaintIconBtn(document.getElementById("scPrev"), "arrowLeft", ((typeof fMulerT === "function") ? fMulerT("prevStep") : "Προηγούμενο βήμα"));
++    fScenarioPaintIconBtn(document.getElementById("scNext"), "arrowRight", ((typeof fMulerT === "function") ? fMulerT("nextStep") : "Επόμενο βήμα"));
+     document.getElementById("scPrev").onclick = function () {
+       fScenarioGo(fScenarioPresent().index - 1);
+     };
+@@ -4663,25 +5082,32 @@
+     panel.innerHTML =
+       "<div class='scenarioHeader'>" +
+       "<span class='scScenarioNo'>S1</span>" +
+-      "<input type='text' class='scenarioTitle' value='' title='Τίτλος σεναρίου'>" +
++      "<input type='text' class='scenarioTitle' value='' title='" + ((typeof fMulerT === "function") ? fMulerT("scenTitle") : "Τίτλος σεναρίου") + "'>" +
+       "<span class='scCount'>0</span>" +
+-      "<button class='scDelete' data-tooltip='Διαγραφή σεναρίου'>✕</button>" +
++      "<button class='scDelete' data-tooltip='" + ((typeof fMulerT === "function") ? fMulerT("deleteScenario") : "Διαγραφή σεναρίου") + "'>✕</button>" +
++      "</div>" +
++      "<div class='scenarioMeta'>" +
++      "<label class='scenarioAuthorLabel' for=''>Author:</label>" +
++      "<input type='text' class='scenarioAuthor' value='' placeholder='Unknown' " +
++      "data-tooltip='" + ((typeof fMulerT === "function") ? fMulerT("scenarioAuthor") : "Συγγραφέας σεναρίου (προαιρετικό)") + "' aria-label='" + ((typeof fMulerT === "function") ? fMulerT("authorShort") : "Συγγραφέας σεναρίου") + "'>" +
+       "</div>" +
+       "<div class='scenarioButtonPanel'>" +
+-      "<button class='scSave' data-tooltip='Αποθήκευση προβολής ως βήμα'>Add step</button>" +
+-      "<button class='scList' data-tooltip='Εμφάνιση/Απόκρυψη βημάτων'>Steps</button>" +
+-      "<button class='scExport' data-tooltip='Λήψη σεναρίου (JSON)'>Export</button>" +
+-      "<button class='scPresent' data-tooltip='Έναρξη παρουσίασης από το βήμα 1'>Play ▶</button>" +
++      "<button class='scSave' data-tooltip='" + ((typeof fMulerT === "function") ? fMulerT("addStep") : "Αποθήκευση προβολής ως βήμα") + "'>Add step</button>" +
++      "<button class='scList' data-tooltip='" + ((typeof fMulerT === "function") ? fMulerT("toggleSteps") : "Εμφάνιση/Απόκρυψη βημάτων") + "'>Steps</button>" +
++      "<button class='scExport' data-tooltip='" + ((typeof fMulerT === "function") ? fMulerT("downloadScenario") : "Λήψη σεναρίου (JSON)") + "'>Export</button>" +
++      "<button class='scPresent' data-tooltip='" + ((typeof fMulerT === "function") ? fMulerT("presentFromStep1") : "Έναρξη παρουσίασης από το βήμα 1") + "'>Play ▶</button>" +
+       "</div>" +
+       "<div class='scenarioDrawer'>" +
+       "<div class='scSteps'></div>" +
+       "</div>";
+     var ti = panel.querySelector(".scenarioTitle");
+     if (ti) ti.value = scen.title || "";
++    var ai = panel.querySelector(".scenarioAuthor");
++    if (ai) ai.value = scen.author || "";
+     fScenarioPaintIconTextBtn(panel.querySelector(".scSave"), "addTask", "Add step");
+     fScenarioPaintIconTextBtn(panel.querySelector(".scExport"), "downloadList", "Export");
+     fScenarioPaintIconTextBtn(panel.querySelector(".scPresent"), "screen", "Play");
+-    fScenarioPaintIconBtn(panel.querySelector(".scDelete"), "deleteStep", "Διαγραφή σεναρίου");
++    fScenarioPaintIconBtn(panel.querySelector(".scDelete"), "deleteStep", ((typeof fMulerT === "function") ? fMulerT("deleteScenario") : "Διαγραφή σεναρίου"));
+     host.appendChild(panel);
+   });
+   fScenarioRenderList();
+@@ -4709,8 +5135,8 @@
+     if (nb) {
+       nb.disabled = locked;
+       if (nb.setAttribute) {
+-        if (locked) nb.setAttribute("data-tooltip", "Συμπληρώστε πρώτα ένα κενό σενάριο (μέχρι " + cap + " κενά)");
+-        else nb.setAttribute("data-tooltip", "Νέο κενό σενάριο");
++        if (locked) nb.setAttribute("data-tooltip", (typeof fMulerIsEN === "function" && fMulerIsEN() ? "Fill an empty scenario first (up to " + cap + " empty)" : "Συμπληρώστε πρώτα ένα κενό σενάριο (μέχρι " + cap + " κενά)"));
++        else nb.setAttribute("data-tooltip", ((typeof fMulerT === "function") ? fMulerT("newScenario") : "Νέο κενό σενάριο"));
+       }
+     }
+     var panels = document.querySelectorAll(".scenarioPanel");
+@@ -4745,7 +5171,7 @@
+   var _no = panel.querySelector(".scScenarioNo");
+   if (_no) {
+     _no.textContent = "S" + (_pos + 1);
+-    _no.title = "Σενάριο " + (_pos + 1);
++  _no.title = ((typeof fMulerPre === "function") ? fMulerPre("Σενάριο ", "Scenario ", (_pos + 1)) : ("Σενάριο " + (_pos + 1)));
+   }
+   if (listBtn) {
+     var _licon = (window.MuLERIcons && window.MuLERIcons.list) || null;
+@@ -4759,7 +5185,7 @@
+       _lbadge.textContent = String(scen.steps.length);
+       listBtn.appendChild(_lbadge);
+       if (listBtn.classList) { listBtn.classList.add("scIconBtn"); listBtn.classList.add("scIconTextBtn"); }
+-      listBtn.setAttribute("aria-label", "Βήματα (" + scen.steps.length + ")");
++      listBtn.setAttribute("aria-label", ((typeof fMulerPre === "function") ? fMulerPre("Βήματα (", "Steps (", scen.steps.length + ")") : ("Βήματα (" + scen.steps.length + ")")));
+     } else {
+       listBtn.innerHTML = "";
+       listBtn.textContent = "Steps (" + scen.steps.length + ")";
+@@ -4779,6 +5205,9 @@
+   });
+   var ti = panel.querySelector(".scenarioTitle");
+   if (ti && document.activeElement !== ti && ti.value !== scen.title) ti.value = scen.title || "";
++  var ai = panel.querySelector(".scenarioAuthor");
++  var _authorShown = scen.author || "";
++  if (ai && document.activeElement !== ai && ai.value !== _authorShown) ai.value = _authorShown;
+   box.innerHTML = "";
+   scen.steps.forEach(function (st, i) {
+     var row = document.createElement("div");
+@@ -4789,16 +5218,16 @@
+     var grip = document.createElement("span");
+     grip.className = "scDragHandle";
+     grip.textContent = "⠿";
+-    grip.setAttribute("data-tooltip", "Σύρετε για αναδιάταξη του βήματος " + st.n);
+-    grip.setAttribute("aria-label", "Σύρετε για αναδιάταξη του βήματος " + st.n);
++    grip.setAttribute("data-tooltip", ((typeof fMulerPre === "function") ? fMulerPre("Σύρετε για αναδιάταξη του βήματος ", "Drag to reorder step ", st.n) : ("Σύρετε για αναδιάταξη του βήματος " + st.n)));
++    grip.setAttribute("aria-label", ((typeof fMulerPre === "function") ? fMulerPre("Σύρετε για αναδιάταξη του βήματος ", "Drag to reorder step ", st.n) : ("Σύρετε για αναδιάταξη του βήματος " + st.n)));
+     grip.setAttribute("tabindex", "0");
+     row.innerHTML =
+       "<span id='scStep" + i + "' class='scStepNumberWrap'>" +
+-      "<span class='stepNumber'>" + st.n + "</span></span><span class='scStepTitleWrap'><span class='scStepTitleLabel'>Τίτλος βήματος</span><input type='text' class='scStepTitle' placeholder='Τίτλος βήματος' value=''></span>" +
+-      "<button class='scGo' data-tooltip='Προεπισκόπηση'>Go</button>" +
+-      "<button class='scPresentStep' data-tooltip='Παρουσίαση από το βήμα " + st.n + "'>▶</button>" +
+-      "<button class='scUpdate' data-tooltip='Ενημέρωση βήματος από την τρέχουσα προβολή'>Update</button><button class='scDupe' data-tooltip='Διπλασιασμός βήματος'>⧉</button><button class='scUp' data-tooltip='Επάνω'>↑</button><button class='scDown' data-tooltip='Κάτω'>↓</button>" +
+-      "<button class='delete' data-tooltip='Διαγραφή'>✕</button>";
++      "<span class='stepNumber'>" + st.n + "</span></span><span class='scStepTitleWrap'><span class='scStepTitleLabel'>" + ((typeof fMulerT === "function") ? fMulerT("stepTitle") : "Τίτλος βήματος") + "</span><input type='text' class='scStepTitle' placeholder='" + ((typeof fMulerT === "function") ? fMulerT("stepTitle") : "Τίτλος βήματος") + "' value=''></span>" +
++      "<button class='scGo' data-tooltip='" + ((typeof fMulerT === "function") ? fMulerT("preview") : "Προεπισκόπηση") + "'>Go</button>" +
++      "<button class='scPresentStep' data-tooltip='" + ((typeof fMulerPre === "function") ? fMulerPre("Παρουσίαση από το βήμα ", "Present from step ", st.n) : ("Παρουσίαση από το βήμα " + st.n)) + "'>▶</button>" +
++      "<button class='scUpdate' data-tooltip='" + ((typeof fMulerT === "function") ? fMulerT("updateStep") : "Ενημέρωση βήματος από την τρέχουσα προβολή") + "'>Update</button><button class='scDupe' data-tooltip='" + ((typeof fMulerT === "function") ? fMulerT("dupeStep") : "Διπλασιασμός βήματος") + "'>⧉</button><button class='scUp' data-tooltip='" + ((typeof fMulerT === "function") ? fMulerT("moveUp") : "Επάνω") + "'>↑</button><button class='scDown' data-tooltip='" + ((typeof fMulerT === "function") ? fMulerT("moveDown") : "Κάτω") + "'>↓</button>" +
++      "<button class='delete' data-tooltip='" + ((typeof fMulerT === "function") ? fMulerT("deleteStep") : "Διαγραφή") + "'>✕</button>";
+     // Grip first so it leads the row; mousedown on it arms HTML5 drag
+     // (row stays non-draggable otherwise so inputs/textareas keep working).
+     if (row.firstChild) row.insertBefore(grip, row.firstChild);
+@@ -4812,9 +5241,10 @@
+     // Icon-only step actions (data-tooltip + aria-label keep the meaning).
+     (function () {
+       var ab = row.querySelectorAll("button");
++      var _T = function (k, gr) { try { return (typeof fMulerT === "function") ? fMulerT(k) : gr; } catch (e) { return gr; } };
+       var defs = [
+-        ["skip", "Προεπισκόπηση"], ["screen", "Παρουσίαση από αυτό το βήμα"], ["reset", "Ενημέρωση βήματος από την τρέχουσα προβολή"], ["copy", "Διπλασιασμός βήματος"],
+-        ["arrowUp", "Επάνω"], ["arrowDown", "Κάτω"], ["deleteStep", "Διαγραφή"]
++        ["skip", _T("preview", "Προεπισκόπηση")], ["screen", _T("presentFromStep", "Παρουσίαση από αυτό το βήμα")], ["reset", _T("updateStep", "Ενημέρωση βήματος από την τρέχουσα προβολή")], ["copy", _T("dupeStep", "Διπλασιασμός βήματος")],
++        ["arrowUp", _T("moveUp", "Επάνω")], ["arrowDown", _T("moveDown", "Κάτω")], ["deleteStep", _T("deleteStep", "Διαγραφή")]
+       ];
+       for (var k = 0; k < defs.length && k < ab.length; k++) {
+         var ic = (window.MuLERIcons && window.MuLERIcons[defs[k][0]]) || null;
+@@ -4833,12 +5263,20 @@
+     molBadge.className = "scMolBadge" + (_isMenu ? " is-menu" : " is-mol");
+     var _subN = Array.isArray(st.menuSubset) ? st.menuSubset.length : 0;
+     molBadge.setAttribute("data-tooltip", st.selectedMol
+-      ? st.selectedMol + (_isMenu ? " + μενού (" + _subN + ")" : "")
+-      : "μόνο μενού (" + _subN + ")");
+-    molBadge.textContent = _isMenu ? "Μενού" : "Μόριο";
++      ? st.selectedMol + (_isMenu ? ((typeof fMulerIsEN === "function" && fMulerIsEN()) ? " + menu (" + _subN + ")" : " + μενού (" + _subN + ")") : "")
++      : ((typeof fMulerIsEN === "function" && fMulerIsEN()) ? "menu only (" + _subN + ")" : "μόνο μενού (" + _subN + ")"));
++    molBadge.textContent = _isMenu ? ((typeof fMulerT === "function") ? fMulerT("menuWord") : "Μενού") : ((typeof fMulerT === "function") ? fMulerT("molecule") : "Μόριο");
++    var langBadge = document.createElement("span");
++    langBadge.className = "scLangBadge";
++    var _sLang = (st.lang === "en") ? "en" : "gr";
++    langBadge.textContent = _sLang.toUpperCase();
++    try {
++      langBadge.setAttribute("data-tooltip", ((typeof fMulerT === "function") ? fMulerT("stepLang") : "Γλώσσα βήματος") + ": " + _sLang.toUpperCase());
++      langBadge.setAttribute("aria-label", ((typeof fMulerT === "function") ? fMulerT("stepLang") : "Γλώσσα βήματος"));
++    } catch (eLB) {}
+     var numWrap = row.querySelector(".scStepNumberWrap");
+-    if (numWrap) numWrap.appendChild(molBadge);
+-    else row.insertBefore(molBadge, row.firstChild.nextSibling);
++    if (numWrap) { numWrap.appendChild(molBadge); numWrap.appendChild(langBadge); }
++    else { row.insertBefore(langBadge, row.firstChild.nextSibling); row.insertBefore(molBadge, row.firstChild.nextSibling); }
+     var titleInput = row.querySelector("input.scStepTitle");
+     titleInput.value = st.title || "";
+     titleInput.onchange = function () {
+@@ -4846,8 +5284,8 @@
+     };
+     var noteInput = document.createElement("div");
+     noteInput.className = "snote snoteRich";
+-    noteInput.setAttribute("data-placeholder", "Γράψτε το κείμενο του βήματος…");
+-    noteInput.setAttribute("aria-label", "Κείμενο βήματος");
++    noteInput.setAttribute("data-placeholder", ((typeof fMulerT === "function") ? fMulerT("notePlaceholder") : "Γράψτε το κείμενο του βήματος…"));
++    noteInput.setAttribute("aria-label", ((typeof fMulerT === "function") ? fMulerT("stepText") : "Κείμενο βήματος"));
+     var inlineState = {
+       st: st,
+       draft: {
+@@ -4915,8 +5353,8 @@
+     var expandBtn = document.createElement("button");
+     expandBtn.type = "button";
+     expandBtn.className = "scNoteBtn scNoteExpandBtn";
+-    expandBtn.setAttribute("data-tooltip", "Μεγάλος επεξεργαστής — εικόνα, πίνακας, έτοιμο περιεχόμενο, κώδικας");
+-    expandBtn.setAttribute("aria-label", "Μεγάλος επεξεργαστής — εικόνα, πίνακας, έτοιμο περιεχόμενο, κώδικας");
++    expandBtn.setAttribute("data-tooltip", ((typeof fMulerT === "function") ? fMulerT("bigEditor") : "Μεγάλος επεξεργαστής — εικόνα, πίνακας, έτοιμο περιεχόμενο, κώδικας"));
++    expandBtn.setAttribute("aria-label", ((typeof fMulerT === "function") ? fMulerT("bigEditor") : "Μεγάλος επεξεργαστής — εικόνα, πίνακας, έτοιμο περιεχόμενο, κώδικας"));
+     if (window.MuLERIcons && window.MuLERIcons.fullScreen) expandBtn.innerHTML = window.MuLERIcons.fullScreen;
+     else expandBtn.textContent = "⤢";
+     expandBtn.onclick = function (ev) {
+@@ -4939,7 +5377,7 @@
+       var tog = document.createElement("button");
+       tog.type = "button";
+       tog.className = "scNoteBtn scColsToggle";
+-      tog.setAttribute("data-tooltip", "Στήλες κειμένου: 1/2 (εναλλαγή)");
++      tog.setAttribute("data-tooltip", ((typeof fMulerT === "function") ? fMulerT("textColsToggle") : "Στήλες κειμένου: 1/2 (εναλλαγή)"));
+       function paintTog() {
+         var two = !!(st.styleText && fScenarioValidColumns(st.styleText.columns) === 2);
+         var ic = (window.MuLERIcons && (two ? window.MuLERIcons.columns2 : window.MuLERIcons.columns1)) || null;
+@@ -4947,7 +5385,7 @@
+         else tog.textContent = two ? "2" : "1";
+         if (tog.classList) tog.classList.toggle("active", two);
+         tog.setAttribute("aria-pressed", two ? "true" : "false");
+-        tog.setAttribute("aria-label", two ? "Κείμενο σε 2 στήλες (εναλλαγή σε 1)" : "Κείμενο σε 1 στήλη (εναλλαγή σε 2)");
++        tog.setAttribute("aria-label", two ? ((typeof fMulerT === "function") ? fMulerT("text2Col") : "Κείμενο σε 2 στήλες (εναλλαγή σε 1)") : ((typeof fMulerT === "function") ? fMulerT("text1Col") : "Κείμενο σε 1 στήλη (εναλλαγή σε 2)"));
+       }
+       tog.onclick = function (ev) {
+         if (ev && ev.preventDefault) ev.preventDefault();
+@@ -4966,10 +5404,11 @@
+     // for switching back. Trigger shows the current icon + caret; the fixed
+     // menu is icon-only (data-tooltip + aria-label carry the names).
+     (function () {
++      var _T2 = function (k, gr) { try { return (typeof fMulerT === "function") ? fMulerT(k) : gr; } catch (e) { return gr; } };
+       var defs = [
+-        ["top", "panelTop", "Πάνω"],
+-        ["left", "panelLeft", "Αριστερά"],
+-        ["right", "panelRight", "Δεξιά"]
++        ["top", "panelTop", _T2("posTop", "Πάνω")],
++        ["left", "panelLeft", _T2("alignLeft", "Αριστερά")],
++        ["right", "panelRight", _T2("alignRight", "Δεξιά")]
+       ];
+       var byKey = {};
+       var opts = {};
+@@ -4990,7 +5429,7 @@
+       var menu = document.createElement("div");
+       menu.className = "scTextPosMenu";
+       menu.setAttribute("role", "menu");
+-      menu.setAttribute("aria-label", "Θέση κειμένου");
++      menu.setAttribute("aria-label", ((typeof fMulerT === "function") ? fMulerT("posMenu") : "Θέση κειμένου"));
+       defs.forEach(function (def) {
+         byKey[def[0]] = def;
+         var opt = document.createElement("button");
+@@ -5018,7 +5457,7 @@
+         caret.className = "scTextPosCaret";
+         caret.setAttribute("aria-hidden", "true");
+         btn.appendChild(caret);
+-        var label = "Θέση κειμένου: " + def[2];
++        var label = ((typeof fMulerT === "function") ? fMulerT("posMenu") : "Θέση κειμένου") + ": " + def[2];
+         btn.setAttribute("data-tooltip", label);
+         btn.setAttribute("aria-label", label);
+         defs.forEach(function (d) {
+@@ -5131,7 +5570,8 @@
+     // viewer is visible — viewers are set live via [2D][3D] before saving).
+     var showRow = document.createElement("div");
+     showRow.className = "scShowRow";
+-    [["2D ρυθμίσεις", "2D"], ["3D ρυθμίσεις", "3D"]].forEach(function (pair) {
++    var _s23 = ((typeof fMulerIsEN === "function") && fMulerIsEN()) ? [["2D settings", "2D"], ["3D settings", "3D"]] : [["2D ρυθμίσεις", "2D"], ["3D ρυθμίσεις", "3D"]];
++    _s23.forEach(function (pair) {
+       var label = document.createElement("label");
+       label.className = "sshow";
+       var kind = pair[1];
+@@ -5165,7 +5605,7 @@
+       st.show.nameSettings = nameCtlCheck.checked;
+     };
+     nameCtlLabel.appendChild(nameCtlCheck);
+-    nameCtlLabel.appendChild(document.createTextNode(" Ρυθμίσεις ονομασίας"));
++    nameCtlLabel.appendChild(document.createTextNode(" " + ((typeof fMulerT === "function") ? fMulerT("namingSettingsLower") : "Ρυθμίσεις ονομασίας")));
+     showRow.appendChild(nameCtlLabel);
+     // Name-box interaction (user clicks only; stored highlight always
+     // replays). Absent = allowed (legacy files); capture stores false.
+@@ -5180,7 +5620,7 @@
+       st.show.nameClick = nameClickCheck.checked;
+     };
+     nameClickLabel.appendChild(nameClickCheck);
+-    nameClickLabel.appendChild(document.createTextNode(" Διάδραση ονομασίας"));
++    nameClickLabel.appendChild(document.createTextNode(" " + ((typeof fMulerT === "function") ? fMulerT("nameInteract") : "Διάδραση ονομασίας")));
+     showRow.appendChild(nameClickLabel);
+     // Per-component eye toggles in presentation (Ορατότητα συνθετικών):
+     // checked → the master eye switch starts lit and the small eye buttons
+@@ -5204,7 +5644,7 @@
+       st.show.nameEye = nameEyeCheck.checked;
+     };
+     nameEyeLabel.appendChild(nameEyeCheck);
+-    nameEyeLabel.appendChild(document.createTextNode(" Ορατότητα συνθετικών"));
++    nameEyeLabel.appendChild(document.createTextNode(" " + ((typeof fMulerT === "function") ? fMulerT("compVisibility") : "Ορατότητα συνθετικών")));
+     showRow.appendChild(nameEyeLabel);
+     row.appendChild(showRow);
+     // Menu grouping (presentation only, menu-carrying steps only): which
+@@ -5219,9 +5659,9 @@
+       menuGroupsRow.className = "scMenuGroupsRow";
+       var menuGroupTitle = document.createElement("span");
+       menuGroupTitle.className = "sshow scMenuGroupsTitle";
+-      menuGroupTitle.appendChild(document.createTextNode("Ταξινομήσεις Μένου:"));
++      menuGroupTitle.appendChild(document.createTextNode(((typeof fMulerT === "function") ? fMulerT("menuGroupsTitle") : "Ταξινομήσεις Μένου:")));
+       menuGroupsRow.appendChild(menuGroupTitle);
+-      [["Μόρια", "molecules"], ["Χημικές Τάξεις", "chemclass"], ["Ομόλογες Σειρές", "series"]].forEach(function (pair) {
++      [[((typeof fMulerT === "function") ? fMulerT("moleculesPlural") : "Μόρια"), "molecules"], [((typeof fMulerT === "function") ? fMulerT("chemClasses") : "Χημικές Τάξεις"), "chemclass"], [((typeof fMulerT === "function") ? fMulerT("homolSeries") : "Ομόλογες Σειρές"), "series"]].forEach(function (pair) {
+         var gLabel = document.createElement("label");
+         gLabel.className = "sshow scMenuGroup";
+         var gKind = pair[1];
+@@ -5283,7 +5723,7 @@
+         fScenarioRenumber(scenId);
+       };
+       if (delBtn) delBtn.onclick = function () {
+-        fScenarioConfirm("Διαγραφή βήματος " + st.n + ";", function () {
++        fScenarioConfirm(((typeof fMulerPre === "function") ? fMulerPre("Διαγραφή βήματος ", "Delete step ", st.n + ";") : ("Διαγραφή βήματος " + st.n + ";")), function () {
+           var s = fScenarioGet(scenId) || fScenarioActive();
+           s.steps.splice(idx, 1);
+           fScenarioRenumber(scenId);
+@@ -5440,7 +5880,7 @@
+   fScenarioRenderList(s.id);
+ }
+ 
+-function fScenarioPlayUi() {
++  function fScenarioPlayUi() {
+   var ps = fScenarioPresent();
+   var st = ps.steps[ps.index];
+   var pos = document.getElementById("scPos");
+@@ -5453,6 +5893,34 @@
+       ? MuLERMoCNote.toPlainText(st.note, st.noteFormat, false)
+       : String((st && st.note) || "").replace(/<[^>]*>/g, "").trim();
+   }
++  // Present identity, full left: scenario name followed by the author
++  // (textContent only — both are free-typed). Runs on begin + every step
++  // turn, so renames always arrive with the next presentation.
++  try {
++    var idEl = document.getElementById("scScenarioId");
++    if (idEl) {
++      var sc = (ps && ps.id && typeof fScenarioGet === "function") ? fScenarioGet(ps.id) : null;
++      var title = (sc && sc.title) || "";
++      var author = (typeof fScenarioValidAuthor === "function")
++        ? fScenarioValidAuthor(sc && sc.author)
++        : (String((sc && sc.author) || "").trim() || "Unknown");
++      while (idEl.firstChild) idEl.removeChild(idEl.firstChild);
++      var tSpan = document.createElement("span");
++      tSpan.className = "scScenarioIdTitle";
++      tSpan.textContent = title;
++      var sep = document.createElement("span");
++      sep.className = "scScenarioIdSep";
++      sep.setAttribute("aria-hidden", "true");
++      sep.textContent = " · ";
++      var aSpan = document.createElement("span");
++      aSpan.className = "scScenarioIdAuthor";
++      aSpan.textContent = author;
++      idEl.appendChild(tSpan);
++      idEl.appendChild(sep);
++      idEl.appendChild(aSpan);
++      idEl.setAttribute("title", title + " · " + author);
++    }
++  } catch (eId) { /* present identity best-effort */ }
+ }
+ 
+ // ── Go/Jump pick alignment (authoring) ───────────────────────────────────
+@@ -5539,7 +6007,7 @@
+ // selectedMol, mode2D, mainChainMode, etherNamingMode, nameAnalysisMode
+ // (clicked name-box highlight), selectedRule, style2D (atom colors, color
+ // mode, zigzag, zoom), styleName (box/cross/etherNaming/panelOpen), styleHighlight,
+-// audio, view3D (style/spin/showH/atomSymbols/moveto), menuSubset +
++// show.nameExpanded (live expand state), audio, view3D (style/spin/showH/atomSymbols/moveto), menuSubset +
+ // show.menu/show.viewers, menuGroups (Ταξινομήσεις Μένου). No schema change
+ // (scenarioVersion stays 1).
+ function fScenarioUpdateStep(scenId, idx) {
+@@ -5557,6 +6025,7 @@
+   // size), per-step chrome permissions. These are edited directly in the
+   // drawer at any time.
+   fresh.n = old.n;
++  fresh.nameBoxLayout = fScenarioValidNameBoxLayout(old.nameBoxLayout, old);
+   fresh.title = old.title;
+   fresh.note = old.note;
+   fresh.noteFormat = old.noteFormat === "html" ? "html" : "text";
+@@ -5638,7 +6107,7 @@
+   } catch (e) {
+     /* no hash */
+   }
+-  return { scenario: q.scenario || null, present: q.present === "1", fromTheoryLibrary: q.from === "theory-library", step: step };
++  return { scenario: q.scenario || null, present: q.present === "1", fromTheoryLibrary: q.from === "theory-library", step: step, mol: q.mol || null };
+ }
+ 
+ function fScenarioBoot() {
+@@ -5655,6 +6124,32 @@
+   MuLERMoCScenario.returnToTheoryLibrary = !!(url.scenario && url.present &&
+     (url.fromTheoryLibrary || url.scenario === "scenarios/alkenes-nomenclature-branches.scenario.json"));
+   fScenarioWhenReady(function () {
++    if (!url.scenario && url.mol && typeof nameExamples !== "undefined" && nameExamples[url.mol]) {
++      // ?mol= deep link (e.g. language toggle): select through the normal
++      // click path so menu, numbering and naming all follow.
++      try {
++        if (typeof fSelectMol === "function") { selectedMol = url.mol; fSelectMol(); }
++      } catch (e) { /* menu click remains the manual path */ }
++      // Adopted deep link counts as explicit: keep carrying it on toggle.
++      try { window.__mulerUserPickedMol = true; } catch (eUp2) { /* best-effort */ }
++      // Mirror the menu click: mark the entry, mark its group header and open
++      // its group (no rule-mode header side effects — theory follows header
++      // clicks only).
++      try {
++        var _mb = document.getElementById(url.mol);
++        if (_mb && _mb.classList && _mb.classList.contains("menuLi")) {
++          document.querySelectorAll(".menuLi.selectedLi").forEach(function (x) { x.classList.remove("selectedLi"); });
++          _mb.classList.add("selectedLi");
++          var _grp = _mb.closest ? _mb.closest(".exmplContainer") : null;
++          if (_grp) { _grp.classList.remove("closed"); _grp.classList.add("open"); }
++          var _hdr = _grp && _grp.previousElementSibling ? _grp.previousElementSibling : null;
++          if (_hdr && _hdr.classList && _hdr.classList.contains("crossMenuLi")) {
++            document.querySelectorAll(".crossMenuLi.selectedLi").forEach(function (x) { x.classList.remove("selectedLi"); });
++            _hdr.classList.add("selectedLi");
++          }
++        }
++      } catch (eM) { /* menu highlight best-effort */ }
++    }
+     if (url.scenario) {
+       // same-origin scenarios/*.json only (validated)
+       if (/\.\./.test(url.scenario) || !/\.json$/i.test(url.scenario) || /^https?:/i.test(url.scenario)) {
+@@ -5678,6 +6173,8 @@
+       scen.reserveTitleSpace = res.reserveTitleSpace;
+           scen.steps = res.steps;
+           scen.index = 0;
++          scen.author = res.author || "Unknown";
++          scen.created = res.created || scen.created;
+           fScenarioSyncLegacy();
+           fScenarioBuildPanels();
+           MuLERMoCScenario.presentId = scen.id;
+@@ -5711,6 +6208,8 @@
+           s1.title = res.title;
+           s1.showStepNumbers = res.showStepNumbers;
+           s1.reserveTitleSpace = res.reserveTitleSpace;
++          s1.author = res.author || "Unknown";
++          s1.created = res.created || s1.created;
+           s1.steps = res.steps;
+           s1.index = 0;
+           s1.menuPick = [];
+--- js/mulermoc-nom-note-52.js
++++ js/mulermoc-nom-note-54.js
+@@ -127,7 +127,7 @@
+         var incs = doc.body.querySelectorAll("[data-note-include]");
+         for (var inc = 0; inc < incs.length; inc++) {
+           var key = String(incs[inc].getAttribute("data-note-include") || "").trim();
+-          incs[inc].replaceWith(doc.createTextNode(key ? "[Συστατικό: " + key + "]" : ""));
++          incs[inc].replaceWith(doc.createTextNode(key ? ("[" + ((typeof fTX === "function") ? fTX("Συστατικό: ", "Component: ") : "Συστατικό: ") + key + "]") : ""));
+         }
+       }
+       var sep = preserveBreaks ? "\n" : " ";
+@@ -196,7 +196,7 @@
+   }
+ 
+   function imageFallbackText(img) {
+-    return (img && img.getAttribute && img.getAttribute("alt")) || "Εικόνα μη διαθέσιμη";
++    return (img && img.getAttribute && img.getAttribute("alt")) || ((typeof fMulerT === "function") ? fMulerT("imgUnavailable") : "Εικόνα μη διαθέσιμη");
+   }
+ 
+   function makeMissingImage(img) {
+@@ -436,7 +436,7 @@
+         wrap.appendChild(component);
+       } else {
+         wrap.className = "note-embed note-embed--missing";
+-        wrap.textContent = "Συστατικό μη διαθέσιμο: " + key;
++        wrap.textContent = ((typeof fTX === "function") ? fTX("Συστατικό μη διαθέσιμο: ", "Component unavailable: ") : "Συστατικό μη διαθέσιμο: ") + key;
+       }
+       if (ph.parentNode) ph.parentNode.replaceChild(wrap, ph);
+     });
+--- js/ui-icons.js
++++ js/ui-icons-54.js
+@@ -64,9 +64,12 @@
+ // Note-editor icons (from imgs/full-screen*, table, link SVGs; titles/ids
+ // stripped, fill -> currentColor, 16px). `link` is registered for future use.
+ window.MuLERIcons.fullScreen = "<svg width='16' height='16' viewBox='0 0 512 512' fill='currentColor' style='vertical-align:middle' xmlns='http://www.w3.org/2000/svg'><g stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'><g fill='currentColor' transform='translate(64.000000, 64.000000)'><path d='M42.6666667,-4.26325641e-14 L-4.26325641e-14,-4.26325641e-14 L-4.26325641e-14,42.6666667 L-4.26325641e-14,128 L42.6666667,128 L42.6666667,42.6666667 L128,42.6666667 L128,-4.26325641e-14 L42.6666667,-4.26325641e-14 Z M42.6666667,256 L-4.26325641e-14,256 L-4.26325641e-14,341.333333 L-4.26325641e-14,384 L42.6666667,384 L128,384 L128,341.333333 L42.6666667,341.333333 L42.6666667,256 Z M256,-4.26325641e-14 L256,42.6666667 L341.333333,42.6666667 L341.333333,128 L384,128 L384,42.6666667 L384,-4.26325641e-14 L341.333333,-4.26325641e-14 L256,-4.26325641e-14 Z M341.333333,341.333333 L256,341.333333 L256,384 L341.333333,384 L384,384 L384,341.333333 L384,256 L341.333333,256 L341.333333,341.333333 Z'/></g></g></svg>";
+-window.MuLERIcons.fullScreenExit = "<svg width='22' height='22' viewBox='0 0 512 512' fill='currentColor' style='vertical-align:middle' xmlns='http://www.w3.org/2000/svg'><g stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'><g fill='currentColor' transform='translate(64.000000, 64.000000)'><path d='M128,-1.42108547e-14 L127.999,85.333 L128,85.3333333 L128,128 L127.999,127.999 L128,128 L85.3333333,128 L85.333,127.999 L2.7000624e-13,128 L2.7000624e-13,85.3333333 L85.333,85.333 L85.3333333,-1.42108547e-14 L128,-1.42108547e-14 Z M128,256 L128,298.666667 L127.999,298.666 L128,384 L85.3333333,384 L85.333,298.666 L2.7000624e-13,298.666667 L2.7000624e-13,256 L128,256 Z M298.666667,-1.42108547e-14 L298.666,85.333 L384,85.3333333 L384,128 L298.666,127.999 L298.666667,128 L256,128 L256,-1.42108547e-14 L298.666667,-1.42108547e-14 Z M384,256 L384,298.666667 L298.666,298.666 L298.666667,384 L256,384 L256,256 L384,256 Z'/></g></g></svg>";
++window.MuLERIcons.fullScreenExit = "<svg width='16' height='16' viewBox='0 0 512 512' fill='currentColor' style='vertical-align:middle' xmlns='http://www.w3.org/2000/svg'><g stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'><g fill='currentColor' transform='translate(64.000000, 64.000000)'><path d='M128,-1.42108547e-14 L127.999,85.333 L128,85.3333333 L128,128 L127.999,127.999 L128,128 L85.3333333,128 L85.333,127.999 L2.7000624e-13,128 L2.7000624e-13,85.3333333 L85.333,85.333 L85.3333333,-1.42108547e-14 L128,-1.42108547e-14 Z M128,256 L128,298.666667 L127.999,298.666 L128,384 L85.3333333,384 L85.333,298.666 L2.7000624e-13,298.666667 L2.7000624e-13,256 L128,256 Z M298.666667,-1.42108547e-14 L298.666,85.333 L384,85.3333333 L384,128 L298.666,127.999 L298.666667,128 L256,128 L256,-1.42108547e-14 L298.666667,-1.42108547e-14 Z M384,256 L384,298.666667 L298.666,298.666 L298.666667,384 L256,384 L256,256 L384,256 Z'/></g></g></svg>";
+ window.MuLERIcons.table = "<svg width='16' height='16' viewBox='0 0 512 512' fill='currentColor' style='vertical-align:middle' xmlns='http://www.w3.org/2000/svg'><g stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'><g fill='currentColor' transform='translate(42.666667, 85.333333)'><path d='M426.666667,1.42108547e-14 L426.666667,341.333333 L3.55271368e-14,341.333333 L3.55271368e-14,1.42108547e-14 L426.666667,1.42108547e-14 Z M42.6666667,256 L42.6666667,298.666667 L128,298.666 L128,256 L42.6666667,256 Z M256,256 L170.666,256 L170.666,298.666 L256,298.666 L256,256 Z M384,256 L298.666,256 L298.666,298.666 L384,298.666667 L384,256 Z M256,170.666 L170.666,170.666 L170.666,213.333 L256,213.333 L256,170.666 Z M384,170.666667 L298.666,170.666 L298.666,213.333 L384,213.333333 L384,170.666667 Z M256,85.333 L170.666,85.333 L170.666,128 L256,128 L256,85.333 Z M384,85.3333333 L298.666,85.333 L298.666,128 L384,128 L384,85.3333333 Z M128,85.333 L42.6666667,85.3333333 L42.6666667,128 L128,128 L128,85.333 Z M42.6666667,213.333333 L128,213.333 L128,170.666 L42.6666667,170.666667 L42.6666667,213.333333 Z'/></g></g></svg>";
+ window.MuLERIcons.link = "<svg width='16' height='16' viewBox='0 0 512 512' fill='currentColor' style='vertical-align:middle' xmlns='http://www.w3.org/2000/svg'><g stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'><g fill='currentColor' transform='translate(42.666667, 128.000000)'><path d='M298.666667,106.666667 L298.666667,149.333333 L128,149.333333 L128,106.666667 L298.666667,106.666667 L298.666667,106.666667 Z M192,213.333333 L128,213.333333 C80.94656,213.333333 42.6666667,175.05344 42.6666667,128 C42.6666667,80.94656 80.94656,42.6666667 128,42.6666667 L192,42.6666667 L192,-2.84217094e-14 L128,-2.84217094e-14 C57.3073067,-2.84217094e-14 3.55271368e-14,57.3073067 3.55271368e-14,128 C3.55271368e-14,198.692693 57.3073067,256 128,256 L192,256 L192,213.333333 Z M298.666667,-2.84217094e-14 L234.666667,-2.84217094e-14 L234.666667,42.6666667 L298.666667,42.6666667 C345.720107,42.6666667 384,80.94656 384,128 C384,175.05344 345.720107,213.333333 298.666667,213.333333 L234.666667,213.333333 L234.666667,256 L298.666667,256 C369.35936,256 426.666667,198.692693 426.666667,128 C426.666667,57.3073067 369.35936,-2.84217094e-14 298.666667,-2.84217094e-14 Z'/></g></g></svg>";
++// Molecule-info button (from imgs/info-svgrepo-com.svg; title/ids stripped,
++// fill -> currentColor, 16px).
++window.MuLERIcons.info = "<svg width='16' height='16' viewBox='0 0 512 512' fill='currentColor' style='vertical-align:middle' xmlns='http://www.w3.org/2000/svg'><g stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'><g fill='currentColor' transform='translate(42.666667, 42.666667)'><path d='M213.333333,3.55271368e-14 C95.51296,3.55271368e-14 3.55271368e-14,95.51168 3.55271368e-14,213.333333 C3.55271368e-14,331.153707 95.51296,426.666667 213.333333,426.666667 C331.154987,426.666667 426.666667,331.153707 426.666667,213.333333 C426.666667,95.51168 331.154987,3.55271368e-14 213.333333,3.55271368e-14 Z M213.333333,384 C119.227947,384 42.6666667,307.43872 42.6666667,213.333333 C42.6666667,119.227947 119.227947,42.6666667 213.333333,42.6666667 C307.44,42.6666667 384,119.227947 384,213.333333 C384,307.43872 307.44,384 213.333333,384 Z M240.04672,128 C240.04672,143.46752 228.785067,154.666667 213.55008,154.666667 C197.698773,154.666667 186.713387,143.46752 186.713387,127.704107 C186.713387,112.5536 197.99616,101.333333 213.55008,101.333333 C228.785067,101.333333 240.04672,112.5536 240.04672,128 Z M192.04672,192 L234.713387,192 L234.713387,320 L192.04672,320 L192.04672,192 Z'/></g></g></svg>";
+ // Save-image button icon (from imgs/image-svgrepo-Industrial-Sharp.svg;
+ // ids/title stripped — the icon renders twice per page).
+ window.MuLERIcons.saveImage = "<svg width='16' height='16' viewBox='0 0 512 512' fill='currentColor' style='vertical-align:middle' xmlns='http://www.w3.org/2000/svg'><g stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'><g fill='currentColor' transform='translate(64.000000, 64.000000)'><path d='M1.42108547e-14,384 L1.42108547e-14,1.45661261e-11 L384,1.45661261e-11 L384,384 L1.42108547e-14,384 Z M109.226667,185.6 L42.666,292.548 L42.666,341.333 L341.333,341.333 L341.333,307.413 L277.333333,243.413333 L211.84,308.906667 L109.226667,185.6 Z M341.333,42.666 L42.666,42.666 L42.666,211.877 L104.106667,113.066667 L214.826667,245.76 L277.333333,183.253333 L341.333,247.253 L341.333,42.666 Z M245.333333,85.3333333 C263.006445,85.3333333 277.333333,99.6602213 277.333333,117.333333 C277.333333,135.006445 263.006445,149.333333 245.333333,149.333333 C227.660221,149.333333 213.333333,135.006445 213.333333,117.333333 C213.333333,99.6602213 227.660221,85.3333333 245.333333,85.3333333 Z'/></g></g></svg>";
+@@ -98,6 +101,8 @@
+ // Stepper chevrons (22-viewBox stroke pair, pixel-mirrored).
+ window.MuLERIcons.chevronLeft = "<svg width='12' height='12' viewBox='0 0 22 22' fill='none' stroke='currentColor' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round' style='vertical-align:middle' xmlns='http://www.w3.org/2000/svg'><path d='M14 5 L7 12 L14 19'/></svg>";
+ window.MuLERIcons.chevronRight = "<svg width='12' height='12' viewBox='0 0 22 22' fill='none' stroke='currentColor' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round' style='vertical-align:middle' xmlns='http://www.w3.org/2000/svg'><path d='M8 5 L15 12 L8 19'/></svg>";
++// Expand (four corner brackets): full-name floating overlay toggle.
++window.MuLERIcons.nameExpand = "<svg width='16' height='16' viewBox='0 0 16 16' fill='currentColor' style='vertical-align:middle' xmlns='http://www.w3.org/2000/svg'><path d='M2 2h4v2H4v2H2V2zM10 2h4v4h-2V4h-2V2zM2 10h2v2h2v2H2v-4zM14 10h-2v2h-2v2h4v-4z'/></svg>";
+ // Pin (from imgs/pin-svgrepo-com.svg; fill #000000 -> currentColor, 16px,
+ // viewBox kept, path transform kept). Scenario pin-dock button.
+ window.MuLERIcons.pin = "<svg width='16' height='16' viewBox='0 0 512 512' fill='currentColor' style='vertical-align:middle' xmlns='http://www.w3.org/2000/svg'><path fill='currentColor' fill-rule='evenodd' d='M226.291627,7.10542736e-15 L407.374933,180.927147 L377.20832,211.114667 L347.02464,180.954453 L279.749973,248.22912 L260.812373,327.520853 L196.19776,392.125013 L120.76032,316.687573 L30.1691733,407.12512 L7.10542736e-15,407.12512 L7.10542736e-15,376.955947 L90.5898667,286.51712 L15.17696,211.104 L79.7706667,146.510293 L159.0624,127.562453 L226.30336,60.3306667 L196.135467,30.18752 L226.291627,7.10542736e-15 Z M256.481707,90.4859733 L180.708267,166.25024 L101.416533,185.19808 L75.5101867,211.104427 L196.19776,331.792 L222.104107,305.896107 L241.041707,226.59392 L316.845013,150.799787 L256.481707,90.4859733 Z' transform='translate(64 40.875)'/></svg>";
+@@ -105,3 +110,8 @@
+ // title/ids stripped, fill #000000 -> currentColor, 16px, viewBox kept,
+ // transform kept). Scenario read-name (narration) button.
+ window.MuLERIcons.audioDescription = "<svg width='20' height='20' viewBox='0 0 512 512' fill='currentColor' style='vertical-align:middle' xmlns='http://www.w3.org/2000/svg'><g stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'><g fill='currentColor' transform='translate(42.666667, 129.706667)'><path d='M49.28,62.2933333 L7.10542736e-15,190.293333 L29.2266667,190.293333 L40.1066667,159.786667 L88.5333333,159.786667 L99.6266667,190.293333 L130.133333,190.293333 L79.5733333,62.2933333 L49.28,62.2933333 Z M47.7866667,138.24 L57.8133333,110.293333 C60.2866806,103.794547 62.4228571,97.1724002 64.2133333,90.4533333 C67.4133333,100.48 68.0533333,102.613333 70.8266667,110.293333 L80.8533333,138.24 L47.7866667,138.24 Z M181.973333,62.2933333 L146.346667,62.2933333 L146.346667,190.293333 L179.84,190.293333 C197.196792,192.014378 214.681021,188.680521 230.186667,180.693333 C247.33529,168.130416 256.580695,147.449907 254.506667,126.293333 C255.778311,108.237677 249.34498,90.4878841 236.8,77.44 C221.303774,65.2259229 201.541969,59.7664358 181.973333,62.2933333 Z M210.133333,161.28 C201.259196,166.325471 191.088465,168.626878 180.906667,167.893333 L175.36,167.893333 L175.36,84.6933333 L180.906667,84.6933333 C198.826667,84.6933333 205.866667,86.6133333 212.906667,93.0133333 C221.295411,101.980302 225.550031,114.04795 224.64,126.293333 C225.810527,139.625159 220.394216,152.688027 210.133333,161.28 L210.133333,161.28 Z M381.866667,-2.84217094e-14 L349.866667,24.7466667 C395.673409,84.6958238 395.673409,167.890843 349.866667,227.84 L381.866667,252.586667 C439.062321,178.104637 439.062321,74.4820294 381.866667,-2.84217094e-14 L381.866667,-2.84217094e-14 Z M281.386667,77.0133333 C302.277327,106.545697 302.277327,146.040969 281.386667,175.573333 L313.6,200.106667 C345.457259,155.975231 345.457259,96.3981025 313.6,52.2666667 L281.386667,77.0133333 Z'/></g></g></svg>";
++// Molecule edit/new icons (from imgs/edit-molecule.svg, imgs/new-molecule.svg;
++// Adobe Illustrator set, viewBox 94 -4 800 800 kept, title/ids stripped,
++// fill -> currentColor, 16px). Viewer title-bar draft entries.
++window.MuLERIcons.editMolecule = "<svg width='16' height='16' viewBox='94 -4 800 800' fill='currentColor' style='vertical-align:middle' xmlns='http://www.w3.org/2000/svg'><g><path d='M884.4,561.8l-5-8.7l-26.1-45.2l-5-8.7l-8.7,5L665.7,604.6c-15.3-11.4-34.2-18.2-54.8-18.2c-20.5,0-39.5,6.8-54.8,18.2L468,553.7c0.4-3.6,0.6-7.2,0.6-10.8c0-50.5-41-91.5-91.5-91.5s-91.5,41-91.5,91.5c0,3.7,0.2,7.3,0.6,10.9L112.3,654.2l-8.7,5l5,8.7l26.1,45.2l5,8.7l8.7-5l174-100.5c15.3,11.4,34.2,18.1,54.7,18.1s39.4-6.7,54.7-18.1l88.3,51c-0.4,3.5-0.6,7-0.6,10.6c0,50.5,41,91.5,91.5,91.5s91.5-41,91.5-91.5c0-3.6-0.2-7.2-0.6-10.7l173.8-100.4L884.4,561.8z'/><path d='M874.1,142.7L736.2,11L425.1,285.5V439h159.6L874.1,142.7z M739.3,86l51.4,48.6l-40,40.4l-53.6-50.8L739.3,86z M483.5,383.6V309l166.6-146.5l58.1,60.9L559.6,383.6H483.5z'/></g></svg>";
++window.MuLERIcons.newMolecule = "<svg width='16' height='16' viewBox='94 -4 800 800' fill='currentColor' style='vertical-align:middle' xmlns='http://www.w3.org/2000/svg'><g><path d='M853.2,511.8l-5-8.7l-8.7,5L665.6,608.6c-15.3-11.4-34.2-18.2-54.8-18.2s-39.5,6.8-54.8,18.2L468,557.7c0.4-3.5,0.6-7.1,0.6-10.8c0-50.5-41-91.5-91.5-91.5c-50.5,0-91.5,41-91.5,91.5c0,3.7,0.2,7.3,0.6,10.8L112.3,658.2l-8.7,5l5,8.7l26.1,45.2l5,8.7l8.7-5l173.9-100.4c15.3,11.4,34.2,18.2,54.8,18.2c20.5,0,39.5-6.8,54.8-18.2l88.1,50.9c-0.4,3.5-0.6,7.1-0.6,10.8c0,50.5,41,91.5,91.5,91.5c50.5,0,91.5-41,91.5-91.5c0-3.7-0.2-7.3-0.6-10.8l173.9-100.4l8.7-5l-5-8.7L853.2,511.8z'/><polygon points='747.9,182.9 747.9,46.4 633.5,46.4 633.5,182.9 497.8,182.9 497.8,297.3 633.5,297.3 633.5,433 747.9,433 747.9,297.3 884.3,297.3 884.3,182.9'/></g></svg>";
+--- css/jsme-nick-52.css
++++ css/jsme-nick-54.css
+@@ -5,6 +5,9 @@
+ 
+   --lightBlue: #779ace;
+   --veryLightBlue: #c8d9ec;
++  --veryLightRed: #f3caca;
++  --veryLightAmber: #f5e3b8;
++  --veryLightLavender: #e2d9f2;
+   --darkEarth: #dfa374;
+   --lightEarth: #f6d1ba;
+ 
+@@ -174,8 +177,14 @@
+   outline-offset: 2px;
+ }
+ 
+-/* Viewer title-bar button row: [2D][3D][gear]. Buttons lay out in a row;
+-   .settingsBtn absolute positioning is neutralized inside the container. */
++#editMolBtn svg, #newMolBtn svg {
++  width: 20px;
++  height: 20px;
++}
++
++/* Viewer title-bar button rows: left [2D][3D], right [edit][new][gear].
++   Buttons lay out in a row; .settingsBtn absolute positioning is
++   neutralized inside both containers. */
+ #viewerVisBtns {
+   position: absolute;
+   left: 16px;
+@@ -191,6 +200,179 @@
+ #viewerVisBtns .settingsBtn {
+   position: static;
+   transform: none;
++}
++
++/* Viewer title-bar right cluster: [edit][new][gear]. The container takes the
++   single absolute slot once (v54 Stage 2: two draft entries + gear); buttons
++   lay out in a row inside it, mirroring #viewerVisBtns on the left. */
++#viewerSettingsBtnDiv {
++  position: absolute;
++  right: 8px;
++  top: 50%;
++  transform: translateY(-50%);
++  display: flex;
++  align-items: center;
++  gap: 6px;
++  z-index: 300;
++}
++
++#viewerSettingsBtnDiv .settingsBtn {
++  position: static;
++  transform: none;
++}
++
++/* Molecule draft bar (v54 Stage 2): [status … Submit][Cancel] row between the
++   2D radios and the 3D viewer. Hidden unless a draft session is active. */
++#molDraftBar {
++  display: flex;
++  align-items: center;
++  gap: 8px;
++  padding: 6px 10px;
++  background: var(--veryLightBlue);
++  /* border-radius: 4px; */
++  /* margin: 6px 0; */
++}
++#molDraftBar.hide {
++  display: none;
++}
++#molDraftStatus {
++  flex: 1;
++  font-size: 0.9rem;
++  color: var(--darkBlue);
++  text-align: left;
++}
++#molDraftBar .settingsBtn.draftBtn {
++  position: static;
++  transform: none;
++  font-size: 0.85rem;
++  width: auto;
++  height: auto;
++  padding: 4px 10px;
++}
++
++/* Draft naming placeholder + submit preview (v54 Stage 2, Step 3). */
++.draftHint {
++  font-style: italic;
++  opacity: 0.65;
++  padding: 8px 4px;
++}
++.draftPreview {
++	display: flex;
++	flex-direction: column;
++	gap: 4px;
++	padding: 10px 10px;
++	background: #fff;
++	border: 1px solid var(--redAlert);
++	border-radius: 4px;
++}
++
++.draftEngine {
++  font-weight: 700;
++  font-size: 1.05rem;
++}
++.draftEngineEN {
++  font-weight: 700;
++  font-size: 0.95rem;
++  opacity: 0.85;
++}
++
++.draftPreviewTitle {
++	font-weight: 700;
++	font-size: 1rem;
++	/* opacity: 0.7; */
++	color: var(--redAlert);
++	border-bottom: 2px solid var(--redAlert);
++	margin-bottom: 5px;
++	padding-bottom: 5px;
++	padding-left: 5px;
++	margin-left: -5px;
++}
++/* Tri-state name verdict: [✓|?|✕] control left of each predicted name. */
++.draftVRow {
++  display: flex;
++  align-items: center;
++  gap: 6px;
++}
++.draftVRow .draftEngine,
++.draftVRow .draftEngineEN {
++  flex: 1;
++}
++.draftVerdict {
++  display: flex;
++  gap: 4px;
++  flex: 0 0 auto;
++}
++.draftVBtn {
++	width: 20px;
++	height: 20px;
++	padding: 0;
++	border: 1px solid var(--darkBlue);
++	border-radius: 3px;
++	background: var(--veryLightEarth);
++	color: var(--darkBlue);
++	font-size: 0.8rem;
++	line-height: 1;
++	cursor: pointer;
++	font-weight: bold;
++	font-family: "Roboto", arial;
++}
++.draftVBtn.active[data-v='correct'] {
++  background: #1e7e34;
++  border-color: #1e7e34;
++  color: #fff;
++}
++.draftVBtn.active[data-v='wrong'] {
++  background: #b3261e;
++  border-color: #b3261e;
++  color: #fff;
++}
++.draftVBtn.active[data-v='unconfirmed'] {
++  background: #666;
++  border-color: #666;
++  color: #fff;
++}
++/* Verdict tints on the predicted names: red = wrong (engine-work queue),
++   green = author-confirmed, neutral = unconfirmed. */
++.draftV-correct {
++  color: #1e7e34;
++}
++.draftV-wrong {
++  color: #b3261e;
++}
++
++.draftOracleRow {
++  font-size: 0.9rem;
++  opacity: 0.85;
++}
++
++/* Draft entries are authoring-only: never in presentation. */
++#pageContainer.presenting #editMolBtn,
++#pageContainer.presenting #newMolBtn {
++  display: none;
++}
++
++/* Draft tweaks (v54 Stage 2 tweaks round): inactive entry + drafting dim. */
++.settingsBtn.btnInactive,
++.btnInactive {
++  opacity: 0.35;
++  pointer-events: none;
++}
++
++/* Drafting: every control cluster dims except the draft bar and the two entry
++   buttons (one carries .active). Functional guards (fSelectMol, name boxes,
++   fScenarioCapture) are the backstops. */
++#pageContainer.drafting #menuCol,
++#pageContainer.drafting #view2DBtn,
++#pageContainer.drafting #view3DBtn,
++#pageContainer.drafting #viewerSettingsBtn,
++/* #pageContainer.drafting #nameAnalysis, */
++#pageContainer.drafting #nameSettingsBtnDiv,
++#pageContainer.drafting #view2DTools,
++#pageContainer.drafting #view3DTools,
++#pageContainer.drafting #scenarioAuthorBar,
++#pageContainer.drafting #scenarioPanels {
++  opacity: 0.45;
++  pointer-events: none;
+ }
+ 
+ /* Text visibility toggles: bold label instead of an icon. */
+@@ -200,6 +382,61 @@
+   padding: 2px 4px;
+   font-family: "Roboto Condensed";
+ }
++
++/* ── Language button ───────────────────────────────────────── */
++
++.langSwitchContainer {
++  display: flex;
++  justify-content: flex-end;
++  height:100%;
++  align-items: center;
++}
++
++#langSwitch {
++  margin-right: 20px;
++  /* position:relative;   */
++}
++
++.langButtonClass {
++  position: relative;
++  font-size: 1rem;
++  font-weight: bolder;
++  padding: 2px 4px;
++  font-family: "Roboto Condensed";
++  background: var(--veryLightBlue);
++  border: 2px solid var(--lightBlue);
++  color: var(--darkBlue);
++  cursor: pointer;
++  padding: 0 5px;
++  /* line-height: 1; */
++  border-radius: 6px;
++  transition: all 0.2s;
++  z-index: 300;
++  width: 20px;
++  height: 20px;
++  box-sizing: content-box;
++}
++
++#langSwitch > button:nth-of-type(1) {
++  border-top-right-radius: 0;
++  border-bottom-right-radius: 0;
++  
++  border-right: 0;
++  
++}
++
++#langSwitch > button:nth-of-type(2) {
++  border-top-left-radius: 0;
++  border-bottom-left-radius: 0;
++     border-left: 0;
++}
++
++.langButtonClass.selected {
++  background: var(--darkBlue);
++  color: #fff;
++  border-color: var(--darkBlue);
++}
++
+ 
+ /* ── Settings dropdown panel ─────────────────────────────────────────────── */
+ #viewerSettingsPanel {
+@@ -251,6 +488,37 @@
+   text-align: right;
+ }
+ 
++/* "Full" viewport-height toggle beside the viewer-height sliders (v52):
++   small outline button, lit while the live global holds the "full"
++   sentinel (mirrors the active checkbox/2D-mode look). */
++.viewerFullBtn {
++  font-family: "Roboto Condensed", sans-serif;
++  font-size: 0.75rem;
++  font-weight: 600;
++  line-height: 1;
++  padding: 3px 8px;
++  border-radius: 4px;
++  border: 1px solid var(--lightBlue);
++  background: transparent;
++  color: var(--darkBlue);
++  cursor: pointer;
++}
++
++.viewerFullBtn:hover {
++  background: var(--veryLightBlue);
++}
++
++.viewerFullBtn.active {
++  background: var(--darkBlue);
++  border-color: var(--darkBlue);
++  color: #fff;
++}
++
++.viewerFullBtn:focus-visible {
++  outline: 2px solid var(--darkBlue);
++  outline-offset: 1px;
++}
++
+ .settingRow {
+   display: flex;
+   align-items: center;
+@@ -377,7 +645,7 @@
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+-  gap: 10px;
++  gap: 7px;
+ }
+ 
+ #nameSettingsRowMain .nsLeft {
+@@ -388,7 +656,7 @@
+ #nameSettingsRowMain .nsRight {
+   display: flex;
+   align-items: center;
+-  gap: 10px;
++  gap: 7px;
+   margin-left: auto;
+ }
+ 
+@@ -400,11 +668,109 @@
+ 
+ }
+ 
++/* Molecule info button row: info button left of the gear. Neutralizes the
++   absolute .settingsBtn positioning inside this container. */
++#nameSettingsBtnDiv {
++  position: absolute;
++  right: 8px;
++  top: 50%;
++  transform: translateY(-50%);
++  display: flex;
++  gap: 6px;
++  z-index: 300;
++}
++#nameSettingsBtnDiv .settingsBtn {
++  position: static;
++  transform: none;
++}
++
++/* In-flow collapsible molecule info panel (SMILES + PubChem IUPAC), below
++   the name settings panel. Same collapse pattern as #nameSettingsPanel. */
++
++#moleculeInfo {
++  display: flex;
++  flex-direction: column;
++  align-items: stretch;
++  gap: 6px;
++  box-sizing: border-box;
++  max-height: 0;
++  overflow: hidden;
++  transition:
++    max-height 0.25s ease,
++    padding 0.25s ease;
++  padding: 0 8px;
++  background: #fff;
++  will-change: max-height;
++  border-bottom-left-radius: 5px;
++  border-bottom-right-radius: 5px;
++}
++
++#molInfoBtn svg {
++  width: 20px;
++  height: 20px;
++}
++
++#moleculeInfo.open {
++  max-height: 260px;
++  padding: 6px 8px;
++  overflow: auto;
++  border: 1px solid var(--lightBlue);
++  /* border-top: none; */
++  margin-top: -4px;
++}
++.molInfoRow {
++  display: flex;
++  align-items: center;
++  gap: 8px;
++  font-size: 0.85rem;
++}
++.molInfoLabel {
++	font-weight: bold;
++	color: #333;
++	white-space: nowrap;
++	flex-shrink: 0;
++	font-size: 0.813rem;
++}
++.molInfoSmiles {
++  font-family: monospace;
++  word-break: break-all;
++}
++.molInfoValue {
++  word-break: break-word;
++}
++.molInfoPending,
++.molInfoEmpty {
++  color: #666;
++  font-style: italic;
++}
++.molInfoCopy {
++  color: var(--darkBlue);
++  background: var(--veryLightGray);
++  border: 1px solid var(--lightBlue);
++  border-radius: 4px;
++  cursor: pointer;
++  padding: 1px 3px;
++  font-size: 0;
++  line-height: 1;
++  flex-shrink: 0;
++  position: relative;
++  transition: all 0.2s;
++}
++.molInfoCopy svg {
++  width: 14px;
++  height: 14px;
++}
++.molInfoCopy:hover {
++  color: #fff;
++  background-color: var(--darkEarth);
++}
++
+ .nameContainer {
+   justify-content: center;
+   /* background-color: var(--veryLightEarth); */
+   padding: 2px 0 10px 0;
+   /* border: 1px solid var(--darkEarth); */
++  position: relative;
+ }
+ 
+ .nameEmptyHint {
+@@ -423,6 +789,7 @@
+ .nameContainer.nameOverflow {
+   justify-content: flex-start !important;
+   overflow-x: auto;
++  overflow-y: hidden;
+   scrollbar-width: thin;
+   scrollbar-color: var(--darkBlue) var(--veryLightBlue);
+ }
+@@ -431,12 +798,13 @@
+ .nameStyleBox,
+ .nameStyleCross,
+ .nameStyleEye,
++.nameStyleExpand,
+ .readNameBtn {
+   width: 19px;
+   height: 19px;
+   color: var(--darkBlue);
+   background-color: var(--veryLightEarth);
+-  border: 2px solid var(--darkEarth);
++  border: 1px solid var(--darkEarth);
+   padding: 2px;
+   border-radius: 4px;
+   cursor: pointer;
+@@ -451,6 +819,7 @@
+ .nameStyleBox:hover,
+ .nameStyleCross:hover,
+ .nameStyleEye:hover,
++.nameStyleExpand:hover,
+ .readNameBtn:hover {
+   color: #fff;
+   background-color: var(--darkEarth);
+@@ -459,6 +828,7 @@
+ .nameStyleCross.active,
+ .nameStyleBox.active,
+ .nameStyleEye.active,
++.nameStyleExpand.active,
+ .narrateBtn.active {
+   color: #fff;
+   background-color: var(--darkBlue);
+@@ -488,6 +858,8 @@
+ .nameStyleBox[data-tooltip]::after,
+ .nameStyleCross[data-tooltip]::after,
+ .nameStyleEye[data-tooltip]::after,
++.nameStyleExpand[data-tooltip]::after,
++.molInfoCopy[data-tooltip]::after,
+ #narrateAnalysisToggle[data-tooltip]::after,
+ .compEye[data-tooltip]::after,
+ #scenarioAuthorTab[data-tooltip]::after,
+@@ -500,7 +872,8 @@
+ .scNoteFontSizeWrap[data-tooltip]::after,
+ .scShowRow .sshow[data-tooltip]::after,
+ .scMolBadge[data-tooltip]::after,
+-.scDragHandle[data-tooltip]::after {
++.scDragHandle[data-tooltip]::after,
++.langButtonClass[data-tooltip]::after {
+   content: attr(data-tooltip);
+   background: var(--darkBlue);
+   color: #fff;
+@@ -525,6 +898,8 @@
+ .nameStyleBox[data-tooltip]:hover::after,
+ .nameStyleCross[data-tooltip]:hover::after,
+ .nameStyleEye[data-tooltip]:hover::after,
++.nameStyleExpand[data-tooltip]:hover::after,
++.molInfoCopy[data-tooltip]:hover::after,
+ #narrateAnalysisToggle[data-tooltip]:hover::after,
+ .compEye[data-tooltip]:hover::after,
+ #scenarioAuthorTab[data-tooltip]:hover::after,
+@@ -537,7 +912,8 @@
+ .scNoteFontSizeWrap[data-tooltip]:hover::after,
+ .scShowRow .sshow[data-tooltip]:hover::after,
+ .scMolBadge[data-tooltip]:hover::after,
+-.scDragHandle[data-tooltip]:hover::after {
++.scDragHandle[data-tooltip]:hover::after,
++.langButtonClass[data-tooltip]:hover::after {
+   opacity: 1;
+   transition: opacity 0.15s ease 0.5s;
+ }
+@@ -551,7 +927,10 @@
+ .nameStyleBox[data-tooltip]::after,
+ .nameStyleCross[data-tooltip]::after,
+ .nameStyleEye[data-tooltip]::after,
+-#narrateAnalysisToggle[data-tooltip]::after {
++.nameStyleExpand[data-tooltip]::after,
++.molInfoCopy[data-tooltip]::after,
++#narrateAnalysisToggle[data-tooltip]::after,
++.langButtonClass[data-tooltip]::after {
+   position: absolute;
+   top: calc(100% + 10px);
+   left: 50%;
+@@ -569,6 +948,8 @@
+ .nameStyleBox[data-tooltip]::before,
+ .nameStyleCross[data-tooltip]::before,
+ .nameStyleEye[data-tooltip]::before,
++.nameStyleExpand[data-tooltip]::before,
++.molInfoCopy[data-tooltip]::before,
+ #narrateAnalysisToggle[data-tooltip]::before,
+ .compEye[data-tooltip]::before,
+ #scenarioAuthorTab[data-tooltip]::before,
+@@ -580,7 +961,8 @@
+ .scNoteFontSizeWrap[data-tooltip]::before,
+ .scShowRow .sshow[data-tooltip]::before,
+ .scMolBadge[data-tooltip]::before,
+-.scDragHandle[data-tooltip]::before {
++.scDragHandle[data-tooltip]::before,
++.langButtonClass[data-tooltip]::before {
+   content: "";
+   position: absolute;
+   border: 6px solid transparent;
+@@ -597,6 +979,8 @@
+ .nameStyleBox[data-tooltip]:hover::before,
+ .nameStyleCross[data-tooltip]:hover::before,
+ .nameStyleEye[data-tooltip]:hover::before,
++.nameStyleExpand[data-tooltip]:hover::before,
++.molInfoCopy[data-tooltip]:hover::before,
+ #narrateAnalysisToggle[data-tooltip]:hover::before,
+ .compEye[data-tooltip]:hover::before,
+ #scenarioAuthorTab[data-tooltip]:hover::before,
+@@ -608,7 +992,8 @@
+ .scNoteFontSizeWrap[data-tooltip]:hover::before,
+ .scShowRow .sshow[data-tooltip]:hover::before,
+ .scMolBadge[data-tooltip]:hover::before,
+-.scDragHandle[data-tooltip]:hover::before {
++.scDragHandle[data-tooltip]:hover::before,
++.langButtonClass[data-tooltip]:hover::before {
+   opacity: 1;
+   transition: opacity 0.15s ease 0.5s;
+ }
+@@ -622,7 +1007,10 @@
+ .nameStyleBox[data-tooltip]::before,
+ .nameStyleCross[data-tooltip]::before,
+ .nameStyleEye[data-tooltip]::before,
+-#narrateAnalysisToggle[data-tooltip]::before {
++.nameStyleExpand[data-tooltip]::before,
++.molInfoCopy[data-tooltip]::before,
++#narrateAnalysisToggle[data-tooltip]::before,
++.langButtonClass[data-tooltip]::before {
+   top: 100%;
+   left: 50%;
+   transform: translateX(-50%);
+@@ -1436,12 +1824,18 @@
+ }
+ 
+ .nameCompBox {
+-  font-size: calc(1.1rem * var(--nameCompScale, 1));
++  font-size: max(14px, calc(1.1rem * var(--nameCompScale, 1)));
+   font-weight: bold;
+   color: #000;
+-   cursor: pointer;
++  cursor: pointer;
+   transition: all 0.3s;
+-  
++  /* One line per component, always: locant runs ("-2,7-") contain soft
++     wrap opportunities (comma/hyphen), and a squeezed flex row would wrap
++     them — which then defeats fFitNameComponents' scrollWidth measurement.
++     Forbid wrapping instead, so overflow resolves through the scale-down
++     and the nameOverflow horizontal scroll as designed. */
++  white-space: nowrap;
++
+ 
+ }
+ 
+@@ -1450,7 +1844,7 @@
+ 
+ .boxed {
+   padding: 5px 6px;
+-  border: 2px solid var(--lightBlue);
++  border: 1px solid var(--lightBlue);
+   margin-right: -2px;
+   background-color: #fff;
+ }
+@@ -1459,17 +1853,17 @@
+   padding: 5px 0;
+   /* border: 0; */
+   margin-right: 0;
+-   background-color: #fff;
+-   border-bottom: 1px solid var(--veryLightBlue);
++  background-color: #fff;
++  border-bottom: 1px solid var(--veryLightBlue);
+   border-top: 1px solid var(--veryLightBlue);
+ }
+ 
+-.nameCompContainer > .nameCompWrap:first-child > .nameCompBox.unboxed { 
++.nameCompContainer>.nameCompWrap:first-child>.nameCompBox.unboxed {
+   padding-left: 7px;
+   border-left: 1px solid var(--veryLightBlue);
+ }
+ 
+-.nameCompContainer > .nameCompWrap:last-child > .nameCompBox.unboxed { 
++.nameCompContainer>.nameCompWrap:last-child>.nameCompBox.unboxed {
+   padding-right: 7px;
+   border-right: 1px solid var(--veryLightBlue);
+ }
+@@ -1488,11 +1882,52 @@
+   margin-right: 4px;
+   /* display: none; */
+   color: var(--lightBlue);
++  white-space: nowrap;
+ }
+ 
+ .nameCompSpace {
+   margin-left: 4px;
+   margin-right: 4px;
++  white-space: nowrap;
++}
++
++/* Expanded-name floating overlay (non-modal): the existing name boxes float
++   over the app at fit-content width and default size so long names read whole.
++   Anchored to the host's right edge, growing left outside the parent.
++   Same nodes — clicks, eyes, narration keep working; no backdrop, no dimming,
++   the app underneath stays fully interactive. Closed by its toggle, Esc, or
++   a rebuild for another molecule. */
++#nameExpandBtn[hidden] {
++  display: none;
++}
++
++#nameAnalysisContainer {
++  position: relative;
++  overflow: visible;
++}
++
++#nameAnalysisContainer.nameExpanded .nameCompContainer {
++  position: absolute;
++  right: 0px;
++  width: max-content;
++  min-width: 100%;
++  /* never smaller than host width */
++  max-width: calc(100vw - 24px);
++  /* viewport safety cap */
++  overflow-x: auto;
++  /* max-height: calc(100vh - 130px); */
++  overflow-y: hidden;
++  z-index: 800;
++  background: var(--bodyBg);
++  border: 1px solid var(--lightBlue);
++  border-radius: 3px;
++  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.55), 1px 3px 6px rgba(0, 0, 0, 0.35);
++  padding: 0 15px 18px 15px;
++  display: flex;
++  flex-wrap: nowrap;
++  row-gap: 0px;
++  align-items: center;
++  --nameCompScale: 1;
+ }
+ 
+ .nameCompBox:hover {
+@@ -1592,6 +2027,27 @@
+   background-color: var(--veryLightBlue);
+ }
+ 
++/* Oracle/fallback marker (EN only): the shown name is not pure engine
++   output — PubChem-oracle EN boxes, or Greek fallback in EN mode.
++   Selected boxes keep their green highlight. */
++.nameCompContainer.oracle-name .nameCompBox:not(.selected) {
++  background-color: var(--veryLightBlue);
++  border-color: var(--lightBlue);
++}
++/* Live oracle verdicts (EN only): mismatch alarm + no-data amber. */
++.nameCompContainer.oracle-name.verdict-mismatch .nameCompBox:not(.selected) {
++  background-color: var(--veryLightRed);
++  border-color: #d98c8c;
++}
++.nameCompContainer.oracle-name.verdict-nooracle .nameCompBox:not(.selected) {
++  background-color: var(--veryLightAmber);
++  border-color: #d9b96a;
++}
++.nameCompContainer.oracle-name.verdict-noerror .nameCompBox:not(.selected) {
++  background-color: var(--veryLightLavender);
++  border-color: #a58fd6;
++}
++
+ /* Eye tooltip above the button (skin: shared rule at the top of this file) */
+ .compEye[data-tooltip]::after {
+   position: absolute;
+@@ -1619,11 +2075,31 @@
+   /* border-top: 0; */
+ }
+ 
++#nameAnalysisExplain.nameExplainExpanded {
++  position: absolute;
++  right: 0;
++  width: max-content;
++  min-width: 100%;
++  max-width: calc(100vw - 24px);
++  z-index: 801;
++  /* top/width pinned via JS to match the name sheet */
++}
++
++#nameAnalysisExplain.nameExplainExpanded .explainText {
++  width: fit-content;
++  max-width: 100%;
++  box-sizing: border-box;
++  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.55), 1px 3px 6px rgba(0, 0, 0, 0.35);
++  z-index: 800;
++  border-top-left-radius: 0;
++  border-top-right-radius: 0;
++}
++
+ .explainText {
+   padding: 10px 10px;
+   font-weight: bold;
+   font-size: 1rem;
+-  color: var(--darkBlue);
++  color: #000;
+   background-color: #fff;
+   border: 3px solid var(--vibrantGreen);
+   z-index: 100;
+@@ -1972,12 +2448,14 @@
+ .ruleText {
+   box-sizing: border-box;
+   padding: 10px;
+-  color: #000;
+-  background-color: var(--veryLightEarth);
++  color: #333;
++  background-color: #fff;
+   border: 1px solid var(--darkBlue);
+   font-size: 0.969rem;
+-
+-  /* border-top: 0; */
++  margin-bottom: 10px;
++  border-top: 0;
++  border-bottom-left-radius: 4px;
++  border-bottom-right-radius: 4px;
+ }
+ 
+ /* ── ruleTheory accordion ──────────────────────────────────────────────── */
+@@ -2142,7 +2620,7 @@
+   min-width: 120px;
+   /* never collapses below this */
+   flex-shrink: 0;
+- 
++
+ }
+ 
+ #viewerCol {
+@@ -2195,7 +2673,7 @@
+   width: 350px;
+   min-width: 300px;
+   flex-shrink: 0;
+-   justify-content: space-between;
++  justify-content: space-between;
+ }
+ 
+ /* Collapsible menu drawer */
+--- css/mulermoc-nom-scenario-52.css
++++ css/mulermoc-nom-scenario-54.css
+@@ -298,6 +298,35 @@
+    font-family: "Roboto Condensed", sans-serif;
+ }
+ 
++/* Scenario metadata row (v52): optional author, blank → "Unknown" stored. */
++.scenarioPanel .scenarioMeta {
++   display: flex;
++   gap: 6px;
++   align-items: center;
++   padding: 0 8px 6px 8px;
++   background: #fff;
++}
++
++.scenarioPanel .scenarioMeta .scenarioAuthorLabel {
++   font-size: .75rem;
++   font-weight: bold;
++   color: var(--darkBlue);
++   white-space: nowrap;
++   flex: none;
++}
++
++.scenarioPanel .scenarioMeta .scenarioAuthor {
++   flex: 1;
++   min-width: 0;
++   font-size: .8rem;
++   font-family: "Roboto Condensed", sans-serif;
++   color: var(--darkBlue);
++}
++
++.scenarioPanel.is-empty .scenarioAuthor {
++   opacity: .6;
++}
++
+ .scenarioButtonPanel {
+    background: var(--veryLightGray);
+ }
+@@ -638,12 +667,29 @@
+    color: var(--darkBlue);
+ }
+ 
++.scenarioDrawer .scLangBadge {
++	font-size: .65rem;
++	font-weight: bold;
++	color: #fff;
++	background: var(--darkEarth);
++	/* border: 1px solid var(--veryLightBlue); */
++	border-radius: 2px;
++	padding: 1px 2px;
++	white-space: nowrap;
++	font-family: "Roboto Condensed", sans-serif;
++	position: absolute;
++	top: 1px;
++	right: -3px;
++}
++
+ .scenarioDrawer .scStepNumberWrap {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    flex: none;
++   position: relative;
++   min-width: 50px;
+ }
+ 
+ .scenarioDrawer .stepNumber {
+@@ -690,6 +736,38 @@
+    justify-content: center;
+ }
+ 
++/* Present identity, full left: scenario name followed by the author.
++   Mirrors #scExit (absolute right) so the centered step controls never
++   shift; long names truncate with an ellipsis (full text in title attr). */
++#scScenarioId {
++   position: absolute;
++   left: 20px;
++   top: 50%;
++   transform: translateY(-50%);
++   max-width: 30vw;
++   overflow: hidden;
++   text-overflow: ellipsis;
++   white-space: nowrap;
++   font-weight: bold;
++}
++
++#scScenarioId .scScenarioIdAuthor {
++   font-weight: normal;
++   opacity: .75;
++}
++
++/* Narrow screens: keep the name, drop the author so the step counter
++   and Exit stay clear. */
++@media (max-width: 700px) {
++   #scScenarioId {
++      max-width: 34vw;
++   }
++   #scScenarioId .scScenarioIdAuthor,
++   #scScenarioId .scScenarioIdSep {
++      display: none;
++   }
++}
++
+ /* #scenarioPlayBar .snote {
+    opacity: .5;
+    font-size: .8rem;
+@@ -711,7 +789,11 @@
+    border-radius: 6px;
+    opacity: 0;
+    transition: opacity .2s;
+-   max-width: 80vw
++   max-width: 80vw;
++   /* Text-only notice: never intercept clicks, visible or not. Without
++      this the faded (opacity 0) fixed element keeps hit-testing and blocks
++      buttons behind it. */
++   pointer-events: none;
+ }
+ 
+ #scenarioToast.show {
+@@ -820,10 +902,10 @@
+    appearance: none;
+    -webkit-appearance: none;
+    position: absolute;
+-   left: -40px;
++   left: -60px;
+    top: -2px;
+-   width: 40px;
+-   /* height: 80px; */
++   width: 60px;
++   height: 120px;
+    /* z-index: -10; */
+    display: flex;
+    flex-direction: column;
+@@ -889,7 +971,7 @@
+ 
+ #scenarioAuthorTab .scTabText {
+    writing-mode: vertical-rl;
+-   font-size: 1.0rem;
++   font-size: 1.125rem;
+    font-weight: 600;
+    letter-spacing: .06em;
+    line-height: 1.2;
+@@ -1134,6 +1216,24 @@
+    transform: none;
+ }
+ 
++/* Inline toolbar right edge: the column toggle and the alignment/text-position
++   triggers sit at the end of the row, where centered bubbles spill past the
++   drawer's clip box. Right-anchor them like .scDelete; vertical stays below. */
++#scenarioAuthorBar .scenarioDrawer .scNoteToolbar button.scColsToggle[data-tooltip]::after,
++#scenarioAuthorBar .scenarioDrawer .scNoteToolbar button.scTextPosBtn[data-tooltip]::after {
++   left: auto;
++   right: 0;
++   transform: none;
++}
++
++#scenarioAuthorBar .scenarioDrawer .scNoteToolbar button.scColsToggle[data-tooltip]::before,
++#scenarioAuthorBar .scenarioDrawer .scNoteToolbar button.scTextPosBtn[data-tooltip]::before {
++   left: auto;
++   /* 6px = half the shared 12px arrow; keeps the tip under the button. */
++   right: calc(50% - 6px);
++   transform: none;
++}
++
+ /* Step-row show toggles: left-anchor and wrap the long English hints so the
+    dark bubbles stay inside the drawer instead of clipping at the edges. */
+ #scenarioAuthorBar .scenarioDrawer .scShowRow .sshow[data-tooltip]::after {
+@@ -1231,9 +1331,35 @@
+    footer to the bottom. Base #pageContainer uses justify-content:space-between
+    (jsme-nick-52.css), which spreads every child across the full height; here
+    the last child's margin-top:auto absorbs the free space instead, so the
+-   footer stays on the bottom without spreading the rest. */
++   footer stays on the bottom without spreading the rest. The chain below
++   (authorLayout > mainAppContainer > mainApp3Columns) is flex:1 so the row
++   fills the viewport down to the credits; side rails stretch into that
++   height and internal-scroll (see fScenarioSyncStepTextHeight). */
+ #pageContainer.presenting {
+    justify-content: flex-start;
++   height: auto;
++   min-height: calc(100vh - 30px);
++}
++
++#pageContainer.presenting #authorLayout {
++   flex: 1 0 auto;
++   display: flex;
++   flex-direction: column;
++   min-height: 0;
++   width: 100%;
++}
++
++#pageContainer.presenting #mainAppContainer {
++   flex: 1 0 auto;
++   display: flex;
++   flex-direction: column;
++   min-height: 0;
++   width: 100%;
++}
++
++#pageContainer.presenting #mainAppContainer > .mainApp3Columns {
++   flex: 1 0 auto;
++   min-height: 0;
+ }
+ 
+ /* The shared ≤999px landscape rule hides h1 for the compact explorer;
+@@ -1752,7 +1878,11 @@
+    #pageContainer.presenting.scTextLeft .mainApp3Columns>#scStepText,
+    #pageContainer.presenting.scTextRight .mainApp3Columns>#scStepText {
+       flex: 0 0 clamp(300px, 24vw, 420px);
+-      align-self: stretch;
++      /* Fit the content up to the JS max-height cap (tallest column or
++         creditsTop − railTop − 20px): short rails hug their text instead
++         of stretching the row, long rails internal-scroll at the cap. */
++      align-self: flex-start;
++      height: auto;
+       position: sticky;
+       /* Clear the fixed play bar (#scenarioPlayBar) while scrolling. */
+       top: 50px;
+@@ -1951,7 +2081,7 @@
+ body.scPinned #scenarioAuthorBar {
+    position: absolute;
+    right: 0;
+-   top: 0;
++   top: -31px;
+    bottom: 0;
+    width: 480px;
+    max-width: 480px;
+@@ -2382,6 +2512,7 @@
+ }
+ 
+ .mu-note .note-embed .namingRuleTable {
++font-family: "Roboto Condensed", sans-serif; 
+    width: 100%;
+    min-width: 280px;
+ }
+--- spt/init-3.spt
++++ spt/init-54.spt
+@@ -20,8 +20,12 @@
+  background [xffffff]
+ 
+  frank off;
++
++ rotate best;
+  
+- zoom 80;
++ zoom 0;
++
++ zoomto 0.0 out;
+ 
+  
+ 
+--- baseline/design/welcome-proposal.html
++++ design/welcome-proposal.html
+@@ -16,14 +16,14 @@
+ <main><section class="hero"><span class="eyebrow">ΜΑΘΑΙΝΩ · ΣΥΝΔΕΩ · ΑΝΑΚΑΛΥΠΤΩ</span><h1>Κάθε μόριο έχει ένα όνομα<br><span>Ανακάλυψέ το&nbsp;!</span></h1><p>Σύνδεσε τη δομή με την ονομασία, μάθε βήμα βήμα και δοκίμασε τις γνώσεις&nbsp;σου</p></section><p class="choose">Διάλεξε από πού θέλεις να ξεκινήσεις</p>
+ <section class="cards" aria-label="Επιλογές εφαρμογής">
+ <article class="card one"><div class="icon"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 9C12 6 7 6 3 7v19c5-1 9-1 13 2 4-3 8-3 13-2V7c-4-1-9-1-13 2v19M7 12h5m-5 5h5m8-5h5m-5 5h5"/></svg></div><span class="label">ΘΕΩΡΙΑ</span><h2>Μαθαίνω βήμα βήμα</h2><p>Ανακάλυψε τους κανόνες ονοματολογίας μέσα από καθοδηγούμενα σενάρια και διαφορετικές εικόνες του ίδιου μορίου.</p><ul><li>Έτοιμα σενάρια θεωρίας</li><li>Για μελέτη ή για το μάθημα στην τάξη</li></ul><a class="action" style="text-decoration:none" href="theory-library.html?v=other-ketones-theory-20261026">Δες τη θεωρία <span aria-hidden="true">↗</span></a><small>Για μαθητές και εκπαιδευτικούς</small></article>
+-<article class="card two"><div class="icon"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M11 10h10c6 0 9 13 5 15-3 1-5-5-8-5h-4c-3 0-5 6-8 5-4-2-1-15 5-15ZM10 13v7m-3-3.5h6"/><circle cx="22" cy="14" r="1"/><circle cx="25" cy="18" r="1"/></svg></div><span class="label">ΑΣΚΗΣΕΙΣ &amp; ΠΑΙΧΝΙΔΙΑ</span><h2>Συνδέω και εξασκούμαι</h2><p>Σύνδεσε ονόματα και δομές, αναγνώρισε το ίδιο μόριο σε άλλες αναπαραστάσεις και δοκίμασε όσα έμαθες.</p><ul><li>Εξάσκηση με βοήθεια και εξηγήσεις</li><li>Προκλήσεις με σκορ</li></ul><button class="action" data-panel="games">Δες τις δραστηριότητες <span aria-hidden="true">↗</span></button><small>Για μαθητές και εκπαιδευτικούς</small></article>
++<article class="card two"><div class="icon"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M11 10h10c6 0 9 13 5 15-3 1-5-5-8-5h-4c-3 0-5 6-8 5-4-2-1-15 5-15ZM10 13v7m-3-3.5h6"/><circle cx="22" cy="14" r="1"/><circle cx="25" cy="18" r="1"/></svg></div><span class="label">ΑΣΚΗΣΕΙΣ &amp; ΠΑΙΧΝΙΔΙΑ</span><h2>Παίζω και εξασκούμαι</h2><p>Εντόπισε και διόρθωσε λάθη στα ονόματα οργανικών ενώσεων στο Συνεργείο ονομάτων.</p><ul><li>Καθοδηγούμενο παράδειγμα και προκλήσεις</li><li>Ανατροφοδότηση και εξηγήσεις των κανόνων</li></ul><a class="action" style="text-decoration:none" href="../games/name-repair.html?v=logo-3d-20261104-r1">Συνεργείο ονομάτων <span aria-hidden="true">↗</span></a><small>Για μαθητές και εκπαιδευτικούς</small></article>
+ <article class="card three"><div class="icon"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M18 5H6v23h20V16M15 19l2-6L26 4l4 4-9 9-6 2ZM24 6l4 4M10 23h10"/></svg></div><span class="label">ΓΙΑ ΕΚΠΑΙΔΕΥΤΙΚΟΥΣ</span><h2>Δημιουργώ το μάθημά μου</h2><p>Βρες έτοιμο υλικό για την τάξη σου ή φτιάξε τα δικά σου σενάρια θεωρίας και μαθησιακά παιχνίδια.</p><ul><li>Ο προσωπικός σου χώρος υλικού</li><li>Αποθήκευση και λήψη των δημιουργιών σου</li></ul><button class="action" data-panel="teacher">Χώρος εκπαιδευτικού <span aria-hidden="true">↗</span></button><small>Σύνδεση για τον προσωπικό σου χώρο</small></article>
+ </section>
+ <section class="representations"><div><span class="eyebrow">Η ΙΔΙΑ ΔΟΜΗ, ΑΛΛΗ ΟΠΤΙΚΗ</span><h2>Ένα μόριο.<br>Πολλοί τρόποι να το καταλάβεις.</h2><p>Από τον χημικό τύπο στο τρισδιάστατο μοντέλο και από τη δομή στο όνομα: κάθε αναπαράσταση σε βοηθά να δεις μια άλλη πλευρά του μορίου.</p></div><div><div class="rep-art"><div class="rep"><div class="formula">CH₃–CH₂–<b>OH</b></div><small>Συνεπτυγμένος συντακτικός</small></div><span class="equal" aria-hidden="true">↔</span><div class="rep"><svg class="expanded-ethanol" viewBox="0 0 180 115" role="img" aria-label="Ανεπτυγμένος συντακτικός τύπος αιθανόλης: δύο άνθρακες, έξι υδρογόνα και ένα οξυγόνο"><g stroke="#254c50" stroke-width="2"><path d="M26 59H41M59 59H81M99 59H121M140 59H155M50 45V28M50 73V91M90 45V28M90 73V91"/></g><g fill="#254c50" font-family="system-ui,sans-serif" font-size="18" text-anchor="middle"><text x="16" y="65">H</text><text x="50" y="65">C</text><text x="90" y="65">C</text><text x="166" y="65">H</text><text x="50" y="23">H</text><text x="90" y="23">H</text><text x="50" y="110">H</text><text x="90" y="110">H</text></g><text x="130" y="65" fill="#a54e40" font-family="system-ui,sans-serif" font-size="18" text-anchor="middle">O</text></svg><small>Ανεπτυγμένος συντακτικός</small></div><span class="equal" aria-hidden="true">↔</span><div class="rep"><div class="ethanol-model ethanol-static"><img src="assets/ethanol-3d-jsmol.png" width="1200" height="1200" alt="Τρισδιάστατο μοντέλο του ίδιου μορίου, εξαγμένο από το JSmol" decoding="async"></div><small>Τρισδιάστατο μοντέλο</small></div></div><div class="explore-entry"><a href="../mulermoc-nom-52.html">Εξερεύνησε ελεύθερα τα μόρια</a></div></div></section>
+ <footer class="footer"><span>Namelecule · Μια εφαρμογή της πλατφόρμας MuLERMoCs</span><a href="../mulermoc-nom-52.html">Συντελεστές στην εφαρμογή ↗</a></footer></main>
+-<div class="preview-note">Η βιβλιοθήκη θεωρίας είναι διαθέσιμη. Η σύνδεση και τα παιχνίδια είναι υπό σχεδιασμό.</div>
++<div class="preview-note">Η βιβλιοθήκη θεωρίας και το Συνεργείο ονομάτων είναι διαθέσιμα. Η σύνδεση εκπαιδευτικών είναι υπό σχεδιασμό.</div>
+ <dialog id="details" aria-labelledby="dialog-title"><h2 id="dialog-title"></h2><p id="dialog-copy"></p><a id="dialog-link" href="../mulermoc-nom-52.html"></a><form method="dialog"><button>Κλείσιμο</button></form></dialog>
+ <script>
+-const panels={games:['Ασκήσεις & παιχνίδια','Εδώ σχεδιάζουμε εξάσκηση με βοήθεια και προκλήσεις με σκορ, βασισμένες στη σύνδεση διαφορετικών αναπαραστάσεων. Οι δραστηριότητες δεν έχουν υλοποιηθεί ακόμη.'],teacher:['Χώρος εκπαιδευτικού','Ο προσωπικός χώρος με σύνδεση, αποθήκευση και λήψη υλικού είναι υπό σχεδιασμό. Σήμερα μπορείς να ανοίξεις την εφαρμογή και να χρησιμοποιήσεις το εργαλείο σεναρίων.','Άνοιγμα εφαρμογής','../mulermoc-nom-52.html'],login:['Σύνδεση','Η σύνδεση εκπαιδευτικών είναι υπό σχεδιασμό. Για τους μαθητές δεν έχει αποφασιστεί ακόμη αν θα υπάρχει λογαριασμός.']};
++const panels={teacher:['Χώρος εκπαιδευτικού','Ο προσωπικός χώρος με σύνδεση, αποθήκευση και λήψη υλικού είναι υπό σχεδιασμό. Σήμερα μπορείς να ανοίξεις την εφαρμογή και να χρησιμοποιήσεις το εργαλείο σεναρίων.','Άνοιγμα εφαρμογής','../mulermoc-nom-52.html'],login:['Σύνδεση','Η σύνδεση εκπαιδευτικών είναι υπό σχεδιασμό. Για τους μαθητές δεν έχει αποφασιστεί ακόμη αν θα υπάρχει λογαριασμός.']};
+ document.querySelectorAll('[data-panel]').forEach(button=>button.addEventListener('click',()=>{const p=panels[button.dataset.panel];document.getElementById('dialog-title').textContent=p[0];document.getElementById('dialog-copy').textContent=p[1];const link=document.getElementById('dialog-link');link.hidden=!p[2];link.textContent=p[2]||'';link.href=p[3]||'../mulermoc-nom-52.html';document.getElementById('details').showModal();}));
+ </script></body></html>

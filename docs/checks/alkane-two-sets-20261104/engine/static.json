@@ -1,0 +1,22 @@
+{
+  "completed": true,
+  "checks": 32,
+  "base": "168e3cec01f941a84d40bbe0dc07156e7baa35d0",
+  "sets": [
+    {
+      "id": "alkanes-unbranched",
+      "quizzes": 3
+    },
+    {
+      "id": "alkanes-branched",
+      "quizzes": 3
+    }
+  ],
+  "sharedRendererChange": "optional standalone set identity only",
+  "sourceSHA256": {
+    "js/namelecule-game-repair.js": "8987e392296115f05aebc71cbb29c7ad3fc7853f3be966e1d715871ddf7e853c",
+    "games/data/name-repair-alkanes.json": "0538e31934d55d1738305d28a2f41ffa8ff520bfe08119517b277b4c5f2cf2e4"
+  },
+  "embeddedPilotSHA256": "61d115b7f246cbff2509aecc9ef286cc275350ea61cffd8273dfc85f63db6dff",
+  "untested": "Actual browser/layout/image assets are root-owned checks; DOM unit checks do not verify real images"
+}

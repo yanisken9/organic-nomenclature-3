@@ -1,0 +1,10 @@
+{
+  "finding": "U35-NUM02",
+  "beforeCoreSHA256": "c619d99a2804f09ecaf7acc7c4c6dd3de09045485414db4163b7f7d95259e95e",
+  "actualBefore": "dodecane-10,2-diol",
+  "expected": "dodecane-2,10-diol",
+  "reproductionCommand": "python3 docs/checks/v54-upstream-20261104/test-naming.py",
+  "exitCode": 1,
+  "error": "numeric functional locants diol: dodecane-10,2-diol",
+  "remainingSites": 3
+}

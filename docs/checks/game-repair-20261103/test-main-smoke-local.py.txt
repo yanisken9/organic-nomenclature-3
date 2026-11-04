@@ -1,0 +1,41 @@
+"""Bounded original Main/theory replay; records external errors without masking."""
+from pathlib import Path
+import os
+import json
+import traceback
+
+os.environ.setdefault('NAMELECULE_BIDI_PORT','9241')
+os.environ.setdefault('NAMELECULE_TEST_BASE_URL','http://127.0.0.1:8053/')
+exec(compile(Path('tools/namelecule_bidi.py').read_text(),'bidi','exec'))
+HERE=Path('docs/checks/game-repair-20261103')
+out={'completed':False,'checks':[]}
+try:
+    navigate('mulermoc-nom-52.html?libs=local');app_ready()
+    until('window.JSmolReadyFlag===true')
+    assert ev('Object.keys(nameExamples).length')==141
+    out['checks'].append('141 Main molecules retained')
+    ev('document.getElementById("butane").click();true')
+    until('selectedMol==="butane"&&currentMolName==="βουτάνιο"')
+    for index,mode in [(0,'condensed'),(1,'expanded'),(2,'skeletal')]:
+        ev('document.querySelectorAll("#radio2DMode .mode2DOption")['+str(index)+'].click();true')
+        until('mode2D==='+json.dumps(mode)+'&&!!document.querySelector("#jsmeNomeclatureSVG svg text")')
+        assert ev('currentMolName')=='βουτάνιο'
+        out['checks'].append('Butane '+mode+' and unchanged name')
+    until('(()=>{const m=Jmol.getPropertyAsArray(jmolAppletNomeclature,"modelInfo").models;return m&&m[0]&&m[0].file===new URL(nameExamples.butane.file3D,document.baseURI).href})()')
+    out['checks'].append('Butane actual 3D model URL matches source')
+    navigate('mulermoc-nom-52.html?libs=local&scenario=scenarios/alkanes-nomenclature-branches.scenario.json&present=1&from=theory-library')
+    until('typeof fScenarioPresent==="function"&&!!fScenarioPresent()&&!document.documentElement.classList.contains("lesson-loading")')
+    ev('document.getElementById("scNext").click();true');until('fScenarioPresent().index===1')
+    ev('document.getElementById("scPrev").click();true');until('fScenarioPresent().index===0')
+    ev('document.getElementById("scExit").click();true');until('location.pathname.endsWith("/design/theory-library.html")')
+    out['checks'].append('Existing alkane theory next/previous/exit')
+    out['completed']=True
+except Exception as e:
+    out.update(failure=str(e),traceback=traceback.format_exc());print(out['traceback'],flush=True)
+finally:
+    out['javascriptErrors']=js_errors
+    out['diagnostics']=[e for e in all_events if e.get('method')=='log.entryAdded'and e.get('params',{}).get('level')in ['error','warn']]
+    (HERE/'main-smoke.json').write_text(json.dumps(out,ensure_ascii=False,indent=2)+'\n')
+    call('browsingContext.close',{'context':ctx});call('session.end',{})
+    print(json.dumps({'completed':out['completed'],'checks':len(out['checks']),'JSerrors':len(js_errors)}),flush=True)
+if not out['completed']:raise SystemExit(1)

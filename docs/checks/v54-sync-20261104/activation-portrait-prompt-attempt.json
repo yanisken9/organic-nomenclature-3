@@ -1,0 +1,19 @@
+{
+  "completed": false,
+  "checks": [
+    "Explore54 1500",
+    "Actual54 boot 1500",
+    "Explore returnwelcome 1500",
+    "All14 lessons54 1500",
+    "Lessonpresentfromlibrary 1500",
+    "LessonExitlibrary 1500",
+    "Workshop directentry 1500",
+    "Workshopreturn 1500",
+    "Teacher54 1500",
+    "Explore54 390",
+    "Actual54 boot 390"
+  ],
+  "failure": "('a[href*=\"welcome-proposal\"]', {'x': 227.93333435058594, 'y': 142.5, 'receivesClick': False, 'hit': '<div id=\"rotatePrompt\">\\n    <svg id=\"rotatePromptIcon\" viewBox=\"0 0 24 24\" fill=\"white\" xmlns=\"http://www.w3.org/2000/svg\">\\n      <path d=\"M16.48 2.52c3.27 1.55 5.61 4.72 5.97 8.48h1.5C23.44 4.84 18.29 0 12 0l-.66.03 3.81 3.81 1.33-1.32zm-6.25-.77c-.59-.59-1.54-.59-2.12 0L1.75 8.11c-.59.59-.59 1.54 '})",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/v54-sync-20261104/test-activation.py\", line 16, in <module>\n    click('a[href*=\"welcome-proposal\"]')\n  File \"feature-support\", line 10, in click\n    for width in [1500,390]:\nAssertionError: ('a[href*=\"welcome-proposal\"]', {'x': 227.93333435058594, 'y': 142.5, 'receivesClick': False, 'hit': '<div id=\"rotatePrompt\">\\n    <svg id=\"rotatePromptIcon\" viewBox=\"0 0 24 24\" fill=\"white\" xmlns=\"http://www.w3.org/2000/svg\">\\n      <path d=\"M16.48 2.52c3.27 1.55 5.61 4.72 5.97 8.48h1.5C23.44 4.84 18.29 0 12 0l-.66.03 3.81 3.81 1.33-1.32zm-6.25-.77c-.59-.59-1.54-.59-2.12 0L1.75 8.11c-.59.59-.59 1.54 '})\n",
+  "javascriptErrors": []
+}

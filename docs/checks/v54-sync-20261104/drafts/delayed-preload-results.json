@@ -1,0 +1,1307 @@
+{
+  "checks": [
+    {
+      "label": "Normal startup imports seven steps and one empty card",
+      "passed": true
+    },
+    {
+      "label": "Delayed default preserves exact state: new-captured-user-card",
+      "passed": true
+    },
+    {
+      "label": "All 141 templates retained: new-captured-user-card",
+      "passed": true
+    },
+    {
+      "label": "Final scenario retains language Cancel safeguard",
+      "passed": true
+    },
+    {
+      "label": "Delayed default preserves exact state: edit-original-card",
+      "passed": true
+    },
+    {
+      "label": "All 141 templates retained: edit-original-card",
+      "passed": true
+    },
+    {
+      "label": "Delayed default preserves exact state: delete-original-card",
+      "passed": true
+    },
+    {
+      "label": "All 141 templates retained: delete-original-card",
+      "passed": true
+    },
+    {
+      "label": "Delayed default preserves exact state: author-bar-opened-and-closed",
+      "passed": true
+    },
+    {
+      "label": "All 141 templates retained: author-bar-opened-and-closed",
+      "passed": true
+    }
+  ],
+  "cases": [
+    {
+      "case": "new-captured-user-card",
+      "before": {
+        "scenarios": [
+          {
+            "id": "s1",
+            "title": "untitled-scenario",
+            "author": "Unknown",
+            "created": "2026-11-04T07:58:33.525Z",
+            "steps": [],
+            "index": 0,
+            "menuPick": [],
+            "showStepNumbers": true,
+            "reserveTitleSpace": false
+          },
+          {
+            "id": "s2",
+            "title": "delayed-user-authored",
+            "author": "Unknown",
+            "created": "2026-11-04T07:58:39.212Z",
+            "steps": [
+              {
+                "n": 1,
+                "nameBoxLayout": 2,
+                "lang": "gr",
+                "title": "προπένιο",
+                "note": "",
+                "noteFormat": "html",
+                "selectedMol": "propene",
+                "mode2D": "condensed",
+                "mainChainMode": "algorithmic",
+                "chainIdx": 0,
+                "etherNamingMode": "iupac",
+                "nameAnalysisMode": "none",
+                "selectedRule": null,
+                "style2D": {
+                  "atomColors": true,
+                  "colorMode": "atom",
+                  "zigzag": false,
+                  "zoom": 2
+                },
+                "styleName": {
+                  "box": true,
+                  "cross": false,
+                  "etherNaming": "iupac",
+                  "panelOpen": true,
+                  "hidden": []
+                },
+                "styleHighlight": {
+                  "bondAtoms": false,
+                  "numberingAtoms": true,
+                  "numberingBonds": true
+                },
+                "styleText": {
+                  "fontSizePx": null,
+                  "textWidthPx": null,
+                  "columns": null,
+                  "position": null
+                },
+                "audio": {
+                  "narrate": false
+                },
+                "view3D": {
+                  "style": "ballnstick",
+                  "spin": false,
+                  "showH": true,
+                  "atomSymbols": true,
+                  "moveto": "moveto 0.0 {0 0 1 0} 100.0 0.0 0.0 {0.000020000000000020002 0.0000199999999999978 0} 2.290012662678742 {0 0 0} 0 0 0 3.0 0.0 0.0;"
+                },
+                "menuSubset": [],
+                "menuGroups": [
+                  "molecules"
+                ],
+                "show": {
+                  "menu": false,
+                  "viewerButtons": false,
+                  "viewerSettings": false,
+                  "viewers": {
+                    "2D": true,
+                    "3D": true
+                  },
+                  "viewerMaxHeight": "full",
+                  "viewerBothHeight": "full",
+                  "controls": {
+                    "2D": false,
+                    "3D": false
+                  },
+                  "save": {
+                    "2D": false,
+                    "3D": false
+                  },
+                  "naming": true,
+                  "nameSettings": false,
+                  "nameClick": false,
+                  "nameEye": false,
+                  "nameExpanded": false,
+                  "audio": false,
+                  "rule": false,
+                  "text": true
+                }
+              }
+            ],
+            "index": 0,
+            "menuPick": [],
+            "showStepNumbers": true,
+            "reserveTitleSpace": false
+          }
+        ],
+        "active": "s2",
+        "authoring": false,
+        "opened": true,
+        "selected": "propene",
+        "mode": "condensed",
+        "records": 141
+      },
+      "after": {
+        "scenarios": [
+          {
+            "id": "s1",
+            "title": "untitled-scenario",
+            "author": "Unknown",
+            "created": "2026-11-04T07:58:33.525Z",
+            "steps": [],
+            "index": 0,
+            "menuPick": [],
+            "showStepNumbers": true,
+            "reserveTitleSpace": false
+          },
+          {
+            "id": "s2",
+            "title": "delayed-user-authored",
+            "author": "Unknown",
+            "created": "2026-11-04T07:58:39.212Z",
+            "steps": [
+              {
+                "n": 1,
+                "nameBoxLayout": 2,
+                "lang": "gr",
+                "title": "προπένιο",
+                "note": "",
+                "noteFormat": "html",
+                "selectedMol": "propene",
+                "mode2D": "condensed",
+                "mainChainMode": "algorithmic",
+                "chainIdx": 0,
+                "etherNamingMode": "iupac",
+                "nameAnalysisMode": "none",
+                "selectedRule": null,
+                "style2D": {
+                  "atomColors": true,
+                  "colorMode": "atom",
+                  "zigzag": false,
+                  "zoom": 2
+                },
+                "styleName": {
+                  "box": true,
+                  "cross": false,
+                  "etherNaming": "iupac",
+                  "panelOpen": true,
+                  "hidden": []
+                },
+                "styleHighlight": {
+                  "bondAtoms": false,
+                  "numberingAtoms": true,
+                  "numberingBonds": true
+                },
+                "styleText": {
+                  "fontSizePx": null,
+                  "textWidthPx": null,
+                  "columns": null,
+                  "position": null
+                },
+                "audio": {
+                  "narrate": false
+                },
+                "view3D": {
+                  "style": "ballnstick",
+                  "spin": false,
+                  "showH": true,
+                  "atomSymbols": true,
+                  "moveto": "moveto 0.0 {0 0 1 0} 100.0 0.0 0.0 {0.000020000000000020002 0.0000199999999999978 0} 2.290012662678742 {0 0 0} 0 0 0 3.0 0.0 0.0;"
+                },
+                "menuSubset": [],
+                "menuGroups": [
+                  "molecules"
+                ],
+                "show": {
+                  "menu": false,
+                  "viewerButtons": false,
+                  "viewerSettings": false,
+                  "viewers": {
+                    "2D": true,
+                    "3D": true
+                  },
+                  "viewerMaxHeight": "full",
+                  "viewerBothHeight": "full",
+                  "controls": {
+                    "2D": false,
+                    "3D": false
+                  },
+                  "save": {
+                    "2D": false,
+                    "3D": false
+                  },
+                  "naming": true,
+                  "nameSettings": false,
+                  "nameClick": false,
+                  "nameEye": false,
+                  "nameExpanded": false,
+                  "audio": false,
+                  "rule": false,
+                  "text": true
+                }
+              }
+            ],
+            "index": 0,
+            "menuPick": [],
+            "showStepNumbers": true,
+            "reserveTitleSpace": false
+          }
+        ],
+        "active": "s2",
+        "authoring": false,
+        "opened": true,
+        "selected": "propene",
+        "mode": "condensed",
+        "records": 141
+      },
+      "loadedGuard": true,
+      "scriptURLs": [
+        "https://www.googletagmanager.com/gtag/js?id=G-1V8NWYY46Y",
+        "http://127.0.0.1:8013/js/namelecule-label-metrics.js?v=20261031-r1",
+        "http://127.0.0.1:8013/js/vendor/jsme/namelecule-20261031-r1/jsme.nocache.js",
+        "http://127.0.0.1:8013/js/vendor/jsme/namelecule-20261031-r1/FEB169D74546A3B279D22AE09AFB86BD.cache.js",
+        "http://127.0.0.1:8013/js/vendor/jquery/jquery-4.0.0.min.js",
+        "http://127.0.0.1:8013/js/vendor/jsmol/namelecule-20261031-r1/JSmol.min.js",
+        "http://127.0.0.1:8013/js/vendor/dompurify/dompurify-3.4.17.min.js",
+        "http://127.0.0.1:8013/js/jsme-nick-nomeclature-moc2-data_54.js?v=v54-sync-20261104-r2",
+        "http://127.0.0.1:8013/js/ui-icons-54.js?v=v54-sync-20261104-r2",
+        "http://127.0.0.1:8013/js/mulermoc-nom-core-54.js?v=v54-sync-20261104-r2",
+        "http://127.0.0.1:8013/js/mulermoc-nom-molview-54.js?v=v54-sync-20261104-r2",
+        "http://127.0.0.1:8013/js/mulermoc-nom-teaching-54.js?v=v54-sync-20261104-r2",
+        "http://127.0.0.1:8013/js/mulermoc-nom-note-54.js?v=v54-sync-20261104-r2",
+        "http://127.0.0.1:8013/js/mulermoc-nom-scenario-54.js?v=v54-sync-20261104-r2",
+        "http://127.0.0.1:8013/js/mulermoc-nom-iupac-54.js?v=v54-sync-20261104-r2",
+        "http://127.0.0.1:8013/js/mulermoc-nom-lang-54.js?v=v54-sync-20261104-r2",
+        "http://127.0.0.1:8013/js/mulermoc-nom-name-en-54.js?v=v54-sync-20261104-r2",
+        "http://127.0.0.1:8013/js/vendor/jsme/namelecule-20261031-r1/96E40B969193BD74B8A621486920E79C.cache.js"
+      ]
+    },
+    {
+      "case": "edit-original-card",
+      "before": {
+        "scenarios": [
+          {
+            "id": "s1",
+            "title": "edited-original-during-fetch",
+            "author": "Unknown",
+            "created": "2026-11-04T07:58:43.192Z",
+            "steps": [
+              {
+                "n": 1,
+                "nameBoxLayout": 2,
+                "lang": "gr",
+                "title": "προπένιο",
+                "note": "",
+                "noteFormat": "html",
+                "selectedMol": "propene",
+                "mode2D": "condensed",
+                "mainChainMode": "algorithmic",
+                "chainIdx": 0,
+                "etherNamingMode": "iupac",
+                "nameAnalysisMode": "none",
+                "selectedRule": null,
+                "style2D": {
+                  "atomColors": true,
+                  "colorMode": "atom",
+                  "zigzag": false,
+                  "zoom": 2
+                },
+                "styleName": {
+                  "box": true,
+                  "cross": false,
+                  "etherNaming": "iupac",
+                  "panelOpen": true,
+                  "hidden": []
+                },
+                "styleHighlight": {
+                  "bondAtoms": false,
+                  "numberingAtoms": true,
+                  "numberingBonds": true
+                },
+                "styleText": {
+                  "fontSizePx": null,
+                  "textWidthPx": null,
+                  "columns": null,
+                  "position": null
+                },
+                "audio": {
+                  "narrate": false
+                },
+                "view3D": {
+                  "style": "ballnstick",
+                  "spin": false,
+                  "showH": true,
+                  "atomSymbols": true,
+                  "moveto": "moveto 0.0 {0 0 1 0} 100.0 0.0 0.0 {0.15621111111111116 -0.06524444444444445 0} 3.5481076953081674 {0 0 0} 0 0 0 3.0 0.0 0.0;"
+                },
+                "menuSubset": [],
+                "menuGroups": [
+                  "molecules"
+                ],
+                "show": {
+                  "menu": false,
+                  "viewerButtons": false,
+                  "viewerSettings": false,
+                  "viewers": {
+                    "2D": true,
+                    "3D": true
+                  },
+                  "viewerMaxHeight": "full",
+                  "viewerBothHeight": "full",
+                  "controls": {
+                    "2D": false,
+                    "3D": false
+                  },
+                  "save": {
+                    "2D": false,
+                    "3D": false
+                  },
+                  "naming": true,
+                  "nameSettings": false,
+                  "nameClick": false,
+                  "nameEye": false,
+                  "nameExpanded": false,
+                  "audio": false,
+                  "rule": false,
+                  "text": true
+                }
+              }
+            ],
+            "index": 0,
+            "menuPick": [],
+            "showStepNumbers": true,
+            "reserveTitleSpace": false
+          }
+        ],
+        "active": "s1",
+        "authoring": false,
+        "opened": false,
+        "selected": "propene",
+        "mode": "condensed",
+        "records": 141
+      },
+      "after": {
+        "scenarios": [
+          {
+            "id": "s1",
+            "title": "edited-original-during-fetch",
+            "author": "Unknown",
+            "created": "2026-11-04T07:58:43.192Z",
+            "steps": [
+              {
+                "n": 1,
+                "nameBoxLayout": 2,
+                "lang": "gr",
+                "title": "προπένιο",
+                "note": "",
+                "noteFormat": "html",
+                "selectedMol": "propene",
+                "mode2D": "condensed",
+                "mainChainMode": "algorithmic",
+                "chainIdx": 0,
+                "etherNamingMode": "iupac",
+                "nameAnalysisMode": "none",
+                "selectedRule": null,
+                "style2D": {
+                  "atomColors": true,
+                  "colorMode": "atom",
+                  "zigzag": false,
+                  "zoom": 2
+                },
+                "styleName": {
+                  "box": true,
+                  "cross": false,
+                  "etherNaming": "iupac",
+                  "panelOpen": true,
+                  "hidden": []
+                },
+                "styleHighlight": {
+                  "bondAtoms": false,
+                  "numberingAtoms": true,
+                  "numberingBonds": true
+                },
+                "styleText": {
+                  "fontSizePx": null,
+                  "textWidthPx": null,
+                  "columns": null,
+                  "position": null
+                },
+                "audio": {
+                  "narrate": false
+                },
+                "view3D": {
+                  "style": "ballnstick",
+                  "spin": false,
+                  "showH": true,
+                  "atomSymbols": true,
+                  "moveto": "moveto 0.0 {0 0 1 0} 100.0 0.0 0.0 {0.15621111111111116 -0.06524444444444445 0} 3.5481076953081674 {0 0 0} 0 0 0 3.0 0.0 0.0;"
+                },
+                "menuSubset": [],
+                "menuGroups": [
+                  "molecules"
+                ],
+                "show": {
+                  "menu": false,
+                  "viewerButtons": false,
+                  "viewerSettings": false,
+                  "viewers": {
+                    "2D": true,
+                    "3D": true
+                  },
+                  "viewerMaxHeight": "full",
+                  "viewerBothHeight": "full",
+                  "controls": {
+                    "2D": false,
+                    "3D": false
+                  },
+                  "save": {
+                    "2D": false,
+                    "3D": false
+                  },
+                  "naming": true,
+                  "nameSettings": false,
+                  "nameClick": false,
+                  "nameEye": false,
+                  "nameExpanded": false,
+                  "audio": false,
+                  "rule": false,
+                  "text": true
+                }
+              }
+            ],
+            "index": 0,
+            "menuPick": [],
+            "showStepNumbers": true,
+            "reserveTitleSpace": false
+          }
+        ],
+        "active": "s1",
+        "authoring": false,
+        "opened": false,
+        "selected": "propene",
+        "mode": "condensed",
+        "records": 141
+      },
+      "loadedGuard": true,
+      "scriptURLs": [
+        "https://www.googletagmanager.com/gtag/js?id=G-1V8NWYY46Y",
+        "http://127.0.0.1:8013/js/namelecule-label-metrics.js?v=20261031-r1",
+        "http://127.0.0.1:8013/js/vendor/jsme/namelecule-20261031-r1/jsme.nocache.js",
+        "http://127.0.0.1:8013/js/vendor/jsme/namelecule-20261031-r1/FEB169D74546A3B279D22AE09AFB86BD.cache.js",
+        "http://127.0.0.1:8013/js/vendor/jquery/jquery-4.0.0.min.js",
+        "http://127.0.0.1:8013/js/vendor/jsmol/namelecule-20261031-r1/JSmol.min.js",
+        "http://127.0.0.1:8013/js/vendor/dompurify/dompurify-3.4.17.min.js",
+        "http://127.0.0.1:8013/js/jsme-nick-nomeclature-moc2-data_54.js?v=v54-sync-20261104-r2",
+        "http://127.0.0.1:8013/js/ui-icons-54.js?v=v54-sync-20261104-r2",
+        "http://127.0.0.1:8013/js/mulermoc-nom-core-54.js?v=v54-sync-20261104-r2",
+        "http://127.0.0.1:8013/js/mulermoc-nom-molview-54.js?v=v54-sync-20261104-r2",
+        "http://127.0.0.1:8013/js/mulermoc-nom-teaching-54.js?v=v54-sync-20261104-r2",
+        "http://127.0.0.1:8013/js/mulermoc-nom-note-54.js?v=v54-sync-20261104-r2",
+        "http://127.0.0.1:8013/js/mulermoc-nom-scenario-54.js?v=v54-sync-20261104-r2",
+        "http://127.0.0.1:8013/js/mulermoc-nom-iupac-54.js?v=v54-sync-20261104-r2",
+        "http://127.0.0.1:8013/js/mulermoc-nom-lang-54.js?v=v54-sync-20261104-r2",
+        "http://127.0.0.1:8013/js/mulermoc-nom-name-en-54.js?v=v54-sync-20261104-r2",
+        "http://127.0.0.1:8013/js/vendor/jsme/namelecule-20261031-r1/96E40B969193BD74B8A621486920E79C.cache.js"
+      ]
+    },
+    {
+      "case": "delete-original-card",
+      "before": {
+        "scenarios": [
+          {
+            "id": "s2",
+            "title": "untitled-scenario",
+            "author": "Unknown",
+            "created": "2026-11-04T07:58:56.551Z",
+            "steps": [],
+            "index": 0,
+            "menuPick": [],
+            "showStepNumbers": true,
+            "reserveTitleSpace": false
+          }
+        ],
+        "active": "s2",
+        "authoring": false,
+        "opened": false,
+        "selected": "propene",
+        "mode": "condensed",
+        "records": 141
+      },
+      "after": {
+        "scenarios": [
+          {
+            "id": "s2",
+            "title": "untitled-scenario",
+            "author": "Unknown",
+            "created": "2026-11-04T07:58:56.551Z",
+            "steps": [],
+            "index": 0,
+            "menuPick": [],
+            "showStepNumbers": true,
+            "reserveTitleSpace": false
+          }
+        ],
+        "active": "s2",
+        "authoring": false,
+        "opened": false,
+        "selected": "propene",
+        "mode": "condensed",
+        "records": 141
+      },
+      "loadedGuard": true,
+      "scriptURLs": [
+        "https://www.googletagmanager.com/gtag/js?id=G-1V8NWYY46Y",
+        "http://127.0.0.1:8013/js/namelecule-label-metrics.js?v=20261031-r1",
+        "http://127.0.0.1:8013/js/vendor/jsme/namelecule-20261031-r1/jsme.nocache.js",
+        "http://127.0.0.1:8013/js/vendor/jsme/namelecule-20261031-r1/FEB169D74546A3B279D22AE09AFB86BD.cache.js",
+        "http://127.0.0.1:8013/js/vendor/jquery/jquery-4.0.0.min.js",
+        "http://127.0.0.1:8013/js/vendor/jsmol/namelecule-20261031-r1/JSmol.min.js",
+        "http://127.0.0.1:8013/js/vendor/dompurify/dompurify-3.4.17.min.js",
+        "http://127.0.0.1:8013/js/jsme-nick-nomeclature-moc2-data_54.js?v=v54-sync-20261104-r2",
+        "http://127.0.0.1:8013/js/ui-icons-54.js?v=v54-sync-20261104-r2",
+        "http://127.0.0.1:8013/js/mulermoc-nom-core-54.js?v=v54-sync-20261104-r2",
+        "http://127.0.0.1:8013/js/mulermoc-nom-molview-54.js?v=v54-sync-20261104-r2",
+        "http://127.0.0.1:8013/js/mulermoc-nom-teaching-54.js?v=v54-sync-20261104-r2",
+        "http://127.0.0.1:8013/js/mulermoc-nom-note-54.js?v=v54-sync-20261104-r2",
+        "http://127.0.0.1:8013/js/mulermoc-nom-scenario-54.js?v=v54-sync-20261104-r2",
+        "http://127.0.0.1:8013/js/mulermoc-nom-iupac-54.js?v=v54-sync-20261104-r2",
+        "http://127.0.0.1:8013/js/mulermoc-nom-lang-54.js?v=v54-sync-20261104-r2",
+        "http://127.0.0.1:8013/js/mulermoc-nom-name-en-54.js?v=v54-sync-20261104-r2",
+        "http://127.0.0.1:8013/js/vendor/jsme/namelecule-20261031-r1/96E40B969193BD74B8A621486920E79C.cache.js"
+      ]
+    },
+    {
+      "case": "author-bar-opened-and-closed",
+      "before": {
+        "scenarios": [
+          {
+            "id": "s1",
+            "title": "untitled-scenario",
+            "author": "Unknown",
+            "created": "2026-11-04T07:58:59.676Z",
+            "steps": [],
+            "index": 0,
+            "menuPick": [],
+            "showStepNumbers": true,
+            "reserveTitleSpace": false
+          }
+        ],
+        "active": "s1",
+        "authoring": false,
+        "opened": true,
+        "selected": "propene",
+        "mode": "condensed",
+        "records": 141
+      },
+      "after": {
+        "scenarios": [
+          {
+            "id": "s1",
+            "title": "untitled-scenario",
+            "author": "Unknown",
+            "created": "2026-11-04T07:58:59.676Z",
+            "steps": [],
+            "index": 0,
+            "menuPick": [],
+            "showStepNumbers": true,
+            "reserveTitleSpace": false
+          }
+        ],
+        "active": "s1",
+        "authoring": false,
+        "opened": true,
+        "selected": "propene",
+        "mode": "condensed",
+        "records": 141
+      },
+      "loadedGuard": true,
+      "scriptURLs": [
+        "https://www.googletagmanager.com/gtag/js?id=G-1V8NWYY46Y",
+        "http://127.0.0.1:8013/js/namelecule-label-metrics.js?v=20261031-r1",
+        "http://127.0.0.1:8013/js/vendor/jsme/namelecule-20261031-r1/jsme.nocache.js",
+        "http://127.0.0.1:8013/js/vendor/jsme/namelecule-20261031-r1/FEB169D74546A3B279D22AE09AFB86BD.cache.js",
+        "http://127.0.0.1:8013/js/vendor/jquery/jquery-4.0.0.min.js",
+        "http://127.0.0.1:8013/js/vendor/jsmol/namelecule-20261031-r1/JSmol.min.js",
+        "http://127.0.0.1:8013/js/vendor/dompurify/dompurify-3.4.17.min.js",
+        "http://127.0.0.1:8013/js/jsme-nick-nomeclature-moc2-data_54.js?v=v54-sync-20261104-r2",
+        "http://127.0.0.1:8013/js/ui-icons-54.js?v=v54-sync-20261104-r2",
+        "http://127.0.0.1:8013/js/mulermoc-nom-core-54.js?v=v54-sync-20261104-r2",
+        "http://127.0.0.1:8013/js/mulermoc-nom-molview-54.js?v=v54-sync-20261104-r2",
+        "http://127.0.0.1:8013/js/mulermoc-nom-teaching-54.js?v=v54-sync-20261104-r2",
+        "http://127.0.0.1:8013/js/mulermoc-nom-note-54.js?v=v54-sync-20261104-r2",
+        "http://127.0.0.1:8013/js/mulermoc-nom-scenario-54.js?v=v54-sync-20261104-r2",
+        "http://127.0.0.1:8013/js/mulermoc-nom-iupac-54.js?v=v54-sync-20261104-r2",
+        "http://127.0.0.1:8013/js/mulermoc-nom-lang-54.js?v=v54-sync-20261104-r2",
+        "http://127.0.0.1:8013/js/mulermoc-nom-name-en-54.js?v=v54-sync-20261104-r2",
+        "http://127.0.0.1:8013/js/vendor/jsme/namelecule-20261031-r1/96E40B969193BD74B8A621486920E79C.cache.js"
+      ]
+    }
+  ],
+  "sourceHashesAtStart": {
+    "mulermoc-nom-54.html": "64e4f298b393e5f1c6401f4fbca193bfe44d55ebf94cd8f18c4078af2669a6e3",
+    "js/jsme-nick-nomeclature-moc2-data_54.js": "9387cd654b2ff3cfb058d9b97ddcca798ac13f47f769b532f9c122277ff8dd0a",
+    "js/mulermoc-nom-core-54.js": "73e28373c8128b3db48a65084ac07bd19c5f4887b236ba4896a3c5a29330fe6c",
+    "js/mulermoc-nom-iupac-54.js": "3d7c675f5c9a2fc449412e85e3cc844d4b76959faaeb151bf41865a627f56931",
+    "js/mulermoc-nom-lang-54.js": "31545f05a35020b6e603d9b10300848f72fc4b4d18ebbbbb4b695f469df10bf7",
+    "js/mulermoc-nom-molview-54.js": "3b228b89b35db3da990ca0d75885b33221ae19793fb7ef2cd68b4f03e9363fb1",
+    "js/mulermoc-nom-name-en-54.js": "8490121cd3de7908772b2bb833a86e98e529ae555de761a3337eea784f93fa42",
+    "js/mulermoc-nom-note-54.js": "e685355459afb7955fbe13e3b8e07c6283469b4d8acb98cfbcfa483c9f9be3ca",
+    "js/mulermoc-nom-scenario-54.js": "f1763a31567172e295cfee7afc936b0e592b3d5d6c0fddc60d7e68356b21a9c8",
+    "js/mulermoc-nom-teaching-54.js": "26704561e4e4daef69482294bfc77e0c69fd82a4f59f83e31e355747c9fadcb5",
+    "js/ui-icons-54.js": "2ae4c48198f8e62f6e74645ef853369164b9e0e4915c4df2cc1715a06705896f",
+    "css/jsme-nick-54.css": "987c729b5411f915ad507694a83ec0eae524bc43464967037bb3ff795ad02ed9",
+    "css/mulermoc-nom-scenario-54.css": "a705e6e0aa5547bd6a57c1d6c33ec5f09e42b764cfc3e86616f6cd0269797a08",
+    "css/namelecule-54.css": "042b0e93645dbc9fe5c9851bdd90a73b08f8c89fc4ef524302bd07ac7180e7a7"
+  },
+  "fixturePolicy": "Only default-scenario fetch held, then released with exact local stored JSON. Authoring/capture/delete APIs remain real. No source writes.",
+  "fixtureSHA256": "11b6a1c0d876eff0e2dbf66eb23e078ab8957f32f6a3cf2db0bea0a116337ada",
+  "normalStartup": {
+    "scenarios": [
+      {
+        "id": "s1",
+        "title": "Αλκάνια-Αιθάνιο-τεστ",
+        "author": "Unknown",
+        "created": "2026-11-04T07:58:24.068Z",
+        "steps": [
+          {
+            "n": 1,
+            "nameBoxLayout": 1,
+            "lang": "gr",
+            "title": "Πώς ονομάζεται ένα οργανικό μόριο;",
+            "note": "Το όνομα μιας άκυκλης οργανικής ένωσης που έχει συνεχή ευθύγραμμη ανθρακική αλυσίδα προκύπτει από τον συνδυασμό τριών συνθετικών.",
+            "noteFormat": "text",
+            "mode2D": "condensed",
+            "mainChainMode": "algorithmic",
+            "chainIdx": 0,
+            "etherNamingMode": "iupac",
+            "nameAnalysisMode": "none",
+            "selectedRule": null,
+            "style2D": {
+              "atomColors": true,
+              "colorMode": "atom",
+              "zigzag": false,
+              "zoom": 2
+            },
+            "styleName": {
+              "box": true,
+              "cross": true,
+              "etherNaming": "iupac",
+              "panelOpen": true,
+              "hidden": [
+                "comp5",
+                "comp6",
+                "comp9"
+              ]
+            },
+            "styleHighlight": {
+              "bondAtoms": false,
+              "numberingAtoms": true,
+              "numberingBonds": true
+            },
+            "styleText": {
+              "fontSizePx": null,
+              "textWidthPx": null,
+              "columns": null,
+              "position": null
+            },
+            "audio": {
+              "narrate": false
+            },
+            "menuSubset": [],
+            "menuGroups": [
+              "molecules"
+            ],
+            "view3D": {
+              "style": "ballnstick",
+              "spin": false,
+              "showH": true,
+              "atomSymbols": true,
+              "moveto": null
+            },
+            "show": {
+              "menu": false,
+              "viewerButtons": false,
+              "viewerSettings": false,
+              "viewers": {
+                "2D": true,
+                "3D": false
+              },
+              "viewerMaxHeight": null,
+              "viewerBothHeight": null,
+              "controls": {
+                "2D": false,
+                "3D": false
+              },
+              "save": {
+                "2D": false,
+                "3D": false
+              },
+              "naming": true,
+              "nameSettings": false,
+              "nameEye": false,
+              "nameExpanded": false,
+              "audio": false,
+              "rule": false,
+              "text": true,
+              "nameClick": false
+            },
+            "selectedMol": "ethane"
+          },
+          {
+            "n": 2,
+            "nameBoxLayout": 1,
+            "lang": "gr",
+            "title": "Πρώτο Συνθετικό",
+            "note": "Το <b>1<sup>o</sup> Συνθετικό</b> δείχνει τον αριθμό των ατόμων άνθρακα της ανθρακικής αλυσίδας.",
+            "noteFormat": "text",
+            "mode2D": "condensed",
+            "mainChainMode": "algorithmic",
+            "chainIdx": 0,
+            "etherNamingMode": "iupac",
+            "nameAnalysisMode": "compCarbonsCount",
+            "selectedRule": null,
+            "style2D": {
+              "atomColors": true,
+              "colorMode": "atom",
+              "zigzag": false,
+              "zoom": 2
+            },
+            "styleName": {
+              "box": true,
+              "cross": true,
+              "etherNaming": "iupac",
+              "panelOpen": true,
+              "hidden": [
+                "comp6",
+                "comp9"
+              ]
+            },
+            "styleHighlight": {
+              "bondAtoms": false,
+              "numberingAtoms": true,
+              "numberingBonds": true
+            },
+            "styleText": {
+              "fontSizePx": null,
+              "textWidthPx": null,
+              "columns": null,
+              "position": null
+            },
+            "audio": {
+              "narrate": false
+            },
+            "menuSubset": [],
+            "menuGroups": [
+              "molecules"
+            ],
+            "view3D": {
+              "style": "ballnstick",
+              "spin": false,
+              "showH": true,
+              "atomSymbols": true,
+              "moveto": null
+            },
+            "show": {
+              "menu": false,
+              "viewerButtons": false,
+              "viewerSettings": false,
+              "viewers": {
+                "2D": true,
+                "3D": false
+              },
+              "viewerMaxHeight": null,
+              "viewerBothHeight": null,
+              "controls": {
+                "2D": false,
+                "3D": false
+              },
+              "save": {
+                "2D": false,
+                "3D": false
+              },
+              "naming": true,
+              "nameSettings": false,
+              "nameEye": false,
+              "nameExpanded": false,
+              "audio": false,
+              "rule": false,
+              "text": true,
+              "nameClick": false
+            },
+            "selectedMol": "ethane"
+          },
+          {
+            "n": 3,
+            "nameBoxLayout": 1,
+            "lang": "gr",
+            "title": "Δεύτερο Συνθετικό",
+            "note": "Το <b>2<sup>o</sup> Συνθετικό</b>  δείχνει το είδος των δεσμών που υπάρχουν μεταξύ των ατόμων του άνθρακα.",
+            "noteFormat": "text",
+            "mode2D": "condensed",
+            "mainChainMode": "algorithmic",
+            "chainIdx": 0,
+            "etherNamingMode": "iupac",
+            "nameAnalysisMode": "compBondType",
+            "selectedRule": null,
+            "style2D": {
+              "atomColors": true,
+              "colorMode": "atom",
+              "zigzag": false,
+              "zoom": 2
+            },
+            "styleName": {
+              "box": true,
+              "cross": true,
+              "etherNaming": "iupac",
+              "panelOpen": true,
+              "hidden": [
+                "comp9"
+              ]
+            },
+            "styleHighlight": {
+              "bondAtoms": false,
+              "numberingAtoms": true,
+              "numberingBonds": true
+            },
+            "styleText": {
+              "fontSizePx": null,
+              "textWidthPx": null,
+              "columns": null,
+              "position": null
+            },
+            "audio": {
+              "narrate": false
+            },
+            "menuSubset": [],
+            "menuGroups": [
+              "molecules"
+            ],
+            "view3D": {
+              "style": "ballnstick",
+              "spin": false,
+              "showH": true,
+              "atomSymbols": true,
+              "moveto": null
+            },
+            "show": {
+              "menu": false,
+              "viewerButtons": false,
+              "viewerSettings": false,
+              "viewers": {
+                "2D": true,
+                "3D": false
+              },
+              "viewerMaxHeight": null,
+              "viewerBothHeight": null,
+              "controls": {
+                "2D": false,
+                "3D": false
+              },
+              "save": {
+                "2D": false,
+                "3D": false
+              },
+              "naming": true,
+              "nameSettings": false,
+              "nameEye": false,
+              "nameExpanded": false,
+              "audio": false,
+              "rule": false,
+              "text": true,
+              "nameClick": false
+            },
+            "selectedMol": "ethane"
+          },
+          {
+            "n": 4,
+            "nameBoxLayout": 1,
+            "lang": "gr",
+            "title": "Τρίτο Συνθετικό",
+            "note": "Το <b>3<sup>o</sup> Συνθετικό</b> δηλώνει την χημική τάξη που ανήκει.",
+            "noteFormat": "text",
+            "mode2D": "condensed",
+            "mainChainMode": "algorithmic",
+            "chainIdx": 0,
+            "etherNamingMode": "iupac",
+            "nameAnalysisMode": "compSuffix",
+            "selectedRule": null,
+            "style2D": {
+              "atomColors": true,
+              "colorMode": "atom",
+              "zigzag": false,
+              "zoom": 2
+            },
+            "styleName": {
+              "box": true,
+              "cross": true,
+              "etherNaming": "iupac",
+              "panelOpen": true,
+              "hidden": []
+            },
+            "styleHighlight": {
+              "bondAtoms": false,
+              "numberingAtoms": true,
+              "numberingBonds": true
+            },
+            "styleText": {
+              "fontSizePx": null,
+              "textWidthPx": null,
+              "columns": null,
+              "position": null
+            },
+            "audio": {
+              "narrate": false
+            },
+            "menuSubset": [],
+            "menuGroups": [
+              "molecules"
+            ],
+            "view3D": {
+              "style": "ballnstick",
+              "spin": false,
+              "showH": true,
+              "atomSymbols": true,
+              "moveto": null
+            },
+            "show": {
+              "menu": false,
+              "viewerButtons": false,
+              "viewerSettings": false,
+              "viewers": {
+                "2D": true,
+                "3D": false
+              },
+              "viewerMaxHeight": null,
+              "viewerBothHeight": null,
+              "controls": {
+                "2D": false,
+                "3D": false
+              },
+              "save": {
+                "2D": false,
+                "3D": false
+              },
+              "naming": true,
+              "nameSettings": false,
+              "nameEye": false,
+              "nameExpanded": false,
+              "audio": false,
+              "rule": false,
+              "text": true,
+              "nameClick": false
+            },
+            "selectedMol": "ethane"
+          },
+          {
+            "n": 5,
+            "nameBoxLayout": 1,
+            "lang": "gr",
+            "title": "Διαφορετικές Αναπαραστάσεις Μορίων",
+            "note": "Ένα μόριο μπορεί να αναπαρίσταται με διαφορετικές μορφές 2D συντακτικών τύπων:\n \n<b>α) συνεπτυγμένη, </b>\n\n<b>β) ανεπτυγμένη,</b>\n\n<b>γ) σκελετική μορφή.</b>\n\nΕπίλεξε τις διαφορετικές αναπαραστάσεις για το αιθάνιο.\n\nEπίλεξε κάθε συνθετικό της ονομασίας για να δεις σε ποιό χαρακτηριστικό του μορίου αντιστοιχεί.\n",
+            "noteFormat": "text",
+            "mode2D": "condensed",
+            "mainChainMode": "algorithmic",
+            "chainIdx": 0,
+            "etherNamingMode": "iupac",
+            "nameAnalysisMode": "none",
+            "selectedRule": null,
+            "style2D": {
+              "atomColors": true,
+              "colorMode": "atom",
+              "zigzag": false,
+              "zoom": 2
+            },
+            "styleName": {
+              "box": true,
+              "cross": false,
+              "etherNaming": "iupac",
+              "panelOpen": true,
+              "hidden": []
+            },
+            "styleHighlight": {
+              "bondAtoms": false,
+              "numberingAtoms": true,
+              "numberingBonds": true
+            },
+            "styleText": {
+              "fontSizePx": 16,
+              "textWidthPx": null,
+              "columns": null,
+              "position": "left"
+            },
+            "audio": {
+              "narrate": false
+            },
+            "menuSubset": [],
+            "menuGroups": [
+              "molecules"
+            ],
+            "view3D": {
+              "style": "ballnstick",
+              "spin": false,
+              "showH": true,
+              "atomSymbols": true,
+              "moveto": null
+            },
+            "show": {
+              "menu": false,
+              "viewerButtons": false,
+              "viewerSettings": false,
+              "viewers": {
+                "2D": true,
+                "3D": false
+              },
+              "viewerMaxHeight": null,
+              "viewerBothHeight": null,
+              "controls": {
+                "2D": true,
+                "3D": false
+              },
+              "save": {
+                "2D": false,
+                "3D": false
+              },
+              "naming": true,
+              "nameSettings": true,
+              "nameEye": false,
+              "nameExpanded": false,
+              "audio": false,
+              "rule": false,
+              "text": true,
+              "nameClick": true
+            },
+            "selectedMol": "ethane"
+          },
+          {
+            "n": 6,
+            "nameBoxLayout": 1,
+            "lang": "gr",
+            "title": "Διερεύνησε τα μόρια των Αλκανίων",
+            "note": "Διάλεξε τα μόρια στο αριστερό μενού και δες την ονομασία τους.\n\nΔοκίμασε τις διαφορετικές μορφές των αναπαραστάσεων των μορίων.\n\nΕπίλεξε κάθε συνθετικό και δες σε ποιό χαρακτηριστικό του μορίου αντιστοιχεί.\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales lorem turpis, ornare condimentum nisl feugiat luctus. \n\nDonec interdum feugiat tellus, in mattis magna viverra et. In convallis non lorem quis facilisis. Suspendisse cursus eu augue lacinia molestie. \n\nDuis ac massa non ante egestas varius. Sed aliquet ultrices nulla, id maximus lacus laoreet convallis. Curabitur cursus, erat suscipit laoreet fringilla, lorem odio auctor lorem, vel egestas odio ligula quis felis. In non sapien leo.\n\nAliquam bibendum velit sed facilisis ullamcorper. Vestibulum quis accumsan neque, quis molestie metus. Nullam orci diam, aliquam a mi id, interdum ultricies justo. \n\nPraesent vel odio tristique, bibendum nisl a, porttitor eros. Phasellus nec iaculis diam, sed eleifend dolor. Sed fermentum volutpat mollis. Vestibulum quis porta odio. Suspendisse eu ligula libero. \n\nEtiam orci nulla, tempor eu erat et, cursus pulvinar purus. Ut sit amet dictum velit, at efficitur sem. Nam a enim iaculis, ullamcorper orci fermentum, faucibus odio. Proin sapien dolor, malesuada in gravida non, luctus sed eros. Praesent congue scelerisque mi, ac ultrices massa ultrices et. \n\nDuis porta justo placerat dolor ultrices, nec elementum arcu cursus. \n\nPhasellus eros eros, porta sit amet iaculis sodales, mollis auctor est. Sed rhoncus sodales ex placerat vulputate.\n\nAenean ac ultrices eros, a scelerisque justo. Vestibulum eleifend nunc ut justo dictum faucibus. Sed rutrum lacinia laoreet. Morbi auctor rutrum interdum. In scelerisque mattis ultrices. Etiam pretium ullamcorper quam. Integer accumsan blandit sem ut eleifend. \n\nClass aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam mattis volutpat neque, congue hendrerit mauris molestie a. Cras iaculis tincidunt est vulputate tempor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent tincidunt consequat consectetur. \n\nVivamus in maximus dolor. Vestibulum ornare, tellus sed consectetur dignissim, risus dolor condimentum libero, ut venenatis dolor nunc eget ante. \n\nAenean ex orci, commodo in finibus non, ultricies vitae mauris. Nullam finibus blandit tellus, eget eleifend metus interdum sed. ",
+            "noteFormat": "text",
+            "mode2D": "condensed",
+            "mainChainMode": "algorithmic",
+            "chainIdx": 0,
+            "etherNamingMode": "iupac",
+            "nameAnalysisMode": "none",
+            "selectedRule": null,
+            "style2D": {
+              "atomColors": true,
+              "colorMode": "atom",
+              "zigzag": false,
+              "zoom": 2
+            },
+            "styleName": {
+              "box": true,
+              "cross": true,
+              "etherNaming": "iupac",
+              "panelOpen": false,
+              "hidden": []
+            },
+            "styleHighlight": {
+              "bondAtoms": false,
+              "numberingAtoms": true,
+              "numberingBonds": true
+            },
+            "styleText": {
+              "fontSizePx": 16,
+              "textWidthPx": null,
+              "columns": null,
+              "position": "left"
+            },
+            "audio": {
+              "narrate": false
+            },
+            "menuSubset": [
+              "methane",
+              "ethane",
+              "propane",
+              "butane",
+              "pentane"
+            ],
+            "menuGroups": [
+              "molecules"
+            ],
+            "view3D": {
+              "style": "ballnstick",
+              "spin": false,
+              "showH": true,
+              "atomSymbols": true,
+              "moveto": null
+            },
+            "show": {
+              "menu": true,
+              "viewerButtons": false,
+              "viewerSettings": false,
+              "viewers": {
+                "2D": true,
+                "3D": false
+              },
+              "viewerMaxHeight": null,
+              "viewerBothHeight": null,
+              "controls": {
+                "2D": true,
+                "3D": false
+              },
+              "save": {
+                "2D": false,
+                "3D": false
+              },
+              "naming": true,
+              "nameSettings": true,
+              "nameEye": false,
+              "nameExpanded": false,
+              "audio": false,
+              "rule": false,
+              "text": true,
+              "nameClick": true
+            },
+            "selectedMol": null
+          },
+          {
+            "n": 7,
+            "nameBoxLayout": 1,
+            "lang": "gr",
+            "title": "Τριδσιάστατα Mοριακά μοντέλα Αλκανίων",
+            "note": "Τα μόρια απεικονίζονται και με τρισδιάστατα μοριακά μοντέλα.\nΔιάλεξε τα μόρια στο αριστερό μενού για να δεις και να διαδράσεις με τα 3D μοντέλα.\n\nΕπίλεξε κάθε συνθετικό και δες σε ποιό χαρακτηριστικό του μοριακού μοντέλου και του συντακτικού τύπου αντιστοιχεί.\n\n Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales lorem turpis, ornare condimentum nisl feugiat luctus. \n\nDonec interdum feugiat tellus, in mattis magna viverra et. In convallis non lorem quis facilisis. Suspendisse cursus eu augue lacinia molestie. \n\nDuis ac massa non ante egestas varius. Sed aliquet ultrices nulla, id maximus lacus laoreet convallis. Curabitur cursus, erat suscipit laoreet fringilla, lorem odio auctor lorem, vel egestas odio ligula quis felis. In non sapien leo.\n\nAliquam bibendum velit sed facilisis ullamcorper. Vestibulum quis accumsan neque, quis molestie metus. Nullam orci diam, aliquam a mi id, interdum ultricies justo. \n\nPraesent vel odio tristique, bibendum nisl a, porttitor eros. Phasellus nec iaculis diam, sed eleifend dolor. Sed fermentum volutpat mollis. Vestibulum quis porta odio. Suspendisse eu ligula libero. \n\nEtiam orci nulla, tempor eu erat et, cursus pulvinar purus. Ut sit amet dictum velit, at efficitur sem. Nam a enim iaculis, ullamcorper orci fermentum, faucibus odio. Proin sapien dolor, malesuada in gravida non, luctus sed eros. Praesent congue scelerisque mi, ac ultrices massa ultrices et. \n\nDuis porta justo placerat dolor ultrices, nec elementum arcu cursus. \n\nPhasellus eros eros, porta sit amet iaculis sodales, mollis auctor est. Sed rhoncus sodales ex placerat vulputate.\n\nAenean ac ultrices eros, a scelerisque justo. Vestibulum eleifend nunc ut justo dictum faucibus. Sed rutrum lacinia laoreet. Morbi auctor rutrum interdum. In scelerisque mattis ultrices. Etiam pretium ullamcorper quam. Integer accumsan blandit sem ut eleifend. \n\nClass aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam mattis volutpat neque, congue hendrerit mauris molestie a. Cras iaculis tincidunt est vulputate tempor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent tincidunt consequat consectetur. \n\nVivamus in maximus dolor. Vestibulum ornare, tellus sed consectetur dignissim, risus dolor condimentum libero, ut venenatis dolor nunc eget ante. \n\nAenean ex orci, commodo in finibus non, ultricies vitae mauris. Nullam finibus blandit tellus, eget eleifend metus interdum sed. ",
+            "noteFormat": "text",
+            "mode2D": "condensed",
+            "mainChainMode": "algorithmic",
+            "chainIdx": 0,
+            "etherNamingMode": "iupac",
+            "nameAnalysisMode": "none",
+            "selectedRule": null,
+            "style2D": {
+              "atomColors": true,
+              "colorMode": "atom",
+              "zigzag": false,
+              "zoom": 2
+            },
+            "styleName": {
+              "box": true,
+              "cross": true,
+              "etherNaming": "iupac",
+              "panelOpen": false,
+              "hidden": []
+            },
+            "styleHighlight": {
+              "bondAtoms": false,
+              "numberingAtoms": true,
+              "numberingBonds": true
+            },
+            "styleText": {
+              "fontSizePx": 16,
+              "textWidthPx": null,
+              "columns": null,
+              "position": "left"
+            },
+            "audio": {
+              "narrate": false
+            },
+            "menuSubset": [
+              "methane",
+              "ethane",
+              "propane",
+              "butane",
+              "pentane"
+            ],
+            "menuGroups": [
+              "molecules"
+            ],
+            "view3D": {
+              "style": "ballnstick",
+              "spin": false,
+              "showH": true,
+              "atomSymbols": true,
+              "moveto": null
+            },
+            "show": {
+              "menu": true,
+              "viewerButtons": false,
+              "viewerSettings": false,
+              "viewers": {
+                "2D": true,
+                "3D": true
+              },
+              "viewerMaxHeight": null,
+              "viewerBothHeight": null,
+              "controls": {
+                "2D": true,
+                "3D": true
+              },
+              "save": {
+                "2D": false,
+                "3D": false
+              },
+              "naming": true,
+              "nameSettings": true,
+              "nameEye": false,
+              "nameExpanded": false,
+              "audio": false,
+              "rule": false,
+              "text": true,
+              "nameClick": true
+            },
+            "selectedMol": null
+          }
+        ],
+        "index": 0,
+        "menuPick": [],
+        "showStepNumbers": true,
+        "reserveTitleSpace": false
+      },
+      {
+        "id": "s2",
+        "title": "untitled-scenario",
+        "author": "Unknown",
+        "created": "2026-11-04T07:58:29.926Z",
+        "steps": [],
+        "index": 0,
+        "menuPick": [],
+        "showStepNumbers": true,
+        "reserveTitleSpace": false
+      }
+    ],
+    "active": "s1",
+    "authoring": false,
+    "opened": false,
+    "selected": "methane",
+    "mode": "condensed",
+    "records": 141
+  },
+  "completed": true,
+  "javascriptErrors": [],
+  "sourceHashesAtEnd": {
+    "mulermoc-nom-54.html": "64e4f298b393e5f1c6401f4fbca193bfe44d55ebf94cd8f18c4078af2669a6e3",
+    "js/jsme-nick-nomeclature-moc2-data_54.js": "9387cd654b2ff3cfb058d9b97ddcca798ac13f47f769b532f9c122277ff8dd0a",
+    "js/mulermoc-nom-core-54.js": "73e28373c8128b3db48a65084ac07bd19c5f4887b236ba4896a3c5a29330fe6c",
+    "js/mulermoc-nom-iupac-54.js": "3d7c675f5c9a2fc449412e85e3cc844d4b76959faaeb151bf41865a627f56931",
+    "js/mulermoc-nom-lang-54.js": "31545f05a35020b6e603d9b10300848f72fc4b4d18ebbbbb4b695f469df10bf7",
+    "js/mulermoc-nom-molview-54.js": "3b228b89b35db3da990ca0d75885b33221ae19793fb7ef2cd68b4f03e9363fb1",
+    "js/mulermoc-nom-name-en-54.js": "8490121cd3de7908772b2bb833a86e98e529ae555de761a3337eea784f93fa42",
+    "js/mulermoc-nom-note-54.js": "e685355459afb7955fbe13e3b8e07c6283469b4d8acb98cfbcfa483c9f9be3ca",
+    "js/mulermoc-nom-scenario-54.js": "f1763a31567172e295cfee7afc936b0e592b3d5d6c0fddc60d7e68356b21a9c8",
+    "js/mulermoc-nom-teaching-54.js": "26704561e4e4daef69482294bfc77e0c69fd82a4f59f83e31e355747c9fadcb5",
+    "js/ui-icons-54.js": "2ae4c48198f8e62f6e74645ef853369164b9e0e4915c4df2cc1715a06705896f",
+    "css/jsme-nick-54.css": "987c729b5411f915ad507694a83ec0eae524bc43464967037bb3ff795ad02ed9",
+    "css/mulermoc-nom-scenario-54.css": "a705e6e0aa5547bd6a57c1d6c33ec5f09e42b764cfc3e86616f6cd0269797a08",
+    "css/namelecule-54.css": "042b0e93645dbc9fe5c9851bdd90a73b08f8c89fc4ef524302bd07ac7180e7a7"
+  },
+  "sourcesUnchanged": true
+}

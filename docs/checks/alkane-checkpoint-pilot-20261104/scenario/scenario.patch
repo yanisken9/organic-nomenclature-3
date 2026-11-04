@@ -1,0 +1,287 @@
+diff --git a/docs/checks/alkane-checkpoint-pilot-20261104/scenario/before-mulermoc-nom-scenario-54.js b/js/mulermoc-nom-scenario-54.js
+index 2443539..376f377 100644
+--- a/docs/checks/alkane-checkpoint-pilot-20261104/scenario/before-mulermoc-nom-scenario-54.js
++++ b/js/mulermoc-nom-scenario-54.js
+@@ -6,7 +6,7 @@
+ // exactly like the plain naming app.
+ 
+ var MuLERMoCScenario = {
+-  SUPPORTED_VERSION: 1,
++  SUPPORTED_VERSION: 2,
+   steps: [], // legacy mirror of the active scenario (kept in sync; use fScenarioActive())
+   index: 0, // legacy mirror of active.index
+   title: "untitled-scenario", // legacy mirror of active.title
+@@ -21,6 +21,7 @@ var MuLERMoCScenario = {
+   returnToTheoryLibrary: false, // library-launched lessons return there on Exit/Esc
+   ready: false,
+   applyToken: 0, // S2: bumped per fScenarioApply; stale async follow-ups abort
++  checkpointApplied: null, // transient {scenario, index}; blocked navigation never reapplies the viewer
+   pending3D: null, // S2: {token, mol, step, done} — name click waits for 3D parse
+   authorSettings: null, // pre-Present checkbox states, restored on Exit
+   nameBoxLayoutContext: null, // live render context: null = normal v54, 1 = legacy, 2 = v54
+@@ -62,6 +63,39 @@ function fScenarioValidCreated(v) {
+   return d.toISOString();
+ }
+ 
++// Checkpoints are mandatory authored content. Presence is checked locally so
++// an unavailable controller can never silently turn a lesson into plain theory.
++function fScenarioHasCheckpoints(scen) {
++  return !!(scen && Array.isArray(scen.steps) && scen.steps.some(function (step) {
++    return !!step && Object.prototype.hasOwnProperty.call(step, "checkpoint");
++  }));
++}
++function fScenarioCheckpointApi(scen) {
++  if (!fScenarioHasCheckpoints(scen)) return null;
++  var api = window.NameleculeQuizCheckpoints;
++  if (!api || ["validateCheckpoint", "resolveTarget", "onStep", "onExit", "isComplete", "hasCheckpoints"].some(function (key) {
++    return typeof api[key] !== "function";
++  })) throw new Error("Το υποχρεωτικό κουίζ δεν είναι διαθέσιμο. Ανανέωσε το μάθημα.");
++  return api;
++}
++function fScenarioResolveCheckpointTarget(scen, requested) {
++  var api = fScenarioCheckpointApi(scen);
++  if (!api) return requested;
++  // Validate again for in-memory authoring changes as well as imported files.
++  scen.steps.forEach(function (step) {
++    if (step && Object.prototype.hasOwnProperty.call(step, "checkpoint")) api.validateCheckpoint(step.checkpoint);
++  });
++  var target = api.resolveTarget(scen, requested);
++  if (typeof target !== "number" || !isFinite(target) || target !== Math.floor(target) || target < 0 || target > requested) {
++    throw new Error("Δεν ήταν δυνατός ο έλεγχος του υποχρεωτικού κουίζ.");
++  }
++  return target;
++}
++function fScenarioCheckpointError(error) {
++  if (window.fLessonLoadingDone) window.fLessonLoadingDone(true);
++  fScenarioToast(error && error.message ? error.message : "Το υποχρεωτικό κουίζ δεν είναι διαθέσιμο.");
++}
++
+ // Name-box identities are an authored contract (including hidden groups and
+ // replayed highlights). Old snapshots predate the v54 split pieces; preserve
+ // their slot semantics without changing the saved source JSON. The version is
+@@ -1136,6 +1170,9 @@ function fScenarioDefaults(step, i) {
+     },
+   };
+   var out = Object.assign({}, d, step);
++  if (Object.prototype.hasOwnProperty.call(step, "checkpoint")) {
++    out.checkpoint = fScenarioCheckpointApi({ steps: [step] }).validateCheckpoint(step.checkpoint);
++  }
+   ["style2D", "styleName", "styleHighlight", "styleText", "audio", "view3D", "show"].forEach(function (k) {
+     out[k] = Object.assign({}, d[k], step[k] || {});
+   });
+@@ -1193,10 +1230,26 @@ function fScenarioValidate(obj) {
+   if (!Array.isArray(obj.steps) || !obj.steps.length) {
+     return { ok: false, warnings: ["Scenario has no steps."] };
+   }
++  var hasCheckpoints = fScenarioHasCheckpoints(obj);
++  if (hasCheckpoints && v !== 2) {
++    return { ok: false, warnings: ["Mandatory checkpoints require scenarioVersion 2."] };
++  }
++  if (hasCheckpoints) {
++    try {
++      var checkpointApi = fScenarioCheckpointApi(obj);
++      obj.steps.forEach(function (step) {
++        if (step && Object.prototype.hasOwnProperty.call(step, "checkpoint")) checkpointApi.validateCheckpoint(step.checkpoint);
++      });
++    } catch (eCheckpoint) {
++      return { ok: false, warnings: ["Invalid mandatory checkpoint: " + eCheckpoint.message] };
++    }
++  }
+   var steps = [];
++  var skippedCheckpoint = false;
+   obj.steps.forEach(function (s, i) {
+     var hasMol = !!(s && s.selectedMol && typeof nameExamples !== "undefined" && nameExamples[s.selectedMol]);
+     if (s && s.selectedMol && !hasMol) {
++      if (Object.prototype.hasOwnProperty.call(s, "checkpoint")) skippedCheckpoint = true;
+       warnings.push("Step " + (i + 1) + ": unknown molecule '" + s.selectedMol + "' — skipped.");
+       return;
+     }
+@@ -1283,6 +1336,7 @@ function fScenarioValidate(obj) {
+     if (!hasMol) {
+       // Menu-only step (selectedMol null): needs a browsable subset.
+       if (!kept.length) {
++        if (Object.prototype.hasOwnProperty.call(s, "checkpoint")) skippedCheckpoint = true;
+         warnings.push("Step " + (i + 1) + ": no molecule and no menu subset — skipped.");
+         return;
+       }
+@@ -1292,6 +1346,7 @@ function fScenarioValidate(obj) {
+     st.menuSubset = kept;
+     steps.push(st);
+   });
++  if (skippedCheckpoint) return { ok: false, warnings: warnings.concat(["A mandatory checkpoint step cannot be skipped."]) };
+   if (!steps.length) return { ok: false, warnings: warnings.concat(["No valid steps left."]) };
+   // Scenario metadata (additive, no version bump): author defaults to
+   // "Unknown" when blank/absent/invalid; a valid creation date is kept,
+@@ -1308,6 +1363,7 @@ function fScenarioValidate(obj) {
+   }
+   return {
+     ok: true,
++    scenarioVersion: hasCheckpoints ? 2 : 1,
+     steps: steps,
+     title: obj.title || obj.scenario || "scenario",
+     author: _author,
+@@ -4486,7 +4542,7 @@ function fScenarioExport(id) {
+   var scen = (id && fScenarioGet(id)) || fScenarioActive();
+   if (!scen) return;
+   var data = {
+-    scenarioVersion: MuLERMoCScenario.SUPPORTED_VERSION,
++    scenarioVersion: fScenarioHasCheckpoints(scen) ? 2 : 1,
+     app: "mulermoc-nom-54",
+     scenario: scen.title,
+     title: scen.title,
+@@ -4508,6 +4564,7 @@ function fScenarioImportFile(file) {
+       res.warnings.forEach(fScenarioToast);
+       if (!res.ok) return;
+       var scen = fScenarioNew(res.title || "imported-scenario", true);
++      scen.scenarioVersion = res.scenarioVersion;
+       scen.showStepNumbers = res.showStepNumbers;
+       scen.reserveTitleSpace = res.reserveTitleSpace;
+       scen.steps = res.steps;
+@@ -4528,6 +4585,11 @@ function fScenarioImportFile(file) {
+ // (menu menu-open + both viewers + all bars) via a transient clone — the
+ // stored step keeps its authored show.* for a later Export.
+ function fScenarioExitPresent() {
++  try {
++    var checkpointApi = fScenarioCheckpointApi(fScenarioPresent());
++    if (checkpointApi) checkpointApi.onExit();
++  } catch (eCheckpoint) { /* Exit remains available even if the quiz failed. */ }
++  MuLERMoCScenario.checkpointApplied = null;
+   if (MuLERMoCScenario.present && MuLERMoCScenario.returnToTheoryLibrary) {
+     location.assign("design/theory-library.html?v=alkynes-library-20261022");
+     return;
+@@ -4646,6 +4708,12 @@ function fScenarioPresentBegin(id, startIdx) {
+     ? Math.floor(startIdx)
+     : 0;
+   start = Math.max(0, Math.min(start, scen.steps.length - 1));
++  try {
++    start = fScenarioResolveCheckpointTarget(scen, start);
++  } catch (eCheckpoint) {
++    fScenarioCheckpointError(eCheckpoint);
++    return;
++  }
+   try {
+     history.replaceState(null, "", "#step=" + (start + 1));
+   } catch (e) {
+@@ -4681,6 +4749,7 @@ function fScenarioPresentBegin(id, startIdx) {
+     fScenarioToast("Could not start presentation at step " + (start + 1) + ".");
+     return;
+   }
++  MuLERMoCScenario.checkpointApplied = { scenario: scen, index: start };
+   fScenarioPlayUi();
+   fScenarioRenderPresentMenu();
+ }
+@@ -5923,6 +5992,25 @@ function fScenarioRenumber(id) {
+       idEl.setAttribute("title", title + " · " + author);
+     }
+   } catch (eId) { /* present identity best-effort */ }
++  // This path also refreshes the controls after a quiz answer; it never applies
++  // a snapshot, so answers/retries preserve the live molecule and viewer state.
++  var next = document.getElementById("scNext");
++  var blocked = false;
++  if (MuLERMoCScenario.present && fScenarioHasCheckpoints(ps)) {
++    try {
++      var checkpointApi = fScenarioCheckpointApi(ps);
++      blocked = ps.index < ps.steps.length - 1 &&
++        fScenarioResolveCheckpointTarget(ps, ps.index + 1) <= ps.index;
++      checkpointApi.onStep(ps, ps.index);
++    } catch (eCheckpoint) {
++      blocked = true;
++      fScenarioCheckpointError(eCheckpoint);
++    }
++  }
++  if (next) {
++    next.disabled = blocked;
++    next.setAttribute("aria-disabled", blocked ? "true" : "false");
++  }
+ }
+ 
+ // ── Go/Jump pick alignment (authoring) ───────────────────────────────────
+@@ -5958,8 +6046,27 @@ function fScenarioGoAlignPick(step) {
+ function fScenarioGo(i) {
+   var ps = fScenarioPresent();
+   if (!ps.steps.length) return;
++  i = typeof i === "number" && isFinite(i) ? Math.floor(i) : 0;
+   if (i < 0) i = 0;
+   if (i >= ps.steps.length) i = ps.steps.length - 1;
++  if (MuLERMoCScenario.present) {
++    var requested = i;
++    try {
++      i = fScenarioResolveCheckpointTarget(ps, requested);
++    } catch (eCheckpoint) {
++      fScenarioCheckpointError(eCheckpoint);
++      return;
++    }
++    var applied = MuLERMoCScenario.checkpointApplied;
++    if (i !== requested && i === ps.index && applied && applied.scenario === ps && applied.index === i) {
++      // A blocked Next/hash jump at the current checkpoint updates only quiz
++      // chrome. Reapplying the snapshot would reset zoom/highlights/camera.
++      try { history.replaceState(null, "", "#step=" + (i + 1)); } catch (eHash) { /* file:// */ }
++      fScenarioPlayUi();
++      fScenarioToast("Λύσε το σύντομο κουίζ για να συνεχίσεις.");
++      return;
++    }
++  }
+   ps.index = i;
+   fScenarioSyncLegacy();
+   try {
+@@ -5979,6 +6086,7 @@ function fScenarioGo(i) {
+     fScenarioToast("Could not apply step " + (i + 1) + ".");
+     return;
+   }
++  if (MuLERMoCScenario.present) MuLERMoCScenario.checkpointApplied = { scenario: ps, index: i };
+   try {
+     fScenarioGoAlignPick(ps.steps[i]);
+   } catch (e) {
+@@ -6031,6 +6139,14 @@ function fScenarioUpdateStep(scenId, idx) {
+   fresh.title = old.title;
+   fresh.note = old.note;
+   fresh.noteFormat = old.noteFormat === "html" ? "html" : "text";
++  if (Object.prototype.hasOwnProperty.call(old, "checkpoint")) {
++    try {
++      fresh.checkpoint = fScenarioCheckpointApi(s).validateCheckpoint(old.checkpoint);
++    } catch (eCheckpoint) {
++      fScenarioCheckpointError(eCheckpoint);
++      return;
++    }
++  }
+   fresh.styleText = {
+     fontSizePx: fScenarioValidFontSizePx(old.styleText ? old.styleText.fontSizePx : null),
+     textWidthPx: fScenarioValidTextWidthPx(old.styleText ? old.styleText.textWidthPx : null),
+@@ -6175,6 +6291,7 @@ function fScenarioBoot() {
+             return;
+           }
+           var scen = fScenarioNew(res.title || "imported-scenario", true);
++          scen.scenarioVersion = res.scenarioVersion;
+       scen.showStepNumbers = res.showStepNumbers;
+       scen.reserveTitleSpace = res.reserveTitleSpace;
+           scen.steps = res.steps;
+@@ -6218,6 +6335,7 @@ function fScenarioBoot() {
+               MuLERMoCScenario.scenarios.length !== 1 ||
+               JSON.stringify(defaultPreloadCard) !== defaultPreloadSnapshot) return;
+           var s1 = defaultPreloadCard;
++          s1.scenarioVersion = res.scenarioVersion;
+           s1.title = res.title;
+           s1.showStepNumbers = res.showStepNumbers;
+           s1.reserveTitleSpace = res.reserveTitleSpace;
+@@ -6251,20 +6369,7 @@ function fScenarioBoot() {
+     if (m) {
+       var i = Math.max(1, parseInt(m[1], 10)) - 1;
+       if (i !== hps.index) {
+-        hps.index = Math.min(i, hps.steps.length - 1);
+-        fScenarioSyncLegacy();
+-        var hok = false;
+-        try {
+-          hok = !!fScenarioApply(hps.steps[hps.index]);
+-        } catch (e) {
+-          hok = false;
+-        }
+-        if (!hok) {
+-          fScenarioToast("Could not apply step " + (hps.index + 1) + ".");
+-          return;
+-        }
+-        fScenarioPlayUi();
+-        fScenarioRenderPresentMenu();
++        fScenarioGo(i);
+       }
+     }
+   });

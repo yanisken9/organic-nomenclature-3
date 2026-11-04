@@ -1,0 +1,110 @@
+{
+  "role": "NAMELECULE_DEVELOPER_V1_20261023",
+  "comparisonBase": "168e3cec01f941a84d40bbe0dc07156e7baa35d0",
+  "approvedScope": "54 shell/scenario synchronization, direct welcome game connection, approved generic backwards compatibility and browser verification.",
+  "runtimeFrozen": true,
+  "changedPaths": [
+    "mulermoc-nom-54.html",
+    "js/mulermoc-nom-teaching-54.js",
+    "js/mulermoc-nom-scenario-54.js",
+    "js/mulermoc-nom-note-54.js",
+    "js/ui-icons-54.js",
+    "css/jsme-nick-54.css",
+    "css/mulermoc-nom-scenario-54.css",
+    "css/namelecule-54.css",
+    "spt/init-54.spt",
+    "design/welcome-proposal.html"
+  ],
+  "runtimeHashes": {
+    "mulermoc-nom-54.html": "401dc106c9d56d99820cd933a08806a545f73c5510cc49a8e1a77ad9d04dca04",
+    "js/mulermoc-nom-teaching-54.js": "26704561e4e4daef69482294bfc77e0c69fd82a4f59f83e31e355747c9fadcb5",
+    "js/mulermoc-nom-scenario-54.js": "5c51c00c58558695b32706921969d7392b707b892b4b67cde476506443e87b4d",
+    "js/mulermoc-nom-note-54.js": "e685355459afb7955fbe13e3b8e07c6283469b4d8acb98cfbcfa483c9f9be3ca",
+    "js/ui-icons-54.js": "2ae4c48198f8e62f6e74645ef853369164b9e0e4915c4df2cc1715a06705896f",
+    "css/jsme-nick-54.css": "987c729b5411f915ad507694a83ec0eae524bc43464967037bb3ff795ad02ed9",
+    "css/mulermoc-nom-scenario-54.css": "a705e6e0aa5547bd6a57c1d6c33ec5f09e42b764cfc3e86616f6cd0269797a08",
+    "css/namelecule-54.css": "042b0e93645dbc9fe5c9851bdd90a73b08f8c89fc4ef524302bd07ac7180e7a7",
+    "spt/init-54.spt": "69cdc2a07d6131ea4dca753617c2070c0d099825ea214a3bd6fc95f64c617245",
+    "design/welcome-proposal.html": "3c3922dc1c37660a23bb770198bd020fff32ca3f0d2fbbc8389240c87d2e61a5"
+  },
+  "unmodifiedOwnedPath": "design/theory-library.html",
+  "coreChangesByThisWorker": false,
+  "verification": {
+    "static": {
+      "command": "python3 docs/checks/v54-sync-20261104/shell/check-static.py",
+      "passed": 27,
+      "checks": 27,
+      "exit": 0
+    },
+    "schema": {
+      "command": "/System/Library/Frameworks/JavaScriptCore.framework/Versions/A/Helpers/jsc docs/checks/v54-sync-20261104/shell/scenario-schema-check.js",
+      "checks": 149,
+      "failures": [],
+      "exit": 0
+    },
+    "fullReplay": {
+      "command": "python3 docs/checks/v54-sync-20261104/shell/test-lessons-browser.py",
+      "completed": true,
+      "checks": 9076,
+      "steps": 337,
+      "functionalFailures": [],
+      "applicationCodeErrors": 0,
+      "externalCIR_CORS404": 4,
+      "actualCommandExit": 1,
+      "sourceChangesDuringRun": [
+        "js/mulermoc-nom-scenario-54.js"
+      ],
+      "explanation": "Only approved in-place Exit selection invalidation changed duringrun. Library Exit navigates away; fresh final targeted19checks exercise affected author Exit/Capture/replay path. Core54 remained frozen10f3e1ed."
+    },
+    "finalTargeted": {
+      "command": "python3 docs/checks/v54-sync-20261104/shell/test-layout-compatibility-browser.py",
+      "completed": true,
+      "checks": 19,
+      "javascriptErrors": 0,
+      "exit": 0
+    },
+    "real3DModels": {
+      "command": "python3 docs/checks/v54-sync-20261104/shell/test-visible3d-browser.py",
+      "completed": true,
+      "lessons": 14,
+      "checks": 70,
+      "applicationCodeErrors": 0,
+      "externalCIR_CORS404": 1,
+      "actualCommandExit": 1,
+      "sourceChangesDuringRun": [
+        "mulermoc-nom-core-54.js"
+      ]
+    },
+    "authoredProbe": "Actual35degree/85zoom moveto readback, full-height/nameExpanded/EN, richnotes, real FileReader import/export,390px library passed in fullreplay; standalone earlier10check report also retained."
+  },
+  "rootCauseCorrections": [
+    "Version authored namebox layout semantics generically; preserve old prefixes/suffix grouping and new54 split features.",
+    "Root separately guarded lang54 app-title repaint while presenting.",
+    "Exit invalidates a now-incompatible aggregate selection instead of translating its ID to a new piece."
+  ],
+  "testAdjustments": [
+    "Initial libs=local attempt could not initialize3D because repository has no j2s/; retained failure evidence and used standard CDN backend.",
+    "Corrected async syntax in source hash probe and measured actual pane visibility instead of hidden author-toolbar button state.",
+    "Targeted synthetic layout steps explicitly2D-only to avoid unrelated async3D highlight waiting; suffix probe uses real db+tb fusion case."
+  ],
+  "limits": [
+    "Firefox headless desktop1500×1000;390px library checks. Physicaltouch, Safari/Chromium and screenreader not tested by this worker.",
+    "CDN j2s required; external CIR404/CORS errors remain visible and retained. No offline or uninterrupted conference guarantee.",
+    "Real3D model probe ran while core54 was being finalized; all14model counts/PrevNext passed. Final337replay used frozen core10f3e1ed.",
+    "Independent review not performed by this worker; primary consolidated Reviewer still required.",
+    "Navigation54 activation patch is not applied.",
+    "No stage/commit/push/publication/install."
+  ],
+  "next": "Primary apply navigation activation after its broad gates; verify welcome→library→54 lesson→Exit and game link, then consolidate independent review against final hashes. Record contribution/session/core reports in primary-owned notes.",
+  "ownedBrowserCleanup": {
+    "pid": 32826,
+    "profile": "/var/folders/2v/ds4vjvgj1_1000kq1fzg70q40000gn/T/namelecule-v54-lessons-20261104-ksx90v7y",
+    "port": 9245,
+    "ownershipCommand": "/Applications/Firefox.app/Contents/MacOS/firefox --headless --no-remote --profile /var/folders/2v/ds4vjvgj1_1000kq1fzg70q40000gn/T/namelecule-v54-lessons-20261104-ksx90v7y --remote-debugging-port 9245 about:blank",
+    "userServerAndNormalFirefoxUntouched": true,
+    "signal": "SIGTERM to exact ownedFirefoxPID only",
+    "ownedPortClosed": true
+  },
+  "runtimeEditingStopped": true,
+  "activationOwnership": "Transferred back to primary agent after browser gates; worker has not applied activation patch."
+}

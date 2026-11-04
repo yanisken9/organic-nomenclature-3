@@ -1,0 +1,56 @@
+{
+  "status": "Read-only preflight; specific implementation plan not yet approved",
+  "userDecisions": [
+    "Start with alkanes; transfer agreed approach proportionally to other homologous series.",
+    "Refine theory to sustain engagement; interleave short active tasks at chosen conceptual boundaries.",
+    "Continue theory only after solving required quiz; allow future other quiz types.",
+    "User will direct changes one by one."
+  ],
+  "proposedPilot": {
+    "afterCurrentStep": 10,
+    "round": "parent-not-total",
+    "molecule": "methyl_2_pentane",
+    "count": 1,
+    "purpose": "Parent-chain carbon count versus all carbons",
+    "approval": "pending"
+  },
+  "technicalFindings": [
+    "Currentgame fixesfive rounds/oneguidedround and alkane loader/labels; needs reusable mount/metadata contract.",
+    "Central gate must cover Go, PresentBegin, hash/URL/keyboard before state mutation.",
+    "Legacy52 ignores unknown v1quizfields; use explicit checkpoint-capable format while retaining original14scenarioJSONs.",
+    "Keep authoredspec separate fromcompletionstate; preserve metadata onUpdate, invalidate oncontentchanges.",
+    "Reuse stateful2D/3D viewer whilequiz opens; do not reapplysnapshot onanswer/retry."
+  ],
+  "intendedFiles": [
+    "js/namelecule-game-repair.js",
+    "css/namelecule-games.css",
+    "games/name-repair.html",
+    "js/mulermoc-nom-scenario-54.js",
+    "mulermoc-nom-54.html",
+    "new scoped checkpoint module/CSS",
+    "new isolated alkane checkpoint lesson/pack"
+  ],
+  "plannedVerification": [
+    "Existingstandalonefive-roundbehavior",
+    "Incorrectanswer/retry/solution/unlock",
+    "Next/keyboard/URL/hash/back/refresh/re-entry",
+    "Missingassets/invalidpack/retry/safeExit",
+    "Viewerstatepreservation",
+    "Legacy14lessons/v52/Reactpreservation",
+    "IndependentconsolidatedReviewer afterapprovedimplementation"
+  ],
+  "agents": {
+    "technical": "/root/quiz_checkpoint_preflight (explorer,read-only)",
+    "pedagogical": "/root/quiz_checkpoint_learning (LearningDesigner,read-only)"
+  },
+  "actuallyPerformed": [
+    "ReadREADME/session/AGENTS/relevantplans and boundedsourceinspection",
+    "Checkedgitstatus/relevantdiffandHEAD",
+    "ActualupstreamHEAD/history/CHANGELOG comparison:02dbcfafunchanged",
+    "Planningbaselinehashesunchanged; noapp/browser tests run"
+  ],
+  "coreChangesThisPlanningUnit": false,
+  "appCodeEdits": false,
+  "committed": false,
+  "published": false
+}

@@ -1,0 +1,48 @@
+--- docs/checks/v54-sync-20261104/upstream-snapshot/js/mulermoc-nom-lang-54.js	2026-11-04 09:18:48
++++ js/mulermoc-nom-lang-54.js	2026-11-04 09:44:22
+@@ -335,7 +335,10 @@
+       for (var i = 0; i < els.length; i++) els[i].setAttribute("data-tooltip", txt);
+     } catch (e) {}
+   };
+-  set("#pageTitle", fMulerT("pageTitle"));
++  // During presentation the scenario owns its authored step title.
++  // Translating shared chrome must not replace that title on cold entry.
++  var presenting = typeof MuLERMoCScenario !== "undefined" && !!MuLERMoCScenario.present;
++  if (!presenting) set("#pageTitle", fMulerT("pageTitle"));
+   set("#menuToggle", fMulerT("menu"));
+   set("#viewerCol .panelTitle > span", fMulerT("molecule"));
+   set("#viewerSettingsPanel .settingTitle", fMulerT("settings"));
+@@ -792,6 +795,33 @@
+     try { cur = (typeof fMulerLang === "function") ? fMulerLang() : null; } catch (eC) {}
+     if (cur && cur === to) return;
+   } catch (e) {}
++  // A language switch reloads this document. Keep an active drawing intact
++  // until its author explicitly accepts or cancels the draft.
++  if (typeof window !== "undefined" && window.MulerDraft) {
++    var draftMessage = cur === "en"
++      ? "Accept or cancel the molecule draft before changing language."
++      : "Ολοκλήρωσε ή ακύρωσε το σχέδιο του μορίου πριν αλλάξεις γλώσσα.";
++    if (typeof fScenarioToast === "function") fScenarioToast(draftMessage);
++    return;
++  }
++  // Accepted customs and authored scenarios live in memory until the author
++  // downloads/registers them. Never discard this session on a silent reload.
++  var sessionContent = false;
++  try {
++    sessionContent = !!(window.nameExamplesCustom && Object.keys(window.nameExamplesCustom).length);
++    if (!sessionContent && typeof MuLERMoCScenario !== "undefined" &&
++        MuLERMoCScenario.authoringOpened && MuLERMoCScenario.scenarios) {
++      sessionContent = MuLERMoCScenario.scenarios.some(function (sc) {
++        return sc && sc.steps && sc.steps.length;
++      });
++    }
++  } catch (eSession) {}
++  if (sessionContent) {
++    var reloadMessage = cur === "en"
++      ? "Changing language reloads the page. Molecules and scenarios that exist only in this session will be lost. If you have not downloaded your work, cancel and download it first. Continue?"
++      : "Η αλλαγή γλώσσας επαναφορτώνει τη σελίδα. Μόρια και σενάρια που υπάρχουν μόνο σε αυτή τη συνεδρία θα χαθούν. Αν δεν έχεις κατεβάσει τη δουλειά σου, ακύρωσε και κάνε πρώτα λήψη. Συνέχεια;";
++    if (typeof window.confirm !== "function" || !window.confirm(reloadMessage)) return;
++  }
+   try { try { localStorage.setItem("mulerLang", to); } catch (eS) {} } catch (e) {}
+   try {
+     var u = new URL(window.location.href);

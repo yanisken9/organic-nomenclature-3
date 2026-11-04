@@ -1,0 +1,104 @@
+{
+  "completed": false,
+  "checks": [
+    {
+      "label": "Teacher drawing default on exposes New/Edit",
+      "detail": null
+    },
+    {
+      "label": "Beautify available in editor",
+      "detail": null
+    },
+    {
+      "label": "Real Beautify uses live11C horizontal chain",
+      "detail": {
+        "n": 11,
+        "range": 0
+      }
+    },
+    {
+      "label": "Beautify hidden in submitted depict preview",
+      "detail": null
+    },
+    {
+      "label": "New C11 GR/EN actual prediction",
+      "detail": null
+    },
+    {
+      "label": "Real JSmol preview has C11H24 35atoms",
+      "detail": null
+    },
+    {
+      "label": "Accept adds session molecule without automatic download",
+      "detail": null
+    },
+    {
+      "label": "Accepted skeletal is generated zigzag",
+      "detail": {
+        "n": 11,
+        "range": 0.585,
+        "bonds": 10
+      }
+    },
+    {
+      "label": "Accepted condensed name/parent/drawing 1500",
+      "detail": null
+    },
+    {
+      "label": "Accepted expanded name/parent/drawing 1500",
+      "detail": null
+    },
+    {
+      "label": "Accepted skeletal name/parent/drawing 1500",
+      "detail": null
+    },
+    {
+      "label": "Accepted condensed name/parent/drawing 844",
+      "detail": null
+    },
+    {
+      "label": "Accepted expanded name/parent/drawing 844",
+      "detail": null
+    },
+    {
+      "label": "Accepted skeletal name/parent/drawing 844",
+      "detail": null
+    },
+    {
+      "label": "Skeletal edit hides school-only Beautify",
+      "detail": null
+    },
+    {
+      "label": "Skeletal Update retains registry identity/key/count",
+      "detail": null
+    },
+    {
+      "label": "Skeletal Update retains valid zigzag fixed point",
+      "detail": null
+    },
+    {
+      "label": "Accepted skeletal zoom and11parentnumbers work",
+      "detail": null
+    },
+    {
+      "label": "No3D visibly prevents acceptance",
+      "detail": null
+    },
+    {
+      "label": "No3D authoritative guard preserves draft and records",
+      "detail": null
+    },
+    {
+      "label": "Stale accepted preview cannot create a record",
+      "detail": null
+    },
+    {
+      "label": "Changed custom molecule forks and preserves prior record",
+      "detail": null
+    }
+  ],
+  "fixturePolicy": "Actual PubChem REST responses stored locally; name/3D async transport replaced for repeatable authoring. Real JSME, engine, SVG, JSmol, registry and Blob payload.",
+  "failure": "('All141 original records and stored MOLs preserved', None)",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/v54-upstream-20261104/browser/test-drawing.py\", line 65, in <module>\n    check(ev('JSON.stringify(Object.fromEntries(__originalKeys.map(k=>[k,nameExamples[k]])))===__originalRecords&&JSON.stringify(MOL2D)===__originalMOL2D'),'All141 original records and stored MOLs preserved')\n  File \"support\", line 10, in check\n    until('mode2D==='+json.dumps(m)+'&&!!document.querySelector(\"#jsmeNomeclatureSVG svg\")')\nAssertionError: ('All141 original records and stored MOLs preserved', None)\n",
+  "javascriptErrors": []
+}

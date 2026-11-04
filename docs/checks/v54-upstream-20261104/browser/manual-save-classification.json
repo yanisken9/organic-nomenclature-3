@@ -1,0 +1,21 @@
+{
+  "before": "manual-save-button-timeout.json",
+  "observedBefore": {
+    "saveHandlerCalls": 0,
+    "downloads": 0,
+    "JSExceptions": 0
+  },
+  "settingsCSS": "max-height/padding transition 0.22s",
+  "diagnosticChange": "Test waits350ms after settings opens, adds capture listeners and traces real handlers; application code unchanged.",
+  "after": "manual-save-browser.json",
+  "observedAfter": {
+    "checks": 9,
+    "JSExceptions": 0,
+    "pointerEventTarget": "customMolSaveBtn",
+    "selectedHandlerCalled": true,
+    "singleDownloadReturned": true,
+    "file": "MULERMOC_undecane_data.js",
+    "payloadCharacters": 12612
+  },
+  "conclusion": "The completed settled-panel check proves manual download works under these conditions. Earlier click never invoked handler; this is not evidence of a fixed app export defect. No universal race cause claim."
+}

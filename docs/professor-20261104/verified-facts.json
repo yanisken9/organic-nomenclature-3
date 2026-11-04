@@ -1,0 +1,310 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-04",
+  "status": "verified local publication candidate; full save, final copies and public verification pending",
+  "periodStart": "after the published 2026-11-01 report",
+  "periodEnd": "2026-11-04",
+  "previousReportForwardedByUser": "unknown; not claimed",
+  "mainVersion": 54,
+  "mainMolecules": 141,
+  "activeLessons": 14,
+  "activeLessonSteps": 337,
+  "availableStored2DForms": 422,
+  "missingStored2DForms": [
+    "methane skeletal"
+  ],
+  "original14ScenarioJSONChanged": false,
+  "newMoleculeRecordsAdded": 0,
+  "upstream": {
+    "previousActualSync": "93b759f5891d7b5a1172646032d83215d60b7604",
+    "lastCompletedVerifiedSync": "35d791ee9d6bdb8566d3adca1a1bdaba97efc5b8",
+    "firstIntegrationCommits": 57,
+    "firstIntegrationPaths": 69,
+    "latestInspectedHead": "35d791ee9d6bdb8566d3adca1a1bdaba97efc5b8",
+    "latestCommitTitle": "drawing engine and beautifier improvements",
+    "latestCommitPaths": 6,
+    "changelogChangedForLatestCommit": false,
+    "latestIntegrationStatus": "completed locally; targeted independent verification closed U35-NUM02 and U35-GEOM01",
+    "latestIntegrationAccepted": true,
+    "previousCompletedVerifiedSync": "02dbcfaf79e23f1933a252e0b1f6671049d39b78"
+  },
+  "workshop": {
+    "entry": "welcome → Παίζω και εξασκούμαι → Συνεργείο ονομάτων → Αλκάνια",
+    "sets": [
+      {
+        "name": "Χωρίς διακλαδώσεις",
+        "quizzes": 3,
+        "molecules": [
+          "butane",
+          "ethane",
+          "pentane"
+        ]
+      },
+      {
+        "name": "Με διακλαδώσεις",
+        "quizzes": 3,
+        "molecules": [
+          "2-methylpentane",
+          "2,3-dimethylbutane",
+          "3-ethyl-2,5-dimethylhexane"
+        ]
+      }
+    ],
+    "guidedRehearsal": false,
+    "optionalHints": false,
+    "successExplanations": true,
+    "selectedAgreeingFragmentFeedback": "minimal relevant sentence",
+    "accepted3DLogo": true,
+    "standalonePersistence": "in-memory attempt; new attempt/reload resets",
+    "DeveloperChecks": {
+      "engine": 143,
+      "mount": 60,
+      "hub": 85,
+      "static": 32,
+      "FirefoxStandalone": 60,
+      "FirefoxEmbeddedPilot": 45,
+      "JavaScriptExceptions": 0
+    },
+    "independentReviewer": "/root/review_alkane_two_sets",
+    "independentReviewFindings": [],
+    "browserEvidenceOrigin": "Developer; Reviewer inspected supplied evidence without browser execution"
+  },
+  "pilot": {
+    "path": "scenarios/alkanes-name-repair-pilot.scenario.json",
+    "steps": 21,
+    "countsAsAdditionalActiveLesson": false,
+    "checkpointAfterOriginalStep": 10,
+    "question": "parent-not-total",
+    "molecule": "2-methylpentane",
+    "schemaVersion": 2,
+    "mandatoryCorrectSubmission": true,
+    "sameTabRefreshPersistence": "sessionStorage keyed by complete scenario content",
+    "crossDeviceSync": false,
+    "initialDeveloperFirefoxChecks": 45,
+    "originalLessonsReplayAssertions": 9780,
+    "originalLessonsReplayFunctionalFailures": 0,
+    "independentReviewer": "/root/review_alkane_checkpoint",
+    "independentReviewFindings": [],
+    "learningEvidenceLimit": "practice of previously taught example; no measured learning effectiveness or transfer"
+  },
+  "core": {
+    "changedInReportPeriod": true,
+    "changedByReportWriting": false,
+    "currentPath": "js/mulermoc-nom-core-54.js",
+    "currentFinalSHA256": "3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306",
+    "previousCompletedV54SHA256": "73e28373c8128b3db48a65084ac07bd19c5f4887b236ba4896a3c5a29330fe6c",
+    "previousV54HashAppliesTo": "completed initial integration through 02dbcfaf; not latest 35 integration",
+    "core52Changed": false,
+    "core52SHA256": "d2138418ff630ab77e578b80ca8ba3a10cc1b877c3ab8c0e5c2735ffcd1f24a2",
+    "localCorrections": [
+      "charge/isotope/SUP preservation",
+      "charge-aware H completion",
+      "terminal C-C≡N linearity",
+      "exact 2D/3D graph mapping and input-sensitive cache",
+      "Greek C9 stem εννε",
+      "numeric locant sorting",
+      "complete linear C9–C20 alkyl groups with shape guards",
+      "shared skeletal generator: normalized branch vectors, 120-degree degree-two C/O, linear triple/two-double carbon sp; proper separable-component rotations"
+    ],
+    "storedMOLSDFAndEmbeddedDataChangedByLatestSync": false,
+    "generatedLengthConvention": "L=1.17; repair preserves generated lengths and other local angles, not every authored source length"
+  },
+  "checks": {
+    "firstV54Integration": {
+      "libraryNamingComparisons": 844,
+      "MOLRoundtrips": 422,
+      "mappingTransitions": 1684,
+      "Firefox2DRenderCases": 844,
+      "lessonSteps": 337,
+      "lessonAssertions": 9076
+    },
+    "firstV54CheckTiming": "broad checks preceded final C9 constant change; targeted independent C8/C9/C10 and 844 unchanged library comparisons followed; not a fresh full run of latest 35 final bytes",
+    "countsMustNotBeSummedAsReliabilityPercentage": true,
+    "latest35Final": {
+      "namingAndBoundaryChecks": 1084,
+      "unchangedLibraryComparisons": 844,
+      "newCases": 92,
+      "storedSourceForms": 422,
+      "strictSupportedFormsPassed": 421,
+      "existingUnsupportedFormSkips": [
+        {
+          "form": "penten_3_yne_1 expanded",
+          "reason": "literal [H] metadata outside supported transformation guard"
+        }
+      ],
+      "baselineAngleFailingForms": 200,
+      "baselineLengthFailingForms": 36,
+      "finalSupportedFormFailures": 0,
+      "preservedGeneratedLengths": 2309,
+      "preservedOtherAngles": 2218,
+      "preservedOrientationSigns": 1922,
+      "newOrWorseGuardedContactsOrCrossings": 0,
+      "linearTripleSpCenters": 134,
+      "linearTwoDoubleSpCenters": 6,
+      "acceptanceAssertions": 228,
+      "SyncBarAndPreservationAssertions": 27,
+      "MOLProperties": {
+        "roundtrips": 422,
+        "derivations": 1684,
+        "metadataFixtures": 13,
+        "nitroDerivations": 24,
+        "negativeMapCheck": "pass"
+      },
+      "finalFirefoxOrdinaryAuthoring": {
+        "checks": 25,
+        "complete": true,
+        "JavaScriptExceptions": 0,
+        "timing": "after final core/generator",
+        "transport": "recorded actual PubChem responses; real JSME/core/SVG/JSmol"
+      },
+      "finalFirefoxGeometryAcceptUpdate": {
+        "checks": 22,
+        "complete": true,
+        "JavaScriptExceptions": 0,
+        "timing": "after final core/generator",
+        "fixtureLimit": "stored SDF transport; duplicate source record temporarily removed from test registry and restored"
+      },
+      "manualC11Save": {
+        "checks": 9,
+        "payloadCharacters": 12612,
+        "transport": "locally stored actual PubChem responses",
+        "realComponents": [
+          "JSME",
+          "core",
+          "SVG",
+          "JSmol",
+          "registry",
+          "Blob payload"
+        ],
+        "livePubChemAvailabilityTest": false
+      },
+      "FirefoxPilotAndSets": {
+        "pilotChecks": 45,
+        "twoSetChecks": 60,
+        "JavaScriptExceptions": 0,
+        "timing": "before final generator-only correction; not repeated as a full final-byte game/pilot pass"
+      },
+      "originalLessonsReplay": {
+        "lessons": 14,
+        "steps": 337,
+        "assertions": 9780,
+        "functionalFailures": 0,
+        "realFinal3DModels": 14,
+        "externalCIRExceptions": 4,
+        "rawExit": 1,
+        "strictCleanConsole": false,
+        "timing": "before final generator-only correction"
+      },
+      "initialAuthoringFailure": {
+        "functionalChecksBeforeFailure": 23,
+        "rawResult": "retained harness cache-field assertion failure",
+        "finalFullRerun": 25,
+        "applicationExportFixClaimed": false
+      },
+      "independentReviewer": "/root/review_upstream54_35",
+      "independentVerdict": "no actionable findings in reviewed scope; U35-NUM02 and U35-GEOM01 closed by targeted final review",
+      "independentExecuted": {
+        "namingChecks": 1084,
+        "libraryUnchanged": 844,
+        "acceptanceAssertions": 228,
+        "sourceForms": 422,
+        "supportedPass": 421,
+        "existingLiteralHSkip": 1,
+        "lengths": 2309,
+        "otherAngles": 2218,
+        "orientationSigns": 1922,
+        "contactGuards": "pass",
+        "execution": "read-only AST/in-memory execution; no independent browser run"
+      },
+      "independentChemistryExecuted": {
+        "actualSourceForms": 10,
+        "lengths": 38,
+        "otherAngles": 25,
+        "orientations": 21,
+        "actionableFindings": []
+      },
+      "resolvedFindings": [
+        {
+          "id": "U35-NUM02",
+          "severity": "P2",
+          "cause": "three remaining functional-group locant sorts compared strings",
+          "beforeDiol": "dodecane-10,2-diol",
+          "afterDiol": "dodecane-2,10-diol",
+          "independentTargetedClosure": true
+        },
+        {
+          "id": "U35-GEOM01",
+          "severity": "P2",
+          "cause": "shared generator flattened degree-two C/O and bent two-double sp; terminal vector multiplied L twice",
+          "independentTargetedClosure": true
+        }
+      ]
+    }
+  },
+  "React": {
+    "molecules": 126,
+    "lessons": 12,
+    "rebuild": false,
+    "changedByReportWork": false
+  },
+  "publication": {
+    "status": "pending",
+    "releaseQuery": "release-20261104",
+    "runtimeCommit": null,
+    "fullCheckpoint": null,
+    "publicHTTPAndHashVerification": null,
+    "functionalVerification": null
+  },
+  "save": {
+    "status": "pending",
+    "checkpoint": null,
+    "ZIP": null,
+    "GitBundle": null,
+    "externalCopies": null,
+    "plannedCheckpointBranch": "checkpoint/namelecule-20261104-143518",
+    "plannedExternalCopyDestinationCount": 2
+  },
+  "limitations": [
+    "External JSmol j2s CDN, PubChem and CIR; recorded CIR/CORS404 and pre-existing mapping diagnostics",
+    "New molecule acceptance still depends on available PubChem 3D; manual data download/install, no automatic permanent persistence",
+    "Greek C13/C14/C19 conventions and C9 diacritics remain P3 spelling uncertainties; C20 eicos convention is not a full IUPAC PIN icos claim",
+    "Existing Greek polyunsaturation euphony issue unchanged",
+    "Inherited Escape after history with only programmatic focus has unknown cause; actual pointer navigation plus focused Escape passed",
+    "Existing long-name PNG clipping, historical framing observation and narrow-width 3D-label crowding remain",
+    "Firefox/macOS and simulated narrow/touch checks; no Safari, physical mobile, assistive-technology, offline package or complete conference-sequence certification",
+    "Pure-engine/mock drawing checks do not establish real browser/JSME or arbitrary network failure behavior",
+    "Source backup is not a verified self-contained offline presentation package",
+    "Inherited English nitro multiplicity omission persists (2,10-nitro instead of 2,10-dinitro); numeric locants corrected, multiplicity not fixed",
+    "Non-C/O and degree-three/four angle conventions lie outside the bounded generator repair; guarded checks do not remove all pre-existing crowding",
+    "Fallback echo matching uses one exact symmetric graph correspondence; no universal geometric-isomorphism or asynchronous applet guarantee"
+  ],
+  "reportSourceFiles": [
+    "docs/professor-20261101/update.html",
+    "docs/professor-20261101/verified-facts.json",
+    "docs/V54-SYNC-20261104.md",
+    "docs/ALKANE-CHECKPOINT-PILOT-20261104.md",
+    "docs/checks/game-repair-20261103/summary.json",
+    "docs/checks/game-repair-feedback-20261103/summary.json",
+    "docs/checks/game-workshop-logo-20261104/review-report.md",
+    "docs/checks/alkane-two-sets-20261104/REPORT.md",
+    "docs/checks/alkane-two-sets-20261104/review-report.md",
+    "docs/checks/v54-upstream-20261104/naming-results.json",
+    "docs/checks/v54-upstream-20261104/drawing/REPORT.md",
+    "docs/checks/v54-upstream-20261104/REPORT.md",
+    "docs/SESSION-NOTES.md",
+    "docs/checks/v54-upstream-20261104/browser/lessons-browser.json",
+    "docs/checks/v54-upstream-20261104/browser/lesson-classification.json",
+    "docs/checks/v54-upstream-20261104/browser/pilot-browser.json",
+    "docs/checks/v54-upstream-20261104/browser/two-sets-browser.json",
+    "docs/checks/v54-upstream-20261104/browser/manual-save-browser.json",
+    "docs/checks/v54-upstream-20261104/browser/drawing-browser.json",
+    "docs/checks/v54-upstream-20261104/browser/lookup-cache-classification.json",
+    "docs/checks/v54-upstream-20261104/geometry/REPORT.md",
+    "docs/checks/v54-upstream-20261104/geometry/geometry-results.json",
+    "docs/checks/v54-upstream-20261104/geometry/mechanics-results.json",
+    "docs/checks/v54-upstream-20261104/geometry/acceptance-results.json",
+    "docs/checks/v54-upstream-20261104/browser/generated-geometry-browser.json"
+  ],
+  "pendingSourceFiles": [],
+  "linksFile": "links.json"
+}

@@ -1,0 +1,409 @@
+--- before/games/name-repair.html
++++ after/games/name-repair.html
+@@ -6,8 +6,8 @@
+   <meta name="theme-color" content="#254c50">
+   <title>Συνεργείο ονομάτων · Namelecule</title>
+   <meta name="description" content="Παρατήρησε τη δομή και επισκεύασε ένα όνομα αλκανίου βήμα βήμα, με βοήθεια όποτε τη χρειάζεσαι.">
+-  <link rel="stylesheet" href="../css/namelecule-games.css">
+-  <script src="../js/namelecule-game-repair.js" defer></script>
++  <link rel="stylesheet" href="../css/namelecule-games.css?v=feedback-20261103-r2">
++  <script src="../js/namelecule-game-repair.js?v=feedback-20261103-r2" defer></script>
+ </head>
+ <body>
+   <a class="skip-link" href="#game-root">Πήγαινε στο παιχνίδι</a>
+--- before/js/namelecule-game-repair.js
++++ after/js/namelecule-game-repair.js
+@@ -23,7 +23,6 @@
+       order: round.kind === "order" ? round.movablePartIds.slice() : [],
+       choiceOrder: previous && previous.choiceOrder ? previous.choiceOrder.slice() : initialChoiceOrder(round),
+       attempts: previous ? previous.attempts : 0,
+-      hintsUsed: previous ? previous.hintsUsed : 0,
+       selectionMisses: previous ? previous.selectionMisses : 0,
+       solved: false
+     };
+@@ -75,10 +74,7 @@
+     return {
+       total: challenges.length,
+       completed: challenges.filter(function (entry) { return entry.state && entry.state.solved; }).length,
+-      independent: challenges.filter(function (entry) { return entry.state && entry.state.solved && entry.state.hintsUsed === 0; }).length,
+-      assisted: challenges.filter(function (entry) { return entry.state && entry.state.solved && entry.state.hintsUsed > 0; }).length,
+-      attempts: challenges.reduce(function (sum, entry) { return sum + (entry.state ? entry.state.attempts : 0); }, 0),
+-      hints: challenges.reduce(function (sum, entry) { return sum + (entry.state ? entry.state.hintsUsed : 0); }, 0)
++      attempts: challenges.reduce(function (sum, entry) { return sum + (entry.state ? entry.state.attempts : 0); }, 0)
+     };
+   }
+ 
+@@ -102,11 +98,6 @@
+       round.parts.forEach(function (part) {
+         assert(part && text(part.id) && text(part.text) && text(part.label) && !ids.has(part.id), "Invalid name part");
+         ids.add(part.id);
+-      });
+-      assert(Array.isArray(round.hints) && round.hints.length > 0 && round.hints.length <= 2, "Expected one or two staged hints");
+-      round.hints.forEach(function (hint) {
+-        assert(hint && text(hint.text), "Missing hint text");
+-        if (hint.asset) assert(localAsset(hint.asset) && text(hint.alt), "Invalid hint diagram");
+       });
+       assert(round.feedback && ["wrongPart", "unchanged", "incorrect"].every(function (key) {
+         return text(round.feedback[key]);
+@@ -151,7 +142,6 @@
+   let states = [];
+   let refs = {};
+   let mainImageStatus = "loading";
+-  let hintImageStatuses = [];
+   let renderId = 0;
+ 
+   function node(tag, attributes, children) {
+@@ -192,7 +182,7 @@
+     ]);
+     root.replaceChildren(loading);
+     try {
+-      const response = await fetch("./data/name-repair-alkanes.json");
++      const response = await fetch("./data/name-repair-alkanes.json", { cache: "no-cache" });
+       if (!response.ok) throw new Error("Game data HTTP " + response.status);
+       game = validateGameData(await response.json());
+       states = game.rounds.map(function (round) { return createRoundState(round); });
+@@ -215,7 +205,7 @@
+       node("p", { class: "eyebrow" }, [node("span", { class: "eyebrow-dot", "aria-hidden": "true" }), "ΠΑΙΧΝΙΔΙ ΟΝΟΜΑΤΟΛΟΓΙΑΣ · ΑΛΚΑΝΙΑ"]),
+       node("h1", {}, ["Συνεργείο", node("span", { text: "ονομάτων" })]),
+       node("p", { class: "intro-description" }, ["Η δομή είναι εδώ. Στο όνομα, όμως, ", node("strong", { text: "κάτι δεν ταιριάζει." }), " Παρατήρησε το μόριο, βρες το λάθος κομμάτι και βάλε το σωστό στη θέση του."]),
+-      node("div", { class: "intro-badges" }, [node("span", { text: "1 παράδειγμα + 4 αποστολές" }), node("span", { text: "Χωρίς χρονόμετρο" }), node("span", { text: "Βοήθεια όποτε θέλεις" })]),
++      node("div", { class: "intro-badges" }, [node("span", { text: "1 παράδειγμα + 4 αποστολές" }), node("span", { text: "Χωρίς χρονόμετρο" }), node("span", { text: "Εξηγήσεις μετά την επισκευή" })]),
+       button("Άνοιξε το συνεργείο  →", "primary intro-start", function () { roundIndex = 0; renderRound(); }),
+       node("p", { class: "intro-small", text: "Χρησιμοποίησε ποντίκι, αφή ή τα πλήκτρα Tab και Enter. Κάθε επόμενο βήμα το επιλέγεις εσύ." })
+     ]);
+@@ -233,7 +223,7 @@
+     const steps = [
+       ["Δες τη δομή", "Σύνδεσε τους άνθρακες και τους κλάδους με το όνομα."],
+       ["Βρες τι χρειάζεται αλλαγή", "Διάλεξε κομμάτι και αντικατάσταση ή άλλαξε τη σειρά."],
+-      ["Έλεγξε και ξαναδοκίμασε", "Η εξήγηση και οι υποδείξεις είναι δίπλα σου."]
++      ["Έλεγξε και ξαναδοκίμασε", "Μετά τη σωστή επισκευή, δες γιατί το όνομα ταιριάζει στη δομή."]
+     ];
+     const welcome = node("div", {}, [
+       node("section", { class: "intro", "aria-label": "Καλώς ήρθες στο Συνεργείο ονομάτων" }, [copy, art]),
+@@ -261,13 +251,12 @@
+   function round() { return game.rounds[roundIndex]; }
+   function state() { return states[roundIndex]; }
+   function diagramsReady() {
+-    return mainImageStatus === "ready" && hintImageStatuses.every(function (status) { return status === "ready"; });
++    return mainImageStatus === "ready";
+   }
+ 
+   function renderRound() {
+     const currentRender = ++renderId;
+     mainImageStatus = "loading";
+-    hintImageStatuses = [];
+     const data = round();
+     refs = {};
+     const heading = node("div", { class: "round-heading" });
+@@ -283,13 +272,6 @@
+       node("div", { class: "card-heading" }, [node("h2", { id: "diagram-heading", text: "Η δομή στο επίκεντρο" }), node("div", { class: "diagram-tools" }, [node("span", { text: "Ανεπτυγμένος τύπος" }), refs.zoomButton])]),
+       node("figure", { class: "diagram-figure" }, [node("div", { class: "diagram-stage" }, [refs.image]), node("figcaption", { text: "Παρατήρησε την κύρια αλυσίδα και τους κλάδους." })]),
+       refs.imageStatus
+-    ]);
+-    refs.hintButton = button("Μια υπόδειξη", "quiet", showHint);
+-    refs.hintCount = node("p");
+-    refs.hintList = node("ol", { class: "hint-list", "aria-live": "polite", "aria-label": "Υποδείξεις που άνοιξες" });
+-    const hints = node("section", { class: "hint-card", "aria-labelledby": "hint-heading" }, [
+-      node("div", { class: "hint-top" }, [node("span", { class: "hint-symbol", "aria-hidden": "true", text: "?" }), node("div", {}, [node("h2", { id: "hint-heading", text: "Χρειάζεσαι μια ιδέα;" }), refs.hintCount]), refs.hintButton]),
+-      refs.hintList
+     ]);
+     const broken = candidateName(data, createRoundState(data));
+     refs.parts = node("div", { class: "name-parts", role: "group", "aria-label": "Κομμάτια του ονόματος" });
+@@ -319,11 +301,10 @@
+     const screen = node("div", { class: "round-screen" }, [
+       node("div", { class: "round-topbar" }, [node("p", { class: "eyebrow", text: "ΣΥΝΕΡΓΕΙΟ ΟΝΟΜΑΤΩΝ" }), progressList()]),
+       heading, steps,
+-      node("div", { class: "bench" }, [node("div", { class: "visual-side" }, [diagram, hints]), node("div", { class: "repair-side" }, [repair, refs.next])]),
++      node("div", { class: "bench" }, [node("div", { class: "visual-side" }, [diagram]), node("div", { class: "repair-side" }, [repair, refs.next])]),
+       node("div", { class: "session-row" }, [refs.sessionStats, button("Νέο παιχνίδι", "quiet", requestRestart)])
+     ]);
+     replaceRoot(screen);
+-    renderHints(currentRender);
+     loadDiagram(currentRender);
+     updateControls();
+     focusHeading();
+@@ -421,11 +402,8 @@
+     refs.checkButton.disabled = !enabled || !hasCandidate;
+     refs.zoomButton.disabled = mainImageStatus !== "ready";
+     refs.retryButton.disabled = !enabled;
+-    refs.hintButton.disabled = !enabled || current.hintsUsed >= data.hints.length;
+-    refs.hintButton.textContent = current.hintsUsed >= data.hints.length ? "Άνοιξαν όλες" : current.hintsUsed > 0 ? "Επόμενη ιδέα" : "Μια υπόδειξη";
+-    refs.hintCount.textContent = current.hintsUsed + " από " + data.hints.length + " υποδείξεις ανοιχτές";
+     refs.checkHelper.textContent = current.solved ? "Η επισκευή ολοκληρώθηκε. Συνέχισε όταν είσαι έτοιμος ή έτοιμη." : !diagramsReady() ? "Περιμένουμε να εμφανιστούν οι δομές πριν από τον έλεγχο." : data.kind === "order" ? "Επιλέγεις κλάδο, πατάς ένα βέλος και ελέγχεις τη νέα σειρά." : hasCandidate ? "Ο έλεγχος μετρά ως μία προσπάθεια. Μπορείς να δοκιμάσεις ξανά." : "Διάλεξε πρώτα το κομμάτι και έπειτα μια αντικατάσταση.";
+-    refs.sessionStats.textContent = "Προσπάθειες σε αυτή την " + (data.guided ? "πρόβα " : "αποστολή ") + current.attempts + " · Υποδείξεις " + current.hintsUsed;
++    refs.sessionStats.textContent = "Προσπάθειες σε αυτή την " + (data.guided ? "πρόβα " : "αποστολή ") + current.attempts;
+     if (restoreId) restoreFocus(restoreId);
+   }
+ 
+@@ -485,74 +463,19 @@
+   function retryRound() {
+     if (!diagramsReady() || state().solved) return;
+     states[roundIndex] = createRoundState(round(), state());
+-    refs.selectionStatus.textContent = "Οι επιλογές επανήλθαν. Οι προσπάθειες και οι υποδείξεις σου παραμένουν.";
++    refs.selectionStatus.textContent = "Οι επιλογές επανήλθαν. Οι προσπάθειές σου παραμένουν.";
+     clearFeedback();
+     updateControls();
+     const first = refs.parts.querySelector("button");
+     if (first && !first.disabled) first.focus({ preventScroll: true });
+   }
+ 
+-  function showHint() {
+-    if (!diagramsReady() || state().solved || state().hintsUsed >= round().hints.length) return;
+-    state().hintsUsed += 1;
+-    renderHints(renderId);
+-    updateControls();
+-  }
+-
+-  function renderHints(currentRender) {
+-    const visible = round().hints.slice(0, state().hintsUsed);
+-    const previousStatuses = hintImageStatuses.slice();
+-    hintImageStatuses = visible.filter(function (hint) { return hint.asset; }).map(function (_, index) {
+-      return previousStatuses[index] || "loading";
+-    });
+-    refs.hintList.replaceChildren();
+-    let imageIndex = 0;
+-    visible.forEach(function (hint, index) {
+-      const item = node("li", { class: "hint-item" }, [node("h3", { text: "ΥΠΟΔΕΙΞΗ " + (index + 1) }), node("p", { text: hint.text })]);
+-      if (hint.asset) {
+-        const assetIndex = imageIndex++;
+-        const image = node("img", { class: "hint-image", alt: hint.alt });
+-        const status = node("div", { class: "hint-image-error", role: "status" });
+-        function loadHintImage() {
+-          hintImageStatuses[assetIndex] = "loading";
+-          image.hidden = true;
+-          status.replaceChildren(node("p", { text: "Η εικόνα της υπόδειξης φορτώνεται." }));
+-          image.onload = function () {
+-            if (currentRender !== renderId || !image.isConnected) return;
+-            if (!image.naturalWidth) return failHintImage();
+-            hintImageStatuses[assetIndex] = "ready";
+-            image.hidden = false;
+-            status.replaceChildren();
+-            updateControls();
+-          };
+-          image.onerror = failHintImage;
+-          image.src = hint.asset;
+-        }
+-        function failHintImage() {
+-          if (currentRender !== renderId || !image.isConnected) return;
+-          hintImageStatuses[assetIndex] = "error";
+-          image.hidden = true;
+-          status.replaceChildren(node("p", { text: "Η εικόνα της υπόδειξης δεν εμφανίστηκε." }), button("Φόρτωσε ξανά την υπόδειξη", "secondary", function () {
+-            loadHintImage();
+-            updateControls();
+-          }));
+-          updateControls();
+-        }
+-        item.append(image, status);
+-        refs.hintList.append(item);
+-        loadHintImage();
+-      } else {
+-        refs.hintList.append(item);
+-      }
+-    });
+-  }
+-
+   function requestRestart() {
+-    const hasProgress = roundIndex > 0 || states.some(function (entry) { return entry.attempts > 0 || entry.hintsUsed > 0 || entry.selectionMisses > 0 || entry.selectedPartId; });
++    const hasProgress = roundIndex > 0 || states.some(function (entry) { return entry.attempts > 0 || entry.selectionMisses > 0 || entry.selectedPartId; });
+     if (!hasProgress) return restartGame();
+     const dialog = node("dialog", { class: "confirm-dialog", "aria-labelledby": "restart-title" }, [
+       node("h2", { id: "restart-title", text: "Να ανοίξουμε νέο παιχνίδι;" }),
+-      node("p", { text: "Οι επισκευές, οι προσπάθειες και οι υποδείξεις αυτού του παιχνιδιού θα μηδενιστούν." })
++      node("p", { text: "Οι επισκευές και οι προσπάθειες αυτού του παιχνιδιού θα μηδενιστούν." })
+     ]);
+     const keep = button("Συνέχισε εδώ", "secondary", function () { dialog.close(); });
+     const restart = button("Νέο παιχνίδι", "primary", function () { dialog.close(); restartGame(); });
+@@ -595,8 +518,7 @@
+     renderId += 1;
+     const summary = summarizeGame(game.rounds, states);
+     const stats = [
+-      [summary.independent, "Ολοκληρώθηκαν χωρίς πρόσθετη υπόδειξη"],
+-      [summary.assisted, "Ολοκληρώθηκαν με πρόσθετη υπόδειξη"],
++      [summary.completed, "Αποστολές που ολοκληρώθηκαν"],
+       [summary.attempts, "Προσπάθειες ελέγχου"]
+     ];
+     const challenges = game.rounds.map(function (data, index) { return { data: data, state: states[index] }; }).filter(function (entry) { return !entry.data.guided; });
+@@ -615,12 +537,11 @@
+         node("ol", { class: "results-list" }, challenges.map(function (entry) {
+           return node("li", { class: "result-item" }, [
+             node("span", { class: "result-check", "aria-hidden": "true", text: "✓" }),
+-            node("div", {}, [node("strong", { class: "result-name", text: entry.data.correctName }), node("span", { class: "result-objective", text: entry.data.title })]),
+-            node("span", { class: "result-assistance" + (entry.state.hintsUsed > 0 ? " with-hint" : ""), text: entry.state.hintsUsed > 0 ? "Με πρόσθετη υπόδειξη" : "Χωρίς πρόσθετη υπόδειξη" })
++            node("div", {}, [node("strong", { class: "result-name", text: entry.data.correctName }), node("span", { class: "result-objective", text: entry.data.title })])
+           ]);
+         }))
+       ]),
+-      node("p", { class: "results-note", text: "Το καθοδηγούμενο παράδειγμα δεν προσμετράται. «Χωρίς πρόσθετη υπόδειξη» σημαίνει ότι δεν άνοιξες τις προαιρετικές υποδείξεις, ακόμη κι αν δοκίμασες περισσότερες φορές. Οι οδηγίες και η ανατροφοδότηση ήταν διαθέσιμες σε όλες τις αποστολές." }),
++      node("p", { class: "results-note", text: "Το καθοδηγούμενο παράδειγμα δεν προσμετράται. Οι προσπάθειες ελέγχου περιλαμβάνουν τις επαναλήψεις κάθε αποστολής." }),
+       node("div", { class: "results-actions" }, [button("Νέο παιχνίδι  ↻", "primary", restartGame), node("a", { class: "secondary", href: "../design/welcome-proposal.html", text: "Επιστροφή στην αρχική" })])
+     ]);
+     replaceRoot(content);
+--- before/css/namelecule-games.css
++++ after/css/namelecule-games.css
+@@ -131,19 +131,6 @@
+ .image-status p { margin: 0 0 10px; }
+ .image-status p:last-child { margin-bottom: 0; }
+ .image-status .secondary { min-height: 40px; font-size: .76rem; padding: 8px 12px; }
+-.hint-card { border: 1px solid #e7d3bc; border-radius: 17px; margin-top: 16px; background: #fbf2e6; overflow: hidden; }
+-.hint-top { display: flex; align-items: center; gap: 12px; padding: 15px 17px; }
+-.hint-symbol { width: 31px; height: 31px; flex-shrink: 0; background: #f2dfc3; display: grid; place-items: center; border-radius: 10px; font-size: .9rem; font-weight: 800; color: var(--peach-ink); }
+-.hint-top h2 { font-size: .85rem; margin: 0 0 2px; }
+-.hint-top p { color: #755e49; font-size: .69rem; margin: 0; }
+-.hint-top .quiet { margin-left: auto; border: 1px solid #dcc5a7; padding: 7px 10px; color: #695139; min-width: 90px; font-size: .72rem; flex-shrink: 0; }
+-.hint-top .quiet:hover:not(:disabled) { background: #f3e3cc; }
+-.hint-list { list-style: none; margin: 0; padding: 0 17px; }
+-.hint-item { border-top: 1px solid #e5d5c2; padding: 12px 0 14px; }
+-.hint-item h3 { color: #75563c; margin: 0 0 5px; font-size: .66rem; letter-spacing: .07em; }
+-.hint-item p { font-size: .8rem; color: #644f3e; margin: 0; }
+-.hint-image { display: block; width: auto; max-width: 100%; height: auto; object-fit: contain; margin: 10px auto 0; border-radius: 9px; background: white; }
+-.hint-image-error { font-size: .75rem; color: var(--peach-ink); margin-top: 10px; }
+ .repair-card { background: white; border: 1px solid var(--line); border-radius: 21px; padding: 22px; box-shadow: var(--shadow); }
+ .repair-card .section-label { display: block; margin-bottom: 8px; color: var(--peach-ink); font-size: .66rem; font-weight: 800; letter-spacing: .04em; }
+ .broken-name { background: #fbf2e9; border: 1px dashed #dfc5ac; border-radius: 12px; padding: 13px 14px; font-size: clamp(1.03rem, 1.7vw, 1.2rem); font-weight: 650; overflow-wrap: anywhere; line-height: 1.5; margin-bottom: 22px; }
+@@ -190,7 +177,7 @@
+ .results-seal { width: 65px; height: 65px; display: grid; place-items: center; background: var(--mint); border: 1px solid #c4dece; border-radius: 22px; margin: 0 auto 20px; font-size: 1.7rem; transform: rotate(-7deg); }
+ .results-hero h1 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 14px; }
+ .results-hero p { color: var(--muted); max-width: 620px; margin: 0 auto; font-size: .91rem; }
+-.results-stats { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 13px; margin: 6px 0 25px; }
++.results-stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 13px; margin: 6px 0 25px; }
+ .stat-card { border: 1px solid var(--line); border-radius: 18px; background: white; padding: 20px 16px; text-align: center; }
+ .stat-card:first-child { background: var(--mint); border-color: #c9ddcf; }
+ .stat-card:nth-child(2) { background: #fbefdf; border-color: #e9d6bc; }
+@@ -199,13 +186,11 @@
+ .results-detail { border: 1px solid var(--line); border-radius: 18px; overflow: hidden; background: white; }
+ .results-detail h2 { font-size: .9rem; padding: 17px 20px; background: #f4f6ef; margin: 0; border-bottom: 1px solid var(--line); }
+ .results-list { list-style: none; padding: 0; margin: 0; }
+-.result-item { display: grid; grid-template-columns: 28px 1fr auto; gap: 12px; align-items: start; padding: 15px 20px; }
++.result-item { display: grid; grid-template-columns: 28px 1fr; gap: 12px; align-items: start; padding: 15px 20px; }
+ .result-item + .result-item { border-top: 1px solid #e8ece5; }
+ .result-check { display: grid; place-items: center; height: 26px; width: 26px; background: var(--mint); border-radius: 9px; font-size: .8rem; font-weight: 700; }
+ .result-name { display: block; font-size: .86rem; font-weight: 700; overflow-wrap: anywhere; }
+ .result-objective { display: block; font-size: .69rem; color: var(--muted); margin-top: 2px; }
+-.result-assistance { font-size: .64rem; color: var(--teal-dark); background: #f0f6f1; border: 1px solid #dce8dc; border-radius: 8px; padding: 4px 8px; white-space: nowrap; }
+-.result-assistance.with-hint { color: #765438; background: #fbf0e2; border-color: #ecdbc5; }
+ .results-note { color: var(--muted); font-size: .72rem; margin: 15px 0 22px; text-align: center; }
+ .results-actions { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+ .site-footer { max-width: 1176px; margin: 0 auto; border-top: 1px solid var(--line); padding: 19px 0 24px; display: flex; justify-content: space-between; gap: 16px; color: var(--muted); font-size: .65rem; }
+@@ -233,8 +218,6 @@
+   .intro-how { gap: 18px; }
+   .bench { grid-template-columns: .95fr 1.1fr; gap: 16px; }
+   .repair-card { padding: 18px; }
+-  .hint-top { flex-wrap: wrap; gap: 9px; }
+-  .hint-top .quiet { margin-left: 40px; }
+   .diagram-stage { min-height: 210px; }
+   .site-footer { margin-left: 32px; margin-right: 32px; }
+ }
+@@ -252,8 +235,6 @@
+   .how-item h2 { margin-bottom: 3px; }
+   .bench { grid-template-columns: 1fr; gap: 16px; }
+   .diagram-stage { min-height: 190px; }
+-  .hint-top { flex-wrap: nowrap; }
+-  .hint-top .quiet { margin-left: auto; }
+   .round-topbar { margin-bottom: 22px; }
+   .round-topbar .eyebrow { font-size: .57rem; letter-spacing: .09em; }
+   .progress { gap: 5px; }
+@@ -292,11 +273,6 @@
+   .diagram-stage { min-height: 172px; }
+   .diagram-tools { gap: 4px; }
+   .diagram-tools > span { display: none; }
+-  .hint-top { padding: 13px; gap: 9px; }
+-  .hint-top h2 { font-size: .77rem; }
+-  .hint-top p { font-size: .63rem; }
+-  .hint-top .quiet { min-width: 81px; font-size: .66rem; padding: 7px 8px; }
+-  .hint-symbol { width: 27px; height: 29px; }
+   .repair-card { padding: 17px; }
+   .broken-name { padding: 11px; margin-bottom: 18px; }
+   .part-button { padding: 9px 11px; font-size: .89rem; }
+@@ -311,7 +287,6 @@
+   .stat-label { font-size: .64rem; }
+   .result-item { padding: 13px; gap: 9px; grid-template-columns: 24px 1fr; }
+   .result-check { width: 24px; height: 24px; }
+-  .result-assistance { grid-column: 2; justify-self: start; margin-top: -4px; }
+   .results-actions .primary, .results-actions .secondary { width: 100%; }
+   .site-footer { margin-left: 18px; margin-right: 18px; font-size: .59rem; }
+ }
+--- before/games/data/name-repair-alkanes.json
++++ after/games/data/name-repair-alkanes.json
+@@ -25,13 +25,9 @@
+         {"value": "βουτ", "label": "βουτ"},
+         {"value": "εξ", "label": "εξ", "feedback": "Το «εξ» αντιστοιχεί σε έξι άνθρακες. Στο σχέδιο η αλυσίδα έχει τέσσερις."}
+       ],
+-      "hints": [
+-        {"text": "Μέτρησε μόνο τα άτομα C που σχηματίζουν τη συνεχή αλυσίδα."},
+-        {"text": "Η αρίθμηση δείχνει τέσσερις άνθρακες. Το αντίστοιχο πρώτο συνθετικό είναι «βουτ».", "asset": "assets/name-repair/butane-chain.svg", "alt": "Η ίδια αλυσίδα, με τους τέσσερις άνθρακες αριθμημένους από το ένα έως το τέσσερα."}
+-      ],
+-      "successText": "Τέσσερις άνθρακες στην κύρια αλυσίδα δίνουν «βουτ». Μαζί με το «άν» και το «ιο» σχηματίζεται το όνομα βουτάνιο.",
++      "successText": "Η κύρια αλυσίδα έχει τέσσερις άνθρακες, επομένως το πρώτο συνθετικό είναι «βουτ». Το «άν» δηλώνει απλούς δεσμούς μεταξύ των ανθράκων και το «ιο» την κατάληξη του υδρογονάνθρακα.",
+       "feedback": {
+-        "wrongPart": "Αυτό το συνθετικό συμφωνεί με τη δομή. Σε αυτή την επισκευή ψάχνουμε το μέρος που δηλώνει το πλήθος των ανθράκων της αλυσίδας.",
++        "wrongPart": "Αυτό το συνθετικό συμφωνεί με τη δομή.",
+         "unchanged": "Διάλεξε ένα νέο συνθετικό πριν ελέγξεις την επισκευή.",
+         "incorrect": "Το νέο συνθετικό δεν συμφωνεί με το πλήθος των ανθράκων της κύριας αλυσίδας. Δοκίμασε ξανά."
+       }
+@@ -60,15 +56,11 @@
+         {"value": "πεντ", "label": "πεντ"},
+         {"value": "επτ", "label": "επτ", "feedback": "Το «επτ» δηλώνει επτά άνθρακες. Αναζήτησε τη μεγαλύτερη συνεχή αλυσίδα στο δοσμένο μόριο."}
+       ],
+-      "hints": [
+-        {"text": "Το πρώτο συνθετικό μετρά την κύρια αλυσίδα. Ο άνθρακας της μεθυλομάδας δεν προστίθεται στο μήκος της."},
+-        {"text": "Οι αριθμημένοι άνθρακες της κύριας αλυσίδας είναι πέντε, ενώ οι συνολικοί άνθρακες του μορίου είναι έξι.", "asset": "assets/name-repair/methyl_2_pentane-chain.svg", "alt": "Η κύρια αλυσίδα έχει αριθμούς ένα έως πέντε. Ο άνθρακας της μεθυλομάδας παραμένει εκτός αρίθμησης."}
+-      ],
+-      "successText": "Το «πεντ» προκύπτει από τους πέντε άνθρακες της κύριας αλυσίδας. Η μεθυλομάδα στη θέση 2 αναφέρεται χωριστά. Το σωστό όνομα είναι 2-μεθυλοπεντάνιο.",
++      "successText": "Η μεγαλύτερη συνεχής ανθρακική αλυσίδα έχει πέντε άνθρακες και δίνει το «πεντ». Ο έκτος άνθρακας ανήκει στη μεθυλομάδα, που αναφέρεται χωριστά στη θέση 2.",
+       "feedback": {
+-        "wrongPart": "Αυτό το συνθετικό συμφωνεί με τη δομή. Κράτησέ το και έλεγξε ένα άλλο μέρος του ονόματος.",
++        "wrongPart": "Αυτό το συνθετικό συμφωνεί με τη δομή.",
+         "unchanged": "Διάλεξε αντικατάσταση για το λανθασμένο συνθετικό.",
+-        "incorrect": "Η επισκευή δεν δίνει το μήκος της μεγαλύτερης συνεχούς αλυσίδας. Μπορείς να δοκιμάσεις ξανά ή να ζητήσεις υπόδειξη."
++        "incorrect": "Η επισκευή δεν δίνει το μήκος της μεγαλύτερης συνεχούς αλυσίδας. Δοκίμασε ξανά."
+       }
+     },
+     {
+@@ -95,13 +87,9 @@
+         {"value": "2-", "label": "2-"},
+         {"value": "3-", "label": "3-", "feedback": "Η μεθυλομάδα δεν συνδέεται στον μεσαίο άνθρακα. Ακολούθησε διαδοχικά την αλυσίδα από το πλησιέστερο άκρο."}
+       ],
+-      "hints": [
+-        {"text": "Για αυτό το αλκάνιο διάλεξε τη φορά που δίνει στη μοναδική διακλάδωση τη μικρότερη θέση."},
+-        {"text": "Από τα δύο άκρα προκύπτουν οι θέσεις 2 και 4. Επιλέγουμε τη θέση 2.", "asset": "assets/name-repair/methyl_2_pentane-chain.svg", "alt": "Αρίθμηση από το πλησιέστερο άκρο. Η μεθυλομάδα συνδέεται στον άνθρακα δύο."}
+-      ],
+-      "successText": "Το «4-» περιγράφει την αρίθμηση από το πιο μακρινό άκρο. Η μικρότερη θέση είναι 2, οπότε επιλέγουμε το όνομα 2-μεθυλοπεντάνιο.",
++      "successText": "Οι δύο φορές αρίθμησης δίνουν στη μεθυλομάδα τις θέσεις 2 και 4. Επιλέγουμε τη θέση 2, επειδή σε αυτό το αλκάνιο η μοναδική διακλάδωση πρέπει να πάρει τον μικρότερο αριθμό.",
+       "feedback": {
+-        "wrongPart": "Αυτό το συνθετικό συμφωνεί με τη δομή. Το μήκος της κύριας αλυσίδας και το είδος της διακλάδωσης παραμένουν όπως πριν.",
++        "wrongPart": "Αυτό το συνθετικό συμφωνεί με τη δομή.",
+         "unchanged": "Επίλεξε μια νέα θέση πριν ελέγξεις την επισκευή.",
+         "incorrect": "Η θέση πρέπει να συμφωνεί με το σημείο σύνδεσης της διακλάδωσης και με τη σωστή φορά αρίθμησης."
+       }
+@@ -130,13 +118,9 @@
+         {"value": "διμεθυλο", "label": "διμεθυλο"},
+         {"value": "τριμεθυλο", "label": "τριμεθυλο", "feedback": "Το «τρι-» δηλώνει τρεις ίδιες διακλαδώσεις. Στο σχέδιο υπάρχουν δύο μεθυλομάδες, στις θέσεις 2 και 3."}
+       ],
+-      "hints": [
+-        {"text": "Δύο ίδιες διακλαδώσεις γράφονται μαζί, με το πολλαπλασιαστικό πρόθεμα «δι-»."},
+-        {"text": "Στις θέσεις 2 και 3 υπάρχει από μία μεθυλομάδα. Το συνθετικό που τις περιγράφει και τις δύο είναι «διμεθυλο»."}
+-      ],
+-      "successText": "Οι δύο μεθυλομάδες απαιτούν το «δι-». Οι θέσεις 2 και 3 και η κύρια αλυσίδα τεσσάρων ανθράκων δίνουν 2,3-διμεθυλοβουτάνιο.",
++      "successText": "Στις θέσεις 2 και 3 υπάρχει από μία μεθυλομάδα. Επειδή οι διακλαδώσεις είναι δύο και ίδιες, χρησιμοποιούμε το «διμεθυλο». Η κύρια αλυσίδα έχει τέσσερις άνθρακες και δίνει το «βουτ».",
+       "feedback": {
+-        "wrongPart": "Αυτό το μέρος συμφωνεί με τη δομή. Αναζήτησε το συνθετικό που περιγράφει το είδος και το πλήθος των διακλαδώσεων.",
++        "wrongPart": "Αυτό το συνθετικό συμφωνεί με τη δομή.",
+         "unchanged": "Διάλεξε συνθετικό που να περιγράφει και τις δύο διακλαδώσεις.",
+         "incorrect": "Η επισκευή πρέπει να διατηρεί το είδος της διακλάδωσης και να δηλώνει το σωστό πλήθος της."
+       }
+@@ -159,13 +143,9 @@
+       "correctOrder": ["ethylGroup", "methylGroup"],
+       "suffixPartId": "parent",
+       "correctName": "3-αιθυλο-2,5-διμεθυλοεξάνιο",
+-      "hints": [
+-        {"text": "Η σειρά των διαφορετικών αλκυλίων καθορίζεται αλφαβητικά, όχι από τον μικρότερο αριθμό θέσης."},
+-        {"text": "Το «αιθυλο» αρχίζει από α και το «μεθυλο» από μ. Το «δι-» δεν λαμβάνεται υπόψη στην αλφαβητική κατάταξη."}
+-      ],
+-      "successText": "Η αιθυλομάδα προηγείται αλφαβητικά από τις μεθυλομάδες. Κάθε ομάδα κρατά τις θέσεις της. Το όνομα γίνεται 3-αιθυλο-2,5-διμεθυλοεξάνιο.",
++      "successText": "Συγκρίνουμε αλφαβητικά τα «αιθυλο» και «μεθυλο», επομένως προηγείται το «αιθυλο». Το «δι-» και οι αριθμοί θέσης δεν καθορίζουν αυτή τη σειρά. Κάθε ομάδα κρατά τις δικές της θέσεις όταν μετακινείται.",
+       "feedback": {
+-        "wrongPart": "Το «εξάνιο» παραμένει στο τέλος. Μετακίνησε μόνο τις ομάδες των διακλαδώσεων, μαζί με τις θέσεις τους.",
++        "wrongPart": "Αυτό το συνθετικό συμφωνεί με τη δομή.",
+         "unchanged": "Μετακίνησε μια ομάδα για να αλλάξει η σειρά των διακλαδώσεων.",
+         "incorrect": "Σύγκρινε τις λέξεις «αιθυλο» και «μεθυλο». Ο αριθμός θέσης και το «δι-» δεν αποφασίζουν ποια προηγείται."
+       }

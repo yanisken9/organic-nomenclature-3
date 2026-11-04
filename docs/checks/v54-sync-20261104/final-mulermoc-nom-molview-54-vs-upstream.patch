@@ -1,0 +1,1901 @@
+--- docs/checks/v54-sync-20261104/upstream-snapshot/js/mulermoc-nom-molview-54.js	2026-11-04 09:18:48
++++ js/mulermoc-nom-molview-54.js	2026-11-04 09:28:45
+@@ -69,6 +69,9 @@
+ let myMol2D = null;
+ let myMol3D = null;
+ let molSvg;
++// Display-only geometry: never replace a library record or a 3D source.
++let skeletalLayoutSource = null;
++let skeletalLayoutApplied = null;
+ 
+ // ── MuSVG: minimal native SVG DOM helper (replaces the former SVG library) ──
+ const MuSVG = (function () {
+@@ -359,7 +362,7 @@
+     "#ff9999",
+     "#33ccff",
+     "#ff99ff",
+-    "#79dc6d",
++    "#D8EEDC",
+     "#ff8566",
+     "#66ff66",
+     "#93bfff",
+@@ -443,7 +446,6 @@
+   // the known-good first paint), then the debounced observer owns resizes.
+   try { fResizeViewers(); } catch (eFit) { /* fit best-effort */ }
+   try { fInitZoomObserver2D(); } catch (eObs) { /* observer best-effort */ }
+-  try { fInitNameFitObserver(); } catch (eObsN) { /* observer best-effort */ }
+ }
+ 
+ function fClassifyAllMolecules() {
+@@ -1564,7 +1566,7 @@
+   // Inline DATA load — never a blob: URL (see helper note above).
+   try {
+     if (typeof fJSmolLoadInlineSDF === "function") {
+-      fJSmolLoadInlineSDF(jmolAppletNomeclature, sdf, "script spt/init-3.spt;");
++      fJSmolLoadInlineSDF(jmolAppletNomeclature, sdf, "script spt/init-54.spt;");
+     }
+   } catch (eJ) {}
+   try { if (typeof fSetMolVis3D === "function") fSetMolVis3D(); } catch (eV) {}
+@@ -1596,6 +1598,11 @@
+ // Submit keeps algorithmic through its preview (teardown restores via
+ // savedChainMode); Beautify restores immediately via its own saved mode.
+ function fMolDraftSandboxAnalyse(molText) {
++  // Display source belongs to this drawing, never the selected template.
++  myMol2D = molText;
++  skeletalLayoutApplied = null;
++  skeletalLayoutSource = mode2D === 'skeletal' && molText
++    ? {key: selectedMol, mol: molText, draft: window.MulerDraft || null} : null;
+   try {
+     if (molText && typeof jsmeNomeclatureApplet !== "undefined" && jsmeNomeclatureApplet &&
+         typeof jsmeNomeclatureApplet.readMolFile === "function") {
+@@ -3080,8 +3087,224 @@
+ }
+ 
+ // ── fLoadMol2D ────────────────────────────────────────────────────────────
++
++// Pure V2000 display transform. Topology, atom order, stereo fields and z stay
++// unchanged. A proper rotation preserves the authored layout wherever possible.
++// BEGIN SKELETAL GEOMETRY
++function fSkeletalLayoutMol(mol, chain, esterFragments = null) {
++  const unchanged = {mol, rotation: 0, repairs: [], skipped: []};
++  if (typeof mol !== "string" || !Array.isArray(chain)) return unchanged;
++  const lines = mol.split(/\r?\n/), counts = lines[3] || "";
++  const n = Number(counts.slice(0, 3)), nb = Number(counts.slice(3, 6));
++  if (!counts.includes("V2000") || !(n > 0) || !(nb >= 0) ||
++      lines.length < 4 + n + nb) return unchanged;
++  const points = lines.slice(4, 4+n).map(l => [Number(l.slice(0,10)), Number(l.slice(10,20))]);
++  const types = lines.slice(4, 4+n).map(l => l.slice(31,34).trim());
++  if (points.some(p => !p.every(Number.isFinite))) return unchanged;
++  const parent = chain.map(i => i-1);
++  if (new Set(parent).size !== parent.length || parent.some(i =>
++      !Number.isInteger(i) || i < 0 || i >= n || types[i] !== 'C')) return unchanged;
++  const bonds = lines.slice(4+n,4+n+nb).map(l =>
++    [Number(l.slice(0,3))-1, Number(l.slice(3,6))-1, Number(l.slice(6,9))]);
++  if (bonds.some(([a,b,o]) => !Number.isInteger(a) || !Number.isInteger(b) ||
++      a < 0 || b < 0 || a >= n || b >= n || a === b || !(o > 0))) return unchanged;
++  const adj = points.map(() => []), sp = new Set();
++  bonds.forEach(([a,b,o]) => {
++    adj[a].push(b); adj[b].push(a);
++    if (o === 3) { sp.add(a); sp.add(b); }
++  });
++  function turn(ids, pivot, angle) {
++    const co = Math.cos(angle), si = Math.sin(angle);
++    for (const i of ids) {
++      const x = points[i][0]-pivot[0], y = points[i][1]-pivot[1];
++      points[i] = [pivot[0]+x*co-y*si, pivot[1]+x*si+y*co];
++    }
++  }
++  function wrap(angle) { return Math.atan2(Math.sin(angle), Math.cos(angle)); }
++  function cross(p,a,b,c) {
++    return (p[b][0]-p[a][0])*(p[c][1]-p[a][1])-(p[b][1]-p[a][1])*(p[c][0]-p[a][0]);
++  }
++  function crosses(p,a,b,c,d) {
++    return cross(p,a,b,c)*cross(p,a,b,d) < -1e-10 &&
++      cross(p,c,d,a)*cross(p,c,d,b) < -1e-10;
++  }
++  function atomBondDistance(p,i,a,b) {
++    const dx=p[b][0]-p[a][0], dy=p[b][1]-p[a][1], length=dx*dx+dy*dy;
++    const t=length ? Math.max(0,Math.min(1,
++      ((p[i][0]-p[a][0])*dx+(p[i][1]-p[a][1])*dy)/length)) : 0;
++    return Math.hypot(p[i][0]-p[a][0]-t*dx,p[i][1]-p[a][1]-t*dy);
++  }
++  function safeRepair(previous) {
++    const lengths=bonds.map(([a,b]) => Math.hypot(previous[a][0]-previous[b][0],previous[a][1]-previous[b][1])).sort((a,b)=>a-b);
++    const unit=lengths[Math.floor(lengths.length/2)] || 1;
++    const clearance=unit*0.45;
++    const linked=new Set(bonds.map(([a,b]) => [Math.min(a,b),Math.max(a,b)].join(',')));
++    for (let a=0; a<n; a++) for (let b=0; b<a; b++) {
++      if (linked.has([b,a].join(','))) continue;
++      const old=Math.hypot(previous[a][0]-previous[b][0],previous[a][1]-previous[b][1]);
++      const now=Math.hypot(points[a][0]-points[b][0],points[a][1]-points[b][1]);
++      if (now < clearance && now < old-1e-6) return false;
++    }
++    // Strict crossings miss endpoint-on-bond and collinear contacts. Test
++    // every nonincident atom against each segment too, with bond-scaled space.
++    for (const [a,b] of bonds) for (let i=0; i<n; i++) {
++      if (i===a || i===b) continue;
++      const old=atomBondDistance(previous,i,a,b), now=atomBondDistance(points,i,a,b);
++      if (now < unit*0.12 && now < old-1e-6) return false;
++    }
++    for (let i=0; i<bonds.length; i++) for (let j=0; j<i; j++) {
++      const [a,b]=bonds[i], [c,d]=bonds[j];
++      if (a===c || a===d || b===c || b===d) continue;
++      if (crosses(points,a,b,c,d) && !crosses(previous,a,b,c,d)) return false;
++    }
++    return true;
++  }
++  const all = points.map((_,i) => i), repairs = [], skipped = [];
++  // A bent, degree-two sp carbon needs a local angle repair; global rotation
++  // cannot fix it. Only move a whole acyclic side, retaining all bond lengths
++  // and every other local angle. Never tear apart a ring or reflect a fragment.
++  for (const center of sp) {
++    if (types[center] !== 'C' || adj[center].length !== 2) continue;
++    const sides = adj[center].map(start => {
++      const seen = new Set([center]), ids = [], todo = [start];
++      while (todo.length) {
++        const i = todo.pop(); if (seen.has(i)) continue;
++        seen.add(i); ids.push(i);
++        adj[i].forEach(j => { if (!seen.has(j)) todo.push(j); });
++      }
++      return {start, ids};
++    });
++    // Prefer the side outside the numbered parent; otherwise its downstream
++    // side, so corrections propagate from C1 towards the end of the chain.
++    sides.sort((a,b) => {
++      const ia = parent.indexOf(a.start), ib = parent.indexOf(b.start);
++      return (ia < 0 ? -1 : 0)-(ib < 0 ? -1 : 0) || ib-ia || a.ids.length-b.ids.length;
++    });
++    const moving = sides[0], fixed = adj[center].find(i => i !== moving.start);
++    const c = points[center], a = points[moving.start], b = points[fixed];
++    if (Math.hypot(a[0]-c[0],a[1]-c[1]) < 1e-8 ||
++        Math.hypot(b[0]-c[0],b[1]-c[1]) < 1e-8) continue;
++    const angle = wrap(Math.atan2(b[1]-c[1],b[0]-c[0])+Math.PI-
++      Math.atan2(a[1]-c[1],a[0]-c[0]));
++    if (Math.abs(angle) < Math.PI/3600) continue; // <=0.05 degree input rounding
++    if (moving.ids.includes(fixed)) { skipped.push(center+1); continue; }
++    const previous=points.map(p=>p.slice());
++    turn(moving.ids, c, angle);
++    if (!safeRepair(previous)) {
++      previous.forEach((p,i)=>{ points[i]=p; });
++      skipped.push(center+1); continue;
++    }
++    repairs.push({atom: center+1, degrees: angle*180/Math.PI});
++  }
++  function bounds(ids, angle) {
++    const co = Math.cos(angle), si = Math.sin(angle);
++    const xs = ids.map(i => points[i][0]*co-points[i][1]*si);
++    const ys = ids.map(i => points[i][0]*si+points[i][1]*co);
++    return {width: Math.max(...xs)-Math.min(...xs), height: Math.max(...ys)-Math.min(...ys)};
++  }
++  const before = parent.length ? bounds(parent,0) : {height:0};
++  let best = null;
++  // Minimum-height strip: an optimum is parallel to an edge of the parent's
++  // convex hull. Pair directions include those edges, without a hull dependency.
++  // Degenerate/single-C parents keep their existing orientation.
++  if (parent.length >= 2) {
++    const angles = [0];
++    for (let i=0; i<parent.length; i++) for (let j=0; j<i; j++) {
++      const a=points[parent[j]], b=points[parent[i]];
++      if (Math.hypot(b[0]-a[0],b[1]-a[1]) > 1e-8) angles.push(-Math.atan2(b[1]-a[1],b[0]-a[0]));
++    }
++    for (let angle of angles) {
++      const first=points[parent[0]], last=points[parent[parent.length-1]];
++      const dx=(last[0]-first[0])*Math.cos(angle)-(last[1]-first[1])*Math.sin(angle);
++      if (dx < -1e-8) angle += Math.PI;
++      angle=wrap(angle);
++      const box=bounds(parent,angle), whole=bounds(all,angle);
++      const score=[box.height, whole.height, Math.abs(angle)];
++      const better=!best || score.some((v,i) =>
++        score.slice(0,i).every((x,j) => Math.abs(x-best.score[j]) < 1e-6) && v < best.score[i]-1e-6);
++      if (better) best={angle,score};
++    }
++  }
++  let angle=best ? best.angle : 0;
++  // Ester display convention takes precedence over C1-left progression.
++  // Choose the half-turn inside this same pipeline, retaining every local
++  // angle/length and its repair safeguards. Naming/numbering are unchanged.
++  if (esterFragments) {
++    const groups = [esterFragments.acidFrag, esterFragments.alcoholFrag];
++    if (groups.every(ids => Array.isArray(ids) && ids.length &&
++        ids.every(i => Number.isInteger(i) && i >= 0 && i < n && types[i] === 'C'))) {
++      const mean = ids => ids.reduce((sum,i) => sum +
++        points[i][0]*Math.cos(angle)-points[i][1]*Math.sin(angle),0)/ids.length;
++      if (mean(groups[0]) > mean(groups[1]) + 1e-6) angle=wrap(angle+Math.PI);
++    }
++  }
++  turn(all,[0,0],angle);
++  // Center coordinates of the complete molecule, not just its parent. The
++  // final SVG fit separately includes the actual rendered labels and strokes.
++  const cx=(Math.min(...points.map(p=>p[0]))+Math.max(...points.map(p=>p[0])))/2;
++  const cy=(Math.min(...points.map(p=>p[1]))+Math.max(...points.map(p=>p[1])))/2;
++  for (let i=0; i<n; i++) {
++    const x=(points[i][0]-cx).toFixed(4), y=(points[i][1]-cy).toFixed(4);
++    if (x.length > 10 || y.length > 10) return unchanged;
++    lines[4+i]=x.padStart(10)+y.padStart(10)+lines[4+i].slice(20);
++  }
++  return {mol:lines.join('\n'), rotation:angle*180/Math.PI, repairs, skipped,
++    parentHeightBefore:before.height, parentHeightAfter:parent.length ? bounds(parent,0).height : 0};
++}
++// END SKELETAL GEOMETRY
+ 
++function fApplySkeletalLayout() {
++  if (mode2D !== 'skeletal' || !skeletalLayoutSource ||
++      skeletalLayoutSource.key !== selectedMol ||
++      (skeletalLayoutSource.draft || null) !== (window.MulerDraft || null)) return;
++  const key=mainChainAtomsList.join(',');
++  if (skeletalLayoutApplied === key) return;
++  const fragments = fIsSingleEster() &&
++    fIsAcyclicSaturatedMonoesterGraph(atomConnectivityList,allAtomsTypeList,bondList)
++      ? esterInfo : null;
++  const layout=fSkeletalLayoutMol(skeletalLayoutSource.mol,mainChainAtomsList,fragments);
++  myMol2D=layout.mol;
++  jsmeNomeclatureApplet.readMolFile(myMol2D);
++  jsmeNomeclatureApplet.setMolecularAreaScale(molZoom2D);
++  if (jsmeNomeclatureAppletORGNL) {
++    jsmeNomeclatureAppletORGNL.readMolFile(myMol2D);
++    jsmeNomeclatureAppletORGNL.setMolecularAreaScale(molZoom2D);
++  }
++  skeletalLayoutApplied=key;
++}
++
++// School expanded form: terminal formyl H left of C for the requested ester.
++// Start from the saved string each load; only this H's transient XY changes.
++function fFormylHydrogenLeftMol(mol) {
++  if (selectedMol !== 'tert_butyl_methanoate' || typeof mol !== 'string') return mol;
++  const lines=mol.split('\n'), n=Number((lines[3] || '').slice(0,3));
++  const nb=Number((lines[3] || '').slice(3,6));
++  if (!(lines[3] || '').includes('V2000') || !(n > 0) || !(nb > 0)) return mol;
++  const atoms=lines.slice(4,4+n).map(l => ({x:Number(l.slice(0,10)),
++    y:Number(l.slice(10,20)), type:l.slice(31,34).trim()}));
++  const bonds=lines.slice(4+n,4+n+nb).map(l =>
++    [Number(l.slice(0,3))-1,Number(l.slice(3,6))-1,Number(l.slice(6,9))]);
++  for (const [a,b,order] of bonds) {
++    if (order !== 2 || !atoms[a] || !atoms[b]) continue;
++    const carbon=atoms[a].type === 'C' && atoms[b].type === 'O' ? a :
++      atoms[b].type === 'C' && atoms[a].type === 'O' ? b : -1;
++    if (carbon < 0) continue;
++    const hs=bonds.filter(e => e[2] === 1 && (e[0] === carbon || e[1] === carbon))
++      .map(e => e[0] === carbon ? e[1] : e[0]).filter(i => atoms[i]?.type === 'H');
++    if (hs.length !== 1) return mol;
++    const h=hs[0], c=atoms[carbon], length=Math.hypot(atoms[h].x-c.x,atoms[h].y-c.y);
++    if (!(length > 0) || !Number.isFinite(length)) return mol;
++    const x=(c.x-length).toFixed(4), y=c.y.toFixed(4);
++    if (x.length > 10 || y.length > 10) return mol;
++    lines[4+h]=x.padStart(10)+y.padStart(10)+lines[4+h].slice(20);
++    return lines.join('\n');
++  }
++  return mol;
++}
++
+ function fLoadMol2D() {
++  skeletalLayoutSource = null;
++  skeletalLayoutApplied = null;
+   const selectedExample = nameExamples[selectedMol];
+   if (!selectedExample) {
+     myMol2D = null;
+@@ -3129,8 +3352,8 @@
+       myMol2D = fMakeAnnotatedSkeletal(selectedExample.structure2D_Condensed);
+       break;
+     case "expanded":
+-      rawMol2D = selectedExample.structure2D_Expanded;
+-      myMol2D = fMakeAnnotatedSkeletal(selectedExample.structure2D_Expanded);
++      rawMol2D = fFormylHydrogenLeftMol(selectedExample.structure2D_Expanded);
++      myMol2D = fMakeAnnotatedSkeletal(rawMol2D);
+       break;
+     case "skeletal":
+       rawMol2D = selectedExample.structure2D_Skeletal;
+@@ -3153,6 +3376,9 @@
+     return;
+   }
+ 
++  if (mode2D === "skeletal" && myMol2D) {
++    skeletalLayoutSource = {key: selectedMol, mol: myMol2D};
++  }
+   jsmeNomeclatureApplet.readMolFile(myMol2D);
+   jsmeNomeclatureApplet.setMolecularAreaScale(molZoom2D);
+   if (jsmeNomeclatureAppletORGNL && rawMol2D) {
+@@ -3236,16 +3462,27 @@
+ 
+ // ── fAddHydrogens2SVG ─────────────────────────────────────────────────────
+ 
++function fRemainingImplicitCarbonHydrogens(atomIdx) {
++  const explicit=bondList.filter(([a,b,order]) => order === 1 &&
++    ((a-1 === atomIdx && allAtomsTypeList[b-1] === 'H') ||
++     (b-1 === atomIdx && allAtomsTypeList[a-1] === 'H'))).length;
++  const remaining=carbonHydrogens[atomIdx]-explicit;
++  if (!Number.isInteger(remaining) || remaining < 0 || remaining > 4) {
++    console.warn('Invalid display hydrogen count', selectedMol, atomIdx, remaining);
++    return null;
++  }
++  return remaining;
++}
++
+ function fAddHydrogens2SVG() {
+   let tmpTexts, tmpRects, tmpBonds;
+   let currText, currElement, currID, currHydrogensCount;
+-  let myLabel, myNo, rectX, textX, currString, newString, newStringElement;
++  let myLabel, myNo, currString, newString, newStringElement;
+   molSvg = MuSVG("#jsmeNomeclatureSVG svg");
+ 
+   tmpTexts = molSvg.selectAll("text");
+   tmpRects = molSvg.selectAll("rect");
+   tmpBonds = molSvg.selectAll("line");
+-  for (let i = 0; i < tmpBonds.length; i++) {}
+ 
+   for (let i = 0; i < tmpTexts.length; i++) {
+     currText = tmpTexts[i].attr("text");
+@@ -3254,7 +3491,8 @@
+     if (currText === "C") {
+       currID = currText + (i + 1);
+ 
+-      currHydrogensCount = carbonHydrogens[i];
++      currHydrogensCount = fRemainingImplicitCarbonHydrogens(i);
++      if (currHydrogensCount === null) continue;
+       switch (currHydrogensCount) {
+         case 0:
+           myLabel = "C";
+@@ -3263,9 +3501,6 @@
+         case 1:
+           myLabel = "CH";
+           myNo = "";
+-          tmpRects[i + 1].attr({ width: 470 });
+-          rectX = parseInt(tmpRects[i + 1].attr("x")) + 60;
+-          tmpRects[i + 1].attr({ x: rectX });
+           break;
+         case 4:
+           myLabel = "CH";
+@@ -3274,11 +3509,6 @@
+         default:
+           myLabel = "CH";
+           myNo = currHydrogensCount;
+-          tmpRects[i + 1].attr({ width: 600 });
+-          rectX = parseInt(tmpRects[i + 1].attr("x")) - 120;
+-          tmpRects[i + 1].attr({ x: rectX });
+-          textX = parseInt(tmpTexts[i].attr("x")) - 160;
+-          tmpTexts[i].attr({ x: textX });
+       }
+ 
+       currString = tmpTexts[i].toString();
+@@ -3294,6 +3524,46 @@
+       if (!newStringElement) continue;
+       tmpTexts[i].remove();
+       molSvg.select("g").append(newStringElement);
++      // Keep C at its original JSME anchor. Only the real label and a small
++      // uniform clearance may mask a bond; CHn must not shift the carbon.
++      const label = molSvg.select("#" + currID);
++      const owner = tmpTexts[i].node.getAttribute("data-namelecule-atom");
++      const backplate = owner ? molSvg.select(`rect[data-namelecule-atom="${owner}"][data-namelecule-role="backplate"]`) : tmpRects[i + 1];
++      if (label && backplate) {
++        if (selectedMol === 'tert_butyl_methanoate' && fIsSingleEster() &&
++            i === esterInfo.carbonylC && currHydrogensCount === 1) {
++          // H precedes C, while C keeps the native atom anchor.
++          const carbon=label.node.firstElementChild, hydrogen=carbon?.nextElementSibling;
++          if (carbon && hydrogen) {
++            const x=Number(label.attr('x'));
++            const pad=parseFloat(label.attr('font-size'))*.06;
++            hydrogen.setAttribute('x',x-hydrogen.getComputedTextLength()-pad);
++            carbon.setAttribute('x',x);
++            label.node.insertBefore(hydrogen,carbon);
++          }
++        }
++        const bounds = label.node.getBBox();
++        const fontSize = parseFloat(label.attr("font-size"));
++        const padding = Number.isFinite(fontSize) && fontSize > 0 ? fontSize * 0.06 : 20;
++        // In acid condensed drawings a vertical bond below C must not stop
++        // at the lower edge of the adjacent H subscript's rectangular mask.
++        const carbon = label.node.firstElementChild;
++        if (mode2D === "condensed" && functionalGroupObj && functionalGroupObj.carboxylicAcid && carbon &&
++            (atomConnectivityList[i] || []).some(nb =>
++              allAtomsTypeList[nb] === "C" && tmpTexts[nb] &&
++              Math.abs(parseFloat(tmpTexts[nb].attr("x")) - parseFloat(label.attr("x"))) < 0.01 &&
++              parseFloat(tmpTexts[nb].attr("y")) > parseFloat(label.attr("y")) + 0.01)) {
++          const carbonBounds = carbon.getBBox();
++          bounds.height = carbonBounds.y + carbonBounds.height - bounds.y;
++        }
++        if ([bounds.x, bounds.y, bounds.width, bounds.height].every(Number.isFinite) &&
++            bounds.width > 0 && bounds.height > 0) {
++          backplate.attr({
++            x: bounds.x - padding, y: bounds.y - padding,
++            width: bounds.width + 2 * padding, height: bounds.height + 2 * padding
++          });
++        }
++      }
+     } else {
+       currString = tmpTexts[i].toString();
+       newStringElement = MuSVG.parse(currString);
+@@ -3361,6 +3631,16 @@
+   includeHydrogens = false,
+ ) {
+   const atomTextMap = {};
++  // The native producer supplies actual atom IDs, even when skeletal C is omitted.
++  const owned = molSvg.selectAll('text[data-namelecule-atom][data-namelecule-role="label"]');
++  if (owned.length) {
++    owned.forEach(el => {
++      const index = Number(el.node.getAttribute('data-namelecule-atom')) - 1;
++      if (Number.isInteger(index) && index >= 0 &&
++          (includeHydrogens || allAtomsTypeList[index] !== 'H')) atomTextMap[index] = el;
++    });
++    return atomTextMap;
++  }
+   const textEls = molSvg.selectAll("text");
+   const skipIndices = fGetCompactedAtomSkipSet(includeCompactedAtoms);
+ 
+@@ -3386,6 +3666,16 @@
+   includeHydrogens = false,
+ ) {
+   const atomRectMap = {};
++  // The native producer supplies actual atom IDs, even when skeletal C is omitted.
++  const owned = molSvg.selectAll('rect[data-namelecule-atom][data-namelecule-role="backplate"]');
++  if (owned.length) {
++    owned.forEach(el => {
++      const index = Number(el.node.getAttribute('data-namelecule-atom')) - 1;
++      if (Number.isInteger(index) && index >= 0 &&
++          (includeHydrogens || allAtomsTypeList[index] !== 'H')) atomRectMap[index] = el;
++    });
++    return atomRectMap;
++  }
+   const rectEls = molSvg.selectAll("rect");
+   const skipIndices = fGetCompactedAtomSkipSet(includeCompactedAtoms);
+   let rectIdx = 1;
+@@ -3461,6 +3751,10 @@
+     "y",
+     "font-size",
+     "font-family",
++    "font-weight",
++    "font-style",
++    "data-namelecule-atom",
++    "data-namelecule-role",
+     "text-anchor",
+     "fill",
+     "stroke",
+@@ -3908,66 +4202,11 @@
+ }
+ 
+ function fCollectHighlightRectsNearText(textEls) {
+-  const collectedRects = [];
+-  const seenRects = new Set();
+-  const rectEls = molSvg.selectAll("rect");
+-
+-  for (let i = 0; i < textEls.length; i++) {
+-    const textEl = textEls[i];
+-    if (!textEl || !textEl.node || !textEl.node.getBBox) {
+-      continue;
+-    }
+-
+-    let textBBox;
+-    try {
+-      textBBox = textEl.node.getBBox();
+-    } catch (e) {
+-      continue;
+-    }
+-
+-    const padX = Math.max(textBBox.width * 0.7, 160);
+-    const padY = Math.max(textBBox.height * 0.6, 120);
+-    const minX = textBBox.x - padX;
+-    const maxX = textBBox.x + textBBox.width + padX;
+-    const minY = textBBox.y - padY;
+-    const maxY = textBBox.y + textBBox.height + padY;
+-
+-    for (let r = 0; r < rectEls.length; r++) {
+-      const rectEl = rectEls[r];
+-      if (!rectEl || !rectEl.node) {
+-        continue;
+-      }
+-      if (seenRects.has(rectEl.node)) {
+-        continue;
+-      }
+-
+-      const rectX = parseFloat(rectEl.attr("x"));
+-      const rectY = parseFloat(rectEl.attr("y"));
+-      const rectWidth = parseFloat(rectEl.attr("width"));
+-      const rectHeight = parseFloat(rectEl.attr("height"));
+-      if (
+-        isNaN(rectX) ||
+-        isNaN(rectY) ||
+-        isNaN(rectWidth) ||
+-        isNaN(rectHeight)
+-      ) {
+-        continue;
+-      }
+-
+-      const rectMaxX = rectX + rectWidth;
+-      const rectMaxY = rectY + rectHeight;
+-      const overlaps =
+-        rectMaxX >= minX && rectX <= maxX && rectMaxY >= minY && rectY <= maxY;
+-      if (!overlaps) {
+-        continue;
+-      }
+-
+-      seenRects.add(rectEl.node);
+-      collectedRects.push(rectEl);
+-    }
+-  }
+-
+-  return collectedRects;
++  // Ownership, never proximity: a neighboring CH3 must keep its own backplate.
++  const owners = new Set(textEls.filter(Boolean).map(el =>
++    el.node.getAttribute("data-namelecule-atom")).filter(Boolean));
++  return molSvg.selectAll("rect[data-namelecule-atom]").filter(el =>
++    owners.has(el.node.getAttribute("data-namelecule-atom")));
+ }
+ 
+ function fGetCompactLabelNumberX(textEl, labelKey, defaultOffsetX) {
+@@ -4207,10 +4446,10 @@
+     return false;
+   }
+   const normalized = fillValue.replace(/\s+/g, "").toLowerCase();
+-  if (normalized.indexOf("79dc6d") !== -1) {
++  if (normalized.indexOf("d8eedc") !== -1 || normalized.indexOf("79dc6d") !== -1) {
+     return true;
+   }
+-  if (normalized.indexOf("121,220,109") !== -1) {
++  if (normalized.indexOf("216,238,220") !== -1 || normalized.indexOf("121,220,109") !== -1) {
+     return true;
+   }
+   return false;
+@@ -4861,6 +5100,14 @@
+       replacements[i].geometryHint,
+     );
+     if (newTextEl && replacements[i].anchorIdx >= 0) {
++      const owner = String(replacements[i].anchorIdx + 1);
++      newTextEl.node.setAttribute("data-namelecule-atom", owner);
++      newTextEl.node.setAttribute("data-namelecule-role", "label");
++      const rect = rectEl || MuSVG(newTextEl.node.previousElementSibling);
++      if (rect && rect.node.localName === "rect") {
++        rect.node.setAttribute("data-namelecule-atom", owner);
++        rect.node.setAttribute("data-namelecule-role", "backplate");
++      }
+       compactNumberingLabelMap[replacements[i].anchorIdx] =
+         replacements[i].labelKey;
+     }
+@@ -4939,8 +5186,77 @@
+ 
+ function fMarkExpandedHydrogens() {
+   fWrapStandaloneHydrogenTextsAsTspan();
++}
++
++function fRefreshLabelBackplates() {
++  const svg = document.querySelector("#jsmeNomeclatureSVG svg");
++  if (!svg || !svg.getClientRects().length) return;
++  const metrics = window.NameleculeLabelMetrics;
++  if (!metrics) throw new Error("Label metrics service unavailable");
++  for (const text of svg.querySelectorAll('text:not([id^="number"])')) {
++    if (!text.hasAttribute("data-namelecule-atom")) throw new Error("Unowned 2D label");
++  }
++  const owners=new Set();
++  for (const text of svg.querySelectorAll('text[data-namelecule-role="label"]')) {
++    if (text.hasAttribute('data-hidden-carbon-h')) continue;
++    const owner = text.getAttribute('data-namelecule-atom');
++    const index=Number(owner)-1;
++    if (!Number.isInteger(index) || index<0 || index>=allAtomsTypeList.length || owners.has(owner))
++      throw new Error("Invalid or duplicate 2D atom owner");
++    owners.add(owner);
++    const rect = svg.querySelector(`rect[data-namelecule-atom="${owner}"][data-namelecule-role="backplate"]`);
++    if (!rect) throw new Error("Missing owned label backplate: " + owner);
++    const box = metrics.element(text), matrix = text.getScreenCTM();
++    if (!box || !matrix) throw new Error("Label bounds unavailable: " + owner);
++    const scale = Math.hypot(matrix.a,matrix.b), font = parseFloat(getComputedStyle(text).fontSize);
++    if (!(scale > 0 && font > 0)) continue;
++    // Single-element labels retain the approved centered square. Compound
++    // OH/NH2 labels need their complete measured ink bounds, including H/tails.
++    const singleElement = text.textContent.replace(/\s+/g, "") === allAtomsTypeList[index];
++    if (svg.dataset.alkaneFixedCCScale && text.dataset.fixedCCAtomX && singleElement) {
++      const half=font*.52, x=Number(text.dataset.fixedCCAtomX), y=Number(text.dataset.fixedCCAtomY);
++      for (const [key,value] of Object.entries({x:x-half,y:y-half,width:2*half,height:2*half,rx:0,ry:0})) rect.setAttribute(key,value);
++      continue;
++    }
++    const line=svg.querySelector('line'), bondWidth=line ? parseFloat(line.getAttribute('stroke-width')) || 0 : 0;
++    const padding=Math.max(font*.06,Math.min(.6/scale,font*.18)) + bondWidth/2;
++    for (const [key,value] of Object.entries({x:box.left-padding,y:box.top-padding,
++        width:box.right-box.left+2*padding,height:box.bottom-box.top+2*padding,rx:0,ry:0})) rect.setAttribute(key,value);
++  }
+ }
+ 
++// Reject a drawing whose visible graph has lost a complete bond primitive.
++// Interval clipping is exact for our rectangular backplates, not pixel sampling.
++function fValidate2DBondVisibility() {
++  const svg=document.querySelector("#jsmeNomeclatureSVG svg");
++  if (!svg || !svg.getClientRects().length) return;
++  const visible=el=>!el.hasAttribute("data-hidden-carbon-h") &&
++    getComputedStyle(el).display!=="none" && getComputedStyle(el).visibility!=="hidden";
++  const masks=[...svg.querySelectorAll('rect[data-namelecule-role="backplate"]')].filter(visible).map(r=>({
++    inverse:r.getScreenCTM()?.inverse(), x:+r.getAttribute("x"),y:+r.getAttribute("y"),
++    width:+r.getAttribute("width"),height:+r.getAttribute("height")
++  })).filter(r=>r.inverse);
++  for (const line of [...svg.querySelectorAll("line")].filter(visible)) {
++    const m=line.getScreenCTM();if (!m) continue;
++    const a=new DOMPoint(+line.getAttribute("x1"),+line.getAttribute("y1")).matrixTransform(m);
++    const b=new DOMPoint(+line.getAttribute("x2"),+line.getAttribute("y2")).matrixTransform(m);
++    if (Math.hypot(b.x-a.x,b.y-a.y)<.01) continue;
++    const intervals=[];
++    for (const r of masks) {
++      const p=a.matrixTransform(r.inverse),q=b.matrixTransform(r.inverse);
++      let lo=0,hi=1;
++      for (const [v,d,min,max] of [[p.x,q.x-p.x,r.x,r.x+r.width],[p.y,q.y-p.y,r.y,r.y+r.height]]) {
++        if (Math.abs(d)<1e-9) {if(v<min || v>max) {hi=-1;break;}}
++        else {const t=(min-v)/d,u=(max-v)/d;lo=Math.max(lo,Math.min(t,u));hi=Math.min(hi,Math.max(t,u));}
++      }
++      if (lo<=hi) intervals.push([lo,hi]);
++    }
++    intervals.sort((a,b)=>a[0]-b[0]);let covered=0;
++    for (const [lo,hi] of intervals) {if(lo>covered+1e-7)break;covered=Math.max(covered,hi);}
++    if (covered>=1-1e-7) throw new Error("2D bond fully hidden by label backplates");
++  }
++}
++
+ // ── fMolHasSpCarbon ────────────────────────────────────────────────────────
+ // True when the parsed 2D structure contains at least one sp-hybridised
+ // carbon: a carbon in a triple bond (C≡C or C≡N) or in cumulated double bonds
+@@ -5016,12 +5332,341 @@
+     }
+     label.remove();
+   });
++}
++
++// Match explicit H by its actual chemical bond's native SVG endpoints and
++// paired backplate, never by text ordinal (skeletal carbons have no text).
++// Keep hidden nodes in the DOM so existing bond/atom indices stay stable.
++function fHideEsterSkeletalCarbonHydrogens() {
++  if (mode2D !== 'skeletal' || !fIsSingleEster()) return;
++  const svg=document.querySelector('#jsmeNomeclatureSVG svg');
++  if (!svg) return;
++  const lines=[...svg.querySelectorAll('line')];
++  for (let i=0;i<bondList.length;i++) {
++    const [a,b,order]=bondList[i], ta=allAtomsTypeList[a-1], tb=allAtomsTypeList[b-1];
++    if (order !== 1 || !((ta === 'C' && tb === 'H') || (ta === 'H' && tb === 'C'))) continue;
++    const line=lines[svgBondList[i]-1];
++    if (!line) continue;
++    const ends=[1,2].map(k => [Number(line.getAttribute('x'+k)),Number(line.getAttribute('y'+k))]);
++    const matches=[...svg.querySelectorAll('text')].filter(label => {
++      if (label.textContent.trim() !== 'H') return false;
++      const r=label.previousElementSibling;
++      if (!r || r.localName !== 'rect' || !r.hasAttribute('rx')) return false;
++      const x=Number(r.getAttribute('x')), y=Number(r.getAttribute('y'));
++      const w=Number(r.getAttribute('width')), h=Number(r.getAttribute('height'));
++      return ends.some(p => p[0]>=x && p[0]<=x+w && p[1]>=y && p[1]<=y+h);
++    });
++    if (matches.length !== 1) {
++      console.warn('Unmatched skeletal ester H',selectedMol,ta === 'H' ? a : b);
++      continue;
++    }
++    for (const el of [line,matches[0],matches[0].previousElementSibling]) {
++      el.setAttribute('visibility','hidden');
++      el.setAttribute('data-hidden-carbon-h','true');
++    }
++  }
+ }
+ 
+ // ── fUpdateSVG ────────────────────────────────────────────────────────────
++
++// Use the same viewport policy for every 2D representation. Measure molecular
++// bonds/labels only: backgrounds and highlight shapes must not affect centering.
++// Reserve numbering room up front so its animation never moves the drawing.
++// A shared library frame prevents molecule-by-molecule label magnification.
++// Cache geometry only; the pixel size is recomputed for each visible viewport.
++let uniform2DLibraryFrame = null;
++function fPrepareFixedCCAlkanePrototype() {
++  const esterScale = ["ethanoic_methyl_ester", "propanoic_methyl_ester", "methyl_methanoate", "isopropyl_ethanoate", "sec_butyl_ethanoate", "butyl_propanoate", "tert_butyl_methanoate", "isobutyl_2_methylpropanoate", "isopropyl_2_3_dimethylbutanoate"].includes(selectedMol);
++  const carbonylScale = ["ethanal", "butanal", "propanal", "propynal", "pentanal", "methanal", "methyl_2_propanal", "dimethyl_2_3_butanal", "ethyl_2_methyl_3_pentanal", "ethyl_4_isopropyl_3_methyl_2_hexanal", "propenal", "methyl_2_propenal", "propanedial", "methyl_3_penten_2_dial", "ethyl_4_penten_4_yn_2_al", "isopropyl_2_buten_2_dial", "ethyl_2_methyl_3_hexen_2_yn_4_dial", "penten_1_one_3", "pentanone_2", "pentyn_4_one_2", "butanone", "propanone", "pentanone_3", "dimethyl_2_4_pentanone_3", "trimethyl_3_4_4_pentanone_2", "diethyl_4_5_dimethyl_2_6_heptanone_3", "penten_1_yn_4_one_3", "dimethyl_4_5_hexen_5_yn_1_one_3", "methyl_6_hepten_3_dione_2_5", "ethyl_3_methyl_4_octen_3_yn_5_dione_2_7", "isopropyl_4_dimethyl_3_6_octen_3_yn_7_dione_2_5", "methanoicacid", "propionicacid", "butanoic_acid", "propenoic_acid", "propanedioic_acid", "hydroxypropanoic_acid_2", "Oxopropanoic_acid", "aminobutanoic_acid_3", "pentanoic_acid", "oxobutanoic_acid", "dihydroxybutanedioic_acid_2_3", "methyl_2_propanoic_acid", "dimethyl_2_2_propanoic_acid", "ethyl_2_methyl_3_pentanoic_acid", "ethyl_3_isopropyl_2_dimethyl_4_5_hexanoic_acid", "methyl_2_propenoic_acid", "ethyl_2_methyl_3_penten_2_yn_4_oic_acid", "ethyl_3_isopropyl_2_dimethyl_4_5_hexadien_2_4_dioic_acid", "ethyl_2_isopropyl_3_dimethyl_6_6_hepten_2_yn_4_dioic_acid", "penten_2_yn_4_oic_acid", "hexen_2_yn_4_dioic_acid"].includes(selectedMol);
++  const etherScale = ["dimethylether", "ethyl_methyl_ether", "diethyl_ether",
++    "isopropyl_methyl_ether", "methyl_propyl_ether", "ethyl_propyl_ether",
++    "ethyl_isopropyl_ether", "butyl_methyl_ether", "ethyl_sec_butyl_ether",
++    "isobutyl_isopropyl_ether", "tert_butyl_isopropyl_ether"].includes(selectedMol);
++  if (mode2D !== "expanded" ||
++      (!etherScale && !carbonylScale && !esterScale && !["methane", "ethane", "propane", "butane", "pentane",
++        "methyl_2_pentane", "dimethyl_2_3_butane", "ethyl_3_dimethyl_2_5_hexane",
++        "ethene", "propene", "butene_1", "butene_2", "methyl_2_propene",
++        "methyl_3_butene_1", "ethyl_3_dimethyl_2_5_hexene_2",
++        "propyne", "ethyne", "butyne_1", "butyne_2", "methyl_3_butyne_1",
++        "methyl_3_pentyne_1", "methyl_4_pentyne_2", "ethyl_4_dimethyl_3_5_heptyne_1",
++        "propadiene", "pentadiene_1_3", "butadiene_1_3", "butadiene_1_2",
++        "pentadiene_1_4", "methyl_3_pentadiene_1_3", "dimethyl_2_3_pentadiene_1_3",
++        "ethyl_3_dimethyl_4_5_hexadiene_1_4",
++        "penten_3_yne_1", "hexen_1_yne_4", "buten_1_yne_3", "hexen_2_yne_4",
++        "methyl_2_buten_1_yne_3", "dimethyl_2_3_penten_1_yne_4",
++        "ethyl_4_dimethyl_2_3_hepten_2_yne_5",
++        "propanol_1", "penten_4_ol_2", "butanol_1", "butene_3_ol_2", "penten_2_ol_1", "propanediol_1_2", "propanetriol", "ethanol", "butanol_2", "methyl_4_pentanol_2", "dimethyl_2_2_pentanol_3", "methyl_2_propanediol_1_2", "methyl_3_buten_3_ol_2", "methyl_3_pentyn_4_ol_2", "methyl_4_penten_4_yn_2_ol_1", "ethyl_3_methyl_4_hexen_3_yn_5_ol_2", "isopropyl_4_dimethyl_3_5_heptanol_2"].includes(selectedMol))) return;
++  const svg = molSvg?.node;
++  if (!svg || svg.dataset.alkaneFixedCCScale) return;
++  const lines = [...svg.querySelectorAll("line")];
++  if (lines.length !== bondList.reduce((sum,bond)=>sum+bond[2],0)) return;
++  const anchors = new Map(), lengths = [], hydrogenLengths = [];
++  for (let i = 0; i < bondList.length; i++) {
++    const [a, b, order] = bondList[i];
++    if (![1,2,3].includes(order)) return;
++    // Multiple-bond strokes can be offset from their atom centers. Derive centers
++    // from single C-C/C-H bonds, using the actual bond-to-SVG primitive map.
++    // Prefer single-bond anchors. A cumulene center can have only double
++    // bonds; its missing anchor is resolved from validated stroke pairs below.
++    if (order > 1) continue;
++    const line = lines[svgBondList[i]-1];
++    if (!line) return;
++    const p = {x: Number(line.getAttribute("x1")), y: Number(line.getAttribute("y1"))};
++    const q = {x: Number(line.getAttribute("x2")), y: Number(line.getAttribute("y2"))};
++    if (![p.x, p.y, q.x, q.y].every(Number.isFinite)) return;
++    for (const [atom, point] of [[a - 1, p], [b - 1, q]]) {
++      const previous = anchors.get(atom);
++      if (previous && Math.hypot(previous.x - point.x, previous.y - point.y) > 0.01) return;
++      anchors.set(atom, point);
++    }
++    if ((allAtomsTypeList[a - 1] === "C" && allAtomsTypeList[b - 1] === "H") ||
++        (allAtomsTypeList[a - 1] === "H" && allAtomsTypeList[b - 1] === "C")) {
++      hydrogenLengths.push(Math.hypot(q.x - p.x, q.y - p.y));
++    }
++  }
++  if (anchors.size !== allAtomsTypeList.length) {
++    // Symmetric, parallel native double strokes identify their centerline.
++    // Validate both endpoints against every existing anchor before accepting
++    // missing centers. No atom or bond geometry is moved by this operation.
++    for (let i=0;i<bondList.length;i++) {
++      const [a,b,order]=bondList[i];
++      if (order!==2) continue;
++      const pair=lines.slice(svgBondList[i]-1,svgBondList[i]+1);
++      if (pair.length!==2) return;
++      const points=pair.map(line=>({
++        p:{x:Number(line.getAttribute("x1")),y:Number(line.getAttribute("y1"))},
++        q:{x:Number(line.getAttribute("x2")),y:Number(line.getAttribute("y2"))}
++      }));
++      if (points.some(v=>![v.p.x,v.p.y,v.q.x,v.q.y].every(Number.isFinite))) return;
++      const vectors=points.map(v=>({x:v.q.x-v.p.x,y:v.q.y-v.p.y}));
++      const lengths=vectors.map(v=>Math.hypot(v.x,v.y));
++      if (lengths.some(v=>!(v>0)) || Math.abs(lengths[0]-lengths[1])>2 ||
++          Math.abs(vectors[0].x*vectors[1].y-vectors[0].y*vectors[1].x)>lengths[0]*lengths[1]*.001 ||
++          vectors[0].x*vectors[1].x+vectors[0].y*vectors[1].y<=0) return;
++      for (const [atom,end] of [[a-1,"p"],[b-1,"q"]]) {
++        const point={x:(points[0][end].x+points[1][end].x)/2,
++          y:(points[0][end].y+points[1][end].y)/2};
++        const previous=anchors.get(atom);
++        // One native unit allows only the producer's integer rounding.
++        if (previous && Math.hypot(previous.x-point.x,previous.y-point.y)>1) return;
++        if (!previous) anchors.set(atom,point);
++      }
++    }
++  }
++  if (anchors.size !== allAtomsTypeList.length) return;
++  for (const [a,b] of bondList) {
++    const first=allAtomsTypeList[a-1], second=allAtomsTypeList[b-1];
++    // Normalized drawings share the same heavy-bond unit. C-O includes
++    // C=O, so methanal and methanoic acid also calibrate without any C-C.
++    if (!(first === "C" && second === "C") &&
++        !((etherScale || carbonylScale || esterScale) &&
++          ((first === "C" && second === "O") || (first === "O" && second === "C"))) &&
++        !(carbonylScale &&
++          ((first === "C" && second === "N") || (first === "N" && second === "C")))) continue;
++    const p=anchors.get(a-1),q=anchors.get(b-1);
++    lengths.push(Math.hypot(q.x-p.x,q.y-p.y));
++  }
++  // Methane has no C-C. Its C-H/font uses half the common C-C/font unit.
++  // This is a calibration value only; native atom anchors and bonds stay intact.
++  if (!lengths.length && selectedMol === "methane") {
++    lengths.push(...hydrogenLengths.map(length => length * 2));
++  }
++  if (!lengths.length || anchors.size !== allAtomsTypeList.length) return;
++  lengths.sort((a, b) => a - b);
++  // Original reference C-C/font 3.49, shortened by the approved 25%.
++  // The existing calibration/backplate/numbering pipeline is shared by the
++  // alkenes, alkynes and dienes; the historical dataset name stays for callers.
++  // Change label size around native atom anchors, never molecular geometry.
++  const font = lengths[Math.floor(lengths.length / 2)] / 2.6175;
++  if (!(font > 0)) return;
++  const context = document.createElement("canvas").getContext("2d");
++  if (!context) return;
++  const texts = fGetRenderedAtomTextMap(false, true), changes = [];
++  for (const [atom, anchor] of anchors) {
++    const label = texts[atom];
++    const symbol = allAtomsTypeList[atom];
++    const raw = label?.node.textContent.replace(/\s+/g, "");
++    if (!label || !(raw === symbol || (carbonylScale &&
++        ((symbol === "O" && ["OH", "HO"].includes(raw)) ||
++         (symbol === "N" && raw === "NH2"))))) return;
++    const originalFont = parseFloat(label.attr("font-size"));
++    const x = Number(label.attr("x")), y = Number(label.attr("y"));
++    if (!(originalFont > 0) || ![x, y].every(Number.isFinite)) return;
++    const style = getComputedStyle(label.node);
++    context.font = `${style.fontStyle} ${style.fontWeight} ${font}px ${style.fontFamily}`;
++    const ink = context.measureText(allAtomsTypeList[atom]);
++    const cx = (ink.actualBoundingBoxRight - ink.actualBoundingBoxLeft) / 2;
++    const cy = (ink.actualBoundingBoxAscent - ink.actualBoundingBoxDescent) / 2;
++    if (![cx, cy].every(Number.isFinite)) return;
++    const prefix = raw === "HO" ? context.measureText("H").width : 0;
++    // Keep implicit-H labels intact. Queue all changes, including numeric
++    // subscript offsets, so a later validation failure leaves the drawing intact.
++    const offsets = [];
++    for (const tspan of label.node.querySelectorAll("tspan[dy]")) {
++      const dy = tspan.getAttribute("dy");
++      if (/^-?\d+(?:\.\d+)?$/.test(dy))
++        offsets.push([tspan, String(Number(dy) * font / originalFont)]);
++    }
++    changes.push([label, {x: anchor.x - cx - prefix, y: anchor.y + cy,
++      "font-size": font + "px"}, anchor, offsets]);
++  }
++  changes.forEach(([label, attributes, anchor, offsets]) => {
++    label.attr(attributes);
++    offsets.forEach(([node, dy]) => node.setAttribute("dy", dy));
++    label.node.dataset.fixedCCAtomX = String(anchor.x);
++    label.node.dataset.fixedCCAtomY = String(anchor.y);
++  });
++  svg.dataset.alkaneFixedCCScale = String(font / 270);
++}
++
++function fGetUniform2DLibraryFrame() {
++  if (uniform2DLibraryFrame) return uniform2DLibraryFrame;
++  let spanX = 1, spanY = 1;
++  const inventory = window.MOL2D || {};
++  Object.values(inventory).forEach(function (forms) {
++    Object.values(forms).forEach(function (mol) {
++      if (typeof mol !== 'string' || !mol.trim()) return;
++      const lines = mol.split('\n'), counts = lines[3] || '';
++      const na = Number(counts.slice(0,3)), nb = Number(counts.slice(3,6));
++      if (!(na > 0)) return;
++      const atoms = lines.slice(4,4+na).map(l => ({
++        x:Number(l.slice(0,10)), y:Number(l.slice(10,20)), symbol:l.slice(31,34).trim()
++      }));
++      if (atoms.some(a => !Number.isFinite(a.x) || !Number.isFinite(a.y))) return;
++      const heavyLengths = [], allLengths = [];
++      lines.slice(4+na,4+na+nb).forEach(function (line) {
++        const a=atoms[Number(line.slice(0,3))-1], b=atoms[Number(line.slice(3,6))-1];
++        if (!a || !b) return;
++        const length=Math.hypot(b.x-a.x,b.y-a.y);
++        if (!(length > 0)) return;
++        allLengths.push(length);
++        if (a.symbol !== 'H' && b.symbol !== 'H') heavyLengths.push(length);
++      });
++      const lengths=(heavyLengths.length ? heavyLengths : allLengths).sort((a,b)=>a-b);
++      const unit=lengths.length ? lengths[Math.floor(lengths.length/2)] : 1;
++      spanX=Math.max(spanX,(Math.max(...atoms.map(a=>a.x))-Math.min(...atoms.map(a=>a.x)))/unit);
++      spanY=Math.max(spanY,(Math.max(...atoms.map(a=>a.y))-Math.min(...atoms.map(a=>a.y)))/unit);
++    });
++  });
++  // Native JSME uses up to ~3.7 em per heavy bond; reserve label/number margins.
++  uniform2DLibraryFrame = {width:spanX*4+5, height:spanY*4+5};
++  return uniform2DLibraryFrame;
++}
+ 
++function fFit2DSVG() {
++  const svg = document.querySelector("#jsmeNomeclatureSVG svg");
++  if (!svg || !svg.getClientRects().length) return;
++  try {
++    const rootMatrix = svg.getCTM();
++    if (!rootMatrix) return;
++    const inverse = rootMatrix.inverse();
++    let left = Infinity, top = Infinity, right = -Infinity, bottom = -Infinity;
++    svg.querySelectorAll("line, text, path").forEach(function (el) {
++      if (el.closest("defs") || (el.id || "").indexOf("number") === 0) return;
++      if (el.hasAttribute('data-hidden-carbon-h')) return;
++      const matrix = el.getCTM();
++      if (!matrix) return;
++      const box = el.getBBox();
++      const transform = inverse.multiply(matrix);
++      [[box.x, box.y], [box.x + box.width, box.y],
++       [box.x, box.y + box.height], [box.x + box.width, box.y + box.height]].forEach(function (xy) {
++        const p = svg.createSVGPoint();
++        p.x = xy[0]; p.y = xy[1];
++        const q = p.matrixTransform(transform);
++        left = Math.min(left, q.x); right = Math.max(right, q.x);
++        top = Math.min(top, q.y); bottom = Math.max(bottom, q.y);
++      });
++    });
++    // Single atoms and horizontal/vertical skeletal bonds are valid drawings.
++    if (![left, top, right, bottom].every(Number.isFinite)) return;
++    if (!svg.dataset.baseViewport) {
++      const box = svg.viewBox.baseVal;
++      svg.dataset.baseViewport = JSON.stringify([
++        box.width || svg.width.baseVal.value,
++        box.height || svg.height.baseVal.value,
++      ]);
++    }
++    const size = JSON.parse(svg.dataset.baseViewport);
++    if (!(size[0] > 0 && size[1] > 0)) return;
++    const viewport = svg.parentNode.getBoundingClientRect();
++    const aspect = viewport.width > 0 && viewport.height > 0
++      ? viewport.width / viewport.height : size[0] / size[1];
++    // Numbers are inserted in the first drawing group, whose coordinates
++    // JSME scales down. Convert their clearance into root SVG units too.
++    const numberGroup = svg.querySelector("g");
++    const numberMatrix = numberGroup && numberGroup.getCTM();
++    const numberTransform = numberMatrix ? inverse.multiply(numberMatrix) : null;
++    // Reserve numbering clearance without forcing the largest library drawing
++    // back to a smaller label size (all numbered forms are browser-checked).
++    const prototypeNumberScale = Number(svg.dataset.alkaneFixedCCScale) || 1;
++    const numberPaddingX = numberTransform
++      ? 350 * prototypeNumberScale * (Math.abs(numberTransform.a) + Math.abs(numberTransform.c)) : 0;
++    const numberPaddingY = numberTransform
++      ? 350 * prototypeNumberScale * (Math.abs(numberTransform.b) + Math.abs(numberTransform.d)) : 0;
++    const margin = Math.max(right - left, bottom - top) * 0.04;
++    const paddingX = Math.max(numberPaddingX, margin);
++    const paddingY = Math.max(numberPaddingY, margin);
++    let desiredWidth = size[0];
++    const label = svg.querySelector('text:not([id^="number"])');
++    if (label && viewport.width > 0 && viewport.height > 0) {
++      const frame=fGetUniform2DLibraryFrame();
++      const fontSize=parseFloat(getComputedStyle(label).fontSize);
++      const matrix=label.getCTM();
++      const local=matrix && inverse.multiply(matrix);
++      const fontInRoot=local && fontSize*Math.hypot(local.a,local.b);
++      const zoom=molZoom2D/MOL_ZOOM_DEFAULT;
++      // Main can request readable labels, with the bounds below fitting large
++      // drawings. Saved embedded hosts retain their existing common scale.
++      const pageScale=Number(document.documentElement.getAttribute("data-namelecule-2d-scale"));
++      const initialScale=Number.isFinite(pageScale) && pageScale > 0 ? pageScale : 1;
++      const pageFont=Number(document.documentElement.getAttribute("data-namelecule-2d-font-size"));
++      const pixels=Number.isFinite(pageFont) && pageFont > 0 ? pageFont*zoom
++        : Math.min(18,viewport.width/frame.width,viewport.height/frame.height)*zoom*1.15*initialScale;
++      if (fontInRoot > 0 && pixels > 0) {
++        desiredWidth=viewport.width*fontInRoot/pixels;
++        svg.dataset.uniformAtomFontPixels=String(pixels);
++      }
++    }
++    // Free editor input beyond the library frame still fits without clipping.
++    const width = Math.max(desiredWidth, right - left + paddingX * 2,
++      (bottom - top + paddingY * 2) * aspect);
++    const height = width / aspect;
++    svg.setAttribute("viewBox", [(left + right - width) / 2,
++      (top + bottom - height) / 2, width, height].join(" "));
++    svg.setAttribute("preserveAspectRatio", "xMidYMid meet");
++    svg.style.width = "100%";
++    svg.style.height = "100%";
++    // Font bounds depend on the final viewBox (including browser hinting).
++    fRefreshLabelBackplates();
++  } catch (eFit) {
++    /* Hidden/uninitialized drawings are fitted on the next visible render. */
++  }
++}
++
++// JSME labels collinear sp carbons even in its skeletal depiction. Its bond
++// lines already reach the atom centers; the label backplates mask those lines.
++// Remove the paired labels/backplates, keeping the separate atom/bond highlights.
++
+ function fUpdateSVG() {
++  try {
++    fBuildMoleculeSVG();
++    document.getElementById("jsmeNomeclatureSVG").removeAttribute("data-label-error");
++  } catch (error) {
++    // Never leave an obsolete molecule on screen after a failed redraw.
++    const host = document.getElementById("jsmeNomeclatureSVG");
++    host.replaceChildren();host.setAttribute("data-label-error", "true");
++    const status=document.createElement("p");status.setAttribute("role","status");
++    status.textContent="Η αναπαράσταση 2D δεν είναι διαθέσιμη. Δοκίμασε ξανά ή επίλεξε άλλη μορφή.";
++    host.appendChild(status);
++    console.warn("Namelecule 2D rendering unavailable", error);
++  }
++}
++
++function fBuildMoleculeSVG() {
+   if (!jsmeNomeclatureApplet) return;
++  // Stage 1 precedes native label layout. Stage 2 is fFit2DSVG below, after
++  // functional labels are finalized. Numbering/highlights reuse stable atom IDs.
++  fApplySkeletalLayout();
+   compactNumberingLabelMap = {};
+   let mySVG = jsmeNomeclatureApplet.getMolecularAreaGraphicsString();
+   // Fix JSME highlight malformation BEFORE HTML parsing
+@@ -5058,12 +5703,88 @@
+   fWrapStandaloneHydrogenTextsAsTspan();
+   fApplyAtomColors2DToSVGLabels();
+   fApplyCHBondColors2D();
++  // Hydrogen wrapping may replace the text node, so hide only after labels
++  // and colors are finalized, before fitting the visible drawing.
++  fHideEsterSkeletalCarbonHydrogens();
++  fPrepareFixedCCAlkanePrototype();
+   $("#jsmeNomeclatureSVG").toggleClass(
+     "svgAtomsColorized",
+     svgAtomColors2DFlag,
+   );
++  fRefreshLabelBackplates();
++  fFit2DSVG();
++  fValidate2DBondVisibility();
++}
++
++// A font notification owns only 2D work. It must not replay JSmol scripts or
++// restart the user's progressive numbering animation.
++function fNumberingAnchor2D(atomNo) {
++  if (mode2D !== "skeletal") {
++    const label=fGetRenderedAtomTextMap(false,true)[atomNo-1];
++    if (!label) return null;
++    const compact=compactNumberingLabelMap[atomNo-1];
++    return {x:compact ? fGetCompactLabelNumberX(label,compact,0) : parseInt(label.attr("x")),
++      y:parseInt(label.attr("y"))};
++  }
++  const lines=molSvg.selectAll("line");let point=null;
++  for (let i=0;i<bondList.length;i++) {
++    const bond=bondList[i],line=lines[svgBondList[i]-1];if(!line)continue;
++    if (bond[0]===atomNo) return {x:parseInt(line.attr("x1")),y:parseInt(line.attr("y1"))};
++    if (bond[1]===atomNo) point={x:parseInt(line.attr("x2")),y:parseInt(line.attr("y2"))};
++  }
++  return point;
++}
++
++function fRefreshFontDrawing2D() {
++  const svg=document.querySelector("#jsmeNomeclatureSVG svg");
++  if (!svg) {fUpdateSVG();return;}
++  const chain=((Array.isArray(numberingAtomOverride) ? numberingAtomOverride : mainChainAtomsList) || [])
++    .filter(atomNo=>allAtomsTypeList[atomNo-1]==="C");
++  const anchors=chain.map(fNumberingAnchor2D);
++  const sources=Array.isArray(numbersSVGElements) ? numbersSVGElements.slice() : [];
++  const visible=[...svg.querySelectorAll('text[id^="number"]')].map(n=>n.cloneNode(true));
++  fUpdateSVG();
++  const fresh=document.querySelector("#jsmeNomeclatureSVG svg");
++  if (!fresh || !numberingFlag || !sources.length) return;
++  const next=chain.map(fNumberingAnchor2D);
++  // Update queued 2D positions while leaving the existing interval, progress,
++  // override chains and all 3D echoes untouched.
++  numbersSVGElements=sources.map((source,i)=>{
++    if (!source || !anchors[i] || !next[i]) return source;
++    const dx=next[i].x-anchors[i].x,dy=next[i].y-anchors[i].y;
++    return source.replace(/(\bx=['"])([^'"]+)(['"])/,(_m,a,v,b)=>a+(Number(v)+dx)+b)
++      .replace(/(\by=['"])([^'"]+)(['"])/,(_m,a,v,b)=>a+(Number(v)+dy)+b);
++  });
++  const group=molSvg.select("g");
++  visible.forEach(node=>{
++    const index=Number(node.id.slice(6)),before=anchors[index],after=next[index];
++    if (before && after) {
++      node.setAttribute("x",Number(node.getAttribute("x"))+after.x-before.x);
++      node.setAttribute("y",Number(node.getAttribute("y"))+after.y-before.y);
++      group.node.appendChild(node);
++    }
++  });
+ }
+ 
++let labelFontRefreshFrame = null;
++let labelFontPageActive = true;
++function fCancelFontRefresh2D() {
++  if (labelFontRefreshFrame!==null) cancelAnimationFrame(labelFontRefreshFrame);
++  labelFontRefreshFrame=null;
++}
++// beforeunload can be cancelled; only pagehide suspends the controller.
++window.addEventListener("beforeunload",fCancelFontRefresh2D);
++window.addEventListener("pagehide",function(){labelFontPageActive=false;fCancelFontRefresh2D();});
++window.addEventListener("pageshow",function(){labelFontPageActive=true;});
++window.addEventListener("namelecule-font-metrics-change",function(){
++  if (!labelFontPageActive) return;
++  if (labelFontRefreshFrame!==null) cancelAnimationFrame(labelFontRefreshFrame);
++  labelFontRefreshFrame=requestAnimationFrame(function(){
++    labelFontRefreshFrame=null;
++    if (labelFontPageActive && jsmeNomeclatureApplet && selectedMol) fRefreshFontDrawing2D();
++  });
++});
++
+ // ── patchtheNitrogen ──────────────────────────────────────────────────────
+ 
+ function patchtheNitrogen() {
+@@ -5101,6 +5822,11 @@
+       if (fontSize) {
+         attrs += ` font-size="${fontSize}"`;
+       }
++      for (const key of ["font-family", "font-weight", "font-style",
++          "data-namelecule-atom", "data-namelecule-role"]) {
++        const value = el.node.getAttribute(key);
++        if (value) attrs += ` ${key}="${value}"`;
++      }
+       if (textAnchor) {
+         attrs += ` text-anchor="${textAnchor}"`;
+       }
+@@ -5282,7 +6008,7 @@
+     try {
+       if (typeof fJSmolLoadInlineSDF === "function") {
+         fJSmolLoadInlineSDF(jmolAppletNomeclature, selectedExample.sdf3D,
+-          "script spt/init-3.spt;" + zoomInline + movetoInline);
++          "script spt/init-54.spt;" + zoomInline + movetoInline);
+       }
+     } catch (eInline) {}
+     try { if (typeof fSetMolVis3D === "function") fSetMolVis3D(); } catch (eV) {}
+@@ -5312,7 +6038,7 @@
+     "frank off;load " +
+       myMol3D +
+       "; select all; center selected;" +
+-      "script spt/init-3.spt;" + zoomCmd + movetoCmd,
++      "script spt/init-54.spt;" + zoomCmd + movetoCmd,
+   );
+   fSetMolVis3D();
+   // A fresh load satisfies any pending one-shot exit reload (e.g. molecule
+@@ -5634,58 +6360,73 @@
+   }, 500);
+ };
+ 
+-var NAME_COMP_MIN_SCALE = 0.7;
++// ── fShowNameAnalysis ─────────────────────────────────────────────────────
+ 
+-function fFitNameComponents() {
+-  // Expanded-name overlay owns its own size (full width, default font):
+-  // never shrink it here (render, explain clicks, column observer).
++// Fit the complete name without wrapping or changing its component IDs.
++// Main can tighten overflowing box padding before shrinking label/separator fonts.
++var nameFitFrame = null;
++var nameFitObserver = null;
++var nameFitPanel = null;
++var nameFitFontsBound = false;
++function fFitNameToWidth() {
+   if (window.nameExpanded) return;
+-  var container = document.querySelector("#nameAnalysis .nameCompContainer");
+-  if (!container) return;
+-  var parent = container.parentElement;
+-  if (!parent) return;
+-  var available = 0;
+-  try {
+-    available = Math.round(parent.clientWidth);
+-  } catch (eA) {
+-    available = 0;
++  const host = document.querySelector("#nameAnalysis .nameContainer");
++  const row = host && host.querySelector(".nameCompContainer");
++  if (!row || !host.getClientRects().length || host.clientWidth <= 0) return;
++  const style = getComputedStyle(host);
++  const available = host.clientWidth - parseFloat(style.paddingLeft || 0)
++    - parseFloat(style.paddingRight || 0) - 4;
++  if (available <= 0) return;
++  row.classList.remove("nl-name-tight");
++  row.style.setProperty("--nl-name-scale", "1");
++  if (row.getBoundingClientRect().width <= available) return;
++  if (document.documentElement.dataset.nameleculeCompactNamePadding === "true") {
++    row.classList.add("nl-name-tight");
++    if (row.getBoundingClientRect().width <= available) return;
+   }
+-  if (!(available > 0)) return;
+-  container.classList.add("nameCompMeasuring");
+-  try {
+-    container.style.setProperty("--nameCompScale", "1");
+-    void container.offsetWidth;
+-    var natural = container.scrollWidth;
+-    if (!(natural > 0)) return;
+-    if (natural <= available) {
+-      parent.classList.remove("nameOverflow");
+-      return;
+-    }
+-    var lo = NAME_COMP_MIN_SCALE;
+-    var hi = 1;
+-    var best = NAME_COMP_MIN_SCALE;
+-    for (var i = 0; i < 9; i++) {
+-      var mid = (lo + hi) / 2;
+-      container.style.setProperty("--nameCompScale", String(mid));
+-      void container.offsetWidth;
+-      var w = container.scrollWidth;
+-      if (w <= available) {
+-        best = mid;
+-        lo = mid;
+-      } else {
+-        hi = mid;
+-      }
+-    }
+-    container.style.setProperty("--nameCompScale", String(best));
+-    void container.offsetWidth;
+-    if (container.scrollWidth > available) {
+-      parent.classList.add("nameOverflow");
+-    } else {
+-      parent.classList.remove("nameOverflow");
+-    }
+-  } finally {
+-    container.classList.remove("nameCompMeasuring");
++  let low = 0, high = 1;
++  for (let i = 0; i < 12; i++) {
++    const mid = (low + high) / 2;
++    row.style.setProperty("--nl-name-scale", String(mid));
++    if (row.getBoundingClientRect().width <= available) low = mid;
++    else high = mid;
+   }
++  row.style.setProperty("--nl-name-scale", String(low));
++}
++function fScheduleNameFit() {
++  const panel = document.getElementById("nameAnalysisContainer");
++  if (panel && panel !== nameFitPanel && typeof ResizeObserver !== "undefined") {
++    if (nameFitObserver) nameFitObserver.disconnect();
++    nameFitPanel = panel;
++    let lastWidth = -1;
++    nameFitObserver = new ResizeObserver(function (entries) {
++      const width = entries[0].contentRect.width;
++      // Font changes alter height; observing only width avoids resize loops.
++      if (width === lastWidth) return;
++      lastWidth = width;
++      fScheduleNameFit();
++    });
++    nameFitObserver.observe(panel);
++  }
++  if (!nameFitFontsBound && document.fonts) {
++    nameFitFontsBound = true;
++    document.fonts.ready.then(fScheduleNameFit);
++    document.fonts.addEventListener("loadingdone", fScheduleNameFit);
++  }
++  if (nameFitFrame !== null) cancelAnimationFrame(nameFitFrame);
++  nameFitFrame = requestAnimationFrame(function () {
++    nameFitFrame = null;
++    fFitNameToWidth();
++  });
++}
++
++function fFitNameComponents() {
++  fScheduleNameFit();
++}
++
++// Keep the upstream public initializer on the same observer/fitter owner.
++function fInitNameFitObserver() {
++  fScheduleNameFit();
+ }
+ 
+ // ── Expanded-name floating overlay ────────────────────────────────────────
+@@ -5701,6 +6442,8 @@
+   window.expandedMol = selectedMol;
+   try {
+     cont.style.setProperty("--nameCompScale", "1");
++    cont.style.setProperty("--nl-name-scale", "1");
++    cont.classList.remove("nl-name-tight");
+     var parent = cont.parentElement;
+     if (parent) parent.classList.remove("nameOverflow");
+     var host = document.getElementById("nameAnalysisContainer");
+@@ -6182,8 +6925,10 @@
+   } else {
+   // Build the name component boxes with Greek euphony applied, and + signs in between
+ 
++  const acidPrefixGroups = fAcidPrefixBoxGroups();
+   for (let i = 0; i < compCount; i++) {
+-    currComp = nameComponentsList[i];
++    currComp = i === 3 && acidPrefixGroups.length === 3
++      ? acidPrefixGroups[1].label : nameComponentsList[i];
+     if (currComp == "" || currComp == undefined) {
+       continue;
+     }
+@@ -6234,13 +6979,19 @@
+     }
+ 
+     compBox = fNameCompBox("comp" + i, boxClass, displayComp);
++    if (i === 3 && acidPrefixGroups.length === 3) {
++      compBox += `<div class='${crossClass}'> + </div>` +
++        fNameCompBox('acidPrefixNumber3', boxClass, '-'+acidPrefixGroups[2].locants+'-') +
++        `<div class='${crossClass}'> + </div>` +
++        fNameCompBox('acidPrefixSub3', boxClass, acidPrefixGroups[2].label);
++    }
+     // Locants are always their own component: the suffix slot (index 9)
+     // fuses them only on the db+tb ketone/polyol paths ("-2,7-διόνη"), so
+     // split that shape here at render time — locants first, suffix keeping
+     // the slot id so every id-driven behavior (click mode, restore, hidden
+     // sets, eye toggles) is unchanged. Data list, euphony boundaries and
+     // the joined name are identical to the fused string.
+-    if (i === 9) {
++    if (i === 9 && !(typeof fScenarioUseLegacyNameBoxes === "function" && fScenarioUseLegacyNameBoxes())) {
+       try {
+         var _singleFG = (typeof functionalGroupsList !== "undefined" &&
+           Array.isArray(functionalGroupsList) && functionalGroupsList.length === 1)
+@@ -6271,7 +7022,8 @@
+     // later names comp3b (then comp3loc2/comp3b2, ...). Core list, euphony
+     // and the joined name are unchanged: piece ends ("-", digit, vowel-end
+     // name) never take a connector, and a fired euphony aborts the split.
+-    if (i === 3 && displayComp === currComp) {
++    if (i === 3 && displayComp === currComp &&
++        !(typeof fScenarioUseLegacyNameBoxes === "function" && fScenarioUseLegacyNameBoxes())) {
+       try {
+         var _brp = fSplitBranchPieces(currComp);
+         if (_brp) {
+@@ -6383,6 +7135,8 @@
+       compNumber1: "comp0",
+       "compSecondSub1": "comp1",
+       compNumber2: "comp2",
++      compAcidNumber3: "acidPrefixNumber3",
++      compAcidSub3: "acidPrefixSub3",
+       "compSecondSub2": "comp3",
+       compBondPos: "comp4",
+       compCarbonsCount: "comp5",
+@@ -6541,9 +7295,6 @@
+   προπυλο: "προπύλιο",
+   ισοπροπυλο: "ισοπροπύλιο",
+   βουτυλο: "βουτύλιο",
+-  ισοβουτυλο: "ισοβουτύλιο",
+-  "sec-βουτυλο": "sec-βουτύλιο",
+-  "tert-βουτυλο": "tert-βουτύλιο",
+   πεντυλο: "πεντύλιο",
+   εξυλο: "εξύλιο",
+   επτυλο: "επτύλιο",
+@@ -6789,8 +7540,21 @@
+   return fBranchNoun(prefix);
+ }
+ 
+-// Multiplicative prefix (δι-, τρι-, …) on a substituent name component.
+-// Returns the count, or 0 when the component has no multiplier.
++// ── fExplainNameComp ──────────────────────────────────────────────────────
++
++function fGetNameComponentLocants(component) {
++  if (component === null || component === undefined) return [];
++  return String(component)
++    .replace(/^-+|-+$/g, "")
++    .split(/[,\-]+/)
++    .map(function (n) {
++      return parseInt(n, 10);
++    })
++    .filter(function (n) {
++      return Number.isFinite(n) && n > 0;
++    });
++}
++
+ function fGetNameComponentMultiplier(comp) {
+   const s = String(comp || "");
+   const prefixes = [
+@@ -6808,13 +7572,12 @@
+   return 0;
+ }
+ 
+-// A numbering component such as "-2,5-" carries more than one locant.
+ function fIsMultiLocantComponent(comp) {
+   return fGetNameComponentLocants(comp).length > 1;
+ }
+ 
+-// ── fExplainNameComp ──────────────────────────────────────────────────────
+-
++// Locate the OH-bearing component without confusing it with either C-C
++// multiple-bond locant. Mixed branched alcohols group OH locant with -όλη.
+ function fAlcoholOHNameComponent() {
+   if (typeof functionalGroupObj === 'undefined' || !functionalGroupObj ||
+       !functionalGroupObj.alcohol || !fSupportsAlkylBranchPrefixes()) return null;
+@@ -6910,9 +7673,7 @@
+ // of the new ketones and the ten carboxylic acids, not instant zoom/resize overlay restoration.
+ function fSequentialKetoneNumberingTarget() {
+   return ['penten_2_yn_4_oic_acid', 'hexen_2_yn_4_dioic_acid',
+-    'methyl_2_propenoic_acid', 'ethyl_2_methyl_3_penten_2_yn_4_oic_acid',
+-    'ethyl_3_isopropyl_2_dimethyl_4_5_hexadien_2_4_dioic_acid',
+-    'ethyl_2_isopropyl_3_dimethyl_6_6_hepten_2_yn_4_dioic_acid',
++    'methyl_2_propenoic_acid', 'ethyl_2_methyl_3_penten_2_yn_4_oic_acid', 'ethyl_3_isopropyl_2_dimethyl_4_5_hexadien_2_4_dioic_acid', 'ethyl_2_isopropyl_3_dimethyl_6_6_hepten_2_yn_4_dioic_acid',
+     'methyl_2_propanoic_acid', 'dimethyl_2_2_propanoic_acid',
+     'ethyl_2_methyl_3_pentanoic_acid',
+     'ethyl_3_isopropyl_2_dimethyl_4_5_hexanoic_acid', 'pentanone_3', 'dimethyl_2_4_pentanone_3',
+@@ -6934,7 +7695,6 @@
+   }
+   fShowNumbering(time, overrideAtoms, overrideAtoms3D);
+ }
+-
+ function fExplainNameComp() {
+   let myText, myClass, nStyle, countSubs, myCountText, myFG0, myFG1, myHTML;
+   switch (nameAnalysisMode) {
+@@ -6947,7 +7707,21 @@
+       myClass = "";
+       ruleFlag = false;
+       numberingFlag = false;
++      break;
++    case "compAcidNumber3":
++    case "compAcidSub3": {
++      const group = fSeparateAcidPrefixBoxes() ? fGetHydrocarbonBranchGroup(3) : null;
++      nStyle = ""; myClass = "";
++      const positions = nameAnalysisMode === 'compAcidNumber3';
++      myText = group ? fHydrocarbonBranchExplanation(group, positions) : '';
++      numberingFlag = !!group && positions;
++      if (group) {
++        fHighlightFG(3); fHighlightFG3D(3);
++        if (positions) fShowAnalysisNumbering(0);
++        $("#ruleTheoryContainer").show();
++      }
+       break;
++    }
+     case "compNumber1":
+       nStyle = "";
+       myClass = "";
+@@ -7089,7 +7863,6 @@
+         fHighlightFG3D(1);
+         numberingFlag = true;
+         fShowAnalysisNumbering(0, fGetEtherAlkoxyChain(), fGetEtherAlkoxyChain3D());
+-        $("#ruleTheoryContainer").show();
+         break;
+       }
+       if (nameComponentsList[3] !== null && nameComponentsList[3].length > 0) {
+@@ -7585,7 +8358,7 @@
+           ) {
+             fJSmolScript(
+               jmolAppletNomeclature,
+-              "select atomno=" + bondList3D[_eb][0] + ", atomno=" + bondList3D[_eb][1] + "; color bond [X79dc6d];",
++              "select atomno=" + bondList3D[_eb][0] + ", atomno=" + bondList3D[_eb][1] + "; color bond [XD8EEDC];",
+             );
+           }
+         }
+@@ -7665,15 +8438,15 @@
+ function fShowRule(theRule) {
+   let ruleText, ruleTable, ruleTitle, myStyle, myClass, myHTML;
+   let alkylRows = null;
+-  let alkoxyRow = null;
+   if (theRule === fAlcoholOHNameComponent()) {
+     theRule = 'compSuffix';
+     ruleTableHighlight = 'r3-alcohols';
+   }
+   switch (theRule) {
+     case "compNumber1":
+-    case "compNumber2": {
+-      const group = fGetHydrocarbonBranchGroup(theRule === "compNumber2" ? 2 : 1);
++    case "compNumber2":
++    case "compAcidNumber3": {
++      const group = fGetHydrocarbonBranchGroup(theRule === "compAcidNumber3" ? 3 : theRule === "compNumber2" ? 2 : 1);
+       if (group) {
+         ruleText = namingRules.alkylRule;
+         ruleTable = namingRules.alkylTable;
+@@ -7691,8 +8464,9 @@
+       break;
+     }
+     case "compSecondSub1":
+-    case "compSecondSub2": {
+-      const group = fGetHydrocarbonBranchGroup(theRule === "compSecondSub2" ? 2 : 1);
++    case "compSecondSub2":
++    case "compAcidSub3": {
++      const group = fGetHydrocarbonBranchGroup(theRule === "compAcidSub3" ? 3 : theRule === "compSecondSub2" ? 2 : 1);
+       if (group) {
+         ruleText = namingRules.alkylRule;
+         ruleTable = namingRules.alkylTable;
+@@ -7775,23 +8549,20 @@
+     }
+   }
+ 
+-  if ((theRule === "compNumber1" || theRule === "compSecondSub1" ||
+-       theRule === "compNumber2" || theRule === "compSecondSub2" ||
+-       /^compBranch(Sub|Loc)\d+$/.test(theRule || "")) &&
+-      typeof selectedMol !== "undefined" && selectedMol &&
+-      Array.isArray(atomConnectivityList) && Array.isArray(allAtomsTypeList) && Array.isArray(bondList) &&
+-      typeof fIsAcyclicMonoetherGraph === "function" &&
+-      fIsAcyclicMonoetherGraph(atomConnectivityList, allAtomsTypeList, bondList)) {
+-    const etherGroups = fEtherPrefixGroups();
+-    const alkoxy = etherGroups.find(g => g.kind === "alkoxy");
+-    const slot = (theRule === "compSecondSub1" || theRule === "compNumber1") ? 1 : 2;
+-    const selectedGroups = slot === 1 ? etherGroups.slice(0, 1) : etherGroups.slice(1);
+-    if (alkoxy && selectedGroups.length === 1 && selectedGroups[0].kind === "alkoxy") {
+-      ruleText = namingRules.alkoxyRule;
+-      ruleTable = namingRules.alkoxyTable;
+-      ruleTitle = "Ονόματα αλκοξυομάδων και προθέματα";
+-      alkoxyRow = "alkoxy-" + alkoxy.name;
+-    }
++  const showAlkoxy = typeof fScenarioShowAlkoxyRule === "function" && fScenarioShowAlkoxyRule();
++  const etherGroups = showAlkoxy && Array.isArray(atomConnectivityList) &&
++    Array.isArray(allAtomsTypeList) && Array.isArray(bondList) &&
++    fIsAcyclicMonoetherGraph(atomConnectivityList, allAtomsTypeList, bondList)
++    ? fEtherPrefixGroups() : [];
++  const alkoxy = etherGroups.find(g => g.kind === "alkoxy");
++  const slot = ["compNumber1", "compSecondSub1"].includes(theRule) ? 1 :
++    ["compNumber2", "compSecondSub2"].includes(theRule) || /^compBranch(Sub|Loc)\d+$/.test(theRule || "") ? 2 : 0;
++  const selectedGroups = slot === 1 ? etherGroups.slice(0, 1) : slot === 2 ? etherGroups.slice(1) : [];
++  const alkoxyAsMain = !!alkoxy && selectedGroups.length === 1 && selectedGroups[0].kind === "alkoxy";
++  if (alkoxyAsMain) {
++    ruleText = namingRules.alkoxyRule;
++    ruleTable = namingRules.alkoxyTable;
++    ruleTitle = "Ονόματα αλκοξυομάδων και προθέματα";
+   }
+   const pilotRule = typeof fScenarioShowComponentRule === "function" &&
+     fScenarioShowComponentRule(theRule);
+@@ -7816,16 +8587,22 @@
+   <div id='ruleContainer' style='${myStyle}'><div class='ruleText' >${ruleText}</div><div class='ruleTable' >${ruleTable}</div></div>
+   </div>`;
+ 
++  if (alkoxy && !alkoxyAsMain) {
++    // Keep the current chain/alkyl rule; add a separate, initially closed table.
++    if (!ruleTitle) myHTML = "";
++    myHTML += `<div class='ruleTheory'><button type='button' class='ruleTile closed' id='alkoxyRuleTitle' style='width:100%;border:0;text-align:left;' aria-expanded='false' aria-controls='alkoxyRuleContainer'>Ονόματα αλκοξυομάδων και προθέματα</button><div id='alkoxyRuleContainer' style='display:none;'><div class='ruleText'>${namingRules.alkoxyRule}</div><div class='ruleTable'>${namingRules.alkoxyTable}</div></div></div>`;
++  }
+   $("#ruleTheoryContainer").html(myHTML);
++  if (alkoxy) {
++    $("#ruleTheoryContainer").show();
++    $("#ruleTheoryContainer [data-row='alkoxy-" + alkoxy.name + "']").addClass("selected");
++  }
+ 
+   if (alkylRows) {
+     alkylRows.forEach(function (key) {
+       $("#ruleContainer [data-row='" + key + "']").addClass("selected");
+     });
+   }
+-  if (alkoxyRow) {
+-    $("#ruleContainer [data-row='" + alkoxyRow + "']").addClass("selected");
+-  }
+ 
+   // Key-based highlight: rows carry data-row="rN-key" (see fInitTheory tables).
+   // Row order no longer matters — moves/additions need no code changes.
+@@ -7886,15 +8663,7 @@
+     return;
+   }
+ 
+-  const _storedChain = nameExamples[selectedMol]
+-    ? nameExamples[selectedMol]["mainChain" + fMainChainKeySuffix()]
+-    : null;
+-  highAtoms =
+-    mainChainMode === "algorithmic" ||
+-    !Array.isArray(_storedChain) ||
+-    _storedChain.length === 0
+-      ? mainChainAtomsList
+-      : _storedChain;
++  highAtoms = mainChainAtomsList;
+ 
+   let highAtomsArg = "";
+   for (let i = 0; i < highAtoms.length; i++) {
+@@ -7918,15 +8687,7 @@
+     return;
+   }
+ 
+-  const _storedChain = nameExamples[selectedMol]
+-    ? nameExamples[selectedMol]["mainChain" + fMainChainKeySuffix()]
+-    : null;
+-  const _chain =
+-    mainChainMode === "algorithmic" ||
+-    !Array.isArray(_storedChain) ||
+-    _storedChain.length === 0
+-      ? mainChainAtomsList
+-      : _storedChain;
++  const _chain = mainChainAtomsList;
+   if (!Array.isArray(_chain) || _chain.length === 0 || typeof bondList === "undefined") {
+     return;
+   }
+@@ -8117,26 +8878,44 @@
+ 
+ // Match the same Greek-alphabetical prefix groups used by fGuessName.
+ // Slot 2 represents all remaining groups, matching the fused comp2/comp3 boxes.
++// Main-only projection for the approved three-alkyl acid. Keep the core's
++// fixed component array and the saved React/scenario contracts unchanged.
++function fSeparateAcidPrefixBoxes() {
++  return ['ethyl_3_isopropyl_2_dimethyl_4_5_hexanoic_acid',
++    'ethyl_3_isopropyl_2_dimethyl_4_5_hexadien_2_4_dioic_acid',
++    'ethyl_2_isopropyl_3_dimethyl_6_6_hepten_2_yn_4_dioic_acid'].includes(selectedMol) &&
++    typeof document !== 'undefined' && !!document.documentElement &&
++    document.documentElement.getAttribute('data-namelecule-acid-prefix-boxes') === 'true';
++}
++function fAcidPrefixBoxGroups() {
++  if (!fSeparateAcidPrefixBoxes()) return [];
++  const branches = fGetHydrocarbonSubstituentInfo();
++  return [...new Set(branches.map(b => b.name))].sort().map(name => {
++    const members = branches.filter(b => b.name === name);
++    return { label: nameMultiPrefix[members.length-1] + name,
++      locants: members.map(b => b.locant).sort((a,b) => a-b).join(',') };
++  });
++}
++
+ function fGetHydrocarbonBranchGroup(slot) {
+   if (functionalGroupsList.length === 1 && functionalGroupsList[0] === 'ether') {
+     const groups = fEtherPrefixGroups();
+-    const selected = slot === 2 ? groups.slice(1) : groups.slice(0, 1);
++    const selected = slot === 2 ? groups.slice(1) : groups.slice(0,1);
+     const members = selected.filter(g => g.kind === 'alkyl').flatMap(g => g.members);
+-    return members.length ? {
+-      names: selected.filter(g => g.kind === 'alkyl').map(g => g.name),
+-      members: members
+-    } : null;
++    return members.length ? {names:selected.filter(g=>g.kind==='alkyl').map(g=>g.name),members:members} : null;
+   }
+   if (!functionalGroupObj || !fSupportsAlkylBranchPrefixes()) return null;
+   const branches = fGetHydrocarbonSubstituentInfo();
+   const names = [...new Set(branches.map(function (b) { return b.name; }))]
+     .sort(function (a, b) { return a < b ? -1 : a > b ? 1 : 0; });
+-  const selected = slot === 2 ? names.slice(1) : names.slice(0, 1);
++  const selected = fSeparateAcidPrefixBoxes() ? names.slice(slot-1, slot) :
++    slot === 2 ? names.slice(1) : names.slice(0, 1);
+   const members = branches.filter(function (b) { return selected.includes(b.name); });
+   return members.length ? { names: selected, members: members } : null;
+ }
+ 
+ function fHydrocarbonBranchSlot() {
++  if (["compAcidNumber3", "compAcidSub3"].includes(nameAnalysisMode)) return 3;
+   if (/^compBranch(Sub|Loc)\d+$/.test(nameAnalysisMode || "")) return 2;
+   return nameAnalysisMode === "compNumber2" || nameAnalysisMode === "compSecondSub2" ? 2 : 1;
+ }
+@@ -8163,19 +8942,6 @@
+   return group.members.length === 1
+     ? fTX(`Δηλώνει το όνομα της ανθρακικής διακλάδωσης (${names}).`, `Indicates the name of the carbon branch (${names}).`)
+     : fTX(`Δηλώνει το όνομα και το πλήθος (${group.members.length}) των ανθρακικών διακλαδώσεων (${names}).`, `Indicates the name and the number (${group.members.length}) of the carbon branches (${names}).`);
+-}
+-
+-function fGetNameComponentLocants(component) {
+-  if (component === null || component === undefined) return [];
+-  return String(component)
+-    .replace(/^-+|-+$/g, "")
+-    .split(/[,\-]+/)
+-    .map(function (n) {
+-      return parseInt(n, 10);
+-    })
+-    .filter(function (n) {
+-      return Number.isFinite(n) && n > 0;
+-    });
+ }
+ 
+ function fGetHydrocarbonBranchHighlight(slot) {
+@@ -8623,6 +9389,24 @@
+   return null;
+ }
+ 
++// The stem/numbering concerns the selected acid parent; bond-type highlights
++// still use the complete acid fragment above. Never number alcohol carbons.
++function fGetEsterAcidParentChain() {
++  if (!fIsSingleEster()) return null;
++  const fragment = fGetEsterAcidChain();
++  if (Array.isArray(mainChainAtomsList) && mainChainAtomsList[0] === esterInfo.carbonylC + 1 &&
++      mainChainAtomsList.every(n => fragment.includes(n))) return mainChainAtomsList.slice();
++  return fragment;
++}
++
++function fGetEsterAcidParentChain3D() {
++  const carbonyl = fGetEsterAcidC3D(), fragment = fGetEsterAcidChain3D();
++  if (carbonyl === null || !fragment) return null;
++  if (Array.isArray(mainChainAtoms3D) && mainChainAtoms3D[0] === carbonyl + 1 &&
++      mainChainAtoms3D.every(n => fragment.includes(n))) return mainChainAtoms3D.slice();
++  return null; // 3D analysis/mapping has not caught up with this molecule.
++}
++
+ // 3D mirror: acid-side carbon (0-based SDF index) = C neighbor of the ketone O.
+ function fGetEsterAcidC3D() {
+   if (!functionalGroupObj3D || !functionalGroupObj3D.ester || !functionalGroupObj3D.ester.O) return null;
+@@ -8812,12 +9596,12 @@
+   // `select …` fuses with `color …` into one unparsable command.
+   var _atomClause = skipAtoms
+     ? ""
+-    : ";color selectionHalos[X79dc6d]; selectionHalos on; color atoms [X79dc6d]";
++    : ";color selectionHalos[XD8EEDC]; selectionHalos on; color atoms [XD8EEDC]";
+   fJSmolScript(
+     jmolAppletNomeclature,
+     "select all; selectionHalos off; color atoms none; color bonds none;" + arg +
+       _atomClause +
+-      (skipBonds ? ";color bonds [X909090];" : ";color bonds [X79dc6d];"),
++      (skipBonds ? ";color bonds [X909090];" : ";color bonds [XD8EEDC];"),
+   );
+   JmolSelection = arg;
+ }
+@@ -8841,7 +9625,7 @@
+     const hBond = wantH && ((in1 && allAtomsTypeList3D[bondList3D[b][1] - 1] === "H") ||
+       (in2 && allAtomsTypeList3D[bondList3D[b][0] - 1] === "H"));
+     if ((in1 && in2) || hBond) {
+-      script += "select atomno=" + bondList3D[b][0] + ", atomno=" + bondList3D[b][1] + "; color bond [X79dc6d];";
++      script += "select atomno=" + bondList3D[b][0] + ", atomno=" + bondList3D[b][1] + "; color bond [XD8EEDC];";
+     }
+   }
+   if (script) {
+@@ -8871,6 +9655,8 @@
+     "compNumber2",
+     "compSecondSub1",
+     "compSecondSub2",
++    "compAcidNumber3",
++    "compAcidSub3",
+   ].includes(nameAnalysisMode) || /^compBranch(Sub|Loc)\d+$/.test(nameAnalysisMode || "");
+ 
+   if (fgKeys.length === 0 || (allowBranchFallback &&
+@@ -9297,6 +10083,8 @@
+     "compNumber2",
+     "compSecondSub1",
+     "compSecondSub2",
++    "compAcidNumber3",
++    "compAcidSub3",
+   ].includes(nameAnalysisMode) || /^compBranch(Sub|Loc)\d+$/.test(nameAnalysisMode || "");
+ 
+   let highAtoms3D = [];
+@@ -9324,7 +10112,7 @@
+       jmolAppletNomeclature,
+       "select all; selectionHalos off; color atoms none; color bonds none;" +
+         highAtoms3DArg +
+-        ";color selectionHalos[X79dc6d]; selectionHalos on; color atoms [X79dc6d];",
++        ";color selectionHalos[XD8EEDC]; selectionHalos on; color atoms [XD8EEDC];",
+     );
+     JmolSelection = highAtoms3DArg;
+   } else {
+@@ -9389,7 +10177,7 @@
+         jmolAppletNomeclature,
+         "select all; selectionHalos off; color atoms none; color bonds none;" +
+           highAtoms3DArg +
+-          ";color selectionHalos[X79dc6d]; selectionHalos on; color atoms [X79dc6d];",
++          ";color selectionHalos[XD8EEDC]; selectionHalos on; color atoms [XD8EEDC];",
+       );
+       JmolSelection = highAtoms3DArg;
+       return;
+@@ -9629,7 +10417,7 @@
+       jmolAppletNomeclature,
+       "select all; selectionHalos off; color atoms none; color bonds none;" +
+         highAtoms3DArg +
+-        ";color selectionHalos[X79dc6d]; selectionHalos on; color atoms [X79dc6d];",
++        ";color selectionHalos[XD8EEDC]; selectionHalos on; color atoms [XD8EEDC];",
+     );
+     JmolSelection = highAtoms3DArg;
+     // IUPAC alkoxy prefix: the halo script colors atoms only — color the
+@@ -9695,10 +10483,7 @@
+       highAtoms =
+         Array.isArray(numberingAtomOverride)
+           ? numberingAtomOverride
+-          : mainChainMode === "algorithmic" ||
+-            !nameExamples[selectedMol]["mainChain_Condensed"]
+-            ? mainChainAtomsList
+-            : nameExamples[selectedMol]["mainChain_Condensed"];
++          : mainChainAtomsList;
+       highAtoms = (Array.isArray(highAtoms) ? highAtoms : []).filter(
+         function (atomNo) {
+           return allAtomsTypeList[atomNo - 1] === "C";
+@@ -9721,7 +10506,7 @@
+           : parseInt(currAtomTextElement.attr("x")) + numberOffset[0];
+         y = parseInt(currAtomTextElement.attr("y")) + +numberOffset[1];
+         r = 220;
+-        numberString = `  <text id='number${i}' x='${x}' y='${y}' font-size='380px' font-weight='bold' font-family='Arial, sans-serif' fill='${(numberingEmphasis === null || numberingEmphasis.indexOf(i) >= 0) ? "#193F8F" : "#9ac1ed"}' stroke='white' stroke-width='60px' paint-order='stroke'>${i + 1}</text> `;
++        numberString = `  <text id='number${i}' x='${x}' y='${y}' font-size='270px' font-weight='600' font-family='Arial, sans-serif' fill='${(numberingEmphasis === null || numberingEmphasis.indexOf(i) >= 0) ? "#193F8F" : "#9ac1ed"}' stroke='white' stroke-width='30px' paint-order='stroke'>${i + 1}</text> `;
+         numbersSVGElements[i] = numberString;
+       }
+       break;
+@@ -9729,10 +10514,7 @@
+       highAtoms =
+         Array.isArray(numberingAtomOverride)
+           ? numberingAtomOverride
+-          : mainChainMode === "algorithmic" ||
+-            !nameExamples[selectedMol]["mainChain_Condensed"]
+-            ? mainChainAtomsList
+-            : nameExamples[selectedMol]["mainChain_Condensed"];
++          : mainChainAtomsList;
+       highAtoms = (Array.isArray(highAtoms) ? highAtoms : []).filter(
+         function (atomNo) {
+           return allAtomsTypeList[atomNo - 1] === "C";
+@@ -9748,7 +10530,7 @@
+         x = parseInt(currAtomTextElement.attr("x")) + numberOffset[0];
+         y = parseInt(currAtomTextElement.attr("y")) + +numberOffset[1];
+         r = 220;
+-        numberString = `  <text id='number${i}' x='${x}' y='${y}' font-size='380px' font-weight='bold' font-family='Arial, sans-serif' fill='${(numberingEmphasis === null || numberingEmphasis.indexOf(i) >= 0) ? "#193F8F" : "#9ac1ed"}' stroke='white' stroke-width='60px' paint-order='stroke'>${i + 1}</text> `;
++        numberString = `  <text id='number${i}' x='${x}' y='${y}' font-size='270px' font-weight='600' font-family='Arial, sans-serif' fill='${(numberingEmphasis === null || numberingEmphasis.indexOf(i) >= 0) ? "#193F8F" : "#9ac1ed"}' stroke='white' stroke-width='30px' paint-order='stroke'>${i + 1}</text> `;
+         numbersSVGElements[i] = numberString;
+       }
+       break;
+@@ -9756,17 +10538,16 @@
+       highAtoms =
+         Array.isArray(numberingAtomOverride)
+           ? numberingAtomOverride
+-          : mainChainMode === "algorithmic" ||
+-            !nameExamples[selectedMol]["mainChain_Expanded"]
+-            ? mainChainAtomsList
+-            : nameExamples[selectedMol]["mainChain_Expanded"];
++          : mainChainAtomsList;
+       highAtoms = (Array.isArray(highAtoms) ? highAtoms : []).filter(
+         function (atomNo) {
+           return allAtomsTypeList[atomNo - 1] === "C";
+         },
+       );
+       const expandedAtomTextMap = fGetRenderedAtomTextMap(false, true);
+-      numberOffset = [-120, -280];
++      const fixedCCNumberScale = Number(molSvg.node.dataset.alkaneFixedCCScale) || 1;
++      numberOffset = [(molSvg.node.dataset.alkaneFixedCCScale ? -230 : -120) * fixedCCNumberScale,
++        -280 * fixedCCNumberScale];
+       for (let i = 0; i < highAtoms.length; i++) {
+         currAtomTextElement = expandedAtomTextMap[highAtoms[i] - 1];
+         if (!currAtomTextElement) {
+@@ -9775,23 +10556,14 @@
+         x = parseInt(currAtomTextElement.attr("x")) + numberOffset[0];
+         y = parseInt(currAtomTextElement.attr("y")) + +numberOffset[1];
+         r = 220;
+-        numberString = `  <text id='number${i}' x='${x}' y='${y}' font-size='380px' font-weight='bold' font-family='Arial, sans-serif' fill='${(numberingEmphasis === null || numberingEmphasis.indexOf(i) >= 0) ? "#193F8F" : "#9ac1ed"}' stroke='white' stroke-width='60px' paint-order='stroke'>${i + 1}</text> `;
++        numberString = `  <text id='number${i}' x='${x}' y='${y}' font-size='${270 * fixedCCNumberScale}px' font-weight='600' font-family='Arial, sans-serif' fill='${(numberingEmphasis === null || numberingEmphasis.indexOf(i) >= 0) ? "#193F8F" : "#9ac1ed"}' stroke='white' stroke-width='${30 * fixedCCNumberScale}px' paint-order='stroke'>${i + 1}</text> `;
+         numbersSVGElements[i] = numberString;
+       }
+       break;
+ 
+     case "skeletal":
+-      var _skel = nameExamples[selectedMol]
+-        ? nameExamples[selectedMol]["mainChain_Skeletal"]
+-        : null;
+-      highAtoms =
+-        Array.isArray(numberingAtomOverride)
+-          ? numberingAtomOverride
+-          : mainChainMode === "algorithmic" ||
+-            !Array.isArray(_skel) ||
+-            _skel.length === 0
+-            ? mainChainAtomsList
+-            : _skel;
++      highAtoms = Array.isArray(numberingAtomOverride)
++        ? numberingAtomOverride : mainChainAtomsList;
+       highAtoms = (Array.isArray(highAtoms) ? highAtoms : []).filter(
+         function (atomNo) {
+           return allAtomsTypeList[atomNo - 1] === "C";
+@@ -9826,7 +10598,7 @@
+         }
+ 
+         r = 220;
+-        numberString = `  <text id='number${i}' x='${x}' y='${y}' font-size='380px' font-weight='bold' font-family='Arial, sans-serif' fill='${(numberingEmphasis === null || numberingEmphasis.indexOf(i) >= 0) ? "#193F8F" : "#9ac1ed"}' stroke='white' stroke-width='60px' paint-order='stroke'>${i + 1}</text> `;
++        numberString = `  <text id='number${i}' x='${x}' y='${y}' font-size='270px' font-weight='600' font-family='Arial, sans-serif' fill='${(numberingEmphasis === null || numberingEmphasis.indexOf(i) >= 0) ? "#193F8F" : "#9ac1ed"}' stroke='white' stroke-width='30px' paint-order='stroke'>${i + 1}</text> `;
+         numbersSVGElements[i] = numberString;
+       }
+       break;
+@@ -9864,25 +10636,10 @@
+ 
+ function fShowNumbering3D() {
+   const chain3D = Array.isArray(numberingAtomOverride3D)
+-    ? numberingAtomOverride3D
+-    : mainChainMode !== "algorithmic"
+-      ? nameExamples[selectedMol].mainChain3D
+-      : null;
+-  if (chain3D) {
+-    // Local copy: a step override must not leak into the global chain
+-    const _chain3D = chain3D.slice();
+-    for (let i = 0; i < _chain3D.length; i++) {
+-      fShowNumber3D(i, _chain3D);
+-    }
+-    return;
+-  } else if (mainChainMode !== "algorithmic") {
+-    mainChainAtoms3D = nameExamples[selectedMol].mainChain3D;
++    ? numberingAtomOverride3D : mainChainAtoms3D;
++  for (let i = 0; i < chain3D.length; i++) {
++    fShowNumber3D(i, chain3D);
+   }
+-  // algorithmic mode: mainChainAtoms3D already set by fCalcMainChain3D()
+-
+-  for (let i = 0; i < mainChainAtoms3D.length; i++) {
+-    fShowNumber3D(i);
+-  }
+ }
+ 
+ // ── removeEcho3D ──────────────────────────────────────────────────────────
+@@ -9898,9 +10655,7 @@
+   let myAtom =
+     Array.isArray(numberingAtomOverride3D)
+       ? numberingAtomOverride3D[n]
+-      : mainChainMode === "algorithmic"
+-        ? _chain[n]
+-        : nameExamples[selectedMol].mainChain3D[n];
++      : _chain[n];
+ 
+   if (typeof myAtom === "undefined" || myAtom === null) {
+     return;
+@@ -9925,7 +10680,7 @@
+     id +
+     " " +
+     atom +
+-    "; set echo offset {-1.1 1.1 3}; font echo 42 sansSerif bold; color echo[" + _echoCol + "]; echo " +
++    "; set echo offset {-1.1 1.1 3}; font echo 30 sansSerif bold; color echo[" + _echoCol + "]; echo " +
+     num +
+     ";";
+ 
+@@ -9938,7 +10693,7 @@
+     (-1.1 + d) +
+     " " +
+     (1.1 - d) +
+-    " 3}; font echo 42 sansSerif bold; color echo black; echo " +
++    " 3}; font echo 30 sansSerif bold; color echo white; echo " +
+     num +
+     ";";
+ 
+@@ -10080,14 +10835,14 @@
+         highBonds3D[i][0] +
+         ", atomno=" +
+         highBonds3D[i][1] +
+-        "; color bond [X79dc6d];",
++        "; color bond [XD8EEDC];",
+     );
+   }
+ 
+   fJSmolScript(
+     jmolAppletNomeclature,
+     highAtoms3DArg +
+-      "; color selectionHalos[X79dc6d]; selectionHalos on; color atoms [X79dc6d];",
++      "; color selectionHalos[XD8EEDC]; selectionHalos on; color atoms [XD8EEDC];",
+   );
+   if (!fShowBondAtoms()) {
+     // Bonds-only mode: undo the atom halo — keep just the green bonds above.
+@@ -10211,13 +10966,13 @@
+         highBonds3D[i][0] +
+         ", atomno=" +
+         highBonds3D[i][1] +
+-        "; color bond [X79dc6d];",
++        "; color bond [XD8EEDC];",
+     );
+   }
+   fJSmolScript(
+     jmolAppletNomeclature,
+     highAtoms3DArg +
+-      "; color selectionHalos[X79dc6d]; selectionHalos on; color atoms [X79dc6d];",
++      "; color selectionHalos[XD8EEDC]; selectionHalos on; color atoms [XD8EEDC];",
+   );
+   if (!fShowBondAtoms()) {
+     // Bonds-only mode: undo the atom halo — keep just the green bonds above.
+@@ -10546,35 +11301,6 @@
+       _zoomROLastW = g0.w; _zoomROLastH = g0.h;
+     } catch (eI) { _zoomROLastW = 0; _zoomROLastH = 0; }
+     _zoomRO.observe(vc);
+-  } catch (eZ) { /* observer unavailable */ }
+-}
+-
+-var _nameFitROTimer = null;
+-var _nameFitROLastW = 0;
+-var _nameFitRO = null;
+-function fInitNameFitObserver() {
+-  try {
+-    if (_nameFitRO || typeof ResizeObserver === "undefined") return;
+-    var ac = document.getElementById("analysisCol");
+-    if (!ac) return;
+-    _nameFitRO = new ResizeObserver(function () {
+-      try {
+-        var w = Math.round(ac.getBoundingClientRect().width);
+-        if (w === _nameFitROLastW) return;
+-        if (_nameFitROTimer) clearTimeout(_nameFitROTimer);
+-        _nameFitROTimer = setTimeout(function () {
+-          _nameFitROTimer = null;
+-          var w2 = Math.round(ac.getBoundingClientRect().width);
+-          if (!(w2 > 0) || w2 === _nameFitROLastW) return;
+-          _nameFitROLastW = w2;
+-          fFitNameComponents();
+-        }, 150);
+-      } catch (eO) { /* observer unavailable */ }
+-    });
+-    try {
+-      _nameFitROLastW = Math.round(ac.getBoundingClientRect().width);
+-    } catch (eI) { _nameFitROLastW = 0; }
+-    _nameFitRO.observe(ac);
+   } catch (eZ) { /* observer unavailable */ }
+ }
+ 

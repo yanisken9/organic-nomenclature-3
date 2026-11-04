@@ -1,0 +1,105 @@
+{
+  "completed": true,
+  "checks": [
+    {
+      "label": "Cold direct final3Dstep loads actual correct model",
+      "detail": {
+        "ready": true,
+        "live": true,
+        "pending": null,
+        "model": {
+          "canSkipLoad": true,
+          "isTainted": false,
+          "modelCount": 1,
+          "modelCountSelected": 1,
+          "modelIndex": 0,
+          "modelSetHasVibrationVectors": false,
+          "modelSetName": "ethyl_2_isopropyl_3_ ...",
+          "modelSetProperties": {
+            "PATH_KEY": ".PATH",
+            "PATH_SEPARATOR": "/"
+          },
+          "models": [
+            {
+              "_ipt": 0,
+              "atomCount": 38,
+              "bondCount": 37,
+              "chainCount": 1,
+              "file": "http://127.0.0.1:8013/mols/nomeclature-moc2/ethyl_2_isopropyl_3_dimethyl_6_6_hepten_2_yn_4_dioic_acid_3D.sdf",
+              "file_model": "1.1",
+              "groupCount": 1,
+              "moleculeCount": 1,
+              "name": "1",
+              "num": 1,
+              "vibrationVectors": false
+            }
+          ],
+          "modelsSelected": [
+            0
+          ]
+        }
+      }
+    },
+    {
+      "label": "Actual Previous returns2D drawing",
+      "detail": null
+    },
+    {
+      "label": "Next reloads final3Dmodel after2D",
+      "detail": null
+    },
+    {
+      "label": "Actual keyboardEscape returns theorylibrary",
+      "detail": null
+    }
+  ],
+  "javascriptErrors": [
+    {
+      "type": "javascript",
+      "level": "error",
+      "source": {
+        "realm": "82135cb0-d3b2-40d5-b115-7072fdf9502a",
+        "context": "5808bac9-1e3a-4d27-85fc-ba6fc5970a4c",
+        "userContext": "default"
+      },
+      "text": "Αποκλείστηκε αίτημα πολλαπλών προελεύσεων: Η πολιτική ίδιας προέλευσης δεν επιτρέπει την ανάγνωση του απομακρυσμένου πόρου στο https://cactus.nci.nih.gov/chemical/structure/CC%2FC(C(%3DO)O)%3DC(C%23CC(C)(C)C(%3DO)O)%2FC(C)C/iupac_name. (Αιτία: η κεφαλίδα «Access-Control-Allow-Origin» του CORS απουσιάζει). Κωδικός κατάστασης: 404.",
+      "timestamp": 1793779369057
+    },
+    {
+      "type": "javascript",
+      "level": "error",
+      "source": {
+        "realm": "82135cb0-d3b2-40d5-b115-7072fdf9502a",
+        "context": "5808bac9-1e3a-4d27-85fc-ba6fc5970a4c",
+        "userContext": "default"
+      },
+      "text": "Αποκλείστηκε αίτημα πολλαπλών προελεύσεων: Η πολιτική ίδιας προέλευσης δεν επιτρέπει την ανάγνωση του απομακρυσμένου πόρου στο https://cactus.nci.nih.gov/chemical/structure/CC%2FC(C(%3DO)O)%3DC(C%23CC(C)(C)C(%3DO)O)%2FC(C)C/iupac_name. (Αιτία: η κεφαλίδα «Access-Control-Allow-Origin» του CORS απουσιάζει). Κωδικός κατάστασης: 404.",
+      "timestamp": 1793779370808
+    }
+  ],
+  "externalCIR": [
+    {
+      "type": "javascript",
+      "level": "error",
+      "source": {
+        "realm": "82135cb0-d3b2-40d5-b115-7072fdf9502a",
+        "context": "5808bac9-1e3a-4d27-85fc-ba6fc5970a4c",
+        "userContext": "default"
+      },
+      "text": "Αποκλείστηκε αίτημα πολλαπλών προελεύσεων: Η πολιτική ίδιας προέλευσης δεν επιτρέπει την ανάγνωση του απομακρυσμένου πόρου στο https://cactus.nci.nih.gov/chemical/structure/CC%2FC(C(%3DO)O)%3DC(C%23CC(C)(C)C(%3DO)O)%2FC(C)C/iupac_name. (Αιτία: η κεφαλίδα «Access-Control-Allow-Origin» του CORS απουσιάζει). Κωδικός κατάστασης: 404.",
+      "timestamp": 1793779369057
+    },
+    {
+      "type": "javascript",
+      "level": "error",
+      "source": {
+        "realm": "82135cb0-d3b2-40d5-b115-7072fdf9502a",
+        "context": "5808bac9-1e3a-4d27-85fc-ba6fc5970a4c",
+        "userContext": "default"
+      },
+      "text": "Αποκλείστηκε αίτημα πολλαπλών προελεύσεων: Η πολιτική ίδιας προέλευσης δεν επιτρέπει την ανάγνωση του απομακρυσμένου πόρου στο https://cactus.nci.nih.gov/chemical/structure/CC%2FC(C(%3DO)O)%3DC(C%23CC(C)(C)C(%3DO)O)%2FC(C)C/iupac_name. (Αιτία: η κεφαλίδα «Access-Control-Allow-Origin» του CORS απουσιάζει). Κωδικός κατάστασης: 404.",
+      "timestamp": 1793779370808
+    }
+  ],
+  "applicationErrors": []
+}
