@@ -1,0 +1,67 @@
+{
+  "completed": false,
+  "checks": [
+    {
+      "label": "390px portrait after actual dismiss fits without overflow",
+      "detail": null
+    },
+    {
+      "label": "Embedded mission title remains visible in portrait",
+      "detail": null
+    },
+    {
+      "label": "390px portrait simulated-touch answer and Continue",
+      "detail": null
+    }
+  ],
+  "fonts": [
+    {
+      "text": "Ποιοι άνθρακες μετρούν εδώ;",
+      "display": "block",
+      "font": "28px"
+    },
+    {
+      "text": "2-",
+      "display": "block",
+      "font": "15px"
+    },
+    {
+      "text": "μεθυλο",
+      "display": "block",
+      "font": "15px"
+    },
+    {
+      "text": "εξ",
+      "display": "block",
+      "font": "15px"
+    },
+    {
+      "text": "άν",
+      "display": "block",
+      "font": "15px"
+    },
+    {
+      "text": "ιο",
+      "display": "block",
+      "font": "15px"
+    },
+    {
+      "text": "πεντ",
+      "display": "flex",
+      "font": "14px"
+    },
+    {
+      "text": "βουτ",
+      "display": "flex",
+      "font": "14px"
+    },
+    {
+      "text": "επτ",
+      "display": "flex",
+      "font": "14px"
+    }
+  ],
+  "failure": "{'columnNumber': 16, 'exception': {'type': 'error'}, 'lineNumber': 6129, 'stackTrace': {'callFrames': [{'columnNumber': 16, 'functionName': 'fScenarioUpdateStep', 'lineNumber': 6129, 'url': 'http://127.0.0.1:8013/js/mulermoc-nom-scenario-54.js?v=checkpoint-pilot-20261104-r1'}, {'columnNumber': 186, 'functionName': '', 'lineNumber': 0, 'url': 'http://127.0.0.1:8013/mulermoc-nom-54.html?scenario=scenarios/alkanes-name-repair-pilot.scenario.json&present=1#step=11'}]}, 'text': 'TypeError: can\\'t access property \"selectedMol\", old is undefined'}",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/alkane-checkpoint-pilot-20261104/browser/test-authoring-layout.py\", line 17, in <module>\n    ev('fScenarioExitPresent();fScenarioSetAuthoring(true);fScenarioGo(9);window.__oldSpec=JSON.stringify(fScenarioActive().steps[9].checkpoint);window.__sc=fScenarioActive();fScenarioUpdateStep(9,window.__sc.id);true')\n  File \"bidi\", line 43, in ev\nRuntimeError: {'columnNumber': 16, 'exception': {'type': 'error'}, 'lineNumber': 6129, 'stackTrace': {'callFrames': [{'columnNumber': 16, 'functionName': 'fScenarioUpdateStep', 'lineNumber': 6129, 'url': 'http://127.0.0.1:8013/js/mulermoc-nom-scenario-54.js?v=checkpoint-pilot-20261104-r1'}, {'columnNumber': 186, 'functionName': '', 'lineNumber': 0, 'url': 'http://127.0.0.1:8013/mulermoc-nom-54.html?scenario=scenarios/alkanes-name-repair-pilot.scenario.json&present=1#step=11'}]}, 'text': 'TypeError: can\\'t access property \"selectedMol\", old is undefined'}\n",
+  "javascriptErrors": []
+}

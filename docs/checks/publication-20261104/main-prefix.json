@@ -1,0 +1,206 @@
+{
+  "base": "http://127.0.0.1:8054/organic-nomenclature-3/",
+  "checks": [
+    {
+      "reportWidth": 1500,
+      "noOverflow": true
+    },
+    {
+      "reportWidth": 390,
+      "noOverflow": true
+    },
+    {
+      "welcome": true
+    },
+    {
+      "prefixedWorkshopQuestionAndSVG": true
+    },
+    {
+      "MainMolecules": 141,
+      "newMetrics": true
+    },
+    {
+      "key": "propene",
+      "3Datoms": 9,
+      "expandedSVG": true
+    },
+    {
+      "key": "dimethylether",
+      "3Datoms": 9,
+      "expandedSVG": true
+    },
+    {
+      "key": "ethyl_4_isopropyl_3_methyl_2_hexanal",
+      "3Datoms": 37,
+      "expandedSVG": true
+    },
+    {
+      "key": "ethyl_3_isopropyl_2_dimethyl_4_5_hexadien_2_4_dioic_acid",
+      "3Datoms": 37,
+      "expandedSVG": true
+    },
+    {
+      "key": "isopropyl_2_3_dimethylbutanoate",
+      "3Datoms": 29,
+      "expandedSVG": true
+    },
+    {
+      "publicLessonNavigationExit": true
+    }
+  ],
+  "selections": [
+    {
+      "key": "propene",
+      "before": {
+        "selectedMol": "methane",
+        "mode2D": "condensed",
+        "classes": [
+          "radioCheckContainer mode2DOption selectedRadio",
+          "radioCheckContainer mode2DOption unselectedRadio",
+          "radioCheckContainer mode2DOption unselectedRadio disabledRadio"
+        ]
+      },
+      "afterMenu": {
+        "selectedMol": "propene",
+        "mode2D": "condensed",
+        "classes": [
+          "radioCheckContainer mode2DOption selectedRadio",
+          "radioCheckContainer mode2DOption unselectedRadio",
+          "radioCheckContainer mode2DOption unselectedRadio"
+        ]
+      },
+      "afterMode": {
+        "selectedMol": "propene",
+        "mode2D": "expanded",
+        "classes": [
+          "radioCheckContainer mode2DOption unselectedRadio",
+          "radioCheckContainer mode2DOption selectedRadio",
+          "radioCheckContainer mode2DOption unselectedRadio"
+        ]
+      }
+    },
+    {
+      "key": "dimethylether",
+      "before": {
+        "selectedMol": "propene",
+        "mode2D": "expanded",
+        "classes": [
+          "radioCheckContainer mode2DOption unselectedRadio",
+          "radioCheckContainer mode2DOption selectedRadio",
+          "radioCheckContainer mode2DOption unselectedRadio"
+        ]
+      },
+      "afterMenu": {
+        "selectedMol": "dimethylether",
+        "mode2D": "expanded",
+        "classes": [
+          "radioCheckContainer mode2DOption unselectedRadio",
+          "radioCheckContainer mode2DOption selectedRadio",
+          "radioCheckContainer mode2DOption unselectedRadio"
+        ]
+      },
+      "afterMode": {
+        "selectedMol": "dimethylether",
+        "mode2D": "expanded",
+        "classes": [
+          "radioCheckContainer mode2DOption unselectedRadio",
+          "radioCheckContainer mode2DOption selectedRadio",
+          "radioCheckContainer mode2DOption unselectedRadio"
+        ]
+      }
+    },
+    {
+      "key": "ethyl_4_isopropyl_3_methyl_2_hexanal",
+      "before": {
+        "selectedMol": "dimethylether",
+        "mode2D": "expanded",
+        "classes": [
+          "radioCheckContainer mode2DOption unselectedRadio",
+          "radioCheckContainer mode2DOption selectedRadio",
+          "radioCheckContainer mode2DOption unselectedRadio"
+        ]
+      },
+      "afterMenu": {
+        "selectedMol": "ethyl_4_isopropyl_3_methyl_2_hexanal",
+        "mode2D": "expanded",
+        "classes": [
+          "radioCheckContainer mode2DOption unselectedRadio",
+          "radioCheckContainer mode2DOption selectedRadio",
+          "radioCheckContainer mode2DOption unselectedRadio"
+        ]
+      },
+      "afterMode": {
+        "selectedMol": "ethyl_4_isopropyl_3_methyl_2_hexanal",
+        "mode2D": "expanded",
+        "classes": [
+          "radioCheckContainer mode2DOption unselectedRadio",
+          "radioCheckContainer mode2DOption selectedRadio",
+          "radioCheckContainer mode2DOption unselectedRadio"
+        ]
+      }
+    },
+    {
+      "key": "ethyl_3_isopropyl_2_dimethyl_4_5_hexadien_2_4_dioic_acid",
+      "before": {
+        "selectedMol": "ethyl_4_isopropyl_3_methyl_2_hexanal",
+        "mode2D": "expanded",
+        "classes": [
+          "radioCheckContainer mode2DOption unselectedRadio",
+          "radioCheckContainer mode2DOption selectedRadio",
+          "radioCheckContainer mode2DOption unselectedRadio"
+        ]
+      },
+      "afterMenu": {
+        "selectedMol": "ethyl_3_isopropyl_2_dimethyl_4_5_hexadien_2_4_dioic_acid",
+        "mode2D": "expanded",
+        "classes": [
+          "radioCheckContainer mode2DOption unselectedRadio",
+          "radioCheckContainer mode2DOption selectedRadio",
+          "radioCheckContainer mode2DOption unselectedRadio"
+        ]
+      },
+      "afterMode": {
+        "selectedMol": "ethyl_3_isopropyl_2_dimethyl_4_5_hexadien_2_4_dioic_acid",
+        "mode2D": "expanded",
+        "classes": [
+          "radioCheckContainer mode2DOption unselectedRadio",
+          "radioCheckContainer mode2DOption selectedRadio",
+          "radioCheckContainer mode2DOption unselectedRadio"
+        ]
+      }
+    },
+    {
+      "key": "isopropyl_2_3_dimethylbutanoate",
+      "before": {
+        "selectedMol": "ethyl_3_isopropyl_2_dimethyl_4_5_hexadien_2_4_dioic_acid",
+        "mode2D": "expanded",
+        "classes": [
+          "radioCheckContainer mode2DOption unselectedRadio",
+          "radioCheckContainer mode2DOption selectedRadio",
+          "radioCheckContainer mode2DOption unselectedRadio"
+        ]
+      },
+      "afterMenu": {
+        "selectedMol": "isopropyl_2_3_dimethylbutanoate",
+        "mode2D": "expanded",
+        "classes": [
+          "radioCheckContainer mode2DOption unselectedRadio",
+          "radioCheckContainer mode2DOption selectedRadio",
+          "radioCheckContainer mode2DOption unselectedRadio"
+        ]
+      },
+      "afterMode": {
+        "selectedMol": "isopropyl_2_3_dimethylbutanoate",
+        "mode2D": "expanded",
+        "classes": [
+          "radioCheckContainer mode2DOption unselectedRadio",
+          "radioCheckContainer mode2DOption selectedRadio",
+          "radioCheckContainer mode2DOption unselectedRadio"
+        ]
+      }
+    }
+  ],
+  "completed": true,
+  "javascriptErrors": [],
+  "allDiagnosticEntries": []
+}

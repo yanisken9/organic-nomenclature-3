@@ -1,5 +1,22 @@
 # Changelog
 
+## 2026-11-04 — Local Main54 integration and workshop entry (local; independently reviewed)
+
+Approved complete professor sync through02dbcfaf,57commits/69paths since93b759f5.
+New isolated54 runtime retains141molecules/422forms/14lessonJSONs337steps and
+Namelecule2D conventions. GR/EN,PubCheminfo,JSmolreadiness,newdrafteditor/generators,
+richauthoring and allcumulativefeatures integrated. Welcome «Παίζω και εξασκούμαι»
+opens acceptedworkshop; welcomeexplore/teacher and14lessonlinks now54.
+Old52/React/molecularassets preserved. Bounded fixes address charge/metadata,
+spgeometry,exact2D/3Dmapping/cache,ENboxfusion,legacylessonboxsemantics,draftgeometry,
+active-draftreload and Presenttitleownership; inheritedC9stem corrected toεννε.
+IndependentReviewerfoundR54-F1storedreadycallbackbypass;registeredstabledelegate
+nowreachesrecovery. Optionaldefaultscenariofetchcapturesspecificuntouchedbootcard;
+new/edited/deletedcardsandstartedauthoringarepreserved. Explicitnativeconfirmation
+preventssilentsessioncontentlossduringGR/ENreload;noautopersistenceadded.
+Addedcore54;core52 unchanged. No commit/push/publication. Finalauthoring/reviewcomplete; residualC9diaeresis/mobile3Dlabelcrowding/externaldepsrecorded; actualchecks/externalCIR/CDN limits in[V54 record](V54-SYNC-20261104.md).
+
+
 ### 2026-11-01 — Consolidated30Oct–1Nov report and completed expanded-form normalization
 
 - Complete11ethers,31aldehydes/ketones,21acids and9esters after last public31October release;72additional Expanded entries bring reviewed category coverage to127molecules.

@@ -1,0 +1,53 @@
+{
+  "role": "NAMELECULE_DEVELOPER_V1_20261023",
+  "frozenUtc": "2026-11-04T10:48:28.002431+00:00",
+  "request": "Approved alkane pilot callc6ffd89529a54e47849aa0b933c9435e; scenario integration only",
+  "baseCommit": "168e3cec01f941a84d40bbe0dc07156e7baa35d0",
+  "comparisonBase": "docs/checks/alkane-checkpoint-pilot-20261104/scenario/before-mulermoc-nom-scenario-54.js",
+  "baselineSha256": "f1763a31567172e295cfee7afc936b0e592b3d5d6c0fddc60d7e68356b21a9c8",
+  "changedRuntimePaths": [
+    "js/mulermoc-nom-scenario-54.js"
+  ],
+  "runtimeSha256": "e8ab12d6bf7671a93d7b5b9c21506d98959f3133a6df425e3787d0408becaa9a",
+  "checks": [
+    {
+      "evidence": "docs/checks/alkane-checkpoint-pilot-20261104/scenario/ordinary-before.json",
+      "checks": 149,
+      "failures": 0
+    },
+    {
+      "evidence": "docs/checks/alkane-checkpoint-pilot-20261104/scenario/ordinary-after.json",
+      "checks": 149,
+      "failures": 0
+    },
+    {
+      "evidence": "docs/checks/alkane-checkpoint-pilot-20261104/scenario/checkpoint-before.json",
+      "checks": 50,
+      "failures": 29
+    },
+    {
+      "evidence": "docs/checks/alkane-checkpoint-pilot-20261104/scenario/checkpoint-after.json",
+      "checks": 55,
+      "failures": 0
+    },
+    {
+      "evidence": "docs/checks/alkane-checkpoint-pilot-20261104/scenario/real-controller-results.json",
+      "checks": 15,
+      "failures": 0
+    }
+  ],
+  "commands": [
+    "/System/Library/Frameworks/JavaScriptCore.framework/Versions/A/Helpers/jsc docs/checks/v54-sync-20261104/shell/scenario-schema-check.js",
+    "/System/Library/Frameworks/JavaScriptCore.framework/Versions/A/Helpers/jsc docs/checks/alkane-checkpoint-pilot-20261104/scenario/checkpoint-integration-check.js -- <comparison-target>",
+    "/System/Library/Frameworks/JavaScriptCore.framework/Versions/A/Helpers/jsc docs/checks/alkane-checkpoint-pilot-20261104/scenario/real-controller-check.js",
+    "git diff --no-index --check -- <before-copy> js/mulermoc-nom-scenario-54.js (exit1 for differing files; no whitespace findings)"
+  ],
+  "limitations": [
+    "Integration55 uses a controller contract double and molecular apply counter; no browser claims.",
+    "Real-module15 covers schema/gating and legal saved answers in in-memory sessionStorage; no physical browser storage claim.",
+    "Actual viewer/modes/zoom/highlights/dialog/keyboard/refresh/mobile and full standalone game regression are root checks.",
+    "Independent consolidated Reviewer has not run yet; root owns review."
+  ],
+  "coreFilesChanged": false,
+  "notes": "No notes, build, install, stage, commit, push, publication or agents by this worker."
+}

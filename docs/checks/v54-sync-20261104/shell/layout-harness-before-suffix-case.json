@@ -1,0 +1,34 @@
+{
+  "completed": false,
+  "checks": 16,
+  "states": {
+    "legacyHighlight": {
+      "mode": "compSecondSub2",
+      "expected": [
+        7,
+        8,
+        9,
+        10
+      ],
+      "calls": [
+        "7,9,8,9,9,9,10,9"
+      ],
+      "explanation": "Ομαδοποιημένο συνθετικό με τα ονόματα των υπόλοιπων διακλαδώσεων και τις ενδιάμεσες θέσεις τους (ισοπροπύλιο στις θέσεις 3 · μεθύλιο στις θέσεις 2)."
+    }
+  },
+  "failure": "Modern suffix locant control remains available: None",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/v54-sync-20261104/shell/test-layout-compatibility-browser.py\", line 52, in <module>\n    jscheck(\"nameAnalysisMode==='compSuffixLocants' && !!document.querySelector('#comp9loc.selected')\",'Modern suffix locant control remains available')\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/v54-sync-20261104/shell/test-layout-compatibility-browser.py\", line 10, in jscheck\n    def jscheck(expr,label):check(ev(expr),label)\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/v54-sync-20261104/shell/test-layout-compatibility-browser.py\", line 9, in check\n    if not ok:raise AssertionError(label+': '+str(detail))\nAssertionError: Modern suffix locant control remains available: None\n",
+  "javascriptErrors": [],
+  "sourceHashes": {
+    "js/jsme-nick-nomeclature-moc2-data_54.js": "9387cd654b2ff3cfb058d9b97ddcca798ac13f47f769b532f9c122277ff8dd0a",
+    "js/mulermoc-nom-core-54.js": "10f3e1ed4ea566be50c4797d523d6cfe83e86a41cab761b0c18281f9113a061f",
+    "js/mulermoc-nom-iupac-54.js": "3d7c675f5c9a2fc449412e85e3cc844d4b76959faaeb151bf41865a627f56931",
+    "js/mulermoc-nom-lang-54.js": "e9e564857a34161bcefd456042cf4974882e7dbc6dc5c453f77d8e64878cb2e5",
+    "js/mulermoc-nom-molview-54.js": "c1c4b6806aac5f2efaa77beea5c106241d355293d068cce41313dda4a3a143ba",
+    "js/mulermoc-nom-name-en-54.js": "98b37b9a999d0f2a3f56a73d59c625b5dc072ba80bd850aaf446519acdabc741",
+    "js/mulermoc-nom-note-54.js": "e685355459afb7955fbe13e3b8e07c6283469b4d8acb98cfbcfa483c9f9be3ca",
+    "js/mulermoc-nom-scenario-54.js": "72091a95033d60f9a386d78e0b60747c5aa58abedc7e49cb7dc6f61f6573cbd3",
+    "js/mulermoc-nom-teaching-54.js": "26704561e4e4daef69482294bfc77e0c69fd82a4f59f83e31e355747c9fadcb5",
+    "js/ui-icons-54.js": "2ae4c48198f8e62f6e74645ef853369164b9e0e4915c4df2cc1715a06705896f"
+  }
+}

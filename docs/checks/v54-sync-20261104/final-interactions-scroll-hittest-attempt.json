@@ -1,0 +1,7 @@
+{
+  "completed": false,
+  "checks": [],
+  "failure": "('[id=\"ethyl_3_isopropyl_2_dimethyl_4_5_hexanoic_acid\"].menuLi', {'x': 350.1000061035156, 'y': 607, 'receivesClick': False, 'hit': '<div class=\"menuNomeclature2Container\"><div id=\"methane\" class=\"menuLi\"><span class=\"menuLiCounter\">1.</span><span class=\"menuLiFormula\"> CH<sub>4</sub></span></div><div id=\"methanoicacid\" class=\"menuLi\"><span class=\"menuLiCounter\">2.</span><span class=\"menuLiFormula\"> HCOOH</span></div><div id=\"met'})",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/v54-sync-20261104/test-final-interactions.py\", line 14, in <module>\n    key=keys[0];click('[id=\"'+key+'\"].menuLi');until('selectedMol==='+json.dumps(key))\n  File \"support\", line 10, in click\n    key='ethyl_3_isopropyl_2_dimethyl_4_5_hexanoic_acid'\nAssertionError: ('[id=\"ethyl_3_isopropyl_2_dimethyl_4_5_hexanoic_acid\"].menuLi', {'x': 350.1000061035156, 'y': 607, 'receivesClick': False, 'hit': '<div class=\"menuNomeclature2Container\"><div id=\"methane\" class=\"menuLi\"><span class=\"menuLiCounter\">1.</span><span class=\"menuLiFormula\"> CH<sub>4</sub></span></div><div id=\"methanoicacid\" class=\"menuLi\"><span class=\"menuLiCounter\">2.</span><span class=\"menuLiFormula\"> HCOOH</span></div><div id=\"met'})\n",
+  "javascriptErrors": []
+}

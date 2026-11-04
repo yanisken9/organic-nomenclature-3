@@ -1,0 +1,51 @@
+{
+  "completed": false,
+  "checks": 5,
+  "failures": [],
+  "steps": [],
+  "lessons": [],
+  "sourceHashesStart": {
+    "mulermoc-nom-54.html": "401dc106c9d56d99820cd933a08806a545f73c5510cc49a8e1a77ad9d04dca04",
+    "js/jsme-nick-nomeclature-moc2-data_54.js": "9387cd654b2ff3cfb058d9b97ddcca798ac13f47f769b532f9c122277ff8dd0a",
+    "js/mulermoc-nom-core-54.js": "449aa27c432f93c369afc6ad2d517ba6c3777a1a2b297b5623d1003b529d39b0",
+    "js/mulermoc-nom-iupac-54.js": "3d7c675f5c9a2fc449412e85e3cc844d4b76959faaeb151bf41865a627f56931",
+    "js/mulermoc-nom-lang-54.js": "8a4d26e95abe30da67682e90b8ba04da94dd7412d3b191171fe3f1bc78a33b49",
+    "js/mulermoc-nom-molview-54.js": "a3f05fe87fe80c9cac911d9ed55778a07a03a039e1a5c22f57b92bbd03800e16",
+    "js/mulermoc-nom-name-en-54.js": "98b37b9a999d0f2a3f56a73d59c625b5dc072ba80bd850aaf446519acdabc741",
+    "js/mulermoc-nom-note-54.js": "e685355459afb7955fbe13e3b8e07c6283469b4d8acb98cfbcfa483c9f9be3ca",
+    "js/mulermoc-nom-scenario-54.js": "83b87c814a14194391f4108960671317394eb91ed1a4100814a51726b9f4e49a",
+    "js/mulermoc-nom-teaching-54.js": "d5ab436dacd41d5e09083b5f12ded39f5c671cc2c4605e9ca86950d5a71079ac",
+    "js/ui-icons-54.js": "2ae4c48198f8e62f6e74645ef853369164b9e0e4915c4df2cc1715a06705896f",
+    "css/jsme-nick-54.css": "987c729b5411f915ad507694a83ec0eae524bc43464967037bb3ff795ad02ed9",
+    "css/mulermoc-nom-scenario-54.css": "a705e6e0aa5547bd6a57c1d6c33ec5f09e42b764cfc3e86616f6cd0269797a08",
+    "css/namelecule-54.css": "042b0e93645dbc9fe5c9851bdd90a73b08f8c89fc4ef524302bd07ac7180e7a7",
+    "spt/init-54.spt": "69cdc2a07d6131ea4dca753617c2070c0d099825ea214a3bd6fc95f64c617245"
+  },
+  "loadedRuntime": [],
+  "limits": [
+    "Developer browser execution; not independent review.",
+    "Existing337 steps have no stored moveto/lang/nameExpanded fields; separate in-memory probes exercise those54 additions."
+  ],
+  "failure": "{'columnNumber': 39, 'exception': {'type': 'error'}, 'lineNumber': 305, 'stackTrace': {'callFrames': []}, 'text': 'SyntaxError: missing ) after argument list'}",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/v54-sync-20261104/shell/test-lessons-browser.py\", line 37, in <module>\n    if lesson_index==0:out['loadedRuntime'].append({'lesson':1,'sources':loaded_sources()})\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/v54-sync-20261104/shell/test-lessons-browser.py\", line 19, in loaded_sources\n    return json.loads(ev(\"JSON.stringify(await Promise.all([...document.scripts].filter(x=>x.src&&!x.src.startsWith('https:')).map(async x=>{let r=await fetch(x.src,{cache:'force-cache'}),b=await r.arrayBuffer(),h=await crypto.subtle.digest('SHA-256',b);return {url:x.src,sha256:[...new Uint8Array(h)].map(b=>b.toString(16).padStart(2,'0')).join('')}})))\"))\n  File \"bidi\", line 43, in ev\n    for i,step in enumerate(source):\nRuntimeError: {'columnNumber': 39, 'exception': {'type': 'error'}, 'lineNumber': 305, 'stackTrace': {'callFrames': []}, 'text': 'SyntaxError: missing ) after argument list'}\n",
+  "sourceHashesEnd": {
+    "mulermoc-nom-54.html": "401dc106c9d56d99820cd933a08806a545f73c5510cc49a8e1a77ad9d04dca04",
+    "js/jsme-nick-nomeclature-moc2-data_54.js": "9387cd654b2ff3cfb058d9b97ddcca798ac13f47f769b532f9c122277ff8dd0a",
+    "js/mulermoc-nom-core-54.js": "449aa27c432f93c369afc6ad2d517ba6c3777a1a2b297b5623d1003b529d39b0",
+    "js/mulermoc-nom-iupac-54.js": "3d7c675f5c9a2fc449412e85e3cc844d4b76959faaeb151bf41865a627f56931",
+    "js/mulermoc-nom-lang-54.js": "8a4d26e95abe30da67682e90b8ba04da94dd7412d3b191171fe3f1bc78a33b49",
+    "js/mulermoc-nom-molview-54.js": "a3f05fe87fe80c9cac911d9ed55778a07a03a039e1a5c22f57b92bbd03800e16",
+    "js/mulermoc-nom-name-en-54.js": "98b37b9a999d0f2a3f56a73d59c625b5dc072ba80bd850aaf446519acdabc741",
+    "js/mulermoc-nom-note-54.js": "e685355459afb7955fbe13e3b8e07c6283469b4d8acb98cfbcfa483c9f9be3ca",
+    "js/mulermoc-nom-scenario-54.js": "83b87c814a14194391f4108960671317394eb91ed1a4100814a51726b9f4e49a",
+    "js/mulermoc-nom-teaching-54.js": "d5ab436dacd41d5e09083b5f12ded39f5c671cc2c4605e9ca86950d5a71079ac",
+    "js/ui-icons-54.js": "2ae4c48198f8e62f6e74645ef853369164b9e0e4915c4df2cc1715a06705896f",
+    "css/jsme-nick-54.css": "987c729b5411f915ad507694a83ec0eae524bc43464967037bb3ff795ad02ed9",
+    "css/mulermoc-nom-scenario-54.css": "a705e6e0aa5547bd6a57c1d6c33ec5f09e42b764cfc3e86616f6cd0269797a08",
+    "css/namelecule-54.css": "042b0e93645dbc9fe5c9851bdd90a73b08f8c89fc4ef524302bd07ac7180e7a7",
+    "spt/init-54.spt": "69cdc2a07d6131ea4dca753617c2070c0d099825ea214a3bd6fc95f64c617245"
+  },
+  "changedDuringRun": [],
+  "javascriptErrors": [],
+  "diagnostics": []
+}

@@ -1,0 +1,262 @@
+{
+  "runtime": "JavaScriptCore",
+  "checks": 149,
+  "failures": [],
+  "lessons": [
+    {
+      "path": "scenarios/alkanes-nomenclature-branches.scenario.json",
+      "steps": 21,
+      "warnings": [],
+      "baseline52RuntimeDifferences": []
+    },
+    {
+      "path": "scenarios/alkenes-nomenclature-branches.scenario.json",
+      "steps": 22,
+      "warnings": [],
+      "baseline52RuntimeDifferences": []
+    },
+    {
+      "path": "scenarios/alkynes-nomenclature-branches.scenario.json",
+      "steps": 22,
+      "warnings": [],
+      "baseline52RuntimeDifferences": []
+    },
+    {
+      "path": "scenarios/alkadienes-nomenclature-branches.scenario.json",
+      "steps": 23,
+      "warnings": [],
+      "baseline52RuntimeDifferences": []
+    },
+    {
+      "path": "scenarios/enynes-nomenclature-branches.scenario.json",
+      "steps": 23,
+      "warnings": [],
+      "baseline52RuntimeDifferences": []
+    },
+    {
+      "path": "scenarios/saturated-monoalcohols-nomenclature.scenario.json",
+      "steps": 20,
+      "warnings": [],
+      "baseline52RuntimeDifferences": []
+    },
+    {
+      "path": "scenarios/other-alcohols-nomenclature.scenario.json",
+      "steps": 22,
+      "warnings": [],
+      "baseline52RuntimeDifferences": []
+    },
+    {
+      "path": "scenarios/saturated-monoethers-nomenclature.scenario.json",
+      "steps": 27,
+      "warnings": [],
+      "baseline52RuntimeDifferences": []
+    },
+    {
+      "path": "scenarios/saturated-monoaldehydes-nomenclature.scenario.json",
+      "steps": 24,
+      "warnings": [],
+      "baseline52RuntimeDifferences": []
+    },
+    {
+      "path": "scenarios/other-aldehydes-nomenclature.scenario.json",
+      "steps": 26,
+      "warnings": [],
+      "baseline52RuntimeDifferences": []
+    },
+    {
+      "path": "scenarios/saturated-monoketones-nomenclature.scenario.json",
+      "steps": 25,
+      "warnings": [],
+      "baseline52RuntimeDifferences": []
+    },
+    {
+      "path": "scenarios/other-ketones-nomenclature.scenario.json",
+      "steps": 28,
+      "warnings": [],
+      "baseline52RuntimeDifferences": []
+    },
+    {
+      "path": "scenarios/saturated-monocarboxylic-acids-nomenclature.scenario.json",
+      "steps": 28,
+      "warnings": [],
+      "baseline52RuntimeDifferences": []
+    },
+    {
+      "path": "scenarios/other-carboxylic-acids-nomenclature.scenario.json",
+      "steps": 26,
+      "warnings": [],
+      "baseline52RuntimeDifferences": []
+    }
+  ],
+  "totalSteps": 337,
+  "exportPayload": {
+    "scenarioVersion": 1,
+    "app": "mulermoc-nom-54",
+    "scenario": "layout roundtrip",
+    "title": "layout roundtrip",
+    "showStepNumbers": true,
+    "reserveTitleSpace": false,
+    "author": "Unknown",
+    "created": "2026-11-04T08:00:55.342Z",
+    "steps": [
+      {
+        "n": 1,
+        "nameBoxLayout": 1,
+        "lang": "gr",
+        "title": "methane",
+        "note": "",
+        "noteFormat": "text",
+        "mode2D": "condensed",
+        "mainChainMode": "algorithmic",
+        "chainIdx": 0,
+        "etherNamingMode": "iupac",
+        "nameAnalysisMode": "none",
+        "selectedRule": null,
+        "style2D": {
+          "atomColors": false,
+          "colorMode": "atom",
+          "zigzag": false,
+          "zoom": 2
+        },
+        "styleName": {
+          "box": true,
+          "cross": false,
+          "etherNaming": "iupac",
+          "panelOpen": true,
+          "hidden": []
+        },
+        "styleHighlight": {
+          "bondAtoms": false,
+          "numberingAtoms": true,
+          "numberingBonds": true
+        },
+        "styleText": {
+          "fontSizePx": null,
+          "textWidthPx": null,
+          "columns": null,
+          "position": null
+        },
+        "audio": {
+          "narrate": false
+        },
+        "menuSubset": [],
+        "menuGroups": [
+          "molecules"
+        ],
+        "view3D": {
+          "style": "ballnstick",
+          "spin": false,
+          "showH": true,
+          "atomSymbols": true,
+          "moveto": null
+        },
+        "show": {
+          "menu": false,
+          "viewerButtons": false,
+          "viewerSettings": false,
+          "viewers": {
+            "2D": true,
+            "3D": true
+          },
+          "viewerMaxHeight": "full",
+          "viewerBothHeight": "full",
+          "controls": {
+            "2D": false,
+            "3D": false
+          },
+          "save": {
+            "2D": false,
+            "3D": false
+          },
+          "naming": true,
+          "nameSettings": false,
+          "nameEye": false,
+          "nameExpanded": false,
+          "audio": false,
+          "rule": false,
+          "text": true
+        },
+        "selectedMol": "methane"
+      },
+      {
+        "n": 2,
+        "nameBoxLayout": 2,
+        "lang": "gr",
+        "title": "ethane",
+        "note": "",
+        "noteFormat": "text",
+        "mode2D": "condensed",
+        "mainChainMode": "algorithmic",
+        "chainIdx": 0,
+        "etherNamingMode": "iupac",
+        "nameAnalysisMode": "none",
+        "selectedRule": null,
+        "style2D": {
+          "atomColors": false,
+          "colorMode": "atom",
+          "zigzag": false,
+          "zoom": 2
+        },
+        "styleName": {
+          "box": true,
+          "cross": false,
+          "etherNaming": "iupac",
+          "panelOpen": true,
+          "hidden": []
+        },
+        "styleHighlight": {
+          "bondAtoms": false,
+          "numberingAtoms": true,
+          "numberingBonds": true
+        },
+        "styleText": {
+          "fontSizePx": null,
+          "textWidthPx": null,
+          "columns": null,
+          "position": null
+        },
+        "audio": {
+          "narrate": false
+        },
+        "menuSubset": [],
+        "menuGroups": [
+          "molecules"
+        ],
+        "view3D": {
+          "style": "ballnstick",
+          "spin": false,
+          "showH": true,
+          "atomSymbols": true,
+          "moveto": null
+        },
+        "show": {
+          "menu": false,
+          "viewerButtons": false,
+          "viewerSettings": false,
+          "viewers": {
+            "2D": true,
+            "3D": true
+          },
+          "viewerMaxHeight": "full",
+          "viewerBothHeight": "full",
+          "controls": {
+            "2D": false,
+            "3D": false
+          },
+          "save": {
+            "2D": false,
+            "3D": false
+          },
+          "naming": true,
+          "nameSettings": false,
+          "nameEye": false,
+          "nameExpanded": false,
+          "audio": false,
+          "rule": false,
+          "text": true
+        },
+        "selectedMol": "ethane"
+      }
+    ]
+  }
+}

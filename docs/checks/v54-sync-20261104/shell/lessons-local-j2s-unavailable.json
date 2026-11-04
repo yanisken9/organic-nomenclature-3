@@ -1,0 +1,54 @@
+{
+  "completed": false,
+  "checks": 4,
+  "failures": [],
+  "steps": [],
+  "lessons": [],
+  "sourceHashesStart": {
+    "mulermoc-nom-54.html": "401dc106c9d56d99820cd933a08806a545f73c5510cc49a8e1a77ad9d04dca04",
+    "js/jsme-nick-nomeclature-moc2-data_54.js": "9387cd654b2ff3cfb058d9b97ddcca798ac13f47f769b532f9c122277ff8dd0a",
+    "js/mulermoc-nom-core-54.js": "b496e2c3d02c3b43c0144332542d0a2f9e0b11e4d03407aeaf4e875091bf2598",
+    "js/mulermoc-nom-iupac-54.js": "3d7c675f5c9a2fc449412e85e3cc844d4b76959faaeb151bf41865a627f56931",
+    "js/mulermoc-nom-lang-54.js": "8a4d26e95abe30da67682e90b8ba04da94dd7412d3b191171fe3f1bc78a33b49",
+    "js/mulermoc-nom-molview-54.js": "a3f05fe87fe80c9cac911d9ed55778a07a03a039e1a5c22f57b92bbd03800e16",
+    "js/mulermoc-nom-name-en-54.js": "2a5c7575485d488f06c6b1980703f270ccc1dd531fe3b97a6d43f485ae59ff4f",
+    "js/mulermoc-nom-note-54.js": "e685355459afb7955fbe13e3b8e07c6283469b4d8acb98cfbcfa483c9f9be3ca",
+    "js/mulermoc-nom-scenario-54.js": "83b87c814a14194391f4108960671317394eb91ed1a4100814a51726b9f4e49a",
+    "js/mulermoc-nom-teaching-54.js": "d5ab436dacd41d5e09083b5f12ded39f5c671cc2c4605e9ca86950d5a71079ac",
+    "js/ui-icons-54.js": "2ae4c48198f8e62f6e74645ef853369164b9e0e4915c4df2cc1715a06705896f",
+    "css/jsme-nick-54.css": "987c729b5411f915ad507694a83ec0eae524bc43464967037bb3ff795ad02ed9",
+    "css/mulermoc-nom-scenario-54.css": "a705e6e0aa5547bd6a57c1d6c33ec5f09e42b764cfc3e86616f6cd0269797a08",
+    "css/namelecule-54.css": "042b0e93645dbc9fe5c9851bdd90a73b08f8c89fc4ef524302bd07ac7180e7a7",
+    "spt/init-54.spt": "69cdc2a07d6131ea4dca753617c2070c0d099825ea214a3bd6fc95f64c617245"
+  },
+  "loadedRuntime": [],
+  "limits": [
+    "Developer browser execution; not independent review.",
+    "Existing337 steps have no stored moveto/lang/nameExpanded fields; separate in-memory probes exercise those54 additions."
+  ],
+  "failure": "Timed out: window.JSmolReadyFlag===true",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/v54-sync-20261104/shell/test-lessons-browser.py\", line 34, in <module>\n    app_ready();until('window.JSmolReadyFlag===true')\n  File \"bidi\", line 51, in until\n    check(state[field]==expected,title+' step'+str(i+1)+' '+field,{'expected':expected,'actual':state[field]})\nAssertionError: Timed out: window.JSmolReadyFlag===true\n",
+  "sourceHashesEnd": {
+    "mulermoc-nom-54.html": "401dc106c9d56d99820cd933a08806a545f73c5510cc49a8e1a77ad9d04dca04",
+    "js/jsme-nick-nomeclature-moc2-data_54.js": "9387cd654b2ff3cfb058d9b97ddcca798ac13f47f769b532f9c122277ff8dd0a",
+    "js/mulermoc-nom-core-54.js": "ccd26af31d3960f2005666c86c0579fc1d4e7e9191c19a1e53bc6f56684070f7",
+    "js/mulermoc-nom-iupac-54.js": "3d7c675f5c9a2fc449412e85e3cc844d4b76959faaeb151bf41865a627f56931",
+    "js/mulermoc-nom-lang-54.js": "8a4d26e95abe30da67682e90b8ba04da94dd7412d3b191171fe3f1bc78a33b49",
+    "js/mulermoc-nom-molview-54.js": "a3f05fe87fe80c9cac911d9ed55778a07a03a039e1a5c22f57b92bbd03800e16",
+    "js/mulermoc-nom-name-en-54.js": "98b37b9a999d0f2a3f56a73d59c625b5dc072ba80bd850aaf446519acdabc741",
+    "js/mulermoc-nom-note-54.js": "e685355459afb7955fbe13e3b8e07c6283469b4d8acb98cfbcfa483c9f9be3ca",
+    "js/mulermoc-nom-scenario-54.js": "83b87c814a14194391f4108960671317394eb91ed1a4100814a51726b9f4e49a",
+    "js/mulermoc-nom-teaching-54.js": "d5ab436dacd41d5e09083b5f12ded39f5c671cc2c4605e9ca86950d5a71079ac",
+    "js/ui-icons-54.js": "2ae4c48198f8e62f6e74645ef853369164b9e0e4915c4df2cc1715a06705896f",
+    "css/jsme-nick-54.css": "987c729b5411f915ad507694a83ec0eae524bc43464967037bb3ff795ad02ed9",
+    "css/mulermoc-nom-scenario-54.css": "a705e6e0aa5547bd6a57c1d6c33ec5f09e42b764cfc3e86616f6cd0269797a08",
+    "css/namelecule-54.css": "042b0e93645dbc9fe5c9851bdd90a73b08f8c89fc4ef524302bd07ac7180e7a7",
+    "spt/init-54.spt": "69cdc2a07d6131ea4dca753617c2070c0d099825ea214a3bd6fc95f64c617245"
+  },
+  "changedDuringRun": [
+    "js/mulermoc-nom-core-54.js",
+    "js/mulermoc-nom-name-en-54.js"
+  ],
+  "javascriptErrors": [],
+  "diagnostics": []
+}

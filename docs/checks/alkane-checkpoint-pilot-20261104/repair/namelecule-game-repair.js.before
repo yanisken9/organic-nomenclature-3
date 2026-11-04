@@ -1,0 +1,563 @@
+/* Namelecule · Συνεργείο ονομάτων. Standalone, buildless and local assets only. */
+(function (global) {
+  "use strict";
+
+  function initialChoiceOrder(round) {
+    if (round.kind !== "replace") return [];
+    const order = round.choices.map(function (_, index) { return index; });
+    if (!round.guided) {
+      for (let index = order.length - 1; index > 0; index -= 1) {
+        const swapIndex = Math.floor(Math.random() * (index + 1));
+        const previous = order[index];
+        order[index] = order[swapIndex];
+        order[swapIndex] = previous;
+      }
+    }
+    return order;
+  }
+
+  function createRoundState(round, previous) {
+    return {
+      selectedPartId: null,
+      selectedValue: null,
+      order: round.kind === "order" ? round.movablePartIds.slice() : [],
+      choiceOrder: previous && previous.choiceOrder ? previous.choiceOrder.slice() : initialChoiceOrder(round),
+      attempts: previous ? previous.attempts : 0,
+      selectionMisses: previous ? previous.selectionMisses : 0,
+      solved: false
+    };
+  }
+
+  function candidateName(round, state) {
+    if (round.kind === "order") {
+      const textById = Object.fromEntries(round.parts.map(function (part) { return [part.id, part.text]; }));
+      return state.order.map(function (id) { return textById[id]; }).join("-") + textById[round.suffixPartId];
+    }
+    return round.parts.map(function (part) {
+      return part.id === round.targetPartId && state.selectedValue !== null ? state.selectedValue : part.text;
+    }).join("");
+  }
+
+  function movePart(order, partId, direction) {
+    const next = order.slice();
+    const index = next.indexOf(partId);
+    const destination = index + direction;
+    if ((direction === -1 || direction === 1) && index >= 0 && destination >= 0 && destination < next.length) {
+      next[index] = next[destination];
+      next[destination] = partId;
+    }
+    return next;
+  }
+
+  function evaluateRepair(round, state) {
+    const name = candidateName(round, state);
+    if (round.kind === "replace") {
+      if (!state.selectedPartId || state.selectedValue === null) return { kind: "incomplete", name: name };
+      if (state.selectedPartId !== round.targetPartId) return { kind: "wrongPart", name: name, message: round.feedback.wrongPart };
+      if (state.selectedValue === round.correctValue) return { kind: "correct", name: name, message: round.successText };
+      const original = round.parts.find(function (part) { return part.id === round.targetPartId; }).text;
+      if (state.selectedValue === original) return { kind: "unchanged", name: name, message: round.feedback.unchanged };
+      const choice = round.choices.find(function (item) { return item.value === state.selectedValue; });
+      return { kind: "incorrect", name: name, message: choice && choice.feedback ? choice.feedback : round.feedback.incorrect };
+    }
+    const correct = state.order.length === round.correctOrder.length && state.order.every(function (id, index) {
+      return id === round.correctOrder[index];
+    });
+    if (correct) return { kind: "correct", name: name, message: round.successText };
+    const unchanged = state.order.every(function (id, index) { return id === round.movablePartIds[index]; });
+    return { kind: unchanged ? "unchanged" : "incorrect", name: name, message: unchanged ? round.feedback.unchanged : round.feedback.incorrect };
+  }
+
+  function summarizeGame(rounds, states) {
+    const challenges = rounds.map(function (round, index) { return { round: round, state: states[index] }; })
+      .filter(function (entry) { return !entry.round.guided; });
+    return {
+      total: challenges.length,
+      completed: challenges.filter(function (entry) { return entry.state && entry.state.solved; }).length,
+      attempts: challenges.reduce(function (sum, entry) { return sum + (entry.state ? entry.state.attempts : 0); }, 0)
+    };
+  }
+
+  function validateGameData(data) {
+    function assert(condition, message) { if (!condition) throw new Error(message); }
+    function text(value) { return typeof value === "string" && value.trim().length > 0; }
+    function localAsset(value) { return text(value) && /^assets\/[a-zA-Z0-9_/-]+\.svg$/.test(value) && !value.includes(".."); }
+    assert(data && data.schemaVersion === 1 && text(data.title) && text(data.description), "Invalid game metadata");
+    assert(Array.isArray(data.rounds) && data.rounds.length === 5, "Expected one example and four challenges");
+    const roundIds = new Set();
+    data.rounds.forEach(function (round, index) {
+      assert(round && text(round.id) && !roundIds.has(round.id), "Invalid round id");
+      roundIds.add(round.id);
+      assert(round.guided === (index === 0), "The first round must be the only guided example");
+      ["title", "objective", "moleculeId", "diagramAlt", "correctName", "successText"].forEach(function (key) {
+        assert(text(round[key]), "Missing round field " + key);
+      });
+      assert(localAsset(round.asset), "Invalid local diagram path");
+      assert(Array.isArray(round.parts) && round.parts.length > 0, "Missing name parts");
+      const ids = new Set();
+      round.parts.forEach(function (part) {
+        assert(part && text(part.id) && text(part.text) && text(part.label) && !ids.has(part.id), "Invalid name part");
+        ids.add(part.id);
+      });
+      assert(round.feedback && ["wrongPart", "unchanged", "incorrect"].every(function (key) {
+        return text(round.feedback[key]);
+      }), "Missing targeted feedback");
+      const solution = createRoundState(round);
+      if (round.kind === "replace") {
+        assert(ids.has(round.targetPartId) && text(round.correctValue), "Invalid replacement target");
+        assert(Array.isArray(round.choices) && round.choices.length >= 2, "Missing replacement choices");
+        const choiceValues = new Set();
+        round.choices.forEach(function (choice) {
+          assert(choice && text(choice.value) && text(choice.label) && !choiceValues.has(choice.value), "Invalid replacement choice");
+          choiceValues.add(choice.value);
+        });
+        assert(choiceValues.has(round.correctValue), "Missing correct replacement");
+        solution.selectedPartId = round.targetPartId;
+        solution.selectedValue = round.correctValue;
+      } else {
+        assert(round.kind === "order" && Array.isArray(round.movablePartIds) && round.movablePartIds.length === 2, "Invalid ordering round");
+        assert(new Set(round.movablePartIds).size === 2 && round.movablePartIds.every(function (id) { return ids.has(id); }), "Invalid movable groups");
+        assert(ids.has(round.suffixPartId) && !round.movablePartIds.includes(round.suffixPartId), "Invalid fixed parent");
+        assert(Array.isArray(round.correctOrder) && round.correctOrder.length === 2 && new Set(round.correctOrder).size === 2 && round.correctOrder.every(function (id) {
+          return round.movablePartIds.includes(id);
+        }), "Invalid correct group order");
+        solution.order = round.correctOrder.slice();
+      }
+      assert(candidateName(round, solution) === round.correctName, "Correct name does not match name parts");
+      assert(candidateName(round, createRoundState(round)) !== round.correctName, "The repair must begin with a different name");
+    });
+    return data;
+  }
+
+  const engine = { createRoundState: createRoundState, candidateName: candidateName, movePart: movePart,
+    evaluateRepair: evaluateRepair, summarizeGame: summarizeGame, validateGameData: validateGameData };
+  if (typeof module !== "undefined" && module.exports) module.exports = engine;
+  global.NameleculeRepairEngine = engine;
+  if (typeof document === "undefined") return;
+
+  const root = document.getElementById("game-root");
+  if (!root) return;
+  let game = null;
+  let roundIndex = 0;
+  let states = [];
+  let refs = {};
+  let mainImageStatus = "loading";
+  let renderId = 0;
+
+  function node(tag, attributes, children) {
+    const result = document.createElement(tag);
+    Object.entries(attributes || {}).forEach(function (entry) {
+      if (entry[0] === "class") result.className = entry[1];
+      else if (entry[0] === "text") result.textContent = entry[1];
+      else result.setAttribute(entry[0], entry[1]);
+    });
+    (children || []).forEach(function (child) { result.append(typeof child === "string" ? document.createTextNode(child) : child); });
+    return result;
+  }
+
+  function button(label, className, action, attributes) {
+    const result = node("button", Object.assign({ type: "button", class: className, text: label }, attributes || {}));
+    result.addEventListener("click", action);
+    return result;
+  }
+
+  function focusHeading() {
+    const heading = root.querySelector("h1");
+    if (heading) { heading.tabIndex = -1; heading.focus({ preventScroll: true }); }
+    window.scrollTo({ top: 0, behavior: "instant" });
+  }
+
+  function replaceRoot(content) {
+    root.replaceChildren(content);
+    root.setAttribute("aria-busy", "false");
+  }
+
+  async function loadGame() {
+    root.setAttribute("aria-busy", "true");
+    const loading = node("section", { class: "loading-card" }, [
+      node("span", { class: "loading-mark", "aria-hidden": "true", text: "C" }),
+      node("p", { class: "eyebrow", text: "ΣΥΝΕΡΓΕΙΟ ΟΝΟΜΑΤΩΝ" }),
+      node("h1", { text: "Ετοιμάζουμε τον πάγκο σου" }),
+      node("p", { role: "status", text: "Οι δομές και οι αποστολές φορτώνονται." })
+    ]);
+    root.replaceChildren(loading);
+    try {
+      const response = await fetch("./data/name-repair-alkanes.json", { cache: "no-cache" });
+      if (!response.ok) throw new Error("Game data HTTP " + response.status);
+      game = validateGameData(await response.json());
+      states = game.rounds.map(function (round) { return createRoundState(round); });
+      renderWelcome();
+    } catch (error) {
+      console.error("Namelecule game could not load", error);
+      replaceRoot(node("section", { class: "loading-card" }, [
+        node("span", { class: "loading-mark", "aria-hidden": "true", text: "?" }),
+        node("p", { class: "eyebrow", text: "ΣΥΝΕΡΓΕΙΟ ΟΝΟΜΑΤΩΝ" }),
+        node("h1", { text: "Ο πάγκος δεν άνοιξε ακόμη" }),
+        node("p", { role: "status", text: "Δεν φορτώθηκαν οι αποστολές. Δοκίμασε ξανά ή επέστρεψε στην αρχική σελίδα από την Έξοδο." }),
+        button("Δοκίμασε ξανά", "primary", loadGame)
+      ]));
+    }
+  }
+
+  function workshopLogo(className) {
+    return node("img", {
+      class: className,
+      src: "assets/name-repair/workshop-logo-3d-v1.png",
+      width: "128",
+      height: "128",
+      alt: "",
+      "aria-hidden": "true"
+    });
+  }
+
+  function renderWelcome() {
+    renderId += 1;
+    const copy = node("div", { class: "intro-copy" }, [
+      node("p", { class: "eyebrow" }, [node("span", { class: "eyebrow-dot", "aria-hidden": "true" }), "ΠΑΙΧΝΙΔΙ ΟΝΟΜΑΤΟΛΟΓΙΑΣ · ΑΛΚΑΝΙΑ"]),
+      node("div", { class: "workshop-title" }, [workshopLogo("workshop-logo"), node("h1", {}, ["Συνεργείο", node("span", { text: "ονομάτων" })])]),
+      node("p", { class: "intro-description" }, ["Η δομή είναι εδώ. Στο όνομα, όμως, ", node("strong", { text: "κάτι δεν ταιριάζει." }), " Παρατήρησε το μόριο, βρες το λάθος κομμάτι και βάλε το σωστό στη θέση του."]),
+      node("div", { class: "intro-badges" }, [node("span", { text: "1 παράδειγμα + 4 αποστολές" }), node("span", { text: "Χωρίς χρονόμετρο" }), node("span", { text: "Εξηγήσεις μετά την επισκευή" })]),
+      button("Άνοιξε το συνεργείο  →", "primary intro-start", function () { roundIndex = 0; renderRound(); }),
+      node("p", { class: "intro-small", text: "Χρησιμοποίησε ποντίκι, αφή ή τα πλήκτρα Tab και Enter. Κάθε επόμενο βήμα το επιλέγεις εσύ." })
+    ]);
+    const art = node("div", { class: "intro-art", "aria-hidden": "true" });
+    const sheet = node("div", { class: "art-sheet" });
+    // Decorative workbench marks are not a structure offered for assessment.
+    sheet.innerHTML = '<svg viewBox="0 0 380 140" focusable="false"><g fill="none" stroke="#8db5a3" stroke-width="3"><path d="M64 86 145 43 225 86 306 43"/><circle cx="64" cy="86" r="21" fill="#fffdf8"/><circle cx="145" cy="43" r="21" fill="#fffdf8"/><circle cx="225" cy="86" r="21" fill="#e1efea"/><circle cx="306" cy="43" r="21" fill="#fffdf8"/></g><g fill="#397b78" font-family="system-ui,sans-serif" font-weight="650" font-size="19" text-anchor="middle"><text x="64" y="93">C</text><text x="145" y="50">C</text><text x="225" y="93">C</text><text x="306" y="50">C</text></g><g fill="#cfdecf"><circle cx="31" cy="30" r="3"/><circle cx="341" cy="105" r="3"/></g></svg>';
+    sheet.append(node("p", { class: "art-caption", text: "Μια μικρή αλλαγή. Ένα όνομα που ταιριάζει." }));
+    art.append(
+      node("div", { class: "art-header" }, [node("span", { class: "art-label", text: "Ο ΠΑΓΚΟΣ ΤΩΝ ΟΝΟΜΑΤΩΝ" }), node("span", { class: "art-dots" }, [node("i"), node("i"), node("i")])]),
+      sheet,
+      node("div", { class: "art-tabs" }, ["αλυσίδα", "θέση", "πλήθος", "σειρά"].map(function (text) { return node("span", { text: text }); })),
+      node("span", { class: "art-stamp", text: "↔" })
+    );
+    const steps = [
+      ["Δες τη δομή", "Σύνδεσε τους άνθρακες και τους κλάδους με το όνομα."],
+      ["Βρες τι χρειάζεται αλλαγή", "Διάλεξε κομμάτι και αντικατάσταση ή άλλαξε τη σειρά."],
+      ["Έλεγξε και ξαναδοκίμασε", "Μετά τη σωστή επισκευή, δες γιατί το όνομα ταιριάζει στη δομή."]
+    ];
+    const welcome = node("div", {}, [
+      node("section", { class: "intro", "aria-label": "Καλώς ήρθες στο Συνεργείο ονομάτων" }, [copy, art]),
+      node("section", { class: "intro-how", "aria-label": "Πώς παίζεται" }, steps.map(function (step, index) {
+        return node("div", { class: "how-item" }, [node("span", { class: "how-number", "aria-hidden": "true", text: String(index + 1) }), node("div", {}, [node("h2", { text: step[0] }), node("p", { text: step[1] })])]);
+      }))
+    ]);
+    replaceRoot(welcome);
+  }
+
+  function progressList() {
+    return node("ol", { class: "progress", "aria-label": "Πρόοδος παιχνιδιού" }, game.rounds.map(function (round, index) {
+      const complete = states[index].solved;
+      const current = index === roundIndex;
+      const label = round.guided ? "Καθοδηγούμενο παράδειγμα" : "Αποστολή " + index;
+      const item = node("li", { class: current ? "is-current" : complete ? "is-complete" : "" }, [
+        node("span", { class: "progress-dot", "aria-hidden": "true", text: complete ? "✓" : round.guided ? "Π" : String(index) }),
+        node("span", { class: "progress-label", text: label + (complete ? " ολοκληρώθηκε" : current ? " σε εξέλιξη" : "") })
+      ]);
+      if (current) item.setAttribute("aria-current", "step");
+      return item;
+    }));
+  }
+
+  function round() { return game.rounds[roundIndex]; }
+  function state() { return states[roundIndex]; }
+  function diagramsReady() {
+    return mainImageStatus === "ready";
+  }
+
+  function renderRound() {
+    const currentRender = ++renderId;
+    mainImageStatus = "loading";
+    const data = round();
+    refs = {};
+    const heading = node("div", { class: "round-heading" });
+    if (data.guided) heading.append(node("span", { class: "guided-pill", text: "Πρώτα δοκιμάζουμε μαζί" }));
+    heading.append(node("h1", { text: data.title }), node("p", { text: data.objective }));
+    const steps = node("ol", { class: "compact-steps", "aria-label": "Βήματα αποστολής" }, ["Παρατήρησε τη δομή", "Επισκεύασε το όνομα", "Έλεγξε την επιλογή σου"].map(function (text, index) {
+      return node("li", {}, [node("span", { "aria-hidden": "true", text: String(index + 1) }), text]);
+    }));
+    refs.image = node("img", { class: "diagram-image", alt: data.diagramAlt, draggable: "false" });
+    refs.imageStatus = node("div", { class: "image-status", role: "status", "aria-live": "polite" });
+    refs.zoomButton = button("Μεγέθυνση σχεδίου", "quiet", showDiagramZoom);
+    const diagram = node("section", { class: "diagram-card", "aria-labelledby": "diagram-heading" }, [
+      node("div", { class: "card-heading" }, [node("h2", { id: "diagram-heading", text: "Η δομή στο επίκεντρο" }), node("div", { class: "diagram-tools" }, [node("span", { text: "Ανεπτυγμένος τύπος" }), refs.zoomButton])]),
+      node("figure", { class: "diagram-figure" }, [node("div", { class: "diagram-stage" }, [refs.image]), node("figcaption", { text: "Παρατήρησε την κύρια αλυσίδα και τους κλάδους." })]),
+      refs.imageStatus
+    ]);
+    const broken = candidateName(data, createRoundState(data));
+    refs.parts = node("div", { class: "name-parts", role: "group", "aria-label": "Κομμάτια του ονόματος" });
+    refs.selectionStatus = node("p", { class: "part-selection-status", role: "status", "aria-live": "polite" });
+    refs.choices = node("div", { class: "choices", role: "group", "aria-label": "Επιλογές αντικατάστασης" });
+    refs.choiceFieldset = node("fieldset", { class: "choice-fieldset" }, [node("legend", { text: "2. Διάλεξε την αντικατάσταση" }), refs.choices]);
+    refs.orderControls = node("div", { class: "order-controls" });
+    refs.candidateName = node("strong", { class: "candidate-name" });
+    refs.candidate = node("div", { class: "candidate", "aria-live": "polite", "aria-atomic": "true" }, [node("span", { class: "candidate-label", text: "Η πρότασή σου για έλεγχο" }), refs.candidateName]);
+    refs.checkButton = button("Έλεγχος  ✓", "primary", submitRepair);
+    refs.checkButton.id = "check-button";
+    refs.retryButton = button("Από την αρχή", "quiet", retryRound, { "aria-label": "Επαναφορά επιλογών αυτής της αποστολής" });
+    refs.checkHelper = node("p", { class: "check-helper", id: "check-helper" });
+    refs.checkButton.setAttribute("aria-describedby", "check-helper");
+    refs.feedback = node("div", { class: "feedback", role: "status", "aria-live": "polite", "aria-atomic": "true" });
+    refs.next = node("div", { class: "round-next" });
+    const repair = node("section", { class: "repair-card", "aria-label": "Επισκευή ονόματος" }, [
+      node("span", { class: "section-label", text: "ΟΝΟΜΑ ΠΟΥ ΧΡΕΙΑΖΕΤΑΙ ΕΠΙΣΚΕΥΗ" }),
+      node("div", { class: "broken-name", text: broken }),
+      node("h2", { class: "step-heading", text: data.kind === "order" ? "1. Βάλε τους κλάδους στη σειρά" : "1. Ποιο κομμάτι θα αλλάξεις;" }),
+      node("p", { class: "step-description", text: data.kind === "order" ? "Διάλεξε έναν κλάδο και μετακίνησέ τον με τα βέλη. Η κύρια αλυσίδα μένει στο τέλος." : "Πάτησε το κομμάτι που δεν ταιριάζει με τη δομή." }),
+      refs.parts, refs.selectionStatus, refs.orderControls, refs.choiceFieldset, refs.candidate,
+      node("div", { class: "repair-actions" }, [refs.checkButton, refs.retryButton]),
+      refs.checkHelper, refs.feedback
+    ]);
+    refs.sessionStats = node("span");
+    const screen = node("div", { class: "round-screen" }, [
+      node("div", { class: "round-topbar" }, [node("p", { class: "eyebrow round-game-brand" }, [workshopLogo("workshop-logo-small"), node("span", { class: "round-game-label", text: "ΣΥΝΕΡΓΕΙΟ ΟΝΟΜΑΤΩΝ" })]), progressList()]),
+      heading, steps,
+      node("div", { class: "bench" }, [node("div", { class: "visual-side" }, [diagram]), node("div", { class: "repair-side" }, [repair, refs.next])]),
+      node("div", { class: "session-row" }, [refs.sessionStats, button("Νέο παιχνίδι", "quiet", requestRestart)])
+    ]);
+    replaceRoot(screen);
+    loadDiagram(currentRender);
+    updateControls();
+    focusHeading();
+  }
+
+  function loadDiagram(currentRender) {
+    mainImageStatus = "loading";
+    refs.image.classList.remove("is-ready");
+    refs.imageStatus.replaceChildren(node("p", { text: "Η δομή φορτώνεται. Οι επιλογές θα ανοίξουν μόλις εμφανιστεί." }));
+    refs.image.onload = function () {
+      if (currentRender !== renderId) return;
+      if (!refs.image.naturalWidth) return diagramFailure(currentRender);
+      mainImageStatus = "ready";
+      refs.image.classList.add("is-ready");
+      refs.imageStatus.replaceChildren();
+      updateControls();
+    };
+    refs.image.onerror = function () { diagramFailure(currentRender); };
+    refs.image.src = round().asset;
+    updateControls();
+  }
+
+  function diagramFailure(currentRender) {
+    if (currentRender !== renderId) return;
+    mainImageStatus = "error";
+    refs.image.classList.remove("is-ready");
+    refs.imageStatus.replaceChildren(
+      node("p", { text: "Η δομή δεν εμφανίστηκε. Για να επισκευάσεις το όνομα, χρειάζεται πρώτα να δεις το μόριο." }),
+      button("Φόρτωσε ξανά τη δομή", "secondary", function () { loadDiagram(currentRender); })
+    );
+    updateControls();
+  }
+
+  function restoreFocus(id) {
+    const control = document.getElementById(id);
+    if (control && !control.disabled) control.focus({ preventScroll: true });
+  }
+
+  function updateControls(focusId) {
+    const activeElement = document.activeElement;
+    const restoreId = focusId || (root.contains(activeElement) ? activeElement.id : null);
+    const data = round();
+    const current = state();
+    const enabled = diagramsReady() && !current.solved;
+    const hasTarget = current.selectedPartId === data.targetPartId;
+    refs.parts.replaceChildren();
+    const partIds = data.kind === "order" ? current.order : data.parts.map(function (part) { return part.id; });
+    partIds.forEach(function (id) {
+      const part = data.parts.find(function (entry) { return entry.id === id; });
+      const partButton = button(part.text, "part-button", function () { selectPart(id); }, {
+        id: "part-" + id, "aria-label": part.label + " — " + part.text,
+        "aria-pressed": String(current.selectedPartId === id)
+      });
+      partButton.disabled = !enabled;
+      if (data.kind === "replace" && current.selectedPartId === id && !hasTarget) partButton.classList.add("is-agreeing");
+      refs.parts.append(partButton);
+    });
+    if (data.kind === "order") {
+      const suffix = data.parts.find(function (part) { return part.id === data.suffixPartId; });
+      refs.parts.append(node("span", { class: "fixed-suffix", "aria-label": "Η κύρια αλυσίδα μένει σταθερή", text: suffix.text }));
+    }
+    refs.choiceFieldset.hidden = data.kind !== "replace" || !hasTarget;
+    refs.choices.replaceChildren();
+    if (data.kind === "replace") {
+      current.choiceOrder.forEach(function (index) {
+        const choice = data.choices[index];
+        const choiceButton = button(choice.label, "choice-button", function () {
+          current.selectedValue = choice.value;
+          clearFeedback();
+          updateControls("choice-" + index);
+        }, { id: "choice-" + index, "aria-pressed": String(current.selectedValue === choice.value) });
+        choiceButton.disabled = !enabled;
+        refs.choices.append(choiceButton);
+      });
+    }
+    refs.orderControls.replaceChildren();
+    refs.orderControls.hidden = data.kind !== "order";
+    if (data.kind === "order") {
+      const selectedIndex = current.order.indexOf(current.selectedPartId);
+      [-1, 1].forEach(function (direction) {
+        const id = direction < 0 ? "move-left" : "move-right";
+        const moveButton = button(direction < 0 ? "← Αριστερά" : "Δεξιά →", "secondary", function () {
+          current.order = movePart(current.order, current.selectedPartId, direction);
+          clearFeedback();
+          updateControls("part-" + current.selectedPartId);
+          refs.selectionStatus.textContent = "Ο κλάδος μετακινήθηκε. Δες την πρότασή σου και πάτησε Έλεγχος.";
+        }, { id: id, "aria-label": direction < 0 ? "Μετακίνησε τον επιλεγμένο κλάδο αριστερά" : "Μετακίνησε τον επιλεγμένο κλάδο δεξιά" });
+        moveButton.disabled = !enabled || selectedIndex < 0 || selectedIndex + direction < 0 || selectedIndex + direction >= current.order.length;
+        refs.orderControls.append(moveButton);
+      });
+    }
+    refs.candidateName.textContent = candidateName(data, current);
+    refs.candidate.hidden = data.kind === "replace" && current.selectedValue === null;
+    const hasCandidate = data.kind === "order" || (hasTarget && current.selectedValue !== null);
+    refs.checkButton.disabled = !enabled || !hasCandidate;
+    refs.zoomButton.disabled = mainImageStatus !== "ready";
+    refs.retryButton.disabled = !enabled;
+    refs.checkHelper.textContent = current.solved ? "Η επισκευή ολοκληρώθηκε. Συνέχισε όταν είσαι έτοιμος ή έτοιμη." : !diagramsReady() ? "Περιμένουμε να εμφανιστούν οι δομές πριν από τον έλεγχο." : data.kind === "order" ? "Επιλέγεις κλάδο, πατάς ένα βέλος και ελέγχεις τη νέα σειρά." : hasCandidate ? "Ο έλεγχος μετρά ως μία προσπάθεια. Μπορείς να δοκιμάσεις ξανά." : "Διάλεξε πρώτα το κομμάτι και έπειτα μια αντικατάσταση.";
+    refs.sessionStats.textContent = "Προσπάθειες σε αυτή την " + (data.guided ? "πρόβα " : "αποστολή ") + current.attempts;
+    if (restoreId) restoreFocus(restoreId);
+  }
+
+  function selectPart(id) {
+    if (!diagramsReady() || state().solved) return;
+    const current = state();
+    current.selectedPartId = id;
+    clearFeedback();
+    if (round().kind === "replace") {
+      current.selectedValue = null;
+      if (id !== round().targetPartId) {
+        current.selectionMisses += 1;
+        refs.selectionStatus.textContent = round().feedback.wrongPart;
+      } else {
+        refs.selectionStatus.textContent = "Αυτό το κομμάτι χρειάζεται επισκευή. Διάλεξε την αντικατάστασή του.";
+      }
+    } else {
+      refs.selectionStatus.textContent = "Ο κλάδος επιλέχθηκε. Μετακίνησέ τον με τα κουμπιά Αριστερά και Δεξιά.";
+    }
+    updateControls("part-" + id);
+  }
+
+  function clearFeedback() {
+    refs.feedback.classList.remove("is-success");
+    refs.feedback.replaceChildren();
+  }
+
+  function submitRepair() {
+    if (!diagramsReady() || state().solved) return;
+    const result = evaluateRepair(round(), state());
+    if (result.kind === "incomplete" || result.kind === "wrongPart") return;
+    state().attempts += 1;
+    if (result.kind === "correct") {
+      state().solved = true;
+      refs.feedback.classList.add("is-success");
+      refs.feedback.replaceChildren(
+        node("strong", { class: "success-title", text: "✓ Η επισκευή πέτυχε" }),
+        node("span", { class: "success-name", text: round().correctName }),
+        node("p", { class: "success-explanation", text: result.message })
+      );
+      const next = button(roundIndex === game.rounds.length - 1 ? "Δες τις επισκευές σου  →" : "Επόμενη αποστολή  →", "primary", function () {
+        if (roundIndex === game.rounds.length - 1) renderResults();
+        else { roundIndex += 1; renderRound(); }
+      });
+      refs.next.replaceChildren(next);
+      updateControls();
+      // Keep the result announcement in the live region and move keyboard focus to the explicit next action.
+      next.focus({ preventScroll: true });
+      const oldProgress = root.querySelector(".progress");
+      oldProgress.replaceWith(progressList());
+    } else {
+      refs.feedback.replaceChildren(node("p", { text: result.message }));
+      updateControls("check-button");
+    }
+  }
+
+  function retryRound() {
+    if (!diagramsReady() || state().solved) return;
+    states[roundIndex] = createRoundState(round(), state());
+    refs.selectionStatus.textContent = "Οι επιλογές επανήλθαν. Οι προσπάθειές σου παραμένουν.";
+    clearFeedback();
+    updateControls();
+    const first = refs.parts.querySelector("button");
+    if (first && !first.disabled) first.focus({ preventScroll: true });
+  }
+
+  function requestRestart() {
+    const hasProgress = roundIndex > 0 || states.some(function (entry) { return entry.attempts > 0 || entry.selectionMisses > 0 || entry.selectedPartId; });
+    if (!hasProgress) return restartGame();
+    const dialog = node("dialog", { class: "confirm-dialog", "aria-labelledby": "restart-title" }, [
+      node("h2", { id: "restart-title", text: "Να ανοίξουμε νέο παιχνίδι;" }),
+      node("p", { text: "Οι επισκευές και οι προσπάθειες αυτού του παιχνιδιού θα μηδενιστούν." })
+    ]);
+    const keep = button("Συνέχισε εδώ", "secondary", function () { dialog.close(); });
+    const restart = button("Νέο παιχνίδι", "primary", function () { dialog.close(); restartGame(); });
+    dialog.append(node("div", { class: "confirm-actions" }, [keep, restart]));
+    dialog.addEventListener("close", function () { dialog.remove(); });
+    document.body.append(dialog);
+    dialog.showModal();
+    keep.focus();
+  }
+
+  function showDiagramZoom() {
+    if (mainImageStatus !== "ready") return;
+    const dialog = node("dialog", { class: "zoom-dialog", "aria-labelledby": "zoom-title" });
+    const close = button("Κλείσιμο", "secondary", function () { dialog.close(); });
+    const image = node("img", { class: "zoom-image", alt: round().diagramAlt });
+    const viewport = node("div", { class: "zoom-viewport", tabindex: "0", "aria-label": "Μεγεθυμένη δομή. Μετακινήσου μέσα στην εικόνα με αφή ή τα πλήκτρα βέλους." }, [image]);
+    image.onerror = function () {
+      viewport.replaceChildren(node("p", { role: "status", text: "Η εικόνα δεν εμφανίστηκε. Κλείσε τη μεγέθυνση και δοκίμασε ξανά." }));
+    };
+    image.src = round().asset;
+    dialog.append(
+      node("div", { class: "zoom-heading" }, [node("h2", { id: "zoom-title", text: "Η δομή σε αρχικό μέγεθος" }), close]),
+      node("p", { text: "Αν η εικόνα δεν χωρά, μετακινήσου μέσα στο πλαίσιο με αφή ή τα πλήκτρα βέλους." }),
+      viewport
+    );
+    dialog.addEventListener("close", function () { dialog.remove(); });
+    document.body.append(dialog);
+    dialog.showModal();
+    close.focus();
+  }
+
+  function restartGame() {
+    roundIndex = 0;
+    states = game.rounds.map(function (data) { return createRoundState(data); });
+    renderWelcome();
+    focusHeading();
+  }
+
+  function renderResults() {
+    renderId += 1;
+    const summary = summarizeGame(game.rounds, states);
+    const stats = [
+      [summary.completed, "Αποστολές που ολοκληρώθηκαν"],
+      [summary.attempts, "Προσπάθειες ελέγχου"]
+    ];
+    const challenges = game.rounds.map(function (data, index) { return { data: data, state: states[index] }; }).filter(function (entry) { return !entry.data.guided; });
+    const content = node("section", { class: "results" }, [
+      node("div", { class: "results-hero" }, [
+        node("span", { class: "results-seal", "aria-hidden": "true", text: "✓" }),
+        node("p", { class: "eyebrow", text: "Ο ΠΑΓΚΟΣ ΤΑΚΤΟΠΟΙΗΘΗΚΕ" }),
+        node("h1", { text: "Τέσσερα ονόματα στη θέση τους" }),
+        node("p", { role: "status", text: "Ολοκλήρωσες και τις τέσσερις αποστολές. Κράτησε τη σύνδεση ανάμεσα στη δομή, την αρίθμηση και τα κομμάτια κάθε ονόματος." })
+      ]),
+      node("div", { class: "results-stats", "aria-label": "Οι επισκευές σου" }, stats.map(function (stat) {
+        return node("div", { class: "stat-card" }, [node("span", { class: "stat-number", text: String(stat[0]) }), node("span", { class: "stat-label", text: stat[1] })]);
+      })),
+      node("section", { class: "results-detail", "aria-labelledby": "results-detail-title" }, [
+        node("h2", { id: "results-detail-title", text: "Οι επισκευές του παιχνιδιού σου" }),
+        node("ol", { class: "results-list" }, challenges.map(function (entry) {
+          return node("li", { class: "result-item" }, [
+            node("span", { class: "result-check", "aria-hidden": "true", text: "✓" }),
+            node("div", {}, [node("strong", { class: "result-name", text: entry.data.correctName }), node("span", { class: "result-objective", text: entry.data.title })])
+          ]);
+        }))
+      ]),
+      node("p", { class: "results-note", text: "Το καθοδηγούμενο παράδειγμα δεν προσμετράται. Οι προσπάθειες ελέγχου περιλαμβάνουν τις επαναλήψεις κάθε αποστολής." }),
+      node("div", { class: "results-actions" }, [button("Νέο παιχνίδι  ↻", "primary", restartGame), node("a", { class: "secondary", href: "../design/welcome-proposal.html", text: "Επιστροφή στην αρχική" })])
+    ]);
+    replaceRoot(content);
+    focusHeading();
+  }
+
+  loadGame();
+})(typeof globalThis !== "undefined" ? globalThis : this);

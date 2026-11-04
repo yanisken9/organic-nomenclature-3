@@ -1,0 +1,27 @@
+{
+  "steps": [
+    "Review assembled candidate, helpers and existing checks before personal publication.",
+    "Commit/push reviewed candidate to personal thesis-work; verify live exact bytes and actual Main/React flows.",
+    "Create verified-base full snapshot/ZIP/bundle/two external copies after live verification.",
+    "Update only five professor metadata/report files and README with ACTUAL runtime/backup evidence; targeted documentary review.",
+    "Publish final documentary update; verify exact documentary HTTP hashes and unchanged reviewed runtime.",
+    "Create final full source snapshot including completed report and first-save receipts; verify ZIP/every-file CRC/SHA, bundle and two external copies.",
+    "Push full checkpoint branch, record final bookkeeping separately, refresh bundle/notes/receipts; source HEAD/index stay unchanged."
+  ],
+  "reasonForTwoSnapshots": "Report states completed backup only after the verified-base backup actually exists; final snapshot then includes that truthful completed report. Each immutable archive has an explicit cutoff; later bookkeeping is separately committed/copied.",
+  "writeRemotes": [
+    "https://github.com/yanisken9/organic-nomenclature-3.git"
+  ],
+  "preserve": [
+    "All existing public paths",
+    "39 public React paths, no build",
+    "Old52 paths",
+    "Source active HEAD/index and user Firefox/server8013",
+    "Previous backups"
+  ],
+  "prohibited": [
+    "No upstream professor push",
+    "No message to professor",
+    "No invented save/publication/runtime guarantees"
+  ]
+}

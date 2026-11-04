@@ -1,0 +1,143 @@
+--- a/design/welcome-proposal.html
++++ b/design/welcome-proposal.html
+@@ -19,11 +19,11 @@
+ <article class="card two"><div class="icon"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M11 10h10c6 0 9 13 5 15-3 1-5-5-8-5h-4c-3 0-5 6-8 5-4-2-1-15 5-15ZM10 13v7m-3-3.5h6"/><circle cx="22" cy="14" r="1"/><circle cx="25" cy="18" r="1"/></svg></div><span class="label">ΑΣΚΗΣΕΙΣ &amp; ΠΑΙΧΝΙΔΙΑ</span><h2>Παίζω και εξασκούμαι</h2><p>Εντόπισε και διόρθωσε λάθη στα ονόματα οργανικών ενώσεων στο Συνεργείο ονομάτων.</p><ul><li>Καθοδηγούμενο παράδειγμα και προκλήσεις</li><li>Ανατροφοδότηση και εξηγήσεις των κανόνων</li></ul><a class="action" style="text-decoration:none" href="../games/name-repair.html?v=logo-3d-20261104-r1">Συνεργείο ονομάτων <span aria-hidden="true">↗</span></a><small>Για μαθητές και εκπαιδευτικούς</small></article>
+ <article class="card three"><div class="icon"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M18 5H6v23h20V16M15 19l2-6L26 4l4 4-9 9-6 2ZM24 6l4 4M10 23h10"/></svg></div><span class="label">ΓΙΑ ΕΚΠΑΙΔΕΥΤΙΚΟΥΣ</span><h2>Δημιουργώ το μάθημά μου</h2><p>Βρες έτοιμο υλικό για την τάξη σου ή φτιάξε τα δικά σου σενάρια θεωρίας και μαθησιακά παιχνίδια.</p><ul><li>Ο προσωπικός σου χώρος υλικού</li><li>Αποθήκευση και λήψη των δημιουργιών σου</li></ul><button class="action" data-panel="teacher">Χώρος εκπαιδευτικού <span aria-hidden="true">↗</span></button><small>Σύνδεση για τον προσωπικό σου χώρο</small></article>
+ </section>
+-<section class="representations"><div><span class="eyebrow">Η ΙΔΙΑ ΔΟΜΗ, ΑΛΛΗ ΟΠΤΙΚΗ</span><h2>Ένα μόριο.<br>Πολλοί τρόποι να το καταλάβεις.</h2><p>Από τον χημικό τύπο στο τρισδιάστατο μοντέλο και από τη δομή στο όνομα: κάθε αναπαράσταση σε βοηθά να δεις μια άλλη πλευρά του μορίου.</p></div><div><div class="rep-art"><div class="rep"><div class="formula">CH₃–CH₂–<b>OH</b></div><small>Συνεπτυγμένος συντακτικός</small></div><span class="equal" aria-hidden="true">↔</span><div class="rep"><svg class="expanded-ethanol" viewBox="0 0 180 115" role="img" aria-label="Ανεπτυγμένος συντακτικός τύπος αιθανόλης: δύο άνθρακες, έξι υδρογόνα και ένα οξυγόνο"><g stroke="#254c50" stroke-width="2"><path d="M26 59H41M59 59H81M99 59H121M140 59H155M50 45V28M50 73V91M90 45V28M90 73V91"/></g><g fill="#254c50" font-family="system-ui,sans-serif" font-size="18" text-anchor="middle"><text x="16" y="65">H</text><text x="50" y="65">C</text><text x="90" y="65">C</text><text x="166" y="65">H</text><text x="50" y="23">H</text><text x="90" y="23">H</text><text x="50" y="110">H</text><text x="90" y="110">H</text></g><text x="130" y="65" fill="#a54e40" font-family="system-ui,sans-serif" font-size="18" text-anchor="middle">O</text></svg><small>Ανεπτυγμένος συντακτικός</small></div><span class="equal" aria-hidden="true">↔</span><div class="rep"><div class="ethanol-model ethanol-static"><img src="assets/ethanol-3d-jsmol.png" width="1200" height="1200" alt="Τρισδιάστατο μοντέλο του ίδιου μορίου, εξαγμένο από το JSmol" decoding="async"></div><small>Τρισδιάστατο μοντέλο</small></div></div><div class="explore-entry"><a href="../mulermoc-nom-52.html">Εξερεύνησε ελεύθερα τα μόρια</a></div></div></section>
+-<footer class="footer"><span>Namelecule · Μια εφαρμογή της πλατφόρμας MuLERMoCs</span><a href="../mulermoc-nom-52.html">Συντελεστές στην εφαρμογή ↗</a></footer></main>
++<section class="representations"><div><span class="eyebrow">Η ΙΔΙΑ ΔΟΜΗ, ΑΛΛΗ ΟΠΤΙΚΗ</span><h2>Ένα μόριο.<br>Πολλοί τρόποι να το καταλάβεις.</h2><p>Από τον χημικό τύπο στο τρισδιάστατο μοντέλο και από τη δομή στο όνομα: κάθε αναπαράσταση σε βοηθά να δεις μια άλλη πλευρά του μορίου.</p></div><div><div class="rep-art"><div class="rep"><div class="formula">CH₃–CH₂–<b>OH</b></div><small>Συνεπτυγμένος συντακτικός</small></div><span class="equal" aria-hidden="true">↔</span><div class="rep"><svg class="expanded-ethanol" viewBox="0 0 180 115" role="img" aria-label="Ανεπτυγμένος συντακτικός τύπος αιθανόλης: δύο άνθρακες, έξι υδρογόνα και ένα οξυγόνο"><g stroke="#254c50" stroke-width="2"><path d="M26 59H41M59 59H81M99 59H121M140 59H155M50 45V28M50 73V91M90 45V28M90 73V91"/></g><g fill="#254c50" font-family="system-ui,sans-serif" font-size="18" text-anchor="middle"><text x="16" y="65">H</text><text x="50" y="65">C</text><text x="90" y="65">C</text><text x="166" y="65">H</text><text x="50" y="23">H</text><text x="90" y="23">H</text><text x="50" y="110">H</text><text x="90" y="110">H</text></g><text x="130" y="65" fill="#a54e40" font-family="system-ui,sans-serif" font-size="18" text-anchor="middle">O</text></svg><small>Ανεπτυγμένος συντακτικός</small></div><span class="equal" aria-hidden="true">↔</span><div class="rep"><div class="ethanol-model ethanol-static"><img src="assets/ethanol-3d-jsmol.png" width="1200" height="1200" alt="Τρισδιάστατο μοντέλο του ίδιου μορίου, εξαγμένο από το JSmol" decoding="async"></div><small>Τρισδιάστατο μοντέλο</small></div></div><div class="explore-entry"><a href="../mulermoc-nom-54.html">Εξερεύνησε ελεύθερα τα μόρια</a></div></div></section>
++<footer class="footer"><span>Namelecule · Μια εφαρμογή της πλατφόρμας MuLERMoCs</span><a href="../mulermoc-nom-54.html">Συντελεστές στην εφαρμογή ↗</a></footer></main>
+ <div class="preview-note">Η βιβλιοθήκη θεωρίας και το Συνεργείο ονομάτων είναι διαθέσιμα. Η σύνδεση εκπαιδευτικών είναι υπό σχεδιασμό.</div>
+-<dialog id="details" aria-labelledby="dialog-title"><h2 id="dialog-title"></h2><p id="dialog-copy"></p><a id="dialog-link" href="../mulermoc-nom-52.html"></a><form method="dialog"><button>Κλείσιμο</button></form></dialog>
++<dialog id="details" aria-labelledby="dialog-title"><h2 id="dialog-title"></h2><p id="dialog-copy"></p><a id="dialog-link" href="../mulermoc-nom-54.html"></a><form method="dialog"><button>Κλείσιμο</button></form></dialog>
+ <script>
+-const panels={teacher:['Χώρος εκπαιδευτικού','Ο προσωπικός χώρος με σύνδεση, αποθήκευση και λήψη υλικού είναι υπό σχεδιασμό. Σήμερα μπορείς να ανοίξεις την εφαρμογή και να χρησιμοποιήσεις το εργαλείο σεναρίων.','Άνοιγμα εφαρμογής','../mulermoc-nom-52.html'],login:['Σύνδεση','Η σύνδεση εκπαιδευτικών είναι υπό σχεδιασμό. Για τους μαθητές δεν έχει αποφασιστεί ακόμη αν θα υπάρχει λογαριασμός.']};
+-document.querySelectorAll('[data-panel]').forEach(button=>button.addEventListener('click',()=>{const p=panels[button.dataset.panel];document.getElementById('dialog-title').textContent=p[0];document.getElementById('dialog-copy').textContent=p[1];const link=document.getElementById('dialog-link');link.hidden=!p[2];link.textContent=p[2]||'';link.href=p[3]||'../mulermoc-nom-52.html';document.getElementById('details').showModal();}));
++const panels={teacher:['Χώρος εκπαιδευτικού','Ο προσωπικός χώρος με σύνδεση, αποθήκευση και λήψη υλικού είναι υπό σχεδιασμό. Σήμερα μπορείς να ανοίξεις την εφαρμογή και να χρησιμοποιήσεις το εργαλείο σεναρίων.','Άνοιγμα εφαρμογής','../mulermoc-nom-54.html'],login:['Σύνδεση','Η σύνδεση εκπαιδευτικών είναι υπό σχεδιασμό. Για τους μαθητές δεν έχει αποφασιστεί ακόμη αν θα υπάρχει λογαριασμός.']};
++document.querySelectorAll('[data-panel]').forEach(button=>button.addEventListener('click',()=>{const p=panels[button.dataset.panel];document.getElementById('dialog-title').textContent=p[0];document.getElementById('dialog-copy').textContent=p[1];const link=document.getElementById('dialog-link');link.hidden=!p[2];link.textContent=p[2]||'';link.href=p[3]||'../mulermoc-nom-54.html';document.getElementById('details').showModal();}));
+ </script></body></html>
+--- a/design/theory-library.html
++++ b/design/theory-library.html
+@@ -33,7 +33,7 @@
+             <li>Αλκύλια, διακλαδώσεις και αλφαβητική σειρά</li>
+             <li>Διερεύνηση σε 2D και 3D</li>
+           </ul>
+-          <a class="action" href="../mulermoc-nom-52.html?scenario=scenarios/alkanes-nomenclature-branches.scenario.json&amp;present=1&amp;from=theory-library&amp;v=theory-progressive-20261024">Ξεκίνα το μάθημα <span aria-hidden="true">→</span></a>
++          <a class="action" href="../mulermoc-nom-54.html?scenario=scenarios/alkanes-nomenclature-branches.scenario.json&amp;present=1&amp;from=theory-library&amp;v=theory-progressive-20261024">Ξεκίνα το μάθημα <span aria-hidden="true">→</span></a>
+         </div>
+       </article>
+       <article class="lesson" aria-labelledby="alkenes-title">
+@@ -47,7 +47,7 @@
+             <li>Αλκύλια, διακλαδώσεις και αλφαβητική σειρά</li>
+             <li>Διερεύνηση σε 2D και 3D</li>
+           </ul>
+-          <a class="action" href="../mulermoc-nom-52.html?scenario=scenarios/alkenes-nomenclature-branches.scenario.json&amp;present=1&amp;from=theory-library&amp;v=theory-progressive-20261024">Ξεκίνα το μάθημα <span aria-hidden="true">→</span></a>
++          <a class="action" href="../mulermoc-nom-54.html?scenario=scenarios/alkenes-nomenclature-branches.scenario.json&amp;present=1&amp;from=theory-library&amp;v=theory-progressive-20261024">Ξεκίνα το μάθημα <span aria-hidden="true">→</span></a>
+         </div>
+       </article>
+       <article class="lesson" aria-labelledby="alkynes-title">
+@@ -61,7 +61,7 @@
+             <li>Αλκύλια, διακλαδώσεις και αλφαβητική σειρά</li>
+             <li>Διερεύνηση σε 2D και 3D</li>
+           </ul>
+-          <a class="action" href="../mulermoc-nom-52.html?scenario=scenarios/alkynes-nomenclature-branches.scenario.json&amp;present=1&amp;from=theory-library&amp;v=theory-progressive-20261024">Ξεκίνα το μάθημα <span aria-hidden="true">→</span></a>
++          <a class="action" href="../mulermoc-nom-54.html?scenario=scenarios/alkynes-nomenclature-branches.scenario.json&amp;present=1&amp;from=theory-library&amp;v=theory-progressive-20261024">Ξεκίνα το μάθημα <span aria-hidden="true">→</span></a>
+         </div>
+       </article>
+       <article class="lesson" aria-labelledby="alkadienes-title">
+@@ -75,7 +75,7 @@
+             <li>Αλκύλια, διακλαδώσεις και αλφαβητική σειρά</li>
+             <li>Διερεύνηση σε 2D και 3D</li>
+           </ul>
+-          <a class="action" href="../mulermoc-nom-52.html?scenario=scenarios/alkadienes-nomenclature-branches.scenario.json&amp;present=1&amp;from=theory-library&amp;v=theory-progressive-20261024">Ξεκίνα το μάθημα <span aria-hidden="true">→</span></a>
++          <a class="action" href="../mulermoc-nom-54.html?scenario=scenarios/alkadienes-nomenclature-branches.scenario.json&amp;present=1&amp;from=theory-library&amp;v=theory-progressive-20261024">Ξεκίνα το μάθημα <span aria-hidden="true">→</span></a>
+         </div>
+       </article>
+       <article class="lesson" aria-labelledby="enynes-title">
+@@ -89,7 +89,7 @@
+             <li>Αλκύλια, διακλαδώσεις και αλφαβητική σειρά</li>
+             <li>Διερεύνηση σε 2D και 3D</li>
+           </ul>
+-          <a class="action" href="../mulermoc-nom-52.html?scenario=scenarios/enynes-nomenclature-branches.scenario.json&amp;present=1&amp;from=theory-library&amp;v=theory-progressive-20261024">Ξεκίνα το μάθημα <span aria-hidden="true">→</span></a>
++          <a class="action" href="../mulermoc-nom-54.html?scenario=scenarios/enynes-nomenclature-branches.scenario.json&amp;present=1&amp;from=theory-library&amp;v=theory-progressive-20261024">Ξεκίνα το μάθημα <span aria-hidden="true">→</span></a>
+         </div>
+       </article>
+       <article class="lesson" aria-labelledby="alcohols-title">
+@@ -100,14 +100,14 @@
+             <p class="series-formula">C<sub>ν</sub>H<sub>2ν+2</sub>O<span class="restriction">ν ≥ 1</span></p>
+             <p>Μία υδροξυλομάδα και μόνο απλοί δεσμοί μεταξύ των ατόμων άνθρακα.</p>
+             <p><span class="count">20 βήματα · 7 μόρια</span></p>
+-            <a class="action" href="../mulermoc-nom-52.html?scenario=scenarios/saturated-monoalcohols-nomenclature.scenario.json&amp;present=1&amp;from=theory-library&amp;v=monoalcohol-theory-20261025">Ξεκίνα το μάθημα <span aria-hidden="true">→</span></a>
++            <a class="action" href="../mulermoc-nom-54.html?scenario=scenarios/saturated-monoalcohols-nomenclature.scenario.json&amp;present=1&amp;from=theory-library&amp;v=monoalcohol-theory-20261025">Ξεκίνα το μάθημα <span aria-hidden="true">→</span></a>
+           </section>
+           <section class="lesson-part" aria-labelledby="other-alcohols-title">
+             <h3 id="other-alcohols-title">Άλλες αλκοόλες</h3>
+             <p class="series-formula">C<sub>x</sub>H<sub>y</sub>(OH)<sub>n</sub></p>
+             <p>Αλκοόλες με περισσότερες υδροξυλομάδες ή με πολλαπλούς δεσμούς ή και τα δύο.</p>
+             <p><span class="count">22 βήματα · 10 μόρια</span></p>
+-            <a class="action" href="../mulermoc-nom-52.html?scenario=scenarios/other-alcohols-nomenclature.scenario.json&amp;present=1&amp;from=theory-library&amp;v=other-alcohols-theory-20261025">Ξεκίνα το μάθημα <span aria-hidden="true">→</span></a>
++            <a class="action" href="../mulermoc-nom-54.html?scenario=scenarios/other-alcohols-nomenclature.scenario.json&amp;present=1&amp;from=theory-library&amp;v=other-alcohols-theory-20261025">Ξεκίνα το μάθημα <span aria-hidden="true">→</span></a>
+           </section>
+         </div>
+       </article>
+@@ -122,7 +122,7 @@
+             <li>Συστηματική ονομασία: αλκοξυομάδες, κύρια αλυσίδα και θέσεις</li>
+             <li>Διερεύνηση σε 2D και προαιρετικά σε 3D</li>
+           </ul>
+-          <a class="action" href="../mulermoc-nom-52.html?scenario=scenarios/saturated-monoethers-nomenclature.scenario.json&amp;present=1&amp;from=theory-library&amp;v=alkoxy-rule-20261026">Ξεκίνα το μάθημα <span aria-hidden="true">→</span></a>
++          <a class="action" href="../mulermoc-nom-54.html?scenario=scenarios/saturated-monoethers-nomenclature.scenario.json&amp;present=1&amp;from=theory-library&amp;v=alkoxy-rule-20261026">Ξεκίνα το μάθημα <span aria-hidden="true">→</span></a>
+         </div>
+       </article>
+       <article class="lesson" aria-labelledby="aldehydes-title">
+@@ -133,14 +133,14 @@
+             <p class="series-formula">C<sub>ν</sub>H<sub>2ν</sub>O<span class="restriction">ν ≥ 1</span></p>
+             <p>Άκυκλες αλδεΰδες με μία αλδεϋδομάδα και μόνο απλούς δεσμούς μεταξύ των ατόμων C.</p>
+             <p><span class="count">24 βήματα · 9 μόρια</span></p>
+-            <a class="action" href="../mulermoc-nom-52.html?scenario=scenarios/saturated-monoaldehydes-nomenclature.scenario.json&amp;present=1&amp;from=theory-library&amp;v=monoaldehydes-theory-20261026">Ξεκίνα το μάθημα <span aria-hidden="true">→</span></a>
++            <a class="action" href="../mulermoc-nom-54.html?scenario=scenarios/saturated-monoaldehydes-nomenclature.scenario.json&amp;present=1&amp;from=theory-library&amp;v=monoaldehydes-theory-20261026">Ξεκίνα το μάθημα <span aria-hidden="true">→</span></a>
+           </section>
+           <section class="lesson-part" aria-labelledby="other-aldehydes-title">
+             <h3 id="other-aldehydes-title">Άλλες αλδεΰδες</h3>
+             <p class="series-formula">C<sub>x</sub>H<sub>y</sub>(CHO)<sub>n</sub></p>
+             <p>Αλδεΰδες με περισσότερες αλδεϋδομάδες ή με πολλαπλούς δεσμούς μεταξύ ατόμων C ή και τα δύο.</p>
+             <p><span class="count">26 βήματα · 8 μόρια</span></p>
+-            <a class="action" href="../mulermoc-nom-52.html?scenario=scenarios/other-aldehydes-nomenclature.scenario.json&amp;present=1&amp;from=theory-library&amp;v=other-aldehydes-theory-20261026">Ξεκίνα το μάθημα <span aria-hidden="true">→</span></a>
++            <a class="action" href="../mulermoc-nom-54.html?scenario=scenarios/other-aldehydes-nomenclature.scenario.json&amp;present=1&amp;from=theory-library&amp;v=other-aldehydes-theory-20261026">Ξεκίνα το μάθημα <span aria-hidden="true">→</span></a>
+           </section>
+         </div>
+       </article>
+@@ -152,14 +152,14 @@
+             <p class="series-formula">C<sub>ν</sub>H<sub>2ν</sub>O<span class="restriction">ν ≥ 3</span></p>
+             <p>Άκυκλες κετόνες με μία καρβονυλομάδα και μόνο απλούς δεσμούς μεταξύ των ατόμων C.</p>
+             <p><span class="count">25 βήματα · 7 μόρια</span></p>
+-            <a class="action" href="../mulermoc-nom-52.html?scenario=scenarios/saturated-monoketones-nomenclature.scenario.json&amp;present=1&amp;from=theory-library&amp;v=monoketones-theory-20261026">Ξεκίνα το μάθημα <span aria-hidden="true">→</span></a>
++            <a class="action" href="../mulermoc-nom-54.html?scenario=scenarios/saturated-monoketones-nomenclature.scenario.json&amp;present=1&amp;from=theory-library&amp;v=monoketones-theory-20261026">Ξεκίνα το μάθημα <span aria-hidden="true">→</span></a>
+           </section>
+           <section class="lesson-part" aria-labelledby="other-ketones-title">
+             <h3 id="other-ketones-title">Άλλες κετόνες</h3>
+             <p class="series-formula">C<sub>x</sub>H<sub>y</sub>(CO)<sub>n</sub></p>
+             <p>Κετόνες με περισσότερες καρβονυλομάδες ή με πολλαπλούς δεσμούς μεταξύ ατόμων C ή και τα δύο.</p>
+             <p><span class="count">28 βήματα · 7 μόρια</span></p>
+-            <a class="action" href="../mulermoc-nom-52.html?scenario=scenarios/other-ketones-nomenclature.scenario.json&amp;present=1&amp;from=theory-library&amp;v=other-ketones-theory-20261026">Ξεκίνα το μάθημα <span aria-hidden="true">→</span></a>
++            <a class="action" href="../mulermoc-nom-54.html?scenario=scenarios/other-ketones-nomenclature.scenario.json&amp;present=1&amp;from=theory-library&amp;v=other-ketones-theory-20261026">Ξεκίνα το μάθημα <span aria-hidden="true">→</span></a>
+           </section>
+         </div>
+       </article>
+@@ -171,14 +171,14 @@
+             <p class="series-formula">C<sub>ν</sub>H<sub>2ν</sub>O<sub>2</sub><span class="restriction">ν ≥ 1</span></p>
+             <p>Από την καρβοξυλομάδα και τα συνθετικά του ονόματος στις διακλαδώσεις.</p>
+             <p><span class="count">28 βήματα · 8 μόρια</span></p>
+-            <a class="action" href="../mulermoc-nom-52.html?scenario=scenarios/saturated-monocarboxylic-acids-nomenclature.scenario.json&amp;present=1&amp;from=theory-library&amp;v=monoacids-theory-20261028">Ξεκίνα το μάθημα <span aria-hidden="true">→</span></a>
++            <a class="action" href="../mulermoc-nom-54.html?scenario=scenarios/saturated-monocarboxylic-acids-nomenclature.scenario.json&amp;present=1&amp;from=theory-library&amp;v=monoacids-theory-20261028">Ξεκίνα το μάθημα <span aria-hidden="true">→</span></a>
+           </section>
+           <section class="lesson-part" aria-labelledby="other-carboxylic-acids-title">
+             <h3 id="other-carboxylic-acids-title">Άλλα καρβοξυλικά οξέα</h3>
+             <p class="series-formula">C<sub>x</sub>H<sub>y</sub>(COOH)<sub>n</sub></p>
+             <p>Ακόρεστα μονοκαρβοξυλικά και δικαρβοξυλικά οξέα, χωρίς άλλες χαρακτηριστικές ομάδες.</p>
+             <p><span class="count">26 βήματα · 7 μόρια</span></p>
+-            <a class="action" href="../mulermoc-nom-52.html?scenario=scenarios/other-carboxylic-acids-nomenclature.scenario.json&amp;present=1&amp;from=theory-library&amp;v=unsaturated-acids-theory-20261028">Ξεκίνα το μάθημα <span aria-hidden="true">→</span></a>
++            <a class="action" href="../mulermoc-nom-54.html?scenario=scenarios/other-carboxylic-acids-nomenclature.scenario.json&amp;present=1&amp;from=theory-library&amp;v=unsaturated-acids-theory-20261028">Ξεκίνα το μάθημα <span aria-hidden="true">→</span></a>
+           </section>
+         </div>
+       </article>

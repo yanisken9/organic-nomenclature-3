@@ -1,0 +1,54 @@
+{
+  "date": "2026-11-03",
+  "status": "complete locally, independently reviewed",
+  "userClarification": "Remove only optional Χρειάζεσαι μια ιδέα;/Μια υπόδειξη card; retain separate wrong-replacement feedback",
+  "productionChanges": [
+    "games/name-repair.html",
+    "js/namelecule-game-repair.js",
+    "css/namelecule-games.css",
+    "games/data/name-repair-alkanes.json"
+  ],
+  "behavior": [
+    "exact wrong-part sentence only",
+    "optional hints removed from state/render/data/CSS",
+    "success explanations2–3sentences after correct Check",
+    "summarycompleted+attempts, guided example excluded",
+    "JS/CSS URLs versioned and JSON revalidated to avoid stale copy"
+  ],
+  "checks": {
+    "engine": 87,
+    "Firefox": 162,
+    "fullJourneys": 2,
+    "viewports": [
+      1500,
+      390
+    ],
+    "javascriptErrors": 0,
+    "imageFailureRecovery": true,
+    "assetProvenanceUnchanged": true,
+    "transformRebuildExact": true
+  },
+  "chemistry": {
+    "agent": "/root/game_repair_chemistry",
+    "findings": [],
+    "JSONSHA256": "823cba93c3f25eb79263d810606b9150e14e17cf47d0dccb2288707afb9cd762",
+    "scope": "16 semantic changes only:5successText/5wrongPart/5hints removed/1incorrect shortened; names/answers/choices/MOLrefs unchanged",
+    "noGraphRescan": true
+  },
+  "learning": {
+    "agent": "/root/games_learning_design",
+    "findings": [],
+    "scope": "targeted new feedback, intro, retry and result wording; no classroom/browser claims"
+  },
+  "limits": [
+    "Local-only, no commit/push/publication",
+    "No Main/core/React/scenario/MOL/SVG changes",
+    "Firefox desktop+simulatedtouch; not physicalmobile/screenreader/otherbrowser/conference certification"
+  ],
+  "next": "User refreshes existing game URL; no sync/publication",
+  "independentReview": {
+    "agent": "/root/review_repair_feedback",
+    "findings": [],
+    "independentJSCChecks": 82
+  }
+}

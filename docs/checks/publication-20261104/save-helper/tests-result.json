@@ -1,0 +1,30 @@
+{
+  "dateUTC": "2026-11-04T12:42:33.718913+00:00",
+  "command": "python3 -B docs/checks/publication-20261104/save-helper/test-save-helper.py",
+  "exitCode": 0,
+  "testCount": 19,
+  "astAndTrailingWhitespace": "pass",
+  "helperSHA256": "1f2f7594fa46f3bda665dc30461b3cbd61de820354786a59e0ca1632d62d8716",
+  "testSHA256": "f32b1701c787b1f3d5fbc166b0891363b70fe0217ec689381b21f14fa4021af4",
+  "sourceHeadReadOnly": "168e3cec01f941a84d40bbe0dc07156e7baa35d0",
+  "sourceIndexSHA256ReadOnly": "25c212236906eff396f0a3521653f16eea1f5d57dfc5e32ba4477ad25930f964",
+  "executed": [
+    "Isolated temporary fictional-file tests",
+    "Mocked Git staged-byte and gate checks"
+  ],
+  "notExecuted": [
+    "save()",
+    "create_zip()",
+    "create_bundle()",
+    "checkpoint_snapshot()",
+    "copy_external()",
+    "real Git mutations",
+    "network",
+    "external save folder writes"
+  ],
+  "limitations": [
+    "No actual archive, bundle, publication, checkpoint commit, desktop launcher or external copy verification has occurred in this preparation task",
+    "Pattern scanning is not a comprehensive secret audit",
+    "File copies are atomic individually; the two external directories are not one atomic transaction"
+  ]
+}

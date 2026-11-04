@@ -1,3 +1,352 @@
+# 2026-11-04 — Professor35 integration and shared skeletal generation corrected
+
+Compared actual upstream02dbcfaf→35d791ee (onecommit/sixpaths;CHANGELOGunchanged).
+Integrated six teacher paths preserving Namelecule customizations, GreekC9 and
+old52/React/sourceassets. Core54now3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306.
+UpstreamC11–20 tables/drawingdefault/Beautify and deterministicfirstAccept merged;
+authorednumericlocants, validatedlinearC9–20alkylguard/unsupportedmarker,
+completeENlonggroup/ether names, safeperrungacceptance/restoration andcommon
+fZigzagMoldegree2/spwhole-siderotation/vectornormalization corrections. Stored
+MOL/SDFandcore52 unchanged. Exact6paths/checks/limitsin
+checks/v54-upstream-20261104/REPORT.md andfrozenreviewmanifest.
+
+IndependentReviewerinitialP2NUM02/GEOM01 reproducedandclosedafterapprovedfixes;
+independent1084naming/844oldunchanged,228accept,all422inventory421pass/1old[H]skip,
+2309length/2218angle/1922orientationinvariants. Domainindependent10sourceforms.
+DeveloperfinalFirefox25authoring/22geometry/45pilot/60sets0JSexceptions;
+full14/337replay9780functionallypassedbeforegeneratorwith4oldCIRerrors/rawexit1.
+ENnitromultiplierandGreek/C20/geometry/external/conferencelimitsdisclosed.
+
+Core54changedTHISintegration/reportperiod (upstream+localauthoredfixes);core52
+unchanged. No currentcommit/push/publicationyet. Originalsave/reportrequest
+continueswithcuratedpublication+fullcheckpoint/twoexternalcopies. Sourceactive
+HEAD/indexretained. Reportdraft/localchecks aredistinctfromverifiedpubliclinks.
+
+# 2026-11-04 — Approved game welcome connection and full v54 migration (in progress)
+
+## 2026-11-04 — Two alkane sets complete, independently reviewed locally
+
+Implemented user's two-sets/three-quizzes/implementation-now request. Exactscope:
+gameJS/JSON/CSS; gameHTMLcache; Main54HTMLsharedJS cache only; welcomegamequery;
+newethane/pentaneSVG+provenance exportedfrom existingMain54expanded drawings.
+2sets×3, separatefreshstate/results/progress1–3, no rehearsal, neutralprompts,
+correctexplanations, returnconfirmation/cancelpreservation. Existingembedded
+parent-not-total retained. MOL/core52/core54/viewer/data/scenario/React unchanged
+THISunit; earliercore54integration separate. No stage/commit/push/publication,
+HEAD/indexunchanged. Beforecopies and sourcehashes preserve recovery baseline.
+
+Developer143engine+60mount+85hub+32static; actualFirefox60sets+45embedded PASS
+zeroJSexceptions,9servedexactbytes. Domainread-onlychecks recordedinREPORT.
+FreshReviewer /root/review_alkane_two_sets independently reran143+60+85+32without
+writes, verified10target/50evidence hashes/SVG-MOL/schema, noactionableP0–P3.
+No independentbrowser orconferenceguarantee; inheritedEscape/programmaticfocus
+limitation unchanged. REPORT/review-report/final-manifest in
+checks/alkane-two-sets-20261104/. Ownedheadlesscleanup done, userbrowser/server
+preserved, updatedgame senttonormalFirefox. Newupstream35pendingseparatesync
+fromactuallysynced02. Next:userrefinement/other series, notautomaticpublication.
+
+
+## 2026-11-04 — Two alkane sets implemented; independent review pending
+
+User requested two sets (unbranched/branched), exactly3quizzes each, then explicit
+implementation-now. Sixruntimepaths: gameJS/JSON/CSS, gameHTMLcache, Main54HTML
+sharedJS cache only, mainwelcome gamequery. Newethane/pentaneSVG from existing
+Main54expanded viewer and honest provenance; MOL/core/viewer/data/scenarios/React
+unchanged. Embedded parent-not-total retained; standalone branched3questions
+reuse existing authoredcontent except neutral prompts. Fresh set state/results,
+returnconfirmation/cancelpreservation andprogress1–3.
+
+Evidence in checks/alkane-two-sets-20261104/: beforecopies/baseline/boundary/diffs,
+143engine+60mount+85hub+32static, actualFirefox60sets+45embedded PASS0JSexceptions,
+9servedexactbytes, domain-role read-onlychecks. Frozen10targets/50evidence reviewed
+by fresh /root/review_alkane_two_sets; verdict pending. No commit/push/publication
+and no THISunitcorechanges. Newupstream35 separately pending fromactualsync02.
+
+
+## 2026-11-04 — Alkane set structure and quiz count, design only
+
+User requests two alkane sets (unbranched/branched), each with exactly three
+short quizzes to reduce fatigue. Recorded as a requirement for the next approved
+implementation. Current reviewed one-card/four-branched-mission runtime remains
+unchanged; question selection and implementation plan are still pending. Notes
+only, no code/core changes, application tests, commit/push/publication.
+
+
+## 2026-11-04 — Workshop welcome/Alkanes card complete and reviewed (local)
+
+Approved b08e3395296b4ddf89d19d98dd901c72 plus exact requested nomenclature header.
+Six runtime paths detailed below; original3Dlogo, firstcard→four exactmissions,
+noΠ, progress1–4, confirmedreset/Cancelpreservation/resultsreturn/mainExit. No new
+chemistry/other-series content or core/viewer/scenario/controller/React changes.
+Beforecopies/taskbaseline in checks/workshop-hub-20261104/.
+
+Fresh independent Reviewer /root/review_workshop_hub found no actionableP0–P3,
+verified7target/42evidence hashes and independently reran74+60+40 in-memory checks.
+DeveloperFirefox53hub+45embedded+4header PASS0JSexceptions; visualdesktop/mobile
+inspection. Tests include full4missionkeyboard/retry score4/5/cancel/reset/image
+failure/recovery/320…1500widths/touch and embeddedrefresh/gating. Original4question
+objects byte-identical; sharedgrading/restore/mount invariant. Sixruntime targets
+unchanged after review. Read review-report.md for exact evidence/limits; no
+independent browser execution or conference/offline certification.
+
+Unresolved inherited Escape/programmaticfocus sensitivity afterhistory retained;
+actualpointer/focusedEscape passes, no appfixclaimed. OwnFirefox38292/9244 stopped,
+profile removed, normalFirefox/server retained; updatedworkshop externalopen exited0.
+Corefiles unchanged THISunit; earliercore54integration separate. No stage/commit/
+push/publication, HEAD/index unchanged. Next:user review/refinements; other sets
+later. TaskREPORT.md and final-manifest.json record final source/review references.
+
+
+## 2026-11-04 — Workshop hub final source frozen, independent review running
+
+Approved b08e3395296b4ddf89d19d98dd901c72 implemented in six paths documented
+below. Latest explicit user text correction changes visible header to «ΜΙΚΡΕΣ
+ΑΠΟΣΤΟΛΕΣ ΟΝΟΜΑΤΟΛΟΓΙΑΣ». Root actualFirefox53hub+45embedded+4header PASS;
+worker74engine+60mount+40hub DOMdouble PASS. Exact4authoredquestion content,
+sharedAPI/core/viewer/scenario/pilotJSON/React preserved. Read-only fresh Reviewer
+/root/review_workshop_hub checking frozen7target/42evidence manifestd711308d....
+Raw driver anchor and afterhistory/programmaticfocus failures retained; final
+nativepointer-keyboard condition passes, no appfix claimed for old focus route.
+Current-taskcorechanges NONE; no commit/push/publication. Cleanup/final verdict
+and user-facing updatedbrowser preview pending. Details REPORT.md/evidence in
+checks/workshop-hub-20261104/.
+
+
+## 2026-11-04 — Workshop welcome and first Alkanes set (implemented, verification running)
+
+User approved b08e3395296b4ddf89d19d98dd901c72, consolidating earlier Π removal
+with welcome/card request. Existing logo/route retained; first active «Αλκάνια»
+card starts four exact challenge objects, no rehearsal; visible/accessibility
+progress1–4, explicit hub reset/confirmation/cancel, main Exit retained.
+Six runtime paths: js/namelecule-game-repair.js, games/data/name-repair-alkanes.json,
+css/namelecule-games.css, games/name-repair.html, mulermoc-nom-54.html(cache only),
+design/welcome-proposal.html(entry text/query). No core/new chemistry/other series.
+Root styles/HTML; bounded Developer component reuse JS/JSON; read-only explorer
+and prior Learning Designer preflight. Worker74+60+40unit assertions and Root53
+actualFirefox hub/game checks PASS; embedded44passes with final Escape focus
+probe running. Independent consolidated Reviewer not yet started. Beforecopies,
+hashes/tests/limits in checks/workshop-hub-20261104/. No stage/commit/push/publication.
+
+
+## 2026-11-04 — Remove rehearsal, read-only planning
+
+User asks to remove Π/guided rehearsal. Root traced validation and intro/progress/
+results dependency; Learning Designer confirms first remaining question suitable
+without rewriting content. Four challenges/embedded pilot to remain identical.
+Concrete4runtime-path plan presented; explicit approval pending. Recovery copies
+and baseline in checks/game-remove-rehearsal-20261104/. Upstream unchanged at
+02dbcfaf79e2 after actualHEAD/history/CHANGELOG read11:30Z. No application/core
+changes or execution tests; no commit/push/publication. Next: approved code unit,
+proportional four-round/embedded checks and independent Reviewer.
+
+
+## 2026-11-04 — Alkane checkpoint pilot complete, independently reviewed (local)
+
+Final state of approved c6ffd89529a54e47849aa0b933c9435e implementation detailed
+below: exact existing question after step10 in isolated21-step pilot, reusable
+renderer/controller, mandatory gating, refresh progress and metadata preservation.
+No expansion to other series or new chemical rules/graphs. Original14lessons,
+standalone5roundgame/v52/React/MOL/data/assets preserved. Changed4existing runtime
+paths and added4runtime paths, with beforecopies/task629hashbaseline.
+
+Independent fresh Reviewer /root/review_alkane_checkpoint: no actionableP0–P3,
+9target/80evidence hashes verified,87+59+55+15in-memory checks independently run;
+Developer Firefox evidence reviewed, not independently executed. Full evidence,
+commands/limits and Reviewer attribution in ALKANE-CHECKPOINT-PILOT-20261104.md
+and checks/alkane-checkpoint-pilot-20261104/review-report.md. Root final8runtime
+hashes remain identical to reviewed versions after factual documentation updates.
+
+Developer final:45pilot+30standalone+7portrait/realUpdateExportImport+4CSS checks;
+14legacylessons337steps9780assertions0functional failures/14actual3Dmodels.
+Raw externalCIR404 diagnostics preserved and matched previousv54; no new app
+exception. Test-driver corrections and two fixed integration issues documented.
+Owned browser cleanup verified; userFirefox/server8013 retained. No core changes
+in this pilot (previous core54 integration separately recorded), no stage/commit/
+push/publication; HEAD/index unchanged. Next:user trial/refinements; original
+library destination stays original lesson until later user decision.
+
+
+## 2026-11-04 — Approved first alkane theory checkpoint pilot (local; review running)
+
+User approved call c6ffd89529a54e47849aa0b933c9435e after read-only planning below.
+Purpose: active practice in theory, alkane-first; future series/quiz types later
+under user direction. Reuse exact parent-not-total after current step10 in a
+separate 21-step pilot; original lesson remains the library destination.
+
+Changed4 existing runtime paths: game-repair JS (shared mount/restore renderer),
+game HTML cache URL, scenario54 JS (metadata/schema/navigation), Main54 HTML
+(includes/cache). New4runtime paths: repair-round CSS, quiz-checkpoints CSS/JS,
+alkanes-name-repair-pilot.scenario.json. New task report and evidence. Root is
+Developer; two bounded workers handled shared component and scenario integration;
+Learning Designer preflight informed placement. Chemical content/assets unchanged.
+
+Unlimited retries, in-lesson dialog, visible explanation and explicit Continue;
+submission required, refresh progress retained, URL/history/keyboard gated before
+snapshot mutation. Update/Blob export/FileReader import retain metadata; mandatory
+checkpoint lessons use v2, ordinary exports v1. Safe image-failure/retry/return.
+Browser-discovered zoom Escape and inherited landscape title issues corrected at
+the shared component/scoped CSS. No core/data/MOL/React/v52/original14JSON changes.
+
+Verified Developer evidence:87engine+59component DOM-double,149schema,
+55integration contract-double+15real-module in-memory; Firefox45pilot,
+30standalone5rounds,7portrait/authoring,4final landscape. Legacy14lessons337steps:
+9780checks0functional failures/14actual3Dmodels+painted cold probe. Four known
+external CIR404 logs make raw inherited replay exit1; all diagnostic texts match
+previous v54. Test driver mistakes and failed runs are preserved with explanations.
+
+Baseline629paths, HEAD168e3cec/index unchanged; exact frozen9path review target,
+before copies/diffs/hashes and limits in checks/alkane-checkpoint-pilot-20261104/.
+Fresh read-only Reviewer /root/review_alkane_checkpoint active; final independent
+result pending. No commit/push/publication. Root browser cleanup/final journal
+update and user pilot link follow review. Current-task core changes: NONE.
+
+
+## 2026-11-04 — Alkane theory/quiz checkpoints, read-only planning
+
+Userdirection: briefmandatorygamesinterleavedwithrefinedtheory, allserieslater;
+alkanesfirst, userdirectschangesonebyone. Proposed(notapproved)pilotafterstep10,
+existingparent-not-totalround; root/explorer/LearningDesignerpreflightrecorded
+inchecks/quiz-checkpoints-preflight-20261104/planning-summary.json. Existing5round
+contract/navigation/schema/viewerconstraintsidentified. Actualupstream02dbcfaf
+HEAD/history/CHANGELOGunchangedfromlastlocalintegration. Onlyprojectrecords/
+planningJSONwritten; noapp/core/chemistrychangesorapplicationtests. Nocommit/push/
+publication. Nextspecificpilotapprovalbeforeimplementation; independentReviewer
+afterlogicalcodeunit,notactivatedforread-onlyplanningalone.
+
+
+## 2026-11-04 — Complete professor54 integration and game entry (local, complete with disclosed limits)
+
+Userapprovedcall930f6bc06ac24b0eaf10097bc65a6c3d: directwelcome gameconnection,
+allprofessorfunctionality inMain54,preserve52/React andbroaddomain/browser/review.
+BaseGit168e3cec,upstream93b759f5→02dbcfaf(57commits/69paths). 783pre-existing
+statusentries arepriorwork, notattributedtothisunit. Taskbaseline610hashes.
+
+Newcode: mulermoc-nom-54.html;js/data_54andcore/molview/teaching/scenario/note/
+iupac/lang/name-en54; isolatedui-icons54,threeCSS54,init54. Welcomegamecard
+andwelcome/librarynavigationupdated. Thirteenupstreamdocsimported;raw69paths
+archived/traceable;README/CHANGELOG/sessionrecordsupdated. Details/exactpaths,
+localfixesandupstreamprovenance in[V54 record](V54-SYNC-20261104.md) and
+checks/v54-sync-20261104/.Nooriginal52/React/MOL/SDF/scenarioJSONedit.
+
+Core54 isnewcustomizedupstream withcharge/metadata-preservinggenerators,
+charge-awareH,nitrilesp,strictmapping/contentcache andinheritedC9stemfix.
+Core52 baselineunchanged. ChemistryValidator independentlyclosedcriticalfindings
+andtargetedstemcheck. OneC9alkynediaeresisP3observationremains,sourceindexed
+butdirectfetchfailed; noallGreekspellingscertification. Reviewerindependentlyverified844+844cases/19chemistryguards,foundR54-F1storedcallbackwiringandverifiedfix;alsoindependentlyverifiedlatepreloadoverwritebefore/after. Final350pathreviewmanifest6a82fcd9verified;noopenP0/P1/P2.R54-F1/F2closed.
+Developerresultsinclude844naming/coldinit,141ENnames,844actual2Dglyphcases,
+337lessonssteps9076functionalassertions,149schema,19compatibility,14real3Dmodels,
+94welcome/game,17preservedReactand5controlledreadinesschecks. Final844library
+comparisonaftertwoisolatedstemconstantchangesisidentical. ExternalCIR/CORS404,
+CDNj2sdependence andoneunresolvedReactkeyboardautomationattemptdisclosed.
+Finaldraftchecks10native/logicalreload+10delayedpreload+19mobile passed;
+16desktop assertionspluscreate/update/fork/registration evidenceversionedindraftreport.
+R54-F1actualregisteredcallbackrecoveryfixedinHTML54stabledelegate/cacheURLr2;
+inheriteddefaultpreloadnowcapturesspecificuntouchedbootcard,cancelsifauthoringstarted.
+Rootfinal7zoom/resize/numbering/PNG/EN+4Beautify+4cold3Dlesson/Escpassed;
+2externalCIR404inlastlessonretained,0appcodeerrors. Reviewerfinalconclusionacceptslocalscope;residualP3C9spelling/mobile3Dcrowdingandexternaldepsretained.
+No stage/commit/push/publication;indexunchanged.Recoveryold52andpriorcheckpoints
+retained. Nextfinalgates/independentreview, then usertrial; publicationonlyonrequest.
+
+
+User approved direct «Παίζω και εξασκούμαι»→Συνεργείο ονομάτων and additive Main54
+with all professor features, preserving Main52/React. Complete actualsync→HEAD
+comparison57commits/69paths saved; baseline610files/783pre-existingstatusentries.
+New54candidate modules assembled; welcome game entry implemented, Main links
+still52 untilgate. Developer18basic/844actual2Dcases pass0errors; shell27static/
+133schema checks pass. Full337step replay running. Root/worker chemistry checks
+found and are correcting demonstrated upstream nitrocharge/spgeometry/map/ENbox
+issues; CV-F1 correct localacidformula retained. Fresh independent finalreview
+pending. Newcore54 is a session change; oldcore52 unchanged. No commit/push/
+publication. Exact ownership, process IDs, evidence and remaining work in current
+session resume and docs/checks/v54-sync-20261104/.
+
+# 2026-11-04 — Accepted 3D logo for «Συνεργείο ονομάτων»
+
+User approved introduction and mission placements, then accepted the 3D variant.
+Generated transparent PNGs (flat alternative retained), integrated the accepted
+3D image with one shared helper, responsive CSS and cache-versioned HTML.
+Changed runtime paths: games/name-repair.html, js/namelecule-game-repair.js,
+css/namelecule-games.css, games/assets/name-repair/workshop-logo-3d-v1.png.
+Purpose: recognizable workshop identity without changing assessment or content.
+
+Developer: 87 JSC engine checks and 69 Firefox checks passed; six viewport widths,
+full keyboard journey, restart and simulated-touch guided/next; zero JavaScript
+errors. Five runtime files HTTP 200/exact on existing server 8013. Generation
+prompts, baseline and verification stored in docs/checks/game-workshop-logo-20261104/.
+Independent Reviewer /root/review_workshop_logo_3d inspected the frozen 18-path
+target: no actionable P0–P3 findings; independently 12 in-memory JSC checks, PNG
+integrity/transparency, exact diff/hashes and four screenshots. Review recorded.
+Opened in normal Firefox (command exit 0); only owned test browser terminated. No core.js/core-version, Main, React, scenario, MOL/SVG or grading
+data changes. No commit/push/publication; prior uncommitted work is separate.
+Upstream v54 reviewed today, synchronization remains deferred by user.
+
+# 2026-11-03 — Feedback revision complete
+
+Completed user's clarified4filegamechange: only minimalwrongPart sentence, remove
+optionalhints with allcounters/classifications, specificpost-success explanations,
+summarycompleted+attempts. Separatewrongreplacementfeedback preserved.87engine/
+162Firefoxchecks0errors, targetedchemistry/learningchecks; Reviewerfresh22paths,
+82independentJSCchecks andnodiscoveredfindings.4runtimeHTTPexact; usercanrefresh.
+OwnedtestFirefoxclosed,user8013/browserkept. No core.js/core-version/Main/scenario/
+React/MOL/SVG changes, commit/push/publication; sync remainsdeferred.
+
+# 2026-11-03 — Feedback/hint revision implemented locally
+
+User clarifiedremoveoptionalhintcardonly.4gamefiles updated: exactminimalwrongPart,
+removehintmechanism/counters, improvepost-success explanations andsimplifysummary;
+keepwrongreplacementfeedback.87engine/162Firefoxchecks,0JSerrors; chemistry/
+learningtargetedreviews nofindings. IndependentReviewer pending. Currentchanges
+bounded againstrecorded4filebeforecopies, otherapp/assets unchanged. No core.js/
+core-version changes, commit/push/publication; v53sync deferred byuser.
+
+# 2026-11-03 — Requested feedback revision investigated
+
+User wants minimal wrong-part feedback, removal of a help panel and explanatory
+success feedback. Scope clarification pending between right-hand wrong-answer
+feedback and optional hint panel; read-only baseline/plan prepared. No game/core
+changes or runtime tests/commit/push/publication in this revision yet.
+
+# 2026-11-03 — Repair game completed, independently reviewed, locally opened
+
+Completed approved isolated Συνεργείο ονομάτων, one guidedexample/fourchallenges.
+Existing4alkane structures exported to6SVGs by currentMain2Dpipeline; no molecular
+orcore changes. Runtimebuildless/noexternalgame resources; feedback/hints, error
+recovery, keyboard/touch, zoom/retry/summary. Reviewer freshcontext50paths with
+no actionablefindings; independent68JSC andchemical/XML/hashguards. Developer80
+engine/79Firefox checks plus finalfullTabEnterjourney60Tabpresses/Back; original
+MainCDN6smokes pass. Failed local-j2s smoke and old processwarnings disclosed;
+no offline/conferencecertification.10runtimeHTTPbytes verified8013; normalFirefox
+openexit0. Ownedtestprocesses closed, user8013/browser preserved. No commit/push/
+publication orwelcomeintegration. Core.js/core-version unchanged thissession.
+Exacthashes/roles/limits in game-repair-20261103 records. Awaiting uservisualtrial;
+synchronization remains deferred per explicit instruction.
+
+# 2026-11-03 — First approved repair game implemented locally
+
+User approved isolated Συνεργείο ονομάτων and deferredv53sync. One worked example/
+four challenges, existing alkaneMOL-derived SVGs, targeted feedback, optional hints,
+keyboard/touch controls, retry/zoom/results/error recovery. New standalone HTML/JS/
+CSS/JSON/assets/exporter; Main/core/React/scenarios/welcome unchanged.80engine and
+79actualFirefoxchecks, two full input journeys, six SVGdecodes/font/frame checks,
+six shipping-CDN Main/theory smokechecks. Failedlocal-j2s attempt retained; no offline
+package. Independentchemistry and learning assessments completed; XML serialization
+finding fixed and independently closed. Final independentReviewer stillpending.
+No core.js/core-version changes, commit/push/publication. See game-repair-20261103.
+
+# 2026-11-03 — Games read-only preflight and first-game proposal
+
+User requested original functional games from existing material. Investigated Main52
+components/MOL/viewer and theory/layers plans; no quiz engine currently implemented.
+Learning Designer /root/games_learning_design supplied read-only four-mechanic design
+and bounded Συνεργείο ονομάτων proposal, one worked repair/four challenges with
+existing alkane IDs. Implementation approval pending; no app/code changes or runtime
+validation claimed. No core.js/core-version changes, commit/push/publication.
+Upstream HEAD/history/raw CHANGELOG actually read: v53 HEAD7f56de54,26 commits after
+4e1190ab; last actual sync93b759f5, no new integration. Relevant naming/viewer/scenario
+and language overlaps disclosed. Baseline/upstream evidence in games-preflight-20261103;
+next step is approved isolated prototype with chemistry validation/browser checks
+and independent Reviewer. Pre-existing working-tree changes remain untouched.
+
 # 2026-11-01 — Final consolidated publication and save completed
 
 Public 74a9e3ea395eb79ffa6d6d72bdcb6275e10c93a7 and professor report verified; runtime db08d20

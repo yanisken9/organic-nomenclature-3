@@ -1,0 +1,30 @@
+{
+  "agent": "/root/game_repair_chemistry",
+  "ROLE_ID": "NAMELECULE_CHEMISTRY_VALIDATOR_V1_20261023",
+  "independentReadOnly": true,
+  "contentSHA256": "ca17854c948a99da6e80aaef8f1c3d576747ee71029876de8f7239e4b8b24bbc",
+  "checks": [
+    "all five wrong/correct names and every hint/feedback/distractor",
+    "12 embedded 2D forms and four runtime SDFs with full constitutional graph correspondences, H per C and valid neutral valence",
+    "source-file/MOL hashes, selected parent equivalence and actual atom-label/bond endpoints in six exported SVGs"
+  ],
+  "finding": {
+    "id": "P1-CHEM-ASSET-01",
+    "status": "closed by independent targeted verification",
+    "cause": "New exporter bypassed existing Main standalone XML attribute repair; live HTML DOM contained black quote orphan attribute",
+    "resolution": "Validate/remove invalid XML attribute names at export boundary; keep computed fill; validate using DOMParser and ElementTree",
+    "proof": "All six final SVG parse, recorded hashes exact, internal numbered SVG nodes/attributes/text unchanged versus retained before except orphan attributes; only root dimensions/viewBox adjusted"
+  },
+  "assetSHA256": {
+    "butane.svg": "af599e7bd7ab3f7e25e9db068db31f87960f9fc67e40807ad563c303171beff7",
+    "butane-chain.svg": "e624f34f15582031d26fda984f9e109c60219e0f50e8f43e218710d905c58120",
+    "methyl_2_pentane.svg": "3bcb602334f6f44b8e3c9e428bd8020bcbca93aae3d5b878158227c3d0a84d67",
+    "methyl_2_pentane-chain.svg": "fb32daff082c0cc78e04a9c18ef23c7b3e5526be6d7426862bc24c232f1ed319",
+    "dimethyl_2_3_butane.svg": "7cca82e80e3d7ec861a81a23933fcc33e656257ef009ff14f95255d148987e30",
+    "ethyl_3_dimethyl_2_5_hexane.svg": "3f0c3c15861ead27aec9cf7516a653276fd2738ff9dc367a01f51712458ca672"
+  },
+  "limitations": [
+    "No Chemistry Validator browser execution",
+    "Large pre-existing SDF has atom1 parity2 while 2D stereochemistry unspecified; constitutional game only, no stereo/PIN certification"
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "completed": false,
+  "checks": [
+    {
+      "label": "Actual3D preview available diethyl_ether",
+      "detail": null
+    },
+    {
+      "label": "Accepted skeletal conventional/sp angles diethyl_ether",
+      "detail": [
+        {
+          "atom": 1,
+          "el": "O",
+          "sp": false,
+          "angle": 120.00121751714275,
+          "target": 120
+        },
+        {
+          "atom": 2,
+          "el": "C",
+          "sp": false,
+          "angle": 119.99756496571455,
+          "target": 120
+        },
+        {
+          "atom": 4,
+          "el": "C",
+          "sp": false,
+          "angle": 119.99876898055987,
+          "target": 120
+        }
+      ]
+    },
+    {
+      "label": "Generated skeletal visible diethyl_ether",
+      "detail": null
+    },
+    {
+      "label": "Zoom and numbered parent diethyl_ether",
+      "detail": null
+    }
+  ],
+  "fixturePolicy": "Stored local SDF source replaces PubChem3D/name transport. Existing source record is temporarily removed from runtime registry after Submit only, isolating new-accept geometry from duplicate guard; restored immediately after Accept. Actual JSME/core/registry/renderer/JSmol. Stored MOL registry unchanged.",
+  "cases": [],
+  "failure": "Timed out: !MulerDraft",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/v54-upstream-20261104/browser/test-generated-geometry.py\", line 27, in <module>\n    click('#editMolBtn');until('!!MulerDraft');submit();click('#molDraftAcceptBtn');until('!MulerDraft',seconds=20)\n  File \"bidi\", line 51, in until\nAssertionError: Timed out: !MulerDraft\n",
+  "javascriptErrors": []
+}

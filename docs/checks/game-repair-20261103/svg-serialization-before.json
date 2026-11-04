@@ -1,0 +1,16 @@
+{
+  "finding": "CHEM-ASSET-01",
+  "failures": [
+    {
+      "file": "games/assets/name-repair/butane-chain.svg",
+      "SHA256": "b227a00b6aff91bbe49a9d508eb6ede9125b06396f8015b2b09c3e504e866e2b",
+      "parseError": "not well-formed (invalid token): line 26, column 169"
+    },
+    {
+      "file": "games/assets/name-repair/methyl_2_pentane-chain.svg",
+      "SHA256": "85ff6f77949666cbf4e081750766effb520699b8b04c4f5360d0aa4b9c39092c",
+      "parseError": "not well-formed (invalid token): line 32, column 174"
+    }
+  ],
+  "cause": "HTML SVG DOM permits malformed attribute names; standalone XML serialization needs valid XML attributes."
+}

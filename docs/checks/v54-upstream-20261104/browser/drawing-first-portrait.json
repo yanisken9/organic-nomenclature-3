@@ -1,0 +1,60 @@
+{
+  "completed": false,
+  "checks": [
+    {
+      "label": "Teacher drawing default on exposes New/Edit",
+      "detail": null
+    },
+    {
+      "label": "Beautify available in editor",
+      "detail": null
+    },
+    {
+      "label": "Real Beautify uses live11C horizontal chain",
+      "detail": {
+        "n": 11,
+        "range": 0
+      }
+    },
+    {
+      "label": "Beautify hidden in submitted depict preview",
+      "detail": null
+    },
+    {
+      "label": "New C11 GR/EN actual prediction",
+      "detail": null
+    },
+    {
+      "label": "Real JSmol preview has C11H24 35atoms",
+      "detail": null
+    },
+    {
+      "label": "Accept adds session molecule without automatic download",
+      "detail": null
+    },
+    {
+      "label": "Accepted skeletal is generated zigzag",
+      "detail": {
+        "n": 11,
+        "range": 0.585,
+        "bonds": 10
+      }
+    },
+    {
+      "label": "Accepted condensed name/parent/drawing 1500",
+      "detail": null
+    },
+    {
+      "label": "Accepted expanded name/parent/drawing 1500",
+      "detail": null
+    },
+    {
+      "label": "Accepted skeletal name/parent/drawing 1500",
+      "detail": null
+    }
+  ],
+  "fixturePolicy": "Actual PubChem REST responses stored locally; name/3D async transport replaced for repeatable authoring. Real JSME, engine, SVG, JSmol, registry and Blob payload.",
+  "failure": "('.mode2DOption:nth-child(1)', {'x': 115.93333435058594, 'y': 500, 'hit': False, 'disabled': False, 'at': '<p>\\n      Στρέψε τη\\n      συσκευή\\n      οριζόντια<br>για\\n      καλύτερη\\n      εμφάνιση\\n    </p>'})",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/v54-upstream-20261104/browser/test-drawing.py\", line 47, in <module>\n    mode(m);check(ev('currentMolName===\"ενδεκάνιο\"&&mainChainAtomsList.length===11&&!document.querySelector(\"#jsmeNomeclatureSVG\").getAttribute(\"data-label-error\")'),'Accepted '+m+' name/parent/drawing '+str(w))\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/v54-upstream-20261104/browser/test-drawing.py\", line 9, in mode\n    if ev('mode2D')!=m:click('.mode2DOption:nth-child('+str(i)+')')\n  File \"support\", line 17, in click\n    navigate('mulermoc-nom-54.html?lang=gr&v=upstream54-drawing-'+str(time.time_ns()));app_ready();until('!!jsmeEditDraftApplet&&window.JSmolReadyFlag===true')\nAssertionError: ('.mode2DOption:nth-child(1)', {'x': 115.93333435058594, 'y': 500, 'hit': False, 'disabled': False, 'at': '<p>\\n      Στρέψε τη\\n      συσκευή\\n      οριζόντια<br>για\\n      καλύτερη\\n      εμφάνιση\\n    </p>'})\n",
+  "javascriptErrors": []
+}

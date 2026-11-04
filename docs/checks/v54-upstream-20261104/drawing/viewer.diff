@@ -1,0 +1,260 @@
+--- docs/checks/v54-upstream-20261104/before/js/mulermoc-nom-molview-54.js	2026-11-04 14:19:15
++++ js/mulermoc-nom-molview-54.js	2026-11-04 14:29:42
+@@ -815,14 +815,13 @@
+       }
+       else bw.classList.add("hide");
+     }
+-    // Beautify: school-slot drafts only, lit whenever not submitting (it
+-    // creates staleness rather than consuming it — the editor flip + sync
+-    // below re-light Submit, and resubmit recaptures the tidied drawing).
++    // Beautify changes the editor canvas, so school drafts expose it only
++    // while that editor is visible. Draw returns from preview to the editor.
+     var bb2 = document.getElementById("molDraftBeautifyBtn");
+     if (bb2) {
+       var schoolDraft = true;
+       try { schoolDraft = !(d.mode === "edit" && (d.variant === "skeletal" || d.variant === "condensedZigZag")); } catch (eSd) {}
+-      if (!schoolDraft) { bb2.classList.add("hide"); }
++      if (!schoolDraft || !editorVisible) { bb2.classList.add("hide"); }
+       else {
+         bb2.classList.remove("hide");
+         if (!d.submitting) { bb2.classList.add("active"); bb2.classList.remove("btnInactive"); }
+@@ -2014,67 +2013,99 @@
+   try { if (typeof fGetMoleculeClassification === "function") cls = fGetMoleculeClassification(); } catch (eCl) { cls = null; }
+   var formula = "";
+   try { if (typeof fMolDraftExpandedFormula === "function") formula = fMolDraftExpandedFormula() || ""; } catch (eFo) { formula = ""; }
+-  // Three-slot derivation (v54): the drawn variant is stored verbatim (author
+-  // is king of what they drew); siblings are generated. Condensed/expanded
+-  // keep the school geometry (linearized main chain + orthogonal branches,
+-  // H appended); skeletal is the JSME scientific zigzag from the drawing's
+-  // own SMILES. Any generator gap falls back to the drawn geometry, so a
+-  // missing slot degrades to the mode-radio fallback, never to a failure.
++  // Condensed/expanded preserve the drawn slot; skeletal is generated on
++  // acceptance, including skeletal edits. Generator gaps retain the drawing.
+   var drawnVariant = (d.mode === "edit") ? d.variant : "condensed";
+   var _chainLive = null;
+   try { _chainLive = (typeof mainChainAtomsList !== "undefined") ? mainChainAtomsList : null; } catch (eCh) { _chainLive = null; }
+-  // Skeletal source ladder (first valid wins): (a) display applet = depict
+-  // pipeline, the layout-capable path in this build; (b) edit applet +
+-  // repaint; (c) built-in deterministic zigzag. The edit-applet-only attempt
+-  // proved a silent no-op (returns the drawn MOL unchanged), so it sits
+-  // second and every miss logs loudly.
+   var _skel = null, _skelSrc = "";
+-  try {
+-    if (typeof fMolDraftDepictSmiles === "function") {
+-      if (typeof jsmeNomeclatureApplet !== "undefined" && jsmeNomeclatureApplet) {
+-        _skel = fMolDraftDepictSmiles(jsmeNomeclatureApplet, d.smiles, d.molText) || null;
+-        if (_skel && _skel !== d.molText) _skelSrc = "display";
+-        else {
+-          _skel = null;
+-          try { console.warn("[draft] skeletal: display-applet depict unchanged/failed"); } catch (eL1) {}
+-        }
+-      }
+-      if (!_skel && typeof jsmeEditDraftApplet !== "undefined" && jsmeEditDraftApplet) {
+-        _skel = fMolDraftDepictSmiles(jsmeEditDraftApplet, d.smiles, d.molText) || null;
+-        if (_skel && _skel !== d.molText) _skelSrc = "edit";
+-        else {
+-          _skel = null;
+-          try { console.warn("[draft] skeletal: edit-applet depict unchanged/failed"); } catch (eL2) {}
+-        }
+-      }
+-    } else {
+-      try { console.warn("[draft] skeletal: depict helper missing"); } catch (eL0) {}
+-    }
+-    if (!_skel && typeof fZigzagMol === "function") {
+-      try { _skel = fZigzagMol(d.molText, _chainLive) || null; } catch (eZ) { _skel = null; }
+-      if (_skel) _skelSrc = "builtin";
+-      else { try { console.warn("[draft] skeletal: built-in zigzag failed, using drawn geometry"); } catch (eL3) {} }
++  // Coordinate sums are a diagnostic receipt, never an identity/quality gate.
++  var _sigOf = function (text) {
++    try {
++      if (!text) return "none";
++      var p = fParseMolV2000(text);
++      if (!p || !p.atoms.length) return "unparseable";
++      var hc = 0, xs = 0, ys = 0;
++      p.atoms.forEach(function (a) {
++        if (fIsHeavyEl2D(a.el)) { hc++; xs += Math.round(a.x * 100); ys += Math.round(a.y * 100); }
++      });
++      return "heavy=" + hc + " x=" + xs + " y=" + ys;
++    } catch (eSg) { return "?"; }
++  };
++  // Reuse the existing exact heavy-graph mapper in a synchronous transaction.
++  // It only reads these four lists (no map-cache mutation). Composite labels
++  // retain charge and isotope distinctions; H stays H for explicit-H removal.
++  function fMolDraftLayoutMap(a, b) {
++    if (typeof fBuildHeavyMap2D3D !== "function") return null;
++    var saved = [allAtomsTypeList, bondList, allAtomsTypeList3D, bondList3D];
++    function labels(m) {
++      return m.atoms.map(function (v) {
++        return fIsHeavyEl2D(v.el) ? JSON.stringify([v.el, v.charge || 0,
++          v.massDifference || 0, v.isotope || 0]) : "H";
++      });
+     }
+-  } catch (eSk) { _skel = null; }
+-  try {
+-    if (_skel && typeof fParseMolV2000 === "function") {
+-      var _pa = fParseMolV2000(d.molText), _pb = fParseMolV2000(_skel);
+-      var _ha = 0, _hb = 0, _qi, _zero = true;
+-      if (_pa && _pb) {
+-        for (_qi = 0; _qi < _pa.atoms.length; _qi++) { var _ta = String(_pa.atoms[_qi].el || ""); if (_ta !== "H" && _ta !== "h" && _ta) _ha++; }
+-        for (_qi = 0; _qi < _pb.atoms.length; _qi++) {
+-          var _tb = String(_pb.atoms[_qi].el || "");
+-          if (_tb !== "H" && _tb !== "h" && _tb) _hb++;
+-          if (Math.abs(_pb.atoms[_qi].x) > 1e-6 || Math.abs(_pb.atoms[_qi].y) > 1e-6) _zero = false;
+-        }
++    try {
++      allAtomsTypeList = labels(a); bondList = a.bonds;
++      allAtomsTypeList3D = labels(b); bondList3D = b.bonds;
++      return fBuildHeavyMap2D3D(false);
++    } finally {
++      allAtomsTypeList = saved[0]; bondList = saved[1];
++      allAtomsTypeList3D = saved[2]; bondList3D = saved[3];
++    }
++  }
++  // Compare all mapped internal distances, normalized by extent: headers,
++  // translation, rotation and uniform scale cannot turn a depict echo into
++  // a new layout. Built-in fixed points deliberately bypass this echo test.
++  function fMolDraftLayoutEcho(a, b, map) {
++    var pairs = [], extentA = 0, extentB = 0;
++    for (var i = 0; i < a.atoms.length; i++) {
++      if (map.arr[i] == null) continue;
++      for (var j = i + 1; j < a.atoms.length; j++) {
++        if (map.arr[j] == null) continue;
++        var x = a.atoms[i], y = a.atoms[j], u = b.atoms[map.arr[i]], v = b.atoms[map.arr[j]];
++        var da = Math.hypot(x.x - y.x, x.y - y.y), db = Math.hypot(u.x - v.x, u.y - v.y);
++        extentA = Math.max(extentA, da); extentB = Math.max(extentB, db);
++        pairs.push([da, db]);
+       }
+-      if (!_ha || _ha !== _hb || _zero) {
+-        try { console.warn("[draft] skeletal: validation failed (heavy " + _ha + " vs " + _hb + ", zeroCoords " + _zero + ", src " + _skelSrc + ")"); } catch (eLv) {}
+-        _skel = null; _skelSrc = "";
+-      }
+     }
+-  } catch (eSv) { _skel = null; _skelSrc = ""; }
+-  try { if (_skelSrc) console.log("[draft] skeletal from " + _skelSrc); } catch (eLg) {}
++    if (!pairs.length) return true;
++    if (!(extentA > 1e-6) || !(extentB > 1e-6)) return extentA <= 1e-6 && extentB <= 1e-6;
++    return pairs.every(function (p) { return Math.abs(p[0] / extentA - p[1] / extentB) < 0.0002; });
++  }
++  function fMolDraftUseSkeletal(text, source) {
++    try {
++      var a = fParseMolV2000(d.molText), b = fParseMolV2000(text);
++      // Supported transformation rules reject ambiguous query/stereo records;
++      // parser enforces finite coordinates and valid bond endpoints.
++      if (!fMolCanTransform2D(a, true) || !fMolCanTransform2D(b, true)) throw new Error("unsupported/invalid MOL");
++      var map = fMolDraftLayoutMap(a, b);
++      if (!map) throw new Error("heavy graph/charge/isotope mismatch");
++      var heavy = b.atoms.filter(function (v) { return fIsHeavyEl2D(v.el); });
++      if (heavy.length > 1 && b.bonds.some(function (bond) {
++        var x = b.atoms[bond[0] - 1], y = b.atoms[bond[1] - 1];
++        return fIsHeavyEl2D(x.el) && fIsHeavyEl2D(y.el) && Math.hypot(x.x - y.x, x.y - y.y) < 1e-6;
++      })) throw new Error("collapsed bond");
++      if (source !== "builtin" && fMolDraftLayoutEcho(a, b, map)) throw new Error("unchanged internal geometry");
++      _skel = text; _skelSrc = source;
++      try { console.log("[draft] skeletal: " + source + " ok " + _sigOf(text)); } catch (eL) {}
++      return true;
++    } catch (eV) {
++      try { console.warn("[draft] skeletal: " + source + " rejected (" + eV.message + ")"); } catch (eL) {}
++      return false;
++    }
++  }
++  // Validate each rung before choosing it. Invalid built-in output must not
++  // block either applet fallback; a valid deterministic fixed point is fine.
++  if (typeof fZigzagMol === "function") {
++    try { fMolDraftUseSkeletal(fZigzagMol(d.molText, _chainLive), "builtin"); }
++    catch (eZ) { try { console.warn("[draft] skeletal: builtin failed", eZ); } catch (eL0) {} }
++  } else { try { console.warn("[draft] skeletal: builtin helper missing"); } catch (eL1) {} }
++  if (!_skel && typeof jsmeNomeclatureApplet !== "undefined" && jsmeNomeclatureApplet) {
++    fMolDraftUseSkeletal(fMolDraftDepictSmiles(jsmeNomeclatureApplet, d.smiles), "display");
++  }
++  if (!_skel && typeof jsmeEditDraftApplet !== "undefined" && jsmeEditDraftApplet) {
++    fMolDraftUseSkeletal(fMolDraftDepictSmiles(jsmeEditDraftApplet, d.smiles), "edit");
++  }
+   var molC = null, molE = null, molS = null;
+   try {
+     if (drawnVariant === "expanded") {
+@@ -2083,7 +2114,8 @@
+       molS = _skel || molC;
+       if (!_skel) { try { console.warn("[draft] skeletal fallback: drawn geometry"); } catch (eW1) {} }
+     } else if (drawnVariant === "skeletal" || drawnVariant === "condensedZigZag") {
+-      molS = d.molText;
++      molS = _skel || d.molText;
++      if (!_skel) { try { console.warn("[draft] skeletal fallback: drawn geometry"); } catch (eW2b) {} }
+       var _lin = (typeof fLinearizeMol === "function") ? fLinearizeMol(d.molText, _chainLive) : null;
+       if (!_lin) { try { console.warn("[draft] linearizer failed, condensed = drawn geometry"); } catch (eW2) {} }
+       molC = _lin || d.molText;
+@@ -2099,31 +2131,52 @@
+   } catch (eDv) { molC = d.molText; molE = null; molS = d.molText; }
+   if (!molC) molC = d.molText;
+   if (!molS) molS = molC;
+-  // SMILES-to-MOL depict on any JSME applet (display = depict pipeline,
+-  // edit = fallback): read back the laid-out MOL, restore the applet content
+-  // immediately afterwards. Display-applet zoom is re-applied best-effort so
+-  // the preview underneath keeps its scale. Null on any gap.
+-  function fMolDraftDepictSmiles(applet, smiles, restoreMol) {
++  try {
++    console.log("[draft] slots variant=" + drawnVariant + " skelSrc=" + (_skelSrc || "-") +
++      " C:[" + _sigOf(molC) + "] E:[" + _sigOf(molE) + "] S:[" + _sigOf(molS) + "] draw:[" + _sigOf(d.molText) + "]");
++  } catch (eLg2) {}
++  // Clear before each import, then restore the applet's actual prior content
++  // and scale in finally, including clear/import/read exceptions. Never use
++  // the draft MOL as a substitute for the display's transient layout.
++  // A synchronous retry helps only immediate repaint; it cannot await an
++  // asynchronously completed layout. Null on an empty/failed attempt.
++  function fMolDraftDepictSmiles(applet, smiles) {
++    if (!smiles || !applet || typeof applet.readGenericMolecularInput !== "function" ||
++        typeof applet.molFile !== "function" || typeof applet.readMolFile !== "function" ||
++        typeof applet.clear !== "function") return null;
++    var priorMol, priorScale, captured = false, out = null;
+     try {
+-      if (!smiles || !applet) return null;
+-      if (typeof applet.readGenericMolecularInput !== "function") return null;
+-      if (typeof applet.molFile !== "function") return null;
+-      applet.readGenericMolecularInput(smiles);
+-      try { if (typeof applet.deferredRepaint === "function") applet.deferredRepaint(); } catch (eRp) {}
+-      var out = "";
+-      try { out = applet.molFile() || ""; } catch (eM) { out = ""; }
+-      try {
+-        if (restoreMol && typeof applet.readMolFile === "function") {
+-          applet.readMolFile(restoreMol);
+-          try { if (typeof molZoom2D !== "undefined") applet.setMolecularAreaScale(molZoom2D); } catch (eZ) {}
+-        }
+-      } catch (eR) {}
+-      if (out && out.indexOf("V2000") >= 0) return out;
+-      return null;
+-    } catch (e) {
+-      try { if (restoreMol && applet && typeof applet.readMolFile === "function") applet.readMolFile(restoreMol); } catch (eR2) {}
+-      return null;
++      priorMol = applet.molFile();
++      if (typeof priorMol !== "string") return null;
++      if (typeof applet.getMolecularAreaScale !== "function" || typeof applet.setMolecularAreaScale !== "function") return null;
++      priorScale = applet.getMolecularAreaScale();
++      if (!Number.isFinite(priorScale)) return null;
++      captured = true;
++      function attempt() {
++        applet.clear();
++        var cleared = applet.molFile();
++        var empty = cleared ? fParseMolV2000(cleared) : null;
++        if (cleared && (!empty || empty.atoms.length)) return null;
++        applet.readGenericMolecularInput(smiles);
++        if (typeof applet.deferredRepaint === "function") applet.deferredRepaint();
++        var result = applet.molFile();
++        return result && result.indexOf("V2000") >= 0 ? result : null;
++      }
++      out = attempt();
++      if (!out && typeof applet.repaint === "function") {
++        applet.repaint();
++        out = attempt();
++      }
++    } catch (eD) { out = null; }
++    finally {
++      if (captured) {
++        try { if (priorMol) applet.readMolFile(priorMol); else applet.clear(); }
++        catch (eR) { out = null; try { console.warn("[draft] depict content restoration failed", eR); } catch (eL) {} }
++        try { applet.setMolecularAreaScale(priorScale); }
++        catch (eS) { out = null; try { console.warn("[draft] depict scale restoration failed", eS); } catch (eL2) {} }
++      }
+     }
++    return out;
+   }
+   // Tri-state verdicts travel with the molecule: the saved file becomes
+   // labeled eval data (predicted pair + oracle + human label) for engine work.

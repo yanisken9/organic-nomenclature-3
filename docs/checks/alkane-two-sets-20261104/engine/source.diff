@@ -1,0 +1,673 @@
+--- js/namelecule-game-repair.js.before
++++ js/namelecule-game-repair.js
+@@ -126,14 +126,21 @@
+   }
+ 
+   function validateGameData(data) {
+-    assert(data && data.schemaVersion === 1 && text(data.title) && text(data.description), "Invalid game metadata");
+-    assert(Array.isArray(data.rounds) && data.rounds.length === 4, "Expected four challenges");
++    assert(data && data.schemaVersion === 2 && text(data.title) && text(data.description), "Invalid game metadata");
++    assert(!Object.prototype.hasOwnProperty.call(data, "rounds") && Array.isArray(data.sets) && data.sets.length === 2, "Expected two quiz sets");
++    const setIds = new Set();
+     const roundIds = new Set();
+-    data.rounds.forEach(function (round) {
+-      validateRoundData(round);
+-      assert(!roundIds.has(round.id), "Invalid round id");
+-      roundIds.add(round.id);
+-      assert(round.guided === false, "Standalone rounds must be challenges");
++    data.sets.forEach(function (set) {
++      assert(set && ["alkanes-unbranched", "alkanes-branched"].includes(set.id) && !setIds.has(set.id), "Invalid set id");
++      setIds.add(set.id);
++      assert(text(set.title) && text(set.description) && Array.isArray(set.topics) && set.topics.length > 0 && set.topics.every(text), "Invalid set metadata");
++      assert(Array.isArray(set.rounds) && set.rounds.length === 3, "Expected three quizzes per set");
++      set.rounds.forEach(function (round) {
++        validateRoundData(round);
++        assert(!roundIds.has(round.id), "Invalid round id");
++        roundIds.add(round.id);
++        assert(round.guided === false, "Standalone rounds must be challenges");
++      });
+     });
+     return data;
+   }
+@@ -277,6 +284,7 @@
+       refs = {};
+       const heading = node("div", { class: "round-heading" });
+       if (data.guided) heading.append(node("span", { class: "guided-pill", text: "Πρώτα δοκιμάζουμε μαζί" }));
++      if (standalone && options.setTitle) heading.append(node("p", { class: "round-set-name", text: "Αλκάνια · " + options.setTitle }));
+       heading.append(node("h1", { text: data.title }), node("p", { text: data.objective }));
+       const steps = node("ol", { class: "compact-steps", "aria-label": "Βήματα αποστολής" }, ["Παρατήρησε τη δομή", "Επισκεύασε το όνομα", "Έλεγξε την επιλογή σου"].map(function (text, index) {
+         return node("li", {}, [node("span", { "aria-hidden": "true", text: String(index + 1) }), text]);
+@@ -581,6 +589,7 @@
+   const root = document.getElementById("game-root");
+   if (!root) return;
+   let game = null;
++  let activeSet = null;
+   let roundIndex = 0;
+   let states = [];
+   let activeRound = null;
+@@ -611,7 +620,8 @@
+       const response = await fetch("./data/name-repair-alkanes.json", { cache: "no-cache" });
+       if (!response.ok) throw new Error("Game data HTTP " + response.status);
+       game = validateGameData(await response.json());
+-      states = game.rounds.map(function (round) { return createRoundState(round); });
++      states = [];
++      activeSet = null;
+       renderWelcome();
+     } catch (error) {
+       console.error("Namelecule game could not load", error);
+@@ -630,23 +640,22 @@
+     const hero = node("section", { class: "workshop-hero", "aria-label": "Καλώς ήρθες στο Συνεργείο ονομάτων" }, [
+       node("p", { class: "eyebrow", text: "ΠΑΙΧΝΙΔΙΑ ΟΝΟΜΑΤΟΛΟΓΙΑΣ" }),
+       node("div", { class: "workshop-title" }, [workshopLogo("workshop-logo"), node("h1", {}, ["Συνεργείο", node("span", { text: "ονομάτων" })])]),
+-      node("p", { class: "workshop-description", text: "Διάλεξε ένα σετ αποστολών. Παρατήρησε κάθε δομή, επισκεύασε το όνομα και δες την εξήγηση μετά από κάθε σωστή απάντηση." })
++      node("p", { class: "workshop-description", text: "Διάλεξε μια κατηγορία και έπειτα ένα σύντομο σετ. Παρατήρησε κάθε δομή, επισκεύασε το όνομα και δες την εξήγηση μετά από κάθε σωστή απάντηση." })
+     ]);
+-    const start = button("Ξεκίνα το σετ →", "primary workshop-set-start intro-start", function () {
+-      roundIndex = 0;
+-      states = game.rounds.map(function (data) { return createRoundState(data); });
+-      renderRound();
++    const start = button("Δες τα σετ →", "primary workshop-set-start intro-start", function () {
++      renderSetPicker();
++      focusHeading();
+     }, { id: "set-alkanes-start" });
+     const card = node("article", { class: "workshop-set-card", "aria-labelledby": "set-alkanes-title" }, [
+       node("span", { class: "workshop-set-kind", text: "ΣΕΤ ΑΠΟΣΤΟΛΩΝ" }),
+       node("h3", { id: "set-alkanes-title", text: "Αλκάνια" }),
+-      node("p", { text: "Τέσσερις μικρές επισκευές για να συνδέσεις τη δομή των αλκανίων με τα κομμάτια του ονόματος." }),
+-      node("div", { class: "workshop-set-meta" }, [node("span", { text: "4 αποστολές" }), node("span", { text: "Χωρίς χρονόμετρο" })]),
+-      node("ul", { class: "workshop-set-topics" }, ["Κύρια αλυσίδα", "Αρίθμηση", "Ίδιες διακλαδώσεις", "Αλφαβητική σειρά"].map(function (text) { return node("li", { text: text }); })),
++      node("p", { text: "Δύο σύντομα σετ για να συνδέσεις τη δομή των αλκανίων με τα κομμάτια του ονόματος." }),
++      node("div", { class: "workshop-set-meta" }, [node("span", { text: "2 σετ" }), node("span", { text: "3 κουίζ ανά σετ" })]),
++      node("ul", { class: "workshop-set-topics" }, ["Χωρίς διακλαδώσεις", "Με διακλαδώσεις"].map(function (text) { return node("li", { text: text }); })),
+       start
+     ]);
+     const sets = node("section", { class: "workshop-sets", "aria-labelledby": "workshop-sets-title" }, [
+-      node("h2", { id: "workshop-sets-title", text: "Διάλεξε σετ αποστολών" }),
++      node("h2", { id: "workshop-sets-title", text: "Διάλεξε κατηγορία" }),
+       node("div", { class: "workshop-set-grid" }, [card])
+     ]);
+     const steps = [
+@@ -663,11 +672,43 @@
+     replaceRoot(welcome);
+   }
+ 
++  function renderSetPicker() {
++    renderId += 1;
++    const cards = game.sets.map(function (set) {
++      const titleId = "set-" + set.id + "-title";
++      return node("article", { class: "workshop-set-card", "aria-labelledby": titleId }, [
++        node("span", { class: "workshop-set-kind", text: "ΣΕΤ ΑΠΟΣΤΟΛΩΝ" }),
++        node("h3", { id: titleId, text: set.title }),
++        node("p", { text: set.description }),
++        node("div", { class: "workshop-set-meta" }, [node("span", { text: "3 κουίζ" }), node("span", { text: "Χωρίς χρονόμετρο" })]),
++        node("ul", { class: "workshop-set-topics" }, set.topics.map(function (text) { return node("li", { text: text }); })),
++        button("Ξεκίνα το σετ →", "primary workshop-set-start", function () {
++          activeSet = set;
++          roundIndex = 0;
++          states = set.rounds.map(function (round) { return createRoundState(round); });
++          renderRound();
++        }, { id: "set-" + set.id + "-start" })
++      ]);
++    });
++    replaceRoot(node("div", { class: "workshop-hub workshop-set-picker" }, [
++      node("section", { class: "workshop-hero" }, [
++        button("← Όλα τα σετ", "secondary workshop-all-sets", function () { renderWelcome(); focusHeading(); }, { id: "workshop-all-sets" }),
++        node("p", { class: "eyebrow", text: "ΣΥΝΕΡΓΕΙΟ ΟΝΟΜΑΤΩΝ" }),
++        node("h1", { text: "Αλκάνια" }),
++        node("p", { class: "workshop-description", text: "Διάλεξε αλκάνια χωρίς ή με διακλαδώσεις. Κάθε σετ έχει τρία σύντομα κουίζ." })
++      ]),
++      node("section", { class: "workshop-sets", "aria-labelledby": "alkane-sets-title" }, [
++        node("h2", { id: "alkane-sets-title", text: "Διάλεξε σετ" }),
++        node("div", { class: "workshop-set-grid" }, cards)
++      ])
++    ]));
++  }
++
+   function progressList() {
+-    return node("ol", { class: "progress", "aria-label": "Πρόοδος παιχνιδιού" }, game.rounds.map(function (round, index) {
++    return node("ol", { class: "progress", "aria-label": "Πρόοδος παιχνιδιού" }, activeSet.rounds.map(function (round, index) {
+       const complete = states[index].solved;
+       const current = index === roundIndex;
+-      const label = "Αποστολή " + (index + 1);
++      const label = "Κουίζ " + (index + 1);
+       const item = node("li", { class: current ? "is-current" : complete ? "is-complete" : "" }, [
+         node("span", { class: "progress-dot", "aria-hidden": "true", text: complete ? "✓" : String(index + 1) }),
+         node("span", { class: "progress-label", text: label + (complete ? " ολοκληρώθηκε" : current ? " σε εξέλιξη" : "") })
+@@ -677,18 +718,18 @@
+     }));
+   }
+ 
+-  function round() { return game.rounds[roundIndex]; }
++  function round() { return activeSet.rounds[roundIndex]; }
+   function state() { return states[roundIndex]; }
+   function renderRound() {
+     if (activeRound) activeRound.destroy();
+     const index = roundIndex;
+     activeRound = createRoundView(root, {
+-      round: round(), initialState: state(), assetBase: "", progressList: progressList,
++      round: round(), initialState: state(), assetBase: "", progressList: progressList, setTitle: activeSet.title,
+       requestRestart: requestRestart,
+-      continueLabel: index === game.rounds.length - 1 ? "Δες τις επισκευές σου  →" : "Επόμενη αποστολή  →",
++      continueLabel: index === activeSet.rounds.length - 1 ? "Δες τις επισκευές σου  →" : "Επόμενο κουίζ  →",
+       onStateChange: function (current) { states[index] = current; },
+       onContinue: function () {
+-        if (index === game.rounds.length - 1) renderResults();
++        if (index === activeSet.rounds.length - 1) renderResults();
+         else { roundIndex += 1; renderRound(); }
+       }
+     }, true);
+@@ -712,25 +753,27 @@
+ 
+   function restartGame() {
+     roundIndex = 0;
+-    states = game.rounds.map(function (data) { return createRoundState(data); });
+-    renderWelcome();
++    states = [];
++    activeSet = null;
++    renderSetPicker();
+     focusHeading();
+   }
+ 
+   function renderResults() {
+     renderId += 1;
+-    const summary = summarizeGame(game.rounds, states);
++    const summary = summarizeGame(activeSet.rounds, states);
+     const stats = [
+-      [summary.completed, "Αποστολές που ολοκληρώθηκαν"],
++      [summary.completed, "Κουίζ που ολοκληρώθηκαν"],
+       [summary.attempts, "Προσπάθειες ελέγχου"]
+     ];
+-    const challenges = game.rounds.map(function (data, index) { return { data: data, state: states[index] }; }).filter(function (entry) { return !entry.data.guided; });
++    const challenges = activeSet.rounds.map(function (data, index) { return { data: data, state: states[index] }; }).filter(function (entry) { return !entry.data.guided; });
+     const content = node("section", { class: "results" }, [
+       node("div", { class: "results-hero" }, [
+         node("span", { class: "results-seal", "aria-hidden": "true", text: "✓" }),
+         node("p", { class: "eyebrow", text: "Ο ΠΑΓΚΟΣ ΤΑΚΤΟΠΟΙΗΘΗΚΕ" }),
+-        node("h1", { text: "Τέσσερα ονόματα στη θέση τους" }),
+-        node("p", { role: "status", text: "Ολοκλήρωσες και τις τέσσερις αποστολές. Κράτησε τη σύνδεση ανάμεσα στη δομή, την αρίθμηση και τα κομμάτια κάθε ονόματος." })
++        node("p", { class: "results-set-name", text: "Αλκάνια · " + activeSet.title }),
++        node("h1", { text: summary.total + " ονόματα στη θέση τους" }),
++        node("p", { role: "status", text: "Ολοκλήρωσες και τα " + summary.total + " κουίζ του σετ. Κράτησε τη σύνδεση ανάμεσα στη δομή και τα κομμάτια κάθε ονόματος." })
+       ]),
+       node("div", { class: "results-stats", "aria-label": "Οι επισκευές σου" }, stats.map(function (stat) {
+         return node("div", { class: "stat-card" }, [node("span", { class: "stat-number", text: String(stat[0]) }), node("span", { class: "stat-label", text: stat[1] })]);
+@@ -744,7 +787,7 @@
+           ]);
+         }))
+       ]),
+-      node("p", { class: "results-note", text: "Οι προσπάθειες ελέγχου περιλαμβάνουν τις επαναλήψεις κάθε αποστολής." }),
++      node("p", { class: "results-note", text: "Οι προσπάθειες ελέγχου περιλαμβάνουν τις επαναλήψεις κάθε κουίζ." }),
+       node("div", { class: "results-actions" }, [button("Επιστροφή στα σετ", "primary", restartGame), node("a", { class: "secondary", href: "../design/welcome-proposal.html", text: "Επιστροφή στην αρχική" })])
+     ]);
+     replaceRoot(content);
+--- games/data/name-repair-alkanes.json.before
++++ games/data/name-repair-alkanes.json
+@@ -1,125 +1,354 @@
+ {
+-  "schemaVersion": 1,
++  "schemaVersion": 2,
+   "title": "Συνεργείο ονομάτων",
+   "description": "Κάθε μόριο έφτασε με ένα λάθος στο όνομά του. Εντόπισε το μέρος που δεν συμφωνεί με τη δομή, επισκεύασέ το και κράτησε όσα είναι σωστά.",
+-  "rounds": [
++  "sets": [
+     {
+-      "id": "parent-not-total",
+-      "guided": false,
+-      "title": "Ποιοι άνθρακες μετρούν εδώ;",
+-      "objective": "Ένα συνθετικό δεν συμφωνεί με την κύρια αλυσίδα. Εντόπισέ το και επισκεύασέ το.",
+-      "moleculeId": "methyl_2_pentane",
+-      "asset": "assets/name-repair/methyl_2_pentane.svg",
+-      "diagramAlt": "Ανεπτυγμένος τύπος αλκανίου με κύρια αλυσίδα πέντε ανθράκων και μια μεθυλομάδα στον δεύτερο άνθρακα όταν αριθμούμε από το πλησιέστερο άκρο. Συνολικά υπάρχουν έξι άνθρακες.",
+-      "kind": "replace",
+-      "parts": [
+-        {"id": "locant", "text": "2-", "label": "Θέση διακλάδωσης"},
+-        {"id": "branch", "text": "μεθυλο", "label": "Είδος διακλάδωσης"},
+-        {"id": "root", "text": "εξ", "label": "Μήκος κύριας αλυσίδας"},
+-        {"id": "saturation", "text": "άν", "label": "Απλοί δεσμοί"},
+-        {"id": "ending", "text": "ιο", "label": "Κατάληξη αλκανίου"}
++      "id": "alkanes-unbranched",
++      "title": "Χωρίς διακλαδώσεις",
++      "description": "Σύνδεσε το μήκος της συνεχούς αλυσίδας και το είδος των δεσμών με τα συνθετικά του ονόματος.",
++      "topics": [
++        "Μήκος αλυσίδας",
++        "Είδος δεσμών",
++        "Σύνθεση ονόματος"
+       ],
+-      "targetPartId": "root",
+-      "correctValue": "πεντ",
+-      "correctName": "2-μεθυλοπεντάνιο",
+-      "choices": [
+-        {"value": "βουτ", "label": "βουτ", "feedback": "Το «βουτ» δηλώνει τέσσερις άνθρακες. Υπάρχει συνεχής αλυσίδα πέντε ανθράκων, επομένως η τετραμελής δεν είναι η κύρια."},
+-        {"value": "πεντ", "label": "πεντ"},
+-        {"value": "επτ", "label": "επτ", "feedback": "Το «επτ» δηλώνει επτά άνθρακες. Αναζήτησε τη μεγαλύτερη συνεχή αλυσίδα στο δοσμένο μόριο."}
+-      ],
+-      "successText": "Η μεγαλύτερη συνεχής ανθρακική αλυσίδα έχει πέντε άνθρακες και δίνει το «πεντ». Ο έκτος άνθρακας ανήκει στη μεθυλομάδα, που αναφέρεται χωριστά στη θέση 2.",
+-      "feedback": {
+-        "wrongPart": "Αυτό το συνθετικό συμφωνεί με τη δομή.",
+-        "unchanged": "Διάλεξε αντικατάσταση για το λανθασμένο συνθετικό.",
+-        "incorrect": "Η επισκευή δεν δίνει το μήκος της μεγαλύτερης συνεχούς αλυσίδας. Δοκίμασε ξανά."
+-      }
++      "rounds": [
++        {
++          "id": "unbranched-parent-four",
++          "guided": false,
++          "title": "Πόσο μήκος δείχνει η αλυσίδα;",
++          "objective": "Ένα συνθετικό δεν συμφωνεί με τη δομή. Επισκεύασέ το.",
++          "moleculeId": "butane",
++          "asset": "assets/name-repair/butane.svg",
++          "diagramAlt": "Ανεπτυγμένος τύπος ευθείας αλυσίδας τεσσάρων ανθράκων με απλούς δεσμούς και χωρίς διακλαδώσεις.",
++          "kind": "replace",
++          "parts": [
++            {
++              "id": "root",
++              "text": "προπ",
++              "label": "Μήκος κύριας αλυσίδας"
++            },
++            {
++              "id": "saturation",
++              "text": "άν",
++              "label": "Είδος δεσμών"
++            },
++            {
++              "id": "ending",
++              "text": "ιο",
++              "label": "Χημική τάξη"
++            }
++          ],
++          "targetPartId": "root",
++          "correctValue": "βουτ",
++          "correctName": "βουτάνιο",
++          "choices": [
++            {
++              "value": "αιθ",
++              "label": "αιθ",
++              "feedback": "Το «αιθ» δηλώνει δύο άνθρακες. Ακολούθησε όλη τη συνεχή αλυσίδα του σχεδίου."
++            },
++            {
++              "value": "βουτ",
++              "label": "βουτ"
++            },
++            {
++              "value": "πεντ",
++              "label": "πεντ",
++              "feedback": "Το «πεντ» δηλώνει πέντε άνθρακες. Μέτρησε τους άνθρακες της αλυσίδας στο σχέδιο."
++            }
++          ],
++          "successText": "Η συνεχής ανθρακική αλυσίδα έχει τέσσερις άνθρακες, άρα το συνθετικό του μήκους της είναι «βουτ». Έτσι το σωστό όνομα είναι βουτάνιο.",
++          "feedback": {
++            "wrongPart": "Αυτό το συνθετικό συμφωνεί με τη δομή.",
++            "unchanged": "Διάλεξε αντικατάσταση για το λανθασμένο συνθετικό.",
++            "incorrect": "Το συνθετικό δεν συμφωνεί με τη δομή. Παρατήρησε το μόριο και δοκίμασε ξανά."
++          }
++        },
++        {
++          "id": "unbranched-single-bond",
++          "guided": false,
++          "title": "Τι δείχνει ο δεσμός;",
++          "objective": "Ένα συνθετικό δεν συμφωνεί με τη δομή. Επισκεύασέ το.",
++          "moleculeId": "ethane",
++          "asset": "assets/name-repair/ethane.svg",
++          "diagramAlt": "Ανεπτυγμένος τύπος δύο ανθράκων που ενώνονται με έναν απλό δεσμό. Κάθε άνθρακας συνδέεται με τρία υδρογόνα.",
++          "kind": "replace",
++          "parts": [
++            {
++              "id": "root",
++              "text": "αιθ",
++              "label": "Μήκος κύριας αλυσίδας"
++            },
++            {
++              "id": "saturation",
++              "text": "έν",
++              "label": "Είδος δεσμών"
++            },
++            {
++              "id": "ending",
++              "text": "ιο",
++              "label": "Χημική τάξη"
++            }
++          ],
++          "targetPartId": "saturation",
++          "correctValue": "άν",
++          "correctName": "αιθάνιο",
++          "choices": [
++            {
++              "value": "άν",
++              "label": "άν"
++            },
++            {
++              "value": "έν",
++              "label": "έν",
++              "feedback": "Το «έν» δηλώνει διπλό δεσμό μεταξύ ανθράκων. Στο σχέδιο ο δεσμός μεταξύ των δύο ανθράκων είναι απλός."
++            },
++            {
++              "value": "ίν",
++              "label": "ίν",
++              "feedback": "Το «ίν» δηλώνει τριπλό δεσμό μεταξύ ανθράκων. Στο σχέδιο ο δεσμός μεταξύ των δύο ανθράκων είναι απλός."
++            }
++          ],
++          "successText": "Ο δεσμός ανάμεσα στους δύο άνθρακες είναι απλός, επομένως χρησιμοποιούμε το «άν». Με το «αιθ» για τους δύο άνθρακες, το όνομα είναι αιθάνιο.",
++          "feedback": {
++            "wrongPart": "Αυτό το συνθετικό συμφωνεί με τη δομή.",
++            "unchanged": "Διάλεξε αντικατάσταση για το λανθασμένο συνθετικό.",
++            "incorrect": "Το συνθετικό δεν συμφωνεί με τη δομή. Παρατήρησε το μόριο και δοκίμασε ξανά."
++          }
++        },
++        {
++          "id": "unbranched-parent-five",
++          "guided": false,
++          "title": "Μέτρησε τη συνεχή αλυσίδα",
++          "objective": "Ένα συνθετικό δεν συμφωνεί με τη δομή. Επισκεύασέ το.",
++          "moleculeId": "pentane",
++          "asset": "assets/name-repair/pentane.svg",
++          "diagramAlt": "Ανεπτυγμένος τύπος ευθείας αλυσίδας πέντε ανθράκων με απλούς δεσμούς και χωρίς διακλαδώσεις.",
++          "kind": "replace",
++          "parts": [
++            {
++              "id": "root",
++              "text": "εξ",
++              "label": "Μήκος κύριας αλυσίδας"
++            },
++            {
++              "id": "saturation",
++              "text": "άν",
++              "label": "Είδος δεσμών"
++            },
++            {
++              "id": "ending",
++              "text": "ιο",
++              "label": "Χημική τάξη"
++            }
++          ],
++          "targetPartId": "root",
++          "correctValue": "πεντ",
++          "correctName": "πεντάνιο",
++          "choices": [
++            {
++              "value": "προπ",
++              "label": "προπ",
++              "feedback": "Το «προπ» δηλώνει τρεις άνθρακες. Ακολούθησε όλη τη συνεχή αλυσίδα του σχεδίου."
++            },
++            {
++              "value": "βουτ",
++              "label": "βουτ",
++              "feedback": "Το «βουτ» δηλώνει τέσσερις άνθρακες. Μέτρησε και τους δύο ακραίους άνθρακες της αλυσίδας."
++            },
++            {
++              "value": "πεντ",
++              "label": "πεντ"
++            }
++          ],
++          "successText": "Η συνεχής ανθρακική αλυσίδα έχει πέντε άνθρακες, άρα το συνθετικό του μήκους της είναι «πεντ». Έτσι το σωστό όνομα είναι πεντάνιο.",
++          "feedback": {
++            "wrongPart": "Αυτό το συνθετικό συμφωνεί με τη δομή.",
++            "unchanged": "Διάλεξε αντικατάσταση για το λανθασμένο συνθετικό.",
++            "incorrect": "Το συνθετικό δεν συμφωνεί με τη δομή. Παρατήρησε το μόριο και δοκίμασε ξανά."
++          }
++        }
++      ]
+     },
+     {
+-      "id": "number-from-nearest",
+-      "guided": false,
+-      "title": "Η αρίθμηση αλλάζει το όνομα",
+-      "objective": "Η δομή είναι ίδια με πριν, αλλά τώρα έχει χαλάσει άλλο μέρος του ονόματος.",
+-      "moleculeId": "methyl_2_pentane",
+-      "asset": "assets/name-repair/methyl_2_pentane.svg",
+-      "diagramAlt": "Αλυσίδα πέντε ανθράκων με μια μεθυλομάδα. Η θέση της μεθυλομάδας είναι 2 από το ένα άκρο και 4 από το άλλο.",
+-      "kind": "replace",
+-      "parts": [
+-        {"id": "locant", "text": "4-", "label": "Θέση διακλάδωσης"},
+-        {"id": "branch", "text": "μεθυλο", "label": "Είδος διακλάδωσης"},
+-        {"id": "root", "text": "πεντ", "label": "Μήκος κύριας αλυσίδας"},
+-        {"id": "saturation", "text": "άν", "label": "Απλοί δεσμοί"},
+-        {"id": "ending", "text": "ιο", "label": "Κατάληξη αλκανίου"}
++      "id": "alkanes-branched",
++      "title": "Με διακλαδώσεις",
++      "description": "Σύνδεσε τις θέσεις, το πλήθος και τη σειρά των διακλαδώσεων με τα κομμάτια του ονόματος.",
++      "topics": [
++        "Αρίθμηση",
++        "Ίδιες διακλαδώσεις",
++        "Αλφαβητική σειρά"
+       ],
+-      "targetPartId": "locant",
+-      "correctValue": "2-",
+-      "correctName": "2-μεθυλοπεντάνιο",
+-      "choices": [
+-        {"value": "1-", "label": "1-", "feedback": "Στο άκρο της κύριας αλυσίδας δεν συνδέεται μεθυλομάδα. Η διακλάδωση συνδέεται στον επόμενο άνθρακα."},
+-        {"value": "2-", "label": "2-"},
+-        {"value": "3-", "label": "3-", "feedback": "Η μεθυλομάδα δεν συνδέεται στον μεσαίο άνθρακα. Ακολούθησε διαδοχικά την αλυσίδα από το πλησιέστερο άκρο."}
+-      ],
+-      "successText": "Οι δύο φορές αρίθμησης δίνουν στη μεθυλομάδα τις θέσεις 2 και 4. Επιλέγουμε τη θέση 2, επειδή σε αυτό το αλκάνιο η μοναδική διακλάδωση πρέπει να πάρει τον μικρότερο αριθμό.",
+-      "feedback": {
+-        "wrongPart": "Αυτό το συνθετικό συμφωνεί με τη δομή.",
+-        "unchanged": "Επίλεξε μια νέα θέση πριν ελέγξεις την επισκευή.",
+-        "incorrect": "Η θέση πρέπει να συμφωνεί με το σημείο σύνδεσης της διακλάδωσης και με τη σωστή φορά αρίθμησης."
+-      }
+-    },
+-    {
+-      "id": "two-methyl-groups",
+-      "guided": false,
+-      "title": "Μία λέξη, δύο διακλαδώσεις",
+-      "objective": "Οι θέσεις είναι σωστές. Έλεγξε αν το όνομα δηλώνει και τις δύο ίδιες διακλαδώσεις.",
+-      "moleculeId": "dimethyl_2_3_butane",
+-      "asset": "assets/name-repair/dimethyl_2_3_butane.svg",
+-      "diagramAlt": "Κύρια αλυσίδα τεσσάρων ανθράκων με δύο μεθυλομάδες, μία στον δεύτερο και μία στον τρίτο άνθρακα.",
+-      "kind": "replace",
+-      "parts": [
+-        {"id": "locants", "text": "2,3-", "label": "Θέσεις διακλαδώσεων"},
+-        {"id": "branch", "text": "μεθυλο", "label": "Είδος και πλήθος διακλαδώσεων"},
+-        {"id": "root", "text": "βουτ", "label": "Μήκος κύριας αλυσίδας"},
+-        {"id": "saturation", "text": "άν", "label": "Απλοί δεσμοί"},
+-        {"id": "ending", "text": "ιο", "label": "Κατάληξη αλκανίου"}
+-      ],
+-      "targetPartId": "branch",
+-      "correctValue": "διμεθυλο",
+-      "correctName": "2,3-διμεθυλοβουτάνιο",
+-      "choices": [
+-        {"value": "αιθυλο", "label": "αιθυλο", "feedback": "Κάθε διακλάδωση εδώ έχει έναν άνθρακα. Μια αιθυλομάδα θα είχε δύο συνδεδεμένους άνθρακες στην ίδια διακλάδωση."},
+-        {"value": "διμεθυλο", "label": "διμεθυλο"},
+-        {"value": "τριμεθυλο", "label": "τριμεθυλο", "feedback": "Το «τρι-» δηλώνει τρεις ίδιες διακλαδώσεις. Στο σχέδιο υπάρχουν δύο μεθυλομάδες, στις θέσεις 2 και 3."}
+-      ],
+-      "successText": "Στις θέσεις 2 και 3 υπάρχει από μία μεθυλομάδα. Επειδή οι διακλαδώσεις είναι δύο και ίδιες, χρησιμοποιούμε το «διμεθυλο». Η κύρια αλυσίδα έχει τέσσερις άνθρακες και δίνει το «βουτ».",
+-      "feedback": {
+-        "wrongPart": "Αυτό το συνθετικό συμφωνεί με τη δομή.",
+-        "unchanged": "Διάλεξε συνθετικό που να περιγράφει και τις δύο διακλαδώσεις.",
+-        "incorrect": "Η επισκευή πρέπει να διατηρεί το είδος της διακλάδωσης και να δηλώνει το σωστό πλήθος της."
+-      }
+-    },
+-    {
+-      "id": "alphabetical-branches",
+-      "guided": false,
+-      "title": "Τα σωστά κομμάτια, στη σωστή σειρά",
+-      "objective": "Τα κομμάτια είναι σωστά, αλλά οι διακλαδώσεις μπήκαν σε λάθος σειρά. Σύγκρινε αλφαβητικά το «αιθυλο» με το «μεθυλο», χωρίς να μετράς το «δι-». Επίλεξε μια ομάδα και μετακίνησέ τη.",
+-      "moleculeId": "ethyl_3_dimethyl_2_5_hexane",
+-      "asset": "assets/name-repair/ethyl_3_dimethyl_2_5_hexane.svg",
+-      "diagramAlt": "Κύρια αλυσίδα έξι ανθράκων με μεθυλομάδες στις θέσεις δύο και πέντε και αιθυλομάδα στη θέση τρία. Η αιθυλομάδα έχει δύο συνδεδεμένους άνθρακες.",
+-      "kind": "order",
+-      "parts": [
+-        {"id": "methylGroup", "text": "2,5-διμεθυλο", "label": "Οι δύο μεθυλομάδες με τις θέσεις τους"},
+-        {"id": "ethylGroup", "text": "3-αιθυλο", "label": "Η αιθυλομάδα με τη θέση της"},
+-        {"id": "parent", "text": "εξάνιο", "label": "Η κύρια αλυσίδα"}
+-      ],
+-      "movablePartIds": ["methylGroup", "ethylGroup"],
+-      "correctOrder": ["ethylGroup", "methylGroup"],
+-      "suffixPartId": "parent",
+-      "correctName": "3-αιθυλο-2,5-διμεθυλοεξάνιο",
+-      "successText": "Συγκρίνουμε αλφαβητικά τα «αιθυλο» και «μεθυλο», επομένως προηγείται το «αιθυλο». Το «δι-» και οι αριθμοί θέσης δεν καθορίζουν αυτή τη σειρά. Κάθε ομάδα κρατά τις δικές της θέσεις όταν μετακινείται.",
+-      "feedback": {
+-        "wrongPart": "Αυτό το συνθετικό συμφωνεί με τη δομή.",
+-        "unchanged": "Μετακίνησε μια ομάδα για να αλλάξει η σειρά των διακλαδώσεων.",
+-        "incorrect": "Σύγκρινε τις λέξεις «αιθυλο» και «μεθυλο». Ο αριθμός θέσης και το «δι-» δεν αποφασίζουν ποια προηγείται."
+-      }
++      "rounds": [
++        {
++          "id": "number-from-nearest",
++          "guided": false,
++          "title": "Η αρίθμηση αλλάζει το όνομα",
++          "objective": "Ένα συνθετικό δεν συμφωνεί με τη δομή. Επισκεύασέ το.",
++          "moleculeId": "methyl_2_pentane",
++          "asset": "assets/name-repair/methyl_2_pentane.svg",
++          "diagramAlt": "Αλυσίδα πέντε ανθράκων με μια μεθυλομάδα. Η θέση της μεθυλομάδας είναι 2 από το ένα άκρο και 4 από το άλλο.",
++          "kind": "replace",
++          "parts": [
++            {
++              "id": "locant",
++              "text": "4-",
++              "label": "Θέση διακλάδωσης"
++            },
++            {
++              "id": "branch",
++              "text": "μεθυλο",
++              "label": "Είδος διακλάδωσης"
++            },
++            {
++              "id": "root",
++              "text": "πεντ",
++              "label": "Μήκος κύριας αλυσίδας"
++            },
++            {
++              "id": "saturation",
++              "text": "άν",
++              "label": "Απλοί δεσμοί"
++            },
++            {
++              "id": "ending",
++              "text": "ιο",
++              "label": "Κατάληξη αλκανίου"
++            }
++          ],
++          "targetPartId": "locant",
++          "correctValue": "2-",
++          "correctName": "2-μεθυλοπεντάνιο",
++          "choices": [
++            {
++              "value": "1-",
++              "label": "1-",
++              "feedback": "Στο άκρο της κύριας αλυσίδας δεν συνδέεται μεθυλομάδα. Η διακλάδωση συνδέεται στον επόμενο άνθρακα."
++            },
++            {
++              "value": "2-",
++              "label": "2-"
++            },
++            {
++              "value": "3-",
++              "label": "3-",
++              "feedback": "Η μεθυλομάδα δεν συνδέεται στον μεσαίο άνθρακα. Ακολούθησε διαδοχικά την αλυσίδα από το πλησιέστερο άκρο."
++            }
++          ],
++          "successText": "Οι δύο φορές αρίθμησης δίνουν στη μεθυλομάδα τις θέσεις 2 και 4. Επιλέγουμε τη θέση 2, επειδή σε αυτό το αλκάνιο η μοναδική διακλάδωση πρέπει να πάρει τον μικρότερο αριθμό.",
++          "feedback": {
++            "wrongPart": "Αυτό το συνθετικό συμφωνεί με τη δομή.",
++            "unchanged": "Επίλεξε μια νέα θέση πριν ελέγξεις την επισκευή.",
++            "incorrect": "Η θέση πρέπει να συμφωνεί με το σημείο σύνδεσης της διακλάδωσης και με τη σωστή φορά αρίθμησης."
++          }
++        },
++        {
++          "id": "two-methyl-groups",
++          "guided": false,
++          "title": "Μία λέξη, δύο διακλαδώσεις",
++          "objective": "Ένα συνθετικό δεν συμφωνεί με τη δομή. Επισκεύασέ το.",
++          "moleculeId": "dimethyl_2_3_butane",
++          "asset": "assets/name-repair/dimethyl_2_3_butane.svg",
++          "diagramAlt": "Κύρια αλυσίδα τεσσάρων ανθράκων με δύο μεθυλομάδες, μία στον δεύτερο και μία στον τρίτο άνθρακα.",
++          "kind": "replace",
++          "parts": [
++            {
++              "id": "locants",
++              "text": "2,3-",
++              "label": "Θέσεις διακλαδώσεων"
++            },
++            {
++              "id": "branch",
++              "text": "μεθυλο",
++              "label": "Είδος και πλήθος διακλαδώσεων"
++            },
++            {
++              "id": "root",
++              "text": "βουτ",
++              "label": "Μήκος κύριας αλυσίδας"
++            },
++            {
++              "id": "saturation",
++              "text": "άν",
++              "label": "Απλοί δεσμοί"
++            },
++            {
++              "id": "ending",
++              "text": "ιο",
++              "label": "Κατάληξη αλκανίου"
++            }
++          ],
++          "targetPartId": "branch",
++          "correctValue": "διμεθυλο",
++          "correctName": "2,3-διμεθυλοβουτάνιο",
++          "choices": [
++            {
++              "value": "αιθυλο",
++              "label": "αιθυλο",
++              "feedback": "Κάθε διακλάδωση εδώ έχει έναν άνθρακα. Μια αιθυλομάδα θα είχε δύο συνδεδεμένους άνθρακες στην ίδια διακλάδωση."
++            },
++            {
++              "value": "διμεθυλο",
++              "label": "διμεθυλο"
++            },
++            {
++              "value": "τριμεθυλο",
++              "label": "τριμεθυλο",
++              "feedback": "Το «τρι-» δηλώνει τρεις ίδιες διακλαδώσεις. Στο σχέδιο υπάρχουν δύο μεθυλομάδες, στις θέσεις 2 και 3."
++            }
++          ],
++          "successText": "Στις θέσεις 2 και 3 υπάρχει από μία μεθυλομάδα. Επειδή οι διακλαδώσεις είναι δύο και ίδιες, χρησιμοποιούμε το «διμεθυλο». Η κύρια αλυσίδα έχει τέσσερις άνθρακες και δίνει το «βουτ».",
++          "feedback": {
++            "wrongPart": "Αυτό το συνθετικό συμφωνεί με τη δομή.",
++            "unchanged": "Διάλεξε συνθετικό που να περιγράφει και τις δύο διακλαδώσεις.",
++            "incorrect": "Η επισκευή πρέπει να διατηρεί το είδος της διακλάδωσης και να δηλώνει το σωστό πλήθος της."
++          }
++        },
++        {
++          "id": "alphabetical-branches",
++          "guided": false,
++          "title": "Τα σωστά κομμάτια, στη σωστή σειρά",
++          "objective": "Οι ομάδες του ονόματος μπήκαν σε λάθος σειρά. Επίλεξε μια ομάδα και μετακίνησέ τη.",
++          "moleculeId": "ethyl_3_dimethyl_2_5_hexane",
++          "asset": "assets/name-repair/ethyl_3_dimethyl_2_5_hexane.svg",
++          "diagramAlt": "Κύρια αλυσίδα έξι ανθράκων με μεθυλομάδες στις θέσεις δύο και πέντε και αιθυλομάδα στη θέση τρία. Η αιθυλομάδα έχει δύο συνδεδεμένους άνθρακες.",
++          "kind": "order",
++          "parts": [
++            {
++              "id": "methylGroup",
++              "text": "2,5-διμεθυλο",
++              "label": "Οι δύο μεθυλομάδες με τις θέσεις τους"
++            },
++            {
++              "id": "ethylGroup",
++              "text": "3-αιθυλο",
++              "label": "Η αιθυλομάδα με τη θέση της"
++            },
++            {
++              "id": "parent",
++              "text": "εξάνιο",
++              "label": "Η κύρια αλυσίδα"
++            }
++          ],
++          "movablePartIds": [
++            "methylGroup",
++            "ethylGroup"
++          ],
++          "correctOrder": [
++            "ethylGroup",
++            "methylGroup"
++          ],
++          "suffixPartId": "parent",
++          "correctName": "3-αιθυλο-2,5-διμεθυλοεξάνιο",
++          "successText": "Συγκρίνουμε αλφαβητικά τα «αιθυλο» και «μεθυλο», επομένως προηγείται το «αιθυλο». Το «δι-» και οι αριθμοί θέσης δεν καθορίζουν αυτή τη σειρά. Κάθε ομάδα κρατά τις δικές της θέσεις όταν μετακινείται.",
++          "feedback": {
++            "wrongPart": "Αυτό το συνθετικό συμφωνεί με τη δομή.",
++            "unchanged": "Μετακίνησε μια ομάδα για να αλλάξει η σειρά των διακλαδώσεων.",
++            "incorrect": "Σύγκρινε τις λέξεις «αιθυλο» και «μεθυλο». Ο αριθμός θέσης και το «δι-» δεν αποφασίζουν ποια προηγείται."
++          }
++        }
++      ]
+     }
+   ]
+ }

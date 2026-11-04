@@ -1,0 +1,12 @@
+{
+  "completed": false,
+  "checks": [
+    "Explore54 1500",
+    "Actual54 boot 1500",
+    "Explore returnwelcome 1500",
+    "All14 lessons54 1500"
+  ],
+  "failure": "Lessonpresentfromlibrary 1500",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/v54-sync-20261104/test-activation.py\", line 24, in <module>\n    check(ev('new URLSearchParams(location.search).get(\"from\")===\"theory-library\"&&MuLERMoCScenario.steps.length>0'),'Lessonpresentfromlibrary '+str(width))\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/v54-sync-20261104/test-activation.py\", line 7, in check\n    assert value,label\nAssertionError: Lessonpresentfromlibrary 1500\n",
+  "javascriptErrors": []
+}
