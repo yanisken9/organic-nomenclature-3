@@ -124,8 +124,17 @@ p { margin-bottom: 1rem; }
 .workshop-hub .intro-how { padding-top: 26px; }
 .workshop-set-picker .workshop-set-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 900px; margin: 0 auto; }
 .workshop-set-picker .workshop-sets > h2 { text-align: center; }
+.workshop-set-picker .workshop-brand { display: flex; align-items: center; justify-content: center; gap: 10px; margin: 12px 0 18px; }
+.workshop-set-picker .workshop-brand-label { min-width: 0; }
 .workshop-hub .workshop-all-sets { margin-top: 20px; }
 .round-set-name, .results-set-name { display: block; margin: 0 0 12px; color: var(--teal-dark); font-size: .8rem; line-height: 1.45; font-weight: 750; }
+.pilot-entry { text-align: center; font-size: .85rem; margin: 0 0 24px; }
+.pilot-entry a { text-underline-offset: 4px; }
+.pilot-settings { max-width: 900px; margin: 0 auto 26px; padding: 20px; border: 1px solid var(--line); border-radius: 16px; background: white; }
+.pilot-settings label { margin-right: 12px; font-weight: 700; }
+.pilot-settings select { max-width: 100%; font: inherit; padding: 8px 12px; border: 1px solid #b5cbc1; border-radius: 8px; color: var(--ink); background: white; }
+.pilot-settings select:focus-visible { outline: 3px solid #a54e2e; outline-offset: 3px; }
+.pilot-settings p { font-size: .84rem; margin: 12px 0 0; }
 @media (max-width: 650px) {
   .workshop-set-picker .workshop-set-grid { grid-template-columns: 1fr; }
 }

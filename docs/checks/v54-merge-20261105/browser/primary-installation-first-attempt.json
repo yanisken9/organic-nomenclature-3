@@ -1,0 +1,12 @@
+{
+  "completed": false,
+  "checks": [
+    "Primary main141molecules and initial2D ready",
+    "Primary real methane3D contains5atoms",
+    "Primary browser fetched exact independently reviewed new core"
+  ],
+  "scope": "Developer final primary entry-flow checks; isolated owned Firefox9247 only. No authoring/network fixtures or changes to user window.",
+  "failure": "{'columnNumber': 39, 'exception': {'type': 'error'}, 'lineNumber': 305, 'stackTrace': {'callFrames': []}, 'text': 'SyntaxError: missing ) after argument list'}",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/v54-merge-20261105/browser/test-primary-installation.py\", line 43, in <module>\n    check(ev('document.querySelector(\"#autoLinearizeCheck\").classList.contains(\"selectedCheck\")&&!!document.querySelector(\"script[src*=\\\"merge54-20261105-r1\\\"]\")'),'Primary automatic layout default and new cache references')\n  File \"bidi\", line 43, in ev\n    check(ev('document.querySelector(\"#autoLinearizeCheck\").classList.contains(\"selectedCheck\")&&!!document.querySelector(\"script[src*=\\\"merge54-20261105-r1\\\"]\")'),'Primary automatic layout default and new cache references')\nRuntimeError: {'columnNumber': 39, 'exception': {'type': 'error'}, 'lineNumber': 305, 'stackTrace': {'callFrames': []}, 'text': 'SyntaxError: missing ) after argument list'}\n",
+  "javascriptErrors": []
+}

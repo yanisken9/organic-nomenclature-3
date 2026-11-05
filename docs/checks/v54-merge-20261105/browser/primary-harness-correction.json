@@ -1,0 +1,20 @@
+{
+  "firstAttempt": "primary-installation-first-attempt.json",
+  "checksPassed": 3,
+  "cause": "Developer harness generated invalid JavaScript quoting in a CSS attribute selector; failure occurred before assertion execution.",
+  "correction": "Use script src property comparison without nested selector quoting.",
+  "productSourceChanged": false,
+  "subsequentAttempts": [
+    {
+      "file": "primary-installation-second-attempt.json",
+      "passed": 9,
+      "failure": "Over-broad full receipt comparison; no field delta retained."
+    },
+    {
+      "file": "primary-installation-third-attempt.json",
+      "passed": 9,
+      "failure": "Only unopened third-round choiceOrder differs. Active/prior state exact."
+    }
+  ],
+  "resolution": "Exact active/prior equality plus future state pristine valid permutation. Reviewer reproduced before/current normalization; no source correction."
+}

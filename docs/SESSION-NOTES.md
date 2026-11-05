@@ -1,3 +1,617 @@
+# Current resume point — 2026-11-05 — Full save and professor publication underway
+
+User explicitly requested saving everywhere, professor report and link after the
+completed merge. New state communication/checkpoints/save-publish-20261105-state.json;
+stamp 20261105-140541, new checkpoint branch checkpoint/namelecule-20261105-140541.
+Fresh disposable public/checkpoint clones based on actual remote19b58f20/5c82c1c1;
+source HEAD/branch/index stay untouched. Public React39paths/v52 preserved; full
+checkpoint includes local React WIP and project notes. Dated helper copies pass
+19save+15assembly isolated tests; new328step/compactscenario/engine dependencies
+included. Publication report being prepared. No new public push/save-complete claim.
+Next verify initialfullsnapshot/externalcopies, freeze publiccandidate/report,
+entry-flow checks and fresh publication Reviewer, then personalGitHub publication,
+exactlivechecks, finalsnapshot/notes/receipts. Runtime merge complete as below.
+
+# Current resume point — 2026-11-05 — Reviewed merge and quiz compatibility installed locally
+
+Completed approved four-commit integration35d791ee→f49b810c93ec85d06163679aff4a8642ea1b4cd3.
+Last checked and last actually synchronized now both f49b810, in local working tree;
+no Git merge commit or publication. Main uses new merged core54; existing quizzes
+use immutable SHA-verified engine3f9382b4. Recipes and active/earlier solved progress
+remain compatible. Incoming authoring doc copied exactly; local history preserved.
+
+Fresh Reviewer /root/review_v54_merge_f49 reviewed frozen28paths, no actionable
+P0–P3 findings. Independent chemistry522assertions. Developer isolated browser:
+336assertions in10completed phases, plus69in one incomplete prefix phase retained
+separately. Final primary14browser checks/0JS and17HTTP checks passed. All816
+protected files outside10replacements unchanged; one immutable engine asset added.
+MOL/SDF/data/v52/React/lesson content unchanged. HEAD/index unchanged.
+Exact paths/hashes, before copies, verified10-file rollback, failed attempts,
+review attribution and core report: docs/checks/v54-merge-20261105/final-report.json.
+
+Final primary harness first had a quoting error, then an over-broad receipt
+comparison. Complete snapshots isolated only future unopened choice-order shuffle.
+Reviewer independently reproduced it in before/current code. All active/prior
+fields remain exact; future state pristine except valid permutation. No source
+change needed for this observation. Complete corrected primary flow passed.
+Two earlier Submit timeouts and native Firefox freeze still lack established
+cause; later passes do not resolve them. No Safari/physical mobile/external
+availability/offline/conference certification. Next diagnostic on recurrence:
+capture exact action and native/async draft state before recovery. User preview
+Firefox8098/server8055 untouched by automation or recovery actions.
+Core54 changed this session; core52 unchanged. No new commit/push/publication.
+
+# Current resume point — 2026-11-05 — Candidate frozen; independent review underway
+
+All11 candidate runtime paths frozen; one fresh read-only Reviewer
+/root/review_v54_merge_f49 reviewing28paths (11runtime+17testdrivers). Manifest
+review-target.json SHA f07c270113b052c1e98c706e1e9d7bbe925b3ce40f8ed9ae3425e52843037157
+under docs/checks/v54-merge-20261105/. DO NOT edit review target until report.
+Primary826 runtime files remain premerge. Verified10-file runtime rollback tar
+created from exact baseline bytes; this is not a full/offline conference package.
+
+Developer browser evidence:405assertions across recorded phases,0JS inlisted
+runs. Engine69pass run stopped at missing prefix in initial candidate testserver;
+harness-only prefix correction then3targetedchecks passed. Remaining phases:
+authoring27,geometry22,binding8,completealkanelesson128,asynccontrols14,settings3,
+actualold-receipt migration11,authoredWorkshop60,other13lessons compatibility60.
+Raw first authoring20thenSubmit timeout and later initialAutoSubmit timeout remain
+unexplained (application vs delivered input); subsequent27+14passes are NOT
+root-cause proof. Other failed attempts were specific harness function/readiness/
+writer mistakes, preserved. All source hashes unchanged throughout these runs.
+Chemistry independent522assertionspassed. Full evidence/limits in browser-summary.
+Candidate server now9595/session47069 (8056, prefix routing); ownedtestFirefox9247
+session33465. Mainserver8055/userFirefox8098 untouched. No commit/push/publication.
+Next collect Reviewer, resolve findings within scope with targetedverification,
+then install exact reviewed runtime in primary, verify protected hashes and
+final entry/cache checks, update upstream actualsync/core report and close tests.
+
+# Current resume point — 2026-11-05 — Full isolated candidate implemented; browser/review in progress
+
+User explicitly approved extra engine compatibility «Ναι, προχώρα με τη συμβατότητα».
+All11 candidate runtime paths now frozen in candidate-runtime-manifest.json.
+Current main engine8f3e5f76; viewer22d3b9fd; client13f882de; immutable old3f9382b4
+engine supports unchanged quiz catalog/recipes/progress. Main/shared lazy client
+cache refs updated. Exact old bytes preserved; every load requires SHA256, only
+immutable404 falls back to current engine. Primary runtime still unchanged.
+
+Developer JSC suites and independent chemistry522assertions passed. Actual Firefox:
+authoring27checks0JS; geometry22checks0JS; binding8checks/16actualWorkers0JS;
+complete12step lesson128checks0JS including both gates/refresh/23forms/8models.
+Initial authoring run timed out after20checks at nonaneSubmit, not reproduced by
+27check rerun; cause remains unproven and raw result/screenshot preserved. Extra
+transaction test passed14flow checks and GRlabels, then had harness-only wrong
+function name/early DOM read on language reload; corrected harness rerun currently
+exec71384. Known native user freeze remains unresolved, no cure/conference claim.
+Next finish transaction/old-receipt/other-lesson/standalonegame checks, freeze
+review target and get one fresh independent Reviewer; only then primary update.
+No commit/push/publication; primary core52/core54 currently unchanged. Candidate
+server8056/session83964; owned testFirefox9247/session33465; user8098 untouched.
+
+# Current resume point — 2026-11-05 — Candidate core/viewer frozen; quiz engine compatibility approval pending
+
+Approved seven-runtime-file merge implemented ONLY in isolated candidate. Core
+frozen8f3e5f76d96322faf7cf9251f4cae3eca204fe2f82bf5754fdce6ffc4cd5d5a9;
+viewer frozen22d3b9fdfca8052332b4f842deec7055f6ca8f382ff4a3692db321e770b02e36.
+Actual JSC naming/core/metadata/map/geometry corpus passed; viewer19targeted mocks
+passed, all evidence copied into docs/checks/v54-merge-20261105/{core,viewer}/.
+Real isolated Firefox authoring test underway server8056/profilemungqr1z/port9247,
+exec12523, about20checks passed so far. Primary runtime still unchanged.
+
+New dependency traced before quiz replay: catalog + generated adapter + lesson
+recipes pin old engine3f9382b4 and client SHA-256 correctly rejects new core8f3e5f76.
+Specific extension approval pending: preserve old core as immutable SHA-addressed
+asset and use verified-version lookup in shared chemistry client, two cache refs;
+quiz recipes/questions/progress unchanged. Primary main still new merged core
+only after final checks/review. No compatibility source edits until approval.
+Engine-binding-preflight.json documents exact hashes. Ordinary authoring checks
+can continue independently. Next collect test result/approval, implement authorized
+compatibility if approved, then actual quiz/lesson replay and fresh final Reviewer.
+No commit/push/publication. No PRIMARY core changes yet; isolated candidate core
+has changed and is not yet independently reviewed. UserFirefox8098 untouched.
+
+# Current resume point — 2026-11-05 — Merge plan approved; isolated implementation underway
+
+User explicitly approved «Ναι, με αυτές τις προφυλάξεις». Approval and exact plan
+are in docs/checks/v54-merge-20261105/. Candidate at
+/tmp/namelecule-v54-merge-20261105-candidate, isolated server8056/session83964.
+Root merged candidate CSS/iupac/teaching/lang/Main54; actual translation regression
+before/incoming/fixed reproduced (candidate33 labels + future-row33 all pass).
+Workers /root/merge_core_implementation and /root/merge_viewer_implementation own
+candidate core54/viewer54 and targeted tests; primary826 runtime source hashes
+remain unchanged until candidate verification and fresh independent review.
+One owned isolated Firefox profile /tmp/namelecule-v54-merge-ff-mungqr1z/port9247
+will run browser tests; userFirefox8098 and primaryserver8055 stay untouched.
+No commit/push/publication. Candidate implementation is not yet reviewed/accepted.
+Next collect workers' frozen hashes, run affected suites/browser flows, review,
+resolve within approved scope, then verified primary update and final records.
+Known native Firefox freeze cause is unresolved; no merge cure claim. Preflight
+and historical notes remain below.
+
+# Current resume point — 2026-11-05 — Careful v54 merge preflight complete; specific plan approval pending
+
+User says «Πάμε προσεκτικά για αυτή τη συγχώνευση». Read-only investigation and
+baseline completed; no application code edits. Fresh upstream HEAD still f49b810,
+last actual sync35d791ee. Exact ten-path base/target snapshots (20 files), local
+before copies and 826 runtime hashes/index/status in docs/checks/v54-merge-20261105/.
+Text preview finds core5/viewer7/Main3 conflict blocks, not automatic-safe merge.
+Chemistry Validator /root/merge_core_preflight demonstrated parser metadata/bond
+validation and nitrile-sp protections that wholesale upstream replacement loses;
+new counts regex also rejects valid contiguous101100. Viewer Explorer
+/root/merge_viewer_preflight demonstrated short-header annotation/layout bypass,
+traced async Accept interleaving risk and reproduced incoming settings translation
+shift (base0 wrong; target7GR/8EN). These are preflight findings, not review of a
+merged implementation. Raw specifics: preflight-findings.json; concrete plan.json.
+
+Specific plan presented and async approval pending under AGENTS line113:
+JSME-first canonical acquisition with retained local graph/metadata/geometry checks,
+bounded async Accept with in-flight/cancel guards, common robust counts offsets,
+ID-based settings labels; all professor behavior merged first in isolated candidate.
+Seven runtime paths: core54/viewer54/iupac54/lang54/teaching54/CSS54/Main54.
+Original MOL/SDF/data/v52/React/lesson/game files preserved; necessary final cache
+and documentation updates. Reuse relevant naming/422-form metadata/geometry/map
+suites, real authoring/GR-EN/interactions and compact lesson gates/Workshop checks,
+then one fresh independent Reviewer/chemical validation before primary update.
+No publish/commit authorized. User choice also allows candidate-only scope.
+Next wait explicit specific approval; no dependent source edits beforehand.
+All826 protected runtime hashes and Git index reverified; no core/core-version
+changes so far this session. Firefox8098 remains responsive per user; cause of
+past freeze unproven and outside merge fix claims. Previous records follow.
+
+# Current resume point — 2026-11-05 — Professor upstream rechecked; no newer commits
+
+User asked whether professor has anything new. Live read-only GitHub API HEAD,
+comparisons against actual sync35d791ee and previous checkf49b810, and complete
+latest CHANGELOG fetch succeeded (web fetch failed; direct HTTPS fallback worked).
+Current HEAD remains f49b810c93ec85d06163679aff4a8642ea1b4cd3, 4Nov21:38:26UTC.
+Zero newer commits since previous check; four previously identified commits/ten
+paths still pending since actual sync35d791ee. CHANGELOG patch reviewed: drawing
+switch/Enter guard; auto-linearize, canonical SMILES, HOOC/ether layout, explicit-H
+condensed stripping, counts-line detection and asynchronous JSME depiction.
+Existing core54/viewer54 overlap remains: professor JSME-first skeletal ladder
+versus local reviewed builtin-first. No merge/sync implemented in this status task.
+Evidence and fetched source: `docs/checks/professor-upstream-20261105-latest/`.
+Last checked=f49b810; last actually synchronized=35d791ee (distinct). Core52/core54
+hashes unchanged; no core/core-version changes this session, no commit/push/publish.
+Next: before integration, present a concrete preservation plan for the unresolved
+behavioral overlap. Firefox temporary recovery is user-confirmed below; cause is
+still unresolved. Current label and compact lesson work remain local.
+
+# Current resume point — 2026-11-05 — Firefox recovery confirmed; cause unresolved
+
+User reports freeze inside quiz «2/12», including browser menu/address bar.
+Local Main54/game HTTP200 (0.016s/0.002s). Owned preview7534 session snapshot
+persisted #step=4 (first gate); reported counter/last action still ambiguous.
+Three-second parent/two-content/GPU native samples mostly event/condition waits;
+no sustained JS spin or root cause demonstrated. Read-only Explorer
+/root/quiz_freeze_preflight traced bounded game callbacks and background JSmol;
+these paths do not establish causality. Raw samples and structured findings:
+`docs/checks/firefox-freeze-20261105-repeat/diagnostic-and-recovery.json`.
+
+Backed up owned preview session in /tmp/namelecule-firefox-freeze-recovery-20261105-2.
+SIGTERM only verified owned preview7534/test7818/test4104 and diagnostic Swift8057.
+Personal Firefox1602 untouched. Relaunched SAME preview profile with
+--restore-last-session, no automation. New PID8098/session73505, visible window856,
+post-restart HTTP200. User confirmed responsiveness: «Ναι, ανταποκρίνεται».
+No app/core changes, all five prior reviewed source/protected hashes preserved;
+no commit/push/publication. This is temporary recovery, not a root-cause fix.
+Next resume user work; if recurrent, correlate exact window/PID/input/native
+modal and active content before code proposal. Prior accepted label work is below.
+
+# Current resume point — 2026-11-05 — Plain Check label completed and reviewed
+
+User approved “Ναι, μόνο «Έλεγχος»”. All quiz entry modes now share the plain
+«Έλεγχος» button label. Exactly three runtime lines changed: the common label in
+js/namelecule-game-repair.js and its cache references in games/name-repair.html
+and mulermoc-nom-54.html. No action/state, scenario, molecule or core changes.
+Baseline/before copies, frozen hashes and final evidence are in
+`docs/checks/quiz-check-label-20261105/`. Fresh independent Reviewer
+/root/review_check_button_label found no actionable P0/P1/P2/P3 source findings.
+Developer JSC syntax and 13 actual Firefox checks passed, zero JavaScript errors:
+authored/generated, standalone/embedded, selection/submission and success state.
+Browser checks used native DOM programmatic clicks in an owned isolated window;
+user native Firefox7534 remained untouched. Test-runner recovery is documented
+in review-result.json; it required no application change. Final 3 changed and
+2 protected file hashes plus HEAD verified unchanged from frozen review target.
+No commit/push/publication. No core/core-version changes this entire session.
+User should refresh their page to receive the new cached-script URL. Existing
+lesson/JSmol uncertainties remain recorded below; this cosmetic change does not
+claim to fix those. Next work follows the user's choice; no pending label work.
+
+# Current resume point — 2026-11-05 — Check-button label implemented; browser check underway
+
+User approved “Ναι, μόνο «Έλεγχος»”. Changed exactly one shared button label
+and its two script-cache references (game HTML and Main54). No action/state,
+scenario, molecule or core changes. Baseline, before copies and frozen manifest
+are in docs/checks/quiz-check-label-20261105/. Fresh independent Reviewer
+/root/review_check_button_label found no actionable P0/P1/P2/P3 source findings;
+all 3 changed and 2 protected hashes verified. Developer JSC syntax passed.
+Actual four-entry-mode browser check is running in owned test profile9246,
+exec session15269. Its stale automation session/no-window failure required
+restarting ONLY owned test Firefox6500; user regular profile7534 stayed untouched.
+No app workaround for the test-runner issue, no new test script or dependencies.
+Next collect browser result, record final verification and user refresh guidance.
+No commit/push/publication. No core/core-version changes this session.
+
+# Current resume point — 2026-11-05 — Quiz check-button label plan awaiting approval
+
+UserrequestsremovalofcheckmarkfromallquizCheckbuttons: itlookscompletedbefore
+submission. Screenshotandsharedsource confirm literal «Έλεγχος  ✓» at
+js/namelecule-game-repair.js308. Oneconstructorservesstandaloneauthored/generated
+Workshopandembeddedlessons. Planpresented: labelonly«Έλεγχος»,bumpgameJSrefs in
+Main54andgamesHTML,briefappearance/actionverificationandboundedindependentreview.
+AsyncapprovalpendingunderAGENTS; noappcodeedit yet. Baseline/beforecopies in
+`docs/checks/quiz-check-label-20261105/`. Successfeedbackisaseparatepost-checkstate.
+No corechanges. Nextwaitspecificapproval,thenscopedimplementation/checks/review.
+UserregularFirefoxprofileisdhy79j isresponsiveandmustremainuntouchedbytesttools.
+
+# Current resume point — 2026-11-05 — External Firefox recovery confirmed
+
+UserreportedbrowserclosedthenentireFirefoxunresponsive. Read-onlyHTTPchecks:
+8055MainHTML200/0.019s andnewscenario200/0.003s. ExistingpersonalFirefoxPID1602
+andownedtestprofiles4104/6500werealive; thisdoesnotestablishhangcause. Opened
+separatenativeFirefoxWITHOUTautomation/debugging usingtemporaryprofile
+/tmp/namelecule-user-preview-20261105-isdhy79j (PID7534,execsession68796),newlesson
+step1. CoreGraphicsconfirmed2onscreenlayer0windows772/776. Userconfirmedresponsive:
+«Ναι, βλέπω το μάθημα και μπορώ να πατήσω». Thisistemporarystartuprecovery,NOTa proven
+rootfixfornativehang/JSmol. NoexistingFirefoxprocesswasquit; nosource/corecode
+changed. Evidencebrowser/external-browser-recovery.json underlessoncheckfolder.
+8055serverstillhealthy. Newnativepreviewleftopenforuser. Ifhangrecurs, diagnosenativewindow/dialogstate
+beforeproposinganyappcodechanges. Reviewedlessonstate
+andunresolvedJSmolobservationremainasbelow; no commit/push/publication.
+
+# Current resume point — 2026-11-05 — Compact alkane lesson reviewed locally
+
+ApprovedNEW12steplesson linkedfromlibrary:3unbranchedteachingsteps+3repairgate,
+6branchedteachingsteps+3repairgate,finalall8molecules/23available2D+8existing3D.
+Original21stepandauthoredpilot retained;14activelessons/328steps. Eight runtime
+paths, beforecopies, exactinitial/finalhashes,evidenceandREPORT in
+`docs/checks/alkanes-two-part-20261105/`. No core/core-version/MOL/data/generator/
+client/Worker/v52/React changes. HEAD168e3cec/index25c21223unchanged;no stage/
+commit/push/publication. PreviousNov4verifiedrecoverypointretained.
+
+ChemistryValidator23graphs8SDF/35coreanalyses23maps,no findings. Unit51passed.
+Firefox128functionalcheckscompletedwith1nativeJSmolplatformnullexception during
+savedgate refresh; causeUNRESOLVED, notclassifiedpre-existing/fixed. Recovery19,
+compatibility60(allother13lessonfirst/final/PrevNext+export/history),oldpilot45,
+originalWorkshop60 passed0JS. FreshReviewerfoundR1P2bootstrapflash;correctedcold
+loadinghostandExit,11targetedFirefoxchecks0JS+7independentmemorychecksclosedR1.
+ResidualnativeobservationapproxP2; no openP0/P1, no conference-readinessclaim.
+Diagnosticnormal-vs-deferredloaderincomplete/harnessfailed,notcausalproof. Failed
+preloadexperimentshadURL-before-assignment/frozenAPIharnesserrors;finalharness
+copiesAPIanddelaysactualclient/Workers. BrowserresultsremainDeveloperevidence.
+
+Owned8055serverandexternalFirefox9246(profile/tmp/namelecule-two-part-20261105-ff,
+session39503) retainedforpreview;9245oldprofile hadhiddencontrols onexactBEFORE,
+notreproducedincleanprofile. Upstreamcheckedf49 earlier;actualsync35,designer
+pipelineoverlapstillseparate. Nextuserpreviewshortlesson; subsequenttechnical
+workshouldtraceJSmolobservation beforepresentationrelease. Core report unchanged.
+
+# Current resume point — 2026-11-05 —12step lesson implemented; final review pending
+
+Approved12stepalkane lesson now implemented in NEWalkanes-two-part-workshop
+scenario and linkedcurrentlibrarycard (14lessons/328steps). Two generatedsets3+3
+repairs, finalall8gallery. Eight runtimepaths changed; beforebaseline and hashes
+in docs/checks/alkanes-two-part-20261105/. Old21step/authoredpilot/core/MOL/React
+preserved. ChemistryValidator nofindings;23forms+8SDFgraphs/35coreanalyses/23maps.
+Adapter/controller unit51checks pass. ActualFirefoxcleanprofile9246:128functional
+checks completed,23available2D+8matching3D models;1uncaughtnativeJSmolplatformnull
+exception occurred during asynchronous saved-first-gate refresh. Cause unresolved;
+NOT classifiedpre-existing/fixed. Boundednormal-vs-deferredloadertrace underway.
+Recovery19checks,compatibility60checks(allother13lessonsfirst/final/PrevNext,
+export andpagehide/pageshow/history),oldauthoredpilot45andoriginalWorkshop60
+passed0JSerrors. Beforeunload capture cancellation andBFcache return handling are
+partofplayer asyncsafety; do NOT claim they fixnativeJSmolexception withoutproof.
+Newcode runtimecurrentlyfrozenexcept evidence-driven correction ifneeded, then
+onefreshindependentReviewer required. No declaration readyforconference.
+
+OwnedcleanFirefoxsession39503/profile/tmp/namelecule-two-part-20261105-ff BiDi9246
+nowused: older9245profile hadhiddencontrols evenon exacthistoricalbefore, current
+cleanfreshprofilecontrolsvisible. Noappfixmadeforthatprofilecondition.8055owned
+serverretained. Scripttrace-restoration session93222 running; wait/poll no parallel
+BiDiclients. Previous fulltestfinalStorage fixture recorded forboundedrefreshtrace.
+No core/core-version changes, no stage/commit/push/publication. Next resolve/classify
+JSmolobservation, targetedfinalchecks, freezeexacttarget+freshreview,records+preview.
+
+# Current resume point — 2026-11-05 — Approved12step alkane lesson implementation started
+
+User explicitly approved12steps and3quizzes per mandatory stop. Implementation
+baseline saved in docs/checks/alkanes-two-part-20261105/baseline.json with six
+before copies and nine protected dependencies. Original21step lesson and authored
+pilot remain unchanged. Root owns player54 async preparation/cancellation/UI,
+Main54 script order and compatible embedded continueLabel. Worker
+/root/implement_generated_checkpoint owns adapter/controller/checkpointCSS;
+/root/implement_compact_alkane_scenario owns NEWscenario and librarycard. See
+preflight below for agreed sequence/verification. No new scope approval needed.
+Core54/core52 unchanged; no commit/push/publication. Next implement and validate
+both gates, refresh, fullgallery and legacy replay before fresh independentreview.
+
+# Current resume point — 2026-11-05 — Shorter two-part alkane lesson preflight complete; plan pending
+
+New user objective: shorten theory starting with alkanes; unbranched part,
+required Workshop gate, branched part, required Workshop set, then free access
+to all available2D/3D forms of all8alkanes. No code plan approval yet. User's
+follow-up asks whether closing laptop lid allows continued work; it is a side
+question, not a request to pause/cancel the lesson. Record state before sleep.
+
+Read-only LearningDesigner /root/alkane_lesson_compact_design recommends12steps
+instead of21:1alkane/bonds definition,2three namecomponents,3fiveunbranched2D
+comparison,4requiredunbranched3roundset,5branchedparent vs totalC,6singlebranch
+numbering/name,7identicalbranches,8complexparent/chain tie,9firstdifference
+numbering,10branchtypes/alphabetic/fullname,11requiredbranched3roundset,
+12all8freeexplore. Preserve existing chainIdx1 choices where intentional,
+rule tables optional, brief paragraphs. Completion means three successful
+repairs with retries, not proof of mastery/allrulecoverage. Existing generator
+samples eligible families without guaranteeing everyrule per set; no new
+generator profiles planned. Final23available2Dforms+8existing3D; methane lacks
+skeletal form and is currently missing from oldlesson final7molecule menu.
+
+Read-only explorer /root/alkane_generated_gates_preflight found public adapter
+registration already exists. New external generated-set type can use versioned
+recipe descriptor in existing spec.round contract; store seed/revision/setID/
+difficulty+3answerstates. Async engine revalidation must precede accepting saved
+completion. Proposed narrow optional controller prepareTarget seam, guarded
+defer/re-enter before existing synchronous gate resolution in PresentBegin/Go,
+pending navigation/errorretry/Exit cancellation. Preserve actualviewer state,
+original requesthash/index after validrefresh; stale callbacks neverapply.
+Embedded round needs optionalcontinueLabel forfirst2'Nextquiz'/third'Theory'.
+Finalgallerybothpanesvisible with existingmenuSubset8/controls/nameClick works;
+no viewer-visibility toggle fix needed. Source/core/worker/client/generator/MOL
+and old52/React outside scope. Alreadycheckedprofessorf49; actualsync35 unchanged.
+
+Concrete plan to present: NEW shortened scenario file linked from currenttheory
+card, keeping old21step source and authoredsinglequizpilot available forlegacy
+v52/React/recovery. New js/namelecule-generated-repair-checkpoint.js; targeted
+controller/scenario54/sharedroundcontinueLabel/checkpointCSS/Main54scriptorder+
+cache; theorylibrarymetadata/link update. No implementation yet. Verify full
+12step/6repair flow, bothgates and bypassattempts, refreshpartial/completed/final,
+invalidrecipe/storage/unavailableengine/catalog/image,retryExit/staleprep,
+all8mol/forms/3D/highlights/zoom/resize; priorauthoredpilot,standalonegames and
+otherlesson navigation regressions; chemistrytext/snapshotvalidation+onefresh
+Reviewer afterlogicalunit. Next obtain specificplan approval beforeediting.
+
+Only session records changed for this preflight. No new core change thissession;
+existingcore54=3f9382...5306 andcore52=d21384...24a2 remain. No tests/runtimechanges,
+commit/push/publication for lessonpreflight. Completedenginepilot/branding and
+local8055server+testFirefox9245 remain as recorded below.
+
+# Current resume point — 2026-11-05 — Workshop set-picker branding complete locally
+
+User approved logo/arrow plan (“ναι”). Changed only renderSetPicker header in
+gameJS: existing 3D logo helper beside visible Workshop label, button now exactly
+“Όλα τα σετ”. Two scopedCSS rules center/align label+logo; HTML cache updated.
+ActualFirefox inline checks20passed0JSerrors across original/engine modes,
+1500/390/320px alignment/nooverflow, decoded existinglogo and keyboardreturn.
+No new unit tests for this cosmetic change. Evidence/baseline/screenshots:
+docs/checks/workshop-branding-20261105/. Frozen10-path manifestSHA
+500a371283cfbc25b41a35cfacdaa7775e6d9fa38d036f8eb93dbf868197a998.
+Fresh read-only Reviewer /root/review_workshop_branding_20261105 completed with
+no actionableP0/P1/P2/P3 findings. Independently checked all10targethashes,three
+small diffs,7preserveddependencies and JavaScriptCore syntax; inspected screenshots.
+Browser20checks remainDeveloper evidence, not independentinteractive execution.
+No corrections needed; reviewedsource retained. See review-result.json beside
+baseline/evidence. Core,engine/gen/catalog/logoasset and quiz/scenario behavior
+untouched; hashes checked. No core/core-version changes thissession, no commit/
+push/publication. Previous enginepilot report is its historical cut-off; this
+later cosmetic delta supersedes only its gameJS/HTML/CSS hashes.
+Next: user refreshes externalFirefox to see update. No requiredwork remains for
+this approvedrequest. Other series/lesson integration and upstream overlap remain
+separate. Existinglocal8055server/Firefox available as noted below.
+
+# Current resume point — 2026-11-05 — Workshop set-picker branding requested
+
+User requests existing Workshop logo beside “ΣΥΝΕΡΓΕΙΟ ΟΝΟΜΑΤΩΝ” in the alkane
+set-picker header and removal of the arrow from “Όλα τα σετ”. Read-only inspection
+located renderSetPicker gameJS843–844 and existing workshopLogo helper/3D asset.
+Concrete scoped plan pending approval: reuse existing logo helper; centered
+logo/text CSS scoped to set picker; button label only; HTML cache references.
+Files: js/namelecule-game-repair.js,css/namelecule-games.css,games/name-repair.html.
+Verify image decode/alignment,320px/desktop fit and return action in original and
+engine modes, then bounded independent review. No application/core edits made
+for this request yet. Prior pilot remains complete/reviewed as recorded below.
+
+# Current resume point — 2026-11-05 — Engine-backed alkane Workshop pilot complete locally
+
+Approved pilot implemented, tested and independently reviewed. User preview:
+http://127.0.0.1:8055/games/name-repair.html?source=engine
+Left open in owned externalFirefox(profile /tmp/namelecule-engine-pilot-20261105-ff)
+at the two-set picker with Basic selected. Owned8055serverPID4102/session66368
+andFirefox9245/session11399 intentionally left running for user testing. Original
+default games/name-repair.html remains available and has a visible pilot entry.
+
+Actual unchangedcore54 analyzes eight existing MOLs in fresh one-shot Workers;
+exact SHA-verified bytes are imported through per-job Blob URLs and cleaned up.
+Factory creates2sets×3distinctstructures with seeded question/fault/choice order.
+Basic supplies initial direction,Challenge neutral prompt. Recipe/legal answer
+states survive refresh and reject incompatible/corrupt or skipped progress.
+Existing authored lesson checkpoint remains unchanged. Eight fixed structures
+provide fault variants, not new molecular graphs or validated adaptive difficulty.
+
+Finalsource hashes: generator11830448,client506a63f8,Worker86b14771,gameJS8afafaea.
+Final actualFirefox72engine+21family/recovery+60originalgame+45embeddedlessonchecks
+passed0uncaughtJSerrors; intentionalunavailableWorker diagnostic is separately
+recorded. Generator512games/3072rounds/38644repairchecks/6144restorechecks passed.
+Adapter62clientchecks/23forms/8permutations/22rejects;9Workersallterminated,
+10BlobURLsallrevoked. ChemistryValidator independently checked23forms/eightSDF
+graphs and closedGEN-CHEM01 atfinalgenerator;6992rootvaluechecks passed.
+
+Fresh read-only Reviewer /root/review_engine_workshop_20261105 returned NO
+actionableP0/P1/P2/P3 findings. Independently verified all52manifesthashes,
+catalog,adapter/generator tests via in-memory no-write AST,4JSsyntax files,
+SVGcounts and preservedbaseline; browserchecks inspected asDeveloper evidence.
+Review-targetmanifestSHA c76ab02275ccf19f15c9849bae66bbeadbd0db9d1e3d5352302b422166e5b382.
+See docs/checks/engine-workshop-20261105/{REPORT.md,independent-review.json,
+final-verification.json}. Afterreview only documentation/preview records changed;
+all10reviewed runtime/source hashes retained. No code correction was needed.
+
+CORE REPORT: no core/core-version change this session. Core54 remains
+3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306;
+core52d2138418ff630ab77e578b80ca8ba3a10cc1b877c3ab8c0e5c2735ffcd1f24a2.
+MainHTML/viewer,data54,sourceMOL/SDF,scenarioJSON,oldgameJSON/assets andReact
+preserved. SourceHEAD168e3cec/index25c21223 retained. No stage/commit/push or
+publication; existing verified Nov4public/fullcheckpoint retained. Upstream was
+alreadycheckedthroughf49b810 thissession; actualsync35 remains, designeroverlap
+unresolvedseparately. Safari/physicaldevices/AT/publicdeployment/offlinepackage/
+conference-machine replay not certified. Next: user tries local pilot and chooses
+refinements; broader lesson/series integration or saving/publication follows user
+direction. No required implementation/review work remains for this approvedpilot.
+
+# Current resume point — 2026-11-05 — Engine-backed Workshop frozen for independent review
+
+Implementation and Developer verification complete. Frozen52-path manifest:
+docs/checks/engine-workshop-20261105/review-target.json SHA256
+c76ab02275ccf19f15c9849bae66bbeadbd0db9d1e3d5352302b422166e5b382.
+Fresh-context read-only Reviewer /root/review_engine_workshop_20261105 is inspecting
+the exact final runtime+untracked tests/assets/evidence. DO NOT edit those targets
+until review returns. Session/contribution notes are outside frozen target.
+
+Final source: generator11830448; client506a63f8; Worker86b14771. Exact-byte Blob
+binding fixed a reproduced version/network race;62clientchecks,9Workers all
+terminated,10BlobURLs allrevoked,3forbiddenURLcases. Final actualFirefox72engine
+checks+21family/recovery checks passed0uncaughtJSerrors, using realBlobimports
+andall5families. IntentionalunavailableWorker produced1expectedconsole diagnostic.
+Original fixedgame60/embeddedpilot45 also passed0JSerrors. Generator512games/
+3072rounds/38644repairs/6144restorechecks, chemistryindependentclosure, provenance
+andpreserved-baseline facts recorded below and in REPORT.md. One intermediate
+test-navigation wait was corrected in test harness only; finalrunpassed.
+
+Next: handle Reviewer findings within approved scope, targeted verification if
+needed, final notes/report and local user preview. No commit/push/publication.
+Core54/core52 unchanged from session baseline. Known recovery remains Nov4public
+and fullcheckpoint; this new pilot is local only. Owned8055server/testFirefox9245
+remain available. Previouslycheckedupstreamf49b810 remainsunsynced(actualsync35).
+
+# Current resume point — 2026-11-05 — Approved engine-backed Workshop implemented; verification in progress
+
+User approved the concrete pilot plan (“ναι”). New opt-in Workshop
+games/name-repair.html?source=engine now uses actual core54 in isolated one-shot
+Workers and a deterministic repair factory,2sets×3questions. Structure-only
+8-alkane catalog is reproducibly extracted from existing data54; methane/propane
+SVGs exported via actual unchanged Main54 pipeline,0JSerrors. Basic/challenge
+differ in initial guidance. Session recipe/answer states survive refresh;
+versions, malformed seeds and unsolved prior questions are checked before restore.
+Original fixed game remains default; embedded lesson stays authored.
+
+Owned source targets: existing gameJS/HTML/CSS; new chemistry Worker/client,
+repair-generator,alkane-structures JSON,builder and twoSVGs. Baseline, tests,
+provenance and report in docs/checks/engine-workshop-20261105/. Two workers
+implemented adapter/generator; ChemistryValidator independently closed
+P2GEN-CHEM01(short hypothetical parents) on final generator118304488b6eaee651490785903080c419239df3f646988f79ae0e2548527611.
+Root choices now come from actual engine vocabulary, bounded toC10 and valid
+interior branch locants. Chemistry verified23forms/eightSDFgraphs and exactcatalog
+MOL provenance; final independent512games/3072rounds/6992root-value checks passed.
+
+Developer generator tests:512games/3072rounds/38644repairchecks/6144restorechecks.
+First actualFirefox engine run71checks0JSerrors; includes eight actualWorker
+names, bothcomplete sets,retry/refresh/results,zoom,320–1500px,repositoryprefix.
+Original fixedgame60checks and embeddedpilot45checks passed0JSerrors, with
+viewer-state preservation/gating/imagefailures. Revised-code browser checks and
+all5families/failure recovery tests still need final execution. Adapter follow-up
+in progress: bind Worker execution to exact measured core bytes rather than a
+second URL import, preventing cached verification from mislabeling later code;
+version Worker cache URL and verify Blob/lifecycle cleanup. No core edit needed.
+
+Next: finish bounded adapter follow-up, run final realFirefox tests, freeze exact
+paths/hashes, consolidated fresh-context independentReviewer, resolve findings,
+update records and hand user local pilot. Do NOT commit/push/publish without new
+save instruction. Owned server8055PID4102/session66368 and testFirefox9245/profile
+/tmp/namelecule-engine-pilot-20261105-ff/session11399; user server8013 was not
+running when inspected. Do not target user browsers. Browser sessions sequential.
+
+Core54/52,Main54HTML/viewer,data54,originalgameJSON,scenarioJSON,sourceMOL/SDF and
+React remain outside changes. Core54SHA3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306;
+core52d2138418ff630ab77e578b80ca8ba3a10cc1b877c3ab8c0e5c2735ffcd1f24a2.
+HEAD168e3cec/index25c21223 retained. Alreadycheckedupstreamf49b810; actualsync35
+unchanged, separate JSME-first overlap still unresolved. No publication/commit.
+
+# Current resume point — 2026-11-05 — Engine-backed alkane pilot preflight
+
+User: “ας το δοκιμάσουμε” after discussing the chemical-engine connection.
+Read-only preflight completed; concrete code-plan approval is still pending.
+Developer reused the existing in-memory JavaScriptCore harness and confirmed
+eight eligible library alkanes (five unbranched, three branched), with actual
+core54 names/components/parent/branch outputs. Explorer
+/root/quiz_engine_adapter_preflight additionally executed unmodified core54 alone
+on all23available alkane forms without data54/window/document/Jmol in naming
+scope; invariant names/classification and zero diagnostics. This is headless
+feasibility evidence, NOT an actual browser Worker or generated-game test.
+
+Proposed bounded implementation: opt-in Workshop URL ?source=engine; current
+default game and embedded checkpoint retain their existing behavior. New
+chemistry Worker/client import the unchanged core54, one-shot analysis per
+molecule to avoid shared-global/pool-index carryover; no live lesson/viewer state.
+New factory derives answers/parts from engine outputs and introduces one eligible
+fault, with shuffled sampling/choices and a reproducible attempt. Keep two sets
+and three quizzes each. Structure-only alkane catalog is reproducibly extracted
+from existing data54, with source hashes and no authored answer keys. Export
+missing methane/propane SVGs through the existing viewer, preserving source MOLs.
+Learning Designer /root/quiz_generation_learning_preflight recommends guidance
+levels: basic feature-level prompt versus neutral challenge prompt; harder branch
+faults only where graph supports them. Five straight/three branched molecules
+limit structural variety. Symmetric reversal of2,3-dimethylbutane is not an error;
+alphabetical-order fault is eligible only for the existing ethyl/dimethyl example.
+
+Planned code paths: new js/namelecule-chemistry-worker.js,
+js/namelecule-chemistry-client.js,js/namelecule-repair-generator.js;
+games/data/alkane-structures.json and reproducible tools extractor; opt-in hooks
+in existing gameJS/HTML/CSS; two missing SVG exports/provenance. Core54/core52,
+MOL/SDF/data sources, scenario JSONs, Main viewer and React are outside this plan.
+Checks after approval: independent chemical expected examples, single valid
+repair/distractors, seed/retry stability, failures/cancellation/stale requests,
+actual Firefox root/subdirectory load and full three-round runs, old game and
+embedded checkpoint regression, resize/keyboard/navigation, then one consolidated
+fresh-context Reviewer. No application implementation, browser test, commit,
+push or publication yet. Only these records changed locally. Core hashes remain
+3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306 (54) and
+d2138418ff630ab77e578b80ca8ba3a10cc1b877c3ab8c0e5c2735ffcd1f24a2 (52).
+Source HEAD168e3cec/index25c21223 retained. Upstream was already checked this
+session through f49b810; actual sync remains35d791ee. Its unresolved designer
+JSME-first overlap remains separate; no upstream merge was attempted here.
+Next: present this concrete pilot plan for approval, then implement/test/review.
+
+# Current resume point — 2026-11-05 — Professor requests engine-backed random quizzes
+
+Read-only consultation. Professor asks whether questions/correctness checks come
+from the chemistry engine and requires many random questions with configurable
+difficulty. Audited current Workshop directly and with read-only explorer
+/root/quiz_engine_audit_20261105. Current six questions (two sets of three), their
+correctValue/correctOrder/correctName, feedback and SVG assets are predefined in
+games/data/name-repair-alkanes.json. evaluateRepair in js/namelecule-game-repair.js
+compares against those authored keys; only replacement-choice display order is
+randomized. No difficulty parameter or runtime core54 naming call. Embedded
+checkpoint is also predefined and uses the same round UI/assessment helper.
+NameleculeRepairEngine is a game-state helper, not the chemical naming engine.
+Earlier engine-based asset exports do not imply runtime question generation.
+
+Proposed direction, NOT implemented or approved as a concrete code plan yet:
+retain Workshop UI and three questions per short set; derive answers/components
+from actual molecular graphs via the chemistry engine; add a separate exercise
+factory for constrained sampling, deliberate errors and difficulty; initially use
+eligible existing alkanes, later consider new-molecule generation separately.
+Need isolation from the stateful viewer/lesson engine, stable retry/replay and
+independently checked chemistry examples before enabling generated checkpoints.
+Next: explain current behavior honestly to user/professor, then investigate and
+obtain approval of a bounded implementation plan if the user proceeds.
+
+Session-start upstream read succeeded: last actual sync35d791ee versus latest
+checked f49b810c93ec85d06163679aff4a8642ea1b4cd3, four new commits/ten paths;
+CHANGELOG changed. Commits aa6d250 (drawing defaults/guarded Enter),2cbfd88 (docs),
+ab590dc (validated skeletal ladder/async depict/canonical SMILES),f49b810 (docs).
+Read actual CHANGELOG diff: auto-linearize, Linearize naming, canonical SMILES,
+HOOC/ether linearization, explicit-H condensed stripping, variable MOL counts-line
+and asynchronous depiction polling. Overlap with our core54/viewer54 changes;
+teacher now prefers JSME-first, while local reviewed code uses builtin-first.
+This is an unresolved behavioral overlap requiring a specific preservation/merge
+plan; no upstream synchronization was performed in this read-only question task.
+Last checked=f49b810; last actually synchronized=35d791ee.
+
+Only session/contribution records changed. No application/core/data/MOL/React
+changes, runtime tests, stage, commit, push or publication. Core54 remains
+3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306;
+core52 remains d2138418ff630ab77e578b80ca8ba3a10cc1b877c3ab8c0e5c2735ffcd1f24a2.
+Active HEAD168e3cec/index25c21223 retained; prior dirty work is pre-existing.
+Yesterday's verified recovery/publication remains recorded below and in receipts.
+
 # Current resume point — 2026-11-04 — Full save and professor delivery completed
 
 User request completed: latest professor35 integrated first, then consolidated

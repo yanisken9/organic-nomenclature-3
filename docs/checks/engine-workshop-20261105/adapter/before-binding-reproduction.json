@@ -1,0 +1,41 @@
+{
+  "method": "Controlled client API double; hash input inspected and later network import simulated, not browser execution",
+  "beforeClientSHA256": "792614ab77c077390fd83d5fec76e866c4912d20481a7dcd386bd2e69611355c",
+  "verifiedSourceSHA256": "3a5f459f7cd874cf3a815205a401ac032049d9d8c5a2a938aa5cd7c245560a2d",
+  "laterExecutedSourceSHA256": "8ed7958fb4e202f78f3b684030d27b89e37c3c6e6c9abb003c1c35b2bb01214c",
+  "reproduced": true,
+  "observed": {
+    "result": {
+      "moleculeId": "probe",
+      "name": "changed-network-engine",
+      "engineSHA256": "3a5f459f7cd874cf3a815205a401ac032049d9d8c5a2a938aa5cd7c245560a2d"
+    },
+    "outputs": [
+      {
+        "executed": [
+          99,
+          104,
+          97,
+          110,
+          103,
+          101,
+          100,
+          32,
+          101,
+          110,
+          103,
+          105,
+          110,
+          101,
+          32,
+          98,
+          121,
+          116,
+          101,
+          115
+        ],
+        "versionClaim": "3a5f459f7cd874cf3a815205a401ac032049d9d8c5a2a938aa5cd7c245560a2d"
+      }
+    ]
+  }
+}

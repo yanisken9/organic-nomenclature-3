@@ -1,5 +1,20 @@
 # Changelog
 
+## 2026-11-05 — Professor merge through f49b810 and quiz compatibility (local)
+
+- Integrate four commits since35d791ee: canonical SMILES, automatic/manual drawing
+  linearization, terminal acid/ether layout, robust MOL headers/counts and async
+  JSME depiction. Preserve graph/metadata/sp checks and guarded Accept/Cancel;
+  translate settings through stable row IDs.
+- Main uses merged core54. Existing generated quizzes load their exact verified
+  previous engine through the SHA-addressed client, preserving recipes and active/
+  solved progress. Every engine load requires SHA-256 validation.
+- Stored molecular assets, v52, React and lesson/game content preserved. Full incoming
+  changelog/session documents archived; local histories retained. Authoring doc copied
+  exactly. Reviewer found no actionable P0–P3 findings. Final primary14browser/17HTTP
+  checks and816protected hashes passed. Submit/nativeFirefox observations unresolved.
+- No new commit/push/publication. [Evidence and limits](checks/v54-merge-20261105/final-report.json).
+
 ## 2026-11-04 — Local Main54 integration and workshop entry (local; independently reviewed)
 
 Approved complete professor sync through02dbcfaf,57commits/69paths since93b759f5.

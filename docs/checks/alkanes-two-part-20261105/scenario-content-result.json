@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "scenario": "scenarios/alkanes-two-part-workshop.scenario.json",
+  "steps": 12,
+  "gateIndices": [
+    3,
+    10
+  ],
+  "roundsPerGate": 3,
+  "finalMolecules": [
+    "methane",
+    "ethane",
+    "propane",
+    "butane",
+    "pentane",
+    "methyl_2_pentane",
+    "dimethyl_2_3_butane",
+    "ethyl_3_dimethyl_2_5_hexane"
+  ],
+  "activeLessonCount": 14,
+  "activeLessonSteps": 328,
+  "preservedPaths": 9,
+  "otherLibraryCardsByteIdentical": true,
+  "scenarioSHA256": "b5986b52311422bd79a626492b9af42523e31a3252177b37eabc99b35853a2da",
+  "librarySHA256": "1d45992006e97ef1ebacb2f13a6e7601a48a14081ac88ff21e8f556eaefd48ec",
+  "limitations": [
+    "No browser execution in this check",
+    "Chemical graph checks run separately"
+  ]
+}

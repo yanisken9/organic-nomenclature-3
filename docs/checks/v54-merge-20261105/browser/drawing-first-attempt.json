@@ -1,0 +1,96 @@
+{
+  "completed": false,
+  "checks": [
+    {
+      "label": "Teacher drawing default on exposes New/Edit",
+      "detail": null
+    },
+    {
+      "label": "Auto-linearize defaults ON",
+      "detail": null
+    },
+    {
+      "label": "Manual Linearize selectable with Auto OFF",
+      "detail": null
+    },
+    {
+      "label": "Beautify available in editor",
+      "detail": null
+    },
+    {
+      "label": "Real Beautify uses live11C horizontal chain",
+      "detail": {
+        "n": 11,
+        "range": 0
+      }
+    },
+    {
+      "label": "Beautify hidden in submitted depict preview",
+      "detail": null
+    },
+    {
+      "label": "New C11 GR/EN actual prediction",
+      "detail": null
+    },
+    {
+      "label": "Real JSmol preview has C11H24 35atoms",
+      "detail": null
+    },
+    {
+      "label": "Accept adds session molecule without automatic download",
+      "detail": null
+    },
+    {
+      "label": "Accepted skeletal is generated zigzag",
+      "detail": {
+        "n": 11,
+        "range": 0.7,
+        "bonds": 10
+      }
+    },
+    {
+      "label": "Accepted condensed name/parent/drawing 1500",
+      "detail": null
+    },
+    {
+      "label": "Accepted expanded name/parent/drawing 1500",
+      "detail": null
+    },
+    {
+      "label": "Accepted skeletal name/parent/drawing 1500",
+      "detail": null
+    },
+    {
+      "label": "Accepted condensed name/parent/drawing 844",
+      "detail": null
+    },
+    {
+      "label": "Accepted expanded name/parent/drawing 844",
+      "detail": null
+    },
+    {
+      "label": "Accepted skeletal name/parent/drawing 844",
+      "detail": null
+    },
+    {
+      "label": "Skeletal edit hides school-only Beautify",
+      "detail": null
+    },
+    {
+      "label": "Skeletal Update retains registry identity/key/count",
+      "detail": null
+    },
+    {
+      "label": "Skeletal Update retains valid zigzag fixed point",
+      "detail": null
+    },
+    {
+      "label": "Accepted skeletal zoom and11parentnumbers work",
+      "detail": null
+    }
+  ],
+  "fixturePolicy": "Actual PubChem REST responses stored locally; name/3D async transport replaced for repeatable authoring. Real JSME, engine, SVG, JSmol, registry and Blob payload.",
+  "failure": "Timed out: !!window.MulerDraft&&MulerDraft.submitted&&!MulerDraft.submitting&&MulerDraft.sdfDone",
+  "traceback": "Traceback (most recent call last):\n  File \"/private/tmp/namelecule-v54-merge-20261105-candidate/docs/checks/v54-merge-20261105/browser/test-drawing.py\", line 62, in <module>\n    click('#editMolBtn');until('!!window.MulerDraft');load(9);ev('window.__no3D=true;true');submit()\n  File \"/private/tmp/namelecule-v54-merge-20261105-candidate/docs/checks/v54-merge-20261105/browser/test-drawing.py\", line 12, in submit\n    click('#molDraftSubmitBtn');until('!!window.MulerDraft&&MulerDraft.submitted&&!MulerDraft.submitting&&MulerDraft.sdfDone',seconds=40)\n  File \"bidi\", line 51, in until\n    mode(m);check(ev('currentMolName===\"ενδεκάνιο\"&&mainChainAtomsList.length===11&&!document.querySelector(\"#jsmeNomeclatureSVG\").getAttribute(\"data-label-error\")'),'Accepted '+m+' name/parent/drawing '+str(w))\nAssertionError: Timed out: !!window.MulerDraft&&MulerDraft.submitted&&!MulerDraft.submitting&&MulerDraft.sdfDone\n",
+  "javascriptErrors": []
+}

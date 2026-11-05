@@ -1,0 +1,87 @@
+{
+  "passed": 19,
+  "total": 19,
+  "results": [
+    {
+      "name": "JSME canonical display wins with reordered exact graph and restores actual MOL/scale",
+      "pass": true
+    },
+    {
+      "name": "Truncated and wrong-heavy reads wait, input once, settle on sixth read",
+      "pass": true
+    },
+    {
+      "name": "Exhausted six-read display falls through edit, never unbounded",
+      "pass": true
+    },
+    {
+      "name": "Echo (rotation/translation/scale) and same-count wrong graph fall through validated builtin",
+      "pass": true
+    },
+    {
+      "name": "Collapsed bond rejected despite exact graph",
+      "pass": true
+    },
+    {
+      "name": "Charge and isotope mismatches rejected; valid metadata preserved",
+      "pass": true
+    },
+    {
+      "name": "Double Accept and Draw/Submit/Beautify stay blocked during acquisition",
+      "pass": true
+    },
+    {
+      "name": "Cancel during wait defers teardown until restore and creates no record",
+      "pass": true
+    },
+    {
+      "name": "Replacement draft during wait receives neither stale applet restoration nor registration",
+      "pass": true
+    },
+    {
+      "name": "Selection/mode change during wait prevents stale restoration and record creation",
+      "pass": true
+    },
+    {
+      "name": "Import, clear and read failures restore actual content and scale then fall through",
+      "pass": true
+    },
+    {
+      "name": "Explicit H stripped in accepted generated condensed and expanded not doubled",
+      "pass": true
+    },
+    {
+      "name": "Two/three header annotation and skeletal transform are equivalent, metadata/headers retained",
+      "pass": true
+    },
+    {
+      "name": "Canonical info SMILES/link/name/copy agree; invalid CID stays plain text",
+      "pass": true
+    },
+    {
+      "name": "Default automatic setting and manual Linearize visibility follow current draft/view",
+      "pass": true
+    },
+    {
+      "name": "Shared auto-tidy uses fresh sandbox chain, regenerates expanded H, skeletal passes through",
+      "pass": true
+    },
+    {
+      "name": "Submit identity guard rejects old oracle against replacement with same SMILES",
+      "pass": true
+    },
+    {
+      "name": "Charge-only and isotope-only mismatches independently fall through to matching edit",
+      "pass": true
+    },
+    {
+      "name": "Submit identity guard rejects old SDF against replacement with same SMILES",
+      "pass": true
+    }
+  ],
+  "environment": "JavaScriptCore; full current core/viewer; mocked DOM/JSME/scheduler, no browser or external PubChem",
+  "hashes": {
+    "js/mulermoc-nom-core-54.js": "8f3e5f76d96322faf7cf9251f4cae3eca204fe2f82bf5754fdce6ffc4cd5d5a9",
+    "js/mulermoc-nom-molview-54.js": "22d3b9fdfca8052332b4f842deec7055f6ca8f382ff4a3692db321e770b02e36"
+  }
+}

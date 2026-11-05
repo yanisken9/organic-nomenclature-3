@@ -1,0 +1,59 @@
+{
+  "status": "Frozen for root browser verification and independent review; no further viewer source edits planned",
+  "upstreamBase": "35d791ee9d6bdb8566d3adca1a1bdaba97efc5b8",
+  "upstreamTarget": "f49b810c93ec85d06163679aff4a8642ea1b4cd3",
+  "owner": "/root/merge_viewer_implementation",
+  "paths": {
+    "js/mulermoc-nom-molview-54.js": "22d3b9fdfca8052332b4f842deec7055f6ca8f382ff4a3692db321e770b02e36",
+    "docs/checks/v54-merge-20261105/viewer/run-checks.py": "2518531b4663a3691845b71fe132040b793e0f42424cbbefa68ddcfdcf9f2630",
+    "docs/checks/v54-merge-20261105/viewer/checks.js": "e3da54908d9384d8fc717a58bbd0a5ff44a7d36081a321fc861404f6b46f3626",
+    "docs/checks/v54-merge-20261105/viewer/results.json": "eeb81ba13448cbb9a4a0a17d6cedb4deb47a0acc1b4556d34455dcbba526ba68",
+    "docs/checks/v54-merge-20261105/viewer/source.diff": "76539e6866aa6b1a4dc0f7fcd71cc102205f1e81879dacd864ae919862f85c46"
+  },
+  "upstreamViewerHunks": {
+    "total": 22,
+    "exactPort": 16,
+    "manualPreservationMerge": 6,
+    "semantics": [
+      "canonize options for both applets",
+      "shared auto tidy and default auto preference/manual visibility",
+      "guarded drawing entry",
+      "submit auto tidy and dead engineFailed removal",
+      "canonical JSME display/edit then builtin acquisition",
+      "bounded asynchronous polling",
+      "canonical SMILES persistence/update/info/copy/CID links",
+      "explicit-H stripping for generated condensed",
+      "counts-line annotation offset"
+    ]
+  },
+  "preservedLocalSafeguards": [
+    "strict parse and fMolCanTransform2D gate",
+    "exact heavy graph mapper with charge/isotope labels and complete shared-state restoration",
+    "collapsed heavy bond rejection",
+    "pairwise normalized mapped-distance echo rejection for JSME; builtin fixed points permitted",
+    "actual prior applet MOL and scale restore in finally",
+    "downstream SVG labels/mapping/JSmol/framing/geometry unchanged except counts offsets in skeletal display helper"
+  ],
+  "addedAsyncGuards": [
+    "per-draft accepting + global acquisition owner",
+    "owner identity + selection/mode checked after every await and before registry writes",
+    "deferred Cancel restores applet before draft teardown/reselect",
+    "duplicate Accept and Submit/Draw/Beautify blocked; native buttons disabled while acquiring",
+    "no old applet restoration if draft/selection/mode replaced",
+    "Submit PubChem/SDF response guarded by draft object identity, including same-SMILES replacement"
+  ],
+  "verification": {
+    "actualFunctionMockCases": 19,
+    "passed": 19,
+    "fullViewerJscSyntax": "PASS",
+    "coreDependencySha256": "8f3e5f76d96322faf7cf9251f4cae3eca204fe2f82bf5754fdce6ffc4cd5d5a9",
+    "beforeFailureReference": "primary preflight-findings.json VIEW-OFFSET and VIEW-ASYNC (async concurrency was source risk, not a claimed original runtime failure)"
+  },
+  "limitations": [
+    "Mock checks do not establish real JSME/CDN/PubChem/JSmol timing or browser interactions; root browser verification remains required",
+    "Independent Reviewer has not yet assessed this frozen content",
+    "Acquisition preserves prior local unsupported stereo/query/metadata refusal; a rejected JSME candidate falls through",
+    "No primary repository runtime file, source molecule asset, core, v52 or React edited by this agent",
+    "No install/commit/push/publication"
+  ]
+}

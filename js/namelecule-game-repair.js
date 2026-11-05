@@ -305,7 +305,7 @@
       refs.orderControls = node("div", { class: "order-controls" });
       refs.candidateName = node("strong", { class: "candidate-name" });
       refs.candidate = node("div", { class: "candidate", "aria-live": "polite", "aria-atomic": "true" }, [node("span", { class: "candidate-label", text: "Η πρότασή σου για έλεγχο" }), refs.candidateName]);
-      refs.checkButton = button("Έλεγχος  ✓", "primary", submitRepair);
+      refs.checkButton = button("Έλεγχος", "primary", submitRepair);
       refs.checkButton.id = controlId("check-button");
       refs.retryButton = button("Από την αρχή", "quiet", retryRound, { "aria-label": "Επαναφορά επιλογών αυτής της αποστολής" });
       refs.checkHelper = node("p", { class: "check-helper", id: controlId("check-helper") });
@@ -487,7 +487,7 @@
         node("span", { class: "success-name", text: round().correctName }),
         node("p", { class: "success-explanation", text: result.message })
       );
-      const next = button(standalone ? options.continueLabel : "Συνεχίζω τη θεωρία", "primary", function () {
+      const next = button(options.continueLabel || "Συνεχίζω τη θεωρία", "primary", function () {
         if (!diagramsReady() || !state().solved) return;
         if (typeof options.onContinue === "function") options.onContinue(getState());
       });
@@ -594,6 +594,137 @@
   let states = [];
   let activeRound = null;
   let renderId = 0;
+  const enginePilot = new URLSearchParams(window.location.search).get("source") === "engine";
+  const pilotStorageKey = "namelecule-repair-engine-pilot-v1";
+  let pilot = null;
+  let pilotPhase = "hub";
+  let loadToken = 0;
+  let loadAbort = null;
+
+  function newSeed() {
+    const values = new Uint32Array(1);
+    window.crypto.getRandomValues(values);
+    return String(values[0]);
+  }
+
+  function loadPilotScript(path) {
+    return new Promise(function (resolve, reject) {
+      const script = document.createElement("script");
+      script.src = new URL(path, document.baseURI).href;
+      script.onload = resolve;
+      script.onerror = function () { script.remove(); reject(new Error("Pilot script could not load")); };
+      document.head.append(script);
+    });
+  }
+
+  function readPilotProgress() {
+    try { return JSON.parse(window.sessionStorage.getItem(pilotStorageKey)); }
+    catch (_) { return null; }
+  }
+
+  function savePilotProgress() {
+    if (!pilot) return;
+    const record = {
+      version: 1, generatorVersion: global.NameleculeRepairGenerator.version,
+      catalogRevision: pilot.catalog.revision, engineSHA256: pilot.catalog.engineSHA256,
+      seed: pilot.seed, difficulty: pilot.difficulty, phase: pilotPhase,
+      setId: activeSet && activeSet.id, roundIndex: roundIndex, states: states
+    };
+    try { window.sessionStorage.setItem(pilotStorageKey, JSON.stringify(record)); }
+    catch (_) { pilot.storageAvailable = false; }
+  }
+
+  function generatePilotGame(seed) {
+    pilot.seed = global.NameleculeRepairGenerator.normalizeSeed(seed);
+    game = validateGameData(global.NameleculeRepairGenerator.createGame(pilot.catalog, pilot.analyses, {
+      seed: pilot.seed, difficulty: pilot.difficulty
+    }));
+  }
+
+  function restorePilotProgress(record) {
+    if (!record || record.version !== 1 || record.generatorVersion !== global.NameleculeRepairGenerator.version ||
+        record.catalogRevision !== pilot.catalog.revision || record.engineSHA256 !== pilot.catalog.engineSHA256 ||
+        !["basic", "challenge"].includes(record.difficulty) || typeof record.seed !== "string") return false;
+    try { global.NameleculeRepairGenerator.normalizeSeed(record.seed); }
+    catch (_) { return false; }
+    pilot.difficulty = record.difficulty;
+    generatePilotGame(record.seed);
+    if (["hub", "picker"].includes(record.phase)) { pilotPhase = record.phase; return true; }
+    const set = game.sets.find(function (entry) { return entry.id === record.setId; });
+    if (!set || !["round", "results"].includes(record.phase) || !Number.isInteger(record.roundIndex) ||
+        record.roundIndex < 0 || record.roundIndex >= set.rounds.length ||
+        !Array.isArray(record.states) || record.states.length !== set.rounds.length) return false;
+    const restored = set.rounds.map(function (entry, i) { return restoreRoundState(entry, record.states[i]); });
+    // Refresh cannot bypass an unsolved preceding round or manufacture results.
+    if (restored.slice(0, record.roundIndex).some(function (entry) { return !entry.solved; }) ||
+        (record.phase === "results" && restored.some(function (entry) { return !entry.solved; }))) return false;
+    activeSet = set;
+    states = restored;
+    roundIndex = record.roundIndex;
+    pilotPhase = record.phase;
+    return true;
+  }
+
+  async function preparePilot(signal) {
+    if (!global.NameleculeChemistryClient) await loadPilotScript("../js/namelecule-chemistry-client.js?v=verified-engines-20261105-r1");
+    if (!global.NameleculeRepairGenerator) await loadPilotScript("../js/namelecule-repair-generator.js?v=engine-pilot-20261105-r2");
+    const response = await fetch("./data/alkane-structures.json", { cache: "no-cache", signal: signal });
+    if (!response.ok) throw new Error("Alkane structures HTTP " + response.status);
+    const catalog = await response.json();
+    assert(catalog && catalog.schemaVersion === 1 && Array.isArray(catalog.molecules) && catalog.molecules.length === 8, "Invalid alkane structure catalog");
+    const analyses = [];
+    // Bound parallel work; each analysis gets a fresh, short-lived core instance.
+    for (let i = 0; i < catalog.molecules.length; i += 3) {
+      const batch = await Promise.all(catalog.molecules.slice(i, i + 3).map(function (molecule) {
+        return global.NameleculeChemistryClient.analyze(molecule, { signal: signal, engineSHA256: catalog.engineSHA256 });
+      }));
+      analyses.push.apply(analyses, batch);
+    }
+    if (signal.aborted) throw new DOMException("Cancelled", "AbortError");
+    pilot = { catalog: catalog, analyses: analyses, seed: newSeed(), difficulty: "basic", storageAvailable: true };
+    const restored = restorePilotProgress(readPilotProgress());
+    if (!restored) {
+      activeSet = null; states = []; roundIndex = 0; pilotPhase = "hub";
+      pilot.difficulty = "basic";
+      generatePilotGame(newSeed());
+    }
+  }
+
+  function pilotSettings() {
+    const select = node("select", { id: "pilot-difficulty" }, [
+      node("option", { value: "basic", text: "Βασικό" }), node("option", { value: "challenge", text: "Πρόκληση" })
+    ]);
+    select.value = pilot.difficulty;
+    select.addEventListener("change", function () {
+      pilot.difficulty = select.value;
+      generatePilotGame(newSeed());
+      renderSetPicker();
+      document.getElementById("pilot-difficulty").focus();
+    });
+    return node("div", { class: "pilot-settings" }, [
+      node("label", { for: "pilot-difficulty", text: "Δυσκολία" }), select,
+      node("p", { text: "Στο Βασικό δίνεται μια αρχική κατεύθυνση. Στην Πρόκληση εντοπίζεις και τον κανόνα που χρειάζεται." }),
+      node("p", { class: "muted", text: "Σε κάθε νέα προσπάθεια επιλέγονται τυχαία επισκευές από τα οκτώ διαθέσιμα αλκάνια." })
+    ]);
+  }
+
+  function startSet(setId) {
+    if (pilot) generatePilotGame(newSeed());
+    activeSet = game.sets.find(function (entry) { return entry.id === setId; });
+    roundIndex = 0;
+    states = activeSet.rounds.map(function (entry) {
+      const initial = createRoundState(entry);
+      // The generator already shuffled choices using the recorded seed.
+      if (pilot && entry.kind === "replace") initial.choiceOrder = entry.choices.map(function (_, i) { return i; });
+      return initial;
+    });
+    renderRound();
+  }
+
+  window.addEventListener("pagehide", function () { if (loadAbort) loadAbort.abort(); });
+  window.addEventListener("pageshow", function (event) {
+    if (event.persisted && root.getAttribute("aria-busy") === "true") loadGame();
+  });
 
   function focusHeading() {
     const heading = root.querySelector("h1");
@@ -608,6 +739,9 @@
   }
 
   async function loadGame() {
+    const token = ++loadToken;
+    if (loadAbort) loadAbort.abort();
+    loadAbort = new AbortController();
     root.setAttribute("aria-busy", "true");
     const loading = node("section", { class: "loading-card" }, [
       node("span", { class: "loading-mark", "aria-hidden": "true", text: "C" }),
@@ -617,25 +751,35 @@
     ]);
     root.replaceChildren(loading);
     try {
-      const response = await fetch("./data/name-repair-alkanes.json", { cache: "no-cache" });
-      if (!response.ok) throw new Error("Game data HTTP " + response.status);
-      game = validateGameData(await response.json());
-      states = [];
-      activeSet = null;
-      renderWelcome();
+      if (enginePilot) await preparePilot(loadAbort.signal);
+      else {
+        const response = await fetch("./data/name-repair-alkanes.json", { cache: "no-cache", signal: loadAbort.signal });
+        if (!response.ok) throw new Error("Game data HTTP " + response.status);
+        game = validateGameData(await response.json());
+        states = []; activeSet = null;
+      }
+      if (token !== loadToken) return;
+      root.setAttribute("aria-busy", "false");
+      if (pilot && pilotPhase === "round") renderRound();
+      else if (pilot && pilotPhase === "results") renderResults();
+      else if (pilot && pilotPhase === "picker") renderSetPicker();
+      else renderWelcome();
     } catch (error) {
+      if (token !== loadToken || error.name === "AbortError") return;
       console.error("Namelecule game could not load", error);
       replaceRoot(node("section", { class: "loading-card" }, [
         node("span", { class: "loading-mark", "aria-hidden": "true", text: "?" }),
         node("p", { class: "eyebrow", text: "ΣΥΝΕΡΓΕΙΟ ΟΝΟΜΑΤΩΝ" }),
         node("h1", { text: "Ο πάγκος δεν άνοιξε ακόμη" }),
         node("p", { role: "status", text: "Δεν φορτώθηκαν οι αποστολές. Δοκίμασε ξανά ή επέστρεψε στην αρχική σελίδα από την Έξοδο." }),
-        button("Δοκίμασε ξανά", "primary", loadGame)
+        button("Δοκίμασε ξανά", "primary", loadGame),
+        node("a", { class: "secondary", href: "name-repair.html", text: "Άνοιξε τα αρχικά σετ" })
       ]));
     }
   }
 
   function renderWelcome() {
+    pilotPhase = "hub";
     renderId += 1;
     const hero = node("section", { class: "workshop-hero", "aria-label": "Καλώς ήρθες στο Συνεργείο ονομάτων" }, [
       node("p", { class: "eyebrow", text: "ΠΑΙΧΝΙΔΙΑ ΟΝΟΜΑΤΟΛΟΓΙΑΣ" }),
@@ -664,15 +808,22 @@
       ["Έλεγξε και ξαναδοκίμασε", "Μετά τη σωστή επισκευή, δες γιατί το όνομα ταιριάζει στη δομή."]
     ];
     const welcome = node("div", { class: "workshop-hub" }, [
-      hero, sets,
+      hero,
+      node("p", { class: "pilot-entry" }, [node("a", {
+        href: enginePilot ? "name-repair.html" : "name-repair.html?source=engine",
+        text: enginePilot ? "Δοκιμή ερωτήσεων από τη μηχανή · Αρχικά σετ" : "Δοκίμασε νέες ερωτήσεις από τη μηχανή →"
+      })]),
+      sets,
       node("section", { class: "intro-how", "aria-label": "Πώς παίζεται" }, steps.map(function (step, index) {
         return node("div", { class: "how-item" }, [node("span", { class: "how-number", "aria-hidden": "true", text: String(index + 1) }), node("div", {}, [node("h2", { text: step[0] }), node("p", { text: step[1] })])]);
       }))
     ]);
     replaceRoot(welcome);
+    savePilotProgress();
   }
 
   function renderSetPicker() {
+    pilotPhase = "picker";
     renderId += 1;
     const cards = game.sets.map(function (set) {
       const titleId = "set-" + set.id + "-title";
@@ -683,25 +834,27 @@
         node("div", { class: "workshop-set-meta" }, [node("span", { text: "3 κουίζ" }), node("span", { text: "Χωρίς χρονόμετρο" })]),
         node("ul", { class: "workshop-set-topics" }, set.topics.map(function (text) { return node("li", { text: text }); })),
         button("Ξεκίνα το σετ →", "primary workshop-set-start", function () {
-          activeSet = set;
-          roundIndex = 0;
-          states = set.rounds.map(function (round) { return createRoundState(round); });
-          renderRound();
+          startSet(set.id);
         }, { id: "set-" + set.id + "-start" })
       ]);
     });
     replaceRoot(node("div", { class: "workshop-hub workshop-set-picker" }, [
       node("section", { class: "workshop-hero" }, [
-        button("← Όλα τα σετ", "secondary workshop-all-sets", function () { renderWelcome(); focusHeading(); }, { id: "workshop-all-sets" }),
-        node("p", { class: "eyebrow", text: "ΣΥΝΕΡΓΕΙΟ ΟΝΟΜΑΤΩΝ" }),
+        button("Όλα τα σετ", "secondary workshop-all-sets", function () { renderWelcome(); focusHeading(); }, { id: "workshop-all-sets" }),
+        node("p", { class: "eyebrow workshop-brand" }, [
+          workshopLogo("workshop-logo-small"),
+          node("span", { class: "workshop-brand-label", text: "ΣΥΝΕΡΓΕΙΟ ΟΝΟΜΑΤΩΝ" })
+        ]),
         node("h1", { text: "Αλκάνια" }),
         node("p", { class: "workshop-description", text: "Διάλεξε αλκάνια χωρίς ή με διακλαδώσεις. Κάθε σετ έχει τρία σύντομα κουίζ." })
       ]),
+      ...(pilot ? [pilotSettings()] : []),
       node("section", { class: "workshop-sets", "aria-labelledby": "alkane-sets-title" }, [
         node("h2", { id: "alkane-sets-title", text: "Διάλεξε σετ" }),
         node("div", { class: "workshop-set-grid" }, cards)
       ])
     ]));
+    savePilotProgress();
   }
 
   function progressList() {
@@ -721,18 +874,21 @@
   function round() { return activeSet.rounds[roundIndex]; }
   function state() { return states[roundIndex]; }
   function renderRound() {
+    pilotPhase = "round";
     if (activeRound) activeRound.destroy();
     const index = roundIndex;
     activeRound = createRoundView(root, {
       round: round(), initialState: state(), assetBase: "", progressList: progressList, setTitle: activeSet.title,
       requestRestart: requestRestart,
       continueLabel: index === activeSet.rounds.length - 1 ? "Δες τις επισκευές σου  →" : "Επόμενο κουίζ  →",
-      onStateChange: function (current) { states[index] = current; },
+      onStateChange: function (current) { states[index] = current; savePilotProgress(); },
       onContinue: function () {
         if (index === activeSet.rounds.length - 1) renderResults();
         else { roundIndex += 1; renderRound(); }
       }
     }, true);
+    if (pilot && !pilot.storageAvailable) root.append(node("p", { role: "status", class: "pilot-entry", text: "Ο browser δεν επιτρέπει αποθήκευση της προσπάθειας. Κράτησε αυτή τη σελίδα ανοιχτή μέχρι να τελειώσεις." }));
+    savePilotProgress();
   }
 
   function requestRestart() {
@@ -760,6 +916,7 @@
   }
 
   function renderResults() {
+    pilotPhase = "results";
     renderId += 1;
     const summary = summarizeGame(activeSet.rounds, states);
     const stats = [
@@ -792,6 +949,7 @@
     ]);
     replaceRoot(content);
     focusHeading();
+    savePilotProgress();
   }
 
   loadGame();

@@ -1,0 +1,142 @@
+--- /tmp/namelecule-v54-merge-20261105-candidate/docs/checks/v54-merge-20261105/core/before-core54.js	2026-11-05 13:17:57
++++ /tmp/namelecule-v54-merge-20261105-candidate/js/mulermoc-nom-core-54.js	2026-11-05 13:21:28
+@@ -2366,7 +2366,7 @@
+     if (!pool.length || !Array.isArray(reference)) return -1
+     const signature = fNumberedChainSignature(reference, allAtomsTypeList, bondList)
+     if (signature === null) return -1
+-    let lines
++    let lines, countsLine
+     try {
+         const text = typeof jsmeNomeclatureApplet.molFile === 'function'
+             ? jsmeNomeclatureApplet.molFile()
+@@ -2374,9 +2374,10 @@
+                 ? window.MOL2D[selectedMol][mode2D] : null)
+         if (!text) return -1
+         lines = text.split(/\r?\n/)
+-        if (Number(lines[3].slice(0, 3)) !== allAtomsTypeList.length) return -1
++        countsLine = fMolCountsLine(lines)
++        if (countsLine < 0 || Number(lines[countsLine].slice(0, 3)) !== allAtomsTypeList.length) return -1
+     } catch (e) { return -1 }
+-    const coords = lines.slice(4, 4 + allAtomsTypeList.length).map(line =>
++    const coords = lines.slice(countsLine + 1, countsLine + 1 + allAtomsTypeList.length).map(line =>
+         [Number(line.slice(0, 10)), Number(line.slice(10, 20))])
+     function score(chain) {
+         let vertical = 0, travel = 0, length = 0
+@@ -2566,16 +2567,41 @@
+ // Condensed = linear main chain + orthogonal branches (school form); expanded
+ // = condensed + explicit H; skeletal comes from JSME (molview side, scientific
+ // zigzag). Deterministic and offline. No DOM, no jQuery.
++// Locate a bounded V2000 counts line in standard or short JSME headers.
++// The atom and bond counts are separate three-column fields: contiguous
++// three-digit values (e.g. 101100) are valid and need no whitespace separator.
++// Versionless legacy records retain their standard index-3 counts line.
++// Returns the line index (0..7), or -1 when either fixed-width field is invalid.
++function fMolCountsLine(lines) {
++  try {
++    if (!lines || !lines.length) return -1;
++    for (var i = 0, lim = Math.min(lines.length, 8); i < lim; i++) {
++      var L = lines[i];
++      if (typeof L !== 'string' || !/\bV2000\b/.test(L)) continue;
++      if (/^\d{1,3}$/.test(L.substring(0, 3).trim()) &&
++          /^\d{1,3}$/.test(L.substring(3, 6).trim())) return i;
++    }
++    // Older library SDFs omit the version tag. Preserve their existing strict
++    // standard-header read without treating arbitrary short-header lines as counts.
++    var legacy = lines[3];
++    if (typeof legacy === 'string' && !/V\d+/.test(legacy) &&
++        /^\d{1,3}$/.test(legacy.substring(0, 3).trim()) &&
++        /^\d{1,3}$/.test(legacy.substring(3, 6).trim())) return 3;
++  } catch (e) {}
++  return -1;
++}
++
+ function fParseMolV2000(text) {
+   try {
+     if (!text) return null;
+     var lines = String(text).split(/\r?\n/);
+-    if (lines.length < 5 || (/V\d+/.test(lines[3]) && !/V2000/.test(lines[3]))) return null;
+-    var nA = Number(lines[3].substring(0, 3)), nB = Number(lines[3].substring(3, 6));
+-    if (!Number.isInteger(nA) || !Number.isInteger(nB) || nA < 0 || nB < 0 || lines.length < 4 + nA + nB) return null;
++    var ci = fMolCountsLine(lines);
++    if (ci < 0) return null;
++    var nA = Number(lines[ci].substring(0, 3)), nB = Number(lines[ci].substring(3, 6));
++    if (!Number.isInteger(nA) || !Number.isInteger(nB) || nA < 0 || nB < 0 || lines.length < ci + 1 + nA + nB) return null;
+     var atoms = [], bonds = [], chargeCodes = { 0: 0, 1: 3, 2: 2, 3: 1, 4: 0, 5: -1, 6: -2, 7: -3 };
+     for (var i = 0; i < nA; i++) {
+-      var L = lines[4 + i], code = Number(L.substring(36, 39));
++      var L = lines[ci + 1 + i], code = Number(L.substring(36, 39));
+       var x = Number(L.substring(0, 10)), y = Number(L.substring(10, 20)), z = Number(L.substring(20, 30));
+       var el = L.substring(31, 34).trim();
+       if (L.length < 34 || !el || !Number.isFinite(x) || !Number.isFinite(y) || !Number.isFinite(z) || !(code in chargeCodes)) return null;
+@@ -2585,12 +2611,12 @@
+         valence: Number(L.substring(48, 51)) });
+     }
+     for (var j = 0; j < nB; j++) {
+-      var B = lines[4 + nA + j], a = Number(B.substring(0, 3)), b = Number(B.substring(3, 6)), o = Number(B.substring(6, 9));
++      var B = lines[ci + 1 + nA + j], a = Number(B.substring(0, 3)), b = Number(B.substring(3, 6)), o = Number(B.substring(6, 9));
+       if (!Number.isInteger(a) || !Number.isInteger(b) || a < 1 || a > nA || b < 1 || b > nA || a === b || !Number.isInteger(o) || o < 1) return null;
+       var bond = [a, b, o]; bond.tail = B.substring(9); bond.sourceIndex = j + 1; bonds.push(bond);
+     }
+     var properties = [], ended = false;
+-    for (var k = 4 + nA + nB; k < lines.length; k++) {
++    for (var k = ci + 1 + nA + nB; k < lines.length; k++) {
+       var P = lines[k];
+       if (/^M  END\s*$/.test(P)) { ended = true; break; }
+       if (!P.trim()) continue;
+@@ -2605,7 +2631,9 @@
+       }
+     }
+     if (!ended) return null;
+-    return { head: lines.slice(0, 3), countsTail: lines[3].substring(6), atoms: atoms, bonds: bonds, properties: properties };
++    var head = lines.slice(Math.max(0, ci - 3), ci);
++    while (head.length < 3) head.unshift('');
++    return { head: head, countsTail: lines[ci].substring(6), atoms: atoms, bonds: bonds, properties: properties };
+   } catch (e) { return null; }
+ }
+ 
+@@ -2876,9 +2904,14 @@
+     for (var kc = 0; kc < ch.length; kc++) visited[ch[kc]] = true;
+     // Queue: {node, x, y, dx, dy} — first continuation keeps direction,
+     // extra forks rotate 90° (rare in scope, depiction-only).
++    // Keep terminal sp handling first; other terminal groups lean outward,
++    // while a terminal ether link continues horizontally (upstream school form).
+     var queue = [];
+     for (var ci = 0; ci < ch.length; ci++) {
+-      var c0 = ch[ci], sideCount = 0;
++      var c0 = ch[ci], sideCount = 0, etherDone = false;
++      var lean = 0;
++      if (ci === 0) lean = -0.5;
++      else if (ci === ch.length - 1) lean = 0.5;
+       for (var nb = 0; nb < adj[c0].length; nb++) {
+         var br = adj[c0][nb];
+         if (visited[br]) continue;
+@@ -2892,11 +2925,28 @@
+         if (terminalSp) {
+           var outward = ci === 0 ? -1 : 1;
+           queue.push({ node: br, x: (ci + outward) * DX, y: 0, dx: outward, dy: 0 });
++          continue;
++        }
++        var isEtherLink = false;
++        try {
++          if ((ci === 0 || ci === ch.length - 1) && !etherDone &&
++              String(m.atoms[br].el || '').toUpperCase() === 'O' && adj[br].length === 2) {
++            var carbonNeighbors = 0;
++            for (var oi = 0; oi < adj[br].length; oi++) {
++              if (String(m.atoms[adj[br][oi]].el || '').toUpperCase() === 'C') carbonNeighbors++;
++            }
++            if (carbonNeighbors === 2) isEtherLink = true;
++          }
++        } catch (eEl) { isEtherLink = false; }
++        if (isEtherLink) {
++          var direction = ci === 0 ? -1 : 1;
++          queue.push({ node: br, x: ci * DX + direction * DX, y: 0, dx: direction, dy: 0 });
++          etherDone = true;
+           continue;
+         }
+         var side = (sideCount % 2 === 0) ? -1 : 1;
+         sideCount++;
+-        queue.push({ node: br, x: ci * DX, y: side * DY, dx: 0, dy: side });
++        queue.push({ node: br, x: ci * DX + lean * DX, y: side * DY, dx: 0, dy: side });
+       }
+     }
+     while (queue.length) {

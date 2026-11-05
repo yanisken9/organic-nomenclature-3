@@ -21,6 +21,7 @@ var MuLERMoCScenario = {
   returnToTheoryLibrary: false, // library-launched lessons return there on Exit/Esc
   ready: false,
   applyToken: 0, // S2: bumped per fScenarioApply; stale async follow-ups abort
+  checkpointPreparation: null, // cancellable async receipt validation, before changing live step
   checkpointApplied: null, // transient {scenario, index}; blocked navigation never reapplies the viewer
   pending3D: null, // S2: {token, mol, step, done} — name click waits for 3D parse
   authorSettings: null, // pre-Present checkbox states, restored on Exit
@@ -94,6 +95,91 @@ function fScenarioResolveCheckpointTarget(scen, requested) {
 function fScenarioCheckpointError(error) {
   if (window.fLessonLoadingDone) window.fLessonLoadingDone(true);
   fScenarioToast(error && error.message ? error.message : "Το υποχρεωτικό κουίζ δεν είναι διαθέσιμο.");
+}
+
+// Only generated checkpoints need asynchronous restoration. Keep ordinary
+// lessons/authored rounds synchronous; never apply a different viewer snapshot
+// while canonical answers are being reconstructed.
+function fScenarioCancelCheckpointPreparation() {
+  var pending = MuLERMoCScenario.checkpointPreparation;
+  MuLERMoCScenario.checkpointPreparation = null;
+  if (!pending) return;
+  pending.controller.abort();
+  if (pending.panel) pending.panel.remove();
+}
+function fScenarioCheckpointContent(scen) {
+  return JSON.stringify({ title: scen.title, author: scen.author, steps: scen.steps });
+}
+function fScenarioPrepareCheckpointTarget(scen, requested, resume) {
+  fScenarioCancelCheckpointPreparation();
+  var api = fScenarioCheckpointApi(scen);
+  if (!api || typeof api.prepareTarget !== "function") return false;
+  var controller = new AbortController();
+  var work = api.prepareTarget(scen, requested, { signal: controller.signal });
+  if (!work) return false;
+  // A native quiz modal must not cover the pending Retry/Exit surface.
+  api.onExit();
+  var request = { scenario: scen, content: fScenarioCheckpointContent(scen),
+    controller: controller, requested: requested, resume: resume, panel: null };
+  MuLERMoCScenario.checkpointPreparation = request;
+  var panel = document.createElement("section");
+  panel.id = "scCheckpointPreparation";
+  panel.className = "lesson-checkpoint-preparation";
+  panel.setAttribute("aria-label", "Έλεγχος προόδου κουίζ");
+  var status = document.createElement("p");
+  status.setAttribute("role", "status");
+  status.textContent = "Ελέγχουμε τις αποθηκευμένες επισκευές…";
+  var actions = document.createElement("div");
+  actions.className = "lesson-checkpoint-preparation-actions";
+  var retry = document.createElement("button");
+  retry.type = "button";
+  retry.className = "nl-quiz-button";
+  retry.textContent = "Δοκίμασε ξανά";
+  retry.hidden = true;
+  var exit = document.createElement("button");
+  exit.type = "button";
+  exit.className = "nl-quiz-button";
+  exit.textContent = "Έξοδος από το μάθημα";
+  exit.onclick = fScenarioExitPresent;
+  actions.append(retry, exit);
+  panel.append(status, actions);
+  // Buttons inside this surface must not also trigger presentation shortcuts.
+  panel.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") { event.preventDefault(); fScenarioExitPresent(); }
+    event.stopPropagation();
+  });
+  var loadingHost = document.documentElement.classList.contains("lesson-loading") &&
+    document.getElementById("lessonLoading");
+  if (loadingHost) panel.classList.add("is-cold");
+  (loadingHost || document.body).appendChild(panel);
+  request.panel = panel;
+  var next = document.getElementById("scNext");
+  if (next) { next.disabled = true; next.setAttribute("aria-disabled", "true"); }
+  // Cold startup remains behind its loading screen until Go applies the
+  // resolved snapshot. Status/Retry/Exit live inside that screen meanwhile.
+  function current() {
+    return MuLERMoCScenario.checkpointPreparation === request && !controller.signal.aborted &&
+      fScenarioGet(scen.id) === scen && fScenarioCheckpointContent(scen) === request.content;
+  }
+  function discardStale() {
+    if (MuLERMoCScenario.checkpointPreparation === request) {
+      fScenarioCancelCheckpointPreparation();
+      fScenarioPlayUi();
+    }
+  }
+  retry.onclick = function () { if (current()) resume(); else discardStale(); };
+  Promise.resolve(work).then(function () {
+    if (!current()) { discardStale(); return; }
+    fScenarioCancelCheckpointPreparation();
+    resume();
+  }, function (error) {
+    if (!current()) { discardStale(); return; }
+    panel.classList.add("is-error");
+    status.textContent = "Δεν ήταν δυνατός ο έλεγχος της προόδου. Δοκίμασε ξανά ή βγες από το μάθημα.";
+    retry.hidden = false;
+    retry.focus({ preventScroll: true });
+  });
+  return true;
 }
 
 // Name-box identities are an authored contract (including hidden groups and
@@ -180,6 +266,7 @@ function fScenarioShowComponentRule(mode) {
   var lesson = fScenarioPresent();
   return !!lesson && [
     "Αλκάνια-Ονοματολογία και διακλαδώσεις",
+    "Αλκάνια · Δύο μέρη με Συνεργείο ονομάτων",
     "Αλκένια-Ονοματολογία και διακλαδώσεις",
     "Αλκίνια-Ονοματολογία και διακλαδώσεις",
     "Αλκαδιένια-Ονοματολογία και διακλαδώσεις",
@@ -205,6 +292,7 @@ function fScenarioShowAlkoxyRule() {
 }
 
 function fScenarioNew(title, silent) {
+  fScenarioCancelCheckpointPreparation();
   var scen = {
     id: fScenarioNewId(),
     title: title || ("scenario-" + (MuLERMoCScenario.seq)),
@@ -226,6 +314,7 @@ function fScenarioNew(title, silent) {
   return scen;
 }
 function fScenarioDelete(id) {
+  fScenarioCancelCheckpointPreparation();
   var i;
   for (i = 0; i < MuLERMoCScenario.scenarios.length; i++) {
     if (MuLERMoCScenario.scenarios[i].id === id) break;
@@ -243,6 +332,7 @@ function fScenarioDelete(id) {
   fScenarioPaintPickUi();
 }
 function fScenarioSetActive(id) {
+  fScenarioCancelCheckpointPreparation();
   var s = fScenarioGet(id);
   if (!s) return;
   MuLERMoCScenario.activeId = id;
@@ -4585,6 +4675,7 @@ function fScenarioImportFile(file) {
 // (menu menu-open + both viewers + all bars) via a transient clone — the
 // stored step keeps its authored show.* for a later Export.
 function fScenarioExitPresent() {
+  fScenarioCancelCheckpointPreparation();
   try {
     var checkpointApi = fScenarioCheckpointApi(fScenarioPresent());
     if (checkpointApi) checkpointApi.onExit();
@@ -4667,6 +4758,7 @@ function fScenarioExitPresent() {
   // Leave the step language behind: authoring continues in session language.
   try { window.__mulerStepLang = null; } catch (e) {}
   try { if (typeof fMulerRefreshStepChrome === "function") fMulerRefreshStepChrome(); } catch (e2) {}
+  if (window.fLessonLoadingDone) window.fLessonLoadingDone(false);
 }
 
 // Scroll only the card's open drawer to a step row (never the page/bar).
@@ -4709,6 +4801,7 @@ function fScenarioPresentBegin(id, startIdx) {
     : 0;
   start = Math.max(0, Math.min(start, scen.steps.length - 1));
   try {
+    if (fScenarioPrepareCheckpointTarget(scen, start, function () { fScenarioPresentBegin(scen.id, start); })) return;
     start = fScenarioResolveCheckpointTarget(scen, start);
   } catch (eCheckpoint) {
     fScenarioCheckpointError(eCheckpoint);
@@ -5995,8 +6088,8 @@ function fScenarioRenumber(id) {
   // This path also refreshes the controls after a quiz answer; it never applies
   // a snapshot, so answers/retries preserve the live molecule and viewer state.
   var next = document.getElementById("scNext");
-  var blocked = false;
-  if (MuLERMoCScenario.present && fScenarioHasCheckpoints(ps)) {
+  var blocked = !!MuLERMoCScenario.checkpointPreparation;
+  if (!blocked && MuLERMoCScenario.present && fScenarioHasCheckpoints(ps)) {
     try {
       var checkpointApi = fScenarioCheckpointApi(ps);
       blocked = ps.index < ps.steps.length - 1 &&
@@ -6049,9 +6142,11 @@ function fScenarioGo(i) {
   i = typeof i === "number" && isFinite(i) ? Math.floor(i) : 0;
   if (i < 0) i = 0;
   if (i >= ps.steps.length) i = ps.steps.length - 1;
+  if (!MuLERMoCScenario.present) fScenarioCancelCheckpointPreparation();
   if (MuLERMoCScenario.present) {
     var requested = i;
     try {
+      if (fScenarioPrepareCheckpointTarget(ps, requested, function () { fScenarioGo(requested); })) return;
       i = fScenarioResolveCheckpointTarget(ps, requested);
     } catch (eCheckpoint) {
       fScenarioCheckpointError(eCheckpoint);
@@ -6368,7 +6463,7 @@ function fScenarioBoot() {
     var m = /step=(\d+)/.exec(location.hash);
     if (m) {
       var i = Math.max(1, parseInt(m[1], 10)) - 1;
-      if (i !== hps.index) {
+      if (i !== hps.index || MuLERMoCScenario.checkpointPreparation) {
         fScenarioGo(i);
       }
     }
@@ -6380,5 +6475,35 @@ if (document.readyState === "loading") {
 } else {
   fScenarioBoot();
 }
+
+// Navigating/reloading the document invalidates receipt/round work as well as
+// in-page Exit. Late completion must never re-enter an obsolete presentation.
+function fScenarioSuspendCheckpointPreparation() {
+  if (MuLERMoCScenario.checkpointPreparation) {
+    MuLERMoCScenario.checkpointResumeOnShow = MuLERMoCScenario.checkpointPreparation;
+  }
+  fScenarioCancelCheckpointPreparation();
+}
+// JSmol starts teardown on beforeunload. Capture runs before its bubbling
+// handler, closing the interval in which a receipt could resume a dead viewer.
+window.addEventListener("beforeunload", function () {
+  fScenarioSuspendCheckpointPreparation();
+  // A cancelled navigation can leave this document alive. Refresh only quiz
+  // chrome, never its molecular snapshot, once the event has finished.
+  setTimeout(function () { if (MuLERMoCScenario.present) fScenarioPlayUi(); }, 0);
+}, true);
+window.addEventListener("pagehide", function () {
+  fScenarioSuspendCheckpointPreparation();
+  var api = window.NameleculeQuizCheckpoints;
+  if (api && typeof api.onExit === "function") api.onExit();
+});
+window.addEventListener("pageshow", function (event) {
+  if (!event.persisted) return;
+  var request = MuLERMoCScenario.checkpointResumeOnShow;
+  MuLERMoCScenario.checkpointResumeOnShow = null;
+  if (request && fScenarioGet(request.scenario.id) === request.scenario &&
+      fScenarioCheckpointContent(request.scenario) === request.content) request.resume();
+  else if (MuLERMoCScenario.present) fScenarioPlayUi();
+});
 
 window.addEventListener("resize", fScenarioSyncPresentClass);

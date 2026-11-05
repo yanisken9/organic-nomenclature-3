@@ -44,12 +44,12 @@
 
   <title>Namelecule — Ονοματολογία Οργανικών Ενώσεων</title>
 
-  <link rel="stylesheet" href="css/jsme-nick-54.css?v=v54-upstream-20261104-r2" />
+  <link rel="stylesheet" href="css/jsme-nick-54.css?v=merge54-20261105-r1" />
   <link rel="stylesheet" href="css/mulermoc-nom-scenario-54.css?v=v54-sync-20261104-r2" />
 
   <link rel="stylesheet" href="css/namelecule-54.css?v=v54-sync-20261104-r2" />
   <link rel="stylesheet" href="css/namelecule-repair-round.css?v=checkpoint-pilot-20261104-r1" />
-  <link rel="stylesheet" href="css/namelecule-quiz-checkpoints.css?v=checkpoint-pilot-20261104-r1" />
+  <link rel="stylesheet" href="css/namelecule-quiz-checkpoints.css?v=alkanes-two-part-20261105-r1" />
   <script src="js/namelecule-label-metrics.js?v=20261031-r1"></script>
   <script src="js/vendor/jsme/namelecule-20261031-r1/jsme.nocache.js"></script>
   <script src="js/vendor/jquery/jquery-4.0.0.min.js"></script>
@@ -177,6 +177,15 @@
                     Σχεδίαση και προσθήκη μορίων:
                   </div>
                   <div id="originalJSMECheck" class="checkBoxContainer selectedCheck">
+                    &nbsp;<span class="checkBox"></span>
+                  </div>
+                </div>
+
+                <div id="autoLinearize" class="settingRow">
+                  <div class="settingLabel" id="autoLinearizeLabel">
+                    Αυτόματη γραμμικοποίηση:
+                  </div>
+                  <div id="autoLinearizeCheck" class="checkBoxContainer selectedCheck">
                     &nbsp;<span class="checkBox"></span>
                   </div>
                 </div>
@@ -354,15 +363,18 @@
        files next to the data file and register each one, e.g.:
        <script src="js/MULERMOC_dimethyl_ether_data.js?v=54.1"></script> -->
   <script src="js/ui-icons-54.js?v=v54-sync-20261104-r2"></script>
-  <script src="js/mulermoc-nom-core-54.js?v=v54-upstream-20261104-r2"></script>
-  <script src="js/mulermoc-nom-molview-54.js?v=v54-upstream-20261104-r2"></script>
-  <script src="js/mulermoc-nom-teaching-54.js?v=v54-sync-20261104-r2"></script>
+  <script src="js/mulermoc-nom-core-54.js?v=merge54-20261105-r1"></script>
+  <script src="js/mulermoc-nom-molview-54.js?v=merge54-20261105-r1"></script>
+  <script src="js/mulermoc-nom-teaching-54.js?v=merge54-20261105-r1"></script>
   <script src="js/mulermoc-nom-note-54.js?v=v54-sync-20261104-r2"></script>
-  <script src="js/namelecule-game-repair.js?v=alkane-two-sets-20261104-r1"></script>
-  <script src="js/namelecule-quiz-checkpoints.js?v=checkpoint-pilot-20261104-r1"></script>
-  <script src="js/mulermoc-nom-scenario-54.js?v=checkpoint-pilot-20261104-r1"></script>
-  <script src="js/mulermoc-nom-iupac-54.js?v=v54-upstream-20261104-r2"></script>
-  <script src="js/mulermoc-nom-lang-54.js?v=v54-sync-20261104-r2"></script>
+  <script src="js/namelecule-game-repair.js?v=engine-compat-20261105-r1"></script>
+  <script src="js/namelecule-quiz-checkpoints.js?v=alkanes-two-part-20261105-r1"></script>
+  <script src="js/namelecule-chemistry-client.js?v=verified-engines-20261105-r1"></script>
+  <script src="js/namelecule-repair-generator.js?v=engine-pilot-20261105-r1"></script>
+  <script src="js/namelecule-generated-repair-checkpoint.js?v=alkanes-two-part-20261105-r1"></script>
+  <script src="js/mulermoc-nom-scenario-54.js?v=alkanes-two-part-20261105-r1"></script>
+  <script src="js/mulermoc-nom-iupac-54.js?v=merge54-20261105-r1"></script>
+  <script src="js/mulermoc-nom-lang-54.js?v=merge54-20261105-r1"></script>
   <script src="js/mulermoc-nom-name-en-54.js?v=v54-upstream-20261104-r2"></script>
   <script>
     window.JSApplet = window.JSApplet || {};

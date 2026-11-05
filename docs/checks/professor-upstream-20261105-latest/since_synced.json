@@ -1,0 +1,627 @@
+{
+  "url": "https://api.github.com/repos/nick-charistos/organic-nomenclature-3/compare/35d791ee...HEAD",
+  "html_url": "https://github.com/nick-charistos/organic-nomenclature-3/compare/35d791ee...HEAD",
+  "permalink_url": "https://github.com/nick-charistos/organic-nomenclature-3/compare/nick-charistos:35d791e...nick-charistos:f49b810",
+  "diff_url": "https://github.com/nick-charistos/organic-nomenclature-3/compare/35d791ee...HEAD.diff",
+  "patch_url": "https://github.com/nick-charistos/organic-nomenclature-3/compare/35d791ee...HEAD.patch",
+  "base_commit": {
+    "sha": "35d791ee9d6bdb8566d3adca1a1bdaba97efc5b8",
+    "node_id": "C_kwDOU4mZitoAKDM1ZDc5MWVlOWQ2YmRiODU2NmQzYWRjYTFhMWJkYWJhOTdlZmM1Yjg",
+    "commit": {
+      "author": {
+        "name": "nick-charistos",
+        "email": "nick-charistos@users.noreply.github.com",
+        "date": "2026-11-04T11:58:19Z"
+      },
+      "committer": {
+        "name": "nick-charistos",
+        "email": "nick-charistos@users.noreply.github.com",
+        "date": "2026-11-04T11:58:19Z"
+      },
+      "message": "drawing engine and beautifier improvements",
+      "tree": {
+        "sha": "07646a9bdb873cb2b90cd89e591e4b6261f16abc",
+        "url": "https://api.github.com/repos/nick-charistos/organic-nomenclature-3/git/trees/07646a9bdb873cb2b90cd89e591e4b6261f16abc"
+      },
+      "url": "https://api.github.com/repos/nick-charistos/organic-nomenclature-3/git/commits/35d791ee9d6bdb8566d3adca1a1bdaba97efc5b8",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/nick-charistos/organic-nomenclature-3/commits/35d791ee9d6bdb8566d3adca1a1bdaba97efc5b8",
+    "html_url": "https://github.com/nick-charistos/organic-nomenclature-3/commit/35d791ee9d6bdb8566d3adca1a1bdaba97efc5b8",
+    "comments_url": "https://api.github.com/repos/nick-charistos/organic-nomenclature-3/commits/35d791ee9d6bdb8566d3adca1a1bdaba97efc5b8/comments",
+    "author": {
+      "login": "nick-charistos",
+      "id": 84317444,
+      "node_id": "MDQ6VXNlcjg0MzE3NDQ0",
+      "avatar_url": "https://avatars.githubusercontent.com/u/84317444?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/nick-charistos",
+      "html_url": "https://github.com/nick-charistos",
+      "followers_url": "https://api.github.com/users/nick-charistos/followers",
+      "following_url": "https://api.github.com/users/nick-charistos/following{/other_user}",
+      "gists_url": "https://api.github.com/users/nick-charistos/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/nick-charistos/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/nick-charistos/subscriptions",
+      "organizations_url": "https://api.github.com/users/nick-charistos/orgs",
+      "repos_url": "https://api.github.com/users/nick-charistos/repos",
+      "events_url": "https://api.github.com/users/nick-charistos/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/nick-charistos/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "nick-charistos",
+      "id": 84317444,
+      "node_id": "MDQ6VXNlcjg0MzE3NDQ0",
+      "avatar_url": "https://avatars.githubusercontent.com/u/84317444?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/nick-charistos",
+      "html_url": "https://github.com/nick-charistos",
+      "followers_url": "https://api.github.com/users/nick-charistos/followers",
+      "following_url": "https://api.github.com/users/nick-charistos/following{/other_user}",
+      "gists_url": "https://api.github.com/users/nick-charistos/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/nick-charistos/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/nick-charistos/subscriptions",
+      "organizations_url": "https://api.github.com/users/nick-charistos/orgs",
+      "repos_url": "https://api.github.com/users/nick-charistos/repos",
+      "events_url": "https://api.github.com/users/nick-charistos/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/nick-charistos/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "02dbcfaf79e23f1933a252e0b1f6671049d39b78",
+        "url": "https://api.github.com/repos/nick-charistos/organic-nomenclature-3/commits/02dbcfaf79e23f1933a252e0b1f6671049d39b78",
+        "html_url": "https://github.com/nick-charistos/organic-nomenclature-3/commit/02dbcfaf79e23f1933a252e0b1f6671049d39b78"
+      }
+    ]
+  },
+  "merge_base_commit": {
+    "sha": "35d791ee9d6bdb8566d3adca1a1bdaba97efc5b8",
+    "node_id": "C_kwDOU4mZitoAKDM1ZDc5MWVlOWQ2YmRiODU2NmQzYWRjYTFhMWJkYWJhOTdlZmM1Yjg",
+    "commit": {
+      "author": {
+        "name": "nick-charistos",
+        "email": "nick-charistos@users.noreply.github.com",
+        "date": "2026-11-04T11:58:19Z"
+      },
+      "committer": {
+        "name": "nick-charistos",
+        "email": "nick-charistos@users.noreply.github.com",
+        "date": "2026-11-04T11:58:19Z"
+      },
+      "message": "drawing engine and beautifier improvements",
+      "tree": {
+        "sha": "07646a9bdb873cb2b90cd89e591e4b6261f16abc",
+        "url": "https://api.github.com/repos/nick-charistos/organic-nomenclature-3/git/trees/07646a9bdb873cb2b90cd89e591e4b6261f16abc"
+      },
+      "url": "https://api.github.com/repos/nick-charistos/organic-nomenclature-3/git/commits/35d791ee9d6bdb8566d3adca1a1bdaba97efc5b8",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/nick-charistos/organic-nomenclature-3/commits/35d791ee9d6bdb8566d3adca1a1bdaba97efc5b8",
+    "html_url": "https://github.com/nick-charistos/organic-nomenclature-3/commit/35d791ee9d6bdb8566d3adca1a1bdaba97efc5b8",
+    "comments_url": "https://api.github.com/repos/nick-charistos/organic-nomenclature-3/commits/35d791ee9d6bdb8566d3adca1a1bdaba97efc5b8/comments",
+    "author": {
+      "login": "nick-charistos",
+      "id": 84317444,
+      "node_id": "MDQ6VXNlcjg0MzE3NDQ0",
+      "avatar_url": "https://avatars.githubusercontent.com/u/84317444?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/nick-charistos",
+      "html_url": "https://github.com/nick-charistos",
+      "followers_url": "https://api.github.com/users/nick-charistos/followers",
+      "following_url": "https://api.github.com/users/nick-charistos/following{/other_user}",
+      "gists_url": "https://api.github.com/users/nick-charistos/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/nick-charistos/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/nick-charistos/subscriptions",
+      "organizations_url": "https://api.github.com/users/nick-charistos/orgs",
+      "repos_url": "https://api.github.com/users/nick-charistos/repos",
+      "events_url": "https://api.github.com/users/nick-charistos/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/nick-charistos/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "nick-charistos",
+      "id": 84317444,
+      "node_id": "MDQ6VXNlcjg0MzE3NDQ0",
+      "avatar_url": "https://avatars.githubusercontent.com/u/84317444?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/nick-charistos",
+      "html_url": "https://github.com/nick-charistos",
+      "followers_url": "https://api.github.com/users/nick-charistos/followers",
+      "following_url": "https://api.github.com/users/nick-charistos/following{/other_user}",
+      "gists_url": "https://api.github.com/users/nick-charistos/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/nick-charistos/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/nick-charistos/subscriptions",
+      "organizations_url": "https://api.github.com/users/nick-charistos/orgs",
+      "repos_url": "https://api.github.com/users/nick-charistos/repos",
+      "events_url": "https://api.github.com/users/nick-charistos/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/nick-charistos/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "02dbcfaf79e23f1933a252e0b1f6671049d39b78",
+        "url": "https://api.github.com/repos/nick-charistos/organic-nomenclature-3/commits/02dbcfaf79e23f1933a252e0b1f6671049d39b78",
+        "html_url": "https://github.com/nick-charistos/organic-nomenclature-3/commit/02dbcfaf79e23f1933a252e0b1f6671049d39b78"
+      }
+    ]
+  },
+  "status": "ahead",
+  "ahead_by": 4,
+  "behind_by": 0,
+  "total_commits": 4,
+  "commits": [
+    {
+      "sha": "aa6d250411d90e59348962aa4105bb0d3405b2ee",
+      "node_id": "C_kwDOU4mZitoAKGFhNmQyNTA0MTFkOTBlNTkzNDg5NjJhYTQxMDViYjBkMzQwNWIyZWU",
+      "commit": {
+        "author": {
+          "name": "nick-charistos",
+          "email": "nick-charistos@users.noreply.github.com",
+          "date": "2026-11-04T17:45:55Z"
+        },
+        "committer": {
+          "name": "nick-charistos",
+          "email": "nick-charistos@users.noreply.github.com",
+          "date": "2026-11-04T17:45:55Z"
+        },
+        "message": "v54 review follow-ups: switch default ON, drop dead engineFailed, guarded Enter, stage2 refresh\n\n- Drawing master switch ships ON (entries visible at boot); CHANGELOG corrected (was: default off)\n- Submit: removed dead engineFailed flag (helper returns ok/ring now)\n- fMolDraftEnter: null-safe checkbox guard with draftEnableFirst toast (was silent return)\n- STAGE2: open list current (beautify/3-slot/EN-verdicts done; RDKit, 2B correction, Q4 exercises remain); Q1 answered",
+        "tree": {
+          "sha": "f68db487f5230a309a50750e176cf327b1100dc1",
+          "url": "https://api.github.com/repos/nick-charistos/organic-nomenclature-3/git/trees/f68db487f5230a309a50750e176cf327b1100dc1"
+        },
+        "url": "https://api.github.com/repos/nick-charistos/organic-nomenclature-3/git/commits/aa6d250411d90e59348962aa4105bb0d3405b2ee",
+        "comment_count": 0,
+        "verification": {
+          "verified": false,
+          "reason": "unsigned",
+          "signature": null,
+          "payload": null,
+          "verified_at": null
+        }
+      },
+      "url": "https://api.github.com/repos/nick-charistos/organic-nomenclature-3/commits/aa6d250411d90e59348962aa4105bb0d3405b2ee",
+      "html_url": "https://github.com/nick-charistos/organic-nomenclature-3/commit/aa6d250411d90e59348962aa4105bb0d3405b2ee",
+      "comments_url": "https://api.github.com/repos/nick-charistos/organic-nomenclature-3/commits/aa6d250411d90e59348962aa4105bb0d3405b2ee/comments",
+      "author": {
+        "login": "nick-charistos",
+        "id": 84317444,
+        "node_id": "MDQ6VXNlcjg0MzE3NDQ0",
+        "avatar_url": "https://avatars.githubusercontent.com/u/84317444?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/nick-charistos",
+        "html_url": "https://github.com/nick-charistos",
+        "followers_url": "https://api.github.com/users/nick-charistos/followers",
+        "following_url": "https://api.github.com/users/nick-charistos/following{/other_user}",
+        "gists_url": "https://api.github.com/users/nick-charistos/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/nick-charistos/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/nick-charistos/subscriptions",
+        "organizations_url": "https://api.github.com/users/nick-charistos/orgs",
+        "repos_url": "https://api.github.com/users/nick-charistos/repos",
+        "events_url": "https://api.github.com/users/nick-charistos/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/nick-charistos/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "nick-charistos",
+        "id": 84317444,
+        "node_id": "MDQ6VXNlcjg0MzE3NDQ0",
+        "avatar_url": "https://avatars.githubusercontent.com/u/84317444?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/nick-charistos",
+        "html_url": "https://github.com/nick-charistos",
+        "followers_url": "https://api.github.com/users/nick-charistos/followers",
+        "following_url": "https://api.github.com/users/nick-charistos/following{/other_user}",
+        "gists_url": "https://api.github.com/users/nick-charistos/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/nick-charistos/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/nick-charistos/subscriptions",
+        "organizations_url": "https://api.github.com/users/nick-charistos/orgs",
+        "repos_url": "https://api.github.com/users/nick-charistos/repos",
+        "events_url": "https://api.github.com/users/nick-charistos/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/nick-charistos/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "35d791ee9d6bdb8566d3adca1a1bdaba97efc5b8",
+          "url": "https://api.github.com/repos/nick-charistos/organic-nomenclature-3/commits/35d791ee9d6bdb8566d3adca1a1bdaba97efc5b8",
+          "html_url": "https://github.com/nick-charistos/organic-nomenclature-3/commit/35d791ee9d6bdb8566d3adca1a1bdaba97efc5b8"
+        }
+      ]
+    },
+    {
+      "sha": "2cbfd88a6947af6b6e332654a77c57b205a8fc6a",
+      "node_id": "C_kwDOU4mZitoAKDJjYmZkODhhNjk0N2FmNmI2ZTMzMjY1NGE3N2M1N2IyMDVhOGZjNmE",
+      "commit": {
+        "author": {
+          "name": "nick-charistos",
+          "email": "nick-charistos@users.noreply.github.com",
+          "date": "2026-11-04T17:46:27Z"
+        },
+        "committer": {
+          "name": "nick-charistos",
+          "email": "nick-charistos@users.noreply.github.com",
+          "date": "2026-11-04T17:46:27Z"
+        },
+        "message": "docs: resume pointer -> aa6d250",
+        "tree": {
+          "sha": "9b81cd53a015f59e46b51a399bacbece7604adcb",
+          "url": "https://api.github.com/repos/nick-charistos/organic-nomenclature-3/git/trees/9b81cd53a015f59e46b51a399bacbece7604adcb"
+        },
+        "url": "https://api.github.com/repos/nick-charistos/organic-nomenclature-3/git/commits/2cbfd88a6947af6b6e332654a77c57b205a8fc6a",
+        "comment_count": 0,
+        "verification": {
+          "verified": false,
+          "reason": "unsigned",
+          "signature": null,
+          "payload": null,
+          "verified_at": null
+        }
+      },
+      "url": "https://api.github.com/repos/nick-charistos/organic-nomenclature-3/commits/2cbfd88a6947af6b6e332654a77c57b205a8fc6a",
+      "html_url": "https://github.com/nick-charistos/organic-nomenclature-3/commit/2cbfd88a6947af6b6e332654a77c57b205a8fc6a",
+      "comments_url": "https://api.github.com/repos/nick-charistos/organic-nomenclature-3/commits/2cbfd88a6947af6b6e332654a77c57b205a8fc6a/comments",
+      "author": {
+        "login": "nick-charistos",
+        "id": 84317444,
+        "node_id": "MDQ6VXNlcjg0MzE3NDQ0",
+        "avatar_url": "https://avatars.githubusercontent.com/u/84317444?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/nick-charistos",
+        "html_url": "https://github.com/nick-charistos",
+        "followers_url": "https://api.github.com/users/nick-charistos/followers",
+        "following_url": "https://api.github.com/users/nick-charistos/following{/other_user}",
+        "gists_url": "https://api.github.com/users/nick-charistos/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/nick-charistos/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/nick-charistos/subscriptions",
+        "organizations_url": "https://api.github.com/users/nick-charistos/orgs",
+        "repos_url": "https://api.github.com/users/nick-charistos/repos",
+        "events_url": "https://api.github.com/users/nick-charistos/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/nick-charistos/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "nick-charistos",
+        "id": 84317444,
+        "node_id": "MDQ6VXNlcjg0MzE3NDQ0",
+        "avatar_url": "https://avatars.githubusercontent.com/u/84317444?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/nick-charistos",
+        "html_url": "https://github.com/nick-charistos",
+        "followers_url": "https://api.github.com/users/nick-charistos/followers",
+        "following_url": "https://api.github.com/users/nick-charistos/following{/other_user}",
+        "gists_url": "https://api.github.com/users/nick-charistos/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/nick-charistos/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/nick-charistos/subscriptions",
+        "organizations_url": "https://api.github.com/users/nick-charistos/orgs",
+        "repos_url": "https://api.github.com/users/nick-charistos/repos",
+        "events_url": "https://api.github.com/users/nick-charistos/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/nick-charistos/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "aa6d250411d90e59348962aa4105bb0d3405b2ee",
+          "url": "https://api.github.com/repos/nick-charistos/organic-nomenclature-3/commits/aa6d250411d90e59348962aa4105bb0d3405b2ee",
+          "html_url": "https://github.com/nick-charistos/organic-nomenclature-3/commit/aa6d250411d90e59348962aa4105bb0d3405b2ee"
+        }
+      ]
+    },
+    {
+      "sha": "ab590dcff636f81f1bd7a31e87312c7947b51e03",
+      "node_id": "C_kwDOU4mZitoAKGFiNTkwZGNmZjYzNmY4MWYxYmQ3YTMxZTg3MzEyYzc5NDdiNTFlMDM",
+      "commit": {
+        "author": {
+          "name": "nick-charistos",
+          "email": "nick-charistos@users.noreply.github.com",
+          "date": "2026-11-04T21:36:21Z"
+        },
+        "committer": {
+          "name": "nick-charistos",
+          "email": "nick-charistos@users.noreply.github.com",
+          "date": "2026-11-04T21:36:21Z"
+        },
+        "message": "v54 draft flow: validated skeletal ladder, async depict race fix, canonical SMILES end-to-end\n\n- Per-rung validated skeletal acceptance (display/edit/builtin); bad rungs\n  fall through instead of stranding the ladder\n- V2000 counts-line located by shape (JSME 2-line headers); parser fails\n  closed on truncated input\n- Async depict read-until-stable defeats the layout race; Accept async\n- Canonical SMILES propagation, info-panel links, auto-linearize, drawing\n  master switch; cache-busters to ?v=54.3",
+        "tree": {
+          "sha": "9370f99580038ec922f56211b060e5487f045fca",
+          "url": "https://api.github.com/repos/nick-charistos/organic-nomenclature-3/git/trees/9370f99580038ec922f56211b060e5487f045fca"
+        },
+        "url": "https://api.github.com/repos/nick-charistos/organic-nomenclature-3/git/commits/ab590dcff636f81f1bd7a31e87312c7947b51e03",
+        "comment_count": 0,
+        "verification": {
+          "verified": false,
+          "reason": "unsigned",
+          "signature": null,
+          "payload": null,
+          "verified_at": null
+        }
+      },
+      "url": "https://api.github.com/repos/nick-charistos/organic-nomenclature-3/commits/ab590dcff636f81f1bd7a31e87312c7947b51e03",
+      "html_url": "https://github.com/nick-charistos/organic-nomenclature-3/commit/ab590dcff636f81f1bd7a31e87312c7947b51e03",
+      "comments_url": "https://api.github.com/repos/nick-charistos/organic-nomenclature-3/commits/ab590dcff636f81f1bd7a31e87312c7947b51e03/comments",
+      "author": {
+        "login": "nick-charistos",
+        "id": 84317444,
+        "node_id": "MDQ6VXNlcjg0MzE3NDQ0",
+        "avatar_url": "https://avatars.githubusercontent.com/u/84317444?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/nick-charistos",
+        "html_url": "https://github.com/nick-charistos",
+        "followers_url": "https://api.github.com/users/nick-charistos/followers",
+        "following_url": "https://api.github.com/users/nick-charistos/following{/other_user}",
+        "gists_url": "https://api.github.com/users/nick-charistos/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/nick-charistos/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/nick-charistos/subscriptions",
+        "organizations_url": "https://api.github.com/users/nick-charistos/orgs",
+        "repos_url": "https://api.github.com/users/nick-charistos/repos",
+        "events_url": "https://api.github.com/users/nick-charistos/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/nick-charistos/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "nick-charistos",
+        "id": 84317444,
+        "node_id": "MDQ6VXNlcjg0MzE3NDQ0",
+        "avatar_url": "https://avatars.githubusercontent.com/u/84317444?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/nick-charistos",
+        "html_url": "https://github.com/nick-charistos",
+        "followers_url": "https://api.github.com/users/nick-charistos/followers",
+        "following_url": "https://api.github.com/users/nick-charistos/following{/other_user}",
+        "gists_url": "https://api.github.com/users/nick-charistos/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/nick-charistos/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/nick-charistos/subscriptions",
+        "organizations_url": "https://api.github.com/users/nick-charistos/orgs",
+        "repos_url": "https://api.github.com/users/nick-charistos/repos",
+        "events_url": "https://api.github.com/users/nick-charistos/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/nick-charistos/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "2cbfd88a6947af6b6e332654a77c57b205a8fc6a",
+          "url": "https://api.github.com/repos/nick-charistos/organic-nomenclature-3/commits/2cbfd88a6947af6b6e332654a77c57b205a8fc6a",
+          "html_url": "https://github.com/nick-charistos/organic-nomenclature-3/commit/2cbfd88a6947af6b6e332654a77c57b205a8fc6a"
+        }
+      ]
+    },
+    {
+      "sha": "f49b810c93ec85d06163679aff4a8642ea1b4cd3",
+      "node_id": "C_kwDOU4mZitoAKGY0OWI4MTBjOTNlYzg1ZDA2MTYzNjc5YWZmNGE4NjQyZWExYjRjZDM",
+      "commit": {
+        "author": {
+          "name": "nick-charistos",
+          "email": "nick-charistos@users.noreply.github.com",
+          "date": "2026-11-04T21:38:26Z"
+        },
+        "committer": {
+          "name": "nick-charistos",
+          "email": "nick-charistos@users.noreply.github.com",
+          "date": "2026-11-04T21:38:26Z"
+        },
+        "message": "docs: session log + resume pointer -> ab590dc",
+        "tree": {
+          "sha": "e6b06d6570d45d8fa5d6de94910edcea21e4796a",
+          "url": "https://api.github.com/repos/nick-charistos/organic-nomenclature-3/git/trees/e6b06d6570d45d8fa5d6de94910edcea21e4796a"
+        },
+        "url": "https://api.github.com/repos/nick-charistos/organic-nomenclature-3/git/commits/f49b810c93ec85d06163679aff4a8642ea1b4cd3",
+        "comment_count": 0,
+        "verification": {
+          "verified": false,
+          "reason": "unsigned",
+          "signature": null,
+          "payload": null,
+          "verified_at": null
+        }
+      },
+      "url": "https://api.github.com/repos/nick-charistos/organic-nomenclature-3/commits/f49b810c93ec85d06163679aff4a8642ea1b4cd3",
+      "html_url": "https://github.com/nick-charistos/organic-nomenclature-3/commit/f49b810c93ec85d06163679aff4a8642ea1b4cd3",
+      "comments_url": "https://api.github.com/repos/nick-charistos/organic-nomenclature-3/commits/f49b810c93ec85d06163679aff4a8642ea1b4cd3/comments",
+      "author": {
+        "login": "nick-charistos",
+        "id": 84317444,
+        "node_id": "MDQ6VXNlcjg0MzE3NDQ0",
+        "avatar_url": "https://avatars.githubusercontent.com/u/84317444?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/nick-charistos",
+        "html_url": "https://github.com/nick-charistos",
+        "followers_url": "https://api.github.com/users/nick-charistos/followers",
+        "following_url": "https://api.github.com/users/nick-charistos/following{/other_user}",
+        "gists_url": "https://api.github.com/users/nick-charistos/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/nick-charistos/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/nick-charistos/subscriptions",
+        "organizations_url": "https://api.github.com/users/nick-charistos/orgs",
+        "repos_url": "https://api.github.com/users/nick-charistos/repos",
+        "events_url": "https://api.github.com/users/nick-charistos/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/nick-charistos/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "nick-charistos",
+        "id": 84317444,
+        "node_id": "MDQ6VXNlcjg0MzE3NDQ0",
+        "avatar_url": "https://avatars.githubusercontent.com/u/84317444?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/nick-charistos",
+        "html_url": "https://github.com/nick-charistos",
+        "followers_url": "https://api.github.com/users/nick-charistos/followers",
+        "following_url": "https://api.github.com/users/nick-charistos/following{/other_user}",
+        "gists_url": "https://api.github.com/users/nick-charistos/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/nick-charistos/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/nick-charistos/subscriptions",
+        "organizations_url": "https://api.github.com/users/nick-charistos/orgs",
+        "repos_url": "https://api.github.com/users/nick-charistos/repos",
+        "events_url": "https://api.github.com/users/nick-charistos/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/nick-charistos/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "ab590dcff636f81f1bd7a31e87312c7947b51e03",
+          "url": "https://api.github.com/repos/nick-charistos/organic-nomenclature-3/commits/ab590dcff636f81f1bd7a31e87312c7947b51e03",
+          "html_url": "https://github.com/nick-charistos/organic-nomenclature-3/commit/ab590dcff636f81f1bd7a31e87312c7947b51e03"
+        }
+      ]
+    }
+  ],
+  "files": [
+    {
+      "sha": "c5a2ff3687817463cc0fec4b0ba3179eb3e22db5",
+      "filename": "css/jsme-nick-54.css",
+      "status": "modified",
+      "additions": 5,
+      "deletions": 2,
+      "changes": 7,
+      "blob_url": "https://github.com/nick-charistos/organic-nomenclature-3/blob/f49b810c93ec85d06163679aff4a8642ea1b4cd3/css%2Fjsme-nick-54.css",
+      "raw_url": "https://github.com/nick-charistos/organic-nomenclature-3/raw/f49b810c93ec85d06163679aff4a8642ea1b4cd3/css%2Fjsme-nick-54.css",
+      "contents_url": "https://api.github.com/repos/nick-charistos/organic-nomenclature-3/contents/css%2Fjsme-nick-54.css?ref=f49b810c93ec85d06163679aff4a8642ea1b4cd3",
+      "patch": "@@ -485,8 +485,8 @@ header {\n   font-family: \"Roboto Condensed\", sans-serif;\n   font-size: 0.813rem;\n   color: #333;\n-  min-width: 44px;\n-  text-align: right;\n+  /* min-width: 44px; */\n+  /* text-align: right; */\n }\n \n /* \"Full\" viewport-height toggle beside the viewer-height sliders (v52):\n@@ -736,6 +736,9 @@ header {\n   font-family: monospace;\n   word-break: break-all;\n }\n+.molInfoRow a.molInfoLink {\n+  color: var(--darkBlue);\n+}\n .molInfoValue {\n   word-break: break-word;\n }"
+    },
+    {
+      "sha": "1174184ac9e728773f3a09e7842e40ff8e591797",
+      "filename": "docs/CHANGELOG.md",
+      "status": "modified",
+      "additions": 10,
+      "deletions": 3,
+      "changes": 13,
+      "blob_url": "https://github.com/nick-charistos/organic-nomenclature-3/blob/f49b810c93ec85d06163679aff4a8642ea1b4cd3/docs%2FCHANGELOG.md",
+      "raw_url": "https://github.com/nick-charistos/organic-nomenclature-3/raw/f49b810c93ec85d06163679aff4a8642ea1b4cd3/docs%2FCHANGELOG.md",
+      "contents_url": "https://api.github.com/repos/nick-charistos/organic-nomenclature-3/contents/docs%2FCHANGELOG.md?ref=f49b810c93ec85d06163679aff4a8642ea1b4cd3",
+      "patch": "@@ -27,9 +27,16 @@ New parallel file set `mulermoc-nom-54.html` + `js/*-54.js` + `css/*-54.css`, fo\n - Chain stepper 3D tracking: per-molecule 2D↔3D heavy-atom isomorphism map translates the adopted chain atom-by-atom (symmetry-safe — neopentane's 6 identical C–C–C paths cycle correctly); signature match then ordinal are fallbacks. Also applied at load-time snap.\n - Draft preview now shows the predicted EN name under the GR engine name (sandbox-safe transliteration, PubChem systematic fallback for Greek-common esters/complex ethers) under a \"Πρόβλεψη Ονομασίας\" title.\n - Tri-state name verdicts (`[✓|?|✕]` per predicted name, correct/wrong/unconfirmed): EN auto-checks via the shared oracle comparator when untouched (human always wins); tints (green/red/neutral); reset on resubmit; persisted as `nameCheck` (+ history + save-file header line) so each saved file is labeled eval data for engine work. Accept stays non-blocking with an outcome toast.\n-- Three-slot 2D derivation at Accept (drawn variant verbatim + generated siblings): drawn MOL in its slot, school-condensed via main-chain linearization, expanded via topped-up explicit H, skeletal via JSME zigzag ladder (display applet → edit applet → built-in, validated, logged) with drawn-geometry fallback; update-in-place rewrites all three slots; the accepted menu row is marked, grouped open, and scrolled into view.\n-- Beautify button (`Ομορφοποίηση`, school slots only): rewrites the canvas with the linearizer, marks stale so resubmit recaptures. Shares one sandbox engine pass with Submit (`fMolDraftSandboxAnalyse`, chain rebuild included) — the earlier split caused pre-submit beautify to lay out on the template's stale chain.\n-- Drawing master switch: the old `Επεξεργασία/Σχεδίαση 2D` Ρυθμίσεις checkbox is now \"Σχεδίαση και προσθήκη μορίων\" (default off); Edit/New entries exist only while enabled, mid-draft toggle blocked, Enter refuses while off.\n+- Three-slot 2D derivation at Accept (drawn variant verbatim + generated siblings): drawn MOL in its slot, school-condensed via main-chain linearization, expanded via topped-up explicit H, skeletal via JSME-first ladder (display applet → edit applet on PubChem canonical SMILES, built-in zigzag as guaranteed fallback; each rung validated at acquisition so a bad rung can never strand the ladder) with drawn-geometry fallback; update-in-place rewrites all three slots; the accepted menu row is marked, grouped open, and scrolled into view.\n+- Linearize button (`Γραμμικοποίηση`/`Linearize`, school slots only; renamed from Beautify/Ομορφοποίηση): rewrites the canvas with the linearizer, marks stale so resubmit recaptures. Shares one sandbox engine pass with Submit (`fMolDraftSandboxAnalyse`, chain rebuild included) — the earlier split caused pre-submit beautify to lay out on the template's stale chain. Shared core factored into `fMolDraftAutoTidy` (read → sandbox → linearize → write back → re-read).\n+- Auto-linearize (Ρυθμίσεις `Αυτόματη γραμμικοποίηση`, default on): school drawings are tidied to the canonical linear layout automatically at the start of Submit, before the naming run — preview and stored MOLs always come from tidied geometry, with no extra submit cycle. Skeletal drafts pass through untouched (zigzag path owns that slot). Manual Linearize button only shows when auto is off.\n+- Drawing master switch: the old `Επεξεργασία/Σχεδίαση 2D` Ρυθμίσεις checkbox is now \"Σχεδίαση και προσθήκη μορίων\" (default on, entries visible at boot); Edit/New entries exist only while enabled, mid-draft toggle blocked, Enter refuses while off.\n+- Canonical SMILES end-to-end (no extra fetch — already in the PUG payload, now propagated): `fEnrichMolWithIUPAC` + Accept store `canonicalSmiles`; the skeletal JSME rungs depict canonical-first (canonical input order → reproducible layout), drawing SMILES as fallback; molecule info panel shows canonical SMILES with copy, and SMILES + IUPAC names link to the PubChem compound page when a CID exists.\n+- HOOC orientation fix: the linearizer's terminal chain branches now lean outward in x, so the geometry-based HOOC/COOH test decides correctly on both ends (was: tied at anchor x, always forward COOH — the reported \"CH2 on the carboxyl carbon\" was this overlap artifact on C2, not an H-count bug).\n+- Ether links stay linear: R-O-R oxygen on a terminal chain atom is laid out horizontally outward (same outward-lean family as the HOOC fix) instead of kinking the R groups orthogonal.\n+- Condensed slot hardening: hand-drawn explicit H are stripped before storing condensed (the overlay adds implicit H itself, so kept H would double-render); expanded generation unchanged (strip → linearize → top up).\n+- V2000 counts-line located by shape, not position: JSME depict output uses a 2-line header (counts at index 2) vs 3-line stored files — `fParseMolV2000` (plus `fMakeAnnotatedSkeletal` and the horizontal-equivalent chain check) now scans for the counts line instead of hardcoding index 3. Without this every JSME rung failed validation and the ladder always fell through to drawn geometry.\n+- Depict layout-race fix: `fMolDraftDepictSmiles` is now async — inputs once, then polls `molFile()` (up to 6 reads × 120ms) until the output parses with the drawn heavy-atom count, instead of a same-tick read that caught JSME mid-layout (truncated ~151-char stubs, `heavy 9 vs 0`). `fMolDraftAccept` is async (sole caller is a fire-and-forget `onclick`, so safe); `fParseMolV2000` additionally fails closed on truncated input (body-length check, non-empty element fields, no phantom `C@(0,0)`). Cache-busters bumped to `?v=54.3` so mixed old/new file versions can't recur. Verified live: the `display(canon)` rung now wins via read-until-stable (`depict settled`, `skelSrc=display`), builtin remains as fallback.\n \n ## [v53] (English version: full UI + molecule naming in English, Greek default preserved)\n "
+    },
+    {
+      "sha": "3372497e724c0d084c8e95454878c424a03016be",
+      "filename": "docs/SESSION-NOTES.md",
+      "status": "modified",
+      "additions": 12,
+      "deletions": 2,
+      "changes": 14,
+      "blob_url": "https://github.com/nick-charistos/organic-nomenclature-3/blob/f49b810c93ec85d06163679aff4a8642ea1b4cd3/docs%2FSESSION-NOTES.md",
+      "raw_url": "https://github.com/nick-charistos/organic-nomenclature-3/raw/f49b810c93ec85d06163679aff4a8642ea1b4cd3/docs%2FSESSION-NOTES.md",
+      "contents_url": "https://api.github.com/repos/nick-charistos/organic-nomenclature-3/contents/docs%2FSESSION-NOTES.md?ref=f49b810c93ec85d06163679aff4a8642ea1b4cd3",
+      "patch": "@@ -1,7 +1,8 @@\n # Session notes — 2026-10-03 (resume point for next session)\n \n-> **Resume pointer (cross-machine):** last commit `d081c88` (2026-11-04) —\n-> v54 shared sandbox engine pass + drawing master switch + docs, tree clean. Routine:\n+> **Resume pointer (cross-machine):** last commit `ab590dc` (2026-11-04) —\n+> v54 draft flow (validated skeletal ladder, depict race fix, canonical SMILES,\n+> auto-linearize, `?v=54.3`), verified live, tree clean. Routine:\n > end-of-day commit + push and update this pointer; on the other machine pull\n > first, then resume from the baseline below + `git log --oneline -5` +\n > `git status`. OpenCode sessions themselves stay machine-local.\n@@ -2577,3 +2578,12 @@ follows; one Save → Present → Next → Exit round-trip.\n * Amber = 15 §E novel (confirmed no-record); 19 further missing were bulk-run throttling (spot re-checks resolve to match/red), motivating the error split.\n * Fetch layer now distinguishes transport failure (lavender `verdict-noerror`, `iupacFetchError`) from genuine no-record (amber). Only transport-like errors in `lastErr` count as failed; PubChem/CIR 404-style empties stay amber.\n * REVIEW §N watchlist written (10 red incl. prior-run dial row, 15 amber + transient note). Individual re-checks: butene_2 + hexen_2_yn_4_dioic_acid → systematic match; 3 throttled esters → red with exact oracle strings captured.\n+\n+## 2026-11-03/04 — v54 draft flow: validated skeletal ladder + depict race fix (verified live)\n+\n+* Commits: `d081c88` (shared sandbox engine pass + drawing master switch), `35d791e` (drawing engine + beautifier), `aa6d250` (switch default ON, dead `engineFailed` dropped, guarded Enter, STAGE2 refresh), `ab590dc` (this batch).\n+* Skeletal ladder is JSME-first (display applet → edit applet on PubChem canonical SMILES) with built-in `fZigzagMol` fallback. Each rung validated at acquisition (`_acceptSkel`: parse + heavy count + non-zero coords + geometry differs from drawing) so a bad rung falls through instead of stranding the ladder; post-ladder validation stays as safety net. Per-rung console receipt (`won …` / `rejected (…)` / `accepted …`, `skelSrc=` in slots line).\n+* Two parser defects fixed along the way: counts line located by shape (`fMolCountsLine`, JSME uses a 2-line header) and fail-closed parsing (no phantom `C@(0,0)` on truncated reads). Same locator applied to `fMakeAnnotatedSkeletal` + horizontal-equivalent chain check.\n+* Depict layout race fixed: `fMolDraftDepictSmiles` is async (input once, poll `molFile()` up to 6×120ms until output carries the drawn heavy count); `fMolDraftAccept` async (sole caller is a fire-and-forget `onclick`). Root-caused from a 151-char truncated read + `heavy 9 vs 0` rejections.\n+* Also in batch: canonical SMILES end-to-end (info panel shows PubChem canonical when available, links + copy follow display), auto-linearize default-on with manual button only when off, drawing master switch, `?v=54.3` cache-busters (mixed old/new files had muddied one debug round — bump busters with every JS change from now on).\n+* Verified live by owner: `display(canon)` rung wins via read-until-stable (`depict settled`, `skelSrc=display`), builtin fallback intact. Standing rules re-armed: no commit without explicit word; `git status` clean at `ab590dc`."
+    },
+    {
+      "sha": "ca3a31dda52462cb63aec4747e9e83b6549d54cf",
+      "filename": "docs/STAGE2-AUTHORING-54.md",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 2,
+      "changes": 4,
+      "blob_url": "https://github.com/nick-charistos/organic-nomenclature-3/blob/f49b810c93ec85d06163679aff4a8642ea1b4cd3/docs%2FSTAGE2-AUTHORING-54.md",
+      "raw_url": "https://github.com/nick-charistos/organic-nomenclature-3/raw/f49b810c93ec85d06163679aff4a8642ea1b4cd3/docs%2FSTAGE2-AUTHORING-54.md",
+      "contents_url": "https://api.github.com/repos/nick-charistos/organic-nomenclature-3/contents/docs%2FSTAGE2-AUTHORING-54.md?ref=f49b810c93ec85d06163679aff4a8642ea1b4cd3",
+      "patch": "@@ -6,7 +6,7 @@\n > state machine), Accept (fork/update-in-place by molecule identity, readable keys, dup + 3D\n > gates, manual per-molecule save), 3-slot 2D generation (linearized school-condensed, H-expanded,\n > JSME zigzag skeletal ladder), formula generator, menu fixes, chain-stepper atom map, toast hardening. Open:\n-> RDKit local 3D (gates Accept), beautify button (spec'd), 2B author correction,\n+> RDKit local 3D (gates Accept for record-less drawings), 2B author correction,\n > exercise types (Q4 first).\n \n ## Where we are (Stage 1, done; v54 live)\n@@ -34,7 +34,7 @@\n - Duplicate guard: canonical SMILES compare against existing 141 + other drafts at submit.\n \n ## Open questions (tomorrow)\n-1. 2D mode variants: derive at submit (JSME-side) vs store one molfile + convert on switch?\n+1. ~~2D mode variants: derive at submit (JSME-side) vs store one molfile + convert on switch?~~ Answered 2026-11-04: derive at Accept, store all three slots (drawn verbatim + linearized school-condensed + H-expanded + zigzag skeletal via JSME ladder with built-in fallback).\n 2. RDKit.js: is `RDKit/` usable as WASM, or fetch remote? Fallback if neither?\n 3. Correction granularity: free-text component edit vs slot-level (prefix/locant/stem/suffix) pickers?\n 4. Exercise question types to lock fragment-event API before building author UI twice."
+    },
+    {
+      "sha": "3b70e102d8460e54d2e622980cd60280eab504d2",
+      "filename": "js/mulermoc-nom-core-54.js",
+      "status": "modified",
+      "additions": 74,
+      "deletions": 12,
+      "changes": 86,
+      "blob_url": "https://github.com/nick-charistos/organic-nomenclature-3/blob/f49b810c93ec85d06163679aff4a8642ea1b4cd3/js%2Fmulermoc-nom-core-54.js",
+      "raw_url": "https://github.com/nick-charistos/organic-nomenclature-3/raw/f49b810c93ec85d06163679aff4a8642ea1b4cd3/js%2Fmulermoc-nom-core-54.js",
+      "contents_url": "https://api.github.com/repos/nick-charistos/organic-nomenclature-3/contents/js%2Fmulermoc-nom-core-54.js?ref=f49b810c93ec85d06163679aff4a8642ea1b4cd3",
+      "patch": "@@ -2335,10 +2335,14 @@ function fHorizontalEquivalentIndex(pool, reference) {\n             : (typeof window !== 'undefined' && window.MOL2D && window.MOL2D[selectedMol]\n                 ? window.MOL2D[selectedMol][mode2D] : null)\n         if (!text) return -1\n-        lines = text.split(/\\r?\\n/)\n-        if (Number(lines[3].slice(0, 3)) !== allAtomsTypeList.length) return -1\n+        lines = String(text).split(/\\r?\\n/)\n+        // Counts line located by shape (JSME depict output uses a 2-line\n+        // header); fail closed on mismatch exactly as before.\n+        const ci = (typeof fMolCountsLine === \"function\") ? fMolCountsLine(lines) : 3\n+        if (ci < 0 || Number((lines[ci] || \"\").slice(0, 3)) !== allAtomsTypeList.length) return -1\n+        var _ciOff = ci + 1\n     } catch (e) { return -1 }\n-    const coords = lines.slice(4, 4 + allAtomsTypeList.length).map(line =>\n+    const coords = lines.slice(_ciOff, _ciOff + allAtomsTypeList.length).map(line =>\n         [Number(line.slice(0, 10)), Number(line.slice(10, 20))])\n     function score(chain) {\n         let vertical = 0, travel = 0, length = 0\n@@ -2521,30 +2525,63 @@ function fTranslateChain2D3D(chain) {\n // Condensed = linear main chain + orthogonal branches (school form); expanded\n // = condensed + explicit H; skeletal comes from JSME (molview side, scientific\n // zigzag). Deterministic and offline. No DOM, no jQuery.\n+// V2000 counts-line locator: the counts line is NOT always at index 3.\n+// Stored MOLs use the standard 3-line header, but JSME depict output uses a\n+// 2-line header (name + blank), putting counts at index 2. Locate by shape\n+// instead of position: first line (within the first 8) that starts with two\n+// integers AND contains the V2000 tag. Atom/bond lines never contain the tag,\n+// so false positives are impossible in practice. Returns the line index or -1.\n+function fMolCountsLine(lines) {\n+  try {\n+    if (!lines || !lines.length) return -1;\n+    var lim = Math.min(lines.length, 8);\n+    for (var i = 0; i < lim; i++) {\n+      var L = lines[i];\n+      if (!L || L.indexOf(\"V2000\") < 0) continue;\n+      if (/^\\s*\\d{1,3}\\s+\\d{1,3}\\b/.test(L)) return i;\n+    }\n+  } catch (e) {}\n+  return -1;\n+}\n+\n function fParseMolV2000(text) {\n   try {\n     if (!text) return null;\n-    var lines = String(text).split(\"\\n\");\n+    var lines = String(text).split(/\\r?\\n/);\n     if (lines.length < 5) return null;\n-    var nA = parseInt(lines[3].substring(0, 3), 10);\n-    var nB = parseInt(lines[3].substring(3, 6), 10);\n+    var ci = fMolCountsLine(lines);\n+    if (ci < 0) return null;\n+    var nA = parseInt(lines[ci].substring(0, 3), 10);\n+    var nB = parseInt(lines[ci].substring(3, 6), 10);\n     if (!(nA >= 0) || !(nB >= 0)) return null;\n+    // Fail closed on truncated reads (JSME async-layout race can return a\n+    // header + counts line with a short/missing atom block): require the full\n+    // declared body to be present, require a non-empty element field per atom\n+    // (no phantom C@(0,0)), and require at least one valid bond when bonds\n+    // were declared for a multi-atom molecule.\n+    if (lines.length < ci + 1 + nA + nB) return null;\n     var atoms = [], bonds = [];\n     for (var i = 0; i < nA; i++) {\n-      var L = lines[4 + i] || \"\";\n+      var L = lines[ci + 1 + i] || \"\";\n+      var _el = (L.substring(31, 34) || \"\").trim();\n+      if (!_el) return null;\n       atoms.push({\n         x: parseFloat(L.substring(0, 10)) || 0,\n         y: parseFloat(L.substring(10, 20)) || 0,\n-        el: (L.substring(31, 34) || \"\").trim() || \"C\"\n+        el: _el\n       });\n     }\n     for (var j = 0; j < nB; j++) {\n-      var parts = (lines[4 + nA + j] || \"\").trim().split(/\\s+/);\n+      var parts = (lines[ci + 1 + nA + j] || \"\").trim().split(/\\s+/);\n       var a = parseInt(parts[0], 10), b = parseInt(parts[1], 10), o = parseInt(parts[2], 10) || 1;\n       if (!(a >= 1 && a <= nA && b >= 1 && b <= nA)) continue;\n       bonds.push([a, b, o]);\n     }\n-    return { head: [lines[0] || \"\", lines[1] || \"\", lines[2] || \"\"], atoms: atoms, bonds: bonds };\n+    if (nA > 1 && nB > 0 && bonds.length === 0) return null;\n+    var head = [];\n+    for (var hi = Math.max(0, ci - 3); hi < ci; hi++) head.push(lines[hi] || \"\");\n+    while (head.length < 3) head.unshift(\"\");\n+    return { head: head, atoms: atoms, bonds: bonds };\n   } catch (e) { return null; }\n }\n \n@@ -2699,15 +2736,40 @@ function fLinearizeMol(text, chain) {\n     for (var kc = 0; kc < ch.length; kc++) visited[ch[kc]] = true;\n     // Queue: {node, x, y, dx, dy} — first continuation keeps direction,\n     // extra forks rotate 90° (rare in scope, depiction-only).\n+    // Terminal chain atoms lean their branches outward (±x): without this,\n+    // end-group branches sit exactly above the anchor and geometry-based\n+    // tests (e.g. HOOC-vs-COOH orientation) tie instead of deciding.\n+    // Ether links (R-O-R) go fully horizontal from terminal atoms so C-O-C\n+    // stays linear instead of kinking the R groups orthogonal.\n     var queue = [];\n     for (var ci = 0; ci < ch.length; ci++) {\n-      var c0 = ch[ci], sideCount = 0;\n+      var c0 = ch[ci], sideCount = 0, etherDone = false;\n+      var lean = 0;\n+      if (ci === 0) lean = -0.5;\n+      else if (ci === ch.length - 1) lean = 0.5;\n       for (var nb = 0; nb < adj[c0].length; nb++) {\n         var br = adj[c0][nb];\n         if (visited[br]) continue;\n+        var isEtherLink = false;\n+        try {\n+          if ((ci === 0 || ci === ch.length - 1) && !etherDone &&\n+              String(m.atoms[br].el || \"\").toUpperCase() === \"O\" && adj[br].length === 2) {\n+            var _cc = 0;\n+            for (var _oi = 0; _oi < adj[br].length; _oi++) {\n+              if (String(m.atoms[adj[br][_oi]].el || \"\").toUpperCase() === \"C\") _cc++;\n+            }\n+            if (_cc === 2) isEtherLink = true;\n+          }\n+        } catch (eEl) { isEtherLink = false; }\n+        if (isEtherLink) {\n+          var _dir = (ci === 0) ? -1 : 1;\n+          queue.push({ node: br, x: ci * DX + _dir * DX, y: 0, dx: _dir, dy: 0 });\n+          etherDone = true;\n+          continue;\n+        }\n         var side = (sideCount % 2 === 0) ? -1 : 1;\n         sideCount++;\n-        queue.push({ node: br, x: ci * DX, y: side * DY, dx: 0, dy: side });\n+        queue.push({ node: br, x: ci * DX + lean * DX, y: side * DY, dx: 0, dy: side });\n       }\n     }\n     while (queue.length) {"
+    },
+    {
+      "sha": "e6cba68c8bf1fafbbf4b6be1f3acd8c0b3898184",
+      "filename": "js/mulermoc-nom-iupac-54.js",
+      "status": "modified",
+      "additions": 4,
+      "deletions": 0,
+      "changes": 4,
+      "blob_url": "https://github.com/nick-charistos/organic-nomenclature-3/blob/f49b810c93ec85d06163679aff4a8642ea1b4cd3/js%2Fmulermoc-nom-iupac-54.js",
+      "raw_url": "https://github.com/nick-charistos/organic-nomenclature-3/raw/f49b810c93ec85d06163679aff4a8642ea1b4cd3/js%2Fmulermoc-nom-iupac-54.js",
+      "contents_url": "https://api.github.com/repos/nick-charistos/organic-nomenclature-3/contents/js%2Fmulermoc-nom-iupac-54.js?ref=f49b810c93ec85d06163679aff4a8642ea1b4cd3",
+      "patch": "@@ -159,6 +159,9 @@ async function fFetchIUPAC_EN(smiles, opts) {\n   result.iupacPubchem = result.iupac || null;\n   result.systematic = systematic || null;\n   result.synonyms = synonyms || [];\n+  // Canonical SMILES rides along from the PUG payload (no extra request);\n+  // consumers (skeletal depict input, info panel) read it off the hit.\n+  try { result.canonicalSmiles = result.canonicalSmiles || null; } catch (eC) {}\n   console.log(\n     \"[IUPAC-EN] SMILES=\" +\n       smiles +\n@@ -226,6 +229,7 @@ async function fEnrichMolWithIUPAC(key, opts) {\n   entry.systematicEN = hit.systematic || null;\n   entry.iupacEN = entry.systematicEN || entry.iupacPubchem || null;\n   entry.pubchemCID = hit.cid || entry.pubchemCID || null;\n+  entry.canonicalSmiles = hit.canonicalSmiles || entry.canonicalSmiles || null;\n   entry.iupacSource = hit.source || \"none\";\n   try { entry.iupacErr = hit.lastErr || null; } catch (eI) {}\n   entry.needsHumanCheck ="
+    },
+    {
+      "sha": "933ec77d0b8e1e590bdce555585c43e8193207b5",
+      "filename": "js/mulermoc-nom-lang-54.js",
+      "status": "modified",
+      "additions": 12,
+      "deletions": 1,
+      "changes": 13,
+      "blob_url": "https://github.com/nick-charistos/organic-nomenclature-3/blob/f49b810c93ec85d06163679aff4a8642ea1b4cd3/js%2Fmulermoc-nom-lang-54.js",
+      "raw_url": "https://github.com/nick-charistos/organic-nomenclature-3/raw/f49b810c93ec85d06163679aff4a8642ea1b4cd3/js%2Fmulermoc-nom-lang-54.js",
+      "contents_url": "https://api.github.com/repos/nick-charistos/organic-nomenclature-3/contents/js%2Fmulermoc-nom-lang-54.js?ref=f49b810c93ec85d06163679aff4a8642ea1b4cd3",
+      "patch": "@@ -57,7 +57,8 @@ var MULER_STRINGS = {\n   submitNo3D: { gr: \"Χωρίς τρισδιάστατο μοντέλο στο PubChem — μόνο 2D.\", en: \"No 3D model on PubChem — 2D only.\" },\n   draftUpdate: { gr: \"Ενημέρωση\", en: \"Update\" },\n   draftDraw: { gr: \"Επεξεργασία\", en: \"Edit\" },\n-  draftBeautify: { gr: \"Ομορφοποίηση\", en: \"Beautify\" },\n+  draftBeautify: { gr: \"Γραμμικοποίηση\", en: \"Linearize\" },\n+  autoLinearize: { gr: \"Αυτόματη γραμμικοποίηση:\", en: \"Auto-linearize:\" },\n   draftPreview: { gr: \"Προεπισκόπηση\", en: \"Preview\" },\n   draftPreviewTitle: { gr: \"Πρόβλεψη Ονομασίας\", en: \"Name Prediction\" },\n   draftCorrect: { gr: \"Σωστό\", en: \"Correct\" },\n@@ -377,6 +378,16 @@ function fMulerPaintStaticChrome() {\n       csb.setAttribute(\"data-tooltip\", fMulerT(\"customMolSave\"));\n     }\n   } catch (e) {}\n+  // autoLinearize label is id-addressed (NOT in the positional map above):\n+  // inserting a row mid-panel would shift every index after it.\n+  try {\n+    var al1 = document.getElementById(\"autoLinearizeLabel\");\n+    if (al1) {\n+      var alt = fMulerT(\"autoLinearize\");\n+      if (alt && al1.firstChild) al1.firstChild.textContent = alt + \" \";\n+      else if (alt) al1.textContent = alt + \" \";\n+    }\n+  } catch (e) {}\n   setTip(\"#zoomOutBtn\", fMulerT(\"zoomOut\") + \" 2D\");\n   setTip(\"#zoomInBtn\", fMulerT(\"zoomIn\") + \" 2D\");\n   setTip(\"#save2DBtn\", fMulerT(\"saveImage\") + \" 2D\");"
+    },
+    {
+      "sha": "3afa2a880d3c96f241c12dcff28a933e958fb153",
+      "filename": "js/mulermoc-nom-molview-54.js",
+      "status": "modified",
+      "additions": 279,
+      "deletions": 68,
+      "changes": 347,
+      "blob_url": "https://github.com/nick-charistos/organic-nomenclature-3/blob/f49b810c93ec85d06163679aff4a8642ea1b4cd3/js%2Fmulermoc-nom-molview-54.js",
+      "raw_url": "https://github.com/nick-charistos/organic-nomenclature-3/raw/f49b810c93ec85d06163679aff4a8642ea1b4cd3/js%2Fmulermoc-nom-molview-54.js",
+      "contents_url": "https://api.github.com/repos/nick-charistos/organic-nomenclature-3/contents/js%2Fmulermoc-nom-molview-54.js?ref=f49b810c93ec85d06163679aff4a8642ea1b4cd3",
+      "patch": "@@ -342,7 +342,7 @@ function jsmeOnLoad() {\n     \"590px\",\n     \"240px\",\n     {\n-      options: \"depict, marker, toggle, depictaction, noreaction,nomultipart,noquery\",\"guicolor\": \"#c8d9ec\",  \"guiAtomColor\": \"#1b275d\", \n+      options: \"depict, marker, toggle, depictaction, noreaction,nomultipart,noquery, canonize\",\"guicolor\": \"#c8d9ec\",  \"guiAtomColor\": \"#1b275d\",\n       depictbg: \"#fff\",\n       atombgsize: \"0.6\",\n     },\n@@ -378,7 +378,7 @@ function jsmeOnLoad() {\n       \"590px\",\n       \"240px\",\n       {\n-        options: \"marker, norbutton, noxbutton, atommovebutton, autonumber, noreaction,nomultipart,noquery\",\"guicolor\": \"#c8d9ec\",  \"guiAtomColor\": \"#1b275d\",\n+        options: \"marker, norbutton, noxbutton, atommovebutton, autonumber, noreaction,nomultipart,noquery, canonize\",\"guicolor\": \"#c8d9ec\",  \"guiAtomColor\": \"#1b275d\",\n         depictbg: \"#fff\",\n         atombgsize: \"0.6\",\n       },\n@@ -813,15 +813,18 @@ function fMolDraftSyncBar() {\n       }\n       else bw.classList.add(\"hide\");\n     }\n-    // Beautify: school-slot drafts only, and only in the editor view (it\n-    // rewrites the canvas geometry — pointless while the depict preview is\n-    // up; Draw flips back to the editor). Lit whenever not submitting; it\n-    // creates staleness and resubmit recaptures the tidied drawing.\n+    // Beautify: manual mode only (auto-linearize covers it when on), school\n+    // slots only, and only in the editor view (it rewrites the canvas geometry\n+    // — pointless while the depict preview is up; Draw flips back to the\n+    // editor). Lit whenever not submitting; it creates staleness and resubmit\n+    // recaptures the tidied drawing.\n     var bb2 = document.getElementById(\"molDraftBeautifyBtn\");\n     if (bb2) {\n       var schoolDraft = true;\n       try { schoolDraft = !(d.mode === \"edit\" && (d.variant === \"skeletal\" || d.variant === \"condensedZigZag\")); } catch (eSd) {}\n-      if (!schoolDraft || !editorVisible) { bb2.classList.add(\"hide\"); }\n+      var autoOn = true;\n+      try { autoOn = (typeof fMolDraftAutoLinearizeOn === \"function\") ? fMolDraftAutoLinearizeOn() : true; } catch (eAu) {}\n+      if (!schoolDraft || autoOn || !editorVisible) { bb2.classList.add(\"hide\"); }\n       else {\n         bb2.classList.remove(\"hide\");\n         if (!d.submitting) { bb2.classList.add(\"active\"); bb2.classList.remove(\"btnInactive\"); }\n@@ -891,45 +894,81 @@ function fMolDraftBackToEdit() {\n // recaptures; d.molText is refreshed too, so even the Accept-time self-heal\n // path keeps the tidied geometry). School slots only — skeletal drafts keep\n // their JSME zigzag (button hidden there).\n-function fMolDraftBeautify() {\n+// Auto-tidy core (Submit auto-linearize + manual Linearize button share it):\n+// reads the canvas, runs the sandbox engine pass for a fresh chain,\n+// linearizes school geometry (expanded: heavy skeleton + regenerated H),\n+// writes back to the edit applet and re-reads. Skeletal drafts pass through\n+// untouched (zigzag path owns that slot). Returns {molText, smiles} or null\n+// (toast already shown). Never touches view state or the draft bar — callers\n+// own those (Submit continues its flow; Beautify flips view + marks stale).\n+function fMolDraftAutoTidy() {\n   var d = window.MulerDraft;\n-  if (!d || fMolDraftPresenting()) return;\n-  if (d.submitting) return;\n-  if (d.mode === \"edit\" && (d.variant === \"skeletal\" || d.variant === \"condensedZigZag\")) return;\n-  if (typeof jsmeEditDraftApplet === \"undefined\" || !jsmeEditDraftApplet) return;\n+  if (!d || fMolDraftPresenting()) return null;\n+  if (d.submitting) return null;\n+  if (typeof jsmeEditDraftApplet === \"undefined\" || !jsmeEditDraftApplet) return null;\n   var drawing = null;\n   try { drawing = fMolDraftReadDrawing(); } catch (eR) { drawing = null; }\n   if (!drawing || !drawing.hasAny) {\n     fMolDraftToast(fMolDraftT(\"submitEmpty\", \"Empty drawing — draw something first.\"));\n-    return;\n+    return null;\n+  }\n+  if (d.mode === \"edit\" && (d.variant === \"skeletal\" || d.variant === \"condensedZigZag\")) {\n+    return { molText: drawing.molText, smiles: drawing.smiles };\n   }\n   var savedMode = null;\n   try { savedMode = (typeof mainChainMode !== \"undefined\") ? mainChainMode : null; } catch (eM0) {}\n-  // Same shared sandbox pass as Submit (chain rebuild included — a bare\n-  // analyse+detect was the pre-submit damage).\n   var _sb = { ok: false, ring: false };\n   try { _sb = fMolDraftSandboxAnalyse(drawing.molText) || _sb; } catch (eSb) {}\n   try { if (savedMode != null) mainChainMode = savedMode; } catch (eRm0) {}\n   try { if (typeof fUpdateChainModeButton === \"function\") fUpdateChainModeButton(); } catch (eBc0) {}\n   if (!_sb.ok) {\n     fMolDraftToast(fMolDraftT(_sb.ring ? \"submitRing\" : \"submitEngineFail\", _sb.ring ? \"Rings are out of scope — acyclic structures only.\" : \"Engine failed — check the drawing.\"));\n-    return;\n+    return null;\n   }\n   var chainNow = null;\n   try { chainNow = (typeof mainChainAtomsList !== \"undefined\") ? mainChainAtomsList : null; } catch (eCh) {}\n   var lin = null;\n   try { if (typeof fLinearizeMol === \"function\") lin = fLinearizeMol(drawing.molText, chainNow); } catch (eL) { lin = null; }\n   if (!lin) {\n     fMolDraftToast(fMolDraftT(\"submitEngineFail\", \"Engine failed — check the drawing.\"));\n-    return;\n+    return null;\n   }\n+  var outMol = lin;\n+  try {\n+    var _dv = (d.mode === \"edit\") ? d.variant : \"condensed\";\n+    if (_dv === \"expanded\" && typeof fGenExpandedMol === \"function\") {\n+      var _ex = fGenExpandedMol(lin) || null;\n+      if (_ex) outMol = _ex;\n+    }\n+  } catch (eE) {}\n+  try { jsmeEditDraftApplet.readMolFile(outMol); } catch (eW) {\n+    fMolDraftToast(fMolDraftT(\"submitEngineFail\", \"Engine failed — check the drawing.\"));\n+    return null;\n+  }\n+  var fresh = null;\n+  try { fresh = fMolDraftReadDrawing(); } catch (eR2) { fresh = null; }\n+  if (!fresh || !fresh.molText) {\n+    fMolDraftToast(fMolDraftT(\"submitEngineFail\", \"Engine failed — check the drawing.\"));\n+    return null;\n+  }\n+  return { molText: fresh.molText, smiles: fresh.smiles };\n+}\n+\n+function fMolDraftBeautify() {\n+  var d = window.MulerDraft;\n+  if (!d || fMolDraftPresenting()) return;\n+  if (d.submitting) return;\n+  if (d.mode === \"edit\" && (d.variant === \"skeletal\" || d.variant === \"condensedZigZag\")) return;\n+  if (typeof jsmeEditDraftApplet === \"undefined\" || !jsmeEditDraftApplet) return;\n+  var _td = null;\n+  try { _td = fMolDraftAutoTidy(); } catch (eT) { _td = null; }\n+  if (!_td) return;\n   try {\n     var _b3 = document.getElementById(\"view3DBtn\");\n     if (_b3 && _b3.classList.contains(\"active\") && typeof fToggleViewer3D === \"function\") fToggleViewer3D();\n   } catch (e3) {}\n   fMolDraftShowEditor();\n-  try { jsmeEditDraftApplet.readMolFile(lin); } catch (eW) { return; }\n-  try { d.molText = lin; d.smiles = drawing.smiles; } catch (eD) {}\n+  try { d.molText = _td.molText; d.smiles = _td.smiles; } catch (eD) {}\n   if (d.submitted && !d.submitting) {\n     d.stale = true;\n     try {\n@@ -985,7 +1024,7 @@ function fMolDraftClearNaming(statusText) {\n   } catch (eE) {}\n }\n \n-// Drawing master switch (repurposed Ρυθμίσεις checkbox, default off):\n+// Drawing master switch (repurposed Ρυθμίσεις checkbox, default ON):\n // the Edit/New title-bar entries exist only while drawing is enabled.\n // Called at button build, on toggle, and from fMolDraftSyncButtons.\n function fMolDraftSyncEntryButtons() {\n@@ -999,15 +1038,30 @@ function fMolDraftSyncEntryButtons() {\n   } catch (eS) {}\n }\n \n+// Auto-linearize preference (Ρυθμίσεις, default ON): Submit tidies school\n+// drawings to the canonical linear layout before the naming run. Missing\n+// checkbox fails open (standardized path).\n+function fMolDraftAutoLinearizeOn() {\n+  try {\n+    var el = document.getElementById(\"autoLinearizeCheck\");\n+    if (!el) return true;\n+    return el.classList.contains(\"selectedCheck\");\n+  } catch (e) { return true; }\n+}\n+\n function fMolDraftEnter(mode) {\n   if (fMolDraftPresenting()) return;\n   if (window.MulerDraft) return;\n   try {\n-    if (!document.getElementById(\"originalJSMECheck\").classList.contains(\"selectedCheck\")) {\n+    var _sw = document.getElementById(\"originalJSMECheck\");\n+    if (!_sw || !(_sw.classList && _sw.classList.contains(\"selectedCheck\"))) {\n       fMolDraftToast(fMolDraftT(\"draftEnableFirst\", \"Enable drawing from Settings first.\"));\n       return;\n     }\n-  } catch (eSw) { return; }\n+  } catch (eSw) {\n+    fMolDraftToast(fMolDraftT(\"draftEnableFirst\", \"Enable drawing from Settings first.\"));\n+    return;\n+  }\n   var sourceMol = null;\n   try { sourceMol = (typeof selectedMol !== \"undefined\") ? selectedMol : null; } catch (eS) { sourceMol = null; }\n   if (mode === \"edit\") {\n@@ -1628,6 +1682,19 @@ async function fMolDraftSubmit() {\n     fMolDraftToast(fMolDraftT(\"submitEmpty\", \"Empty drawing — draw something first.\"));\n     return;\n   }\n+  // Auto-linearize (Ρυθμίσεις, default on): tidy school drawings to the\n+  // canonical linear layout BEFORE the naming run, so preview + stored MOLs\n+  // always come from tidied geometry. Skeletal drafts pass through untouched\n+  // (zigzag path owns that slot). Submit then proceeds unchanged.\n+  var _auto = true;\n+  try { _auto = (typeof fMolDraftAutoLinearizeOn === \"function\") ? fMolDraftAutoLinearizeOn() : true; } catch (eA) { _auto = true; }\n+  if (_auto) {\n+    var _td = null;\n+    try { _td = fMolDraftAutoTidy(); } catch (eT) { _td = null; }\n+    if (!_td) return;\n+    drawing.molText = _td.molText;\n+    drawing.smiles = _td.smiles;\n+  }\n   window.MulerDraft.submitting = true;\n   try {\n     var st = document.getElementById(\"molDraftStatus\");\n@@ -1656,10 +1723,9 @@ async function fMolDraftSubmit() {\n     fMolDraftToast(fMolDraftT(_sb.ring ? \"submitRing\" : \"submitEngineFail\", _sb.ring ? \"Rings are out of scope — acyclic structures only.\" : \"Engine failed — check the drawing.\"));\n     return;\n   }\n-  var engineFailed = false;\n   var engineName = \"\";\n   try { engineName = (typeof currentMolName !== \"undefined\") ? String(currentMolName || \"\") : \"\"; } catch (eN) {}\n-  if (engineFailed || !engineName) {\n+  if (!engineName) {\n     fMolDraftRestoreChainMode();\n     window.MulerDraft.submitting = false;\n     fMolDraftToast(fMolDraftT(\"submitEngineFail\", \"Engine failed — check the drawing.\"));\n@@ -1931,7 +1997,7 @@ function fMolDraftSyncSaveBtn() {\n   } catch (eS) {}\n }\n \n-function fMolDraftAccept() {\n+async function fMolDraftAccept() {\n   var d = window.MulerDraft;\n   if (!d || fMolDraftPresenting()) return;\n   if (!d.submitted || !d.engineName) {\n@@ -2019,13 +2085,40 @@ function fMolDraftAccept() {\n   var drawnVariant = (d.mode === \"edit\") ? d.variant : \"condensed\";\n   var _chainLive = null;\n   try { _chainLive = (typeof mainChainAtomsList !== \"undefined\") ? mainChainAtomsList : null; } catch (eCh) { _chainLive = null; }\n-  // Skeletal source ladder, deterministic-first: (a) built-in zigzag (pure\n-  // function of MOL + chain — no applet, no timing, reproducible); (b/c)\n-  // display/edit-applet SMILES depict as fallback (readGenericMolecularInput\n-  // can no-op or race the layout; both are detected per rung). First valid\n-  // wins. Validation below additionally requires the coordinates to actually\n-  // differ from the drawing (string !== catches formatting only).\n+  // Skeletal source ladder, JSME-first: (a/b) display/edit-applet depict of\n+  // the PubChem canonical SMILES (canonical input order → canonical,\n+  // preferred zigzag layout; zero extra fetch — already in the hit; drawing\n+  // SMILES as fallback); (c) built-in deterministic zigzag as the\n+  // guaranteed fallback (pure function of MOL + chain). Each rung is\n+  // validated at acquisition time via _acceptSkel (parse + heavy count +\n+  // non-zero coords + geometry differs from the drawing), so a bad rung\n+  // can never strand the ladder — later rungs still run. JSME rungs read\n+  // async-until-stable (input once, poll molFile up to 6×120ms for output\n+  // carrying the drawn heavy count — defeats the layout race where the first\n+  // read returns a truncated stub). The post-ladder validation below stays\n+  // as a safety net. JSME rungs can no-op or race the layout; both are\n+  // detected per rung (string !== catches formatting only).\n+  var _depictSmi = \"\";\n+  var _depictSrc = \"drawn\";\n+  try {\n+    if (hit && hit.canonicalSmiles) { _depictSmi = hit.canonicalSmiles; _depictSrc = \"canon\"; }\n+    else _depictSmi = d.smiles || \"\";\n+  } catch (eDs) { _depictSmi = d.smiles || \"\"; }\n   var _skel = null, _skelSrc = \"\";\n+  // Expected heavy-atom count from the drawn MOL: the depict retry loop polls\n+  // until JSME output carries exactly this many heavies (settled layout).\n+  var _expectHeavy = 0;\n+  try {\n+    if (typeof fParseMolV2000 === \"function\") {\n+      var _pe = fParseMolV2000(d.molText);\n+      if (_pe && _pe.atoms) {\n+        for (var _ei = 0; _ei < _pe.atoms.length; _ei++) {\n+          var _ee = String(_pe.atoms[_ei].el || \"\");\n+          if (_ee && _ee !== \"H\" && _ee !== \"h\") _expectHeavy++;\n+        }\n+      }\n+    }\n+  } catch (eEh) { _expectHeavy = 0; }\n   var _sigOf = function (m) {\n     try {\n       if (!m) return \"none\";\n@@ -2044,31 +2137,76 @@ function fMolDraftAccept() {\n       return \"heavy=\" + hc + \" x=\" + xs + \" y=\" + ys;\n     } catch (eSg) { return \"?\"; }\n   };\n+  // Per-rung validated acceptance: a rung \"wins\" only if its output parses,\n+  // keeps the heavy-atom count, has non-zero coordinates, AND differs in\n+  // geometry from the drawing. Returns the accepted MOL or null, logging the\n+  // exact discard reason — so a bad rung can never strand the ladder\n+  // (previously an unparseable/echo win assigned _skel, blocked all later\n+  // rungs, and the post-ladder validation could only discard, never retry).\n+  var _acceptSkel = function (cand, src, drawnMol) {\n+    try {\n+      if (!cand) return null;\n+      if (typeof fParseMolV2000 !== \"function\") { try { console.warn(\"[draft] skeletal: \" + src + \" skipped (no parser)\"); } catch (eP0) {} return null; }\n+      var _pa = fParseMolV2000(drawnMol), _pb = fParseMolV2000(cand);\n+      var _ha = 0, _hb = 0, _qi, _zero = true;\n+      if (_pa && _pb) {\n+        for (_qi = 0; _qi < _pa.atoms.length; _qi++) { var _va = String(_pa.atoms[_qi].el || \"\"); if (_va && _va !== \"H\" && _va !== \"h\") _ha++; }\n+        for (_qi = 0; _qi < _pb.atoms.length; _qi++) {\n+          var _vb = String(_pb.atoms[_qi].el || \"\");\n+          if (_vb && _vb !== \"H\" && _vb !== \"h\") _hb++;\n+          if (Math.abs(_pb.atoms[_qi].x) > 1e-6 || Math.abs(_pb.atoms[_qi].y) > 1e-6) _zero = false;\n+        }\n+      }\n+      if (!_ha || _ha !== _hb || _zero) {\n+        try { console.warn(\"[draft] skeletal: \" + src + \" rejected (heavy \" + _ha + \" vs \" + _hb + \", zeroCoords \" + _zero + \")\"); } catch (eRj) {}\n+        return null;\n+      }\n+      try {\n+        if (_sigOf(drawnMol) === _sigOf(cand)) { try { console.warn(\"[draft] skeletal: \" + src + \" unchanged geometry, discarding\"); } catch (eUg2) {} return null; }\n+      } catch (eSg3) { return null; }\n+      try { console.log(\"[draft] skeletal: \" + src + \" accepted \" + _sigOf(cand)); } catch (eA0) {}\n+      return cand;\n+    } catch (eA) { return null; }\n+  };\n   try {\n-    if (typeof fZigzagMol === \"function\") {\n-      try { _skel = fZigzagMol(d.molText, _chainLive) || null; } catch (eZ) { _skel = null; }\n-      if (_skel) { _skelSrc = \"builtin\"; try { console.log(\"[draft] skeletal: builtin ok \" + _sigOf(_skel)); } catch (eL0) {} }\n-      else { try { console.warn(\"[draft] skeletal: built-in zigzag failed\"); } catch (eL1) {} }\n-    } else {\n-      try { console.warn(\"[draft] skeletal: builtin helper missing\"); } catch (eL0b) {}\n-    }\n-    if (!_skel && typeof fMolDraftDepictSmiles === \"function\") {\n+    if (typeof fMolDraftDepictSmiles === \"function\") {\n       if (typeof jsmeNomeclatureApplet !== \"undefined\" && jsmeNomeclatureApplet) {\n         var _d1 = null;\n-        try { _d1 = fMolDraftDepictSmiles(jsmeNomeclatureApplet, d.smiles, d.molText) || null; } catch (eD1) { _d1 = null; }\n-        try { console.log(\"[draft] skeletal: display rung \" + (!_d1 ? \"null\" : (_d1 !== d.molText ? \"won \" + _sigOf(_d1) : \"unchanged\"))); } catch (eL2) {}\n-        if (_d1 && _d1 !== d.molText) { _skel = _d1; _skelSrc = \"display\"; }\n+        try { _d1 = await fMolDraftDepictSmiles(jsmeNomeclatureApplet, _depictSmi, d.molText, _expectHeavy) || null; } catch (eD1) { _d1 = null; }\n+        try { console.log(\"[draft] skeletal: display rung(\" + _depictSrc + \") \" + (!_d1 ? \"null\" : (_d1 !== d.molText ? \"won \" + _sigOf(_d1) : \"unchanged\"))); } catch (eL2) {}\n+        if (_d1 && _d1 !== d.molText) {\n+          var _a1 = null;\n+          try { _a1 = _acceptSkel(_d1, \"display(\" + _depictSrc + \")\", d.molText) || null; } catch (eA1) { _a1 = null; }\n+          if (_a1) { _skel = _a1; _skelSrc = \"display\"; }\n+        }\n       }\n       if (!_skel && typeof jsmeEditDraftApplet !== \"undefined\" && jsmeEditDraftApplet) {\n         var _d2 = null;\n-        try { _d2 = fMolDraftDepictSmiles(jsmeEditDraftApplet, d.smiles, d.molText) || null; } catch (eD2) { _d2 = null; }\n-        try { console.log(\"[draft] skeletal: edit rung \" + (!_d2 ? \"null\" : (_d2 !== d.molText ? \"won \" + _sigOf(_d2) : \"unchanged\"))); } catch (eL3) {}\n-        if (_d2 && _d2 !== d.molText) { _skel = _d2; _skelSrc = \"edit\"; }\n+        try { _d2 = await fMolDraftDepictSmiles(jsmeEditDraftApplet, _depictSmi, d.molText, _expectHeavy) || null; } catch (eD2) { _d2 = null; }\n+        try { console.log(\"[draft] skeletal: edit rung(\" + _depictSrc + \") \" + (!_d2 ? \"null\" : (_d2 !== d.molText ? \"won \" + _sigOf(_d2) : \"unchanged\"))); } catch (eL3) {}\n+        if (_d2 && _d2 !== d.molText) {\n+          var _a2 = null;\n+          try { _a2 = _acceptSkel(_d2, \"edit(\" + _depictSrc + \")\", d.molText) || null; } catch (eA2) { _a2 = null; }\n+          if (_a2) { _skel = _a2; _skelSrc = \"edit\"; }\n+        }\n       }\n-      if (!_skel) { try { console.warn(\"[draft] skeletal: all depict rungs missed\"); } catch (eL4) {} }\n-    } else if (!_skel) {\n+      if (!_skel) { try { console.warn(\"[draft] skeletal: JSME rungs missed, trying built-in\"); } catch (eL4) {} }\n+    } else {\n       try { console.warn(\"[draft] skeletal: depict helper missing\"); } catch (eL5) {}\n     }\n+    if (!_skel && typeof fZigzagMol === \"function\") {\n+      var _zb = null;\n+      try { _zb = fZigzagMol(d.molText, _chainLive) || null; } catch (eZ) { _zb = null; }\n+      if (_zb) {\n+        var _zbA = null;\n+        try { _zbA = _acceptSkel(_zb, \"builtin\", d.molText) || null; } catch (eZa) { _zbA = null; }\n+        if (_zbA) { _skel = _zbA; _skelSrc = \"builtin\"; }\n+        else { try { console.warn(\"[draft] skeletal: built-in zigzag failed\"); } catch (eL1) {} }\n+      }\n+      else { try { console.warn(\"[draft] skeletal: built-in zigzag failed\"); } catch (eL1b) {} }\n+    } else if (!_skel) {\n+      try { console.warn(\"[draft] skeletal: builtin helper missing\"); } catch (eL0b) {}\n+    }\n   } catch (eSk) { _skel = null; }\n   try {\n     if (_skel && typeof fParseMolV2000 === \"function\") {\n@@ -2117,10 +2255,16 @@ function fMolDraftAccept() {\n       molE = (typeof fGenExpandedMol === \"function\") ? (fGenExpandedMol(molC) || null) : null;\n       if (!molE) { try { console.warn(\"[draft] expanded generation failed — mode disabled\"); } catch (eW3) {} }\n     } else {\n+      // Condensed slot must stay heavy-only: the overlay adds implicit H\n+      // itself, so any hand-drawn explicit H would double-render. Strip\n+      // first (drawn geometry otherwise kept verbatim).\n       molC = d.molText;\n-      molE = (typeof fGenExpandedMol === \"function\") ? (fGenExpandedMol(d.molText) || null) : null;\n+      if (typeof fStripHydrogensMol === \"function\") {\n+        try { molC = fStripHydrogensMol(d.molText) || d.molText; } catch (eSt) {}\n+      }\n+      molE = (typeof fGenExpandedMol === \"function\") ? (fGenExpandedMol(molC) || null) : null;\n       if (!molE) { try { console.warn(\"[draft] expanded generation failed — mode disabled\"); } catch (eW4) {} }\n-      molS = _skel || d.molText;\n+      molS = _skel || molC;\n       if (!_skel) { try { console.warn(\"[draft] skeletal fallback: drawn geometry\"); } catch (eW5) {} }\n     }\n   } catch (eDv) { molC = d.molText; molE = null; molS = d.molText; }\n@@ -2140,26 +2284,53 @@ function fMolDraftAccept() {\n   // previous canvas content masquerading as a fresh layout. One synchronous\n   // retry covers the async-layout race (first read can catch pre-layout MOL).\n   // Null on any gap.\n-  function fMolDraftDepictSmiles(applet, smiles, restoreMol) {\n+  // Async: JSME lays out depict output asynchronously, so a synchronous\n+  // clear → input → molFile() burst can catch a truncated stub (header +\n+  // counts line, no atom block — the observed ~151-char reads). Input once,\n+  // then poll molFile() until the output parses AND carries the expected\n+  // heavy-atom count (known from the drawn MOL). Bounded: 6 reads × 120ms.\n+  async function fMolDraftDepictSmiles(applet, smiles, restoreMol, expectHeavy) {\n+    var _sleep = function (ms) {\n+      return new Promise(function (res) { try { setTimeout(res, ms); } catch (eS) { try { res(); } catch (eS2) {} } });\n+    };\n+    var _good = function (out) {\n+      try {\n+        if (!out || out.indexOf(\"V2000\") < 0) return false;\n+        if (typeof fParseMolV2000 !== \"function\") return true;\n+        var _p = fParseMolV2000(out);\n+        if (!_p || !_p.atoms || !_p.atoms.length) return false;\n+        if (expectHeavy) {\n+          var _h = 0, _i;\n+          for (_i = 0; _i < _p.atoms.length; _i++) {\n+            var _e = String(_p.atoms[_i].el || \"\");\n+            if (_e && _e !== \"H\" && _e !== \"h\") _h++;\n+          }\n+          if (_h !== expectHeavy) return false;\n+        }\n+        return true;\n+      } catch (eG) { return false; }\n+    };\n     try {\n       if (!smiles || !applet) return null;\n       if (typeof applet.readGenericMolecularInput !== \"function\") return null;\n       if (typeof applet.molFile !== \"function\") return null;\n       if (typeof applet.readMolFile === \"function\" && typeof applet.clear === \"function\") {\n         try { applet.clear(); } catch (eC) {}\n       }\n-      var attempt = function () {\n-        var out = \"\";\n-        try { applet.readGenericMolecularInput(smiles); } catch (eI) { return \"\"; }\n-        try { if (typeof applet.deferredRepaint === \"function\") applet.deferredRepaint(); } catch (eRp) {}\n+      try { applet.readGenericMolecularInput(smiles); } catch (eI) { return null; }\n+      try { if (typeof applet.deferredRepaint === \"function\") applet.deferredRepaint(); } catch (eRp) {}\n+      var out = \"\", ri, MAX = 6, GAP = 120;\n+      for (ri = 0; ri < MAX; ri++) {\n         try { out = applet.molFile() || \"\"; } catch (eM) { out = \"\"; }\n-        return out;\n-      };\n-      var out = attempt();\n-      if ((!out || out.indexOf(\"V2000\") < 0) && typeof applet.repaint === \"function\") {\n-        try { applet.repaint(); } catch (eRp2) {}\n-        out = attempt();\n+        if (_good(out)) {\n+          if (ri > 0) { try { console.log(\"[draft] skeletal: depict settled after \" + (ri + 1) + \" reads\"); } catch (eLg) {} }\n+          break;\n+        }\n+        if (ri === 0) { try { if (typeof applet.repaint === \"function\") applet.repaint(); } catch (eRp2) {} }\n+        else { try { console.log(\"[draft] skeletal: depict read \" + (ri + 1) + \" not stable yet\"); } catch (eLg2) {} }\n+        if (ri < MAX - 1) await _sleep(GAP);\n       }\n+      if (!_good(out)) out = \"\";\n       try {\n         if (restoreMol && typeof applet.readMolFile === \"function\") {\n           applet.readMolFile(restoreMol);\n@@ -2195,6 +2366,7 @@ function fMolDraftAccept() {\n     iupacPubchem: (hit && (hit.iupacPubchem || hit.iupac)) || null,\n     titlePubchem: (hit && (hit.title || hit.titlePubchem)) || null,\n     pubchemCID: (hit && hit.cid) || null,\n+    canonicalSmiles: (hit && hit.canonicalSmiles) || null,\n     sdf3D: d.sdf3D || null,\n     file3D: null,\n     author: \"\",\n@@ -2226,6 +2398,7 @@ function fMolDraftAccept() {\n     prev.iupacPubchem = rec.iupacPubchem;\n     prev.titlePubchem = rec.titlePubchem;\n     prev.pubchemCID = rec.pubchemCID;\n+    prev.canonicalSmiles = rec.canonicalSmiles;\n     prev.sdf3D = rec.sdf3D;\n     try {\n       prev.history = prev.history || [];\n@@ -2699,15 +2872,34 @@ function fRenderMolInfo() {\n     try { box.appendChild(hint); } catch (eA) { /* best-effort */ }\n     return;\n   }\n-  // SMILES row (cached at boot; always available when a molecule is loaded).\n+  // SMILES row (cached SMILES, PubChem canonical preferred; always available\n+  // when a molecule is loaded). Canonical value links to the PubChem compound\n+  // page when we have a numeric CID.\n+  var cidNum = null;\n+  try {\n+    var _cid = entry.pubchemCID;\n+    if (_cid != null && /^\\d+$/.test(String(_cid).trim())) cidNum = String(_cid).trim();\n+  } catch (eCid) { cidNum = null; }\n+  var smiShown = null;\n+  try { smiShown = entry.canonicalSmiles || entry.smiles || null; } catch (eS) { smiShown = null; }\n   var r1 = document.createElement(\"div\");\n   r1.className = \"molInfoRow\";\n   var l1 = document.createElement(\"span\");\n   l1.className = \"molInfoLabel\";\n   l1.textContent = T(\"molInfoSmiles\", \"SMILES\");\n   var v1 = document.createElement(\"code\");\n   v1.className = \"molInfoSmiles\";\n-  v1.textContent = (entry.smiles ? entry.smiles : \"—\");\n+  if (smiShown) {\n+    if (cidNum) {\n+      var _as = document.createElement(\"a\");\n+      _as.href = \"https://pubchem.ncbi.nlm.nih.gov/compound/\" + cidNum;\n+      _as.target = \"_blank\";\n+      try { _as.rel = \"noopener noreferrer\"; } catch (eR) {}\n+      _as.textContent = smiShown;\n+      try { _as.className = \"molInfoLink\"; } catch (eC2) {}\n+      v1.appendChild(_as);\n+    } else v1.textContent = smiShown;\n+  } else v1.textContent = \"—\";\n   var cp = document.createElement(\"button\");\n   cp.type = \"button\";\n   cp.className = \"molInfoCopy\";\n@@ -2733,7 +2925,15 @@ function fRenderMolInfo() {\n   var iupac = null;\n   try { iupac = entry.iupacPubchem || null; } catch (eN) { iupac = null; }\n   if (iupac) {\n-    v2.textContent = iupac;\n+    if (cidNum) {\n+      var _ai = document.createElement(\"a\");\n+      _ai.href = \"https://pubchem.ncbi.nlm.nih.gov/compound/\" + cidNum;\n+      _ai.target = \"_blank\";\n+      try { _ai.rel = \"noopener noreferrer\"; } catch (eR2) {}\n+      _ai.textContent = iupac;\n+      try { _ai.className = \"molInfoLink\"; } catch (eC3) {}\n+      v2.appendChild(_ai);\n+    } else v2.textContent = iupac;\n   } else {\n     var failed = false, done = false;\n     try { failed = !!entry.iupacFetchError; done = !!entry.iupacFetchDone; } catch (eS) { /* best-effort */ }\n@@ -2815,7 +3015,7 @@ function fCopyMolSmiles(btn) {\n   var smi = \"\";\n   try {\n     smi = (typeof selectedMol !== \"undefined\" && selectedMol && typeof nameExamples !== \"undefined\" && nameExamples[selectedMol])\n-      ? (nameExamples[selectedMol].smiles || \"\") : \"\";\n+      ? (nameExamples[selectedMol].canonicalSmiles || nameExamples[selectedMol].smiles || \"\") : \"\";\n   } catch (eS) { smi = \"\"; }\n   if (!smi) return;\n   var done = function () {\n@@ -2883,15 +3083,26 @@ function fMakeAnnotatedSkeletal(molStr) {\n   if (!molStr) {\n     return molStr;\n   }\n-  const lines = molStr.split(\"\\n\");\n-  if (lines.length < 4) {\n+  const lines = String(molStr).split(/\\r?\\n/);\n+  // Counts line located by shape, not position: JSME depict output uses a\n+  // 2-line header (counts at index 2), stored files use 3 (index 3).\n+  let ci = -1;\n+  try {\n+    if (typeof fMolCountsLine === \"function\") ci = fMolCountsLine(lines);\n+    else {\n+      for (let _i = 0; _i < Math.min(lines.length, 8); _i++) {\n+        if (lines[_i] && lines[_i].indexOf(\"V2000\") >= 0 && /^\\s*\\d{1,3}\\s+\\d{1,3}\\b/.test(lines[_i])) { ci = _i; break; }\n+      }\n+    }\n+  } catch (eCi) { ci = -1; }\n+  if (ci < 0 || lines.length < ci + 1) {\n     return molStr;\n   }\n-  const atomCount = parseInt(lines[3].substring(0, 3));\n+  const atomCount = parseInt((lines[ci] || \"\").substring(0, 3), 10);\n   if (isNaN(atomCount)) {\n     return molStr;\n   }\n-  for (let i = 4; i < 4 + atomCount && i < lines.length; i++) {\n+  for (let i = ci + 1; i < ci + 1 + atomCount && i < lines.length; i++) {\n     if (lines[i].substring(31, 34) === \"C  \") {\n       lines[i] = lines[i].substring(0, 31) + \"[C]\" + lines[i].substring(34);\n     }"
+    },
+    {
+      "sha": "b4732b2fb92884f62edf3ae18aa97b01c2de6351",
+      "filename": "js/mulermoc-nom-teaching-54.js",
+      "status": "modified",
+      "additions": 8,
+      "deletions": 0,
+      "changes": 8,
+      "blob_url": "https://github.com/nick-charistos/organic-nomenclature-3/blob/f49b810c93ec85d06163679aff4a8642ea1b4cd3/js%2Fmulermoc-nom-teaching-54.js",
+      "raw_url": "https://github.com/nick-charistos/organic-nomenclature-3/raw/f49b810c93ec85d06163679aff4a8642ea1b4cd3/js%2Fmulermoc-nom-teaching-54.js",
+      "contents_url": "https://api.github.com/repos/nick-charistos/organic-nomenclature-3/contents/js%2Fmulermoc-nom-teaching-54.js?ref=f49b810c93ec85d06163679aff4a8642ea1b4cd3",
+      "patch": "@@ -1113,6 +1113,14 @@ $(document).ready(function () {\n     try { if (typeof fMolDraftSyncEntryButtons === \"function\") fMolDraftSyncEntryButtons(); } catch (eSy) {}\n   });\n \n+  // v54: auto-linearize master preference (default on) — tidies school drawings\n+  // to the canonical linear layout on Submit. Toggling is always allowed\n+  // (it only affects the *next* Submit; nothing strands mid-draft), the bar\n+  // button visibility follows on the next sync.\n+  $(\"#autoLinearize\").on(\"click\", \".checkBoxContainer\", function () {\n+    try { if (typeof fMolDraftSyncBar === \"function\") fMolDraftSyncBar(); } catch (eSy2) {}\n+  });\n+\n   $(\"#viewFinalJSMESetting\").on(\"click\", \".checkBoxContainer\", function () {\n     const enableFinalJSME = $(\"#finalJSMECheck\").hasClass(\"unselectedCheck\");\n     if (enableFinalJSME) {"
+    },
+    {
+      "sha": "670435b3fe87907e069f3392302e93531f4d4206",
+      "filename": "mulermoc-nom-54.html",
+      "status": "modified",
+      "additions": 22,
+      "deletions": 13,
+      "changes": 35,
+      "blob_url": "https://github.com/nick-charistos/organic-nomenclature-3/blob/f49b810c93ec85d06163679aff4a8642ea1b4cd3/mulermoc-nom-54.html",
+      "raw_url": "https://github.com/nick-charistos/organic-nomenclature-3/raw/f49b810c93ec85d06163679aff4a8642ea1b4cd3/mulermoc-nom-54.html",
+      "contents_url": "https://api.github.com/repos/nick-charistos/organic-nomenclature-3/contents/mulermoc-nom-54.html?ref=f49b810c93ec85d06163679aff4a8642ea1b4cd3",
+      "patch": "@@ -18,8 +18,8 @@\n \n   <title>Κανόνες Ονοματολογίας Οργανικών Ενώσεων</title>\n \n-  <link rel=\"stylesheet\" href=\"css/jsme-nick-54.css?v=54.2\" />\n-  <link rel=\"stylesheet\" href=\"css/mulermoc-nom-scenario-54.css?v=54.2\" />\n+  <link rel=\"stylesheet\" href=\"css/jsme-nick-54.css?v=54.3\" />\n+  <link rel=\"stylesheet\" href=\"css/mulermoc-nom-scenario-54.css?v=54.3\" />\n \n   <script src=\"jsme/jsme.nocache.js\"></script>\n   <script src=\"js/vendor/jquery/jquery-4.0.0.min.js\"></script>\n@@ -120,6 +120,15 @@ <h1 id=\"pageTitle\">Ονοματολογία Άκυκλων Οργανικών Ε\n                   </div>\n                 </div>\n \n+                <div id=\"autoLinearize\" class=\"settingRow\">\n+                  <div class=\"settingLabel\" id=\"autoLinearizeLabel\">\n+                    Αυτόματη γραμμικοποίηση:\n+                  </div>\n+                  <div id=\"autoLinearizeCheck\" class=\"checkBoxContainer selectedCheck\">\n+                    &nbsp;<span class=\"checkBox\"></span>\n+                  </div>\n+                </div>\n+\n                 <div id=\"highlightNumberingSetting\" class=\"settingRow\">\n                   <div class=\"settingLabel\">\n                     Επισήμανση ατόμων κατά την αρίθμηση:\n@@ -287,20 +296,20 @@ <h1 id=\"pageTitle\">Ονοματολογία Άκυκλων Οργανικών Ε\n     <div id=\"creditsUs\"></div>\n   </div>\n \n-  <script src=\"js/jsme-nick-nomeclature-moc2-data_54.js?v=54.2\"></script>\n+  <script src=\"js/jsme-nick-nomeclature-moc2-data_54.js?v=54.3\"></script>\n   <!-- Accepted custom molecules (v54 Stage 2): save one MULERMOC_<name>_data.js\n        per molecule from Ρυθμίσεις → Προσαρμοσμένα μόρια. Drop collected\n        files next to the data file and register each one, e.g.:\n-       <script src=\"js/MULERMOC_dimethyl_ether_data.js?v=54.2\"></script> -->\n-  <script src=\"js/ui-icons.js?v=54.2\"></script>\n-  <script src=\"js/mulermoc-nom-core-54.js?v=54.2\"></script>\n-  <script src=\"js/mulermoc-nom-molview-54.js?v=54.2\"></script>\n-  <script src=\"js/mulermoc-nom-teaching-54.js?v=54.2\"></script>\n-  <script src=\"js/mulermoc-nom-note-54.js?v=54.2\"></script>\n-  <script src=\"js/mulermoc-nom-scenario-54.js?v=54.2\"></script>\n-  <script src=\"js/mulermoc-nom-iupac-54.js?v=54.2\"></script>\n-  <script src=\"js/mulermoc-nom-lang-54.js?v=54.2\"></script>\n-  <script src=\"js/mulermoc-nom-name-en-54.js?v=54.2\"></script>\n+       <script src=\"js/MULERMOC_dimethyl_ether_data.js?v=54.3\"></script> -->\n+  <script src=\"js/ui-icons.js?v=54.3\"></script>\n+  <script src=\"js/mulermoc-nom-core-54.js?v=54.3\"></script>\n+  <script src=\"js/mulermoc-nom-molview-54.js?v=54.3\"></script>\n+  <script src=\"js/mulermoc-nom-teaching-54.js?v=54.3\"></script>\n+  <script src=\"js/mulermoc-nom-note-54.js?v=54.3\"></script>\n+  <script src=\"js/mulermoc-nom-scenario-54.js?v=54.3\"></script>\n+  <script src=\"js/mulermoc-nom-iupac-54.js?v=54.3\"></script>\n+  <script src=\"js/mulermoc-nom-lang-54.js?v=54.3\"></script>\n+  <script src=\"js/mulermoc-nom-name-en-54.js?v=54.3\"></script>\n   <script>\n     window.JSApplet = window.JSApplet || {};\n   </script>"
+    }
+  ]
+}

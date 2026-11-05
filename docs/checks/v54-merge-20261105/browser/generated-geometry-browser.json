@@ -1,0 +1,292 @@
+{
+  "completed": true,
+  "checks": [
+    {
+      "label": "Actual3D preview available diethyl_ether",
+      "detail": null
+    },
+    {
+      "label": "Accepted skeletal conventional/sp angles diethyl_ether",
+      "detail": [
+        {
+          "atom": 2,
+          "el": "C",
+          "sp": false,
+          "angle": 119.99854443834528,
+          "target": 120
+        },
+        {
+          "atom": 3,
+          "el": "O",
+          "sp": false,
+          "angle": 120.00059067964413,
+          "target": 120
+        },
+        {
+          "atom": 4,
+          "el": "C",
+          "sp": false,
+          "angle": 120.00059067964413,
+          "target": 120
+        }
+      ]
+    },
+    {
+      "label": "Generated skeletal visible diethyl_ether",
+      "detail": null
+    },
+    {
+      "label": "Zoom and numbered parent diethyl_ether",
+      "detail": null
+    },
+    {
+      "label": "Skeletal Update identity and angles diethyl_ether",
+      "detail": [
+        {
+          "atom": 2,
+          "el": "C",
+          "sp": false,
+          "angle": 119.99756496571455,
+          "target": 120
+        },
+        {
+          "atom": 3,
+          "el": "O",
+          "sp": false,
+          "angle": 120.00121751714275,
+          "target": 120
+        },
+        {
+          "atom": 4,
+          "el": "C",
+          "sp": false,
+          "angle": 119.99876898055987,
+          "target": 120
+        }
+      ]
+    },
+    {
+      "label": "Generated skeletal resize diethyl_ether/844",
+      "detail": null
+    },
+    {
+      "label": "Generated skeletal resize diethyl_ether/1500",
+      "detail": null
+    },
+    {
+      "label": "Actual3D preview available propadiene",
+      "detail": null
+    },
+    {
+      "label": "Accepted skeletal conventional/sp angles propadiene",
+      "detail": [
+        {
+          "atom": 2,
+          "el": "C",
+          "sp": true,
+          "angle": 179.99755146351387,
+          "target": 180
+        }
+      ]
+    },
+    {
+      "label": "Generated skeletal visible propadiene",
+      "detail": null
+    },
+    {
+      "label": "Zoom and numbered parent propadiene",
+      "detail": null
+    },
+    {
+      "label": "Skeletal Update identity and angles propadiene",
+      "detail": [
+        {
+          "atom": 2,
+          "el": "C",
+          "sp": true,
+          "angle": 179.99755146351387,
+          "target": 180
+        }
+      ]
+    },
+    {
+      "label": "Generated skeletal resize propadiene/844",
+      "detail": null
+    },
+    {
+      "label": "Generated skeletal resize propadiene/1500",
+      "detail": null
+    },
+    {
+      "label": "Actual3D preview available butyne_1",
+      "detail": null
+    },
+    {
+      "label": "Accepted skeletal conventional/sp angles butyne_1",
+      "detail": [
+        {
+          "atom": 2,
+          "el": "C",
+          "sp": true,
+          "angle": 180,
+          "target": 180
+        },
+        {
+          "atom": 3,
+          "el": "C",
+          "sp": false,
+          "angle": 120.00072778082736,
+          "target": 120
+        }
+      ]
+    },
+    {
+      "label": "Generated skeletal visible butyne_1",
+      "detail": null
+    },
+    {
+      "label": "Zoom and numbered parent butyne_1",
+      "detail": null
+    },
+    {
+      "label": "Skeletal Update identity and angles butyne_1",
+      "detail": [
+        {
+          "atom": 2,
+          "el": "C",
+          "sp": true,
+          "angle": 179.99755146351387,
+          "target": 180
+        },
+        {
+          "atom": 3,
+          "el": "C",
+          "sp": false,
+          "angle": 120.00001350229742,
+          "target": 120
+        }
+      ]
+    },
+    {
+      "label": "Generated skeletal resize butyne_1/844",
+      "detail": null
+    },
+    {
+      "label": "Generated skeletal resize butyne_1/1500",
+      "detail": null
+    },
+    {
+      "label": "All original stored2D records unchanged",
+      "detail": null
+    }
+  ],
+  "fixturePolicy": "Stored local SDF source replaces PubChem3D/name transport. Existing source record is temporarily removed from runtime registry after Submit only, isolating new-accept geometry from duplicate guard; restored after Accept and Update; otherwise the original entry correctly blocks even a custom update as duplicate. Actual JSME/core/registry/renderer/JSmol. Stored MOL registry unchanged.",
+  "cases": [
+    {
+      "molecule": "diethyl_ether",
+      "accepted": [
+        {
+          "atom": 2,
+          "el": "C",
+          "sp": false,
+          "angle": 119.99854443834528,
+          "target": 120
+        },
+        {
+          "atom": 3,
+          "el": "O",
+          "sp": false,
+          "angle": 120.00059067964413,
+          "target": 120
+        },
+        {
+          "atom": 4,
+          "el": "C",
+          "sp": false,
+          "angle": 120.00059067964413,
+          "target": 120
+        }
+      ],
+      "updated": [
+        {
+          "atom": 2,
+          "el": "C",
+          "sp": false,
+          "angle": 119.99756496571455,
+          "target": 120
+        },
+        {
+          "atom": 3,
+          "el": "O",
+          "sp": false,
+          "angle": 120.00121751714275,
+          "target": 120
+        },
+        {
+          "atom": 4,
+          "el": "C",
+          "sp": false,
+          "angle": 119.99876898055987,
+          "target": 120
+        }
+      ]
+    },
+    {
+      "molecule": "propadiene",
+      "accepted": [
+        {
+          "atom": 2,
+          "el": "C",
+          "sp": true,
+          "angle": 179.99755146351387,
+          "target": 180
+        }
+      ],
+      "updated": [
+        {
+          "atom": 2,
+          "el": "C",
+          "sp": true,
+          "angle": 179.99755146351387,
+          "target": 180
+        }
+      ]
+    },
+    {
+      "molecule": "butyne_1",
+      "accepted": [
+        {
+          "atom": 2,
+          "el": "C",
+          "sp": true,
+          "angle": 180,
+          "target": 180
+        },
+        {
+          "atom": 3,
+          "el": "C",
+          "sp": false,
+          "angle": 120.00072778082736,
+          "target": 120
+        }
+      ],
+      "updated": [
+        {
+          "atom": 2,
+          "el": "C",
+          "sp": true,
+          "angle": 179.99755146351387,
+          "target": 180
+        },
+        {
+          "atom": 3,
+          "el": "C",
+          "sp": false,
+          "angle": 120.00001350229742,
+          "target": 120
+        }
+      ]
+    }
+  ],
+  "javascriptErrors": []
+}

@@ -1,0 +1,64 @@
+{
+  "status": "Concrete plan pending specific approval; no application source edits.",
+  "upstreamBase": "35d791ee9d6bdb8566d3adca1a1bdaba97efc5b8",
+  "upstreamTarget": "f49b810c93ec85d06163679aff4a8642ea1b4cd3",
+  "baseline": "baseline.json (826 runtime hashes; exact before copies of all ten upstream paths)",
+  "implementationLocation": "Isolated candidate copy/server first; primary user preview8055 untouched until verified candidate accepted under this plan.",
+  "runtimePaths": [
+    "js/mulermoc-nom-core-54.js",
+    "js/mulermoc-nom-molview-54.js",
+    "js/mulermoc-nom-iupac-54.js",
+    "js/mulermoc-nom-lang-54.js",
+    "js/mulermoc-nom-teaching-54.js",
+    "css/jsme-nick-54.css",
+    "mulermoc-nom-54.html"
+  ],
+  "documentationPaths": [
+    "docs/CHANGELOG.md",
+    "docs/STAGE2-AUTHORING-54.md",
+    "docs/SESSION-NOTES.md",
+    "docs/YANNIS-CONTRIBUTIONS.md",
+    "README.md"
+  ],
+  "behaviors": [
+    "Adopt all four professor commits semantically, with traceability for every upstream changed path; preserve local records rather than overwrite them with upstream session notes.",
+    "Adopt default drawing ON, automatic school-form linearization ON, manual Linearize when auto OFF, canonical SMILES propagation/info/PubChem links and explicit-H stripping in generated condensed forms.",
+    "Prefer validated canonical-SMILES JSME skeletal acquisition (display then edit applet) before validated builtin fallback; retain exact graph, charge/isotope, collapse and stale-echo checks, local geometry and whole-drawing framing.",
+    "Preserve current strict metadata-aware V2000 parser, generalize detected counts/atom/bond/property offsets, and use fixed-width count fields supporting short JSME headers and contiguous three-digit counts. C101 is a parser test, not nomenclature support.",
+    "Keep terminal-sp linearity before terminal lean/ether condensed rules; preserve fZigzagMol and naming/locant/C9-C20/mapping safeguards.",
+    "Preserve skeletal display algorithm and adapt its input/output offsets to the shared detected counts line, so short JSME headers cannot bypass the pipeline.",
+    "Make depiction/Accept asynchronous with bounded polling. Guard duplicate acceptance and per-draft liveness; safely defer cancellation until applet transaction restoration, prohibit stale registration/restoration and conflicting Draw/Submit during acquisition.",
+    "Keep GR/EN settings correctly mapped after insertion of new row; correct the reproduced upstream positional-map shift through existing row IDs.",
+    "Update only necessary asset cache references; preserve all lesson/checkpoint/game includes and navigation."
+  ],
+  "preserved": [
+    "Authored/embedded/source MOL/SDF, IDs, 141-molecule library and source data remain unchanged.",
+    "v52 and React remain unchanged, with hash verification.",
+    "Current 12-step alkane lesson, two three-quiz gates, generated Workshop and plain Check label remain unchanged.",
+    "No unrelated Firefox/JSmol rewrite; existing freeze cause remains unresolved."
+  ],
+  "verification": [
+    "Reproduce relevant pre-merge failures; test short/standard headers, malformed/truncated bonds, charge/isotope/SUP, contiguous counts, nitrile linearity and canonical reorder.",
+    "Reuse actual core naming corpus and source-form metadata/geometry/2D-3D map suites; compare to this exact baseline and report skipped/unsafe forms.",
+    "Verify actual JSME async display/edit success, invalid/stale fallback, delayed results, duplicate Accept, Draw/Cancel during acquisition and safe final registration.",
+    "Real isolated Firefox: Auto ON/OFF/Linearize, Submit/Accept/Update/fork, canonical SMILES/info and manual save payload, all three forms/3D, zoom/resize/numbering/highlights and GR/EN settings.",
+    "Replay affected representative lessons and complete compact alkane lesson including both three-repair gates/refresh/return/final gallery, plus standalone authored/generated Workshop.",
+    "Freeze final exact paths/hashes; one fresh-context read-only independent Reviewer and chemistry validation, necessary corrections and bounded final verification.",
+    "Only after checks/review, copy the approved changed source to primary, reverify hashes and final cache/entry flows. Preserve user browser state; no automatic refresh/quit.",
+    "No commit/push/publication in this unit. Record core54 changes and limitations honestly."
+  ],
+  "preflightEvidence": {
+    "textConflicts": {
+      "core54": 5,
+      "viewer54": 7,
+      "Main54": 3,
+      "CHANGELOG": 1,
+      "SESSION": 2
+    },
+    "chemistryAgent": "/root/merge_core_preflight",
+    "viewerAgent": "/root/merge_viewer_preflight",
+    "measured": "Local handles charges/metadata/invalid bonds and linear nitrile that wholesale upstream replacement would lose. Short JSME headers currently miss annotation/layout. Upstream helper rejects contiguous fixed-width101100 counts.",
+    "notClaimed": "Preflight is not review of an implementation or a root-cause fix for native Firefox hangs."
+  },
+  "approvalReason": "Known unresolved JSME-first/local builtin-first behavior plus necessary async acceptance and parser/display preservation fixes; AGENTS.md line113 requires approval for unresolved conflicting behavior."
+}

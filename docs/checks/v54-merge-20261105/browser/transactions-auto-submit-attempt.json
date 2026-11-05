@@ -1,0 +1,19 @@
+{
+  "completed": false,
+  "checks": [
+    {
+      "label": "Auto ON hides manual Linearize",
+      "detail": null
+    }
+  ],
+  "failure": "Timed out: MulerDraft&&MulerDraft.submitted&&!MulerDraft.submitting&&MulerDraft.sdfDone",
+  "traceback": "Traceback (most recent call last):\n  File \"/private/tmp/namelecule-v54-merge-20261105-candidate/docs/checks/v54-merge-20261105/browser/test-transactions.py\", line 16, in <module>\n    submit()\n  File \"/private/tmp/namelecule-v54-merge-20261105-candidate/docs/checks/v54-merge-20261105/browser/test-transactions.py\", line 9, in submit\n    def submit():click('#molDraftSubmitBtn');until('MulerDraft&&MulerDraft.submitted&&!MulerDraft.submitting&&MulerDraft.sdfDone',seconds=15)\n  File \"bidi\", line 51, in until\n    except Exception as e:\nAssertionError: Timed out: MulerDraft&&MulerDraft.submitted&&!MulerDraft.submitting&&MulerDraft.sdfDone\n",
+  "failureState": {
+    "draft": {
+      "variant": "condensed"
+    },
+    "acquisition": false,
+    "toast": ""
+  },
+  "javascriptErrors": []
+}
