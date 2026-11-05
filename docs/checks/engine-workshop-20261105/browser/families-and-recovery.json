@@ -1,0 +1,163 @@
+{
+  "completed": true,
+  "checks": [
+    {
+      "label": "Five fault families have valid deterministic entry cases",
+      "detail": null
+    },
+    {
+      "label": "Frozen recipe replays family parent-length",
+      "detail": null
+    },
+    {
+      "label": "Exact graph-derived candidate methane",
+      "detail": null
+    },
+    {
+      "label": "Actual successful family parent-length",
+      "detail": null
+    },
+    {
+      "label": "Frozen recipe replays family alphabetical-order",
+      "detail": null
+    },
+    {
+      "label": "Exact graph-derived candidate ethyl_3_dimethyl_2_5_hexane",
+      "detail": null
+    },
+    {
+      "label": "Actual successful family alphabetical-order",
+      "detail": null
+    },
+    {
+      "label": "Frozen recipe replays family branch-multiplier",
+      "detail": null
+    },
+    {
+      "label": "Exact graph-derived candidate dimethyl_2_3_butane",
+      "detail": null
+    },
+    {
+      "label": "Actual successful family branch-multiplier",
+      "detail": null
+    },
+    {
+      "label": "Frozen recipe replays family branch-locants",
+      "detail": null
+    },
+    {
+      "label": "Exact graph-derived candidate methyl_2_pentane",
+      "detail": null
+    },
+    {
+      "label": "Actual successful family branch-locants",
+      "detail": null
+    },
+    {
+      "label": "Frozen recipe replays family bond-type",
+      "detail": null
+    },
+    {
+      "label": "Exact graph-derived candidate propane",
+      "detail": null
+    },
+    {
+      "label": "Actual successful family bond-type",
+      "detail": null
+    },
+    {
+      "label": "Exported asset decodes with 22px glyphs and complete frame methane",
+      "detail": {
+        "id": "methane",
+        "labels": 5,
+        "minFont": 21.999990561123937,
+        "maxFont": 21.999990561123937,
+        "clipped": false
+      }
+    },
+    {
+      "label": "Exported asset decodes with 22px glyphs and complete frame propane",
+      "detail": {
+        "id": "propane",
+        "labels": 11,
+        "minFont": 21.999996511265635,
+        "maxFont": 21.999996511265635,
+        "clipped": false
+      }
+    },
+    {
+      "label": "Unavailable engine fails visibly without pretending to grade",
+      "detail": null
+    },
+    {
+      "label": "Retry recovers after engine becomes available",
+      "detail": null
+    },
+    {
+      "label": "Saved progress cannot bypass earlier unsolved rounds",
+      "detail": null
+    }
+  ],
+  "assetAudit": [
+    {
+      "id": "methane",
+      "labels": 5,
+      "minFont": 21.999990561123937,
+      "maxFont": 21.999990561123937,
+      "clipped": false
+    },
+    {
+      "id": "propane",
+      "labels": 11,
+      "minFont": 21.999996511265635,
+      "maxFont": 21.999996511265635,
+      "clipped": false
+    }
+  ],
+  "javascriptErrors": [],
+  "diagnostics": [
+    {
+      "type": "event",
+      "method": "log.entryAdded",
+      "params": {
+        "type": "console",
+        "method": "error",
+        "source": {
+          "realm": "71454df3-e0f2-4bdc-826d-96cfbaff309b",
+          "context": "997d890f-128a-438c-b40b-648ca8753f48",
+          "userContext": "default"
+        },
+        "args": [
+          {
+            "type": "string",
+            "value": "Namelecule game could not load"
+          },
+          {
+            "type": "error",
+            "value": {}
+          }
+        ],
+        "level": "error",
+        "text": "Namelecule game could not load Error: Ο περιηγητής δεν υποστηρίζει απομονωμένη χημική ανάλυση.",
+        "timestamp": 1793857631723,
+        "stackTrace": {
+          "callFrames": [
+            {
+              "columnNumber": 14,
+              "functionName": "loadGame",
+              "lineNumber": 768,
+              "url": "http://127.0.0.1:8055/js/namelecule-game-repair.js?v=engine-pilot-20261105-r2"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "sourceSHA256": {
+    "js/namelecule-game-repair.js": "8afafaea77dd5c0a6259cecfd8d98c548500a030810708a30bd616856353e2eb",
+    "js/namelecule-chemistry-client.js": "506a63f8fdbbcc6c4e3e06daa1f74e5679e720f0d9489ce1c022c74df19298b7",
+    "js/namelecule-chemistry-worker.js": "86b14771559761d1e6aa9f0120927b3303c58f090a39ab0c6274639f987b3c34",
+    "js/namelecule-repair-generator.js": "118304488b6eaee651490785903080c419239df3f646988f79ae0e2548527611",
+    "games/data/alkane-structures.json": "9778e30ea33f2f7cd4c8a472e46e90539856b861a54035a1d514c3246cccf724"
+  }
+}

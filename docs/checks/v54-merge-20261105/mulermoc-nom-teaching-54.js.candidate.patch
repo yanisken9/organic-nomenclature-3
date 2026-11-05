@@ -1,0 +1,17 @@
+--- /Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/v54-merge-20261105/before/js/mulermoc-nom-teaching-54.js	2026-11-04 09:17:22
++++ /tmp/namelecule-v54-merge-20261105-candidate/js/mulermoc-nom-teaching-54.js	2026-11-05 13:17:16
+@@ -1111,6 +1111,14 @@
+       return;
+     }
+     try { if (typeof fMolDraftSyncEntryButtons === "function") fMolDraftSyncEntryButtons(); } catch (eSy) {}
++  });
++
++  // v54: auto-linearize master preference (default on) — tidies school drawings
++  // to the canonical linear layout on Submit. Toggling is always allowed
++  // (it only affects the *next* Submit; nothing strands mid-draft), the bar
++  // button visibility follows on the next sync.
++  $("#autoLinearize").on("click", ".checkBoxContainer", function () {
++    try { if (typeof fMolDraftSyncBar === "function") fMolDraftSyncBar(); } catch (eSy2) {}
+   });
+ 
+   $("#viewFinalJSMESetting").on("click", ".checkBoxContainer", function () {

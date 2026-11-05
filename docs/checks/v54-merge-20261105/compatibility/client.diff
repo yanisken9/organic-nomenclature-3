@@ -1,0 +1,24 @@
+--- before/js/namelecule-chemistry-client.js
++++ candidate/js/namelecule-chemistry-client.js
+@@ -35,9 +35,20 @@
+         throw failure('ENGINE_UNAVAILABLE', 'Δεν είναι διαθέσιμος ο ασφαλής έλεγχος της χημικής μηχανής.');
+       }
+       if (verifiedEngines.has(expectedHash)) return expectedHash;
++      // Persisted exercises pin an engine digest, independently of main's
++      // current core. Prefer that immutable version without changing receipts.
++      var snapshotURL = new URL('chemistry-engines/' + expectedHash + '.js', baseURL);
+       var url = new URL(engineURL.href);
+       url.searchParams.set('sha256', expectedHash);
+-      return global.fetch(url.href, { cache: 'reload', signal: options.signal }).then(function (response) {
++      return global.fetch(snapshotURL.href, { cache: 'reload', signal: options.signal }).then(function (response) {
++        // Only an absent snapshot permits current-core lookup. Corruption,
++        // denied access and transport errors must never silently change source.
++        if (response.status === 404) {
++          if (options.signal && options.signal.aborted) throw failure('ABORTED', 'Η ανάλυση ακυρώθηκε.');
++          return global.fetch(url.href, { cache: 'reload', signal: options.signal });
++        }
++        return response;
++      }).then(function (response) {
+         if (!response.ok) throw failure('ENGINE_LOAD_FAILED', 'Η χημική μηχανή δεν φορτώθηκε.');
+         return response.arrayBuffer();
+       }).then(function (bytes) {

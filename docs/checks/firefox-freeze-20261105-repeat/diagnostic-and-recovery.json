@@ -1,0 +1,92 @@
+{
+  "date": "2026-11-05",
+  "userReport": "Firefox froze again, inside quiz «2/12»; neither address bar nor menu responds.",
+  "before": {
+    "userPreviewPID": 7534,
+    "HTTP": {
+      "mulermoc-nom-54.html": {
+        "status": 200,
+        "seconds": 0.016
+      },
+      "games/name-repair.html": {
+        "status": 200,
+        "seconds": 0.002
+      }
+    },
+    "ownedPreviewSessionSnapshotURL": "http://127.0.0.1:8055/mulermoc-nom-54.html?scenario=scenarios/alkanes-two-part-workshop.scenario.json&present=1&from=theory-library#step=4",
+    "counterAmbiguity": "Main lesson 2/12 normally means theory step2; embedded quiz says quiz2of3. Owned profile persisted step4, which contains first gate. Exact clicked action not established.",
+    "visibleFirefoxWindows": [
+      {
+        "pid": 7818,
+        "window": 844
+      },
+      {
+        "pid": 1602,
+        "window": 528
+      },
+      {
+        "pid": 7534,
+        "window": 772
+      }
+    ],
+    "sampling": "Three-second native samples for preview parent, two content processes and GPU. Sampled main threads predominantly event/condition waits, without demonstrated sustained JS spin. No causal interpretation from idle samples alone.",
+    "samples": {
+      "parent7534": {
+        "path": "docs/checks/firefox-freeze-20261105-repeat/parent7534.sample.txt",
+        "sha256": "a34301c8dc8071e392468367164fd3db90afdbf147db41d5a44dd2c29ed70838",
+        "bytes": 216742
+      },
+      "content7542": {
+        "path": "docs/checks/firefox-freeze-20261105-repeat/content7542.sample.txt",
+        "sha256": "25e8690db4caff9c5b8ccce3f8ef30d9889e75ec5c6f36ff1246f59eebfd3298",
+        "bytes": 179561
+      },
+      "content7546": {
+        "path": "docs/checks/firefox-freeze-20261105-repeat/content7546.sample.txt",
+        "sha256": "70463900eecbdcd431c5fb78b1311d093590f71db14761ca8415d90b8c8868e1",
+        "bytes": 179978
+      },
+      "gpu7537": {
+        "path": "docs/checks/firefox-freeze-20261105-repeat/gpu7537.sample.txt",
+        "sha256": "b732a696261c24c9b06ea26b1dcd567a68fa61ecfe0883c985b907da2e435981",
+        "bytes": 184025
+      }
+    }
+  },
+  "readOnlyCodeTrace": {
+    "agent": "/root/quiz_freeze_preflight",
+    "findings": "No unbounded synchronous loop demonstrated in inspected game/checkpoint callbacks. Middle quiz transition uses cached set. Background JSmol still runs when selecting a hidden-3D lesson molecule; modal showModal path exists. None is proven causal.",
+    "files": [
+      "js/mulermoc-nom-scenario-54.js",
+      "js/namelecule-generated-repair-checkpoint.js",
+      "js/namelecule-quiz-checkpoints.js",
+      "js/namelecule-game-repair.js",
+      "js/mulermoc-nom-molview-54.js"
+    ]
+  },
+  "temporaryRecovery": {
+    "profile": "/tmp/namelecule-user-preview-20261105-isdhy79j",
+    "sessionBackup": "/tmp/namelecule-firefox-freeze-recovery-20261105-2",
+    "terminatedVerifiedPIDs": [
+      7534,
+      7818,
+      4104
+    ],
+    "terminatedOwnDiagnosticCompilerPID": 8057,
+    "untouchedPersonalFirefoxPID": 1602,
+    "restart": "Same preview profile, --restore-last-session, no automation/debug port.",
+    "newPID": 8098,
+    "execSession": 73505,
+    "confirmedVisibleWindow": 856,
+    "postRestartHTTPStatus": 200,
+    "userConfirmedResponsive": true,
+    "userConfirmation": "Ναι, ανταποκρίνεται"
+  },
+  "appCodeChanged": false,
+  "coreChangedThisSession": false,
+  "allFivePreviousReviewTargetHashesPreserved": true,
+  "rootCauseEstablished": false,
+  "limitations": "Native frames incompletely symbolicated; recovery responsiveness confirmed by user, not independently measured physical input/hit testing. Existing JSmol observation not linked. Restart is recovery, not a root-cause fix; no stability guarantee.",
+  "nextStep": "Resume user work with recovered preview. If recurrence, identify exact visible window/PID and last click; trace input/native modal/focus and active content together before proposing any app change.",
+  "commitPushPublication": "None."
+}

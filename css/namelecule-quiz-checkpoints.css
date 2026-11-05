@@ -74,3 +74,33 @@
   .nl-quiz-dialog .nl-quiz-dialog-title { font-size: .95rem; }
   .nl-quiz-dialog .nl-quiz-back { font-size: .88rem; max-width: 170px; }
 }
+
+.nl-quiz-set-progress { margin: 0 0 14px; font-weight: 700; color: #397b78; }
+.nl-quiz-loading { padding: 28px 14px; }
+.lesson-checkpoint-preparation {
+  position: fixed;
+  z-index: 12000;
+  left: 50%;
+  bottom: 24px;
+  transform: translateX(-50%);
+  box-sizing: border-box;
+  width: min(580px, calc(100% - 28px));
+  padding: 18px 22px;
+  border: 2px solid #397b78;
+  border-radius: 16px;
+  background: #eef6f1;
+  color: #254c50;
+  box-shadow: 0 8px 30px #16343633;
+  font: 16px/1.5 system-ui, sans-serif;
+}
+.lesson-checkpoint-preparation p { margin: 0 0 12px; }
+.lesson-checkpoint-preparation-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+.lesson-checkpoint-preparation.is-error { border-color: #a6633d; }
+
+/* Cold receipt restoration is part of the loading stage, not the boot molecule. */
+.lesson-checkpoint-preparation.is-cold {
+  position: static;
+  transform: none;
+  margin: 0;
+  flex-shrink: 0;
+}

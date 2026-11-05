@@ -1,0 +1,92 @@
+{
+  "scope": "Developer evidence from actual isolated Firefox, native pointer/keyboard unless explicitly direct API guard/fault injection. Recorded local PubChem3D/name transport fixtures; no external availability guarantee.",
+  "runs": [
+    {
+      "file": "browser/drawing-browser.json",
+      "completed": true,
+      "checks": 27,
+      "javascriptErrors": 0,
+      "failure": null
+    },
+    {
+      "file": "browser/generated-geometry-browser.json",
+      "completed": true,
+      "checks": 22,
+      "javascriptErrors": 0,
+      "failure": null
+    },
+    {
+      "file": "browser/engine-binding-browser.json",
+      "completed": true,
+      "checks": 8,
+      "javascriptErrors": 0,
+      "failure": null
+    },
+    {
+      "file": "browser/two-part-browser.json",
+      "completed": true,
+      "checks": 128,
+      "javascriptErrors": 0,
+      "failure": null
+    },
+    {
+      "file": "browser/transactions-browser.json",
+      "completed": true,
+      "checks": 14,
+      "javascriptErrors": 0,
+      "failure": null
+    },
+    {
+      "file": "browser/settings-browser.json",
+      "completed": true,
+      "checks": 3,
+      "javascriptErrors": 0,
+      "failure": null
+    },
+    {
+      "file": "browser/premerge-receipt-browser.json",
+      "completed": true,
+      "checks": 11,
+      "javascriptErrors": 0,
+      "failure": null
+    },
+    {
+      "file": "browser/engine-browser.json",
+      "completed": false,
+      "checks": 69,
+      "javascriptErrors": 0,
+      "failure": "Timed out: !!document.querySelector('.diagram-image.is-ready')||!!document.querySelector('#set-alkanes-start')"
+    },
+    {
+      "file": "browser/engine-prefix-browser.json",
+      "completed": true,
+      "checks": 3,
+      "javascriptErrors": 0,
+      "failure": null
+    },
+    {
+      "file": "browser/two-sets-browser.json",
+      "completed": true,
+      "checks": 60,
+      "javascriptErrors": 0,
+      "failure": null
+    },
+    {
+      "file": "browser/lesson-compatibility-browser.json",
+      "completed": true,
+      "checks": 60,
+      "javascriptErrors": 0,
+      "failure": null
+    }
+  ],
+  "checksInListedPhases": 405,
+  "javascriptErrorsInListedPhases": 0,
+  "partialRun": "engine-browser.json passed69rootflow assertions then stopped at unsupported prefix of initial testserver. Prefix driver corrected only in harness,3targeted prefix/negative checks subsequently passed. No app fix or re-execution of the69 claimed.",
+  "retainedFailures": [
+    "First authoring20checks then Submit timeout; not reproduced in27check rerun. A later transaction initial Submit also timed out, cause unestablished. Subsequent14checks with delivery traces passed; not proof of root cause.",
+    "Transaction harness wrongfunctionname, then early DOM/global reads during language reload; actual independent settings test3passed after readiness correction.",
+    "Initial candidate HTTP harness lacked Pages-prefix route; isolated harness corrected.",
+    "Earlier developer test-writer quoting SyntaxError occurred before any app execution."
+  ],
+  "limits": "Native user Firefox hang remains unresolved; transient Submit observations not attributed to app vs harness. No Safari/physicalmobile/offline/conference certification. Full13otherlessons first/final/PrevNext only; compactlesson fully replayed."
+}

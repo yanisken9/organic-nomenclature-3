@@ -1,5 +1,37 @@
 # Changelog
 
+## 2026-11-05 — Professor merge through f49b810 and quiz compatibility (local)
+
+- Integrate four commits since35d791ee: canonical SMILES, automatic/manual drawing
+  linearization, terminal acid/ether layout, robust MOL headers/counts and async
+  JSME depiction. Preserve graph/metadata/sp checks and guarded Accept/Cancel;
+  translate settings through stable row IDs.
+- Main uses merged core54. Existing generated quizzes load their exact verified
+  previous engine through the SHA-addressed client, preserving recipes and active/
+  solved progress. Every engine load requires SHA-256 validation.
+- Stored molecular assets, v52, React and lesson/game content preserved. Full incoming
+  changelog/session documents archived; local histories retained. Authoring doc copied
+  exactly. Reviewer found no actionable P0–P3 findings. Final primary14browser/17HTTP
+  checks and816protected hashes passed. Submit/nativeFirefox observations unresolved.
+- No new commit/push/publication. [Evidence and limits](checks/v54-merge-20261105/final-report.json).
+
+## 2026-11-04 — Local Main54 integration and workshop entry (local; independently reviewed)
+
+Approved complete professor sync through02dbcfaf,57commits/69paths since93b759f5.
+New isolated54 runtime retains141molecules/422forms/14lessonJSONs337steps and
+Namelecule2D conventions. GR/EN,PubCheminfo,JSmolreadiness,newdrafteditor/generators,
+richauthoring and allcumulativefeatures integrated. Welcome «Παίζω και εξασκούμαι»
+opens acceptedworkshop; welcomeexplore/teacher and14lessonlinks now54.
+Old52/React/molecularassets preserved. Bounded fixes address charge/metadata,
+spgeometry,exact2D/3Dmapping/cache,ENboxfusion,legacylessonboxsemantics,draftgeometry,
+active-draftreload and Presenttitleownership; inheritedC9stem corrected toεννε.
+IndependentReviewerfoundR54-F1storedreadycallbackbypass;registeredstabledelegate
+nowreachesrecovery. Optionaldefaultscenariofetchcapturesspecificuntouchedbootcard;
+new/edited/deletedcardsandstartedauthoringarepreserved. Explicitnativeconfirmation
+preventssilentsessioncontentlossduringGR/ENreload;noautopersistenceadded.
+Addedcore54;core52 unchanged. No commit/push/publication. Finalauthoring/reviewcomplete; residualC9diaeresis/mobile3Dlabelcrowding/externaldepsrecorded; actualchecks/externalCIR/CDN limits in[V54 record](V54-SYNC-20261104.md).
+
+
 ### 2026-11-01 — Consolidated30Oct–1Nov report and completed expanded-form normalization
 
 - Complete11ethers,31aldehydes/ketones,21acids and9esters after last public31October release;72additional Expanded entries bring reviewed category coverage to127molecules.

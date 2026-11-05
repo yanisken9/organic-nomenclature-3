@@ -1,0 +1,1161 @@
+{
+  "completed": true,
+  "checks": [
+    {
+      "label": "Teacher drawing default on exposes New/Edit",
+      "detail": null
+    },
+    {
+      "label": "Auto-linearize defaults ON",
+      "detail": null
+    },
+    {
+      "label": "Manual Linearize selectable with Auto OFF",
+      "detail": null
+    },
+    {
+      "label": "Beautify available in editor",
+      "detail": null
+    },
+    {
+      "label": "Real Beautify uses live11C horizontal chain",
+      "detail": {
+        "n": 11,
+        "range": 0
+      }
+    },
+    {
+      "label": "Beautify hidden in submitted depict preview",
+      "detail": null
+    },
+    {
+      "label": "New C11 GR/EN actual prediction",
+      "detail": null
+    },
+    {
+      "label": "Real JSmol preview has C11H24 35atoms",
+      "detail": null
+    },
+    {
+      "label": "Accept adds session molecule without automatic download",
+      "detail": null
+    },
+    {
+      "label": "Accepted skeletal is generated zigzag",
+      "detail": {
+        "n": 11,
+        "range": 0.7,
+        "bonds": 10
+      }
+    },
+    {
+      "label": "Accepted condensed name/parent/drawing 1500",
+      "detail": null
+    },
+    {
+      "label": "Accepted expanded name/parent/drawing 1500",
+      "detail": null
+    },
+    {
+      "label": "Accepted skeletal name/parent/drawing 1500",
+      "detail": null
+    },
+    {
+      "label": "Accepted condensed name/parent/drawing 844",
+      "detail": null
+    },
+    {
+      "label": "Accepted expanded name/parent/drawing 844",
+      "detail": null
+    },
+    {
+      "label": "Accepted skeletal name/parent/drawing 844",
+      "detail": null
+    },
+    {
+      "label": "Skeletal edit hides school-only Beautify",
+      "detail": null
+    },
+    {
+      "label": "Skeletal Update retains registry identity/key/count",
+      "detail": null
+    },
+    {
+      "label": "Skeletal Update retains valid zigzag fixed point",
+      "detail": null
+    },
+    {
+      "label": "Accepted skeletal zoom and11parentnumbers work",
+      "detail": null
+    },
+    {
+      "label": "No3D visibly prevents acceptance",
+      "detail": null
+    },
+    {
+      "label": "No3D authoritative guard preserves draft and records",
+      "detail": null
+    },
+    {
+      "label": "Stale accepted preview cannot create a record",
+      "detail": null
+    },
+    {
+      "label": "Changed custom molecule forks and preserves prior record",
+      "detail": null
+    },
+    {
+      "label": "All original stored2D forms preserved",
+      "detail": null
+    },
+    {
+      "label": "Original scientific records unchanged except named runtime lookup cache fields",
+      "detail": []
+    },
+    {
+      "label": "Manual Save delivers JS data payload",
+      "detail": null
+    }
+  ],
+  "fixturePolicy": "Actual PubChem REST responses stored locally; name/3D async transport replaced for repeatable authoring. Real JSME, engine, SVG, JSmol, registry and Blob payload.",
+  "submitSnapshots": [
+    {
+      "draft": {
+        "mode": "new",
+        "sourceMol": "methane",
+        "variant": "condensed",
+        "had3D": true,
+        "sourceIsCustom": false,
+        "sourceSmiles": "C",
+        "sourceCid": "297",
+        "acceptKey": "draftAccept",
+        "smiles": "CCCCCCCCCCC",
+        "submitting": true,
+        "savedChainMode": "algorithmic",
+        "engineName": "ενδεκάνιο",
+        "engineEN": "undecane",
+        "engineDelegated": false,
+        "verdictGR": "unconfirmed",
+        "verdictEN": "unconfirmed",
+        "touchedGR": false,
+        "touchedEN": false,
+        "enAutoValidated": false,
+        "submitted": true,
+        "stale": false,
+        "sdfDone": false
+      },
+      "acquisition": false,
+      "toast": "",
+      "drawing": "CCCCCCCCCCC"
+    },
+    {
+      "draft": {
+        "mode": "edit",
+        "sourceMol": "custom_undecane",
+        "variant": "skeletal",
+        "had3D": true,
+        "sourceIsCustom": true,
+        "sourceSmiles": "CCCCCCCCCCC",
+        "sourceCid": "14257",
+        "acceptKey": "draftUpdate",
+        "submitting": true,
+        "savedChainMode": "algorithmic",
+        "smiles": "CCCCCCCCCCC",
+        "engineName": "ενδεκάνιο",
+        "engineEN": "undecane",
+        "engineDelegated": false,
+        "verdictGR": "unconfirmed",
+        "verdictEN": "unconfirmed",
+        "touchedGR": false,
+        "touchedEN": false,
+        "enAutoValidated": false,
+        "submitted": true,
+        "stale": false,
+        "sdfDone": false
+      },
+      "acquisition": false,
+      "toast": "Αποδεκτή — με ανεπιβεβαίωτα ονόματα.",
+      "drawing": "CCCCCCCCCCC"
+    },
+    {
+      "draft": {
+        "mode": "edit",
+        "sourceMol": "custom_undecane",
+        "variant": "skeletal",
+        "had3D": true,
+        "sourceIsCustom": true,
+        "sourceSmiles": "CCCCCCCCCCC",
+        "sourceCid": "14257",
+        "acceptKey": "draftUpdate",
+        "submitting": true,
+        "savedChainMode": "algorithmic",
+        "smiles": "CCCCCCCCC",
+        "engineName": "εννεάνιο",
+        "engineEN": "nonane",
+        "engineDelegated": false,
+        "verdictGR": "unconfirmed",
+        "verdictEN": "unconfirmed",
+        "touchedGR": false,
+        "touchedEN": false,
+        "enAutoValidated": false,
+        "submitted": true,
+        "stale": false,
+        "sdfDone": false
+      },
+      "acquisition": false,
+      "toast": "Αποδεκτή — με ανεπιβεβαίωτα ονόματα.",
+      "drawing": "CCCCCCCCC"
+    },
+    {
+      "draft": {
+        "mode": "edit",
+        "sourceMol": "custom_undecane",
+        "variant": "skeletal",
+        "had3D": true,
+        "sourceIsCustom": true,
+        "sourceSmiles": "CCCCCCCCCCC",
+        "sourceCid": "14257",
+        "acceptKey": "draftAccept",
+        "submitting": true,
+        "savedChainMode": "algorithmic",
+        "smiles": "CCCCCCCCC",
+        "engineName": "εννεάνιο",
+        "engineEN": "nonane",
+        "engineDelegated": false,
+        "verdictGR": "unconfirmed",
+        "verdictEN": "unconfirmed",
+        "touchedGR": false,
+        "touchedEN": false,
+        "enAutoValidated": false,
+        "submitted": true,
+        "stale": false,
+        "sdfDone": false
+      },
+      "acquisition": false,
+      "toast": "Αποδοχή μόνο με εγγραφή PubChem + 3D — θα επανέλθουμε με το RDKit.",
+      "drawing": "CCCCCCCCC"
+    },
+    {
+      "draft": {
+        "mode": "edit",
+        "sourceMol": "custom_undecane",
+        "variant": "skeletal",
+        "had3D": true,
+        "sourceIsCustom": true,
+        "sourceSmiles": "CCCCCCCCCCC",
+        "sourceCid": "14257",
+        "acceptKey": "draftAccept",
+        "submitting": true,
+        "savedChainMode": "algorithmic",
+        "smiles": "CCCCCCCC",
+        "engineName": "οκτάνιο",
+        "engineEN": "octane",
+        "engineDelegated": false,
+        "verdictGR": "unconfirmed",
+        "verdictEN": "unconfirmed",
+        "touchedGR": false,
+        "touchedEN": false,
+        "enAutoValidated": false,
+        "submitted": true,
+        "stale": false,
+        "sdfDone": false,
+        "preview3D": true
+      },
+      "acquisition": false,
+      "toast": "Το σχέδιο άλλαξε — πάτα ξανά Υποβολή.",
+      "drawing": "CCCCCCCC"
+    }
+  ],
+  "originalRecordDifferences": [],
+  "originalMOLDifferences": [],
+  "addedMOLKeys": [],
+  "manualSave": {
+    "filename": "MULERMOC_octane_data.js",
+    "bytes": 9824
+  },
+  "actualFixtureCalls": [
+    {
+      "kind": "name",
+      "s": "CCCCCCCCCCC"
+    },
+    {
+      "kind": "3d",
+      "s": "CCCCCCCCCCC"
+    },
+    {
+      "kind": "name",
+      "s": "CCCCCCCCCCC"
+    },
+    {
+      "kind": "3d",
+      "s": "CCCCCCCCCCC"
+    },
+    {
+      "kind": "name",
+      "s": "CCCCCCCCC"
+    },
+    {
+      "kind": "3d",
+      "s": "CCCCCCCCC"
+    },
+    {
+      "kind": "name",
+      "s": "CCCCCCCCC"
+    },
+    {
+      "kind": "3d",
+      "s": "CCCCCCCCC"
+    },
+    {
+      "kind": "name",
+      "s": "CCCCCCCC"
+    },
+    {
+      "kind": "3d",
+      "s": "CCCCCCCC"
+    }
+  ],
+  "consoleEntries": [
+    {
+      "type": "console",
+      "method": "log",
+      "source": {
+        "realm": "919a5e70-c3ee-4c13-8a9d-c02dff09cda7",
+        "context": "79680c77-c6a4-48b7-b612-194cef4c7eb8",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "JSmol load jmolAppletNomeclature loadClazz..."
+        }
+      ],
+      "level": "info",
+      "text": "JSmol load jmolAppletNomeclature loadClazz...",
+      "timestamp": 1793878043659,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 484,
+            "functionName": "a._addExec",
+            "lineNumber": 158,
+            "url": "http://127.0.0.1:8056/js/vendor/jsmol/namelecule-20261031-r1/JSmol.min.js"
+          }
+        ]
+      }
+    },
+    {
+      "type": "console",
+      "method": "log",
+      "source": {
+        "realm": "919a5e70-c3ee-4c13-8a9d-c02dff09cda7",
+        "context": "79680c77-c6a4-48b7-b612-194cef4c7eb8",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "JSmol load jmolAppletNomeclature start applet..."
+        }
+      ],
+      "level": "info",
+      "text": "JSmol load jmolAppletNomeclature start applet...",
+      "timestamp": 1793878043673,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 484,
+            "functionName": "a._addExec",
+            "lineNumber": 158,
+            "url": "http://127.0.0.1:8056/js/vendor/jsmol/namelecule-20261031-r1/JSmol.min.js"
+          }
+        ]
+      }
+    },
+    {
+      "type": "console",
+      "method": "log",
+      "source": {
+        "realm": "919a5e70-c3ee-4c13-8a9d-c02dff09cda7",
+        "context": "79680c77-c6a4-48b7-b612-194cef4c7eb8",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "JSmol exec jmolAppletNomeclature loadClazz null -- OK"
+        }
+      ],
+      "level": "info",
+      "text": "JSmol exec jmolAppletNomeclature loadClazz null -- OK",
+      "timestamp": 1793878043906,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 373,
+            "functionName": "l",
+            "lineNumber": 157,
+            "url": "http://127.0.0.1:8056/js/vendor/jsmol/namelecule-20261031-r1/JSmol.min.js"
+          }
+        ]
+      }
+    },
+    {
+      "type": "console",
+      "method": "log",
+      "source": {
+        "realm": "919a5e70-c3ee-4c13-8a9d-c02dff09cda7",
+        "context": "79680c77-c6a4-48b7-b612-194cef4c7eb8",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "JSmol exec jmolAppletNomeclature start applet null -- OK"
+        }
+      ],
+      "level": "info",
+      "text": "JSmol exec jmolAppletNomeclature start applet null -- OK",
+      "timestamp": 1793878044763,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 373,
+            "functionName": "l",
+            "lineNumber": 157,
+            "url": "http://127.0.0.1:8056/js/vendor/jsmol/namelecule-20261031-r1/JSmol.min.js"
+          }
+        ]
+      }
+    },
+    {
+      "type": "console",
+      "method": "log",
+      "source": {
+        "realm": "919a5e70-c3ee-4c13-8a9d-c02dff09cda7",
+        "context": "79680c77-c6a4-48b7-b612-194cef4c7eb8",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "[SELECT] mol=methane SMILES=C SYSTEMATIC_EN=fetching…"
+        }
+      ],
+      "level": "info",
+      "text": "[SELECT] mol=methane SMILES=C SYSTEMATIC_EN=fetching…",
+      "timestamp": 1793878045371,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 10,
+            "functionName": "fLogMolSelectWithIUPAC",
+            "lineNumber": 344,
+            "url": "http://127.0.0.1:8056/js/mulermoc-nom-iupac-54.js?v=merge54-20261105-r1"
+          }
+        ]
+      }
+    },
+    {
+      "type": "console",
+      "method": "log",
+      "source": {
+        "realm": "919a5e70-c3ee-4c13-8a9d-c02dff09cda7",
+        "context": "79680c77-c6a4-48b7-b612-194cef4c7eb8",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "[ENGINE-EN] methane -> methane"
+        }
+      ],
+      "level": "info",
+      "text": "[ENGINE-EN] methane -> methane",
+      "timestamp": 1793878045372,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 12,
+            "functionName": "fPopulateEngineENFromGreek",
+            "lineNumber": 311,
+            "url": "http://127.0.0.1:8056/js/mulermoc-nom-name-en-54.js?v=v54-upstream-20261104-r2"
+          }
+        ]
+      }
+    },
+    {
+      "type": "console",
+      "method": "log",
+      "source": {
+        "realm": "919a5e70-c3ee-4c13-8a9d-c02dff09cda7",
+        "context": "79680c77-c6a4-48b7-b612-194cef4c7eb8",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "[IUPAC-EN] SMILES=C -> retained=\"methane\" systematic=\"methane\" (via pubchem, CID 297)"
+        }
+      ],
+      "level": "info",
+      "text": "[IUPAC-EN] SMILES=C -> retained=\"methane\" systematic=\"methane\" (via pubchem, CID 297)",
+      "timestamp": 1793878045943,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 10,
+            "functionName": "fFetchIUPAC_EN",
+            "lineNumber": 164,
+            "url": "http://127.0.0.1:8056/js/mulermoc-nom-iupac-54.js?v=merge54-20261105-r1"
+          }
+        ]
+      }
+    },
+    {
+      "type": "console",
+      "method": "log",
+      "source": {
+        "realm": "919a5e70-c3ee-4c13-8a9d-c02dff09cda7",
+        "context": "79680c77-c6a4-48b7-b612-194cef4c7eb8",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "[IUPAC-EN] methane: SMILES=C retained=\"methane\" systematic=\"methane\""
+        }
+      ],
+      "level": "info",
+      "text": "[IUPAC-EN] methane: SMILES=C retained=\"methane\" systematic=\"methane\"",
+      "timestamp": 1793878045943,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 14,
+            "functionName": "fLogMolSelectWithIUPAC/<",
+            "lineNumber": 382,
+            "url": "http://127.0.0.1:8056/js/mulermoc-nom-iupac-54.js?v=merge54-20261105-r1"
+          }
+        ]
+      }
+    },
+    {
+      "type": "console",
+      "method": "warn",
+      "source": {
+        "realm": "919a5e70-c3ee-4c13-8a9d-c02dff09cda7",
+        "context": "79680c77-c6a4-48b7-b612-194cef4c7eb8",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "[fCalcMainChain] LENGTH MISMATCH  \"methane\"  calc=[1,2,3,4,5,6,7,8,9,10,11]  stored=[1]"
+        }
+      ],
+      "level": "warn",
+      "text": "[fCalcMainChain] LENGTH MISMATCH  \"methane\"  calc=[1,2,3,4,5,6,7,8,9,10,11]  stored=[1]",
+      "timestamp": 1793878047199,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 16,
+            "functionName": "fValidateMainChain",
+            "lineNumber": 1563,
+            "url": "http://127.0.0.1:8056/js/mulermoc-nom-core-54.js?v=merge54-20261105-r1"
+          }
+        ]
+      }
+    },
+    {
+      "type": "console",
+      "method": "warn",
+      "source": {
+        "realm": "919a5e70-c3ee-4c13-8a9d-c02dff09cda7",
+        "context": "79680c77-c6a4-48b7-b612-194cef4c7eb8",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "[fCalcMainChain] LENGTH MISMATCH  \"methane\"  calc=[1,2,3,4,5,6,7,8,9,10,11]  stored=[1]"
+        }
+      ],
+      "level": "warn",
+      "text": "[fCalcMainChain] LENGTH MISMATCH  \"methane\"  calc=[1,2,3,4,5,6,7,8,9,10,11]  stored=[1]",
+      "timestamp": 1793878047401,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 16,
+            "functionName": "fValidateMainChain",
+            "lineNumber": 1563,
+            "url": "http://127.0.0.1:8056/js/mulermoc-nom-core-54.js?v=merge54-20261105-r1"
+          }
+        ]
+      }
+    },
+    {
+      "type": "console",
+      "method": "log",
+      "source": {
+        "realm": "919a5e70-c3ee-4c13-8a9d-c02dff09cda7",
+        "context": "79680c77-c6a4-48b7-b612-194cef4c7eb8",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "[ENGINE-EN] __draft__ -> undecane"
+        }
+      ],
+      "level": "info",
+      "text": "[ENGINE-EN] __draft__ -> undecane",
+      "timestamp": 1793878047409,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 12,
+            "functionName": "fPopulateEngineENFromGreek",
+            "lineNumber": 311,
+            "url": "http://127.0.0.1:8056/js/mulermoc-nom-name-en-54.js?v=v54-upstream-20261104-r2"
+          }
+        ]
+      }
+    },
+    {
+      "type": "console",
+      "method": "warn",
+      "source": {
+        "realm": "919a5e70-c3ee-4c13-8a9d-c02dff09cda7",
+        "context": "79680c77-c6a4-48b7-b612-194cef4c7eb8",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "[fCalcMainChain3D] LENGTH MISMATCH  \"methane\"  calc=[10,8,6,4,2,1,3,5,7,9,11]  stored=[1]"
+        }
+      ],
+      "level": "warn",
+      "text": "[fCalcMainChain3D] LENGTH MISMATCH  \"methane\"  calc=[10,8,6,4,2,1,3,5,7,9,11]  stored=[1]",
+      "timestamp": 1793878047576,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 16,
+            "functionName": "fValidateMainChain3D",
+            "lineNumber": 2002,
+            "url": "http://127.0.0.1:8056/js/mulermoc-nom-core-54.js?v=merge54-20261105-r1"
+          }
+        ]
+      }
+    },
+    {
+      "type": "console",
+      "method": "log",
+      "source": {
+        "realm": "919a5e70-c3ee-4c13-8a9d-c02dff09cda7",
+        "context": "79680c77-c6a4-48b7-b612-194cef4c7eb8",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "[draft] skeletal: display ok heavy=11 x=6667 y=350"
+        }
+      ],
+      "level": "info",
+      "text": "[draft] skeletal: display ok heavy=11 x=6667 y=350",
+      "timestamp": 1793878048383,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 20,
+            "functionName": "fMolDraftUseSkeletal",
+            "lineNumber": 2185,
+            "url": "http://127.0.0.1:8056/js/mulermoc-nom-molview-54.js?v=merge54-20261105-r1"
+          }
+        ]
+      }
+    },
+    {
+      "type": "console",
+      "method": "log",
+      "source": {
+        "realm": "919a5e70-c3ee-4c13-8a9d-c02dff09cda7",
+        "context": "79680c77-c6a4-48b7-b612-194cef4c7eb8",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "[draft] slots variant=condensed skelSrc=display C:[heavy=11 x=7700 y=0] E:[heavy=11 x=7700 y=0] S:[heavy=11 x=6667 y=350] draw:[heavy=11 x=7700 y=0]"
+        }
+      ],
+      "level": "info",
+      "text": "[draft] slots variant=condensed skelSrc=display C:[heavy=11 x=7700 y=0] E:[heavy=11 x=7700 y=0] S:[heavy=11 x=6667 y=350] draw:[heavy=11 x=7700 y=0]",
+      "timestamp": 1793878048384,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 12,
+            "functionName": "fMolDraftAccept",
+            "lineNumber": 2241,
+            "url": "http://127.0.0.1:8056/js/mulermoc-nom-molview-54.js?v=merge54-20261105-r1"
+          }
+        ]
+      }
+    },
+    {
+      "type": "console",
+      "method": "log",
+      "source": {
+        "realm": "919a5e70-c3ee-4c13-8a9d-c02dff09cda7",
+        "context": "79680c77-c6a4-48b7-b612-194cef4c7eb8",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "[SELECT] mol=custom_undecane SMILES=CCCCCCCCCCC SYSTEMATIC_EN=undecane (retained=\"undecane\")"
+        }
+      ],
+      "level": "info",
+      "text": "[SELECT] mol=custom_undecane SMILES=CCCCCCCCCCC SYSTEMATIC_EN=undecane (retained=\"undecane\")",
+      "timestamp": 1793878048424,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 10,
+            "functionName": "fLogMolSelectWithIUPAC",
+            "lineNumber": 344,
+            "url": "http://127.0.0.1:8056/js/mulermoc-nom-iupac-54.js?v=merge54-20261105-r1"
+          }
+        ]
+      }
+    },
+    {
+      "type": "console",
+      "method": "log",
+      "source": {
+        "realm": "919a5e70-c3ee-4c13-8a9d-c02dff09cda7",
+        "context": "79680c77-c6a4-48b7-b612-194cef4c7eb8",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "[ENGINE-EN] custom_undecane -> undecane"
+        }
+      ],
+      "level": "info",
+      "text": "[ENGINE-EN] custom_undecane -> undecane",
+      "timestamp": 1793878048425,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 12,
+            "functionName": "fPopulateEngineENFromGreek",
+            "lineNumber": 311,
+            "url": "http://127.0.0.1:8056/js/mulermoc-nom-name-en-54.js?v=v54-upstream-20261104-r2"
+          }
+        ]
+      }
+    },
+    {
+      "type": "console",
+      "method": "log",
+      "source": {
+        "realm": "919a5e70-c3ee-4c13-8a9d-c02dff09cda7",
+        "context": "79680c77-c6a4-48b7-b612-194cef4c7eb8",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "[ENGINE-EN] __draft__ -> undecane"
+        }
+      ],
+      "level": "info",
+      "text": "[ENGINE-EN] __draft__ -> undecane",
+      "timestamp": 1793878050452,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 12,
+            "functionName": "fPopulateEngineENFromGreek",
+            "lineNumber": 311,
+            "url": "http://127.0.0.1:8056/js/mulermoc-nom-name-en-54.js?v=v54-upstream-20261104-r2"
+          }
+        ]
+      }
+    },
+    {
+      "type": "console",
+      "method": "warn",
+      "source": {
+        "realm": "919a5e70-c3ee-4c13-8a9d-c02dff09cda7",
+        "context": "79680c77-c6a4-48b7-b612-194cef4c7eb8",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "[draft] skeletal: display rejected ()"
+        }
+      ],
+      "level": "warn",
+      "text": "[draft] skeletal: display rejected ()",
+      "timestamp": 1793878051110,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 20,
+            "functionName": "fMolDraftUseSkeletal",
+            "lineNumber": 2188,
+            "url": "http://127.0.0.1:8056/js/mulermoc-nom-molview-54.js?v=merge54-20261105-r1"
+          }
+        ]
+      }
+    },
+    {
+      "type": "console",
+      "method": "warn",
+      "source": {
+        "realm": "919a5e70-c3ee-4c13-8a9d-c02dff09cda7",
+        "context": "79680c77-c6a4-48b7-b612-194cef4c7eb8",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "[draft] skeletal: edit rejected ()"
+        }
+      ],
+      "level": "warn",
+      "text": "[draft] skeletal: edit rejected ()",
+      "timestamp": 1793878051125,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 20,
+            "functionName": "fMolDraftUseSkeletal",
+            "lineNumber": 2188,
+            "url": "http://127.0.0.1:8056/js/mulermoc-nom-molview-54.js?v=merge54-20261105-r1"
+          }
+        ]
+      }
+    },
+    {
+      "type": "console",
+      "method": "log",
+      "source": {
+        "realm": "919a5e70-c3ee-4c13-8a9d-c02dff09cda7",
+        "context": "79680c77-c6a4-48b7-b612-194cef4c7eb8",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "[draft] skeletal: builtin ok heavy=11 x=5573 y=295"
+        }
+      ],
+      "level": "info",
+      "text": "[draft] skeletal: builtin ok heavy=11 x=5573 y=295",
+      "timestamp": 1793878051127,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 20,
+            "functionName": "fMolDraftUseSkeletal",
+            "lineNumber": 2185,
+            "url": "http://127.0.0.1:8056/js/mulermoc-nom-molview-54.js?v=merge54-20261105-r1"
+          }
+        ]
+      }
+    },
+    {
+      "type": "console",
+      "method": "log",
+      "source": {
+        "realm": "919a5e70-c3ee-4c13-8a9d-c02dff09cda7",
+        "context": "79680c77-c6a4-48b7-b612-194cef4c7eb8",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "[draft] slots variant=skeletal skelSrc=builtin C:[heavy=11 x=6435 y=0] E:[heavy=11 x=6435 y=0] S:[heavy=11 x=5573 y=295] draw:[heavy=11 x=6667 y=350]"
+        }
+      ],
+      "level": "info",
+      "text": "[draft] slots variant=skeletal skelSrc=builtin C:[heavy=11 x=6435 y=0] E:[heavy=11 x=6435 y=0] S:[heavy=11 x=5573 y=295] draw:[heavy=11 x=6667 y=350]",
+      "timestamp": 1793878051128,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 12,
+            "functionName": "fMolDraftAccept",
+            "lineNumber": 2241,
+            "url": "http://127.0.0.1:8056/js/mulermoc-nom-molview-54.js?v=merge54-20261105-r1"
+          }
+        ]
+      }
+    },
+    {
+      "type": "console",
+      "method": "log",
+      "source": {
+        "realm": "919a5e70-c3ee-4c13-8a9d-c02dff09cda7",
+        "context": "79680c77-c6a4-48b7-b612-194cef4c7eb8",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "[SELECT] mol=custom_undecane SMILES=CCCCCCCCCCC SYSTEMATIC_EN=undecane (retained=\"undecane\")"
+        }
+      ],
+      "level": "info",
+      "text": "[SELECT] mol=custom_undecane SMILES=CCCCCCCCCCC SYSTEMATIC_EN=undecane (retained=\"undecane\")",
+      "timestamp": 1793878051161,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 10,
+            "functionName": "fLogMolSelectWithIUPAC",
+            "lineNumber": 344,
+            "url": "http://127.0.0.1:8056/js/mulermoc-nom-iupac-54.js?v=merge54-20261105-r1"
+          }
+        ]
+      }
+    },
+    {
+      "type": "console",
+      "method": "log",
+      "source": {
+        "realm": "919a5e70-c3ee-4c13-8a9d-c02dff09cda7",
+        "context": "79680c77-c6a4-48b7-b612-194cef4c7eb8",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "[ENGINE-EN] custom_undecane -> undecane"
+        }
+      ],
+      "level": "info",
+      "text": "[ENGINE-EN] custom_undecane -> undecane",
+      "timestamp": 1793878051161,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 12,
+            "functionName": "fPopulateEngineENFromGreek",
+            "lineNumber": 311,
+            "url": "http://127.0.0.1:8056/js/mulermoc-nom-name-en-54.js?v=v54-upstream-20261104-r2"
+          }
+        ]
+      }
+    },
+    {
+      "type": "console",
+      "method": "log",
+      "source": {
+        "realm": "919a5e70-c3ee-4c13-8a9d-c02dff09cda7",
+        "context": "79680c77-c6a4-48b7-b612-194cef4c7eb8",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "[ENGINE-EN] __draft__ -> nonane"
+        }
+      ],
+      "level": "info",
+      "text": "[ENGINE-EN] __draft__ -> nonane",
+      "timestamp": 1793878058762,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 12,
+            "functionName": "fPopulateEngineENFromGreek",
+            "lineNumber": 311,
+            "url": "http://127.0.0.1:8056/js/mulermoc-nom-name-en-54.js?v=v54-upstream-20261104-r2"
+          }
+        ]
+      }
+    },
+    {
+      "type": "console",
+      "method": "log",
+      "source": {
+        "realm": "919a5e70-c3ee-4c13-8a9d-c02dff09cda7",
+        "context": "79680c77-c6a4-48b7-b612-194cef4c7eb8",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "[ENGINE-EN] __draft__ -> nonane"
+        }
+      ],
+      "level": "info",
+      "text": "[ENGINE-EN] __draft__ -> nonane",
+      "timestamp": 1793878059776,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 12,
+            "functionName": "fPopulateEngineENFromGreek",
+            "lineNumber": 311,
+            "url": "http://127.0.0.1:8056/js/mulermoc-nom-name-en-54.js?v=v54-upstream-20261104-r2"
+          }
+        ]
+      }
+    },
+    {
+      "type": "console",
+      "method": "log",
+      "source": {
+        "realm": "919a5e70-c3ee-4c13-8a9d-c02dff09cda7",
+        "context": "79680c77-c6a4-48b7-b612-194cef4c7eb8",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "[ENGINE-EN] __draft__ -> octane"
+        }
+      ],
+      "level": "info",
+      "text": "[ENGINE-EN] __draft__ -> octane",
+      "timestamp": 1793878061373,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 12,
+            "functionName": "fPopulateEngineENFromGreek",
+            "lineNumber": 311,
+            "url": "http://127.0.0.1:8056/js/mulermoc-nom-name-en-54.js?v=v54-upstream-20261104-r2"
+          }
+        ]
+      }
+    },
+    {
+      "type": "console",
+      "method": "log",
+      "source": {
+        "realm": "919a5e70-c3ee-4c13-8a9d-c02dff09cda7",
+        "context": "79680c77-c6a4-48b7-b612-194cef4c7eb8",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "[draft] skeletal: display ok heavy=8 x=3394 y=280"
+        }
+      ],
+      "level": "info",
+      "text": "[draft] skeletal: display ok heavy=8 x=3394 y=280",
+      "timestamp": 1793878062573,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 20,
+            "functionName": "fMolDraftUseSkeletal",
+            "lineNumber": 2185,
+            "url": "http://127.0.0.1:8056/js/mulermoc-nom-molview-54.js?v=merge54-20261105-r1"
+          }
+        ]
+      }
+    },
+    {
+      "type": "console",
+      "method": "log",
+      "source": {
+        "realm": "919a5e70-c3ee-4c13-8a9d-c02dff09cda7",
+        "context": "79680c77-c6a4-48b7-b612-194cef4c7eb8",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "[draft] slots variant=skeletal skelSrc=display C:[heavy=8 x=3276 y=0] E:[heavy=8 x=3276 y=0] S:[heavy=8 x=3394 y=280] draw:[heavy=8 x=3659 y=200]"
+        }
+      ],
+      "level": "info",
+      "text": "[draft] slots variant=skeletal skelSrc=display C:[heavy=8 x=3276 y=0] E:[heavy=8 x=3276 y=0] S:[heavy=8 x=3394 y=280] draw:[heavy=8 x=3659 y=200]",
+      "timestamp": 1793878062573,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 12,
+            "functionName": "fMolDraftAccept",
+            "lineNumber": 2241,
+            "url": "http://127.0.0.1:8056/js/mulermoc-nom-molview-54.js?v=merge54-20261105-r1"
+          }
+        ]
+      }
+    },
+    {
+      "type": "console",
+      "method": "log",
+      "source": {
+        "realm": "919a5e70-c3ee-4c13-8a9d-c02dff09cda7",
+        "context": "79680c77-c6a4-48b7-b612-194cef4c7eb8",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "[SELECT] mol=custom_octane SMILES=CCCCCCCC SYSTEMATIC_EN=octane (retained=\"octane\")"
+        }
+      ],
+      "level": "info",
+      "text": "[SELECT] mol=custom_octane SMILES=CCCCCCCC SYSTEMATIC_EN=octane (retained=\"octane\")",
+      "timestamp": 1793878062598,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 10,
+            "functionName": "fLogMolSelectWithIUPAC",
+            "lineNumber": 344,
+            "url": "http://127.0.0.1:8056/js/mulermoc-nom-iupac-54.js?v=merge54-20261105-r1"
+          }
+        ]
+      }
+    },
+    {
+      "type": "console",
+      "method": "log",
+      "source": {
+        "realm": "919a5e70-c3ee-4c13-8a9d-c02dff09cda7",
+        "context": "79680c77-c6a4-48b7-b612-194cef4c7eb8",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "[ENGINE-EN] custom_octane -> octane"
+        }
+      ],
+      "level": "info",
+      "text": "[ENGINE-EN] custom_octane -> octane",
+      "timestamp": 1793878062598,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 12,
+            "functionName": "fPopulateEngineENFromGreek",
+            "lineNumber": 311,
+            "url": "http://127.0.0.1:8056/js/mulermoc-nom-name-en-54.js?v=v54-upstream-20261104-r2"
+          }
+        ]
+      }
+    }
+  ],
+  "javascriptErrors": []
+}

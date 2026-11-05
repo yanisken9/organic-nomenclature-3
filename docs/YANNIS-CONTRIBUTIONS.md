@@ -1,3 +1,281 @@
+# 2026-11-05 — Reviewed professor merge and immutable quiz-engine compatibility
+
+Yannis approved the preservation plan and extra compatibility. Integrated four
+professor commits35d791ee→f49b810 into local primary after isolated implementation
+and fresh independent review. Purpose: adopt all incoming drawing/canonical-SMILES/
+layout behavior while preserving chemistry, async draft guards, stable setting
+labels, checked lessons and existing quiz progress.
+
+Changed seven v54 runtime files (CSS/Main/core/iupac/lang/molview/teaching), shared
+chemistry client and two game cache references; added one exact old-core SHA asset.
+Exact11paths/hashes: checks/v54-merge-20261105/final-report.json. Updated upstream
+authoring doc exactly; preserved own changelog/session history and archived full
+incoming originals. Earlier Nov5 lesson/branding/label work retained, not attributed
+to this merge. Existing MOL/SDF/data/v52/React/recipes remain unchanged.
+
+Developer core/name/metadata/map/geometry suites passed. Browser336assertions in
+10completed isolated phases;69in incomplete prefix run recorded separately. Final
+primary14browser/0JS and17HTTP checks passed;816protected hashes/HEAD/index intact.
+Independent Chemistry Validator522assertions; fresh Reviewer
+/root/review_v54_merge_f49 no actionable P0–P3 findings. Reviewer ran source/memory
+checks independently, not browser interactions. Post-install exact snapshot
+comparison retained active/prior answers, with pristine unopened future state
+except pre-existing choice-order shuffle. Reviewer reproduced before/current RNG
+behavior independently. Failed attempts and all test attribution retained.
+
+Two unexplained Submit timeouts and earlier native Firefox freeze remain open;
+passing reruns do not prove a cause or cure. Safari, physical mobile, external
+availability, offline and conference sequence unverified. Rollback covers only
+10replaced runtime files, not a full/offline package. Core54 changed; core52 intact.
+Local only, no new commit/push/publication. Next diagnose recurrence before recovery.
+
+Forwardable core message:
+
+Ενημερώθηκε το js/mulermoc-nom-core-54.js κατά την ενσωμάτωση έως f49b810: ασφαλής ανάγνωση κεφαλίδων/μετρήσεων MOL και διάταξη τελικών ομάδων/αιθέρων, με διατήρηση ελέγχων μεταδεδομένων, γράφου και γραμμικότητας sp. Πέρασαν έλεγχοι ονοματολογίας, γράφων/γεωμετρίας και browser, με ανεξάρτητη χημική επικύρωση και Reviewer. Το core52 παρέμεινε αμετάβλητο. Τοπική ενημέρωση, χωρίς νέο commit ή δημοσίευση.
+
+# 2026-11-05 — Four-commit merge implemented in isolated candidate; review pending
+
+Yannis approved the concrete preservation plan and the additional immutable quiz
+engine compatibility. Eleven runtime paths implemented in isolated /tmp candidate,
+with old engine3f9382b4 retained by exact SHA for unchanged quiz recipes/progress;
+new main core8f3e5f76 and viewer22d3b9fd. All826 primary runtime hashes remain
+unchanged until acceptance. Exact target, before copies, verified10-file rollback,
+upstream traceability and evidence are in docs/checks/v54-merge-20261105/.
+
+Actual developer Firefox phases total405assertions/0JS inlistedruns, including
+full12step lesson, actual old-receipt migration, authored/generated Workshop and
+13otherlesson entry/final/PrevNext. One69check engine run ended at missing prefix
+in initial testserver; correctedharness3targetedchecks passed. Two transientSubmit
+timeouts remain causally unestablished; later27authoring/14controls passed, not
+root-cause proof. Other harness-only failed attempts retained. Independent
+Chemistry Validator passed522assertions; fresh Reviewer/root/review_v54_merge_f49
+reviewing frozen28paths, report pending. No primary core changes yet; candidate
+core54 changed. No commit/push/publication; v52/React/MOL/SDF/data remain protected.
+
+# 2026-11-05 — Careful four-commit merge preflight
+
+At Yannis's request, prepared exact base35d791ee/targetf49b810 ten-path snapshots,
+before copies and826 runtime hashes. Fresh target confirmed. Read-only chemistry
+and viewer roles identified concrete preservation requirements: metadata/strict
+bonds, nitrile-sp, fixed-width counts, short-header display, async transaction guards,
+and incoming positional settings-label regression. Evidence and proposed exact
+seven-runtime-file plan: docs/checks/v54-merge-20261105/. A specific approval request
+covers these semantic conflict resolutions before any source intervention.
+No source/core edits, Git index update, commit, push or publication. All826 runtime
+hashes unchanged. Preflight evidence is not final implementation review. Await
+specific approval; then isolated candidate and necessary regression/review work.
+
+# 2026-11-05 — Professor upstream status recheck
+
+At Yannis's request, read current GitHub HEAD/history and complete CHANGELOG.
+HEAD remainsf49b810; no new commits since previous check. Four already known
+commits/ten paths pending since actual synchronization35d791ee, including shared
+core54/viewer54 overlap (JSME-first vs local builtin-first skeletal acquisition).
+Live comparison evidence: docs/checks/professor-upstream-20261105-latest/summary.json.
+Web access failed; direct HTTPS API/raw reads succeeded. No application/core edits,
+synchronization, Git ref update, commit, push or publication. Core hashes verified
+unchanged. Before implementation, the unresolved behavioral merge needs a concrete
+preservation plan; this status check does not imply the pending work was merged.
+
+# 2026-11-05 — Repeated Firefox freeze investigation and temporary recovery
+
+Investigated user's recurrence report (quiz «2/12», browser controls unresponsive).
+Main54/game local HTTP200; collected native parent/two-content/GPU samples and
+read-only Explorer code trace. No demonstrated JS spin or established root cause.
+Evidence: docs/checks/firefox-freeze-20261105-repeat/diagnostic-and-recovery.json.
+Preserved owned preview session, closed only verified owned preview/test processes,
+relaunched same preview profile with session restore. Personal Firefox1602 untouched.
+New visible window856/PID8098; user confirmed «Ναι, ανταποκρίνεται». Recovery
+is temporary; no source/core changes or new commit/push/publication. Existing
+reviewed source hashes unchanged. No independent code review needed for this
+read-only diagnosis/recovery; Explorer report is not an independent implementation
+review. Next diagnose exact input/native state if recurrence continues.
+
+# 2026-11-05 — Plain «Έλεγχος» button in every quiz
+
+Yannis requested and approved removal of the premature success cue from the
+Check button. Changed the shared label in js/namelecule-game-repair.js and only
+its two cache references in games/name-repair.html and mulermoc-nom-54.html.
+Button now reads «Έλεγχος» in standalone and lesson quizzes, authored/generated.
+Handlers, checking logic and the separate post-success indicator are unchanged.
+
+Developer JavaScriptCore syntax and 13 actual Firefox checks passed, zero JS
+errors, including entry modes, selection/enabling and correct submissions.
+Fresh independent Reviewer /root/review_check_button_label found no actionable
+P0/P1/P2/P3 source findings; browser results are Developer evidence. Frozen
+hashes reverified. Baseline, exact changed paths, attribution and limitations:
+`docs/checks/quiz-check-label-20261105/review-result.json`. Existing earlier
+changes are preserved separately. Local only; no new commit/push/publication.
+No core/core-version changes were made during this session.
+
+# 2026-11-05 — Reviewed compact alkane lesson
+
+Yannis approved12steps/two3repairgates. ImplementedNEWscenario+generatedset
+adapter andtargetedcheckpoint/player54/gamecontinueLabel/CSS/Main54/librarylink.
+Finalall8exploration; old21step/authoredpilot retained;14lessons328steps. Purpose
+is shorter two-part theory with required formative practice. Exact8paths,before
+copies,hashes/tests/review in docs/checks/alkanes-two-part-20261105/REPORT.md.
+ChemistryValidatorpassed23graphs8SDF35analyses23maps. Unit51passed. Developer
+Firefox128functionalcheckscompleted(allforms/models)with1nativeJSmolexception;
+19recovery+60compatibility+45oldpilot+60originalgame0JS. FreshReviewerR1P2early
+loadingflash correctedandclosed via11targetedbrowser0JS+7independentmemorychecks.
+NativeJSmolobservation remainsapproxP2/causeunestablished; no conference-readiness
+claim. No core/core-version/MOL/data/Reactchanges. Localonly,no newcommit/push/
+publication; HEAD/indexverifiedunchanged. Fullreport/nextnative-diagnosticstep
+recordedforsubsequentwork. Earlierpendingentriesbelowarehistoricalcutoffs.
+
+# 2026-11-05 — Compact two-part alkane lesson (local implementation; review pending)
+
+User approved12steps with3generatedrepairs at eachof2requiredstops. Newscenario
+andgeneratedcheckpointadapter; targetedcontroller/player54/embeddedcontinueLabel/
+CSS/Main54scriptorder/librarycard. Two teachingparts and finalall8exploration.
+Original21stepandoldauthoredpilot remain. Active14lessons/328steps. Runtime8paths
+andpre-taskcopies documentedin docs/checks/alkanes-two-part-20261105/.
+Chemistryread-onlyvalidationpassed;51unitassertions. Browser128functionalchecks
+completed includingallavailableforms/models;nativeJSmolplatformnullexception
+observedduringasyncrefresh remainsunderdiagnosis.19recovery+60compatibility+
+45oldpilot+60originalWorkshopchecks passed0JSerrors. Thisisnot yetfinalreviewor
+aconference-readyclaim. No core/MOL/Reactchanges;no commit/push/publication.
+Finalreview/checkoutcompleteness toberecordedaftertargetfrozen.
+
+# 2026-11-05 — Approved Workshop set-picker branding
+
+User requested and approved existingWorkshop logo beside the set-picker label
+and removal of the “Όλα τα σετ” arrow. Changed js/namelecule-game-repair.js
+header markup/label only, two scopedCSS rules in css/namelecule-games.css and
+games/name-repair.html cache references. Reused existing3DPNG/helper, no asset
+creation or game/core/chemistry/scenario change. Before-snapshots and hashes in
+docs/checks/workshop-branding-20261105/.
+
+Developer actualFirefox20checks passed0JSerrors: original/engine label/logo,
+1500/390/320px fit/alignment, keyboardreturnwelcome. Existinglogo/engine/gen/catalog
+andcore hashes preserved. Fresh independentReviewer
+/root/review_workshop_branding_20261105 completed with no actionableP0–P3 findings
+on frozen10pathmanifest500a3712: independently verified hashes,three bounded
+diffs,7preserveddependencies andJavaScriptCore syntax; screenshots inspected.
+Developer browser evidence was not independently rerun. No corrections needed.
+Final records in docs/checks/workshop-branding-20261105/review-result.json.
+No application unit tests needed for cosmetic change. Local only; no commit/
+push/publication; no core change session. Earlier enginepilot manifests retain
+their original cut-off; this later cosmetic delta changes only3UI/cache files.
+
+# 2026-11-05 — Engine-backed pilot independently reviewed and handed off locally
+
+Approved unit completed. Fresh-context read-only Reviewer
+/root/review_engine_workshop_20261105 found no actionableP0/P1/P2/P3 findings in
+frozen52-path manifestc76ab022. Independently verified catalog,62clientchecks,
+23forms/eightpermutations/22rejects,512games/3072rounds/38644repairchecks/
+6144restorechecks,4JSsyntax files,SVGcounts and baselinehashes. Browser72+21+60+45
+checks were inspected Developer evidence, not independent browser execution.
+The expected unavailableWorker console diagnostic is separately disclosed.
+
+All10reviewed runtime/source hashes retained after review. Only status/records
+changed; independent-review.json and final-verification.json record attribution,
+hashes and limitations. Pilot left open locally in externalFirefox at
+http://127.0.0.1:8055/games/name-repair.html?source=engine . Ownedtestserver remains
+available for user. No stage/commit/push/publication or newfullbackup claimed.
+Core54/core52 unchanged thissession; sourceHEAD/index and earlier recovery point
+retained. Defaultgame and authoredlesson remain available. Other series/newgraphs,
+generatedlesson gates,adaptiveassessment,published/offline/conference validation
+remain outside this bounded unit. The earlier implementation record below was
+written before review; this entry records its actual completion.
+
+# 2026-11-05 — Approved engine-backed alkane Workshop pilot
+
+User approved the concrete opt-in pilot. Existing gameJS/HTML/CSS now expose
+games/name-repair.html?source=engine, retaining the original default game. New
+chemistry Worker/client run unchanged core54 on actual structure-only catalog
+MOLs; new deterministic factory derives names/parts/branches/vocabulary and
+eligible repairs. Two sets×three distinct structures, random questions/choices,
+basic initial guidance versus neutral challenge, specific correct explanations
+and versioned session recipe/answer-state restoration. No authored molecule
+answer table in pilot. Pool remains eight existing structures; this does not
+generate new graphs or certify adaptive difficulty/learning outcomes.
+
+New runtime paths: js/namelecule-chemistry-worker.js,
+js/namelecule-chemistry-client.js,js/namelecule-repair-generator.js,
+games/data/alkane-structures.json,two missing methane/propane SVGs. New reproducible
+tools/build-alkane-game-catalog.py and bounded evidence/tests under
+docs/checks/engine-workshop-20261105/. ActualMain54 pipeline exported SVGs, no
+alternative renderer. Catalog exactly matches actual embedded expanded MOLs.
+
+Developer verified final72actualFirefoxengine checks+21family/recovery checks,
+originalgame60 andembeddedpilot45, all0uncaughtJavaScript errors. Deliberate
+unavailableWorker case has1expectedconsole diagnostic. Exactverifiedcorebytes
+now bind Worker execution through immutable Blob snapshots; a before-fix network
+race was reproduced, then62controlledclientchecks confirmedcleanup/versioning
+(9Workers terminated,10BlobURLs revoked). Generator512games/3072rounds/
+38644allowedrepairchecks/6144restorechecks passed. ChemistryValidator independently
+verified23forms/eightSDFgraphs/eight names and closed P2GEN-CHEM01; final6992root
+value checks passed with valid branch bounds and C10vocabulary cap.
+
+Independent fresh-context Reviewer /root/review_engine_workshop_20261105 is
+reviewing frozen52-path manifestc76ab022. Review pending at this record. No core
+or core-version edit this session: core54SHA3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306;
+core52d2138418ff630ab77e578b80ca8ba3a10cc1b877c3ab8c0e5c2735ffcd1f24a2.
+Original gameJSON,MainHTML/viewer,data54,MOL/SDF,scenarioJSON andReact preserved.
+No stage/commit/push/publication; only local changes. Prior dirty work and Nov4
+recovery/public snapshots retained. Professorf49 alreadychecked, actualsync35;
+designer overlap remains separate. Browser verification is Developer evidence,
+not specialist or Reviewer execution. Safari/physicalmobile/published/offline and
+conference-machine flow are not certified by these checks.
+
+# 2026-11-05 — Read-only feasibility of engine-backed alkane Workshop
+
+After user's request to try the connection, investigated the actual core runtime
+boundary and a bounded opt-in pilot. Developer confirmed eight alkane naming
+outputs through the existing in-memory JavaScriptCore harness. Read-only explorer
+/root/quiz_engine_adapter_preflight additionally ran core54 alone on23available
+forms, without viewer/DOM/Jmol/data globals in naming scope: invariant names and
+alkane classifications, zero diagnostics. Browser Worker execution and generated
+game behavior remain untested; no implementation is claimed. Read-only Learning
+Designer scoped guidance levels and concept eligibility to the five straight and
+three branched library molecules; symmetric numbering is never a distractor.
+
+Concrete proposal: unchanged core in one-shot Workers, structure-only catalog
+extracted from current library, graph-derived repairs and explanations, two short
+sets of three, reproducible sampling/retry and opt-in Workshop path. Existing
+game/checkpoint preserved pending comparative tests and independent review.
+Plan approval still pending. Only session/contribution records changed; no core,
+application, molecule, scenario or React changes, and no commit/push/publication.
+
+# 2026-11-05 — Read-only audit of Workshop question generation
+
+Professor requirement: questions and grading should use the chemical naming
+engine, with many random items and difficulty settings. Confirmed six predefined
+JSON questions, stored answer-key comparison and randomized option order only;
+no runtime chemical-engine grading or difficulty controls. Read-only explorer
+verified controller/JSON/checkpoint interfaces. Existing engine-derived asset
+provenance is distinct from live question generation. No runtime tests needed
+for this source audit; no implementation or chemical-rule change was made.
+
+Recorded a proposed engine-backed exercise factory starting with alkanes;
+concrete architecture/scope approval remains pending. Four new professor commits
+through f49b810 were checked against actual sync35d791ee, including CHANGELOG diff;
+core/viewer overlap (JSME-first versus local builtin-first) needs a separate merge
+plan. No sync performed. Only these two record files changed locally; no core.js
+or core-version changes this session, no stage/commit/push/publication. Previous
+changes belong to earlier sessions and remain intact.
+
+# 2026-11-04 — Completed final publication, full snapshots and recovery delivery
+
+Published runtimeddc3c80ce643b11a9089012fd312d9853ae1d85b and documentary19b58f200deb4358e6cc556e47bf7a78459e4d9a.
+Final full source snapshot59af0e8f6ae24a1991c4cbec0388a2b7cd9facbc, 3878files; immutable ZIP
+everySHA/CRC, bundle/recovery andtwoexternalcopies verified. Earlier verified-base
+ac348f5/3868files retained. Latest two notes are separately committed after the
+snapshot and included in an additional bookkeeping bundle/external receipts;
+exact final commit/ref hashes are in final-save-state-20261104-143518.json.
+
+221 initial public and24final critical/documentary HTTP hashes plus3immutable
+checkpoint evidence links verified. Main11/React8 functional checks complete;
+10/2known external cookie/tracker diagnostics and strict exit1 disclosed.
+Independent reviews closed all bounded findings. Core54changed in this period
+and is committed/published with the approved fixes; SHA3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306.
+Core52 unchanged. Source HEAD/index retained,39publicReact files preserved/no
+build, localReact WIP fully saved,14originalJSON337steps+separatepilot+10launcher
+files copied. Ready report/links delivered, no message sent to professor.
+Earlier detailed contributions, test timing and limitations remain below.
+
 # 2026-11-04 — Professor35 integration, independent review and verified delivery
 
 Integrated professor commit 35d791ee after comparing it with the previously

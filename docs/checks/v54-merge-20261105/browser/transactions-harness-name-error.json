@@ -1,0 +1,35 @@
+{
+  "completed": false,
+  "checks": [
+    {
+      "label": "Auto ON hides manual Linearize",
+      "detail": null
+    },
+    {
+      "label": "Auto ON linearizes actual Submit input",
+      "detail": null
+    },
+    {
+      "label": "Real Accept enters asynchronous acquisition",
+      "detail": null
+    },
+    {
+      "label": "Conflicting controls disabled during acquisition",
+      "detail": null
+    }
+  ],
+  "failure": "{'columnNumber': 46, 'exception': {'type': 'error'}, 'lineNumber': 0, 'stackTrace': {'callFrames': [{'columnNumber': 46, 'functionName': '', 'lineNumber': 0, 'url': 'http://127.0.0.1:8056/mulermoc-nom-54.html?v=transaction-1793878624669610000'}]}, 'text': 'ReferenceError: fMolDraftDraw is not defined'}",
+  "traceback": "Traceback (most recent call last):\n  File \"/private/tmp/namelecule-v54-merge-20261105-candidate/docs/checks/v54-merge-20261105/browser/test-transactions.py\", line 27, in <module>\n    ev('void fMolDraftAccept();void fMolDraftSubmit();fMolDraftDraw();fMolDraftBeautify();true')\n  File \"bidi\", line 43, in ev\n    keys={'radioChainMode':'chainCalc','originalJSME':'showOrig2D','autoLinearize':'autoLinearize','highlightNumberingSetting':'hlAtoms','highlightNumberingBondsSetting':'hlBonds','bondAtomsSetting':'hlBondAtoms','atomColorModeRow':'atomColor2D','atomSymbolsSetting':'atomSymbols3D','viewerMaxHeightSetting':'maxHeight1','viewerBothHeightSetting':'bothHeight','customMolSetting':'customMols'}\nRuntimeError: {'columnNumber': 46, 'exception': {'type': 'error'}, 'lineNumber': 0, 'stackTrace': {'callFrames': [{'columnNumber': 46, 'functionName': '', 'lineNumber': 0, 'url': 'http://127.0.0.1:8056/mulermoc-nom-54.html?v=transaction-1793878624669610000'}]}, 'text': 'ReferenceError: fMolDraftDraw is not defined'}\n",
+  "failureState": {
+    "draft": {
+      "variant": "condensed",
+      "submitted": true,
+      "submitting": false,
+      "accepting": true,
+      "cancelRequested": false
+    },
+    "acquisition": true,
+    "toast": ""
+  },
+  "javascriptErrors": []
+}

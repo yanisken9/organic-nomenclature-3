@@ -1,0 +1,27 @@
+{
+  "date": "2026-11-05",
+  "approvedRequest": "Ναι, μόνο «Έλεγχος»",
+  "reviewTarget": "review-target.json",
+  "reviewTargetSHA256": "20983e872c1269b65b46b2b42740b3584d716d7ff4ea78009ba56c2eac926b69",
+  "independentReview": {
+    "reviewer": "/root/review_check_button_label",
+    "context": "Fresh context; read-only independent source review",
+    "findings": [],
+    "verified": "Exact three-line diff, common button constructor across all entry modes, final target/before/protected hashes, separate success feedback; no handler or state changes.",
+    "limitations": "Browser checks were performed by Developer, not independently executed by Reviewer."
+  },
+  "developerVerification": {
+    "syntax": "JavaScriptCore full game-script parse passed.",
+    "browserEvidence": "browser-check.json",
+    "browserEvidenceSHA256": "18438848aa3469eff00143775f4e3587ef42317faa61063f200984e7288e138e",
+    "checksPassed": 13,
+    "javascriptErrors": 0,
+    "conditions": "Actual Firefox on local server8055; standalone authored/generated and embedded authored/generated. Native DOM programmatic clicks; no physical pointer/hit testing.",
+    "coverage": "Exact visible/native label, refreshed asset URLs, initial disabled state, enabled selection, correct submissions and separate post-success indicator.",
+    "runnerRecovery": "An owned no-window/stale automation session required restarting only test Firefox6500. No application workaround; user native profile7534 remained untouched.",
+    "finalFrozenHashesVerified": true
+  },
+  "coreChangesThisSession": false,
+  "publication": "Local only; no new commit, push or publication.",
+  "scopeLimit": "Cosmetic label change; these checks do not establish general conference readiness or resolve previously recorded native JSmol uncertainties."
+}

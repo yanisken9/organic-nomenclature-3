@@ -1,0 +1,20 @@
+{
+  "status": "frozen by quiz_engine_compatibility Developer subagent; source unchanged after handoff",
+  "snapshotExactByteComparison": true,
+  "primaryClientUnchanged": true,
+  "files": {
+    "js/namelecule-chemistry-client.js": "13f882de81ba00c2f5ced2adf4a9d97e2c66cf5ed7035bf344ea53dd7430db44",
+    "js/chemistry-engines/3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306.js": "3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306",
+    "docs/checks/v54-merge-20261105/compatibility/baseline-report.json": "399e03471111cd2e5c09212bbfd9fd96fc679f7cf77306f39a878b1dfa677053",
+    "docs/checks/v54-merge-20261105/compatibility/before-client.js": "506a63f8fdbbcc6c4e3e06daa1f74e5679e720f0d9489ce1c022c74df19298b7",
+    "docs/checks/v54-merge-20261105/compatibility/client-lifecycle-tests.js": "2fbc4117851ca5199846bcaff5237b9ba778b83a7915e08873e8b72892113de0",
+    "docs/checks/v54-merge-20261105/compatibility/client.diff": "dc58be109072e35dc7f1ddb05de1714a98723969e93707ac030158226d0af5bf",
+    "docs/checks/v54-merge-20261105/compatibility/compatibility-report.json": "9317d8011a56edc49c35836c8c5993ecb9978f613e36ce7be822b541cd23a5e4",
+    "docs/checks/v54-merge-20261105/compatibility/test-compatibility.py": "c7829b67e3e1765cfd81cc2cf9aec6f07f5d8a05f5779117ea4cb5eee88ed4f0"
+  },
+  "limitations": [
+    "Controlled Web API doubles for client tests; Python hashlib computes digest fixture expectations.",
+    "Actual browser Worker/current-engine lookup/legacy quiz and lesson receipts are parent Developer checks.",
+    "No primary source edits; no commits, pushes, publication or dependency installation."
+  ]
+}

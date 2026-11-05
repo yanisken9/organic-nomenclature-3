@@ -1,0 +1,374 @@
+{
+  "status": "pass",
+  "generatorVersion": "1.0.0",
+  "seedCount": 256,
+  "difficulties": [
+    "basic",
+    "challenge"
+  ],
+  "gamesChecked": 512,
+  "roundsChecked": 3072,
+  "repairsChecked": 38644,
+  "restoreChecks": 6144,
+  "independentNames": [
+    {
+      "moleculeId": "methane",
+      "name": "μεθάνιο",
+      "parentLength": 1,
+      "carbonCount": 1
+    },
+    {
+      "moleculeId": "ethane",
+      "name": "αιθάνιο",
+      "parentLength": 2,
+      "carbonCount": 2
+    },
+    {
+      "moleculeId": "propane",
+      "name": "προπάνιο",
+      "parentLength": 3,
+      "carbonCount": 3
+    },
+    {
+      "moleculeId": "butane",
+      "name": "βουτάνιο",
+      "parentLength": 4,
+      "carbonCount": 4
+    },
+    {
+      "moleculeId": "pentane",
+      "name": "πεντάνιο",
+      "parentLength": 5,
+      "carbonCount": 5
+    },
+    {
+      "moleculeId": "methyl_2_pentane",
+      "name": "2-μεθυλοπεντάνιο",
+      "parentLength": 5,
+      "carbonCount": 6
+    },
+    {
+      "moleculeId": "dimethyl_2_3_butane",
+      "name": "2,3-διμεθυλοβουτάνιο",
+      "parentLength": 4,
+      "carbonCount": 6
+    },
+    {
+      "moleculeId": "ethyl_3_dimethyl_2_5_hexane",
+      "name": "3-αιθυλο-2,5-διμεθυλοεξάνιο",
+      "parentLength": 6,
+      "carbonCount": 10
+    }
+  ],
+  "uniqueFaultVariants": 84,
+  "availableMoleculesSampled": 8,
+  "questionOrders": 65,
+  "choiceSetsWithMultipleOrders": 82,
+  "familyCounts": {
+    "parent-length": 1748,
+    "bond-type": 374,
+    "alphabetical-order": 68,
+    "branch-locants": 526,
+    "branch-multiplier": 356
+  },
+  "exampleByFamily": {
+    "parent-length": {
+      "id": "engine-methane-parent-length-aaf59bef",
+      "guided": false,
+      "title": "Επισκευή ονόματος",
+      "objective": "Έλεγξε το μήκος της κύριας αλυσίδας και το συνθετικό που το δηλώνει.",
+      "moleculeId": "methane",
+      "asset": "assets/name-repair/methane.svg",
+      "diagramAlt": "Ανεπτυγμένος συντακτικός τύπος αλκανίου. Τα άτομα και οι δεσμοί φαίνονται στο διάγραμμα.",
+      "correctName": "μεθάνιο",
+      "successText": "Η συνεχής κύρια αλυσίδα έχει 1 άτομα άνθρακα. Το συνθετικό «μεθ» περιγράφει το μήκος της κύριας αλυσίδας. Σωστό όνομα: μεθάνιο.",
+      "fault": {
+        "kind": "parent-length",
+        "signature": "methane:parent-length:5:πεντ"
+      },
+      "kind": "replace",
+      "parts": [
+        {
+          "id": "component-5",
+          "text": "πεντ",
+          "label": "Μήκος κύριας αλυσίδας"
+        },
+        {
+          "id": "component-6",
+          "text": "άν",
+          "label": "Είδος δεσμών"
+        },
+        {
+          "id": "component-9",
+          "text": "ιο",
+          "label": "Χημική τάξη"
+        }
+      ],
+      "targetPartId": "component-5",
+      "correctValue": "μεθ",
+      "choices": [
+        {
+          "value": "εξ",
+          "label": "εξ"
+        },
+        {
+          "value": "πεντ",
+          "label": "πεντ"
+        },
+        {
+          "value": "μεθ",
+          "label": "μεθ"
+        }
+      ],
+      "feedback": {
+        "wrongPart": "Αυτό το συνθετικό συμφωνεί με τη δομή.",
+        "unchanged": "Διάλεξε μια αντικατάσταση πριν ελέγξεις την επισκευή.",
+        "incorrect": "Η επισκευή δεν συμφωνεί ακόμη με τη δομή. Δοκίμασε ξανά."
+      }
+    },
+    "bond-type": {
+      "id": "engine-ethane-bond-type-3ff25797",
+      "guided": false,
+      "title": "Επισκευή ονόματος",
+      "objective": "Έλεγξε το είδος των δεσμών ανάμεσα στα άτομα άνθρακα.",
+      "moleculeId": "ethane",
+      "asset": "assets/name-repair/ethane.svg",
+      "diagramAlt": "Ανεπτυγμένος συντακτικός τύπος αλκανίου. Τα άτομα και οι δεσμοί φαίνονται στο διάγραμμα.",
+      "correctName": "αιθάνιο",
+      "successText": "Οι δεσμοί ανάμεσα στα 2 άτομα άνθρακα είναι απλοί. Γι’ αυτό χρησιμοποιούμε το συνθετικό «άν». Σωστό όνομα: αιθάνιο.",
+      "fault": {
+        "kind": "bond-type",
+        "signature": "ethane:bond-type:6:ίν"
+      },
+      "kind": "replace",
+      "parts": [
+        {
+          "id": "component-5",
+          "text": "αιθ",
+          "label": "Μήκος κύριας αλυσίδας"
+        },
+        {
+          "id": "component-6",
+          "text": "ίν",
+          "label": "Είδος δεσμών"
+        },
+        {
+          "id": "component-9",
+          "text": "ιο",
+          "label": "Χημική τάξη"
+        }
+      ],
+      "targetPartId": "component-6",
+      "correctValue": "άν",
+      "choices": [
+        {
+          "value": "άν",
+          "label": "άν"
+        },
+        {
+          "value": "ίν",
+          "label": "ίν"
+        },
+        {
+          "value": "έν",
+          "label": "έν"
+        }
+      ],
+      "feedback": {
+        "wrongPart": "Αυτό το συνθετικό συμφωνεί με τη δομή.",
+        "unchanged": "Διάλεξε μια αντικατάσταση πριν ελέγξεις την επισκευή.",
+        "incorrect": "Η επισκευή δεν συμφωνεί ακόμη με τη δομή. Δοκίμασε ξανά."
+      }
+    },
+    "alphabetical-order": {
+      "id": "engine-ethyl_3_dimethyl_2_5_hexane-alphabetical-order-4d777eae",
+      "guided": false,
+      "title": "Επισκευή ονόματος",
+      "objective": "Έλεγξε την αλφαβητική σειρά των διαφορετικών διακλαδώσεων.",
+      "moleculeId": "ethyl_3_dimethyl_2_5_hexane",
+      "asset": "assets/name-repair/ethyl_3_dimethyl_2_5_hexane.svg",
+      "diagramAlt": "Ανεπτυγμένος συντακτικός τύπος αλκανίου. Τα άτομα και οι δεσμοί φαίνονται στο διάγραμμα.",
+      "correctName": "3-αιθυλο-2,5-διμεθυλοεξάνιο",
+      "successText": "Το «αιθυλο» προηγείται αλφαβητικά του «μεθυλο». Οι αριθμοί θέσης και τα πολλαπλασιαστικά προθέματα δεν καθορίζουν τη σειρά. Κάθε ομάδα κρατά τις δικές της θέσεις. Σωστό όνομα: 3-αιθυλο-2,5-διμεθυλοεξάνιο.",
+      "fault": {
+        "kind": "alphabetical-order",
+        "signature": "ethyl_3_dimethyl_2_5_hexane:alphabetical-order:reversed"
+      },
+      "kind": "order",
+      "parts": [
+        {
+          "id": "branch-group-2",
+          "text": "2,5-διμεθυλο",
+          "label": "Ομάδα διακλαδώσεων με τις θέσεις της"
+        },
+        {
+          "id": "branch-group-1",
+          "text": "3-αιθυλο",
+          "label": "Ομάδα διακλαδώσεων με τις θέσεις της"
+        },
+        {
+          "id": "parent",
+          "text": "εξάνιο",
+          "label": "Κύρια αλυσίδα"
+        }
+      ],
+      "movablePartIds": [
+        "branch-group-2",
+        "branch-group-1"
+      ],
+      "correctOrder": [
+        "branch-group-1",
+        "branch-group-2"
+      ],
+      "suffixPartId": "parent",
+      "feedback": {
+        "wrongPart": "Αυτό το συνθετικό συμφωνεί με τη δομή.",
+        "unchanged": "Μετακίνησε μια ομάδα πριν ελέγξεις την επισκευή.",
+        "incorrect": "Η επισκευή δεν συμφωνεί ακόμη με τη δομή. Δοκίμασε ξανά."
+      }
+    },
+    "branch-locants": {
+      "id": "engine-dimethyl_2_3_butane-branch-locants-f0d60cff",
+      "guided": false,
+      "title": "Επισκευή ονόματος",
+      "objective": "Έλεγξε τα σημεία σύνδεσης των διακλαδώσεων και τη φορά αρίθμησης.",
+      "moleculeId": "dimethyl_2_3_butane",
+      "asset": "assets/name-repair/dimethyl_2_3_butane.svg",
+      "diagramAlt": "Ανεπτυγμένος συντακτικός τύπος αλκανίου. Τα άτομα και οι δεσμοί φαίνονται στο διάγραμμα.",
+      "correctName": "2,3-διμεθυλοβουτάνιο",
+      "successText": "Οι διακλαδώσεις «μεθυλο» συνδέονται στις θέσεις 2, 3 της κύριας αλυσίδας. Οι θέσεις πρέπει να αντιστοιχούν στα σημεία σύνδεσης. Η αρίθμηση συγκρίνεται από τα δύο άκρα, στο πρώτο σημείο διαφοράς. Σωστό όνομα: 2,3-διμεθυλοβουτάνιο.",
+      "fault": {
+        "kind": "branch-locants",
+        "signature": "dimethyl_2_3_butane:branch-locants:0:2,2-"
+      },
+      "kind": "replace",
+      "parts": [
+        {
+          "id": "component-0",
+          "text": "2,2-",
+          "label": "Θέσεις διακλαδώσεων"
+        },
+        {
+          "id": "component-1",
+          "text": "διμεθυλο",
+          "label": "Είδος και πλήθος διακλαδώσεων"
+        },
+        {
+          "id": "component-5",
+          "text": "βουτ",
+          "label": "Μήκος κύριας αλυσίδας"
+        },
+        {
+          "id": "component-6",
+          "text": "άν",
+          "label": "Είδος δεσμών"
+        },
+        {
+          "id": "component-9",
+          "text": "ιο",
+          "label": "Χημική τάξη"
+        }
+      ],
+      "targetPartId": "component-0",
+      "correctValue": "2,3-",
+      "choices": [
+        {
+          "value": "3,3-",
+          "label": "3,3-"
+        },
+        {
+          "value": "2,3-",
+          "label": "2,3-"
+        },
+        {
+          "value": "2,2-",
+          "label": "2,2-"
+        }
+      ],
+      "feedback": {
+        "wrongPart": "Αυτό το συνθετικό συμφωνεί με τη δομή.",
+        "unchanged": "Διάλεξε μια αντικατάσταση πριν ελέγξεις την επισκευή.",
+        "incorrect": "Η επισκευή δεν συμφωνεί ακόμη με τη δομή. Δοκίμασε ξανά."
+      }
+    },
+    "branch-multiplier": {
+      "id": "engine-dimethyl_2_3_butane-branch-multiplier-74bb4f08",
+      "guided": false,
+      "title": "Επισκευή ονόματος",
+      "objective": "Έλεγξε πόσες ίδιες διακλαδώσεις υπάρχουν και πώς δηλώνεται το πλήθος τους.",
+      "moleculeId": "dimethyl_2_3_butane",
+      "asset": "assets/name-repair/dimethyl_2_3_butane.svg",
+      "diagramAlt": "Ανεπτυγμένος συντακτικός τύπος αλκανίου. Τα άτομα και οι δεσμοί φαίνονται στο διάγραμμα.",
+      "correctName": "2,3-διμεθυλοβουτάνιο",
+      "successText": "Υπάρχουν 2 ίδιες διακλαδώσεις «μεθυλο», στις θέσεις 2, 3. Το συνθετικό «διμεθυλο» δηλώνει μαζί το είδος και το πλήθος τους. Σωστό όνομα: 2,3-διμεθυλοβουτάνιο.",
+      "fault": {
+        "kind": "branch-multiplier",
+        "signature": "dimethyl_2_3_butane:branch-multiplier:1:τριμεθυλο"
+      },
+      "kind": "replace",
+      "parts": [
+        {
+          "id": "component-0",
+          "text": "2,3-",
+          "label": "Θέσεις διακλαδώσεων"
+        },
+        {
+          "id": "component-1",
+          "text": "τριμεθυλο",
+          "label": "Είδος και πλήθος διακλαδώσεων"
+        },
+        {
+          "id": "component-5",
+          "text": "βουτ",
+          "label": "Μήκος κύριας αλυσίδας"
+        },
+        {
+          "id": "component-6",
+          "text": "άν",
+          "label": "Είδος δεσμών"
+        },
+        {
+          "id": "component-9",
+          "text": "ιο",
+          "label": "Χημική τάξη"
+        }
+      ],
+      "targetPartId": "component-1",
+      "correctValue": "διμεθυλο",
+      "choices": [
+        {
+          "value": "μεθυλο",
+          "label": "μεθυλο"
+        },
+        {
+          "value": "τριμεθυλο",
+          "label": "τριμεθυλο"
+        },
+        {
+          "value": "διμεθυλο",
+          "label": "διμεθυλο"
+        }
+      ],
+      "feedback": {
+        "wrongPart": "Αυτό το συνθετικό συμφωνεί με τη δομή.",
+        "unchanged": "Διάλεξε μια αντικατάσταση πριν ελέγξεις την επισκευή.",
+        "incorrect": "Η επισκευή δεν συμφωνεί ακόμη με τη δομή. Δοκίμασε ξανά."
+      }
+    }
+  },
+  "deterministic": true,
+  "inputImmutable": true,
+  "engineOutputSensitive": true,
+  "invalidInputChecks": 9,
+  "limitations": [
+    "Headless JavaScriptCore; not an actual browser Worker or UI replay.",
+    "Eight fixed structures; random fault/choice/order variants do not create new molecular structures.",
+    "Parent-length alternatives come from the actual core rootVocabulary, bounded to the catalog maximum total carbon count (10); correct fragments come from real core54 parts."
+  ],
+  "sha256": {
+    "js/mulermoc-nom-core-54.js": "3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306",
+    "games/data/alkane-structures.json": "9778e30ea33f2f7cd4c8a472e46e90539856b861a54035a1d514c3246cccf724",
+    "js/namelecule-repair-generator.js": "118304488b6eaee651490785903080c419239df3f646988f79ae0e2548527611",
+    "js/namelecule-game-repair.js": "8afafaea77dd5c0a6259cecfd8d98c548500a030810708a30bd616856353e2eb"
+  }
+}

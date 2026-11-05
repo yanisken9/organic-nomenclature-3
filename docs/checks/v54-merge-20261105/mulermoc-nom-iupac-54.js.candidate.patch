@@ -1,0 +1,20 @@
+--- /Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/v54-merge-20261105/before/js/mulermoc-nom-iupac-54.js	2026-11-04 14:27:31
++++ /tmp/namelecule-v54-merge-20261105-candidate/js/mulermoc-nom-iupac-54.js	2026-11-05 13:17:16
+@@ -159,6 +159,9 @@
+   result.iupacPubchem = result.iupac || null;
+   result.systematic = systematic || null;
+   result.synonyms = synonyms || [];
++  // Canonical SMILES rides along from the PUG payload (no extra request);
++  // consumers (skeletal depict input, info panel) read it off the hit.
++  try { result.canonicalSmiles = result.canonicalSmiles || null; } catch (eC) {}
+   console.log(
+     "[IUPAC-EN] SMILES=" +
+       smiles +
+@@ -226,6 +229,7 @@
+   entry.systematicEN = hit.systematic || null;
+   entry.iupacEN = entry.systematicEN || entry.iupacPubchem || null;
+   entry.pubchemCID = hit.cid || entry.pubchemCID || null;
++  entry.canonicalSmiles = hit.canonicalSmiles || entry.canonicalSmiles || null;
+   entry.iupacSource = hit.source || "none";
+   try { entry.iupacErr = hit.lastErr || null; } catch (eI) {}
+   entry.needsHumanCheck =

@@ -122,6 +122,54 @@
     return target;
   }
 
+  // Existing authored checkpoints remain synchronous. An adapter may need the
+  // engine to reconstruct a saved generated set before navigation can trust it.
+  function prepareTarget(scenario, requested, options) {
+    if (!scenario || !Array.isArray(scenario.steps)) return null;
+    const number = Number(requested);
+    const target = Math.max(0, Math.min(scenario.steps.length - 1, Number.isFinite(number) ? Math.floor(number) : 0));
+    const record = recordFor(scenario);
+    const content = record.content;
+    const signal = options && options.signal;
+    function checkCurrent() {
+      if ((signal && signal.aborted) || signature(scenario) !== content) {
+        const error = new Error("Checkpoint preparation cancelled");
+        error.name = "AbortError";
+        throw error;
+      }
+    }
+    function scan(start) {
+      checkCurrent();
+      for (let index = start; index < target; index++) {
+        const step = scenario.steps[index];
+        if (!step || !own(step, "checkpoint")) continue;
+        const spec = validateCheckpoint(step.checkpoint);
+        const adapter = types[spec.type];
+        const saved = record.states[index];
+        if (saved && typeof adapter.prepare === "function") {
+          const savedContent = JSON.stringify(saved);
+          const pending = adapter.prepare(spec.round, saved, { signal });
+          if (pending && typeof pending.then === "function") {
+            return Promise.resolve(pending).then(state => {
+              checkCurrent();
+              if (JSON.stringify(record.states[index]) !== savedContent) {
+                const error = new Error("Checkpoint progress changed during preparation");
+                error.name = "AbortError";
+                throw error;
+              }
+              record.states[index] = adapter.restore(spec.round, state);
+              persist(record);
+              return isComplete(scenario, index) ? scan(index + 1) : null;
+            });
+          }
+        }
+        if (!isComplete(scenario, index)) return null;
+      }
+      return null;
+    }
+    return scan(0);
+  }
+
   const words = {
     gr: { label: "Μικρή στάση για επισκευή", instruction: "Επισκεύασε το όνομα για να συνεχίσεις τη θεωρία.",
       open: "Στο Συνεργείο ονομάτων", done: "Η επισκευή ολοκληρώθηκε. Μπορείς να συνεχίσεις.", revisit: "Δες ξανά την επισκευή",
@@ -311,5 +359,5 @@
   }
 
   global.NameleculeQuizCheckpoints = { registerType, validateCheckpoint, hasCheckpoints,
-    resolveTarget, isComplete, onStep, onExit, reset };
+    resolveTarget, prepareTarget, isComplete, onStep, onExit, reset };
 })(typeof window !== "undefined" ? window : globalThis);

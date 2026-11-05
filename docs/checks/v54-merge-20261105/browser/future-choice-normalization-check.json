@@ -1,0 +1,17 @@
+{
+  "source": "primary-installation-third-attempt.json",
+  "result": "passed",
+  "exactlyRetained": [
+    "whole canonical active round",
+    "receipt version/content/seed/currentRound/solved",
+    "complete solved state0",
+    "complete active unsubmitted state1",
+    "all future state fields except choiceOrder"
+  ],
+  "futureStatePristine": true,
+  "futureChoiceOrderBothValidPermutations": true,
+  "onlyObservedDifference": "Permutation of choiceOrder in never-opened state2",
+  "sourceCause": "Unchanged generated adapter restore() resets all states after first unsolved; unchanged repair engine initialChoiceOrder() shuffles with Math.random.",
+  "independentReviewer": "/root/review_v54_merge_f49 targeted source/evidence check confirms existing behavior; no demonstrated merge regression.",
+  "productSourceChanged": false
+}

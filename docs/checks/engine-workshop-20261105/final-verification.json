@@ -1,0 +1,106 @@
+{
+  "status": "complete locally, independently reviewed",
+  "reviewTargetSHA256": "c76ab02275ccf19f15c9849bae66bbeadbd0db9d1e3d5352302b422166e5b382",
+  "reviewedRuntimeUnchanged": [
+    {
+      "path": "js/namelecule-game-repair.js",
+      "sha256": "8afafaea77dd5c0a6259cecfd8d98c548500a030810708a30bd616856353e2eb",
+      "kind": "runtime/source"
+    },
+    {
+      "path": "games/name-repair.html",
+      "sha256": "89459845eb24dc6efbc9108fc2f4d2eef9bea33199fa006f1c77ee5d4937c417",
+      "kind": "runtime/source"
+    },
+    {
+      "path": "css/namelecule-games.css",
+      "sha256": "4e90d6b3512402971b75fc2cec73ce41619f676f1b7880f68e8440d0d351c61c",
+      "kind": "runtime/source"
+    },
+    {
+      "path": "js/namelecule-chemistry-worker.js",
+      "sha256": "86b14771559761d1e6aa9f0120927b3303c58f090a39ab0c6274639f987b3c34",
+      "kind": "runtime/source"
+    },
+    {
+      "path": "js/namelecule-chemistry-client.js",
+      "sha256": "506a63f8fdbbcc6c4e3e06daa1f74e5679e720f0d9489ce1c022c74df19298b7",
+      "kind": "runtime/source"
+    },
+    {
+      "path": "js/namelecule-repair-generator.js",
+      "sha256": "118304488b6eaee651490785903080c419239df3f646988f79ae0e2548527611",
+      "kind": "runtime/source"
+    },
+    {
+      "path": "games/data/alkane-structures.json",
+      "sha256": "9778e30ea33f2f7cd4c8a472e46e90539856b861a54035a1d514c3246cccf724",
+      "kind": "runtime/source"
+    },
+    {
+      "path": "tools/build-alkane-game-catalog.py",
+      "sha256": "e5fd721ff49ae4d25a50e7acf32c135fb9c09b154f85719b897d8b7e937a926e",
+      "kind": "runtime/source"
+    },
+    {
+      "path": "games/assets/name-repair/methane.svg",
+      "sha256": "8f4e242ab525b321c35a5c479b04ec6af226fd2fbdace1f95cad2daa6caf85d4",
+      "kind": "runtime/source"
+    },
+    {
+      "path": "games/assets/name-repair/propane.svg",
+      "sha256": "281576dc3d950752aedc595df21d979a886ea8b339463160964973057e84a116",
+      "kind": "runtime/source"
+    }
+  ],
+  "postReviewReviewedPathChanges": [
+    "docs/checks/engine-workshop-20261105/REPORT.md"
+  ],
+  "postReviewChangeNature": "Documentation/status only; no runtime/source change. Final records checked against actual Reviewer result.",
+  "postReviewRecordSHA256": {
+    "docs/checks/engine-workshop-20261105/REPORT.md": "63fbd0c1c4265b8dd41f79d7802b554baa0ba976d723607c3f6ad67e9e560d51",
+    "docs/checks/engine-workshop-20261105/independent-review.json": "9a212c85da36ec222a4390c8e4ae4456fec3b5d56a5fe5fa10d10e921c0efae9",
+    "docs/SESSION-NOTES.md": "d853aac11c2653e15601a8eab087c83926c49e436d80dce304afbd2c1399b9f6",
+    "docs/YANNIS-CONTRIBUTIONS.md": "a23b91e55687a328444fd3027669bbaa8ce2d0c5be1921fa3f8e3d2f7937bcf6",
+    "docs/checks/engine-workshop-20261105/browser/preview-ready.json": "643a176221b9b429b3ac2ab86be8e5c18f562be46afdc0554f11ceb0baf40cc4"
+  },
+  "preservedBaseline": {
+    "js/mulermoc-nom-core-54.js": true,
+    "js/mulermoc-nom-core-52.js": true,
+    "js/jsme-nick-nomeclature-moc2-data_54.js": true,
+    "mulermoc-nom-54.html": true,
+    "js/mulermoc-nom-molview-54.js": true,
+    "scenarios/alkanes-name-repair-pilot.scenario.json": true,
+    "games/data/name-repair-alkanes.json": true,
+    "games/assets/name-repair/alkane-sets-provenance.json": true
+  },
+  "sourceHEAD": "168e3cec01f941a84d40bbe0dc07156e7baa35d0",
+  "indexSHA256": "25c212236906eff396f0a3521653f16eea1f5d57dfc5e32ba4477ad25930f964",
+  "browser": {
+    "engine-browser.json": {
+      "completed": true,
+      "checks": 72,
+      "uncaughtJavaScriptErrors": 0
+    },
+    "families-and-recovery.json": {
+      "completed": true,
+      "checks": 21,
+      "uncaughtJavaScriptErrors": 0
+    },
+    "two-sets-browser.json": {
+      "completed": true,
+      "checks": 60,
+      "uncaughtJavaScriptErrors": 0
+    },
+    "pilot-browser.json": {
+      "completed": true,
+      "checks": 45,
+      "uncaughtJavaScriptErrors": 0
+    }
+  },
+  "browserAssertionTotal": 198,
+  "coreChangesThisSession": false,
+  "commitPushPublication": false,
+  "previewURL": "http://127.0.0.1:8055/games/name-repair.html?source=engine",
+  "knownVerifiedRecovery": "Completed 2026-11-04 public/full checkpoints; this pilot is local only."
+}

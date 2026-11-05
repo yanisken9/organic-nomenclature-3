@@ -1,0 +1,51 @@
+--- /Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/v54-merge-20261105/before/mulermoc-nom-54.html	2026-11-05 12:41:42
++++ /tmp/namelecule-v54-merge-20261105-candidate/mulermoc-nom-54.html	2026-11-05 13:17:16
+@@ -44,7 +44,7 @@
+ 
+   <title>Namelecule — Ονοματολογία Οργανικών Ενώσεων</title>
+ 
+-  <link rel="stylesheet" href="css/jsme-nick-54.css?v=v54-upstream-20261104-r2" />
++  <link rel="stylesheet" href="css/jsme-nick-54.css?v=merge54-20261105-r1" />
+   <link rel="stylesheet" href="css/mulermoc-nom-scenario-54.css?v=v54-sync-20261104-r2" />
+ 
+   <link rel="stylesheet" href="css/namelecule-54.css?v=v54-sync-20261104-r2" />
+@@ -181,6 +181,15 @@
+                   </div>
+                 </div>
+ 
++                <div id="autoLinearize" class="settingRow">
++                  <div class="settingLabel" id="autoLinearizeLabel">
++                    Αυτόματη γραμμικοποίηση:
++                  </div>
++                  <div id="autoLinearizeCheck" class="checkBoxContainer selectedCheck">
++                    &nbsp;<span class="checkBox"></span>
++                  </div>
++                </div>
++
+                 <div id="highlightNumberingSetting" class="settingRow">
+                   <div class="settingLabel">
+                     Επισήμανση ατόμων κατά την αρίθμηση:
+@@ -354,9 +363,9 @@
+        files next to the data file and register each one, e.g.:
+        <script src="js/MULERMOC_dimethyl_ether_data.js?v=54.1"></script> -->
+   <script src="js/ui-icons-54.js?v=v54-sync-20261104-r2"></script>
+-  <script src="js/mulermoc-nom-core-54.js?v=v54-upstream-20261104-r2"></script>
+-  <script src="js/mulermoc-nom-molview-54.js?v=v54-upstream-20261104-r2"></script>
+-  <script src="js/mulermoc-nom-teaching-54.js?v=v54-sync-20261104-r2"></script>
++  <script src="js/mulermoc-nom-core-54.js?v=merge54-20261105-r1"></script>
++  <script src="js/mulermoc-nom-molview-54.js?v=merge54-20261105-r1"></script>
++  <script src="js/mulermoc-nom-teaching-54.js?v=merge54-20261105-r1"></script>
+   <script src="js/mulermoc-nom-note-54.js?v=v54-sync-20261104-r2"></script>
+   <script src="js/namelecule-game-repair.js?v=quiz-check-label-20261105-r1"></script>
+   <script src="js/namelecule-quiz-checkpoints.js?v=alkanes-two-part-20261105-r1"></script>
+@@ -364,8 +373,8 @@
+   <script src="js/namelecule-repair-generator.js?v=engine-pilot-20261105-r1"></script>
+   <script src="js/namelecule-generated-repair-checkpoint.js?v=alkanes-two-part-20261105-r1"></script>
+   <script src="js/mulermoc-nom-scenario-54.js?v=alkanes-two-part-20261105-r1"></script>
+-  <script src="js/mulermoc-nom-iupac-54.js?v=v54-upstream-20261104-r2"></script>
+-  <script src="js/mulermoc-nom-lang-54.js?v=v54-sync-20261104-r2"></script>
++  <script src="js/mulermoc-nom-iupac-54.js?v=merge54-20261105-r1"></script>
++  <script src="js/mulermoc-nom-lang-54.js?v=merge54-20261105-r1"></script>
+   <script src="js/mulermoc-nom-name-en-54.js?v=v54-upstream-20261104-r2"></script>
+   <script>
+     window.JSApplet = window.JSApplet || {};

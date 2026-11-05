@@ -345,7 +345,7 @@ function jsmeOnLoad() {
     "590px",
     "240px",
     {
-      options: "depict, marker, toggle, depictaction, noreaction,nomultipart,noquery","guicolor": "#c8d9ec",  "guiAtomColor": "#1b275d", 
+      options: "depict, marker, toggle, depictaction, noreaction,nomultipart,noquery, canonize","guicolor": "#c8d9ec",  "guiAtomColor": "#1b275d",
       depictbg: "#fff",
       atombgsize: "0.6",
     },
@@ -381,7 +381,7 @@ function jsmeOnLoad() {
       "590px",
       "240px",
       {
-        options: "marker, norbutton, noxbutton, atommovebutton, autonumber, noreaction,nomultipart,noquery","guicolor": "#c8d9ec",  "guiAtomColor": "#1b275d",
+        options: "marker, norbutton, noxbutton, atommovebutton, autonumber, noreaction,nomultipart,noquery, canonize","guicolor": "#c8d9ec",  "guiAtomColor": "#1b275d",
         depictbg: "#fff",
         atombgsize: "0.6",
       },
@@ -682,6 +682,9 @@ function fToggleViewerSettings() {
 // the same known-good path as the cold-boot resend. Submit (engine + PubChem)
 // arrives in Step 3; the Submit button below is a stub until then.
 window.MulerDraft = window.MulerDraft || null;
+// Depiction owns the applets until restoration. Cancel waits for that finally
+// block; a replacement draft never receives the previous applet content.
+window.MulerDraftAcquisition = window.MulerDraftAcquisition || null;
 
 function fMolDraftT(key, fallback) {
   try {
@@ -798,7 +801,8 @@ function fMolDraftSyncBar() {
     var editorVisible = false;
     try { editorVisible = !document.getElementById("jsmeEditDraft").classList.contains("hide"); } catch (eV) {}
     var submitActive = false, acceptActive = false;
-    if (!d.submitting) {
+    var acquiring = !!window.MulerDraftAcquisition;
+    if (!d.submitting && !acquiring) {
       if (!d.submitted || d.stale || editorVisible) submitActive = true;
       if (d.submitted && !d.stale && d.pubchem && d.sdf3D && !editorVisible) acceptActive = true;
     }
@@ -810,24 +814,29 @@ function fMolDraftSyncBar() {
     if (bw) {
       if (d.submitted) {
         bw.classList.remove("hide");
-        if (!d.submitting && !editorVisible) { bw.classList.add("active"); bw.classList.remove("btnInactive"); }
+        if (!d.submitting && !acquiring && !editorVisible) { bw.classList.add("active"); bw.classList.remove("btnInactive"); }
         else { bw.classList.remove("active"); bw.classList.add("btnInactive"); }
       }
       else bw.classList.add("hide");
     }
-    // Beautify changes the editor canvas, so school drafts expose it only
-    // while that editor is visible. Draw returns from preview to the editor.
+    // Auto mode owns school linearization; manual mode offers the same
+    // shared operation only while the school editor is visible.
     var bb2 = document.getElementById("molDraftBeautifyBtn");
     if (bb2) {
       var schoolDraft = true;
       try { schoolDraft = !(d.mode === "edit" && (d.variant === "skeletal" || d.variant === "condensedZigZag")); } catch (eSd) {}
-      if (!schoolDraft || !editorVisible) { bb2.classList.add("hide"); }
+      var autoOn = true;
+      try { autoOn = fMolDraftAutoLinearizeOn(); } catch (eAu) {}
+      if (!schoolDraft || autoOn || !editorVisible) { bb2.classList.add("hide"); }
       else {
         bb2.classList.remove("hide");
-        if (!d.submitting) { bb2.classList.add("active"); bb2.classList.remove("btnInactive"); }
+        if (!d.submitting && !acquiring) { bb2.classList.add("active"); bb2.classList.remove("btnInactive"); }
         else { bb2.classList.remove("active"); bb2.classList.add("btnInactive"); }
       }
     }
+    [bs, ba, bw, bb2].forEach(function (button) {
+      if (button) button.disabled = acquiring;
+    });
   } catch (eS) {}
 }
 
@@ -852,7 +861,7 @@ function fMolDraftShowPreviewView() {
 }
 
 function fMolDraftBackToEdit() {
-  if (!window.MulerDraft || fMolDraftPresenting()) return;
+  if (!window.MulerDraft || window.MulerDraftAcquisition || window.MulerDraft.submitting || fMolDraftPresenting()) return;
   // Like Edit entry: 3D away (hide, not zap — viewport fragility), then the
   // editor view, so the refit below measures the settled layout.
   try {
@@ -891,29 +900,36 @@ function fMolDraftBackToEdit() {
 // recaptures; d.molText is refreshed too, so even the Accept-time self-heal
 // path keeps the tidied geometry). School slots only — skeletal drafts keep
 // their JSME zigzag (button hidden there).
-function fMolDraftBeautify() {
+// Auto-tidy core (Submit auto-linearize + manual Linearize button share it):
+// reads the canvas, runs the sandbox engine pass for a fresh chain,
+// linearizes school geometry (expanded: heavy skeleton + regenerated H),
+// writes back to the edit applet and re-reads. Skeletal drafts pass through
+// untouched (zigzag path owns that slot). Returns {molText, smiles} or null
+// (toast already shown). Never touches view state or the draft bar — callers
+// own those (Submit continues its flow; Beautify flips view + marks stale).
+function fMolDraftAutoTidy() {
   var d = window.MulerDraft;
-  if (!d || fMolDraftPresenting()) return;
-  if (d.submitting) return;
-  if (d.mode === "edit" && (d.variant === "skeletal" || d.variant === "condensedZigZag")) return;
-  if (typeof jsmeEditDraftApplet === "undefined" || !jsmeEditDraftApplet) return;
+  if (!d || fMolDraftPresenting()) return null;
+  if (d.submitting || window.MulerDraftAcquisition) return null;
+  if (typeof jsmeEditDraftApplet === "undefined" || !jsmeEditDraftApplet) return null;
   var drawing = null;
   try { drawing = fMolDraftReadDrawing(); } catch (eR) { drawing = null; }
   if (!drawing || !drawing.hasAny) {
     fMolDraftToast(fMolDraftT("submitEmpty", "Empty drawing — draw something first."));
-    return;
+    return null;
+  }
+  if (d.mode === "edit" && (d.variant === "skeletal" || d.variant === "condensedZigZag")) {
+    return { molText: drawing.molText, smiles: drawing.smiles };
   }
   var savedMode = null;
   try { savedMode = (typeof mainChainMode !== "undefined") ? mainChainMode : null; } catch (eM0) {}
-  // Same shared sandbox pass as Submit (chain rebuild included — a bare
-  // analyse+detect was the pre-submit damage).
   var _sb = { ok: false, ring: false };
   try { _sb = fMolDraftSandboxAnalyse(drawing.molText) || _sb; } catch (eSb) {}
   try { if (savedMode != null) mainChainMode = savedMode; } catch (eRm0) {}
   try { if (typeof fUpdateChainModeButton === "function") fUpdateChainModeButton(); } catch (eBc0) {}
   if (!_sb.ok) {
     fMolDraftToast(fMolDraftT(_sb.ring ? "submitRing" : "submitEngineFail", _sb.ring ? "Rings are out of scope — acyclic structures only." : "Engine failed — check the drawing."));
-    return;
+    return null;
   }
   var chainNow = null;
   try { chainNow = (typeof mainChainAtomsList !== "undefined") ? mainChainAtomsList : null; } catch (eCh) {}
@@ -921,15 +937,44 @@ function fMolDraftBeautify() {
   try { if (typeof fLinearizeMol === "function") lin = fLinearizeMol(drawing.molText, chainNow); } catch (eL) { lin = null; }
   if (!lin) {
     fMolDraftToast(fMolDraftT("submitEngineFail", "Engine failed — check the drawing."));
-    return;
+    return null;
   }
+  var outMol = lin;
+  try {
+    var _dv = (d.mode === "edit") ? d.variant : "condensed";
+    if (_dv === "expanded" && typeof fGenExpandedMol === "function") {
+      var _ex = fGenExpandedMol(lin) || null;
+      if (_ex) outMol = _ex;
+    }
+  } catch (eE) {}
+  try { jsmeEditDraftApplet.readMolFile(outMol); } catch (eW) {
+    fMolDraftToast(fMolDraftT("submitEngineFail", "Engine failed — check the drawing."));
+    return null;
+  }
+  var fresh = null;
+  try { fresh = fMolDraftReadDrawing(); } catch (eR2) { fresh = null; }
+  if (!fresh || !fresh.molText) {
+    fMolDraftToast(fMolDraftT("submitEngineFail", "Engine failed — check the drawing."));
+    return null;
+  }
+  return { molText: fresh.molText, smiles: fresh.smiles };
+}
+
+function fMolDraftBeautify() {
+  var d = window.MulerDraft;
+  if (!d || fMolDraftPresenting()) return;
+  if (d.submitting || window.MulerDraftAcquisition) return;
+  if (d.mode === "edit" && (d.variant === "skeletal" || d.variant === "condensedZigZag")) return;
+  if (typeof jsmeEditDraftApplet === "undefined" || !jsmeEditDraftApplet) return;
+  var _td = null;
+  try { _td = fMolDraftAutoTidy(); } catch (eT) { _td = null; }
+  if (!_td) return;
   try {
     var _b3 = document.getElementById("view3DBtn");
     if (_b3 && _b3.classList.contains("active") && typeof fToggleViewer3D === "function") fToggleViewer3D();
   } catch (e3) {}
   fMolDraftShowEditor();
-  try { jsmeEditDraftApplet.readMolFile(lin); } catch (eW) { return; }
-  try { d.molText = lin; d.smiles = drawing.smiles; } catch (eD) {}
+  try { d.molText = _td.molText; d.smiles = _td.smiles; } catch (eD) {}
   if (d.submitted && !d.submitting) {
     d.stale = true;
     try {
@@ -942,7 +987,7 @@ function fMolDraftBeautify() {
 
 function fMolDraftMarkStale() {
   try {
-    if (!window.MulerDraft || window.MulerDraft.submitting) return;
+    if (!window.MulerDraft || window.MulerDraft.submitting || window.MulerDraftAcquisition) return;
     if (!window.MulerDraft.submitted) return; // nothing to stale yet
     window.MulerDraft.stale = true;
     try {
@@ -985,7 +1030,7 @@ function fMolDraftClearNaming(statusText) {
   } catch (eE) {}
 }
 
-// Drawing master switch (repurposed Ρυθμίσεις checkbox, default off):
+// Drawing master switch (repurposed Ρυθμίσεις checkbox, default ON):
 // the Edit/New title-bar entries exist only while drawing is enabled.
 // Called at button build, on toggle, and from fMolDraftSyncButtons.
 function fMolDraftSyncEntryButtons() {
@@ -999,15 +1044,30 @@ function fMolDraftSyncEntryButtons() {
   } catch (eS) {}
 }
 
+// Auto-linearize preference (Ρυθμίσεις, default ON): Submit tidies school
+// drawings to the canonical linear layout before the naming run. Missing
+// checkbox fails open (standardized path).
+function fMolDraftAutoLinearizeOn() {
+  try {
+    var el = document.getElementById("autoLinearizeCheck");
+    if (!el) return true;
+    return el.classList.contains("selectedCheck");
+  } catch (e) { return true; }
+}
+
 function fMolDraftEnter(mode) {
   if (fMolDraftPresenting()) return;
-  if (window.MulerDraft) return;
+  if (window.MulerDraft || window.MulerDraftAcquisition) return;
   try {
-    if (!document.getElementById("originalJSMECheck").classList.contains("selectedCheck")) {
+    var _sw = document.getElementById("originalJSMECheck");
+    if (!_sw || !(_sw.classList && _sw.classList.contains("selectedCheck"))) {
       fMolDraftToast(fMolDraftT("draftEnableFirst", "Enable drawing from Settings first."));
       return;
     }
-  } catch (eSw) { return; }
+  } catch (eSw) {
+    fMolDraftToast(fMolDraftT("draftEnableFirst", "Enable drawing from Settings first."));
+    return;
+  }
   var sourceMol = null;
   try { sourceMol = (typeof selectedMol !== "undefined") ? selectedMol : null; } catch (eS) { sourceMol = null; }
   if (mode === "edit") {
@@ -1626,12 +1686,26 @@ function fMolDraftSandboxAnalyse(molText) {
 
 async function fMolDraftSubmit() {
   if (!window.MulerDraft || fMolDraftPresenting()) return;
-  if (window.MulerDraft.submitting) return;
+  if (window.MulerDraft.submitting || window.MulerDraftAcquisition) return;
+  var submittingDraft = window.MulerDraft;
   // 1. read + validate (empty drawing -> toast, no state change).
   var drawing = fMolDraftReadDrawing();
   if (!drawing.hasAny) {
     fMolDraftToast(fMolDraftT("submitEmpty", "Empty drawing — draw something first."));
     return;
+  }
+  // Auto-linearize (Ρυθμίσεις, default on): tidy school drawings to the
+  // canonical linear layout BEFORE the naming run, so preview + stored MOLs
+  // always come from tidied geometry. Skeletal drafts pass through untouched
+  // (zigzag path owns that slot). Submit then proceeds unchanged.
+  var _auto = true;
+  try { _auto = (typeof fMolDraftAutoLinearizeOn === "function") ? fMolDraftAutoLinearizeOn() : true; } catch (eA) { _auto = true; }
+  if (_auto) {
+    var _td = null;
+    try { _td = fMolDraftAutoTidy(); } catch (eT) { _td = null; }
+    if (!_td) return;
+    drawing.molText = _td.molText;
+    drawing.smiles = _td.smiles;
   }
   window.MulerDraft.submitting = true;
   try {
@@ -1661,10 +1735,9 @@ async function fMolDraftSubmit() {
     fMolDraftToast(fMolDraftT(_sb.ring ? "submitRing" : "submitEngineFail", _sb.ring ? "Rings are out of scope — acyclic structures only." : "Engine failed — check the drawing."));
     return;
   }
-  var engineFailed = false;
   var engineName = "";
   try { engineName = (typeof currentMolName !== "undefined") ? String(currentMolName || "") : ""; } catch (eN) {}
-  if (engineFailed || !engineName) {
+  if (!engineName) {
     fMolDraftRestoreChainMode();
     window.MulerDraft.submitting = false;
     fMolDraftToast(fMolDraftT("submitEngineFail", "Engine failed — check the drawing."));
@@ -1717,7 +1790,7 @@ async function fMolDraftSubmit() {
   try {
     if (typeof fFetchIUPAC_EN === "function") hit = await fFetchIUPAC_EN(submittingSmiles);
   } catch (eP) { hit = null; }
-  if (!window.MulerDraft || window.MulerDraft.smiles !== submittingSmiles) return; // superseded/cancelled
+  if (window.MulerDraft !== submittingDraft || submittingDraft.smiles !== submittingSmiles) return; // superseded/cancelled
   window.MulerDraft.pubchem = hit || null;
   // Oracle fallback for the non-transliterable case (Greek-common
   // esters/complex ethers): same systematicEN the stored path delegates to.
@@ -1749,7 +1822,7 @@ async function fMolDraftSubmit() {
   try {
     if (hit && typeof fFetchSDF3D_PubChem === "function") sdf = await fFetchSDF3D_PubChem(submittingSmiles);
   } catch (eS) { sdf = null; }
-  if (!window.MulerDraft || window.MulerDraft.smiles !== submittingSmiles) return;
+  if (window.MulerDraft !== submittingDraft || submittingDraft.smiles !== submittingSmiles) return;
   window.MulerDraft.submitting = false;
   window.MulerDraft.sdfDone = true;
   if (sdf) {
@@ -1808,6 +1881,10 @@ function fMolDraftTeardownDisplay() {
 
 function fMolDraftCancel() {
   if (!window.MulerDraft) return;
+  if (window.MulerDraftAcquisition === window.MulerDraft) {
+    window.MulerDraft.cancelRequested = true;
+    return; // The owning Accept restores both applets before teardown.
+  }
   fMolDraftTeardownDisplay();
   // Full reselect — the same path recovery flows use — rebuilds naming + 3D.
   try { if (typeof fSelectMol === "function") fSelectMol(); } catch (eF) {}
@@ -1936,9 +2013,9 @@ function fMolDraftSyncSaveBtn() {
   } catch (eS) {}
 }
 
-function fMolDraftAccept() {
+async function fMolDraftAccept() {
   var d = window.MulerDraft;
-  if (!d || fMolDraftPresenting()) return;
+  if (!d || d.submitting || d.accepting || window.MulerDraftAcquisition || fMolDraftPresenting()) return;
   if (!d.submitted || !d.engineName) {
     fMolDraftToast(fMolDraftT("acceptNeedsSubmit", "Press Submit for a preview first."));
     return;
@@ -2004,6 +2081,19 @@ function fMolDraftAccept() {
     fMolDraftToast(fMolDraftT("acceptDup", "Already exists — pick it from the menu.") + " (" + dupKey + ")");
     return;
   }
+  d.accepting = true;
+  d.cancelRequested = false;
+  window.MulerDraftAcquisition = d;
+  var selectionAtAccept = (typeof selectedMol !== "undefined") ? selectedMol : null;
+  var modeAtAccept = (typeof mode2D !== "undefined") ? mode2D : null;
+  function ownsDraft() {
+    return window.MulerDraft === d && window.MulerDraftAcquisition === d &&
+      ((typeof selectedMol !== "undefined") ? selectedMol : null) === selectionAtAccept &&
+      ((typeof mode2D !== "undefined") ? mode2D : null) === modeAtAccept;
+  }
+  function liveDraft() { return ownsDraft() && !d.cancelRequested; }
+  try { fMolDraftSyncBar(); } catch (eSyA) {}
+  try {
   var hit = d.pubchem || null;
   var key = fMolDraftMakeKey(normSmi, hit);
   if (isUpdate) key = d.sourceMol;
@@ -2019,6 +2109,12 @@ function fMolDraftAccept() {
   var _chainLive = null;
   try { _chainLive = (typeof mainChainAtomsList !== "undefined") ? mainChainAtomsList : null; } catch (eCh) { _chainLive = null; }
   var _skel = null, _skelSrc = "";
+  var depictSmiles = (hit && hit.canonicalSmiles) || d.smiles || "";
+  var expectedHeavy = 0;
+  try {
+    var drawnParsed = fParseMolV2000(d.molText);
+    if (drawnParsed) expectedHeavy = drawnParsed.atoms.filter(function (a) { return fIsHeavyEl2D(a.el); }).length;
+  } catch (eHeavy) {}
   // Coordinate sums are a diagnostic receipt, never an identity/quality gate.
   var _sigOf = function (text) {
     try {
@@ -2094,18 +2190,23 @@ function fMolDraftAccept() {
       return false;
     }
   }
-  // Validate each rung before choosing it. Invalid built-in output must not
-  // block either applet fallback; a valid deterministic fixed point is fine.
-  if (typeof fZigzagMol === "function") {
-    try { fMolDraftUseSkeletal(fZigzagMol(d.molText, _chainLive), "builtin"); }
-    catch (eZ) { try { console.warn("[draft] skeletal: builtin failed", eZ); } catch (eL0) {} }
-  } else { try { console.warn("[draft] skeletal: builtin helper missing"); } catch (eL1) {} }
-  if (!_skel && typeof jsmeNomeclatureApplet !== "undefined" && jsmeNomeclatureApplet) {
-    fMolDraftUseSkeletal(fMolDraftDepictSmiles(jsmeNomeclatureApplet, d.smiles), "display");
+  // Canonical JSME display, then edit, then deterministic built-in. Every
+  // rung must pass the same exact graph/metadata/geometry gates before winning.
+  if (typeof jsmeNomeclatureApplet !== "undefined" && jsmeNomeclatureApplet) {
+    var displayDepiction = await fMolDraftDepictSmiles(jsmeNomeclatureApplet, depictSmiles, expectedHeavy);
+    if (!liveDraft()) return;
+    fMolDraftUseSkeletal(displayDepiction, "display");
   }
   if (!_skel && typeof jsmeEditDraftApplet !== "undefined" && jsmeEditDraftApplet) {
-    fMolDraftUseSkeletal(fMolDraftDepictSmiles(jsmeEditDraftApplet, d.smiles), "edit");
+    var editDepiction = await fMolDraftDepictSmiles(jsmeEditDraftApplet, depictSmiles, expectedHeavy);
+    if (!liveDraft()) return;
+    fMolDraftUseSkeletal(editDepiction, "edit");
   }
+  if (!_skel && typeof fZigzagMol === "function") {
+    try { fMolDraftUseSkeletal(fZigzagMol(d.molText, _chainLive), "builtin"); }
+    catch (eZ) { try { console.warn("[draft] skeletal: builtin failed", eZ); } catch (eL0) {} }
+  }
+  if (!liveDraft()) return;
   var molC = null, molE = null, molS = null;
   try {
     if (drawnVariant === "expanded") {
@@ -2122,10 +2223,16 @@ function fMolDraftAccept() {
       molE = (typeof fGenExpandedMol === "function") ? (fGenExpandedMol(molC) || null) : null;
       if (!molE) { try { console.warn("[draft] expanded generation failed — mode disabled"); } catch (eW3) {} }
     } else {
+      // Condensed slot must stay heavy-only: the overlay adds implicit H
+      // itself, so any hand-drawn explicit H would double-render. Strip
+      // first (drawn geometry otherwise kept verbatim).
       molC = d.molText;
-      molE = (typeof fGenExpandedMol === "function") ? (fGenExpandedMol(d.molText) || null) : null;
+      if (typeof fStripHydrogensMol === "function") {
+        try { molC = fStripHydrogensMol(d.molText) || d.molText; } catch (eSt) {}
+      }
+      molE = (typeof fGenExpandedMol === "function") ? (fGenExpandedMol(molC) || null) : null;
       if (!molE) { try { console.warn("[draft] expanded generation failed — mode disabled"); } catch (eW4) {} }
-      molS = _skel || d.molText;
+      molS = _skel || molC;
       if (!_skel) { try { console.warn("[draft] skeletal fallback: drawn geometry"); } catch (eW5) {} }
     }
   } catch (eDv) { molC = d.molText; molE = null; molS = d.molText; }
@@ -2135,13 +2242,12 @@ function fMolDraftAccept() {
     console.log("[draft] slots variant=" + drawnVariant + " skelSrc=" + (_skelSrc || "-") +
       " C:[" + _sigOf(molC) + "] E:[" + _sigOf(molE) + "] S:[" + _sigOf(molS) + "] draw:[" + _sigOf(d.molText) + "]");
   } catch (eLg2) {}
-  // Clear before each import, then restore the applet's actual prior content
-  // and scale in finally, including clear/import/read exceptions. Never use
-  // the draft MOL as a substitute for the display's transient layout.
-  // A synchronous retry helps only immediate repaint; it cannot await an
-  // asynchronously completed layout. Null on an empty/failed attempt.
-  function fMolDraftDepictSmiles(applet, smiles) {
-    if (!smiles || !applet || typeof applet.readGenericMolecularInput !== "function" ||
+  // Input once; poll at most six reads 120 ms apart. Capture actual applet
+  // MOL + scale, restoring in finally even when import/read fails. Deferred
+  // Cancel retains ownership; replacement/selection changes relinquish it so
+  // old content cannot overwrite a new view.
+  async function fMolDraftDepictSmiles(applet, smiles, expectHeavy) {
+    if (!liveDraft() || !smiles || !applet || typeof applet.readGenericMolecularInput !== "function" ||
         typeof applet.molFile !== "function" || typeof applet.readMolFile !== "function" ||
         typeof applet.clear !== "function") return null;
     var priorMol, priorScale, captured = false, out = null;
@@ -2152,31 +2258,34 @@ function fMolDraftAccept() {
       priorScale = applet.getMolecularAreaScale();
       if (!Number.isFinite(priorScale)) return null;
       captured = true;
-      function attempt() {
-        applet.clear();
-        var cleared = applet.molFile();
-        var empty = cleared ? fParseMolV2000(cleared) : null;
-        if (cleared && (!empty || empty.atoms.length)) return null;
-        applet.readGenericMolecularInput(smiles);
-        if (typeof applet.deferredRepaint === "function") applet.deferredRepaint();
-        var result = applet.molFile();
-        return result && result.indexOf("V2000") >= 0 ? result : null;
-      }
-      out = attempt();
-      if (!out && typeof applet.repaint === "function") {
-        applet.repaint();
-        out = attempt();
+      applet.clear();
+      var cleared = applet.molFile();
+      var empty = cleared ? fParseMolV2000(cleared) : null;
+      if (cleared && (!empty || empty.atoms.length)) return null;
+      applet.readGenericMolecularInput(smiles);
+      if (typeof applet.deferredRepaint === "function") applet.deferredRepaint();
+      for (var ri = 0; ri < 6; ri++) {
+        if (!liveDraft()) break;
+        var result = null, parsed = null;
+        try { result = applet.molFile(); parsed = result ? fParseMolV2000(result) : null; } catch (eRead) {}
+        if (parsed && parsed.atoms.length && expectHeavy > 0 &&
+            parsed.atoms.filter(function (a) { return fIsHeavyEl2D(a.el); }).length === expectHeavy) {
+          out = result;
+          break;
+        }
+        if (ri === 0 && typeof applet.repaint === "function") applet.repaint();
+        if (ri < 5) await new Promise(function (resolve) { setTimeout(resolve, 120); });
       }
     } catch (eD) { out = null; }
     finally {
-      if (captured) {
+      if (captured && ownsDraft()) {
         try { if (priorMol) applet.readMolFile(priorMol); else applet.clear(); }
         catch (eR) { out = null; try { console.warn("[draft] depict content restoration failed", eR); } catch (eL) {} }
         try { applet.setMolecularAreaScale(priorScale); }
         catch (eS) { out = null; try { console.warn("[draft] depict scale restoration failed", eS); } catch (eL2) {} }
-      }
+      } else out = null;
     }
-    return out;
+    return liveDraft() ? out : null;
   }
   // Tri-state verdicts travel with the molecule: the saved file becomes
   // labeled eval data (predicted pair + oracle + human label) for engine work.
@@ -2200,12 +2309,14 @@ function fMolDraftAccept() {
     iupacPubchem: (hit && (hit.iupacPubchem || hit.iupac)) || null,
     titlePubchem: (hit && (hit.title || hit.titlePubchem)) || null,
     pubchemCID: (hit && hit.cid) || null,
+    canonicalSmiles: (hit && hit.canonicalSmiles) || null,
     sdf3D: d.sdf3D || null,
     file3D: null,
     author: "",
     status: "draft",
     history: [{ t: Date.now(), action: "accepted", mode: d.mode, source: d.sourceMol || null, verdict: { gr: _vc.gr, en: _vc.en } }]
   };
+  if (!liveDraft()) return;
   rec.structure2D_Condensed = molC;
   rec.structure2D_Expanded = molE;
   rec.structure2D_Skeletal = molS;
@@ -2231,6 +2342,7 @@ function fMolDraftAccept() {
     prev.iupacPubchem = rec.iupacPubchem;
     prev.titlePubchem = rec.titlePubchem;
     prev.pubchemCID = rec.pubchemCID;
+    prev.canonicalSmiles = rec.canonicalSmiles;
     prev.sdf3D = rec.sdf3D;
     try {
       prev.history = prev.history || [];
@@ -2285,6 +2397,14 @@ function fMolDraftAccept() {
     if (_vc.gr === "correct" && _vc.en === "correct") fMolDraftToast(fMolDraftT("acceptKept", "Accepted into this session — save it from Settings."));
     else fMolDraftToast(fMolDraftT("draftSavedUnconfirmed", "Accepted — with unconfirmed names."));
   } catch (eTk) { try { fMolDraftToast(fMolDraftT("acceptKept", "Accepted into this session — save it from Settings.")); } catch (eT2) {} }
+  } finally {
+    d.accepting = false;
+    if (window.MulerDraftAcquisition === d) window.MulerDraftAcquisition = null;
+    if (window.MulerDraft === d) {
+      if (d.cancelRequested) fMolDraftCancel();
+      else { try { fMolDraftSyncBar(); } catch (eSyEnd) {} }
+    }
+  }
 }
 
 // Edit-entry visual state: inactive when no molecule is selected (menu-only
@@ -2704,7 +2824,16 @@ function fRenderMolInfo() {
     try { box.appendChild(hint); } catch (eA) { /* best-effort */ }
     return;
   }
-  // SMILES row (cached at boot; always available when a molecule is loaded).
+  // SMILES row (cached SMILES, PubChem canonical preferred; always available
+  // when a molecule is loaded). Canonical value links to the PubChem compound
+  // page when we have a numeric CID.
+  var cidNum = null;
+  try {
+    var _cid = entry.pubchemCID;
+    if (_cid != null && /^\d+$/.test(String(_cid).trim())) cidNum = String(_cid).trim();
+  } catch (eCid) { cidNum = null; }
+  var smiShown = null;
+  try { smiShown = entry.canonicalSmiles || entry.smiles || null; } catch (eS) { smiShown = null; }
   var r1 = document.createElement("div");
   r1.className = "molInfoRow";
   var l1 = document.createElement("span");
@@ -2712,7 +2841,17 @@ function fRenderMolInfo() {
   l1.textContent = T("molInfoSmiles", "SMILES");
   var v1 = document.createElement("code");
   v1.className = "molInfoSmiles";
-  v1.textContent = (entry.smiles ? entry.smiles : "—");
+  if (smiShown) {
+    if (cidNum) {
+      var _as = document.createElement("a");
+      _as.href = "https://pubchem.ncbi.nlm.nih.gov/compound/" + cidNum;
+      _as.target = "_blank";
+      try { _as.rel = "noopener noreferrer"; } catch (eR) {}
+      _as.textContent = smiShown;
+      try { _as.className = "molInfoLink"; } catch (eC2) {}
+      v1.appendChild(_as);
+    } else v1.textContent = smiShown;
+  } else v1.textContent = "—";
   var cp = document.createElement("button");
   cp.type = "button";
   cp.className = "molInfoCopy";
@@ -2738,7 +2877,15 @@ function fRenderMolInfo() {
   var iupac = null;
   try { iupac = entry.iupacPubchem || null; } catch (eN) { iupac = null; }
   if (iupac) {
-    v2.textContent = iupac;
+    if (cidNum) {
+      var _ai = document.createElement("a");
+      _ai.href = "https://pubchem.ncbi.nlm.nih.gov/compound/" + cidNum;
+      _ai.target = "_blank";
+      try { _ai.rel = "noopener noreferrer"; } catch (eR2) {}
+      _ai.textContent = iupac;
+      try { _ai.className = "molInfoLink"; } catch (eC3) {}
+      v2.appendChild(_ai);
+    } else v2.textContent = iupac;
   } else {
     var failed = false, done = false;
     try { failed = !!entry.iupacFetchError; done = !!entry.iupacFetchDone; } catch (eS) { /* best-effort */ }
@@ -2820,7 +2967,7 @@ function fCopyMolSmiles(btn) {
   var smi = "";
   try {
     smi = (typeof selectedMol !== "undefined" && selectedMol && typeof nameExamples !== "undefined" && nameExamples[selectedMol])
-      ? (nameExamples[selectedMol].smiles || "") : "";
+      ? (nameExamples[selectedMol].canonicalSmiles || nameExamples[selectedMol].smiles || "") : "";
   } catch (eS) { smi = ""; }
   if (!smi) return;
   var done = function () {
@@ -2888,15 +3035,12 @@ function fMakeAnnotatedSkeletal(molStr) {
   if (!molStr) {
     return molStr;
   }
-  const lines = molStr.split("\n");
-  if (lines.length < 4) {
-    return molStr;
-  }
-  const atomCount = parseInt(lines[3].substring(0, 3));
-  if (isNaN(atomCount)) {
-    return molStr;
-  }
-  for (let i = 4; i < 4 + atomCount && i < lines.length; i++) {
+  const lines = String(molStr).split(/\r?\n/);
+  const ci = (typeof fMolCountsLine === "function") ? fMolCountsLine(lines) : -1;
+  if (ci < 0) return molStr;
+  const atomCount = parseInt(lines[ci].substring(0, 3), 10);
+  if (isNaN(atomCount)) return molStr;
+  for (let i = ci + 1; i < ci + 1 + atomCount && i < lines.length; i++) {
     if (lines[i].substring(31, 34) === "C  ") {
       lines[i] = lines[i].substring(0, 31) + "[C]" + lines[i].substring(34);
     }
@@ -3147,17 +3291,20 @@ function fShowMolName() {
 function fSkeletalLayoutMol(mol, chain, esterFragments = null) {
   const unchanged = {mol, rotation: 0, repairs: [], skipped: []};
   if (typeof mol !== "string" || !Array.isArray(chain)) return unchanged;
-  const lines = mol.split(/\r?\n/), counts = lines[3] || "";
+  const lines = mol.split(/\r?\n/);
+  const ci = (typeof fMolCountsLine === "function") ? fMolCountsLine(lines) : -1;
+  if (ci < 0) return unchanged;
+  const start = ci + 1, counts = lines[ci];
   const n = Number(counts.slice(0, 3)), nb = Number(counts.slice(3, 6));
   if (!counts.includes("V2000") || !(n > 0) || !(nb >= 0) ||
-      lines.length < 4 + n + nb) return unchanged;
-  const points = lines.slice(4, 4+n).map(l => [Number(l.slice(0,10)), Number(l.slice(10,20))]);
-  const types = lines.slice(4, 4+n).map(l => l.slice(31,34).trim());
+      lines.length < start + n + nb) return unchanged;
+  const points = lines.slice(start, start+n).map(l => [Number(l.slice(0,10)), Number(l.slice(10,20))]);
+  const types = lines.slice(start, start+n).map(l => l.slice(31,34).trim());
   if (points.some(p => !p.every(Number.isFinite))) return unchanged;
   const parent = chain.map(i => i-1);
   if (new Set(parent).size !== parent.length || parent.some(i =>
       !Number.isInteger(i) || i < 0 || i >= n || types[i] !== 'C')) return unchanged;
-  const bonds = lines.slice(4+n,4+n+nb).map(l =>
+  const bonds = lines.slice(start+n,start+n+nb).map(l =>
     [Number(l.slice(0,3))-1, Number(l.slice(3,6))-1, Number(l.slice(6,9))]);
   if (bonds.some(([a,b,o]) => !Number.isInteger(a) || !Number.isInteger(b) ||
       a < 0 || b < 0 || a >= n || b >= n || a === b || !(o > 0))) return unchanged;
@@ -3299,7 +3446,7 @@ function fSkeletalLayoutMol(mol, chain, esterFragments = null) {
   for (let i=0; i<n; i++) {
     const x=(points[i][0]-cx).toFixed(4), y=(points[i][1]-cy).toFixed(4);
     if (x.length > 10 || y.length > 10) return unchanged;
-    lines[4+i]=x.padStart(10)+y.padStart(10)+lines[4+i].slice(20);
+    lines[start+i]=x.padStart(10)+y.padStart(10)+lines[start+i].slice(20);
   }
   return {mol:lines.join('\n'), rotation:angle*180/Math.PI, repairs, skipped,
     parentHeightBefore:before.height, parentHeightAfter:parent.length ? bounds(parent,0).height : 0};

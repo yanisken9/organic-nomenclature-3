@@ -1,0 +1,59 @@
+{
+  "Reviewer": "/root/review_publication_20261104",
+  "roleID": "NAMELECULE_REVIEWER_V1_20261023",
+  "freshContext": true,
+  "writes": false,
+  "initialTargetSHA256": "382d03dd333c02dd8bae4654c8bdc83ffc4ca7304787bfc930f1724dd093b7b2",
+  "initialCuratedManifest": "7d764ff5c7f99fd76e5e53da92eac7e142dbc0cfed5b7f8a4bb7c92ed4a90166",
+  "finalCuratedManifest": "018f0dc645684abae02a8e0992fcb0235acd04aa5f61ebf8d7c0e7d0c3094d17",
+  "findings": [
+    {
+      "id": "PUB-DOC01",
+      "severity": "P3",
+      "paths": [
+        "docs/professor-20261104/update.html:73",
+        "docs/professor-20261104/message-to-professor.txt:18"
+      ],
+      "issue": "Unchanged embedded-data statement ambiguous for entire period",
+      "resolution": "Explicitly scoped to latest35/generator unit",
+      "status": "closed independently targeted"
+    }
+  ],
+  "openFindings": [],
+  "independentChecks": {
+    "exactCuratedFiles": 759,
+    "actualPublicTreeFiles": 3441,
+    "baseFilesAgainstGitBlobs": 2686,
+    "protected52ReactFiles": 49,
+    "ReactPaths": 39,
+    "dependencies": 208,
+    "currentSourceInventory": 3855,
+    "recoveryInventory": 198,
+    "activeLessons": 14,
+    "steps": 337,
+    "launcherFiles": 10,
+    "readOnlyFunctions": [
+      "dependency_inventory",
+      "frozen_manifest",
+      "source_invariant",
+      "verify_tree",
+      "scan"
+    ],
+    "helperAST": "passed",
+    "finalPrerequisiteGuard": "Correctly rejects before public live verification",
+    "sourceHEADIndex": "unchanged"
+  },
+  "DeveloperEvidence": [
+    "19save-helper isolated tests",
+    "14assembly-helper isolated tests",
+    "ActualFirefoxMain11/React8 passed0JS"
+  ],
+  "limits": [
+    "No independent browser or temporary-file tests",
+    "Read-only behavioral, not enforced separate filesystem",
+    "Pattern scan not complete secret audit",
+    "Live publication and actual archives/copies pending at review time",
+    "Prior core/chemistry independent review reused"
+  ],
+  "targetedFinalMetadataVerification": "Reviewer independently confirmed only corrected message dependency hash, canonical manifest and verify_tree3441/759/49 passed; PUB-DOC01 remains closed."
+}
