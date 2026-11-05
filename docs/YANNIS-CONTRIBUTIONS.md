@@ -1,3 +1,26 @@
+# 2026-11-05 — Full backups, reviewed public release and professor report
+
+User requested all saves/report/link, then explicitly approved public runtime.
+First automatic approval review rejected ambiguous runtime authorization before
+any command ran; explicit approval subsequently recorded. Published reviewed
+runtime d8985ad381a4f15f5fd67c4118ab8ff987d38f62/tagnamelecule-20261105-runtime to personal thesis-work.
+222publicHTTPhashes andMain18/React8boundedchecks completed. Rawstrictscripts exit1:
+Main16cookies+4tracker+1realJSmolplatformnull;React2tracker. ExistingopenPUB-JS1P2
+retained after independent targetedassessment; no newP0/P1 blocker demonstrated.
+No cleanconsole, whole3Dpostexception orconference-readiness claim.
+
+Fresh publication Reviewer /root/review_publication_20261105 independently verified
+all3800candidate/49protectedpaths,4194initialZIPfiles/recovery203/bundle/external
+hashes. Initialsnapshot1a402b18 and finalfullsnapshot c7f1cc34b416c4fe4ea1773d78465afbf1c4d6ba/4214files
+remotely verified; sourceZIP CRC/everySHA,bundle,recovery,twoexternalcopies checked.
+Exact receipts communication/checkpoints/save-publish-20261105-state.json; public
+report docs/professor-20261105/ records sourcecutoffs, actualverification/limits.
+PublicReact39paths/v52 preserved; localReactWIP/internalnotes included in full save.
+Final report/README/changelog/contribution status delta has separate hashes/review
+and post-snapshot bookkeeping. Source HEAD/branch/index preserved; savedfiles do
+not mean sourcebranchcommit. Core54changedbymerge; save/report didnotchangecore;
+core52 unchanged. Next prioritize diagnosis of PUB-JS1/Firefox/Submit observations.
+
 # 2026-11-05 — Reviewed professor merge and immutable quiz-engine compatibility
 
 Yannis approved the preservation plan and extra compatibility. Integrated four

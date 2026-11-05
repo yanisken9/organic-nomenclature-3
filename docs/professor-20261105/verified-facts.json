@@ -4,7 +4,7 @@
   "periodStart": "after the professor report dated 2026-11-04",
   "periodEnd": "2026-11-05",
   "previousReportForwardedByUser": "unknown; not claimed",
-  "status": "reviewed runtime installed and checked locally; full current save and public release verification pending",
+  "status": "Published runtime and full source snapshot verified; this record identifies their exact cutoffs.",
   "mainVersion": 54,
   "mainMolecules": 141,
   "activeLessons": 14,
@@ -86,7 +86,8 @@
     "independentReviewer": "/root/review_two_part_alkane_lesson",
     "R1": "P2 early cold-loader release corrected and independently closed",
     "remainingObservation": "native JSmol bufferedImage / platform is null exception during first completed-gate async restoration; no causal fix established",
-    "evidence": "docs/checks/alkanes-two-part-20261105/REPORT.md"
+    "evidence": "docs/checks/alkanes-two-part-20261105/REPORT.md",
+    "futureUnopenedChoiceOrder": "May rerandomize on restore; active/prior solved states remain exact."
   },
   "upstream": {
     "previousActuallySynchronized": "35d791ee9d6bdb8566d3adca1a1bdaba97efc5b8",
@@ -144,27 +145,35 @@
   "remainingUncertainties": [
     "two Submit timeouts without established cause; later passes do not resolve cause",
     "reported native Firefox freeze without established cause",
-    "earlier native JSmol restoration exception; not established as pre-existing or permanently corrected",
+    "JSmol restoration symptom recorded beforemerge and againpublicly; causalidentity, oldpublicpresence and permanentcure unestablished",
     "external JSmol/CDN/font/PubChem/CIR availability",
     "unsupported literal[H] source and inherited bent nitrile source geometry retained",
-    "Safari, physical mobile devices, assistive technology, offline package and intended conference sequence/machine unverified"
+    "Safari, physical mobile devices, assistive technology, offline package and intended conference sequence/machine unverified",
+    "PublicMain also reproduced JSmol platformnull; same symptom existed beforemerge, causalidentity andoldpublicpresence unproved; entire3Dgallerynotretestedafterexception."
   ],
   "save": {
-    "status": "pending",
+    "status": "Final fullsnapshot verified locally, remotely and in two external copies; later report/notes bookkeeping separate.",
     "plannedCheckpointBranch": "checkpoint/namelecule-20261105-140541",
     "controlState": "communication/checkpoints/save-publish-20261105-state.json",
-    "fullCurrentSaveVerified": false,
-    "externalCopiesVerified": false,
-    "ZIPBundleVerified": false,
+    "fullCurrentSaveVerified": true,
+    "externalCopiesVerified": 2,
+    "ZIPBundleVerified": true,
     "previousKnownRecovery": "verified November4 recovery recorded in previous report",
-    "mergeRollbackScope": "ten replaced runtime files only; not full/offline package"
+    "mergeRollbackScope": "ten replaced runtime files only; not full/offline package",
+    "snapshotCommit": "c7f1cc34b416c4fe4ea1773d78465afbf1c4d6ba",
+    "sourceFiles": 4214,
+    "snapshotCutoff": "Full source before later final report/publication/bookkeeping updates; those have separate receipts.",
+    "postSnapshotBookkeepingSeparate": true
   },
   "publication": {
-    "status": "pending",
-    "currentPublicReleaseVerified": false,
-    "newCommitClaimedByThisReport": false,
+    "status": "Runtime published and verified with disclosedopenP2/noncleanconsole.",
+    "currentPublicReleaseVerified": true,
+    "newCommitClaimedByThisReport": true,
     "releaseURLsAreIntendedDestinations": true,
-    "cacheQueryProvesDeployment": false
+    "cacheQueryProvesDeployment": false,
+    "runtimePublicCommit": "d8985ad381a4f15f5fd67c4118ab8ff987d38f62",
+    "releaseURLsVerified": true,
+    "publicCleanConsole": false
   },
   "sources": [
     "docs/SESSION-NOTES.md",
@@ -174,7 +183,10 @@
     "docs/checks/quiz-check-label-20261105/review-result.json",
     "docs/checks/v54-merge-20261105/final-report.json",
     "docs/checks/v54-merge-20261105/review-result.json",
-    "communication/checkpoints/save-publish-20261105-state.json"
+    "communication/checkpoints/save-publish-20261105-state.json",
+    "https://github.com/yanisken9/organic-nomenclature-3/blob/c7f1cc34b416c4fe4ea1773d78465afbf1c4d6ba/docs/checks/publication-20261105/public-http.json",
+    "https://github.com/yanisken9/organic-nomenclature-3/blob/c7f1cc34b416c4fe4ea1773d78465afbf1c4d6ba/docs/checks/publication-20261105/public-error-classification.json",
+    "https://github.com/yanisken9/organic-nomenclature-3/blob/c7f1cc34b416c4fe4ea1773d78465afbf1c4d6ba/docs/checks/publication-20261105/public-independent-assessment.json"
   ],
   "initialVerifiedSnapshot": {
     "commit": "1a402b1807b2e4fe54301844e9311ce5ccba1127",
@@ -189,5 +201,41 @@
     "remoteVerified": "1a402b1807b2e4fe54301844e9311ce5ccba1127"
   },
   "checkpointBranch": "checkpoint/namelecule-20261105-140541",
-  "publicReleaseStatus": "Pending; initial complete checkpoint verified, candidate/public checks still pending."
+  "publicReleaseStatus": "Runtimepublic verified with bounded interactions and openP2JSmol; console not clean.",
+  "finalVerifiedSnapshot": {
+    "commit": "c7f1cc34b416c4fe4ea1773d78465afbf1c4d6ba",
+    "sourceFileCount": 4214,
+    "archive": "communication/checkpoints/Namelecule-20261105-140541-final.zip",
+    "archiveSHA256": "4101f8a7fd6645a62536f4a4389f16a647d828270dedd2efe93f0f119f5f237a",
+    "bundle": "communication/checkpoints/Namelecule-20261105-140541-final.bundle",
+    "bundleSHA256": "f3088b3ffe669b74fdb0456056d079a29ef42f0b7c6c4a5c36455f1fd3ea4dae",
+    "recoveryArchive": "communication/checkpoints/Namelecule-20261105-140541-final-recovery.zip",
+    "recoveryArchiveSHA256": "a3e11edb4b0ccee89ebaa381f49823eb14b7fd7c6c2e4df71a02f419bb97850b",
+    "externalCopiesVerified": 2,
+    "remoteVerified": "c7f1cc34b416c4fe4ea1773d78465afbf1c4d6ba",
+    "cutoff": "Full source before later final report/publication/bookkeeping updates; those have separate receipts."
+  },
+  "publicVerification": {
+    "runtimeCommit": "d8985ad381a4f15f5fd67c4118ab8ff987d38f62",
+    "tag": "namelecule-20261105-runtime",
+    "exactHTTP": 222,
+    "MainChecks": 18,
+    "ReactChecks": 8,
+    "MainDiagnostics": {
+      "cookies": 16,
+      "tracker": 4,
+      "JSmolPlatformNull": 1
+    },
+    "ReactDiagnostics": {
+      "tracker": 2
+    },
+    "rawStrictExitCodes": [
+      1,
+      1
+    ],
+    "publicCleanConsole": false,
+    "openP2": "PUB-JS1",
+    "independentAssessment": "https://github.com/yanisken9/organic-nomenclature-3/blob/c7f1cc34b416c4fe4ea1773d78465afbf1c4d6ba/docs/checks/publication-20261105/public-independent-assessment.json",
+    "notFullGalleryPostExceptionVerification": true
+  }
 }
