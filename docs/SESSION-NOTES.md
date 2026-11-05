@@ -1,3 +1,65 @@
+# Current resume point — 2026-11-05 — Public release/report and full recovery snapshot verified
+
+Userapprovedmainpublication explicitly. Runtime d8985ad381a4f15f5fd67c4118ab8ff987d38f62,
+finaldocumentarypubliccommit2afe6135df7a923bdd8950eb312a39cf6a073bd6,
+tagsnamelecule-20261105-runtime/report on personal thesis-work; exactrefsverified.
+Live222runtime/dependencyHTTPhashes +23finaldoc/preservedruntimeHTTPhashes passed.
+Report: https://yanisken9.github.io/organic-nomenclature-3/docs/professor-20261105/update.html
+Welcome: https://yanisken9.github.io/organic-nomenclature-3/design/welcome-proposal.html?v=release-20261105
+Readyforwardmessage/links in professorfolder; twoexternalcopies use datedNameleculefolder.
+
+AllboundedpublicMain18/React8checks completed. Rawstrictscripts exit1; Main16cookie+
+4tracker+1realJSmolplatformnull; React2tracker. PUB-JS1 remains existingopenP2;
+no demonstratednewP0/P1 blocker. IndependentReviewer targetedassessment doesnot
+prove cause/cure/oldpublicpresence orcomplete3Dafterexception. EarliernativeFirefox
+freeze/twoSubmittimeouts remain open. No cleanconsole/offline/Safari/conferenceclaim.
+FreshpublicationReviewer independentlychecked3800candidate/49protectedpaths,
+initial/finalZIP everyCRC/SHA,bundles/recovery and45hashesperexternalcopy;8finaldocs
+reviewedwithoutnewfindings. Browserchecks areDeveloper evidence, not Reviewerexecution.
+
+Initialfullsnapshot1a402b1807b2e4fe54301844e9311ce5ccba1127/4194files andfinal
+c7f1cc34b416c4fe4ea1773d78465afbf1c4d6ba/4214files remotelyverified on
+checkpoint/namelecule-20261105-140541; sourceZIP/bundle/recovery/twoexternalcopies
+verified. FullZIP cutoff precedes8finaldocs andthese notes. Consult separate
+post-snapshot bookkeeping records/deltaZIP/latestbundle for laterdocuments and
+receipts; do not attribute them to immutablefullZIP. Authoritative completion,
+latestcheckpointrefs/hashes: communication/checkpoints/save-publish-20261105-state.json.
+Backuproots: siblingΑποθηκεύσεις/2026-11-05-140541 andDesktop/αρχεία  json/Namelecule_05-11-2026.
+
+Actualsync/lastcheckedprofessor=f49b810c93ec85d06163679aff4a8642ea1b4cd3.
+Core54changedbymerge (8f3e5f76...),core52unchanged. Save/report didnotaltercore;
+exactforwardablecoreexplanationinprofessor/message-to-professor.txt. Sourceactive
+react-library-pilot/168e3cec/indexpreserved; publication/checkpoints useownedclones.
+PublicReact39paths/v52 retained; localReactWIP includedfullcheckpoint. Temporary
+Firefox9247 andservers8056/8057 closedonlyafteridentitychecks; user8098/main8055
+untouched. Automaticapprovalrejection of first runtimeattempt preceded any execution;
+explicituserapproval thenobtained. No writes toprofessorupstream ormessages sent.
+Nextproductwork: usertriesnewlesson/engineWorkshop; prioritizediagnosisofPUB-JS1,
+recordexactaction/native+draftstate ifFirefox/Submitrecurs before recovery.
+
+# Current resume point — 2026-11-05 — Final source snapshot verified; final documentary review underway
+
+Finalfullsnapshot c7f1cc34b416c4fe4ea1773d78465afbf1c4d6ba/4214files,
+ZIPeveryCRC/SHA,bundle,recovery,twoexternalcopies verified; checkpointbranch
+checkpoint/namelecule-20261105-140541 remoteconfirmed atc7f. Initial1a402b18/4194
+remainsseparate. SourceHEAD/index/core preserved bysavehelpers.
+Runtimepublicd8985ad3/222HTTP/Main18/React8verified withopenP2JSmol/noncleanconsole;
+see actualindependent assessment/previousresume. No source/runtimecodechanges since.
+
+Updatedonly8docs withactualpublic/snapshotfacts, strictExit1/openP2, no postexception
+full3Dclaim andpreciselessonfuturechoicewording. Source/candidate docmanifest
+checks/publication-20261105/documentary-final-manifest.json SHA428d7e2d2e3903e3351107be8a91134f94c35257c8accaa2800204a00e2cd5cb.
+Freshtargeted /root/review_publication_20261105 review active; no8targetedocedits.
+All3800candidatehashes/49protected/209dependencies verified after8docoverlay;
+newGitHubprooflinks pointtorealimmutablec7fsnapshotpaths. Publicdocpush stillpending.
+Next collectnarrowreview, push8doccommit/tag, exactpublicdocHTTPhashes. Thenwrite
+finalnotes, fullcurrentsourcebookkeepingcommit inownedcheckpointclone, verified
+latestbundle/deltaZIP pluslatestportableprofessorreport/links/notes tobothfolders,
+remotecheckpoint/tag/receiptscheck. ImmutablefullZIPcutoffmuststaydistinct from
+latestmetadata. OwnedtestFirefoxrestartsession23725/9247 andcandidate8057 retained;
+user8098/main8055untouched. No conference/offlineguarantee. Core54changedbymerge;
+core52unchanged. Userwantsall saves andprofessorcopy/pastelinks whencomplete.
+
 # Current resume point — 2026-11-05 — Public runtime verified with disclosed P2; final full save next
 
 Runtime d8985ad381a4f15f5fd67c4118ab8ff987d38f62/tagnamelecule-20261105-runtime,

@@ -1,5 +1,15 @@
 # Changelog
 
+## 2026-11-05 — Published reviewed runtime and verified full recovery snapshot
+
+Runtime `d8985ad381a4f15f5fd67c4118ab8ff987d38f62` published on personal thesis-work with generated
+alkane practice, two-part12step lesson and professor sync throughf49b810. Public
+222exactHTTPchecks and bounded Main18/React8 interactions completed. Console is
+not clean: existingopenP2JSmol platform-null observation remains; no conference claim.
+Fullsnapshot `c7f1cc34b416c4fe4ea1773d78465afbf1c4d6ba`/4214files, ZIP/bundle/recovery/twoexternalcopies
+verified; later documentary bookkeeping has separate cutoff/receipts. Core54 changed
+by merge, core52/publicReact preserved. [Professor report](professor-20261105/update.html).
+
 ## 2026-11-05 — Professor merge through f49b810 and quiz compatibility (local)
 
 - Integrate four commits since35d791ee: canonical SMILES, automatic/manual drawing
