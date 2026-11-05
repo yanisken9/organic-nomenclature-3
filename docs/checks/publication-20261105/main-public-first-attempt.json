@@ -1,0 +1,805 @@
+{
+  "completed": false,
+  "checks": [
+    "Professor report readable at 1500",
+    "Professor report readable at 390",
+    "Welcome still opens current Main54",
+    "Primary main141molecules and initial2D ready",
+    "Primary real methane3D contains5atoms",
+    "Primary browser fetched exact independently reviewed new core",
+    "Primary automatic layout default and new cache references",
+    "Direct final-step request stops at unsolved required gate",
+    "Primary embedded quiz fetched immutable verified old engine",
+    "Primary old quiz engine passes actual WebCrypto",
+    "Primary new engine passes verified404fallback",
+    "First solved repair explains answer but keeps required set locked"
+  ],
+  "scope": "Developer final primary entry-flow checks; isolated owned Firefox9247 only. No authoring/network fixtures or changes to user window.",
+  "failure": "('[id$=\"-part-component-6\"]', {'x': 831.7416687011719, 'y': 645.0499877929688, 'hit': True, 'enabled': False})",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/publication-20261105/test-main.py\", line 59, in <module>\n    click('.round-next button');until('testCurrentRound.id!=='+json.dumps(data['id']));second=round_data();candidate(second)\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/publication-20261105/test-main.py\", line 29, in candidate\n    click('[id$=\"-part-'+data['targetPartId']+'\"]')\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/publication-20261105/test-main.py\", line 19, in click\n    assert b['hit'] and b['enabled'],(sel,b)\nAssertionError: ('[id$=\"-part-component-6\"]', {'x': 831.7416687011719, 'y': 645.0499877929688, 'hit': True, 'enabled': False})\n",
+  "javascriptErrors": [
+    {
+      "type": "javascript",
+      "level": "error",
+      "source": {
+        "realm": "d97b4d3d-e574-4dfe-98e8-8bc0be9f8244",
+        "context": "5cb06c24-482d-4173-9263-d06c7e404265",
+        "userContext": "default"
+      },
+      "text": "Το cookie «_ga_1V8NWYY46Y» έχει απορριφθεί λόγω μη έγκυρου τομέα.",
+      "timestamp": 1793881401912
+    },
+    {
+      "type": "javascript",
+      "level": "error",
+      "source": {
+        "realm": "d97b4d3d-e574-4dfe-98e8-8bc0be9f8244",
+        "context": "5cb06c24-482d-4173-9263-d06c7e404265",
+        "userContext": "default"
+      },
+      "text": "Το cookie «_ga_1V8NWYY46Y» έχει απορριφθεί λόγω μη έγκυρου τομέα.",
+      "timestamp": 1793881401913
+    },
+    {
+      "type": "javascript",
+      "level": "error",
+      "source": {
+        "realm": "d97b4d3d-e574-4dfe-98e8-8bc0be9f8244",
+        "context": "5cb06c24-482d-4173-9263-d06c7e404265",
+        "userContext": "default"
+      },
+      "text": "Το cookie «_ga» έχει απορριφθεί λόγω μη έγκυρου τομέα.",
+      "timestamp": 1793881401913
+    },
+    {
+      "type": "javascript",
+      "level": "error",
+      "source": {
+        "realm": "d97b4d3d-e574-4dfe-98e8-8bc0be9f8244",
+        "context": "5cb06c24-482d-4173-9263-d06c7e404265",
+        "userContext": "default"
+      },
+      "text": "Η φόρτωση του «https://chemapps.stolaf.edu/jmol/JmolTracker.php?id=UA-45940799-1&applet=Jmol._Canvas2D%20(Jmol)&version=2022-06-24%2005:54:49%20(JSmol/j2s)&appver=16.4.23&url=https%3A%2F%2Fyanisken9.github.io%2Forganic-nomenclature-3%2Fmulermoc-nom-54.html%3Fv%3Dpost-install-20261105» σε ένα πλαίσιο απορρίπτεται από την οδηγία «X-Frame-Options» που έχει οριστεί σε «sameorigin».",
+      "timestamp": 1793881402124
+    },
+    {
+      "type": "javascript",
+      "level": "error",
+      "source": {
+        "realm": "d97b4d3d-e574-4dfe-98e8-8bc0be9f8244",
+        "context": "5cb06c24-482d-4173-9263-d06c7e404265",
+        "userContext": "default"
+      },
+      "text": "Το cookie «_ga_1V8NWYY46Y» έχει απορριφθεί λόγω μη έγκυρου τομέα.",
+      "timestamp": 1793881402155
+    },
+    {
+      "type": "javascript",
+      "level": "error",
+      "source": {
+        "realm": "d97b4d3d-e574-4dfe-98e8-8bc0be9f8244",
+        "context": "5cb06c24-482d-4173-9263-d06c7e404265",
+        "userContext": "default"
+      },
+      "text": "Το cookie «_ga_1V8NWYY46Y» έχει απορριφθεί λόγω μη έγκυρου τομέα.",
+      "timestamp": 1793881402155
+    },
+    {
+      "type": "javascript",
+      "level": "error",
+      "source": {
+        "realm": "59b5b8cc-cedc-4801-b6b4-2242a0b838a2",
+        "context": "5cb06c24-482d-4173-9263-d06c7e404265",
+        "userContext": "default"
+      },
+      "text": "Το cookie «_ga_1V8NWYY46Y» έχει απορριφθεί λόγω μη έγκυρου τομέα.",
+      "timestamp": 1793881404555
+    },
+    {
+      "type": "javascript",
+      "level": "error",
+      "source": {
+        "realm": "59b5b8cc-cedc-4801-b6b4-2242a0b838a2",
+        "context": "5cb06c24-482d-4173-9263-d06c7e404265",
+        "userContext": "default"
+      },
+      "text": "Το cookie «_ga_1V8NWYY46Y» έχει απορριφθεί λόγω μη έγκυρου τομέα.",
+      "timestamp": 1793881404557
+    },
+    {
+      "type": "javascript",
+      "level": "error",
+      "source": {
+        "realm": "59b5b8cc-cedc-4801-b6b4-2242a0b838a2",
+        "context": "5cb06c24-482d-4173-9263-d06c7e404265",
+        "userContext": "default"
+      },
+      "text": "Το cookie «_ga» έχει απορριφθεί λόγω μη έγκυρου τομέα.",
+      "timestamp": 1793881404557
+    },
+    {
+      "type": "javascript",
+      "level": "error",
+      "source": {
+        "realm": "59b5b8cc-cedc-4801-b6b4-2242a0b838a2",
+        "context": "5cb06c24-482d-4173-9263-d06c7e404265",
+        "userContext": "default"
+      },
+      "text": "Η φόρτωση του «https://chemapps.stolaf.edu/jmol/JmolTracker.php?id=UA-45940799-1&applet=Jmol._Canvas2D%20(Jmol)&version=2022-06-24%2005:54:49%20(JSmol/j2s)&appver=16.4.23&url=https%3A%2F%2Fyanisken9.github.io%2Forganic-nomenclature-3%2Fmulermoc-nom-54.html%3Fscenario%3Dscenarios%2Falkanes-two-part-workshop.scenario.json%26present%3D1%23step%3D12» σε ένα πλαίσιο απορρίπτεται από την οδηγία «X-Frame-Options» που έχει οριστεί σε «sameorigin».",
+      "timestamp": 1793881405433
+    }
+  ],
+  "baseURL": "https://yanisken9.github.io/organic-nomenclature-3/",
+  "consoleEntries": [
+    {
+      "type": "console",
+      "method": "log",
+      "source": {
+        "realm": "d97b4d3d-e574-4dfe-98e8-8bc0be9f8244",
+        "context": "5cb06c24-482d-4173-9263-d06c7e404265",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "JSmol load jmolAppletNomeclature loadClazz..."
+        }
+      ],
+      "level": "info",
+      "text": "JSmol load jmolAppletNomeclature loadClazz...",
+      "timestamp": 1793881399099,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 484,
+            "functionName": "a._addExec",
+            "lineNumber": 158,
+            "url": "https://yanisken9.github.io/organic-nomenclature-3/js/vendor/jsmol/namelecule-20261031-r1/JSmol.min.js"
+          }
+        ]
+      }
+    },
+    {
+      "type": "console",
+      "method": "log",
+      "source": {
+        "realm": "d97b4d3d-e574-4dfe-98e8-8bc0be9f8244",
+        "context": "5cb06c24-482d-4173-9263-d06c7e404265",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "JSmol load jmolAppletNomeclature start applet..."
+        }
+      ],
+      "level": "info",
+      "text": "JSmol load jmolAppletNomeclature start applet...",
+      "timestamp": 1793881399112,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 484,
+            "functionName": "a._addExec",
+            "lineNumber": 158,
+            "url": "https://yanisken9.github.io/organic-nomenclature-3/js/vendor/jsmol/namelecule-20261031-r1/JSmol.min.js"
+          }
+        ]
+      }
+    },
+    {
+      "type": "console",
+      "method": "log",
+      "source": {
+        "realm": "d97b4d3d-e574-4dfe-98e8-8bc0be9f8244",
+        "context": "5cb06c24-482d-4173-9263-d06c7e404265",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "JSmol exec jmolAppletNomeclature loadClazz null -- OK"
+        }
+      ],
+      "level": "info",
+      "text": "JSmol exec jmolAppletNomeclature loadClazz null -- OK",
+      "timestamp": 1793881399253,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 373,
+            "functionName": "l",
+            "lineNumber": 157,
+            "url": "https://yanisken9.github.io/organic-nomenclature-3/js/vendor/jsmol/namelecule-20261031-r1/JSmol.min.js"
+          }
+        ]
+      }
+    },
+    {
+      "type": "console",
+      "method": "log",
+      "source": {
+        "realm": "d97b4d3d-e574-4dfe-98e8-8bc0be9f8244",
+        "context": "5cb06c24-482d-4173-9263-d06c7e404265",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "JSmol exec jmolAppletNomeclature start applet null -- OK"
+        }
+      ],
+      "level": "info",
+      "text": "JSmol exec jmolAppletNomeclature start applet null -- OK",
+      "timestamp": 1793881401440,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 373,
+            "functionName": "l",
+            "lineNumber": 157,
+            "url": "https://yanisken9.github.io/organic-nomenclature-3/js/vendor/jsmol/namelecule-20261031-r1/JSmol.min.js"
+          }
+        ]
+      }
+    },
+    {
+      "type": "javascript",
+      "level": "error",
+      "source": {
+        "realm": "d97b4d3d-e574-4dfe-98e8-8bc0be9f8244",
+        "context": "5cb06c24-482d-4173-9263-d06c7e404265",
+        "userContext": "default"
+      },
+      "text": "Το cookie «_ga_1V8NWYY46Y» έχει απορριφθεί λόγω μη έγκυρου τομέα.",
+      "timestamp": 1793881401912
+    },
+    {
+      "type": "javascript",
+      "level": "error",
+      "source": {
+        "realm": "d97b4d3d-e574-4dfe-98e8-8bc0be9f8244",
+        "context": "5cb06c24-482d-4173-9263-d06c7e404265",
+        "userContext": "default"
+      },
+      "text": "Το cookie «_ga_1V8NWYY46Y» έχει απορριφθεί λόγω μη έγκυρου τομέα.",
+      "timestamp": 1793881401913
+    },
+    {
+      "type": "javascript",
+      "level": "error",
+      "source": {
+        "realm": "d97b4d3d-e574-4dfe-98e8-8bc0be9f8244",
+        "context": "5cb06c24-482d-4173-9263-d06c7e404265",
+        "userContext": "default"
+      },
+      "text": "Το cookie «_ga» έχει απορριφθεί λόγω μη έγκυρου τομέα.",
+      "timestamp": 1793881401913
+    },
+    {
+      "type": "javascript",
+      "level": "error",
+      "source": {
+        "realm": "d97b4d3d-e574-4dfe-98e8-8bc0be9f8244",
+        "context": "5cb06c24-482d-4173-9263-d06c7e404265",
+        "userContext": "default"
+      },
+      "text": "Η φόρτωση του «https://chemapps.stolaf.edu/jmol/JmolTracker.php?id=UA-45940799-1&applet=Jmol._Canvas2D%20(Jmol)&version=2022-06-24%2005:54:49%20(JSmol/j2s)&appver=16.4.23&url=https%3A%2F%2Fyanisken9.github.io%2Forganic-nomenclature-3%2Fmulermoc-nom-54.html%3Fv%3Dpost-install-20261105» σε ένα πλαίσιο απορρίπτεται από την οδηγία «X-Frame-Options» που έχει οριστεί σε «sameorigin».",
+      "timestamp": 1793881402124
+    },
+    {
+      "type": "console",
+      "method": "log",
+      "source": {
+        "realm": "d97b4d3d-e574-4dfe-98e8-8bc0be9f8244",
+        "context": "5cb06c24-482d-4173-9263-d06c7e404265",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "[SELECT] mol=methane SMILES=C SYSTEMATIC_EN=fetching…"
+        }
+      ],
+      "level": "info",
+      "text": "[SELECT] mol=methane SMILES=C SYSTEMATIC_EN=fetching…",
+      "timestamp": 1793881402768,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 10,
+            "functionName": "fLogMolSelectWithIUPAC",
+            "lineNumber": 344,
+            "url": "https://yanisken9.github.io/organic-nomenclature-3/js/mulermoc-nom-iupac-54.js?v=merge54-20261105-r1"
+          }
+        ]
+      }
+    },
+    {
+      "type": "console",
+      "method": "log",
+      "source": {
+        "realm": "d97b4d3d-e574-4dfe-98e8-8bc0be9f8244",
+        "context": "5cb06c24-482d-4173-9263-d06c7e404265",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "[ENGINE-EN] methane -> methane"
+        }
+      ],
+      "level": "info",
+      "text": "[ENGINE-EN] methane -> methane",
+      "timestamp": 1793881402770,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 12,
+            "functionName": "fPopulateEngineENFromGreek",
+            "lineNumber": 311,
+            "url": "https://yanisken9.github.io/organic-nomenclature-3/js/mulermoc-nom-name-en-54.js?v=v54-upstream-20261104-r2"
+          }
+        ]
+      }
+    },
+    {
+      "type": "javascript",
+      "level": "error",
+      "source": {
+        "realm": "d97b4d3d-e574-4dfe-98e8-8bc0be9f8244",
+        "context": "5cb06c24-482d-4173-9263-d06c7e404265",
+        "userContext": "default"
+      },
+      "text": "Το cookie «_ga_1V8NWYY46Y» έχει απορριφθεί λόγω μη έγκυρου τομέα.",
+      "timestamp": 1793881402155
+    },
+    {
+      "type": "javascript",
+      "level": "error",
+      "source": {
+        "realm": "d97b4d3d-e574-4dfe-98e8-8bc0be9f8244",
+        "context": "5cb06c24-482d-4173-9263-d06c7e404265",
+        "userContext": "default"
+      },
+      "text": "Το cookie «_ga_1V8NWYY46Y» έχει απορριφθεί λόγω μη έγκυρου τομέα.",
+      "timestamp": 1793881402155
+    },
+    {
+      "type": "console",
+      "method": "log",
+      "source": {
+        "realm": "d97b4d3d-e574-4dfe-98e8-8bc0be9f8244",
+        "context": "5cb06c24-482d-4173-9263-d06c7e404265",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "[IUPAC-EN] SMILES=C -> retained=\"methane\" systematic=\"methane\" (via pubchem, CID 297)"
+        }
+      ],
+      "level": "info",
+      "text": "[IUPAC-EN] SMILES=C -> retained=\"methane\" systematic=\"methane\" (via pubchem, CID 297)",
+      "timestamp": 1793881404046,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 10,
+            "functionName": "fFetchIUPAC_EN",
+            "lineNumber": 164,
+            "url": "https://yanisken9.github.io/organic-nomenclature-3/js/mulermoc-nom-iupac-54.js?v=merge54-20261105-r1"
+          }
+        ]
+      }
+    },
+    {
+      "type": "console",
+      "method": "log",
+      "source": {
+        "realm": "d97b4d3d-e574-4dfe-98e8-8bc0be9f8244",
+        "context": "5cb06c24-482d-4173-9263-d06c7e404265",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "[IUPAC-EN] methane: SMILES=C retained=\"methane\" systematic=\"methane\""
+        }
+      ],
+      "level": "info",
+      "text": "[IUPAC-EN] methane: SMILES=C retained=\"methane\" systematic=\"methane\"",
+      "timestamp": 1793881404047,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 14,
+            "functionName": "fLogMolSelectWithIUPAC/<",
+            "lineNumber": 382,
+            "url": "https://yanisken9.github.io/organic-nomenclature-3/js/mulermoc-nom-iupac-54.js?v=merge54-20261105-r1"
+          }
+        ]
+      }
+    },
+    {
+      "type": "console",
+      "method": "log",
+      "source": {
+        "realm": "59b5b8cc-cedc-4801-b6b4-2242a0b838a2",
+        "context": "5cb06c24-482d-4173-9263-d06c7e404265",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "JSmol load jmolAppletNomeclature loadClazz..."
+        }
+      ],
+      "level": "info",
+      "text": "JSmol load jmolAppletNomeclature loadClazz...",
+      "timestamp": 1793881404416,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 484,
+            "functionName": "a._addExec",
+            "lineNumber": 158,
+            "url": "https://yanisken9.github.io/organic-nomenclature-3/js/vendor/jsmol/namelecule-20261031-r1/JSmol.min.js"
+          }
+        ]
+      }
+    },
+    {
+      "type": "console",
+      "method": "log",
+      "source": {
+        "realm": "59b5b8cc-cedc-4801-b6b4-2242a0b838a2",
+        "context": "5cb06c24-482d-4173-9263-d06c7e404265",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "JSmol load jmolAppletNomeclature start applet..."
+        }
+      ],
+      "level": "info",
+      "text": "JSmol load jmolAppletNomeclature start applet...",
+      "timestamp": 1793881404416,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 484,
+            "functionName": "a._addExec",
+            "lineNumber": 158,
+            "url": "https://yanisken9.github.io/organic-nomenclature-3/js/vendor/jsmol/namelecule-20261031-r1/JSmol.min.js"
+          }
+        ]
+      }
+    },
+    {
+      "type": "console",
+      "method": "log",
+      "source": {
+        "realm": "59b5b8cc-cedc-4801-b6b4-2242a0b838a2",
+        "context": "5cb06c24-482d-4173-9263-d06c7e404265",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "JSmol exec jmolAppletNomeclature loadClazz null -- OK"
+        }
+      ],
+      "level": "info",
+      "text": "JSmol exec jmolAppletNomeclature loadClazz null -- OK",
+      "timestamp": 1793881404559,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 373,
+            "functionName": "l",
+            "lineNumber": 157,
+            "url": "https://yanisken9.github.io/organic-nomenclature-3/js/vendor/jsmol/namelecule-20261031-r1/JSmol.min.js"
+          }
+        ]
+      }
+    },
+    {
+      "type": "javascript",
+      "level": "error",
+      "source": {
+        "realm": "59b5b8cc-cedc-4801-b6b4-2242a0b838a2",
+        "context": "5cb06c24-482d-4173-9263-d06c7e404265",
+        "userContext": "default"
+      },
+      "text": "Το cookie «_ga_1V8NWYY46Y» έχει απορριφθεί λόγω μη έγκυρου τομέα.",
+      "timestamp": 1793881404555
+    },
+    {
+      "type": "javascript",
+      "level": "error",
+      "source": {
+        "realm": "59b5b8cc-cedc-4801-b6b4-2242a0b838a2",
+        "context": "5cb06c24-482d-4173-9263-d06c7e404265",
+        "userContext": "default"
+      },
+      "text": "Το cookie «_ga_1V8NWYY46Y» έχει απορριφθεί λόγω μη έγκυρου τομέα.",
+      "timestamp": 1793881404557
+    },
+    {
+      "type": "javascript",
+      "level": "error",
+      "source": {
+        "realm": "59b5b8cc-cedc-4801-b6b4-2242a0b838a2",
+        "context": "5cb06c24-482d-4173-9263-d06c7e404265",
+        "userContext": "default"
+      },
+      "text": "Το cookie «_ga» έχει απορριφθεί λόγω μη έγκυρου τομέα.",
+      "timestamp": 1793881404557
+    },
+    {
+      "type": "console",
+      "method": "log",
+      "source": {
+        "realm": "59b5b8cc-cedc-4801-b6b4-2242a0b838a2",
+        "context": "5cb06c24-482d-4173-9263-d06c7e404265",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "JSmol exec jmolAppletNomeclature start applet null -- OK"
+        }
+      ],
+      "level": "info",
+      "text": "JSmol exec jmolAppletNomeclature start applet null -- OK",
+      "timestamp": 1793881404784,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 373,
+            "functionName": "l",
+            "lineNumber": 157,
+            "url": "https://yanisken9.github.io/organic-nomenclature-3/js/vendor/jsmol/namelecule-20261031-r1/JSmol.min.js"
+          }
+        ]
+      }
+    },
+    {
+      "type": "console",
+      "method": "log",
+      "source": {
+        "realm": "59b5b8cc-cedc-4801-b6b4-2242a0b838a2",
+        "context": "5cb06c24-482d-4173-9263-d06c7e404265",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "[SELECT] mol=methane SMILES=C SYSTEMATIC_EN=fetching…"
+        }
+      ],
+      "level": "info",
+      "text": "[SELECT] mol=methane SMILES=C SYSTEMATIC_EN=fetching…",
+      "timestamp": 1793881405402,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 10,
+            "functionName": "fLogMolSelectWithIUPAC",
+            "lineNumber": 344,
+            "url": "https://yanisken9.github.io/organic-nomenclature-3/js/mulermoc-nom-iupac-54.js?v=merge54-20261105-r1"
+          }
+        ]
+      }
+    },
+    {
+      "type": "console",
+      "method": "log",
+      "source": {
+        "realm": "59b5b8cc-cedc-4801-b6b4-2242a0b838a2",
+        "context": "5cb06c24-482d-4173-9263-d06c7e404265",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "[ENGINE-EN] methane -> methane"
+        }
+      ],
+      "level": "info",
+      "text": "[ENGINE-EN] methane -> methane",
+      "timestamp": 1793881405403,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 12,
+            "functionName": "fPopulateEngineENFromGreek",
+            "lineNumber": 311,
+            "url": "https://yanisken9.github.io/organic-nomenclature-3/js/mulermoc-nom-name-en-54.js?v=v54-upstream-20261104-r2"
+          }
+        ]
+      }
+    },
+    {
+      "type": "javascript",
+      "level": "error",
+      "source": {
+        "realm": "59b5b8cc-cedc-4801-b6b4-2242a0b838a2",
+        "context": "5cb06c24-482d-4173-9263-d06c7e404265",
+        "userContext": "default"
+      },
+      "text": "Η φόρτωση του «https://chemapps.stolaf.edu/jmol/JmolTracker.php?id=UA-45940799-1&applet=Jmol._Canvas2D%20(Jmol)&version=2022-06-24%2005:54:49%20(JSmol/j2s)&appver=16.4.23&url=https%3A%2F%2Fyanisken9.github.io%2Forganic-nomenclature-3%2Fmulermoc-nom-54.html%3Fscenario%3Dscenarios%2Falkanes-two-part-workshop.scenario.json%26present%3D1%23step%3D12» σε ένα πλαίσιο απορρίπτεται από την οδηγία «X-Frame-Options» που έχει οριστεί σε «sameorigin».",
+      "timestamp": 1793881405433
+    },
+    {
+      "type": "console",
+      "method": "log",
+      "source": {
+        "realm": "59b5b8cc-cedc-4801-b6b4-2242a0b838a2",
+        "context": "5cb06c24-482d-4173-9263-d06c7e404265",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "[IUPAC-EN] SMILES=C -> retained=\"methane\" systematic=\"methane\" (via pubchem, CID 297)"
+        }
+      ],
+      "level": "info",
+      "text": "[IUPAC-EN] SMILES=C -> retained=\"methane\" systematic=\"methane\" (via pubchem, CID 297)",
+      "timestamp": 1793881405995,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 10,
+            "functionName": "fFetchIUPAC_EN",
+            "lineNumber": 164,
+            "url": "https://yanisken9.github.io/organic-nomenclature-3/js/mulermoc-nom-iupac-54.js?v=merge54-20261105-r1"
+          }
+        ]
+      }
+    },
+    {
+      "type": "console",
+      "method": "log",
+      "source": {
+        "realm": "59b5b8cc-cedc-4801-b6b4-2242a0b838a2",
+        "context": "5cb06c24-482d-4173-9263-d06c7e404265",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "[IUPAC-EN] methane: SMILES=C retained=\"methane\" systematic=\"methane\""
+        }
+      ],
+      "level": "info",
+      "text": "[IUPAC-EN] methane: SMILES=C retained=\"methane\" systematic=\"methane\"",
+      "timestamp": 1793881405997,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 14,
+            "functionName": "fLogMolSelectWithIUPAC/<",
+            "lineNumber": 382,
+            "url": "https://yanisken9.github.io/organic-nomenclature-3/js/mulermoc-nom-iupac-54.js?v=merge54-20261105-r1"
+          }
+        ]
+      }
+    },
+    {
+      "type": "console",
+      "method": "log",
+      "source": {
+        "realm": "59b5b8cc-cedc-4801-b6b4-2242a0b838a2",
+        "context": "5cb06c24-482d-4173-9263-d06c7e404265",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "[SELECT] mol=pentane SMILES=CCCCC SYSTEMATIC_EN=fetching…"
+        }
+      ],
+      "level": "info",
+      "text": "[SELECT] mol=pentane SMILES=CCCCC SYSTEMATIC_EN=fetching…",
+      "timestamp": 1793881406230,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 10,
+            "functionName": "fLogMolSelectWithIUPAC",
+            "lineNumber": 344,
+            "url": "https://yanisken9.github.io/organic-nomenclature-3/js/mulermoc-nom-iupac-54.js?v=merge54-20261105-r1"
+          }
+        ]
+      }
+    },
+    {
+      "type": "console",
+      "method": "log",
+      "source": {
+        "realm": "59b5b8cc-cedc-4801-b6b4-2242a0b838a2",
+        "context": "5cb06c24-482d-4173-9263-d06c7e404265",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "[ENGINE-EN] pentane -> pentane"
+        }
+      ],
+      "level": "info",
+      "text": "[ENGINE-EN] pentane -> pentane",
+      "timestamp": 1793881406231,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 12,
+            "functionName": "fPopulateEngineENFromGreek",
+            "lineNumber": 311,
+            "url": "https://yanisken9.github.io/organic-nomenclature-3/js/mulermoc-nom-name-en-54.js?v=v54-upstream-20261104-r2"
+          }
+        ]
+      }
+    },
+    {
+      "type": "console",
+      "method": "log",
+      "source": {
+        "realm": "59b5b8cc-cedc-4801-b6b4-2242a0b838a2",
+        "context": "5cb06c24-482d-4173-9263-d06c7e404265",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "[IUPAC-EN] SMILES=CCCCC -> retained=\"pentane\" systematic=\"pentane\" (via pubchem, CID 8003)"
+        }
+      ],
+      "level": "info",
+      "text": "[IUPAC-EN] SMILES=CCCCC -> retained=\"pentane\" systematic=\"pentane\" (via pubchem, CID 8003)",
+      "timestamp": 1793881407066,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 10,
+            "functionName": "fFetchIUPAC_EN",
+            "lineNumber": 164,
+            "url": "https://yanisken9.github.io/organic-nomenclature-3/js/mulermoc-nom-iupac-54.js?v=merge54-20261105-r1"
+          }
+        ]
+      }
+    },
+    {
+      "type": "console",
+      "method": "log",
+      "source": {
+        "realm": "59b5b8cc-cedc-4801-b6b4-2242a0b838a2",
+        "context": "5cb06c24-482d-4173-9263-d06c7e404265",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "[IUPAC-EN] pentane: SMILES=CCCCC retained=\"pentane\" systematic=\"pentane\""
+        }
+      ],
+      "level": "info",
+      "text": "[IUPAC-EN] pentane: SMILES=CCCCC retained=\"pentane\" systematic=\"pentane\"",
+      "timestamp": 1793881407066,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 14,
+            "functionName": "fLogMolSelectWithIUPAC/<",
+            "lineNumber": 382,
+            "url": "https://yanisken9.github.io/organic-nomenclature-3/js/mulermoc-nom-iupac-54.js?v=merge54-20261105-r1"
+          }
+        ]
+      }
+    }
+  ]
+}

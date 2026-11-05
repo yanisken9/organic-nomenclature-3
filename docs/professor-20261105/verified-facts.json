@@ -21,7 +21,11 @@
     "distinctMoleculesPerSetAttempt": 3,
     "mayRepeatGraphsAcrossAttempts": true,
     "runtimeAnalysis": "actual core derives correct name and components before a separate factory creates an eligible fault",
-    "seededVariation": ["fault", "question order", "choice order"],
+    "seededVariation": [
+      "fault",
+      "question order",
+      "choice order"
+    ],
     "newMolecularGraphGeneration": false,
     "difficulty": {
       "basic": "feature-level initial direction",
@@ -32,8 +36,19 @@
     "branding": "existing 3D logo in set picker; return label Όλα τα σετ",
     "commonCheckLabel": "Έλεγχος",
     "measuredLearningEffectiveness": false,
-    "originalUnitDeveloperBrowserChecks": {"engine": 72, "targeted": 21, "fixedSets": 60, "authoredPilot": 45, "JavaScriptErrors": 0},
-    "generatorChecks": {"games": 512, "rounds": 3072, "legalRepairs": 38644, "stateRestorations": 6144},
+    "originalUnitDeveloperBrowserChecks": {
+      "engine": 72,
+      "targeted": 21,
+      "fixedSets": 60,
+      "authoredPilot": 45,
+      "JavaScriptErrors": 0
+    },
+    "generatorChecks": {
+      "games": 512,
+      "rounds": 3072,
+      "legalRepairs": 38644,
+      "stateRestorations": 6144
+    },
     "independentReviewer": "/root/review_engine_workshop_20261105",
     "independentFindingsAtUnitCompletion": [],
     "evidence": "docs/checks/engine-workshop-20261105/REPORT.md",
@@ -55,9 +70,19 @@
     "missingForm": "methane skeletal",
     "original21StepScenarioPreserved": true,
     "previousAuthoredPilotPreserved": true,
-    "developerFirefoxChecks": {"fullReplay": 128, "recovery": 19, "compatibility": 60, "targetedR1Correction": 11},
+    "developerFirefoxChecks": {
+      "fullReplay": 128,
+      "recovery": 19,
+      "compatibility": 60,
+      "targetedR1Correction": 11
+    },
     "compatibilityLimit": "first/final/navigation in other thirteen lessons; not fresh full replay of all316 unaffected authored steps",
-    "independentChemistry": {"graphs2D": 23, "SDFGraphs": 8, "coreAnalyses": 35, "atomMaps": 23},
+    "independentChemistry": {
+      "graphs2D": 23,
+      "SDFGraphs": 8,
+      "coreAnalyses": 35,
+      "atomMaps": 23
+    },
     "independentReviewer": "/root/review_two_part_alkane_lesson",
     "R1": "P2 early cold-loader release corrected and independently closed",
     "remainingObservation": "native JSmol bufferedImage / platform is null exception during first completed-gate async restoration; no causal fix established",
@@ -87,7 +112,11 @@
     "primaryPath": "js/mulermoc-nom-core-54.js",
     "primarySHA256": "8f3e5f76d96322faf7cf9251f4cae3eca204fe2f82bf5754fdce6ffc4cd5d5a9",
     "primaryUse": "exploration and drawing",
-    "changes": ["bounded shared MOL counts/header detection with standard unversioned compatibility", "terminal group/ether layout", "retained graph/metadata/charge/isotope/SUP and sp safeguards"],
+    "changes": [
+      "bounded shared MOL counts/header detection with standard unversioned compatibility",
+      "terminal group/ether layout",
+      "retained graph/metadata/charge/isotope/SUP and sp safeguards"
+    ],
     "quizEnginePath": "js/chemistry-engines/3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306.js",
     "quizEngineSHA256": "3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306",
     "quizEngineIsExactPreviousBytes": true,
@@ -146,5 +175,19 @@
     "docs/checks/v54-merge-20261105/final-report.json",
     "docs/checks/v54-merge-20261105/review-result.json",
     "communication/checkpoints/save-publish-20261105-state.json"
-  ]
+  ],
+  "initialVerifiedSnapshot": {
+    "commit": "1a402b1807b2e4fe54301844e9311ce5ccba1127",
+    "sourceFileCount": 4194,
+    "archive": "communication/checkpoints/Namelecule-20261105-140541-initial.zip",
+    "archiveSHA256": "f4515678a7f88a52f986143c24eb265a232c5e716e13bb3d1b0c4151646ee3e5",
+    "bundle": "communication/checkpoints/Namelecule-20261105-140541-initial.bundle",
+    "bundleSHA256": "4352132cf0a1946a1e63020458235ac36449fff3d9d32298204e7683a0f7af49",
+    "recoveryArchive": "communication/checkpoints/Namelecule-20261105-140541-initial-recovery.zip",
+    "recoveryArchiveSHA256": "9f11c083846d174cc7060bfd8bedfd5a62277f82179c3242bb59f44c026982b8",
+    "externalCopiesVerified": 2,
+    "remoteVerified": "1a402b1807b2e4fe54301844e9311ce5ccba1127"
+  },
+  "checkpointBranch": "checkpoint/namelecule-20261105-140541",
+  "publicReleaseStatus": "Pending; initial complete checkpoint verified, candidate/public checks still pending."
 }

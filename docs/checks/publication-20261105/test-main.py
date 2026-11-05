@@ -25,6 +25,7 @@ def open_quiz():
     click('#nlQuizOpen');until('!!document.querySelector("#nlQuizDialog[open] .diagram-image.is-ready")&&!!window.testCurrentRound')
 def round_data():return read('testCurrentRound')
 def candidate(data):
+    until('!!document.querySelector("#nlQuizDialog[open] .diagram-image.is-ready")')
     if data['kind']=='replace':
         click('[id$="-part-'+data['targetPartId']+'"]')
         good=next(i for i,c in enumerate(data['choices']) if c['value']==data['correctValue'])

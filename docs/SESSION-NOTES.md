@@ -1,3 +1,68 @@
+# Current resume point — 2026-11-05 — Public runtime verified with disclosed P2; final full save next
+
+Runtime d8985ad381a4f15f5fd67c4118ab8ff987d38f62/tagnamelecule-20261105-runtime,
+personal thesis-work, exactrefs and222liveHTTPhashes verified. ActualpublicMain18
+andReact8boundedinteractionchecks completed. Rawstrictscripts exit1: Main16cookie+
+4tracker+1realJSmolplatformnullexception;React2trackerframe denials. Console NOTclean.
+FreshpublicationReviewer targetedassessment: no demonstratednewP0/P1 blocker;
+carry PUB-JS1 as existingopenP2, cause/cure unknown. Same symptom/namedcallchain
+premerge doesnot prove samecause/publicNov4presence. Full3Dgallerynotrechecked
+postexception; no conference/offline/Safari guarantee. Evidence under
+checks/publication-20261105/public-independent-assessment.json andrawpubliclogs.
+
+Onlytestdrivercorrectionawaitednextdiagramready beforeanswer; source runtime
+unchanged, independentlychecked. FirstnativeBiDiwindowcreationfailedbeforeapp;
+ownedtestFirefoxrestarted session23725/9247, user8098/main8055untouched. Initial
+fullsnapshot1a402b18/4194files remotelyverified withZIP/bundle/recovery/2copies.
+State now publicLiveVerified=true with explicitbounded/nonclean/P2scope, allowing
+finalgeneration backup. Next fullfinalsnapshot (no sourceeditswhilesnapshotting),
+then actualsnapshot/publicfacts+preciselessonseedwording inreport, narrowtargeted
+independentdoccheck, docpublication/exactHTTP, latestsourcebookkeepingcheckpoint/
+bundle/twoexternalreceipts. PreserveimmutableZIPcutoff separately. SourceHEAD/index
+unchanged; core54changedbymergeonly, savehelperdoesnotchangecore.
+
+# Current resume point — 2026-11-05 — Runtime published; public browser checks running
+
+User explicitly approved publicruntime after automaticapprovalreview initially
+rejected ambiguous save/report authorization. Rejected command did not run.
+Actual runtime commitd8985ad381a4f15f5fd67c4118ab8ff987d38f62, tag
+namelecule-20261105-runtime pushed atomically to personal thesis-work; exactrefs
+verified. Fresh publication Reviewer /root/review_publication_20261105 found no
+actionableP0–P3 findings, independently verified3800candidatepaths/49protected,
+4194initialZIPfiles/recovery203/bundle and45hashes perexternalcopy.
+Public222HTTP/exactSHA checks passed. First public browserattempt failed at native
+BiDi createWindow before application navigation (selectedTab null),0checks.
+Recorded separately; only ownedtestFirefox9011 was stopped, sameprofile restarted
+session23725/port9247. User8098/main8055 untouched. PublicMainexec76680 running;
+thenReactpublic. Source HEAD/index/runtime unchanged.
+
+Next finish publicchecks/classifyanyexternaldiagnostics, markstatepublicLiveVerified
+only on actualcompletedchecks. Then fullfinalsnapshot/externalcopies; update report
+with realpublic/snapshotfacts+optionalpreciselessonseedclarification; fresh hashes
+for narrowdocumentaryReviewer; publicdoccommit/exactHTTP; latestnotes/bookkeeping
+checkpoint+bundle andexternalreceipts. Final sourceZIP immutablecutoff mustremain
+separate fromlaterbookkeeping. State: communication/checkpoints/save-publish-20261105-state.json.
+Initialverifiedbackup and frozenreview detailbelow. Core54changedbymerge only.
+
+# Current resume point — 2026-11-05 — Initial full backup verified; public candidate under review
+
+Initial complete source snapshot1a402b1807b2e4fe54301844e9311ce5ccba1127,
+4194files, remote branch checkpoint/namelecule-20261105-140541 verified. ZIP every
+CRC/SHA, Git bundle, recovery ZIP and both external copies verified. Exact receipts
+in communication/checkpoints/save-publish-20261105-state.json. This initial snapshot
+precedes later report/publication bookkeeping, not a final/offline package.
+
+Curated public candidate3800files (3441base,1114overlays),49protected including39
+publicReactpaths;0deletions. Manifest9e464dbf; publication review target81bbcef3.
+Fresh /root/review_publication_20261105 read-only review active; no target edits.
+Prefix Main18checks/0JS passed; Reactprefixexec72177 running. Ownedpublicserver
+8057/PID10459/session27894; ownedtestFirefox9011/BiDi9247 retained forpublicchecks.
+User8098/main8055 untouched. SourceHEAD/index unchanged. No public push yet.
+Next collect React/review, fixwithinapprovedscope, commit/push exactcandidate to
+personal thesis-work, verifylivebytes/Main/React, targetedreportstatusupdate, final
+fullsave plus separatelatestnotes/bookkeepingbundle and verifiedexternalreceipts.
+Core54mergealreadycomplete below; save helpers have not changed core.
+
 # Current resume point — 2026-11-05 — Full save and professor publication underway
 
 User explicitly requested saving everywhere, professor report and link after the
