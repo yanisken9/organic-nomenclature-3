@@ -1,0 +1,15 @@
+{
+  "date": "2026-11-09T06:38:15.404586+00:00",
+  "failure": "Caller supplied source_paths() only to staged verification, omitting two intentionally force-added Git-ignored receipt/state files. Staged path set differs stopped execution before receipt commit or push.",
+  "measuredSourceCount": 5005,
+  "measuredIndexCount": 5007,
+  "omittedExplicitFiles": [
+    "communication/checkpoints/save-publish-20261109-state.json",
+    "communication/checkpoints/Namelecule-20261109-081249-complete-verification.json"
+  ],
+  "correction": "Use union of normal source inventory and all deliberately included receipt/state/evidence paths for staged-byte and final current-content verification. No application or archive helper edits.",
+  "publicRuntimeUnaffected": true,
+  "fullSourceArchivesUnaffected": true,
+  "metadataContentCommitAlreadyVerified": "78870cb73e6524d0a86e77fb7b68d07eeb0cd3a1",
+  "reviewedHelperUnchanged": true
+}
