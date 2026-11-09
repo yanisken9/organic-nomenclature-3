@@ -6,6 +6,12 @@
   const REVISION = "275d537b19f3ef0791c97d8d78c127f541a0579038ef1e8d65dadde611845690";
   const CATALOG_SHA = "9778e30ea33f2f7cd4c8a472e46e90539856b861a54035a1d514c3246cccf724";
   const recipeKeys = ["version", "setId", "difficulty", "roundCount", "generatorVersion", "catalogRevision", "engineSHA256"];
+  const WRONG_PART_REMINDERS = Object.freeze({
+    "parent-length": "Η αποστολή αφορά το πλήθος των ατόμων C της κύριας αλυσίδας.",
+    "bond-type": "Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+    "branch-locants": "Η αποστολή αφορά τις θέσεις σύνδεσης των διακλαδώσεων και τη φορά αρίθμησης.",
+    "branch-multiplier": "Η αποστολή αφορά το πλήθος των ίδιων διακλαδώσεων."
+  });
   const prepared = new Map();
   let source = null;
   function assert(condition, message) { if (!condition) throw new Error(message); }
@@ -130,6 +136,18 @@
     if (text) element.textContent = text;
     return element;
   }
+  // Basic lesson rounds repeat the mission focus without changing the
+  // canonical generated question used to restore and verify saved answers.
+  function lessonRoundForDisplay(round) {
+    const family = round && round.kind === "replace" && round.fault && round.fault.kind;
+    if (!Object.prototype.hasOwnProperty.call(WRONG_PART_REMINDERS, family) ||
+      !round.feedback || typeof round.feedback.wrongPart !== "string") return round;
+    return Object.assign({}, round, {
+      feedback: Object.assign({}, round.feedback, {
+        wrongPart: round.feedback.wrongPart + " " + WRONG_PART_REMINDERS[family]
+      })
+    });
+  }
   function mount(host, options) {
     const recipe = validate(options.round);
     const controller = new AbortController();
@@ -146,19 +164,27 @@
       state = restore(recipe, state);
       if (!destroyed && typeof options.onStateChange === "function") options.onStateChange(JSON.parse(JSON.stringify(state)));
     }
+    function reportProgress(value) {
+      if (!destroyed && typeof options.onProgress === "function") options.onProgress(value);
+    }
     function destroyRound() { if (current) current.destroy(); current = null; }
     function render(set) {
       if (destroyed) return;
       destroyRound();
       const index = state.currentRound;
-      const progress = node("p", "nl-quiz-set-progress", "Κουίζ " + (index + 1) + " από 3 · " + set.title);
-      progress.setAttribute("role", "status");
+      const headerProgress = typeof options.onProgress === "function";
+      const progress = node("p", "nl-quiz-set-progress", headerProgress ? set.title : "Κουίζ " + (index + 1) + " από 3 · " + set.title);
+      if (!headerProgress) progress.setAttribute("role", "status");
       const roundHost = node("div", "nl-quiz-set-round");
       host.replaceChildren(progress, roundHost);
       host.setAttribute("aria-busy", "false");
       current = global.NameleculeRepairGame.mountRound(roundHost, {
-        round: set.rounds[index], initialState: state.states[index], assetBase: options.assetBase,
+        round: lessonRoundForDisplay(set.rounds[index]), initialState: state.states[index], assetBase: options.assetBase,
         continueLabel: index < 2 ? "Επόμενο κουίζ" : "Συνεχίζω τη θεωρία",
+        onReveal(request) {
+          if (!destroyed && state.currentRound === index && roundHost.isConnected &&
+            typeof options.onReveal === "function") options.onReveal(request);
+        },
         onStateChange(roundState) {
           if (destroyed) return;
           state.states[index] = roundState;
@@ -181,10 +207,12 @@
           } else if (state.solved && typeof options.onContinue === "function") options.onContinue();
         }
       });
+      reportProgress({ current: index + 1, total: recipe.roundCount });
     }
     function start() {
       const request = ++token;
       destroyRound();
+      reportProgress(null);
       host.setAttribute("aria-busy", "true");
       const loading = node("p", "nl-quiz-loading", "Η μηχανή ετοιμάζει τις τρεις επισκευές…");
       loading.setAttribute("role", "status");
@@ -197,6 +225,7 @@
         render(set);
       }).catch(error => {
         if (destroyed || request !== token || controller.signal.aborted) return;
+        reportProgress(null);
         host.setAttribute("aria-busy", "false");
         const message = node("p", "nl-quiz-error", "Οι επισκευές δεν φορτώθηκαν. Δοκίμασε ξανά ή επέστρεψε στη θεωρία.");
         message.setAttribute("role", "alert");
@@ -209,6 +238,7 @@
     start();
     return { destroy() {
       if (destroyed) return;
+      reportProgress(null);
       destroyed = true;
       token++;
       controller.abort();

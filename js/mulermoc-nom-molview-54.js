@@ -7356,7 +7356,9 @@ function fShowNameAnalysis() {
     };
     const _selId = _modeToCompId[nameAnalysisMode] || fBranchPieceBoxId(nameAnalysisMode);
     // Hidden boxes stay inert: never restore .selected onto a dash box.
-    if (_selId && $(`#${_selId}`).length && !fNameCompHidden(_selId)) {
+    if (_selId && $(`#${_selId}`).length && !fNameCompHidden(_selId) &&
+        !(typeof window.fScenarioNameCompDisabled === "function" &&
+          window.fScenarioNameCompDisabled(_selId))) {
       $(`#${_selId}`).addClass("selected");
     } else {
       nameAnalysisMode = "none";
@@ -8988,6 +8990,9 @@ function fApplyChainStep() {
     if (typeof fExplainNameComp === "function") fExplainNameComp();
   } catch (eHl) { /* viewer unavailable */ }
   fRenderChainStepper();
+  try {
+    if (typeof window.fScenarioOnPresentBrowse === "function") window.fScenarioOnPresentBrowse();
+  } catch (eScenario) { /* scenario absent */ }
 }
 
 function fStepMainChain(dir) {
@@ -10632,6 +10637,45 @@ function fHighlightFG3D(FGno) {
 let numberingAtomOverride = null;
 let numberingAtomOverride3D = null;
 
+// A display-only comparison of equivalent directions of one parent. The core
+// signature omits some chemical metadata, so accept only a plain, connected
+// saturated C/H tree whose parsed graph is exactly the live numbering graph.
+function fEquivalentParentNumberingDirections(molText, chain, types, bonds) {
+  try {
+    const m = fParseMolV2000(molText);
+    if (!m || !Array.isArray(chain) || chain.length < 2 ||
+        !Array.isArray(types) || !Array.isArray(bonds) ||
+        m.atoms.length !== types.length || m.bonds.length !== types.length - 1 ||
+        m.properties.length || !fMolCanTransform2D(m, false)) return null;
+    if (m.atoms.some((a, i) => !["C", "H"].includes(a.el) || a.el !== types[i] ||
+        a.charge !== 0 || a.massDifference !== 0 || (a.isotope != null && a.isotope !== 0) ||
+        a.tail.trim().split(/\s+/).some(v => !/^[+-]?\d+$/.test(v) || Number(v) !== 0))) return null;
+    const key = b => {
+      if (!Array.isArray(b) || !Number.isInteger(b[0]) || !Number.isInteger(b[1]) ||
+          b[0] < 1 || b[1] < 1 || b[0] > types.length || b[1] > types.length ||
+          b[0] === b[1] || b[2] !== 1) throw new Error("Unsupported numbering graph");
+      return [Math.min(b[0], b[1]), Math.max(b[0], b[1]), b[2]].join(":");
+    };
+    if (m.bonds.some(b => b.tail.trim().split(/\s+/).some(v => !/^[+-]?\d+$/.test(v) || Number(v) !== 0)) ||
+        JSON.stringify(m.bonds.map(key).sort()) !== JSON.stringify(bonds.map(key).sort())) return null;
+    const adj = types.map(() => []);
+    bonds.forEach(([a, b]) => { adj[a - 1].push(b - 1); adj[b - 1].push(a - 1); });
+    if (adj.some((ns, i) => types[i] === "H" ? ns.length !== 1 : ns.length > 4)) return null;
+    const seen = new Set([0]), queue = [0];
+    for (let i = 0; i < queue.length; i++) adj[queue[i]].forEach(n => {
+      if (!seen.has(n)) { seen.add(n); queue.push(n); }
+    });
+    if (seen.size !== types.length || new Set(chain).size !== chain.length ||
+        chain.some(n => !Number.isInteger(n) || types[n - 1] !== "C")) return null;
+    const reverse = chain.slice().reverse();
+    const signature = fNumberedChainSignature(chain, types, bonds);
+    if (signature === null || signature !== fNumberedChainSignature(reverse, types, bonds)) return null;
+    const dx = m.atoms[chain[chain.length - 1] - 1].x - m.atoms[chain[0] - 1].x;
+    if (Math.abs(dx) < 1e-6) return null; // no unambiguous left/right endpoints
+    return { left: (dx > 0 ? chain : reverse).slice(), right: (dx > 0 ? reverse : chain).slice() };
+  } catch (e) { return null; }
+}
+
 // Locant emphasis (visual): when a locant/position component is clicked, its
 // number(s) stay blue while the rest dim to gray — 2D fill + 3D echo.
 // Only for main-chain numbering modes whose box digits ARE display indices
@@ -10668,6 +10712,13 @@ function fShowNumbering(time, overrideAtoms, overrideAtoms3D) {
   let numberOffset, currAtomTextElement, x, y, r, numberString;
   if (!numberingFlag) {
     return;
+  }
+  // Resolve on every repaint, including zoom/resize. Explicit component
+  // overrides retain priority. This lesson feature is restricted to 2D.
+  if (!Array.isArray(overrideAtoms) && !Array.isArray(overrideAtoms3D) &&
+      typeof fScenarioNumberingDirectionAtoms === "function") {
+    const directionAtoms = fScenarioNumberingDirectionAtoms();
+    if (directionAtoms) { overrideAtoms = directionAtoms; overrideAtoms3D = []; }
   }
   numberingAtomOverride = Array.isArray(overrideAtoms) ? overrideAtoms : null;
   numberingAtomOverride3D = Array.isArray(overrideAtoms3D) ? overrideAtoms3D : null;

@@ -375,6 +375,17 @@
    font-size: 1.25rem;
 }
 
+/* Keep rehearsal status above the count, preserving space for Next and Exit. */
+#scenarioPlayBarNextPrevContainer #scPos.scAuthorPreview {
+   line-height: 1;
+}
+
+#scPos .scAuthorPreviewLabel {
+   display: block;
+   font-size: .6em;
+   line-height: 1;
+}
+
 
 /* Disabled buttons (empty-panel gating) never hover: keep base chrome + text. */
 #scenarioAuthorBar button:disabled,
@@ -574,6 +585,39 @@
    width: 100%;
 }
 
+.scenarioDrawer .scTitleLogoRow {
+   flex: 1 0 100%;
+   min-width: 0;
+   display: flex;
+   align-items: center;
+   flex-wrap: wrap;
+   gap: 8px;
+}
+
+.scenarioDrawer .scTitleLogoLabel {
+   display: inline-flex;
+   align-items: center;
+   flex-wrap: wrap;
+   gap: 5px;
+   color: var(--darkBlue);
+}
+
+.scenarioDrawer .scTitleLogoSelect {
+   max-width: 100%;
+   font: inherit;
+   color: var(--darkBlue);
+}
+
+.scenarioDrawer .scTitleLogoSelect:focus-visible {
+   outline: 2px solid var(--darkBlue);
+   outline-offset: 2px;
+}
+
+.scenarioDrawer .scTitleLogoPreview {
+   --sc-title-logo-size: 36px;
+   font-size: .8rem;
+}
+
 .scenarioDrawer .snote {
    flex-basis: 100%;
    width: 100%;
@@ -710,6 +754,57 @@
    pointer-events: none
 }
 
+#nameAnalysisContainer .nameCompBox.scNameCompDisabled {
+   pointer-events: none;
+   cursor: default;
+}
+
+.scChainNavigation {
+   padding: 10px 12px;
+   border-bottom: 1px solid var(--lightBlue);
+}
+
+.scChainNavigation #chainStepperBox {
+   justify-content: center;
+   flex-wrap: wrap;
+}
+
+.scChainNavigation .stepBtn {
+   min-width: 44px;
+   min-height: 44px;
+}
+
+.scNumberingDirection {
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   justify-content: center;
+   gap: 8px;
+   padding: 12px;
+   border-bottom: 1px solid var(--lightBlue);
+}
+
+.scNumberingDirection button {
+   min-height: 44px;
+   padding: 8px 12px;
+   border: 1px solid var(--darkBlue);
+   border-radius: 10px;
+   background: white;
+   color: var(--darkBlue);
+   font: inherit;
+   cursor: pointer;
+}
+
+.scNumberingDirection button[aria-pressed="true"] {
+   background: var(--darkBlue);
+   color: white;
+}
+
+.scNumberingDirection button:focus-visible {
+   outline: 3px solid var(--darkBlue);
+   outline-offset: 3px;
+}
+
 #scenarioPlayBar {
    position: fixed;
    top: 0px;
@@ -798,6 +893,30 @@
 
 #scenarioToast.show {
    opacity: 1
+}
+
+.scCheckpointNotice {
+   display: none;
+}
+
+#pageContainer.presenting.scContentOnly .scCheckpointNotice:not([hidden]) {
+   display: block;
+   box-sizing: border-box;
+   max-width: min(680px, 100%);
+   margin: auto;
+   align-self: center;
+   padding: 18px 24px;
+   border: 2px solid #a9ccc2;
+   border-radius: 14px;
+   background: #eef6f1;
+   color: #254c50;
+   font-size: clamp(18px, 2vw, 22px);
+   font-weight: 600;
+   text-align: center;
+   overflow-wrap: anywhere;
+   scroll-margin-top: 64px;
+   scroll-margin-bottom: 16px;
+   pointer-events: none;
 }
 
 /* Destructive-action confirm dialog (see fScenarioConfirm). Dim backdrop over
@@ -1349,6 +1468,13 @@
    width: 100%;
 }
 
+/* With no molecular columns to measure, the note uses the host's full width.
+   Let flex size that host inside its margins instead of adding them to 100%. */
+#pageContainer.presenting.scContentOnly #authorLayout {
+   width: auto;
+   align-self: stretch;
+}
+
 #pageContainer.presenting #mainAppContainer {
    flex: 1 0 auto;
    display: flex;
@@ -1366,6 +1492,62 @@
    presentation uses #pageTitle for the step title, so keep it visible. */
 #pageContainer.presenting #pageTitle {
    display: block;
+}
+
+/* Only opted-in headings use artwork. The fallback text always supplies
+   the heading's accessible name; it stays visible on loading/error. */
+#pageContainer.presenting #pageTitle.scStepHeadingHasLogo {
+   --sc-title-logo-size: clamp(64px, 10vw, 88px);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 8px;
+   max-width: 100%;
+}
+
+#pageTitle.scStepHeadingHasLogo .scStepNumberTitle {
+   flex: 0 0 40px;
+   margin-right: 0;
+}
+
+#pageTitle.scStepHeadingHasLogo .scStepHeadingVisual,
+.scenarioDrawer .scTitleLogoPreview.scStepHeadingVisual {
+   position: relative;
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   min-width: 0;
+   min-height: var(--sc-title-logo-size);
+   max-width: 100%;
+   overflow-wrap: anywhere;
+}
+
+#pageTitle.scStepHeadingHasLogo .scStepHeadingImage,
+.scenarioDrawer .scTitleLogoPreview .scStepHeadingImage {
+   display: block;
+   width: var(--sc-title-logo-size);
+   height: var(--sc-title-logo-size);
+   max-width: 100%;
+   object-fit: contain;
+}
+
+#pageTitle .scStepHeadingImage[hidden],
+.scenarioDrawer .scTitleLogoPreview[hidden],
+.scenarioDrawer .scTitleLogoPreview .scStepHeadingImage[hidden] {
+   display: none;
+}
+
+#pageTitle .scStepHeadingVisual.is-loaded .scStepHeadingFallback,
+.scenarioDrawer .scTitleLogoPreview.is-loaded .scStepHeadingFallback {
+   position: absolute;
+   width: 1px;
+   height: 1px;
+   padding: 0;
+   margin: -1px;
+   overflow: hidden;
+   clip-path: inset(50%);
+   white-space: nowrap;
+   border: 0;
 }
 
 /* Presentation top text: span exactly the visible app columns. JS measures the

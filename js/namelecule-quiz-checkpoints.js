@@ -3,6 +3,7 @@
   "use strict";
   const types = Object.create(null);
   const records = new Map();
+  let preview = null; // Editor rehearsal only; never a stored learner receipt.
   const own = (object, key) => Object.prototype.hasOwnProperty.call(object, key);
   const clone = value => JSON.parse(JSON.stringify(value));
   const storagePrefix = "namelecule:lesson-checkpoints:v1:";
@@ -10,8 +11,10 @@
   let dialog = null;
   let mountHost = null;
   let retryButton = null;
+  let progressCounter = null;
   let mounted = null;
   let mountToken = 0;
+  let revealingResponse = false;
 
   function registerType(name, adapter) {
     if (!/^[a-z][a-z0-9-]{0,48}$/.test(name) || own(types, name) || !adapter ||
@@ -47,6 +50,11 @@
       throw new Error("Unknown or invalid required checkpoint");
     }
     const value = clone(spec);
+    if (own(value, "openLabel")) {
+      const label = typeof value.openLabel === "string" ? value.openLabel.trim() : "";
+      if (label && label.length <= 100) value.openLabel = label;
+      else delete value.openLabel;
+    }
     types[value.type].validate(value.round);
     return value;
   }
@@ -70,6 +78,7 @@
 
   function recordFor(scenario) {
     const content = signature(scenario);
+    if (isPreview(scenario)) return preview.record;
     if (records.has(content)) return records.get(content);
     const key = storagePrefix + hash(content);
     let states = Object.create(null);
@@ -96,6 +105,7 @@
   }
 
   function persist(record) {
+    if (record.temporary) return;
     try {
       global.sessionStorage.setItem(record.key, JSON.stringify({ version: 1, content: record.content, states: record.states }));
       record.storageAvailable = true;
@@ -171,12 +181,12 @@
   }
 
   const words = {
-    gr: { label: "Μικρή στάση για επισκευή", instruction: "Επισκεύασε το όνομα για να συνεχίσεις τη θεωρία.",
+    gr: { label: "Μικρή στάση για επισκευή", counter: "Κουίζ", instruction: "Επισκεύασε το όνομα για να συνεχίσεις τη θεωρία.",
       open: "Στο Συνεργείο ονομάτων", done: "Η επισκευή ολοκληρώθηκε. Μπορείς να συνεχίσεις.", revisit: "Δες ξανά την επισκευή",
       back: "Επιστροφή στη θεωρία", retry: "Φόρτωσε ξανά την αποστολή", error: "Η αποστολή δεν φορτώθηκε. Δοκίμασε ξανά ή επέστρεψε στη θεωρία.",
       storage: "Η πρόοδος κρατιέται μόνο όσο μένει ανοιχτή αυτή η σελίδα· η αποθήκευση της καρτέλας δεν είναι διαθέσιμη.",
       reset: "Νέα προσπάθεια", resetLabel: "Ξεκίνα την επισκευή από την αρχή" },
-    en: { label: "A short repair stop", instruction: "Repair the name to continue the lesson.",
+    en: { label: "A short repair stop", counter: "Quiz", instruction: "Repair the name to continue the lesson.",
       open: "Open the name workshop", done: "Repair completed. You can continue.", revisit: "Review the repair",
       back: "Return to the lesson", retry: "Reload the mission", error: "The mission could not load. Retry or return to the lesson.",
       storage: "Progress is kept only while this page remains open; tab storage is unavailable.",
@@ -200,8 +210,51 @@
     return element;
   }
 
+  function validProgress(value) {
+    return !!(value && Number.isSafeInteger(value.current) && Number.isSafeInteger(value.total) &&
+      value.current >= 1 && value.current <= value.total);
+  }
+  function showProgress(value) {
+    if (!progressCounter) return;
+    const valid = validProgress(value);
+    progressCounter.hidden = !valid;
+    progressCounter.textContent = valid ? text("counter") + " " + value.current + "/" + value.total : "";
+  }
+  function stopResponseScroll() {
+    if (!revealingResponse || !dialog) return;
+    revealingResponse = false;
+    if (typeof dialog.scrollTo === "function") dialog.scrollTo({ top: dialog.scrollTop, behavior: "instant" });
+  }
+  function revealResponse(request) {
+    if (!dialog || !dialog.open || !mountHost || !request) return;
+    const start = request.start, end = request.end || start;
+    if (!start || !end || !start.isConnected || !end.isConnected ||
+      !mountHost.contains(start) || !mountHost.contains(end) ||
+      typeof start.getBoundingClientRect !== "function" || typeof end.getBoundingClientRect !== "function") return;
+    stopResponseScroll();
+    const first = start.getBoundingClientRect(), last = end.getBoundingClientRect();
+    if (first.height <= 0 || last.height <= 0) return;
+    const box = dialog.getBoundingClientRect();
+    const header = dialog.querySelector(".nl-quiz-dialog-header");
+    const top = Math.max(box.top + dialog.clientTop, header ? header.getBoundingClientRect().bottom : box.top) + 12;
+    const bottom = box.top + dialog.clientTop + dialog.clientHeight - 12;
+    const rangeTop = Math.min(first.top, last.top), rangeBottom = Math.max(first.bottom, last.bottom);
+    if (![top, bottom, rangeTop, rangeBottom].every(Number.isFinite) || bottom <= top) return;
+    if (rangeTop >= top && rangeBottom <= bottom) return;
+    // Keep a long explanation's beginning visible instead of jumping past it to Continue.
+    const delta = rangeBottom - rangeTop > bottom - top || rangeTop < top ? rangeTop - top : rangeBottom - bottom;
+    const destination = Math.max(0, Math.min(dialog.scrollHeight - dialog.clientHeight, dialog.scrollTop + delta));
+    if (Math.abs(destination - dialog.scrollTop) < 1) return;
+    const reducedMotion = typeof global.matchMedia === "function" && global.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (typeof dialog.scrollTo === "function") {
+      revealingResponse = !reducedMotion;
+      dialog.scrollTo({ top: destination, behavior: reducedMotion ? "instant" : "smooth" });
+    } else dialog.scrollTop = destination;
+  }
   function destroyMount() {
+    stopResponseScroll();
     mountToken++;
+    showProgress(null);
     const previous = mounted;
     mounted = null;
     if (previous && typeof previous.destroy === "function") previous.destroy();
@@ -222,7 +275,15 @@
     title.id = "nlQuizDialogTitle";
     const back = button("", "nl-quiz-button nl-quiz-back", closeDialog);
     back.id = "nlQuizBack";
-    header.append(title, back);
+    const actions = node("div", "nl-quiz-dialog-actions");
+    progressCounter = node("span", "nl-quiz-round-progress");
+    progressCounter.id = "nlQuizProgress";
+    progressCounter.hidden = true;
+    progressCounter.setAttribute("role", "status");
+    progressCounter.setAttribute("aria-live", "polite");
+    progressCounter.setAttribute("aria-atomic", "true");
+    actions.append(progressCounter, back);
+    header.append(title, actions);
     mountHost = node("div", "nl-quiz-host");
     mountHost.id = "nlQuizHost";
     retryButton = button("", "nl-quiz-button nl-quiz-retry", () => { if (active) mountQuestion(active); });
@@ -234,7 +295,10 @@
     dialog.append(header, mountHost, retryButton);
     dialog.addEventListener("cancel", event => { event.preventDefault(); closeDialog(); });
     // Let the round handle its own keys first, then stop lesson arrows/Escape.
-    dialog.addEventListener("keydown", event => { event.stopPropagation(); });
+    dialog.addEventListener("keydown", event => { stopResponseScroll(); event.stopPropagation(); });
+    dialog.addEventListener("wheel", stopResponseScroll, { passive: true });
+    dialog.addEventListener("touchstart", stopResponseScroll, { passive: true });
+    dialog.addEventListener("pointerdown", stopResponseScroll, { passive: true });
     dialog.addEventListener("close", destroyMount);
     global.document.body.append(dialog);
   }
@@ -252,7 +316,7 @@
     if (active !== context) return;
     const done = isComplete(context.scenario, context.index);
     context.status.textContent = text(done ? "done" : "instruction");
-    context.openButton.textContent = text(done ? "revisit" : "open");
+    context.openButton.textContent = done ? text("revisit") : (context.spec.openLabel || text("open"));
     context.section.classList.toggle("nl-quiz-complete", done);
     context.storageNote.textContent = context.record.storageAvailable ? "" : text("storage");
     context.storageNote.hidden = context.record.storageAvailable;
@@ -265,12 +329,28 @@
     if (!currentContext(context)) return;
     destroyMount();
     const token = mountToken;
+    let visibleRound = null;
     retryButton.hidden = true;
     try {
       const spec = validateCheckpoint(context.spec);
       mounted = types[spec.type].mount(mountHost, {
         round: clone(spec.round), assetBase: "games/",
         initialState: context.record.states[context.index] ? clone(context.record.states[context.index]) : null,
+        onProgress(value) {
+          if (token !== mountToken || !currentContext(context)) return;
+          showProgress(value);
+          const nextRound = validProgress(value) ? value.current + "/" + value.total : null;
+          // A new question starts above the fold; same-round updates keep the learner's scroll.
+          if (nextRound !== visibleRound) {
+            stopResponseScroll();
+            if (nextRound && dialog && dialog.open) dialog.scrollTop = 0;
+          }
+          visibleRound = nextRound;
+        },
+        onReveal(request) {
+          if (token !== mountToken || !currentContext(context)) return;
+          revealResponse(request);
+        },
         onStateChange(state) {
           if (token !== mountToken || !currentContext(context)) return;
           const wasComplete = isComplete(context.scenario, context.index);
@@ -295,6 +375,7 @@
         }
       });
     } catch (_) {
+      showProgress(null);
       mountHost.replaceChildren(node("p", "nl-quiz-error", text("error")));
       retryButton.hidden = false;
     }
@@ -317,6 +398,20 @@
     closeDialog();
     if (active && active.section) active.section.remove();
     active = null;
+  }
+  function isPreview(scenario) {
+    return !!(preview && preview.scenario === scenario && preview.record.content === signature(scenario));
+  }
+  function endPreview() {
+    if (!preview) return;
+    preview = null;
+    onExit();
+  }
+  function beginPreview(scenario) {
+    endPreview();
+    onExit();
+    preview = { scenario, record: { key: null, content: signature(scenario),
+      states: Object.create(null), storageAvailable: true, temporary: true } };
   }
   function onStep(scenario, index) {
     const step = scenario && scenario.steps && scenario.steps[index];
@@ -359,5 +454,6 @@
   }
 
   global.NameleculeQuizCheckpoints = { registerType, validateCheckpoint, hasCheckpoints,
-    resolveTarget, prepareTarget, isComplete, onStep, onExit, reset };
+    resolveTarget, prepareTarget, isComplete, onStep, onExit, reset,
+    beginPreview, endPreview, isPreview };
 })(typeof window !== "undefined" ? window : globalThis);

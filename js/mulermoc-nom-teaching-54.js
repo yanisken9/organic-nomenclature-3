@@ -1160,6 +1160,8 @@ $(document).ready(function () {
   $(document).on("click", ".nameCompBox", function (event) {
     event.preventDefault();
     event.stopPropagation();
+    if (typeof window.fScenarioNameCompDisabled === "function" &&
+        window.fScenarioNameCompDisabled(this.id)) return;
     // Draft session (v54 Stage 2): naming is cleared to a placeholder; box
     // clicks must not re-highlight or explain.
     if (typeof window !== "undefined" && window.MulerDraft) {
@@ -1269,6 +1271,9 @@ $(document).ready(function () {
       }
     }
     if (typeof fScheduleNameFit === "function") fScheduleNameFit();
+    try {
+      if (typeof window.fScenarioOnPresentBrowse === "function") window.fScenarioOnPresentBrowse();
+    } catch (eScenario) { /* scenario absent */ }
   });
 
 

@@ -61,7 +61,18 @@
   background: #e1efea;
   border-bottom: 1px solid #c7dcd2;
 }
-.nl-quiz-dialog .nl-quiz-dialog-title { margin: 0; font: 700 1.05rem/1.4 system-ui, sans-serif; }
+.nl-quiz-dialog .nl-quiz-dialog-title { flex: 1; min-width: 0; margin: 0; font: 700 1.05rem/1.4 system-ui, sans-serif; }
+.nl-quiz-dialog-actions { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; max-width: 55%; }
+.nl-quiz-dialog .nl-quiz-dialog-actions .nl-quiz-back { max-width: 100%; }
+.nl-quiz-round-progress {
+  box-sizing: border-box;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #254c50;
+  color: #fff;
+  font: 700 1.05rem/1.3 "Roboto Condensed", system-ui, sans-serif;
+  white-space: nowrap;
+}
 .nl-quiz-dialog .nl-quiz-host { padding: 22px; }
 .nl-quiz-dialog .nl-quiz-retry { margin: 0 22px 20px; }
 .nl-quiz-dialog .nl-quiz-error { margin: 0; padding: 22px; }

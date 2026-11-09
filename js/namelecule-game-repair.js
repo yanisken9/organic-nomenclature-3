@@ -234,6 +234,11 @@
     function emitState() {
       if (!destroyed && typeof options.onStateChange === "function") options.onStateChange(getState());
     }
+    function revealResponse(reason, start, end) {
+      if (!standalone && !destroyed && typeof options.onReveal === "function") {
+        options.onReveal({ reason: reason, start: start, end: end || start });
+      }
+    }
     function listen(element, event, handler) {
       const guarded = function (e) { if (!destroyed) handler(e); };
       element.addEventListener(event, guarded);
@@ -307,7 +312,6 @@
       refs.candidate = node("div", { class: "candidate", "aria-live": "polite", "aria-atomic": "true" }, [node("span", { class: "candidate-label", text: "Η πρότασή σου για έλεγχο" }), refs.candidateName]);
       refs.checkButton = button("Έλεγχος", "primary", submitRepair);
       refs.checkButton.id = controlId("check-button");
-      refs.retryButton = button("Από την αρχή", "quiet", retryRound, { "aria-label": "Επαναφορά επιλογών αυτής της αποστολής" });
       refs.checkHelper = node("p", { class: "check-helper", id: controlId("check-helper") });
       refs.checkButton.setAttribute("aria-describedby", controlId("check-helper"));
       refs.feedback = node("div", { class: "feedback", role: "status", "aria-live": "polite", "aria-atomic": "true" });
@@ -318,7 +322,7 @@
         node("h2", { class: "step-heading", text: data.kind === "order" ? "1. Βάλε τους κλάδους στη σειρά" : "1. Ποιο κομμάτι θα αλλάξεις;" }),
         node("p", { class: "step-description", text: data.kind === "order" ? "Διάλεξε έναν κλάδο και μετακίνησέ τον με τα βέλη. Η κύρια αλυσίδα μένει στο τέλος." : "Πάτησε το κομμάτι που δεν ταιριάζει με τη δομή." }),
         refs.parts, refs.selectionStatus, refs.orderControls, refs.choiceFieldset, refs.candidate,
-        node("div", { class: "repair-actions" }, [refs.checkButton, refs.retryButton]),
+        node("div", { class: "repair-actions" }, [refs.checkButton]),
         refs.checkHelper, refs.feedback
       ]);
       refs.sessionStats = node("span");
@@ -417,6 +421,7 @@
             clearFeedback();
             updateControls(controlId("choice-" + index));
             emitState();
+            revealResponse("candidate", refs.candidate, refs.checkHelper);
           }, { id: controlId("choice-" + index), "aria-pressed": String(current.selectedValue === choice.value) });
           choiceButton.disabled = !enabled;
           refs.choices.append(choiceButton);
@@ -436,6 +441,7 @@
             updateControls(controlId("part-" + current.selectedPartId));
             refs.selectionStatus.textContent = "Ο κλάδος μετακινήθηκε. Δες την πρότασή σου και πάτησε Έλεγχος.";
             emitState();
+            revealResponse("order-candidate", refs.orderControls, refs.checkHelper);
           }, { id: id, "aria-label": direction < 0 ? "Μετακίνησε τον επιλεγμένο κλάδο αριστερά" : "Μετακίνησε τον επιλεγμένο κλάδο δεξιά" });
           moveButton.disabled = !enabled || selectedIndex < 0 || selectedIndex + direction < 0 || selectedIndex + direction >= current.order.length;
           refs.orderControls.append(moveButton);
@@ -446,7 +452,6 @@
       const hasCandidate = data.kind === "order" || (hasTarget && current.selectedValue !== null);
       refs.checkButton.disabled = !enabled || !hasCandidate;
       refs.zoomButton.disabled = mainImageStatus !== "ready" || !!zoomPanel;
-      refs.retryButton.disabled = !enabled;
       const continueButton = refs.next.querySelector("button");
       if (continueButton) continueButton.disabled = !diagramsReady() || !current.solved;
       refs.checkHelper.textContent = current.solved ? "Η επισκευή ολοκληρώθηκε. Συνέχισε όταν είσαι έτοιμος ή έτοιμη." : !diagramsReady() ? "Περιμένουμε να εμφανιστούν οι δομές πριν από τον έλεγχο." : data.kind === "order" ? "Επιλέγεις κλάδο, πατάς ένα βέλος και ελέγχεις τη νέα σειρά." : hasCandidate ? "Ο έλεγχος μετρά ως μία προσπάθεια. Μπορείς να δοκιμάσεις ξανά." : "Διάλεξε πρώτα το κομμάτι και έπειτα μια αντικατάσταση.";
@@ -473,6 +478,9 @@
       }
       updateControls(controlId("part-" + id));
       emitState();
+      if (round().kind === "order") revealResponse("order-controls", refs.selectionStatus, refs.orderControls);
+      else if (id === round().targetPartId) revealResponse("replacement-options", refs.choiceFieldset);
+      else revealResponse("selection-feedback", refs.selectionStatus);
     }
 
     function clearFeedback() {
@@ -512,22 +520,13 @@
         if (destroyed) return;
         showSuccess(result, true);
         if (!destroyed && typeof options.onSolved === "function") options.onSolved(Object.assign({}, result), getState());
+        revealResponse("success", refs.feedback, refs.next);
       } else {
         replaceChildren(refs.feedback, node("p", { text: result.message }));
         updateControls(controlId("check-button"));
         emitState();
+        revealResponse("check-feedback", refs.feedback);
       }
-    }
-
-    function retryRound() {
-      if (!diagramsReady() || state().solved) return;
-      currentState = createRoundState(round(), state());
-      refs.selectionStatus.textContent = "Οι επιλογές επανήλθαν. Οι προσπάθειές σου παραμένουν.";
-      clearFeedback();
-      updateControls();
-      const first = refs.parts.querySelector("button");
-      if (first && !first.disabled) first.focus({ preventScroll: true });
-      emitState();
     }
 
     function showDiagramZoom() {

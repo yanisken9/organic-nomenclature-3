@@ -79,6 +79,14 @@ function fScenarioCheckpointApi(scen) {
   })) throw new Error("Το υποχρεωτικό κουίζ δεν είναι διαθέσιμο. Ανανέωσε το μάθημα.");
   return api;
 }
+function fScenarioIsAuthorPreview(scen) {
+  var api = window.NameleculeQuizCheckpoints;
+  return !!(api && typeof api.isPreview === "function" && api.isPreview(scen));
+}
+function fScenarioEndAuthorPreview() {
+  var api = window.NameleculeQuizCheckpoints;
+  if (api && typeof api.endPreview === "function") api.endPreview();
+}
 function fScenarioResolveCheckpointTarget(scen, requested) {
   var api = fScenarioCheckpointApi(scen);
   if (!api) return requested;
@@ -86,6 +94,7 @@ function fScenarioResolveCheckpointTarget(scen, requested) {
   scen.steps.forEach(function (step) {
     if (step && Object.prototype.hasOwnProperty.call(step, "checkpoint")) api.validateCheckpoint(step.checkpoint);
   });
+  if (fScenarioIsAuthorPreview(scen)) return requested;
   var target = api.resolveTarget(scen, requested);
   if (typeof target !== "number" || !isFinite(target) || target !== Math.floor(target) || target < 0 || target > requested) {
     throw new Error("Δεν ήταν δυνατός ο έλεγχος του υποχρεωτικού κουίζ.");
@@ -113,6 +122,7 @@ function fScenarioCheckpointContent(scen) {
 function fScenarioPrepareCheckpointTarget(scen, requested, resume) {
   fScenarioCancelCheckpointPreparation();
   var api = fScenarioCheckpointApi(scen);
+  if (fScenarioIsAuthorPreview(scen)) return false;
   if (!api || typeof api.prepareTarget !== "function") return false;
   var controller = new AbortController();
   var work = api.prepareTarget(scen, requested, { signal: controller.signal });
@@ -293,6 +303,7 @@ function fScenarioShowAlkoxyRule() {
 
 function fScenarioNew(title, silent) {
   fScenarioCancelCheckpointPreparation();
+  fScenarioEndAuthorPreview();
   var scen = {
     id: fScenarioNewId(),
     title: title || ("scenario-" + (MuLERMoCScenario.seq)),
@@ -315,6 +326,7 @@ function fScenarioNew(title, silent) {
 }
 function fScenarioDelete(id) {
   fScenarioCancelCheckpointPreparation();
+  fScenarioEndAuthorPreview();
   var i;
   for (i = 0; i < MuLERMoCScenario.scenarios.length; i++) {
     if (MuLERMoCScenario.scenarios[i].id === id) break;
@@ -335,6 +347,7 @@ function fScenarioSetActive(id) {
   fScenarioCancelCheckpointPreparation();
   var s = fScenarioGet(id);
   if (!s) return;
+  if (!fScenarioIsAuthorPreview(s)) fScenarioEndAuthorPreview();
   MuLERMoCScenario.activeId = id;
   fScenarioSyncLegacy();
   fScenarioPaintPickUi();
@@ -426,7 +439,62 @@ function fScenarioG(name, fallback) {
   }
 }
 
+var _scCheckpointNoticeTimer = null;
+function fScenarioClearCheckpointNotice() {
+  if (_scCheckpointNoticeTimer !== null) clearTimeout(_scCheckpointNoticeTimer);
+  _scCheckpointNoticeTimer = null;
+  var notice = document.getElementById("scCheckpointNotice");
+  if (notice) {
+    notice.hidden = true;
+    notice.textContent = "";
+  }
+}
+
+// A blocked content-only checkpoint has space for feedback in the lesson.
+// Molecular steps retain the existing global toast and its placement.
+function fScenarioCheckpointNotice(msg) {
+  var pc = document.getElementById("pageContainer");
+  var row = document.querySelector("#mainAppContainer > .mainApp3Columns");
+  var lesson = fScenarioPresent();
+  var step = lesson && lesson.steps[lesson.index];
+  if (!MuLERMoCScenario.present || !pc || !pc.classList.contains("scContentOnly") ||
+      !row || !step || !Object.prototype.hasOwnProperty.call(step, "checkpoint")) {
+    fScenarioToast(msg);
+    return;
+  }
+  fScenarioClearCheckpointNotice();
+  var toast = document.getElementById("scenarioToast");
+  if (toast) toast.classList.remove("show");
+  if (window.__scToastTimer) clearTimeout(window.__scToastTimer);
+  window.__scToastTimer = null;
+  var notice = document.getElementById("scCheckpointNotice");
+  if (!notice) {
+    notice = document.createElement("div");
+    notice.id = "scCheckpointNotice";
+    notice.className = "scCheckpointNotice";
+    notice.setAttribute("role", "status");
+    notice.setAttribute("aria-live", "polite");
+    notice.setAttribute("aria-atomic", "true");
+    row.appendChild(notice);
+  }
+  try { if (typeof fMulerTByGr === "function") msg = fMulerTByGr(msg); } catch (e) {}
+  notice.hidden = false;
+  notice.textContent = msg;
+  // Short viewports can put the free lesson space below the fold. Reveal
+  // the notice with the smallest scroll; keep focus and the Workshop flow.
+  try {
+    var bounds = notice.getBoundingClientRect();
+    var bar = document.getElementById("scenarioPlayBar");
+    var top = bar ? bar.getBoundingClientRect().bottom : 0;
+    if (bounds.top < top + 8 || bounds.bottom > window.innerHeight - 16) {
+      notice.scrollIntoView({ block: "nearest", inline: "nearest" });
+    }
+  } catch (eScroll) { /* the in-flow notice remains available */ }
+  _scCheckpointNoticeTimer = setTimeout(fScenarioClearCheckpointNotice, 2600);
+}
+
 function fScenarioToast(msg) {
+  fScenarioClearCheckpointNotice();
   var t = document.getElementById("scenarioToast");
   if (!t) return;
   try { if (typeof fMulerTByGr === "function") msg = fMulerTByGr(msg); } catch (e) {}
@@ -1227,6 +1295,181 @@ function fScenarioValidMenuGroups(g) {
   });
   return out.length ? out : ["molecules"];
 }
+// Opt-in heading artwork is a bounded local preset, never imported HTML/URLs.
+// Keep the field absent for plain-title steps so legacy JSON gains no default.
+var SCENARIO_TITLE_LOGOS = {
+  workshop: {
+    src: "games/assets/name-repair/workshop-logo-3d-v1.png",
+    title: "Συνεργείο ονομάτων"
+  }
+};
+function fScenarioValidTitleLogo(value) {
+  return typeof value === "string" && Object.prototype.hasOwnProperty.call(SCENARIO_TITLE_LOGOS, value)
+    ? value : null;
+}
+function fScenarioValidDisabledNameComps(value) {
+  if (!Array.isArray(value)) return [];
+  return value.filter(function (id, index) {
+    return typeof id === "string" &&
+      /^(?:comp(?:[0-9]|1[0-2])|comp9loc|comp3(?:b|loc)\d*|acidPrefix(?:Number|Sub)3)$/.test(id) &&
+      value.indexOf(id) === index;
+  });
+}
+
+function fScenarioNameCompDisabled(id, step) {
+  if (!MuLERMoCScenario.present) return false;
+  var lesson = fScenarioPresent();
+  step = step || (lesson && lesson.steps[lesson.index]);
+  var ids = step && step.styleName && step.styleName.disabled;
+  return Array.isArray(ids) && ids.indexOf(id) !== -1;
+}
+
+function fScenarioApplyNameRestrictions(step) {
+  var boxes = document.querySelectorAll("#nameAnalysisContainer .nameCompBox");
+  for (var i = 0; i < boxes.length; i++) {
+    var box = boxes[i];
+    var wasDisabled = box.classList.contains("scNameCompDisabled");
+    var disabled = fScenarioNameCompDisabled(box.id, step);
+    box.classList.toggle("scNameCompDisabled", disabled);
+    if (disabled) {
+      box.setAttribute("aria-disabled", "true");
+      box.classList.remove("selected");
+    } else if (wasDisabled) {
+      box.removeAttribute("aria-disabled");
+    }
+  }
+}
+
+// Reuse the existing chain controls, moving their one DOM instance outside
+// the closed settings panel only for steps that explicitly request them.
+function fScenarioApplyChainNavigation(show) {
+  var box = document.getElementById("chainStepperBox");
+  var host = document.getElementById("scChainNavigation");
+  var panel = document.getElementById("nameSettingsPanel");
+  var active = MuLERMoCScenario.present && show &&
+    show.chainNavigation === true && show.naming !== false;
+  if (!active || !box || !panel || !panel.parentNode) {
+    if (host) {
+      if (box && box.parentNode === host) {
+        var home = box.__scChainNavigationHome;
+        if (home && home.isConnected) home.appendChild(box);
+        else if (panel) panel.appendChild(box);
+      }
+      host.remove();
+    }
+    return;
+  }
+  if (!host) {
+    host = document.createElement("div");
+    host.id = "scChainNavigation";
+    host.className = "scChainNavigation";
+    panel.parentNode.insertBefore(host, panel);
+  }
+  if (box.parentNode !== host) {
+    box.__scChainNavigationHome = box.parentNode;
+    host.appendChild(box);
+  }
+  host.setAttribute("role", "group");
+  var label = box.querySelector(".settingLabel");
+  if (label) host.setAttribute("aria-label", label.textContent);
+  ["chainPrevBtn", "chainNextBtn"].forEach(function (id) {
+    var button = document.getElementById(id);
+    if (button && button.getAttribute("data-tooltip")) {
+      button.setAttribute("aria-label", button.getAttribute("data-tooltip"));
+    }
+  });
+  if (typeof fRenderChainStepper === "function") fRenderChainStepper();
+}
+
+// Transient display state: never added to a step, exported JSON or quiz receipt.
+function fScenarioNumberingDirectionContext() {
+  var scenario = fScenarioPresent();
+  var step = scenario && scenario.steps && scenario.steps[scenario.index];
+  var show = step && step.show;
+  if (!MuLERMoCScenario.present || !show || show.numberingDirection !== true ||
+      show.naming === false || show.nameClick === false ||
+      !show.viewers || show.viewers["2D"] === false || show.viewers["3D"] !== false ||
+      step.selectedMol !== selectedMol || fScenarioNameCompDisabled("comp5", step) ||
+      (step.styleName && Array.isArray(step.styleName.hidden) && step.styleName.hidden.indexOf("comp5") !== -1)) {
+    MuLERMoCScenario.numberingDirection = null;
+    return null;
+  }
+  var choices = null;
+  try {
+    choices = fEquivalentParentNumberingDirections(jsmeNomeclatureApplet.molFile(),
+      mainChainAtomsList, allAtomsTypeList, bondList);
+  } catch (e) { /* not yet ready or unsupported: retain ordinary numbering */ }
+  if (!choices) { MuLERMoCScenario.numberingDirection = null; return null; }
+  var key = selectedMol + ":" + mainChainAtomsList.join(",");
+  var state = MuLERMoCScenario.numberingDirection;
+  // Update replaces the step object without entering another presentation
+  // step. Identify this live entry by scenario/index/token, then refresh the
+  // data reference without silently changing the learner's chosen direction.
+  if (!state || state.scenario !== scenario || state.index !== scenario.index ||
+      state.token !== MuLERMoCScenario.applyToken || state.key !== key) {
+    state = { scenario: scenario, index: scenario.index, token: MuLERMoCScenario.applyToken,
+      step: step, key: key, direction: "left" };
+    MuLERMoCScenario.numberingDirection = state;
+  } else state.step = step;
+  return { state: state, choices: choices };
+}
+
+function fScenarioNumberingDirectionAtoms() {
+  var context = fScenarioNumberingDirectionContext();
+  return context ? context.choices[context.state.direction].slice() : null;
+}
+
+function fScenarioChooseNumberingDirection(direction) {
+  if (direction !== "left" && direction !== "right") return;
+  var context = fScenarioNumberingDirectionContext();
+  if (!context) return;
+  context.state.direction = direction;
+  // A deliberate learner action supersedes the delayed initial highlight.
+  var pending = MuLERMoCScenario.pending3D;
+  if (pending && pending.token === MuLERMoCScenario.applyToken) pending.done = true;
+  $(".nameCompBox").removeClass("selected");
+  nameAnalysisMode = "none";
+  fScenarioClickNameBox(Object.assign({}, context.state.step, { nameAnalysisMode: "compCarbonsCount" }));
+  currNumberEl = 0;
+  fShowNumbering(0);
+  fScenarioApplyNumberingDirection();
+}
+
+function fScenarioApplyNumberingDirection() {
+  var host = document.getElementById("scNumberingDirection");
+  var context = fScenarioNumberingDirectionContext();
+  var panel = document.getElementById("nameSettingsPanel");
+  if (!context || !panel || !panel.parentNode) {
+    if (host) host.remove();
+    return;
+  }
+  var en = context.state.step.lang === "en";
+  if (!host) {
+    host = document.createElement("div");
+    host.id = "scNumberingDirection";
+    host.className = "scNumberingDirection";
+    host.setAttribute("role", "group");
+    var label = document.createElement("span");
+    label.id = "scNumberingDirectionLabel";
+    host.appendChild(label);
+    host.setAttribute("aria-labelledby", label.id);
+    ["left", "right"].forEach(function (direction) {
+      var button = document.createElement("button");
+      button.type = "button";
+      button.id = "scNumbering" + (direction === "left" ? "Left" : "Right");
+      button.addEventListener("click", function () { fScenarioChooseNumberingDirection(direction); });
+      host.appendChild(button);
+    });
+    panel.parentNode.insertBefore(host, panel);
+  }
+  document.getElementById("scNumberingDirectionLabel").textContent = en ? "Numbering" : "Αρίθμηση";
+  ["left", "right"].forEach(function (direction) {
+    var button = document.getElementById("scNumbering" + (direction === "left" ? "Left" : "Right"));
+    button.textContent = direction === "left" ? (en ? "From the left" : "Από αριστερά") : (en ? "From the right" : "Από δεξιά");
+    button.setAttribute("aria-pressed", context.state.direction === direction ? "true" : "false");
+  });
+}
+
 function fScenarioDefaults(step, i) {
   var d = {
     n: i + 1,
@@ -1260,6 +1503,9 @@ function fScenarioDefaults(step, i) {
     },
   };
   var out = Object.assign({}, d, step);
+  var titleLogo = fScenarioValidTitleLogo(step.titleLogo);
+  if (titleLogo) out.titleLogo = titleLogo;
+  else delete out.titleLogo;
   if (Object.prototype.hasOwnProperty.call(step, "checkpoint")) {
     out.checkpoint = fScenarioCheckpointApi({ steps: [step] }).validateCheckpoint(step.checkpoint);
   }
@@ -1271,6 +1517,12 @@ function fScenarioDefaults(step, i) {
   out.show.save = Object.assign({}, d.show.save, (step.show || {}).save || {});
   if (Object.prototype.hasOwnProperty.call(out.show, "alkoxyRule")) {
     out.show.alkoxyRule = out.show.alkoxyRule === true;
+  }
+  if (Object.prototype.hasOwnProperty.call(out.show, "chainNavigation")) {
+    out.show.chainNavigation = out.show.chainNavigation === true;
+  }
+  if (Object.prototype.hasOwnProperty.call(out.show, "numberingDirection")) {
+    out.show.numberingDirection = out.show.numberingDirection === true;
   }
   // Single-viewer max height: normalize silently (null = Auto); the validate
   // path warns on non-empty invalid input.
@@ -1289,6 +1541,9 @@ function fScenarioDefaults(step, i) {
   // arrays copy by value, not by reference (steps stay independent)
   out.menuSubset = Array.isArray(step.menuSubset) ? step.menuSubset.slice() : [];
   out.styleName.hidden = Array.isArray(step.styleName && step.styleName.hidden) ? step.styleName.hidden.slice() : [];
+  if (Object.prototype.hasOwnProperty.call(out.styleName, "disabled")) {
+    out.styleName.disabled = fScenarioValidDisabledNameComps(out.styleName.disabled);
+  }
   out.menuGroups = fScenarioValidMenuGroups(step.menuGroups);
   // Whole-text size/width/columns: normalize silently (font 12–28, width
   // 320–1200, columns 1|2 → 2 else null). The validate path warns on
@@ -1344,6 +1599,9 @@ function fScenarioValidate(obj) {
       return;
     }
     var st = fScenarioDefaults(s, steps.length);
+    if (Object.prototype.hasOwnProperty.call(s, "titleLogo") && !fScenarioValidTitleLogo(s.titleLogo)) {
+      warnings.push("Step " + (i + 1) + ": invalid title logo discarded (text title used).");
+    }
     if (typeof s.nameBoxLayout !== "undefined" && s.nameBoxLayout !== 1 && s.nameBoxLayout !== 2) {
       warnings.push("Step " + (i + 1) + ": invalid name-box layout discarded (legacy layout used).");
     }
@@ -2076,6 +2334,7 @@ function fScenarioClickNameBox(step, token) {
   var compId = fScenarioCompIdFor(step.nameAnalysisMode);
   var box = compId && document.getElementById(compId);
   if (!box) return;
+  if (fScenarioNameCompDisabled(compId, step)) return;
   // Hidden (dash) boxes stay inert: skip the stored highlight replay.
   try {
     if (box.classList && box.classList.contains("comp-hidden")) return;
@@ -2094,6 +2353,8 @@ function fScenarioClickNameBox(step, token) {
 
 function fScenarioApply(step) {
   if (!MuLERMoCScenario.ready || !step) return false;
+  MuLERMoCScenario.numberingDirection = null;
+  fScenarioClearCheckpointNotice();
   // Set before any load or naming repaint, in presentation and Go preview.
   MuLERMoCScenario.nameBoxLayoutContext = fScenarioValidNameBoxLayout(step.nameBoxLayout, step);
   // Step language: the step shows naming + UI in its creation language.
@@ -2358,6 +2619,8 @@ function fScenarioSyncPresentClass() {
     var pc = document.getElementById("pageContainer");
     if (pc) {
       pc.classList.toggle("presenting", !!MuLERMoCScenario.present);
+      pc.classList.toggle("scContentOnly",
+        !!MuLERMoCScenario.present && !fScenarioVisibleStepTextSpan());
       var reserve = MuLERMoCScenario.present && fScenarioPresent().reserveTitleSpace === true;
       pc.classList.toggle("scReserveTitleSpace", !!reserve);
       var bar = document.getElementById("scenarioPlayBar");
@@ -2388,6 +2651,7 @@ function fScenarioRestoreChrome(viewers) {
   var ids = [
     "save2DBtn", "save3DBtn",
     "jsmeNomeclatureDIV",
+    "viewerCol", "analysisCol",
     "menuCol", "viewerVisBtns", "viewerSettingsBtnDiv", "viewerSettingsPanel",
     "nameAnalysisContainer", "nameSettingsPanel",
   ];
@@ -2450,8 +2714,8 @@ function fScenarioRestoreChrome(viewers) {
 
 function showTextOn(step) {
   // Automatic: heading + text show iff the step carries content
-  // (title or note). The legacy show.text flag is ignored.
-  return !!(step && (step.title || step.note));
+  // (title, opt-in heading logo or note). The legacy show.text flag is ignored.
+  return !!(step && (step.title || fScenarioValidTitleLogo(step.titleLogo) || step.note));
 }
 
 function showNoteOn(step) {
@@ -4132,19 +4396,73 @@ function fScenarioDuplicateStep(scenId, idx) {
   fScenarioToast("Duplicated step " + src.n + " as step " + (idx + 2) + ".");
 }
 
+// The text remains the heading's accessible name, even after a successful
+// image load. While loading or on error it is also the visible fallback.
+// Every callback owns only these nodes; detached/previous-step callbacks do
+// nothing and cannot hide a later step title or the restored app title.
+function fScenarioRenderTitleLogo(host, presetKey, title, onLayout) {
+  var key = fScenarioValidTitleLogo(presetKey);
+  if (!host || !key) return;
+  var preset = SCENARIO_TITLE_LOGOS[key];
+  host.textContent = "";
+  host.classList.add("scStepHeadingVisual");
+  host.classList.remove("is-loaded");
+  var img = document.createElement("img");
+  img.className = "scStepHeadingImage";
+  img.alt = "";
+  img.setAttribute("aria-hidden", "true");
+  img.width = 88;
+  img.height = 88;
+  img.hidden = true;
+  var fallback = document.createElement("span");
+  fallback.className = "scStepHeadingFallback";
+  fallback.textContent = title || preset.title;
+  function current() {
+    return img.parentNode === host && document.documentElement.contains(host);
+  }
+  img.onload = function () {
+    if (!current()) return;
+    img.hidden = false;
+    host.classList.add("is-loaded");
+    if (onLayout) onLayout();
+  };
+  img.onerror = function () {
+    if (!current()) return;
+    img.hidden = true;
+    host.classList.remove("is-loaded");
+    if (onLayout) onLayout();
+  };
+  host.appendChild(img);
+  host.appendChild(fallback);
+  img.src = preset.src;
+}
+
 function fScenarioFillStepPanel(step) {
   var h1 = document.getElementById("pageTitle");
   var p = document.getElementById("scStepText");
   if (!h1 || !p) return;
   var appTitle = MuLERMoCScenario.appTitle || h1.textContent || "";
+  h1.classList.remove("scStepHeadingHasLogo");
   if (MuLERMoCScenario.present && step && step.n && showTextOn(step)) {
-    if (step.title) {
+    var logo = fScenarioValidTitleLogo(step.titleLogo);
+    if (step.title || logo) {
       h1.textContent = "";
       if (fScenarioPresent().showStepNumbers !== false) {
         var numSpan = document.createElement("span");
         numSpan.className = "scStepNumberTitle";
         numSpan.textContent = step.n + ".";
         h1.appendChild(numSpan);
+      }
+      if (logo) {
+        h1.classList.add("scStepHeadingHasLogo");
+        var visual = document.createElement("span");
+        h1.appendChild(visual);
+        fScenarioRenderTitleLogo(visual, logo, step.title, function () {
+          if (!MuLERMoCScenario.present || visual.parentNode !== h1) return;
+          try { if (typeof fResizeViewers === "function") fResizeViewers(); } catch (eLogoSize) { /* resize best-effort */ }
+          try { fScenarioSyncStepTextLayout(); } catch (eLogoText) { /* text layout best-effort */ }
+        });
+      } else if (fScenarioPresent().showStepNumbers !== false) {
         h1.appendChild(document.createTextNode(" " + step.title));
       } else {
         h1.textContent = step.title;
@@ -4178,6 +4496,10 @@ function fScenarioFillStepPanel(step) {
 function fScenarioApplyNamingChrome(show) {
   var present = MuLERMoCScenario.present;
   if (!present) {
+    fScenarioApplyNameRestrictions(null);
+    fScenarioApplyChainNavigation(null);
+    fScenarioApplyNumberingDirection();
+    fScenarioHide("analysisCol", false);
     // Full interactivity outside presentation: a locked present step must
     // never leak its lock (or its hidden explain line) into authoring —
     // the container node survives box rebuilds, so clear both actively.
@@ -4206,6 +4528,18 @@ function fScenarioApplyNamingChrome(show) {
     var _st = _pst && _pst.steps ? _pst.steps[_pst.index] : null;
     if (!_st) return;
     show = show || _st.show || {};
+    fScenarioApplyNameRestrictions(_st);
+    // A hidden name panel leaves no column unless this step has a rule.
+    // Match the effective rule predicate used by step entry, including
+    // component/alkoxy references that do not require show.rule.
+    var ruleOn = !!show.rule || fScenarioShowComponentRule(_st.nameAnalysisMode) ||
+      fScenarioShowAlkoxyRule();
+    // Standalone chain controls keep the step's requested references. Also
+    // honor a supported component selected live; legacy layouts are unchanged.
+    var liveRuleOn = ruleOn || fScenarioShowComponentRule(
+      typeof nameAnalysisMode === "string" ? nameAnalysisMode : "none");
+    if (show.chainNavigation === true && !liveRuleOn) fScenarioHide("ruleTheoryContainer", true);
+    fScenarioHide("analysisCol", show.naming === false && !ruleOn);
     // naming panel + settings + audio
     fScenarioHide("nameAnalysisContainer", present && show.naming === false);
     // locked name interaction: boxes ignore mouse clicks in presentation
@@ -4252,6 +4586,8 @@ function fScenarioApplyNamingChrome(show) {
     fScenarioHide("nameSettingsBtnDiv", present && !ns);
     var panel = document.getElementById("nameSettingsPanel");
     if (panel && present && !ns) panel.classList.remove("open");
+    fScenarioApplyChainNavigation(show);
+    fScenarioApplyNumberingDirection();
     // The panel sits above the name boxes: re-pin the floating Explain sheet
     // when chrome mutates it (no-op unless expanded; covers the 0.25s close).
     try { if (typeof fNameExpandRepinDelayed === "function") fNameExpandRepinDelayed(); } catch (eExp) { /* best-effort */ }
@@ -4271,6 +4607,9 @@ function fScenarioChrome(show) {
   // viewers: hidden viewer is not rendered (mirrors fToggleViewer2D/3D scope)
   var show2D = !show.viewers || show.viewers["2D"] !== false;
   var show3D = !show.viewers || show.viewers["3D"] !== false;
+  // Hide the whole presentation shell when neither viewer is requested;
+  // the authoring settings remain available outside presentation.
+  fScenarioHide("viewerCol", present && !show2D && !show3D);
   ["jsmeNomeclatureDIV", "jsmeNomeclatureSVG"].forEach(function (id) {
     fScenarioHide(id, !show2D);
   });
@@ -4675,13 +5014,17 @@ function fScenarioImportFile(file) {
 // (menu menu-open + both viewers + all bars) via a transient clone — the
 // stored step keeps its authored show.* for a later Export.
 function fScenarioExitPresent() {
+  MuLERMoCScenario.numberingDirection = null;
+  var wasAuthorPreview = fScenarioIsAuthorPreview(fScenarioPresent());
+  fScenarioClearCheckpointNotice();
   fScenarioCancelCheckpointPreparation();
   try {
     var checkpointApi = fScenarioCheckpointApi(fScenarioPresent());
     if (checkpointApi) checkpointApi.onExit();
   } catch (eCheckpoint) { /* Exit remains available even if the quiz failed. */ }
+  fScenarioEndAuthorPreview();
   MuLERMoCScenario.checkpointApplied = null;
-  if (MuLERMoCScenario.present && MuLERMoCScenario.returnToTheoryLibrary) {
+  if (MuLERMoCScenario.present && MuLERMoCScenario.returnToTheoryLibrary && !wasAuthorPreview) {
     location.assign("design/theory-library.html?v=alkynes-library-20261022");
     return;
   }
@@ -4788,11 +5131,31 @@ function fScenarioScrollDrawerToStep(scenId, stepIdx) {
   setTimeout(run, 120);
 }
 
-// Start presentation at a step (top-level: the card Play and the per-step
-// Present buttons both call it). startIdx is 0-based; omitted -> step 1.
-function fScenarioPresentBegin(id, startIdx) {
+// The editor's screen rehearses a step without creating learner receipts.
+// No URL or JSON setting enables this transient, scenario-bound context.
+function fScenarioAuthorPreviewBegin(id, startIdx) {
+  if (!MuLERMoCScenario.authoring || MuLERMoCScenario.present) return;
   var scen = (id && fScenarioGet(id)) || fScenarioActive();
+  var api = window.NameleculeQuizCheckpoints;
+  if (!scen || !scen.steps.length) return;
+  if (!api || ["beginPreview", "endPreview", "isPreview"].some(function (key) {
+    return typeof api[key] !== "function";
+  })) {
+    fScenarioCheckpointError(new Error("Η προεπισκόπηση δεν είναι διαθέσιμη. Αποθήκευσε το JSON και ανανέωσε τη σελίδα."));
+    return;
+  }
+  fScenarioCancelCheckpointPreparation();
+  api.beginPreview(scen);
+  fScenarioPresentBegin(scen.id, startIdx, true);
+}
+
+// Card Play and ordinary callers always use learner gates. Only the editor
+// wrapper above can supply an already established rehearsal context.
+function fScenarioPresentBegin(id, startIdx, authorPreview) {
+  var scen = (id && fScenarioGet(id)) || fScenarioActive();
+  if (authorPreview !== true || !fScenarioIsAuthorPreview(scen)) fScenarioEndAuthorPreview();
   if (!scen || !scen.steps.length) {
+    fScenarioEndAuthorPreview();
     fScenarioToast("Save at least one step first.");
     return;
   }
@@ -4804,6 +5167,7 @@ function fScenarioPresentBegin(id, startIdx) {
     if (fScenarioPrepareCheckpointTarget(scen, start, function () { fScenarioPresentBegin(scen.id, start); })) return;
     start = fScenarioResolveCheckpointTarget(scen, start);
   } catch (eCheckpoint) {
+    fScenarioEndAuthorPreview();
     fScenarioCheckpointError(eCheckpoint);
     return;
   }
@@ -4828,6 +5192,7 @@ function fScenarioPresentBegin(id, startIdx) {
     applied = false;
   }
   if (!applied) {
+    fScenarioEndAuthorPreview();
     MuLERMoCScenario.present = false;
     MuLERMoCScenario.presentId = null;
     fScenarioSyncPresentClass();
@@ -5445,7 +5810,44 @@ function fScenarioRenderOne(scen) {
     titleInput.value = st.title || "";
     titleInput.onchange = function () {
       st.title = titleInput.value;
+      paintTitleLogoPreview();
     };
+    var titleLogoRow = document.createElement("div");
+    titleLogoRow.className = "scTitleLogoRow";
+    var titleLogoLabel = document.createElement("label");
+    titleLogoLabel.className = "scTitleLogoLabel";
+    var titleLogoEN = typeof fMulerIsEN === "function" && fMulerIsEN();
+    titleLogoLabel.appendChild(document.createTextNode(titleLogoEN ? "Heading appearance" : "Μορφή τίτλου"));
+    var titleLogoSelect = document.createElement("select");
+    titleLogoSelect.className = "scTitleLogoSelect";
+    [["", titleLogoEN ? "Title text" : "Κείμενο τίτλου"],
+      ["workshop", titleLogoEN ? "Workshop logo" : "Λογότυπο Συνεργείου"]].forEach(function (pair) {
+      var option = document.createElement("option");
+      option.value = pair[0];
+      option.textContent = pair[1];
+      titleLogoSelect.appendChild(option);
+    });
+    titleLogoSelect.value = fScenarioValidTitleLogo(st.titleLogo) || "";
+    titleLogoLabel.appendChild(titleLogoSelect);
+    titleLogoRow.appendChild(titleLogoLabel);
+    var titleLogoPreview = document.createElement("span");
+    titleLogoPreview.className = "scTitleLogoPreview";
+    titleLogoRow.appendChild(titleLogoPreview);
+    row.appendChild(titleLogoRow);
+    function paintTitleLogoPreview() {
+      var key = fScenarioValidTitleLogo(st.titleLogo);
+      titleLogoPreview.hidden = !key;
+      titleLogoPreview.textContent = "";
+      titleLogoPreview.classList.remove("scStepHeadingVisual", "is-loaded");
+      if (key) fScenarioRenderTitleLogo(titleLogoPreview, key, st.title);
+    }
+    titleLogoSelect.onchange = function () {
+      var key = fScenarioValidTitleLogo(titleLogoSelect.value);
+      if (key) st.titleLogo = key;
+      else delete st.titleLogo;
+      paintTitleLogoPreview();
+    };
+    paintTitleLogoPreview();
     var noteInput = document.createElement("div");
     noteInput.className = "snote snoteRich";
     noteInput.setAttribute("data-placeholder", ((typeof fMulerT === "function") ? fMulerT("notePlaceholder") : "Γράψτε το κείμενο του βήματος…"));
@@ -5727,7 +6129,7 @@ function fScenarioRenderOne(scen) {
     row.appendChild(noteBar);
     row.appendChild(noteInput);
     // No Text checkbox: heading + text show automatically iff the step
-    // carries a title or note (see showTextOn); clear both for silence.
+    // carries a title, heading logo or note (see showTextOn); clear all for silence.
     // No Menu checkbox: the menu follows picks + selection (derived at
     // capture/validate — 2+ picks show it, otherwise the step stands alone).
     // Viewer control bars (authored per step; enabled only when that step's
@@ -5866,7 +6268,7 @@ function fScenarioRenderOne(scen) {
         fScenarioGo(idx);
       };
       if (presentBtn) presentBtn.onclick = function () {
-        fScenarioPresentBegin(scenId, idx);
+        fScenarioAuthorPreviewBegin(scenId, idx);
       };
       if (updBtn) updBtn.onclick = function () {
         fScenarioUpdateStep(scenId, idx);
@@ -6048,7 +6450,19 @@ function fScenarioRenumber(id) {
   var ps = fScenarioPresent();
   var st = ps.steps[ps.index];
   var pos = document.getElementById("scPos");
-  if (pos) pos.textContent = ps.steps.length ? ps.index + 1 + "/" + ps.steps.length : "0/0";
+  if (pos) {
+    var position = ps.steps.length ? ps.index + 1 + "/" + ps.steps.length : "0/0";
+    var previewLabel = (typeof fMulerPre === "function") ? fMulerPre("Δοκιμή", "Preview", "") : "Δοκιμή";
+    var previewing = fScenarioIsAuthorPreview(ps);
+    pos.textContent = position;
+    pos.classList.toggle("scAuthorPreview", previewing);
+    if (previewing) {
+      var label = document.createElement("span");
+      label.className = "scAuthorPreviewLabel";
+      label.textContent = previewLabel + " ";
+      pos.insertBefore(label, pos.firstChild);
+    }
+  }
   var ti = document.getElementById("scStepTitle");
   if (ti) ti.textContent = st ? st.n + ". " + (st.title || "") : "";
   var no = document.getElementById("scStepNote");
@@ -6100,6 +6514,7 @@ function fScenarioRenumber(id) {
       fScenarioCheckpointError(eCheckpoint);
     }
   }
+  if (!blocked) fScenarioClearCheckpointNotice();
   if (next) {
     next.disabled = blocked;
     next.setAttribute("aria-disabled", blocked ? "true" : "false");
@@ -6158,7 +6573,7 @@ function fScenarioGo(i) {
       // chrome. Reapplying the snapshot would reset zoom/highlights/camera.
       try { history.replaceState(null, "", "#step=" + (i + 1)); } catch (eHash) { /* file:// */ }
       fScenarioPlayUi();
-      fScenarioToast("Λύσε το σύντομο κουίζ για να συνεχίσεις.");
+      fScenarioCheckpointNotice("Λύσε το σύντομο κουίζ για να συνεχίσεις.");
       return;
     }
   }
@@ -6207,7 +6622,7 @@ function fScenarioGo(i) {
 // ── per-step Update (authoring): Go → tweak live view → Update ───────────
 // Captures the current live view via fScenarioCapture() and overwrites the
 // stored view snapshot at scen.steps[idx]. Authored layer is preserved:
-// title, note, styleText.fontSizePx/textWidthPx/columns, and the 4 drawer chrome checkboxes
+// title, optional titleLogo, note, styleText.fontSizePx/textWidthPx/columns, and the 4 drawer chrome checkboxes
 // (show.controls.2D/3D, show.nameSettings, show.nameClick). Everything visual is refreshed:
 // selectedMol, mode2D, mainChainMode, etherNamingMode, nameAnalysisMode
 // (clicked name-box highlight), selectedRule, style2D (atom colors, color
@@ -6232,8 +6647,14 @@ function fScenarioUpdateStep(scenId, idx) {
   fresh.n = old.n;
   fresh.nameBoxLayout = fScenarioValidNameBoxLayout(old.nameBoxLayout, old);
   fresh.title = old.title;
+  var titleLogo = fScenarioValidTitleLogo(old.titleLogo);
+  if (titleLogo) fresh.titleLogo = titleLogo;
+  else delete fresh.titleLogo;
   fresh.note = old.note;
   fresh.noteFormat = old.noteFormat === "html" ? "html" : "text";
+  if (old.styleName && Object.prototype.hasOwnProperty.call(old.styleName, "disabled")) {
+    fresh.styleName.disabled = fScenarioValidDisabledNameComps(old.styleName.disabled);
+  }
   if (Object.prototype.hasOwnProperty.call(old, "checkpoint")) {
     try {
       fresh.checkpoint = fScenarioCheckpointApi(s).validateCheckpoint(old.checkpoint);
@@ -6258,6 +6679,18 @@ function fScenarioUpdateStep(scenId, idx) {
   fresh.show.nameEye = oldShow.nameEye === true;
   if (Object.prototype.hasOwnProperty.call(oldShow, "alkoxyRule")) {
     fresh.show.alkoxyRule = oldShow.alkoxyRule === true;
+  }
+  if (Object.prototype.hasOwnProperty.call(oldShow, "chainNavigation")) {
+    fresh.show.chainNavigation = oldShow.chainNavigation === true;
+  }
+  if (Object.prototype.hasOwnProperty.call(oldShow, "numberingDirection")) {
+    fresh.show.numberingDirection = oldShow.numberingDirection === true;
+    // Presentation chrome can hide 3D while the free-browse toggle stays on.
+    // Capture must not invalidate this step's authored 2D-only comparison.
+    if (MuLERMoCScenario.present && oldShow.numberingDirection === true &&
+        oldShow.viewers && oldShow.viewers["2D"] !== false && oldShow.viewers["3D"] === false) {
+      fresh.show.viewers = Object.assign({}, oldShow.viewers);
+    }
   }
   fresh.menuGroups = fScenarioValidMenuGroups(old.menuGroups);
   s.steps[idx] = fresh;
