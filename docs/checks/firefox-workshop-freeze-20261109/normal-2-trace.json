@@ -1,0 +1,761 @@
+{
+  "label": "normal-2",
+  "events": [
+    {
+      "t": 0,
+      "kind": "instrumented",
+      "info": {
+        "visibility": "visible",
+        "focus": true
+      }
+    },
+    {
+      "t": 375,
+      "kind": "click",
+      "info": {
+        "id": "",
+        "cls": "scList scIconBtn scIconTextBtn",
+        "trusted": false,
+        "active": ""
+      }
+    },
+    {
+      "t": 383,
+      "kind": "click",
+      "info": {
+        "id": "",
+        "cls": "scPresentStep scIconBtn",
+        "trusted": false,
+        "active": ""
+      }
+    },
+    {
+      "t": 624,
+      "kind": "modal-mutation",
+      "info": {
+        "image": null
+      }
+    },
+    {
+      "t": 1191,
+      "kind": "pointerdown",
+      "info": {
+        "id": "nlQuizOpen",
+        "cls": "nl-quiz-button nl-quiz-open",
+        "trusted": true,
+        "active": ""
+      }
+    },
+    {
+      "t": 1192,
+      "kind": "focusin",
+      "info": {
+        "id": "nlQuizOpen",
+        "cls": "nl-quiz-button nl-quiz-open",
+        "trusted": true,
+        "active": "nlQuizOpen"
+      }
+    },
+    {
+      "t": 1216,
+      "kind": "pointerup",
+      "info": {
+        "id": "nlQuizOpen",
+        "cls": "nl-quiz-button nl-quiz-open",
+        "trusted": true,
+        "active": "nlQuizOpen"
+      }
+    },
+    {
+      "t": 1217,
+      "kind": "click",
+      "info": {
+        "id": "nlQuizOpen",
+        "cls": "nl-quiz-button nl-quiz-open",
+        "trusted": true,
+        "active": "nlQuizOpen"
+      }
+    },
+    {
+      "t": 1217,
+      "kind": "showModal-before",
+      "info": {
+        "id": "nlQuizDialog",
+        "active": "nlQuizOpen"
+      }
+    },
+    {
+      "t": 1258,
+      "kind": "focusout",
+      "info": {
+        "id": "nlQuizOpen",
+        "cls": "nl-quiz-button nl-quiz-open",
+        "trusted": true,
+        "active": ""
+      }
+    },
+    {
+      "t": 1259,
+      "kind": "focusin",
+      "info": {
+        "id": "nlQuizBack",
+        "cls": "nl-quiz-button nl-quiz-back",
+        "trusted": true,
+        "active": "nlQuizBack"
+      }
+    },
+    {
+      "t": 1259,
+      "kind": "showModal-after",
+      "info": {
+        "open": true,
+        "modal": true,
+        "active": "nlQuizBack"
+      }
+    },
+    {
+      "t": 1271,
+      "kind": "analyze-start",
+      "info": {
+        "id": "methane"
+      }
+    },
+    {
+      "t": 1271,
+      "kind": "analyze-start",
+      "info": {
+        "id": "ethane"
+      }
+    },
+    {
+      "t": 1271,
+      "kind": "analyze-start",
+      "info": {
+        "id": "propane"
+      }
+    },
+    {
+      "t": 1310,
+      "kind": "modal-mutation",
+      "info": {
+        "open": true,
+        "busy": "true",
+        "text": "Η μηχανή ετοιμάζει τις τρεις επισκευές…",
+        "image": null
+      }
+    },
+    {
+      "t": 1337,
+      "kind": "analyze-ok",
+      "info": {
+        "id": "methane",
+        "ms": 66
+      }
+    },
+    {
+      "t": 1346,
+      "kind": "analyze-ok",
+      "info": {
+        "id": "ethane",
+        "ms": 75
+      }
+    },
+    {
+      "t": 1350,
+      "kind": "analyze-ok",
+      "info": {
+        "id": "propane",
+        "ms": 79
+      }
+    },
+    {
+      "t": 1350,
+      "kind": "analyze-start",
+      "info": {
+        "id": "butane"
+      }
+    },
+    {
+      "t": 1350,
+      "kind": "analyze-start",
+      "info": {
+        "id": "pentane"
+      }
+    },
+    {
+      "t": 1350,
+      "kind": "analyze-start",
+      "info": {
+        "id": "methyl_2_pentane"
+      }
+    },
+    {
+      "t": 1386,
+      "kind": "analyze-ok",
+      "info": {
+        "id": "butane",
+        "ms": 36
+      }
+    },
+    {
+      "t": 1395,
+      "kind": "analyze-ok",
+      "info": {
+        "id": "pentane",
+        "ms": 45
+      }
+    },
+    {
+      "t": 1409,
+      "kind": "analyze-ok",
+      "info": {
+        "id": "methyl_2_pentane",
+        "ms": 59
+      }
+    },
+    {
+      "t": 1409,
+      "kind": "analyze-start",
+      "info": {
+        "id": "dimethyl_2_3_butane"
+      }
+    },
+    {
+      "t": 1409,
+      "kind": "analyze-start",
+      "info": {
+        "id": "ethyl_3_dimethyl_2_5_hexane"
+      }
+    },
+    {
+      "t": 1446,
+      "kind": "analyze-ok",
+      "info": {
+        "id": "ethyl_3_dimethyl_2_5_hexane",
+        "ms": 37
+      }
+    },
+    {
+      "t": 1446,
+      "kind": "analyze-ok",
+      "info": {
+        "id": "dimethyl_2_3_butane",
+        "ms": 37
+      }
+    },
+    {
+      "t": 1456,
+      "kind": "mountRound",
+      "info": {
+        "id": "engine-dimethyl_2_3_butane-parent-length-917072a0",
+        "kind": "replace"
+      }
+    },
+    {
+      "t": 1460,
+      "kind": "focusout",
+      "info": {
+        "id": "nlQuizBack",
+        "cls": "nl-quiz-button nl-quiz-back",
+        "trusted": true,
+        "active": ""
+      }
+    },
+    {
+      "t": 1461,
+      "kind": "focusin",
+      "info": {
+        "id": "",
+        "cls": "",
+        "trusted": true,
+        "active": ""
+      }
+    },
+    {
+      "t": 1501,
+      "kind": "modal-mutation",
+      "info": {
+        "open": true,
+        "busy": "false",
+        "text": "Με διακλαδώσειςΣΥΝΕΡΓΕΙΟ ΟΝΟΜΑΤΩΝΕπισκευή ονόματοςΈλεγξε το μήκος της κύριας αλυσίδας και το συνθετικό που το δηλώνει.1Παρατήρησε τη δομή2Επισκεύασε το όνομα3Έλεγξε την επιλογή σουΗ δομή στο επίκεντροΑνεπτυγμένος τύποςΜεγέθυνση σχεδίουΠαρατήρησε την ",
+        "image": {
+          "complete": true,
+          "width": 281,
+          "cls": "diagram-image is-ready"
+        }
+      }
+    },
+    {
+      "t": 28519,
+      "kind": "pointerdown",
+      "info": {
+        "id": "nl-repair-1-part-component-5",
+        "cls": "part-button",
+        "trusted": true,
+        "active": ""
+      }
+    },
+    {
+      "t": 28519,
+      "kind": "focusout",
+      "info": {
+        "id": "",
+        "cls": "",
+        "trusted": true,
+        "active": ""
+      }
+    },
+    {
+      "t": 28520,
+      "kind": "focusin",
+      "info": {
+        "id": "nl-repair-1-part-component-5",
+        "cls": "part-button",
+        "trusted": true,
+        "active": "nl-repair-1-part-component-5"
+      }
+    },
+    {
+      "t": 28522,
+      "kind": "pointerup",
+      "info": {
+        "id": "nl-repair-1-part-component-5",
+        "cls": "part-button",
+        "trusted": true,
+        "active": "nl-repair-1-part-component-5"
+      }
+    },
+    {
+      "t": 28523,
+      "kind": "click",
+      "info": {
+        "id": "nl-repair-1-part-component-5",
+        "cls": "part-button",
+        "trusted": true,
+        "active": "nl-repair-1-part-component-5"
+      }
+    },
+    {
+      "t": 28532,
+      "kind": "focusin",
+      "info": {
+        "id": "nl-repair-1-part-component-5",
+        "cls": "part-button",
+        "trusted": true,
+        "active": "nl-repair-1-part-component-5"
+      }
+    },
+    {
+      "t": 28555,
+      "kind": "pointerdown",
+      "info": {
+        "id": "nl-repair-1-choice-2",
+        "cls": "choice-button",
+        "trusted": true,
+        "active": "nl-repair-1-part-component-5"
+      }
+    },
+    {
+      "t": 28556,
+      "kind": "focusout",
+      "info": {
+        "id": "nl-repair-1-part-component-5",
+        "cls": "part-button",
+        "trusted": true,
+        "active": ""
+      }
+    },
+    {
+      "t": 28556,
+      "kind": "focusin",
+      "info": {
+        "id": "nl-repair-1-choice-2",
+        "cls": "choice-button",
+        "trusted": true,
+        "active": "nl-repair-1-choice-2"
+      }
+    },
+    {
+      "t": 28559,
+      "kind": "pointerup",
+      "info": {
+        "id": "nl-repair-1-choice-2",
+        "cls": "choice-button",
+        "trusted": true,
+        "active": "nl-repair-1-choice-2"
+      }
+    },
+    {
+      "t": 28560,
+      "kind": "click",
+      "info": {
+        "id": "nl-repair-1-choice-2",
+        "cls": "choice-button",
+        "trusted": true,
+        "active": "nl-repair-1-choice-2"
+      }
+    },
+    {
+      "t": 28567,
+      "kind": "focusin",
+      "info": {
+        "id": "nl-repair-1-choice-2",
+        "cls": "choice-button",
+        "trusted": true,
+        "active": "nl-repair-1-choice-2"
+      }
+    },
+    {
+      "t": 28609,
+      "kind": "pointerdown",
+      "info": {
+        "id": "nl-repair-1-check-button",
+        "cls": "primary",
+        "trusted": true,
+        "active": "nl-repair-1-choice-2"
+      }
+    },
+    {
+      "t": 28611,
+      "kind": "focusout",
+      "info": {
+        "id": "nl-repair-1-choice-2",
+        "cls": "choice-button",
+        "trusted": true,
+        "active": ""
+      }
+    },
+    {
+      "t": 28611,
+      "kind": "focusin",
+      "info": {
+        "id": "nl-repair-1-check-button",
+        "cls": "primary",
+        "trusted": true,
+        "active": "nl-repair-1-check-button"
+      }
+    },
+    {
+      "t": 28613,
+      "kind": "pointerup",
+      "info": {
+        "id": "nl-repair-1-check-button",
+        "cls": "primary",
+        "trusted": true,
+        "active": "nl-repair-1-check-button"
+      }
+    },
+    {
+      "t": 28613,
+      "kind": "click",
+      "info": {
+        "id": "nl-repair-1-check-button",
+        "cls": "primary",
+        "trusted": true,
+        "active": "nl-repair-1-check-button"
+      }
+    },
+    {
+      "t": 28625,
+      "kind": "focusout",
+      "info": {
+        "id": "nl-repair-1-check-button",
+        "cls": "primary",
+        "trusted": true,
+        "active": ""
+      }
+    },
+    {
+      "t": 28625,
+      "kind": "focusin",
+      "info": {
+        "id": "",
+        "cls": "primary",
+        "trusted": true,
+        "active": ""
+      }
+    },
+    {
+      "t": 29116,
+      "kind": "pointerdown",
+      "info": {
+        "id": "nlQuizBack",
+        "cls": "nl-quiz-button nl-quiz-back",
+        "trusted": true,
+        "active": ""
+      }
+    },
+    {
+      "t": 29117,
+      "kind": "focusout",
+      "info": {
+        "id": "",
+        "cls": "primary",
+        "trusted": true,
+        "active": ""
+      }
+    },
+    {
+      "t": 29117,
+      "kind": "focusin",
+      "info": {
+        "id": "nlQuizBack",
+        "cls": "nl-quiz-button nl-quiz-back",
+        "trusted": true,
+        "active": "nlQuizBack"
+      }
+    },
+    {
+      "t": 29118,
+      "kind": "pointerup",
+      "info": {
+        "id": "nlQuizBack",
+        "cls": "nl-quiz-button nl-quiz-back",
+        "trusted": true,
+        "active": "nlQuizBack"
+      }
+    },
+    {
+      "t": 29118,
+      "kind": "click",
+      "info": {
+        "id": "nlQuizBack",
+        "cls": "nl-quiz-button nl-quiz-back",
+        "trusted": true,
+        "active": "nlQuizBack"
+      }
+    },
+    {
+      "t": 29146,
+      "kind": "focusout",
+      "info": {
+        "id": "nlQuizBack",
+        "cls": "nl-quiz-button nl-quiz-back",
+        "trusted": true,
+        "active": ""
+      }
+    },
+    {
+      "t": 29146,
+      "kind": "focusin",
+      "info": {
+        "id": "nlQuizOpen",
+        "cls": "nl-quiz-button nl-quiz-open",
+        "trusted": true,
+        "active": "nlQuizOpen"
+      }
+    },
+    {
+      "t": 29165,
+      "kind": "pointerdown",
+      "info": {
+        "id": "nlQuizOpen",
+        "cls": "nl-quiz-button nl-quiz-open",
+        "trusted": true,
+        "active": "nlQuizOpen"
+      }
+    },
+    {
+      "t": 29167,
+      "kind": "pointerup",
+      "info": {
+        "id": "nlQuizOpen",
+        "cls": "nl-quiz-button nl-quiz-open",
+        "trusted": true,
+        "active": "nlQuizOpen"
+      }
+    },
+    {
+      "t": 29167,
+      "kind": "click",
+      "info": {
+        "id": "nlQuizOpen",
+        "cls": "nl-quiz-button nl-quiz-open",
+        "trusted": true,
+        "active": "nlQuizOpen"
+      }
+    },
+    {
+      "t": 29167,
+      "kind": "showModal-before",
+      "info": {
+        "id": "nlQuizDialog",
+        "active": "nlQuizOpen"
+      }
+    },
+    {
+      "t": 29206,
+      "kind": "focusout",
+      "info": {
+        "id": "nlQuizOpen",
+        "cls": "nl-quiz-button nl-quiz-open",
+        "trusted": true,
+        "active": ""
+      }
+    },
+    {
+      "t": 29206,
+      "kind": "focusin",
+      "info": {
+        "id": "nlQuizBack",
+        "cls": "nl-quiz-button nl-quiz-back",
+        "trusted": true,
+        "active": "nlQuizBack"
+      }
+    },
+    {
+      "t": 29207,
+      "kind": "showModal-after",
+      "info": {
+        "open": true,
+        "modal": true,
+        "active": "nlQuizBack"
+      }
+    },
+    {
+      "t": 29210,
+      "kind": "mountRound",
+      "info": {
+        "id": "engine-dimethyl_2_3_butane-parent-length-917072a0",
+        "kind": "replace"
+      }
+    },
+    {
+      "t": 29216,
+      "kind": "focusout",
+      "info": {
+        "id": "nlQuizBack",
+        "cls": "nl-quiz-button nl-quiz-back",
+        "trusted": true,
+        "active": ""
+      }
+    },
+    {
+      "t": 29217,
+      "kind": "focusin",
+      "info": {
+        "id": "",
+        "cls": "",
+        "trusted": true,
+        "active": ""
+      }
+    },
+    {
+      "t": 29223,
+      "kind": "modal-mutation",
+      "info": {
+        "open": true,
+        "busy": "false",
+        "text": "Με διακλαδώσειςΣΥΝΕΡΓΕΙΟ ΟΝΟΜΑΤΩΝΕπισκευή ονόματοςΈλεγξε το μήκος της κύριας αλυσίδας και το συνθετικό που το δηλώνει.1Παρατήρησε τη δομή2Επισκεύασε το όνομα3Έλεγξε την επιλογή σουΗ δομή στο επίκεντροΑνεπτυγμένος τύποςΜεγέθυνση σχεδίουΠαρατήρησε την ",
+        "image": {
+          "complete": true,
+          "width": 281,
+          "cls": "diagram-image"
+        }
+      }
+    },
+    {
+      "t": 29264,
+      "kind": "modal-mutation",
+      "info": {
+        "open": true,
+        "busy": "false",
+        "text": "Με διακλαδώσειςΣΥΝΕΡΓΕΙΟ ΟΝΟΜΑΤΩΝΕπισκευή ονόματοςΈλεγξε το μήκος της κύριας αλυσίδας και το συνθετικό που το δηλώνει.1Παρατήρησε τη δομή2Επισκεύασε το όνομα3Έλεγξε την επιλογή σουΗ δομή στο επίκεντροΑνεπτυγμένος τύποςΜεγέθυνση σχεδίουΠαρατήρησε την ",
+        "image": {
+          "complete": true,
+          "width": 281,
+          "cls": "diagram-image is-ready"
+        }
+      }
+    }
+  ],
+  "raf": 1675,
+  "timers": 286,
+  "resources": [
+    {
+      "name": "http://127.0.0.1:8013/js/mulermoc-nom-teaching-54.js?v=alkane-step5-interaction-20261106-r1",
+      "duration": 10,
+      "transferSize": 0
+    },
+    {
+      "name": "http://127.0.0.1:8013/js/namelecule-chemistry-client.js?v=verified-engines-20261105-r1",
+      "duration": 13,
+      "transferSize": 0
+    },
+    {
+      "name": "http://127.0.0.1:8013/scenarios/alkanes-user-3.scenario.json",
+      "duration": 8,
+      "transferSize": 33572
+    },
+    {
+      "name": "http://127.0.0.1:8013/games/data/alkane-structures.json",
+      "duration": 3,
+      "transferSize": 15899
+    },
+    {
+      "name": "http://127.0.0.1:8013/js/chemistry-engines/3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306.js",
+      "duration": 8,
+      "transferSize": 217031
+    },
+    {
+      "name": "http://127.0.0.1:8013/js/chemistry-engines/3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306.js",
+      "duration": 6,
+      "transferSize": 217031
+    },
+    {
+      "name": "http://127.0.0.1:8013/js/chemistry-engines/3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306.js",
+      "duration": 8,
+      "transferSize": 217031
+    },
+    {
+      "name": "http://127.0.0.1:8013/js/namelecule-chemistry-worker.js?v=verified-engines-20261105-r1",
+      "duration": 3,
+      "transferSize": 0
+    },
+    {
+      "name": "http://127.0.0.1:8013/js/namelecule-chemistry-worker.js?v=verified-engines-20261105-r1",
+      "duration": 2,
+      "transferSize": 0
+    },
+    {
+      "name": "http://127.0.0.1:8013/js/namelecule-chemistry-worker.js?v=verified-engines-20261105-r1",
+      "duration": 2,
+      "transferSize": 0
+    },
+    {
+      "name": "http://127.0.0.1:8013/js/namelecule-chemistry-worker.js?v=verified-engines-20261105-r1",
+      "duration": 2,
+      "transferSize": 0
+    },
+    {
+      "name": "http://127.0.0.1:8013/js/namelecule-chemistry-worker.js?v=verified-engines-20261105-r1",
+      "duration": 2,
+      "transferSize": 0
+    },
+    {
+      "name": "http://127.0.0.1:8013/js/namelecule-chemistry-worker.js?v=verified-engines-20261105-r1",
+      "duration": 1,
+      "transferSize": 0
+    },
+    {
+      "name": "http://127.0.0.1:8013/js/namelecule-chemistry-worker.js?v=verified-engines-20261105-r1",
+      "duration": 3,
+      "transferSize": 0
+    },
+    {
+      "name": "http://127.0.0.1:8013/js/namelecule-chemistry-worker.js?v=verified-engines-20261105-r1",
+      "duration": 2,
+      "transferSize": 0
+    },
+    {
+      "name": "http://127.0.0.1:8013/games/assets/name-repair/dimethyl_2_3_butane.svg",
+      "duration": 4,
+      "transferSize": 41103
+    },
+    {
+      "name": "https://region1.google-analytics.com/g/collect?v=2&tid=G-1V8NWYY46Y&gtm=45je6b41v9247675757za208zd9247675757xf1&_p=1794197180797&gcd=13l3l3l2l1l1&npa=1&dma_cps=a&dma=1&_eu=AAAAAAQ&cid=2141009540.1794197037&frm=0&ngs=1&pscdl=noapi&rcb=16&sr=1440x900&ul=el-gr&_s=1&tag_exp=115938466~115938469~118897920~118897930~120213116~120385423~120412526~120420416~120469145~120469153~121246026~121246034~123814185&sid=1794197036&sct=1&seg=1&dl=http%3A%2F%2F127.0.0.1%2Fmulermoc-nom-54.html%3Fscenario%3Dscenarios%2Falkanes-user-3.scenario.json%26v%3Dworkshop-manual-1794197179&dt=Namelecule%20%E2%80%94%20%CE%9F%CE%BD%CE%BF%CE%BC%CE%B1%CF%84%CE%BF%CE%BB%CE%BF%CE%B3%CE%AF%CE%B1%20%CE%9F%CF%81%CE%B3%CE%B1%CE%BD%CE%B9%CE%BA%CF%8E%CE%BD%20%CE%95%CE%BD%CF%8E%CF%83%CE%B5%CF%89%CE%BD&en=page_view&_ee=1&tfd=7622",
+      "duration": 655,
+      "transferSize": 0
+    }
+  ]
+}

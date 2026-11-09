@@ -1,0 +1,14 @@
+{
+  "completed": false,
+  "checks": [
+    {
+      "label": "Actual3D preview available diethyl_ether",
+      "detail": null
+    }
+  ],
+  "fixturePolicy": "Stored local SDF source replaces new-molecule PubChem3D/name transport; actual JSME/core/registry/renderer/JSmol.",
+  "cases": [],
+  "failure": "Timed out: !MulerDraft&&selectedMol.startsWith(\"custom_\")",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/v54-upstream-20261104/browser/test-generated-geometry.py\", line 19, in <module>\n    ev('window.__fixtureSource=nameExamples['+json.dumps(mol)+'];delete nameExamples['+json.dumps(mol)+'];true');click('#molDraftAcceptBtn');until('!MulerDraft&&selectedMol.startsWith(\"custom_\")');ev('nameExamples['+json.dumps(mol)+']=__fixtureSource;true')\n  File \"bidi\", line 51, in until\nAssertionError: Timed out: !MulerDraft&&selectedMol.startsWith(\"custom_\")\n",
+  "javascriptErrors": []
+}

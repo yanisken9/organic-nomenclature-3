@@ -1,0 +1,127 @@
+{
+  "date": "2026-11-09",
+  "role": "Developer browser verification subagent, not independent Reviewer",
+  "completed": true,
+  "assertions": 50,
+  "actualUIRepairs": 6,
+  "pageJavascriptErrors": 0,
+  "testedControllerSHA256": "35fda6953f06356d498f1be40fe4c6123d0c81c3bdbf81a60fa3fda5ea211501",
+  "loadedScript": "http://127.0.0.1:8013/js/namelecule-quiz-checkpoints.js?v=quiz-round-scroll-20261109-r1",
+  "sourceJSONSHA256": "607a530a2d3ba151026517c61d6f7a31644e15abf82a687e778b7453d80089b7",
+  "flow": "Normal learner library→unsolved4 blocks jump→3 actualunbranchedrepairs1280×650/DPR2→10→11unsolved→3 actualbranchedrepairs390×760/DPR1→12→Exit/library. Unsolved seeds4/1 only; no fabricatedsolvedreceipts.",
+  "otherChecks": "Actualcounters1/3→2/3→3/3; gatesblockedafter1/2 andunlockonly3; Returnbeforecheck/reopenpreservesselectedanswer/counter; reopenstartsattop; naturalmanualscrollnotforcedtopbysame-roundchoice/order/check;320×700 resize preservesanswer andvisibleheading/objective.",
+  "beforeAfter": [
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 650,
+        "dpr": 2
+      },
+      "entry": "after-continue-to-round2",
+      "before": {
+        "dialogScrollTop": 183.6666717529297,
+        "objectiveTop": 114.16667175292969,
+        "headerBottom": 121.83332824707031
+      },
+      "after": {
+        "dialogScrollTop": 0,
+        "objectiveTop": 297.83331298828125,
+        "headerBottom": 121.83332824707031
+      },
+      "afterMeasuredBeforeAnyNewScroll": true
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 650,
+        "dpr": 2
+      },
+      "entry": "after-continue-to-round3",
+      "before": {
+        "dialogScrollTop": 203.63333129882812,
+        "objectiveTop": 94.19999694824219,
+        "headerBottom": 121.83332824707031
+      },
+      "after": {
+        "dialogScrollTop": 0,
+        "objectiveTop": 297.83331298828125,
+        "headerBottom": 121.83332824707031
+      },
+      "afterMeasuredBeforeAnyNewScroll": true
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 760,
+        "dpr": 1
+      },
+      "entry": "after-continue-to-round2",
+      "before": {
+        "dialogScrollTop": 462.4666748046875,
+        "objectiveTop": -203.26666259765625,
+        "headerBottom": 111.83332824707031
+      },
+      "after": {
+        "dialogScrollTop": 0,
+        "objectiveTop": 259.20001220703125,
+        "headerBottom": 111.83332824707031
+      },
+      "afterMeasuredBeforeAnyNewScroll": true
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 760,
+        "dpr": 1
+      },
+      "entry": "after-continue-to-round3",
+      "before": {
+        "dialogScrollTop": 456.73333740234375,
+        "objectiveTop": -197.53334045410156,
+        "headerBottom": 111.83332824707031
+      },
+      "after": {
+        "dialogScrollTop": 0,
+        "objectiveTop": 259.20001220703125,
+        "headerBottom": 111.83332824707031
+      },
+      "afterMeasuredBeforeAnyNewScroll": true
+    }
+  ],
+  "baselineEquivalenceLimit": "Baseline records two generated branched flows. AFTER normalflow uses unbranched desktop and branched mobile with fixed unsolvedfixtureseeds; exactrandomquestions differ, but same affected dialog owner/round lifecycle and viewportconditions are measured.",
+  "initialNavigationTimeout": "First run completed24assertions/3actualdesktoprepairs0pageerrors, then trustedtoolbar10→11 didnotadvancewithin12sec. Eventwasnotcapturedinthatfirstattempt, so cause remainsunestablished. Preservedbrowser-after-initial-navigation-timeout.json,initial-navigation-timeout.png,check-after-initial.py. Noappfixwasapplied. Oneboundedrerun waitedready+2rAFandcapturedstep10screenshotbeforeclick; trustedpolygonclick@index9thenindex10 succeeded, andall50assertions/6repairscompleted.",
+  "toolbarEvidence": {
+    "events": [
+      {
+        "trusted": true,
+        "index": 9,
+        "target": "polygon",
+        "preparation": false
+      }
+    ],
+    "index": 10,
+    "disabled": true,
+    "preparation": false
+  },
+  "processLogLimit": "Browser-internal chromeBiDi WeakMapkeynull messages/SWGLwarning retainedinfirefox.log, separatefromcapturedpageJavaScripterrors0.",
+  "cleanup": {
+    "pid": 57118,
+    "bidi_port": 59211,
+    "profile": "/var/folders/2v/ds4vjvgj1_1000kq1fzg70q40000gn/T/namelecule-round-scroll-after-20261109-03n6olvp/profile",
+    "log": "/var/folders/2v/ds4vjvgj1_1000kq1fzg70q40000gn/T/namelecule-round-scroll-after-20261109-03n6olvp/firefox.log",
+    "owner": "/root/verify_step11_stop_20261109",
+    "purpose": "Approved newround scroll afterchecks only; GUI56371/driver21029 untouched",
+    "cleanup": "Only owned headlessPID terminated after exact headless/profile/port verification. GUI56371/driver21029 untouched.",
+    "ownershipCommand": "/Applications/Firefox.app/Contents/MacOS/firefox -headless -no-remote -profile /var/folders/2v/ds4vjvgj1_1000kq1fzg70q40000gn/T/namelecule-round-scroll-after-20261109-03n6olvp/profile --remote-debugging-port 59211 about:blank",
+    "parentNoLongerRunning": true
+  },
+  "limits": [
+    "Owned headless, not user GUI/freeze diagnosis",
+    "Viewportemulation1280×650/DPR2,390×760/DPR1 and320×700/DPR1, not physical mobile/Safari",
+    "Only normal learner checkpoint flow; root separately covers private callback invalid/stale/same-index guards",
+    "Desktop uses actual unbranched set and mobile actual branched set; baseline original clipping used generated branched set. Shared dialog lifecycle is exercised in both.",
+    "This verifies the layout/scroll correction; no Firefoxwholebrowserfreeze fix or uninterruptedoperationclaim.",
+    "No userGUI/personalsessionreload, focus/activation or profile/historyread by thesechecks.",
+    "No productioncode/JSON/CSS/core changes by this agent; root owns implementation/notes/independentreview."
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "completed": true,
+  "checks": [
+    "Workshop-only presentation uses content layout",
+    "Entire host, instructions, card and button fit 320",
+    "No horizontal text overflow 320",
+    "Resize preserves Workshop-only columns 320",
+    "Entire host, instructions, card and button fit 390",
+    "No horizontal text overflow 390",
+    "Resize preserves Workshop-only columns 390",
+    "Entire host, instructions, card and button fit 1280",
+    "No horizontal text overflow 1280",
+    "Resize preserves Workshop-only columns 1280",
+    "Step3 restores normal column layout",
+    "Step3 retains measured text width",
+    "Step3→4 restores content-only layout",
+    "Effective content restores normal sizing",
+    "Removing temporary rule restores correct host sizing",
+    "Exit removes content layout and restores authoring columns",
+    "Reentry restores Workshop-only layout",
+    "Quiz opens and remains locked",
+    "Gate after repair 1",
+    "Gate after repair 2",
+    "Gate after repair 3",
+    "Step5 after real quiz restores molecular layout",
+    "Completed stop stays clean and unlocked",
+    "Canonical lesson does not acquire content-only layout"
+  ],
+  "bounds": [
+    {
+      "viewport": 320,
+      "boxes": {
+        "authorLayout": {
+          "left": 10,
+          "right": 310,
+          "width": 300,
+          "scrollWidth": 300,
+          "clientWidth": 300
+        },
+        "scStepText": {
+          "left": 10,
+          "right": 310,
+          "width": 300,
+          "scrollWidth": 298,
+          "clientWidth": 298
+        },
+        "nlQuizCheckpoint": {
+          "left": 24,
+          "right": 296,
+          "width": 272,
+          "scrollWidth": 268,
+          "clientWidth": 268
+        },
+        "nlQuizOpen": {
+          "left": 42,
+          "right": 278,
+          "width": 236,
+          "scrollWidth": 234,
+          "clientWidth": 234
+        }
+      }
+    },
+    {
+      "viewport": 390,
+      "boxes": {
+        "authorLayout": {
+          "left": 10,
+          "right": 380,
+          "width": 370,
+          "scrollWidth": 370,
+          "clientWidth": 370
+        },
+        "scStepText": {
+          "left": 10,
+          "right": 380,
+          "width": 370,
+          "scrollWidth": 368,
+          "clientWidth": 368
+        },
+        "nlQuizCheckpoint": {
+          "left": 24,
+          "right": 366,
+          "width": 342,
+          "scrollWidth": 338,
+          "clientWidth": 338
+        },
+        "nlQuizOpen": {
+          "left": 42,
+          "right": 348,
+          "width": 306,
+          "scrollWidth": 304,
+          "clientWidth": 304
+        }
+      }
+    },
+    {
+      "viewport": 1280,
+      "boxes": {
+        "authorLayout": {
+          "left": 10,
+          "right": 1270,
+          "width": 1260,
+          "scrollWidth": 1260,
+          "clientWidth": 1260
+        },
+        "scStepText": {
+          "left": 10,
+          "right": 1270,
+          "width": 1260,
+          "scrollWidth": 1258,
+          "clientWidth": 1258
+        },
+        "nlQuizCheckpoint": {
+          "left": 145,
+          "right": 1135,
+          "width": 990,
+          "scrollWidth": 986,
+          "clientWidth": 986
+        },
+        "nlQuizOpen": {
+          "left": 928.4000244140625,
+          "right": 1111.0000305175781,
+          "width": 182.60000610351562,
+          "scrollWidth": 181,
+          "clientWidth": 181
+        }
+      }
+    }
+  ],
+  "javascriptErrors": []
+}

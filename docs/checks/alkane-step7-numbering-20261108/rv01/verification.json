@@ -1,0 +1,36 @@
+{
+  "finding": {
+    "id": "RV-01",
+    "severity": "P2",
+    "cause": "Stepobjectreference was used as transient identity; Update replaces dataobject during same presentationentry",
+    "resolution": "Use scenario/index/applyToken/parentkey for entryidentity, refresh stepdatareference without changing direction; explicitApply/Exitreset unchanged",
+    "DeveloperBefore": "actualFirefox2assertions/0JSerrors reproduced leftlabelswithrightpressed afterUpdate→zoom",
+    "DeveloperAfter": "actualFirefox8assertions/0JSerrors: rightUpdate→zoom/resize3903201500; leftUpdate→zoom; newauthorentryleft; Exitclear",
+    "unitRegression": "202JSCassertions; sameentrydatareplacement preserves direction andrefreshesdatareference, newentrytokenresets",
+    "testOnlyAdjustment": "Firstafterrun6passes then staleauthorpreview blockedat4 followingUpdatedcontent; after-failure.png confirms. FreshExit/screenpreviewused for reentry in correctedtest, no extraappchange.",
+    "status": "Developer corrected/verified, targeted independent verification pending",
+    "sources": {
+      "scenarios/alkanes-user-3.scenario.json": "d5463463b14c1f694dbd381c65a7b4aa466eebd9143f4f91c565894f26645cd4",
+      "js/mulermoc-nom-scenario-54.js": "a24eef83359039e91ad15217d667713f64f79dff4b750b8b103bf42f2adde5aa",
+      "js/mulermoc-nom-molview-54.js": "9e835f5e7c94ac736f7a4ca80ac3c67cc03f34eac2098ac5e9de3eb0eae9ba2f",
+      "css/mulermoc-nom-scenario-54.css": "9766b3a231bc7dafb7addf01e516aa0457320bd6d6f25fa0259b76908b4fa393",
+      "mulermoc-nom-54.html": "3bea88a51c5873227c44c902b1427637da558bdbe1c1774f4803c403b53c299a",
+      "docs/didactic-scenario-plan.md": "cc13399282b1fb3d49c01cc49248b24cbbbddabaa3e95e0078a070dc6cf9d771"
+    }
+  },
+  "HTTP": {
+    "scenarios/alkanes-user-3.scenario.json": "d5463463b14c1f694dbd381c65a7b4aa466eebd9143f4f91c565894f26645cd4",
+    "js/mulermoc-nom-scenario-54.js": "a24eef83359039e91ad15217d667713f64f79dff4b750b8b103bf42f2adde5aa",
+    "js/mulermoc-nom-molview-54.js": "9e835f5e7c94ac736f7a4ca80ac3c67cc03f34eac2098ac5e9de3eb0eae9ba2f",
+    "css/mulermoc-nom-scenario-54.css": "9766b3a231bc7dafb7addf01e516aa0457320bd6d6f25fa0259b76908b4fa393",
+    "mulermoc-nom-54.html": "3bea88a51c5873227c44c902b1427637da558bdbe1c1774f4803c403b53c299a"
+  },
+  "protectedUnchanged": 496,
+  "coreUnchanged": 10,
+  "MOLSDFUnchanged": 453,
+  "externalExportUnchanged": {
+    "/Users/yannisskendros/Desktop/αρχεία  json/9Αλκάνια.json": "d5463463b14c1f694dbd381c65a7b4aa466eebd9143f4f91c565894f26645cd4",
+    "/Users/yannisskendros/Desktop/αρχεία  json/Namelecule_08-11-2026/9Αλκάνια-before-numbering-20261108-081134.json": "57f2822ad5771743893b748fa353e20463f49e6a7917d44459d14d70b93d4cfb"
+  },
+  "syntaxBothJS": "passed"
+}

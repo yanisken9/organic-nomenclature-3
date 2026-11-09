@@ -1,0 +1,13 @@
+{
+  "completed": false,
+  "checks": [
+    "Explore54 1500",
+    "Actual54 boot 1500",
+    "Explore returnwelcome 1500",
+    "All14 lessons54 1500",
+    "Lessonpresentfromlibrary 1500"
+  ],
+  "failure": "('#scExit', {'x': 1453.7999725341797, 'y': 21, 'receivesClick': False, 'hit': '<div id=\"scenarioPlayBar\" style=\"\"><span id=\"scScenarioId\" aria-label=\"Σενάριο παρουσίασης\" title=\"Αλκάνια-Ονοματολογία και διακλαδώσεις · Unknown\"><span class=\"scScenarioIdTitle\">Αλκάνια-Ονοματολογία και διακλαδώσεις</span><span class=\"scScenarioIdSep\" aria-hidden=\"true\"> · </span><span class=\"scSc'})",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/v54-sync-20261104/test-activation.py\", line 31, in <module>\n    click('#scExit');until('location.pathname.endsWith(\"/design/theory-library.html\")')\n  File \"feature-support\", line 10, in click\n    for width in [1500,390]:\nAssertionError: ('#scExit', {'x': 1453.7999725341797, 'y': 21, 'receivesClick': False, 'hit': '<div id=\"scenarioPlayBar\" style=\"\"><span id=\"scScenarioId\" aria-label=\"Σενάριο παρουσίασης\" title=\"Αλκάνια-Ονοματολογία και διακλαδώσεις · Unknown\"><span class=\"scScenarioIdTitle\">Αλκάνια-Ονοματολογία και διακλαδώσεις</span><span class=\"scScenarioIdSep\" aria-hidden=\"true\"> · </span><span class=\"scSc'})\n",
+  "javascriptErrors": []
+}

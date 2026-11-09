@@ -1,0 +1,23 @@
+--- before/docs/didactic-scenario-plan.md
++++ docs/didactic-scenario-plan.md
+@@ -296,6 +296,20 @@
+   `nameEye`; Present stashes / Exit restores the author's live hidden set
+   + edit mode. Eye-hiding the highlighted box also repaints the 2D SVG
+   so its highlight vanishes at once.
++* Optional `styleName.disabled` lists visible component IDs that are passive
++  during presentation, e.g. `["comp6", "comp9"]`. Their text remains readable;
++  clicks (including synthetic replay), hover feedback and selected-state
++  restoration are blocked. Known component IDs are retained without duplicates;
++  invalid values normalize to an empty list. Missing means no restriction and
++  does not add a field to legacy steps. Update preserves this authored setting;
++  duplicate/import/export retain it. Exit restores ordinary interaction.
++* Optional `show.chainNavigation: true` exposes the existing algorithmic
++  main-chain stepper separately from the naming settings panel, when naming is
++  visible and at least two chains are available. It reuses the same controls and
++  naming/highlight mechanism. Missing/false preserves the existing settings UI.
++  Standalone controls preserve the step's requested rule visibility, including
++  supported component references selected live. Update, duplicate and
++  import/export preserve the opt-in.
+ * `title` is the step heading: in presentation it replaces the
+   page `#pageTitle`, preceded by the number pill
+   `<span class="scStepNumberTitle">N.</span>` unless the scenario's

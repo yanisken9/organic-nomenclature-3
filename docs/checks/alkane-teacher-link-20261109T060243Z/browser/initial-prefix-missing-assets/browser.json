@@ -1,0 +1,535 @@
+{
+  "completed": false,
+  "role": "Developer browser verification; not independent review",
+  "checks": [
+    "All275 candidate content hashes match frozen metadata",
+    "Copied library alkane link resolves inside nested prefix",
+    "Normal learner presentation mode loaded from copied library",
+    "step4-desktop hides molecular view/name/menu",
+    "step4-desktop shows loaded logo/instructions/card and blocks Next",
+    "Unsolved gate4 rejects forward jump"
+  ],
+  "rounds": [],
+  "geometry": [],
+  "models3D": [],
+  "lessonSteps": [
+    {
+      "step": 1,
+      "title": "Τι είναι τα αλκάνια;",
+      "selectedMol": "ethane",
+      "mode2D": "condensed",
+      "nextDisabled": false
+    },
+    {
+      "step": 2,
+      "title": "Ένα όνομα από τρία συνθετικά",
+      "selectedMol": "ethane",
+      "mode2D": "condensed",
+      "nextDisabled": false
+    },
+    {
+      "step": 3,
+      "title": "Αλκάνια χωρίς διακλαδώσεις",
+      "selectedMol": "butane",
+      "mode2D": "condensed",
+      "nextDisabled": false
+    },
+    {
+      "step": 4,
+      "title": "Συνεργείο ονομάτων",
+      "selectedMol": "pentane",
+      "mode2D": "condensed",
+      "nextDisabled": true
+    }
+  ],
+  "notes": [],
+  "limitations": [
+    "Owned headless Firefox and viewport emulation only; no personal/GUI Firefox interaction or prior freeze diagnosis",
+    "No Safari/physical mobile/screen reader/conference-machine audit; no uninterrupted-operation guarantee",
+    "External JSmol/Google Fonts network dependencies retained; captured errors/resources reported separately",
+    "Seed4/seed1 unsolved starts only; all six correct repair receipts earned by actual native pointer actions",
+    "Bounded prefix integration; prior smooth-scroll/reduced-motion animation matrix not repeated"
+  ],
+  "candidateSHA256": "0faf6b6046e8c5abcd453db8b1a11458e2e2d69522c5cb9127c0422ff6673c2e",
+  "base_url": "http://127.0.0.1:60876/organic-nomenclature-3/reviews/alkanes-20261109/",
+  "javascriptErrors": [],
+  "environment": {
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:159.0) Gecko/20100101 Firefox/159.0",
+    "url": "http://127.0.0.1:60876/organic-nomenclature-3/reviews/alkanes-20261109/mulermoc-nom-54.html?scenario=scenarios/alkanes-user-3.scenario.json&present=1&from=theory-library&v=alkanes-personal-20261106-r1#step=1",
+    "jsmolVersion": "2022-06-24 05:54:49 (JSmol/j2s)",
+    "jquery": "3.7.1"
+  },
+  "failure": "Traceback (most recent call last):\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/alkane-teacher-link-20261109T060243Z/browser/check-prefix.py\", line 77, in <module>\n    checkpoint(3,'step4-desktop');ev('fScenarioGo(11);true');wait('fScenarioPresent().index===3');check(ev('document.getElementById(\"scNext\").disabled'),'Unsolved gate4 rejects forward jump');solve_gate(3,'alkanes-unbranched','4')\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/alkane-teacher-link-20261109T060243Z/browser/check-prefix.py\", line 55, in solve_gate\n    seed(index,seed_value);dismiss_rotate();pointer('#nlQuizOpen');wait('!!document.querySelector(\"#nlQuizDialog[open] .diagram-image.is-ready\")',45);quiz_top('s'+str(index+1)+' entry')\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/alkane-teacher-link-20261109T060243Z/browser/check-prefix.py\", line 16, in wait\n    raise AssertionError('Timeout '+expr)\nAssertionError: Timeout !!document.querySelector(\"#nlQuizDialog[open] .diagram-image.is-ready\")\n",
+  "failureURL": "http://127.0.0.1:60876/organic-nomenclature-3/reviews/alkanes-20261109/mulermoc-nom-54.html?scenario=scenarios/alkanes-user-3.scenario.json&present=1&from=theory-library&v=alkanes-personal-20261106-r1#step=4",
+  "resourcesAtFailure": [
+    {
+      "name": "http://127.0.0.1:60876/organic-nomenclature-3/reviews/alkanes-20261109/css/jsme-nick-54.css?v=merge54-20261105-r1",
+      "initiatorType": "link",
+      "duration": 0,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:60876/organic-nomenclature-3/reviews/alkanes-20261109/css/mulermoc-nom-scenario-54.css?v=step7-numbering-directions-20261108-r3",
+      "initiatorType": "link",
+      "duration": 0,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:60876/organic-nomenclature-3/reviews/alkanes-20261109/css/namelecule-54.css?v=v54-sync-20261104-r2",
+      "initiatorType": "link",
+      "duration": 0,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:60876/organic-nomenclature-3/reviews/alkanes-20261109/css/namelecule-repair-round.css?v=checkpoint-pilot-20261104-r1",
+      "initiatorType": "link",
+      "duration": 0,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "https://www.googletagmanager.com/gtag/js?id=G-1V8NWYY46Y",
+      "initiatorType": "script",
+      "duration": 169,
+      "transferSize": 0,
+      "responseStatus": 0
+    },
+    {
+      "name": "http://127.0.0.1:60876/organic-nomenclature-3/reviews/alkanes-20261109/css/namelecule-quiz-checkpoints.css?v=quiz-header-progress-20261108-r1",
+      "initiatorType": "link",
+      "duration": 0,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:60876/organic-nomenclature-3/reviews/alkanes-20261109/js/namelecule-label-metrics.js?v=20261031-r1",
+      "initiatorType": "script",
+      "duration": 168,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:60876/organic-nomenclature-3/reviews/alkanes-20261109/js/vendor/jsme/namelecule-20261031-r1/jsme.nocache.js",
+      "initiatorType": "script",
+      "duration": 167,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:60876/organic-nomenclature-3/reviews/alkanes-20261109/js/vendor/jquery/jquery-4.0.0.min.js",
+      "initiatorType": "script",
+      "duration": 167,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:60876/organic-nomenclature-3/reviews/alkanes-20261109/js/vendor/dompurify/dompurify-3.4.17.min.js",
+      "initiatorType": "script",
+      "duration": 167,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:60876/organic-nomenclature-3/reviews/alkanes-20261109/js/jsme-nick-nomeclature-moc2-data_54.js?v=v54-sync-20261104-r2",
+      "initiatorType": "script",
+      "duration": 169,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:60876/organic-nomenclature-3/reviews/alkanes-20261109/js/ui-icons-54.js?v=v54-sync-20261104-r2",
+      "initiatorType": "script",
+      "duration": 168,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:60876/organic-nomenclature-3/reviews/alkanes-20261109/js/mulermoc-nom-core-54.js?v=merge54-20261105-r1",
+      "initiatorType": "script",
+      "duration": 169,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:60876/organic-nomenclature-3/reviews/alkanes-20261109/js/mulermoc-nom-molview-54.js?v=step7-numbering-directions-20261108-r3",
+      "initiatorType": "script",
+      "duration": 173,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:60876/organic-nomenclature-3/reviews/alkanes-20261109/js/mulermoc-nom-teaching-54.js?v=alkane-step5-interaction-20261106-r1",
+      "initiatorType": "script",
+      "duration": 176,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:60876/organic-nomenclature-3/reviews/alkanes-20261109/js/mulermoc-nom-note-54.js?v=v54-sync-20261104-r2",
+      "initiatorType": "script",
+      "duration": 176,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:60876/organic-nomenclature-3/reviews/alkanes-20261109/js/namelecule-game-repair.js?v=quiz-answer-reveal-20261109-r1",
+      "initiatorType": "script",
+      "duration": 177,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:60876/organic-nomenclature-3/reviews/alkanes-20261109/js/namelecule-quiz-checkpoints.js?v=quiz-answer-reveal-20261109-r1",
+      "initiatorType": "script",
+      "duration": 178,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:60876/organic-nomenclature-3/reviews/alkanes-20261109/js/namelecule-chemistry-client.js?v=verified-engines-20261105-r1",
+      "initiatorType": "script",
+      "duration": 176,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:60876/organic-nomenclature-3/reviews/alkanes-20261109/js/namelecule-repair-generator.js?v=engine-pilot-20261105-r1",
+      "initiatorType": "script",
+      "duration": 176,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:60876/organic-nomenclature-3/reviews/alkanes-20261109/js/namelecule-generated-repair-checkpoint.js?v=quiz-answer-reveal-20261109-r1",
+      "initiatorType": "script",
+      "duration": 174,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:60876/organic-nomenclature-3/reviews/alkanes-20261109/js/mulermoc-nom-scenario-54.js?v=step7-numbering-directions-20261108-r3",
+      "initiatorType": "script",
+      "duration": 125,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:60876/organic-nomenclature-3/reviews/alkanes-20261109/js/mulermoc-nom-iupac-54.js?v=merge54-20261105-r1",
+      "initiatorType": "script",
+      "duration": 126,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:60876/organic-nomenclature-3/reviews/alkanes-20261109/js/mulermoc-nom-lang-54.js?v=merge54-20261105-r1",
+      "initiatorType": "script",
+      "duration": 126,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:60876/organic-nomenclature-3/reviews/alkanes-20261109/js/mulermoc-nom-name-en-54.js?v=v54-upstream-20261104-r2",
+      "initiatorType": "script",
+      "duration": 126,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:60876/organic-nomenclature-3/reviews/alkanes-20261109/js/vendor/jsme/namelecule-20261031-r1/96E40B969193BD74B8A621486920E79C.cache.js",
+      "initiatorType": "script",
+      "duration": 125,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:60876/organic-nomenclature-3/reviews/alkanes-20261109/js/vendor/jsme/namelecule-20261031-r1/jsa.css",
+      "initiatorType": "link",
+      "duration": 0,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:60876/organic-nomenclature-3/reviews/alkanes-20261109/js/vendor/jsme/namelecule-20261031-r1/gwt/chrome/chrome.css",
+      "initiatorType": "link",
+      "duration": 0,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:60876/organic-nomenclature-3/reviews/alkanes-20261109/js/vendor/jsme/namelecule-20261031-r1/gwt/chrome/mosaic.css",
+      "initiatorType": "link",
+      "duration": 0,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:60876/organic-nomenclature-3/reviews/alkanes-20261109/js/vendor/jsme/namelecule-20261031-r1/FEB169D74546A3B279D22AE09AFB86BD.cache.js",
+      "initiatorType": "script",
+      "duration": 2,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:60876/organic-nomenclature-3/reviews/alkanes-20261109/js/vendor/jsmol/namelecule-20261031-r1/JSmol.min.js",
+      "initiatorType": "script",
+      "duration": 4,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:60876/favicon.ico",
+      "initiatorType": "other",
+      "duration": 587,
+      "transferSize": 0,
+      "responseStatus": 404
+    },
+    {
+      "name": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/package.js",
+      "initiatorType": "xmlhttprequest",
+      "duration": 2,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/package.js",
+      "initiatorType": "xmlhttprequest",
+      "duration": 3,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corejmol.z.js",
+      "initiatorType": "xmlhttprequest",
+      "duration": 3,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/J/translation/PO.js",
+      "initiatorType": "xmlhttprequest",
+      "duration": 2,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corescript.z.js",
+      "initiatorType": "xmlhttprequest",
+      "duration": 5,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/J/api/JmolSelectionListener.js",
+      "initiatorType": "xmlhttprequest",
+      "duration": 3,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/J/translation/JmolApplet/el.po",
+      "initiatorType": "xmlhttprequest",
+      "duration": 2,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:60876/organic-nomenclature-3/reviews/alkanes-20261109/mols/nomeclature-moc2/methane_3D.sdf",
+      "initiatorType": "fetch",
+      "duration": 2,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/smiles/C/property/IUPACName,Title,CanonicalSMILES,ConnectivitySMILES/JSON",
+      "initiatorType": "fetch",
+      "duration": 9,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/coretext.z.js",
+      "initiatorType": "xmlhttprequest",
+      "duration": 3,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:60876/organic-nomenclature-3/reviews/alkanes-20261109/mols/nomeclature-moc2/methane_3D.sdf",
+      "initiatorType": "xmlhttprequest",
+      "duration": 2,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:60876/organic-nomenclature-3/reviews/alkanes-20261109/spt/init-54.spt",
+      "initiatorType": "xmlhttprequest",
+      "duration": 2,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/J/shape/Halos.js",
+      "initiatorType": "xmlhttprequest",
+      "duration": 2,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/297/synonyms/JSON",
+      "initiatorType": "fetch",
+      "duration": 4,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/J/render/HalosRenderer.js",
+      "initiatorType": "xmlhttprequest",
+      "duration": 2,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:60876/organic-nomenclature-3/reviews/alkanes-20261109/scenarios/alkanes-user-3.scenario.json",
+      "initiatorType": "fetch",
+      "duration": 3,
+      "transferSize": 33572,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:60876/organic-nomenclature-3/reviews/alkanes-20261109/mols/nomeclature-moc2/pentane_3D.sdf",
+      "initiatorType": "fetch",
+      "duration": 7,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/smiles/CCCCC/property/IUPACName,Title,CanonicalSMILES,ConnectivitySMILES/JSON",
+      "initiatorType": "fetch",
+      "duration": 4,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:60876/organic-nomenclature-3/reviews/alkanes-20261109/mols/nomeclature-moc2/pentane_3D.sdf",
+      "initiatorType": "xmlhttprequest",
+      "duration": 2,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:60876/organic-nomenclature-3/reviews/alkanes-20261109/spt/init-54.spt",
+      "initiatorType": "xmlhttprequest",
+      "duration": 2,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/8003/synonyms/JSON",
+      "initiatorType": "fetch",
+      "duration": 400,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:60876/organic-nomenclature-3/reviews/alkanes-20261109/games/data/alkane-structures.json",
+      "initiatorType": "fetch",
+      "duration": 5,
+      "transferSize": 15899,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:60876/organic-nomenclature-3/reviews/alkanes-20261109/js/chemistry-engines/3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306.js",
+      "initiatorType": "fetch",
+      "duration": 12,
+      "transferSize": 217031,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:60876/organic-nomenclature-3/reviews/alkanes-20261109/js/chemistry-engines/3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306.js",
+      "initiatorType": "fetch",
+      "duration": 12,
+      "transferSize": 217031,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:60876/organic-nomenclature-3/reviews/alkanes-20261109/js/chemistry-engines/3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306.js",
+      "initiatorType": "fetch",
+      "duration": 13,
+      "transferSize": 217031,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:60876/organic-nomenclature-3/reviews/alkanes-20261109/js/namelecule-chemistry-worker.js?v=verified-engines-20261105-r1",
+      "initiatorType": "other",
+      "duration": 9,
+      "transferSize": 7462,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:60876/organic-nomenclature-3/reviews/alkanes-20261109/js/namelecule-chemistry-worker.js?v=verified-engines-20261105-r1",
+      "initiatorType": "other",
+      "duration": 3,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:60876/organic-nomenclature-3/reviews/alkanes-20261109/js/namelecule-chemistry-worker.js?v=verified-engines-20261105-r1",
+      "initiatorType": "other",
+      "duration": 3,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:60876/organic-nomenclature-3/reviews/alkanes-20261109/js/namelecule-chemistry-worker.js?v=verified-engines-20261105-r1",
+      "initiatorType": "other",
+      "duration": 3,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:60876/organic-nomenclature-3/reviews/alkanes-20261109/js/namelecule-chemistry-worker.js?v=verified-engines-20261105-r1",
+      "initiatorType": "other",
+      "duration": 2,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:60876/organic-nomenclature-3/reviews/alkanes-20261109/js/namelecule-chemistry-worker.js?v=verified-engines-20261105-r1",
+      "initiatorType": "other",
+      "duration": 3,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:60876/organic-nomenclature-3/reviews/alkanes-20261109/js/namelecule-chemistry-worker.js?v=verified-engines-20261105-r1",
+      "initiatorType": "other",
+      "duration": 3,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:60876/organic-nomenclature-3/reviews/alkanes-20261109/js/namelecule-chemistry-worker.js?v=verified-engines-20261105-r1",
+      "initiatorType": "other",
+      "duration": 4,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:60876/organic-nomenclature-3/reviews/alkanes-20261109/games/assets/name-repair/propane.svg",
+      "initiatorType": "img",
+      "duration": 5,
+      "transferSize": 769,
+      "responseStatus": 404
+    },
+    {
+      "name": "https://region1.google-analytics.com/g/collect?v=2&tid=G-1V8NWYY46Y&gtm=45je6b41v9247675757za208zd9247675757xf1&_p=1794204508811&gcd=13l3l3l2l1l1&npa=1&dma_cps=a&dma=1&_eu=AAAAAAQ&cid=1531993512.1794204504&frm=0&ngs=1&pscdl=noapi&rcb=4&sr=1366x768&ul=el-gr&_s=1&tag_exp=115938465~115938468~118897920~118897930~120213116~120385423~120412526~120420414~120469145~120469153~121246026~121246034~123814183&sid=1794204504&sct=1&seg=1&dl=http%3A%2F%2F127.0.0.1%2Forganic-nomenclature-3%2Freviews%2Falkanes-20261109%2Fmulermoc-nom-54.html%3Fscenario%3Dscenarios%2Falkanes-user-3.scenario.json%26present%3D1%26from%3Dtheory-library%26v%3Dalkanes-personal-20261106-r1&dr=http%3A%2F%2F127.0.0.1%3A60876%2Forganic-nomenclature-3%2Freviews%2Falkanes-20261109%2Fdesign%2Ftheory-library.html%3Fv%3Dteacher-prefix-20261109&dt=Namelecule%20%E2%80%94%20%CE%9F%CE%BD%CE%BF%CE%BC%CE%B1%CF%84%CE%BF%CE%BB%CE%BF%CE%B3%CE%AF%CE%B1%20%CE%9F%CF%81%CE%B3%CE%B1%CE%BD%CE%B9%CE%BA%CF%8E%CE%BD%20%CE%95%CE%BD%CF%8E%CF%83%CE%B5%CF%89%CE%BD&en=page_view&_ee=1&tfd=6972",
+      "initiatorType": "fetch",
+      "duration": 655,
+      "transferSize": 0,
+      "responseStatus": 0
+    }
+  ]
+}

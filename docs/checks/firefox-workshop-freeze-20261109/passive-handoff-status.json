@@ -1,0 +1,517 @@
+{
+  "title": "Namelecule — ΑΥΤΟΜΑΤΟΣ ΕΛΕΓΧΟΣ — διαθέσιμο για δοκιμή",
+  "url": "http://127.0.0.1:8013/mulermoc-nom-54.html?scenario=scenarios/alkanes-user-3.scenario.json&v=workshop-manual-1794197282#step=11",
+  "step": 10,
+  "visibility": "visible",
+  "focus": true,
+  "active": "",
+  "modal": {
+    "present": true,
+    "open": true,
+    "topLayer": true
+  },
+  "heart": {
+    "raf": 9815,
+    "timers": 1655,
+    "rafAgeMs": 18.160000000003492,
+    "timerAgeMs": 24
+  },
+  "image": {
+    "src": "http://127.0.0.1:8013/games/assets/name-repair/dimethyl_2_3_butane.svg",
+    "complete": true,
+    "naturalWidth": 281,
+    "className": "diagram-image is-ready"
+  },
+  "hostBusy": "false",
+  "hits": [
+    {
+      "selector": "#nlQuizOpen",
+      "present": true,
+      "target": "nlQuizOpen",
+      "disabled": false,
+      "rect": {
+        "left": 928.4000244140625,
+        "top": 227.0500030517578,
+        "width": 182.60000610351562,
+        "height": 44
+      },
+      "hit": "",
+      "hitClass": "repair-actions",
+      "receives": false
+    },
+    {
+      "selector": "#nlQuizBack",
+      "present": true,
+      "target": "nlQuizBack",
+      "disabled": false,
+      "rect": {
+        "left": 1024.4166259765625,
+        "top": 62.83332824707031,
+        "width": 184.5833282470703,
+        "height": 44
+      },
+      "hit": "nlQuizBack",
+      "hitClass": "nl-quiz-button nl-quiz-back",
+      "receives": true
+    },
+    {
+      "selector": "#nlQuizDialog [id$='-check-button']",
+      "present": true,
+      "target": "nl-repair-1-check-button",
+      "disabled": true,
+      "rect": {
+        "left": 625.88330078125,
+        "top": 247.75,
+        "width": 150,
+        "height": 47
+      },
+      "hit": "nl-repair-1-check-button",
+      "hitClass": "primary",
+      "receives": true
+    },
+    {
+      "selector": "#nlQuizDialog .part-button",
+      "present": true,
+      "target": "nl-repair-1-part-component-0",
+      "disabled": true,
+      "rect": {
+        "left": 625.88330078125,
+        "top": -24.683334350585938,
+        "width": 59.23333740234375,
+        "height": 47
+      },
+      "hitClass": null,
+      "receives": false
+    },
+    {
+      "selector": "#nlQuizDialog .choice-button",
+      "present": true,
+      "target": "nl-repair-1-choice-2",
+      "disabled": true,
+      "rect": {
+        "left": 625.88330078125,
+        "top": 101.78334045410156,
+        "width": 85.5,
+        "height": 44
+      },
+      "hit": "nl-repair-1-choice-2",
+      "hitClass": "choice-button",
+      "receives": true
+    }
+  ],
+  "inputs": [
+    {
+      "t": 148,
+      "kind": "click",
+      "info": {
+        "id": "",
+        "cls": "scList scIconBtn scIconTextBtn",
+        "trusted": false,
+        "active": ""
+      }
+    },
+    {
+      "t": 154,
+      "kind": "click",
+      "info": {
+        "id": "",
+        "cls": "scPresentStep scIconBtn",
+        "trusted": false,
+        "active": ""
+      }
+    },
+    {
+      "t": 140359,
+      "kind": "pointerdown",
+      "info": {
+        "id": "nlQuizOpen",
+        "cls": "nl-quiz-button nl-quiz-open",
+        "trusted": true,
+        "active": ""
+      }
+    },
+    {
+      "t": 140361,
+      "kind": "focusin",
+      "info": {
+        "id": "nlQuizOpen",
+        "cls": "nl-quiz-button nl-quiz-open",
+        "trusted": true,
+        "active": "nlQuizOpen"
+      }
+    },
+    {
+      "t": 140366,
+      "kind": "pointerup",
+      "info": {
+        "id": "nlQuizOpen",
+        "cls": "nl-quiz-button nl-quiz-open",
+        "trusted": true,
+        "active": "nlQuizOpen"
+      }
+    },
+    {
+      "t": 140368,
+      "kind": "click",
+      "info": {
+        "id": "nlQuizOpen",
+        "cls": "nl-quiz-button nl-quiz-open",
+        "trusted": true,
+        "active": "nlQuizOpen"
+      }
+    },
+    {
+      "t": 140413,
+      "kind": "focusout",
+      "info": {
+        "id": "nlQuizOpen",
+        "cls": "nl-quiz-button nl-quiz-open",
+        "trusted": true,
+        "active": ""
+      }
+    },
+    {
+      "t": 140416,
+      "kind": "focusin",
+      "info": {
+        "id": "nlQuizBack",
+        "cls": "nl-quiz-button nl-quiz-back",
+        "trusted": true,
+        "active": "nlQuizBack"
+      }
+    },
+    {
+      "t": 140647,
+      "kind": "focusout",
+      "info": {
+        "id": "nlQuizBack",
+        "cls": "nl-quiz-button nl-quiz-back",
+        "trusted": true,
+        "active": ""
+      }
+    },
+    {
+      "t": 140648,
+      "kind": "focusin",
+      "info": {
+        "id": "",
+        "cls": "",
+        "trusted": true,
+        "active": ""
+      }
+    },
+    {
+      "t": 160857,
+      "kind": "pointerdown",
+      "info": {
+        "id": "nl-repair-1-part-component-0",
+        "cls": "part-button",
+        "trusted": true,
+        "active": ""
+      }
+    },
+    {
+      "t": 160859,
+      "kind": "focusout",
+      "info": {
+        "id": "",
+        "cls": "",
+        "trusted": true,
+        "active": ""
+      }
+    },
+    {
+      "t": 160859,
+      "kind": "focusin",
+      "info": {
+        "id": "nl-repair-1-part-component-0",
+        "cls": "part-button",
+        "trusted": true,
+        "active": "nl-repair-1-part-component-0"
+      }
+    },
+    {
+      "t": 160873,
+      "kind": "pointerup",
+      "info": {
+        "id": "nl-repair-1-part-component-0",
+        "cls": "part-button",
+        "trusted": true,
+        "active": "nl-repair-1-part-component-0"
+      }
+    },
+    {
+      "t": 160873,
+      "kind": "click",
+      "info": {
+        "id": "nl-repair-1-part-component-0",
+        "cls": "part-button",
+        "trusted": true,
+        "active": "nl-repair-1-part-component-0"
+      }
+    },
+    {
+      "t": 160879,
+      "kind": "focusin",
+      "info": {
+        "id": "nl-repair-1-part-component-0",
+        "cls": "part-button",
+        "trusted": true,
+        "active": "nl-repair-1-part-component-0"
+      }
+    },
+    {
+      "t": 162372,
+      "kind": "pointerdown",
+      "info": {
+        "id": "nl-repair-1-choice-2",
+        "cls": "choice-button",
+        "trusted": true,
+        "active": "nl-repair-1-part-component-0"
+      }
+    },
+    {
+      "t": 162374,
+      "kind": "focusout",
+      "info": {
+        "id": "nl-repair-1-part-component-0",
+        "cls": "part-button",
+        "trusted": true,
+        "active": ""
+      }
+    },
+    {
+      "t": 162374,
+      "kind": "focusin",
+      "info": {
+        "id": "nl-repair-1-choice-2",
+        "cls": "choice-button",
+        "trusted": true,
+        "active": "nl-repair-1-choice-2"
+      }
+    },
+    {
+      "t": 162389,
+      "kind": "pointerup",
+      "info": {
+        "id": "nl-repair-1-choice-2",
+        "cls": "choice-button",
+        "trusted": true,
+        "active": "nl-repair-1-choice-2"
+      }
+    },
+    {
+      "t": 162390,
+      "kind": "click",
+      "info": {
+        "id": "nl-repair-1-choice-2",
+        "cls": "choice-button",
+        "trusted": true,
+        "active": "nl-repair-1-choice-2"
+      }
+    },
+    {
+      "t": 162394,
+      "kind": "focusin",
+      "info": {
+        "id": "nl-repair-1-choice-2",
+        "cls": "choice-button",
+        "trusted": true,
+        "active": "nl-repair-1-choice-2"
+      }
+    },
+    {
+      "t": 164815,
+      "kind": "pointerdown",
+      "info": {
+        "id": "nl-repair-1-check-button",
+        "cls": "primary",
+        "trusted": true,
+        "active": "nl-repair-1-choice-2"
+      }
+    },
+    {
+      "t": 164816,
+      "kind": "focusout",
+      "info": {
+        "id": "nl-repair-1-choice-2",
+        "cls": "choice-button",
+        "trusted": true,
+        "active": ""
+      }
+    },
+    {
+      "t": 164817,
+      "kind": "focusin",
+      "info": {
+        "id": "nl-repair-1-check-button",
+        "cls": "primary",
+        "trusted": true,
+        "active": "nl-repair-1-check-button"
+      }
+    },
+    {
+      "t": 164830,
+      "kind": "pointerup",
+      "info": {
+        "id": "nl-repair-1-check-button",
+        "cls": "primary",
+        "trusted": true,
+        "active": "nl-repair-1-check-button"
+      }
+    },
+    {
+      "t": 164831,
+      "kind": "click",
+      "info": {
+        "id": "nl-repair-1-check-button",
+        "cls": "primary",
+        "trusted": true,
+        "active": "nl-repair-1-check-button"
+      }
+    },
+    {
+      "t": 164842,
+      "kind": "focusout",
+      "info": {
+        "id": "nl-repair-1-check-button",
+        "cls": "primary",
+        "trusted": true,
+        "active": ""
+      }
+    },
+    {
+      "t": 164842,
+      "kind": "focusin",
+      "info": {
+        "id": "",
+        "cls": "primary",
+        "trusted": true,
+        "active": ""
+      }
+    }
+  ],
+  "errors": [],
+  "lastStages": [
+    {
+      "t": 781,
+      "kind": "modal-mutation",
+      "info": {
+        "image": null
+      }
+    },
+    {
+      "t": 140368,
+      "kind": "showModal-before",
+      "info": {
+        "id": "nlQuizDialog",
+        "active": "nlQuizOpen"
+      }
+    },
+    {
+      "t": 140416,
+      "kind": "showModal-after",
+      "info": {
+        "open": true,
+        "modal": true,
+        "active": "nlQuizBack"
+      }
+    },
+    {
+      "t": 140463,
+      "kind": "modal-mutation",
+      "info": {
+        "open": true,
+        "busy": "true",
+        "text": "Η μηχανή ετοιμάζει τις τρεις επισκευές…",
+        "image": null
+      }
+    },
+    {
+      "t": 140505,
+      "kind": "analyze-ok",
+      "info": {
+        "id": "propane",
+        "ms": 66
+      }
+    },
+    {
+      "t": 140511,
+      "kind": "analyze-ok",
+      "info": {
+        "id": "methane",
+        "ms": 72
+      }
+    },
+    {
+      "t": 140513,
+      "kind": "analyze-ok",
+      "info": {
+        "id": "ethane",
+        "ms": 74
+      }
+    },
+    {
+      "t": 140557,
+      "kind": "analyze-ok",
+      "info": {
+        "id": "butane",
+        "ms": 44
+      }
+    },
+    {
+      "t": 140557,
+      "kind": "analyze-ok",
+      "info": {
+        "id": "methyl_2_pentane",
+        "ms": 44
+      }
+    },
+    {
+      "t": 140578,
+      "kind": "analyze-ok",
+      "info": {
+        "id": "pentane",
+        "ms": 65
+      }
+    },
+    {
+      "t": 140613,
+      "kind": "analyze-ok",
+      "info": {
+        "id": "dimethyl_2_3_butane",
+        "ms": 35
+      }
+    },
+    {
+      "t": 140616,
+      "kind": "analyze-ok",
+      "info": {
+        "id": "ethyl_3_dimethyl_2_5_hexane",
+        "ms": 38
+      }
+    },
+    {
+      "t": 140623,
+      "kind": "mountRound",
+      "info": {
+        "id": "engine-dimethyl_2_3_butane-branch-locants-f0d60cff",
+        "kind": "replace"
+      }
+    },
+    {
+      "t": 140689,
+      "kind": "modal-mutation",
+      "info": {
+        "open": true,
+        "busy": "false",
+        "text": "Με διακλαδώσειςΣΥΝΕΡΓΕΙΟ ΟΝΟΜΑΤΩΝΕπισκευή ονόματοςΈλεγξε τα σημεία σύνδεσης των διακλαδώσεων και τη φορά αρίθμησης.1Παρατήρησε τη δομή2Επισκεύασε το όνομα3Έλεγξε την επιλογή σουΗ δομή στο επίκεντροΑνεπτυγμένος τύποςΜεγέθυνση σχεδίουΠαρατήρησε την κύρ",
+        "image": {
+          "complete": true,
+          "width": 281,
+          "cls": "diagram-image is-ready"
+        }
+      }
+    }
+  ]
+}

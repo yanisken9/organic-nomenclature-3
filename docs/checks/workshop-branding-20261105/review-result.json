@@ -1,0 +1,42 @@
+{
+  "status": "complete locally",
+  "reviewer": "/root/review_workshop_branding_20261105",
+  "roleId": "NAMELECULE_REVIEWER_V1_20261023",
+  "freshContext": true,
+  "readOnlyBehavior": true,
+  "manifestSHA256": "500a371283cfbc25b41a35cfacdaa7775e6d9fa38d036f8eb93dbf868197a998",
+  "reviewedPaths": 10,
+  "allReviewedHashesRetained": true,
+  "findings": [],
+  "independentChecks": [
+    "Three source diffs against exact before snapshots",
+    "All10targethashes and7preserveddependency hashes",
+    "Native JavaScriptCore JSCheckScriptSyntax passed",
+    "Supplied1500px/320px screenshots inspected"
+  ],
+  "developerBrowserEvidence": {
+    "checks": 20,
+    "uncaughtJavaScriptErrors": 0,
+    "modes": [
+      "original",
+      "engine"
+    ],
+    "widths": [
+      1500,
+      390,
+      320
+    ],
+    "independentBrowserRerun": false
+  },
+  "limits": [
+    "No independent interactive/browser or assistive-technology check.",
+    "Chemistry/core/viewer/scenario changes outside this cosmeticdelta."
+  ],
+  "coreChangesThisSession": false,
+  "sourceSHA256": {
+    "js/namelecule-game-repair.js": "b8394f7f0e5ad5287100b8a2aec8c123a789955ca0ac8876e18edf544b2026f6",
+    "css/namelecule-games.css": "53cfefd2a3dfd24f7aaac8f8a7394dfae6e87263103b2af58a184c40296bd9af",
+    "games/name-repair.html": "123b8c8367ae337df47987c52ec825fb854e759fb45acdde66e662d9f9a71ed7"
+  },
+  "commitPushPublication": false
+}

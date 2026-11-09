@@ -1,0 +1,119 @@
+{
+  "passiveOnly": true,
+  "commands": "Read existing nativewindowstate and current DOM only. No scroll/focus/click/navigation/activation/resize/screenshot.",
+  "browserPid": 56371,
+  "nativeWindow": [
+    {
+      "active": true,
+      "clientWindow": "5144f954-f64f-49b4-a15a-1264209e0515",
+      "height": 735,
+      "state": "normal",
+      "width": 1280,
+      "x": 4,
+      "y": 25
+    }
+  ],
+  "status": {
+    "url": "http://127.0.0.1:8013/mulermoc-nom-54.html?scenario=scenarios/alkanes-user-3.scenario.json&v=workshop-manual-1794197282#step=12",
+    "step": 11,
+    "dialogOpen": false,
+    "modal": false,
+    "active": "",
+    "visibility": "visible",
+    "focus": true,
+    "viewport": {
+      "width": 1280,
+      "height": 650
+    },
+    "heart": {
+      "raf": 20344,
+      "timers": 3423,
+      "lastRAF": 350344.62,
+      "lastTimer": 350302
+    },
+    "image": null,
+    "progress": "",
+    "hostBusy": null,
+    "round": {
+      "id": "engine-ethyl_3_dimethyl_2_5_hexane-parent-length-19105509",
+      "kind": "replace"
+    }
+  },
+  "liveMeasurement": {
+    "time": "2026-11-09T04:13:53.455Z",
+    "step": 11,
+    "dialog": {
+      "open": false,
+      "modal": false,
+      "scrollTop": 0,
+      "clientHeight": 0,
+      "scrollHeight": 0,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+      }
+    },
+    "active": "",
+    "focus": true,
+    "visibility": "visible",
+    "viewport": {
+      "width": 1280,
+      "height": 650,
+      "dpr": 2
+    },
+    "progress": ""
+  },
+  "selectors": [
+    {
+      "selector": "#nlQuizDialog .nl-quiz-dialog-header",
+      "present": true,
+      "tag": "DIV",
+      "className": "nl-quiz-dialog-header",
+      "text": "Μικρή στάση για επισκευήΕπιστροφή στη θεωρία",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+      },
+      "styles": {
+        "position": "sticky",
+        "top": "0px",
+        "zIndex": "2",
+        "overflowY": "visible",
+        "paddingTop": "14px",
+        "paddingBottom": "14px",
+        "marginTop": "0px",
+        "marginBottom": "0px",
+        "height": "auto",
+        "lineHeight": "24px",
+        "scrollMarginTop": "0px"
+      }
+    },
+    {
+      "selector": "#nlQuizDialog .round-header",
+      "present": false
+    },
+    {
+      "selector": "#nlQuizDialog .round-header h1",
+      "present": false
+    },
+    {
+      "selector": "#nlQuizDialog .objective",
+      "present": false
+    }
+  ],
+  "objectiveTextMatches": [],
+  "interpretation": "Current page is step12 with quiz dialog closed. Its zero rectangles and absent destroyed round/objective nodes cannot measure overlap visible in a historical quiz photo. No recreation was performed on user's current context.",
+  "limitation": "Computed sticky header style is observable on closed retained dialog header, but closed dialog layout is zero and does not establish the photo's exact scroll/occlusion state."
+}

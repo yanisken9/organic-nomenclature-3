@@ -1,0 +1,20 @@
+{
+  "date": "2026-11-09",
+  "purpose": "Read-only reference during native wheel cancellation diagnosis; not proof of this observed cause",
+  "sources": [
+    {
+      "url": "https://drafts.csswg.org/cssom-view/#scrolling",
+      "basis": "Performing a scroll aborts ongoing smooth scroll; smooth duration/style user-agent defined. Installed behavior still requires direct tests."
+    },
+    {
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollTo",
+      "basis": "Element scroll API, smooth/instant options; do not rely on newer Promise return value for compatibility."
+    },
+    {
+      "url": "https://bugzilla.mozilla.org/show_bug.cgi?id=1932985",
+      "basis": "Primary historical APZ wheel interaction report, verified fixed for Firefox136. Does not identify our Firefox159 observation."
+    }
+  ],
+  "measured_current_unknown": "Post-wheel rebound also reproduced in an isolated fixture with native smooth scroll and NO application cancellation writes. No application rescheduled scroll was identified. Timing/positions differ between arms; quantitative effects of our listener are not established. Original failed strict assertion retained. Main-flow criterion refined to manual direction/takeover, final stability and interruption of the original reveal destination, allowing observed native settling.",
+  "controls": "browser/native-wheel-control.json and browser/native-wheel-relative-last-event.json"
+}

@@ -1,0 +1,42 @@
+{
+  "status": "awaiting user approval before source changes",
+  "scope": "First-stage wrong-component feedback for embedded basic generated alkane quizzes, both lesson sets. Applies wherever that shared generated-lesson checkpoint type is used, including older generated alkane lessons; standalone game unchanged.",
+  "reproduction": "before-headless-reproduction.json reproduces screenshot propane/ίν/ιο and generic message using actual pinned chemistry engine and generator; no browser replay yet.",
+  "root_cause": "Generator assigns one WRONG_PART string regardless of fault.kind. UI already consistently displays round.feedback.wrongPart in live, restored and evaluate branches.",
+  "implementation_choice": "Decorate a temporary round/feedback copy in generated-checkpoint adapter before mountRound, using four stable fault.kind mappings. Preserve canonical generated round objects and all generator/UI defaults. Unknown or order rounds retain original feedback.",
+  "affected_runtime_files": [
+    "js/namelecule-generated-repair-checkpoint.js",
+    "mulermoc-nom-54.html (adapter cache URL only)"
+  ],
+  "messages": {
+    "parent-length": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το πλήθος των ατόμων C της κύριας αλυσίδας.",
+    "bond-type": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+    "branch-locants": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά τις θέσεις σύνδεσης των διακλαδώσεων και τη φορά αρίθμησης.",
+    "branch-multiplier": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το πλήθος των ίδιων διακλαδώσεων."
+  },
+  "wording_reason": "Categorical unrelated can be inaccurate when correct parent/locants still relate indirectly to target numbering or multiplicity. Mission reminder preserves requested intent without false exclusions or answer disclosure.",
+  "unchanged_contracts": [
+    "Core/chemical engine and engine SHA",
+    "Catalog/generator and RNG/seeds/IDs/choices/answers",
+    "Recipe/scenario JSON and progress signature",
+    "Standalone game and challenge mode",
+    "Ordering quizzes and success explanation"
+  ],
+  "verification": [
+    "Original before comparison and known/unknown/order mappings",
+    "Canonical round immutability and same-seed identity; existing stored answers still rechecked identically",
+    "Live wrong selection and restoration after dialog reopen/refresh; correct selection/retry clears or replaces reminder",
+    "Both embedded sets, relevant focus categories, narrow viewport wrapping/live region",
+    "Attempt/miss counters and actual three-repair unlock/return-to-theory flow",
+    "One independent consolidated Reviewer after implementation"
+  ],
+  "preflight_agents": [
+    "/root/workshop_stop_visibility_preflight",
+    "/root/alkane_wrong_part_learning_20261107"
+  ],
+  "chemical_rule_changes": false,
+  "scenario_json_changes": false,
+  "desktop_json_export_required": false,
+  "core_changed": false,
+  "publication_authorized": false
+}

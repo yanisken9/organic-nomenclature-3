@@ -1,0 +1,76 @@
+{
+  "date": "2026-11-09",
+  "status": "Investigation ongoing; whole-browser freeze not resolved",
+  "user_reports": {
+    "step": 11,
+    "scope": "Neither browser address bar/menu nor page responds",
+    "escape_attempt": "Physical Esc once did not restore response",
+    "window_action": "User used upper-left green maximize/fullscreen control; cannot recall cursor remaining there"
+  },
+  "native_samples": {
+    "firefox-content-42117.sample.txt": "4b2dc58fa7fd5b094ec79ec5759f1390f5ebbca805c0a559512455f4003ffb43",
+    "firefox-gpu-564.sample.txt": "f9932d619264a9bb4e6b12410a15daafaf5a8236e4791e2a5a28a7b2898776d8",
+    "firefox-parent-493-post-esc.sample.txt": "b4ebe34dae4f4a6bd9ed0a1c9f3c604c862c3c3f7c158e48e0d2cdd8c8fd2f4a",
+    "firefox-parent-493.sample.txt": "6538b491e05e22f5dd5cb691c3a1f31e963e3df14be910ee900542fd893ab608"
+  },
+  "measured_facts": [
+    "Only personal Firefox parent PID493 was observed before launching separately owned Developer checks; not a dedicated Namelecule instance. No termination or preference change.",
+    "Parent493 before and after user physical Esc remains in delayed AppKit zoom-menu showMenu / NSThemeWidgetZoomMenuRemoteView nested event loop. Initial421 and postEsc1789 main-thread samples include these frames.",
+    "Nov5 sampled frozen parent7534 lacked zoom-menu nesting. Same reported Firefox159.0.1/macOS14.8.9, different process.",
+    "Sampled content42117 was not independently mapped to the lesson tab. Captured stacks do not establish JS spin, OOM, or total absence of one.",
+    "lsappinfo reports PID493 foreground; IsUnresponsive=NULL, so this field does not verify response.",
+    "Source tracing shows lesson fScenarioApply invokes fSelectMol even for hidden viewers; fSelectMol schedules2D/3D load, and hidden3D chrome subsequently queues zap. Causal relation to whole-browser freeze unproven."
+  ],
+  "hypotheses": [
+    "Native window-menu/input interaction may contribute to current loss of response. It may instead reflect interaction attempted after initial freeze.",
+    "Hidden JSmol work may trigger known applet exceptions; no proof it causes browser chrome input failure."
+  ],
+  "known_separate_issue": "bufferedImage / this.platform is null predates recent changes and was logged while35Nov8 browser functional checks completed.",
+  "plan_approval": "User approved step11 JSON-only workshop-only presentation matching step4, preserving second checkpoint and Desktop9 export with recovery and verification. No JS/core or Firefox preference/process change approved by this plan.",
+  "next": "Reproduce step11 visible before/after in owned isolated Firefox; investigate native zoom-menu/input path separately. No symptom hiding/restart presented as durable fix.",
+  "core_changed": false,
+  "native_control_results": {
+    "about_blank_transitions": 6,
+    "before_step11_transitions": 6,
+    "current_step11_transitions": 6,
+    "all_completed": true,
+    "javascript_errors": 0,
+    "root_cause_established": false,
+    "method": "InstalledFirefox159 BiDi browser.setClientWindowState fullscreen/normal, GUI profile; native chrome fullscreen, not green-hover menu",
+    "before_source_sha256": "d5463463b14c1f694dbd381c65a7b4aa466eebd9143f4f91c565894f26645cd4",
+    "current_source_sha256": "607a530a2d3ba151026517c61d6f7a31644e15abf82a687e778b7453d80089b7"
+  },
+  "native_control_limitations": [
+    "AXIsProcessTrusted false via ctypes; no accessibility permission requested or changed. Cannot automate green-hover popup.",
+    "Optional Swift accessibility query failed to compile due existing SwiftBridging module redefinition; ctypes direct read succeeded. No compiler/system repair attempted.",
+    "Initial lesson test reused leftoverBiDi session; maximum-active-sessions test-only error preserved separately. Restarted only own55515 after executable/profile guard; lesson matrix completed on own55645.",
+    "Causal native-popup experiment requires physical user interaction. Asked user to test green control on new ownGUI; answer pending.",
+    "Loadedj2sresourceURLs recorded; exact external response bytes not captured. No claim current CDN equals another deployment/cache."
+  ],
+  "step11_implementation": {
+    "approved": true,
+    "changed_paths": [
+      "scenarios/alkanes-user-3.scenario.json",
+      "communication/checkpoints/alkanes-json-export-20261109.json"
+    ],
+    "same_other_steps": true,
+    "same_checkpoint_recipe": true,
+    "desktop_export": "docs/checks/alkane-step11-stop-20261109/export-verification.json",
+    "core_changed": false,
+    "javascript_changed": false,
+    "review": "FreshReviewer completed with no actionable findings; exactfrozenmanifestreverified. See step11review.json"
+  },
+  "manual_test": {
+    "user_request": "Accidentally closed newGUI, requestedreopen",
+    "reopened_pid": 55879,
+    "preparation": "manual-window-preparation.json",
+    "step": 11,
+    "mode": "Authorpreviewonlydiagnostic",
+    "javascript_errors": 0,
+    "user_physical_green_test": "Pending response",
+    "original_personal493_unchanged": true,
+    "paired_control_sample": "manual-window-comparison.json",
+    "left_open_for_user": true,
+    "previous_owned55645_cleaned": "Userclosedoldwindow; remainingownedbackgroundprocessSIGTERMafterexactprofileguard. Current55879andpersonal493untouched."
+  }
+}

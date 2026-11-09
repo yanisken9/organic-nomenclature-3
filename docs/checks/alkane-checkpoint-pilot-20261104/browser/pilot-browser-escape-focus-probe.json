@@ -1,0 +1,189 @@
+{
+  "completed": false,
+  "checks": [
+    {
+      "label": "Cold URL clamps step21 to unsolved step10",
+      "detail": null
+    },
+    {
+      "label": "Next visibly disabled before solution",
+      "detail": null
+    },
+    {
+      "label": "Blocked navigation preserves actual viewer fScenarioGo(20)",
+      "detail": null
+    },
+    {
+      "label": "Blocked navigation preserves actual viewer location.hash=\"step=21\"",
+      "detail": null
+    },
+    {
+      "label": "Actual ArrowRight cannot bypass checkpoint",
+      "detail": null
+    },
+    {
+      "label": "Blocked navigation does not apply molecular snapshot",
+      "detail": null
+    },
+    {
+      "label": "Previous theory accessible",
+      "detail": null
+    },
+    {
+      "label": "Quiz is inside one native lesson dialog",
+      "detail": null
+    },
+    {
+      "label": "No removed hint card",
+      "detail": null
+    },
+    {
+      "label": "Dialog arrows do not navigate theory",
+      "detail": null
+    },
+    {
+      "label": "Agreeing fragment receives only accepted minimal feedback",
+      "detail": null
+    },
+    {
+      "label": "Wrong repair displays authored explanation",
+      "detail": null
+    },
+    {
+      "label": "Wrong submitted repair remains gated",
+      "detail": null
+    },
+    {
+      "label": "Retry retains attempt count",
+      "detail": null
+    },
+    {
+      "label": "Correct candidate can be prepared",
+      "detail": null
+    },
+    {
+      "label": "Correct selection without submitted check cannot unlock",
+      "detail": null
+    },
+    {
+      "label": "All quiz selections and retries preserve viewer snapshot",
+      "detail": null
+    },
+    {
+      "label": "Escape returns to current theory and restores button focus",
+      "detail": null
+    },
+    {
+      "label": "Refresh retains unsolved gate",
+      "detail": null
+    },
+    {
+      "label": "Refresh restores candidate and choices",
+      "detail": null
+    },
+    {
+      "label": "Restored unsubmitted correct answer remains unsolved",
+      "detail": null
+    },
+    {
+      "label": "Explicit return to theory preserves checkpoint",
+      "detail": null
+    },
+    {
+      "label": "Correct checked repair shows full existing explanation",
+      "detail": null
+    },
+    {
+      "label": "Explicit theory Continue follows explanation",
+      "detail": null
+    },
+    {
+      "label": "Correct answer unlocks without advancing or resetting viewer",
+      "detail": null
+    },
+    {
+      "label": "Correct check unlocks navigation",
+      "detail": null
+    },
+    {
+      "label": "Continue closes exercise and applies next theory step",
+      "detail": null
+    },
+    {
+      "label": "Refresh preserves completed progress beyond checkpoint",
+      "detail": null
+    },
+    {
+      "label": "Completed receipt permits later URL/hash destination",
+      "detail": null
+    },
+    {
+      "label": "Revisit restores completed explanation and image-gated Continue",
+      "detail": null
+    },
+    {
+      "label": "844×390 landscape dialog fits viewport without horizontal overflow",
+      "detail": null
+    },
+    {
+      "label": "Embedded zoom stays within quiz without nested modal",
+      "detail": null
+    },
+    {
+      "label": "First Escape closes zoom and keeps exercise",
+      "detail": null
+    },
+    {
+      "label": "844×390 landscape simulated-touch solution and Continue work",
+      "detail": null
+    },
+    {
+      "label": "Missing molecule image disables assessment and retains gate",
+      "detail": null
+    },
+    {
+      "label": "Image failure exposes mission retry",
+      "detail": null
+    },
+    {
+      "label": "Load failure does not trap return to theory",
+      "detail": null
+    },
+    {
+      "label": "Reopen retries and recovers actual diagram",
+      "detail": null
+    },
+    {
+      "label": "Missing controller never bypasses required checkpoint",
+      "detail": null
+    },
+    {
+      "label": "Unknown quiz type never bypasses required checkpoint",
+      "detail": null
+    },
+    {
+      "label": "Author preview remains ungated",
+      "detail": null
+    },
+    {
+      "label": "Starting presentation at later selected step honors gate",
+      "detail": null
+    },
+    {
+      "label": "Actual browser Back/Forward cannot bypass unsolved gate",
+      "detail": null
+    },
+    {
+      "label": "Real schema accepts pilot2, rejects v1 mandatory metadata and skipped question",
+      "detail": {
+        "good": true,
+        "old": true,
+        "skipped": true
+      }
+    }
+  ],
+  "failure": "Timed out: !MuLERMoCScenario.present",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/alkane-checkpoint-pilot-20261104/browser/test-pilot.py\", line 122, in <module>\n    key('\\ue00c');until('!MuLERMoCScenario.present');check(not ev('!!document.querySelector(\"#nlQuizCheckpoint\")'),'Escape exits presentation and removes checkpoint UI')\n  File \"bidi\", line 51, in until\n    open_quiz();screenshot_here('pilot-mission-desktop.png')\nAssertionError: Timed out: !MuLERMoCScenario.present\n",
+  "javascriptErrors": [],
+  "diagnostics": []
+}

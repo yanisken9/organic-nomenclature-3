@@ -1,0 +1,207 @@
+{
+  "date": "2026-11-09",
+  "role": "Developer runtime verification; not independent Reviewer",
+  "completed": true,
+  "productionHashes": {
+    "js/namelecule-game-repair.js": "7d0a0939841f0423377d0ccca66ee9554b70f8a61a7ff020cf833aa0755b5ac7",
+    "js/namelecule-generated-repair-checkpoint.js": "d99aaa972afa2a437bedf1e4eca3c835126f237e5333e33ac1d9d10d5b684d27",
+    "js/namelecule-quiz-checkpoints.js": "7bf5441b52b9b519db79f3e56adec97979668de172b8292c0a714355add35bb7",
+    "mulermoc-nom-54.html": "34ade6e22d3e9afaf8cfeb49d7a75fabada1a915b6d1550f58b83b323d68fb27"
+  },
+  "normal": {
+    "assertions": 111,
+    "semanticActions": 24,
+    "actualLearnerRepairs": 6,
+    "standaloneActualRepairSuccess": true,
+    "pageJavascriptErrors": 0,
+    "realReducedMotionPreference": false,
+    "nativeSmoothActionsWithIntermediatePositions": 19,
+    "flow": "Actualnormallearner library→gate4 threeunbranchedrepairs desktop1280×650/DPR2→gate11 threebranchedrepairs mobile390×760/DPR1includingorder→12/Exit. Unsolvedseed4/1only; nofabricatedsolvedreceipts.",
+    "alreadyVisible": "s4r1-target-alreadyvisible asserted nojump.",
+    "keyboard": {
+      "label": "s4r2-target",
+      "nativeSpaceActivation": true,
+      "settledFocus": {
+        "id": "nl-repair-3-part-component-5",
+        "tag": "BUTTON",
+        "text": "πεντ"
+      },
+      "focusStableAfterInitialInteraction": true
+    },
+    "BackDuringMotion": {
+      "observedScrollBeforeClose": 44.20000076293945,
+      "reopenedScroll": 0,
+      "allReopenSamplesRemainAtTop": true,
+      "counter": "1/3",
+      "selectedTargetRestored": true
+    },
+    "wheel": {
+      "criteria": "Native control A/B/C reproduced residualAPZ settling; verify actualtrustedupwheel direction, final materiallyshortoforiginaldestination, stable>=800msafterlastwheel. No stationaryinstanttakeoverpromise. Originalfailedcriterion retained.",
+      "observedDuringScroll": 12.416666984558105,
+      "actualTrustedWheelEvents": [
+        {
+          "sampleMs": 87,
+          "scroll": 22.483333587646484,
+          "trusted": true,
+          "deltaY": -20
+        },
+        {
+          "sampleMs": 104,
+          "scroll": 43.733333587646484,
+          "trusted": true,
+          "deltaY": -20
+        },
+        {
+          "sampleMs": 121,
+          "scroll": 33.483333587646484,
+          "trusted": true,
+          "deltaY": -20
+        },
+        {
+          "sampleMs": 139,
+          "scroll": 13.483333587646484,
+          "trusted": true,
+          "deltaY": -20
+        },
+        {
+          "sampleMs": 155,
+          "scroll": 10.416666984558105,
+          "trusted": true,
+          "deltaY": -20
+        },
+        {
+          "sampleMs": 188,
+          "scroll": 6.816666603088379,
+          "trusted": true,
+          "deltaY": -20
+        }
+      ],
+      "oldRevealDestination": 110.8500165939331,
+      "finalScroll": 18.950000762939453,
+      "lateSamplesAtLeast800msAfterLastWheel": [
+        18.950000762939453,
+        18.950000762939453,
+        18.950000762939453,
+        18.950000762939453,
+        18.950000762939453,
+        18.950000762939453,
+        18.950000762939453,
+        18.950000762939453,
+        18.950000762939453,
+        18.950000762939453,
+        18.950000762939453,
+        18.950000762939453,
+        18.950000762939453,
+        18.950000762939453,
+        18.950000762939453,
+        18.950000762939453,
+        18.950000762939453,
+        18.950000762939453,
+        18.950000762939453,
+        18.950000762939453,
+        18.950000762939453,
+        18.950000762939453,
+        18.950000762939453,
+        18.950000762939453,
+        18.950000762939453,
+        18.950000762939453,
+        18.950000762939453,
+        18.950000762939453,
+        18.950000762939453,
+        18.950000762939453,
+        18.950000762939453,
+        18.950000762939453,
+        18.950000762939453,
+        18.950000762939453
+      ]
+    },
+    "tallRealContent": {
+      "label": "s11r3-success",
+      "viewport": {
+        "width": 390,
+        "height": 320,
+        "dpr": 1
+      },
+      "range": [
+        ".feedback",
+        ".round-next button"
+      ],
+      "criterion": "Realshortviewport390×320; startofsuccess explanation remainsbelowheader. Continuecanremainbelowfoldwhenrangetall. No synthetictalltext/teststub."
+    }
+  },
+  "reduced": {
+    "assertions": 37,
+    "semanticActions": 9,
+    "actualRepairSuccesses": 1,
+    "pageJavascriptErrors": 0,
+    "realReducedMotionPreference": true,
+    "nativePreference": "SeparateownedFirefoxuser.js ui.prefersReducedMotion1; realmatchMedia true, noproductionstubs",
+    "intermediateSmoothActions": 0
+  },
+  "originalFailureAndControl": {
+    "originalFiles": [
+      "normal-after-initial-wheel-assertion.json",
+      "check-after-initial-wheel.py",
+      "normal-failure.png"
+    ],
+    "originalCriterion": "Strictassertiondemanded nofuturepositivescroll afterupwheel; failed beforeanyrepaircompletion, while motion/focus/Backchecks passed.",
+    "nativeArms": [
+      {
+        "mode": "A",
+        "scrollBeforeWheel": 9.300000190734863,
+        "final": 0
+      },
+      {
+        "mode": "B",
+        "scrollBeforeWheel": 9.966666221618652,
+        "final": 24.350000381469727
+      },
+      {
+        "mode": "C",
+        "scrollBeforeWheel": 29.483333587646484,
+        "final": 13.183333396911621
+      }
+    ],
+    "conclusion": "Postwheelsettling/rebound reproduces inisolatednativesmooth+wheel WITHOUT applicationcancellationwrite. Originalstrictstationarycriterioncouldnotattributeappregression. Rootauthorized revisedcriterion after reviewing preservedA/B/Ccontrols; productionwasnotpatchedtofitassertion.",
+    "limitation": "B/Cfirstwheeltimingandpositionwere notmatched; do notcomparelistenerquality quantitatively. Residualnative/APZ settling remainsplatformvariation, not a promiseofinstantstationarytakeover."
+  },
+  "harnessStartup": "InitialconnectbeatFirefoxendpointstartup, beforeanyappload; preservedharness-startup-note.json. Retriedafterlisteninglog.",
+  "instrumentation": "No app/round API/prototype monkeypatch. Passive rAFscroll/focus sampling andtemporaryreadonlywheelobserver fortrustedactualeventtimes; observerremovedaftercase. Actualnativeinput.performActions pointer/key/wheel; knownunsolvedfixturesonly.",
+  "sourceEditsByThisAgent": [],
+  "cleanup": [
+    {
+      "pid": 59062,
+      "bidi_port": 59989,
+      "profile": "/var/folders/2v/ds4vjvgj1_1000kq1fzg70q40000gn/T/namelecule-answer-after-normal-20261109-qq1js_7h/profile",
+      "log": "/var/folders/2v/ds4vjvgj1_1000kq1fzg70q40000gn/T/namelecule-answer-after-normal-20261109-qq1js_7h/firefox.log",
+      "mode": "normal",
+      "ui.prefersReducedMotion": 0,
+      "owner": "/root/verify_step11_stop_20261109",
+      "cleanup": "Only thisexactownedheadlessPID terminated afterprofile/headless/port check; allGUI/userbrowsers/driver21029 untouched",
+      "ownershipCommand": "/Applications/Firefox.app/Contents/MacOS/firefox -headless -no-remote -profile /var/folders/2v/ds4vjvgj1_1000kq1fzg70q40000gn/T/namelecule-answer-after-normal-20261109-qq1js_7h/profile --remote-debugging-port 59989 about:blank",
+      "parentNoLongerRunning": true
+    },
+    {
+      "pid": 59063,
+      "bidi_port": 59990,
+      "profile": "/var/folders/2v/ds4vjvgj1_1000kq1fzg70q40000gn/T/namelecule-answer-after-reduced-20261109-w7pui_ft/profile",
+      "log": "/var/folders/2v/ds4vjvgj1_1000kq1fzg70q40000gn/T/namelecule-answer-after-reduced-20261109-w7pui_ft/firefox.log",
+      "mode": "reduced",
+      "ui.prefersReducedMotion": 1,
+      "owner": "/root/verify_step11_stop_20261109",
+      "cleanup": "Only thisexactownedheadlessPID terminated afterprofile/headless/port check; allGUI/userbrowsers/driver21029 untouched",
+      "ownershipCommand": "/Applications/Firefox.app/Contents/MacOS/firefox -headless -no-remote -profile /var/folders/2v/ds4vjvgj1_1000kq1fzg70q40000gn/T/namelecule-answer-after-reduced-20261109-w7pui_ft/profile --remote-debugging-port 59990 about:blank",
+      "parentNoLongerRunning": true
+    }
+  ],
+  "limits": [
+    "Ownedheadless, no personal/GUI browser interaction",
+    "Readonly DOM/rAF sampling only, no prototype hooks or fake solved receipts",
+    "Normal six-repair flow; separate reducedpref round and bounded standalone smoke",
+    "Sourcecallbackedgeguards testedbyroot separately; not independentlyexecutedbythisagent.",
+    "No production or userGUIreload; GUI55879/56371, persistentdriver21029 and personal57800 remaineduntouched.",
+    "No fullscreen/freeze guarantee or fixedFirefox-freeze claim.",
+    "BrowserprocesslogsretaininternalchromeBiDi/SWGLmessages; pageJavascript0 is not a fullcleanconsole guarantee.",
+    "Standalone smoke coversoneactualfixedround andnopostansweraddedscrollmotion, not fullstandalonematrix."
+  ]
+}

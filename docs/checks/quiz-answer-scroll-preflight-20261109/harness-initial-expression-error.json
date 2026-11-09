@@ -1,0 +1,24 @@
+{
+  "completed": false,
+  "date": "2026-11-09",
+  "role": "Developer preflight geometry evidence, not independent review",
+  "scope": "No production edits, hooks, extraUIlisteners or round API overrides. Separate owned headless, two actual rounds total; all answer actions use native pointer input and natural wheel to visible controls. Unsolved seed4 only.",
+  "runs": [
+    {
+      "width": 1280,
+      "height": 650,
+      "dpr": 2,
+      "fixtureId": "engine-propane-bond-type-3ff25797",
+      "stages": []
+    }
+  ],
+  "sources": {
+    "js/namelecule-game-repair.js": "e557da67fdb125488c8b432ea3afcdcbbc6374cd904c2b85355e0efc32571ffa",
+    "js/namelecule-quiz-checkpoints.js": "35fda6953f06356d498f1be40fe4c6123d0c81c3bdbf81a60fa3fda5ea211501",
+    "css/namelecule-quiz-checkpoints.css": "73efe5d5338e2753667d72b5847426ae143b3690292310213f263714ec9919d8",
+    "scenarios/alkanes-user-3.scenario.json": "607a530a2d3ba151026517c61d6f7a31644e15abf82a687e778b7453d80089b7"
+  },
+  "failure": "Traceback (most recent call last):\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/quiz-answer-scroll-preflight-20261109/check-before.py\", line 45, in <module>\n    record(run,'initial-open')\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/quiz-answer-scroll-preflight-20261109/check-before.py\", line 22, in record\n    time.sleep(.15);g=geometry();m={'label':label,'geometry':g}\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/quiz-answer-scroll-preflight-20261109/check-before.py\", line 20, in geometry\n    def geometry():return read('''(()=>{const d=document.getElementById('nlQuizDialog'),host=document.getElementById('nlQuizHost'),h=d?.querySelector('.nl-quiz-dialog-header'),hr=h?.getBoundingClientRect(),dr=d?.getBoundingClientRect(),top=hr?.bottom||0,bottom=Math.min(dr?.bottom||innerHeight,innerHeight),sels=['.round-heading p','.name-parts','.part-selection-status','.choice-fieldset','.choices','.candidate','.repair-actions','.feedback','.success-explanation','.round-next button'];return{time:new Date().toISOString(),step:fScenarioPresent().index,progress:document.getElementById('nlQuizProgress')?.textContent,viewport:{width:innerWidth,height:innerHeight,dpr:devicePixelRatio},active:{tag:document.activeElement?.tagName,id:document.activeElement?.id},dialog:d?{open:d.open,scrollTop:d.scrollTop,clientHeight:d.clientHeight,scrollHeight:d.scrollHeight,overflowY:getComputedStyle(d).overflowY,rect:dr.toJSON()}:null,host:host?{scrollTop:host.scrollTop,clientHeight:host.clientHeight,scrollHeight:host.scrollHeight,overflowY:getComputedStyle(host).overflowY}:null,documentScrollTop:document.scrollingElement.scrollTop,header:hr?.toJSON(),usable:{top,bottom,height:bottom-top},elements:sels.map(sel=>{const e=d?.querySelector(sel);if(!e)return{selector:sel,present:false};const r=e.getBoundingClientRect(),s=getComputedStyle(e),displayed:r.width>0&&r.height>0&&s.visibility!=='hidden',visible=displayed?Math.max(0,Math.min(r.bottom,bottom)-Math.max(r.top,top)):0;return{selector:sel,present:true,displayed,text:e.textContent,rect:r.toJSON(),visibleHeight:visible,fullyVisible:displayed&&r.top>=top&&r.bottom<=bottom,clippedTop:displayed?Math.max(0,top-r.top):0,clippedBottom:displayed?Math.max(0,r.bottom-bottom):0,display:s.display}})}})()''')\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/quiz-answer-scroll-preflight-20261109/check-before.py\", line 9, in read\n    def read(x):return json.loads(ev('JSON.stringify('+x+')'))\n  File \"owned-headless-bidi\", line 43, in ev\n    assert ev('document.getElementById(\"nlQuizProgress\").textContent')=='Κουίζ 1/3'\nRuntimeError: {'columnNumber': 39, 'exception': {'type': 'error'}, 'lineNumber': 305, 'stackTrace': {'callFrames': []}, 'text': 'SyntaxError: missing = in const declaration'}\n",
+  "captureFailure": "{'columnNumber': 39, 'exception': {'type': 'error'}, 'lineNumber': 305, 'stackTrace': {'callFrames': []}, 'text': 'SyntaxError: missing = in const declaration'}",
+  "javascriptErrors": []
+}

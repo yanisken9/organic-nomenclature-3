@@ -1,0 +1,52 @@
+{
+  "approved_request": "Only personal lesson step4 becomes Workshop-only: logo, existing instructions and authored entry button, no molecule/naming/shells. Generic presentation wrapper hide/restore based on existing flags, cache URL, Desktop export after review. Other 11 steps and canonical lesson unchanged.",
+  "base_commit": "168e3cec01f941a84d40bbe0dc07156e7baa35d0",
+  "before_snapshots": "before/ (actual start-of-unit files; targets pre-existed dirty/untracked)",
+  "runtime_files": {
+    "js/mulermoc-nom-scenario-54.js": "238d0d2a3d56fba433b24c87dca5bae7decba60c79b563694886b2c4125f2deb",
+    "mulermoc-nom-54.html": "0abedcea4a13eb4fbb5fbcfeb1524a8370f0d3c1683602f319c1fe2827ed8728",
+    "scenarios/alkanes-user-3.scenario.json": "a58d55e7ca1fb31753d84d2f4af95f85b224b0fac5bb679210325b6f33b9cfe7"
+  },
+  "deliverables": {
+    "docs/checks/workshop-stop-only-20261106/after-1280.png": "411322342f9e7aaf41a916f5d6d5bce06022f3853c2d7d939431c1742a972586",
+    "docs/checks/workshop-stop-only-20261106/after-390.png": "e376924f71ff10fdf7d62ebd88ad1c75fd001d8b673a21cf5c496a39771f9f65",
+    "docs/checks/workshop-stop-only-20261106/alkanes-user-3.scenario.json.diff": "36b1d79ddeaf944794f57f817842c5372466ded8d3cb580a34c4a8f904c1aecc",
+    "docs/checks/workshop-stop-only-20261106/baseline.json": "12f624cf542ef6bf8f45a69ba6921942e19a159e78fd89c1fa1ac9e366be62b9",
+    "docs/checks/workshop-stop-only-20261106/before/js/mulermoc-nom-scenario-54.js": "57a8006e24e8b6d4df8f0a74b121532a119fe0a96e4ce21f8659178075b0216d",
+    "docs/checks/workshop-stop-only-20261106/before/mulermoc-nom-54.html": "6eb78d4d69451b5de26ea8cf6c86963917e93e88247e8e26adce5f95c4fb7c05",
+    "docs/checks/workshop-stop-only-20261106/before/scenarios/alkanes-user-3.scenario.json": "1e24bbad02bd866db612808179d2c0fea641415a3f4e2d1f4af259573d56651a",
+    "docs/checks/workshop-stop-only-20261106/before-browser.json": "bd7c9416cc23a9546e68b7b138d717ef7d94517458448b2a427d4a729f70c69a",
+    "docs/checks/workshop-stop-only-20261106/before.png": "38192509e055f09198e12592f3cbd3bb2256ee83e7d9f64255b2dbd340425592",
+    "docs/checks/workshop-stop-only-20261106/browser.json": "b7d0dce7db22f7f27e5eaaea0b3991ccbd0e4323c2543e879e5d6e51e3868f3e",
+    "docs/checks/workshop-stop-only-20261106/check-browser.py": "358073909760f5eeb4b3a81d420e96ab8af698d7540f8090862193533f56ec15",
+    "docs/checks/workshop-stop-only-20261106/exported.json": "a58d55e7ca1fb31753d84d2f4af95f85b224b0fac5bb679210325b6f33b9cfe7",
+    "docs/checks/workshop-stop-only-20261106/failure.png": "411322342f9e7aaf41a916f5d6d5bce06022f3853c2d7d939431c1742a972586",
+    "docs/checks/workshop-stop-only-20261106/flags-only-before.png": "455628b636b5b1b5e47e3cd9683238d6b3c69e70f73d05d0de594687194b3c7f",
+    "docs/checks/workshop-stop-only-20261106/initial-browser.json": "2fa802276f7c459fbdfb9effb571d9c15bd5c848bac4cde04aa4a3ecc170a0fa",
+    "docs/checks/workshop-stop-only-20261106/initial-check-limitation.json": "c13244feaaf8a7735ee2ac0f4cbca9b7eb3ec6447bd04bd455ce77f06dedc63f",
+    "docs/checks/workshop-stop-only-20261106/initial-failure.png": "411322342f9e7aaf41a916f5d6d5bce06022f3853c2d7d939431c1742a972586",
+    "docs/checks/workshop-stop-only-20261106/mulermoc-nom-54.html.diff": "74fbe6df4f8a768f0574f14e328c1286505017da961f86453d6759d8385d4ea0",
+    "docs/checks/workshop-stop-only-20261106/mulermoc-nom-scenario-54.js.diff": "d5ce01058bd1406cf620bcccf50842230a6a03f7bfc6076fd0a786e3829c7f2d",
+    "docs/checks/workshop-stop-only-20261106/source-verification.json": "8f82089710bf313c51f16518b9020879175bf1377ad2b689a252848c9c3b1771",
+    "docs/checks/workshop-stop-only-20261106/test-process.json": "2cb0196918fc8e9400466adc883e6f124403e9b84bf4f1fa8085e0207d95ec7c"
+  },
+  "developer_evidence": {
+    "source_verification": "source-verification.json",
+    "syntax": "JSC checkSyntax passed",
+    "functional_assertions_passed": 33,
+    "functional_completed": true,
+    "javascript_error_count": 1,
+    "javascript_error_summary": [
+      "TypeError: can't access property \"bufferedImage\", this.platform is null"
+    ],
+    "strict_browser_command_exit": 1,
+    "known_issue": "bufferedImage/platform null also recorded before this unit; no claim of clean console or full 3D stability.",
+    "initial_harness_assumption": "initial-check-limitation.json documents direct checkpoint refresh assertion before existing receipt reconstruction. Second run tests step5 receipt reconstruction; no controller changes."
+  },
+  "limitations": [
+    "No native/user Firefox recheck (automation session already reserved from earlier unit)",
+    "No Safari, physical mobile, full conference sequence",
+    "No chemistry/naming/data changes",
+    "No commit/push/publication; Desktop export pending review"
+  ]
+}

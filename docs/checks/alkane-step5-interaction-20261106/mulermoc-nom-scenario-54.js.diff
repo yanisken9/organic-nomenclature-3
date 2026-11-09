@@ -1,0 +1,166 @@
+--- before/js/mulermoc-nom-scenario-54.js
++++ js/mulermoc-nom-scenario-54.js
+@@ -1294,6 +1294,80 @@
+   return typeof value === "string" && Object.prototype.hasOwnProperty.call(SCENARIO_TITLE_LOGOS, value)
+     ? value : null;
+ }
++function fScenarioValidDisabledNameComps(value) {
++  if (!Array.isArray(value)) return [];
++  return value.filter(function (id, index) {
++    return typeof id === "string" &&
++      /^(?:comp(?:[0-9]|1[0-2])|comp9loc|comp3(?:b|loc)\d*|acidPrefix(?:Number|Sub)3)$/.test(id) &&
++      value.indexOf(id) === index;
++  });
++}
++
++function fScenarioNameCompDisabled(id, step) {
++  if (!MuLERMoCScenario.present) return false;
++  var lesson = fScenarioPresent();
++  step = step || (lesson && lesson.steps[lesson.index]);
++  var ids = step && step.styleName && step.styleName.disabled;
++  return Array.isArray(ids) && ids.indexOf(id) !== -1;
++}
++
++function fScenarioApplyNameRestrictions(step) {
++  var boxes = document.querySelectorAll("#nameAnalysisContainer .nameCompBox");
++  for (var i = 0; i < boxes.length; i++) {
++    var box = boxes[i];
++    var wasDisabled = box.classList.contains("scNameCompDisabled");
++    var disabled = fScenarioNameCompDisabled(box.id, step);
++    box.classList.toggle("scNameCompDisabled", disabled);
++    if (disabled) {
++      box.setAttribute("aria-disabled", "true");
++      box.classList.remove("selected");
++    } else if (wasDisabled) {
++      box.removeAttribute("aria-disabled");
++    }
++  }
++}
++
++// Reuse the existing chain controls, moving their one DOM instance outside
++// the closed settings panel only for steps that explicitly request them.
++function fScenarioApplyChainNavigation(show) {
++  var box = document.getElementById("chainStepperBox");
++  var host = document.getElementById("scChainNavigation");
++  var panel = document.getElementById("nameSettingsPanel");
++  var active = MuLERMoCScenario.present && show &&
++    show.chainNavigation === true && show.naming !== false;
++  if (!active || !box || !panel || !panel.parentNode) {
++    if (host) {
++      if (box && box.parentNode === host) {
++        var home = box.__scChainNavigationHome;
++        if (home && home.isConnected) home.appendChild(box);
++        else if (panel) panel.appendChild(box);
++      }
++      host.remove();
++    }
++    return;
++  }
++  if (!host) {
++    host = document.createElement("div");
++    host.id = "scChainNavigation";
++    host.className = "scChainNavigation";
++    panel.parentNode.insertBefore(host, panel);
++  }
++  if (box.parentNode !== host) {
++    box.__scChainNavigationHome = box.parentNode;
++    host.appendChild(box);
++  }
++  host.setAttribute("role", "group");
++  var label = box.querySelector(".settingLabel");
++  if (label) host.setAttribute("aria-label", label.textContent);
++  ["chainPrevBtn", "chainNextBtn"].forEach(function (id) {
++    var button = document.getElementById(id);
++    if (button && button.getAttribute("data-tooltip")) {
++      button.setAttribute("aria-label", button.getAttribute("data-tooltip"));
++    }
++  });
++  if (typeof fRenderChainStepper === "function") fRenderChainStepper();
++}
++
+ function fScenarioDefaults(step, i) {
+   var d = {
+     n: i + 1,
+@@ -1342,6 +1416,9 @@
+   if (Object.prototype.hasOwnProperty.call(out.show, "alkoxyRule")) {
+     out.show.alkoxyRule = out.show.alkoxyRule === true;
+   }
++  if (Object.prototype.hasOwnProperty.call(out.show, "chainNavigation")) {
++    out.show.chainNavigation = out.show.chainNavigation === true;
++  }
+   // Single-viewer max height: normalize silently (null = Auto); the validate
+   // path warns on non-empty invalid input.
+   out.show.viewerMaxHeight = fScenarioValidViewerMaxHeight(
+@@ -1359,6 +1436,9 @@
+   // arrays copy by value, not by reference (steps stay independent)
+   out.menuSubset = Array.isArray(step.menuSubset) ? step.menuSubset.slice() : [];
+   out.styleName.hidden = Array.isArray(step.styleName && step.styleName.hidden) ? step.styleName.hidden.slice() : [];
++  if (Object.prototype.hasOwnProperty.call(out.styleName, "disabled")) {
++    out.styleName.disabled = fScenarioValidDisabledNameComps(out.styleName.disabled);
++  }
+   out.menuGroups = fScenarioValidMenuGroups(step.menuGroups);
+   // Whole-text size/width/columns: normalize silently (font 12–28, width
+   // 320–1200, columns 1|2 → 2 else null). The validate path warns on
+@@ -2149,6 +2229,7 @@
+   var compId = fScenarioCompIdFor(step.nameAnalysisMode);
+   var box = compId && document.getElementById(compId);
+   if (!box) return;
++  if (fScenarioNameCompDisabled(compId, step)) return;
+   // Hidden (dash) boxes stay inert: skip the stored highlight replay.
+   try {
+     if (box.classList && box.classList.contains("comp-hidden")) return;
+@@ -4309,6 +4390,8 @@
+ function fScenarioApplyNamingChrome(show) {
+   var present = MuLERMoCScenario.present;
+   if (!present) {
++    fScenarioApplyNameRestrictions(null);
++    fScenarioApplyChainNavigation(null);
+     fScenarioHide("analysisCol", false);
+     // Full interactivity outside presentation: a locked present step must
+     // never leak its lock (or its hidden explain line) into authoring —
+@@ -4338,11 +4421,17 @@
+     var _st = _pst && _pst.steps ? _pst.steps[_pst.index] : null;
+     if (!_st) return;
+     show = show || _st.show || {};
++    fScenarioApplyNameRestrictions(_st);
+     // A hidden name panel leaves no column unless this step has a rule.
+     // Match the effective rule predicate used by step entry, including
+     // component/alkoxy references that do not require show.rule.
+     var ruleOn = !!show.rule || fScenarioShowComponentRule(_st.nameAnalysisMode) ||
+       fScenarioShowAlkoxyRule();
++    // Standalone chain controls keep the step's requested references. Also
++    // honor a supported component selected live; legacy layouts are unchanged.
++    var liveRuleOn = ruleOn || fScenarioShowComponentRule(
++      typeof nameAnalysisMode === "string" ? nameAnalysisMode : "none");
++    if (show.chainNavigation === true && !liveRuleOn) fScenarioHide("ruleTheoryContainer", true);
+     fScenarioHide("analysisCol", show.naming === false && !ruleOn);
+     // naming panel + settings + audio
+     fScenarioHide("nameAnalysisContainer", present && show.naming === false);
+@@ -4390,6 +4479,7 @@
+     fScenarioHide("nameSettingsBtnDiv", present && !ns);
+     var panel = document.getElementById("nameSettingsPanel");
+     if (panel && present && !ns) panel.classList.remove("open");
++    fScenarioApplyChainNavigation(show);
+     // The panel sits above the name boxes: re-pin the floating Explain sheet
+     // when chrome mutates it (no-op unless expanded; covers the 0.25s close).
+     try { if (typeof fNameExpandRepinDelayed === "function") fNameExpandRepinDelayed(); } catch (eExp) { /* best-effort */ }
+@@ -6417,6 +6507,9 @@
+   else delete fresh.titleLogo;
+   fresh.note = old.note;
+   fresh.noteFormat = old.noteFormat === "html" ? "html" : "text";
++  if (old.styleName && Object.prototype.hasOwnProperty.call(old.styleName, "disabled")) {
++    fresh.styleName.disabled = fScenarioValidDisabledNameComps(old.styleName.disabled);
++  }
+   if (Object.prototype.hasOwnProperty.call(old, "checkpoint")) {
+     try {
+       fresh.checkpoint = fScenarioCheckpointApi(s).validateCheckpoint(old.checkpoint);
+@@ -6441,6 +6534,9 @@
+   fresh.show.nameEye = oldShow.nameEye === true;
+   if (Object.prototype.hasOwnProperty.call(oldShow, "alkoxyRule")) {
+     fresh.show.alkoxyRule = oldShow.alkoxyRule === true;
++  }
++  if (Object.prototype.hasOwnProperty.call(oldShow, "chainNavigation")) {
++    fresh.show.chainNavigation = oldShow.chainNavigation === true;
+   }
+   fresh.menuGroups = fScenarioValidMenuGroups(old.menuGroups);
+   s.steps[idx] = fresh;

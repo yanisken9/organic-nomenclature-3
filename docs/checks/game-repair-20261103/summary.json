@@ -1,0 +1,62 @@
+{
+  "date": "2026-11-03",
+  "status": "complete locally and independently reviewed; no publication",
+  "rounds": 5,
+  "guidedExamples": 1,
+  "challenges": 4,
+  "molecules": 4,
+  "staticSVGAssets": 6,
+  "checks": {
+    "engine": 80,
+    "browser": 79,
+    "fullGameJourneys": 2,
+    "simulatedInput": [
+      "Enter keyboard",
+      "touch at390px",
+      "mouse"
+    ],
+    "faultCases": [
+      "missing main and hint SVG block and recover",
+      "fetch failure recovery",
+      "invalid schema recovery"
+    ],
+    "SVGActualImageDecode": 6,
+    "nativeAtomFontPixels": 22,
+    "MainCDNsmoke": 6,
+    "normalGameJavascriptErrors": 0
+  },
+  "expectedInjectedConsoleErrors": 2,
+  "MainLocalLibrariesAttempt": {
+    "completed": false,
+    "reason": "libs=local requires missing local j2s/package.js; no offline package prepared",
+    "evidence": "main-smoke-local-unavailable.json",
+    "retry": "unchanged shipping CDN mode passed six checks"
+  },
+  "protected": "six start-baseline application hashes,14 scenario JSON/337steps and source HEAD/index unchanged",
+  "coreChanged": false,
+  "implementationPaths": [
+    "games/name-repair.html",
+    "js/namelecule-game-repair.js",
+    "css/namelecule-games.css",
+    "games/data/name-repair-alkanes.json",
+    "games/assets/name-repair/",
+    "tools/export-name-repair-assets.py"
+  ],
+  "limits": [
+    "Local prototype only, no commit/push/publication or welcome integration",
+    "In-memory progress resets on reload/new game; no student accounts/research logging",
+    "No actual Safari/Chromium/physical touch-device or screen-reader certification",
+    "No full conference demonstration or offline Main package certification",
+    "Existing headless process log contains Main pagehide-font timeout and RemoteAgent diagnostics; no causal fix claimed"
+  ],
+  "next": "User visual acceptance; then consider welcome integration/next game. Upstream sync remains deferred by user.",
+  "independentReviewer": "/root/review_game_name_repair",
+  "reviewFindings": [],
+  "postReviewTabAndBack": {
+    "fiveRounds": true,
+    "TabPresses": 60,
+    "BackRestored": "results",
+    "gameExternalResources": 0,
+    "JavascriptErrors": 0
+  }
+}

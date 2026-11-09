@@ -1,0 +1,68 @@
+{
+  "functionalChecksPassed": true,
+  "originalHarnessCompleted": false,
+  "originalHarnessFailure": "Final zero-console-errors assertion rejected two external JmolTracker X-Frame-Options messages after all application assertions passed",
+  "checks": [
+    "Packaged Main welcome52 and14lesson actions",
+    "Packaged React welcome/library12/viewer126, ethanol2D and3D, same-originhost",
+    "Packaged native lesson host loads alkane lesson21steps and advances1→2"
+  ],
+  "externalTrackerDiagnostics": [
+    {
+      "type": "javascript",
+      "level": "error",
+      "source": {
+        "realm": "6fd3bc95-4232-4de5-9623-2c19f1c7092b",
+        "context": "25769803777",
+        "userContext": "default"
+      },
+      "text": "Η φόρτωση του «https://chemapps.stolaf.edu/jmol/JmolTracker.php?id=UA-45940799-1&applet=Jmol._Canvas2D%20(Jmol)&version=2022-06-24%2005:54:49%20(JSmol/j2s)&appver=16.4.23&url=https%3A%2F%2Fyanisken9.github.io%2Forganic-nomenclature-3%2Freact-preview%2Fdist%2Fviewer-host.html%3Fsession%3Dbf358598-2c44-4adb-b289-9b4fe0f007c1» σε ένα πλαίσιο απορρίπτεται από την οδηγία «X-Frame-Options» που έχει οριστεί σε «sameorigin».",
+      "timestamp": 1793178837226
+    },
+    {
+      "type": "javascript",
+      "level": "error",
+      "source": {
+        "realm": "260ba799-da85-4518-949d-a5b053b726ed",
+        "context": "32212254721",
+        "userContext": "default"
+      },
+      "text": "Η φόρτωση του «https://chemapps.stolaf.edu/jmol/JmolTracker.php?id=UA-45940799-1&applet=Jmol._Canvas2D%20(Jmol)&version=2022-06-24%2005:54:49%20(JSmol/j2s)&appver=16.4.23&url=https%3A%2F%2Fyanisken9.github.io%2Forganic-nomenclature-3%2Freact-preview%2Fdist%2Flesson-host.html%3Fsession%3D4acf39ed-8d23-4473-be8a-c46ed483453a%26lesson%3Dalkanes%26scenario%3Dscenarios%252Falkanes-nomenclature-branches.scenario.json%26present%3D1%26viewportHeight%3D683%23step%3D1» σε ένα πλαίσιο απορρίπτεται από την οδηγία «X-Frame-Options» που έχει οριστεί σε «sameorigin».",
+      "timestamp": 1793178841280
+    }
+  ],
+  "unexpectedJavascriptErrors": [],
+  "rawHarness": {
+    "completed": false,
+    "baseURL": "https://yanisken9.github.io/organic-nomenclature-3/",
+    "checks": [
+      "Packaged Main welcome52 and14lesson actions",
+      "Packaged React welcome/library12/viewer126, ethanol2D and3D, same-originhost",
+      "Packaged native lesson host loads alkane lesson21steps and advances1→2"
+    ],
+    "javascriptErrors": [
+      {
+        "type": "javascript",
+        "level": "error",
+        "source": {
+          "realm": "6fd3bc95-4232-4de5-9623-2c19f1c7092b",
+          "context": "25769803777",
+          "userContext": "default"
+        },
+        "text": "Η φόρτωση του «https://chemapps.stolaf.edu/jmol/JmolTracker.php?id=UA-45940799-1&applet=Jmol._Canvas2D%20(Jmol)&version=2022-06-24%2005:54:49%20(JSmol/j2s)&appver=16.4.23&url=https%3A%2F%2Fyanisken9.github.io%2Forganic-nomenclature-3%2Freact-preview%2Fdist%2Fviewer-host.html%3Fsession%3Dbf358598-2c44-4adb-b289-9b4fe0f007c1» σε ένα πλαίσιο απορρίπτεται από την οδηγία «X-Frame-Options» που έχει οριστεί σε «sameorigin».",
+        "timestamp": 1793178837226
+      },
+      {
+        "type": "javascript",
+        "level": "error",
+        "source": {
+          "realm": "260ba799-da85-4518-949d-a5b053b726ed",
+          "context": "32212254721",
+          "userContext": "default"
+        },
+        "text": "Η φόρτωση του «https://chemapps.stolaf.edu/jmol/JmolTracker.php?id=UA-45940799-1&applet=Jmol._Canvas2D%20(Jmol)&version=2022-06-24%2005:54:49%20(JSmol/j2s)&appver=16.4.23&url=https%3A%2F%2Fyanisken9.github.io%2Forganic-nomenclature-3%2Freact-preview%2Fdist%2Flesson-host.html%3Fsession%3D4acf39ed-8d23-4473-be8a-c46ed483453a%26lesson%3Dalkanes%26scenario%3Dscenarios%252Falkanes-nomenclature-branches.scenario.json%26present%3D1%26viewportHeight%3D683%23step%3D1» σε ένα πλαίσιο απορρίπτεται από την οδηγία «X-Frame-Options» που έχει οριστεί σε «sameorigin».",
+        "timestamp": 1793178841280
+      }
+    ]
+  }
+}

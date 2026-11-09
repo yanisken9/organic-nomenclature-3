@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-31",
+  "role": "NAMELECULE_CHEMISTRY_VALIDATOR_V1_20261023",
+  "agent": "/root/ether_geometry_preflight",
+  "readOnly": true,
+  "manifest": "chemistry-target.json",
+  "manifestSHA256": "4e99ef74662bba84969b667094f288aba4880d9fc4e1adec54f50a58407ab2f0",
+  "findings": [],
+  "independentlyChecked": {
+    "runtimeHashes": 12,
+    "expandedEmbeddedMOLs": 11,
+    "expandedSourceMOLs": 9,
+    "nonXYFieldsPreserved": true,
+    "graphRepresentationsComparedIncluding3D": 44,
+    "explicitValenceAndFormula": true,
+    "maxLengthError": 9.884e-05,
+    "maxDirectionSineDeviation": 0.00020803,
+    "minimumNonbondedDistance": 0.43643293,
+    "coincidentAtoms": 0,
+    "strictUnrelatedBondCrossings": 0,
+    "atomsOnUnrelatedBond": 0,
+    "newlineConventionsPreserved": true,
+    "coreAnd3DUnchanged": true,
+    "unchangedBaselinePathsAtReviewTime": 2607
+  },
+  "limits": [
+    "BrowserandnamingengineDeveloperresultsnotindependentlyexecuted",
+    "Notaphysicalbondlengthorconformerchange"
+  ],
+  "targetHashesRecheckedAfterInspection": true
+}

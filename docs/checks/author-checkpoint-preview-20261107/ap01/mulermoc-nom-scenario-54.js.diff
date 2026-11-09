@@ -1,0 +1,19 @@
+--- AP01-before/js/mulermoc-nom-scenario-54.js
++++ js/mulermoc-nom-scenario-54.js
+@@ -6357,7 +6357,15 @@
+   if (pos) {
+     var position = ps.steps.length ? ps.index + 1 + "/" + ps.steps.length : "0/0";
+     var previewLabel = (typeof fMulerPre === "function") ? fMulerPre("Δοκιμή", "Preview", "") : "Δοκιμή";
+-    pos.textContent = fScenarioIsAuthorPreview(ps) ? previewLabel + " " + position : position;
++    var previewing = fScenarioIsAuthorPreview(ps);
++    pos.textContent = position;
++    pos.classList.toggle("scAuthorPreview", previewing);
++    if (previewing) {
++      var label = document.createElement("span");
++      label.className = "scAuthorPreviewLabel";
++      label.textContent = previewLabel + " ";
++      pos.insertBefore(label, pos.firstChild);
++    }
+   }
+   var ti = document.getElementById("scStepTitle");
+   if (ti) ti.textContent = st ? st.n + ". " + (st.title || "") : "";

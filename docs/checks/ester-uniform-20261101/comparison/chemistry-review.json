@@ -1,0 +1,22 @@
+{
+  "ChemistryValidator": "/root/acid_uniform_preflight",
+  "ROLE_ID": "NAMELECULE_CHEMISTRY_VALIDATOR_V1_20261023",
+  "readOnly": true,
+  "pairsVerified": 4,
+  "proposedSHA256": {
+    "methyl_methanoate": "2c4582cfaabd26537a875cc9145d4fba746fe8714198b53269be6843964147cf",
+    "isopropyl_ethanoate": "77dbeec13135d9ba1ecafb8fdefbddf4406ef24930639b310c514240aa14a229",
+    "tert_butyl_methanoate": "6bce78151beb23551d6bef1da0838126f537d3290ea726d45ef265164f9f2445",
+    "isopropyl_2_3_dimethylbutanoate": "8421b6ce93d551cad58ff7c6f00b62cbd1e438902d9009a6920ac2944e593833"
+  },
+  "independentChecks": [
+    "Before exactly matches original active embeds",
+    "Graph IDs bond orders valences headers trailing and all nonXY preserved",
+    "All proposed bonds cardinal; CH .3094 and heavy .6188",
+    "Explicit nearest-cardinal construction only2old, max deviations1.309656/1.375168 degrees",
+    "Vertical C=O/horizontal COC/formylH4 H8left",
+    "Zero coincidence/onbond/crossings; min nonbonded .437558; atom-to-unrelatedbond .3094"
+  ],
+  "noBrowserExecuted": true,
+  "findings": []
+}

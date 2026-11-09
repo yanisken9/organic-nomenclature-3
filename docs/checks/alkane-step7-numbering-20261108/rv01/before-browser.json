@@ -1,0 +1,68 @@
+{
+  "mode": "before",
+  "completed": true,
+  "checks": [
+    "Right choice starts consistent",
+    "RV01 reproduced in actual Firefox: left labels while right button stays pressed"
+  ],
+  "observations": [
+    {
+      "state": "right",
+      "left": "false",
+      "right": "true",
+      "numbers": [
+        4,
+        3,
+        2,
+        1
+      ],
+      "chain": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "name": "2,3-διμεθυλοβουτάνιο",
+      "label": "Right before Update"
+    },
+    {
+      "state": "left",
+      "left": "false",
+      "right": "true",
+      "numbers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "chain": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "name": "2,3-διμεθυλοβουτάνιο",
+      "label": "After Update before repaint"
+    },
+    {
+      "state": "left",
+      "left": "false",
+      "right": "true",
+      "numbers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "chain": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "name": "2,3-διμεθυλοβουτάνιο",
+      "label": "After actual zoom"
+    }
+  ],
+  "javascriptErrors": []
+}

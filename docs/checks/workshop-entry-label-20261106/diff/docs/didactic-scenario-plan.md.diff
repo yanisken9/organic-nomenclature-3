@@ -1,0 +1,18 @@
+--- before/docs/didactic-scenario-plan.md
++++ after/docs/didactic-scenario-plan.md
+@@ -608,3 +608,15 @@
+ 
+ * Current states: default (`!authoring && !present`), authoring (`authoring && !present`), presentation (`present == true`, wins over authoring; `showBar = authoring && !present`; `#pageContainer.presenting` is the CSS hook).
+ * Agreed direction: derived `fScenarioGetState()` getter as single authority; booleans stay as storage. No quiz planning now — quiz question as step + `itemType`/prompt/feedback reuse left open for PRACTICE/PLAY.
++
++### Optional checkpoint entry-button label (v54)
++
++A checkpoint may include `openLabel`, an authored plain-text label for its
++entry button, for example `"openLabel": "πήγαινε στο συνεργείο"`. It is trimmed
++and must contain 1–100 characters; invalid, blank or overlong values are omitted
++and use the normal localized entry label. The label is rendered with
++`textContent`, never HTML. Omit the field to retain the existing GR/EN default.
++Completed checkpoints retain the existing localized revisit label.
++The field lives inside the checkpoint specification, so normal validation,
++Update, duplicate, export and import preserve it without adding a default
++property to legacy checkpoints. It changes no question, answer or gate rule.

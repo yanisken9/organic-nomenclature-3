@@ -1,0 +1,17 @@
+[
+  {
+    "id": "DEV-01",
+    "severity": "P2",
+    "trigger": "Update while previewing opted-in2D-onlystep7, then Exit/reenter",
+    "observed": "fScenarioCapture reads3Dglobal toggle true behind presentationchrome; newdirection control declines unsupported3Dvisible step on reentry",
+    "beforeEvidence": [
+      "browser-author-before-fix.json",
+      "browser-export-before-fix.json",
+      "scenario-before-update-fix.js"
+    ],
+    "cause": "Authored viewer permissions lost to hidden global viewer toggles at Update",
+    "resolution": "Within opted-in presentationUpdate, preserve authored2D-onlyshow.viewers; other Update behavior unchanged",
+    "afterEvidence": "browser-author.json8checks0JSerrors; actualUpdate retains2Dtrue/3Dfalse and reentry/displays left again",
+    "status": "Developer corrected/verified; final independent review pending"
+  }
+]

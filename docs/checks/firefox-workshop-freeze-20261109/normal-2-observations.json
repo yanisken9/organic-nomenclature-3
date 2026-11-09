@@ -1,0 +1,203 @@
+[
+  {
+    "ok": true,
+    "op": "fresh-preview",
+    "answer": {
+      "status": {
+        "url": "http://127.0.0.1:8013/mulermoc-nom-54.html?scenario=scenarios/alkanes-user-3.scenario.json&v=workshop-manual-1794197179#step=11",
+        "step": 10,
+        "dialogOpen": false,
+        "modal": false,
+        "active": "",
+        "visibility": "visible",
+        "focus": true,
+        "viewport": {
+          "width": 1280,
+          "height": 650
+        },
+        "heart": {
+          "raf": 2,
+          "timers": 1,
+          "lastRAF": 3912.9,
+          "lastTimer": 3929
+        },
+        "image": null,
+        "round": null
+      }
+    }
+  },
+  {
+    "ok": true,
+    "op": "eval",
+    "answer": {
+      "value": true
+    }
+  },
+  {
+    "ok": true,
+    "op": "pointer",
+    "answer": {
+      "x": 1020,
+      "y": 249,
+      "hit": "nlQuizOpen",
+      "hitClass": "nl-quiz-button nl-quiz-open",
+      "enabled": true,
+      "target": "nlQuizOpen",
+      "receives": true
+    }
+  },
+  {
+    "ok": true,
+    "op": "eval",
+    "answer": {
+      "value": "{\"ready\":true,\"id\":\"engine-dimethyl_2_3_butane-parent-length-917072a0\",\"kind\":\"replace\",\"target\":\"component-5\",\"choiceIndex\":2,\"heart\":{\"raf\":12,\"timers\":4}}"
+    }
+  },
+  {
+    "ok": true,
+    "op": "pointer",
+    "answer": {
+      "x": 668,
+      "y": 427,
+      "hit": "nl-repair-1-choice-2",
+      "hitClass": "choice-button",
+      "enabled": true,
+      "target": "nl-repair-1-choice-2",
+      "receives": true
+    }
+  },
+  {
+    "ok": true,
+    "op": "pointer",
+    "answer": {
+      "x": 701,
+      "y": 490,
+      "hit": "nl-repair-1-check-button",
+      "hitClass": "primary",
+      "enabled": true,
+      "target": "nl-repair-1-check-button",
+      "receives": true
+    }
+  },
+  {
+    "ok": true,
+    "op": "eval",
+    "answer": {
+      "value": "{\"success\":true,\"heart\":{\"raf\":1603,\"timers\":273}}"
+    }
+  },
+  {
+    "ok": true,
+    "op": "screenshot",
+    "answer": {
+      "path": "docs/checks/firefox-workshop-freeze-20261109/normal-2-answer.png",
+      "status": {
+        "url": "http://127.0.0.1:8013/mulermoc-nom-54.html?scenario=scenarios/alkanes-user-3.scenario.json&v=workshop-manual-1794197179#step=11",
+        "step": 10,
+        "dialogOpen": true,
+        "modal": true,
+        "active": "",
+        "visibility": "visible",
+        "focus": true,
+        "viewport": {
+          "width": 1280,
+          "height": 650
+        },
+        "heart": {
+          "raf": 1622,
+          "timers": 276,
+          "lastRAF": 32391.12,
+          "lastTimer": 32314
+        },
+        "image": {
+          "src": "http://127.0.0.1:8013/games/assets/name-repair/dimethyl_2_3_butane.svg",
+          "complete": true,
+          "naturalWidth": 281,
+          "className": "diagram-image is-ready"
+        },
+        "progress": "Κουίζ 1/3",
+        "hostBusy": "false",
+        "round": {
+          "id": "engine-dimethyl_2_3_butane-parent-length-917072a0",
+          "kind": "replace"
+        }
+      }
+    }
+  },
+  {
+    "ok": true,
+    "op": "pointer",
+    "answer": {
+      "x": 1117,
+      "y": 85,
+      "hit": "nlQuizBack",
+      "hitClass": "nl-quiz-button nl-quiz-back",
+      "enabled": true,
+      "target": "nlQuizBack",
+      "receives": true
+    }
+  },
+  {
+    "ok": true,
+    "op": "pointer",
+    "answer": {
+      "x": 1020,
+      "y": 249,
+      "hit": "nlQuizOpen",
+      "hitClass": "nl-quiz-button nl-quiz-open",
+      "enabled": true,
+      "target": "nlQuizOpen",
+      "receives": true
+    }
+  },
+  {
+    "ok": true,
+    "op": "eval",
+    "answer": {
+      "value": "{\"imageReady\":true,\"heart\":{\"raf\":1656,\"timers\":283}}"
+    }
+  },
+  {
+    "ok": true,
+    "op": "screenshot",
+    "answer": {
+      "path": "docs/checks/firefox-workshop-freeze-20261109/normal-2-reopened.png",
+      "status": {
+        "url": "http://127.0.0.1:8013/mulermoc-nom-54.html?scenario=scenarios/alkanes-user-3.scenario.json&v=workshop-manual-1794197179#step=11",
+        "step": 10,
+        "dialogOpen": true,
+        "modal": true,
+        "active": "",
+        "visibility": "visible",
+        "focus": true,
+        "viewport": {
+          "width": 1280,
+          "height": 650
+        },
+        "heart": {
+          "raf": 1675,
+          "timers": 286,
+          "lastRAF": 33445.84,
+          "lastTimer": 33378
+        },
+        "image": {
+          "src": "http://127.0.0.1:8013/games/assets/name-repair/dimethyl_2_3_butane.svg",
+          "complete": true,
+          "naturalWidth": 281,
+          "className": "diagram-image is-ready"
+        },
+        "progress": "Κουίζ 1/3",
+        "hostBusy": "false",
+        "round": {
+          "id": "engine-dimethyl_2_3_butane-parent-length-917072a0",
+          "kind": "replace"
+        }
+      }
+    }
+  },
+  {
+    "ok": true,
+    "op": "eval",
+    "traceFile": "normal-2-trace.json"
+  }
+]

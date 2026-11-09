@@ -1,0 +1,112 @@
+{
+  "completed": false,
+  "checks": [
+    "Updated adapter and CSS cache URLs loaded",
+    "Header shows actual alkanes-unbranched round 1/3",
+    "Progress lives in stable polite header slot alkanes-unbranched 0",
+    "Old content keeps set title without duplicate counter announcement alkanes-unbranched 0",
+    "Incorrect Check increments attempts but counter stays1/3",
+    "Correct Check alone keeps current round alkanes-unbranched 1",
+    "Learner gate requires all3solved repairs alkanes-unbranched 1",
+    "Header shows actual alkanes-unbranched round 2/3",
+    "Progress lives in stable polite header slot alkanes-unbranched 1",
+    "Old content keeps set title without duplicate counter announcement alkanes-unbranched 1",
+    "Closing clears header progress",
+    "Reopen restores actual2/3 and saved progress",
+    "Refresh restores actual2/3 and saved progress",
+    "Counter/title/Back separated and hittable before scroll 1500",
+    "Counter stays visible while scrolling 1500",
+    "Counter/title/Back separated and hittable before scroll 390"
+  ],
+  "rounds": [],
+  "fixture_policy": "Owned profile. Seed4 unbranched/seed1 branched only; all6 repairs solved through actual UI, no fabricated solved receipts. Actual frozen canonical fixtures and unchanged current9 lesson JSON.",
+  "limitations": [
+    "Headless isolated Firefox; no user-facing Firefox freeze diagnosis",
+    "No Safari, physical mobile, screen reader or full conference sequence audit",
+    "No new viewer/3D audit; existing JSmol issue remains outside scope"
+  ],
+  "headerBounds": [
+    {
+      "width": 1500,
+      "elements": {
+        "nlQuizDialogTitle": {
+          "left": 181,
+          "right": 1118.4166870117188,
+          "top": 55.149993896484375,
+          "bottom": 78.66667175292969,
+          "hit": true
+        },
+        "nlQuizProgress": {
+          "left": 1234.316650390625,
+          "right": 1318.999984741211,
+          "top": 27,
+          "bottom": 56.83332824707031,
+          "hit": true
+        },
+        "nlQuizBack": {
+          "left": 1134.4166259765625,
+          "right": 1318.9999542236328,
+          "top": 62.83332824707031,
+          "bottom": 106.83332824707031,
+          "hit": true
+        }
+      }
+    },
+    {
+      "width": 1500,
+      "elements": {
+        "nlQuizDialogTitle": {
+          "left": 181,
+          "right": 1118.4166870117188,
+          "top": 55.149993896484375,
+          "bottom": 78.66667175292969,
+          "hit": true
+        },
+        "nlQuizProgress": {
+          "left": 1234.316650390625,
+          "right": 1318.999984741211,
+          "top": 27,
+          "bottom": 56.83332824707031,
+          "hit": true
+        },
+        "nlQuizBack": {
+          "left": 1134.4166259765625,
+          "right": 1318.9999542236328,
+          "top": 62.83332824707031,
+          "bottom": 106.83332824707031,
+          "hit": true
+        }
+      }
+    },
+    {
+      "width": 390,
+      "elements": {
+        "nlQuizDialogTitle": {
+          "left": 19,
+          "right": 194.43333435058594,
+          "top": 19,
+          "bottom": 61.56666564941406,
+          "hit": true
+        },
+        "nlQuizProgress": {
+          "left": 286.316650390625,
+          "right": 370.99998474121094,
+          "top": 19,
+          "bottom": 48.83332824707031,
+          "hit": true
+        },
+        "nlQuizBack": {
+          "left": 204.43333435058594,
+          "right": 371,
+          "top": 54.83332824707031,
+          "bottom": 98.83332824707031,
+          "hit": true
+        }
+      }
+    }
+  ],
+  "failure": "{'columnNumber': 0, 'exception': {'type': 'error'}, 'lineNumber': 0, 'stackTrace': {'callFrames': [{'columnNumber': 0, 'functionName': '', 'lineNumber': 0, 'url': 'http://127.0.0.1:8013/mulermoc-nom-54.html?scenario=scenarios/alkanes-user-3.scenario.json&present=1&from=theory-library&v=alkanes-personal-20261106-r1#step=4'}]}, 'text': 'SyntaxError: redeclaration of const q'}",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/quiz-header-progress-20261108/check-browser.py\", line 84, in <module>\n    ev('const q=document.getElementById(\"nlQuizDialog\");q.scrollTop=q.scrollHeight;true')\n  File \"bidi\", line 43, in ev\n    if round['kind']=='replace':\nRuntimeError: {'columnNumber': 0, 'exception': {'type': 'error'}, 'lineNumber': 0, 'stackTrace': {'callFrames': [{'columnNumber': 0, 'functionName': '', 'lineNumber': 0, 'url': 'http://127.0.0.1:8013/mulermoc-nom-54.html?scenario=scenarios/alkanes-user-3.scenario.json&present=1&from=theory-library&v=alkanes-personal-20261106-r1#step=4'}]}, 'text': 'SyntaxError: redeclaration of const q'}\n",
+  "javascriptErrors": [],
+  "classification": "Developer test harness lexical redeclaration on its second scroll iteration; 16 application checks passed, no observed application JavaScript errors. Correct harness and rerun."
+}

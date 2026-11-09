@@ -1,0 +1,125 @@
+{
+  "provenance": "Actual Firefox startup diagnosis before Main scale edits; see /tmp/namelecule-main-startup-20261027.json",
+  "javascriptErrors": [
+    {
+      "type": "javascript",
+      "level": "error",
+      "source": {
+        "realm": "5268d15f-33f8-4081-8658-fa5f34a5bec2",
+        "context": "f65ebf1a-7db6-445f-bbc3-985897f206be",
+        "userContext": "default"
+      },
+      "text": "TypeError: can't access property \"setScreenDimension\", this.viewer is null",
+      "timestamp": 1793137047511,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 373,
+            "functionName": "",
+            "lineNumber": 1836,
+            "url": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corejmol.z.js"
+          },
+          {
+            "columnNumber": 428,
+            "functionName": "a.repaint",
+            "lineNumber": 109,
+            "url": "https://chemapps.stolaf.edu/jmol/jsmol/JSmol.min.js"
+          },
+          {
+            "columnNumber": 83,
+            "functionName": "",
+            "lineNumber": 792,
+            "url": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corejmol.z.js"
+          },
+          {
+            "columnNumber": 21,
+            "functionName": "",
+            "lineNumber": 1032,
+            "url": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corejmol.z.js"
+          },
+          {
+            "columnNumber": 244,
+            "functionName": "",
+            "lineNumber": 1030,
+            "url": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corejmol.z.js"
+          },
+          {
+            "columnNumber": 8,
+            "functionName": "",
+            "lineNumber": 2629,
+            "url": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corejmol.z.js"
+          },
+          {
+            "columnNumber": 9,
+            "functionName": "",
+            "lineNumber": 138,
+            "url": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corescript.z.js"
+          },
+          {
+            "columnNumber": 160,
+            "functionName": "",
+            "lineNumber": 135,
+            "url": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corescript.z.js"
+          },
+          {
+            "columnNumber": 132,
+            "functionName": "",
+            "lineNumber": 514,
+            "url": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corescript.z.js"
+          },
+          {
+            "columnNumber": 369,
+            "functionName": "",
+            "lineNumber": 525,
+            "url": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corescript.z.js"
+          },
+          {
+            "columnNumber": 223,
+            "functionName": "",
+            "lineNumber": 636,
+            "url": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corescript.z.js"
+          },
+          {
+            "columnNumber": 275,
+            "functionName": "",
+            "lineNumber": 635,
+            "url": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corescript.z.js"
+          },
+          {
+            "columnNumber": 162,
+            "functionName": "",
+            "lineNumber": 1218,
+            "url": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corejmol.z.js"
+          }
+        ]
+      }
+    },
+    {
+      "type": "javascript",
+      "level": "error",
+      "source": {
+        "realm": "5268d15f-33f8-4081-8658-fa5f34a5bec2",
+        "context": "f65ebf1a-7db6-445f-bbc3-985897f206be",
+        "userContext": "default"
+      },
+      "text": "TypeError: can't access property \"updateJS\", this.viewer is null",
+      "timestamp": 1793137047590,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 30,
+            "functionName": "",
+            "lineNumber": 1836,
+            "url": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corejmol.z.js"
+          },
+          {
+            "columnNumber": 15,
+            "functionName": "f",
+            "lineNumber": 110,
+            "url": "https://chemapps.stolaf.edu/jmol/jsmol/JSmol.min.js"
+          }
+        ]
+      }
+    }
+  ]
+}

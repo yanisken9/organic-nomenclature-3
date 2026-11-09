@@ -1,0 +1,23 @@
+--- before/js/namelecule-quiz-checkpoints.js
++++ after/js/namelecule-quiz-checkpoints.js
+@@ -47,6 +47,11 @@
+       throw new Error("Unknown or invalid required checkpoint");
+     }
+     const value = clone(spec);
++    if (own(value, "openLabel")) {
++      const label = typeof value.openLabel === "string" ? value.openLabel.trim() : "";
++      if (label && label.length <= 100) value.openLabel = label;
++      else delete value.openLabel;
++    }
+     types[value.type].validate(value.round);
+     return value;
+   }
+@@ -252,7 +257,7 @@
+     if (active !== context) return;
+     const done = isComplete(context.scenario, context.index);
+     context.status.textContent = text(done ? "done" : "instruction");
+-    context.openButton.textContent = text(done ? "revisit" : "open");
++    context.openButton.textContent = done ? text("revisit") : (context.spec.openLabel || text("open"));
+     context.section.classList.toggle("nl-quiz-complete", done);
+     context.storageNote.textContent = context.record.storageAvailable ? "" : text("storage");
+     context.storageNote.hidden = context.record.storageAvailable;

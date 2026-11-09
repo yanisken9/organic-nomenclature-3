@@ -1,0 +1,7 @@
+{
+  "completed": false,
+  "checks": [],
+  "failure": "('Existing 3D logo decodes in introduction', None)",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/alkane-checkpoint-pilot-20261104/browser/test-standalone.py\", line 8, in <module>\n    check(ev('document.querySelector(\".workshop-logo\").complete&&document.querySelector(\".workshop-logo\").naturalWidth>0'),'Existing 3D logo decodes in introduction')\n  File \"support\", line 11, in check\n    until('!!document.querySelector(\".diagram-image.is-ready\")')\nAssertionError: ('Existing 3D logo decodes in introduction', None)\n",
+  "javascriptErrors": []
+}

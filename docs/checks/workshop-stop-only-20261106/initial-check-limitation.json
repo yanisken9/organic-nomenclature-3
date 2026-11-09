@@ -1,0 +1,6 @@
+{
+  "failure": "Immediate unlock after refreshing the checkpoint itself was asserted before saved generated answers had been reconstructed.",
+  "trace": "Existing generated adapter restore returns solved:false without its prepared set; prepareTarget scans checkpoints before the requested destination, excluding the current gate.",
+  "correction": "Verify the established flow: reload at step5 to reconstruct the completed preceding gate, then return to step4. No runtime/controller/adapter change.",
+  "not_a_new_regression": "The changed runtime only controls wrapper display; original controller/adapter unchanged."
+}

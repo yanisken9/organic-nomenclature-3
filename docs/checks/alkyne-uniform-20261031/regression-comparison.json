@@ -1,0 +1,48 @@
+{
+  "guardCases": 30,
+  "invariantDifferences": [],
+  "rawSVGDifferences": [
+    [
+      "methyl_3_butene_1",
+      390,
+      [
+        312,
+        272
+      ],
+      [
+        312,
+        310
+      ]
+    ],
+    [
+      "methyl_2_propene",
+      390,
+      [
+        312,
+        272
+      ],
+      [
+        312,
+        310
+      ]
+    ]
+  ],
+  "rawSVGIdenticalCases": 28,
+  "priorFullCatalog": "../alkene-uniform-20261031/catalog.json.gz (844cases before alkynes)",
+  "sharedFrameUnchanged": "shared-frame.json",
+  "postAlkyneFull844Rerun": false,
+  "nonIdenticalSVGsProvenEquivalent": [
+    {
+      "key": "methyl_3_butene_1",
+      "width": 390,
+      "equivalentModuloTranslation": true,
+      "maxNativeFloatingDelta": 4.547473508864641e-13
+    },
+    {
+      "key": "methyl_2_propene",
+      "width": 390,
+      "equivalentModuloTranslation": true,
+      "maxNativeFloatingDelta": 0
+    }
+  ]
+}

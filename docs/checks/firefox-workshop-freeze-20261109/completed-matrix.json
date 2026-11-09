@@ -1,0 +1,166 @@
+{
+  "completed": true,
+  "date": "2026-11-09",
+  "role": "Developer diagnosis; not independent review",
+  "sourceSHA256": "607a530a2d3ba151026517c61d6f7a31644e15abf82a687e778b7453d80089b7",
+  "runs": [
+    {
+      "label": "normal-1",
+      "state": "normal",
+      "freshPage": true,
+      "sourceCache": "First actual run new profile; subsequent runs can reuse browser HTTP cache. Each page generates again with8real analyses.",
+      "analysisSuccesses": 8,
+      "trustedClicks": 6,
+      "trustedTargets": [
+        "nlQuizOpen",
+        "nl-repair-1-part-component-3",
+        "nl-repair-1-choice-1",
+        "nl-repair-1-check-button",
+        "nlQuizBack",
+        "nlQuizOpen"
+      ],
+      "actualReplacementSuccess": true,
+      "reopenedImageReady": true,
+      "pageErrors": 0,
+      "modalOpenToRoundMountedMs": 315,
+      "modalOpenToImageReadyMs": 426,
+      "heartAfterAnswer": {
+        "raf": 1469,
+        "timers": 249
+      },
+      "heartAfterReopen": {
+        "raf": 1521,
+        "timers": 258
+      },
+      "trace": "normal-1-trace.json",
+      "observations": "normal-1-observations.json"
+    },
+    {
+      "label": "fullscreen-1",
+      "state": "fullscreen",
+      "freshPage": true,
+      "sourceCache": "First actual run new profile; subsequent runs can reuse browser HTTP cache. Each page generates again with8real analyses.",
+      "analysisSuccesses": 8,
+      "trustedClicks": 6,
+      "trustedTargets": [
+        "nlQuizOpen",
+        "nl-repair-1-part-component-5",
+        "nl-repair-1-choice-0",
+        "nl-repair-1-check-button",
+        "nlQuizBack",
+        "nlQuizOpen"
+      ],
+      "actualReplacementSuccess": true,
+      "reopenedImageReady": true,
+      "pageErrors": 0,
+      "modalOpenToRoundMountedMs": 374,
+      "modalOpenToImageReadyMs": 419,
+      "heartAfterAnswer": {
+        "raf": 1058,
+        "timers": 177
+      },
+      "heartAfterReopen": {
+        "raf": 1114,
+        "timers": 187
+      },
+      "trace": "fullscreen-1-trace.json",
+      "observations": "fullscreen-1-observations.json"
+    },
+    {
+      "label": "normal-2",
+      "state": "normal",
+      "freshPage": true,
+      "sourceCache": "First actual run new profile; subsequent runs can reuse browser HTTP cache. Each page generates again with8real analyses.",
+      "analysisSuccesses": 8,
+      "trustedClicks": 6,
+      "trustedTargets": [
+        "nlQuizOpen",
+        "nl-repair-1-part-component-5",
+        "nl-repair-1-choice-2",
+        "nl-repair-1-check-button",
+        "nlQuizBack",
+        "nlQuizOpen"
+      ],
+      "actualReplacementSuccess": true,
+      "reopenedImageReady": true,
+      "pageErrors": 0,
+      "modalOpenToRoundMountedMs": 239,
+      "modalOpenToImageReadyMs": 284,
+      "heartAfterAnswer": {
+        "raf": 1603,
+        "timers": 273
+      },
+      "heartAfterReopen": {
+        "raf": 1656,
+        "timers": 283
+      },
+      "trace": "normal-2-trace.json",
+      "observations": "normal-2-observations.json"
+    },
+    {
+      "label": "fullscreen-2",
+      "state": "fullscreen",
+      "freshPage": true,
+      "sourceCache": "First actual run new profile; subsequent runs can reuse browser HTTP cache. Each page generates again with8real analyses.",
+      "analysisSuccesses": 8,
+      "trustedClicks": 6,
+      "trustedTargets": [
+        "nlQuizOpen",
+        "nl-repair-1-part-component-1",
+        "nl-repair-1-choice-1",
+        "nl-repair-1-check-button",
+        "nlQuizBack",
+        "nlQuizOpen"
+      ],
+      "actualReplacementSuccess": true,
+      "reopenedImageReady": true,
+      "pageErrors": 0,
+      "modalOpenToRoundMountedMs": 262,
+      "modalOpenToImageReadyMs": 313,
+      "heartAfterAnswer": {
+        "raf": 1860,
+        "timers": 312
+      },
+      "heartAfterReopen": {
+        "raf": 1916,
+        "timers": 322
+      },
+      "trace": "fullscreen-2-trace.json",
+      "observations": "fullscreen-2-observations.json"
+    }
+  ],
+  "result": "No application freeze reproduced in4GUI runs: normal/fullscreen ×2, freshpage, trustedopen/part/replacement/check success/close/reopen. rAF/timercounters advanced.",
+  "scope": "Native browser.setClientWindowState fullscreen path; actual physical green-control click was not exercised in this matrix. User report concerns physicalgreenfullscreen then workshop. Existing493/55879 untouched.",
+  "instrumentation": "Owned page only: error/unhandledrejection/focus/input capture, MutationObserver, rAF/timer counters, showModal/mountRound and chemistry API promise wrappers. Instrumentation may affect scheduling; no productionfile changed.",
+  "harnessCorrections": "Initial matrix stopped before Workshop because trusted author-sidebar step button was occluded. Corrected author entry uses programmatic existing preview action; Workshop controls always trusted pointer. Original matrix.json preserved with failure. Subsequent four completed runs were driven through same persistentstdin/WebSocket and are recorded separately here. A too-long TTYcommand was discarded before execution; helper installed through short owned-script fetch.",
+  "handoff": {
+    "pid": 56371,
+    "bidi_port": 58652,
+    "profile": "/var/folders/2v/ds4vjvgj1_1000kq1fzg70q40000gn/T/namelecule-workshop-gui-20261109-efi1o_1v",
+    "log": "/var/folders/2v/ds4vjvgj1_1000kq1fzg70q40000gn/T/namelecule-workshop-gui-20261109-efi1o_1v/firefox.log",
+    "createdAt": 1794197022.7039192,
+    "owner": "/root/verify_step11_stop_20261109",
+    "purpose": "Owned GUI Workshop modal/native fullscreen diagnosis; persistent BiDi driver handoff to root; no personal493/55879 interaction",
+    "context": "f4634ab3-0358-43d7-87df-f688cefae5ad",
+    "clientWindow": "5144f954-f64f-49b4-a15a-1264209e0515",
+    "connectionPolicy": "Single live Python driver/WebSocket; do not exit driver before handoff",
+    "driverExecSessionId": 21029,
+    "handoffState": "Alive/normal/nativewindow, freshauthor11, modalclosed. Title Namelecule — ΑΥΤΟΜΑΤΟΣ ΕΛΕΓΧΟΣ — διαθέσιμο για δοκιμή",
+    "cleanupResponsibility": "Root after physical user test; this agent intentionally leaves owned GUI and persistentdriver alive.",
+    "driverExecSessionScope": "Agent-scoped: root tools.write_stdin cannot access21029; /root/verify_step11_stop_20261109 must relay commands on existing liveconnection via followup_task/send_message. No new WebSocket/session."
+  },
+  "passiveSnapshotCommand": {
+    "op": "eval",
+    "expression": "__diagReadOnlyStatus()"
+  },
+  "passiveSemantics": "Snapshot reads only; no browsingContext.activate, focus(), resize or repaint command. Reads visibility/hasFocus/active/rAF+timer ages/modal/hits/images/trustedinputs/errors/stages. Existing status op is also passive and includes native window state.",
+  "limits": [
+    "Not a reproduction or fix of the user reported failure. Neither passing native fullscreen nor instrumented Workshop tests establishes cause in another browser/profile.",
+    "Own newGUI profile, same profile across runs; freshpages but cache can warm. No cache disabled/coldcache equivalence claimed.",
+    "Instrumentation covered Workshop stages afterappready; no independent full-browser freeze audit or continuous compositor/video recording.",
+    "No personal493/55879 profile/history/tabs read or changed.",
+    "No production source/JSON/core, dependency, notes/git/commit/publication changes by this agent.",
+    "Do not exit persistentdriver/WebSocket before physical test; Firefox159 directsession cannot reattach after clientexit. TTYJSONlines should stay below900chars.",
+    "Root directtools.write_stdin21029 returned Unknownprocessid. Driver lives in child toolcontext; relay passivecommands through /root/verify_step11_stop_20261109, which keeps existing connection alive."
+  ]
+}

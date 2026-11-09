@@ -1,0 +1,70 @@
+{
+  "checks": [
+    {
+      "ok": true,
+      "label": "All421 generated forms preserve mechanical invariants",
+      "detail": {
+        "forms": 421,
+        "bondLengths": 2309,
+        "unchangedAngles": 2218,
+        "repairedPivots": 281,
+        "spTriple": 134,
+        "spDoubleDouble": 6,
+        "properOrientation": 1922,
+        "contactPairs": 7005,
+        "atomBondPairs": 14010,
+        "bondCrossingPairs": 4506
+      }
+    },
+    {
+      "ok": true,
+      "label": "Old52/data54 and all recorded MOL/SDF files unchanged",
+      "detail": {
+        "paths": 456,
+        "changed": []
+      }
+    },
+    {
+      "ok": true,
+      "label": "Outside owned fZigzagMol only root three authorized numeric sorts changed",
+      "detail": null
+    },
+    {
+      "ok": true,
+      "label": "Unsafe/invalid fixture rejected: ring",
+      "detail": null
+    },
+    {
+      "ok": true,
+      "label": "Unsafe/invalid fixture rejected: disconnected",
+      "detail": null
+    },
+    {
+      "ok": true,
+      "label": "Unsafe/invalid fixture rejected: duplicate parent",
+      "detail": null
+    },
+    {
+      "ok": true,
+      "label": "Unsafe/invalid fixture rejected: nonbonded parent",
+      "detail": null
+    },
+    {
+      "ok": true,
+      "label": "Unsafe/invalid fixture rejected: invalid carbon valence",
+      "detail": null
+    }
+  ],
+  "counts": {
+    "forms": 421,
+    "bondLengths": 2309,
+    "unchangedAngles": 2218,
+    "repairedPivots": 281,
+    "spTriple": 134,
+    "spDoubleDouble": 6,
+    "properOrientation": 1922,
+    "contactPairs": 7005,
+    "atomBondPairs": 14010,
+    "bondCrossingPairs": 4506
+  }
+}

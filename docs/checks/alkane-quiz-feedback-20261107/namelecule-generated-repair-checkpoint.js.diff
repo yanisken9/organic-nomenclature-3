@@ -1,0 +1,43 @@
+--- before/js/namelecule-generated-repair-checkpoint.js
++++ js/namelecule-generated-repair-checkpoint.js
+@@ -6,6 +6,12 @@
+   const REVISION = "275d537b19f3ef0791c97d8d78c127f541a0579038ef1e8d65dadde611845690";
+   const CATALOG_SHA = "9778e30ea33f2f7cd4c8a472e46e90539856b861a54035a1d514c3246cccf724";
+   const recipeKeys = ["version", "setId", "difficulty", "roundCount", "generatorVersion", "catalogRevision", "engineSHA256"];
++  const WRONG_PART_REMINDERS = Object.freeze({
++    "parent-length": "Η αποστολή αφορά το πλήθος των ατόμων C της κύριας αλυσίδας.",
++    "bond-type": "Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
++    "branch-locants": "Η αποστολή αφορά τις θέσεις σύνδεσης των διακλαδώσεων και τη φορά αρίθμησης.",
++    "branch-multiplier": "Η αποστολή αφορά το πλήθος των ίδιων διακλαδώσεων."
++  });
+   const prepared = new Map();
+   let source = null;
+   function assert(condition, message) { if (!condition) throw new Error(message); }
+@@ -130,6 +136,18 @@
+     if (text) element.textContent = text;
+     return element;
+   }
++  // Basic lesson rounds repeat the mission focus without changing the
++  // canonical generated question used to restore and verify saved answers.
++  function lessonRoundForDisplay(round) {
++    const family = round && round.kind === "replace" && round.fault && round.fault.kind;
++    if (!Object.prototype.hasOwnProperty.call(WRONG_PART_REMINDERS, family) ||
++      !round.feedback || typeof round.feedback.wrongPart !== "string") return round;
++    return Object.assign({}, round, {
++      feedback: Object.assign({}, round.feedback, {
++        wrongPart: round.feedback.wrongPart + " " + WRONG_PART_REMINDERS[family]
++      })
++    });
++  }
+   function mount(host, options) {
+     const recipe = validate(options.round);
+     const controller = new AbortController();
+@@ -157,7 +175,7 @@
+       host.replaceChildren(progress, roundHost);
+       host.setAttribute("aria-busy", "false");
+       current = global.NameleculeRepairGame.mountRound(roundHost, {
+-        round: set.rounds[index], initialState: state.states[index], assetBase: options.assetBase,
++        round: lessonRoundForDisplay(set.rounds[index]), initialState: state.states[index], assetBase: options.assetBase,
+         continueLabel: index < 2 ? "Επόμενο κουίζ" : "Συνεχίζω τη θεωρία",
+         onStateChange(roundState) {
+           if (destroyed) return;

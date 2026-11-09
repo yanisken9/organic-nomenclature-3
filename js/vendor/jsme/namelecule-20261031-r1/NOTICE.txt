@@ -1,0 +1,22 @@
+Namelecule JSME label geometry integration, 2026-10-31 r1
+
+Based on the project's installed JSME 2023-07-31 distribution by Peter Ertl
+and Bruno Bienfait. Original copyright notices remain in the copied modules.
+Copyright (c) 2023, Novartis Institutes for BioMedical Research Inc and Bruno Bienfait.
+License: BSD 3-Clause; exact license.txt from the official matching distribution
+is provided as LICENSE-JSME.txt. Homepage: https://jsme-editor.github.io/
+Official distribution: https://github.com/jsme-editor/jsme-editor.github.io/
+
+Local display-only modifications affect FEB169D74546A3B279D22AE09AFB86BD.cache.js:
+- Shared actual-glyph measurement before native label painting and framing.
+- Explicit native atom ownership attributes on label text/backplates.
+- Guarded fallback if the shared service is unavailable; Main handles failure.
+The shared service is js/namelecule-label-metrics.js, loaded before JSME.
+Original jsme/ is untouched. Native chemistry, MOL data and naming are unchanged.
+This is a reproducible textual patch of compiled vendor input, not a GWT rebuild.
+
+The active Main HTML uses standards mode. Firefox and WebKit standards choices
+share the modified FEB169 module. The copied BackCompat/quirks 870EF module is
+unchanged and is not claimed as a corrected rendering route. Original auxiliary
+and deferred assets retain their bytes. No general JSME upgrade/offline package.
+See PROVENANCE.json, tools/build-jsme-labels.py and tools/jsme-label-inputs.json.

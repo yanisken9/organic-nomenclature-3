@@ -1,0 +1,1128 @@
+{
+  "completed": true,
+  "checks": [
+    {
+      "label": "Original client reproduces old quiz pin/new main engine mismatch",
+      "detail": "ENGINE_VERSION_MISMATCH"
+    },
+    {
+      "label": "Immutable old engine passes actual WebCrypto SHA check",
+      "detail": null
+    },
+    {
+      "label": "Current merged engine passes404fallback and actual SHA check",
+      "detail": null
+    },
+    {
+      "label": "Eight actual Workers return exact required engine 3f9382b4",
+      "detail": null
+    },
+    {
+      "label": "Eight actual Workers return exact required engine 8f3e5f76",
+      "detail": null
+    },
+    {
+      "label": "Both verified engines agree on all eight existing alkane analyses",
+      "detail": null
+    },
+    {
+      "label": "Unknown digest is rejected after immutable404/current mismatch",
+      "detail": null
+    },
+    {
+      "label": "Invalid version path is rejected before loading",
+      "detail": null
+    }
+  ],
+  "analyses": [
+    [
+      {
+        "moleculeId": "methane",
+        "name": "μεθάνιο",
+        "parts": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "μεθ",
+          "άν",
+          null,
+          "",
+          "ιο",
+          null,
+          null
+        ],
+        "rootVocabulary": [
+          "μεθ",
+          "αιθ",
+          "προπ",
+          "βουτ",
+          "πεντ",
+          "εξ",
+          "επτ",
+          "οκτ",
+          "εννε",
+          "δεκ",
+          "ενδεκ",
+          "δωδεκ",
+          "δεκατρι",
+          "δεκατεσσερ",
+          "δεκαπεντ",
+          "δεκαεξ",
+          "δεκαεπτ",
+          "δεκαοκτ",
+          "δεκαεννι",
+          "εικοσ"
+        ],
+        "chain": [
+          1
+        ],
+        "branches": [],
+        "classification": {
+          "taxonomy": "",
+          "carbonCount": 1,
+          "principalFunctionalGroup": "hydrocarbon",
+          "bondSeries": "alkanes",
+          "seriesKey": "alkanes",
+          "chemicalClass": "hydrocarbons",
+          "functionalGroups": [
+            "hydrocarbon"
+          ]
+        },
+        "carbonCount": 1,
+        "engineSHA256": "3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306"
+      },
+      {
+        "moleculeId": "ethane",
+        "name": "αιθάνιο",
+        "parts": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "αιθ",
+          "άν",
+          null,
+          "",
+          "ιο",
+          null,
+          null
+        ],
+        "rootVocabulary": [
+          "μεθ",
+          "αιθ",
+          "προπ",
+          "βουτ",
+          "πεντ",
+          "εξ",
+          "επτ",
+          "οκτ",
+          "εννε",
+          "δεκ",
+          "ενδεκ",
+          "δωδεκ",
+          "δεκατρι",
+          "δεκατεσσερ",
+          "δεκαπεντ",
+          "δεκαεξ",
+          "δεκαεπτ",
+          "δεκαοκτ",
+          "δεκαεννι",
+          "εικοσ"
+        ],
+        "chain": [
+          1,
+          2
+        ],
+        "branches": [],
+        "classification": {
+          "taxonomy": "",
+          "carbonCount": 2,
+          "principalFunctionalGroup": "hydrocarbon",
+          "bondSeries": "alkanes",
+          "seriesKey": "alkanes",
+          "chemicalClass": "hydrocarbons",
+          "functionalGroups": [
+            "hydrocarbon"
+          ]
+        },
+        "carbonCount": 2,
+        "engineSHA256": "3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306"
+      },
+      {
+        "moleculeId": "propane",
+        "name": "προπάνιο",
+        "parts": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "προπ",
+          "άν",
+          null,
+          "",
+          "ιο",
+          null,
+          null
+        ],
+        "rootVocabulary": [
+          "μεθ",
+          "αιθ",
+          "προπ",
+          "βουτ",
+          "πεντ",
+          "εξ",
+          "επτ",
+          "οκτ",
+          "εννε",
+          "δεκ",
+          "ενδεκ",
+          "δωδεκ",
+          "δεκατρι",
+          "δεκατεσσερ",
+          "δεκαπεντ",
+          "δεκαεξ",
+          "δεκαεπτ",
+          "δεκαοκτ",
+          "δεκαεννι",
+          "εικοσ"
+        ],
+        "chain": [
+          2,
+          3,
+          4
+        ],
+        "branches": [],
+        "classification": {
+          "taxonomy": "",
+          "carbonCount": 3,
+          "principalFunctionalGroup": "hydrocarbon",
+          "bondSeries": "alkanes",
+          "seriesKey": "alkanes",
+          "chemicalClass": "hydrocarbons",
+          "functionalGroups": [
+            "hydrocarbon"
+          ]
+        },
+        "carbonCount": 3,
+        "engineSHA256": "3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306"
+      },
+      {
+        "moleculeId": "butane",
+        "name": "βουτάνιο",
+        "parts": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "βουτ",
+          "άν",
+          null,
+          "",
+          "ιο",
+          null,
+          null
+        ],
+        "rootVocabulary": [
+          "μεθ",
+          "αιθ",
+          "προπ",
+          "βουτ",
+          "πεντ",
+          "εξ",
+          "επτ",
+          "οκτ",
+          "εννε",
+          "δεκ",
+          "ενδεκ",
+          "δωδεκ",
+          "δεκατρι",
+          "δεκατεσσερ",
+          "δεκαπεντ",
+          "δεκαεξ",
+          "δεκαεπτ",
+          "δεκαοκτ",
+          "δεκαεννι",
+          "εικοσ"
+        ],
+        "chain": [
+          2,
+          3,
+          4,
+          5
+        ],
+        "branches": [],
+        "classification": {
+          "taxonomy": "",
+          "carbonCount": 4,
+          "principalFunctionalGroup": "hydrocarbon",
+          "bondSeries": "alkanes",
+          "seriesKey": "alkanes",
+          "chemicalClass": "hydrocarbons",
+          "functionalGroups": [
+            "hydrocarbon"
+          ]
+        },
+        "carbonCount": 4,
+        "engineSHA256": "3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306"
+      },
+      {
+        "moleculeId": "pentane",
+        "name": "πεντάνιο",
+        "parts": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "πεντ",
+          "άν",
+          null,
+          "",
+          "ιο",
+          null,
+          null
+        ],
+        "rootVocabulary": [
+          "μεθ",
+          "αιθ",
+          "προπ",
+          "βουτ",
+          "πεντ",
+          "εξ",
+          "επτ",
+          "οκτ",
+          "εννε",
+          "δεκ",
+          "ενδεκ",
+          "δωδεκ",
+          "δεκατρι",
+          "δεκατεσσερ",
+          "δεκαπεντ",
+          "δεκαεξ",
+          "δεκαεπτ",
+          "δεκαοκτ",
+          "δεκαεννι",
+          "εικοσ"
+        ],
+        "chain": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "branches": [],
+        "classification": {
+          "taxonomy": "",
+          "carbonCount": 5,
+          "principalFunctionalGroup": "hydrocarbon",
+          "bondSeries": "alkanes",
+          "seriesKey": "alkanes",
+          "chemicalClass": "hydrocarbons",
+          "functionalGroups": [
+            "hydrocarbon"
+          ]
+        },
+        "carbonCount": 5,
+        "engineSHA256": "3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306"
+      },
+      {
+        "moleculeId": "methyl_2_pentane",
+        "name": "2-μεθυλοπεντάνιο",
+        "parts": [
+          "2-",
+          "μεθυλο",
+          null,
+          null,
+          null,
+          "πεντ",
+          "άν",
+          null,
+          "",
+          "ιο",
+          null,
+          null
+        ],
+        "rootVocabulary": [
+          "μεθ",
+          "αιθ",
+          "προπ",
+          "βουτ",
+          "πεντ",
+          "εξ",
+          "επτ",
+          "οκτ",
+          "εννε",
+          "δεκ",
+          "ενδεκ",
+          "δωδεκ",
+          "δεκατρι",
+          "δεκατεσσερ",
+          "δεκαπεντ",
+          "δεκαεξ",
+          "δεκαεπτ",
+          "δεκαοκτ",
+          "δεκαεννι",
+          "εικοσ"
+        ],
+        "chain": [
+          1,
+          2,
+          3,
+          4,
+          6
+        ],
+        "branches": [
+          {
+            "locant": 2,
+            "length": 1,
+            "attach": 4,
+            "atoms": [
+              4
+            ],
+            "signature": "C()",
+            "name": "μεθυλο"
+          }
+        ],
+        "classification": {
+          "taxonomy": "",
+          "carbonCount": 6,
+          "principalFunctionalGroup": "hydrocarbon",
+          "bondSeries": "alkanes",
+          "seriesKey": "alkanes",
+          "chemicalClass": "hydrocarbons",
+          "functionalGroups": [
+            "hydrocarbon"
+          ]
+        },
+        "carbonCount": 6,
+        "engineSHA256": "3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306"
+      },
+      {
+        "moleculeId": "dimethyl_2_3_butane",
+        "name": "2,3-διμεθυλοβουτάνιο",
+        "parts": [
+          "2,3-",
+          "διμεθυλο",
+          null,
+          null,
+          null,
+          "βουτ",
+          "άν",
+          null,
+          "",
+          "ιο",
+          null,
+          null
+        ],
+        "rootVocabulary": [
+          "μεθ",
+          "αιθ",
+          "προπ",
+          "βουτ",
+          "πεντ",
+          "εξ",
+          "επτ",
+          "οκτ",
+          "εννε",
+          "δεκ",
+          "ενδεκ",
+          "δωδεκ",
+          "δεκατρι",
+          "δεκατεσσερ",
+          "δεκαπεντ",
+          "δεκαεξ",
+          "δεκαεπτ",
+          "δεκαοκτ",
+          "δεκαεννι",
+          "εικοσ"
+        ],
+        "chain": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "branches": [
+          {
+            "locant": 2,
+            "length": 1,
+            "attach": 4,
+            "atoms": [
+              4
+            ],
+            "signature": "C()",
+            "name": "μεθυλο"
+          },
+          {
+            "locant": 3,
+            "length": 1,
+            "attach": 5,
+            "atoms": [
+              5
+            ],
+            "signature": "C()",
+            "name": "μεθυλο"
+          }
+        ],
+        "classification": {
+          "taxonomy": "",
+          "carbonCount": 6,
+          "principalFunctionalGroup": "hydrocarbon",
+          "bondSeries": "alkanes",
+          "seriesKey": "alkanes",
+          "chemicalClass": "hydrocarbons",
+          "functionalGroups": [
+            "hydrocarbon"
+          ]
+        },
+        "carbonCount": 6,
+        "engineSHA256": "3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306"
+      },
+      {
+        "moleculeId": "ethyl_3_dimethyl_2_5_hexane",
+        "name": "3-αιθυλο-2,5-διμεθυλοεξάνιο",
+        "parts": [
+          "3-",
+          "αιθυλο",
+          "-2,5-",
+          "διμεθυλο",
+          null,
+          "εξ",
+          "άν",
+          null,
+          "",
+          "ιο",
+          null,
+          null
+        ],
+        "rootVocabulary": [
+          "μεθ",
+          "αιθ",
+          "προπ",
+          "βουτ",
+          "πεντ",
+          "εξ",
+          "επτ",
+          "οκτ",
+          "εννε",
+          "δεκ",
+          "ενδεκ",
+          "δωδεκ",
+          "δεκατρι",
+          "δεκατεσσερ",
+          "δεκαπεντ",
+          "δεκαεξ",
+          "δεκαεπτ",
+          "δεκαοκτ",
+          "δεκαεννι",
+          "εικοσ"
+        ],
+        "chain": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "branches": [
+          {
+            "locant": 2,
+            "length": 1,
+            "attach": 6,
+            "atoms": [
+              6
+            ],
+            "signature": "C()",
+            "name": "μεθυλο"
+          },
+          {
+            "locant": 3,
+            "length": 2,
+            "attach": 7,
+            "atoms": [
+              7,
+              8
+            ],
+            "signature": "C(C())",
+            "name": "αιθυλο"
+          },
+          {
+            "locant": 5,
+            "length": 1,
+            "attach": 9,
+            "atoms": [
+              9
+            ],
+            "signature": "C()",
+            "name": "μεθυλο"
+          }
+        ],
+        "classification": {
+          "taxonomy": "",
+          "carbonCount": 10,
+          "principalFunctionalGroup": "hydrocarbon",
+          "bondSeries": "alkanes",
+          "seriesKey": "alkanes",
+          "chemicalClass": "hydrocarbons",
+          "functionalGroups": [
+            "hydrocarbon"
+          ]
+        },
+        "carbonCount": 10,
+        "engineSHA256": "3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306"
+      }
+    ],
+    [
+      {
+        "moleculeId": "methane",
+        "name": "μεθάνιο",
+        "parts": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "μεθ",
+          "άν",
+          null,
+          "",
+          "ιο",
+          null,
+          null
+        ],
+        "rootVocabulary": [
+          "μεθ",
+          "αιθ",
+          "προπ",
+          "βουτ",
+          "πεντ",
+          "εξ",
+          "επτ",
+          "οκτ",
+          "εννε",
+          "δεκ",
+          "ενδεκ",
+          "δωδεκ",
+          "δεκατρι",
+          "δεκατεσσερ",
+          "δεκαπεντ",
+          "δεκαεξ",
+          "δεκαεπτ",
+          "δεκαοκτ",
+          "δεκαεννι",
+          "εικοσ"
+        ],
+        "chain": [
+          1
+        ],
+        "branches": [],
+        "classification": {
+          "taxonomy": "",
+          "carbonCount": 1,
+          "principalFunctionalGroup": "hydrocarbon",
+          "bondSeries": "alkanes",
+          "seriesKey": "alkanes",
+          "chemicalClass": "hydrocarbons",
+          "functionalGroups": [
+            "hydrocarbon"
+          ]
+        },
+        "carbonCount": 1,
+        "engineSHA256": "8f3e5f76d96322faf7cf9251f4cae3eca204fe2f82bf5754fdce6ffc4cd5d5a9"
+      },
+      {
+        "moleculeId": "ethane",
+        "name": "αιθάνιο",
+        "parts": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "αιθ",
+          "άν",
+          null,
+          "",
+          "ιο",
+          null,
+          null
+        ],
+        "rootVocabulary": [
+          "μεθ",
+          "αιθ",
+          "προπ",
+          "βουτ",
+          "πεντ",
+          "εξ",
+          "επτ",
+          "οκτ",
+          "εννε",
+          "δεκ",
+          "ενδεκ",
+          "δωδεκ",
+          "δεκατρι",
+          "δεκατεσσερ",
+          "δεκαπεντ",
+          "δεκαεξ",
+          "δεκαεπτ",
+          "δεκαοκτ",
+          "δεκαεννι",
+          "εικοσ"
+        ],
+        "chain": [
+          1,
+          2
+        ],
+        "branches": [],
+        "classification": {
+          "taxonomy": "",
+          "carbonCount": 2,
+          "principalFunctionalGroup": "hydrocarbon",
+          "bondSeries": "alkanes",
+          "seriesKey": "alkanes",
+          "chemicalClass": "hydrocarbons",
+          "functionalGroups": [
+            "hydrocarbon"
+          ]
+        },
+        "carbonCount": 2,
+        "engineSHA256": "8f3e5f76d96322faf7cf9251f4cae3eca204fe2f82bf5754fdce6ffc4cd5d5a9"
+      },
+      {
+        "moleculeId": "propane",
+        "name": "προπάνιο",
+        "parts": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "προπ",
+          "άν",
+          null,
+          "",
+          "ιο",
+          null,
+          null
+        ],
+        "rootVocabulary": [
+          "μεθ",
+          "αιθ",
+          "προπ",
+          "βουτ",
+          "πεντ",
+          "εξ",
+          "επτ",
+          "οκτ",
+          "εννε",
+          "δεκ",
+          "ενδεκ",
+          "δωδεκ",
+          "δεκατρι",
+          "δεκατεσσερ",
+          "δεκαπεντ",
+          "δεκαεξ",
+          "δεκαεπτ",
+          "δεκαοκτ",
+          "δεκαεννι",
+          "εικοσ"
+        ],
+        "chain": [
+          2,
+          3,
+          4
+        ],
+        "branches": [],
+        "classification": {
+          "taxonomy": "",
+          "carbonCount": 3,
+          "principalFunctionalGroup": "hydrocarbon",
+          "bondSeries": "alkanes",
+          "seriesKey": "alkanes",
+          "chemicalClass": "hydrocarbons",
+          "functionalGroups": [
+            "hydrocarbon"
+          ]
+        },
+        "carbonCount": 3,
+        "engineSHA256": "8f3e5f76d96322faf7cf9251f4cae3eca204fe2f82bf5754fdce6ffc4cd5d5a9"
+      },
+      {
+        "moleculeId": "butane",
+        "name": "βουτάνιο",
+        "parts": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "βουτ",
+          "άν",
+          null,
+          "",
+          "ιο",
+          null,
+          null
+        ],
+        "rootVocabulary": [
+          "μεθ",
+          "αιθ",
+          "προπ",
+          "βουτ",
+          "πεντ",
+          "εξ",
+          "επτ",
+          "οκτ",
+          "εννε",
+          "δεκ",
+          "ενδεκ",
+          "δωδεκ",
+          "δεκατρι",
+          "δεκατεσσερ",
+          "δεκαπεντ",
+          "δεκαεξ",
+          "δεκαεπτ",
+          "δεκαοκτ",
+          "δεκαεννι",
+          "εικοσ"
+        ],
+        "chain": [
+          2,
+          3,
+          4,
+          5
+        ],
+        "branches": [],
+        "classification": {
+          "taxonomy": "",
+          "carbonCount": 4,
+          "principalFunctionalGroup": "hydrocarbon",
+          "bondSeries": "alkanes",
+          "seriesKey": "alkanes",
+          "chemicalClass": "hydrocarbons",
+          "functionalGroups": [
+            "hydrocarbon"
+          ]
+        },
+        "carbonCount": 4,
+        "engineSHA256": "8f3e5f76d96322faf7cf9251f4cae3eca204fe2f82bf5754fdce6ffc4cd5d5a9"
+      },
+      {
+        "moleculeId": "pentane",
+        "name": "πεντάνιο",
+        "parts": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "πεντ",
+          "άν",
+          null,
+          "",
+          "ιο",
+          null,
+          null
+        ],
+        "rootVocabulary": [
+          "μεθ",
+          "αιθ",
+          "προπ",
+          "βουτ",
+          "πεντ",
+          "εξ",
+          "επτ",
+          "οκτ",
+          "εννε",
+          "δεκ",
+          "ενδεκ",
+          "δωδεκ",
+          "δεκατρι",
+          "δεκατεσσερ",
+          "δεκαπεντ",
+          "δεκαεξ",
+          "δεκαεπτ",
+          "δεκαοκτ",
+          "δεκαεννι",
+          "εικοσ"
+        ],
+        "chain": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "branches": [],
+        "classification": {
+          "taxonomy": "",
+          "carbonCount": 5,
+          "principalFunctionalGroup": "hydrocarbon",
+          "bondSeries": "alkanes",
+          "seriesKey": "alkanes",
+          "chemicalClass": "hydrocarbons",
+          "functionalGroups": [
+            "hydrocarbon"
+          ]
+        },
+        "carbonCount": 5,
+        "engineSHA256": "8f3e5f76d96322faf7cf9251f4cae3eca204fe2f82bf5754fdce6ffc4cd5d5a9"
+      },
+      {
+        "moleculeId": "methyl_2_pentane",
+        "name": "2-μεθυλοπεντάνιο",
+        "parts": [
+          "2-",
+          "μεθυλο",
+          null,
+          null,
+          null,
+          "πεντ",
+          "άν",
+          null,
+          "",
+          "ιο",
+          null,
+          null
+        ],
+        "rootVocabulary": [
+          "μεθ",
+          "αιθ",
+          "προπ",
+          "βουτ",
+          "πεντ",
+          "εξ",
+          "επτ",
+          "οκτ",
+          "εννε",
+          "δεκ",
+          "ενδεκ",
+          "δωδεκ",
+          "δεκατρι",
+          "δεκατεσσερ",
+          "δεκαπεντ",
+          "δεκαεξ",
+          "δεκαεπτ",
+          "δεκαοκτ",
+          "δεκαεννι",
+          "εικοσ"
+        ],
+        "chain": [
+          1,
+          2,
+          3,
+          4,
+          6
+        ],
+        "branches": [
+          {
+            "locant": 2,
+            "length": 1,
+            "attach": 4,
+            "atoms": [
+              4
+            ],
+            "signature": "C()",
+            "name": "μεθυλο"
+          }
+        ],
+        "classification": {
+          "taxonomy": "",
+          "carbonCount": 6,
+          "principalFunctionalGroup": "hydrocarbon",
+          "bondSeries": "alkanes",
+          "seriesKey": "alkanes",
+          "chemicalClass": "hydrocarbons",
+          "functionalGroups": [
+            "hydrocarbon"
+          ]
+        },
+        "carbonCount": 6,
+        "engineSHA256": "8f3e5f76d96322faf7cf9251f4cae3eca204fe2f82bf5754fdce6ffc4cd5d5a9"
+      },
+      {
+        "moleculeId": "dimethyl_2_3_butane",
+        "name": "2,3-διμεθυλοβουτάνιο",
+        "parts": [
+          "2,3-",
+          "διμεθυλο",
+          null,
+          null,
+          null,
+          "βουτ",
+          "άν",
+          null,
+          "",
+          "ιο",
+          null,
+          null
+        ],
+        "rootVocabulary": [
+          "μεθ",
+          "αιθ",
+          "προπ",
+          "βουτ",
+          "πεντ",
+          "εξ",
+          "επτ",
+          "οκτ",
+          "εννε",
+          "δεκ",
+          "ενδεκ",
+          "δωδεκ",
+          "δεκατρι",
+          "δεκατεσσερ",
+          "δεκαπεντ",
+          "δεκαεξ",
+          "δεκαεπτ",
+          "δεκαοκτ",
+          "δεκαεννι",
+          "εικοσ"
+        ],
+        "chain": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "branches": [
+          {
+            "locant": 2,
+            "length": 1,
+            "attach": 4,
+            "atoms": [
+              4
+            ],
+            "signature": "C()",
+            "name": "μεθυλο"
+          },
+          {
+            "locant": 3,
+            "length": 1,
+            "attach": 5,
+            "atoms": [
+              5
+            ],
+            "signature": "C()",
+            "name": "μεθυλο"
+          }
+        ],
+        "classification": {
+          "taxonomy": "",
+          "carbonCount": 6,
+          "principalFunctionalGroup": "hydrocarbon",
+          "bondSeries": "alkanes",
+          "seriesKey": "alkanes",
+          "chemicalClass": "hydrocarbons",
+          "functionalGroups": [
+            "hydrocarbon"
+          ]
+        },
+        "carbonCount": 6,
+        "engineSHA256": "8f3e5f76d96322faf7cf9251f4cae3eca204fe2f82bf5754fdce6ffc4cd5d5a9"
+      },
+      {
+        "moleculeId": "ethyl_3_dimethyl_2_5_hexane",
+        "name": "3-αιθυλο-2,5-διμεθυλοεξάνιο",
+        "parts": [
+          "3-",
+          "αιθυλο",
+          "-2,5-",
+          "διμεθυλο",
+          null,
+          "εξ",
+          "άν",
+          null,
+          "",
+          "ιο",
+          null,
+          null
+        ],
+        "rootVocabulary": [
+          "μεθ",
+          "αιθ",
+          "προπ",
+          "βουτ",
+          "πεντ",
+          "εξ",
+          "επτ",
+          "οκτ",
+          "εννε",
+          "δεκ",
+          "ενδεκ",
+          "δωδεκ",
+          "δεκατρι",
+          "δεκατεσσερ",
+          "δεκαπεντ",
+          "δεκαεξ",
+          "δεκαεπτ",
+          "δεκαοκτ",
+          "δεκαεννι",
+          "εικοσ"
+        ],
+        "chain": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "branches": [
+          {
+            "locant": 2,
+            "length": 1,
+            "attach": 6,
+            "atoms": [
+              6
+            ],
+            "signature": "C()",
+            "name": "μεθυλο"
+          },
+          {
+            "locant": 3,
+            "length": 2,
+            "attach": 7,
+            "atoms": [
+              7,
+              8
+            ],
+            "signature": "C(C())",
+            "name": "αιθυλο"
+          },
+          {
+            "locant": 5,
+            "length": 1,
+            "attach": 9,
+            "atoms": [
+              9
+            ],
+            "signature": "C()",
+            "name": "μεθυλο"
+          }
+        ],
+        "classification": {
+          "taxonomy": "",
+          "carbonCount": 10,
+          "principalFunctionalGroup": "hydrocarbon",
+          "bondSeries": "alkanes",
+          "seriesKey": "alkanes",
+          "chemicalClass": "hydrocarbons",
+          "functionalGroups": [
+            "hydrocarbon"
+          ]
+        },
+        "carbonCount": 10,
+        "engineSHA256": "8f3e5f76d96322faf7cf9251f4cae3eca204fe2f82bf5754fdce6ffc4cd5d5a9"
+      }
+    ]
+  ],
+  "javascriptErrors": []
+}

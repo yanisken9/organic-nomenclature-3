@@ -1,0 +1,31 @@
+--- before/js/mulermoc-nom-molview-52.js
++++ after/js/mulermoc-nom-molview-52.js
+@@ -1255,6 +1255,17 @@
+         const bounds = label.node.getBBox();
+         const fontSize = parseFloat(label.attr("font-size"));
+         const padding = Number.isFinite(fontSize) && fontSize > 0 ? fontSize * 0.06 : 20;
++        // In acid condensed drawings a vertical bond below C must not stop
++        // at the lower edge of the adjacent H subscript's rectangular mask.
++        const carbon = label.node.firstElementChild;
++        if (mode2D === "condensed" && functionalGroupObj && functionalGroupObj.carboxylicAcid && carbon &&
++            (atomConnectivityList[i] || []).some(nb =>
++              allAtomsTypeList[nb] === "C" && tmpTexts[nb] &&
++              Math.abs(parseFloat(tmpTexts[nb].attr("x")) - parseFloat(label.attr("x"))) < 0.01 &&
++              parseFloat(tmpTexts[nb].attr("y")) > parseFloat(label.attr("y")) + 0.01)) {
++          const carbonBounds = carbon.getBBox();
++          bounds.height = carbonBounds.y + carbonBounds.height - bounds.y;
++        }
+         if ([bounds.x, bounds.y, bounds.width, bounds.height].every(Number.isFinite) &&
+             bounds.width > 0 && bounds.height > 0) {
+           backplate.attr({
+--- before/mulermoc-nom-52.html
++++ after/mulermoc-nom-52.html
+@@ -331,7 +331,7 @@
+   <script src="js/jsme-nick-nomeclature-moc2-data_52.js?v=acid-layout-20261028"></script>
+   <script src="js/ui-icons.js?v=v52-sync-20261027-r2"></script>
+   <script src="js/mulermoc-nom-core-52.js?v=acids-20261028"></script>
+-  <script src="js/mulermoc-nom-molview-52.js?v=acid-layout-20261028"></script>
++  <script src="js/mulermoc-nom-molview-52.js?v=acid-condensed-gap-20261028"></script>
+   <script src="js/mulermoc-nom-teaching-52.js?v=acid-prefix-boxes-20261028"></script>
+   <script src="js/mulermoc-nom-note-52.js?v=v52-sync-20261027-r2"></script>
+   <script src="js/mulermoc-nom-scenario-52.js?v=upstream-image-picker-20261026"></script>

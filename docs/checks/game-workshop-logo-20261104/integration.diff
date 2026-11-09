@@ -1,0 +1,81 @@
+--- before/games/name-repair.html
++++ after/games/name-repair.html
+@@ -6,8 +6,8 @@
+   <meta name="theme-color" content="#254c50">
+   <title>Συνεργείο ονομάτων · Namelecule</title>
+   <meta name="description" content="Παρατήρησε τη δομή και επισκεύασε ένα όνομα αλκανίου βήμα βήμα, με βοήθεια όποτε τη χρειάζεσαι.">
+-  <link rel="stylesheet" href="../css/namelecule-games.css?v=feedback-20261103-r2">
+-  <script src="../js/namelecule-game-repair.js?v=feedback-20261103-r2" defer></script>
++  <link rel="stylesheet" href="../css/namelecule-games.css?v=logo-3d-20261104-r1">
++  <script src="../js/namelecule-game-repair.js?v=logo-3d-20261104-r1" defer></script>
+ </head>
+ <body>
+   <a class="skip-link" href="#game-root">Πήγαινε στο παιχνίδι</a>
+--- before/js/namelecule-game-repair.js
++++ after/js/namelecule-game-repair.js
+@@ -199,11 +199,22 @@
+     }
+   }
+ 
++  function workshopLogo(className) {
++    return node("img", {
++      class: className,
++      src: "assets/name-repair/workshop-logo-3d-v1.png",
++      width: "128",
++      height: "128",
++      alt: "",
++      "aria-hidden": "true"
++    });
++  }
++
+   function renderWelcome() {
+     renderId += 1;
+     const copy = node("div", { class: "intro-copy" }, [
+       node("p", { class: "eyebrow" }, [node("span", { class: "eyebrow-dot", "aria-hidden": "true" }), "ΠΑΙΧΝΙΔΙ ΟΝΟΜΑΤΟΛΟΓΙΑΣ · ΑΛΚΑΝΙΑ"]),
+-      node("h1", {}, ["Συνεργείο", node("span", { text: "ονομάτων" })]),
++      node("div", { class: "workshop-title" }, [workshopLogo("workshop-logo"), node("h1", {}, ["Συνεργείο", node("span", { text: "ονομάτων" })])]),
+       node("p", { class: "intro-description" }, ["Η δομή είναι εδώ. Στο όνομα, όμως, ", node("strong", { text: "κάτι δεν ταιριάζει." }), " Παρατήρησε το μόριο, βρες το λάθος κομμάτι και βάλε το σωστό στη θέση του."]),
+       node("div", { class: "intro-badges" }, [node("span", { text: "1 παράδειγμα + 4 αποστολές" }), node("span", { text: "Χωρίς χρονόμετρο" }), node("span", { text: "Εξηγήσεις μετά την επισκευή" })]),
+       button("Άνοιξε το συνεργείο  →", "primary intro-start", function () { roundIndex = 0; renderRound(); }),
+@@ -299,7 +310,7 @@
+     ]);
+     refs.sessionStats = node("span");
+     const screen = node("div", { class: "round-screen" }, [
+-      node("div", { class: "round-topbar" }, [node("p", { class: "eyebrow", text: "ΣΥΝΕΡΓΕΙΟ ΟΝΟΜΑΤΩΝ" }), progressList()]),
++      node("div", { class: "round-topbar" }, [node("p", { class: "eyebrow round-game-brand" }, [workshopLogo("workshop-logo-small"), node("span", { class: "round-game-label", text: "ΣΥΝΕΡΓΕΙΟ ΟΝΟΜΑΤΩΝ" })]), progressList()]),
+       heading, steps,
+       node("div", { class: "bench" }, [node("div", { class: "visual-side" }, [diagram]), node("div", { class: "repair-side" }, [repair, refs.next])]),
+       node("div", { class: "session-row" }, [refs.sessionStats, button("Νέο παιχνίδι", "quiet", requestRestart)])
+--- before/css/namelecule-games.css
++++ after/css/namelecule-games.css
+@@ -70,6 +70,12 @@
+ .intro { display: grid; grid-template-columns: 1.04fr 1fr; gap: 55px; align-items: center; padding: 38px 0 45px; }
+ .intro-copy h1 { margin-bottom: 22px; }
+ .intro-copy h1 span { display: block; color: var(--teal); }
++.workshop-title { display: flex; align-items: center; gap: 18px; margin-bottom: 24px; }
++.workshop-title h1 { margin: 0; min-width: 0; }
++.workshop-logo { display: block; width: 128px; height: 128px; object-fit: contain; flex: 0 0 auto; }
++.workshop-logo-small { display: block; width: 36px; height: 36px; object-fit: contain; flex: 0 0 auto; }
++.round-topbar .round-game-brand { display: flex; align-items: center; gap: 10px; margin: 0; }
++.round-game-label { min-width: 0; }
+ .intro-description { max-width: 490px; color: var(--muted); font-size: 1.05rem; line-height: 1.75; margin-bottom: 25px; }
+ .intro-description strong { color: var(--ink); font-weight: 650; }
+ .intro-badges { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 28px; }
+@@ -265,6 +271,8 @@
+   .art-tabs span { padding: 8px 10px; font-size: .7rem; }
+   .round-topbar { align-items: flex-start; gap: 8px; }
+   .round-topbar .eyebrow { max-width: 98px; padding-top: 4px; }
++  .round-topbar .round-game-brand { max-width: 154px; gap: 7px; padding-top: 0; }
++  .workshop-logo-small { width: 30px; height: 30px; }
+   .progress li + li::before { width: 5px; }
+   .progress, .progress li { gap: 4px; }
+   .progress-dot { min-width: 23px; height: 23px; }
+@@ -293,3 +301,8 @@
+ @media (prefers-reduced-motion: reduce) {
+   *, *::before, *::after { scroll-behavior: auto !important; animation: none !important; transition: none !important; }
+ }
++@media (max-width: 550px) {
++  .workshop-title { gap: 13px; }
++  .workshop-title .workshop-logo { width: 88px; height: 88px; }
++  .workshop-title h1 { font-size: 2.25rem; }
++}

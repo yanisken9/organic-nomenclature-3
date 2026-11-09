@@ -1,0 +1,113 @@
+{
+  "date": "2026-11-08",
+  "kind": "Developer verification, not independent review",
+  "baseCommit": "168e3cec01f941a84d40bbe0dc07156e7baa35d0",
+  "targets": {
+    "js/namelecule-generated-repair-checkpoint.js": "17b33b952cb0f01d897b6e245f920568ac0e709c274fec58422196f4e88180f8",
+    "js/namelecule-quiz-checkpoints.js": "9ffff4aa880aeb3fc68010325684a2d59045754026b60ee9c80249be16061d00",
+    "css/namelecule-quiz-checkpoints.css": "73efe5d5338e2753667d72b5847426ae143b3690292310213f263714ec9919d8",
+    "mulermoc-nom-54.html": "a8cf41730cf2413b4c85ed002503038b3a89dc1f3a7dc4f55ab1882f5174435c"
+  },
+  "protectedUnchanged": {
+    "js/mulermoc-nom-core-43.js": true,
+    "js/mulermoc-nom-core-42.js": true,
+    "js/mulermoc-nom-core-52.js": true,
+    "js/mulermoc-nom-core-49.js": true,
+    "js/mulermoc-nom-core-48.js": true,
+    "js/mulermoc-nom-core-45.js": true,
+    "js/mulermoc-nom-core-51.js": true,
+    "js/mulermoc-nom-core-50.js": true,
+    "js/mulermoc-nom-core-44.js": true,
+    "js/mulermoc-nom-core-54.js": true,
+    "design/theory-library.html": true,
+    "js/mulermoc-nom-scenario-54.js": true,
+    "css/mulermoc-nom-scenario-54.css": true,
+    "js/namelecule-repair-generator.js": true,
+    "js/namelecule-game-repair.js": true,
+    "scenarios/alkanes-name-repair-pilot.scenario.json": true,
+    "scenarios/ethene.scenario.json": true,
+    "scenarios/Αλκάνια-Αιθάνιο.scenario.json": true,
+    "scenarios/other-aldehydes-nomenclature.scenario.json": true,
+    "scenarios/alkynes-nomenclature-branches.scenario.json": true,
+    "scenarios/Αλκένια-Ονοματολογία-Διακλαδώσεις.scenario.json": true,
+    "scenarios/alkanes-nomenclature-branches.scenario.json": true,
+    "scenarios/saturated-monoaldehydes-nomenclature.scenario.json": true,
+    "scenarios/1Αλκένια-Ονοματολογία_και_διακλαδώσεις.scenario.json": true,
+    "scenarios/alkanes-two-part-workshop.scenario.json": true,
+    "scenarios/saturated-monocarboxylic-acids-nomenclature.scenario.json": true,
+    "scenarios/3Αλκένια-Ονοματολογία_και_διακλαδώσεις.scenario.json": true,
+    "scenarios/other-ketones-nomenclature.scenario.json": true,
+    "scenarios/alkenes-nomenclature-branches.scenario.json": true,
+    "scenarios/other-alcohols-nomenclature.scenario.json": true,
+    "scenarios/saturated-monoketones-nomenclature.scenario.json": true,
+    "scenarios/saturated-monoalcohols-nomenclature.scenario.json": true,
+    "scenarios/2Αλκένια-Ονοματολογία_και_διακλαδώσεις.scenario.json": true,
+    "scenarios/Αλκάνια-Αιθάνιο-τεστ.scenario.json": true,
+    "scenarios/Αλκένια-Αιθένιο.scenario.json": true,
+    "scenarios/4Αλκένια-Ονοματολογία_και_διακλαδώσεις.scenario.json": true,
+    "scenarios/Αλκένια-Ονοματολογία_και_διακλαδώσεις1.scenario.json": true,
+    "scenarios/enynes-nomenclature-branches.scenario.json": true,
+    "scenarios/saturated-monoethers-nomenclature.scenario.json": true,
+    "scenarios/alkadienes-nomenclature-branches.scenario.json": true,
+    "scenarios/Αλκένια-Ονοματολογία_και_διακλαδώσεις.scenario.json": true,
+    "scenarios/other-carboxylic-acids-nomenclature.scenario.json": true,
+    "scenarios/alkanes-user-3.scenario.json": true,
+    "games/name-repair.html": true
+  },
+  "protectedCount": 44,
+  "coreFilesUnchanged": [
+    "js/mulermoc-nom-core-43.js",
+    "js/mulermoc-nom-core-42.js",
+    "js/mulermoc-nom-core-52.js",
+    "js/mulermoc-nom-core-49.js",
+    "js/mulermoc-nom-core-48.js",
+    "js/mulermoc-nom-core-45.js",
+    "js/mulermoc-nom-core-51.js",
+    "js/mulermoc-nom-core-50.js",
+    "js/mulermoc-nom-core-44.js",
+    "js/mulermoc-nom-core-54.js"
+  ],
+  "HTTP": {
+    "js/namelecule-generated-repair-checkpoint.js": {
+      "status": 200,
+      "SHA256": "17b33b952cb0f01d897b6e245f920568ac0e709c274fec58422196f4e88180f8"
+    },
+    "js/namelecule-quiz-checkpoints.js": {
+      "status": 200,
+      "SHA256": "9ffff4aa880aeb3fc68010325684a2d59045754026b60ee9c80249be16061d00"
+    },
+    "css/namelecule-quiz-checkpoints.css": {
+      "status": 200,
+      "SHA256": "73efe5d5338e2753667d72b5847426ae143b3690292310213f263714ec9919d8"
+    },
+    "mulermoc-nom-54.html": {
+      "status": 200,
+      "SHA256": "a8cf41730cf2413b4c85ed002503038b3a89dc1f3a7dc4f55ab1882f5174435c"
+    }
+  },
+  "browser": {
+    "passed": 48,
+    "JavaScriptErrors": 0
+  },
+  "memory": {
+    "passed": 321,
+    "limitations": [
+      "JavaScriptCore and Fake DOM: no visual/sticky/mobile/scroll/focus/screen-reader or real browser claims",
+      "Shared round UI mounting is mocked; callback actions use actual repair validation/evaluation/restoration; Firefox exercises UI separately",
+      "Network transport, WebCrypto, timers, chemistry analyses and generator delivery are mocked; no new chemical generation claims",
+      "Fixtures are earlier exact pinned-engine seeds1/4; behavioral flows use seed1 including both replacement and actual order repair",
+      "Custom test adapter supplies malformed/stale progress and synchronous destroy/error probes; production code is evaluated unmodified",
+      "Authored scenario invariance and protected source hashes cover export contract; no browser download/export performed"
+    ]
+  },
+  "screenshotsInspected": [
+    "counter-1-desktop.png",
+    "counter-scrolled-320.png"
+  ],
+  "limitations": [
+    "Headless isolated Firefox at1500/390/320 widths; no Safari/physical mobile/screen reader",
+    "No new full 3D/JSmol/user Firefox freeze or conference sequence audit",
+    "No JSON export or core/generator/answer/schema changes",
+    "Initial browser test harness const redeclaration fixed; initial failure preserved; no app source correction required"
+  ]
+}

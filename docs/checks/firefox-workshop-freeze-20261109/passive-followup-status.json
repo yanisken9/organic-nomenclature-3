@@ -1,0 +1,665 @@
+{
+  "readOnly": true,
+  "commands": "status + two passive eval reads; no activate/focus/resize/screenshot/click/navigation",
+  "browserPid": 56371,
+  "nativeWindows": [
+    {
+      "active": true,
+      "clientWindow": "5144f954-f64f-49b4-a15a-1264209e0515",
+      "height": 735,
+      "state": "normal",
+      "width": 1280,
+      "x": 4,
+      "y": 25
+    }
+  ],
+  "status": {
+    "url": "http://127.0.0.1:8013/mulermoc-nom-54.html?scenario=scenarios/alkanes-user-3.scenario.json&v=workshop-manual-1794197282#step=12",
+    "step": 11,
+    "dialogOpen": false,
+    "modal": false,
+    "active": "",
+    "visibility": "visible",
+    "focus": true,
+    "viewport": {
+      "width": 1280,
+      "height": 650
+    },
+    "heart": {
+      "raf": 15451,
+      "timers": 2603,
+      "lastRAF": 267093.22,
+      "lastTimer": 267074
+    },
+    "image": null,
+    "progress": "",
+    "hostBusy": null,
+    "round": {
+      "id": "engine-ethyl_3_dimethyl_2_5_hexane-parent-length-19105509",
+      "kind": "replace"
+    }
+  },
+  "snapshot": {
+    "title": "Namelecule — ΑΥΤΟΜΑΤΟΣ ΕΛΕΓΧΟΣ — διαθέσιμο για δοκιμή",
+    "url": "http://127.0.0.1:8013/mulermoc-nom-54.html?scenario=scenarios/alkanes-user-3.scenario.json&v=workshop-manual-1794197282#step=12",
+    "step": 11,
+    "visibility": "visible",
+    "focus": true,
+    "active": "",
+    "modal": {
+      "present": true,
+      "open": false,
+      "topLayer": false
+    },
+    "heart": {
+      "raf": 15451,
+      "timers": 2603,
+      "rafAgeMs": 15.78000000002794,
+      "timerAgeMs": 35
+    },
+    "image": null,
+    "hostBusy": null,
+    "hits": [
+      {
+        "selector": "#nlQuizOpen",
+        "present": false
+      },
+      {
+        "selector": "#nlQuizBack",
+        "present": true,
+        "target": "nlQuizBack",
+        "disabled": false,
+        "rect": {
+          "left": 0,
+          "top": 0,
+          "width": 0,
+          "height": 0
+        },
+        "hit": "scenarioPlayBar",
+        "hitClass": "",
+        "receives": false
+      },
+      {
+        "selector": "#nlQuizDialog [id$='-check-button']",
+        "present": false
+      },
+      {
+        "selector": "#nlQuizDialog .part-button",
+        "present": false
+      },
+      {
+        "selector": "#nlQuizDialog .choice-button",
+        "present": false
+      }
+    ],
+    "inputs": [
+      {
+        "t": 201002,
+        "kind": "focusin",
+        "info": {
+          "id": "nl-repair-2-choice-1",
+          "cls": "choice-button",
+          "trusted": true,
+          "active": "nl-repair-2-choice-1"
+        }
+      },
+      {
+        "t": 204316,
+        "kind": "pointerdown",
+        "info": {
+          "id": "nl-repair-2-check-button",
+          "cls": "primary",
+          "trusted": true,
+          "active": "nl-repair-2-choice-1"
+        }
+      },
+      {
+        "t": 204317,
+        "kind": "focusout",
+        "info": {
+          "id": "nl-repair-2-choice-1",
+          "cls": "choice-button",
+          "trusted": true,
+          "active": ""
+        }
+      },
+      {
+        "t": 204318,
+        "kind": "focusin",
+        "info": {
+          "id": "nl-repair-2-check-button",
+          "cls": "primary",
+          "trusted": true,
+          "active": "nl-repair-2-check-button"
+        }
+      },
+      {
+        "t": 204321,
+        "kind": "pointerup",
+        "info": {
+          "id": "nl-repair-2-check-button",
+          "cls": "primary",
+          "trusted": true,
+          "active": "nl-repair-2-check-button"
+        }
+      },
+      {
+        "t": 204321,
+        "kind": "click",
+        "info": {
+          "id": "nl-repair-2-check-button",
+          "cls": "primary",
+          "trusted": true,
+          "active": "nl-repair-2-check-button"
+        }
+      },
+      {
+        "t": 204329,
+        "kind": "focusout",
+        "info": {
+          "id": "nl-repair-2-check-button",
+          "cls": "primary",
+          "trusted": true,
+          "active": ""
+        }
+      },
+      {
+        "t": 204330,
+        "kind": "focusin",
+        "info": {
+          "id": "",
+          "cls": "primary",
+          "trusted": true,
+          "active": ""
+        }
+      },
+      {
+        "t": 206849,
+        "kind": "pointerdown",
+        "info": {
+          "id": "",
+          "cls": "primary",
+          "trusted": true,
+          "active": ""
+        }
+      },
+      {
+        "t": 206864,
+        "kind": "pointerup",
+        "info": {
+          "id": "",
+          "cls": "primary",
+          "trusted": true,
+          "active": ""
+        }
+      },
+      {
+        "t": 206865,
+        "kind": "click",
+        "info": {
+          "id": "",
+          "cls": "primary",
+          "trusted": true,
+          "active": ""
+        }
+      },
+      {
+        "t": 206872,
+        "kind": "focusin",
+        "info": {
+          "id": "",
+          "cls": "",
+          "trusted": true,
+          "active": ""
+        }
+      },
+      {
+        "t": 213029,
+        "kind": "pointerdown",
+        "info": {
+          "id": "nl-repair-3-part-component-5",
+          "cls": "part-button",
+          "trusted": true,
+          "active": ""
+        }
+      },
+      {
+        "t": 213030,
+        "kind": "focusout",
+        "info": {
+          "id": "",
+          "cls": "",
+          "trusted": true,
+          "active": ""
+        }
+      },
+      {
+        "t": 213030,
+        "kind": "focusin",
+        "info": {
+          "id": "nl-repair-3-part-component-5",
+          "cls": "part-button",
+          "trusted": true,
+          "active": "nl-repair-3-part-component-5"
+        }
+      },
+      {
+        "t": 213040,
+        "kind": "pointerup",
+        "info": {
+          "id": "nl-repair-3-part-component-5",
+          "cls": "part-button",
+          "trusted": true,
+          "active": "nl-repair-3-part-component-5"
+        }
+      },
+      {
+        "t": 213042,
+        "kind": "click",
+        "info": {
+          "id": "nl-repair-3-part-component-5",
+          "cls": "part-button",
+          "trusted": true,
+          "active": "nl-repair-3-part-component-5"
+        }
+      },
+      {
+        "t": 213045,
+        "kind": "focusin",
+        "info": {
+          "id": "nl-repair-3-part-component-5",
+          "cls": "part-button",
+          "trusted": true,
+          "active": "nl-repair-3-part-component-5"
+        }
+      },
+      {
+        "t": 214583,
+        "kind": "pointerdown",
+        "info": {
+          "id": "nl-repair-3-choice-2",
+          "cls": "choice-button",
+          "trusted": true,
+          "active": "nl-repair-3-part-component-5"
+        }
+      },
+      {
+        "t": 214586,
+        "kind": "focusout",
+        "info": {
+          "id": "nl-repair-3-part-component-5",
+          "cls": "part-button",
+          "trusted": true,
+          "active": ""
+        }
+      },
+      {
+        "t": 214587,
+        "kind": "focusin",
+        "info": {
+          "id": "nl-repair-3-choice-2",
+          "cls": "choice-button",
+          "trusted": true,
+          "active": "nl-repair-3-choice-2"
+        }
+      },
+      {
+        "t": 214593,
+        "kind": "pointerup",
+        "info": {
+          "id": "nl-repair-3-choice-2",
+          "cls": "choice-button",
+          "trusted": true,
+          "active": "nl-repair-3-choice-2"
+        }
+      },
+      {
+        "t": 214594,
+        "kind": "click",
+        "info": {
+          "id": "nl-repair-3-choice-2",
+          "cls": "choice-button",
+          "trusted": true,
+          "active": "nl-repair-3-choice-2"
+        }
+      },
+      {
+        "t": 214597,
+        "kind": "focusin",
+        "info": {
+          "id": "nl-repair-3-choice-2",
+          "cls": "choice-button",
+          "trusted": true,
+          "active": "nl-repair-3-choice-2"
+        }
+      },
+      {
+        "t": 216867,
+        "kind": "pointerdown",
+        "info": {
+          "id": "nl-repair-3-check-button",
+          "cls": "primary",
+          "trusted": true,
+          "active": "nl-repair-3-choice-2"
+        }
+      },
+      {
+        "t": 216868,
+        "kind": "focusout",
+        "info": {
+          "id": "nl-repair-3-choice-2",
+          "cls": "choice-button",
+          "trusted": true,
+          "active": ""
+        }
+      },
+      {
+        "t": 216868,
+        "kind": "focusin",
+        "info": {
+          "id": "nl-repair-3-check-button",
+          "cls": "primary",
+          "trusted": true,
+          "active": "nl-repair-3-check-button"
+        }
+      },
+      {
+        "t": 216883,
+        "kind": "pointerup",
+        "info": {
+          "id": "nl-repair-3-check-button",
+          "cls": "primary",
+          "trusted": true,
+          "active": "nl-repair-3-check-button"
+        }
+      },
+      {
+        "t": 216884,
+        "kind": "click",
+        "info": {
+          "id": "nl-repair-3-check-button",
+          "cls": "primary",
+          "trusted": true,
+          "active": "nl-repair-3-check-button"
+        }
+      },
+      {
+        "t": 216891,
+        "kind": "focusout",
+        "info": {
+          "id": "nl-repair-3-check-button",
+          "cls": "primary",
+          "trusted": true,
+          "active": ""
+        }
+      },
+      {
+        "t": 216891,
+        "kind": "focusin",
+        "info": {
+          "id": "",
+          "cls": "primary",
+          "trusted": true,
+          "active": ""
+        }
+      },
+      {
+        "t": 219137,
+        "kind": "pointerdown",
+        "info": {
+          "id": "",
+          "cls": "primary",
+          "trusted": true,
+          "active": ""
+        }
+      },
+      {
+        "t": 219152,
+        "kind": "pointerup",
+        "info": {
+          "id": "",
+          "cls": "primary",
+          "trusted": true,
+          "active": ""
+        }
+      },
+      {
+        "t": 219152,
+        "kind": "click",
+        "info": {
+          "id": "",
+          "cls": "primary",
+          "trusted": true,
+          "active": ""
+        }
+      },
+      {
+        "t": 219191,
+        "kind": "focusin",
+        "info": {
+          "id": "nlQuizOpen",
+          "cls": "nl-quiz-button nl-quiz-open",
+          "trusted": true,
+          "active": "nlQuizOpen"
+        }
+      }
+    ],
+    "errors": [],
+    "lastStages": [
+      {
+        "t": 140505,
+        "kind": "analyze-ok",
+        "info": {
+          "id": "propane",
+          "ms": 66
+        }
+      },
+      {
+        "t": 140511,
+        "kind": "analyze-ok",
+        "info": {
+          "id": "methane",
+          "ms": 72
+        }
+      },
+      {
+        "t": 140513,
+        "kind": "analyze-ok",
+        "info": {
+          "id": "ethane",
+          "ms": 74
+        }
+      },
+      {
+        "t": 140557,
+        "kind": "analyze-ok",
+        "info": {
+          "id": "butane",
+          "ms": 44
+        }
+      },
+      {
+        "t": 140557,
+        "kind": "analyze-ok",
+        "info": {
+          "id": "methyl_2_pentane",
+          "ms": 44
+        }
+      },
+      {
+        "t": 140578,
+        "kind": "analyze-ok",
+        "info": {
+          "id": "pentane",
+          "ms": 65
+        }
+      },
+      {
+        "t": 140613,
+        "kind": "analyze-ok",
+        "info": {
+          "id": "dimethyl_2_3_butane",
+          "ms": 35
+        }
+      },
+      {
+        "t": 140616,
+        "kind": "analyze-ok",
+        "info": {
+          "id": "ethyl_3_dimethyl_2_5_hexane",
+          "ms": 38
+        }
+      },
+      {
+        "t": 140623,
+        "kind": "mountRound",
+        "info": {
+          "id": "engine-dimethyl_2_3_butane-branch-locants-f0d60cff",
+          "kind": "replace"
+        }
+      },
+      {
+        "t": 140689,
+        "kind": "modal-mutation",
+        "info": {
+          "open": true,
+          "busy": "false",
+          "text": "Με διακλαδώσειςΣΥΝΕΡΓΕΙΟ ΟΝΟΜΑΤΩΝΕπισκευή ονόματοςΈλεγξε τα σημεία σύνδεσης των διακλαδώσεων και τη φορά αρίθμησης.1Παρατήρησε τη δομή2Επισκεύασε το όνομα3Έλεγξε την επιλογή σουΗ δομή στο επίκεντροΑνεπτυγμένος τύποςΜεγέθυνση σχεδίουΠαρατήρησε την κύρ",
+          "image": {
+            "complete": true,
+            "width": 281,
+            "cls": "diagram-image is-ready"
+          }
+        }
+      },
+      {
+        "t": 170689,
+        "kind": "mountRound",
+        "info": {
+          "id": "engine-methyl_2_pentane-parent-length-61befc4",
+          "kind": "replace"
+        }
+      },
+      {
+        "t": 170734,
+        "kind": "modal-mutation",
+        "info": {
+          "open": true,
+          "busy": "false",
+          "text": "Με διακλαδώσειςΣΥΝΕΡΓΕΙΟ ΟΝΟΜΑΤΩΝΕπισκευή ονόματοςΈλεγξε το μήκος της κύριας αλυσίδας και το συνθετικό που το δηλώνει.1Παρατήρησε τη δομή2Επισκεύασε το όνομα3Έλεγξε την επιλογή σουΗ δομή στο επίκεντροΑνεπτυγμένος τύποςΜεγέθυνση σχεδίουΠαρατήρησε την ",
+          "image": {
+            "complete": true,
+            "width": 339,
+            "cls": "diagram-image is-ready"
+          }
+        }
+      },
+      {
+        "t": 206867,
+        "kind": "mountRound",
+        "info": {
+          "id": "engine-ethyl_3_dimethyl_2_5_hexane-parent-length-19105509",
+          "kind": "replace"
+        }
+      },
+      {
+        "t": 206913,
+        "kind": "modal-mutation",
+        "info": {
+          "open": true,
+          "busy": "false",
+          "text": "Με διακλαδώσειςΣΥΝΕΡΓΕΙΟ ΟΝΟΜΑΤΩΝΕπισκευή ονόματοςΈλεγξε το μήκος της κύριας αλυσίδας και το συνθετικό που το δηλώνει.1Παρατήρησε τη δομή2Επισκεύασε το όνομα3Έλεγξε την επιλογή σουΗ δομή στο επίκεντροΑνεπτυγμένος τύποςΜεγέθυνση σχεδίουΠαρατήρησε την ",
+          "image": {
+            "complete": true,
+            "width": 396,
+            "cls": "diagram-image is-ready"
+          }
+        }
+      },
+      {
+        "t": 219786,
+        "kind": "modal-mutation",
+        "info": {
+          "open": false,
+          "busy": null,
+          "text": "",
+          "image": null
+        }
+      }
+    ]
+  },
+  "feedback": {
+    "time": "2026-11-09T04:12:30.206Z",
+    "title": "Namelecule — ΑΥΤΟΜΑΤΟΣ ΕΛΕΓΧΟΣ — διαθέσιμο για δοκιμή",
+    "progress": "",
+    "viewport": {
+      "width": 1280,
+      "height": 650
+    },
+    "continue": [],
+    "resizes": []
+  },
+  "resizeLimitation": "No resize event listener was installed originally; empty resizes is not evidence that no native resizing occurred. Current native state and viewport are measured.",
+  "latestTrustedClicks": [
+    {
+      "t": 204321,
+      "kind": "click",
+      "info": {
+        "id": "nl-repair-2-check-button",
+        "cls": "primary",
+        "trusted": true,
+        "active": "nl-repair-2-check-button"
+      }
+    },
+    {
+      "t": 206865,
+      "kind": "click",
+      "info": {
+        "id": "",
+        "cls": "primary",
+        "trusted": true,
+        "active": ""
+      }
+    },
+    {
+      "t": 213042,
+      "kind": "click",
+      "info": {
+        "id": "nl-repair-3-part-component-5",
+        "cls": "part-button",
+        "trusted": true,
+        "active": "nl-repair-3-part-component-5"
+      }
+    },
+    {
+      "t": 214594,
+      "kind": "click",
+      "info": {
+        "id": "nl-repair-3-choice-2",
+        "cls": "choice-button",
+        "trusted": true,
+        "active": "nl-repair-3-choice-2"
+      }
+    },
+    {
+      "t": 216884,
+      "kind": "click",
+      "info": {
+        "id": "nl-repair-3-check-button",
+        "cls": "primary",
+        "trusted": true,
+        "active": "nl-repair-3-check-button"
+      }
+    },
+    {
+      "t": 219152,
+      "kind": "click",
+      "info": {
+        "id": "",
+        "cls": "primary",
+        "trusted": true,
+        "active": ""
+      }
+    }
+  ]
+}

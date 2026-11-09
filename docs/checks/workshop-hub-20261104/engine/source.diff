@@ -1,0 +1,159 @@
+--- js/namelecule-game-repair.js.before
++++ js/namelecule-game-repair.js
+@@ -127,13 +127,13 @@
+ 
+   function validateGameData(data) {
+     assert(data && data.schemaVersion === 1 && text(data.title) && text(data.description), "Invalid game metadata");
+-    assert(Array.isArray(data.rounds) && data.rounds.length === 5, "Expected one example and four challenges");
++    assert(Array.isArray(data.rounds) && data.rounds.length === 4, "Expected four challenges");
+     const roundIds = new Set();
+-    data.rounds.forEach(function (round, index) {
++    data.rounds.forEach(function (round) {
+       validateRoundData(round);
+       assert(!roundIds.has(round.id), "Invalid round id");
+       roundIds.add(round.id);
+-      assert(round.guided === (index === 0), "The first round must be the only guided example");
++      assert(round.guided === false, "Standalone rounds must be challenges");
+     });
+     return data;
+   }
+@@ -318,7 +318,7 @@
+         node("div", { class: "round-topbar" }, [node("p", { class: "eyebrow round-game-brand" }, [workshopLogo("workshop-logo-small", assetBase), node("span", { class: "round-game-label", text: "ΣΥΝΕΡΓΕΙΟ ΟΝΟΜΑΤΩΝ" })])].concat(standalone ? [options.progressList()] : [])),
+         heading, steps,
+         node("div", { class: "bench" }, [node("div", { class: "visual-side" }, [diagram]), node("div", { class: "repair-side" }, [repair, refs.next])]),
+-        node("div", { class: "session-row" }, [refs.sessionStats].concat(standalone ? [button("Νέο παιχνίδι", "quiet", options.requestRestart)] : []))
++        node("div", { class: "session-row" }, [refs.sessionStats].concat(standalone ? [button("Επιστροφή στα σετ", "quiet", options.requestRestart)] : []))
+       ]);
+       root.replaceChildren(screen);
+       root.setAttribute("aria-busy", "false");
+@@ -627,32 +627,35 @@
+ 
+   function renderWelcome() {
+     renderId += 1;
+-    const copy = node("div", { class: "intro-copy" }, [
+-      node("p", { class: "eyebrow" }, [node("span", { class: "eyebrow-dot", "aria-hidden": "true" }), "ΠΑΙΧΝΙΔΙ ΟΝΟΜΑΤΟΛΟΓΙΑΣ · ΑΛΚΑΝΙΑ"]),
++    const hero = node("section", { class: "workshop-hero", "aria-label": "Καλώς ήρθες στο Συνεργείο ονομάτων" }, [
++      node("p", { class: "eyebrow", text: "ΠΑΙΧΝΙΔΙΑ ΟΝΟΜΑΤΟΛΟΓΙΑΣ" }),
+       node("div", { class: "workshop-title" }, [workshopLogo("workshop-logo"), node("h1", {}, ["Συνεργείο", node("span", { text: "ονομάτων" })])]),
+-      node("p", { class: "intro-description" }, ["Η δομή είναι εδώ. Στο όνομα, όμως, ", node("strong", { text: "κάτι δεν ταιριάζει." }), " Παρατήρησε το μόριο, βρες το λάθος κομμάτι και βάλε το σωστό στη θέση του."]),
+-      node("div", { class: "intro-badges" }, [node("span", { text: "1 παράδειγμα + 4 αποστολές" }), node("span", { text: "Χωρίς χρονόμετρο" }), node("span", { text: "Εξηγήσεις μετά την επισκευή" })]),
+-      button("Άνοιξε το συνεργείο  →", "primary intro-start", function () { roundIndex = 0; renderRound(); }),
+-      node("p", { class: "intro-small", text: "Χρησιμοποίησε ποντίκι, αφή ή τα πλήκτρα Tab και Enter. Κάθε επόμενο βήμα το επιλέγεις εσύ." })
++      node("p", { class: "workshop-description", text: "Διάλεξε ένα σετ αποστολών. Παρατήρησε κάθε δομή, επισκεύασε το όνομα και δες την εξήγηση μετά από κάθε σωστή απάντηση." })
+     ]);
+-    const art = node("div", { class: "intro-art", "aria-hidden": "true" });
+-    const sheet = node("div", { class: "art-sheet" });
+-    // Decorative workbench marks are not a structure offered for assessment.
+-    sheet.innerHTML = '<svg viewBox="0 0 380 140" focusable="false"><g fill="none" stroke="#8db5a3" stroke-width="3"><path d="M64 86 145 43 225 86 306 43"/><circle cx="64" cy="86" r="21" fill="#fffdf8"/><circle cx="145" cy="43" r="21" fill="#fffdf8"/><circle cx="225" cy="86" r="21" fill="#e1efea"/><circle cx="306" cy="43" r="21" fill="#fffdf8"/></g><g fill="#397b78" font-family="system-ui,sans-serif" font-weight="650" font-size="19" text-anchor="middle"><text x="64" y="93">C</text><text x="145" y="50">C</text><text x="225" y="93">C</text><text x="306" y="50">C</text></g><g fill="#cfdecf"><circle cx="31" cy="30" r="3"/><circle cx="341" cy="105" r="3"/></g></svg>';
+-    sheet.append(node("p", { class: "art-caption", text: "Μια μικρή αλλαγή. Ένα όνομα που ταιριάζει." }));
+-    art.append(
+-      node("div", { class: "art-header" }, [node("span", { class: "art-label", text: "Ο ΠΑΓΚΟΣ ΤΩΝ ΟΝΟΜΑΤΩΝ" }), node("span", { class: "art-dots" }, [node("i"), node("i"), node("i")])]),
+-      sheet,
+-      node("div", { class: "art-tabs" }, ["αλυσίδα", "θέση", "πλήθος", "σειρά"].map(function (text) { return node("span", { text: text }); })),
+-      node("span", { class: "art-stamp", text: "↔" })
+-    );
++    const start = button("Ξεκίνα το σετ →", "primary workshop-set-start intro-start", function () {
++      roundIndex = 0;
++      states = game.rounds.map(function (data) { return createRoundState(data); });
++      renderRound();
++    }, { id: "set-alkanes-start" });
++    const card = node("article", { class: "workshop-set-card", "aria-labelledby": "set-alkanes-title" }, [
++      node("span", { class: "workshop-set-kind", text: "ΣΕΤ ΑΠΟΣΤΟΛΩΝ" }),
++      node("h3", { id: "set-alkanes-title", text: "Αλκάνια" }),
++      node("p", { text: "Τέσσερις μικρές επισκευές για να συνδέσεις τη δομή των αλκανίων με τα κομμάτια του ονόματος." }),
++      node("div", { class: "workshop-set-meta" }, [node("span", { text: "4 αποστολές" }), node("span", { text: "Χωρίς χρονόμετρο" })]),
++      node("ul", { class: "workshop-set-topics" }, ["Κύρια αλυσίδα", "Αρίθμηση", "Ίδιες διακλαδώσεις", "Αλφαβητική σειρά"].map(function (text) { return node("li", { text: text }); })),
++      start
++    ]);
++    const sets = node("section", { class: "workshop-sets", "aria-labelledby": "workshop-sets-title" }, [
++      node("h2", { id: "workshop-sets-title", text: "Διάλεξε σετ αποστολών" }),
++      node("div", { class: "workshop-set-grid" }, [card])
++    ]);
+     const steps = [
+       ["Δες τη δομή", "Σύνδεσε τους άνθρακες και τους κλάδους με το όνομα."],
+       ["Βρες τι χρειάζεται αλλαγή", "Διάλεξε κομμάτι και αντικατάσταση ή άλλαξε τη σειρά."],
+       ["Έλεγξε και ξαναδοκίμασε", "Μετά τη σωστή επισκευή, δες γιατί το όνομα ταιριάζει στη δομή."]
+     ];
+-    const welcome = node("div", {}, [
+-      node("section", { class: "intro", "aria-label": "Καλώς ήρθες στο Συνεργείο ονομάτων" }, [copy, art]),
++    const welcome = node("div", { class: "workshop-hub" }, [
++      hero, sets,
+       node("section", { class: "intro-how", "aria-label": "Πώς παίζεται" }, steps.map(function (step, index) {
+         return node("div", { class: "how-item" }, [node("span", { class: "how-number", "aria-hidden": "true", text: String(index + 1) }), node("div", {}, [node("h2", { text: step[0] }), node("p", { text: step[1] })])]);
+       }))
+@@ -664,9 +667,9 @@
+     return node("ol", { class: "progress", "aria-label": "Πρόοδος παιχνιδιού" }, game.rounds.map(function (round, index) {
+       const complete = states[index].solved;
+       const current = index === roundIndex;
+-      const label = round.guided ? "Καθοδηγούμενο παράδειγμα" : "Αποστολή " + index;
++      const label = "Αποστολή " + (index + 1);
+       const item = node("li", { class: current ? "is-current" : complete ? "is-complete" : "" }, [
+-        node("span", { class: "progress-dot", "aria-hidden": "true", text: complete ? "✓" : round.guided ? "Π" : String(index) }),
++        node("span", { class: "progress-dot", "aria-hidden": "true", text: complete ? "✓" : String(index + 1) }),
+         node("span", { class: "progress-label", text: label + (complete ? " ολοκληρώθηκε" : current ? " σε εξέλιξη" : "") })
+       ]);
+       if (current) item.setAttribute("aria-current", "step");
+@@ -695,11 +698,11 @@
+     const hasProgress = roundIndex > 0 || states.some(function (entry) { return entry.attempts > 0 || entry.selectionMisses > 0 || entry.selectedPartId; });
+     if (!hasProgress) return restartGame();
+     const dialog = node("dialog", { class: "confirm-dialog", "aria-labelledby": "restart-title" }, [
+-      node("h2", { id: "restart-title", text: "Να ανοίξουμε νέο παιχνίδι;" }),
+-      node("p", { text: "Οι επισκευές και οι προσπάθειες αυτού του παιχνιδιού θα μηδενιστούν." })
++      node("h2", { id: "restart-title", text: "Επιστροφή στα σετ;" }),
++      node("p", { text: "Οι επισκευές και οι προσπάθειες αυτού του σετ θα μηδενιστούν." })
+     ]);
+     const keep = button("Συνέχισε εδώ", "secondary", function () { dialog.close(); });
+-    const restart = button("Νέο παιχνίδι", "primary", function () { dialog.close(); restartGame(); });
++    const restart = button("Επιστροφή στα σετ", "primary", function () { dialog.close(); restartGame(); });
+     dialog.append(node("div", { class: "confirm-actions" }, [keep, restart]));
+     dialog.addEventListener("close", function () { dialog.remove(); });
+     document.body.append(dialog);
+@@ -741,8 +744,8 @@
+           ]);
+         }))
+       ]),
+-      node("p", { class: "results-note", text: "Το καθοδηγούμενο παράδειγμα δεν προσμετράται. Οι προσπάθειες ελέγχου περιλαμβάνουν τις επαναλήψεις κάθε αποστολής." }),
+-      node("div", { class: "results-actions" }, [button("Νέο παιχνίδι  ↻", "primary", restartGame), node("a", { class: "secondary", href: "../design/welcome-proposal.html", text: "Επιστροφή στην αρχική" })])
++      node("p", { class: "results-note", text: "Οι προσπάθειες ελέγχου περιλαμβάνουν τις επαναλήψεις κάθε αποστολής." }),
++      node("div", { class: "results-actions" }, [button("Επιστροφή στα σετ", "primary", restartGame), node("a", { class: "secondary", href: "../design/welcome-proposal.html", text: "Επιστροφή στην αρχική" })])
+     ]);
+     replaceRoot(content);
+     focusHeading();
+--- games/data/name-repair-alkanes.json.before
++++ games/data/name-repair-alkanes.json
+@@ -3,35 +3,6 @@
+   "title": "Συνεργείο ονομάτων",
+   "description": "Κάθε μόριο έφτασε με ένα λάθος στο όνομά του. Εντόπισε το μέρος που δεν συμφωνεί με τη δομή, επισκεύασέ το και κράτησε όσα είναι σωστά.",
+   "rounds": [
+-    {
+-      "id": "guided-parent",
+-      "guided": true,
+-      "title": "Μια επισκευή μαζί",
+-      "objective": "Το πρώτο συνθετικό δείχνει πόσους άνθρακες έχει η κύρια αλυσίδα. Το σχέδιο έχει τέσσερις. Επίλεξε το «πεντ» και αντικατάστησέ το με «βουτ».",
+-      "moleculeId": "butane",
+-      "asset": "assets/name-repair/butane.svg",
+-      "diagramAlt": "Ανεπτυγμένος τύπος ευθείας αλυσίδας τεσσάρων ανθράκων. Οι δεσμοί άνθρακα με άνθρακα είναι απλοί. Δεν υπάρχουν διακλαδώσεις.",
+-      "kind": "replace",
+-      "parts": [
+-        {"id": "root", "text": "πεντ", "label": "Μήκος κύριας αλυσίδας"},
+-        {"id": "saturation", "text": "άν", "label": "Απλοί δεσμοί"},
+-        {"id": "ending", "text": "ιο", "label": "Κατάληξη αλκανίου"}
+-      ],
+-      "targetPartId": "root",
+-      "correctValue": "βουτ",
+-      "correctName": "βουτάνιο",
+-      "choices": [
+-        {"value": "προπ", "label": "προπ", "feedback": "Το «προπ» αντιστοιχεί σε τρεις άνθρακες. Μέτρησε και τους τέσσερις της συνεχούς αλυσίδας."},
+-        {"value": "βουτ", "label": "βουτ"},
+-        {"value": "εξ", "label": "εξ", "feedback": "Το «εξ» αντιστοιχεί σε έξι άνθρακες. Στο σχέδιο η αλυσίδα έχει τέσσερις."}
+-      ],
+-      "successText": "Η κύρια αλυσίδα έχει τέσσερις άνθρακες, επομένως το πρώτο συνθετικό είναι «βουτ». Το «άν» δηλώνει απλούς δεσμούς μεταξύ των ανθράκων και το «ιο» την κατάληξη του υδρογονάνθρακα.",
+-      "feedback": {
+-        "wrongPart": "Αυτό το συνθετικό συμφωνεί με τη δομή.",
+-        "unchanged": "Διάλεξε ένα νέο συνθετικό πριν ελέγξεις την επισκευή.",
+-        "incorrect": "Το νέο συνθετικό δεν συμφωνεί με το πλήθος των ανθράκων της κύριας αλυσίδας. Δοκίμασε ξανά."
+-      }
+-    },
+     {
+       "id": "parent-not-total",
+       "guided": false,

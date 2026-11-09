@@ -1,0 +1,175 @@
+--- before/js/namelecule-generated-repair-checkpoint.js
++++ js/namelecule-generated-repair-checkpoint.js
+@@ -164,13 +164,17 @@
+       state = restore(recipe, state);
+       if (!destroyed && typeof options.onStateChange === "function") options.onStateChange(JSON.parse(JSON.stringify(state)));
+     }
++    function reportProgress(value) {
++      if (!destroyed && typeof options.onProgress === "function") options.onProgress(value);
++    }
+     function destroyRound() { if (current) current.destroy(); current = null; }
+     function render(set) {
+       if (destroyed) return;
+       destroyRound();
+       const index = state.currentRound;
+-      const progress = node("p", "nl-quiz-set-progress", "Κουίζ " + (index + 1) + " από 3 · " + set.title);
+-      progress.setAttribute("role", "status");
++      const headerProgress = typeof options.onProgress === "function";
++      const progress = node("p", "nl-quiz-set-progress", headerProgress ? set.title : "Κουίζ " + (index + 1) + " από 3 · " + set.title);
++      if (!headerProgress) progress.setAttribute("role", "status");
+       const roundHost = node("div", "nl-quiz-set-round");
+       host.replaceChildren(progress, roundHost);
+       host.setAttribute("aria-busy", "false");
+@@ -199,10 +203,12 @@
+           } else if (state.solved && typeof options.onContinue === "function") options.onContinue();
+         }
+       });
++      reportProgress({ current: index + 1, total: recipe.roundCount });
+     }
+     function start() {
+       const request = ++token;
+       destroyRound();
++      reportProgress(null);
+       host.setAttribute("aria-busy", "true");
+       const loading = node("p", "nl-quiz-loading", "Η μηχανή ετοιμάζει τις τρεις επισκευές…");
+       loading.setAttribute("role", "status");
+@@ -215,6 +221,7 @@
+         render(set);
+       }).catch(error => {
+         if (destroyed || request !== token || controller.signal.aborted) return;
++        reportProgress(null);
+         host.setAttribute("aria-busy", "false");
+         const message = node("p", "nl-quiz-error", "Οι επισκευές δεν φορτώθηκαν. Δοκίμασε ξανά ή επέστρεψε στη θεωρία.");
+         message.setAttribute("role", "alert");
+@@ -227,6 +234,7 @@
+     start();
+     return { destroy() {
+       if (destroyed) return;
++      reportProgress(null);
+       destroyed = true;
+       token++;
+       controller.abort();
+--- before/js/namelecule-quiz-checkpoints.js
++++ js/namelecule-quiz-checkpoints.js
+@@ -11,6 +11,7 @@
+   let dialog = null;
+   let mountHost = null;
+   let retryButton = null;
++  let progressCounter = null;
+   let mounted = null;
+   let mountToken = 0;
+ 
+@@ -179,12 +180,12 @@
+   }
+ 
+   const words = {
+-    gr: { label: "Μικρή στάση για επισκευή", instruction: "Επισκεύασε το όνομα για να συνεχίσεις τη θεωρία.",
++    gr: { label: "Μικρή στάση για επισκευή", counter: "Κουίζ", instruction: "Επισκεύασε το όνομα για να συνεχίσεις τη θεωρία.",
+       open: "Στο Συνεργείο ονομάτων", done: "Η επισκευή ολοκληρώθηκε. Μπορείς να συνεχίσεις.", revisit: "Δες ξανά την επισκευή",
+       back: "Επιστροφή στη θεωρία", retry: "Φόρτωσε ξανά την αποστολή", error: "Η αποστολή δεν φορτώθηκε. Δοκίμασε ξανά ή επέστρεψε στη θεωρία.",
+       storage: "Η πρόοδος κρατιέται μόνο όσο μένει ανοιχτή αυτή η σελίδα· η αποθήκευση της καρτέλας δεν είναι διαθέσιμη.",
+       reset: "Νέα προσπάθεια", resetLabel: "Ξεκίνα την επισκευή από την αρχή" },
+-    en: { label: "A short repair stop", instruction: "Repair the name to continue the lesson.",
++    en: { label: "A short repair stop", counter: "Quiz", instruction: "Repair the name to continue the lesson.",
+       open: "Open the name workshop", done: "Repair completed. You can continue.", revisit: "Review the repair",
+       back: "Return to the lesson", retry: "Reload the mission", error: "The mission could not load. Retry or return to the lesson.",
+       storage: "Progress is kept only while this page remains open; tab storage is unavailable.",
+@@ -208,8 +209,16 @@
+     return element;
+   }
+ 
++  function showProgress(value) {
++    if (!progressCounter) return;
++    const valid = value && Number.isSafeInteger(value.current) && Number.isSafeInteger(value.total) &&
++      value.current >= 1 && value.current <= value.total;
++    progressCounter.hidden = !valid;
++    progressCounter.textContent = valid ? text("counter") + " " + value.current + "/" + value.total : "";
++  }
+   function destroyMount() {
+     mountToken++;
++    showProgress(null);
+     const previous = mounted;
+     mounted = null;
+     if (previous && typeof previous.destroy === "function") previous.destroy();
+@@ -230,7 +239,15 @@
+     title.id = "nlQuizDialogTitle";
+     const back = button("", "nl-quiz-button nl-quiz-back", closeDialog);
+     back.id = "nlQuizBack";
+-    header.append(title, back);
++    const actions = node("div", "nl-quiz-dialog-actions");
++    progressCounter = node("span", "nl-quiz-round-progress");
++    progressCounter.id = "nlQuizProgress";
++    progressCounter.hidden = true;
++    progressCounter.setAttribute("role", "status");
++    progressCounter.setAttribute("aria-live", "polite");
++    progressCounter.setAttribute("aria-atomic", "true");
++    actions.append(progressCounter, back);
++    header.append(title, actions);
+     mountHost = node("div", "nl-quiz-host");
+     mountHost.id = "nlQuizHost";
+     retryButton = button("", "nl-quiz-button nl-quiz-retry", () => { if (active) mountQuestion(active); });
+@@ -279,6 +296,10 @@
+       mounted = types[spec.type].mount(mountHost, {
+         round: clone(spec.round), assetBase: "games/",
+         initialState: context.record.states[context.index] ? clone(context.record.states[context.index]) : null,
++        onProgress(value) {
++          if (token !== mountToken || !currentContext(context)) return;
++          showProgress(value);
++        },
+         onStateChange(state) {
+           if (token !== mountToken || !currentContext(context)) return;
+           const wasComplete = isComplete(context.scenario, context.index);
+@@ -303,6 +324,7 @@
+         }
+       });
+     } catch (_) {
++      showProgress(null);
+       mountHost.replaceChildren(node("p", "nl-quiz-error", text("error")));
+       retryButton.hidden = false;
+     }
+--- before/css/namelecule-quiz-checkpoints.css
++++ css/namelecule-quiz-checkpoints.css
+@@ -61,7 +61,18 @@
+   background: #e1efea;
+   border-bottom: 1px solid #c7dcd2;
+ }
+-.nl-quiz-dialog .nl-quiz-dialog-title { margin: 0; font: 700 1.05rem/1.4 system-ui, sans-serif; }
++.nl-quiz-dialog .nl-quiz-dialog-title { flex: 1; min-width: 0; margin: 0; font: 700 1.05rem/1.4 system-ui, sans-serif; }
++.nl-quiz-dialog-actions { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; max-width: 55%; }
++.nl-quiz-dialog .nl-quiz-dialog-actions .nl-quiz-back { max-width: 100%; }
++.nl-quiz-round-progress {
++  box-sizing: border-box;
++  padding: 4px 10px;
++  border-radius: 999px;
++  background: #254c50;
++  color: #fff;
++  font: 700 1.05rem/1.3 "Roboto Condensed", system-ui, sans-serif;
++  white-space: nowrap;
++}
+ .nl-quiz-dialog .nl-quiz-host { padding: 22px; }
+ .nl-quiz-dialog .nl-quiz-retry { margin: 0 22px 20px; }
+ .nl-quiz-dialog .nl-quiz-error { margin: 0; padding: 22px; }
+--- before/mulermoc-nom-54.html
++++ mulermoc-nom-54.html
+@@ -49,7 +49,7 @@
+ 
+   <link rel="stylesheet" href="css/namelecule-54.css?v=v54-sync-20261104-r2" />
+   <link rel="stylesheet" href="css/namelecule-repair-round.css?v=checkpoint-pilot-20261104-r1" />
+-  <link rel="stylesheet" href="css/namelecule-quiz-checkpoints.css?v=alkanes-two-part-20261105-r1" />
++  <link rel="stylesheet" href="css/namelecule-quiz-checkpoints.css?v=quiz-header-progress-20261108-r1" />
+   <script src="js/namelecule-label-metrics.js?v=20261031-r1"></script>
+   <script src="js/vendor/jsme/namelecule-20261031-r1/jsme.nocache.js"></script>
+   <script src="js/vendor/jquery/jquery-4.0.0.min.js"></script>
+@@ -368,10 +368,10 @@
+   <script src="js/mulermoc-nom-teaching-54.js?v=alkane-step5-interaction-20261106-r1"></script>
+   <script src="js/mulermoc-nom-note-54.js?v=v54-sync-20261104-r2"></script>
+   <script src="js/namelecule-game-repair.js?v=workshop-reset-removal-20261107-r1"></script>
+-  <script src="js/namelecule-quiz-checkpoints.js?v=author-step-preview-20261107-r1"></script>
++  <script src="js/namelecule-quiz-checkpoints.js?v=quiz-header-progress-20261108-r1"></script>
+   <script src="js/namelecule-chemistry-client.js?v=verified-engines-20261105-r1"></script>
+   <script src="js/namelecule-repair-generator.js?v=engine-pilot-20261105-r1"></script>
+-  <script src="js/namelecule-generated-repair-checkpoint.js?v=alkane-quiz-feedback-20261107-r1"></script>
++  <script src="js/namelecule-generated-repair-checkpoint.js?v=quiz-header-progress-20261108-r1"></script>
+   <script src="js/mulermoc-nom-scenario-54.js?v=author-step-preview-20261107-r2"></script>
+   <script src="js/mulermoc-nom-iupac-54.js?v=merge54-20261105-r1"></script>
+   <script src="js/mulermoc-nom-lang-54.js?v=merge54-20261105-r1"></script>

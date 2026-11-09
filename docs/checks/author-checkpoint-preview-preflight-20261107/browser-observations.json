@@ -1,0 +1,79 @@
+{
+  "completed": true,
+  "observations": [
+    {
+      "present": false,
+      "authoring": true,
+      "index": 1,
+      "hash": "#step=1",
+      "selectedMol": "ethane",
+      "title": "Τι είναι τα αλκάνια;",
+      "traces": [],
+      "storedKeys": [],
+      "label": "Before edited-step launch"
+    },
+    {
+      "present": false,
+      "authoring": true,
+      "index": 5,
+      "hash": "#step=5",
+      "selectedMol": "methyl_2_pentane",
+      "title": "Μέρος Β: Κύρια αλυσίδα και συνολικά άτομα C [δοκιμή προεπισκόπησης]",
+      "traces": [
+        {
+          "fn": "fScenarioGo",
+          "requested": 5,
+          "present": false
+        }
+      ],
+      "storedKeys": [],
+      "label": "Author row Preview/Go"
+    },
+    {
+      "present": true,
+      "authoring": true,
+      "index": 4,
+      "hash": "#step=4",
+      "selectedMol": "pentane",
+      "title": "Συνεργείο ονομάτων",
+      "traces": [
+        {
+          "fn": "fScenarioPresentBegin",
+          "requested": 5,
+          "present": false
+        },
+        {
+          "fn": "fScenarioResolveCheckpointTarget",
+          "requested": 5,
+          "present": false,
+          "result": 4
+        },
+        {
+          "fn": "fScenarioResolveCheckpointTarget",
+          "requested": 5,
+          "present": true,
+          "result": 4
+        }
+      ],
+      "storedKeys": [],
+      "label": "Author row Present from step"
+    },
+    {
+      "present": true,
+      "authoring": false,
+      "index": 4,
+      "hash": "#step=4",
+      "selectedMol": "pentane",
+      "title": "Συνεργείο ονομάτων",
+      "traces": [],
+      "storedKeys": [],
+      "label": "Normal learner direct step5 URL"
+    }
+  ],
+  "limitations": [
+    "Owned headless profile, not user browser or unsaved JSON",
+    "Existing project lesson used; only test-profile in-memory title edited",
+    "No implementation or source JSON edits"
+  ],
+  "javascriptErrors": []
+}

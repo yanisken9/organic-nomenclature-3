@@ -1,0 +1,16 @@
+--- before/css/mulermoc-nom-scenario-54.css
++++ css/mulermoc-nom-scenario-54.css
+@@ -1382,6 +1382,13 @@
+    width: 100%;
+ }
+ 
++/* With no molecular columns to measure, the note uses the host's full width.
++   Let flex size that host inside its margins instead of adding them to 100%. */
++#pageContainer.presenting.scContentOnly #authorLayout {
++   width: auto;
++   align-self: stretch;
++}
++
+ #pageContainer.presenting #mainAppContainer {
+    flex: 1 0 auto;
+    display: flex;

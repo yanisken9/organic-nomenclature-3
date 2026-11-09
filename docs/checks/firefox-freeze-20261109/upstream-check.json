@@ -1,0 +1,39 @@
+{
+  "date": "2026-11-09",
+  "reviewer": "/root/upstream_check_20261109",
+  "head": "bfa9ce034eb8569fcbde988f939069d33bc7020a",
+  "functional_head": "282567e9dc6dd4b87b6c77ea4c1b937fbb596be6",
+  "version": "54.42",
+  "previous_checked": "0fe3f14e07d9b76cf9bc15a9eba5d3e0e503ab5f",
+  "actual_synchronized": "f49b810c93ec85d06163679aff4a8642ea1b4cd3",
+  "new_since_checked": {
+    "commits": 30,
+    "paths": 14
+  },
+  "pending_since_sync": {
+    "commits": 59,
+    "paths": 23
+  },
+  "integration": "User hold preserved; no fetch/merge/writes by upstream reviewer",
+  "new_commits_change_core_or_scenario": false,
+  "full_pending_range_changes_core_and_scenario": true,
+  "changelog_sha256": "5a98c11d3f4ed74179a0e7f174f4ddc53b32d4f941c60df51115a14927024f2e",
+  "changelog_bytes": 222211,
+  "summary": [
+    "First molecule toggle; Greek common/systematic naming and component splitting",
+    "GR/EN alphabetical group sorting preserving IDs",
+    "O-linked ester/ether alkyl numbering2D3D and selected-group locant explanation",
+    "Titlebar Save-all, credits/CSS, OpenClatura verification configuration",
+    "Namelecule identified as Yannis variant; upstream Molwave/MuLERMoCs"
+  ],
+  "overlap": [
+    "molview54 +777/-27 since checked",
+    "name-en54",
+    "teaching54",
+    "Main54/cache",
+    "CSS/icons/docs"
+  ],
+  "firefox_caveat": "No new wrapper/readiness/fViewerHeights2D3D fix observed in new30 commits. No evidence of browser hang correction. Upstream full141 browser checks pending.",
+  "access": "Initial web API/history/compare failed and /commit/main cached oldSHA. Verified live API/raw via read-only HTTP and pinnedSHA.",
+  "source": "https://raw.githubusercontent.com/nick-charistos/organic-nomenclature-3/bfa9ce034eb8569fcbde988f939069d33bc7020a/docs/CHANGELOG.md"
+}

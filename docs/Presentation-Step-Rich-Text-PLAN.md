@@ -1,12 +1,14 @@
-# Presentation Step Rich Text — v51 Plan
+# Presentation Step Rich Text — v51/v52 Plan
 
-Status: rich-text implementation complete and **v51 is live**; the content-only
-authoring note dialog and compact icon toolbar are in place. Snap.svg has been
-removed from v51 in favour of the native `MuSVG` helper. The `MuSVG.parse()`
-OOM/XML crash was fixed on 2026-10-25; Chrome and Firefox automated matrices
-pass, with the two pre-existing skeletal JSmol failures still open. `index.html`
-now points to v51; v50 remains runnable.
-Scope: v51 release set live; v50 remains runnable at root
+Status: rich-text implementation is complete and **v52 is live**; v52 adds the
+unified rich note editor (inline WYSIWYG, modal WYSIWYG + HTML source, lazy
+legacy-text upgrade, staged Apply/Cancel, and a dirty-close confirm). The v51 safe rich-note renderer,
+rule-table components, compact icon toolbar, and Snap-free native `MuSVG`
+helper are retained. The `MuSVG.parse()` OOM/XML crash was fixed on 2026-10-25;
+Chrome and Firefox automated matrices pass, with the two pre-existing skeletal
+JSmol failures still open. `index.html` now points to v52; v51 and v50 remain
+runnable.
+Scope: v52 release set live; v51/v50 remain runnable at root
 Related: `didactic-scenario-plan.md`, `CHANGELOG.md`, `LAYERS-PLAN.md`
 
 ---
@@ -23,9 +25,12 @@ can carry:
 - a forward-compatible extension point for note buttons that drive the main app
   (no public actions in v1)
 
-Also give authoring a larger note editor: an **expand** control opens a
-content-only modal dialog that live-syncs with the inline note. Presentation
-keeps the v50 top/left/right rails; there is no separate wide/focus mode.
+Also give authoring a larger note editor: an **expand** control opens a modal
+dialog with one WYSIWYG editor plus a WYSIWYG/HTML source toggle, and staged
+Apply/Cancel. The inline note is a compact WYSIWYG editor with live writes.
+Presentation keeps the v50 top/left/right rails; the top card spans the visible
+menu/viewer/analysis columns (menu only when shown), while side rails are
+unchanged. There is no separate wide/focus mode.
 
 Non-goals for v51:
 
@@ -41,12 +46,15 @@ Non-goals for v51:
 
 1. **v51 release set.** Forked from v50 without modifying the v50 files.
 2. **Superseded 2026-10-25:** v51 was promoted live after verification;
-   `index.html` now points to `mulermoc-nom-51.html` and v50 remains runnable.
+   `index.html` now points to `mulermoc-nom-52.html`; v51 and v50 remain runnable.
 3. **DOMPurify** is the sanitizer; loaded locally, fail closed to the legacy
    renderer if unavailable.
-4. **Authoring note editor:** expand opens a content-only modal dialog; inline
-   layout controls stay in the inline toolbar. No preview/Apply/Cancel; the
-   modal and inline textarea live-sync. Presentation has no wide/focus controls.
+4. **Authoring note editor (v52):** the inline drawer is a compact WYSIWYG
+   editor with live writes; expand opens a modal with one WYSIWYG editor and a
+   WYSIWYG/HTML source toggle. Modal edits are staged behind Apply/Cancel (with
+   dirty-close confirm). New notes default to HTML; legacy text notes upgrade on
+   first edit. Inline layout controls stay in the inline toolbar. Presentation
+   has no wide/focus controls.
 5. **Actions:** build the registry/delegated-handler extension point now, ship
    zero public actions.
 6. **Components:** all rule tables first — `table1`, `table2`, `table3`,
@@ -82,7 +90,9 @@ New:
 - `js/vendor/README.md` (versions, update procedure, hashes)
 
 The v50 files and earlier versions remain untouched; `index.html` was promoted
-to v51 on 2026-10-25.
+to v51 on 2026-10-25. v52 was forked from v51 on 2026-10-26 without modifying
+the v51 files and was promoted live after headless Chrome smoke tests; see
+`CHANGELOG.md [v52]`.
 
 ---
 
@@ -220,7 +230,8 @@ Whitespace:
   while rendering an HTML note; use normal block flow but preserve deliberate
   `<br>` line breaks. Authoring should insert blocks/`<br>` for rich notes.
 - Tables get horizontal scrolling inside the side rail; images use
-  `max-width: 100%; height: auto`.
+  `max-width: 100%`, with `height: auto` only when no `height` attribute is
+  stored (explicit width/height survive).
 
 ---
 
@@ -230,11 +241,12 @@ Use `<img>` only; no inline `<svg>`.
 
 Allowed attributes:
 
-- `src`, `alt`, `title`, `loading`, `decoding`, numeric `width`/`height`,
-  `class="note-img"` / `note--center`
+- `src`, `alt`, `title`, `loading`, `decoding`, numeric `width`/`height`
+  (integer `16–2000`; blank = auto), `class="note-img"` / `note--center`
 - authoring helper must require `alt`; the file picker embeds the selected
-  image as a capped data URI, while the URL helper keeps relative/`https:`
-  sources available
+  image as a capped data URI and opens a compact dialog for alt + optional
+  width/height. The v52 toolbar has no URL image tool; relative/`https:` image
+  sources remain valid in stored HTML and the sanitizer policy below.
 
 Source policy:
 
@@ -250,7 +262,9 @@ Rendering:
 
 - post-render listener adds an “image unavailable” placeholder on load error
   (cannot use inline `onerror`)
-- CSS: `#scStepText img { max-width: 100%; height: auto; }`
+- CSS: `max-width: 100%`; `height: auto` only when no `height` attribute exists,
+  so explicit dimensions survive. `object-fit: contain` applies when both width
+  and height are present.
 - future assets live under `imgs/notes/` or a scenario asset folder
 
 ---
@@ -258,7 +272,7 @@ Rendering:
 ## 9. Predefined components (rule tables)
 
 `namingRules` is a trusted JS object of HTML templates built by `fInitTheory`
-(`js/mulermoc-nom-teaching-50.js`). Do not copy its HTML into scenario JSON.
+(`js/mulermoc-nom-teaching-52.js`). Do not copy its HTML into scenario JSON.
 Reference it through a small component registry.
 
 Syntax:
@@ -266,6 +280,7 @@ Syntax:
 ```html
 <div data-note-include="rule-table:3"></div>
 <div data-note-include="rule-table:alkyl"></div>
+<div data-note-include="rule-table:alkoxy"></div>
 ```
 
 v1 keys:
@@ -275,6 +290,7 @@ v1 keys:
 - `rule-table:3`
 - `rule-table:4`
 - `rule-table:alkyl`
+- `rule-table:alkoxy`
 
 Rendering:
 
@@ -288,13 +304,13 @@ Rendering:
 CSS:
 
 - audit which rule-table styles are scoped under `#ruleTheory` in
-  `css/jsme-nick-50.css`; add the needed scoped rules for `.note-embed` in v51
+  `css/jsme-nick-52.css`; add the needed scoped rules for `.note-embed` in v52
 - ensure tables scroll in the side rail and do not break the two-column note
 - static display only; no `data-row` interaction in v1
 
 Authoring:
 
-- icon-only “predefined content” dropdown lists the five rule-table keys
+- icon-only “predefined content” dropdown in the expanded modal lists the six rule-table keys
 - no raw token typing required
 - no separate preview dialog; use the step preview/Go or Present for rendered
   output
@@ -342,15 +358,18 @@ step; Prev/Next re-applies the step. Document this when actions are added.
 
 ## 12. Authoring UX
 
-Keep the textarea, add helpers:
+Use the shared WYSIWYG/source editor, with helpers:
 
-- format switch/indicator (`text` vs `html`)
-- B/I/sup/sub formatting plus clear
-- image inserts from a local file picker or URL, plus table inserts
+- source toggle only in the modal, as an icon button (`code` ↔ `itemDetails`)
+- B/I/sup/sub formatting plus clear, UL/OL lists
+- per-block font-size dropdown (`14/18/22/26`) and left/center/right alignment
+  dropdown; both are WYSIWYG-only and disabled in source mode
+- image insert from a local file picker (PNG/JPEG/GIF/WebP, ≤500 KB) with a
+  compact alt + optional width/height dialog; table inserts
 - icon-only rule-table dropdown (`addPredefinedItem`)
-- expand button opening the content-only modal editor; live sync, no
-  preview/Apply/Cancel, Esc/close returns focus to the expand button
-- image file picker (PNG/JPEG/GIF/WebP, ≤500 KB) plus URL insert and optional data-URI paste/import
+- expand button opening the modal editor with staged Apply/Cancel and dirty
+  confirm; Esc/close returns focus to the expand button
+- optional data-URI paste/import remains supported by the sanitizer
 - warnings for large data URIs, external images, unknown components
 - unbalanced-tag hint retained/adapted
 
@@ -415,7 +434,7 @@ rich-text feature or v50.
    import/render sanitize, fail-closed.
 4. **Rich content** — links/images/tables/figures/classes; CSS; play-bar plain
    text; `showNoteOn` fix.
-5. **Components** — five rule-table keys, icon-only insert dropdown.
+5. **Components** — six rule-table keys, icon-only insert dropdown.
 6. **Actions** — registry + delegated handler, zero public actions.
 7. **Authoring UX** — flattened inline toolbar, content-only expand dialog,
    live sync, icon-only step actions.
@@ -448,14 +467,16 @@ Functional/browser:
 
 - legacy text notes byte-identical
 - HTML note: paragraphs, lists, links, images, tables
-- side rail tables/images; top card
+- side rail tables/images; top card matches the visible app columns
 - play-bar note plain text
 - rule-table components render and scroll
-- authoring expand dialog live-syncs with the inline textarea; Esc/close
+- authoring expand dialog opens from the inline WYSIWYG editor; Esc/close
   restores focus and leaves the step live
-- inline toolbar keeps layout controls and the icon-only rule-table dropdown
-  after expanding; `Go` uses the skip icon
-- all 98 molecules in all 2D modes after Snap removal
+- inline toolbar keeps layout controls and UL/OL; the expanded modal adds
+  image/table/predefined-content inserts; `Go` uses the skip icon
+- lists, per-block font size, alignment, image sizing dialog, source-mode
+  disabling, top-card column alignment, and side-rail stretch (v52 refinement)
+- all 98 v51 molecules in all 2D modes after Snap removal; v52 extends the live set to 136
 - v50 remains runnable and unchanged
 
 Completed 2026-10-25 (Snap removal + v51 live):
@@ -465,7 +486,7 @@ Completed 2026-10-25 (Snap removal + v51 live):
 - Fixed the `MuSVG.parse()` OOM infinite loop (`importNode()` → tolerant
   HTML parsing + `adoptNode()`); the XML parsing error is gone.
 - `node --check` passes on the v51 JS after the `MuSVG` migration.
-- Chrome CDP: 98 molecules in condensed mode + mode sample sweep (128/130);
+- Chrome CDP: 98 v51 molecules in condensed mode + mode sample sweep (128/130); v52 current set is 136.
   Firefox 158.0.1 headless WebDriver BiDi: same 128/130, zero XML/OOM/runtime
   errors. The two failures are pre-existing skeletal JSmol errors
   (`butadiene_1_3`, `propadiene`) and also occur on the Snap baseline.

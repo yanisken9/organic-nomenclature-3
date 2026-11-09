@@ -1,0 +1,171 @@
+{
+  "status": "passed",
+  "kind": "Developer verification, not independent review",
+  "checks": 643,
+  "realPinnedEngineAnalyses": 8,
+  "seeds": [
+    "1",
+    "4"
+  ],
+  "canonicalRounds": 12,
+  "replaceChoiceCases": 135,
+  "orderCases": 2,
+  "preparedAdapterRuns": 8,
+  "receiptCasesPerRun": 6,
+  "fetched": 8,
+  "analysisRequests": 64,
+  "mappings": [
+    {
+      "family": "parent-length",
+      "roundId": "engine-pentane-parent-length-5c0984f2",
+      "message": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το πλήθος των ατόμων C της κύριας αλυσίδας."
+    },
+    {
+      "family": "bond-type",
+      "roundId": "engine-ethane-bond-type-43fa0111",
+      "message": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C."
+    },
+    {
+      "family": "branch-locants",
+      "roundId": "engine-ethyl_3_dimethyl_2_5_hexane-branch-locants-45cd043e",
+      "message": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά τις θέσεις σύνδεσης των διακλαδώσεων και τη φορά αρίθμησης."
+    },
+    {
+      "family": "branch-multiplier",
+      "roundId": "engine-dimethyl_2_3_butane-branch-multiplier-74bb4f08",
+      "message": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το πλήθος των ίδιων διακλαδώσεων."
+    }
+  ],
+  "generatedSummary": [
+    {
+      "seed": "1",
+      "sets": [
+        {
+          "id": "alkanes-unbranched",
+          "rounds": [
+            {
+              "id": "engine-pentane-parent-length-5c0984f2",
+              "family": "parent-length",
+              "kind": "replace"
+            },
+            {
+              "id": "engine-methane-parent-length-aaf59bef",
+              "family": "parent-length",
+              "kind": "replace"
+            },
+            {
+              "id": "engine-ethane-bond-type-43fa0111",
+              "family": "bond-type",
+              "kind": "replace"
+            }
+          ]
+        },
+        {
+          "id": "alkanes-branched",
+          "rounds": [
+            {
+              "id": "engine-dimethyl_2_3_butane-branch-multiplier-74bb4f08",
+              "family": "branch-multiplier",
+              "kind": "replace"
+            },
+            {
+              "id": "engine-ethyl_3_dimethyl_2_5_hexane-alphabetical-order-4d777eae",
+              "family": "alphabetical-order",
+              "kind": "order"
+            },
+            {
+              "id": "engine-methyl_2_pentane-parent-length-2c39b9b5",
+              "family": "parent-length",
+              "kind": "replace"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "seed": "4",
+      "sets": [
+        {
+          "id": "alkanes-unbranched",
+          "rounds": [
+            {
+              "id": "engine-propane-bond-type-3ff25797",
+              "family": "bond-type",
+              "kind": "replace"
+            },
+            {
+              "id": "engine-butane-parent-length-aaf59bef",
+              "family": "parent-length",
+              "kind": "replace"
+            },
+            {
+              "id": "engine-pentane-parent-length-5b7ba7a7",
+              "family": "parent-length",
+              "kind": "replace"
+            }
+          ]
+        },
+        {
+          "id": "alkanes-branched",
+          "rounds": [
+            {
+              "id": "engine-methyl_2_pentane-parent-length-2c39b9b5",
+              "family": "parent-length",
+              "kind": "replace"
+            },
+            {
+              "id": "engine-ethyl_3_dimethyl_2_5_hexane-branch-locants-45cd043e",
+              "family": "branch-locants",
+              "kind": "replace"
+            },
+            {
+              "id": "engine-dimethyl_2_3_butane-branch-multiplier-74bb4f08",
+              "family": "branch-multiplier",
+              "kind": "replace"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "originalExample": {
+    "seed": "4",
+    "roundId": "engine-propane-bond-type-3ff25797",
+    "parts": [
+      "προπ",
+      "ίν",
+      "ιο"
+    ],
+    "selected": "προπ",
+    "before": "Αυτό το συνθετικό συμφωνεί με τη δομή.",
+    "after": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C."
+  },
+  "invariants": [
+    "Exact before/current adapter registered API preserved",
+    "Only display feedback.wrongPart differs; canonical rounds and feedback frozen and unchanged",
+    "All four messages match approved wording and are independent of answer/target/choice values",
+    "Unknown/missing/order cases retain original object and feedback",
+    "Same-seed full games and generatorVersion unchanged",
+    "Fresh, wrong-selection, partial, complete, forged and unsubmitted receipts restore identically",
+    "Both three-round sets mount display copies while cache retains canonical sets",
+    "Progress publications and unlock/continue behavior match baseline"
+  ],
+  "limitations": [
+    "JSC macOS execution; DOM, network transport, WebCrypto, timers and chemistry-client delivery mocked",
+    "Actual pinned chemistry calculations and actual generator/repair/adapter code executed; UI choice RNG fixed for deterministic receipt comparison",
+    "Only seeds 1 and 4, selected to cover all four affected families, real ordering fallback and original propane example; not exhaustive generator enumeration",
+    "Private inspection hooks inserted only into evaluated in-memory adapter strings",
+    "Firefox selection/reopen/reload/narrow-layout and lesson navigation are outside this harness and owned by root; no browser claims from this harness"
+  ],
+  "fixtureSHA256": "d8de795ce5305d9c1b825c88674dfa3788ab9db6cc04f2a5d85c2640e8b77ad6",
+  "sourceSHA256": {
+    "js/namelecule-generated-repair-checkpoint.js": "b801364da6cca067d3c784bd16c9bbbd8a85e3c2d8441abe9a91177a30a8141f",
+    "games/data/alkane-structures.json": "9778e30ea33f2f7cd4c8a472e46e90539856b861a54035a1d514c3246cccf724",
+    "js/namelecule-game-repair.js": "04e17117d3e2aa27d70cc51af6e9e7b75f085e72e7ce94802dfab35d520c4c33",
+    "js/namelecule-repair-generator.js": "118304488b6eaee651490785903080c419239df3f646988f79ae0e2548527611",
+    "js/chemistry-engines/3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306.js": "3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306"
+  },
+  "beforeAdapterSHA256": "b5cbedf4428c36c1a6d1ada4657233c07460844f9e158cb108f39d54f6e9a3d3",
+  "harnessSHA256": "4750d73b14f343fd9ae2e3ad020c0ca278eb874fb6e616a89bcd146671e46d14",
+  "command": "python3 docs/checks/alkane-quiz-feedback-20261107/check-memory.py"
+}

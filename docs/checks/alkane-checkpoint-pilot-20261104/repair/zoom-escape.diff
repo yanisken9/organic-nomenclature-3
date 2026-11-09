@@ -1,0 +1,24 @@
+--- js/namelecule-game-repair.js.before-zoom-escape
++++ js/namelecule-game-repair.js
+@@ -546,6 +546,12 @@
+         dialog.showModal();
+       } else {
+         dialog.setAttribute("role", "region");
++        listen(dialog, "keydown", function (event) {
++          if (event.key !== "Escape") return;
++          event.preventDefault();
++          event.stopPropagation();
++          closeZoom();
++        });
+         refs.zoomButton.setAttribute("aria-expanded", "true");
+         refs.zoomButton.disabled = true;
+         root.append(dialog);
+@@ -557,7 +563,7 @@
+       if (!zoomPanel) return;
+       if (zoomImage) zoomImage.onerror = null;
+       if (standalone) zoomPanel.close();
+-      else { zoomPanel.remove(); zoomPanel = null; }
++      else { replaceChildren(zoomPanel); zoomPanel.remove(); zoomPanel = null; }
+       refs.zoomButton.setAttribute("aria-expanded", "false");
+       refs.zoomButton.disabled = mainImageStatus !== "ready" || !!zoomPanel;
+       refs.zoomButton.focus({ preventScroll: true });

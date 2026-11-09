@@ -1,0 +1,120 @@
+--- before/js/mulermoc-nom-molview-52.js
++++ js/mulermoc-nom-molview-52.js
+@@ -61,7 +61,6 @@
+ // Display-only geometry: never replace a library record or a 3D source.
+ let skeletalLayoutSource = null;
+ let skeletalLayoutApplied = null;
+-let esterOrientationApplied = null;
+ 
+ // ── MuSVG: minimal native SVG DOM helper (replaces the former SVG library) ──
+ const MuSVG = (function () {
+@@ -1230,59 +1229,9 @@
+   skeletalLayoutApplied=key;
+ }
+ 
+-// Ester display convention: acid on the left, alcohol on the right. A proper
+-// whole-molecule rotation preserves every bond/local angle and
+-// atom ID. Canonical MOLs/SDFs remain untouched; fit/labels run afterwards.
+-function fEsterAcidLeftMol(mol) {
+-  if (!mol || !esterInfo || !esterInfo.acidFrag.length || !esterInfo.alcoholFrag.length) return mol;
+-  const lines = mol.split('\n'), n = Number((lines[3] || '').slice(0,3));
+-  if (!Number.isInteger(n) || n < 1 || !(lines[3] || '').includes('V2000')) return mol;
+-  const points = lines.slice(4,4+n).map(l => [Number(l.slice(0,10)),Number(l.slice(10,20))]);
+-  if (points.length !== n || points.some(p => !p.every(Number.isFinite)) ||
+-      esterInfo.acidFrag.concat(esterInfo.alcoholFrag).some(i => !points[i])) return mol;
+-  const center = ids => [0,1].map(axis => ids.reduce((sum,i) => sum+points[i][axis],0)/ids.length);
+-  // School diagrams keep their authored horizontal/vertical bonds. Skeletal
+-  // esters develop the two named fragments across the page, rather than put
+-  // one above the other merely to orient the short acid parent horizontally.
+-  const skeletal = mode2D === 'skeletal' || mode2D === 'condensedZigZag';
+-  const from = skeletal ? center(esterInfo.acidFrag) : points[esterInfo.carbonylC];
+-  const to = skeletal ? center(esterInfo.alcoholFrag) : points[esterInfo.alcoholAttachC];
+-  if (!from || !to || Math.hypot(to[0]-from[0],to[1]-from[1]) < 1e-6) return mol;
+-  const angle = skeletal ? -Math.atan2(to[1]-from[1],to[0]-from[0]) : (to[0] < from[0] ? Math.PI : 0);
+-  if (Math.abs(angle) < 1e-4) return mol;
+-  const co = Math.cos(angle), si = Math.sin(angle);
+-  const cx = (Math.min(...points.map(p=>p[0]))+Math.max(...points.map(p=>p[0])))/2;
+-  const cy = (Math.min(...points.map(p=>p[1]))+Math.max(...points.map(p=>p[1])))/2;
+-  for (let i=0;i<n;i++) {
+-    const dx=points[i][0]-cx, dy=points[i][1]-cy;
+-    const x=(cx+dx*co-dy*si).toFixed(4), y=(cy+dx*si+dy*co).toFixed(4);
+-    if (x.length > 10 || y.length > 10) return mol;
+-    lines[4+i]=x.padStart(10)+y.padStart(10)+lines[4+i].slice(20);
+-  }
+-  return lines.join('\n');
+-}
+-
+-function fApplyEsterOrientation() {
+-  if (!fIsSingleEster() || !fIsAcyclicSaturatedMonoesterGraph(atomConnectivityList,allAtomsTypeList,bondList)) return;
+-  const key = selectedMol+'|'+mode2D+'|'+mainChainAtomsList.join(',');
+-  if (esterOrientationApplied === key) return;
+-  const oriented = fEsterAcidLeftMol(myMol2D);
+-  if (oriented !== myMol2D) {
+-    myMol2D = oriented;
+-    jsmeNomeclatureApplet.readMolFile(myMol2D);
+-    jsmeNomeclatureApplet.setMolecularAreaScale(molZoom2D);
+-    if (jsmeNomeclatureAppletORGNL) {
+-      jsmeNomeclatureAppletORGNL.readMolFile(fEsterAcidLeftMol(jsmeNomeclatureAppletORGNL.molFile()));
+-      jsmeNomeclatureAppletORGNL.setMolecularAreaScale(molZoom2D);
+-    }
+-  }
+-  esterOrientationApplied = key;
+-}
+-
+ function fLoadMol2D() {
+   skeletalLayoutSource = null;
+   skeletalLayoutApplied = null;
+-  esterOrientationApplied = null;
+   const selectedExample = nameExamples[selectedMol];
+   if (!selectedExample) {
+     myMol2D = null;
+@@ -3406,7 +3355,6 @@
+   // Stage 1 precedes native label layout. Stage 2 is fFit2DSVG below, after
+   // functional labels are finalized. Numbering/highlights reuse stable atom IDs.
+   fApplySkeletalLayout();
+-  fApplyEsterOrientation();
+   compactNumberingLabelMap = {};
+   let mySVG = jsmeNomeclatureApplet.getMolecularAreaGraphicsString();
+   // Fix JSME highlight malformation BEFORE HTML parsing
+--- before/mulermoc-nom-52.html
++++ mulermoc-nom-52.html
+@@ -331,7 +331,7 @@
+   <script src="js/jsme-nick-nomeclature-moc2-data_52.js?v=esters-mol-20261029"></script>
+   <script src="js/ui-icons.js?v=v52-sync-20261027-r2"></script>
+   <script src="js/mulermoc-nom-core-52.js?v=esters-20261029"></script>
+-  <script src="js/mulermoc-nom-molview-52.js?v=esters-20261029"></script>
++  <script src="js/mulermoc-nom-molview-52.js?v=restore-ester-viewer-20261029"></script>
+   <script src="js/mulermoc-nom-teaching-52.js?v=acid-prefix-boxes-20261028"></script>
+   <script src="js/mulermoc-nom-note-52.js?v=v52-sync-20261027-r2"></script>
+   <script src="js/mulermoc-nom-scenario-52.js?v=other-acids-theory-20261028"></script>
+--- before/docs/checks/test-esters-naming-20261029.py
++++ docs/checks/test-esters-naming-20261029.py
+@@ -29,8 +29,6 @@
+  series:fGetMoleculeClassification().seriesKey,chain:mainChainAtomsList,
+  signature:fNumberedChainSignature(mainChainAtomsList,allAtomsTypeList,bondList),
+  signature3:sdf?fNumberedChainSignature(mainChainAtoms3D,allAtomsTypeList3D,bondList3D):null,
+- orientedMol:probe?null:fEsterAcidLeftMol(mode==='skeletal'?fSkeletalLayoutMol(text,mainChainAtomsList).mol:text),
+- orientationIdempotent:probe?null:(()=>{const m=fEsterAcidLeftMol(text);return m===fEsterAcidLeftMol(m)})(),
+  acidCount:esterInfo?esterInfo.acidLen:null,acidParent:esterInfo?fGetEsterAcidParentChain():null,
+  acidParent3:sdf&&esterInfo?fGetEsterAcidParentChain3D():null,
+  alcohol:esterInfo?fGetEsterAlcoholChain():null,alcohol3:sdf&&esterInfo?fGetEsterAlcoholChain3D():null,
+@@ -112,19 +110,6 @@
+         assert len(v['alcohol']) == s['carbons']-s['acidCarbons']
+         if row['mode'] != 'permutation':
+             assert v['signature'] == v['signature3'], row
+-            assert v['orientationIdempotent'], row
+-            import math
+-            original = Path('mols/new_molecules', s['key']+'_2D_'+row['mode'].capitalize()+'.mol').read_text().splitlines()
+-            oriented = v['orientedMol'].splitlines(); n = int(original[3][:3])
+-            assert original[:4] == oriented[:4] and original[4+n:] == oriented[4+n:]
+-            assert all(a[20:] == b[20:] for a,b in zip(original[4:4+n],oriented[4:4+n]))
+-            xy = lambda ls: [(float(l[:10]),float(l[10:20])) for l in ls[4:4+n]]
+-            a,b = xy(original),xy(oriented)
+-            assert all(abs(math.dist(a[i],a[j])-math.dist(b[i],b[j])) < .0004 for i in range(n) for j in range(i))
+-            acid = range(s['acidCarbons']); alcohol = range(s['acidCarbons'],s['carbons'])
+-            assert sum(b[i][0] for i in acid)/len(acid) < sum(b[i][0] for i in alcohol)/len(alcohol)
+-            if row['mode'] == 'skeletal':
+-                assert abs(sum(b[i][1] for i in acid)/len(acid)-sum(b[i][1] for i in alcohol)/len(alcohol)) < .001
+             assert len(v['acidParent3']) == s['parent']
+             assert len(v['alcohol3']) == len(v['alcohol'])
+             assert not set(v['acidParent3']) & set(v['alcohol3'])

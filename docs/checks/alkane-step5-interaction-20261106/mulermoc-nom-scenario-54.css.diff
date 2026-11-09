@@ -1,0 +1,29 @@
+--- before/css/mulermoc-nom-scenario-54.css
++++ css/mulermoc-nom-scenario-54.css
+@@ -743,6 +743,26 @@
+    pointer-events: none
+ }
+ 
++#nameAnalysisContainer .nameCompBox.scNameCompDisabled {
++   pointer-events: none;
++   cursor: default;
++}
++
++.scChainNavigation {
++   padding: 10px 12px;
++   border-bottom: 1px solid var(--lightBlue);
++}
++
++.scChainNavigation #chainStepperBox {
++   justify-content: center;
++   flex-wrap: wrap;
++}
++
++.scChainNavigation .stepBtn {
++   min-width: 44px;
++   min-height: 44px;
++}
++
+ #scenarioPlayBar {
+    position: fixed;
+    top: 0px;

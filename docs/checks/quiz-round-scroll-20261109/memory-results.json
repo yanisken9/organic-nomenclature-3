@@ -1,0 +1,69 @@
+{
+  "completed": true,
+  "checks": 48,
+  "labels": [
+    "before: first rendered round retains old scroll",
+    "before: counter remains correct",
+    "before: same round progress preserves manual scrolling",
+    "before: equivalent progress object does not jump",
+    "before: round1→2 reproduces retained scroll",
+    "before: round2→3 reproduces retained scroll",
+    "before: last-round updates preserve manual scroll",
+    "before: new total is a distinct round context",
+    "before: invalid/loading progress clears counter without scroll",
+    "before: invalid/loading progress clears counter without scroll",
+    "before: invalid/loading progress clears counter without scroll",
+    "before: invalid/loading progress clears counter without scroll",
+    "before: invalid/loading progress clears counter without scroll",
+    "before: invalid/loading progress clears counter without scroll",
+    "before: invalid/loading progress clears counter without scroll",
+    "before: first valid round after loading starts afresh",
+    "before: Back closes dialog",
+    "before: stale closed-mount callback is ignored",
+    "before: stale earlier mount cannot scroll reopened dialog",
+    "before: new mount initializes restored round position",
+    "before: restored round keeps later manual scroll",
+    "before: different active scenario rejects old callback",
+    "before: different step rejects old callback",
+    "before: Exit rejects callbacks and closes dialog",
+    "after: first rendered round starts at top",
+    "after: counter remains correct",
+    "after: same round progress preserves manual scrolling",
+    "after: equivalent progress object does not jump",
+    "after: round1→2 reveals new instructions",
+    "after: round2→3 reveals new instructions",
+    "after: last-round updates preserve manual scroll",
+    "after: new total is a distinct round context",
+    "after: invalid/loading progress clears counter without scroll",
+    "after: invalid/loading progress clears counter without scroll",
+    "after: invalid/loading progress clears counter without scroll",
+    "after: invalid/loading progress clears counter without scroll",
+    "after: invalid/loading progress clears counter without scroll",
+    "after: invalid/loading progress clears counter without scroll",
+    "after: invalid/loading progress clears counter without scroll",
+    "after: first valid round after loading starts afresh",
+    "after: Back closes dialog",
+    "after: stale closed-mount callback is ignored",
+    "after: stale earlier mount cannot scroll reopened dialog",
+    "after: new mount initializes restored round position",
+    "after: restored round keeps later manual scroll",
+    "after: different active scenario rejects old callback",
+    "after: different step rejects old callback",
+    "after: Exit rejects callbacks and closes dialog"
+  ],
+  "runs": [
+    {
+      "expectedReset": false,
+      "checks": 24
+    },
+    {
+      "expectedReset": true,
+      "checks": 24
+    }
+  ],
+  "limitations": [
+    "Actual before/current controller; reused FakeNode DOM, tab storage and custom quiz adapter doubles.",
+    "No browser/layout/chemical or physical-keyboard proof from this probe."
+  ],
+  "controller_sha256": "35fda6953f06356d498f1be40fe4c6123d0c81c3bdbf81a60fa3fda5ea211501"
+}

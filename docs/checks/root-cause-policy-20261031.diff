@@ -1,0 +1,84 @@
+--- before/AGENTS.md
++++ after/AGENTS.md
+@@ -17,6 +17,30 @@
+   require their own preparation and verification; do not claim either exists
+   without evidence. This priority does not authorize unrelated refactors,
+   automatic publication, or activating all agent roles for each task.
++
++# Root-cause solutions and prevention of recurrence
++
++- User instruction (2026-10-31), applicable to every agent: prefer durable fixes
++  at the demonstrated cause of a problem. Do not present symptom suppression,
++  cosmetic compensation or a passing narrow test as proof of a root-cause fix.
++- Before proposing implementation, reproduce the failure and trace the relevant
++  data, settings and processing stages to identify where expected and actual
++  behavior first diverge. Separate measured facts, hypotheses and unknowns.
++  A repository revision or local copy does not establish what another person
++  saw in a different live deployment, browser or configuration.
++- Fix the causal component using a supported setting or a shared mechanism
++  where appropriate. Do not accumulate molecule-specific exceptions to hide an
++  unexplained failure. If only a temporary mitigation is justified, explain its
++  limits and obtain approval for that scope; do not silently call it permanent.
++- Verification should reproduce the original failure before the change, confirm
++  its resolution afterward, and cover relevant variations and affected flows.
++  Preserve scientific correctness and add meaningful regression protection
++  against recurrence, proportionate to the actual change and existing tests.
++- State the verified operating conditions and remaining uncertainties. Reliability
++  is established with evidence and independent review, not an unconditional
++  promise that a solution will always work. Existing workarounds may need later
++  reassessment; this instruction does not authorize automatic removal, broad
++  rewrites or changes outside an approved plan. Keep the cost protocol in force.
+ 
+ # Session continuity
+ 
+--- before/docs/SESSION-NOTES.md
++++ after/docs/SESSION-NOTES.md
+@@ -1,3 +1,28 @@
++# Current resume point — 2026-10-31 — Root-cause requirement; alkene extension paused
++
++Latest user instruction applies generally to ALL agents: solve demonstrated
++root causes, prevent recurrence, avoid unexplained symptom patches. Permanent
++section added toAGENTS.md, preserving conference/cost/approval/scientific rules.
++Facts/hypotheses/unknowns, real artifact/environment, causal shared fix, before/
++after regression evidence, truthful verified limits; no unconditional guarantee.
++Only documentation changed in this step.
++
++All-alkene mask-extension proposal is PAUSED, not approved. Existing reviewed
++propene-only local mitigation remains present; no implicit rollback/removal.
++It achieves measured gaps but has NOT established/fixed the originating JSME
++font/backplate mismatch. Next authorized read-only investigation: trace original
++MOL→JSME SVG generation→native mask/text dimensions→computed browser typography;
++identify first divergence and evaluate supported settings before proposing new
++implementation. Do not extend masks or claim a root-cause solution meanwhile.
++
++7alkenes audited previously,6others show contact; no category fix implemented.
++Propene review/evidence remains in PROPENE-GAP-FIX-20261031.md. Known38JSmol
++null-viewer diagnostics in supplementary navigation/audit remain unresolved,
++separate from initial bounded0errorrun. Not conference-ready certification.
++SourceHEAD168e3cec/index25c212... same, core52d2138418... unchanged allsession.
++Lastcheckedupstream4e1190a, actualsync93b759f; no sync/commit/push/publication.
++Policy review is bounded to documentation; no new app tests needed for thisstep.
++
+ # Current resume point — 2026-10-31 — Propene correction reviewed; six more alkenes audited
+ 
+ User prioritizes ENEPHET presentation23–25April2027Volos; permanent all-agent
+--- before/docs/YANNIS-CONTRIBUTIONS.md
++++ after/docs/YANNIS-CONTRIBUTIONS.md
+@@ -1,3 +1,17 @@
++# Contribution — 2026-10-31 — Permanent root-cause policy; implementation paused
++
++User explicitly requested root-cause solutions as the general rule for allagents.
++AGENTS.md now requires evidence of causal origin, distinguishes observation from
++hypothesis, favors causal/shared supported fixes, meaningful regression coverage
++and accurate verified limits. Temporary mitigation must be named and scoped;
++no promise of universally working software or silent broad changes. Conference
++priority and cost/review/scientific/approval protocols are retained.
++Only3documentationfiles changed in thisstep:AGENTS/sessionnotes/contributions.
++All-alkene mask-extension paused; current propene mitigation retained without
++claiming root cause resolved. Next: read-only trace of JSME SVG masks/text/font
++settings and first divergence. No new runtime tests or app/core edits. Existing
++local propene fix is pre-existing to this documentationstep. No commit/publish.
++
+ # Contribution — 2026-10-31 — Conference policy and reviewed propene clearance
+ 
+ User renewed propene-only safefix approval and set April2027ENEPHET presentation

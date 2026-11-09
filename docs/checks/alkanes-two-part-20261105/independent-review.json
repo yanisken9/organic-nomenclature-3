@@ -1,0 +1,39 @@
+{
+  "reviewer": "/root/review_two_part_alkane_lesson",
+  "freshContext": true,
+  "baseCommit": "168e3cec01f941a84d40bbe0dc07156e7baa35d0",
+  "initialManifestSHA256": "69ec82e5b646ce675a1cb17e415be53be613f5692370e6f55207e21f968a5e01",
+  "targetedManifestSHA256": "2314c4049055eb99095d1e14ad307377fe3dc6662eae05a3b38691f0bb71d5bf",
+  "findings": [
+    {
+      "id": "R1",
+      "severity": "P2",
+      "description": "Cold preparation revealed bootstrap molecule before resolved snapshot",
+      "status": "closed",
+      "correction": "Keep recovery controls inside loading stage; release after applying snapshot; retain warm viewer; release in-placeExit",
+      "developerVerification": "11 actualFirefoxchecks0JSerrors",
+      "independentVerification": "exacthashes, reversible2filedelta,JSCsyntax,7memory-onlybehaviorchecks; inspectedDeveloperbrowserJSON/screenshots"
+    }
+  ],
+  "residualObservations": [
+    {
+      "id": "JSMOL-RESTORE-OBS",
+      "severity": "P2 approximate demonstratedimpact",
+      "status": "unresolved",
+      "description": "Native bufferedImage/platformnull exception in initialfull128functionalcheckrestoration; subsequentflowmodelsrendered",
+      "cause": "unestablished",
+      "limitation": "Targeted11with0errors doesnotprovepermanentnativefix"
+    }
+  ],
+  "initialIndependentChecks": [
+    "8runtime9protected6beforehashes",
+    "scenario-contentcheck",
+    "51assertionharnessinmemory8realcoreanalyses(mocksDOM/transport/crypto)",
+    "4JSsyntaxchecks",
+    "6diffwhitespacechecks",
+    "suppliedscreenshots"
+  ],
+  "browserEvidenceIsDeveloperSupplied": true,
+  "coreChanges": false,
+  "publication": false
+}

@@ -1,0 +1,54 @@
+{
+  "baseCommit": "168e3cec01f941a84d40bbe0dc07156e7baa35d0",
+  "approvedRequest": "Remove Από την αρχή from every shared quiz kind in lesson and standalone; preserve direct edits/retry/counters/progress/Continue. Three runtime paths; no core/JSON changes.",
+  "targets": {
+    "js/namelecule-game-repair.js": "e557da67fdb125488c8b432ea3afcdcbbc6374cd904c2b85355e0efc32571ffa",
+    "mulermoc-nom-54.html": "05d956f23830f83785f9088d6da3d45b3b4b2b2398e983eec885133e8db209b3",
+    "games/name-repair.html": "530ca1484541345b1f61ff510309987b0f0d9b79cf5f0b502e9e8c234f8ce28d"
+  },
+  "evidence": {
+    "docs/checks/workshop-reset-removal-20261107/after-replacement.png": "4c6494bc533b62c60fa5b01f5c244b65c2eafa5afb32159cfd966d4e40ef4926",
+    "docs/checks/workshop-reset-removal-20261107/baseline.json": "d16b76c7d21ca4d50a9230ef2f0a3cb86c83f50f231010270bbd4532a7eb435b",
+    "docs/checks/workshop-reset-removal-20261107/before/games/name-repair.html": "000aebafd697d2296a7204b0eca2c84cda73388183a23531da4a6e1aef9031be",
+    "docs/checks/workshop-reset-removal-20261107/before/js/namelecule-game-repair.js": "04e17117d3e2aa27d70cc51af6e9e7b75f085e72e7ce94802dfab35d520c4c33",
+    "docs/checks/workshop-reset-removal-20261107/before/mulermoc-nom-54.html": "f00ad630c19742654756ad583c3c7bae7ee50ef50ed0c49f4ebbbff02dd5a987",
+    "docs/checks/workshop-reset-removal-20261107/before-replacement.png": "2774c4c91dc8d3193b3e9cafe6d1f27d06d0f4a9ab423abba89c3df61a4e6191",
+    "docs/checks/workshop-reset-removal-20261107/browser.json": "90ec1579d824e9652b01859eb4e540f0af635e420f4838f6bff0964360a780df",
+    "docs/checks/workshop-reset-removal-20261107/check-browser.py": "7d2f844424de464487dc381b674bc913c60156d7dcfac24660e09c1f745092ae",
+    "docs/checks/workshop-reset-removal-20261107/cleanup.json": "4e2e92424ecabc2b89d540df343cbb9035d2ea19eb9294c054596d4a123b4670",
+    "docs/checks/workshop-reset-removal-20261107/git-status-before.txt": "c660661ab676043a85ea547a06f8fc6224c54cc5e5d3f7ac77de8389dbc14737",
+    "docs/checks/workshop-reset-removal-20261107/lesson-320.png": "5f8c90e39a0af70028e3d624459e19f0738be1b27ba851dff736bf696c84cd83",
+    "docs/checks/workshop-reset-removal-20261107/lesson-390.png": "dc6461f747c8831be94d163eeee4110fa0e19ad02bc38a5af4f37dab1c29c589",
+    "docs/checks/workshop-reset-removal-20261107/mulermoc-nom-54.html.diff": "08653fdb0cc87fc53173918ed06a73b2d9b6ccf3d2e84526db1fb4b45b41e89f",
+    "docs/checks/workshop-reset-removal-20261107/name-repair.html.diff": "bfd50a2ec1e42d63cd6b35fbe9f7c638554ce94b813f7ce63ab974fcc308d13a",
+    "docs/checks/workshop-reset-removal-20261107/namelecule-game-repair.js.diff": "c43c7ac8ec3d254dec7f0a95b0b53d9b12348791a61f49edfc46cd38d4cdba94",
+    "docs/checks/workshop-reset-removal-20261107/served-verification.json": "5024486ab843edf324a1a512ad270c31e1321398a032c9658b76dd18df7bf03e",
+    "docs/checks/workshop-reset-removal-20261107/source-verification.json": "6c849b471f31a51da85f0fbb5bd04000b90e439b1f3aba8d589bf44d5536825f",
+    "docs/checks/workshop-reset-removal-20261107/standalone-order.png": "a17759d6a751974ae117f016606d448873b7b4967a746382e8857efa07014d50",
+    "docs/checks/workshop-reset-removal-20261107/test-process.json": "ef3b09fc1e3fa4db4b3941c280bef2653399e72e20f943cdd5d420d9dbd6b1d3"
+  },
+  "notesToReadOnlyTopSections": [
+    "docs/SESSION-NOTES.md",
+    "docs/YANNIS-CONTRIBUTIONS.md"
+  ],
+  "runtimeGitStatus": "?? games/name-repair.html\n?? js/namelecule-game-repair.js\n?? mulermoc-nom-54.html\n",
+  "acceptance": [
+    "No reset for replace/order in lesson and standalone",
+    "Check/choices/movement retries and counters/progress/Continue preserved",
+    "Only three runtime files changed; HTML only game cache URL",
+    "No core/scenario/generator/chemical changes"
+  ],
+  "developerEvidence": {
+    "FirefoxAssertions": 42,
+    "JavaScriptErrors": 0,
+    "SourceAssertions": 56,
+    "protectedPaths": 50,
+    "HTTP_SHA_Checks": 3
+  },
+  "limitations": [
+    "Headless Firefox only",
+    "No physical mobile, Safari, screen reader or full conference audit",
+    "Existing Firefox/JSmol issue not investigated",
+    "No publication/commit/push/JSON export"
+  ]
+}

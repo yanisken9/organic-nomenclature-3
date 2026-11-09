@@ -1,0 +1,56 @@
+{
+  "status": "Read-only preflight complete; specific approval pending. No application source changes.",
+  "chemistryRole": "/root/merge_core_preflight",
+  "viewerRole": "/root/merge_viewer_preflight",
+  "findings": [
+    {
+      "id": "CV-M01",
+      "severity": "P1 preservation hazard",
+      "source": "js/mulermoc-nom-core-54.js:2569",
+      "evidence": "Read-only actual JSC: local nitroethane retains N+1/O-1 and six property records; raw upstream parser loses this metadata. Local rejects one-invalid-bond fixture, upstream accepts only one of two declared bonds.",
+      "resolutionPlanned": "Retain local strict parser and metadata; generalize offsets."
+    },
+    {
+      "id": "CV-M02",
+      "severity": "P1 preservation hazard",
+      "source": "js/mulermoc-nom-core-54.js:2885",
+      "evidence": "Read-only actual JSC CH3-C≡N parent[2,1]: current local180deg vs raw upstream116.565deg.",
+      "resolutionPlanned": "Retain terminal sp handling before new terminal lean/ether rules."
+    },
+    {
+      "id": "CV-M03",
+      "severity": "P2 incoming limitation",
+      "source": "upstream-target/js/mulermoc-nom-core-54.js:2534",
+      "evidence": "New regex rejects valid contiguous fixed-width101100 counts; current parser accepts it. Short JSME header conversely rejected currently.",
+      "resolutionPlanned": "Validate separate fixed-width count fields and shared bounded locator; C101 tests parser, not naming support."
+    },
+    {
+      "id": "VIEW-OFFSET",
+      "severity": "Required preservation adaptation",
+      "source": "js/mulermoc-nom-molview-54.js:3147",
+      "evidence": "Actual current JSC: 3-header6C annotation6[C] vs 2-header0. Four-carbon display3-header rotation-60.0007deg vs 2-header skip.",
+      "resolutionPlanned": "Use shared counts-line offsets in annotation and preserved skeletal display helper."
+    },
+    {
+      "id": "VIEW-ASYNC",
+      "severity": "Required concurrency protection",
+      "source": "js/mulermoc-nom-molview-54.js:1939",
+      "evidence": "Source tracing shows upstream await windows while current Cancel/Draw/Accept assume synchronous transaction. No runtime failure of a merged implementation claimed.",
+      "resolutionPlanned": "Per-draft in-flight/identity guards, safe cancellation/restoration and no stale registration."
+    },
+    {
+      "id": "LANG-ROW",
+      "severity": "P2 incoming regression",
+      "source": "upstream-target/js/mulermoc-nom-lang-54.js:345",
+      "evidence": "Read-only actual base/target strings/painter plus in-memory label DOM: base0 wrongGR/EN; target7GR/8EN wrong. New row shifts positional mapping.",
+      "resolutionPlanned": "Address existing row IDs, test all11 labels GR/EN/GR."
+    }
+  ],
+  "attribution": "Chemistry/viewer agents independently executed read-only preflight probes. This is not an independent Reviewer assessment of a merged implementation, which does not exist yet.",
+  "protectedRuntimeHashesUnchanged": 826,
+  "indexUnchanged": true,
+  "coreChanged": false,
+  "baseline": "baseline.json",
+  "plan": "plan.json",
+  "approvalPending": true
+}

@@ -1,0 +1,224 @@
+{
+  "completed": true,
+  "checks": [
+    "Actual player accepts source9 JSON with12steps and no warnings",
+    "Desktop source9 unchanged since preflight",
+    "Recorded existing lesson still matches recovery snapshot",
+    "Installed lesson is byte-identical to Desktop9JSON",
+    "Local HTTP serves exact9JSON bytes through stable lesson URL",
+    "Existing library card opens updated12step lesson normally",
+    "Normal learner step5 request remains locked by quiz4",
+    "Revised workshop text loaded from9JSON",
+    "Unchanged generated quiz opens with current shared UI",
+    "Normal lesson Exit returns to library",
+    "Author screen opens revised step5 directly",
+    "New step5 title and revised main-chain instruction rendered",
+    "Step5 passive name parts preserved",
+    "Both existing main-chain navigation arrows remain available",
+    "Step5 can display second equivalent parent chain",
+    "Step5 switches back to first equivalent chain",
+    "Rehearsal step 1 applies correct title",
+    "Rehearsal step 2 applies correct title",
+    "Rehearsal step 3 applies correct title",
+    "Rehearsal step 4 applies correct title",
+    "Rehearsal step 5 applies correct title",
+    "Rehearsal step 6 applies correct title",
+    "Revised rich text renders correctly step6",
+    "Rehearsal step 7 applies correct title",
+    "Revised rich text renders correctly step7",
+    "Rehearsal step 8 applies correct title",
+    "Revised rich text renders correctly step8",
+    "Rehearsal step 9 applies correct title",
+    "Rehearsal step 10 applies correct title",
+    "Revised rich text renders correctly step10",
+    "Rehearsal step 11 applies correct title",
+    "Rehearsal step 12 applies correct title",
+    "Final8molecule2D3D configuration retained",
+    "All45 protected app/core/library/other-scenario files unchanged",
+    "Final active/Desktop9 exact byte andSHA match"
+  ],
+  "scope": "User-supplied JSON import as-is at existing active library path; no application code edits",
+  "limitations": [
+    "Owned headless Firefox; no user browser/unsaved edits accessed",
+    "All12 steps replayed in author rehearsal; unchanged quiz recipes validated/opened, not all six repairs solved anew",
+    "No new full3D/Safari/physicalmobile/screenreader/conference audit"
+  ],
+  "validation": {
+    "ok": true,
+    "warnings": [],
+    "steps": 12
+  },
+  "chainSelectors": [
+    {
+      "id": "chainPrevBtn",
+      "text": "",
+      "label": "Προηγούμενη αλυσίδα"
+    },
+    {
+      "id": "chainNextBtn",
+      "text": "",
+      "label": "Επόμενη αλυσίδα"
+    }
+  ],
+  "javascriptErrors": [
+    {
+      "type": "javascript",
+      "level": "error",
+      "source": {
+        "realm": "9f8e3221-1437-4cf9-b51b-c3471850d72e",
+        "context": "26339237-a503-4e6a-a2c4-b9742feb28b1",
+        "userContext": "default"
+      },
+      "text": "TypeError: can't access property \"bufferedImage\", this.platform is null",
+      "timestamp": 1794114593210,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 290,
+            "functionName": "",
+            "lineNumber": 869,
+            "url": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corejmol.z.js"
+          },
+          {
+            "columnNumber": 18,
+            "functionName": "",
+            "lineNumber": 2519,
+            "url": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corejmol.z.js"
+          },
+          {
+            "columnNumber": 349,
+            "functionName": "",
+            "lineNumber": 2522,
+            "url": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corejmol.z.js"
+          },
+          {
+            "columnNumber": 396,
+            "functionName": "",
+            "lineNumber": 2631,
+            "url": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corejmol.z.js"
+          },
+          {
+            "columnNumber": 227,
+            "functionName": "",
+            "lineNumber": 2633,
+            "url": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corejmol.z.js"
+          },
+          {
+            "columnNumber": 42,
+            "functionName": "",
+            "lineNumber": 1836,
+            "url": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corejmol.z.js"
+          },
+          {
+            "columnNumber": 86,
+            "functionName": "a.repaint/<",
+            "lineNumber": 182,
+            "url": "http://127.0.0.1:8013/js/vendor/jsmol/namelecule-20261031-r1/JSmol.min.js"
+          },
+          {
+            "columnNumber": 33,
+            "functionName": "run",
+            "lineNumber": 87,
+            "url": "http://127.0.0.1:8013/js/vendor/jsmol/namelecule-20261031-r1/JSmol.min.js"
+          },
+          {
+            "columnNumber": 17,
+            "functionName": "paint",
+            "lineNumber": 90,
+            "url": "http://127.0.0.1:8013/js/vendor/jsmol/namelecule-20261031-r1/JSmol.min.js"
+          },
+          {
+            "columnNumber": 23,
+            "functionName": "a.repaint",
+            "lineNumber": 182,
+            "url": "http://127.0.0.1:8013/js/vendor/jsmol/namelecule-20261031-r1/JSmol.min.js"
+          },
+          {
+            "columnNumber": 83,
+            "functionName": "",
+            "lineNumber": 792,
+            "url": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corejmol.z.js"
+          },
+          {
+            "columnNumber": 21,
+            "functionName": "",
+            "lineNumber": 1032,
+            "url": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corejmol.z.js"
+          },
+          {
+            "columnNumber": 244,
+            "functionName": "",
+            "lineNumber": 1030,
+            "url": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corejmol.z.js"
+          },
+          {
+            "columnNumber": 8,
+            "functionName": "",
+            "lineNumber": 2629,
+            "url": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corejmol.z.js"
+          },
+          {
+            "columnNumber": 375,
+            "functionName": "",
+            "lineNumber": 140,
+            "url": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corescript.z.js"
+          },
+          {
+            "columnNumber": 281,
+            "functionName": "",
+            "lineNumber": 139,
+            "url": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corescript.z.js"
+          },
+          {
+            "columnNumber": 75,
+            "functionName": "",
+            "lineNumber": 203,
+            "url": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corescript.z.js"
+          },
+          {
+            "columnNumber": 255,
+            "functionName": "",
+            "lineNumber": 136,
+            "url": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corescript.z.js"
+          },
+          {
+            "columnNumber": 160,
+            "functionName": "",
+            "lineNumber": 135,
+            "url": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corescript.z.js"
+          },
+          {
+            "columnNumber": 132,
+            "functionName": "",
+            "lineNumber": 514,
+            "url": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corescript.z.js"
+          },
+          {
+            "columnNumber": 369,
+            "functionName": "",
+            "lineNumber": 525,
+            "url": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corescript.z.js"
+          },
+          {
+            "columnNumber": 223,
+            "functionName": "",
+            "lineNumber": 636,
+            "url": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corescript.z.js"
+          },
+          {
+            "columnNumber": 275,
+            "functionName": "",
+            "lineNumber": 635,
+            "url": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corescript.z.js"
+          },
+          {
+            "columnNumber": 162,
+            "functionName": "",
+            "lineNumber": 1218,
+            "url": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corejmol.z.js"
+          }
+        ]
+      }
+    }
+  ]
+}

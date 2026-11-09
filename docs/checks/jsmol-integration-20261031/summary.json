@@ -1,0 +1,139 @@
+{
+  "date": "2026-10-31",
+  "scope": "Actual locally installed Main v52 JSmol lifecycle integration; not publication or conference certification",
+  "candidateSHA256": "d99b1168acbbd55d59073943e6fde174513e8b815ddb88ae8f1bfa927961b323",
+  "causal": {
+    "totalCases": 20,
+    "baselineFailingCases": 10,
+    "mainFailingCases": 0,
+    "baselineUncaughtErrors": 14,
+    "baselineCaughtExceptions": 4,
+    "unrelatedPageWorkPassed": true
+  },
+  "lessons": {
+    "entries": 14,
+    "sampledStates": 70,
+    "correctTerminalModels": 14,
+    "exitsToLibrary": 14,
+    "javascriptErrors": 0,
+    "all337StepsReplayed": false
+  },
+  "active": {
+    "rounds": 3,
+    "actualMenuPicks": 12,
+    "finalModelAtoms": 37,
+    "toggleResizePassed": true,
+    "javascriptErrors": 0
+  },
+  "controls": {
+    "realNumbering3DAnd2D": true,
+    "echoPositionsMatchAtomCoordinates": true,
+    "mainCarbonsGreenHydrogensNotGreen": true,
+    "zoomAndLabelsPassed": true,
+    "nativePNG": {
+      "filename": "προπένιο_3D.png",
+      "dimensions": [
+        1200,
+        1200
+      ],
+      "bytes": 219252,
+      "handoff": "native JSmol _localFileSaveFunction capture; no external download",
+      "CRCsPassed": true,
+      "scanlineBytes": 4321200,
+      "SHA256": "397b47a3e27c3b8d2498fc43b26277240efbf19a118b5df67c3596d3c1718c63",
+      "visuallyInspected": true
+    },
+    "nativePromptAnsweredViaBiDi": true,
+    "javascriptErrors": 0
+  },
+  "loader": {
+    "normalCDNOptionPrefixCases": 3,
+    "reloadPassed": true,
+    "prefixedLessonExit": "/prefix/organic-nomenclature-3/design/theory-library.html",
+    "SRIAndAssetSHAPassed": true
+  },
+  "invariants": {
+    "availableForms": 422,
+    "molecules": 141,
+    "namesAndLabelTextUnchanged": true,
+    "javascriptErrors": 0,
+    "chemicalRecertification": false
+  },
+  "source": {
+    "protectedFiles": 734,
+    "changed": [
+      "js/vendor/README.md",
+      "mulermoc-nom-52.html"
+    ],
+    "allOther732Unchanged": true,
+    "coreSHA256": "d2138418ff630ab77e578b80ca8ba3a10cc1b877c3ab8c0e5c2735ffcd1f24a2",
+    "HEAD": "168e3cec01f941a84d40bbe0dc07156e7baa35d0",
+    "indexSHA256": "25c212236906eff396f0a3521653f16eea1f5d57dfc5e32ba4477ad25930f964"
+  },
+  "rollback": {
+    "isolatedRestorePassed": true,
+    "originalFilesRestored": 3,
+    "newFilesRemoved": 6,
+    "newerEditBlocksBeforeAnyMutation": true,
+    "MainRolledBack": false
+  },
+  "initialHarnessLimitation": "First PNG attempt did not handle native Save Image prompt and timed out; preserved initial log. Harness corrected to answer actual prompt; Main code unchanged.",
+  "environment": {
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:159.0) Gecko/20100101 Firefox/159.0",
+    "jsmolVersion": "2022-06-24 05:54:49 (JSmol/j2s)",
+    "engine": {
+      "codeBase": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/",
+      "date": "2026-08-24 10:15",
+      "documentBase": "http://127.0.0.1:8030/slow/main/mulermoc-nom-52.html?audit=active-switches",
+      "fullName": "jmolAppletNomeclature__105950039430857__",
+      "htmlName": "jmolAppletNomeclature",
+      "javaVendor": "Java2Script (HTML5)",
+      "javaVersion": "2022-06-24 05:54:49 (JSmol/j2s)(HTML5)",
+      "operatingSystem": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:159.0) Gecko/20100101 Firefox/159.0",
+      "registry": {
+        "jmolAppletNomeclature__105950039430857__": "[J.appletjs.Jmol object]"
+      },
+      "syncId": "105950039430857",
+      "version": "16.4.23"
+    },
+    "jquery": "3.7.1",
+    "resources": [
+      {
+        "name": "http://127.0.0.1:8030/slow/main/js/vendor/jsmol/namelecule-20261031-r1/JSmol.min.js",
+        "start": 184,
+        "end": 190
+      },
+      {
+        "name": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/img/JSmol_spinner.gif",
+        "start": 219,
+        "end": 221
+      },
+      {
+        "name": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corejmol.z.js",
+        "start": 456,
+        "end": 458
+      },
+      {
+        "name": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corescript.z.js",
+        "start": 633,
+        "end": 635
+      }
+    ]
+  },
+  "limits": [
+    "j2s remains unpinned CDN, not offline",
+    "Model-completion and hidden-load-zap contract unchanged",
+    "Not all 337 lesson steps/all 141 3D models tested",
+    "Safari/BFCache/network outage/conference rehearsal not performed",
+    "Earlier 2D text prototype not integrated"
+  ],
+  "independentReview": {
+    "completed": true,
+    "reviewer": "/root/review_jsmol_main_integration_20261031",
+    "findings": [],
+    "record": "independent-review.json",
+    "frozenManifestSHA256": "48220a2bfd444e9dae08956f590ecbc5475fc797923073ae64858e9115b96544"
+  },
+  "coreChangedThisSession": false,
+  "commitPushPublish": false
+}

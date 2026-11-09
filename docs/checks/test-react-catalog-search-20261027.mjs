@@ -1,0 +1,23 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import { filterMolecules } from '../../react-preview/src/molecule-search.js';
+
+const catalog = JSON.parse(fs.readFileSync(new URL('../../react-preview/src/molecules.json', import.meta.url)));
+const ids = rows => rows.map(m => m.id);
+assert.equal(catalog.length, 126);
+assert.equal(new Set(ids(catalog)).size, 126);
+assert.equal(catalog.flatMap(m => m.modes).length, 377);
+assert.deepEqual(filterMolecules(catalog, '', ''), catalog);
+assert.deepEqual(filterMolecules(catalog, '  ', ''), catalog);
+assert.deepEqual(ids(filterMolecules(catalog, 'ΑΙΘΑΝΟΛΗ', '')), ids(filterMolecules(catalog, 'αιθανόλη', '')));
+assert.deepEqual(ids(filterMolecules(catalog, 'αιθέρας', '')), ids(filterMolecules(catalog, 'ΑΙΘΕΡΑΣ', '')));
+assert.deepEqual(ids(filterMolecules(catalog, 'C2H6O', '')), ids(filterMolecules(catalog, 'C₂H₆O', '')));
+assert.deepEqual(new Set(ids(filterMolecules(catalog, 'C2H6O', ''))), new Set(['ethanol', 'dimethylether']));
+assert(filterMolecules(catalog, 'αιθυλο', 'ether').every(m => m.series === 'ether'));
+assert.equal(filterMolecules(catalog, 'ανυπαρκτομοριο', '').length, 0);
+assert.equal(filterMolecules(catalog, '', 'not-a-series').length, 0);
+assert.equal(filterMolecules(catalog, 'μεθοξυμεθάνιο', 'ketone').length, 0);
+assert(catalog.every((m, i) => !i || m.carbonCount >= catalog[i - 1].carbonCount));
+assert.deepEqual(catalog.find(m => m.id === 'methane').modes, ['condensed', 'expanded']);
+assert(catalog.some(m => m.id === 'Oxopropanoic_acid'));
+console.log('126 IDs /377forms and molecule filter behavior: PASS');

@@ -1,0 +1,23 @@
+--- before/scenarios/alkanes-user-3.scenario.json
++++ scenarios/alkanes-user-3.scenario.json
+@@ -381,6 +381,10 @@
+         "hidden": [
+           "comp0",
+           "comp1"
++        ],
++        "disabled": [
++          "comp6",
++          "comp9"
+         ]
+       },
+       "styleHighlight": {
+@@ -433,7 +437,8 @@
+         "audio": false,
+         "rule": false,
+         "text": true,
+-        "nameClick": true
++        "nameClick": true,
++        "chainNavigation": true
+       },
+       "selectedMol": "methyl_2_pentane"
+     },

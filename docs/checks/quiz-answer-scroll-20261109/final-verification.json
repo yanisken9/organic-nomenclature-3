@@ -1,0 +1,47 @@
+{
+  "date": "2026-11-09T05:38:49.648541+00:00",
+  "base_commit": "168e3cec01f941a84d40bbe0dc07156e7baa35d0",
+  "completed": true,
+  "approval": "Explicit user approval of the bounded threeJS+Main54cacheURL plan",
+  "main_manifest_sha256": "528b33e714de06ba034321b5739bed563b5c50cdc1b0a188f0d2f6ebe36c6573",
+  "targeted_manifest_sha256": "aace722eadafd796822be7fb54fc5b91b8208304c5391b74fc799c1e55c79f2b",
+  "verified_hash_counts": {
+    "targets": 4,
+    "deliverables": 65,
+    "before_runtime_context": 23,
+    "protected": 13,
+    "production_targets_unchanged": 4,
+    "new_untracked_evidence": 13
+  },
+  "production_hashes": {
+    "js/namelecule-game-repair.js": "7d0a0939841f0423377d0ccca66ee9554b70f8a61a7ff020cf833aa0755b5ac7",
+    "js/namelecule-generated-repair-checkpoint.js": "d99aaa972afa2a437bedf1e4eca3c835126f237e5333e33ac1d9d10d5b684d27",
+    "js/namelecule-quiz-checkpoints.js": "7bf5441b52b9b519db79f3e56adec97979668de172b8292c0a714355add35bb7",
+    "mulermoc-nom-54.html": "34ade6e22d3e9afaf8cfeb49d7a75fabada1a915b6d1550f58b83b323d68fb27"
+  },
+  "session_start_core_count": 10,
+  "core_changed_since_session_start": false,
+  "review_sha256": "a6c8ccdfa01806ae6e426d45bbd68c4351f9e623973d167ce88bc403f0b94578",
+  "independent_reviewer": "/root/review_quiz_answer_scroll_20261109",
+  "actionable_findings": [],
+  "pending_verification_gaps": [],
+  "notes_sha256": {
+    "docs/SESSION-NOTES.md": "ea782c950eb6b272b58a4f3c37e6c9ec73d6a844832755a884d1c7f4480e6137",
+    "docs/YANNIS-CONTRIBUTIONS.md": "e408a2293016e9d3e1e48cfc50eb229c60ab8553ca95603d8faedf541d07affe"
+  },
+  "conditions": "Developer native Firefox159 isolated headless tests; independent review includes raw evidence analysis and in-memory checks, not independent browser execution.",
+  "remaining_limits": [
+    "Native wheel settling can occur; no instantaneous stationary takeover guarantee",
+    "No physical newMac/projector/conference certification",
+    "Prior whole-browser Firefox freeze unresolved"
+  ],
+  "active_json_unchanged": true,
+  "css_unchanged": true,
+  "user_gui_untouched": true,
+  "loaded_page_note": "Existing loaded lesson not silently reloaded; reload required to consume new cache queries.",
+  "commit": false,
+  "push": false,
+  "publication": false,
+  "upstream_sync": false,
+  "preexisting_dirty_tree": "Not attributed to this change; use explicit before baseline/source.diff."
+}

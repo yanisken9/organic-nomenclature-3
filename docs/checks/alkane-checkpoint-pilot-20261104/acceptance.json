@@ -1,0 +1,39 @@
+{
+  "finishedUtc": "2026-11-04T11:06:06.718208+00:00",
+  "approvedCall": "c6ffd89529a54e47849aa0b933c9435e",
+  "runtime8UnchangedSinceIndependentReview": true,
+  "unexpectedProtectedChanges": [],
+  "protectedCount": 629,
+  "expectedChangedProtectedPaths": [
+    "docs/SESSION-NOTES.md",
+    "docs/YANNIS-CONTRIBUTIONS.md",
+    "games/name-repair.html",
+    "js/mulermoc-nom-scenario-54.js",
+    "js/namelecule-game-repair.js",
+    "mulermoc-nom-54.html"
+  ],
+  "HEAD": "168e3cec01f941a84d40bbe0dc07156e7baa35d0",
+  "indexUnchanged": true,
+  "coreFilesChangedThisTask": false,
+  "browserChecks": {
+    "browser/pilot-browser.json": 45,
+    "browser/standalone-browser.json": 30,
+    "browser/authoring-layout-browser.json": 7,
+    "browser/landscape-heading-browser.json": 4
+  },
+  "reviewer": "/root/review_alkane_checkpoint",
+  "openFindings": [],
+  "localOnly": true,
+  "commitPushPublication": false,
+  "ownedBrowsersCleaned": true,
+  "legacyAssertions": 9780,
+  "legacyFunctionalFailures": 0,
+  "legacyRawExitCode": 1,
+  "legacyKnownExternalCIRLogs": 4,
+  "limitations": [
+    "Developer Firefox execution; independent Reviewer ran in-memory checks/read evidence, not browser.",
+    "Touch simulated; no Safari/physical touch/AT/conference-machine validation.",
+    "External CDN/PubChem/CIR remain; original14lesson/library and independent52/React preserved.",
+    "Same-tab sessionStorage; no cross-device progress guarantee."
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "ChemistryValidator": "/root/acid_uniform_preflight",
+  "ROLE_ID": "NAMELECULE_CHEMISTRY_VALIDATOR_V1_20261023",
+  "readOnly": true,
+  "findings": "Two existing ID-only diagnostic false positives; no incorrect chemical parent found in these two cases.",
+  "cases": [
+    {
+      "key": "ethyl_4_isopropyl_3_methyl_2_hexanal",
+      "atoms": 37,
+      "bonds": 36,
+      "stored": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "computed": [
+        1,
+        2,
+        3,
+        4,
+        11,
+        12
+      ],
+      "swaps": [
+        [
+          5,
+          11
+        ],
+        [
+          6,
+          12
+        ],
+        [
+          18,
+          33
+        ],
+        [
+          19,
+          34
+        ],
+        [
+          20,
+          35
+        ],
+        [
+          21,
+          36
+        ],
+        [
+          22,
+          37
+        ]
+      ],
+      "maxCarbonylRootedCarbonPathLength": 6,
+      "maximalPaths": 2
+    },
+    {
+      "key": "isopropyl_2_3_dimethylbutanoate",
+      "atoms": 29,
+      "bonds": 28,
+      "stored": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "computed": [
+        1,
+        2,
+        3,
+        6
+      ],
+      "swaps": [
+        [
+          4,
+          6
+        ],
+        [
+          14,
+          20
+        ],
+        [
+          15,
+          21
+        ],
+        [
+          16,
+          22
+        ]
+      ],
+      "maxCarbonylRootedCarbonPathLength": 4,
+      "maximalPaths": 2
+    }
+  ],
+  "independentChecks": [
+    "Full explicitH SDF graph automorphisms preserve allatomproperties/bondsets/orders and map stored orderedparent tocomputed",
+    "No declared stereo/isotope/charge/radical difference invalidates equivalence",
+    "Enumerated all carbonylrooted carbonpaths; exactly2equivalent longestpaths percase",
+    "core52:1993 compares rawatomIDsets, not graph-equivalence"
+  ],
+  "DeveloperEvidence": "JSC old0969/current names/chains/warnings reproduce identically; Validator inspected supplied JSON but did not rerun oldbrowser.",
+  "limitations": "No generalization to other mismatch warnings; no corefix or browser run."
+}

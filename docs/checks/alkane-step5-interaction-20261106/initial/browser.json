@@ -1,0 +1,293 @@
+{
+  "completed": true,
+  "checks": [
+    "Direct step5 URL still respects first Workshop gate",
+    "Existing gate requires three repairs 1",
+    "Existing gate requires three repairs 2",
+    "Existing gate requires three repairs 3",
+    "Parent stem remains preselected and active",
+    "Passive syllables retain their exact text",
+    "Passive boxes are noninteractive but remain readable",
+    "Locant and branch boxes remain hidden",
+    "DOM click on comp6 changes no analysis or drawing",
+    "Synthetic click on comp6 is also inert",
+    "Enter/Space do not activate comp6",
+    "Actual pointer hover/click on comp6 has no effect",
+    "DOM click on comp9 changes no analysis or drawing",
+    "Synthetic click on comp9 is also inert",
+    "Enter/Space do not activate comp9",
+    "Actual pointer hover/click on comp9 has no effect",
+    "One existing chain stepper is exposed outside hidden settings",
+    "Other naming controls stay hidden",
+    "Chain selector has accessible native controls",
+    "Both chemically verified paths and return in condensed",
+    "Name, five-atom scope and restrictions persist in condensed",
+    "Displayed first locant follows selected terminal atom in condensed",
+    "Chain endpoint buttons track selection in condensed",
+    "Both chemically verified paths and return in expanded",
+    "Name, five-atom scope and restrictions persist in expanded",
+    "Displayed first locant follows selected terminal atom in expanded",
+    "Chain endpoint buttons track selection in expanded",
+    "Both chemically verified paths and return in skeletal",
+    "Name, five-atom scope and restrictions persist in skeletal",
+    "Displayed first locant follows selected terminal atom in skeletal",
+    "Chain endpoint buttons track selection in skeletal",
+    "Chain selector fits and is unique at 390",
+    "Resize retains passive syllables at 390",
+    "Chain selector fits and is unique at 320",
+    "Resize retains passive syllables at 320",
+    "Chain selector fits and is unique at 1280",
+    "Resize retains passive syllables at 1280",
+    "Parent stem still toggles normally",
+    "Parent stem reselects normally",
+    "Step6 restores normal components and removes standalone chain selector",
+    "Step6 syllable interaction remains active",
+    "Return6→5 restores the exact per-step permissions",
+    "Step4 remains Workshop-only",
+    "Presentation export preserves all authored steps exactly",
+    "Exit removes presentation-only restrictions and standalone controls",
+    "Ordinary explorer interaction is restored after Exit",
+    "Author Update preserves both optional authored permissions",
+    "Duplicate preserves independent restriction list and chain opt-in",
+    "FileReader import retains both optional fields",
+    "Invalid/duplicate disabled IDs normalize without changing valid IDs",
+    "Legacy scenario validation adds neither optional field"
+  ],
+  "chain_states": [
+    {
+      "mode": "condensed",
+      "first": {
+        "mode": "condensed",
+        "chain": [
+          1,
+          2,
+          3,
+          4,
+          6
+        ],
+        "highAtoms": [
+          1,
+          2,
+          3,
+          4,
+          6
+        ],
+        "name": "2-μεθυλοπεντάνιο",
+        "analysis": "compCarbonsCount",
+        "label": "1/2",
+        "number0": [
+          "3026",
+          "3343"
+        ],
+        "disabled": true
+      },
+      "second": {
+        "mode": "condensed",
+        "chain": [
+          5,
+          2,
+          3,
+          4,
+          6
+        ],
+        "highAtoms": [
+          5,
+          2,
+          3,
+          4,
+          6
+        ],
+        "name": "2-μεθυλοπεντάνιο",
+        "analysis": "compCarbonsCount",
+        "label": "2/2",
+        "number0": [
+          "3776",
+          "2593"
+        ],
+        "disabled": true
+      },
+      "again": {
+        "mode": "condensed",
+        "chain": [
+          1,
+          2,
+          3,
+          4,
+          6
+        ],
+        "highAtoms": [
+          1,
+          2,
+          3,
+          4,
+          6
+        ],
+        "name": "2-μεθυλοπεντάνιο",
+        "analysis": "compCarbonsCount",
+        "label": "1/2",
+        "number0": [
+          "3026",
+          "3343"
+        ],
+        "disabled": true
+      }
+    },
+    {
+      "mode": "expanded",
+      "first": {
+        "mode": "expanded",
+        "chain": [
+          1,
+          2,
+          3,
+          4,
+          6
+        ],
+        "highAtoms": [
+          1,
+          2,
+          3,
+          4,
+          6
+        ],
+        "name": "2-μεθυλοπεντάνιο",
+        "analysis": "compCarbonsCount",
+        "label": "1/2",
+        "number0": [
+          "1670.696982560402",
+          "3434.7180657257068"
+        ],
+        "disabled": true
+      },
+      "second": {
+        "mode": "expanded",
+        "chain": [
+          5,
+          2,
+          3,
+          4,
+          6
+        ],
+        "highAtoms": [
+          5,
+          2,
+          3,
+          4,
+          6
+        ],
+        "name": "2-μεθυλοπεντάνιο",
+        "analysis": "compCarbonsCount",
+        "label": "2/2",
+        "number0": [
+          "2858.696982560402",
+          "2247.7180657257068"
+        ],
+        "disabled": true
+      },
+      "again": {
+        "mode": "expanded",
+        "chain": [
+          1,
+          2,
+          3,
+          4,
+          6
+        ],
+        "highAtoms": [
+          1,
+          2,
+          3,
+          4,
+          6
+        ],
+        "name": "2-μεθυλοπεντάνιο",
+        "analysis": "compCarbonsCount",
+        "label": "1/2",
+        "number0": [
+          "1670.696982560402",
+          "3434.7180657257068"
+        ],
+        "disabled": true
+      }
+    },
+    {
+      "mode": "skeletal",
+      "first": {
+        "mode": "skeletal",
+        "chain": [
+          1,
+          2,
+          4,
+          5,
+          6
+        ],
+        "highAtoms": [
+          1,
+          2,
+          4,
+          5,
+          6
+        ],
+        "name": "2-μεθυλοπεντάνιο",
+        "analysis": "compCarbonsCount",
+        "label": "1/2",
+        "number0": [
+          "3422",
+          "2320"
+        ],
+        "disabled": true
+      },
+      "second": {
+        "mode": "skeletal",
+        "chain": [
+          3,
+          2,
+          4,
+          5,
+          6
+        ],
+        "highAtoms": [
+          3,
+          2,
+          4,
+          5,
+          6
+        ],
+        "name": "2-μεθυλοπεντάνιο",
+        "analysis": "compCarbonsCount",
+        "label": "2/2",
+        "number0": [
+          "3248",
+          "3533"
+        ],
+        "disabled": true
+      },
+      "again": {
+        "mode": "skeletal",
+        "chain": [
+          1,
+          2,
+          4,
+          5,
+          6
+        ],
+        "highAtoms": [
+          1,
+          2,
+          4,
+          5,
+          6
+        ],
+        "name": "2-μεθυλοπεντάνιο",
+        "analysis": "compCarbonsCount",
+        "label": "1/2",
+        "number0": [
+          "3422",
+          "2320"
+        ],
+        "disabled": true
+      }
+    }
+  ],
+  "javascriptErrors": []
+}

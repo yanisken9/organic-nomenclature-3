@@ -1,0 +1,20 @@
+{
+  "completed": true,
+  "checks": [
+    "Author screen opens step7 directly with direction control",
+    "Delayed initial highlight does not override a direction choice",
+    "Actual Update preserves optional flag and authored2D-only viewerpermissions",
+    "Actual export retains opt-in and omits transient selected direction",
+    "Actual exported Blob roundtrip validates",
+    "Stop/Exit clears transient direction and control",
+    "Author reentry also starts left with no persisted direction",
+    "Actual Duplicate preserves optional flag without aliasing original step"
+  ],
+  "limitations": [
+    "Owned headless Firefox; no personal browser interaction or freeze diagnosis",
+    "Viewport emulation, not physical mobile/Safari/screen reader or conference sequence",
+    "No full 3D audit; direction support requires2D-only step",
+    "Export actual Blob captured and validated; no browser download picker; actual Desktop export verified separately"
+  ],
+  "javascriptErrors": []
+}

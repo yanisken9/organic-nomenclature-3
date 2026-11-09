@@ -1,0 +1,7 @@
+{
+  "completed": false,
+  "checks": [],
+  "failure": "Timed out: selectedMol===\"ethyl_3_isopropyl_2_dimethyl_4_5_hexanoic_acid\"",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/v54-sync-20261104/test-final-interactions.py\", line 14, in <module>\n    key=keys[0];ev('document.getElementById('+json.dumps(key)+').click();true');until('selectedMol==='+json.dumps(key))\n  File \"bidi\", line 51, in until\nAssertionError: Timed out: selectedMol===\"ethyl_3_isopropyl_2_dimethyl_4_5_hexanoic_acid\"\n",
+  "javascriptErrors": []
+}

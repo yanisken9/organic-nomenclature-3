@@ -1,0 +1,86 @@
+{
+  "stage": "Initial exact-upstream sweep before generator-property and persistent-cache investigations; not final evidence",
+  "sha256": {
+    "js/jsme-nick-nomeclature-moc2-data_52.js": "f7e0f9cd800f067fb44a3bd8654088259e06e815984337a8167c33c198ab4854",
+    "js/mulermoc-nom-core-52.js": "d2138418ff630ab77e578b80ca8ba3a10cc1b877c3ab8c0e5c2735ffcd1f24a2",
+    "js/mulermoc-nom-core-54.js": "75b69725e39ac5812566306a65150e1c26c6b5be09416ca2bb5160289dc17c46"
+  },
+  "summary": {
+    "molecules": 141,
+    "namingParentRegressionCases": 844,
+    "namingParentDifferences": 12,
+    "coldInitCases": 844,
+    "exactMaps": 842,
+    "mapCases": 844,
+    "signatureMismatches": [],
+    "untranslatedMaps": [
+      {
+        "key": "penten_3_yne_1",
+        "mode": "expanded",
+        "cm": "algorithmic",
+        "exact": false,
+        "translated": null,
+        "chain3": [
+          5,
+          4,
+          3,
+          2,
+          1
+        ],
+        "signatureMatches": true,
+        "pool": [
+          [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        ],
+        "mappedPool": [
+          null
+        ]
+      },
+      {
+        "key": "penten_3_yne_1",
+        "mode": "expanded",
+        "cm": "data",
+        "exact": false,
+        "translated": null,
+        "chain3": [
+          5,
+          4,
+          3,
+          2,
+          1
+        ],
+        "signatureMatches": true,
+        "pool": [
+          [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        ],
+        "mappedPool": [
+          null
+        ]
+      }
+    ],
+    "generatorCases": 1266,
+    "generatorNamingDifferences": [],
+    "reorderedGraphMaps": 422,
+    "reorderedGraphMapFailures": [
+      {
+        "key": "penten_3_yne_1",
+        "mode": "expanded",
+        "exact": false
+      }
+    ],
+    "invalidInputChecks": 6,
+    "chemicalOraclePermutationCases": 240,
+    "chemicalGuardCases": 15
+  }
+}

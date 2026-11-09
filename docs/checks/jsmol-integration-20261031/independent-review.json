@@ -1,0 +1,32 @@
+{
+  "reviewer": "/root/review_jsmol_main_integration_20261031",
+  "roleID": "NAMELECULE_REVIEWER_V1_20261023",
+  "freshContext": true,
+  "manifestSHA256": "48220a2bfd444e9dae08956f590ecbc5475fc797923073ae64858e9115b96544",
+  "findings": [],
+  "verdict": "No actionable P0/P1/P2/P3 findings within approved integration scope",
+  "independentChecks": [
+    "44 target and 8 dependency hashes",
+    "Actual before archive/integration.diff exact match",
+    "Read-only deterministic builder check and differing-target refusal",
+    "Independent SRI hash and relative loader/config inspection",
+    "734 protected hashes: only HTML/vendor README differ; HEAD/index preserved",
+    "Rollback archive/checkpoint equality and dry-run3/6; guards inspected",
+    "Evidence parsed:20causal/14lessons70states/422forms141molecules; lesson selections/modes against source",
+    "Numbering coordinates/colors/zoom/labels evidence inspected",
+    "Native PNG chunk CRC/decompression1200square and existing image visually inspected"
+  ],
+  "developerSuppliedExecution": [
+    "Browser causal/navigation/control/loader runs",
+    "JSC syntax checks",
+    "Isolated applied rollback/newer-edit refusal tests"
+  ],
+  "limitations": [
+    "No independent browser or restoration execution",
+    "External unpinned j2s/model completion-hidden-load behavior unchanged",
+    "Partial lesson/model coverage; no Safari/BFCache/outage/conference rehearsal",
+    "No-write rule behavioral; enforced filesystem isolation not verified"
+  ],
+  "coreChangedDuringReview": false,
+  "conclusion": "No correction identified; not universal reliability or conference certification"
+}

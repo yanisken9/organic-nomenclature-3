@@ -1,0 +1,40 @@
+{
+  "reviewer": "/root/review_author_step_preview_20261107",
+  "freshContext": true,
+  "readOnly": true,
+  "baseCommit": "168e3cec01f941a84d40bbe0dc07156e7baa35d0",
+  "initialReview": {
+    "finding": "AP-01",
+    "severity": "P2",
+    "behavior": "At320px inline preview label widened nav under absolute Exit, obscuring Next",
+    "independentChecks": "4targets30evidence50protected hashes,19JSC memorychecks+syntax,actualdiff/lifecycle/storage/code/screenshots"
+  },
+  "resolution": {
+    "finding": "AP-01",
+    "status": "closed",
+    "change": "Small preview label stacked above counter, scoped CSS and cache URLs",
+    "DeveloperChecks": "14Firefox assertions,9trusted pointer clicks,0JSerrors,4HTTP_SHA",
+    "independentTargetedVerification": "5targets15evidence49protected hashes,exact3diffs,syntax,320/390/1500screenshots;controller+contractunchanged",
+    "remainingBlockingFindings": []
+  },
+  "DeveloperInitialEvidence": {
+    "memoryChecks": 76,
+    "FirefoxAssertions": 30,
+    "sourceChecks": 53,
+    "HTTP_SHA": 3,
+    "JavaScriptErrors": 0
+  },
+  "limitations": [
+    "Native ArrowLeft endpoint delivered no keydown; actual document handler checked synthetically",
+    "Independent Reviewer did not replay live browser",
+    "No Safari/physicalmobile/screenreader/conference sequence/new3D audit",
+    "Prior Firefox/JSmol issue outside scope"
+  ],
+  "finalTargets": {
+    "js/mulermoc-nom-scenario-54.js": "4d6d500dfed220d4e8ea672a407d6201a281ed9653514ad465111023b27dc381",
+    "js/namelecule-quiz-checkpoints.js": "aec225787a916465e8d393e4e18810528a4680676b7cb66f7ca0e42f60df6b1c",
+    "mulermoc-nom-54.html": "3d3be1605608c55d36225937ec9e8c8e3b0e17252adee5223ef3c08ec00ca934",
+    "docs/didactic-scenario-plan.md": "eef71ec1cb8d50378412456a282678c7890cd5f2d71413e4b4af223a3a48371d",
+    "css/mulermoc-nom-scenario-54.css": "e4e362cbdfd6f9c964831ec6c9fc4a6e38522caf9dacf1c25b837542963b6db8"
+  }
+}

@@ -1,0 +1,624 @@
+{
+  "date": "2026-11-09",
+  "role": "Developer runtime preflight, not independent Reviewer",
+  "completed": true,
+  "twoActualRepairRounds": 2,
+  "pageJavascriptErrors": 0,
+  "actualScrollOwner": "#nlQuizDialog overflow-y:auto. The readonly measurements capture dialog/host/document scroll separately; no application auto-scroll was observed after these answer actions.",
+  "observedNeed": "Agreeing-part feedback can be partly belowview; choosing target reveals choices entirely belowview; success explanation and Continue can extend belowview. Candidate/check and incorrect feedback may already be visible after prior manual scrolling.",
+  "keyDesktop": "1280×650/DPR2: agreeing-statusbottom29.78pxcut; newchoices0visible/97.85pxpastbottom; aftercorrectCheck feedbackbottom53.05pxcut andContinue0visible/139.05pxpastbottom.",
+  "keyMobile": "390×760/DPR1: agreeing-statusbottom8.37pxcut; newchoices0visible/96.13pxpastbottom; incorrectCheckfeedbackbottom1.85pxcut; successfeedbackbottom86.80pxcut andContinue0visible/167.80pxpastbottom.",
+  "pathDependence": "The harness used actual naturalwheel input to expose each next control, then measured immediately after the actual pointer answer without further scroll. Candidate/check were fully visible in the measured replacement paths. These values describe this supportedpath, not every possible prior scroll position.",
+  "measurements": [
+    {
+      "width": 1280,
+      "stage": "initial-open",
+      "scrollBeforeClick": null,
+      "scrollAfter": 0,
+      "hostScrollTop": 0,
+      "documentScrollTop": 0,
+      "stickyHeaderBottom": 121.83332824707031,
+      "visibleBottom": 638,
+      "targets": []
+    },
+    {
+      "width": 1280,
+      "stage": "agreeing-component-feedback",
+      "scrollBeforeClick": 0,
+      "scrollAfter": 0,
+      "hostScrollTop": 0,
+      "documentScrollTop": 0,
+      "stickyHeaderBottom": 121.83332824707031,
+      "visibleBottom": 638,
+      "targets": [
+        {
+          "selector": ".part-selection-status",
+          "displayed": true,
+          "text": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "rect": {
+            "x": 625.88330078125,
+            "y": 628.38330078125,
+            "width": 558.11669921875,
+            "height": 39.40000915527344,
+            "top": 628.38330078125,
+            "right": 1184,
+            "bottom": 667.7833099365234,
+            "left": 625.88330078125
+          },
+          "visibleHeight": 9.61669921875,
+          "fullyVisible": false,
+          "clippedTop": 0,
+          "clippedBottom": 29.783309936523438
+        }
+      ]
+    },
+    {
+      "width": 1280,
+      "stage": "target-reveals-choices",
+      "scrollBeforeClick": 0,
+      "scrollAfter": 0,
+      "hostScrollTop": 0,
+      "documentScrollTop": 0,
+      "stickyHeaderBottom": 121.83332824707031,
+      "visibleBottom": 638,
+      "targets": [
+        {
+          "selector": ".choice-fieldset",
+          "displayed": true,
+          "text": "2. Διάλεξε την αντικατάστασηάνίνέν",
+          "rect": {
+            "x": 625.88330078125,
+            "y": 661.0833129882812,
+            "width": 558.11669921875,
+            "height": 74.76667785644531,
+            "top": 661.0833129882812,
+            "right": 1184,
+            "bottom": 735.8499908447266,
+            "left": 625.88330078125
+          },
+          "visibleHeight": 0,
+          "fullyVisible": false,
+          "clippedTop": 0,
+          "clippedBottom": 97.84999084472656
+        },
+        {
+          "selector": ".choices",
+          "displayed": true,
+          "text": "άνίνέν",
+          "rect": {
+            "x": 625.88330078125,
+            "y": 691.8499755859375,
+            "width": 558.11669921875,
+            "height": 44,
+            "top": 691.8499755859375,
+            "right": 1184,
+            "bottom": 735.8499755859375,
+            "left": 625.88330078125
+          },
+          "visibleHeight": 0,
+          "fullyVisible": false,
+          "clippedTop": 0,
+          "clippedBottom": 97.8499755859375
+        }
+      ]
+    },
+    {
+      "width": 1280,
+      "stage": "incorrect-replacement-candidate",
+      "scrollBeforeClick": 220,
+      "scrollAfter": 220,
+      "hostScrollTop": 0,
+      "documentScrollTop": 0,
+      "stickyHeaderBottom": 121.83332824707031,
+      "visibleBottom": 638,
+      "targets": [
+        {
+          "selector": ".candidate",
+          "displayed": true,
+          "text": "Η πρότασή σου για έλεγχοπροπένιο",
+          "rect": {
+            "x": 625.88330078125,
+            "y": 532.8499755859375,
+            "width": 558.11669921875,
+            "height": 67.96665954589844,
+            "top": 532.8499755859375,
+            "right": 1184,
+            "bottom": 600.8166351318359,
+            "left": 625.88330078125
+          },
+          "visibleHeight": 67.96665954589844,
+          "fullyVisible": true,
+          "clippedTop": 0,
+          "clippedBottom": 0
+        },
+        {
+          "selector": ".repair-actions",
+          "displayed": true,
+          "text": "Έλεγχος",
+          "rect": {
+            "x": 625.88330078125,
+            "y": 617.816650390625,
+            "width": 558.11669921875,
+            "height": 47,
+            "top": 617.816650390625,
+            "right": 1184,
+            "bottom": 664.816650390625,
+            "left": 625.88330078125
+          },
+          "visibleHeight": 20.183349609375,
+          "fullyVisible": false,
+          "clippedTop": 0,
+          "clippedBottom": 26.816650390625
+        }
+      ]
+    },
+    {
+      "width": 1280,
+      "stage": "incorrect-check-feedback",
+      "scrollBeforeClick": 371.6166687011719,
+      "scrollAfter": 371.6166687011719,
+      "hostScrollTop": 0,
+      "documentScrollTop": 0,
+      "stickyHeaderBottom": 121.83332824707031,
+      "visibleBottom": 638,
+      "targets": [
+        {
+          "selector": ".feedback",
+          "displayed": true,
+          "text": "Η επισκευή δεν συμφωνεί ακόμη με τη δομή. Δοκίμασε ξανά.",
+          "rect": {
+            "x": 625.88330078125,
+            "y": 557.3499755859375,
+            "width": 558.11669921875,
+            "height": 48.75,
+            "top": 557.3499755859375,
+            "right": 1184,
+            "bottom": 606.0999755859375,
+            "left": 625.88330078125
+          },
+          "visibleHeight": 48.75,
+          "fullyVisible": true,
+          "clippedTop": 0,
+          "clippedBottom": 0
+        }
+      ]
+    },
+    {
+      "width": 1280,
+      "stage": "correct-replacement-candidate",
+      "scrollBeforeClick": 371.6166687011719,
+      "scrollAfter": 371.6166687011719,
+      "hostScrollTop": 0,
+      "documentScrollTop": 0,
+      "stickyHeaderBottom": 121.83332824707031,
+      "visibleBottom": 638,
+      "targets": [
+        {
+          "selector": ".candidate",
+          "displayed": true,
+          "text": "Η πρότασή σου για έλεγχοπροπάνιο",
+          "rect": {
+            "x": 625.88330078125,
+            "y": 381.23333740234375,
+            "width": 558.11669921875,
+            "height": 67.96665954589844,
+            "top": 381.23333740234375,
+            "right": 1184,
+            "bottom": 449.1999969482422,
+            "left": 625.88330078125
+          },
+          "visibleHeight": 67.96665954589844,
+          "fullyVisible": true,
+          "clippedTop": 0,
+          "clippedBottom": 0
+        },
+        {
+          "selector": ".repair-actions",
+          "displayed": true,
+          "text": "Έλεγχος",
+          "rect": {
+            "x": 625.88330078125,
+            "y": 466.20001220703125,
+            "width": 558.11669921875,
+            "height": 47,
+            "top": 466.20001220703125,
+            "right": 1184,
+            "bottom": 513.2000122070312,
+            "left": 625.88330078125
+          },
+          "visibleHeight": 47,
+          "fullyVisible": true,
+          "clippedTop": 0,
+          "clippedBottom": 0
+        }
+      ]
+    },
+    {
+      "width": 1280,
+      "stage": "correct-check-success-explanation-continue",
+      "scrollBeforeClick": 371.6166687011719,
+      "scrollAfter": 371.6166687011719,
+      "hostScrollTop": 0,
+      "documentScrollTop": 0,
+      "stickyHeaderBottom": 121.83332824707031,
+      "visibleBottom": 638,
+      "targets": [
+        {
+          "selector": ".feedback",
+          "displayed": true,
+          "text": "✓ Η επισκευή πέτυχεπροπάνιοΟι δεσμοί ανάμεσα στα 3 άτομα άνθρακα είναι απλοί. Γι’ αυτό χρησιμοποιούμε το συνθετικό «άν». Σωστό όνομα: προπάνιο.",
+          "rect": {
+            "x": 625.88330078125,
+            "y": 557.3499755859375,
+            "width": 558.11669921875,
+            "height": 133.6999969482422,
+            "top": 557.3499755859375,
+            "right": 1184,
+            "bottom": 691.0499725341797,
+            "left": 625.88330078125
+          },
+          "visibleHeight": 80.6500244140625,
+          "fullyVisible": false,
+          "clippedTop": 0,
+          "clippedBottom": 53.04997253417969
+        },
+        {
+          "selector": ".success-explanation",
+          "displayed": true,
+          "text": "Οι δεσμοί ανάμεσα στα 3 άτομα άνθρακα είναι απλοί. Γι’ αυτό χρησιμοποιούμε το συνθετικό «άν». Σωστό όνομα: προπάνιο.",
+          "rect": {
+            "x": 640.88330078125,
+            "y": 635.5499877929688,
+            "width": 528.11669921875,
+            "height": 41.5,
+            "top": 635.5499877929688,
+            "right": 1169,
+            "bottom": 677.0499877929688,
+            "left": 640.88330078125
+          },
+          "visibleHeight": 2.45001220703125,
+          "fullyVisible": false,
+          "clippedTop": 0,
+          "clippedBottom": 39.04998779296875
+        },
+        {
+          "selector": ".round-next button",
+          "displayed": true,
+          "text": "Επόμενο κουίζ",
+          "rect": {
+            "x": 1062.4000244140625,
+            "y": 730.0499877929688,
+            "width": 144.60000610351562,
+            "height": 47,
+            "top": 730.0499877929688,
+            "right": 1207.0000305175781,
+            "bottom": 777.0499877929688,
+            "left": 1062.4000244140625
+          },
+          "visibleHeight": 0,
+          "fullyVisible": false,
+          "clippedTop": 0,
+          "clippedBottom": 139.04998779296875
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "stage": "initial-open",
+      "scrollBeforeClick": null,
+      "scrollAfter": 0,
+      "hostScrollTop": 0,
+      "documentScrollTop": 0,
+      "stickyHeaderBottom": 111.83332824707031,
+      "visibleBottom": 754,
+      "targets": []
+    },
+    {
+      "width": 390,
+      "stage": "agreeing-component-feedback",
+      "scrollBeforeClick": 220,
+      "scrollAfter": 220,
+      "hostScrollTop": 0,
+      "documentScrollTop": 0,
+      "stickyHeaderBottom": 111.83332824707031,
+      "visibleBottom": 754,
+      "targets": [
+        {
+          "selector": ".part-selection-status",
+          "displayed": true,
+          "text": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "rect": {
+            "x": 39,
+            "y": 722.9666748046875,
+            "width": 312,
+            "height": 39.40000915527344,
+            "top": 722.9666748046875,
+            "right": 351,
+            "bottom": 762.3666839599609,
+            "left": 39
+          },
+          "visibleHeight": 31.0333251953125,
+          "fullyVisible": false,
+          "clippedTop": 0,
+          "clippedBottom": 8.366683959960938
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "stage": "target-reveals-choices",
+      "scrollBeforeClick": 220,
+      "scrollAfter": 220,
+      "hostScrollTop": 0,
+      "documentScrollTop": 0,
+      "stickyHeaderBottom": 111.83332824707031,
+      "visibleBottom": 754,
+      "targets": [
+        {
+          "selector": ".choice-fieldset",
+          "displayed": true,
+          "text": "2. Διάλεξε την αντικατάστασηίνένάν",
+          "rect": {
+            "x": 39,
+            "y": 775.36669921875,
+            "width": 312,
+            "height": 74.76666259765625,
+            "top": 775.36669921875,
+            "right": 351,
+            "bottom": 850.1333618164062,
+            "left": 39
+          },
+          "visibleHeight": 0,
+          "fullyVisible": false,
+          "clippedTop": 0,
+          "clippedBottom": 96.13336181640625
+        },
+        {
+          "selector": ".choices",
+          "displayed": true,
+          "text": "ίνένάν",
+          "rect": {
+            "x": 39,
+            "y": 806.13330078125,
+            "width": 312,
+            "height": 44,
+            "top": 806.13330078125,
+            "right": 351,
+            "bottom": 850.13330078125,
+            "left": 39
+          },
+          "visibleHeight": 0,
+          "fullyVisible": false,
+          "clippedTop": 0,
+          "clippedBottom": 96.13330078125
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "stage": "incorrect-replacement-candidate",
+      "scrollBeforeClick": 440,
+      "scrollAfter": 440,
+      "hostScrollTop": 0,
+      "documentScrollTop": 0,
+      "stickyHeaderBottom": 111.83332824707031,
+      "visibleBottom": 754,
+      "targets": [
+        {
+          "selector": ".candidate",
+          "displayed": true,
+          "text": "Η πρότασή σου για έλεγχοπροπένιο",
+          "rect": {
+            "x": 39,
+            "y": 647.13330078125,
+            "width": 312,
+            "height": 67.9666748046875,
+            "top": 647.13330078125,
+            "right": 351,
+            "bottom": 715.0999755859375,
+            "left": 39
+          },
+          "visibleHeight": 67.9666748046875,
+          "fullyVisible": true,
+          "clippedTop": 0,
+          "clippedBottom": 0
+        },
+        {
+          "selector": ".repair-actions",
+          "displayed": true,
+          "text": "Έλεγχος",
+          "rect": {
+            "x": 39,
+            "y": 732.0999755859375,
+            "width": 312,
+            "height": 47,
+            "top": 732.0999755859375,
+            "right": 351,
+            "bottom": 779.0999755859375,
+            "left": 39
+          },
+          "visibleHeight": 21.9000244140625,
+          "fullyVisible": false,
+          "clippedTop": 0,
+          "clippedBottom": 25.0999755859375
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "stage": "incorrect-check-feedback",
+      "scrollBeforeClick": 594.0499877929688,
+      "scrollAfter": 594.0499877929688,
+      "hostScrollTop": 0,
+      "documentScrollTop": 0,
+      "stickyHeaderBottom": 111.83332824707031,
+      "visibleBottom": 754,
+      "targets": [
+        {
+          "selector": ".feedback",
+          "displayed": true,
+          "text": "Η επισκευή δεν συμφωνεί ακόμη με τη δομή. Δοκίμασε ξανά.",
+          "rect": {
+            "x": 39,
+            "y": 686.3499755859375,
+            "width": 312,
+            "height": 69.5,
+            "top": 686.3499755859375,
+            "right": 351,
+            "bottom": 755.8499755859375,
+            "left": 39
+          },
+          "visibleHeight": 67.6500244140625,
+          "fullyVisible": false,
+          "clippedTop": 0,
+          "clippedBottom": 1.8499755859375
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "stage": "correct-replacement-candidate",
+      "scrollBeforeClick": 594.0499877929688,
+      "scrollAfter": 594.0499877929688,
+      "hostScrollTop": 0,
+      "documentScrollTop": 0,
+      "stickyHeaderBottom": 111.83332824707031,
+      "visibleBottom": 754,
+      "targets": [
+        {
+          "selector": ".candidate",
+          "displayed": true,
+          "text": "Η πρότασή σου για έλεγχοπροπάνιο",
+          "rect": {
+            "x": 39,
+            "y": 493.08331298828125,
+            "width": 312,
+            "height": 67.9666748046875,
+            "top": 493.08331298828125,
+            "right": 351,
+            "bottom": 561.0499877929688,
+            "left": 39
+          },
+          "visibleHeight": 67.9666748046875,
+          "fullyVisible": true,
+          "clippedTop": 0,
+          "clippedBottom": 0
+        },
+        {
+          "selector": ".repair-actions",
+          "displayed": true,
+          "text": "Έλεγχος",
+          "rect": {
+            "x": 39,
+            "y": 578.0499877929688,
+            "width": 312,
+            "height": 47,
+            "top": 578.0499877929688,
+            "right": 351,
+            "bottom": 625.0499877929688,
+            "left": 39
+          },
+          "visibleHeight": 47,
+          "fullyVisible": true,
+          "clippedTop": 0,
+          "clippedBottom": 0
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "stage": "correct-check-success-explanation-continue",
+      "scrollBeforeClick": 594.0499877929688,
+      "scrollAfter": 594.0499877929688,
+      "hostScrollTop": 0,
+      "documentScrollTop": 0,
+      "stickyHeaderBottom": 111.83332824707031,
+      "visibleBottom": 754,
+      "targets": [
+        {
+          "selector": ".feedback",
+          "displayed": true,
+          "text": "✓ Η επισκευή πέτυχεπροπάνιοΟι δεσμοί ανάμεσα στα 3 άτομα άνθρακα είναι απλοί. Γι’ αυτό χρησιμοποιούμε το συνθετικό «άν». Σωστό όνομα: προπάνιο.",
+          "rect": {
+            "x": 39,
+            "y": 686.3499755859375,
+            "width": 312,
+            "height": 154.4499969482422,
+            "top": 686.3499755859375,
+            "right": 351,
+            "bottom": 840.7999725341797,
+            "left": 39
+          },
+          "visibleHeight": 67.6500244140625,
+          "fullyVisible": false,
+          "clippedTop": 0,
+          "clippedBottom": 86.79997253417969
+        },
+        {
+          "selector": ".success-explanation",
+          "displayed": true,
+          "text": "Οι δεσμοί ανάμεσα στα 3 άτομα άνθρακα είναι απλοί. Γι’ αυτό χρησιμοποιούμε το συνθετικό «άν». Σωστό όνομα: προπάνιο.",
+          "rect": {
+            "x": 54,
+            "y": 764.5499877929688,
+            "width": 282,
+            "height": 62.25,
+            "top": 764.5499877929688,
+            "right": 336,
+            "bottom": 826.7999877929688,
+            "left": 54
+          },
+          "visibleHeight": 0,
+          "fullyVisible": false,
+          "clippedTop": 0,
+          "clippedBottom": 72.79998779296875
+        },
+        {
+          "selector": ".round-next button",
+          "displayed": true,
+          "text": "Επόμενο κουίζ",
+          "rect": {
+            "x": 21,
+            "y": 874.7999877929688,
+            "width": 348,
+            "height": 47,
+            "top": 874.7999877929688,
+            "right": 369,
+            "bottom": 921.7999877929688,
+            "left": 21
+          },
+          "visibleHeight": 0,
+          "fullyVisible": false,
+          "clippedTop": 0,
+          "clippedBottom": 167.79998779296875
+        }
+      ]
+    }
+  ],
+  "hooks": "No round API monkeypatch, no app event listeners, no CSS/JS prototype, no added UIinstrumentation. Only readonly DOM geometry and the explicitly permitted unsolved seed4 fixture setup; answers/checks actual nativepointer input.",
+  "harnessCorrection": "Initial readonlygeometry expression used colon instead of equals in constdeclaration; it failed before any answer action. Preserved harness-initial-expression-error.json, corrected expression syntaxchecked withJSC. The completed run has exactlytwo solvedrounds total.",
+  "sourcesUnchanged": {
+    "js/namelecule-game-repair.js": true,
+    "js/namelecule-quiz-checkpoints.js": true,
+    "css/namelecule-quiz-checkpoints.css": true,
+    "scenarios/alkanes-user-3.scenario.json": true
+  },
+  "cleanup": {
+    "pid": 58698,
+    "bidi_port": 59774,
+    "profile": "/var/folders/2v/ds4vjvgj1_1000kq1fzg70q40000gn/T/namelecule-answer-scroll-before-20261109-lu24xu1h/profile",
+    "log": "/var/folders/2v/ds4vjvgj1_1000kq1fzg70q40000gn/T/namelecule-answer-scroll-before-20261109-lu24xu1h/firefox.log",
+    "owner": "/root/verify_step11_stop_20261109",
+    "purpose": "Pre-approval before geometry of answer stages only; all existingGUI/userprofiles untouched",
+    "cleanup": "Only ownedheadlessPID terminated after exact headless/profile/port check. All existing GUI/userprofiles untouched.",
+    "ownershipCommand": "/Applications/Firefox.app/Contents/MacOS/firefox -headless -no-remote -profile /var/folders/2v/ds4vjvgj1_1000kq1fzg70q40000gn/T/namelecule-answer-scroll-before-20261109-lu24xu1h/profile --remote-debugging-port 59774 about:blank",
+    "parentNoLongerRunning": true
+  },
+  "limits": [
+    "Separate headless desktop/mobileviewport emulation, not physical mobile or userGUI.",
+    "First seed4 unbranched replace round only; reorder/other branch families not part of this bounded preflight.",
+    "No implementation, rootcause sourceaudit, independentreview or broadFirefox freeze probe bythisagent.",
+    "Browserprocess log may contain internal chromeBiDi/SWGL messages; capturedpageJavascripterrors0 is not a full clean-console guarantee.",
+    "GUI55879/56371, persistentdriver21029 and personal57800 were not read, changed, activated, reloaded or closed."
+  ]
+}

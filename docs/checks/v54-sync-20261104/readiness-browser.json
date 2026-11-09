@@ -1,0 +1,58 @@
+{
+  "completed": true,
+  "controlledReadiness": true,
+  "realCDNOutage": false,
+  "checks": [
+    {
+      "cold2DNamingDespiteUnreadiness": "μεθάνιο"
+    },
+    {
+      "pendingMoleculeSelection": true,
+      "2D": true
+    },
+    {
+      "readyResendCorrectModel": true
+    },
+    {
+      "syncMissingAPIDegrades2D": {
+        "name": "αιθάνιο",
+        "svg": true,
+        "pending": "ethane"
+      }
+    },
+    {
+      "APIRecoveryCorrectModel": true
+    }
+  ],
+  "javascriptErrors": [],
+  "diagnostics": [
+    {
+      "type": "console",
+      "method": "warn",
+      "source": {
+        "realm": "15836d8d-afc0-4a30-92de-6a674f211aff",
+        "context": "64d0e3b1-7dde-44e4-9198-bf172fb9b082",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "[JSmol] library failed to load; 3D disabled for this session."
+        }
+      ],
+      "level": "warn",
+      "text": "[JSmol] library failed to load; 3D disabled for this session.",
+      "timestamp": 1793777397289,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 20,
+            "functionName": "fLoadMol3D",
+            "lineNumber": 5991,
+            "url": "http://127.0.0.1:8013/js/mulermoc-nom-molview-54.js?v=v54-sync-20261104-r1"
+          }
+        ]
+      }
+    }
+  ]
+}

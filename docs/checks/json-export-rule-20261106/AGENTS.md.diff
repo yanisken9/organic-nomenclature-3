@@ -1,0 +1,18 @@
+--- before/AGENTS.md
++++ after/AGENTS.md
+@@ -250,3 +250,15 @@
+   The approved current revision covers only the active alkane lesson; do not
+   retroactively edit other series without authorization. Keep chemical class
+   names and established terms such as «υδρογονάνθρακες» and «ανθρακική αλυσίδα».
++
++# Requested scenario JSON exports
++
++- User instruction (2026-11-06): whenever the user requests an update or export
++  of a scenario JSON, also refresh its corresponding current copy in the Desktop
++  folder `/Users/yannisskendros/Desktop/αρχεία  json` as part of that request.
++- Verify the exported bytes or SHA-256 against the active project JSON and record
++  the exact source/destination. Keep the mapping clear; preserve dated recovery
++  snapshots. The current alkane export mapping is recorded in
++  `communication/checkpoints/alkanes-json-export-20261106.json`.
++- This is an on-request file export, not background synchronization or permission
++  to publish, commit, push, overwrite historical backups or save unrelated files.

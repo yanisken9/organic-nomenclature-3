@@ -1,0 +1,241 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-05",
+  "periodStart": "after the professor report dated 2026-11-04",
+  "periodEnd": "2026-11-05",
+  "previousReportForwardedByUser": "unknown; not claimed",
+  "status": "Published runtime and full source snapshot verified; this record identifies their exact cutoffs.",
+  "mainVersion": 54,
+  "mainMolecules": 141,
+  "activeLessons": 14,
+  "activeLessonSteps": 328,
+  "previousActiveLessonSteps": 337,
+  "newMoleculeRecordsAdded": 0,
+  "workshop": {
+    "optInQuery": "source=engine",
+    "defaultFixedSetsPreserved": true,
+    "existingGraphs": 8,
+    "unbranchedGraphs": 5,
+    "branchedGraphs": 3,
+    "sets": 2,
+    "distinctMoleculesPerSetAttempt": 3,
+    "mayRepeatGraphsAcrossAttempts": true,
+    "runtimeAnalysis": "actual core derives correct name and components before a separate factory creates an eligible fault",
+    "seededVariation": [
+      "fault",
+      "question order",
+      "choice order"
+    ],
+    "newMolecularGraphGeneration": false,
+    "difficulty": {
+      "basic": "feature-level initial direction",
+      "challenge": "student identifies the feature",
+      "sharedGraphsAndEligibleRules": true,
+      "validatedAdaptiveModel": false
+    },
+    "branding": "existing 3D logo in set picker; return label Όλα τα σετ",
+    "commonCheckLabel": "Έλεγχος",
+    "measuredLearningEffectiveness": false,
+    "originalUnitDeveloperBrowserChecks": {
+      "engine": 72,
+      "targeted": 21,
+      "fixedSets": 60,
+      "authoredPilot": 45,
+      "JavaScriptErrors": 0
+    },
+    "generatorChecks": {
+      "games": 512,
+      "rounds": 3072,
+      "legalRepairs": 38644,
+      "stateRestorations": 6144
+    },
+    "independentReviewer": "/root/review_engine_workshop_20261105",
+    "independentFindingsAtUnitCompletion": [],
+    "evidence": "docs/checks/engine-workshop-20261105/REPORT.md",
+    "historicalCutoffNote": "Original unit report precedes later branding, lesson, Check-label and merge deltas; it does not identify every final runtime hash."
+  },
+  "lesson": {
+    "path": "scenarios/alkanes-two-part-workshop.scenario.json",
+    "steps": 12,
+    "theoryParts": 2,
+    "mandatoryGeneratedSets": 2,
+    "repairsPerGate": 3,
+    "gateRequiresAllCorrectSubmitted": true,
+    "difficulty": "basic",
+    "allRuleFamiliesGuaranteedPerSet": false,
+    "sameTabRefreshPersistence": "saved recipe/state reconstructed and rechecked before accepting completion",
+    "galleryExistingMolecules": 8,
+    "galleryAvailable2DForms": 23,
+    "galleryExisting3DModels": 8,
+    "missingForm": "methane skeletal",
+    "original21StepScenarioPreserved": true,
+    "previousAuthoredPilotPreserved": true,
+    "developerFirefoxChecks": {
+      "fullReplay": 128,
+      "recovery": 19,
+      "compatibility": 60,
+      "targetedR1Correction": 11
+    },
+    "compatibilityLimit": "first/final/navigation in other thirteen lessons; not fresh full replay of all316 unaffected authored steps",
+    "independentChemistry": {
+      "graphs2D": 23,
+      "SDFGraphs": 8,
+      "coreAnalyses": 35,
+      "atomMaps": 23
+    },
+    "independentReviewer": "/root/review_two_part_alkane_lesson",
+    "R1": "P2 early cold-loader release corrected and independently closed",
+    "remainingObservation": "native JSmol bufferedImage / platform is null exception during first completed-gate async restoration; no causal fix established",
+    "evidence": "docs/checks/alkanes-two-part-20261105/REPORT.md",
+    "futureUnopenedChoiceOrder": "May rerandomize on restore; active/prior solved states remain exact."
+  },
+  "upstream": {
+    "previousActuallySynchronized": "35d791ee9d6bdb8566d3adca1a1bdaba97efc5b8",
+    "lastChecked": "f49b810c93ec85d06163679aff4a8642ea1b4cd3",
+    "lastActuallySynchronized": "f49b810c93ec85d06163679aff4a8642ea1b4cd3",
+    "commitsIntegrated": 4,
+    "integrationInstalledLocally": true,
+    "initialImplementationIsolated": true,
+    "independentReviewer": "/root/review_v54_merge_f49",
+    "reviewFindings": [],
+    "reviewTargetPaths": 28,
+    "reviewTargetManifestSHA256": "f07c270113b052c1e98c706e1e9d7bbe925b3ce40f8ed9ae3425e52843037157",
+    "reviewerIndependentlyExecutedBrowser": false,
+    "sourceHEADPreservedDuringMerge": "168e3cec01f941a84d40bbe0dc07156e7baa35d0",
+    "sourceIndexPreservedDuringMerge": true,
+    "protectedFilesUnchanged": 816,
+    "evidence": "docs/checks/v54-merge-20261105/final-report.json",
+    "independentReviewEvidence": "docs/checks/v54-merge-20261105/review-result.json"
+  },
+  "core": {
+    "changedInReportPeriod": true,
+    "changedByReportWriting": false,
+    "primaryPath": "js/mulermoc-nom-core-54.js",
+    "primarySHA256": "8f3e5f76d96322faf7cf9251f4cae3eca204fe2f82bf5754fdce6ffc4cd5d5a9",
+    "primaryUse": "exploration and drawing",
+    "changes": [
+      "bounded shared MOL counts/header detection with standard unversioned compatibility",
+      "terminal group/ether layout",
+      "retained graph/metadata/charge/isotope/SUP and sp safeguards"
+    ],
+    "quizEnginePath": "js/chemistry-engines/3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306.js",
+    "quizEngineSHA256": "3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306",
+    "quizEngineIsExactPreviousBytes": true,
+    "quizEngineSHA256VerifiedBeforeExecutionOnEachLoad": true,
+    "verifiedBytesBoundToWorkerExecution": true,
+    "fallback": "only immutable HTTP404 permits verified current-engine fallback; corruption fails closed",
+    "existingRecipesAndActiveSolvedProgressCompatible": true,
+    "core52Changed": false,
+    "core52SHA256": "d2138418ff630ab77e578b80ca8ba3a10cc1b877c3ab8c0e5c2735ffcd1f24a2",
+    "storedMOLSDFDataChangedByMerge": false,
+    "v52AndReactPreserved": true
+  },
+  "latestMergeVerification": {
+    "developerCompletedIsolatedPhases": 10,
+    "developerAssertionsInCompletedPhases": 336,
+    "assertionsInIncompletePrefixPhase": 69,
+    "incompletePhaseReason": "initial candidate server lacked repository-prefix routing; targeted correction passed separately and is included in336",
+    "finalPrimaryBrowserChecks": 14,
+    "finalPrimaryJavaScriptErrors": 0,
+    "finalPrimaryHTTPChecks": 17,
+    "independentChemistryAssertions": 522,
+    "browserEvidenceOrigin": "Developer; Reviewer inspected evidence and independently checked source/in-memory behavior, without independent browser execution",
+    "numbersAreSeparateRunsNotReliabilityPercentage": true
+  },
+  "remainingUncertainties": [
+    "two Submit timeouts without established cause; later passes do not resolve cause",
+    "reported native Firefox freeze without established cause",
+    "JSmol restoration symptom recorded beforemerge and againpublicly; causalidentity, oldpublicpresence and permanentcure unestablished",
+    "external JSmol/CDN/font/PubChem/CIR availability",
+    "unsupported literal[H] source and inherited bent nitrile source geometry retained",
+    "Safari, physical mobile devices, assistive technology, offline package and intended conference sequence/machine unverified",
+    "PublicMain also reproduced JSmol platformnull; same symptom existed beforemerge, causalidentity andoldpublicpresence unproved; entire3Dgallerynotretestedafterexception."
+  ],
+  "save": {
+    "status": "Final fullsnapshot verified locally, remotely and in two external copies; later report/notes bookkeeping separate.",
+    "plannedCheckpointBranch": "checkpoint/namelecule-20261105-140541",
+    "controlState": "communication/checkpoints/save-publish-20261105-state.json",
+    "fullCurrentSaveVerified": true,
+    "externalCopiesVerified": 2,
+    "ZIPBundleVerified": true,
+    "previousKnownRecovery": "verified November4 recovery recorded in previous report",
+    "mergeRollbackScope": "ten replaced runtime files only; not full/offline package",
+    "snapshotCommit": "c7f1cc34b416c4fe4ea1773d78465afbf1c4d6ba",
+    "sourceFiles": 4214,
+    "snapshotCutoff": "Full source before later final report/publication/bookkeeping updates; those have separate receipts.",
+    "postSnapshotBookkeepingSeparate": true
+  },
+  "publication": {
+    "status": "Runtime published and verified with disclosedopenP2/noncleanconsole.",
+    "currentPublicReleaseVerified": true,
+    "newCommitClaimedByThisReport": true,
+    "releaseURLsAreIntendedDestinations": true,
+    "cacheQueryProvesDeployment": false,
+    "runtimePublicCommit": "d8985ad381a4f15f5fd67c4118ab8ff987d38f62",
+    "releaseURLsVerified": true,
+    "publicCleanConsole": false
+  },
+  "sources": [
+    "docs/SESSION-NOTES.md",
+    "docs/checks/engine-workshop-20261105/REPORT.md",
+    "docs/checks/alkanes-two-part-20261105/REPORT.md",
+    "docs/checks/workshop-branding-20261105/review-result.json",
+    "docs/checks/quiz-check-label-20261105/review-result.json",
+    "docs/checks/v54-merge-20261105/final-report.json",
+    "docs/checks/v54-merge-20261105/review-result.json",
+    "communication/checkpoints/save-publish-20261105-state.json",
+    "https://github.com/yanisken9/organic-nomenclature-3/blob/c7f1cc34b416c4fe4ea1773d78465afbf1c4d6ba/docs/checks/publication-20261105/public-http.json",
+    "https://github.com/yanisken9/organic-nomenclature-3/blob/c7f1cc34b416c4fe4ea1773d78465afbf1c4d6ba/docs/checks/publication-20261105/public-error-classification.json",
+    "https://github.com/yanisken9/organic-nomenclature-3/blob/c7f1cc34b416c4fe4ea1773d78465afbf1c4d6ba/docs/checks/publication-20261105/public-independent-assessment.json"
+  ],
+  "initialVerifiedSnapshot": {
+    "commit": "1a402b1807b2e4fe54301844e9311ce5ccba1127",
+    "sourceFileCount": 4194,
+    "archive": "communication/checkpoints/Namelecule-20261105-140541-initial.zip",
+    "archiveSHA256": "f4515678a7f88a52f986143c24eb265a232c5e716e13bb3d1b0c4151646ee3e5",
+    "bundle": "communication/checkpoints/Namelecule-20261105-140541-initial.bundle",
+    "bundleSHA256": "4352132cf0a1946a1e63020458235ac36449fff3d9d32298204e7683a0f7af49",
+    "recoveryArchive": "communication/checkpoints/Namelecule-20261105-140541-initial-recovery.zip",
+    "recoveryArchiveSHA256": "9f11c083846d174cc7060bfd8bedfd5a62277f82179c3242bb59f44c026982b8",
+    "externalCopiesVerified": 2,
+    "remoteVerified": "1a402b1807b2e4fe54301844e9311ce5ccba1127"
+  },
+  "checkpointBranch": "checkpoint/namelecule-20261105-140541",
+  "publicReleaseStatus": "Runtimepublic verified with bounded interactions and openP2JSmol; console not clean.",
+  "finalVerifiedSnapshot": {
+    "commit": "c7f1cc34b416c4fe4ea1773d78465afbf1c4d6ba",
+    "sourceFileCount": 4214,
+    "archive": "communication/checkpoints/Namelecule-20261105-140541-final.zip",
+    "archiveSHA256": "4101f8a7fd6645a62536f4a4389f16a647d828270dedd2efe93f0f119f5f237a",
+    "bundle": "communication/checkpoints/Namelecule-20261105-140541-final.bundle",
+    "bundleSHA256": "f3088b3ffe669b74fdb0456056d079a29ef42f0b7c6c4a5c36455f1fd3ea4dae",
+    "recoveryArchive": "communication/checkpoints/Namelecule-20261105-140541-final-recovery.zip",
+    "recoveryArchiveSHA256": "a3e11edb4b0ccee89ebaa381f49823eb14b7fd7c6c2e4df71a02f419bb97850b",
+    "externalCopiesVerified": 2,
+    "remoteVerified": "c7f1cc34b416c4fe4ea1773d78465afbf1c4d6ba",
+    "cutoff": "Full source before later final report/publication/bookkeeping updates; those have separate receipts."
+  },
+  "publicVerification": {
+    "runtimeCommit": "d8985ad381a4f15f5fd67c4118ab8ff987d38f62",
+    "tag": "namelecule-20261105-runtime",
+    "exactHTTP": 222,
+    "MainChecks": 18,
+    "ReactChecks": 8,
+    "MainDiagnostics": {
+      "cookies": 16,
+      "tracker": 4,
+      "JSmolPlatformNull": 1
+    },
+    "ReactDiagnostics": {
+      "tracker": 2
+    },
+    "rawStrictExitCodes": [
+      1,
+      1
+    ],
+    "publicCleanConsole": false,
+    "openP2": "PUB-JS1",
+    "independentAssessment": "https://github.com/yanisken9/organic-nomenclature-3/blob/c7f1cc34b416c4fe4ea1773d78465afbf1c4d6ba/docs/checks/publication-20261105/public-independent-assessment.json",
+    "notFullGalleryPostExceptionVerification": true
+  }
+}

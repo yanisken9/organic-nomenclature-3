@@ -1,0 +1,22 @@
+{
+  "role": "Developer harness notes",
+  "observations": [
+    {
+      "stage": "initial-launch",
+      "status": "sandbox denial",
+      "detail": "Unprivileged bind127.0.0.1:0 returned PermissionError[Errno1] before any process launch; owned launch rerun with approved escalation."
+    },
+    {
+      "stage": "initial-compile",
+      "status": "harness environment issue",
+      "detail": "py_compile attempted OS-configured cache outside owned path and failed. Script was then compiled by Python runtime on actual run; no production effect, no cache claim."
+    },
+    {
+      "stage": "initial-connect",
+      "status": "sandbox denial",
+      "detail": "Unprivileged BiDi localhost connect returned PermissionError[Errno1] before session. Rerun via approved escalation."
+    }
+  ],
+  "no_production_edits": true,
+  "no_personal_browser_interaction": true
+}

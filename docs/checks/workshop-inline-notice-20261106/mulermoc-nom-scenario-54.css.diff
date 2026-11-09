@@ -1,0 +1,33 @@
+--- before/css/mulermoc-nom-scenario-54.css
++++ css/mulermoc-nom-scenario-54.css
+@@ -833,6 +833,30 @@
+    opacity: 1
+ }
+ 
++.scCheckpointNotice {
++   display: none;
++}
++
++#pageContainer.presenting.scContentOnly .scCheckpointNotice:not([hidden]) {
++   display: block;
++   box-sizing: border-box;
++   max-width: min(680px, 100%);
++   margin: auto;
++   align-self: center;
++   padding: 18px 24px;
++   border: 2px solid #a9ccc2;
++   border-radius: 14px;
++   background: #eef6f1;
++   color: #254c50;
++   font-size: clamp(18px, 2vw, 22px);
++   font-weight: 600;
++   text-align: center;
++   overflow-wrap: anywhere;
++   scroll-margin-top: 64px;
++   scroll-margin-bottom: 16px;
++   pointer-events: none;
++}
++
+ /* Destructive-action confirm dialog (see fScenarioConfirm). Dim backdrop over
+    the whole viewport (above the toast at 600); safe button focused first. */
+ #scenarioConfirm {

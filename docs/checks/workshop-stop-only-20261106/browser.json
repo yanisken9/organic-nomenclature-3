@@ -1,0 +1,343 @@
+{
+  "completed": true,
+  "checks": [
+    "Step4 imports as one of twelve steps",
+    "Step4 hides molecule, naming, controls and entire empty columns",
+    "Logo, instructions and Workshop entry remain visible",
+    "Authored entry label retained",
+    "Mandatory gate still locked",
+    "No stale width reserved for hidden molecular columns",
+    "Hidden columns stay hidden after resize 1280",
+    "Workshop button fits viewport 1280",
+    "Hidden columns stay hidden after resize 390",
+    "Workshop button fits viewport 390",
+    "Step3 restores molecular columns and 2D",
+    "Return 3→4 hides columns again",
+    "Naming rebuild does not reveal hidden content",
+    "Explicit rule keeps analysis shell available when naming is hidden",
+    "Effective component rule keeps analysis shell available",
+    "Effective alkoxy rule keeps analysis shell available",
+    "Restoring authored flags hides all molecular UI",
+    "Exit restores both outer columns for authoring",
+    "Exit restores viewer settings and naming access",
+    "Reenter step4 returns to Workshop-only presentation",
+    "Quiz opens in place and preserves gate",
+    "Returning unsolved quiz restores the clean Workshop stop",
+    "Three required repairs gate: round 1",
+    "Three required repairs gate: round 2",
+    "Three required repairs gate: round 3",
+    "Completed quiz proceeds to step5 with molecular panels restored",
+    "Completed Workshop stop remains clean and unlocked",
+    "Export preserves every authored step including visibility flags",
+    "FileReader reimport retains Workshop-only flags and twelve steps",
+    "Reload revalidates completed repairs and restores step5 destination",
+    "Revalidated completion retains clean unlocked Workshop stop",
+    "Unchanged step11 still shows its molecule and naming",
+    "Canonical lesson retains its existing molecular presentation"
+  ],
+  "javascriptErrors": [
+    {
+      "type": "javascript",
+      "level": "error",
+      "source": {
+        "realm": "55a7ae19-3685-4488-985c-66a29cbb329f",
+        "context": "b0c9d4d5-d0bd-4260-95f0-581368465ec8",
+        "userContext": "default"
+      },
+      "text": "TypeError: can't access property \"bufferedImage\", this.platform is null",
+      "timestamp": 1793946205922,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 290,
+            "functionName": "",
+            "lineNumber": 869,
+            "url": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corejmol.z.js"
+          },
+          {
+            "columnNumber": 18,
+            "functionName": "",
+            "lineNumber": 2519,
+            "url": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corejmol.z.js"
+          },
+          {
+            "columnNumber": 349,
+            "functionName": "",
+            "lineNumber": 2522,
+            "url": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corejmol.z.js"
+          },
+          {
+            "columnNumber": 396,
+            "functionName": "",
+            "lineNumber": 2631,
+            "url": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corejmol.z.js"
+          },
+          {
+            "columnNumber": 227,
+            "functionName": "",
+            "lineNumber": 2633,
+            "url": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corejmol.z.js"
+          },
+          {
+            "columnNumber": 42,
+            "functionName": "",
+            "lineNumber": 1836,
+            "url": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corejmol.z.js"
+          },
+          {
+            "columnNumber": 86,
+            "functionName": "a.repaint/<",
+            "lineNumber": 182,
+            "url": "http://127.0.0.1:8013/js/vendor/jsmol/namelecule-20261031-r1/JSmol.min.js"
+          },
+          {
+            "columnNumber": 33,
+            "functionName": "run",
+            "lineNumber": 87,
+            "url": "http://127.0.0.1:8013/js/vendor/jsmol/namelecule-20261031-r1/JSmol.min.js"
+          },
+          {
+            "columnNumber": 17,
+            "functionName": "paint",
+            "lineNumber": 90,
+            "url": "http://127.0.0.1:8013/js/vendor/jsmol/namelecule-20261031-r1/JSmol.min.js"
+          },
+          {
+            "columnNumber": 23,
+            "functionName": "a.repaint",
+            "lineNumber": 182,
+            "url": "http://127.0.0.1:8013/js/vendor/jsmol/namelecule-20261031-r1/JSmol.min.js"
+          },
+          {
+            "columnNumber": 83,
+            "functionName": "",
+            "lineNumber": 792,
+            "url": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corejmol.z.js"
+          },
+          {
+            "columnNumber": 21,
+            "functionName": "",
+            "lineNumber": 1032,
+            "url": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corejmol.z.js"
+          },
+          {
+            "columnNumber": 244,
+            "functionName": "",
+            "lineNumber": 1030,
+            "url": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corejmol.z.js"
+          },
+          {
+            "columnNumber": 8,
+            "functionName": "",
+            "lineNumber": 2629,
+            "url": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corejmol.z.js"
+          },
+          {
+            "columnNumber": 375,
+            "functionName": "",
+            "lineNumber": 140,
+            "url": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corescript.z.js"
+          },
+          {
+            "columnNumber": 281,
+            "functionName": "",
+            "lineNumber": 139,
+            "url": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corescript.z.js"
+          },
+          {
+            "columnNumber": 75,
+            "functionName": "",
+            "lineNumber": 203,
+            "url": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corescript.z.js"
+          },
+          {
+            "columnNumber": 255,
+            "functionName": "",
+            "lineNumber": 136,
+            "url": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corescript.z.js"
+          },
+          {
+            "columnNumber": 160,
+            "functionName": "",
+            "lineNumber": 135,
+            "url": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corescript.z.js"
+          },
+          {
+            "columnNumber": 132,
+            "functionName": "",
+            "lineNumber": 514,
+            "url": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corescript.z.js"
+          },
+          {
+            "columnNumber": 369,
+            "functionName": "",
+            "lineNumber": 525,
+            "url": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corescript.z.js"
+          },
+          {
+            "columnNumber": 223,
+            "functionName": "",
+            "lineNumber": 636,
+            "url": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corescript.z.js"
+          },
+          {
+            "columnNumber": 275,
+            "functionName": "",
+            "lineNumber": 635,
+            "url": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corescript.z.js"
+          },
+          {
+            "columnNumber": 162,
+            "functionName": "",
+            "lineNumber": 1218,
+            "url": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corejmol.z.js"
+          },
+          {
+            "columnNumber": 148,
+            "functionName": "",
+            "lineNumber": 1218,
+            "url": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corejmol.z.js"
+          },
+          {
+            "columnNumber": 298,
+            "functionName": "",
+            "lineNumber": 635,
+            "url": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corescript.z.js"
+          },
+          {
+            "columnNumber": 216,
+            "functionName": "",
+            "lineNumber": 1217,
+            "url": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corejmol.z.js"
+          },
+          {
+            "columnNumber": 136,
+            "functionName": "",
+            "lineNumber": 1217,
+            "url": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corejmol.z.js"
+          },
+          {
+            "columnNumber": 65,
+            "functionName": "",
+            "lineNumber": 509,
+            "url": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corescript.z.js"
+          },
+          {
+            "columnNumber": 135,
+            "functionName": "",
+            "lineNumber": 507,
+            "url": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corescript.z.js"
+          },
+          {
+            "columnNumber": 419,
+            "functionName": "",
+            "lineNumber": 505,
+            "url": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corescript.z.js"
+          },
+          {
+            "columnNumber": 147,
+            "functionName": "",
+            "lineNumber": 518,
+            "url": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corescript.z.js"
+          },
+          {
+            "columnNumber": 68,
+            "functionName": "",
+            "lineNumber": 517,
+            "url": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corescript.z.js"
+          },
+          {
+            "columnNumber": 107,
+            "functionName": "",
+            "lineNumber": 2635,
+            "url": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corejmol.z.js"
+          },
+          {
+            "columnNumber": 343,
+            "functionName": "",
+            "lineNumber": 2634,
+            "url": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corejmol.z.js"
+          },
+          {
+            "columnNumber": 27,
+            "functionName": "",
+            "lineNumber": 1845,
+            "url": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corejmol.z.js"
+          },
+          {
+            "columnNumber": 423,
+            "functionName": "",
+            "lineNumber": 1846,
+            "url": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corejmol.z.js"
+          },
+          {
+            "columnNumber": 234,
+            "functionName": "",
+            "lineNumber": 1846,
+            "url": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corejmol.z.js"
+          },
+          {
+            "columnNumber": 210,
+            "functionName": "d._script",
+            "lineNumber": 204,
+            "url": "http://127.0.0.1:8013/js/vendor/jsmol/namelecule-20261031-r1/JSmol.min.js"
+          },
+          {
+            "columnNumber": 69,
+            "functionName": "a.script",
+            "lineNumber": 236,
+            "url": "http://127.0.0.1:8013/js/vendor/jsmol/namelecule-20261031-r1/JSmol.min.js"
+          },
+          {
+            "columnNumber": 80,
+            "functionName": "fMulerSafeJSmol/Jmol.script",
+            "lineNumber": 6145,
+            "url": "http://127.0.0.1:8013/js/mulermoc-nom-molview-54.js?v=merge54-20261105-r1"
+          },
+          {
+            "columnNumber": 20,
+            "functionName": "fJSmolScript",
+            "lineNumber": 6107,
+            "url": "http://127.0.0.1:8013/js/mulermoc-nom-molview-54.js?v=merge54-20261105-r1"
+          },
+          {
+            "columnNumber": 14,
+            "functionName": "fClearHighlights",
+            "lineNumber": 7443,
+            "url": "http://127.0.0.1:8013/js/mulermoc-nom-molview-54.js?v=merge54-20261105-r1"
+          },
+          {
+            "columnNumber": 2,
+            "functionName": "fSelectMol",
+            "lineNumber": 3171,
+            "url": "http://127.0.0.1:8013/js/mulermoc-nom-molview-54.js?v=merge54-20261105-r1"
+          },
+          {
+            "columnNumber": 2,
+            "functionName": "fScenarioApply",
+            "lineNumber": 2219,
+            "url": "http://127.0.0.1:8013/js/mulermoc-nom-scenario-54.js?v=workshop-stop-only-20261106-r1"
+          },
+          {
+            "columnNumber": 11,
+            "functionName": "fScenarioGo",
+            "lineNumber": 6294,
+            "url": "http://127.0.0.1:8013/js/mulermoc-nom-scenario-54.js?v=workshop-stop-only-20261106-r1"
+          },
+          {
+            "columnNumber": 83,
+            "functionName": "fScenarioGo/<",
+            "lineNumber": 6268,
+            "url": "http://127.0.0.1:8013/js/mulermoc-nom-scenario-54.js?v=workshop-stop-only-20261106-r1"
+          },
+          {
+            "columnNumber": 4,
+            "functionName": "fScenarioPrepareCheckpointTarget/<",
+            "lineNumber": 173,
+            "url": "http://127.0.0.1:8013/js/mulermoc-nom-scenario-54.js?v=workshop-stop-only-20261106-r1"
+          }
+        ]
+      }
+    }
+  ]
+}

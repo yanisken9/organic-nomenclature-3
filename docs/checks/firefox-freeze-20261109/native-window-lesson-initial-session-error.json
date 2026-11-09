@@ -1,0 +1,12 @@
+{
+  "completed": false,
+  "runs": [],
+  "limitations": [
+    "Own fresh GUI Firefox profile; not personal493",
+    "Author screen preview to reach11, not normal learner quiz progression",
+    "Native fullscreen command bypasses green-button hover popup",
+    "Passing fresh-profile replay does not resolve or rule out original whole-browser freeze"
+  ],
+  "exception": "Traceback (most recent call last):\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/firefox-freeze-20261109/check-native-lesson.py\", line 11, in <module>\n    exec(compile(helper,'owned-gui-bidi','exec'));s.settimeout(20)\n  File \"owned-gui-bidi\", line 37, in <module>\n    result['completed']=True;result['javascript_errors']=js_errors;save();print('COMPLETE native lesson matrix',flush=True)\n  File \"owned-gui-bidi\", line 35, in call\n    run['loaded_j2s_resources']=json.loads(ev('JSON.stringify(performance.getEntriesByType(\"resource\").filter(e=>/j2s|jmol|jsmol/i.test(e.name)).map(e=>({url:e.name,duration:e.duration,transferSize:e.transferSize})))'))\nRuntimeError: {'type': 'error', 'id': 1, 'error': 'session not created', 'message': 'Maximum number of active sessions', 'stacktrace': 'RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:14:8\\nWebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:169:5\\nSessionNotCreatedError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:813:5\\ncreateSession@chrome://remote/content/webdriver-bidi/WebDriverBiDi.sys.mjs:132:13\\nonPacket@chrome://remote/content/webdriver-bidi/WebDriverBiDiConnection.sys.mjs:208:55\\nonMessage@chrome://remote/content/server/WebSocketTransport.sys.mjs:127:18\\nhandleEvent@chrome://remote/content/server/WebSocketTransport.sys.mjs:109:14\\n'}\n",
+  "javascript_errors": []
+}

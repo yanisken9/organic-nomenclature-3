@@ -1,0 +1,50 @@
+--- before/js/mulermoc-nom-scenario-54.js
++++ js/mulermoc-nom-scenario-54.js
+@@ -2376,6 +2376,8 @@
+     var pc = document.getElementById("pageContainer");
+     if (pc) {
+       pc.classList.toggle("presenting", !!MuLERMoCScenario.present);
++      pc.classList.toggle("scContentOnly",
++        !!MuLERMoCScenario.present && !fScenarioVisibleStepTextSpan());
+       var reserve = MuLERMoCScenario.present && fScenarioPresent().reserveTitleSpace === true;
+       pc.classList.toggle("scReserveTitleSpace", !!reserve);
+       var bar = document.getElementById("scenarioPlayBar");
+@@ -2406,6 +2408,7 @@
+   var ids = [
+     "save2DBtn", "save3DBtn",
+     "jsmeNomeclatureDIV",
++    "viewerCol", "analysisCol",
+     "menuCol", "viewerVisBtns", "viewerSettingsBtnDiv", "viewerSettingsPanel",
+     "nameAnalysisContainer", "nameSettingsPanel",
+   ];
+@@ -4250,6 +4253,7 @@
+ function fScenarioApplyNamingChrome(show) {
+   var present = MuLERMoCScenario.present;
+   if (!present) {
++    fScenarioHide("analysisCol", false);
+     // Full interactivity outside presentation: a locked present step must
+     // never leak its lock (or its hidden explain line) into authoring —
+     // the container node survives box rebuilds, so clear both actively.
+@@ -4278,6 +4282,12 @@
+     var _st = _pst && _pst.steps ? _pst.steps[_pst.index] : null;
+     if (!_st) return;
+     show = show || _st.show || {};
++    // A hidden name panel leaves no column unless this step has a rule.
++    // Match the effective rule predicate used by step entry, including
++    // component/alkoxy references that do not require show.rule.
++    var ruleOn = !!show.rule || fScenarioShowComponentRule(_st.nameAnalysisMode) ||
++      fScenarioShowAlkoxyRule();
++    fScenarioHide("analysisCol", show.naming === false && !ruleOn);
+     // naming panel + settings + audio
+     fScenarioHide("nameAnalysisContainer", present && show.naming === false);
+     // locked name interaction: boxes ignore mouse clicks in presentation
+@@ -4343,6 +4353,9 @@
+   // viewers: hidden viewer is not rendered (mirrors fToggleViewer2D/3D scope)
+   var show2D = !show.viewers || show.viewers["2D"] !== false;
+   var show3D = !show.viewers || show.viewers["3D"] !== false;
++  // Hide the whole presentation shell when neither viewer is requested;
++  // the authoring settings remain available outside presentation.
++  fScenarioHide("viewerCol", present && !show2D && !show3D);
+   ["jsmeNomeclatureDIV", "jsmeNomeclatureSVG"].forEach(function (id) {
+     fScenarioHide(id, !show2D);
+   });

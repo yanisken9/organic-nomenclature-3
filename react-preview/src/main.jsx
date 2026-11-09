@@ -3,15 +3,22 @@ import { createRoot } from 'react-dom/client';
 import content from './content.json';
 import LibraryPage from './LibraryPage.jsx';
 import MoleculePreview from './MoleculePreview.jsx';
+import LessonPreview, { lessonRoute, resolveLessonRoute } from './LessonPreview.jsx';
 import './preview.css';
 
 // dist/ is served under the existing repository: both hosting subpaths and
 // the current Python HTTP server resolve the same unchanged legacy files.
 const projectRoot = new URL('../../', window.location.href);
+const lessons = content.library.categories.flatMap(category => category.lessons.map(lesson => ({
+  ...lesson, heading: `${category.title} — ${lesson.title}`,
+})));
 
 function resolveUrl(value, page) {
   if (/^theory-library\.html(?:[?#]|$)/.test(value)) return '#/library';
   if (/^welcome-proposal\.html(?:[?#]|$)/.test(value)) return '#/';
+  if (/^\.\.\/mulermoc-nom-52\.html$/.test(value)) return '#/viewer';
+  const lesson = lessons.find(entry => entry.href === value);
+  if (lesson) return lessonRoute(lesson.id, 1);
   return new URL(value, new URL(page.source, projectRoot)).href;
 }
 
@@ -93,7 +100,9 @@ function App() {
   const [filters, setFilters] = useState({ query: '', categoryId: '' });
   const library = route === '#/library';
   const viewer = route === '#/viewer';
-  const page = library || viewer ? content.library : content.welcome;
+  const lesson = /^#\/lesson(?:\/|$)/.test(route);
+  const selection = resolveLessonRoute(route, lessons);
+  const page = library || viewer || lesson ? content.library : content.welcome;
   useEffect(() => {
     const onHashChange = () => {
       setRoute(window.location.hash);
@@ -104,29 +113,31 @@ function App() {
     return () => window.removeEventListener('hashchange', onHashChange);
   }, []);
   useEffect(() => {
-    document.title = (viewer ? 'Αιθανόλη' : page.title) + ' — Namelecule React';
-  }, [page, viewer]);
+    document.title = (lesson ? selection?.lesson.heading || 'Μάθημα θεωρίας' : viewer ? 'Μόρια — 2D και 3D προβολή' : page.title) + ' — Namelecule React';
+  }, [page, viewer, lesson, selection?.lesson]);
   function openPanel(name, trigger) { setPanel({ name, trigger }); }
   function closePanel() {
     panel?.trigger?.focus();
     setPanel(null);
   }
   // Welcome contains its footer within main; the library puts it after main.
-  const hasFooterInMain = !library && !viewer && page.main.children.some(node => typeof node !== 'string' && node.tag === 'footer');
+  const hasFooterInMain = !library && !viewer && !lesson && page.main.children.some(node => typeof node !== 'string' && node.tag === 'footer');
   return <>
     <style>{page.styles}</style>
     <aside className="react-preview-banner" aria-label="Δοκιμαστική έκδοση">
       <span>Namelecule React — Δοκιμαστική έκδοση</span>
-      <a href="#/viewer">2D δοκιμή · Αιθανόλη</a>
+      <a href="#/viewer">Προβολή μορίων</a>
       <a href={new URL('design/welcome-proposal.html', projectRoot).href}>Κύρια έκδοση</a>
     </aside>
     <SiteHeader page={page} openPanel={openPanel} />
-    {viewer ? <MoleculePreview mainUrl={new URL('design/welcome-proposal.html', projectRoot).href} />
+    {lesson ? <LessonPreview key={selection?.lesson.id || 'invalid'} step={selection?.step || 0} lesson={selection?.lesson}
+      mainUrl={selection ? new URL(selection.lesson.href, new URL(content.library.source, projectRoot)).href : undefined} />
+      : viewer ? <MoleculePreview mainUrl={new URL('design/welcome-proposal.html', projectRoot).href} />
       : library ? <LibraryPage catalog={content.library} filters={filters} setFilters={setFilters}
       resolveHref={href => resolveUrl(href, content.library)} />
       : renderNode(page.main, 'main', page, openPanel)}
     {!hasFooterInMain && <SiteFooter page={page} openPanel={openPanel} />}
-    {!library && !viewer && <div className="preview-note">Η βιβλιοθήκη θεωρίας είναι διαθέσιμη. Η σύνδεση και τα παιχνίδια είναι υπό σχεδιασμό.</div>}
+    {!library && !viewer && !lesson && <div className="preview-note">Η βιβλιοθήκη θεωρίας είναι διαθέσιμη. Η σύνδεση και τα παιχνίδια είναι υπό σχεδιασμό.</div>}
     <PanelDialog panel={panel} onClose={closePanel} />
   </>;
 }

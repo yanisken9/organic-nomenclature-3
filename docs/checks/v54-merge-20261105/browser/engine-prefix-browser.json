@@ -1,0 +1,22 @@
+{
+  "completed": true,
+  "checks": [
+    {
+      "label": "Actual client loads under Pages-shaped subdirectory",
+      "detail": null
+    },
+    {
+      "label": "Eight actual Workers succeed under subdirectory",
+      "detail": null
+    },
+    {
+      "label": "Actual invalid input/abort/integrity rejection under prefix",
+      "detail": [
+        "INVALID_MOLECULE",
+        "AbortError",
+        "ENGINE_VERSION_MISMATCH"
+      ]
+    }
+  ],
+  "javascriptErrors": []
+}

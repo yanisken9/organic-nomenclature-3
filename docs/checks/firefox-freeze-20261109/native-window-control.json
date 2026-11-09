@@ -1,0 +1,283 @@
+{
+  "completed": true,
+  "checks": [
+    {
+      "cycle": 1,
+      "state": "fullscreen",
+      "window_state": [
+        {
+          "active": true,
+          "clientWindow": "9ae5a29b-7c92-43b0-896e-0f18ce9e12fe",
+          "height": 900,
+          "state": "fullscreen",
+          "width": 1440,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "page_roundtrip": true
+    },
+    {
+      "cycle": 1,
+      "state": "normal",
+      "window_state": [
+        {
+          "active": true,
+          "clientWindow": "9ae5a29b-7c92-43b0-896e-0f18ce9e12fe",
+          "height": 735,
+          "state": "normal",
+          "width": 1280,
+          "x": 4,
+          "y": 25
+        }
+      ],
+      "page_roundtrip": true
+    },
+    {
+      "cycle": 2,
+      "state": "fullscreen",
+      "window_state": [
+        {
+          "active": true,
+          "clientWindow": "9ae5a29b-7c92-43b0-896e-0f18ce9e12fe",
+          "height": 900,
+          "state": "fullscreen",
+          "width": 1440,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "page_roundtrip": true
+    },
+    {
+      "cycle": 2,
+      "state": "normal",
+      "window_state": [
+        {
+          "active": true,
+          "clientWindow": "9ae5a29b-7c92-43b0-896e-0f18ce9e12fe",
+          "height": 735,
+          "state": "normal",
+          "width": 1280,
+          "x": 4,
+          "y": 25
+        }
+      ],
+      "page_roundtrip": true
+    },
+    {
+      "cycle": 3,
+      "state": "fullscreen",
+      "window_state": [
+        {
+          "active": true,
+          "clientWindow": "9ae5a29b-7c92-43b0-896e-0f18ce9e12fe",
+          "height": 900,
+          "state": "fullscreen",
+          "width": 1440,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "page_roundtrip": true
+    },
+    {
+      "cycle": 3,
+      "state": "normal",
+      "window_state": [
+        {
+          "active": true,
+          "clientWindow": "9ae5a29b-7c92-43b0-896e-0f18ce9e12fe",
+          "height": 735,
+          "state": "normal",
+          "width": 1280,
+          "x": 4,
+          "y": 25
+        }
+      ],
+      "page_roundtrip": true
+    }
+  ],
+  "commands": [
+    {
+      "method": "browser.getClientWindows",
+      "params": {},
+      "elapsed_seconds": 0.005
+    },
+    {
+      "method": "browsingContext.activate",
+      "params": {
+        "context": "dd840407-6b7b-4dbc-ad30-4de390493de3"
+      },
+      "elapsed_seconds": 0.003
+    },
+    {
+      "method": "script.evaluate",
+      "params": {
+        "expression": "document.title=\"Namelecule — δοκιμή μεγέθυνσης\"; document.body.textContent=\"Δοκιμαστικό παράθυρο Namelecule. Κενή σελίδα ελέγχου.\"; true",
+        "target": {
+          "context": "dd840407-6b7b-4dbc-ad30-4de390493de3"
+        },
+        "awaitPromise": true
+      },
+      "elapsed_seconds": 0.03
+    },
+    {
+      "method": "browser.setClientWindowState",
+      "params": {
+        "clientWindow": "9ae5a29b-7c92-43b0-896e-0f18ce9e12fe",
+        "state": "fullscreen"
+      },
+      "elapsed_seconds": 1.071
+    },
+    {
+      "method": "browser.getClientWindows",
+      "params": {},
+      "elapsed_seconds": 0.286
+    },
+    {
+      "method": "script.evaluate",
+      "params": {
+        "expression": "20+22",
+        "target": {
+          "context": "dd840407-6b7b-4dbc-ad30-4de390493de3"
+        },
+        "awaitPromise": true
+      },
+      "elapsed_seconds": 0.044
+    },
+    {
+      "method": "browser.setClientWindowState",
+      "params": {
+        "clientWindow": "9ae5a29b-7c92-43b0-896e-0f18ce9e12fe",
+        "state": "normal"
+      },
+      "elapsed_seconds": 0.649
+    },
+    {
+      "method": "browser.getClientWindows",
+      "params": {},
+      "elapsed_seconds": 0.004
+    },
+    {
+      "method": "script.evaluate",
+      "params": {
+        "expression": "20+22",
+        "target": {
+          "context": "dd840407-6b7b-4dbc-ad30-4de390493de3"
+        },
+        "awaitPromise": true
+      },
+      "elapsed_seconds": 0.022
+    },
+    {
+      "method": "browser.setClientWindowState",
+      "params": {
+        "clientWindow": "9ae5a29b-7c92-43b0-896e-0f18ce9e12fe",
+        "state": "fullscreen"
+      },
+      "elapsed_seconds": 0.785
+    },
+    {
+      "method": "browser.getClientWindows",
+      "params": {},
+      "elapsed_seconds": 0.003
+    },
+    {
+      "method": "script.evaluate",
+      "params": {
+        "expression": "20+22",
+        "target": {
+          "context": "dd840407-6b7b-4dbc-ad30-4de390493de3"
+        },
+        "awaitPromise": true
+      },
+      "elapsed_seconds": 0.008
+    },
+    {
+      "method": "browser.setClientWindowState",
+      "params": {
+        "clientWindow": "9ae5a29b-7c92-43b0-896e-0f18ce9e12fe",
+        "state": "normal"
+      },
+      "elapsed_seconds": 1.061
+    },
+    {
+      "method": "browser.getClientWindows",
+      "params": {},
+      "elapsed_seconds": 0.005
+    },
+    {
+      "method": "script.evaluate",
+      "params": {
+        "expression": "20+22",
+        "target": {
+          "context": "dd840407-6b7b-4dbc-ad30-4de390493de3"
+        },
+        "awaitPromise": true
+      },
+      "elapsed_seconds": 0.003
+    },
+    {
+      "method": "browser.setClientWindowState",
+      "params": {
+        "clientWindow": "9ae5a29b-7c92-43b0-896e-0f18ce9e12fe",
+        "state": "fullscreen"
+      },
+      "elapsed_seconds": 0.626
+    },
+    {
+      "method": "browser.getClientWindows",
+      "params": {},
+      "elapsed_seconds": 0.004
+    },
+    {
+      "method": "script.evaluate",
+      "params": {
+        "expression": "20+22",
+        "target": {
+          "context": "dd840407-6b7b-4dbc-ad30-4de390493de3"
+        },
+        "awaitPromise": true
+      },
+      "elapsed_seconds": 0.008
+    },
+    {
+      "method": "browser.setClientWindowState",
+      "params": {
+        "clientWindow": "9ae5a29b-7c92-43b0-896e-0f18ce9e12fe",
+        "state": "normal"
+      },
+      "elapsed_seconds": 0.986
+    },
+    {
+      "method": "browser.getClientWindows",
+      "params": {},
+      "elapsed_seconds": 0.011
+    },
+    {
+      "method": "script.evaluate",
+      "params": {
+        "expression": "20+22",
+        "target": {
+          "context": "dd840407-6b7b-4dbc-ad30-4de390493de3"
+        },
+        "awaitPromise": true
+      },
+      "elapsed_seconds": 0.012
+    }
+  ],
+  "scope": "Own GUI profile, about:blank native fullscreen only. Does not exercise native green-button hover menu. No personal browser, app sources or settings changed.",
+  "initial_windows": [
+    {
+      "active": true,
+      "clientWindow": "9ae5a29b-7c92-43b0-896e-0f18ce9e12fe",
+      "height": 735,
+      "state": "normal",
+      "width": 1280,
+      "x": 4,
+      "y": 25
+    }
+  ],
+  "javascript_errors": []
+}

@@ -1,8 +1,138 @@
+**Namelecule — 5/11/2026, δημοσιευμένη κύρια v54.** Παραγόμενα κουίζ αλκανίων,
+μάθημα 12 βημάτων με δύο υποχρεωτικά σετ και ενσωμάτωση καθηγητή έως `f49b810`.
+Runtime `d8985ad381a4f15f5fd67c4118ab8ff987d38f62`: 222 δημόσιοι HTTP/SHA έλεγχοι και περιορισμένες
+διαδρομές Main18/React8 ολοκληρώθηκαν. Η κονσόλα δεν είναι καθαρή· η εξαίρεση
+JSmol κατά την επαναφορά παραμένει ανοικτή P2. Δεν δηλώνεται συνεδριακή ετοιμότητα.
+Πλήρες snapshot `c7f1cc34b416c4fe4ea1773d78465afbf1c4d6ba`, 4.214 αρχεία, ZIP/bundle/recovery και
+δύο εξωτερικά αντίγραφα επαληθευμένα. Οι μεταγενέστερες σημειώσεις/αποδείξεις
+έχουν χωριστό χρονικό όριο και αποθήκευση. Core54 ενημερώθηκε· core52/δημόσια React
+παραμένουν ίδια. [Αναφορά καθηγητή](https://yanisken9.github.io/organic-nomenclature-3/docs/professor-20261105/update.html) ·
+[Υποδοχή](https://yanisken9.github.io/organic-nomenclature-3/design/welcome-proposal.html?v=release-20261105).
+
+**Namelecule — 5/11/2026, τοπική ενημερωμένη κύρια v54.** Ενσωματώθηκαν οι
+τέσσερις αλλαγές του καθηγητή έως `f49b810`, με διατήρηση των χημικών ελέγχων μας.
+Η εξερεύνηση/σχεδίαση χρησιμοποιεί τη νέα μηχανή· τα υπάρχοντα παραγόμενα κουίζ
+φορτώνουν την ακριβή προηγούμενη ελεγμένη έκδοση, με έλεγχο SHA-256 και διατήρηση
+της ενεργής/λυμένης προόδου. Ο ανεξάρτητος Reviewer δεν εντόπισε ανοικτά ευρήματα.
+Ο τελικός έλεγχος της κύριας πέρασε. Το core54 άλλαξε· το core52 παρέμεινε ίδιο.
+Το πάγωμα Firefox και δύο Submit timeouts παραμένουν υπό διερεύνηση.
+[Καταγραφή ελέγχων και ορίων](docs/checks/v54-merge-20261105/final-report.json).
+Δεν έγινε νέο commit ή δημοσίευση. Οι δημόσιοι σύνδεσμοι παρακάτω παραμένουν στις
+προηγούμενες δημοσιευμένες εκδόσεις.
+
+**Namelecule — 4/11/2026, δημοσιευμένη κύρια v54.** Ενσωματώθηκαν οι αλλαγές του
+καθηγητή έως `35d791ee`, η ασφαλής υποστήριξη γραμμικών αλκυλίων C9–C20 και οι
+διορθώσεις αριθμητικών θέσεων και κοινής παραγωγής σκελετικών τύπων. Το «Συνεργείο
+ονομάτων» έχει δύο σετ αλκανίων με τρία κουίζ το καθένα και χωριστό πιλότο μέσα
+στη θεωρία. Διατηρούνται 141 μόρια, 14 αρχικά μαθήματα/337 βήματα, η v52 και η
+προηγούμενη React χωρίς νέο build.
+[Αναφορά καθηγητή](https://yanisken9.github.io/organic-nomenclature-3/docs/professor-20261104/update.html) ·
+[Υποδοχή Namelecule](https://yanisken9.github.io/organic-nomenclature-3/design/welcome-proposal.html?v=release-20261104).
+
+Η δημόσια έκδοση `ddc3c80` επαληθεύτηκε με 221 ακριβείς HTTP/SHA ελέγχους και
+λειτουργικές δοκιμές Main/React. Τα γνωστά μηνύματα cookies/JSmol tracker
+παραμένουν καταγεγραμμένα. Πλήρες σημείο επαναφοράς `ac348f5` αποθηκεύτηκε στο
+χωριστό checkpoint branch, με ελεγμένα ZIP/bundle και δύο εξωτερικά αντίγραφα.
+Στο παρόν σημείο τεκμηρίωσης, η πρόσθετη αποθήκευση της τελικής αναφοράς
+εκκρεμεί. Θα ελεγχθεί και θα καταγραφεί χωριστά από το ολοκληρωμένο πρώτο αντίγραφο. [Έλεγχοι και όρια](docs/checks/v54-upstream-20261104/REPORT.md).
+
+**Namelecule — 4/11/2026, τοπική v54:** ενσωμάτωση των λειτουργιών του καθηγητή
+μέχρι `02dbcfaf` σε χωριστή v54, σύνδεση του «Συνεργείου ονομάτων» από
+«Παίζω και εξασκούμαι» και διατήρηση v52/React. Παραμένουν141μόρια και14μαθήματα/
+337βήματα. Προστέθηκε νέο core54 με ελεγμένες τοπικές διορθώσεις γεννητριών MOL
+και αντιστοίχισης2D/3D· το core52 δεν άλλαξε. Ο ανεξάρτητος έλεγχος ολοκληρώθηκε χωρίς ανοικτό P0/P1/P2· οι γνωστοί περιορισμοί καταγράφονται στην αναφορά.
+[Αναφορά ενσωμάτωσης/έλεγχοι/όρια](docs/V54-SYNC-20261104.md).
+Δεν έγινε commit ή δημοσίευση. Τα παλιότερα δημόσια links παρακάτω παραμένουν
+στιγμιότυπα των αντίστοιχων ημερομηνιών.
+
+**Namelecule — 1/11/2026:** Συνολική αναφορά από Παρασκευή30/10 έως σήμερα, με κοινή πολιτική127ανεπτυγμένων τύπων σε11κατηγορίες, ελεγμένα γράμματα2D και στοχευμένη διόρθωση κύκλου ζωήςJSmol. Παραμένουν141μόρια/14μαθήματα/337βήματα. Το core52 και τα ενεργάscenarioJSON δεν άλλαξαν στην περίοδο. React χωρίς νέο build.
+[Συνολική αναφορά καθηγητή](https://yanisken9.github.io/organic-nomenclature-3/docs/professor-20261101/update.html), [ενημερωμένη υποδοχή](https://yanisken9.github.io/organic-nomenclature-3/design/welcome-proposal.html?v=release-20261101). Οι εξαιρέσεις και οι περιορισμοί παρατίθενται στην αναφορά.
+
+**Namelecule — 31/10/2026:** Διόρθωση γραμμάτων 2D, ελεγχόμενη διόρθωση κύκλου ζωής JSmol και ομοιογένεια 47 ανεπτυγμένων τύπων. Παραμένουν 141 μόρια / 14 μαθήματα / 337 βήματα. Καμία σημερινή αλλαγή core. Η React διατηρείται χωρίς νέο build, με απομόνωση δύο παλιών εξαρτήσεων για συμβατότητα.
+[Αναφορά καθηγητή](https://yanisken9.github.io/organic-nomenclature-3/docs/professor-20261031/update.html), [σελίδα υποδοχής](https://yanisken9.github.io/organic-nomenclature-3/design/welcome-proposal.html?v=release-20261031). Τα όρια και η ανοικτή διερεύνηση του κάδρου αναφέρονται στην αναφορά.
+
+**Namelecule — 30/10/2026:** Ενιαία παρουσίαση των οκτώ ανεπτυγμένων αλκανίων,
+με C–H0,3094 και C–C0,6188 στα MOL, κοινή πολιτική χαρακτήρων/κενών και
+ελεγμένη αρίθμηση. Διατηρούνται141μόρια,14μαθήματα/337βήματα και προηγούμενα
+σημεία επαναφοράς. Καμία σημερινή αλλαγή core ή React build.
+[Αναφορά καθηγητή](https://yanisken9.github.io/organic-nomenclature-3/docs/professor-20261030/update.html),
+[σελίδα υποδοχής](https://yanisken9.github.io/organic-nomenclature-3/design/welcome-proposal.html?v=release-20261030).
+
+**Namelecule v52 — 29/10/2026:**141molecules, including nine esters;
+14active lessons/337steps. [Main welcome](https://yanisken9.github.io/organic-nomenclature-3/design/welcome-proposal.html?v=release-20261029),
+[professor report](https://yanisken9.github.io/organic-nomenclature-3/docs/professor-20261029/main-esters-update.html).
+The five new expanded MOLs use orthogonal bonds. Known rendering limits are
+listed in the report. React build/catalog remains the previous126molecule release.
+
+**Local expanded MOL correction — 2026-10-29:** The five new esters now have
+only horizontal/vertical bonds in their expanded source MOLs and embedded data.
+Crowding is handled with spacing, not diagonal C–H fans. The generator preserves
+this convention. Other2D forms, old esters,3D, core and viewer are unchanged by
+this correction. Local, not committed/published; see [orthogonal MOL report](docs/ESTERS-ORTHOGONAL-MOL-20261029.md).
+
+**Local ester display fixes — 2026-10-29:** Main v52 has141molecules.
+The approved viewer fixes avoid duplicate formyl H, place ester acid fragments
+left in skeletal mode, suppress skeletal carbon-bound H with their strokes,
+and put tert-butyl formate's formyl H left in condensed/expanded views.
+Source MOL/SDF, embedded data and core remain unchanged by these display fixes.
+Local, without a commit or publication; checks, review status and one unchanged
+legacy expanded-label overlap are recorded in [display report](docs/ESTERS-DISPLAY-20261029.md).
+
+**Public review release - 2026-10-28:** [Main v52 welcome](https://yanisken9.github.io/organic-nomenclature-3/design/welcome-proposal.html?v=release-20261028) and
+[React trial welcome](https://yanisken9.github.io/organic-nomenclature-3/react-preview/dist/?v=release-20261028#/). Main136molecules/14lessons337steps;
+React126molecules/12lessons283steps. Reviewed runtime/build retained, without
+rebuild or chemistry changes. Known limits are disclosed in
+[professor reports](docs/professor-20261028/main-v52-update.html).
+
+**Corrected theory scope — 2026-10-28:** «Άλλα καρβοξυλικά οξέα» now uses only
+7 existing unsaturated mono-/dicarboxylic acids with C=C or C≡C and no other
+functional groups, in 26 progressive steps. The library has 14 active lessons /
+337 steps. Removed examples remain in the general molecule library. No core,
+player, viewer or molecular data changes. Local, not committed or published.
+See [corrected lesson record](docs/UNSATURATED-ACIDS-SCENARIO-20261028.md).
+
+**Local addition — 2026-10-28:** 2-πεντεν-4-ινικό οξύ (C5H4O2) and
+2-εξεν-4-ινοδιικό οξύ (C6H4O4) bring the Main library to136molecules.
+Three2D forms and graph-matched explicit-H RDKit3D sources use existing
+conventions and the shared skeletal geometry pipeline. Existing134records,
+source assets, core52, scenarios and React catalog are preserved. Local,
+without commit/push/publication. See [checks](docs/TWO-ENYNOIC-ACIDS-20261028.md).
+
+**Local addition — 2026-10-28:** four unsaturated mono-/dicarboxylic acids
+bring the Main library from130 to134molecules. The interrupted addition is
+completed with bounded core52 alkyl-prefix support, three2D forms per molecule
+and graph-matched explicit-H RDKit3D conformers with provenance. Existing130
+records/MOLs,13active lessons and React source are preserved. These conformers
+do not specify R/S or E/Z. See [scope, checks and review](docs/OTHER-ACIDS-20261028.md).
+This addition is local, without commit/push/publication.
+
 # MuLERMoCs — Organic Nomenclature Learning Platform
 
 A Greek-first interactive learning platform for organic nomenclature, built around molecular structure, naming logic, and multiple representations. It is a no-build static web app (JSME, JSmol, Snap.svg, jQuery, vanilla JavaScript) intended to be embedded in Drupal.
 
 Desinged and developed by Nickolas Charistos
+
+**Local theory addition — 2026-10-28:** «Κορεσμένα μονοκαρβοξυλικά οξέα»,28
+progressive steps using all8eligible existing molecules, is linked from the acid
+card. The Main library now has13active lessons/311steps. Optional rule tables
+start closed; the last3D step is optional. Player52 supports replay of the
+existing third-acid-prefix boxes. Previous12scenarioJSONs, core52, molecular
+assets and React files remain unchanged by this lesson. Local, not published.
+See [lesson record](docs/MONOACIDS-SCENARIO-20261028.md) for verification status.
+
+**Local addition — 2026-10-28:** four saturated monocarboxylic acids bring the
+Main library to130molecules. Bounded core52 alkyl-prefix support, three2D forms
+and graph-matched explicit-H3D follow existing conventions. All126oldrecords
+and12scenarioJSONs remain unchanged; React is preserved without a rebuild.
+See [acid addition and checks](docs/ACIDS-20261028.md). Local, not committed/published.
+
+**Current local integration — 2026-10-27:** v52 from professor upstream
+`93b759f5891d7b5a1172646032d83215d60b7604`, with Namelecule layout, all126molecules
+and12lessons/283steps retained. The previous v51 remains runnable. Welcome/library
+and the React trial now target v52; stable/published Git checkpoints are unchanged.
+No commit or publication is implied. See [v52 integration and checks](docs/V52-SYNC-20261027.md)
+and the current resume point for validation/review status. Older entries below
+describe their original implementation stages.
 
 **Current source snapshot — 2026-10-26:**126molecules,12active theory lessons,
 283steps. The [consolidated professor update](docs/UPDATE-20261025-26.html)

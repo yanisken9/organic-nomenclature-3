@@ -1,0 +1,333 @@
+--- before/scenarios/alkanes-user-3.scenario.json
++++ scenarios/alkanes-user-3.scenario.json
+@@ -533,7 +533,7 @@
+       "mainChainMode": "algorithmic",
+       "chainIdx": 1,
+       "etherNamingMode": "iupac",
+-      "nameAnalysisMode": "compSecondSub1",
++      "nameAnalysisMode": "compCarbonsCount",
+       "selectedRule": null,
+       "style2D": {
+         "atomColors": true,
+@@ -598,7 +598,8 @@
+         "audio": false,
+         "rule": false,
+         "text": true,
+-        "nameClick": true
++        "nameClick": true,
++        "numberingDirection": true
+       },
+       "selectedMol": "dimethyl_2_3_butane"
+     },
+--- before/js/mulermoc-nom-scenario-54.js
++++ js/mulermoc-nom-scenario-54.js
+@@ -1381,6 +1381,95 @@
+   if (typeof fRenderChainStepper === "function") fRenderChainStepper();
+ }
+ 
++// Transient display state: never added to a step, exported JSON or quiz receipt.
++function fScenarioNumberingDirectionContext() {
++  var scenario = fScenarioPresent();
++  var step = scenario && scenario.steps && scenario.steps[scenario.index];
++  var show = step && step.show;
++  if (!MuLERMoCScenario.present || !show || show.numberingDirection !== true ||
++      show.naming === false || show.nameClick === false ||
++      !show.viewers || show.viewers["2D"] === false || show.viewers["3D"] !== false ||
++      step.selectedMol !== selectedMol || fScenarioNameCompDisabled("comp5", step) ||
++      (step.styleName && Array.isArray(step.styleName.hidden) && step.styleName.hidden.indexOf("comp5") !== -1)) {
++    MuLERMoCScenario.numberingDirection = null;
++    return null;
++  }
++  var choices = null;
++  try {
++    choices = fEquivalentParentNumberingDirections(jsmeNomeclatureApplet.molFile(),
++      mainChainAtomsList, allAtomsTypeList, bondList);
++  } catch (e) { /* not yet ready or unsupported: retain ordinary numbering */ }
++  if (!choices) { MuLERMoCScenario.numberingDirection = null; return null; }
++  var key = selectedMol + ":" + mainChainAtomsList.join(",");
++  var state = MuLERMoCScenario.numberingDirection;
++  // Update replaces the step object without entering another presentation
++  // step. Identify this live entry by scenario/index/token, then refresh the
++  // data reference without silently changing the learner's chosen direction.
++  if (!state || state.scenario !== scenario || state.index !== scenario.index ||
++      state.token !== MuLERMoCScenario.applyToken || state.key !== key) {
++    state = { scenario: scenario, index: scenario.index, token: MuLERMoCScenario.applyToken,
++      step: step, key: key, direction: "left" };
++    MuLERMoCScenario.numberingDirection = state;
++  } else state.step = step;
++  return { state: state, choices: choices };
++}
++
++function fScenarioNumberingDirectionAtoms() {
++  var context = fScenarioNumberingDirectionContext();
++  return context ? context.choices[context.state.direction].slice() : null;
++}
++
++function fScenarioChooseNumberingDirection(direction) {
++  if (direction !== "left" && direction !== "right") return;
++  var context = fScenarioNumberingDirectionContext();
++  if (!context) return;
++  context.state.direction = direction;
++  // A deliberate learner action supersedes the delayed initial highlight.
++  var pending = MuLERMoCScenario.pending3D;
++  if (pending && pending.token === MuLERMoCScenario.applyToken) pending.done = true;
++  $(".nameCompBox").removeClass("selected");
++  nameAnalysisMode = "none";
++  fScenarioClickNameBox(Object.assign({}, context.state.step, { nameAnalysisMode: "compCarbonsCount" }));
++  currNumberEl = 0;
++  fShowNumbering(0);
++  fScenarioApplyNumberingDirection();
++}
++
++function fScenarioApplyNumberingDirection() {
++  var host = document.getElementById("scNumberingDirection");
++  var context = fScenarioNumberingDirectionContext();
++  var panel = document.getElementById("nameSettingsPanel");
++  if (!context || !panel || !panel.parentNode) {
++    if (host) host.remove();
++    return;
++  }
++  var en = context.state.step.lang === "en";
++  if (!host) {
++    host = document.createElement("div");
++    host.id = "scNumberingDirection";
++    host.className = "scNumberingDirection";
++    host.setAttribute("role", "group");
++    var label = document.createElement("span");
++    label.id = "scNumberingDirectionLabel";
++    host.appendChild(label);
++    host.setAttribute("aria-labelledby", label.id);
++    ["left", "right"].forEach(function (direction) {
++      var button = document.createElement("button");
++      button.type = "button";
++      button.id = "scNumbering" + (direction === "left" ? "Left" : "Right");
++      button.addEventListener("click", function () { fScenarioChooseNumberingDirection(direction); });
++      host.appendChild(button);
++    });
++    panel.parentNode.insertBefore(host, panel);
++  }
++  document.getElementById("scNumberingDirectionLabel").textContent = en ? "Numbering" : "Αρίθμηση";
++  ["left", "right"].forEach(function (direction) {
++    var button = document.getElementById("scNumbering" + (direction === "left" ? "Left" : "Right"));
++    button.textContent = direction === "left" ? (en ? "From the left" : "Από αριστερά") : (en ? "From the right" : "Από δεξιά");
++    button.setAttribute("aria-pressed", context.state.direction === direction ? "true" : "false");
++  });
++}
++
+ function fScenarioDefaults(step, i) {
+   var d = {
+     n: i + 1,
+@@ -1431,6 +1520,9 @@
+   }
+   if (Object.prototype.hasOwnProperty.call(out.show, "chainNavigation")) {
+     out.show.chainNavigation = out.show.chainNavigation === true;
++  }
++  if (Object.prototype.hasOwnProperty.call(out.show, "numberingDirection")) {
++    out.show.numberingDirection = out.show.numberingDirection === true;
+   }
+   // Single-viewer max height: normalize silently (null = Auto); the validate
+   // path warns on non-empty invalid input.
+@@ -2261,6 +2353,7 @@
+ 
+ function fScenarioApply(step) {
+   if (!MuLERMoCScenario.ready || !step) return false;
++  MuLERMoCScenario.numberingDirection = null;
+   fScenarioClearCheckpointNotice();
+   // Set before any load or naming repaint, in presentation and Go preview.
+   MuLERMoCScenario.nameBoxLayoutContext = fScenarioValidNameBoxLayout(step.nameBoxLayout, step);
+@@ -4405,6 +4498,7 @@
+   if (!present) {
+     fScenarioApplyNameRestrictions(null);
+     fScenarioApplyChainNavigation(null);
++    fScenarioApplyNumberingDirection();
+     fScenarioHide("analysisCol", false);
+     // Full interactivity outside presentation: a locked present step must
+     // never leak its lock (or its hidden explain line) into authoring —
+@@ -4493,6 +4587,7 @@
+     var panel = document.getElementById("nameSettingsPanel");
+     if (panel && present && !ns) panel.classList.remove("open");
+     fScenarioApplyChainNavigation(show);
++    fScenarioApplyNumberingDirection();
+     // The panel sits above the name boxes: re-pin the floating Explain sheet
+     // when chrome mutates it (no-op unless expanded; covers the 0.25s close).
+     try { if (typeof fNameExpandRepinDelayed === "function") fNameExpandRepinDelayed(); } catch (eExp) { /* best-effort */ }
+@@ -4919,6 +5014,7 @@
+ // (menu menu-open + both viewers + all bars) via a transient clone — the
+ // stored step keeps its authored show.* for a later Export.
+ function fScenarioExitPresent() {
++  MuLERMoCScenario.numberingDirection = null;
+   var wasAuthorPreview = fScenarioIsAuthorPreview(fScenarioPresent());
+   fScenarioClearCheckpointNotice();
+   fScenarioCancelCheckpointPreparation();
+@@ -6587,6 +6683,15 @@
+   if (Object.prototype.hasOwnProperty.call(oldShow, "chainNavigation")) {
+     fresh.show.chainNavigation = oldShow.chainNavigation === true;
+   }
++  if (Object.prototype.hasOwnProperty.call(oldShow, "numberingDirection")) {
++    fresh.show.numberingDirection = oldShow.numberingDirection === true;
++    // Presentation chrome can hide 3D while the free-browse toggle stays on.
++    // Capture must not invalidate this step's authored 2D-only comparison.
++    if (MuLERMoCScenario.present && oldShow.numberingDirection === true &&
++        oldShow.viewers && oldShow.viewers["2D"] !== false && oldShow.viewers["3D"] === false) {
++      fresh.show.viewers = Object.assign({}, oldShow.viewers);
++    }
++  }
+   fresh.menuGroups = fScenarioValidMenuGroups(old.menuGroups);
+   s.steps[idx] = fresh;
+   fScenarioSyncLegacy();
+--- before/js/mulermoc-nom-molview-54.js
++++ js/mulermoc-nom-molview-54.js
+@@ -10637,6 +10637,45 @@
+ let numberingAtomOverride = null;
+ let numberingAtomOverride3D = null;
+ 
++// A display-only comparison of equivalent directions of one parent. The core
++// signature omits some chemical metadata, so accept only a plain, connected
++// saturated C/H tree whose parsed graph is exactly the live numbering graph.
++function fEquivalentParentNumberingDirections(molText, chain, types, bonds) {
++  try {
++    const m = fParseMolV2000(molText);
++    if (!m || !Array.isArray(chain) || chain.length < 2 ||
++        !Array.isArray(types) || !Array.isArray(bonds) ||
++        m.atoms.length !== types.length || m.bonds.length !== types.length - 1 ||
++        m.properties.length || !fMolCanTransform2D(m, false)) return null;
++    if (m.atoms.some((a, i) => !["C", "H"].includes(a.el) || a.el !== types[i] ||
++        a.charge !== 0 || a.massDifference !== 0 || (a.isotope != null && a.isotope !== 0) ||
++        a.tail.trim().split(/\s+/).some(v => !/^[+-]?\d+$/.test(v) || Number(v) !== 0))) return null;
++    const key = b => {
++      if (!Array.isArray(b) || !Number.isInteger(b[0]) || !Number.isInteger(b[1]) ||
++          b[0] < 1 || b[1] < 1 || b[0] > types.length || b[1] > types.length ||
++          b[0] === b[1] || b[2] !== 1) throw new Error("Unsupported numbering graph");
++      return [Math.min(b[0], b[1]), Math.max(b[0], b[1]), b[2]].join(":");
++    };
++    if (m.bonds.some(b => b.tail.trim().split(/\s+/).some(v => !/^[+-]?\d+$/.test(v) || Number(v) !== 0)) ||
++        JSON.stringify(m.bonds.map(key).sort()) !== JSON.stringify(bonds.map(key).sort())) return null;
++    const adj = types.map(() => []);
++    bonds.forEach(([a, b]) => { adj[a - 1].push(b - 1); adj[b - 1].push(a - 1); });
++    if (adj.some((ns, i) => types[i] === "H" ? ns.length !== 1 : ns.length > 4)) return null;
++    const seen = new Set([0]), queue = [0];
++    for (let i = 0; i < queue.length; i++) adj[queue[i]].forEach(n => {
++      if (!seen.has(n)) { seen.add(n); queue.push(n); }
++    });
++    if (seen.size !== types.length || new Set(chain).size !== chain.length ||
++        chain.some(n => !Number.isInteger(n) || types[n - 1] !== "C")) return null;
++    const reverse = chain.slice().reverse();
++    const signature = fNumberedChainSignature(chain, types, bonds);
++    if (signature === null || signature !== fNumberedChainSignature(reverse, types, bonds)) return null;
++    const dx = m.atoms[chain[chain.length - 1] - 1].x - m.atoms[chain[0] - 1].x;
++    if (Math.abs(dx) < 1e-6) return null; // no unambiguous left/right endpoints
++    return { left: (dx > 0 ? chain : reverse).slice(), right: (dx > 0 ? reverse : chain).slice() };
++  } catch (e) { return null; }
++}
++
+ // Locant emphasis (visual): when a locant/position component is clicked, its
+ // number(s) stay blue while the rest dim to gray — 2D fill + 3D echo.
+ // Only for main-chain numbering modes whose box digits ARE display indices
+@@ -10673,6 +10712,13 @@
+   let numberOffset, currAtomTextElement, x, y, r, numberString;
+   if (!numberingFlag) {
+     return;
++  }
++  // Resolve on every repaint, including zoom/resize. Explicit component
++  // overrides retain priority. This lesson feature is restricted to 2D.
++  if (!Array.isArray(overrideAtoms) && !Array.isArray(overrideAtoms3D) &&
++      typeof fScenarioNumberingDirectionAtoms === "function") {
++    const directionAtoms = fScenarioNumberingDirectionAtoms();
++    if (directionAtoms) { overrideAtoms = directionAtoms; overrideAtoms3D = []; }
+   }
+   numberingAtomOverride = Array.isArray(overrideAtoms) ? overrideAtoms : null;
+   numberingAtomOverride3D = Array.isArray(overrideAtoms3D) ? overrideAtoms3D : null;
+--- before/css/mulermoc-nom-scenario-54.css
++++ css/mulermoc-nom-scenario-54.css
+@@ -774,6 +774,37 @@
+    min-height: 44px;
+ }
+ 
++.scNumberingDirection {
++   display: flex;
++   flex-wrap: wrap;
++   align-items: center;
++   justify-content: center;
++   gap: 8px;
++   padding: 12px;
++   border-bottom: 1px solid var(--lightBlue);
++}
++
++.scNumberingDirection button {
++   min-height: 44px;
++   padding: 8px 12px;
++   border: 1px solid var(--darkBlue);
++   border-radius: 10px;
++   background: white;
++   color: var(--darkBlue);
++   font: inherit;
++   cursor: pointer;
++}
++
++.scNumberingDirection button[aria-pressed="true"] {
++   background: var(--darkBlue);
++   color: white;
++}
++
++.scNumberingDirection button:focus-visible {
++   outline: 3px solid var(--darkBlue);
++   outline-offset: 3px;
++}
++
+ #scenarioPlayBar {
+    position: fixed;
+    top: 0px;
+--- before/mulermoc-nom-54.html
++++ mulermoc-nom-54.html
+@@ -45,7 +45,7 @@
+   <title>Namelecule — Ονοματολογία Οργανικών Ενώσεων</title>
+ 
+   <link rel="stylesheet" href="css/jsme-nick-54.css?v=merge54-20261105-r1" />
+-  <link rel="stylesheet" href="css/mulermoc-nom-scenario-54.css?v=author-step-preview-20261107-r2" />
++  <link rel="stylesheet" href="css/mulermoc-nom-scenario-54.css?v=step7-numbering-directions-20261108-r3" />
+ 
+   <link rel="stylesheet" href="css/namelecule-54.css?v=v54-sync-20261104-r2" />
+   <link rel="stylesheet" href="css/namelecule-repair-round.css?v=checkpoint-pilot-20261104-r1" />
+@@ -364,7 +364,7 @@
+        <script src="js/MULERMOC_dimethyl_ether_data.js?v=54.1"></script> -->
+   <script src="js/ui-icons-54.js?v=v54-sync-20261104-r2"></script>
+   <script src="js/mulermoc-nom-core-54.js?v=merge54-20261105-r1"></script>
+-  <script src="js/mulermoc-nom-molview-54.js?v=alkane-step5-interaction-20261106-r1"></script>
++  <script src="js/mulermoc-nom-molview-54.js?v=step7-numbering-directions-20261108-r3"></script>
+   <script src="js/mulermoc-nom-teaching-54.js?v=alkane-step5-interaction-20261106-r1"></script>
+   <script src="js/mulermoc-nom-note-54.js?v=v54-sync-20261104-r2"></script>
+   <script src="js/namelecule-game-repair.js?v=workshop-reset-removal-20261107-r1"></script>
+@@ -372,7 +372,7 @@
+   <script src="js/namelecule-chemistry-client.js?v=verified-engines-20261105-r1"></script>
+   <script src="js/namelecule-repair-generator.js?v=engine-pilot-20261105-r1"></script>
+   <script src="js/namelecule-generated-repair-checkpoint.js?v=quiz-header-progress-20261108-r1"></script>
+-  <script src="js/mulermoc-nom-scenario-54.js?v=author-step-preview-20261107-r2"></script>
++  <script src="js/mulermoc-nom-scenario-54.js?v=step7-numbering-directions-20261108-r3"></script>
+   <script src="js/mulermoc-nom-iupac-54.js?v=merge54-20261105-r1"></script>
+   <script src="js/mulermoc-nom-lang-54.js?v=merge54-20261105-r1"></script>
+   <script src="js/mulermoc-nom-name-en-54.js?v=v54-upstream-20261104-r2"></script>
+--- before/docs/didactic-scenario-plan.md
++++ docs/didactic-scenario-plan.md
+@@ -310,6 +310,22 @@
+   Standalone controls preserve the step's requested rule visibility, including
+   supported component references selected live. Update, duplicate and
+   import/export preserve the opt-in.
++* Optional `show.numberingDirection: true` offers two equivalent numbering
++  directions of the **same** parent, separately from `chainNavigation`.
++  Current support is 2D-only, with visible interactive naming and a plain,
++  neutral connected acyclic saturated C/H graph without chemical annotations.
++  Both numbered tree signatures must be non-null and equal; uncertain cases
++  keep ordinary numbering and do not expose the control. Signature equality
++  alone is not a general chemical-equivalence test. The live MOL graph must
++  match the numbering graph and have distinct left/right endpoints.
++  The two buttons restore the parent-stem view and reverse copied label order,
++  preserving canonical chain, pool, name and geometry. Explicit component
++  numbering overrides retain priority. Choice is transient across clicks,
++  Update, zoom and resize, resets on step entry/exit or molecule/chain change, and is
++  never exported or stored in quiz progress. Only the opt-in is retained by
++  normalization, Update, duplicate and import/export. Missing/false is off.
++  During presentation Update also preserves this option's authored 2D-only
++  viewer permissions, instead of capturing the underlying free-browse toggles.
+ * `title` is the step heading: in presentation it replaces the
+   page `#pageTitle`, preceded by the number pill
+   `<span class="scStepNumberTitle">N.</span>` unless the scenario's

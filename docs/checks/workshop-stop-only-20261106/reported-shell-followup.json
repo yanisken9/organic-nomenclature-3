@@ -1,0 +1,21 @@
+{
+  "user_observation": "Screenshot after JSON update still has empty Molecule wrapper; browser URL/runtime not supplied in screenshot.",
+  "read_only_followup": true,
+  "http_checks": {
+    "base": "http://127.0.0.1:8013/",
+    "paths": [
+      "mulermoc-nom-54.html?v=workshop-stop-only-20261106-r2",
+      "js/mulermoc-nom-scenario-54.js?v=workshop-stop-only-20261106-r2",
+      "css/mulermoc-nom-scenario-54.css?v=workshop-stop-only-20261106-r2",
+      "scenarios/alkanes-user-3.scenario.json"
+    ],
+    "all_status_200_and_served_bytes_equal_reviewed_source": true
+  },
+  "explorer": "/root/workshop_stop_visibility_preflight",
+  "source_findings": "No active deferred path re-shows viewerCol while present=true after hide. Restore paths require Exit/nonpresent author preview. CSS does not override inline display:none.",
+  "hypothesis_not_proven": "Already-open tab retained earlier player; importing the new JSON alone does not reload JS/CSS.",
+  "next_action": "Load fresh r2 local URL for same personal step4 or hard-refresh current correct Main54 page.",
+  "live_user_browser_inspected": false,
+  "new_code_changes": false,
+  "core_changes": false
+}

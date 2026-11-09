@@ -1,0 +1,41 @@
+--- before/scenarios/alkanes-user-3.scenario.json
++++ scenarios/alkanes-user-3.scenario.json
+@@ -314,27 +314,27 @@
+         "viewerButtons": false,
+         "viewerSettings": false,
+         "viewers": {
+-          "2D": true,
++          "2D": false,
+           "3D": false
+         },
+         "viewerMaxHeight": 420,
+         "viewerBothHeight": null,
+         "controls": {
+-          "2D": true,
+-          "3D": false
+-        },
+-        "save": {
+-          "2D": false,
+-          "3D": false
+-        },
+-        "naming": true,
+-        "nameSettings": true,
++          "2D": false,
++          "3D": false
++        },
++        "save": {
++          "2D": false,
++          "3D": false
++        },
++        "naming": false,
++        "nameSettings": false,
+         "nameEye": false,
+         "nameExpanded": false,
+         "audio": false,
+         "rule": false,
+         "text": true,
+-        "nameClick": true
++        "nameClick": false
+       },
+       "selectedMol": "pentane",
+       "checkpoint": {

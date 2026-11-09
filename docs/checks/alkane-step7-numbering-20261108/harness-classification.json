@@ -1,0 +1,26 @@
+{
+  "firstFailure": "Python spacing vs JSON.stringify compact array in test expression",
+  "secondFailure": "Dynamic JSME export timestamp in header, not geometry; confirmed independent repeated-choice probe across1.1second wait",
+  "repeatProbeHeaderChanged": true,
+  "countsAtomsBondsMetadataIdentical": true,
+  "repeatedNumbersCorrect": [
+    {
+      "text": "1",
+      "x": "5651"
+    },
+    {
+      "text": "2",
+      "x": "4901"
+    },
+    {
+      "text": "3",
+      "x": "4151"
+    },
+    {
+      "text": "4",
+      "x": "3401"
+    }
+  ],
+  "sourceCodeCorrectionsForTheseFailures": false,
+  "fix": "Compare exact MOL counts/atoms/bonds/metadata after three header lines; compare compact JSON numbers"
+}

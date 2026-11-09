@@ -1,0 +1,76 @@
+/* Checkpoint surfaces only. The molecular viewers keep their existing layout. */
+.nl-quiz-checkpoint {
+  box-sizing: border-box;
+  width: min(calc(100% - 28px), 990px);
+  margin: 0 auto 24px;
+  padding: 18px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  border: 2px solid #a9ccc2;
+  border-radius: 16px;
+  background: #eef6f1;
+  color: #254c50;
+  font-family: "Roboto Condensed", system-ui, sans-serif;
+}
+.nl-quiz-checkpoint .nl-quiz-checkpoint-heading { margin: 0 0 5px; font-size: 1.15rem; line-height: 1.3; }
+.nl-quiz-checkpoint .nl-quiz-checkpoint-status { margin: 0; font-size: 1rem; line-height: 1.45; }
+.nl-quiz-checkpoint .nl-quiz-storage-note { font-size: .88rem; margin: 8px 0 0; }
+.nl-quiz-complete { border-color: #397b78; }
+.nl-quiz-button {
+  box-sizing: border-box;
+  border: 1px solid #397b78;
+  border-radius: 10px;
+  min-height: 44px;
+  padding: 10px 16px;
+  font: 600 1rem/1.3 "Roboto Condensed", system-ui, sans-serif;
+  cursor: pointer;
+  background: #fff;
+  color: #254c50;
+  touch-action: manipulation;
+}
+.nl-quiz-open { background: #254c50; color: #fff; flex-shrink: 0; }
+.nl-quiz-button:hover { background: #dfefe6; color: #254c50; }
+.nl-quiz-button:focus-visible { outline: 3px solid #a6633d; outline-offset: 3px; }
+.nl-quiz-dialog {
+  box-sizing: border-box;
+  width: min(1180px, calc(100% - 24px));
+  max-width: calc(100% - 24px);
+  max-height: calc(100dvh - 24px);
+  margin: auto;
+  padding: 0;
+  overflow: auto;
+  border: 1px solid #a9c7be;
+  border-radius: 20px;
+  background: #faf9f5;
+  color: #254c50;
+  font: 16px/1.5 system-ui, sans-serif;
+  box-shadow: 0 20px 70px #1634364d;
+}
+.nl-quiz-dialog::backdrop { background: #153738a6; }
+.nl-quiz-dialog-header {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 20px;
+  background: #e1efea;
+  border-bottom: 1px solid #c7dcd2;
+}
+.nl-quiz-dialog .nl-quiz-dialog-title { margin: 0; font: 700 1.05rem/1.4 system-ui, sans-serif; }
+.nl-quiz-dialog .nl-quiz-host { padding: 22px; }
+.nl-quiz-dialog .nl-quiz-retry { margin: 0 22px 20px; }
+.nl-quiz-dialog .nl-quiz-error { margin: 0; padding: 22px; }
+.nl-quiz-dialog [hidden], .nl-quiz-checkpoint [hidden] { display: none !important; }
+@media (max-width: 650px) {
+  .nl-quiz-checkpoint { flex-direction: column; align-items: stretch; padding: 16px; }
+  .nl-quiz-dialog { width: calc(100% - 12px); max-width: calc(100% - 12px); max-height: calc(100dvh - 12px); border-radius: 14px; }
+  .nl-quiz-dialog-header { padding: 12px; gap: 10px; align-items: flex-start; }
+  .nl-quiz-dialog .nl-quiz-host { padding: 14px; }
+  .nl-quiz-dialog .nl-quiz-dialog-title { font-size: .95rem; }
+  .nl-quiz-dialog .nl-quiz-back { font-size: .88rem; max-width: 170px; }
+}

@@ -1,0 +1,21 @@
+--- before-RV01/scenario54.js
++++ after-RV01/scenario54.js
+@@ -1402,10 +1402,15 @@
+   if (!choices) { MuLERMoCScenario.numberingDirection = null; return null; }
+   var key = selectedMol + ":" + mainChainAtomsList.join(",");
+   var state = MuLERMoCScenario.numberingDirection;
+-  if (!state || state.scenario !== scenario || state.step !== step || state.key !== key) {
+-    state = { scenario: scenario, step: step, key: key, direction: "left" };
++  // Update replaces the step object without entering another presentation
++  // step. Identify this live entry by scenario/index/token, then refresh the
++  // data reference without silently changing the learner's chosen direction.
++  if (!state || state.scenario !== scenario || state.index !== scenario.index ||
++      state.token !== MuLERMoCScenario.applyToken || state.key !== key) {
++    state = { scenario: scenario, index: scenario.index, token: MuLERMoCScenario.applyToken,
++      step: step, key: key, direction: "left" };
+     MuLERMoCScenario.numberingDirection = state;
+-  }
++  } else state.step = step;
+   return { state: state, choices: choices };
+ }
+ 

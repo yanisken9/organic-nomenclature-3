@@ -1,0 +1,10 @@
+{
+  "functionalChecksCompleted": true,
+  "functionalAssertions": 35,
+  "uncaughtErrors": 1,
+  "observedMessage": "TypeError: can't access property \"bufferedImage\", this.platform is null",
+  "samePreExistingMessageEvidence": "docs/checks/workshop-stop-only-20261106/browser.json",
+  "evidenceSHA256": "b7d0dce7db22f7f27e5eaaea0b3991ccbd0e4323c2543e879e5d6e51e3868f3e",
+  "conclusion": "Same JSmol bufferedImage/platform-null symptom is recorded before JSON9. Import changed only titles/notes/noteFormat, all viewer/gate/molecule settings unchanged;45protected app/core files unchanged. No root-cause or frequency claim; console not clean and issue remains unresolved.",
+  "scope": "Do not change JSmol/viewer code as part of user-authored JSON import."
+}

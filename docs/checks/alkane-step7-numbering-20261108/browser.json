@@ -1,0 +1,146 @@
+{
+  "completed": false,
+  "checks": [
+    "Only two approved step7 fields changed; notes/other steps/checkpoints unchanged",
+    "Actual player validates updated12step lesson",
+    "New viewer/player CSS cache version loaded",
+    "Normal learner still stops at unsolved workshop4",
+    "Existing quiz counter still correct 1",
+    "Existing quiz counter still correct 2",
+    "Existing quiz counter still correct 3",
+    "Normal gate accepts actual3 correct repairs",
+    "Initial left choice and parent-stem analysis visible",
+    "Right direction changes labels only: exact parent/index/name/graph/MOL geometry unchanged",
+    "Active right direction conveyed via aria-pressed",
+    "Repeated right choice is idempotent",
+    "Switching back exactly restores numbering on same parent",
+    "Native keyboard Space activates focused direction button",
+    "Name-part click remains interactive and remembers direction",
+    "Direction action restores parent view after other name part",
+    "Locant analysis retains equivalent2,3 with reverse numbering",
+    "Zoom in/out preserves chosen right direction",
+    "Both direction buttons visible/nonoverlapping/hittable at390",
+    "Both direction buttons visible/nonoverlapping/hittable at320",
+    "Both direction buttons visible/nonoverlapping/hittable at1500",
+    "Direction/analysis/zoom/resize do not change actual learner receipt bytes",
+    "Explicit component numbering override retains precedence",
+    "Only numbers reverse in actual expanded view",
+    "Only numbers reverse in actual skeletal view",
+    "Only numbers reverse in actual condensed view",
+    "Step8 has no direction control/state leakage",
+    "Reentry step7 resets to left direction",
+    "Step6 keeps its original controls",
+    "Existing step5 alternative parent navigation still works",
+    "Step5 parent navigation returns to original",
+    "Non-equivalent methylpentane directions fail closed in actual lesson",
+    "Normal Exit returns to theory library"
+  ],
+  "limitations": [
+    "Owned headless Firefox; no personal browser interaction or freeze diagnosis",
+    "Viewport emulation, not physical mobile/Safari/screen reader or conference sequence",
+    "No full 3D audit; direction support requires2D-only step",
+    "Export actual Blob captured and validated; no browser download picker; actual Desktop export verified separately"
+  ],
+  "nativeKeyboard": {
+    "events": [
+      {
+        "key": " ",
+        "trusted": true
+      }
+    ],
+    "direction": "right",
+    "focused": "scNumberingRight"
+  },
+  "buttonBounds": [
+    {
+      "width": 390,
+      "buttons": [
+        {
+          "id": "scNumberingLeft",
+          "left": 132.8333282470703,
+          "right": 251.10000610351562,
+          "top": 358,
+          "bottom": 402,
+          "width": 118.26667785644531,
+          "height": 44,
+          "hit": true,
+          "pressed": "false",
+          "border": "1px"
+        },
+        {
+          "id": "scNumberingRight",
+          "left": 259.1000061035156,
+          "right": 350.18333435058594,
+          "top": 358,
+          "bottom": 402,
+          "width": 91.08332824707031,
+          "height": 44,
+          "hit": true,
+          "pressed": "true",
+          "border": "1px"
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "buttons": [
+        {
+          "id": "scNumberingLeft",
+          "left": 147.36666870117188,
+          "right": 265.6333312988281,
+          "top": 276,
+          "bottom": 320,
+          "width": 118.26666259765625,
+          "height": 44,
+          "hit": true,
+          "pressed": "false",
+          "border": "1px"
+        },
+        {
+          "id": "scNumberingRight",
+          "left": 124.44999694824219,
+          "right": 215.53334045410156,
+          "top": 328,
+          "bottom": 372,
+          "width": 91.08334350585938,
+          "height": 44,
+          "hit": true,
+          "pressed": "true",
+          "border": "1px"
+        }
+      ]
+    },
+    {
+      "width": 1500,
+      "buttons": [
+        {
+          "id": "scNumberingLeft",
+          "left": 1007.8333129882812,
+          "right": 1126.0999908447266,
+          "top": 415,
+          "bottom": 459,
+          "width": 118.26667785644531,
+          "height": 44,
+          "hit": true,
+          "pressed": "false",
+          "border": "1px"
+        },
+        {
+          "id": "scNumberingRight",
+          "left": 1134.0999755859375,
+          "right": 1225.1833038330078,
+          "top": 415,
+          "bottom": 459,
+          "width": 91.08332824707031,
+          "height": 44,
+          "hit": true,
+          "pressed": "true",
+          "border": "1px"
+        }
+      ]
+    }
+  ],
+  "failure": "Timed out: MuLERMoCScenario.present&&!!fScenarioPresent()&&!MuLERMoCScenario.checkpointPreparation&&!document.documentElement.classList.contains(\"lesson-loading\")",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/alkane-step7-numbering-20261108/check-browser.py\", line 119, in <module>\n    navigate('mulermoc-nom-54.html?scenario=scenarios/alkanes-user-3.scenario.json&v=step7-author-check');ready();ev('fScenarioSetAuthoring(true);document.querySelector(\".scenarioPanel.active .scList\").click();true');click('.scenarioPanel.active .srow[data-idx=\"6\"] .scPresentStep');until('MuLERMoCScenario.present&&!!document.getElementById(\"scNumberingRight\")');click('#scNumberingRight')\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/alkane-step7-numbering-20261108/check-browser.py\", line 19, in ready\n    app_ready();until('MuLERMoCScenario.present&&!!fScenarioPresent()&&!MuLERMoCScenario.checkpointPreparation&&!document.documentElement.classList.contains(\"lesson-loading\")',seconds=45)\n  File \"bidi\", line 51, in until\n    def labels():return json.loads(ev('JSON.stringify([...document.querySelectorAll(\"#jsmeNomeclatureSVG text[id^=number]\")].map(e=>({text:e.textContent,x:Number(e.getAttribute(\"x\")),y:Number(e.getAttribute(\"y\"))})).sort((a,b)=>a.x-b.x))'))\nAssertionError: Timed out: MuLERMoCScenario.present&&!!fScenarioPresent()&&!MuLERMoCScenario.checkpointPreparation&&!document.documentElement.classList.contains(\"lesson-loading\")\n",
+  "javascriptErrors": []
+}

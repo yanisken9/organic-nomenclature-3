@@ -1,0 +1,222 @@
+{
+  "completed": true,
+  "checks": [
+    {
+      "label": "Teacher drawing default on exposes New/Edit",
+      "detail": null
+    },
+    {
+      "label": "Beautify available in editor",
+      "detail": null
+    },
+    {
+      "label": "Real Beautify uses live11C horizontal chain",
+      "detail": {
+        "n": 11,
+        "range": 0
+      }
+    },
+    {
+      "label": "Beautify hidden in submitted depict preview",
+      "detail": null
+    },
+    {
+      "label": "New C11 GR/EN actual prediction",
+      "detail": null
+    },
+    {
+      "label": "Real JSmol preview has C11H24 35atoms",
+      "detail": null
+    },
+    {
+      "label": "Accept adds session molecule without automatic download",
+      "detail": null
+    },
+    {
+      "label": "Accepted skeletal is generated zigzag",
+      "detail": {
+        "n": 11,
+        "range": 0.585,
+        "bonds": 10
+      }
+    },
+    {
+      "label": "Manual Save delivers JS data payload",
+      "detail": null
+    }
+  ],
+  "fixturePolicy": "Actual PubChem REST responses stored locally; name/3D async transport replaced for repeatable authoring. Real JSME, engine, SVG, JSmol, registry and Blob payload.",
+  "saveButtonBefore": {
+    "selected": "custom_undecane",
+    "customKeys": [
+      "custom_undecane"
+    ],
+    "button": "<button type=\"button\" id=\"customMolSaveBtn\" class=\"viewerFullBtn\" onclick=\"fMolDraftSaveSelected()\">Λήψη .js</button>"
+  },
+  "saveCalls": [
+    {
+      "kind": "selected",
+      "selected": "custom_undecane",
+      "custom": true,
+      "draft": false
+    },
+    {
+      "kind": "single",
+      "key": "custom_undecane",
+      "hook": "function"
+    },
+    {
+      "kind": "singleResult",
+      "result": true
+    }
+  ],
+  "saveEvents": [
+    {
+      "type": "pointerdown",
+      "id": "customMolSaveBtn",
+      "tag": "BUTTON",
+      "x": 545,
+      "y": 500
+    },
+    {
+      "type": "pointerup",
+      "id": "customMolSaveBtn",
+      "tag": "BUTTON",
+      "x": 545,
+      "y": 500
+    },
+    {
+      "type": "click",
+      "id": "customMolSaveBtn",
+      "tag": "BUTTON",
+      "x": 545,
+      "y": 500
+    },
+    {
+      "type": "pointerdown",
+      "id": "",
+      "tag": "svg",
+      "x": 977,
+      "y": 319
+    },
+    {
+      "type": "pointerup",
+      "id": "",
+      "tag": "svg",
+      "x": 977,
+      "y": 319
+    },
+    {
+      "type": "click",
+      "id": "",
+      "tag": "svg",
+      "x": 977,
+      "y": 319
+    }
+  ],
+  "manualSave": {
+    "filename": "MULERMOC_undecane_data.js",
+    "bytes": 12612
+  },
+  "actualFixtureCalls": [
+    {
+      "kind": "name",
+      "s": "CCCCCCCCCCC"
+    },
+    {
+      "kind": "3d",
+      "s": "CCCCCCCCCCC"
+    }
+  ],
+  "javascriptErrors": [],
+  "downloads": {
+    "count": 1,
+    "pending": "object"
+  },
+  "diagnostics": [
+    {
+      "type": "console",
+      "method": "warn",
+      "source": {
+        "realm": "81599fcb-43c7-4858-a2c1-4b8ec9b79f1d",
+        "context": "fb26875f-ba78-491d-929c-bec008946ade",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "[fCalcMainChain] LENGTH MISMATCH  \"methane\"  calc=[1,2,3,4,5,6,7,8,9,10,11]  stored=[1]"
+        }
+      ],
+      "level": "warn",
+      "text": "[fCalcMainChain] LENGTH MISMATCH  \"methane\"  calc=[1,2,3,4,5,6,7,8,9,10,11]  stored=[1]",
+      "timestamp": 1793797313675,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 16,
+            "functionName": "fValidateMainChain",
+            "lineNumber": 1563,
+            "url": "http://127.0.0.1:8013/js/mulermoc-nom-core-54.js?v=v54-upstream-20261104-r1"
+          }
+        ]
+      }
+    },
+    {
+      "type": "console",
+      "method": "warn",
+      "source": {
+        "realm": "81599fcb-43c7-4858-a2c1-4b8ec9b79f1d",
+        "context": "fb26875f-ba78-491d-929c-bec008946ade",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "[fCalcMainChain] LENGTH MISMATCH  \"methane\"  calc=[1,2,3,4,5,6,7,8,9,10,11]  stored=[1]"
+        }
+      ],
+      "level": "warn",
+      "text": "[fCalcMainChain] LENGTH MISMATCH  \"methane\"  calc=[1,2,3,4,5,6,7,8,9,10,11]  stored=[1]",
+      "timestamp": 1793797313850,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 16,
+            "functionName": "fValidateMainChain",
+            "lineNumber": 1563,
+            "url": "http://127.0.0.1:8013/js/mulermoc-nom-core-54.js?v=v54-upstream-20261104-r1"
+          }
+        ]
+      }
+    },
+    {
+      "type": "console",
+      "method": "warn",
+      "source": {
+        "realm": "81599fcb-43c7-4858-a2c1-4b8ec9b79f1d",
+        "context": "fb26875f-ba78-491d-929c-bec008946ade",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "[fCalcMainChain3D] LENGTH MISMATCH  \"methane\"  calc=[10,8,6,4,2,1,3,5,7,9,11]  stored=[1]"
+        }
+      ],
+      "level": "warn",
+      "text": "[fCalcMainChain3D] LENGTH MISMATCH  \"methane\"  calc=[10,8,6,4,2,1,3,5,7,9,11]  stored=[1]",
+      "timestamp": 1793797314046,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 16,
+            "functionName": "fValidateMainChain3D",
+            "lineNumber": 2002,
+            "url": "http://127.0.0.1:8013/js/mulermoc-nom-core-54.js?v=v54-upstream-20261104-r1"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+<!doctype html><meta charset="utf-8"><title>Isolated native dialog wheel control</title>
+<style>body{margin:0}dialog{box-sizing:border-box;width:1180px;height:626px;max-height:calc(100dvh - 24px);max-width:calc(100% - 24px);padding:0;border:1px solid #aaa;overflow:auto}header{box-sizing:border-box;height:108.8333px;position:sticky;top:0;z-index:2;background:#dfeee8}.filler{height:802.1667px;background:linear-gradient(#fff,#ccc)}</style>
+<dialog id="control"><header>Isolated native control — no application scripts</header><div class="filler"></div></dialog>
+<script>
+const d=document.getElementById('control');let moving=false;window.events=[];window.samples=[];let started=0;
+d.addEventListener('wheel',e=>{const entry={ms:performance.now()-started,trusted:e.isTrusted,deltaY:e.deltaY,deltaMode:e.deltaMode,offsetX:e.offsetX,offsetY:e.offsetY,before:d.scrollTop,moving};if(moving&&window.controlMode!=='C'){moving=false;d.scrollTo({top:d.scrollTop,behavior:'instant'})}entry.after=d.scrollTop;events.push(entry)},{passive:true});
+window.startControl=function(mode,initial){window.controlMode=mode;moving=false;d.scrollTo({top:initial,behavior:'instant'});events=[];samples=[];started=performance.now();function sample(){samples.push({ms:performance.now()-started,scroll:d.scrollTop});if(performance.now()-started<1250)requestAnimationFrame(sample)}requestAnimationFrame(sample);if(mode==='B'||mode==='C'){moving=true;d.scrollTo({top:110,behavior:'smooth'})}return true};d.showModal();
+</script>

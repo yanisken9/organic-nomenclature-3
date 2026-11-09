@@ -1,0 +1,162 @@
+--- before/js/namelecule-game-repair.js
++++ after/js/namelecule-game-repair.js
+@@ -233,6 +233,11 @@
+     function getState() { return JSON.parse(JSON.stringify(currentState)); }
+     function emitState() {
+       if (!destroyed && typeof options.onStateChange === "function") options.onStateChange(getState());
++    }
++    function revealResponse(reason, start, end) {
++      if (!standalone && !destroyed && typeof options.onReveal === "function") {
++        options.onReveal({ reason: reason, start: start, end: end || start });
++      }
+     }
+     function listen(element, event, handler) {
+       const guarded = function (e) { if (!destroyed) handler(e); };
+@@ -416,6 +421,7 @@
+             clearFeedback();
+             updateControls(controlId("choice-" + index));
+             emitState();
++            revealResponse("candidate", refs.candidate, refs.checkHelper);
+           }, { id: controlId("choice-" + index), "aria-pressed": String(current.selectedValue === choice.value) });
+           choiceButton.disabled = !enabled;
+           refs.choices.append(choiceButton);
+@@ -435,6 +441,7 @@
+             updateControls(controlId("part-" + current.selectedPartId));
+             refs.selectionStatus.textContent = "Ο κλάδος μετακινήθηκε. Δες την πρότασή σου και πάτησε Έλεγχος.";
+             emitState();
++            revealResponse("order-candidate", refs.orderControls, refs.checkHelper);
+           }, { id: id, "aria-label": direction < 0 ? "Μετακίνησε τον επιλεγμένο κλάδο αριστερά" : "Μετακίνησε τον επιλεγμένο κλάδο δεξιά" });
+           moveButton.disabled = !enabled || selectedIndex < 0 || selectedIndex + direction < 0 || selectedIndex + direction >= current.order.length;
+           refs.orderControls.append(moveButton);
+@@ -471,6 +478,9 @@
+       }
+       updateControls(controlId("part-" + id));
+       emitState();
++      if (round().kind === "order") revealResponse("order-controls", refs.selectionStatus, refs.orderControls);
++      else if (id === round().targetPartId) revealResponse("replacement-options", refs.choiceFieldset);
++      else revealResponse("selection-feedback", refs.selectionStatus);
+     }
+ 
+     function clearFeedback() {
+@@ -510,10 +520,12 @@
+         if (destroyed) return;
+         showSuccess(result, true);
+         if (!destroyed && typeof options.onSolved === "function") options.onSolved(Object.assign({}, result), getState());
++        revealResponse("success", refs.feedback, refs.next);
+       } else {
+         replaceChildren(refs.feedback, node("p", { text: result.message }));
+         updateControls(controlId("check-button"));
+         emitState();
++        revealResponse("check-feedback", refs.feedback);
+       }
+     }
+ 
+--- before/js/namelecule-generated-repair-checkpoint.js
++++ after/js/namelecule-generated-repair-checkpoint.js
+@@ -181,6 +181,10 @@
+       current = global.NameleculeRepairGame.mountRound(roundHost, {
+         round: lessonRoundForDisplay(set.rounds[index]), initialState: state.states[index], assetBase: options.assetBase,
+         continueLabel: index < 2 ? "Επόμενο κουίζ" : "Συνεχίζω τη θεωρία",
++        onReveal(request) {
++          if (!destroyed && state.currentRound === index && roundHost.isConnected &&
++            typeof options.onReveal === "function") options.onReveal(request);
++        },
+         onStateChange(roundState) {
+           if (destroyed) return;
+           state.states[index] = roundState;
+--- before/js/namelecule-quiz-checkpoints.js
++++ after/js/namelecule-quiz-checkpoints.js
+@@ -14,6 +14,7 @@
+   let progressCounter = null;
+   let mounted = null;
+   let mountToken = 0;
++  let revealingResponse = false;
+ 
+   function registerType(name, adapter) {
+     if (!/^[a-z][a-z0-9-]{0,48}$/.test(name) || own(types, name) || !adapter ||
+@@ -219,7 +220,39 @@
+     progressCounter.hidden = !valid;
+     progressCounter.textContent = valid ? text("counter") + " " + value.current + "/" + value.total : "";
+   }
++  function stopResponseScroll() {
++    if (!revealingResponse || !dialog) return;
++    revealingResponse = false;
++    if (typeof dialog.scrollTo === "function") dialog.scrollTo({ top: dialog.scrollTop, behavior: "instant" });
++  }
++  function revealResponse(request) {
++    if (!dialog || !dialog.open || !mountHost || !request) return;
++    const start = request.start, end = request.end || start;
++    if (!start || !end || !start.isConnected || !end.isConnected ||
++      !mountHost.contains(start) || !mountHost.contains(end) ||
++      typeof start.getBoundingClientRect !== "function" || typeof end.getBoundingClientRect !== "function") return;
++    stopResponseScroll();
++    const first = start.getBoundingClientRect(), last = end.getBoundingClientRect();
++    if (first.height <= 0 || last.height <= 0) return;
++    const box = dialog.getBoundingClientRect();
++    const header = dialog.querySelector(".nl-quiz-dialog-header");
++    const top = Math.max(box.top + dialog.clientTop, header ? header.getBoundingClientRect().bottom : box.top) + 12;
++    const bottom = box.top + dialog.clientTop + dialog.clientHeight - 12;
++    const rangeTop = Math.min(first.top, last.top), rangeBottom = Math.max(first.bottom, last.bottom);
++    if (![top, bottom, rangeTop, rangeBottom].every(Number.isFinite) || bottom <= top) return;
++    if (rangeTop >= top && rangeBottom <= bottom) return;
++    // Keep a long explanation's beginning visible instead of jumping past it to Continue.
++    const delta = rangeBottom - rangeTop > bottom - top || rangeTop < top ? rangeTop - top : rangeBottom - bottom;
++    const destination = Math.max(0, Math.min(dialog.scrollHeight - dialog.clientHeight, dialog.scrollTop + delta));
++    if (Math.abs(destination - dialog.scrollTop) < 1) return;
++    const reducedMotion = typeof global.matchMedia === "function" && global.matchMedia("(prefers-reduced-motion: reduce)").matches;
++    if (typeof dialog.scrollTo === "function") {
++      revealingResponse = !reducedMotion;
++      dialog.scrollTo({ top: destination, behavior: reducedMotion ? "instant" : "smooth" });
++    } else dialog.scrollTop = destination;
++  }
+   function destroyMount() {
++    stopResponseScroll();
+     mountToken++;
+     showProgress(null);
+     const previous = mounted;
+@@ -262,7 +295,10 @@
+     dialog.append(header, mountHost, retryButton);
+     dialog.addEventListener("cancel", event => { event.preventDefault(); closeDialog(); });
+     // Let the round handle its own keys first, then stop lesson arrows/Escape.
+-    dialog.addEventListener("keydown", event => { event.stopPropagation(); });
++    dialog.addEventListener("keydown", event => { stopResponseScroll(); event.stopPropagation(); });
++    dialog.addEventListener("wheel", stopResponseScroll, { passive: true });
++    dialog.addEventListener("touchstart", stopResponseScroll, { passive: true });
++    dialog.addEventListener("pointerdown", stopResponseScroll, { passive: true });
+     dialog.addEventListener("close", destroyMount);
+     global.document.body.append(dialog);
+   }
+@@ -305,8 +341,15 @@
+           showProgress(value);
+           const nextRound = validProgress(value) ? value.current + "/" + value.total : null;
+           // A new question starts above the fold; same-round updates keep the learner's scroll.
+-          if (nextRound && nextRound !== visibleRound && dialog && dialog.open) dialog.scrollTop = 0;
++          if (nextRound !== visibleRound) {
++            stopResponseScroll();
++            if (nextRound && dialog && dialog.open) dialog.scrollTop = 0;
++          }
+           visibleRound = nextRound;
++        },
++        onReveal(request) {
++          if (token !== mountToken || !currentContext(context)) return;
++          revealResponse(request);
+         },
+         onStateChange(state) {
+           if (token !== mountToken || !currentContext(context)) return;
+--- before/mulermoc-nom-54.html
++++ after/mulermoc-nom-54.html
+@@ -367,11 +367,11 @@
+   <script src="js/mulermoc-nom-molview-54.js?v=step7-numbering-directions-20261108-r3"></script>
+   <script src="js/mulermoc-nom-teaching-54.js?v=alkane-step5-interaction-20261106-r1"></script>
+   <script src="js/mulermoc-nom-note-54.js?v=v54-sync-20261104-r2"></script>
+-  <script src="js/namelecule-game-repair.js?v=workshop-reset-removal-20261107-r1"></script>
+-  <script src="js/namelecule-quiz-checkpoints.js?v=quiz-round-scroll-20261109-r1"></script>
++  <script src="js/namelecule-game-repair.js?v=quiz-answer-reveal-20261109-r1"></script>
++  <script src="js/namelecule-quiz-checkpoints.js?v=quiz-answer-reveal-20261109-r1"></script>
+   <script src="js/namelecule-chemistry-client.js?v=verified-engines-20261105-r1"></script>
+   <script src="js/namelecule-repair-generator.js?v=engine-pilot-20261105-r1"></script>
+-  <script src="js/namelecule-generated-repair-checkpoint.js?v=quiz-header-progress-20261108-r1"></script>
++  <script src="js/namelecule-generated-repair-checkpoint.js?v=quiz-answer-reveal-20261109-r1"></script>
+   <script src="js/mulermoc-nom-scenario-54.js?v=step7-numbering-directions-20261108-r3"></script>
+   <script src="js/mulermoc-nom-iupac-54.js?v=merge54-20261105-r1"></script>
+   <script src="js/mulermoc-nom-lang-54.js?v=merge54-20261105-r1"></script>

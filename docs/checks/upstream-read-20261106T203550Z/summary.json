@@ -1,0 +1,102 @@
+{
+  "checked_at_utc": "2026-11-06T20:35:50.676612+00:00",
+  "checked_at_athens": "2026-11-06T22:35:50.676612+02:00",
+  "upstream": "https://github.com/nick-charistos/organic-nomenclature-3",
+  "last_previously_checked": "747c924e5305cd9aefea09065b63d4090f44ada9",
+  "current_head": "c5069abdc52d6c52175de6257a1ba40538e74668",
+  "last_actually_synchronized": "f49b810c93ec85d06163679aff4a8642ea1b4cd3",
+  "new_commits_since_check": 8,
+  "pending_commits_since_sync": 10,
+  "new_paths_since_check": 16,
+  "pending_paths_since_sync": 18,
+  "commits": [
+    {
+      "sha": "3126c93eaa3325feaacb7ad261ce03ee55ca4d0f",
+      "title": "v54 display compensation + Edit contract: equalizer fonts/numbering, splay, skip-tidy, stray guard, fork full-gen",
+      "date": "2026-11-06T11:32:10Z"
+    },
+    {
+      "sha": "8a29f01a7888a7c1f4dd00b18910c0f253cb3215",
+      "title": "docs: resume pointer -> 3126c93",
+      "date": "2026-11-06T11:32:17Z"
+    },
+    {
+      "sha": "5d40ebe65ac85185f78d9c4c52abe49c9aff9f45",
+      "title": "v54 OpenClatura second oracle: display rows, verdict badge, merged verdicts, stale-marker fix",
+      "date": "2026-11-06T12:09:27Z"
+    },
+    {
+      "sha": "1fc902955f3f4848abe8bc7f599fc7a8ffaf5ca1",
+      "title": "docs: resume pointer -> 5d40ebe",
+      "date": "2026-11-06T12:09:35Z"
+    },
+    {
+      "sha": "4bd1ed8f07f7f5e00fdb29b8b91349d24058363b",
+      "title": "css tweak",
+      "date": "2026-11-06T12:11:33Z"
+    },
+    {
+      "sha": "085bb41a189db5cc9a3b4b5c7833ad8a648a98ff",
+      "title": "docs: data-phase session plan (manifest, school freeze, scaling)",
+      "date": "2026-11-06T12:28:51Z"
+    },
+    {
+      "sha": "ebfbbd9cd5a702cecd2cf60874b470601d6b9f7c",
+      "title": "v54: linearizer overlap fix, draft hardening, OC outline OR fix, badge removal (?v=54.17)",
+      "date": "2026-11-06T19:16:51Z"
+    },
+    {
+      "sha": "c5069abdc52d6c52175de6257a1ba40538e74668",
+      "title": "v54: draft preview carbon labels via [C] annotation (?v=54.18)",
+      "date": "2026-11-06T19:36:03Z"
+    }
+  ],
+  "all_remote_reads_succeeded": true,
+  "main_changes": [
+    "2D per-mode C-C equalization, expanded label/number compensation, collision-aware hydrogen placement and linearizer branching.",
+    "Draft same-molecule slot updates, fork generation, stale/async Accept and Draw/Cancel hardening, carbon-label annotations.",
+    "OpenClatura external English-name display and merged OR verdicts with PubChem, plus XSS and parser/naming guards.",
+    "Documentation-only data-phase plan for scaling141 to~1000; Yannis127-form policy sync explicitly deferred."
+  ],
+  "overlap_agent": "/root/workshop_stop_visibility_preflight",
+  "potential_overlaps": [
+    {
+      "path": "js/mulermoc-nom-core-54.js",
+      "detail": "Same generators fGenExpandedMol/fLinearizeMol/fZigzagMol: upstream CC1/CH.5/collision-splay versus current local1.17/.78 generators with chemical fail-closed/sp/terminal guards. Stored local uniform MOL policy0.6188/0.3094 is distinct from generator defaults."
+    },
+    {
+      "path": "js/mulermoc-nom-molview-54.js",
+      "detail": "New equalizer/font/number helpers intersect current fPrepareFixedCCAlkanePrototype/label metrics/fFit2DSVG/fixedCCNumberScale; Accept epoch protections must be reconciled with existing MulerDraftAcquisition and restore guards."
+    },
+    {
+      "path": "js/mulermoc-nom-scenario-54.js",
+      "detail": "Apply/RestoreAuthorSettings direct scale calls replaced by common helper; interacts with presentation zoom and local authoring/presentation changes."
+    }
+  ],
+  "actual_merge_conflicts_determined": false,
+  "new_external_dependency": {
+    "url": "https://openclatura.org/name",
+    "purpose": "English-name lookup and draft auto-verdict via OR with PubChem",
+    "network_required_for_new_lookup": true,
+    "runtime_tested_here": false,
+    "observations": "Single fetch attempt, no explicit timeout/AbortSignal in inspected helper; in-memory per-entry cache, no independent persistent offline cache. Upstream sectionO pending live run."
+  },
+  "no_runtime_tests_this_task": true,
+  "merged": false,
+  "core_changed": false,
+  "core_hashes_verified_unchanged": {
+    "js/mulermoc-nom-core-43.js": "93373c8ea49d6489350c4c7eee36d444b0f6ff5c13c500aa9662d4997575ac21",
+    "js/mulermoc-nom-core-42.js": "a7b95d7fd9eb8589c2f441205ddd3751bd6da9bf9834fa60d9a5b5d2d2aa2b83",
+    "js/mulermoc-nom-core-52.js": "d2138418ff630ab77e578b80ca8ba3a10cc1b877c3ab8c0e5c2735ffcd1f24a2",
+    "js/mulermoc-nom-core-49.js": "ae85dd22b94292ed539ff2a858a1a6fe3672af90298662e5c6860fb411a65951",
+    "js/mulermoc-nom-core-48.js": "37dad911ed73af0768fc922186cb94e71df7df1144b2c1e75aee4c9202ce6c0d",
+    "js/mulermoc-nom-core-45.js": "dde5fb6350a0374e1ebda69e0870cbfce0bbed027b8219f33bc4de3c4cf9ae74",
+    "js/mulermoc-nom-core-51.js": "096d617853646de0dfd67bcbde3e32252aebcb98e7525b05e6f7e71ccb48a5fc",
+    "js/mulermoc-nom-core-50.js": "0f79b5af20b9c3b4504673876abc03b6c162af316c33dff55fd55e0c22a43fd9",
+    "js/mulermoc-nom-core-44.js": "3bb8773be785992ec581d4cdd11a58a6bb5a833ed429ae07287839b436e523e1",
+    "js/mulermoc-nom-core-54.js": "8f3e5f76d96322faf7cf9251f4cae3eca204fe2f82bf5754fdce6ffc4cd5d5a9"
+  },
+  "committed": false,
+  "published": false,
+  "next_step": "Separate scoped integration plan for10pending commits, reconcile generator/viewer/async protections, explicitly review new external naming-verdict dependency and geometry choices before implementation."
+}

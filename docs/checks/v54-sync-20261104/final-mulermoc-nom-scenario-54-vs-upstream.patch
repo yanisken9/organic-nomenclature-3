@@ -1,0 +1,463 @@
+--- docs/checks/v54-sync-20261104/upstream-snapshot/js/mulermoc-nom-scenario-54.js	2026-11-04 09:18:48
++++ js/mulermoc-nom-scenario-54.js	2026-11-04 09:55:43
+@@ -18,12 +18,15 @@
+   presentId: null, // scenario being presented (set on Play, cleared on Exit)
+   seq: 0, // scenario id sequence
+   present: false,
++  returnToTheoryLibrary: false, // library-launched lessons return there on Exit/Esc
+   ready: false,
+   applyToken: 0, // S2: bumped per fScenarioApply; stale async follow-ups abort
+   pending3D: null, // S2: {token, mol, step, done} — name click waits for 3D parse
+   authorSettings: null, // pre-Present checkbox states, restored on Exit
++  nameBoxLayoutContext: null, // live render context: null = normal v54, 1 = legacy, 2 = v54
+   menuPickMode: false, // authoring: show pick checkboxes in the left menu
+   authoring: false, // authoring mode: bar + panels + pick UI (off by default)
++  authoringOpened: false, // session-only reload warning survives closing the author bar
+   pinned: false, // authoring pin-dock: bar docked in-flow at the row's right end (live-only, never in step JSON)
+   pinPref: true, // remembered authoring pin choice (default pinned; panel stays closed until opened; live-only, session-scoped, never in step JSON)
+   maxEmptyScenarios: 3, // adjustable cap on step-less cards (scNew locks at cap)
+@@ -58,6 +61,50 @@
+   if (isNaN(d.getTime())) return null;
+   return d.toISOString();
+ }
++
++// Name-box identities are an authored contract (including hidden groups and
++// replayed highlights). Old snapshots predate the v54 split pieces; preserve
++// their slot semantics without changing the saved source JSON. The version is
++// additive within scenarioVersion 1 and follows the step through export/import.
++function fScenarioValidNameBoxLayout(v, step) {
++  if (v === 1 || v === 2) return v;
++  // Imported upstream v53/v54 snapshots may already use split-piece IDs
++  // without this local compatibility marker. Their explicit semantics win.
++  if (typeof v === "undefined" && step) {
++    var mode = step.nameAnalysisMode || "";
++    if (/^compBranch(Sub|Loc)\d+$/.test(mode) || mode === "compSuffixLocants") return 2;
++    var hidden = step.styleName && step.styleName.hidden;
++    if (Array.isArray(hidden) && hidden.some(function (id) {
++      return /^comp3(loc|b)\d*$/.test(id) || id === "comp9loc";
++    })) return 2;
++  }
++  return 1;
++}
++function fScenarioUseLegacyNameBoxes() {
++  return MuLERMoCScenario.nameBoxLayoutContext === 1;
++}
++function fScenarioClearNameBoxLayout() {
++  MuLERMoCScenario.nameBoxLayoutContext = null;
++}
++
++// After returning from a fused legacy view, an old group selection must not
++// silently acquire the meaning of the first newly split piece. Inspect the
++// rendered contract rather than guessing from molecule-specific cases.
++function fScenarioInvalidateChangedNameBoxSelection(previousLayout) {
++  if (previousLayout !== 1 || fScenarioUseLegacyNameBoxes()) return;
++  try {
++    var splitBranch = nameAnalysisMode === "compSecondSub2" &&
++      typeof fSplitBranchPiecesActive === "function" && fSplitBranchPiecesActive();
++    var splitSuffix = nameAnalysisMode === "compSuffix" &&
++      typeof fSplitSuffixLocantsActive === "function" && fSplitSuffixLocantsActive();
++    if (!splitBranch && !splitSuffix) return;
++    nameAnalysisMode = "none";
++    $(".nameCompBox").removeClass("selected");
++    if (typeof fClearHighlights === "function") fClearHighlights();
++    if (typeof fUpdateSVG === "function") fUpdateSVG();
++    if (typeof fExplainNameComp === "function") fExplainNameComp();
++  } catch (eLayout) { /* naming layer unavailable */ }
++}
+ function fScenarioNewId() {
+   MuLERMoCScenario.seq = (MuLERMoCScenario.seq || 0) + 1;
+   return "s" + MuLERMoCScenario.seq;
+@@ -91,7 +138,38 @@
+ function fScenarioPresent() {
+   var p = MuLERMoCScenario.presentId ? fScenarioGet(MuLERMoCScenario.presentId) : null;
+   return p || fScenarioActive();
++}
++// Corresponding rule titles in the supported theory presentations.
++// Keep the corresponding rule title available; its table opens only by request.
++function fScenarioShowComponentRule(mode) {
++  if (!MuLERMoCScenario.present) return false;
++  var lesson = fScenarioPresent();
++  return !!lesson && [
++    "Αλκάνια-Ονοματολογία και διακλαδώσεις",
++    "Αλκένια-Ονοματολογία και διακλαδώσεις",
++    "Αλκίνια-Ονοματολογία και διακλαδώσεις",
++    "Αλκαδιένια-Ονοματολογία και διακλαδώσεις",
++    "Ονοματολογία Αλκενινίων",
++    "Κορεσμένες μονοσθενείς αλκοόλες",
++    "Άλλες αλκοόλες",
++    "Ονοματολογία Κορεσμένων Μονοαιθέρων",
++    "Κορεσμένες μονοσθενείς αλδεΰδες",
++    "Άλλες αλδεΰδες",
++    "Κορεσμένες μονοσθενείς κετόνες",
++    "Άλλες κετόνες",
++    "Κορεσμένα μονοκαρβοξυλικά οξέα",
++    "Άλλα καρβοξυλικά οξέα"
++  ].indexOf(lesson.title) !== -1 &&
++    /^(compCarbonsCount|compBondType|compSuffix|compSecondSub1|compSecondSub2|compNumber1|compNumber2|compBondType2|compBondPos|compEndNumber|compAcidNumber3|compAcidSub3)$/.test(mode || "");
++}
++
++// Optional authored reference, off for every step that does not request it.
++function fScenarioShowAlkoxyRule() {
++  if (!MuLERMoCScenario.present) return false;
++  var lesson = fScenarioPresent(), step = lesson && lesson.steps[lesson.index];
++  return !!(step && step.show && step.show.alkoxyRule === true);
+ }
++
+ function fScenarioNew(title, silent) {
+   var scen = {
+     id: fScenarioNewId(),
+@@ -100,7 +178,9 @@
+     created: fScenarioNowIso(),
+     steps: [],
+     index: 0,
+-    menuPick: []
++    menuPick: [],
++    showStepNumbers: true,
++    reserveTitleSpace: false
+   };
+   MuLERMoCScenario.scenarios.push(scen);
+   MuLERMoCScenario.activeId = scen.id;
+@@ -151,6 +231,8 @@
+   compSecondSub1: "comp1",
+   compNumber2: "comp2",
+   compSecondSub2: "comp3",
++  compAcidNumber3: "acidPrefixNumber3",
++  compAcidSub3: "acidPrefixSub3",
+   compBondPos: "comp4",
+   compCarbonsCount: "comp5",
+   compBondType: "comp6",
+@@ -567,6 +649,7 @@
+   if (_capLang !== "en" && _capLang !== "gr") _capLang = "gr";
+   var step = {
+     n: act.steps.length + 1,
++    nameBoxLayout: fScenarioUseLegacyNameBoxes() ? 1 : 2,
+     lang: _capLang,
+     title: !mol ? "menu" : (_liveMol === mol && _greek ? _greek : mol),
+     note: "",
+@@ -1023,6 +1106,7 @@
+ function fScenarioDefaults(step, i) {
+   var d = {
+     n: i + 1,
++    nameBoxLayout: 1,
+     lang: "gr",
+     title: step.selectedMol || "step " + (i + 1),
+     note: "",
+@@ -1058,6 +1142,9 @@
+   out.show.viewers = Object.assign({}, d.show.viewers, (step.show || {}).viewers || {});
+   out.show.controls = Object.assign({}, d.show.controls, (step.show || {}).controls || {});
+   out.show.save = Object.assign({}, d.show.save, (step.show || {}).save || {});
++  if (Object.prototype.hasOwnProperty.call(out.show, "alkoxyRule")) {
++    out.show.alkoxyRule = out.show.alkoxyRule === true;
++  }
+   // Single-viewer max height: normalize silently (null = Auto); the validate
+   // path warns on non-empty invalid input.
+   out.show.viewerMaxHeight = fScenarioValidViewerMaxHeight(
+@@ -1086,6 +1173,7 @@
+     position: fScenarioValidTextPosition(out.styleText ? out.styleText.position : null)
+   };
+   out.n = i + 1;
++  out.nameBoxLayout = fScenarioValidNameBoxLayout(step.nameBoxLayout, step);
+   // Step language (additive, no version bump): en|gr, legacy/unknown → gr.
+   // Silent here; fScenarioValidate warns on invalid present values.
+   var _rawLang = step ? step.lang : undefined;
+@@ -1113,6 +1201,9 @@
+       return;
+     }
+     var st = fScenarioDefaults(s, steps.length);
++    if (typeof s.nameBoxLayout !== "undefined" && s.nameBoxLayout !== 1 && s.nameBoxLayout !== 2) {
++      warnings.push("Step " + (i + 1) + ": invalid name-box layout discarded (legacy layout used).");
++    }
+     var _rawNF = s && typeof s.noteFormat !== "undefined" ? s.noteFormat : null;
+     if (_rawNF !== null && _rawNF !== "" && _rawNF !== "text" && _rawNF !== "html") {
+       warnings.push("Step " + (i + 1) + ": invalid note format discarded (text used).");
+@@ -1221,6 +1312,8 @@
+     title: obj.title || obj.scenario || "scenario",
+     author: _author,
+     created: _created,
++    showStepNumbers: obj.showStepNumbers !== false,
++    reserveTitleSpace: obj.reserveTitleSpace === true,
+     warnings: warnings
+   };
+ }
+@@ -1359,6 +1452,7 @@
+ // can restore the author's working settings instead of the step's values.
+ function fScenarioStashAuthorSettings() {
+   MuLERMoCScenario.authorSettings = {
++    nameBoxLayoutContext: MuLERMoCScenario.nameBoxLayoutContext,
+     bondAtoms: fScenarioCheck("bondAtomsCheck", false),
+     numberingAtoms: fScenarioCheck("highlightNumberingCheck", true),
+     numberingBonds: fScenarioCheck("highlightNumberingBondsCheck", true),
+@@ -1373,7 +1467,18 @@
+ 
+ function fScenarioRestoreAuthorSettings() {
+   var a = MuLERMoCScenario.authorSettings;
+-  if (!a) return;
++  var previousLayout = MuLERMoCScenario.nameBoxLayoutContext;
++  if (!a) {
++    fScenarioClearNameBoxLayout();
++    try {
++      if (typeof fShowNameAnalysis === "function") fShowNameAnalysis();
++      fScenarioInvalidateChangedNameBoxSelection(previousLayout);
++    } catch (eLayout) { /* naming unavailable */ }
++    return;
++  }
++  MuLERMoCScenario.nameBoxLayoutContext =
++    a.nameBoxLayoutContext === 1 || a.nameBoxLayoutContext === 2
++      ? a.nameBoxLayoutContext : null;
+   fScenarioSetCheck("bondAtomsCheck", !!a.bondAtoms, "selectedCheck", "unselectedCheck");
+   fScenarioSetCheck("highlightNumberingCheck", a.numberingAtoms !== false, "selectedCheck", "unselectedCheck");
+   fScenarioSetCheck("highlightNumberingBondsCheck", a.numberingBonds !== false, "selectedCheck", "unselectedCheck");
+@@ -1406,6 +1511,7 @@
+   // outside presentation.
+   try {
+     if (typeof fShowNameAnalysis === "function") fShowNameAnalysis();
++    fScenarioInvalidateChangedNameBoxSelection(previousLayout);
+   } catch (e) {
+     /* naming unavailable */
+   }
+@@ -1842,6 +1948,8 @@
+ 
+ function fScenarioApply(step) {
+   if (!MuLERMoCScenario.ready || !step) return false;
++  // Set before any load or naming repaint, in presentation and Go preview.
++  MuLERMoCScenario.nameBoxLayoutContext = fScenarioValidNameBoxLayout(step.nameBoxLayout, step);
+   // Step language: the step shows naming + UI in its creation language.
+   // Single chokepoint — present navigation, authoring preview, exit align.
+   try {
+@@ -1971,17 +2079,20 @@
+   }
+   // Per-step main-chain walk index re-asserted after the load: fSelectMol
+   // resets to pool[0] via fInitProps, then the stored step applies on top.
+-  // Naming/boxes stay as loaded (winner); the highlight replay (§5 below)
+-  // paints onto the stepped chain. Out-of-range (data changed since
+-  // authoring) falls back to the winner. The async 3D side needs no hook:
+-  // fCalcMainChain3D adopts pool3D[shared idx] when the parse lands.
++  // Resolve a stored choice to its most horizontal chemical equivalent,
++  // then recompute its name. Out-of-range indices fall back to the winner.
++  // Async 3D parsing matches the final numbered chemical identity.
+   try {
+     if (typeof mainChainPool !== "undefined" && Array.isArray(mainChainPool) &&
+       mainChainPool.length > 0) {
+       var _ci = fScenarioValidChainIdx(step.chainIdx);
+       if (_ci > mainChainPool.length - 1) _ci = 0;
++      var _horizontal = fHorizontalEquivalentIndex(mainChainPool, mainChainPool[_ci].chain);
++      if (_horizontal >= 0) _ci = _horizontal;
+       mainChainPoolIdx = _ci;
+       mainChainAtomsList = mainChainPool[_ci].chain.slice();
++      fGuessName(true);
++      fMatchNumberedMainChain3D();
+     }
+   } catch (eChain) { /* chain unavailable */ }
+   try {
+@@ -2055,7 +2166,7 @@
+ 
+   // 6. rule area
+   try {
+-    if (step.show.rule) {
++    if (step.show.rule || fScenarioShowComponentRule(step.nameAnalysisMode) || fScenarioShowAlkoxyRule()) {
+       $("#ruleTheoryContainer").show();
+       if (typeof step.selectedRule === "number" && typeof fShowRuleTheory === "function") {
+         fShowRuleTheory();
+@@ -2099,7 +2210,17 @@
+ function fScenarioSyncPresentClass() {
+   try {
+     var pc = document.getElementById("pageContainer");
+-    if (pc) pc.classList.toggle("presenting", !!MuLERMoCScenario.present);
++    if (pc) {
++      pc.classList.toggle("presenting", !!MuLERMoCScenario.present);
++      var reserve = MuLERMoCScenario.present && fScenarioPresent().reserveTitleSpace === true;
++      pc.classList.toggle("scReserveTitleSpace", !!reserve);
++      var bar = document.getElementById("scenarioPlayBar");
++      if (reserve && bar) {
++        pc.style.setProperty("--sc-playbar-height", bar.getBoundingClientRect().height + "px");
++      } else {
++        pc.style.removeProperty("--sc-playbar-height");
++      }
++    }
+   } catch (e) {
+     /* no DOM */
+   }
+@@ -3873,11 +3994,15 @@
+   if (MuLERMoCScenario.present && step && step.n && showTextOn(step)) {
+     if (step.title) {
+       h1.textContent = "";
+-      var numSpan = document.createElement("span");
+-      numSpan.className = "scStepNumberTitle";
+-      numSpan.textContent = step.n + ".";
+-      // h1.appendChild(numSpan);
+-      h1.appendChild(document.createTextNode(" " + step.title));
++      if (fScenarioPresent().showStepNumbers !== false) {
++        var numSpan = document.createElement("span");
++        numSpan.className = "scStepNumberTitle";
++        numSpan.textContent = step.n + ".";
++        h1.appendChild(numSpan);
++        h1.appendChild(document.createTextNode(" " + step.title));
++      } else {
++        h1.textContent = step.title;
++      }
+     } else {
+       h1.textContent = appTitle;
+     }
+@@ -4080,6 +4205,7 @@
+ // authoring turns off — only the UI hides and pick mode disengages.
+ function fScenarioSetAuthoring(on) {
+   MuLERMoCScenario.authoring = !!on;
++  if (on) MuLERMoCScenario.authoringOpened = true;
+   if (!MuLERMoCScenario.authoring) {
+     fScenarioNoteEditorClose();
+     MuLERMoCScenario.menuPickMode = false;
+@@ -4361,9 +4487,11 @@
+   if (!scen) return;
+   var data = {
+     scenarioVersion: MuLERMoCScenario.SUPPORTED_VERSION,
+-    app: "mulermoc-nom-44",
++    app: "mulermoc-nom-54",
+     scenario: scen.title,
+     title: scen.title,
++    showStepNumbers: scen.showStepNumbers !== false,
++    reserveTitleSpace: scen.reserveTitleSpace === true,
+     author: fScenarioValidAuthor(scen.author),
+     created: scen.created || fScenarioNowIso(),
+     steps: scen.steps,
+@@ -4380,6 +4508,8 @@
+       res.warnings.forEach(fScenarioToast);
+       if (!res.ok) return;
+       var scen = fScenarioNew(res.title || "imported-scenario", true);
++      scen.showStepNumbers = res.showStepNumbers;
++      scen.reserveTitleSpace = res.reserveTitleSpace;
+       scen.steps = res.steps;
+       scen.index = 0;
+       scen.author = res.author || "Unknown";
+@@ -4398,6 +4528,10 @@
+ // (menu menu-open + both viewers + all bars) via a transient clone — the
+ // stored step keeps its authored show.* for a later Export.
+ function fScenarioExitPresent() {
++  if (MuLERMoCScenario.present && MuLERMoCScenario.returnToTheoryLibrary) {
++    location.assign("design/theory-library.html?v=alkynes-library-20261022");
++    return;
++  }
+   MuLERMoCScenario.present = false;
+   MuLERMoCScenario.presentId = null;
+   MuLERMoCScenario.pending3D = null;
+@@ -4452,6 +4586,7 @@
+     // ... and the author's own checkbox settings, not the step's
+     fScenarioRestoreAuthorSettings();
+   } else {
++    fScenarioClearNameBoxLayout();
+     fScenarioChrome(null);
+     fScenarioRestoreChrome();
+     fScenarioRestoreAuthorMenu();
+@@ -5840,6 +5975,7 @@
+     ok = false;
+   }
+   if (!ok) {
++    if (window.fLessonLoadingDone) window.fLessonLoadingDone(true);
+     fScenarioToast("Could not apply step " + (i + 1) + ".");
+     return;
+   }
+@@ -5862,6 +5998,7 @@
+   }
+   fScenarioPlayUi();
+   fScenarioRenderPresentMenu();
++  if (window.fLessonLoadingDone) window.fLessonLoadingDone(false);
+ }
+ 
+ // ── per-step Update (authoring): Go → tweak live view → Update ───────────
+@@ -5890,6 +6027,7 @@
+   // size), per-step chrome permissions. These are edited directly in the
+   // drawer at any time.
+   fresh.n = old.n;
++  fresh.nameBoxLayout = fScenarioValidNameBoxLayout(old.nameBoxLayout, old);
+   fresh.title = old.title;
+   fresh.note = old.note;
+   fresh.noteFormat = old.noteFormat === "html" ? "html" : "text";
+@@ -5907,6 +6045,9 @@
+   fresh.show.nameSettings = oldShow.nameSettings === true;
+   fresh.show.nameClick = oldShow.nameClick === true;
+   fresh.show.nameEye = oldShow.nameEye === true;
++  if (Object.prototype.hasOwnProperty.call(oldShow, "alkoxyRule")) {
++    fresh.show.alkoxyRule = oldShow.alkoxyRule === true;
++  }
+   fresh.menuGroups = fScenarioValidMenuGroups(old.menuGroups);
+   s.steps[idx] = fresh;
+   fScenarioSyncLegacy();
+@@ -5968,7 +6109,7 @@
+   } catch (e) {
+     /* no hash */
+   }
+-  return { scenario: q.scenario || null, present: q.present === "1", step: step, mol: q.mol || null };
++  return { scenario: q.scenario || null, present: q.present === "1", fromTheoryLibrary: q.from === "theory-library", step: step, mol: q.mol || null };
+ }
+ 
+ function fScenarioBoot() {
+@@ -5981,7 +6122,13 @@
+     /* no DOM */
+   }
+   var url = fScenarioParseUrl();
++  // Capture the original empty card before waiting for applets/network. A
++  // late optional library preload must never target a newly active user card.
++  var defaultPreloadCard = url.scenario ? null : fScenarioActive();
++  var defaultPreloadSnapshot = defaultPreloadCard ? JSON.stringify(defaultPreloadCard) : null;
+   MuLERMoCScenario.present = url.present;
++  MuLERMoCScenario.returnToTheoryLibrary = !!(url.scenario && url.present &&
++    (url.fromTheoryLibrary || url.scenario === "scenarios/alkenes-nomenclature-branches.scenario.json"));
+   fScenarioWhenReady(function () {
+     if (!url.scenario && url.mol && typeof nameExamples !== "undefined" && nameExamples[url.mol]) {
+       // ?mol= deep link (e.g. language toggle): select through the normal
+@@ -6015,7 +6162,7 @@
+         fScenarioToast("Blocked scenario URL (same-origin .json only).");
+         return;
+       }
+-      fetch(url.scenario)
++      fetch(url.scenario, { cache: "no-store" })
+         .then(function (r) {
+           if (!r.ok) throw new Error("HTTP " + r.status);
+           return r.json();
+@@ -6023,8 +6170,13 @@
+         .then(function (obj) {
+           var res = fScenarioValidate(obj);
+           res.warnings.forEach(fScenarioToast);
+-          if (!res.ok) return;
++          if (!res.ok) {
++            if (window.fLessonLoadingDone) window.fLessonLoadingDone(true);
++            return;
++          }
+           var scen = fScenarioNew(res.title || "imported-scenario", true);
++      scen.showStepNumbers = res.showStepNumbers;
++      scen.reserveTitleSpace = res.reserveTitleSpace;
+           scen.steps = res.steps;
+           scen.index = 0;
+           scen.author = res.author || "Unknown";
+@@ -6038,6 +6190,7 @@
+           });
+         })
+         .catch(function (e) {
++          if (window.fLessonLoadingDone) window.fLessonLoadingDone(true);
+           fScenarioToast("Could not load scenario (needs http(s); use Import on file://).");
+         });
+     } else {
+@@ -6057,8 +6210,17 @@
+             if (url.present) fScenarioToast("Present mode needs ?scenario=… or imported steps.");
+             return;
+           }
+-          var s1 = fScenarioActive();
++          // Authoring may have started while the fetch was in flight. Keep
++          // the user's cards, focus and input; this preload is optional.
++          if (!defaultPreloadCard || MuLERMoCScenario.authoringOpened ||
++              fScenarioGet(defaultPreloadCard.id) !== defaultPreloadCard ||
++              MuLERMoCScenario.activeId !== defaultPreloadCard.id ||
++              MuLERMoCScenario.scenarios.length !== 1 ||
++              JSON.stringify(defaultPreloadCard) !== defaultPreloadSnapshot) return;
++          var s1 = defaultPreloadCard;
+           s1.title = res.title;
++          s1.showStepNumbers = res.showStepNumbers;
++          s1.reserveTitleSpace = res.reserveTitleSpace;
+           s1.author = res.author || "Unknown";
+           s1.created = res.created || s1.created;
+           s1.steps = res.steps;
+@@ -6113,3 +6275,5 @@
+ } else {
+   fScenarioBoot();
+ }
++
++window.addEventListener("resize", fScenarioSyncPresentClass);

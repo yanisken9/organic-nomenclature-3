@@ -1,5 +1,62 @@
 # Changelog
 
+## 2026-11-05 — Published reviewed runtime and verified full recovery snapshot
+
+Runtime `d8985ad381a4f15f5fd67c4118ab8ff987d38f62` published on personal thesis-work with generated
+alkane practice, two-part12step lesson and professor sync throughf49b810. Public
+222exactHTTPchecks and bounded Main18/React8 interactions completed. Console is
+not clean: existingopenP2JSmol platform-null observation remains; no conference claim.
+Fullsnapshot `c7f1cc34b416c4fe4ea1773d78465afbf1c4d6ba`/4214files, ZIP/bundle/recovery/twoexternalcopies
+verified; later documentary bookkeeping has separate cutoff/receipts. Core54 changed
+by merge, core52/publicReact preserved. [Professor report](professor-20261105/update.html).
+
+## 2026-11-05 — Professor merge through f49b810 and quiz compatibility (local)
+
+- Integrate four commits since35d791ee: canonical SMILES, automatic/manual drawing
+  linearization, terminal acid/ether layout, robust MOL headers/counts and async
+  JSME depiction. Preserve graph/metadata/sp checks and guarded Accept/Cancel;
+  translate settings through stable row IDs.
+- Main uses merged core54. Existing generated quizzes load their exact verified
+  previous engine through the SHA-addressed client, preserving recipes and active/
+  solved progress. Every engine load requires SHA-256 validation.
+- Stored molecular assets, v52, React and lesson/game content preserved. Full incoming
+  changelog/session documents archived; local histories retained. Authoring doc copied
+  exactly. Reviewer found no actionable P0–P3 findings. Final primary14browser/17HTTP
+  checks and816protected hashes passed. Submit/nativeFirefox observations unresolved.
+- No new commit/push/publication. [Evidence and limits](checks/v54-merge-20261105/final-report.json).
+
+## 2026-11-04 — Local Main54 integration and workshop entry (local; independently reviewed)
+
+Approved complete professor sync through02dbcfaf,57commits/69paths since93b759f5.
+New isolated54 runtime retains141molecules/422forms/14lessonJSONs337steps and
+Namelecule2D conventions. GR/EN,PubCheminfo,JSmolreadiness,newdrafteditor/generators,
+richauthoring and allcumulativefeatures integrated. Welcome «Παίζω και εξασκούμαι»
+opens acceptedworkshop; welcomeexplore/teacher and14lessonlinks now54.
+Old52/React/molecularassets preserved. Bounded fixes address charge/metadata,
+spgeometry,exact2D/3Dmapping/cache,ENboxfusion,legacylessonboxsemantics,draftgeometry,
+active-draftreload and Presenttitleownership; inheritedC9stem corrected toεννε.
+IndependentReviewerfoundR54-F1storedreadycallbackbypass;registeredstabledelegate
+nowreachesrecovery. Optionaldefaultscenariofetchcapturesspecificuntouchedbootcard;
+new/edited/deletedcardsandstartedauthoringarepreserved. Explicitnativeconfirmation
+preventssilentsessioncontentlossduringGR/ENreload;noautopersistenceadded.
+Addedcore54;core52 unchanged. No commit/push/publication. Finalauthoring/reviewcomplete; residualC9diaeresis/mobile3Dlabelcrowding/externaldepsrecorded; actualchecks/externalCIR/CDN limits in[V54 record](V54-SYNC-20261104.md).
+
+
+### 2026-11-01 — Consolidated30Oct–1Nov report and completed expanded-form normalization
+
+- Complete11ethers,31aldehydes/ketones,21acids and9esters after last public31October release;72additional Expanded entries bring reviewed category coverage to127molecules.
+- Preserve molecular identities, other2Dforms,3Dfiles,core52 and14activeJSON/337steps. Keep approved spacingexceptions and full compound-label ink masks.
+- Publish consolidated professor report with review evidence, original snapshots and disclosed PNG/framing/CDN/browser limits; preserve public React without rebuild.
+- Runtime hashes/review and actual save/publication results: checks/publication-20261101/ and SESSION-NOTES.md.
+
+### 2026-10-27 — Local v52 integration and React host update
+
+- Integrate professor v52 at93b759f with the unified rich-note editor, HTML source mode, sanitizer and compact toolbar.
+- Keep the checked Namelecule126-entry data/MOLs/cameras/order, all SDFs and12lesson JSONs, theme/fitting/name sizing/palette/manual rules. Previous v51 remains intact.
+- Add upstream core52 with the monoether array guard; retain existing naming behavior.
+- Route welcome/library and the React host/catalog through v52. No commit/push/publication.
+- Actual verification and independent review status: V52-SYNC-20261027.md and SESSION-NOTES.md.
+
 ### 2026-10-26 — Structured React library with search and category filters
 
 - Save the prior reviewed pilot on local react-library-pilot at e8d9bb4; preserve stable thesis-work at3673c390. No push/publication.

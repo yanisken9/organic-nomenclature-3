@@ -1,0 +1,36 @@
+{
+  "date": "2026-11-09",
+  "base_commit": "168e3cec01f941a84d40bbe0dc07156e7baa35d0",
+  "approval": "Explicit user approval: Ναι, προχώρα με αυτό το πλάνο",
+  "approved_scope": "Gentle automatic reveal after deliberate answers/selections/Check in embedded alkane quizzes, including older embedded lessons sharing the UI. Three JS + matching Main54 cache URLs. Standalone, chemistry, JSON/CSS/recipes/progress unchanged.",
+  "comparison": "Use explicit before/ copies and source.diff. All four source paths are pre-existing untracked deliverables; huge HEAD-to-working-tree diff is not this unit.",
+  "production_paths": [
+    "js/namelecule-game-repair.js",
+    "js/namelecule-generated-repair-checkpoint.js",
+    "js/namelecule-quiz-checkpoints.js",
+    "mulermoc-nom-54.html"
+  ],
+  "acceptance": [
+    "Reveal the relevant semantic target only after user-driven DOM/focus updates, not initial/restored/loading/image rendering.",
+    "Only real quiz dialog scrolls. Measure actual sticky header and viewport; no new movement for visible range; tall explanation begins under header rather than skipping to Continue.",
+    "Native smooth motion respects reduced-motion preference. Existing focus/answers/attempts/persistence/gates and new-round-top reset remain.",
+    "Subsequent input and close/new-round/step/Exit cancel obsolete motion; stale adapter/controller targets cannot move current lesson.",
+    "Generated replacement and order paths, actual before/after geometry, desktop/mobile widths, reduced motion, rapid/Back/reopen/Next and standalone verified proportionally.",
+    "No added timers, production instrumentation, browser configuration or personal GUI changes."
+  ],
+  "evidence": [
+    "controller-results.json (32 full-controller assertions, explicit FakeNode/custom adapter/synchronous scroll doubles)",
+    "browser/ (Developer worker actual Firefox behavior; inspect final report and any preserved failures)",
+    "http-verification.json (four localhost resources, exact current bytes)",
+    "developer-verification.json (protected hashes and only three Main54 query changes)",
+    "../quiz-answer-scroll-preflight-20261109/ (two actual before repairs/geometry/screenshots)"
+  ],
+  "known_limits": [
+    "Earlier whole-browser Firefox hang is separate and remains unexplained. Do not treat this interaction enhancement as a freeze fix or conference certification.",
+    "Headless/viewport emulation and any temporary tall-content fixtures do not certify physical mobile/accessibility/Safari or future new MacBook.",
+    "Independent reviewer must label supplied browser evidence as Developer evidence; root logical doubles do not prove native animation."
+  ],
+  "review_instructions": "Read AGENTS.md and docs/REVIEW-CHECKLIST.md. Fresh-context independent read-only review. Do not edit/create/delete/stage any file, update notes, launch browsers/checks creating files or caches, install dependencies, commit/push/publish or spawn agents. Read-only in-memory checks allowed. Report actionable P0/P1/P2/P3 with exact file/line/evidence and distinguish pre-existing issues.",
+  "freeze": "Exact target+untracked deliverable list and SHA256 will be supplied in review-manifest.json once browser flow completes. Session/contribution notes explicitly excluded; review result/final check recorded afterward.",
+  "native_wheel_evidence": "Original normal run failed a strict stationary-by350ms-from-sampler assertion. Preserved raw data/script/failure. A/B/C isolated controls show post-wheel movement with smooth+native wheel even with NO app cancellation writes; first event times differ, so no quantitative listener comparison. Explicitly assess criterion refinement in final browser report: trusted manual direction, interruption of original reveal destination, stable post-last-wheel offset after>=800ms. Native wheel settling remains a disclosed platform variation; do not call exact immediate stationary cancellation proven."
+}

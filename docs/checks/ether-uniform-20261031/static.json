@@ -1,0 +1,7704 @@
+{
+  "passed": true,
+  "geometry": [
+    {
+      "atoms": 9,
+      "formula": {
+        "C": 2,
+        "H": 6,
+        "O": 1
+      },
+      "maxDirectionSineChange": 0.0,
+      "minBond": 0.3094,
+      "maxBond": 0.6188,
+      "key": "dimethylether"
+    },
+    {
+      "atoms": 12,
+      "formula": {
+        "C": 3,
+        "H": 8,
+        "O": 1
+      },
+      "maxDirectionSineChange": 0.0,
+      "minBond": 0.3094,
+      "maxBond": 0.6188,
+      "key": "ethyl_methyl_ether"
+    },
+    {
+      "atoms": 15,
+      "formula": {
+        "C": 4,
+        "H": 10,
+        "O": 1
+      },
+      "maxDirectionSineChange": 0.0,
+      "minBond": 0.3093999999999999,
+      "maxBond": 0.6188,
+      "key": "diethyl_ether"
+    },
+    {
+      "atoms": 15,
+      "formula": {
+        "C": 4,
+        "H": 10,
+        "O": 1
+      },
+      "maxDirectionSineChange": 0.00020802537627433371,
+      "minBond": 0.30940014544275835,
+      "maxBond": 0.6188035633381566,
+      "key": "isopropyl_methyl_ether"
+    },
+    {
+      "atoms": 15,
+      "formula": {
+        "C": 4,
+        "H": 10,
+        "O": 1
+      },
+      "maxDirectionSineChange": 0.0,
+      "minBond": 0.3093999999999999,
+      "maxBond": 0.6188,
+      "key": "methyl_propyl_ether"
+    },
+    {
+      "atoms": 18,
+      "formula": {
+        "C": 5,
+        "H": 12,
+        "O": 1
+      },
+      "maxDirectionSineChange": 0.0,
+      "minBond": 0.3093999999999999,
+      "maxBond": 0.6188,
+      "key": "ethyl_propyl_ether"
+    },
+    {
+      "atoms": 18,
+      "formula": {
+        "C": 5,
+        "H": 12,
+        "O": 1
+      },
+      "maxDirectionSineChange": 0.0,
+      "minBond": 0.3093999999999999,
+      "maxBond": 0.6188,
+      "key": "ethyl_isopropyl_ether"
+    },
+    {
+      "atoms": 18,
+      "formula": {
+        "C": 5,
+        "H": 12,
+        "O": 1
+      },
+      "maxDirectionSineChange": 0.0,
+      "minBond": 0.3093999999999999,
+      "maxBond": 0.6188,
+      "key": "butyl_methyl_ether"
+    },
+    {
+      "atoms": 21,
+      "formula": {
+        "C": 6,
+        "H": 14,
+        "O": 1
+      },
+      "maxDirectionSineChange": 0.0,
+      "minBond": 0.3093999999999999,
+      "maxBond": 0.6188,
+      "key": "ethyl_sec_butyl_ether"
+    },
+    {
+      "atoms": 24,
+      "formula": {
+        "C": 7,
+        "H": 16,
+        "O": 1
+      },
+      "maxDirectionSineChange": 0.0,
+      "minBond": 0.3093999999999999,
+      "maxBond": 0.6188,
+      "key": "isobutyl_isopropyl_ether"
+    },
+    {
+      "atoms": 24,
+      "formula": {
+        "C": 7,
+        "H": 16,
+        "O": 1
+      },
+      "maxDirectionSineChange": 0.0,
+      "minBond": 0.3093999999999999,
+      "maxBond": 0.6188,
+      "key": "tert_butyl_isopropyl_ether"
+    }
+  ],
+  "namingCasesCompared": 844,
+  "etherFormChain2D3DCases": 66,
+  "names": [
+    {
+      "key": "ethyl_methyl_ether",
+      "mode": "condensed",
+      "chain": "algorithmic",
+      "result": {
+        "name": "μεθοξυαιθάνιο",
+        "common": "αιθυλομεθυλαιθέρας",
+        "parts": [
+          "",
+          "μεθοξυ",
+          null,
+          null,
+          null,
+          "αιθ",
+          "άν",
+          null,
+          "",
+          "ιο",
+          null,
+          null
+        ],
+        "chain": [
+          3,
+          4
+        ],
+        "classification": {
+          "taxonomy": "Αιθέρες",
+          "carbonCount": 3,
+          "principalFunctionalGroup": "ether",
+          "bondSeries": "alkanes",
+          "seriesKey": "ether",
+          "chemicalClass": "ethers",
+          "functionalGroups": [
+            "ether"
+          ]
+        },
+        "chain3D": [
+          2,
+          3
+        ],
+        "commonParts": {
+          "symmetric": false,
+          "parts": [
+            {
+              "label": "αιθυλ",
+              "chain": [
+                3,
+                4
+              ],
+              "chain3D": [
+                2,
+                3
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                3,
+                4
+              ],
+              "numberChain3D": [
+                2,
+                3
+              ]
+            },
+            {
+              "label": "μεθυλ",
+              "chain": [
+                1
+              ],
+              "chain3D": [
+                4
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                1
+              ],
+              "numberChain3D": [
+                4
+              ]
+            },
+            {
+              "label": "αιθέρας",
+              "chain": "ether",
+              "chain3D": "ether",
+              "kind": "ether",
+              "numberChain": null,
+              "numberChain3D": null
+            }
+          ]
+        },
+        "prefixes": [
+          {
+            "kind": "alkoxy",
+            "name": "μεθοξυ",
+            "label": "μεθοξυ",
+            "locants": "1",
+            "members": []
+          }
+        ],
+        "signature": "[[\"C\",1,[\"1:O(1:C())\"]],[\"C\",0,[]]]",
+        "signature3D": "[[\"C\",1,[\"1:O(1:C())\"]],[\"C\",0,[]]]"
+      }
+    },
+    {
+      "key": "ethyl_methyl_ether",
+      "mode": "condensed",
+      "chain": "data",
+      "result": {
+        "name": "μεθοξυαιθάνιο",
+        "common": "αιθυλομεθυλαιθέρας",
+        "parts": [
+          "",
+          "μεθοξυ",
+          null,
+          null,
+          null,
+          "αιθ",
+          "άν",
+          null,
+          "",
+          "ιο",
+          null,
+          null
+        ],
+        "chain": [
+          3,
+          4
+        ],
+        "classification": {
+          "taxonomy": "Αιθέρες",
+          "carbonCount": 3,
+          "principalFunctionalGroup": "ether",
+          "bondSeries": "alkanes",
+          "seriesKey": "ether",
+          "chemicalClass": "ethers",
+          "functionalGroups": [
+            "ether"
+          ]
+        },
+        "chain3D": [
+          2,
+          3
+        ],
+        "commonParts": {
+          "symmetric": false,
+          "parts": [
+            {
+              "label": "αιθυλ",
+              "chain": [
+                3,
+                4
+              ],
+              "chain3D": [
+                2,
+                3
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                3,
+                4
+              ],
+              "numberChain3D": [
+                2,
+                3
+              ]
+            },
+            {
+              "label": "μεθυλ",
+              "chain": [
+                1
+              ],
+              "chain3D": [
+                4
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                1
+              ],
+              "numberChain3D": [
+                4
+              ]
+            },
+            {
+              "label": "αιθέρας",
+              "chain": "ether",
+              "chain3D": "ether",
+              "kind": "ether",
+              "numberChain": null,
+              "numberChain3D": null
+            }
+          ]
+        },
+        "prefixes": [
+          {
+            "kind": "alkoxy",
+            "name": "μεθοξυ",
+            "label": "μεθοξυ",
+            "locants": "1",
+            "members": []
+          }
+        ],
+        "signature": "[[\"C\",1,[\"1:O(1:C())\"]],[\"C\",0,[]]]",
+        "signature3D": "[[\"C\",1,[\"1:O(1:C())\"]],[\"C\",0,[]]]"
+      }
+    },
+    {
+      "key": "ethyl_methyl_ether",
+      "mode": "expanded",
+      "chain": "algorithmic",
+      "result": {
+        "name": "μεθοξυαιθάνιο",
+        "common": "αιθυλομεθυλαιθέρας",
+        "parts": [
+          "",
+          "μεθοξυ",
+          null,
+          null,
+          null,
+          "αιθ",
+          "άν",
+          null,
+          "",
+          "ιο",
+          null,
+          null
+        ],
+        "chain": [
+          3,
+          4
+        ],
+        "classification": {
+          "taxonomy": "Αιθέρες",
+          "carbonCount": 3,
+          "principalFunctionalGroup": "ether",
+          "bondSeries": "alkanes",
+          "seriesKey": "ether",
+          "chemicalClass": "ethers",
+          "functionalGroups": [
+            "ether"
+          ]
+        },
+        "chain3D": [
+          2,
+          3
+        ],
+        "commonParts": {
+          "symmetric": false,
+          "parts": [
+            {
+              "label": "αιθυλ",
+              "chain": [
+                3,
+                4
+              ],
+              "chain3D": [
+                2,
+                3
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                3,
+                4
+              ],
+              "numberChain3D": [
+                2,
+                3
+              ]
+            },
+            {
+              "label": "μεθυλ",
+              "chain": [
+                1
+              ],
+              "chain3D": [
+                4
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                1
+              ],
+              "numberChain3D": [
+                4
+              ]
+            },
+            {
+              "label": "αιθέρας",
+              "chain": "ether",
+              "chain3D": "ether",
+              "kind": "ether",
+              "numberChain": null,
+              "numberChain3D": null
+            }
+          ]
+        },
+        "prefixes": [
+          {
+            "kind": "alkoxy",
+            "name": "μεθοξυ",
+            "label": "μεθοξυ",
+            "locants": "1",
+            "members": []
+          }
+        ],
+        "signature": "[[\"C\",1,[\"1:O(1:C())\"]],[\"C\",0,[]]]",
+        "signature3D": "[[\"C\",1,[\"1:O(1:C())\"]],[\"C\",0,[]]]"
+      }
+    },
+    {
+      "key": "ethyl_methyl_ether",
+      "mode": "expanded",
+      "chain": "data",
+      "result": {
+        "name": "μεθοξυαιθάνιο",
+        "common": "αιθυλομεθυλαιθέρας",
+        "parts": [
+          "",
+          "μεθοξυ",
+          null,
+          null,
+          null,
+          "αιθ",
+          "άν",
+          null,
+          "",
+          "ιο",
+          null,
+          null
+        ],
+        "chain": [
+          3,
+          4
+        ],
+        "classification": {
+          "taxonomy": "Αιθέρες",
+          "carbonCount": 3,
+          "principalFunctionalGroup": "ether",
+          "bondSeries": "alkanes",
+          "seriesKey": "ether",
+          "chemicalClass": "ethers",
+          "functionalGroups": [
+            "ether"
+          ]
+        },
+        "chain3D": [
+          2,
+          3
+        ],
+        "commonParts": {
+          "symmetric": false,
+          "parts": [
+            {
+              "label": "αιθυλ",
+              "chain": [
+                3,
+                4
+              ],
+              "chain3D": [
+                2,
+                3
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                3,
+                4
+              ],
+              "numberChain3D": [
+                2,
+                3
+              ]
+            },
+            {
+              "label": "μεθυλ",
+              "chain": [
+                1
+              ],
+              "chain3D": [
+                4
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                1
+              ],
+              "numberChain3D": [
+                4
+              ]
+            },
+            {
+              "label": "αιθέρας",
+              "chain": "ether",
+              "chain3D": "ether",
+              "kind": "ether",
+              "numberChain": null,
+              "numberChain3D": null
+            }
+          ]
+        },
+        "prefixes": [
+          {
+            "kind": "alkoxy",
+            "name": "μεθοξυ",
+            "label": "μεθοξυ",
+            "locants": "1",
+            "members": []
+          }
+        ],
+        "signature": "[[\"C\",1,[\"1:O(1:C())\"]],[\"C\",0,[]]]",
+        "signature3D": "[[\"C\",1,[\"1:O(1:C())\"]],[\"C\",0,[]]]"
+      }
+    },
+    {
+      "key": "ethyl_methyl_ether",
+      "mode": "skeletal",
+      "chain": "algorithmic",
+      "result": {
+        "name": "μεθοξυαιθάνιο",
+        "common": "αιθυλομεθυλαιθέρας",
+        "parts": [
+          "",
+          "μεθοξυ",
+          null,
+          null,
+          null,
+          "αιθ",
+          "άν",
+          null,
+          "",
+          "ιο",
+          null,
+          null
+        ],
+        "chain": [
+          2,
+          1
+        ],
+        "classification": {
+          "taxonomy": "Αιθέρες",
+          "carbonCount": 3,
+          "principalFunctionalGroup": "ether",
+          "bondSeries": "alkanes",
+          "seriesKey": "ether",
+          "chemicalClass": "ethers",
+          "functionalGroups": [
+            "ether"
+          ]
+        },
+        "chain3D": [
+          2,
+          3
+        ],
+        "commonParts": {
+          "symmetric": false,
+          "parts": [
+            {
+              "label": "αιθυλ",
+              "chain": [
+                1,
+                2
+              ],
+              "chain3D": [
+                2,
+                3
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                2,
+                1
+              ],
+              "numberChain3D": [
+                2,
+                3
+              ]
+            },
+            {
+              "label": "μεθυλ",
+              "chain": [
+                4
+              ],
+              "chain3D": [
+                4
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                4
+              ],
+              "numberChain3D": [
+                4
+              ]
+            },
+            {
+              "label": "αιθέρας",
+              "chain": "ether",
+              "chain3D": "ether",
+              "kind": "ether",
+              "numberChain": null,
+              "numberChain3D": null
+            }
+          ]
+        },
+        "prefixes": [
+          {
+            "kind": "alkoxy",
+            "name": "μεθοξυ",
+            "label": "μεθοξυ",
+            "locants": "1",
+            "members": []
+          }
+        ],
+        "signature": "[[\"C\",1,[\"1:O(1:C())\"]],[\"C\",0,[]]]",
+        "signature3D": "[[\"C\",1,[\"1:O(1:C())\"]],[\"C\",0,[]]]"
+      }
+    },
+    {
+      "key": "ethyl_methyl_ether",
+      "mode": "skeletal",
+      "chain": "data",
+      "result": {
+        "name": "μεθοξυαιθάνιο",
+        "common": "αιθυλομεθυλαιθέρας",
+        "parts": [
+          "",
+          "μεθοξυ",
+          null,
+          null,
+          null,
+          "αιθ",
+          "άν",
+          null,
+          "",
+          "ιο",
+          null,
+          null
+        ],
+        "chain": [
+          2,
+          1
+        ],
+        "classification": {
+          "taxonomy": "Αιθέρες",
+          "carbonCount": 3,
+          "principalFunctionalGroup": "ether",
+          "bondSeries": "alkanes",
+          "seriesKey": "ether",
+          "chemicalClass": "ethers",
+          "functionalGroups": [
+            "ether"
+          ]
+        },
+        "chain3D": [
+          2,
+          3
+        ],
+        "commonParts": {
+          "symmetric": false,
+          "parts": [
+            {
+              "label": "αιθυλ",
+              "chain": [
+                1,
+                2
+              ],
+              "chain3D": [
+                2,
+                3
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                2,
+                1
+              ],
+              "numberChain3D": [
+                2,
+                3
+              ]
+            },
+            {
+              "label": "μεθυλ",
+              "chain": [
+                4
+              ],
+              "chain3D": [
+                4
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                4
+              ],
+              "numberChain3D": [
+                4
+              ]
+            },
+            {
+              "label": "αιθέρας",
+              "chain": "ether",
+              "chain3D": "ether",
+              "kind": "ether",
+              "numberChain": null,
+              "numberChain3D": null
+            }
+          ]
+        },
+        "prefixes": [
+          {
+            "kind": "alkoxy",
+            "name": "μεθοξυ",
+            "label": "μεθοξυ",
+            "locants": "1",
+            "members": []
+          }
+        ],
+        "signature": "[[\"C\",1,[\"1:O(1:C())\"]],[\"C\",0,[]]]",
+        "signature3D": "[[\"C\",1,[\"1:O(1:C())\"]],[\"C\",0,[]]]"
+      }
+    },
+    {
+      "key": "dimethylether",
+      "mode": "condensed",
+      "chain": "algorithmic",
+      "result": {
+        "name": "μεθοξυμεθάνιο",
+        "common": "διμεθυλαιθέρας",
+        "parts": [
+          "",
+          "μεθοξυ",
+          null,
+          null,
+          null,
+          "μεθ",
+          "άν",
+          null,
+          "",
+          "ιο",
+          null,
+          null
+        ],
+        "chain": [
+          1
+        ],
+        "classification": {
+          "taxonomy": "Αιθέρες",
+          "carbonCount": 2,
+          "principalFunctionalGroup": "ether",
+          "bondSeries": "alkanes",
+          "seriesKey": "ether",
+          "chemicalClass": "ethers",
+          "functionalGroups": [
+            "ether"
+          ]
+        },
+        "chain3D": [
+          2
+        ],
+        "commonParts": {
+          "symmetric": true,
+          "parts": [
+            {
+              "label": "δι",
+              "chain": [
+                1,
+                3
+              ],
+              "chain3D": [
+                2,
+                3
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                1
+              ],
+              "numberChain3D": [
+                2
+              ]
+            },
+            {
+              "label": "μεθυλ",
+              "chain": [
+                1,
+                3
+              ],
+              "chain3D": [
+                2,
+                3
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                1
+              ],
+              "numberChain3D": [
+                2
+              ]
+            },
+            {
+              "label": "αιθέρας",
+              "chain": "ether",
+              "chain3D": "ether",
+              "kind": "ether",
+              "numberChain": null,
+              "numberChain3D": null
+            }
+          ]
+        },
+        "prefixes": [
+          {
+            "kind": "alkoxy",
+            "name": "μεθοξυ",
+            "label": "μεθοξυ",
+            "locants": "1",
+            "members": []
+          }
+        ],
+        "signature": "[[\"C\",0,[\"1:O(1:C())\"]]]",
+        "signature3D": "[[\"C\",0,[\"1:O(1:C())\"]]]"
+      }
+    },
+    {
+      "key": "dimethylether",
+      "mode": "condensed",
+      "chain": "data",
+      "result": {
+        "name": "μεθοξυμεθάνιο",
+        "common": "διμεθυλαιθέρας",
+        "parts": [
+          "",
+          "μεθοξυ",
+          null,
+          null,
+          null,
+          "μεθ",
+          "άν",
+          null,
+          "",
+          "ιο",
+          null,
+          null
+        ],
+        "chain": [
+          1
+        ],
+        "classification": {
+          "taxonomy": "Αιθέρες",
+          "carbonCount": 2,
+          "principalFunctionalGroup": "ether",
+          "bondSeries": "alkanes",
+          "seriesKey": "ether",
+          "chemicalClass": "ethers",
+          "functionalGroups": [
+            "ether"
+          ]
+        },
+        "chain3D": [
+          2
+        ],
+        "commonParts": {
+          "symmetric": true,
+          "parts": [
+            {
+              "label": "δι",
+              "chain": [
+                1,
+                3
+              ],
+              "chain3D": [
+                2,
+                3
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                1
+              ],
+              "numberChain3D": [
+                2
+              ]
+            },
+            {
+              "label": "μεθυλ",
+              "chain": [
+                1,
+                3
+              ],
+              "chain3D": [
+                2,
+                3
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                1
+              ],
+              "numberChain3D": [
+                2
+              ]
+            },
+            {
+              "label": "αιθέρας",
+              "chain": "ether",
+              "chain3D": "ether",
+              "kind": "ether",
+              "numberChain": null,
+              "numberChain3D": null
+            }
+          ]
+        },
+        "prefixes": [
+          {
+            "kind": "alkoxy",
+            "name": "μεθοξυ",
+            "label": "μεθοξυ",
+            "locants": "1",
+            "members": []
+          }
+        ],
+        "signature": "[[\"C\",0,[\"1:O(1:C())\"]]]",
+        "signature3D": "[[\"C\",0,[\"1:O(1:C())\"]]]"
+      }
+    },
+    {
+      "key": "dimethylether",
+      "mode": "expanded",
+      "chain": "algorithmic",
+      "result": {
+        "name": "μεθοξυμεθάνιο",
+        "common": "διμεθυλαιθέρας",
+        "parts": [
+          "",
+          "μεθοξυ",
+          null,
+          null,
+          null,
+          "μεθ",
+          "άν",
+          null,
+          "",
+          "ιο",
+          null,
+          null
+        ],
+        "chain": [
+          1
+        ],
+        "classification": {
+          "taxonomy": "Αιθέρες",
+          "carbonCount": 2,
+          "principalFunctionalGroup": "ether",
+          "bondSeries": "alkanes",
+          "seriesKey": "ether",
+          "chemicalClass": "ethers",
+          "functionalGroups": [
+            "ether"
+          ]
+        },
+        "chain3D": [
+          2
+        ],
+        "commonParts": {
+          "symmetric": true,
+          "parts": [
+            {
+              "label": "δι",
+              "chain": [
+                1,
+                3
+              ],
+              "chain3D": [
+                2,
+                3
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                1
+              ],
+              "numberChain3D": [
+                2
+              ]
+            },
+            {
+              "label": "μεθυλ",
+              "chain": [
+                1,
+                3
+              ],
+              "chain3D": [
+                2,
+                3
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                1
+              ],
+              "numberChain3D": [
+                2
+              ]
+            },
+            {
+              "label": "αιθέρας",
+              "chain": "ether",
+              "chain3D": "ether",
+              "kind": "ether",
+              "numberChain": null,
+              "numberChain3D": null
+            }
+          ]
+        },
+        "prefixes": [
+          {
+            "kind": "alkoxy",
+            "name": "μεθοξυ",
+            "label": "μεθοξυ",
+            "locants": "1",
+            "members": []
+          }
+        ],
+        "signature": "[[\"C\",0,[\"1:O(1:C())\"]]]",
+        "signature3D": "[[\"C\",0,[\"1:O(1:C())\"]]]"
+      }
+    },
+    {
+      "key": "dimethylether",
+      "mode": "expanded",
+      "chain": "data",
+      "result": {
+        "name": "μεθοξυμεθάνιο",
+        "common": "διμεθυλαιθέρας",
+        "parts": [
+          "",
+          "μεθοξυ",
+          null,
+          null,
+          null,
+          "μεθ",
+          "άν",
+          null,
+          "",
+          "ιο",
+          null,
+          null
+        ],
+        "chain": [
+          1
+        ],
+        "classification": {
+          "taxonomy": "Αιθέρες",
+          "carbonCount": 2,
+          "principalFunctionalGroup": "ether",
+          "bondSeries": "alkanes",
+          "seriesKey": "ether",
+          "chemicalClass": "ethers",
+          "functionalGroups": [
+            "ether"
+          ]
+        },
+        "chain3D": [
+          2
+        ],
+        "commonParts": {
+          "symmetric": true,
+          "parts": [
+            {
+              "label": "δι",
+              "chain": [
+                1,
+                3
+              ],
+              "chain3D": [
+                2,
+                3
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                1
+              ],
+              "numberChain3D": [
+                2
+              ]
+            },
+            {
+              "label": "μεθυλ",
+              "chain": [
+                1,
+                3
+              ],
+              "chain3D": [
+                2,
+                3
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                1
+              ],
+              "numberChain3D": [
+                2
+              ]
+            },
+            {
+              "label": "αιθέρας",
+              "chain": "ether",
+              "chain3D": "ether",
+              "kind": "ether",
+              "numberChain": null,
+              "numberChain3D": null
+            }
+          ]
+        },
+        "prefixes": [
+          {
+            "kind": "alkoxy",
+            "name": "μεθοξυ",
+            "label": "μεθοξυ",
+            "locants": "1",
+            "members": []
+          }
+        ],
+        "signature": "[[\"C\",0,[\"1:O(1:C())\"]]]",
+        "signature3D": "[[\"C\",0,[\"1:O(1:C())\"]]]"
+      }
+    },
+    {
+      "key": "dimethylether",
+      "mode": "skeletal",
+      "chain": "algorithmic",
+      "result": {
+        "name": "μεθοξυμεθάνιο",
+        "common": "διμεθυλαιθέρας",
+        "parts": [
+          "",
+          "μεθοξυ",
+          null,
+          null,
+          null,
+          "μεθ",
+          "άν",
+          null,
+          "",
+          "ιο",
+          null,
+          null
+        ],
+        "chain": [
+          1
+        ],
+        "classification": {
+          "taxonomy": "Αιθέρες",
+          "carbonCount": 2,
+          "principalFunctionalGroup": "ether",
+          "bondSeries": "alkanes",
+          "seriesKey": "ether",
+          "chemicalClass": "ethers",
+          "functionalGroups": [
+            "ether"
+          ]
+        },
+        "chain3D": [
+          2
+        ],
+        "commonParts": {
+          "symmetric": true,
+          "parts": [
+            {
+              "label": "δι",
+              "chain": [
+                1,
+                3
+              ],
+              "chain3D": [
+                2,
+                3
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                1
+              ],
+              "numberChain3D": [
+                2
+              ]
+            },
+            {
+              "label": "μεθυλ",
+              "chain": [
+                1,
+                3
+              ],
+              "chain3D": [
+                2,
+                3
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                1
+              ],
+              "numberChain3D": [
+                2
+              ]
+            },
+            {
+              "label": "αιθέρας",
+              "chain": "ether",
+              "chain3D": "ether",
+              "kind": "ether",
+              "numberChain": null,
+              "numberChain3D": null
+            }
+          ]
+        },
+        "prefixes": [
+          {
+            "kind": "alkoxy",
+            "name": "μεθοξυ",
+            "label": "μεθοξυ",
+            "locants": "1",
+            "members": []
+          }
+        ],
+        "signature": "[[\"C\",0,[\"1:O(1:C())\"]]]",
+        "signature3D": "[[\"C\",0,[\"1:O(1:C())\"]]]"
+      }
+    },
+    {
+      "key": "dimethylether",
+      "mode": "skeletal",
+      "chain": "data",
+      "result": {
+        "name": "μεθοξυμεθάνιο",
+        "common": "διμεθυλαιθέρας",
+        "parts": [
+          "",
+          "μεθοξυ",
+          null,
+          null,
+          null,
+          "μεθ",
+          "άν",
+          null,
+          "",
+          "ιο",
+          null,
+          null
+        ],
+        "chain": [
+          1
+        ],
+        "classification": {
+          "taxonomy": "Αιθέρες",
+          "carbonCount": 2,
+          "principalFunctionalGroup": "ether",
+          "bondSeries": "alkanes",
+          "seriesKey": "ether",
+          "chemicalClass": "ethers",
+          "functionalGroups": [
+            "ether"
+          ]
+        },
+        "chain3D": [
+          2
+        ],
+        "commonParts": {
+          "symmetric": true,
+          "parts": [
+            {
+              "label": "δι",
+              "chain": [
+                1,
+                3
+              ],
+              "chain3D": [
+                2,
+                3
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                1
+              ],
+              "numberChain3D": [
+                2
+              ]
+            },
+            {
+              "label": "μεθυλ",
+              "chain": [
+                1,
+                3
+              ],
+              "chain3D": [
+                2,
+                3
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                1
+              ],
+              "numberChain3D": [
+                2
+              ]
+            },
+            {
+              "label": "αιθέρας",
+              "chain": "ether",
+              "chain3D": "ether",
+              "kind": "ether",
+              "numberChain": null,
+              "numberChain3D": null
+            }
+          ]
+        },
+        "prefixes": [
+          {
+            "kind": "alkoxy",
+            "name": "μεθοξυ",
+            "label": "μεθοξυ",
+            "locants": "1",
+            "members": []
+          }
+        ],
+        "signature": "[[\"C\",0,[\"1:O(1:C())\"]]]",
+        "signature3D": "[[\"C\",0,[\"1:O(1:C())\"]]]"
+      }
+    },
+    {
+      "key": "diethyl_ether",
+      "mode": "condensed",
+      "chain": "algorithmic",
+      "result": {
+        "name": "αιθοξυαιθάνιο",
+        "common": "διαιθυλαιθέρας",
+        "parts": [
+          "",
+          "αιθοξυ",
+          null,
+          null,
+          null,
+          "αιθ",
+          "άν",
+          null,
+          "",
+          "ιο",
+          null,
+          null
+        ],
+        "chain": [
+          2,
+          3
+        ],
+        "classification": {
+          "taxonomy": "Αιθέρες",
+          "carbonCount": 4,
+          "principalFunctionalGroup": "ether",
+          "bondSeries": "alkanes",
+          "seriesKey": "ether",
+          "chemicalClass": "ethers",
+          "functionalGroups": [
+            "ether"
+          ]
+        },
+        "chain3D": [
+          2,
+          4
+        ],
+        "commonParts": {
+          "symmetric": true,
+          "parts": [
+            {
+              "label": "δι",
+              "chain": [
+                2,
+                3,
+                4,
+                5
+              ],
+              "chain3D": [
+                2,
+                4,
+                3,
+                5
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                2,
+                3
+              ],
+              "numberChain3D": [
+                2,
+                4
+              ]
+            },
+            {
+              "label": "αιθυλ",
+              "chain": [
+                2,
+                3,
+                4,
+                5
+              ],
+              "chain3D": [
+                2,
+                4,
+                3,
+                5
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                2,
+                3
+              ],
+              "numberChain3D": [
+                2,
+                4
+              ]
+            },
+            {
+              "label": "αιθέρας",
+              "chain": "ether",
+              "chain3D": "ether",
+              "kind": "ether",
+              "numberChain": null,
+              "numberChain3D": null
+            }
+          ]
+        },
+        "prefixes": [
+          {
+            "kind": "alkoxy",
+            "name": "αιθοξυ",
+            "label": "αιθοξυ",
+            "locants": "1",
+            "members": []
+          }
+        ],
+        "signature": "[[\"C\",1,[\"1:O(1:C(1:C()))\"]],[\"C\",0,[]]]",
+        "signature3D": "[[\"C\",1,[\"1:O(1:C(1:C()))\"]],[\"C\",0,[]]]"
+      }
+    },
+    {
+      "key": "diethyl_ether",
+      "mode": "condensed",
+      "chain": "data",
+      "result": {
+        "name": "αιθοξυαιθάνιο",
+        "common": "διαιθυλαιθέρας",
+        "parts": [
+          "",
+          "αιθοξυ",
+          null,
+          null,
+          null,
+          "αιθ",
+          "άν",
+          null,
+          "",
+          "ιο",
+          null,
+          null
+        ],
+        "chain": [
+          2,
+          3
+        ],
+        "classification": {
+          "taxonomy": "Αιθέρες",
+          "carbonCount": 4,
+          "principalFunctionalGroup": "ether",
+          "bondSeries": "alkanes",
+          "seriesKey": "ether",
+          "chemicalClass": "ethers",
+          "functionalGroups": [
+            "ether"
+          ]
+        },
+        "chain3D": [
+          2,
+          4
+        ],
+        "commonParts": {
+          "symmetric": true,
+          "parts": [
+            {
+              "label": "δι",
+              "chain": [
+                2,
+                3,
+                4,
+                5
+              ],
+              "chain3D": [
+                2,
+                4,
+                3,
+                5
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                2,
+                3
+              ],
+              "numberChain3D": [
+                2,
+                4
+              ]
+            },
+            {
+              "label": "αιθυλ",
+              "chain": [
+                2,
+                3,
+                4,
+                5
+              ],
+              "chain3D": [
+                2,
+                4,
+                3,
+                5
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                2,
+                3
+              ],
+              "numberChain3D": [
+                2,
+                4
+              ]
+            },
+            {
+              "label": "αιθέρας",
+              "chain": "ether",
+              "chain3D": "ether",
+              "kind": "ether",
+              "numberChain": null,
+              "numberChain3D": null
+            }
+          ]
+        },
+        "prefixes": [
+          {
+            "kind": "alkoxy",
+            "name": "αιθοξυ",
+            "label": "αιθοξυ",
+            "locants": "1",
+            "members": []
+          }
+        ],
+        "signature": "[[\"C\",1,[\"1:O(1:C(1:C()))\"]],[\"C\",0,[]]]",
+        "signature3D": "[[\"C\",1,[\"1:O(1:C(1:C()))\"]],[\"C\",0,[]]]"
+      }
+    },
+    {
+      "key": "diethyl_ether",
+      "mode": "expanded",
+      "chain": "algorithmic",
+      "result": {
+        "name": "αιθοξυαιθάνιο",
+        "common": "διαιθυλαιθέρας",
+        "parts": [
+          "",
+          "αιθοξυ",
+          null,
+          null,
+          null,
+          "αιθ",
+          "άν",
+          null,
+          "",
+          "ιο",
+          null,
+          null
+        ],
+        "chain": [
+          2,
+          3
+        ],
+        "classification": {
+          "taxonomy": "Αιθέρες",
+          "carbonCount": 4,
+          "principalFunctionalGroup": "ether",
+          "bondSeries": "alkanes",
+          "seriesKey": "ether",
+          "chemicalClass": "ethers",
+          "functionalGroups": [
+            "ether"
+          ]
+        },
+        "chain3D": [
+          2,
+          4
+        ],
+        "commonParts": {
+          "symmetric": true,
+          "parts": [
+            {
+              "label": "δι",
+              "chain": [
+                2,
+                3,
+                4,
+                5
+              ],
+              "chain3D": [
+                2,
+                4,
+                3,
+                5
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                2,
+                3
+              ],
+              "numberChain3D": [
+                2,
+                4
+              ]
+            },
+            {
+              "label": "αιθυλ",
+              "chain": [
+                2,
+                3,
+                4,
+                5
+              ],
+              "chain3D": [
+                2,
+                4,
+                3,
+                5
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                2,
+                3
+              ],
+              "numberChain3D": [
+                2,
+                4
+              ]
+            },
+            {
+              "label": "αιθέρας",
+              "chain": "ether",
+              "chain3D": "ether",
+              "kind": "ether",
+              "numberChain": null,
+              "numberChain3D": null
+            }
+          ]
+        },
+        "prefixes": [
+          {
+            "kind": "alkoxy",
+            "name": "αιθοξυ",
+            "label": "αιθοξυ",
+            "locants": "1",
+            "members": []
+          }
+        ],
+        "signature": "[[\"C\",1,[\"1:O(1:C(1:C()))\"]],[\"C\",0,[]]]",
+        "signature3D": "[[\"C\",1,[\"1:O(1:C(1:C()))\"]],[\"C\",0,[]]]"
+      }
+    },
+    {
+      "key": "diethyl_ether",
+      "mode": "expanded",
+      "chain": "data",
+      "result": {
+        "name": "αιθοξυαιθάνιο",
+        "common": "διαιθυλαιθέρας",
+        "parts": [
+          "",
+          "αιθοξυ",
+          null,
+          null,
+          null,
+          "αιθ",
+          "άν",
+          null,
+          "",
+          "ιο",
+          null,
+          null
+        ],
+        "chain": [
+          2,
+          3
+        ],
+        "classification": {
+          "taxonomy": "Αιθέρες",
+          "carbonCount": 4,
+          "principalFunctionalGroup": "ether",
+          "bondSeries": "alkanes",
+          "seriesKey": "ether",
+          "chemicalClass": "ethers",
+          "functionalGroups": [
+            "ether"
+          ]
+        },
+        "chain3D": [
+          2,
+          4
+        ],
+        "commonParts": {
+          "symmetric": true,
+          "parts": [
+            {
+              "label": "δι",
+              "chain": [
+                2,
+                3,
+                4,
+                5
+              ],
+              "chain3D": [
+                2,
+                4,
+                3,
+                5
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                2,
+                3
+              ],
+              "numberChain3D": [
+                2,
+                4
+              ]
+            },
+            {
+              "label": "αιθυλ",
+              "chain": [
+                2,
+                3,
+                4,
+                5
+              ],
+              "chain3D": [
+                2,
+                4,
+                3,
+                5
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                2,
+                3
+              ],
+              "numberChain3D": [
+                2,
+                4
+              ]
+            },
+            {
+              "label": "αιθέρας",
+              "chain": "ether",
+              "chain3D": "ether",
+              "kind": "ether",
+              "numberChain": null,
+              "numberChain3D": null
+            }
+          ]
+        },
+        "prefixes": [
+          {
+            "kind": "alkoxy",
+            "name": "αιθοξυ",
+            "label": "αιθοξυ",
+            "locants": "1",
+            "members": []
+          }
+        ],
+        "signature": "[[\"C\",1,[\"1:O(1:C(1:C()))\"]],[\"C\",0,[]]]",
+        "signature3D": "[[\"C\",1,[\"1:O(1:C(1:C()))\"]],[\"C\",0,[]]]"
+      }
+    },
+    {
+      "key": "diethyl_ether",
+      "mode": "skeletal",
+      "chain": "algorithmic",
+      "result": {
+        "name": "αιθοξυαιθάνιο",
+        "common": "διαιθυλαιθέρας",
+        "parts": [
+          "",
+          "αιθοξυ",
+          null,
+          null,
+          null,
+          "αιθ",
+          "άν",
+          null,
+          "",
+          "ιο",
+          null,
+          null
+        ],
+        "chain": [
+          2,
+          1
+        ],
+        "classification": {
+          "taxonomy": "Αιθέρες",
+          "carbonCount": 4,
+          "principalFunctionalGroup": "ether",
+          "bondSeries": "alkanes",
+          "seriesKey": "ether",
+          "chemicalClass": "ethers",
+          "functionalGroups": [
+            "ether"
+          ]
+        },
+        "chain3D": [
+          2,
+          4
+        ],
+        "commonParts": {
+          "symmetric": true,
+          "parts": [
+            {
+              "label": "δι",
+              "chain": [
+                1,
+                2,
+                4,
+                5
+              ],
+              "chain3D": [
+                2,
+                4,
+                3,
+                5
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                1,
+                2
+              ],
+              "numberChain3D": [
+                2,
+                4
+              ]
+            },
+            {
+              "label": "αιθυλ",
+              "chain": [
+                1,
+                2,
+                4,
+                5
+              ],
+              "chain3D": [
+                2,
+                4,
+                3,
+                5
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                1,
+                2
+              ],
+              "numberChain3D": [
+                2,
+                4
+              ]
+            },
+            {
+              "label": "αιθέρας",
+              "chain": "ether",
+              "chain3D": "ether",
+              "kind": "ether",
+              "numberChain": null,
+              "numberChain3D": null
+            }
+          ]
+        },
+        "prefixes": [
+          {
+            "kind": "alkoxy",
+            "name": "αιθοξυ",
+            "label": "αιθοξυ",
+            "locants": "1",
+            "members": []
+          }
+        ],
+        "signature": "[[\"C\",1,[\"1:O(1:C(1:C()))\"]],[\"C\",0,[]]]",
+        "signature3D": "[[\"C\",1,[\"1:O(1:C(1:C()))\"]],[\"C\",0,[]]]"
+      }
+    },
+    {
+      "key": "diethyl_ether",
+      "mode": "skeletal",
+      "chain": "data",
+      "result": {
+        "name": "αιθοξυαιθάνιο",
+        "common": "διαιθυλαιθέρας",
+        "parts": [
+          "",
+          "αιθοξυ",
+          null,
+          null,
+          null,
+          "αιθ",
+          "άν",
+          null,
+          "",
+          "ιο",
+          null,
+          null
+        ],
+        "chain": [
+          2,
+          1
+        ],
+        "classification": {
+          "taxonomy": "Αιθέρες",
+          "carbonCount": 4,
+          "principalFunctionalGroup": "ether",
+          "bondSeries": "alkanes",
+          "seriesKey": "ether",
+          "chemicalClass": "ethers",
+          "functionalGroups": [
+            "ether"
+          ]
+        },
+        "chain3D": [
+          2,
+          4
+        ],
+        "commonParts": {
+          "symmetric": true,
+          "parts": [
+            {
+              "label": "δι",
+              "chain": [
+                1,
+                2,
+                4,
+                5
+              ],
+              "chain3D": [
+                2,
+                4,
+                3,
+                5
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                1,
+                2
+              ],
+              "numberChain3D": [
+                2,
+                4
+              ]
+            },
+            {
+              "label": "αιθυλ",
+              "chain": [
+                1,
+                2,
+                4,
+                5
+              ],
+              "chain3D": [
+                2,
+                4,
+                3,
+                5
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                1,
+                2
+              ],
+              "numberChain3D": [
+                2,
+                4
+              ]
+            },
+            {
+              "label": "αιθέρας",
+              "chain": "ether",
+              "chain3D": "ether",
+              "kind": "ether",
+              "numberChain": null,
+              "numberChain3D": null
+            }
+          ]
+        },
+        "prefixes": [
+          {
+            "kind": "alkoxy",
+            "name": "αιθοξυ",
+            "label": "αιθοξυ",
+            "locants": "1",
+            "members": []
+          }
+        ],
+        "signature": "[[\"C\",1,[\"1:O(1:C(1:C()))\"]],[\"C\",0,[]]]",
+        "signature3D": "[[\"C\",1,[\"1:O(1:C(1:C()))\"]],[\"C\",0,[]]]"
+      }
+    },
+    {
+      "key": "isopropyl_methyl_ether",
+      "mode": "condensed",
+      "chain": "algorithmic",
+      "result": {
+        "name": "2-μεθοξυπροπάνιο",
+        "common": "ισοπροπυλομεθυλαιθέρας",
+        "parts": [
+          "2-",
+          "μεθοξυ",
+          null,
+          null,
+          null,
+          "προπ",
+          "άν",
+          null,
+          "",
+          "ιο",
+          null,
+          null
+        ],
+        "chain": [
+          4,
+          2,
+          5
+        ],
+        "classification": {
+          "taxonomy": "Αιθέρες",
+          "carbonCount": 4,
+          "principalFunctionalGroup": "ether",
+          "bondSeries": "alkanes",
+          "seriesKey": "ether",
+          "chemicalClass": "ethers",
+          "functionalGroups": [
+            "ether"
+          ]
+        },
+        "chain3D": [
+          3,
+          2,
+          4
+        ],
+        "commonParts": {
+          "symmetric": false,
+          "parts": [
+            {
+              "label": "ισοπροπυλ",
+              "chain": [
+                2,
+                4,
+                5
+              ],
+              "chain3D": [
+                2,
+                4,
+                3
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                4,
+                2,
+                5
+              ],
+              "numberChain3D": [
+                3,
+                2,
+                4
+              ]
+            },
+            {
+              "label": "μεθυλ",
+              "chain": [
+                3
+              ],
+              "chain3D": [
+                5
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                3
+              ],
+              "numberChain3D": [
+                5
+              ]
+            },
+            {
+              "label": "αιθέρας",
+              "chain": "ether",
+              "chain3D": "ether",
+              "kind": "ether",
+              "numberChain": null,
+              "numberChain3D": null
+            }
+          ]
+        },
+        "prefixes": [
+          {
+            "kind": "alkoxy",
+            "name": "μεθοξυ",
+            "label": "μεθοξυ",
+            "locants": "2",
+            "members": []
+          }
+        ],
+        "signature": "[[\"C\",1,[]],[\"C\",1,[\"1:O(1:C())\"]],[\"C\",0,[]]]",
+        "signature3D": "[[\"C\",1,[]],[\"C\",1,[\"1:O(1:C())\"]],[\"C\",0,[]]]"
+      }
+    },
+    {
+      "key": "isopropyl_methyl_ether",
+      "mode": "condensed",
+      "chain": "data",
+      "result": {
+        "name": "2-μεθοξυπροπάνιο",
+        "common": "ισοπροπυλομεθυλαιθέρας",
+        "parts": [
+          "2-",
+          "μεθοξυ",
+          null,
+          null,
+          null,
+          "προπ",
+          "άν",
+          null,
+          "",
+          "ιο",
+          null,
+          null
+        ],
+        "chain": [
+          4,
+          2,
+          5
+        ],
+        "classification": {
+          "taxonomy": "Αιθέρες",
+          "carbonCount": 4,
+          "principalFunctionalGroup": "ether",
+          "bondSeries": "alkanes",
+          "seriesKey": "ether",
+          "chemicalClass": "ethers",
+          "functionalGroups": [
+            "ether"
+          ]
+        },
+        "chain3D": [
+          3,
+          2,
+          4
+        ],
+        "commonParts": {
+          "symmetric": false,
+          "parts": [
+            {
+              "label": "ισοπροπυλ",
+              "chain": [
+                2,
+                4,
+                5
+              ],
+              "chain3D": [
+                2,
+                4,
+                3
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                4,
+                2,
+                5
+              ],
+              "numberChain3D": [
+                3,
+                2,
+                4
+              ]
+            },
+            {
+              "label": "μεθυλ",
+              "chain": [
+                3
+              ],
+              "chain3D": [
+                5
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                3
+              ],
+              "numberChain3D": [
+                5
+              ]
+            },
+            {
+              "label": "αιθέρας",
+              "chain": "ether",
+              "chain3D": "ether",
+              "kind": "ether",
+              "numberChain": null,
+              "numberChain3D": null
+            }
+          ]
+        },
+        "prefixes": [
+          {
+            "kind": "alkoxy",
+            "name": "μεθοξυ",
+            "label": "μεθοξυ",
+            "locants": "2",
+            "members": []
+          }
+        ],
+        "signature": "[[\"C\",1,[]],[\"C\",1,[\"1:O(1:C())\"]],[\"C\",0,[]]]",
+        "signature3D": "[[\"C\",1,[]],[\"C\",1,[\"1:O(1:C())\"]],[\"C\",0,[]]]"
+      }
+    },
+    {
+      "key": "isopropyl_methyl_ether",
+      "mode": "expanded",
+      "chain": "algorithmic",
+      "result": {
+        "name": "2-μεθοξυπροπάνιο",
+        "common": "ισοπροπυλομεθυλαιθέρας",
+        "parts": [
+          "2-",
+          "μεθοξυ",
+          null,
+          null,
+          null,
+          "προπ",
+          "άν",
+          null,
+          "",
+          "ιο",
+          null,
+          null
+        ],
+        "chain": [
+          4,
+          2,
+          5
+        ],
+        "classification": {
+          "taxonomy": "Αιθέρες",
+          "carbonCount": 4,
+          "principalFunctionalGroup": "ether",
+          "bondSeries": "alkanes",
+          "seriesKey": "ether",
+          "chemicalClass": "ethers",
+          "functionalGroups": [
+            "ether"
+          ]
+        },
+        "chain3D": [
+          3,
+          2,
+          4
+        ],
+        "commonParts": {
+          "symmetric": false,
+          "parts": [
+            {
+              "label": "ισοπροπυλ",
+              "chain": [
+                2,
+                4,
+                5
+              ],
+              "chain3D": [
+                2,
+                4,
+                3
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                4,
+                2,
+                5
+              ],
+              "numberChain3D": [
+                3,
+                2,
+                4
+              ]
+            },
+            {
+              "label": "μεθυλ",
+              "chain": [
+                3
+              ],
+              "chain3D": [
+                5
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                3
+              ],
+              "numberChain3D": [
+                5
+              ]
+            },
+            {
+              "label": "αιθέρας",
+              "chain": "ether",
+              "chain3D": "ether",
+              "kind": "ether",
+              "numberChain": null,
+              "numberChain3D": null
+            }
+          ]
+        },
+        "prefixes": [
+          {
+            "kind": "alkoxy",
+            "name": "μεθοξυ",
+            "label": "μεθοξυ",
+            "locants": "2",
+            "members": []
+          }
+        ],
+        "signature": "[[\"C\",1,[]],[\"C\",1,[\"1:O(1:C())\"]],[\"C\",0,[]]]",
+        "signature3D": "[[\"C\",1,[]],[\"C\",1,[\"1:O(1:C())\"]],[\"C\",0,[]]]"
+      }
+    },
+    {
+      "key": "isopropyl_methyl_ether",
+      "mode": "expanded",
+      "chain": "data",
+      "result": {
+        "name": "2-μεθοξυπροπάνιο",
+        "common": "ισοπροπυλομεθυλαιθέρας",
+        "parts": [
+          "2-",
+          "μεθοξυ",
+          null,
+          null,
+          null,
+          "προπ",
+          "άν",
+          null,
+          "",
+          "ιο",
+          null,
+          null
+        ],
+        "chain": [
+          4,
+          2,
+          5
+        ],
+        "classification": {
+          "taxonomy": "Αιθέρες",
+          "carbonCount": 4,
+          "principalFunctionalGroup": "ether",
+          "bondSeries": "alkanes",
+          "seriesKey": "ether",
+          "chemicalClass": "ethers",
+          "functionalGroups": [
+            "ether"
+          ]
+        },
+        "chain3D": [
+          3,
+          2,
+          4
+        ],
+        "commonParts": {
+          "symmetric": false,
+          "parts": [
+            {
+              "label": "ισοπροπυλ",
+              "chain": [
+                2,
+                4,
+                5
+              ],
+              "chain3D": [
+                2,
+                4,
+                3
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                4,
+                2,
+                5
+              ],
+              "numberChain3D": [
+                3,
+                2,
+                4
+              ]
+            },
+            {
+              "label": "μεθυλ",
+              "chain": [
+                3
+              ],
+              "chain3D": [
+                5
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                3
+              ],
+              "numberChain3D": [
+                5
+              ]
+            },
+            {
+              "label": "αιθέρας",
+              "chain": "ether",
+              "chain3D": "ether",
+              "kind": "ether",
+              "numberChain": null,
+              "numberChain3D": null
+            }
+          ]
+        },
+        "prefixes": [
+          {
+            "kind": "alkoxy",
+            "name": "μεθοξυ",
+            "label": "μεθοξυ",
+            "locants": "2",
+            "members": []
+          }
+        ],
+        "signature": "[[\"C\",1,[]],[\"C\",1,[\"1:O(1:C())\"]],[\"C\",0,[]]]",
+        "signature3D": "[[\"C\",1,[]],[\"C\",1,[\"1:O(1:C())\"]],[\"C\",0,[]]]"
+      }
+    },
+    {
+      "key": "isopropyl_methyl_ether",
+      "mode": "skeletal",
+      "chain": "algorithmic",
+      "result": {
+        "name": "2-μεθοξυπροπάνιο",
+        "common": "ισοπροπυλομεθυλαιθέρας",
+        "parts": [
+          "2-",
+          "μεθοξυ",
+          null,
+          null,
+          null,
+          "προπ",
+          "άν",
+          null,
+          "",
+          "ιο",
+          null,
+          null
+        ],
+        "chain": [
+          4,
+          3,
+          5
+        ],
+        "classification": {
+          "taxonomy": "Αιθέρες",
+          "carbonCount": 4,
+          "principalFunctionalGroup": "ether",
+          "bondSeries": "alkanes",
+          "seriesKey": "ether",
+          "chemicalClass": "ethers",
+          "functionalGroups": [
+            "ether"
+          ]
+        },
+        "chain3D": [
+          3,
+          2,
+          4
+        ],
+        "commonParts": {
+          "symmetric": false,
+          "parts": [
+            {
+              "label": "ισοπροπυλ",
+              "chain": [
+                3,
+                4,
+                5
+              ],
+              "chain3D": [
+                2,
+                4,
+                3
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                4,
+                3,
+                5
+              ],
+              "numberChain3D": [
+                3,
+                2,
+                4
+              ]
+            },
+            {
+              "label": "μεθυλ",
+              "chain": [
+                1
+              ],
+              "chain3D": [
+                5
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                1
+              ],
+              "numberChain3D": [
+                5
+              ]
+            },
+            {
+              "label": "αιθέρας",
+              "chain": "ether",
+              "chain3D": "ether",
+              "kind": "ether",
+              "numberChain": null,
+              "numberChain3D": null
+            }
+          ]
+        },
+        "prefixes": [
+          {
+            "kind": "alkoxy",
+            "name": "μεθοξυ",
+            "label": "μεθοξυ",
+            "locants": "2",
+            "members": []
+          }
+        ],
+        "signature": "[[\"C\",1,[]],[\"C\",1,[\"1:O(1:C())\"]],[\"C\",0,[]]]",
+        "signature3D": "[[\"C\",1,[]],[\"C\",1,[\"1:O(1:C())\"]],[\"C\",0,[]]]"
+      }
+    },
+    {
+      "key": "isopropyl_methyl_ether",
+      "mode": "skeletal",
+      "chain": "data",
+      "result": {
+        "name": "2-μεθοξυπροπάνιο",
+        "common": "ισοπροπυλομεθυλαιθέρας",
+        "parts": [
+          "2-",
+          "μεθοξυ",
+          null,
+          null,
+          null,
+          "προπ",
+          "άν",
+          null,
+          "",
+          "ιο",
+          null,
+          null
+        ],
+        "chain": [
+          4,
+          3,
+          5
+        ],
+        "classification": {
+          "taxonomy": "Αιθέρες",
+          "carbonCount": 4,
+          "principalFunctionalGroup": "ether",
+          "bondSeries": "alkanes",
+          "seriesKey": "ether",
+          "chemicalClass": "ethers",
+          "functionalGroups": [
+            "ether"
+          ]
+        },
+        "chain3D": [
+          3,
+          2,
+          4
+        ],
+        "commonParts": {
+          "symmetric": false,
+          "parts": [
+            {
+              "label": "ισοπροπυλ",
+              "chain": [
+                3,
+                4,
+                5
+              ],
+              "chain3D": [
+                2,
+                4,
+                3
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                4,
+                3,
+                5
+              ],
+              "numberChain3D": [
+                3,
+                2,
+                4
+              ]
+            },
+            {
+              "label": "μεθυλ",
+              "chain": [
+                1
+              ],
+              "chain3D": [
+                5
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                1
+              ],
+              "numberChain3D": [
+                5
+              ]
+            },
+            {
+              "label": "αιθέρας",
+              "chain": "ether",
+              "chain3D": "ether",
+              "kind": "ether",
+              "numberChain": null,
+              "numberChain3D": null
+            }
+          ]
+        },
+        "prefixes": [
+          {
+            "kind": "alkoxy",
+            "name": "μεθοξυ",
+            "label": "μεθοξυ",
+            "locants": "2",
+            "members": []
+          }
+        ],
+        "signature": "[[\"C\",1,[]],[\"C\",1,[\"1:O(1:C())\"]],[\"C\",0,[]]]",
+        "signature3D": "[[\"C\",1,[]],[\"C\",1,[\"1:O(1:C())\"]],[\"C\",0,[]]]"
+      }
+    },
+    {
+      "key": "methyl_propyl_ether",
+      "mode": "condensed",
+      "chain": "algorithmic",
+      "result": {
+        "name": "1-μεθοξυπροπάνιο",
+        "common": "μεθυλοπροπυλαιθέρας",
+        "parts": [
+          "1-",
+          "μεθοξυ",
+          null,
+          null,
+          null,
+          "προπ",
+          "άν",
+          null,
+          "",
+          "ιο",
+          null,
+          null
+        ],
+        "chain": [
+          1,
+          2,
+          3
+        ],
+        "classification": {
+          "taxonomy": "Αιθέρες",
+          "carbonCount": 4,
+          "principalFunctionalGroup": "ether",
+          "bondSeries": "alkanes",
+          "seriesKey": "ether",
+          "chemicalClass": "ethers",
+          "functionalGroups": [
+            "ether"
+          ]
+        },
+        "chain3D": [
+          3,
+          2,
+          4
+        ],
+        "commonParts": {
+          "symmetric": false,
+          "parts": [
+            {
+              "label": "μεθυλ",
+              "chain": [
+                4
+              ],
+              "chain3D": [
+                5
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                4
+              ],
+              "numberChain3D": [
+                5
+              ]
+            },
+            {
+              "label": "προπυλ",
+              "chain": [
+                1,
+                2,
+                3
+              ],
+              "chain3D": [
+                3,
+                2,
+                4
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                1,
+                2,
+                3
+              ],
+              "numberChain3D": [
+                3,
+                2,
+                4
+              ]
+            },
+            {
+              "label": "αιθέρας",
+              "chain": "ether",
+              "chain3D": "ether",
+              "kind": "ether",
+              "numberChain": null,
+              "numberChain3D": null
+            }
+          ]
+        },
+        "prefixes": [
+          {
+            "kind": "alkoxy",
+            "name": "μεθοξυ",
+            "label": "μεθοξυ",
+            "locants": "1",
+            "members": []
+          }
+        ],
+        "signature": "[[\"C\",1,[\"1:O(1:C())\"]],[\"C\",1,[]],[\"C\",0,[]]]",
+        "signature3D": "[[\"C\",1,[\"1:O(1:C())\"]],[\"C\",1,[]],[\"C\",0,[]]]"
+      }
+    },
+    {
+      "key": "methyl_propyl_ether",
+      "mode": "condensed",
+      "chain": "data",
+      "result": {
+        "name": "1-μεθοξυπροπάνιο",
+        "common": "μεθυλοπροπυλαιθέρας",
+        "parts": [
+          "1-",
+          "μεθοξυ",
+          null,
+          null,
+          null,
+          "προπ",
+          "άν",
+          null,
+          "",
+          "ιο",
+          null,
+          null
+        ],
+        "chain": [
+          1,
+          2,
+          3
+        ],
+        "classification": {
+          "taxonomy": "Αιθέρες",
+          "carbonCount": 4,
+          "principalFunctionalGroup": "ether",
+          "bondSeries": "alkanes",
+          "seriesKey": "ether",
+          "chemicalClass": "ethers",
+          "functionalGroups": [
+            "ether"
+          ]
+        },
+        "chain3D": [
+          3,
+          2,
+          4
+        ],
+        "commonParts": {
+          "symmetric": false,
+          "parts": [
+            {
+              "label": "μεθυλ",
+              "chain": [
+                4
+              ],
+              "chain3D": [
+                5
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                4
+              ],
+              "numberChain3D": [
+                5
+              ]
+            },
+            {
+              "label": "προπυλ",
+              "chain": [
+                1,
+                2,
+                3
+              ],
+              "chain3D": [
+                3,
+                2,
+                4
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                1,
+                2,
+                3
+              ],
+              "numberChain3D": [
+                3,
+                2,
+                4
+              ]
+            },
+            {
+              "label": "αιθέρας",
+              "chain": "ether",
+              "chain3D": "ether",
+              "kind": "ether",
+              "numberChain": null,
+              "numberChain3D": null
+            }
+          ]
+        },
+        "prefixes": [
+          {
+            "kind": "alkoxy",
+            "name": "μεθοξυ",
+            "label": "μεθοξυ",
+            "locants": "1",
+            "members": []
+          }
+        ],
+        "signature": "[[\"C\",1,[\"1:O(1:C())\"]],[\"C\",1,[]],[\"C\",0,[]]]",
+        "signature3D": "[[\"C\",1,[\"1:O(1:C())\"]],[\"C\",1,[]],[\"C\",0,[]]]"
+      }
+    },
+    {
+      "key": "methyl_propyl_ether",
+      "mode": "expanded",
+      "chain": "algorithmic",
+      "result": {
+        "name": "1-μεθοξυπροπάνιο",
+        "common": "μεθυλοπροπυλαιθέρας",
+        "parts": [
+          "1-",
+          "μεθοξυ",
+          null,
+          null,
+          null,
+          "προπ",
+          "άν",
+          null,
+          "",
+          "ιο",
+          null,
+          null
+        ],
+        "chain": [
+          1,
+          2,
+          3
+        ],
+        "classification": {
+          "taxonomy": "Αιθέρες",
+          "carbonCount": 4,
+          "principalFunctionalGroup": "ether",
+          "bondSeries": "alkanes",
+          "seriesKey": "ether",
+          "chemicalClass": "ethers",
+          "functionalGroups": [
+            "ether"
+          ]
+        },
+        "chain3D": [
+          3,
+          2,
+          4
+        ],
+        "commonParts": {
+          "symmetric": false,
+          "parts": [
+            {
+              "label": "μεθυλ",
+              "chain": [
+                4
+              ],
+              "chain3D": [
+                5
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                4
+              ],
+              "numberChain3D": [
+                5
+              ]
+            },
+            {
+              "label": "προπυλ",
+              "chain": [
+                1,
+                2,
+                3
+              ],
+              "chain3D": [
+                3,
+                2,
+                4
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                1,
+                2,
+                3
+              ],
+              "numberChain3D": [
+                3,
+                2,
+                4
+              ]
+            },
+            {
+              "label": "αιθέρας",
+              "chain": "ether",
+              "chain3D": "ether",
+              "kind": "ether",
+              "numberChain": null,
+              "numberChain3D": null
+            }
+          ]
+        },
+        "prefixes": [
+          {
+            "kind": "alkoxy",
+            "name": "μεθοξυ",
+            "label": "μεθοξυ",
+            "locants": "1",
+            "members": []
+          }
+        ],
+        "signature": "[[\"C\",1,[\"1:O(1:C())\"]],[\"C\",1,[]],[\"C\",0,[]]]",
+        "signature3D": "[[\"C\",1,[\"1:O(1:C())\"]],[\"C\",1,[]],[\"C\",0,[]]]"
+      }
+    },
+    {
+      "key": "methyl_propyl_ether",
+      "mode": "expanded",
+      "chain": "data",
+      "result": {
+        "name": "1-μεθοξυπροπάνιο",
+        "common": "μεθυλοπροπυλαιθέρας",
+        "parts": [
+          "1-",
+          "μεθοξυ",
+          null,
+          null,
+          null,
+          "προπ",
+          "άν",
+          null,
+          "",
+          "ιο",
+          null,
+          null
+        ],
+        "chain": [
+          1,
+          2,
+          3
+        ],
+        "classification": {
+          "taxonomy": "Αιθέρες",
+          "carbonCount": 4,
+          "principalFunctionalGroup": "ether",
+          "bondSeries": "alkanes",
+          "seriesKey": "ether",
+          "chemicalClass": "ethers",
+          "functionalGroups": [
+            "ether"
+          ]
+        },
+        "chain3D": [
+          3,
+          2,
+          4
+        ],
+        "commonParts": {
+          "symmetric": false,
+          "parts": [
+            {
+              "label": "μεθυλ",
+              "chain": [
+                4
+              ],
+              "chain3D": [
+                5
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                4
+              ],
+              "numberChain3D": [
+                5
+              ]
+            },
+            {
+              "label": "προπυλ",
+              "chain": [
+                1,
+                2,
+                3
+              ],
+              "chain3D": [
+                3,
+                2,
+                4
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                1,
+                2,
+                3
+              ],
+              "numberChain3D": [
+                3,
+                2,
+                4
+              ]
+            },
+            {
+              "label": "αιθέρας",
+              "chain": "ether",
+              "chain3D": "ether",
+              "kind": "ether",
+              "numberChain": null,
+              "numberChain3D": null
+            }
+          ]
+        },
+        "prefixes": [
+          {
+            "kind": "alkoxy",
+            "name": "μεθοξυ",
+            "label": "μεθοξυ",
+            "locants": "1",
+            "members": []
+          }
+        ],
+        "signature": "[[\"C\",1,[\"1:O(1:C())\"]],[\"C\",1,[]],[\"C\",0,[]]]",
+        "signature3D": "[[\"C\",1,[\"1:O(1:C())\"]],[\"C\",1,[]],[\"C\",0,[]]]"
+      }
+    },
+    {
+      "key": "methyl_propyl_ether",
+      "mode": "skeletal",
+      "chain": "algorithmic",
+      "result": {
+        "name": "1-μεθοξυπροπάνιο",
+        "common": "μεθυλοπροπυλαιθέρας",
+        "parts": [
+          "1-",
+          "μεθοξυ",
+          null,
+          null,
+          null,
+          "προπ",
+          "άν",
+          null,
+          "",
+          "ιο",
+          null,
+          null
+        ],
+        "chain": [
+          1,
+          2,
+          3
+        ],
+        "classification": {
+          "taxonomy": "Αιθέρες",
+          "carbonCount": 4,
+          "principalFunctionalGroup": "ether",
+          "bondSeries": "alkanes",
+          "seriesKey": "ether",
+          "chemicalClass": "ethers",
+          "functionalGroups": [
+            "ether"
+          ]
+        },
+        "chain3D": [
+          3,
+          2,
+          4
+        ],
+        "commonParts": {
+          "symmetric": false,
+          "parts": [
+            {
+              "label": "μεθυλ",
+              "chain": [
+                4
+              ],
+              "chain3D": [
+                5
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                4
+              ],
+              "numberChain3D": [
+                5
+              ]
+            },
+            {
+              "label": "προπυλ",
+              "chain": [
+                1,
+                2,
+                3
+              ],
+              "chain3D": [
+                3,
+                2,
+                4
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                1,
+                2,
+                3
+              ],
+              "numberChain3D": [
+                3,
+                2,
+                4
+              ]
+            },
+            {
+              "label": "αιθέρας",
+              "chain": "ether",
+              "chain3D": "ether",
+              "kind": "ether",
+              "numberChain": null,
+              "numberChain3D": null
+            }
+          ]
+        },
+        "prefixes": [
+          {
+            "kind": "alkoxy",
+            "name": "μεθοξυ",
+            "label": "μεθοξυ",
+            "locants": "1",
+            "members": []
+          }
+        ],
+        "signature": "[[\"C\",1,[\"1:O(1:C())\"]],[\"C\",1,[]],[\"C\",0,[]]]",
+        "signature3D": "[[\"C\",1,[\"1:O(1:C())\"]],[\"C\",1,[]],[\"C\",0,[]]]"
+      }
+    },
+    {
+      "key": "methyl_propyl_ether",
+      "mode": "skeletal",
+      "chain": "data",
+      "result": {
+        "name": "1-μεθοξυπροπάνιο",
+        "common": "μεθυλοπροπυλαιθέρας",
+        "parts": [
+          "1-",
+          "μεθοξυ",
+          null,
+          null,
+          null,
+          "προπ",
+          "άν",
+          null,
+          "",
+          "ιο",
+          null,
+          null
+        ],
+        "chain": [
+          1,
+          2,
+          3
+        ],
+        "classification": {
+          "taxonomy": "Αιθέρες",
+          "carbonCount": 4,
+          "principalFunctionalGroup": "ether",
+          "bondSeries": "alkanes",
+          "seriesKey": "ether",
+          "chemicalClass": "ethers",
+          "functionalGroups": [
+            "ether"
+          ]
+        },
+        "chain3D": [
+          3,
+          2,
+          4
+        ],
+        "commonParts": {
+          "symmetric": false,
+          "parts": [
+            {
+              "label": "μεθυλ",
+              "chain": [
+                4
+              ],
+              "chain3D": [
+                5
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                4
+              ],
+              "numberChain3D": [
+                5
+              ]
+            },
+            {
+              "label": "προπυλ",
+              "chain": [
+                1,
+                2,
+                3
+              ],
+              "chain3D": [
+                3,
+                2,
+                4
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                1,
+                2,
+                3
+              ],
+              "numberChain3D": [
+                3,
+                2,
+                4
+              ]
+            },
+            {
+              "label": "αιθέρας",
+              "chain": "ether",
+              "chain3D": "ether",
+              "kind": "ether",
+              "numberChain": null,
+              "numberChain3D": null
+            }
+          ]
+        },
+        "prefixes": [
+          {
+            "kind": "alkoxy",
+            "name": "μεθοξυ",
+            "label": "μεθοξυ",
+            "locants": "1",
+            "members": []
+          }
+        ],
+        "signature": "[[\"C\",1,[\"1:O(1:C())\"]],[\"C\",1,[]],[\"C\",0,[]]]",
+        "signature3D": "[[\"C\",1,[\"1:O(1:C())\"]],[\"C\",1,[]],[\"C\",0,[]]]"
+      }
+    },
+    {
+      "key": "ethyl_propyl_ether",
+      "mode": "condensed",
+      "chain": "algorithmic",
+      "result": {
+        "name": "1-αιθοξυπροπάνιο",
+        "common": "αιθυλοπροπυλαιθέρας",
+        "parts": [
+          "1-",
+          "αιθοξυ",
+          null,
+          null,
+          null,
+          "προπ",
+          "άν",
+          null,
+          "",
+          "ιο",
+          null,
+          null
+        ],
+        "chain": [
+          1,
+          2,
+          3
+        ],
+        "classification": {
+          "taxonomy": "Αιθέρες",
+          "carbonCount": 5,
+          "principalFunctionalGroup": "ether",
+          "bondSeries": "alkanes",
+          "seriesKey": "ether",
+          "chemicalClass": "ethers",
+          "functionalGroups": [
+            "ether"
+          ]
+        },
+        "chain3D": [
+          3,
+          2,
+          5
+        ],
+        "commonParts": {
+          "symmetric": false,
+          "parts": [
+            {
+              "label": "αιθυλ",
+              "chain": [
+                4,
+                5
+              ],
+              "chain3D": [
+                4,
+                6
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                4,
+                5
+              ],
+              "numberChain3D": [
+                4,
+                6
+              ]
+            },
+            {
+              "label": "προπυλ",
+              "chain": [
+                1,
+                2,
+                3
+              ],
+              "chain3D": [
+                3,
+                2,
+                5
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                1,
+                2,
+                3
+              ],
+              "numberChain3D": [
+                3,
+                2,
+                5
+              ]
+            },
+            {
+              "label": "αιθέρας",
+              "chain": "ether",
+              "chain3D": "ether",
+              "kind": "ether",
+              "numberChain": null,
+              "numberChain3D": null
+            }
+          ]
+        },
+        "prefixes": [
+          {
+            "kind": "alkoxy",
+            "name": "αιθοξυ",
+            "label": "αιθοξυ",
+            "locants": "1",
+            "members": []
+          }
+        ],
+        "signature": "[[\"C\",1,[\"1:O(1:C(1:C()))\"]],[\"C\",1,[]],[\"C\",0,[]]]",
+        "signature3D": "[[\"C\",1,[\"1:O(1:C(1:C()))\"]],[\"C\",1,[]],[\"C\",0,[]]]"
+      }
+    },
+    {
+      "key": "ethyl_propyl_ether",
+      "mode": "condensed",
+      "chain": "data",
+      "result": {
+        "name": "1-αιθοξυπροπάνιο",
+        "common": "αιθυλοπροπυλαιθέρας",
+        "parts": [
+          "1-",
+          "αιθοξυ",
+          null,
+          null,
+          null,
+          "προπ",
+          "άν",
+          null,
+          "",
+          "ιο",
+          null,
+          null
+        ],
+        "chain": [
+          1,
+          2,
+          3
+        ],
+        "classification": {
+          "taxonomy": "Αιθέρες",
+          "carbonCount": 5,
+          "principalFunctionalGroup": "ether",
+          "bondSeries": "alkanes",
+          "seriesKey": "ether",
+          "chemicalClass": "ethers",
+          "functionalGroups": [
+            "ether"
+          ]
+        },
+        "chain3D": [
+          3,
+          2,
+          5
+        ],
+        "commonParts": {
+          "symmetric": false,
+          "parts": [
+            {
+              "label": "αιθυλ",
+              "chain": [
+                4,
+                5
+              ],
+              "chain3D": [
+                4,
+                6
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                4,
+                5
+              ],
+              "numberChain3D": [
+                4,
+                6
+              ]
+            },
+            {
+              "label": "προπυλ",
+              "chain": [
+                1,
+                2,
+                3
+              ],
+              "chain3D": [
+                3,
+                2,
+                5
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                1,
+                2,
+                3
+              ],
+              "numberChain3D": [
+                3,
+                2,
+                5
+              ]
+            },
+            {
+              "label": "αιθέρας",
+              "chain": "ether",
+              "chain3D": "ether",
+              "kind": "ether",
+              "numberChain": null,
+              "numberChain3D": null
+            }
+          ]
+        },
+        "prefixes": [
+          {
+            "kind": "alkoxy",
+            "name": "αιθοξυ",
+            "label": "αιθοξυ",
+            "locants": "1",
+            "members": []
+          }
+        ],
+        "signature": "[[\"C\",1,[\"1:O(1:C(1:C()))\"]],[\"C\",1,[]],[\"C\",0,[]]]",
+        "signature3D": "[[\"C\",1,[\"1:O(1:C(1:C()))\"]],[\"C\",1,[]],[\"C\",0,[]]]"
+      }
+    },
+    {
+      "key": "ethyl_propyl_ether",
+      "mode": "expanded",
+      "chain": "algorithmic",
+      "result": {
+        "name": "1-αιθοξυπροπάνιο",
+        "common": "αιθυλοπροπυλαιθέρας",
+        "parts": [
+          "1-",
+          "αιθοξυ",
+          null,
+          null,
+          null,
+          "προπ",
+          "άν",
+          null,
+          "",
+          "ιο",
+          null,
+          null
+        ],
+        "chain": [
+          1,
+          2,
+          3
+        ],
+        "classification": {
+          "taxonomy": "Αιθέρες",
+          "carbonCount": 5,
+          "principalFunctionalGroup": "ether",
+          "bondSeries": "alkanes",
+          "seriesKey": "ether",
+          "chemicalClass": "ethers",
+          "functionalGroups": [
+            "ether"
+          ]
+        },
+        "chain3D": [
+          3,
+          2,
+          5
+        ],
+        "commonParts": {
+          "symmetric": false,
+          "parts": [
+            {
+              "label": "αιθυλ",
+              "chain": [
+                4,
+                5
+              ],
+              "chain3D": [
+                4,
+                6
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                4,
+                5
+              ],
+              "numberChain3D": [
+                4,
+                6
+              ]
+            },
+            {
+              "label": "προπυλ",
+              "chain": [
+                1,
+                2,
+                3
+              ],
+              "chain3D": [
+                3,
+                2,
+                5
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                1,
+                2,
+                3
+              ],
+              "numberChain3D": [
+                3,
+                2,
+                5
+              ]
+            },
+            {
+              "label": "αιθέρας",
+              "chain": "ether",
+              "chain3D": "ether",
+              "kind": "ether",
+              "numberChain": null,
+              "numberChain3D": null
+            }
+          ]
+        },
+        "prefixes": [
+          {
+            "kind": "alkoxy",
+            "name": "αιθοξυ",
+            "label": "αιθοξυ",
+            "locants": "1",
+            "members": []
+          }
+        ],
+        "signature": "[[\"C\",1,[\"1:O(1:C(1:C()))\"]],[\"C\",1,[]],[\"C\",0,[]]]",
+        "signature3D": "[[\"C\",1,[\"1:O(1:C(1:C()))\"]],[\"C\",1,[]],[\"C\",0,[]]]"
+      }
+    },
+    {
+      "key": "ethyl_propyl_ether",
+      "mode": "expanded",
+      "chain": "data",
+      "result": {
+        "name": "1-αιθοξυπροπάνιο",
+        "common": "αιθυλοπροπυλαιθέρας",
+        "parts": [
+          "1-",
+          "αιθοξυ",
+          null,
+          null,
+          null,
+          "προπ",
+          "άν",
+          null,
+          "",
+          "ιο",
+          null,
+          null
+        ],
+        "chain": [
+          1,
+          2,
+          3
+        ],
+        "classification": {
+          "taxonomy": "Αιθέρες",
+          "carbonCount": 5,
+          "principalFunctionalGroup": "ether",
+          "bondSeries": "alkanes",
+          "seriesKey": "ether",
+          "chemicalClass": "ethers",
+          "functionalGroups": [
+            "ether"
+          ]
+        },
+        "chain3D": [
+          3,
+          2,
+          5
+        ],
+        "commonParts": {
+          "symmetric": false,
+          "parts": [
+            {
+              "label": "αιθυλ",
+              "chain": [
+                4,
+                5
+              ],
+              "chain3D": [
+                4,
+                6
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                4,
+                5
+              ],
+              "numberChain3D": [
+                4,
+                6
+              ]
+            },
+            {
+              "label": "προπυλ",
+              "chain": [
+                1,
+                2,
+                3
+              ],
+              "chain3D": [
+                3,
+                2,
+                5
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                1,
+                2,
+                3
+              ],
+              "numberChain3D": [
+                3,
+                2,
+                5
+              ]
+            },
+            {
+              "label": "αιθέρας",
+              "chain": "ether",
+              "chain3D": "ether",
+              "kind": "ether",
+              "numberChain": null,
+              "numberChain3D": null
+            }
+          ]
+        },
+        "prefixes": [
+          {
+            "kind": "alkoxy",
+            "name": "αιθοξυ",
+            "label": "αιθοξυ",
+            "locants": "1",
+            "members": []
+          }
+        ],
+        "signature": "[[\"C\",1,[\"1:O(1:C(1:C()))\"]],[\"C\",1,[]],[\"C\",0,[]]]",
+        "signature3D": "[[\"C\",1,[\"1:O(1:C(1:C()))\"]],[\"C\",1,[]],[\"C\",0,[]]]"
+      }
+    },
+    {
+      "key": "ethyl_propyl_ether",
+      "mode": "skeletal",
+      "chain": "algorithmic",
+      "result": {
+        "name": "1-αιθοξυπροπάνιο",
+        "common": "αιθυλοπροπυλαιθέρας",
+        "parts": [
+          "1-",
+          "αιθοξυ",
+          null,
+          null,
+          null,
+          "προπ",
+          "άν",
+          null,
+          "",
+          "ιο",
+          null,
+          null
+        ],
+        "chain": [
+          1,
+          2,
+          3
+        ],
+        "classification": {
+          "taxonomy": "Αιθέρες",
+          "carbonCount": 5,
+          "principalFunctionalGroup": "ether",
+          "bondSeries": "alkanes",
+          "seriesKey": "ether",
+          "chemicalClass": "ethers",
+          "functionalGroups": [
+            "ether"
+          ]
+        },
+        "chain3D": [
+          3,
+          2,
+          5
+        ],
+        "commonParts": {
+          "symmetric": false,
+          "parts": [
+            {
+              "label": "αιθυλ",
+              "chain": [
+                4,
+                5
+              ],
+              "chain3D": [
+                4,
+                6
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                4,
+                5
+              ],
+              "numberChain3D": [
+                4,
+                6
+              ]
+            },
+            {
+              "label": "προπυλ",
+              "chain": [
+                1,
+                2,
+                3
+              ],
+              "chain3D": [
+                3,
+                2,
+                5
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                1,
+                2,
+                3
+              ],
+              "numberChain3D": [
+                3,
+                2,
+                5
+              ]
+            },
+            {
+              "label": "αιθέρας",
+              "chain": "ether",
+              "chain3D": "ether",
+              "kind": "ether",
+              "numberChain": null,
+              "numberChain3D": null
+            }
+          ]
+        },
+        "prefixes": [
+          {
+            "kind": "alkoxy",
+            "name": "αιθοξυ",
+            "label": "αιθοξυ",
+            "locants": "1",
+            "members": []
+          }
+        ],
+        "signature": "[[\"C\",1,[\"1:O(1:C(1:C()))\"]],[\"C\",1,[]],[\"C\",0,[]]]",
+        "signature3D": "[[\"C\",1,[\"1:O(1:C(1:C()))\"]],[\"C\",1,[]],[\"C\",0,[]]]"
+      }
+    },
+    {
+      "key": "ethyl_propyl_ether",
+      "mode": "skeletal",
+      "chain": "data",
+      "result": {
+        "name": "1-αιθοξυπροπάνιο",
+        "common": "αιθυλοπροπυλαιθέρας",
+        "parts": [
+          "1-",
+          "αιθοξυ",
+          null,
+          null,
+          null,
+          "προπ",
+          "άν",
+          null,
+          "",
+          "ιο",
+          null,
+          null
+        ],
+        "chain": [
+          1,
+          2,
+          3
+        ],
+        "classification": {
+          "taxonomy": "Αιθέρες",
+          "carbonCount": 5,
+          "principalFunctionalGroup": "ether",
+          "bondSeries": "alkanes",
+          "seriesKey": "ether",
+          "chemicalClass": "ethers",
+          "functionalGroups": [
+            "ether"
+          ]
+        },
+        "chain3D": [
+          3,
+          2,
+          5
+        ],
+        "commonParts": {
+          "symmetric": false,
+          "parts": [
+            {
+              "label": "αιθυλ",
+              "chain": [
+                4,
+                5
+              ],
+              "chain3D": [
+                4,
+                6
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                4,
+                5
+              ],
+              "numberChain3D": [
+                4,
+                6
+              ]
+            },
+            {
+              "label": "προπυλ",
+              "chain": [
+                1,
+                2,
+                3
+              ],
+              "chain3D": [
+                3,
+                2,
+                5
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                1,
+                2,
+                3
+              ],
+              "numberChain3D": [
+                3,
+                2,
+                5
+              ]
+            },
+            {
+              "label": "αιθέρας",
+              "chain": "ether",
+              "chain3D": "ether",
+              "kind": "ether",
+              "numberChain": null,
+              "numberChain3D": null
+            }
+          ]
+        },
+        "prefixes": [
+          {
+            "kind": "alkoxy",
+            "name": "αιθοξυ",
+            "label": "αιθοξυ",
+            "locants": "1",
+            "members": []
+          }
+        ],
+        "signature": "[[\"C\",1,[\"1:O(1:C(1:C()))\"]],[\"C\",1,[]],[\"C\",0,[]]]",
+        "signature3D": "[[\"C\",1,[\"1:O(1:C(1:C()))\"]],[\"C\",1,[]],[\"C\",0,[]]]"
+      }
+    },
+    {
+      "key": "ethyl_isopropyl_ether",
+      "mode": "condensed",
+      "chain": "algorithmic",
+      "result": {
+        "name": "2-αιθοξυπροπάνιο",
+        "common": "αιθυλοϊσοπροπυλαιθέρας",
+        "parts": [
+          "2-",
+          "αιθοξυ",
+          null,
+          null,
+          null,
+          "προπ",
+          "άν",
+          null,
+          "",
+          "ιο",
+          null,
+          null
+        ],
+        "chain": [
+          1,
+          2,
+          3
+        ],
+        "classification": {
+          "taxonomy": "Αιθέρες",
+          "carbonCount": 5,
+          "principalFunctionalGroup": "ether",
+          "bondSeries": "alkanes",
+          "seriesKey": "ether",
+          "chemicalClass": "ethers",
+          "functionalGroups": [
+            "ether"
+          ]
+        },
+        "chain3D": [
+          3,
+          2,
+          4
+        ],
+        "commonParts": {
+          "symmetric": false,
+          "parts": [
+            {
+              "label": "αιθυλο",
+              "chain": [
+                4,
+                5
+              ],
+              "chain3D": [
+                5,
+                6
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                4,
+                5
+              ],
+              "numberChain3D": [
+                5,
+                6
+              ]
+            },
+            {
+              "label": "ϊσοπροπυλ",
+              "chain": [
+                1,
+                2,
+                3
+              ],
+              "chain3D": [
+                2,
+                4,
+                3
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                1,
+                2,
+                3
+              ],
+              "numberChain3D": [
+                3,
+                2,
+                4
+              ]
+            },
+            {
+              "label": "αιθέρας",
+              "chain": "ether",
+              "chain3D": "ether",
+              "kind": "ether",
+              "numberChain": null,
+              "numberChain3D": null
+            }
+          ]
+        },
+        "prefixes": [
+          {
+            "kind": "alkoxy",
+            "name": "αιθοξυ",
+            "label": "αιθοξυ",
+            "locants": "2",
+            "members": []
+          }
+        ],
+        "signature": "[[\"C\",1,[]],[\"C\",1,[\"1:O(1:C(1:C()))\"]],[\"C\",0,[]]]",
+        "signature3D": "[[\"C\",1,[]],[\"C\",1,[\"1:O(1:C(1:C()))\"]],[\"C\",0,[]]]"
+      }
+    },
+    {
+      "key": "ethyl_isopropyl_ether",
+      "mode": "condensed",
+      "chain": "data",
+      "result": {
+        "name": "2-αιθοξυπροπάνιο",
+        "common": "αιθυλοϊσοπροπυλαιθέρας",
+        "parts": [
+          "2-",
+          "αιθοξυ",
+          null,
+          null,
+          null,
+          "προπ",
+          "άν",
+          null,
+          "",
+          "ιο",
+          null,
+          null
+        ],
+        "chain": [
+          1,
+          2,
+          3
+        ],
+        "classification": {
+          "taxonomy": "Αιθέρες",
+          "carbonCount": 5,
+          "principalFunctionalGroup": "ether",
+          "bondSeries": "alkanes",
+          "seriesKey": "ether",
+          "chemicalClass": "ethers",
+          "functionalGroups": [
+            "ether"
+          ]
+        },
+        "chain3D": [
+          3,
+          2,
+          4
+        ],
+        "commonParts": {
+          "symmetric": false,
+          "parts": [
+            {
+              "label": "αιθυλο",
+              "chain": [
+                4,
+                5
+              ],
+              "chain3D": [
+                5,
+                6
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                4,
+                5
+              ],
+              "numberChain3D": [
+                5,
+                6
+              ]
+            },
+            {
+              "label": "ϊσοπροπυλ",
+              "chain": [
+                1,
+                2,
+                3
+              ],
+              "chain3D": [
+                2,
+                4,
+                3
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                1,
+                2,
+                3
+              ],
+              "numberChain3D": [
+                3,
+                2,
+                4
+              ]
+            },
+            {
+              "label": "αιθέρας",
+              "chain": "ether",
+              "chain3D": "ether",
+              "kind": "ether",
+              "numberChain": null,
+              "numberChain3D": null
+            }
+          ]
+        },
+        "prefixes": [
+          {
+            "kind": "alkoxy",
+            "name": "αιθοξυ",
+            "label": "αιθοξυ",
+            "locants": "2",
+            "members": []
+          }
+        ],
+        "signature": "[[\"C\",1,[]],[\"C\",1,[\"1:O(1:C(1:C()))\"]],[\"C\",0,[]]]",
+        "signature3D": "[[\"C\",1,[]],[\"C\",1,[\"1:O(1:C(1:C()))\"]],[\"C\",0,[]]]"
+      }
+    },
+    {
+      "key": "ethyl_isopropyl_ether",
+      "mode": "expanded",
+      "chain": "algorithmic",
+      "result": {
+        "name": "2-αιθοξυπροπάνιο",
+        "common": "αιθυλοϊσοπροπυλαιθέρας",
+        "parts": [
+          "2-",
+          "αιθοξυ",
+          null,
+          null,
+          null,
+          "προπ",
+          "άν",
+          null,
+          "",
+          "ιο",
+          null,
+          null
+        ],
+        "chain": [
+          1,
+          2,
+          3
+        ],
+        "classification": {
+          "taxonomy": "Αιθέρες",
+          "carbonCount": 5,
+          "principalFunctionalGroup": "ether",
+          "bondSeries": "alkanes",
+          "seriesKey": "ether",
+          "chemicalClass": "ethers",
+          "functionalGroups": [
+            "ether"
+          ]
+        },
+        "chain3D": [
+          3,
+          2,
+          4
+        ],
+        "commonParts": {
+          "symmetric": false,
+          "parts": [
+            {
+              "label": "αιθυλο",
+              "chain": [
+                4,
+                5
+              ],
+              "chain3D": [
+                5,
+                6
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                4,
+                5
+              ],
+              "numberChain3D": [
+                5,
+                6
+              ]
+            },
+            {
+              "label": "ϊσοπροπυλ",
+              "chain": [
+                1,
+                2,
+                3
+              ],
+              "chain3D": [
+                2,
+                4,
+                3
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                1,
+                2,
+                3
+              ],
+              "numberChain3D": [
+                3,
+                2,
+                4
+              ]
+            },
+            {
+              "label": "αιθέρας",
+              "chain": "ether",
+              "chain3D": "ether",
+              "kind": "ether",
+              "numberChain": null,
+              "numberChain3D": null
+            }
+          ]
+        },
+        "prefixes": [
+          {
+            "kind": "alkoxy",
+            "name": "αιθοξυ",
+            "label": "αιθοξυ",
+            "locants": "2",
+            "members": []
+          }
+        ],
+        "signature": "[[\"C\",1,[]],[\"C\",1,[\"1:O(1:C(1:C()))\"]],[\"C\",0,[]]]",
+        "signature3D": "[[\"C\",1,[]],[\"C\",1,[\"1:O(1:C(1:C()))\"]],[\"C\",0,[]]]"
+      }
+    },
+    {
+      "key": "ethyl_isopropyl_ether",
+      "mode": "expanded",
+      "chain": "data",
+      "result": {
+        "name": "2-αιθοξυπροπάνιο",
+        "common": "αιθυλοϊσοπροπυλαιθέρας",
+        "parts": [
+          "2-",
+          "αιθοξυ",
+          null,
+          null,
+          null,
+          "προπ",
+          "άν",
+          null,
+          "",
+          "ιο",
+          null,
+          null
+        ],
+        "chain": [
+          1,
+          2,
+          3
+        ],
+        "classification": {
+          "taxonomy": "Αιθέρες",
+          "carbonCount": 5,
+          "principalFunctionalGroup": "ether",
+          "bondSeries": "alkanes",
+          "seriesKey": "ether",
+          "chemicalClass": "ethers",
+          "functionalGroups": [
+            "ether"
+          ]
+        },
+        "chain3D": [
+          3,
+          2,
+          4
+        ],
+        "commonParts": {
+          "symmetric": false,
+          "parts": [
+            {
+              "label": "αιθυλο",
+              "chain": [
+                4,
+                5
+              ],
+              "chain3D": [
+                5,
+                6
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                4,
+                5
+              ],
+              "numberChain3D": [
+                5,
+                6
+              ]
+            },
+            {
+              "label": "ϊσοπροπυλ",
+              "chain": [
+                1,
+                2,
+                3
+              ],
+              "chain3D": [
+                2,
+                4,
+                3
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                1,
+                2,
+                3
+              ],
+              "numberChain3D": [
+                3,
+                2,
+                4
+              ]
+            },
+            {
+              "label": "αιθέρας",
+              "chain": "ether",
+              "chain3D": "ether",
+              "kind": "ether",
+              "numberChain": null,
+              "numberChain3D": null
+            }
+          ]
+        },
+        "prefixes": [
+          {
+            "kind": "alkoxy",
+            "name": "αιθοξυ",
+            "label": "αιθοξυ",
+            "locants": "2",
+            "members": []
+          }
+        ],
+        "signature": "[[\"C\",1,[]],[\"C\",1,[\"1:O(1:C(1:C()))\"]],[\"C\",0,[]]]",
+        "signature3D": "[[\"C\",1,[]],[\"C\",1,[\"1:O(1:C(1:C()))\"]],[\"C\",0,[]]]"
+      }
+    },
+    {
+      "key": "ethyl_isopropyl_ether",
+      "mode": "skeletal",
+      "chain": "algorithmic",
+      "result": {
+        "name": "2-αιθοξυπροπάνιο",
+        "common": "αιθυλοϊσοπροπυλαιθέρας",
+        "parts": [
+          "2-",
+          "αιθοξυ",
+          null,
+          null,
+          null,
+          "προπ",
+          "άν",
+          null,
+          "",
+          "ιο",
+          null,
+          null
+        ],
+        "chain": [
+          1,
+          2,
+          3
+        ],
+        "classification": {
+          "taxonomy": "Αιθέρες",
+          "carbonCount": 5,
+          "principalFunctionalGroup": "ether",
+          "bondSeries": "alkanes",
+          "seriesKey": "ether",
+          "chemicalClass": "ethers",
+          "functionalGroups": [
+            "ether"
+          ]
+        },
+        "chain3D": [
+          3,
+          2,
+          4
+        ],
+        "commonParts": {
+          "symmetric": false,
+          "parts": [
+            {
+              "label": "αιθυλο",
+              "chain": [
+                4,
+                5
+              ],
+              "chain3D": [
+                5,
+                6
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                4,
+                5
+              ],
+              "numberChain3D": [
+                5,
+                6
+              ]
+            },
+            {
+              "label": "ϊσοπροπυλ",
+              "chain": [
+                1,
+                2,
+                3
+              ],
+              "chain3D": [
+                2,
+                4,
+                3
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                1,
+                2,
+                3
+              ],
+              "numberChain3D": [
+                3,
+                2,
+                4
+              ]
+            },
+            {
+              "label": "αιθέρας",
+              "chain": "ether",
+              "chain3D": "ether",
+              "kind": "ether",
+              "numberChain": null,
+              "numberChain3D": null
+            }
+          ]
+        },
+        "prefixes": [
+          {
+            "kind": "alkoxy",
+            "name": "αιθοξυ",
+            "label": "αιθοξυ",
+            "locants": "2",
+            "members": []
+          }
+        ],
+        "signature": "[[\"C\",1,[]],[\"C\",1,[\"1:O(1:C(1:C()))\"]],[\"C\",0,[]]]",
+        "signature3D": "[[\"C\",1,[]],[\"C\",1,[\"1:O(1:C(1:C()))\"]],[\"C\",0,[]]]"
+      }
+    },
+    {
+      "key": "ethyl_isopropyl_ether",
+      "mode": "skeletal",
+      "chain": "data",
+      "result": {
+        "name": "2-αιθοξυπροπάνιο",
+        "common": "αιθυλοϊσοπροπυλαιθέρας",
+        "parts": [
+          "2-",
+          "αιθοξυ",
+          null,
+          null,
+          null,
+          "προπ",
+          "άν",
+          null,
+          "",
+          "ιο",
+          null,
+          null
+        ],
+        "chain": [
+          1,
+          2,
+          3
+        ],
+        "classification": {
+          "taxonomy": "Αιθέρες",
+          "carbonCount": 5,
+          "principalFunctionalGroup": "ether",
+          "bondSeries": "alkanes",
+          "seriesKey": "ether",
+          "chemicalClass": "ethers",
+          "functionalGroups": [
+            "ether"
+          ]
+        },
+        "chain3D": [
+          3,
+          2,
+          4
+        ],
+        "commonParts": {
+          "symmetric": false,
+          "parts": [
+            {
+              "label": "αιθυλο",
+              "chain": [
+                4,
+                5
+              ],
+              "chain3D": [
+                5,
+                6
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                4,
+                5
+              ],
+              "numberChain3D": [
+                5,
+                6
+              ]
+            },
+            {
+              "label": "ϊσοπροπυλ",
+              "chain": [
+                1,
+                2,
+                3
+              ],
+              "chain3D": [
+                2,
+                4,
+                3
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                1,
+                2,
+                3
+              ],
+              "numberChain3D": [
+                3,
+                2,
+                4
+              ]
+            },
+            {
+              "label": "αιθέρας",
+              "chain": "ether",
+              "chain3D": "ether",
+              "kind": "ether",
+              "numberChain": null,
+              "numberChain3D": null
+            }
+          ]
+        },
+        "prefixes": [
+          {
+            "kind": "alkoxy",
+            "name": "αιθοξυ",
+            "label": "αιθοξυ",
+            "locants": "2",
+            "members": []
+          }
+        ],
+        "signature": "[[\"C\",1,[]],[\"C\",1,[\"1:O(1:C(1:C()))\"]],[\"C\",0,[]]]",
+        "signature3D": "[[\"C\",1,[]],[\"C\",1,[\"1:O(1:C(1:C()))\"]],[\"C\",0,[]]]"
+      }
+    },
+    {
+      "key": "butyl_methyl_ether",
+      "mode": "condensed",
+      "chain": "algorithmic",
+      "result": {
+        "name": "1-μεθοξυβουτάνιο",
+        "common": "βουτυλομεθυλαιθέρας",
+        "parts": [
+          "1-",
+          "μεθοξυ",
+          null,
+          null,
+          null,
+          "βουτ",
+          "άν",
+          null,
+          "",
+          "ιο",
+          null,
+          null
+        ],
+        "chain": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "classification": {
+          "taxonomy": "Αιθέρες",
+          "carbonCount": 5,
+          "principalFunctionalGroup": "ether",
+          "bondSeries": "alkanes",
+          "seriesKey": "ether",
+          "chemicalClass": "ethers",
+          "functionalGroups": [
+            "ether"
+          ]
+        },
+        "chain3D": [
+          4,
+          2,
+          3,
+          5
+        ],
+        "commonParts": {
+          "symmetric": false,
+          "parts": [
+            {
+              "label": "βουτυλ",
+              "chain": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "chain3D": [
+                4,
+                2,
+                3,
+                5
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "numberChain3D": [
+                4,
+                2,
+                3,
+                5
+              ]
+            },
+            {
+              "label": "μεθυλ",
+              "chain": [
+                5
+              ],
+              "chain3D": [
+                6
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                5
+              ],
+              "numberChain3D": [
+                6
+              ]
+            },
+            {
+              "label": "αιθέρας",
+              "chain": "ether",
+              "chain3D": "ether",
+              "kind": "ether",
+              "numberChain": null,
+              "numberChain3D": null
+            }
+          ]
+        },
+        "prefixes": [
+          {
+            "kind": "alkoxy",
+            "name": "μεθοξυ",
+            "label": "μεθοξυ",
+            "locants": "1",
+            "members": []
+          }
+        ],
+        "signature": "[[\"C\",1,[\"1:O(1:C())\"]],[\"C\",1,[]],[\"C\",1,[]],[\"C\",0,[]]]",
+        "signature3D": "[[\"C\",1,[\"1:O(1:C())\"]],[\"C\",1,[]],[\"C\",1,[]],[\"C\",0,[]]]"
+      }
+    },
+    {
+      "key": "butyl_methyl_ether",
+      "mode": "condensed",
+      "chain": "data",
+      "result": {
+        "name": "1-μεθοξυβουτάνιο",
+        "common": "βουτυλομεθυλαιθέρας",
+        "parts": [
+          "1-",
+          "μεθοξυ",
+          null,
+          null,
+          null,
+          "βουτ",
+          "άν",
+          null,
+          "",
+          "ιο",
+          null,
+          null
+        ],
+        "chain": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "classification": {
+          "taxonomy": "Αιθέρες",
+          "carbonCount": 5,
+          "principalFunctionalGroup": "ether",
+          "bondSeries": "alkanes",
+          "seriesKey": "ether",
+          "chemicalClass": "ethers",
+          "functionalGroups": [
+            "ether"
+          ]
+        },
+        "chain3D": [
+          4,
+          2,
+          3,
+          5
+        ],
+        "commonParts": {
+          "symmetric": false,
+          "parts": [
+            {
+              "label": "βουτυλ",
+              "chain": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "chain3D": [
+                4,
+                2,
+                3,
+                5
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "numberChain3D": [
+                4,
+                2,
+                3,
+                5
+              ]
+            },
+            {
+              "label": "μεθυλ",
+              "chain": [
+                5
+              ],
+              "chain3D": [
+                6
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                5
+              ],
+              "numberChain3D": [
+                6
+              ]
+            },
+            {
+              "label": "αιθέρας",
+              "chain": "ether",
+              "chain3D": "ether",
+              "kind": "ether",
+              "numberChain": null,
+              "numberChain3D": null
+            }
+          ]
+        },
+        "prefixes": [
+          {
+            "kind": "alkoxy",
+            "name": "μεθοξυ",
+            "label": "μεθοξυ",
+            "locants": "1",
+            "members": []
+          }
+        ],
+        "signature": "[[\"C\",1,[\"1:O(1:C())\"]],[\"C\",1,[]],[\"C\",1,[]],[\"C\",0,[]]]",
+        "signature3D": "[[\"C\",1,[\"1:O(1:C())\"]],[\"C\",1,[]],[\"C\",1,[]],[\"C\",0,[]]]"
+      }
+    },
+    {
+      "key": "butyl_methyl_ether",
+      "mode": "expanded",
+      "chain": "algorithmic",
+      "result": {
+        "name": "1-μεθοξυβουτάνιο",
+        "common": "βουτυλομεθυλαιθέρας",
+        "parts": [
+          "1-",
+          "μεθοξυ",
+          null,
+          null,
+          null,
+          "βουτ",
+          "άν",
+          null,
+          "",
+          "ιο",
+          null,
+          null
+        ],
+        "chain": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "classification": {
+          "taxonomy": "Αιθέρες",
+          "carbonCount": 5,
+          "principalFunctionalGroup": "ether",
+          "bondSeries": "alkanes",
+          "seriesKey": "ether",
+          "chemicalClass": "ethers",
+          "functionalGroups": [
+            "ether"
+          ]
+        },
+        "chain3D": [
+          4,
+          2,
+          3,
+          5
+        ],
+        "commonParts": {
+          "symmetric": false,
+          "parts": [
+            {
+              "label": "βουτυλ",
+              "chain": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "chain3D": [
+                4,
+                2,
+                3,
+                5
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "numberChain3D": [
+                4,
+                2,
+                3,
+                5
+              ]
+            },
+            {
+              "label": "μεθυλ",
+              "chain": [
+                5
+              ],
+              "chain3D": [
+                6
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                5
+              ],
+              "numberChain3D": [
+                6
+              ]
+            },
+            {
+              "label": "αιθέρας",
+              "chain": "ether",
+              "chain3D": "ether",
+              "kind": "ether",
+              "numberChain": null,
+              "numberChain3D": null
+            }
+          ]
+        },
+        "prefixes": [
+          {
+            "kind": "alkoxy",
+            "name": "μεθοξυ",
+            "label": "μεθοξυ",
+            "locants": "1",
+            "members": []
+          }
+        ],
+        "signature": "[[\"C\",1,[\"1:O(1:C())\"]],[\"C\",1,[]],[\"C\",1,[]],[\"C\",0,[]]]",
+        "signature3D": "[[\"C\",1,[\"1:O(1:C())\"]],[\"C\",1,[]],[\"C\",1,[]],[\"C\",0,[]]]"
+      }
+    },
+    {
+      "key": "butyl_methyl_ether",
+      "mode": "expanded",
+      "chain": "data",
+      "result": {
+        "name": "1-μεθοξυβουτάνιο",
+        "common": "βουτυλομεθυλαιθέρας",
+        "parts": [
+          "1-",
+          "μεθοξυ",
+          null,
+          null,
+          null,
+          "βουτ",
+          "άν",
+          null,
+          "",
+          "ιο",
+          null,
+          null
+        ],
+        "chain": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "classification": {
+          "taxonomy": "Αιθέρες",
+          "carbonCount": 5,
+          "principalFunctionalGroup": "ether",
+          "bondSeries": "alkanes",
+          "seriesKey": "ether",
+          "chemicalClass": "ethers",
+          "functionalGroups": [
+            "ether"
+          ]
+        },
+        "chain3D": [
+          4,
+          2,
+          3,
+          5
+        ],
+        "commonParts": {
+          "symmetric": false,
+          "parts": [
+            {
+              "label": "βουτυλ",
+              "chain": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "chain3D": [
+                4,
+                2,
+                3,
+                5
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "numberChain3D": [
+                4,
+                2,
+                3,
+                5
+              ]
+            },
+            {
+              "label": "μεθυλ",
+              "chain": [
+                5
+              ],
+              "chain3D": [
+                6
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                5
+              ],
+              "numberChain3D": [
+                6
+              ]
+            },
+            {
+              "label": "αιθέρας",
+              "chain": "ether",
+              "chain3D": "ether",
+              "kind": "ether",
+              "numberChain": null,
+              "numberChain3D": null
+            }
+          ]
+        },
+        "prefixes": [
+          {
+            "kind": "alkoxy",
+            "name": "μεθοξυ",
+            "label": "μεθοξυ",
+            "locants": "1",
+            "members": []
+          }
+        ],
+        "signature": "[[\"C\",1,[\"1:O(1:C())\"]],[\"C\",1,[]],[\"C\",1,[]],[\"C\",0,[]]]",
+        "signature3D": "[[\"C\",1,[\"1:O(1:C())\"]],[\"C\",1,[]],[\"C\",1,[]],[\"C\",0,[]]]"
+      }
+    },
+    {
+      "key": "butyl_methyl_ether",
+      "mode": "skeletal",
+      "chain": "algorithmic",
+      "result": {
+        "name": "1-μεθοξυβουτάνιο",
+        "common": "βουτυλομεθυλαιθέρας",
+        "parts": [
+          "1-",
+          "μεθοξυ",
+          null,
+          null,
+          null,
+          "βουτ",
+          "άν",
+          null,
+          "",
+          "ιο",
+          null,
+          null
+        ],
+        "chain": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "classification": {
+          "taxonomy": "Αιθέρες",
+          "carbonCount": 5,
+          "principalFunctionalGroup": "ether",
+          "bondSeries": "alkanes",
+          "seriesKey": "ether",
+          "chemicalClass": "ethers",
+          "functionalGroups": [
+            "ether"
+          ]
+        },
+        "chain3D": [
+          4,
+          2,
+          3,
+          5
+        ],
+        "commonParts": {
+          "symmetric": false,
+          "parts": [
+            {
+              "label": "βουτυλ",
+              "chain": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "chain3D": [
+                4,
+                2,
+                3,
+                5
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "numberChain3D": [
+                4,
+                2,
+                3,
+                5
+              ]
+            },
+            {
+              "label": "μεθυλ",
+              "chain": [
+                5
+              ],
+              "chain3D": [
+                6
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                5
+              ],
+              "numberChain3D": [
+                6
+              ]
+            },
+            {
+              "label": "αιθέρας",
+              "chain": "ether",
+              "chain3D": "ether",
+              "kind": "ether",
+              "numberChain": null,
+              "numberChain3D": null
+            }
+          ]
+        },
+        "prefixes": [
+          {
+            "kind": "alkoxy",
+            "name": "μεθοξυ",
+            "label": "μεθοξυ",
+            "locants": "1",
+            "members": []
+          }
+        ],
+        "signature": "[[\"C\",1,[\"1:O(1:C())\"]],[\"C\",1,[]],[\"C\",1,[]],[\"C\",0,[]]]",
+        "signature3D": "[[\"C\",1,[\"1:O(1:C())\"]],[\"C\",1,[]],[\"C\",1,[]],[\"C\",0,[]]]"
+      }
+    },
+    {
+      "key": "butyl_methyl_ether",
+      "mode": "skeletal",
+      "chain": "data",
+      "result": {
+        "name": "1-μεθοξυβουτάνιο",
+        "common": "βουτυλομεθυλαιθέρας",
+        "parts": [
+          "1-",
+          "μεθοξυ",
+          null,
+          null,
+          null,
+          "βουτ",
+          "άν",
+          null,
+          "",
+          "ιο",
+          null,
+          null
+        ],
+        "chain": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "classification": {
+          "taxonomy": "Αιθέρες",
+          "carbonCount": 5,
+          "principalFunctionalGroup": "ether",
+          "bondSeries": "alkanes",
+          "seriesKey": "ether",
+          "chemicalClass": "ethers",
+          "functionalGroups": [
+            "ether"
+          ]
+        },
+        "chain3D": [
+          4,
+          2,
+          3,
+          5
+        ],
+        "commonParts": {
+          "symmetric": false,
+          "parts": [
+            {
+              "label": "βουτυλ",
+              "chain": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "chain3D": [
+                4,
+                2,
+                3,
+                5
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "numberChain3D": [
+                4,
+                2,
+                3,
+                5
+              ]
+            },
+            {
+              "label": "μεθυλ",
+              "chain": [
+                5
+              ],
+              "chain3D": [
+                6
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                5
+              ],
+              "numberChain3D": [
+                6
+              ]
+            },
+            {
+              "label": "αιθέρας",
+              "chain": "ether",
+              "chain3D": "ether",
+              "kind": "ether",
+              "numberChain": null,
+              "numberChain3D": null
+            }
+          ]
+        },
+        "prefixes": [
+          {
+            "kind": "alkoxy",
+            "name": "μεθοξυ",
+            "label": "μεθοξυ",
+            "locants": "1",
+            "members": []
+          }
+        ],
+        "signature": "[[\"C\",1,[\"1:O(1:C())\"]],[\"C\",1,[]],[\"C\",1,[]],[\"C\",0,[]]]",
+        "signature3D": "[[\"C\",1,[\"1:O(1:C())\"]],[\"C\",1,[]],[\"C\",1,[]],[\"C\",0,[]]]"
+      }
+    },
+    {
+      "key": "isobutyl_isopropyl_ether",
+      "mode": "condensed",
+      "chain": "algorithmic",
+      "result": {
+        "name": "1-ισοπροποξυ-2-μεθυλοπροπάνιο",
+        "common": "ισοβουτυλοϊσοπροπυλαιθέρας",
+        "parts": [
+          "1-",
+          "ισοπροποξυ",
+          "-2-",
+          "μεθυλο",
+          null,
+          "προπ",
+          "άν",
+          null,
+          "",
+          "ιο",
+          null,
+          null
+        ],
+        "chain": [
+          1,
+          2,
+          3
+        ],
+        "classification": {
+          "taxonomy": "Αιθέρες",
+          "carbonCount": 7,
+          "principalFunctionalGroup": "ether",
+          "bondSeries": "alkanes",
+          "seriesKey": "ether",
+          "chemicalClass": "ethers",
+          "functionalGroups": [
+            "ether"
+          ]
+        },
+        "chain3D": [
+          3,
+          2,
+          6
+        ],
+        "commonParts": {
+          "symmetric": false,
+          "parts": [
+            {
+              "label": "ισοβουτυλο",
+              "chain": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "chain3D": [
+                3,
+                2,
+                6,
+                5
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                1,
+                2,
+                3
+              ],
+              "numberChain3D": [
+                3,
+                2,
+                6
+              ]
+            },
+            {
+              "label": "ϊσοπροπυλ",
+              "chain": [
+                5,
+                6,
+                7
+              ],
+              "chain3D": [
+                4,
+                7,
+                8
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                5,
+                6,
+                7
+              ],
+              "numberChain3D": [
+                4,
+                7,
+                8
+              ]
+            },
+            {
+              "label": "αιθέρας",
+              "chain": "ether",
+              "chain3D": "ether",
+              "kind": "ether",
+              "numberChain": null,
+              "numberChain3D": null
+            }
+          ]
+        },
+        "prefixes": [
+          {
+            "kind": "alkoxy",
+            "name": "ισοπροποξυ",
+            "label": "ισοπροποξυ",
+            "locants": "1",
+            "members": []
+          },
+          {
+            "kind": "alkyl",
+            "name": "μεθυλο",
+            "label": "μεθυλο",
+            "locants": "2",
+            "members": [
+              {
+                "locant": 2,
+                "length": 1,
+                "attach": 3,
+                "atoms": [
+                  3
+                ],
+                "signature": "C()",
+                "name": "μεθυλο"
+              }
+            ]
+          }
+        ],
+        "signature": "[[\"C\",1,[\"1:O(1:C(1:C(),1:C()))\"]],[\"C\",1,[\"1:C()\"]],[\"C\",0,[]]]",
+        "signature3D": "[[\"C\",1,[\"1:O(1:C(1:C(),1:C()))\"]],[\"C\",1,[\"1:C()\"]],[\"C\",0,[]]]"
+      }
+    },
+    {
+      "key": "isobutyl_isopropyl_ether",
+      "mode": "condensed",
+      "chain": "data",
+      "result": {
+        "name": "1-ισοπροποξυ-2-μεθυλοπροπάνιο",
+        "common": "ισοβουτυλοϊσοπροπυλαιθέρας",
+        "parts": [
+          "1-",
+          "ισοπροποξυ",
+          "-2-",
+          "μεθυλο",
+          null,
+          "προπ",
+          "άν",
+          null,
+          "",
+          "ιο",
+          null,
+          null
+        ],
+        "chain": [
+          1,
+          2,
+          3
+        ],
+        "classification": {
+          "taxonomy": "Αιθέρες",
+          "carbonCount": 7,
+          "principalFunctionalGroup": "ether",
+          "bondSeries": "alkanes",
+          "seriesKey": "ether",
+          "chemicalClass": "ethers",
+          "functionalGroups": [
+            "ether"
+          ]
+        },
+        "chain3D": [
+          3,
+          2,
+          6
+        ],
+        "commonParts": {
+          "symmetric": false,
+          "parts": [
+            {
+              "label": "ισοβουτυλο",
+              "chain": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "chain3D": [
+                3,
+                2,
+                6,
+                5
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                1,
+                2,
+                3
+              ],
+              "numberChain3D": [
+                3,
+                2,
+                6
+              ]
+            },
+            {
+              "label": "ϊσοπροπυλ",
+              "chain": [
+                5,
+                6,
+                7
+              ],
+              "chain3D": [
+                4,
+                7,
+                8
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                5,
+                6,
+                7
+              ],
+              "numberChain3D": [
+                4,
+                7,
+                8
+              ]
+            },
+            {
+              "label": "αιθέρας",
+              "chain": "ether",
+              "chain3D": "ether",
+              "kind": "ether",
+              "numberChain": null,
+              "numberChain3D": null
+            }
+          ]
+        },
+        "prefixes": [
+          {
+            "kind": "alkoxy",
+            "name": "ισοπροποξυ",
+            "label": "ισοπροποξυ",
+            "locants": "1",
+            "members": []
+          },
+          {
+            "kind": "alkyl",
+            "name": "μεθυλο",
+            "label": "μεθυλο",
+            "locants": "2",
+            "members": [
+              {
+                "locant": 2,
+                "length": 1,
+                "attach": 3,
+                "atoms": [
+                  3
+                ],
+                "signature": "C()",
+                "name": "μεθυλο"
+              }
+            ]
+          }
+        ],
+        "signature": "[[\"C\",1,[\"1:O(1:C(1:C(),1:C()))\"]],[\"C\",1,[\"1:C()\"]],[\"C\",0,[]]]",
+        "signature3D": "[[\"C\",1,[\"1:O(1:C(1:C(),1:C()))\"]],[\"C\",1,[\"1:C()\"]],[\"C\",0,[]]]"
+      }
+    },
+    {
+      "key": "isobutyl_isopropyl_ether",
+      "mode": "expanded",
+      "chain": "algorithmic",
+      "result": {
+        "name": "1-ισοπροποξυ-2-μεθυλοπροπάνιο",
+        "common": "ισοβουτυλοϊσοπροπυλαιθέρας",
+        "parts": [
+          "1-",
+          "ισοπροποξυ",
+          "-2-",
+          "μεθυλο",
+          null,
+          "προπ",
+          "άν",
+          null,
+          "",
+          "ιο",
+          null,
+          null
+        ],
+        "chain": [
+          1,
+          2,
+          3
+        ],
+        "classification": {
+          "taxonomy": "Αιθέρες",
+          "carbonCount": 7,
+          "principalFunctionalGroup": "ether",
+          "bondSeries": "alkanes",
+          "seriesKey": "ether",
+          "chemicalClass": "ethers",
+          "functionalGroups": [
+            "ether"
+          ]
+        },
+        "chain3D": [
+          3,
+          2,
+          6
+        ],
+        "commonParts": {
+          "symmetric": false,
+          "parts": [
+            {
+              "label": "ισοβουτυλο",
+              "chain": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "chain3D": [
+                3,
+                2,
+                6,
+                5
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                1,
+                2,
+                3
+              ],
+              "numberChain3D": [
+                3,
+                2,
+                6
+              ]
+            },
+            {
+              "label": "ϊσοπροπυλ",
+              "chain": [
+                5,
+                6,
+                7
+              ],
+              "chain3D": [
+                4,
+                7,
+                8
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                5,
+                6,
+                7
+              ],
+              "numberChain3D": [
+                4,
+                7,
+                8
+              ]
+            },
+            {
+              "label": "αιθέρας",
+              "chain": "ether",
+              "chain3D": "ether",
+              "kind": "ether",
+              "numberChain": null,
+              "numberChain3D": null
+            }
+          ]
+        },
+        "prefixes": [
+          {
+            "kind": "alkoxy",
+            "name": "ισοπροποξυ",
+            "label": "ισοπροποξυ",
+            "locants": "1",
+            "members": []
+          },
+          {
+            "kind": "alkyl",
+            "name": "μεθυλο",
+            "label": "μεθυλο",
+            "locants": "2",
+            "members": [
+              {
+                "locant": 2,
+                "length": 1,
+                "attach": 3,
+                "atoms": [
+                  3
+                ],
+                "signature": "C()",
+                "name": "μεθυλο"
+              }
+            ]
+          }
+        ],
+        "signature": "[[\"C\",1,[\"1:O(1:C(1:C(),1:C()))\"]],[\"C\",1,[\"1:C()\"]],[\"C\",0,[]]]",
+        "signature3D": "[[\"C\",1,[\"1:O(1:C(1:C(),1:C()))\"]],[\"C\",1,[\"1:C()\"]],[\"C\",0,[]]]"
+      }
+    },
+    {
+      "key": "isobutyl_isopropyl_ether",
+      "mode": "expanded",
+      "chain": "data",
+      "result": {
+        "name": "1-ισοπροποξυ-2-μεθυλοπροπάνιο",
+        "common": "ισοβουτυλοϊσοπροπυλαιθέρας",
+        "parts": [
+          "1-",
+          "ισοπροποξυ",
+          "-2-",
+          "μεθυλο",
+          null,
+          "προπ",
+          "άν",
+          null,
+          "",
+          "ιο",
+          null,
+          null
+        ],
+        "chain": [
+          1,
+          2,
+          3
+        ],
+        "classification": {
+          "taxonomy": "Αιθέρες",
+          "carbonCount": 7,
+          "principalFunctionalGroup": "ether",
+          "bondSeries": "alkanes",
+          "seriesKey": "ether",
+          "chemicalClass": "ethers",
+          "functionalGroups": [
+            "ether"
+          ]
+        },
+        "chain3D": [
+          3,
+          2,
+          6
+        ],
+        "commonParts": {
+          "symmetric": false,
+          "parts": [
+            {
+              "label": "ισοβουτυλο",
+              "chain": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "chain3D": [
+                3,
+                2,
+                6,
+                5
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                1,
+                2,
+                3
+              ],
+              "numberChain3D": [
+                3,
+                2,
+                6
+              ]
+            },
+            {
+              "label": "ϊσοπροπυλ",
+              "chain": [
+                5,
+                6,
+                7
+              ],
+              "chain3D": [
+                4,
+                7,
+                8
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                5,
+                6,
+                7
+              ],
+              "numberChain3D": [
+                4,
+                7,
+                8
+              ]
+            },
+            {
+              "label": "αιθέρας",
+              "chain": "ether",
+              "chain3D": "ether",
+              "kind": "ether",
+              "numberChain": null,
+              "numberChain3D": null
+            }
+          ]
+        },
+        "prefixes": [
+          {
+            "kind": "alkoxy",
+            "name": "ισοπροποξυ",
+            "label": "ισοπροποξυ",
+            "locants": "1",
+            "members": []
+          },
+          {
+            "kind": "alkyl",
+            "name": "μεθυλο",
+            "label": "μεθυλο",
+            "locants": "2",
+            "members": [
+              {
+                "locant": 2,
+                "length": 1,
+                "attach": 3,
+                "atoms": [
+                  3
+                ],
+                "signature": "C()",
+                "name": "μεθυλο"
+              }
+            ]
+          }
+        ],
+        "signature": "[[\"C\",1,[\"1:O(1:C(1:C(),1:C()))\"]],[\"C\",1,[\"1:C()\"]],[\"C\",0,[]]]",
+        "signature3D": "[[\"C\",1,[\"1:O(1:C(1:C(),1:C()))\"]],[\"C\",1,[\"1:C()\"]],[\"C\",0,[]]]"
+      }
+    },
+    {
+      "key": "isobutyl_isopropyl_ether",
+      "mode": "skeletal",
+      "chain": "algorithmic",
+      "result": {
+        "name": "1-ισοπροποξυ-2-μεθυλοπροπάνιο",
+        "common": "ισοβουτυλοϊσοπροπυλαιθέρας",
+        "parts": [
+          "1-",
+          "ισοπροποξυ",
+          "-2-",
+          "μεθυλο",
+          null,
+          "προπ",
+          "άν",
+          null,
+          "",
+          "ιο",
+          null,
+          null
+        ],
+        "chain": [
+          1,
+          2,
+          4
+        ],
+        "classification": {
+          "taxonomy": "Αιθέρες",
+          "carbonCount": 7,
+          "principalFunctionalGroup": "ether",
+          "bondSeries": "alkanes",
+          "seriesKey": "ether",
+          "chemicalClass": "ethers",
+          "functionalGroups": [
+            "ether"
+          ]
+        },
+        "chain3D": [
+          3,
+          2,
+          6
+        ],
+        "commonParts": {
+          "symmetric": false,
+          "parts": [
+            {
+              "label": "ισοβουτυλο",
+              "chain": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "chain3D": [
+                3,
+                2,
+                6,
+                5
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                1,
+                2,
+                4
+              ],
+              "numberChain3D": [
+                3,
+                2,
+                6
+              ]
+            },
+            {
+              "label": "ϊσοπροπυλ",
+              "chain": [
+                5,
+                6,
+                7
+              ],
+              "chain3D": [
+                4,
+                7,
+                8
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                5,
+                6,
+                7
+              ],
+              "numberChain3D": [
+                4,
+                7,
+                8
+              ]
+            },
+            {
+              "label": "αιθέρας",
+              "chain": "ether",
+              "chain3D": "ether",
+              "kind": "ether",
+              "numberChain": null,
+              "numberChain3D": null
+            }
+          ]
+        },
+        "prefixes": [
+          {
+            "kind": "alkoxy",
+            "name": "ισοπροποξυ",
+            "label": "ισοπροποξυ",
+            "locants": "1",
+            "members": []
+          },
+          {
+            "kind": "alkyl",
+            "name": "μεθυλο",
+            "label": "μεθυλο",
+            "locants": "2",
+            "members": [
+              {
+                "locant": 2,
+                "length": 1,
+                "attach": 2,
+                "atoms": [
+                  2
+                ],
+                "signature": "C()",
+                "name": "μεθυλο"
+              }
+            ]
+          }
+        ],
+        "signature": "[[\"C\",1,[\"1:O(1:C(1:C(),1:C()))\"]],[\"C\",1,[\"1:C()\"]],[\"C\",0,[]]]",
+        "signature3D": "[[\"C\",1,[\"1:O(1:C(1:C(),1:C()))\"]],[\"C\",1,[\"1:C()\"]],[\"C\",0,[]]]"
+      }
+    },
+    {
+      "key": "isobutyl_isopropyl_ether",
+      "mode": "skeletal",
+      "chain": "data",
+      "result": {
+        "name": "1-ισοπροποξυ-2-μεθυλοπροπάνιο",
+        "common": "ισοβουτυλοϊσοπροπυλαιθέρας",
+        "parts": [
+          "1-",
+          "ισοπροποξυ",
+          "-2-",
+          "μεθυλο",
+          null,
+          "προπ",
+          "άν",
+          null,
+          "",
+          "ιο",
+          null,
+          null
+        ],
+        "chain": [
+          1,
+          2,
+          4
+        ],
+        "classification": {
+          "taxonomy": "Αιθέρες",
+          "carbonCount": 7,
+          "principalFunctionalGroup": "ether",
+          "bondSeries": "alkanes",
+          "seriesKey": "ether",
+          "chemicalClass": "ethers",
+          "functionalGroups": [
+            "ether"
+          ]
+        },
+        "chain3D": [
+          3,
+          2,
+          6
+        ],
+        "commonParts": {
+          "symmetric": false,
+          "parts": [
+            {
+              "label": "ισοβουτυλο",
+              "chain": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "chain3D": [
+                3,
+                2,
+                6,
+                5
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                1,
+                2,
+                4
+              ],
+              "numberChain3D": [
+                3,
+                2,
+                6
+              ]
+            },
+            {
+              "label": "ϊσοπροπυλ",
+              "chain": [
+                5,
+                6,
+                7
+              ],
+              "chain3D": [
+                4,
+                7,
+                8
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                5,
+                6,
+                7
+              ],
+              "numberChain3D": [
+                4,
+                7,
+                8
+              ]
+            },
+            {
+              "label": "αιθέρας",
+              "chain": "ether",
+              "chain3D": "ether",
+              "kind": "ether",
+              "numberChain": null,
+              "numberChain3D": null
+            }
+          ]
+        },
+        "prefixes": [
+          {
+            "kind": "alkoxy",
+            "name": "ισοπροποξυ",
+            "label": "ισοπροποξυ",
+            "locants": "1",
+            "members": []
+          },
+          {
+            "kind": "alkyl",
+            "name": "μεθυλο",
+            "label": "μεθυλο",
+            "locants": "2",
+            "members": [
+              {
+                "locant": 2,
+                "length": 1,
+                "attach": 2,
+                "atoms": [
+                  2
+                ],
+                "signature": "C()",
+                "name": "μεθυλο"
+              }
+            ]
+          }
+        ],
+        "signature": "[[\"C\",1,[\"1:O(1:C(1:C(),1:C()))\"]],[\"C\",1,[\"1:C()\"]],[\"C\",0,[]]]",
+        "signature3D": "[[\"C\",1,[\"1:O(1:C(1:C(),1:C()))\"]],[\"C\",1,[\"1:C()\"]],[\"C\",0,[]]]"
+      }
+    },
+    {
+      "key": "ethyl_sec_butyl_ether",
+      "mode": "condensed",
+      "chain": "algorithmic",
+      "result": {
+        "name": "2-αιθοξυβουτάνιο",
+        "common": "αιθυλο-sec-βουτυλαιθέρας",
+        "parts": [
+          "2-",
+          "αιθοξυ",
+          null,
+          null,
+          null,
+          "βουτ",
+          "άν",
+          null,
+          "",
+          "ιο",
+          null,
+          null
+        ],
+        "chain": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "classification": {
+          "taxonomy": "Αιθέρες",
+          "carbonCount": 6,
+          "principalFunctionalGroup": "ether",
+          "bondSeries": "alkanes",
+          "seriesKey": "ether",
+          "chemicalClass": "ethers",
+          "functionalGroups": [
+            "ether"
+          ]
+        },
+        "chain3D": [
+          4,
+          2,
+          3,
+          5
+        ],
+        "commonParts": {
+          "symmetric": false,
+          "parts": [
+            {
+              "label": "αιθυλο-",
+              "chain": [
+                5,
+                6
+              ],
+              "chain3D": [
+                6,
+                7
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                5,
+                6
+              ],
+              "numberChain3D": [
+                6,
+                7
+              ]
+            },
+            {
+              "label": "sec-βουτυλ",
+              "chain": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "chain3D": [
+                2,
+                4,
+                3,
+                5
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "numberChain3D": [
+                4,
+                2,
+                3,
+                5
+              ]
+            },
+            {
+              "label": "αιθέρας",
+              "chain": "ether",
+              "chain3D": "ether",
+              "kind": "ether",
+              "numberChain": null,
+              "numberChain3D": null
+            }
+          ]
+        },
+        "prefixes": [
+          {
+            "kind": "alkoxy",
+            "name": "αιθοξυ",
+            "label": "αιθοξυ",
+            "locants": "2",
+            "members": []
+          }
+        ],
+        "signature": "[[\"C\",1,[]],[\"C\",1,[\"1:O(1:C(1:C()))\"]],[\"C\",1,[]],[\"C\",0,[]]]",
+        "signature3D": "[[\"C\",1,[]],[\"C\",1,[\"1:O(1:C(1:C()))\"]],[\"C\",1,[]],[\"C\",0,[]]]"
+      }
+    },
+    {
+      "key": "ethyl_sec_butyl_ether",
+      "mode": "condensed",
+      "chain": "data",
+      "result": {
+        "name": "2-αιθοξυβουτάνιο",
+        "common": "αιθυλο-sec-βουτυλαιθέρας",
+        "parts": [
+          "2-",
+          "αιθοξυ",
+          null,
+          null,
+          null,
+          "βουτ",
+          "άν",
+          null,
+          "",
+          "ιο",
+          null,
+          null
+        ],
+        "chain": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "classification": {
+          "taxonomy": "Αιθέρες",
+          "carbonCount": 6,
+          "principalFunctionalGroup": "ether",
+          "bondSeries": "alkanes",
+          "seriesKey": "ether",
+          "chemicalClass": "ethers",
+          "functionalGroups": [
+            "ether"
+          ]
+        },
+        "chain3D": [
+          4,
+          2,
+          3,
+          5
+        ],
+        "commonParts": {
+          "symmetric": false,
+          "parts": [
+            {
+              "label": "αιθυλο-",
+              "chain": [
+                5,
+                6
+              ],
+              "chain3D": [
+                6,
+                7
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                5,
+                6
+              ],
+              "numberChain3D": [
+                6,
+                7
+              ]
+            },
+            {
+              "label": "sec-βουτυλ",
+              "chain": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "chain3D": [
+                2,
+                4,
+                3,
+                5
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "numberChain3D": [
+                4,
+                2,
+                3,
+                5
+              ]
+            },
+            {
+              "label": "αιθέρας",
+              "chain": "ether",
+              "chain3D": "ether",
+              "kind": "ether",
+              "numberChain": null,
+              "numberChain3D": null
+            }
+          ]
+        },
+        "prefixes": [
+          {
+            "kind": "alkoxy",
+            "name": "αιθοξυ",
+            "label": "αιθοξυ",
+            "locants": "2",
+            "members": []
+          }
+        ],
+        "signature": "[[\"C\",1,[]],[\"C\",1,[\"1:O(1:C(1:C()))\"]],[\"C\",1,[]],[\"C\",0,[]]]",
+        "signature3D": "[[\"C\",1,[]],[\"C\",1,[\"1:O(1:C(1:C()))\"]],[\"C\",1,[]],[\"C\",0,[]]]"
+      }
+    },
+    {
+      "key": "ethyl_sec_butyl_ether",
+      "mode": "expanded",
+      "chain": "algorithmic",
+      "result": {
+        "name": "2-αιθοξυβουτάνιο",
+        "common": "αιθυλο-sec-βουτυλαιθέρας",
+        "parts": [
+          "2-",
+          "αιθοξυ",
+          null,
+          null,
+          null,
+          "βουτ",
+          "άν",
+          null,
+          "",
+          "ιο",
+          null,
+          null
+        ],
+        "chain": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "classification": {
+          "taxonomy": "Αιθέρες",
+          "carbonCount": 6,
+          "principalFunctionalGroup": "ether",
+          "bondSeries": "alkanes",
+          "seriesKey": "ether",
+          "chemicalClass": "ethers",
+          "functionalGroups": [
+            "ether"
+          ]
+        },
+        "chain3D": [
+          4,
+          2,
+          3,
+          5
+        ],
+        "commonParts": {
+          "symmetric": false,
+          "parts": [
+            {
+              "label": "αιθυλο-",
+              "chain": [
+                5,
+                6
+              ],
+              "chain3D": [
+                6,
+                7
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                5,
+                6
+              ],
+              "numberChain3D": [
+                6,
+                7
+              ]
+            },
+            {
+              "label": "sec-βουτυλ",
+              "chain": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "chain3D": [
+                2,
+                4,
+                3,
+                5
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "numberChain3D": [
+                4,
+                2,
+                3,
+                5
+              ]
+            },
+            {
+              "label": "αιθέρας",
+              "chain": "ether",
+              "chain3D": "ether",
+              "kind": "ether",
+              "numberChain": null,
+              "numberChain3D": null
+            }
+          ]
+        },
+        "prefixes": [
+          {
+            "kind": "alkoxy",
+            "name": "αιθοξυ",
+            "label": "αιθοξυ",
+            "locants": "2",
+            "members": []
+          }
+        ],
+        "signature": "[[\"C\",1,[]],[\"C\",1,[\"1:O(1:C(1:C()))\"]],[\"C\",1,[]],[\"C\",0,[]]]",
+        "signature3D": "[[\"C\",1,[]],[\"C\",1,[\"1:O(1:C(1:C()))\"]],[\"C\",1,[]],[\"C\",0,[]]]"
+      }
+    },
+    {
+      "key": "ethyl_sec_butyl_ether",
+      "mode": "expanded",
+      "chain": "data",
+      "result": {
+        "name": "2-αιθοξυβουτάνιο",
+        "common": "αιθυλο-sec-βουτυλαιθέρας",
+        "parts": [
+          "2-",
+          "αιθοξυ",
+          null,
+          null,
+          null,
+          "βουτ",
+          "άν",
+          null,
+          "",
+          "ιο",
+          null,
+          null
+        ],
+        "chain": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "classification": {
+          "taxonomy": "Αιθέρες",
+          "carbonCount": 6,
+          "principalFunctionalGroup": "ether",
+          "bondSeries": "alkanes",
+          "seriesKey": "ether",
+          "chemicalClass": "ethers",
+          "functionalGroups": [
+            "ether"
+          ]
+        },
+        "chain3D": [
+          4,
+          2,
+          3,
+          5
+        ],
+        "commonParts": {
+          "symmetric": false,
+          "parts": [
+            {
+              "label": "αιθυλο-",
+              "chain": [
+                5,
+                6
+              ],
+              "chain3D": [
+                6,
+                7
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                5,
+                6
+              ],
+              "numberChain3D": [
+                6,
+                7
+              ]
+            },
+            {
+              "label": "sec-βουτυλ",
+              "chain": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "chain3D": [
+                2,
+                4,
+                3,
+                5
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "numberChain3D": [
+                4,
+                2,
+                3,
+                5
+              ]
+            },
+            {
+              "label": "αιθέρας",
+              "chain": "ether",
+              "chain3D": "ether",
+              "kind": "ether",
+              "numberChain": null,
+              "numberChain3D": null
+            }
+          ]
+        },
+        "prefixes": [
+          {
+            "kind": "alkoxy",
+            "name": "αιθοξυ",
+            "label": "αιθοξυ",
+            "locants": "2",
+            "members": []
+          }
+        ],
+        "signature": "[[\"C\",1,[]],[\"C\",1,[\"1:O(1:C(1:C()))\"]],[\"C\",1,[]],[\"C\",0,[]]]",
+        "signature3D": "[[\"C\",1,[]],[\"C\",1,[\"1:O(1:C(1:C()))\"]],[\"C\",1,[]],[\"C\",0,[]]]"
+      }
+    },
+    {
+      "key": "ethyl_sec_butyl_ether",
+      "mode": "skeletal",
+      "chain": "algorithmic",
+      "result": {
+        "name": "2-αιθοξυβουτάνιο",
+        "common": "αιθυλο-sec-βουτυλαιθέρας",
+        "parts": [
+          "2-",
+          "αιθοξυ",
+          null,
+          null,
+          null,
+          "βουτ",
+          "άν",
+          null,
+          "",
+          "ιο",
+          null,
+          null
+        ],
+        "chain": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "classification": {
+          "taxonomy": "Αιθέρες",
+          "carbonCount": 6,
+          "principalFunctionalGroup": "ether",
+          "bondSeries": "alkanes",
+          "seriesKey": "ether",
+          "chemicalClass": "ethers",
+          "functionalGroups": [
+            "ether"
+          ]
+        },
+        "chain3D": [
+          4,
+          2,
+          3,
+          5
+        ],
+        "commonParts": {
+          "symmetric": false,
+          "parts": [
+            {
+              "label": "αιθυλο-",
+              "chain": [
+                5,
+                6
+              ],
+              "chain3D": [
+                6,
+                7
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                5,
+                6
+              ],
+              "numberChain3D": [
+                6,
+                7
+              ]
+            },
+            {
+              "label": "sec-βουτυλ",
+              "chain": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "chain3D": [
+                2,
+                4,
+                3,
+                5
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "numberChain3D": [
+                4,
+                2,
+                3,
+                5
+              ]
+            },
+            {
+              "label": "αιθέρας",
+              "chain": "ether",
+              "chain3D": "ether",
+              "kind": "ether",
+              "numberChain": null,
+              "numberChain3D": null
+            }
+          ]
+        },
+        "prefixes": [
+          {
+            "kind": "alkoxy",
+            "name": "αιθοξυ",
+            "label": "αιθοξυ",
+            "locants": "2",
+            "members": []
+          }
+        ],
+        "signature": "[[\"C\",1,[]],[\"C\",1,[\"1:O(1:C(1:C()))\"]],[\"C\",1,[]],[\"C\",0,[]]]",
+        "signature3D": "[[\"C\",1,[]],[\"C\",1,[\"1:O(1:C(1:C()))\"]],[\"C\",1,[]],[\"C\",0,[]]]"
+      }
+    },
+    {
+      "key": "ethyl_sec_butyl_ether",
+      "mode": "skeletal",
+      "chain": "data",
+      "result": {
+        "name": "2-αιθοξυβουτάνιο",
+        "common": "αιθυλο-sec-βουτυλαιθέρας",
+        "parts": [
+          "2-",
+          "αιθοξυ",
+          null,
+          null,
+          null,
+          "βουτ",
+          "άν",
+          null,
+          "",
+          "ιο",
+          null,
+          null
+        ],
+        "chain": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "classification": {
+          "taxonomy": "Αιθέρες",
+          "carbonCount": 6,
+          "principalFunctionalGroup": "ether",
+          "bondSeries": "alkanes",
+          "seriesKey": "ether",
+          "chemicalClass": "ethers",
+          "functionalGroups": [
+            "ether"
+          ]
+        },
+        "chain3D": [
+          4,
+          2,
+          3,
+          5
+        ],
+        "commonParts": {
+          "symmetric": false,
+          "parts": [
+            {
+              "label": "αιθυλο-",
+              "chain": [
+                5,
+                6
+              ],
+              "chain3D": [
+                6,
+                7
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                5,
+                6
+              ],
+              "numberChain3D": [
+                6,
+                7
+              ]
+            },
+            {
+              "label": "sec-βουτυλ",
+              "chain": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "chain3D": [
+                2,
+                4,
+                3,
+                5
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "numberChain3D": [
+                4,
+                2,
+                3,
+                5
+              ]
+            },
+            {
+              "label": "αιθέρας",
+              "chain": "ether",
+              "chain3D": "ether",
+              "kind": "ether",
+              "numberChain": null,
+              "numberChain3D": null
+            }
+          ]
+        },
+        "prefixes": [
+          {
+            "kind": "alkoxy",
+            "name": "αιθοξυ",
+            "label": "αιθοξυ",
+            "locants": "2",
+            "members": []
+          }
+        ],
+        "signature": "[[\"C\",1,[]],[\"C\",1,[\"1:O(1:C(1:C()))\"]],[\"C\",1,[]],[\"C\",0,[]]]",
+        "signature3D": "[[\"C\",1,[]],[\"C\",1,[\"1:O(1:C(1:C()))\"]],[\"C\",1,[]],[\"C\",0,[]]]"
+      }
+    },
+    {
+      "key": "tert_butyl_isopropyl_ether",
+      "mode": "condensed",
+      "chain": "algorithmic",
+      "result": {
+        "name": "2-ισοπροποξυ-2-μεθυλοπροπάνιο",
+        "common": "tert-βουτυλοϊσοπροπυλαιθέρας",
+        "parts": [
+          "2-",
+          "ισοπροποξυ",
+          "-2-",
+          "μεθυλο",
+          null,
+          "προπ",
+          "άν",
+          null,
+          "",
+          "ιο",
+          null,
+          null
+        ],
+        "chain": [
+          1,
+          2,
+          4
+        ],
+        "classification": {
+          "taxonomy": "Αιθέρες",
+          "carbonCount": 7,
+          "principalFunctionalGroup": "ether",
+          "bondSeries": "alkanes",
+          "seriesKey": "ether",
+          "chemicalClass": "ethers",
+          "functionalGroups": [
+            "ether"
+          ]
+        },
+        "chain3D": [
+          4,
+          2,
+          6
+        ],
+        "commonParts": {
+          "symmetric": false,
+          "parts": [
+            {
+              "label": "tert-βουτυλο",
+              "chain": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "chain3D": [
+                2,
+                6,
+                5,
+                4
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                1,
+                2,
+                4
+              ],
+              "numberChain3D": [
+                4,
+                2,
+                6
+              ]
+            },
+            {
+              "label": "ϊσοπροπυλ",
+              "chain": [
+                5,
+                6,
+                7
+              ],
+              "chain3D": [
+                3,
+                7,
+                8
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                5,
+                6,
+                7
+              ],
+              "numberChain3D": [
+                3,
+                7,
+                8
+              ]
+            },
+            {
+              "label": "αιθέρας",
+              "chain": "ether",
+              "chain3D": "ether",
+              "kind": "ether",
+              "numberChain": null,
+              "numberChain3D": null
+            }
+          ]
+        },
+        "prefixes": [
+          {
+            "kind": "alkoxy",
+            "name": "ισοπροποξυ",
+            "label": "ισοπροποξυ",
+            "locants": "2",
+            "members": []
+          },
+          {
+            "kind": "alkyl",
+            "name": "μεθυλο",
+            "label": "μεθυλο",
+            "locants": "2",
+            "members": [
+              {
+                "locant": 2,
+                "length": 1,
+                "attach": 2,
+                "atoms": [
+                  2
+                ],
+                "signature": "C()",
+                "name": "μεθυλο"
+              }
+            ]
+          }
+        ],
+        "signature": "[[\"C\",1,[]],[\"C\",1,[\"1:C()\",\"1:O(1:C(1:C(),1:C()))\"]],[\"C\",0,[]]]",
+        "signature3D": "[[\"C\",1,[]],[\"C\",1,[\"1:C()\",\"1:O(1:C(1:C(),1:C()))\"]],[\"C\",0,[]]]"
+      }
+    },
+    {
+      "key": "tert_butyl_isopropyl_ether",
+      "mode": "condensed",
+      "chain": "data",
+      "result": {
+        "name": "2-ισοπροποξυ-2-μεθυλοπροπάνιο",
+        "common": "tert-βουτυλοϊσοπροπυλαιθέρας",
+        "parts": [
+          "2-",
+          "ισοπροποξυ",
+          "-2-",
+          "μεθυλο",
+          null,
+          "προπ",
+          "άν",
+          null,
+          "",
+          "ιο",
+          null,
+          null
+        ],
+        "chain": [
+          1,
+          2,
+          4
+        ],
+        "classification": {
+          "taxonomy": "Αιθέρες",
+          "carbonCount": 7,
+          "principalFunctionalGroup": "ether",
+          "bondSeries": "alkanes",
+          "seriesKey": "ether",
+          "chemicalClass": "ethers",
+          "functionalGroups": [
+            "ether"
+          ]
+        },
+        "chain3D": [
+          4,
+          2,
+          6
+        ],
+        "commonParts": {
+          "symmetric": false,
+          "parts": [
+            {
+              "label": "tert-βουτυλο",
+              "chain": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "chain3D": [
+                2,
+                6,
+                5,
+                4
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                1,
+                2,
+                4
+              ],
+              "numberChain3D": [
+                4,
+                2,
+                6
+              ]
+            },
+            {
+              "label": "ϊσοπροπυλ",
+              "chain": [
+                5,
+                6,
+                7
+              ],
+              "chain3D": [
+                3,
+                7,
+                8
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                5,
+                6,
+                7
+              ],
+              "numberChain3D": [
+                3,
+                7,
+                8
+              ]
+            },
+            {
+              "label": "αιθέρας",
+              "chain": "ether",
+              "chain3D": "ether",
+              "kind": "ether",
+              "numberChain": null,
+              "numberChain3D": null
+            }
+          ]
+        },
+        "prefixes": [
+          {
+            "kind": "alkoxy",
+            "name": "ισοπροποξυ",
+            "label": "ισοπροποξυ",
+            "locants": "2",
+            "members": []
+          },
+          {
+            "kind": "alkyl",
+            "name": "μεθυλο",
+            "label": "μεθυλο",
+            "locants": "2",
+            "members": [
+              {
+                "locant": 2,
+                "length": 1,
+                "attach": 2,
+                "atoms": [
+                  2
+                ],
+                "signature": "C()",
+                "name": "μεθυλο"
+              }
+            ]
+          }
+        ],
+        "signature": "[[\"C\",1,[]],[\"C\",1,[\"1:C()\",\"1:O(1:C(1:C(),1:C()))\"]],[\"C\",0,[]]]",
+        "signature3D": "[[\"C\",1,[]],[\"C\",1,[\"1:C()\",\"1:O(1:C(1:C(),1:C()))\"]],[\"C\",0,[]]]"
+      }
+    },
+    {
+      "key": "tert_butyl_isopropyl_ether",
+      "mode": "expanded",
+      "chain": "algorithmic",
+      "result": {
+        "name": "2-ισοπροποξυ-2-μεθυλοπροπάνιο",
+        "common": "tert-βουτυλοϊσοπροπυλαιθέρας",
+        "parts": [
+          "2-",
+          "ισοπροποξυ",
+          "-2-",
+          "μεθυλο",
+          null,
+          "προπ",
+          "άν",
+          null,
+          "",
+          "ιο",
+          null,
+          null
+        ],
+        "chain": [
+          1,
+          2,
+          4
+        ],
+        "classification": {
+          "taxonomy": "Αιθέρες",
+          "carbonCount": 7,
+          "principalFunctionalGroup": "ether",
+          "bondSeries": "alkanes",
+          "seriesKey": "ether",
+          "chemicalClass": "ethers",
+          "functionalGroups": [
+            "ether"
+          ]
+        },
+        "chain3D": [
+          4,
+          2,
+          6
+        ],
+        "commonParts": {
+          "symmetric": false,
+          "parts": [
+            {
+              "label": "tert-βουτυλο",
+              "chain": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "chain3D": [
+                2,
+                6,
+                5,
+                4
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                1,
+                2,
+                4
+              ],
+              "numberChain3D": [
+                4,
+                2,
+                6
+              ]
+            },
+            {
+              "label": "ϊσοπροπυλ",
+              "chain": [
+                5,
+                6,
+                7
+              ],
+              "chain3D": [
+                3,
+                7,
+                8
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                5,
+                6,
+                7
+              ],
+              "numberChain3D": [
+                3,
+                7,
+                8
+              ]
+            },
+            {
+              "label": "αιθέρας",
+              "chain": "ether",
+              "chain3D": "ether",
+              "kind": "ether",
+              "numberChain": null,
+              "numberChain3D": null
+            }
+          ]
+        },
+        "prefixes": [
+          {
+            "kind": "alkoxy",
+            "name": "ισοπροποξυ",
+            "label": "ισοπροποξυ",
+            "locants": "2",
+            "members": []
+          },
+          {
+            "kind": "alkyl",
+            "name": "μεθυλο",
+            "label": "μεθυλο",
+            "locants": "2",
+            "members": [
+              {
+                "locant": 2,
+                "length": 1,
+                "attach": 2,
+                "atoms": [
+                  2
+                ],
+                "signature": "C()",
+                "name": "μεθυλο"
+              }
+            ]
+          }
+        ],
+        "signature": "[[\"C\",1,[]],[\"C\",1,[\"1:C()\",\"1:O(1:C(1:C(),1:C()))\"]],[\"C\",0,[]]]",
+        "signature3D": "[[\"C\",1,[]],[\"C\",1,[\"1:C()\",\"1:O(1:C(1:C(),1:C()))\"]],[\"C\",0,[]]]"
+      }
+    },
+    {
+      "key": "tert_butyl_isopropyl_ether",
+      "mode": "expanded",
+      "chain": "data",
+      "result": {
+        "name": "2-ισοπροποξυ-2-μεθυλοπροπάνιο",
+        "common": "tert-βουτυλοϊσοπροπυλαιθέρας",
+        "parts": [
+          "2-",
+          "ισοπροποξυ",
+          "-2-",
+          "μεθυλο",
+          null,
+          "προπ",
+          "άν",
+          null,
+          "",
+          "ιο",
+          null,
+          null
+        ],
+        "chain": [
+          1,
+          2,
+          4
+        ],
+        "classification": {
+          "taxonomy": "Αιθέρες",
+          "carbonCount": 7,
+          "principalFunctionalGroup": "ether",
+          "bondSeries": "alkanes",
+          "seriesKey": "ether",
+          "chemicalClass": "ethers",
+          "functionalGroups": [
+            "ether"
+          ]
+        },
+        "chain3D": [
+          4,
+          2,
+          6
+        ],
+        "commonParts": {
+          "symmetric": false,
+          "parts": [
+            {
+              "label": "tert-βουτυλο",
+              "chain": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "chain3D": [
+                2,
+                6,
+                5,
+                4
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                1,
+                2,
+                4
+              ],
+              "numberChain3D": [
+                4,
+                2,
+                6
+              ]
+            },
+            {
+              "label": "ϊσοπροπυλ",
+              "chain": [
+                5,
+                6,
+                7
+              ],
+              "chain3D": [
+                3,
+                7,
+                8
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                5,
+                6,
+                7
+              ],
+              "numberChain3D": [
+                3,
+                7,
+                8
+              ]
+            },
+            {
+              "label": "αιθέρας",
+              "chain": "ether",
+              "chain3D": "ether",
+              "kind": "ether",
+              "numberChain": null,
+              "numberChain3D": null
+            }
+          ]
+        },
+        "prefixes": [
+          {
+            "kind": "alkoxy",
+            "name": "ισοπροποξυ",
+            "label": "ισοπροποξυ",
+            "locants": "2",
+            "members": []
+          },
+          {
+            "kind": "alkyl",
+            "name": "μεθυλο",
+            "label": "μεθυλο",
+            "locants": "2",
+            "members": [
+              {
+                "locant": 2,
+                "length": 1,
+                "attach": 2,
+                "atoms": [
+                  2
+                ],
+                "signature": "C()",
+                "name": "μεθυλο"
+              }
+            ]
+          }
+        ],
+        "signature": "[[\"C\",1,[]],[\"C\",1,[\"1:C()\",\"1:O(1:C(1:C(),1:C()))\"]],[\"C\",0,[]]]",
+        "signature3D": "[[\"C\",1,[]],[\"C\",1,[\"1:C()\",\"1:O(1:C(1:C(),1:C()))\"]],[\"C\",0,[]]]"
+      }
+    },
+    {
+      "key": "tert_butyl_isopropyl_ether",
+      "mode": "skeletal",
+      "chain": "algorithmic",
+      "result": {
+        "name": "2-ισοπροποξυ-2-μεθυλοπροπάνιο",
+        "common": "tert-βουτυλοϊσοπροπυλαιθέρας",
+        "parts": [
+          "2-",
+          "ισοπροποξυ",
+          "-2-",
+          "μεθυλο",
+          null,
+          "προπ",
+          "άν",
+          null,
+          "",
+          "ιο",
+          null,
+          null
+        ],
+        "chain": [
+          1,
+          2,
+          3
+        ],
+        "classification": {
+          "taxonomy": "Αιθέρες",
+          "carbonCount": 7,
+          "principalFunctionalGroup": "ether",
+          "bondSeries": "alkanes",
+          "seriesKey": "ether",
+          "chemicalClass": "ethers",
+          "functionalGroups": [
+            "ether"
+          ]
+        },
+        "chain3D": [
+          4,
+          2,
+          6
+        ],
+        "commonParts": {
+          "symmetric": false,
+          "parts": [
+            {
+              "label": "tert-βουτυλο",
+              "chain": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "chain3D": [
+                2,
+                6,
+                5,
+                4
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                1,
+                2,
+                3
+              ],
+              "numberChain3D": [
+                4,
+                2,
+                6
+              ]
+            },
+            {
+              "label": "ϊσοπροπυλ",
+              "chain": [
+                5,
+                6,
+                7
+              ],
+              "chain3D": [
+                3,
+                7,
+                8
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                5,
+                6,
+                7
+              ],
+              "numberChain3D": [
+                3,
+                7,
+                8
+              ]
+            },
+            {
+              "label": "αιθέρας",
+              "chain": "ether",
+              "chain3D": "ether",
+              "kind": "ether",
+              "numberChain": null,
+              "numberChain3D": null
+            }
+          ]
+        },
+        "prefixes": [
+          {
+            "kind": "alkoxy",
+            "name": "ισοπροποξυ",
+            "label": "ισοπροποξυ",
+            "locants": "2",
+            "members": []
+          },
+          {
+            "kind": "alkyl",
+            "name": "μεθυλο",
+            "label": "μεθυλο",
+            "locants": "2",
+            "members": [
+              {
+                "locant": 2,
+                "length": 1,
+                "attach": 3,
+                "atoms": [
+                  3
+                ],
+                "signature": "C()",
+                "name": "μεθυλο"
+              }
+            ]
+          }
+        ],
+        "signature": "[[\"C\",1,[]],[\"C\",1,[\"1:C()\",\"1:O(1:C(1:C(),1:C()))\"]],[\"C\",0,[]]]",
+        "signature3D": "[[\"C\",1,[]],[\"C\",1,[\"1:C()\",\"1:O(1:C(1:C(),1:C()))\"]],[\"C\",0,[]]]"
+      }
+    },
+    {
+      "key": "tert_butyl_isopropyl_ether",
+      "mode": "skeletal",
+      "chain": "data",
+      "result": {
+        "name": "2-ισοπροποξυ-2-μεθυλοπροπάνιο",
+        "common": "tert-βουτυλοϊσοπροπυλαιθέρας",
+        "parts": [
+          "2-",
+          "ισοπροποξυ",
+          "-2-",
+          "μεθυλο",
+          null,
+          "προπ",
+          "άν",
+          null,
+          "",
+          "ιο",
+          null,
+          null
+        ],
+        "chain": [
+          1,
+          2,
+          3
+        ],
+        "classification": {
+          "taxonomy": "Αιθέρες",
+          "carbonCount": 7,
+          "principalFunctionalGroup": "ether",
+          "bondSeries": "alkanes",
+          "seriesKey": "ether",
+          "chemicalClass": "ethers",
+          "functionalGroups": [
+            "ether"
+          ]
+        },
+        "chain3D": [
+          4,
+          2,
+          6
+        ],
+        "commonParts": {
+          "symmetric": false,
+          "parts": [
+            {
+              "label": "tert-βουτυλο",
+              "chain": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "chain3D": [
+                2,
+                6,
+                5,
+                4
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                1,
+                2,
+                3
+              ],
+              "numberChain3D": [
+                4,
+                2,
+                6
+              ]
+            },
+            {
+              "label": "ϊσοπροπυλ",
+              "chain": [
+                5,
+                6,
+                7
+              ],
+              "chain3D": [
+                3,
+                7,
+                8
+              ],
+              "kind": "alkyl",
+              "numberChain": [
+                5,
+                6,
+                7
+              ],
+              "numberChain3D": [
+                3,
+                7,
+                8
+              ]
+            },
+            {
+              "label": "αιθέρας",
+              "chain": "ether",
+              "chain3D": "ether",
+              "kind": "ether",
+              "numberChain": null,
+              "numberChain3D": null
+            }
+          ]
+        },
+        "prefixes": [
+          {
+            "kind": "alkoxy",
+            "name": "ισοπροποξυ",
+            "label": "ισοπροποξυ",
+            "locants": "2",
+            "members": []
+          },
+          {
+            "kind": "alkyl",
+            "name": "μεθυλο",
+            "label": "μεθυλο",
+            "locants": "2",
+            "members": [
+              {
+                "locant": 2,
+                "length": 1,
+                "attach": 3,
+                "atoms": [
+                  3
+                ],
+                "signature": "C()",
+                "name": "μεθυλο"
+              }
+            ]
+          }
+        ],
+        "signature": "[[\"C\",1,[]],[\"C\",1,[\"1:C()\",\"1:O(1:C(1:C(),1:C()))\"]],[\"C\",0,[]]]",
+        "signature3D": "[[\"C\",1,[]],[\"C\",1,[\"1:C()\",\"1:O(1:C(1:C(),1:C()))\"]],[\"C\",0,[]]]"
+      }
+    }
+  ],
+  "protectedFilesUnchanged": 2606,
+  "coreUnchanged": true,
+  "newAtomOrBondIDs": false
+}

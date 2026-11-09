@@ -1,0 +1,200 @@
+--- before/js/mulermoc-nom-scenario-54.js
++++ after/js/mulermoc-nom-scenario-54.js
+@@ -1227,6 +1227,18 @@
+   });
+   return out.length ? out : ["molecules"];
+ }
++// Opt-in heading artwork is a bounded local preset, never imported HTML/URLs.
++// Keep the field absent for plain-title steps so legacy JSON gains no default.
++var SCENARIO_TITLE_LOGOS = {
++  workshop: {
++    src: "games/assets/name-repair/workshop-logo-3d-v1.png",
++    title: "Συνεργείο ονομάτων"
++  }
++};
++function fScenarioValidTitleLogo(value) {
++  return typeof value === "string" && Object.prototype.hasOwnProperty.call(SCENARIO_TITLE_LOGOS, value)
++    ? value : null;
++}
+ function fScenarioDefaults(step, i) {
+   var d = {
+     n: i + 1,
+@@ -1260,6 +1272,9 @@
+     },
+   };
+   var out = Object.assign({}, d, step);
++  var titleLogo = fScenarioValidTitleLogo(step.titleLogo);
++  if (titleLogo) out.titleLogo = titleLogo;
++  else delete out.titleLogo;
+   if (Object.prototype.hasOwnProperty.call(step, "checkpoint")) {
+     out.checkpoint = fScenarioCheckpointApi({ steps: [step] }).validateCheckpoint(step.checkpoint);
+   }
+@@ -1344,6 +1359,9 @@
+       return;
+     }
+     var st = fScenarioDefaults(s, steps.length);
++    if (Object.prototype.hasOwnProperty.call(s, "titleLogo") && !fScenarioValidTitleLogo(s.titleLogo)) {
++      warnings.push("Step " + (i + 1) + ": invalid title logo discarded (text title used).");
++    }
+     if (typeof s.nameBoxLayout !== "undefined" && s.nameBoxLayout !== 1 && s.nameBoxLayout !== 2) {
+       warnings.push("Step " + (i + 1) + ": invalid name-box layout discarded (legacy layout used).");
+     }
+@@ -2450,8 +2468,8 @@
+ 
+ function showTextOn(step) {
+   // Automatic: heading + text show iff the step carries content
+-  // (title or note). The legacy show.text flag is ignored.
+-  return !!(step && (step.title || step.note));
++  // (title, opt-in heading logo or note). The legacy show.text flag is ignored.
++  return !!(step && (step.title || fScenarioValidTitleLogo(step.titleLogo) || step.note));
+ }
+ 
+ function showNoteOn(step) {
+@@ -4132,19 +4150,73 @@
+   fScenarioToast("Duplicated step " + src.n + " as step " + (idx + 2) + ".");
+ }
+ 
++// The text remains the heading's accessible name, even after a successful
++// image load. While loading or on error it is also the visible fallback.
++// Every callback owns only these nodes; detached/previous-step callbacks do
++// nothing and cannot hide a later step title or the restored app title.
++function fScenarioRenderTitleLogo(host, presetKey, title, onLayout) {
++  var key = fScenarioValidTitleLogo(presetKey);
++  if (!host || !key) return;
++  var preset = SCENARIO_TITLE_LOGOS[key];
++  host.textContent = "";
++  host.classList.add("scStepHeadingVisual");
++  host.classList.remove("is-loaded");
++  var img = document.createElement("img");
++  img.className = "scStepHeadingImage";
++  img.alt = "";
++  img.setAttribute("aria-hidden", "true");
++  img.width = 88;
++  img.height = 88;
++  img.hidden = true;
++  var fallback = document.createElement("span");
++  fallback.className = "scStepHeadingFallback";
++  fallback.textContent = title || preset.title;
++  function current() {
++    return img.parentNode === host && document.documentElement.contains(host);
++  }
++  img.onload = function () {
++    if (!current()) return;
++    img.hidden = false;
++    host.classList.add("is-loaded");
++    if (onLayout) onLayout();
++  };
++  img.onerror = function () {
++    if (!current()) return;
++    img.hidden = true;
++    host.classList.remove("is-loaded");
++    if (onLayout) onLayout();
++  };
++  host.appendChild(img);
++  host.appendChild(fallback);
++  img.src = preset.src;
++}
++
+ function fScenarioFillStepPanel(step) {
+   var h1 = document.getElementById("pageTitle");
+   var p = document.getElementById("scStepText");
+   if (!h1 || !p) return;
+   var appTitle = MuLERMoCScenario.appTitle || h1.textContent || "";
++  h1.classList.remove("scStepHeadingHasLogo");
+   if (MuLERMoCScenario.present && step && step.n && showTextOn(step)) {
+-    if (step.title) {
++    var logo = fScenarioValidTitleLogo(step.titleLogo);
++    if (step.title || logo) {
+       h1.textContent = "";
+       if (fScenarioPresent().showStepNumbers !== false) {
+         var numSpan = document.createElement("span");
+         numSpan.className = "scStepNumberTitle";
+         numSpan.textContent = step.n + ".";
+         h1.appendChild(numSpan);
++      }
++      if (logo) {
++        h1.classList.add("scStepHeadingHasLogo");
++        var visual = document.createElement("span");
++        h1.appendChild(visual);
++        fScenarioRenderTitleLogo(visual, logo, step.title, function () {
++          if (!MuLERMoCScenario.present || visual.parentNode !== h1) return;
++          try { if (typeof fResizeViewers === "function") fResizeViewers(); } catch (eLogoSize) { /* resize best-effort */ }
++          try { fScenarioSyncStepTextLayout(); } catch (eLogoText) { /* text layout best-effort */ }
++        });
++      } else if (fScenarioPresent().showStepNumbers !== false) {
+         h1.appendChild(document.createTextNode(" " + step.title));
+       } else {
+         h1.textContent = step.title;
+@@ -5445,7 +5517,44 @@
+     titleInput.value = st.title || "";
+     titleInput.onchange = function () {
+       st.title = titleInput.value;
++      paintTitleLogoPreview();
+     };
++    var titleLogoRow = document.createElement("div");
++    titleLogoRow.className = "scTitleLogoRow";
++    var titleLogoLabel = document.createElement("label");
++    titleLogoLabel.className = "scTitleLogoLabel";
++    var titleLogoEN = typeof fMulerIsEN === "function" && fMulerIsEN();
++    titleLogoLabel.appendChild(document.createTextNode(titleLogoEN ? "Heading appearance" : "Μορφή τίτλου"));
++    var titleLogoSelect = document.createElement("select");
++    titleLogoSelect.className = "scTitleLogoSelect";
++    [["", titleLogoEN ? "Title text" : "Κείμενο τίτλου"],
++      ["workshop", titleLogoEN ? "Workshop logo" : "Λογότυπο Συνεργείου"]].forEach(function (pair) {
++      var option = document.createElement("option");
++      option.value = pair[0];
++      option.textContent = pair[1];
++      titleLogoSelect.appendChild(option);
++    });
++    titleLogoSelect.value = fScenarioValidTitleLogo(st.titleLogo) || "";
++    titleLogoLabel.appendChild(titleLogoSelect);
++    titleLogoRow.appendChild(titleLogoLabel);
++    var titleLogoPreview = document.createElement("span");
++    titleLogoPreview.className = "scTitleLogoPreview";
++    titleLogoRow.appendChild(titleLogoPreview);
++    row.appendChild(titleLogoRow);
++    function paintTitleLogoPreview() {
++      var key = fScenarioValidTitleLogo(st.titleLogo);
++      titleLogoPreview.hidden = !key;
++      titleLogoPreview.textContent = "";
++      titleLogoPreview.classList.remove("scStepHeadingVisual", "is-loaded");
++      if (key) fScenarioRenderTitleLogo(titleLogoPreview, key, st.title);
++    }
++    titleLogoSelect.onchange = function () {
++      var key = fScenarioValidTitleLogo(titleLogoSelect.value);
++      if (key) st.titleLogo = key;
++      else delete st.titleLogo;
++      paintTitleLogoPreview();
++    };
++    paintTitleLogoPreview();
+     var noteInput = document.createElement("div");
+     noteInput.className = "snote snoteRich";
+     noteInput.setAttribute("data-placeholder", ((typeof fMulerT === "function") ? fMulerT("notePlaceholder") : "Γράψτε το κείμενο του βήματος…"));
+@@ -5727,7 +5836,7 @@
+     row.appendChild(noteBar);
+     row.appendChild(noteInput);
+     // No Text checkbox: heading + text show automatically iff the step
+-    // carries a title or note (see showTextOn); clear both for silence.
++    // carries a title, heading logo or note (see showTextOn); clear all for silence.
+     // No Menu checkbox: the menu follows picks + selection (derived at
+     // capture/validate — 2+ picks show it, otherwise the step stands alone).
+     // Viewer control bars (authored per step; enabled only when that step's
+@@ -6207,7 +6316,7 @@
+ // ── per-step Update (authoring): Go → tweak live view → Update ───────────
+ // Captures the current live view via fScenarioCapture() and overwrites the
+ // stored view snapshot at scen.steps[idx]. Authored layer is preserved:
+-// title, note, styleText.fontSizePx/textWidthPx/columns, and the 4 drawer chrome checkboxes
++// title, optional titleLogo, note, styleText.fontSizePx/textWidthPx/columns, and the 4 drawer chrome checkboxes
+ // (show.controls.2D/3D, show.nameSettings, show.nameClick). Everything visual is refreshed:
+ // selectedMol, mode2D, mainChainMode, etherNamingMode, nameAnalysisMode
+ // (clicked name-box highlight), selectedRule, style2D (atom colors, color
+@@ -6232,6 +6341,9 @@
+   fresh.n = old.n;
+   fresh.nameBoxLayout = fScenarioValidNameBoxLayout(old.nameBoxLayout, old);
+   fresh.title = old.title;
++  var titleLogo = fScenarioValidTitleLogo(old.titleLogo);
++  if (titleLogo) fresh.titleLogo = titleLogo;
++  else delete fresh.titleLogo;
+   fresh.note = old.note;
+   fresh.noteFormat = old.noteFormat === "html" ? "html" : "text";
+   if (Object.prototype.hasOwnProperty.call(old, "checkpoint")) {

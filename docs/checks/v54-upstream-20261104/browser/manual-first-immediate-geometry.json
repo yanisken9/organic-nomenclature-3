@@ -1,0 +1,17 @@
+{
+  "completed": false,
+  "checks": [
+    {
+      "label": "Teacher drawing default on exposes New/Edit",
+      "detail": null
+    },
+    {
+      "label": "Beautify available in editor",
+      "detail": null
+    }
+  ],
+  "fixturePolicy": "Actual PubChem REST responses stored locally; name/3D async transport replaced for repeatable authoring. Real JSME, engine, SVG, JSmol, registry and Blob payload.",
+  "failure": "('Real Beautify uses live11C horizontal chain', {'n': 11, 'range': 0.5026})",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/v54-upstream-20261104/browser/test-manual-save.py\", line 33, in <module>\n    check(row['n']==11 and row['range']<.001,'Real Beautify uses live11C horizontal chain',row)\n  File \"support\", line 10, in check\n    until('mode2D==='+json.dumps(m)+'&&!!document.querySelector(\"#jsmeNomeclatureSVG svg\")')\nAssertionError: ('Real Beautify uses live11C horizontal chain', {'n': 11, 'range': 0.5026})\n",
+  "javascriptErrors": []
+}

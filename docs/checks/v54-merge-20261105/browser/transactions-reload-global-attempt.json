@@ -1,0 +1,64 @@
+{
+  "completed": false,
+  "checks": [
+    {
+      "label": "Auto ON hides manual Linearize",
+      "detail": null
+    },
+    {
+      "label": "Auto ON linearizes actual Submit input",
+      "detail": null
+    },
+    {
+      "label": "Real Accept enters asynchronous acquisition",
+      "detail": null
+    },
+    {
+      "label": "Conflicting controls disabled during acquisition",
+      "detail": null
+    },
+    {
+      "label": "Authoritative duplicate/Submit/Draw/Linearize guards preserve transaction",
+      "detail": null
+    },
+    {
+      "label": "Cancel during delayed output creates no record",
+      "detail": null
+    },
+    {
+      "label": "Cancelled transaction returns usable original viewer",
+      "detail": null
+    },
+    {
+      "label": "Repeated settled no3D Submit completes 9",
+      "detail": null
+    },
+    {
+      "label": "No3D remains authoritatively blocked 9",
+      "detail": null
+    },
+    {
+      "label": "Repeated settled no3D Submit completes 11",
+      "detail": null
+    },
+    {
+      "label": "No3D remains authoritatively blocked 11",
+      "detail": null
+    },
+    {
+      "label": "Repeated settled no3D Submit completes 9",
+      "detail": null
+    },
+    {
+      "label": "No3D remains authoritatively blocked 9",
+      "detail": null
+    },
+    {
+      "label": "All three submission pointer events delivered",
+      "detail": null
+    }
+  ],
+  "failure": "{'columnNumber': 0, 'exception': {'type': 'error'}, 'lineNumber': 0, 'stackTrace': {'callFrames': [{'columnNumber': 0, 'functionName': '', 'lineNumber': 0, 'url': 'http://127.0.0.1:8056/mulermoc-nom-54.html?v=transaction-1793878883193817000&lang=gr'}]}, 'text': 'ReferenceError: fMulerLang is not defined'}",
+  "traceback": "Traceback (most recent call last):\n  File \"/private/tmp/namelecule-v54-merge-20261105-candidate/docs/checks/v54-merge-20261105/browser/test-transactions.py\", line 47, in <module>\n    click('#langSwitch [data-lang=\"'+lang+'\"]');app_ready();until('fMulerLang()==='+json.dumps(lang))\n  File \"bidi\", line 49, in until\n    labels=read('Object.entries('+json.dumps(keys)+').map(([row,key])=>({row,actual:document.querySelector(\"#\"+row+\" .settingLabel\").firstChild.textContent.trim(),expected:MULER_STRINGS[key]['+json.dumps(lang)+']}))')\n  File \"bidi\", line 43, in ev\n    click('#molDraftCancelBtn');until('!MulerDraft')\nRuntimeError: {'columnNumber': 0, 'exception': {'type': 'error'}, 'lineNumber': 0, 'stackTrace': {'callFrames': [{'columnNumber': 0, 'functionName': '', 'lineNumber': 0, 'url': 'http://127.0.0.1:8056/mulermoc-nom-54.html?v=transaction-1793878883193817000&lang=gr'}]}, 'text': 'ReferenceError: fMulerLang is not defined'}\n",
+  "javascriptErrors": []
+}

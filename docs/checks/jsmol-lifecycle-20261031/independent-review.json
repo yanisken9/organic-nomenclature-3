@@ -1,0 +1,49 @@
+{
+  "date": "2026-10-31",
+  "reviewer": "/root/review_jsmol_lifecycle_20261031",
+  "role": "NAMELECULE_REVIEWER_V1_20261023",
+  "freshContext": true,
+  "manifestSHA256": "30b57e5844a0d76761bbb00c5edc775c55079f9ba56f98cc43f709e270f0f9ff",
+  "baseCommit": "168e3cec01f941a84d40bbe0dc07156e7baa35d0",
+  "independentChecks": [
+    "24targets/5dependencies/734productionhashes/HEAD/index",
+    "Read-only summarize.build exactly matches summary",
+    "43 natural exceptions paired by ordered timestamps and BiDi realm/context: after destroy during departure",
+    "Eight induced cases and distinct script-continuation/resize call stacks",
+    "24later samples expected URL and37atoms",
+    "Five native function strings match downloaded source",
+    "AST checks/Main surroundingcode/screenshot inspection"
+  ],
+  "developerEvidence": [
+    "Browser runs/timing/HTTPmetadata/upstreamremotechecks",
+    "Targeted final report correction verification, no browser rerun"
+  ],
+  "findings": [
+    {
+      "id": "JSL-01",
+      "severity": "P2",
+      "path": "docs/JSMOL-LIFECYCLE-INVESTIGATION-20261031.md",
+      "originalLines": [
+        9,
+        150
+      ],
+      "finding": "Natural setScreenDimension follows continuing script into repaint, whereas controlled case follows resize timer; cancellation of induced handle alone cannot prove coverage of natural path",
+      "resolution": "Report distinguishes histories and uncertainty; prototype plan explicitly requires guarding entry to repaint after destroy before synchronous setScreenDimension, plus owned RAF/resize cancellation",
+      "status": "Closed by targeted Developer documentation/source-stack verification per protocol"
+    }
+  ],
+  "P0P1": 0,
+  "otherActionableFindings": 0,
+  "limitations": [
+    "No independent runtime/browser replay",
+    "Behavioral no-write, not enforced filesystem isolation",
+    "No conference/browser/offline certification or chemistry/pedagogy validation",
+    "Production fix and prototype not implemented/approved"
+  ],
+  "postReviewChangedPaths": {
+    "docs/JSMOL-LIFECYCLE-INVESTIGATION-20261031.md": {
+      "reviewed": "4aadff0011b54637ccefcae565ff15390cc5e3f5b6667def88511226b7e75ee3",
+      "final": "08f116b0506e1272dc14ad2b57a3e9ddf349570d7a2036e4c9a4c59ab440d448"
+    }
+  }
+}

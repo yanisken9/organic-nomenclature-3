@@ -1,0 +1,3699 @@
+{
+  "completed": true,
+  "checks": [
+    "Same frozenproductionsourcehashes",
+    "Actualnative smoothpreference",
+    "Firsttargetreveal measuredmidmotionbeforesecondinput",
+    "Rapidsecondnativeclick selectsagreeingcomponent",
+    "Latestagreeingstatus visibleunderstickyheader",
+    "Rapidanswer settlesatlatesttarget withoutobsolete drift",
+    "Rapidanswer preservescounter/state anddoesnotcompleterepair",
+    "ExistingNextfocus presentwhile successreveal moving",
+    "Successreveal measuredmidmotionbefore nativeEnter",
+    "NativeEnter activatesNext beforeoldmotionsettles",
+    "Newround2top0 andheadingfullybelowheader",
+    "Nolaterobsolete successmotion afterNext",
+    "Onlyoneactualrepairreceipt andcorrectround2state"
+  ],
+  "scenarios": {
+    "rapidSecondAnswer": {
+      "before": {
+        "time": "2026-11-09T05:34:07.975Z",
+        "step": 3,
+        "progress": "Κουίζ 1/3",
+        "viewport": {
+          "width": 1280,
+          "height": 650,
+          "dpr": 2
+        },
+        "active": {
+          "tag": "H1",
+          "id": ""
+        },
+        "dialog": {
+          "open": true,
+          "scrollTop": 0,
+          "clientHeight": 624,
+          "scrollHeight": 808,
+          "overflowY": "auto",
+          "rect": {
+            "x": 50,
+            "y": 12,
+            "width": 1180,
+            "height": 626,
+            "top": 12,
+            "right": 1230,
+            "bottom": 638,
+            "left": 50
+          }
+        },
+        "host": {
+          "scrollTop": 0,
+          "clientHeight": 699,
+          "scrollHeight": 699,
+          "overflowY": "visible"
+        },
+        "documentScrollTop": 0,
+        "header": {
+          "x": 51,
+          "y": 13,
+          "width": 1178,
+          "height": 108.83332824707031,
+          "top": 13,
+          "right": 1229,
+          "bottom": 121.83332824707031,
+          "left": 51
+        },
+        "usable": {
+          "top": 121.83332824707031,
+          "bottom": 638,
+          "height": 516.1666717529297
+        },
+        "elements": [
+          {
+            "selector": ".round-heading h1",
+            "present": true,
+            "displayed": true,
+            "text": "Επισκευή ονόματος",
+            "rect": {
+              "x": 73,
+              "y": 244.8333282470703,
+              "width": 1134,
+              "height": 43,
+              "top": 244.8333282470703,
+              "right": 1207,
+              "bottom": 287.8333282470703,
+              "left": 73
+            },
+            "visibleHeight": 43,
+            "fullyVisible": true,
+            "clippedTop": 0,
+            "clippedBottom": 0,
+            "display": "block"
+          },
+          {
+            "selector": ".round-heading p",
+            "present": true,
+            "displayed": true,
+            "text": "Έλεγξε το είδος των δεσμών ανάμεσα στα άτομα άνθρακα.",
+            "rect": {
+              "x": 73,
+              "y": 297.83331298828125,
+              "width": 810,
+              "height": 23.550003051757812,
+              "top": 297.83331298828125,
+              "right": 883,
+              "bottom": 321.38331604003906,
+              "left": 73
+            },
+            "visibleHeight": 23.550003051757812,
+            "fullyVisible": true,
+            "clippedTop": 0,
+            "clippedBottom": 0,
+            "display": "block"
+          },
+          {
+            "selector": ".order-controls",
+            "present": true,
+            "displayed": false,
+            "text": "",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            },
+            "visibleHeight": 0,
+            "fullyVisible": false,
+            "clippedTop": 0,
+            "clippedBottom": 0,
+            "display": "none"
+          },
+          {
+            "selector": ".check-helper",
+            "present": true,
+            "displayed": true,
+            "text": "Διάλεξε πρώτα το κομμάτι και έπειτα μια αντικατάσταση.",
+            "rect": {
+              "x": 625.88330078125,
+              "y": 685.38330078125,
+              "width": 558.11669921875,
+              "height": 17.150009155273438,
+              "top": 685.38330078125,
+              "right": 1184,
+              "bottom": 702.5333099365234,
+              "left": 625.88330078125
+            },
+            "visibleHeight": 0,
+            "fullyVisible": false,
+            "clippedTop": 0,
+            "clippedBottom": 64.53330993652344,
+            "display": "block"
+          },
+          {
+            "selector": ".name-parts",
+            "present": true,
+            "displayed": true,
+            "text": "προπίνιο",
+            "rect": {
+              "x": 625.88330078125,
+              "y": 565.38330078125,
+              "width": 558.11669921875,
+              "height": 47,
+              "top": 565.38330078125,
+              "right": 1184,
+              "bottom": 612.38330078125,
+              "left": 625.88330078125
+            },
+            "visibleHeight": 47,
+            "fullyVisible": true,
+            "clippedTop": 0,
+            "clippedBottom": 0,
+            "display": "flex"
+          },
+          {
+            "selector": ".part-selection-status",
+            "present": true,
+            "displayed": false,
+            "text": "",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            },
+            "visibleHeight": 0,
+            "fullyVisible": false,
+            "clippedTop": 0,
+            "clippedBottom": 0,
+            "display": "none"
+          },
+          {
+            "selector": ".choice-fieldset",
+            "present": true,
+            "displayed": false,
+            "text": "2. Διάλεξε την αντικατάστασηένάνίν",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            },
+            "visibleHeight": 0,
+            "fullyVisible": false,
+            "clippedTop": 0,
+            "clippedBottom": 0,
+            "display": "none"
+          },
+          {
+            "selector": ".choices",
+            "present": true,
+            "displayed": false,
+            "text": "ένάνίν",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            },
+            "visibleHeight": 0,
+            "fullyVisible": false,
+            "clippedTop": 0,
+            "clippedBottom": 0,
+            "display": "flex"
+          },
+          {
+            "selector": ".candidate",
+            "present": true,
+            "displayed": false,
+            "text": "Η πρότασή σου για έλεγχοπροπίνιο",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            },
+            "visibleHeight": 0,
+            "fullyVisible": false,
+            "clippedTop": 0,
+            "clippedBottom": 0,
+            "display": "none"
+          },
+          {
+            "selector": ".repair-actions",
+            "present": true,
+            "displayed": true,
+            "text": "Έλεγχος",
+            "rect": {
+              "x": 625.88330078125,
+              "y": 628.38330078125,
+              "width": 558.11669921875,
+              "height": 47,
+              "top": 628.38330078125,
+              "right": 1184,
+              "bottom": 675.38330078125,
+              "left": 625.88330078125
+            },
+            "visibleHeight": 9.61669921875,
+            "fullyVisible": false,
+            "clippedTop": 0,
+            "clippedBottom": 37.38330078125,
+            "display": "flex"
+          },
+          {
+            "selector": ".feedback",
+            "present": true,
+            "displayed": false,
+            "text": "",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            },
+            "visibleHeight": 0,
+            "fullyVisible": false,
+            "clippedTop": 0,
+            "clippedBottom": 0,
+            "display": "none"
+          },
+          {
+            "selector": ".success-explanation",
+            "present": false
+          },
+          {
+            "selector": ".round-next button",
+            "present": false
+          }
+        ]
+      },
+      "oldDestination": 110.84999084472656,
+      "precomputedAgreeingPoint": {
+        "x": 660,
+        "y": 569
+      },
+      "measuredBeforeSecondInput": {
+        "ms": 73,
+        "scroll": 8.75,
+        "progress": "Κουίζ 1/3",
+        "selected": "nl-repair-1-part-component-6",
+        "agreeing": false,
+        "focusNext": false,
+        "focusText": "ίν"
+      },
+      "afterSecondInput": {
+        "ms": 96,
+        "scroll": 8.75,
+        "progress": "Κουίζ 1/3",
+        "selected": "nl-repair-1-part-component-5",
+        "agreeing": true,
+        "focusNext": false,
+        "focusText": "προπ"
+      },
+      "latestDestination": 42.78330993652344,
+      "trace": [
+        {
+          "ms": 16,
+          "scroll": 0,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-6",
+          "agreeing": false,
+          "status": "Αυτό το κομμάτι χρειάζεται επισκευή. Διάλεξε την αντικατάστασή του.",
+          "focus": {
+            "id": "nl-repair-1-part-component-6",
+            "tag": "BUTTON",
+            "text": "ίν"
+          }
+        },
+        {
+          "ms": 30,
+          "scroll": 0,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-6",
+          "agreeing": false,
+          "status": "Αυτό το κομμάτι χρειάζεται επισκευή. Διάλεξε την αντικατάστασή του.",
+          "focus": {
+            "id": "nl-repair-1-part-component-6",
+            "tag": "BUTTON",
+            "text": "ίν"
+          }
+        },
+        {
+          "ms": 70,
+          "scroll": 8.75,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-6",
+          "agreeing": false,
+          "status": "Αυτό το κομμάτι χρειάζεται επισκευή. Διάλεξε την αντικατάστασή του.",
+          "focus": {
+            "id": "nl-repair-1-part-component-6",
+            "tag": "BUTTON",
+            "text": "ίν"
+          }
+        },
+        {
+          "ms": 104,
+          "scroll": 39.71666717529297,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 113,
+          "scroll": 39.71666717529297,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 131,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 148,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 163,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 180,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 196,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 214,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 231,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 246,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 263,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 281,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 298,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 314,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 332,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 347,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 364,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 380,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 396,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 413,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 432,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 448,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 464,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 481,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 498,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 514,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 530,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 548,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 564,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 581,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 597,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 613,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 631,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 647,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 663,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 680,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 697,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 714,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 730,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 747,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 763,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 781,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 799,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 815,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 832,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 848,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 863,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 880,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 898,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 914,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 933,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 947,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 963,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 981,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 997,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 1013,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 1032,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 1047,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 1065,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 1081,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 1099,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 1113,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 1132,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 1148,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 1163,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 1181,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 1198,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 1214,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 1231,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 1247,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 1263,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 1280,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 1299,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 1314,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 1332,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 1347,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 1364,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 1380,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 1398,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 1414,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 1430,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 1447,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 1463,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 1483,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 1497,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 1513,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 1532,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 1547,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 1565,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        }
+      ],
+      "settled": {
+        "time": "2026-11-09T05:34:09.742Z",
+        "step": 3,
+        "progress": "Κουίζ 1/3",
+        "viewport": {
+          "width": 1280,
+          "height": 650,
+          "dpr": 2
+        },
+        "active": {
+          "tag": "BUTTON",
+          "id": "nl-repair-1-part-component-5"
+        },
+        "dialog": {
+          "open": true,
+          "scrollTop": 42.78333282470703,
+          "clientHeight": 624,
+          "scrollHeight": 839,
+          "overflowY": "auto",
+          "rect": {
+            "x": 50,
+            "y": 12,
+            "width": 1180,
+            "height": 626,
+            "top": 12,
+            "right": 1230,
+            "bottom": 638,
+            "left": 50
+          }
+        },
+        "host": {
+          "scrollTop": 0,
+          "clientHeight": 730,
+          "scrollHeight": 730,
+          "overflowY": "visible"
+        },
+        "documentScrollTop": 0,
+        "header": {
+          "x": 51,
+          "y": 13,
+          "width": 1178,
+          "height": 108.83332824707031,
+          "top": 13,
+          "right": 1229,
+          "bottom": 121.83332824707031,
+          "left": 51
+        },
+        "usable": {
+          "top": 121.83332824707031,
+          "bottom": 638,
+          "height": 516.1666717529297
+        },
+        "elements": [
+          {
+            "selector": ".round-heading h1",
+            "present": true,
+            "displayed": true,
+            "text": "Επισκευή ονόματος",
+            "rect": {
+              "x": 73,
+              "y": 202.0500030517578,
+              "width": 1134,
+              "height": 43,
+              "top": 202.0500030517578,
+              "right": 1207,
+              "bottom": 245.0500030517578,
+              "left": 73
+            },
+            "visibleHeight": 43,
+            "fullyVisible": true,
+            "clippedTop": 0,
+            "clippedBottom": 0,
+            "display": "block"
+          },
+          {
+            "selector": ".round-heading p",
+            "present": true,
+            "displayed": true,
+            "text": "Έλεγξε το είδος των δεσμών ανάμεσα στα άτομα άνθρακα.",
+            "rect": {
+              "x": 73,
+              "y": 255.0500030517578,
+              "width": 810,
+              "height": 23.550003051757812,
+              "top": 255.0500030517578,
+              "right": 883,
+              "bottom": 278.6000061035156,
+              "left": 73
+            },
+            "visibleHeight": 23.550003051757812,
+            "fullyVisible": true,
+            "clippedTop": 0,
+            "clippedBottom": 0,
+            "display": "block"
+          },
+          {
+            "selector": ".order-controls",
+            "present": true,
+            "displayed": false,
+            "text": "",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            },
+            "visibleHeight": 0,
+            "fullyVisible": false,
+            "clippedTop": 0,
+            "clippedBottom": 0,
+            "display": "none"
+          },
+          {
+            "selector": ".check-helper",
+            "present": true,
+            "displayed": true,
+            "text": "Διάλεξε πρώτα το κομμάτι και έπειτα μια αντικατάσταση.",
+            "rect": {
+              "x": 625.88330078125,
+              "y": 695,
+              "width": 558.11669921875,
+              "height": 17.149993896484375,
+              "top": 695,
+              "right": 1184,
+              "bottom": 712.1499938964844,
+              "left": 625.88330078125
+            },
+            "visibleHeight": 0,
+            "fullyVisible": false,
+            "clippedTop": 0,
+            "clippedBottom": 74.14999389648438,
+            "display": "block"
+          },
+          {
+            "selector": ".name-parts",
+            "present": true,
+            "displayed": true,
+            "text": "προπίνιο",
+            "rect": {
+              "x": 625.88330078125,
+              "y": 522.5999755859375,
+              "width": 558.11669921875,
+              "height": 47,
+              "top": 522.5999755859375,
+              "right": 1184,
+              "bottom": 569.5999755859375,
+              "left": 625.88330078125
+            },
+            "visibleHeight": 47,
+            "fullyVisible": true,
+            "clippedTop": 0,
+            "clippedBottom": 0,
+            "display": "flex"
+          },
+          {
+            "selector": ".part-selection-status",
+            "present": true,
+            "displayed": true,
+            "text": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+            "rect": {
+              "x": 625.88330078125,
+              "y": 585.5999755859375,
+              "width": 558.11669921875,
+              "height": 39.399993896484375,
+              "top": 585.5999755859375,
+              "right": 1184,
+              "bottom": 624.9999694824219,
+              "left": 625.88330078125
+            },
+            "visibleHeight": 39.399993896484375,
+            "fullyVisible": true,
+            "clippedTop": 0,
+            "clippedBottom": 0,
+            "display": "block"
+          },
+          {
+            "selector": ".choice-fieldset",
+            "present": true,
+            "displayed": false,
+            "text": "2. Διάλεξε την αντικατάστασηένάνίν",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            },
+            "visibleHeight": 0,
+            "fullyVisible": false,
+            "clippedTop": 0,
+            "clippedBottom": 0,
+            "display": "none"
+          },
+          {
+            "selector": ".choices",
+            "present": true,
+            "displayed": false,
+            "text": "ένάνίν",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            },
+            "visibleHeight": 0,
+            "fullyVisible": false,
+            "clippedTop": 0,
+            "clippedBottom": 0,
+            "display": "flex"
+          },
+          {
+            "selector": ".candidate",
+            "present": true,
+            "displayed": false,
+            "text": "Η πρότασή σου για έλεγχοπροπίνιο",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            },
+            "visibleHeight": 0,
+            "fullyVisible": false,
+            "clippedTop": 0,
+            "clippedBottom": 0,
+            "display": "none"
+          },
+          {
+            "selector": ".repair-actions",
+            "present": true,
+            "displayed": true,
+            "text": "Έλεγχος",
+            "rect": {
+              "x": 625.88330078125,
+              "y": 638,
+              "width": 558.11669921875,
+              "height": 47,
+              "top": 638,
+              "right": 1184,
+              "bottom": 685,
+              "left": 625.88330078125
+            },
+            "visibleHeight": 0,
+            "fullyVisible": false,
+            "clippedTop": 0,
+            "clippedBottom": 47,
+            "display": "flex"
+          },
+          {
+            "selector": ".feedback",
+            "present": true,
+            "displayed": false,
+            "text": "",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            },
+            "visibleHeight": 0,
+            "fullyVisible": false,
+            "clippedTop": 0,
+            "clippedBottom": 0,
+            "display": "none"
+          },
+          {
+            "selector": ".success-explanation",
+            "present": false
+          },
+          {
+            "selector": ".round-next button",
+            "present": false
+          }
+        ]
+      },
+      "state": {
+        "version": 1,
+        "seed": "4",
+        "currentRound": 0,
+        "states": [
+          {
+            "selectedPartId": "component-5",
+            "selectedValue": null,
+            "order": [],
+            "choiceOrder": [
+              1,
+              2,
+              0
+            ],
+            "attempts": 0,
+            "selectionMisses": 1,
+            "solved": false,
+            "submitted": false
+          },
+          {
+            "selectedPartId": null,
+            "selectedValue": null,
+            "order": [],
+            "choiceOrder": [
+              2,
+              1,
+              0
+            ],
+            "attempts": 0,
+            "selectionMisses": 0,
+            "solved": false,
+            "submitted": false
+          },
+          {
+            "selectedPartId": null,
+            "selectedValue": null,
+            "order": [],
+            "choiceOrder": [
+              1,
+              2,
+              0
+            ],
+            "attempts": 0,
+            "selectionMisses": 0,
+            "solved": false,
+            "submitted": false
+          }
+        ],
+        "solved": false
+      }
+    },
+    "nextDuringMotion": {
+      "beforeCheck": {
+        "time": "2026-11-09T05:34:11.913Z",
+        "step": 3,
+        "progress": "Κουίζ 1/3",
+        "viewport": {
+          "width": 1280,
+          "height": 650,
+          "dpr": 2
+        },
+        "active": {
+          "tag": "BUTTON",
+          "id": "nl-repair-1-choice-2"
+        },
+        "dialog": {
+          "open": true,
+          "scrollTop": 286.9666748046875,
+          "clientHeight": 624,
+          "scrollHeight": 996,
+          "overflowY": "auto",
+          "rect": {
+            "x": 50,
+            "y": 12,
+            "width": 1180,
+            "height": 626,
+            "top": 12,
+            "right": 1230,
+            "bottom": 638,
+            "left": 50
+          }
+        },
+        "host": {
+          "scrollTop": 0,
+          "clientHeight": 887,
+          "scrollHeight": 887,
+          "overflowY": "visible"
+        },
+        "documentScrollTop": 0,
+        "header": {
+          "x": 51,
+          "y": 13,
+          "width": 1178,
+          "height": 108.83332824707031,
+          "top": 13,
+          "right": 1229,
+          "bottom": 121.83332824707031,
+          "left": 51
+        },
+        "usable": {
+          "top": 121.83332824707031,
+          "bottom": 638,
+          "height": 516.1666717529297
+        },
+        "elements": [
+          {
+            "selector": ".round-heading h1",
+            "present": true,
+            "displayed": true,
+            "text": "Επισκευή ονόματος",
+            "rect": {
+              "x": 73,
+              "y": -42.133331298828125,
+              "width": 1134,
+              "height": 43,
+              "top": -42.133331298828125,
+              "right": 1207,
+              "bottom": 0.866668701171875,
+              "left": 73
+            },
+            "visibleHeight": 0,
+            "fullyVisible": false,
+            "clippedTop": 163.96665954589844,
+            "clippedBottom": 0,
+            "display": "block"
+          },
+          {
+            "selector": ".round-heading p",
+            "present": true,
+            "displayed": true,
+            "text": "Έλεγξε το είδος των δεσμών ανάμεσα στα άτομα άνθρακα.",
+            "rect": {
+              "x": 73,
+              "y": 10.866668701171875,
+              "width": 810,
+              "height": 23.550003051757812,
+              "top": 10.866668701171875,
+              "right": 883,
+              "bottom": 34.41667175292969,
+              "left": 73
+            },
+            "visibleHeight": 0,
+            "fullyVisible": false,
+            "clippedTop": 110.96665954589844,
+            "clippedBottom": 0,
+            "display": "block"
+          },
+          {
+            "selector": ".order-controls",
+            "present": true,
+            "displayed": false,
+            "text": "",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            },
+            "visibleHeight": 0,
+            "fullyVisible": false,
+            "clippedTop": 0,
+            "clippedBottom": 0,
+            "display": "none"
+          },
+          {
+            "selector": ".check-helper",
+            "present": true,
+            "displayed": true,
+            "text": "Ο έλεγχος μετρά ως μία προσπάθεια. Μπορείς να δοκιμάσεις ξανά.",
+            "rect": {
+              "x": 625.88330078125,
+              "y": 607.8499755859375,
+              "width": 558.11669921875,
+              "height": 17.149993896484375,
+              "top": 607.8499755859375,
+              "right": 1184,
+              "bottom": 624.9999694824219,
+              "left": 625.88330078125
+            },
+            "visibleHeight": 17.149993896484375,
+            "fullyVisible": true,
+            "clippedTop": 0,
+            "clippedBottom": 0,
+            "display": "block"
+          },
+          {
+            "selector": ".name-parts",
+            "present": true,
+            "displayed": true,
+            "text": "προπίνιο",
+            "rect": {
+              "x": 625.88330078125,
+              "y": 278.41668701171875,
+              "width": 558.11669921875,
+              "height": 47,
+              "top": 278.41668701171875,
+              "right": 1184,
+              "bottom": 325.41668701171875,
+              "left": 625.88330078125
+            },
+            "visibleHeight": 47,
+            "fullyVisible": true,
+            "clippedTop": 0,
+            "clippedBottom": 0,
+            "display": "flex"
+          },
+          {
+            "selector": ".part-selection-status",
+            "present": true,
+            "displayed": true,
+            "text": "Αυτό το κομμάτι χρειάζεται επισκευή. Διάλεξε την αντικατάστασή του.",
+            "rect": {
+              "x": 625.88330078125,
+              "y": 341.41668701171875,
+              "width": 558.11669921875,
+              "height": 19.699996948242188,
+              "top": 341.41668701171875,
+              "right": 1184,
+              "bottom": 361.11668395996094,
+              "left": 625.88330078125
+            },
+            "visibleHeight": 19.699996948242188,
+            "fullyVisible": true,
+            "clippedTop": 0,
+            "clippedBottom": 0,
+            "display": "block"
+          },
+          {
+            "selector": ".choice-fieldset",
+            "present": true,
+            "displayed": true,
+            "text": "2. Διάλεξε την αντικατάστασηένάνίν",
+            "rect": {
+              "x": 625.88330078125,
+              "y": 374.1166687011719,
+              "width": 558.11669921875,
+              "height": 74.76666259765625,
+              "top": 374.1166687011719,
+              "right": 1184,
+              "bottom": 448.8833312988281,
+              "left": 625.88330078125
+            },
+            "visibleHeight": 74.76666259765625,
+            "fullyVisible": true,
+            "clippedTop": 0,
+            "clippedBottom": 0,
+            "display": "block"
+          },
+          {
+            "selector": ".choices",
+            "present": true,
+            "displayed": true,
+            "text": "ένάνίν",
+            "rect": {
+              "x": 625.88330078125,
+              "y": 404.8833312988281,
+              "width": 558.11669921875,
+              "height": 44,
+              "top": 404.8833312988281,
+              "right": 1184,
+              "bottom": 448.8833312988281,
+              "left": 625.88330078125
+            },
+            "visibleHeight": 44,
+            "fullyVisible": true,
+            "clippedTop": 0,
+            "clippedBottom": 0,
+            "display": "flex"
+          },
+          {
+            "selector": ".candidate",
+            "present": true,
+            "displayed": true,
+            "text": "Η πρότασή σου για έλεγχοπροπάνιο",
+            "rect": {
+              "x": 625.88330078125,
+              "y": 465.8833312988281,
+              "width": 558.11669921875,
+              "height": 67.9666748046875,
+              "top": 465.8833312988281,
+              "right": 1184,
+              "bottom": 533.8500061035156,
+              "left": 625.88330078125
+            },
+            "visibleHeight": 67.9666748046875,
+            "fullyVisible": true,
+            "clippedTop": 0,
+            "clippedBottom": 0,
+            "display": "block"
+          },
+          {
+            "selector": ".repair-actions",
+            "present": true,
+            "displayed": true,
+            "text": "Έλεγχος",
+            "rect": {
+              "x": 625.88330078125,
+              "y": 550.8499755859375,
+              "width": 558.11669921875,
+              "height": 47,
+              "top": 550.8499755859375,
+              "right": 1184,
+              "bottom": 597.8499755859375,
+              "left": 625.88330078125
+            },
+            "visibleHeight": 47,
+            "fullyVisible": true,
+            "clippedTop": 0,
+            "clippedBottom": 0,
+            "display": "flex"
+          },
+          {
+            "selector": ".feedback",
+            "present": true,
+            "displayed": false,
+            "text": "",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            },
+            "visibleHeight": 0,
+            "fullyVisible": false,
+            "clippedTop": 0,
+            "clippedBottom": 0,
+            "display": "none"
+          },
+          {
+            "selector": ".success-explanation",
+            "present": false
+          },
+          {
+            "selector": ".round-next button",
+            "present": false
+          }
+        ]
+      },
+      "successDestination": 523.6666870117188,
+      "measuredBeforeNativeEnter": {
+        "ms": 45,
+        "scroll": 287.70001220703125,
+        "progress": "Κουίζ 1/3",
+        "selected": "nl-repair-1-part-component-6",
+        "agreeing": false,
+        "focusNext": true,
+        "focusText": "Επόμενο κουίζ"
+      },
+      "immediateAfterEnter": {
+        "ms": 80,
+        "scroll": 0,
+        "progress": "Κουίζ 2/3",
+        "agreeing": false,
+        "focusNext": false,
+        "focusText": "Επισκευή ονόματος"
+      },
+      "trace": [
+        {
+          "ms": 0,
+          "scroll": 286.9666748046875,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-6",
+          "agreeing": false,
+          "status": "Αυτό το κομμάτι χρειάζεται επισκευή. Διάλεξε την αντικατάστασή του.",
+          "focus": {
+            "id": "nl-repair-1-choice-2",
+            "tag": "BUTTON",
+            "text": "άν"
+          }
+        },
+        {
+          "ms": 19,
+          "scroll": 286.9666748046875,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-6",
+          "agreeing": false,
+          "status": "Αυτό το κομμάτι χρειάζεται επισκευή. Διάλεξε την αντικατάστασή του.",
+          "focus": {
+            "id": "",
+            "tag": "BUTTON",
+            "text": "Επόμενο κουίζ"
+          }
+        },
+        {
+          "ms": 27,
+          "scroll": 286.9666748046875,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-6",
+          "agreeing": false,
+          "status": "Αυτό το κομμάτι χρειάζεται επισκευή. Διάλεξε την αντικατάστασή του.",
+          "focus": {
+            "id": "",
+            "tag": "BUTTON",
+            "text": "Επόμενο κουίζ"
+          }
+        },
+        {
+          "ms": 43,
+          "scroll": 287.70001220703125,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-6",
+          "agreeing": false,
+          "status": "Αυτό το κομμάτι χρειάζεται επισκευή. Διάλεξε την αντικατάστασή του.",
+          "focus": {
+            "id": "",
+            "tag": "BUTTON",
+            "text": "Επόμενο κουίζ"
+          }
+        },
+        {
+          "ms": 67,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        },
+        {
+          "ms": 77,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        },
+        {
+          "ms": 109,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        },
+        {
+          "ms": 110,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        },
+        {
+          "ms": 127,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        },
+        {
+          "ms": 143,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        },
+        {
+          "ms": 161,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        },
+        {
+          "ms": 177,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        },
+        {
+          "ms": 193,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        },
+        {
+          "ms": 211,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        },
+        {
+          "ms": 227,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        },
+        {
+          "ms": 244,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        },
+        {
+          "ms": 260,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        },
+        {
+          "ms": 276,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        },
+        {
+          "ms": 295,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        },
+        {
+          "ms": 311,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        },
+        {
+          "ms": 328,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        },
+        {
+          "ms": 342,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        },
+        {
+          "ms": 360,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        },
+        {
+          "ms": 376,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        },
+        {
+          "ms": 393,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        },
+        {
+          "ms": 410,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        },
+        {
+          "ms": 426,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        },
+        {
+          "ms": 443,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        },
+        {
+          "ms": 459,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        },
+        {
+          "ms": 477,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        },
+        {
+          "ms": 492,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        },
+        {
+          "ms": 509,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        },
+        {
+          "ms": 526,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        },
+        {
+          "ms": 543,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        },
+        {
+          "ms": 560,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        },
+        {
+          "ms": 578,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        },
+        {
+          "ms": 594,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        },
+        {
+          "ms": 610,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        },
+        {
+          "ms": 626,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        },
+        {
+          "ms": 644,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        },
+        {
+          "ms": 661,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        },
+        {
+          "ms": 678,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        },
+        {
+          "ms": 693,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        },
+        {
+          "ms": 710,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        },
+        {
+          "ms": 726,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        },
+        {
+          "ms": 744,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        },
+        {
+          "ms": 759,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        },
+        {
+          "ms": 776,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        },
+        {
+          "ms": 795,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        },
+        {
+          "ms": 810,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        },
+        {
+          "ms": 826,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        },
+        {
+          "ms": 843,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        },
+        {
+          "ms": 861,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        },
+        {
+          "ms": 877,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        },
+        {
+          "ms": 893,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        },
+        {
+          "ms": 910,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        },
+        {
+          "ms": 926,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        },
+        {
+          "ms": 944,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        },
+        {
+          "ms": 961,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        },
+        {
+          "ms": 977,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        },
+        {
+          "ms": 992,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        },
+        {
+          "ms": 1011,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        },
+        {
+          "ms": 1029,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        },
+        {
+          "ms": 1044,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        },
+        {
+          "ms": 1061,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        },
+        {
+          "ms": 1077,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        },
+        {
+          "ms": 1094,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        },
+        {
+          "ms": 1110,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        },
+        {
+          "ms": 1126,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        },
+        {
+          "ms": 1144,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        },
+        {
+          "ms": 1160,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        },
+        {
+          "ms": 1176,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        },
+        {
+          "ms": 1194,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        },
+        {
+          "ms": 1209,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        },
+        {
+          "ms": 1227,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        },
+        {
+          "ms": 1244,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        },
+        {
+          "ms": 1260,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        },
+        {
+          "ms": 1276,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        },
+        {
+          "ms": 1293,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        },
+        {
+          "ms": 1310,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        },
+        {
+          "ms": 1326,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        },
+        {
+          "ms": 1344,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        },
+        {
+          "ms": 1359,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        },
+        {
+          "ms": 1376,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        },
+        {
+          "ms": 1393,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        },
+        {
+          "ms": 1410,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        },
+        {
+          "ms": 1426,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        },
+        {
+          "ms": 1444,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        },
+        {
+          "ms": 1460,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        },
+        {
+          "ms": 1476,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        },
+        {
+          "ms": 1494,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        },
+        {
+          "ms": 1511,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        },
+        {
+          "ms": 1526,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        },
+        {
+          "ms": 1543,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        },
+        {
+          "ms": 1559,
+          "scroll": 0,
+          "progress": "Κουίζ 2/3",
+          "agreeing": false,
+          "status": "",
+          "focus": {
+            "id": "",
+            "tag": "H1",
+            "text": "Επισκευή ονόματος"
+          }
+        }
+      ],
+      "settled": {
+        "time": "2026-11-09T05:34:13.663Z",
+        "step": 3,
+        "progress": "Κουίζ 2/3",
+        "viewport": {
+          "width": 1280,
+          "height": 650,
+          "dpr": 2
+        },
+        "active": {
+          "tag": "H1",
+          "id": ""
+        },
+        "dialog": {
+          "open": true,
+          "scrollTop": 0,
+          "clientHeight": 624,
+          "scrollHeight": 808,
+          "overflowY": "auto",
+          "rect": {
+            "x": 50,
+            "y": 12,
+            "width": 1180,
+            "height": 626,
+            "top": 12,
+            "right": 1230,
+            "bottom": 638,
+            "left": 50
+          }
+        },
+        "host": {
+          "scrollTop": 0,
+          "clientHeight": 699,
+          "scrollHeight": 699,
+          "overflowY": "visible"
+        },
+        "documentScrollTop": 0,
+        "header": {
+          "x": 51,
+          "y": 13,
+          "width": 1178,
+          "height": 108.83332824707031,
+          "top": 13,
+          "right": 1229,
+          "bottom": 121.83332824707031,
+          "left": 51
+        },
+        "usable": {
+          "top": 121.83332824707031,
+          "bottom": 638,
+          "height": 516.1666717529297
+        },
+        "elements": [
+          {
+            "selector": ".round-heading h1",
+            "present": true,
+            "displayed": true,
+            "text": "Επισκευή ονόματος",
+            "rect": {
+              "x": 73,
+              "y": 244.8333282470703,
+              "width": 1134,
+              "height": 43,
+              "top": 244.8333282470703,
+              "right": 1207,
+              "bottom": 287.8333282470703,
+              "left": 73
+            },
+            "visibleHeight": 43,
+            "fullyVisible": true,
+            "clippedTop": 0,
+            "clippedBottom": 0,
+            "display": "block"
+          },
+          {
+            "selector": ".round-heading p",
+            "present": true,
+            "displayed": true,
+            "text": "Έλεγξε το μήκος της κύριας αλυσίδας και το συνθετικό που το δηλώνει.",
+            "rect": {
+              "x": 73,
+              "y": 297.83331298828125,
+              "width": 810,
+              "height": 23.550003051757812,
+              "top": 297.83331298828125,
+              "right": 883,
+              "bottom": 321.38331604003906,
+              "left": 73
+            },
+            "visibleHeight": 23.550003051757812,
+            "fullyVisible": true,
+            "clippedTop": 0,
+            "clippedBottom": 0,
+            "display": "block"
+          },
+          {
+            "selector": ".order-controls",
+            "present": true,
+            "displayed": false,
+            "text": "",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            },
+            "visibleHeight": 0,
+            "fullyVisible": false,
+            "clippedTop": 0,
+            "clippedBottom": 0,
+            "display": "none"
+          },
+          {
+            "selector": ".check-helper",
+            "present": true,
+            "displayed": true,
+            "text": "Διάλεξε πρώτα το κομμάτι και έπειτα μια αντικατάσταση.",
+            "rect": {
+              "x": 625.88330078125,
+              "y": 685.38330078125,
+              "width": 558.11669921875,
+              "height": 17.150009155273438,
+              "top": 685.38330078125,
+              "right": 1184,
+              "bottom": 702.5333099365234,
+              "left": 625.88330078125
+            },
+            "visibleHeight": 0,
+            "fullyVisible": false,
+            "clippedTop": 0,
+            "clippedBottom": 64.53330993652344,
+            "display": "block"
+          },
+          {
+            "selector": ".name-parts",
+            "present": true,
+            "displayed": true,
+            "text": "πεντάνιο",
+            "rect": {
+              "x": 625.88330078125,
+              "y": 565.38330078125,
+              "width": 558.11669921875,
+              "height": 47,
+              "top": 565.38330078125,
+              "right": 1184,
+              "bottom": 612.38330078125,
+              "left": 625.88330078125
+            },
+            "visibleHeight": 47,
+            "fullyVisible": true,
+            "clippedTop": 0,
+            "clippedBottom": 0,
+            "display": "flex"
+          },
+          {
+            "selector": ".part-selection-status",
+            "present": true,
+            "displayed": false,
+            "text": "",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            },
+            "visibleHeight": 0,
+            "fullyVisible": false,
+            "clippedTop": 0,
+            "clippedBottom": 0,
+            "display": "none"
+          },
+          {
+            "selector": ".choice-fieldset",
+            "present": true,
+            "displayed": false,
+            "text": "2. Διάλεξε την αντικατάστασηαιθβουτπεντ",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            },
+            "visibleHeight": 0,
+            "fullyVisible": false,
+            "clippedTop": 0,
+            "clippedBottom": 0,
+            "display": "none"
+          },
+          {
+            "selector": ".choices",
+            "present": true,
+            "displayed": false,
+            "text": "αιθβουτπεντ",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            },
+            "visibleHeight": 0,
+            "fullyVisible": false,
+            "clippedTop": 0,
+            "clippedBottom": 0,
+            "display": "flex"
+          },
+          {
+            "selector": ".candidate",
+            "present": true,
+            "displayed": false,
+            "text": "Η πρότασή σου για έλεγχοπεντάνιο",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            },
+            "visibleHeight": 0,
+            "fullyVisible": false,
+            "clippedTop": 0,
+            "clippedBottom": 0,
+            "display": "none"
+          },
+          {
+            "selector": ".repair-actions",
+            "present": true,
+            "displayed": true,
+            "text": "Έλεγχος",
+            "rect": {
+              "x": 625.88330078125,
+              "y": 628.38330078125,
+              "width": 558.11669921875,
+              "height": 47,
+              "top": 628.38330078125,
+              "right": 1184,
+              "bottom": 675.38330078125,
+              "left": 625.88330078125
+            },
+            "visibleHeight": 9.61669921875,
+            "fullyVisible": false,
+            "clippedTop": 0,
+            "clippedBottom": 37.38330078125,
+            "display": "flex"
+          },
+          {
+            "selector": ".feedback",
+            "present": true,
+            "displayed": false,
+            "text": "",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            },
+            "visibleHeight": 0,
+            "fullyVisible": false,
+            "clippedTop": 0,
+            "clippedBottom": 0,
+            "display": "none"
+          },
+          {
+            "selector": ".success-explanation",
+            "present": false
+          },
+          {
+            "selector": ".round-next button",
+            "present": false
+          }
+        ]
+      },
+      "state": {
+        "version": 1,
+        "seed": "4",
+        "currentRound": 1,
+        "states": [
+          {
+            "selectedPartId": "component-6",
+            "selectedValue": "άν",
+            "order": [],
+            "choiceOrder": [
+              1,
+              2,
+              0
+            ],
+            "attempts": 1,
+            "selectionMisses": 1,
+            "solved": true,
+            "submitted": true
+          },
+          {
+            "selectedPartId": null,
+            "selectedValue": null,
+            "order": [],
+            "choiceOrder": [
+              1,
+              2,
+              0
+            ],
+            "attempts": 0,
+            "selectionMisses": 0,
+            "solved": false,
+            "submitted": false
+          },
+          {
+            "selectedPartId": null,
+            "selectedValue": null,
+            "order": [],
+            "choiceOrder": [
+              0,
+              2,
+              1
+            ],
+            "attempts": 0,
+            "selectionMisses": 0,
+            "solved": false,
+            "submitted": false
+          }
+        ],
+        "solved": false
+      }
+    }
+  },
+  "role": "Developer targeted lifecycle evidence, not independent review",
+  "limits": [
+    "Two scenarios, one actual repair only; owned headless1280×650/DPR2, actualnativeinputs, no apphooks/prototypes",
+    "Only passive rAF/DOM/state reads and approved unsolvedseed4 setup",
+    "All pre-existing userGUI/profiles/driver21029 untouched"
+  ],
+  "javascriptErrors": [],
+  "productionHashes": {
+    "js/namelecule-game-repair.js": "7d0a0939841f0423377d0ccca66ee9554b70f8a61a7ff020cf833aa0755b5ac7",
+    "js/namelecule-generated-repair-checkpoint.js": "d99aaa972afa2a437bedf1e4eca3c835126f237e5333e33ac1d9d10d5b684d27",
+    "js/namelecule-quiz-checkpoints.js": "7bf5441b52b9b519db79f3e56adec97979668de172b8292c0a714355add35bb7",
+    "mulermoc-nom-54.html": "34ade6e22d3e9afaf8cfeb49d7a75fabada1a915b6d1550f58b83b323d68fb27"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "completedAt": "2026-11-05T12:02:11.908728+00:00",
+  "status": "Reviewed merge and approved compatibility installed locally; final primary checks passed.",
+  "upstreamLastActuallySynchronized": "f49b810c93ec85d06163679aff4a8642ea1b4cd3",
+  "upstreamLastChecked": "f49b810c93ec85d06163679aff4a8642ea1b4cd3",
+  "previousActuallySynchronized": "35d791ee9d6bdb8566d3adca1a1bdaba97efc5b8",
+  "runtimeFiles": {
+    "css/jsme-nick-54.css": "7a64231e2121bafa964628a5d40dedeec7c8da1aac2034d6107cdcc3a4b48987",
+    "js/mulermoc-nom-core-54.js": "8f3e5f76d96322faf7cf9251f4cae3eca204fe2f82bf5754fdce6ffc4cd5d5a9",
+    "js/mulermoc-nom-iupac-54.js": "47727ba868761e2e5845e0e8c60e3fa14f196d39e06e6187a5f39f40fabb0901",
+    "js/mulermoc-nom-lang-54.js": "b75a8c8ad149ed3a0cdf35789ca44a0a7658269703832b78fdb7afedd17b6f40",
+    "js/mulermoc-nom-molview-54.js": "22d3b9fdfca8052332b4f842deec7055f6ca8f382ff4a3692db321e770b02e36",
+    "js/mulermoc-nom-teaching-54.js": "45c7a06dfa937339c33a9d8f3f188885828fb88170a5758b32f95af9493b7eca",
+    "mulermoc-nom-54.html": "5c09ea16af0561a83cd5db33deb2d68e5345081a414ccb69c300c78fb8973c03",
+    "js/namelecule-chemistry-client.js": "13f882de81ba00c2f5ced2adf4a9d97e2c66cf5ed7035bf344ea53dd7430db44",
+    "js/namelecule-game-repair.js": "04e17117d3e2aa27d70cc51af6e9e7b75f085e72e7ce94802dfab35d520c4c33",
+    "games/name-repair.html": "000aebafd697d2296a7204b0eca2c84cda73388183a23531da4a6e1aef9031be",
+    "js/chemistry-engines/3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306.js": "3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306"
+  },
+  "behavior": [
+    "Main exploration/drawing uses merged new core54.",
+    "Existing generated quizzes use exact immutable previous engine, verified with SHA-256 before execution.",
+    "Recipes and active/earlier solved progress remain compatible; quizzes remain generated.",
+    "Only immutable HTTP404 permits fallback to verified current engine; corruption fails closed."
+  ],
+  "checks": {
+    "developerIsolatedBrowserCompletedPhases": 10,
+    "developerIsolatedBrowserCompletedAssertions": 336,
+    "incompleteEnginePrefixRunAssertions": 69,
+    "incompleteRunNote": "Initial testserver lacked prefix route. Corrected targeted phase passed3; included among336 completed assertions. Do not call69acompletedphase.",
+    "primaryBrowserAssertions": 14,
+    "primaryBrowserJavaScriptErrors": 0,
+    "primaryHTTPChecks": 17,
+    "protectedFilesUnchanged": 816,
+    "chemistryValidatorIndependentAssertions": 522,
+    "review": "review-result.json",
+    "reviewFindings": [],
+    "primaryFutureStateCheck": "browser/future-choice-normalization-check.json"
+  },
+  "remainingUncertainties": [
+    "Two transient authoring Submit timeouts have no demonstrated cause; later passes do not resolve them.",
+    "Earlier native Firefox freeze unresolved.",
+    "External availability, Safari, physical mobile, offline and conference sequence unverified.",
+    "Existing literal[H]/missingmethaneskeletal/inheritednitrilegeometry limitations retained."
+  ],
+  "recovery": {
+    "archive": "rollback-before.tar.gz",
+    "sha256": "3c473607b6db68b8dee0c1be28ff1987450b7a3d252d0022411a1d0ba09bf712",
+    "scope": "Ten replaced runtime files only; not full repo or offline conference package.",
+    "restorationPerformed": false
+  },
+  "coreSessionReportGR": "Ενημερώθηκε το js/mulermoc-nom-core-54.js κατά την ενσωμάτωση έως f49b810: ασφαλής ανάγνωση κεφαλίδων/μετρήσεων MOL και διάταξη τελικών ομάδων/αιθέρων, με διατήρηση ελέγχων μεταδεδομένων, γράφου και γραμμικότητας sp. Πέρασαν έλεγχοι ονοματολογίας, γράφων/γεωμετρίας και browser, με ανεξάρτητη χημική επικύρωση και Reviewer. Το core52 παρέμεινε αμετάβλητο. Τοπική ενημέρωση, χωρίς νέο commit ή δημοσίευση.",
+  "core54Before": "3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306",
+  "core54After": "8f3e5f76d96322faf7cf9251f4cae3eca204fe2f82bf5754fdce6ffc4cd5d5a9",
+  "core52Unchanged": true,
+  "HEADUnchanged": "168e3cec01f941a84d40bbe0dc07156e7baa35d0",
+  "indexUnchanged": true,
+  "commit": false,
+  "push": false,
+  "publication": false,
+  "userFirefoxTouched": false
+}

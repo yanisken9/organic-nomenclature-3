@@ -1,0 +1,72 @@
+--- before/README.md
++++ after/README.md
+@@ -3,6 +3,14 @@
+ A Greek-first interactive learning platform for organic nomenclature, built around molecular structure, naming logic, and multiple representations. It is a no-build static web app (JSME, JSmol, Snap.svg, jQuery, vanilla JavaScript) intended to be embedded in Drupal.
+ 
+ Desinged and developed by Nickolas Charistos
++
++**Local theory addition — 2026-10-28:** «Κορεσμένα μονοκαρβοξυλικά οξέα»,28
++progressive steps using all8eligible existing molecules, is linked from the acid
++card. The Main library now has13active lessons/311steps. Optional rule tables
++start closed; the last3D step is optional. Player52 supports replay of the
++existing third-acid-prefix boxes. Previous12scenarioJSONs, core52, molecular
++assets and React files remain unchanged by this lesson. Local, not published.
++See [lesson record](docs/MONOACIDS-SCENARIO-20261028.md) for verification status.
+ 
+ **Local addition — 2026-10-28:** four saturated monocarboxylic acids bring the
+ Main library to130molecules. Bounded core52 alkyl-prefix support, three2D forms
+--- before/design/theory-library.html
++++ after/design/theory-library.html
+@@ -164,13 +164,14 @@
+         </div>
+       </article>
+       <article class="lesson" id="carboxylic-acids-card" aria-labelledby="carboxylic-acids-title">
+-        <div class="illustration alcohols-header"><span class="formula" id="carboxylic-acids-title" role="heading" aria-level="2">ΚΑΡΒΟΞΥΛΙΚΑ ΟΞΕΑ</span><span class="count">2 ενότητες</span></div>
++        <div class="illustration alcohols-header"><span class="formula" id="carboxylic-acids-title" role="heading" aria-level="2">ΚΑΡΒΟΞΥΛΙΚΑ ΟΞΕΑ</span><span class="count">1 διαθέσιμο μάθημα</span></div>
+         <div class="content">
+           <section class="lesson-part" aria-labelledby="saturated-monocarboxylic-acids-title">
+             <h3 id="saturated-monocarboxylic-acids-title">Κορεσμένα μονοκαρβοξυλικά οξέα</h3>
+             <p class="series-formula">C<sub>ν</sub>H<sub>2ν</sub>O<sub>2</sub><span class="restriction">ν ≥ 1</span></p>
+-            <p>Ονοματολογία κορεσμένων μονοκαρβοξυλικών οξέων.</p>
+-            <span class="pending">Το μάθημα δεν είναι ακόμη διαθέσιμο</span>
++            <p>Από την καρβοξυλομάδα και τα συνθετικά του ονόματος στις διακλαδώσεις.</p>
++            <p><span class="count">28 βήματα</span></p>
++            <a class="action" href="../mulermoc-nom-52.html?scenario=scenarios/saturated-monocarboxylic-acids-nomenclature.scenario.json&amp;present=1&amp;from=theory-library&amp;v=monoacids-theory-20261028">Ξεκίνα το μάθημα <span aria-hidden="true">→</span></a>
+           </section>
+           <section class="lesson-part" aria-labelledby="other-carboxylic-acids-title">
+             <h3 id="other-carboxylic-acids-title">Άλλα καρβοξυλικά οξέα</h3>
+--- before/js/mulermoc-nom-scenario-52.js
++++ after/js/mulermoc-nom-scenario-52.js
+@@ -82,9 +82,10 @@
+     "Κορεσμένες μονοσθενείς αλδεΰδες",
+     "Άλλες αλδεΰδες",
+     "Κορεσμένες μονοσθενείς κετόνες",
+-    "Άλλες κετόνες"
++    "Άλλες κετόνες",
++    "Κορεσμένα μονοκαρβοξυλικά οξέα"
+   ].indexOf(lesson.title) !== -1 &&
+-    /^(compCarbonsCount|compBondType|compSuffix|compSecondSub1|compSecondSub2|compNumber1|compNumber2|compBondType2|compBondPos|compEndNumber)$/.test(mode || "");
++    /^(compCarbonsCount|compBondType|compSuffix|compSecondSub1|compSecondSub2|compNumber1|compNumber2|compBondType2|compBondPos|compEndNumber|compAcidNumber3|compAcidSub3)$/.test(mode || "");
+ }
+ 
+ // Optional authored reference, off for every step that does not request it.
+@@ -145,6 +146,8 @@
+   compSecondSub1: "comp1",
+   compNumber2: "comp2",
+   compSecondSub2: "comp3",
++  compAcidNumber3: "acidPrefixNumber3",
++  compAcidSub3: "acidPrefixSub3",
+   compBondPos: "comp4",
+   compCarbonsCount: "comp5",
+   compBondType: "comp6",
+--- before/mulermoc-nom-52.html
++++ after/mulermoc-nom-52.html
+@@ -334,7 +334,7 @@
+   <script src="js/mulermoc-nom-molview-52.js?v=acid-condensed-gap-20261028"></script>
+   <script src="js/mulermoc-nom-teaching-52.js?v=acid-prefix-boxes-20261028"></script>
+   <script src="js/mulermoc-nom-note-52.js?v=v52-sync-20261027-r2"></script>
+-  <script src="js/mulermoc-nom-scenario-52.js?v=upstream-image-picker-20261026"></script>
++  <script src="js/mulermoc-nom-scenario-52.js?v=monoacids-theory-20261028"></script>
+   <script>
+     window.JSApplet = window.JSApplet || {};
+   </script>

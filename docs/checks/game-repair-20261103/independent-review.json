@@ -1,0 +1,31 @@
+{
+  "date": "2026-11-03",
+  "agent": "/root/review_game_name_repair",
+  "ROLE_ID": "NAMELECULE_REVIEWER_V1_20261023",
+  "freshContext": true,
+  "readOnlyBehavior": true,
+  "enforcedReadOnlySandboxVerified": false,
+  "targetManifestSHA256": "37da0e2ae1e3bf75dc42a80033a725f53896a3a4fe40a5002a7a239e869a89bc",
+  "targetPaths": 50,
+  "findings": [],
+  "independentChecks": [
+    "50 hashes before/after, HEAD/index/baseline",
+    "read AGENTS/review checklist and actual HTML/JS/CSS/JSON/exporter and dependencies",
+    "Python AST/XML and actual SVG atomlabels/bondendpoint correspondence for sixassets/fourMOLs",
+    "68 JavaScriptCore grading/reset/count checks",
+    "P1-CHEM-ASSET-01 targetclosure and internal SVG node-coordinate preservation",
+    "four desktop/mobile screenshots inspected"
+  ],
+  "suppliedDeveloperEvidence": [
+    "engine80checks",
+    "browser79checks/twofulljourneys",
+    "MainCDNsmoke6checks"
+  ],
+  "limits": [
+    "No independent browser run",
+    "No physical touch/screenreader/other-browser certification",
+    "No offline/conference readiness certification",
+    "Broader preexisting tree differences not attributed to this change"
+  ],
+  "postReviewDeveloperChecks": "See tab-and-back.json: full real Tab/Enter journey60Tab presses, Back restoredresults, no externalgame resources,0JS; no productionchanges"
+}

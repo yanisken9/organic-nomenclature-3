@@ -1,0 +1,98 @@
+--- before/js/mulermoc-nom-scenario-54.js
++++ js/mulermoc-nom-scenario-54.js
+@@ -426,7 +426,62 @@
+   }
+ }
+ 
++var _scCheckpointNoticeTimer = null;
++function fScenarioClearCheckpointNotice() {
++  if (_scCheckpointNoticeTimer !== null) clearTimeout(_scCheckpointNoticeTimer);
++  _scCheckpointNoticeTimer = null;
++  var notice = document.getElementById("scCheckpointNotice");
++  if (notice) {
++    notice.hidden = true;
++    notice.textContent = "";
++  }
++}
++
++// A blocked content-only checkpoint has space for feedback in the lesson.
++// Molecular steps retain the existing global toast and its placement.
++function fScenarioCheckpointNotice(msg) {
++  var pc = document.getElementById("pageContainer");
++  var row = document.querySelector("#mainAppContainer > .mainApp3Columns");
++  var lesson = fScenarioPresent();
++  var step = lesson && lesson.steps[lesson.index];
++  if (!MuLERMoCScenario.present || !pc || !pc.classList.contains("scContentOnly") ||
++      !row || !step || !Object.prototype.hasOwnProperty.call(step, "checkpoint")) {
++    fScenarioToast(msg);
++    return;
++  }
++  fScenarioClearCheckpointNotice();
++  var toast = document.getElementById("scenarioToast");
++  if (toast) toast.classList.remove("show");
++  if (window.__scToastTimer) clearTimeout(window.__scToastTimer);
++  window.__scToastTimer = null;
++  var notice = document.getElementById("scCheckpointNotice");
++  if (!notice) {
++    notice = document.createElement("div");
++    notice.id = "scCheckpointNotice";
++    notice.className = "scCheckpointNotice";
++    notice.setAttribute("role", "status");
++    notice.setAttribute("aria-live", "polite");
++    notice.setAttribute("aria-atomic", "true");
++    row.appendChild(notice);
++  }
++  try { if (typeof fMulerTByGr === "function") msg = fMulerTByGr(msg); } catch (e) {}
++  notice.hidden = false;
++  notice.textContent = msg;
++  // Short viewports can put the free lesson space below the fold. Reveal
++  // the notice with the smallest scroll; keep focus and the Workshop flow.
++  try {
++    var bounds = notice.getBoundingClientRect();
++    var bar = document.getElementById("scenarioPlayBar");
++    var top = bar ? bar.getBoundingClientRect().bottom : 0;
++    if (bounds.top < top + 8 || bounds.bottom > window.innerHeight - 16) {
++      notice.scrollIntoView({ block: "nearest", inline: "nearest" });
++    }
++  } catch (eScroll) { /* the in-flow notice remains available */ }
++  _scCheckpointNoticeTimer = setTimeout(fScenarioClearCheckpointNotice, 2600);
++}
++
+ function fScenarioToast(msg) {
++  fScenarioClearCheckpointNotice();
+   var t = document.getElementById("scenarioToast");
+   if (!t) return;
+   try { if (typeof fMulerTByGr === "function") msg = fMulerTByGr(msg); } catch (e) {}
+@@ -2112,6 +2167,7 @@
+ 
+ function fScenarioApply(step) {
+   if (!MuLERMoCScenario.ready || !step) return false;
++  fScenarioClearCheckpointNotice();
+   // Set before any load or naming repaint, in presentation and Go preview.
+   MuLERMoCScenario.nameBoxLayoutContext = fScenarioValidNameBoxLayout(step.nameBoxLayout, step);
+   // Step language: the step shows naming + UI in its creation language.
+@@ -4760,6 +4816,7 @@
+ // (menu menu-open + both viewers + all bars) via a transient clone — the
+ // stored step keeps its authored show.* for a later Export.
+ function fScenarioExitPresent() {
++  fScenarioClearCheckpointNotice();
+   fScenarioCancelCheckpointPreparation();
+   try {
+     var checkpointApi = fScenarioCheckpointApi(fScenarioPresent());
+@@ -6222,6 +6279,7 @@
+       fScenarioCheckpointError(eCheckpoint);
+     }
+   }
++  if (!blocked) fScenarioClearCheckpointNotice();
+   if (next) {
+     next.disabled = blocked;
+     next.setAttribute("aria-disabled", blocked ? "true" : "false");
+@@ -6280,7 +6338,7 @@
+       // chrome. Reapplying the snapshot would reset zoom/highlights/camera.
+       try { history.replaceState(null, "", "#step=" + (i + 1)); } catch (eHash) { /* file:// */ }
+       fScenarioPlayUi();
+-      fScenarioToast("Λύσε το σύντομο κουίζ για να συνεχίσεις.");
++      fScenarioCheckpointNotice("Λύσε το σύντομο κουίζ για να συνεχίσεις.");
+       return;
+     }
+   }

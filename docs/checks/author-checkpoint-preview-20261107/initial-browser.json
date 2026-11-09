@@ -1,0 +1,21 @@
+{
+  "completed": false,
+  "checks": [
+    "Ordinary learner gate still blocks at step4",
+    "Real first learner repair is stored without unlocking the three-round gate",
+    "Screen opens edited step5 directly despite unsolved step4",
+    "Edited title and explicit preview counter shown",
+    "Step5 keeps authored passive boxes and chain selector; preview Next enabled",
+    "Preview Next advances directly to6"
+  ],
+  "rounds": [],
+  "fixture_policy": "Owned profile only. Actual learner partial progress and temporary preview completions created through UI; no fabricated solved receipts. Title changed only in isolated browser; no source/desktop JSON writes.",
+  "limitations": [
+    "Headless isolated Firefox; no user-facing Firefox freeze diagnosis",
+    "No Safari, physical mobile, screen reader or full conference sequence audit",
+    "No new viewer/3D audit; existing JSmol issue remains outside scope"
+  ],
+  "failure": "Native ArrowLeft returns preview to5",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/author-checkpoint-preview-20261107/check-browser.py\", line 79, in <module>\n    native_key('\\ue012');check(ev('fScenarioPresent().index===4'),'Native ArrowLeft returns preview to5')\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/author-checkpoint-preview-20261107/check-browser.py\", line 15, in check\n    assert ok,name\nAssertionError: Native ArrowLeft returns preview to5\n",
+  "javascriptErrors": []
+}

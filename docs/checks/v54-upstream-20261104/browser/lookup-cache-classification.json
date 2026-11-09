@@ -1,0 +1,56 @@
+{
+  "completed": true,
+  "actualRecordedRows": [
+    {
+      "molecule": "methane",
+      "field": "iupacPubchem",
+      "after": "methane"
+    },
+    {
+      "molecule": "methane",
+      "field": "titlePubchem",
+      "after": "Methane"
+    },
+    {
+      "molecule": "methane",
+      "field": "systematicEN",
+      "after": "methane"
+    },
+    {
+      "molecule": "methane",
+      "field": "iupacEN",
+      "after": "methane"
+    },
+    {
+      "molecule": "methane",
+      "field": "pubchemCID",
+      "after": 297
+    },
+    {
+      "molecule": "methane",
+      "field": "iupacSource",
+      "after": "pubchem"
+    },
+    {
+      "molecule": "methane",
+      "field": "needsHumanCheck",
+      "after": false
+    },
+    {
+      "molecule": "methane",
+      "field": "iupacFetchDone",
+      "after": true
+    },
+    {
+      "molecule": "methane",
+      "field": "iupacFetchError",
+      "after": false
+    }
+  ],
+  "checks": 9,
+  "scientificMOLChanges": 0,
+  "source": "drawing-lookup-cache-assumption.json",
+  "cause": "Already-started cold methane PubChem request filled nine previously absent lookup fields; exact before/after recorded. Application lookup function unchanged by this sync except longer-name resolver regex.",
+  "applicationFix": false,
+  "fullDrawingScriptResult": "Retained raw failure exit1 due missing iupacSource allowance; do not call that run fully passing"
+}

@@ -114,7 +114,7 @@ def lesson_data(block):
                 and has_class(child, 'action'))
     href = link['attrs']['href']
     url = urlsplit(href)
-    if url.path != '../mulermoc-nom-51.html' or url.scheme or url.netloc:
+    if url.path != '../mulermoc-nom-52.html' or url.scheme or url.netloc:
         raise ValueError('Unexpected lesson player URL.')
     scenario = parse_qs(url.query)['scenario'][0]
     scenario_path = (ROOT / scenario).resolve()

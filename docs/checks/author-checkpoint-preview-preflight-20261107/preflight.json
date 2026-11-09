@@ -1,0 +1,26 @@
+{
+  "observed": [
+    "Edited step5 via title change event, Go opens step5 outside presentation",
+    "Editor screen/Present-from-step requests5; resolveCheckpointTarget returns4 before presentation begins",
+    "Normal learner URL step5 also clamps4",
+    "Zero captured JavaScript errors on successful probes"
+  ],
+  "cause": "The per-row screen launches ordinary fScenarioPresentBegin; no transient author-preview context distinguishes it from learner playback. Entire-step content participates in progress signature.",
+  "userConfirmedButton": "Screen icon scPresentStep",
+  "proposedFiles": [
+    "js/mulermoc-nom-scenario-54.js",
+    "js/namelecule-quiz-checkpoints.js",
+    "mulermoc-nom-54.html",
+    "docs/didactic-scenario-plan.md"
+  ],
+  "proposedBehavior": "Transient per-scenario author presentation context for row screen; direct selected step and free rehearsal navigation, isolated temporary quiz progress, clear on Exit/failure/normal Play/import. Normal library/URL/Play gates preserved. No source JSON/core edits.",
+  "sourceHashes": {
+    "js/mulermoc-nom-scenario-54.js": "5cc4678e6475cae32cf596c828aa73fb5e6c4f2124ae1dd9ed709c4879e2fab7",
+    "js/namelecule-quiz-checkpoints.js": "c0c89ec8242ec913a0e241cda2f93c859cea8b34b239796459c5d7e8701f892e",
+    "mulermoc-nom-54.html": "05d956f23830f83785f9088d6da3d45b3b4b2b2398e983eec885133e8db209b3",
+    "scenarios/alkanes-user-3.scenario.json": "5161a3e17d0070de62a6493a03aea3e164f604a20c07587c299279ea9977230e",
+    "js/mulermoc-nom-core-54.js": "8f3e5f76d96322faf7cf9251f4cae3eca204fe2f82bf5754fdce6ffc4cd5d5a9"
+  },
+  "approval": "Pending specific implementation plan",
+  "testHarnessCorrection": "First attempt referenced private nested toggle function; then actual .scList handler used. Input event did not save title; final change event confirmed edited title. Initial/unedited results retained. No application fix made."
+}

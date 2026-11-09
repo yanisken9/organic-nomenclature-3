@@ -1,0 +1,48 @@
+--- before/js/namelecule-quiz-checkpoints.js
++++ after/js/namelecule-quiz-checkpoints.js
+@@ -209,10 +209,13 @@
+     return element;
+   }
+ 
++  function validProgress(value) {
++    return !!(value && Number.isSafeInteger(value.current) && Number.isSafeInteger(value.total) &&
++      value.current >= 1 && value.current <= value.total);
++  }
+   function showProgress(value) {
+     if (!progressCounter) return;
+-    const valid = value && Number.isSafeInteger(value.current) && Number.isSafeInteger(value.total) &&
+-      value.current >= 1 && value.current <= value.total;
++    const valid = validProgress(value);
+     progressCounter.hidden = !valid;
+     progressCounter.textContent = valid ? text("counter") + " " + value.current + "/" + value.total : "";
+   }
+@@ -290,6 +293,7 @@
+     if (!currentContext(context)) return;
+     destroyMount();
+     const token = mountToken;
++    let visibleRound = null;
+     retryButton.hidden = true;
+     try {
+       const spec = validateCheckpoint(context.spec);
+@@ -299,6 +303,10 @@
+         onProgress(value) {
+           if (token !== mountToken || !currentContext(context)) return;
+           showProgress(value);
++          const nextRound = validProgress(value) ? value.current + "/" + value.total : null;
++          // A new question starts above the fold; same-round updates keep the learner's scroll.
++          if (nextRound && nextRound !== visibleRound && dialog && dialog.open) dialog.scrollTop = 0;
++          visibleRound = nextRound;
+         },
+         onStateChange(state) {
+           if (token !== mountToken || !currentContext(context)) return;
+--- before/mulermoc-nom-54.html
++++ after/mulermoc-nom-54.html
+@@ -368,7 +368,7 @@
+   <script src="js/mulermoc-nom-teaching-54.js?v=alkane-step5-interaction-20261106-r1"></script>
+   <script src="js/mulermoc-nom-note-54.js?v=v54-sync-20261104-r2"></script>
+   <script src="js/namelecule-game-repair.js?v=workshop-reset-removal-20261107-r1"></script>
+-  <script src="js/namelecule-quiz-checkpoints.js?v=quiz-header-progress-20261108-r1"></script>
++  <script src="js/namelecule-quiz-checkpoints.js?v=quiz-round-scroll-20261109-r1"></script>
+   <script src="js/namelecule-chemistry-client.js?v=verified-engines-20261105-r1"></script>
+   <script src="js/namelecule-repair-generator.js?v=engine-pilot-20261105-r1"></script>
+   <script src="js/namelecule-generated-repair-checkpoint.js?v=quiz-header-progress-20261108-r1"></script>

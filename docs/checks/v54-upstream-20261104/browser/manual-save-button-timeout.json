@@ -1,0 +1,48 @@
+{
+  "completed": false,
+  "checks": [
+    {
+      "label": "Teacher drawing default on exposes New/Edit",
+      "detail": null
+    },
+    {
+      "label": "Beautify available in editor",
+      "detail": null
+    },
+    {
+      "label": "Real Beautify uses live11C horizontal chain",
+      "detail": {
+        "n": 11,
+        "range": 0
+      }
+    },
+    {
+      "label": "Beautify hidden in submitted depict preview",
+      "detail": null
+    },
+    {
+      "label": "New C11 GR/EN actual prediction",
+      "detail": null
+    },
+    {
+      "label": "Real JSmol preview has C11H24 35atoms",
+      "detail": null
+    },
+    {
+      "label": "Accept adds session molecule without automatic download",
+      "detail": null
+    },
+    {
+      "label": "Accepted skeletal is generated zigzag",
+      "detail": {
+        "n": 11,
+        "range": 0.585,
+        "bonds": 10
+      }
+    }
+  ],
+  "fixturePolicy": "Actual PubChem REST responses stored locally; name/3D async transport replaced for repeatable authoring. Real JSME, engine, SVG, JSmol, registry and Blob payload.",
+  "failure": "Timed out: window.__downloads.length===1",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/v54-upstream-20261104/browser/test-manual-save.py\", line 45, in <module>\n    click('#viewerSettingsBtn');click('#customMolSaveBtn');until('window.__downloads.length===1')\n  File \"bidi\", line 51, in until\n    out.update(failure=str(e),traceback=traceback.format_exc());print(out['traceback'],flush=True)\nAssertionError: Timed out: window.__downloads.length===1\n",
+  "javascriptErrors": []
+}

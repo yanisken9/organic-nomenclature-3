@@ -1,0 +1,21 @@
+--- before/js/mulermoc-nom-teaching-54.js
++++ js/mulermoc-nom-teaching-54.js
+@@ -1160,6 +1160,8 @@
+   $(document).on("click", ".nameCompBox", function (event) {
+     event.preventDefault();
+     event.stopPropagation();
++    if (typeof window.fScenarioNameCompDisabled === "function" &&
++        window.fScenarioNameCompDisabled(this.id)) return;
+     // Draft session (v54 Stage 2): naming is cleared to a placeholder; box
+     // clicks must not re-highlight or explain.
+     if (typeof window !== "undefined" && window.MulerDraft) {
+@@ -1269,6 +1271,9 @@
+       }
+     }
+     if (typeof fScheduleNameFit === "function") fScheduleNameFit();
++    try {
++      if (typeof window.fScenarioOnPresentBrowse === "function") window.fScenarioOnPresentBrowse();
++    } catch (eScenario) { /* scenario absent */ }
+   });
+ 
+ 

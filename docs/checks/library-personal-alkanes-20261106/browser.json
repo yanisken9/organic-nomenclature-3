@@ -1,0 +1,25 @@
+{
+  "completed": true,
+  "checks": [
+    "One existing Alkane card, no duplicate",
+    "Alkane action targets current personal JSON with presentation and return flags",
+    "Existing card count matches personal lesson",
+    "Actual card click navigates to current scenario URL",
+    "Current personal lesson loads its 12 steps from first step",
+    "First step displays the saved title and ethane",
+    "Loaded lesson includes reviewed step5 restrictions and two-chain selector",
+    "Library return flag is active",
+    "Forward navigation reaches step 2",
+    "Forward navigation reaches step 3",
+    "Forward navigation reaches step 4",
+    "Workshop gate remains present and locked at step4",
+    "Saved Workshop-only layout is loaded",
+    "Exit returns to library with the updated Alkane action",
+    "Other lesson action is unchanged after return"
+  ],
+  "limitations": [
+    "Isolated headless Firefox; DOM click activates actual navigation. Native pointer/keyboard, Safari, physical mobile and full conference flow not audited. No repeated full quiz/viewer/3D regression because their files/data are unchanged."
+  ],
+  "final_url": "http://127.0.0.1:8013/design/theory-library.html?v=alkynes-library-20261022",
+  "javascriptErrors": []
+}

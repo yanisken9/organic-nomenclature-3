@@ -1,0 +1,23 @@
+--- before/js/mulermoc-nom-molview-54.js
++++ js/mulermoc-nom-molview-54.js
+@@ -7356,7 +7356,9 @@
+     };
+     const _selId = _modeToCompId[nameAnalysisMode] || fBranchPieceBoxId(nameAnalysisMode);
+     // Hidden boxes stay inert: never restore .selected onto a dash box.
+-    if (_selId && $(`#${_selId}`).length && !fNameCompHidden(_selId)) {
++    if (_selId && $(`#${_selId}`).length && !fNameCompHidden(_selId) &&
++        !(typeof window.fScenarioNameCompDisabled === "function" &&
++          window.fScenarioNameCompDisabled(_selId))) {
+       $(`#${_selId}`).addClass("selected");
+     } else {
+       nameAnalysisMode = "none";
+@@ -8988,6 +8990,9 @@
+     if (typeof fExplainNameComp === "function") fExplainNameComp();
+   } catch (eHl) { /* viewer unavailable */ }
+   fRenderChainStepper();
++  try {
++    if (typeof window.fScenarioOnPresentBrowse === "function") window.fScenarioOnPresentBrowse();
++  } catch (eScenario) { /* scenario absent */ }
+ }
+ 
+ function fStepMainChain(dir) {

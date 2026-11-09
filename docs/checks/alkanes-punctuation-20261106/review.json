@@ -1,0 +1,24 @@
+{
+  "reviewer": "/root/review_alkane_punctuation_20261106",
+  "fresh_context": true,
+  "read_only_behavior": true,
+  "enforced_read_only_verified": false,
+  "target": "scenarios/alkanes-two-part-workshop.scenario.json",
+  "target_sha256": "d6a0622e23f2f74e247c156454e38c1bf6c833134e3796178e700ef59c46009f",
+  "findings": [],
+  "independent_checks": [
+    "Exact before/final SHA-256 and HEAD",
+    "19 middle dots removed in 15 display-text fields",
+    "Requested hydrocarbon wording",
+    "12 steps, all other values and HTML unchanged",
+    "Manual chemical/educational meaning reading",
+    "Diff and developer change list match actual files",
+    "Controller signature and restoration source inspection; signature-input comparison"
+  ],
+  "known_existing_behavior": "Revised text changes checkpoint content identity. Previous receipts remain stored but are not reused by the revised lesson. Disclosed to user. No progress-controller changes.",
+  "limits": [
+    "No browser replay or JavaScript execution; text-only scope",
+    "No molecule/viewer/core changes in this target",
+    "All-core-unchanged and remote upstream results supplied by Developer"
+  ]
+}

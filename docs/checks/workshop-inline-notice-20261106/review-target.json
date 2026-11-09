@@ -1,0 +1,61 @@
+{
+  "approved_scope": "Checkpoint blocked message in center of free lesson space only for content-only Workshop presentation. Cleanup on navigation/Exit/unlock. Ordinary molecular lessons retain bottom toast. Same message and2600ms duration, translation/textContent, status semantics, no focus move; nearest scroll only if offscreen. Source JSON unchanged.",
+  "base_commit": "168e3cec01f941a84d40bbe0dc07156e7baa35d0",
+  "runtime_files": {
+    "js/mulermoc-nom-scenario-54.js": "b1be9a490ae6088c4e39ab33fb41df48d258f76a618d9f36ad21782c043c887b",
+    "css/mulermoc-nom-scenario-54.css": "2435dc066db0c366cd08f9fcc26350148ec0c23d0b0cd427d2330962a9e4f627",
+    "mulermoc-nom-54.html": "0f6c3259c906dc69e00dacdfc08764d263851ccfa8d9b3e79cd0ba1ca73bb88f"
+  },
+  "before": "before/ real start-of-unit snapshots (targets preexisted untracked/dirty)",
+  "evidence": {
+    "docs/checks/workshop-inline-notice-20261106/after-1280.png": "56e6d441beb4081bf2ec009f9b148e8d985a2aaa1b94a082569c03c5ec9dbecd",
+    "docs/checks/workshop-inline-notice-20261106/after-1280x500.png": "f9c11ea6bc704f468443b94d2803613df566ec99d22e8770b5c23e79d0215887",
+    "docs/checks/workshop-inline-notice-20261106/after-1280x900.png": "56e6d441beb4081bf2ec009f9b148e8d985a2aaa1b94a082569c03c5ec9dbecd",
+    "docs/checks/workshop-inline-notice-20261106/after-320.png": "c1f9b2c892e9210b10f985450d4420e0d576d546121070a86041a6136895923d",
+    "docs/checks/workshop-inline-notice-20261106/after-320x844.png": "2fff38acc862f05824e7faa6069be12d04b823d3c896eb9518da63ecd2b364d6",
+    "docs/checks/workshop-inline-notice-20261106/after-390.png": "6e85052ea8244c2c8120e15d4785a2e904375c88f91a9dd2ef5a5923a547b932",
+    "docs/checks/workshop-inline-notice-20261106/after-390x844.png": "6e85052ea8244c2c8120e15d4785a2e904375c88f91a9dd2ef5a5923a547b932",
+    "docs/checks/workshop-inline-notice-20261106/baseline.json": "8042934cfeda11363cb5ec7034298702ee748881164d30a1773a948be1cbff44",
+    "docs/checks/workshop-inline-notice-20261106/before/css/mulermoc-nom-scenario-54.css": "0fcc3ec2a4b0cbe29be6989fc483c2f01eaa0001a8eef826a6016c3d76e565b6",
+    "docs/checks/workshop-inline-notice-20261106/before/js/mulermoc-nom-scenario-54.js": "e81b29d7c4f1c4e54ba12cf155bb0ffb35cd8998e244950ec57b453ee867cea0",
+    "docs/checks/workshop-inline-notice-20261106/before/mulermoc-nom-54.html": "4278188fac26f618c2c865e8b83ca7863b9f4b88c06224b5f4fd33512febd00d",
+    "docs/checks/workshop-inline-notice-20261106/before-browser.json": "e3aa02605275eaa2b89a1b64e155493becb24b9590a5802402905c7363552980",
+    "docs/checks/workshop-inline-notice-20261106/before.png": "f355ca90bc3790f310dcbd25ca4577ba956fde74085fc58c03ae8463a8bc2143",
+    "docs/checks/workshop-inline-notice-20261106/browser.json": "8ca94bee89232b89ee53deeedb50542deedfc0e6ca6ad3e80cd4603c49a909d0",
+    "docs/checks/workshop-inline-notice-20261106/check-browser.py": "3d739a689d8bf6a8139ebfff922a84271911c9709e1e30a43379467673720bc0",
+    "docs/checks/workshop-inline-notice-20261106/initial-browser.json": "d46dab7e434d30a4e4034e93c5dea79c17c67007063bdc476f9ac4186d205b6f",
+    "docs/checks/workshop-inline-notice-20261106/initial-layout-observation.json": "ac464fc4f6cb14371ef3d75036d89b349caba5767e873d7ef30aadbf512bc5fc",
+    "docs/checks/workshop-inline-notice-20261106/mulermoc-nom-54.html.diff": "95e5164367010cc794a4aeed42f49fc1300a69adb72ad47bffa2afacae3d030b",
+    "docs/checks/workshop-inline-notice-20261106/mulermoc-nom-scenario-54.css.diff": "cb10dfb30688816f239339bd4000d4d480ce492df93e1059faeb71af426407a3",
+    "docs/checks/workshop-inline-notice-20261106/mulermoc-nom-scenario-54.js.diff": "a9000d92fd9ea62cfebd968742ebf3594c4d96a12b4d6984dd49285b5c67dfeb",
+    "docs/checks/workshop-inline-notice-20261106/source-verification.json": "389fa483c973dacc9968929f916a709b0171ab13b1fe756878244fc890fa3157",
+    "docs/checks/workshop-inline-notice-20261106/test-process.json": "364af0a564e0200700dd52bfa37b516f31ba5ebd263507e930d75605189620b2"
+  },
+  "developer_checks": {
+    "browser_assertions": 38,
+    "JS_errors": 0,
+    "viewports": [
+      "1280x900",
+      "390x844",
+      "320x844",
+      "1280x500"
+    ],
+    "flows": [
+      "ArrowRight/hash/directGo",
+      "timer restart/expiry",
+      "ordinary toast replacement",
+      "previous/Exit/reentry",
+      "actual3quizgate/unlock/step5",
+      "legacy molecular lesson",
+      "translation"
+    ],
+    "baseline_reproduced": "Actual before messagefixedbottom16px",
+    "initial_iteration": "31assertions0JSerrors; visualbounds foundbottom6.3px outside320viewport. Added minimalnearestscroll and fullboundsassertions before review."
+  },
+  "limitations": [
+    "No native user browser inspection",
+    "No physicalmobile/Safari/screenreader/conference sequence",
+    "Prior JSmolplatformnull issue remains open, not repaired here"
+  ],
+  "no_commit_push_publication": true
+}

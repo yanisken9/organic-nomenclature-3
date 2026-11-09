@@ -1,0 +1,29 @@
+{
+  "date": "2026-11-05",
+  "userReport": "Entire Firefox unresponsive",
+  "serverChecks": {
+    "html": 200,
+    "scenario": 200
+  },
+  "recovery": "Separate native Firefox profile without browser automation",
+  "profile": "/tmp/namelecule-user-preview-20261105-isdhy79j",
+  "url": "http://127.0.0.1:8055/mulermoc-nom-54.html?scenario=scenarios/alkanes-two-part-workshop.scenario.json&present=1&from=theory-library#step=1",
+  "appCodeChanged": false,
+  "coreChanged": false,
+  "rootCauseEstablished": false,
+  "nativeFirefoxPIDs": [
+    7534
+  ],
+  "onScreenNormalWindows": [
+    {
+      "pid": 7534,
+      "window": 776
+    },
+    {
+      "pid": 7534,
+      "window": 772
+    }
+  ],
+  "userConfirmedResponsive": true,
+  "userConfirmation": "Ναι, βλέπω το μάθημα και μπορώ να πατήσω"
+}

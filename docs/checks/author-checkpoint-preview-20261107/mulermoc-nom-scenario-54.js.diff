@@ -1,0 +1,148 @@
+--- before/js/mulermoc-nom-scenario-54.js
++++ js/mulermoc-nom-scenario-54.js
+@@ -79,6 +79,14 @@
+   })) throw new Error("Το υποχρεωτικό κουίζ δεν είναι διαθέσιμο. Ανανέωσε το μάθημα.");
+   return api;
+ }
++function fScenarioIsAuthorPreview(scen) {
++  var api = window.NameleculeQuizCheckpoints;
++  return !!(api && typeof api.isPreview === "function" && api.isPreview(scen));
++}
++function fScenarioEndAuthorPreview() {
++  var api = window.NameleculeQuizCheckpoints;
++  if (api && typeof api.endPreview === "function") api.endPreview();
++}
+ function fScenarioResolveCheckpointTarget(scen, requested) {
+   var api = fScenarioCheckpointApi(scen);
+   if (!api) return requested;
+@@ -86,6 +94,7 @@
+   scen.steps.forEach(function (step) {
+     if (step && Object.prototype.hasOwnProperty.call(step, "checkpoint")) api.validateCheckpoint(step.checkpoint);
+   });
++  if (fScenarioIsAuthorPreview(scen)) return requested;
+   var target = api.resolveTarget(scen, requested);
+   if (typeof target !== "number" || !isFinite(target) || target !== Math.floor(target) || target < 0 || target > requested) {
+     throw new Error("Δεν ήταν δυνατός ο έλεγχος του υποχρεωτικού κουίζ.");
+@@ -113,6 +122,7 @@
+ function fScenarioPrepareCheckpointTarget(scen, requested, resume) {
+   fScenarioCancelCheckpointPreparation();
+   var api = fScenarioCheckpointApi(scen);
++  if (fScenarioIsAuthorPreview(scen)) return false;
+   if (!api || typeof api.prepareTarget !== "function") return false;
+   var controller = new AbortController();
+   var work = api.prepareTarget(scen, requested, { signal: controller.signal });
+@@ -293,6 +303,7 @@
+ 
+ function fScenarioNew(title, silent) {
+   fScenarioCancelCheckpointPreparation();
++  fScenarioEndAuthorPreview();
+   var scen = {
+     id: fScenarioNewId(),
+     title: title || ("scenario-" + (MuLERMoCScenario.seq)),
+@@ -315,6 +326,7 @@
+ }
+ function fScenarioDelete(id) {
+   fScenarioCancelCheckpointPreparation();
++  fScenarioEndAuthorPreview();
+   var i;
+   for (i = 0; i < MuLERMoCScenario.scenarios.length; i++) {
+     if (MuLERMoCScenario.scenarios[i].id === id) break;
+@@ -335,6 +347,7 @@
+   fScenarioCancelCheckpointPreparation();
+   var s = fScenarioGet(id);
+   if (!s) return;
++  if (!fScenarioIsAuthorPreview(s)) fScenarioEndAuthorPreview();
+   MuLERMoCScenario.activeId = id;
+   fScenarioSyncLegacy();
+   fScenarioPaintPickUi();
+@@ -4906,14 +4919,16 @@
+ // (menu menu-open + both viewers + all bars) via a transient clone — the
+ // stored step keeps its authored show.* for a later Export.
+ function fScenarioExitPresent() {
++  var wasAuthorPreview = fScenarioIsAuthorPreview(fScenarioPresent());
+   fScenarioClearCheckpointNotice();
+   fScenarioCancelCheckpointPreparation();
+   try {
+     var checkpointApi = fScenarioCheckpointApi(fScenarioPresent());
+     if (checkpointApi) checkpointApi.onExit();
+   } catch (eCheckpoint) { /* Exit remains available even if the quiz failed. */ }
++  fScenarioEndAuthorPreview();
+   MuLERMoCScenario.checkpointApplied = null;
+-  if (MuLERMoCScenario.present && MuLERMoCScenario.returnToTheoryLibrary) {
++  if (MuLERMoCScenario.present && MuLERMoCScenario.returnToTheoryLibrary && !wasAuthorPreview) {
+     location.assign("design/theory-library.html?v=alkynes-library-20261022");
+     return;
+   }
+@@ -5020,11 +5035,31 @@
+   setTimeout(run, 120);
+ }
+ 
+-// Start presentation at a step (top-level: the card Play and the per-step
+-// Present buttons both call it). startIdx is 0-based; omitted -> step 1.
+-function fScenarioPresentBegin(id, startIdx) {
++// The editor's screen rehearses a step without creating learner receipts.
++// No URL or JSON setting enables this transient, scenario-bound context.
++function fScenarioAuthorPreviewBegin(id, startIdx) {
++  if (!MuLERMoCScenario.authoring || MuLERMoCScenario.present) return;
+   var scen = (id && fScenarioGet(id)) || fScenarioActive();
++  var api = window.NameleculeQuizCheckpoints;
++  if (!scen || !scen.steps.length) return;
++  if (!api || ["beginPreview", "endPreview", "isPreview"].some(function (key) {
++    return typeof api[key] !== "function";
++  })) {
++    fScenarioCheckpointError(new Error("Η προεπισκόπηση δεν είναι διαθέσιμη. Αποθήκευσε το JSON και ανανέωσε τη σελίδα."));
++    return;
++  }
++  fScenarioCancelCheckpointPreparation();
++  api.beginPreview(scen);
++  fScenarioPresentBegin(scen.id, startIdx, true);
++}
++
++// Card Play and ordinary callers always use learner gates. Only the editor
++// wrapper above can supply an already established rehearsal context.
++function fScenarioPresentBegin(id, startIdx, authorPreview) {
++  var scen = (id && fScenarioGet(id)) || fScenarioActive();
++  if (authorPreview !== true || !fScenarioIsAuthorPreview(scen)) fScenarioEndAuthorPreview();
+   if (!scen || !scen.steps.length) {
++    fScenarioEndAuthorPreview();
+     fScenarioToast("Save at least one step first.");
+     return;
+   }
+@@ -5036,6 +5071,7 @@
+     if (fScenarioPrepareCheckpointTarget(scen, start, function () { fScenarioPresentBegin(scen.id, start); })) return;
+     start = fScenarioResolveCheckpointTarget(scen, start);
+   } catch (eCheckpoint) {
++    fScenarioEndAuthorPreview();
+     fScenarioCheckpointError(eCheckpoint);
+     return;
+   }
+@@ -5060,6 +5096,7 @@
+     applied = false;
+   }
+   if (!applied) {
++    fScenarioEndAuthorPreview();
+     MuLERMoCScenario.present = false;
+     MuLERMoCScenario.presentId = null;
+     fScenarioSyncPresentClass();
+@@ -6135,7 +6172,7 @@
+         fScenarioGo(idx);
+       };
+       if (presentBtn) presentBtn.onclick = function () {
+-        fScenarioPresentBegin(scenId, idx);
++        fScenarioAuthorPreviewBegin(scenId, idx);
+       };
+       if (updBtn) updBtn.onclick = function () {
+         fScenarioUpdateStep(scenId, idx);
+@@ -6317,7 +6354,11 @@
+   var ps = fScenarioPresent();
+   var st = ps.steps[ps.index];
+   var pos = document.getElementById("scPos");
+-  if (pos) pos.textContent = ps.steps.length ? ps.index + 1 + "/" + ps.steps.length : "0/0";
++  if (pos) {
++    var position = ps.steps.length ? ps.index + 1 + "/" + ps.steps.length : "0/0";
++    var previewLabel = (typeof fMulerPre === "function") ? fMulerPre("Δοκιμή", "Preview", "") : "Δοκιμή";
++    pos.textContent = fScenarioIsAuthorPreview(ps) ? previewLabel + " " + position : position;
++  }
+   var ti = document.getElementById("scStepTitle");
+   if (ti) ti.textContent = st ? st.n + ". " + (st.title || "") : "";
+   var no = document.getElementById("scStepNote");

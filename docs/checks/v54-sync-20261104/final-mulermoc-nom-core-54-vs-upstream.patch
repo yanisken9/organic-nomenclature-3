@@ -1,0 +1,416 @@
+--- docs/checks/v54-sync-20261104/upstream-snapshot/js/mulermoc-nom-core-54.js	2026-11-04 09:18:48
++++ js/mulermoc-nom-core-54.js	2026-11-04 09:38:49
+@@ -65,6 +65,7 @@
+ // heavy-atom counts stop matching; cleared in fInitProps like the pools.
+ let molAtomMap2D3D = null
+ let molAtomMapKey = null
++let molAtomMapSource3D = null
+ 
+ // ── Naming globals ────────────────────────────────────────────────────────
+ let nameComponentsList = []
+@@ -154,7 +155,7 @@
+ // ── fInitNamingProps ──────────────────────────────────────────────────────
+ 
+ function fInitNamingProps() {
+-    nameMainCompList1 = ["μεθ", "αιθ", "προπ", "βουτ", "πεντ", "εξ", "επτ", "οκτ", "εν", "δεκ"]
++    nameMainCompList1 = ["μεθ", "αιθ", "προπ", "βουτ", "πεντ", "εξ", "επτ", "οκτ", "εννε", "δεκ"]
+ 
+     nameMainCompObj3 = {
+         hydrocarbon: { suffix: "ιο", substitute: "" },
+@@ -2497,9 +2498,16 @@
+         try { M = molAtomMap2D3D } catch (eG) { M = null }
+         var K = null
+         try { K = molAtomMapKey } catch (eK) { K = null; }
+-        if (!M || !M.arr || K !== selectedMol || M.n2 !== n2 || M.n3 !== n3) {
+-            M = fBuildHeavyMap2D3D(false) || fBuildHeavyMap2D3D(true)
+-            try { molAtomMap2D3D = M; molAtomMapKey = selectedMol } catch (eS) {}
++        // Representation switches can reorder atoms without changing counts.
++        // Key every ordered graph input and the source records (which include
++        // charge/isotope/stereo fields), not just the selected molecule/size.
++        var source2D = null;
++        try { source2D = jsmeNomeclatureApplet.molFile(); } catch (eSource) {}
++        var graphKey = JSON.stringify([selectedMol, allAtomsTypeList, bondList,
++            allAtomsTypeList3D, bondList3D, source2D, molAtomMapSource3D]);
++        if (!M || !M.arr || K !== graphKey || M.n2 !== n2 || M.n3 !== n3) {
++            M = fBuildHeavyMap2D3D(false)
++            try { molAtomMap2D3D = M; molAtomMapKey = graphKey } catch (eS) {}
+         }
+         if (!M || !M.arr) return null
+         var out = []
+@@ -2524,50 +2532,175 @@
+ function fParseMolV2000(text) {
+   try {
+     if (!text) return null;
+-    var lines = String(text).split("\n");
+-    if (lines.length < 5) return null;
+-    var nA = parseInt(lines[3].substring(0, 3), 10);
+-    var nB = parseInt(lines[3].substring(3, 6), 10);
+-    if (!(nA >= 0) || !(nB >= 0)) return null;
+-    var atoms = [], bonds = [];
++    var lines = String(text).split(/\r?\n/);
++    if (lines.length < 5 || (/V\d+/.test(lines[3]) && !/V2000/.test(lines[3]))) return null;
++    var nA = Number(lines[3].substring(0, 3)), nB = Number(lines[3].substring(3, 6));
++    if (!Number.isInteger(nA) || !Number.isInteger(nB) || nA < 0 || nB < 0 || lines.length < 4 + nA + nB) return null;
++    var atoms = [], bonds = [], chargeCodes = { 0: 0, 1: 3, 2: 2, 3: 1, 4: 0, 5: -1, 6: -2, 7: -3 };
+     for (var i = 0; i < nA; i++) {
+-      var L = lines[4 + i] || "";
+-      atoms.push({
+-        x: parseFloat(L.substring(0, 10)) || 0,
+-        y: parseFloat(L.substring(10, 20)) || 0,
+-        el: (L.substring(31, 34) || "").trim() || "C"
+-      });
++      var L = lines[4 + i], code = Number(L.substring(36, 39));
++      var x = Number(L.substring(0, 10)), y = Number(L.substring(10, 20)), z = Number(L.substring(20, 30));
++      var el = L.substring(31, 34).trim();
++      if (L.length < 34 || !el || !Number.isFinite(x) || !Number.isFinite(y) || !Number.isFinite(z) || !(code in chargeCodes)) return null;
++      atoms.push({ sourceIndex: i + 1, x: x, y: y, z: z, el: el, tail: L.substring(34), charge: chargeCodes[code],
++        massDifference: Number(L.substring(34, 36)), isotope: null, radical: code === 4 ? 2 : 0,
++        parity: Number(L.substring(39, 42)), hydrogenCount: Number(L.substring(42, 45)),
++        valence: Number(L.substring(48, 51)) });
+     }
+     for (var j = 0; j < nB; j++) {
+-      var parts = (lines[4 + nA + j] || "").trim().split(/\s+/);
+-      var a = parseInt(parts[0], 10), b = parseInt(parts[1], 10), o = parseInt(parts[2], 10) || 1;
+-      if (!(a >= 1 && a <= nA && b >= 1 && b <= nA)) continue;
+-      bonds.push([a, b, o]);
++      var B = lines[4 + nA + j], a = Number(B.substring(0, 3)), b = Number(B.substring(3, 6)), o = Number(B.substring(6, 9));
++      if (!Number.isInteger(a) || !Number.isInteger(b) || a < 1 || a > nA || b < 1 || b > nA || a === b || !Number.isInteger(o) || o < 1) return null;
++      var bond = [a, b, o]; bond.tail = B.substring(9); bond.sourceIndex = j + 1; bonds.push(bond);
+     }
+-    return { head: [lines[0] || "", lines[1] || "", lines[2] || ""], atoms: atoms, bonds: bonds };
++    var properties = [], ended = false;
++    for (var k = 4 + nA + nB; k < lines.length; k++) {
++      var P = lines[k];
++      if (/^M  END\s*$/.test(P)) { ended = true; break; }
++      if (!P.trim()) continue;
++      var match = /^M  (CHG|ISO|RAD)\s+/.exec(P);
++      if (!match) { properties.push(P); continue; }
++      var fields = P.trim().split(/\s+/), count = Number(fields[2]);
++      if (!Number.isInteger(count) || count < 1 || fields.length !== 3 + 2 * count) return null;
++      for (var q = 0; q < count; q++) {
++        var index = Number(fields[3 + q * 2]), value = Number(fields[4 + q * 2]);
++        if (!Number.isInteger(index) || index < 1 || index > nA || !Number.isInteger(value)) return null;
++        atoms[index - 1][{ CHG: 'charge', ISO: 'isotope', RAD: 'radical' }[match[1]]] = value;
++      }
++    }
++    if (!ended) return null;
++    return { head: lines.slice(0, 3), countsTail: lines[3].substring(6), atoms: atoms, bonds: bonds, properties: properties };
+   } catch (e) { return null; }
+ }
+ 
+-function fWriteMolV2000(head, atoms, bonds) {
++// Preserve atom/bond fields and known atom-indexed properties. Layout/stripping
++// reject unsupported annotations below; a plain parse/write can retain them.
++function fWriteMolV2000(head, atoms, bonds, metadata) {
+   try {
+-    var out = [];
+-    out.push(head && head[0] != null ? head[0] : "");
+-    out.push(head && head[1] != null ? head[1] : "  MuLERMoC 2D");
+-    out.push(head && head[2] != null ? head[2] : "");
+-    out.push(String(atoms.length).padStart(3, " ") + String(bonds.length).padStart(3, " ") + "  0  0  0  0  0  0  0  0  0  0999 V2000");
++    if (atoms.length > 999 || bonds.length > 999) return null;
++    var out = [], chargePairs = [], isotopePairs = [], radicalPairs = [];
++    out.push(head && head[0] != null ? head[0] : '');
++    out.push(head && head[1] != null ? head[1] : '  MuLERMoC 2D');
++    out.push(head && head[2] != null ? head[2] : '');
++    out.push(String(atoms.length).padStart(3, ' ') + String(bonds.length).padStart(3, ' ') +
++      (metadata && metadata.countsTail || '  0  0  0  0  0  0  0  0  0  0999 V2000'));
+     for (var i = 0; i < atoms.length; i++) {
+-      var a = atoms[i];
+-      out.push(a.x.toFixed(4).padStart(10, " ") + a.y.toFixed(4).padStart(10, " ") + "    0.0000 " + String(a.el || "C").padEnd(3, " ") + " 0  0  0  0  0  0  0  0  0  0  0  0");
++      var a = atoms[i], tail = a.tail != null ? a.tail : ' 0  0  0  0  0  0  0  0  0  0  0  0';
++      var charge = a.charge || 0, code = ({ 3: 1, 2: 2, 1: 3, '-1': 5, '-2': 6, '-3': 7 })[charge] || 0;
++      tail = tail.padEnd(5, ' '); tail = tail.substring(0, 2) + String(code).padStart(3, ' ') + tail.substring(5);
++      out.push(a.x.toFixed(4).padStart(10, ' ') + a.y.toFixed(4).padStart(10, ' ') +
++        Number(a.z || 0).toFixed(4).padStart(10, ' ') + ' ' + String(a.el || 'C').padEnd(3, ' ') + tail);
++      if (charge) chargePairs.push([i + 1, charge]);
++      if (a.isotope != null && a.isotope !== 0) isotopePairs.push([i + 1, a.isotope]);
++      if (a.radical) radicalPairs.push([i + 1, a.radical]);
+     }
+     for (var j = 0; j < bonds.length; j++) {
+       var b = bonds[j];
+-      out.push(String(b[0]).padStart(3, " ") + String(b[1]).padStart(3, " ") + String(b[2] || 1).padStart(3, " ") + "  0  0  0");
++      out.push(String(b[0]).padStart(3, ' ') + String(b[1]).padStart(3, ' ') + String(b[2]).padStart(3, ' ') +
++        (b.tail != null ? b.tail : '  0  0  0'));
+     }
+-    out.push("M  END");
+-    return out.join("\n") + "\n";
++    if (metadata && metadata.properties) {
++      var properties = fRemapMolProperties2D(metadata, atoms, bonds);
++      if (!properties) return null;
++      out.push.apply(out, properties);
++    }
++    function property(kind, pairs) {
++      for (var at = 0; at < pairs.length; at += 8) {
++        var group = pairs.slice(at, at + 8);
++        out.push('M  ' + kind + String(group.length).padStart(3, ' ') + group.map(function (p) {
++          return String(p[0]).padStart(4, ' ') + String(p[1]).padStart(4, ' ');
++        }).join(''));
++      }
++    }
++    property('CHG', chargePairs); property('ISO', isotopePairs); property('RAD', radicalPairs);
++    out.push('M  END');
++    return out.join('\n') + '\n';
+   } catch (e) { return null; }
+ }
+ 
++// Bounded SUP Sgroup support covers the library's expanded abbreviations.
++// Atom/bond lists follow reindexing; new H join their parent's group, and
++// crossing-bond vectors follow the new coordinates. Other group types/records
++// cannot be safely interpreted here and reject the transformation.
++function fRemapMolProperties2D(m, atoms, bonds) {
++  try {
++    var atomMap = {}, bondMap = {}, groups = {}, declared = {}, emitted = {}, out = [];
++    atoms.forEach(function (a, i) { if (a.sourceIndex) atomMap[a.sourceIndex] = i + 1; });
++    bonds.forEach(function (b, i) { if (b.sourceIndex) bondMap[b.sourceIndex] = i + 1; });
++    for (var i = 0; i < m.properties.length; i++) {
++      var line = m.properties[i], fields = line.trim().split(/\s+/), kind = fields[1];
++      if (kind === 'STY') {
++        var count = Number(fields[2]);
++        if (!Number.isInteger(count) || count < 1 || fields.length !== 3 + 2 * count) return null;
++        for (var j = 0; j < count; j++) {
++          if (fields[4 + 2 * j] !== 'SUP') return null;
++          declared[fields[3 + 2 * j]] = true;
++        }
++      } else if (kind === 'SAL') {
++        var g = fields[2], n = Number(fields[3]), members = fields.slice(4).map(Number);
++        if (members.length !== n || members.some(function (x) { return !Number.isInteger(x) || x < 1 || x > m.atoms.length; })) return null;
++        groups[g] = (groups[g] || []).concat(members);
++      } else if (!['SLB','SBL','SMT','SBV'].includes(kind)) return null;
++    }
++    if (Object.keys(groups).some(function (g) { return !declared[g]; })) return null;
++    function list(kind, group, values) {
++      if (!values.length) return false;
++      for (var k = 0; k < values.length; k += 15) {
++        var part = values.slice(k, k + 15);
++        out.push('M  ' + kind + String(group).padStart(4, ' ') + String(part.length).padStart(3, ' ') +
++          part.map(function (x) { return String(x).padStart(4, ' '); }).join(''));
++      }
++      return true;
++    }
++    for (var at = 0; at < m.properties.length; at++) {
++      var P = m.properties[at], f = P.trim().split(/\s+/), type = f[1];
++      if (type === 'SAL') {
++        if (emitted[f[2]]) continue;
++        emitted[f[2]] = true;
++        var members = groups[f[2]], mapped = members.filter(function (x) { return atomMap[x] != null; })
++          .map(function (x) { return atomMap[x]; });
++        atoms.forEach(function (a, index) {
++          if (a.parentSourceIndex && members.includes(a.parentSourceIndex)) mapped.push(index + 1);
++        });
++        if (!list(type, f[2], mapped)) return null;
++      } else if (type === 'SBL') {
++        var count = Number(f[3]), ids = f.slice(4).map(Number);
++        if (ids.length !== count || ids.some(function (x) { return !Number.isInteger(x) || x < 1 || x > m.bonds.length; })) return null;
++        var mappedBonds = ids.filter(function (x) { return bondMap[x] != null; }).map(function (x) { return bondMap[x]; });
++        if (!list(type, f[2], mappedBonds)) return null;
++      } else if (type === 'SBV') {
++        var newBond = bondMap[Number(f[3])], group = groups[f[2]];
++        if (!newBond || !group) return null;
++        var b = bonds[newBond - 1], sourceBond = m.bonds[Number(f[3]) - 1];
++        var firstInside = group.includes(sourceBond[0]), secondInside = group.includes(sourceBond[1]);
++        if (firstInside === secondInside) return null;
++        var inside = atoms[(firstInside ? b[0] : b[1]) - 1], outside = atoms[(firstInside ? b[1] : b[0]) - 1];
++        out.push('M  SBV' + String(f[2]).padStart(4, ' ') + String(newBond).padStart(4, ' ') +
++          (outside.x - inside.x).toFixed(4).padStart(10, ' ') + (outside.y - inside.y).toFixed(4).padStart(10, ' '));
++      } else out.push(P);
++    }
++    return out;
++  } catch (e) { return null; }
++}
++
++function fMolCanTransform2D(m, removeHydrogens) {
++  if (!m || !m.atoms.length || Number(m.countsTail.substring(6, 9)) ||
++      !fRemapMolProperties2D(m, m.atoms, m.bonds)) return false;
++  if (m.atoms.some(function (a) {
++    return a.parity || a.hydrogenCount || a.valence || a.radical ||
++      !['C','N','O','S','P','F','Cl','Br','I','H'].includes(a.el) ||
++      (a.el === 'H' && (a.charge || (removeHydrogens && (a.massDifference || a.isotope))));
++  })) return false;
++  return m.bonds.every(function (b) { return b[2] <= 3 && !Number((b.tail || '').substring(0, 3)); });
++}
++
++function fCopyMolAtom2D(a, x, y) {
++  return Object.assign({}, a, { x: x == null ? a.x : x, y: y == null ? a.y : y });
++}
++
++function fCopyMolBond2D(b, a, c) {
++  var copy = [a, c, b[2]]; copy.tail = b.tail; copy.sourceIndex = b.sourceIndex; return copy;
++}
++
+ function fIsHeavyEl2D(el) {
+   var s = String(el == null ? "" : el);
+   return !(s === "H" || s === "h" || s === "");
+@@ -2577,20 +2710,20 @@
+ function fStripHydrogensMol(text) {
+   try {
+     var m = fParseMolV2000(text);
+-    if (!m || !m.atoms.length) return null;
++    if (!fMolCanTransform2D(m, true)) return null;
+     var map = {}, atoms = [];
+     for (var i = 0; i < m.atoms.length; i++) {
+       if (!fIsHeavyEl2D(m.atoms[i].el)) continue;
+       map[i + 1] = atoms.length + 1;
+-      atoms.push({ x: m.atoms[i].x, y: m.atoms[i].y, el: m.atoms[i].el });
++      atoms.push(fCopyMolAtom2D(m.atoms[i]));
+     }
+     if (!atoms.length) return null;
+     var bonds = [];
+     for (var j = 0; j < m.bonds.length; j++) {
+       var b = m.bonds[j];
+-      if (map[b[0]] && map[b[1]]) bonds.push([map[b[0]], map[b[1]], b[2]]);
++      if (map[b[0]] && map[b[1]]) bonds.push(fCopyMolBond2D(b, map[b[0]], map[b[1]]));
+     }
+-    return fWriteMolV2000(m.head, atoms, bonds);
++    return fWriteMolV2000(m.head, atoms, bonds, m);
+   } catch (e) { return null; }
+ }
+ 
+@@ -2598,13 +2731,13 @@
+ 
+ // Expanded form: heavy skeleton + explicit H at standard lengths, placed by
+ // largest-free-sector bisection (matches the stored 0.78-grid convention
+-// closely enough for depiction; connectivity is what matters). Pre-existing
+-// explicit H are kept; missing ones are topped up. Unknown elements: kept,
+-// never added to.
++// closely enough for depiction). Pre-existing explicit H are kept; missing
++// ones use supported charge-aware valences. Unknown/query elements, radicals
++// and declared stereochemistry fail closed rather than changing chemistry.
+ function fGenExpandedMol(text) {
+   try {
+     var m = fParseMolV2000(text);
+-    if (!m || !m.atoms.length) return null;
++    if (!fMolCanTransform2D(m, false)) return null;
+     var n = m.atoms.length;
+     var adj = [], ord = {};
+     for (var a = 0; a < n; a++) adj[a] = [];
+@@ -2617,21 +2750,28 @@
+       if (!ord[k] || ord[k] < bb[2]) ord[k] = bb[2];
+     }
+     var atoms = [];
+-    for (var c = 0; c < n; c++) atoms.push({ x: m.atoms[c].x, y: m.atoms[c].y, el: m.atoms[c].el });
++    for (var c = 0; c < n; c++) atoms.push(fCopyMolAtom2D(m.atoms[c]));
+     var bonds = [];
+-    for (var d = 0; d < m.bonds.length; d++) bonds.push([m.bonds[d][0], m.bonds[d][1], m.bonds[d][2]]);
++    for (var d = 0; d < m.bonds.length; d++) bonds.push(fCopyMolBond2D(m.bonds[d], m.bonds[d][0], m.bonds[d][1]));
+     var HLEN = 0.78;
+     for (var h = 0; h < n; h++) {
+       var el = String(m.atoms[h].el || "");
+       if (!fIsHeavyEl2D(el)) continue;
+-      var v = MOLGEN_STDVALENCE[el];
+-      if (v == null) continue;
++      var v = MOLGEN_STDVALENCE[el], charge = m.atoms[h].charge || 0;
++      if (charge) {
++        var chargedValences = { C: { '-1': 3, 1: 3 }, N: { '-1': 2, 1: 4 }, O: { '-1': 1, 1: 3 },
++          F: { '-1': 0 }, Cl: { '-1': 0 }, Br: { '-1': 0 }, I: { '-1': 0 } };
++        if (!chargedValences[el] || chargedValences[el][charge] == null) return null;
++        v = chargedValences[el][charge];
++      }
++      if (v == null) return null;
+       var used = 0;
+       for (var q = 0; q < adj[h].length; q++) {
+         var nb = adj[h][q];
+         var kk = (h < nb) ? h + "-" + nb : nb + "-" + h;
+         used += ord[kk] || 1;
+       }
++      if (used > v) return null;
+       var missing = v - used;
+       for (var t = 0; t < missing; t++) {
+         var angs = [];
+@@ -2649,13 +2789,13 @@
+             if (g > bestG) { bestG = g; bestA = a1 + g / 2; }
+           }
+         }
+-        atoms.push({ x: atoms[h].x + HLEN * Math.cos(bestA), y: atoms[h].y + HLEN * Math.sin(bestA), el: "H" });
++        atoms.push({ x: atoms[h].x + HLEN * Math.cos(bestA), y: atoms[h].y + HLEN * Math.sin(bestA), el: "H", parentSourceIndex: h + 1 });
+         var ni = atoms.length - 1;
+         adj[h].push(ni); adj.push([h]);
+         bonds.push([h + 1, ni + 1, 1]);
+       }
+     }
+-    return fWriteMolV2000(m.head, atoms, bonds);
++    return fWriteMolV2000(m.head, atoms, bonds, m);
+   } catch (e) { return null; }
+ }
+ 
+@@ -2667,7 +2807,7 @@
+ function fLinearizeMol(text, chain) {
+   try {
+     var m = fParseMolV2000(text);
+-    if (!m || !m.atoms.length) return null;
++    if (!fMolCanTransform2D(m, true)) return null;
+     if (!Array.isArray(chain) || !chain.length) return null;
+     var n = m.atoms.length;
+     var map = {}, order = [];
+@@ -2705,6 +2845,18 @@
+       for (var nb = 0; nb < adj[c0].length; nb++) {
+         var br = adj[c0][nb];
+         if (visited[br]) continue;
++        // A terminal degree-two sp center continues the parent axis, even
++        // when its triple-bonded neighbor (e.g. nitrile N) is off the carbon
++        // parent. Orthogonal branch placement would bend C-C≡N by 90°.
++        var terminalSp = ch.length > 1 && (ci === 0 || ci === ch.length - 1) &&
++          adj[c0].length === 2 && m.bonds.some(function (bond) {
++            return bond[2] === 3 && (bond[0] === c0 + 1 || bond[1] === c0 + 1);
++          });
++        if (terminalSp) {
++          var outward = ci === 0 ? -1 : 1;
++          queue.push({ node: br, x: (ci + outward) * DX, y: 0, dx: outward, dy: 0 });
++          continue;
++        }
+         var side = (sideCount % 2 === 0) ? -1 : 1;
+         sideCount++;
+         queue.push({ node: br, x: ci * DX, y: side * DY, dx: 0, dy: side });
+@@ -2732,14 +2884,14 @@
+       var oi = order[o];
+       var pp = pos[oi] || { x: m.atoms[oi].x, y: m.atoms[oi].y };
+       newIdx[oi + 1] = atoms.length + 1;
+-      atoms.push({ x: pp.x, y: pp.y, el: m.atoms[oi].el });
++      atoms.push(fCopyMolAtom2D(m.atoms[oi], pp.x, pp.y));
+     }
+     var bonds = [];
+     for (var j = 0; j < m.bonds.length; j++) {
+       var bj = m.bonds[j];
+-      if (newIdx[bj[0]] && newIdx[bj[1]]) bonds.push([newIdx[bj[0]], newIdx[bj[1]], bj[2]]);
++      if (newIdx[bj[0]] && newIdx[bj[1]]) bonds.push(fCopyMolBond2D(bj, newIdx[bj[0]], newIdx[bj[1]]));
+     }
+-    return fWriteMolV2000(m.head, atoms, bonds);
++    return fWriteMolV2000(m.head, atoms, bonds, m);
+   } catch (e) { return null; }
+ }
+ 
+@@ -2751,7 +2903,7 @@
+ function fZigzagMol(text, chain) {
+   try {
+     var m = fParseMolV2000(text);
+-    if (!m || !m.atoms.length) return null;
++    if (!fMolCanTransform2D(m, true)) return null;
+     if (!Array.isArray(chain) || !chain.length) return null;
+     var n = m.atoms.length;
+     var map = {}, order = [];
+@@ -2851,14 +3003,14 @@
+       var oi = order[o];
+       var pp = pos[oi] || { x: m.atoms[oi].x, y: m.atoms[oi].y };
+       newIdx[oi + 1] = atoms.length + 1;
+-      atoms.push({ x: pp.x, y: pp.y, el: m.atoms[oi].el });
++      atoms.push(fCopyMolAtom2D(m.atoms[oi], pp.x, pp.y));
+     }
+     var bonds = [];
+     for (var j = 0; j < m.bonds.length; j++) {
+       var bj = m.bonds[j];
+-      if (newIdx[bj[0]] && newIdx[bj[1]]) bonds.push([newIdx[bj[0]], newIdx[bj[1]], bj[2]]);
++      if (newIdx[bj[0]] && newIdx[bj[1]]) bonds.push(fCopyMolBond2D(bj, newIdx[bj[0]], newIdx[bj[1]]));
+     }
+-    return fWriteMolV2000(m.head, atoms, bonds);
++    return fWriteMolV2000(m.head, atoms, bonds, m);
+   } catch (e) { return null; }
+ }
+ 
+@@ -3497,6 +3649,7 @@
+                 break
+         }
+     }
++    molAtomMapSource3D = String(text)
+ }
+ 
+ // ── fDetectMolType3D ──────────────────────────────────────────────────────

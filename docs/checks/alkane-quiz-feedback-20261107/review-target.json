@@ -1,0 +1,69 @@
+{
+  "approved_request": "Contextual wrong-part feedback for four replacement families in basic embedded alkane lesson quizzes, via temporary copied display round. Two runtime files only. Preserve core, canonical generated rounds, answers, recipes, JSON/progress; test and independent review.",
+  "base_commit": "168e3cec01f941a84d40bbe0dc07156e7baa35d0",
+  "comparison": "Actual before snapshots; both production target files are pre-existing untracked local work, not new files authored wholesale in this task.",
+  "targets": {
+    "js/namelecule-generated-repair-checkpoint.js": "b801364da6cca067d3c784bd16c9bbbd8a85e3c2d8441abe9a91177a30a8141f",
+    "mulermoc-nom-54.html": "f00ad630c19742654756ad583c3c7bae7ee50ef50ed0c49f4ebbbff02dd5a987"
+  },
+  "deliverables": {
+    "docs/checks/alkane-quiz-feedback-20261107/baseline.json": "771e08a70df55f93e0421511808245842eeb0fdfb371d58bd011ba7426cf93c2",
+    "docs/checks/alkane-quiz-feedback-20261107/before/js/namelecule-generated-repair-checkpoint.js": "b5cbedf4428c36c1a6d1ada4657233c07460844f9e158cb108f39d54f6e9a3d3",
+    "docs/checks/alkane-quiz-feedback-20261107/before/mulermoc-nom-54.html": "3128e4ac489dd34b146e19c58d7512a952200b3c050ceb019e73c5c7da080fad",
+    "docs/checks/alkane-quiz-feedback-20261107/browser.json": "4dd523c3b77c3568c1de0b676975bbf219d5df9d35f3fdb585f181ca7411979e",
+    "docs/checks/alkane-quiz-feedback-20261107/check-browser.py": "628c096a3a9ae406f48957242b7d6c291d3046df3591b954233bc57fc1ec8bd8",
+    "docs/checks/alkane-quiz-feedback-20261107/check-memory.py": "4750d73b14f343fd9ae2e3ad020c0ca278eb874fb6e616a89bcd146671e46d14",
+    "docs/checks/alkane-quiz-feedback-20261107/context-320.png": "43e6e06b1513835ee52d772b90780cebc35c0e47348e8858dd2c06a5dc0313b1",
+    "docs/checks/alkane-quiz-feedback-20261107/context-390.png": "10dfb5af8306fa299ee1ba788d461197285fd0783c0423626dbeb67f7842e94f",
+    "docs/checks/alkane-quiz-feedback-20261107/initial-browser.json": "0eefd8b4c94c63c3ef9f81704c234b187428dd0f811afd1529bb01de7b4ab017",
+    "docs/checks/alkane-quiz-feedback-20261107/initial-check-browser.py": "4c26c888aae1f8f48ce28032926e5e49d57725aadf2912fef8227fd22604131b",
+    "docs/checks/alkane-quiz-feedback-20261107/initial-failure.png": "7c83a0936d960c797e5ea9935fdfc4157cca3f36f5205c274d9450b407c1a2ba",
+    "docs/checks/alkane-quiz-feedback-20261107/memory-fixtures.json": "d8de795ce5305d9c1b825c88674dfa3788ab9db6cc04f2a5d85c2640e8b77ad6",
+    "docs/checks/alkane-quiz-feedback-20261107/memory-results.json": "e8bf9d89743ae5dbe703cf28cba4818f7a126a28d009a61dd298176918a2be00",
+    "docs/checks/alkane-quiz-feedback-20261107/mulermoc-nom-54.html.diff": "e3cbafce6d9bc6eedd99d9768ef574d716f08118be2c1ce02920b9b98240d6b4",
+    "docs/checks/alkane-quiz-feedback-20261107/namelecule-generated-repair-checkpoint.js.diff": "1133c16c1b12f0c77fe00ece0f33d8d4912d217a816d834769d8030947917b68",
+    "docs/checks/alkane-quiz-feedback-20261107/propane-context.png": "318b77e1ff61fc169c8af9e1b602fbd7d77f44bcd822a98be99d3bb0698dfa53",
+    "docs/checks/alkane-quiz-feedback-20261107/restore-initial-browser.json": "d8d88e31f9c9e711237b59f037f0f1592d3aa53f542f3ab3b9e6a462d25a23c0",
+    "docs/checks/alkane-quiz-feedback-20261107/restore-initial-check-browser.py": "91edc097d847d1c84929732f2bb0deb9b72009ef2c7bcc73a75ecece8d2ce3e7",
+    "docs/checks/alkane-quiz-feedback-20261107/restore-initial-failure.png": "c71bcc7c57711c0b132c5be260f747a8668b7819d9c9e6abee6253b4e0d93ef5",
+    "docs/checks/alkane-quiz-feedback-20261107/source-verification.json": "598ebe56c323fd802952b5b442c622a6bc2bdf0b43003a078a4d0fc80f2d7e22",
+    "docs/checks/alkane-quiz-feedback-20261107/test-process.json": "ba1d014f035df08453d7ebdf67b938be9e4cbc0cf4afacdd04567ec19456c01d",
+    "docs/checks/alkane-quiz-feedback-20261107/served-verification.json": "49f0219402066eefc7aa5b1d32c852775641721cca5eb2722d89ff8764cfb99a",
+    "docs/checks/alkane-quiz-feedback-20261107/cleanup.json": "984f6ed0805cad2f390262eb7750c62373b9b30cdf689bd1279cd0d00ee17a10"
+  },
+  "preflight_evidence": {
+    "docs/checks/alkane-quiz-feedback-preflight-20261107/plan.json": "1680f601fc27ec81fe05ca7d95116269f075b019c2b70e60a752e9c3b8071cde",
+    "docs/checks/alkane-quiz-feedback-preflight-20261107/before-headless-reproduction.json": "32554c4f30588bfc059ec34dee40a63cef35dfb24beab24e7e455d733e58a0d8"
+  },
+  "developer_evidence": {
+    "memory_assertions": 643,
+    "Firefox_assertions": 58,
+    "recorded_JS_errors": 0,
+    "native_Enter_probe": {
+      "has_document_focus": true,
+      "events": [
+        {
+          "key": "Enter",
+          "trusted": true
+        }
+      ],
+      "activated_wrong_component": true
+    },
+    "flows": "Real library entry; all four replace families across both actual three-repair gates; wrong component, wrong replacement, correct explanation, reopen/refresh/retry, narrow320/390, saved completion restoration, real order fallback, Exit; deterministic seeds only, actual UI answers."
+  },
+  "initial_test_corrections": [
+    "Initial static JS expression quoting in browser harness failed; no app error, preserved initial evidence.",
+    "Earlier comparison incorrectly required unchanged random choice order in unvisited future rounds. Existing adapter regenerates those; test now verifies current selection/counters/seed/progress while recording actual before/after. Full completed receipts still exact. No production change for either correction."
+  ],
+  "protected_unchanged": 51,
+  "scenario_JSON_files_unchanged": 28,
+  "core_files_unchanged": 10,
+  "scope": "Shared generated embedded basic alkane lesson type, including older generated lesson copies. Standalone and challenge modes untouched.",
+  "limitations": [
+    "Headless isolated Firefox; no user-facing Firefox freeze diagnosis",
+    "No Safari, physical mobile, screen reader or full conference sequence audit",
+    "No new viewer/3D audit; existing JSmol issue remains outside scope"
+  ],
+  "export_required": false,
+  "no_commit_push_publication": true
+}

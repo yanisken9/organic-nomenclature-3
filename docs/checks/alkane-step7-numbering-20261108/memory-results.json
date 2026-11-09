@@ -1,0 +1,397 @@
+{
+  "passed": true,
+  "assertions": 202,
+  "cases": [
+    {
+      "label": "condensed",
+      "expected": "accepted with both orientations"
+    },
+    {
+      "label": "expanded",
+      "expected": "accepted with both orientations"
+    },
+    {
+      "label": "skeletal",
+      "expected": "accepted with both orientations"
+    },
+    {
+      "label": "methylpentane condensed unequal numbering",
+      "expected": "rejected"
+    },
+    {
+      "label": "methylpentane expanded unequal numbering",
+      "expected": "rejected"
+    },
+    {
+      "label": "methylpentane skeletal unequal numbering",
+      "expected": "rejected"
+    },
+    {
+      "label": "atom charge code",
+      "expected": "rejected"
+    },
+    {
+      "label": "M CHG property",
+      "expected": "rejected"
+    },
+    {
+      "label": "mass difference",
+      "expected": "rejected"
+    },
+    {
+      "label": "M ISO isotope",
+      "expected": "rejected"
+    },
+    {
+      "label": "radical charge code",
+      "expected": "rejected"
+    },
+    {
+      "label": "M RAD radical",
+      "expected": "rejected"
+    },
+    {
+      "label": "atom stereo parity",
+      "expected": "rejected"
+    },
+    {
+      "label": "bond stereo wedge",
+      "expected": "rejected"
+    },
+    {
+      "label": "explicit hydrogen metadata",
+      "expected": "rejected"
+    },
+    {
+      "label": "explicit valence metadata",
+      "expected": "rejected"
+    },
+    {
+      "label": "unknown atom mapping metadata",
+      "expected": "rejected"
+    },
+    {
+      "label": "unknown atom stereocare metadata",
+      "expected": "rejected"
+    },
+    {
+      "label": "unknown nonnumeric atom metadata",
+      "expected": "rejected"
+    },
+    {
+      "label": "unknown bond topology metadata",
+      "expected": "rejected"
+    },
+    {
+      "label": "unknown nonnumeric bond metadata",
+      "expected": "rejected"
+    },
+    {
+      "label": "counts chiral flag",
+      "expected": "rejected"
+    },
+    {
+      "label": "unknown property",
+      "expected": "rejected"
+    },
+    {
+      "label": "disconnected extra carbon",
+      "expected": "rejected"
+    },
+    {
+      "label": "disconnected graph despite tree edge count",
+      "expected": "rejected"
+    },
+    {
+      "label": "cyclic graph",
+      "expected": "rejected"
+    },
+    {
+      "label": "multiple bond with symmetric locants",
+      "expected": "rejected"
+    },
+    {
+      "label": "unsupported symmetric heteroatoms",
+      "expected": "rejected"
+    },
+    {
+      "label": "carbon degree five in otherwise connected acyclic graph",
+      "expected": "rejected"
+    },
+    {
+      "label": "hydrogen degree two in otherwise connected acyclic graph",
+      "expected": "rejected"
+    },
+    {
+      "label": "duplicate atom in path",
+      "expected": "rejected"
+    },
+    {
+      "label": "disconnected path jump",
+      "expected": "rejected"
+    },
+    {
+      "label": "out of range path atom",
+      "expected": "rejected"
+    },
+    {
+      "label": "fractional path atom",
+      "expected": "rejected"
+    },
+    {
+      "label": "empty path",
+      "expected": "rejected"
+    },
+    {
+      "label": "stale live atom types",
+      "expected": "rejected"
+    },
+    {
+      "label": "stale missing live bond",
+      "expected": "rejected"
+    },
+    {
+      "label": "stale live bond order",
+      "expected": "rejected"
+    },
+    {
+      "label": "invalid live bond endpoint",
+      "expected": "rejected"
+    },
+    {
+      "label": "ambiguous equal endpoint x",
+      "expected": "rejected"
+    },
+    {
+      "label": "malformed source coordinate",
+      "expected": "rejected"
+    }
+  ],
+  "labels": [
+    "condensed: actual library has six atoms C",
+    "condensed: actual core signature is defined",
+    "condensed: actual core confirms equivalent numbered chemistry",
+    "condensed: inputs unchanged",
+    "condensed: returns independent arrays",
+    "condensed: physical directions retain same atom IDs",
+    "condensed reversed canonical copy: inputs unchanged",
+    "condensed reversed canonical copy: returns independent arrays",
+    "condensed: result independent of incoming canonical orientation",
+    "condensed: mutating display output cannot change canonical parent",
+    "condensed: no retained output mutation",
+    "condensed rotated: inputs unchanged",
+    "condensed rotated: returns independent arrays",
+    "condensed: directions follow actual coordinates",
+    "expanded: actual library has six atoms C",
+    "expanded: actual core signature is defined",
+    "expanded: actual core confirms equivalent numbered chemistry",
+    "expanded: inputs unchanged",
+    "expanded: returns independent arrays",
+    "expanded: physical directions retain same atom IDs",
+    "expanded reversed canonical copy: inputs unchanged",
+    "expanded reversed canonical copy: returns independent arrays",
+    "expanded: result independent of incoming canonical orientation",
+    "expanded: mutating display output cannot change canonical parent",
+    "expanded: no retained output mutation",
+    "expanded rotated: inputs unchanged",
+    "expanded rotated: returns independent arrays",
+    "expanded: directions follow actual coordinates",
+    "skeletal: actual library has six atoms C",
+    "skeletal: actual core signature is defined",
+    "skeletal: actual core confirms equivalent numbered chemistry",
+    "skeletal: inputs unchanged",
+    "skeletal: returns independent arrays",
+    "skeletal: physical directions retain same atom IDs",
+    "skeletal reversed canonical copy: inputs unchanged",
+    "skeletal reversed canonical copy: returns independent arrays",
+    "skeletal: result independent of incoming canonical orientation",
+    "skeletal: mutating display output cannot change canonical parent",
+    "skeletal: no retained output mutation",
+    "skeletal rotated: inputs unchanged",
+    "skeletal rotated: returns independent arrays",
+    "skeletal: directions follow actual coordinates",
+    "methylpentane condensed: core observes unequal branch locants",
+    "methylpentane condensed unequal numbering: inputs unchanged",
+    "methylpentane condensed unequal numbering: rejected",
+    "methylpentane expanded: core observes unequal branch locants",
+    "methylpentane expanded unequal numbering: inputs unchanged",
+    "methylpentane expanded unequal numbering: rejected",
+    "methylpentane skeletal: core observes unequal branch locants",
+    "methylpentane skeletal unequal numbering: inputs unchanged",
+    "methylpentane skeletal unequal numbering: rejected",
+    "atom charge code: inputs unchanged",
+    "atom charge code: rejected",
+    "M CHG property: inputs unchanged",
+    "M CHG property: rejected",
+    "mass difference: inputs unchanged",
+    "mass difference: rejected",
+    "M ISO isotope: inputs unchanged",
+    "M ISO isotope: rejected",
+    "radical charge code: inputs unchanged",
+    "radical charge code: rejected",
+    "M RAD radical: inputs unchanged",
+    "M RAD radical: rejected",
+    "atom stereo parity: inputs unchanged",
+    "atom stereo parity: rejected",
+    "bond stereo wedge: inputs unchanged",
+    "bond stereo wedge: rejected",
+    "explicit hydrogen metadata: inputs unchanged",
+    "explicit hydrogen metadata: rejected",
+    "explicit valence metadata: inputs unchanged",
+    "explicit valence metadata: rejected",
+    "unknown atom mapping metadata: inputs unchanged",
+    "unknown atom mapping metadata: rejected",
+    "unknown atom stereocare metadata: inputs unchanged",
+    "unknown atom stereocare metadata: rejected",
+    "unknown nonnumeric atom metadata: inputs unchanged",
+    "unknown nonnumeric atom metadata: rejected",
+    "unknown bond topology metadata: inputs unchanged",
+    "unknown bond topology metadata: rejected",
+    "unknown nonnumeric bond metadata: inputs unchanged",
+    "unknown nonnumeric bond metadata: rejected",
+    "counts chiral flag: inputs unchanged",
+    "counts chiral flag: rejected",
+    "unknown property: inputs unchanged",
+    "unknown property: rejected",
+    "disconnected extra carbon: inputs unchanged",
+    "disconnected extra carbon: rejected",
+    "disconnected graph despite tree edge count: inputs unchanged",
+    "disconnected graph despite tree edge count: rejected",
+    "cyclic graph: inputs unchanged",
+    "cyclic graph: rejected",
+    "multiple bond with symmetric locants: inputs unchanged",
+    "multiple bond with symmetric locants: rejected",
+    "unsupported symmetric heteroatoms: inputs unchanged",
+    "unsupported symmetric heteroatoms: rejected",
+    "invalid valence tree would pass signature equivalence alone",
+    "carbon degree five in otherwise connected acyclic graph: inputs unchanged",
+    "carbon degree five in otherwise connected acyclic graph: rejected",
+    "hydrogen degree two in otherwise connected acyclic graph: inputs unchanged",
+    "hydrogen degree two in otherwise connected acyclic graph: rejected",
+    "duplicate atom in path: inputs unchanged",
+    "duplicate atom in path: rejected",
+    "disconnected path jump: inputs unchanged",
+    "disconnected path jump: rejected",
+    "out of range path atom: inputs unchanged",
+    "out of range path atom: rejected",
+    "fractional path atom: inputs unchanged",
+    "fractional path atom: rejected",
+    "empty path: inputs unchanged",
+    "empty path: rejected",
+    "stale live atom types: inputs unchanged",
+    "stale live atom types: rejected",
+    "stale missing live bond: inputs unchanged",
+    "stale missing live bond: rejected",
+    "stale live bond order: inputs unchanged",
+    "stale live bond order: rejected",
+    "invalid live bond endpoint: inputs unchanged",
+    "invalid live bond endpoint: rejected",
+    "reordered undirected live bonds: inputs unchanged",
+    "reordered undirected live bonds: returns independent arrays",
+    "equivalent graph accepted independent of live bond ordering",
+    "ambiguous equal endpoint x: inputs unchanged",
+    "ambiguous equal endpoint x: rejected",
+    "actual core parser rejects malformed coordinate",
+    "malformed source coordinate: inputs unchanged",
+    "malformed source coordinate: rejected",
+    "missing MOL fails closed",
+    "missing parent fails closed",
+    "actual authored opt-in enabled only at step 7",
+    "actual step 7 starts with parent atoms C highlighted and numbered",
+    "context starts from physical left",
+    "context never returns retained choice array",
+    "actual choose action reverses same parent",
+    "actual choose action requests stem view",
+    "selection action restores visible numbering mode",
+    "selection supersedes delayed initial callback",
+    "selection refreshes the direction control",
+    "selection clears earlier name-box selection",
+    "selection does not change canonical parent",
+    "selection does not alter authored JSON",
+    "invalid direction cannot replace state",
+    "invalid direction preserves current valid selection",
+    "first render: actual viewer resolves selected order",
+    "first render: optional display choice emits no 3D labels",
+    "first render: displayed C1 follows physical right endpoint",
+    "first render: displayed C4 follows physical left endpoint",
+    "first render: preserves transient selection",
+    "repeat render: actual viewer resolves selected order",
+    "repeat render: optional display choice emits no 3D labels",
+    "repeat render: displayed C1 follows physical right endpoint",
+    "repeat render: displayed C4 follows physical left endpoint",
+    "repeat render: preserves transient selection",
+    "name component rerender: actual viewer resolves selected order",
+    "name component rerender: optional display choice emits no 3D labels",
+    "name component rerender: displayed C1 follows physical right endpoint",
+    "name component rerender: displayed C4 follows physical left endpoint",
+    "name component rerender: preserves transient selection",
+    "explicit component 2D override retains priority",
+    "explicit component 3D override retains priority",
+    "explicit empty component overrides retain priority",
+    "explicit component paint preserves selected parent direction",
+    "choosing after another name component restores stem",
+    "left choice restores original physical order",
+    "different apply token callback is not marked complete",
+    "presentation inactive: no override",
+    "presentation inactive: transient choice cleared",
+    "optional feature absent: no override",
+    "optional feature absent: transient choice cleared",
+    "optional feature false: no override",
+    "optional feature false: transient choice cleared",
+    "naming panel unavailable: no override",
+    "naming panel unavailable: transient choice cleared",
+    "name interaction disabled: no override",
+    "name interaction disabled: transient choice cleared",
+    "2D viewer hidden: no override",
+    "2D viewer hidden: transient choice cleared",
+    "3D viewer visible: no override",
+    "3D viewer visible: transient choice cleared",
+    "3D visibility not explicit: no override",
+    "3D visibility not explicit: transient choice cleared",
+    "molecule changed during pending load: no override",
+    "molecule changed during pending load: transient choice cleared",
+    "stem disabled: no override",
+    "stem disabled: transient choice cleared",
+    "stem hidden: no override",
+    "stem hidden: transient choice cleared",
+    "source gains unsupported metadata: no override",
+    "source gains unsupported metadata: transient choice cleared",
+    "live graph becomes stale: no override",
+    "live graph becomes stale: transient choice cleared",
+    "moving to ordinary step clears override",
+    "reentry starts from left",
+    "scenario identity change resets selection",
+    "same-entry step data replacement preserves selection",
+    "same-entry replacement refreshes data reference",
+    "new entry token resets selection",
+    "equivalent parent path change resets selection",
+    "actual apply entry: intentional stop after production reset",
+    "actual apply entry: clears choice before downstream effects",
+    "actual exit entry: intentional stop after production reset",
+    "actual exit entry: clears choice before downstream effects",
+    "all context/render checks leave actual authored JSON unchanged"
+  ],
+  "date": "2026-11-08",
+  "kind": "Developer evidence; not independent review",
+  "command": "python3 -B docs/checks/alkane-step7-numbering-20261108/check-memory.py",
+  "runtime": "/System/Library/Frameworks/JavaScriptCore.framework/Versions/A/Helpers/jsc",
+  "jscExitCode": 0,
+  "sourceSha256": {
+    "js/mulermoc-nom-core-54.js": "8f3e5f76d96322faf7cf9251f4cae3eca204fe2f82bf5754fdce6ffc4cd5d5a9",
+    "js/mulermoc-nom-molview-54.js": "9e835f5e7c94ac736f7a4ca80ac3c67cc03f34eac2098ac5e9de3eb0eae9ba2f",
+    "js/mulermoc-nom-scenario-54.js": "a24eef83359039e91ad15217d667713f64f79dff4b750b8b103bf42f2adde5aa",
+    "js/jsme-nick-nomeclature-moc2-data_54.js": "9387cd654b2ff3cfb058d9b97ddcca798ac13f47f769b532f9c122277ff8dd0a",
+    "scenarios/alkanes-user-3.scenario.json": "d5463463b14c1f694dbd381c65a7b4aa466eebd9143f4f91c565894f26645cd4"
+  },
+  "protectedBaselineFilesVerified": 496,
+  "coreUnchangedFromSessionBaseline": true,
+  "baselineNewPureHelperAbsent": true,
+  "limitations": [
+    "Actual selected production functions are extracted and executed; the full application is not loaded.",
+    "Library MOL fixtures are actual expressions from data_54.js; adversarial variants are synthetic in-memory copies.",
+    "Presentation lookup, DOM/name-click drawing primitives and timers are doubles; actual context, direction action and viewer numbering function execute.",
+    "Actual Apply/Exit functions execute only through their reset boundary; full navigation is left to browser verification.",
+    "Repeated render checks represent repaint invariance; actual zoom/resize browser events are not executed.",
+    "No browser/layout, complete name-generation, 3D, accessibility, or conference sequence is tested here."
+  ]
+}

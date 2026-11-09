@@ -1,0 +1,155 @@
+{
+  "completed": false,
+  "checks": [
+    "Ordinary learner gate still blocks at step4",
+    "Real first learner repair is stored without unlocking the three-round gate",
+    "Screen opens edited step5 directly despite unsolved step4",
+    "Edited title and explicit preview counter shown",
+    "Step5 keeps authored passive boxes and chain selector; preview Next enabled",
+    "Preview Next advances directly to6",
+    "ArrowLeft document route returns preview to5",
+    "Preview hash crosses both unsolved quiz gates",
+    "Preview step11 quiz is optional for navigation",
+    "Preview can continue beyond optional quiz11",
+    "Preview counter fits 390px",
+    "Preview counter fits 320px",
+    "Preview quiz can actually be completed in temporary state",
+    "Full preview completion leaves every learner storage byte unchanged",
+    "Preview/navigation/quiz do not add state or flags to authored steps",
+    "Exit clears preview, closes quiz and returns to editor",
+    "Reopening preview starts fresh temporary progress",
+    "Card Play uses learner mode at step1 after preview",
+    "Normal card Play cannot pass unsolved quiz4",
+    "Preview/Exit/cardPlay never overwrite original learner receipt",
+    "Failed launch invalidates preview context and returns author mode",
+    "New/import card path invalidates old scenario preview",
+    "Library/manual hash still enforces normal first gate",
+    "Library reload itself preserves exact pre-preview learner storage bytes",
+    "Original learner answers/current selection/counters restore after rehearsal",
+    "Normal learner also stops at second unsolved gate11 after completing first set",
+    "Normal library Exit keeps existing return route",
+    "Reload carries no preview context or learner completion"
+  ],
+  "rounds": [],
+  "fixture_policy": "Owned profile only. Actual learner partial progress and temporary preview completions created through UI; no fabricated solved receipts. Title changed only in isolated browser; no source/desktop JSON writes.",
+  "limitations": [
+    "Headless isolated Firefox; no user-facing Firefox freeze diagnosis",
+    "No Safari, physical mobile, screen reader or full conference sequence audit",
+    "No new viewer/3D audit; existing JSmol issue remains outside scope",
+    "Native ArrowLeft unverified: headless endpoint delivered no keydown. Actual document handler exercised with synthetic KeyboardEvent."
+  ],
+  "native_keyboard_probe": {
+    "events": [],
+    "index": 5,
+    "focus": true,
+    "active": "BUTTON",
+    "noteEditorOpen": false
+  },
+  "normal_reopen_observation": {
+    "before": {
+      "version": 1,
+      "seed": "757870153443268610",
+      "currentRound": 1,
+      "states": [
+        {
+          "selectedPartId": "component-5",
+          "selectedValue": "μεθ",
+          "order": [],
+          "choiceOrder": [
+            1,
+            2,
+            0
+          ],
+          "attempts": 1,
+          "selectionMisses": 0,
+          "solved": true,
+          "submitted": true
+        },
+        {
+          "selectedPartId": null,
+          "selectedValue": null,
+          "order": [],
+          "choiceOrder": [
+            2,
+            0,
+            1
+          ],
+          "attempts": 0,
+          "selectionMisses": 0,
+          "solved": false,
+          "submitted": false
+        },
+        {
+          "selectedPartId": null,
+          "selectedValue": null,
+          "order": [],
+          "choiceOrder": [
+            0,
+            1,
+            2
+          ],
+          "attempts": 0,
+          "selectionMisses": 0,
+          "solved": false,
+          "submitted": false
+        }
+      ],
+      "solved": false
+    },
+    "after": {
+      "version": 1,
+      "seed": "757870153443268610",
+      "currentRound": 1,
+      "states": [
+        {
+          "selectedPartId": "component-5",
+          "selectedValue": "μεθ",
+          "order": [],
+          "choiceOrder": [
+            1,
+            2,
+            0
+          ],
+          "attempts": 1,
+          "selectionMisses": 0,
+          "solved": true,
+          "submitted": true
+        },
+        {
+          "selectedPartId": null,
+          "selectedValue": null,
+          "order": [],
+          "choiceOrder": [
+            2,
+            0,
+            1
+          ],
+          "attempts": 0,
+          "selectionMisses": 0,
+          "solved": false,
+          "submitted": false
+        },
+        {
+          "selectedPartId": null,
+          "selectedValue": null,
+          "order": [],
+          "choiceOrder": [
+            0,
+            1,
+            2
+          ],
+          "attempts": 0,
+          "selectionMisses": 0,
+          "solved": false,
+          "submitted": false
+        }
+      ],
+      "solved": false
+    },
+    "exact_storage_before_open": true,
+    "future_unvisited_choice_order_policy": "Existing unchanged generated adapter recreates unvisited future choice orders on normal open; those are not answered progress."
+  },
+  "failure": "Invented preview URL cannot bypass learner gate",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/author-checkpoint-preview-20261107/check-browser.py\", line 146, in <module>\n    check(ev('fScenarioPresent().index===3&&!NameleculeQuizCheckpoints.isPreview(fScenarioPresent())'),'Invented preview URL cannot bypass learner gate')\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/author-checkpoint-preview-20261107/check-browser.py\", line 15, in check\n    assert ok,name\nAssertionError: Invented preview URL cannot bypass learner gate\n",
+  "javascriptErrors": []
+}

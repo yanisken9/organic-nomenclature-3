@@ -1,0 +1,228 @@
+{
+  "completed": true,
+  "checks": [
+    "Library still opens personal twelve-step lesson at first step",
+    "Updated adapter cache URL loads",
+    "Only display feedback differs from canonical alkanes-unbranched 0",
+    "Mission focus shown for bond-type 0",
+    "Wrong component retains counters and disabled Check alkanes-unbranched 0",
+    "Exact screenshot example reproduced with real pointer click",
+    "Reminder retains polite live-region semantics",
+    "Entire contextual reminder wraps visibly at 390",
+    "Entire contextual reminder wraps visibly at 320",
+    "Close returns to theory without solving gate",
+    "Reopen restores contextual message, current answer, counters and seed",
+    "Refresh restores contextual message, seed, selection and counters",
+    "Retry clears contextual selection without changing mission",
+    "Native Enter activates component and contextual reminder",
+    "Correct component replaces reminder with replacement instruction",
+    "Wrong replacement retains existing feedback",
+    "Selecting repair target clears focus reminder alkanes-unbranched 0",
+    "Original successful explanation retained alkanes-unbranched 0",
+    "Three repairs still required to unlock alkanes-unbranched 1",
+    "Only display feedback differs from canonical alkanes-unbranched 1",
+    "Mission focus shown for parent-length 1",
+    "Wrong component retains counters and disabled Check alkanes-unbranched 1",
+    "Selecting repair target clears focus reminder alkanes-unbranched 1",
+    "Original successful explanation retained alkanes-unbranched 1",
+    "Three repairs still required to unlock alkanes-unbranched 2",
+    "Only display feedback differs from canonical alkanes-unbranched 2",
+    "Mission focus shown for parent-length 2",
+    "Wrong component retains counters and disabled Check alkanes-unbranched 2",
+    "Selecting repair target clears focus reminder alkanes-unbranched 2",
+    "Original successful explanation retained alkanes-unbranched 2",
+    "Three repairs still required to unlock alkanes-unbranched 3",
+    "Completed set receipt remains valid alkanes-unbranched",
+    "Step5 still restores its existing passive boxes and chain selector",
+    "Only display feedback differs from canonical alkanes-branched 0",
+    "Mission focus shown for parent-length 0",
+    "Wrong component retains counters and disabled Check alkanes-branched 0",
+    "Selecting repair target clears focus reminder alkanes-branched 0",
+    "Original successful explanation retained alkanes-branched 0",
+    "Three repairs still required to unlock alkanes-branched 1",
+    "Only display feedback differs from canonical alkanes-branched 1",
+    "Mission focus shown for branch-locants 1",
+    "Wrong component retains counters and disabled Check alkanes-branched 1",
+    "Selecting repair target clears focus reminder alkanes-branched 1",
+    "Original successful explanation retained alkanes-branched 1",
+    "Three repairs still required to unlock alkanes-branched 2",
+    "Only display feedback differs from canonical alkanes-branched 2",
+    "Mission focus shown for branch-multiplier 2",
+    "Wrong component retains counters and disabled Check alkanes-branched 2",
+    "Selecting repair target clears focus reminder alkanes-branched 2",
+    "Original successful explanation retained alkanes-branched 2",
+    "Three repairs still required to unlock alkanes-branched 3",
+    "Completed set receipt remains valid alkanes-branched",
+    "Both completed sets restore after refresh at final lesson step",
+    "Complete stored progress remains byte-equivalent as JSON after refresh",
+    "Real ordering round has no contextual replacement reminder",
+    "Real alphabetical ordering still solves",
+    "Original completed test progress restores after ordering compatibility probe",
+    "Exit returns to updated library"
+  ],
+  "rounds": [
+    {
+      "set": "alkanes-unbranched",
+      "index": 0,
+      "id": "engine-propane-bond-type-3ff25797",
+      "family": "bond-type",
+      "feedback": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C."
+    },
+    {
+      "set": "alkanes-unbranched",
+      "index": 1,
+      "id": "engine-butane-parent-length-aaf59bef",
+      "family": "parent-length",
+      "feedback": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το πλήθος των ατόμων C της κύριας αλυσίδας."
+    },
+    {
+      "set": "alkanes-unbranched",
+      "index": 2,
+      "id": "engine-pentane-parent-length-5b7ba7a7",
+      "family": "parent-length",
+      "feedback": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το πλήθος των ατόμων C της κύριας αλυσίδας."
+    },
+    {
+      "set": "alkanes-branched",
+      "index": 0,
+      "id": "engine-methyl_2_pentane-parent-length-2c39b9b5",
+      "family": "parent-length",
+      "feedback": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το πλήθος των ατόμων C της κύριας αλυσίδας."
+    },
+    {
+      "set": "alkanes-branched",
+      "index": 1,
+      "id": "engine-ethyl_3_dimethyl_2_5_hexane-branch-locants-45cd043e",
+      "family": "branch-locants",
+      "feedback": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά τις θέσεις σύνδεσης των διακλαδώσεων και τη φορά αρίθμησης."
+    },
+    {
+      "set": "alkanes-branched",
+      "index": 2,
+      "id": "engine-dimethyl_2_3_butane-branch-multiplier-74bb4f08",
+      "family": "branch-multiplier",
+      "feedback": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το πλήθος των ίδιων διακλαδώσεων."
+    }
+  ],
+  "fixture_policy": "Deterministic seeds set in isolated sessionStorage. No completed answers injected: all six primary repairs solved through real UI. Canonical fixtures generated by actual pinned core; no source JSON changes.",
+  "limitations": [
+    "Headless isolated Firefox; no user-facing Firefox freeze diagnosis",
+    "No Safari, physical mobile, screen reader or full conference sequence audit",
+    "No new viewer/3D audit; existing JSmol issue remains outside scope"
+  ],
+  "reopen_progress_observation": {
+    "before": {
+      "version": 1,
+      "seed": "4",
+      "currentRound": 0,
+      "states": [
+        {
+          "selectedPartId": "component-5",
+          "selectedValue": null,
+          "order": [],
+          "choiceOrder": [
+            1,
+            2,
+            0
+          ],
+          "attempts": 0,
+          "selectionMisses": 1,
+          "solved": false,
+          "submitted": false
+        },
+        {
+          "selectedPartId": null,
+          "selectedValue": null,
+          "order": [],
+          "choiceOrder": [
+            0,
+            1,
+            2
+          ],
+          "attempts": 0,
+          "selectionMisses": 0,
+          "solved": false,
+          "submitted": false
+        },
+        {
+          "selectedPartId": null,
+          "selectedValue": null,
+          "order": [],
+          "choiceOrder": [
+            1,
+            2,
+            0
+          ],
+          "attempts": 0,
+          "selectionMisses": 0,
+          "solved": false,
+          "submitted": false
+        }
+      ],
+      "solved": false
+    },
+    "after": {
+      "version": 1,
+      "seed": "4",
+      "currentRound": 0,
+      "states": [
+        {
+          "selectedPartId": "component-5",
+          "selectedValue": null,
+          "order": [],
+          "choiceOrder": [
+            1,
+            2,
+            0
+          ],
+          "attempts": 0,
+          "selectionMisses": 1,
+          "solved": false,
+          "submitted": false
+        },
+        {
+          "selectedPartId": null,
+          "selectedValue": null,
+          "order": [],
+          "choiceOrder": [
+            1,
+            0,
+            2
+          ],
+          "attempts": 0,
+          "selectionMisses": 0,
+          "solved": false,
+          "submitted": false
+        },
+        {
+          "selectedPartId": null,
+          "selectedValue": null,
+          "order": [],
+          "choiceOrder": [
+            1,
+            2,
+            0
+          ],
+          "attempts": 0,
+          "selectionMisses": 0,
+          "solved": false,
+          "submitted": false
+        }
+      ],
+      "solved": false
+    },
+    "current_round_exact": true,
+    "future_unvisited_choice_order_not_progress": true
+  },
+  "native_keyboard": {
+    "has_document_focus": true,
+    "events": [
+      {
+        "key": "Enter",
+        "trusted": true
+      }
+    ],
+    "activated_wrong_component": true
+  },
+  "javascriptErrors": []
+}

@@ -1,0 +1,485 @@
+{
+  "completed": true,
+  "checks": [
+    "3representatives ×12style/H/label combinations plus numbered-chain labels; React analysis matches native; 2D depiction unchanged",
+    "Actual ethanol5C–H hidden, O–H hydrogen remains visible; atom count unchanged",
+    "Rotation moves camera, stops on request, leaves molecular coordinates unchanged",
+    "Preferences preserved across methane/ether/naming/2D/zoom; invalid, stale, wrong-model/2D commands and forged control ACKs rejected",
+    "Space key works; pending controls hide graph/disable duplicates; pending control→new model keeps latest state; pending zoom gates style",
+    "1500/390px no page/control overflow; screenshots captured",
+    "Actual model mismatch yields bounded failure/retry resets defaults; leaving rotating viewer removes iframe, re-entry creates fresh default session",
+    "All42actual3Drender snapshots exactly equal unchanged native main52 controls at same viewport"
+  ],
+  "parity": [
+    {
+      "molecule": "ethanol",
+      "component": "base",
+      "controls": {
+        "hydrogens": true,
+        "labels": true,
+        "rotating": false,
+        "style": "ballnstick"
+      },
+      "exact": true
+    },
+    {
+      "molecule": "ethanol",
+      "component": "base",
+      "controls": {
+        "hydrogens": true,
+        "labels": false,
+        "rotating": false,
+        "style": "ballnstick"
+      },
+      "exact": true
+    },
+    {
+      "molecule": "ethanol",
+      "component": "base",
+      "controls": {
+        "hydrogens": false,
+        "labels": true,
+        "rotating": false,
+        "style": "ballnstick"
+      },
+      "exact": true
+    },
+    {
+      "molecule": "ethanol",
+      "component": "base",
+      "controls": {
+        "hydrogens": false,
+        "labels": false,
+        "rotating": false,
+        "style": "ballnstick"
+      },
+      "exact": true
+    },
+    {
+      "molecule": "ethanol",
+      "component": "base",
+      "controls": {
+        "hydrogens": true,
+        "labels": true,
+        "rotating": false,
+        "style": "spacefill"
+      },
+      "exact": true
+    },
+    {
+      "molecule": "ethanol",
+      "component": "base",
+      "controls": {
+        "hydrogens": true,
+        "labels": false,
+        "rotating": false,
+        "style": "spacefill"
+      },
+      "exact": true
+    },
+    {
+      "molecule": "ethanol",
+      "component": "base",
+      "controls": {
+        "hydrogens": false,
+        "labels": true,
+        "rotating": false,
+        "style": "spacefill"
+      },
+      "exact": true
+    },
+    {
+      "molecule": "ethanol",
+      "component": "base",
+      "controls": {
+        "hydrogens": false,
+        "labels": false,
+        "rotating": false,
+        "style": "spacefill"
+      },
+      "exact": true
+    },
+    {
+      "molecule": "ethanol",
+      "component": "base",
+      "controls": {
+        "hydrogens": true,
+        "labels": true,
+        "rotating": false,
+        "style": "sticks"
+      },
+      "exact": true
+    },
+    {
+      "molecule": "ethanol",
+      "component": "base",
+      "controls": {
+        "hydrogens": true,
+        "labels": false,
+        "rotating": false,
+        "style": "sticks"
+      },
+      "exact": true
+    },
+    {
+      "molecule": "ethanol",
+      "component": "base",
+      "controls": {
+        "hydrogens": false,
+        "labels": true,
+        "rotating": false,
+        "style": "sticks"
+      },
+      "exact": true
+    },
+    {
+      "molecule": "ethanol",
+      "component": "base",
+      "controls": {
+        "hydrogens": false,
+        "labels": false,
+        "rotating": false,
+        "style": "sticks"
+      },
+      "exact": true
+    },
+    {
+      "molecule": "ethanol",
+      "component": "comp5",
+      "controls": {
+        "hydrogens": false,
+        "labels": false,
+        "rotating": false,
+        "style": "ballnstick"
+      },
+      "exact": true
+    },
+    {
+      "molecule": "ethanol",
+      "component": "comp5",
+      "controls": {
+        "hydrogens": false,
+        "labels": true,
+        "rotating": false,
+        "style": "ballnstick"
+      },
+      "exact": true
+    },
+    {
+      "molecule": "ethyl_isopropyl_ether",
+      "component": "base",
+      "controls": {
+        "hydrogens": true,
+        "labels": true,
+        "rotating": false,
+        "style": "ballnstick"
+      },
+      "exact": true
+    },
+    {
+      "molecule": "ethyl_isopropyl_ether",
+      "component": "base",
+      "controls": {
+        "hydrogens": true,
+        "labels": false,
+        "rotating": false,
+        "style": "ballnstick"
+      },
+      "exact": true
+    },
+    {
+      "molecule": "ethyl_isopropyl_ether",
+      "component": "base",
+      "controls": {
+        "hydrogens": false,
+        "labels": true,
+        "rotating": false,
+        "style": "ballnstick"
+      },
+      "exact": true
+    },
+    {
+      "molecule": "ethyl_isopropyl_ether",
+      "component": "base",
+      "controls": {
+        "hydrogens": false,
+        "labels": false,
+        "rotating": false,
+        "style": "ballnstick"
+      },
+      "exact": true
+    },
+    {
+      "molecule": "ethyl_isopropyl_ether",
+      "component": "base",
+      "controls": {
+        "hydrogens": true,
+        "labels": true,
+        "rotating": false,
+        "style": "spacefill"
+      },
+      "exact": true
+    },
+    {
+      "molecule": "ethyl_isopropyl_ether",
+      "component": "base",
+      "controls": {
+        "hydrogens": true,
+        "labels": false,
+        "rotating": false,
+        "style": "spacefill"
+      },
+      "exact": true
+    },
+    {
+      "molecule": "ethyl_isopropyl_ether",
+      "component": "base",
+      "controls": {
+        "hydrogens": false,
+        "labels": true,
+        "rotating": false,
+        "style": "spacefill"
+      },
+      "exact": true
+    },
+    {
+      "molecule": "ethyl_isopropyl_ether",
+      "component": "base",
+      "controls": {
+        "hydrogens": false,
+        "labels": false,
+        "rotating": false,
+        "style": "spacefill"
+      },
+      "exact": true
+    },
+    {
+      "molecule": "ethyl_isopropyl_ether",
+      "component": "base",
+      "controls": {
+        "hydrogens": true,
+        "labels": true,
+        "rotating": false,
+        "style": "sticks"
+      },
+      "exact": true
+    },
+    {
+      "molecule": "ethyl_isopropyl_ether",
+      "component": "base",
+      "controls": {
+        "hydrogens": true,
+        "labels": false,
+        "rotating": false,
+        "style": "sticks"
+      },
+      "exact": true
+    },
+    {
+      "molecule": "ethyl_isopropyl_ether",
+      "component": "base",
+      "controls": {
+        "hydrogens": false,
+        "labels": true,
+        "rotating": false,
+        "style": "sticks"
+      },
+      "exact": true
+    },
+    {
+      "molecule": "ethyl_isopropyl_ether",
+      "component": "base",
+      "controls": {
+        "hydrogens": false,
+        "labels": false,
+        "rotating": false,
+        "style": "sticks"
+      },
+      "exact": true
+    },
+    {
+      "molecule": "ethyl_isopropyl_ether",
+      "component": "comp5",
+      "controls": {
+        "hydrogens": false,
+        "labels": false,
+        "rotating": false,
+        "style": "ballnstick"
+      },
+      "exact": true
+    },
+    {
+      "molecule": "ethyl_isopropyl_ether",
+      "component": "comp5",
+      "controls": {
+        "hydrogens": false,
+        "labels": true,
+        "rotating": false,
+        "style": "ballnstick"
+      },
+      "exact": true
+    },
+    {
+      "molecule": "isopropyl_4_dimethyl_3_6_octen_3_yn_7_dione_2_5",
+      "component": "base",
+      "controls": {
+        "hydrogens": true,
+        "labels": true,
+        "rotating": false,
+        "style": "ballnstick"
+      },
+      "exact": true
+    },
+    {
+      "molecule": "isopropyl_4_dimethyl_3_6_octen_3_yn_7_dione_2_5",
+      "component": "base",
+      "controls": {
+        "hydrogens": true,
+        "labels": false,
+        "rotating": false,
+        "style": "ballnstick"
+      },
+      "exact": true
+    },
+    {
+      "molecule": "isopropyl_4_dimethyl_3_6_octen_3_yn_7_dione_2_5",
+      "component": "base",
+      "controls": {
+        "hydrogens": false,
+        "labels": true,
+        "rotating": false,
+        "style": "ballnstick"
+      },
+      "exact": true
+    },
+    {
+      "molecule": "isopropyl_4_dimethyl_3_6_octen_3_yn_7_dione_2_5",
+      "component": "base",
+      "controls": {
+        "hydrogens": false,
+        "labels": false,
+        "rotating": false,
+        "style": "ballnstick"
+      },
+      "exact": true
+    },
+    {
+      "molecule": "isopropyl_4_dimethyl_3_6_octen_3_yn_7_dione_2_5",
+      "component": "base",
+      "controls": {
+        "hydrogens": true,
+        "labels": true,
+        "rotating": false,
+        "style": "spacefill"
+      },
+      "exact": true
+    },
+    {
+      "molecule": "isopropyl_4_dimethyl_3_6_octen_3_yn_7_dione_2_5",
+      "component": "base",
+      "controls": {
+        "hydrogens": true,
+        "labels": false,
+        "rotating": false,
+        "style": "spacefill"
+      },
+      "exact": true
+    },
+    {
+      "molecule": "isopropyl_4_dimethyl_3_6_octen_3_yn_7_dione_2_5",
+      "component": "base",
+      "controls": {
+        "hydrogens": false,
+        "labels": true,
+        "rotating": false,
+        "style": "spacefill"
+      },
+      "exact": true
+    },
+    {
+      "molecule": "isopropyl_4_dimethyl_3_6_octen_3_yn_7_dione_2_5",
+      "component": "base",
+      "controls": {
+        "hydrogens": false,
+        "labels": false,
+        "rotating": false,
+        "style": "spacefill"
+      },
+      "exact": true
+    },
+    {
+      "molecule": "isopropyl_4_dimethyl_3_6_octen_3_yn_7_dione_2_5",
+      "component": "base",
+      "controls": {
+        "hydrogens": true,
+        "labels": true,
+        "rotating": false,
+        "style": "sticks"
+      },
+      "exact": true
+    },
+    {
+      "molecule": "isopropyl_4_dimethyl_3_6_octen_3_yn_7_dione_2_5",
+      "component": "base",
+      "controls": {
+        "hydrogens": true,
+        "labels": false,
+        "rotating": false,
+        "style": "sticks"
+      },
+      "exact": true
+    },
+    {
+      "molecule": "isopropyl_4_dimethyl_3_6_octen_3_yn_7_dione_2_5",
+      "component": "base",
+      "controls": {
+        "hydrogens": false,
+        "labels": true,
+        "rotating": false,
+        "style": "sticks"
+      },
+      "exact": true
+    },
+    {
+      "molecule": "isopropyl_4_dimethyl_3_6_octen_3_yn_7_dione_2_5",
+      "component": "base",
+      "controls": {
+        "hydrogens": false,
+        "labels": false,
+        "rotating": false,
+        "style": "sticks"
+      },
+      "exact": true
+    },
+    {
+      "molecule": "isopropyl_4_dimethyl_3_6_octen_3_yn_7_dione_2_5",
+      "component": "comp5",
+      "controls": {
+        "hydrogens": false,
+        "labels": false,
+        "rotating": false,
+        "style": "ballnstick"
+      },
+      "exact": true
+    },
+    {
+      "molecule": "isopropyl_4_dimethyl_3_6_octen_3_yn_7_dione_2_5",
+      "component": "comp5",
+      "controls": {
+        "hydrogens": false,
+        "labels": true,
+        "rotating": false,
+        "style": "ballnstick"
+      },
+      "exact": true
+    }
+  ],
+  "iframeSize": {
+    "width": 784,
+    "height": 420
+  },
+  "modelFailureSeconds": 9.09,
+  "knownJSmolErrors": [],
+  "unexpectedJavaScriptErrors": [],
+  "javascriptErrors": []
+}

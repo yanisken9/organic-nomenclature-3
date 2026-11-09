@@ -1,0 +1,127 @@
+{
+  "runtime": "JavaScriptCore",
+  "source": "docs/checks/alkane-checkpoint-pilot-20261104/scenario/before-mulermoc-nom-scenario-54.js",
+  "controller": "contract double; no browser/persistence claims",
+  "checks": 50,
+  "failures": [
+    {
+      "label": "v2 checkpoint lesson accepted",
+      "detail": [
+        "File needs a newer app (scenarioVersion 2)."
+      ]
+    },
+    {
+      "label": "v1 checkpoint rejected before silent interpretation"
+    },
+    {
+      "label": "Unversioned mandatory checkpoint rejected"
+    },
+    {
+      "label": "Checkpoint export is version2"
+    },
+    {
+      "label": "Update preserves authored checkpoint"
+    },
+    {
+      "label": "Duplicate retains checkpoint metadata"
+    },
+    {
+      "label": "File import keeps version2 and checkpoint"
+    },
+    {
+      "label": "Direct PresentBegin clamps to first unsolved checkpoint",
+      "detail": 3
+    },
+    {
+      "label": "Direct presentation applies checkpoint only",
+      "detail": [
+        "propane",
+        "propane",
+        "methane",
+        "propane",
+        "propane"
+      ]
+    },
+    {
+      "label": "Direct presentation hash uses resolved target",
+      "detail": "#step=4"
+    },
+    {
+      "label": "Next disabled on unsolved current checkpoint"
+    },
+    {
+      "label": "onStep called after presentation apply"
+    },
+    {
+      "label": "Blocked forward jump at current gate does not reapply snapshot"
+    },
+    {
+      "label": "Blocked forward jump retains resolved hash"
+    },
+    {
+      "label": "Jump from earlier theory cannot bypass checkpoint"
+    },
+    {
+      "label": "Cold Go clamps and applies checkpoint"
+    },
+    {
+      "label": "Cold checkpoint at index0 still applies snapshot"
+    },
+    {
+      "label": "Hashchange jump is clamped to gate"
+    },
+    {
+      "label": "Blocked hashchange does not reset current viewer"
+    },
+    {
+      "label": "Browser forward hash cannot bypass unsolved gate"
+    },
+    {
+      "label": "Missing controller fails closed before Go mutations"
+    },
+    {
+      "label": "Missing controller fails closed before PresentBegin mutations",
+      "detail": [
+        [
+          "hash",
+          "#step=4"
+        ],
+        [
+          "apply",
+          "propane"
+        ],
+        [
+          "exit-url",
+          "design/theory-library.html?v=alkynes-library-20261022"
+        ]
+      ]
+    },
+    {
+      "label": "Checkpoint cleanup occurs before library Exit redirect",
+      "detail": [
+        [
+          "exit-url",
+          "design/theory-library.html?v=alkynes-library-20261022"
+        ]
+      ]
+    },
+    {
+      "label": "Unknown in-memory checkpoint fails closed before destination mutation"
+    },
+    {
+      "label": "Invalid checkpoint Update leaves stored step intact"
+    },
+    {
+      "label": "Cold URL boot preserves checkpoint metadata and version"
+    },
+    {
+      "label": "Cold URL boot gates requested later hash before apply"
+    },
+    {
+      "label": "Default preload preserves checkpoint metadata and version"
+    },
+    {
+      "label": "Default preload presentation gates later hash"
+    }
+  ]
+}

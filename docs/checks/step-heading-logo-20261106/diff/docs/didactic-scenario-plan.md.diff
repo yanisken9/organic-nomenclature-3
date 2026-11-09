@@ -1,0 +1,71 @@
+--- before/docs/didactic-scenario-plan.md
++++ after/docs/didactic-scenario-plan.md
+@@ -28,7 +28,7 @@
+ > per-card Save/Steps/Export/Play); Export writes one card per file in this
+ > shape. Working-copy field notes: there is no Menu checkbox (menu is derived
+ > from picks), no `Text` checkbox (heading + text show automatically iff the
+-> step carries title or note — legacy `show.text` is ignored/self-healing),
++> step carries title, valid `titleLogo` or note — legacy `show.text` is ignored/self-healing),
+ > and `styleHighlight` is additive (`bondAtoms`, `numberingAtoms`).
+ > `menuGroups` is additive (`molecules` default = flat list, `chemclass` /
+ > `series` classify the picked subset; unknown values coerce out, missing or
+@@ -297,11 +297,21 @@
+   + edit mode. Eye-hiding the highlighted box also repaints the 2D SVG
+   so its highlight vanishes at once.
+ * `title` is the step heading: in presentation it replaces the
+-  page `#pageTitle` (number pill `<span class="scStepNumberTitle">N.</span>`
+-  currently disabled — append commented out 2026-10-11, headings render
+-  title-only; span construction + pill CSS kept for revert); on exit the
+-  app title is
+-  restored. `note` is the educational paragraph in `#scStepText`
++  page `#pageTitle`, preceded by the number pill
++  `<span class="scStepNumberTitle">N.</span>` unless the scenario's
++  `showStepNumbers` is `false`. On exit the app title is restored.
++  Optional `titleLogo: "workshop"` displays the existing local
++  `games/assets/name-repair/workshop-logo-3d-v1.png` in place of visible
++  heading text. Only this preset is accepted; arbitrary HTML and image URLs
++  are not accepted. The `title` string remains the accessible heading and
++  the visible fallback while the image loads or if loading fails; a blank
++  title uses the preset's `Συνεργείο ονομάτων` fallback. Step numbering still
++  follows `showStepNumbers`. Unknown/invalid present `titleLogo` values
++  are removed during import with a warning, falling back to the text title.
++  Missing values stay absent; clearing the authoring choice deletes the
++  field. Import/export, Update and Duplicate retain valid choices without
++  changing the scenario version or adding the field to plain-title steps.
++  `note` is the educational paragraph in `#scStepText`
+   directly below the title. `noteFormat: "text"` (default/legacy) keeps
+   the escape-first subset (`<b>`, `<i>`, `<u>`, `<sup>`, `<sub>`,
+   `<ul>`, `<ol>`, `<li>`, `<small>`, `<big>`); `noteFormat: "html"`
+@@ -315,8 +325,8 @@
+   with a dirty-close confirm. New notes default to HTML; legacy text notes
+   render safely and upgrade on first edit. Presentation keeps the v50 top/left/right rails and
+   has no separate wide/focus mode. Heading +
+-  text show automatically iff the step carries a title or note;
+-  clear both for a silent visual step (app title kept). Author
++  text show automatically iff the step carries a title, valid title logo or note;
++  clear all three for a silent visual step (app title kept). Author
+   mode always shows the app title and hides the text div (text is
+   written in the drawer textarea).
+ 
+@@ -372,7 +382,11 @@
+ * Step rows: number + type badge (`molecule`/`menu`, key in tooltip)
+   stacked in `.scStepNumberWrap`, step title (`Τίτλος βήματος` label
+   above the field, defaults to the live Greek IUPAC name at Save —
+-  key fallback, `"menu"` for menu-only), per-step educational text
++  key fallback, `"menu"` for menu-only), labelled `Μορφή τίτλου` select
++  (`Κείμενο τίτλου` / `Λογότυπο Συνεργείου`) with a small logo preview.
++  The title field supplies the accessible/fallback text when a logo is chosen.
++  `Go` keeps the app title in authoring; `Present` renders the chosen step heading.
++  Per-step educational text
+   (`note` rich editor with formatting toolbar: `B I sup sub`, clear, UL/OL
+   lists, per-block font-size dropdown (`14/18/22/26`), left/center/right
+   alignment dropdown (WYSIWYG only), image file dialog/table and icon-only
+@@ -401,7 +415,7 @@
+    0-based index; card Play omits it and starts at step 1), `Update`
+   (rewrite the step's stored view snapshot from the current live view:
+   Go → tweak molecule, 2D/3D modes + styles, naming clicks/toggles,
+-   camera, pick → Update; preserves `title`/`note` + the 4 chrome
++   camera, pick → Update; preserves `title`/optional `titleLogo`/`note` + the 4 chrome
+    checkboxes + `show.nameEye` + `menuGroups` + `styleText` (legacy size, parsed width, columns, position), refreshes everything visual incl. `nameAnalysisMode`,
+    `styleName.hidden` (from the live eye toggles),
+    `menuSubset`/`show.menu`/`show.viewers`; toasts kind/subset changes),

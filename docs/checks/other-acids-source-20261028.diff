@@ -1,0 +1,243 @@
+--- before/js/jsme-nick-nomeclature-moc2-data_52.js
++++ after/js/jsme-nick-nomeclature-moc2-data_52.js
+@@ -1620,6 +1620,12 @@
+   ethyl_2_methyl_3_pentanoic_acid: {"formula": "CH3CH2CH(CH3)CH(CH2CH3)COOH", "mainChain_Condensed": [1, 2, 3, 4, 5], "mainChain_Expanded": [1, 2, 3, 4, 5], "mainChain_Skeletal": [1, 2, 3, 4, 5], "mainChain3D": [8, 4, 3, 5, 9]},
+   ethyl_3_isopropyl_2_dimethyl_4_5_hexanoic_acid: {"formula": "CH3CH(CH3)CH(CH3)CH(CH2CH3)CH(CH(CH3)2)COOH", "mainChain_Condensed": [1, 2, 3, 4, 5, 6], "mainChain_Expanded": [1, 2, 3, 4, 5, 6], "mainChain_Skeletal": [1, 2, 3, 4, 5, 6], "mainChain3D": [1, 2, 3, 4, 5, 6]},
+ 
++  // Four unsaturated mono-/dicarboxylic acids, 2026-10-28.
++  methyl_2_propenoic_acid: {"formula": "CH2=C(CH3)COOH", "mainChain_Condensed": [1, 2, 3], "mainChain_Expanded": [1, 2, 3], "mainChain_Skeletal": [1, 2, 3], "mainChain3D": [1, 2, 3]},
++  ethyl_2_methyl_3_penten_2_yn_4_oic_acid: {"formula": "CH_CC(CH3)=C(CH2CH3)COOH", "mainChain_Condensed": [1, 2, 3, 4, 5], "mainChain_Expanded": [1, 2, 3, 4, 5], "mainChain_Skeletal": [1, 2, 3, 4, 5], "mainChain3D": [1, 2, 3, 4, 5]},
++  ethyl_3_isopropyl_2_dimethyl_4_5_hexadien_2_4_dioic_acid: {"formula": "HOOCC(CH3)=C(CH3)C(CH2CH3)=C(CH(CH3)2)COOH", "mainChain_Condensed": [1, 2, 3, 4, 5, 6], "mainChain_Expanded": [1, 2, 3, 4, 5, 6], "mainChain_Skeletal": [1, 2, 3, 4, 5, 6], "mainChain3D": [1, 2, 3, 4, 5, 6]},
++  ethyl_2_isopropyl_3_dimethyl_6_6_hepten_2_yn_4_dioic_acid: {"formula": "HOOCC(CH3)2C_CC(CH(CH3)2)=C(CH2CH3)COOH", "mainChain_Condensed": [1, 2, 3, 4, 5, 6, 7], "mainChain_Expanded": [1, 2, 3, 4, 5, 6, 7], "mainChain_Skeletal": [1, 2, 3, 4, 5, 6, 7], "mainChain3D": [1, 2, 3, 4, 5, 6, 7]},
++
+ };
+ 
+ let methane_2D_Condensed =
+@@ -6281,3 +6287,21 @@
+ let ethyl_3_isopropyl_2_dimethyl_4_5_hexanoic_acid_2D_Expanded = "ethyl_3_isopropyl_2_dimethyl_4_5_hexanoic_acid_2D_Expanded\n     RDKit          2D\n\n 41 40  0  0  0  0  0  0  0  0999 V2000\n   -0.0000    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.1700    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.3400    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -3.5100    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -4.6800    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -5.8500    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.1700   -4.0950    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.0000   -4.0950    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.3400   -4.0950    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.3400    2.3400    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.1700    2.3400    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -3.5100   -1.7550    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -4.6800    1.7550    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.0000    1.1700    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n    1.1700    0.0000    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.1700    0.7800    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.3400   -0.7800    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -3.5100    0.7800    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -4.6800   -0.7800    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -5.8500   -0.7800    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -5.8500    0.7800    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -6.6300    0.0000    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.1700   -4.8750    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.0000   -4.8750    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.0000   -3.3150    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.7800   -4.0950    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.3400   -4.8750    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.3400   -3.3150    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -3.1200   -4.0950    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.3400    3.1200    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -3.1200    2.3400    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.1700    1.5600    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.1700    3.1200    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.3900    2.3400    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -3.5100   -2.5350    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -4.2900   -1.7550    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.7300   -1.7550    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -4.6800    2.5350    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -5.4600    1.7550    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -3.9000    1.7550    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.9500    0.0000    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0\n  2  3  1  0\n  3  4  1  0\n  4  5  1  0\n  5  6  1  0\n  2  7  1  0\n  7  8  1  0\n  7  9  1  0\n  3 10  1  0\n 10 11  1  0\n  4 12  1  0\n  5 13  1  0\n  1 14  2  0\n  1 15  1  0\n  2 16  1  0\n  3 17  1  0\n  4 18  1  0\n  5 19  1  0\n  6 20  1  0\n  6 21  1  0\n  6 22  1  0\n  7 23  1  0\n  8 24  1  0\n  8 25  1  0\n  8 26  1  0\n  9 27  1  0\n  9 28  1  0\n  9 29  1  0\n 10 30  1  0\n 10 31  1  0\n 11 32  1  0\n 11 33  1  0\n 11 34  1  0\n 12 35  1  0\n 12 36  1  0\n 12 37  1  0\n 13 38  1  0\n 13 39  1  0\n 13 40  1  0\n 15 41  1  0\nM  END\n";
+ let ethyl_3_isopropyl_2_dimethyl_4_5_hexanoic_acid_2D_Skeletal = "ethyl_3_isopropyl_2_dimethyl_4_5_hexanoic_acid_2D_Skeletal\n     RDKit          2D\n\n 15 14  0  0  0  0  0  0  0  0999 V2000\n    2.0802    0.1162    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.0066   -0.3487    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.0671    0.3487    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.0066   -0.1162    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.9460    0.5811    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -3.0197    0.1162    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.8724   -1.5110    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.2013   -1.9759    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.8118   -2.2083    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.2013    1.5110    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.7381    2.2083    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.1408   -1.2785    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.8118    1.7434    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.0197   -0.5811    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n    2.2144    1.2785    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0\n  2  3  1  0\n  3  4  1  0\n  4  5  1  0\n  5  6  1  0\n  2  7  1  0\n  7  8  1  0\n  7  9  1  0\n  3 10  1  0\n 10 11  1  0\n  4 12  1  0\n  5 13  1  0\n  1 14  2  0\n  1 15  1  0\nM  END\n";
+ window.MOL2D["ethyl_3_isopropyl_2_dimethyl_4_5_hexanoic_acid"] = {condensed: ethyl_3_isopropyl_2_dimethyl_4_5_hexanoic_acid_2D_Condensed, expanded: ethyl_3_isopropyl_2_dimethyl_4_5_hexanoic_acid_2D_Expanded, skeletal: ethyl_3_isopropyl_2_dimethyl_4_5_hexanoic_acid_2D_Skeletal};
++
++// Four unsaturated mono-/dicarboxylic acids, existing MOL2D conventions.
++let methyl_2_propenoic_acid_2D_Condensed = "methyl_2_propenoic_acid_2D_Condensed\n     RDKit          2D\n\n  6  5  0  1  0  0  0  0  0  0999 V2000\n   -0.0000    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.4040    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.8080    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.4040   -1.1700    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.7020    1.2159    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n    1.4040    0.0000    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0\n  2  3  2  0\n  2  4  1  0\n  1  5  2  0\n  1  6  1  0\nM  STY  1   1 SUP\nM  SAL   1  3   1   5   6\nM  SBL   1  1   1\nM  SMT   1 COOH\nM  END\n";
++let methyl_2_propenoic_acid_2D_Expanded = "methyl_2_propenoic_acid_2D_Expanded\n     RDKit          2D\n\n 12 11  0  0  0  0  0  0  0  0999 V2000\n   -0.0000    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.1700    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.3400    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.1700   -1.7550    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.0000    1.1700    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n    1.1700    0.0000    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.3400   -0.7800    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.3400    0.7800    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.1700   -2.5350    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.9500   -1.7550    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.3900   -1.7550    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.9500    0.0000    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0\n  2  3  2  0\n  2  4  1  0\n  1  5  2  0\n  1  6  1  0\n  3  7  1  0\n  3  8  1  0\n  4  9  1  0\n  4 10  1  0\n  4 11  1  0\n  6 12  1  0\nM  END\n";
++let methyl_2_propenoic_acid_2D_Skeletal = "methyl_2_propenoic_acid_2D_Skeletal\n     RDKit          2D\n\n  6  5  0  0  0  0  0  0  0  0999 V2000\n    0.5066    0.2925    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.5066   -0.2925    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.5199    0.2925    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.5066   -1.4625    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.5199   -0.2925    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n    0.5066    1.4625    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0\n  2  3  2  0\n  2  4  1  0\n  1  5  2  0\n  1  6  1  0\nM  END\n";
++window.MOL2D["methyl_2_propenoic_acid"] = {condensed: methyl_2_propenoic_acid_2D_Condensed, expanded: methyl_2_propenoic_acid_2D_Expanded, skeletal: methyl_2_propenoic_acid_2D_Skeletal};
++let ethyl_2_methyl_3_penten_2_yn_4_oic_acid_2D_Condensed = "ethyl_2_methyl_3_penten_2_yn_4_oic_acid_2D_Condensed\n     RDKit          2D\n\n 10  9  0  1  0  0  0  0  0  0999 V2000\n   -0.0000    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.4040    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.8080    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -4.2120    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -5.6160    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.4040    1.1700    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.8080    1.1700    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.8080   -1.1700    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.7020    1.2159    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n    1.4040    0.0000    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0\n  2  3  2  0\n  3  4  1  0\n  4  5  3  0\n  2  6  1  0\n  6  7  1  0\n  3  8  1  0\n  1  9  2  0\n  1 10  1  0\nM  STY  1   1 SUP\nM  SAL   1  3   1   9  10\nM  SBL   1  1   1\nM  SMT   1 COOH\nM  END\n";
++let ethyl_2_methyl_3_penten_2_yn_4_oic_acid_2D_Expanded = "ethyl_2_methyl_3_penten_2_yn_4_oic_acid_2D_Expanded\n     RDKit          2D\n\n 20 19  0  0  0  0  0  0  0  0999 V2000\n   -0.0000    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.1700    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.3400    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -3.5100    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -4.6800    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.1700    2.3400    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.3400    2.3400    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.3400   -1.7550    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.0000    1.1700    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n    1.1700    0.0000    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n   -5.4600    0.0000    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.1700    3.1200    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.3900    2.3400    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.3400    1.5600    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.3400    3.1200    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -3.1200    2.3400    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.3400   -2.5350    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -3.1200   -1.7550    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.5600   -1.7550    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.9500    0.0000    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0\n  2  3  2  0\n  3  4  1  0\n  4  5  3  0\n  2  6  1  0\n  6  7  1  0\n  3  8  1  0\n  1  9  2  0\n  1 10  1  0\n  5 11  1  0\n  6 12  1  0\n  6 13  1  0\n  7 14  1  0\n  7 15  1  0\n  7 16  1  0\n  8 17  1  0\n  8 18  1  0\n  8 19  1  0\n 10 20  1  0\nM  END\n";
++let ethyl_2_methyl_3_penten_2_yn_4_oic_acid_2D_Skeletal = "ethyl_2_methyl_3_penten_2_yn_4_oic_acid_2D_Skeletal\n     RDKit          2D\n\n 10  9  0  0  0  0  0  0  0  0999 V2000\n    1.6827    0.3323    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.5609    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.2878    0.8053    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.4096    0.4730    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.5314    0.1407    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.2878   -1.1377    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.1365   -1.9430    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.0147    1.9430    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.5314   -0.4730    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n    1.9558    1.4700    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0\n  2  3  2  0\n  3  4  1  0\n  4  5  3  0\n  2  6  1  0\n  6  7  1  0\n  3  8  1  0\n  1  9  2  0\n  1 10  1  0\nM  END\n";
++window.MOL2D["ethyl_2_methyl_3_penten_2_yn_4_oic_acid"] = {condensed: ethyl_2_methyl_3_penten_2_yn_4_oic_acid_2D_Condensed, expanded: ethyl_2_methyl_3_penten_2_yn_4_oic_acid_2D_Expanded, skeletal: ethyl_2_methyl_3_penten_2_yn_4_oic_acid_2D_Skeletal};
++let ethyl_3_isopropyl_2_dimethyl_4_5_hexadien_2_4_dioic_acid_2D_Condensed = "ethyl_3_isopropyl_2_dimethyl_4_5_hexadien_2_4_dioic_acid_2D_Condensed\n     RDKit          2D\n\n 17 16  0  2  0  0  0  0  0  0999 V2000\n   -0.0000    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.4040    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.8080    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -4.2120    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -5.6160    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -7.0200    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.4040   -2.3400    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.0000   -2.3400    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.8080   -2.3400    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.8080    1.1700    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.4040    1.1700    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -4.2120   -1.1700    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -5.6160    1.1700    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.7020    1.2159    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n    1.4040    0.0000    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n   -7.7220    1.2159    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n   -8.4240    0.0000    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0\n  2  3  2  0\n  3  4  1  0\n  4  5  2  0\n  5  6  1  0\n  2  7  1  0\n  7  8  1  0\n  7  9  1  0\n  3 10  1  0\n 10 11  1  0\n  4 12  1  0\n  5 13  1  0\n  1 14  2  0\n  1 15  1  0\n  6 16  2  0\n  6 17  1  0\nM  STY  2   1 SUP   2 SUP\nM  SAL   1  3   1  14  15\nM  SBL   1  1   1\nM  SMT   1 COOH\nM  SAL   2  3   6  16  17\nM  SBL   2  1   5\nM  SMT   2 COOH\nM  END\n";
++let ethyl_3_isopropyl_2_dimethyl_4_5_hexadien_2_4_dioic_acid_2D_Expanded = "ethyl_3_isopropyl_2_dimethyl_4_5_hexadien_2_4_dioic_acid_2D_Expanded\n     RDKit          2D\n\n 37 36  0  0  0  0  0  0  0  0999 V2000\n   -0.0000    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.1700    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.3400    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -3.5100    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -4.6800    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -5.8500    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.1700   -3.5100    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.0000   -3.5100    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.3400   -3.5100    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.3400    2.3400    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.1700    2.3400    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -3.5100   -1.7550    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -4.6800    1.7550    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.0000    1.1700    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n    1.1700    0.0000    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n   -5.8500    1.1700    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n   -7.0200    0.0000    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.1700   -4.2900    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.0000   -4.2900    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.0000   -2.7300    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.7800   -3.5100    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.3400   -4.2900    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.3400   -2.7300    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -3.1200   -3.5100    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.3400    3.1200    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -3.1200    2.3400    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.1700    1.5600    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.1700    3.1200    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.3900    2.3400    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -3.5100   -2.5350    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -4.2900   -1.7550    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.7300   -1.7550    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -4.6800    2.5350    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -5.4600    1.7550    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -3.9000    1.7550    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.9500    0.0000    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -7.8000    0.0000    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0\n  2  3  2  0\n  3  4  1  0\n  4  5  2  0\n  5  6  1  0\n  2  7  1  0\n  7  8  1  0\n  7  9  1  0\n  3 10  1  0\n 10 11  1  0\n  4 12  1  0\n  5 13  1  0\n  1 14  2  0\n  1 15  1  0\n  6 16  2  0\n  6 17  1  0\n  7 18  1  0\n  8 19  1  0\n  8 20  1  0\n  8 21  1  0\n  9 22  1  0\n  9 23  1  0\n  9 24  1  0\n 10 25  1  0\n 10 26  1  0\n 11 27  1  0\n 11 28  1  0\n 11 29  1  0\n 12 30  1  0\n 12 31  1  0\n 12 32  1  0\n 13 33  1  0\n 13 34  1  0\n 13 35  1  0\n 15 36  1  0\n 17 37  1  0\nM  END\n";
++let ethyl_3_isopropyl_2_dimethyl_4_5_hexadien_2_4_dioic_acid_2D_Skeletal = "ethyl_3_isopropyl_2_dimethyl_4_5_hexadien_2_4_dioic_acid_2D_Skeletal\n     RDKit          2D\n\n 17 16  0  0  0  0  0  0  0  0999 V2000\n    2.5447    0.2150    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.5031   -0.3178    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.5208    0.3178    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.5208   -0.2150    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.5031    0.4207    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.5447   -0.1122    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.4437   -1.4863    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.4021   -2.0192    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.4260   -2.1220    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.5802    1.4863    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.4021    2.1220    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.5802   -1.3835    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.4437    1.5892    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.5270   -0.4207    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n    2.6041    1.3835    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n   -3.5270    0.5235    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.6041   -1.2807    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0\n  2  3  2  0\n  3  4  1  0\n  4  5  2  0\n  5  6  1  0\n  2  7  1  0\n  7  8  1  0\n  7  9  1  0\n  3 10  1  0\n 10 11  1  0\n  4 12  1  0\n  5 13  1  0\n  1 14  2  0\n  1 15  1  0\n  6 16  2  0\n  6 17  1  0\nM  END\n";
++window.MOL2D["ethyl_3_isopropyl_2_dimethyl_4_5_hexadien_2_4_dioic_acid"] = {condensed: ethyl_3_isopropyl_2_dimethyl_4_5_hexadien_2_4_dioic_acid_2D_Condensed, expanded: ethyl_3_isopropyl_2_dimethyl_4_5_hexadien_2_4_dioic_acid_2D_Expanded, skeletal: ethyl_3_isopropyl_2_dimethyl_4_5_hexadien_2_4_dioic_acid_2D_Skeletal};
++let ethyl_2_isopropyl_3_dimethyl_6_6_hepten_2_yn_4_dioic_acid_2D_Condensed = "ethyl_2_isopropyl_3_dimethyl_6_6_hepten_2_yn_4_dioic_acid_2D_Condensed\n     RDKit          2D\n\n 18 17  0  2  0  0  0  0  0  0999 V2000\n   -0.0000    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.4040    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.8080    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -4.2120    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -5.6160    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -7.0200    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -8.4240    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.4040    1.1700    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.8080    1.1700    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.8080   -2.3400    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.4040   -2.3400    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -4.2120   -2.3400    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -7.0200    1.1700    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -7.0200   -1.1700    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.7020    1.2159    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n    1.4040    0.0000    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n   -9.1260    1.2159    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n   -9.8280    0.0000    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0\n  2  3  2  0\n  3  4  1  0\n  4  5  3  0\n  5  6  1  0\n  6  7  1  0\n  2  8  1  0\n  8  9  1  0\n  3 10  1  0\n 10 11  1  0\n 10 12  1  0\n  6 13  1  0\n  6 14  1  0\n  1 15  2  0\n  1 16  1  0\n  7 17  2  0\n  7 18  1  0\nM  STY  2   1 SUP   2 SUP\nM  SAL   1  3   1  15  16\nM  SBL   1  1   1\nM  SMT   1 COOH\nM  SAL   2  3   7  17  18\nM  SBL   2  1   6\nM  SMT   2 COOH\nM  END\n";
++let ethyl_2_isopropyl_3_dimethyl_6_6_hepten_2_yn_4_dioic_acid_2D_Expanded = "ethyl_2_isopropyl_3_dimethyl_6_6_hepten_2_yn_4_dioic_acid_2D_Expanded\n     RDKit          2D\n\n 38 37  0  0  0  0  0  0  0  0999 V2000\n   -0.0000    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.1700    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.3400    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -3.5100    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -4.6800    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -5.8500    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -7.0200    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.1700    2.3400    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.3400    2.3400    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.3400   -2.3400    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.1700   -2.3400    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -3.5100   -2.3400    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -5.8500    1.7550    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -5.8500   -1.7550    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.0000    1.1700    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n    1.1700    0.0000    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n   -7.0200    1.1700    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n   -8.1900    0.0000    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.1700    3.1200    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.3900    2.3400    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.3400    1.5600    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.3400    3.1200    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -3.1200    2.3400    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.3400   -3.1200    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.1700   -3.1200    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.1700   -1.5600    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.3900   -2.3400    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -3.5100   -3.1200    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -3.5100   -1.5600    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -4.2900   -2.3400    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -5.8500    2.5350    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -6.6300    1.7550    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -5.0700    1.7550    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -5.8500   -2.5350    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -6.6300   -1.7550    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -5.0700   -1.7550    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.9500    0.0000    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -8.9700    0.0000    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0\n  2  3  2  0\n  3  4  1  0\n  4  5  3  0\n  5  6  1  0\n  6  7  1  0\n  2  8  1  0\n  8  9  1  0\n  3 10  1  0\n 10 11  1  0\n 10 12  1  0\n  6 13  1  0\n  6 14  1  0\n  1 15  2  0\n  1 16  1  0\n  7 17  2  0\n  7 18  1  0\n  8 19  1  0\n  8 20  1  0\n  9 21  1  0\n  9 22  1  0\n  9 23  1  0\n 10 24  1  0\n 11 25  1  0\n 11 26  1  0\n 11 27  1  0\n 12 28  1  0\n 12 29  1  0\n 12 30  1  0\n 13 31  1  0\n 13 32  1  0\n 13 33  1  0\n 14 34  1  0\n 14 35  1  0\n 14 36  1  0\n 16 37  1  0\n 18 38  1  0\nM  END\n";
++let ethyl_2_isopropyl_3_dimethyl_6_6_hepten_2_yn_4_dioic_acid_2D_Skeletal = "ethyl_2_isopropyl_3_dimethyl_6_6_hepten_2_yn_4_dioic_acid_2D_Skeletal\n     RDKit          2D\n\n 18 17  0  0  0  0  0  0  0  0999 V2000\n    3.2342   -0.0906    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.1081   -0.4082    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.2700    0.4082    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.1440    0.0906    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.9821   -0.2270    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.1081   -0.5447    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.9462    0.2717    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.8202   -1.5422    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.6583   -2.3586    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.5580    1.5422    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.7199    2.3586    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.6841    1.8598    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -3.0577   -1.2283    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.5998   -1.5985    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    4.0723   -0.9070    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n    3.5222    1.0434    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.6583    1.4057    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n   -4.0723   -0.0459    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0\n  2  3  2  0\n  3  4  1  0\n  4  5  3  0\n  5  6  1  0\n  6  7  1  0\n  2  8  1  0\n  8  9  1  0\n  3 10  1  0\n 10 11  1  0\n 10 12  1  0\n  6 13  1  0\n  6 14  1  0\n  1 15  2  0\n  1 16  1  0\n  7 17  2  0\n  7 18  1  0\nM  END\n";
++window.MOL2D["ethyl_2_isopropyl_3_dimethyl_6_6_hepten_2_yn_4_dioic_acid"] = {condensed: ethyl_2_isopropyl_3_dimethyl_6_6_hepten_2_yn_4_dioic_acid_2D_Condensed, expanded: ethyl_2_isopropyl_3_dimethyl_6_6_hepten_2_yn_4_dioic_acid_2D_Expanded, skeletal: ethyl_2_isopropyl_3_dimethyl_6_6_hepten_2_yn_4_dioic_acid_2D_Skeletal};
+--- before/js/mulermoc-nom-core-52.js
++++ after/js/mulermoc-nom-core-52.js
+@@ -759,6 +759,49 @@
+              (b[1]-1 === acidC && types[b[0]-1] === 'O')))) &&
+         fIsAcyclicHydrocarbonGraph(conn, types.map(t => t === 'O' ? 'H' : t))
+ }
++// One/two terminal COOH groups, otherwise an unsaturated acyclic C/H skeleton.
++// Exclude esters, mixed O functions, other elements and carbon rings.
++function fIsAcyclicUnsaturatedAcidGraph(conn, types, bonds) {
++    if (!Array.isArray(conn) || !Array.isArray(types) || !Array.isArray(bonds) ||
++        types.some(t => !['C','H','O'].includes(t))) return false
++    const os = types.map((t,i) => t === 'O' ? i : -1).filter(i => i >= 0)
++    if (![2,4].includes(os.length)) return false
++    const groups = new Map()
++    for (const o of os) {
++        const ns = (conn[o] || []).filter(n => types[n] !== 'H')
++        if (ns.length !== 1 || types[ns[0]] !== 'C') return false
++        const c = ns[0], ob = bonds.filter(b => b[0]-1 === o || b[1]-1 === o)
++        const co = ob.find(b => b[0]-1 === c || b[1]-1 === c)
++        if (!co || ![1,2].includes(co[2])) return false
++        if (co[2] === 2 ? ob.length !== 1 : ob.length > 2 || ob.some(b =>
++            b !== co && (b[2] !== 1 || types[(b[0]-1 === o ? b[1] : b[0])-1] !== 'H'))) return false
++        if (!groups.has(c)) groups.set(c, [])
++        groups.get(c).push(co[2])
++    }
++    if (groups.size !== os.length/2 || [...groups].some(([c, orders]) =>
++        orders.length !== 2 || orders.sort().join(',') !== '1,2' ||
++        (conn[c] || []).filter(n => types[n] === 'C').length !== 1)) return false
++    if (types.some((t,i) => t === 'C' && bonds.filter(b =>
++        b[0]-1 === i || b[1]-1 === i).reduce((sum,b) => sum+b[2], 0) > 4)) return false
++    // Analysis connectivity deliberately omits H; validate H against full bonds.
++    if (types.some((t,i) => {
++        if (t !== 'H') return false
++        const hb = bonds.filter(b => b[0]-1 === i || b[1]-1 === i)
++        return hb.length !== 1 || hb[0][2] !== 1 ||
++            !['C','O'].includes(types[(hb[0][0]-1 === i ? hb[0][1] : hb[0][0])-1])
++    })) return false
++    if (!bonds.some(b => types[b[0]-1] === 'C' && types[b[1]-1] === 'C' && b[2] > 1)) return false
++    if (!bonds.every(b => {
++        const a = types[b[0]-1], c = types[b[1]-1]
++        return a === 'C' && c === 'C' ? [1,2,3].includes(b[2]) :
++            a === 'O' || c === 'O' ? [1,2].includes(b[2]) : b[2] === 1
++    })) return false
++    return fIsAcyclicHydrocarbonGraph(conn, types.map(t => t === 'O' ? 'H' : t))
++}
++function fSupportsAcyclicAcidGraph(conn, types, bonds) {
++    return fIsAcyclicSaturatedMonoacidGraph(conn, types, bonds) ||
++        fIsAcyclicUnsaturatedAcidGraph(conn, types, bonds)
++}
+ // Bounded support: one acyclic, saturated C-O-C ether, no other elements.
+ function fIsAcyclicMonoetherGraph(conn, types, bonds) {
+     if (!Array.isArray(conn) || !Array.isArray(types) || !Array.isArray(bonds)) return false
+@@ -821,11 +864,17 @@
+     return groups.sort((a,b)=>fEtherNameSortKey(a.name)<fEtherNameSortKey(b.name)?-1:1)
+ }
+ function fSupportsAlkylBranchPrefixes() {
++    // This acid extension supports alkyl branches only, never alkenyl/alkynyl.
++    if (functionalGroupsList.length === 1 && functionalGroupsList[0] === 'carboxylicAcid' &&
++        fIsAcyclicUnsaturatedAcidGraph(atomConnectivityList, allAtomsTypeList, bondList) &&
++        bondList.some(([a,b,order]) => order > 1 &&
++            allAtomsTypeList[a-1] === 'C' && allAtomsTypeList[b-1] === 'C' &&
++            (!mainChainAtomsList.includes(a) || !mainChainAtomsList.includes(b)))) return false
+     return functionalGroupsList.length === 1 && (functionalGroupsList[0] === 'hydrocarbon' ||
+         (functionalGroupsList[0] === 'aldehyde' &&
+             fIsAcyclicAldehydeGraph(atomConnectivityList, allAtomsTypeList, bondList)) ||
+         (functionalGroupsList[0] === 'carboxylicAcid' &&
+-            fIsAcyclicSaturatedMonoacidGraph(atomConnectivityList, allAtomsTypeList, bondList)) ||
++            fSupportsAcyclicAcidGraph(atomConnectivityList, allAtomsTypeList, bondList)) ||
+         (functionalGroupsList[0] === 'ketone' &&
+             fIsAcyclicKetoneGraph(atomConnectivityList, allAtomsTypeList, bondList)) ||
+         (functionalGroupsList[0] === 'alcohol' &&
+@@ -870,8 +919,9 @@
+         }
+     }
+ 
+-    // Two terminal CHO groups tie: compare multiple bonds, then alkyl locants.
+-    if (fIsAcyclicAldehydeGraph(atomConnectivityList, allAtomsTypeList, bondList) &&
++    // Two eligible terminal CHO/COOH groups tie: compare bonds, then alkyl locants.
++    if ((fIsAcyclicAldehydeGraph(atomConnectivityList, allAtomsTypeList, bondList) ||
++        fIsAcyclicUnsaturatedAcidGraph(atomConnectivityList, allAtomsTypeList, bondList)) &&
+         termFgKeys.filter(k => oriented.includes(Number(k)) && terminalFgCarbons[k] === forcedC1Priority).length === 2) forcedC1 = -1
+     if (forcedC1 >= 0) {
+         // Forced-C1 must be at index 0
+@@ -928,7 +978,7 @@
+                 if (pos >= 0) locants.push(pos + 1)
+             }
+             // v49: acyclic hydrocarbon alkyl branches join the detachable-prefix tier
+-            if ((fIsAcyclicHydrocarbonGraph(atomConnectivityList, allAtomsTypeList) || fIsAcyclicAlcoholGraph(atomConnectivityList, allAtomsTypeList, bondList) || fIsAcyclicMonoetherGraph(atomConnectivityList, allAtomsTypeList, bondList) || fIsAcyclicAldehydeGraph(atomConnectivityList, allAtomsTypeList, bondList) || fIsAcyclicKetoneGraph(atomConnectivityList, allAtomsTypeList, bondList) || fIsAcyclicSaturatedMonoacidGraph(atomConnectivityList, allAtomsTypeList, bondList))) {
++            if ((fIsAcyclicHydrocarbonGraph(atomConnectivityList, allAtomsTypeList) || fIsAcyclicAlcoholGraph(atomConnectivityList, allAtomsTypeList, bondList) || fIsAcyclicMonoetherGraph(atomConnectivityList, allAtomsTypeList, bondList) || fIsAcyclicAldehydeGraph(atomConnectivityList, allAtomsTypeList, bondList) || fIsAcyclicKetoneGraph(atomConnectivityList, allAtomsTypeList, bondList) || fSupportsAcyclicAcidGraph(atomConnectivityList, allAtomsTypeList, bondList))) {
+                 locants.push(...fCarbonBranchLocants(path, atomConnectivityList, allAtomsTypeList))
+             }
+             locants.sort(function(a, b) { return a - b })
+@@ -994,8 +1044,9 @@
+                             })
+                             return pairs
+                         }
+-                        if (!Object.keys(ccDoubleBondKeys).length && !Object.keys(ccTripleBondKeys).length &&
+-                            (fIsAcyclicHydrocarbonGraph(atomConnectivityList, allAtomsTypeList) || fIsAcyclicAlcoholGraph(atomConnectivityList, allAtomsTypeList, bondList) || fIsAcyclicMonoetherGraph(atomConnectivityList, allAtomsTypeList, bondList) || fIsAcyclicAldehydeGraph(atomConnectivityList, allAtomsTypeList, bondList) || fIsAcyclicKetoneGraph(atomConnectivityList, allAtomsTypeList, bondList) || fIsAcyclicSaturatedMonoacidGraph(atomConnectivityList, allAtomsTypeList, bondList))) {
++                        if (((!Object.keys(ccDoubleBondKeys).length && !Object.keys(ccTripleBondKeys).length) ||
++                        fIsAcyclicUnsaturatedAcidGraph(atomConnectivityList, allAtomsTypeList, bondList)) &&
++                            (fIsAcyclicHydrocarbonGraph(atomConnectivityList, allAtomsTypeList) || fIsAcyclicAlcoholGraph(atomConnectivityList, allAtomsTypeList, bondList) || fIsAcyclicMonoetherGraph(atomConnectivityList, allAtomsTypeList, bondList) || fIsAcyclicAldehydeGraph(atomConnectivityList, allAtomsTypeList, bondList) || fIsAcyclicKetoneGraph(atomConnectivityList, allAtomsTypeList, bondList) || fSupportsAcyclicAcidGraph(atomConnectivityList, allAtomsTypeList, bondList))) {
+                             if (fCompareLocantSets(
+                                 fCarbonBranchAlphabeticalKey(rev, atomConnectivityList, allAtomsTypeList),
+                                 fCarbonBranchAlphabeticalKey(oriented, atomConnectivityList, allAtomsTypeList)) < 0) useForward = false
+@@ -1532,7 +1583,8 @@
+         }
+     }
+ 
+-    if (fIsAcyclicAldehydeGraph(atomConnectivityList3D, allAtomsTypeList3D, bondList3D) &&
++    if ((fIsAcyclicAldehydeGraph(atomConnectivityList3D, allAtomsTypeList3D, bondList3D) ||
++        fIsAcyclicUnsaturatedAcidGraph(atomConnectivityList3D, allAtomsTypeList3D, bondList3D)) &&
+         termFgKeys3D.filter(k => oriented3D.includes(Number(k)) && terminalFgCarbons3D[k] === forcedC1Priority3D).length === 2) forcedC1_3D = -1
+     if (forcedC1_3D >= 0) {
+         if (oriented3D[oriented3D.length - 1] === forcedC1_3D) {
+@@ -1577,7 +1629,7 @@
+                 if (pos >= 0) locants.push(pos + 1)
+             }
+             // v49: acyclic hydrocarbon alkyl branches join the detachable-prefix tier
+-            if ((fIsAcyclicHydrocarbonGraph(atomConnectivityList3D, allAtomsTypeList3D) || fIsAcyclicAlcoholGraph(atomConnectivityList3D, allAtomsTypeList3D, bondList3D) || fIsAcyclicMonoetherGraph(atomConnectivityList3D, allAtomsTypeList3D, bondList3D) || fIsAcyclicAldehydeGraph(atomConnectivityList3D, allAtomsTypeList3D, bondList3D) || fIsAcyclicKetoneGraph(atomConnectivityList3D, allAtomsTypeList3D, bondList3D) || fIsAcyclicSaturatedMonoacidGraph(atomConnectivityList3D, allAtomsTypeList3D, bondList3D))) {
++            if ((fIsAcyclicHydrocarbonGraph(atomConnectivityList3D, allAtomsTypeList3D) || fIsAcyclicAlcoholGraph(atomConnectivityList3D, allAtomsTypeList3D, bondList3D) || fIsAcyclicMonoetherGraph(atomConnectivityList3D, allAtomsTypeList3D, bondList3D) || fIsAcyclicAldehydeGraph(atomConnectivityList3D, allAtomsTypeList3D, bondList3D) || fIsAcyclicKetoneGraph(atomConnectivityList3D, allAtomsTypeList3D, bondList3D) || fSupportsAcyclicAcidGraph(atomConnectivityList3D, allAtomsTypeList3D, bondList3D))) {
+                 locants.push(...fCarbonBranchLocants(path, atomConnectivityList3D, allAtomsTypeList3D))
+             }
+             locants.sort(function(a, b) { return a - b })
+@@ -1617,8 +1669,9 @@
+                     const revSub3D = getSubstituentLocantSet3D(rev3D)
+                     if (lexLess3D(revSub3D, fwdSub3D)) useForward3D = false
+                     else if (!lexLess3D(fwdSub3D, revSub3D) &&
+-                        !Object.keys(ccDoubleBondKeys3D).length && !Object.keys(ccTripleBondKeys3D).length &&
+-                        (fIsAcyclicHydrocarbonGraph(atomConnectivityList3D, allAtomsTypeList3D) || fIsAcyclicAlcoholGraph(atomConnectivityList3D, allAtomsTypeList3D, bondList3D)) &&
++                        ((!Object.keys(ccDoubleBondKeys3D).length && !Object.keys(ccTripleBondKeys3D).length) ||
++                        fIsAcyclicUnsaturatedAcidGraph(atomConnectivityList3D, allAtomsTypeList3D, bondList3D)) &&
++                        (fIsAcyclicHydrocarbonGraph(atomConnectivityList3D, allAtomsTypeList3D) || fIsAcyclicAlcoholGraph(atomConnectivityList3D, allAtomsTypeList3D, bondList3D) || fIsAcyclicUnsaturatedAcidGraph(atomConnectivityList3D, allAtomsTypeList3D, bondList3D)) &&
+                         fCompareLocantSets(
+                             fCarbonBranchAlphabeticalKey(rev3D, atomConnectivityList3D, allAtomsTypeList3D),
+                             fCarbonBranchAlphabeticalKey(oriented3D, atomConnectivityList3D, allAtomsTypeList3D)) < 0) useForward3D = false
+@@ -2063,7 +2116,7 @@
+             scored = scored.filter(c => fCompareLocantSets(multiKey(c), bestMulti) === 0)
+         }
+     }
+-    if ((bestMu === 0 && fIsAcyclicHydrocarbonGraph(connList, typeList)) || alcohol || fIsAcyclicAldehydeGraph(connList, typeList, bonds) || fIsAcyclicKetoneGraph(connList, typeList, bonds) || fIsAcyclicSaturatedMonoacidGraph(connList, typeList, bonds)) {
++    if ((bestMu === 0 && fIsAcyclicHydrocarbonGraph(connList, typeList)) || alcohol || fIsAcyclicAldehydeGraph(connList, typeList, bonds) || fIsAcyclicKetoneGraph(connList, typeList, bonds) || fSupportsAcyclicAcidGraph(connList, typeList, bonds)) {
+         let bestBranches = -1
+         for (const candidate of scored) {
+             candidate.branchCount = fCarbonBranchLocants(candidate.p, connList, typeList).length
+@@ -2392,7 +2445,7 @@
+             }
+             comp0 = bondPrefixTB
+         }
+-        if (mainChainAtomsList.length <= 3) { // Αν η κυρια αλυσιδα είναι μέχρι 3 άτομα C, τότε χωρις αρίθμηση πολλαπλών δεσμων
++        if (mainChainAtomsList.length <= 3 && !(fIsAcyclicUnsaturatedAcidGraph(atomConnectivityList, allAtomsTypeList, bondList) && fGetHydrocarbonSubstituentInfo().length)) { // Αν η κυρια αλυσιδα είναι μέχρι 3 άτομα C, τότε χωρις αρίθμηση πολλαπλών δεσμων
+             bondPrefixDB = ""
+             bondPrefixTB = ""
+             comp0 = null
+--- before/js/mulermoc-nom-molview-52.js
++++ after/js/mulermoc-nom-molview-52.js
+@@ -4188,7 +4188,8 @@
+ // Keep the existing numbering policy elsewhere; animate explicit analysis
+ // of the added ketones and saturated monoacids, not zoom/resize restoration.
+ function fSequentialKetoneNumberingTarget() {
+-  return ['methyl_2_propanoic_acid', 'dimethyl_2_2_propanoic_acid',
++  return ['methyl_2_propenoic_acid', 'ethyl_2_methyl_3_penten_2_yn_4_oic_acid', 'ethyl_3_isopropyl_2_dimethyl_4_5_hexadien_2_4_dioic_acid', 'ethyl_2_isopropyl_3_dimethyl_6_6_hepten_2_yn_4_dioic_acid',
++    'methyl_2_propanoic_acid', 'dimethyl_2_2_propanoic_acid',
+     'ethyl_2_methyl_3_pentanoic_acid',
+     'ethyl_3_isopropyl_2_dimethyl_4_5_hexanoic_acid', 'pentanone_3', 'dimethyl_2_4_pentanone_3',
+     'trimethyl_3_4_4_pentanone_2',
+@@ -5235,7 +5236,9 @@
+ // Main-only projection for the approved three-alkyl acid. Keep the core's
+ // fixed component array and the saved React/scenario contracts unchanged.
+ function fSeparateAcidPrefixBoxes() {
+-  return selectedMol === 'ethyl_3_isopropyl_2_dimethyl_4_5_hexanoic_acid' &&
++  return ['ethyl_3_isopropyl_2_dimethyl_4_5_hexanoic_acid',
++    'ethyl_3_isopropyl_2_dimethyl_4_5_hexadien_2_4_dioic_acid',
++    'ethyl_2_isopropyl_3_dimethyl_6_6_hepten_2_yn_4_dioic_acid'].includes(selectedMol) &&
+     typeof document !== 'undefined' && !!document.documentElement &&
+     document.documentElement.getAttribute('data-namelecule-acid-prefix-boxes') === 'true';
+ }
+--- before/mulermoc-nom-52.html
++++ after/mulermoc-nom-52.html
+@@ -328,10 +328,10 @@
+     <div id="creditsUs"></div>
+   </div>
+ 
+-  <script src="js/jsme-nick-nomeclature-moc2-data_52.js?v=acid-layout-20261028"></script>
++  <script src="js/jsme-nick-nomeclature-moc2-data_52.js?v=other-acids-20261028-h2"></script>
+   <script src="js/ui-icons.js?v=v52-sync-20261027-r2"></script>
+-  <script src="js/mulermoc-nom-core-52.js?v=acids-20261028"></script>
+-  <script src="js/mulermoc-nom-molview-52.js?v=name-font-20261028"></script>
++  <script src="js/mulermoc-nom-core-52.js?v=other-acids-20261028-h2"></script>
++  <script src="js/mulermoc-nom-molview-52.js?v=other-acids-20261028-h2"></script>
+   <script src="js/mulermoc-nom-teaching-52.js?v=acid-prefix-boxes-20261028"></script>
+   <script src="js/mulermoc-nom-note-52.js?v=v52-sync-20261027-r2"></script>
+   <script src="js/mulermoc-nom-scenario-52.js?v=monoacids-theory-20261028"></script>
+--- before/README.md
++++ after/README.md
+@@ -1,3 +1,11 @@
++**Local addition — 2026-10-28:** four unsaturated mono-/dicarboxylic acids
++bring the Main library from130 to134molecules. The interrupted addition is
++completed with bounded core52 alkyl-prefix support, three2D forms per molecule
++and graph-matched explicit-H RDKit3D conformers with provenance. Existing130
++records/MOLs,13active lessons and React source are preserved. These conformers
++do not specify R/S or E/Z. See [scope, checks and review](docs/OTHER-ACIDS-20261028.md).
++This addition is local, without commit/push/publication.
++
+ # MuLERMoCs — Organic Nomenclature Learning Platform
+ 
+ A Greek-first interactive learning platform for organic nomenclature, built around molecular structure, naming logic, and multiple representations. It is a no-build static web app (JSME, JSmol, Snap.svg, jQuery, vanilla JavaScript) intended to be embedded in Drupal.

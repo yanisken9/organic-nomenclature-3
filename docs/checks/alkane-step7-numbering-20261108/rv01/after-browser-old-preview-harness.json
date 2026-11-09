@@ -1,0 +1,151 @@
+{
+  "mode": "after",
+  "completed": false,
+  "checks": [
+    "Right choice starts consistent",
+    "Update then zoom keeps selected direction and labels consistent",
+    "Update then resize remains consistent 390",
+    "Update then resize remains consistent 320",
+    "Update then resize remains consistent 1500",
+    "Left choice also stays consistent after Update and zoom"
+  ],
+  "observations": [
+    {
+      "state": "right",
+      "left": "false",
+      "right": "true",
+      "numbers": [
+        4,
+        3,
+        2,
+        1
+      ],
+      "chain": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "name": "2,3-διμεθυλοβουτάνιο",
+      "label": "Right before Update"
+    },
+    {
+      "state": "right",
+      "left": "false",
+      "right": "true",
+      "numbers": [
+        4,
+        3,
+        2,
+        1
+      ],
+      "chain": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "name": "2,3-διμεθυλοβουτάνιο",
+      "label": "After Update before repaint"
+    },
+    {
+      "state": "right",
+      "left": "false",
+      "right": "true",
+      "numbers": [
+        4,
+        3,
+        2,
+        1
+      ],
+      "chain": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "name": "2,3-διμεθυλοβουτάνιο",
+      "label": "After actual zoom"
+    },
+    {
+      "state": "right",
+      "left": "false",
+      "right": "true",
+      "numbers": [
+        4,
+        3,
+        2,
+        1
+      ],
+      "chain": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "name": "2,3-διμεθυλοβουτάνιο",
+      "label": "Update then resize390"
+    },
+    {
+      "state": "right",
+      "left": "false",
+      "right": "true",
+      "numbers": [
+        4,
+        3,
+        2,
+        1
+      ],
+      "chain": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "name": "2,3-διμεθυλοβουτάνιο",
+      "label": "Update then resize320"
+    },
+    {
+      "state": "right",
+      "left": "false",
+      "right": "true",
+      "numbers": [
+        4,
+        3,
+        2,
+        1
+      ],
+      "chain": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "name": "2,3-διμεθυλοβουτάνιο",
+      "label": "Update then resize1500"
+    },
+    {
+      "state": "left",
+      "left": "true",
+      "right": "false",
+      "numbers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "chain": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "name": "2,3-διμεθυλοβουτάνιο",
+      "label": "Left Update zoomout"
+    }
+  ],
+  "failure": "Timed out: !!document.getElementById(\"scNumberingLeft\")&&document.querySelectorAll(\"#jsmeNomeclatureSVG text[id^=number]\").length===4",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/alkane-step7-numbering-20261108/rv01/check-rv01.py\", line 22, in <module>\n    click('#scNumberingRight');ev('fScenarioGo(7);fScenarioGo(6);true');until('!!document.getElementById(\"scNumberingLeft\")&&document.querySelectorAll(\"#jsmeNomeclatureSVG text[id^=number]\").length===4');e=snap('Fresh step entry');check(e['state']=='left' and e['left']=='true' and e['numbers']==[1,2,3,4],'True step reentry retains required reset')\n  File \"bidi\", line 51, in until\nAssertionError: Timed out: !!document.getElementById(\"scNumberingLeft\")&&document.querySelectorAll(\"#jsmeNomeclatureSVG text[id^=number]\").length===4\n",
+  "javascriptErrors": [],
+  "classification": "Six RV01 zoom/resize consistency checks passed. Reentry part reused old author preview after Update changed content identity, so existing gate correctly routed to4 (after-failure.png). Correct test to Exit then start fresh author screen7; no application source change."
+}

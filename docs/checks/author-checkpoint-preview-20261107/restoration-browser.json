@@ -1,0 +1,47 @@
+{
+  "completed": false,
+  "checks": [
+    "Ordinary learner gate still blocks at step4",
+    "Real first learner repair is stored without unlocking the three-round gate",
+    "Screen opens edited step5 directly despite unsolved step4",
+    "Edited title and explicit preview counter shown",
+    "Step5 keeps authored passive boxes and chain selector; preview Next enabled",
+    "Preview Next advances directly to6",
+    "ArrowLeft document route returns preview to5",
+    "Preview hash crosses both unsolved quiz gates",
+    "Preview step11 quiz is optional for navigation",
+    "Preview can continue beyond optional quiz11",
+    "Preview counter fits 390px",
+    "Preview counter fits 320px",
+    "Preview quiz can actually be completed in temporary state",
+    "Full preview completion leaves every learner storage byte unchanged",
+    "Preview/navigation/quiz do not add state or flags to authored steps",
+    "Exit clears preview, closes quiz and returns to editor",
+    "Reopening preview starts fresh temporary progress",
+    "Card Play uses learner mode at step1 after preview",
+    "Normal card Play cannot pass unsolved quiz4",
+    "Preview/Exit/cardPlay never overwrite original learner receipt",
+    "Failed launch invalidates preview context and returns author mode",
+    "New/import card path invalidates old scenario preview",
+    "Library/manual hash still enforces normal first gate",
+    "Original actual learner partial progress restores after author rehearsal"
+  ],
+  "rounds": [],
+  "fixture_policy": "Owned profile only. Actual learner partial progress and temporary preview completions created through UI; no fabricated solved receipts. Title changed only in isolated browser; no source/desktop JSON writes.",
+  "limitations": [
+    "Headless isolated Firefox; no user-facing Firefox freeze diagnosis",
+    "No Safari, physical mobile, screen reader or full conference sequence audit",
+    "No new viewer/3D audit; existing JSmol issue remains outside scope",
+    "Native ArrowLeft unverified: headless endpoint delivered no keydown. Actual document handler exercised with synthetic KeyboardEvent."
+  ],
+  "native_keyboard_probe": {
+    "events": [],
+    "index": 5,
+    "focus": true,
+    "active": "BUTTON",
+    "noteEditorOpen": false
+  },
+  "failure": "Restored learner storage exactly matches pre-preview bytes",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/author-checkpoint-preview-20261107/check-browser.py\", line 130, in <module>\n    check(storage()==learner_storage,'Restored learner storage exactly matches pre-preview bytes')\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/author-checkpoint-preview-20261107/check-browser.py\", line 15, in check\n    assert ok,name\nAssertionError: Restored learner storage exactly matches pre-preview bytes\n",
+  "javascriptErrors": []
+}

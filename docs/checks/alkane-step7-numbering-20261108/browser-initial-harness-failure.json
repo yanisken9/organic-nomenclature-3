@@ -1,0 +1,23 @@
+{
+  "completed": false,
+  "checks": [
+    "Only two approved step7 fields changed; notes/other steps/checkpoints unchanged",
+    "Actual player validates updated12step lesson",
+    "New viewer/player CSS cache version loaded",
+    "Normal learner still stops at unsolved workshop4",
+    "Existing quiz counter still correct 1",
+    "Existing quiz counter still correct 2",
+    "Existing quiz counter still correct 3",
+    "Normal gate accepts actual3 correct repairs"
+  ],
+  "limitations": [
+    "Owned headless Firefox; no personal browser interaction or freeze diagnosis",
+    "Viewport emulation, not physical mobile/Safari/screen reader or conference sequence",
+    "No full 3D audit; direction support requires2D-only step",
+    "Export actual Blob captured and validated; no browser download picker; actual Desktop export verified separately"
+  ],
+  "failure": "Timed out: JSON.stringify([...document.querySelectorAll(\"#jsmeNomeclatureSVG text[id^=number]\")].sort((a,b)=>Number(a.getAttribute(\"x\"))-Number(b.getAttribute(\"x\"))).map(e=>Number(e.textContent)))===\"[1, 2, 3, 4]\"",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/alkane-step7-numbering-20261108/check-browser.py\", line 77, in <module>\n    ev('fScenarioGo(6);true');until('fScenarioPresent().index===6&&!!document.getElementById(\"scNumberingRight\")');wait_numbers([1,2,3,4])\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/alkane-step7-numbering-20261108/check-browser.py\", line 53, in wait_numbers\n    def wait_numbers(expected):until('JSON.stringify([...document.querySelectorAll(\"#jsmeNomeclatureSVG text[id^=number]\")].sort((a,b)=>Number(a.getAttribute(\"x\"))-Number(b.getAttribute(\"x\"))).map(e=>Number(e.textContent)))==='+json.dumps(json.dumps(expected)),seconds=12)\n  File \"bidi\", line 51, in until\n    def labels():return json.loads(ev('JSON.stringify([...document.querySelectorAll(\"#jsmeNomeclatureSVG text[id^=number]\")].map(e=>({text:e.textContent,x:Number(e.getAttribute(\"x\")),y:Number(e.getAttribute(\"y\"))})).sort((a,b)=>a.x-b.x))'))\nAssertionError: Timed out: JSON.stringify([...document.querySelectorAll(\"#jsmeNomeclatureSVG text[id^=number]\")].sort((a,b)=>Number(a.getAttribute(\"x\"))-Number(b.getAttribute(\"x\"))).map(e=>Number(e.textContent)))===\"[1, 2, 3, 4]\"\n",
+  "javascriptErrors": [],
+  "classification": "Harness compared JSON.stringify compact number array with Python JSON containing spaces; eight app checks passed, no JavaScript errors. Correction only in test script, then full remaining flow."
+}

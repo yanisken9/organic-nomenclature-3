@@ -1,0 +1,78 @@
+{
+  "completed": false,
+  "checks": [
+    {
+      "label": "Cold direct final3Dstep loads actual correct model",
+      "detail": {
+        "ready": true,
+        "live": true,
+        "pending": null,
+        "model": {
+          "canSkipLoad": true,
+          "isTainted": false,
+          "modelCount": 1,
+          "modelCountSelected": 1,
+          "modelIndex": 0,
+          "modelSetHasVibrationVectors": false,
+          "modelSetName": "ethyl_2_isopropyl_3_ ...",
+          "modelSetProperties": {
+            "PATH_KEY": ".PATH",
+            "PATH_SEPARATOR": "/"
+          },
+          "models": [
+            {
+              "_ipt": 0,
+              "atomCount": 38,
+              "bondCount": 37,
+              "chainCount": 1,
+              "file": "http://127.0.0.1:8013/mols/nomeclature-moc2/ethyl_2_isopropyl_3_dimethyl_6_6_hepten_2_yn_4_dioic_acid_3D.sdf",
+              "file_model": "1.1",
+              "groupCount": 1,
+              "moleculeCount": 1,
+              "name": "1",
+              "num": 1,
+              "vibrationVectors": false
+            }
+          ],
+          "modelsSelected": [
+            0
+          ]
+        }
+      }
+    },
+    {
+      "label": "Actual Previous returns2D drawing",
+      "detail": null
+    },
+    {
+      "label": "Next reloads final3Dmodel after2D",
+      "detail": null
+    }
+  ],
+  "failure": "Timed out: location.pathname.endsWith(\"/design/theory-library.html\")",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/v54-sync-20261104/test-postreview-lesson.py\", line 18, in <module>\n    until('location.pathname.endsWith(\"/design/theory-library.html\")')\n  File \"bidi\", line 51, in until\nAssertionError: Timed out: location.pathname.endsWith(\"/design/theory-library.html\")\n",
+  "javascriptErrors": [
+    {
+      "type": "javascript",
+      "level": "error",
+      "source": {
+        "realm": "a272431c-45f5-45ab-8fdd-1beca66882c6",
+        "context": "898f76d8-854c-473b-847e-4bd4fc5e901d",
+        "userContext": "default"
+      },
+      "text": "Αποκλείστηκε αίτημα πολλαπλών προελεύσεων: Η πολιτική ίδιας προέλευσης δεν επιτρέπει την ανάγνωση του απομακρυσμένου πόρου στο https://cactus.nci.nih.gov/chemical/structure/CC%2FC(C(%3DO)O)%3DC(C%23CC(C)(C)C(%3DO)O)%2FC(C)C/iupac_name. (Αιτία: η κεφαλίδα «Access-Control-Allow-Origin» του CORS απουσιάζει). Κωδικός κατάστασης: 404.",
+      "timestamp": 1793779202946
+    },
+    {
+      "type": "javascript",
+      "level": "error",
+      "source": {
+        "realm": "a272431c-45f5-45ab-8fdd-1beca66882c6",
+        "context": "898f76d8-854c-473b-847e-4bd4fc5e901d",
+        "userContext": "default"
+      },
+      "text": "Αποκλείστηκε αίτημα πολλαπλών προελεύσεων: Η πολιτική ίδιας προέλευσης δεν επιτρέπει την ανάγνωση του απομακρυσμένου πόρου στο https://cactus.nci.nih.gov/chemical/structure/CC%2FC(C(%3DO)O)%3DC(C%23CC(C)(C)C(%3DO)O)%2FC(C)C/iupac_name. (Αιτία: η κεφαλίδα «Access-Control-Allow-Origin» του CORS απουσιάζει). Κωδικός κατάστασης: 404.",
+      "timestamp": 1793779204376
+    }
+  ]
+}

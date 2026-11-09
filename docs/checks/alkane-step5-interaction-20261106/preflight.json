@@ -1,0 +1,91 @@
+{
+  "chemistry_validator": "/root/alkane_step5_chain_preflight",
+  "learning_designer": "/root/alkane_step5_learning_preflight",
+  "provenance": "Read-only preflight reports; no browser execution by these agents",
+  "chemical_checks_reported": [
+    "Python-B independent path enumeration, heavy-atom graph correspondence and valences across four representations, C6H14",
+    "Actual core54 in JSC returned exactly two winning condensed paths, identical2-methylpentane name and branch locant2"
+  ],
+  "expected_chains_1_based": {
+    "condensed": [
+      [
+        1,
+        2,
+        3,
+        4,
+        6
+      ],
+      [
+        5,
+        2,
+        3,
+        4,
+        6
+      ]
+    ],
+    "expanded": [
+      [
+        1,
+        2,
+        3,
+        4,
+        6
+      ],
+      [
+        5,
+        2,
+        3,
+        4,
+        6
+      ]
+    ],
+    "skeletal": [
+      [
+        1,
+        2,
+        4,
+        5,
+        6
+      ],
+      [
+        3,
+        2,
+        4,
+        5,
+        6
+      ]
+    ],
+    "SDF3D": [
+      [
+        4,
+        1,
+        2,
+        3,
+        6
+      ],
+      [
+        5,
+        1,
+        2,
+        3,
+        6
+      ]
+    ]
+  },
+  "learning_acceptance": [
+    "Only step5; active/preselectedcomp5 stem, visible passivecomp6/comp9, hiddencomp0/comp1",
+    "Exactly five parent C atoms; switch highlight/numbering as one chain at a time, branch remainslocant2",
+    "No new completion requirement; existing4→5 checkpoint and5→6 progression",
+    "Keep other naming controls and rule reference hidden for personal step5"
+  ],
+  "source_paths": [
+    "js/jsme-nick-nomeclature-moc2-data_54.js",
+    "js/mulermoc-nom-core-54.js",
+    "mols/nomeclature-moc2/methyl_2_pentane_3D.sdf"
+  ],
+  "source_hashes_at_record": {
+    "js/jsme-nick-nomeclature-moc2-data_54.js": "9387cd654b2ff3cfb058d9b97ddcca798ac13f47f769b532f9c122277ff8dd0a",
+    "js/mulermoc-nom-core-54.js": "8f3e5f76d96322faf7cf9251f4cae3eca204fe2f82bf5754fdce6ffc4cd5d5a9",
+    "mols/nomeclature-moc2/methyl_2_pentane_3D.sdf": "ff9db35241837136fa9e702051d536de97b1ec8c5917a0ecba9bb8ff2b696816"
+  }
+}

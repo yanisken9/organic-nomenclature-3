@@ -1,0 +1,93 @@
+{
+  "date": "2026-11-09",
+  "role": "Developer runtime evidence supplied for independent targeted verification; not independent review",
+  "completed": true,
+  "checks": 13,
+  "javascriptErrors": [],
+  "productionHashesBeforeAndAfter": {
+    "js/namelecule-game-repair.js": "7d0a0939841f0423377d0ccca66ee9554b70f8a61a7ff020cf833aa0755b5ac7",
+    "js/namelecule-generated-repair-checkpoint.js": "d99aaa972afa2a437bedf1e4eca3c835126f237e5333e33ac1d9d10d5b684d27",
+    "js/namelecule-quiz-checkpoints.js": "7bf5441b52b9b519db79f3e56adec97979668de172b8292c0a714355add35bb7",
+    "mulermoc-nom-54.html": "34ade6e22d3e9afaf8cfeb49d7a75fabada1a915b6d1550f58b83b323d68fb27"
+  },
+  "operatingConditions": {
+    "browser": "Firefox159 owned isolated headless",
+    "viewport": {
+      "width": 1280,
+      "height": 650,
+      "devicePixelRatio": 2
+    },
+    "reducedMotion": false,
+    "input": "WebDriver BiDi native pointer and key actions; native Enter uses pre-existing Next focus; no page-level app hooks/prototype overrides",
+    "fixture": "One unsolved seed4 first unbranched gate, initialized before real answer actions; no solved receipts fabricated"
+  },
+  "rapidSecondAnswer": {
+    "initialDestination": 110.84999084472656,
+    "measuredBeforeSecondInput": {
+      "ms": 73,
+      "scroll": 8.75,
+      "progress": "Κουίζ 1/3",
+      "selected": "nl-repair-1-part-component-6",
+      "agreeing": false,
+      "focusNext": false,
+      "focusText": "ίν"
+    },
+    "afterSecondInput": {
+      "ms": 96,
+      "scroll": 8.75,
+      "progress": "Κουίζ 1/3",
+      "selected": "nl-repair-1-part-component-5",
+      "agreeing": true,
+      "focusNext": false,
+      "focusText": "προπ"
+    },
+    "latestDestination": 42.78330993652344,
+    "settledScroll": 42.78333282470703,
+    "observedAtLeastMs": 1565,
+    "counterAndStatePreserved": true,
+    "latestFeedbackFullyVisibleUnderStickyHeader": true,
+    "noObsoleteDriftAfter900ms": true
+  },
+  "nextDuringMotion": {
+    "beforeCheckScroll": 286.9666748046875,
+    "successDestination": 523.6666870117188,
+    "measuredBeforeNativeEnter": {
+      "ms": 45,
+      "scroll": 287.70001220703125,
+      "progress": "Κουίζ 1/3",
+      "selected": "nl-repair-1-part-component-6",
+      "agreeing": false,
+      "focusNext": true,
+      "focusText": "Επόμενο κουίζ"
+    },
+    "immediateAfterEnter": {
+      "ms": 80,
+      "scroll": 0,
+      "progress": "Κουίζ 2/3",
+      "agreeing": false,
+      "focusNext": false,
+      "focusText": "Επισκευή ονόματος"
+    },
+    "settledScroll": 0,
+    "observedAtLeastMs": 1559,
+    "onlyOneActualRepair": true,
+    "allRound2TraceSamplesTopZero": true,
+    "round2HeadingBelowStickyHeader": true
+  },
+  "harnessFailurePreserved": {
+    "files": [
+      "check-attempt1.py",
+      "browser-attempt1.json",
+      "process-attempt1.json",
+      "firefox-attempt1.log"
+    ],
+    "cause": "Python roundstate local was accidentally named s, shadowing the raw BiDihelper global socket after first scenario six assertions; AttributeError dict.sendall. No application failure; zero actual repair completions before restart. Renamed round_state and reran both bounded scenarios.",
+    "recovery": "Exact-owned-PID guard terminated59784, restarted same unique profile as59889; completed rerun and guarded final cleanup recorded in cleanup.json"
+  },
+  "limits": [
+    "One desktop viewport, two actual native interruption scenarios, one actual repair; complements the already frozen main browser matrix rather than repeating it",
+    "Passive rAF/geometry reads measure motion before interruptions; assertions do not require timing guessed from a delay",
+    "No new application finding or production edits. No claim of resolving Firefox freeze. All GUI/profiles/persistentdriver21029 untouched.",
+    "The initial broken harness and all frozen main browser evidence remain unchanged."
+  ]
+}

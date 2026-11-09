@@ -1,0 +1,15 @@
+{
+  "paths": {
+    "AGENTS.md": "f75acc3b51fd33c02d03aa7303da590e4ba39291c92eadc3784903692981295c",
+    "docs/SESSION-NOTES.md": "3512a97264c93febc9f86c5eafb2f9fb9bedfbb5a82eaddd9fc0f736d0a94b80",
+    "docs/YANNIS-CONTRIBUTIONS.md": "5dfe55ce32c53f7b2727f20869008f3825a0864d873bc3d93524e326fa83e3ed"
+  },
+  "checks": [
+    "AGENTS append-only; existing instructions preserved",
+    "Continuity/contribution records prepend-only",
+    "All10core files unchanged",
+    "Existing source/export JSON byte-identical; not rewritten"
+  ],
+  "runtime_tests": "Not applicable: documentation-only instruction recording",
+  "approval": "User standing request recorded, no app/source-code intervention"
+}

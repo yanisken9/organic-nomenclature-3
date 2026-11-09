@@ -1,0 +1,37 @@
+{
+  "phase": "targeted correction R1",
+  "runtime_files": {
+    "js/mulermoc-nom-scenario-54.js": "e81b29d7c4f1c4e54ba12cf155bb0ffb35cd8998e244950ec57b453ee867cea0",
+    "mulermoc-nom-54.html": "4278188fac26f618c2c865e8b83ca7863b9f4b88c06224b5f4fd33512febd00d",
+    "scenarios/alkanes-user-3.scenario.json": "a58d55e7ca1fb31753d84d2f4af95f85b224b0fac5bb679210325b6f33b9cfe7",
+    "css/mulermoc-nom-scenario-54.css": "0fcc3ec2a4b0cbe29be6989fc483c2f01eaa0001a8eef826a6016c3d76e565b6"
+  },
+  "base_commit": "168e3cec01f941a84d40bbe0dc07156e7baa35d0",
+  "changes_since_first_review": [
+    "fScenarioSyncPresentClass toggles scContentOnly based on visible molecular columns, cleared on normal step/Exit",
+    "Scoped presentation-only host width:auto and align-self:stretch respects existing margins",
+    "Both scenario JS/CSS Main54 cache URLs r2"
+  ],
+  "evidence": {
+    "docs/checks/workshop-stop-only-20261106/revision2/after-1280.png": "54a06992c73d1a7696ad579b7c0541a1b655c48bf752d894d2d7b71837481a8a",
+    "docs/checks/workshop-stop-only-20261106/revision2/after-320.png": "6bbfbc2e3d7dfd5983a849475c901d0dc0fe591f428c3d7379189b59d94606c1",
+    "docs/checks/workshop-stop-only-20261106/revision2/after-390.png": "80bd3c2c05a0c0631411982d7c1234b760439aff3ab99977b7f0c3b728f350ae",
+    "docs/checks/workshop-stop-only-20261106/revision2/alkanes-user-3.scenario.json.diff": "36b1d79ddeaf944794f57f817842c5372466ded8d3cb580a34c4a8f904c1aecc",
+    "docs/checks/workshop-stop-only-20261106/revision2/browser.json": "3b9ebde332209d00c8bb3bd5ab428be345eacf71a5c60dba278e940062e12464",
+    "docs/checks/workshop-stop-only-20261106/revision2/mulermoc-nom-54.html.diff": "0e91078d7394812f6c26feae5f785aa9db2af9064adc644dd17f8ccadfc8ccf2",
+    "docs/checks/workshop-stop-only-20261106/revision2/mulermoc-nom-scenario-54.css.diff": "404fc9981495583fa43123869fc98049acd41f360f624fbf4c42fe72b9e8f6ff",
+    "docs/checks/workshop-stop-only-20261106/revision2/mulermoc-nom-scenario-54.js.diff": "437c2eb687e3ce2a8b52be2d7338d9c95ba17c604a09ede323223449e5be19fb",
+    "docs/checks/workshop-stop-only-20261106/revision2/source-verification.json": "25a07eb79a4dea877a4bd5e8560e17881bb9ba9a1cace653c4fb711b82c18c82"
+  },
+  "test_script": {
+    "path": "docs/checks/workshop-stop-only-20261106/check-layout-correction.py",
+    "sha256": "35f14d08bea4fbc0273b3b25a75a71ee5f61cea0afe60760a0c3d5a7ecfa2188"
+  },
+  "developer_checks": {
+    "targeted_browser_assertions": 24,
+    "targeted_JS_errors": 0,
+    "initial_browser": "33functional assertions passed with1matchingpreviousJSmolplatformnull error; not a clean overall-console claim",
+    "source_checks": "JSCsyntax,10cores27otherJSON11othersteps and sharedquizcontroller/library unchanged"
+  },
+  "remaining": "Reviewer final verification, verified Desktop export, cleanup owned test browser, notes"
+}

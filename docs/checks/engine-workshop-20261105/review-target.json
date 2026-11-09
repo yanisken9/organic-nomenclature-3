@@ -1,0 +1,282 @@
+{
+  "frozen": true,
+  "baseHEAD": "168e3cec01f941a84d40bbe0dc07156e7baa35d0",
+  "baseline": "docs/checks/engine-workshop-20261105/baseline.json",
+  "approvedScope": "Opt-in engine-backed eight-alkane Workshop; 2sets x3; guidance levels, deterministic recipe/session restore; original game/lesson preserved; no core or publication.",
+  "files": [
+    {
+      "path": "js/namelecule-game-repair.js",
+      "sha256": "8afafaea77dd5c0a6259cecfd8d98c548500a030810708a30bd616856353e2eb",
+      "kind": "runtime/source"
+    },
+    {
+      "path": "games/name-repair.html",
+      "sha256": "89459845eb24dc6efbc9108fc2f4d2eef9bea33199fa006f1c77ee5d4937c417",
+      "kind": "runtime/source"
+    },
+    {
+      "path": "css/namelecule-games.css",
+      "sha256": "4e90d6b3512402971b75fc2cec73ce41619f676f1b7880f68e8440d0d351c61c",
+      "kind": "runtime/source"
+    },
+    {
+      "path": "js/namelecule-chemistry-worker.js",
+      "sha256": "86b14771559761d1e6aa9f0120927b3303c58f090a39ab0c6274639f987b3c34",
+      "kind": "runtime/source"
+    },
+    {
+      "path": "js/namelecule-chemistry-client.js",
+      "sha256": "506a63f8fdbbcc6c4e3e06daa1f74e5679e720f0d9489ce1c022c74df19298b7",
+      "kind": "runtime/source"
+    },
+    {
+      "path": "js/namelecule-repair-generator.js",
+      "sha256": "118304488b6eaee651490785903080c419239df3f646988f79ae0e2548527611",
+      "kind": "runtime/source"
+    },
+    {
+      "path": "games/data/alkane-structures.json",
+      "sha256": "9778e30ea33f2f7cd4c8a472e46e90539856b861a54035a1d514c3246cccf724",
+      "kind": "runtime/source"
+    },
+    {
+      "path": "tools/build-alkane-game-catalog.py",
+      "sha256": "e5fd721ff49ae4d25a50e7acf32c135fb9c09b154f85719b897d8b7e937a926e",
+      "kind": "runtime/source"
+    },
+    {
+      "path": "games/assets/name-repair/methane.svg",
+      "sha256": "8f4e242ab525b321c35a5c479b04ec6af226fd2fbdace1f95cad2daa6caf85d4",
+      "kind": "runtime/source"
+    },
+    {
+      "path": "games/assets/name-repair/propane.svg",
+      "sha256": "281576dc3d950752aedc595df21d979a886ea8b339463160964973057e84a116",
+      "kind": "runtime/source"
+    },
+    {
+      "path": "docs/checks/engine-workshop-20261105/REPORT.md",
+      "sha256": "1d04811f1aa8eabaec00fc4354e059c919b0e738eda18604d339077465001c55",
+      "kind": "verification deliverable"
+    },
+    {
+      "path": "docs/checks/engine-workshop-20261105/adapter/adapter-report.json",
+      "sha256": "7f7a22026a44c91f6829366fb8706b663e305ac7bc9a18920deefe4a2bb86143",
+      "kind": "verification deliverable"
+    },
+    {
+      "path": "docs/checks/engine-workshop-20261105/adapter/before-binding-reproduction.json",
+      "sha256": "e9d395b3d09e42e3c1275f128c50e1fb437ca76b52efeede83c605b4ffa53137",
+      "kind": "verification deliverable"
+    },
+    {
+      "path": "docs/checks/engine-workshop-20261105/adapter/test-adapter.py",
+      "sha256": "d61c96a83f1bc3ec2cc6cf20365badd0585da0bc1f26bf5bd7a02ff677c68960",
+      "kind": "verification deliverable"
+    },
+    {
+      "path": "docs/checks/engine-workshop-20261105/baseline.json",
+      "sha256": "a58ba7c0756a1638ba1d15279ba930d9a5f52baba628f31351695c15bb241f28",
+      "kind": "verification deliverable"
+    },
+    {
+      "path": "docs/checks/engine-workshop-20261105/before/css/namelecule-games.css",
+      "sha256": "170c52aef9c9180af4ec840d4362a3c7f632a6840c8db9caff18cd8d8b7f269b",
+      "kind": "baseline reference"
+    },
+    {
+      "path": "docs/checks/engine-workshop-20261105/before/games/name-repair.html",
+      "sha256": "9e590ddff9a2d3dd75d51f8bf6fddced4254e75226368904d60e86fd5d87260b",
+      "kind": "baseline reference"
+    },
+    {
+      "path": "docs/checks/engine-workshop-20261105/before/js/namelecule-game-repair.js",
+      "sha256": "8987e392296115f05aebc71cbb29c7ad3fc7853f3be966e1d715871ddf7e853c",
+      "kind": "baseline reference"
+    },
+    {
+      "path": "docs/checks/engine-workshop-20261105/browser/alkanes-branched-candidate.png",
+      "sha256": "828bb06c94b3d9b7738587f4631fde3e314405c8435885f78b0c2ebab8cca012",
+      "kind": "verification deliverable"
+    },
+    {
+      "path": "docs/checks/engine-workshop-20261105/browser/alkanes-branched-results.png",
+      "sha256": "0ce5e463a6468347b642779e0afe4efc67039254898f4b40ef3dc40549496da7",
+      "kind": "verification deliverable"
+    },
+    {
+      "path": "docs/checks/engine-workshop-20261105/browser/alkanes-unbranched-candidate.png",
+      "sha256": "7a9ff2672fd2054d2e55d41d1d9e4651968a9a961575e1107e33e1b97c5fe985",
+      "kind": "verification deliverable"
+    },
+    {
+      "path": "docs/checks/engine-workshop-20261105/browser/alkanes-unbranched-results.png",
+      "sha256": "9d392f9b412d442644dd47eb48a250a9ffb590560b4a5e46ae88454e60abb950",
+      "kind": "verification deliverable"
+    },
+    {
+      "path": "docs/checks/engine-workshop-20261105/browser/engine-browser.json",
+      "sha256": "b936c235e66805d21956f4bcde1c3411c74396877a89c55aeca9687b9ca11e86",
+      "kind": "verification deliverable"
+    },
+    {
+      "path": "docs/checks/engine-workshop-20261105/browser/engine-round-320.png",
+      "sha256": "5165560afbb7070f0ff639fbdb8e8b27c4b766452b5b16063b867c6e78d61806",
+      "kind": "verification deliverable"
+    },
+    {
+      "path": "docs/checks/engine-workshop-20261105/browser/engine-set-picker.png",
+      "sha256": "36341da1d80bcc09963a454447e23361478e17e87d439f68c6e00247ea646aca",
+      "kind": "verification deliverable"
+    },
+    {
+      "path": "docs/checks/engine-workshop-20261105/browser/export-missing-assets.py",
+      "sha256": "4f03d9399e97e3b593cb4209b5211d23436bb255f466aaf7b32379679ba3a07e",
+      "kind": "verification deliverable"
+    },
+    {
+      "path": "docs/checks/engine-workshop-20261105/browser/families-and-recovery.json",
+      "sha256": "96bf5d6260ca60109197acd25346b550aeabb8795b0b540a0ae8556f697f0ce3",
+      "kind": "verification deliverable"
+    },
+    {
+      "path": "docs/checks/engine-workshop-20261105/browser/first-engine-load.png",
+      "sha256": "420e3738f8781b8becebe3029dfd6473b15577e307530fe94781208001288ada",
+      "kind": "verification deliverable"
+    },
+    {
+      "path": "docs/checks/engine-workshop-20261105/browser/generated-alphabetical-order-success.png",
+      "sha256": "62f388784be06f5b870994a63d9f8b5a0b6ff846446c991b4311d1e09d6eaeab",
+      "kind": "verification deliverable"
+    },
+    {
+      "path": "docs/checks/engine-workshop-20261105/browser/linear-bond-mobile.png",
+      "sha256": "cfaede7e985481aba496b4c8f3a4077ac976edc7fc339b230bf5daa1232bd766",
+      "kind": "verification deliverable"
+    },
+    {
+      "path": "docs/checks/engine-workshop-20261105/browser/methane-main-expanded.png",
+      "sha256": "4efdfef01805b3f2f8a32377257cf0f26550f2358a26e9d42e23702296bf0f36",
+      "kind": "verification deliverable"
+    },
+    {
+      "path": "docs/checks/engine-workshop-20261105/browser/missing-assets-provenance.json",
+      "sha256": "db6c929ce8d97842512a0889d18b86de2af5d8018cb2a1b9e48aa3d48668495c",
+      "kind": "verification deliverable"
+    },
+    {
+      "path": "docs/checks/engine-workshop-20261105/browser/pilot-browser.json",
+      "sha256": "e9976eb98a902d69f31e05bac49b8ca8042d59b5e1969fb79101bf7b8c495c97",
+      "kind": "verification deliverable"
+    },
+    {
+      "path": "docs/checks/engine-workshop-20261105/browser/pilot-gate-desktop.png",
+      "sha256": "523e2fc08eaa0fd3b4a54ef158a3273b31de64ad7d7f1d5e9f702b8485dd3cf1",
+      "kind": "verification deliverable"
+    },
+    {
+      "path": "docs/checks/engine-workshop-20261105/browser/pilot-image-failure-mobile.png",
+      "sha256": "d9b23fc0596c623acf4c71668028430b8aae3d518f3bf83f86af8c007bce296f",
+      "kind": "verification deliverable"
+    },
+    {
+      "path": "docs/checks/engine-workshop-20261105/browser/pilot-mission-desktop.png",
+      "sha256": "5f38b963c26759834645d582aa68735b983d154d50bc24bbaa7fa515407ef5a0",
+      "kind": "verification deliverable"
+    },
+    {
+      "path": "docs/checks/engine-workshop-20261105/browser/pilot-mission-landscape.png",
+      "sha256": "35edebbade87707dc15286919588d47be6391eed741b372aefee5c353a4daaea",
+      "kind": "verification deliverable"
+    },
+    {
+      "path": "docs/checks/engine-workshop-20261105/browser/pilot-success-desktop.png",
+      "sha256": "ad8bb3ef5f19f4fdf3490d1574a921d0020a62e71b6bb3269d217d8619ad3061",
+      "kind": "verification deliverable"
+    },
+    {
+      "path": "docs/checks/engine-workshop-20261105/browser/pilot-success-landscape.png",
+      "sha256": "e0e03367be211a0c0c9daac88f90d47b5d52255715f6f0b980972d664cabd655",
+      "kind": "verification deliverable"
+    },
+    {
+      "path": "docs/checks/engine-workshop-20261105/browser/propane-main-expanded.png",
+      "sha256": "5ead2ef20029d8aab7dfde82571334d8dc7c6811d4b36388ed34dff269f7c4ce",
+      "kind": "verification deliverable"
+    },
+    {
+      "path": "docs/checks/engine-workshop-20261105/browser/results-alkanes-branched.png",
+      "sha256": "1c57303c6cbb2162be05aa6984c5a1cc79c1588817795aebc27210fa0d30f297",
+      "kind": "verification deliverable"
+    },
+    {
+      "path": "docs/checks/engine-workshop-20261105/browser/results-alkanes-unbranched.png",
+      "sha256": "1c2ee30c13bbb4b55af0d9474d90297708d74c13b51e12649ea6756d7c29832f",
+      "kind": "verification deliverable"
+    },
+    {
+      "path": "docs/checks/engine-workshop-20261105/browser/run-existing-regressions.py",
+      "sha256": "bb1e0da617bff6b70ee8a38af748afa4a5c801c46813fc77cfef87d8f6c310c4",
+      "kind": "verification deliverable"
+    },
+    {
+      "path": "docs/checks/engine-workshop-20261105/browser/serve.py",
+      "sha256": "3a664ff57f54e2e63c2e8ca34b00022730e87fffa8bb42f97fe6341a0a287635",
+      "kind": "verification deliverable"
+    },
+    {
+      "path": "docs/checks/engine-workshop-20261105/browser/sets-1500.png",
+      "sha256": "a97002abf06d75434e0963e7d74b7538605092349612f6249b3282518526daee",
+      "kind": "verification deliverable"
+    },
+    {
+      "path": "docs/checks/engine-workshop-20261105/browser/sets-390.png",
+      "sha256": "4f1f7f7a8c942d334c2345257534d6cdb099e0385d0f3b08bd546a106625ead4",
+      "kind": "verification deliverable"
+    },
+    {
+      "path": "docs/checks/engine-workshop-20261105/browser/support.py",
+      "sha256": "be696942f1cde492112aa22f4bb4f9f27928649c88b5efa0391139d208197ba6",
+      "kind": "verification deliverable"
+    },
+    {
+      "path": "docs/checks/engine-workshop-20261105/browser/test-engine.py",
+      "sha256": "538c0b941b105c269030ccb518986c1b515bed1b4b7a0a890b46c25a01d9301d",
+      "kind": "verification deliverable"
+    },
+    {
+      "path": "docs/checks/engine-workshop-20261105/browser/test-families-and-recovery.py",
+      "sha256": "52527102de4b07b20a0512dd2e7b677d6370806af6d24955b202fa896018341c",
+      "kind": "verification deliverable"
+    },
+    {
+      "path": "docs/checks/engine-workshop-20261105/browser/two-sets-browser.json",
+      "sha256": "11be038baf472d97436282a119fe352f2542e4cb148936c1f3bbb7695bde69af",
+      "kind": "verification deliverable"
+    },
+    {
+      "path": "docs/checks/engine-workshop-20261105/generator/results.json",
+      "sha256": "c2dc83db69edfb020c9fd2bb34e6e29eacf133e4793c8caf05117f3f235f682d",
+      "kind": "verification deliverable"
+    },
+    {
+      "path": "docs/checks/engine-workshop-20261105/generator/test-generator.py",
+      "sha256": "98e62b54032bac9ab88777acc9b6e7e9566931c04dab86498f7346c4f3f97dc0",
+      "kind": "verification deliverable"
+    }
+  ],
+  "preservedBaseline": {
+    "js/mulermoc-nom-core-54.js": true,
+    "js/mulermoc-nom-core-52.js": true,
+    "js/jsme-nick-nomeclature-moc2-data_54.js": true,
+    "mulermoc-nom-54.html": true,
+    "js/mulermoc-nom-molview-54.js": true,
+    "scenarios/alkanes-name-repair-pilot.scenario.json": true,
+    "games/data/name-repair-alkanes.json": true,
+    "games/assets/name-repair/alkane-sets-provenance.json": true
+  },
+  "notesOutsideReviewTarget": [
+    "docs/SESSION-NOTES.md",
+    "docs/YANNIS-CONTRIBUTIONS.md"
+  ]
+}

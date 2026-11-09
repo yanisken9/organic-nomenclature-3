@@ -1,0 +1,30 @@
+{
+  "recordedBy": "root Developer from actual read-only Chemistry Validator messages; not a Validator-written file",
+  "validator": "/root/v54_formula_conflict",
+  "roleID": "NAMELECULE_CHEMISTRY_VALIDATOR_V1_20261023",
+  "criticalReviewCoreSHA256": "10f3e1ed4ea566be50c4797d523d6cfe83e86a41cab761b0c18281f9113a061f",
+  "finalCoreSHA256": "73e28373c8128b3db48a65084ac07bd19c5f4887b236ba4896a3c5a29330fe6c",
+  "finalEN_SHA256": "8490121cd3de7908772b2bb833a86e98e529ae555de761a3337eea784f93fa42",
+  "closed": {
+    "CV-F1": "Correct local C5 acid formula confirmed against12representations, upstream incorrect C8 field rejected.",
+    "CV-F2_P1": "Independent53graph/formula/charge/isotope/SUP comparisons,8guards and4extra property reindex checks; nitroO-H not introduced.",
+    "CV-F3_P2": "141ENboxes and42targetcases, seven fusion errors closed; GRslots remain.",
+    "CV-F4": "12upstreampersistentmappingfailures reproduced;40finaltransitions exact; incompatible same-size butene maps rejected; symmetric/permuted controls pass.",
+    "terminal_sp": "45nitrileangles in five molecules/three forms/three layouts linear, minimum179.9999988degrees.",
+    "C9_stem_P2": "Inherited wrong parentstem; independent9C8/C9/C10 cases and exacttwo-constantdiff verified, priorcriticalfixes/infix unchanged."
+  },
+  "unresolved": [
+    {
+      "id": "CV-C9-diaeresis",
+      "severity": "P3",
+      "behavior": "C9alkyne Greek1-εννείνιο; indexedELINYAElexicon hasΕννεΐνιο. Exactgraph/locant/English agree.",
+      "source": "https://www.elinyae.gr/ilektroniko-lexiko/n?page=6",
+      "limit": "Directpagefetch timed out; indexedterm observed. No blanketGreekorthography certification."
+    }
+  ],
+  "limitations": [
+    "Domain independent checks in memory, not browser execution.",
+    "No broad PIN or E/Z/R/S certification.",
+    "Final constant correction verified by exact bytes plus targeted9cases; preceding broad critical tests are not claimed reexecuted on newhash."
+  ]
+}

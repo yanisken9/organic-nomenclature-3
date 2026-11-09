@@ -1,0 +1,125 @@
+{
+  "publicReleaseCommit": "0969f46205c5317ee22c8b28dabe21880a4fb270",
+  "base": "https://yanisken9.github.io/organic-nomenclature-3/",
+  "checks": [
+    {
+      "path": "index.html",
+      "status": 200,
+      "sha256": "b988d9331e2a921d3571c54a0212be328f11473fd4d08b9be7afadd29ab75ba5",
+      "expected": "b988d9331e2a921d3571c54a0212be328f11473fd4d08b9be7afadd29ab75ba5",
+      "matches": true
+    },
+    {
+      "path": "design/welcome-proposal.html",
+      "status": 200,
+      "sha256": "6158b66367af903011ffe5cb28851e8713fa4fd6d0bf0fd42d292112750ac71a",
+      "expected": "6158b66367af903011ffe5cb28851e8713fa4fd6d0bf0fd42d292112750ac71a",
+      "matches": true
+    },
+    {
+      "path": "design/theory-library.html",
+      "status": 200,
+      "sha256": "f339298bb3eede613a1ef538c2d65184b57199ed9bedb2fe8d7e133c090e53a0",
+      "expected": "f339298bb3eede613a1ef538c2d65184b57199ed9bedb2fe8d7e133c090e53a0",
+      "matches": true
+    },
+    {
+      "path": "mulermoc-nom-52.html",
+      "status": 200,
+      "sha256": "ebe8d0aeffcdfd36f644b1ac3ecd7317673e9378e2b30745be49c6e2d4257341",
+      "expected": "a18e2e41507126b3406cd7e1063398fff116385c94da9cf521bdc8e94d89be1e",
+      "matches": false
+    },
+    {
+      "path": "js/jsme-nick-nomeclature-moc2-data_52.js",
+      "status": 200,
+      "sha256": "ba8ee675f8866021a98719673ba7cbb170d49beeeeecef8a3a5f8da71ef05dd4",
+      "expected": "24976c938839494a343005492a15a83375b0012b22b05fa8f7106482318b91d5",
+      "matches": false
+    },
+    {
+      "path": "js/mulermoc-nom-molview-52.js",
+      "status": 200,
+      "sha256": "a8e0b27cba790f4bdb93035e4225f54f78ae7ae2679a5b0d0bdea8e2ae9658c0",
+      "expected": "7da0009a3c7c2649bf9b50230077dcd2142e023b34ca75388ce8617b34107bc4",
+      "matches": false
+    },
+    {
+      "path": "js/mulermoc-nom-core-52.js",
+      "status": 200,
+      "sha256": "d2138418ff630ab77e578b80ca8ba3a10cc1b877c3ab8c0e5c2735ffcd1f24a2",
+      "expected": "d2138418ff630ab77e578b80ca8ba3a10cc1b877c3ab8c0e5c2735ffcd1f24a2",
+      "matches": true
+    },
+    {
+      "path": "js/namelecule-label-metrics.js",
+      "matches": false,
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "path": "docs/professor-20261031/update.html",
+      "matches": false,
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "path": "docs/professor-20261031/verified-facts.json",
+      "matches": false,
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "path": "docs/professor-20261031/links.json",
+      "matches": false,
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "path": "react-preview/dist/viewer-host.html",
+      "status": 200,
+      "sha256": "b8752db497544d95fabf67a30213b4fb042a442045cb53bc3838f21f09299f30",
+      "expected": "de74096d3fac926b9864e7bf04a1c8aafd8cc93e10be55a687d4c53795c4c286",
+      "matches": false
+    },
+    {
+      "path": "react-preview/dist/lesson-host.html",
+      "status": 200,
+      "sha256": "6c2b7786535f8b40aa2353cb87d3d3dad9937349933cdda67f619cbd6f8e05c4",
+      "expected": "9141fac7b699c02f72423fc2ece65add4bf15ae508bc243cd82f6319447acf60",
+      "matches": false
+    },
+    {
+      "path": "react-preview/public/viewer-host.html",
+      "status": 200,
+      "sha256": "f45b60fe5eb7ac5894175c4d27490610e4f3d911461838dad5d4c196588e09c4",
+      "expected": "de74096d3fac926b9864e7bf04a1c8aafd8cc93e10be55a687d4c53795c4c286",
+      "matches": false
+    },
+    {
+      "path": "react-preview/public/lesson-host.html",
+      "status": 200,
+      "sha256": "822b217a1c3b14d38cd9ba796575b1ee83b286b7687d38ad0acd15c2852e8cc1",
+      "expected": "9141fac7b699c02f72423fc2ece65add4bf15ae508bc243cd82f6319447acf60",
+      "matches": false
+    },
+    {
+      "path": "react-preview/preserved-main-20261030/js/jsme-nick-nomeclature-moc2-data_52.js",
+      "matches": false,
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "path": "react-preview/preserved-main-20261030/js/mulermoc-nom-molview-52.js",
+      "matches": false,
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "path": "js/vendor/jsme/namelecule-20261031-r1/jsme.nocache.js",
+      "matches": false,
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "path": "js/vendor/jsmol/namelecule-20261031-r1/JSmol.min.js",
+      "matches": false,
+      "error": "HTTP Error 404: Not Found"
+    }
+  ],
+  "passed": false,
+  "coreSHA256": "d2138418ff630ab77e578b80ca8ba3a10cc1b877c3ab8c0e5c2735ffcd1f24a2"
+}

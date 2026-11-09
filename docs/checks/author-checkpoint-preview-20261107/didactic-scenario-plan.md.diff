@@ -1,0 +1,39 @@
+--- before/docs/didactic-scenario-plan.md
++++ docs/didactic-scenario-plan.md
+@@ -423,10 +423,15 @@
+    menu-less molecule steps clear silently; unknown keys filtered) and the
+    viewer chrome to the step's viewers via `fScenarioRestoreChrome`, the
+    same helper Exit uses — panes + `[2D][3D]` actives + control bars follow
+-   the step; present navigation never touches picks), `▶` Present
+-   (enters presentation at this step via the same
+-   `fScenarioPresentBegin(scenId, idx)` used by card Play, with the row's
+-   0-based index; card Play omits it and starts at step 1), `Update`
++   the step; present navigation never touches picks), the per-row screen
++   (v54: `fScenarioAuthorPreviewBegin(scenId, idx)` rehearses the selected
++   step immediately, with free navigation and a visible Preview counter;
++   required checkpoint data is still validated, but earlier quizzes do not
++   block the author. Quiz attempts use a separate in-memory record, never
++   learner sessionStorage. Exit returns to authoring and discards rehearsal
++   progress; new/imported/deleted cards, another card or a failed launch
++   invalidate it. No JSON/URL flag enables it. Card Play and library/URL
++   presentation retain ordinary mandatory gates), `Update`
+   (rewrite the step's stored view snapshot from the current live view:
+   Go → tweak molecule, 2D/3D modes + styles, naming clicks/toggles,
+    camera, pick → Update; preserves `title`/optional `titleLogo`/`note` + the 4 chrome
+@@ -465,10 +470,12 @@
+ * `#step=N`: 1-based step in the hash so Prev/Next can use
+   `history.replaceState` without a full reload (JSME/JSmol init
+   is expensive). Missing/invalid/clamped to 1/last with notice.
+-* `Play ▶` on a scenario card always starts at step 1. Each step row's
+-  `▶` starts presentation at that step instead; both enter the same player
+-  and write `#step=N`. Exit returns to authoring with the card's drawer
+-  (if open) scrolled to the step that was on stage.
++* `Play ▶` on a scenario card always starts at step 1 using normal learner
++  checkpoint gates. In v54, each step row's screen opens transient author
++  rehearsal at that step via the same renderer, writing `#step=N` without
++  exporting a preview flag or awarding learner completion. Exit returns to
++  authoring with the card's open drawer scrolled to the step that was on stage.
++  A normal page reload has no rehearsal context; normal playback stays gated.
+ * Fixed present bar (`#scenarioPlayBar`): full left shows the scenario identity
+   (`#scScenarioId` ← `title · author`, author via `fScenarioValidAuthor`;
+   ellipsis-truncated with the full string in the hover title, author hidden

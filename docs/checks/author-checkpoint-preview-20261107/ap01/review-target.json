@@ -1,0 +1,44 @@
+{
+  "finding": "AP-01 P2",
+  "correction": "Stack small preview label above counter; leave ordinary counter unchanged. Add scoped CSS and refresh CSS/player cache URLs. No gate/storage logic changes since reviewed target.",
+  "baseCommit": "168e3cec01f941a84d40bbe0dc07156e7baa35d0",
+  "targets": {
+    "js/mulermoc-nom-scenario-54.js": "4d6d500dfed220d4e8ea672a407d6201a281ed9653514ad465111023b27dc381",
+    "js/namelecule-quiz-checkpoints.js": "aec225787a916465e8d393e4e18810528a4680676b7cb66f7ca0e42f60df6b1c",
+    "mulermoc-nom-54.html": "3d3be1605608c55d36225937ec9e8c8e3b0e17252adee5223ef3c08ec00ca934",
+    "docs/didactic-scenario-plan.md": "eef71ec1cb8d50378412456a282678c7890cd5f2d71413e4b4af223a3a48371d",
+    "css/mulermoc-nom-scenario-54.css": "e4e362cbdfd6f9c964831ec6c9fc4a6e38522caf9dacf1c25b837542963b6db8"
+  },
+  "evidence": {
+    "docs/checks/author-checkpoint-preview-20261107/ap01/before/css/mulermoc-nom-scenario-54.css": "c6b64f87a6d94f1a7c976106bd8356d78aa372270fe9d14ec314997e91742341",
+    "docs/checks/author-checkpoint-preview-20261107/ap01/before/js/mulermoc-nom-scenario-54.js": "bf9277528a6f4956d41ef15e6d867ca8030aa8666ce87abbc3bab0e962883b01",
+    "docs/checks/author-checkpoint-preview-20261107/ap01/before/mulermoc-nom-54.html": "3f1e3b5b67c8175ab9219aea94dce85066004327126dd75a291bf7f7f5b0cd82",
+    "docs/checks/author-checkpoint-preview-20261107/ap01/check-layout.py": "6d0a499ba4529c7bc8e8d2de64408b24a1f4e9f50eabb1df84a56cfcf03bf112",
+    "docs/checks/author-checkpoint-preview-20261107/ap01/cleanup.json": "1c3d47248d655ea0c7db531b25f1ccf3dbb3dc53f1a1993e9aee2a8597bd44aa",
+    "docs/checks/author-checkpoint-preview-20261107/ap01/layout-results.json": "88a97fb0acdc4ec08f111d0ef70720dc5169e88cbed3b40379b8259fff55d14f",
+    "docs/checks/author-checkpoint-preview-20261107/ap01/mulermoc-nom-54.html.diff": "5d7dbaed8a70517f6cd912fe7b740f0515ef4e4c94d8ab4acfa603994a9a631c",
+    "docs/checks/author-checkpoint-preview-20261107/ap01/mulermoc-nom-scenario-54.css.diff": "744827e20591cdca1b8edae05b64be240472e60b51529bac390f178cc0b811fb",
+    "docs/checks/author-checkpoint-preview-20261107/ap01/mulermoc-nom-scenario-54.js.diff": "83c6f1704dec7a7ff3e3429cdae0a82b0dd2cb9b346432e42bd28e4f366f0ced",
+    "docs/checks/author-checkpoint-preview-20261107/ap01/preview-1500.png": "62873031a034885623fad1648aadb6f26ad02bc1db0b9f48f7ea334c460ea0d1",
+    "docs/checks/author-checkpoint-preview-20261107/ap01/preview-320.png": "c6d47cd76b63e2deb4dbb3a1a20f1ff6e617784c96fc691fd802648c7f1476ed",
+    "docs/checks/author-checkpoint-preview-20261107/ap01/preview-390.png": "dc36179c723cb6163c9b7f34af7fa24d84772c06bd420972f35c6e82a30809bd",
+    "docs/checks/author-checkpoint-preview-20261107/ap01/served-verification.json": "4de1770a4b96f050a0671d514d6cd5d00b1307c2f943f955f431d0a4c652082e",
+    "docs/checks/author-checkpoint-preview-20261107/ap01/source-verification.json": "e2f472006c12b00fbf451691bd1cace2ca175d28a93e4c2e4a48bc055ba71999",
+    "docs/checks/author-checkpoint-preview-20261107/ap01/test-process.json": "560a9dbd3f07e878c2084519a94a23f5c23d2ba18efa585b91ea63e03e7b6616"
+  },
+  "priorReviewManifest": "docs/checks/author-checkpoint-preview-20261107/review-target.json",
+  "checks": {
+    "targetedFirefoxAssertions": 14,
+    "realTrustedPointerClicks": 9,
+    "JavaScriptErrors": 0,
+    "viewports": [
+      1500,
+      390,
+      320
+    ],
+    "HTTP_SHA_Checks": 4,
+    "protectedUnchanged": 49,
+    "newCorrectionTargetFormerlyProtected": "css/mulermoc-nom-scenario-54.css"
+  },
+  "scopeNote": "CSS added solely for AP01, recorded before snapshot matches original protected baseline. Original 30-flow/76memory/53source evidence remains unchanged; no full rerun for label-only correction."
+}

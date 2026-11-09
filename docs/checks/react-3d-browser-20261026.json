@@ -1,0 +1,705 @@
+{
+  "completed": true,
+  "checks": [
+    "native pointer drag changes 3D rotation",
+    "3D zoom in/out changes actual camera without 2D zoom",
+    "model mismatch hides iframe and disables components until recovery",
+    "rapid molecule/view changes acknowledge latest model without frame reload",
+    "all three 3D canvases match host at desktop/mobile without page overflow",
+    "all 11 components: actual 3D atom/bond colors, selection property, numbering echoes, chain and explanation match unchanged legacy app"
+  ],
+  "models": {
+    "ethanol": {
+      "atoms": [
+        {
+          "n": 1,
+          "s": "O",
+          "x": -1.1712,
+          "y": 0.2997,
+          "z": 0,
+          "color": "[xff0d0d]",
+          "visible": true
+        },
+        {
+          "n": 2,
+          "s": "C",
+          "x": -0.04630000000000001,
+          "y": -0.5665,
+          "z": 0,
+          "color": "[x909090]",
+          "visible": true
+        },
+        {
+          "n": 3,
+          "s": "C",
+          "x": 1.2175,
+          "y": 0.26680000000000004,
+          "z": 0,
+          "color": "[x909090]",
+          "visible": true
+        },
+        {
+          "n": 4,
+          "s": "H",
+          "x": -0.09580000000000001,
+          "y": -1.212,
+          "z": 0.8819,
+          "color": "[xffffff]",
+          "visible": true
+        },
+        {
+          "n": 5,
+          "s": "H",
+          "x": -0.0952,
+          "y": -1.1938,
+          "z": -0.8946000000000001,
+          "color": "[xffffff]",
+          "visible": true
+        },
+        {
+          "n": 6,
+          "s": "H",
+          "x": 2.105,
+          "y": -0.372,
+          "z": -0.0177,
+          "color": "[xffffff]",
+          "visible": true
+        },
+        {
+          "n": 7,
+          "s": "H",
+          "x": 1.2426,
+          "y": 0.9307000000000001,
+          "z": -0.8704000000000001,
+          "color": "[xffffff]",
+          "visible": true
+        },
+        {
+          "n": 8,
+          "s": "H",
+          "x": 1.2616,
+          "y": 0.9052,
+          "z": 0.8886000000000001,
+          "color": "[xffffff]",
+          "visible": true
+        },
+        {
+          "n": 9,
+          "s": "H",
+          "x": -1.1291,
+          "y": 0.8364,
+          "z": 0.8099000000000001,
+          "color": "[xffffff]",
+          "visible": true
+        }
+      ],
+      "bonds": [
+        {
+          "a": 1,
+          "b": 2,
+          "order": 1,
+          "colix": 0,
+          "visible": true
+        },
+        {
+          "a": 1,
+          "b": 9,
+          "order": 1,
+          "colix": 0,
+          "visible": true
+        },
+        {
+          "a": 2,
+          "b": 3,
+          "order": 1,
+          "colix": 0,
+          "visible": true
+        },
+        {
+          "a": 2,
+          "b": 4,
+          "order": 1,
+          "colix": 0,
+          "visible": true
+        },
+        {
+          "a": 2,
+          "b": 5,
+          "order": 1,
+          "colix": 0,
+          "visible": true
+        },
+        {
+          "a": 3,
+          "b": 6,
+          "order": 1,
+          "colix": 0,
+          "visible": true
+        },
+        {
+          "a": 3,
+          "b": 7,
+          "order": 1,
+          "colix": 0,
+          "visible": true
+        },
+        {
+          "a": 3,
+          "b": 8,
+          "order": 1,
+          "colix": 0,
+          "visible": true
+        }
+      ],
+      "selected": null,
+      "echoes": [
+        {
+          "top": {
+            "text": ""
+          }
+        }
+      ],
+      "chain": [
+        2,
+        3
+      ],
+      "explanation": "Κάνε κλικ σε ένα συνθετικό του ονόματος για να δεις την εξήγηση"
+    },
+    "dimethyl_2_3_butane": {
+      "atoms": [
+        {
+          "n": 1,
+          "s": "C",
+          "x": 0.7182000000000001,
+          "y": 0.29450000000000004,
+          "z": -0.36610000000000004,
+          "color": "[x909090]",
+          "visible": true
+        },
+        {
+          "n": 2,
+          "s": "C",
+          "x": -0.7182000000000001,
+          "y": -0.2944,
+          "z": -0.3659,
+          "color": "[x909090]",
+          "visible": true
+        },
+        {
+          "n": 3,
+          "s": "C",
+          "x": 1.0257,
+          "y": 1.1919,
+          "z": 0.8359000000000001,
+          "color": "[x909090]",
+          "visible": true
+        },
+        {
+          "n": 4,
+          "s": "C",
+          "x": 1.7804,
+          "y": -0.8053,
+          "z": -0.46990000000000004,
+          "color": "[x909090]",
+          "visible": true
+        },
+        {
+          "n": 5,
+          "s": "C",
+          "x": -1.0254,
+          "y": -1.1919,
+          "z": 0.8359000000000001,
+          "color": "[x909090]",
+          "visible": true
+        },
+        {
+          "n": 6,
+          "s": "C",
+          "x": -1.7806000000000002,
+          "y": 0.8052,
+          "z": -0.4698,
+          "color": "[x909090]",
+          "visible": true
+        },
+        {
+          "n": 7,
+          "s": "H",
+          "x": 0.8160000000000001,
+          "y": 0.9147000000000001,
+          "z": -1.2676,
+          "color": "[xffffff]",
+          "visible": true
+        },
+        {
+          "n": 8,
+          "s": "H",
+          "x": -0.8161,
+          "y": -0.9146000000000001,
+          "z": -1.2674,
+          "color": "[xffffff]",
+          "visible": true
+        },
+        {
+          "n": 9,
+          "s": "H",
+          "x": 0.9791000000000001,
+          "y": 0.6383,
+          "z": 1.7788,
+          "color": "[xffffff]",
+          "visible": true
+        },
+        {
+          "n": 10,
+          "s": "H",
+          "x": 2.0345,
+          "y": 1.6112000000000002,
+          "z": 0.7508,
+          "color": "[xffffff]",
+          "visible": true
+        },
+        {
+          "n": 11,
+          "s": "H",
+          "x": 0.3311,
+          "y": 2.0345,
+          "z": 0.8966000000000001,
+          "color": "[xffffff]",
+          "visible": true
+        },
+        {
+          "n": 12,
+          "s": "H",
+          "x": 2.7716000000000003,
+          "y": -0.3662,
+          "z": -0.6279,
+          "color": "[xffffff]",
+          "visible": true
+        },
+        {
+          "n": 13,
+          "s": "H",
+          "x": 1.8309000000000002,
+          "y": -1.4116,
+          "z": 0.4398,
+          "color": "[xffffff]",
+          "visible": true
+        },
+        {
+          "n": 14,
+          "s": "H",
+          "x": 1.5745,
+          "y": -1.4696,
+          "z": -1.3157,
+          "color": "[xffffff]",
+          "visible": true
+        },
+        {
+          "n": 15,
+          "s": "H",
+          "x": -0.33080000000000004,
+          "y": -2.0346,
+          "z": 0.8964000000000001,
+          "color": "[xffffff]",
+          "visible": true
+        },
+        {
+          "n": 16,
+          "s": "H",
+          "x": -0.9785,
+          "y": -0.6385000000000001,
+          "z": 1.7789000000000001,
+          "color": "[xffffff]",
+          "visible": true
+        },
+        {
+          "n": 17,
+          "s": "H",
+          "x": -2.0342,
+          "y": -1.6112000000000002,
+          "z": 0.7509,
+          "color": "[xffffff]",
+          "visible": true
+        },
+        {
+          "n": 18,
+          "s": "H",
+          "x": -1.8312,
+          "y": 1.4118,
+          "z": 0.4398,
+          "color": "[xffffff]",
+          "visible": true
+        },
+        {
+          "n": 19,
+          "s": "H",
+          "x": -2.7718,
+          "y": 0.3658,
+          "z": -0.6275000000000001,
+          "color": "[xffffff]",
+          "visible": true
+        },
+        {
+          "n": 20,
+          "s": "H",
+          "x": -1.5751,
+          "y": 1.4693,
+          "z": -1.3158,
+          "color": "[xffffff]",
+          "visible": true
+        }
+      ],
+      "bonds": [
+        {
+          "a": 1,
+          "b": 2,
+          "order": 1,
+          "colix": 0,
+          "visible": true
+        },
+        {
+          "a": 1,
+          "b": 3,
+          "order": 1,
+          "colix": 0,
+          "visible": true
+        },
+        {
+          "a": 1,
+          "b": 4,
+          "order": 1,
+          "colix": 0,
+          "visible": true
+        },
+        {
+          "a": 1,
+          "b": 7,
+          "order": 1,
+          "colix": 0,
+          "visible": true
+        },
+        {
+          "a": 2,
+          "b": 5,
+          "order": 1,
+          "colix": 0,
+          "visible": true
+        },
+        {
+          "a": 2,
+          "b": 6,
+          "order": 1,
+          "colix": 0,
+          "visible": true
+        },
+        {
+          "a": 2,
+          "b": 8,
+          "order": 1,
+          "colix": 0,
+          "visible": true
+        },
+        {
+          "a": 3,
+          "b": 9,
+          "order": 1,
+          "colix": 0,
+          "visible": true
+        },
+        {
+          "a": 3,
+          "b": 10,
+          "order": 1,
+          "colix": 0,
+          "visible": true
+        },
+        {
+          "a": 3,
+          "b": 11,
+          "order": 1,
+          "colix": 0,
+          "visible": true
+        },
+        {
+          "a": 4,
+          "b": 12,
+          "order": 1,
+          "colix": 0,
+          "visible": true
+        },
+        {
+          "a": 4,
+          "b": 13,
+          "order": 1,
+          "colix": 0,
+          "visible": true
+        },
+        {
+          "a": 4,
+          "b": 14,
+          "order": 1,
+          "colix": 0,
+          "visible": true
+        },
+        {
+          "a": 5,
+          "b": 15,
+          "order": 1,
+          "colix": 0,
+          "visible": true
+        },
+        {
+          "a": 5,
+          "b": 16,
+          "order": 1,
+          "colix": 0,
+          "visible": true
+        },
+        {
+          "a": 5,
+          "b": 17,
+          "order": 1,
+          "colix": 0,
+          "visible": true
+        },
+        {
+          "a": 6,
+          "b": 18,
+          "order": 1,
+          "colix": 0,
+          "visible": true
+        },
+        {
+          "a": 6,
+          "b": 19,
+          "order": 1,
+          "colix": 0,
+          "visible": true
+        },
+        {
+          "a": 6,
+          "b": 20,
+          "order": 1,
+          "colix": 0,
+          "visible": true
+        }
+      ],
+      "selected": null,
+      "echoes": [
+        {
+          "top": {
+            "text": ""
+          }
+        }
+      ],
+      "chain": [
+        3,
+        1,
+        2,
+        6
+      ],
+      "explanation": "Κάνε κλικ σε ένα συνθετικό του ονόματος για να δεις την εξήγηση"
+    },
+    "propanone": {
+      "atoms": [
+        {
+          "n": 1,
+          "s": "O",
+          "x": 0.00030000000000000003,
+          "y": -1.3171,
+          "z": -0.0002,
+          "color": "[xff0d0d]",
+          "visible": true
+        },
+        {
+          "n": 2,
+          "s": "C",
+          "x": 0,
+          "y": -0.0872,
+          "z": 0.0006000000000000001,
+          "color": "[x909090]",
+          "visible": true
+        },
+        {
+          "n": 3,
+          "s": "C",
+          "x": 1.2810000000000001,
+          "y": 0.7024,
+          "z": -0.0002,
+          "color": "[x909090]",
+          "visible": true
+        },
+        {
+          "n": 4,
+          "s": "C",
+          "x": -1.2812999999999999,
+          "y": 0.7019000000000001,
+          "z": -0.0002,
+          "color": "[x909090]",
+          "visible": true
+        },
+        {
+          "n": 5,
+          "s": "H",
+          "x": 1.3279,
+          "y": 1.3235000000000001,
+          "z": -0.898,
+          "color": "[xffffff]",
+          "visible": true
+        },
+        {
+          "n": 6,
+          "s": "H",
+          "x": 1.326,
+          "y": 1.3282,
+          "z": 0.8945000000000001,
+          "color": "[xffffff]",
+          "visible": true
+        },
+        {
+          "n": 7,
+          "s": "H",
+          "x": 2.1351,
+          "y": 0.019600000000000003,
+          "z": 0.0027,
+          "color": "[xffffff]",
+          "visible": true
+        },
+        {
+          "n": 8,
+          "s": "H",
+          "x": -2.1352,
+          "y": 0.0187,
+          "z": 0.0027,
+          "color": "[xffffff]",
+          "visible": true
+        },
+        {
+          "n": 9,
+          "s": "H",
+          "x": -1.3284,
+          "y": 1.323,
+          "z": -0.898,
+          "color": "[xffffff]",
+          "visible": true
+        },
+        {
+          "n": 10,
+          "s": "H",
+          "x": -1.3266,
+          "y": 1.3278,
+          "z": 0.8945000000000001,
+          "color": "[xffffff]",
+          "visible": true
+        }
+      ],
+      "bonds": [
+        {
+          "a": 1,
+          "b": 2,
+          "order": 2,
+          "colix": 0,
+          "visible": true
+        },
+        {
+          "a": 2,
+          "b": 3,
+          "order": 1,
+          "colix": 0,
+          "visible": true
+        },
+        {
+          "a": 2,
+          "b": 4,
+          "order": 1,
+          "colix": 0,
+          "visible": true
+        },
+        {
+          "a": 3,
+          "b": 5,
+          "order": 1,
+          "colix": 0,
+          "visible": true
+        },
+        {
+          "a": 3,
+          "b": 6,
+          "order": 1,
+          "colix": 0,
+          "visible": true
+        },
+        {
+          "a": 3,
+          "b": 7,
+          "order": 1,
+          "colix": 0,
+          "visible": true
+        },
+        {
+          "a": 4,
+          "b": 8,
+          "order": 1,
+          "colix": 0,
+          "visible": true
+        },
+        {
+          "a": 4,
+          "b": 9,
+          "order": 1,
+          "colix": 0,
+          "visible": true
+        },
+        {
+          "a": 4,
+          "b": 10,
+          "order": 1,
+          "colix": 0,
+          "visible": true
+        }
+      ],
+      "selected": null,
+      "echoes": [
+        {
+          "top": {
+            "text": ""
+          }
+        }
+      ],
+      "chain": [
+        3,
+        2,
+        4
+      ],
+      "explanation": "Κάνε κλικ σε ένα συνθετικό του ονόματος για να δεις την εξήγηση"
+    }
+  },
+  "highlights": {
+    "ethanol": {
+      "components": [
+        "comp5",
+        "comp6",
+        "comp9"
+      ],
+      "exactLegacyParity": true
+    },
+    "dimethyl_2_3_butane": {
+      "components": [
+        "comp0",
+        "comp1",
+        "comp5",
+        "comp6",
+        "comp9"
+      ],
+      "exactLegacyParity": true
+    },
+    "propanone": {
+      "components": [
+        "comp5",
+        "comp6",
+        "comp9"
+      ],
+      "exactLegacyParity": true
+    }
+  },
+  "javascriptErrors": []
+}

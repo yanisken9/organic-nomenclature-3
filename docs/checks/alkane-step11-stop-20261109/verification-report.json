@@ -1,0 +1,78 @@
+{
+  "date": "2026-11-09",
+  "role": "Developer verification subagent; not independent Reviewer",
+  "task": "Approved step11 JSON-only workshop visibility/logo/instruction formatting parity with4; existing branched words and gate recipe preserved",
+  "before": {
+    "scenarioSHA256": "d5463463b14c1f694dbd381c65a7b4aa466eebd9143f4f91c565894f26645cd4",
+    "completed": true,
+    "assertions": 5,
+    "appJavascriptErrors": 0,
+    "measured": "Normal4 content-only and blocked; author-preview11 molecular/name panels visible and no logo. Existing player already renders b tags despite noteFormat text."
+  },
+  "after": {
+    "scenarioSHA256": "607a530a2d3ba151026517c61d6f7a31644e15abf82a687e778b7453d80089b7",
+    "completed": true,
+    "assertions": 55,
+    "appJavascriptErrors": 0,
+    "actualUIRepairs": 6,
+    "counter": "1/3 to2/3 to3/3; Next blocked after1and2, unlock after3actual branched repairs",
+    "flow": "Normal learner gate4 actual3repairs;10→11→12; back11→10 active notice cleared; completed11→12 replay; Exit→theory library",
+    "viewportWidths": [
+      1500,
+      390,
+      320
+    ],
+    "features": "Content-only11 hides menu/molecule/name and their frames; workshop logo loaded; HTML note renders; in-flow gate notice centered, accessible and expires. Step12 restores original8alkane menu/2D+3D visibility.",
+    "screenshots": [
+      "before-step4-blocked-desktop.png",
+      "before-step11-desktop.png",
+      "after-step10-desktop.png",
+      "after-step11-desktop.png",
+      "after-step11-blocked-1500.png",
+      "after-step11-blocked-390.png",
+      "after-step11-blocked-320.png",
+      "after-step11-mobile-top-document-390.png",
+      "after-step11-mobile-top-document-320.png",
+      "after-step11-mobile-top-viewport-390.png",
+      "after-step11-mobile-top-viewport-320.png",
+      "after-step12-desktop.png"
+    ]
+  },
+  "knownHarnessCorrections": [
+    "Direct scenario URL entered editor, so initial learner checkpoint wait was invalid; correct test uses real theory-library link. Initialfailure retained.",
+    "Author Exit correctly returned to theory library; author inspection uses fresh direct URL.",
+    "Actual before11 b markup already rendered; initial literal-tag assumption corrected.",
+    "Late after check referenced nonexistent vis2D global; corrected to authored flags plus real DOM pane visibility, then full55assertion flow rerun. Initial49pass failure retained."
+  ],
+  "screenshotSemantics": "Default capture origin document; captures after automatic notice scroll may place fixed playbar at current scroll location in full-document PNG. Separate mobile-top-document/viewport artifacts captured from scrollTop0 in author preview. Learner normal gates are from browser-after.json.",
+  "runtime": "runtime-hashes.json confirms Main54, scenario54JS, molview54JS, scenario54CSS and all10core files equal session baseline. Only root changed active scenario; this agent authored evidence only.",
+  "contentKey": {
+    "before": {
+      "computedSignatureKey": "namelecule:lesson-checkpoints:v1:7a7f37bf",
+      "method": "Equivalent existing JS FNV1a over JSON.stringify property order and Greek BMP characters; actual after key also supplied in browser-after.json"
+    },
+    "after": {
+      "computedSignatureKey": "namelecule:lesson-checkpoints:v1:f5e830a1",
+      "method": "Equivalent existing JS FNV1a over JSON.stringify property order and Greek BMP characters; actual after key also supplied in browser-after.json"
+    },
+    "actualAfterKey": "namelecule:lesson-checkpoints:v1:f5e830a1",
+    "computedAfterMatchesActual": true,
+    "limitation": "Lesson content key changes with this JSON edit; existing prior-content session receipts are not migrated. Test seeds set only unsolved starts, then actual UI produced completion receipts."
+  },
+  "ownershipCleanup": {
+    "pid": 55365,
+    "profile": "/var/folders/2v/ds4vjvgj1_1000kq1fzg70q40000gn/T/namelecule-step11-stop-20261109-p63sqgl0/profile",
+    "parentNoLongerRunning": true,
+    "method": "SIGTERM sent after exact owned profile/headless/port command match; no other browser PID targeted"
+  },
+  "limits": [
+    "Developer evidence in owned headless Firefox; not independent Reviewer and not personal Firefox freeze diagnosis",
+    "Viewport emulation1500/390/320, not physical mobile/Safari/screen reader",
+    "Step12 shown/restored but no broad3D or conference demonstration audit",
+    "Content-keyed receipt changes with edited lesson content; no migration tested or introduced",
+    "Personal Firefox493 not automated, inspected or closed; no personal profile/history accessed. Passing isolated tests does not diagnose or resolve whole-browser freeze.",
+    "No app JavaScript errors captured in tested before/after flows; known JSmol null exception was not observed here and is not declared fixed.",
+    "Firefox process log includes internal chrome BiDi WeakMap null errors and SWGL warning. These are retained separately from page JavaScript log events.",
+    "No production source/JSON edits or notes/git/commits/publication by this subagent."
+  ]
+}

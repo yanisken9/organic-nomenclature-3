@@ -1,0 +1,36 @@
+{
+  "date": "2026-11-09",
+  "reviewer": "/root/review_quiz_scroll_20261109",
+  "role_id": "NAMELECULE_REVIEWER_V1_20261023",
+  "fresh_context": true,
+  "reviewer_no_writes_reported": true,
+  "read_only_limit": "Behavioral no-write restriction; enforced filesystem isolation not established.",
+  "base_commit": "168e3cec01f941a84d40bbe0dc07156e7baa35d0",
+  "manifest_sha256": "9be697ba86cbf1dd92fbf1fa581107786938ffcedba7fa524b61204559d98553",
+  "targets": {
+    "js/namelecule-quiz-checkpoints.js": "35fda6953f06356d498f1be40fe4c6123d0c81c3bdbf81a60fa3fda5ea211501",
+    "mulermoc-nom-54.html": "695c75a1cd82c01ea77a58e53814b378178eb2a1b0b320f50531ed1b3166d3ec"
+  },
+  "findings": [],
+  "verdict": "No actionable P0/P1/P2/P3 findings within approved scroll correction. No corrections required.",
+  "independent_checks": [
+    "Read AGENTS.md and docs/REVIEW-CHECKLIST.md; request/diff/controller/generated adapter/game focus/dialog CSS.",
+    "Git read-only status and HEAD; Python in-memory hashes/difflib/JSON comparison; exact source.diff and HTML query substitution.",
+    "JavaScriptCore jsc -e, 76 assertions using full before/current controllers, inspected FakeNode double and custom review adapter. Covers transitions/same-round/invalid/persistence/reopen/stale/scenario/step/Exit.",
+    "Inspected supplied before/after desktop/mobile and initial-timeout screenshots. All manifest hashes matched twice."
+  ],
+  "developer_evidence": [
+    "48 JavaScriptCore assertions, actual full before/current controllers with explicit DOM/adapter doubles.",
+    "50 browser checks, six actual trusted UI repairs, zero captured page-JavaScript errors. Nine new/reopen/resize entries start at top with visible objective; twelve same-round actions retain exact scroll.",
+    "HTTP exact updated bytes; protected dependency/JSON/core hashes and Desktop JSON parity."
+  ],
+  "remaining_uncertainties": [
+    "Initial toolbar10→11 timeout cause unknown; bounded readiness rerun passed without app fix. Not established as regression from this change.",
+    "Earlier whole-browser Firefox freeze unresolved; this correction does not establish its resolution.",
+    "No independent browser run; no physical mobile/Safari/screen reader or conference reliability certification."
+  ],
+  "not_applicable": [
+    "No chemistry, MOL/SDF, naming, molecular viewer or learning-sequence changes."
+  ],
+  "status": "Independent review complete; local correction only, no commit/push/publication."
+}

@@ -1,0 +1,23 @@
+{
+  "at_utc": "2026-11-06T08:02:20.239248+00:00",
+  "all_44_frozen_hashes_unchanged": true,
+  "review": "review.json",
+  "desktop_export_receipt": "communication/checkpoints/user-3-alkanes-step5-export-20261106.json",
+  "desktop_export_verified": true,
+  "source_and_export_sha256": "5161a3e17d0070de62a6493a03aea3e164f604a20c07587c299279ea9977230e",
+  "previous_backup_verified": true,
+  "served_files_verified": 6,
+  "owned_test_firefox_stopped": true,
+  "core_changed": false,
+  "committed": false,
+  "pushed": false,
+  "published": false,
+  "full_checkpoint_created": false,
+  "limitations": [
+    "No independent browser replay",
+    "No Safari, physical mobile, screen reader or conference-sequence validation",
+    "No new 3D runtime audit; previous JSmol failure outside scope",
+    "No unconditional correctness or reliability guarantee",
+    "Focused Next loses focus when reaching final chain and becoming disabled. Existing fRenderChainStepper/fStepMainChain unchanged. Native key probe captured no DOM key events, so native activation/focus continuity is unverified; no new regression established."
+  ]
+}

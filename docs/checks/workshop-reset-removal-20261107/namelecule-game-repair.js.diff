@@ -1,0 +1,45 @@
+--- before/js/namelecule-game-repair.js
++++ js/namelecule-game-repair.js
+@@ -307,7 +307,6 @@
+       refs.candidate = node("div", { class: "candidate", "aria-live": "polite", "aria-atomic": "true" }, [node("span", { class: "candidate-label", text: "Η πρότασή σου για έλεγχο" }), refs.candidateName]);
+       refs.checkButton = button("Έλεγχος", "primary", submitRepair);
+       refs.checkButton.id = controlId("check-button");
+-      refs.retryButton = button("Από την αρχή", "quiet", retryRound, { "aria-label": "Επαναφορά επιλογών αυτής της αποστολής" });
+       refs.checkHelper = node("p", { class: "check-helper", id: controlId("check-helper") });
+       refs.checkButton.setAttribute("aria-describedby", controlId("check-helper"));
+       refs.feedback = node("div", { class: "feedback", role: "status", "aria-live": "polite", "aria-atomic": "true" });
+@@ -318,7 +317,7 @@
+         node("h2", { class: "step-heading", text: data.kind === "order" ? "1. Βάλε τους κλάδους στη σειρά" : "1. Ποιο κομμάτι θα αλλάξεις;" }),
+         node("p", { class: "step-description", text: data.kind === "order" ? "Διάλεξε έναν κλάδο και μετακίνησέ τον με τα βέλη. Η κύρια αλυσίδα μένει στο τέλος." : "Πάτησε το κομμάτι που δεν ταιριάζει με τη δομή." }),
+         refs.parts, refs.selectionStatus, refs.orderControls, refs.choiceFieldset, refs.candidate,
+-        node("div", { class: "repair-actions" }, [refs.checkButton, refs.retryButton]),
++        node("div", { class: "repair-actions" }, [refs.checkButton]),
+         refs.checkHelper, refs.feedback
+       ]);
+       refs.sessionStats = node("span");
+@@ -446,7 +445,6 @@
+       const hasCandidate = data.kind === "order" || (hasTarget && current.selectedValue !== null);
+       refs.checkButton.disabled = !enabled || !hasCandidate;
+       refs.zoomButton.disabled = mainImageStatus !== "ready" || !!zoomPanel;
+-      refs.retryButton.disabled = !enabled;
+       const continueButton = refs.next.querySelector("button");
+       if (continueButton) continueButton.disabled = !diagramsReady() || !current.solved;
+       refs.checkHelper.textContent = current.solved ? "Η επισκευή ολοκληρώθηκε. Συνέχισε όταν είσαι έτοιμος ή έτοιμη." : !diagramsReady() ? "Περιμένουμε να εμφανιστούν οι δομές πριν από τον έλεγχο." : data.kind === "order" ? "Επιλέγεις κλάδο, πατάς ένα βέλος και ελέγχεις τη νέα σειρά." : hasCandidate ? "Ο έλεγχος μετρά ως μία προσπάθεια. Μπορείς να δοκιμάσεις ξανά." : "Διάλεξε πρώτα το κομμάτι και έπειτα μια αντικατάσταση.";
+@@ -517,17 +515,6 @@
+         updateControls(controlId("check-button"));
+         emitState();
+       }
+-    }
+-
+-    function retryRound() {
+-      if (!diagramsReady() || state().solved) return;
+-      currentState = createRoundState(round(), state());
+-      refs.selectionStatus.textContent = "Οι επιλογές επανήλθαν. Οι προσπάθειές σου παραμένουν.";
+-      clearFeedback();
+-      updateControls();
+-      const first = refs.parts.querySelector("button");
+-      if (first && !first.disabled) first.focus({ preventScroll: true });
+-      emitState();
+     }
+ 
+     function showDiagramZoom() {

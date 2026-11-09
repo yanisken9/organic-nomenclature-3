@@ -1,0 +1,34 @@
+{
+  "approved_request": "Update existing Alkane library action to the current personal 3Αλκάνια lesson, starting step1. Only source change is one href in design/theory-library.html. Verify entry/return and unchanged other links; independent review. No publication.",
+  "base_commit": "168e3cec01f941a84d40bbe0dc07156e7baa35d0",
+  "comparison": "Use actual before snapshot theory-library.before.html, not HEAD diff; source already had pre-existing edits.",
+  "targets": {
+    "design/theory-library.html": "9949ea2ee92b6df3f1069f891fa6faff91f756868c7eb5fa4d5e31f0773b6d5f"
+  },
+  "deliverables": {
+    "docs/checks/library-personal-alkanes-20261106/baseline.json": "c87a423bc8392c734c3713182534837c62980e7803551c92edf16d154f324f74",
+    "docs/checks/library-personal-alkanes-20261106/browser.json": "a2a97ec3dcde77cc5df605b3cf39fb7bbd02b3ad5ab3c3bc3f3329a5410cb1ad",
+    "docs/checks/library-personal-alkanes-20261106/check-browser.py": "a03f39b05e994fb3fc15de6c858e5630960c8459b0ea896ac2e953ab0bc27a05",
+    "docs/checks/library-personal-alkanes-20261106/cleanup.json": "5b73dc7210eea68b5d54a76e1b73c1aa15e610ef3cd20694f1cdae43c7db6152",
+    "docs/checks/library-personal-alkanes-20261106/lesson-start.png": "7c83a0936d960c797e5ea9935fdfc4157cca3f36f5205c274d9450b407c1a2ba",
+    "docs/checks/library-personal-alkanes-20261106/library.png": "09bf10b06e480340d77c89d9aa5e52f5aeb0bc5043d803f85198aadc9a079478",
+    "docs/checks/library-personal-alkanes-20261106/served-verification.json": "f6acb00e1664a1e8e4d2049e9d981b8869ba68af658aac355a7b9d502a0a864a",
+    "docs/checks/library-personal-alkanes-20261106/source-verification.json": "5de190f8e89c66d41c8774904c38e5c15a7acc3c165ed7ffd6e44dc873a77a28",
+    "docs/checks/library-personal-alkanes-20261106/source.diff": "a634700e441940d0fccb60f641cbc5ecf95c27ad48b0be87bce6ecf8e3db7b44",
+    "docs/checks/library-personal-alkanes-20261106/test-process.json": "4209ce2968f535fde0b4bd3a1d5da5e20dfab8c8509d992b8c1f3836b5f91458",
+    "docs/checks/library-personal-alkanes-20261106/theory-library.before.html": "1d45992006e97ef1ebacb2f13a6e7601a48a14081ac88ff21e8f556eaefd48ec"
+  },
+  "developer_evidence": {
+    "browser_assertions": 15,
+    "javascript_errors": 0,
+    "served_files_byte_verified": 2,
+    "protected_files_unchanged": 44,
+    "core_files_unchanged": 10
+  },
+  "limitations": [
+    "Isolated headless Firefox with DOM clicks; no native pointer/key audit",
+    "Existing lesson and quiz/viewer regression suite not repeated; source JSON/JS/CSS unchanged",
+    "No Safari/physical-mobile/3D or full conference sequence validation"
+  ],
+  "no_commit_push_publication": true
+}

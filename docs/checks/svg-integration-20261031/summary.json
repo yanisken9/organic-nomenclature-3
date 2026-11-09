@@ -1,0 +1,91 @@
+{
+  "date": "2026-10-31",
+  "state": "implemented locally; independent review complete, no actionable findings",
+  "baseHEAD": "168e3cec01f941a84d40bbe0dc07156e7baa35d0",
+  "coreChangedToday": false,
+  "committed": false,
+  "published": false,
+  "catalog": {
+    "forms": 422,
+    "molecules": 141,
+    "widths": [
+      1500,
+      390
+    ],
+    "cases": 844,
+    "failures": 0,
+    "javascriptErrors": 0,
+    "invariantDifferences": 0
+  },
+  "controls": {
+    "states": 98,
+    "alkaneRatioCases": 48,
+    "native2DExports": 2
+  },
+  "nativeProducer": {
+    "cases": 92,
+    "fonts": [
+      9,
+      12,
+      14,
+      16
+    ],
+    "invariantsPreserved": true
+  },
+  "lessons": {
+    "entries": 14,
+    "sampledStates": 70,
+    "terminalModels": 14,
+    "exits": 14,
+    "all337StepsTested": false
+  },
+  "future": {
+    "cases": 18,
+    "accepted": 12,
+    "safelyRejectedCrowdedInputs": 6
+  },
+  "webkit": {
+    "engine": "native WKWebView, not Safari application",
+    "representativeCases": 28,
+    "javascriptErrors": 0
+  },
+  "loader": {
+    "variants": 3,
+    "dpr2Cases": 6,
+    "javascriptErrors": 0
+  },
+  "metrics": [
+    "Canvas raster fallback",
+    "Failure clears stale diagram and PNG",
+    "Real late FontFace cache invalidation",
+    "Progressive numbering retains timer/index",
+    "Font refresh after native 3D destruction emits no Jmol script",
+    "Pagehide/pageshow controller cancellation; not full BFCache certification"
+  ],
+  "limitations": [
+    "Finite catalog/browser/interaction sample; no guarantee for arbitrary future geometry/fonts/OS.",
+    "No Chrome/Windows/Safari application/full BFCache certification.",
+    "WebKit and normal controls preceded final pure-2D font callback correction; callback targeted-tested and full 844-case catalog rerun on final frozen runtime.",
+    "Extremely crowded inputs display controlled unavailable status; no silent geometry rewrite.",
+    "Original native quirks module unchanged; active standards module tested.",
+    "Offline package deferred; no publication/conference rehearsal claim."
+  ],
+  "developerCorrections": [
+    {
+      "id": "D1",
+      "issue": "Initial 1.2px mask floor hid pentanoic-acid bond at minimum zoom",
+      "resolution": "Shared floor 0.6px; controls and complete catalog passed"
+    },
+    {
+      "id": "D2",
+      "issue": "First font redraw called 3D numbering after applet teardown",
+      "resolution": "Pure 2D redraw preserves progress and timer; owns/cancels RAF; lifecycle and loader passed"
+    },
+    {
+      "id": "D3",
+      "issue": "Probe read live line geometry after await; detached SVG could yield invalid metrics",
+      "resolution": "Freeze line visibility before await. Final acceptance uses corrected probe; debug counters are not final evidence."
+    }
+  ],
+  "independentReview": "independent-review.json"
+}

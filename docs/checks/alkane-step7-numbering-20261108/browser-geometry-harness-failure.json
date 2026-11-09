@@ -1,0 +1,26 @@
+{
+  "completed": false,
+  "checks": [
+    "Only two approved step7 fields changed; notes/other steps/checkpoints unchanged",
+    "Actual player validates updated12step lesson",
+    "New viewer/player CSS cache version loaded",
+    "Normal learner still stops at unsolved workshop4",
+    "Existing quiz counter still correct 1",
+    "Existing quiz counter still correct 2",
+    "Existing quiz counter still correct 3",
+    "Normal gate accepts actual3 correct repairs",
+    "Initial left choice and parent-stem analysis visible",
+    "Right direction changes labels only: exact parent/index/name/graph/MOL geometry unchanged",
+    "Active right direction conveyed via aria-pressed"
+  ],
+  "limitations": [
+    "Owned headless Firefox; no personal browser interaction or freeze diagnosis",
+    "Viewport emulation, not physical mobile/Safari/screen reader or conference sequence",
+    "No full 3D audit; direction support requires2D-only step",
+    "Export actual Blob captured and validated; no browser download picker; actual Desktop export verified separately"
+  ],
+  "failure": "Repeated right choice is idempotent",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/alkane-step7-numbering-20261108/check-browser.py\", line 83, in <module>\n    screenshot(HERE/'right-desktop.png');pointer('#scNumberingRight');check(sequence()==[4,3,2,1] and invariant()==initial,'Repeated right choice is idempotent')\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/alkane-step7-numbering-20261108/check-browser.py\", line 15, in check\n    assert ok,name\nAssertionError: Repeated right choice is idempotent\n",
+  "javascriptErrors": [],
+  "classification": "Repeated-choice invariant included JSME molFile header, which carries a fresh export timestamp; actual numbering/geometry isolated in repeat probe. Exclude only the first3header lines from geometry comparison, keep counts/atoms/bonds/metadata exact."
+}

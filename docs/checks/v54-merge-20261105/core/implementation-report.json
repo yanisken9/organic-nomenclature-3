@@ -1,0 +1,253 @@
+{
+  "status": "Owned core target frozen after Developer verification; independent review pending with root",
+  "approvedRequest": "primary docs/checks/v54-merge-20261105/plan.json and approval.json; user «Ναι, με αυτές τις προφυλάξεις»",
+  "candidate": "/tmp/namelecule-v54-merge-20261105-candidate",
+  "primaryEdited": false,
+  "commitPushInstall": false,
+  "runtimeTarget": {
+    "path": "js/mulermoc-nom-core-54.js",
+    "beforeSHA256": "3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306",
+    "afterSHA256": "8f3e5f76d96322faf7cf9251f4cae3eca204fe2f82bf5754fdce6ffc4cd5d5a9"
+  },
+  "functionsChanged": [
+    {
+      "name": "fMolCountsLine",
+      "change": "New bounded index0..7 versioned locator with separately validated3column atom/bond fields including contiguous101100; preserves unversioned strict standardindex3 records only; rejects malformed fields and V3000."
+    },
+    {
+      "name": "fParseMolV2000",
+      "change": "Use detected counts/atom/bond/property offsets; normalize output head to3lines. Retain every declared valid bond requirement, coordinates/element validation, atom/bond metadata, charge/isotope/radical records, SUP handling and required M END."
+    },
+    {
+      "name": "fHorizontalEquivalentIndex",
+      "change": "Read atom count/coordinates relative to shared detected counts line, retaining exact numbered-chemistry equivalence filtering and horizontal scoring."
+    },
+    {
+      "name": "fLinearizeMol",
+      "change": "Adopt upstream terminal lean and horizontal terminal ether school-form rules only after retained terminal degree-two sp continuation, preserving both nitrile directions."
+    }
+  ],
+  "unchanged": "52 other pre-existing top-level functions byte-identical; fTranslateChain2D3D executable portion identical (new helper follows its trailing documentation); fZigzagMol exact byte-identical. All naming/locant/C9-C20/isomorphism safeguards retained. No MOL/SDF/data writes.",
+  "reproductions": [
+    "Exact session baseline rejects short nitro header; a synthetic short zero-x carbon source is incorrectly parsed as0atoms. Candidate parses correct3atoms and preserves nitro charges/SUP.",
+    "Raw upstream accepts invalid declared bond, loses charge/isotope/SUP metadata, and bends CH3-C#N to116.565deg in both chain directions. Candidate rejects invalid bonds and keeps8direction/header nitrile cases180deg.",
+    "Raw upstream rejects valid contiguous101100 counts. Candidate parses101atoms/100bonds in standard and short forms; no C101 naming claim.",
+    "Initial tag-only candidate exposed existing unversioned pentyn_4_one_2_3D.sdf regression in full reordered-map sweep. Bounded strictindex3 versionless compatibility restored; actual stored12atom/11bond record and V3000/wrong-index negative controls now checked."
+  ],
+  "verification": {
+    "runtime": "actual macOS JavaScriptCore; Python stdlib runners; no dependencies installed",
+    "newRegression": {
+      "checksPassed": true,
+      "strictInvalidCases": 22,
+      "terminalSpDirectionsAndHeaders": 8,
+      "unchangedTopLevelFunctions": 52,
+      "fZigzagMolByteIdentical": true,
+      "operatingConditions": "actual macOS JavaScriptCore; no browser",
+      "sourceSHA256": {
+        "before": "3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306",
+        "after": "8f3e5f76d96322faf7cf9251f4cae3eca204fe2f82bf5754fdce6ffc4cd5d5a9",
+        "upstream": "28f1e9f5d00ee428f4ac5877dfc3f072c3b1f6a43a8f96f73d576c020248445d"
+      }
+    },
+    "naming": {
+      "completed": true,
+      "checks": 1084,
+      "libraryComparisons": 844
+    },
+    "coreSuite": {
+      "molecules": 141,
+      "namingParentRegressionCases": 844,
+      "namingParentDifferences": 12,
+      "coldInitCases": 844,
+      "exactMaps": 842,
+      "mapCases": 844,
+      "signatureMismatches": [],
+      "untranslatedMaps": [
+        {
+          "key": "penten_3_yne_1",
+          "mode": "expanded",
+          "cm": "algorithmic",
+          "exact": false,
+          "translated": null,
+          "chain3": [
+            5,
+            4,
+            3,
+            2,
+            1
+          ],
+          "signatureMatches": true,
+          "pool": [
+            [
+              1,
+              2,
+              3,
+              4,
+              5
+            ]
+          ],
+          "mappedPool": [
+            null
+          ]
+        },
+        {
+          "key": "penten_3_yne_1",
+          "mode": "expanded",
+          "cm": "data",
+          "exact": false,
+          "translated": null,
+          "chain3": [
+            5,
+            4,
+            3,
+            2,
+            1
+          ],
+          "signatureMatches": true,
+          "pool": [
+            [
+              1,
+              2,
+              3,
+              4,
+              5
+            ]
+          ],
+          "mappedPool": [
+            null
+          ]
+        }
+      ],
+      "generatorCases": 1263,
+      "generatorNamingDifferences": [],
+      "reorderedGraphMaps": 422,
+      "reorderedGraphMapFailures": [
+        {
+          "key": "penten_3_yne_1",
+          "mode": "expanded",
+          "exact": false
+        }
+      ],
+      "invalidInputChecks": 6,
+      "chemicalOraclePermutationCases": 240,
+      "chemicalGuardCases": 15,
+      "mapBoundaryCases": 4,
+      "generatorBentSp": [
+        {
+          "key": "butanenitrile",
+          "mode": "skeletal",
+          "inputBentSp": [
+            {
+              "atom": 1,
+              "cosine": -0.5000089280931208
+            }
+          ],
+          "results": [
+            {
+              "kind": "expanded",
+              "name": "βουτανονιτρίλιο",
+              "heavyAtoms": 5,
+              "atoms": 12,
+              "sameName": true,
+              "bentSp": [
+                {
+                  "atom": 1,
+                  "cosine": -0.5000089280931208
+                }
+              ],
+              "newBentSp": [],
+              "signatureMatches": true
+            }
+          ]
+        }
+      ],
+      "generatorNewBentSp": [],
+      "terminalSpDirectionCases": 4,
+      "unsupportedGeneratorSources": [
+        {
+          "key": "penten_3_yne_1",
+          "mode": "expanded",
+          "unsupported": true,
+          "results": []
+        }
+      ]
+    },
+    "metadataSuite": {
+      "molecules": 141,
+      "roundtripCases": 422,
+      "generatorGraphFormulaChargeCases": 1684,
+      "unsupportedSources": [
+        {
+          "key": "penten_3_yne_1",
+          "mode": "expanded",
+          "reason": "unsupported literal element/query label"
+        }
+      ],
+      "deliberateFixtures": 13,
+      "namedNitroCases": 24,
+      "negativeButeneMap": true
+    },
+    "mapTransitions": {
+      "molecules": 141,
+      "exactPersistentTransitions": 1684,
+      "unsupportedRawLabelCases": [
+        {
+          "key": "penten_3_yne_1",
+          "mode": "expanded",
+          "cm": "algorithmic"
+        },
+        {
+          "key": "penten_3_yne_1",
+          "mode": "expanded",
+          "cm": "algorithmic"
+        },
+        {
+          "key": "penten_3_yne_1",
+          "mode": "expanded",
+          "cm": "data"
+        },
+        {
+          "key": "penten_3_yne_1",
+          "mode": "expanded",
+          "cm": "data"
+        }
+      ],
+      "sameSizeMutationRejected": true
+    },
+    "skeletalGeometry": {
+      "forms": 422,
+      "molecules": 141,
+      "missing": [
+        {
+          "key": "methane",
+          "mode": "skeletal"
+        }
+      ],
+      "generated": 421,
+      "skipped": [
+        {
+          "key": "penten_3_yne_1",
+          "mode": "expanded",
+          "reason": "unsupported source transformation metadata"
+        }
+      ],
+      "angleFailures": 0,
+      "invariantFailures": 0
+    }
+  },
+  "runnerDiagnostics": [
+    "Core suite first stopped because isolated candidate omitted4root scientific spec fixtures; root copied exact fixtures; suite rerun.",
+    "Core suite then demonstrated unversioned SDF compatibility failure; causal helper extension implemented and all affected suites rerun at finalhash8f3e5f76.",
+    "New fixture initial assertions over-constrained baseline short parse as null (actual may misparse0atoms) and roundtrip literal SUP SBV vector (existing writer recomputes-0.8250 as-0.8251 from saved4decimal coordinates). Assertions now measure correct atom cardinality, full atom/bond semantic metadata and SUP identity; existing geometry suite separately validates recomputed SBV vectors. No historical tests or assertions altered.",
+    "Naming/geometry wrapper redirects evidence outputs only and uses exact original tests; historical source files unchanged."
+  ],
+  "limitations": [
+    "Browser/JSME acquisition, app modes, presentation replay and final primary verification belong to root/viewer work and were not run by this worker.",
+    "Independent Reviewer and Chemistry Validator assessment of complete merged unit still pending at root.",
+    "Methane has no stored skeletal form; unsupported literal[H] label in penten_3_yne_1 expanded remains fail-closed (1source,2algorithm/data raw map cases; repeated transitions list4occurrences).",
+    "Pre-existing bent source butanenitrile skeletal coordinates remain inherited by fGenExpandedMol (no geometry rewrite there); no new bent sp cases. Shared fZigzagMol checks pass all421supported sourceforms.",
+    "Core52 comparison reports12expected pre-existing oxyacid naming corrections; exact pre-merge-core54 corpus compares844cases unchanged.",
+    "Existing English nitro-multiplicity omission and naming spelling conventions remain documented by reused naming suite; no external naming oracle or native-browser guarantee claimed.",
+    "C101 fixture validates parser capacity only; nomenclature support remains bounded."
+  ]
+}

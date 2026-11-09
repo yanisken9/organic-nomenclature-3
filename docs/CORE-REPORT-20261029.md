@@ -1,0 +1,11 @@
+# Core-only professor delivery — 2026-10-29
+
+User approved replacing the whole-work report with ONLY core behavior/reason, actual past checks and exact code differences. No planning presentation requested. Existing report URL retained. Six files under docs/professor-20261029 changed/added: main-esters-update.html, core-changes.html, core-changes.patch, core-update.txt, links.txt, verified-facts.json. Public docs-only commit3f046ad8be3d21a852a130beeca88682bd7afe06, parentcc2b611. Old full report remains in published Git history and previous backups.
+
+Frozen target hashes: checks/core-report-target-20261029.json. Independent fresh read-only Reviewer /root/core_report_review, role NAMELECULE_REVIEWER_V1_20261023, inspected all six deliverables, surrounding source, instructions/checklist, patch against original Git diff, decoded HTML against patch, evidence110rows/814regression/16guards, exact source core checksum and relative links. No P0–P3 findings. No file writes by Reviewer. No chemical/naming rules changed, so no separate chemistry role or runtime suite activated.
+
+Developer checks: git apply --check and application to temporary aae82c8 core yielded byte-identical cc2b611 core; relative report/evidence links resolve; staged diff limited to six report paths and diff --check passed. Pages API exact commit built; six live file SHA256 comparisons passed. Saved in checks/core-report-publication-20261029.json. All source core hashes, original HEAD/branch and index unchanged. Historical functional tests cited, not re-executed. Browser rendering not independently tested for this text-only change.
+
+Scope/limitation: patch is single-file previous-Namelecule-release diff, NOT a patch against current professor upstream and not a complete feature/data/viewer distribution. Short report makes baseline and compatibility review explicit. Future report policy is recorded at top SESSION-NOTES/YANNIS-CONTRIBUTIONS. No professor message sent.
+
+Desktop current HTML uses absolute public links so the local copy is usable; current links and core patch exported. Previous full backups retained. New core-only copy in Αποθηκεύσεις/2026-10-29-core-report. No new core change during this session.

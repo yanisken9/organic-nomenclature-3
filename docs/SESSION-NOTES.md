@@ -1,3 +1,11139 @@
+# Current resume point — 2026-11-09 — Ενημερωμένη κύρια δημοσιεύτηκε, πλήρης αποθήκευση εκκρεμεί
+
+Ο χρήστης ενέκρινε αποθήκευση παντού και γενικό σύνδεσμο, διευκρινίζοντας μόνο
+την υποδοχή. Δημοσιεύτηκαν ΜΟΝΟ12ήδηελεγμένα runtime/lesson/library αρχεία στο
+προσωπικόorigin/thesis-work, commit98c22050de2cd81f36db734fe1556e3871c9f91b,
+base2afe6135. Δεν δημοσιεύτηκε το προσωρινό reviews/ prefix. Όλα3789άλλαpublic
+αρχεία και49protectedReact/v52 ίδια. Καμία ενσωμάτωση καθηγητή (HOLD ισχύει),
+καμία νέα αλλαγή core/χημικούγράφου/MOL/SDF. SourceHEAD168e3ce/index25c21223…
+διατηρήθηκαν,10core ίδια με αρχή συνεδρίας. Τελικός μόνο σύνδεσμος:
+https://yanisken9.github.io/organic-nomenclature-3/design/welcome-proposal.html?v=release-20261109
+
+Developer native integration:6πραγματικέςεπισκευές/gates4/11,12steps,chainchoices/
+numberingdirections/mobile;23available2Dcombinations×2viewports=46framingchecks,
+8actual3D/SDFcounts. Rootwelcome→library→activeuser3→gate4/Return/Exit και
+προηγούμενηReact smoke,0capturedpageJSerrors. Source JSON/desktop9 SHA607a530a…
+ίδια. Prefixmissing7assets ήταν fixture-only (root ήδηόλα14), διατηρήθηκεfailedrun.
+Skeletal2D-vs3Datomcount comparator ήταν harnessbug, στοχευμένα63finalchecks
+πέρασαν· interruptednormalrun χαρακτηρίζεται incomplete, όχι passingfullsuite.
+Fresh Reviewer `/root/review_save_publish_20261109` noP0/P1/P2/P3, exact12staged/
+54deliverables/42browserfiles/49protected/3789otherpublic και νέαsavehelperprimitives
+ελεγμέναανεξάρτητα. Browser παραμένει Developer evidence, όχι reviewerbrowserrun.
+Manifest2689e0d1… και review.json στο
+`docs/checks/alkane-teacher-link-20261109T060243Z/`. Actual live65HTTP/SHA πέρασαν,
+remoteHEAD98c22050ίδιο· bounded LIVE browser smoke ολοκληρώθηκε:10 checks, νέα owned headless συνεδρία έκλεισε.
+Η κονσόλα ΔΕΝ είναι καθαρή:3γνωστά Analytics cookie rejections,1JSmolTracker
+XFO/NS_ERROR_XFO_VIOLATION και4favicon404. Δεν καταγράφηκαν άλλες εξαιρέσεις
+ή αποτυχίες runtime assets. Live report7b6c0bda…/manifest1733e89d… στοbrowser-live/.
+
+Fullsourcecheckpoint (ReactWIPμαζί), ZIP/allSHA+CRC, bundleverify, recoveryZIP,
+δύοdatedfolders και Githubcheckpoint ΕΚΚΡΕΜΟΥΝ ακόμη. State:
+`communication/checkpoints/save-publish-20261109-state.json`, branch
+`checkpoint/namelecule-20261109-081249`. Reviewed helper414270fa…865d εκτελείται
+μόνομετάbrowser-live freeze/σημειώσεις. Κανέναclaimπλήρουςsaveμέχριchecks.
+Επόμενο: sourcefreeze→savehelper/externalcopies→checkpointpush→
+τελικέςσημειώσεις/bookkeepingdelta+bundle/twofolders→targetedindependentclosure.
+ΠαλιάFirefoxfreeze/JSmol/externalfonts-dependencies παραμένουν γνωστά· δεν
+δηλώνεται offlineπακέτοήσυνεδριακήετοιμότητα. ΠροσωπικάGUI δεν πειράχτηκαν.
+
+# 2026-11-09 — Εγκεκριμένη πλήρης αποθήκευση και γενικός σύνδεσμος, σε εξέλιξη
+
+Ο χρήστης ζήτησε σύνδεσμο για το σημερινό μάθημα, έπειτα «αποθήκευσε παντού τα
+πάντα κ βγάλε έναν γενικό σύνδεσμο για την εφαρμογή» και διευκρίνισε «για την
+υποδοχή μόνο αρκεί». Τελικό ζητούμενο: μόνο ο γενικός σύνδεσμος της ενημερωμένης
+υποδοχής. PublicNov5 main200/oldlesson200, σημερινό user3JSON404 επιβεβαιώθηκαν
+με actualHTTP. Καμία αυτόματη ενσωμάτωση καθηγητή· HOLD διατηρείται.
+
+Outside-source public clone HEAD2afe6135: ετοιμάστηκαν/staged ΜΟΝΟ12ακριβή
+ήδη ελεγμένα αρχεία (11updates+νέοuser3JSON), χωρίς νέο runtime κώδικα/core.
+Root-publication-plan/staged hashes και3800baseline paths στο
+`docs/checks/alkane-teacher-link-20261109T060243Z/`. Όλα49publicReact/v52
+προστατευμένα ίδια, όλες άλλες public πηγές ίδιες. React WIP περιλαμβάνεται
+ΜΟΝΟ στο fullsourcecheckpoint. Prefix275→282αρχεία χρησιμοποιείται μόνο για
+τοπικό integration test, ΔΕΝ δημοσιεύεται. Initial prefixpropane404 διατηρήθηκε·
+root περιείχε ήδη όλα14dynamicassets. Prefix προστέθηκαν7αρχεία χωρίς appfix.
+Browser worker ελέγχει έξι πραγματικές επισκευές, δύο gates, step5/7, final8
+molecules/23μορφές2D×2viewports και3D, rootwelcome→library→lesson/React smoke.
+Τα αποτυχημένα harness counts μετά skeletal διορθώθηκαν μόνο στο harness.
+Αποτελέσματα/review/final live επιβεβαίωση εκκρεμούν· καμία δημοσίευση ακόμη.
+
+Προετοιμάστηκε own-.git checkpoint clone/νέο branch και καινούρια dated paths:
+`communication/checkpoints/save-publish-20261109-state.json`. Reusable archive/
+SHA/CRC primitives Nov5, νέο ρητό helper `save-helper-20261109.py`, syntaxpass·
+παραμένει για ανεξάρτητο έλεγχο και εκτέλεση μετά liveverification/sourcefreeze.
+GitHTTPS dry-run μέσω υπάρχοντος osxkeychain passed, ghCLI λείπει χωρίς ανάγκη
+εγκατάστασης/ανάγνωσης tokens. SourceHEAD168e3ce/index25c21223… αμετάβλητα,
+10core hashes ίδια μεsessionstart. Fullsave/publication/core report ΔΕΝ έχουν
+δηλωθεί ολοκληρωμένα. Τελικός σχεδιασμένος σύνδεσμος:
+https://yanisken9.github.io/organic-nomenclature-3/design/welcome-proposal.html?v=release-20261109
+Επόμενο: browser report→ένα ανεξάρτητο review→publish/livebytes→τελικές σημειώσεις,
+fullsourceZIP/bundle/recovery/twofolders και GitHubcheckpoint, SHA επαλήθευση.
+Παλιό Firefox freeze/εξωτερικόJSmol παραμένουν ανοικτοί γνωστοί περιορισμοί.
+
+# 2026-11-09 — Νέος read-only έλεγχος καθηγητή, χωρίς νεότερα
+
+Στις05:48UTC ο χρήστης ζήτησε αν υπάρχει κάτι μετά τον προηγούμενο έλεγχο.
+Live GitHub HEAD/history και pinned CHANGELOG ελέγχθηκαν: ίδιο bfa9ce034eb8569fcbde988f939069d33bc7020a,
+τελευταίο functional282567e9/v54.42, μηδέν νέα commits από τον προηγούμενο έλεγχο.
+Changelog222211bytes/SHA5a98c11d… ακριβώς ίδιο. Actual synchronized παραμένει
+f49b810c93ec85d06163679aff4a8642ea1b4cd3, γνωστό backlog59commits χωρίς νέα
+επικάλυψη· user HOLD ενσωμάτωσης διατηρείται. Πρώτη web ανάγνωση απέτυχε
+(API inaccessible/raw cache miss), direct read-only HTTPS succeeded με HTTP200
+και pinnedSHA. Evidence/head/history/CHANGELOG/HTTP/result:
+`docs/checks/upstream-read-20261109T054801Z/`. Καμία fetch/merge, αλλαγή εφαρμογής
+ή core, commit/push/δημοσίευση. Όλα10core hashes ίδια με Nov9 sessionbaseline.
+Η ομαλή κύλιση ολοκληρώθηκε τοπικά/reviewed, όπως ακριβώς καταγράφεται αμέσως
+παρακάτω. Επόμενο παραμένει δοκιμή χρήστη/βελτίωση μαθήματος· παλιό Firefox
+freeze ανοικτό, χωρίς αλλαγή στο υπόλοιπο εγκεκριμένο scope.
+
+# 2026-11-09 — Ομαλή κύλιση απαντήσεων ολοκληρώθηκε τοπικά
+
+Με ρητή έγκριση υλοποιήθηκε semantic reveal στα ενσωματωμένα κουίζ αλκανίων:
+μετά από επιλογές/Έλεγχο εμφανίζεται το επόμενο χρήσιμο περιεχόμενο κάτω από
+τη σταθερή κεφαλίδα. Ήδη ορατό περιεχόμενο δεν μετακινείται· ψηλή εξήγηση
+αρχίζει από την αρχή της. Διατηρούνται focus, πρόοδος, gates και αρχή κάθε
+νέου κουίζ. Reduced-motion υποστηρίζεται και παλιές κινήσεις ακυρώνονται σε
+νέα ενέργεια/χειροκίνητη επέμβαση/αλλαγή γύρου/κλείσιμο. Αλλαγές μόνο στα
+`js/namelecule-game-repair.js`, `js/namelecule-generated-repair-checkpoint.js`,
+`js/namelecule-quiz-checkpoints.js` και τρία cache URLs του Main54. Standalone,
+JSON και CSS αμετάβλητα. Πριν/μετά, ακριβή hashes και evidence στο
+`docs/checks/quiz-answer-scroll-20261109/`.
+
+Developer:3JS compile,32 controller assertions με δηλωμένα doubles,4 exact HTTP
+byte checks· native Firefox159:111 normal+37 reduced-motion checks,6 πραγματικές
+επισκευές στα δύο gates, πρόσθετη reduced-motion/standalone κάλυψη και13 targeted
+checks rapid answer/Next εν κινήσει με μία επιπλέον πραγματική επισκευή. Desktop,
+390/320px και χαμηλό viewport, keyboard, counter1–2–3, reopen/Back/Exit, unlock
+και μηδέν καταγεγραμμένα page JS errors. Native wheel αρχική αποτυχία διατηρήθηκε:
+isolated no-app control αναπαράγει settling· δεν αποδεικνύεται στιγμιαίο σταμάτημα
+ή υπεροχή listener. Τελικό app destination διακόπτεται και σταθεροποιείται μετά
+το τελευταίο wheel. Αρχικό followup harness socket-shadowing failure επίσης
+διατηρήθηκε/διορθώθηκε μόνο στο harness, όχι στην εφαρμογή.
+
+Fresh Reviewer `/root/review_quiz_answer_scroll_20261109`: χωρίς actionable
+P0/P1/P2/P3,32+44 independent in-memory assertions και trace/screenshot review.
+Δύο κενά V1/V2 έκλεισαν με targeted ανεξάρτητη αξιολόγηση νέου Developer evidence,
+9 πρόσθετους ελέγχους: rapid δεύτερη επιλογή σωστός τελευταίος στόχος· Next κατά
+την κίνηση φέρνει2/3/top0 χωρίς drift. Δεν εκτέλεσε browser ο Reviewer.
+Main manifest528b33e7… και targeted aace722e… ίδια, τελική επαλήθευση όλων των
+hashes στο final-verification.json, λεπτομέρειες/όρια στο review.json.
+
+Όλα τα10 core hashes ίδια με την αρχή της συνεδρίας Nov9: ΚΑΜΙΑ αλλαγή core.
+Δεν έγινε commit/push/δημοσίευση/upstream sync ή JSON export. Μεγάλη προϋπάρχουσα
+dirty κατάσταση δεν αποδίδεται εδώ. User HOLD ενσωμάτωσης professor παραμένει:
+checked bfa9ce034e/v54.42, actual sync f49b810c. Η αλλαγή είναι μόνο τοπική·
+η ήδη ανοικτή σελίδα χρειάζεται ανανέωση για τα νέα cache URLs. Προσωπικός57800,
+GUI55879/56371 και driver21029 δεν πειράχτηκαν· owned headless καθαρίστηκαν με guards.
+Παλιό whole-browser freeze παραμένει ανοικτό, δεν δηλώνεται μόνιμη θεραπεία ή
+συνεδριακή πιστοποίηση. Προσωπικός Firefox ανακτήθηκε και ο χρήστης επιβεβαίωσε
+καρτέλες/απόκριση· private recovery αρχεία εκτός repo. Επόμενο: οπτική δοκιμή
+χρήστη μετά από ανανέωση· αν επανεμφανιστεί freeze, sample/snapshot πριν reload.
+Τελική πρόβα απαιτεί το πραγματικό νέο Mac/macOS/browser/projector· offline
+προετοιμασία παραμένει για Φεβρουάριο2027.
+
+# 2026-11-09 — Ιστορικό υλοποίησης και ελέγχων κύλισης απαντήσεων
+
+Ο χρήστης ενέκρινε ρητά όλο το πλάνο ομαλής αυτόματης κύλισης μετά τις επιλογές
+και τον Έλεγχο στα ενσωματωμένα κουίζ. Υλοποιήθηκαν μόνο3JS και Main54cacheURLs:
+`namelecule-game-repair.js` 7d0a0939841f0423377d0ccca66ee9554b70f8a61a7ff020cf833aa0755b5ac7,
+`namelecule-generated-repair-checkpoint.js` d99aaa972afa2a437bedf1e4eca3c835126f237e5333e33ac1d9d10d5b684d27,
+`namelecule-quiz-checkpoints.js` 7bf5441b52b9b519db79f3e56adec97979668de172b8292c0a714355add35bb7,
+Main54 34ade6e22d3e9afaf8cfeb49d7a75fabada1a915b6d1550f58b83b323d68fb27.
+Optional semantic onReveal εκπέμπεται μόνο μετά από user action/render/focus·
+ο generated adapter προωθεί με destroyed/index/connected guards. Controller
+μετρά πραγματικό dialog/header/target range, αποκαλύπτει όσο λείπει, αρχή ψηλής
+εξήγησης και όχι το τέλος της. Smooth ή instant όταν reduced-motion, χωρίς νέα
+focus moves. Παλιά κίνηση ακυρώνεται σε επόμενη ενέργεια/manual input, νέο γύρο,
+loading/close/destroy/step/Exit. New-round reset0 διατηρείται. Standalone δεν
+λαμβάνει reveal callback και ο game hook ελέγχει !standalone.
+
+Root:3scripts compile,32JSC guard/geometry assertions με δηλωμένα FakeNode/adapter
+και synchronous scroll doubles· δεν αποδεικνύουν native animation. ExactHTTPbytes
+4resources με νέα queries,13protected hashes ίδια (10core+2CSS+activeJSON), Main54
+μόνο3query αλλαγές. Αρχικό restricted-network HTTP απέτυχε πριν συνδεθεί·
+εξουσιοδοτημένο rerun πέρασε. Evidence/before/plan/source.diff στο
+`docs/checks/quiz-answer-scroll-20261109/`. Worker ετοιμάζει/τρέχει isolated
+browser verification6actualrepairs με order, native smooth/reducedmotion,
+close/rapid/Next/reopen/gates/standalone και narrow. Δεν έχει ακόμη γίνει fresh
+independent review ή τελική αποδοχή. Root κρατά την παραγωγή σταθερή όσο τρέχει.
+GUI55879/56371/driver21029 και προσωπικός57800 δεν ανανεώθηκαν/πειράχτηκαν.
+Καμία core/CSS/JSON αλλαγή ή export, commit/push/publication/upstream sync.
+Πρώτα native αποτελέσματα: agreeing reveal και Back-midmotion/reopen πέρασαν.
+Strict wheel takeover assertion απέτυχε: scroll0 μετά wheelup και σταδιακή
+επιστροφή~30.3px, αρχικός προορισμός~110.9. Δεν είναι αποδεδειγμένο app resume:
+pre-wheel9.3 snapshot προηγείται100ms χειρονομίας/πρώτου event. Δεν βρέθηκε νέο
+app scroll call, ούτε layout/focus shift. Worker συγκρίνει isolated native fixture
+manual-only, smooth+cancel listener, smooth+natural wheel με trusted timestamps.
+Control ολοκληρώθηκε χωρίς app scripts: A manual-only τελικό0· B smooth με
+ίδιο passive instant cancel τελικό24.35· C smooth+natural wheel ΧΩΡΙΣ cancel
+write επίσης post-wheel rebound και τελικό13.18. Πρώτα events/θέσεις διαφέρουν,
+άρα δεν γίνεται ποσοτική σύγκριση listener. Native settling αναπαράγεται χωρίς
+app writes· δεν αποδεικνύεται app resume. Η αρχική αποτυχία διατηρείται και το
+κριτήριο διευκρινίζεται με last-wheel timestamps: manual direction/διακοπή
+παλιού προορισμού, τελική σταθεροποίηση, χωρίς νέα semantic/app scroll request.
+Δεν άλλαξε παραγωγικός κώδικας για να προσαρμοστεί στο assertion. Ο worker
+συνεχίζει την πραγματική πλήρη ροή με ίδια hashes. Reduced-motion real profile
+ήδη37checks/1actualrepair/0pageerrors, τα normal6rounds εκκρεμούν. Primaryrefs
+στο native-scroll-reference.json· παλιό Bug1932985 είχε λυθεί στη136, δεν αποδίδει
+τη δική μας παρατήρηση. Main browser verification ολοκληρώθηκε:111normal+37reduced assertions,
+33semantic actions,6actuallearnerrepairs+reduced+standalone,0pageJSerrors.
+Παραγωγή ίδια. Fresh Reviewer `/root/review_quiz_answer_scroll_20261109`:
+χωρίς actionable production findings· ανεξάρτητο diff/hash και32+44in-memory
+assertions,33trace reanalysis. Manifest528b33e7… με4targets/65deliverables/
+23beforecontext/13protected, frozen. Επισημάνθηκαν δύο native coverage gaps:
+rapid δεύτερη απάντηση και Next κατά την κίνηση (το main harness περίμενε760ms).
+Worker συμπληρώνει ΜΟΝΟ αυτά σε νέο `lifecycle-followup/`,χωρίς source/frozen
+browser αλλαγές, έναheadless/μίαactualrepair. Main review στο review.json·
+απαιτείται targeted final verification νέων evidence, όχι δεύτερο fullreview.
+Επόμενο: browser findings, αναγκαίες διορθώσεις εντός εγκεκριμένου scope,
+freeze τελικών hashes/evidence και fresh Reviewer. Παλιό Firefox freeze ανοικτό.
+
+# Current resume point — 2026-11-09 — Ομαλή κύλιση μετά τις απαντήσεις, αναμένεται έγκριση
+
+Ο χρήστης ζητά στο μάθημα αλκανίων ομαλή αυτόματη κύλιση μετά από κάθε απάντηση,
+ώστε να εμφανίζεται το επόμενο περιεχόμενο χωρίς χειροκίνητη μετακίνηση.
+Έγινε μόνο διερεύνηση και κρατήθηκαν before copies/hashes4αρχείων· κανένας
+κώδικας/CSS/JSON/core δεν άλλαξε. Plan/baseline στο
+`docs/checks/quiz-answer-scroll-20261109/plan.json` (approval pending).
+
+Source explorer `/root/quiz_answer_scroll_preflight_20261109`: οι handlers
+κάνουν render/focus preventScroll χωρίς semantic reveal callback. State callback
+δεν επαρκεί: στη σωστή απάντηση εκπέμπεται πριν δημιουργηθεί το success DOM.
+Ο πραγματικός scroll owner είναι το dialog με sticky header. Προτεινόμενη
+προαιρετική διαδρομή reveal: round UI→generated adapter→dialog controller,
+μόνο μετά από ενέργεια χρήστη και αφού υπάρχουν τα αντίστοιχα DOM containers.
+No generic updateControls/image-load/restore trigger. Σωστό Check: αρχή εξήγησης,
+με Continue όταν χωρά· όχι άλμα που προσπερνά την εξήγηση.
+
+Developer worker `/root/verify_step11_stop_20261109`:2actualrepairs/0pageJSerrors,
+1280×650 και390×760. Οι choices μένουν ολόκληρες κάτω από view, success feedback
+κόβεται και Continue εκτός θέας. Candidate είναι ορατό στις μετρημένες διαδρομές,
+Check/λάθος feedback διαφέρουν ανά προηγούμενη κύλιση· χρειάζεται target-aware
+μετακίνηση μόνο όταν απαιτείται. Evidence14screenshots/before/findings στο
+`docs/checks/quiz-answer-scroll-preflight-20261109/`. Headless58698 έκλεισε με
+ownership guard· personal57800 και GUI55879/56371/driver21029 ανέπαφα.
+Αρχικό typo στον readonly geometry helper διατηρήθηκε, δεν ήταν app σφάλμα.
+
+Παρουσιάστηκε συγκεκριμένο πλάνο και εκκρεμεί ρητή έγκριση:3JS
+(namelecule-game-repair/generated-repair-checkpoint/quiz-checkpoints) και
+Main54 cache URLs, common embedded quizzes και παλιότερα alkane lessons·
+standalone game χωρίς νέα κύλιση. Native smooth, measured sticky safe region,
+reduced-motion, υπάρχον focus, stale/cancellation guards, διατήρηση νέου γύρου
+στην κορυφή και προόδου. Έλεγχοι replacement/order, σωστό/λάθος, ήδη ορατά/
+ψηλά targets, desktop/narrow, reduced motion, rapid/close/Next/reopen/gates,
+standalone και fresh independent Reviewer. JSON/core δεν προβλέπεται να αλλάξουν.
+Ο χρήστης μπορεί να περιορίσει την έγκριση μόνο στο Check. Επόμενο: απάντηση
+στην ανοιχτή ερώτηση· πριν από αυτήν καμία υλοποίηση. Χωρίς commit/publication.
+Το παλιό Firefox freeze παραμένει χωριστό ανοικτό θέμα. Όλα10core ίδια με
+session baseline· προηγούμενη διόρθωση round-top reset παραμένει ελεγμένη.
+
+# Current resume point — 2026-11-09 — Προβλεπόμενο μηχάνημα συνεδρίου: νέο MacBook
+
+Ο χρήστης διευκρίνισε ότι στην παρουσίαση θα έχει νέο «MacBook M6,32GB».
+Πρόκειται για δήλωση/προγραμματισμό χρήστη, όχι ανεξάρτητη επαλήθευση μοντέλου,
+διαθεσιμότητας ή μετρημένων δυνατοτήτων. Το νέο μηχάνημα δεν έχει ελεγχθεί εδώ.
+Η τελική αποδοχή/πρόβα του συνεδρίου πρέπει να γίνει σε αυτό το μηχάνημα,
+με την πραγματική έκδοση macOS/browser/Namelecule και το σύστημα προβολής.
+Να ελεγχθούν cold startup, πλήρης διαδρομή θεωρίας/κουίζ/2D/3D/fullscreen,
+κλιμάκωση/ανάλυση με προβολέα και η συμφωνημένη διαδικασία ανάκαμψης.
+Οι σημερινοί έλεγχοι αφορούν το τωρινό μηχάνημα. Δεν αποδεικνύουν εμφάνιση
+ή εξάλειψη του freeze στο νέο MacBook. Η περισσότερη RAM δεν αποτελεί απόδειξη
+διόρθωσης αστοχίας browser/λογισμικού. Η τρέχουσα διάγνωση παραμένει ανοικτή
+και συνεχίζεται όπως περιγράφεται παρακάτω· ο έλεγχος στο νέο περιβάλλον είναι
+χωριστή απαιτούμενη επιβεβαίωση όταν αυτό είναι διαθέσιμο. Η προετοιμασία
+του offline πακέτου παραμένει στον συμφωνημένο Φεβρουάριο2027.
+Καμία νέα αλλαγή εφαρμογής/core/JSON, commit/push/δημοσίευση ή upstream sync.
+
+# Current resume point — 2026-11-09 — Ανοικτή αξιοπιστία παρουσίασης συνεδρίου
+
+Ο χρήστης επανέφερε ως κρίσιμο κριτήριο την αποφυγή διακοπής της παρουσίασης
+στο συνέδριο Απριλίου2027. Ο προσωπικός Firefox επανεκκινήθηκε και ο χρήστης
+επιβεβαίωσε απόκριση/καρτέλες, αλλά η αιτία του freeze παραμένει ανοικτή.
+Δεν τεκμηριώνεται ακόμη συνεδριακή ετοιμότητα από αυτή την ανάκαμψη.
+Διαφορετικά συμπτώματα:493 whole-browser hang με επίμονα AppKit zoom-menu
+frames·55879 αναφορά προβλήματος κουίζ με browser chrome που ανταποκρινόταν.
+Δεν αποδεικνύεται κοινή αιτία ούτε ευθύνη Namelecule/JSmol/Firefox από μόνα τους.
+
+Read-only follow-up `/root/firefox_freeze_code_preflight_20261109` επιβεβαιώνει
+το επόμενο διακριτικό τεστ: ίδια διαδρομή lesson11→Workshop σε owned fresh GUI,
+φυσική χρήση πράσινου fullscreen control έναντι BiDi fullscreen, με ζωντανό
+bound driver και καταγραφή window/modal/image/heartbeat πριν/μετά. Σε αποτυχία,
+ένα3sec parent sample πριν από recovery. Δεν εκτελέστηκε νέα δοκιμή ή αλλαγή.
+Physical-only αποτυχία με ίδιο stack ενισχύει τη συγκεκριμένη native διαδρομή·
+αποτυχία και στις δύο δεν χρειάζεται το πράσινο trigger· καμία αποτυχία αφήνει
+την intermittent αιτία ανοικτή. Instrumentation μπορεί να αλλάζει χρονισμούς.
+Δεν ζητήθηκαν νέες OS permissions ούτε επέμβαση στον προσωπικό Firefox.
+
+Προϋποθέσεις πριν χαρακτηριστεί έτοιμη η παρουσίαση: εξήγηση/αντιμετώπιση
+επαναλαμβανόμενης αστοχίας με έλεγχο στη ρίζα, επαναλαμβανόμενη πλήρης πρόβα
+στη συμφωνημένη έκδοση/μηχάνημα/browser (cold startup, θεωρία, quiz gates,
+2D/3D, fullscreen, επιστροφή), καταγεγραμμένο επαληθευμένο recovery point και
+εναλλακτική διαδρομή με δοκιμασμένη ανάκαμψη. Δεν υπάρχει ακόμη πιστοποιημένη
+τέτοια έκδοση/εναλλακτική και δεν υπόσχεται αδιάκοπη λειτουργία ένα smoke pass.
+Το offline πακέτο παραμένει για τη συμφωνημένη προετοιμασία Φεβρουαρίου2027.
+Επόμενο: bounded φυσική/αυτοματοποιημένη σύγκριση σε owned παράθυρο· για
+παραγωγική διόρθωση χρειάζονται causal evidence, συγκεκριμένο πλάνο/έγκριση
+και ανεξάρτητο review. Καμία νέα αλλαγή κώδικα/JSON/core, commit ή δημοσίευση.
+
+# Current resume point — 2026-11-09 — Προσωπικός Firefox επανεκκινήθηκε
+
+Ο χρήστης ενέκρινε ρητά «Ναι, κλείσιμο και επανεκκίνηση», μετά την ενημέρωση
+για πιθανή απώλεια μη αποθηκευμένων κειμένων. Ελέγχθηκαν ξανά το ακριβές
+executable/start/profile του προσωπικού PID493 και τα hashes των αντιγράφων.
+Έγινε SIGKILL μόνο στον493 στις06:43:23 και επαληθεύτηκε η έξοδός του.
+Με ελεύθερο profile lock άνοιξε μέσω LaunchServices με --new-instance και
+--profile το ίδιο προσωπικό4bou5fna.default-release-1, χωρίς URL/restore flag.
+Νέος προσωπικός PID57800 στις06:43:47· στις06:44:21 AppKit finishedLaunchingtrue,
+activetrue, terminatedfalse. Οι55879/56371 παραμένουν ίδιοι (start identity).
+Δεν άλλαξαν prefs/sessionstore και δεν έγινε reset/refresh profile.
+
+Backup και διαγνωστικά ΜΟΝΟ σε private0700 tmp, όχι στο repository:
+`/private/tmp/namelecule-personal-firefox-recovery-20261109-1fyj6__s`.
+Δύο σταθερά sessionstore αντίγραφα, με manifest/SHA· payload δεν διαβάστηκε.
+Η τελευταία recovery αποθήκευση ήταν περίπου67λεπτών πριν. Ιστορικό, cookies,
+κωδικοί/bookmarks δεν αντιγράφηκαν. Logs authorized-force-quit.json,
+personal-firefox-restarted.json και restart-verification.json καταγράφουν πράξεις.
+Κανονικό quit είχε αποτύχει (AppleEvent permission preflight-1744 χωρίς send·
+NSRunningApplication.terminate requestSenttrue αλλά493 παρέμενε μετά12sec).
+Το νέο άνοιγμα επιτρέπει την κανονική crash recovery του Firefox, δεν εγγυάται
+επαναφορά μη αποθηκευμένων δεδομένων. Ο χρήστης ερωτήθηκε αν ανταποκρίνεται
+και αν επανήλθαν οι καρτέλες. Ο χρήστης επιβεβαίωσε ρητά:
+«Ναι, ανταποκρίνεται και οι καρτέλες επανήλθαν». Η λειτουργική ανάκαμψη και
+επαναφορά καρτελών επιβεβαιώθηκαν από τον ίδιο, όχι μόνο από process/AppKit
+status. Καταγραφή στο private user-recovery-confirmation.json. Δεν απαιτείται
+άλλη επέμβαση για την επανεκκίνηση. Το αίτιο του παλιού freeze δεν έχει λυθεί·
+επόμενο μόνο σε επανάληψη: snapshot/sample πριν από reload/τερματισμό.
+Το τοπικό installed-source preflight επιβεβαιώνει --new-instance/--profile,
+όχι --restore-last-session. Δεν χρησιμοποιήθηκε μη υποστηριζόμενο flag.
+Καμία αλλαγή εφαρμογής/JSON/core· 17 target/protected hashes ίδια,10core ίδια
+με session baseline. Χωρίς commit/push/publication ή upstream sync.
+
+# Current resume point — 2026-11-09 — Διόρθωση κύλισης κουίζ ολοκληρωμένη
+
+Με ρητή έγκριση διορθώθηκε ο κοινός μηχανισμός των ενσωματωμένων κουίζ:
+η πρώτη και κάθε νέα ερώτηση αρχίζουν στην κορυφή του πραγματικού dialog.
+Η χειροκίνητη κύλιση στην ίδια ερώτηση διατηρείται. Άλλαξαν μόνο
+`js/namelecule-quiz-checkpoints.js` (SHA 35fda6953f06356d498f1be40fe4c6123d0c81c3bdbf81a60fa3fda5ea211501)
+και το σχετικό cache URL του Main54 (SHA 695c75a1cd82c01ea77a58e53814b378178eb2a1b0b320f50531ed1b3166d3ec).
+Κοινή επικύρωση progress, ίδιοι token/context guards· χωρίς αλλαγή σε
+απαντήσεις, εστίαση, CSS, JSON, adapters/game, γεννήτρια ή core.
+
+Έλεγχοι Developer: 48 JSC assertions με δηλωμένα doubles και 50 browser checks,
+6 πραγματικές επισκευές στα gates 4/11, 1→2→3, επανάνοιγμα/επιλογές/μετρητής,
+κλείδωμα μέχρι 3 σωστές επισκευές, 10→11→12/Exit και πλάτη 1280/390/320.
+Μηδέν καταγεγραμμένα page JS errors. Νέα ερώτηση: scrollTop 0 και ορατή οδηγία.
+Το αρχικό toolbar 10→11 timeout διατηρήθηκε· η μία περιορισμένη επανάληψη
+πέρασε με επιπλέον readiness checks, χωρίς τεκμηρίωση αιτίας ή app fix.
+Fresh Reviewer `/root/review_quiz_scroll_20261109`: χωρίς actionable ευρήματα,
+ανεξάρτητη επιθεώρηση/hashes και 76 in-memory JSC assertions. Browser evidence
+του Developer, όχι ανεξάρτητη επανεκτέλεση. Manifest SHA
+9be697ba86cbf1dd92fbf1fa581107786938ffcedba7fa524b61204559d98553.
+Evidence, review και τελικός επανέλεγχος: `docs/checks/quiz-round-scroll-20261109/`.
+
+Τα 15 protected αρχεία και όλα τα 10 core παραμένουν ίδια με το baseline.
+Δεν έγινε αλλαγή στον core σε όλη τη συνεδρία Nov9. Active JSON/Desktop9
+παραμένουν byte-identical SHA 607a530a…· δεν χρειαζόταν νέο export.
+Το βήμα 11 είχε ήδη ολοκληρωθεί και ελεγχθεί ανεξάρτητα (παρακάτω).
+Χωρίς commit/push/δημοσίευση ή upstream sync· το HOLD ενσωμάτωσης ισχύει.
+GUI56371/driver21029 έμειναν ανέπαφα με παλιότερη φορτωμένη JS· η ενημερωμένη
+έκδοση εμφανίζεται μετά από νέα φόρτωση. Δεν αγγίχτηκαν οι Firefox 493/55879.
+Το παλιότερο whole-browser freeze παραμένει ανεξήγητο, ξεχωριστό από την κύλιση.
+Επόμενο αν επαναληφθεί: παθητικό snapshot στον ζωντανό bound driver και native
+process sample πριν από reload, με διάκριση page από browser-chrome απόκριση.
+
+# Current resume point — 2026-11-09 — Κύλιση νέου κουίζ: αναπαραγωγή και πλάνο
+
+Ο χρήστης ανέφερε ότι το τρέχον παράθυρο λειτουργεί καλά και έστειλε φωτογραφία
+με την αρχή οδηγίας κρυμμένη κάτω από τη σταθερή κεφαλίδα. Repro μόνο σε χωριστό
+owned headless: initial/reopen scrollTop0 καθαρά. Με πραγματική επισκευή και
+Continue→round2 διατηρείται/clamp παλιό dialog scrollTop183.67: objectiveTop114.17
+έναντι headerBottom121.83, δηλαδή7.67px κρυμμένα χωρίς νέα χειροκίνητη κύλιση.
+Round3 ακόμη χαμηλότερη προβολή. Στο390×760 η νέα οδηγία ολόκληρη εκτός view.
+Η συνηθισμένη manual sticky επικάλυψη μετρήθηκε χωριστά· λειτουργικό bug είναι
+η αυτόματη είσοδος νέου γύρου στην παλιά θέση. 4actualUIrepairs/0JSerrors,
+1280×650/DPR2 και390×760· ownedheadless56769 έκλεισε με guard. Evidence
+`docs/checks/quiz-header-overlap-20261109/`, φωτογραφία δεν αποδεικνύει την
+ακριβή ιστορική ακολουθία του χρήστη, αναπαράχθηκε όμως η ίδια γεωμετρία.
+
+Συγκεκριμένο πλάνο ζητήθηκε και αναμένει έγκριση: κοινός dialog owner στο
+js/namelecule-quiz-checkpoints.js να ξεκινά κάθε νέα ερώτηση στην κορυφή,
+διατηρώντας manual scroll μέσα στον ίδιο γύρο, κεφαλίδα/μετρητή/κατάσταση.
+Main54 μόνο αντίστοιχο cacheURL. Έλεγχοι1→2→3, reopen, repair/gate/mobile και
+fresh ανεξάρτητο review. Δεν προβλέπεται CSS/JSON/core αλλαγή ή exportJSON.
+Before copies/hashes στο `docs/checks/quiz-round-scroll-20261109/`. Κώδικας
+δεν έχει αλλάξει για αυτό το πλάνο. Δεν ταυτίζεται με fix του Firefox freeze.
+
+Νέα GUI διερεύνηση freeze: τέσσερα runs windowed/fullscreen×2,32engine analyses,
+24trusted clicks/open/repair/close/reopen χωρίς freeze/καταγεγραμμένα errors.
+`docs/checks/firefox-workshop-freeze-20261109/completed-matrix.json`.
+Πρόκειται για BiDi nativefullscreen, όχι physicaltrafficlightclick. Ο χρήστης
+κατόπιν αλληλεπίδρασε στο GUI56371: παθητικά logs κατέγραψαν και3σωστά rounds,
+πρόοδο στο12, modalclosed, nativeNORMAL1280×735/viewport1280×650/DPR2, ζωντανά
+rAF/timers, μηδέν instrumented errors. Δεν τεκμηριώνει τι συνέβη στο55879 ή493.
+Η αρχική ερώτηση σταδίου απαντήθηκε «δουλεύει καλά, μόνο μια ατέλεια».
+Freeze παραμένει ανοικτό, δεν έγινε παραγωγική επέμβαση γι' αυτό.
+
+GUI56371/driver21029 μένουν ανοικτοί. Execsessions είναι agent-scoped· root
+δεν μπορεί write_stdin21029 (Unknownprocessid), ο worker κάνει παθητικό relay
+με followup_task /root/verify_step11_stop_20261109. Δεν πρέπει να κλείσει το
+WebSocket μέχρι να ολοκληρωθούν οι σχετικές δοκιμές. Δεν πειράχτηκαν493/55879.
+Αμέσως επόμενο: έγκριση scroll πλάνου, bounded implementation/checks/review.
+Όλα10core hashes ίδια με Nov9 baseline. Χωρίς commit/push/publication/sync.
+
+# Current resume point — 2026-11-09 — Νέο περιστατικό μέσα στο Συνεργείο
+
+Ο χρήστης διευκρίνισε ότι το πράσινο ήταν το native κουμπί πλήρους οθόνης,
+από τα τρία επάνω αριστερά. Νέο owned GUI55879 ανταποκρινόταν αρχικά και
+«πάγωσε» όταν μπήκε στο Συνεργείο από το preview11. Σε ρητή ερώτηση απάντησε
+ΝΑΙ: η γραμμή διευθύνσεων και το μενού του νέου Firefox ανταποκρίνονται.
+Επομένως το τρέχον quiz/page περιστατικό δεν εξισώνεται με το παλιό493
+whole-browser hang· κοινή αιτία δεν έχει αποδειχθεί. Νέο parent55879 sample
+χωρίς zoom-menu frames, footprint274MB/peak382.9MB. Δεν έγινε ανανέωση,
+κλείσιμο ή αλλαγή στο παράθυρο/επιλογές του χρήστη.
+
+Προηγούμενο matrix18 fullscreen μεταβάσεων ΔΕΝ άνοιγε κουίζ, άρα δεν καλύπτει
+το νέο trigger. Read-only source: #nlQuizOpen→HTMLdialog.showModal πριν από
+generator/Workers/image/focus, χωρίς JSmol ή native OS dialog σε αυτό το branch.
+Ο χρήστης ερωτήθηκε αν βλέπει επιλογές/φόρτωση/blank, απάντηση εκκρεμεί.
+Παλιό directBiDi socket έκλεισε μετά την προετοιμασία: νέο root socket status
+«session already started», evaluate invalidsessionid και UUIDroute404.
+Εγκατεστημένος Mozilla κώδικας δεν υποστηρίζει reattach αυτής της directsession·
+αυτό είναι όριο harness και δεν αποδεικνύει freeze της σελίδας. ScreenCapture
+access επίσης δεν είναι ήδη επιτρεπτό· δεν ζητήθηκε/άλλαξε άδεια.
+
+Developer worker `/root/verify_step11_stop_20261109` ετοιμάζει χωριστό owned GUI
+με persistent BiDi socket και μόνο test/evidence στο
+`docs/checks/firefox-workshop-freeze-20261109/`: windowed/fullscreen→open quiz,
+στάδια φόρτωσης/εικόνας, πραγματικά pointer events, focus/paint/timer heartbeat.
+Δεν αγγίζει παραγωγή,493/55879 ή παλιό frozen review target. Current user report
+και samples στο `docs/checks/firefox-freeze-20261109/`.
+
+Το εγκεκριμένο step11/JSON/export έχει ολοκληρωθεί και ανεξάρτητα ελεγχθεί
+όπως κάτω. Νέα επέμβαση παραγωγής δεν έγινε ούτε έχει εγκριθεί συγκεκριμένο
+πλάνο fix για το πάγωμα. Core/JS ίδια, upstream hold ισχύει, χωρίς commit/publish.
+Επόμενο: τρέχουσα ορατή κατάσταση χρήστη + GUI matrix/physical input evidence.
+
+# Current resume point — 2026-11-09 — Βήμα 11 και επαναλαμβανόμενο πάγωμα Firefox
+
+Ο χρήστης ζητά το βήμα 11 να γίνει στάση Συνεργείου όπως το 4 και οριστική
+διερεύνηση του συχνού παγώματος. Ενέκρινε συγκεκριμένο JSON-only πλάνο για το
+βήμα 11, με ίδια δεύτερη αποστολή/τρία κουίζ/κλείδωμα, απόκρυψη μόριου/ονομασίας,
+λογότυπο και οδηγίες, έλεγχο 10–11–12/μετρητή/μικρής οθόνης, ανεξάρτητο review
+και ενημέρωση του Desktop «αρχεία  json/9Αλκάνια.json» με backup/SHA.
+Εφαρμόστηκε μόνο στο step11: viewers/controls/naming/nameClick false,
+titleLogo workshop, explicit HTML/paragraph break με ίδιες λέξεις. Άλλα βήματα,
+checkpoint και JS/CSS/Main/core ίδια. Active/Desktop9 byte-identical SHA
+607a530a2d3ba151026517c61d6f7a31644e15abf82a687e778b7453d80089b7,
+33272 bytes, με dated backup και νέο mapping
+`communication/checkpoints/alkanes-json-export-20261109.json`.
+Developer worker: actual before5/after55 checks, έξι πραγματικές επισκευές,
+counter/gates/10–11–12/replay/Exit και widths1500/390/320, μηδέν JSerrors.
+Παλιά assumptions author-vs-learner/vis2D διορθώθηκαν μόνο στο harness και
+διατηρήθηκαν τα αποτυχημένα artifacts. Owned55365 έκλεισε με ownership guard.
+Evidence `docs/checks/alkane-step11-stop-20261109/`. Content-key πρόοδος αλλάζει
+7a7f37bf→f5e830a1 χωρίς migration, δεν διαγράφεται το παλιό receipt.
+Fresh ανεξάρτητο review `/root/review_step11_stop_20261109` σε frozen manifest
+e4399599756f5537d957cffa77a1c9e60dfa25e228bf2eba715c263c58afb342 ολοκληρώθηκε,
+χωρίς actionable findings. Reviewer επαλήθευσε hashes, recursive JSON diff,
+κοινές διαδρομές/flags, export/recovery, content keys και4screenshots, χωρίς
+browser run ή εγγραφές. Root επαλήθευσε ξανά όλα τα frozen hashes μετά το review.
+`review.json` και `final-verification.json` καταγράφουν αποτέλεσμα και όρια.
+
+Ο χρήστης επιβεβαίωσε freeze στο βήμα 11, χωρίς απόκριση ούτε στη γραμμή
+διευθύνσεων/μενού. Physical Esc δεν βοήθησε. Είχε χρησιμοποιήσει το πράσινο
+κουμπί μεγέθυνσης. Live προσωπικός parent PID493 (όχι παλιό dedicated instance):
+δείγματα πριν/μετά Esc δείχνουν AppKit zoom-menu showMenu/nested event loop.
+Αυτό δεν υπήρχε στο διαθέσιμο Nov5 parent sample, αλλά δεν αποδεικνύει αιτία.
+Δεν τερματίστηκε προσωπικός browser, δεν άλλαξε προτίμησή του. Αιτία παραμένει ανοικτή· το
+υφιστάμενο JSmol null exception και τα hidden viewer loads δεν ταυτίζονται με
+το whole-browser hang χωρίς επιπλέον απόδειξη. Evidence/baseline/core hashes:
+`docs/checks/firefox-freeze-20261109/`. Δεν άλλαξε core ή παραγωγική JavaScript.
+Ξεχωριστός owned GUI έλεγχος: blank6 και before/current11 από6 native
+fullscreen transitions πέρασαν, μηδέν JSerrors, χωρίς αναπαραγωγή του freeze.
+BiDi native fullscreen ΔΕΝ ενεργοποιεί green-hover popup. AXIsProcessTrusted
+false, δεν ζητήθηκε/άλλαξε άδεια. Optional Swift probe απέτυχε σε existing
+SwiftBridging module conflict· ctypes check πέτυχε, δεν έγινε compiler repair.
+Initial native test leftoverBiDi session διορθώθηκε με restart μόνο owned55515.
+Ο χρήστης έκλεισε κατά λάθος το νέο owned GUI55645 και ζήτησε ξανά άνοιγμα:
+νέο owned55879 άνοιξε στο preview11 για physical green-control test, μηδέν JSerrors.
+Παλιά frozen review evidence ίδια· νέα manual artifacts είναι χωριστά.
+Το νέο55879 έμεινε ανοικτό κατόπιν του αιτήματος επανανοίγματος. Το νέο native
+sample δεν περιέχει zoom-menu frames, χωρίς ακόμη physical user response·
+δεν αποδεικνύει αιτία ή ανθρώπινη απόκριση. Το παλιό owned55645 background
+έκλεισε μετά το user-closed window και ακριβή profile guard. Προσωπικός493
+ανέπαφος. Καμία αυτόματη ανάκτηση/διαγραφή ή αλλαγή preference προσωπικού profile.
+
+Upstream read-only: checked HEAD bfa9ce034eb8569fcbde988f939069d33bc7020a,
+λειτουργική v54.42/282567e9, από προηγούμενο checked 0fe3f14e υπάρχουν 30 νέα
+commits/14 paths. Από actual sync f49b810c εκκρεμούν 59 commits/23 paths.
+Νέα naming/sorting/2D–3D O-alkyl numbering/Save-all, επικαλύψεις viewer54,
+teaching/name-en/HTML/CSS. Τα νέα 30 δεν αλλάζουν core54/scenario54· το συνολικό
+pending εύρος τα αλλάζει. Δεν τεκμηριώνεται fix για freeze/JSmol. User HOLD
+ενσωμάτωσης ισχύει. Αρχικό cached HEAD/access failure επιλύθηκε με live pinned
+API/raw· SHA/πηγή στο upstream-check.json. Καμία συγχώνευση ή δημοσίευση.
+
+Επόμενο: physical user green-menu αποτέλεσμα στο νέο παράθυρο με τίτλο
+«Namelecule — ΔΟΚΙΜΗ FIREFOX — βήμα 11» και σχετική native διάγνωση.
+Step11 UI ολοκληρώθηκε· το whole-browser πάγωμα παραμένει ανεπίλυτο.
+Τελική επιβεβαίωση συνεδρίας: και τα10core hashes ίδια με baseline. Δεν έγινε
+commit/push/publication. Αναμονή απάντησης στη φυσική δοκιμή, όχι εργασία
+που υπόσχεται αδιάλειπτη λειτουργία ή συνεδριακή πιστοποίηση.
+
+# Current resume point — 2026-11-08 — Ολοκληρώθηκαν οι δύο αριθμήσεις στο βήμα 7
+
+Με έγκριση υλοποιήθηκαν στο ενεργό μάθημα/9Αλκάνια οι επιλογές «Από αριστερά»
+και «Από δεξιά»: ίδια αλυσίδα/γράφος/γεωμετρία/όνομα2,3, labels1–4 ή4–1.
+Αρχικό compCarbonsCount, ενεργόκουμπί aria-pressed, επαναφορά stem απόάλλο
+συνθετικό, διατήρηση σε Update/zoom/resize και reset σε νέαείσοδο/Exit ή
+molecule/parent change. Optional κοινό 2D-only resolver με bounded chemical
+validation, μόνο step7 enabled. Κείμενα και λοιπάβήματα ίδια. Άλλαξαν scenario54JS,
+molview54JS, scenario54CSS, Main54cacheURLs r3, activeJSON, contract και mapping.
+DEV-01P2 (Updateκατέγραφε hidden3Dtoggle) διορθώθηκε διατηρώντας authored2D
+permissions στο opted-in presentationUpdate. RV-01P2 του freshReviewer
+(νέοstepobjectστοUpdate→αντιστροφήlabelsμεstalerightbutton) διορθώθηκε με
+stableentryidentity και ανεξάρτητα έκλεισε. Κανένα ανοικτό actionable finding.
+
+Έλεγχοι: Developer learner33/author8Firefox assertions0JSerrors, actual3quizgate,
+3μορφές2D, nativeSpace/pointer, nameparts, zoom/resize3203901500, transitions,
+Update/exportBlob/validation/duplicate. ΜετάRV01: πραγματική αναπαραγωγήbefore2
+και targetedafter8Firefox0JSerrors,202JSCμεdeclared doubles,496protected SHA
+(10core/453MOL-SDF),5HTTP/SHA και2JSsyntax. Δεν επαναλήφθηκε το αρχικόfullflow
+μετάτιςboundedδιορθώσεις· καλύφθηκαν τα αλλαγμέναeffects. ΧημικόςValidator
+20independentJSCchecks έκλεισε CV-01στοguard. FreshReviewer
+`/root/review_step7_numbering_20261108`: αρχικό9targets48evidence496protected2external,
+RV01targeted9targets65evidenceκαι14independentJSCchecks, χωρίς browser run.
+Αποτελέσματα/σφάλματαharness/διορθώσεις καιόρια στο
+`docs/checks/alkane-step7-numbering-20261108/`, review.json/final-verification.json.
+
+Active `scenarios/alkanes-user-3.scenario.json` και Desktop «αρχεία  json/9Αλκάνια.json»
+έχουν ίδια bytes/SHA d5463463b14c1f694dbd381c65a7b4aa466eebd9143f4f91c565894f26645cd4.
+Παλιό9backup στο Namelecule_08-11-2026/9Αλκάνια-before-numbering-20261108-081134.json.
+Ακριβής mapping/recovery στο communication/checkpoints/alkanes-json-export-20261108.json.
+Παλιές3/4/history δεν γράφτηκαν. Το νέοJSON έχει ξεχωριστή content-keyedπρόοδο
+κουίζ· δεν προστέθηκε migration. Για ήδηανοιχτό editor: αποθήκευσηχωριστά τυχόν
+εκκρεμώνδικώντουαλλαγών, refresh και εισαγωγήενημερωμένου9. Προσωπικόςbrowser
+καιserverανέπαφοι· owned44666/45200 έκλεισανμεprofileguards.
+Καμία αλλαγήcore στη συνεδρία, ούτεcommit/push/publication/fullbackup.
+Δεν ελέγχθηκαν Safari/physicalmobile/screenreader/full3D/conference sequence·
+παλιόFirefox/JSmolissue παραμένει. Upstreamchecked0fe3f14e/actualsyncf49b810,
+29pending, συγχώνευσησεuserhold. Επόμενο: οπτική δοκιμή απότονχρήστηστοβήμα7.
+
+# Current resume point — 2026-11-08 — RV-01 διορθώθηκε, στοχευμένο review εκκρεμεί
+
+Το fresh ανεξάρτητο review `/root/review_step7_numbering_20261108` επαλήθευσε
+9targets/48deliverables/496protected/2external και εντόπισε μόνο RV-01P2:
+στο ίδιο preview, right→Update→zoom/resize άλλαζε labels σεleft ενώ το κουμπί
+έμενεright. Αιτία: η αντικατάσταση stepobject στο Update θεωρούνταν νέαείσοδος.
+Developer το αναπαρήγαγε σε πραγματικό Firefox (2checks/0JSerrors). Διορθώθηκε
+με ταυτότητα ενεργής εισόδου scenario/index/applyToken/parentkey και ανανέωση
+του datareference, χωρίς αλλαγή επιλογής στο ίδιο βήμα. Actual stepentry/Exit
+και molecule/parent change συνεχίζουν να κάνουν reset. MaincacheURLs r3 και
+μία διευκρίνιση contract Update. JSON/Desktop, viewer και CSS δεν άλλαξαν μετά
+το αρχικό review. Finalplayer SHA a24eef83359039e91ad15217d667713f64f79dff4b750b8b103bf42f2adde5aa.
+
+Developer targetedFirefox8assertions/0JSerrors μετάfix: rightUpdate→zoom και
+resize390/320/1500, leftUpdate→zoom, freshauthorreentryleft, Exitclear. Αρχική
+δοκιμή επανείσοδου χρησιμοποίησε παλιό preview μετά Update/contentchange και
+πήγε ορθά στο gate4· διατηρήθηκε ως test-only artifact και αντικαταστάθηκε από
+Exit/newscreenpreview. Καμία πρόσθετη appfix γι’ αυτό. 202JSCassertions (2νέα
+same-entry/new-token regressions),5HTTP/SHA,2JSsyntax,496protected και2external
+ίδια. Evidence `docs/checks/alkane-step7-numbering-20261108/rv01/`, αρχικό
+review-initial.json. Δεν επαναλήφθηκε όλο το αρχικό learner33/author8 flow·
+στοχευμένη επαλήθευση των αλλαγμένων effects. OwnedFirefox45200 έκλεισε με
+profileguard. RV-01 περιμένει ανεξάρτητη targeted επιβεβαίωση, όχι δεύτεροfullreview.
+Καμία core/JSON/export/commit/push/publication αλλαγή σ’ αυτή τη διόρθωση.
+Το αρχικό updateJSON/Desktop9 SHA d5463463… παραμένει byte-identical μεbackup.
+Προηγούμενα όρια (νέο content-keyedquizprogress, όχι Safari/physicalmobile/
+screenreader/full3D/conference ή λύση παλιούFirefoxJSmol) ισχύουν.
+Επόμενο: freeze targetedmanifest, reviewerRV01 closure, τελική καταγραφή.
+
+# Current resume point — 2026-11-08 — Βήμα 7: δύο αριθμήσεις, υλοποίηση προς review
+
+Με ρητή έγκριση προστέθηκε optional show.numberingDirection και ενεργοποιήθηκε
+μόνο στο βήμα7 του ενεργού μαθήματος αλκανίων, με αρχικό compCarbonsCount.
+Οι επιλογές «Από αριστερά/Από δεξιά» αντιστρέφουν μόνο αντίγραφο των ορατών
+αριθμών πάνω στον ίδιο γονέα[1,2,3,4]. Όνομα/2,3/γράφος/γεωμετρία/chainpool ίδια.
+Ενεργή επιλογή aria-pressed, zoom/resize και nameclick διατήρηση, directionaction
+επαναφέρει stemview, stepentry/Exit reset. Κοινή fShowNumbering resolver με
+προτεραιότητα explicitgroup overrides. Χημικός φραγμός μόνο σε επαληθευμένο
+ουδέτερο συνδεδεμένο άκυκλο κορεσμένο C/H χωρίς metadata, με matchinglivegraph,
+βαθμούς/υπογραφές και distinctendpoints· 2D-only, όχι γενική πιστοποίηση.
+Paths: scenario54JS, molview54JS, scenario54CSS, Main54cacheURLs r2, activeJSON,
+didactic-scenario-plan και exportmapping. Κείμενα και άλλες ρυθμίσεις ίδια.
+
+Developer: 33 learner Firefox checks/0JSerrors, actual3repairs firstgate,
+reverse/canonical invariance, trustedpointer και nativeSpace, interactiveparts,
+zoom/resize3203901500,3actual2Dmodes, stepreentry/6/8/step5chainnav/negative
+methylpentane και explicitoverride. Authorsection αρχικά σταμάτησε από test
+readiness requiringpresentation· διατηρήθηκε artifact. Στοχευμένο authorrun
+εντόπισε DEV-01P2: Updatecaptured underlyingglobal3Dtrue, άρα χάνονταν controls
+σε επανείσοδο. Boundedfix διατηρεί authored2D-onlyviewerpermissions μόνο σε
+opted-in presentationUpdate. Targeted8authorchecks/0JSerrors σε finalsources:
+Update/exportBlob/validation/Exit/reentry/duplicate. Δεν επαναλήφθηκε όλη η ήδη
+περασμένη learnerflow μετά τη μικρή Updatefix. 200JSCassertions/41cases rerun,
+actualcorehelpers/viewer/playerfunctions με δηλωμένα doubles,496protected SHA,
+5HTTP/SHA και2JSsyntax. Αρχικά JSONspace/timestamp test errors καταγράφηκαν·
+geometrycomparison κρατά counts/atoms/bonds/metadata, αφαιρεί μόνο3headerlines.
+
+ChemistryValidator `/root/step7_numbering_chemistry_20261108` κάλυψε CV-01 με
+20independentJSCchecks στο τελικό viewerguard· χωρίς browser/γενικόreview.
+LearningDesigner είχε προτείνει τα δύοlabels/initialstem και ίδιοnote. Fresh
+independentReviewer επόμενο. Evidence `docs/checks/alkane-step7-numbering-20261108/`.
+ActiveJSON/Desktop9 bytes ίδια, SHA d5463463b14c1f694dbd381c65a7b4aa466eebd9143f4f91c565894f26645cd4.
+Desktopdatedbackup στο Namelecule_08-11-2026, exactpaths/export-verification.json
+και communication/checkpoints/alkanes-json-export-20261108.json. Παλιές εκδόσεις
+3/4/history δεν γράφτηκαν. Η αλλαγή JSON αλλάζει το υπάρχον content-keyed quiz
+identity, οπότε η ενημερωμένη έκδοση έχει ξεχωριστή πρόοδο· δεν προστέθηκε migration.
+10core/453MOL-SDF καιotherJSON/gamechecksums ίδια. Καμία corechange στη συνεδρία,
+commit/push/publication/fullbackup. OwnedtestFirefox44666 έκλεισε μεprofileguard.
+Προσωπικός browser/server ανέπαφοι. Χωρίς Safari/physicalmobile/screenreader/
+full3D/conferenceaudit· παλιόFirefoxJSmol ανεπίλυτο. Upstreamchecked0fe3f14e,
+actualsyncf49b810/29pending, hold ισχύει. Επόμενο: freeze/review/τελική επαλήθευση.
+
+# Current resume point — 2026-11-08 — Βήμα 7: δύο αριθμήσεις, πλάνο προς έγκριση
+
+Ο χρήστης ζητά στο βήμα7 «Δύο ίδιες διακλαδώσεις» να βλέπει ο μαθητής και τις
+δύο κατευθύνσεις αρίθμησης της ίδιας αλυσίδας. Read-only Explorer και πραγματική
+author preview: parent[1,2,3,4], pool4διαδρομών χωρίς[4,3,2,1]. Το υπάρχον
+chainNavigation αλλάζει διαδρομή, δεν αντιστρέφει την ίδια. Αρχικό compSecondSub1
+χωρίς αριθμούς· stemclick εμφανίζει1,2,3,4. 0JSerrors, ownedFirefox43984 έκλεισε.
+Evidence `docs/checks/alkane-step7-numbering-preflight-20261108/`.
+Learning Designer προτείνει δύο επιλογές «Από αριστερά/Από δεξιά», αρχικό
+compCarbonsCount, υπάρχον note αυτούσιο και διαδραστικά συνθετικά. Chemistry
+Validator επαλήθευσε πραγματικό γράφοC6H14 και ισοδύναμη αντιστροφή2,3·
+CV-01P2: η υπάρχουσα signature δεν πιστοποιεί γενικά φορτία/ισότοπα/στερεοχημεία
+ή disconnected υλικό. Είναι περιορισμός προς φραγμό στη νέα υποστήριξη,
+όχι παλινδρόμηση ή λόγος αλλαγής core.
+
+Προτεινόμενο optional show.numberingDirection μόνο στο step7: κοινό display
+resolver player/viewer, αντιστροφή αντιγράφου, ίδια canonicalchain/name/geometry,
+σαφής επιλογή, επιβίωση zoom/resize, reset σε έξοδο/επανείσοδο. Επιλογή κατεύθυνσης
+επαναφέρει stemview αν άλλο συνθετικό κρύβει αριθμούς. Fail-closed ισοδυναμία σε
+περιορισμένο υποστηριζόμενο γράφο· explicitgroup overrides προηγούνται. Paths:
+activeJSON, scenario54JS, molview54JS, scenario54CSS, Main54 cacheURLs και contract
+στο didactic-scenario-plan. Με την έγκριση θα ενημερωθεί και Desktop9 με datedbackup
+και verified SHA, όχι Desktop3/4/history. Runtime/chemical-negative/interaction/
+export checks και ένα fresh independent review μετά την υλοποίηση. Plan.json
+καταγράφει ακριβές scope/paths/hashes. Καμία appcode/JSON/core αλλαγή γι’ αυτό το
+αίτημα ακόμη· η υλοποίηση περιμένει έγκριση. Countertask έχει ήδη ολοκληρωθεί.
+Σημερινό upstreamcheck0fe3f14e, actualsyncf49b810/29pending, mergeσεuserhold.
+Δεν έγιναν corechanges στη συνεδρία, commit/push/publication ή JSONexport εδώ.
+Επόμενο: παρουσιάζεται συγκεκριμένο πλάνο και αναμονή έγκρισης πριν από κώδικα.
+
+# Current resume point — 2026-11-08 — Ολοκληρώθηκε ο μετρητής προόδου των κουίζ
+
+Με την έγκριση του χρήστη ενσωματώθηκε στα παραγόμενα σετ του μαθήματος
+αλκανίων στα βήματα 4 και 11 ο σταθερός μετρητής «Κουίζ 1/3 → 2/3 → 3/3»,
+επάνω δεξιά, πάνω από την επιστροφή στη θεωρία. Ακολουθεί τον πραγματικό
+αποδιδόμενο γύρο και το Continue, όχι το Check. Παραμένει ορατός στην κύλιση,
+επαναφέρει τη σωστή θέση μετά από επιστροφή/refresh και δεν διπλασιάζει την
+ανακοίνωση προόδου μέσα στο περιεχόμενο. Loading/error/close και παλιά callbacks
+ελέγχθηκαν. Αλλάχθηκαν μόνο `js/namelecule-generated-repair-checkpoint.js`,
+`js/namelecule-quiz-checkpoints.js`, `css/namelecule-quiz-checkpoints.css` και
+τα τρία cache URLs στο `mulermoc-nom-54.html`.
+
+Developer: 48 assertions σε απομονωμένο headless Firefox, 0 JS errors,
+πραγματική ολοκλήρωση των 6 κουίζ, gates και Check/Continue, restore/reopen,
+actual scroll στα 1500/390/320px και pointer Back στα320. Επιπλέον 321 JSC
+assertions από τον worker με δηλωμένα doubles, 44 προστατευμένα SHA και
+4 HTTP/SHA. Fresh ανεξάρτητος Reviewer `/root/review_quiz_header_progress_20261108`
+επαλήθευσε 6 targets/22 deliverables/44 protected, exact diff, σύνταξη των2 JS,
+relevant lifecycle και δύο screenshots. Κανένα actionable P0–P3, καμία διόρθωση.
+Δεν εκτέλεσε browser· τα runtime αποτελέσματα παραμένουν στοιχεία Developer.
+Αρχικό σφάλμα redeclaration μόνο στο test harness διατηρήθηκε και διορθώθηκε.
+Evidence `docs/checks/quiz-header-progress-20261108/`, ιδίως review.json,
+developer-verification.json, browser.json και memory-results.json.
+
+Τα 10 core, όλα τα JSON, η γεννήτρια, οι λύσεις και η αποθηκευμένη πρόοδος
+παρέμειναν αμετάβλητα. Καμία αλλαγή core στη σημερινή συνεδρία. Το ενεργό
+μάθημα εξακολουθεί να έχει αυτούσια τα bytes του Desktop9Αλκάνια, SHA57f2822… .
+Δεν ζητήθηκε/έγινε νέο JSON export, commit, push ή δημοσίευση. Owned Firefox43328
+έκλεισε με profile guard, προσωπικός browser και server ανέπαφοι. Safari,
+screen reader, φυσικό κινητό, νέο πλήρες 3D και συνεδριακή ακολουθία δεν ελέγχθηκαν·
+τα παλιά προβλήματα Firefox/JSmol δεν επιλύθηκαν από αυτή την αλλαγή.
+Upstream checked0fe3f14e, actual syncf49b810/29 pending· hold συγχώνευσης ισχύει.
+Επόμενο: ο χρήστης μπορεί να δει τον μετρητή μετά από ανανέωση· αποθήκευση τυχόν
+μη αποθηκευμένων αλλαγών JSON πριν από refresh της δικής του καρτέλας.
+
+# Current resume point — 2026-11-08 — Μετρητής κουίζ: υλοποίηση και έλεγχοι, αναμονή review
+
+Ο χρήστης ενέκρινε το συγκεκριμένο πλάνο. Στα ενσωματωμένα παραγόμενα σετ
+ο adapter αναφέρει το πραγματικό currentRound στον controller. Νέος σταθερός
+μετρητής «Κουίζ N/3» επάνω δεξιά στο sticky header, πάνω από την επιστροφή.
+Το παλιό paragraph κρατά μόνο τον τίτλο του σετ, χωρίς δεύτερη live ανακοίνωση.
+Καθαρισμός σε loading/error/close/destroy, guard παλιών callbacks. Χωρίς
+callback παραμένει η παλιά ένδειξη. Κοινή εφαρμογή στα βήματα 4 και 11.
+Αλλάχθηκαν μόνο generated-repair-checkpoint JS, quiz-checkpoints JS,
+checkpoint CSS και τα τρία cache URLs του Main54. Δεν άλλαξαν JSON/core,
+γεννήτρια, λύσεις ή receipt schema· το ενεργό 9Αλκάνια SHA57f2822… παραμένει.
+
+Evidence `docs/checks/quiz-header-progress-20261108/`: 48 actual headless Firefox
+assertions/0 JS errors, πραγματικές λύσεις και στα 6 κουίζ, λάθος/σωστό Check,
+Continue, gates, reopen/refresh 2/3, revisit 3/3, legacy μονό checkpoint.
+Πραγματικό overflow/scroll και hit tests στα 1500/390/320px, pointer Back στα320.
+321 JSC assertions από worker `/root/verify_quiz_header_progress_20261108`,
+με actual adapter/controller/repair validation αλλά DOM/network/generator doubles:
+before/after receipts, restoration, fallback, preview, stale/invalid callbacks,
+loading/error/retry/destroy. Δεν πρόκειται για ανεξάρτητο review.
+44 προστατευμένα SHA (10 core και όλα τα JSON), 4 HTTP/SHA ίδια. Ο αρχικός
+browser έλεγχος σταμάτησε από redeclaration στο ίδιο το script· διατηρήθηκε
+και διορθώθηκε το harness, χωρίς αλλαγή εφαρμογής. Δύο screenshots ελέγχθηκαν
+οπτικά. Owned Firefox43328 έκλεισε με profile guard· προσωπικός browser/server
+ανέπαφοι. Δεν έγινε Safari/physical mobile/screen reader/full 3D/conference
+έλεγχος ή διάγνωση του παλιού παγώματος Firefox/JSmol. Ανεξάρτητο review επόμενο.
+
+Δεν έγιναν αλλαγές core στη συνεδρία, ούτε commit/push/publication/JSON export.
+Upstream σημερινό checked0fe3f14e, actual syncf49b810/29 pending, user hold ισχύει.
+Επόμενο: freeze target, fresh Reviewer, αναγκαίες στοχευμένες διορθώσεις,
+τελική καταγραφή. Ο χρήστης πρέπει να αποθηκεύσει unsaved scenario JSON πριν
+από refresh της καρτέλας του.
+
+# Current resume point — 2026-11-08 — Μετρητής κουίζ πάνω δεξιά, πλάνο προς έγκριση
+
+Νέο αίτημα: στη στάση4 των αλκανίων, πάνω δεξιά μετρητής του τρέχοντος από3
+κουίζ. Read-onlycode+Explorer+actualownedFirefox42541: ήδη υπάρχει paragraph
+`.nl-quiz-set-progress` «Κουίζ1από3·Χωρίςδιακλαδώσεις» στο #nlQuizHost, πριν το
+round και έξω από sticky header· CSSdefaultleft. Header έχει titleleft/Backright,
+χωρίς progressslot. Desktopprobefit→scrollTop0, συνεπώς scrolling δεν
+αναπαράχθηκε δυναμικά (staticflowγνωστό),0JSerrors· ownedFirefoxέκλεισε.
+Evidence `docs/checks/quiz-header-progress-preflight-20261108/`.
+
+Προτεινόμενο πλάνο προς έγκριση: adapter δημοσιεύει actual currentRound σε
+optionalcallback, controller stable stickyheader slot πάνωδεξιά «ΚουίζN/3»,
+responsive group με Back και χωρίς duplicate liveannouncements. Guard/reset
+στα close/loading/error/retry/stalecallback. Κοινό mechanism και δεύτεροset11.
+4runtimepaths: generated-repair-checkpointJS, quiz-checkpointsJS, checkpointCSS,
+Main54 cacheURLs. Καμία γεννήτρια/λύση/receipt-schema/JSON/core αλλαγή· Desktop9
+export δεν απαιτείται. Checks1→2→3,wrong/correctCheckvsNext,restore/reopen/refresh,
+scroll/320390/backclearance,normal3repairs gate,preview/secondset/legacyquestion,
+έναindependentreview. Έγκριση εκκρεμεί πριν κώδικα. Δεν έγιναν appcode/corechanges.
+Active9JSON SHA57f2822… παραμένει. Σημερινός upstreamreview0fe3f14e/actualsyncf49b810,
+29pending· mergeσεuserhold. Δεν έγινεcommit/push/publication/fullbackup.
+Επόμενο: συγκεκριμένο πλάνο στον χρήστη και αναμονή έγκρισης.
+
+# Current resume point — 2026-11-08 — Το 9Αλκάνια.json είναι το ενεργό μάθημα
+
+Ολοκληρώθηκε το ρητό αίτημα αυτούσιας εισαγωγής Desktop «αρχεία  json/9Αλκάνια.json»
+στο μάθημα βιβλιοθήκης. Ενεργό stable path παραμένει
+`scenarios/alkanes-user-3.scenario.json`, με ΝΕΟ περιεχόμενο του9, ώστε existing
+library links/bookmarks να δουλεύουν.33.194bytes/SHA57f2822ad5771743893b748fa353e20463f49e6a7917d44459d14d70b93d4cfb
+ταυτίζονται active/Desktop9/input snapshot. Παλιό ενεργό SHA5161a3e… κρατήθηκε
+στο dated `docs/checks/alkanes-json9-library-20261108/before/scenarios/`.
+CurrentDesktopmapping `communication/checkpoints/alkanes-json-export-20261108.json`.
+Δεν γράφτηκαν Desktop9/3/4/history· δεν υπάρχουν πριν hashes που να πιστοποιούν
+ιστορικά Desktop3/4. Δεν άλλαξε library HTML/JS/CSS/core. Τα κείμενα είναι του
+χρήστη, assistant μόνο αντέγραψε.13fieldchanges σε title/note/noteFormat4to10,
+12steps και όλαfunctionalfields/recipes/IDs/8molecules ίδια.
+
+Evidence `docs/checks/alkanes-json9-library-20261108/`. Actualvalidator12steps/
+no warnings.35checks ολοκληρώθηκαν (runtime+filechecks), με1uncaughtJSmol
+bufferedImage/platform-null και strictscript exit1· ίδιο σύμπτωμα recordedNov6,
+rootcause/frequency άγνωστα, όχι καθαρήκονσόλα. Checked library/newcontent/gate/
+quizopen/Exit, authorpreview5direct/newrichtext/passiveparts/chain1→2→1,
+rehearsal12steps καιfinal8mol2D3Dconfig. LearningDesigner no materialnewcontradictions.
+Fresh Reviewer `/root/review_alkanes_json9_import_20261108`: χωρίς actionable
+P0–P3 γιαimport· independentlyexactcopy/diff/schema/mapping/library/no-store/
+2targets14evidence45protectedSHA (10core27otherJSON), suppliedscreenshot+prior
+error evidence. Noindependentbrowser. JSmol existingissue δεν κρίθηκε blocker
+τουcontentimport. Τελικοί hashes επανελέγχθηκαν ίδιοι, source9same. Owned42130
+έκλεισε μεprofilecheck· userbrowser/server ανέπαφα. Χωρίς6newquizsolves/full3D/
+Safari/physicalmobile/screenreader/conference audit. Καμία core αλλαγή αυτή
+τη συνεδρία ή commit/push/publication/fullbackup.
+
+UpstreamNov8 livehistory/SHAchangelog: currentHEAD0fe3f14e07d9b76cf9bc15a9eba5d3e0e503ab5f
+(v54.29), previouscheckedc5069ab→19new, actualsyncf49b810→29pending. Corebranch/
+locants, viewer/settings/heights,scenario variant είναι possibleoverlaps,
+όχι provedconflicts. RESTfailed/fallbackweb succeeded. Sync remains USER HOLD.
+Επόμενο: χρήστης ανοίγει ξανά Αλκάνια από βιβλιοθήκη· θα δει το περιεχόμενο9.
+
+# Current resume point — 2026-11-08 — 9Αλκάνια.json στη βιβλιοθήκη, προς ανεξάρτητο review
+
+Ρητό αίτημα χρήστη: βάλε Desktop «αρχεία  json/9Αλκάνια.json» στο μάθημα
+αλκανίων. Έγινε αυτούσια αντικατάσταση περιεχομένου στο σταθερό ενεργό
+`scenarios/alkanes-user-3.scenario.json`· δεν χρειάστηκε HTML/JS/CSS παρέμβαση
+ή νέο πλάνο κώδικα. Η υπάρχουσα library card/παλιοί σύνδεσμοι συνεχίζουν να
+ανοίγουν το ενεργό αρχείο, με fetch no-store. Active bytes SHA57f2822ad5771743893b748fa353e20463f49e6a7917d44459d14d70b93d4cfb
+ίδια με Desktop9. Η παλιά μορφή SHA5161a3e… έχει dated recovery στο
+`docs/checks/alkanes-json9-library-20261108/before/scenarios/alkanes-user-3.scenario.json`.
+Source9 και παλιά Desktop3/4/ιστορικά ανέπαφα. Mappingcurrentcopy:
+`communication/checkpoints/alkanes-json-export-20261108.json` (projectlegacy
+filename3→Desktopcurrent9). Χρήστης έγραψε τα κείμενα· assistant εισήγαγε μόνον.
+
+Actual player validation:12steps/no warnings. Diff μόνο note4, title/note/
+noteFormat5, note/noteFormat6/7/8/10, title9. Όλα τα υπόλοιπα πεδία, δύο
+quiz recipes/IDs,8molecules/viewer/settings ίδια. LearningDesigner read-only:
+χωρίς materialnewcontradiction· στο5 τα δύο βέλη δίπλα στη στατική ετικέτα
+Κύριααλυσίδα κάνουν εναλλαγή.35Firefox functional checks ολοκληρώθηκαν:
+library→newlesson/normalgate4/openquiz/Exit, preview5direct/newrichtext,
+passivecomp6/9, chain1→2→1, rehearsal12steps/final8mol2D3Dconfig και45protected
+hashes (10core/27otherJSON/HTML/JS/CSS) ίδια. Υπήρξε1uncaughtJSmolbufferedImage/
+platformnull, ίδιο καταγεγραμμένο σύμπτωμα Nov6· strict script exit1, όχι καθαρή
+κονσόλα/ούτε rootcausefrequency claim. Δεν έγινε νέο full3Daudit/6quizsolve/
+Safari/physicalmobile/screenreader/conference sequence. OwnedFirefox42130
+έκλεισε με PID/profilecheck· userwindow/server ανέπαφα.
+
+Σημερινός upstream review liveweb agent: HEAD0fe3f14e07d9b76cf9bc15a9eba5d3e0e503ab5f
+(v54.29), previouscheckedc5069ab→19newcommits, actualsyncf49b810→29pending.
+Πιθανά overlaps corebranch/locants,viewerheight/settings,scenarionamingvariant·
+όχι provedconflicts. RESTfailed, fallbacklivehistory/SHAchangelog succeeded.
+Καμία merge/fetch· integration διατηρείται σε αναμονή χρήστη.
+Επόμενο: frozen independentreview στο JSON9 import/evidence και τελικοί hashes.
+Καμία core change αυτήτησυνεδρία ή commit/push/publication/fullbackup.
+
+# Current resume point — 2026-11-07 — Άμεση author screen preview, ολοκληρώθηκε
+
+Η εγκεκριμένη αλλαγή ολοκληρώθηκε: οθόνη ανά βήμα editor → άμεσο selected
+step, transient per-scenario rehearsal με ένδειξη «Δοκιμή», ελεύθερη πλοήγηση
+και απομονωμένο προσωρινό quiz record. Κανονικό library/URL/cardPlay κρατά
+και τα δύο mandatory gates. Exit/normalPlay/New/import/Delete/othercard/
+failedlaunch καθαρίζουν preview. Runtime: scenario54JS, quiz-controllerJS,
+Main54 URLs και scoped CSS54· contract docs ενημερώθηκαν. CSS προστέθηκε
+μόνο ως bounded διόρθωση του AP-01, με πριν snapshot. Τελικό CSS/player cache
+`author-step-preview-20261107-r2`, controller r1. JSON/source/Desktop/user
+unsaved browser ανέπαφα, καμία αλλαγή core αυτή τη συνεδρία.
+
+Evidence `docs/checks/author-checkpoint-preview-20261107/` + ap01/. Developer:
+76memory checks,30Firefox flow assertions0JSerrors, πραγματικό pointer screen5,
+actual temporary set completion, strict preview storage isolation, restored
+learner answers/counters/seed και both normal gates, failures/Exit/reopen/
+reload/320390. Native ArrowLeft δεν παραδόθηκε από headless· synthetic actual
+handler only, δεν δηλώνεται nativekeyboardverified. Προϋπάρχουσα normal
+future-unvisited choiceOrder normalization δεν αλλάχθηκε· test-only assumptions
+διορθώθηκαν με initial artifacts διατηρημένα. 53initialsource checks/3HTTP_SHA.
+
+Fresh Reviewer `/root/review_author_step_preview_20261107`: αρχικό AP-01 P2,
+inline label→Next/Exit overlap320. Διορθώθηκε σε stacked label. AP01Developer:
+14targetedFirefox assertions0JSerrors,9trusted pointer Prev/Next/Exit στα
+1500/390/320, pairwise bounds+centerhit, ordinarylabelcleanup/gate και4HTTP_SHA.
+Reviewer targeted: AP-01 closed, χωρίς άλλα ευρήματα. Έλεγξε exactdiffs,
+5targets/15evidence/49protected hashes,syntax+3screens· initialreview19JSC
+checks και4targets/30evidence/50protected. CSS αρχικάprotected προήχθη σε
+approvedcorrectiontarget, τα υπόλοιπα49 (10core/28JSON) ίδια. Τελικοί5source/
+45evidence hashes επανελέγχθηκαν ίδιοι. Δεν έγινε independent browser replay.
+Owned Firefox29654/30022 έκλεισαν με PID/profile checks· userserver/profile
+ανέπαφα. Χωρίς commit/push/publication/fullbackup/JSONexport. Upstream c5069ab
+checked/f49b810 synced· merge σε αναμονή χρήστη. Όρια Safari/physicalmobile/
+screenreader/conference/new3D και παλιόFirefox/JSmol εκτόςscope.
+Επόμενο για χρήστη: κατέβασε πρώτα το edited JSON από την υπάρχουσα καρτέλα,
+μετά refresh και επανεισαγωγή του JSON· screen στο5 ανοίγει αμέσως5. Η βιβλιοθήκη
+θα ενημερωθεί με το editedJSON μόνο όταν το ζητήσει αργότερα.
+
+# Current resume point — 2026-11-07 — Author screen preview υλοποιήθηκε, προς ανεξάρτητο review
+
+Ο χρήστης ενέκρινε το πλάνο. Row screen πλέον καλεί
+`fScenarioAuthorPreviewBegin`: explicit transient context δεμένο με scenario
+object+content, άμεσο επιλεγμένο βήμα, ελεύθερη rehearsal πλοήγηση και counter
+«Δοκιμή». Checkpoint definitions εξακολουθούν να επικυρώνονται. Controller
+beginPreview/endPreview/isPreview χρησιμοποιεί χωριστό in-memory record,
+χωρίς learner storage read/write ή καταχώριση completed receipts. Exit,
+normal Play, New/import/Delete/άλλη card και failed launch ακυρώνουν context.
+Normal library/URL/cardPlay gates μένουν. Runtime3paths: scenario54 JS,
+quiz-checkpoints JS, δύο Main54 cache URLs· contract docs updated. Core και
+scenario JSON ίδια, χωρίς Desktop export. Η unsaved δουλειά του χρήστη και
+το user Firefox δεν αγγίχτηκαν. ΠΡΙΝ refresh χρειάζεται δική του λήψη JSON.
+
+Evidence: `docs/checks/author-checkpoint-preview-20261107/`; actual before
+reproduction στο `author-checkpoint-preview-preflight-20261107/`. Developer:
+76JSC memory checks (4mounts/destroys) για stored/cache/isolation/stale callbacks/
+validation/failure,30Firefox assertions0JSerrors: edited5/direct real pointer,
+preview navigation/hash/both gates/quiz complete, strict unchanged learner
+storage during preview, Exit/reopen/reload/failure/New path, normal first AND
+second gates, library return and partial learner answer restoration,320/390.
+Native ArrowLeft probe delivered no keydown in headless, δεν είναι verified·
+actual document keyboard route ελέγχθηκε synthetic, πραγματικό pointer πέρασε.
+Test-only focus/state assumptions και strict future-choice byte comparisons
+διορθώθηκαν· αρχικά artifacts διατηρήθηκαν, χωρίς app fix γι' αυτά. Unchanged
+adapter αναπαράγει ήδη random choiceOrder μελλοντικών unvisited rounds σε
+normal restore· seed/answers/counters/content ελέγχθηκαν ίδια. 53sourcechecks,
+50protected paths με10core/28JSON ίδια,3HTTP/SHA. Owned headless29654 έκλεισε
+με PID/profile check. Επόμενο: frozen independent Reviewer, τελικά hashes και
+οδηγία αποθήκευσης JSON ΠΡΙΝ refresh. Δεν έγινε commit/push/publication/full
+backup/core change. Upstream c5069ab checked/f49b810 synced· merge σε αναμονή.
+Όρια: χωρίς independent/live user browser, native ArrowLeft, Safari/physical
+mobile/screenreader/fullconference/new3D audit· προϋπάρχον Firefox/JSmol εκτός scope.
+
+# Current resume point — 2026-11-07 — Προεπισκόπηση συγγραφέα από επιλεγμένο βήμα, πλάνο προς έγκριση
+
+Ο χρήστης επεξεργάζεται το 3Αλκάνια.json και επιβεβαίωσε με screenshot ότι
+πατά το εικονίδιο οθόνης `.scPresentStep` στο βήμα5. Θέλει άμεση δοκιμή του5
+χωρίς να λύνει πρώτα το checkpoint4. Προγενέστερα δήλωσε ότι θα κάνει ο ίδιος
+αλλαγές στο JSON και μετά θα ζητήσει ενημέρωση βιβλιοθήκης· καμία τέτοια
+ενημέρωση/εξαγωγή δεν ζητήθηκε τώρα. Να μην αγγιχτεί η ενεργή unsaved δουλειά
+ή ο Firefox του. Η συγχώνευση καθηγητή εξακολουθεί σε αναμονή.
+
+Read-only app reproduction σε owned headless Firefox29321: μετά actual title
+change event στο προσωπικό project lesson, row Go άνοιξε5/present=false,
+row screen ζήτησε5 αλλά fScenarioPresentBegin5036–37 → resolveTarget120–127
+επέστρεψε4. Κανονικό learner URL#step5 επίσης επέστρεψε4. Επιτυχείς probes
+0JSerrors, χωρίς app source/JSON/core changes. Διορθώθηκε μόνο test harness
+(private nested function/Go title input→change event), αρχικά αποτελέσματα
+διατηρήθηκαν. Browser29321 έκλεισε με PID/profile check· userprofile ανέπαφο.
+Explorer επιβεβαίωσε ότι authoring flag είναι UI μόνο· progress signature
+περιέχει όλο το edited steps content, άρα προηγούμενα solved receipts δεν
+αποτρέπουν το πρόβλημα μετά από αλλαγές. Evidence `docs/checks/author-checkpoint-preview-preflight-20261107/`.
+
+Προτεινόμενο πλάνο προς ρητή έγκριση: προσωρινό author-preview context δεμένο
+στο συγκεκριμένο scenario, μόνο από το row screen του editor. Direct selected
+step και ελεύθερη δοκιμή πλοήγησης, σαφής ένδειξη δοκιμής, προσωρινή ξεχωριστή
+quiz progress· clear σε Exit/failed launch/import/normal Play. Κανονικό
+library/manualURL/cardPlay διατηρεί gates και πραγματικές receipts. Πιθανά
+paths: scenario54 JS, quiz-checkpoints JS, Main54 cache URLs και contract docs.
+Χωρίς core/JSON/export αλλαγές. Έλεγχοι edited5, both checkpoint boundaries,
+Prev/Next/arrows/hash, preview quizzes, return/reopen/import/failure cleanup,
+normal learner gates και unchanged stored progress, με ανεξάρτητο Reviewer.
+Επόμενο: παρουσιάζεται συγκεκριμένο πλάνο και αναμένεται έγκριση πριν από κώδικα.
+Καμία νέα αλλαγή core ή commit/push/publication/full backup.
+
+# Current resume point — 2026-11-07 — Αφαίρεση «Από την αρχή», ολοκληρώθηκε
+
+Εφαρμόστηκε η έγκριση αφαίρεσης από ΟΛΑ τα replace/order κουίζ του κοινού
+Συνεργείου, embedded και standalone. `js/namelecule-game-repair.js`: αφαιρέθηκαν
+κατασκευή/append/disabled reference και αποκλειστικός reset handler. Main54 και
+`games/name-repair.html`: μόνο κοινό game cache URL σε `workshop-reset-removal-20261107-r1`.
+Άμεσες επιλογές/μετακινήσεις, Check, attempts, progress και Continue λειτουργούν.
+Καμία αλλαγή core αυτή τη συνεδρία, generator/feedback adapter/JSON ίδια.
+
+Evidence: `docs/checks/workshop-reset-removal-20261107/`. Developer42Firefox
+assertions/0JSerrors: πραγματικό πριν/μετά shared mount και στα δύο kinds,
+έξι lesson repairs/δύο gates, wrong Check→επιλογές/αμφίδρομη αναδιάταξη,
+nativeEnter, reopen/refresh active progress και exact completed receipts,
+320/390px, τρία standalone/results. 56source/SHA/syntax και3HTTP/SHA checks.
+Fresh Reviewer `/root/review_workshop_reset_removal_20261107`: κανένα P0–P3,
+ανεξάρτητος έλεγχος actual diff/paths/state/focus/loading/cache, JSC syntax,
+3εικόνες και3runtime/19evidence/50protected hashes (10core/28JSON). Browser
+results Developer evidence, όχι independent replay. Τελικοί hashes ίδιοι.
+Owned headless Firefox28701 έκλεισε με PID/profile check· userprofiles/server
+ανέπαφα. Χωρίς Safari/physical mobile/screenreader/fullconference/new3D audit·
+παλιό Firefox/JSmol issue εκτός scope. Χωρίς commit/push/publication/full backup
+ή JSON export. Upstream c5069ab checked/f49b810 synced· merge σε αναμονή.
+Επόμενο: ανανέωση του μαθήματος/Συνεργείου για φόρτωση του νέου κοινού script.
+
+# Current resume point — 2026-11-07 — Αφαίρεση reset από όλα τα κουίζ, προς ανεξάρτητο review
+
+Με ρητή έγκριση «ναι, να αφαιρεθεί», αφαιρέθηκαν από το κοινό game view η
+κατασκευή/εισαγωγή/disabled αναφορά και ο αποκλειστικός handler του «Από την
+αρχή», για replace ΚΑΙ order, μέσα σε μαθήματα και standalone. Τρία runtime
+paths: `js/namelecule-game-repair.js`, cache URLs Main54 και games/name-repair.
+Μένει μόνο «Έλεγχος» στο repair-actions· αλλαγές επιλογής/σειράς και επανάληψη
+λειτουργούν από τους υπάρχοντες χειρισμούς. Generator/feedback adapter/λύσεις,
+JSON και core αμετάβλητα. Το αμιγές engine/state/validation prefix είναι
+byte-identical. Δεν απαιτείται Desktop JSON export.
+
+Τεκμήρια/baseline/before/diff/script/images/results: `docs/checks/workshop-reset-removal-20261107/`.
+Developer: 42 actual Firefox assertions/0 JS errors, πριν/μετά κοινό mount και
+στα δύο kinds, έξι embedded repairs με δύο gates, wrong Check→αλλαγή επιλογής
+και αμφίδρομη αναδιάταξη, native Enter, reopen/refresh active state και exact
+completed receipts,320/390px, τρία standalone repairs/results. 56 source/SHA/
+syntax checks,50protected paths με10core/28JSON ίδια,3HTTP200/SHA. Owned headless
+Firefox28701 έκλεισε με PID/profile check· userprofiles/server ανέπαφα.
+Επόμενο: ένα frozen ανεξάρτητο review, επίλυση τυχόν findings και τελική
+επαλήθευση hashes. Δεν έγινε commit/push/publication/full backup ή αλλαγή core.
+Upstream check c5069ab/actual sync f49b810 παραμένει· merge σε αναμονή χρήστη.
+Όρια: χωρίς Safari/physical mobile/screenreader/full conference/new3D audit·
+το προϋπάρχον Firefox/JSmol ζήτημα δεν διερευνήθηκε ούτε θεωρείται λυμένο.
+
+# Current resume point — 2026-11-07 — Αφαίρεση reset από κουίζ αντικατάστασης, πλάνο προς έγκριση
+
+Μετά την εξήγηση του «Από την αρχή», ο χρήστης είπε ότι δεν χρειάζεται σε
+τέτοιο κουίζ. Read-only επιβεβαίωση: component/choice handlers επιτρέπουν
+ήδη αλλαγή επιλογής και επαναπροσπάθεια μετά από λάθος Check, χωρίς reset.
+Explorer `/root/workshop_stop_visibility_preflight` εντόπισε μόνο τρεις
+retryButton αναφορές στο κοινό game UI: κατασκευή310, append321, disabled449.
+Η εστίαση χρησιμοποιεί IDs επιλογών/Check/Continue, όχι του reset. Το node()
+δεν φιλτράρει null children· χρειάζεται conditional actions array.
+
+Προτεινόμενο μικρό πλάνο, πριν από έγκριση: αφαίρεση «Από την αρχή» από ΟΛΑ
+τα replace rounds του κοινού view, δηλαδή μάθημα/παλιές authored στάσεις και
+αυτόνομο static/engine Συνεργείο. Order rounds κρατούν reset. Τρία runtime
+paths: `js/namelecule-game-repair.js` και το cache URL του στα Main54 και
+`games/name-repair.html`. Conditional creation/append + disabled null guard,
+χωρίς νέο mount option/adapter/CSS/JSON/core change. Απαιτείται ρητή έγκριση
+του καθολικού replace scope· αν ζητηθεί μόνο το active lesson, υπάρχει
+στενότερο optional mount flag με επιπλέον adapter αλλαγή, όχι σιωπηρή επέκταση.
+
+Προβλεπόμενοι έλεγχοι: απουσία button/κενών/null artifacts, επιλογή άλλου
+συνθετικού/αντικατάστασης πριν και μετά λάθος Check, native keyboard/Continue,
+loading/restore/μικρή οθόνη, embedded και standalone replacement, και reset
+σε πραγματικό order round, με ανεξάρτητο review. Μέχρι τώρα καμία νέα αλλαγή
+κώδικα ή core· η προηγούμενη reviewed feedback βελτίωση κρατά τα ίδια hashes.
+Δεν έγινε JSON export/commit/push/publication. Ο σημερινός upstream έλεγχος
+παραμένει c5069ab, actual sync f49b810· η συγχώνευση παραμένει σε αναμονή.
+Επόμενο: συγκεκριμένη έγκριση αυτού του πλάνου πριν από υλοποίηση.
+
+# Current resume point — 2026-11-07 — Υπενθύμιση στόχου στα κουίζ αλκανίων, ολοκληρώθηκε
+
+Εφαρμόστηκε το εγκεκριμένο πλάνο σε δύο runtime αρχεία: ο generated-checkpoint
+adapter συμπληρώνει σε προσωρινό round/feedback copy το «Αυτό το συνθετικό
+συμφωνεί με τη δομή.» με υπενθύμιση στόχου για parent-length/bond-type/
+branch-locants/branch-multiplier. Το Main54 αλλάζει μόνο το adapter cache URL
+σε `alkane-quiz-feedback-20261107-r1`. Order/unknown fallback, standalone και
+challenge παραμένουν ίδια. Επηρεάζονται τα embedded basic alkane checkpoints,
+άρα και παλιά μαθήματα που καλούν αυτόν τον κοινό τύπο. Canonical rounds,
+γεννήτρια/λύσεις/IDs/seed/recipe, 28 scenario JSON/progress signature και core
+δεν άλλαξαν. Δεν χρειάζεται νέο Desktop JSON export. Καμία αλλαγή core αυτή
+τη συνεδρία· τα 10 hashes συμφωνούν με το αρχικό baseline.
+
+Τεκμήρια/before/diff/SHA/scripts/results/images/review/final verification:
+`docs/checks/alkane-quiz-feedback-20261107/`. Developer: worker643 JSC
+assertions με actual8pinned-engine analyses/12rounds/135choice cases και
+before-after receipt/mount/gate checks· root58Firefox assertions με0JSerrors,
+πραγματικό pointer και trusted native Enter, και τις4οικογένειες, reopen/
+refresh/retry, πλήρες κείμενο320/390, έξι πραγματικές επισκευές/δύο gates,
+παλιές success explanations, exact completed receipts μετά refresh,
+πραγματικό order fallback και Exit. Αρχικά test-only quoting/τυχαίας σειράς
+μελλοντικών επιλογών σφάλματα διορθώθηκαν και διατηρήθηκαν· χωρίς production
+αλλαγή γι' αυτά. Η τυχαία σειρά μη επισκεφθέντων κουίζ αλλάζει ήδη στο baseline.
+
+Fresh Reviewer `/root/review_alkane_quiz_feedback_20261107`: κανένα εύρημα
+P0–P3, ανεξάρτητα107JSC assertions/syntax, hashes/diffs/related lifecycle και
+τρεις εικόνες. Χρησιμοποίησε Developer fixtures, χωρίς νέα chemical analyses
+ή independent browser replay. Τα2targets και25evidence hashes παραμένουν
+ίδια μετά το review· 51protected paths, μαζί με10core/28JSON, ίδια. Τρία
+HTTP200/byte-SHA checks πέρασαν. Owned headless Firefox26872 έκλεισε με
+profile check, userwindows/server ανέπαφα. Safari/physicalmobile/screenreader/
+full conference sequence και νέο3Druntime δεν ελέγχθηκαν. Προγενέστερο
+JSmol/Firefox freeze εκτός scope· δεν δηλώνεται συνεδριακή ετοιμότητα.
+
+Τοπική αλλαγή, χωρίς commit/push/publication/full backup. Επόμενο: νέο άνοιγμα
+ή πλήρης ανανέωση Main54 με personal scenario και `v=alkane-quiz-feedback-20261107-r1`.
+Η πρώτη στάση είναι `#step=4`. Η βιβλιοθήκη συνεχίζει να καλεί το personal JSON.
+Σημερινός actual upstream HEAD/history/CHANGELOG ίδιο c5069ab, actual sync
+f49b810· η ενσωμάτωση των10εκκρεμών commits παραμένει σε αναμονή χρήστη.
+
+# Current resume point — 2026-11-06 — Κίνδυνοι ενσωμάτωσης, εξήγηση χωρίς αλλαγές
+
+Ο χρήστης ζήτησε πώς μπορεί να επηρεάσει αρνητικά μια ενσωμάτωση. Έγινε
+περιορισμένος read-only έλεγχος των ήδη αποθηκευμένων συγκρίσεων και της
+πλήρους τρέχουσας upstream core πηγής c5069ab (νέα HTTP 200 ανάγνωση), ώστε η
+απουσία τοπικού guard να μην συναχθεί μόνο από αποσπασματικό patch.
+Η πλήρης upstream core δεν έχει `fMolCanTransform2D`. Η τοπική έχει ελέγχους
+στερεοχημείας/query/στοιχείων και διατήρηση charge/isotope/radical/parity,
+με ελεγχόμενη προσθήκη H. Αυτές οι δικλίδες πρέπει να συμφιλιωθούν στο sync.
+Explorer `/root/workshop_stop_visibility_preflight` έδωσε read-only αναφορές
+σε parser/generator guards. Δεν έγινε δοκιμαστική συγχώνευση ή runtime test.
+
+Τεκμηριωμένα σημεία πιθανού κινδύνου: συνδυασμός upstream equalizer/font/
+numbering με δικό μας fixedCC/metrics/fit, διαγώνιες collision/splay λύσεις
+έναντι ζητούμενων ορθογώνιων ανεπτυγμένων, απώλεια χημικών guard κατά απλή
+αντικατάσταση core, επικάλυψη async Accept/Cancel/Draw προστασιών, lesson zoom/
+controls, νέα εξωτερική OpenClatura και αλλαγή EN auto-verdict σε OR με PubChem.
+Είναι πηγές κινδύνου από τον κώδικα, όχι αναπαραχθείσες βλάβες μετά από merge.
+Τα υπάρχοντα παραγόμενα κουίζ προστατεύονται ήδη με pinned immutable core·
+το SHA του snapshot επανελέγχθηκε σωστό. Δεν υποστηρίζεται ότι αλλαγή της
+κύριας core από μόνη της θα σπάσει τα κουίζ ή θα χάσει πρόοδο.
+
+Τεκμήρια: `docs/checks/upstream-read-20261106T203550Z/integration-risks.json`
+και `current-core-readonly{.js,-source.json}`. Τα 44 προστατευμένα source hashes
+και τα 10 core παραμένουν ίδια. Καμία νέα αλλαγή κώδικα εφαρμογής/core/JSON,
+merge, commit ή δημοσίευση. Actual sync f49b810, latest checked c5069ab,
+10 pending commits. Επόμενο, εφόσον ζητηθεί ενσωμάτωση: χωριστό αντίγραφο,
+συμφιλίωση κοινών μηχανισμών, χημικός/λειτουργικός έλεγχος και ανεξάρτητο review.
+
+# Current resume point — 2026-11-06 — Νέες αλλαγές καθηγητή, read-only έλεγχος
+
+Ο χρήστης ρώτησε αν υπάρχει κάτι νέο. Πραγματικές αναγνώσεις GitHub API/raw
+HEAD/history και changelog ολοκληρώθηκαν στις 22:35 ώρα Ελλάδας (20:35 UTC).
+Προηγούμενο ελεγμένο `747c924e5305cd9aefea09065b63d4090f44ada9`, νέο HEAD
+`c5069abdc52d6c52175de6257a1ba40538e74668` (v54.18). Τελευταίο πραγματικό
+sync παραμένει `f49b810c93ec85d06163679aff4a8642ea1b4cd3`. Βρέθηκαν 8 νέα
+commits από τον προηγούμενο έλεγχο, συνολικά 10 εκκρεμή από το actual sync.
+Συγκρίθηκαν και τα δύο changelog βάσης με το τρέχον, όχι μόνο οι τίτλοι commits.
+16 paths αλλάζουν από το τελευταίο check, 18 από το τελευταίο sync.
+
+Νέα commits: 3126c93 (κλίμακα/font/numbering, Edit/fork και H placement),
+8a29f01 (docs pointer), 5d40ebe (OpenClatura και merged EN verdicts),
+1fc9029 (docs pointer), 4bd1ed8 (CSS), 085bb41 (data-phase plan),
+ebfbbd9 (linearizer/Accept/Draw guards, parser/EN/OC διορθώσεις),
+c5069ab (C labels στην προεπισκόπηση draft). Το πλάνο για ~1000 μόρια είναι
+τεκμηρίωση μελλοντικής εργασίας, όχι έτοιμη επέκταση. Η εναρμόνιση των
+δικών μας 127 ανεπτυγμένων αναφέρεται ρητά ως μεταγενέστερη εκκρεμότητα.
+
+Read-only Explorer `/root/workshop_stop_visibility_preflight` εντόπισε
+πιθανές επικαλύψεις, χωρίς να κάνει merge ή να αποδείξει σύγκρουση: ίδιες
+core generators με τοπικούς χημικούς ελέγχους· νέος equalizer/font/numbering
+με το δικό μας fixedCC/metrics/fit pipeline· upstream epoch/accepting guards
+με το υπάρχον MulerDraftAcquisition/selectedMol/mode/finally restore· δύο
+scenario scale apply sites με την τοπική παρουσίαση/zoom. Οι upstream
+collision/splay γωνίες χρειάζονται έλεγχο έναντι των ζητούμενων οριζόντιων/
+κατακόρυφων ανεπτυγμένων. Δεν τεκμηριώθηκε ακόμη merge conflict ή συμβατότητα.
+OpenClatura: νέα εξωτερική υπηρεσία για EN όνομα και OR auto-verdict με PubChem,
+ανά επιλογή/draft, in-memory cache, όχι αυτόνομη offline υποδομή. Μία προσπάθεια
+fetch, χωρίς εμφανές timeout στο helper. Δεν έγινε κλήση της υπηρεσίας ή browser
+validation· upstream §O παραμένει pending live run.
+
+Τεκμήρια και πλήρεις remote πηγές/συγκρίσεις/summary:
+`docs/checks/upstream-read-20261106T203550Z/`. Όλες οι έξι αναγνώσεις HTTP 200.
+Δεν έγινε αλλαγή application/core, merge, commit, push ή δημοσίευση. Και τα
+10 core hashes επιβεβαιώθηκαν ίδια με το καταγεγραμμένο τοπικό baseline.
+Επόμενο: χωριστό πλάνο ενσωμάτωσης των 10 εκκρεμών commits με συμφιλίωση των
+κοινών μηχανισμών και ρητό έλεγχο νέας εξωτερικής ονοματολογικής επιβεβαίωσης.
+Το τρέχον αίτημα ήταν ενημέρωση κατάστασης, όχι υλοποίηση συγχώνευσης.
+
+# Current resume point — 2026-11-06 — Νέος ανεξάρτητος Firefox, παλιός Namelecule έκλεισε
+
+Ο χρήστης ανέφερε κολλημένο Firefox, ζήτησε άνοιγμα σε άλλον Firefox και
+κατόπιν ρητά κλείσιμο του κολλημένου. Άνοιξε κανονικός GUI Firefox με
+`open -n`, `--no-remote`, καθαρό χωριστό προφίλ και URL τοπικής ενημερωμένης
+βιβλιοθήκης. Νέος PID 15152, χωρίς remote debugging/BiDi ή automation session.
+Προφίλ: `/var/folders/2v/ds4vjvgj1_1000kq1fzg70q40000gn/T/namelecule-user-library-20261106-qerio7vy/profile`.
+Είναι user-facing· μην τον κλείσετε ως test browser. HTTP 200 πριν το launch,
+αποδοχή launch και ταυτότητα/ύπαρξη διεργασίας επιβεβαιώθηκαν. Η πραγματική
+διάδραση του χρήστη στο νέο παράθυρο δεν ελέγχθηκε. Η πρόοδος των παλιών
+κουίζ δεν μεταφέρθηκε στο καθαρό προφίλ.
+
+Ο προηγούμενος αποκλειστικός Namelecule Firefox PID 10392 ταυτοποιήθηκε με
+το ακριβές καταγεγραμμένο προφίλ και έκλεισε με SIGTERM βάσει του αιτήματος.
+Επιβεβαιώθηκε η παύση του, η λειτουργία της νέας διεργασίας 15152 και η
+διατήρηση του προσωπικού Firefox 493, στον οποίο δεν στάλθηκε σήμα.
+Δεν διαγνώστηκε η αιτία του παγώματος ούτε αποδείχθηκε πάγωμα του 493.
+Ο server 8013 και τα προφίλ/αρχεία εφαρμογής διατηρήθηκαν. Receipt:
+`communication/checkpoints/user-library-firefox-20261106.json`· η προηγούμενη
+browser receipt ενημερώθηκε μόνο ως προς το lifecycle/αντικατάσταση.
+Καμία αλλαγή core ή κώδικα εφαρμογής, JSON, commit/push/publication.
+Το library target και τα 44 προστατευμένα hashes επανελέγχθηκαν ίδια.
+
+Επόμενο: στον νέο Firefox, καρτέλα «Αλκάνια» → «Ξεκίνα το μάθημα».
+Αναμένεται επιβεβαίωση χρήστη ότι το νέο παράθυρο ανταποκρίνεται. Αν όχι,
+χρειάζεται νέα διάγνωση· η νέα διεργασία δεν αποδεικνύει θεραπεία του freeze.
+
+# Current resume point — 2026-11-06 — Προσωπικό μάθημα στη βιβλιοθήκη, ολοκληρώθηκε
+
+Εφαρμόστηκε το εγκεκριμένο πλάνο: μόνο το href της υπάρχουσας καρτέλας
+Αλκανίων στο `design/theory-library.html:36` άλλαξε προς το τρέχον
+`scenarios/alkanes-user-3.scenario.json`, με `present=1`, `from=theory-library`
+και `v=alkanes-personal-20261106-r1`. Ξεκινά από το πρώτο βήμα. Η κάρτα
+κρατά σωστά 12 βήματα/8 μόρια και το ίδιο περιγραφικό κείμενο. Οι άλλοι
+15 σύνδεσμοι και όλα τα υπόλοιπα HTML bytes είναι ίδια με το πραγματικό before.
+Δεν άλλαξαν player, προσωπικό/canonical JSON, κανόνες, περιεχόμενο ή core.
+
+Τεκμήρια/baseline/before/diff/hashes/review/final verification:
+`docs/checks/library-personal-alkanes-20261106/`. Developer: 15 Firefox
+assertions με 0 καταγεγραμμένα JS errors, πραγματικό DOM click καρτέλας →
+προσωπικό μάθημα 12 βημάτων/βήμα 1 → 2–3–4/κλειδωμένο Συνεργείο → Exit/
+βιβλιοθήκη με νέο σύνδεσμο. Το φορτωμένο μάθημα περιείχε τις πρόσφατες ρυθμίσεις
+βήματος 5. Δύο HTTP 200 αποκρίσεις συμφωνούν byte-for-byte/SHA με HTML/JSON.
+Owned headless Firefox 14732 έκλεισε μετά από έλεγχο ακριβούς προφίλ·
+user windows και server ανέπαφα. Native pointer/keyboard, Safari/mobile,
+Esc, νέο 3D και πλήρης συνεδριακή ακολουθία δεν ελέγχθηκαν. Δεν επαναλήφθηκε
+ο έλεγχος αμετάβλητων κουίζ/viewer· το προηγούμενο JSmol issue μένει ανοικτό.
+
+Fresh Reviewer `/root/review_library_personal_alkanes_20261106`: κανένα
+εύρημα P0–P3, ανεξάρτητος έλεγχος μίας αποκλειστικής αλλαγής, URL/loader/Exit,
+μετρήσεων, δύο εικόνων, diff και όλων των 12 frozen hashes. Οι 15 browser
+assertions παραμένουν Developer evidence. Τα 44 προστατευμένα αρχεία,
+συμπεριλαμβανομένων 10 core και 28 scenario JSON, έχουν ίδια baseline hashes.
+Όλα επανελέγχθηκαν μετά το review· κανένα source edit μετά το freeze.
+Τελικό library SHA: `9949ea2ee92b6df3f1069f891fa6faff91f756868c7eb5fa4d5e31f0773b6d5f`.
+Καμία αλλαγή core αυτή τη συνεδρία. Δεν έγινε νέο Desktop export (JSON ίδιο),
+commit, push, δημοσίευση ή πλήρες checkpoint.
+
+Άνοιγμα/ανανέωση τοπικής βιβλιοθήκης:
+`http://127.0.0.1:8013/design/theory-library.html?v=alkanes-personal-20261106-r1`.
+Επόμενο: ο χρήστης επιλέγει «Αλκάνια» → «Ξεκίνα το μάθημα».
+Upstream είχε ελεγχθεί ήδη σήμερα έως 747c924, actual sync f49b810· χωρίς νέο sync.
+
+# Current resume point — 2026-11-06 — Βήμα 5: δύο αλυσίδες, ολοκληρώθηκε
+
+Ολοκληρώθηκε το εγκεκριμένο αίτημα μόνο στο βήμα 5 του προσωπικού
+«3Αλκάνια.json»: «άν»/«ιο» ορατά χωρίς διάδραση, «πεντ» ενεργό και αρχικά
+επιλεγμένο, με επιλογέα των δύο ισοδύναμων κύριων αλυσίδων. Ο επιλογέας
+επαναχρησιμοποιεί τα υπάρχοντα χειριστήρια, με τις υπόλοιπες ρυθμίσεις κρυφές.
+Προαιρετικά `styleName.disabled` και `show.chainNavigation`, χωρίς αλλαγή
+προεπιλογών στα παλιά σενάρια. Διατηρούνται σε Update/αντιγραφή/import/export.
+Άλλαξαν scenario/molver/teaching v54 JS, scenario CSS, τέσσερα Main54 cache URLs,
+το προσωπικό JSON και η τεκμηρίωση schema. Στο JSON προστέθηκαν μόνο δύο πεδία
+στο βήμα 5. Τα άλλα 11 βήματα, 27 σενάρια, 10 core και τέσσερις προστατευμένες
+εξαρτήσεις διατηρούν τα αρχικά hashes. Καμία αλλαγή core αυτή τη συνεδρία.
+
+Developer: αναπαραγωγή της αρχικής διάδρασης/κρυφού επιλογέα, JSC syntax και
+66 τελικές Firefox assertions με 0 καταγεγραμμένα JS errors. Ελέγχθηκαν τρία
+πραγματικά κουίζ/ξεκλείδωμα, pointer click/hover, DOM key/synthetic/replay,
+αλυσίδες 0→1→0 με σωστή επισήμανση/αρίθμηση σε τρεις τύπους 2D, πλάτη
+320/390/1280, μεταβάσεις 4–5–6, Exit, Update/αντιγραφή/FileReader/export και
+παλιά/ζητούμενα/live rule references. Ανεπιθύμητος κανόνας που φάνηκε στις
+αρχικές εικόνες διορθώθηκε πριν το review, με scoped επανεφαρμογή ρυθμίσεων.
+Read-only Chemistry Validator και Learning Designer επιβεβαίωσαν το scope.
+
+Fresh Reviewer `/root/review_alkane_step5_interaction_20261106`: κανένα
+εύρημα P0–P3. Ανεξάρτητα 44 hashes/επτά diffs, 65 JSC in-memory assertions,
+χημική απαρίθμηση των δύο πενταμελών αλυσίδων και οπτική επιθεώρηση τεκμηρίων.
+Οι 66 Firefox assertions είναι Developer evidence, όχι ανεξάρτητο browser replay.
+Η native ενεργοποίηση των chain buttons με πληκτρολόγιο/συνέχεια focus δεν
+επαληθεύτηκε: το native key probe δεν έδωσε DOM key events. Μετά από DOM click
+το Next χάνει focus όταν απενεργοποιείται στο τέλος· οι σχετικές παλιές συναρτήσεις
+μένουν ίδιες, χωρίς τεκμηριωμένη νέα regression. Safari, φυσικό mobile,
+screen reader, συνεδριακή ακολουθία και νέο 3D runtime δεν ελέγχθηκαν.
+Το προηγούμενο ανεξήγητο JSmol platform-null παραμένει εκτός αυτού του scope.
+
+Τεκμήρια, baseline, hashes, review και final verification:
+`docs/checks/alkane-step5-interaction-20261106/`. Όλα τα 44 frozen hashes
+παρέμειναν ίδια μετά το review. Έξι runtime/JSON αποκρίσεις HTTP 200 στον 8013
+συμφωνούν με τις ελεγμένες πηγές. Το «αρχεία  json/3Αλκάνια.json» ενημερώθηκε
+με ακριβώς ίδια bytes/SHA `5161a3e1…977230e`. Το προηγούμενο `a58d55e7…9cfe7`
+φυλάχτηκε και επαληθεύτηκε στο `Namelecule_06-11-2026/Πριν_τις_ρυθμίσεις_βήματος_5/`.
+Receipt: `communication/checkpoints/user-3-alkanes-step5-export-20261106.json`.
+Μόνο ο owned headless Firefox 13724 έκλεισε μετά από έλεγχο ακριβούς προφίλ.
+User windows και server ανέπαφα. Δεν έγινε commit/push/publication/full backup.
+
+Επόμενο: νέο άνοιγμα ή πλήρης ανανέωση της Main54 με
+`v=alkane-step5-interaction-20261106-r1`, personal scenario και `#step=5`.
+Το checkpoint παραμένει υποχρεωτικό· νέο scenario identity μπορεί να απαιτήσει
+ξανά τα τρία κουίζ. Δεν παρακάμπτεται το βήμα 4 με URL. Upstream ελέγχθηκε
+ήδη σήμερα έως `747c924e5305cd9aefea09065b63d4090f44ada9`, actual sync
+`f49b810c93ec85d06163679aff4a8642ea1b4cd3`. Δεν έγινε συγχρονισμός σε αυτό το unit.
+
+# Current resume point — 2026-11-06 — Μήνυμα κλειδώματος στον χώρο της στάσης
+
+Ολοκληρώθηκε το εγκεκριμένο αίτημα: το «Λύσε το σύντομο κουίζ για να συνεχίσεις.»
+εμφανίζεται στο κέντρο του ελεύθερου χώρου κάτω από τις οδηγίες, μόνο σε
+content-only checkpoint. Player54 και CSS χρησιμοποιούν ξεχωριστό status,
+με το ίδιο κείμενο/μετάφραση και διάρκεια 2600 ms. Καθαρίζει σε αλλαγή βήματος,
+Exit, ξεκλείδωμα ή άλλο toast. Επαναλαμβανόμενη προσπάθεια ανανεώνει τον timer.
+Χρησιμοποιεί textContent, role=status/polite/atomic και δεν μετακινεί focus.
+Αν κόβεται σε μικρό viewport, γίνεται η ελάχιστη κύλιση για να φανεί ολόκληρο.
+Τα συνήθη μηνύματα και τα μαθήματα με μόριο κρατούν την προηγούμενη θέση τους.
+
+Άλλαξαν scenario54 JS/CSS και δύο Main54 cache URLs σε
+`workshop-inline-notice-20261106-r1`. Όλα τα 28 scenario JSON, τα 10 core και
+οι τρεις προστατευμένες εξαρτήσεις παραμένουν ίδια. Το προσωπικό Desktop JSON
+είναι ήδη byte-identical με το source, χωρίς ανάγκη νέας εξαγωγής.
+Developer: αναπαραγωγή πριν, JSC syntax και 38 Firefox assertions με 0 JS errors.
+Ελέγχθηκαν ολόκληρα bounds σε 1280×900/390×844/320×844/1280×500, timer/replacement,
+πλήκτρα/hash/direct Go, μετάφραση, Exit/reentry και πραγματικά 3 κουίζ → βήμα5.
+Αρχική παρατήρηση 6,3 px αποκοπής σε 320 px διορθώθηκε πριν το review· κρατήθηκαν
+τα αρχικά τεκμήρια. Fresh Reviewer `/root/review_workshop_inline_notice_20261106`:
+χωρίς ευρήματα P0–P3, 73 ανεξάρτητες JSC/memory/DOM/timer assertions και έλεγχοι
+hash/diff/εικόνων. Browser replay και HTTP/SHA είναι Developer evidence.
+Τεκμήρια/before/target/review/final: `docs/checks/workshop-inline-notice-20261106/`.
+
+Ο server8013 δίνει τα τρία ελεγμένα runtime αρχεία με HTTP200/SHA. Μόνο ο owned
+headless Firefox12470 έκλεισε με έλεγχο προφίλ. User windows/server ανέπαφα.
+Καμία αλλαγή core, commit/push/publication ή πλήρες backup. Δεν ελέγχθηκαν
+native user window, Safari, φυσικό mobile, screen reader ή συνεδριακή ακολουθία.
+Το παλιό JSmol platformnull παραμένει εκτός αυτής της διόρθωσης. Επόμενο:
+fresh Main54 URL μεv=workshop-inline-notice-20261106-r1#step=4 ή page refresh.
+Upstream ελέγχθηκε ήδη σήμερα747c924, actual sync f49b810· δεν έγινε sync εδώ.
+
+# Current resume point — 2026-11-06 — Screenshot με κενό «Μόριο», έλεγχος έκδοσης
+
+Μετά την εγκεκριμένη αλλαγή ο χρήστης έδειξε screenshot με κενό πλαίσιο
+«Μόριο» στο4. Read-only followup: τα4reviewedruntimeSHA παραμένουν ίδια·
+4HTTP200 responses απόlocalhost8013 γιαMain54/scenarioJS/CSS/personalJSON
+είναι byte-identical με το ελεγμένοr2. Explorer `/root/workshop_stop_visibility_preflight`
+δεν βρήκε active/deferred re-show ενώpresent=true ή CSSoverride του inlinehide.
+Αυτό δεν αποδεικνύει ποιον player έχει φορτώσει η ήδη ανοιχτή καρτέλα του χρήστη.
+Παλιός φορτωμένος player παραμένει υπόθεση· το importJSON δεν ανανεώνει JS/CSS.
+Η προηγούμενη τελική οδηγία «φόρτωσέ το ξανά» ήταν ελλιπής για playerchanges.
+Επόμενο: άνοιγμα fresh localMain54 URL μεv=workshop-stop-only-20261106-r2#step=4
+ή πλήρης ανανέωση της σωστής σελίδας. Δεν έγινε νέα αλλαγή κώδικα/core/JSON,
+commit/push/publication ή παρέμβαση σε userbrowser. Τεκμήριο:
+`docs/checks/workshop-stop-only-20261106/reported-shell-followup.json`.
+
+# Current resume point — 2026-11-06 — Βήμα4 προσωπικού JSON μόνο Συνεργείο, ολοκληρώθηκε
+
+Εγκεκριμένη αλλαγή μόνο στο βήμα4 του `scenarios/alkanes-user-3.scenario.json`:
+φαίνονται logo, υπάρχουσες οδηγίες και «πήγαινε στο συνεργείο», χωρίς μόριο,
+ονομασία ή κενές στήλες. Αλλαγή5showρυθμίσεων· τα άλλα11βήματα/πεδία ίδια.
+Player54 κρύβει άδεια outer columns βάσει showflags και effective rules, με
+αποκατάσταση σε μετάβαση/rebuild/Exit. Fresh Reviewer βρήκεR1/P2: no-column
+fallback εξέθετε host width100%+margins και έκοβε οδηγίες δεξιά. Διορθώθηκε
+με scoped scContentOnly, width:auto/align-self:stretch, αφαίρεση κλάσης όταν
+επανέρχονται στήλες/Exit. ScenarioCSS+JS και δύο Main54 cacheURLs r2 ενημερώθηκαν.
+
+Developer: πραγματικό before/flags-only failure, JSCsyntax και sourcechecks.
+Αρχικές33Firefox functionalassertions ολοκληρώθηκαν αλλά strictcommand exit1
+λόγω1uncaughtJSmolbufferedImage/platformnull (προϋπάρχον ίδιο σύμπτωμα, άγνωστη
+αιτία/μεταβολή συχνότητας). Δεν δηλώνεται συνολικά καθαρή κονσόλα. Initial
+refresh assertion είχε λάθος προσδοκία πριν prepare των saved generated rounds·
+διορθώθηκε μόνο test, κρατήθηκαν τεκμήρια. Τελικές24targetedFirefox assertions
+πέρασαν με0JSerrors: πλήρη bounds/κειμένου320/390/1280, πραγματικά3κουίζ/gate,
+3–4–5,rulecontent,Exit/reentry,canonical. 10core/27άλλαJSON ίδια.
+Fresh Reviewer `/root/review_workshop_stop_only_20261106`: initial119καιfinal36
+ανεξάρτητες JSC/memoryassertions+hash/diff/visualchecks. R1 έκλεισε, χωρίς άλλα
+findings. Browserchecks και Desktopexport είναι Developer evidence.
+
+Frozen4runtimeSHA/before/scripts/reviews/final: `docs/checks/workshop-stop-only-20261106/`.
+Desktop «αρχεία  json/3Αλκάνια.json» ενημερώθηκε byte/SHA-identical με source
+(a58d55e7ca1fb31753d84d2f4af95f85b224b0fac5bb679210325b6f33b9cfe7).
+Προηγούμενο1e24...51a backup: `Namelecule_06-11-2026/Πριν_την_αφαίρεση_μορίου_βήματος_4/`.
+Receipt: `communication/checkpoints/user-3-alkanes-workshop-stop-export-20261106.json`.
+Μόνο ownedheadlessFirefox11603 έκλεισε μεprofilecheck· userwindows/server ανέπαφα.
+Καμία αλλαγήcore/commit/push/publication ή πλήρεςbackup. Δεν ελέγχθηκαν native
+window/Safari/φυσικόmobile/πλήρηςσυνεδριακήροή. UserFirefox10392 BiDiharnessμένει
+σε παλιά reserved-sessionκατάσταση· μην κλείνεται για automation. Refresh/import
+του updatedJSON από τον χρήστη είναι το επόμενο βήμα. Upstream σήμερα747c924,
+actualsyncf49b810, γνωστές νεότερες αλλαγές δεν συγχωνεύθηκαν εδώ.
+
+# Current resume point — 2026-11-06 — Βήμα 4 μόνο στάση Συνεργείου, αναμονή έγκρισης
+
+Νέο αίτημα: στο προσωπικό `3Αλκάνια.json` να μην εμφανίζεται καθόλου μόριο
+στο βήμα4, μόνο η στάση Συνεργείου. Read-only διερεύνηση Root και explorer
+`/root/workshop_stop_visibility_preflight`: τα υπάρχοντα flags κρύβουν τα
+εσωτερικά viewers/naming, αλλά αφήνουν τις εξωτερικές στήλες, τον τίτλο
+«Μόριο» και κενό χώρο. Αφαίρεση selectedMol με κενό menuSubset απορρίπτει
+το mandatory checkpoint κατά το validation· δεν εφαρμόστηκε.
+Προτάθηκε μέσω async ερώτησης συγκεκριμένο πλάνο: flags μόνο στο βήμα4,
+μικρή γενική προσαρμογή presentation chrome/player54 για κενά εξωτερικά
+πλαίσια με αποκατάσταση σε επόμενο βήμα/Exit, Main54 cache URL, αντίγραφο
+στο Desktop «αρχεία json», έλεγχοι3–4–5/quiz/roundtrip και fresh Reviewer.
+Η ερώτηση διευκρινίζει αν παραμένουν οδηγίες ή μόνο logo+κουμπί.
+Έγκριση εκκρεμεί· καμία υλοποίηση ή browser check για το νέο αίτημα.
+Source παραμένει1e24bbad02bd866db612808179d2c0fea641415a3f4e2d1f4af259573d56651a.
+Καμία νέα αλλαγή core, commit/push/publication. Επόμενο: απάντηση χρήστη,
+καταγραφή baseline και υλοποίηση μόνο του εγκεκριμένου scope.
+
+# Current resume point — 2026-11-06 — «πήγαινε στο συνεργείο» στο προσωπικό JSON
+
+Ρητά εγκεκριμένη αλλαγή και στα δύο κουμπιά εισόδου των βημάτων4/11 του
+`scenarios/alkanes-user-3.scenario.json`: προαιρετικό `checkpoint.openLabel` με
+ακριβές κείμενο «πήγαινε στο συνεργείο». Στον κοινό `namelecule-quiz-checkpoints.js`
+προστέθηκε μόνο trim/όριο1–100/απόρριψη άκυρου optional label και εμφάνιση με
+textContent. Τα ολοκληρωμένα checkpoints διατηρούν την υπάρχουσα ετικέτα revisit.
+Legacy checkpoints δεν αποκτούν πεδίο. Main54 cache URL και schema doc ενημερώθηκαν.
+Τα άλλα πεδία του προσωπικού JSON, 27 άλλες πηγές σεναρίων και 10 core ίδια.
+
+Developer: JSC syntax και23actual Firefox assertions/0JS errors πέρασαν, με
+πραγματική επίλυση3κουίζ πρώτης στάσης, είσοδο στη δεύτερη, gating/revisit,
+Desktop/mobile bounds, logo, εξαγωγή/FileReader εισαγωγή, trim/invalid/default.
+Παγωμένα4paths/SHA/before/scripts/results: `docs/checks/workshop-entry-label-20261106/`.
+Fresh Reviewer `/root/review_workshop_entry_label_20261106`: ολοκληρώθηκε χωρίς
+ευρήματα P0–P3. Ανεξάρτητα: hashes/diffs/JSON,73JSC memory/DOM-adapter assertions,
+GR/EN defaults/revisit, προστατευμέναcore/σενάρια. Browser replay παραμένει
+Developer evidence. `review.json` και `final-verification.json` καταγράφηκαν.
+Το Desktop «3Αλκάνια.json» ενημερώθηκε σε1e24bbad...51a με byte/SHA σύγκριση
+προς το αμετάβλητο μετά το review source. Το προηγούμενοc408 backup επαληθεύτηκε στο
+`Namelecule_06-11-2026/Πριν_την_αλλαγή_κουμπιών_Συνεργείου/`. Τα labels επιβεβαιώθηκαν στα4/11. Receipt:
+`communication/checkpoints/user-3-alkanes-entry-label-export-20261106.json`.
+Μόνο δικός μας headless test Firefox10577 τερματίστηκε με έλεγχο προφίλ.
+
+Όριο harness, όχι παρατηρημένο native/app freeze: read-only probe στο user
+Firefox10392 χρησιμοποίησε παλιό BiDi context ID και απέτυχε NoSuchFrame.
+Το exception path παρέλειψε session.end. Νεότερη σύνδεση πήρε Maximum active
+sessions/invalid session. Δεν επιβεβαιώθηκε ξανά το ορατό παράθυρο σε αυτή
+την αλλαγή. Μην τερματιστεί ο user Firefox για αποκατάσταση αυτοματισμού.
+Η αρχική ένδειξη κειμένου τεκμηριώνεται από user screenshot και before source.
+Τα headless after checks είναι ανεξάρτητα από αυτή την αστοχία harness.
+
+Χωρίς core change/commit/push/publication. Δεν ελέγχθηκαν Safari/φυσικό mobile/
+πλήρης συνεδριακή ακολουθία. Η υπάρχουσα content identity αλλάζει με metadata,
+χωρίς μεταφορά προηγούμενων receipts. Upstream σήμερα747c924, actualsyncf49b810.
+Επόμενο: ανανέωση τοπικής σελίδας από τον χρήστη ή συνέχιση ραφιναρίσματος.
+
+# Current resume point — 2026-11-06 — Το «3Αλκάνια» άνοιξε στο4 με λογότυπο Συνεργείου
+
+Ολοκληρώθηκε το εγκεκριμένο opt-in `titleLogo: "workshop"` στον player54 και
+μόνο στο βήμα4 του νέου `scenarios/alkanes-user-3.scenario.json`. Όλες οι αλλαγές
+του χρήστη διατηρούνται. Ενημερώθηκε byte-identical και το Desktop
+`αρχεία  json/3Αλκάνια.json` (SHAc408d9dd08d060bb71a6e8208475689dbde55891c4676789ad859a43d9dd2d00).
+Αρχικό backup στο `Namelecule_06-11-2026/Πριν_το_λογότυπο_βήματος_4/3Αλκάνια.json`.
+Fresh Reviewer `/root/review_step_heading_logo_20261106`: χωρίς ευρήματα P0–P3,
+15ανεξάρτητες JSC/memory assertions. Developer:66browser assertions/0JS errors,
+με πραγματικά3κουίζ και roundtrip/Update/μεταβάσεις/responsive. Δεν ελέγχθηκαν
+Safari, φυσικό mobile, screen-reader ή πλήρης συνεδριακή διαδρομή.
+
+USER-FACING FirefoxPID10392/BiDi52697 ανοιχτός στο4, εικόνα/120mscallback και
+nativeactive=true επαληθευμένα. Προφίλ:
+`/var/folders/2v/ds4vjvgj1_1000kq1fzg70q40000gn/T/namelecule-user-3-alkanes-20261106-u8fpsb1s/profile`.
+ΜΗΝ κλείνεται ως testbrowser. Προσωπικό Firefox493/server8013 διατηρήθηκαν.
+Μόνο δικοί μας προσωρινοί testPIDs10015/10014 τερματίστηκαν μετά έλεγχο ταυτότητας.
+Τεκμήρια/SHA/review/final: `docs/checks/step-heading-logo-20261106/`.
+Receipts: `communication/checkpoints/user-3-alkanes-{logo-export,browser}-20261106.json`.
+Καμία αλλαγή core (10SHA)/παλιών27σεναρίων, commit/push/publication ή πλήρες backup.
+Παραμένει η υπάρχουσα αλλαγή ταυτότητας προόδου όταν αλλάζει κείμενο/metadata.
+Επόμενο: χρήση του ανοιχτού παραθύρου/περαιτέρω ραφινάρισμα του προσωπικού JSON.
+Upstream ήδη ελέγχθηκε σήμερα747c924, πραγματικό syncf49b810, νέα commits σε εκκρεμότητα.
+
+# Current resume point — 2026-11-06 — Λογότυπο Συνεργείου στο βήμα 4 του «3Αλκάνια.json»
+
+Ο χρήστης ενέκρινε προαιρετική επιλογή λογοτύπου τίτλου και εφαρμογή μόνο στο
+βήμα 4 του δικού του αρχείου «3Αλκάνια.json» (12 βήματα). Το πραγματικό αρχείο
+είναι `/Users/yannisskendros/Desktop/αρχεία  json/3Αλκάνια.json`, αρχικό SHA
+9555b2f139f462c00406b1f6390f82d7c6a582be151afe2a3f76632bcd7dbd00.
+Διατηρήθηκαν όλες οι προσωπικές αλλαγές του, χωρίς αντικατάσταση από το παλιό μάθημα.
+Νέο χωριστό source: `scenarios/alkanes-user-3.scenario.json`. Μόνη διαφορά από το
+αρχικό: title «Συνεργείο ονομάτων» και titleLogo «workshop» στο βήμα 4.
+
+Worker `/root/implement_step_heading_logo` υλοποίησε προαιρετικό γνωστό preset
+στο player54, ασφαλές DOM/προσβάσιμο κείμενο και εφεδρεία σφάλματος, επιλογή/
+προεπισκόπηση στη συγγραφή και διατήρηση με Update/αντιγραφή/εξαγωγή. Άλλαξε μόνο
+`js/mulermoc-nom-scenario-54.js`, το αντίστοιχο CSS και `docs/didactic-scenario-plan.md`.
+Root άλλαξε τα δύο cache URLs στο Main54 και πρόσθεσε το χωριστό user JSON.
+Legacy τίτλοι/Go/Exit διατηρούνται, χωρίς πεδίο προεπιλογής στα παλιά JSON.
+Άγνωστα presets απορρίπτονται με προειδοποίηση, χωρίς εισαγόμενο HTML/URL.
+
+Επαληθεύτηκε στο πριν: «logo» ως κείμενο, μηδέν εικόνες/JS errors. Στο μετά,
+66 Developer assertions σε απομονωμένο Firefox πέρασαν με μηδέν JS errors:
+πραγματικές τρεις σωστές επισκευές/κλείδωμα, 3↔4↔5, Update/αντιγραφή/αναδιάταξη,
+εισαγωγή/εξαγωγή/επανεισαγωγή, εφεδρεία απουσίας εικόνας, παλιά callbacks,
+αρίθμηση/Exit και 14 παλιές εισαγωγές. Desktop και emulated320/390/844 ελέγχθηκαν,
+με την υπάρχουσα προτροπή περιστροφής κλεισμένη πριν από τις καθαρές λήψεις.
+Worker αναφέρει JavaScriptCore syntax/diff checks. Δεν ελέγχθηκαν Safari,
+φυσικό κινητό ή πλήρης 3D/συνεδριακή ακολουθία. Δεν δηλώνεται καθολική σταθερότητα.
+Όλα τα προϋπάρχοντα scenario JSON και οι 10 core SHA παρέμειναν ίδια.
+
+Παγωμένο target 5 paths/SHA και τεκμήρια: `docs/checks/step-heading-logo-20261106/`.
+Fresh Reviewer `/root/review_step_heading_logo_20261106`: σε εξέλιξη.
+Το παλιό Desktop JSON φυλάχθηκε στο `Namelecule_06-11-2026/Πριν_το_λογότυπο_βήματος_4/`.
+Εξαγωγή τελικού JSON στο αρχικό Desktop path και άνοιγμα σε εξωτερικό Firefox
+εκκρεμούν μετά το review. Receipt: `communication/checkpoints/user-3-alkanes-logo-export-20261106.json`.
+Δικοί μας test processes σε `test-processes.json` (headless Firefox10015/server10014),
+χωρίς αλλαγή στο προσωπικό Firefox493 ή στον server8013/PID8008.
+
+Καμία αλλαγή core, νέο commit/push ή δημοσίευση. Τα παλιά θέματα Firefox/JSmol
+παραμένουν ανοικτά εκτός αυτού του scope. Η υπάρχουσα content signature σημαίνει
+ότι το νέο title/metadata δεν επαναχρησιμοποιεί παλιές αποδείξεις λυμένων κουίζ.
+Ο σημερινός έλεγχος upstream παραμένει747c924, πραγματικό τελευταίο sync f49b810.
+Επόμενο: αντιμετώπιση τυχόν review findings, επαλήθευση εξαγωγής και άνοιγμα στο4.
+
+# Current resume point — 2026-11-06 — Πάγια οδηγία για ενημέρωση του «αρχεία json»
+
+Ο χρήστης ζήτησε η ενημέρωση του αντίστοιχου αντιγράφου στο «αρχεία json» να
+γίνεται όποτε ζητά ενημέρωση σεναρίου JSON. Καταγράφηκε μόνιμα στο `AGENTS.md`,
+στην ενότητα «Requested scenario JSON exports»: ενημέρωση τρέχοντος αντιγράφου,
+έλεγχος bytes/SHA με το ενεργό source, καταγραφή ακριβούς αντιστοίχισης και
+διατήρηση χρονολογημένων στιγμιοτύπων. Η οδηγία αφορά αιτήματα του χρήστη,
+όχι συγχρονισμό παρασκηνίου ή αυτόματη δημοσίευση/commit/full backup.
+Το ενεργό JSON αλκανίων και το ήδη εξαγμένο αντίγραφο παραμένουν ίδια.
+Μόνο οδηγίες/σημειώσεις άλλαξαν. Καμία αλλαγή core, νέο commit/push ή δημοσίευση.
+Ανεξάρτητος στοχευμένος έλεγχος της προσθήκης οδηγίας ολοκληρώθηκε χωρίς
+ευρήματα P0–P3 από `/root/review_alkane_terminology_20261106`. Επαληθεύτηκαν
+τα πραγματικά snapshots, οι τρεις SHA και τα diff. Τεκμήρια:
+`docs/checks/json-export-rule-20261106/`. Χωρίς runtime/browser/agent-loading tests
+(καθαρή τεκμηρίωση). Επόμενο: εφαρμογή της
+οδηγίας στο επόμενο σχετικό αίτημα και διατήρηση σαφούς χαρτογράφησης αρχείων.
+
+# Current resume point — 2026-11-06 — Το ενημερωμένο JSON βρίσκεται και στο «αρχεία json»
+
+Με διευκρίνιση του χρήστη, εξήχθη το ήδη ελεγμένο μάθημα 12 βημάτων απευθείας στο
+`/Users/yannisskendros/Desktop/αρχεία  json/Αλκάνια-Δύο_μέρη_με_Συνεργείο.scenario.json`.
+Περιλαμβάνει τις διορθώσεις στίξης και τη σύμβαση «άτομα C»/«μεταξύ ατόμων C».
+Επιβεβαιώθηκε byte-identical αντίγραφο με το ενεργό source JSON και SHA-256
+`55320dbe0b0d2a09ff71b405e1ffbeb64c6e9efff1a3578fcf0772fe2806d198`.
+Τα παλιά/χρονολογημένα αντίγραφα δεν αντικαταστάθηκαν. Πρόκειται για εξαγωγή
+ενός αρχείου, όχι πλήρη αποθήκευση έργου. Απόδειξη:
+`communication/checkpoints/alkanes-json-export-20261106.json`.
+Source/ρυθμίσεις/core παρέμειναν ίδια (10 core SHA ελέγχθηκαν). Η ανεξάρτητη
+αξιολόγηση του ίδιου ακριβώς περιεχομένου παραμένει στο προηγούμενο review.
+Δεν έγινε νέο commit/push/δημοσίευση. Καμία αλλαγή core στη συνεδρία.
+Επόμενο: χρήση του ενημερωμένου αντιγράφου ή συνέχιση ραφιναρίσματος.
+
+# Current resume point — 2026-11-06 — «Άτομα C» στα κείμενα αλκανίων
+
+Ο χρήστης ενέκρινε συγκεκριμένα τις διατυπώσεις «δηλώνει τα δύο άτομα C της
+κύριας αλυσίδας» και «τους απλούς δεσμούς μεταξύ ατόμων C», με εφαρμογή τώρα
+μόνο στο ενεργό μάθημα αλκανίων και καταγραφή για μελλοντικά κείμενα.
+Άλλαξαν επτά πεδία title/note του `scenarios/alkanes-two-part-workshop.scenario.json`:
+πλήθος ατόμων C στην κύρια αλυσίδα/στο μόριο/στις διακλαδώσεις και ο προσδιορισμός
+των απλών δεσμών. Διατηρούνται 12 βήματα, HTML, ερωτήσεις/IDs και όλες οι άλλες
+τιμές. Το `AGENTS.md` απέκτησε μόνο πρόσθετη ενότητα «Teaching wording for carbon
+atoms and bonds». Οι προϋπάρχουσες οδηγίες του παρέμειναν αμετάβλητες. Η σύμβαση
+ισχύει για νέα/αναθεωρούμενα κείμενα, χωρίς αναδρομική αλλαγή άλλων σειρών.
+
+Developer: έγκυρο JSON, σύγκριση όλων των πεδίων/HTML, απουσία παλιών αναφορών
+σε «άνθρακες»/«μεταξύ C» και βουλίτσας, ίδιοι SHA και των 10 αρχείων core.
+Τεκμήρια, πραγματικά before αρχεία και diff: `docs/checks/alkanes-terminology-20261106/`.
+Ανεξάρτητος Reviewer `/root/review_alkane_terminology_20261106`: ολοκλήρωσε
+τον έλεγχο χωρίς ευρήματα P0–P3. Επιβεβαίωσε τα δύο παγωμένα SHA, τα επτά πεδία,
+την ορολογία/γραμματική/σημασία και όλους τους 10 core SHA έναντι του supplied
+baseline. Αναφορά: `review.json`. Οι στόχοι έμειναν ίδιοι και μετά το review.
+Χωρίς browser/JS replay για αυτή την αλλαγή κειμένου. Παραμένει το ήδη γνωστοποιημένο
+όριο content signature: μετά την ανανέωση νέου κειμένου δεν επαναχρησιμοποιούνται
+οι αποδείξεις λυμένων στάσεων της προηγούμενης εκδοχής. Ο controller δεν άλλαξε.
+
+Τοπική αλλαγή, χωρίς νέο commit/push/δημοσίευση ή εξωτερικά αντίγραφα.
+Καμία αλλαγή core στη συνεδρία. Ο καθηγητής έχει ήδη ελεγχθεί σήμερα έως
+747c924, με πραγματικό τελευταίο sync f49b810. Δεν επαναλήφθηκε έλεγχος δικτύου
+για αυτή τη συνέχεια. Τα νέα d6513f0/747c924 παραμένουν προς χωριστή εξέταση και
+ενσωμάτωση. Επόμενο: συνέχιση ραφιναρίσματος με την καταγεγραμμένη σύμβαση.
+
+# Current resume point — 2026-11-06 — Στίξη στο σύντομο μάθημα αλκανίων
+
+Ο χρήστης ενέκρινε την αφαίρεση της βουλίτσας από όλο το μάθημα αλκανίων.
+Άλλαξε μόνο το `scenarios/alkanes-two-part-workshop.scenario.json`: 19 σημεία
+σε 15 πεδία τίτλων/κειμένων αντικαταστάθηκαν με φυσική στίξη. Η αρχή γράφει
+«υδρογονάνθρακες, που περιέχουν μόνο C και H». Διατηρούνται και τα 12 βήματα,
+τα HTML tags και όλα τα πεδία εκτός κειμένου, μαζί με τις δύο στάσεις/προδιαγραφές
+κουίζ. Προηγούμενα μαθήματα και runtime JS δεν τροποποιήθηκαν.
+
+Έλεγχοι Developer: έγκυρο JSON, έλεγχος όλων των διαφορών, απουσία U+00B7/U+0387,
+ίδια HTML και μη κειμενικά δεδομένα, ίδιοι SHA-256 και των 10 αρχείων core σε
+σύγκριση με την αρχή της συνεδρίας. Δεν έγινε browser replay για αυτή την αλλαγή
+στίξης. Τεκμήρια/before/diff/SHA: `docs/checks/alkanes-punctuation-20261106/`.
+Ανεξάρτητος Reviewer `/root/review_alkane_punctuation_20261106`: ολοκλήρωσε τον
+στοχευμένο έλεγχο χωρίς ευρήματα P0–P3. Επιβεβαίωσε ανεξάρτητα τη στίξη, το
+περιεχόμενο, τη μη κειμενική ισότητα και τη συμπεριφορά επαναφοράς προόδου.
+Δεν εκτέλεσε browser/JavaScript ή ελέγχους μορίων. Αναφορά: `review.json`.
+Το τελικό SHA του σεναρίου παρέμεινε παγωμένο κατά και μετά το review.
+
+Σημαντικό υπάρχον όριο, γνωστοποιημένο στον χρήστη: η signature() του
+`js/namelecule-quiz-checkpoints.js:58` περιλαμβάνει τίτλο και όλα τα βήματα.
+Άρα η ανανέωση της διορθωμένης έκδοσης δεν επαναχρησιμοποιεί τις παλιές αποδείξεις
+λυμένων κουίζ, παρότι οι ερωτήσεις/IDs παραμένουν ίδια. Δεν άλλαξε ο μηχανισμός
+ταυτοποίησης προόδου και δεν δηλώνεται διατήρηση προόδου μεταξύ των δύο εκδόσεων.
+
+Έλεγχος καθηγητή μέσω GitHub HEAD/history και πλήρους σύγκρισης changelog:
+τελευταίο πραγματικό sync `f49b810c93ec85d06163679aff4a8642ea1b4cd3`, νέο ελεγμένο
+HEAD `747c924e5305cd9aefea09065b63d4090f44ada9`. Δύο νέα commits: `d6513f0`
+(μεταβλητές μήκους CC/CH, κλίμακα ανά μορφή, συμβόλαιο New/Edit/fork) και
+`747c924` (δείκτης τεκμηρίωσης). Το changelog έχει νέες καταχωρίσεις. Οι αλλαγές
+επικαλύπτονται με τη δική μας βαθμονόμηση viewer/σεναρίων και την προστασία draft.
+Δεν συγχωνεύθηκαν στο πλαίσιο της αλλαγής στίξης. Επόμενο: χωριστός έλεγχος αυτών
+των επικαλύψεων πριν από ενσωμάτωση, διατηρώντας τις τοπικές διορθώσεις.
+
+Τοπική αλλαγή. Χωρίς νέο commit, push, δημοσίευση ή εξωτερικά αντίγραφα για αυτή
+την επέμβαση. Η δημόσια έκδοση παραμένει στο προηγούμενο σημείο δημοσίευσης.
+Καμία αλλαγή core αυτή τη συνεδρία. Οι παλιές εκκρεμότητες Firefox/JSmol παραμένουν.
+
+# Current resume point — 2026-11-05 — Separate visible Firefox opened for report and welcome
+
+User reported previous Firefox was already frozen after OSopen-a routed links.
+Left existingFirefox1602/8098 andtheirprofiles/windows untouched. Opened independent
+USER-FACING FirefoxPID11223, profile /var/folders/2v/ds4vjvgj1_1000kq1fzg70q40000gn/T/namelecule-user-links-20261105-220gn99b,
+BiDiport 58612 (do not treat this as a disposable testbrowser or close it).
+Both requested public report/welcome URLs loaded complete;120ms page callbacks
+returned. NSRunningApplication targetedactivation returnedtrue andisActive=true.
+Welcome tabselected; bothpagesleftopen after endingautomation only. This provides
+an independent usablewindow; nativefreeze cause remains unestablished, notfixed.
+Operationalrecord: communication/checkpoints/browser-links-recovery-20261105.json.
+App/core52/core54 unchanged against prelaunchSHA. Only localnotes/operationalrecord
+added after previous verifiedsave; no newcommit/push/publication for this action.
+Priorpublished2afe/reportlinks andd36fullcheckpointremainhistoricalverifiedcutoffs.
+Next: usercanuse newwindow; onrecurrencecapture exactaction/native+draftstate
+before recovery. Do not terminatePID11223 withoutuserdirection. Earlierrelease,
+backupdetails andopenPUB-JS1P2 follow below.
+
+# Current resume point — 2026-11-05 — Public release/report and full recovery snapshot verified
+
+Userapprovedmainpublication explicitly. Runtime d8985ad381a4f15f5fd67c4118ab8ff987d38f62,
+finaldocumentarypubliccommit2afe6135df7a923bdd8950eb312a39cf6a073bd6,
+tagsnamelecule-20261105-runtime/report on personal thesis-work; exactrefsverified.
+Live222runtime/dependencyHTTPhashes +23finaldoc/preservedruntimeHTTPhashes passed.
+Report: https://yanisken9.github.io/organic-nomenclature-3/docs/professor-20261105/update.html
+Welcome: https://yanisken9.github.io/organic-nomenclature-3/design/welcome-proposal.html?v=release-20261105
+Readyforwardmessage/links in professorfolder; twoexternalcopies use datedNameleculefolder.
+
+AllboundedpublicMain18/React8checks completed. Rawstrictscripts exit1; Main16cookie+
+4tracker+1realJSmolplatformnull; React2tracker. PUB-JS1 remains existingopenP2;
+no demonstratednewP0/P1 blocker. IndependentReviewer targetedassessment doesnot
+prove cause/cure/oldpublicpresence orcomplete3Dafterexception. EarliernativeFirefox
+freeze/twoSubmittimeouts remain open. No cleanconsole/offline/Safari/conferenceclaim.
+FreshpublicationReviewer independentlychecked3800candidate/49protectedpaths,
+initial/finalZIP everyCRC/SHA,bundles/recovery and45hashesperexternalcopy;8finaldocs
+reviewedwithoutnewfindings. Browserchecks areDeveloper evidence, not Reviewerexecution.
+
+Initialfullsnapshot1a402b1807b2e4fe54301844e9311ce5ccba1127/4194files andfinal
+c7f1cc34b416c4fe4ea1773d78465afbf1c4d6ba/4214files remotelyverified on
+checkpoint/namelecule-20261105-140541; sourceZIP/bundle/recovery/twoexternalcopies
+verified. FullZIP cutoff precedes8finaldocs andthese notes. Consult separate
+post-snapshot bookkeeping records/deltaZIP/latestbundle for laterdocuments and
+receipts; do not attribute them to immutablefullZIP. Authoritative completion,
+latestcheckpointrefs/hashes: communication/checkpoints/save-publish-20261105-state.json.
+Backuproots: siblingΑποθηκεύσεις/2026-11-05-140541 andDesktop/αρχεία  json/Namelecule_05-11-2026.
+
+Actualsync/lastcheckedprofessor=f49b810c93ec85d06163679aff4a8642ea1b4cd3.
+Core54changedbymerge (8f3e5f76...),core52unchanged. Save/report didnotaltercore;
+exactforwardablecoreexplanationinprofessor/message-to-professor.txt. Sourceactive
+react-library-pilot/168e3cec/indexpreserved; publication/checkpoints useownedclones.
+PublicReact39paths/v52 retained; localReactWIP includedfullcheckpoint. Temporary
+Firefox9247 andservers8056/8057 closedonlyafteridentitychecks; user8098/main8055
+untouched. Automaticapprovalrejection of first runtimeattempt preceded any execution;
+explicituserapproval thenobtained. No writes toprofessorupstream ormessages sent.
+Nextproductwork: usertriesnewlesson/engineWorkshop; prioritizediagnosisofPUB-JS1,
+recordexactaction/native+draftstate ifFirefox/Submitrecurs before recovery.
+
+# Current resume point — 2026-11-05 — Final source snapshot verified; final documentary review underway
+
+Finalfullsnapshot c7f1cc34b416c4fe4ea1773d78465afbf1c4d6ba/4214files,
+ZIPeveryCRC/SHA,bundle,recovery,twoexternalcopies verified; checkpointbranch
+checkpoint/namelecule-20261105-140541 remoteconfirmed atc7f. Initial1a402b18/4194
+remainsseparate. SourceHEAD/index/core preserved bysavehelpers.
+Runtimepublicd8985ad3/222HTTP/Main18/React8verified withopenP2JSmol/noncleanconsole;
+see actualindependent assessment/previousresume. No source/runtimecodechanges since.
+
+Updatedonly8docs withactualpublic/snapshotfacts, strictExit1/openP2, no postexception
+full3Dclaim andpreciselessonfuturechoicewording. Source/candidate docmanifest
+checks/publication-20261105/documentary-final-manifest.json SHA428d7e2d2e3903e3351107be8a91134f94c35257c8accaa2800204a00e2cd5cb.
+Freshtargeted /root/review_publication_20261105 review active; no8targetedocedits.
+All3800candidatehashes/49protected/209dependencies verified after8docoverlay;
+newGitHubprooflinks pointtorealimmutablec7fsnapshotpaths. Publicdocpush stillpending.
+Next collectnarrowreview, push8doccommit/tag, exactpublicdocHTTPhashes. Thenwrite
+finalnotes, fullcurrentsourcebookkeepingcommit inownedcheckpointclone, verified
+latestbundle/deltaZIP pluslatestportableprofessorreport/links/notes tobothfolders,
+remotecheckpoint/tag/receiptscheck. ImmutablefullZIPcutoffmuststaydistinct from
+latestmetadata. OwnedtestFirefoxrestartsession23725/9247 andcandidate8057 retained;
+user8098/main8055untouched. No conference/offlineguarantee. Core54changedbymerge;
+core52unchanged. Userwantsall saves andprofessorcopy/pastelinks whencomplete.
+
+# Current resume point — 2026-11-05 — Public runtime verified with disclosed P2; final full save next
+
+Runtime d8985ad381a4f15f5fd67c4118ab8ff987d38f62/tagnamelecule-20261105-runtime,
+personal thesis-work, exactrefs and222liveHTTPhashes verified. ActualpublicMain18
+andReact8boundedinteractionchecks completed. Rawstrictscripts exit1: Main16cookie+
+4tracker+1realJSmolplatformnullexception;React2trackerframe denials. Console NOTclean.
+FreshpublicationReviewer targetedassessment: no demonstratednewP0/P1 blocker;
+carry PUB-JS1 as existingopenP2, cause/cure unknown. Same symptom/namedcallchain
+premerge doesnot prove samecause/publicNov4presence. Full3Dgallerynotrechecked
+postexception; no conference/offline/Safari guarantee. Evidence under
+checks/publication-20261105/public-independent-assessment.json andrawpubliclogs.
+
+Onlytestdrivercorrectionawaitednextdiagramready beforeanswer; source runtime
+unchanged, independentlychecked. FirstnativeBiDiwindowcreationfailedbeforeapp;
+ownedtestFirefoxrestarted session23725/9247, user8098/main8055untouched. Initial
+fullsnapshot1a402b18/4194files remotelyverified withZIP/bundle/recovery/2copies.
+State now publicLiveVerified=true with explicitbounded/nonclean/P2scope, allowing
+finalgeneration backup. Next fullfinalsnapshot (no sourceeditswhilesnapshotting),
+then actualsnapshot/publicfacts+preciselessonseedwording inreport, narrowtargeted
+independentdoccheck, docpublication/exactHTTP, latestsourcebookkeepingcheckpoint/
+bundle/twoexternalreceipts. PreserveimmutableZIPcutoff separately. SourceHEAD/index
+unchanged; core54changedbymergeonly, savehelperdoesnotchangecore.
+
+# Current resume point — 2026-11-05 — Runtime published; public browser checks running
+
+User explicitly approved publicruntime after automaticapprovalreview initially
+rejected ambiguous save/report authorization. Rejected command did not run.
+Actual runtime commitd8985ad381a4f15f5fd67c4118ab8ff987d38f62, tag
+namelecule-20261105-runtime pushed atomically to personal thesis-work; exactrefs
+verified. Fresh publication Reviewer /root/review_publication_20261105 found no
+actionableP0–P3 findings, independently verified3800candidatepaths/49protected,
+4194initialZIPfiles/recovery203/bundle and45hashes perexternalcopy.
+Public222HTTP/exactSHA checks passed. First public browserattempt failed at native
+BiDi createWindow before application navigation (selectedTab null),0checks.
+Recorded separately; only ownedtestFirefox9011 was stopped, sameprofile restarted
+session23725/port9247. User8098/main8055 untouched. PublicMainexec76680 running;
+thenReactpublic. Source HEAD/index/runtime unchanged.
+
+Next finish publicchecks/classifyanyexternaldiagnostics, markstatepublicLiveVerified
+only on actualcompletedchecks. Then fullfinalsnapshot/externalcopies; update report
+with realpublic/snapshotfacts+optionalpreciselessonseedclarification; fresh hashes
+for narrowdocumentaryReviewer; publicdoccommit/exactHTTP; latestnotes/bookkeeping
+checkpoint+bundle andexternalreceipts. Final sourceZIP immutablecutoff mustremain
+separate fromlaterbookkeeping. State: communication/checkpoints/save-publish-20261105-state.json.
+Initialverifiedbackup and frozenreview detailbelow. Core54changedbymerge only.
+
+# Current resume point — 2026-11-05 — Initial full backup verified; public candidate under review
+
+Initial complete source snapshot1a402b1807b2e4fe54301844e9311ce5ccba1127,
+4194files, remote branch checkpoint/namelecule-20261105-140541 verified. ZIP every
+CRC/SHA, Git bundle, recovery ZIP and both external copies verified. Exact receipts
+in communication/checkpoints/save-publish-20261105-state.json. This initial snapshot
+precedes later report/publication bookkeeping, not a final/offline package.
+
+Curated public candidate3800files (3441base,1114overlays),49protected including39
+publicReactpaths;0deletions. Manifest9e464dbf; publication review target81bbcef3.
+Fresh /root/review_publication_20261105 read-only review active; no target edits.
+Prefix Main18checks/0JS passed; Reactprefixexec72177 running. Ownedpublicserver
+8057/PID10459/session27894; ownedtestFirefox9011/BiDi9247 retained forpublicchecks.
+User8098/main8055 untouched. SourceHEAD/index unchanged. No public push yet.
+Next collect React/review, fixwithinapprovedscope, commit/push exactcandidate to
+personal thesis-work, verifylivebytes/Main/React, targetedreportstatusupdate, final
+fullsave plus separatelatestnotes/bookkeepingbundle and verifiedexternalreceipts.
+Core54mergealreadycomplete below; save helpers have not changed core.
+
+# Current resume point — 2026-11-05 — Full save and professor publication underway
+
+User explicitly requested saving everywhere, professor report and link after the
+completed merge. New state communication/checkpoints/save-publish-20261105-state.json;
+stamp 20261105-140541, new checkpoint branch checkpoint/namelecule-20261105-140541.
+Fresh disposable public/checkpoint clones based on actual remote19b58f20/5c82c1c1;
+source HEAD/branch/index stay untouched. Public React39paths/v52 preserved; full
+checkpoint includes local React WIP and project notes. Dated helper copies pass
+19save+15assembly isolated tests; new328step/compactscenario/engine dependencies
+included. Publication report being prepared. No new public push/save-complete claim.
+Next verify initialfullsnapshot/externalcopies, freeze publiccandidate/report,
+entry-flow checks and fresh publication Reviewer, then personalGitHub publication,
+exactlivechecks, finalsnapshot/notes/receipts. Runtime merge complete as below.
+
+# Current resume point — 2026-11-05 — Reviewed merge and quiz compatibility installed locally
+
+Completed approved four-commit integration35d791ee→f49b810c93ec85d06163679aff4a8642ea1b4cd3.
+Last checked and last actually synchronized now both f49b810, in local working tree;
+no Git merge commit or publication. Main uses new merged core54; existing quizzes
+use immutable SHA-verified engine3f9382b4. Recipes and active/earlier solved progress
+remain compatible. Incoming authoring doc copied exactly; local history preserved.
+
+Fresh Reviewer /root/review_v54_merge_f49 reviewed frozen28paths, no actionable
+P0–P3 findings. Independent chemistry522assertions. Developer isolated browser:
+336assertions in10completed phases, plus69in one incomplete prefix phase retained
+separately. Final primary14browser checks/0JS and17HTTP checks passed. All816
+protected files outside10replacements unchanged; one immutable engine asset added.
+MOL/SDF/data/v52/React/lesson content unchanged. HEAD/index unchanged.
+Exact paths/hashes, before copies, verified10-file rollback, failed attempts,
+review attribution and core report: docs/checks/v54-merge-20261105/final-report.json.
+
+Final primary harness first had a quoting error, then an over-broad receipt
+comparison. Complete snapshots isolated only future unopened choice-order shuffle.
+Reviewer independently reproduced it in before/current code. All active/prior
+fields remain exact; future state pristine except valid permutation. No source
+change needed for this observation. Complete corrected primary flow passed.
+Two earlier Submit timeouts and native Firefox freeze still lack established
+cause; later passes do not resolve them. No Safari/physical mobile/external
+availability/offline/conference certification. Next diagnostic on recurrence:
+capture exact action and native/async draft state before recovery. User preview
+Firefox8098/server8055 untouched by automation or recovery actions.
+Core54 changed this session; core52 unchanged. No new commit/push/publication.
+
+# Current resume point — 2026-11-05 — Candidate frozen; independent review underway
+
+All11 candidate runtime paths frozen; one fresh read-only Reviewer
+/root/review_v54_merge_f49 reviewing28paths (11runtime+17testdrivers). Manifest
+review-target.json SHA f07c270113b052c1e98c706e1e9d7bbe925b3ce40f8ed9ae3425e52843037157
+under docs/checks/v54-merge-20261105/. DO NOT edit review target until report.
+Primary826 runtime files remain premerge. Verified10-file runtime rollback tar
+created from exact baseline bytes; this is not a full/offline conference package.
+
+Developer browser evidence:405assertions across recorded phases,0JS inlisted
+runs. Engine69pass run stopped at missing prefix in initial candidate testserver;
+harness-only prefix correction then3targetedchecks passed. Remaining phases:
+authoring27,geometry22,binding8,completealkanelesson128,asynccontrols14,settings3,
+actualold-receipt migration11,authoredWorkshop60,other13lessons compatibility60.
+Raw first authoring20thenSubmit timeout and later initialAutoSubmit timeout remain
+unexplained (application vs delivered input); subsequent27+14passes are NOT
+root-cause proof. Other failed attempts were specific harness function/readiness/
+writer mistakes, preserved. All source hashes unchanged throughout these runs.
+Chemistry independent522assertionspassed. Full evidence/limits in browser-summary.
+Candidate server now9595/session47069 (8056, prefix routing); ownedtestFirefox9247
+session33465. Mainserver8055/userFirefox8098 untouched. No commit/push/publication.
+Next collect Reviewer, resolve findings within scope with targetedverification,
+then install exact reviewed runtime in primary, verify protected hashes and
+final entry/cache checks, update upstream actualsync/core report and close tests.
+
+# Current resume point — 2026-11-05 — Full isolated candidate implemented; browser/review in progress
+
+User explicitly approved extra engine compatibility «Ναι, προχώρα με τη συμβατότητα».
+All11 candidate runtime paths now frozen in candidate-runtime-manifest.json.
+Current main engine8f3e5f76; viewer22d3b9fd; client13f882de; immutable old3f9382b4
+engine supports unchanged quiz catalog/recipes/progress. Main/shared lazy client
+cache refs updated. Exact old bytes preserved; every load requires SHA256, only
+immutable404 falls back to current engine. Primary runtime still unchanged.
+
+Developer JSC suites and independent chemistry522assertions passed. Actual Firefox:
+authoring27checks0JS; geometry22checks0JS; binding8checks/16actualWorkers0JS;
+complete12step lesson128checks0JS including both gates/refresh/23forms/8models.
+Initial authoring run timed out after20checks at nonaneSubmit, not reproduced by
+27check rerun; cause remains unproven and raw result/screenshot preserved. Extra
+transaction test passed14flow checks and GRlabels, then had harness-only wrong
+function name/early DOM read on language reload; corrected harness rerun currently
+exec71384. Known native user freeze remains unresolved, no cure/conference claim.
+Next finish transaction/old-receipt/other-lesson/standalonegame checks, freeze
+review target and get one fresh independent Reviewer; only then primary update.
+No commit/push/publication; primary core52/core54 currently unchanged. Candidate
+server8056/session83964; owned testFirefox9247/session33465; user8098 untouched.
+
+# Current resume point — 2026-11-05 — Candidate core/viewer frozen; quiz engine compatibility approval pending
+
+Approved seven-runtime-file merge implemented ONLY in isolated candidate. Core
+frozen8f3e5f76d96322faf7cf9251f4cae3eca204fe2f82bf5754fdce6ffc4cd5d5a9;
+viewer frozen22d3b9fdfca8052332b4f842deec7055f6ca8f382ff4a3692db321e770b02e36.
+Actual JSC naming/core/metadata/map/geometry corpus passed; viewer19targeted mocks
+passed, all evidence copied into docs/checks/v54-merge-20261105/{core,viewer}/.
+Real isolated Firefox authoring test underway server8056/profilemungqr1z/port9247,
+exec12523, about20checks passed so far. Primary runtime still unchanged.
+
+New dependency traced before quiz replay: catalog + generated adapter + lesson
+recipes pin old engine3f9382b4 and client SHA-256 correctly rejects new core8f3e5f76.
+Specific extension approval pending: preserve old core as immutable SHA-addressed
+asset and use verified-version lookup in shared chemistry client, two cache refs;
+quiz recipes/questions/progress unchanged. Primary main still new merged core
+only after final checks/review. No compatibility source edits until approval.
+Engine-binding-preflight.json documents exact hashes. Ordinary authoring checks
+can continue independently. Next collect test result/approval, implement authorized
+compatibility if approved, then actual quiz/lesson replay and fresh final Reviewer.
+No commit/push/publication. No PRIMARY core changes yet; isolated candidate core
+has changed and is not yet independently reviewed. UserFirefox8098 untouched.
+
+# Current resume point — 2026-11-05 — Merge plan approved; isolated implementation underway
+
+User explicitly approved «Ναι, με αυτές τις προφυλάξεις». Approval and exact plan
+are in docs/checks/v54-merge-20261105/. Candidate at
+/tmp/namelecule-v54-merge-20261105-candidate, isolated server8056/session83964.
+Root merged candidate CSS/iupac/teaching/lang/Main54; actual translation regression
+before/incoming/fixed reproduced (candidate33 labels + future-row33 all pass).
+Workers /root/merge_core_implementation and /root/merge_viewer_implementation own
+candidate core54/viewer54 and targeted tests; primary826 runtime source hashes
+remain unchanged until candidate verification and fresh independent review.
+One owned isolated Firefox profile /tmp/namelecule-v54-merge-ff-mungqr1z/port9247
+will run browser tests; userFirefox8098 and primaryserver8055 stay untouched.
+No commit/push/publication. Candidate implementation is not yet reviewed/accepted.
+Next collect workers' frozen hashes, run affected suites/browser flows, review,
+resolve within approved scope, then verified primary update and final records.
+Known native Firefox freeze cause is unresolved; no merge cure claim. Preflight
+and historical notes remain below.
+
+# Current resume point — 2026-11-05 — Careful v54 merge preflight complete; specific plan approval pending
+
+User says «Πάμε προσεκτικά για αυτή τη συγχώνευση». Read-only investigation and
+baseline completed; no application code edits. Fresh upstream HEAD still f49b810,
+last actual sync35d791ee. Exact ten-path base/target snapshots (20 files), local
+before copies and 826 runtime hashes/index/status in docs/checks/v54-merge-20261105/.
+Text preview finds core5/viewer7/Main3 conflict blocks, not automatic-safe merge.
+Chemistry Validator /root/merge_core_preflight demonstrated parser metadata/bond
+validation and nitrile-sp protections that wholesale upstream replacement loses;
+new counts regex also rejects valid contiguous101100. Viewer Explorer
+/root/merge_viewer_preflight demonstrated short-header annotation/layout bypass,
+traced async Accept interleaving risk and reproduced incoming settings translation
+shift (base0 wrong; target7GR/8EN). These are preflight findings, not review of a
+merged implementation. Raw specifics: preflight-findings.json; concrete plan.json.
+
+Specific plan presented and async approval pending under AGENTS line113:
+JSME-first canonical acquisition with retained local graph/metadata/geometry checks,
+bounded async Accept with in-flight/cancel guards, common robust counts offsets,
+ID-based settings labels; all professor behavior merged first in isolated candidate.
+Seven runtime paths: core54/viewer54/iupac54/lang54/teaching54/CSS54/Main54.
+Original MOL/SDF/data/v52/React/lesson/game files preserved; necessary final cache
+and documentation updates. Reuse relevant naming/422-form metadata/geometry/map
+suites, real authoring/GR-EN/interactions and compact lesson gates/Workshop checks,
+then one fresh independent Reviewer/chemical validation before primary update.
+No publish/commit authorized. User choice also allows candidate-only scope.
+Next wait explicit specific approval; no dependent source edits beforehand.
+All826 protected runtime hashes and Git index reverified; no core/core-version
+changes so far this session. Firefox8098 remains responsive per user; cause of
+past freeze unproven and outside merge fix claims. Previous records follow.
+
+# Current resume point — 2026-11-05 — Professor upstream rechecked; no newer commits
+
+User asked whether professor has anything new. Live read-only GitHub API HEAD,
+comparisons against actual sync35d791ee and previous checkf49b810, and complete
+latest CHANGELOG fetch succeeded (web fetch failed; direct HTTPS fallback worked).
+Current HEAD remains f49b810c93ec85d06163679aff4a8642ea1b4cd3, 4Nov21:38:26UTC.
+Zero newer commits since previous check; four previously identified commits/ten
+paths still pending since actual sync35d791ee. CHANGELOG patch reviewed: drawing
+switch/Enter guard; auto-linearize, canonical SMILES, HOOC/ether layout, explicit-H
+condensed stripping, counts-line detection and asynchronous JSME depiction.
+Existing core54/viewer54 overlap remains: professor JSME-first skeletal ladder
+versus local reviewed builtin-first. No merge/sync implemented in this status task.
+Evidence and fetched source: `docs/checks/professor-upstream-20261105-latest/`.
+Last checked=f49b810; last actually synchronized=35d791ee (distinct). Core52/core54
+hashes unchanged; no core/core-version changes this session, no commit/push/publish.
+Next: before integration, present a concrete preservation plan for the unresolved
+behavioral overlap. Firefox temporary recovery is user-confirmed below; cause is
+still unresolved. Current label and compact lesson work remain local.
+
+# Current resume point — 2026-11-05 — Firefox recovery confirmed; cause unresolved
+
+User reports freeze inside quiz «2/12», including browser menu/address bar.
+Local Main54/game HTTP200 (0.016s/0.002s). Owned preview7534 session snapshot
+persisted #step=4 (first gate); reported counter/last action still ambiguous.
+Three-second parent/two-content/GPU native samples mostly event/condition waits;
+no sustained JS spin or root cause demonstrated. Read-only Explorer
+/root/quiz_freeze_preflight traced bounded game callbacks and background JSmol;
+these paths do not establish causality. Raw samples and structured findings:
+`docs/checks/firefox-freeze-20261105-repeat/diagnostic-and-recovery.json`.
+
+Backed up owned preview session in /tmp/namelecule-firefox-freeze-recovery-20261105-2.
+SIGTERM only verified owned preview7534/test7818/test4104 and diagnostic Swift8057.
+Personal Firefox1602 untouched. Relaunched SAME preview profile with
+--restore-last-session, no automation. New PID8098/session73505, visible window856,
+post-restart HTTP200. User confirmed responsiveness: «Ναι, ανταποκρίνεται».
+No app/core changes, all five prior reviewed source/protected hashes preserved;
+no commit/push/publication. This is temporary recovery, not a root-cause fix.
+Next resume user work; if recurrent, correlate exact window/PID/input/native
+modal and active content before code proposal. Prior accepted label work is below.
+
+# Current resume point — 2026-11-05 — Plain Check label completed and reviewed
+
+User approved “Ναι, μόνο «Έλεγχος»”. All quiz entry modes now share the plain
+«Έλεγχος» button label. Exactly three runtime lines changed: the common label in
+js/namelecule-game-repair.js and its cache references in games/name-repair.html
+and mulermoc-nom-54.html. No action/state, scenario, molecule or core changes.
+Baseline/before copies, frozen hashes and final evidence are in
+`docs/checks/quiz-check-label-20261105/`. Fresh independent Reviewer
+/root/review_check_button_label found no actionable P0/P1/P2/P3 source findings.
+Developer JSC syntax and 13 actual Firefox checks passed, zero JavaScript errors:
+authored/generated, standalone/embedded, selection/submission and success state.
+Browser checks used native DOM programmatic clicks in an owned isolated window;
+user native Firefox7534 remained untouched. Test-runner recovery is documented
+in review-result.json; it required no application change. Final 3 changed and
+2 protected file hashes plus HEAD verified unchanged from frozen review target.
+No commit/push/publication. No core/core-version changes this entire session.
+User should refresh their page to receive the new cached-script URL. Existing
+lesson/JSmol uncertainties remain recorded below; this cosmetic change does not
+claim to fix those. Next work follows the user's choice; no pending label work.
+
+# Current resume point — 2026-11-05 — Check-button label implemented; browser check underway
+
+User approved “Ναι, μόνο «Έλεγχος»”. Changed exactly one shared button label
+and its two script-cache references (game HTML and Main54). No action/state,
+scenario, molecule or core changes. Baseline, before copies and frozen manifest
+are in docs/checks/quiz-check-label-20261105/. Fresh independent Reviewer
+/root/review_check_button_label found no actionable P0/P1/P2/P3 source findings;
+all 3 changed and 2 protected hashes verified. Developer JSC syntax passed.
+Actual four-entry-mode browser check is running in owned test profile9246,
+exec session15269. Its stale automation session/no-window failure required
+restarting ONLY owned test Firefox6500; user regular profile7534 stayed untouched.
+No app workaround for the test-runner issue, no new test script or dependencies.
+Next collect browser result, record final verification and user refresh guidance.
+No commit/push/publication. No core/core-version changes this session.
+
+# Current resume point — 2026-11-05 — Quiz check-button label plan awaiting approval
+
+UserrequestsremovalofcheckmarkfromallquizCheckbuttons: itlookscompletedbefore
+submission. Screenshotandsharedsource confirm literal «Έλεγχος  ✓» at
+js/namelecule-game-repair.js308. Oneconstructorservesstandaloneauthored/generated
+Workshopandembeddedlessons. Planpresented: labelonly«Έλεγχος»,bumpgameJSrefs in
+Main54andgamesHTML,briefappearance/actionverificationandboundedindependentreview.
+AsyncapprovalpendingunderAGENTS; noappcodeedit yet. Baseline/beforecopies in
+`docs/checks/quiz-check-label-20261105/`. Successfeedbackisaseparatepost-checkstate.
+No corechanges. Nextwaitspecificapproval,thenscopedimplementation/checks/review.
+UserregularFirefoxprofileisdhy79j isresponsiveandmustremainuntouchedbytesttools.
+
+# Current resume point — 2026-11-05 — External Firefox recovery confirmed
+
+UserreportedbrowserclosedthenentireFirefoxunresponsive. Read-onlyHTTPchecks:
+8055MainHTML200/0.019s andnewscenario200/0.003s. ExistingpersonalFirefoxPID1602
+andownedtestprofiles4104/6500werealive; thisdoesnotestablishhangcause. Opened
+separatenativeFirefoxWITHOUTautomation/debugging usingtemporaryprofile
+/tmp/namelecule-user-preview-20261105-isdhy79j (PID7534,execsession68796),newlesson
+step1. CoreGraphicsconfirmed2onscreenlayer0windows772/776. Userconfirmedresponsive:
+«Ναι, βλέπω το μάθημα και μπορώ να πατήσω». Thisistemporarystartuprecovery,NOTa proven
+rootfixfornativehang/JSmol. NoexistingFirefoxprocesswasquit; nosource/corecode
+changed. Evidencebrowser/external-browser-recovery.json underlessoncheckfolder.
+8055serverstillhealthy. Newnativepreviewleftopenforuser. Ifhangrecurs, diagnosenativewindow/dialogstate
+beforeproposinganyappcodechanges. Reviewedlessonstate
+andunresolvedJSmolobservationremainasbelow; no commit/push/publication.
+
+# Current resume point — 2026-11-05 — Compact alkane lesson reviewed locally
+
+ApprovedNEW12steplesson linkedfromlibrary:3unbranchedteachingsteps+3repairgate,
+6branchedteachingsteps+3repairgate,finalall8molecules/23available2D+8existing3D.
+Original21stepandauthoredpilot retained;14activelessons/328steps. Eight runtime
+paths, beforecopies, exactinitial/finalhashes,evidenceandREPORT in
+`docs/checks/alkanes-two-part-20261105/`. No core/core-version/MOL/data/generator/
+client/Worker/v52/React changes. HEAD168e3cec/index25c21223unchanged;no stage/
+commit/push/publication. PreviousNov4verifiedrecoverypointretained.
+
+ChemistryValidator23graphs8SDF/35coreanalyses23maps,no findings. Unit51passed.
+Firefox128functionalcheckscompletedwith1nativeJSmolplatformnullexception during
+savedgate refresh; causeUNRESOLVED, notclassifiedpre-existing/fixed. Recovery19,
+compatibility60(allother13lessonfirst/final/PrevNext+export/history),oldpilot45,
+originalWorkshop60 passed0JS. FreshReviewerfoundR1P2bootstrapflash;correctedcold
+loadinghostandExit,11targetedFirefoxchecks0JS+7independentmemorychecksclosedR1.
+ResidualnativeobservationapproxP2; no openP0/P1, no conference-readinessclaim.
+Diagnosticnormal-vs-deferredloaderincomplete/harnessfailed,notcausalproof. Failed
+preloadexperimentshadURL-before-assignment/frozenAPIharnesserrors;finalharness
+copiesAPIanddelaysactualclient/Workers. BrowserresultsremainDeveloperevidence.
+
+Owned8055serverandexternalFirefox9246(profile/tmp/namelecule-two-part-20261105-ff,
+session39503) retainedforpreview;9245oldprofile hadhiddencontrols onexactBEFORE,
+notreproducedincleanprofile. Upstreamcheckedf49 earlier;actualsync35,designer
+pipelineoverlapstillseparate. Nextuserpreviewshortlesson; subsequenttechnical
+workshouldtraceJSmolobservation beforepresentationrelease. Core report unchanged.
+
+# Current resume point — 2026-11-05 —12step lesson implemented; final review pending
+
+Approved12stepalkane lesson now implemented in NEWalkanes-two-part-workshop
+scenario and linkedcurrentlibrarycard (14lessons/328steps). Two generatedsets3+3
+repairs, finalall8gallery. Eight runtimepaths changed; beforebaseline and hashes
+in docs/checks/alkanes-two-part-20261105/. Old21step/authoredpilot/core/MOL/React
+preserved. ChemistryValidator nofindings;23forms+8SDFgraphs/35coreanalyses/23maps.
+Adapter/controller unit51checks pass. ActualFirefoxcleanprofile9246:128functional
+checks completed,23available2D+8matching3D models;1uncaughtnativeJSmolplatformnull
+exception occurred during asynchronous saved-first-gate refresh. Cause unresolved;
+NOT classifiedpre-existing/fixed. Boundednormal-vs-deferredloadertrace underway.
+Recovery19checks,compatibility60checks(allother13lessonsfirst/final/PrevNext,
+export andpagehide/pageshow/history),oldauthoredpilot45andoriginalWorkshop60
+passed0JSerrors. Beforeunload capture cancellation andBFcache return handling are
+partofplayer asyncsafety; do NOT claim they fixnativeJSmolexception withoutproof.
+Newcode runtimecurrentlyfrozenexcept evidence-driven correction ifneeded, then
+onefreshindependentReviewer required. No declaration readyforconference.
+
+OwnedcleanFirefoxsession39503/profile/tmp/namelecule-two-part-20261105-ff BiDi9246
+nowused: older9245profile hadhiddencontrols evenon exacthistoricalbefore, current
+cleanfreshprofilecontrolsvisible. Noappfixmadeforthatprofilecondition.8055owned
+serverretained. Scripttrace-restoration session93222 running; wait/poll no parallel
+BiDiclients. Previous fulltestfinalStorage fixture recorded forboundedrefreshtrace.
+No core/core-version changes, no stage/commit/push/publication. Next resolve/classify
+JSmolobservation, targetedfinalchecks, freezeexacttarget+freshreview,records+preview.
+
+# Current resume point — 2026-11-05 — Approved12step alkane lesson implementation started
+
+User explicitly approved12steps and3quizzes per mandatory stop. Implementation
+baseline saved in docs/checks/alkanes-two-part-20261105/baseline.json with six
+before copies and nine protected dependencies. Original21step lesson and authored
+pilot remain unchanged. Root owns player54 async preparation/cancellation/UI,
+Main54 script order and compatible embedded continueLabel. Worker
+/root/implement_generated_checkpoint owns adapter/controller/checkpointCSS;
+/root/implement_compact_alkane_scenario owns NEWscenario and librarycard. See
+preflight below for agreed sequence/verification. No new scope approval needed.
+Core54/core52 unchanged; no commit/push/publication. Next implement and validate
+both gates, refresh, fullgallery and legacy replay before fresh independentreview.
+
+# Current resume point — 2026-11-05 — Shorter two-part alkane lesson preflight complete; plan pending
+
+New user objective: shorten theory starting with alkanes; unbranched part,
+required Workshop gate, branched part, required Workshop set, then free access
+to all available2D/3D forms of all8alkanes. No code plan approval yet. User's
+follow-up asks whether closing laptop lid allows continued work; it is a side
+question, not a request to pause/cancel the lesson. Record state before sleep.
+
+Read-only LearningDesigner /root/alkane_lesson_compact_design recommends12steps
+instead of21:1alkane/bonds definition,2three namecomponents,3fiveunbranched2D
+comparison,4requiredunbranched3roundset,5branchedparent vs totalC,6singlebranch
+numbering/name,7identicalbranches,8complexparent/chain tie,9firstdifference
+numbering,10branchtypes/alphabetic/fullname,11requiredbranched3roundset,
+12all8freeexplore. Preserve existing chainIdx1 choices where intentional,
+rule tables optional, brief paragraphs. Completion means three successful
+repairs with retries, not proof of mastery/allrulecoverage. Existing generator
+samples eligible families without guaranteeing everyrule per set; no new
+generator profiles planned. Final23available2Dforms+8existing3D; methane lacks
+skeletal form and is currently missing from oldlesson final7molecule menu.
+
+Read-only explorer /root/alkane_generated_gates_preflight found public adapter
+registration already exists. New external generated-set type can use versioned
+recipe descriptor in existing spec.round contract; store seed/revision/setID/
+difficulty+3answerstates. Async engine revalidation must precede accepting saved
+completion. Proposed narrow optional controller prepareTarget seam, guarded
+defer/re-enter before existing synchronous gate resolution in PresentBegin/Go,
+pending navigation/errorretry/Exit cancellation. Preserve actualviewer state,
+original requesthash/index after validrefresh; stale callbacks neverapply.
+Embedded round needs optionalcontinueLabel forfirst2'Nextquiz'/third'Theory'.
+Finalgallerybothpanesvisible with existingmenuSubset8/controls/nameClick works;
+no viewer-visibility toggle fix needed. Source/core/worker/client/generator/MOL
+and old52/React outside scope. Alreadycheckedprofessorf49; actualsync35 unchanged.
+
+Concrete plan to present: NEW shortened scenario file linked from currenttheory
+card, keeping old21step source and authoredsinglequizpilot available forlegacy
+v52/React/recovery. New js/namelecule-generated-repair-checkpoint.js; targeted
+controller/scenario54/sharedroundcontinueLabel/checkpointCSS/Main54scriptorder+
+cache; theorylibrarymetadata/link update. No implementation yet. Verify full
+12step/6repair flow, bothgates and bypassattempts, refreshpartial/completed/final,
+invalidrecipe/storage/unavailableengine/catalog/image,retryExit/staleprep,
+all8mol/forms/3D/highlights/zoom/resize; priorauthoredpilot,standalonegames and
+otherlesson navigation regressions; chemistrytext/snapshotvalidation+onefresh
+Reviewer afterlogicalunit. Next obtain specificplan approval beforeediting.
+
+Only session records changed for this preflight. No new core change thissession;
+existingcore54=3f9382...5306 andcore52=d21384...24a2 remain. No tests/runtimechanges,
+commit/push/publication for lessonpreflight. Completedenginepilot/branding and
+local8055server+testFirefox9245 remain as recorded below.
+
+# Current resume point — 2026-11-05 — Workshop set-picker branding complete locally
+
+User approved logo/arrow plan (“ναι”). Changed only renderSetPicker header in
+gameJS: existing 3D logo helper beside visible Workshop label, button now exactly
+“Όλα τα σετ”. Two scopedCSS rules center/align label+logo; HTML cache updated.
+ActualFirefox inline checks20passed0JSerrors across original/engine modes,
+1500/390/320px alignment/nooverflow, decoded existinglogo and keyboardreturn.
+No new unit tests for this cosmetic change. Evidence/baseline/screenshots:
+docs/checks/workshop-branding-20261105/. Frozen10-path manifestSHA
+500a371283cfbc25b41a35cfacdaa7775e6d9fa38d036f8eb93dbf868197a998.
+Fresh read-only Reviewer /root/review_workshop_branding_20261105 completed with
+no actionableP0/P1/P2/P3 findings. Independently checked all10targethashes,three
+small diffs,7preserveddependencies and JavaScriptCore syntax; inspected screenshots.
+Browser20checks remainDeveloper evidence, not independentinteractive execution.
+No corrections needed; reviewedsource retained. See review-result.json beside
+baseline/evidence. Core,engine/gen/catalog/logoasset and quiz/scenario behavior
+untouched; hashes checked. No core/core-version changes thissession, no commit/
+push/publication. Previous enginepilot report is its historical cut-off; this
+later cosmetic delta supersedes only its gameJS/HTML/CSS hashes.
+Next: user refreshes externalFirefox to see update. No requiredwork remains for
+this approvedrequest. Other series/lesson integration and upstream overlap remain
+separate. Existinglocal8055server/Firefox available as noted below.
+
+# Current resume point — 2026-11-05 — Workshop set-picker branding requested
+
+User requests existing Workshop logo beside “ΣΥΝΕΡΓΕΙΟ ΟΝΟΜΑΤΩΝ” in the alkane
+set-picker header and removal of the arrow from “Όλα τα σετ”. Read-only inspection
+located renderSetPicker gameJS843–844 and existing workshopLogo helper/3D asset.
+Concrete scoped plan pending approval: reuse existing logo helper; centered
+logo/text CSS scoped to set picker; button label only; HTML cache references.
+Files: js/namelecule-game-repair.js,css/namelecule-games.css,games/name-repair.html.
+Verify image decode/alignment,320px/desktop fit and return action in original and
+engine modes, then bounded independent review. No application/core edits made
+for this request yet. Prior pilot remains complete/reviewed as recorded below.
+
+# Current resume point — 2026-11-05 — Engine-backed alkane Workshop pilot complete locally
+
+Approved pilot implemented, tested and independently reviewed. User preview:
+http://127.0.0.1:8055/games/name-repair.html?source=engine
+Left open in owned externalFirefox(profile /tmp/namelecule-engine-pilot-20261105-ff)
+at the two-set picker with Basic selected. Owned8055serverPID4102/session66368
+andFirefox9245/session11399 intentionally left running for user testing. Original
+default games/name-repair.html remains available and has a visible pilot entry.
+
+Actual unchangedcore54 analyzes eight existing MOLs in fresh one-shot Workers;
+exact SHA-verified bytes are imported through per-job Blob URLs and cleaned up.
+Factory creates2sets×3distinctstructures with seeded question/fault/choice order.
+Basic supplies initial direction,Challenge neutral prompt. Recipe/legal answer
+states survive refresh and reject incompatible/corrupt or skipped progress.
+Existing authored lesson checkpoint remains unchanged. Eight fixed structures
+provide fault variants, not new molecular graphs or validated adaptive difficulty.
+
+Finalsource hashes: generator11830448,client506a63f8,Worker86b14771,gameJS8afafaea.
+Final actualFirefox72engine+21family/recovery+60originalgame+45embeddedlessonchecks
+passed0uncaughtJSerrors; intentionalunavailableWorker diagnostic is separately
+recorded. Generator512games/3072rounds/38644repairchecks/6144restorechecks passed.
+Adapter62clientchecks/23forms/8permutations/22rejects;9Workersallterminated,
+10BlobURLsallrevoked. ChemistryValidator independently checked23forms/eightSDF
+graphs and closedGEN-CHEM01 atfinalgenerator;6992rootvaluechecks passed.
+
+Fresh read-only Reviewer /root/review_engine_workshop_20261105 returned NO
+actionableP0/P1/P2/P3 findings. Independently verified all52manifesthashes,
+catalog,adapter/generator tests via in-memory no-write AST,4JSsyntax files,
+SVGcounts and preservedbaseline; browserchecks inspected asDeveloper evidence.
+Review-targetmanifestSHA c76ab02275ccf19f15c9849bae66bbeadbd0db9d1e3d5352302b422166e5b382.
+See docs/checks/engine-workshop-20261105/{REPORT.md,independent-review.json,
+final-verification.json}. Afterreview only documentation/preview records changed;
+all10reviewed runtime/source hashes retained. No code correction was needed.
+
+CORE REPORT: no core/core-version change this session. Core54 remains
+3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306;
+core52d2138418ff630ab77e578b80ca8ba3a10cc1b877c3ab8c0e5c2735ffcd1f24a2.
+MainHTML/viewer,data54,sourceMOL/SDF,scenarioJSON,oldgameJSON/assets andReact
+preserved. SourceHEAD168e3cec/index25c21223 retained. No stage/commit/push or
+publication; existing verified Nov4public/fullcheckpoint retained. Upstream was
+alreadycheckedthroughf49b810 thissession; actualsync35 remains, designeroverlap
+unresolvedseparately. Safari/physicaldevices/AT/publicdeployment/offlinepackage/
+conference-machine replay not certified. Next: user tries local pilot and chooses
+refinements; broader lesson/series integration or saving/publication follows user
+direction. No required implementation/review work remains for this approvedpilot.
+
+# Current resume point — 2026-11-05 — Engine-backed Workshop frozen for independent review
+
+Implementation and Developer verification complete. Frozen52-path manifest:
+docs/checks/engine-workshop-20261105/review-target.json SHA256
+c76ab02275ccf19f15c9849bae66bbeadbd0db9d1e3d5352302b422166e5b382.
+Fresh-context read-only Reviewer /root/review_engine_workshop_20261105 is inspecting
+the exact final runtime+untracked tests/assets/evidence. DO NOT edit those targets
+until review returns. Session/contribution notes are outside frozen target.
+
+Final source: generator11830448; client506a63f8; Worker86b14771. Exact-byte Blob
+binding fixed a reproduced version/network race;62clientchecks,9Workers all
+terminated,10BlobURLs allrevoked,3forbiddenURLcases. Final actualFirefox72engine
+checks+21family/recovery checks passed0uncaughtJSerrors, using realBlobimports
+andall5families. IntentionalunavailableWorker produced1expectedconsole diagnostic.
+Original fixedgame60/embeddedpilot45 also passed0JSerrors. Generator512games/
+3072rounds/38644repairs/6144restorechecks, chemistryindependentclosure, provenance
+andpreserved-baseline facts recorded below and in REPORT.md. One intermediate
+test-navigation wait was corrected in test harness only; finalrunpassed.
+
+Next: handle Reviewer findings within approved scope, targeted verification if
+needed, final notes/report and local user preview. No commit/push/publication.
+Core54/core52 unchanged from session baseline. Known recovery remains Nov4public
+and fullcheckpoint; this new pilot is local only. Owned8055server/testFirefox9245
+remain available. Previouslycheckedupstreamf49b810 remainsunsynced(actualsync35).
+
+# Current resume point — 2026-11-05 — Approved engine-backed Workshop implemented; verification in progress
+
+User approved the concrete pilot plan (“ναι”). New opt-in Workshop
+games/name-repair.html?source=engine now uses actual core54 in isolated one-shot
+Workers and a deterministic repair factory,2sets×3questions. Structure-only
+8-alkane catalog is reproducibly extracted from existing data54; methane/propane
+SVGs exported via actual unchanged Main54 pipeline,0JSerrors. Basic/challenge
+differ in initial guidance. Session recipe/answer states survive refresh;
+versions, malformed seeds and unsolved prior questions are checked before restore.
+Original fixed game remains default; embedded lesson stays authored.
+
+Owned source targets: existing gameJS/HTML/CSS; new chemistry Worker/client,
+repair-generator,alkane-structures JSON,builder and twoSVGs. Baseline, tests,
+provenance and report in docs/checks/engine-workshop-20261105/. Two workers
+implemented adapter/generator; ChemistryValidator independently closed
+P2GEN-CHEM01(short hypothetical parents) on final generator118304488b6eaee651490785903080c419239df3f646988f79ae0e2548527611.
+Root choices now come from actual engine vocabulary, bounded toC10 and valid
+interior branch locants. Chemistry verified23forms/eightSDFgraphs and exactcatalog
+MOL provenance; final independent512games/3072rounds/6992root-value checks passed.
+
+Developer generator tests:512games/3072rounds/38644repairchecks/6144restorechecks.
+First actualFirefox engine run71checks0JSerrors; includes eight actualWorker
+names, bothcomplete sets,retry/refresh/results,zoom,320–1500px,repositoryprefix.
+Original fixedgame60checks and embeddedpilot45checks passed0JSerrors, with
+viewer-state preservation/gating/imagefailures. Revised-code browser checks and
+all5families/failure recovery tests still need final execution. Adapter follow-up
+in progress: bind Worker execution to exact measured core bytes rather than a
+second URL import, preventing cached verification from mislabeling later code;
+version Worker cache URL and verify Blob/lifecycle cleanup. No core edit needed.
+
+Next: finish bounded adapter follow-up, run final realFirefox tests, freeze exact
+paths/hashes, consolidated fresh-context independentReviewer, resolve findings,
+update records and hand user local pilot. Do NOT commit/push/publish without new
+save instruction. Owned server8055PID4102/session66368 and testFirefox9245/profile
+/tmp/namelecule-engine-pilot-20261105-ff/session11399; user server8013 was not
+running when inspected. Do not target user browsers. Browser sessions sequential.
+
+Core54/52,Main54HTML/viewer,data54,originalgameJSON,scenarioJSON,sourceMOL/SDF and
+React remain outside changes. Core54SHA3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306;
+core52d2138418ff630ab77e578b80ca8ba3a10cc1b877c3ab8c0e5c2735ffcd1f24a2.
+HEAD168e3cec/index25c21223 retained. Alreadycheckedupstreamf49b810; actualsync35
+unchanged, separate JSME-first overlap still unresolved. No publication/commit.
+
+# Current resume point — 2026-11-05 — Engine-backed alkane pilot preflight
+
+User: “ας το δοκιμάσουμε” after discussing the chemical-engine connection.
+Read-only preflight completed; concrete code-plan approval is still pending.
+Developer reused the existing in-memory JavaScriptCore harness and confirmed
+eight eligible library alkanes (five unbranched, three branched), with actual
+core54 names/components/parent/branch outputs. Explorer
+/root/quiz_engine_adapter_preflight additionally executed unmodified core54 alone
+on all23available alkane forms without data54/window/document/Jmol in naming
+scope; invariant names/classification and zero diagnostics. This is headless
+feasibility evidence, NOT an actual browser Worker or generated-game test.
+
+Proposed bounded implementation: opt-in Workshop URL ?source=engine; current
+default game and embedded checkpoint retain their existing behavior. New
+chemistry Worker/client import the unchanged core54, one-shot analysis per
+molecule to avoid shared-global/pool-index carryover; no live lesson/viewer state.
+New factory derives answers/parts from engine outputs and introduces one eligible
+fault, with shuffled sampling/choices and a reproducible attempt. Keep two sets
+and three quizzes each. Structure-only alkane catalog is reproducibly extracted
+from existing data54, with source hashes and no authored answer keys. Export
+missing methane/propane SVGs through the existing viewer, preserving source MOLs.
+Learning Designer /root/quiz_generation_learning_preflight recommends guidance
+levels: basic feature-level prompt versus neutral challenge prompt; harder branch
+faults only where graph supports them. Five straight/three branched molecules
+limit structural variety. Symmetric reversal of2,3-dimethylbutane is not an error;
+alphabetical-order fault is eligible only for the existing ethyl/dimethyl example.
+
+Planned code paths: new js/namelecule-chemistry-worker.js,
+js/namelecule-chemistry-client.js,js/namelecule-repair-generator.js;
+games/data/alkane-structures.json and reproducible tools extractor; opt-in hooks
+in existing gameJS/HTML/CSS; two missing SVG exports/provenance. Core54/core52,
+MOL/SDF/data sources, scenario JSONs, Main viewer and React are outside this plan.
+Checks after approval: independent chemical expected examples, single valid
+repair/distractors, seed/retry stability, failures/cancellation/stale requests,
+actual Firefox root/subdirectory load and full three-round runs, old game and
+embedded checkpoint regression, resize/keyboard/navigation, then one consolidated
+fresh-context Reviewer. No application implementation, browser test, commit,
+push or publication yet. Only these records changed locally. Core hashes remain
+3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306 (54) and
+d2138418ff630ab77e578b80ca8ba3a10cc1b877c3ab8c0e5c2735ffcd1f24a2 (52).
+Source HEAD168e3cec/index25c21223 retained. Upstream was already checked this
+session through f49b810; actual sync remains35d791ee. Its unresolved designer
+JSME-first overlap remains separate; no upstream merge was attempted here.
+Next: present this concrete pilot plan for approval, then implement/test/review.
+
+# Current resume point — 2026-11-05 — Professor requests engine-backed random quizzes
+
+Read-only consultation. Professor asks whether questions/correctness checks come
+from the chemistry engine and requires many random questions with configurable
+difficulty. Audited current Workshop directly and with read-only explorer
+/root/quiz_engine_audit_20261105. Current six questions (two sets of three), their
+correctValue/correctOrder/correctName, feedback and SVG assets are predefined in
+games/data/name-repair-alkanes.json. evaluateRepair in js/namelecule-game-repair.js
+compares against those authored keys; only replacement-choice display order is
+randomized. No difficulty parameter or runtime core54 naming call. Embedded
+checkpoint is also predefined and uses the same round UI/assessment helper.
+NameleculeRepairEngine is a game-state helper, not the chemical naming engine.
+Earlier engine-based asset exports do not imply runtime question generation.
+
+Proposed direction, NOT implemented or approved as a concrete code plan yet:
+retain Workshop UI and three questions per short set; derive answers/components
+from actual molecular graphs via the chemistry engine; add a separate exercise
+factory for constrained sampling, deliberate errors and difficulty; initially use
+eligible existing alkanes, later consider new-molecule generation separately.
+Need isolation from the stateful viewer/lesson engine, stable retry/replay and
+independently checked chemistry examples before enabling generated checkpoints.
+Next: explain current behavior honestly to user/professor, then investigate and
+obtain approval of a bounded implementation plan if the user proceeds.
+
+Session-start upstream read succeeded: last actual sync35d791ee versus latest
+checked f49b810c93ec85d06163679aff4a8642ea1b4cd3, four new commits/ten paths;
+CHANGELOG changed. Commits aa6d250 (drawing defaults/guarded Enter),2cbfd88 (docs),
+ab590dc (validated skeletal ladder/async depict/canonical SMILES),f49b810 (docs).
+Read actual CHANGELOG diff: auto-linearize, Linearize naming, canonical SMILES,
+HOOC/ether linearization, explicit-H condensed stripping, variable MOL counts-line
+and asynchronous depiction polling. Overlap with our core54/viewer54 changes;
+teacher now prefers JSME-first, while local reviewed code uses builtin-first.
+This is an unresolved behavioral overlap requiring a specific preservation/merge
+plan; no upstream synchronization was performed in this read-only question task.
+Last checked=f49b810; last actually synchronized=35d791ee.
+
+Only session/contribution records changed. No application/core/data/MOL/React
+changes, runtime tests, stage, commit, push or publication. Core54 remains
+3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306;
+core52 remains d2138418ff630ab77e578b80ca8ba3a10cc1b877c3ab8c0e5c2735ffcd1f24a2.
+Active HEAD168e3cec/index25c21223 retained; prior dirty work is pre-existing.
+Yesterday's verified recovery/publication remains recorded below and in receipts.
+
+# Current resume point — 2026-11-04 — Full save and professor delivery completed
+
+User request completed: latest professor35 integrated first, then consolidated
+report, personal publication and full backups. Public runtime commit
+ddc3c80ce643b11a9089012fd312d9853ae1d85b; final documentary commit19b58f200deb4358e6cc556e47bf7a78459e4d9a.
+Report: https://yanisken9.github.io/organic-nomenclature-3/docs/professor-20261104/update.html
+Welcome: https://yanisken9.github.io/organic-nomenclature-3/design/welcome-proposal.html?v=release-20261104
+Ready-to-forward text/links are beside the report and in both external folders.
+No message sent to professor; user forwards the links.
+
+Known recovery snapshots: verified-base ac348f5fd6b8ac3ee5305637ce26308415ba5af3
+(3868 files), and final59af0e8f6ae24a1991c4cbec0388a2b7cd9facbc (3878 files). Both ZIP cutoffs
+are immutable. Every source-file SHA and ZIP CRC, Git bundles and recovery ZIPs
+were verified; copies in both established destinations were verified, including
+14 active JSONs/337steps, separate21step pilot and10launcher files. Final folder:
+Αποθηκεύσεις/2026-11-04-143518 and Desktop/αρχεία  json/Namelecule_04-11-2026.
+Earlier backups retained. Final notes are separate post-snapshot bookkeeping;
+its actual commit/ref and refreshed bundle hashes are recorded in the final
+save-state receipts, avoiding self-referencing commit claims. The ZIP remains
+exactly its captured snapshot. Latest notes/bundle are also copied externally.
+
+Public221 exact HTTP hashes plus final24 critical/documentary and3immutable
+evidence links passed. Actual public Main11/React8 functional checks completed;
+strict clean-console scripts exit1 on10/2known cookie/JmolTracker diagnostics,
+all matching prior-release families. Prefix checks11/8 had0JSerrors. Final source
+checks include1084naming/844unchanged,422forms (421supported+1old[H]skip),228accept,
+25ordinary authoring,22geometry browser,45pilot and60sets. Full14lesson/337step
+replay completed9780functional assertions before final generator correction,
+with4knownCIRerrors/rawexit1. These are distinct runs; no clean-console guarantee.
+
+Independent core Reviewer closed U35-NUM02/GEOM01; publication Reviewer closed
+PUB-DOC01/PUB-LINK02/PUB-DOC03. Reviewer independently checked the verified-base
+archives/external hashes; final generation uses the same reviewed helper with
+Developer verification. ChemistryValidator checked ten final source forms.
+All39publicReact files/old52 preserved without rebuild; fullcheckpoint preserves
+local React WIP. Source active HEAD168e3cec/index25c21223 preserved. Owned Firefox
+and prefix server stopped; user Firefox/server8013 not targeted.
+
+CORE REPORT: js/mulermoc-nom-core-54.js DID change in this session/report period:
+professor35/C11–20 tables, numeric locants, safe linearC9–20 groups, common
+whole-side skeletal angle/branch-vector correction, retaining local charge/
+isotope/map fixes. Final SHA2563f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306. Committed/published in runtime
+ddc3c80ce643b11a9089012fd312d9853ae1d85b, fully checkpointed. Core52 unchanged SHA256
+d2138418ff630ab77e578b80ca8ba3a10cc1b877c3ab8c0e5c2735ffcd1f24a2. Saving/report writing added no further core change.
+
+Upstream HEAD/CHANGELOG rechecked35d791ee, latest actual sync35; CHANGELOG unchanged
+versus02. Known ENnitro multiplier/Greek/C20 conventions, unsupported[H], geometry
+scope, echo/asynchronous/external-service limits remain in report. Safari,
+physical mobile/AT, full restore, conference-machine sequence and offline package
+not certified. Next: user forwards links/tests workshop; further features follow
+user direction and a concrete approved plan. No required save work remains once
+final receipt/remote-ref verification below completes.
+
+# Current resume point — 2026-11-04 — Final public report verified; final full snapshot next
+
+The consolidated report is public at commit 19b58f200deb4358e6cc556e47bf7a78459e4d9a.
+Runtime commit remains ddc3c80ce643b11a9089012fd312d9853ae1d85b; no application code changed
+in the documentary update. Final24 critical/documentary HTTP hashes and3immutable
+checkpoint evidence links passed, supplementing the initial221public hashes.
+Actual public Main11/React8 functional checks completed;10/2known cookie/tracker
+diagnostics remain, strict exit1 disclosed. No clean-console or offline claim.
+Independent publication Reviewer closed PUB-DOC01, PUB-LINK02 and PUB-DOC03;
+final documentary manifest98a181548b7a1c82a69afc9574b7c7d261dd40ea1a0edae3e5718495984b6840.
+
+Verified-base full snapshotac348f5fd6b8ac3ee5305637ce26308415ba5af3/3868files,
+ZIP every-fileSHA/CRC,bundle,recovery andtwoexternalcopies are complete andremote
+checkpoint branch verified. Final report truthfully cites that first immutable
+recovery point; additional final snapshot now follows to include completed report.
+Next run save-helper generation final, then push final checkpoint/bookkeeping,
+create separate latest-notes bundle and refresh exact external receipts. Preserve
+immutable ZIP cutoff and existing backups. No current-final-generation completion
+claim yet; first verified-base save is genuinely complete.
+
+Core54 changed in this report/session period:3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306,
+published and independently checked. Core52d2138418ff630ab77e578b80ca8ba3a10cc1b877c3ab8c0e5c2735ffcd1f24a2
+unchanged. Source HEAD168e3cec/index25c21223 preserved; source branch remains
+react-library-pilot. Full checkpoint preserves local React WIP; public39Reactfiles
+and old52 unchanged. Owned test processes stopped; user Firefox/8013 untouched.
+Report https://yanisken9.github.io/organic-nomenclature-3/docs/professor-20261104/update.html
+Welcome https://yanisken9.github.io/organic-nomenclature-3/design/welcome-proposal.html?v=release-20261104
+No message sent to professor. User will forward the two links and supplied text.
+
+# Current resume point — 2026-11-04 — Public runtime verified; first complete backup next
+
+The reviewed Main54/workshop/pilot/report candidate was committed and published as
+ddc3c80ce643b11a9089012fd312d9853ae1d85b, tag namelecule-20261104-runtime, on personal
+thesis-work. All221 public HTTP/exact-SHA checks passed. Actual public Firefox
+completed Main11 and React8 functional checks; strict scripts exit1 on10/2 browser
+cookie/JmolTracker diagnostics. Every diagnostic matches a family in prior public
+release; no clean-console claim or suppression fix. Source/candidate Main11 and
+React8 had0JS errors. Publication Reviewer closed P3PUB-DOC01 by explicitly scoping
+unchanged embedded data to latest35/generator unit. Final curated manifest018f0dc6.
+
+Full save/report request still active. Runtime/site are verified, but no current
+full checkpoint/ZIP/bundle/external-copy completion yet. Next execute approved
+save-helper generation verified-base; only after real backup exists update report
+metadata with actual evidence, targeted documentary review/publication, then final
+full generation including completed report and separate final bookkeeping.
+Source active HEAD168e3cec/index25c21223 remain unchanged. Core54changed in report
+period and is published hash3f9382...; core52d213... unchanged. Exact full hashes and
+prior checks in v54-upstream REPORT/review-report and checkpoint state.
+
+Owned isolated Firefox40585 and prefix server8054 stopped after identity checks;
+user Firefox/server8013 not targeted. No more app changes planned. Preserve old
+backups, all39publicReact files/old52, and complete localReact WIP in full checkpoint.
+
+# Current resume point — 2026-11-04 — Upstream35 fully reviewed locally; publication/save next
+
+User saveeverything/report/publiclinks request still active. Approved latest35
+integration completed, fresh Reviewer /root/review_upstream54_35 closedP2 NUM02/
+GEOM01 after independent1084naming/844unchanged,228acceptance,422sourcegeometry
+(421pass/oneoldliteral[H]skip), mechanical2309length/2218angle/1922orientation.
+Core54final3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306;
+core52d213unchanged;1110protectedruntimehashesmatch; sixruntime correctionmanifest
+5c3e101a... frozen andunchanged. Actualsyncnow35d791ee; unchangedCHANGELOG1commit6paths
+vs02dbcfaf. Core54 DID CHANGE thisintegration/reportperiod, old52unchanged.
+
+FinalFirefox25ordinaryauthoring+22isolatedgeometry+45pilot+60sets checksPASS0JS;
+manualSave9checks/12612charspayload proven. Earlierfull14/337/9780functionalreplay
+passedwith4knownCIRexceptions/rawexit1, beforefinalgenerator; limitsretained.
+ChemistryValidatorindependent10forms38length/25angle/21orientationpassed. Report
+in checks/v54-upstream-20261104/REPORT.md + review-report.md. ENnitromultiplier,
+longGreekorthography, C20CASvsPIN and external/browser/conferencelimitsdisclosed.
+
+No newcommit/push/publication/fullsaveyet. SourceHEAD168e3cec/index25c21223 retained.
+Savejobstate communication/checkpoints/save-publish-20261104-state.json nowsets
+syncReviewComplete/runtimehashgates accurately. Two disposableclones exist; helper
+assemblyprepare14isolatedtests, fullsavehelper19tests. Professor5filesfinalizing
+localverifiedcandidate (public/savepending). Nextfreeze/assemblecuratedclone,
+localprefixMain/Reactchecks,freshindependentpublicationreview,thencommit/push/live
+exactHTTP/browserchecks andfinalreportmetadata,thenfullsnapshotZIP/bundle/two
+externalcopies+remotecheckpoint/bookkeepingreceipts. OwnFirefox40585/9244, preserve
+userFirefox/server8013. Old52 and39publicReactpaths mustremainexact; fullcheckpoint
+captureslocalReactWIP. Needfinalexplicitcore54professorforwardmessageand2links.
+
+# Current resume point — 2026-11-04 — Approved common skeletal generator repair
+
+Original full save/report/publication request remains unfinished; no new commit,
+push or publication yet. Fresh Reviewer /root/review_upstream54_35 completed initial
+review with two P2: U35-NUM02 three remaining functional locant sorts (10,2), and
+U35-GEOM01 builtin-first exposing flattened degree-two ether side chains. User
+explicitly approved shared core54 generator repair (call329cc39...): all422source
+forms, whole separable-side rotations, graph/length preservation, sp linear,
+stored MOL/SDF and old52 unchanged. Worker /root/upstream54_drawing_merge owns
+fZigzagMol only + geometry evidence; root owns3numeric sorts/tests elsewhere;
+ChemistryValidator read-only targeted geometry. Final independent recheck needed.
+
+Numeric diol failure reproduced;3comparators fixed; newdiol/hydroxyacid/nitro tests
+running. Newcase exposes inherited ENnitro multiplier omission, disclosed, not
+silently fixed outside scope. Manual Save actualFirefox9checks nowPASS0exceptions:
+prior pointer had no onclick delivery during220ms settings animation; waitingfor
+settlement solves diagnostic (no appcodechange). Pilot replayrunning session8032.
+Full legacy replay14/337/9780 alreadycomplete0functionalfailures+4knownCIRerrors.
+Savehelper prepared19tests;publicationassemblyscriptbeingprepared, noexecution.
+ActiveHEAD168e3cec/index25c21223 retained; ownFirefox40585/9244, preserveuser8013.
+Core54 changed thisintegration/reportperiod;core52unchanged. Nextfinalgeometry/
+numeric/browserevidence→targetedreview→report→curatedpublicrelease/livecheck→
+fullcheckpoint ZIP/bundle/twoexternalcopies/receipts. No completed-save claim.
+
+# Current resume point — 2026-11-04 — Upstream35 integrated; source frozen for independent review
+
+Originalauthorizedgoal remains fullsaveeverywhere+professorreport/publiclink.
+Userthenrequestedlatestprofessor35syncfirst, approvedsumgate/numericfixes and
+C9–20linearalkylshape/unsupportedmarker expansion. Sixruntimefilesimplemented;
+core54finalc619d99a2804f09ecaf7acc7c4c6dd3de09045485414db4163b7f7d95259e95e,
+ENaee2846c...,viewer61b64083.... C9preserved, teacherDrawingdefaultON. Core52/
+1110protectedruntime/React/MOL/scenarios unchanged. Userapprecordcount141,14active
+lessons337steps andseparate21steppilot. SourceHEAD168e3cec/index25c21223 retained.
+
+FreshreadonlyReviewer /root/review_upstream54_35 reviewingfrozen6targets in
+checks/v54-upstream-20261104/review-manifest.json SHAa54b5f60... . No sourceedits
+untilreport. Developer1077naming(844existingunchanged/88newcases),188drawing+
+27preservation;domain1077+10+8independentcheckscloseNUM01/ENETHER01. GreekP3
+conventions/C20CASandpre-existingGreekpolyconnector disclosed. Drawingechoone
+exactmappercorrespondence has symmetricreorderlimit;no universalguarantee.
+
+ActualFirefox14lessons337steps9780assertions+14actual3Dmodelscomplete,0functional
+failure;4oldCIRexceptionsidenticalprior→rawexit1/no cleanconsoleclaim. Authoring
+23functionalchecks passed real11Ccreation/3forms/Update/No3D/stale/fork;rawdriver
+failures retained:portraitrotateoverlay/native.disabledassumption/wholeobject
+snapshot and9expectedcoldmethanePubChemcachefields(iupacSourceallowlistomission).
+SourceMOLsunchanged; exactcacheclassificationrecorded. Separatemanualsavebrowser
+session51305running; laterpilot/gamechecksneeded. OwnFirefox40585/9244profile
+/tmp/namelecule-upstream54-20261104-ff, userFirefox/server8013 preserved.
+
+Savejobstamp20261104-143518 in communication/checkpoints/save-publish-20261104-state.json.
+TwoDISPOSABLEclonesready(publicbase74a9e3ea/fullbaseb4e7c67e),no commit/push/publication.
+Ownedhelpersaveprepared19isolatedtests, notexecuted; gates syncReview/publicLive
+mustpassfirst. Professor5filedraftpausedforfinalfacts, allpendingexplicit. Curated
+assemblyplan712paths50.8MiB preservesall39publicReactpaths andold52. Nextfinish
+browserevidence/review,reportfinalfacts,curatedpublicationreview+livechecks,then
+checkpoint/ZIP/bundle/2externalcopies+receipts. No saved/publishedcompletionclaim.
+
+# Current resume point — 2026-11-04 — Upstream35 sync approved before full save/report
+
+Original user request remains: saveeverythingeverywhere, professorreport/link.
+Then user explicitly asked integrate latestprofessor35NOWbeforefinalsave. Routine
+sync authorized; user approved extra sum-gate/numeric-locant corrections via
+19bfc324... «Ναι, με τις απαραίτητες διορθώσεις». Separate latest question pending:
+longalkylC9–20completegroups/shapeguards, beyondthetwoapprovedfixes. No dependent
+longalkylimplementation untilanswer. Reportwriter paused; no publication yet.
+
+Baseline sixactualbeforefiles, fullupstream02/35rawsources/CHANGELOG/currentHEAD
+retrieved in checks/v54-upstream-20261104/. HEAD35d791ee reconfirmed, CHANGELOGequal,
+actualsyncremains02untilchecksclosed. ThreewayconflictsC9/EN/htmlcache resolved
+withlocalC9εννε andvendor/game/checkpointcustomizations preserved. Rootedited
+CSS/core/iupac/EN/html: C11–20tables,2numericlocantsorts,completeENgroupmapping,
+drawingmasterdefaulton/cacheURLs. Reviewer-required afterfinallogicalunit.
+
+Worker /root/upstream54_drawing_merge owns molview54 anddrawing/evidence, applying
+deterministic-first+perrung graph/geometryvalidation/finallyrestoration withno
+centroid-sum gate;180inmemorychecksreportedpassing, source freeze pending.
+Rootnewnamingtest running session26552. OwnedheadlessFirefox40585/profile
+/tmp/namelecule-upstream54-20261104-ff/9244, userFirefox/server8013 retained.
+1110protectedruntimehashes recorded. No commits/stage/push/publication yet;
+activeHEAD168e3cec/index25c21223 preserved. Core54changedTHISunit(table/numerics),
+core52unchanged. Next: resolvependinglonggroupapproval, tests/browser/scenario/
+independentreview, THEN report/fullcheckpoint/ZIP/bundle/externalcopies/publish.
+
+# Current resume point — 2026-11-04 — Two alkane sets complete and reviewed locally
+
+User instruction to implement now completed: workshopAlkanes→twochoices, without/
+withbranches→exact3quizzes each/no rehearsal/progress1–3. Sixquestions with short
+neutral prompts and explanations aftercorrectcheck; isolatedfreshstate/results,
+returnconfirm/cancelpreservation. Linear butane-root/ethane-bond/pentane-root;
+branched locant/multiplicity/alphabetical. Parent-not-total staysembeddedpilot.
+
+Sixruntimepaths+2newSVG/provenance in checks/alkane-two-sets-20261104/REPORT.md.
+Actualbeforecopies/baseline preserved for recovery; hugepre-existingdirtytree
+notreverted. Core52/core54/data54/viewer54/scenario/controller/pilotJSON/oldassets/
+React unchanged THISunit. Earliercore54integration separate. HEAD168e3cec/index
+unchanged; no stage/commit/push/publication. Files savedlocally only.
+
+Developer143engine+60mount+85hub+32static andactualFirefox60sets+45embedded PASS,
+zeroJSexceptions. TwoSVG nominal22px/full-labelframe,6keyboardanswers,320…1500
+pickerwidths/mobiletouch,9servedexactbytes. ChemistryValidator finalgraphs/6names/
+SVG-MOL/provenance noactionablefindings; LearningDesigner preflight supports
+sequence, not effectivenessproof. Fresh readonlyReviewer /root/review_alkane_two_sets
+noactionableP0–P3, independently reran143+60+85+32withoutwrites andverified10target/
+50evidence hashes, source/schema/SVG-MOL. Browser suppliedbyDeveloper, notindependent.
+Frozenmanifest1b0459c5... unchanged afterreview; review-report.md/final-manifest.json
+holdverdict/limits. ExistingEscape/programmatic-focus issue notfixed; supported
+actualpointer+focusedEscape passed. No Safari/physicaltouch/AT/conferencemachine/
+offlinecertification orfull337repeat on unchangedengine.
+
+OwnedFirefox39158/profile/9244 stopped/removed; userFirefox/server8013 retained.
+OSnormalFirefoxopen returned0 for games/name-repair.html?v=alkane-two-sets-20261104-r1.
+Next:user inspects two sets and directs refinements, later otherhomologousseries.
+Newupstream35d791ee checked12:01:29Z, onecommit6paths, unchangedCHANGELOG;
+actualsyncremains02dbcfaf. Drawing/core C11–C20 update pending separately scoped
+sync with localC9Greekstem preserved; user already informed. No remainingapproved
+implementation in this boundedgamesunit.
+
+# Current resume point — 2026-11-04 — Two alkane sets implemented; frozen independent review
+
+User implementation-now direction has been executed: Alkanes family card→two
+choices (without/with branches), exactly3quizzes each, no rehearsal. Sixquestions
+and separate fresh progress/results implemented in6runtimepaths plus2Main54SVG
+exports/provenance. Existing embedded parent-not-total preserved. No core52/54,
+viewer54/data54/scenario/controller/pilot/React changes THISunit; earliercore54
+integration separate. No stage/commit/push/publication, HEAD168e3cec/indexunchanged.
+
+Developer143engine+60mount+85hub+32static PASS. ActualFirefox60sets+45embedded
+PASS0JSexceptions,320…1500pickerwidths,6keyboardanswers andmobiletouch, sourceSVG
+font/frame audit;9servedpathsHTTP200/exactbytes. Read-only ChemistryValidator
+verified final6names/choices/SVG-MOLgraphs/provenance with noactionablefindings;
+LearningDesigner preflight supported sequence, not effectivenessproof.
+
+Fresh Reviewer /root/review_alkane_two_sets inspecting frozen10targets/50evidence
+in checks/alkane-two-sets-20261104/review-manifest.json SHA1b0459c5... . No edits
+to target/evidence while review. ExistingEscape/programmatic-focus condition and
+external-service/browserlimits preserved in REPORT. Next: verdict/corrections,
+records, ownFirefox39158/9244 cleanup and normalFirefox preview. UserFirefox/
+server8013 preserved. New upstream35d791ee checked12:01:29Z, onecommit6paths,
+CHANGELOGunchanged; actualsyncstill02dbcfaf. Drawing/core C11–C20 changes pending
+separate scoped sync, preserve C9Greek stem; user already informed.
+
+# Current resume point — 2026-11-04 — Implementing two alkane sets now, three quizzes each
+
+User explicitly clarified implementation-now («δεν θα το κάνεις τώρα;») after
+instructing two sets and3quizzes per set. Root is implementing, not leaving this
+as design notes. Concrete scope stated before code: oneAlkanes card→two set
+choices→exact3questions each. No rehearshal. Linear butane-root/ethane-singlebond/
+pentane-root; branched number-from-nearest/two-methyl-groups/alphabetical-branches.
+Parent-not-total retained in embeddedpilot only. Short neutral prompts and
+correct-answer explanations; no engine accent changes. LD/ChemistryValidator
+read-only findings support the material (correct graphs/provenance, no newMOLs).
+
+Baseline/beforecopies in checks/alkane-two-sets-20261104/. Root owns CSS/HTML,
+newethane/pentaneSVGexports+provenance, browser/notes; reused Developer
+/root/checkpoint_repair_component owns gameJS/JSON/schema2sets and unit tests.
+OtherMain/core/viewer/data/scenario/pilot/React files protected. Next: export2
+existingMain54drawings, implement/test sixquiz journeys and set isolation,
+independent fresh Reviewer, finalrecords/openexternalFirefox. No commit/push/
+publication. Current-task core changes NONE. UserFirefox/server8013 retained.
+
+# Current resume point — 2026-11-04 — Alkane sets: three quizzes each, design decision
+
+User direction after the completed workshop hub: separate alkanes into two sets,
+one without branches and one with branches. Each set must contain exactly three
+short quizzes to limit fatigue (six quizzes across the two sets). The current
+reviewed hub still has one Alkanes card and four branched missions; the new split
+and count are design decisions, not implemented changes. Exact question selection
+and any replacement/addition remain to be planned against existing material.
+Preserve short repair interaction and explanation after a correct submission,
+with theory checkpoints selecting an appropriate taught topic. Next: concrete
+bounded implementation plan for the two three-quiz sets, then approval per AGENTS.
+This update records decisions only; no application/core change, tests, commit,
+push or publication. Completed verified hub/recovery details remain below.
+
+# Current resume point — 2026-11-04 — Workshop hub/Alkanes card complete, reviewed locally
+
+Approved b08e3395296b4ddf89d19d98dd901c72 complete: existing workshop URL now
+welcome with original3Dlogo and one activeAlkanes4mission card. Π removed; direct
+firstchallenge, progress1–4, reset/return with confirmation, Cancel keepsanswers;
+resultsreturn and mainExit work. Latest user correction applied: visible header
+«ΜΙΚΡΕΣ ΑΠΟΣΤΟΛΕΣ ΟΝΟΜΑΤΟΛΟΓΙΑΣ». Other sets await later user direction.
+
+Six changed runtime paths: gameJS/JSON/CSS, gameHTML(cache/description/header),
+Main54HTML(sharedJS cache only), mainwelcome(entrywording/query). Exact4question
+bytes/content/feedback/assets and embeddedquestion unchanged. No core52/54,
+viewer/scenario/controller/pilotJSON/React changes in this unit. Earlier core54
+integration is separately recorded below. No stage/commit/push/publication;
+HEAD168e3cec/index unchanged. Baseline/beforecopies/final hashes in
+checks/workshop-hub-20261104/. Upstream actually rechecked11:37:40Z at actual
+synced02dbcfaf79e2, no new commits/CHANGELOG.
+
+Fresh readonly Reviewer /root/review_workshop_hub: no actionableP0/P1/P2/P3;
+independently verified7targets/42evidence hashes and74engine+60mount+40hub JSCore
+assertions, exactJSON/sharedAPI/core/index boundaries. Supplied DeveloperFirefox
+53hub+45embedded+4header checks PASS0JSexceptions; desktop/mobile screenshots
+inspected. No independent browser execution. Target manifestd711308d... retained;
+postreview only factual docs/cleanup evidence, sixruntime hashes unchanged.
+Full337not repeated because core/viewer/scenario unchanged; sharedembedded direct
+checks covered. Escape-afterhistory with programmaticfocus failed once, as before
+hub; realpointer+focusedEscape passes/capturedkey. Exactoriginalfocusroute unresolved;
+no rootcausefix or universalkeyboard claim. Safari/physicaltouch/AT not tested.
+
+Root-only Firefox38292/profile/tmp/namelecule-workshop-hub-20261104-ff/9244 stopped,
+port closed/profile removed. UserFirefox/server8013 preserved. NormalFirefox open
+command returned0 for games/name-repair.html?v=workshop-hub-20261104-r1.
+Sixserved filesHTTP200/exactbytes. Report/review/limits in taskREPORT.md and
+review-report.md. No conference/offline readiness claim. Next:user inspects hub,
+directs refinements/other sets; investigate inherited focus limitation separately
+under a specific plan if needed. No remaining approved implementation.
+
+# Current resume point — 2026-11-04 — Workshop hub complete locally; independent review running
+
+Approved b08e3395296b4ddf89d19d98dd901c72 implemented: generic workshop welcome,
+one Alkanes4mission card, actual Π removal, direct first challenge/progress1–4,
+confirmed reset/return and preserved cancel. Latest user steering «ονοματολογίας
+αντί για χημείας» applied to visible header before independent review.
+
+Sixruntime+REPORT frozen in checks/workshop-hub-20261104/review-manifest.json,
+SHAd711308d...7targets/42evidence. Fresh readonly Reviewer /root/review_workshop_hub
+active; no target edits until report. Root CSS/HTML; worker JS/JSON stopped.
+Developer74engine+60mount+40hub DOMdouble, actualFirefox53hub+45embedded+4header
+all pass0JSerrors. Full45passed after actualpointer navigation before Escape;
+raw earlier Escape/programmatic-focus failure preserved, exactfocusroute unknown,
+no apppatch/rootcauseclaim. Real captured Escape targetscExit/hasFocus true.
+Desktop/mobile pictures inspected,320…1500 widths and one simulatedtouch repair.
+No full337repeat: core/viewer/scenario/controller/pilotdata unchanged; direct
+sharedcomponent/embedded paths covered. Remaining4question objects byte/content
+identical to original; core52/54, React/otherlessons/assets preserved.
+
+HEAD168e3cec/index unchanged, no stage/commit/push/publication. Upstream actual
+HEAD/history/CHANGELOGchecked11:37:40Zstillactualsynced02dbcfaf,nochanges. Root-owned
+Firefox38292/profile/tmp/namelecule-workshop-hub-20261104-ff/9244 still active,
+normalFirefox/server8013 preserved. Next: independent verdict/corrections if any,
+final records/ownedbrowsercleanup, open updatedworkshop in normalFirefox.
+
+# Current resume point — 2026-11-04 — Workshop hub implemented, final checks/review pending
+
+Approved b08e3395296b4ddf89d19d98dd901c72 implemented in six runtime paths:
+game JS/JSON/CSS, game HTML cache/description, Main54 HTML shared JS cache only,
+main welcome entry wording/query. Existing workshop route now generic3Dlogo hub
+with one Alkanes card; four exact authored challenge objects remain, Π removed,
+progress1–4. Card starts first actual mission; session/results return resets set;
+in-progress Cancel preserves answers, Confirm resets. Existing main header Exit.
+No new route/history architecture or other-series content.
+
+Root CSS/HTML; Developer /root/checkpoint_repair_component JS/JSON frozen at
+576d299a.../d688a90e.... Worker74engine+60mount+40hub DOM-double checks pass.
+Root actualFirefox53hub/game checks pass0JS exceptions, including full4round
+keyboard journey, wrongretry score4/5, reset/cancel/confirm, 1500…320px,390touch,
+missingSVG/retry/Exit. Desktop/mobile images visually inspected. Embedded pilot
+replay44checks passes; last Escape-after-history focus is being diagnosed using
+actualpointer/key event capture. Same sensitivity exists in prior pilot evidence.
+Do not call full45replay passing until measured. No app fix claimed for testdriver
+anchor-disabled normalization; raw failure preserved.
+
+Baseline/recovery docs/checks/workshop-hub-20261104/; core52/54 and embedded JSON/
+controller/scenario hashes unchanged. Actual upstreamHEAD/history/CHANGELOG
+checked11:37:40Z unchanged from actualsynced02dbcfaf79e2. No stage/commit/push/
+publication. User Firefox/server8013 retained. Root-owned Firefox38292/profile
+/tmp/namelecule-workshop-hub-20261104-ff/9244 active; clean only this process later.
+Next: finish keyboard diagnosis and frozen-target fresh independent Reviewer,
+then final notes/core-unchanged report and open updated workshop in Firefox.
+
+# Current resume point — 2026-11-04 — Workshop welcome/card approved, implementation starting
+
+User approved b08e3395296b4ddf89d19d98dd901c72: convert existing standalone
+workshop entrance into welcome with first «Αλκάνια —4αποστολές» card, remove Π,
+start directly at first challenge, consistent hub return/restart with confirmation
+for in-progress work. Exact4challenge content/feedback/assets and embedded theory
+pilot preserved. Six approved runtime paths: game JS/JSON/CSS, game HTML cache/
+description, Main54 HTML shared JS cache, main welcome wording/cache. No core,
+new chemistry, other-series expansion, commit/push/publication authorized.
+
+Read-only root/explorer preflight completed; existing Learning Designer analysis
+confirms first challenge self-contained. Baseline and recovery copies recorded in
+checks/workshop-hub-20261104/. Prior rehearsal-only plan was not implemented;
+this approval consolidates hub + removal. Root owns styles/HTML/browser/records;
+shared JS/JSON to bounded Developer. Next: implement, focused4round/restart/return/
+mobile/embedded checks, fresh read-only independent Reviewer, final notes/link.
+
+# Current resume point — 2026-11-04 — Remove standalone rehearsal: plan approval pending
+
+User asks removal of guided Π/rehearsal from Συνεργείο ονομάτων. Read-only trace
+found game validation currently requires5rounds/firstguided; removing only the
+JSON entry would break loading. Proposed: remove guided-parent, preserve exact
+four challenge objects; adapt standalone validation, intro badge/progress1–4,
+results note; refresh engine URLs in game/Main54 HTML. Verify all4rounds/retry/
+restart/scoring/mobile and embedded theory checkpoint unchanged. Await explicit
+plan answer in current async request; no application changes yet.
+
+Learning Designer /root/remove_rehearsal_learning read-only confirms first
+remaining parent-not-total self-contained; subsequent same-structure wording still
+valid. No new chemical rules/graphs. Baseline/recovery copies in
+checks/game-remove-rehearsal-20261104/{baseline.json,before/}; core52/54 recorded.
+Actual upstreamHEAD/history/CHANGELOG rechecked2026-11-04T11:30:00Z: still actual
+synchronized02dbcfaf79e2, no newcommits/changelog. No implementation/tests/core
+changes, commit/push/publication in this planning turn. Next: after plan approval,
+bounded implementation/checks and one independent fresh Reviewer.
+
+# Current resume point — 2026-11-04 — Alkane checkpoint pilot complete locally, reviewed
+
+Approved call c6ffd89529a54e47849aa0b933c9435e completed. Isolated21-step lesson
+scenarios/alkanes-name-repair-pilot.scenario.json adds exact parent-not-total
+question after step10. In-lesson dialog, unlimited retries/return, submitted
+correct answer/explanation + explicit Continue, content-scoped same-tab refresh
+progress. Go/Present/keyboard/hash/history gated; metadata kept in real Update,
+Blob export/FileReader import. Mandatory checkpoint JSONv2; normal exportsv1,
+v52 refusesv2. Original14lessonJSONs and library destination/standalone5roundgame/
+v52/React/MOLs/game data/assets preserved. No expansion to other series.
+
+Fresh read-only Reviewer /root/review_alkane_checkpoint found no actionable
+P0/P1/P2/P3. Independently verified9target+80evidence hashes, protected629baseline,
+87+59+55+15in-memory checks, syntax/diff/flow/diagnostics; browser evidence supplied
+by Developer, not independently rerun. Review manifest2da60157..., report in
+checks/alkane-checkpoint-pilot-20261104/review-report.md. Final documentation and
+owned-browser cleanup updated afterward;8runtime hashes unchanged. No further
+runtime edits. Browser-found zoomEscape/landscape h1 issues fixed and verified.
+
+Developer:87engine,59DOMdouble,149schema,55contractdouble,15realmoduleinmemory;
+actualFirefox45pilot+30standalone+7portrait/authoring+4finalCSS. Legacy14lessons/
+337steps/9780assertions0functional failures,14actual3Dmodels and cold paintedcanvas.
+Raw replay exit1 due4knownexternalCIR/CORS404; every diagnostic text already in
+pre-pilot v54. Limits and test-driver corrections preserved, see full task report
+ALKANE-CHECKPOINT-PILOT-20261104.md. Safari/physicaltouch/AT not tested; no
+conference/offline readiness claim. Existing external dependencies retained.
+
+Current-task core changes: NONE (core52d2138418...,core5473e28373... unchanged).
+Earlier Main54 core integration is separately recorded below. HEAD168e3cec/index
+unchanged, no stage/commit/push/publication. Upstream checked at synchronized
+02dbcfaf79e2 on2026-11-04T10:34:27Z, no newer commits/changelog. Task629hashbaseline,
+beforecopies and final manifest preserve review/recovery evidence.
+Owned Firefox36737/9244 and36989/9245 stopped, ports closed/profiles removed;
+normalFirefox/server8013 preserved. Next: user tries local pilot (direct#step10
+available in task report), directs refinements one by one, then later transfer
+agreed pattern to other series. No additional implementation pending.
+
+# Current resume point — 2026-11-04 — Alkane checkpoint pilot implemented; independent review running
+
+Approved call c6ffd89529a54e47849aa0b933c9435e: isolated theory/game pilot after
+alkane step 10, exact existing parent-not-total question, unlimited retries,
+return to theory, correct submitted solution/explanation and explicit Continue.
+Original 14 lessons/standalone five-round game/v52/React/MOLs remain available.
+New pilot JSON is not substituted into the main library. Same-tab refresh uses
+content-scoped sessionStorage; Go/Present/hash/history/keyboard gated. v2 required
+for mandatory checkpoints; ordinary scenario/export remains v1; v52 rejects v2.
+
+Implementation complete; 9 source/report paths frozen in
+checks/alkane-checkpoint-pilot-20261104/review-manifest.json. Fresh read-only
+Reviewer /root/review_alkane_checkpoint is running. Do not edit frozen targets
+until its report. Developers /root/checkpoint_repair_component and
+/root/checkpoint_scenario_integration stopped editing. Root implemented controller,
+scoped dialog CSS, pilot JSON and includes. Known browser integration issues
+(zoom Escape closed whole quiz; Main landscape rule hid mission h1) fixed and
+retested with real input. No final independent verdict yet.
+
+Developer checks: 87 engine +59 DOM-double component; 149 legacy schema;
+55 integration contract-double +15 real-module in-memory checks. Firefox pilot45,
+standalone30, portrait/real Update/Export/Import7 and final landscape4 pass with
+0 app exceptions. Separate legacy Developer replay:14lessons/337steps/9780checks,
+0 functional failures,14 actual final3D source/atom checks plus cold painted canvas.
+Raw legacy harness exit1 retains4 existing external CIR/CORS404 logs; every
+warning/error text matched pre-pilot evidence. Details in legacy/REPORT.md.
+Test-driver corrections and raw failed runs retained; not app regressions.
+
+Baseline629 protected hashes, HEAD168e3cec01f941a84d40bbe0dc07156e7baa35d0/index
+unchanged. All protected originals except intended4app files +journals unchanged;
+core52/54, original14JSONs/game data/assets/MOLs/React unchanged. Upstream checked
+2026-11-04T10:34:27Z at synchronized02dbcfaf79e2, no newer commits/changelog.
+No stage/commit/push/publication. Current-task core changes: NONE; earlier Main54
+integration is separately recorded below. Report ALKANE-CHECKPOINT-PILOT-20261104.md.
+Root-owned Firefox36737/profile/tmp/namelecule-checkpoint-20261104-ff/port9244
+still running; must clean up only it. Legacy Firefox36989/9245 already stopped.
+User Firefox/server8013 preserved. Next: resolve Reviewer findings, target-check,
+finalize records and provide local pilot link. Safari/physical touch/AT not tested;
+no conference or offline readiness claim.
+
+# Current resume point — 2026-11-04 — Approved alkane checkpoint pilot in progress
+
+User approved plan c6ffd89529a54e47849aa0b933c9435e: isolated pilot after alkane
+step 10, reusing parent-not-total inside the lesson. Unlimited retries, return to
+theory, correct submitted repair plus explanation and explicit Continue; gate
+keyboard/hash/URL paths and retain progress on same-tab refresh. Original lesson,
+five-round game, v52/React remain available. No commit/push/publication authorized.
+
+Baseline: checks/alkane-checkpoint-pilot-20261104/baseline.json, 629 protected
+paths, HEAD 168e3cec01f941a84d40bbe0dc07156e7baa35d0. Upstream already rechecked
+2026-11-04T10:34:27Z, no new commits since actual synchronized 02dbcfaf79e2.
+Root owns new checkpoint controller/CSS/pilot JSON and Main54 includes; developer
+/root/checkpoint_repair_component owns reusable round/game cache; developer
+/root/checkpoint_scenario_integration owns scenario54 metadata/navigation gates.
+Learning Designer read-only preflight completed; chemical content/assets reused.
+Initial worker checks pass (87 engine, 54 component DOM-double, 149 legacy schema,
+55 integration contract-double); browser verification and independent review are
+still pending. No current-task core changes. User Firefox/server8013 preserved.
+Next: actual isolated Firefox journey, persistence/URL/keyboard/failure tests,
+legacy regression and independent fresh-context frozen-target review.
+
+# Current resume point — 2026-11-04 — Alkane theory/quiz pilot planning; approval pending
+
+Userwants Συνεργείο ονομάτων for allhomologousseries, shortmandatoryquizbuttons
+atselectedtheorysteps, theorycontinueonlyaftersolution, futureotherquiztypes.
+Purposeisactivevariationbecausepupilsmaygetbored; theorywillberefinedlater.
+Userexplicitlychosealkanesfirst; transferagreedpatternproportionallylater and
+letuserdirectchangesonebyone. Noimplementationapprovedinthisplanningunit.
+
+Read-onlypreflightcompleted: README/currentnotes/AGENTS/plans/gitstatus/diffs,
+explorer /root/quiz_checkpoint_preflight andLearningDesigner
+/root/quiz_checkpoint_learning. Proposedfirstpilot: existingparent-not-total
+singlemissionaftercurrentalkanesstep10 (parentCcountversustotal), flexibleposition
+whenrefiningtheory. Notyetapproved/implemented. Existinggamefixed5rounds;
+needreusablemountandmetadata, centralgatebeforeGo/Present/hash/URL/keyboard,
+explicitcheckpointcapableJSONboundary(v52wouldignorev1unknownfields), authoring
+metadataretentionandcontent-scopedcompletion. Preserveoriginal14JSONs,v52/React.
+Noapp/core/chemistryedits,noapplicationtests,stage/commit/push/publication.
+Sevenplanningbaselinehashes(core52/54included)unchanged. Evidence
+checks/quiz-checkpoints-preflight-20261104/{baseline,upstream,planning-summary}.json.
+
+ActualupstreamHEAD/history/CHANGELOGrechecked2026-11-04T10:34:27Z:
+lastactualsyncandcurrentHEAD02dbcfaf79e23f1933a252e0b1f6671049d39b78;
+nonewcommits,CHANGELOGidentical. ExistingMain54acceptedstatebelowpreserved.
+Next: presentconcreteboundedpilotplanandobtaincodeapprovalperAGENTS, then
+implement/checkindependentreview. Gatewronganswers/retries/navigation/refresh,
+loadfailure/Exitandviewerstate; legacygame/lessonsremainfunctional.
+
+# Current resume point — 2026-11-04 — Main54 complete locally; independent review closed
+
+Approvedplan930f6bc06ac24b0eaf10097bc65a6c3d: direct «Παίζω και εξασκούμαι»→
+Συνεργείο ονομάτων; ALLprofessorfunctionality innew54; preserve52andReact.
+No commit/push/publication. GitHEAD168e3cec/index25c21223 unchanged;783dirty
+entriespre-existed. Baseline610hashes. Original52/React/MOL/SDF/14JSONunchanged;
+onlyapprovedREADME/CHANGELOG/welcome/librarychangedamongprotectedpaths.
+
+UpstreamHEAD/history/CHANGELOGchecked02dbcfaf79e23f1933a252e0b1f6671049d39b78,
+unchangedfinalrecheck2026-11-04T07:45:35Z;57commits/69paths sinceactualsync
+93b759f5891d7b5a1172646032d83215d60b7604. Localintegrationactuallysynchronizedthrough02dbcfaf(customized,uncommitted). All69sourceblobsarchived/traceable;
+13professordocsimported. Welcome5refs/library14hrefsactive54;gameconnected.
+
+New54runtimepreserves141records/422forms/14lessons337steps/local2Dpipeline;
+adoptsupstreamcamera policy,keepsperstepmoveto. GR/EN,info,drafts/generators,
+richauthoring,splitnamepartsimplementedwithlegacynameBoxLayout1/2compatibility.
+Core54newSHA73e28373c8128b3db48a65084ac07bd19c5f4887b236ba4896a3c5a29330fe6c:
+upstream+charge/metadata/SUP/H,nitrilesp,strictgraphmap/cache,C9stemεννεfix.
+Core52 unchanged d2138418...; EN8490121c...,viewer3b228b89...,lang31545f05... .
+FinalHTML64e4f298.../scenariof1763a31...;new54cacheURLsr2.
+
+FreshReviewer/root/review_v54_integration independentlychecked263hashes/69blobs,
+844+844enginecases/19chemistryassertions. FoundR54-F1P2: JSmolstoredoldreadycallback;
+fixedstabledelegation. Alsoindependentlyreproduced/verifiedinheriteddefaultfetch
+wrong-activecardoverwrite: nowonlyoriginaluntouchedbootcard,skipifauthoringbegan.
+Bothtargetedfixesindependentlyclosed;final350hashmanifest6a82fcd9verified.
+Reviewerreportchecks/v54-sync-20261104/review-report.md,noopenP0/P1/P2.
+DomainValidator/root/v54_formula_conflict independentlyclosedCV-F1…F4/sp/ENand
+C9stem; residualP3C9alkynediaeresisspellingrecorded,notfullGreekPINcertification.
+
+Developer:8442Dglyphcases;337steps9076functionalassertions;149schema/27static;
+19compatibility/14real3Dmodels;94gamewelcome/17React;19activation. Correctedready
+registration:actualvendorcallbackheld/released4checks0JSerrors;before/after0→1loads.
+Finaldraft10reloadCancel/Continue+10delayedpreload+19mobile;16desktopassertions,
+actualnonanePubChemlookup,recordedfixturesexplicit;Save/register/update/forkpassed.
+Root7zoom/resize/numbering/PNG/EN+4Beautify+4coldfinal3Dlesson/PrevNext/Escpassed.
+CIR/CORS404retained(4fullreplay,2finalcoldlesson),0appcodeexceptions;CDN/PubChem
+remainexternal. ReactkeyboardPreviousautomationuncertaintyretained(pointerpassed).
+
+Report docs/V54-SYNC-20261104.md; evidence docs/checks/v54-sync-20261104/.
+Drafthandoffmanifest6610d8fd...59paths/report469c6be5...,sourcehashesfinal.
+AllownedFirefox32660/32826/33683/33397stoppedafterprofileverification;
+ports9244/9245/9246closed; userFirefox/server8013preserved. Nooffline/conferencerelease.
+Next:usertrialfromlocalwelcome;implementationcompletewithdisclosedlimits.
+P3C9diaeresisand390px3Dlabelcrowdingremain;2Dsuccessdoesnotcertifymobile3D. Commit/push/publicationonlyonlaterinstruction. Coreforwardable
+GreekreportinV54record. No otherimplementationremainsunlessreviewfindsregression.
+
+# Current resume point — 2026-11-04 — Approved 3D workshop logo integrated and independently reviewed
+
+User approved the logo in both the introduction and missions of «Συνεργείο
+ονομάτων», then preferred and accepted the generated 3D variant. Integrated the
+transparent PNG as decorative branding beside the existing title and as a small
+mission emblem. This is a static image with a 3D appearance. The original flat
+variant is retained. Runtime changes: games/name-repair.html (cache URLs),
+js/namelecule-game-repair.js (shared image helper and two placements),
+css/namelecule-games.css (responsive sizing), and the new PNG under
+games/assets/name-repair/workshop-logo-3d-v1.png. No gameplay/data changes.
+
+Developer checks passed: 87 existing JSC engine checks; 69 Firefox checks with
+actual image decoding, widths 320/390/431/550/768/1500, a complete five-round
+keyboard journey, summary/restart and a simulated-touch guided round/next.
+Zero application JavaScript errors. Inspected desktop intro and mobile mission
+screenshots. An initial test used the wrong progress CSS selector; corrected
+only the test and reran successfully. Five runtime files are HTTP 200 and exact
+local bytes on user server 8013. Evidence, before copies, prompts, screenshots,
+and manifest: docs/checks/game-workshop-logo-20261104/. Fresh read-only Reviewer
+/root/review_workshop_logo_3d reviewed the frozen 18-path target; no actionable
+P0–P3 findings. Independently rebuilt the diff, checked PNG integrity/transparency,
+inspected four screenshots and ran 12 in-memory JSC checks. Manifest SHA256
+1225b3e16f9e7df20bfe9778e1f31144655242c5df31faf43cf3693751f191f4.
+Review report: docs/checks/game-workshop-logo-20261104/review-report.md.
+
+Upstream CHANGELOG and HEAD/history checked today: last checked 7f56de54c8ca751a6c6247c4868a97a1df026b48,
+current 02dbcfaf79e23f1933a252e0b1f6671049d39b78 (10 new commits: v53 tooltips,
+v54 molecule authoring/drafts/PubChem 3D/shared engine). These overlap future
+viewer/data/core integration. Last actually synchronized remains
+93b759f5891d7b5a1172646032d83215d60b7604. User's games-first, sync-later decision
+remains active; no synchronization performed.
+
+No core.js/core-version files changed in this session; core52 and game JSON
+match the recorded baseline. Main, React, scenarios, MOL/SVG files unchanged.
+No commit, push or publication. Source HEAD remains
+168e3cec01f941a84d40bbe0dc07156e7baa35d0 and the Git index is unchanged.
+Safari, physical touch and assistive-technology execution were not tested;
+this visual change does not establish conference or offline readiness.
+Normal Firefox open command returned exit 0 for
+http://127.0.0.1:8013/games/name-repair.html?v=logo-3d-20261104-r1 .
+Only our isolated headless Firefox31062 received SIGTERM after profile verification;
+user browser/server preserved. Approved work complete locally. Next: user visual
+trial of the integrated game; upstream synchronization remains deferred.
+
+# Current resume point — 2026-11-03 — Feedback revision complete and independently reviewed
+
+User clarified removing ONLY optional Χρειάζεσαι μια ιδέα;/Μια υπόδειξη card.
+Four gamefiles changed: wrongpart emits only «Αυτό το συνθετικό συμφωνεί με τη
+δομή.», optionalhintfeature/data/CSS/state/counters removed, success nowexplains
+rule2–3sentences aftercorrectCheck. Separate wrongreplacementfeedback retained.
+Summary shows completedchallenges+submittedattempts, guidedexample excluded.
+CacheversionedHTMLJS/CSS and JSONrevalidation ensure refresh loads currentdata.
+
+Developer87JSC/162Firefoxchecks pass (1500keyboard/390simulatedtouch, fullrounds,
+allwrongpartmessagesexact, successfeedback, summary, retry/restart, missingimage
+blocking/recovery),0JSerrors. LearningDesignerandChemistryValidator targetedcontent
+checks nofindings; names/answers/choices/MOLrefs unchanged. Fresh Reviewer
+/root/review_repair_feedback inspected22frozenpaths manifest2a41332d2a196c91fed3f86
+ed070c5fe9806cfcc474158356a18311bf75d0d43; noactionablefindings, independently82JSC
+checks, exactdiffrebuild/corehash and2screenshots. BrowserresultsDeveloper-supplied.
+Evidence docs/checks/game-repair-feedback-20261103/. All4runtimefiles HTTP200/exact
+bytes on user8013. User can refresh existingFirefox or open
+http://127.0.0.1:8013/games/name-repair.html?v=feedback-20261103-r2 .
+OwnedheadlessFirefox25665closed afterprofileverification; userbrowser/server intact.
+
+No Main/core/scenario/React/MOL/SVG changes; no commit/push/publication. No core.js/
+core-version changes thisrevision/session. v53sync explicitlydeferred byuser.
+SourceHEAD/index remain original. ActualSafari/physicaltouch/screenreader/conference
+operation remain uncertified. Currentprototypeinmemoryonly. Next uservisuallytries
+simplifiedfeedback; no remainingimplementation work inapprovedrevision.
+
+# Current resume point — 2026-11-03 — Requested feedback simplification implemented; review pending
+
+User clarified only optional Χρειάζεσαι μια ιδέα;/Μια υπόδειξη panel should go.
+Implemented within4gamefiles: minimal exact wrongPart sentence, removeoptionalhint
+state/UI/schemafields/CSS/counters/classifications; keep separate wrongreplacement
+feedback; success2–3sentence rule explanations after explicitCheck. Summary now
+completedchallenges+submittedattempts, guidedexample excluded. HTMLonlycacheURL
+updates, JSONno-cacherevalidation to avoidstaleuserdata. No Main/core/scenario/
+React/MOL/SVG changes; no commit/push/publication. Upstream sync remains deferred.
+
+Developer87JSC grading/state/summary/data checks and162Firefox checks passed:
+full1500keyboard/390simulatedtouch journeys, allwrongpart responsesexact, distinct
+wrongreplacement feedback, success explanations, retry/shuffledorder, nohintUI/
+summarylabels, restart and missingbaseSVGblocking/recovery;0JavaScripterrors.
+Developer inspected successdesktop/results390 screenshots. ChemistryValidator
+/root/game_repair_chemistry verified16semanticJSONchanges and unchangednames/
+answers/choices/MOLrefs; no chemicalfindings/no graphrescan. LearningDesigner
+/root/games_learning_design foundno inconsistency in targetedfeedback/summary.
+Beforecopies/diff/rebuild/evidence docs/checks/game-repair-feedback-20261103/.
+Independent finalReviewer pending; nextfreeze4codepaths+evidenceandhandoff.
+OwnedisolatedFirefoxPID25665/port9242 retained fortargetedchecks; user8013/normal
+Firefox untouched. No core.js/core-version changes in thisrevision/session.
+
+# Current resume point — 2026-11-03 — Feedback simplification requested; awaiting panel clarification
+
+User requests wrong-part selection response only «Αυτό το συνθετικό συμφωνεί με τη
+δομή.», removal of lower-right help box, and good explanation on correct answer.
+Read-only investigated current game; no production edits yet. There are two distinct
+panels: right-hand wrong-answer feedback below Έλεγχος and left optional
+Χρειάζεσαι μια ιδέα;/Μια υπόδειξη. Async clarification asks which one or both.
+Presented bounded plan: data/JS/CSS only, success explanation after explicit Check,
+Firefox wrong/correct/retry/mobile checks and independent review. User reply needed
+before dependent edits. If optional hints removed, align intro/summary/stats too.
+LearningDesigner /root/games_learning_design reviewing existing success text read-only.
+Before-state hashes/copies in docs/checks/game-repair-feedback-20261103/baseline.json.
+Main/core/scenarios/React remain unchanged; no core.js/core-version changes this turn.
+No commit/push/publication. Games-first/v53-sync-later preference remains in force.
+
+# Current resume point — 2026-11-03 — First game complete locally, reviewed, opened in Firefox
+
+User approved games first; v53 synchronization explicitly deferred. Standalone
+Συνεργείο ονομάτων at http://127.0.0.1:8013/games/name-repair.html opened via
+open -a Firefox (exit0); all10runtime files HTTP200/exact bytes on user8013.
+One guided example and four challenges use four existing alkane MOL structures.
+New HTML/JS/CSS/JSON + six SVGs/provenance and bounded export helper. Main/welcome/
+core/React/14active scenarios remain unchanged; no commit/push/publication.
+
+Independent Reviewer /root/review_game_name_repair, fresh context, no writes,
+50frozenpaths manifest37da0e2ae1e3bf75dc42a80033a725f53896a3a4fe40a5002a7a239e869a89bc:
+no actionablefindings. Independently68JSC grading/state checks, sixSVG/MOL maps,
+XMLrepair closure, AST/hash/baseline guards;4PNGs reviewed. Browser evidence is
+Developer-supplied. Chemistry Validator fullconstitutionalgraph audit and targeted
+finalSVG checks, LearningDesigner feedback/metric wording applied. P1-CHEM-ASSET-01
+closed independently after exporterXMLattribute validation; sourceMOLs unchanged.
+
+Developer checks80engine/79Firefox checks, two full desktop-keyboard/390px
+simulated-touch journeys, six actualSVGimage decodes/22px/no label clipping,
+wrongchoices/hints/retry/summary/restart/zoom/error recovery. Post-review targeted
+fullgameTab+Enter path60Tabpresses passed, Back restoredresults,0externalgame
+resources/0JS. Shipping-CDN Main/theory smoke6checks passed. Two deliberate
+fetch/schema console.errors retained as expectedfaultdiagnostics. FirstMain
+libs=local attempt failedmissing j2s/package.js, retained; no offlinepackage.
+Headlessprocesslog contains pre-existingMainpagehidefont/RemoteAgentwarnings;
+no causalfix or universalclean-process claim. ActualSafari/Chromium/physicaltouch/
+screenreader/conferencedemonstration not certified. Progress in memory only.
+
+SourceHEAD168e3cec/index25c21223 preserved. No core.js/core-version changes this
+session. Owned8053/isolatedFirefox stopped afterownershipchecks; user8013/normal
+Firefox preserved. Cleanupfirstattempt stoppedonsafeUnicodepspath assertion,
+then verifiedownedPID/port/directory and completed; no userprocess terminated.
+Evidence docs/checks/game-repair-20261103/{summary,independent-review,final-verification}.json.
+Next user visually tries game; welcomeintegration/othergames require their next
+approved scope. Do not silentlypublish or synchronizetov53 while gamingworkactive.
+Upstream lastchecked7f56de54, lastactualsync93b759f5. No pendingimplementation work
+within approved firstgame scope; rootcode target remained unchanged afterreview.
+
+# Current resume point — 2026-11-03 — Approved game implemented; independent final review pending
+
+User approved games first and explicitly deferred professor v53 synchronization.
+New standalone games/name-repair.html uses four existing alkane structures, one
+worked example and four repair challenges. New JSON/JS/CSS + six standalone SVG
+assets from existing Main52 expanded viewer, provenance/export helper. Existing
+Main/welcome/core/React/scenario files unchanged. No commit, push or publication.
+
+Developer checks:80 JavaScriptCore grading/state/data tests;79 actual Firefox
+checks, complete desktop keyboard and390px simulated-touch journeys; native22px
+SVG text, six real image decodes/no label clipping, hints/retry/summary/restart/
+zoom/exit and missing-image/data-failure recovery. Normal-game JS errors0; two
+console.errors expected from deliberate fetch/schema fault injection retained.
+Original Main shipping-CDN smoke6 checks pass including three2D forms,3Dmodel and
+alkane lesson next/prev/exit. First libs=local smoke could not initialize3D due to
+missing j2s/package.js; retained as evidence, no offline package or fix claimed.
+Headless-process log retains pre-existing Main pagehide font/RemoteAgent warnings;
+no cause attributed to game and no general clean-process guarantee.
+
+Chemistry Validator /root/game_repair_chemistry independently verified content,
+12embedded2D/fourSDF constitutional graphs, six asset provenance/atom/bond maps.
+P1-CHEM-ASSET-01 invalidXML numbered hints fixed at exporter serialization boundary,
+independent targeted closure on finalassets. Large sourceSDF specified atomparity
+vs unspecified2D caveat retained; game is constitutional. LearningDesigner fixes
+applied for additional-hint summary interpretation and unambiguous parent wording.
+Evidence docs/checks/game-repair-20261103/; app/preflight baseline unchanged.
+Next freeze exactnewpaths/hashes, Reviewer freshcontext, resolve findings, final
+verify notes and open http://127.0.0.1:8013/games/name-repair.html in normalFirefox.
+No core.js/core-version changes. Upstream checked7f56de54, lastactualsync93b759f;
+sync explicitly deferred by user until after games. No live welcome link yet.
+
+# Current resume point — 2026-11-03 — Nomenclature games investigation; implementation plan awaiting approval
+
+User wants original functional nomenclature games using existing Namelecule material.
+Read current resume/README, relevant project/layers/didactic plans and Main52 paths.
+No application/code changes, runtime tests, commit, push or publication this session.
+Core52 SHA remains d2138418ff630ab77e578b80ca8ba3a10cc1b877c3ab8c0e5c2735ffcd1f24a2.
+Relevant six app/instruction paths match final saved checkpoint b4e7c67e.
+Pre-existing source status has 776 entries; do not treat them as new contributions.
+
+Upstream actual HEAD/history/CHANGELOG read on 3 November: 7f56de54c8ca751a6c6247c4868a97a1df026b48,
+26 commits after last checked 4e1190ab. Last actual synchronized remains 93b759f5.
+New parallel v53 includes English, naming/oxo/ester changes, molecule info and
+JSmol cold-boot work. Overlaps naming/viewer/scenario/UI customizations; no sync
+performed. Requires separate concrete integration plan and relevant review;
+do not silently redirect Main52 or games to53. Evidence and baseline saved in
+ docs/checks/games-preflight-20261103/{upstream,baseline}.json.
+
+Learning Designer /root/games_learning_design (fresh context, read-only) proposes
+first game Συνεργείο ονομάτων: one worked butane repair and four challenges using
+methyl_2_pentane (parent vs total C; then numbering), dimethyl_2_3_butane (di-),
+ethyl_3_dimethyl_2_5_hexane (branch order). New assessment/feedback engine is needed;
+existing scenario hidden boxes are not answer inputs. Possible later games:
+carbon-chain route, lost-molecule clues/elimination, numbering station. No E/Z.
+No claim of empirically validated learning gains or globally novel mechanics.
+
+Proposed first scope: isolated games/name-repair.html, js/namelecule-game-repair.js,
+css/namelecule-games.css, games/data/name-repair-alkanes.json and 2D assets exported
+from existing MOL/viewer pipeline with provenance via a bounded tools export helper.
+No live iframe/Main/core/scenario/React edits; welcome integration after visual
+acceptance. Buttons/touch/keyboard, targeted feedback and staged hints; no mandatory
+time/lives. Show independent vs assisted repairs separately, no learning-gain claim.
+Chemistry Validator to inspect final wrong/correct pairs, followed by one independent
+Reviewer after implementation and actual browser flow checks incl restart/retry,
+resize/back navigation and original Main/theory smoke. User approval required by
+AGENTS.md before code. Next: obtain approval of this concrete first-game scope,
+then implement and verify; do not mistake this design proposal for a working game.
+No core.js/core-version changes in this session. Notes/evidence only saved locally.
+
+# Current resume point — 2026-11-01 — Consolidated report and full save completed
+
+User requested one professor report for Friday 30 October midday through 1 November,
+plus saving everything everywhere. Public report/app verified at release
+74a9e3ea395eb79ffa6d6d72bdcb6275e10c93a7; reviewed runtime db08d20a7d5c0cfce194edd80ad3a7439d1f3e44.
+Report: https://yanisken9.github.io/organic-nomenclature-3/docs/professor-20261101/update.html
+Welcome: https://yanisken9.github.io/organic-nomenclature-3/design/welcome-proposal.html?v=release-20261101
+Ready-to-forward text and links saved beside report and in both external folders.
+No message sent to professor. No further work remains within this save/report request.
+
+Final full source snapshot: 5eb89f0f7acd2a7bdb26f58fb42e6c2d4ffce14f (3059 files).
+Branch checkpoint/namelecule-20261101-085010 uploaded. ZIP CRC/every-file SHA, Git
+bundle and recovery ZIP verified; copies verified in both established destinations:
+Desktop/Διπλωματική - Ονοματολογία/Αποθηκεύσεις/2026-11-01-085010 and
+Desktop/αρχεία  json/Namelecule_01-11-2026. Old backups retained. Latest session/
+contribution bookkeeping is committed separately on the same branch and included
+in the refreshed bundle; ZIP remains the exact snapshot above, latest notes copied
+separately. Final bookkeeping commit/remote refs/archive hashes are recorded in
+communication/checkpoints/final-save-state-20261101-085010.json and both external
+final-save-state.json receipts. Source active HEAD/index preserved, no checkout/stage.
+Full checkpoint preserves local React WIP; only reviewed Main and documentation
+published. Public React's 39 files byte-preserved with no new build.
+
+Verification: 73 exact runtime/public HTTP hashes plus 10 exact final documentary
+HTTP hashes. Live Main retry completed 10 functional checks, React completed 8.
+Main's 8 and React's 2 raw external tracker/cookie errors remain; strict clean-console
+checks fail. Initial Main timeout after 4 checks has unknown cause and is retained,
+not declared fixed. Two existing atom-ID warnings independently proved symmetry-
+equivalent with full explicit-H SDF automorphisms and old/current JSC reproduction.
+Independent Reviewer /root/review_publication_20261101 passed initial and targeted
+reviews; evidence/limits in docs/checks/publication-20261101/. No new app fixes here.
+127 Expanded forms/11 classes reported; 141 molecules/14 lessons/337 steps preserved.
+Core52 and all active scenario JSONs byte-equal to Friday baseline 3f046ad8.
+No core.js/core-version changes this session or reported period.
+Upstream CHANGELOG checked against 4e1190ab (unchanged); last actual sync 93b759f5.
+Owned test server/Firefox closed; user 8013 and normal Firefox left running.
+Known long acid-name PNG clipping, framing uncertainty, CDN dependencies and untested
+Safari/physical mobile/offline/conference demonstration sequence remain disclosed.
+Next: user may forward report/app links; future work requires its own approved scope.
+
+# Current resume point — 2026-11-01 — Consolidated report published and verified; final backup generation underway
+
+User requested one professor report for Friday 30 October midday through 1 November,
+plus saving everything everywhere; publication/full checkpoint explicitly authorized.
+Public personal thesis-work release: 74a9e3ea395eb79ffa6d6d72bdcb6275e10c93a7
+(final documentation); reviewed runtime: db08d20a7d5c0cfce194edd80ad3a7439d1f3e44.
+Tags: namelecule-20261101-085010 and corresponding -final. Report and ready-to-forward
+links/text: docs/professor-20261101/. No message was sent to the professor.
+
+Evidence: 73 runtime/public URLs exact SHA; final 10 documentary URLs exact SHA.
+Actual live Main retry completed 10 functional checks; React completed 8. Raw console
+errors remain: Main 8 external tracker/cookie entries, React 2 tracker entries.
+Strict zero-console checks do not pass. First Main attempt stopped after 4 checks
+with a propene/expanded timeout of unknown cause; retained, not claimed fixed.
+Two pre-existing core atom-ID warnings independently proved symmetry-equivalent
+by full explicit-H SDF automorphisms; old/current core produce same warnings.
+See publication-result.json and final-public-http.json under publication-20261101.
+Independent Reviewer /root/review_publication_20261101: initial 472 paths, targeted
+6 warning-disclosure paths and final 10 public-result paths; no actionable findings.
+Latest target manifest 6956bd9d804404fd5e3dc303901a859a4566504eb9a2d855b59bb30c2ea44a6c.
+
+Report covers 127 Expanded forms/11 classes; library 141 molecules/14 lessons/337 steps.
+Core52 and all 14 active scenario JSONs byte-equal to Friday baseline 3f046ad8.
+No core.js/core-version changes in this save session or reported period. Public
+React's 39 files preserved, no new build; local WIP belongs to full checkpoint.
+Upstream CHANGELOG actually read: checked 4e1190ab unchanged; last actual sync
+93b759f5. No new upstream synchronization. Active source react-library-pilot HEAD
+168e3cec/index 25c21223 preserved; no checkout/stage of source workspace.
+
+Initial checkpoint 1a26e93a15ad0d45b543bf8a06d07b58122e217c uploaded on
+checkpoint/namelecule-20261101-085010; 3037-file ZIP/bundle/recovery and both external
+copies verified. Final generation pending; receipts in communication/checkpoints/
+save-publish-20261101-state.json and final-save-state-20261101-085010.json.
+Owned test server 8051 and isolated Firefox closed after ownership checks; user
+8013 still HTTP 200 and normal Firefox untouched. Existing long acid-name PNG
+clipping, framing uncertainty, external/CDN dependencies and untested Safari,
+physical mobile, offline and conference sequence remain disclosed.
+Next: complete final archive/bundle/checkpoint upload and two external copies,
+record exact final commits/receipts, then give user consolidated report/app links.
+
+# Current resume point - 2026-11-01 - Consolidated report pushed; live verification and final save pending
+
+User requested consolidated30October-midday-to-nowreport and reiterated saveall.
+Reviewed Main/report pushed to personalorigin/thesis-work at db08d20a7d5c0cfce194
+edd80ad3a7439d1f3e44, tagnamelecule-20261101-085010. PublicURLs not yet declared
+verified; waitingPagesdeployment via /tmp/namelecule-verify-public-20261101.py.
+Report path docs/professor-20261101/update.html; allforwardlinks/message besideit.
+
+IndependentpublicationReviewer /root/review_publication_20261101 verified472initial
+files, then6targetedwarning-disclosurepaths; final475stagedfiles reviewed. No new
+findings. Two coreATOMwarnings chemically provedfalsepositiveIDcomparisons via
+fullSDFautomorphisms; identical old/currentJSCdiagnostics. Disclosed inreport;
+core unchanged, notsilenced. Mainprefix10/Reactprefix8functionalchecks0JS, but2
+corewarnings so no cleanconsoleclaim. Sourcecore/14JSON unchanged sinceFriday.
+
+Initialfullsave checkpoint1a26e93a15ad0d45b543bf8a06d07b58122e217c has3037files,
+verifiedZIP95MB/bundle/recoveryand2externalcopies/14JSON/10launcherfiles. Fullbranch
+checkpoint/namelecule-20261101-085010 upload underway; check SPbeforeclaimingremote.
+Oldarchivesretained. FinalgenerationmustrefreshafterpublicHTTP/browser checks.
+Receipts: communication/checkpoints/save-publish-20261101-state.json and
+final-save-state-20261101-085010.json. No activebranchcheckout/indexchange.
+
+Ownedpublicationserver8051PID15949/Firefox15950active, user8013/browser untouched.
+Next verifyliveHTTP+Main/Reactbrowser,recordactualdiagnostics;writefinalsavegeneration,
+pushfullcheckpoint,refreshZIP/bundle/externalreceipts/notes,cleanupownedprocesses.
+No core.js/core-version changes thissaveperiod; no messagetoprofessor. Existing
+acidPNGlongname/framing/CDN/Safari/mobile/offline/conferencelimits remain explicit.
+
+# Current resume point - 2026-11-01 - Consolidated Friday-to-now report and full save in progress
+
+User requested one report for Friday30October midday throughnow, plus saveeverything
+and professorlink; reiterated saveall afterinterruption. Publication andfullGitHub
+checkpoint authorized by currentrequest plus prior explicitpublicfullcheckpoint
+consent. No messages toprofessor. Draft docs/professor-20261101/ includes report,
+verifiedfacts,links andreadyforwardmessage.127normalizedExpanded/11categories,
+141molecules/14lessons337steps. Fridaycore52 and14activeJSON byteequal confirmed.
+No core.js/core-version changes in thissave workunit.
+
+Separate public/checkpoint clones in publication-20261101/baseline.json preserve
+active react-library-pilot HEAD168e3cec/index25c21223. Publicbase0969f462;copyonly50
+approvedruntime paths fromethers+52carbonylacid+9esterunits andnewreport/evidence.
+PublicReact39paths/core/scenarios/legacy51/welcome/library unchanged. Registry
+check:exactly72Expanded changed vs lastpublic;metadata/otherforms unchanged.
+Report coversFridayalkanes andSaturday2D/JSmol too, withexceptions/limits explicit.
+UpstreamrawCHANGELOG actuallyread,HEADunchanged4e1190ab;lastactualsync93b759f.
+
+Maincandidate prefixbrowser10checks andReactprefix8checks passed,0JS. Assembly
+checks pass,allrelativereportlinksresolve. Testdiagnostics:macOS/privatepathalias
+fixed inlink-check root;rawdiffcheck flags intentionallypreservedfixedMOLpadding/
+archiveddiffbytes,scopednonMOL/nonDiff check passes. No productfix for either.
+Own testserver8051PID15949/browserPID15950 recorded;neverstopuser8013/browser.
+Next finishprefixReact,freezepublicationtargetandfreshindependentReviewer;then
+commit/pushpersonal thesis-work,verifydeployHTTP/browser,fullcheckpoint+ZIP/bundle/
+externalcopies inestablisheddestinations. No publication/backupcompletion claimyet.
+
+# Current resume point - 2026-11-01 - Main9 esters complete and independently reviewed
+
+User accepted esterpreview (όλα οκ). Completed approved9Expanded embeddedMOLs,
+7existing sourceMOLs,sharedviewer calibration andcontentSHAcacheURLs (10appfiles).
+CH .3094, allCC/CO/C=O .6188; only2slightlyslanted originals cardinalized. Four
+acceptedpreview/controlMOLs exact;2old sourcefinalblanklines preserved. No core.js/
+core-version, React, scenario, other2D or3D changes. Local only; no commit/push/
+publication. Recovery and records: docs/checks/ester-uniform-20261101/main/.
+
+Fresh Reviewer /root/review_ester_main9 inspected70frozenpaths, manifest
+174cc003e07438400b0b0f00743e226c4a46d7c3f87a57386b30142abd5bb6dd; no actionable
+findings. Independently rebuilt10outputs, checked9MOLs/7sources/4exactaccepted,
+2937protected paths/HEAD/index,844naming/54affected2D3Dcases,175nativeaudits/
+166esterlength-fontchecks/36exactunchangedotherform arrays, syntax/cache and
+suppliedPNG/screenshots. Exactreview in independent-review.json. FullSDFgraphs/
+provenance attributed to ChemistryValidator; runtimecontrols attributedDeveloper.
+
+Developer:54before+54after forms,157controls including4alternatechains and9class
+smokes,18actualJSmolfileURLmatches/36toggles;2actualPNGs visuallycomplete. No final
+JS errors, inkcontact/clipping/uncoveredink in checkedstates. ChemistryValidator9
+fullSDFisomorphisms/5addedprovenancemaps; actual10outputs canonical205e03f0... match.
+No existinglesson references9keys; no lessonreplay in this boundedunit. Existing
+acidlongnamePNGclipping remains outsideunit; historicalisopropylvisibleoverlap
+notreproduced, so no provedhistoricalfix. No Safari/physicalmobile/offline/
+conferencecertification. OwnedtestFirefox15402closed via profilecheck; userbrowser
+andserver8013 retained. Upstream alreadycheckedtoday4e1190ab unchanged,lastactual
+sync93b759f. Completionmetadata/notes only changed afterreview; functionalhashes
+verified in final-verification.json. Core change report: none this work unit.
+
+Next user can refresh Main52 in existingFirefox to see9updatedesters. No pending
+work within approvedester scope; awaiting next user request. Existing separate
+PNGnameoverflow investigation and futureconference validation remain open.
+
+# Current resume point - 2026-11-01 - Main9 ester checks complete; independent review pending
+
+User visually accepted preview; approved9ester integration applied locally in10
+appfiles (9Expanded embeds/7sources/sharedviewer calibration/HTMLcache). Four
+accepted preview/controlMOLs exact. Bothold sourcefinalblankline differences
+preserved. Recovery and all evidence: docs/checks/ester-uniform-20261101/main/.
+No core.js/core-version, React, scenario, other2D or3D file changes; no commit,
+push or publication. Main9 is not yet declared reviewed/complete.
+
+Developer evidence:54before+54after states including36unchangedotherform comparisons;
+844naming/54affectedform-chain2D3D,157controls including4alternatechainstates,
+9unrelatedcategorysmokes,18actual3DmodelURLmatches and36toggleactions;175native
+Expanded audits with0nonendpointmaskcuts/diagonals and correctlength/font ratios.
+Two actualPNGs inspected complete including names. No JS errors/visibleglyph
+contact/uncoveredink/clipping in final checks. Independent ChemistryValidator9
+SDFfullgraphisomorphisms/5provenancemaps; Developer actual10outputs match expected
+canonical205e03f0... .2937protectedpaths/core/HEAD/index preserved.
+
+No existing scenario references any9esterkey; no lessonreplay in this boundedunit.
+Existing acid long-name PNG clipping remains separately disclosed, not seen in
+these2esterexports. Startup test connection race recorded before appnavigation;
+readinessguard rerun succeeded, no productfix. No Safari/physicalmobile/offline/
+conference certification. OwnedFirefox15402receivedSIGTERM afterprofilecheck;
+userbrowser/server8013 untouched. Upstream alreadycheckedtoday4e1190ab unchanged,
+lastactualsync93b759f. Next freeze exacttarget andfreshindependentReviewer, then
+recordfindings/finalhashes. No more code edits while targetfrozen.
+
+# Current resume point - 2026-11-01 - User accepted ester preview; Main9 applied, checks running
+
+User visually accepted comparison (όλα οκ), authorizing already approved final
+integration. Applied9expanded embeds/7sourceMOLs/sharedviewer calibration/cache
+in10appfiles. Four preview/control MOLs exact; source2old finalblanklines preserved.
+Recovery: docs/checks/ester-uniform-20261101/main/{baseline,before-sources}.json[.gz].
+Main9 is local and still undergoing verification; no completion/review claim yet.
+
+Before54states captured. Static844naming/54affectedform-chain2D3D passed;2937
+protectedfiles/core/index/HEAD unchanged. Chemistry Validator independently9SDF
+fullgraphisomorphisms/5provenancemaps/4exactlayouts and sourceidentity checks;
+Developer actual10bytehash map matches independently expected205e03f0... output.
+After54forms completing; actualcontrols/export/unrelatedcategory checks and fresh
+Reviewer pending. Owned isolatedFirefox15402 active, userbrowser/server untouched.
+First test attempt hit endpointstartup ConnectionRefused beforeappnavigation;
+readiness check and rerun succeeded, no productfix. No core.js/core-version,
+React/scenario/other2D/3D edits, commit/push/publication. Upstream alreadychecked
+today4e1190ab unchanged,last actualsync93b759f. Existing PNGlongname clipping
+separate. Next finish controls, recordlimits, freeze and independentReviewer.
+
+# Current resume point - 2026-11-01 - Ester preview reviewed; user visual acceptance pending
+
+Approved isolated before/after comparison complete for2old esters (methyl
+methanoate/isopropyl ethanoate), plus tert-butyl methanoate/largestester controls.
+Gallery: docs/checks/ester-uniform-20261101/comparison/index.html.
+CH .3094; heavyCC/CO/C=O .6188; explicit cardinal reconstruction only2slightly
+slanted old layouts. Main/sourceMOL/core/React/scenario/3D unchanged. No commit,
+push or publication. Do not integrate Main until user visually accepts proposal.
+
+Fresh Reviewer /root/review_ester_uniform_preview:47frozen paths, manifest
+0a55aec6a186280f02aa36aee2a0d82c7d7af6c7d88507aee32bb62a12c30a3c; no actionable
+findings. Independently replayed4MOLpair/72nativeaudit/2898protected guards,
+validated fields/axes/lengths/calibration, rebuilt6galleryoutputs byteexact and
+checked syntax/screenshots. Browser results remain Developer evidence:16captures,
+64controls,8modelURLmatches,14gallery states/8figureaudits/8HTTPdigestchecks.
+Chemistry Validator independently verified4pairs. No finalJS errors or proposed
+visible inkoverlap/bondcontact/clipping/uncoveredink. Historical isopropyl overlap
+was not reproduced as paintedpixel contact, so no historicalfix claim. Existing
+PNG longname clipping unchanged; no appPNG/interactive3D/all9integration/Safari/
+physicalmobile/offline/conference validation. Exactreports/limits in previewfolder.
+
+Verified gallery HTTP bytes against local index SHA and requested external Firefox
+launch successfully (open exit0). Exact URL in previewfolder/external-open.json;
+window visibility was not independently confirmed. Await user visual assessment.
+After acceptance, execute already approved9ester Main integration phase:9embeds,
+7existing sourceMOLs preserving nonXY/trailing, commonviewer calibration/cache,
+appropriate chemistry/naming/control/2D3D checks and consolidated review.
+Owned testFirefox15013closed via ownedprofile check; user browser/server untouched.
+Upstream already checked today4e1190ab unchanged,last actualsync93b759f.
+No core.js/core-version changes this work unit.
+
+# Current resume point - 2026-11-01 - Approved ester isolated preview; review pending
+
+User approved the9-ester plan, with visual comparison FIRST. Prepared only
+docs/checks/ester-uniform-20261101/comparison/:2before/after pairs for old methyl
+methanoate/isopropyl ethanoate;2additional controls tert-butyl methanoate/largest
+ester. Explicit nearest-cardinal reconstruction only2old slightly slanted forms;
+CH .3094, allCC/CO/C=O .6188. Main/sourceMOL/core/React/scenarios/3D unchanged.
+Main integration must wait for user visual acceptance. No commit/push/publication.
+
+Developer checks:16actual Main captures at1500/390,64proposed controls,8actual3D
+fileURL matches,72native proposed stroke/backplate audits,14gallery UI states,
+8standalone raster audits and8versionedasset checks. No JS errors, proposed visible
+label intersections, bond/ink contact, uncovered ink or clipping. Same font and
+frame within each pair. Chemistry Validator independently verified4MOLpairs,
+graphIDs/nonXY/lengths/axes/COOC/formylH and no coordinate collisions.
+Historic old isopropyl overlap was not reproduced as painted-pixel contact here;
+recorded DOMcandidate at18px only. Do not imply historical failure was proven fixed.
+No app PNG export or interactive3D test in this isolated preview; no Safari,
+physical mobile, offline or conference certification. Existing PNG long-name
+clipping remains separately recorded.2898priorprotected files/HEAD/index unchanged.
+
+Next freeze exact target and obtain fresh independent Reviewer, then open gallery
+in external Firefox for visual assessment. Own testFirefox15013received SIGTERM
+after ownedprofile verification; user browser/server8013 untouched. Upstream
+already checked today4e1190ab unchanged, last actualsync93b759f. No core changes.
+
+# Next task - 2026-11-01 - Ester read-only preflight complete; plan approval pending
+
+Main52 integration below is complete and independently reviewed. Queued esters:
+9 embeds,7 existing Expanded source MOLs,4 exact professor-revision93b759f originals
+and5 later additions. Chemistry Validator /root/acid_uniform_preflight simulated
+.3094 C-H/.6188 heavy bonds without collisions. Two old layouts need explicit
+nearest-cardinal reconstruction (max1.31/1.38degrees); do not weaken shared strict
+guard. Seven source files match all geometry/fields;2 differ only in final blank
+line. Preserve each source's non-XY content. Details: ester-next-preflight.json.
+
+Present concrete plan: first isolated before/after preview of those2 old esters,
+plus tert-butyl formate and largest-ester controls; Main untouched until visual
+acceptance. Then9 embeds/7 sources/shared viewer calibration/cache, appropriate
+chemistry/naming/2D3D/UI/export checks and consolidated independent review.
+No ester implementation approval yet, no ester code edits. No core changes.
+No commit/push/publication. Existing PNG long-name clipping remains disclosed.
+
+# Current resume point - 2026-11-01 - Main52 complete and independently reviewed; esters next
+
+Completed local integration of 17 aldehydes +14 ketones +21 carboxylic acids,
+31 source Expanded MOLs, shared viewer calibration and cache URLs. Eight accepted
+layouts remain byte-exact. No core.js/core-version, React, other 2D, scenario or
+3D changes. No commit/push/publication. Recovery and evidence live under
+docs/checks/carbonyl-acid-uniform-20261101/.
+
+Fresh independent Reviewer /root/review_carbonyl_acid_main52 inspected the114-file
+frozen target, manifest dedd9700504822c3e86d6e15e9602416d3f4fef0a4451dee26fa06127fd60d12.
+No new actionable findings. Independently checked52/836 bond records,31 sources,
+8 accepted MOLs,2782 protected paths, both factories,414 native audits, saved
+before/after comparisons, lesson scope and syntax. Browser and full SDF graph
+checks remain explicitly Developer/Chemistry Validator evidence. Exact report:
+independent-review.json. Existing EX-01/P2: long PNG-export name clipped before
+and after; unchanged fixed1200px canvas,1458.70px name. No molecular clipping
+confirmed in inspected images. Export correction needs separate scope.
+
+Developer final evidence:136 before/136 after forms,194 controls,338 authored
+lesson replay states,24 manual Expanded/restored lesson states,844 naming/312
+2D3D comparisons. Chemistry Validator verified52 fullSDF isomorphisms. No final
+JS errors, uncovered ink, measured visible label overlap or bond/ink contacts.
+No Safari/physical mobile/offline/conference certification. Own test Firefox
+received SIGTERM after owned-profile check; user browser and8013 server untouched.
+
+Queued user request: same approach for esters after this completion. Read-only
+preflight confirms9 esters and7 source Expanded MOLs. Four professor-origin active
+embeds are preserved references;2 have small off-axis deviations (~1.31/1.38deg),
+so strict existing normalizer refuses them rather than silently snapping them.
+Chemistry Validator is checking explicit cardinal reconstruction in memory.
+No ester code changes. Present concrete ester plan and obtain approval before
+implementation. Upstream already checked today: unchanged4e1190ab; last actual
+sync93b759f. Core change report: no core changes in this work unit.
+
+# Current resume point - 2026-11-01 - Main52 final checks complete; independent review pending
+
+Applied approved 17 aldehyde +14 ketone +21 acid expanded forms, 31 existing
+source MOLs, shared viewer calibration and cache URLs. Eight accepted layouts
+remain byte-exact. No core.js/core-version, React, other 2D, scenario or 3D edits.
+Recovery baseline and evidence: docs/checks/carbonyl-acid-uniform-20261101/.
+
+Final Developer checks: 136 before +136 final after forms; 844 naming and 312
+form/chain/2D3D comparisons; 194 controls; 338 authored lesson replay states;
+24 additional manually selected Expanded/restored lesson states; 414 native
+expanded stroke/backplate audits. No final JS errors, uncovered ink, measured
+visible label overlap or bond/ink contacts. Chemistry Validator independently
+verified 52 full SDF graph isomorphisms and parent maps. See summary.json for
+exact scope, test-only failures, corrected compound-mask regression and limits.
+
+PNG limitation confirmed before and after: a 1458.70px long name exceeds the
+unchanged 1200px export canvas. Recorded in export-visual-check.json, no silent
+export refactor. Molecular top clipping was not confirmed in inspected images.
+No Safari/physical mobile/offline/conference certification. No commit/push/publish.
+
+Next freeze exact files and hand off to a fresh independent Reviewer, address
+findings within scope, record review and final hashes. Then investigate queued
+esters based on professor MOLs; present concrete plan before ester code edits.
+Upstream already checked today: unchanged 4e1190ab, last actual sync 93b759f.
+User server 8013 and browser remain untouched. Core change report: none this unit.
+
+# Current resume point - 2026-11-01 - Main52 applied; compound backplate correction verification
+
+Userqueuednext: apply same normalized expanded drawing approach to esters, based
+on professororiginal MOLs, AFTERcurrent52verification/review. Investigate/read-only
+esterinventory and present concrete plan forapproval before new ester code edits.
+
+All52expanded/31sourceMOLs applied locally. Static844naming/3122D3D, independent
+ChemistryValidator52fullSDFisomorphisms and exact32actualbytes passed.136before+
+136initialafter forms passed old criteria; allsixlessons157steps at1500/390,
+338states withback/replay and12exits/modelURLmatches passed,0JS.
+
+Expanded extremezoom control initially failed inflatedFirefox DOM boxes: at
+fontCSS5.5,Cinkwidth3.51 vs DOMwidth8.75. Before/afterdiagnostic shows actual
+inkmetrics0contacts and0bondcontacts. Added independent per-label pixel-overlap
+oracle with4positive/negative controls at5.5/22px (passed). DOMoverlaps remain
+recorded, evaluated bypixels instead of blindly treated asvisible intersections.
+A test globalconst redeclaration attempt is retained; IIFE correction passed.
+Secondcontrolattempt65states stopped on mode-return numbering before animation
+finished; added the missing normal-completion wait. No productnumbering fix.
+
+Also found real introduced compound-mask issue: normalized OH/NH2 used single-
+element square, leaving tailink uncovered (no bondcontact). Fixed sharedviewer
+fRefreshLabelBackplates: squares only for singleelement text; compoundlabels
+reuse existing complete measuredink bounds/padding. Only3acid drawings affected:
+hydroxypropanoic_acid_2,aminobutanoic_acid_3,dihydroxybutanedioic_acid_2_3.
+All subsequent audits now reject uncoveredInkPixels. Updated guarded viewer
+factory and MainHTMLcache nowincludes12digit contentSHA prefixes fordata/viewer.
+Current forms-after fresh136recheck running; previous after retained as
+forms-after-before-compound-mask-fix.json.gz. Maingeometry/core/3D unchanged byfix.
+
+Controls finalrerun andnativeaudits/exports/independentReviewer pending. Own
+FirefoxPID14301; user8013server/browser untouched. No core.js/core-version edits,
+commit/push/publication. Next finish finalforms andcontrols, reruncheapstatic
+factory guard, recordlimitations thenfreezeReviewer target. Do not claimcomplete
+until finalscope reviewed. Sixlesson338evidence predates compoundmaskfix, which
+changes only3molecules absent fromthose lesson sequences; verify/report that
+scope explicitly before reusing replayevidence. Upstream unchanged4e1190ab checked
+today,last actualsync93b759f. No Safari/offline/conference certification.
+
+# Current resume point - 2026-11-01 - Approved52 Main integration applied; checks in progress
+
+User explicitly approved final combined plan. Applied34bounded files: data52
+(52Expanded entries:17aldehydes14ketones21acids),31existing sourceExpandedMOLs,
+viewer52shared calibration and MainHTML52cache URLs. All8accepted previewMOLs
+copied byteexact;44others normalized from frozen originals, preserving directions.
+No core/React/other2D/scenario/3D edits. Recovery before-sources.json.gz +baseline
+in docs/checks/carbonyl-acid-uniform-20261101/ includes prior uncommitted ethers.
+
+Developer static52geometry/31sourceembed/8exact accepted checks passed;844naming
+before-after and312affected form/chain/2D3D signatures passed.2782protected files/
+HEAD/index/core unchanged. Actual Firefox136before+136after cases at1500/390
+passed, including32unchanged-form comparisons. ChemistryValidator independently
+verified52fullgraphs/valences/26COOH and fullSDFgraph isomorphisms +authored parent
+maps; actual32data/source bytes match canonical output map7ba8951a638b918a93ca657ae
+106771dd1eaf131ac33162b5c494e264d9a3d94.19corefiles/83SDFs unchanged.
+
+Six existing lessons157steps are replaying at two widths with back/replay/exit;
+controls/PNGexports/independent Reviewer still pending. Owned isolatedFirefox
+PID14301/profile recorded in browser-process.json; user8013server/browser retained.
+Main integration is applied locally but not yet declared complete/reviewed.
+No core.js/core-version changes thisworkunit, no commit/push/publication.
+Next finish lessons and targeted actual controls, fix scope-local findings, freeze
+and consolidatedfreshindependentReviewer. Upstream already checked today4e1190ab
+unchanged; last actualsync93b759f. No Safari/offline/conference guarantee.
+
+# Current resume point - 2026-11-01 - Both acid layouts accepted; Main integration pending
+
+User accepted both acid previews and asked whether aldehydes/ketones were
+integrated. Answer: no; all six carbonyl previews and both acid previews are
+accepted, but neither Main integration has been applied. Do not imply otherwise.
+Only acid summary acceptance metadata and notes changed; Main four hashes match.
+No core.js/core-version changes, commit/push/publication in this turn.
+
+Present combined final plan for approval:52expanded embeds (31carbonyls+21acids),
+31existing source Expanded MOLs (21+10), shared viewer calibration and HTML cache
+URLs; preserve exact accepted layouts and other representations/graphs/IDs/3D/
+React/core/scenario content. Verify all52chemistry/readability and affected
+browser flows; replay six lessons (103+54=157steps), Chemistry Validator and
+consolidated independent Reviewer. Keep rollback baseline. No implementation
+until approval of this concrete final Main scope. Prior preview review remains
+applicable to unchanged functional preview deliverables; acceptance metadata only.
+Upstream already checked today: unchanged4e1190ab; last actualsync93b759f.
+
+# Current resume point - 2026-11-01 - Acid preview reviewed and opened in Firefox
+
+Completed approved isolated two-acid before/after gallery and four representative
+calibration probes; no Main integration. External Firefox opened this verified URL:
+http://127.0.0.1:8013/docs/checks/acid-uniform-20261101/comparison/index.html?preview=0d4318f2a57a4db5
+User visual acceptance is pending. Both proposals have all heavy bonds .6188,
+C-H/O-H .3094, vertical ethyl and one vertical/one right isopropyl arm. All bonds
+orthogonal; no longer stems or graph/ID/nonxy/implicit-H changes.
+
+Fresh Reviewer /root/review_acid_uniform_preview checked49frozen paths at
+34cc3dd01dd02584b5a0cb0969890ad9a8007d79dac1cffdc06b8bf912f5f828: no P0-P3.
+Independent six-MOL reconstruction/8COOH/4SVGprimitive+frame+font+URL checks,
+58mask audits, eightPythonASTs and screenshots;2766protected files/index unchanged.
+Developer18native/40controls/8actual3DmodelURL/14UI/8figure/8HTTPdigest passed;
+noJS/clipping/labeloverlap/inkcontact/nonincidentmaskcut. Browser was not rerun by
+Reviewer. Initial direct-redraw test failure and existing highlight-DOM XML scrub
+are documented; no new application/export bug inferred. No PNG export, all21,
+lesson54steps, Safari/physicalmobile/offline/conference certification.
+
+Only completion metadata and notes changed after review; final-verification.json
+records functional target hashes. Main/core/sourceMOL/React/scenario/3D remain
+unchanged; no core.js/core-version change this work unit. No commit/push/publish.
+Owned isolatedFirefox13851closed; user's8013server/browser preserved.
+Next user assesses two proposals, then final integration plan. Prior31carbonyl
+Main integration remains unapplied/pending approval; allsix previews accepted.
+Upstream already checked today: unchanged4e1190ab; last actualsync93b759f.
+
+# Current resume point - 2026-11-01 - Acid isolated preview implemented; review pending
+
+User approved two-acid comparison plus representative calibration checks only.
+New deliverables: docs/checks/acid-uniform-20261101/comparison/.
+Two proposals use all heavy bonds .6188 and C-H/O-H .3094, with ethyl terminal
+C11 rotated up about C10 and isopropyl terminal C9 down about C7; H take vacated
+slots. No longer stems, diagonal bonds, graph/ID/property changes or new atoms.
+Four extra calibration checks preserve existing OH/NH2 implicit H; only transient
+viewer function/MOL overrides in a disposable Firefox context were used.
+
+Developer: 18 native cases at1500/390, 40 control states (actual selection,
+numbering/highlights, zoom, font refresh), 8 actual3Dmodel URL matches, 14 gallery
+UI cases, 8 standalone figure audits and 8 versioned HTTP digest checks passed;
+0 JS/clipping/label overlap/bond-ink contact, 58 offline native-stroke audits
+with no nonincident backplate cuts. Initial direct-redraw numbering test failed;
+corrected to the supported font-refresh entry point, failed attempt retained.
+Existing highlight DOM orphan attributes require the existing export scrub for
+ElementTree analysis in32control states; no native line/rect bytes changed by
+that offline scrub and no application/export defect is inferred from that parser.
+
+Chemistry Validator /root/acid_uniform_preflight independently checked six MOLs,
+8 COOH orientations, exact graph/IDs/nonxy/implicit H and two screenshots; no
+findings. Browser runs are Developer evidence. Final calibration only defers
+numeric tspan writes until validation; MOL hashes unchanged after chemistry review.
+2766 protected existing files unchanged, including all accepted carbonyl previews.
+Main data/viewer/HTML/core hashes match baseline; no core.js/core-version changes.
+Owned isolatedFirefox13851closed; user's server8013/browser preserved.
+
+Next freeze new preview target and obtain independent Reviewer, then open gallery
+in external Firefox. User visual acceptance pending. Main21acid integration and
+previous31carbonyl integration remain unapplied; four carbonyl lessons103steps
+and two acid lessons54steps not replayed. No React/sourceMOL/scenario/3D changes,
+commit/push/publication or wider conference/Safari/offline certification.
+Upstream already checked today: unchanged4e1190ab; last actualsync93b759f.
+
+# Current resume point - 2026-11-01 - Carboxylic acid uniformity: read-only preflight
+
+User requested the same expanded bond changes for carboxylic acids. Developer
+inventory: 21 molecules, 26 COOH groups, two lessons (28 + 26 = 54 steps).
+Read-only Chemistry Validator /root/acid_uniform_preflight independently found
+10 existing Expanded source MOLs matching embeds; all original COOH directions
+already satisfy vertical C=O and horizontal outward C-O-H.
+
+In-memory candidate drawing units: C-H/O-H 0.3094; C-C/C-O/C=O 0.6188.
+C-N in the amino acid requires an explicit plan policy: propose the same heavy
+unit 0.6188, preserving its existing NH2 label and implicit hydrogens. No atom
+addition is authorized. Existing alcohol-OH labels also need calibration checks.
+These are schematic 2D drawing units, not physical bond lengths.
+
+The uniform candidate has no detected coordinate collision/on-bond/crossing in
+19 cases; two require an isolated visual proposal before Main changes:
+ethyl_3_isopropyl_2_dimethyl_4_5_hexanoic_acid (H16/H32, H17/H28, H29/H37),
+ethyl_3_isopropyl_2_dimethyl_4_5_hexadien_2_4_dioic_acid (H24/H32).
+Original MOLs do not have those candidate coincidences. No browser validation
+or implementation was performed for acids. Geometry clearance does not prove
+rendered-label clearance. Validator confirmed the 11 older drawings exist in professor revision 93b759f;
+13 carboxylic H were added in prior local work, so current MOLs are not byte-
+identical professor originals. Preserve their current graph/IDs and explicit H.
+
+Next approval: isolated before/after preview for the two crowded acids plus
+representative simple/multifunctional calibration checks, under a new checks
+folder; preserve Main and accepted carbonyl previews. Then user visual review
+before final acid integration. The previous Main 31-carbonyl integration plan
+also remains pending explicit approval; all six carbonyl previews are accepted.
+Main four hashes unchanged. No core.js/core-version changes or commit/push/
+publication. Upstream already checked today: 4e1190ab unchanged; last sync93b759f.
+
+# Current resume point - 2026-11-01 - All six carbonyl previews accepted
+
+The user accepted the final fourth RIGHT layout and therefore all six previews.
+Their reviewed MOL/SVG files remain unchanged. Only acceptance metadata and
+project notes were updated in this turn; the four protected Main hashes match.
+
+Next: obtain approval of the final Main integration plan: 31 expanded aldehyde/
+ketone embedded MOLs plus 21 existing source copies; preserve the exact six
+accepted layouts, normalize the other 25 from the frozen original baseline,
+extend shared viewer calibration (including methanal C=O), update HTML cache
+URLs, verify chemistry and affected browser flows/four lessons (103 steps),
+and obtain consolidated independent review. Main integration is not applied.
+Core, React, other 2D representations, scenario JSON and 3D data are unchanged.
+No core.js/core-version changes, commit, push or publication in this turn.
+Upstream already checked today: unchanged 4e1190ab; last sync 93b759f.
+
+# Current resume point - 2026-11-01 - Fourth RIGHT restored/reviewed/opened; final visual acceptance pending
+
+ApprovedONLY4restorationcomplete: horizontalmethylRIGHT,H13LEFT,C7DOWN,H11UP,
+C4H12LEFT,alllengthsunchanged/allorthogonal. Accepted1/2/3/5/6MOL+SVGbyteexact,
+all6beforeunchanged;only4proposedversionedURLchanged. Main31NOTapplied.
+ExternalFirefoxopenedverifiedgallery AND directfourthSVG(lasttab):
+http://127.0.0.1:8013/docs/checks/carbonyl-uniform-20261031/comparison/index.html?fourthright=4f8cecd0cd25c9d7
+DirectfourthURLinsummary.json. HTTPpage/all12versionedSVGbytesverified.
+
+FreshReviewer /root/review_fourth_right_restore,64frozenpaths at
+8bf1e7998a82bc400b59e0a706c65db9626bc41edcddfa58c4454ee73619b50a,noP0-P3findings.
+Independent4reconstruction/pastRIGHTbyteidentity/graphfieldsvalence/acceptedfive
+preservation/generatorSVGmetadata/hashURLs/18maskaudits/2655Mainpaths verified;
+fourthscreenshotinspected. Developer3freshnative+15exactinputreused,22UI/24figure/
+24HTTPdigest0JS/clipping/inkcontact;notindependentlybrowserrerun. ChemistryValidator
+reusedpriorverifiedgeometrybecauseactual4MOLbyteexact. Completionmetadataonlyafter
+review, final-verification.jsonhashesconfirmed. Recoverybefore-fourth-rightretained.
+
+No Main/core/React/sourceMOL/scenario/3Dchanges orcommit/push/publication.
+No core.js/core-version changes inworkunit; Main4hashes/HEAD/indexsame.
+OwnisolatedFoxPID13125closed;user8013/browserretained. Useraccepted1/2/3/5/6;
+only4finalvisualdecisionpending. Allsixhasnotyetbeenacceptedcollectively,do not
+silentlyapplyMain31. Upstreamalreadycheckedtodayunchanged4e1190ab,lastsync93b759f.
+No wider31/fourlessons103steps/3D/offline/Safari/conferencecertification.
+NextuserconfirmsfourthRIGHT;thenreviewfinalMain31implementationplanandscope.
+
+# Current resume point - 2026-11-01 - Fourth RIGHT restored; targeted review pending
+
+User clarifiedRIGHTandapproved. RestoredONLY4horizontalCH3RIGHT/H13LEFT;C7down,
+H11up,C4H12left/alllengths preserved. Accepted1/2/3/5/6MOL+SVGexactunchanged.
+All6beforeMOL/SVGsame. Only4proposedversionedURL changed. Main31notapplied.
+Modifiedcomparisonprepare.py/check-spacing.py/template andderived4MOL/SVG/page;
+newrecapture-fourth-right.py, recoverycompletebefore-fourth-righttar/hashbaseline.
+
+ChemistryValidator confirmed4actualMOLbyteexactpastindependentlyreviewedRIGHT
+shape(ca31e73d...), reusedexistinggeometricproof,other5MOLsexact. Developer3fresh
+native+15reusedafterexactarchivedinput/calibrationchecks;18maskaudits0cuts/diagonals;
+22UI/24figure/24HTTPdigest0JS/clipping/inkcontact,1500/390/fonts18/26/controls18-36.
+3changedPythonASTsparsed;2655protectedMainpathsunchanged. PreservationJSON records
+allacceptedfiveunchanged. No Main/core/React/sourceMOL/scenario/3Dchanges orpublish.
+No core.js/core-version changes. PriorversionedURLmechanismunchangedandworking.
+
+Nextfreezeexacttarget/getboundedfreshindependentReviewer for4restoration then
+openupdatedcomparisonexternalFirefox. OwnisolatedFoxsession86216/profilefourth-
+right-0co9gs5nactivependingcleanup,user8013/browserpreserved. No commit/push.
+Upstreamalreadycheckedtodayunchanged4e1190ab,lastactualsync93b759f. Useraccepted
+1/2/3/5/6;final4visualdecisionpending. No wider31/lessons/3D/offlinecertification.
+
+# Current resume point - 2026-11-01 - Clarified fourth branch RIGHT; plan pending
+
+User clarified fourth horizontalbranch should goRIGHT (previousLEFTwasmistyped).
+Accepted1/2/3/5/6 remainunchanged. ProposedONLY4: proper180rotationC6/H14-H16 about
+C5 fromLEFTtoRIGHT, H13LEFT; C7DOWN,H11UP,C4H12LEFT andalllengthsunchanged.
+Developerreadonlymemorysimulation EXACTLYmatches archivedpreviousreviewedRIGHT
+fourth incomparison-before-isopropyl-20261101.tar.gz; minnonbond.2786/allorthogonal.
+Reuseknownverifiedgeometryforplanning; no newcode/MOLeditsyet. Presentconcreteplan
+andobtainapprovalunderAGENTS beforeimplementation. Afterapprovalrestoreonly4
+candidate/generator/test/derivedversionedimage, targetedbrowserchecks/independentreview.
+No Main31/core/React/sourceMOL/scenario/3Dchanges orpublish. No core.js/version change.
+
+# Current resume point - 2026-11-01 - User accepts1/2/3/5/6; fourth request ambiguous
+
+User now explicitlyaccepts previews1/2/3/5/6. Preserveallfiveexactcurrentlayouts.
+For4 repeatsrequest horizontalCCbranchLEFT, but suppliedphoto already showscurrent
+approvedlayout C6left ofC5 underorange, withC7down/H13right. No newchange canbe
+inferredsafely. Ask whethermoreleftextensionoradifferentbond intended; do notmove
+attachment/changeisopropylconnectivity. No implementationornewapprovalrequested
+untilintentclear. Currentversionedgallery/isopropylreviewremainsvalid; Main31notapplied.
+No code/MOL/corechanges inthisclarificationturn. No commit/push/publication.
+No core.js/core-version change. Next clarifyexactremaining4adjustment; otherfiveOK.
+
+# Current resume point - 2026-11-01 - Isopropyl2/4 adjustments complete; user visual decision pending
+
+Approvedcombined2/4previewimplemented/reviewed/openedinexternalFirefox:
+http://127.0.0.1:8013/docs/checks/carbonyl-uniform-20261031/comparison/index.html?isopropyl=a3a105db7e93da91
+Servedpage/all12versionedSVGbytesverified. RIGHT2upperorange.9000 andhorizontal
+isopropylCC.6188;RIGHT4horizontalmethylLEFT/H13RIGHT;C7down/H11up/C4H12leftpreserved.
+AllCH.3094/allorthogonal. Accepted5/6exactlyunchanged;1/3alsoexact. All6beforeMOL/
+SVGunchanged. Only2/4proposedSVGURLs changed. Main31notapplied.
+
+FreshReviewer /root/review_carbonyl_isopropyl reviewed63frozenpaths at
+ ecf66146fdb20a132be8832d73173b926a0d7385b6ed6818febf317a3eadb0b9,
+noP0-P3findings. Independent2/4reconstruction/6proposalMOLs/12SVG+HTMLbyteexact,
+metadata/hashURLs/preservation/18maskaudits/3PythonASTs/2655protectedpaths checked;
+2/4screenshotsinspected. Developer6freshnative+12exactinputreused,22UI/24figure/
+24HTTPdigest0JS/clipping/inkcontact;notindependentlybrowserrerun. ChemistryValidator
+separateactual2/4clean. Independent-report/final-verificationrecordscopeandhashes.
+Completionmetadata/notesonlyafterreview. Recoveryarchivebefore-isopropylretained.
+
+No Main/core/React/sourceMOL/scenario/3Dchanges orcommit/push/publication.
+No core.js/core-version change thissessionunit. Main4hashes/HEAD/indexunchanged.
+OwnisolatedFoxPID12636closed;user8013/browserpreserved. Userconfirmed5/6OK;
+new2/4visualacceptancepending. Originaloldimagecache/tabcauseunproven; versionedURLs
+working,oldopentabsneedrefresh. Alreadycheckedtodayupstreamunchanged4e1190ab,
+lastactualsync93b759f. No wider31/fourlessons103steps/3D/Safari/offlinecertification.
+Nextuserreviewsnew2/4, thenfinalsixlayoutdecisionbeforeanyMain31implementation.
+
+# Current resume point - 2026-11-01 - Combined isopropyl2/4 implemented; review pending
+
+User approved2upperorange.9000/horizontalCC.6188 and4horizontalmethylLEFT/H13RIGHT.
+Appliedonlycomparisonprepare.py/check-spacing.py/template andderived2MOL/SVG/page.
+AllCH.3094/allorthogonal. #4C7down/H11up/C4H12left preserved. Accepted#5/#6 exactly
+preserved; #1/#3alsoexact. Beforeall6MOL/SVGunchanged. VersionedimageURLs changed
+ONLY2proposed/4proposed,provedisopropyl-preservation-check.json.
+
+Recoverycompletepreviousgalleryincomparison-before-isopropyl-20261101.tar.gz,
+SHAisopropyl-adjustment-baseline.json. Newrecapture-isopropyl.py6freshnativecases
+for2/4+12oldcasesonlyafterexactarchivedinputMOL/calibrationbytechecks. Developer
+18nativebackplatecases0cuts/0diagonals;22UI/24figure/24HTTPdigestresponses0JS/
+clipping/inkcontact at1500/390/fonts18/26 andcontrols18-36.3changedPythonASTs parsed.
+FreshChemistryValidator actual2/4 independentlyreconstructedfromarchive, clean;
+minnonbond.2812/.2786,other4MOLsexact. 2655protectedMainpathsunchanged.
+
+Nextfreezeisopropyltarget/getfreshindependentReviewer, thenopenupdatedcomparison
+externalFirefox. OwnisolatedFoxsession33284/profileisopropyl-adjustment-i1xpwpoy
+activependingcleanup;user8013/browserpreserved. No Main/core/React/sourceMOL/scenario/
+3Dchanges orcommit/push/publication. No core.js/core-version changes. Main31notapplied.
+Alreadycheckedtodayupstream4e1190abunchanged,lastsync93b759f. Useraccepted5/6;
+new2/4visualdecisionpendingafterreview/open. No full31/lesson3D/offlinecertification.
+Historicalasset-versioning-regression isadoptionbytepreservationcheck;notrerunafter
+intentionalgeometrychange;currentversionedassetHTTPdigestsverifiedinstead.
+
+# Current resume point - 2026-11-01 - User accepts previews5/6; combined2/4 plan pending
+
+User explicitly says fifth and sixth are OK. Preserve those exact currentproposals.
+PreviouslydirectfirstSVGconfirmedcorrect. No Main31integrationauthorization.
+Pendingcombinedplanbeforecode: #2upperorangeC3-C8 .588->.9000, horizontalisopropyl
+C8-C10 .9282->.6188 (other5unaffectedbythischange). #4horizontalmethylC6movesLEFT
+viawholeCH3+H14-H16proper180rotationaboutC5; H13movesRIGHT; C7DOWN/H11UP/C4-H12LEFT
+stay. AllCC/CHlengths#4unchanged,allbondsorthogonal. ChemistryValidator independently
+simulated4: no conflicts/crossings/overlaps/atomonbond, minnonbond.2786(C3/H14),
+theoreticalmaskclearance.1506. #2previous.9000/.6188candidateclean,min.2812.
+Allpreflightread-only,no code/MOL changes. Needconcretecombinedplanapproval, then
+implementONLY2/4/rebuildversionedimageURLs,targetedbrowserchecksandindependentreview.
+Keepaccepted5/6byteunchanged;1/3alsooutsidechange. No Main/corechanges orpublish.
+No core.js/core-version changes. Same-dayupstreamcheckalreadyrecordedunchanged.
+
+# Current resume point - 2026-11-01 - Second isopropyl stem/arm rebalance plan pending
+
+User asks onlysecondproposed upperorange toincrease sohorizontalisopropylCCequals
+othernormalCC. Read-onlyDeveloper+independentChemistryValidator memorypreflight:
+C3-C8 .588->.9000 (wholeisopropylup .3120), C8-C10 .9282->.6188 (terminalC10+
+H30-H32right .3094). OnlyC8/C9/C10/H26-H32 move; allotherpositions/lengths unchanged.
+Allorthogonal/CH.3094/valencesunchanged; no conflicts/crossings/overlaps/atomonbond.
+Minnonbond.2812(H17/H30); theoreticalmask+strokeclearance.1532(squarehalf.123,
+stroke.005). Browsernotrunfornewcandidate. Needconcreteplanapprovalbeforecode.
+Allother5proposalsunchanged; Main4hashesconfirmedunchanged. No code/MOL/core edits.
+Nextpresent.9orange/.6188horizontalproposal; afterapprovalimplementonlysecond,
+rebuildversionedassets/browserchecks/independentreview. Main31notapplied.
+No core.js/core-version changes inplanningturn. Upstreamalreadycheckedtoday
+unchanged4e1190ab;lastactualsync93b759f. No commit/push/publication.
+
+# Current resume point - 2026-11-01 - Versioned comparison image delivery complete
+
+ApprovedassetURLworkcomplete andopenedexternalFirefox:
+http://127.0.0.1:8013/docs/checks/carbonyl-uniform-20261031/comparison/index.html?images=c2a6c1ac3ebb1af0
+Page/all12versionedSVGbytesverifiedHTTP. build.py usesfilename?v=fullSHA256;
+figure-framing/indexcarryversions;test-page.py parsesURLs/checksdigests.
+Newasset-versioning-regression.py provesstableinputstableURLs/onechangedSVGonly
+newURLviaisolatedtemporarymutation. All12SVGs/MOL/native/calibrationbytesunchanged.
+
+FreshindependentReviewer /root/review_carbonyl_asset_versioning reviewed41frozen
+paths at024c9e8d2dc817673d0d43d06f847dc753d073e97cc0ba06b858bba50f58916e,
+noP0-P3findings. Independentlyrebuilt14outputsbyteexactinmemory/verifiedhashURLs,
+12valid4invalidpathcases,3PythonASTs,45protectedpreviewfiles/2655protectedMainpaths,
+recoveryarchive/consumers/screenshots. Developerruntime22UI/24figure/24HTTPdigest
+responses(default+force-cache)0JS/clipping/inkcontact,notindependentlyrerun. See
+independent-review.json/final-verification.json. Completionmetadataonlyafterreview.
+
+Originaloldtab/cachecauseunproven; directcurrentfirstimagewasconfirmedcorrectby
+user. Updatedpagesrequestcontent-specificURLs; oldopentabsarenotliveupdated and
+needrefresh. No claimofuniversalcachedisposal/Safari/deploymentcertification.
+Known verified6geometry remains: #1/#3/#6allheavy.6188,CH.3094;#2/#4orange.588,
+#2lateralBLACK.9282;#4leftCHhorizontal;#5unchanged;all6orthogonal. Main31notapplied.
+
+No Main/core/React/sourceMOL/scenario/3D changes orcommit/push/publication.
+No core.js/core-version change thissessionunit. ProtectedMainhashesunchanged.
+Recoveryasset-versioning-before.json.gz +baseline retained. OwnisolatedFoxPID12174
+closed;user8013/browserpreserved. Upstreamcheckedtodayunchanged4e1190ab,lastsync93b759f.
+Next userreviewsremainingproposals; anyMain31integrationrequirespreviousvisual
+acceptance andbroaderplanned2D3D/fourlesson103stepchecks. No automaticpublication.
+
+# Current resume point - 2026-11-01 - Versioned comparison assets implemented; review pending
+
+User approved content-hashed SVGURLs in isolatedcomparison afterdirectfirstimage
+confirmedcorrect. Changedbuild.py toemitfilename?v=fullSHA256 infigure-framing/index.
+Updatedtest-page.py toresolvequeryURLs/verifylocaldigest and24actualFirefoxresponse
+digests(default+force-cache). Addedasset-versioning-regression.py: isolatedtemporary
+builds prove stableURLswithsameinput; mutationoneSVGdescchangesonlyitsURL.
+NoSVG/MOL/nativecapture/calibration/Main/core changes. 45protectedpreviewfiles
+(includingall12SVGs)byteunchanged versusasset-versioning-baseline.json; recovery
+asset-versioning-before.json.gz preserves prior code/page/metadata.
+
+Developer22UI/24figureaudits+24HTTPdigestresponses pass,zeroJS/clipping/inkcontact;
+1500/390/fonts18/26/UIcontrols18-36.3changedPythonASTspass.2655protectedMainpaths
+unchanged. Othercodeconsumersofimages reviewed;test-page isadapted andnewregression
+parsesURLs. No chemistry/native matrix rerunnecessarybecausebytesunchanged.
+Initialuserdisplaycause(oldtab/cache)remainsexactlyunproven; newURLmechanismavoids
+reusinganassetaddresswhencontentchanges inupdatedpage. Itdoesnotlive-updatealready
+openoldpages. Do notclaimoriginalcachecauseproven oruniversalinvalidationguarantee.
+
+Nextfreezeassetversioningtarget,getfreshindependentReviewer scopedbuilder/URLs/
+bytepreservation/browserdelivery, thenopennewpageinexternalFirefox. OwnisolatedFox
+session52567/profileversioned-gallery-n7amfz96activependingcleanup;user8013preserved.
+No Main/core/React/sourceMOL/scenario/3D changes, no commit/push/publication.
+No core.js/core-version change. Prior6geometryreviewremainsvalid; Main31notapplied.
+Upstreamalreadycheckedtoday4e1190abunchanged,lastactualsync93b759f.
+
+# Current resume point - 2026-11-01 - User confirmed direct current first SVG correct
+
+User says newdirectfirstSVGisOK. This confirms currentequalCCgeometryaccepted for
+firstmolecule; doesnotapproveMain31 ornecessarilyremaining5. Priorphoto differed;
+exactoldtab/cacheoriginunknown. Proposednextpreventiveplan(pendingapproval):
+build.py emitscontent-hashquery URLs foreachSVG intofigure-framing/index;test-page.py
+resolveslocalpathwithoutquery andassertsURLdigestmatchesSVGbytes. Preserve12SVG
+bytes/MOLs/calibration/Main/core. RunexistinggalleryUI/figurechecks andHTTPbyte
+checks; independentReviewer scopedURLdelivery. No needrepeatmoleculargeometry/native
+matrix becausecontentunchanged. UpdatedpagesrequestnewassetURLwhenpicturechanges;
+already-openoldpagesarenotautomaticliveupdates. No codechangesyet;coreunchanged.
+Nextpresentconcreteplanandaskapproval. DiagnosticJSONupdatedwithuserconfirmation.
+
+# Current resume point - 2026-11-01 - First molecule screenshot differs from current served SVG
+
+User photo shows firstRIGHTproposed orange stems approximately1.6xnormalCC, so
+visualcomplaintvalid. Read-only investigation: currentMOLallheavy.6188; captured/
+exported/HTTPservedSVGparentCC1125nativeunits, orange1125and1126(1unitintegerrounding,
+approx.06CSSpxatfont26). This cannotexplainphoto1.6ratio. Currentcachedgeneration
+isnotmissingtheMOLchange; actualuserdisplaydiffers fromcurrentservedfile.
+Hypotheses oldimagecache/oldertab/differentURL; exactbrowsercause notinspected.
+Opened currentbyte-verified firstSVGdirectly inexternalFirefox withcontenthashquery:
+http://127.0.0.1:8013/docs/checks/carbonyl-uniform-20261031/comparison/ethyl_2_methyl_3_pentanal-proposed.svg?verified=c9b60bdc97774f99
+Detailsfirst-molecule-display-investigation-20261101.json. No source/MOL/core edits.
+Next userchecksnewdirectimage. Ifresolved, proposegallerycontent-hashedimageURLs
+andtestadaptation beforecodeedits topreventstaleimageURLs; do notclaimcachecause
+provenyet. Main/core unchanged; previousequalCCreview remainsvalidfunctionalcontent.
+No commit/push/publication. No core.js/core-version change in this diagnosticturn.
+
+# Current resume point - 2026-11-01 - Equal CC previews complete; user visual decision pending
+
+Approvedincrementalpreviewcomplete andopened inexternalFirefox:
+http://127.0.0.1:8013/docs/checks/carbonyl-uniform-20261031/comparison/index.html?equalcc=20261101
+Servedpage/all12SVGbytesverified. RIGHTproposed#1/#3/#6allheavyCCCO=.6188/CH.3094;
+#2/#4/#5MOLs+proposedSVGsbyteunchanged frompriorverifiedpreview. #2iso2vertical1
+horizontalwith.9282lateralexception;#4iso2vertical1horizontal/farleftCHhorizontal.
+All6orthogonal. All6beforeMOL/SVGunchanged. No Main31 integration applied.
+
+FreshReviewer /root/review_carbonyl_equal_cc reviewed62frozenpaths at
+526a1bf6733ff1f04c99f9c5052d2582b49ad5f4782351fc2572e6b61526ea81,
+no actionableP0-P3 findings. Independent3MOLreconstruction/graphs/lengths/fields/
+orthogonality/conflicts,12SVG/page rebuildbyteexact,18maskcases0cuts/diagonals,
+9reusedrecords/inputsbyteexact+9freshartifactmatch,7PythonASTs,2655protectedpaths/
+HEAD/index andscreenshots1/3/6/390 checked. Developeractualruntime9fresh+9reused,
+22UI/24figure0JS/clipping/inkcontact. ChemistryValidator separate actual3clean.
+Reviewerauxiliary EXACTnative/MOLscaleratioassertionfailedonintegercoordinate
+quantization; notcountedpassing; MOLlengths/nativeorthogonality/masks verified
+separately. Nofunctionalissue identified fromthatauxiliaryassertion. Seereport.
+Onlycompletionmetadata/notes changed afterreview; final-verification.json records
+hashchecks. No core.js/core-version changes thissessionunit; Main4hashes unchanged.
+
+Recoverypoint comparison-before-equal-cc-20261101.tar.gz retained withSHA in
+comparison/equal-cc-baseline.json; priororthogonalreporthistorical. OwnisolatedFox
+PID11805closed;user8013/browserpreserved. NoMain/core/React/sourceMOL/scenario/3D
+changes orcommit/push/publication. Existinguncommittedethersmustbepreserved.
+Upstreamalreadycheckedtodayunchanged4e1190ab,lastactualsync93b759f. Wider31Main/
+fourlessons103steps/Safari/mobile/offline/conferencereliabilitynotcertified.
+Next userinspects/acceptsoradjustsRIGHTproposed6drawingsbeforeMain31implementation.
+
+# Current resume point - 2026-11-01 - Equal CC previews implemented; final review pending
+
+User approved onlyorangeCC#1/#3/#6 equalnormal.6188. Updated isolatedcomparison
+prepare.py/check-spacing.py/template andderived3MOL/SVG/page/evidence. Other#2/#4/#5
+MOLsbyteunchanged. Theiriso2vertical+1horizontal and#4leftCHhorizontal alreadyfit
+request. Allsixorthogonal;CH.3094;#2/#4orange.588;#2lateralBLACK.9282 retained.
+Main31 NOTmodified. Fullpreviousverifiedpreview retained in
+comparison-before-equal-cc-20261101.tar.gz/hash equal-cc-baseline.json.
+
+Addedrecapture-equal-cc.py:9newnativecases for3changedmolecules+9oldcases onlyafter
+exactarchivedMOL/calibrationbytechecks. Nativebackplateaudit18cases0cuts/0diagonals;
+22UI/24figurechecks0JS/inkcontact/clipping,1500/390/fonts18/26,controls18-36.
+7PythonASTsparsed. SeparateChemistryValidator finalactual3MOLs independentlyrebuilt
+fromarchive, clean;other3hashsame. Minnonbond1/3=.437558,6=.3094.2655protectedpaths
+unchanged,Main4hashes/HEAD/index unchanged. Seechemistry-review.json.
+
+Next freezeequalCCtarget/getfreshindependentReviewer, thenopennewcomparison in
+externalFirefox. Pendingreview mustnotusehistoricalorthogonalreviewasnewapproval.
+OwnisolatedFirefoxsession9830/profilecarbonyl-equal-cc-stac3vlc activeforcleanup;
+user8013/browserpreserved. No core.js/core-version/Main/React/sourceMOL/scenario/3D
+changes; no commit/push/publication. Upstreamalreadycheckedtodayunchanged4e1190ab,
+lastactualsync93b759f. Full31/fourlessons103steps/Safari/physicalmobile/offline not
+certifiedbyisolatedpreview. Uservisualdecisionremainsnextafterreview/opening.
+
+# Current resume point - 2026-11-01 - Equal orange/normal CC preview request; plan approval pending
+
+User requests #1/#3/#6 orangeCC equal ordinaryCC=.6188; #2isopropyl2verticalCC+
+1horizontal; #4same+farleftCHhorizontal; #5unchanged. Read-only inspection confirms
+currentRIGHT proposed#2alreadyCC3-8vertical/8-9vertical/8-10horizontal(.9282approved
+exception);#4alreadyCC2-5vertical/5-7vertical/5-6horizontal andC4-H12left horizontal.
+Clarify comparisonchanges belong in RIGHT proposedcolumn; beforeleft staysMain.
+Plan only changes currentproposed#1/#3/#6 stems via whole-subtree translations.
+#2/#4/#5 remain exactly current. CH.3094 andallorthogonal invariant. No code edits.
+
+Developer memorycheck+independentChemistryValidator /root/carbonyl_geometry_preflight
+confirmed candidatesclear: minnonbond #1/.437558,#3/.437558,#6/.3094(O14/H28), no
+crossings/collinearoverlaps/atoms-on-unrelatedbond. AllheavyCCCO.6188 for these3;
+theoreticalmaskclearance.1814 (squarehalf.123+stroke.005). Actualbrowsernotrun for
+newcandidate. Main4hashesunchanged. Priorindependentlyreviewedorthogonalpreview
+remains current (manifest12226080...93paths), no freshcode/reviewneededyet.
+Next present exactplanandgetapproval; then snapshots/generator-MOL-SVG-pageupdates,
+targetednative/browser/maskaudits +independentreview. Do not changeMain31.
+No core.js/core-version change or commit/push/publication in this planningturn.
+Upstreamalreadycheckedtoday4e1190ab unchanged;lastactualsync93b759f unchanged.
+
+# Current resume point - 2026-11-01 - Orthogonal spacing previews complete; user visual decision pending
+
+Approved final six-preview experiment complete and opened in external Firefox:
+http://127.0.0.1:8013/docs/checks/carbonyl-uniform-20261031/comparison/index.html?orthogonal=20261101
+Served page and all12SVGbytes verified HTTP200. ALL six proposed expanded drawings
+have only horizontal/vertical bonds, includingH. #1-4orange.588; #2oneisomethylUP,
+oneLEFT withapproved lateralBLACKC8-C10 .9282/H26right; #4H12left/H11up/C7down/
+H13left; #5unchanged; #6allorange.3713. CH.3094, othernormalheavy.6188.
+No Main31 integration applied. Await visual acceptance/adjustment of six proposals.
+
+Fresh independentReviewer /root/review_carbonyl_orthogonal_spacing reviewed93
+frozenpaths at12226080848e9fca6ea76c44b0648a1a94392fb384c94b818fc067ad3bc3dab1,
+no actionable P0-P3 findings. Independently checked sixMOLs/graphs/fields/lengths/
+orthogonality/conflicts,18nativebackplatecases0cuts/0diagonals, rebuilt12SVGs/
+framing/index in memory andcomparedexact,7PythonASTs,2655protectedpaths/HEAD/index,
+all7screenshots. SuppliedDeveloper runtimeevidence:3fresh#2nativecases+15exact
+unchangedinputsreusedwithhashes;22UI/24figurechecks0JS/noinkcontact/clipping.
+ChemistryValidator separate finalgeometry clean. See independent-review.json and
+final-verification.json. Completionmetadata/notes only changed after review.
+
+Main/data52/viewer52/core52/React/sourceMOLs/scenarios/3D unchanged this session.
+Core52SHA256d2138418ff630ab77e578b80ca8ba3a10cc1b877c3ab8c0e5c2735ffcd1f24a2.
+No core.js/core-version changes; no commit/push/publication. Existing uncommitted
+ethers must be preserved. Reversible snapshots before spacing and before orthogonal
+revision retained with hashes. Rejected V firstattempt reproduces maskcuts and
+orthogonality failure; current new regression passes. Oldreviews/check-vertical
+are historical, not checks forcurrentrevision. OwnisolatedFirefoxPID11340 closed;
+user8013/browser retained. Upstreamchecked2026-11-01unchanged4e1190ab, lastsync93b759f.
+
+Next: user inspects/accepts or adjusts sixpreviewdrawings. Only afterward final31
+Mainimplementation/fourlessons103steps/2D3D verification can proceed. No current
+Safari/physicalmobile/offline/conference certification from this boundedpreview.
+
+# Current resume point - 2026-11-01 - Orthogonal six-preview option A implemented; review pending
+
+User approved option A: all expanded-preview bonds horizontal/vertical, #2one
+lateralBLACK C8-C10 .9282, othernormalheavy.6188 andCH.3094. #1-4orange .588;
+#4H12left,H11up,C7down,H13left; #5byteunchanged; #6allorange.3713. #2C8C9up,
+C8C10left,H26right. No V/angledH remains in active candidates. Main untouched.
+
+Changed comparison prepare.py/check-spacing.py/recapture-second.py/audit-backplates.py/
+template.html and derived candidates/SVG/page/captures. Added strictorthogonality
+assertions atgeneration, geometrycheck and actualnativeSVGstrokeaudit. Rejected V
+trial retained in comparison-before-orthogonal-20261101.tar.gz; original approved
+vertical preview in comparison-before-spacing-20261101.tar.gz. Negative regression
+onfirstV reproduces8nonendpointmaskcuts; finalbackplateaudit18cases0cuts/0diagonals.
+Freshread-onlyChemistryValidator finalgeometry/hashes clean. Developer3newtargeted
+nativecases for#2 +15unchangedinputs reusedwithhashchecks;22UI/24figurechecks0JS,
+noinkcontact/clipping at1500/390, fonts18/26 andcontrols18-36.7Python ASTspass.
+All2655protectedbaselinepaths unchanged; HEAD/index unchanged, no corechange.
+
+Next freezeexacttarget and getfreshindependentReviewer for logicalspacingunit;
+thenopenupdatedcomparison in externalFirefox andrecordcompletion. Currentprevious
+reviews are historical, not approval of new unit. Own isolatedFirefox session47880
+profilecarbonyl-orthogonal-fm0rb5hv activependingcleanup; user8013/browserpreserved.
+No Main/core/React/sourceMOL/3D/scenario edits, no commit/push/publication. Full31
+integration/fourlessons103steps/Safari/physicalmobile/offline not certified.
+Upstream2026-11-01checkedunchanged4e1190ab; lastactualsync93b759f.
+
+# Current resume point - 2026-11-01 - User rejects V; final preview must be all orthogonal
+
+USER CORRECTION: all expanded-preview bonds, including H, must be horizontal or
+vertical. No V or angled H. Main unchanged. Do NOT treat current trial as approved.
+New spacing code/artifacts exist locally but second candidate currently uses V;
+not opened in external Firefox as final, no independent final review performed.
+summary.json marks incomplete/rejected V. Need new plan approval only for material
+extra length change in #2. No automatic Main31 integration/publication.
+
+Completed earlier approved experiment in prepare.py/build.py/template.html and
+comparison derived MOL/SVG/page/captures: #1-4orange .588, #5unchanged, #6all .3713;
+#4H12left,H11up,C7down,H13left. Previous full approved vertical preview retained in
+comparison-before-spacing-20261101.tar.gz/hash in spacing-baseline.json.
+Initial V with cardinal H caused four non-endpoint white-backplate cuts, reproduced
+at1500/390 (8total). Retained spacing-v-first-attempt/. Corrected terminal H fans
+and centralHleft removedcuts; audit-backplates.py confirms0across18. This V/fan
+candidate is now rejected by user due diagonal bonds, despite geometric checks.
+Added check-spacing.py, audit-backplates.py, recapture-second.py. Developer latest
+18native cases(15unchangedinputreuse+3targetedsecondrecapture),22UI/24figurechecks
+zeroJS/inkcontact/clipping. Chemistry Validator finalgeometry checks clean for
+that trial. No finalindependentReviewer yet; do not cite old reviews for newtrial.
+Harness startup port race fixed by waitingready; geometryassertion double-rounding
+fixed in testonly; neither an app change. First attempt evidence preserved.
+
+Read-only ChemistryValidator verified orthogonal #2 alternatives, same common
+shape: C8-C9verticalUP(+90terminalCH3/Hrotation), H26right, C8-C10horizontalLEFT:
+A recommended: all3orange .588; only lateralBLACK C8-C10 .6188->.9282; allCH.3094.
+B: keepBLACK .6188, restoreisoORANGE C3-C8 .98; otherorange.588.
+Both clear/crossingfree, allorthogonal; minnonbond A.2786/B.3612, theoreticalsquare
+backplate+stroke clearance A.1506/B.1814. Browser not run for A/B. Need userapproval
+for new length exception. #1/#3/#4/#5/#6 as requested remain planned unchanged.
+
+Main4hashes/HEAD/index match sessionstart (core52d2138418...). No core.js/version
+change this session. No Main/React/sourceMOL/scenario/3D changes or commit/push/
+publication. Owned isolatedFirefoxPID11020 closed; user's browser/server preserved.
+Upstream checked2026-11-01unchanged4e1190ab; lastactualsync93b759f, see next entry.
+Next: present exact orthogonal optionA with one blackbond extension and obtain
+approval; implement #2 only, add strict orthogonality assertion all6, targeted
+browser/backplatechecks, regeneratepage and consolidatedindependentreview.
+
+# Current resume point - 2026-11-01 - New six-preview spacing request; plan pending
+
+User requested in Firefox list: #1/#2/#3 orange stems reduce by40% (.98->.588);
+#2 alkyls more vertical; #4 H at screen-left aldehyde left (C4/H12), H on second
+screen-left parent above (C3/H11), morevertical isopropyl, orange stem.588;
+#5 unchanged; #6 all orange stems equal40% OF current smallest (.9282*.4=.37128,
+MOL4decimal .3713). Scope isolated preview only, no code edits made yet.
+Read-only Developer/Chemistry Validator simulation: #1/#3/.588 clear; #6/.3713 clear;
+#4 requested H changes plus one outwardvertical isopropyl arm clear min.2786.
+#2 shortening alone causes overlapping C-H segments/H pairs15/27 and17/30 .0308;
+oneverticalarm leaves othercollision. Bothstrictvertical arms wouldcoincide.
+Rigidterminal V60 rotations give internalH28/H31 .083 proximity; unsuitable.
+Planning alternative V60 carbon arms plus terminalH outwardhorizontal/up/down,
+centralH26up independently verified by Chemistry Validator: min.320314, no
+crossings/collinearoverlaps/atomonunrelatedbond; browser remains untested.
+This reorients terminalH in expandeddiagram;
+requires explicit proposedlayoutapproval before implementation/browserchecks.
+
+Start-session review completed2026-11-01: upstreamHEAD/main4e1190ab3d58f5eb384f1583bfe05e37242bef61
+unchanged versus lastchecked; actual remoteCHANGELOG read SHA256
+b1211403fdbdf60bde5e3334f234b3063c9230ea8126b72fe7a2603d2cdf5f67;
+GitHub latest3commit history read, no new commits. Lastactuallysynced93b759f...
+unchanged. No new sync or overlap introduced. ReadREADME/currentnotes/relevant
+previewgenerator and pendingplan. Main4hashes match priorbaseline, HEAD168e3cec.
+No Main/core/React/MOL/scenario changes, no commit/push/publication. Coreunchanged.
+Next present exactboundedplan including #2 diagonalV choice and obtainapproval;
+then create reversible preview revision, browserchecks and independentreview.
+
+# Current resume point - 2026-10-31 - Vertical carbonyl previews complete; user decision pending
+
+Approved vertical revision complete ONLY in isolated six-preview gallery. Five
+ethyl terminal CH3 groups rotated +90 degrees in four candidates; five CH2 H moved
+into vacated directions. Parent stays horizontal, ethyl continuations vertical,
+isopropyl stems vertical with distinguishable horizontal terminal arms. Other two
+candidates already fit requested layout. Normal heavy .6188/C-H .3094 and previous
+special stem lengths preserved. No Main implementation applied.
+
+Updated comparison opened in external Firefox (HTTP200/page+12SVG bytes verified):
+http://127.0.0.1:8013/docs/checks/carbonyl-uniform-20261031/comparison/index.html?vertical=20261031
+Fresh independent Reviewer /root/review_carbonyl_vertical_preview reviewed59
+frozenpaths at343a0330a504fb241299f34adb2770161354e5914afddca9784b817b7c6d34f1,
+no actionable P0-P3 findings. Independently checked geometry, preserved fields,
+SVG correspondence/framing/fonts, screenshots and baseline hashes. Browser runtime
+checks are Developer evidence:18native/22UI/24figure,0JS. Chemistry Validator also
+independently checked final geometry. See independent-review.json and
+final-verification.json. Only completion metadata/notes changed after review.
+
+Previous complete preview retained as hashed comparison-before-vertical.tar.gz.
+All2655 protected baseline paths unchanged. Main/core52/React/sourceMOL/scenarios/
+3D/HEAD/index unchanged. No core.js/core-version change in this work unit. No commit,
+push or publication. Owned isolatedFirefoxPID9373 closed; user8013/browser retained.
+Upstream lastchecked4e1190ab unchanged, lastactualsync93b759f. Completed ethers
+remain uncommitted and must be preserved. Safari/physicalmobile/offline/full31
+integration and fourlessons/103steps not certified by this preview.
+
+Next: user inspects and accepts/adjusts vertical six-preview design before approved
+final31 implementation can proceed. Do not silently apply to Main.
+
+# Current resume point - 2026-10-31 - Vertical branch preview ready for independent review
+
+User approved vertical branches in six isolated carbonyl previews. Implemented five
+ethyl terminal CH3 rotations (+90 degrees in MOL axes) in four molecules and five
+CH2 H swaps into vacated slots. Other two molecules already satisfy requested
+vertical stems; isopropyl arms remain left/right. Main was NOT changed.
+
+Changed preview prepare.py, geometry/MOL candidates, build/template/index, derived
+SVGs/screenshots and test evidence under checks/carbonyl-uniform-20261031/comparison.
+Retained complete prior comparison in comparison-before-vertical.tar.gz with hash
+in vertical-baseline.json. Added check-vertical.py for bounded geometry regression.
+Fresh read-only Chemistry Validator confirmed graphs, IDs, fields, lengths,
+unaffected coordinates and clear geometry; see chemistry-review.json.
+Developer actual native18, gallery22 and exportedfigure24 checks passed, zero JS
+errors, at1500/390 and actual fonts18/26, controls18-36. Five Python scripts parsed.
+2655 protected baseline paths unchanged; notes only differ. Core52/HEAD/index same.
+
+Next freeze target and obtain fresh independent Reviewer; then open updated page
+in external Firefox. No final31 integration, lessons/3D/Safari/offline certification.
+Own isolated Firefox session40715/profile carbonyl-vertical-okr1zur2 active for now;
+user existing8013 server/browser preserved. No commit/push/publication/core change.
+
+# Current resume point - 2026-10-31 - User requests vertical branches in six previews
+
+User visual feedback: make all branches as vertical as possible. Read-only check:
+all parent-to-branch C-C stems already vertical in six proposed MOLs; ethyl groups
+turn horizontally at their second C. Plan pending approval: revise isolated
+six-preview proposal only, extend ethyl carbons vertically away from parent,
+reposition affected branch H into free directions with fixed .3094 lengths,
+keep heavy lengths/policies and graph/IDs/orders unchanged; isopropyl terminal
+arms must remain distinguishable without collinear overlaps. Main untouched.
+Need chemistry validation, before/after browser comparisons and independent review.
+This material change to original-direction constraint requires plan approval.
+Previous completed six-preview evidence remains baseline; no code changes yet.
+No core change. Next present exact plan and wait for approval.
+
+# Current resume point - 2026-10-31 - Six carbonyl previews complete; user visual decision pending
+
+Approved isolated six-molecule comparison is ready and opened in external Firefox:
+http://127.0.0.1:8013/docs/checks/carbonyl-uniform-20261031/comparison/index.html
+HTTP 200 and served page bytes verified. Before/proposed gallery has six choices,
+previous/next navigation and font slider. Main implementation has NOT been applied.
+
+Independent read-only Reviewer /root/review_carbonyl_six_preview, fresh context,
+reviewed 51 frozen paths, manifest SHA256
+680fd51f91ce3f1208647244ac03f83b3bd1c8670ec20f82f5318b3d24821d1a,
+with no actionable P0/P1/P2/P3 findings. Independently checked hashes, MOL geometry,
+SVG correspondence/framing, calibration and screenshots; browser checks remained
+Developer evidence (18 native cases, 22 UI cases, 24 figure audits, zero JS errors).
+See comparison/independent-review.json and final-verification.json. Completion
+metadata/notes only changed after review; reviewed functional artifacts preserved.
+
+All 2655 protected baseline paths unchanged; two bookkeeping notes updated.
+Main, core52, React, source MOLs, scenario JSON and 3D unchanged in this preview unit.
+No commit/push/publication. Owned headless Firefox PID8841 stopped; existing user
+server8013/PID890 and external Firefox preserved. Upstream check unchanged4e1190ab;
+last actual synchronization93b759f. No core.js/core-version change this session unit.
+
+Next: user inspects/accepts or adjusts the six proposed branch spacings BEFORE
+final 31-molecule implementation. Four aldehydes .98 stems; trimethyl only C4-C8
+.98; diethyl original2x .9282 /3x1.2376. Normal heavy .6188, C-H .3094.
+Do not apply automatically. Full Main integration, four lessons/103 steps and 3D
+verification remain pending; Safari/physical mobile/offline not certified.
+Prior completed uncommitted ethers must be preserved.
+
+# Current resume point — 2026-10-31 — Six carbonyl previews ready; final independent review pending
+
+User approved FIRSTvisualcomparison6, beforefinalMain31implementation. Newfiles
+onlyunder docs/checks/carbonyl-uniform-20261031/comparison/. Original/candidateMOLs,
+prepare.py,isolatedcapture,preview-onlycalibration copiedMainfunction+6eligibility
+keys,12actualSVGfigures/commonfontnormalization,staticcomparisonpage/dropdown/
+prevnext/fontslider. Fouraldehydeslongstems.98;trimethylONLYC4C8.98;diethyl2x.9282/
+3x1.2376;normalheavy.6188CH.3094. Directions/graphs/IDs/nonxy preserved.
+
+Developer actualrenderer18cases(before/proposed1500+proposed390)0JS;page22UIchecks
+and24exportedfigureinkaudits(font18/26)0JS. SamepairviewBox,parentmidpoint and
+commonactualfont acrossall6;CSSsize slider18-36. InitialstrictUIheightcomparison
+failedonly.0000305CSSpxrounding atstackedimage;measuredcase retained,finalbound
+.001CSSpx. No productfix wasneeded for thatharnessprecision. FreshChemistry
+Validatorread-onlyfinal6pairs clean,2657baselinefiles/HEAD/index/coreunchanged.
+Mainapp/React/3D/scenarios/sourceMOLs NOTedited. No final31unit applied/tested.
+
+Next freezepreviewtarget/getfreshconsolidatedReviewer,thenopencomparisonindex
+inexternalFirefox onuser8013. Awaituservisualfeedback/acceptance beforeMain31
+implementation; do notsilently applyspecialstems. Ownheadless9237active(profile
+pathjob inapplication-baseline.json,session15906);user8013existingserverpreserved.
+Upstreamchecked4e1190abunchanged,lastactualsync93b759f;no sync/corechange/publish.
+
+# Current resume point — 2026-10-31 — Aldehyde/ketone preflight; visual-preview plan pending approval
+
+User asks same expanded bondlength changes for aldehydes+ketones. Investigation
+read-only; no app/core edits after completedetherunit. Inventory actualcore
+seriesKeyaldehyde17/ketone14 (chemicalClasscarbonylCompounds),31expanded,21sources,
+fourlessons24+26+25+28=103steps. UpstreamHEAD/main4e1190ab rechecked andactual
+changelog/history read, unchanged since lastcheck; lastactualsync93b759f unchanged.
+Freshread-only ChemistryValidator /root/carbonyl_geometry_preflight confirmed
+10oldliterals exactlymatchprofessorupstreamdata50,21source/embedpairs byteexact,
+all31originalstructures/valences clear. Uniformheavy.6188/CH.3094 preserving
+directions causes exactoverlaps in6(andoneH-on-unrelatedcarbonyl),25geometrically
+clear. Theseare predictedcandidate defects, notexistingbugs; do NOTapply blindly.
+
+Details/collidingIDs/candidates/currentpost-etherbaselinehashes in
+docs/checks/carbonyl-uniform-20261031/preflight.json. Geometricallyclear alternatives:
+fouraffectedaldehydes original-longstem.98;trimethylpentanoneonlyC4C8stem.98;
+diethylheptanoneoriginal2xstems.9282/3xstems1.2376;normalheavy.6188 CH.3094.
+Preservegraphs/IDs/nonxy/directions; do notmoveatomsbynewangles orchangebondorders.
+Browserglyph/double-stroke readability notyetverified. No core/React/JSON changes.
+
+Next presentconcreteplanandrequestapprovalforisolatedvisualcomparisonof6,then
+finalize31onceuseracceptsnecessarybranchspacing. Intendedruntimefilesdata52,
+21existingexpandedMOLs,viewer52sharedcalibration(inclmethanalCOwithoutCC),HTML52
+cacheURLs;protectedotherforms/core/3D/React/scenarios. Proposedchecksactual2D/3D,
+C=Oparallelstrokes/gaps/zoom/resize/numbering/highlights,allfourlessons,recovery
+baselineandoneconsolidatedfreshReviewer. No implementationorpublicationyet.
+Important baseline includes completedUNCOMMITTEDethers; do notrestore03c2 alone
+oroverwriteethers. ActiveHEAD168e3cec/indexunchanged.
+
+# Current resume point — 2026-10-31 — Eleven expanded ethers complete and independently reviewed
+
+User-approved11ether unit complete locally. CH.3094/CCCO.6188drawingunits in11
+embeddedexpanded+nineexisting sourceMOLs; originaldirections/IDs/nonxyfields/newlines
+preserved. Viewer52existingcalibration opt-in11ethers andCOfor dimethylether(noCC);
+HTML52two cacheURLsupdated. No core/3D/React/scenarioJSON/other-form edits.
+
+Evidence docs/checks/ether-uniform-20261031/:844namingcomparisons(incl66ether2D3D),
+2606protectedoldfiles;66formsbefore+66after,204controls,22actual3Dmodels,3PNG,
+58lessonstates/all27steps/twoexits/0JS. FreshChemistryValidatorfinal44representations
+clean. FreshindependentReviewer /root/review_ethers_uniform_20261031 reviewed47
+frozenpaths atc4764343fbdbf474146b17718fcd3c57ebf65952ced38e2831cc8492c6e37f17,
+noP0-P3findings. Independenthash/geometry/source/HEAD/index/syntax checks completed;
+browser/namingexecution remained Developer evidence. See independent-review.json.
+
+Oneunchangeddimethylcondensed nativeviewBoxdifference retained; visibleglyphboxes/
+fonts acrossall44nonexpandedcases exact0CSSdelta. Historicalframingcause remains
+open; no Safari/physicalmobile/offline/conferencecertification. Strictattempt and
+rawcomparison retained. No appfix or unconditionalrootcauseclaim for that diagnostic.
+
+Original12runtimefiles in before-sources.json.gz; guards/diff/targets recorded;
+prior fullcheckpoint03c2d138 remains knownverified recoverypoint. Activebranch
+react-library-pilot HEAD168e3cec/index25c21223 unchanged. No newcommit/push/
+publication for ethers; publicreport31Oct stillpreviousrelease0969f462. Usercan
+refresh currentMainFirefox8013 toseechanges. Ownedtestserver8052PID8120/headless
+9237PID8121 closed; user8013PID890/browser untouched.
+UpstreamcheckedHEAD4e1190abunchanged,lastactualsync93b759f;nosync/corechangeinunit.
+Next: await user visual feedback; do not automatically change another class orpublish.
+
+# Current resume point — 2026-10-31 — Ether unit verified; independent final review pending
+
+User approved all11expandedethers. Applied12runtimepaths:11embedded+nineexisting
+MOLsources/data52,viewer52opt-in scale inclCOfor dimethylether,HTML52cacheURLs.
+OnlyMOLxychanged; originaldirections/IDs/fields/newlineconventions maintained.
+Frozenoriginals/diff/baseline/tests/evidence:docs/checks/ether-uniform-20261031/.
+Developer:66formsbefore+66after,204controls,22real3Dmodels,3PNGexports,58lesson
+states(all27steps,back/next/replay,2exits),0JS;844naming comparisonsincl66ether2D3D;
+2606protectedoldfiles unchanged. FreshChemistryValidator agentether_geometry_preflight
+finalread-only:44graphrepresentations/valences/directions/coords/sourceguards clean.
+Oneunchangedcondensed nativeviewBoxtranslationdiff retained asdiagnostic; all44
+non-expanded visibleglyphboxes/fonts exact0CSSdelta. Historicalframingissueopen,
+notclaimedfixed. OriginalstrictSVG/viewBoxattempt retained; no runtimefixforit.
+
+Next: freeze finalmanifest and getone freshconsolidatedReviewer perprotocol.
+Stopediting reviewtargetduringreview. No core/React/3D/scenarioJSONchanges, no new
+commit/push/publication. SourceHEAD168e3cec/index25c21223; baselinecheckpoint03c2d138;
+upstreamHEAD4e1190abunchanged,lastactualsync93b759f. User8013untouched; ownedtest8052
+server/session11506 andheadless9237/session61767 stillrunning untilfinalcleanup.
+
+# Current resume point — 2026-10-31 — 11 ether changes applied; verification underway
+
+User explicitly approved all11ethers (CH.3094/heavyCCCO.6188) and bounded viewer
+calibration/lesson/independent review plan. Baseline and guarded original12runtime
+files: docs/checks/ether-uniform-20261031/{baseline.json,before-sources.json.gz}.
+SourceHEAD168e3cec/index25c21223 retained; basefullcheckpoint03c2d138. UpstreamHEAD
+4e1190ab checked unchanged; lastactualsync93b759f. No core edits/sync/publication.
+
+Applied coordinate-only generator transform.py to11embeddedexpanded/nineexisting
+sourceMOLs; onlyx/y fields and existing source/embed newline conventions preserved.
+Viewer52existing calibration extended toknown11ethers, includesCOfor dimethylether
+(noCC); HTML52two cacheURLsupdated. No otherforms/core/3D/React/scenariochanges.
+JSCsyntaxpasses; check-static.py passes11geometry/valence/sourceguards,844actual
+namecomparisons/66etherformchain2D3D cases and2606protectedfiles unchanged. Initial
+harness needed window.addEventListener no-op stub; no appchange for this correction.
+
+Baseline actualFirefox66forms/2widths passed0JS. Afterforms underway; firststrict
+rawSVG/viewBox comparefailedon unchangeddimethylcondensed. Retained comparison:
+actualCSSatomboxes/fonts match exactly, viewBoxY differs.06666nativeviewBoxunits,
+native label/backplateYdiff1unit; bothrastercontact/clipping/hiddenbonds zero.
+Not claimed rootcause fixed. Test now explicitly records viewBox diagnostic and
+checks visible atom delta<.15CSSpx plus independent ink/contact oracle and protected
+MOLbytes. Original strictattempt retained, no app changes for that diagnostic.
+Next complete forms, test-controls.py actual11molecules2widths/names/zoom/numbering/
+3Dcolors/PNG, test-lesson.py27steps/replay/exit, ChemistryValidatorfinal and fresh
+consolidatedReviewer. Own8052server11506/headless9237session61767; user8013preserved.
+
+# Current resume point — 2026-10-31 — Ether expanded-geometry plan; approval pending
+
+User requests the same recent expanded bond-length treatment for ethers, using
+original professor MOLs. Read-only investigation only; no app/core/React changes.
+Baseline fullcheckpoint03c2d138504abad3884e707ee7ae9bd6aa5d39da, activeHEAD168e3cec,
+index25c21223/core52d2138418 preserved; prior unrelated WIP remains. Upstream remote
+HEAD/main4e1190ab rechecked, actual changelog/history read: no new changes since last
+checked4e1190ab; last actual synchronized93b759f, no sync performed in this preflight.
+
+Inventory11ether expanded forms;9sourceMOLs,2embedded-only(dimethyl/ethylmethyl).
+Existing saturated-monoethers scenario covers all11 in27steps. Four original literals
+(dimethyl,ethylmethyl,diethyl,isopropylmethyl) match professor upstream4e1190ab
+data50 byte-for-byte (Developer comparison of git blob after remoteHEAD confirmation).
+Old3allbonds.825; isopropylmethylheavy≈.825/CH.5775–.6188;new7heavy1.17/CH.78.
+Fresh read-only Chemistry Validator /root/ether_geometry_preflight confirmed two
+source/embed differences(diethyl/isopropylmethyl) are only one final newline; retain
+that convention. Isopropylmethyl original bond angles depart from axes by≤.55562deg;
+preserve original unit directions rather than silently snap. In-memory normalized
+vector targets heavy.6188/CH.3094 feasibleall11, no coincident atoms/crossings/atoms
+on unrelated bonds in checked geometry. Rendered clearance is not yet tested.
+
+Proposed approval scope: data52embedded11expanded+9existing expanded sourceMOLs;
+viewer52existing font/number calibration extended11ethers including CO-based
+calibration fordimethylether(noCC);HTML52cache refs; guarded baseline/generator/tests/
+projectrecords. Preserve IDs/bonds/noncoordinateMOLfields, current horizontalalkyl
+layout/originaldirections, all otherforms/core/3D/React/JSONcontent. TargetsCH.3094,
+CC/CO.6188 drawingunits, not physical bond lengths. Verification: graph/valence/
+formula/source-embed/newline guards/namesbothways2D3D;all11Firefoxexpanded/zoom/
+numbering/highlights/resize,representativeotherforms/controls/PNGandunrelatedclasses;
+existing27step lesson replay+back/next/exit;oneconsolidatedfreshReviewer afterunit.
+Next: present plan and await explicit approval under AGENTS Plan beforeimplementation.
+No changes to public release or published professor report in this preflight.
+
+# Current resume point — 2026-10-31 — Publication and full recovery copies verified
+
+User approved React preservation and public full-checkpoint export explicitly.
+Main/report published at release 0969f46205c5317ee22c8b28dabe21880a4fb270; public report/welcome/Main assets checked
+by HTTP SHA and actual Firefox Main/React navigation. Main 141 molecules/14 lessons/
+337 steps; React previous126 catalog, no rebuild, frozen data52/viewer52, four host
+references only. Independent publication review: /root/review_publication_final_20261031. Actual verification
+and limits: docs/checks/publication-20261031/publication-result.json. Public strict zero-console tests exited1 from external tracker/cookie diagnostics
+(Main10/React2), with all16functional checks complete; raw records retained. Historical
+viewBox redraw concern remains open; no full mobile/Safari/offline certification.
+
+Full checkpoint 3165bb0af1a382ae498b63f3005d93927fac84bc pushed to checkpoint/namelecule-20261031-221614.
+Published-generation ZIP (2620 source files), verified bundle and recovery ZIP,
+14 active JSONs, report/links, 10 launcher files saved to both external folders.
+Final hashes/receipts: communication/checkpoints/final-save-state-20261031-221614.json
+and final-save-state.json in each folder. This resume block and the final receipt
+are post-snapshot bookkeeping, copied separately; all snapshot hashes verified.
+Active react-library-pilot HEAD168e3cec/index25c21223 preserved. No core changes
+in this save session or versus publicBase39ccedff; core52 d2138418… unchanged.
+Professor upstream HEAD4e1190ab unchanged; last actually synchronized93b759f.
+Owned testserver8051/headlessFirefox9237 closed after checks; user8013PID890/browser preserved.
+Next: user may forward links from Desktop αρχεία  json/Namelecule_31-10-2026/links.txt.
+Do not resume molecular edits automatically.
+
+# Current resume point — 2026-10-31 — Public URLs verified; final backup generation underway
+
+Release0969f46205c5317ee22c8b28dabe21880a4fb270 is live on personal thesis-work;
+GitHub Pages workflow41241394126 success. 19ordinary public HTTP paths match
+reviewedSHAbytes, including report/welcome/Main/newbundles/Reactpins/hosts/core.
+Actual Firefox Main8andReact8functional checks completed,2D/3D/molecule/lesson
+navigation. Strict zero-console harness exited1: Main10andReact2error entries
+are precisely externalJmolTracker X-Frame-Options/analyticscookie domain rejections;
+no unclassified/application errors in observed flows. Do not claim zero console errors.
+Raw evidence and classification retained in docs/checks/publication-20261031/
+publication-result.json,main-public.json,react-public.json,public-http.json.
+
+Next: run approved final save script /tmp/namelecule-final-save-20261031.py;
+creates new -published ZIP/bundle/recovery, updates full checkpoint and both external
+copies/receipts, preserving old archives and active sourcebranch/head/index.
+After completion verify remote checkpoint matches and copiednotes/receipt hashes;
+close only owned testserver8051/headlessFirefox9237, never user8013/browser.
+No core changes; historical viewBox issue and externalCDN/offline/Safari limits remain.
+
+# Current resume point — 2026-10-31 — Approved React preservation; public release pushed, live verification underway
+
+User explicitly approved both pending choices: preserve React and upload full checkpoint publicly.
+Full checkpoint4886c921 pushed; authorization rejection resolved by explicit approval.
+React now pins previous39ccedff data52/viewer52 under preserved-main-20261030; only two
+script refs in each of fourpublic/dist hosts changed, no build/components/core changes.
+Provenance records exact hashes. Scoped .gitattributes -text preserves original JSME license
+bytes. Curated public legacyv51 remains publicBase, local cache variant retained only in fullsave.
+Main8prefix checks and React8realUI checks passed,0JS. Fresh independent Reviewer
+/root/review_publication_final_20261031 checked687stagedpaths,820runtime hashes,React
+32unchangedpaths/4host-only changes,report links/core; noP0–P3findings. Target06d44e95…
+Frozen throughout review. Evidence: docs/checks/publication-20261031/.
+
+Public release 0969f46205c5317ee22c8b28dabe21880a4fb270 and tagnamelecule-20261031-221614 pushed to
+personal origin/thesis-work. Actual Pages deploy/HTTP/browser links NOT YET verified.
+Do not claim completion until public-http/main-public/react-public pass. Then create
+fresh published-generation source ZIP/Gitbundle/recoveryZIP/fullcheckpoint and update
+both external directories/receipts, removing old pending warnings. Existing initial
+archives remain intact. Temp job/state in communication/checkpoints/save-publish-20261031-state.json.
+Owned server8051PID4824/headlessFirefox9237PID4825; preserve user's8013/browser.
+Active source branch/head/index unchanged. No core changes in this save session.
+Upstream HEAD4e1190ab reconfirmed unchanged (source upstream remote); isolated public
+clone has no upstream remote, an attempted query there failed before correct source check.
+Last actual sync93b759f remains unchanged. Historical viewBox issue remains open.
+
+# Current resume point — 2026-10-31 — Local save verified; publication awaits two user choices
+
+Τοπική αποθήκευση ολοκληρώθηκε: checkpoint4886c921b1a97284f0cccd1ed557ec42a3ec891f
+στο checkpoint/namelecule-20261031-221614, ZIP2.601 πηγών με πλήρη CRC/SHA,
+ελεγμένο Git bundle, ZIP186 σημείων επαναφοράς. Και τα δύο εξωτερικά αντίγραφα
+επαληθεύτηκαν, μαζί με14 ενεργά JSON και10 αρχεία Namelecule.app. Ακριβή hashes,
+προορισμοί και flags στο communication/checkpoints/final-save-state-20261031-221614.json
+και final-save-state.json σε κάθε εξωτερικό φάκελο. Αυτή η τελική σημείωση/receipt
+είναι μεταγενέστερη καταγραφή έξω από τα αρχεία ZIP· αντιγράφεται και χωριστά.
+
+Η αναφορά docs/professor-20261031/update.html ετοιμάστηκε και πέρασε ανεξάρτητο
+review7 αρχείων χωρίς ευρήματα. ΔΗΜΟΣΙΕΥΣΗ ΔΕΝ ΕΓΙΝΕ, δημόσιοι σύνδεσμοι31/10
+δεν επαληθεύτηκαν. Το HTML/JSON/README των αντιγράφων προειδοποιεί να μη σταλούν.
+
+Εκκρεμεί ρητή απάντηση σε δύο async ερωτήσεις. Ο χρήστης ζήτησε διευκρίνιση:
+εξηγήθηκε ότι(1) η παλιάReact χρειάζεται τα δικά της παλιά data52/viewer52 για να
+μη χαλάσει το2D από τον νέο κοινόviewer τηςMain, χωρίς νέοbuild/components/core,
+και(2) πλήρες GitHubbackup μεReactWIP/εσωτερικές σημειώσεις είναι χωριστή επιλογή
+και δεν απαιτείται για δημοσίευση κύριας/report. Δεν θεωρούμε τη διευκρίνιση έγκριση.
+Η αλλαγήReact ΔΕΝ υλοποιήθηκε. Το πλήρες checkpointGHpush απορρίφθηκε από automatic
+approval review· δεν επαναλήφθηκε/παρακάμφθηκε. Νέα ρητή εξουσιοδότηση εκκρεμεί.
+
+Απομονωμέναpub/checkpointclones και πλάνο στο save-publish-20261031-state.json.
+Αν εγκρίνει(1): διατήρηση παλιών2JS απόpublic39ccedff, αλλαγή4ReacthostHTML
+public/dist μόνο, νέοςprefixReactviewer/lesson+Main έλεγχος, ανεξάρτητοpublication
+review, μετάpersonalorigin/thesis-workpublish/actualHTTP/browserverification.
+Αν εγκρίνει(2): πλήρεςremotecheckpoint επιτρέπεται τότε, όχιπριν. Ανlocalonly,
+διατηρούνται τα επαληθευμένατοπικά αντίγραφα χωρίς export. Μετά απαιτούνται
+φρέσκαfinalarchives/receipts με πραγματικέςδημοσιεύσεις, όχι τα σημερινάpendingflags.
+Ownedtestserver8051PID1569/Firefox9237PID1570 κλειστά, user8013/Firefox διατηρούνται.
+Activebranchreact-library-pilot/HEAD168e3cec/index25c21223 ίδια. Καμία αλλαγήcore,
+ReactκώδικαήMainruntimeστην αποθήκευση. Upstreamchecked4e1190abunchanged,lastsync93b759f.
+
+# Current resume point — 2026-10-31 — Save/report prepared; two required user decisions pending
+
+User: «αποθήκευσε τα πάντα κ παντού. ετοίμασε report και σύνδεσμο για τον καθηγητή».
+Continuing established save workflow: preserve active react-library-pilot HEAD168e3cec
+and index25c21223, personal origin/thesis-work publicBase39ccedff, full checkpoint
+from prior5230897, ZIP+bundle+recovery ZIP, two external destinations. Upstream remote
+HEAD/main4e1190ab checked again + actual CHANGELOG/history; unchanged since last check,
+last actual synchronized93b759f. No new upstream synchronization or core changes.
+
+Prepared docs/professor-20261031/update.html, facts JSON, links JSON/TXT, ready message.
+Report covers since30Oct: SVG producer/metrics fix, JSmol lifecycle repair,47Expanded
+in5classes(7/8/8/7/17),verifiedresultsandlimits. Banner says LOCAL/NOTPUBLISHED;
+plannedpublicreport/welcomeURLs unverified. README updated. Fresh readonly Reviewer
+/root/review_professor_report_20261031 completed frozen7paths ee93f39d… CLEAN/no
+actionableP0-P3. Actual14JSON337steps/141molecules/core/10relativepaths checked.
+This is docs-only, not publication readiness; report-independent-review.json.
+
+REQUIRED CHOICE1 pending (asyncquestion): source/candidate investigation showed
+oldReacthosts share rootviewer52, but do notload NameleculeLabelMetrics/newproducer.
+Actualisolatedcandidate oldviewerhost: label-error=true,hasSVG=false,metrics=false.
+Needapprovalto preserveoldReact bypinning olddata52/viewer52 frompublic39ccedff
+in versionedReact folder andupdating4public/dist hostHTMLpaths, withoutbuild/core/
+componentschanges. NOReactcodeisolation implementedyet. Maincandidateprefix tests
+8PASS:report1500/390/nooverflow,welcome,141names,propene9/largest39/ethyne4atoms,
+expandedSVGandprefixedlessonback/next/exit,0JS. Do notpublishbrokenoldReact.
+
+REQUIRED CHOICE2 pending (asyncquestion): auto-review REJECTED fullcheckpointGHpush
+(publicWIP/internalnotesexportnotexplicit). Useraskedexplicitlyauthorizeupload to
+GitHubyanisken9/organic-nomenclature-3 checkpoint/namelecule-20261031-221614 orlocalonly.
+No workaround/retry; no remotecheckpointpush and noMainpublication performed.
+Initial localcheckpoint86a54768f1e337298aa89a74fa1a516e333a0ffe,2598files. InitialZIP
+CRC/all2598hashesverified(56.8MB),bundle52MBverified,recovery186filesZIP3.05MB.
+GitnormalizesonlynewLICENSE-JSME.txtCRLF;sourceZIPpreservesexactoriginalbytes.
+Two externalcopies byte-identical,14activeJSON,10Namelecule.appfilesverified:
+../Αποθηκεύσεις/2026-10-31-221614/ and Desktop/αρχεία  json/Namelecule_31-10-2026/.
+External READ FIRST sayspending/no publiclinksready. Source/fullcheckpoint includes
+ReactWIP/notes but curatedpubliccandidate preservesReactpathssofar. No secretsfound
+byboundedrecognized-tokenpatternscan; notuniversalguarantee.
+
+Resumable state: communication/checkpoints/save-publish-20261031-state.json.
+Isolatedpubclone,checkpointclone andserverroot paths in state.job under tempfolder.
+Owned prefixserver8051PID1569 andFirefox9237PID1570 closed after checks;
+user8013PID890 and userFirefox preserved. Testserver/Firefox can be restarted
+if choices arrive; no production deployment has happened.
+Currentmain/core remains reviewedalcoholfinal0.98. Next receive reportreview; refresh
+local reportcopies/backups/bookkeeping. Await explicitchoices; ifapprovedisolate
+Reactonlyunderapprovedplan,verifyoldReactviewer/lesson+Main,consolidatedpublication
+reviewthencommit/pushpersonalpublicbranch,verifyactualpublicHTTP/browserlinks,
+completefinalcheckpoint/archive/copies and receipts. Ifdeclinedkeep localandreport
+publicationpending truthfully. Never claimplannedURLspublished. No needuserreconstruct.
+
+# Current resume point — 2026-10-31 — 17 alcohols complete; 0.98 installed and reviewed
+
+User accepted the exact 0.98 preview connector. Main largest expanded MOL now
+matches accepted c504fdaf… byte-for-byte; 17 alcohols have H=.3094, other heavy
+bonds=.6188, with C4–C10=.98 only in the largest. All 21 OH groups are explicit;
+11 O-bound H appended in the earlier16 stage. Source generator and guarded
+12-file restore are recorded. 842 protected files unchanged. No core, React, 3D
+or scenario JSON changes; no commit/push/publication.
+
+Final independent Reviewer /root/review_alcohol_final098_20261031 (fresh context)
+reviewed47 paths including38untracked at manifest d5410136…; no productionP0/P1/P2.
+One P3 AF-01: direct-setter test screenshot left stale UI/3D. Corrected harness to
+actual molecule/mode clicks, checked radio and awaited matching 39-atom3D;
+11 cases rerun PASS and new screenshot visually inspected. IsolatedP3 closed by
+Developer verification as Reviewer permitted; no independent rerun claimed.
+12 reviewed application hashes unchanged after review,842 protected rechecked.
+Reports: docs/checks/alcohol-uniform-20261031/{summary-final,independent-review-final,
+final-verification}.json. Full earlier scientific validation reused, final targeted
+largest validation clean. Runtime179 control states(all17,2widths,4fullrepresentatives),
+92 lesson states(20+22steps,back/replay/exit),11 real-UI forms/guards,3exports,
+8 numbering/OH3D selections: no contacts/hidden lines/clipping/JS in tested states.
+
+Reported JSmol error: system reboot21:56:16 after application edit21:52:34 left
+8013 absent. SDF unchanged. Existing Desktop Namelecule.app restarted serverPID890
+(parent1) at22:01:38. HTTP17SDF200 byte-exact; actual target JSmol24atoms/CID19871.
+Exact failed screenshot request not captured. User advised start Desktop icon
+following reboot. No molecular/3D source fix. Owned test FirefoxPID896 closed;
+preserve user Firefox and launcher server8013PID890. Previous control test lost
+on reboot not counted; missing TMP snapshot path retry retained/fixed; final179
+resumed36 saved states. Old artifacts/checkpoints preserved.
+
+Historical16-stage redraw viewBox discrepancy remains OPEN, not fixed. It did not
+reproduce in final controls or new4-condition trace; parent heights before/after
+310/272 differ, so no matched optical comparison or root-cause conclusion.
+Conference/offline readiness not claimed; no Safari/physicalmobile/full3D claim.
+Next: user refreshes Firefox and inspects chosen layout. Future fit investigation
+needs actual failing live conditions before proposing a common-renderer change;
+no such fix approved. HEAD168e3cec/index unchanged; upstream last checked4e1190ab,
+last actually synced93b759f. Καμία αλλαγή σε core.js/core-version αυτή τη συνεδρία.
+
+# Current resume point — 2026-10-31 — 17 alcohols installed; final independent review in progress
+
+User approved the visual 0.98 connector («ναι, αυτό είναι καλό»). Largest embedded
+and physical expanded MOL now exactly match approved preview c504fdaf…; existing
+calibration whitelist adds this molecule, two Main cache URLs updated. All 17
+MOLs exactly reproduce from frozen sources with H=.3094, heavy=.6188, largest
+C4–C10=.98. Eleven O-bound H appended in earlier 16-stage; 21 explicit OH total.
+12 application files differ from original 17-plan baseline; 842 protected files,
+core, React, 3D and scenario JSON unchanged. Guarded 12-file rollback verified
+in isolation; Main remains installed. No commit/push/publication.
+
+Independent Chemistry Validator final follow-up clean; original 16 checks reused,
+new largest 3×2D/SDF graph/parent/fields and 6 naming cases before/after passed.
+Developer runtime: 179 states, all 17 default/min/max/OH at1500/390; full controls
+four representative molecules, 8 numbering/OH3D selections, 3 PNG exports. Zero
+contacts/hidden lines/clipping/JS. Lessons20+22 saved condensed steps replayed at
+both widths with back/replay/exit, 92 states. Six largest-form cases plus five
+older-category guards passed; actual largest 3D visibility toggle/count39 passed.
+Shared library frame identical before/after for141 molecules. New baseline-fit
+trace4conditions×4redraws stable within each condition, old fFit unchanged. Before/
+after parent heights310/272 differ; not matched optical comparison. Historical
+16-stage root-viewBox diagnostic remains OPEN, not reproduced or solved here.
+
+User screenshot: JSmol could not load dimethyl_2_2_pentanol_3 SDF. At investigation
+8013 absent; original control process also lost. System boot21:56:16 followed
+application edit21:52:34, consistent with old server termination on reboot. Launched
+existing Desktop Namelecule.app at22:01:38; serverPID890,parent1. HTTP17SDFs200,
+byte-exact disk; target real JSmol24atoms/CID19871/0JS. Exact failed browser request
+not captured. No SDF/3D source fix. User advised start Desktop icon after reboot.
+Original interrupted test not counted; retry36 states then missing TMP screenshot
+path, retained failure; harness changed to repository artifacts, resumed36 states,
+final179 passed. Incremental progress saved to survive interruption.
+
+Fresh independent Reviewer /root/review_alcohol_final098_20261031 inspects frozen
+47-path manifest d54101361c6269612cdcee3406d61ada27976560800f148b2bbcff005ff643fb,
+including38untracked. DO NOT edit target while review active. Developer noticed
+largest-applied-expanded.png has correct 2D but stale UI/methane3D due direct global
+setters in test-forms-final; told Reviewer. Regenerate through real UI click and
+await39atommodel after review, then targeted verification; do not use this current
+artifact as faithful whole-app flow evidence. Current owned Firefox9237PID896
+still running for correction; preserve user launcher server8013PID890/Firefox.
+Preview page now correctly labels before/after and applied option3; acceptedr3
+historical snapshot preserved checkpoint. Core unchanged in this session.
+Next: receive Reviewer report, correct screenshot harness within approved scope,
+verify changed artifacts and findings, record review, close ONLY owned Firefox896.
+HEAD168e3cec/indexunchanged; upstream last checked4e1190ab, last synced93b759f.
+
+# Current resume point — 2026-10-31 — Approved0.98 applied to largest; final alcohol checks ongoing
+
+User accepted preview «ναι,αυτόείναικαλό», authorizingchosen.98stem within17plan.
+Applied exactreviewedMOL c504fdaf… embedded+physicallargest; addedsamekeytoexisting
+fixedCCcalibration andbumped2HTMLcacheURLsfinal-098. Immediate4filebaseline
+communication/checkpoints/alcohol-largest-before-apply-098-20261031. All17sources
+nowexactgeneratedfromoriginalvia transform(mol,True,.98);842protectedunchanged,
+12appfilesmodifiedsince17baseline. Core/React/3D/scenarioJSON unchanged. Generator
+optionalapprovedstemlength added; guarded12file rollbackmanifest updated+isolated
+restore/newereditrefusal verified. ChemistryValidatorfinalfollowupclean:largest
+3x2D/SDFgraph/numberedparent,6namingcasesbeforeafter,allfields/lengths/indices;
+previous16scientificchecks reused. App12paths frozenchemistry-target-final.json
+SHA0e7ee5904f56cc92d22211de25b64da30120891e8a4bdd68165510554cc110bb.
+Userthenreported3Dunrecognizedfileformat(dimethyl_2_2_pentanol_3). Investigation
+found8013/9237bothnolisteners,HTTPconnectionrefused;originalcontrolrunalsoabruptly
+lostwithoutfinalevidence. SDF3595bytesmatchesbaselinebdca64d…,notcorrupt/changed.
+StartedexistingDesktopNamelecule.app;HTTP200SDFexactdisk;freshisolatedFirefox
+JSmolloads24atomsCID19871/noJSerror. Serverexitcauseandexactstateatscreenshot
+notknown;restartisrecovery,notpermanentfix. Evidence3d-recovery/server-recovery.
+Rerunboundedcontrols all17default/min/max/OH,4representativefullcontrols/2widths.
+Firstretry36statespassedbutartifactTMPdirectorymissing;preservedfailurefile,
+changedharnesstoHERE,incrementalstatewrites, resumedwithoutrepeating36. Runtime
+exec21460 active,isolatedFirefox9237(exec61742). Do notstopuserlauncherserver.
+LargestdesktopcontrolsPASSincludingnumbering;remainingmobile/exportpending.
+KnownredrawrootviewBoxdifferencesrecordedunresolved;childinvarianceNOToptical
+proof. No commonfitfixapproved/applied. Furtheractualbaselinefittrace script
+preparedbutnotrun,2theorylessons20+22steps+largestforms/previouscategoryguards
+preparedbutnotrun;independentconsolidatedReviewerpending. No complete/readinessclaim.
+JSCnewFunctionparse2appfilesPASS,3PythonASTPASS;initialunsupported--check-syntax
+attemptfailedandwasreplaced,notsuccessclaim. Sharedlibraryframebefore/afterchecked
+separately. HEAD168e3cec/indexunchanged;no commit/push/publication. Nextfinish
+runtimecontrols,lessonreplay,fitbaselineclassification,consolidatedfreshReviewer.
+
+# Current resume point — 2026-10-31 — User clarified absolute0.98 preview connector
+
+User «ελαφρώςμικρότεροακόμη;ίσως9,08» was initially interpretedas9.08%, but
+interruptedbeforeanyedit; userclarified «όχι,εννοούσα0,98». Implemented ONLY
+preview option3absoluteMOLstem.98, from1.0829; complete10atomC10subtree moved
+(0,-.1029), internalheavy.6188/H.3094/glyphscale preserved. H20H36gap.3612,
+no coincidences. Mainlargestoriginal/854applicationhashes unchanged; largest
+productionexceptionstill NOTapproved. Previouspreview preserved communication/
+checkpoints/alcohol-stem-preview-before-098-20261031; currentreports-r3suffix.
+Developer3nativeFirefoxcaptures stem1.583483/Hsep.583483regularunits/rasterPASS
+0contact/hidden/clipped/JS;6pagecases1500/390PASS,desktop/mobilevisuals inspected;
+3PythonASTPASS. ChemistryValidator targetedindependentcheckclean. r3Reviewer
+targetedfollowupCLEAN,noactionableP0-P3;frozen13paths targetmanifest c623b341e58bcb4d08aeb5206edec7823a31a35a51819ec978380846ab189f90.
+ExternalFirefoxopenedindex.html?v=stem-098-r3 in same stem-comparisonfolder;
+ownheadless9237PID28720closed,user8013/Firefoxremain. NoMain/core/React/3D/JSON
+changes,commit/push/publication. Existing16alcoholunitcontrols/lessons/fitdiagnostic
+remainpending. HEAD168e3cec; priorupstreamchecked4e1190ab,lastactualsync93b759f;
+no additionalsync. NextwaitvisualdecisionbeforeMainedit.
+
+# Current resume point — 2026-10-31 — Option3 preview connector shortened12.5%; production unchanged
+
+User asked «το3λίγομικρότερο;». Developer communicated interpretation: shorten
+orange connector only, same glyphs/other bonds, preview only. New option3 C4–C10
+1.0829 (1.75×.6188), down12.5% from1.2376; translates complete10atomC10subtree
+(0,-.1547). H20–H36gap.4641; no coincident atoms. Main largest remains original,
+no approval to apply exception;16earlier alcohol changes and unfinished controls/
+lessons/redrawviewBox diagnostic remain pending. No Main/core/3D/React/JSON changes.
+Previous full preview saved communication/checkpoints/alcohol-stem-preview-before-
+shorter-20261031. r2 target16paths SHA58510b2c521b44345b49f60c9d46dd93bc8fb62516a3d19a5fc966493193fd37.
+Developer3actualFirefox nativecaptures+rasterPASS,6pagecases1500/390PASS0JS/
+overflow, desktop/mobile screenshots visually inspected,854applicationhashes
+unchanged,3PythonAST checks. Native proposedstem1.749774/Hgap.749774regularunits.
+Independent ChemistryValidator targetedfollowupclean(graph/fields/lengths/gap/
+sourceinvariants); Reviewer targetedfollowup CLEAN, no actionableP0-P3;16frozenhashes verified unchanged. Unsuffixed
+reports describe initial2xpreview; current evidence/reviewtarget uses-r2suffix.
+Opened externalFirefox URLindex.html?v=shorter-r2 (same stem-comparison folder).
+Own headless9237PID28465 closed; user8013/Firefox untouchedexceptrequestednewtab.
+HEAD168e3cec,upstreampreviouschecked4e1190ab,lastactualsync93b759f; no new sync,
+commit/push/publication. No core changes this turn. Next wait user decision on visual proposal before changing largest Main MOL.
+
+# Current resume point — 2026-10-31 — Stem comparison delivered in external Firefox; apply approval still absent
+
+UserchoseVISUALCOMPARISON FIRST. OpenedexternalFirefox(localopen-aexit0) at
+http://127.0.0.1:8013/docs/checks/alcohol-uniform-20261031/stem-comparison/index.html.
+Threebuttons current/invalidallCCequal/proposed2:1stem,commonfont/frame,orangeC4C10,
+redH20H36collision/detail,sidebyside. MainlargestMOL/calibrationremainoriginal.
+All854apphashesunchangedthispreview. Noapprovaltoapplyexception; waituserdecision.
+FreshindependentReviewer /root/review_alcohol_stem_preview_20261031 CLEAN(no
+ actionableP0-P3),26pathsmanifest03c70689b9ac20ee15d4bbaa7804eab71f3668e14ccebcca85ed9de80e1b38b3.
+Independentlycheckedhashes/MOLfields/graphs/units/actualSVGfidelity/fontnorm/
+annotations/paths/JS+3desktopand1mobilevisuals. Browser3captures/6UIcases/raster
+areDeveloperevidence; geometryalsoChemistryValidatorclean. ReviewscopeONLYpreview,
+notunfinished17alcoholwork; retained16implementation/controls/lessons/viewBoxissue
+remainpending. PreviewdoesNOTfixappfit. Sourcebigstill2.34stem/1.17heavy/.78H;
+proposal1.2376stem/.6188otherheavy/.3094H; equalheavycounterexampleinvalidtwoHsamepoint.
+CaptureharnessinitialregistrybindingandouterCTMerrorscorrectedbeforefinaldelivery;
+initialmisboundresultretained+notclaimedfinalevidence. Actualnativegeometryassertions
+confirmcase2/1/2stemunits andHsep.667/0/1. NativeSVGnormalizationartifactonly.
+No app/core/MOLlibrary/3D/scenarioJSON/React modifications thispreviewturn.
+No commit/push/publication. Ownheadless9237PID28078 closedbeforeexternalopen;
+user8013/Firefox untouchedexceptauthorizedcomparisonnewtab. Upstreamchecked4e1190ab
+unchanged; lastactualsync93b759f. HEAD168e3cec,indexunchanged. Next waituserchoice,
+applylargestonlyifapproved; thenfinishalcoholchecks anddiagnosecapturedfitissue
+underseparateapprovalifcommonrendererchangesneeded. Previewrecords in samefolder.
+
+# Current resume point — 2026-10-31 — User requested stem visual comparison first; preview only
+
+Useransweredexceptionquestion: wants VISUALCOMPARISON FIRST. Longstemexception
+NOTapproved. MainlargestMOL/calibrationremainoriginal; all854appsourcehashes
+unchangedthispreviewturn.16previousalcoholchangesremain; controls/lessons/full17
+ReviewerandcapturedviewBoxdiagnosticstillpending. Do notapplyproposalwithoutanswer.
+Newpreview docs/checks/alcohol-uniform-20261031/stem-comparison/index.html has3
+switchablecases:current,uniformCCinvalid(H20/H36coincide),proposedpreserved2:1stem.
+OrangeC4-C10marksconnector; commonfont-normalizedSVGframe/parentalignment and
+invalidredcircle/zoom. ActualisolatedFirefox3MOLcaptures(memory-onlyoverrides),
+6pagecases1500/390/sidebyside/images/nooverflow/0JS. Actualnativeasserts stem2/1/2,
+Hseparationregularunits~.667/0/1 preventmismatchedpreview. Finalfiguresvisually
+inspectedDeveloper. Initialharnessregistrybinding/CTMnormalizationerrorscorrected
+beforeuserdelivery; initialmisboundcapture retained+explanation,notfinalevidence.
+ChemistryValidator targeted3MOLcheckclean:fields/graph39atoms38bonds/directions/
+lengths/collision/source854unchanged. ProposedSHA b1d82d0d…; previewnotapplyapproval.
+Previewsharedframeisartifact-only,NOTfixforapp'sopenfFitdiagnostic. No app/core/
+React/3D/scenarioJSON changes, no commit/push/publication.
+Next freezepreviewtarget/freshboundedReviewer, thenopenlocalcomparison inexternal
+userFirefox. Ownheadless9237PID28078 useduser8013server(readonly); closeownPID
+whenfinished,leaveuser8013/Firefox. UpstreamremoteHEAD4e1190abunchanged,checkedagain;
+lastactualsync93b759f. CurrentHEAD168e3cec/index25c21223unchanged.
+
+# Current resume point — 2026-10-31 — Alcohol16 partial; largest decision and final checks pending
+
+REQUIRED USER ANSWER STILL PENDING: preserve existing2:1C4-C10isopropylstem in
+largest alcohol at1.2376 (otherheavy.6188), orshowvisualcomparisonfirst. User17plan
+approved earlier, butthisoneexceptionnotapproved. Neverinferapprovalfromelapsedtime.
+Largest isopropyl_4_dimethyl_3_5_heptanol_2 embedded/physicalMOL/calibrationremain
+byteexactbaseline. Uniform.6188wouldcoincideH20(C5)withH36(C12), independently
+confirmedChemistryValidator.16othersimplemented:CH/OH.3094,CC/CO/multiples.6188;
+11OHhydrogens appendedto8originalExpandedMOLs,oldIDs/fields/bondsretained.
+All21OHgroupsacross17areexplicitnow,includingexistinglargest;42O-Hlinechecks
+across2widths visible. Before102/after-16same102(all17x3formsx2widths)PASS0contact/
+hiddenlines/clipping/JS. Otherforms/3D/JSON/React/core untouched.11appfileschanged
+of12planned;baseline854files atcommunication/checkpoints/alcohol-uniform-20261031.
+FreshChemistryValidator /root/validate_alcohol_uniform_20261031 clean16scope:
+68formgraphs/21OH/11appendedH/842protected;204productionnamingexecutionsbeforeafter;
+largestcollisionandproposed2:1solutionread-onlyverified,notauthorizednorbrowsertested.
+Report docs/checks/alcohol-uniform-20261031/chemistry-validation-16.json.
+
+CONTROL TEST INCOMPLETE: controls-16-initial.json.gz failsstrictSVGredrawbytecheck
+onfirstpropanol_1desktopafter8successfulUIstates,0JS. UnlikeearlierEunknownfailure,
+actualfirst/secondSVGpairretained:onlyrootviewBoxdiffers;all45descendantnodesidentical.
+Diagnosticclonesatfixedsame618x287.1667viewportgiveeffective scale.732628 vs.678666,
+so opticalequivalence NOTestablished; doNOTrelaxassertasfalsepositive. fFit2DSVG
+measuresparentviewportbeforeapplying100%SVGstylesatend; thisiscausalhypothesisonly,
+needtraceactualbeforeafterviewport/livebaseline BEFOREproposinganysharedfitfix.
+No sharedframingfixapprovedorapplied; noadditionalapprovalquestionyetonthisissue.
+Allactualevidence,status,failedpairs retained docs/checks/alcohol-uniform-20261031/.
+16controls/2lessons20+22steps/finalReviewerNOTcompleted, notreadyclaim. Baseline/
+partialinstalledhashes/guarded12filerestore testedindry+isolatedapply+newereditrefusal;
+MainNOTrolledback; no commit/push/publication/corechanges.
+OwnedtestPIDs27481/27482 closedafterpartialchecks; user8013/Firefoxuntouched.
+Next:firstresolvependinglargestanswer; beforeeditingmolecularsourcekeepcurrenthashes,
+sourceAgentfinished. Afterapprovalapplyonlylargestfromfrozenoriginal,extendwhitelist/
+cache andtargetedchemfollowup. Diagnosecapturedfitdifferencewithoutchangingcommon
+rendererwithoutnewmaterialscopeapproval. Thenrequiredcontrols/lessons/consolidated
+Reviewer. Upstreamchecked4e1190abunchanged;lastsynced93b759f. HEAD168e3cec/index25c21223.
+
+# Current resume point — 2026-10-31 — Approved16 alcohols applied; largest exception awaiting user
+
+User approved17Expanded/O-Hexplicitplan; subsequent exceptionquestion remains
+UNANSWERED: largest isopropyl_4_dimethyl_3_5_heptanol_2 originalC4-C10stem2.34
+(2xregular1.17) cannot simply become.6188 without H20/H36coincidence. Proposed
+preserve2:1ratio→1.2376 onlystem; do NOT applythisexceptionbeforeanswer. Largest
+MOL andcalibration currentlyUNCHANGED; originalapproval coversremaining16.
+Implemented16expandedMOLs(embedded16+physical8):CH/OH.3094,CC/CO/multiples.6188;
+added11explicitOH-Hto8professor originals, preservedoldindices/fields/bonds. All21
+OHgroups across17nowexplicit,includinglargestalreadyexplicit. Source16staticPASS,
+842protected/core/3D/scenarioJSON/React unchanged. MainHTMLalcoholr1/cache/viewer
+whitelist includesonly16;11actualappfileschangedofplanned12.
+Before102(actual17x3formsx2widths)/after-16same102 PASS0contact/hidden/clipped/JS.
+42OHedges(actualbothwidths)recordedvisible;newO/Hseparatetext,notfakehyphen.
+Controls16running ownFirefoxisolated, execsession53439. All17initialbaseline saved
+communication/checkpoints/alcohol-uniform-20261031; sourcehashes854/HEAD168e3cec/
+index25c21223. FreshChemistryValidator /root/validate_alcohol_uniform_20261031
+inspects frozen10molecularpaths chemistry-target-16.json in/tmp/namelecule-alcohol-
+uniform-20261031; do NOT editmolecularsourcewhileinspectionunfinished. Preliminary
+independent68formgraphs/fields/valence/21OH/11appendedH/842protected pass; finalpending.
+Own8032PID27481,Firefox9237PID27482 active; preserveuser8013/browser.
+Next:finish16controls/lessons,recordevidence; waitrequiredlargestexceptionanswer,
+thenonlynecessarytargetedtransform/checks andoneconsolidatedfinalReviewer.
+No commit/push/publication/corechanges; no finalindependentreview/readinessclaim.
+Upstreamchecked4e1190abunchanged vs lastchecked; lastsynced93b759f.
+
+# Current resume point — 2026-10-31 — 17alcohol plan approved; one geometry exception awaiting answer
+
+User requested same expandedbondchanges foralcohols, explicitly O-H separated by
+visiblebond. Read-onlygraphinventory:17purealcohols(7saturatedmono+10other),21OH.
+8originalprofessorExpandedMOLs have11implicitO-boundH missing as explicitatoms;
+9ownMOLs alreadyexplicitOH. Original8 exactpre4919f99/data45; physicalExpanded9.
+User approved concrete17plan: CH/OH.3094,CC/COinclmultiple.6188, append11OH-H
+preserveexistingIDs/metadata/otherforms/core/3D/scenarios/React;2lessons20+22steps,
+controls/chemicalchecks/independentReviewer. Baseline854sourcehashes/12apppaths
+saved communication/checkpoints/alcohol-uniform-20261031; inventory/approval in
+docs/checks/alcohol-uniform-20261031. NOappsourcechangesyet.
+Feasibilitysimulationfound uniformCC inlargest isopropyl_4_dimethyl_3_5_heptanol_2
+makes H20(onC5) andH36(onC12) coincident. ExistingC4-C10isopropylstem2.34 vsregular
+1.17 intentionallyseparatesgroup. Asyncquestionpending: preserve2:1ratio stem1.2376
+onlythere/rest.6188, orvisualcomparisonfirst. Do notmutatelargestuntilanswered;
+other16/snapshot/baselinechecks authorized. Alloldsourcebondsorthogonal.
+NewsourceOH shouldbe explicitatom/bond; no fakehyphenlabel. Existingviewer merely
+colors combinedOH labels; sameactualpriorFirefoxethanolevidencehasOHtextwithout
+OHedge. Commoncalibrationcanreuse singleCO/OHanchors afterMOLexpansion; no core
+changeexpected. Need verify O-H lineactuallyvisible,notmerelypresentinsource.
+Upstreamchecked2026-10-31: remoteHEAD/localupstream4e1190ab unchangedsinceprevious
+check; readactualupstreamCHANGELOG/history,nonewentries/commits. Lastactuallysynced
+93b759f; no syncnow. CurrentHEAD168e3cec,indexexpected25c21223; no corechanges.
+Next: resolveonegeometryquestion, baselinebrowser17allforms/2widths, implement
+approvedscope, ChemValidator thenoneconsolidatedfreshReviewer. User8013/Firefox
+mustremainuntouched; ownprior8032/9237processeswereclosed,notyetrestarted.
+
+# Current resume point — 2026-10-31 — Eight dienes and seven enynes complete; independent review clean
+
+Finalexpanded15molecules follow alkane units CH.3094/allCC.6188. Originalprofessor
+references preserved structurally; x/yonly changes, no core/3D/scenarioJSON/React.
+InventoryE6→7 corrected afteruserphoto of3-penten-1-yne; source[H] untouched,
+analyticalnormalization+categoryinventory regressionguard prevents thisomission.
+Final12applicationpaths at docs/checks/dienes-enynes-uniform-20261031/runtime-freeze.json.
+FreshReviewer /root/review_dienes_enynes_uniform_20261031: NO actionableP0/P1/P2/P3;
+140frozenhashes verified before/after; manifest a108adc90db83765e20ba019fa18719c417d8261bad5b3ee7f0e0bff2915aa20.
+Independently checked finalsource/diff/MOLs/842protected,64+56savedSVGstroke states,
+JSCactualfallbackpositive+4negativeatomicfixtures,5matchedviewportpairs/5PNGs,
+12filedryrestore. Browserandfullchemicalgraphs remainDeveloper/Validator evidence.
+Fullrecord independent-review.json. Afterreviewonlystatus/report/notes updated;
+applicationruntime hashes unchanged. Developer checks90before/90after,231UIstates,
+100lessonstates(all23stepsforeachlesson/2widths),120exactstrokes,62old31guards.
+No newfull844run aftertheseunits; lastfull844afteralkenes. Frameinvariant.
+Open diagnostic: firststrictSVGbyteequalityassertfailedonceat390withoutstoredpair;
+rootcauseUNKNOWN; instrumentedrerun15states+180pairspassedwithoutappchange. Reviewer
+allowsboundedunitclosurewithdisclosure; preservepaircaptureifrecurs,donotclaimfix.
+Report http://127.0.0.1:8013/docs/checks/dienes-enynes-uniform-20261031/report.html.
+User8013 servedfinalr2HTML/data/viewer byteexactHTTP200; own8032PID24839/isolated
+Firefox9237PID24840 terminated afterreview; user8013/Firefox untouched.
+12fileguardedrollback ZIP/dry/isolatedapply/newereditrefusal verifiedfinalr2;
+checkpoint communication/checkpoints/dienes-enynes-uniform-20261031 restores
+pre-diene/post-independently-reviewed-alkyne state; Mainneverrolledback.
+No core changes duringthissession/day. No stage/commit/push/publication; localonly.
+Upstream checked4e1190ab, actuallysynced93b759f; unchanged thissessioncheck.
+Next: userrefreshFirefox andinspectupdatedmolecules; ifredrawdifference recurs,
+retaininstrumentedSVGpair/viewport/zoom andcomparebefore proposingnewscope.
+No pendingimplementation withinapprovedscope; no offline/conferencecertification.
+
+# Current resume point — 2026-10-31 — Dienes/enynes implemented and tested; consolidated Reviewer pending
+
+Approved expanded8dienes +enynes extension implemented. Final inventory is7enynes,
+not6: user screenshot exposed original penten_3_yne_1 whose raw [H] was excluded
+by initial analyticalfilter. Corrected check/transformparser normalizes [H] only
+analytically; sourcefield untouched. Added fullcategory inventoryassertion.
+Userphoto steers samecategory/same6apppaths, no additional representation or mechanism.
+All15targetMOLs CH.3094/allCC(incldouble/triple).6188; orthogonaldirections/IDs/
+fields/graphs/linearsp preserved. Finalruntime r2;12app paths (3shared+9physical).
+Dieneonlyshared mechanism addition validates symmetricparallel doublepairs to
+find missingcentralcumuleneC anchors; unsafe3negativefixtures returnunmodified.
+Enynes reuse calibration viawhitelist, no newruntimeparser/corepatch.
+
+D:48before/48after,122controls,23lessonsteps→50states/2models/2exits,64exactstroke,
+4anchor-guards,46old23guards. E:42before/42after (original36+targetedseventh6),
+109controls(94+15),23lessonsteps→50states/2models/2exits,56exactstrokes/sp;
+62old31guards,5matchedviewportpairs(10captures)rawexact,5PNGsCRC/decode/visual.
+No contacts<=.5CSSpx/hiddenlines/clipping/JS in successful browsermatrices.
+Sharedactualframe invariant42.333333333333336x34.333333333333336;842protected
+sourcefiles/core/3D/scenarios/React untouched cumulatively. Sourcecheck-final passes
+15literals/9physical/HEADindex. Native rounding measured; nopixelperfectclaim.
+No freshfull844aftertheseunits; previousfull844was afteralkenes. Boundedguards
+justified by scope/frame/sourceinvariants. Some historicalcaptureSVGs hadviewport
+size/translation/1nativeunitlabelrounding differences; freshsameviewportpairsrawexact.
+Importantdiagnostic: seventhcontrols initialstrictconsecutiveSVGbyteassertfailedonce
+at390; initialharnessdidnotcapturepair so causeUNKNOWN. Instrumentedrerun15states
+and180targetedpairs(2widths/3zooms/3rounds)PASS withoutappchange. Evidence retained;
+notclaimed asrootcausefixed/no assertionrelaxation. FinalReviewer mustassesslimit.
+
+ChemistryValidator /root/validate_alkadiene_uniform_20261031 clean8D exactgraphs
+24forms2D+8SDF; /root/validate_enyne_uniform_20261031 clean7E exactgraphs28forms,
+42productionnamingcases incltargetedseventhfollowup. [H]neutral/nonisotopic preserved.
+Allprior6E/8D bytes verified unchanged byseventh addition. StageD hashes legitimately
+superseded byE; chainofinvariants documented. Evidence/reports docs/checks/
+{alkadiene,enyne,dienes-enynes}-uniform-20261031/. Combined checkpoint communication/
+checkpoints/dienes-enynes-uniform-20261031 preserves post-cleanreviewedalkyne state.
+12filerestore dry/isolatedapply/newer-edit-refusal/ZIP passed againstfinalr2;
+Mainneverrolledback. No commit/push/publication, no offlinepackage.
+No core changes throughoutthissession/day. HEAD168e3cec; indexSHA25c21223 unchanged.
+Upstream checked4e1190ab3d58f5eb384f1583bfe05e37242bef61, synced93b759f5891d7b5a1172646032d83215d60b7604.
+Next: freeze exactfinaltarget includingnewdeliverables/notes; onefreshindependent
+Reviewer from pre-diene/post-reviewed-alkyne baseline; correctfindingsifany,
+recordverdict/finalhashverification; close onlyown8032PID24839/Firefox9237PID24840.
+Preserveuser8013/Firefox. Runtime frozen: no furthercodeeditsduringreview.
+
+# Current resume point — 2026-10-31 — Six enynes approved/implemented; combined diene/en yne checks in progress
+
+User explicitly approved all6expanded enynes, after8approveddienes. Same original
+professor reference convention and target CH.3094/allCC(incldouble/triple).6188;
+only data52/viewer whitelist/HTMLcache +3physicalExpandedMOLs (6app paths).
+Snapshot communication/checkpoints/enyne-uniform-20261031 is post-diene Developer
+validation, not separately independent-reviewed. Diene before48/after48,122controls,
+all23lessonsteps in50states,64exactstroke/centralsp,4anchor-guards and46old23runtime
+cases passed0JS; oldguardSVGdeltas3mobile cases still being normalized.
+DieneChemistryValidator clean. Final logicalunit review will combineD+E, using
+pre-diene/post-clean-reviewed-alkyne baseline and12applicationpaths. Nofinalreviewyet.
+Enyne static passes6embedded+3sources/848protected/other135records,graph/fields/
+CnH2n-4/linearsp. Before36passed; after/controls/lesson pending.
+ChemistryValidator /root/validate_enyne_uniform_20261031 inspecting4frozenpaths at
+/tmp/namelecule-enyne-uniform-20261031/chemistry-target.json. Noadditionalmechanism
+forenynes; existing reviewed calibration whitelist extended6keys. Diene missing
+centralcumulene-anchor pairvalidation is onlysharedmechanism addition inthisunit.
+No core changes throughouttoday; no commit/push/publication/React/offlinepackage.
+Upstream checked4e1190ab, actuallysynced93b759f. Own8032PID24839/Firefox9237PID24840
+remain; preserveuser8013/browser. Next finishbounded Etests/regressions/evidence,
+combinedguardedrollback andonefreshindependentReviewer, updatecontributions.
+
+# Current resume point — 2026-10-31 — Approved eight-diene implementation; validation in progress
+
+Userapprovedall8expandedalkadienes includingnativeparallel-paircenterfallback.
+Implemented9applicationpaths atopclean-reviewedalkene/alkyneunits:8embeddedMOLs,
+6physicalExpandedMOLs,existingviewerhelper+HTML2cachekeys. SourceCH.3094 and
+CC/C=C.6188,2doublebonds/IDs/fields/directions/linearcentralcumulene preserved.
+Nativehelperpreferssingleanchors, onlyifincomplete validatesparallel/order/length/
+orientation of doublepairs andchecksaveragesagainsteveryexistinganchor (1native
+roundingunit). MissingcentralC2resolvedwithoutmovinglines/atomgeometry;no offset
+exceptions. Existing23helpersskipfallbackwhenanchorscomplete.
+
+Immutablebaseline854files/9originals communication/checkpoints/alkadiene-uniform-20261031.
+StaticPASS8embedded+6physical,x/yonlyfields/graphs/valences/CnH2n-2/centralsp,
+845protectedfiles/other133records/targetotherforms/metadata/HEADindex unchanged.
+Before48/after48Firefox3formsx2widths passed0fail/JS. Controls inprogress.
+FreshChemistryValidator /root/validate_alkadiene_uniform_20261031 inspectingfrozen
+7molecularsourcepaths /tmp/namelecule-alkadiene-uniform-20261031/chemistry-target.json;
+9runtimepaths frozenruntime-freeze.json. No corechanges throughouttoday;no commit/
+push/publication. Next:controls/active22steplesson/old23guards/identicalframe,
+rollback/evidence andfreshconsolidatedReviewer. Own8032PID24839/Firefox9237PID24840
+remain;preserveuser8013/browser. No more permission needed withinapproveddieneplan.
+
+# Current resume point — 2026-10-31 — Alkynes complete/clean; eight-diene plan approved
+
+FreshReviewer /root/review_alkyne_uniform_20261031 completed55pathmanifest146a9b0e…
+review with NO actionableP0/P1/P2/P3. Actual10filediff/hashbeforeafter/sourcegraphs/
+fields/units/sp/protected844/HEADindex,64exactstrokechecks,124SVGprimitives/anchors/
+masks,identicalsharedframe,48invariants/32otherforms/30previousguards,original
+propynehistory/PNGZIP checks andsuppliedvisuals independentlychecked. Browser
+execution remainsDeveloper evidence. Boundedregression judgedproportionate;no
+freshfull844afteralkynes claimed. Fullrecord docs/checks/alkyne-uniform-20261031/.
+Runtimecheckedunchangedafterreviewbefore nextunit. Coreunchangedtoday;localonly,
+no commit/push/publication. Prioralkeneunit also complete/cleanReviewer.
+
+Userexplicitapproved8expandedalkadienes plan includingvalidatedparallel-stroke
+midpoint recognition forcentralcumuleneC withoutsinglebondanchors. Original2
+professorreferences propadiene/pentadiene_1_3 pinnedpre4919f99;6ownadditions e76eae8.
+Target CH.3094/CCandC=C.6188,sourceIDs/fields/2doublebonds/directions/linearcentralsp
+preserved, samefontcalibration withfallbackonlyformissingcenters; no per-molecule
+offsets. Scope data52/viewer52/MainHTMLcache +6physicalExpandedMOLs=9appfiles.
+Nootherforms/core/3D/scenarioJSON/React changes. ActualstoredSVGread-onlyanalysis
+showsC2missing singlebondanchor only inpropadiene/butadiene_1_2, bothdoublepairs
+agree exactlyatcenter. Userapproval in docs/checks/alkadiene-uniform-20261031/approval.json.
+Next: immutablepost-alkynebaseline, implementapproveddieneunit,boundedcontrols/
+lesson/old23guards, ChemistryValidator/freshReviewer. Own8032PID24839andFirefox9237
+PID24840remain; preserveuser8013/browser. Upstreamchecked4e1190ab, synced93b759f.
+
+# Current resume point — 2026-10-31 — Alkynes implemented/validated; Reviewer next; dienes requested
+
+Userapproved8expandedalkyne scope implemented (10applicationpaths) atop completed
+clean-reviewed7alkenes. CoordinateMOLCH.3094/CCandC≡C.6188; samecalibration helper
+accepts3, uses singlebondnativeanchors; triple3primitives/sp-linearity retained.
+Before48/after48,124UIstates/zooms/numbering/highlights/PNG,48lessonstates(all22
+activealkynesteps at1500/390+ExpandedPrev/Next),2terminalmodels/2Exit,64exactstroke/
+nativespchecks passed0contacts/hiddenlines/clipping/JS. Sourceexactunits;native
+rounding atzoom6 givesmaxCHvisiblevariation.15356CSSpx (oneintegernativeunit),
+CC.06695. Testfixed.12CSSboundwasinappropriateforzoom6;replacedbyderived2native
+endpointunitsatactualCSSscale, no runtimechange fordiagnostic. Originalfailure
+andmeasurednative563vs562data retained. No perfectequalityclaim.
+
+FreshChemistryValidator /root/validate_alkyne_uniform_20261031 independently
+verified8hashes,8embedded+7physicalMOLxy-onlyfields/directions/lengths/valences/
+CnH2n-2/linearsp+terminalH, exact2D3forms/3Dgraphmatches/parentlocants, original
+propynepre4919f99 and7ownadditionse0a3971,844protectedfiles/other133records/
+metadata/old15expanded forms unchanged. NO actionablechemicalfindings.
+30runtimeguardcases old15alkanes+alkenes passed0JS/name/graph/textdiff;28SVGexact,
+2mobileviewportheight-onlychanges normalizedequivalent (<4.55e-13nativefloat).
+All32targetcondensed/skeletalSVGexact. Sharedall141libraryframe measuredsame
+before/after(42.3333x34.3333); otherclasses unaffectedsource/guard. Priorfull844
+catalogwasAFTERALKENES; notfreshlyrerunafteralkynes. Boundedregression justified
+by identicalsharedframe,844protectedsources andold15runtimeguards. Reports/evidence
+in docs/checks/alkyne-uniform-20261031/. Guarded10filerestore testedisolatedcopy,
+newereditrefusedbeforewrites; Mainnotrolledback. No corechanges today; no commit/
+push/publication. Runtimefrozen forfinalfreshReviewer; stopeditingreviewtarget.
+
+Latest user: next applysameprocedure toalkadienes. Read-onlyinventory/reference/
+planpending; no approvalyetfordieneimplementation. Finishalkyneconsolidatedreview
+whileinvestigatingdienes. Own8032PID24839/Firefox9237PID24840remain, preserveuser8013.
+Upstreamchecked4e1190abunchanged,actuallysynced93b759f. Next: freezealkynetarget/
+Reviewer; read-onlydieneinventory andconcreteapprovalquestionbeforeadditionalcode.
+
+# Current resume point — 2026-10-31 — Approved eight-alkyne implementation; checks in progress
+
+Alkeneunit complete/cleanReviewer recorded below. Userexplicitapproved8expanded
+alkynes based on originalprofessorpropyne. Newbaseline854files/10applicationpaths
+in communication/checkpoints/alkyne-uniform-20261031 (includes completedalkene
+state). Implemented8embedded+7physicalExpandedxychanges CH.3094/CCandC≡C.6188;
+sharedexistingviewer calibration accepts3 and derives centersfromsinglebond
+anchors, preserving3nativeprimitives. HTMLcachekeysupdated. Staticpass8MOLs/
+7copies: indexedgraphs/fields/directions/valences/CnH2n-2/sp-linearity/sourcecopy
+match;844protectedfiles unchanged,other133records/metadata/targetotherforms/
+core/3D/scenarios/React/previous15expandedmolecules preserved. No core changes
+throughouttoday, no commit/push/publication.
+
+Before48Firefoxcases passed; after48inprogress. FreshChemistryValidator
+/root/validate_alkyne_uniform_20261031 inspecting8frozenmolecularsourcepaths at
+/tmp/namelecule-alkyne-uniform-20261031/chemistry-target.json. Runtime10paths
+frozen at runtime-freeze.json. Next: finishafter/controls/activealkynelesson,
+regression/rollback/evidence andfreshconsolidatedReviewer. Reusing own8032server
+PID24839andFirefox9237PID24840; preserveuser8013/browser. Noofflinetask.
+
+# Current resume point — 2026-10-31 — Alkene unit complete; eight-alkyne plan approved
+
+Alkene unit completed locally with clean fresh Reviewer /root/review_alkene_uniform_20261031
+ROLE_ID NAMELECULE_REVIEWER_V1_20261023. Frozen51paths manifestc75ac67a… matchedbefore/
+after; independentlyrechecked6filediff,7MOLs/3copies/848protectedfiles/JSC/HEAD/index,
+original4templates,108savedSVGanchors/primitives/calibration,56exactstrokechecks,
+844invariants,PNG and suppliedvisualevidence. NO actionableP0/P1/P2/P3. Browser
+runsDeveloper evidence (42before/42after/108controls/48lesson/844catalog). No core
+changes today; no commit/push/publication. Fullrecord docs/checks/alkene-uniform-20261031/.
+Runtimehasheschecked unchanged afterreview in final-verification.json; nextunit
+maylegitimatelysupersedeshareddata/viewer/HTML, preserve thischeckpoint/evidence.
+
+User explicitly approved sameprocedure for all8expandedalkynes: originalpropyne
+reference (bytespinned to4919f99^/data45) +7ownadditions e0a3971. Current propyne
+CC/CtripleC/CH.825, sevenothers1.17/.78; spcentersalreadylinear. Approvedfinal
+CH.3094,CCandC≡C.6188; preserve sp-linearity/threeprimitives/IDs/order/fields/graphs.
+Change data52,viewer52/MainHTMLcache +7physicalExpandedMOLs (10applicationpaths).
+Preserve condensed/skeletal/core/3D/scenarios/React/previousalkane+alkeneresults.
+Neednewimmutablebaseline AFTERcleanalkenereview, then sameboundedchecks/Chemistry
+Validator/consolidatedfreshReviewer. Ownserver8032PID24839/Firefox9237PID24840
+remain fornextunit; preserveuser8013/browser. Upstreamlastchecked4e1190ab unchanged;
+actuallysynced93b759f. Next: capturealkynebaseline and implementapprovedscope.
+
+# Current resume point — 2026-10-31 — Alkene implementation passed; independent Reviewer next; alkynes requested
+
+User approved exact7expandedalkene plan. Sixapplicationfiles changed (data52,
+viewer52,MainHTML and3physicalExpandedMOLs); CH.3094/CCandC=C.6188 preserve all
+IDs/graphs/orders/fields/directions. Originalprofessor4 reference bytes pinned to
+4919f99^/data45; own3 additions4919f99/f6916a8. Source-coordinate transforms and
+existing sharedfixedCCcalibration extended using singlebond anchors/svgBondList,
+so two offsetdoubleprimitives are not mistaken for atomcenters. No runtimeedit
+since freeze. Coreunchangedtoday. Other134records/targetcondensed+skeletal/
+scenarioJSON/3D/React/nativeglyphservice/JSmol preserved.
+
+Developer before42/after42,108UIstates/zooms.5/2/6/numbering/highlight/hideshow/
+idempotence/PNG passed0contact/hiddenline/clipping/JS. Fullactivealkenelesson22steps
+at1500/390 plusback/replayExpandedstep19=48states,2terminalmodels/2exits0JS.
+Finalcatalog844forms/widthcases passed0fail/JS,0name/text/element/graphdifferences;
+8alkaneexpandedguards16retaincalibration.829SVGexactlyidentical;14intendedexpanded
+changes +1ethynemobileviewportheighttimingchange, independentlynormalizedline/
+text/backplateattributes equivalentmodulotranslation/floatnoise<1e-7nativeunits. Targetotherforms28SVGexact.
+56exactstrokeintervalcases: maxsame-typeCCvariation.09925CSSpx,CH.07869(native
+rounding); pixeloracle sampling haslargeruncertainty, no perfectequalityclaim.
+Initialminzoomtest flagged overlappingFirefoxlayoutrectangles despite noactual
+inkcontact/collision. Harnesscorrectedtoactualglyphbounds+independentpixeloracle;
+productioncodeunchanged, originaldiagnosticsretained.
+
+ChemistryValidator /root/validate_alkene_uniform_20261031 freshread-only verified
+4hashes,7MOLfields/valences/CnH2n/directions/lengths/graph+3sourcecopies;canonical
+2D3forms/3Dgraphmatchall7,848protectedfiles unchanged. Noactionablefindings.
+FullindependentReviewer next; see docs/checks/alkene-uniform-20261031/ report,
+source.diff,baselines,results,reviewtargetwhenwritten. Guarded6filerestoreZIP
+isolatedrestored/newereditrefusaltested; Mainnotrolledback. Ownserver8032PID24839,
+Firefox9237PID24840; preserveuser8013/browser. No commit/push/publication.
+
+Latestusersteering: apply same procedure toalkynes too. Continueclosingalkene
+review, while investigating originalalkyneMOLs read-only. Alkynes are material
+additionaltargets beyond7approvedalkenes; present concreteplan/receiveapproval
+before data/viewer edits. Preserve tripleorder/threeprimitives and linearsp.
+Upstreamlastchecked4e1190ab unchanged thisunit; lastactuallysynced93b759f.
+Next: consolidatedfreshReviewer frozenalkeneunit and boundedalkyneinventory/plan.
+
+# Current resume point — 2026-10-31 — Approved alkene lengths implemented; verification in progress
+
+User approved the exact7expanded-alkene plan. Implemented coordinate-only target
+CH.3094/CCandC=C.6188 in7embedded and3physicalMOLs; sharedexistingviewer
+calibration extended via single-bond nativeanchors and svgBondList, preserving
+double primitives. HTMLcache keys updated. Baseline854files/6changedpaths and
+originals communication/checkpoints/alkene-uniform-20261031. Static checks pass:
+848otherfiles unchanged, indexedgraphs/fields/directions/valences/CnH2n/names/
+metadata/other134records/targetotherforms preserved. ActualFirefoxbefore42/after42
+passed0contacts/hiddenlines/clipping/JS. Controls/lessons/finalregression/review
+pending. ChemistryValidator inspecting frozen4molecularsourcepaths at
+/tmp/namelecule-alkene-uniform-20261031/chemistry-target.json. Own8032serverPID24839,
+isolatedFirefox9237PID24840; preserve user8013/browser. Coreunchanged.
+
+Earlier planning record (superseded by approval):
+User requests the recent alkane bond-length treatment for alkenes, clarifying
+that existing professor MOLs must be the basis, as for alkanes. Read-only
+investigation only; no source/geometry changes in this unit. Earlier complete
+reviewed general2D glyph/JSmol integrations preserved; extensive WIP untouched.
+History verifies4originals ethene/propene/butene_1/butene_2 (pre4919f99 data45),
+3assistant additions methyl_2_propene/methyl_3_butene_1 (4919f99) and
+ethyl_3_dimethyl_2_5_hexene_2 (f6916a8; docs/LARGE-ALKENE-TRIAL.md).
+Recent upstream already contains these additions: presence in93b759f does NOT
+make them original professor molecules. Current7expandedMOLs equal93b759f bytes.
+Original4 C-C/C=C/C-H .825; newer3 C-C/C=C about1.17, C-H about.78.
+Final approved alkane target is C-C.6188/C-H.3094,CC/font2.6175,centeredglyphs;
+newer alkane MOLs first inherited original methylpentane reference. Alkenes have
+seven expanded forms and3physicalsourcecopies in mols/new_molecules; original4
+are embedded-only. Existing fixedCC helper accepts only8alkanes/singlelines;
+naive reuse rejects double-bond primitives and native normalization can undo
+source shortening. Need measured native anchors/calibration adapted for C=C.
+
+Concrete proposed scope awaiting approval: original professor propene/butenes
+as per-category layout/reference; final same expanded coordinate lengths.3094CH,
+.6188CCandC=C, horizontal/vertical equality preserving current directions/IDs/
+bond orders; shared viewer calibration for these7, no regeneration or individual
+molecule cosmetic offsets. Change data52/viewer52/MainHTML cache keys +3physical
+Expanded MOLs only; preserve condensed/skeletal, core,3D,scenarios,React and
+reviewed glyph service. Save pre-change baseline; before/after7 browsercases
+bothwidths and zoom, gap/hiddenbond/numbering/highlight/framing/PNG/lessonreplay,
+unchangedalkane/otherforms guards; ChemistryValidator then consolidated fresh
+Reviewer. User approval required before source edits perAGENTS.
+
+Upstream read-only2026-10-31: ls-remoteHEAD4e1190ab unchanged vs lastchecked;
+local upstream/main samehash, changelog/history reviewed. No new entries/commits
+since previous check; lastactuallysynced93b759f remains, no new sync this unit.
+Todaycoreunchanged: d2138418ff630ab77e578b80ca8ba3a10cc1b877c3ab8c0e5c2735ffcd1f24a2.
+No commit/push/publication. Next: receive concrete plan approval, then immutable
+baseline/implementation and proportionate molecular/browser/review checks.
+
+# Current resume point — 2026-10-31 — General 2D glyph integration complete; independent review clean
+
+Main v52/lessons use shared real-glyph metrics and explicit atom-owned label
+backplates, fixing letter/bond contact and both compaction/oversized-mask causes.
+Local only; no commit/push/publication. No core changes throughout today; core52
+SHA d2138418ff630ab77e578b80ca8ba3a10cc1b877c3ab8c0e5c2735ffcd1f24a2.
+OriginalMOL/SDF/embeddeddata/scenarioJSON/React/JSME and prior JSmol d99 preserved.
+Actual3working-treechanges HTML/viewer/vendorREADME +75new runtime/support paths.
+
+Developer final844captures=422forms/141molecules x1500/390 passed0contact<=.5CSSpx,
+0fullyhiddenline/0clipping/0JS;0name/label/element/bondGraph differences. Controls98,
+alkane48, native92, lessons14/70sampledstates/14terminalmodels/14exits, actual2D/3D
+PNG, future18(6crowded safelyrefused), actualFontFace/metricrecovery/fontlifecycle,
+loadernormal/cdn/prefix/reload/lessonExit/DPR2six, nativeWKWebView28 passed within
+recorded scope. Not all337steps/all1413Dmodels/Chrome/Windows/Safariapp/fullBFCache.
+Pure2Dfontcallback fix postdates controls/WebKit; targeted lifecycle/loader and
+complete844catalog rerun on final frozen runtime. Details/initialfailures/fixes
+and exact test evidence: docs/checks/svg-integration-20261031/summary.json.
+
+Fresh Reviewer /root/review_svg_main_integration_20261031, ROLE_ID
+NAMELECULE_REVIEWER_V1_20261023: NO actionable P0/P1/P2/P3. Frozen137targets/78runtime
+hashes matched, manifest57e289e626c343d5d0efcac6cc54520165822339fe847e04b13ce6436e9bce20.
+Independentlychecked actualdiff, source739only3plannedchanges, HEAD/index,
+reproduciblebuilder/JSC/PythonAST,844owner/backplate and baseline invariants.
+Browser evidence supplied byDeveloper, not independently executed. Full review
+record independent-review.json. Afterreview: documentation/report status only;
+runtime frozen unchanged. Finalreconciliation/cleanup recorded in final-verification.json.
+
+Visual before/after: http://127.0.0.1:8013/docs/checks/svg-integration-20261031/report.html
+Refresh existingFirefox Main to see integration. Guarded selective rollbackZIP
+retains3originals/75new hashes; isolatedrestore/refusaltested; Mainnotrolledback.
+Pre-existingWIP/HEAD168e3cec/indexpreserved. Upstream lastchecked4e1190ab unchanged;
+lastactuallysynced93b759f. Offline deferred; February reminder unconfirmed.
+Next: user visual confirmation; future imports can run tools/check-2d-labels.py.
+Publication/save remains separate explicit instruction. Preserve user's8013server.
+
+# Current resume point — 2026-10-31 — General 2D integration implemented; final independent review pending
+
+User explicitly approved the concrete integration plan. Main v52 now uses shared
+real-glyph metrics, explicit native atom ownership and versioned JSME2023-07-31
+standards module (FEB SHA399be5b9…). Original JSME/core/MOL/SDF/scenarioJSON/React
+and prior reviewed JSmol d99b1168… preserved. No core changes throughout today.
+Runtime changes: MainHTML, viewer52, vendorREADME;75new runtime/support files.
+Exact78-path freeze and checkpoint originals in docs/checks/svg-integration-20261031/;
+selective rollback ZIP verified in isolated copy; Main not rolled back.
+
+Final844captures=422forms/141molecules x1500/390:0contacts<=.5CSSpx,0hiddenline
+primitives,0clipping,0JS,0name/label/atom-symbol/bond-graph differences. Controls98,
+alkane ratio/equal-stroke48, actual2DPNG2 and native3DPNG1200 passed. Producer92
+cases preserves original atomIDs/charge/isotope/relativecoords/MOLbody. All14
+lessons70sampledstates/14terminalmodels/14exits0JS; not all337steps. Future18:
+12accepted,6extremelycrowded safely refused. Metrics fallback/failure/recovery and
+real lateFontFace invalidation passed. NativeWKWebView28cases0contacts/hidden/
+clipping/JS (not Safari-app certification); normal/prefix/cdn loaders/reload and
+DPR2sixcases0JS. WebKit/normal controls predate final font callback correction;
+final callback targeted-tested and all844forms rerun afterward.
+
+Developer findings fixed: generic mask floor1.2->.6px (minimumzoom pentanoic bond);
+font redraw used to call3D numbering after applet teardown, now pure2D preserving
+progress/timer with owned RAF cancellation; probe freezes line geometry before
+await to avoid detached-node readings. Initial diagnostics retained, not final
+proof. Font-lifecycle pagehide/show test synthetic; fullBFCache untested.
+Visual before/after report and bounded evidence/test sources:
+docs/checks/svg-integration-20261031/report.html. Current status: review pending.
+Next: finish report browser check, freeze all deliverables, one fresh independent
+Reviewer; resolve findings/targetedchecks then final notes and own-process cleanup.
+Own temporary server8031 PID22376 and isolatedFirefox9237 PID22377; preserve user8013.
+
+Upstream re-read at unit start:4e1190ab3d58f5eb384f1583bfe05e37242bef61 unchanged;
+last actually synchronized93b759f5891d7b5a1172646032d83215d60b7604. No new upstream
+sync/commit/push/publication. HEAD168e3cec unchanged, index unchanged. Offline
+package remains deferred; February reminder creation remains unconfirmed.
+
+# Current resume point — 2026-10-31 — General 2D text integration requested; concrete plan awaiting approval
+
+Verification update: final739-baseline sources preserved except planned3 files;
+current final catalog844captures=422forms x1500/390 has0contacts<=.5CSSpx,
+0hiddenprimitives/0clipping/0JS and0name/label/atom-symbol/bond-graph differences.
+Shared pixel-floor corrected1.2->.6CSS to preserve pentanoic-acid bond atzoom.5;
+initial failure retained. Diagnostic oracle now freezes line coverage beforeawait
+(previous live-node read could observe a detached SVG). Final catalog usesfixed
+oracle and source hashes; old initial counters are not final evidence.
+Controls98states+48alkane ratio/equal-stroke cases+2nativePNG passed0JS. Native
+producer92cases/fonts9/12/14/16 passed raster and original atom/charge/isotope/
+relativecoords/MOLbody invariants. All14lessons70states14terminalmodels14exits0JS.
+Future/recovery/CLI/prefix/report tests and independentReview stillpending.
+NativeWebKit harness nowcompiles throughObjectiveC; Swift attemptfailed dueSDK
+mismatch (no SDK modifications). Do not claimWebKit results until actualrunends.
+Core unchanged. Main integration remainsinprogress, notcommitted/published.
+
+Implementation update — user approved concrete plan. Local implementation/tests
+in progress; do not declare complete. Initial backup at communication/checkpoints/
+svg-integration-20261031,739protected hashes in /tmp/namelecule-svg-integration-20261031.
+Shared metrics and versioned JSME FEB module/native atom-owner attributes installed;
+viewer uses explicit ownership and final masks; syntax passed. Actual browser
+checks beginning. Owned server8031 PID22376 / Firefox9237 PID22377. Core unchanged.
+Upstream re-read4e1190ab unchanged; no sync. Next: all-form audit/corrections,
+metrics failure/recovery/controls/lesson/browser checks and independent review.
+
+User requested integration of the 2D glyph/backplate correction into Main.
+Read-only investigation reused independently reviewed prototype/general audit,
+inspected active loader/modules and viewer producers/compaction/masks. No code
+implementation yet. Audit explicitly says prototype must NOT ship as-is: residual
+wrong backplate ownership in CHO compaction and oversized CHn masks hiding a
+pentanoic-acid C–C, plus missing-metrics crash/untested font recovery. JSmol
+lifecycle integration already complete and must remain preserved.
+
+Presented concrete scope: shared real-glyph bounds service for nativeJSME and
+viewer CHn/functional labels with safe metric/font/cache handling; explicit
+atom/label/backplate ownership for compaction; preserve approved alkane uniform
+stroke policy, remove superseded compensations only after comparison; versioned
+JSME copy with reproducible builder/provenance, actual Main/lesson loader URLs;
+guarded selective rollback. Files: mulermoc-nom-52.html,
+js/mulermoc-nom-molview-52.js, new js/namelecule-label-metrics.js,
+new js/vendor/jsme/namelecule-20261031-r1/, tools/build-jsme-labels.py and bounded
+validation tools/evidence/docs/vendor-policy record as needed. Original jsme,
+core/MOL/scenarioJSON/React preserved; no publication/commit/offline work.
+
+Acceptance: all422forms141molecules desktop/mobile, contact AND hidden-bond/
+clipping/atom-graph invariants; both residual causal examples; future stress inputs,
+sub/super labels, metrics failure/recovery, late fonts/cache, real zoom extremes,
+resize/switches/numbering/highlights/PNG, all14boundedlessonflows and existing3D
+fix smoke. Actual browser support/untested paths explicitly disclosed. One
+consolidated fresh Reviewer after unit; no automatic full-review repetition.
+Await specific plan approval per AGENTS before source edits. Read-only work and
+continuity notes authorized. No core changes today; upstream last checked4e1190ab,
+last actually synced93b759f remains. Offline deferred to near conference;
+February reminder request recorded below; actual reminder creation unconfirmed.
+
+Planning baseline SHA256:
+mulermoc-nom-52.html: 14860cfff5fcb3d5ded4a547bea88e1877201498c746760904e870f094357602
+js/mulermoc-nom-molview-52.js: 04c488613ac45e3e08686948e3633a771dd30641eb3c0a8e9e9aa90b34d4dc15
+js/mulermoc-nom-core-52.js: d2138418ff630ab77e578b80ca8ba3a10cc1b877c3ab8c0e5c2735ffcd1f24a2
+jsme/FEB169D74546A3B279D22AE09AFB86BD.cache.js: 93c3116d5e0775b9fe6953c79102813dac966f7589414ad52509f0c1e254b789
+
+# Current resume point — 2026-10-31 — Main JSmol integration complete and independently reviewed
+
+Reminder request — 2026-10-31: User now explicitly requested a February reminder
+for the deferred offline package. Proposed default1Feb2027 10:00Europe/Athens.
+No chat scheduling tool available. Native Mac Reminders creation and exact-title
+reconciliation both timed out (AppleEvent -1712); creation/notification NOT
+confirmed. Do not claim an active reminder or retry blindly. Prepared importable
+Calendar file communication/reminders/namelecule-offline-20270201.ics with one
+VEVENT at08:00UTC/10:00EET and DISPLAY alarm atstart; user import still required.
+No permission for automatic future code implementation. Application/core unchanged.
+
+Scheduling decision — 2026-10-31: The user explicitly deferred the offline
+package until closer to the April2027 conference. It is not immediate work;
+do not begin offline packaging now. This is a saved decision, not a scheduled
+reminder or authorization to implement it automatically later. Only continuity
+notes changed for this decision; no application/core changes or new tests.
+
+User-approved concrete integration finished locally. Main v52 exploration and14lessons
+share versioned local exact-reviewed JSmol d99b1168… +SRI, provenance/licenses and
+reproducible builder. Existingchanges3files: MainHTML/.gitignore/vendorREADME;
+new6runtime/supportfiles in js/vendor/jsmol/namelecule-20261031-r1/ andtools.
+Pre-existing unrelated WIP preserved. Technical record docs/JSMOL-INTEGRATION-20261031.md,
+visual report/evidence/testsources in docs/checks/jsmol-integration-20261031/.
+Selectiveguardedrollback checkpoint+archivedZIP preserve3originals/6newfilehashes.
+Dryrun/isolatedrestore/newereditrefusalpassed; Mainnotrolledback. NoGitcommitbackup.
+
+Developer20causal cases:10/10baseline fail vs0/10Main;14uncaught+4caughtbaseline,
+pageRAF/timerspreserved. All14lessons70sampledstates/14terminalmodels/14exits0JS;
+12actualrapidpicks+toggle/resize0JS; actual3Dnumberingcoords/highlights/zoom/labels;
+nativePNG1200square viarealSaveImageprompt/encoder, CRC/decode/visualpassed.
+FirstPNGharnesslackedpromptanswer, retainedtimeout; harnesscorrectedonly.
+Loadernormal/libs=cdn/prefix/reload/prefixlessonpassed.422forms141mols names/
+labeltextsunchanged.734protectedfilesonlyHTML/vendorREADMEchanged;732unchanged.
+Core/MOL/scenarios/React/HEAD/indexpreserved; JSC7inlines+bundle/build/ignorepassed.
+
+FreshReviewer /root/review_jsmol_main_integration_20261031: NO actionableP0/P1/P2/P3.
+Frozen44targets+8deps manifest48220a2bfd444e9dae08956f590ecbc5475fc797923073ae64858e9115b96544
+allmatched; independentlyreconstructedbundle/SRI/diff, checked734sources/HEAD/index,
+rollbackdryrun/guards, detailedevidence/lessonselections andnativePNGCRC/decode/image.
+Browsers/JSC/appliedisolatedrollback remainDeveloperexecutionevidence. No-source
+correctionsneeded. Afterreviewonlyreport/summary/continuitystatusupdated; targeted
+finalhashverificationrecordedseparately. Independent-review/final/cleanupJSONsaved.
+Owned21431server8030/21432headlessFirefox9237verifiedexited; user8013/profilepreserved.
+HTTP8013servesexactnewHTML/bundle; userrefreshsuffices. Visualreportdesktop1500/
+mobile390fitandimagesloaded0JS. Report-overviewscreenshotcapturedbeforereview.
+
+No corechangesinENTIREtoday'ssession: core52SHA
+d2138418ff630ab77e578b80ca8ba3a10cc1b877c3ab8c0e5c2735ffcd1f24a2.
+No commit/push/publication/newsync. CheckedupstreamHEAD4e1190abunchanged; lastactual
+sync93b759f. Remainingj2sCDN/notoffline, currentmodel-completion/hiddenload-zap,
+all337steps/all1413Dmodels, Safari/BFCache/outage/conferencerehearsal notcovered.
+2Dtextprototype remainsunintegrated. Next: presentconcreteapprovedscopeplan for
+next root-cause unit (modelcompletion or general2Dtextintegration); no silent
+implementation/publication. Do not claimconferencecertification.
+
+# Current resume point — 2026-10-31 — Main integration complete; independent review pending
+
+User-approved concrete plan implemented: shared v52 loader now loads exact reviewed
+JSmol d99b1168… at js/vendor/jsmol/namelecule-20261031-r1/ with SRI. New local
+licenses/provenance/notice and deterministic tools/build-jsmol-lifecycle.py; narrow
+.gitignore exception and vendor README policy. Three original files/six new runtime
+and support files; pre-existing unrelated WIP preserved. Guarded rollback backup in
+communication/checkpoints/jsmol-integration-20261031; durable rollback-source.zip
+under new docs/checks/jsmol-integration-20261031. Main not rolled back.
+
+Developer checks passed:20causal cases (baseline10failing, Main10zero; baseline14
+uncaught+4caught), unrelated pageRAF/timer preserved; all14lessons70sampledstates,
+14correctterminalmodels/14exits0errors;12rapidactualpicks+hide/show/resize0errors;
+realcomp5numbering2D/3Dmatchedcoordinates+highlightcolors; actualzoom/labels;
+nativeSaveImageprompt accepted viaBiDi, actualPNG1200square verifiedCRC/decoded/
+visuallyinspected. FirstPNG harness omittedprompt handling andtimedout; initiallog
+retained, harnessonlycorrected. Loader normal/libs=cdn/prefix/reload/prefixlesson
+passed. All422forms141molecules names/labeltexts unchanged fromcaptured baseline.
+Of734protectedpreexistingfiles onlyHTML/vendorREADMEchanged, other732unchanged;
+core/MOL/scenarios/React/HEAD/index unchanged. JSCbundle+7inlines, deterministic
+rebuild/corrupttargetrefusal/ignoreexception/isolatedguardedrollbackpassed.
+
+New docs/JSMOL-INTEGRATION-20261031.md +checks/jsmol-integration-20261031/ contain
+actualevidence/testsources/summary/visualreport. One fresh Reviewer next; freeze
+exactcontent/hashes beforehandoff. Noeditingreviewtargetduringreview. Scopeexcludes
+fullj2spinning/offline,model-completion/hidden-load-zap,2Dprototypeintegration,
+all337steps/all1413Dmodels andconference/Safari/BFCache/networkfailurerehearsal.
+Upstreamchecked4e1190abunchanged;lastactualsync93b759f. No newsync/commit/push/publish.
+Core unchanged ALLtoday: core52 d2138418ff630ab77e578b80ca8ba3a10cc1b877c3ab8c0e5c2735ffcd1f24a2.
+Ownedtmpserver8030 PID21431/headlessFirefox9237 PID21432 stillrunning forchecks;
+user8013/profileuntouched. Next: independentreview, resolvefindings, finalhashcheck,
+cleanupownedprocesses, updatecontinuityrecords. Localintegration notconferencecertified.
+
+# Current resume point — 2026-10-31 — Main JSmol integration approved; implementation/checks in progress
+
+User approved the concrete plan below. Installed exact reviewed d99b1168… bundle
+under js/vendor/jsmol/namelecule-20261031-r1 with SRI/provenance/licenses and
+reproducible tools/build-jsmol-lifecycle.py. Main v52 HTML loads this relative
+versioned asset; j2s/server mode config preserved. Narrow .gitignore exception
+and vendor policy updated. No core/MOL/scenario/React changes; no commit/publish.
+Selective guarded rollback under communication/checkpoints/jsmol-integration-20261031
+backs up three existing files and records six new files. Dry-run and isolated
+restore passed, including refusal of newer edits before any write. Main not rolled back.
+Builder/hash, JSC bundle/seven HTML script syntax and ignore exception passed.
+20 causal cases: baseline 10/10 reproduce errors; integrated Main 10/10 zero,
+covering RAF/resize/repaint entry/late delivered callback/post-destroy resize.
+Unrelated page work preserved. All14 bounded lesson checks now running; actual
+controls, prefix hosting, 2D/name invariants and independent final review remain.
+Temporary owned server8030 PID21431 / headlessFirefox9237 PID21432;
+work/evidence in /tmp/namelecule-jsmol-integration-20261031. User8013 untouched.
+Upstream HEAD re-read 4e1190ab3d58f5eb384f1583bfe05e37242bef61, unchanged from
+last checked; changelog/history reviewed. Last actually synchronized remains
+93b759f5891d7b5a1172646032d83215d60b7604. No new upstream sync.
+Core52 d2138418ff630ab77e578b80ca8ba3a10cc1b877c3ab8c0e5c2735ffcd1f24a2
+unchanged all today. Model-completion/hidden load-zap, offline packaging and 2D
+text prototype remain separate. Next: finish acceptance tests, archive report and
+freeze hashes for one fresh independent Reviewer; do not claim conference readiness.
+
+# Current resume point — 2026-10-31 — Concrete Main JSmol integration plan; approval pending
+
+User said yes to preparing the next concrete integration plan. Read-only
+inspection completed; NO production implementation authorized/performed yet.
+734 Main hashes unchanged from independently reviewed prototype baseline;
+HEAD168e3cec/index25c212 unchanged. Core unchanged ALLtoday (d2138418...).
+Main HTML loads unversioned CDN JSmol; local JSmol.min.js/j2s absent. .gitignore
+excludes those basenames globally and vendor README explicitly keeps JSmol out
+of Git. Prototype candidateSHA d99b1168acbbd55d59073943e6fde174513e8b815ddb88ae8f1bfa927961b323 is reviewed.
+
+Concrete proposed scope for user approval:
+- Local pre-change copies+hashes of touched files and explicit new-file inventory
+  under communication/checkpoints; selective rollback must not reset unrelatedWIP.
+- Add exact reviewed bundle at js/vendor/jsmol/namelecule-20261031-r1/JSmol.min.js,
+  source/license/provenance metadata with original/candidate hashes; preserve
+  archived base/helper/diff. Add a reproducible build/check tool under tools/.
+- Update mulermoc-nom-52.html shared script source to relative versioned bundle
+  for normal exploration and all lessons; retain existing j2s/server mode config.
+  New immutable asset path avoids old JSmol cache once HTML is reloaded. Test
+  project-subpath hosting as well as local8013. No silent unpatched-CDN fallback.
+- Narrow .gitignore exception and vendor README policy amendment, so dependency
+  is eligible for eventual save/publication; no commit/push/publication implied.
+- Use exactly tested patch, not an engine upgrade. j2s remains existing CDN in
+  this bounded step; not full runtime pin/offline guarantee. Complete dependency
+  packaging and conference rehearsal remain separate approved work.
+- Tests: build/hash/prefix asset paths, five causal failure paths, all14bounded
+  lesson navigation+exits, real rapid picks, hide/show/resize, targeted actual3D
+  numbering/highlights/camera/PNG smoke, 2D/naming/content invariants, rollback.
+  One consolidated fresh Reviewer of final integration and evidence; corrections
+  within approved scope. Source/core/MOL/scenario/React unchanged.
+
+Planned source paths: mulermoc-nom-52.html, .gitignore, js/vendor/README.md,
+new js/vendor/jsmol/namelecule-20261031-r1/ and tools/build-jsmol-lifecycle.py;
+new integration report/checks and continuity/contribution records. Exact metadata
+filenames/license notices determined from pinned source without changing patch.
+Next: present this plan and request code-change approval per AGENTS. After approval,
+check professor upstream/current overlaps before implementation as required; last
+checked4e1190ab, actuallysynced93b759f. No new sync/check claimed in this step.
+Model-completion/hiddenload-zap, earlier2D fixes and production publication stay
+outside this integration. Prototype/video still available and independentlyreviewed.
+
+# Current resume point — 2026-10-31 — JSmol prototype and video complete, independently reviewed
+
+Approved scope achieved: isolated lifecycle prototype plus requested before/after
+video. Main production integration remains NOT approved. Main/core/MOL/scenarios/
+React untouched. Report docs/JSMOL-LIFECYCLE-PROTOTYPE-20261031.md; deliverables
+under docs/checks/jsmol-lifecycle-prototype-20261031/. watch.html opened in external
+Firefox via open -a (exit0; user display not independently observed). MP4 is
+21.8217s,1280x800,859039bytes,noaudio;105 actual browser captures and105 decoded
+samples/source timestamps verified; Firefox playback/seeks4/12/20passed.
+
+Candidate SHA d99b1168acbbd55d59073943e6fde174513e8b815ddb88ae8f1bfa927961b323.
+WeakMap per applet owns/cancels RAF+resize, closes before native destroy, guards
+repaint entry before synchronous panel access and late callbacks. Five controlled
+paths x2 repeats:10baseline failing cases/10candidate zero; unrelated page work
+preserved. Mock two-owner unit passed (not two live engines).28 bounded lesson
+runs/140states/28exits: correct models,0errors bothversions.24 actual rapid picks,
+hide/show and resize pass. No full337/all141/camera-highlight pixel certification.
+Model-completion/hidden-load-zap behavior unchanged; Safari/BFCache/offline/cold
+conference rehearsal untested. Video honestly labels deliberate teardown and
+isolated prototype; no fabricated Main freeze. Source/code/evidence archived.
+
+Fresh Reviewer /root/review_jsmol_prototype_video_20261031: NO actionable findings.
+Verified40targets+7deps+734sources/HEAD/index; reconstructed candidate/diff in
+memory; exact summary; JSC ownership tests;105frame ZIP/timestamps; independently
+parsedMP4 105samples/timescale600. Browser/media execution remains Developer
+evidence. Manifest82e2cacb338ce18d37378b5b187c1042bbb183dad72961452487ddc9ee830b6a.
+All frozen targets unchanged at final check. independent-review/final-verification/
+cleanup JSON saved. Owned20762server8029/20763Firefox9237 verified exited;
+user8013/browser preserved. No commit/push/publication/upstream sync.
+Core52SHA d2138418ff630ab77e578b80ca8ba3a10cc1b877c3ab8c0e5c2735ffcd1f24a2 unchanged ALLtoday.
+Last checked upstream4e1190ab; actual sync93b759f remains.
+
+Next requires concrete plan/approval: production dependency version/loading/cache/
+rollback integration and relevant acceptance tests; separately current-model
+completion/hidden-load-zap lifecycle contract. Previous 2D prototype also remains
+unintegrated. Do not silently merge either prototype or claim conference readiness.
+
+# Current resume point — 2026-10-31 — JSmol prototype/video complete; independent review pending
+
+User approved isolatedJSmol lifecycleprototype andrequested before/aftervideo.
+Productionintegration NOTapproved. New docs/JSMOL-LIFECYCLE-PROTOTYPE-20261031.md
++checks/jsmol-lifecycle-prototype-20261031/. Frozen40targets+7deps; manifest
+82e2cacb338ce18d37378b5b187c1042bbb183dad72961452487ddc9ee830b6a. Reviewer
+/root/review_jsmol_prototype_video_20261031 inspecting; doNOTeditfrozen targets.
+734Main-sourcehashes/HEAD/index intact. Candidate d99b1168acbbd55d59073943e6fde174513e8b815ddb88ae8f1bfa927961b323,
+deterministicrebuildsame. WeakMapownsRAF/resize perapplet,closesbefore native
+_destroy; repaintentry/panel/callbackguards coverlateworkandcontinuing-script
+entryafterdestroy. Main/core/MOL/React/scenarios untouched; no generalcatch.
+
+20controlledcases:5paths2versions2repeats.10/10baselineflagged;10/10candidate0.
+Includes latecallback/newrepaint/newresize afterdestroy. Unrelatedpageworkruns.
+Mockownershipunitchecks A/B/pageisolation/newobjectsameid/reentrantclose; NOT
+2liveengines.28lessonruns140states28exits14/14modelsperversion0errorsboth under
+SDF/SPT+.5sdelay.24actualpicks (3x4eachversion)+hide/show+resize0errors37atoms.
+Notall337steps/all141models/camera-highlightpixelcertification. Modelcompletion
+contract/hiddenload-zap unchanged. Safari/BFCache/offline/conference untested.
+
+Video actual105browserPNGcaptures~5fps, threecontrolledsamecases eachbaseline1/
+candidate0. MP4 H264 21.8217s1280x800noaudio859039bytes,105/105decoded/sourcePTS
+allmatched; exact-timeencodedposterinspected. Firefoxplayback+seek4/12/20pass0JS.
+watch.htmllocalplayer; MP4+frameZIP/hashes+metadataarchived. No fakeMainfreezeclaim.
+Firstlayout828pxandinitialtimestamp/paddingchecksuperseded; final800pxnormalized.
+NativeAVFoundationencodingoutside sandbox authorized by video request; no installs.
+Ownprocesses20762server8029/20763isolatedFirefox9237 cleanupnext, user8013unchanged.
+Next: Reviewer findings/corrections, records/cleanup, openlocalwatchinexternal
+Firefox andprovidevideo. Core52SHA d2138418ff630ab77e578b80ca8ba3a10cc1b877c3ab8c0e5c2735ffcd1f24a2 unchangedALLtoday;no commit/push/publish/sync.
+
+# Current resume point — 2026-10-31 — Approved JSmol isolated prototype + video IN PROGRESS
+
+User approved tmp-only lifecycle prototype, then explicitly requested before/after
+video. Production integration NOTapproved. Root /tmp/namelecule-jsmol-lifecycle-
+prototype-20261031;734Main-sourcehashbaseline+HEAD/index preserved. Candidate
+JSmolSHA d99b1168acbbd55d59073943e6fde174513e8b815ddb88ae8f1bfa927961b323.
+HelperWeakMapperapplet ownsRAF/resize;disposeclosesbeforecancellation;repaintentry
+andcallbackcheckclosedowner/panel. Nativeactivegeometry/model/cameralogiсunchanged.
+Onlycandidatevendor+HTMLcopies modified; sourceapp/core/MOL/React untouched.
+
+Controlled20cases:5paths x2versions x2repeats. All10baselinecases fail through
+uncaughtorcaughtTypeError;all10candidatezero. Postdestroyrepaintentry andlate
+callbackdelivery included, plusresizerequestafterdestroy. Unrelatedpageworkruns.
+JSC mockedownershipunit passes A/B/page isolation/newobjectsameid/reentrantclose.
+28lessonruns140states/28exits withslowSDF/SPT:14/14terminalmodels eachversion,
+0errorsboth. Not337fullsteps. Actualactive3x4pickseachversion+hide/show+900/1500
+resize correct37atom finalmodel0errors. Video3controlledside-by-sidecases recorded:
+baseline1/candidate0 each.105actualbrowserPNGs1280x800 ~22s, nofalseMainfreezeclaim.
+NativeAVFoundationMP4encoder (noffmpeg/install) producedinitialvalidvideo but
+strictframecountcheckfoundonepaddingframe; normalizeinitialtimestamp/recheckall
+sourcetimestamps inprogress. Initial828pxrecording supersededfor800pxlayout.
+Video userdelivery andindependentreview pending, do notdeclarecompleteyet.
+
+Ownserver8029PID20762, isolatedFirefox9237PID20763; user8013/Firefox preserved.
+Next: finishencode+decode/posterinspection, archiveevidence/builddeterminism,
+consolidatedindependentReviewer, corrections/records/cleanup, provideMP4+viewerlink.
+Productionintegration/model-completioncontract/hiddenloadzap scope stayseparate.
+No corechangesALLtoday;no commit/push/publish/sync. Upstreamchecksame4e1190ab,
+lastactualsync93b759f. Previousinvestigation independentlyreviewed JSL-01closed.
+
+# Current resume point — 2026-10-31 — JSmol investigation independently reviewed
+
+User authorized read-only 3D investigation. COMPLETE; production/prototype fix
+NOTapproved or implemented. Report docs/JSMOL-LIFECYCLE-INVESTIGATION-20261031.md;
+evidence docs/checks/jsmol-lifecycle-20261031/. Main/core/MOL/React unchanged.
+19focusedflows95states,8controlledteardowns,3x4actualpicks+hide/show/resize+PNG.
+43newnaturalerrors all AFTERdestroy/departing. RAF callbacksurvives destruction;
+naturalsetScreenDimension comesfrom CONTINUING SCRIPT into repaint, notresize
+timer. Inducedresize reproduces separately. CancellingknownRAF/resize2/2perkind
+removescontrollederrors; notcompletefix orproofscriptcontinuationcovered.
+Oneimmediateemptyread, notfollowedtorecovery.6separatefollowups24laterreadscorrect
+URL37atoms;olderload/zapcallbackscompleteafterstepchange. Nopermanentblankclaim.
+
+FreshReviewer review_jsmol_lifecycle_20261031 verified24targets/5deps/734sources/
+HEAD/index,43timingclassifications+realm/context,8controls,exactsummary. JSL-01/P2
+requiredseparatingnaturalscriptcontinuationfrominducedresize andcoveringrepaint
+entryafterdestroybefore synchronoussetScreenDimension. Report+plan corrected;
+Developer targetedstack/proseverificationclosed; noadditionalruntime rerun.
+Frozenmanifest30b57e5844a0d76761bbb00c5edc775c55079f9ba56f98cc43f709e270f0f9ff;
+23targetsunchanged,onlyMDcorrected. independent-review/final-verification/cleanup
+JSONsaved. OwnedPIDs20346/20347/20429verifiedexited, user8013/Firefoxpreserved.
+
+Next concrete plan needs approval perAGENTS: isolatedcandidateJSmol.min.js+HTML
+under/tmp/namelecule-jsmol-lifecycle-prototype-20261031, perappletownership/cancel
+RAF+resize andlifecycleguardonrepaintentrybeforeanyaccess, includingcontinuing
+scripts. VerifycausalRAF/resize/postdestroyentry plusrealexits/activeflows;
+no globalexceptioncatch orarbitrarydelay. Productionintegrationseparateapproval.
+Modelcompletion/currentselection contract andhiddenload+zap separateboundedstep.
+Earlier2D audit complete andNOTintegrated. Safari/BFCache/offline/all14/337/cold
+conference rehearsal untested. No guarantee. UpstreamHEAD4e1190abunchangedlast
+checked; actualsync93b759f remains. Core52SHA d2138418ff630ab77e578b80ca8ba3a10cc1b877c3ab8c0e5c2735ffcd1f24a2 unchangedALLtoday. No commit/push/publish/sync.
+
+# Current resume point — 2026-10-31 — JSmol investigation complete; independent review pending
+
+User approved read-only 3D instability investigation, not production implementation.
+New docs/JSMOL-LIFECYCLE-INVESTIGATION-20261031.md + checks/jsmol-lifecycle-20261031/.
+24new files frozen; manifest30b57e5844a0d76761bbb00c5edc775c55079f9ba56f98cc43f709e270f0f9ff.
+Fresh independent Reviewer /root/review_jsmol_lifecycle_20261031 running. Do not
+edit frozen targets. Main/core/MOL/React and734sourcehashes/HEAD/index unchanged.
+
+Confirmed new natural nullviewererrors occur AFTERdestroy duringdeparture:
+faithful6runs1error; slow3runs42errors (41updateJS+1setScreenDimension). Native
+RAF and100msresize callbacks survive_destroy. Eightcontrolledtests:2repeats
+per RAF/resize x cancel/noCancel: native1error each, cancelownedwork0 each.
+Not symptomcatching, no reusableproductionfixyet. Priorold42+4errorlogs cannot
+allberetroclassified.19focusedlessonflows95states total, not14/337replay.
+Oneimmediatemodelread in slow3was0afterpriorcorrectURL; notfollowedtorecovery.
+6separatefollowups/24latersamples correctfile37atoms; callbacksproveolderload/zap
+work completesaftervisible stepchange. No FIFO-inversion/permanentblankclaim.
+Active3x4realpicks +hide/show+900/1500resize correctfinal37atoms0JSerrors; PNGseen.
+InstrumentedFirefox159/macOS/Jmol16.4.23 viaexistingCDN, notoffline/Safaricertified.
+Initialharnesssyntax3errors andgetVersiondiagnosticfailure disclosed/excluded.
+Sourceexcerpts/provenance andactualfunctionstrings distinguishpartialnative
+matches fromfullbytepinning. Observerevolved;earlierruns fewerloggedkindsexplicit.
+
+Proposednextplan (NOTapproved): tmp-onlycandidate JSmol+HTML toown/cancelRAF and
+resize work perapplet atdestroy, lifecycle epochguard; regressionactualnavigation.
+Model-completion/hiddenload+zap contract separate nextboundedstep. Need user
+approval before prototype/productionpatch; auditdiagnosticcancellationisnotequivalent.
+Ownprocesses20346server8027/20347Firefox9237/20429delayserver8028cleanupnext;
+user8013/Firefox untouched. UpstreamHEAD reconfirmed4e1190ab, sameaslastchecked;
+readthatCHANGELOG, nonewsincecheck;actualsync93b759f remains. No new sync/commit/
+push/publication. Core52SHA d2138418ff630ab77e578b80ca8ba3a10cc1b877c3ab8c0e5c2735ffcd1f24a2 unchanged ALLtoday.
+Next: Reviewer findings, boundedcorrectionsifneeded, finalrecords/cleanup; explain
+causeandproposeapprovednextscope. Earlier2D audit complete, integrationNOTapproved.
+
+# Current resume point — 2026-10-31 — JSmol lifecycle read-only investigation IN PROGRESS
+
+User approved investigation/reproduction of 3D null-viewer instability; NOT a
+production fix. Main/core/MOL/React untouched. New diagnostics only under
+/tmp/namelecule-jsmol-lifecycle-20261031;734source hashes+HEAD/index baseline.
+Own server8027PID20346, isolatedheadlessFirefox9237PID20347; user8013 unaffected.
+4initial+6faithfulflows complete. Faithful6 correct37atom final3D;1natural
+updateJSerror afterdestroy/beforepagehide. Slow3flow run:42errors allAFTERdestroy
+(1setScreenDimension+41updateJS);one immediate modelread37→0 transient, later
+settlementnowtesting. Controlled8tests (2repeats x RAF/resize x native/cancel):
+nativeRAF2/2 updateJSerror;native resize2/2 setScreenDimensionerror;cancelonly
+knownpendingwork4/4zeroerrors. Strongcausal evidence: scheduledwork survives
+destroy. CancellationdiagnosticONLY, no productionfix. Slow6settlementflowsnow
+running with loadStructcallbacks/atom-count timestamps.
+Initialpreload harness syntaxfailure kept separately (3diagnosticSyntaxErrors);
+not applicationregressions. CDN sources captured withheaders/hashes. Jmol
+GenericApplet.destroy nullsviewer; wrappers continueaccess unguarded; no proof
+thiscauses activepage failureyet. Actualreadinessflag isapplet-levelnotmodelready.
+UpstreamHEAD read-onlyremote check still4e1190ab (unchanged lastchecked); last
+actualsync93b759f. No codeintegration/sync/commit/publication/corechange today.
+Next: finish faithfulreproduction, test controlleddelayifneeded, record exact
+causalevidence+uncertainty; independentReviewer ofcompletedinvestigation; concrete
+fixplanonlyifjustified, approval beforeproductioncode. Previous2Daudit complete
+and separate, productionintegrationstillNOTapproved. No automatic2Dimplementation.
+
+# Current resume point — 2026-10-31 — Generalization audit independently reviewed
+
+User objective: safe shared glyph/bond solution for all current/future Main
+molecules, with conference collateral checks and visual browser findings.
+Audit COMPLETE; production integration NOT approved or implemented. Visual
+report: docs/checks/svg-general-audit-20261031/report.html (6references/14SVGs).
+Technical report: docs/SVG-GENERAL-AUDIT-20261031.md. Main/core/MOL/React unchanged.
+
+Confirmed final oracle: 141molecules/422forms;1266appcaptures;1402faithful replays.
+Desktop contact-or-gap≤0.5CSSpx forms199→1, candidate390also1; one existing hidden
+line each.198improved forms,0newdesktopcontact/hiddenprimitive,0name/graph/text
+changes. Initial235→42 counters withdrawn (mask discovery/font replay corrected).
+Causeconfirmed: CHOcollector removes unrelated C9mask in complexaldehyde;
+getBBoxovercoverage hides pentanoicacid CC. Both fixed only in scratchdiagnostics,
+NO MOL changes or production exceptions.120controlstates,2PNG,16overlapchecks,
+36futurestresscases,28lessonruns140states28exits,6warmstarts,6DPR2samples.
+Futurecrowding stillhidesbonds; injectedmissingmetrics throws. Baseline lesson
+42JSmolerrors/1unstableterminal3Dread; candidate pass does NOTprovefix. Startup
+has4ADDITIONALnullviewererrors (1setScreenDimension,3updateJS), UNKNOWNrun/version.
+Safari/full337steps/zoomextremes/latefonts/offline/coldmachine notcertified.
+
+Fresh independent Reviewer /root/review_svg_general_audit_20261031 verified frozen
+33files+4deps,734productionhashes,HEAD/index,1402capturelinks and exactsummary.
+Only AUDIT-F01/P2: missing4startup-error disclosure. Corrected technicalMD,
+HTMLgenerator/report; Developer targetedverification closed. FinalHTMLdiff is
+ONLYdisclosureparagraph; scripts/SVGs unchanged. No runtime rerun afterprosefix.
+Reviewmanifest c686e0fa170f8c632c416ac7d6ad1fb64cbb3c7966bd24e1e2032b83f79fb14e.
+independent-review.json/final-verification.json/cleanup.json record scope/evidence.
+Ownserver8026PID19347/isolatedFirefox9237PID19348 verifiedexited;user8013 preserved.
+ExternalFirefox visualreport opened via open -a Firefox (exit0); user display
+not independently observed.
+No core changes ALLtoday;core52SHA d2138418ff630ab77e578b80ca8ba3a10cc1b877c3ab8c0e5c2735ffcd1f24a2.
+HEAD168e3cec/index25c212 unchanged;no commit/push/publication/upstreamsync.
+Lastcheckedprofessor4e1190a, actuallysynced93b759f (earlier review in this session).
+Next: concrete approved-scope plan for shared accurate label geometry, mask
+ownership, fontfailurefallback/cache/versioning and new-input guard. Separate
+JSmol lifecycle/recovery investigation before conference rehearsal. Priorpropene
+mitigation remains; priorisolatedprototype not integrated. No universal guarantee.
+
+# Current resume point — 2026-10-31 — Generalization audit complete; independent review pending
+
+User asks allcurrent/futuremolecule checks, collateral/conference risk and visual
+browser findings. MAIN141molecules/422forms; integration NOTapproved. New report
+SVG-GENERAL-AUDIT-20261031.md; docs/checks/svg-general-audit-20261031/report.html
+sixvisualreferences/14SVGs/12viewbuttons, tested0JSerrors, focusfits. Need open
+report in externalFirefox AFTER review. Production/core/MOL/React untouched.
+
+Developer1266actualappcaptures:422baseline1500,422candidate1500,422candidate390.
+Corrected1402SVG replays (catalog1266+controls120+overlap16) reproduce fonts/boxes
+max7e-5px; finalpixeloracle actualdocfonts+SVGcharpositions, noTextMetricsforink.
+Initial235→42 counters SUPERSEDED: ordinalrectmap skippedrealfirstmask after
+background removal. Firstreplay also stoppedat182 due inheritedNH2font; recorded.
+Final199→1contact-or-near≤.5CSSpx forms desktop;candidate390also1;1existinghidden
+line both.0newdesktop flags,0name/graph/text changes,0clipping.16bboxfollowups
+show0actualglyph overlap.120controlstates allcorrectnumbercounts,PNG2valid.
+
+Causaldiagnostics confirmed BOTHversions: proximitycollector erroneouslyremoves
+unrelatedC9mask in ethyl_4_isopropyl_3_methyl_2_hexanal/condensed;keepingit in
+scratchDOM removes97/90→0flags. pentanoic_acid/condensedgetBBox masks hidefinalCC;
+actualinkbounds C4/C5+samepadding recover4.95644CSSpx,0contact, NO MOL change.
+Diagnostics NOTproductionfixes/per-moleculeexceptionproposals. Nativeprototype
+still tmp-only, priorpropene mitigation remains, no automaticrollback/removal.
+
+36futurestresscases:CHfactor.1 hides6lines in6cases PERversion;0contactalone
+is insufficient. Injectedmissingmetrics makescandidate throw, notproduction-safe.
+6DPR2targetcases matchknownfindings;otherbrowsers/latefonts/fullzoomuntested.
+28lessonentries/140states/28exits:baseline monoaldehydes1unstable3Dpropertysnapshot
++42null-viewererrors, candidate14/14terminalreads0errors inthissingleflow. Not
+proofJSmolfixed orpermanentlyblankbaseline. Needseparate lifecyclecause+recovery.
+337fullsteps/offline/coldmachine/conference notcertified.6warmHTTPpagestarts
+show no clear slowdown; no acceleration/benchmarkclaim.
+
+Frozen33NEWfiles,4deps;manifest c686e0fa170f8c632c416ac7d6ad1fb64cbb3c7966bd24e1e2032b83f79fb14e.
+Fresh Reviewer /root/review_svg_general_audit_20261031 inspecting; do NOTedit
+frozen targets. Source734hashes and HEAD168e3cec/index25c212... allpreserved.
+Core52d2138418... unchanged ALLtoday. No commit/push/publication/sync. Upstream
+lastchecked4e1190a, actualsync93b759f. Own8026/9237cleanup next;user8013 untouched.
+Next: Reviewer verdict/correctionsifneeded, finalize records, externalFirefox
+visualreport. Then concrete sharedmetrics+maskownership+futureguard/cache/fallback
+implementationplan for approval; JSmol conference risk separate boundedtask.
+
+# Current resume point — 2026-10-31 — Whole-catalog collateral-effects audit IN PROGRESS
+
+User requests necessary checks before eventual general use for all current and
+future molecules, emphasizing no conference flow regressions. Audit authorized;
+production integration still NOT approved. Current primary app141molecules/422
+available forms. Runtime734files+HEAD/index baseline saved under
+/tmp/namelecule-svg-general-audit-20261031/production-baseline.json. No production
+source edits. Audit scripts/evidence docs/checks/svg-general-audit-20261031/.
+
+Copied app uses original viewer/core/data, candidate only approved tmp JSME
+prototype. Baseline route points original repo; candidate root uses read-only
+symlinks except vendor redirect to isolated prototype. Server8026PID19347;
+isolatedFirefox9237PID19348, profile within tmp audit directory. User8013 untouched.
+Whole final-SVG raster catalog COMPLETED1266cases/0JSerrors: baseline1500
+235/422contact-or-near(.5CSSpx), candidate1500+39042/422 each, all42condensed.
+No new desktop contact/hiddenline flags. All422names/graph/labelstrings same.
+Desktopboth2potentialoverlaps/1hiddenline; candidate3906potentialoverlaps need
+targeted baseline390+pixel confirmation.0clipping. Sourceallunchanged.
+Future-input36cases: candidate6unsafeCHfactor.1 cases eachhide6lines (no contact);
+missingCanvasbounds injected onnewfont13 makescandidate throw, baselinestill
+renders. These BLOCK production generalization. Scripts/data undertmp.
+Controls job test-controls.py running (baseline10selections finished,candidate
+running); not yet verdict. Needfinish realcontrols and14lessonboundednav, then
+visualreport+independentReviewer. User requests conclusions with visualbrowser
+references. Latest question answered: vieweradds H/subscript to C→CHn and
+coalesces group labels; this preserves molecular graph.
+Smoke4cases perversion completed0JSerrors; prototype fixes nitro skeletal in
+sample, propene/shortalkanes still subject to existing viewer mitigations.
+CompactHCOOH no lines/no backplates: uncovered-ink flag alone NOT a defect.
+Need classify actual contact/new vs existing issues, clipping/overlap/hiddenline,
+not blindly treat every font rectangle overlap or undercoverage as failure.
+
+Read-only trace confirms viewer changes labels AFTER native producer (CHn,
+COOH/NH2/nitro compaction), fixedalkane calibration + species masks. Need final
+pipeline checks and future-input stress cases, not raw-native success alone.
+Loader actualmapping: standardHTML FEB169 with Firefox soft0/Safari soft1;
+quirks uses870EF. Do not equate whole FEBfile exclusively with Firefox.
+React host is a separate saved runtime; React remains outside primary-only
+work per user decision. Need disclose untouched copies before global claim.
+
+Next: finish catalog; inspect exact before/after failures and targeted real
+controls/theory/PNG+3D lifecycle; test rawfullcatalog/futureunsafegeometry/failure
+behavior as needed by findings; one consolidated fresh Reviewer after audit.
+Do not promise no future bug or conference readiness. Core52d2138418... unchanged
+ALLtoday, no commit/push/publication/sync. Lastcheckedupstream4e1190a, actualsync93b759f.
+
+# Current resume point — 2026-10-31 — Isolated producer prototype independently reviewed
+
+User approved isolated JSME producer prototype ("ας τη δοκιμάσουμε"), NOT app
+integration. Built only /tmp/namelecule-svg-prototype-20261031/{baseline,candidate}.
+Pin source FEB169 permutation SHA93c3116...; candidate19823458... . EQ cap/baseline
+and pre-render label bounds use actual glyph metrics/sub/super positions, native
+2-unit padding; global CQ unchanged. No viewer/postprocessed masks in experiment.
+
+Developer184native raster cases =23fixtures×4fonts×2versions: candidate92/92 no
+uncovered ink/contact within2rasterpixels/fullyhidden bond line; original86/92
+uncovered,58/92contact. Raster64px perfontem, NOT productionCSSzoom validation.
+Second184snapshots: same IDs/graph/charges/isotopes/MOLbody excluding JME timestamp;
+relativeatom maxdelta5.69e-14. Native SVG recenters/rounds, vector delta≤sqrt2units.
+Labels/font/colors/script ranges same; baseline/backplate intentionally changed.
+4deterministic rebuilds1500/390/JSME600/360;0JSerrors. NoJSmol loaded/tested.
+Report docs/SVG-TEXT-PROTOTYPE-20261031.md + checks/svg-text-prototype-20261031/.
+Offline comparison.html/png saved. Prototype scripts/evidence reproducible.
+
+Frozen15newdeliverables +4isolatedruntimehashes, manifest9e22fe3728fe95a5c0f1eb79b6d508e896c62bba6655a69127f1640df9ef3816.
+Fresh independent Reviewer /root/review_producer_prototype_20261031, ROLE_ID
+NAMELECULE_REVIEWER_V1_20261023: no findings. Independently checked19frozen+5source
+hashes, decoded/reconstructed exactvendorpatch,184SVGtables,summary/coverage/graph
+claims,AST/JSCsyntax andPNG; runtime executions remainDeveloper evidence. Records
+independent-review.json/final-verification.json. Frozen targets unchanged after
+review. No production integration approval. Need otherpermutations/browser/fontloading/fallback, numbering/highlight/
+appfit/export/lessons/fullcatalog before production readiness. Prototype hardcodes
+SVGscale30, throws on missingmetrics; not conference certification. Existing
+propene mitigation retained, all-alkene maskextension remains paused.
+
+Productionvendor/core52/viewer52/data52/HTML hashes unchanged from prototype start.
+Core52d2138418... unchanged ALLtoday. HEAD168e3cec/index25c212... same, no commit/
+push/publication/sync. Lastcheckedupstream4e1190a, actualsync93b759f. Own8025/9237
+processes receivedSIGTERM after matching their exactcmd/profile; userFirefox/
+server8013 untouched. Offlinecomparison remains usable without prototype server.
+Next: present a concrete maintainable integration plan and get approval before
+changing production; include fallback/fontloading/permutations and fullaffected
+app checks, no silent integration. Isolated prototype unit complete.
+
+# Current resume point — 2026-10-31 — Native JSME root mechanism verified; no new app fix
+
+PrimaryDeveloper completed authorized root investigation; freshReviewer
+/root/review_svg_root_20261031, ROLE_ID NAMELECULE_REVIEWER_V1_20261023, nofindings.
+Report docs/SVG-TEXT-ROOT-CAUSE-20261031.md; evidence/checks/svg-text-root-20261031/.
+ManifestSHA b2f9119f5da07e0f912f1de9619826bd59c0674efba79f827eb0bb7dfad1b6f6.
+Reviewer independently confirmed12deliverable/5runtime/5externalsourcehashes,
+stringliteraldecode,actualformula and23case arithmetic; browser Developer evidence.
+
+Same annotated propene in minimalJSME with NONameleculeviewer/core/JSmol orCSS
+reproduces rawmask. Font9ascent6/descent2→c4, height240,baseline-masktop180SVG
+units; realCTextMetricsascent200.414. Common CQ/EQ fontheight/baseline formula
+underestimatesglyphbounds in this case.15CSS/font/lineheight+8installed2023/
+official2024checks reproduce; font12marginallyfits but14/16fail. Merely changing
+font size/upgrading sampledofficialversion is not durable. Does not explain
+professor's unknown actualruntime or prove everyOS/browser/resolvedfont case.
+
+No new runtime/vendor/MOL/core change. Existing reviewed propene mitigation
+retained; all-alkene paddingextension paused. No rootfixprototype yet. Next
+concrete plan: isolated producer-level text/backplate geometry prototype first,
+with actualglyphmetrics and representativefonts/atoms/modes; production changes
+only after explicit scope approval and broadaffectedverification/review.
+Do not rebrand per-moleculemaskpadding as rootfix. Need preserve realatomIDs/
+chemical/naming/shortenedalkanes and symbol sub/superscripts in future work.
+
+Nativeprobe0JSerrors does not testJSmol; previous38null-viewererrors stillopen.
+Temporary8024/isolatedFirefox closed, userFirefox/server8013 untouched. Core52
+d2138418... unchanged whole session;HEAD168e3cec/index25c212... same. No commit/
+push/publication/upstreamsync. Lastchecked4e1190a,lastactuallysynced93b759f.
+
+# Current resume point — 2026-10-31 — Root-cause requirement; alkene extension paused
+
+Latest user instruction applies generally to ALL agents: solve demonstrated
+root causes, prevent recurrence, avoid unexplained symptom patches. Permanent
+section added toAGENTS.md, preserving conference/cost/approval/scientific rules.
+Facts/hypotheses/unknowns, real artifact/environment, causal shared fix, before/
+after regression evidence, truthful verified limits; no unconditional guarantee.
+Only documentation changed in this step.
+
+All-alkene mask-extension proposal is PAUSED, not approved. Existing reviewed
+propene-only local mitigation remains present; no implicit rollback/removal.
+It achieves measured gaps but has NOT established/fixed the originating JSME
+font/backplate mismatch. Next authorized read-only investigation: trace original
+MOL→JSME SVG generation→native mask/text dimensions→computed browser typography;
+identify first divergence and evaluate supported settings before proposing new
+implementation. Do not extend masks or claim a root-cause solution meanwhile.
+
+7alkenes audited previously,6others show contact; no category fix implemented.
+Propene review/evidence remains in PROPENE-GAP-FIX-20261031.md. Known38JSmol
+null-viewer diagnostics in supplementary navigation/audit remain unresolved,
+separate from initial bounded0errorrun. Not conference-ready certification.
+SourceHEAD168e3cec/index25c212... same, core52d2138418... unchanged allsession.
+Lastcheckedupstream4e1190a, actualsync93b759f; no sync/commit/push/publication.
+Policy review is bounded to documentation; no new app tests needed for thisstep.
+
+Policy independently reviewed by /root/review_root_cause_policy_20261031
+(ROLE_ID NAMELECULE_REVIEWER_V1_20261023), fresh context, no findings. Exact
+3file additions/hashes and runtime identity verified; runtime tests N/A.
+Record docs/checks/root-cause-policy-review-20261031.json + scoped.diff.
+After review only these status notes were added; AGENTS/runtime stay frozen.
+Developer source leads, not established cause: actual JSME API/export/font
+logic is in FEB169D74546A3B279D22AE09AFB86BD.cache.js and870EF2BAB6A388B0F864EB54CB3F82A8.cache.js
+plusdeferredjs/.../8.cache.js. Previously sampled96E40B...cache.js is Inchi
+auxiliary code; its hash alone does not verify the full active JSME runtime.
+Next investigation must identify the browser-loaded permutation and parameters.
+
+# Current resume point — 2026-10-31 — Propene correction reviewed; six more alkenes audited
+
+User prioritizes ENEPHET presentation23–25April2027Volos; permanent all-agent
+instruction now at topAGENTS.md (official https://synedrio2027.enephet.gr/).
+Prior propene-only plan renewed by user and implemented: existing glyph padding
+gate includes propeneExpanded;1viewerHTMLcache. Core/MOL/data/3D/JSON/React unchanged.
+Developer422guards/24rastercases/6interactions/12lessonvisits PASS,0JSerrors;
+min gap0.825CSSpx. Fresh Reviewer /root/review_propene_conference_20261031,
+ROLE_ID NAMELECULE_REVIEWER_V1_20261023:13frozenpaths/exactdiff/770protectedfiles/
+JSC/AST/screenshots independently checked, no findings. ManifestSHA
+68ed8ee6e279768f83cce6eb7c6b4c89b968bfbcff63806c6fa2aa507405923f.
+Only report status changed after review; frozen runtime/policy/tests unchanged.
+Unit report docs/PROPENE-GAP-FIX-20261031.md; final-verification JSON records hashes.
+
+Supplemental real scNext/scPrev6clicks +scExit→library passed. BUT combined
+nav+categoryaudit logged38nativeJSmol null-viewer errors (2setDisplay,36updateJS),
+not localized/causally explained. Do not call console clean/conference ready;
+noJSmolfix. Earlier bounded0errorrun remains separate evidence. Next diagnostic
+for this risk is scoped baseline/current lifecycle comparison, not blind repeats.
+
+Latest user asks check/fix allExpandedalkenes. READ-ONLY audit14cases at1500/390
+includes both C=Cprimitives:7alkenes;propene no flags, all6others haveC/Hcontact:
+ethene,butene_1,butene_2,methyl_2_propene,methyl_3_butene_1,ethyl_3_dimethyl_2_5_hexene_2.
+Artifacts docs/checks/alkenes-gap-audit-and-navigation-20261031.py/.json +summary.
+Concrete extension plan pending: same mask helper for classification alkenes
+(plus unchanged alkanes), viewer52+singleHTMLcache, no MOL/core/geometry changes;
+all7raster includingdoublelines/zoom/resize/highlight/presentation +422guards
+and1consolidatedReviewer. Do not imply all6alreadyfixed. Follow plan approval
+workflow before material category extension.
+
+Core52d2138418... unchanged throughouttoday. SourceHEAD168e3cec/index25c212... same.
+No commit/push/publication. User server8013 confirmed serves correctedpropene
+HTML/viewer bytes. Lastupstreamchecked4e1190a, lastactualsync93b759f, no new sync.
+Previous professor demonstrated gap accepted but exact runtime unknown; not
+explained by thisfix. Next: user approval of categoryextension, then implement.
+
+# Current resume point — 2026-10-31 — Propene safe correction approved; conference priority
+
+User moves past comparison and authorizes previously described propene-only
+Expanded gap correction, prioritizing reliable conference presentation. Official
+https://synedrio2027.enephet.gr/ checked:23–25April2027Volos. Permanent all-agent
+instruction added at top ofAGENTS.md: bounded/reversible changes, relevant real
+interaction/scenario checks, independent review, honest limits, verified recovery;
+no guarantee/offline-ready claim without evidence and no automatic publication.
+Viewer52 now reuses existing glyph-padding branch for propene only, alongside
+unchanged alkanes; HTML viewer cache updated. No MOL/core change. Baseline
+docs/checks/propene-gap-before-20261031.json.gz with770protectedruntimehashes.
+Test workdir /tmp/namelecule-propene-fix-20261031. Need real browser endpoints/
+zoom/resize/switches/numbering/export/presentation guards, then frozen review.
+Earlier actual professor demonstration difference remains unexplained; fix does
+not assert its cause. Upstream4e1190a checked, actualsync93b759f unchanged.
+No commit/push/publication. Core52baseline d2138418..., sourceHEAD168e3cec.
+Next: finish bounded verification, one fresh Reviewer, fix actionable findings.
+
+# Current resume point — 2026-10-31 — Strict comparison only; no changes requested
+
+User explicitly declines changes, wants strict comparison; confirms professor
+showed a visible gap. Accept observation. Exact demonstrated URL/browser unknown.
+Previous git-archive comparison cannot explain that screen; no fix approved.
+Opened actual professor public v52 inFirefox: propene/Expanded; screenshot saved.
+7served files HTTP200/hashmatch upstream4e1190a, expandedMOL same as local.
+Current public/Firefox centerline pixel samples show contact too; observed
+demonstration difference remains unexplained, not contradicted. NativeORGNL
+full-edit hidesC labels and cannot resolve this comparison. No causal claim.
+Details/evidence docs/PROPENE-GAP-INVESTIGATION-20261031.md + checks directory.
+No app/MOL/core edits, sync, commit or publication. Core52 d2138418... unchanged.
+Next: compare demonstrated runtime if identified; do not implement earlier plan.
+
+# Current resume point — 2026-10-31 — Propene upper C–H gap investigated; plan pending
+
+User screenshot=προπένιο. Μόνο read-only εφαρμογής + σημειώσεις/evidence.
+SameFirefox σύγκριση τοπικής και professor4e1190a με ακριβώς ίδιο ExpandedMOL:
+ίδια native masks/labelrelativepositions και raw/final SVG. Mask top κόβει
+τα ink bounds του C (local−1,663px/upstream−1,361px στα αρχικά μεγέθη).
+Κοινή κλίμακα47px αναπαράγει επαφή και στις δύο πηγές. Δεν τεκμηριώνεται
+αποκλειστική localregression· πραγματικό link/browser καθηγητή άγνωστα.
+Αλκάνια helper δεν εφαρμόζεται στο προπένιο. Προτεινόμενο, μη εγκεκριμένο:
+δοκιμή Expanded propene μόνο, glyph-based mask clearance στον viewer52 και
+HTMLcache, με MOL/lines/anchors ίδια, bounded browser/guards και1Reviewer.
+Βλ.docs/PROPENE-GAP-INVESTIGATION-20261031.md και checks/propene-gap-investigation-20261031/.
+Upstream changelog/history ελέγχθηκαν/fetched:4commits απόchecked a9284c5
+έως4e1190ab3d58f5eb384f1583bfe05e37242bef61 (narration/reviewfollowups/locant
+emphasis), overlapscore/viewer/teaching/scenario. Lastactualsync93b759f ίδιο,
+κανένα νέο sync υλοποιημένο. Πρέπει να παρουσιαστεί χωριστό πλάνο διατήρησης.
+SourceHEAD/index ίδιο· core52d2138418... αμετάβλητος, καμία αλλαγή core σήμερα.
+Χωρίς commit/push/publication. Επόμενο: έγκριση δοκιμής προπενίου από χρήστη.
+
+# Current resume point — 2026-10-30 — Main and professor report published; final save receipt
+
+Εντολή χρήστη: πλήρης αποθήκευση παντού και report/copy-paste σύνδεσμος.
+Κύρια runtime d670f009, τελικό report39ccedff στο origin/thesis-work· liveHTTP
+19paths και2τελικάreportpaths PASS. Welcome/report links και έτοιμο μήνυμα:
+docs/professor-20261030/.35Reactruntimepaths διατηρήθηκαν, χωρίς rebuild/sync.
+Independent Reviewer /root/review_publication_20261030: frozen141paths και
+στοχευμένα2reportpaths χωρίς ευρήματα. Developerprefix12/0JSerrors· public12PASS
+αλλά48JSmoldiagnostics, readinessfollowup3modelsPASS/0null-viewer/4cookie-tracker.
+Rapid-switch αιτία ανεξακρίβωτη, καταγράφηκε δημόσια· καμία διόρθωση προεξοφλείται.
+Βλ.PUBLICATION-REVIEW-20261030.md και SAVE-PUBLISH-20261030.md.
+Αρχικόfullcheckpoint3b6848c27b2dc2d60b0a13c191f1490b32dcdca3/1960files,
+ZIP/bundle/δύοexternalcopies ελέγχθηκαν. Τελικόmetadata checkpoint/push και
+refresh αντιγράφων καταγράφονται με ακριβή SHA/status στο final-save-state.json:
+../Αποθηκεύσεις/2026-10-30-090336/ και Desktop/αρχεία  json/Namelecule_30-10-2026/.
+Το receipt final:true/verified:true είναι το τελικό τεκμήριο ολοκλήρωσης.
+14scenarioJSON/report/links/Namelecule.app διατηρούνται στα αντίγραφα.
+Rollback before-alkanes tag→3f046ad και παλιά snapshots διατηρούνται.
+Sourcebranch react-library-pilot HEAD168e3cec/index25c212... καιmain9c5259e ίδια.
+Upstream checked a9284c5f ίδιο, lastactuallysynced93b759f. Core52 d2138418...:
+καμία αλλαγή core στη σημερινή συνεδρία. Δεν στάλθηκε μήνυμα καθηγητή.
+Επόμενο μετά το verified receipt: ο χρήστης στέλνει report/welcome· νέο scope
+μόνο κατόπιν αιτήματός του. Δεν επαναλαμβάνουμε ελέγχους που έχουν περάσει.
+
+# Current resume point — 2026-10-30 — Alkane rollback capability verified; save question only
+
+Ο χρήστης ρώτησε αν με μελλοντική πλήρη αποθήκευση θα μπορεί να επιστρέψει
+στην προηγούμενη μορφή των αλκανίων. Έγινε μόνο read-only audit και καταγραφή,
+όχι επαναφορά, νέο commit/push/publication ή νέα πλήρης αποθήκευση.
+Επαληθεύτηκαν gzipCRC/JSON/base64/UTF8 και JSC registry8 των snapshots:
+two-alkanes-before,alkane-ch-half-before,alkane-fixed-cc-before,alkane-all-uniform-before
+(όλα20261030.json.gz στο docs/checks). Όλεςοιδιαθέσιμες μορφές των8ανακτώνται·
+το methane δεν είχε skeletal και πριν. Πρώτο snapshot περιέχει data52+9MOL
+copies, ch-half-before το data πριν τις μειώσεις+3Expanded πηγές.
+alkane-label-gap-before περιέχει viewer52/HTML52· SHA τους συμφωνούν ακριβώς
+με fileHashes του πρώτου two-alkanes-before. Άρα υπάρχουν πηγές για προηγούμενα
+MOL και αρχική προβολή, καθώς και ενδιάμεσα στάδια. Απαιτείται επιλεκτική
+μελλοντική επαναφορά ανά literal/source/helper για να διατηρηθούν άλλες αλλαγές,
+όχι τυφλή αντικατάσταση ολόκληρου data/viewer μετά από νέες προσθήκες.
+Τρέχουσα ενιαία8αλκανίων παραμένει reviewed όπως παρακάτω. HEAD168e3cec,
+αντίγραφα αυτά τοπικά/untracked· δεν ισχυριζόμαστε νέο remotebackup. Core52hash
+παραμένει d2138418ff630ab77e578b80ca8ba3a10cc1b877c3ab8c0e5c2735ffcd1f24a2.
+Επόμενο: απάντηση δυνατότητας επαναφοράς· πλήρης αποθήκευση μόνο αν ζητηθεί.
+
+# Current resume point — 2026-10-30 — All8expanded alkane settings reviewed
+
+Με ρητή έγκριση ολοκληρώθηκε η επέκταση στα5υπόλοιπα αλκάνια. Data52:
+4embeddedExpanded ethane..pentane,10CC=0,6188/36CH=0,3094 ίδια διανύσματα,
+γράφος/IDs/πεδία. Methane MOL ίδιο. Viewer:8-key gate, methane βαθμονόμηση
+CH/font1,30875, άλλοι CC/font2,6175, ίδια anchors/masks/fit/αρίθμηση. HTML2cacheURLs.
+Και οι8πηγές έχουν90CH=0,3094/29CC=0,6188. Άλλα137records/προηγούμενα3,
+άλλεςμορφές/core/3D/JSON/React ίδια. Chemistry Validator ανεξάρτητα χωρίς ευρήματα.
+Developer static1.938protected/2JS/2AST PASS. Firefox60cases/12SVGguards/
+10number-highlight/idempotence/PNG-SVG PASS· min stroke1,45px/gap0,6833px,
+max same-type διαφορά0,0668px. Runtime evidence Developer,4PNG. Χωρίς νέο
+lessonrun: μόνο το αμετάβλητο προηγούμενο μεγάλοprototype έχει Expanded preset.
+Fresh Reviewer /root/review_alkane_all_uniform,
+ROLE_ID NAMELECULE_REVIEWER_V1_20261023, ανεξάρτητα13hashes/exactdiff/MOL/
+graph/registry/1.938protected/2JS/2AST PASS. Όλεςοι8πηγές επιβεβαιώθηκαν,
+4PNG/runtime επιθεωρήθηκαν, χωρίς ευρήματα. Runtime είναι Developer evidence.
+13frozenpaths αμετάβλητα μετά το review.
+Manifest docs/checks/alkane-all-uniform-review-target-20261030.json,
+SHA cc706cc33bfe2f07c45026120e4e98cca52d439e254053e89609b5236fb75a9b.
+Αναφορά docs/ALKANE-ALL-UNIFORM-20261030.md· sources/evidence παγωμένα.
+Core δεν άλλαξε, χωρίς commit/push/publication. ACQ-R1 παλιού branchedπείραματος
+έχει αντιμετωπιστεί στα3προηγούμενα reviewed prototypes· δεν επανελέγχθηκε εδώ
+όληηεφαρμογή. Τελικά13target/1.938protected/core hashes PASS. TestFirefox9954
+έκλεισε· userFirefox/server8013 διατηρήθηκαν. Μόνο postreview καταγραφές άλλαξαν.
+Επόμενο: Cmd+Shift+R και οπτική κρίση χρήστη στα8αλκάνια πριν από νέο scope.
+
+# Current resume point — 2026-10-30 — Remaining5alkanes implementation in progress
+
+Ο χρήστης ενέκρινε την ενιαία δοκιμή στα methane/ethane/propane/butane/pentane.
+Data52:4embeddedExpanded ethane..pentane με10C–C=0,6188,36C–H=0,3094 ίδια
+διανύσματα, C roundedscale0,6188/0,825. Methane MOL αμετάβλητο. Viewer μόνο
+υπάρχων helper: gate8keys, methane fallback από CH×2 για reference CC/font
+2,6175 (CH/font1,30875). Ίδια anchors/masks/γράμματα/αρίθμηση/fit. HTML2cacheURLs.
+Chemistry Validator ανεξάρτητα χωρίς ευρήματα:4MOL/10CC/36CH/γράφοι/πεδία,
+methaneίδιο, bytes εκτός4literals ίδια. Developer static1.938protected/2JS/2AST
+PASS, επιβεβαιώθηκαν και οι8Expanded:90CH=0,3094/29CC=0,6188. Άλλεςμορφές/
+137records/core/3D/JSON/React ίδια. Firefox5targets πριν/μετά σε1500/390 και3zoom
+σε εξέλιξη· πρώτο methane1500 PASS. Δεν έγινε τελικό review ακόμη.
+Baseline docs/checks/alkane-all-uniform-before-20261030.json.gz· sourcehashes
+στα output της εφαρμογής, static/diff αρχεία ίδιαςρίζας. TestFirefox9954 απομονωμένος,
+userFirefox/server8013 ανέπαφα. Core δεν άλλαξε, χωρίς commit/push/publication.
+Επόμενο: ολοκλήρωση browser/guards/numbering/export, freeze και1fresh Reviewer.
+
+# Current resume point — 2026-10-30 — Remaining5alkanes same-settings plan pending
+
+Ο χρήστης ζήτησε τις ίδιες τελικές αλλαγές σε όλα τα υπόλοιπα αλκάνια:
+methane,ethane,propane,butane,pentane. Read-only: όλα έχουν ήδη C–H=0,3094·
+ethane..pentane έχουν1/2/3/4C–C αντίστοιχα=0,825, προς0,6188. Δεν βρέθηκαν
+φυσικά Expanded MOL αυτών των keys στο mols, μόνο embedded στο data52.
+Methane δεν έχει C–C· ο υπάρχων helper επιστρέφει αν δεν βρει C–C. Πλάνο:
+ίδιο κοινό Expanded pipeline για τα8υπάρχοντα αλκάνια και ειδική επιλογή
+κλίμακας methane από C–H/font=1,30875 (μισό του C–C/font=2,6175), ίδια masks/
+γράμματα/αρίθμηση/fit. MOL methane δεν χρειάζεται αλλαγή·4embedded strings
+άλλων ευθύγραμμων αλκανίων μετακινούν C/H για ισόμηκα C–C=0,6188.
+Αρχεία: data52/viewer52/HTML52 cache. Άλλεςμορφές/άλλαμόρια/3D/core/JSON/React
+διατηρούνται. Στοχευμένοι έλεγχοι5expanded σε desktop/narrow/zoom, αριθμοί,
+κενά και guards προηγούμενων3, Chemistry Validator και1fresh Reviewer.
+Έγκριση πλάνου εκκρεμεί κατά AGENTS.md· καμία αλλαγή κώδικα/MOL/core εδώ.
+Συνεχής συνεδρία: upstream checked a9284c5,actualsynced93b759f, όχι νέος
+έλεγχος/sync εδώ. Χωρίς commit/push/δημοσίευση.
+Επόμενο: μετά την έγκριση baseline και εφαρμογή της ενιαίας δοκιμής.
+
+# Current resume point — 2026-10-30 — 2-methylpentane uniform prototype reviewed
+
+Με ρητή έγκριση εφαρμόστηκαν14C–H=0,3094 και5C–C=0,6188 μόνο στον
+Expanded methyl_2_pentane. Data52 embedded MOL, viewer52 μόνο gate επέκταση,
+HTML52 δύο cacheURLs. Δεν υπάρχει φυσικό Expanded source MOL· δεν δημιουργήθηκε.
+C roundedscale0,6188/0,825, H αρχική διεύθυνση/κανονικοποίηση. Graph/IDs/πεδία,
+άλλα140records/δύο προηγούμεναprototypes/μορφές/core/3D/JSON/React ίδια.
+Chemistry Validator ανεξάρτητα χωρίς ευρήματα, C6H14/σθένη/πεδία/sourcehash.
+Developer static1.927protected/2JS/2AST PASS. Firefox12cases/5guards/
+4number-highlight/PNG-SVG PASS, min stroke1,45px/gap0,6666px, max same-type
+διαφορά οριζόντιων/κατακόρυφων0,0667px. Θεωρία methylpentane μένει condensed,
+χωρίς sequence/JSON edit ή νέο lessonrun. Runtime είναι evidence Developer.
+Fresh Reviewer /root/review_alkane_methylpentane_uniform,
+ROLE_ID NAMELECULE_REVIEWER_V1_20261023, ανεξάρτητα11hashes/exactdiff/MOL/
+graph/1.927protected/2JS/2AST PASS, δύοPNG/runtime επιθεωρήθηκαν, χωρίς ευρήματα.
+Δεν εκτέλεσε browser· runtime evidence Developer.11frozenpaths διατηρούνται.
+Manifest docs/checks/alkane-methylpentane-uniform-review-target-20261030.json,
+SHAab18a144fd16d11c824ddf527d73031adbdf56edf8d96244500f3ff733c4487e.
+Αναφορά docs/ALKANE-METHYLPENTANE-UNIFORM-20261030.md με scope/περιορισμούς.
+Core δεν άλλαξε· χωρίς commit/push/δημοσίευση. ACQ-R1 εκτός νέου scope παραμένει.
+Τελικό11target/1.927protected/core hash PASS. TestFirefox9627 έκλεισε·
+userFirefox/server8013 διατηρήθηκαν. Μόνο postreview καταγραφές άλλαξαν.
+Επόμενο: Cmd+Shift+R και οπτική κρίση χρήστη πριν από νέα επέκταση.
+
+# Current resume point — 2026-10-30 — 2-methylpentane same-prototype plan pending
+
+Ο χρήστης ζήτησε ομοίως για 2-μεθυλοπεντάνιο (methyl_2_pentane) Expanded.
+Read-only:20άτομα/19δεσμοί,5C–C=0,825,14C–H σε0,1906/0,2011/0,2320.
+Δεν βρέθηκε φυσικό Expanded MOL στο mols· πηγή είναι η embedded συμβολοσειρά
+στο data52, ενώ το ξεχωριστό αρχείο methyl_2_pentane_3D.sdf παραμένει ανέπαφο.
+Πλάνο:14C–H=0,3094,5C–C=0,6188, ίδιες κατευθύνσεις/IDs/γράφος/πεδία,
+προσθήκη key μόνο στο υπάρχον Expanded prototype gate, δύο cacheURLs.
+Αρχεία: data52/viewer52/HTML52. Άλλαμόρια/μορφές/JSON/core/3D/React ίδια.
+Χημική επικύρωση και στοχευμένοι έλεγχοι zoom/κενών/αρίθμησης/highlights,
+με έναν fresh Reviewer μετά την υλοποίηση. Αναμένεται έγκριση πλάνου κατά
+AGENTS.md· δεν έγινε κώδικας/MOL edit ή αλλαγή core. Προηγούμενα2prototype
+παραμένουν reviewed. Συνεχής συνεδρία, upstream ήδη checked a9284c5 και
+actual synced93b759f· όχι νέος upstreamcheck/sync εδώ. Χωρίς commit/push.
+Επόμενο: μετά την έγκριση, immediate snapshot και εφαρμογή μόνο στο νέο key.
+
+# Current resume point — 2026-10-30 — Last-alkane uniform prototype reviewed
+
+Ο χρήστης ενέκρινε το πλάνο για 3-αιθυλο-2,5-διμεθυλοεξάνιο Expanded.
+Εφαρμόστηκαν22C–H=0,3094 και9C–C=0,6188, σταθερές κατευθύνσεις/γράφος/
+IDs/πεδία. Data52/μία source MOL, viewer μόνο gate επέκταση, HTML δύο cacheURLs.
+Άλλα140records/άλλες μορφές/προηγούμενο prototype/core/3D/JSON/React ίδια.
+Chemistry Validator /root/validate_alkane_ch_quarter ανεξάρτητα χωρίς ευρήματα:
+C10H22, σθένη, γράφος και2sourcehashes. Developer static1.912protected/2JS/
+3AST PASS. Firefox12cases/5SVGguards/4interactions/PNG-SVG PASS, min stroke
+1,45px/gap0,658px· max οριζόντια/κατακόρυφη διαφορά0,067px. Υπάρχον lesson
+step18 PASS1500/390, χωρίς JSONedit. Runtime είναι Developer evidence.
+Sources/evidence15paths ελέγχθηκαν από fresh Reviewer /root/review_alkane_large_uniform,
+ROLE_ID NAMELECULE_REVIEWER_V1_20261023: exactdiff/2MOL/graphs/1.912protected/
+2JS/3AST ανεξάρτητα PASS,3PNG/runtime επιθεωρήθηκαν, χωρίς ευρήματα.
+Browser evidence παραμένει του Developer, όχι ανεξάρτητη runtime εκτέλεση. Manifest docs/checks/alkane-large-uniform-review-target-20261030.json
+SHA33b867bcccd034a39b4daee896bc61e5b1f45fdbb683519f49dc0b37cc4b8e69.
+Αναφορά docs/ALKANE-LARGE-UNIFORM-20261030.md, baseline/diff/checks ίδιαςρίζας.
+Core δεν άλλαξε· χωρίς commit/push/δημοσίευση. ACQ-R1 άλλων αλκανίων παραμένει.
+Τελικά15target/1.912protected hashes PASS μετά το review. TestFirefox9284
+έκλεισε· userFirefox/server8013 διατηρήθηκαν. Δεν έγινε δεύτερο πλήρες review.
+Επόμενο: Cmd+Shift+R, οπτική κρίση χρήστη πριν από επέκταση σε άλλα μόρια.
+
+# Current resume point — 2026-10-30 — Same prototype requested for final alkane; plan pending
+
+Ο χρήστης ζήτησε τις ίδιες συνολικές αλλαγές στον ανεπτυγμένο του τελευταίου
+αλκανίου: 3-αιθυλο-2,5-διμεθυλοεξάνιο (ethyl_3_dimethyl_2_5_hexane).
+Read-only επιβεβαίωση: τελευταίο από8 άκυκλα κορεσμένα αλκάνια στη σειρά
+nameExamples,32άτομα/31δεσμοί, μία φυσική Expanded πηγή new_molecules.
+Πλάνο:22 C–H=0,3094 και9 C–C=0,6188, ίδιες κατευθύνσεις/γράφος/IDs/πεδία,
+επέκταση υπάρχοντος prototype gate μόνο σε αυτό μαζί με το προηγούμενο,
+ίδια font/masks/αρίθμηση/fit και δύο cacheURLs. Data52/viewer52/HTML52/1MOL.
+Έλεγχοι χημείας, zoom/resize/κενών/αρίθμησης/highlights και υπάρχον lesson
+step18 που εμφανίζει το μόριο σε expanded· χωρίς αλλαγή scenarioJSON.
+Δεν έγινε κώδικας ή MOL edit. Αναμένεται έγκριση συγκεκριμένου πλάνου κατά
+AGENTS.md. Το προηγούμενο reviewed prototype παραμένει. Core/React/3D ίδια.
+Συνεχής συνεδρία: upstream ήδη checked a9284c5, actual synced93b759f· όχι νέος
+upstream έλεγχος/sync εδώ. Χωρίς commit/push/δημοσίευση.
+Επόμενο: μετά την έγκριση, immediate snapshot και εφαρμογή μόνο στο νέο μόριο.
+
+# Current resume point — 2026-10-30 — One-molecule C–C25% follow-up reviewed
+
+Εγκεκριμένο μόνο για τον ανεπτυγμένο του 2,3-διμεθυλοβουτανίου:
+14 C–H = 0,3094 και, μετά από νέα ρητή έγκριση, 5 C–C = 0,6188
+(μείωση25% με στρογγυλοποίηση MOL). Σταθερά διανύσματα C–H, γράφος,
+IDs/σειρά/λοιπά πεδία. Viewer prototype C–C/font3,49→2,6175, κοινά square
+masks, προσαρμογή αρίθμησης/fit. Data52, viewer52, HTML52 cache και2 MOL
+πηγές άλλαξαν. Άλλα140 μόρια/άλλες μορφές/3D/core/JSON/React ίδια.
+Πρώτη13-path ανεξάρτητη αξιολόγηση /root/review_alkane_fixed_cc καθαρή.
+Τελικό25%: Chemistry Validator ανεξάρτητα καθαρό· Developer static1.900
+protected hashes,2JS/2AST PASS. Firefox12 before/after περιπτώσεις1500/390,
+3zoom,5SVG guards,4number/highlight και PNG/SVG PASS. C–C desktop×0,749753,
+C–H×0,999459· min stroke1,45px/gap0,6666px, ίσες γραμμές εντός0,15px.
+Targeted Reviewer /root/review_alkane_fixed_cc ανεξάρτητα επαλήθευσε13hashes,
+άμεσο baseline από το προηγούμενο review, MOL/graph/1.900protected/scope/diff/
+2JS/2AST, χωρίς ευρήματα. Runtime/PNG είναι evidence Developer. Max captured
+διαφορά οριζόντιων/κατακόρυφων γραμμών0,067px. Sources/evidence αμετάβλητα.
+Manifest docs/checks/alkane-cc-quarter-review-target-20261030.json,
+SHA acd7ab5895fdfdc49f27a0e9091120940b79a215c155955a51a43909cf4e447c.
+Αναφορά docs/ALKANE-FIXED-CC-20261030.md· άμεσα baselines και τεκμήρια
+alkane-fixed-cc-* / alkane-cc-quarter-*. ACQ-R1 άλλων αλκανίων παραμένει.
+Κανένα core δεν άλλαξε σήμερα. Χωρίς commit/push/δημοσίευση.
+Ο test Firefox8654 έκλεισε· ο Firefox χρήστη/server8013 διατηρήθηκαν.
+Επόμενο: Cmd+Shift+R και οπτική κρίση χρήστη πριν από επέκταση σε άλλα μόρια.
+
+# Current resume point — 2026-10-30 — One-molecule fixed-C–C prototype in progress
+
+Εγκρίθηκε δοκιμή μόνο στο2,3-διμεθυλοβουτάνιο: επαναφορά της τελευταίαςμείωσης,
+σταθερόC–C/font3,49 από προϋπάρχον2-μεθυλοπεντάνιο και ομοιόμορφαγράμματα.
+Ο χρήστης επισήμανεδιαφορετικάC–H και ενέκρινε ρητά εξίσωσηόλωνστα0,3094MOL
+μόνογιατοδοκιμαστικόμόριο. Ενημερώθηκαν1embeddedExpandedκαι2sourceMOL,
+μεσταθεράC/C–C/διευθύνσεις/γράφους/IDs. Άλλα7αλκάνιαμένουνστο37,5%πείραμα.
+Viewer52: prototypegateμόνοdimethylExpanded, προσαρμογήlabelμεγέθουςσεnative
+atomanchors, κοινάsquaremasksκαιμέγεθοςαρίθμησης, nativegeometryαμετάβλητη.
+HTML52cacheURLsαλλάζουνγιαdata/viewer. Εφαρμογή/έλεγχοισεεξέλιξη,δενέγινε
+τελικόreview. Baseline docs/checks/alkane-fixed-cc-before-20261030.json.gz.
+ΑρχικέςδοκιμέςκανονικήςπροβολήςέδειξανσταθερόC–C·έλεγχοιminzoomσυνεχίζονται.
+Επόμενο:στοχευμένοιέλεγχοιμεομοιόμορφαH,χημικήεπικύρωσηκαι1Reviewer.
+Core/3D/σενάρια/Reactδενάλλαξαν. Χωρίςcommit/push/δημοσίευση.
+
+# Current resume point — 2026-10-30 — C–H additional25% MOL experiment reviewed; ACQ-R1 visual acceptance open
+
+Εφαρμόστηκεηεγκεκριμένηδοκιμήστα8Expandedαλκάνια:Hnew=C+0,75(Hold−C),
+90H/8embeddedstringsστοdata52/3physicalMOLcopies. Ονομαστικά37,5%αρχικώνC–H.
+Σταθερόbaseline docs/checks/alkane-ch-quarter-before-20261030.json.gz γιαrevert.
+C/C–C/γραφήματα/IDs/σθένη/z/κατευθύνσεις/άλλαπεδίακαιμορφές/3D/core/viewer/
+HTML/σενάρια/Reactδιατηρούνται.1879protectedhashes,JSC/3ASTPASS.
+ChemistryValidator /root/validate_alkane_ch_quarter ανεξάρτηταPASS:90vectors,
+τύποι/σθένη/ισομορφισμός2Dκαι8SDF/ιστορικήσειράπηγών. Reviewerfreshcontext
+/root/review_alkane_ch_quarter,NAMELECULE_REVIEWER_V1_20261023,επιβεβαίωσε17hashes,
+exactdiff/90vectors/3copies/1879protectedfiles/3AST/141registry. Nootherfindings.
+ACQ-R1,P2,OPEN:3διακλαδισμέναστοminzoomέχουνC–H0,13–0,42px,σε6aftercases/
+28bondinstances(πριν1,48–1,72px). Lessonstep18PASS1500/FAIL390 μεC–H0,53px.
+Developer64before/aftercases+3highlights,χωρίςoverlap/clipping/JSerrors,
+καθαράκενά·readabilityFALSE. ΤεκμήριαDeveloper,όχιανεξάρτητηruntimeεκτέλεση.
+Μεθάνιοοπτικάίδιο·άλλαC–Hμειώνονται8–21%desktopκαιC–Cμεγαλώνουνσεpixelsλόγω
+JSMEπαρότιCσταMOLίδιοι. Οχρήστηςενημερώθηκεκαιγιαταδύοόρια.
+Αναφοράdocs/ALKANE-CH-QUARTER-20261030.md,evidence docs/checks/alkane-ch-quarter-*.
+Frozenmanifest SHA9784eeac11b251989605e32c71348a1d4b5d4e708cc4a4d83e3e0af80896c4df.
+Ηδοκιμήπαραμένειεφαρμοσμένητοπικάγιαοπτικήαξιολόγηση,χωρίςclaimproductionready.
+Επόμενο:οχρήστηςνααξιολογήσεικαιναεπιλέξειδιατήρησηδοκιμής/επαναφοράή
+συγκεκριμένηdisplayδιόρθωσημενέοπλάνο. Καμίαεπέμβασηviewer/coreεγκεκριμένη.
+TestFirefox8020έκλεισε,userFirefox/server8013διατηρούνται. Κανέναcoreάλλαξε
+στησημερινήσυνεδρία. Χωρίςcommit/push/δημοσίευση. Δενέγινεδεύτεροπλήρεςreview.
+
+# Current resume point — 2026-10-30 — C–H additional25% MOL experiment applied; visual limits found
+
+Ο χρήστης ενέκρινε επιπλέον25% απότιςσημερινέςC–H (=ονομαστικά37,5%αρχικών)
+στα8Expandedαλκάνια, μόνονMOL/data. ΕφαρμόστηκεHnew=C+0,75(Hold−C)από
+σταθερόbaseline docs/checks/alkane-ch-quarter-before-20261030.json.gz:
+90H/8embeddedExpanded/3sourceMOLαντίγραφα. C/C–C/γράφος/IDs/z/άλλαπεδία,
+άλλεςμορφές/3D/core/viewer/HTML/JSON/Reactίδια.1879protectedhashesPASS.
+SyntaxJS/3ASTκαιChemistryValidator /root/validate_alkane_ch_quarter PASS:
+90vectors/σθένη/τύποι/ισομορφισμός2Dκαι8SDF/ιστορικήαρίθμησηίδια.
+DeveloperFirefox64before/after περιπτώσεις1500/390, zoom2/0,5 +3highlights:
+φόρτωση/χωρίςoverlap/clipping/JSerrors και καθαράκενά. ReadabilityFALSE:
+3διακλαδισμένα×2widthsστοminzoom έχουνC–H0,13–0,42px. Lessonstep18PASS1500,
+FAIL390 μεC–H0,53px. Μεθάνιοοπτικάίδιο·άλλαC–Hμειώνονται8–21%desktopκαιC–C
+μεγαλώνουνσεpixelsλόγωJSME,παρότιCσταMOLίδιοι. Αναφοράdocs/ALKANE-CH-QUARTER-20261030.md.
+Δοκιμήεφαρμοσμένητοπικά,οπτικήαποδοχήεκκρεμεί·οχρήστηςενημερώθηκεγιατοόριο.
+Επόμενο:έναςσυγκεντρωτικόςReviewerκαιπαρουσίασηπεριορισμού/επιλογήςχρήστη.
+Καμίαεπιπλέονεπέμβασηviewer/coreδενέχειεγκριθεί. Κανέναcoreάλλαξεσήμερα.
+Χωρίςcommit/push/δημοσίευση.
+
+# Current resume point — 2026-10-30 — Further C–H reduction requested in MOL; amount pending
+
+Ο χρήστης προτιμά πρώτα αλλαγή των αποστάσεων στα MOL, πριν από πρόσθετη
+παρέμβαση κλιμάκωσης/SVG. Οι8Expandedαλκάνια έχουν ήδη C–H50% του αρχικού
+baseline, όπως επιβεβαιώθηκε read-only στο υπάρχον script και σε πραγματικόMOL:
+2,3-διμεθυλοβουτάνιο C–C0,825 και C–H0,2541/0,2682/0,3094μονάδες.
+Δεν έχει ακόμη καθοριστεί ποσοστό επιπλέον μείωσης. Πρόταση προςέγκριση:
+25% επιπλέον απότιςσημερινές αποστάσεις (=37,5%αρχικών), μόνο8embeddedExpanded
+και3υπάρχονταsourceαντίγραφα. C–C/C/κατευθύνσεις/γράφος/άλλεςμορφές/3D/core/
+viewer/Reactδιατηρούνται. Δεν εφαρμόστηκε νέα αλλαγήMOLήκώδικα.
+Επόμενο: επιβεβαίωση ποσοστού/πλάνου, έπειτα ελεγχόμενημεταβολήαπόσταθερό
+baseline και στοχευμένοι έλεγχοι. Η τελευταίαδιόρθωσηκενού C/H έχειολοκληρωθεί
+καιτοACV2-R1έκλεισε. Κανέναcoreάλλαξεσήμερα, χωρίςcommit/push/δημοσίευση.
+
+# Current resume point — 2026-10-30 — Expanded alkane C/H clearance complete; small-zoom review finding closed
+
+Ολοκληρώθηκε το εγκεκριμένο κενό σε όλους τους C–C/C–H των8Expandedαλκανίων.
+Μόνο viewer52 και cacheURLστηνHTML52: actual glyph-ink TextMetrics, πλήρη opaque
+masks,0,08em και pixel-floor έως1,5px που μικραίνει αναλογικά κάτω από8⅓pxfont.
+MOL/συντεταγμένες/γραφήματα/αποστάσεις/C–H50%/3D/core/άλλεςμορφές/JSON/Reactίδια.
+Αρχικοί Developer έλεγχοι422μορφών/141μορίων:414SVGίδια, γραμμές/κείμενα/viewBox
+ίδιασεόλες,66interactions/2256endpoints/step18×2widths/PNG-SVGsmokePASS.
+Reviewer /root/review_alkane_clearance_v2,ROLE_ID NAMELECULE_REVIEWER_V1_20261023,
+σεφρέσκοcontext επιβεβαίωσε scope/1861protectedhashes/JSC/4AST/screenshots.
+Ζήτησε συγκεκριμένο ελάχιστοzoom:16Developerπεριπτώσεις έδειξαν ACV2-R1,P2,
+υπερβολική απόκρυψη κοντώνC–H στα3διακλαδισμένα. Διορθώθηκε μόνοτοpixel-floor.
+Στοχευμένα28cases/1028endpoints:8μόριαστοzoom0,5 +3στοzoom1/2 ×1500/390,
+ελάχιστοstroke1,48pxκαιgap0,78px, raster/overlap/clipping/JSerrors/idempotencePASS.
+Ο ίδιοςReviewer έκλεισε ανεξάρτητατοR1με targetedhash/source/JSC/2AST/evidence
+έλεγχο, χωρίς δεύτεροπλήρεςreview. Ταruntimeπαραμένουν Developer evidence.
+Τελικόscope/syntax5AST/1861protectedhashesPASS· καμίααλλαγήcoreσήμερα.
+Manifestfix SHA cba159553674b65057dc34f4647f6ec137449d9318330638be393e390ea6eb7c.
+Viewer SHA ab8069a3618c510e1d6b0ff582e18c4003147d3692363af4edf6988f3f888217.
+Αναφορά docs/ALKANE-CLEARANCE-V2-20261030.md, evidence docs/checks/*alkane-clearance-v2*.
+Προϋπάρχουσαfitoscillationίδιαπριν/μετά·δενδιορθώθηκε. Responsiveemulation,
+όχιφυσικήσυσκευή/Safari/full3D/Reactbuild. TestFirefox7495έκλεισε, userFirefox/
+server8013διατηρούνται. Χωρίςcommit/push/δημοσίευση. Ο χρήστης ζήτησε επιστροφή
+στοθέματωνC–Hμηκών και ρητή οικονομίαμεδιατήρησηποιότητας. Επόμενο: refreshFirefox
+και συζήτηση επιθυμητής νέας προσαρμογής C–H· δεν έχει εγκριθεί νέα αλλαγή μηκών.
+
+# Current resume point — 2026-10-30 — Expanded alkane C/H clearance implemented; independent review pending
+
+Ο χρήστης ενέκρινε διεύρυνση του κενού σε όλους τους C–C/C–H των8Expanded
+αλκανίων μετά από screenshot επαφής C και αναφορά C–H. Viewer52:
+fPadExpandedAlkaneLabels αντί του παλιού branch helper, actual glyph-ink
+TextMetrics στο τελικό screen font, padding0,08em/min1,5px, πλήρη opaque masks
+χωρίς στρογγυλές γωνίες. HTML52 cache URL ενημερώθηκε. MOL/άτομα/αποστάσεις/
+πείραμα C–H50%/άλλες μορφές/3D/core/JSON σεναρίων/React αμετάβλητα.
+Developer PASS: syntax/4AST,1861protectedhashes. Firefox422μορφές/141μόρια:
+414SVGίδια, μόνο8Expandedmasksδιαφέρουν, lines/text/viewBoxίδια. 66interactions
+1500/390,2256endpoints με ανεξάρτητο SVG ink raster, gaps1,30–3,18px, ελάχιστο
+ορατό stroke4,24px,0overlap/clipping/JSerrors. Lesson step18×2widths:124endpoints
+PASS, PNG/SVGsmokePASS. Screenshots/πλήρη τεκμήρια στο docs/checks/alkane-clearance-v2-*.
+Αναφορά docs/ALKANE-CLEARANCE-V2-20261030.md. Runtime στοιχεία Developer.
+Προϋπάρχουσα fit oscillation αναπαράχθηκε ίδια σε5fits πριν/μετά· δεν διορθώθηκε.
+Το ίδιο το νέο mask helper είναι idempotent. Responsive emulation, όχι φυσική
+συσκευή/Safari ή πλήρες3Dtest. Επόμενο: freeze/hashes και ανεξάρτητος Reviewer.
+Κανένα core δεν άλλαξε σήμερα. Χωρίς commit/push/δημοσίευση.
+
+# Current resume point — 2026-10-30 — Alkane clearance incomplete: broader correction pending approval
+
+Ο χρήστης έδειξε screenshot όπου ο κατακόρυφος C–C ακόμη ακουμπά τον C και
+διευκρίνισε ότι συμβαίνει και σε κατακόρυφους C–H: απαιτεί ορατό κενό σε κάθε
+άκρο δεσμού. Η προηγούμενη διόρθωση δεν καλύπτει πλήρως την απαίτηση του
+χρήστη, παρότι οι καταγεγραμμένοι αυτοματοποιημένοι έλεγχοι πέρασαν.
+Read-only επανεξέταση: fPadExpandedAlkaneBranchLabels επιλέγει μόνο C σε
+κατακόρυφους C–C, αφήνει x/width των native masks ίδια και δεν περιλαμβάνει H.
+Ο προηγούμενος browser έλεγχος μετρούσε bbox κενού masks, όχι πραγματικό
+ορατό stroke προς glyph, ούτε C–H. Δεν έχει τεκμηριωθεί ακόμη η ακριβής αιτία
+της εναπομένουσας επαφής C–C από νέο runtime έλεγχο.
+Προς έγκριση: πλήρη περιθώρια labels C/H για όλους τους δεσμούς των8Expanded
+αλκανίων, με μετρήσεις πραγματικής ορατής απόληξης/πάχους γραμμής και οπτικό
+έλεγχο. Viewer52/cache URL και καταγραφές/έλεγχοι μόνο. MOL/αποστάσεις/C–H50%/
+άλλες μορφές/κατηγορίες/core/React διατηρούνται. Νέα υλοποίηση δεν έγινε.
+Επόμενο: παρουσίαση συγκεκριμένου πλάνου, έγκριση, runtime διάγνωση και διόρθωση
+με ανεξάρτητο Reviewer. Κανένα core δεν άλλαξε. Χωρίς commit/push/δημοσίευση.
+
+# Current resume point — 2026-10-30 — Expanded alkane C-label clearance complete and reviewed
+
+Ολοκληρώθηκε και ελέγχθηκε η εγκεκριμένη διόρθωση κενού γύρω από C στα άκρα
+κατακόρυφων C–C των ανεπτυγμένων αλκανίων. Άλλαξαν μόνο viewer52 και cache URL
+στην κύρια HTML52. Το fPadExpandedAlkaneBranchLabels αλλάζει μόνο y/height
+των υπαρχόντων λευκών masks, με actual text bounds και padding 0,06 font.
+Γραμμές, κείμενα, viewBox, θέσεις ατόμων, MOL/data/3D και core παραμένουν ίδια.
+Διατηρήθηκαν το πείραμα C–H50%, τα σενάρια και τα αρχεία React.
+
+Developer PASS: syntax/2AST και 1.832 προστατευμένα αρχεία. Firefox 422 μορφές
+πριν/μετά στα141 μόρια: 419 πλήρη SVG ίδια, αλλαγή masks μόνο στα3 αναμενόμενα
+Expanded. 36 highlight/zoom/resize περιπτώσεις στα1500/390px, θετικά κενά
+0,57–1,32px, χωρίς overlap/clipping/JS errors. PNG/SVG export smoke PASS.
+Reviewer /root/review_alkane_label_gap σε φρέσκο context ολοκλήρωσε read-only
+έλεγχο χωρίς actionable ευρήματα· επιβεβαίωσε hashes/scope/bounds/idempotence/
+AST/JS και είδε2 screenshots. Το runtime είναι evidence του Developer.
+Frozen manifest SHA256 8e2ce75cf1c5c23f26bb32f6310f9c2e2178afa94d19622dfc0a77cf3cf8a141.
+Μετά το review άλλαξαν μόνο καταγραφές· οι πηγές επαληθεύτηκαν ξανά.
+
+Αναφορά docs/ALKANE-LABEL-GAP-20261030.md, baseline/diff/results/final hashes
+στο docs/checks/alkane-label-gap-*. Δεν επαναλήφθηκαν Safari/φυσική συσκευή,
+πλήρη μαθήματα,3D μοντέλα ή React build. Chemistry/Learning Designer N/A
+(μόνο SVG masks, χωρίς αλλαγή χημικών/διδακτικών κανόνων ή μοριακών πηγών).
+Ο test Firefox6649 έκλεισε· ο Firefox του χρήστη και ο server8013 διατηρούνται.
+Επόμενο: ανανέωση στον Firefox για να φορτωθεί ο viewer με το νέο cache URL.
+Κανένα core αρχείο δεν άλλαξε στη σημερινή συνεδρία. Χωρίς commit/push/δημοσίευση.
+
+# Current resume point — 2026-10-30 — Expanded alkane C-label clearance: viewer plan pending
+
+Ο χρήστης ζήτησε διόρθωση των κατακόρυφων C–C διακλαδώσεων που ακουμπούν
+τους C της κύριας αλυσίδας στους ανεπτυγμένους τύπους. Read-only διερεύνηση
+εντόπισε native SVG label masks: οι Expanded άνθρακες των αλκανίων κρατούν
+τα native masks, ενώ ο viewer ήδη διορθώνει ανάλογα περιθώρια καρβοξυλίων.
+Προτεινόμενο στενό πλάνο: μικρό ομοιόμορφο κενό γύρω από τους C στα άκρα
+κατακόρυφων C–C διακλαδώσεων μόνο σε Expanded αλκάνια, με τον υπάρχοντα
+μηχανισμό λευκών label masks. Αρχεία viewer52 και cache URL στην κύρια HTML52,
+συν αναγκαίες καταγραφές/ελέγχους. Χωρίς μετακίνηση ατόμων, αλλαγή MOL/3D,
+αναίρεση του πειράματος C–H50%, αλλαγή core ή άλλων μορφών/χημικών κατηγοριών.
+Έλεγχοι: πραγματικά κενά/overlap/framing στις τρεις διακλαδισμένες ενώσεις,
+zoom/resize/highlights και guards άλλων μορφών/κατηγοριών, με ανεξάρτητο Reviewer.
+Το συγκεκριμένο πλάνο παρουσιάζεται προς έγκριση πριν από επέμβαση στο viewer,
+όπως απαιτεί AGENTS.md. Δεν έγινε ακόμη αλλαγή κώδικα/MOL ή core.
+Επόμενο: έγκριση πλάνου και στοχευμένη εφαρμογή. Χωρίς commit/push/δημοσίευση.
+
+# Current resume point — 2026-10-30 — C–H 50% MOL experiment complete; screen normalization documented
+
+Ολοκληρώθηκε το εγκεκριμένο πείραμα στους ανεπτυγμένους τύπους και των 8
+αλκανίων: 90 H με H′=C+0.5(H−C), σταθεροί C/z/δείκτες/γραφήματα. Ενημερώθηκαν
+μόνο 8 embedded Expanded στο data52 και 3 υπάρχοντα source MOL αντίγραφα.
+Το αμέσως προηγούμενο εναρμονισμένο baseline διατηρείται για επαναφορά.
+
+Οπτικός περιορισμός που γνωστοποιήθηκε στον χρήστη: ο JSME επανακλιμακώνει.
+Το μεθάνιο μένει οπτικά ίδιο· στα άλλα οι C–H μικραίνουν λιγότερο από 50% και
+οι C–C φαίνονται μεγαλύτεροι, παρότι οι συντεταγμένες C είναι ίδιες. Δεν έγινε
+αντιστάθμιση στον renderer. Η δοκιμή ολοκληρώθηκε στα MOL, χωρίς ισχυρισμό
+ακριβούς μείωσης 50% σε pixels. Οι άλλες μορφές/3D/core/viewer/fonts/React/
+JSON σεναρίων παρέμειναν αμετάβλητα.
+
+Developer: static 90 H/8 records/3 copies/1.820 προστατευμένα αρχεία PASS·
+Firefox 32 before/after περιπτώσεις στα1500/390 px, όλα τα C/H/δεσμοί ορατά,
+χωρίς overlap/clipping/JS errors. Τρία AST και JavaScriptCore PASS. Ο τελικός
+Chemistry Validator /root/validate_alkane_harmonization και ο ανεξάρτητος
+Reviewer /root/review_alkane_ch_half έκλεισαν χωρίς χημικό ή actionable εύρημα.
+Runtime 3D/highlights, σενάρια και export δεν επαναλήφθηκαν· αρχεία αμετάβλητα.
+Frozen manifest SHA256 4b6af1d814a3c2af496d463b48b0745446dc256b755109608f5ed8c1cffd5fdb.
+Μετά το review άλλαξαν μόνο καταγραφές, οι πηγές επαληθεύτηκαν ξανά.
+
+Αναφορά: docs/ALKANE-CH-HALF-EXPERIMENT-20261030.md. Baseline/diff/results/
+final verification στο docs/checks/alkane-ch-half-*. Ο test Firefox6193 έκλεισε·
+ο Firefox του χρήστη και ο server8013 διατηρούνται. Επόμενο: refresh και οπτική
+αξιολόγηση της δοκιμής από τον χρήστη. Δεν έχει εγκριθεί επέμβαση στον renderer.
+Κανένα core αρχείο δεν άλλαξε στη σημερινή συνεδρία. Χωρίς commit/push/δημοσίευση.
+
+# Current resume point — 2026-10-30 — Halve expanded alkane C–H lengths: plan pending
+
+Ο χρήστης ζήτησε πείραμα: μείωση κατά 50% όλων των C–H στους ανεπτυγμένους
+2D τύπους όλων των αλκανίων, αυτή τη φορά και των παλιών. Read-only inventory
+στο ενεργό MOL2D εντόπισε8: methane,ethane,propane,butane,pentane,
+methyl_2_pentane,dimethyl_2_3_butane,ethyl_3_dimethyl_2_5_hexane.
+Προτεινόμενος ακριβής μετασχηματισμός κάθε H: Hνέο=C+0.5*(Hπαλιό−C),
+με σταθερό C και ίδια διεύθυνση. Αφορά8expandedembeddedrecords στο data52
+και3υπάρχονταsourceMOLcopies(δύοnew_molecules,έναsource-2d).
+C–C/βαρέαάτομα,γραφήματα/IDs,H,άλλες2Dμορφές,3D,core/viewer/fonts,Reactκαι
+JSONσεναρίων εκτός scope. Διατηρείται το σημερινό εναρμονισμένο baseline
+για αναστροφή της δοκιμής. Δεν εφαρμόστηκε αλλαγή MOL/εφαρμογής· συγκεκριμένο
+πλάνο προς έγκριση, σύμφωνα με AGENTS.md. Επόμενο: έγκριση,έπειτα ακριβής
+μείωση/αυτοματοποιημένοιέλεγχοι/browserόλων8μορφών/χημικόςκαιανεξάρτητοςέλεγχος.
+Δεν έγινε αλλαγή core,commit,pushήδημοσίευση.
+
+# Current resume point — 2026-10-30 — Two-alkane MOL harmonization complete and reviewed
+
+Ολοκληρώθηκε το εγκεκριμένο scope: μόνο τα δύο δικά μας αλκάνια, τρεις 2D
+μορφές, με πρότυπο το υπάρχον 2-μεθυλοπεντάνιο. Εννέα source MOL (έξι ενεργά,
+τρία ιστορικά αντίγραφα) άλλαξαν μόνο x/y, με διατήρηση των δικών τους indexed
+γράφων/H· έξι embedded/source ζεύγη συμφωνούν ακριβώς. Core/viewer/fonts,
+3D, παλιά μόρια, JSON σεναρίων και React αμετάβλητα.
+
+Developer: στατικός έλεγχος 9 πηγών/6 ζευγών/139 άλλων εγγραφών/1802
+προστατευμένων αρχείων PASS· πραγματικός Firefox18 μορφές/πλάτη1500/390,
+2 JSmol μοντέλα,15 interaction records και11 επηρεαζόμενα βήματα θεωρίας
+PASS,0JSerrors. Responsive emulation, όχι φυσική κινητή συσκευή. Εξετάστηκαν
+screenshots των6νέων2D. Οπτικά3D/color2Dόρια τεκμηρίων στην αναφορά.
+ChemistryValidator /root/validate_alkane_harmonization και ανεξάρτητος
+Reviewer /root/review_two_alkanes_mol ολοκλήρωσαν read-only ελέγχους· κανένα
+χημικό ή actionable P0/P1/P2/P3 εύρημα. Τα runtime τεκμήρια είναι Developer.
+Frozen manifest SHA25600651a3d6cc732a24ed849655b4a6f7f94c35b72ec725b8d6743a0dd4b540579.
+Μετά το review άλλαξαν μόνο καταγραφές· όλες οι πηγές επαληθεύτηκαν ξανά.
+
+Αναφορά: docs/ALKANES-MOL-HARMONIZATION-20261030.md, baseline/diff/results/
+final verification στο docs/checks/two-alkanes-*. Κανένα core αρχείο δεν άλλαξε
+στη σημερινή συνεδρία. Χωρίς commit/push/δημοσίευση. Ο προσωρινός Firefox
+δοκιμών έκλεισε· ο Firefox του χρήστη και ο server8013 διατηρούνται.
+Επόμενο: refresh στον Firefox για τις αλλαγές· καμία εκκρεμότητα στο εγκεκριμένο
+scope. Δεν έχει εγκριθεί εναρμόνιση άλλης κατηγορίας ή αλλαγή γραμματοσειρών.
+
+# Current resume point — 2026-10-30 — Two-alkane MOL harmonization implemented; independent review pending
+
+Ο χρήστης ενέκρινε το συγκεκριμένο πλάνο («ναι»): εναρμόνιση μόνο των
+2,3-διμεθυλοβουτανίου και 3-αιθυλο-2,5-διμεθυλοεξανίου με τα υπάρχοντα MOL
+του διακλαδισμένου 2-μεθυλοπεντανίου, και στις τρεις 2D μορφές.
+
+Έγιναν αλλαγές μόνο x/y σε έξι mols/new_molecules και τρία ιστορικά
+mols/source-2d, διατηρώντας τα indexed atoms/bonds/H κάθε αρχείου. Τα έξι
+ενεργά embedded MOL στο data52 συμφωνούν byte-for-byte με τις πηγές.
+C–C=.825, C–H του προτύπου .6188/.5082/.5363· η πλευρική συντόμευση εφαρμόστηκε
+και στο αιθύλιο λόγω δύο πραγματικών H–H επικαλύψεων στην πρώτη δοκιμή.
+Οι σκελετικοί άλλαξαν με ενιαία κλίμακα, ο μεγάλος με proper rotation180°,
+χωρίς κατοπτρισμό ή αλλαγή τοπικών γωνιών. Οριζόντιες κύριες αλυσίδες.
+Δεν μεταβλήθηκαν core/viewer/fonts, metadata/ονόματα, 3D, παλιά μόρια,
+JSON σεναρίων ή React. Η υφιστάμενη προσαρμογή fonts στον χώρο παραμένει·
+δεν δηλώνεται ίδιο μέγεθος pixels για διαφορετικά μεγέθη/μορφές μορίων.
+
+Developer: 9sources coordinate-only,6embeddedpairs,139άλλεςεγγραφές/metadata
+και1802προϋπάρχοντααρχεία(216SDF)αμετάβλητα. Πραγματικός Firefox18μορφές/
+πλάτη1500/390,χωρίςoverlap/clipping·2JSmolmodels,15parent/branchinteraction
+records,2D/3Dmapping,data/algorithmic,zoom,0JSerrors.11επηρεαζόμεναβήματα
+υφιστάμενουμαθήματος πέρασαν (όνομα/οριζόντιααλυσίδα/mapping/framing),
+χωρίςαλλαγήJSON. Ο Developer είδε screenshotsόλων6νέωνμορφών.4PythonAST
+καιJavaScriptCoreφόρτωσηPASS. Κλείστηκε μόνο το απομονωμένο testFirefox.
+Ο userFirefoxκαιοserver8013διατηρούνται.
+
+Αρχεία/εντολές στο docs/ALKANES-MOL-HARMONIZATION-20261030.md.
+Ακριβέςbeforeκαιhashes: docs/checks/two-alkanes-before-20261030.json.gz.
+Frozen manifest:docs/checks/two-alkanes-review-target-20261030.json,SHA256
+00651a3d6cc732a24ed849655b4a6f7f94c35b72ec725b8d6743a0dd4b540579,
+base168e3cec01f941a84d40bbe0dc07156e7baa35d0. Πραγματικόdiffκαι3results
+στοdocs/checks/two-alkanes-*. ChemistryValidator /root/validate_alkane_harmonization
+επιβεβαίωσεαρχικούςγράφους/τύπους/indexmappings·τελικόςστοχευμένοςέλεγχος
+καιReviewer /root/review_two_alkanes_molεκκρεμούν. Παγωμένοςστόχοςχωρίςνέες
+επεμβάσειςόσοελέγχεται. Επόμενο:κλείσιμοευρημάτωνκαικαταγραφήτελικούreview.
+Δεν έγινε commit/push/δημοσίευση. Κανένα core αρχείο δεν άλλαξε στη σημερινή
+συνεδρία· core52 SHA256 d2138418ff630ab77e578b80ca8ba3a10cc1b877c3ab8c0e5c2735ffcd1f24a2.
+
+# Current resume point — 2026-10-30 — Two-alkane MOL harmonization plan awaiting approval
+
+Ο χρήστης ζήτησε εναρμόνιση των δικών μας MOL με τα προϋπάρχοντα αλκάνια.
+Scope: μόνο 2,3-διμεθυλοβουτάνιο και 3-αιθυλο-2,5-διμεθυλοεξάνιο, τρεις 2D
+μορφές. Προτεινόμενο πρότυπο: το προϋπάρχον διακλαδισμένο 2-μεθυλοπεντάνιο
+(ανά μορφή), με διατήρηση γράφων, indexed atoms/bonds, H, 3D και ονομάτων.
+Απαιτούνται ενημερώσεις MOL στο mols/new_molecules, των υπαρχόντων αντιγράφων
+στο mols/source-2d (με τη δική τους αντιστοίχιση ατόμων) και μόνο των έξι
+σχετικών ενσωματωμένων MOL στο js/jsme-nick-nomeclature-moc2-data_52.js.
+Core/viewer/γραμματοσειρές, παλιά μόρια, σενάρια και React εκτός scope.
+Έγινε μόνο read-only διερεύνηση· δεν υλοποιήθηκε αλλαγή MOL ή εφαρμογής.
+Επόμενο: έγκριση συγκεκριμένου πλάνου, μετά γεωμετρική εναρμόνιση, έλεγχοι
+πηγών/embedded/γράφων/αναπαραστάσεων/ονομάτων/highlights και ανεξάρτητο review.
+Chemistry Validator ενεργοποιείται στην υλοποίηση για τη διατήρηση αντιστοιχίας.
+Δεν έγινε αλλαγή core, commit, push ή δημοσίευση.
+
+# Current resume point — 2026-10-30 — Desktop launcher and larger methane icon
+
+Ο χρήστης ενέκρινε βοηθητικό Desktop για αυτόνομο άνοιγμα της κύριας έκδοσης
+στο Firefox με διπλό κλικ, χωρίς VS Code ή πληκτρολόγηση URL. Εγκαταστάθηκε
+το /Users/yannisskendros/Desktop/Namelecule.app. Έπειτα ενέκρινε χρήση του
+λογότυπου και, επειδή το πλήρες λογότυπο φαινόταν μικρό, μόνο του μορίου του.
+Το αρχικό PNG διατηρήθηκε. Το NSWorkspace.iconForFile επιβεβαίωσε οπτικά το
+τελικό, μεγαλύτερο εικονίδιο μεθανίου· το Namelecule παραμένει η ετικέτα του.
+
+Νέα αρχεία: tools/namelecule-launcher/{launcher.py,launch.applescript,
+build-app.py,make-icon.js,test-launcher.py,README.md} και
+ docs/checks/desktop-launcher-20261030.json. Ο server ακούει μόνο loopback,
+ελέγχεται με ταυτότητα διαδρομής έργου, επαναχρησιμοποιείται και δοκιμάζει
+8013–8032 όταν υπάρχει άλλο πρόγραμμα. Προσωρινό lock/log στο
+~/Library/Caches/Namelecule. Η διεργασία μένει ενεργή μετά την έξοδο του applet.
+
+Developer έλεγχοι: έξι δοκιμές πέρασαν (εκκίνηση/επαναχρησιμοποίηση, ταυτόχρονα
+ανοίγματα, ξένος server/εξαντλημένες θύρες, ελλείπον έργο/Firefox και mock
+BadStatusLine/IncompleteRead). Πραγματικές εκκινήσεις applet και επανεκκίνηση
+δικού μας server, ακριβές welcome HTML με HTTP 200, ένας server μετά από
+επαναλαμβανόμενα ανοίγματα, Firefox ενεργό κατά τον έλεγχο NSWorkspace.
+Δεν δηλώνεται οπτική/DOM επαλήθευση ιστοσελίδας. Ελέγχθηκαν οπτικά το ICNS και
+το εικονίδιο που επιστρέφει το macOS. codesign --verify --deep πέρασε.
+Αρχική αστοχία Desktop πρόσβασης/404 διορθώθηκε με read preflight, χρήση
+/usr/bin/python3 και υπογραφή της ολοκληρωμένης δέσμης. Ο Finder/fileprovider
+επαναφέρει root FinderInfo, που επηρεάζει μόνο τον επιπλέον strict έλεγχο·
+ο κανονικός deep έλεγχος υπογραφής περνά. Αν μετακινηθεί το έργο, χρειάζεται
+αναδημιουργία του εικονιδίου. Δεν υπόσχεται offline εξαρτήσεις εφαρμογής.
+
+Ανεξάρτητος Reviewer /root/review_desktop_launcher, ROLE_ID
+NAMELECULE_REVIEWER_V1_20261023, fresh context, read-only, βάση
+168e3cec01f941a84d40bbe0dc07156e7baa35d0. Αρχικό frozen evidence SHA256
+bc9c551ec41515f21237a97f0853e0d6af249d9b05ae907a215e193ae4090dbd.
+DL-01 P2: HTTP protocol errors από ξένη θύρα διέκοπταν το fallback.
+Διορθώθηκε με HTTPException catch και στοχευμένες δοκιμές Developer.
+Τελικό frozen evidence SHA256 aa91ed4c3827e1d574339a97822582e49f9369d2b39736cbc09f7439b4da754e.
+Ο στοχευμένος ανεξάρτητος επανέλεγχος ολοκληρώθηκε: DL-01 έκλεισε με
+ανεξάρτητη αναπαραγωγή· κανένα νέο εύρημα στο εικονίδιο/build. Επαληθεύτηκαν
+hashes, AST, plist/ICNS και deep υπογραφή. Ο Reviewer είδε και την παρεχόμενη
+τελική εικόνα NSWorkspace· runtime εκκινήσεις/HTTP/tests παραμένουν evidence
+του Developer. Δεν απομένει λειτουργική εκκρεμότητα εντός αυτού του scope.
+
+Δεν άλλαξε κανένα core αρχείο στη σημερινή συνεδρία. Επαληθεύτηκαν τα αρχικά
+SHA256 index/main HTML/core52/viewer52/welcome/library/AGENTS. Δεν άλλαξαν
+μόρια, MOL/SDF, σενάρια, React ή υπάρχων κώδικας εφαρμογής. Δεν έγινε commit,
+push ή δημοσίευση. Ο upstream έλεγχος 30/10 έχει καταγραφεί στο επόμενο
+ιστορικό σημείο (checked a9284c5…, synced 93b759f…· δεν έγινε sync εδώ).
+Επόμενο: χρήση του Desktop εικονιδίου με διπλό κλικ· αν μετακινηθεί το έργο,
+ενημέρωση της αποθηκευμένης διαδρομής/αναδημιουργία του βοηθητικού.
+Ο έλεγχος των δύο δικών μας αλκανίων παραμένει περιορισμένος στην ταυτοποίηση,
+χωρίς προτάσεις αλλαγών ή κατάλογο αποκλίσεων, όπως ζήτησε ο χρήστης.
+
+# Current resume point — 2026-10-30 — Autonomous Firefox launcher proposed; approval pending
+
+Ο χρήστης θέλει αυτονομία στο άνοιγμα της τοπικής κύριας έκδοσης σεFirefox,
+χωρίς να λαμβάνει/πληκτρολογεί σύνδεσμο. Τοlocalhost8013δεν του ανοίγει.
+Δεν έγινε διάγνωση της τρέχουσας κατάστασηςserver. Read-only έλεγχος: υπάρχουν
+/usr/bin/python3,/usr/bin/osacompile,Firefoxκαιindex.html· δεν υπάρχει
+Desktop/Namelecule.app. Προτείνεται νέο βοηθητικό εκκίνησης/εικονίδιο στην
+ΕπιφάνειαΕργασίας: διπλόκλικ,έλεγχος/εκκίνησητοπικούserver,κύριαυποδοχή
+στοFirefox,ανεξάρτητααπόVSCode. Πλάνο προς έγκριση· κανέναlauncherήserver
+δεν δημιουργήθηκε/ξεκίνησε. Μόνοjournalsενημερώθηκαν,core/εφαρμογήαμετάβλητα.
+Επόμενο: έγκριση δημιουργίαςβοηθητικού,έπειταυλοποίηση/έλεγχοιεκκίνησης,
+υπάρχοντοςserver/σύγκρουσηςθύρας/Firefox/ανεξάρτητοreview. Δενεπιτρέπεται
+αυτόματα αλλαγήμορίων ήσίγασηεκκρεμώνχημικώνελέγχων· τοscopeαλκανίωνπαρακάτω.
+
+# Current resume point — 2026-10-30 — Scope narrowed to our two alkane additions
+
+Upstream30/10: αναγνώσθηκαν HEADa9284c5f43e9e539674f3fa2df59b690066199b9,
+4τελευταίοι τίτλοι commits και τρέχον CHANGELOG(SHA256
+12241cb341707cfeb26b938950fb2180474bc346ff880685a1266d0b7677ff18).
+Προηγούμενοchecked93e88ea...,actualsynced93b759f... . Τίτλοι αναφέρουν port
+5εστέρων/core και αλλαγές expandedname/Explain/scenario,άρα πιθανή επικάλυψη
+μετοπικέςπροσαρμογές. Δεν έγινε πλήρηςdiffσύγκριση ή sync· η παρούσα εντολή
+παραμένει μόνο ο στενός έλεγχος των δικών μας αλκανίων.
+
+Ο χρήστης περιόρισε τη νέα εργασία σε έλεγχο ανά κατηγορία, αρχίζοντας από
+τα αλκάνια που προσθέσαμε εμείς. Ζήτησε ρητά να μη γίνουν προτάσεις αλλαγών
+ή καταγραφή αποκλίσεων. Εντοπίστηκαν δύο προσθήκες:2,3-διμεθυλοβουτάνιο
+(dimethyl_2_3_butane) και3-αιθυλο-2,5-διμεθυλοεξάνιο
+(ethyl_3_dimethyl_2_5_hexane),με3διαθέσιμες2Dμορφές το καθένα.
+Ταυτοποίηση από τρέχον data52,παλιό data44στο9c5259e και ιστορικό προσθηκών
+83806a7/48ca292. Δεν εφαρμόστηκαν αλλαγές σε μόρια,viewer ήcore· δεν συντάχθηκε
+κατάλογος αποκλίσεων ή πρόταση εναρμόνισης. Η ταυτοποίηση δεν αποτελεί από μόνη
+της πλήρη οπτικό έλεγχο. Επόμενο: τήρηση αυτού του στενού scope στην επόμενη
+οδηγία του χρήστη. Μόνοjournals ενημερώθηκαν,χωρίςcommit/push/δημοσίευση.
+
+# Current resume point — 2026-10-30 — Methodological observation from 29 October: existing ester MOLs as references
+
+Στις30/10 ο χρήστης ζήτησε να καταγραφεί ως ιδιαίτερα σημαντικό το εξής
+μεθοδολογικό σημείο της εργασίας29/10: για τους νέους εστέρες χρησιμοποιήθηκαν
+ως πρότυπα αναφοράς τα MOL των εστέρων που είχε ήδη ενσωματώσει ο καθηγητής.
+Με βάση τις συμβάσεις και τις αναλογίες τους εναρμονίστηκαν οι νέες αναπαραστάσεις,
+πετυχαίνοντας την ομοιογένεια που ζητούσε ο καθηγητής.
+
+Ακριβής τεχνική αποτύπωση: η επαναχρησιμοποίηση αφορούσε τις συμβάσεις της
+αναπαράστασης και τις γεωμετρικές αναλογίες των υπαρχόντων MOL. Κάθε νέα ένωση
+διατήρησε τον δικό της μοριακό γράφο. Οι προηγούμενες σημειώσεις29/10 τεκμηριώνουν
+τη σύγκριση παλιών/νέων, την εναρμόνιση15νέων2DMOL/source-embedded, τη διατήρηση
+indexedatoms/bonds/H-neighbors και3D, και τους τότε ελέγχους/review. Δεν
+ισχυριζόμαστε ότι αντιγράφηκαν αυτούσιοι οι μοριακοί γράφοι των παλιών εστέρων.
+Αναφορές: docs/ESTERS-20261029.md,
+docs/checks/check-esters-harmonization-20261029.py,
+docs/checks/esters-harmonization-20261029.json.
+
+Μεθοδολογικό συμπέρασμα προς διατήρηση: τα κατάλληλα προϋπάρχοντα παραδείγματα
+της εφαρμογής μπορούν να λειτουργούν ως συγκεκριμένα πρότυπα συμβατότητας για
+νέες προσθήκες. Η παρατήρηση καταγράφεται για την τεκμηρίωση της ανάπτυξης·
+δεν μεταβάλλει αυτομάτως κανόνες/agents και δεν αποτελεί νέο core-only report
+προς τον καθηγητή. Επόμενο: αξιοποίηση αυτής της καταγραφής όταν ζητηθεί.
+Σήμερα άλλαξαν μόνο οι δύο σημειώσεις συνέχειας/συνεισφορών. Δεν επαναλήφθηκαν
+runtime/χημικοί έλεγχοι, δεν έγινε commit/push/δημοσίευση ή αλλαγή εφαρμογής/core.
+Δεν έγινε νέος upstream έλεγχος σε αυτή την καταγραφή· ο τελευταίος επιτυχής
+29/10 και η διάκριση checked/synchronized παραμένουν τεκμηριωμένα παρακάτω.
+
+# Current resume point — 2026-10-29 — Professor report limited to core
+
+Permanent user decision: professor updates contain ONLY core changes: concise reason/
+behavior, tests actually performed, exact core-only diff and patch. If no core change,
+say so in one sentence. User explicitly waived a planning presentation for this
+report revision; implementation/report update approved with «πάμε». No new app edits.
+
+Existing public report URL docs/professor-20261029/main-esters-update.html replaced
+with concise core-only content; added core-changes.html and core-changes.patch.
+Patch is EXACT git diff aae82c8 → cc2b611 for js/mulermoc-nom-core-52.js only,
+46 additions/5 deletions. This is our previous release baseline, NOT professor HEAD.
+Developer git apply --check + application in temporary base tree reproduced exact
+cc2b611 core bytes. Historical110new/814regression/16guards verified in saved evidence;
+not rerun during documentation task. Six report files published in commit
+3f046ad8be3d21a852a130beeca88682bd7afe06; Pages built exact commit, all six public
+SHA256 hashes matched. Desktop current report/links updated with absolute links;
+patch copied; new report backup Αποθηκεύσεις/2026-10-29-core-report. Old full backups retained.
+
+Fresh independent Reviewer /root/core_report_review (NAMELECULE_REVIEWER_V1_20261023):
+no findings in frozen six paths; independently matched exact patch/HTML/hashes/evidence/
+local links. No writes, no runtime/chemistry/browser rechecks required for docs-only.
+Review target in docs/checks/core-report-target-20261029.json; public verification
+in core-report-publication-20261029.json; details CORE-REPORT-20261029.md.
+Original active branch/HEAD/index preserved. ALL core files unchanged this session.
+Existing ester core change remains the code published in cc2b611; no new core commit.
+
+Upstream check 2026-10-29: last actually synchronized93b759f5891d7b5a1172646032d83215d60b7604;
+previous checked6f55eb5eebbc9379c88b4783f72142f26e6ad47d; now checked upstream HEAD
+93e88ea27d41df991ed596e2b7927d2812e12599. git ls-remote/fetch HEAD/history and actual
+CHANGELOG read succeeded. API compare initially HTTP500, replaced by Git diff/log.
+One new commit since prior check: full-name floating overlay; touches CSS52, molview52,
+teaching52, ui-icons and notes/changelog. Overlaps our long-name/viewer customization.
+Not merged in this explicitly core-report-only task; routine sync needs a bounded
+compatibility review before implementation. No claim that latest upstream is synchronized.
+Next: user forwards core-only report/diff links; separately assess new upstream overlay.
+
+# Current resume point — 2026-10-29 — Publication and full save completed
+
+User explicitly approved option1 for publishing the full WIP/internal-notes checkpoint,
+after automatic approval review initially blocked it. Push then succeeded: checkpoint
+branch checkpoint/namelecule-20261029-103322 at ceffd207af4e6713e21c55afbb13b6e5974509a6.
+Main/report public release cc2b6116a6c95b59ba9b20ee55ea6194a406f541 is live; exact Pages build and8HTTP
+hashes verified. Firefox5 functional groups passed; strict console gate exited1 for
+3external analytics cookies +3JmolTracker blocks (raw evidence retained).
+FullZIP1813files CRC/allSHA256 verified; Gitbundle verified; external copies identical.
+Desktop14activeJSON/report matched source. These final records get a metadata checkpoint
+and refreshed archives; exact final checkpoint/archive/bundle hashes and remote checks
+are in external final-save-state.json. Backup folder: /Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/Αποθηκεύσεις/2026-10-29-103322.
+Main141/9esters,14lessons/337steps; React126/12 preserved without rebuild. Independent
+publication review94paths: no findings. See PUBLICATION-REVIEW-20261029.md and professor
+HTML. Known old H overlap/HCOOH rectangle and mobile/export limits disclosed there.
+Active react-library-pilot HEAD168e3ce and original index unchanged; main9c5259e protected.
+Core52 earlier approved ester naming/acid-parent extension published incc2b611;
+110new/814old/16guard cases passed. No additional core change during MOL correction/save.
+Current core SHA256 d2138418ff630ab77e578b80ca8ba3a10cc1b877c3ab8c0e5c2735ffcd1f24a2.
+Professor last sync93b759f/last checked6f55eb5; no new upstream sync during saving.
+Only isolated testFirefox and temporary8024server stopped; user preview8013 retained.
+No message sent to professor. Next: user reviews public Main and forwards report.
+
+# Save status update — 2026-10-29 — Specific checkpoint push approval pending
+
+Reviewed Main/report public release cc2b611 is live and verified. Automatic approval
+review rejected the full working-state checkpoint push: pre-existing WIP/internal
+notes might be exposed at a destination not confirmed private, and general full
+backup instruction was judged insufficiently specific for this exposure. No bypass
+attempted. Asked user explicitly via async question to approve full checkpoint GitHub
+publication or keep it local. Full local checkpoint, ZIP and external Gitbundle
+remain authorized and verified; final copies include this record. Exact final refs
+and hashes are in external final-save-state.json. Pending: user-specific approval
+for checkpoint push only; public app/report delivery is not blocked. No new core edits.
+
+# Current resume point — 2026-10-29 — Main published; full save verified
+
+Public release cc2b6116a6c95b59ba9b20ee55ea6194a406f541 pushed to thesis-work; Pages built exact commit.
+Main141 molecules/9 esters/double ESTERS card,14 lessons/337 steps; preserved React
+126/12 without rebuild. Professor report: docs/professor-20261029/main-esters-update.html.
+Independent publication Reviewer /root/publication_20261029_review:94 paths, no findings.
+Developer public HTTP8 hashes PASS; public Firefox5 functional groups PASS. Strict
+console gate exit1:3 Google Analytics cookie-domain rejections +3external JmolTracker
+frame blocks. Raw evidence retained; see PUBLICATION-REVIEW-20261029.md. No app
+exception observed; no claim of error-free public console. Known old isopropyl-H
+text overlap/HCOOH rectangle remain; physical mobile/other browsers/export untested.
+
+All working source, including pre-existing React/agent WIP, saved on separate branch
+checkpoint/namelecule-20261029-103322; initial checkpoint 70f9f26395742bdb2433e13f617588e6593244b2.
+ZIP1813 files (~20.9MB) CRC/all SHA256 verified; Gitbundle verified; identical copies
+in /Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/Αποθηκεύσεις/2026-10-29-103322.
+14 active scenario JSONs and professor report byte-compared with Desktop αρχεία  json/
+Namelecule_29-10-2026. Final checkpoint adds these final records; archive/bundle are
+refreshed afterward. Exact final commits/hashes/remote verification are in external
+final-save-state.json (avoids self-referential archive hashes). Source branch
+react-library-pilot HEAD168e3cec/index SHA25c212... preserved; origin/main9c5259e unchanged.
+No professor message sent. User receives public application/report links.
+
+Core report: earlier approved five-ester work changed js/mulermoc-nom-core-52.js
+for bounded branched saturated acyclic monoester naming and acid-parent selection.
+Checks110new/814old/16guards; independently reviewed in ester unit. Published in
+cc2b611. Final expanded MOL fixes and saving added no further core changes; SHA256
+d2138418ff630ab77e578b80ca8ba3a10cc1b877c3ab8c0e5c2735ffcd1f24a2. Forwardable report in core-update.txt/public HTML.
+Professor last actual sync93b759f; last checked6f55eb5 in continuous session; no new
+sync during saving. Next: use published Main link for user review; track existing
+viewer limitations separately. Preserve working branch/staging on resume.
+
+# Current resume point — 2026-10-29 — Published esters; full backup finalization
+
+User authorized full save, public link and professor report. Published reviewed commit
+cc2b6116a6c95b59ba9b20ee55ea6194a406f541 to origin/thesis-work; Pages built exact commit.
+Public Main141/9 esters; double library card; 14 lessons/337 steps. React runtime35
+hashes unchanged (126 molecules/12 lessons). Independent publication Reviewer
+/root/publication_20261029_review:94 paths, no findings; see PUBLICATION-REVIEW-20261029.md.
+Developer public HTTP8 hashes PASS; Firefox5 functional groups PASS. Strict console
+check exit1:3analytics cookie-domain diagnostics +3JmolTracker frame blocks; raw
+public-browser.json retained. No application exception observed, no zero-console claim.
+Full source checkpoint branch checkpoint/namelecule-20261029-103322 will preserve all working files,
+including prior React WIP and generated dist. ZIP+Gitbundle destination:
+/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/Αποθηκεύσεις/2026-10-29-103322
+14 active JSONs/report/links exported Desktop αρχεία  json/Namelecule_29-10-2026.
+Original branch react-library-pilot/HEAD168e3ce/staging preserved; main9c5259e protected.
+Core52 earlier ester naming/acid-parent extension published; saving/MOL fixes added
+no core edits (SHA256 d2138418ff630ab77e578b80ca8ba3a10cc1b877c3ab8c0e5c2735ffcd1f24a2).
+Core checks110new/814old/16guards, molecular/browser evidence and known old H-overlap/
+HCOOH rectangle limitations in ester reports. No message sent to professor.
+Professor last actually synchronized93b759f; last checked6f55eb5 this continuous session;
+no new professor sync performed during publication. Final backup hashes/commit references
+are recorded in external final-save-state.json after archive verification.
+Next: verify/checkpoint push, ZIP CRC+all hashes, bundle verify, compare backup copies;
+then provide links. Preserve original working branch and index.
+
+# Current resume point — 2026-10-29 — Full save/publication authorized; release review running
+
+Ο χρήστης ζήτησε πλήρη αποθήκευση παντού, δημόσιο σύνδεσμο και reportκαθηγητή.
+Ετοιμάστηκε απομονωμένο release /tmp/namelecule-release-20261029/release από
+publicbaseaae82c8,branchpublish/esters-20261029. PagesAPIverifiedthesis-work/root;
+originmain9c5259eδιατηρείται. Runtime772/React35hashes/77HTMLrefsPASS. Prefix
+Firefoxsmoke5groupsPASS0errors:report/Main1419esters/card14/realnew3D17atoms/
+Hfixes/React1262D3D/alkane21step1→2. No rebuild/chemistrycodewritesinsave.
+Frozen94stagedpaths manifestdocs/checks/publication-20261029/staged-target.json;
+freshreadonlyReviewer/root/publication_20261029_reviewrunning. Donoteditrelease.
+Originalreact-library-pilotHEAD168e3ce/indexhashunchanged. Allwork1807+files
+willgooncheckpointbranch (namein/tmp/.../state.json),ZIP/externalΑποθηκεύσεις/Gitbundle.
+Report+links+14activeJSON exportedDesktop αρχεία  json/Namelecule_29-10-2026.
+Publicpush/Pagesverify/fullZIP/checkpoint/bundlepending;donotclaimcompleteyet.
+Next:Reviewerthenreleasecommit/push,publicHTTP/browserverify,finalcheckpoint/
+ZIP/bundleandnotes. Coreunchangedinsave(stagebaseline d213...),butprevious
+approved5estercoreextensionwillbepublished. No message sent to professor.
+
+# Current resume point — 2026-10-29 — Expanded ester MOL correction complete; local, reviewed
+
+Ο χρήστης ενέκρινε ρητά διόρθωση στα MOL: στον ανεπτυγμένο τύπο ΟΛΟΙ οι
+δεσμοί είναι οριζόντιοι ή κατακόρυφοι. Τα προηγούμενα45°Hfans ήταν λάθος
+δική μας επιλογή. Αφαιρέθηκαν από generator· οι αποστάσεις λύνουν το crowding.
+Άλλαξαν5νέα *_2D_Expanded.mol,5embeddedstrings, generator και HTMLdata cachekey
+esters-orthogonal-20261029. C–C/branches1.8,C–O1.21,C=O1.10,C–H.825 diagramunits.
+Tert-butylmethanoateformylH8left μέσα στοsourceMOL. Όλοι110δεσμοίορθογώνιοι.
+Condensed/skeletal,old136embeddedrecords,3D/provenance,core/viewer αμετάβλητα.
+
+Developer PASS indexedgraphs/H-neighbors/no crossings/atom-on-bond;RDKit15forms/
+5SDFchemical+provenance;110new814old16guardnames/parentmaps/frame. ActualFirefox
+30expandedcases5×1500/390×zoom1/2/4:0diagonalSVG/overlaps/clipping/JSerrors,
+5highlightreplaysstable. Fiveactualimagesinspected,largestsettledfullpagefits.
+Fullpagecapturesreplaceinitialviewportclipartifact. ProgrammaticDOM/390desktop
+emulation,notphysicalmobile/export/otherfonts. Oldisopropylexpandedoverlap
+unchanged/outside this scope;no universalperfectrenderingclaim.
+
+Read-onlyChemistryValidator/root/ester_orthogonal_chemistry advisedspacing and
+independentlysimulateddistances. FreshindependentReviewer/root/ester_orthogonal_review
+ROLE_ID=NAMELECULE_REVIEWER_V1_20261023:18hashes/exact8pathdiff/520monitoredpaths
+verified;110bonds/graph/H/sourceembedded/formylH/no crossings independentlyPASS;
+generator15formsbyteidenticalinmemory;independentRDKit15forms/3D/provenancePASS.
+NoactionableP0/P1/P2/P3. Browser/naming suites suppliedDeveloper evidence;
+Reviewerdidnotlaunchbrowserorrernamenames. Reportdocs/ESTERS-ORTHOGONAL-MOL-20261029.md.
+Afterreviewonlyreportstatuschanged;17otherreviewedfilesunchanged,finalverifyPASS.
+
+Core52unchangedthiscorrectionSHA256d2138418ff630ab77e578b80ca8ba3a10cc1b877c3ab8c0e5c2735ffcd1f24a2;
+viewerSHA2569c45d5c4180aaf15dd7a68db50561f5664efb14bf9d2e8d133462261d7b8e5a8unchanged.
+Earlierapprovedesternamingcorechangesremainlocal. No commit/push/publication/
+upstreamsync. Alreadycheckedupstreaminthiscontinuoussession6f55eb5eebbc9379c88b4783f72142f26e6ad47d;
+lastactuallysynced93b759f5891d7b5a1172646032d83215d60b7604.
+Next:userinspectlocalresult;futureexpandedimports MUST keep allbonds orthogonal.
+
+# Current resume point — 2026-10-29 — Four approved ester display fixes complete; local, independently reviewed
+
+Userapproved3defects+5thesterHleftimplementedinviewer52/HTMLcachekey
+ester-display-20261029. FirstmethylmethanoatecondensedCwithoneexplicitH(noextraCH);
+all9skeletalacidleft;C-boundH+mask+bondhiddenwithstableDOMindices;
+5thtert_butyl_methanoateHCcondensed(Hleft,Canchorstable)andexpandedhorizontal
+leftH–Cfromsource-derivedtransientcoords. Core/sourceMOL/SDF/provenance/data
+unchanged. NoJSMEvendor/settingschange;labeldisplayfixusesSVGpostprocessing.
+
+DeveloperPASS422formsHaccounting/27esterforms/131other-skeletalunchanged,
+110new814old16guardnames. Firefox162current+162beforecases(9×3×2width×zoom1/2/4),
+0clipping/JSerrors,9resize/highlightreplaysindexedMOLstable,3acid/aldehyde
+controls;actualfirst/fifth/representative/controlimagesinspected. Five-new3D
+model/highlight suitepassedbeforefinalHhide-callorderingfix(whichaffectsold
+methylmethanoateexplicitH);currentall9suitepassedfinalsource. Width390desktop
+layoutemulation,notphysicalmobile;otherfonts/browser/exportnotnewlyverified.
+
+IndependentReviewer/root/ester_display_reviewfresh/read-only,
+ROLE_ID=NAMELECULE_REVIEWER_V1_20261023:13hashes/exactdiffconfirmed,actualJSCore
+static422/27/131independentlyPASS,517currentcore/data/assethashesconfirmed.
+NoactionableP0/P1/P2/P3inapprovedscope. Browser/naming/3DevidenceDeveloper,
+notindependentlyrerun. Onlyreportreviewmetadatachangedafterreview;12other
+reviewedfilesunchangedandfinalverificationPASS. ViewerSHA256
+9c45d5c4180aaf15dd7a68db50561f5664efb14bf9d2e8d133462261d7b8e5a8.
+
+Knownresidual:OLDexpandedisopropyl_ethanoate2Htextoverlap6cases;SVGbyteidentical
+actualbaseline. Discloseit;notrepairedbythisscope. Reportdocs/ESTERS-DISPLAY-20261029.md,
+correspondingdocs/checks/esters-display-* artifacts. Currentfixdoesnotclaim
+universalperfectrenderingorreplicationofexactuserenvironment.
+
+Core52unchangedinthisdisplayfix:SHA256d2138418ff630ab77e578b80ca8ba3a10cc1b877c3ab8c0e5c2735ffcd1f24a2.
+Earlierapproved5esternamingcorechangesremainlocal;noadditionalcoreedits.
+Nocommit/push/publication/upstreamsync. Upstreamalreadycheckedinthissame
+continuoussession6f55eb5eebbc9379c88b4783f72142f26e6ad47d,synced93b759f5891d7b5a1172646032d83215d60b7604.
+Next:userinspectlocalresult;furthercodechangesneedconcreteplan/approval.
+
+# Current resume point — 2026-10-29 — Display fix plan extended: fifth ester formyl H left
+
+Νέα απαίτηση χρήστη μαζίμε3εκκρεμήdisplayfixes: στον5οεστέρατοformylHτου
+carbonylCναεμφανίζεταιαριστεράστοcondensed,καισεοριζόντιοαριστερόC–Hbond
+στοexpanded. Ταυτοποιήθηκεαπόactualcarbon-countsorting fSortPropsByCarbonCount
+(teaching52): methylmethanoateC2,ethanoicmethylC3,propanoicmethylC4,
+isopropylethanoateC5,tert_butyl_methanoateC5→5οςμεθανικόςtert-βουτυλεστέρας.
+ΣτοννέοexpandedsourceτοformylHatom8βρίσκεταικάτω(0,-.825)απόC1(0,0).
+Προτεινόμενοdisplay-onlyscope: condensedHπριναπόC,expandedtransientHθέση
+αριστεράμείδιοC–Hμήκος/ίδιαIDs,χωρίςαλλαγήcanonicalMOL/SDF/core. Μαζίμε
+extraHλογιστική,esteracidleftεντόςexistingpipelineκαιhideC-boundH/bondσταskeletal.
+ΝαεπικυρωθούνσαφώςHC(=O)O... καιH–C(=O)–O... σεactualbrowserεικόνες.
+Ακόμηδενέγινανcodeedits·αναμένεταιέγκρισηενοποιημένουπλάνου.
+Core52unchangedσεαυτόντονέλεγχο. Χωρίςcommit/publish.
+
+# Current resume point — 2026-10-29 — Three ester display defects diagnosed; fix plan awaiting approval
+
+Ο χρήστης επιβεβαίωσε extraHδεξιάτουCστονπρώτοεστέραcondensed,acidrightστους
+περισσότερουςskeletalκαιανεπιθύμηταHσεskeletal. Read-onlyδιάγνωση:
+1) methylmethanoateexplicitformylHήδηστοMOL·corecarbonHydrogensμετράtotalH,
+ενώ fAddHydrogens2SVGπροσθέτειτοtotalξανάωςCH. Displayπρέπειναχρησιμοποιεί
+remainingimplicitH=total−explicitC–HcountαπόbondList(όχιconnectivityπουαγνοείH).
+2) genericfSkeletalLayoutMolεπιβάλλειC1left→right,αντίθετοacidleftστουςεστέρες·
+7/9restoredcasesacidright. Προτεινόμενηesterpreferenceμέσαστοίδιοpipeline,
+μόνοproperwhole rotationχωρίςαλλαγήparent/numbering/γεωμετρικώνsafeguards.
+3) methylmethanoateskeletalέχειexplicitHκαιC–Hbond·requesteddisplayomitCboundH
+χρειάζεταιglyph+bond+maskαπόκρυψημεσωστήatom↔SVGαντιστοίχιση,όχιμόνοlabel.
+
+Read-only ChemistryValidator /root/ester_display_diagnosis,
+ROLE_ID=NAMELECULE_CHEMISTRY_VALIDATOR_V1_20261023,επιβεβαίωσε3P2displaydefects
+EST-H1/H2/O1·noedits. Πρότασηfixviewer52/HTMLcache/tests,χωρίςcore/MOL/SDFedits.
+Acceptance9esters×3forms×desktop/narrow×zoom1/2,explicitHcontrolsσεάλλεςτάξεις,
+actualbond/labelimages,source/IDs/naming/3D/highlightsinvariant,independentreview.
+Περιμένουμεέγκρισησυγκεκριμένουπλάνουπρινcodeedits. Τώραμόνοnotesγράφτηκαν.
+Core52δενάλλαξε·προηγούμενηnamingεπέκτασηπαραμένει. Χωρίςcommit/publication.
+
+# Current resume point — 2026-10-29 — Shared ester orientation removal complete; original visual issue OPEN
+
+Ο χρήστης ενέκρινε αφαίρεση του πρόσθετου αυτόματου προσανατολισμού για όλους
+τους9εστέρες και έλεγχο3μορφών, χωρίς νέαMOL edits. Αφαιρέθηκαν state/helpers/
+call από viewer52· HTMLviewer cachekey restore-ester-viewer-20261029. Naming
+harness προσαρμόστηκε μόνο για τους αφαιρεμένουςhelpers. Όλα515μοριακάαρχεία,
+embedded data και core διατηρήθηκαν. Καμία αλλαγή JSME/SVGspacing/settings.
+
+PASSDeveloper110new+814old+16guard naming. Firefox156captures:48oldSVG/name
+συγκρίσεις byteidenticalμεimmediatepreester snapshot,108restoredcasesόλων9
+σε3μορφές/1500,390/zoom1,2. 0JSerrors/0clippedlabels. Δεν ελέγχθηκεphysical
+mobile/export/κάθεzoom και δεν τεκμηριώνεται σωστή σύνδεση δεσμών/labels.
+Παλιόςmethylmethanoatecondensed ίδιοςμεsnapshot,περιλαμβάνειexplicitformylH
+καιCHlabel·ηακριβήςταυτότητα/περιβάλλονscreenshotδενεπιβεβαιώθηκαν. Skeletal
+acidright7of9 (3old/4new),όπωςπαλιόςpipeline. Condensed/expandedacidleft9of9.
+Η αρχική οπτική απαίτηση ΠΑΡΑΜΕΝΕΙ OPEN. Δεν επαναλαμβάνουμε ισχυρισμόfix.
+
+IndependentReviewer /root/ester_restore_review fresh/read-only,
+ROLE_ID=NAMELECULE_REVIEWER_V1_20261023:12hashes/scopeddiffverified,ανεξάρτητη
+110/814/16namingεπανεκτέλεσηmemoryPASS,κανέναactionableP0/P1/P2/P3στην
+εγκεκριμένηαφαίρεση. Browser/allassetpreservation suppliedDeveloperevidence.
+Μετάreviewμόνοreviewstatusreportάλλαξε·11άλλαreviewedfilesαμετάβλητα.
+Report docs/ESTERS-VIEWER-RESTORE-20261029.md και corresponding check artifacts.
+
+Core52δενάλλαξεστηναποκατάσταση:SHA256d2138418ff630ab77e578b80ca8ba3a10cc1b877c3ab8c0e5c2735ffcd1f24a2.
+Παραμένει προηγούμενηapprovedcoreεπέκτασηnaming5εστέρων. Χωρίςcommit/publish/
+upstreamsync. Upstreamcheckήδηίδιαςσυνεδρίας6f55eb5eebbc9379c88b4783f72142f26e6ad47d,
+synced93b759f5891d7b5a1172646032d83215d60b7604. Επόμενο: read-onlyδιάγνωση
+H/CH labelκαιbond-labelσύνδεσηςστηνίδιαακριβώςπροβολήτουχρήστη,καισυγκεκριμένο
+νέοπλάνο/έγκρισηπρινκώδικα/MOL. ΜηνυποσχεθούμεότιsourceMOLrotationαρκείγια
+skeletalacidleft:οκοινόςpipelineεπαναπροσανατολίζειβάσειparent.
+
+# Current resume point — 2026-10-29 — User rejects ester rendering; diagnosis pending
+
+Ο χρήστης ανέφερε «είναι χάλια όλα» με screenshot αποσυνδεδεμένων δεσμών/
+labels σε συνεπτυγμένο εστέρα. Ανακαλείται το προηγούμενο συμπέρασμα ότι η
+οπτική εργασία ολοκληρώθηκε επιτυχώς· οι passing checks/review δεν κάλυψαν
+επαρκώς αυτή την εικόνα. Δεν έχει ταυτοποιηθεί με βεβαιότητα το screenshot
+μόριο ούτε αναπαραχθεί η αιτία. Δεν παρουσιάζουμε τον orientation helper ως
+αποδεδειγμένη αιτία των αποσυνδέσεων.
+
+Επιβεβαιώθηκε από persistent task-start snapshot diff: παλιοί εστέρες
+χρησιμοποιούσαν ήδη js/mulermoc-nom-molview-52.js/JSME/SVG. Προστέθηκαν
+fEsterAcidLeftMol/fApplyEsterOrientation και κλήση στο κοινό fUpdateSVG μετά
+fApplySkeletalLayout, πριν getMolecularAreaGraphicsString. Το gating αφορά
+όλους τους υποστηριζόμενους κορεσμένους μονοεστέρες, όχι μόνο5νέους.
+Τα παλιά source/embeddedMOL διατηρήθηκαν, αλλά αυτό δεν αποδεικνύει αμετάβλητη
+εμφάνιση. Η προηγούμενη διατύπωση ήταν υπερβολική· ο Developer το διευκρίνισε.
+
+Επόμενο: read-only αναπαραγωγή πριν/μετά στον ίδιο εστέρα/μορφή/zoom/viewport,
+έλεγχος γεωμετρίας και label rendering, συγκεκριμένο σχέδιο και έγκριση πριν
+νέα code edits, όπως ζήτησε ο χρήστης. Δεν εφαρμόστηκε rollback ή άλλη πηγαία
+διόρθωση σε αυτές τις ερωτήσεις. Core52 δεν άλλαξε περαιτέρω· παραμένουν οι
+προηγούμενες τοπικές αλλαγές naming5εστέρων. Χωρίςcommit/publish.
+
+# Current resume point — 2026-10-29 — Five esters and MOL harmonization complete; local, reviewed
+
+Ο χρήστης ενέκρινε εναρμόνιση των15νέων2DMOL με τους παλιούς εστέρες.
+Ολοκληρώθηκε: acid-left/alcohol-right, αναλογίες παλιώνMOL, ασφαλείς branch/H
+αποστάσεις, source/embedded συμφωνία, indexed atoms/bonds/H-neighbors αμετάβλητα.
+136old records και όλα3D/provenance αμετάβλητα. JSMEsettings/vendor και SVG
+spacing/masking δεν άλλαξαν. Main141μόρια. Δεν προστέθηκε μάθημα/Reactπεριεχόμενο.
+
+Συνολικό unit:5νέοι εστέρες με15MOL/5SDF/provenance/runtimepairs, bounded
+core52 acid-parent/branch naming, viewer2D/3Dcounts/highlights/numbering και
+proper rotation. Report docs/ESTERS-20261029.md· exact51file review manifest
+και final verification σε docs/checks/esters-*-20261029.json. Task baseHEAD
+168e3cec01f941a84d40bbe0dc07156e7baa35d0· πολλές άλλες αλλαγές προϋπήρχαν.
+
+Developer PASS:15MOL/5SDF chemistry/provenance; indexed preservation/no bond
+crossings;110new+814old+16guard naming; Firefox30form/chain,5models,12actual3D
+highlights,30layouts1500/390;280cases140available skeletal forms;84rastercases.
+Expanded minimum carbonyl clearance1.50→2.26CSSpx, median2.52→4.24. Όχι
+καθολική απόδειξη για κάθε zoom/font/device. Width390=desktop layout emulation.
+
+Read-only Chemistry Validator /root/harmonization_chemistry συνέβαλε geometry
+advice. Independent Reviewer /root/ester_final_review (fresh context,
+ROLE_ID=NAMELECULE_REVIEWER_V1_20261023) επιβεβαίωσε51hashes, scoped diff,
+indexedgraphs/3Dmaps και εκτέλεσε ανεξάρτητα110+814+16namingchecks σε memory.
+Κανένα actionableP0/P1/P2/P3. Browser/RDKit/raster ήταν suppliedDeveloper
+evidence,όχι ανεξάρτητη εκτέλεση. Μετάreview άλλαξε μόνοreviewstatusστοreport·
+50άλλα reviewedfiles αμετάβλητα, final verificationPASS. Όχι ανεξάρτητος
+physicalmobile/export/extra zoomέλεγχος. Κανένα αρχείο δεν έγραψε οReviewer.
+
+Core report για προώθηση στον καθηγητή:
+«Το js/mulermoc-nom-core-52.js επεκτάθηκε τοπικά για σωστή επιλογή όξινης
+κύριας αλυσίδας και ονοματολογία διακλαδισμένων κορεσμένων μονοεστέρων.
+Επαληθεύθηκαν110νέες,814παλιές και16οριακές περιπτώσεις, και από ανεξάρτητο
+Reviewer. Η μεταγενέστερη εναρμόνισηMOL δεν πρόσθεσε coreαλλαγές.
+Χωρίςcommit ή δημοσίευση.» CoreSHA256d2138418ff630ab77e578b80ca8ba3a10cc1b877c3ab8c0e5c2735ffcd1f24a2.
+
+Καμία αποθήκευσηcommit/push/publication ή upstreamsync. Upstream είχε ήδη
+ελεγχθεί στην ίδια συνεχή συνεδρία μέχρι6f55eb5eebbc9379c88b4783f72142f26e6ad47d·
+πραγματικά συγχρονισμένο93b759f5891d7b5a1172646032d83215d60b7604.
+Επόμενο: ο χρήστης να δει το τοπικό αποτέλεσμα· commit/publish απαιτεί εντολή.
+
+# Current resume point — 2026-10-29 — Ester MOL harmonization implemented; independent review running
+
+Ο χρήστης ενέκρινε («ναι») την εναρμόνιση των15νέων2DMOL με τους παλιούς
+εστέρες. Υλοποιήθηκαν αναλογίες .825 condensed/skeletal,1.21heavy/1.10C=O/
+.825C–H expanded, opposite adjacent methyl branches και outward H fans για
+στενά παράθυρα. Acid-left/alcohol-right. Source/embedded συμφωνούν. Exact
+indexed atoms/bonds/H-neighbors,136old embedded records και όλα3D/provenance
+διατηρήθηκαν. Δεν άλλαξαν JSMEsettings/vendor ούτε SVGspacing/masking.
+Αρχεία αυτής της υποφάσης:15new MOL, data52embedded, generator, HTMLdata
+cachekey, harmonization/pixelchecks, evidence, README και docs/ESTERS-20261029.md.
+Το συνολικό εγκεκριμένο unit5εστέρων περιλαμβάνει επίσης προηγούμενες αλλαγές
+core52/viewer52 για branched acid-parent naming/highlights/numbering.
+
+Developer final checks PASS:15MOL/5SDF chemical/provenance; indexed preservation/
+no unrelated bond intersections;110new+814old+16guard naming; Firefox30form/chain,
+5models,12actual3Dhighlights,30layouts1500/390;280cases all140available skeletal
+forms;84actualSVGpixel comparisons. Expanded min clearance1.50→2.26CSSpx,
+median2.52→4.24. Width390=desktop layout emulation, DOM activation programmatic.
+Ορισμένα αρχικά harness failures διορθώθηκαν· τελικά evidence αποθηκεύτηκαν
+σε docs/checks/esters-*.json. Read-only Chemistry Validator
+/root/harmonization_chemistry έδωσε geometry advice· οι δοκιμές είναι Developer.
+
+Frozen51file target: docs/checks/esters-reviewed-target-20261029.json,
+baseHEAD168e3cec01f941a84d40bbe0dc07156e7baa35d0, actual task-start runtime
+snapshot /tmp/namelecule-esters-20261029/before και persistent gzip. Reviewer
+/root/ester_final_review ξεκίνησε fresh context, read-only. Δεν επεξεργαζόμαστε
+target μέχρι έκθεση. Επόμενο: findings, scoped corrections/checks αν χρειαστούν,
+καταγραφή τελικούreview και παρουσίαση τοπικού αποτελέσματος στον χρήστη.
+
+Core report: η εναρμόνιση ΔΕΝ πρόσθεσε core αλλαγές· το ήδη αλλαγμένο core52
+της εγκεκριμένης προσθήκης παραμένει SHA256d2138418ff630ab77e578b80ca8ba3a10cc1b877c3ab8c0e5c2735ffcd1f24a2.
+Συνολικά η εργασία5εστέρων ΕΧΕΙ core αλλαγές: bounded saturated monoester
+branch/acid-parent selection/name. Καμία αποθήκευσηcommit/push/publication ή
+upstreamsync. Upstream είχε ήδη ελεγχθεί στην ίδια συνεχή συνεδρία μέχρι
+6f55eb5eebbc9379c88b4783f72142f26e6ad47d· πραγματικά συγχρονισμένο93b759f5891d7b5a1172646032d83215d60b7604.
+
+# Current resume point — 2026-10-29 — Proposed harmonization of new ester MOLs; approval pending
+
+Ο χρήστης ζήτησε εναρμόνιση των5νέωνεστέρων με τα προϋπάρχονταMOL.
+Read-onlyσύγκρισηόλων9εστέρων/3μορφών: παλιάαιθανικός/προπανικόςμεθυλεστέρας
+έχουνC–C/C–O/C=Oπερίπου0.825μονάδεςσχεδίου. Παλιόςisopropyl_ethanoate
+ExpandedέχειmedianC–C1.21καιC–H0.825,ενώοινέοιExpandedmedianC–C2.0/C–H0.7.
+Άραυπάρχεισυγκεκριμένηδιαφοράαναλογιώνκαιόχιμόνοδιαφορετικήετικέταεργαλείου.
+Δεν έχει αποδειχτεί ακόμη ότι αυτή εξηγεί πλήρως το κενό στο καρβονυλικόΟ.
+Προτεινόμενοscope: εναρμόνιση15νέων2DMOL/embeddedstringsμεreferenceπαλιούς
+εστέρες,αναπαραγώγιμοςgenerator,acidleft/alcoholright,graph/IDs/3Dαμετάβλητα,
+επαλήθευσηJSME/SVGμεαμετάβλητεςρυθμίσειςκαιανεξάρτητοςReviewer.
+Περιμένουμε έγκριση συγκεκριμένου σχεδίου πριν αλλάξουν αρχεία μορίων.
+Δεν εφαρμόστηκε SVGspacingfix ούτε μόνιμη ρύθμιση JSME. Ο προηγούμενος
+προσωρινός JSMEtrial είχε εγκριθεί,αλλάδενεκτελέστηκανπαραλλαγέςρυθμίσεων
+πριντιςνεότερεςερωτήσεις/κατεύθυνση. Ησυνολικήεισαγωγή5εστέρων παραμένει
+σεεξέλιξημετελικόreviewεκκρεμές·ταυπάρχονταcorechangesείναιτηςήδηεγκεκριμένης
+επέκτασηςονοματολογίας,όχιτηςτωρινήςread-onlyσύγκρισης.
+
+# Current resume point — 2026-10-29 — JSME trial approved; compare old/new ester MOLs first
+
+Ο χρήστης ενέκρινε ΠΡΟΣΩΡΙΝΗ απομονωμένη δοκιμή JSME («πάμε για jsme»),
+χωρίς μόνιμη αλλαγή πριν παρουσιαστεί αποτέλεσμα και ζητηθεί νέα έγκριση.
+Νεότερη κατεύθυνση: οι παλιοί εστέρες έχουν σωστό κενό C=O–O, να συγκριθούν
+με τους νέους πριν επιλεγεί ρύθμιση. Ερώτηση χρήστη για την προέλευση:
+και οι4παλιοί embedded2DMOLs δηλώνουν ChemDraw. Δεν τεκμηριώνεται από την
+κεφαλίδα ποιος σχεδίασε ή η ακριβής χειροκίνητη διαδικασία. Οι5νέοι2D
+παράχθηκαν με RDKit και δικές μας συντεταγμένες: οριζόντια schoolCondensed/
+Expanded, RDKitσκελετικοί. Πρώτα4νέα3DPubChem,πέμπτοRDKit,όχιόλαPubChem.
+Παλιές/νέες2Dδομές περνούν από το ίδιο JSME με font9/lineWidth0.6.
+Μετρήθηκε C=O 0.8144/0.8619 στονπαλιόmethyl_methanoateCondensed/Expanded,
+0.825/1.0998 στονπαλιόisopropyl_ethanoate,1.17/2.0στουςδύονέουςπουελέγχθηκαν.
+Οι rawMOLμονάδες από μόνες τους δεν αποδεικνύουν αιτία του οπτικού κενού.
+Επόμενο: σύγκριση actualJSME/SVGεξόδου παλιών/νέων, προσωρινές ρυθμίσεις,
+παρουσίαση πριν/μετά και έγκριση πριν μόνιμη αλλαγή. Κανένα SVGspacingfix ή
+JSMEsetting/vendor δεν έχει εφαρμοστεί σε πηγαία αρχεία. ΑπομονωμένοςFirefox
+δοκιμών επανεκκινήθηκε,PIDrecord στο/tmp/namelecule-esters-20261029/browser-runtime.json.
+Η εγκεκριμένη εισαγωγή5εστέρων παραμένει σε εξέλιξη,με έλεγχοReviewerεκκρεμή.
+
+# Current resume point — 2026-10-29 — Five esters; awaiting approval for JSME spacing trial
+
+Εγκεκριμένη προσθήκη5εστέρων σε Main52,136→141μόρια: sec_butyl_ethanoate,
+butyl_propanoate,tert_butyl_methanoate,isobutyl_2_methylpropanoate,
+isopropyl_2_3_dimethylbutanoate. 15source/embedded2DMOLs,5source/runtimeSDFpairs,
+5provenanceJSON: πρώτα4PubChemCID7758/11529/61207/7351,πέμπτοRDKitETKDGv3/
+MMFF94s. Στερεοχημεία απροσδιόριστη. Καμία νέα θεωρία ή Reactκατάλογος.
+Core52 έχει αλλάξει: bounded saturated acyclic monoester guard, όξινη κύρια
+αλυσίδα αντί συνολικού acidFrag και αλκυλοδιακλαδώσεις/ranking. Viewer εξηγήσεις,
+highlights και αρίθμηση αντίστοιχης2D/3Dκύριαςαλυσίδας. HTMLcachekeysενημερώθηκαν.
+
+Νεότερες οδηγίες χρήστη: όξινο τμήμα ΑΡΙΣΤΕΡΑ, αλκοολικό ΔΕΞΙΑ όπως παλιοί
+εστέρες. Εφαρμόστηκε display-only ολόκληρη proper rotation στον viewer, με
+σκελετικά τμήματα δίπλα-δίπλα. CanonicalMOL/SDF/IDsαμετάβλητα. Εξαίρεση από
+γενική προτίμηση C1→δεξιά για εστέρες, κατόπιν ρητής οδηγίας.
+Ο χρήστης εντόπισε διπλό C=O που ακουμπά O. Η υπάρχουσα SVGmaskδιόρθωση αφορά
+καρβοξυλικά οξέα μόνο και δεν έχει επεκταθεί σε εστέρες. Ο καθηγητής προτιμά
+ρύθμιση JSME· ο χρήστης ζήτησε «δες το κ ρώτα με πρώτα». ΔΕΝ εφαρμόστηκε
+SVGspacingfix ούτε άλλαξαν JSMEsettings/vendor. Έγινε μόνο έλεγχος API/επίσημων
+οδηγιών: επιβεβαιώθηκαν font-size/line-width/scale, δεν εντοπίστηκε ξεχωριστό
+publicgapsetter. atombgsize αφορά κύκλους highlight. APIjavadoc μέσωwebδεν
+ανακτήθηκε πλήρως,δενδηλώνεταιαπόδειξηανυπαρξίαςεπιλογής.
+Επόμενο: έγκριση χρήστη για ΠΡΟΣΩΡΙΝΗ απομονωμένη δοκιμή ρυθμίσεων JSME,
+σύγκριση πριν/μετά, νέα έγκριση πριν μόνιμη αλλαγή. Δεν συνεχίζουμε αυτόματα SVG.
+
+Επαληθεύσεις μέχρι τώρα:110νέα naming/ordering/orientationcases,814παλιάακριβώς
+ίδια,16guardcasesPASS. Graph/formula/mapping15MOL/5explicit-HSDFPASS. Latest
+FirefoxPASS30form/chaincases,5πραγματικά3Dmodels,12atom-colorhighlights,
+30layoutcases1500/390,0JSerrors. Width390=layoutemulation,όχιπραγματικόκινητό.
+280skeletalcasesείχανPASSπριντηντελευταίαβελτίωσηοριζόντιωνesterfragments·
+επανάληψηστοτελικόtargetεκκρεμεί. Extraοριζόντιοassertστοnamingtestπροστέθηκε
+μετάτοτελευταίοPASSκαιχρειάζεταιτελικήεκτέλεση. Ορισμένεςαρχικέςαποτυχίες
+ήτανharness(socketvariable/typo/orderedvsset/Hpolicy),διορθώθηκαν,δενκρύβονται.
+ΔενέγινεακόμητελικόςανεξάρτητοςReviewer. Δενδηλώνεταιολοκλήρωση/readytopublish.
+Τεκμήρια/baseline/before/envστο/tmp/namelecule-esters-20261029. Νέαscripts/specs
+στοdocs/checks/*esters*20261029. Προϋπάρχονdirty/untrackedδιατηρείται.
+Δενέγινεcommit/push/δημοσίευση. Localpreviewserver8013παραμένειγιαχρήστη.
+Upstreamlastchecked6f55eb5e,actualsynced93b759f,χωρίςνέοsyncστοfeature.
+
+Coreαλλαγήσυνεδρίας:js/mulermoc-nom-core-52.js,τοπική/μηcommitted/μηpublished.
+Γιακαθηγητή:«Στονcore52προστέθηκεπεριορισμένηυποστήριξηδιακλαδισμένων
+κορεσμένωνάκυκλωνμονοεστέρων,ώστεοόξινοςκορμόςκαιταπροθέματαναβγαίνουνσωστά.
+Έχουνπεράσει110νέεςκαι814παλιέςπεριπτώσειςονοματολογίαςκαι16guardchecks.
+Ηεργασίαείναιτοπική,χωρίςcommit/δημοσίευση,καιοτελικόςανεξάρτητοςέλεγχοςεκκρεμεί».
+
+# Current resume point — 2026-10-29 — Double ESTERS card added locally
+
+Εγκεκριμένο αίτημα: νέα διπλή καρτέλα «ΕΣΤΕΡΕΣ» στην κύρια βιβλιοθήκη v52,
+μετά τα καρβοξυλικά οξέα. Πρώτη ενότητα «Εστέρες κορεσμένων μονοκαρβοξυλικών
+οξέων με κορεσμένες μονοσθενείς αλκοόλες», CνH2νO2 με κάτω δείκτες και ν ≥ 2.
+Δεύτερη «Ακόρεστοι μονοεστέρες», CxHy(COOC) με κάτω δείκτες x/y. Ο χρήστης
+επιβεβαίωσε ρητά το (COOC) μετά την επισήμανση της ασάφειας από Chemistry
+Validator /root/ester_card_chemistry· δεν αντικαταστάθηκε με (COO).
+Η πρώτη περιγραφή διευκρινίζει άκυκλους μονοεστέρες χωρίς άλλες ομάδες.
+Και οι δύο ενότητες γράφουν «Το μάθημα ετοιμάζεται», χωρίς ανύπαρκτα links.
+11 καρτέλες / 14 ενεργά μαθήματα. Δεν δημιουργήθηκαν σενάρια ή νέα μόρια.
+
+Αλλαγή εφαρμογής μόνο design/theory-library.html, με υπάρχον CSS. Οι πολλές
+τροποποιήσεις/untracked αρχεία στην αρχική HEAD 168e3cec προϋπήρχαν.
+Προηγούμενο περιεχόμενο της βιβλιοθήκης διατηρείται byte-identical μετά την
+αφαίρεση της νέας κάρτας. React/core/viewers/MOL/SDF/scenarios ανέπαφα.
+Developer Firefox PASS στα 1500/900/390/320px: ακριβείς τίτλοι/τύποι/δείκτες,
+καμία υπερχείλιση καρτέλας/διπλό ID, 14 αρχικά actions, 0 JS errors.
+Ανεξάρτητος Reviewer /root/esters_card_review, fresh context, κανένα actionable
+P0/P1/P2/P3. Έλεγξε task diff/manifest hashes/προηγούμενο περιεχόμενο και δύο
+screenshots· browser εκτέλεση είναι Developer evidence. Frozen source SHA256
+f339298bb3eede613a1ef538c2d65184b57199ed9bedb2fe8d7e133c090e53a0.
+Τεκμήρια και baseline στο /tmp/namelecule-esters-card-20261029.
+
+Τοπική προεπισκόπηση ανοίχτηκε στον Firefox:
+http://127.0.0.1:8013/design/theory-library.html?v=esters-card-20261029#esters-card
+Ο απλός loopback server στη θύρα8013 παραμένει ενεργός για προεπισκόπηση.
+Δεν έγινε commit/push/δημοσίευση. Οι δημόσιοι σύνδεσμοι παραμένουν στην
+προηγούμενη δημοσιευμένη έκδοση. Εκκρεμούν μόνο τα μελλοντικά μαθήματα εστέρων,
+εκτός του τρέχοντος scope· επόμενο βήμα η επιλογή του πρώτου μαθήματος από χρήστη.
+
+Κανένα core/core-version αρχείο δεν άλλαξε στη συνεδρία. Core52 SHA256
+7e944c6f30abd4cae66a4c1ee0f413f21582b2058b7d3c7679a7a1a463d8a998.
+Upstream ελέγχθηκε επιτυχώς στην ίδια συνεδρία: current/lastchecked 6f55eb5e,
+4 νέα commits μετά5903c76, 12 μετάactualsynced93b759f. Core52 ήδη ίδιο με το
+upstream· όχι νέος συγχρονισμός. Προηγήθηκε read-only σύγκριση2D των δύο
+εκδόσεων (135 σκελετικές μορφές ανά έκδοση/πλάτος, συμπληρωματικά παραδείγματα),
+με ανεξάρτητο review και ρητά όρια προσομοίωσης390px· τεκμήρια στο
+/tmp/namelecule-visual-compare-20261029. Η καρτέλα δεν ενσωματώνει upstream αλλαγές.
+
+# Current resume point — 2026-10-28 — Main v52 and React publicly published and verified
+
+Ολοκληρώθηκε η ρητά εγκεκριμένη δημοσίευση των δύο εκδόσεων στο προσωπικό
+GitHubPages. Commit aae82c875532aad892337dcea608fc81c6503aa4,
+tree833d83736e104918ab6404a048da357acf8ba8eb,fast-forward από3673c39σεorigin/thesis-work.
+PagesAPI sourcelegacy/thesis-work/root και builtγιαακριβώςτοπαραπάνωcommit.
+Originmainπαραμένει9c5259e,repositoryκαθηγητήανέπαφο. Κανέναforcepush.
+Τελικοί δημόσιοι σύνδεσμοι,και οι δύο στην υποδοχή:
+https://yanisken9.github.io/organic-nomenclature-3/react-preview/dist/?v=release-20261028#/
+https://yanisken9.github.io/organic-nomenclature-3/design/welcome-proposal.html?v=release-20261028
+
+Κύρια136μόρια/21οξέα/14μαθήματα337βήματα,React126μόρια/377forms/12μαθήματα283steps.
+Η υπάρχουσα δοκιμαστική React δημοσιεύτηκε με το ήδη ελεγμένο dist,χωρίςrebuild.
+Δενσυγχρονίστηκαντα10νέαοξέα/2μαθήματαστοReactcatalog. Κοινόςκινητήραςv52.
+Releasecheckout /tmp/namelecule-publication-20261028/organic-nomenclature-3,
+branchpublish/v52-react-20261028,παλιόcommit/tagπριντηδημοσίευσηδιαθέσιμο.
+Αρχικόενεργόworkingtree/branchreact-library-pilot/HEAD168e3ceκαιstagingπαρέμειναν
+ωςείχαν,εκτόςτεκμηρίωσηςREADME/reports/journals. Οικυρίωςruntimeπηγές742αρχεία
+είναιίδιεςμετοδημοσιευμένοελεγμένοsnapshot. Δενέγινεαλλαγήκανονισμώνagents.
+
+Reviewer /root/publication_assembly_review,ROLE_ID=NAMELECULE_REVIEWER_V1_20261023,
+fork_turnsnone:κανέναΝΕΟactionableP0/P1/P2/P3στηνassembly. Ανεξάρτητα157staged/
+742blobhashes/77HTMLrefs/.nojekyll/retainedpaths/knownlimitsPASS. Πλήρεςcached
+whitespacecheckαναφέρειμόνο5κληρονομημέναbyte-identicalαρχείαv52,δενπειράχτηκαν
+canonicalMOL/core. Νέαreports/README/manifestdiffcheckPASS. Δενέκανεbrowser/εγγραφές.
+
+DeveloperlocalhostprefixFirefoxsmokePASS0JSerrors. Δημόσια16HTTP200/SHA256matches
+σταcriticalassets/entries/JSON/reports/manifest. PublicFirefoxλειτουργικάPASS
+Mainwelcome52/library14,Reactwelcome/library12/viewer126ethanol2D→3Dκαιalkane21step
+1→2. ΔΕΝπέρασετοstrictτελικόassertμηδενικώνconsoleerrors:δύοεξωτερικά
+JmolTracker.phpX-Frame-Options:sameoriginμηνύματα. Διατηρούνταιrawerrorsκαι
+originalHarnessCompleted:false,μεfunctionalChecksPassed:trueκαι0unexpectedapp
+errors. ΣτοχευμένοςReviewerfollow-upαποδέχτηκεμηανασταλτικήεξωτερικήδιάγνωση,
+όχιμηδενικάconsoleerrors/καθολικήπιστοποίηση. ΓνωστόHCOOHP2/μακράονόματαPNG/
+ReactnativehostCDNόριαπαραμένουνσταpublicreports. Δενεπεκτάθηκεηδημοσίευσησεbugfix.
+
+Τεκμήρια docs/checks/publication-20261028,αναφορά docs/PUBLICATION-REVIEW-20261028.md.
+READMEκαι5report/linkfilesworkspace/Desktopενημερώθηκανμεταελεγμέναpubliccopies.
+ΝέοDesktop06_Δημόσιοι_Σύνδεσμοι_28-10-2026.txtγιαcopy/paste. ΠαλιάZIP/SHAδεν
+αλλάχτηκαν(ιστορικάιδιωτικάπακέτα). Παλαιόprivate14filemanifestείναιιστορικό,
+currentpublichashesστοdocs/professor-20261028/publication-verified.json.
+
+Κανέναcoreδενγράφτηκε/άλλαξεστηδημοσίευσηέναντιέναρξης. Δημοσιεύτηκανμόνοοι
+προγενέστερεςελεγμένεςcore52συνεισφορές, SHA256
+7e944c6f30abd4cae66a4c1ee0f413f21582b2058b7d3c7679a7a1a463d8a998.
+Upstreamlastchecked5903c76,actualsynced93b759f,χωρίςνέοsyncστοpublishscope.
+Τοπικάταnotes/evidenceκαταγράφουντοπραγματικόpubliccommit,δενδηλώνεταιότιτο
+αρχικόworkingtreeέγινεκαθαρό/μετακινήθηκεσεαυτότοcommit. Δενστάλθηκεμήνυμα.
+Δενεκκρεμείυποχρεωτικόβήμαδημοσίευσης·επόμενοοχρήστηςαντιγράφειτουςδύοURL.
+
+# Current resume point — 2026-10-28 — Single Viber-ready professor ZIP completed
+
+Ο χρήστης δυσκολεύτηκε με τα χωριστά αρχεία/Viber και ζήτησε πιο βολική παράδοση.
+Δημιουργήθηκε ένα μόνο συνημμένο στον Desktop φάκελο «αρχεία  json»:
+Namelecule_Για_τον_καθηγητή_28-10-2026.zip,12.906.529bytes,SHA256
+0acbb6e8328ff78e78964b6991add2e0529e1102ad40f157904b758a26ad5ce1.
+749entries:745αμετάβλητα του ήδη ελεγμένου React πακέτου,με εξωτερικό φάκελο
+Namelecule_Καθηγητής/,οι3αμετάβλητες αναφορές/οδηγίες01/03/05 και νέο
+ΔΙΑΒΑΣΕ_ΠΡΩΤΑ.txt. Δεν υπάρχει nested ZIP. Μία αποσυμπίεση αρκεί,έπειτα
+εκκίνηση υπάρχοντος serve.py από τον υποφάκελο Namelecule-React-Review-2026-10-28.
+ΟδηγίεςPython3/InternetκαιόριαReactπαραμένουν. Πρωτότυπα αρχεία δεν άλλαξαν.
+
+DeveloperCRC/παραλληλία745entries+3docs/copybytesPASS. Reviewer
+/root/react_zip_review ανεξάρτητοστοχευμένοread-onlyZIPfollow-up,CRC/path/symlink/
+hash/749μοναδικάentries/παραλληλία/οδηγίεςPASS,κανέναactionableP0/P1/P2/P3.
+Δενεπαναλήφθηκεbrowser,αφούμόνοτοπεριτύλιγμαάλλαξε. Ηδοκιμασμένηrelative
+δομήτουπακέτουδιατηρείται. ZIPhashίδιομετάreview. Κανέναcoreδενάλλαξε.
+Core52SHA7e944c6f30abd4cae66a4c1ee0f413f21582b2058b7d3c7679a7a1a463d8a998.
+Δενέγινεcommit/push/δημοσίευσηήαποστολήστονκαθηγητή. ΟχρήστηςθαστείλειέναZIP
+μέσωViberμεσύντομοσυνοδευτικόμήνυμα. Καμίαυποχρεωτικήεκκρεμότηταπακέτου.
+Προηγούμεναpubliclatestlinksπαραμένουνχωριστά/μηδημοσιευμένα.
+
+# Current resume point — 2026-10-28 — React ZIP prepared, extracted smoke tested and independently reviewed
+
+Ολοκληρώθηκε η εγκεκριμένη παράδοση ZIP για ιδιωτική δοκιμή του καθηγητή.
+Στον /Users/yannisskendros/Desktop/αρχεία  json υπάρχουν πλέον
+Namelecule_React_Αξιολόγηση_28-10-2026.zip,
+Namelecule_React_Αξιολόγηση_28-10-2026.zip.sha256,
+05_Οδηγίες_React_ZIP_28-10-2026.txt.
+ZIP12.849.875bytes(12,3MiB),745entries/744payload+manifest, SHA256
+30e2d1918dd1a1a24058975ee63f332883b968f6ebecb7a48d46701ae3ed5d61.
+ΈτοιμοReactbuild/source/lockfile και κοινάruntime/assets/JSME/MOL/SDF/σενάρια,
+Main52/υποδοχή, helperREADME/serve.py. Χωρίς.git/node_modules/κρυφέςρυθμίσεις/
+παλαιάZIP. Δενέγινεrebuildήνέαεγκατάσταση/εξάρτηση/αλλαγήεφαρμογής.
+
+Οδηγίεςκαθηγητή:πλήρηςαποσυμπίεση,Python3serve.py(Windowspy-3serve.py),
+αυτόματοάνοιγμαReactυποδοχήςσεελεύθερηθύρα127.0.0.1,κρατάτερματικόανοιχτό,
+Ctrl+Cγιατερματισμό. ΔενχρειάζεταιNode/npmγιαδοκιμή. ΧρειάζεταιInternetγια
+κανονικόJSmol/CDN,δενείναιofflineκαιlibs=localδενπεριλαμβάνεται. Sourcebuild
+μενεότεροMaincatalogδενεγγυάται/δενελέγχθηκε. React126/377forms/12lessons283steps,
+sharedMain136/21acids/14lessons337steps. ΔενδηλώνεταιπλήρηςReactμετάβαση.
+
+DeveloperCRC/safeextract/744hashes/sourcebytes/669runtimebaselinePASS.
+ΠραγματικόextractαπόZIPκαιδικόςτουserve.pyσεlocalhost60664·FirefoxPASS
+Mainwelcome52/library14,Reactwelcome/library12/viewer126ethanol2D→3D και
+nativealkane21steplesson1→2σεχωριστόtab,0JSerrors. Μόνοπροαιρετικόfavicon404.
+ΑρχικόCSSselectortestλάθοςδιορθώθηκεστοtestμόνο. Sandboxbinddenialλύθηκεμε
+επιτρεπόμενηtestserverεκκίνηση,οοποίοςτερματίστηκεμετάτουςελέγχους.
+Repohelpers/docsστοdocs/packaging/react-review-20261028, packager/browsercheck
+στοdocs/checks. OriginalZIP/extractedcopyστο/tmp/namelecule-react-package-20261028.
+
+Reviewer /root/react_zip_review,ROLE_ID=NAMELECULE_REVIEWER_V1_20261023,
+fork_turnsnone,read-only,base168e3cec,11frozenfilesστοreviewed-target.json.
+ΚανέναactionableP0/P1/P2/P3/διόρθωση. ΑνεξάρτηταzipCRC/path/symlink/hidden/
+manifest/source/Desktop/checksum/669runtimehashes/HTMLdeps/ast/READMEPASS.
+Δενεκτέλεσεbrowser/serverήεγγραφές. BrowserείναιDeveloper evidence. Όχιπλήρες
+regression/newbuild/άλλαOS/browsers/χημικήπιστοποίηση. Όλα11hashesίδιαμετάreview.
+Αναφορά docs/packaging/react-review-20261028/review-result.md.
+
+Κανέναcoreδενάλλαξεστησυσκευασία. Core52SHA256
+7e944c6f30abd4cae66a4c1ee0f413f21582b2058b7d3c7679a7a1a463d8a998.
+Δενέγινεcommit/push/δημοσίευσηήμήνυμαστονκαθηγητή. ΤοZIPεπιτρέπειιδιωτική
+αξιολόγησηχωρίςδημόσιαReact. Ταπροηγούμενα5έγγραφακαθηγητήπαραμένουνστονίδιο
+φάκελο. Δημόσιεςlatestεκδόσειςδενδημοσιεύτηκαν/εγκρίθηκαν:React404/Mainπαλιάv51,
+χωριστήεκκρεμότηταανζητηθούνδημόσιοιlatestσύνδεσμοι. Upstreamίδιο5903c76ελέγχθηκε
+επιτυχώςστοπροηγούμενοreportsegment,actualsynced93b759f. Όχινέοςupstreamsync.
+ΔενεκκρεμείυποχρεωτικόβήμαγιατοZIP. Επόμενοηπαράδοσήτουαπότονχρήστη.
+
+# Current resume point — 2026-10-28 — Professor reports prepared/reviewed; approval required for latest public links
+
+Το αίτημα προετοιμασίας ενημέρωσηςReact, αναφοράςκύριας και αντίστοιχων συνδέσμων
+υλοποιήθηκε ως πακέτο5εγγράφων στον φάκελο χρήστη «αρχεία  json»:
+01_Ενημέρωση_React_28-10-2026.html,
+02_Σύνδεσμος_React_28-10-2026.html,
+03_Αναφορά_Κύριας_v52_28-10-2026.html,
+04_Σύνδεσμος_Κύριας_Υποδοχή_28-10-2026.html,
+00_ΔΙΑΒΑΣΕ_ΠΡΙΝ_ΤΗΝ_ΑΠΟΣΤΟΛΗ_28-10-2026.txt.
+Byte-identical πρωτότυπα/τεκμήρια στο docs/professor-20261028.
+
+Δεν έχουν ολοκληρωθεί δημόσιοι σύνδεσμοι των τελευταίων τοπικών εκδόσεων.
+ReactpublicHTTP404,δημόσιαMainwelcomeHTTP200αλλάlinksv51. Το127.0.0.1είναι
+μόνοτοπικό καιδηλώνεταιρητά. ΟιπροβλεπόμενοιpublicURLsείναιπροςδημοσίευση,
+όχιήδηlatest. Τελικόβήμαζητείταιρητήέγκρισηcommit/push/δημοσίευσηςστοπροσωπικό
+GitHubPages,επειδήοχρήστηςέχειαπαγορεύσειδημοσίευσηχωρίςέγκριση. Οι αναφορές
+είναι συγκεκριμένες/έτοιμες/ελεγμένες πριν ζητηθεί αυτή η έγκριση. Μην θεωρηθεί
+ότι δόθηκε ήδη. Δεν στάλθηκε μήνυμα στον καθηγητή.
+
+Main136μόρια/21οξέα/14μαθήματα337βήματα,Reactbuild126/377forms/12μαθήματα283steps.
+ΔενέγινεReactrebuild ήσυγχρονισμόςκαταλόγουμετα10νέαοξέα/2μαθήματα. Αναφορές
+περιλαμβάνουνχαρακτηριστικά/αρχιτεκτονική/όριαReact,προγενέστερεςcore52
+συνεισφορές,10οξέα/γεωμετρία/αναγνωσιμότητα/νέαμαθήματα/καρτέλεςκύριας και
+γνωστάHCOOHP2/μακράονόματαPNG. Δενδηλώνεταικαθολικήετοιμότηταπαραγωγής.
+
+DeveloperpublicέλεγχοιurllibHTTPκαιGitHubAPI/rawεπιτυχείς,αφούwebtoolαπέτυχε.
+Upstream28OctHEAD5903c76c6f71aaf0512a134a7ff6f710fa95c30a ίδιομεlastchecked,
+changelogSHA46b0f963209d20bf8e22cf664204397445bc04a04aa3cfd8be4be8a3f132f176.
+Πραγματικάsynced93b759f5891d7b5a1172646032d83215d60b7604,δενέγινενέοςsync
+σεαυτότοdocs-onlyαίτημα. Νεότερεςcamera/movetoαλλαγέςήδηγνωστές/χωριστές.
+ΤοπικόςFirefoxsmokePASSMainwelcome52/Main14/Reactwelcome/library12/viewer126
+ethanolready,0JSerrors. Δενεπαναλήφθηκανπλήρηπαλαιάregressions.
+
+Reviewer /root/professor_package_review,ROLE_ID=NAMELECULE_REVIEWER_V1_20261023,
+fork_turnsnone,read-only:κανέναactionableP0/P1/P2/P3. Ανεξάρτητα14targethashes/
+5Desktopcopies/669runtimehashes/μετρήσεις/τεκμηρίωσηPASS. Browserκαιremote
+στοιχείατουDeveloper,όχιδικήτουεκτέλεση. Targetίδιομετάreview. Frozenmanifest
+ docs/professor-20261028/reviewed-target.json,τελικόreview-result.md.
+Δενάλλαξεcoreήοποιοδήποτεapp/runtime/sourceστησυγγραφή,core52SHA
+7e944c6f30abd4cae66a4c1ee0f413f21582b2058b7d3c7679a7a1a463d8a998.
+Οιπρογενέστερεςαλλαγέςcoreπεριγράφονταιχωριστάστηναναφοράκύριας.
+Δενέγινεcommit/push/δημοσίευση. Επόμενοαπαραίτητοβήμαηρητήέγκρισηχρήστη
+γιαδημοσίευσηπρινδοθούνδημόσιοιλειτουργικοίσύνδεσμοιτωνδύολatestεκδόσεων.
+
+# Current resume point — 2026-10-28 — Exact requested formula below other-acid title
+
+Ο χρήστης όρισε ακριβώς το κείμενο κάτω από τον τίτλο «Άλλα καρβοξυλικά οξέα»:
+μόνο CxHy(COOH)n. Εφαρμόστηκε μία αντικατάσταση στο design/theory-library.html:178,
+με x/y/n ως HTML υποδείκτες. Η περιγραφή του περιορισμένου μαθήματος παραμένει
+από κάτω, χωρίς άλλη αλλαγή σε badges, links, μαθήματα ή δεδομένα.
+Η ακριβής αυτή διόρθωση περιεχομένου έγινε σύμφωνα με τη ρητή οδηγία χρήστη.
+Reviewer /root/theory_card_counts_review έκανε στοχευμένη read-only επαλήθευση:
+μοναδική σωστή θέση/τύπος, νέο hash, reverse replacement αποκαθιστά ακριβώς
+το προηγούμενο reviewed HTML hash. Κανένα actionable εύρημα, χωρίς browser ή
+επανάληψη πλήρους review. Developer git diff --check PASS. Νέο HTML SHA256
+062b9dca8f73bc16305dbb0759073337df19570336e9422018d6ba77b42a82b5.
+Οι προηγούμενοι έλεγχοι καρτελών αφορούν την αμέσως προηγούμενη έκδοση· αυτή
+διαφέρει μόνο στον συγκεκριμένο τύπο. Κανένα core δεν άλλαξε, core52 SHA256
+7e944c6f30abd4cae66a4c1ee0f413f21582b2058b7d3c7679a7a1a463d8a998.
+Δεν έγινε commit/push/δημοσίευση. Δεν παραμένει υποχρεωτική εκκρεμότητα.
+
+# Current resume point — 2026-10-28 — Molecule counts added to all theory cards and independently reviewed
+
+Ο χρήστης ενέκρινε την προσθήκη αριθμού μορίων στις υπόλοιπες καρτέλες.
+Ολοκληρώθηκαν 13 αντικαταστάσεις κειμένου στο design/theory-library.html.
+Και τα 14 μαθήματα εμφανίζουν «Χ βήματα · Υ μόρια», με μοναδικά selectedMol
+από τα πραγματικά βήματα κάθε JSON. Πλήθη κατά σειρά 5/5/5/6/6/7/10/11/9/8/7/7/8/7.
+Παραμένουν 14 ενεργά μαθήματα / 337 βήματα. Ίδια links, styles και υπόλοιπα HTML.
+Δεν άλλαξαν JSON, μαθήματα, μόρια, λειτουργίες, CSS, JS, core ή δεδομένα3D.
+Προϋπάρχον WIP δεν αποδόθηκε σε αυτή την αλλαγή.
+
+Developer έλεγχοι JSON/counts και Firefox PASS σε 1500/900/390/320 px,
+όλα τα 14 badges εντός κάρτας/οθόνης, χωρίς overflow σελίδας, 0 JS errors.
+git diff --check PASS. Δεν προστέθηκαν tests για τις απλές αλλαγές labels.
+Ανεξάρτητος Reviewer /root/theory_card_counts_review,
+ROLE_ID=NAMELECULE_REVIEWER_V1_20261023, fork_turns none. Επιβεβαίωσε ακριβώς
+13 αντικαταστάσεις, ανακατασκευή before hash, μετρήσεις και των14JSON και
+18 protected hashes. Κανένα actionable P0/P1/P2/P3 ή απαιτούμενη διόρθωση.
+Browser στοιχεία του Developer, όχι ανεξάρτητη browser εκτέλεση.
+Στοχευμένος ένας Reviewer, χωρίς Chemistry Validator/Learning Designer, αφού
+δεν επηρεάστηκαν χημεία ή εκπαιδευτική αλληλουχία.
+Αναφορά docs/THEORY-CARD-COUNTS-20261028.md, manifest/diff/browser evidence
+στο docs/checks/theory-card-counts-*. Screenshots μόνο στο /tmp.
+Frozen HTML SHA256 c5cf051a2bb8479b282ed6694c700a83c2fe2b0e8c851edfecce682310a2b5f6.
+Target και protected hashes επιβεβαιώθηκαν ίδια μετά το review.
+
+Κανένα core δεν άλλαξε σε αυτή την εργασία έναντι της έναρξης. Core52 SHA256
+7e944c6f30abd4cae66a4c1ee0f413f21582b2058b7d3c7679a7a1a463d8a998.
+Προγενέστερες αλλαγές core της συνομιλίας παραμένουν χωριστά καταγεγραμμένες.
+Upstream τελευταία synced93b759f/checked5903c76, παλαιότερο DNS failure ίδιας
+συνεδρίας, χωρίς νεότερο επιτυχή remote έλεγχο/sync για τις ενδείξεις.
+Δεν έγινε commit/push/δημοσίευση. Δεν παραμένει υποχρεωτική εκκρεμότητα.
+Επόμενο προαιρετικό βήμα ανανέωση της σελίδας βιβλιοθήκης από τον χρήστη.
+
+# Current resume point — 2026-10-28 — Unsaturated-only lesson correction completed and independently reviewed
+
+Υλοποιήθηκε το νέο αίτημα και το εγκεκριμένο με «ναι» πλάνο. Το μάθημα
+«Άλλα καρβοξυλικά οξέα» περιλαμβάνει πλέον μόνο7ακόρεστα οξέα με C=C/C≡C,
+μίαήδύοCOOH,χωρίςάλλεςχαρακτηριστικέςομάδες,σε26βήματα. Διατηρήθηκαν τα
+προηγούμενα1–4/20–41,αναριθμήθηκαν/menuSubset7,προσαρμόστηκαν εισαγωγή,
+πρώτημετάβασηδιοξέος καισύνοψη. Αφαιρέθηκαν απότομάθημα προπανοδιικό και
+υδροξυ-/κετο-/οξο-/αμινοπαραδείγματα. Όλαταμόριαπαραμένουνστηγενικήβιβλιοθήκη.
+Main136μόρια/21οξέα,14ενεργάμαθήματα/337βήματα. Δενέμεινευποχρεωτικήεκκρεμότητα.
+
+Αλλαγές scenarioJSON,design/theory-library.html(count/σαφέςπεδίο/cachelink),
+README,παλιόOTHER-ACIDSreportμεsupersededbanner. ΝέαUNSATURATED-ACIDS-SCENARIO
+report/checksκαιreviewreport. Δενάλλαξανcore/player/MainHTML/viewer/data/MOL/
+SDF/3D/React/άλλαμαθήματα. Task-specificbaseline καιdiff:
+docs/checks/unsaturated-acids-lesson-before-20261028.json καιsource.diff.
+Το ίδιοδιορθωμένοJSON αποθηκεύτηκε/επαληθεύτηκεbyte-for-byte στονφάκελο
+/Users/yannisskendros/Desktop/αρχεία  json/Άλλα_καρβοξυλικά_οξέα-Ονοματολογία.scenario.json
+SHA25666dfb342351bd64d62a22afb4693b60a697cd249ade5796cbec6418a55edd7cb.
+Το προηγούμενοDesktophashελέγχθηκεπριναντικατάσταση,χωρίςάγνωστηαλλαγήχρήστη.
+
+Developer staticPASS7exacteligiblegraphs/26steps/42actualnaming-form-chain
+2D3Dcases/1675protectedfiles/gitdiffcheck. FirefoxτελικόPASS26φυσικάNext,
+rules/hidden/numbering/fit,1500/390px,τρεις2Dμορφές,captureapply,πραγματικό
+FileReaderimport/exportvalidate,Prev/Exit/library,0JSerrors. Αρχικόloadingtimeout
+χωρίςJSerrorsδενεπαναλήφθηκεσεδιάγνωση/τελικόrun,καμίαappfix. Screenshotsμόνο
+/tmp/namelecule-unsaturated-acids-lesson-20261028. LearningDesigner
+/root/other_acids_lesson_design έλεγξεσυνέχεια/κείμενα1/12/25χωρίςευρήματα.
+ΔενεπαναλήφθηκεπλήρηςChemistryValidatorαμετάβλητωνγράφων/ονομάτων/κανόνων.
+
+ΑνεξάρτητοςReviewer /root/unsaturated_acids_lesson_review,
+ROLE_ID=NAMELECULE_REVIEWER_V1_20261023,fork_turnsnone. Frozen13αρχείαστο
+unsaturated-acids-lesson-reviewed-target-20261028.json,base168e3cec/taskbaseline.
+Επιβεβαίωσεhashes,exactdiff/retainedsettings,όλα26κείμενα,ανεξάρτητα7γράφους
+καιεκτέλεσεstatic--read-onlyμεPASS. ΚανέναactionableP0/P1/P2/P3,καμίαδιόρθωση
+ήδεύτεροreview. BrowserαποτελέσματαDeveloper evidence,όχιδικήτουεκτέλεση.
+Περιορισμοί/πλήρηςαναφορά docs/UNSATURATED-ACIDS-SCENARIO-REVIEW-20261028.md.
+ΌχιγενικήIUPAC/οπτική/μαθησιακήπιστοποίηση. Όλα13hashesπαρέμεινανίδιαμετάreview.
+
+Κανέναcoreδενάλλαξεστηδιόρθωση,έναντιέναρξης. Core52SHA256
+7e944c6f30abd4cae66a4c1ee0f413f21582b2058b7d3c7679a7a1a463d8a998.
+Προγενέστερεςcoreαλλαγέςγιαεισαγωγέςοξέωνπαραμένουνδιακριτάκαταγεγραμμένες.
+Upstreamτελευταίαsynced93b759f/checked5903c76,παλαιότεροDNSfailureίδιας
+συνεδρίας,χωρίςνεότεροεπιτυχήremoteέλεγχο/syncσεαυτήτηδιόρθωση.
+Δενέγινεcommit/push/δημοσίευση. Επόμενοπροαιρετικόβήμαανανεωμένηβιβλιοθήκη
+καιοπτικήδοκιμήχρήστητηςδιορθωμένηςέκδοσης26βημάτων.
+
+# Current resume point — 2026-10-28 — User narrows other-acid lesson to unsaturated mono-/diacids; correction plan pending approval
+
+Νέα ρητή διευκρίνιση χρήστη: το σενάριο να περιλαμβάνει μόνο οξέα με πολλαπλούς
+δεσμούς C=C ή C≡C και μία ή δύο –COOH, χωρίς άλλες χαρακτηριστικές ομάδες.
+Έγινε read-only έλεγχος των13 πραγματικών condensed γράφων μέσω του υπάρχοντος
+inventory/parser. Επιλέξιμα7: propenoic_acid, methyl_2_propenoic_acid,
+penten_2_yn_4_oic_acid, hexen_2_yn_4_dioic_acid,
+ethyl_2_methyl_3_penten_2_yn_4_oic_acid,
+ethyl_3_isopropyl_2_dimethyl_4_5_hexadien_2_4_dioic_acid,
+ethyl_2_isopropyl_3_dimethyl_6_6_hepten_2_yn_4_dioic_acid.
+Όλα έχουν C–C πολλαπλό δεσμό, 1/2 COOH, μόνο τα O των COOH και κανένα άλλο
+ετεροάτομο. Αποκλείονται propanedioic_acid (κορεσμένο), hydroxypropanoic_acid_2,
+Oxopropanoic_acid, aminobutanoic_acid_3, oxobutanoic_acid,
+dihydroxybutanedioic_acid_2_3. Καμία αφαίρεση από τη γενική βιβλιοθήκη μορίων.
+
+Προς έγκριση συγκεκριμένο πλάνο: διατήρηση σημερινών βημάτων1–4 και20–41,
+αναρίθμηση σε26, περιορισμός menuSubset στα7, προσαρμογή εισαγωγής/σύνοψης/
+μετάβασης στο δικαρβοξυλικό παράδειγμα ώστε να εξηγείται το -διικό οξύ χωρίς
+το αφαιρούμενο προπανοδιικό. Διατήρηση τίτλου «Άλλα καρβοξυλικά οξέα» με σαφές
+πεδίο ακόρεστων μονο-/δικαρβοξυλικών στη βιβλιοθήκη. Ενημέρωση ίδιας JSON
+διαδρομής και Desktop αντιγράφου, κάρτας/counts/cache-link, README, σχετικών
+checks/report/journals. Με26βήματα τα14μαθήματα θα έχουν337βήματα. Δεν απαιτείται
+αλλαγή core/player/viewer/data/3D. Στοχευμένοι έλεγχοι7inventory/26step playback,
+mobile/export και ένας συγκεντρωτικός Reviewer μετά εγκεκριμένη διόρθωση.
+Δεν εκκινήθηκαν agents και δεν άλλαξαν εφαρμογή/JSON/Desktop αρχεία στη διερεύνηση.
+Και τα14 hashes του προηγούμενου reviewed target παραμένουν ίδια.
+Core52 SHA256 7e944c6f30abd4cae66a4c1ee0f413f21582b2058b7d3c7679a7a1a463d8a998,
+κανένα core δεν άλλαξε σε αυτή τη διερεύνηση. Όχι commit ή δημοσίευση.
+Επόμενο έγκριση του συγκεκριμένου διορθωμένου πλάνου βάσει AGENTS.md.
+
+# Current resume point — 2026-10-28 — Other-acid theory completed and independently reviewed
+
+Ολοκληρώθηκε το εγκεκριμένο μάθημα «Άλλα καρβοξυλικά οξέα», 41 βήματα με όλα
+τα 13 υπάρχοντα άλλα οξέα, χωρίς προσθήκη/διπλότυπα μορίων. Η βιβλιοθήκη Main
+έχει πλέον 14 ενεργά μαθήματα / 352 βήματα, 136 μόρια συνολικά / 21 οξέα.
+Νέο scenarios/other-carboxylic-acids-nomenclature.scenario.json, ενεργή ενότητα
+στο design/theory-library.html, δύο μαθήματα στην κάρτα οξέων και συμπεριληπτική
+περιγραφή χωρίς παραπλανητικό κοινό μοριακό τύπο. Player52 μόνο title whitelist,
+MainHTML cache token, README και αναφορές/checks/journals. Όχι αλλαγές
+core/viewer/data/MOL/SDF/3D/παλαιώνJSON/React. Προϋπάρχον WIP διατηρήθηκε.
+
+Το ίδιο JSON αποθηκεύτηκε και επαληθεύτηκε byte-for-byte στον φάκελο χρήστη
+/Users/yannisskendros/Desktop/αρχεία  json/Άλλα_καρβοξυλικά_οξέα-Ονοματολογία.scenario.json
+SHA256 68fa1db6f780df5e52e2d6f1f86c6ab0d48b922f82e01a3a8e1c37438662e315.
+Οι ονομασίες κετοπροπανικό/οξοβουτανικό παραμένουν ως συμβάσεις εφαρμογής, με
+ρητή διδακτική αντιστοίχιση C2/C4 και 2-οξοπροπανικό/4-οξοβουτανικό χωρίς
+γενίκευση παραλείψεων. Χημικός έλεγχος τελικού JSON από
+/root/other_acids_lesson_chemistry χωρίς actionable ευρήματα. Learning Designer
+/root/other_acids_lesson_design είχε ελέγξει το σχέδιο41 βημάτων.
+
+Developer PASS 78 actual naming/form/chain cases και αριθμημένοι 2D/3D γράφοι,
+1664 protectedfiles, όλα311 oldrule cases, JS syntax/diffcheck. Firefox τελικό
+PASS 41 φυσικά Next, σημειώσεις/κρυμμένα συνθετικά/rules/αρίθμηση/fit,
+desktop1500/mobile390, τρεις 2Dμορφές, capture/apply, export/validate,
+πραγματικό FileReader JSON import, Prev/Exit/κάρτα βιβλιοθήκης, 0JSerrors.
+Τα προηγούμενα σφάλματα test selector/inventory και η πρόωρη μέτρηση πριν
+το asynchronous name-refit καταγράφονται στο report, δεν χρειάστηκαν appfix.
+Στιγμιότυπα μόνο /tmp/namelecule-other-acids-lesson-20261028.
+
+Συγκεντρωτικός ανεξάρτητος Reviewer /root/other_acids_lesson_review,
+ROLE_ID=NAMELECULE_REVIEWER_V1_20261023, fork_turns none, frozen14file target
+στο docs/checks/other-acids-lesson-reviewed-target-20261028.json, base168e3cec.
+Επιβεβαίωσε hashes στην αρχή/τέλος και ανακατασκευή taskdiff. Εκτέλεσε ο ίδιος
+το static --read-only με PASS και προοδευτική αποκάλυψη. Κανένα actionable
+P0/P1/P2/P3, καμία απαιτούμενη διόρθωση/δεύτερο πλήρες review. Browser evidence
+είναι του Developer, όχι του Reviewer. Πλήρης καταγραφή
+ docs/OTHER-ACIDS-SCENARIO-REVIEW-20261028.md. Δεν τεκμηριώνεται καθολική
+επιστημονική πιστοποίηση ή μαθησιακή αποτελεσματικότητα. Στοχευμένοι ρόλοι,
+ένας Reviewer, χωρίς περιττούς πλήρεις επανελέγχους ή ποσοστό εξοικονόμησης.
+
+Κανένα core δεν άλλαξε στην προσθήκη του μαθήματος έναντι task/session-start
+baseline. Core52 SHA256 7e944c6f30abd4cae66a4c1ee0f413f21582b2058b7d3c7679a7a1a463d8a998.
+Προγενέστερη τοπική αλλαγή core52 για τέσσερα οξέα της ίδιας συνομιλίας
+παραμένει καταγεγραμμένη παρακάτω και δεν αποδίδεται σε αυτή την προσθήκη.
+Upstream τελευταία synced93b759f/checked5903c76, προηγούμενο DNSfailure ίδιας
+συνεδρίας, κανένας νεότερος επιτυχής remote έλεγχος ή sync για το μάθημα.
+Δεν έγινε commit/push/δημοσίευση. Δεν εκκρεμεί υποχρεωτικό βήμα για το μάθημα.
+Επόμενο προαιρετικό βήμα οπτική δοκιμή χρήστη από την ενεργή βιβλιοθήκη.
+
+# Current resume point — 2026-10-28 — Other-acid theory implemented; final browser checks and review pending
+
+Ο χρήστης ενέκρινε το συγκεκριμένο σχέδιο 41 βημάτων με «ναι». Δημιουργήθηκε
+το scenarios/other-carboxylic-acids-nomenclature.scenario.json με όλα τα 13
+υπάρχοντα άλλα οξέα, χωρίς νέες εγγραφές μορίων. Ενεργοποιήθηκε η αντίστοιχη
+ενότητα στο design/theory-library.html, δύο μαθήματα στην κάρτα οξέων, 14 ενεργά
+μαθήματα / 352 βήματα συνολικά. Στον player52 προστέθηκε μόνο τίτλος whitelist,
+στο Main HTML cache token. README και docs/OTHER-ACIDS-SCENARIO-20261028.md.
+Αντίγραφο ίδιων bytes αποθηκεύτηκε στον ρητά ζητημένο εξωτερικό φάκελο
+/Users/yannisskendros/Desktop/αρχεία  json/Άλλα_καρβοξυλικά_οξέα-Ονοματολογία.scenario.json
+SHA256 68fa1db6f780df5e52e2d6f1f86c6ab0d48b922f82e01a3a8e1c37438662e315.
+
+Developer static PASS 41steps/13inventory/78actual naming-form-chain cases,
+2D3D numbered signatures, 1664 protectedfiles, 311 oldrule cases, JSsyntax/diff.
+Chemistry Validator /root/other_acids_lesson_chemistry read-only τελικό JSON,
+χωρίς actionable P0/P1/P2/P3. Learning Designer είχε ελέγξει το σχέδιο.
+Φυσική αναπαραγωγή Firefox όλων41 πέρασε με0JSerrors. Έγινε διόρθωση tests
+για selector/inventory και αναμονή asynchronous name-refit μετά 2D mode change.
+Τελικό πλήρες browser run με πραγματικό FileReader import σε εξέλιξη.
+Επόμενο συγκεντρωτικός ανεξάρτητος Reviewer σε frozen target, στοχευμένες
+διορθώσεις αν προκύψουν, τελική καταγραφή/αναφορά. Δεν έγινε commit/publish.
+
+Κανένα core δεν άλλαξε σε αυτή την προσθήκη έναντι task baseline.
+Core52 SHA256 7e944c6f30abd4cae66a4c1ee0f413f21582b2058b7d3c7679a7a1a463d8a998.
+Οι προγενέστερες αλλαγές core52 για τα τέσσερα οξέα της ίδιας συνομιλίας
+παραμένουν ξεχωριστά καταγεγραμμένες παρακάτω. Όχι data/MOL/SDF/3D/React ή
+παλαιά scenarioJSON αλλαγές. Δεν αποδίδεται προϋπάρχον WIP στην παρούσα εργασία.
+Upstream τελευταία synced93b759f, checked5903c76, προηγούμενο DNS failure
+ίδιας συνεδρίας, χωρίς νέο επιτυχή remote έλεγχο/sync στην προσθήκη μαθήματος.
+
+# Current resume point — 2026-10-28 — Other-acid theory investigated; 41-step plan awaiting approval
+
+Νέο αίτημα: θεωρία «Άλλα καρβοξυλικά οξέα» με όλα τα13 υπάρχοντα μόρια,
+σύνδεση στη βιβλιοθήκη και αντίγραφο JSON στον καθιερωμένο φάκελο Desktop.
+Έγινε μόνο read-only διερεύνηση/σχεδιασμός. Δεν δημιουργήθηκε σενάριο ή export.
+Ενεργά τώρα13μαθήματα/311βήματα. Το προηγούμενο μονοκαρβοξυλικό έχει28βήματα.
+Τα13άλλα επιβεβαιώθηκαν ως acid inventory μείον τα8sat-mono του προηγούμενου
+μαθήματος. Runtime ονόματα/parts/parents αποθηκεύτηκαν μόνο στο
+/tmp/namelecule-other-acids-lesson-inventory-20261028.json.
+
+Learning Designer /root/other_acids_lesson_design πρότεινε41βήματα με όλα13,
+κατά αύξον συνολικόC (3/4/5/6/8/13/14), progressive disclosure,COOH priority,
+δύοCOOH/unsaturation/mixedFG/αλκύλια, τελική2Dσύνοψη και προαιρετικό3D.
+Όχιquiz/ισομέρεια,χωρίςάνωκάτωτελείες,κλειστοίπροαιρετικοίπίνακες,ίδιοJSONv1.
+Chemistry Validator /root/other_acids_lesson_chemistry εντόπισε pre-existingP2
+κίνδυνο γενίκευσης για legacy «κετοπροπανικό»/«οξοβουτανικό». Core52:151–152
+κετο/οξο,2748–2749 omissionlocants·ίδιεςεπιλογέςήδηHEADcore51. Γράφοισωστοί,
+συστηματικέςαντιστοιχίσεις2-οξοπροπανικό/4-οξοβουτανικό. Πρωτογενείςπηγές
+IUPACBlueBookP65.1.1.2.3/P64.5.1 https://iupac.qmul.ac.uk/BlueBook/P6.html
+καιP66.6.1.3 https://iupac.qmul.ac.uk/BlueBook/P6a.html. Δεντεκμηριώθηκεεξωτερικά
+ότιοιπαραλείψειςείναικαθολικόςελληνικόςσχολικόςκανόνας.
+
+Προτεινόμενοελάχιστοscope προςέγκριση:διατήρησηcore/υπαρχουσώνσυμβάσεων,
+ρητήαρίθμησηC2/C4στομάθημακαιδιαφανήςαντιστοίχισημεπλήρησυστηματικάονόματα.
+ΝαμηδιδάσκονταιοιπεριορισμένεςlegacyονομασίεςωςγενικήIUPAC. Δενπροτείνεται
+σιωπηρήαλλαγήκετο→οξο. Στα2unbranchedενινικά ηθέση2είναιcomp0·ναμην
+θεωρηθείcompNumber1έγκυροalkyl/doublehighlight. Χρήσηparentnumbering και
+compBondType μέχριεπιβεβαίωσης πραγματικούstepbehavior.
+
+Πλάνο: νέο scenarios/other-carboxylic-acids-nomenclature.scenario.json,
+καρτέλαdesign/theory-library.html ενεργή/2μαθήματα+inclusiveπεριγραφήγιαextraFG,
+κατάργησηλανθασμένουενιαίουτύπουCxHy(COOH)nγιαόλα13,τίτλοςστοplayer52rule
+whitelist,MainHTMLcache,README/report/checks/journals. Σύνολο14μαθήματα/352βήματα
+εφόσονυλοποιηθούν41. ΌχιπαλιάJSON/data/MOL/SDF/3D/React/coreαλλαγές.
+Desktopbytecopy προβλεπόμενο
+/Users/yannisskendros/Desktop/αρχεία  json/Άλλα_καρβοξυλικά_οξέα-Ονοματολογία.scenario.json
+(φάκελοςυπάρχει,αρχείοδενυπάρχει). Χρήστηςτοζήτησερητά·υλοποίησημετάέγκριση.
+ΈλεγχοιJSON/inventory/schema,ονόματα/highlights/visibility/captureapply,όλα41
+βήματαFirefox/desktopmobile/πλοήγησηExit/import-export καιbyteidentityexport,
+έναςσυγκεντρωτικόςReviewer μετάολοκλήρωση. Οιδύοειδικοίμόνοδιάβασαν.
+
+Κανέναcoreδενάλλαξεστηδιερεύνηση. Προγενέστεροcore52για4οξέαίδιαςσυνομιλίας
+παραμένεικαταγεγραμμένο. ΠροηγούμενοupstreamDNSfailureίδιαςσυνεδρίας,όχινεότερος
+επιτυχήςέλεγχος/sync(lastchecked5903c76,synced93b759f). Δενέγινεcommit/publish.
+Επόμενο:έγκρισησυγκεκριμένουπλάνου41βημάτων/ρητώνχημικώνδιευκρινίσεων,
+έπειταbaselineκαιυλοποίηση. Μηνθεωρήσειςότιτοπλάνοέχειήδηεγκριθεί.
+
+# Current resume point — 2026-10-28 — Two enynoic acids integrated; complete; independent review clean
+
+Ο χρήστης ενέκρινε το συγκεκριμένο πλάνο με «ναι». Προστέθηκαν
+2-πεντεν-4-ινικό οξύ (C5H4O2) και 2-εξεν-4-ινοδιικό οξύ (C6H4O4).
+Τελική βιβλιοθήκη136. Οι134 προηγούμενες εγγραφές, η σειρά τους και τα MOL
+διατηρήθηκαν. Κανένα διπλότυπο έναντι των19 παλιών οξέων ή μεταξύ των νέων.
+
+Αλλαγές: δύο εγγραφές/six embeds στο data52, έξι source2D MOL, δύο RDKit SDF
+με provenance και δύο runtime SDF. Viewer52 μόνο δύο keys στην υπάρχουσα
+προοδευτική αρίθμηση· Main HTML ανανέωση data/viewer cache. README/report/tests.
+Ακριβή28 αρχεία και SHA256 στο docs/checks/two-enynoic-acids-reviewed-target-20261028.json.
+Report docs/TWO-ENYNOIC-ACIDS-20261028.md. Τα παλιά assets/3D, core52, κοινός
+skeletal μετασχηματισμός, σενάρια και React διατηρήθηκαν. Προϋπάρχον WIP
+δεν αποδίδεται σε αυτή τη συμβολή. Καμία αλλαγή εκπαιδευτικού σεναρίου.
+
+Developer PASS: έξι2D/δύο3D γράφοι, τύποι, σθένη, ρητάH, clearance/sp/carbonyl
+γεωμετρία, source/runtime equality, provenance/mapping·134 παλιές εγγραφές/MOL/order
+και1625 προστατευμένα αρχεία αμετάβλητα.36 νέες naming/permutation περιπτώσεις,
+802 παλιές συγκρίσεις,JS syntax/4Python AST/diff whitespace. Πραγματικός Firefox:
+12form/viewports1500/390, δύο πραγματικά3D μοντέλα, progressive numbering,
+actual native JSME/JSmol επιλογές διπλού/τριπλού/COOH μαζί μεH, μηδένJSerrors.
+Στιγμιότυπα στο /tmp/namelecule-two-enynoic-acids-20261028.
+
+Chemistry Validator /root/two_acids_chemistry: ανεξάρτητοι γράφοι/τύποι/σθένη/H,
+parent direction, provenance/mapping, duplicate και source/runtime έλεγχοι PASS,
+χωρίς ευρήματα. Reviewer /root/two_acids_review: νέο context, ίδιο παγωμένο28-file
+περιεχόμενο, ανεξάρτητες εκτελέσεις asset/naming tests --read-only και πρόσθετα
+RDKit/hash checks PASS. Source/diff και δύο desktop screenshots ελέγχθηκαν.
+Κανένα actionable P0/P1/P2/P3. Ο Reviewer επιβεβαίωσε και τα28 hashes πριν/μετά.
+Browser αποτελέσματα παραμένουν Developer evidence, όχι ανεξάρτητη εκτέλεση.
+Κανένας subagent δεν έγραψε αρχεία. Δεν χρειάστηκαν διορθώσεις ή δεύτερο review.
+
+Περιορισμοί: ενδεικτικά τοπικά RDKit conformers, χωρίς R/S/E/Z ή experimental
+ισχυρισμό. Κανένα εξωτερικό lookup. PNG export/άσχετες διαδρομές πλοήγησης δεν
+επανελέγχθηκαν· προϋπάρχοντα όριά τους παραμένουν εκτός scope. Προηγούμενη
+αποτυχημένη DNS πρόσβαση upstream στην ίδια συνομιλία: χωρίς νέο επιτυχή έλεγχο
+ή sync (lastchecked5903c76, πραγματικά synced93b759f).
+
+Core αμετάβλητο στην παρούσα προσθήκη:
+js/mulermoc-nom-core-52.js SHA7e944c6f30abd4cae66a4c1ee0f413f21582b2058b7d3c7679a7a1a463d8a998.
+Στο σύνολο της ίδιας συνομιλίας παραμένει η προηγούμενη αλλαγή core52 για τα4
+άλλα οξέα (413daf0c…→7e944c6f…), ήδη καταγεγραμμένη με κείμενο προς καθηγητή.
+Δεν έγινε commit/push/δημοσίευση. Καμία εκκρεμότητα για αυτά τα δύο μόρια.
+Επόμενο: ανανέωση/επιθεώρηση από χρήστη ή επόμενη εγκεκριμένη εργασία.
+
+
+# Current resume point — 2026-10-28 — Two unbranched enynoic acids investigated; awaiting plan approval
+
+Νέο αίτημα: προσθήκη 2-πεντεν-4-ινικού οξέος και 2-εξεν-4-ινοδιικού οξέος.
+Έγινε μόνο read-only διερεύνηση. Η βιβλιοθήκη έχει134 εγγραφές· κανένας από τους
+δύο ζητούμενους γράφους δεν υπάρχει στις19 υφιστάμενες εγγραφές οξέων.
+
+Επιβεβαιωμένα RDKit graphs/formulas:
+-2-πεντεν-4-ινικό οξύ:HOOC–CH=CH–C≡CH,C5H4O2,SMILES O=C(O)C=CC#C.
+-2-εξεν-4-ινοδιικό οξύ:HOOC–CH=CH–C≡C–COOH,C6H4O4,
+ SMILES O=C(O)C=CC#CC(=O)O.
+Τέσσερα in-memory real-core probes (2×implicit/explicit H) με υφιστάμενο
+JavaScriptCore/appet stub επέστρεψαν ακριβώς τα ζητούμενα ονόματα,parents5/6.
+Δεν απαιτείται γνωστή αλλαγή core. Δεν δημιουργήθηκαν assets ή νέες εγγραφές.
+
+Πλάνο προς έγκριση:δύο εγγραφές data52 και6 embedded/source MOL,2RDKit SDF με
+provenance/mapping και2runtime SDF (σύνολο136μορίων). Υπάρχοντα πρότυπα
+COOH/ρητών H,γραμμικά sp,κοινό νέο skeletal pipeline. Viewer52 μόνο προσθήκη2keys
+στην ήδη χρησιμοποιούμενη διαδοχική αρίθμηση,αν χρειαστεί·HTMLcache,report/tests
+και journals. Όχι αλλαγές παλιών μορίων/core/3D,σεναρίων ή Reactcatalog.
+Έλεγχοι graph/formula/valence/provenance/mapping/όνομα3μορφών/2D3D,parentdirection,
+134old regression,Firefoxdesktop/mobile,numbering/selections·στοχευμένος Chemistry
+Validator και ένας συγκεντρωτικός ανεξάρτητος Reviewer,χωρίς Planner/LearningDesigner.
+
+Δεν άλλαξε core σε αυτή τη διερεύνηση:SHA7e944c6f30abd4cae66a4c1ee0f413f21582b2058b7d3c7679a7a1a463d8a998.
+Προηγούμενες σημερινές αλλαγές core για4οξέα παραμένουν όπως καταγράφηκαν.
+Δεν έγινεcommit/push/publish ή νέα εξωτερική αποστολή δομών. Προηγούμενη πρόσβαση
+upstream ίδιαςσυνεδρίας είχεαποτύχειDNS·όχιισχυρισμόςνεότερουεπιτυχούςελέγχου
+(lastchecked5903c76,actualsynced93b759f). Επόμενο:έγκρισησυγκεκριμένουπλάνου,
+έπειταbaseline/υλοποίηση/έλεγχοι. ΧρήσηCostOptimizationProtocolv1.0.
+
+# Current resume point — 2026-10-28 — Global skeletal geometry/framing complete; targeted review clean
+
+Εφαρμόστηκε η εντολή δύο σταδίων: χημικά ορθή γεωμετρία και οριζόντια κύρια
+αλυσίδα, έπειτα κεντράρισμα ολόκληρου SVG με ετικέτες. Αιτία προηγούμενης
+ασυνέπειας: επιλογή ισοδύναμης αλυσίδας χωρίς περιστροφή και χωριστές διορθώσεις
+ανά ομάδα. Η υπάρχουσα fFit2DSVG ήταν ήδη σωστή και διατηρήθηκε.
+
+Κοινή transient λύση σε viewer52, μόνιμος κανόνας AGENTS/checklist, cache URLs
+σε Main/δύο hosts. Αποθηκευμένα δεδομένα/MOL/SDF/3D/core και άλλες μορφές ανέπαφα.
+Το οξύ χρήστη περιστρέφεται ολόκληρο, C1 αριστερά, χωρίς τοπική παραμόρφωση.
+Μόνο το βουτανονιτρίλιο χρειάστηκε διόρθωση sp από120° σε180° στην προβολή.
+Λεπτομέρειες/αρχεία: docs/SKELETAL-LAYOUT-20261028.md και19-file reviewed manifest.
+
+PASS:802 συγκρίσεις ονοματολογίας,266 γεωμετρίες,84 sp,520 προστατευμένα αρχεία,
+9 guards·Firefox266 προβολές/18 before-after/9 άλλες μορφές, χωρίς επικαλύψεις,
+μέγιστο σφάλμα κέντρου0.375px·resize/zoom/chain-step/PNG/δύο hosts.
+Chemistry Validator /root/skeletal_chemistry και Reviewer /root/skeletal_review.
+SKEL-01 P2 επαφή ατόμου με ξένο δεσμό διορθώθηκε· στοχευμένος ανεξάρτητος
+επανέλεγχος έκλεισε το εύρημα, επιβεβαίωσε266 ίδιες τελικές γεωμετρίες.
+
+Κάλυψη133 διαθέσιμων σκελετικών·methane χωρίς σκελετικό κρατά παλιό fallback.
+Προϋπάρχοντα όρια: JSmol σφάλματα σε page teardown και clipping μακρού ονόματος
+στη λωρίδα PNG. Όχι καθολική εγγύηση για κάθε μελλοντικό layout/label collision.
+Αποτυχημένη DNS πρόσβαση upstream στην ίδια συνεδρία·χωρίς νέο sync.
+Δεν έγινε commit/push/δημοσίευση. Επόμενο: επιθεώρηση χρήστη/επόμενη εντολή.
+
+Core αμετάβλητο στην παρούσα εργασία (SHA7e944c6f… στην αρχή και στο τέλος).
+Στο σύνολο της συνομιλίας παραμένει η προηγούμενη αλλαγή core52 για τα4οξέα
+(413daf0c…→7e944c6f…), ήδη καταγεγραμμένη με ελληνικό κείμενο προς καθηγητή.
+Η νέα βελτίωση αφορά viewer52·είναι τοπική και αδημοσίευτη.
+
+
+Τελική στοχευμένη επαλήθευση Reviewer:19hashes και τεκμηρίωση/canonical/raw
+αποτυπώματα PASS, χωρίς πρόσθετα ευρήματα ή επανάληψη tests.
+
+# Current resume point — 2026-10-28 — Global skeletal layout investigated; plan awaiting approval
+
+Νέο αίτημα: μόνιμη κεντρική οριζόντια ανάπτυξη σκελετικών, πλήρες bounding-box
+κεντράρισμα και σταθερή συμπεριφορά σε desktop/mobile/resize, χωρίς αλλαγή άλλων
+μορφών ή ονοματολογίας. Έγινε μόνο read-only διερεύνηση· κώδικας/δεδομένα/core
+αμετάβλητα από το τέλος της προηγούμενης ολοκληρωμένης προσθήκης4οξέων.
+Core baseline SHA2567e944c6f30abd4cae66a4c1ee0f413f21582b2058b7d3c7679a7a1a463d8a998.
+
+Αιτία: η παλιότερη κεντρική horizontal-chain προτίμηση επέλεγε χημικά ισοδύναμη
+αλυσίδα, δεν περιστρέφει σχέδια (docs/HORIZONTAL-CHAINS-AND-LESSON-RULES-20261024.md).
+Οι περιστροφές έγιναν ανά ομάδα από χωριστά scripts/με διαφορετικά κριτήρια
+(κύριοςάξονας/ελάχιστοκατακόρυφοεύρος/επιμέρουςδεσμοί). fLoadMol2D φορτώνει raw
+σκελετικό χωρίς κεντρική κανονικοποίηση. Πρόσφατος acidgenerator ευθυγραμμίζει
+PCA,που δεν εγγυάται ελάχιστο ύψος ή ακριβώς οριζόντια άκρα.
+133διαθέσιμοι σκελετικοί/134εγγραφές. Από109authoredparents>=2C,19έχουν PCAtilt>10°.
+Η υπάρχουσα fFit2DSVG ήδηκεντράρει συνολικά line/text/path bounds,όχι πρώτοάτομο.
+ΠραγματικόςFirefoxbaseline9μόρια×2viewports1500/390:όλαεντόςορίων,μέγιστοοριζόντιο
+σφάλμακέντρου0.267px. Περιλαμβάνει4νέαοξέα,αιθανόλη,βουτανικό,υδροξυπροπανικό,
+διακλαδισμένοδιένιο και αιθέρα. Προσωρινά στοιχεία μόνο /tmp/namelecule-skeletal-
+{orientation-before,browser-before}-20261028.json· δεν πρόκειται για afterέλεγχο.
+Hosts React viewer/lesson αναφέρονται στον ίδιο viewer52,με παλιότερα cacheURLs.
+
+Προτεινόμενο πλάνο προς έγκριση: κοινή rigidrotation-only προσαρμογή skeletal
+στο viewer52 με liveκύριααλυσίδα/ελάχιστηκατακόρυφηζώνη,σταθερήεπίλυσηισοπαλιών,
+χωρίςκαθρεπτισμό/παραμόρφωση/αλλαγήindices/χημείας. Κοινό fullboundsfit μετά τη
+σχεδίαση/resize· μόνο τεκμηριωμένες απαραίτητες επεκτάσεις του υπάρχοντοςfit.
+AGENTS+reviewchecklist μόνιμοςκανόνας, HTMLcache και generatedviewer/lessonhosts,
+στοχευμένοtest/report+journals. Auditόλων133διαθέσιμων,πριν/μετά αντιπροσωπευτικών,
+εναλλαγές/resize/numbering/highlights/PNG,unchangednaming/otherforms. Ένας συγκεντρωτικός
+ανεξάρτητοςReviewer μετάυλοποίηση· δενεκκινήθηκεagentστηδιερεύνηση.
+Επόμενο: έγκρισηχρήστησύμφωναμεAGENTSPlan-before-implementation,έπειταbaseline
+καιυλοποίηση. Δενέγινεcommit/push/publish. Πρόσβασηupstreamτηςίδιαςσυνεδρίας είχε
+αποτύχειDNS· δενισχυριζόμαστενεότεροέλεγχο(checked5903c76,synced93b759f).
+
+# Current resume point — 2026-10-28 — Four other acids integrated; completed; independent review clean
+
+Συνέχιση της ήδη εγκεκριμένης διακοπείσας προσθήκης τεσσάρων ακόρεστων οξέων.
+Επιβεβαιωμένο αρχικό inventory130: τα τέσσερα κορεσμένα είχαν ολοκληρωθεί,
+κανένα νέο ακόρεστο key δεν υπήρχε σε registry/embeds/runtimeSDF. Ενσωματώθηκαν
+τα υπάρχοντα προσωρινά12MOL/4RDKitSDF/4provenance και4runtimeSDF· τελικό134,
+χωρίς διπλότυπους νέους γράφους έναντι των15παλιών οξέων.
+
+Μόρια: 2-μεθυλο-2-προπενικό· 2-αιθυλο-3-μεθυλο-2-πεντεν-4-ινικό·
+3-αιθυλο-2-ισοπροπυλο-4,5-διμεθυλο-2,4-εξαδιενοδιικό·
+2-αιθυλο-3-ισοπροπυλο-6,6-διμεθυλο-2-επτεν-4-ινοδιικό οξύ.
+Αρχεία/ακριβή hashes: docs/checks/other-acids-reviewed-target-20261028.json.
+Data52/12embeds,viewer52(prefixboxes/numbering),HTMLcache,README,24assets,
+στοχευμένα tests/τεκμήρια και docs/OTHER-ACIDS-20261028.md.
+Core52 είχε ημιτελή επέκταση πριν τη συνέχιση· τώρα διορθώθηκε η επικύρωση
+ρητώνH μέσω bonds αντί adjacency και αποκλείστηκαν ψευδή αλκυλικά προθέματα
+για ακόρεστους κλάδους εκτός κύριας. Original saturated guard αμετάβλητος.
+
+Developer PASS:12MOL/4SDF γράφοι/τύποι/H/γεωμετρία/provenance/mapping,
+130oldrecords/MOL αμετάβλητα,1573προστατευμένα αρχεία·72newnaming/permutation,
+778oldregression,29guardprobes·JSsyntax/PythonAST. Πραγματικός Firefox:
+24form/viewportcases1500/390,4actual3Dmodels,allprefixgroups+3DH selections,
+progressive numbering,0JSerrors. Evidence other-acids-{assets,naming,browser}
+και screenshots /tmp/namelecule-other-acids-20261028. No classroomclaim.
+Chemistry Validator /root/acid_chemistry:CV-01P1 explicitH independentlyclosed,
+CV-02P2 vinyl/ethynyl falsealkyl independentlyclosed. Ανεξάρτητος Reviewer
+/root/acid_review ολοκλήρωσε ανεξάρτητο review42-filetarget χωρίς actionable
+P0/P1/P2/P3. Εκτέλεσε ο ίδιος asset/naming tests --read-only και24πρόσθετες
+fullHμεταθέσεις,επιθεώρησε diff/dependencies+5screenshots. Browser αποτελέσματα
+παραμένουν Developer evidence· PNGexport/όλεςviewertransitions/ανεπηρέαστα
+εκπαιδευτικάflows δεν επανελέγχθηκαν. Μετάτοreview άλλαξε μόνο παράγραφος
+statusστοreport/αντίστοιχοhashmanifest και journals,όχι implementation/tests.
+Reviewer targetedfinalverification PASS:42hashes και ακριβής παράγραφοςstatus,
+χωρίς νέες δοκιμές/ευρήματα. ReportSHA2560486f998dd0839b264a2c2755d0324c3e31180c8020b1a5bafbdb4c1c0ffcb87.
+
+Εκτόςscope:γενική ονοματολογία ακόρεστων πλευρικών κλάδων,παλιό HCOOHP2,
+νέα σενάρια/React/παλιάμόρια. Προϋπάρχον invalid0locant σε unsupported
+vinylbranch παραμένει εκτός υποστήριξης· δεν δηλώνεται γενική IUPAC κάλυψη.
+Δεν επαναλήφθηκε η αποκλεισμένη PubChem αποστολή· όλα4RDKit,χωρίς R/S/E/Zclaim.
+Upstream: προηγούμενη πρόσβαση της παρούσας συνεδρίας απέτυχεDNS· δεν έγινε
+νέος επιτυχής απομακρυσμένος έλεγχος ή sync. Lastchecked5903c76,actualsynced93b759f.
+ΠροϋπάρχονWIP δεν αποδίδεται στη συνέχιση. Δεν έγινεcommit/push/publish.
+Core άλλαξε σε αυτή τη συνέχεια:js/mulermoc-nom-core-52.js,τοπικά. Εκκρεμή από τα4μόρια:κανένα. Επόμενο:ο χρήστης επιλέγει επόμενη εργασία ή
+δίνει εντολήsave/publish· η παρούσα προσθήκη δεν έχει αποθηκευτεί σε νέοcommit.
+
+Κείμενο προς καθηγητή (ο χρήστης το προωθεί):
+«Το js/mulermoc-nom-core-52.js (v52) ολοκληρώθηκε τοπικά για τα4νέα άκυκλα
+ακόρεστα μονο-/δικαρβοξυλικά οξέα. Διατηρεί τα αλκυλικά προθέματα με ρητάH,
+τη σωστή φορά COOH/αλφαβητικές ισοπαλίες και αποκλείει ψευδή αλκυλικά ονόματα
+ακόρεστων πλευρικών κλάδων. Πέρασαν72νέες/778παλιές περιπτώσεις,29όρια,
+MOL/SDF/2D↔3D και Firefox24απεικονίσεις/4μοντέλα. Chemistry Validator και
+ανεξάρτητος Reviewer ολοκλήρωσαν ελέγχους χωρίς ανοικτά ευρήματα στο scope.
+Δεν έγινε commit ή δημοσίευση.»
+
+# Current resume point — 2026-10-28 — Cost Optimization Protocol v1.0 applied
+
+Ρητό αίτημα χρήστη: εφαρμογή Namelecule Codex Cost Optimization Protocol v1.0
+μόνο σε οδηγίες/διαδικασίες, χωρίς αλλαγή εφαρμογής ή εκκίνηση οποιουδήποτε
+subagent, συμπεριλαμβανομένου Reviewer για την παρούσα αλλαγή τεκμηρίωσης.
+
+Αλλαγές: AGENTS.md, docs/CUSTOM-AGENTS.md, docs/REVIEW-CHECKLIST.md και τα πέντε
+.codex/agents/{developer,reviewer,planner,chemistry_validator,learning_designer}.toml.
+Developer βασικός, ειδικοί βάσει επίδρασης, Planner μόνο για σύνθετη αρχιτεκτονική/
+σχεδιασμό. Ένας συγκεντρωτικός ανεξάρτητος Reviewer ανά λογική ενότητα, διορθώσεις,
+στοχευμένη τελική επαλήθευση· P0/P1 απαιτούν ανεξάρτητη επιβεβαίωση. Δεύτερο πλήρες
+review μόνο για ουσιαστικές νέες αλλαγές/σοβαρούς ανεπίλυτους κινδύνους. Περιορισμός
+επαναναγνώσεων, διπλών αναφορών και περιττών tests, χωρίς μείωση επιστημονικών
+απαιτήσεων. Ρόλοι, ROLE_ID, permissions και όρια commit/publish διατηρήθηκαν.
+
+Έλεγχοι Developer: ανάγνωση σχετικών οδηγιών/ορισμών και τρέχοντος resume,
+TOML parsing και υποχρεωτικά πεδία/name/ROLE_ID και των πέντε ορισμών PASS,
+git diff --check στα αρχεία οδηγιών PASS, σύγκριση SHA256 με session-start
+baseline 1584 αρχείων PASS για αμετάβλητη εφαρμογή/core. Δεν εκτελέστηκαν runtime,
+browser ή agent-loading tests· δεν έγινε ανεξάρτητο review κατόπιν ρητής εντολής.
+Υπάρχουσες εκτενείς WIP αλλαγές προϋπήρχαν και δεν αποδίδονται στην παρούσα εργασία.
+Κανένα core/versioned-core δεν άλλαξε σε αυτή τη συνεδρία, ούτε μέσω upstream sync.
+Δεν έγινε commit/push/δημοσίευση. Δεν υπάρχουν μετρήσεις εξοικονόμησης.
+
+Upstream 28/10/2026: read-only GitHub API πρόσβαση απέτυχε με DNS URLError,
+άρα σημερινό HEAD/history/CHANGELOG δεν επιβεβαιώθηκαν. Τελευταίο καταγεγραμμένο
+checked 5903c76c6f71aaf0512a134a7ff6f710fa95c30a, πραγματικά synced
+93b759f5891d7b5a1172646032d83215d60b7604. Δεν εξάγεται συμπέρασμα για νέα commits
+ή επικαλύψεις. Το παρόν αίτημα αποκλείει αλλαγή runtime/sync κώδικα.
+
+Περιορισμοί: οι νέες οδηγίες TOML δεν αποδεικνύεται ότι φορτώθηκαν σε ήδη ενεργούς
+agents· κόστος και ορθότητα επιλογής scope χρειάζονται παρατήρηση σε επόμενη εργασία.
+Επόμενο: εφαρμογή v1.0 στην επόμενη εγκεκριμένη λογική ενότητα. Η προηγούμενη
+εκκρεμής υλοποίηση τεσσάρων οξέων παραμένει όπως καταγράφεται αμέσως παρακάτω·
+δεν συνεχίστηκε ούτε επαληθεύτηκε από αυτή την αλλαγή οδηγιών.
+
+# Current resume point — 2026-10-28 — Approved four other acids in progress; PubChem/RDKit comparison requested
+
+User approved four-acid/core52 plan. Baseline1579files and5sourcebytes captured
+in docs/checks/other-acids-before-20261028.json and before-sourcegzip before edits.
+Created coordinate/graph specs and generate-other-acids-20261028.py reusing local
+RDKit pipeline. Generated12MOL/4SDF/4provenance ONLY in
+/tmp/namelecule-other-acids-20261028/assets; no data/library integration yet.
+PubChem lookup command REJECTED BEFORE EXECUTION by automatic approval because
+it would transmit new SMILES to external PubChem without explicit authorization.
+No request ran/no remoteabsence claim/no retry. Safe local RDKit used for all4,
+ETKDGv3/MMFF94s24conformers,source/mapping recorded. User then interrupted to ask
+PubChem versus RDKit; this is steering/question, not cancellation of approvedwork.
+
+Core52 edited: new bounded unsaturatedmono-/diacid guard + combined consumer
+scope, dualCOOH orientation in2D/3D, alphabetical tie for unsaturated acids,
+retain doublelocant2 for branchedC3acid. Original saturated guard retained.
+Node syntax PASS. Four in-memory real-core probes now match all4approvedfullnames
+andparent3/5/6/7; NO newassetgraph/browser/oldlibraryregression verification yet.
+Current assets pending inspection/checks before integration. Viewer/data/HTML
+unchanged sofar; no commit/push/publication. The earlier snapshot remains saved
+at e241f13cf1f01e4b3b54efe89a60ed1ae7685f84. Current incompletework notyet backedup.
+Next: answer comparison with primary sources, continue approved new4acids;
+validate layouts/3D,integrate4records/12embeds/SDFs,viewerprefix/sequence+cache,
+full130old regression/newcases/Firefox/independentReviewer. Keepall13oldJSON,
+old130mols andReact untouched; HCOOH P2 is separate. Professorreport deferred.
+
+# Current resume point — 2026-10-28 — Four other acids investigated; implementation plan awaiting approval
+
+Νέο αίτημα χρήστη: προσθήκη τεσσάρων «άλλων καρβοξυλικών οξέων» στην κύρια,
+με τα υπάρχοντα πρότυπα. Σε αυτό το στάδιο έγινε μόνο διερεύνηση· απαιτείται
+έγκριση συγκεκριμένου πλάνου πριν από αλλαγή κώδικα/δεδομένων.
+
+Ζητούμενα:
+1.2-μεθυλο-2-προπενικό οξύ — C4H6O2,
+  SMILES C=C(C)C(=O)O.
+2.2-αιθυλο-3-μεθυλο-2-πεντεν-4-ινικό οξύ — C8H10O2,
+  SMILES O=C(O)C(CC)=C(C)C#C.
+3.3-αιθυλο-2-ισοπροπυλο-4,5-διμεθυλο-2,4-εξαδιενοδιικό οξύ — C13H20O4,
+  SMILES O=C(O)C(C(C)C)=C(CC)C(C)=C(C)C(=O)O.
+  Ο χρήστης έγραψε «εξαδιένοδιικό»· προτείνεται μόνο διόρθωση τονισμού.
+4.2-αιθυλο-3-ισοπροπυλο-6,6-διμεθυλο-2-επτεν-4-ινοδιικό οξύ — C14H20O4,
+  SMILES O=C(O)C(CC)=C(C(C)C)C#CC(C)(C)C(=O)O.
+
+RDKit in-memory sanitization/formulas επιτυχείς.8read-only real-core probes
+(4×implicit/explicitH),JavaScriptCore με υφιστάμενο appletstub:
+1«προπενικό οξύ»,2«2-πεντεν-4-ινικό οξύ»,3«2,4-εξαδιενοδιικό οξύ»,
+4«2-επτεν-4-ινοδιικό οξύ». Όλα παραλείπουν αλκύλια. Υπάρχον guard
+fIsAcyclicSaturatedMonoacidGraph αποκλείει ακόρεστα/δικαρβοξυλικά και
+χρησιμοποιείται σε naming/main-chain/3D paths. Το πρώτο παραλείπει επίσης
+την περιττή εντός υπάρχουσας λογικής C3 θέση διπλού δεσμού· προτείνεται
+να εμφανιστεί η θέση2 στο νέο πλήρες όνομα όπως ζήτησε ο χρήστης.
+Δεν δημιουργήθηκαν MOL/SDF/libraryrecords ή νέο browser/χημικό runtimecheck.
+Πρωτογενείς αναφορές αναγνώστηκαν: IUPAC BlueBookP65.1.2.1/P65.1.2.3
+(τερματικές COOH/αρίθμηση),P14.5/P15.1.7.1.5(αλφαβητική σειρά/ισοπαλία).
+Στο3ο,2COOH επιβάλλουν κύρια αλυσίδα6C· C=C2,4/αλκυλικά locants ισοπαλία,
+ethyl3 αντί4 επιλέγει τη ζητούμενη φορά. Στο4ο,C=C2/C≡C4 προτιμώνται
+έναντι C=C5/C≡C3. Δεν εισάγεται ισομέρεια ή αξίωση αγγλικών PIN.
+
+Προτεινόμενο πλάνο προς έγκριση: οι4νέες εγγραφές/3MOL ανά μόριο+SDF και
+provenance/mapping με τα υπάρχοντα εργαλεία,οριζόντια κύρια αλυσίδα/όλαH/
+COOH:κατακόρυφοC=O,οριζόντιοC–O–H προς τα έξω,χωρίς επικαλύψεις/υπερβολικά
+στελέχη· κοντά στην οριζόντια σκελετικά/γραμμικάsp. Στοχευμένη επέκτασηcore52
+για τα αλκυλικά προθέματα/αρίθμηση των άκυκλων ακόρεστων μονο-/δικαρβοξυλικών
+C/H/O οξέων· viewer52 component/διαδοχικήαρίθμηση μόνο όπου απαιτείται,
+HTMLcache και docs/checks. Όριαέξω:μικτές λειτουργίες,εστέρες,κύκλοι,παλιά
+μόρια,σενάρια/React,παλιόHCOOHfix. Χημικοί/MOL/SDF/2D↔3D naming καιprefix
+έλεγχοι,όληηπαλιάβιβλιοθήκη regression,Firefox3forms desktop/narrow/
+selection/numbering και ανεξάρτητος Reviewer. Δεν θα γίνει commit/push/publish
+από την προσθήκη χωρίς νεότερη σχετικήεντολή. Report καθηγητή παραμένει deferred.
+
+Νέος read-only professor upstream έλεγχος28Oct:HEAD/5latestcommits/changelog
+επιτυχώς μέσω GitHubAPI/raw. HEAD5903c76c6f71aaf0512a134a7ff6f710fa95c30a,
+ίδιο με lastchecked. ChangelogSHA25646b0f963209d20bf8e22cf664204397445bc04a04aa3cfd8be4be8a3f132f176.
+Πραγματικά synced93b759f5891d7b5a1172646032d83215d60b7604· παλιέςεπικαλύψεις
+camera/loadordering παραμένουν χωριστές,δεν έγινε sync. Δεν άλλαξε κανέναcore
+από τη διερεύνηση· core52SHA97ae0466558eb954b810352d5f135fd4958e94a71c4a0cfef09fcf104085f78a.
+Πρόσφατο πλήρες savedcheckpoint είναιe241f13cf1f01e4b3b54efe89a60ed1ae7685f84,
+επιβεβαιωμένοGitHub/externalfinalstate· η παλιότερη σημείωσηtip5e3e2aa ήταν
+πριν το τελικό metadata commit,όχι αποτυχίαpush. Νέαδιερεύνηση άλλαξε μόνοjournals.
+Επόμενο: έγκριση χρήστη για πλάνο4μορίων+περιορισμένηεπέκτασηcore,έπειτα
+λήψηbaseline/υλοποίηση/tests/ανεξάρτητοreview. Μην ξεκινήσεις απόαυτότοresume
+θεωρώντας ότι έχει δοθεί έγκριση.
+
+# Current resume point — 2026-10-28 — GitHub checkpoint confirmed; professor report deferred
+
+Ο χρήστης ενέκρινε ρητά την εκκρεμή αποστολή του πλήρους WIP checkpoint στο
+συγκεκριμένο προσωπικό GitHub/χωριστή branch, μετά την προηγούμενη απόρριψη.
+Η νέα εντολή push εγκρίθηκε και εκτελέστηκε κανονικά· δεν έγινε παράκαμψη.
+
+Επιβεβαιωμένο remote checkpoint:
+https://github.com/yanisken9/organic-nomenclature-3/tree/checkpoint/namelecule-20261028-021615
+Remote tip κατά τον έλεγχο:5e3e2aa390c66c6eb3ccf2c520a1588fb70636dc,
+με runtime/WIP parent b3f5f504425258f3885c7300567da0d320794976.
+Επιβεβαιώθηκαν με gitls-remote τα αμετάβλητα remote main9c5259e... και
+thesis-work3673c39... . Η δημοσιευμένη εφαρμογή/React παραμένουν ως είχαν.
+Πηγαία κύριαv52,δοκιμαστικήReact,σενάρια και σημειώσεις έχουν remotebackup·
+το generatedReactdist διατηρείται στα τοπικάZIP,όπως έχει τεκμηριωθεί.
+
+Αποθήκευση:13DesktopJSON byte-identical,τοπικό πλήρεςZIP1601files,
+εξωτερικό ../Αποθηκεύσεις/2026-10-28-021615/,Gitbundle/evidence131αρχεία/
+δύο προηγούμεναReactZIP διατηρούνται.1579Gitαρχεία επαληθεύτηκαν byte-identical
+στο προηγούμενο metadata tip. Η παρούσα ενημέρωση σημειώσεων αποθηκεύεται
+σε πρόσθετο metadata-only checkpoint στην ίδια branch,και ZIP/bundle ανανεώνονται
+με νέα πλήρη επαλήθευση. Τα πραγματικά τελικά commit/hash/έλεγχοι βρίσκονται
+στο external final-save-state.json και git-content-verification.json.
+Η τρέχουσα workingbranch react-library-pilot/HEAD168e3ce και το staging
+διατηρούνται. Δεν έγινε νέο build/runtimefix/MOL/JSON/core edit.
+
+Ρητή απόφαση χρήστη: το συνολικό report στον καθηγητή ΑΝΑΒΑΛΛΕΤΑΙ για αργότερα,
+μαζί με τις αυριανές αλλαγές. Δεν δημιουργείται νέα συνολική αναφορά,δεν στέλνεται
+μήνυμα,δεν αλλάζουν οι παλιοί δημόσιοι σύνδεσμοι καθηγητή. Οι παρούσες σημειώσεις
+είναι καταγραφή συνέχειας/αποθήκευσης. Στο μελλοντικό report να ενοποιηθούν οι
+ήδη τεκμηριωμένες αλλαγές και οι νέες εργασίες που πράγματι θα γίνουν.
+
+Παραμένουν για επόμενη εργασία: HCOOH darkrectangle(P2) με χωριστή έγκριση
+συγκεκριμένουviewerfix, αναγνωσιμότητα πολύ μεγάλων ονομάτων σε στενή οθόνη
+εντός του επιλεγμένου one-line σχεδιασμού,React μη ολοκληρωμένη δοκιμή.
+Δεν δηλώνεται συνολική οπτική ετοιμότητα του νέου μαθήματος ή πλήρηςReactμετάβαση.
+Το «ό,τι εκκρεμεί» ερμηνεύθηκε στην άμεση ερώτηση ως έγκριση της συγκεκριμένης
+εκκρεμούς αποθήκευσης GitHub· δεν ξεκίνησε ανεξάρτητη αλλαγή χημείας/viewer.
+
+Core: η παρούσα ολοκλήρωση αποθήκευσης δεν άλλαξε κανέναcore. Το core52
+SHA256παραμένει97ae0466558eb954b810352d5f135fd4958e94a71c4a0cfef09fcf104085f78a.
+Η νωρίτερη τοπική επέκταση οξέων είναι πλέον committed/pushed ως checkpoint,
+χωρίς δημοσίευση της ενημερωμένης εφαρμογής. Οι έλεγχοι και έτοιμηcoreενημέρωση
+για μελλοντική προώθηση παραμένουν παρακάτω· δεν παρουσιάζεται αμετάβλητοςcore
+σε όλη τη συνεδρία. Upstreamτελευταίαchecked5903c76.../actualsynced93b759f...,
+όχι νέοςέλεγχος ή sync κατά τη συγκεκριμένη αποθήκευση.
+Επόμενο: διαβάζουμε αυτή τη σημείωση και το externalfinalstate,συνεχίζουμε
+με την επόμενη συγκεκριμένη εργασία της κύριας έκδοσης. Report μετά τα αυριανά.
+
+# Current resume point — 2026-10-28 — Local backups verified; GitHub push blocked pending explicit authorization
+
+Ο χρήστης ζήτησε πλήρη αποθήκευση. Ολοκληρώθηκαν τα τοπικά αντίγραφα της
+κύριας v52(130μόρια/13μαθήματα/311βήματα) και της υπάρχουσας δοκιμαστικής React.
+Δεν άλλαξε λειτουργικός κώδικας, MOL/SDF, σενάριο ή React build κατά το save.
+
+- Τοπικό source/WIP commit: b3f5f504425258f3885c7300567da0d320794976,
+  χωριστή branch checkpoint/namelecule-20261028-021615. Η τρέχουσα branch
+  react-library-pilot/HEAD168e3ce και το πραγματικό staging διατηρούνται.
+- Και τα13ενεργά JSON είναι byte-identical στο Desktop «αρχεία  json».
+  Το νέο Κορεσμένα_μονοκαρβοξυλικά_οξέα-Ονοματολογία.scenario.json αποθηκεύτηκε
+  τώρα ως WIP snapshot28βημάτων. Τα προηγούμενα12ήταν ήδη ακριβή.
+- Πλήρες ZIP κώδικα/υπάρχοντος Reactdist/σημειώσεων/13JSON:
+  communication/checkpoints/Namelecule-20261028-021615.zip.
+  Εξωτερικό ακριβές αντίγραφο στον καθιερωμένο φάκελο:
+  ../Αποθηκεύσεις/2026-10-28-021615/.
+- Πρώτος έλεγχος ZIP:1601αρχεία,CRCκαι κάθε SHA256PASS,ακριβής αντιγραφή.
+  Στον ίδιο εξωτερικό φάκελο:verification-evidence-20261028.zip(131τεκμήρια),
+  Namelecule-git-history.bundle(gitbundleverifyPASS),preserved-checkpoints/
+  με τα δύο προηγούμενα React ZIP,backup-manifest.json,final-save-state.json.
+  Δεν αντιγράφονται node_modules/.git σταZIP· το ιστορικό υπάρχει στοbundle.
+  Δεν πρόκειται για αυτάρκη offline διανομή λόγω υφιστάμενων CDNεξαρτήσεων.
+- Η τελική αυτή καταγραφή αποθηκεύεται σε metadata-only checkpoint και τα
+  ZIP/bundle ανανεώνονται ώστε να την περιλαμβάνουν. Πραγματικό τελικό commit,
+  hashes/μέγεθος ZIP/bundle και κατάσταση δικτύου γράφονται στο εξωτερικό
+  final-save-state.json, χωρίς ισχυρισμό αυτοαναφορικού commit μέσα στο ίδιο.
+
+Ανεξάρτητο assemblyreview /root/review_monoacid_lesson,
+ROLE_ID=NAMELECULE_REVIEWER_V1_20261023:1576project+8Reactdist,13DesktopJSON,
+311steps/130records,10font hashes και source baselinePASS,χωρίς actionable
+ευρήματα. Read-only ανεξάρτητη εκτέλεση· ZIP/bundle έλεγχοι Developer evidence.
+Frozenmanifest5b7612a1eb2471676ec810f4c22d9a8c4c0501e5852cf0a538c125f8b0e3e69e.
+
+Το push στο προσωπικό origin GitHub ΑΠΟΡΡΙΦΘΗΚΕ πριν εκτελεστεί από automatic
+approval review: γενικό save δεν θεωρήθηκε επαρκής συγκεκριμένη εξουσιοδότηση
+για ολόκληρο πιθανώς ιδιωτικό WIP payload/προορισμό· ιδιοκτησία remote δεν
+επιβεβαιώθηκε. Δεν έγινε retry ή παράκαμψη. Εκκρεμεί ρητή έγκριση για push
+της χωριστής checkpoint branch στο
+https://github.com/yanisken9/organic-nomenclature-3.git.
+Η δημοσιευμένη εφαρμογή/React δεν ενημερώθηκαν. Δεν αποστέλλεται report/message
+στον καθηγητή· παλιοί σύνδεσμοι παραμένουν ως είχαν.
+
+Γνωστές εκκρεμότητες: HCOOH σκοτεινό rectangle(P2) χρειάζεται χωριστή έγκριση
+στοχευμένου viewerfix. Η μικρή αύξηση ονομάτων δεν εξαλείφει τη μικρή γραμματοσειρά
+σε στενό χώρο. Το νέο μάθημα δεν δηλώνεται συνολικά οπτικά έτοιμο. Η React
+παραμένει μη ολοκληρωμένη δοκιμή. Επόμενο: χρήστης εγκρίνει συγκεκριμένο remote
+backup αν επιθυμεί· τότε push μόνο αυτής της branch/έλεγχος refs,χωρίς Pagesdeploy.
+Μετά την επιστροφή διαβάζουμε αυτή τη σημείωση και το external final-save-state.
+
+Έτοιμη ενημέρωση core για προώθηση από τον χρήστη:
+«Στη συνεδρία28/10 τροποποιήθηκε το js/mulermoc-nom-core-52.js για αλκυλικά
+προθέματα και ισοδύναμες κύριες αλυσίδες μόνο σε άκυκλα κορεσμένα
+μονοκαρβοξυλικά οξέα, επειδή οι διακλαδώσεις παραλείπονταν. Πέρασαν72έλεγχοι
+ονομασίας/αναδιάταξης,12όριαguard,754συγκρίσεις παλιών περιπτώσεων, χημικοί
+έλεγχοι12MOL/4SDF,24Firefoxμορφές και ανεξάρτητο review. Οι μεταγενέστερες
+αλλαγές εμφάνισης/μαθήματος και η αποθήκευση δεν πρόσθεσαν αλλαγή στον core.
+Η εργασία είναι αποθηκευμένη σε τοπικό Gitcheckpoint/επαληθευμένα αντίγραφα·
+το push εκκρεμεί έγκριση και η ενημερωμένη εφαρμογή δεν δημοσιεύτηκε.»
+Core52 SHA25697ae0466558eb954b810352d5f135fd4958e94a71c4a0cfef09fcf104085f78a.
+Η παλιότερη upstreamv52ενσωμάτωση διακρίνεται από την τοπική επέκταση οξέων.
+Upstream ήδη ελέγχθηκε5903c76...,πραγματικάsynced93b759f...,όχι νέο sync στοsave.
+
+# Current resume point — 2026-10-28 — User-authorized full checkpoint save in progress
+
+Local runtime/WIP checkpoint created: b3f5f504425258f3885c7300567da0d320794976
+on checkpoint/namelecule-20261028-021615. Current branchHEAD/staging unchanged.
+Attempted push command was REJECTED before execution by automatic approval:
+full potentially private WIP payload to unverified GitHub destination, general
+save request not accepted as specific payload/destination authorization; ownership
+not established. No retry/workaround. Remote push remains pending explicit user
+approval for https://github.com/yanisken9/organic-nomenclature-3.git and this
+checkpoint branch. Main/thesis-work publication unchanged; no React deploy.
+Continue local ZIP/external backup/Gitbundle verification before final question.
+
+Ανεξάρτητο save assembly review ολοκληρώθηκε χωρίς actionable ευρήματα:
+/root/review_monoacid_lesson,ROLE_ID=NAMELECULE_REVIEWER_V1_20261023.
+Επαλήθευσε manifest5b7612a1eb2471676ec810f4c22d9a8c4c0501e5852cf0a538c125f8b0e3e69e,
+1576project+8Reactdist,13DesktopJSON/311steps/130records,10font hashes και
+source baseline (εκτόςjournals). Γνήσιο read-only review χωρίς εγγραφές·
+archive/Git/push επαληθεύσεις είναι επόμενα Developer βήματα, όχι ελέγχοι Reviewer.
+HCOOH P2 παραμένει γνωστό. Δεν εμποδίζει WIP checkpoint, δεν δηλώνεται release.
+
+User requested full save. Preserve current Main130molecules/13lessons/311steps
+and incomplete React source/build.13DesktopJSONverifiedbyteidentical, including
+new monoacid28step snapshot (known HCOOH P2 explicitly retained; user save request
+supersedes earlier deferral of checkpoint copy, not scientific/visual readiness).
+No source/core/MOL/JSON/React edits for save. Plan: independent read-only snapshot
+review, backup branch checkpoint/namelecule-20261028-021615 via alternate index (preserve current branch/staging),
+ZIP+SHAverification at /Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/communication/checkpoints/Namelecule-20261028-021615.zip and external /Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/Αποθηκεύσεις/2026-10-28-021615, complete Git-history bundle.
+Remote main9c5259e.../thesis-work3673c39... must stay unchanged; no Pages deploy/
+React publication. Final commits/push/backup verification pending; don't claim yet.
+Latest font manifest10hashes and source save-start baseline will be verified.
+Earlier same-session core52 acid extension remains; core hash97ae0466... unchanged
+by save. No new professor report/message. Next: review/checkpoint/verify archives,
+then record actual results and concrete resume(HCOOH fix needs separate approval).
+
+# Current resume point — 2026-10-28 — Updated lesson opened in visible Firefox
+
+Άνοιγμα Firefox που ζήτησε ο χρήστης: τοπικό Main URL HTTP200. Νέο
+κανονικό GUI Firefox (--no-remote, profile /tmp/namelecule-firefox-name-font-20261028),
+PID16581, με το ενημερωμένο acid lesson στο #step=25 και νέο query για cache.
+AppKit activation επιβεβαιώθηκε. Δεν έγινε ανεξάρτητη ανάγνωση του περιεχομένου
+του ορατού παραθύρου. Καμία αλλαγή εφαρμογής/core/JSON από το άνοιγμα.
+Προηγούμενη κατάσταση/έλεγχοι/εκκρεμότητα HCOOH παραμένουν παρακάτω.
+Χωρίς commit/push/δημοσίευση.
+
+# Current resume point — 2026-10-28 — Modest name enlargement checked and reviewed
+
+Ολοκληρώθηκε η εγκεκριμένη μικρή αύξηση γραμμάτων ονομασίας, σε μία γραμμή.
+Στο σύνθετο όνομα: 9.66667→10.9167px (+12.93%) σε παράθυρο1500px και
+8.01667→9.25px (+15.38%) σε390px. Μόνο όταν απαιτείται fitting, οριζόντιο
+padding boxed συνθετικών6→4.5px. Σύντομα/unboxed/hosts χωρίς Main opt-in:
+προηγούμενη συμπεριφορά. Κανένα νέο minimum16px ή wrapping.
+
+Αλλαγμένα runtime αρχεία: js/mulermoc-nom-molview-52.js,
+css/namelecule-52.css, mulermoc-nom-52.html. Καμία αλλαγή σε core52,
+MOL/SDF, scenarioJSON ή React από αυτήν την προσαρμογή. Τεκμηρίωση:
+docs/NAME-FONT-20261028.md και docs/checks/name-font*. Node syntax και
+Firefox56περιπτώσεις(28βήματα×2πλάτη),box/plus/eye/reset/legacy checks PASS,
+0JavaScript errors. Συγκριτική προστασία1557αρχείων, εξαιρουμένων των3runtime
+και2journals. Το προηγούμενο static record1558 αναφέρεται στη στιγμή πριν
+ενημερωθεί και το δεύτερο journal, όχι σε αλλαγή προστατευμένου source.
+
+Ανεξάρτητο re-review /root/review_monoacid_lesson,
+ROLE_ID=NAMELECULE_REVIEWER_V1_20261023: κανένα νέο actionable εύρημα.
+Ίδιος ανεξάρτητος Reviewer με προηγούμενο δικό του ιστορικό· όχι νέο Developer
+context. Διάβασε actualdiff/context, επαλήθευσε10hashes/sourcegzip/protection,
+node--check/PythonAST/gitdiff--check. Browser αποτελέσματα Developer evidence·
+Reviewer επιθεώρησε screenshots, δεν εκτέλεσε browser ούτε έγραψε αρχεία.
+Τελικό manifestSHA256 b85a1ea4a863a1cbfb2a7e3506227e2673b02d578d2f688de3ac175db3d333a0,
+επαληθεύτηκε ξανά από Developer μετά το review. Καμία αλλαγή target κατόπιν.
+
+Η μικρή ρύθμιση είναι έτοιμη για δοκιμή με ανανέωση του ήδη ανοιχτού Firefox.
+Η γραμματοσειρά μεγάλων ονομάτων παραμένει μικρή σε στενό χώρο βάσει της
+επιλογής χρήστη. Ανοιχτό ξεχωριστό P2:HCOOH σκοτεινό rectangle, εκτός έγκρισης.
+Το αρχικό28βημάτων μάθημα/8οξέα δεν χαρακτηρίζεται συνολικά οπτικά ολοκληρωμένο·
+DesktopJSON αντίγραφο ακόμη εκκρεμεί τελική οπτική ετοιμότητα. Επόμενο βήμα:
+χρήστης βλέπει τη μικρή αύξηση· χωριστή έγκριση απαιτείται για HCOOH viewerfix.
+Δεν ανοίχθηκε Safari, δεν έγινε commit/push/δημοσίευση.
+
+Core ενημέρωση: αυτή η αλλαγή δεν μεταβάλλει το js/mulermoc-nom-core-52.js,
+SHA25697ae0466558eb954b810352d5f135fd4958e94a71c4a0cfef09fcf104085f78a.
+Νωρίτερα στην ίδια συνεδρία είχε γίνει η ήδη καταγεγραμμένη επέκταση ονομασίας
+διακλαδισμένων κορεσμένων μονοκαρβοξυλικών οξέων· δεν δηλώνεται αμετάβλητο το
+core για ολόκληρη τη συνεδρία. Η προηγούμενη ενημέρωση καθηγητή/έλεγχοι παραμένουν
+παρακάτω. Upstream ήδη ελέγχθηκε28Oct5903c76...,πραγματικά synced93b759f...,
+καμία νέα συγχώνευση σε αυτή την εργασία.
+
+# Current resume point — 2026-10-28 — Modest name enlargement implemented; independent review running
+
+Implemented user-approved bounded adjustment: overflowing Main boxed components
+use horizontal padding 4.5px instead of6px before existing font fit. Short names
+reset to6px; unboxed and opt-in-disabled hosts retain old behavior. One line,
+IDs/order/selection/settings remain. Main HTML opts in/cache-busts CSS/viewer.
+No minimum16px/wrapping/HCOOH change. Initial4px experiment was toned down before
+final review to match user request. Final Firefox:56cases(28steps×1500/390),
+actual boxed/plus/eye controls, fit/one-line/IDs/labels,short reset and no-optin
+legacy fallback PASS;0JSerrors. Complex name desktop9.66667→10.9167px(+12.93%),
+narrow8.01667→9.25px(+15.38%). Still small on narrow displays, as disclosed;
+this is a small user-selected adjustment, not full readability remediation.
+Node viewer syntax PASS;1558protected files unchanged against captured baseline,
+including core52, all scenarioJSONs/MOL/SDF/React. Three runtime files only:
+viewer52,css/namelecule-52.css,MainHTML. New report/baselines/diff/browser harness
+and results under docs/checks/name-font*. Frozen10file target manifest SHA256
+b85a1ea4a863a1cbfb2a7e3506227e2673b02d578d2f688de3ac175db3d333a0.
+Existing independent Reviewer /root/review_monoacid_lesson now reviewing this
+new scope; no target edits during review. Journals excluded. Next: record
+verdict/resolve scope findings if any, then user refreshes existing Firefox.
+Original28step monoacid lesson uses8molecules; HCOOH displayP2 remains outside
+this approval; Desktop JSON copy still pending final visual readiness. No new
+core change in this task; earlier same-session core52 acid naming extension
+remains recorded below. No commit/push/publication; no Safari.
+
+# Current resume point — 2026-10-28 — Approved modest one-line name enlargement
+
+User approved only the revised small adjustment: reduce horizontal box padding
+when the Main name needs fitting, aiming roughly 10–15% larger text while keeping
+one line. No 16px minimum or wrapping is approved. HCOOH dark rectangle remains
+outside this approval. Baseline captured in name-font-before/source files before
+edits. Expected target: viewer52 fitting, Main CSS/HTML opt-in/cache; no core,
+scenario JSON, molecular or React changes. Next: implement, Firefox desktop/narrow
+checks, independent review, record outcome. Original monoacid lesson/Desktop copy
+still pending final display readiness. Earlier session core extension recorded below.
+No commit/push/publication; do not open Safari.
+
+# Current resume point — 2026-10-28 — Visible Firefox opened; display-fix approval still pending
+
+User asked toopenFirefox; initial open-a successwasnotvisible. Read-onlyprocess
+inspectionfound2headlessFirefox instances(9237/9238)plusolderno-remoteGUIprofile.
+OpenednewnormalGUIFirefox with open -n -a Firefox --args --no-remote --profile
+/tmp/namelecule-firefox-visible-20261028 --new-window <monoacidlessonURL#step=25>.
+MainPID15929, noheadlessflag. TargetMainURLlocalhost8013verifiedHTTP200. Used
+AppKitNSRunningApplication targetedPIDactivation; resultactivated=true,active=true,
+nameFirefox. SystemEventswindowinspectiondeniedOSAccessibility(-25211); noaccess
+settingschanged. Applicationactivationisconfirmed; noindependentpage/windowcontent
+inspectionclaimed. Futurebrowseropensmusttargetvisibleinstance,notheadless tests.
+
+Originaltaskretained:28stepmonoacidlessoncontent/playerreviewpassed,but2P2display
+issues(font9.7px/HCOOHdarkrectangle)awaitapprovalofbroadercombinedfixpreviously
+presented. UserrequesttoopenbrowserisNOTapprovaltoeditlayout. No application/core/
+MOLfileschangedbyopeningbrowser. DesktopJSONcopystillpendingfinaldisplayfix/review.
+No commit/push/publication. Earliercoreextensionandfullreviewdetailsbelow. Next:
+userinspectsFirefox;obtainapprovalfor16pxminimum/logicalwrapping+HCOOHguard,then
+implement/test/re-reviewandfinishDesktopcopy. Do notopenSafari.
+
+# Current resume point — 2026-10-28 — Monoacid lesson review: two display P2s; follow-up plan awaiting approval
+
+User steering duringindependentreview: longnamefonts toosmall. Preserveoriginal
+objective(new28steptheory/8acids/library/Desktopcopy); donotdeclarelessonfinished.
+FreshReviewer /root/review_monoacid_lesson,ROLE_ID=NAMELECULE_REVIEWER_V1_20261023,
+fork:none completed15filefrozenreview. No newchemical/playerregression; independently
+readall28notes/settings,ranreadonlystatic48formchain/8eligible/283oldrules/1555
+protectedfilecheck,verified15hashes/diff,ownCOOHrootedlongestchains1/3/4/3/5/3/5/6
+andbranches. Inspectedcaptures; browserexecutionremainsDeveloperevidence.
+TwoP2existingviewerlimitationsnewlessonexposes, visualreadinessPENDING:
+(1)HCOOHdarkrectangle firststep:viewer52fResizeCompactLabelRect~1805hasguardonly
+forHCHO;fallbackfCreateCompactLabelRectinheritsdarktextfill~1741; (2)fontfit~3654
+binarysearchallowszero,CSSnamelecule52~226nowrap. Needfixandindependentre-review.
+
+Developerread-onlydiagnosisconfirmsstableHCOOH rect(x3874,y2820.5,w1000,h405,
+fillrgb64,64,64),persistsredrawandcondensed→expanded→condensed;Expandedisclean.
+Nameatfinalstep25(no+),host348px,scale.54956,all9labels9.66667px. User screenshot
+stillcontains+fromolderpreview; removing+infinalJSONhelpedbutdoesnotresolvereadability.
+Evidence /tmp/namelecule-monoacid-review-diagnostics-20261028.{py,txt},captures
+/tmp/namelecule-monoacids-lesson-20261028/diagnostic-*.png. No appsourcechangedfor
+thisdiagnosis;all15targethashesstillmatchSHAmanifest54f02d145b3e117ea11434c61c701d1de8b52e3fff25256393fa51d61fbea6fd.
+Reviewwasbehaviorallyreadonly,notverifiedenforcedisolation. No agentwrites.
+
+Proposedfollowupscope(needsuserapprovalperAGENTS): Main-onlyreadablenamefitting
+withminimum16CSSpx;longnameswrapintologicalcomponentgroups(2/3lines asneeded),
+keep locant/alkyl together,order/IDs/selection/closedrules/capture intact. Preserve
+shortnamesingleline and existingReactlayout viaMainopt-in ifneeded. Accountfor
+selectedindicator acrossrows. Alsoextendexistingno-artificial-dark-backplateguard
+toHCOOHwhennoactualrect/highlightgeometry,retainrealhighlights. Expectedcode:
+viewer52,css/namelecule-52.css,MainHTMLoptin/cache;scopedchecks/review/journals.
+NoMOL/core/oldscenarioJSONchanges. NewlessonJSONneednotchange. Verifylong/short
+names,boxed/unboxed,+/-/hidden/eye,desktop+narrow/nameclick/2D3D/newlesson28steps,
+HCOOHnormal/selected/modes/redraw/export,oldlessonregressions andReactcontract;
+independentre-reviewbeforeDesktopcopy/finalreadyclaim. Needpresentconcreteplan
+andwaitapproval. Userhasnotyetauthorizedthisbroaderlayout/viewerfix.
+
+DesktopJSONcopystillpending(noexternalfilecreated), tobeidenticalreviewedfinalJSON
+inexisting /Users/yannisskendros/Desktop/αρχεία  json perapprovedstandingpreference.
+No newcorechangebylesson/diagnosis;earlier28Octcoreextensionremainsrecordedbelow.
+No commit/push/publication/Safari. Next: obtaincombineddisplayfixapproval,then
+implement/check/re-review,finishauthorizedlessonandDesktopcopy.
+
+# Current resume point — 2026-10-28 — Monoacid lesson frozen; independent review running
+
+Final28stepJSON/library/player/README/cache integration andcheckscomplete.
+Additional18actualformcontrols/captureapplycases passedwithfinalplusseparator
+style,0JSerrors;visibleacidcarddesktop/narrowcaptured. All28naturalplayback and
+48formchain/8formulagraph/283oldrule/1555protectedfile checks remainpass. Existing
+12active(23total)JSON/core/viewer/teaching/molecular/React files unchanged.
+Frozen15filemanifest docs/checks/monoacids-lesson-reviewed-target-20261028.json
+SHA25654f02d145b3e117ea11434c61c701d1de8b52e3fff25256393fa51d61fbea6fd.
+FreshrealReviewer /root/review_monoacid_lesson(fork:none)nowinspecting,verdictunknown.
+No target editsduringreview. Journals excluded. Next:resolvefindingsifany/re-review;
+otherwiseDesktopGreekJSONbyteidenticalcopy,verifyhashes,finalrecords. Externalcopy
+notyetcreated. No newcorechange/commit/push/publication/Safari. Earliercorechange
+andupstreamcomparisonremainbelow. Don'tclaimfull311stepruntimeplayback.
+
+# Current resume point — 2026-10-28 — Monoacid lesson final playback passed; preparing review
+
+Approved28stepacidlesson implemented. Finalnatural28stepFirefoxplayback passed,
+includingstagedhide/reveal,manualruleopen/close,numberingandfit. Thirdprefixboth
+modes capture/apply andselectexactJSmolbranch3+H;exportvalidatesall28snapshots;
+Prev/jump/narrow/Exit/13linkedvalidation/oldketone3stepreplay pass,0JSerrors.
+FinalJSONplusseparators nowfollowmonoaldehydepattern:buildingstageson,completed
+namesoff;retested28stepswiththisfinalstyle. Additional18actual2Dform/capturecases
+werepassedbeforestylealignmentandarebeingrerunagainstfinalJSON. Nootherappchanges.
+Static48formchain/8formula/graph/2D3Dchecks,283oldruleoutputs,1555protectedfiles
+pass. All23oldscenarioJSON incl12active,core/viewer/teaching/molecules/Reactunchanged.
+Desktopcopy stillpendingreview. Next:finalcontrolsresult,freeze15files,realfresh
+Reviewer,resolveifneeded,byteidenticalDesktopcopy,finaljournals. No newcorechange,
+commit/push/publication/Safari. Prior28Octcorechangesremainbelow.
+
+# Current resume point — 2026-10-28 — Approved monoacid theory implemented; checks in progress
+
+User approved28stepplan inclnewJSON/library/playerthirdprefixsupport/Desktopcopy.
+Created scenarios/saturated-monocarboxylic-acids-nomenclature.scenario.json using
+existingmonoaldehydeJSONv1 conventions;8eligiblemolecules ascendingtotalC, staged
+name/branchreveal,closedoptionalrules,summary2D,optional3Dlast. Addednewlessontitle
+and2thirdprefixsemanticmodes toplayer52rules/map;MainHTMLcacheupdated;acidcard
+nowlinks28steps/1availablelesson;README13active/311steps. No oldJSON/core/molecule/
+viewer/teaching/React edits. Captured1561filebaseline/4exactsourcebytes.
+
+StaticchecksPASS:28stepstructure/targets/hiddenmodes,actualcore48formchaincases,
+8eligibleinventoryexact,retained2D3Dnumberedchains,8formulas/RDKitchemicalgraphs,
+1555protectedfiles inclall23priorJSON(12active),JSsyntax/diffcheck. Atommapmetadata
+normalizedonlyinread-onlychemicalcomparison:oldmethanoicCondensedhasexplicitmap0
+whileExpandeddoesnot;sourceunchanged. Firstauthoredcomplexnameelisioncorrectedto
+existingactualruntime «διμεθυλοεξανικό»; no core/Greeknamingalgorithmchange.
+Browser28stepnaturalnavigation/fullrule/hidden/newmodes/capture/export/optional3D/
+narrow/oldlessonregressionnowrunning;donotclaimsuccessyet. ExternalDesktopcopy
+notyetwritten (plannedbyteidenticalafterindependentreview). Next: finishbrowser,
+resolveissues,freezeandindependentReviewer,copyDesktop,finalrecords. No newcore
+change;earlier28Octextensionremainsbelow. No commit/push/publication,noSafari.
+
+# Current resume point — 2026-10-28 — Saturated monocarboxylic-acid theory: read-only design, approval pending
+
+User requests the usual progressive-disclosure theory lesson, noquiz, for
+saturatedmonocarboxylicacids, linked in existingdualacidcard. Read currentnotes,
+README, relatedplans; examined actualmonoaldehyde/monoketone/monoalcohol JSONs,
+player52/rule whitelist/replay map and existinglesson checks. Relatedgitstatus
+alreadydirty/untracked; noapplicationeditsmade. Fullpreviouscorechanges and
+upstreamlastchecked5903c76...vsactuallysynced93b759... remainrecordedbelow.
+
+Inventorygraph confirms8eligibleacyclicmonoacids withonlyC/H/twoO andsingleC-C:
+methanoicacid(C1),propionicacid(C3),butanoic_acid(C4),methyl_2_propanoic_acid(C4),
+pentanoic_acid(C5),dimethyl_2_2_propanoic_acid(C5),ethyl_2_methyl_3_pentanoic_acid(C8),
+ethyl_3_isopropyl_2_dimethyl_4_5_hexanoic_acid(C13). Other7acidrecords include
+unsaturation/extraCOOH/otherfunctionality andarenotthishomologousseries. Noethanoic
+acidrecord; donotaddamoleculetofillgap. Useexisting8inascendingtotalC order.
+Verified IUPACBlueBook P65.1.2.1 https://iupac.qmul.ac.uk/BlueBook/P6.html#P-65.1.2.1
+(suffix/carboxylC/omittedacidlocant; Greekschoolnamespreserved). Methanoic/formic
+PINdistinctionshouldnotbeconflatedwithschoolnomenclature. Noisomerismintroduced.
+
+Proposed28steps:1–4methanoic/COOH/threecomponents;5–8propanoicgeneralformula
+CnH2nO2(n>=1),COOHcarbonC1/numbering/2Drepresentations,butanoic;9–11singlemethyl
+parent/locant/group+full;12pentanoicretrieval;13–15gemdimethylparent/2,2/di+full;
+16–20ethylmethylparent/numbering/ethyl/methyl/alphafull;21–26complexacidparent/
+ethyl/isopropyl/4,5locants/dimethyl/alphafull;27summary2Dexploration;28optional3D.
+Stress saturated meansC-Csingle despiteC=O, unifiedCOOH,mainchainincludesCOOH-C,
+C1notwritteninacidname,totalCvsparentC,repeatedlocants,diignoredforalphabetizing.
+Optionalrulepanelsinitiallyclosed; sameJSONv1/show/hide/style/zoom conventions.
+
+Knownsmalltechnicalprerequisite nowapplies: player52 map lacks compAcidNumber3/
+compAcidSub3 -> acidPrefixNumber3/acidPrefixSub3; rule whitelistlacksbothmodesand
+newlessontitle. Addonlythesemappings/whitelistentries withinapprovedlessonplan,
+plusMainHTMLscenario cacheURL. Existing viewer/core alreadysupportprefixes.
+Expectedfiles:newscenarios/saturated-monocarboxylic-acids-nomenclature.scenario.json,
+design/theory-library.html,js/mulermoc-nom-scenario-52.js,mulermoc-nom-52.html,
+README,scopedchecks/report/journals. Preserveall12existingJSON/core/MOL/3D/React.
+PersistentDesktopscenario preference verified: /Users/yannisskendros/Desktop/αρχεία  json
+(two spaces); plannedGreekcopy Κορεσμένα_μονοκαρβοξυλικά_οξέα-Ονοματολογία.scenario.json,
+byteidenticalafterreview; externalwritemayneedtoolpermission, alreadyuserauthorized
+asstandingpreference. No externalwriteyet.
+Verificationplan:JSON/player validation,all8existinggraph/name/formula/numbering/
+2D3Dtargets;naturalNextthrough28stepsandPrev/jump,closedrules/manualopen,third
+prefixhidden/replay/captureapply,2D/narrow/optional3D/Exit,oldlessonplayerregression,
+all12oldJSONandotherassetsprotectedhashes;freshindependentReviewer. PrimaryDeveloper
+selfauthors; nooptionalexpertagentsneededatthisstage. No code/core changes or
+agents/commit/push/publication. Next: presentconcreteplanandwaituserapprovalperAGENTS.
+
+# Current resume point — 2026-10-28 — Condensed acid branch clearance fixed and independently reviewed
+
+Approved scopedfix complete. Existing fAddHydrogens2SVG viewer52 now uses Cglyph
+lowerbound formaskheight onlyinCondensedacids withverticalCneighborbelow. Itkeeps
+wholelabelwidth/padding/CHnposition/font/markup/nativebondgeometry. Fourupperlabels
+in3newacids corrected:C5/CH3(dimethylpropanoic),C8/CH3(ethylmethylpentanoic),
+C10/CH2andC13/CH3(complexhexanoic). MaskextensionbelowCtextboundingrectangle
+~5.92–5.93→~1.43–1.45px atdesktopdefault; theseareNOT rasterinkgap measurements.
+MainHTMLviewercacheURLupdated. Only11viewerlines+cacheURLchanged. NoMOL/data/
+coordinate/length/3D/core/scenario/React changes. Otheracidlabelsneedednochange.
+
+Developerfinal:112Firefoxbeforeafterformcases15acids+4nonacidguards at1500/390;
+line/text/viewBoxidentical,fullSVGidenticalfornonacids/otherforms,nonewoverlap/
+clipping;18root/methyl/ethylselectionzoomcases withnumericgap checks/nonemptyreal
+JSmolselection/modelURLmatch;colourcontrols/PNGblob/parseableSVG,0JSerrors. Actual
+screenshots inspected. Static exactsourcescope/1547protectedfilesunchanged,
+JSsyntax/PythonAST/gitdiffcheck pass. AllMOL/SDF/core/scenario/Reactbytespreserved.
+NoSafari/Reactbuild/alllessonreplay/universalnamingcertificationclaimed.
+
+FreshindependentReviewer /root/review_acid_condensed_gap,
+ROLE_ID=NAMELECULE_REVIEWER_V1_20261023,fork:none: noactionableP0/P1/P2/P3findings.
+Independentlyverified10targethashesbefore/after,2sourcebytediff reconstruction,
+HEAD,readonlystaticcheck,own15acidMOL/zeroindex/4affectedatomneighboraudit,code/
+renderordering/cacheURL. Inspecteddesktop/narrowscreenshots+browserJSON; actual
+Firefox/JSmol/export execution remainsDeveloper evidence. NoReviewerwrites/
+installs/agents/commit; no-write behavioral,notverifiedenforcedreadonlyisolation.
+No correctionsneeded. Manifest docs/checks/acid-condensed-gap-reviewed-target-20261028.json
+SHA256259d4fc9011b4d2d0e26eb4a8fc845e5598eccec15813ea4b2a6cefef0c8337e; finalDeveloper
+10hashcheckpasses. Frozenimplementation/evidencereport docs/ACID-CONDENSED-GAP-20261028.md;
+thisjournalrecordsfinalreview. No commit/push/publication/externalbackupperformed.
+Next: userrefreshes existingFirefox(⌘R)andvisuallyconfirms. Do notopenSafari.
+
+Core52 unchangedbythisfix, SHA97ae0466558eb954b810352d5f135fd4958e94a71c4a0cfef09fcf104085f78a.
+Earlier28Octcore52extensionforboundedbranchedsaturatedmonoacidnaming remains
+separate; fullsessioncoreDIDchangeearlier, notinthisfollowup. Readyprofessormessage
+andchecksfororiginalcorechangearepreservedinentriesbelow. Upstreamlastchecked
+5903c76.../actualsynced93b759... andfutureacidprefixscenarioReplaylimitation unchanged.
+
+# Current resume point — 2026-10-28 — Condensed acid gap fix implemented; independent review next
+
+User approved the scopedmaskfix. Only11lines within existing fAddHydrogens2SVG
+viewer52 plusMainHTMLviewercacheURL changed. ForCondensedacidCarbonwithvertical
+Cneighborbelow, backplatebottomusestheCglyphedge ratherthanloweredHsubscript.
+CHnmarkup/font/positions, nativebondgeometry, MOLdata/coords, Expanded/Skeletal,
+core/3D/scenarios/React stayunchanged. FourupperCH3/CH2 in3newacidmolecules improve
+~5.92–5.93px→~1.43–1.45px atdesktopdefault. Nochangesneededinotheracidlabels.
+
+Developer:1551filebaseline/2exactsourcebytescaptured;1547protectedfilesunchanged;
+exactfunction/cacheURLscope,JSsyntax/PythonAST/diffcheck pass. Firefox112beforeafter
+formcases:all15acids+4nonacidguards at1500/390;line/text/viewBoxunchanged, nonacid/
+otherformfullSVGidentical,nonewoverlap/clipping;18realroot/methyl/ethylselected/
+zoomcasesinclnumericgapchecks atbothwidths;colourcontrols/PNGblob/parseableSVG;
+0JSerrors. Screenshots inspected. NoSafari/Reactbuild/alllessonreplay claimed.
+Frozen target manifest: docs/checks/acid-condensed-gap-reviewed-target-20261028.json.
+Next: freshindependentReviewer, resolvefindingsifany, finalhashcheckandclosure.
+No targeteditsduringreview. Journals excluded. No newcorechange; prior28Octcore
+extensionrecordedbelow. No commit/push/publication;Firefoxalreadyopen,noSafari.
+
+# Current resume point — 2026-10-28 — Floating condensed acid branch labels: investigation, approval pending
+
+User reports upperCH3 looks detached from vertical branch bond; also otheracids.
+Read-only source/Firefox investigation confirms condensedCHn whitebackplate uses
+wholelabelbbox inclloweredsubscript, masking verticalbond fartherbelowC. In4newacid
+audit upperCH3/CH2 masks extend~5.92–5.93screenpx belowC versus~1.43–1.45forC/CH,
+at22pxtarget. Confirmed upperCH3 in dimethylpropanoic andethylmethylpentanoic,
+upperCH2+CH3 incomplexhexanoic. EarlierExpanded stem shortening doesnotfixthis
+separateCondensed maskingissue. Actual MOLconnectivityremainsintact. Audit script,
+JSON and screenshot only /tmp/namelecule-acid-floating-*; no appsourcechanged.
+Initialdiagnostic usingpostcompactrectmap wasunreliable/missingrects; replaced
+withgeometricrectassociation forinspection. Noappfixormappingchangeclaimed.
+
+Proposed scopedplan: adjust existing native whiteCHnbackplate clearance onlyfor
+vertical C–C connections in acid Condensed drawings, using Cglyphboundsalongbond
+so index2/3 doesnotcreateanartificialgap. Preserve Cposition/font/subscript, MOL
+coords/lengths/graphs, Expanded/Skeletal,3D/core/scenarios/React. Expectedfiles
+viewer52,HTML52viewercacheURL, relevantchecks/notes. Verify affectedacidCondensed
+labels/verticalgaps/nooverlap atdesktop+narrow/zoom/highlight; preserveotherforms/
+core/names/assets; independentReviewer after approvedimplementation. Need present
+planandwaitapprovalperAGENTS; nocodeinterventionyet. Prior19reviewedtargethashes
+allstillmatch. No newcorechanges/agents/commit/push/publication; earlier28Octcore
+extensionandcompletedExpandedlayoutreviewremainrecordedbelow. UserFirefoxopen,
+do notopenSafari. Next: obtainapproval forCondensed maskfix,thenimplement/test.
+
+# Current resume point — 2026-10-28 — Expanded acid layout complete and independently reviewed
+
+Approved combined3partplan is complete. All15Expanded acids/17COOH show vertical
+C=O and fullyhorizontal outward C–O–H (mirrored atdiacidends). ElevenCOOHgroups
+in9oldmolecules reoriented;6directCH3stems in4newacids shortened2.34→1.755(25%),
+CH3+3H rigid translations. Existing4ExpandedsourceMOLs/specs/embeds aligned.
+Viewer52 pads existing carboxylC/carbonylO backplates using final rendered bounds
+plus6%fontsize clearance; no bond-redrawing/geometryoverride. HTMLcacheURLs updated.
+Unchanged: allatomIDs/properties/bonds/Hcounts/formulas, localCOOHlengths, other
+2Dforms/molecules,3D/SDF/provenance,130records,scenarioJSONs,Reactsource/build/catalog.
+Priorseparateprefixboxes preserved; futureacidscenarioReplaylimitation unchanged.
+
+Final Developer checks:15acidRDKitidentity/formula/3Dgraph,17orientations/lengths,
+6rigidtranslations,all12generatedsource2DMOLs identical,1528protectedfilesunchanged;
+778naming/component/chain/2D3Dsignaturecomparisons130molecules andlegacyframe;
+Firefox48cases1500/390px native-lineidentity/alllabelsoverlap/clipping/maskclearance,
+selectedmainchains,zoom in/out;actual mode/colourcontrols andPNGblob/parseableSVG,
+0JSerrors. Minimum recordedmaskclearance~0.667px. Syntax/PythonAST/diffcheck pass.
+Inspected final screenshots incldismissedportraitprompt. Initialpaddingtoo small,
+measurementcorrectedusingrenderedboundsafterfit; testIDerrorcorrected. NoSafari,
+Reactbuild/all283lessonreplay or universalIUPACcertification claimed.
+
+IndependentReviewer /root/review_acid_layout, freshfork:none,
+ROLE_ID=NAMELECULE_REVIEWER_V1_20261023: noactionableP0/P1/P2/P3findings; no corrections.
+Independentlyverified19targethashes before/after, exactdiff from9capturedsources,
+reranreadonlyasset/naming checks,ownRDKitSMARTS17COOHaudit,Node syntax/PythonAST/
+diffcheck. BroadinitialRDKitexplorationstoppedonunrelatedlegacy[H]parsefailure;
+scoped15acid auditpassed; nofull-libraryRDKitparsingclaim. Inspected6screenshots;
+actualFirefox/JSmol/export execution remainsDeveloper evidence. NoReviewerwrites/
+agents/installs/commits; no-writebehavioral, notenforcedisolation guarantee.
+
+Frozen19filemanifest docs/checks/acid-layout-reviewed-target-20261028.json SHA256
+37b49cd14155956f3a2996dc4ef89b1da58b992f3e3bfc045e1f8e677037fce0 stillmatches.
+Docs/ACID-LAYOUT-20261028.md intentionally remains the frozen pre-review report;
+thisentry recordsfinalreviewoutcome. Baseline1539files/exact9beforebytes/scopeddiff/
+asset,naming,browserJSONsavedunder docs/checks/acid-layout-*. No commit/push/
+publication/externalbackuprequested orperformed. All changes remain local.
+Next: user refreshes existingFirefox(⌘R),visuallyconfirms; next development only
+under an approved concreteplan. Do notopenSafari. Priorupstreamcomparison28Oct
+lastchecked5903c76... versusactuallysynced93b759... unchanged; syncdeferredoverlaps
+remainrecordedbelow, not silentlyperformedbythisfix.
+
+Core disclosure: this task leaves js/mulermoc-nom-core-52.js unchanged at SHA256
+97ae0466558eb954b810352d5f135fd4958e94a71c4a0cfef09fcf104085f78a. Earlier in the28Oct
+worksession it DID change from72ac4b4... for approved bounded saturatedmonoacid
+alkylprefix/ranking support (ACIDS-20261028.md). Do notclaim fullsessioncoreunchanged.
+Ready-to-forward professor message:
+«Στο js/mulermoc-nom-core-52.js προστέθηκε σήμερα στοχευμένη υποστήριξη για την
+ονοματολογία διακλαδισμένων κορεσμένων μονοκαρβοξυλικών οξέων, επειδή δεν
+εμφανίζονταν σωστά οι διακλαδώσεις. Πέρασαν οι έλεγχοι των νέων και υπαρχόντων
+ονομασιών και της αντιστοίχισης 2D/3D, με ανεξάρτητο review. Οι μεταγενέστερες
+διορθώσεις διάταξης/αποστάσεων στα οξέα δεν άλλαξαν ξανά το core. Όλα παραμένουν
+τοπικά, χωρίς commit ή δημοσίευση.»
+
+# Current resume point — 2026-10-28 — Expanded acid layout implemented; independent review running
+
+User explicitly approved the combined3partplan. Main15Expanded acid molecules/
+17COOH now have vertical C=O and collinear horizontal outward C–O–H. Eleven groups
+in9oldmolecules reoriented. Six direct methyl stems in4newacids2.34→1.755(25%);
+CH3+3H translated rigidly. Source4ExpandedMOLs/specs/embedded data agree; no changes
+to native bond declarations, IDs/properties, graphs/H/formulas or otherforms/3D.
+Viewer52 adjusts existing native white carboxylC/carbonylO masks after fitting,
+using rendered bounds converted tolocalcoordinates plus6%fontsize padding; no
+bond-redrawing function. HTML52 data/viewer cacheURLs refreshed.
+
+Developer final checks:15acidRDKitgraph/formula/3Didentity,17orientations/lengths,
+6rigidCH3moves,12generatedsourceMOLidentity,1528protectedfilesunchanged;778naming/
+chain/2D3Dsignaturecomparisons130molecules;Firefox48cases1500/390 inclallatomlabels,
+native line geometry,maskclearance,selection,zoom;actualmode/colourcontrols and
+PNGblob/parseableSVG,0JSerrors. Syntax/AST/diffcheck pass. Initialfontbboxpadding
+wasinsufficient, fixedusingrenderedboundsafterfit; testsemanticIDerror corrected.
+Screenshots inspected. No Safari/Reactbuild/all283lessonsteps claimed.
+
+Frozen19filemanifest docs/checks/acid-layout-reviewed-target-20261028.json SHA256
+37b49cd14155956f3a2996dc4ef89b1da58b992f3e3bfc045e1f8e677037fce0; exactbefore9source
+bytes+1539filebaseline and scoped sourcediff saved. Independent realReviewer
+/root/review_acid_layout fork_turns:none now inspecting; no target edits until
+assessment. Verdict not yet known. Journals excluded from frozenreviewtarget.
+Next: address any findings/re-review; otherwise verify final hashes and close.
+No commit/push/publication or externallysavedcopies requested.
+
+Core52 is unchanged by THIS task (SHA97ae0466558eb954b810352d5f135fd4958e94a71c4a0cfef09fcf104085f78a).
+Earlier28Oct session contribution DID extend js/mulermoc-nom-core-52.js for bounded
+saturatedmonoacid naming/ranking; see ACIDS-20261028.md and entriesbelow. Do not
+claim full28Octsessioncoreunchanged. No upstream sync inthis task; prior28Oct
+lastchecked5903c76.../actualsynced93b759... unchanged. UseralreadyhasFirefoxopen,
+do notopenSafari. Existingthird-prefixfutureacidscenarioReplaylimitation unchanged.
+
+# Current resume point — 2026-10-28 — Approved Expanded acid layout in progress
+
+User approved all three planned changes: vertical C=O / horizontal outward C–O–H
+for17COOH, six direct methyl stems2.34→1.755, and scoped native C/O label-mask
+padding in viewer52 (no bond-redrawing override). Captured1539file baseline and
+9exact sourcebytes in acid-layout-before JSON/gzip. Applied MOL coordinate update
+and specs/source alignment; viewer52 now pads existing carboxyl C/carbonylO masks
+by6%fontsize; MainHTML data/viewer cache URLs updated. Not yet verified or reviewed.
+Next: chemical/coordinate/generator/protectedfile/naming checks, realFirefox
+geometry/overlap/highlight/zoom desktop+narrow, freeze target, independentReviewer.
+No newcore change; earlier28Oct core extension remains recorded below. No React,
+3D, scenarios, commit/push/publication. Firefox already open; do not open Safari.
+
+# Current resume point — 2026-10-28 — Carbonyl-label clearance added to pending Expanded layout plan
+
+User additionally reports carbonyl doublebond touching C in methanoicacid and
+otheracids; photo confirms insufficient visual separation. No approval yet of
+previous fullCOOHorientation/shorterCH3stem plan; newmessage refines that plan.
+Read-only source inspection: Expanded fMarkExpandedHydrogens wrapsH only, while
+Condensed fAddHydrogens2SVG pads C masks. Read-only Firefox diagnostic over17COOH
+compares native Cbackplate against fontbbox along carbonyl axis. Six currently
+verticalcases have maskmargin-2.12..-3.57px; most horizontalcases about.667px,
+leftdiacidends~4.32px. These are fontbbox/mask geometry proxies, NOT exact ink-gap
+measurements. Diagnostic script /tmp/namelecule-carbonyl-gap-audit-20261028.py;
+no app source/assets changed and no screenshot writes inthisaudit.
+
+Revise proposed combinedplan: (1)17COOH target vertical C=O / fullyhorizontal
+outward C–O–H via Expanded MOL coordinates (11groupsneedreorientation), (2)6CH3
+verticalstems2.34→1.755 translatingCH3+H intact, (3)small uniform clearance at
+carboxyl C/carbonylO labels in existing Expanded viewer drawing, so doublelines
+stop before glyphs. Unlike coordinate-onlyfirst2items, item3likelyrequires a
+scoped viewer52 adjustment to native label-mask padding; do NOT revive removed
+doublebond-redrawing override or pretend MOLlength changes solve clipping.
+Need actualvisible-gap/screenshot checks atdesktop/narrow/highlight/zoom, chemical
+and beforeafter compatibility checks, independentReviewer. Preserve core52,
+otherforms,3D/scenarios/Reactfiles/priornameboxfeature. HTMLcache updateasneeded.
+
+Await approval of this revised3partplan perAGENTS before codeintervention.
+Only session/contributionnotes updated. No newcore change, agent, commit/push/
+publication. Priorcore52extension/fullsessionstatus and knownnewprefixscenario
+replayfuturelimitation remain in entriesbelow. Next: explain viewerpadding scope
+and obtain combinedapproval; useralreadyhasFirefox open, do not openSafari.
+
+# Current resume point — 2026-10-28 — Full Expanded COOH orientation and shorter methyl stems: plan pending
+
+User clarifies desired Expanded layout: vertical carbonyl C=O plus the WHOLE
+C–O–H row horizontal in the main-chain direction, matching suppliedphoto.
+Earlier follow-up only made O–H horizontal, leaving11COOH groups in9oldmolecules
+with horizontal C=O/vertical C–O. Read-only fixed-width graph/coordinate audit
+finds17COOH total;6already have requestedlayout (methanoic,propionic,4newacids).
+New plan should rotate/reposition only the11incorrectCOOHgroups in9oldExpanded
+MOLs: keep carboxylC/mainchain fixed; vertical C=O and outward horizontal C–O–H;
+left/right mirrors atdiacidends. All atom IDs/H/bondorders/formulas/3D unchanged.
+
+User also requests shorter vertical mainchain–methyl stem. Six suchstems exist
+in4newbranched acids:1methylpropanoic,2dimethylpropanoic,1ethylmethylpentanoic,
+2complexhexanoic. Allcurrently2.34. Read-only in-memory candidate1.755(25%less)
+translates each CH3 withits3H, preserving C–H orientations/.78lengths. Nearest
+moved nonbonded distances for4molecules1.0501/.7031/1.0501/.975. This is numerical
+clearance only; browserglyph overlap stillmustbe tested afterapproval. Do not
+shrink orrotate H individually. Other branchfamilies not partofthis proposal.
+
+Proposed touchedareas: data52 Expanded embeds (9oldorientation+4newmethyl),
+4existing Expanded sourceMOLs and acid specs/generator/update tooling, HTML52data
+cacheURL, scopedtests/report/journals. No newrenderer/viewer/core modification,
+no Condensed/Skeletal/SDF/camera/scenarioJSON/React edits. Preserve prior9namebox
+projection and knownMain-only/absentfutureacidscenarioReplay limitation.
+Verification:17verticalC=O/collinearoutwardC–O–H,6stemlengths,graphs/formulas/H/
+oldindices/2D3Dparents,realFirefoxlabels/gaps/nooverlapatdesktop+narrow, independent
+review. No code/MOL edits yet; await concreteplanapproval perAGENTS. Journalsonly.
+Coreunchanged inthisinvestigation; earliercore52sessionextension remains below.
+No agents/commit/push/publication. Next: present proposed25%stem reduction and
+wholeCOOHorientation, obtainapproval,then implement andverify. Firefoxalreadyopen;
+do not openSafari. Priorupstream28Oct5903checked/actualsync93b759funchangedcontext.
+
+# Current resume point — 2026-10-28 — Carboxyl OH / third-prefix follow-up complete and reviewed
+
+Implemented both approved corrections. Main v52 still130molecules/12active lessons.
+All15Expanded acid molecules now show17explicit horizontal O–H:13H appended to
+11oldMOLs,4existing H rotated in4newMOLs. Bothdiacidends point outward; no atomID,
+heavycoordinate,existingbond/formula/name/3Dmapping change. LocalHlengths preserved.
+Only data52Expanded embeds/4sourceExpanded MOLs/acidgenerator changed forOH.
+New helper/update/check tools preserve exact before9sourcebytes in gzip and
+1527filebaseline. Other2Dforms/molecules,3D/provenance,all130nameExamples literal
+records,allscenarios andReact sources/build/catalog unchanged.
+
+Viewer52/teaching52/MainHTML52 opt-in/cache changes split fourthacid into9boxes:
+[3-][αιθυλο][-2-][ισοπροπυλο][-4,5-][διμεθυλο][εξ][αν][ικό οξύ]. Separate semantic
+clicks highlight each group/H in2D/3D; locant-onlynumbering,closedoptionalrules,
+fit,selectionrestore andeyecontrols verified. Core componentarray/fullname unchanged.
+Saved Reacthosts opt out and retain existingnamecontract. Shareddata52 supplies
+correctedExpanded MOLs to shareddata consumers; no Reactbuild/catalog sync.
+
+Final Developer evidence:15MOL/17OH/13addedH/chemicalgraph/formula/valence/oldIDs/
+3Dmatch/generator;1516protectedfilesunchanged;130molecules778beforeafter naming/
+parts/chain/2D3Dsignature comparisons andunchangedlegacyframe. JSsyntax/PythonAST/
+diffcheck pass. Firefox30Expandedcases(15x1500/390) and24prefixclickcases inclreal
+JSmolselectedatoms/H,numbering,fit,eyes,selectionrestore,optout;0JSerrors.
+Screenshots inspected. Development trialissues (leftdiacidHcollision and a
+selection-test toggle) corrected and final full test passed, not concealed as
+successful initialruns. No Safari/newReactbuild/alllessonsteps/export testing.
+
+Independent /root/review_acid_followup, fork_turns:none, realreviewer
+ROLE_ID=NAMELECULE_REVIEWER_V1_20261023: no actionableP0/P1/P2/P3 findings within
+approvedscope; no corrections. Independently verified all20hashes and exact9source
+diff, reran readonlyasset/namingtests,JSsyntax/PythonAST/diffcheck; own17COOH SMARTS
+and outward-H audit,12form/chain/optin graphchecks,24recordedJSmol/H selections and
+8Expandedselectedatomsets. InitialcombinedNodeharness stacklimit; independent
+samecheck passedJavaScriptCore. Inspected5screenshots; actualFirefoxexecution
+remainsDeveloper evidence. No reviewerwrites/agents/install/commit/publication;
+behavioral no-write rule, not verifiedenforcedreadonlysandbox.
+
+Frozen20filemanifest docs/checks/acid-followup-reviewed-target-20261028.json SHA256
+314c7106b1c895fa7baada16356f70cc8bcdbae09e8dab41168096948f857064.
+Developer reverified all20hashes unchanged after review. Only excludedjournals
+updated afterward. Report docs/ACID-FOLLOWUP-20261028.md; source/runtime diff,
+baseline/results in docs/checks/acid-followup-* and tools check/test-acid-followup-*,
+update-carboxyl-oh-20261028.py. Rawshots /tmp/namelecule-acid-followup-20261028/.
+
+IMPORTANT scoped futurework: newprefix semantic modes compAcidNumber3/Sub3 are
+Main free-exploration only. They are not in unchangedscenario52 replay map at
+js/mulermoc-nom-scenario-52.js:143–159; lookup returnsnull at179, skippedreplay
+at1614–1616. No existinglesson usesfourthacid. Scope explicitly confirmed with
+Reviewer as existingMainUI/existinglessonpreservation, NOT newacidSave/Apply.
+Before authoring acidlessons or promising thirdgroupstep replay, separatelyplan/
+approve mapping/capture/replay support and test it. No newscenarioformat ornew
+lesson was authorized. This limitation is outside approvedscope, not a hidden
+claim of fullnewacidscenario support. User informed in closing commentary.
+
+Core52 unchanged by THESE TWO fixes:97ae0466558eb954b810352d5f135fd4958e94a71c4a0cfef09fcf104085f78a;
+all16corefiles unchanged vsfollowupbaseline. Entire28Octsession DID previously
+change core52 from72ac4b4ae3c9bfaa90fde650bf588ed6430acec9ad3ceef72a94a27ad6750e3a
+forapproved saturatedmonoacidprefix/ranking support. Do not conflate thisscope
+with no corechange in the entire earlierworksession. Professor text: Στο
+mulermoc-nom-core-52.js διατηρείται η προηγούμενη εγκεκριμένη υποστήριξη αλκυλίων
+για κορεσμένα μονοκαρβοξυλικά οξέα. Οι νέες διορθώσεις Ο–Η και πλαισίων έγιναν
+στα MOL/data52/viewer52/teaching52/HTML52, χωρίς πρόσθετη τροποποίηση του core.
+Πέρασαν χημικοί, συγκριτικοί και Firefox έλεγχοι και ανεξάρτητο review. Όλα
+παραμένουν τοπικά χωρίς commit/push/δημοσίευση.
+
+No required work remains in approvedscope. Next: user visualcheck viaCmd+R in
+alreadyopenFirefox. Do not openSafari. Acidlesson/newscenario support is separate.
+No commit/push/publication/ZIP/agentdefinition/upstreamsync. HEAD168e3cec and
+stable3673c390 unchanged; prior28Octupstream5903c76checked vsactualsync93b759f,
+camera/load reconciliation stilldeferred. Earlierdirtywork preserved.
+
+# Current resume point — 2026-10-28 — Approved acid follow-up implemented; independent review running
+
+User approved both pending corrections. Applied17explicit horizontal O–H in
+15Expanded molecules:13appended H for11old molecules,4existingH moved horizontally.
+Only H coordinates/additions changed; oldatomIDs/properties/heavycoords/bondorders
+preserved. Diacid H point outward at each end. LocalHlengths.825old/.78new.
+Data52 Expanded embeds,4newacid Expanded sourceMOLs and acidgenerator updated.
+Other forms,3D/provenance,130literalrecords,scenarios and React files unchanged.
+Core52 unchanged by this follow-up (SHA97ae0466558eb954b810352d5f135fd4958e94a71c4a0cfef09fcf104085f78a);
+earlier same-session approved acid naming coreextension remains historical below.
+
+Main-only opt-in viewer52 projection splits fourthacid into9boxes, including
+separate -4,5- and διμεθυλο. Core name/components unchanged. Teaching52 handles
+newsemantic clicks; branch helpers separate each group; numbering/rules/selection/
+eyes supported. HTML52flag/cacheURLs. Saved React hosts retain oldbox contract
+without flag; shareddata52 Expanded corrections propagate to shareddata consumers.
+No new lesson, scenarioformat, renderingfunction, commit/push/publication/ZIP.
+
+Final Developer passes:15MOL/17OH/13addedH/formulas/graphs/oldIDs/3Dmatch/generator;
+1516protectedfiles includingallcores/React/scenarios;130molecules778beforeafter
+naming/chain/parts/2D3Dsignature cases,legacyframeunchanged; syntax/diffcheck.
+Firefox30Expandedcases(15x1500/390) and24prefixclick cases with actualJSmolH/atom
+selections,locant-onlynumbering,closedrules,fit,selectionrestore,eyecontrols and
+optoutlegacyprojection;0JSerrors. Screenshots inspected includingdiacid/fourthacid.
+Initial direction trial forleftdiacidends causedcollision andwas corrected;
+initial eye/selection test toggledalreadyselectedbox andwas corrected in harness.
+Final full browser run passed. No Safari/newReactbuild/exhaustive lesson/export run.
+
+Report docs/ACID-FOLLOWUP-20261028.md. Taskbefore9sourcebytes gzip/1527filebaseline
+and exactdiff/testresults in docs/checks/acid-followup-*; rawscreenshots/cache in
+/tmp/namelecule-acid-followup-20261028/. Frozen20filemanifest
+ docs/checks/acid-followup-reviewed-target-20261028.json SHA256
+314c7106b1c895fa7baada16356f70cc8bcdbae09e8dab41168096948f857064.
+Fresh realReviewer /root/review_acid_followup, fork_turns:none, reviewing now.
+Do not edit target while reviewer inspects. Journals excluded from frozen target.
+Next: resolveactualfindings/re-review ifnecessary, verify hashes, record verdict
+and core-session distinction; tell user Cmd+R in alreadyopenFirefox. No Safari.
+Prior upstream28Octcheck5903c76 unchanged vsactualsync93b759f, cameraoverlap
+reconciliation deferred/not partofthisfollow-up. HEAD168e3cec/stable3673c390same.
+
+# Current resume point — 2026-10-28 — Horizontal explicit carboxyl O–H audit; approval plan pending
+
+User additionally requests every carboxyl OH in Expanded to show a visible
+horizontal O–H bond, including old OH-without-bond depictions. Read-only data52
+inventory audited via fixed-width MOL graph parsing and scoped RDKit inspection:
+15molecules,17COOH groups. Eleven older molecules contain13implicit hydroxyl H;
+four newly added acids have4explicit O–H bonds, all vertical vectors(0,.78).
+Older acid Expanded files use median existing X–H length.825; four new use.78.
+Fixed-width audit confirms COOH inventory independently of MOL display strings;
+nonacid legacy RDKit parser warnings were not treated as validated structures.
+
+Concrete proposed implementation, NOT yet applied: data52 Expanded blocks only:
+append explicit H/single O–H for13implicit acidOH groups, preserving all existing
+atom IDs, heavy atoms/bond orders/formulas/parent mappings; reposition4existing H
+horizontally outward. Retain per-file X–H lengths(.825old/.78new), choose left/right
+away from framework with clearance checks. Update existing4source Expanded MOLs
+and acid generator; older11have only embeds in current established sources.
+No need for a new drawing function/core change. Do not alter other alcoholOH,
+Condensed/Skeletal/3D/cameras/scenarioJSON or React files. Refresh data52cacheURL.
+Verify all17explicit horizontal bonds, graph/formula/H/IDs/2D3D naming/highlights,
+visible Firefox O–H/absence of overlap and unmodified other forms. Independent
+Reviewer after frozen target. User still hasFirefox; do not openSafari.
+
+Separate-prefix request from previous turn remains pending approval: fourthacid
+[3-][αιθυλο][-2-][ισοπροπυλο][-4,5-][διμεθυλο][εξ][αν][ικό οξύ], separate semantic
+click/highlight/rule behavior via viewer52/teaching52, preserving core name and
+existing scenario IDs/React contract. Present combined concrete plan, wait for
+approval before editing code under AGENTS. No code/MOL changes made this turn;
+only continuity/contribution notes. No agents, commit/push/publication.
+Core unchanged by these pending inspections; earlier approved session core52
+acid extension remains as recorded below. Next: user approves OH-only or both
+scoped corrections, then implement necessary edits/checks/review.
+
+# Current resume point — 2026-10-28 — Separate third alkyl locants requested; plan pending
+
+User identified the merged name box «ισοπροπυλο-4,5-διμεθυλο» in the fourth new
+acid. Read-only inspection confirms existing core52 fusion at comp0bText stores
+third and later substituent groups inside the second prefix-text slot. Viewer
+renders one box per fixed component slot and slot2 branch helpers group remaining
+names together. This predates the acid addition; the user wants a better semantic
+split, not a different molecular name or graph. Prior clean review did not assess
+this requested improvement to the fixed two-group UI contract.
+
+Proposed visible prefix: [3-][αιθυλο][-2-][ισοπροπυλο][-4,5-][διμεθυλο],
+then existing [εξ][αν][ικό οξύ]. Separate locant/name clicks should explain and
+highlight their own group, with existing numbering and optional closed alkyl
+rule. Scope proposed only Main fourth acid; do not change other molecule boxes,
+existing scenario component IDs/JSON, React contract, MOL/SDF or chemical name.
+Likely edits viewer52 render/group/explanation helpers, teaching52 click routing
+and HTML52 cache URL; preserve core name output and data unchanged. Verify
+individual click/2D3D branch/H targets, numbering, narrow-panel name fitting and
+other acid prefixes; regression old fixed IDs/lesson behavior; independent review.
+No implementation yet. Await approval of concrete UI plan per AGENTS.
+No new core edit for this inspection; earlier approved acid core52 change in
+this same session remains as recorded below. No agents/commit/push/publication.
+Next: present exact split and request approval, then implement scoped metadata
+rather than renaming/rearranging atoms.
+
+# Current resume point — 2026-10-28 — Four carboxylic acids complete and independently reviewed
+
+Completed the approved four-molecule addition to Main v52; library now130.
+Greek school names and formulas:
+- 2-μεθυλοπροπανικό οξύ — C4H8O2, PubChem CID6590.
+- 2,2-διμεθυλοπροπανικό οξύ — C5H10O2, PubChem CID6417.
+- 2-αιθυλο-3-μεθυλοπεντανικό οξύ — C8H16O2, PubChem CID90775.
+- 3-αιθυλο-2-ισοπροπυλο-4,5-διμεθυλοεξανικό οξύ — C13H26O2,
+  documented RDKit2025.09.2 ETKDGv3/MMFF94s fallback after PubChemHTTP400.
+
+Changes: bounded core52 saturated acyclic monoacid alkyl-prefix/ranking guard;
+four appended data52 records and twelve embedded/source MOLs; four sourceSDF,
+four provenanceJSON and four matching runtimeSDF; four viewer52 sequential-number
+keys; HTML52 script-cache URLs; README, scoped report and check artifacts.
+All126oldrecords/embeds, oldmolecularassets,12lessonJSONs and React sources/build/
+catalog unchanged. No React rebuild, new lesson, commit, push, publication or ZIP.
+
+User found a line through C in condensed ethyl branches and overly long stems.
+Final correction is only in new MOL coordinates/embeds: carboxyl O positions
+hidden within COOH moved right so native compaction retains neighboring C
+backplates; condensed vertical branch stems are1.17. Expanded H clearance retained:
+a shorter trial caused H overlap and was rejected. No new rendering function.
+Final Firefox24forms at1500/390: no label overlap/clipping; condensed alkyl-label
+and COOH-entry-C backplates intact. Four actual JSmol models matched URL/counts;
+actual branch/H selections matched graph-derived expectations. Each numbering
+history adds1,2,…parent cumulatively. Final0JavaScript errors. Screenshots examined.
+Initial viewport-resize test/wrapper artifacts are documented, not production
+failures or proof of a global JSmol fix. Safari not opened; user hasFirefox open.
+
+Developer final checks:12MOL/4SDF chemical/formula/H/geometry/mapping/provenance;
+72new naming/ordering cases;12guard boundaries;754before/after old-library cases
+including realoldSDF/numbered2D3D graphs;1209protectedfiles unchanged; unchanged
+legacyReactframe38.3333x34.3333; JS syntax and git diff --check. Durable before bytes
+and exact taskdiff in docs/checks/acids-before-source-20261028.json.gz and
+acids-source-20261028.diff. Report docs/ACIDS-20261028.md. Final browser evidence
+ docs/checks/acids-browser-20261028.json; raw screenshots/cache under
+ /tmp/namelecule-acids-20261028/. JSON evidence/tool filenames have acids prefix.
+
+Independent Reviewer /root/review_acid_molecules, fork_turns:none, real reviewer
+role ROLE_ID=NAMELECULE_REVIEWER_V1_20261023: no actionable P0/P1/P2/P3 findings,
+no corrections required. Independently read instructions/checklist/source/diff,
+verified all43hashes and exact before/diff reconstruction, reran read-only asset/
+naming checks, added in-memory RDKit COOH-parent/branch/formula inspection and
+matched recorded actual JSmol selected atoms/H. JS syntax/diffcheck passed.
+Inspected3fourth-molecule screenshots; browser runs remain Developer evidence.
+No reviewer writes, agents, installs, commits or publication. Behavioral no-write
+rule; enforced read-only sandbox was not established. No new Safari/Reactbuild/
+exhaustiveUI/export checks; preserved lesson files were outside runtime review.
+Frozen43file manifest: docs/checks/acids-reviewed-target-20261028.json SHA256
+7f0a3f0d4ae3dbb8a9f403f9a9ed56ba89056e2df8a2991063a5b9fe677af42b.
+Developer reverified all43hashes unchanged after review. Journals excluded from
+review target; only this closure appended afterward.
+
+Core change thissession: YES, locally authored js/mulermoc-nom-core-52.js.
+Before72ac4b4ae3c9bfaa90fde650bf588ed6430acec9ad3ceef72a94a27ad6750e3a;
+after97ae0466558eb954b810352d5f135fd4958e94a71c4a0cfef09fcf104085f78a. Other15corefiles unchanged.
+Final data52SHA256 bb7290a9c23d064c11ec8103fd4e21c3f629747470e578d40fc6cd4a19b13de2.
+HEAD remains168e3cec01f941a84d40bbe0dc07156e7baa35d0; stable thesis-work remains
+3673c390c1fb1b7cbcc79411a6e1e3720e97f7ab. Pre-existing dirty work is separate.
+Upstream previously checked28Oct5903c76/CHANGELOGunchanged, actualsync93b759f;
+camera/load overlap reconciliation remains deferred, not part of this task.
+
+Μήνυμα για τον καθηγητή: Στο mulermoc-nom-core-52.js προστέθηκε περιορισμένη
+υποστήριξη αλκυλίων και ισοδύναμων κύριων αλυσίδων για άκυκλα κορεσμένα
+μονοκαρβοξυλικά οξέα, επειδή παραλείπονταν οι διακλαδώσεις από τα ονόματα.
+Πέρασαν οι χημικοί, συγκριτικοί και Firefox έλεγχοι και ανεξάρτητο review.
+Οι αλλαγές παραμένουν τοπικές, χωρίς commit/push/δημοσίευση.
+
+No required implementation work remains. Next: user visual acceptance after
+Cmd+R in already-open Firefox; any acid theory lesson is a separate future task.
+Do not reopen Safari or synchronize React without a corresponding request.
+
+# Current resume point — 2026-10-28 — Four acids implemented; final layout validation/review in progress
+
+User approved the bounded core52 extension and insertion of four saturated
+monocarboxylic acids. Main conversation is Developer; no chemistry doubt led
+to a ChemistryValidator delegation. Names/formulas: 2-methylpropanoic C4H8O2,
+2,2-dimethylpropanoic C5H10O2,2-ethyl-3-methylpentanoic C8H16O2,
+3-ethyl-2-isopropyl-4,5-dimethylhexanoic C13H26O2 (schoolGreek labels).
+Core52 guard now admits only acyclic saturated mono-COOH C/H/O graphs to
+existing alkyl-prefix/parent-ranking logic; old acid C1 orientation retained.
+Data52 appends four records/three MOL embeds each;24new source/runtime/provenance
+files, viewer52 sequential-number target list and HTML52 cacheURLs changed.
+README and docs/ACIDS-20261028.md document scoped changes. No React rebuild,
+no existing molecule/12lessonJSON edits, no commit/push/publication/newZIP.
+
+3D: PubChem6590,6417,90775 for first3 with exact graph/formula/unspecified
+stereo; fourth lookup returnedHTTP400 (not proof of absence), documented
+RDKit2025.09.2 ETKDGv3/MMFF94s seed20261028/24samples/bestconverged fallback.
+MOL/SDF valence/formula/graph/H/geometry/mapping/provenance checks passed12forms/
+4SDF. Actual core/viewer tests passed72new cases (24forms/modes+48permutations),
+12guardboundaries and754old before/after cases including realoldSDF/2D3Dnumbered
+graphs. All126oldrecords/embeds unchanged; legacyReactframe38.3333x34.3333same.
+1209protectedfiles unchanged, including oldercores/React/scenarioJSONs.
+
+User correctly identified a bond through C in complex condensedethyl groups
+and excessive branchstems after initial checks missed masked-line geometry.
+Rootcause existing COOHcompaction removed nearbyalkyl-label whitebackplates.
+Corrected only NEW MOL coordinates/embeds: hiddenCOOatoms to right, allcondensed
+verticalstems1.17; originalexpandedHclearance retained after shortertrial caused
+browserH overlap. No new drawingfunction. Finalbrowser check additionally tests
+allalkyllabel backplates and C-entryofCOOH. Earlier completeFirefox24forms/4real
+models/highlights/sequentialcounts had0JSerrors; final corrected24case rerun
+pending, not yet declared reviewed. Diagnostic strictwrapper causedaJSmol
+callererror only intemporarytest; not production. Stableviewport required for
+numbering test because resizing restores existingoverlays immediately.
+
+Taskbeforebytes4runtimefiles stored docs/checks/acids-before-source-20261028.json.gz;
+protectedmanifest acids-before-20261028.json. Testtools/results acidsprefix in
+ docs/checks; rawsourcecache/screenshots /tmp/namelecule-acids-20261028/.
+Next: finish finalFirefox verification and inspect correctedscreenshots; freeze
+source/assets/tests/report hashes, delegate fresh readonlyReviewer perAGENTS,
+resolvefindings,recordreviewidentity/target and finalcore52hash. No source edits
+while review runs. User already hasFirefoxopen: do not openSafari; suggestCmd+R.
+
+Core HAS changed thissession: mulermoc-nom-core-52.js (localauthored acidbranch
+extension), beforeSHA72ac4b4ae3c9bfaa90fde650bf588ed6430acec9ad3ceef72a94a27ad6750e3a,
+after97ae0466558eb954b810352d5f135fd4958e94a71c4a0cfef09fcf104085f78a.
+Other15cores unchanged. Greek professorforwardingtext in docs/ACIDS-20261028.md.
+Upstream previouslychecked28Oct5903c76/CHANGELOGunchanged; actuallysynced93b759f.
+Camera/load sync overlaps deferred; no upstreamsync partofacidtask.
+
+# Current resume point — 2026-10-28 — Four branched acids preflight; core-extension plan pending
+
+User requested 2-methylpropanoic acid,2,2-dimethylpropanoic acid,
+2-ethyl-3-methylpentanoic acid,and3-ethyl-2-isopropyl-4,5-dimethylhexanoic acid
+(Greek schoolnames). Read only relevant existing acidrecords, checked molecule
+layout/generation/naming patterns and core52 branchsupport. Existing registry
+has no matching simplebranched acidentries found in scoped acidrecord search.
+No source/molecularassets edited, generated or imported. Only journals updated.
+
+Read-only diagnostic builds four heavyatomgraph probes in memory with an
+explicitCOOH C (C=O plus C-OH), existing actualdata/core/viewer52 and prior
+naming-test JSME graph adapter. Valence-basedHcounts/acyclicgraph paths give:
+C4H8O2,parent3;C5H10O2,parent3;C8H16O2,parent5;C13H26O2,parent6. Longest paths
+begin atcarboxylC1; fourth has valid six-carbon acidparent and isopropyl at2,
+ethyl3,methyl4/5. No substantive chemicalambiguity requiring ChemistryValidator
+found in thesegraph checks. Normalizes finalappGreekprefix spelling to
+3-αιθυλο-2-ισοπροπυλο-4,5-διμεθυλοεξανικό οξύ, preserves schoolisopropyl usage.
+Primaryreference read IUPACBlueBookP65.1.2/P65.1.2.1 at
+https://iupac.qmul.ac.uk/BlueBook/P6.html ; not a claim that schoolGreeklabel
+is modernpreferredEnglishPIN or experimental3D.
+
+Technicalproblem confirmed: fSupportsAlkylBranchPrefixes excludes acids.
+Actualunmodifiedcore outputs προπανικό οξύ,προπανικό οξύ,πεντανικό οξύ,
+εξανικό οξύ for the4probes, omitting every branch. It computes eligibleparent
+and fDescribeCarbonBranches metadata but returns prefixsupportfalse.
+Evidence /tmp/namelecule-acids-preflight-20261028/{probe.js,result.json}.
+No RDKit/PubChemassets generated, no3Dsourcechecked in thispreflight.
+
+Propose combined insertion of4molecules following existing MOL2D/embedded/data52/
+SDFprovenance conventions, with a bounded core52 extension only for acyclic
+saturated monocarboxylic C/H/O acidgraphs. Rejectesters/multifunctional/cyclic/
+unsaturated/polyacidgraphs from thisnewguard; keep other naming rules intact.
+Relevant corebranchranking/2D3D branch/highlight gates and any required viewer
+numbering support to be examined within approvedbounded scope, not globalrewrite.
+Affectedplannedareas: core52/data52, molecule source/runtimeMOL/SDF/provenance,
+possibly limited viewer52 and HTML52cacheURL, scopedtests/docs. Keep all prior
+126molecules and12scenarioJSONs unchanged. No Reactcatalogsync/build; check
+sharedcore/frame impact on oldReactmolecules. Use PubChem3D only if exactgraph
+matches; document localRDKitfallback honestly if needed. Horizontalparent,
+right-to-left numbering where established, full explicitH inExpanded, separated
+isopropyl/H, 2Dcoordinate/3Datommapping checks. Run naming/permutation andwhole
+existinglibrary regression, molecular/formula/valence/geometry tests andbrowser
+2D3D/numbering/highlights; independentReviewer before completion.
+
+Await userapproval of concreteplan and particularly boundedcoreextension per
+AGENTS before editing source/assets. Currentcoreunchanged:
+72ac4b4ae3c9bfaa90fde650bf588ed6430acec9ad3ceef72a94a27ad6750e3a.
+No agents/commit/push/publication/install/newZIP. Previous28Octupstream5903/
+CHANGELOG checkedunchanged, actualsync93b759f; camerasyncconflict deferred.
+Userbrowserpreference: already openFirefox; do NOT openSafari automatically.
+AskforrefreshCmd+R when implementation ready. Prioracidcard and22pxtrial complete.
+Next: present4names/formulas and confirm boundedcore/integrationplan.
+
+# Current resume point — 2026-10-28 — Carboxylic acid library card complete/reviewed
+
+AddedMain ΚΑΡΒΟΞΥΛΙΚΑ ΟΞΕΑ dualcard afterKetones, requestedcategories and
+Othersformula CxHy(COOH)n with subscripts/no restriction. Firstcategory standard
+CνH2νO2ν≥1. Both lessons honestly marked unavailable; no scenariofiles created.
+Only applicationedit design/theory-library.html plus sectionARIA-label to
+Μαθήματα θεωρίας. Now10cards/12activelessons283steps; old9cards byteidentical
+and allpreviouslinks same. Existingmolecules were not reclassified/modified.
+
+DeveloperFirefox1500/390/320 checks pass title/headings/subscripts/pending/no
+fakeinteractivecontrols/uniqueIDs/nooverflow,0JSerrors; screenshots inspected.
+1485protectedfiles unchanged from1488baseline, including allcore/React/JSON and
+prior22pxtrialruntime. ActualbeforeHTML/harness/screenshots in
+/tmp/namelecule-acids-card-20261028/. Baseline/result persistedin docs/checks.
+Independent /root/review_acids_card, realreviewer/forknone,
+ROLE_ID=NAMELECULE_REVIEWER_V1_20261023: no actionableP0/P1/P2/P3/no corrections.
+Independently read source/beforediff/harness/checklist, hashes/HTMLARIA/IDs/
+links/1485protected/diffcheck/revision; inspected3screenshots. Browserexecution
+remains Developer evidence. No reviewerwrites/cache/agents or enforcedsandbox
+claim. Frozen3files+manifest unchanged afterreview/Developerfinalcheck:
+ docs/checks/acids-card-reviewed-target-20261028.json SHA256
+447dbcb7cfce40350f691ffbc96e2af205585d436f316f84b9a59aa885584039.
+
+No corechanged in session/task:16corefiles same as28Octbaseline; core52SHA
+72ac4b4ae3c9bfaa90fde650bf588ed6430acec9ad3ceef72a94a27ad6750e3a.
+No MOL/SDF/data/scenarioJSON/React changes, install/commit/push/publication/
+newZIP. Safari/screenreader nottested; molecular/3D/lessonruntime N/A forcard.
+Showexternalpreview at http://127.0.0.1:8013/design/theory-library.html?v=acids-card-20261028#carboxylic-acids-card
+Next: uservisualcheck or separate request/plan foracidmolecules/theorylessons.
+Do not infer creationoflessons fromthis card. Prior22pxtrial reviewedandintact.
+Upstream5903lastchecked28Oct, actualsync93b759f; camerasyncdeferred/unrelated.
+
+# Current resume point — 2026-10-28 — Carboxylic acid dual card implemented; review pending
+
+User requested dualcard then directed adding CxHy(COOH)n to Others. Proceeded
+with the proposed card and that refinement. Only applicationedit:
+design/theory-library.html adds ΚΑΡΒΟΞΥΛΙΚΑ ΟΞΕΑ afterKetones, sections
+Κορεσμένα μονοκαρβοξυλικά οξέα (CνH2νO2,ν≥1) and Άλλα καρβοξυλικά οξέα
+(CxHy(COOH)n with x/y/nsubscripts, no restriction). Accurate2sections/pending
+status; no fake lessonlinks/counts or newlessonfiles. Otherdescription covers
+polycarboxyl/unsaturated cases; not a universalformula claim for mixedfunctional
+acids. SectionARIA-label now Μαθήματα θεωρίας to include futurelessons.
+
+Developer actualFirefox1500/390/320 cardtitle/formulas/subscripts/pending/IDs/
+nooverflow pass,0JSerrors. Previous9cards byteidentical, allprevioushrefs/12
+activelessonlinks unchanged; now10cards, still12lessons283steps. Protected1485
+files unchanged against1488baseline includingcore/React/scenarioJSON and prior
+22pxtrialruntime. Screenshots1500/320 visually inspected. No app126molecule/
+JSmol/lessonretests necessary for this isolatedcard. Browserharness andexact
+beforeHTML in/tmp/namelecule-acids-card-20261028; persistedbaseline/result in
+ docs/checks/acids-card-{before,browser}-20261028.json.
+
+Frozen3files plusmanifest docs/checks/acids-card-reviewed-target-20261028.json
+SHA256447dbcb7cfce40350f691ffbc96e2af205585d436f316f84b9a59aa885584039.
+Independent /root/review_acids_card, reviewer/forknone, assigned actualsource/
+beforediff/evidence read-only; verdict pending. Developerstoppedtargetediting,
+journals excluded. Next: collectreview, resolve/re-review ifneeded, finalhashes,
+recordoutcome and showlibrarycard externally.
+
+No corechanges, molecule/data/JSON/React changes, dependencies/install/commit/
+push/publication/newZIP. Priorupstreamcheck28Oct5903unchanged, actualsync93b759f;
+pendingcamera reconciliation unrelated/not synchronized. No newremotecheck in
+thissame-session UIcardtask. Existingdirtychanges not attributedhere.
+
+# Current resume point — 2026-10-28 — Carboxylic acid dual library card plan pending
+
+User requested a Main theory-library card titled ΚΑΡΒΟΞΥΛΙΚΑ ΟΞΕΑ, with
+Κορεσμένα μονοκαρβοξυλικά οξέα and Άλλα καρβοξυλικά οξέα. Read-only inspection
+confirmed existing alcohol/aldehyde/ketone dual-card markup and pending CSS in
+design/theory-library.html; no acid lesson links/cards currently present.
+Main has9cards/12active lessonlinks. Existing acid molecule records do not imply
+that theory scenarios already exist. No new lessons requested in this task.
+Proposed only a new dual card after Ketones, same appearance/headings, accurate
+2sections status and noninteractive unavailable placeholders until lesson work
+is separately requested. Do not invent lesson files/counts/dead links. Main
+library only; React remains preserved and not regenerated.
+
+Await concrete-plan approval underAGENTS before editing appHTML/CSS. Appropriate
+checks: card headings/status, no broken/newfake links, existing12links unchanged,
+desktop/mobile layout and proportional independentReviewer. Current scope is
+card UI only; no molecule/naming/educational-content redesign. No application or
+core changes made in this turn; only projectjournals. Missing historical
+RESEARCH-PLAN.md noted during read-only lookup, not needed for this UI card.
+Prior22pxtrial remains complete/reviewed as recorded below. No commit/push/
+publication. Next: obtain approval, implement exactcard and verify.
+
+# Current resume point — 2026-10-28 — Readable Main2D trial and theory checks complete
+
+User approved readable22px target with adaptive shrinking, relaxing absolute
+cross-molecule/form equality. Runtime only HTML52 font-sizeopt-in/cacheURL and
+viewer52 requestedfont/fallback. Trial complete locally, awaits visualchoice.
+User then asked for same policy in theory: already inherited through all12
+Main52librarylinks; no extra application/JSON edits. Actuallibraryentry/first+
+last/Exit tested for12lessons,24visible2Dcases with correctmolecule/mode/stored
+zoom and no recorded boundsclipping. Not all283steps tested. SupplementalQA
+recorded43knownJSmolerrors(3setScreenDimension,40updateJS viewer-null); allraw
+errors retained,0unknownsignatures, no frequency/fix guarantee. No JSmolfix.
+
+OriginalDeveloper1131cases(377forms126molecules*3widths) pass bounds/numbering;
+all1131names match priorcapture. Methane22px vs11.941before. Desktop301/335
+measuredC/H/Oforms at22,34fit,min12.217; narrow135/335at22,min10.495. Actual
+form/zoom/PNGsignature/SVGparse/4initiallessonchecks/Reactold-fit comparison
+pass; dedicatednormalstartup8samples actual5atom3D/correctname0errors.
+Screenshots inspected including settledstartup and theory. Safari notautomated.
+
+Independent /root/review_readable_2d, reviewer/forknone,
+ROLE_ID=NAMELECULE_REVIEWER_V1_20261023, initial and supplemental reviews return
+no actionableP0/P1/P2/P3, no correctionsrequired. Independently validated actual
+beforediff/fit/zoom/callers/React optout, Node24syntax/120VMcases, static1472
+protected/36React/16core, hashes/AST/JSON/diff, actualscenarioJSON against24
+supplementalrecords and all12libraryhrefs, suppliedscreenshots. Browser remains
+Developer evidence; Reviewer did not execute browser/write/cache/install/agents.
+No claimed enforcedread-onlysandbox. Final13files+manifest unchanged after
+review/Developerfinalcheck: docs/checks/readable-2d-reviewed-target-20261028.json
+SHA2561acaab8c07afe4bf7fe6ea7ecb9594ade70652a722a9d665f2296995f504b65b.
+Original11filemanifest9ef9c72b is historical initialreview before extraQA/report
+section; runtimehashes same in both. Report docs/READABLE-2D-20261028.md and
+scopedreadable-2d-* evidence/scripts in docs/checks. Before1476filebaseline and
+bytes /tmp/namelecule-readable-2d-20261028/before/ permit comparison/rollback.
+
+Core report: no corechanged on28Oct; all16match baseline. Core52SHA256
+72ac4b4ae3c9bfaa90fde650bf588ed6430acec9ad3ceef72a94a27ad6750e3a.
+No molecular/3D/scenarioJSON/React changes, install/commit/push/publication/
+newZIP/branchswitch. Reacthosts deliberately preserved snapshots, notrebuilt.
+Upstream5903/CHANGELOG unchanged on28Oct, lastactualsync93b759f, pendingcamera
+reconciliation deferred; no JSmolhostingchange. Next: show trial externally,
+user visualacceptance or next approved adjustment. Any targetchange requires
+newreview. Prior15%report/checkpoint is historical, not currentruntime policy.
+
+# Current resume point — 2026-10-28 — Readable Main trial reviewed; theory coverage requested
+
+Independent /root/review_readable_2d (reviewer, forknone,
+ROLE_ID=NAMELECULE_REVIEWER_V1_20261023) completed fresh-context review with no
+actionableP0–P3 and no corrections. Verified all11 frozenfiles and manifest
+9ef9c72b2167f5fc13cf438325234dc06579c819d1ec4e8dfe44c3fca94de4a0 before/after.
+Independent static1472protected/36React/16core, Node24syntax, diff/AST/JSON/hash,
+120VM parsing/fallback/zoomcases and all1131capturedrecord comparisons pass.
+Inspected settledstartup/large2D screenshots. Browser evidence is Developer's;
+no independent browserexecution or enforcedread-onlysandbox claim.
+
+Before finalhandoff/openingpreview, user asked to apply this to theoryscenarios.
+Confirmed all12actual librarylinks use the same Main52HTML, so its22pxopt-in
+already covers them. No additional runtime or JSON edits required. Running
+supplemental actual-library-entry/first+last/Exit checks for12lessons (24steps)
+via docs/checks/test-readable-2d-lessons-20261028.py; outcome pending.
+Do not claim all283steps tested. Next: finish supplemental checks, freeze any
+new/changed documentation/evidence and obtain independent review followup,
+then recordfinalresult and openupdatedMain externally for visualcomparison.
+
+Core/report: no corechanges; source/runtime remains previously frozen22pxtrial.
+No molecules/MOL/SDF/JSON/React changes, install/commit/push/publication/newZIP.
+User's visualacceptance of different sizes remains pending. UpstreamHEAD5903
+andCHANGELOG unchanged28Oct; actualsync93b759f, pendingcamera reconciliation
+not partofthis task. Details/evidence in the following resume entry/report.
+
+# Current resume point — 2026-10-28 — Readable Main 2D trial implemented; review running
+
+User found methane still too small after the prior15% increase and explicitly
+approved readable20–24px labels, accepting smaller letters for large drawings
+that cannot fit. Chosen target22CSSpx. Only runtime edits: HTML52 replaces the
+page-scale attribute with data-namelecule-2d-font-size=22 and bumps cacheURL;
+viewer52 validates the requested font and retains old scale/frame fallback.
+Bounds fitting unchanged. No new UI controls or drawing/storage conventions.
+
+Developer verification complete:1131SVGcases(377forms126molecules at widths
+1500/900/390,height1000), no drawing/label/number clipping; no matchedC/H/O
+font smaller than prior Main. All1131names match prior capturedresults.
+Methane22px vs11.941before at618x310. Desktop301/335measuredC/H/Oforms at22,
+34fit smaller,min12.217; narrow135/335at22,200fit,min10.495. Within each drawing
+measuredletters remain samefont; absolute cross-molecule/form uniformity is
+intentionally relaxed by approval.42forms/viewport have no measuredC/H/Otext.
+Actualform/zoomonmethane/nativePNGsignature/SVGparse,4first/last steps2lessons
+and savedReacthost oldfunction comparison pass. Static1472protectedfiles same,
+including36Reactfiles/16core. Node24syntax/PythonAST/gitdiffcheck pass.
+One knownJSmolupdateJS/nullviewer error retained in mainrun,0unknown signatures;
+not a fix or proof of unchangedfrequency. Dedicated normalstartupprobe shows
+methane name and5actual3Datoms by later samples,0errors. Earlyscan screenshot
+preceded async3Dcompletion; settled screenshot independently inspected along
+with largeexpanded2D desktop/mobile. No all3Dbehavior/camera certification.
+Safari remains untested because automation disabled; no settings changed.
+
+Report docs/READABLE-2D-20261028.md and readable-2d-* evidence/tests in docs/checks.
+Before bytes /tmp/namelecule-readable-2d-20261028/before, baseline1476files.
+Frozen11targetfiles plusmanifest docs/checks/readable-2d-reviewed-target-20261028.json
+SHA2569ef9c72b2167f5fc13cf438325234dc06579c819d1ec4e8dfe44c3fca94de4a0.
+Independent /root/review_readable_2d, realreviewer role/forknone, reviewing actual
+source/beforediff/evidence/checklist read-only. Verdict pending; Developer stopped
+targetediting. Journals excluded fromtarget. Prior15%review is historical; its
+runtimehashes naturally changed in this new approved trial, old docs unchanged.
+SavedReacthosts intentionally not regenerated; defaultfallback preserved.
+
+UpstreamHEAD5903c76c6f71aaf0512a134a7ff6f710fa95c30a/CHANGELOG rechecked28Oct,
+unchanged from lastchecked; lastactualsync93b759f. Pendingcamera overlaps need
+separate reconciliation; no sync/JSmolhosting in this scope. No corechanges:
+16corefiles match baseline; core52SHA72ac4b4ae3c9bfaa90fde650bf588ed6430acec9ad3ceef72a94a27ad6750e3a.
+No install/commit/push/publication/newZIP/branchswitch. Existing dirtychanges
+not attributed to this task. Next: collect independent review, correct/re-review
+if needed, verifyfrozenhashes, then user visualcomparison/decision on trial.
+
+# Current resume point — 2026-10-27 — Main 2D +15% complete and independently reviewed
+
+Approved common initial2Dscale change complete locally. Only runtimeedits:
+mulermoc-nom-52.html opt-in1.15/cacheURL and viewer52 validatedpagefactor.
+Absentfactor1 preserves savedReacthosts. Defaultzoom2,JSONzoom and molecules/
+3D/scenario content unchanged. Actualdefaultfonts at618x310:10.383→11.941px;
+312x272:9.111→10.477px. All377forms/126molecules at3widths(1131cases) preserve
+commonfonts and bounds/numbering. Controls/zoom/nativePNG/SVG/4lessonsteps and
+embeddedhost fallback checked byDeveloper. Screenshots inspected. Existing
+JSmolupdateJS/nullviewer error observedonce; same priorerror evidence, no new
+signature, not a fix or proof of unchanged frequency. Safari untested due to
+disabledautomation; user can visually compare afterCmd+R.
+
+Independent /root/review_main_2d_scale, realreviewer role,fork_turns none,
+ROLE_ID=NAMELECULE_REVIEWER_V1_20261023, returned no actionableP0/P1/P2/P3.
+Readactual beforediff/surroundingfit/init/zoom/resize/export/Reactdependencies
+and checklist; independently ran static1463protectedpaths/36React/16core,
+portableNode24syntax, gitdiff/revisions, hash/JSON/difflib/AST and actualparser
+edgecases (absent/invalid/nonpositive/infinite/validfactor). Inspected3screenshots
+and checked browserJSON/report consistency; browserresults remainDeveloper
+evidence, not independent browserexecution. No reviewerwrites/cache/install/
+agents; no claimed enforcedread-onlysandbox. Firstplainnode unavailable in
+PATH; portablebinarycheck passed. No correctionsrequired.
+Frozen10files plusmanifest unchanged before/afterreview andDeveloperfinalcheck:
+docs/checks/main-2d-scale-reviewed-target-20261027.json SHA256
+5dd466d086c23e55f5e20aa9eca99628bb51b1f096b267f530b65568172f072e.
+Report docs/MAIN-2D-SCALE-20261027.md and scopedtests/evidence in docs/checks.
+Full details, earlierdiagnosticfailures andbeforebytes below/inreport. Any
+further targetedit requires re-review. ExistingReactgeneratedhosts intentionally
+remain snapshots; don't regenerate from evolvingMain without new sync request.
+
+Core report: no corechanges thissession/task; all16match taskbaseline.
+Core52SHA25672ac4b4ae3c9bfaa90fde650bf588ed6430acec9ad3ceef72a94a27ad6750e3a.
+No dependencyinstall/commit/push/publication/newZIP. PriorReactcheckpoint remains
+historical pre-scaleMain snapshot, Reactsource/build retained. No JSmolhosting
+or upstreamsync; professorHEAD5903camera changes require conflict reconciliation
+(lastactualsync93b759f). Next: uservisualcheck inMain, then nextspecifictask/plan.
+
+# Current resume point — 2026-10-27 — Main 2D +15% verified; independent review running
+
+User approved larger common initial 2D scale. Changed runtime only:
+mulermoc-nom-52.html opt-in data-namelecule-2d-scale=1.15/cacheURL; viewer52
+fFit2DSVG validated pagefactor (absent =>1, preserving existing React hosts).
+Defaultzoom2 and scenarioJSON unchanged. Baseline1467files and exactbefore
+snapshots retained. Final Firefox1131cases(377forms126molecules x1500/900/390,
+height1000) PASS: commonfonts11.941desktop/10.477mobile (+15%), no clipping of
+labels/lines/path/numbering. Realform/zoom/nativePNG/SVG checks PASS,4steps from
+2lessons preserve molecule/mode/zoom, embeddedReacthost keeps old fit policy.
+Desktop/mobile screenshots visually inspected. Static1463protected unchanged,
+including36React and16core; core52SHA72ac4b4ae3c9bfaa90fde650bf588ed6430acec9ad3ceef72a94a27ad6750e3a.
+One preexistingJSmolupdateJS/nullviewer error retained in finalresults; exact
+errorclass occurs in beforetaskevidence. No unexpectederrors; not a JSmolfix.
+Safari automation disabled, untested. No broader all283steps/zoom/height/touch
+validation or chemistry/contentchanges claimed. Prior40%trial failedfont
+uniformity, discarded; initialtestfixed-height assumption corrected to actual
+geometry afterfontsready. No runtime suppression. Reactfiles/generatedhosts/
+dist unmodified; do not regenerate automatically from evolving Main here.
+
+Final target frozen at docs/checks/main-2d-scale-reviewed-target-20261027.json
+SHA2565dd466d086c23e55f5e20aa9eca99628bb51b1f096b267f530b65568172f072e,
+10targetfiles plusmanifest. Report docs/MAIN-2D-SCALE-20261027.md; runtime diff
+and browser/static/before/error evidence+test scripts under docs/checks.
+Independent /root/review_main_2d_scale, real reviewer role,fork_turns none,
+assigned read-only actualdiff/source/evidence/checklist; verdict pending.
+Developer stopped editing target. Journals excluded from frozenreviewtarget.
+Next: collect review, resolve/re-review findings ifneeded; verify frozenhashes
+and report final outcome. No corechanges/commit/push/publication/installations
+or JSmolhosting/upstreamsync. Earlierupstream5903camera changes remain deferred
+for conflict reconciliation; actualsynchronized93b759f.
+
+# Current resume point — 2026-10-27 — Main 2D +15% implemented; final checks/review pending
+
+User approved a larger common initial2Dscale. Two runtimefiles changed:
+mulermoc-nom-52.html opts into data-namelecule-2d-scale=1.15 and bumps viewer
+cacheURL; viewer52 fit reads validated positive pagefactor, absent defaults1.
+Existing saved React hosts remain opt-out, no React files regenerated. Original
+1.15factor kept; Main is another1.15 larger (not a new zoom/defaultJSON value).
+Trial+40% violated fontuniformity on complexexpanded forms; rejected without
+source changes. First full+15% pass1131forms (377x3widths1500/900/390), no
+label/bond/number clipping, actual common fonts11.941desktop/10.477mobile.
+Controls/zoom/PNG/SVG andtwoexistinglessons first/last4steps pass. One preexisting
+JSmol updateJS/nullviewer error recorded, not hidden or claimedfixed. Prior
+startupdiagnosis actualbeforeerrors stored as scoped evidence. First harness
+assertion wrongly assumed fixed310pxviewer beforefontload, corrected to actual
+geometry/afterfontsready; initialfailure retained in/tmp. Static test exclusion
+of privateconfig paths aligned with baseline; no underlying runtime failure.
+Final same-runtime rerun adds explicitunexpectederror check and dismisses
+mobileorientationprompt before screenshot; pending completion/review.
+Baseline1467files docs/checks/main-2d-scale-before-20261027.json and exact
+beforebytes /tmp/namelecule-main-2d-scale-20261027/before/. Static1463protected
+including36Reactfiles and16corefiles unchanged. No core/data/MOL/SDF/scenarioJSON
+changes, no dependencyinstall/commit/push/publication. Reactgeneratedhosts are
+intentionally preserved snapshots; don't run generator/build-sync in this task.
+Upstream camera changes reviewed earlier thissession remain deferred due
+conflicts; no new sync. Next: finishbrowser/screenshots/report, freeze exact
+target, independent Reviewer(forknone/read-only), resolve any findings then
+report and offer updatedMain for visualcomparison.
+
+# Current resume point — 2026-10-27 — Small initial 2D explained by shared library scale
+
+User asks why first2D molecule is so small. Read relevant viewer52 fit/zoom/
+startup code and historical docs/2D-SIZE-20261026.md. Startup intentionally
+selects methane. fFit2DSVG chooses common atom font size from ALL library
+forms plus available viewport dimensions, to preserve cross-molecule/form
+character-size consistency; with bothviewers this small height limits scale.
+TemporaryFirefox9237 check at1500x1000:2Dviewport618x310, libraryframe
+38.333x34.333; methane font10.383CSSpx/CH4width25.63px atdefaultzoom2.
+Same exactfont/geometry oninitialready,after2s,forcedresize,reselectmethane;
+ethane font also10.383px. Thus no stale startup-only sizing reproduced.
+One+zoom yields12.979px (x1.25). This is a Firefox observation plus source
+explanation, not Safari instrumentation or proof of all viewport behavior.
+Evidence /tmp/namelecule-main-first-2d-20261027.json and temporary harness.
+No source/core/molecule/scenario/React changes, newagents, commit/push or
+publication. Only project journals updated. No scale-change plan approved.
+Next: explain shared-scale/readability tradeoff; if user requests adjustment,
+propose bounded common default-scale change with fit/numbering regression
+checks and independent Reviewer, rather than silently enlarging only methane.
+Earlier startupnetwork proposal remains unapproved. User nowclarified Safari
+4–5sec/pageappears/awaitingmolecules; exact split not measured. Externalvisible
+Firefox launched with separate temporaryprofile at/tmp/namelecule-firefox-visible-20261027
+because defaultopen had routed to headless testinstances. Main URL localhost8013.
+
+# Current resume point — 2026-10-27 — Safari startup clarification; automation unavailable
+
+User identified Safari as the browser with slow Main Explore entry; duration
+and whether delay precedes page or molecule remain unknown. Installed Safari
+26.5 (19624.2.5.18.3) confirmed via safaridriver version and application plist.
+Started temporary safaridriver port9946; session creation explicitly failed:
+Allow remote automation is disabled. No Safari settings changed, no automation
+session created, no Safari runtime/performance measurement claimed. Temporary
+driver stopped. Error saved under /tmp/namelecule-main-startup-safari-session-20261027.json.
+Prior 1.4–1.9s cached/about4.4s bypass measurements are Firefox only. Cannot
+ascribe Safari delay to JSmol/network without user-browser evidence.
+No code/core/React/vendor changes, new agents, commit/push/publication. Only
+project journals updated. LocalJSmol proposal remains unapproved; no install.
+Next: clarify approximate Safari wait and blank-page versus molecule wait;
+choose a concrete scoped plan based on evidence. Do not enable Safari automation
+without user consent or present it as already enabled. Upstream findings below
+remain pending reconciliation; no fresh upstream read required/performed here.
+
+# Current resume point — 2026-10-27 — Main exploration startup diagnosis; no fix approved
+
+User reports slow entry via welcome Explore link. Read-only relevant source
+inspection plus temporary Firefox9237 instrumentation (no application-file
+changes). Welcome links directly to mulermoc-nom-52.html. Parser-blocking
+JSmol script uses external chemapps server; J2S also external. Local-mode hooks
+exist but root JSmol.min.js/j2s files absent. JSME classifies126 molecules at boot.
+Cached observed SVG+3D-ready polling marks:1.882s/1.371s; classification297/185ms.
+Cache-bypass navigation wall4.387s to readiness checks; JSME initialization
+3980–4296ms, classification226ms; JSmol entry download754ms, core752ms plus
+sequential package/other requests. This proves network dependence in test, not
+the cause of a longer user-browser delay. No claim of truly empty new profile.
+Two known JSmol viewer-null errors in cached runs; cache-bypass run0JSerrors.
+Temporary harness wraps functions for timing only, closes its test tabs/session.
+Evidence /tmp/namelecule-main-startup[-cold]-20261027.json and harnesses.
+Asked user which browser, approximate duration and whether delay is blank page
+or molecule. No answer recorded yet. Proposed next scope: pinned local JSmol
+entry+requiredJ2S assets using existing loader, retain CDN option; exact bundle
+and licensing/update inventory before installation. Requires concrete plan
+approval perAGENTS before source/vendor edits. Keep chemistry/core/data/scenario
+content and React unchanged; targeted browser/startup and representative2D/3D/
+lesson regressions plus independent Reviewer if implementation approved.
+
+Upstream HEAD now5903c76c6f71aaf0512a134a7ff6f710fa95c30a vs lastchecked
+a40beec0cc89d40fb90ef84c6d619963ebca136b; actually synchronized remains
+93b759f5891d7b5a1172646032d83215d60b7604. Read HEAD/history/actualcompare
+and CHANGELOG changes; SHA25646b0f963209d20bf8e22cf664204397445bc04a04aa3cfd8be4be8a3f132f176.
+New e03c501 ignore;423390a camera capture fallback/instantmoveto/loadordering/
+pinnedbar;5903c76 disables61data cameras. Overlap with local customized molecule
+cameras, scenario capture and molview. Do not blindly remove local cameras;
+separate reconciliation needed before sync; user informed in Greek. No refs
+changed or sync performed. Evidence /tmp/namelecule-main-startup-upstream[-diff]-20261027.json.
+Only journals updated. No source/core changes, no implementation/reviewer,
+commit/push/publication. Core52 SHA25672ac4b4ae3c9bfaa90fde650bf588ed6430acec9ad3ceef72a94a27ad6750e3a.
+
+# Current resume point — 2026-10-27 — Development returns to Main
+
+Explicit user decision: for now continue building the Main Namelecule version.
+React remains preserved as an optional, incomplete experiment in the existing
+react-preview directory and verified local checkpoint
+communication/checkpoints/Namelecule-React-preserved-20261027-232501.zip.
+Do not continue React migration or publish it without a new user request.
+No rollback, deletion, Main/React code changes, commit/push or publication
+requested or performed by this decision. No core changes in this turn.
+Only session/contribution journals updated; no runtime tests required.
+Next step: identify the user's next specific Main task, inspect relevant code
+and professor upstream per standing workflow, present a concrete plan before
+implementation, and preserve existing customizations.
+
+# Current resume point — 2026-10-27 — React preserved as optional experiment
+
+User requested keeping the React work to date and asked how to demonstrate it to
+the professor. Preserved local source/build plus shared Main runtime/assets and
+project documentation in communication/checkpoints/Namelecule-React-preserved-20261027-232501.zip
+(1467 project files; 16726987 bytes). SHA256 48775d7745a4e49ddba96f519995d2b6bccfeaef989a9e491670f4f0263f39b5.
+ZIP CRC and every archived project-file SHA256 checked against live files; all
+28 frozen PNG3D reviewed files and HEAD 168e3cec01f941a84d40bbe0dc07156e7baa35d0 unchanged.
+No code changes, runtime/build reruns, new agents, commit, push or publication.
+These journal entries were recorded after archiving; the archive has its own
+README/hash manifest and the prior project journals. No Git history/node_modules
+or private local agent/config directories included. External CDN dependencies
+may require Internet; not an offline deployment guarantee.
+Core report: no core changes; core52 SHA256 72ac4b4ae3c9bfaa90fde650bf588ed6430acec9ad3ceef72a94a27ad6750e3a.
+Main remains intact. React remains incomplete; no reliable parity percentage.
+Professor demonstration options explained: local computer/screen sharing, or a
+separate hosted experimental preview opening the React welcome page, preserving
+Main. No publication requested/authorized by this question; prior deferral stands.
+No fresh upstream read/sync in this preservation-only task. Next step: await the
+user's choice to resume development, inventory parity, or prepare a separately
+reviewable preview deployment before requesting publication approval.
+
+# Current resume point — 2026-10-27 — Clarifying incomplete React/Main functional parity
+
+User asked what the React migration has actually achieved and observed it does
+not work like Main. Performed scoped read-only comparison of React App/viewer/
+NameAnalysis/LessonPreview/hostbuilder against native52 controls/handlers.
+Confirmed Reactwelcome/library,126molecule catalog/search, three2Dforms,3Dcontrols,
+name analysis/rules/ethernaming,PNG2D/3D and12lessons283steps. Lessons still use
+nativeplayer inside React navigation; molecule rendering also nativehost.
+Confirmed gaps in standaloneReactviewer: no simultaneous2D+3D; no full native
+chain/color/highlight/settings controls; no componenteye-hide/speech controls;
+no equivalent Reactscenarioauthoring/import-save workspace. Lesson-authored
+settings may still execute inside nativeplayer; don't confuse missing React
+exploration controls with absent lesson content. No claim of diagnosing an
+unspecified user-visible runtime bug. Existing mobilecamera/JSmol limits remain.
+Earlier80–85%functional estimate is withdrawn as a reliable percentage: no
+complete feature inventory or measured denominator exists. Scoped successful
+checks/reviews establish their own behaviors, not wholeapp functional parity.
+Proposed next direction: explicit Main→React feature/flow inventory and prioritize
+ordinaryexploration/lesson experience before claiming equivalent replacement.
+No new implementation approved/requested by this clarification; no code edits,
+runtime tests, agents or upstreamsync in this read-onlyturn. Only twojournals
+updated. All28frozenPNG3Dtargethashes remain unchanged; no corechanges, commit,
+push or publication. Prior approvedPNG3D task remains complete/reviewed below.
+
+# Current resume point — 2026-10-27 — React native PNG3D complete and independently reviewed
+
+Approved active-viewPNG export implemented and locally verified. Same native52
+fSaveJmolPng Save Image dialog/rename/cancel/footer/currentvisualsettings and
+1200square image bytes; React interface invokes it via validated ordered bridge.
+Only MoleculePreview.jsx/viewer-host-bridge.js/ReactREADME plus generatedhost/dist
+and scopeddocs/checks changed. Parent3D100s budget survives queuedactions, host90s;
+2D8/10s retained. Actual prompt cancellation maydiscardmarker: freshsync after
+nativecleanup restores state. Filename observer+PNGsignature binds actualsave,
+latecallbacks blocked afterfail/pagehide; no Reactimageencoder or libraryedit.
+
+Independent final Reviewer /root/review_react_png3d, agent_type reviewer,
+fork_turns none, ROLE_IDNAMELECULE_REVIEWER_V1_20261023, returned no actionable
+P0/P1/P2/P3 findings; no corrections required. ReadAGENTS/checklist/context,
+actualtaskdiffs/beforebytes/nativecode and evidence. Frozen manifest
+ docs/checks/react-3d-png-reviewed-target-20261027.json SHA256
+f52a44604b541ab3568621cb51deda9d9f45d9e66c36260e33d39bf8e96435de,
+19source/docs/check+9generatedfiles; all28hashes matched before/after review and
+Developerfinalcheck. Three exactbefore snapshots match baseline1454files.
+Reviewer independently ran static1441preservedpaths(1417outsideReact+journals),
+portableNode bridge+bundle syntax, gitdiffcheck and read-only hashes/JSON/gzip/
+AST/capture11fingerprints/reportcorrespondence checks. Verified actualbytes/SHA
+of16mainPNGs+rename/extensionless/rotationfiles; inspected desktop/mobile andtwo
+actualPNG images/footer/highlights. Actual build/browser remain Developer evidence;
+Reviewer inspected scripts/results, did not execute build/browser. No review
+writes/cache/install/agents; no-write behavioral, no claimed enforcedsandbox.
+
+Developerfinalresults:16/16imagecomparisons(12native3D+4exact2D forms/CHn), actual
+nativeprompt rename/extensionless/cancel/syncfailure recovery/rotation PASS0errors.
+Post3Dgraph/xyz/visibility/colors/selection/labels/preferences/camera exact;
+3Dnative shading variation observedmax18/255, maxmean0.0561/255 within40+1 bounds,
+not exactpixel/byteequalityclaim. NativeShader pseudo-randomshade logic read from
+primarysource. Final seriallifecycle on configuredtemporaryFirefox9238PASS0errors:
+>10squeuedmodel/view,90.12s actualtimeout, late-save suppression, originalprompt
+restored, retry/unmount/remount, keyboard,1500/390layouts. Existingtransitions9.25s
+and2DPNGlifecycle PASS0errors. Build26modulesJS317.54/89.51gzip CSS10.20/2.27;
+existingtert-butyl etherchain diagnostic retained. Main/core/MOL/SDF/scenarioJSON/
+lessonhost/CSS/dependencies unchanged. HEAD168e3cec andstable3673c390 unchanged.
+KnownJSmolnullviewer/mobilecamera limits retained; no Safari/touch/AT/offline/
+Drupal/all126exportcombinations or newchemistry/learning/conformer certification.
+
+Early diagnostic failures distinguish cancelled-marker/parentdeadline adapter
+fixes from harness promptdefault/profile/filenamefilter/overstrict-raster issues;
+rawfailedreports retained, not counted asfinalpasses.9237was not configured for
+9238's downloadfolder; finaldownload tests use9238serially. Sources/results saved
+locally; temporarybeforebytes/probes/screenshots under
+/tmp/namelecule-react-3d-png-20261027, finaltestdownloads under
+/tmp/namelecule-react-png-20261027/downloads. Report docs/REACT-3D-PNG-20261027.md
+points here for actual finalreviewoutcome. Scopecomplete locally; no remaining
+implementation/reviewwork. Any furthercode intervention needs concrete plan/
+userapproval. User's80–85% discussion was unmeasured functional-use estimate,
+not fullReactcodeconversion; reuse of chemistry/JSME/JSmol can remain final.
+
+Core report: no corefile changed in this session; all16corefiles match baseline.
+Core52SHA25672ac4b4ae3c9bfaa90fde650bf588ed6430acec9ad3ceef72a94a27ad6750e3a.
+No commit/push/publication/installations/newZIP. Upstreama40beec andCHANGELOG
+75630490 recheckedunchanged during task; actualsync93b759f. Priorpendingupstream
+updates deferred to preserve Main. Earlierdirtychanges not attributed here.
+Local URL http://127.0.0.1:8013/react-preview/dist/?v=3d-png-20261027#/viewer
+
+# Current resume point — 2026-10-27 — PNG3D implemented and verified; independent review running
+
+Approved ReactPNG3D complete in Developer checks. Two runtime sources changed:
+MoleculePreview.jsx/viewer-host-bridge.js, plus README/generatedhost/dist and
+scopeddocs/checks. Same nativefSaveJmolPng prompt/rename/cancel/footer/1200square
+bytes; no Reactimageencoder. Native save/prompt observers confined to host,
+restored prompt;PNGsignature+actualdownload guard; queue held through native
+cleanup;3Dhost90s/parent100sbudget persists across queuedactions,2D8/10s retained.
+FinalactualFirefoximage suite16/16PASS0errors:12native3D settings/branch/chain/
+IUPAC-common cases,4exact2Drasterforms inclCHn; actual rename/extensionless/cancel/
+syncerror recovery/rotation. Postgraph/xyz/visibility/colors/labels/preferences/
+camera exact;3Drastermax18/255, maxmean0.0561/255 within40+1 tolerance for native
+Shaderpseudo-random shades. Not a byte-identical3Dimageclaim.11runtimehashes match.
+Finalseriallifecycle on correctlyconfigured9238profile PASS0errors: >10squeued
+model/view, actual90.12stimeout, late save suppressed, originalprompt restored,
+retry/unmount/remount clean, keyboard and1500/390layouts. Existingviewertransition
+9.25s and2DPNGlifecycle PASS0errors. BothUI screenshots and two actualPNG images
+visually inspected.1441protected/1417outsideReact+journals unchanged against
+1454baseline. Main/core/MOL/SDF/scenarios/lessonhost/CSS/dependencies unchanged.
+Build26modules JS317.54/89.51gzip CSS10.20/2.27; existingetherchain diagnostic.
+
+Frozen manifest docs/checks/react-3d-png-reviewed-target-20261027.json SHA256
+f52a44604b541ab3568621cb51deda9d9f45d9e66c36260e33d39bf8e96435de,
+19source/docs/check+9generated. Fresh independentReviewer /root/review_react_png3d,
+agent_type reviewer/fork_turns none, running read-only. No verdict yet. Do not
+edit frozen target; twojournals excluded. Next address findings/re-review if any,
+record actualoutcome and verify hashes. Report docs/REACT-3D-PNG-20261027.md;
+scoped rawresults/diagnostics/compressedcapture in docs/checks. Beforebytes,
+native sourceprobes and screenshots/tmp/namelecule-react-3d-png-20261027;
+configuredtemporarydownloads/tmp/namelecule-react-png-20261027/downloads.
+Early9237profile harness read wrongdownloadfolder; final runs bothon9238serially.
+Earlieremptyinput assumption, cancelledmarker andqueuedparentdeadline findings
+fixed; overlystrictnative-raster checks corrected with primaryShader evidence.
+These earlier diagnosticruns are not finalpasses. Prior knownJSmolnullviewer/
+mobileframing limitation retained; no productionerror suppression/libraryfix.
+No corechanges/commit/push/publication/installations/newZIP. Core52 unchanged
+72ac4b4ae3c9bfaa90fde650bf588ed6430acec9ad3ceef72a94a27ad6750e3a.
+Upstreama40beec/CHANGELOG75630490 recheckedunchanged, actualsync93b759f. Existing
+dirtywork not this contribution. User's80–85% estimate explicitly approximate
+functional-use coverage, not measured completion or a pureReactrewrite.
+
+# Current resume point — 2026-10-27 — PNG3D final image results saved;90s lifecycle pending
+
+Approved React-onlyPNG3D runtime finalized (MoleculePreview.jsx/bridge), generated
+host/dist, README and scopeddocs/checks. Final image suite16/16PASS,0JSerrors:
+12native3D+4exact2D, actualrename/extensionless/cancel/syncfailure/rotation;
+max3Drasterchannel18/255, maxmean0.0561/255, exact postgraph/labels/settings/camera.
+All11runtimefingerprints still match. Parent100s3D export budget retained across
+queuedcommands, native90s bound; ordinary2D8/10s unchanged. Actualcancel0.94s
+recovers without remount. No nativeencoding/frame/data/core changes.
+Existingviewertransitions9.25s and2DPNGlifecyclePASS0errors on finalruntime.
+FinalPNG3Dlifecycle now running serially on correctlydownload-configuredFirefox
+9238, has reached90s timeoutwait.9237 readiness profile has no matchingtemporary
+folder preference, so earlier downloadassertions there were invalid; final
+harness uses9238. Bothharnessbefore/afterfilters includeextensionlessnativefiles.
+Previousstrict3Draster bounds rejected(nativeShaderpseudo-random shades), not a
+claim of exact3Drasterbytes. Relevantdiagnosticreports retained docs/checks;
+finalimagecapturecompressed there. Static1441protected/1417outsideReact+journals
+unchanged; Main/core/MOL/SDF/scenarioJSON/lessonhost/CSS/deps protected.
+Next await90s/retry/unmount/layout results, inspectimages, freeze exact target,
+fresh independentReviewer. No review requested yet. No corechanges, commit/push/
+publication/installations. Upstreama40beec checkedunchanged; actualsync93b759f.
+
+# Current resume point — 2026-10-27 — React PNG3D image suite passed; final lifecycle running
+
+Approved nativePNG3D implemented in React viewer/bridge, README/generatedhost/dist
+and scopeddocs/checks. Final parentdeadline retained across queued commands.
+Nativeprompt nullcancel with discardedJmolmarker handled by freshsync; original
+prompt restored. Real renamed/extensionless filename observed through native
+savehook/PNGsignature, no re-encoding. Main/core/data/lessons/CSS/deps unchanged.
+Final browser suite16/16 comparisons PASS:12native3D (exact postscene/prefs/
+labels/camera, maxchannel18/255, maxmean0.0561/255 within40+1bounds) and4exact2D
+raster/form comparisons. Native actualrename/extensionless/cancel/syncfailure/
+recovery/rotation exports PASS;28realnativeprompts,0JSerrors.11runtimefingerprints
+match finalfiles. Build26modulesJS317.54/89.51gzip CSS10.20/2.27. Static1441
+protected/1417outsideReact+journals unchanged; earlier diagnostics retained below.
+Final lifecycle90sdeadline/>10squeuedcommand/latecallback/retry/unmount running
+serially after image test. Separate existingviewertransition+2DPNGlifecycle
+regression running; no actualdownloads in those tests. No final review yet.
+Next finish tests, inspect screenshots, freeze exact target, freshReviewer.
+No corechanges/commit/push/publication/installations. Upstreama40beec checked
+unchanged, actualsync93b759f. User's80–85% estimate explicitly unmeasured
+functional-use approximation, not complete React rewrite claim.
+
+# Current resume point — 2026-10-27 — React PNG3D cancellation fixed, final tests running
+
+Approved implementation remains React MoleculePreview.jsx/viewer bridge only,
+plus generatedhost/dist and scopeddocs/checks. Native fSaveJmolPng prompt/image/
+filename/footer/1200square encoding reused.3Ddeadline90s,parent100s;2D8s.
+Save observer tracks actual user-chosen filename and dataPNG anchor; prompt wrapper
+forwards the real dialog and observes nullcancel, restored after completion/fail/
+pagehide. Cancel may discard queued Jmol marker; adapter now synchronizes with a
+fresh marker after nativecleanup. Actual cancelprobe0.94s then next PNG succeeds,
+0JSerrors. Empty prompt value is left to native semantics, not treated as cancel.
+Final16-image native rasterparity browser suite running, then run lifecycle suite
+SEQUENTIALLY: both isolatedFirefox profiles write to the SAME temporarydownload
+folder, so parallel all-foldernegative checks interfere. Earlier lifecycle
+actual90.17sdeadline completed but disk assertion collided with other test's
+files; no finalpass claimed. Earlier browser12images then cancel marker timeout
+was real adapterfinding, corrected. Initial test prompt handler also needed
+explicit defaultValue when accepting BiDi prompt. Keep diagnostics distinct.
+No independent review yet. Next finish serialtests, freeze, realfreshReviewer.
+User asked migration percentage:80–85% given as rough unmeasured functional-use
+estimate only; clarified ReactUI reuses existing chemistry/JSME/JSmol, which can
+remain in finished edition. No claim of measured totalmigration/codecoverage.
+Baseline1454files;1441protected/1417outsideReact+journals unchanged so far.
+Main/core/MOL/SDF/scenarios/CSS/dependencies preserved. Upstreama40beec rechecked
+unchanged; actualsync93b759f. No corechanges/commit/push/publication/installations.
+
+# Current resume point — 2026-10-27 — Approved React 3D PNG implementation in verification
+
+User approved exposing native3DPNG. Implemented React viewer+bridge only;
+generatedhost/dist build running. Same native fSaveJmolPng1200×1200, filename
+prompt and bytes retained. Adapter observes prompt cancellation and native local
+save/download anchor, holds commandqueue/model/script gate through native delayed
+echo cleanup, preserves2D export.3Dnativeprompt/encoding deadline90s vs parent100s;
+2D unchanged8s. Native probe confirmed Save Image prompt and actual PNG download
+when accepted; default headlessbrowser dismissed prompt (not applicationfailure).
+No finaltests/review yet. Next run actualPNG/style/name/parity/cancellation/async/
+timeout/retry/unmount/2D checks, freeze and independentReviewer.
+Baseline1454files docs/checks/react-3d-png-before-20261027.json; beforebytes under
+/tmp/namelecule-react-3d-png-20261027/before. Upstreama40beec/CHANGELOG75630490
+successfully rechecked unchanged; actualsync93b759f. Main/core/data/lessons/
+dependencies not targeted. No corechanges/commit/push/publication/installations.
+
+# Current resume point — 2026-10-27 — Next React proposal: native 3D PNG export
+
+User requested further React continuation after completed independent review of
+3D controls. Read-only inspection identified native Main52 fSaveJmolPng already
+exports1200×1200 PNG with currentMolName_3D.png; React currently exposes PNG only
+for2D. Proposed next bounded scope: enable same React PNG action for active3D,
+invoke unchanged native fSaveJmolPng through viewer bridge after actualmodel/
+script readiness, validate current view/model/preferences/component, and report
+requested/failed download without claiming disk save. Preserve native rendering,
+3Doptions/camera/highlights,2DPNG and async lifecycle. Intended changes only
+MoleculePreview.jsx/viewer-host-bridge.js, generatedhost/dist, scopedchecks/docs;
+no Main/core/MOL/SDF/lesson/dependency change. Actual Jmol download completion/
+lifecycle integration still needs implementation verification, not claimed done.
+Plan approval pending; no code intervention this turn. Only two journals updated.
+Next present concrete plan and wait for approval perAGENTS, then implement,
+validate realPNGdownload/nativestyle+size/name/state parity, transitions/failure/
+unmount and2Dregression, followed by fresh independentReviewer.
+Completed3Dcontrol26-file target hashes rechecked unchanged. No corechanges,
+commit/push/publication/installations. Latest verifiedupstreama40beec/CHANGELOG
+75630490 from preceding continuation; actualsync93b759f. No new remotecheck
+claimed for this planning-only turn; no new implementation begun.
+
+# Current resume point — 2026-10-27 — React 3D controls independently reviewed and complete
+
+User requested continuation from the pending independent review. Reused the
+original fresh-context Reviewer /root/review_react_3d_controls after its previous
+usage-limit failure. Actual review now completed, ROLE_ID
+NAMELECULE_REVIEWER_V1_20261023: no actionable P0/P1/P2/P3 findings, no corrections
+required within approved scope. This approval covers the current 3D controls;
+previous usage-limit failure remains historical below. No new code changes in
+this continuation; only the two continuity journals updated.
+
+Frozen target docs/checks/react-3d-controls-reviewed-target-20261027.json,
+SHA2567e5b8b3c617a93048044a643f461b024691e9d00974787ffd6a6a7131802312b,
+17source/docs/check+9generatedfiles. All26hashes matched before/after independent
+review and after Developer final check. Four before snapshots match task baseline.
+BaseHEAD168e3cec01f941a84d40bbe0dc07156e7baa35d0 unchanged. Main/core/MOL/SDF/
+scenarioJSON/catalog/lessonhost/dependencies unchanged;1426protectedfiles.
+
+Reviewer independently executed read-only static, viewerhost--check, gitdiffcheck,
+portableNode bridge+generatedJS syntax, hashes/AST/JSON/gzip/capturefingerprints.
+Compared all42captured scenes with original SDF atom identities/indices/xyz,
+bonds/orders, carbonchaincontinuity and Hvisibility: agree.38cases of actual
+canChange3D in in-memoryNodeVM passed (contract test, not browser execution).
+Inspected1500/390screenshots; controls fit. Nativehandlers/model/scriptACK and
+parent/bridgeguards reviewed. No writes/build/browser/install/additionalagents;
+read-only behavioral restriction, no claimed enforced read-onlysandbox.
+Build and liveFirefox42/42parity/rotation/preferences/pending/retry/PNG/lesson
+checks remain Developer evidence. Reviewer inspected their scripts/results.
+
+Residual existing limitations: externalCDNJSmolsetDisplay/nullviewer occurs in
+initialstrict run; finalidenticalruntime0errors does not establish a fix. Mobile
+screenshot clips model with existingcamera (not newcontrols or camera change).
+No Safari/touch/AT/offline/Drupal/all126controlcombinations/liveReviewerbrowser;
+no new chemistry/learning/conformer certification, data unchanged. No unresolved
+reviewfinding. Report docs/REACT-3D-CONTROLS-20261027.md points to these journals
+for final independentoutcome. Scope complete locally; next migration intervention
+requires its own concrete plan/user approval. Publication still requires approval.
+
+UpstreamHEADa40beec0cc89d40fb90ef84c6d619963ebca136b and CHANGELOGSHA256
+756304901ecad7fa29e432e6dc1a6ef68058756f8f93c45cbcd2828e1ed03f54 rechecked
+successfully on this continuation, unchanged from lastchecked a40beec. Lastactual
+sync remains93b759f5891d7b5a1172646032d83215d60b7604; pending prior upstream
+updates still deferred to preserve Main. No fetch/merge/refchanges.
+Core52SHA25672ac4b4ae3c9bfaa90fde650bf588ed6430acec9ad3ceef72a94a27ad6750e3a
+unchanged against sessionstart/taskbaseline. No core changes in this session.
+No commit/push/publication/newZIP/installations. Existing dirtywork not this
+contribution. Sources/results already local; temporarybeforebytes/screenshots
+under/tmp/namelecule-3d-controls-20261027. URL:
+http://127.0.0.1:8013/react-preview/dist/?v=3d-controls-20261027#/viewer
+
+# Current resume point — 2026-10-27 — React 3D controls implemented; independent review unavailable
+
+Approved implementation and Developer verification completed. Native C–H
+visibility, atom labels,3styles and rotation exposed through React; Main/core/
+MOL/SDF/scenarioJSON/catalog/lessonhost/dependencies unchanged. Source changes:
+MoleculePreview.jsx, viewer-host-bridge.js, preview.css, ReactREADME; generated
+viewer/dist and scoped docs/checks. Build26modules,42/42actual native52render
+parity, actualO–Hpreservation/rotationstop/xyz/2DSVG, preferences, keyboard,
+malformed/stale/asyncgates,9.09smodelmismatch/retry/remount and1500/390layouts PASS.
+Existing transitions9.25s, PNGlifecycle, native1200×733PNG after3D→2DCHn and
+12libraryactions/other-ketone lesson1→2smoke PASS.1426protectedpaths unchanged.
+Initial strict42/42run retained1known externalCDNsetDisplay/nullviewer error;
+finalfullrepeat identical12runtimehashes0errors; no runtime suppression/fix.
+
+Required fresh independentReviewer /root/review_react_3d_controls FAILED TO RUN
+with service message "You've hit your usage limit"; no independent verdict or
+completed checks were returned. Prior Reviewer approvals cover earlier tasks
+only, not these controls. Do not describe this target as independently reviewed
+or ready to publish. User informed in Greek. No automatic retry/schedule set.
+Next concrete step: when Reviewer available, review the same frozen target in
+fresh context using original handoff/AGENTS/REVIEW-CHECKLIST; resolve findings
+and re-review any changes. No further implementation needed pending findings.
+
+Frozen manifest docs/checks/react-3d-controls-reviewed-target-20261027.json SHA256
+7e5b8b3c617a93048044a643f461b024691e9d00974787ffd6a6a7131802312b,
+17source/docs/check+9generated, all26hashes verified unchanged after failure.
+Task baseline docs/checks/react-3d-controls-before-20261027.json1440files;
+exactbeforebytes/screenshots/downloads under/tmp/namelecule-3d-controls-20261027
+and existing temporarydownloadprofile. Report docs/REACT-3D-CONTROLS-20261027.md
+frozen says review outcome is recorded here; it has no claimed review success.
+Core52unchanged72ac4b4ae3c9bfaa90fde650bf588ed6430acec9ad3ceef72a94a27ad6750e3a.
+No corechanges in this session. No commit/push/publication/newZIP/installations.
+Upstreama40beec/CHANGELOG75630490 rechecked unchanged; actualsync93b759f. Pending
+upstream remains deferred to preserve Main. Existing dirtychanges not attributed
+here. Local link http://127.0.0.1:8013/react-preview/dist/?v=3d-controls-20261027#/viewer
+
+# Current resume point — 2026-10-27 — React 3D controls verified, independent review pending
+
+Approved controls implemented: native C–H visibility, atom labels,3styles and
+rotation. Changed React MoleculePreview.jsx, viewer-host-bridge.js, preview.css,
+README/generated viewer/dist and scoped docs/checks only. Build26modules PASS.
+42/42realFirefox/native52render snapshots match; C–H-only hiding, motion/stop,
+unchanged xyz/2DSVG, flags persistence, invalid/stale/model/session packets,
+pendingACK gates/latestmodel,9.09swrongmodel/retry/freshremount, keyboard and
+1500/390layouts PASS. Existing transition9.25s/zoomACK/guard/retry and PNGlifecycle
+PASS. Valid1200×733PNG after3D→2DCHn,12libraryactions, ketone lesson1→2smoke PASS.
+1440baseline:1426protectedfiles/1403outsideReact+journals unchanged; Main/core/
+MOL/SDF/scenarioJSON/catalog/lessonhost/dependencies preserved. Existing build
+tert-butyl-ether chain diagnostic retained. Initial strict run42/42functional
+checks then failed on1known externalJSmolsetDisplay/nullviewer event; rawreport
+retained. Full finalrepeat same12runtimehashes:0JSerrors. Knownerror classification
+only in test; no production suppression/fix. Other regressionruns0errors.
+
+Frozen manifest docs/checks/react-3d-controls-reviewed-target-20261027.json SHA256
+7e5b8b3c617a93048044a643f461b024691e9d00974787ffd6a6a7131802312b,
+17source/docs/check+9generatedfiles. Fresh realReviewer
+/root/review_react_3d_controls, reviewer/fork_turns none, running read-only.
+Do not edit target during review; journals excluded. Next resolve findings,
+record actual finaloutcome and verify hashes. docs/REACT-3D-CONTROLS-20261027.md
+contains scope/evidence/limits. Temporarybeforebytes/screenshots/downloads in
+/tmp/namelecule-3d-controls-20261027 and existing temporarydownloadprofile.
+Core52 unchanged72ac4b4ae3c9bfaa90fde650bf588ed6430acec9ad3ceef72a94a27ad6750e3a.
+No commit/push/publication/newZIP/dependencyinstallation. UpstreamHEADa40beec and
+CHANGELOG75630490 rechecked unchanged; actualsync93b759f. Pendingupstream remains
+deferred to preserve Main. Existing dirtychanges not attributed to this scope.
+
+# Current resume point — 2026-10-27 — Approved React 3D controls in verification
+
+User approved exposing native 3D controls: C–H visibility, atom symbols,
+ball-and-stick/spacefill/sticks and rotation. Implemented only in React
+MoleculePreview.jsx, viewer-host-bridge.js, preview.css and generated host/dist.
+Native handlers, serialized model/script ACK gate and validated control replies
+are reused. Main/core/MOL/SDF/scenario data/lesson host remain protected by
+1440-file baseline docs/checks/react-3d-controls-before-20261027.json; exact
+before sources under /tmp/namelecule-3d-controls-20261027/before/.
+Build passed (26modules); known pre-existing tert-butyl ether chain diagnostic
+retained. Actual Firefox control/render parity and lifecycle checks running;
+no final verification/review outcome yet. Next finish tests, address findings,
+freeze exact target and request independent fresh-context Reviewer.
+Upstream HEAD a40beec0cc89d40fb90ef84c6d619963ebca136b and CHANGELOG hash
+756304901ecad7fa29e432e6dc1a6ef68058756f8f93c45cbcd2828e1ed03f54 rechecked
+successfully, unchanged since last check; actual sync remains93b759f. No upstream
+sync in this scope, to preserve Main. No core changes, commit/push/publication.
+
+# Current resume point — 2026-10-27 — Next React scope proposed, awaiting approval
+
+User requested continuation. Read-only inspection confirmed the completed
+12-lesson target remains unchanged (all26 frozen manifest hashes match).
+Proposed next scope: expose existing native 3D controls in React molecule viewer:
+C–H hydrogen visibility, atom labels, three representation styles and rotation.
+Reuse native52 handlers; preserve Main/core/molecular data/lesson content and
+lesson host. Intended targets: MoleculePreview.jsx, viewer-host-bridge.js,
+preview.css only if needed, generated viewer/dist, scoped checks/docs.
+Plan approval is pending; no code changes made in this continuation. Next:
+present scoped plan and wait for approval, then implement/test and independently
+review. Only journals updated. No core changes, commit, push or publication.
+Completed shared-lesson results and upstream comparison remain recorded below.
+
+# Current resume point — 2026-10-27 — All12React theory lessons completed and independently reviewed
+
+Completed approved shared extension from alkane pilot to all12existing library
+lessons /283unchanged steps. React routes/navigation/counters/history/loading/
+retry/Exit now cover every catalog action. The native52scenario player still
+renders teaching/molecules/rules; this is not a full native React renderer
+migration. FourReactsource files generalized: main.jsx,LessonPreview.jsx,
+lesson-host-bridge.js,build-lesson-host.py, plus ReactREADME/generatedhost and
+scoped docs/checks. Main/core/MOL/SDF/JSON/catalog/CSS/package/lock/dependencies/
+molecule-viewer component+bridge unchanged. No new educational content.
+
+Independent final Reviewer /root/review_react_lessons, agent_type reviewer,
+fork_turns none, ROLE_ID=NAMELECULE_REVIEWER_V1_20261023. Fresh context, no
+Developer history; read AGENTS/checklist/currentcontext/actualdiffs/nativepaths.
+No actionableP0/P1/P2/P3findings; no corrections required. Frozen manifest
+ docs/checks/react-lessons-reviewed-target-20261027.json SHA256
+2cf2fea25e1dcab71f78cb5c3263e7d61be6499fa7b0f4bc4dce437462a10f0f,
+16source/docs/check+10generated files. All26hashes and fivebefore snapshots
+matched before/after review. Only excluded journals updated afterwards.
+
+Reviewer independently executed read-only static, both host--check, content
+--check, diff--check, Nodebridge+bundle syntax; actual routefunction283valid/
+allbounds/malformed/prototype/encoded/overflow cases PASS. AST/JSON/gzip/hashes,
+32runtimefingerprints and283sourcecapture correspondences PASS. Compared all
+12actual3D scenes with sourceSDF atom identities/indices/coordinates, bond
+endpoints/orders and consecutive carbonchains: agree. Inspected four ether/
+complexketone desktop/mobile screenshots. No browser/build execution byReviewer;
+those remain Developer evidence. No writes/generatedfiles; no-write behavioral,
+not claimed enforcedfilesystemsandbox. Ready within approvedLOCALscope.
+
+Developer evidence: build26modules JS315.71/89.00kBgzip CSS9.97/2.25. All12
+actualReactlibraryactions/283steps and283/283exact main state/text/rules/name/
+hidden/highlight/numbering/SVG parity at matched viewport+hostCSS in-memory,
+12actual3Dsceneparity and12mobile layouts PASS. Ether9common/18IUPAC steps,
+manualgeneric+mainalkoxy rules, sourceclosed containers preserved. Cross-course
+session/bounds/stale/wrong-source checks, invalidroutes, Back/Forward/reload,
+Auto1000→700→1100height-onlyresize/invalidviewport/scrollreset, actualwrongmodel
+15.23s+correctcourseretry, pending3D→differentcourse/Exit PASS. Existingviewer
+transition9.28s/zoomACKs/guard/retry and20searchcases PASS.1412protectedpaths,
+1391outsideReact+journals unchanged; host/content/registry/syntax/AST/diff PASS.
+
+Main283run0JSerrors; lifecycle1known CDNsetDisplay/null-viewer event retained,
+0unexpected; viewertransition0errors. Historicalnative51/52control reproduces
+signature. Not fixed/suppressed and not proven absent by a clean large run.
+Auto-only alkene sizing needed independentviewport to avoid content feedback;
+newruntime tested afresh. Laterharness-only menu normalization/nulloptionalDOM
+corrections resumed5then7completedchunks with identical finalruntime fingerprints.
+All283/12scenes belong to finalruntime. See docs/REACT-LESSONS-20261027.md and
+checks/react-lessons-* for actual scripts/rawresults/compressedcaptures.
+
+Baseline1420files docs/checks/react-lessons-before-20261027.json; exactbefore
+bytes and screenshots /tmp/namelecule-react-lessons-20261027/. Sixscreenshots
+captured, fourinspected. Main/sourceapp remains runnable; not published/offline/
+AT/Safari/Drupal/every126exploratory interaction/everyanimationframe/every
+supplementarytoggle/newchemistry certification. Currentcore52 SHA256 unchanged
+throughout approved task:72ac4b4ae3c9bfaa90fde650bf588ed6430acec9ad3ceef72a94a27ad6750e3a.
+Core report: no core file changed. HEAD168e3cec01f941a84d40bbe0dc07156e7baa35d0,
+stable3673c390 unchanged. Pre-existing dirtychanges not attributed to this task.
+
+Latestupstreamchecked a40beec0cc89d40fb90ef84c6d619963ebca136b (priorc2aab76),
+lastactualcontentsync93b759f.2adb973name/suffixlocants+nowrap and a40beecauthor
+handle, plus precedingupdates, remain deferred to preserve main. No merge/fetch/
+refs. CHANGELOGSHA256756304901ecad7fa29e432e6dc1a6ef68058756f8f93c45cbcd2828e1ed03f54;
+scopedupstream.json records reviewedcommits/files. No core update upstream.
+
+Allcurrent sources/docs/results saved on disk. No commit/push/publication/newZIP;
+/tmp screenshots/beforebytes remain temporary. Reused temporaryFirefoxprofiles
+9237/9238 and HTTP8013, normal browser profile unchanged. Approved scope complete;
+no remaining implementation/review work. Next: user can compare all12lessons in
+React library; any further migration/sync needs a concrete scoped plan. URL:
+http://127.0.0.1:8013/react-preview/dist/?v=lessons-20261027#/library
+
+# Current resume point — 2026-10-27 — Shared12-lesson React extension verified; independent review running
+
+User approved extending the reviewed alkane adapter to11more lessons. All12
+catalog links now stay in React,283unchanged source steps. Main/source/core/
+MOL/SDF/JSON/catalog/CSS/package/lock/dependencies/molecule-viewer are unchanged.
+Only main.jsx/LessonPreview.jsx/lesson-host-bridge.js/build-lesson-host.py,
+ReactREADME/generated lesson host and scoped docs/checks changed in this task.
+Baseline1420files docs/checks/react-lessons-before-20261027.json; five exact
+before snapshots /tmp/namelecule-react-lessons-20261027/before/.
+
+Completed Developer evidence: build26modules JS315.71/89.00kBgzip CSS9.97/2.25.
+All12React library actions/283forward steps and283/283exact native main
+state/text/rule/name/hidden/highlight/numbering/SVG parity at matched viewport
++host CSS only in memory;12actual3D atom/bond/chain scenes matched.12mobile
+layouts fit parent/child widths.11generic manualrules + mainalkoxy table at
+etherstep5 open/close; native common9/IUPAC18ethersteps preserved.12cross-course
+sessions/bounds/stale/wrong-course/source guards, malformed/prototype/encoded
+routes, crosscoursehistory/reload, Auto1000→700→1100resize/invalidviewport/
+scrollreset, actualwrong-model15.23stimeout/retry, pending3D→differentcourse,
+Exit PASS. Existingviewertransitions9.28s/zoomACKs/guard/retry and20searchcases
+PASS. Main283run0JSerrors; lifecycle1known nativeCDNsetDisplay/nullviewer,0new;
+viewer0errors. Fullraw event retained, historicalnative51/52control confirms
+signature; not fixed/suppressed. Known limitations in docs/REACT-LESSONS-20261027.md.
+
+Auto-only alkene lesson exposed content-sizing feedback; fixed in adapter by
+independent bounded viewport+native internal scroll, no sourceheight edits.
+New runtime tested afresh. Harness later followed native normalizedmenu instead
+of raw legacyshow.menu and accepted missinggenericruleContainer for ether's
+supplemental DOM. Resumed completed5then7lesson chunks only with identical final
+runtime fingerprints. No mixture of earlier Auto runtime data.1412protected/
+1391outsideReact+journals unchanged; registry/source/host/content/syntax/AST/diff
+checks PASS. Four representative ether/complexketone desktop/mobile screenshots
+visually inspected, sixcaptured. Otherexploratory126molecule/allanimationframes/
+every supplementarytoggle/Safari/AT/Drupal/offline/newchemistry not claimed.
+
+Target frozen for /root/review_react_lessons, agent_type reviewer,fork_turns none.
+Manifest docs/checks/react-lessons-reviewed-target-20261027.json SHA256
+2cf2fea25e1dcab71f78cb5c3263e7d61be6499fa7b0f4bc4dce437462a10f0f,
+16source/docs/check+10generated files. Do not edit target while reviewing;
+only excluded journals may change. Actual independent verdict pending.
+Durable JSON/results/compressed283capture/scripts under docs/checks; screenshots,
+beforebytes and first discarded Auto failure artifacts remain in /tmp.
+
+Upstream read-only check HEADa40beec, priorcheckedc2aab76, actualsync93b759f;
+2adb973suffixlocants/singleline +a40beecauthorhandle overlap name/teaching,
+no core update. CHANGELOGSHA256756304901ecad7fa29e432e6dc1a6ef68058756f8f93c45cbcd2828e1ed03f54.
+No merge/fetch/refs; updates deferred to preserve main. Evidence in scoped
+upstream.json. HEAD168e3cec01f941a84d40bbe0dc07156e7baa35d0/stable3673c390
+unchanged. Core52 unchanged throughout task, SHA256
+72ac4b4ae3c9bfaa90fde650bf588ed6430acec9ad3ceef72a94a27ad6750e3a.
+No commit/push/publication or newZIP. Current files saved on disk; /tmp remains
+temporary. Normal browser profile untouched, reused temporaryFirefox9237/9238.
+Next: actual independent review, any scoped correction/re-review, finalhashcheck
+and review disposition. This remains native-player integration, not completed
+native React renderer migration. React library:
+http://127.0.0.1:8013/react-preview/dist/?v=lessons-20261027#/library
+
+# Current resume point — 2026-10-27 — Shared12-lesson React expansion approved; implementation underway
+
+User approved proposed shared expansion with «ναι». Baseline1420files in
+ docs/checks/react-lessons-before-20261027.json; five before snapshots under
+ /tmp/namelecule-react-lessons-20261027/before/. Generalized LessonPreview/main
+routing and lesson-host bridge/generator to existing catalog IDs. No new lesson
+content, main/core/MOL/SDF/JSON/dependency changes. Build and283-step parity/
+inter-lesson/lifecycle/ether/rule/mobile/3D verification in progress; no claim
+of completion or independent review yet. No commit/push/publication.
+
+Fresh upstream check HEADa40beec0cc89d40fb90ef84c6d619963ebca136b; priorchecked
+c2aab76; lastactualsync93b759f. New2adb973 separates suffix locants and forces
+single-line boxes; a40beec enlarges authorhandle. Files: molview/scenario/
+teaching52, twoCSS,CHANGELOG; no core. CHANGELOG SHA256
+756304901ecad7fa29e432e6dc1a6ef68058756f8f93c45cbcd2828e1ed03f54.
+Read-only commit diff/changelog compared; overlaps name/teaching integration.
+No fetch/merge/ref changes. Deferred with previousupdates to preserve main;
+reported in Greek. Evidence /tmp/namelecule-react-lessons-20261027/upstream.json.
+Next: verify all283steps with native player, correct within scope, then freeze
+exact target and request one fresh independent Reviewer.
+
+# Current resume point — 2026-10-27 — Shared React lesson expansion proposed; awaiting specific approval
+
+After user «ναι» following completed alkane pilot, performed read-only planning.
+All31frozen pilot target hashes still match. Current12lessons total283steps;
+all source steps select existing molecules, use2D or2D+3D, and final steps have
+nameAnalysisMode none. No source lesson edits are needed for the proposed scope.
+Propose generalizing the existing shared lesson route/component/bridge/host
+builder to all12catalog lessons in one bounded task (11additional lessons),
+using unchanged source JSONs and native52player. Update only relevant React
+files/docs/checks; verify all283steps, inter-lesson transitions, history/retry/
+rules, ether naming/alkoxy handling, final3D, mobile and preservation, then one
+fresh independent Reviewer. No new educational content or native renderer rewrite.
+Specific implementation approval pending under AGENTS.md. No new app/core files
+changed, tests executed or commit/push/publication in this planning turn; only
+two journals updated. Prior completed pilot and review details preserved below.
+Last known upstream check c2aab76 / last actual sync93b759f, still deferred to
+preserve main. Next: receive approval for the shared all-lesson expansion plan.
+
+# Current resume point — 2026-10-27 — React alkane lesson pilot completed and independently reviewed
+
+Completed the user-approved21-step alkane lesson pilot in React. Only alkanes
+launches within React at #/lesson/alkanes/step/1; other11lesson links retain the
+standalone player. React owns navigation/counter/history/loading/retry/Exit;
+unchanged native52scenario player renders the existing text, closed optional
+rules, progressive name visibility, numbering and2D/3D. This is incremental
+integration, not a full native React player rewrite. No new teaching content.
+Main/core/MOL/SDF/scenarioJSON/catalog/lock/dependencies unchanged. Existing
+molecule viewer and bridge preserved. No commit/push/publication or newbackup.
+
+Changed/new sources: React LessonPreview.jsx, lesson-host-bridge.js,
+build-lesson-host.py and generated host; main.jsx/preview.css/package build
+command/README, docs/REACT-LESSON-20261027.md and scoped checks/results.
+Baseline1401paths, beforebytes /tmp/namelecule-react-lesson-20261027/before/.
+Frozen21source/docs/check+10generated manifest
+ docs/checks/react-lesson-reviewed-target-20261027.json SHA256
+ d718a1e3bcbbf757cb7fafe70cf84260184cfba9c75bff76cd618d3680ff60cb.
+All hashes verified unchanged after review; only excluded journals updated.
+
+Developer verification: standard build26modules PASS;21/21native state/text/
+rule/name/hidden/highlight/numbering/SVG parity at equal viewport/host layout
+CSS in-memory; actual final3Datom/bond/chain parity.21forward/20reverse, reload,
+deep-link/history/entryBack+Forward, parent/iframekeyboard, manually opened rules,
+invalid/stale/wrong-source packets, rapidroutes, native controlledfailure/retry,
+actualwrong3Dmodel15.15stimeout, pendingunmount/remount, menu butane and390px
+parent+child layout PASS. Existingviewertransitions9.15s+20searchcases PASS.
+Final browser/lifecycle/routes/transitions each0JSerrors. Earlier21/21runs each
+captured one known CDN null-viewer callback (setDisplay/updateJS); both raw
+runs retained. Historical nativecontrol confirms these signatures. Not fixed,
+filtered or disproved by a clean final run. See report and prior entry for the
+host-height correction and harness-only corrections.1395protected paths,
+1376outsideReact+journals unchanged; syntax/host/content/AST/whitespace PASS.
+
+Independent final Reviewer /root/review_react_lesson, agent_type reviewer,
+fork_turns none, ROLE_ID=NAMELECULE_REVIEWER_V1_20261023, confirmed matching
+.codex/agents/reviewer.toml. No Developer history inherited. Read actual scope,
+diffs/native integration/checklist/evidence. No actionableP0/P1/P2/P3findings;
+no corrections required. Independently executed read-only static, both host
+--check, content--check, diff--check, Node bridge+generatedbundle syntax,
+AST/JSON/gzip/hash/source-capture checks. All31target hashes and fourbefore
+snapshots matched before/after. Independently compared final3Dcapture withSDF:
+32atom identities/indices/coordinates and31bonds/orders agree. Inspected four
+screenshots. Browser/build/fault/search execution remains Developer evidence,
+not independent rerun. Reviewer wrote/staged/generated nothing, no-write was
+behavioral, not a claim of enforced filesystem isolation. Scope ready locally
+with documented intermittentnativeJSmol limitation. Safari/AT/Drupal/offline/
+other11Reactlessons/all283steps/newchemistry certification not claimed.
+
+HEAD168e3cec01f941a84d40bbe0dc07156e7baa35d0 and stable3673c390 unchanged.
+Core report: no core file changed throughout this approved task; core52 SHA256
+72ac4b4ae3c9bfaa90fde650bf588ed6430acec9ad3ceef72a94a27ad6750e3a.
+Upstream lastcheckedc2aab76 vs lastactualsync93b759f; Full/rails/tooltip/playbar
+and previousauthor/date/SaveJSON changes remain deferred, preserving main.
+Pre-existing dirty branch changes are not attributed to this task.
+All current sources/docs/results saved to disk; no new ZIP/commit/publication.
+Screenshots and beforebytes in /tmp remain temporary. Servers8013/Firefox9237+
+9238 reused with temporary testprofiles, normalprofile unchanged.
+
+Next: user can inspect the local alkane pilot; choose a bounded next React
+scope through a new concrete plan before code. No remaining required work in
+this approved pilot. Local URL:
+http://127.0.0.1:8013/react-preview/dist/?v=lesson-20261027#/lesson/alkanes/step/1
+
+# Current resume point — 2026-10-27 — React alkane pilot verified; independent review running
+
+User approved21-step alkane lesson pilot with «ναι». Implementation/checks done;
+independent Reviewer /root/review_react_lesson (agent_type reviewer, fresh context,
+fork_turns none) now inspects frozen target. Do not edit target until it reports.
+Manifest docs/checks/react-lesson-reviewed-target-20261027.json SHA256
+ d718a1e3bcbbf757cb7fafe70cf84260184cfba9c75bff76cd618d3680ff60cb,
+21 source/docs/check files +10generated. Journals deliberately excluded.
+
+React owns only the alkane route/navigation/counter/history/loading/retry/Exit;
+native52scenario player retains all21source steps, text/rules/name visibility/
+numbering/2D/3D. Other11lesson links unchanged. Added LessonPreview.jsx,
+lesson-host-bridge.js, build-lesson-host.py/generated host; changed React main.jsx,
+preview.css/package build command/README, checks and docs/REACT-LESSON-20261027.md.
+No main/core/MOL/SDF/JSON/catalog/lock/dependency change; no commit/push/publication.
+
+Build26modules PASS JS315.22/88.79kBgzip CSS9.97/2.25gzip. Actual Firefox:
+21forward/20reverse transitions;21/21native main state/note/rule/name/visibility/
+highlight/numbering/SVG parity at equal per-step viewport and host layout CSS
+in-memory, final actual3Datom/bond/chain parity. Desktop1500/mobile390 inspected;
+no horizontal overflow in parent/child. Rules manually open, reclose on next;
+reload/deep-link/history/entryBack/Forward/parent+iframekeys/invalid/stale packets/
+rapidroutes/native failure hook/retry/menu butane/pending unmount/remount PASS.
+Actualwrongmodel host timeout15.15s + correct retry. Reused existing viewer
+transition suite PASS (9.15swrongmodel, zoomACKs/guard/retry/unmount),20librarysearch
+cases PASS. Final browser/lifecycle/routes/transition runs each0JSerrors.
+
+First parity exposed viewport-height coupling at expanded step18; fixed only
+in lesson adapter by reserving native pixel budget and calling native fitter on
+height-only resize, then full parity passed. Two full functional21/21runs before
+final clean run captured one native CDN null-viewer callback each (setDisplay,
+then updateJS). Raw events retained in docs/checks/react-lesson-browser-initial-*
+and classified against actual existingv51/v52control; never suppressed. Known
+JSmol teardown issue remains, not proven fixed by a final zero-error run. Earlier
+harness-only issues: missing initial childcontext, successfulEscape discarding
+context before keyUp, incomplete known-signature list; corrected tests, notmain.
+
+Staticbaseline1401paths:1395protected/1376outsideReact+journals unchanged.
+Host/content--check, sourceJS/PythonAST/diff--check PASS. Main/core unchanged;
+core52SHA25672ac4b4ae3c9bfaa90fde650bf588ed6430acec9ad3ceef72a94a27ad6750e3a.
+HEAD168e3cec01f941a84d40bbe0dc07156e7baa35d0/stable3673c390 unchanged.
+Actualscreenshots/beforebytes /tmp/namelecule-react-lesson-20261027/; durable
+results/compressedcapture/scripts in docs/checks. No newbackup ZIP. Services
+8013/Firefox9237+9238 reused; sandboxlocalhostcurl failed duepermissions, read-only
+escalated checks showed services alreadyrunning. Normalbrowserprofile untouched.
+
+Upstream lastcheckedc2aab76, actualcontentsync93b759f; latestFull/rails/tooltip/
+identity and earlierauthor/date/SaveJSON remain separate, per main-preservation.
+No Safari/AT/Drupal/offline/other11Reactlessons/full283steps/newchemistry audit.
+Next: receive actual Reviewer findings, correct/re-review only if needed, verify
+frozenhashes and record disposition. Main untouched, migration still incremental.
+ReactURL http://127.0.0.1:8013/react-preview/dist/?v=lesson-20261027#/lesson/alkanes/step/1
+
+# Current resume point — 2026-10-27 — React alkane lesson pilot approved; implementation underway
+
+User approved the specific21-step alkane lesson pilot with «ναι».
+Baseline1401files: docs/checks/react-lesson-before-20261027.json;
+before bytes /tmp/namelecule-react-lesson-20261027/before/.
+Added separate LessonPreview, native lesson bridge and host generator; React
+owns navigation/deep-link/exit, existing native scenario owns lesson content.
+Edited only React main.jsx/preview.css/package build command so far.
+Main/core/MOL/SDF/scenarios and reviewed molecule bridge remain unchanged.
+Build and actual21-step/native parity/lifecycle/3D checks are in progress.
+Do not claim completed checks or independent review yet. Latest upstream
+c2aab76 remains deferred to keep main unchanged (see prior planning record).
+No commit/push/publication. Next: build, browser checks, resolve findings,
+freeze exact target and request fresh-context independent Reviewer.
+
+# Current resume point — 2026-10-27 — Next React lesson pilot proposed; awaiting plan approval
+
+User: «προχωράμε», after completed independently reviewed React PNG task.
+Read-only investigation only; no new implementation is authorized by a specific
+plan yet. Proposed next bounded task: React lesson route for alkanes only,
+21 existing steps / five existing molecules. React would own navigation,
+step counter, route/deep-link and return to the React library, retaining the
+unchanged native v52 scenario engine, lesson text/graphics/rules/3D inside a
+separate generated same-origin lesson host. This is incremental integration,
+not a claim that the full lesson renderer is rewritten in React. Other eleven
+lessons would keep their current links. No quiz or new educational content.
+
+Planned files: new react-preview/src/LessonPreview.jsx,
+public/lesson-host-bridge.js, tools/build-lesson-host.py; existing src/main.jsx,
+src/preview.css and package.json build command, plus scoped README/checks/docs.
+Do not alter the reviewed molecule-viewer bridge or any main/core/MOL/SDF/
+scenario source. Acceptance: all21steps and reverse navigation, source-state
+parity, optional rules remain closed, numbering/highlights/name visibility,
+final3D/menu behavior, reload/deep-link/history/Exit/Escape, keyboard/mobile,
+loading/error/retry/unmount, unchanged-main hashes and existing viewer smoke.
+Independent fresh-context Reviewer after freezing any future implementation.
+Wait for user approval before editing application code, per AGENTS.md.
+
+Mandatory upstream read succeeded via read-only GitHub API after sandbox DNS
+failure. Current HEAD c2aab76ca0f64e08260b1052520fed0a3aadd8e6; last checked
+previously f3033d6e9ece77878a341d844b71bfd16a9de488; last actually synchronized
+remains93b759f5891d7b5a1172646032d83215d60b7604. CHANGELOG SHA256
+def14f7288e794baeca8716cf566ed21039d30225be8e8b32c0e868a0b556352.
+New commit adds tooltip edge fixes, full-height presentation rails, relative
+Full viewer heights and play-bar identity. Cumulative changes since actual sync
+also include author/date/Save-JSON. Overlap: scenario/player/layout and molview52
+resize behavior used by React hosts; no core/MOL changes upstream. No merge,
+fetch or refs changed. Deferred to a separate sync decision because user requires
+main unchanged; proposed pilot uses current checked local52. Findings reported
+in Greek. No claim that the new upstream behavior is integrated or tested.
+
+Verified previous PNG frozen21-file manifest: all hashes still match.
+Alkane scenario read:21steps, ethane/butane/methyl_2_pentane/
+dimethyl_2_3_butane/ethyl_3_dimethyl_2_5_hexane. No new app/build/browser tests
+run in this planning turn. Core52 SHA256 remains
+72ac4b4ae3c9bfaa90fde650bf588ed6430acec9ad3ceef72a94a27ad6750e3a.
+Only two journals updated; pre-existing dirty files are not this turn's changes.
+No core changes, commit, push, publication or new backup. Next: obtain approval
+of the bounded alkane lesson pilot, then baseline/proceed within approved scope.
+
+# Current resume point — 2026-10-27 — React 2D PNG completed and independently reviewed
+
+Ολοκληρώθηκε το εγκεκριμένο βήμα «Αποθήκευση PNG» για τις2Dπροβολές React.
+Τρία runtime αρχεία άλλαξαν: src/MoleculePreview.jsx, public/viewer-host-bridge.js,
+src/preview.css, μαζί με React README, αναφορά και σχετικά tests/evidence.
+Η Κύρια, όλα τα core, τα MOL/SDF, τα σενάρια, ο κατάλογος και package/lock
+διατηρήθηκαν αμετάβλητα. Δεν έγινε commit, push ή δημοσίευση.
+
+Ο adapter καλεί την υπάρχουσα fSave2DPng χωρίς νέο drawing/serialization.
+Το αίτημα δεσμεύει μόριο/mode/CHn/naming/selectedcomponent, με source/origin/
+session/ID/model gates. Περιμένει πλήρη αρίθμηση. Νεότερη εντολή πριν το snapshot
+ακυρώνει export· μετά το snapshot η ουρά περιμένει native blob-anchor click,
+ώστε να μείνουν σταθερά τα globals που χρησιμοποιεί ο ασύγχρονος filename.
+UI «Ζητήθηκε λήψη PNG», χωρίς ισχυρισμό disk save. Sync throw δίνει μη τερματικό
+export error. Native async timeout8s σταματά host/μπλοκάρει late download και
+προσφέρει ειδικό retry, απορρίπτοντας pending callbacks. Δεν προστέθηκε3DPNG.
+
+Developer checks: build25modules JS310.16/87.43kB gzip CSS8.74/2.04gzip PASS.
+Πραγματικά40React+40standalone native PNG downloads στο /tmp:40/40 ίδιαbytes,
+SHA256/filename/dimensions/PNGsignature/IEND/1200width,3μορφές/CHn/highlights/
+numbering/2ethernames/Nhighlight/HCHO/methane/complexketone.0appJSerrors.
+Keyboard Enter, invalid/stale/wrongcontext/3D, syncthrow, pre-snapshotcancel,
+heldtoBlob→newmodel με σωστό παλιόfilename, actual8stimeout/lateblock/retry PASS.
+Unmount με retainedcallback δεν κατέβασε latefile· remountclean. Existing3D
+transition suite PASS (zoomACKs/pendingguard/wrongmodel9.16s/retry/remount),
+0appJSerrors. Screenshots1500/390px και actualPNGs επιθεωρήθηκαν. Host/content
+--check, sourceJS syntax/PythonAST/diff και static1384protected/1365outsideReact
+journals PASS. Τα αρχικά δύο harness failures διορθώθηκαν μόνο σε tests:
+ήδη ενεργή namingτιμή αντίinvalid και initialACK μετά από skip40resumecaptures.
+Η πλήρης τελική εκτέλεση διατήρησε και επαλήθευσε τα ίδια runtime fingerprints.
+
+Γνωστός προϋπάρχων περιορισμός: ο native fDrawNameBoxes στο molview52:3381
+έχει fixed40pxfont/1200width και κόβει πολύ μεγάλα ονόματα στο κάτω footer.
+Επιβεβαιώθηκε σε React και byte-identical standalone PNG σύνθετης κετόνης.
+Γνωστοποιήθηκε στον χρήστη και σε README/report/Reviewer. Δεν διορθώθηκε
+σιωπηρά με αλλαγή Κύριας ή νέα μέθοδο σχεδίασης. Παραμένει χωριστή εκκρεμότητα.
+
+Ανεξάρτητος Reviewer /root/review_react_png, agent_type reviewer,
+fork_turns none, ROLE_ID=NAMELECULE_REVIEWER_V1_20261023, χωρίς Developer history.
+Frozen docs/checks/react-png-reviewed-target-20261027.json, SHA256
+6f03e747d1ce6d0625a4ace02d1ba151954b4f295bea886ec10d26cf9efc641e,
+14source/docs/checkfiles+7generated, hashes συμφωνούν πριν/μετά. Κανένα actionable
+P0/P1/P2/P3 εύρημα· δεν απαιτούνται διορθώσεις. Εξέτασε πραγματικό taskdiff,
+queue/context/lifecycle/timeout/status και native exporter. Ανεξάρτητα read-only
+static/host/content/diff/node--check, baseline/before hashes, JSON/gzip/AST,
+manifest/capturefingerprints και πραγματικά40PNGpairs/dimensions PASS. Επιθεώρησε
+screenshots/PNGs, διαχώρισε την υπάρχουσα clippingπερίπτωση από παλινδρόμηση.
+Browser/build/fault/lifecycle είναι Developer evidence, όχι δική του εκτέλεση.
+Δεν έγραψε αρχεία, no-write behavioral όχι αποδεδειγμένο enforced sandbox.
+Δεν δηλώνεται Safari/AT/OSSaveDialog/Drupal/all126states/all283steps ή νέα
+IUPAC/conformer πιστοποίηση. Το συμπέρασμα αφορά αποκλειστικά frozen scope.
+
+Baseline1390paths docs/checks/react-png-before-20261027.json, beforeReact
+/tmp/namelecule-react-png-20261027/before/. HEAD168e3cec01f941a84d40bbe0dc07156e7baa35d0,
+stablethesis-work3673c390c1fb1b7cbcc79411a6e1e3720e97f7ab ανέπαφα. Προγενέστερα
+dirty changes του branch δεν αποδίδονται στο PNG βήμα. Αναφορά
+ docs/REACT-PNG-20261027.md, scripts/results/compressedcapture στο docs/checks.
+ActualPNGs/layouts στο /tmp/namelecule-react-png-20261027/. Ο testFirefox9238
+γράφει μόνο στον εκεί προσωρινόdownloadfolder· normalbrowsersettings ανέπαφα.
+HTTP8013 και παλιός testFirefox9237 διατηρήθηκαν. Δεν έγινε νέο backupZIP ή
+commit· όλα τα current sources/docs αποθηκευμένα στον δίσκο, /tmp artifacts προσωρινά.
+
+Portable official Node24.22.1 αποκαταστάθηκε με officialSHASUMS256,
+SHA256d132557e7ee2b85af08b0c8c34338e65c6430f2238d01f727728ef42dc83b035.
+Προηγούμενο VSCodeNode24.21 απέτυχε σε unsigned native rolldown, όχιmissingdeps.
+Δεν έγινε reinstall packages/signing/αλλαγή globalρυθμίσεων· αγνοούμενα build
+caches μπορεί να αναγεννήθηκαν. Metadata /tmp/namelecule-react-tools/installation.json.
+
+Υποχρεωτικός πρόσφατος upstream επανέλεγχος HEADf3033d6e9ece77878a341d844b71bfd16a9de488,
+CHANGELOGSHA2565e2cebfc34729e526c6a2a8e25f18712e9e6be2442953ea51503d217fc19f127,
+ίδια με προηγούμενο. Last actually synced93b759f. Author/date/SaveJSON update
+παραμένει για χωριστό sync· evidence /tmp/namelecule-react-png-20261027/upstream.json.
+Δεν έγινε fetch/merge/αλλαγήrefs ή main sync. Core report: κανένα core αρχείο
+δεν άλλαξε σε ολόκληρο το PNG βήμα. Κύρια ανέπαφη και δημοσίευση αναβλημένη.
+Επόμενο: νέο συγκεκριμένο σχέδιο React ή χωριστή αντιμετώπιση nativefooter/
+upstream authoring, μόνο εντός αντίστοιχης έγκρισης. Το εγκεκριμένο PNG scope
+δεν έχει άλλη εκκρεμή εργασία. Η συνολική μετάβαση σε React παραμένει σταδιακή.
+ReactURL http://127.0.0.1:8013/react-preview/dist/?v=png-20261027#/viewer
+
+# Current resume point — 2026-10-27 — React 2D PNG verified; independent review running
+
+Ολοκληρώθηκε η εγκεκριμένη υλοποίηση PNG σε3Reactruntime αρχεία:
+MoleculePreview.jsx, viewer-host-bridge.js, preview.css, με README/tests/docs.
+Native fSave2DPng αμετάβλητη, ίδια MOL/SVG/nameboxes. Έλεγχος current context,
+αναμονή πλήρους αρίθμησης, ακύρωση πριν από snapshot σε νέα εντολή, κράτηση ουράς
+μετά το snapshot μέχρι native blob-anchor click για σταθερό filename. Η ένδειξη
+«Ζητήθηκε λήψη PNG» δεν σημαίνει disk save. Sync throw μη τερματικό export error·
+native async timeout8s σταματά host, μπλοκάρει late download και επιτρέπει retry.
+
+Developer build25modules PASS JS310.16/87.43kB gzip CSS8.74/2.04gzip. Επίσημο
+portable Node24.22.1 αποκαταστάθηκε στο /tmp με officialSHASUMS256 και SHA256
+ d132557e7ee2b85af08b0c8c34338e65c6430f2238d01f727728ef42dc83b035. VSCodeNode
+απέτυχε σε unsignednativebinding, όχιmissingpackage· δεν έγινε reinstall/signing
+ή αλλαγή package/lock. Απομονωμένο Firefox9238 downloadprofile γράφει μόνο /tmp.
+40React+40standalone native PNG λήψεις:40/40 byte-identical, σωστή PNG δομή,
+1200px/ύψος/filename/γραφικά/highlights/numbers/nameboxes. Καλύφθηκαν3μορφές,
+CHn, branches,2ethernames,Nhighlights,HCHO,methane,complexketone.0appJSerrors.
+Αρνητικά/λάθος context/3D, syncfailure, cancelbeforecapture, async heldcallback→
+newmodel, πραγματικό8stimeout/lateblock/retry, keyboard Enter PASS. Unmount με
+retainedcallback δεν κατέβασε latefile, remount clean.3Dtransitionregression PASS
+στο9237 (wrongmodel9.16s/zoom/pendingguard/retry/remount),0appJSerrors.1500/390px
+screenshots και actualethanol/largeketonePNGs επιθεωρήθηκαν. Static1384protected/
+1365outsideReactjournals, host/content--check,JS/Python syntax,diff--check PASS.
+Τα δύο πρώτα harness failures ήταν ήδη ενεργή naming προτίμηση αντίinvalid και
+έλλειψη αρχικού ACK μετάresume40captures. Μόνοtestδιορθώσεις, όχιruntimepatch.
+
+Γνωστό προϋπάρχον: native fixed40px/1200width namefooter κόβει πολύ μακρά ονόματα.
+Η σύνθετη κετόνη το δείχνει πανομοιότυπα στην Κύρια και React. Ο χρήστης
+ενημερώθηκε, αναφορά/README το δηλώνουν. Δεν αλλάζει σιωπηρά ο exporter/Κύρια.
+
+Αναφορά docs/REACT-PNG-20261027.md, checks/react-png-* και compressed capture.
+Αρχικό baseline1390paths docs/checks/react-png-before-20261027.json·beforebytes
+/tmp/namelecule-react-png-20261027/before/. Main/core/MOL/SDF/scenarios ανέπαφα.
+Frozen14source/docs/check+7generated manifest docs/checks/react-png-reviewed-target-20261027.json,
+SHA2566f03e747d1ce6d0625a4ace02d1ba151954b4f295bea886ec10d26cf9efc641e.
+Δεν αλλάζουν τα frozenfiles όσο κάνει review ο /root/review_react_png,
+agent_type reviewer,forknone. Παραδόθηκαν scope/base/beforebytes/exacthashes,
+acceptance και knownfooterlimitation. Αναμένουμε πραγματική γνωμάτευση.
+Μόνοjournals εκτόςtarget ενημερώνονται. Επόμενοπαραλαβήευρημάτων/διορθώσειςανχρειαστεί.
+
+Upstreamεπανέλεγχος HEADf3033d6 και CHANGELOGSHA2565e2cebfc34729e526c6a2a8e25f18712e9e6be2442953ea51503d217fc19f127,
+ίδια με προηγούμενο·lastcontentsync93b759f. Author/date/SaveJSON update παραμένει
+για χωριστόsync. Κανέναcore άλλαξε στοPNGβήμα. Χωρίςcommit/push/δημοσίευση.
+
+# Current resume point — 2026-10-27 — React 2D PNG approved; implementation in progress
+
+Ο χρήστης ενέκρινε με «ναι» το συγκεκριμένο σχέδιο2DPNG. Κύρια/core/μοριακά/
+σενάρια ανέπαφα, χωρίς commit/push/δημοσίευση. Native fSave2DPng, χωρίς νέο
+renderer. MoleculePreview/bridge/προαιρετικόCSS και tests/docs. Απλό ACK δεν
+σημαίνει ολοκληρωμένη αποθήκευση: UI θα δηλώνει μόνο αίτημα λήψης.
+Baseline docs/checks/react-png-before-20261027.json, beforeReact bytes
+/tmp/namelecule-react-png-20261027/before/. Υλοποιήθηκαν UI/bridge/CSS. Build25modules PASS JS310.16/87.43gzip,
+CSS8.74/2.04gzip με portable official Node24.22.1 στο /tmp, SHA256 επαληθευμένο.
+Το VSCode Node24.21 διαβάζειJS αλλά απορρίπτει unsigned native rolldown module·
+δεν είναι missing dependency. Δεν άλλαξαν packages/lock ή native modules.
+Ο adapter περιμένει ολοκλήρωση αρίθμησης, κατόπιν native download anchor click,
+κρατώντας την ουρά ώστε να μη μεταβληθούν globals/filename. Πριν το snapshot
+νεότερη εντολή ακυρώνει export· μετά κρατείται η ουρά ως το πραγματικό download
+request. Native async timeout8s σταματά τον host, φράζει late download και δίνει
+ειδικό μήνυμα/retry. Απλό invoke/ACK δεν δηλώνεται ως αποθήκευση στον δίσκο.
+40πραγματικά PNGs παράχθηκαν, native parity/faultchecks σε εξέλιξη.
+Το πρώτο invalid-packet harness χρησιμοποίησε την ήδη ενεργή global common
+προτίμηση και έτσι έστειλε έγκυρη raw export εντολή. Διορθώθηκε μόνο το test
+σε πραγματικά διαφορετική τιμή· source δεν άλλαξε και διατηρήθηκαν40captures.
+Static1384protected/1365outsideReactjournals PASS. Review εκκρεμεί.
+Βρέθηκε ήδη εγκατεστημένο Node24.21 στο VSCode Code binary με
+ELECTRON_RUN_AS_NODE=1· δεν απαιτείται download ή νέα dependency εγκατάσταση.
+Επόμενο: scoped adapter/UI, πραγματικάPNG/nativeparity/μεταβάσεις και Reviewer.
+
+# Current resume point — 2026-10-27 — React 2D PNG export proposed; approval pending
+
+Ο χρήστης είπε «προχωράμε» μετά το ολοκληρωμένο CHn review. Έγινε μόνο ανάγνωση
+του resume/README, status/diffs και των σχετικών React/native export πηγών.
+Η React δεν προσφέρει ακόμη αποθήκευση εικόνας. Η Κύρια έχει ήδη fSave2DPng
+στο molview52: κλωνοποίηση του τρέχοντος SVG, διατήρηση labels/highlights,
+canvas1200px, προσθήκη name boxes και browser download. fGetNameBoxes διαβάζει
+κείμενο/selection, χωρίς εξάρτηση από την ορατότητα του legacy name panel.
+Ο 3D exporter είναι ξεχωριστός και δεν περιλαμβάνεται στο προτεινόμενο πρώτο βήμα.
+
+Συγκεκριμένη πρόταση προς έγκριση: κουμπί «Αποθήκευση PNG» για την τρέχουσα2D
+προβολή στη React, με κλήση της υφιστάμενης fSave2DPng μέσω γέφυρας. Διατηρούνται
+μορφή/CHn/επισημάνσεις/ονομασία· έλεγχος ετοιμότητας/στόχου/τελευταίας εντολής
+ώστε να μη ληφθεί παλιό ή ενδιάμεσο μοντέλο. Ο υπάρχων exporter επιστρέφει void
+και η πραγματική λήψη είναι asynchronous, άρα ένα απλό command ACK δεν πρέπει
+να παρουσιάζεται ως επιβεβαίωση αποθήκευσης στον δίσκο. Δεν επινοείται νέος renderer.
+Αρχεία: React MoleculePreview.jsx, viewer-host-bridge.js, προαιρετικό preview.css
+για το κουμπί, συν σχετικά checks/README/docs. Κύρια/core/MOL/scenarios ανέπαφα.
+Προβλέπονται έλεγχοι πραγματικού PNG payload/διαστάσεων/περιεχομένου και parity
+με native export σε μορφές/CHn/highlights, φόρτωση/γρήγορες αλλαγές/όρια 3D,
+keyboard/build και ανεξάρτητος Reviewer. Δεν έγινε νέα υλοποίηση ή test.
+
+Περιμένουμε έγκριση αυτού του νέου συγκεκριμένου βήματος όπως απαιτεί AGENTS.md.
+Η προηγούμενη έγκριση CHn δεν υποκαθιστά τη νέα. Μόνο δύο journals ενημερώθηκαν.
+Κανένα core ή αρχείο εφαρμογής δεν άλλαξε. Χωρίς commit/push/δημοσίευση.
+Η πρόσφατη upstream f3033d6 authoring ενημέρωση παραμένει χωριστή εκκρεμότητα,
+με last actually synchronized93b759f· δεν έγινε νέος upstream έλεγχος σε αυτή
+τη σύντομη συνέχεια και δεν δηλώνεται ότι ενσωματώθηκε.
+Επόμενο: έγκριση συγκεκριμένου PNG σχεδίου, νέο baseline και υλοποίηση.
+
+# Current resume point — 2026-10-27 — React CHn completed and independently reviewed
+
+Ολοκληρώθηκαν οι εκκρεμείς έλεγχοι μετά την εντολή «συνεχίζουμε;». Η εγκεκριμένη
+προσθήκη «Σύμβολα CHn» στη React είναι πλέον ελεγμένη και καταγεγραμμένη. Η Κύρια
+παραμένει ανέπαφη, όπως ζήτησε ο χρήστης. Δεν έγινε commit, push ή δημοσίευση.
+Δεν προστέθηκε νέο implementation scope κατά την επανέναρξη.
+
+Η υλοποίηση άλλαξε μόνο δύο React runtime αρχεία: src/MoleculePreview.jsx και
+public/viewer-host-bridge.js, μαζί με React README και σχετικά docs/checks.
+Ο native #zigzagCheck χρησιμοποιεί το ίδιο skeletal MOL. Το normalized mode
+skeletal με bool symbols διατηρεί το υπάρχον condensedZigZag, χωρίς νέα χημεία,
+συντεταγμένες, CSS ή dependencies. Το checkbox περιμένει το τελευταίο ACK,
+ελέγχεται επίσης με ref και ο στόχος επανελέγχεται κατά την queued εκτέλεση.
+Διατηρούνται native resets/preservation, methane fallback και retry/remount.
+Κατά την επανέναρξη δεν άλλαξε ούτε γραμμή runtime, build, MOL ή σεναρίου.
+
+Developer evidence: το προγενέστερο build25modules JS309.00/87.11kB gzip,
+CSS8.65/2.02gzip και το πραγματικό Firefox96/96 exact SVG/name/chain/analysis/
+highlight/numbering parity παρέμειναν ίδια.19σειρές και3διακλαδισμένα παραδείγματα
+με όλα τα ορατά συνθετικά, keyboard, rules,3Dcoordinates, μεταβάσεις, invalid/
+stale/pending, methane και retry/remount PASS,0appJSerrors. Queue regression
+PASS μετά από latest-ACK gate. Οι πρώτες διορθώσεις test helpers για already-
+checked radio και πλήρη sequential numbering κετονών ήταν αλλαγές harness,
+χωρίς αλλαγή της Κύριας. Τα τρέχοντα capture/runtime fingerprints συμφωνούν.
+
+Κατά το resume επανήλθαν26προσωρινά before/screenshot αρχεία από το ZIP μόνο
+στο /tmp. Τα screenshots1500/390px επιθεωρήθηκαν από Developer και Reviewer:
+checkbox/subscript/controls χωρίς εμφανή αποκοπή. Επανεκκινήθηκαν ο root HTTP
+server8013 και headlessFirefox9237 με νέο προσωρινό profile, κατόπιν κανονικής
+έγκρισης. Ο focused test-v52-react-transitions-browser-20261027.py πέρασε στο
+ίδιο build: ordered zoom ACKs, pending3D→2D guard, actual wrong-model failure
+9.17s, retry και pending-unmount/remount.0recorded appJSerrors. Firefox BiDi
+stderr είχε internal chrome://remote WeakMap diagnostics, χωριστά από τα
+application-context errors. Restricted --help απόπειρα είχε έξοδο134 πριν από
+την κανονικά εγκεκριμένη εκτέλεση· δεν θεωρείται επιτυχής browser δοκιμή.
+Portable Node από /tmp δεν υπάρχει πια· δεν έγινε νέα εγκατάσταση ή rebuild.
+Τα προηγούμενα Node/build αποτελέσματα δηλώνονται με την πραγματική προέλευση.
+
+Ανεξάρτητος Reviewer /root/review_react_symbols, agent_type reviewer,
+fork_turns none, ROLE_ID=NAMELECULE_REVIEWER_V1_20261023, χωρίς ιστορικό Developer.
+Frozen manifest docs/checks/react-symbols-reviewed-target-20261027.json,
+SHA25693d6142a98b1f56c651c2e96ea8c8cea9ff05dc99db09b15f110ca4a9b770615:
+14source/docs/checkfiles+7generated, hashes συμφωνούν πριν/μετά. Δεν εντόπισε
+actionable P0/P1/P2/P3 ευρήματα· δεν απαιτούνται διορθώσεις. Εξέτασε πραγματικό
+task diff, τους native handlers και την ουρά/ACK/state. Ανεξάρτητα read-only
+static/host/content/diff, JSON/gzip/AST/hashes και screenshot inspection PASS.
+Επιβεβαίωσε1373protected paths αμετάβλητα,1353εκτόςReact/journals, current
+capture96/96/fingerprint και αμετάβλητα HEAD/stable. Δεν εκτέλεσε browser/build/
+Node checks. Δεν έγραψε αρχεία. No-write ήταν behavioral, όχι επιβεβαιωμένο
+read-only sandbox. Κανένα νέο καθολικό IUPAC/conformer,126allstates/283steps,
+Safari/AT/Drupal test δεν δηλώνεται. Απουσία ευρημάτων αφορά το frozen scope.
+
+Βάση HEAD168e3cec01f941a84d40bbe0dc07156e7baa35d0, stablethesis-work
+3673c390c1fb1b7cbcc79411a6e1e3720e97f7ab. Αρχικό CHn baseline1378paths:
+docs/checks/react-symbols-before-20261027.json, beforebytes
+/tmp/namelecule-react-symbols-20261027/before/ (διαθέσιμα και στο ZIP).
+Resume baseline1388paths /tmp/namelecule-react-symbols-resume-20261027/baseline.json.
+Σε αυτό το resume άλλαξαν μόνο η αναφορά REACT-SYMBOLS και τα δύο journals,
+με νέα transition evidence/review manifest. Προϋπάρχον dirty έργο δεν αποδίδεται
+στην επανέναρξη. Core report: κανένα core δεν άλλαξε σε όλο το CHn βήμα ή
+στο resume. Η προηγούμενη upstream v52 ενσωμάτωση παραμένει χωριστό ιστορικό.
+
+Υποχρεωτικός upstream έλεγχος27/10 ολοκληρώθηκε: restricted DNS αποτυχία,
+έπειτα εγκεκριμένη read-only πρόσβαση χωρίς παράκαμψη. Last checked HEAD
+f3033d6e9ece77878a341d844b71bfd16a9de488 (μετά το39664e52 doc update).
+Last actually synchronized παραμένει93b759f5891d7b5a1172646032d83215d60b7604.
+CHANGELOG SHA2565e2cebfc34729e526c6a2a8e25f18712e9e6be2442953ea51503d217fc19f127.
+Νέα metadata author/created και Save-window export με download fallback.
+Νέα αρχεία που αλλάζει: scenario52JS/CSS, CHANGELOG και didactic-scenario-plan.
+Κανένα core/μόριο. Επικάλυψη με τις τοπικές προσαρμογές scenario/player και τις
+καταγραφές απαιτεί χωριστό έλεγχο συγχρονισμού, με διατήρηση της Κύριας.
+Δεν ενσωματώθηκε το νέο upstream και δεν μετακινήθηκαν refs. Ο χρήστης
+ενημερώθηκε στα ελληνικά. Evidence /tmp/namelecule-react-symbols-resume-20261027/upstream.json.
+
+Τρέχουσα αναφορά docs/REACT-SYMBOLS-20261027.md, checks/react-symbols-*.
+Το ZIP communication/checkpoints/Namelecule-React-CHn-20261027-143807.zip είναι
+το ιστορικό pause checkpoint και δεν περιέχει τη μεταγενέστερη τελική γνωμάτευση/
+transition evidence. Αυτά αποθηκεύτηκαν στα τρέχοντα docs. Δεν έγινε νέο ZIP
+ή commit χωρίς σχετική εντολή. Το παλιό saved-target είναι ιστορικό, το νέο
+reviewed-target περιγράφει την τρέχουσα ελεγμένη έκδοση.
+
+Επόμενο: επιλογή συγκεκριμένου νέου βήματος React ή χωριστός σχεδιασμός
+συγχρονισμού της νεότερης authoring ενημέρωσης, χωρίς αυθαίρετη αλλαγή της Κύριας.
+Δεν απαιτείται άλλη εργασία στο εγκεκριμένο CHn scope. Η συνολική μεταφορά
+σε React δεν έχει ολοκληρωθεί: ο player/editor και ο renderer παραμένουν
+στον υφιστάμενο μηχανισμό. Δημοσίευση παραμένει ρητά αναβλημένη.
+Τοπική React http://127.0.0.1:8013/react-preview/dist/#/viewer
+
+# Current resume point — 2026-10-27 — React CHn checks complete; independent review running
+
+Ο χρήστης επανέλαβε «συνεχίζουμε;» μετά την αποθήκευση/διακοπή. Συνεχίστηκαν
+οι ήδη εγκεκριμένοι εκκρεμείς έλεγχοι, χωρίς νέα υλοποίηση ή αλλαγή runtime.
+Δεν υπάρχει νέα άδεια commit/push/δημοσίευσης. Η Κύρια παραμένει ανέπαφη.
+
+Saved-target19hashes επιβεβαιώθηκαν πριν από ενημέρωση της αναφοράς.26 before/
+screenshot artifacts επανήλθαν από το τοπικό ZIP μόνο στο /tmp, χωρίς αντικατάσταση
+πηγών. Τα1500/390px screenshots επιθεωρήθηκαν: σωστό checkbox/subscript και
+διάταξη, χωρίς εμφανή αποκοπή. Το υπάρχον μικρό default μόριο/zoom διατηρείται.
+Το παλιό portable Node δεν υπάρχει πλέον· δεν εγκαταστάθηκε νέο Node ή dependency
+και δεν επαναλήφθηκε το build. Το τελικό αποθηκευμένο build έχει ακριβώς τα ίδια
+bytes. Προγενέστερα build/catalog/filter/contract αποτελέσματα διατηρούν την
+πραγματική προέλευσή τους και δεν παρουσιάζονται ως νέα εκτέλεση.
+
+Οι τοπικές υπηρεσίες8013/9237 δεν λειτουργούσαν μετά τη διακοπή. Ξεκίνησαν ξανά
+με κανονικά εγκεκριμένες κλήσεις: HTTP στο root, Firefox headless με ξεχωριστό
+/tmp/namelecule-firefox-symbols-review-20261027 profile. Μια αρχική --help
+απόπειρα στο restricted sandbox τερμάτισε134, χωρίς έγκυρο browser test. Έπειτα
+ο πραγματικός focused test-v52-react-transitions-browser-20261027.py PASS στο
+αμετάβλητο build: orderedzoomACKs, pending3D→2Dzoomguard, πραγματική αποτυχία
+λανθασμένου μοντέλου9.17s, retry, pending-unmount/remount. Recorded appJSerrors0.
+Το Firefox BiDi stderr περιείχε εσωτερικά chrome://remote WeakMap diagnostics,
+διαφορετικά από τα application-context errors· δεν δηλώνεται καθολικά καθαρό
+browser stderr ή κάποια διόρθωση του Firefox. Νέο αποτέλεσμα:
+docs/checks/react-symbols-transitions-20261027.json.
+
+Επανέλεγχος compressed capture96/96 και όλων runtime fingerprints PASS.
+Static1373protected/1353outsideReactjournals, host/content --check, diff --check
+PASS. Νέο resume baseline1388paths /tmp/namelecule-react-symbols-resume-20261027/baseline.json.
+Καμία core αλλαγή από αυτό το resume baseline ή το αρχικό CHn baseline1378.
+
+Υποχρεωτικός upstream έλεγχος27/10: restricted DNS απέτυχε, κανονική escalation
+ολοκληρώθηκε χωρίς παράκαμψη. Last checked HEAD πλέον
+f3033d6e9ece77878a341d844b71bfd16a9de488, μετά το39664e52 doc update.
+Last actually content-synchronized παραμένει93b759f5891d7b5a1172646032d83215d60b7604.
+CHANGELOG SHA2565e2cebfc34729e526c6a2a8e25f18712e9e6be2442953ea51503d217fc19f127.
+Νέα καταχώριση «Scenario author + creation date»: optional author/created,
+normalization/legacy defaults και export Save picker με download fallback.
+Το νέο commit αλλάζει μόνο css/mulermoc-nom-scenario-52.css,
+js/mulermoc-nom-scenario-52.js, docs/CHANGELOG.md, docs/didactic-scenario-plan.md.
+Δεν αλλάζει core/μόρια. Επικάλυψη υπάρχει με το προσαρμοσμένο scenario52/player
+και τις τοπικές καταγραφές· να συγχρονιστεί χωριστά, μετά την ολοκλήρωση CHn,
+διατηρώντας ρητά τον όρο της ανέπαφης Κύριας και τις τοπικές προτιμήσεις.
+Δεν ενσωματώθηκε το νέο upstream και δεν άλλαξαν refs/αυθεντικό CHANGELOG.
+Evidence /tmp/namelecule-react-symbols-resume-20261027/upstream.json.
+
+Frozen target docs/checks/react-symbols-reviewed-target-20261027.json,
+SHA25693d6142a98b1f56c651c2e96ea8c8cea9ff05dc99db09b15f110ca4a9b770615,
+14source/docs/checkfiles+7generated. Πραγματικό task diff προς το αρχικό CHn
+baseline και beforebytes /tmp/namelecule-react-symbols-20261027/before/.
+Ανεξάρτητος Reviewer /root/review_react_symbols, agent_type reviewer,
+fork_turns none, ενημερώθηκε με exactscope/base/hashes/acceptance/προέλευσηελέγχων.
+Αναμένουμε την πραγματική αναφορά. Δεν αλλάζουν τα frozen files κατά το review.
+Μόνο τα δύο journals, εκτός frozen target, κρατούν την τρέχουσα κατάσταση.
+Επόμενο: παραλαβή ευρημάτων, scoped διορθώσεις/επανέλεγχος αν χρειαστούν,
+τελική καταγραφή. Η React μετάβαση συνολικά δεν έχει δηλωθεί ολοκληρωμένη.
+Core report: κανένα core άλλαξε σε αυτό το resume ή στο CHn βήμα.
+
+# Current resume point — 2026-10-27 — user pause; React CHn saved, review pending
+
+Ο χρήστης ζήτησε αποθήκευση για να κλείσει. Η εγκεκριμένη υλοποίηση CHn έχει
+αποθηκευτεί στον δίσκο. Σταματάμε εδώ, χωρίς νέο scope, commit/push/δημοσίευση.
+Η Κύρια και τα core παραμένουν ανέπαφα. Η παλαιότερη upstream v52 ενσωμάτωση
+είναι ξεχωριστή εργασία. Πρόσφατο upstream checked39664e52 ήταν μόνο docs,
+last actually synchronized93b759f, όπως καταγράφεται παρακάτω.
+
+Αλλαγές μόνο σε δύο React runtime αρχεία: src/MoleculePreview.jsx και
+public/viewer-host-bridge.js, μαζί με React README και σχετικά checks/docs.
+Native #zigzagCheck, ίδιο skeletal MOL, bool symbols και normalized skeletal
+mode, χωρίς νέα χημεία/συντεταγμένες. Το checkbox περιμένει το τελευταίο ACK,
+ώστε να μη σταλεί εντολή για mode που βρίσκεται ακόμη στην ουρά. Διατηρούνται
+οι native resets/προτιμήσεις, naming/2D/3D, methane fallback και retry/remount.
+Δεν χρειάστηκε CSS ή dependency αλλαγή.
+
+Ολοκληρώθηκαν: τελικό build25modules, JS309.00/87.11kB gzip, CSS8.65/2.02gzip.
+Πραγματικός Firefox96/96 exact source-main52/React SVG/name/chain/analysis/
+highlight/numbering comparisons,19σειρές και3διακλαδισμένα παραδείγματα με όλα
+τα ορατά συνθετικά.0JSerrors. Keyboard, rule retention, unchanged3D coordinates,
+model/naming/form/view transitions, malformed/stale messages, pending/duplicate
+clicks, methane,390/1500px overflow και iframe-error/retry/remount PASS.
+Queue regression PASS μετά από προσθήκη latest-ACK gate μόνο στο νέο checkbox.
+Πρώτες δοκιμές διόρθωσαν test helper για ήδη επιλεγμένο radio και για αναμονή
+πλήρους native sequential αρίθμησης κετονών. Δεν άλλαξε ο viewer της Κύριας.
+Τελικό capture έχει fingerprints του τρέχοντος build,96parityrecords/96captures.
+
+Baseline1378paths docs/checks/react-symbols-before-20261027.json.1373protected
+paths byte-identical,1353εκτόςReact/journals·HEAD168e3cec01f941a84d40bbe0dc07156e7baa35d0,
+stablethesis-work3673c390c1fb1b7cbcc79411a6e1e3720e97f7ab αμετάβλητα.
+Τα προϋπάρχοντα dirty changes δεν αποδίδονται στο τρέχον βήμα.
+Έλεγχοι host/content/catalog --check, catalog/filter, existing29rule-contract,
+syntax/AST/diff PASS. Το παλαιό tert_butyl_isopropyl_ether diagnostic παραμένει.
+
+Εκκρεμούν: οπτική επιθεώρηση των screenshots, existing focused3D transition
+regression στο τελικό build και ανεξάρτητος Reviewer. Κανένας νέος Reviewer δεν
+έχει ενεργοποιηθεί και δεν δηλώνεται ολοκληρωμένο review για το CHn. Το προηγούμενο
+rule-panel review παραμένει ιστορικά ολοκληρωμένο, με διαφορετικό target.
+Οι τελικές browser/queue suites τερμάτισαν κανονικά και έκλεισαν το BiDi session.
+Απόπειρα ανάγνωσης ps για ενδεχόμενη διακοπή του test απορρίφθηκε από sandbox·
+δεν στάλθηκε signal ούτε παρακάμφθηκε έγκριση. Το test πρόλαβε να ολοκληρωθεί
+κανονικά πριν από την τελική αποθήκευση.
+
+Αναφορά docs/REACT-SYMBOLS-20261027.md, scripts/evidence react-symbols-*.
+Πρωτότυπο beforeReact /tmp/namelecule-react-symbols-20261027/before/ και τα
+screenshots /tmp/react-symbols-{1500,390}-20261027.png περιλαμβάνονται και στο ZIP.
+Το saved-target manifest αποτελεί checkpoint hashes, όχι reviewed-target.
+
+Τοπικό αντίγραφο κώδικα/React build/στοιχείων συνέχειας:
+communication/checkpoints/Namelecule-React-CHn-20261027-143807.zip
+Δεν περιλαμβάνει .git, node_modules ή γενικά ignored υλικό. Δεν είναι νέο commit,
+remote backup ή ανεξάρτητη offline διανομή. Περιέχει όλα τα tracked/nonignored
+source files, React dist/host, beforeReact και σχετικά /tmp evidence/screenshots.
+
+Συγκεκριμένο επόμενο βήμα: ανάγνωση αυτού του resume, επαλήθευση saved-target,
+οπτική επιθεώρηση screenshots από το ZIP, focused3Dtransition, τελικό frozen
+manifest και ανεξάρτητος Reviewer με fork none. Έπειτα καταγραφή αποτελέσματος.
+Η ήδη δοθείσα έγκριση καλύπτει αυτούς τους ελέγχους και αναγκαίες διορθώσεις στο
+ίδιο scope. Δεν χρειάζεται επανάληψη της υλοποίησης ή αλλαγή της Κύριας.
+Core report: κανένα core αρχείο δεν άλλαξε σε αυτό το βήμα. Καμία δημοσίευση.
+
+# Current resume point — 2026-10-27 — React CHn approved; implementation in progress
+
+Ο χρήστης ενέκρινε με «ναι» το συγκεκριμένο σχέδιο για «Σύμβολα CHn» στη React.
+Μόνο MoleculePreview.jsx, viewer-host-bridge.js, προαιρετικό CSS και σχετικά
+checks/docs. Native #zigzagCheck, ίδιο skeletal MOL, χωρίς χημικές/μοριακές αλλαγές.
+Νέο baseline1378paths docs/checks/react-symbols-before-20261027.json, προηγούμενα React
+bytes /tmp/namelecule-react-symbols-20261027/before/. Η αρχική υλοποίηση και το build ολοκληρώθηκαν. Browser parity/μεταβάσεις
+ελέγχονται ακόμη και δεν έχει ολοκληρωθεί review. Κύρια/core ανέπαφα, χωρίς commit/push/δημοσίευση.
+Στοχευμένη αναπαραγωγή έδειξε checkbox διαθέσιμο ενώ προηγούμενο zoom κρατούσε
+στην ουρά αλλαγή mode. Προστέθηκε ref ACK id και απενεργοποίηση μόνο του νέου
+checkbox μέχρι την τελευταία έγκυρη απάντηση. Queue regression τελικού build PASS.
+Δύο runtime αρχεία αλλάζουν, χωρίς ανάγκη CSS. Build25modules JS309.00/87.11gzip,
+CSS8.65/2.02gzip. Static1373protected/1353outsideReactjournals PASS.
+Το πρώτο parity run σταμάτησε σε test helper για ήδη επιλεγμένο radio· διορθώθηκε
+μόνο ο helper. Το επόμενο ανέδειξε μη ολοκληρωμένη native sequential αρίθμηση
+κετόνης κατά τη σύγκριση. Ο helper πλέον περιμένει πλήρη αρίθμηση σε κάθε σχετικό
+συνθετικό. Δεν αλλάζει η αρίθμηση/απεικόνιση της Κύριας. Η τελική πλήρης εκτέλεση
+στο διορθωμένο build είναι σε εξέλιξη· δεν δηλώνεται ακόμη ολοκληρωμένο parity.
+Επόμενο: ολοκλήρωση τελικού browser parity,
+μεταβάσεις/προστασία κύριων αρχείων και ανεξάρτητο review.
+
+# Current resume point — 2026-10-27 — React CHn control proposed; awaiting plan approval
+
+Ο χρήστης ζήτησε «συνεχίζουμε». Διαβάστηκαν το README, το τρέχον resume,
+σχετικά React σχέδια/πηγές, git status και σχετικά diffs. Το προηγούμενο βήμα
+προαιρετικών κανόνων παραμένει ολοκληρωμένο: τα29frozen hashes επιβεβαιώθηκαν.
+Η Κύρια πρέπει να παραμένει ανέπαφη. Η δημοσίευση παραμένει σε αναβολή.
+
+Υποχρεωτικός upstream έλεγχος27/10: αρχική πρόσβαση στο restricted περιβάλλον
+απέτυχε σε DNS. Η κανονικά εγκεκριμένη read-only δικτυακή κλήση ολοκληρώθηκε.
+Last checked HEAD πλέον39664e52ebaf812a8f6cea38dcdc8cd18bd640ee («doc update»),
+parent και last actually synchronized93b759f5891d7b5a1172646032d83215d60b7604.
+CHANGELOG SHA256 bb7e2236fdfc1af5722bcf607013861d5626f0ac869c7658cde2b3607e7ae213,
+ίδιο με προηγούμενο έλεγχο. Διαβάστηκε πραγματικό commit diff: μόνο .gitignore
+(αγνόηση docs/OPENCODE-V1-TO-V2-MIGRATION.md) και docs/THESIS-WORK-V52-STEP-TEXT.md
+(ιστορικό v49–v52). Καμία αλλαγή runtime/core/μορίων/scenarios και καμία σύγκρουση
+με React runtime. Το νέο documentation commit δεν έχει ενσωματωθεί· δεν αποτελεί
+νέα runtime release που απαιτεί αλλαγή της Κύριας για τη συνέχεια της React.
+Πρωτογενή δεδομένα GitHub commits/main?per_page=4, raw pinned CHANGELOG και commit
+39664e52 detail εξετάστηκαν. Δεν έγινε fetch, merge ή αλλαγή refs.
+
+Read-only εύρημα: στη React απουσιάζει ακόμη το υπάρχον «Σύμβολα CHn» για τους
+σκελετικούς. Η Κύρια έχει #zigzagCheck handler στο teaching52, ο οποίος εναλλάσσει
+skeletal/condensedZigZag και χρησιμοποιεί το ίδιο _2D_Skeletal MOL. Οι native
+mode handlers και fSelectMol ορίζουν ήδη resets/διαθεσιμότητα. Να επαναχρησιμοποιηθεί
+αυτή η συμπεριφορά, χωρίς νέο σχεδιασμό, χημική λογική ή αλλαγή δεδομένων.
+
+Συγκεκριμένη πρόταση προς έγκριση: React checkbox «Σύμβολα CHn», διαθέσιμο μόνο
+στην κατάλληλη σκελετική2Dπροβολή. Δεδομένα/εντολές μέσω υπάρχουσας γέφυρας προς
+τον native handler, με αντίστοιχη επικύρωση bool/mode, ACK και pending/reset.
+Αρχεία: react-preview/src/MoleculePreview.jsx, public/viewer-host-bridge.js,
+preview.css αν χρειαστεί για τη διάταξη, συν tests/README/καταγραφές.
+Πριν υλοποίηση νέο baseline. Έλεγχοι ακριβούς απόδοσης έναντι Κύριας σε
+αντιπροσωπευτικές σειρές/μεγέθη/επισημάνσεις, checkboxkeyboard, μορφές/μόρια/3D,
+rapid/pending/invalid messages και methane χωρίς skeletal, build, προστασία
+Κύριας και ανεξάρτητος Reviewer. Αναμονή έγκρισης όπως απαιτεί AGENTS.md.
+
+Σε αυτή τη φάση άλλαξαν μόνο SESSION-NOTES και YANNIS-CONTRIBUTIONS.
+Κανένα αρχείο εφαρμογής ή core δεν άλλαξε. Δεν εκτελέστηκαν νέα runtime tests
+ή build, δεν έγινε commit/push/δημοσίευση ούτε ενεργοποιήθηκε νέος agent.
+Επόμενο: παραλαβή έγκρισης του συγκεκριμένου σχεδίου, έπειτα υλοποίηση.
+
+# Current resume point — 2026-10-27 — React optional rules completed and independently reviewed
+
+Ο χρήστης ενέκρινε με «ναι» το συγκεκριμένο σχέδιο των προαιρετικών κανόνων
+στη React. Η Κύρια παραμένει ανέπαφη και διαθέσιμη ως εναλλακτική. Ισχύει ρητά
+η αναβολή δημοσίευσης. Δεν έγινε commit, push ή δημοσίευση.
+
+Ολοκληρώθηκαν οι προαιρετικοί πίνακες κανόνων από την υπάρχουσα fShowRule52,
+με ίδια κείμενα, υποδείκτες, εκθέτες και επισημάνσεις selected/A/B. Αρχικά είναι
+κλειστοί και ανοίγουν χειροκίνητα. Κλείνουν σε αλλαγή συνθετικού, μορίου ή τρόπου
+ονομασίας. Κατά την αναμονή αλλαγής συνθετικού ο προηγούμενος κανόνας κλείνει
+και απενεργοποιείται. Zoom/view/form διατηρούν τον πίνακα όταν δεν αλλάζει το
+επιλεγμένο συνθετικό. Whitelist και bounded schema, χωρίς raw HTML, attributes
+συμβάντων ή styles. Δεν προστέθηκε νέα θεωρία, χημικός κανόνας ή dependency.
+Τα υφιστάμενα commonAlkyl κενά και scenario-gated alkoxy διατηρούνται.
+
+Άλλαξαν οκτώ React runtime/build αρχεία: src/NameAnalysis.jsx,
+src/MoleculePreview.jsx, src/preview.css, public/viewer-host-bridge.js,
+tools/build-viewer-host.py και νέα src/RulePanels.jsx, src/rule-data.js,
+src/rule-schema.json, μαζί με React README και σχετικά tests/docs.
+Η Κύρια, τα core, τα MOL/SDF, τα σενάρια και ο κατάλογος μορίων δεν άλλαξαν.
+Δεν μεταφέρθηκαν ακόμη σε React ο player/editor των μαθημάτων ή ο renderer.
+
+Baseline 1361 paths: docs/checks/react-rules-before-20261027.json.
+1353 προστατευμένα paths byte-identical, από αυτά 1339 εκτός React/journals.
+Προηγούμενα React bytes στο /tmp/namelecule-react-rules-20261027/before/
+(προσωρινό αρχείο σύγκρισης, όχι μόνιμο backup). HEAD
+168e3cec01f941a84d40bbe0dc07156e7baa35d0 και stable thesis-work
+3673c390c1fb1b7cbcc79411a6e1e3720e97f7ab αμετάβλητα. Προγενέστερες uncommitted
+αλλαγές του branch δεν αποδίδονται στο παρόν βήμα.
+
+Developer επαληθεύσεις: build 25 modules PASS, JS308.15/86.90kB gzip,
+CSS8.65/2.02kB gzip. Firefox 237 ακριβείς συγκρίσεις source DOM/React, όλα τα
+ορατά συνθετικά σε αντιπροσωπευτικό μόριο από καθεμία από 19 σειρές. Ελέγχθηκαν
+πέντε οικογένειες κανόνων, sub/sup/selected/A/B, αρχικά κλειστά panels, keyboard
+Space/Enter, delayed ACK, rapid components, reset και διατήρηση σε zoom/view/form.
+Layout 1500/390px χωρίς overflow, screenshots επιθεωρήθηκαν. 29 contract cases
+PASS. Synthetic fixture δύο panels: ανεξάρτητα toggles και literal HTML-looking
+text PASS, χωρίς ισχυρισμό πραγματικής διάθεσης alkoxy στον free explorer.
+Invalid script-element packet απορρίφθηκε. Το πρώτο fixture run χρησιμοποίησε
+ανύπαρκτο test selector comp0 για αιθανόλη· διορθώθηκε μόνο ο test helper σε
+πραγματικό διαθέσιμο συνθετικό. Τελικό run PASS χωρίς διόρθωση runtime κώδικα.
+
+Οι υπάρχοντες test-react-ether-naming-lifecycle-20261027.py και
+ test-v52-react-transitions-browser-20261027.py πέρασαν στο ίδιο build:
+pending naming→model switch, iframe-error/retry/remount, ordered zoom ACKs,
+pending3D→2D guard, πραγματική απόρριψη λάθος μοντέλου στα9.18s, retry και
+pending-unmount/remount. Μηδενικά JS errors σε όλες τις ολοκληρωμένες suites.
+Host/content/catalog --check, 126IDs/377forms/filter, JS/Python syntax και
+ git diff --check PASS. Το catalog check επαναλαμβάνει το προϋπάρχον diagnostic
+calculated/stored chain για tert_butyl_isopropyl_ether, με ίδια δεδομένα/κατάλογο.
+Αποτελέσματα docs/checks/react-rules-*.json και scripts test-react-rules-*.
+Αναφορά docs/REACT-RULES-20261027.md. Screenshots στο /tmp/react-rules-*.png.
+
+Ανεξάρτητος Reviewer /root/review_react_rules, agent_type reviewer,
+fork_turns none, ROLE_ID=NAMELECULE_REVIEWER_V1_20261023, χωρίς ιστορικό Developer.
+Frozen target docs/checks/react-rules-reviewed-target-20261027.json,
+SHA256 a0f377b338cdd08172c173620bf30f92de6733a14b61c41f2fa3d991b72079c9,
+22 source/docs/check αρχεία και7 generated artifacts, hashes PASS πριν/μετά.
+Δεν εντόπισε actionable P0/P1/P2/P3 ευρήματα. Δεν απαιτούνται διορθώσεις.
+Εξέτασε το πραγματικό task diff, serializer/schema/validator/renderer, React
+lifecycle/ACK queue, fShowRule/fInitTheory και styles. Εκτέλεσε ανεξάρτητα
+read-only preservation,29contractcases, host/content/catalog/filter checks,
+syntax/AST/diff και20 before-file hashes. Έλεγξε στη μνήμη ότι όλα τα πραγματικά
+fInitTheory tags/classes/rowIDs/budgets χωρούν στο schema και επιθεώρησε τα
+παραδοθέντα screenshots. Browser/build αποτελέσματα παραμένουν Developer evidence.
+Δεν έγραψε αρχεία. No-write ήταν behavioral, όχι επιβεβαιωμένο enforced sandbox.
+Δεν εκτελέστηκαν πλήρης έλεγχος126μορίων/283βημάτων, Safari, AT, πραγματικό
+mobile touch/Drupal/CDN outage ή νέα πιστοποίηση IUPAC/conformer. Το γνωστό
+legacy JSmol lesson-lifecycle ζήτημα παραμένει εκτός scope.
+
+Η πρώτη απόπειρα ανοίγματος Safari και η αρχική συνέχεια του Reviewer διακόπηκαν
+από usage limit του μηχανισμού έγκρισης/υπηρεσίας. Δεν ήταν απόφαση μη ασφάλειας
+και δεν έγινε παράκαμψη. Με νέα εντολή «συνεχίζουμε;» επανήλθε ο ίδιος Reviewer
+και ολοκλήρωσε το review, χωρίς επανάληψη ήδη ολοκληρωμένων ελέγχων.
+
+Core report: κανένα core.js/core-version αρχείο δεν άλλαξε από το baseline
+αυτού του βήματος. Η προηγούμενη ενσωμάτωση upstream v52 αποτελεί ξεχωριστή
+καταγεγραμμένη εργασία παρακάτω. Η Κύρια διατηρήθηκε ανέπαφη.
+Επόμενο συγκεκριμένο βήμα: ο χρήστης να δει το React viewer με τους προαιρετικούς
+κανόνες και κατόπιν να συμφωνηθεί το επόμενο ανεξάρτητο τμήμα της μετάβασης.
+Δεν έχει εγκριθεί νέο implementation scope ή δημοσίευση.
+Τελική εγκεκριμένη κλήση open -a Safari επέστρεψε επιτυχώς· δεν δηλώνεται
+ανεξάρτητη Safari runtime επαλήθευση.
+Τοπικό URL http://127.0.0.1:8013/react-preview/dist/?v=rules-reviewed-20261027#/viewer
+
+# Current resume point — 2026-10-27 — no publication; React rule-panel plan awaiting approval
+
+Ο χρήστης όρισε ρητά να μη δημοσιεύσουμε ακόμη και θέλει συνέχεια της React,
+με την Κύρια ανέπαφη. Δεν υπάρχει νέα άδεια commit/push/δημοσίευσης. Το προηγούμενο
+βήμα IUPAC/Κοινή ολοκληρώθηκε και ελέγχθηκε όπως καταγράφεται παρακάτω.
+
+Έγινε μόνο ανάγνωση των σχετικών React αρχείων και της fShowRule/handlers52.
+Η fShowRule ήδη παράγει τίτλο, κείμενο, πίνακα και επισημάνσεις γραμμών μετά την
+επιλογή συνθετικού. Η διαθεσιμότητα αλκοξυ-πίνακα έχει scenario gates, ενώ
+commonAlkyl1/2 δίνουν κενό στον υφιστάμενο switch. Αυτά δεν πρέπει να αλλάξουν
+σιωπηρά ή να υποκατασταθούν με νέους χημικούς κανόνες κατά τη μεταφορά.
+
+Πρόταση προς έγκριση: προαιρετικός πίνακας κανόνα στο React NameAnalysis, μόνο
+όπου ο υπάρχων μηχανισμός παράγει σχετικό περιεχόμενο. Ίδιο κείμενο/τύποι/
+υποδείκτες/επισημασμένες γραμμές, από τα υφιστάμενα δεδομένα, χωρίς νέα θεωρία.
+Αρχικά κλειστός, ανοίγει με ενέργεια χρήστη· αλλαγή συνθετικού/μορίου/ονομασίας
+τον κλείνει, αλλαγή zoom/view μπορεί να κρατά την τρέχουσα επιλογή. Η γέφυρα θα
+μεταφέρει ελεγχόμενα δομημένα δεδομένα και η React θα αποδίδει το περιεχόμενο,
+χωρίς raw HTML injection. Δεν μεταφέρεται ακόμη ο player ή ο editor σεναρίων.
+
+Προτεινόμενα αρχεία: NameAnalysis.jsx, MoleculePreview.jsx, viewer-host-bridge.js,
+preview.css και μικρό React component για τον πίνακα αν χρειαστεί, συν tests/docs.
+Πριν υλοποίηση νέο baseline και προστασία όλων των κύριων/core/μοριακών/scenario
+αρχείων. Στοχευμένες συγκρίσεις διαθέσιμων κανόνων/γραμμών/υποδεικτών, άνοιγμα/
+κλείσιμο/μεταβάσεις, Ether IUPAC/Κοινή, keyboard/mobile, build και ανεξάρτητος
+Reviewer. Περιμένουμε έγκριση συγκεκριμένου σχεδίου όπως απαιτεί AGENTS.md.
+Δεν υλοποιήθηκε η πρόταση και δεν εκτελέστηκαν νέα runtime tests. Μόνο δύο
+journals ενημερώθηκαν· κανένα core ή αρχείο εφαρμογής δεν άλλαξε σε αυτή τη φάση.
+
+# Current resume point — 2026-10-27 — React ether naming completed and independently reviewed
+
+Ολοκληρώθηκε και ελέγχθηκε ανεξάρτητα το εγκεκριμένο βήμα εναλλαγής IUPAC/Κοινή
+στους 11 υπάρχοντες αιθέρες της React. Απαράβατος όρος του χρήστη: να παραμείνει
+ανέπαφη η Κύρια έκδοση ως διαθέσιμη εναλλακτική. Δεν άλλαξε κανένα αρχείο της
+Κύριας, core, μοριακό δεδομένο, MOL/SDF ή εκπαιδευτικό σενάριο σε ολόκληρο αυτό
+το βήμα, πριν και μετά τη διακοπή/επανέναρξη.
+
+Άλλαξαν μόνο τέσσερα runtime αρχεία React: src/NameAnalysis.jsx,
+src/MoleculePreview.jsx, src/preview.css, public/viewer-host-bridge.js, μαζί με
+React README και σχετικά tests/docs. Τα radios εμφανίζονται μόνο στους αιθέρες
+και καλούν τον υπάρχοντα main52 handler. Ο κατάλογος/επάνω τίτλος διατηρεί τη
+συστηματική ονομασία, ενώ η ανάλυση ακολουθεί τον επιλεγμένο τρόπο, όπως στην
+Κύρια. Δεν προστέθηκε δεύτερος αλγόριθμος ή νέο χημικό/εκπαιδευτικό περιεχόμενο.
+Η προτίμηση διατηρείται στις αλλαγές μορίων· νέα συνεδρία/retry/remount ξεκινά με
+IUPAC. Η αναμονή αλλαγής ονομασίας καθαρίζει παλιά συνθετικά, κρύβει τον γράφο και
+απενεργοποιεί radios/zoom μέχρι έγκυρο model/script ACK. Διατηρούνται τα όρια
+source/origin/session/request/model και ελέγχονται επιπλέον naming enum, τελευταία
+ζητημένη προτίμηση και πραγματικός στόχος μορίου στην ουρά.
+
+Baseline 1350 αρχείων: docs/checks/react-ether-naming-before-20261027.json.
+Ακριβή προγενέστερα React bytes για diff στο
+/tmp/namelecule-react-ether-naming-20261027/before/ (προσωρινά, όχι μόνιμο backup).
+1343 baseline αρχεία εκτός των πέντε επιτρεπόμενων React paths/δύο journals
+διατηρήθηκαν byte-identical, από αυτά 1328 εκτός React. Κανένα νέο runtime αρχείο
+εκτός εγκεκριμένων διαδρομών. Ο κατάλογος126μορίων,12μαθήματα και378δηλωμέναMOL
+slots (377διαθέσιμεςμορφές) δεν άλλαξαν. Προηγούμενη uncommitted εργασία React3D/
+P2/v52/126catalog είναι ξεχωριστή και δεν αποδίδεται σε αυτή την επέκταση.
+
+Developer επαληθεύσεις: πραγματικός Firefox, 444 ακριβείς συγκρίσεις με την
+αμετάβλητη Κύρια52: 11 αιθέρες, δύο ονομασίες, τρεις 2D μορφές, όλα τα ορατά
+συνθετικά και 3D καταστάσεις. Συμφωνούν SVG, ονόματα, εξηγήσεις, επισημάνσεις,
+αρίθμηση και σχετικά δεδομένα 3D· 0 JS errors. Native keyboard Space, διατήρηση
+προτίμησης μέσω μη αιθέρων, απόρριψη λάθος naming ACK/invalid/stale/wrong-target/
+non-ether commands, pending naming model gate και 1500/390px layout πέρασαν.
+Screenshots επιθεωρήθηκαν. Lifecycle: pending ονομασία→άλλο μόριο ολοκληρώνεται
+στο τελευταίο μοντέλο με σωστή προτίμηση· ελεγχόμενο iframe error/retry και
+unmount/remount επαναφέρουν αιθανόλη/IUPAC. Το υπάρχον transition regression
+πέρασε στο ίδιο build: ordered zoom ACKs, pending3D→2D zoom guard, πραγματική
+αποτυχία λανθασμένου μοντέλου στα9.23s, retry/remount. 0 JS errors και σε αυτά.
+Build22modules, JS305.60kB/85.98kB gzip, CSS5.63kB/1.45kB gzip. Static preservation,
+host/content --check, molecule-filter checks, syntax/AST και diff --check PASS.
+Αναφορά docs/REACT-ETHER-NAMING-20261027.md, scripts/JSON/compressed444capture
+στο docs/checks/react-ether-naming-*. Browser/build είναι Developer evidence.
+
+Η πρώτη προσπάθεια εκτέλεσης browser δεν εγκρίθηκε λόγω usage limit του αυτόματου
+approval reviewer· δεν εκτελέστηκε και δεν θεωρήθηκε μη ασφαλής. Με τη ρητή
+επανέναρξη του χρήστη υποβλήθηκε ξανά και εγκρίθηκε κανονικά, χωρίς παράκαμψη.
+Πρώτο πραγματικό run ολοκλήρωσε444καταγραφές, αλλά το fault-injection harness
+μπέρδεψε το sent counter με σκόπιμα απορριφθέντα oversized IDs. Διορθώθηκε μόνο
+ο helper ACK tracking, όχι runtime κώδικας· τελική πλήρης εκτέλεση444/444 PASS.
+Το fingerprint της διατηρημένης καταγραφής υπολογίστηκε πριν την καταγραφή.
+
+Ανεξάρτητος Reviewer /root/review_react_ether_naming,
+ROLE_ID NAMELECULE_REVIEWER_V1_20261023, agent_type reviewer, fork_turns none,
+χωρίς Developer history. Δεν εντόπισε actionable P0/P1/P2/P3 ευρήματα και δεν
+απαιτούνται διορθώσεις. Εξέτασε πραγματικό diff προς τα ακριβή προηγούμενα React
+bytes (επαλήθευση με baseline), περιβάλλοντα main52 κώδικα, scripts/αποτελέσματα
+και τις444συμπιεσμένες καταγραφές. Ανεξάρτητα read-only PASS: preservation1343,
+host/content --check, Node syntax/molecule search, Python AST, diff --check,
+μοναδικότητα/κάλυψη/συσχέτιση444cases με parity και runtime fingerprint. Δεν
+εκτέλεσε browser/build. Δεν έγραψε αρχεία· ο κανόνας μη εγγραφής ήταν
+συμπεριφορικός, χωρίς ανεξάρτητα επιβεβαιωμένο enforced read-only sandbox.
+
+Τελικό frozen target15scopefiles+7generated:
+docs/checks/react-ether-naming-reviewed-target-20261027.json
+SHA256 f58fba44f4cd31da04a0541a20bee019acc0ef36f63a00664df1d7744ce1ae22.
+Όλα τα hashes ταυτίστηκαν πριν/μετά review· κατόπιν ενημερώθηκαν μόνο τα δύο
+εξαιρούμενα journals. Το συμπέρασμα αφορά το συγκεκριμένο περιεχόμενο, όχι
+καθολική πιστοποίηση χημείας/απουσίας σφαλμάτων.
+
+Περιορισμοί: παραμένει το γνωστό legacy JSmol lesson-lifecycle ζήτημα· δεν
+επαναλήφθηκαν τα αμετάβλητα126μόρια/283βήματα ως πλήρης σουίτα, ούτε νέα
+πιστοποίηση IUPAC/conformers ή Safari/AT/offline/real CDN outage/OS clipboard/
+Drupal tests. Το runtime παραμένει υπάρχων renderer/engine σε same-origin iframe.
+Πίνακες κανόνων και React lesson player είναι επόμενα, μη υλοποιημένα στάδια.
+
+Upstream επανελέγχθηκε επιτυχώς κατά την επανέναρξη (HEAD,4commits,CHANGELOG):
+93b759f5891d7b5a1172646032d83215d60b7604, ίδιο με τελευταία checked/content-synced
+έκδοση. CHANGELOG SHA256
+bb7e2236fdfc1af5722bcf607013861d5626f0ac869c7658cde2b3607e7ae213.
+Evidence /tmp/namelecule-react-ether-naming-20261027/upstream-resume.json.
+Δεν υπάρχει νέο release προς ενσωμάτωση. HEAD168e3cec01f941a84d40bbe0dc07156e7baa35d0
+και stable thesis-work3673c390c1fb1b7cbcc79411a6e1e3720e97f7ab αμετάβλητα.
+Δεν έγινε commit/push/δημοσίευση. Κανένα core δεν άλλαξε σε αυτή την εργασία.
+
+Δοκιμή React:
+http://127.0.0.1:8013/react-preview/dist/?v=ether-naming-reviewed-20261027#/viewer
+Επιλογή σειράς Αιθέρες και στη συνέχεια επιλογή συγκεκριμένου αιθέρα για τα radios.
+Επόμενο: δοκιμή από τον χρήστη, έπειτα συγκεκριμένο σχέδιο πριν από νέο βήμα.
+Δεν εκκρεμεί υλοποίηση ή review του παρόντος εγκεκριμένου scope.
+
+# Current resume point — 2026-10-27 — next React step proposed: ether naming toggle
+
+Ο χρήστης θέλει να συνεχίσουμε τη σταδιακή μετάβαση στη React, κρατώντας ανέπαφη
+την Κύρια. Έγινε μόνο ανάγνωση των σχετικών React αρχείων και των handlers της
+Κύριας52. Επιβεβαιώθηκε ότι η υπάρχουσα εναλλαγή IUPAC/Κοινή στην Κύρια αφορά
+τους αιθέρες (11 υπάρχοντα μόρια), με τον υπάρχοντα etherNamingMode και handler
+#radioEtherNaming .etherNamingRadio. Κατά την αλλαγή καθαρίζονται επισημάνσεις
+και αναδημιουργούνται τα συνθετικά με τον ίδιο μηχανισμό.
+
+Πρόταση, όχι ακόμη υλοποίηση ή εγκεκριμένο συγκεκριμένο σχέδιο: προσθήκη του
+ίδιου επιλογέα IUPAC/Κοινή στο React panel μόνο για τους διαθέσιμους αιθέρες,
+με διατήρηση των σωστών συνθετικών/εξηγήσεων/2D/3D επισημάνσεων. Καλείται ο
+υπάρχων handler, χωρίς δεύτερο αλγόριθμο ή αλλαγή στη συμπεριφορά της Κύριας.
+Προτεινόμενα αρχεία: react-preview/src/NameAnalysis.jsx, MoleculePreview.jsx,
+preview.css, public/viewer-host-bridge.js και σχετικά tests/docs. Θα παρθεί νέο
+baseline πριν την υλοποίηση και θα ελεγχθούν byte-identical όλα τα αρχεία της
+Κύριας. Επαλήθευση των 11 αιθέρων και των δύο τρόπων ονομασίας σε 2D/3D,
+αλλαγές μορίων, keyboard/mobile, σχετικές regressions, build και πραγματικός
+ανεξάρτητος Reviewer. Πίνακες κανόνων και React player παραμένουν επόμενα στάδια,
+χωρίς να θεωρούνται ήδη εγκεκριμένη υλοποίηση.
+
+Αναμονή έγκρισης συγκεκριμένου σχεδίου σύμφωνα με AGENTS.md. Καμία αλλαγή
+κώδικα/core/μορίων/σεναρίων ή commit/push/δημοσίευση σε αυτή τη διερεύνηση.
+Μόνο τα δύο journals ενημερώθηκαν. Προηγούμενο ολοκληρωμένο React126 review
+και στοιχεία upstream/checkpoints διατηρούνται αμέσως παρακάτω.
+
+# Current resume point — 2026-10-27 — React126 completed, main preserved, independent review complete
+
+Ολοκληρώθηκε η εγκεκριμένη επέκταση της React από 3 σε 126 υπάρχοντα μόρια.
+Ο χρήστης έθεσε ως απαράβατο όρο να παραμείνει η Κύρια έκδοση ανεπηρέαστη και
+διαθέσιμη ως εναλλακτική. Η αλλαγή περιορίστηκε στο react-preview και σε σχετικά
+αρχεία ελέγχων/τεκμηρίωσης. Δεν άλλαξε κανένα core, κύριο HTML/CSS/JS, μοριακό
+δεδομένο, MOL/SDF ή εκπαιδευτικό σενάριο σε αυτό το βήμα.
+
+Συμπεριφορά: παραγόμενος κατάλογος από το υπάρχον core52/data52, με τύπους από
+τα υπάρχοντα SDF, αναζήτηση ελληνικών ονομάτων/κοινών ονομάτων/τύπων, φίλτρο και
+ομαδοποίηση στις 19 υπάρχουσες σειρές. Τα φίλτρα διατηρούν το επιλεγμένο μόριο,
+ακόμη και εκτός αποτελεσμάτων. Διατηρούνται 2D/3D, ανάλυση ονόματος και αρχική/
+retry επιλογή αιθανόλης. Υπάρχουν 377 διαθέσιμες μορφές· το μεθάνιο δεν έχει
+σκελετικό αρχείο, οπότε το αντίστοιχο radio απενεργοποιείται και η μετάβαση από
+σκελετικό άλλο μόριο χρησιμοποιεί συνεπτυγμένο. Το case-sensitive ID
+Oxopropanoic_acid διατηρείται. Οι σύνδεσμοι εξερεύνησης της React ανοίγουν τον
+React viewer· τα 12 μαθήματα συνεχίζουν στον υπάρχοντα standalone52 player.
+Δεν προστέθηκαν νέος renderer, δεύτερος αλγόριθμος ονοματολογίας, common-name
+toggle, πίνακες κανόνων, speech/export/authoring ή αποθήκευση προόδου.
+
+Αλλαγμένα αρχεία και τεχνικές λεπτομέρειες: docs/REACT-CATALOG-20261027.md και
+το τελικό manifest παρακάτω. Προγενέστερη uncommitted εργασία React3D/P2/v52
+δεν αποτελεί νέα συνεισφορά αυτού του βήματος. Baseline 1336 αρχείων:
+docs/checks/react-catalog-before-20261027.json. Και τα 1316 προϋπάρχοντα αρχεία
+εκτός React/δύο journals έμειναν byte-identical, περιλαμβανομένων των 126 SDF.
+Δεν προστέθηκε runtime αρχείο εκτός React/docs.
+
+Έλεγχοι Developer: πραγματικός Firefox με 126 φορτώσεις SDF, 377 ακριβείς
+συγκρίσεις SVG/ονόματος/κοινού ονόματος/γράφου/κύριας αλυσίδας/βασικής ανάλυσης
+με την αμετάβλητη Κύρια52, ορατή 3D και επιλογή/αποεπιλογή συνθετικού σε ένα
+μόριο από κάθε μία από τις 19 σειρές, αναζήτηση/φίλτρα/κενά αποτελέσματα/clear/
+focus, 1500px και 390px χωρίς overflow (screenshots επιθεωρήθηκαν), πραγματική
+πλοήγηση React welcome/viewer/library και main fallback. Μηδέν JS errors σε αυτές
+τις δοκιμές. Το υπάρχον transition test πέρασε στο νέο build: ordered zoom ACKs,
+αποκλεισμός πρόωρου zoom κατά pending 3D→2D, πραγματική αποτυχία λανθασμένου
+μοντέλου στα 9.28s, retry και unmount/remount. Build: 22 modules, JS304.83kB /
+85.76kB gzip, CSS5.30kB /1.40kB gzip. Generators --check, syntax/AST, νέα φίλτρα,
+20 υπάρχοντες library-search έλεγχοι, preservation και diff --check πέρασαν.
+Τα browser/build αποτελέσματα είναι Developer evidence. Αποδεικτικά και scripts:
+docs/checks/react-catalog-*. Οι διορθώσεις ACK/selector/canvas/πλήθους welcome
+links αφορούσαν το harness, όχι runtime κώδικα. Οι ολοκληρωμένες 377 καταγραφές
+διατηρήθηκαν συμπιεσμένες και οι υπόλοιποι έλεγχοι συνεχίστηκαν στο ίδιο build.
+Το fingerprint προστέθηκε μετά την καταγραφή· δεν αποτελεί ανεξάρτητη pre-capture
+πιστοποίηση. Η ήδη υπάρχουσα stored-chain προειδοποίηση αιθέρα δεν άλλαξε και
+το παραγόμενο όνομά του συμφωνεί με την πραγματική Κύρια.
+
+Ανεξάρτητος Reviewer: /root/review_react_catalog,
+ROLE_ID NAMELECULE_REVIEWER_V1_20261023, agent_type reviewer, fork_turns none,
+χωρίς ιστορικό Developer. Δεν βρήκε actionable P0/P1/P2/P3 ευρήματα και δεν
+απαιτούνται διορθώσεις. Επιθεώρησε τον πραγματικό κώδικα, τα scripts/αποτελέσματα,
+τις 377 συμπιεσμένες καταγραφές και τους περιορισμούς των τεκμηρίων. Εκτέλεσε
+ανεξάρτητα read-only preservation, generator/host/content --check, molecule/
+library search, JS syntax, Python AST και diff --check· όλα πέρασαν. Δεν έτρεξε
+browser/build. Καμία εγγραφή από Reviewer· η απαγόρευση εγγραφών ήταν στις
+οδηγίες, χωρίς ανεξάρτητα επιβεβαιωμένη απομόνωση filesystem.
+
+Παγωμένο target 21 αρχείων και 7 generated:
+docs/checks/react-catalog-reviewed-target-20261027.json
+SHA256 f9b06c0f2ff90e730f42ca26e1394cc48ec7d22785bc82058c5557971bafe2f6.
+Τα hashes επιβεβαιώθηκαν πριν/μετά το review. Μετά άλλαξαν μόνο τα δύο εξαιρούμενα
+journals. Το baseline περιέχει hashes, όχι πλήρη προηγούμενα React source bytes.
+
+Περιορισμοί: γνωστό παλιό JSmol lesson-lifecycle ζήτημα παραμένει εκτός scope.
+Δεν επαναλήφθηκαν τα 283 αμετάβλητα βήματα ή πλήρης οπτικός έλεγχος 126 conformers,
+ούτε AT/Safari/πραγματικό mobile touch/offline/CDN outage/OS clipboard/Drupal tests.
+Δεν προκύπτει νέα πιστοποίηση IUPAC ή μαθησιακής αποτελεσματικότητας από το port.
+
+Upstream HEAD/history/CHANGELOG ελέγχθηκαν στις27/10: ίδιο
+93b759f5891d7b5a1172646032d83215d60b7604 με το τελευταίο ελεγμένο/τοπικά
+συγχρονισμένο. Δεν υπήρχε νέα έκδοση προς ενσωμάτωση. Branch react-library-pilot,
+HEAD168e3cec01f941a84d40bbe0dc07156e7baa35d0 και stable thesis-work
+3673c390c1fb1b7cbcc79411a6e1e3720e97f7ab αμετάβλητα. Δεν έγινε commit, push ή
+δημοσίευση. Κανένα core δεν άλλαξε στην παρούσα επέκταση· η προηγούμενη προσθήκη
+core52 ανήκει στο ήδη ολοκληρωμένο χωριστό sync.
+
+React για δοκιμή:
+http://127.0.0.1:8013/react-preview/dist/?v=catalog-reviewed-20261027#/viewer
+Κύρια, ανεπηρέαστη:
+http://127.0.0.1:8013/design/welcome-proposal.html
+Επόμενο: δοκιμή των δύο εκδόσεων από τον χρήστη και επιλογή επόμενου συγκεκριμένου
+βήματος πριν από νέα υλοποίηση. Δεν εκκρεμεί έλεγχος ή αλλαγή αυτού του scope.
+
+# Current resume point — 2026-10-27 — React full molecule catalog proposed, approval pending
+
+Αίτημα χρήστη: να προχωρήσει ο συγχρονισμός της React έκδοσης. Έγινε μόνο
+ανάγνωση κώδικα/σχετικών σχεδίων και έλεγχος status/diff· καμία αλλαγή εφαρμογής.
+Επιβεβαιώθηκε ότι η προηγούμενη εγκεκριμένη v52 ενσωμάτωση έχει ολοκληρωθεί.
+Η React βιβλιοθήκη έχει 9 καρτέλες/12 μαθήματα, με εκκίνηση στον υπάρχοντα player·
+ο React viewer παραμένει περιορισμένος στα 3 μόρια του pilot.
+
+Πρόταση προς έγκριση: επόμενο διακριτό βήμα η πρόσβαση στα 126 υπάρχοντα μόρια
+μέσα από τη React προβολή, με παραγόμενο κατάλογο από την υπάρχουσα βιβλιοθήκη,
+αναζήτηση/ομαδοποίηση, διατήρηση 2D/3D και ελεγμένης ανάλυσης ονόματος.
+Επιτρεπόμενη μελλοντική περιοχή: react-preview/src (κατάλογος/επιλογέας),
+react-preview/tools (παραγωγή/έλεγχος), public/viewer-host-bridge.js μόνο εφόσον
+απαιτείται για το διευρυμένο σύνολο, σχετικά tests/docs. Χωρίς νέα μόρια ή αλλαγές
+core/MOL/SDF/σεναρίων/κύριας έκδοσης. Έλεγχοι μετά έγκριση: πληρότητα126IDs,
+αντιστοίχιση με κύρια52, 2D/name parity σε όλο τον κατάλογο, κατάλληλοι3D/transition
+και mobile/browser έλεγχοι, build και ανεξάρτητος Reviewer. Δεν έχουν εκτελεστεί
+αυτοί οι νέοι έλεγχοι ή υλοποιηθεί η πρόταση. Επόμενο: έγκριση συγκεκριμένου σχεδίου.
+
+Νέος επιτυχής read-only upstream έλεγχος HEAD/4commits/CHANGELOG στις27/10/2026:
+93b759f5891d7b5a1172646032d83215d60b7604, ίδιο με τελευταίο checked/synchronized.
+CHANGELOG SHA256 bb7e2236fdfc1af5722bcf607013861d5626f0ac869c7658cde2b3607e7ae213.
+Δεν υπάρχει νέα έκδοση ή νέο overlap για ενσωμάτωση. Κανένα core δεν άλλαξε στην
+παρούσα διερεύνηση. Δεν έγινε commit/push/δημοσίευση· μόνο δύο journals ενημερώθηκαν.
+
+# Current resume point — 2026-10-27 — v52 main/React sync completed and independently reviewed
+
+Η εγκεκριμένη εργασία ολοκληρώθηκε: πρώτα συγχρονισμός της Κύριας έκδοσης με
+τη v52 του καθηγητή, έπειτα ενημέρωση της React δοκιμαστικής έκδοσης στην ίδια βάση.
+Η συνέχεια μετά τη διακοπή από το όριο χρήσης ολοκλήρωσε τον ανεξάρτητο έλεγχο·
+δεν έγιναν επιπλέον αλλαγές κώδικα κατά την επανέναρξη του review.
+
+Upstream HEAD/history/CHANGELOG ελέγχθηκαν επιτυχώς στις 27/10/2026. Τελευταίο
+ελεγμένο και πλέον τοπικά συγχρονισμένο περιεχόμενο:
+93b759f5891d7b5a1172646032d83215d60b7604. Προηγούμενο συγχρονισμένο:
+dc02933358a19f792c1a393fbdc2c15c2aba573f. Ενσωματώθηκαν οι εκδόσεις 0415c72022a2
+(rich note editor/toolbar) και 93b759f5891d (engine/data port/docs), διατηρώντας
+τις προσαρμογές Namelecule. SHA256 upstream CHANGELOG:
+bb7e2236fdfc1af5722bcf607013861d5626f0ac869c7658cde2b3607e7ae213.
+Evidence επανελέγχου: /tmp/namelecule-v52-review-resume-20261027/upstream.json.
+Πρόκειται για ενσωμάτωση περιεχομένου, χωρίς git merge ή μετακίνηση upstream refs.
+
+Αλλαγές: παράλληλο HTML52, έξι JS52, τρία CSS52· shared ui-icons, welcome/library
+links, React generators/catalog, README και changelog. Ακριβής κατάλογος στο
+manifest παρακάτω και αναλυτική αναφορά docs/V52-SYNC-20261027.md. Τα 126 μόρια,
+378 δηλωμένα 2D MOL, SDF, κάμερες, σειρά και 12 JSON σεναρίων έμειναν αμετάβλητα.
+Data52/theme52 είναι byte-identical με τα τοπικά51. Διατηρήθηκαν η ομοιόμορφη
+τυπογραφία, οι κανόνες που ανοίγει ο χρήστης, οι επισημάνσεις και η αρίθμηση.
+Η αρχική v51 παραμένει διαθέσιμη. Προγενέστερη React selector/analysis/3D/P2 εργασία
+είναι ξεχωριστή ήδη ελεγμένη συνεισφορά· δεν αποδίδεται όλο το working diff στη v52.
+
+Developer επαληθεύσεις ολοκληρωμένες:
+- 756 περιπτώσεις (126 μόρια × 3 μορφές × 2 τρόποι κύριας αλυσίδας): ίδια ονόματα,
+  γράφοι, κύριες αλυσίδες και canonical SVG με την αμετάβλητη51, μηδέν JS errors.
+- 12 σενάρια / 283 βήματα: φόρτωση, πλοήγηση, κανόνες, validate/export, Exit και
+  βιβλιοθήκη στα 390px λειτουργούν. Καταγράφηκαν 16 JSmol null-viewer errors
+  (5 setDisplay, 11 updateJS). Δεν δηλώνεται εκτέλεση χωρίς σφάλματα για τη σουίτα.
+- Rich editor: επτά έλεγχοι σε πραγματικό Firefox για legacy κείμενο, source,
+  Apply/Cancel, sanitization, include πίνακα, inline/export52 και mobile, χωρίς JS errors.
+- React: τρία μοντέλα 3D/11 συνθετικά, 33 active + 9 base περιπτώσεις 2D/ονομάτων,
+  keyboard/rapid commands/failure/retry, διαδοχικά zoom ACK, delayed model→2D,
+  αποκλεισμός πρόωρου zoom και επαναφορά μετά ολοκλήρωση, χωρίς JS errors.
+- Αντιστοίχιση SDF/explicit H/γράφων/formula/valence για τα τρία React μόρια,
+  source/host parity, syntax/AST, 20 search cases και git diff --check: PASS.
+- Build: 21 modules. 1293 προστατευμένα αρχεία του αρχικού baseline διατηρήθηκαν,
+  περιλαμβανομένων 458 κρίσιμων μοριακών/σεναρίων/v51 αρχείων.
+  Baseline: docs/checks/v52-before-sync-20261027.json. Evidence: docs/checks/v52-*.
+
+Γνωστός περιορισμός: ίδιο control τριών μαθημάτων στην αμετάβλητη51 και στη52
+αναπαράγει αντίστοιχες JSmol lifecycle υπογραφές (1031/936 events). Το πλήρες log
+διατηρείται στο docs/checks/v52-jsmol-lifecycle-control-20261027.json.gz, με σύνοψη
+και hashes στο διπλανό JSON. Προγενέστερα51 logs έχουν επίσης setDisplay errors.
+Το πρόβλημα δεν διορθώθηκε ή αποκρύφτηκε· τα counts δεν αποδεικνύουν όλες τις αιτίες
+ούτε αποκλείουν κάθε παλινδρόμηση. Δεν έγινε πλήρης 3D οπτική εξέταση126 μορίων,
+Safari/AT/πραγματικό mobile touch/OS clipboard/πραγματική διακοπή CDN/Drupal έλεγχος.
+
+Ανεξάρτητος Reviewer: /root/review_other_ketones,
+ROLE_ID NAMELECULE_REVIEWER_V1_20261023, αρχικό χωριστό context χωρίς Developer history.
+Δεν βρήκε actionable P0/P1/P2/P3 ευρήματα. Εξέτασε diff/local51/pinned upstream,
+editor/sanitizer/import/export, preserved scenario hooks, URLs και React generators.
+Εκτέλεσε ανεξάρτητα read-only static/preservation, source/host --check, 20 search
+cases, Python AST, πέντε JS syntax checks και diff --check· PASS. Επαλήθευσε και
+το συμπιεσμένο JSmol log. Τα browser/build αποτελέσματα παραμένουν Developer
+ evidence, όχι ανεξάρτητη εκτέλεση browser. Reviewer χωρίς εγγραφές· δεν υπήρχε
+επιβεβλημένη απομόνωση filesystem μόνο για ανάγνωση.
+
+Τελικό παγωμένο target: docs/checks/v52-reviewed-target-20261027.json,
+SHA256 a4f7cdb5c560eb1f547e461811c92dd47929d2946a4d9ede6c7ed5e0446ba315.
+40 scope files + 7 generated hashes ταυτίστηκαν πριν/μετά review και στον τελικό
+Developer έλεγχο. Μόνο τα δύο journals ενημερώθηκαν μετά το review.
+
+Core report προς προώθηση:
+«Ενσωματώθηκε το νέο js/mulermoc-nom-core-52.js από τη v52 του καθηγητή. Σε σχέση
+με το τοπικό core51 προσθέτει μόνο προστασία για ελλιπή δεδομένα στην αναγνώριση
+αιθέρων. Οι 756 συγκριτικοί έλεγχοι ονομάτων/γράφων/2D πέρασαν. Το core51 έμεινε
+αμετάβλητο. Η ενσωμάτωση είναι τοπική, χωρίς commit ή δημοσίευση.»
+Core52 SHA256: 72ac4b4ae3c9bfaa90fde650bf588ed6430acec9ad3ceef72a94a27ad6750e3a.
+Core51 SHA256: 096d617853646de0dfd67bcbde3e32252aebcb98e7525b05e6f7e71ccb48a5fc.
+Κατά το τελευταίο resumed review δεν άλλαξε κανένα core· η προσθήκη52 αφορά το
+σύνολο της εγκεκριμένης εργασίας συγχρονισμού.
+
+Καμία εντολή commit/push/δημοσίευσης δεν εκτελέστηκε. Branch react-library-pilot,
+HEAD168e3cec01f941a84d40bbe0dc07156e7baa35d0· σταθερό thesis-work checkpoint
+3673c390c1fb1b7cbcc79411a6e1e3720e97f7ab αμετάβλητο. Το checked/synced περιεχόμενο
+είναι τοπικό· δεν ισοδυναμεί με ενημερωμένο δημοσιευμένο ή committed checkpoint.
+
+Τοπικές διευθύνσεις για δοκιμή:
+Κύρια: http://127.0.0.1:8013/design/welcome-proposal.html?v=v52-20261027
+React: http://127.0.0.1:8013/react-preview/dist/?v=v52-reviewed-20261027#/viewer
+Επόμενο: ο χρήστης δοκιμάζει τις δύο εκδόσεις. Περαιτέρω επέκταση React απαιτεί
+συγκεκριμένο σχέδιο πριν από νέες αλλαγές. Δεν εκκρεμεί υλοποίηση ή review αυτού
+του εγκεκριμένου sync· παραμένει το καταγεγραμμένο JSmol lifecycle πρόβλημα.
+
+# Current resume point — 2026-10-27 — approved main v52 sync and React update in progress
+
+Ο χρήστης ενέκρινε πρώτα συγχρονισμό Κύριας έκδοσης και έπειτα React. Παρουσιάστηκε
+συγκεκριμένο σχέδιο πριν την υλοποίηση, με standing sync authorization. Δεν υπάρχει
+εντολή commit/push/publication. Working branch react-library-pilot, HEAD168e3ce·
+thesis-work3673c390 παραμένει checkpoint. UpstreamHEAD επανελέγχθηκε επιτυχώς:
+93b759f5891d7b5a1172646032d83215d60b7604 (v52), ίδιο με προηγούμενο checked αλλά
+όχι ακόμη οριστικά synchronized. Πλήρες start baseline1304files και αναγκαία
+upstream51/52αρχεία/τριπλέςσυγχωνεύσεις: /tmp/namelecule-v52-sync-20261027/.
+
+Προστέθηκαν παράλληλα HTML52,6JS52,2upstreamCSS52 καιthemeNamelecule52. HTML/scenario/
+teaching/note/CSS τριπλήσυγχώνευση upstream51->52 +local51. Core52 upstreamαυτούσιο
+(ίδια localχημικήλογική με πρόσθετοArrayguard monoether). Viewer52 παραμένει ίδιος
+μεlocal51 εκτόςversioncomments καιdefensivealkoxyarrays/graphguard· διατηρήθηκαν
+fit/uniformlabels/namefit/παλέτα/κλειστοίκανόνες/numbering. Data52 byte-identicalμε
+local51:126μόρια/378MOL/σειρά/mainchains/cameras· SDF/scenarioJSON/v51αρχεία άθικτα.
+js/ui-icons.js ενημερώθηκε απόupstream. indexwelcomeπαραμένει. Welcome/librarylinks
+δείχνουν52. Reactgenerators διαβάζουν52και generatedcontent/host/dist ανανεώθηκαν.
+Προγενέστερη React3D/P2εργασία είναι ήδη ελεγμένη χωριστήσυνεισφορά, όχι νέαεδώ.
+
+Build/syntax PASS21modules. ΠραγματικόςFirefox test-v52-molecules-browser-20261027.py
+PASS756cases:126mol×3forms×2parentmodes, exactnames/commonnames/2Dgraphs/mainchains/
+canonicalSVGhashparity μεαμετάβλητηv51,0JSerrors. Evidence/tmp/v52-molecules-browser-20261027.json.
+Τρέχει έλεγχος welcome/library/12lessons/283steps/export/rules/Exit. Απομένουν νέο
+rich-editor UI/fault/legacytext checks, React3D/name regressions, staticpreservation,
+τεκμηρίωσηκαιανεξάρτητοςReviewer. Δενδηλώνεται ακόμηολοκληρωμένοήσυγχρονισμένο.
+
+Core report in progress: προστέθηκε νέο js/mulermoc-nom-core-52.js απόupstream,
+χωρίς αλλαγήσεκανέναπαλιόcore. Θαδοθείτελικόελληνικόκείμενοπροςκαθηγητήμεchecks/status.
+Επόμενο: ολοκλήρωση browserchecksκαιαντιμετώπισηευρημάτωνεντόςεγκεκριμένουscope.
+
+# Current resume point — 2026-10-27 — React 3D completed and independently re-reviewed
+
+Συνέχεια εγκεκριμένης 3D εργασίας· χθεσινό review διακόπηκε από usage limit.
+Κατά την επανέναρξη επιβεβαιώθηκαν το frozen26 target (30+7 hashes), όλα1272
+protected files, HEAD168e3ce και stable thesis-work3673c390. Νέο session-start
+tracked baseline1277files: /tmp/namelecule-resume-20261027/baseline.json.
+
+Reviewer /root/review_other_ketones, ROLE_ID NAMELECULE_REVIEWER_V1_20261023,
+ολοκλήρωσε independent read-only review και αναπαρήγαγε P2 με πραγματικό bridge
+σε Node VM: 3D + νέα επιλογήμορίου +2D +πρόωροzoom επέτρεπεκουμπίπριν ολοκληρωθεί
+hostmodel/view, χάνονταν ACK καιparenttimeout. Διορθώθηκαν μόνο οι2zoom disabled
+conditions στο React MoleculePreview.jsx: disabled κατά κάθε state.pending.
+Στοχευμένο πραγματικόFirefox regression προστέθηκε στο υπάρχον transition test.
+PASS delayedmodel→2D/disabledprematurezoom→completion/usablezoom, orderedzoomACKs,
+πραγματικόwrongmodel failure9.23s, retry/unmount/remount,0JSerrors. BuildPASS21modules,
+JS269.53/81.29gzip CSS4.84/1.34gzip. AST/source-hostparity/staticSDFrecheck/diffPASS.
+Evidence docs/checks/react-3d-transitions-20261027.json. Προγενέστερα πλήρη3D/2D
+suites26Οκτωβρίου είναιpriorDeveloper evidence γιααμετάβλητοbridge/renderer, όχι
+fullrerun τουnewbundle. README καιdocs/REACT-3D-20261026.md ενημερώθηκαν.
+Τελικό manifest docs/checks/react-3d-reviewed-target-20261027.json SHA256
+44f50e0578a79310a1fd305c16993b51884f5f2eef5026ae37e88ce6ed2e1b22:
+32source/doc/test/evidence +7generated hashes ίδια πριν/μετά ανεξάρτητο re-review.
+Ο Reviewer επιβεβαίωσε ότι το P2 διορθώθηκε, χωρίς άλλα actionable ευρήματα.
+Εκτέλεσε actual source disabled predicates στο Node (blocked prior dropped-request
+path και re-enable μετά ACK), host --check, AST/diff και1272protected hashes.
+Δεν εκτέλεσε ανεξάρτητο browser/build/AT· αυτά παραμένουν Developer evidence.
+Καμία εγγραφή από Reviewer, χωριστό αρχικόcontext, χωρίς enforced read-only isolation.
+Δεν άλλαξε κανένα frozen target μετά το clean re-review, μόνο αυτά τα journals.
+
+Mandatory upstream check27Οκτωβρίου επιτυχές: main93b759f5891d7b5a1172646032d83215d60b7604,
+δύοcommitsμετάlastsynchronizeddc02933358a19f792c1a393fbdc2c15c2aba573f:
+0415c72022a2(v52richnoteeditor/toolbar),93b759f5891d(v52thesis-workdata/engineport).
+CHANGELOG SHA256bb7e2236fdfc1af5722bcf607013861d5626f0ac869c7658cde2b3607e7ae213.
+Read-onlycompare51files· 28newupstreamSDF ήδητοπικάbyte-identical. DataVMcompare:
+ίδιο126keyset,διαφορετικήσειρά,metadataδιαφοράμόνοethyl_4_dimethyl_3_5_heptyne_1
+(initialZoom3D,moveto),MOL2Dδιαφοράpentyn_4_one_2. Core52διαφέρειουσιαστικάαπόlocal51
+μόνομεdefensiveArrayguardστοmonoetherpredicate. Viewer52διαφέρεισεfit/uniformfont,
+namefit,palette/rules. Δενενσωματώθηκεv52σεαυτήτηReactδιόρθωση· ησυγχώνευσηθέλει
+διατήρησηNameleculeMOL/cameras/τυπογραφίας/κανόνων/σεναρίωνκαιχωριστόσχέδιοελέγχων.
+Currentchecked93b759f ≠ lastsynchronizeddc029333. Fullread-onlyevidence/diffs στο
+/tmp/namelecule-resume-20261027/. Δενέγινεfetch/mergeήαλλαγήupstreamrefs/activeversion.
+
+Originalcore/viewer/data/HTML/MOL/SDF/lessonsκαικύριαέκδοσηαμετάβλητα. Κανέναcore
+δενάλλαξεσεαυτήτησυνεδρία· core51SHA096d617853646de0dfd67bcbde3e32252aebcb98e7525b05e6f7e71ccb48a5fc.
+Χωρίςcommit/push/publication. Τελική επαλήθευση όλων των32+7hashes, HEAD/stable και session-start core hashes PASS.
+Τοπική διεύθυνση: http://127.0.0.1:8013/react-preview/dist/?v=3d-review-20261027#/viewer
+Επόμενο: ο χρήστης δοκιμάζει 2D/3D/συνθετικά για τα ίδια3μόρια. Πριν περαιτέρω
+μεταφορά React, να παρουσιαστεί συγκεκριμένο σχέδιο ενσωμάτωσης v52 που διατηρεί
+Namelecule welcome/library/12lessons και τις τοπικές οπτικές/μοριακές συμβάσεις.
+Πιθανά conflicts: MOL2D pentyn_4_one_2, camera/initialZoom ethyl_4_dimethyl_3_5_heptyne_1,
+uniform atom scale/name fitting, palette/rule behavior. Δεν αντικαθιστούμε τυφλά
+τους local51 counterparts με upstream52. Ρουτίνα sync έχει standing authorization,
+ουσιαστικό νέο scope ή άλυτη σύγκρουση απαιτεί έγκριση κατά AGENTS.md.
+
+# Current resume point — 2026-10-26 — React 3D complete locally, frozen independent review pending
+
+Εγκεκριμένη υλοποίηση: ορατό 3D στα ίδια τρία μόρια (αιθανόλη C₂H₆O,
+2,3-διμεθυλοβουτάνιο C₆H₁₄, προπανόνη C₃H₆O), React 2D/3D toggle, native JSmol
+περιστροφή/zoom και υπάρχουσες επισημάνσεις/αρίθμηση συνθετικών. Επιστροφή σε 2D
+διατηρεί μορφή/zoom/ανάλυση. Αλλαγή μορίου διατηρεί view/form, καθαρίζει ανάλυση
+και επαναφέρει zoom. Έλεγχος πραγματικού SDF URL, serials/elements/bond graph και
+ordered script marker πριν αποκαλυφθεί μοντέλο. Εντολές εκτελούνται διαδοχικά.
+Generated-host Info.script/defaultDirectory διορθώνει JSmol relative-path resolution
+χωρίς αλλαγές σε original HTML/engine/data ή αρχεία μορίων. ResizeObserver/public API.
+
+Βάση HEAD168e3cec01f941a84d40bbe0dc07156e7baa35d0, branch react-library-pilot.
+Προϋπάρχον selector/name-panel είναι ήδη ελεγμένες χωριστές συνεισφορές στο ίδιο
+workingtree. Νέα φάση: React MoleculePreview.jsx, main.jsx, preview.css, bridge,
+build-viewer-host.py, README, docs/REACT-3D-20261026.md και 4 νέα test scripts +
+4 evidence JSON + frozen manifest. NameAnalysis.jsx/catalog αμετάβλητα από 3D baseline.
+Καμία αλλαγή σε original core/viewer/data/HTML/MOL/SDF/lessons ή stable thesis-work
+3673c390c1fb1b7cbcc79411a6e1e3720e97f7ab. 1272 protected nonReact αρχεία ίδια με
+baseline /tmp/namelecule-before-react-3d-20261026/baseline.json (1292files).
+Δεν έγινε νέο commit/push/publication ή εγκατάσταση dependency.
+
+Developer checks PASS: build21modules JS269.53kB/81.29gzip CSS4.84kB/1.34gzip.
+Πραγματικός Firefox: 3models,11name-components ίδια 3D colors/visibility/selection
+property/numbering echoes/3Danchors/main-chain/explanations με original σε ίδια
+2D form. Native pointer drag αλλάζει rotation matrix, zoom αλλάζει κάμερα, toggle
+επιστρέφει σωστά, model mismatch αποκρύπτει iframe/απενεργοποιεί analysis, rapid
+molecule/view changes χωρίς frame reload. Canvas fits all3 στα1500/390 χωρίς overflow.
+Static source/runtime serials/elements/coordinates/bonds, complete valences,
+formula/explicitH6,14,6 και isomorphism με όλες3τις 2Dμορφές PASS. Δεν έγινε νέα
+παραγωγή 3D ή καθολική IUPAC/conformer certification.
+Final corrected bridge regression PASS33active2D/name cases +9base forms και
+16behavior checks (keyboard/numbering0,1,2 σε0.03/0.46/0.85s, modes/zoom/rapid,
+mobile/library/lifecycle/malformed/stale/failure/retry). Transition supplement PASS:
+overlapping zoomIN/OUT->2D ACKs1,2,3,4, camera80%, πραγματικό wrong-model failure
+σε9.31s, retry και unmount/remount. Όλα successful browser runs0JSerrors. AST,
+bridge syntax, source/host --check και git diff --check PASS. Πλήρη evidence στα
+ docs/checks/react-3d-{browser,regression-browser,static,transitions}-20261026.json.
+
+Διαγνωστικό ιστορικό: stale cached dist/index.html έφερνε v3 parent με v4 host,
+διορθώθηκε με fresh query URL (όχι αποδεδειγμένο boxed-number bug). Αρχική σύγκριση
+3D με διαφορετικές2Dμορφές διέφερε σε εσωτερική selection property· ίδια form PASS.
+Πραγματικό overlapping fZoom3D quit ακύρωνε queued markers: αναπαραγωγή και λύση
+με serial adapter commands. Το παλιό regression test επίσης απαιτούσε αναμονή
+πραγματικού ACK αντί synchronous υπόθεσης σε burst component commands. Μετά τη
+διόρθωση έγινε πλήρες relevant rerun, χωρίς απόκρυψη αποτυχημένων προσπαθειών.
+
+Ανεξάρτητος Reviewer /root/review_other_ketones (ROLE_ID NAMELECULE_REVIEWER_V1_20261023)
+έλαβε frozen target και δουλεύει read-only στο αρχικό ανεξάρτητο context.
+Manifest docs/checks/react-3d-reviewed-target-20261026.json SHA256
+3ff14e499f783afb7738fc3e19fd9defb5c72bd5092b2173765633cd8af85da0:
+30 source/doc/test/evidence hashes +7 generated runtime hashes. Δεν αλλάζουμε target
+κατά το review. Μόνο αυτά τα2journals εξαιρούνται ως mutable. Browser/build checks
+είναι Developer evidence. Εκκρεμεί παραλαβή ευρημάτων/τυχόν διορθώσεις+re-review,
+τελική επαλήθευση hashes και άνοιγμα external browser. Δεν δηλώνεται ακόμη clean review.
+
+Τοπική διεύθυνση http://127.0.0.1:8013/react-preview/dist/?v=3d-20261026#/viewer
+με HTTP root server8013. Δεν είναι δημόσιος σύνδεσμος. Legacy CDN/JSME/JSmol
+dependencies παραμένουν και απαιτούνται και στο verified2Dstartup. Δεν έγινε νέο
+full126molecule/283step/Safari/touch/AT/offline/Drupal/PNG test.
+Upstream session-start check dc029333 ίδιο με τελευταίο content-sync, χωρίς release·
+δεν επαναλήφθηκε αδικαιολόγητα. Core report: κανένα core δεν άλλαξε στη React φάση,
+core51 SHA256096d617853646de0dfd67bcbde3e32252aebcb98e7525b05e6f7e71ccb48a5fc.
+Επόμενο: ολοκλήρωση ανεξάρτητου review και παράδοση τοπικής δοκιμής στον χρήστη.
+
+# Current resume point — 2026-10-26 — approved React 3D implemented, validation/review in progress
+
+Ο χρήστης ενέκρινε την προσθήκη ορατής 3D προβολής για τα ίδια τρία μόρια
+(αιθανόλη, 2,3-διμεθυλοβουτάνιο, προπανόνη), με υπάρχον JSmol/SDF και επισημάνσεις.
+Υλοποιήθηκαν React 2D/3D toggle, native rotation/zoom, canvas resize και v4 bridge.
+Readiness ελέγχει πραγματικό SDF URL, atom serials/elements/bonds και ordered
+JSmol script marker πριν αποκαλύψει μοντέλο ή ενεργοποιήσει συνθετικά.
+Διορθώθηκε μόνο στο generated host η επίλυση σχετικών JSmol paths: HTML base
+δεν αρκούσε για load/script, οπότε το υπάρχον Info.script θέτει defaultDirectory
+στη ρίζα του repository. Αμετάβλητα original HTML/core/viewer/data/MOL/SDF/lessons.
+
+Baseline /tmp/namelecule-before-react-3d-20261026/baseline.json (1292 files),
+HEAD168e3ce, stable thesis-work3673c390. Προγενέστερα selector/name-panel changes
+ήταν ήδη uncommitted και ελεγμένα· δεν αποδίδονται στη νέα φάση. Δεν έγινε νέο
+commit/push/publication. Core51 SHA256 096d617853646de0dfd67bcbde3e32252aebcb98e7525b05e6f7e71ccb48a5fc.
+
+Μέχρι εδώ: build PASS21modules, visible ethanol 3D actual9atoms8bonds και canvas
+784x420 επιβεβαιωμένα σε Firefox/screenshot. Full 2D/name regression PASS33active
+cases/9base forms, keyboard/numbering/modes/zoom/rapid/lifecycle/faults/mobile,
+0JS errors (/tmp/react-3d-regression-browser-20261026.json). Αρχική διάγνωση
+καθυστέρησε λόγω cached παλιού dist/index.html (v3 parent με v4 host)· οι νέες
+δοκιμές ανοίγουν fresh query URL. Δεν ήταν επιβεβαιωμένο boxed-number bug.
+Αυτή τη στιγμή τρέχει docs/checks/test-react-3d-browser-20261026.py: all3models,
+11name-components, native drag/zoom, model gate, rapid toggles, responsive canvas,
+actual legacy3D parity. Απομένουν graph/coordinate checks, README/report,
+freeze και υποχρεωτικός ανεξάρτητος Reviewer. Μην δηλωθεί ολοκληρωμένο πριν αυτά.
+Upstream έλεγχος αυτής της συνεδρίας είχε επιτύχει dc029333, χωρίς νέα release.
+Επόμενο: παραλαβή πραγματικών 3D αποτελεσμάτων και αντιμετώπιση ευρημάτων.
+
+# Current resume point — 2026-10-26 — proposed visible React 3D, awaiting approval
+
+Ο χρήστης ζήτησε συνέχεια μετά το ελεγμένο πάνελ ανάλυσης ονόματος. Στοχευμένη
+read-only επιθεώρηση των fToggleViewer2D/3D, fLoadMol3D, fInitData και generatedhost
+CSS επιβεβαιώνει ότι το JSmol ήδη φορτώνεται αλλά παραμένει offscreen/hidden.
+Επιβεβαιώθηκαν τα πραγματικά runtimeSDF στο mols/nomeclature-moc2:
+ethanol_3D.sdf9atoms8bonds, dimethyl_2_3_butane_3D.sdf20atoms19bonds,
+propanone_3D.sdf10atoms9bonds. Η ανάγνωσηcounts δεν είναι νέα3Dπιστοποίηση.
+
+Πρόταση προςέγκριση: εναλλαγή2D/3D στη React προβολή για ταίδια3μόρια,
+nativeJSmol περιστροφή/3Dzoom και αντίστοιχη υπάρχουσα επισήμανση/αρίθμηση από
+τα συνθετικά. Χρήση αμετάβλητωνSDF/JSmol/engine. Readiness ανάμόριο πριν την
+εμφάνιση3D και τοcomponentclick ώστε να μη φαίνεται/επισημαίνεται παλιόμοντέλο.
+Προβλεπόμενα αρχεία μόνοReact: MoleculePreview.jsx, bridge, hostgenerator/layoutCSS,
+README και σχετικάdocs/checks· καμίαoriginalcore/viewer/data/MOL/SDF/lessonαλλαγή.
+Μετάτηνέγκριση χρειάζονται realbrowser3Dload/render/rotate/zoom/toggle/rapidselection,
+ίδιαSDF/graph/formula/atomcorrespondence καισύγκρισηhighlight/numbering μεΚύρια
+έκδοση, 2D/namepanelregression,resize/lifecycle/errors καιindependentReviewer.
+Οι παλιέςJSmol ιδιαιτερότητες δεν θεωρούνται διορθωμένες εκ τωνπροτέρων.
+
+Δεν έγινε νέαυλοποίηση ή νέοruntimeTest. Μόνοjournalsενημερώθηκαν· περιμένουμε
+έγκρισησυγκεκριμένουβήματοςσύμφωναμεAGENTS.md. Προγενέστεραελεγμέναselector/namepanel
+παραμένουνworkingtree, χωρίς νέοcommit/push/publication. Core αμετάβλητο.
+Ο επιτυχής upstreamέλεγχοςέναρξης τηςσυνεδρίας (dc029333 ίδιομεcontent-sync)
+δεν επαναλήφθηκεσεαυτότοplanningβήμα. Επόμενο: έγκριση/προσαρμογή πρότασης3D.
+
+# Current resume point — 2026-10-26 — reviewed React name-analysis panel ready locally
+
+Εγκεκριμένο πάνελ «Ονοματολογία» ολοκληρώθηκε για τα ίδια3μόρια: αιθανόλη,
+2,3-διμεθυλοβουτάνιο, προπανόνη. Native React κουμπιά στα υπάρχοντα συνθετικά,
+κλικ/Enter/Space για εξήγηση, επισήμανση και αρίθμηση, δεύτεροκλικ για ακύρωση.
+Τα labels περιέχουν την πραγματική ελληνικήευφωνία του παλιούμηχανισμού. Δεν
+γράφτηκε άλλος αλγόριθμος ονοματολογίας/atom mapping ή εκπαιδευτικό περιεχόμενο.
+Κύριασυνομιλία Developer· δεν χρειάστηκε νέος chemistry/learningagent.
+
+Τοπικήπροβολή: http://127.0.0.1:8013/react-preview/dist/?v=name-analysis-20261026#/viewer
+Desktop: πάνελ δίπλα· στενήοθόνη: κάτω απόviewer. Η αρχική400ms αρίθμηση παραμένει
+στο iframe, με παρατηρημένη συσσωρευτικήακολουθία0/1/2 σε0.01/0.44/0.85s γιααιθανόλη.
+Mode/zoom διατηρούν επιλογή· αλλαγήμορίου/retry/remount την καθαρίζουν. Πρωτόκολλοv3
+με υπάρχοντες/component-bound IDs και boundedanalysisvalidation. Σφάλματα/cleanup/
+παλιέςJSmol/3Dεξαρτήσεις διατηρούνται. ΌχιnativeReact renderer/securitysandbox ήJSmolfix.
+
+Βάση/HEAD168e3cec01f941a84d40bbe0dc07156e7baa35d0, branchreact-library-pilot.
+Το προγενέστερο ελεγμένοέργο τριώνμορίων παραμένει χωριστή συνεισφορά στο ίδιο
+workingtree. Αυτήηφάση άλλαξε react-preview/src/MoleculePreview.jsx, νέοNameAnalysis.jsx,
+public/viewer-host-bridge.js, preview.css, README καινέα docs/REACT-ANALYSIS-20261026.md,
+docs/checks/test-react-analysis-browser-20261026.py και react-analysis-{browser,
+layout,static,reviewed-target}-20261026.json. Άλλα αρχικάruntime/data/MOL/lesson
+αρχεία δεντροποποιήθηκαν. Χωρίς νέοdependency ή νέοcommit/push/publication.
+Κύριαέκδοση thesis-work3673c390c1fb1b7cbcc79411a6e1e3720e97f7ab καιδημοσιευμένοι
+σύνδεσμοι άθικτοι. Όλα τα αρχείαείναι αποθηκευμέναστοworkingtree· προηγούμενα
+τοπικάGitcheckpoints94cc469/168e3ce διατηρούνται.
+
+Developerέλεγχοι PASS: build21modules JS268.80kB/81.10gzip,CSS4.69kB/1.33gzip.
+33/33activecomponents×mode με ίδιακείμενα/ευφωνία/selectedstate καιexactSVGgeometry/
+text/styles/viewBox/highlightcolors/τελικήαρίθμηση μεαμετάβλητη εφαρμογή στο ίδιο
+784x420viewport. 9/9baseSVG/rawMOLparity καιΗ6/14/6. Keyboard/toggle, αριθμοίσταδιακά,
+mode/zoom/reset,rapidcommands,source/componentbinding,malformedpayloads, mobile,
+library9cards/12links,unmount/remount,loading/commandfaulttests PASS,0JSerrors.
+Faulttests περιέχουνελεγχόμεναerrorevent/ACKdrop/90scallback καιπραγματική10sαναμονή,
+όχιπραγματικόCDNoutage. Μετάτοfullrun έγινεCSS-only buttonspacing/minwidth/font
+προσαρμογή: ίδιοJavaScriptSHA25622b1592f6fbb6d6ba77815383f18be223729b63708fdf5e830570bd7677295cd.
+6finalCSSlayoutcases PASS1500/390:μονογραμμικάκουμπιά≥44x48,ίδιεςεξηγήσεις,
+nooverflow,ίδιοdesktopviewport. Source/hostparity,20existingsearchcases,AST/syntax/
+diff PASS. Όχι νέοfull126molecule/283step/Safari/Drupal/offline/screenreadertest.
+
+ΑνεξάρτητοςReviewer /root/review_other_ketones,
+ROLE_ID=NAMELECULE_REVIEWER_V1_20261023: κανέναactionableP0-P3. Διάβασεsource/calls/
+state/validation, εκτέλεσεπραγματικήvalidAnalysis γιαvalid+7rejectioncases, host/source
+--check,JSsyntax,20searchcases,AST,diff,1266protectednonReacthashes/stablebranch και
+τελικόJSbyteidentity. Browser/build είναιDeveloper evidence, όχιindependentexecution.
+Reviewer στο αρχικόχωριστόcontext χωρίςDeveloperιστορικό, καμίαεγγραφή καιχωρίς
+επαληθευμένοenforcedread-onlysandbox. Προγενέστεροselectorχωρίστηκεαπότη νέαφάση.
+Frozenmanifest docs/checks/react-analysis-reviewed-target-20261026.json SHA256
+6ff0bc32fc93a2f916822549cd3a3e8ae57ae288a7757aa8ad5a4c9845b73d92:
+20source/doc/test/evidence+7generatedhashes έγκυρα πριν/μετάreview καιστοhandoff.
+Κανέναtargeteditμετάcleanreview. Μόνοjournalsενημερώθηκαν, εκτόςfrozenobject.
+1266nonReactαρχείαεκτόςjournals ίδιομεbefore-namebaseline1285files στο/tmp.
+
+Έλεγχοςprofessorupstream στηνέναρξη τηςσυνεδρίας επιτυχής HEAD/main/history και
+CHANGELOG:dc02933358a19f792c1a393fbdc2c15c2aba573f,ίδιομεlastchecked/content-sync,
+χωρίςνέαrelease. ChangelogSHA256eb54faf3308c29c143d816b76399f1cd6ad373223de8a28f56b3b3253a875c0d.
+Core report: **Δεν έγιναν αλλαγές σε κανένα core σε αυτή τη φάση**. Core51SHA256
+096d617853646de0dfd67bcbde3e32252aebcb98e7525b05e6f7e71ccb48a5fc ίσομεbaseline.
+Επόμενο: οχρήστηςδοκιμάζει τιςεπιλογέςσυνθετικών. Νέαεπέκταση απαιτείσυγκεκριμένο
+σχέδιο/έγκριση· νέοcommitήpublication μόνομεσχετικήεντολή.
+
+# Current resume point — 2026-10-26 — React name-analysis panel implemented, independent review pending
+
+Ο χρήστης ενέκρινε συγκεκριμένα το πάνελ ονοματολογίας για τα ίδια3μόρια.
+Υλοποιήθηκαν NameAnalysis.jsx (native buttons/pressed state/live explanation και
+bounded payload validation), σύνδεση MoleculePreview/bridgev3 και responsiveCSS.
+Τα labels/ευφωνία/εξηγήσεις διαβάζονται από τα ήδη παραγόμενα legacyDOM στοιχεία·
+το κλικ καλεί τον αρχικό delegatedhandler .nameCompBox, όχι νέο χημικόαλγόριθμο.
+Η αρίθμηση παραμένει ο αρχικός400ms timer στο iframe. Στο πραγματικό πρώτο probe
+το Reactcomp5 της αιθανόλης έδωσε ακριβώς εξήγηση/αρίθμηση, χωρίςJSerrors.
+
+Προγενέστερο έργο τριών μορίων ήταν ήδη στο workingtree, δεν αποτελεί όλο νέα
+συνεισφορά αυτήςτηςφάσης. Baseline όλων1285tracked/untracked αρχείων αποθηκεύτηκε
+στο /tmp/namelecule-before-react-analysis-20261026/baseline.json. Τα1266nonReact
+αρχεία εκτόςjournals παραμένουν ίδια. BuildPASS21modules JS268.80kB/81.10gzip,
+CSS4.69kB/1.33gzip μετά finalCSS. Το test-react-analysis-browser-20261026.py
+ολοκληρώθηκε:33activecases/9baseSVGs/asyncnumbering/keyboard/rapid/fault/mobile PASS,
+0JSerrors. Μετά απόCSS-only spacing tweak το JavaScriptπαρέμεινε byte-identical
+και6στοχευμένα final-layoutcases PASS. Παραδόθηκε frozen20source+7generatedtarget
+στον ανεξάρτητοReviewer /root/review_other_ketones. ManifestSHA256
+6ff0bc32fc93a2f916822549cd3a3e8ae57ae288a7757aa8ad5a4c9845b73d92
+στο docs/checks/react-analysis-reviewed-target-20261026.json. Καμίααλλαγήtarget
+ενώτρέχειreview. Επόμενο: ευρήματα/διορθώσειςανχρειαστούν, τελικήκαταγραφήκαιbrowser.
+Κανένανέοcommit/push/publication/corechange.
+
+# Current resume point — 2026-10-26 — proposed React name-analysis panel, awaiting approval
+
+Ο χρήστης ζήτησε να συνεχίσουμε μετά τον ελεγμένο επιλογέα τριών μορίων.
+Έγινε στοχευμένη read-only επιθεώρηση του React state/καταλόγου, fShowNameAnalysis,
+fNameCompBox, #nameAnalysisExplain και του delegated click handler .nameCompBox.
+Το προηγούμενο ελεγμένο έργο επιλογέα παραμένει στο working tree χωρίς νέοcommit.
+Δεν άλλαξε κώδικας σε αυτό το planning βήμα. Core51/Κύρια έκδοση αμετάβλητα.
+
+Πρόταση προς έγκριση: πραγματικό React πάνελ ανάλυσης ονόματος δίπλα στον 2D
+viewer για τα ίδια3μόρια. Τα εμφανιζόμενα συνθετικά/επεξηγήσεις θα προέρχονται
+από τον υπάρχοντα μηχανισμό και την ήδη εφαρμοσμένη ελληνική ευφωνία, χωρίς νέο
+αλγόριθμο ονοματολογίας. React buttons ανά υπαρκτόcomponentid θα καλούν μέσω
+ελεγχόμενης γέφυρας το ήδη υπάρχον click path για εξήγηση/highlight/αρίθμηση.
+Προβλεπόμενα αρχεία μόνοReact: νέοNameAnalysis.jsx, MoleculePreview.jsx, bridge,
+preview.css και σχετικάdocs/checks. Αρχικάcore/viewer/data/HTML/MOL/lessons άθικτα.
+Επαλήθευση μετάέγκριση: ίδιασυνθετικά/κείμενα/highlights μεΚύρια έκδοση και για
+τα3μόρια/3μορφές, ακύρωση/αλλαγή επιλογής/reset, asyncαρίθμηση, rapidcommands,
+σφάλματα/cleanup/mobile και ανεξάρτητοςReviewer. Ασύγχρονα highlights/3D dependencies
+θα ελεγχθούν πραγματικά, δεν τεκμαίρονται από την απλή εμφάνιση των κουμπιών.
+
+Αναμονή συγκεκριμένης έγκρισης πριν από κώδικα σύμφωναμε AGENTS.md. Δεν ξεκίνησε
+νέαανάθεση/υλοποίηση/runtimeέλεγχος. Μόνο δύοjournals ενημερώθηκαν. Έλεγχοςupstream
+στην έναρξη αυτής της συνεδρίας είχε επιβεβαιώσει dc029333 (HEAD/main/history και
+byte-identicalCHANGELOG), ίδιομεlastchecked/content-sync· δεν επαναλήφθηκε τώρα.
+Core report: καμίααλλαγήσεcore σεαυτότοβήμα. Επόμενο: έγκριση/προσαρμογή πάνελ.
+
+# Current resume point — 2026-10-26 — reviewed three-molecule React selector ready locally
+
+Ο χρήστης ενέκρινε την επέκταση της React δοκιμής σε τρία υπάρχοντα μόρια.
+Η κύρια συνομιλία υλοποίησε ως Developer: αιθανόλη (ethanol,C2H6O),
+2,3-διμεθυλοβουτάνιο (dimethyl_2_3_butane,C6H14), προπανόνη (propanone,C3H6O).
+Κοινός κατάλογος src/molecules.json για React και generator, επιλογή στο ίδιο
+iframe χωρίς reload, διατήρηση 2D μορφής και reset zoom στο2 όπως το fSelectMol.
+Το προηγούμενο σχήμα κρύβεται μέχρι ACK για το τελευταίο id/μόριο/μορφή. Η νέα
+επιλογή παραμένει διαθέσιμη για γρήγορες εναλλαγές. Retry/remount επαναφέρει
+αιθανόλη/συνεπτυγμένο/zoom2. Διατηρούνται error/deadlines/cleanup/accessibility.
+
+Προβολή: http://127.0.0.1:8013/react-preview/dist/?v=molecules-20261026#/viewer
+Ο τοπικός server8013 και ο απομονωμένος FirefoxBiDi9237 επανεκκινήθηκαν για tests.
+Portable Node24.22.1 επαναφέρθηκε προσωρινά από το επίσημο nodejs.org, με SHA256
+archive d132557e7ee2b85af08b0c8c34338e65c6430f2238d01f727728ef42dc83b035.
+Οι προϋπάρχουσες εξαρτήσεις node_modules χρησιμοποιήθηκαν, χωρίς νέα dependency.
+
+Αφετηρία/HEAD168e3cec01f941a84d40bbe0dc07156e7baa35d0 στο react-library-pilot.
+Το αρχικό working tree είχε μόνο τα δύο planning journals τροποποιημένα.
+Η νέα εργασία είναι αποθηκευμένη στα working-tree αρχεία, χωρίς νέο commit/push/
+δημοσίευση. Προηγούμενα checkpoints94cc469/168e3ce παραμένουν. Κύρια έκδοση στο
+thesis-work3673c390c1fb1b7cbcc79411a6e1e3720e97f7ab και δημοσιευμένοι σύνδεσμοι άθικτοι.
+
+Αλλαγμένα: react-preview/src/{MoleculePreview.jsx,main.jsx,preview.css,molecules.json},
+public/viewer-host-bridge.js, tools/build-viewer-host.py, README.md. Νέα docs/
+REACT-MOLECULES-20261026.md και docs/checks/react-molecules-{browser,graphs,static,
+reviewed-target}-20261026.json, test-react-molecules-{browser,static}-20261026.py.
+Τα αρχικά core/viewer/data/HTML/MOL/SDF και12scenario JSONs παραμένουν byte-identical.
+Δεν αλλάζει επιστημονικό/εκπαιδευτικό περιεχόμενο. JSmol/3D startup και3Dloading
+παραμένουν παλιές εξαρτήσεις του iframe: όχι nativeReact renderer/2D-onlybundle,
+όχι securitysandbox ή διόρθωσηJSmol. Οι παλιές font/fit συμβάσεις παραμένουν.
+
+Developer επαλήθευση: build20modules JS267.14kB/80.67gzip,CSS3.66kB/1.09gzip PASS.
+Firefox1500/390:9MOL και9exactSVGgeometry/text/styles/viewBox ισοδυναμίες στο
+εξισωμένο958x420 baseline PASS. ΕμφανήH6/14/6, επιλογέας/τίτλοι, ίδιοiframe stamp,
+mode/zoom0.5..6,reset/preservedmode,γρήγορες μικτές αλλαγές, άγνωσταIDs/καθυστερημένα
+μηνύματα, mobile/nooverflow, library9cards/12links,remount/unmountwhileloading PASS.
+Missing-document error test με εισαγόμενο nativeerror event· αρχικό timeout με
+ενεργοποίηση πραγματικής callback. ΝέοcommandACKdrop: πραγματική αναμονή10s,
+wrong-molecule reply rejected,oldgraphhidden,lateACKignored,retryreset PASS.
+Αυτά είναι ελεγχόμενες fault injections, όχι πραγματικόCDNoutage. Τελικόrun0JSerrors.
+Graph checker9neutralC/H/O formula/valence/heavy-graph-isomorphism PASS, όχι γενικός
+MOL/IUPAC validator.20existingsearchcases,sourceparity,hostparity,syntax/AST/diffPASS.
+1259protectednonReactfiles+stablebranch άθικτα. Τελικήεπαλήθευση20targethashes PASS.
+
+Ανεξάρτητος Reviewer /root/review_other_ketones, ROLE_ID=NAMELECULE_REVIEWER_V1_20261023,
+στο αρχικό ανεξάρτητο context χωρίς Developer ιστορικό. Κανένα actionableP0-P3.
+Ανεξάρτητα διάβασε source/protocol/state/calls, έλεγξε13source+7generatedhashes,
+generator/source --check,AST/JSsyntax,20searchcases,graphchecker,9MOLstrings έναντι
+πραγματικής embeddedπηγής,1259protectedhashes καιstablebranch. Runtime/build είναι
+Developer evidence· δεν έκανε ανεξάρτητοbrowser/build. Καμία εγγραφή Reviewer,
+χωρίς επιβεβαιωμένο enforcedread-onlysandbox. Κανένα source edit μετά το review.
+Manifest docs/checks/react-molecules-reviewed-target-20261026.json SHA256
+f020d51b3db7b8ae2a64f7200239dd552a7462974c872a789a310d1bf09f75d0.
+Περιορισμοί: όχι νέοfull126molecule/283step/Safari/Drupal/offline/screen-reader test.
+
+Έλεγχος έναρξης professorHEAD/main/history/changelog επιτυχής:dc02933358a19f792c1a393fbdc2c15c2aba573f,
+ίδιο με lastchecked/content-synchronized, χωρίς νέαrelease/overlap. ChangelogSHA256
+ eb54faf3308c29c143d816b76399f1cd6ad373223de8a28f56b3b3253a875c0d.
+Core report: **Δεν έγιναν αλλαγές σε κανένα core σε αυτή τη φάση**. Core51SHA256
+096d617853646de0dfd67bcbde3e32252aebcb98e7525b05e6f7e71ccb48a5fc ίσο μεbaseline.
+Επόμενο: ο χρήστης δοκιμάζει τον επιλογέα. Επόμενη επέκταση χρειάζεται συγκεκριμένο
+σχέδιο/έγκριση. Αποθήκευση σε νέοcommit ή δημοσίευση μόνο με σχετική εντολή.
+
+# Current resume point — 2026-10-26 — proposed React molecule selection, awaiting approval
+
+Ο χρήστης ζήτησε να συνεχίσουμε με τη React έκδοση. Διαβάστηκαν το αποθηκευμένο
+resume point, README, σχετικά plans και ο υπάρχων κώδικας React/bridge/host/data.
+Αφετηρία HEAD168e3cec01f941a84d40bbe0dc07156e7baa35d0 στο react-library-pilot,
+καθαρό working tree πριν τη σημερινή καταγραφή. Stable thesis-work3673c390.
+Δεν έγινε νέα υλοποίηση ή επανάληψη runtime tests· το προηγούμενο ελεγμένο
+checkpoint αιθανόλης παραμένει διαθέσιμο.
+
+Νέος επιτυχής read-only έλεγχος professor upstream HEAD/main/history/changelog:
+dc02933358a19f792c1a393fbdc2c15c2aba573f, ίδιο με last checked/content-synchronized.
+Το τρέχον CHANGELOG είναι byte-identical με το συγχρονισμένο· SHA256
+ eb54faf3308c29c143d816b76399f1cd6ad373223de8a28f56b3b3253a875c0d.
+Δεν υπάρχουν νέα commits/release ή επικαλύψεις για συγχρονισμό.
+
+Προτεινόμενο επόμενο bounded βήμα, προς έγκριση: React επιλογέας τριών ήδη
+υπαρχόντων μορίων: ethanol (αιθανόλη), dimethyl_2_3_butane
+(2,3-διμεθυλοβουτάνιο), propanone (προπανόνη). Επιβεβαιώθηκαν οι εγγραφές και
+οι τρεις MOL μορφές/registry για το καθένα στην υπάρχουσα data51. Σκοπός:
+επαναχρησιμοποιήσιμη σύνδεση React-viewer με διακλαδώσεις και καρβονύλιο.
+Μικρός κοινός κατάλογος επιτρεπόμενων ids/τίτλων/τύπων, επιλογή χωρίς reload
+του iframe, διατήρηση επιλεγμένης 2D μορφής και reset zoom όπως το fSelectMol.
+Προβλεπόμενα αρχεία μόνο react-preview: MoleculePreview.jsx, bridge, host generator,
+main.jsx/preview.css, νέος μικρός κατάλογος και σχετικά docs/checks. Όλα τα
+αρχικά core/viewer/data/MOL/lesson αρχεία παραμένουν ως έχουν.
+Έλεγχοι προς εκτέλεση μετά την έγκριση: source MOL/SVG parity 3x3, Η/font/layout,
+γρήγορη εναλλαγή μορίων και μορφών, zoom/reset, errors/retry, resize/navigation,
+υπάρχουσα βιβλιοθήκη και ανεξάρτητος Reviewer. Τα γνωστά JSmol/3D startup
+φορτία παραμένουν· δεν προτείνεται σιωπηρή αφαίρεση εξαρτήσεων.
+
+Αναμονή έγκρισης συγκεκριμένου σχεδίου πριν τον κώδικα, σύμφωνα με AGENTS.md.
+Μόνο τα δύο continuity/contribution journals ενημερώθηκαν. Χωρίς commit/push/
+δημοσίευση σε αυτό το planning βήμα. Core unchanged, SHA256 096d617853646de0dfd67bcbde3e32252aebcb98e7525b05e6f7e71ccb48a5fc.
+Επόμενο: έγκριση/προσαρμογή της πρότασης από τον χρήστη, κατόπιν υλοποίηση.
+
 # Current resume point — 2026-10-26 — local checkpoint saved for later continuation
 
 Ο χρήστης ζήτησε αποθήκευση μέχρι εδώ και συνέχεια αργότερα. Η ελεγμένη δοκιμή

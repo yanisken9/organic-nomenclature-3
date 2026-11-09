@@ -1,0 +1,70 @@
+{
+  "nativeCases": 184,
+  "pairedComparisons": 92,
+  "fixtures": 23,
+  "fonts": [
+    9,
+    12,
+    14,
+    16
+  ],
+  "rasterScale": "64 raster pixels per requested font em; contact means ink within Chebyshev radius 2 of visible bond pixels",
+  "versions": {
+    "baseline": {
+      "cases": 92,
+      "casesWithUncoveredGlyphInk": 86,
+      "casesWithBondContact": 58,
+      "casesWithFullyHiddenLine": 0,
+      "drawAndTransportMedianMs": 5.279999999999999
+    },
+    "candidate": {
+      "cases": 92,
+      "casesWithUncoveredGlyphInk": 0,
+      "casesWithBondContact": 0,
+      "casesWithFullyHiddenLine": 0,
+      "drawAndTransportMedianMs": 5.865
+    }
+  },
+  "invariants": {
+    "atomCoordinatesRelativeToAtom1MaxDifference": 5.684341886080802e-14,
+    "svgLineVectorMaxDifferenceFromIntegerRounding": 1.4142135623730951,
+    "molecularGraphAtomIDsChargesIsotopesAndMOLBody": "unchanged in 92 pairs; generated timestamp excluded",
+    "labelsColorsFontsSubSuperRanges": "unchanged in 92 pairs; text positions and backplates intentionally change",
+    "rebuild": [
+      {
+        "version": "baseline",
+        "width": 1500,
+        "sameSVG": true
+      },
+      {
+        "version": "baseline",
+        "width": 390,
+        "sameSVG": true
+      },
+      {
+        "version": "candidate",
+        "width": 1500,
+        "sameSVG": true
+      },
+      {
+        "version": "candidate",
+        "width": 390,
+        "sameSVG": true
+      }
+    ],
+    "javascriptErrors": 0
+  },
+  "limitations": [
+    "Firefox/macOS active FEB169 permutation only",
+    "Native producer, no app integration, lesson, JSmol, numbering or highlight interaction tests",
+    "No late font-load invalidation or production-safe fallback; missing metrics throws",
+    "Timing includes BiDi overhead; not a performance benchmark"
+  ],
+  "productionProtected": {
+    "jsme/FEB169D74546A3B279D22AE09AFB86BD.cache.js": true,
+    "js/mulermoc-nom-core-52.js": true,
+    "js/mulermoc-nom-molview-52.js": true,
+    "js/jsme-nick-nomeclature-moc2-data_52.js": true,
+    "mulermoc-nom-52.html": true
+  }
+}

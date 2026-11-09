@@ -1,0 +1,52 @@
+{
+  "sourceBefore": "../svg-general-audit-20261031/catalog.json.gz baseline raw SVG",
+  "sourceBeforeMetrics": "../svg-general-audit-20261031/corrected-replay.json.gz catalog baseline (corrected oracle)",
+  "sourceAfter": "final-acceptance.json.gz",
+  "examples": [
+    {
+      "key": "butene_1",
+      "mode": "expanded",
+      "width": 1500,
+      "beforeSVGsha256": "b2ea91b722378644af22acb42bc0af064717b719fc4f17f7f5820e3cae7d3549",
+      "beforeMetrics": {
+        "inkWithinHalfCssPixelOfBond": 162,
+        "fullyHiddenLineCount": 0
+      },
+      "afterSVGsha256": "6fcd4fd85269bdeae08d730b863bbdbdabfe86b594f4af124360e08fae442d7e",
+      "afterMetrics": {
+        "inkWithinHalfCssPixelOfBond": 0,
+        "fullyHiddenLineCount": 0
+      }
+    },
+    {
+      "key": "ethyl_4_isopropyl_3_methyl_2_hexanal",
+      "mode": "condensed",
+      "width": 1500,
+      "beforeSVGsha256": "315f4efa1971ea081708ac6ef8d48dd82b1fa6912cfcf8c84fd9e31ffde88ad4",
+      "beforeMetrics": {
+        "inkWithinHalfCssPixelOfBond": 97,
+        "fullyHiddenLineCount": 0
+      },
+      "afterSVGsha256": "e9e2e09a4f1282cd0bf319471084e1fe25514b7e4dbe8327877707283c3287cb",
+      "afterMetrics": {
+        "inkWithinHalfCssPixelOfBond": 0,
+        "fullyHiddenLineCount": 0
+      }
+    },
+    {
+      "key": "pentanoic_acid",
+      "mode": "condensed",
+      "width": 1500,
+      "beforeSVGsha256": "2f165b899d13f97afd08314c12bbd695e290d8bca34bd3b48e5a4feaf617389e",
+      "beforeMetrics": {
+        "inkWithinHalfCssPixelOfBond": 0,
+        "fullyHiddenLineCount": 1
+      },
+      "afterSVGsha256": "0be8dc814fb9141d0ce620eec67b2fb06cf62267ce5479a4cf4afbf5a0c932ac",
+      "afterMetrics": {
+        "inkWithinHalfCssPixelOfBond": 0,
+        "fullyHiddenLineCount": 0
+      }
+    }
+  ]
+}

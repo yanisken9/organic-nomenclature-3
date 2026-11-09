@@ -1,0 +1,30 @@
+{
+  "validator": "/root/acid_uniform_preflight",
+  "role": "NAMELECULE_CHEMISTRY_VALIDATOR_V1_20261023",
+  "date": "2026-11-01",
+  "findings": [],
+  "actualMainVerified": true,
+  "molecules": 52,
+  "sourceMOLs": 31,
+  "acceptedExactMOLs": 8,
+  "actual32OutputMapSHA256": "7ba8951a638b918a93ca657ae106771dd1eaf131ac33162b5c494e264d9a3d94",
+  "checks": [
+    "Independent fixed-column parsing; graph/IDs/orders/charges/formula/valence/nonxy preserved",
+    "Remaining44 retain originalbond directions;8acceptedMOLs byteexact",
+    "Full52heavygraph backtrackingisomorphism vs existingruntimeSDF, includingimplicitH",
+    "All52authored Expanded-to-3D parent maps extend to completegraph isomorphism",
+    "26COOH orientations retained; no coincidences/onbond/crossings",
+    "Onlyfive approved nonstandardheavy bonds",
+    "All32actualdata/source files match independentlyvalidated outputs",
+    "19corefiles and83relevant source/runtimeSDFs matchbaseline"
+  ],
+  "minimumNonbondedAndAtomToNonincidentBondClearance": 0.2786,
+  "RDKitUsed": false,
+  "method": "Independent complete adjacency-constrained backtracking graph matching; no dependency installation",
+  "readOnly": true,
+  "browserExecutionByValidator": false,
+  "limits": [
+    "No browser/visual guarantee",
+    "Namingengine/browser/lessons are separateDeveloper checks"
+  ]
+}

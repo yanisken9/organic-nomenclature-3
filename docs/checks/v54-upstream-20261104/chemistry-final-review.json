@@ -1,0 +1,24 @@
+{
+  "role": "ChemistryValidator",
+  "agent": "/root/alkane_two_sets_chemistry",
+  "writes": false,
+  "coreSHA256": "3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306",
+  "independentlyExecutedSourceForms": 10,
+  "preservedLengths": 38,
+  "preservedOtherAngles": 25,
+  "preservedOrientations": 21,
+  "checks": [
+    "ethers C/O120",
+    "butyne nonsp120/sp180",
+    "cumulene/nitrile sp180",
+    "heavy graph/metadata/name/determinism",
+    "rings/disconnected rejected"
+  ],
+  "actionableFindings": [],
+  "DeveloperEvidenceInspected": "421 supported outputs from422 inventory; full sweep not independently rerun",
+  "limits": [
+    "120degrees is2D convention, not physical angle guarantee",
+    "No browser execution",
+    "Non-C/O/degree3and4 conventions not certified"
+  ]
+}

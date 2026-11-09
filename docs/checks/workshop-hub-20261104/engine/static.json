@@ -1,0 +1,25 @@
+{
+  "completed": true,
+  "approval": "b08e3395296b4ddf89d19d98dd901c72",
+  "baseline": "168e3cec01f941a84d40bbe0dc07156e7baa35d0",
+  "remainingChallengesExactlyEqual": true,
+  "remainingJSONBytesExactlyEqual": true,
+  "gameMetadataUnchanged": true,
+  "sharedRendererChange": "standalone session return button label only",
+  "gradingRestoreAndRoundValidationUnchanged": true,
+  "singleMountExportUnchanged": true,
+  "directWhitespaceCheck": "2 source files PASS",
+  "checks": {
+    "engine": {
+      "count": 74,
+      "prior87Adaptation": "Removed only the deleted rehearsal round16assertions; added3four-round validation cases"
+    },
+    "mount": 60,
+    "hub": 40
+  },
+  "sourceSHA256": {
+    "js/namelecule-game-repair.js": "576d299af6ba2b34b847f8f59964b732937a39ea9799c2a86e5858d98d71bdd2",
+    "games/data/name-repair-alkanes.json": "d688a90eb7d89544d2f00b90e576028f2c4a481c79675fb723e602d14033b41e"
+  },
+  "untested": "Actual browser layout/navigation/image behavior delegated to root; unit DOM checks are not browser evidence"
+}

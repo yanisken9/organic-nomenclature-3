@@ -1,0 +1,28 @@
+{
+  "reviewer": "/root/review_workshop_reset_removal_20261107",
+  "freshContext": true,
+  "readOnly": true,
+  "findings": [],
+  "runtimeHashes": {
+    "js/namelecule-game-repair.js": "e557da67fdb125488c8b432ea3afcdcbbc6374cd904c2b85355e0efc32571ffa",
+    "mulermoc-nom-54.html": "05d956f23830f83785f9088d6da3d45b3b4b2b2398e983eec885133e8db209b3",
+    "games/name-repair.html": "530ca1484541345b1f61ff510309987b0f0d9b79cf5f0b502e9e8c234f8ce28d"
+  },
+  "independentChecks": [
+    "AGENTS/checklist, actual snapshot diffs and relevant state/focus/loading/embedded/standalone/cache code",
+    "3runtime+19evidence+50protected SHA checks including10core/28scenarioJSON",
+    "JavaScriptCore new Function syntax",
+    "Entire pure engine/state/validation prefix byte identity",
+    "Visual inspection supplied after-replacement.png, lesson-320.png, standalone-order.png"
+  ],
+  "developerEvidenceOnly": [
+    "42 Firefox assertions/0JavaScriptErrors",
+    "56source checks/3HTTP_SHA checks"
+  ],
+  "limitations": [
+    "No independent live browser execution",
+    "No Safari/physicalmobile/screenreader/conference replay",
+    "Chemistry/new2D3D N/A for removed control; prior Firefox/JSmol issue outside scope"
+  ],
+  "targetChangesAfterReview": false
+}

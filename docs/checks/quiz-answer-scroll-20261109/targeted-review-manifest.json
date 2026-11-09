@@ -1,0 +1,36 @@
+{
+  "date": "2026-11-09",
+  "base_commit": "168e3cec01f941a84d40bbe0dc07156e7baa35d0",
+  "main_manifest_sha256": "528b33e714de06ba034321b5739bed563b5c50cdc1b0a188f0d2f6ebe36c6573",
+  "production_targets_unchanged": {
+    "js/namelecule-game-repair.js": "7d0a0939841f0423377d0ccca66ee9554b70f8a61a7ff020cf833aa0755b5ac7",
+    "js/namelecule-generated-repair-checkpoint.js": "d99aaa972afa2a437bedf1e4eca3c835126f237e5333e33ac1d9d10d5b684d27",
+    "js/namelecule-quiz-checkpoints.js": "7bf5441b52b9b519db79f3e56adec97979668de172b8292c0a714355add35bb7",
+    "mulermoc-nom-54.html": "34ade6e22d3e9afaf8cfeb49d7a75fabada1a915b6d1550f58b83b323d68fb27"
+  },
+  "new_untracked_evidence": {
+    "docs/checks/quiz-answer-scroll-20261109/lifecycle-followup/browser-attempt1.json": "7f3121b4c40027331657584239977c296a8cd368dac7cd4bc7f81ab6ed725b8e",
+    "docs/checks/quiz-answer-scroll-20261109/lifecycle-followup/browser.json": "2f5ff94b279f09b005ecbc6c4da41ec169da9882e17598b295b7c2c906ee3b7e",
+    "docs/checks/quiz-answer-scroll-20261109/lifecycle-followup/check-attempt1.py": "9810600272ae8c3be22363cb2b29b641dac39b09317abbb2bdba451bd9086958",
+    "docs/checks/quiz-answer-scroll-20261109/lifecycle-followup/check.py": "9be21890e47c87b1395cc516fc2efa0a60581aab8ee7de854ed8783066c12fa3",
+    "docs/checks/quiz-answer-scroll-20261109/lifecycle-followup/cleanup.json": "fed8dac8092e2b2da9097b0b90178e4c2747fc0fbdec24374af12464cf0af7b2",
+    "docs/checks/quiz-answer-scroll-20261109/lifecycle-followup/evidence-hashes.json": "900da55f106d42d791c46960e2eee96e375fc037dc6ab4fb894dc0fc04ef5c1f",
+    "docs/checks/quiz-answer-scroll-20261109/lifecycle-followup/firefox-attempt1.log": "955cbc333b0e193c4eafebe8fe45098e4f49779fcacf08723b27a46b2192c45d",
+    "docs/checks/quiz-answer-scroll-20261109/lifecycle-followup/firefox-retry.log": "cf39e8ec166a1da1baf9c31b313a312100f96110e403597e583f4688b8b71305",
+    "docs/checks/quiz-answer-scroll-20261109/lifecycle-followup/next-during-motion-round2-settled.png": "a471c23039747ceada5b2c011e2914ab9b6f5ac544e71ec48fbac8d9653bd134",
+    "docs/checks/quiz-answer-scroll-20261109/lifecycle-followup/process-attempt1.json": "5cf947f20b7ad9263f18a52bd30a0aa26dc4b547c2e22ffc891220cd35f53778",
+    "docs/checks/quiz-answer-scroll-20261109/lifecycle-followup/process-normal.json": "ecb0bc7dbd2e759e2b35024ea11bd2b83d66d9a78b5c937fa578003fbdfbaca5",
+    "docs/checks/quiz-answer-scroll-20261109/lifecycle-followup/rapid-second-settled.png": "09f8824cde39387d396736989b3dcb3ef2c12fbd12a453a64577a2b1beba8f6d",
+    "docs/checks/quiz-answer-scroll-20261109/lifecycle-followup/verification-report.json": "ac6d6a06877ddadce877640ef030edc4c927e9e104ecbf801b93b2cbc777f114"
+  },
+  "verification_gaps": [
+    "V1: actual rapid second answer during native reveal",
+    "V2: actual Next during native success reveal"
+  ],
+  "task": "Targeted read-only closure of two native verification gaps only; no second full review needed. Inspect report/raw traces/harness and unchanged source hashes.",
+  "excluded": [
+    "docs/SESSION-NOTES.md",
+    "docs/YANNIS-CONTRIBUTIONS.md",
+    "Mutable review.json and future final-verification.json"
+  ]
+}

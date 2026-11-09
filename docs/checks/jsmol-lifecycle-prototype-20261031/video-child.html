@@ -1,0 +1,21 @@
+<!doctype html><html lang="el"><meta charset="utf-8"><style>body{margin:0;background:white;font:17px system-ui;color:#234c50}#viewer{height:320px}#departed{display:none;height:320px;box-sizing:border-box;padding:100px 25px;text-align:center;background:#f4f8f7;color:#53666a}p{margin:10px 18px;font-size:15px}code{font-size:14px}</style>
+<script>
+const version=new URLSearchParams(location.search).get('version');
+document.write('<script src="/vendor-'+version+'/JSmol.min.js"><\/script>');
+</script>
+<script>
+window.ready=false;window.ran=false;
+function relay(type,detail){parent.receive(version,type,detail)}
+addEventListener('error',e=>relay('exception',e.message));
+const info={width:'100%',height:320,use:'HTML5',color:'#FFFFFF',j2sPath:'https://chemapps.stolaf.edu/jmol/jsmol/j2s',serverURL:'https://chemapps.stolaf.edu/jmol/jsmol/php/jsmol.php',disableJ2SLoadMonitor:true,disableInitialConsole:true,readyFunction:function(a){
+ Jmol.script(a,'load "/app-baseline/mols/nomeclature-moc2/propene_3D.sdf";script "/app-baseline/spt/init-3.spt";spin off;');
+ const timer=setInterval(()=>{try{const models=Jmol.getPropertyAsArray(a,'modelInfo').models;if(models?.length&&models[0].file.endsWith('/propene_3D.sdf')){clearInterval(timer);window.ready=true;relay('ready',{atoms:Jmol.getPropertyAsArray(a,'atomInfo').length})}}catch(e){}},80);
+}};
+function run(kind){if(!ready||ran)return;ran=true;const a=window.videoApplet;
+ if(kind==='raf')Jmol.repaint(a,true);
+ if(kind==='resize')a._resize();
+ Jmol._destroy(a);
+ if(kind==='entryAfterDestroy'){try{Jmol.repaint(a,false)}catch(e){relay('exception',String(e))}}
+ document.getElementById('viewer').style.display='none';document.getElementById('departed').style.display='block';relay('destroyed',null);
+}
+</script><body><div id="viewer"><script>window.videoApplet=Jmol.getApplet('videoApplet',info);</script></div><div id="departed">Ο viewer αποδεσμεύτηκε.<br><br>Ελέγχουμε αν κάποια εργασία<br>τον χρησιμοποιεί μετά την καταστροφή του.</div><p>Ίδιο μοντέλο προπενίου και ίδιος Jmol engine.<br><code>Ελεγχόμενη δοκιμή · δεν είναι η κύρια εφαρμογή.</code></p></body></html>

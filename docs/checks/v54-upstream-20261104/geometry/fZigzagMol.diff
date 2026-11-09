@@ -1,0 +1,127 @@
+--- before/fZigzagMol
++++ after/fZigzagMol
+@@ -32,6 +32,18 @@
+       var kk = (a < c) ? a + "-" + c : c + "-" + a;
+       return ord[kk] || 1;
+     };
++    // This tree layout cannot safely reconstruct ring closure or disconnected
++    // fragments. Reject those inputs instead of stretching an unvisited edge.
++    var reached = {}, todo = [ch[0]], heavyBonds = 0;
++    while (todo.length) {
++      var node = todo.pop(); if (reached[node]) continue;
++      reached[node] = true;
++      adj[node].forEach(function (v) { if (!reached[v]) todo.push(v); });
++    }
++    order.forEach(function (v) { heavyBonds += adj[v].length; });
++    if (Object.keys(reached).length !== order.length || heavyBonds !== 2 * (order.length - 1) ||
++        ch.length !== chain.length || new Set(ch).size !== ch.length ||
++        ch.some(function (v, i) { return i && adj[ch[i - 1]].indexOf(v) < 0; })) return null;
+     var L = 1.17, CX = L * 0.8660254, CY = L * 0.5;
+     var norm2 = function (vx, vy) {
+       var l = Math.sqrt(vx * vx + vy * vy);
+@@ -72,6 +84,10 @@
+           var r2 = (usedC % 2 === 1) ? 1 : -1;
+           bd = norm2(-bd.y * r2, bd.x * r2) || bd;
+         }
++        // Endpoint dIn carries a bond vector of length L, not a unit vector.
++        // Normalize every branch direction before multiplying by L below.
++        bd = norm2(bd.x, bd.y);
++        if (!bd) return null;
+         usedC++;
+         queue.push({ node: br, fx: c0, dx: bd.x, dy: bd.y, rot: 0 });
+       }
+@@ -96,6 +112,94 @@
+         queue.push({ node: cand, fx: it.node, dx: nd.x, dy: nd.y });
+       }
+     }
++    // The first continuation of an off-parent subtree used to stay straight.
++    // Correct only the affected degree-two pivot by rotating an entire side:
++    // all generated bond lengths and every other local angle remain invariant.
++    function turn(ids, pivot, angle) {
++      var co = Math.cos(angle), si = Math.sin(angle);
++      ids.forEach(function (v) {
++        var x = pos[v].x - pivot.x, y = pos[v].y - pivot.y;
++        pos[v] = { x: pivot.x + x * co - y * si, y: pivot.y + x * si + y * co };
++      });
++    }
++    function cross(p, a, b, c) {
++      return (p[b].x - p[a].x) * (p[c].y - p[a].y) - (p[b].y - p[a].y) * (p[c].x - p[a].x);
++    }
++    function crossing(p, a, b, c, d) {
++      return cross(p, a, b, c) * cross(p, a, b, d) < -1e-10 &&
++        cross(p, c, d, a) * cross(p, c, d, b) < -1e-10;
++    }
++    function atomBondDistance(p, i, a, b) {
++      var dx = p[b].x - p[a].x, dy = p[b].y - p[a].y, length = dx * dx + dy * dy;
++      var t = length ? Math.max(0, Math.min(1, ((p[i].x - p[a].x) * dx + (p[i].y - p[a].y) * dy) / length)) : 0;
++      return Math.hypot(p[i].x - p[a].x - t * dx, p[i].y - p[a].y - t * dy);
++    }
++    var edges = m.bonds.filter(function (b) { return map[b[0]] != null && map[b[1]] != null; })
++      .map(function (b) { return [b[0] - 1, b[1] - 1]; });
++    function safe(previous) {
++      for (var i = 0; i < order.length; i++) for (var j = 0; j < i; j++) {
++        var a = order[i], b = order[j];
++        if (adj[a].indexOf(b) >= 0) continue;
++        var old = Math.hypot(previous[a].x - previous[b].x, previous[a].y - previous[b].y);
++        var now = Math.hypot(pos[a].x - pos[b].x, pos[a].y - pos[b].y);
++        if (now < L * 0.45 && now < old - 1e-6) return false;
++      }
++      for (var e = 0; e < edges.length; e++) {
++        var a = edges[e][0], b = edges[e][1];
++        for (var j = 0; j < order.length; j++) {
++          var v = order[j]; if (v === a || v === b) continue;
++          var old = atomBondDistance(previous, v, a, b), now = atomBondDistance(pos, v, a, b);
++          if (now < L * 0.12 && now < old - 1e-6) return false;
++        }
++        for (var d = 0; d < e; d++) {
++          var c = edges[d][0], q = edges[d][1];
++          if (a === c || a === q || b === c || b === q) continue;
++          if (crossing(pos, a, b, c, q) && !crossing(previous, a, b, c, q)) return false;
++        }
++      }
++      return true;
++    }
++    for (var at = 0; at < order.length; at++) {
++      var center = order[at], el = m.atoms[center].el;
++      if (adj[center].length !== 2 || (el !== 'C' && el !== 'O')) continue;
++      var ns = adj[center], orders = ns.map(function (v) { return bo(center, v); });
++      if (el === 'O' && (m.atoms[center].charge || orders.some(function (v) { return v !== 1; }))) return null;
++      if (el === 'C' && orders[0] + orders[1] > 4) return null;
++      var sp = el === 'C' && (orders.indexOf(3) >= 0 || (orders[0] === 2 && orders[1] === 2));
++      var target = sp ? Math.PI : 2 * Math.PI / 3;
++      var sides = ns.map(function (start) {
++        var seen = {}, ids = [], todo = [start]; seen[center] = true;
++        while (todo.length) {
++          var v = todo.pop(); if (seen[v]) continue;
++          seen[v] = true; ids.push(v);
++          adj[v].forEach(function (q) { if (!seen[q]) todo.push(q); });
++        }
++        return { start: start, ids: ids };
++      });
++      // Keep C1 and as much of the resolved parent as possible fixed.
++      sides.sort(function (a, b) {
++        return Number(a.ids.indexOf(ch[0]) >= 0) - Number(b.ids.indexOf(ch[0]) >= 0) ||
++          a.ids.filter(function (v) { return ch.indexOf(v) >= 0; }).length -
++          b.ids.filter(function (v) { return ch.indexOf(v) >= 0; }).length || a.ids.length - b.ids.length;
++      });
++      var moving = sides[0], fixed = ns[0] === moving.start ? ns[1] : ns[0], pivot = pos[center];
++      if (moving.ids.indexOf(fixed) >= 0) return null;
++      var from = Math.atan2(pos[moving.start].y - pivot.y, pos[moving.start].x - pivot.x);
++      var base = Math.atan2(pos[fixed].y - pivot.y, pos[fixed].x - pivot.x);
++      var choices = [target, -target].map(function (t) { return Math.atan2(Math.sin(base + t - from), Math.cos(base + t - from)); });
++      choices.sort(function (a, b) { return Math.abs(a) - Math.abs(b); });
++      if (Math.abs(choices[0]) < 1e-7) continue;
++      var previous = {};
++      order.forEach(function (v) { previous[v] = { x: pos[v].x, y: pos[v].y }; });
++      var repaired = false;
++      for (var trial = 0; trial < choices.length; trial++) {
++        order.forEach(function (v) { pos[v] = { x: previous[v].x, y: previous[v].y }; });
++        turn(moving.ids, pivot, choices[trial]);
++        if (safe(previous)) { repaired = true; break; }
++      }
++      // An unsafe generated layout is not a successful deterministic rung.
++      if (!repaired) return null;
++    }
+     var atoms = [], newIdx = {};
+     for (var o = 0; o < order.length; o++) {
+       var oi = order[o];

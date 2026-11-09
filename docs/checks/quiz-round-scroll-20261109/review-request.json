@@ -1,0 +1,33 @@
+{
+  "date": "2026-11-09",
+  "approved_request": "Shared embedded quiz scroll correction: each new question starts at top; preserve sticky header and counter, current answers/progress and manual scrolling within same question. Main54 matching cache URL only. Test 1→2→3, reopen, actual selection/check/unlock and narrow viewports; independent review.",
+  "base_commit": "168e3cec01f941a84d40bbe0dc07156e7baa35d0",
+  "production_paths": [
+    "js/namelecule-quiz-checkpoints.js",
+    "mulermoc-nom-54.html"
+  ],
+  "comparison": "Use explicit before copies and source.diff. Existing dirty working tree includes unrelated earlier changes; do not attribute whole HEAD-to-working-tree diff to this unit.",
+  "acceptance": [
+    "First valid displayed question and each changed current/total enter at actual dialog scrollTop=0.",
+    "Same-round progress and manual scrolling stay free; invalid/loading values must not scroll.",
+    "Existing token/context cancellation after close/reopen/step/Exit remains effective.",
+    "Header/counter, selections, actual checking, saved progress and gate unlock are preserved.",
+    "No JSON/CSS/game/adapter/core changes in this unit; exact matching Main54 cache URL.",
+    "Assess preserved initial toolbar navigation timeout and disclosed limitations without equating a successful retry with a causal diagnosis."
+  ],
+  "evidence": [
+    "memory-results.json (48 JavaScriptCore checks on full before/current controller, explicitly declared DOM/adapter doubles)",
+    "browser/verification-report.json (Developer worker actual learner browser flow with screenshots and initial timeout artifacts)",
+    "http-verification.json (exact current served bytes)",
+    "developer-verification.json (protected files/core session-baseline/JSON export unchanged)"
+  ],
+  "before_causal_source": "docs/checks/quiz-header-overlap-20261109/causal-report.json",
+  "limits": [
+    "Firefox whole-browser freeze remains unresolved; this correction concerns round scroll ownership only.",
+    "Headless Firefox159 viewport emulation, not physical mobile/Safari/screen reader or conference certification.",
+    "Baseline generated questions differ from after fixed unsolved seeds; same affected dialog lifecycle/viewport examined.",
+    "No silent reload or navigation of active user GUI56371."
+  ],
+  "read_only_review": "Read AGENTS.md and docs/REVIEW-CHECKLIST.md. Do not edit/create/delete/stage files, update notes, install dependencies, run browser or checks that create artifacts/cache, commit/push/publish, or spawn additional agents. Read-only in-memory checks are allowed; label supplied browser evidence as Developer evidence.",
+  "freeze": "Production paths and listed deliverables frozen. Session/contribution notes are not part of this frozen code review and will be updated after report. Review result/final verification will be newly recorded after review."
+}

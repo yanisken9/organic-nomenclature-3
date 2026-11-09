@@ -1,0 +1,129 @@
+{
+  "completed": false,
+  "runs": [
+    {
+      "label": "normal-1",
+      "windowState": "normal",
+      "cycle": 1,
+      "stages": [
+        {
+          "stage": "native-window-state-confirmed",
+          "seconds": 0.42
+        },
+        {
+          "stage": "fresh-page-ready",
+          "seconds": 8.016
+        }
+      ],
+      "completed": false,
+      "failure": "Traceback (most recent call last):\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/firefox-workshop-freeze-20261109/driver.py\", line 65, in run_one\n    pointer('.scenarioPanel.active .srow[data-idx=\"10\"] .scPresentStep');wait('MuLERMoCScenario.present&&fScenarioPresent().index===10',12);stage(run,'author-preview11-ready',status())\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/firefox-workshop-freeze-20261109/driver.py\", line 32, in pointer\n    assert p['receives'] and p['enabled'],{'selector':sel,'hitTest':p}\nAssertionError: {'selector': '.scenarioPanel.active .srow[data-idx=\"10\"] .scPresentStep', 'hitTest': {'x': 1269, 'y': 355, 'hit': '', 'hitClass': '', 'enabled': True, 'target': '', 'receives': False}}\n",
+      "snapshots": {
+        "failure": {
+          "url": "http://127.0.0.1:8013/mulermoc-nom-54.html?scenario=scenarios/alkanes-user-3.scenario.json&v=workshop-freeze-normal-1#step=1",
+          "step": 0,
+          "dialogOpen": false,
+          "modal": false,
+          "active": "",
+          "visibility": "visible",
+          "focus": true,
+          "viewport": {
+            "width": 1280,
+            "height": 650
+          },
+          "heart": {
+            "raf": 2,
+            "timers": 1,
+            "lastRAF": 8118.06,
+            "lastTimer": 8124
+          },
+          "image": null,
+          "round": null
+        }
+      },
+      "pageEvents": [
+        {
+          "t": 0,
+          "kind": "instrumented",
+          "info": {
+            "visibility": "visible",
+            "focus": true
+          }
+        },
+        {
+          "t": 158,
+          "kind": "click",
+          "info": {
+            "id": "",
+            "cls": "scList scIconBtn scIconTextBtn",
+            "trusted": false,
+            "active": ""
+          }
+        },
+        {
+          "t": 536,
+          "kind": "modal-mutation",
+          "info": {
+            "image": null
+          }
+        }
+      ],
+      "resourceTimings": [
+        {
+          "name": "http://127.0.0.1:8013/js/mulermoc-nom-teaching-54.js?v=alkane-step5-interaction-20261106-r1",
+          "duration": 94,
+          "transferSize": 70624,
+          "decodedBodySize": 70324
+        },
+        {
+          "name": "http://127.0.0.1:8013/js/namelecule-chemistry-client.js?v=verified-engines-20261105-r1",
+          "duration": 96,
+          "transferSize": 8338,
+          "decodedBodySize": 8038
+        },
+        {
+          "name": "https://region1.google-analytics.com/g/collect?v=2&tid=G-1V8NWYY46Y&gtm=45je6b41v9247675757za208zd9247675757xf1&_p=1794197030937&gcd=13l3l3l2l1l1&npa=1&dma_cps=a&dma=1&cid=2141009540.1794197037&frm=0&ngs=1&pscdl=noapi&rcb=10&sr=1440x900&ul=el-gr&_s=1&tag_exp=115616985~115938465~115938469~118897920~118897930~120213116~120385423~120412526~120420414~120469145~120469153~121246026~121246034~123814185&sid=1794197036&sct=1&seg=0&dl=http%3A%2F%2F127.0.0.1%2Fmulermoc-nom-54.html%3Fscenario%3Dscenarios%2Falkanes-user-3.scenario.json%26v%3Dworkshop-freeze-normal-1&dt=Namelecule%20%E2%80%94%20%CE%9F%CE%BD%CE%BF%CE%BC%CE%B1%CF%84%CE%BF%CE%BB%CE%BF%CE%B3%CE%AF%CE%B1%20%CE%9F%CF%81%CE%B3%CE%B1%CE%BD%CE%B9%CE%BA%CF%8E%CE%BD%20%CE%95%CE%BD%CF%8E%CF%83%CE%B5%CF%89%CE%BD&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&tfd=5880",
+          "duration": 723,
+          "transferSize": 0,
+          "decodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:8013/scenarios/alkanes-user-3.scenario.json",
+          "duration": 4,
+          "transferSize": 33572,
+          "decodedBodySize": 33272
+        }
+      ],
+      "finalStatus": {
+        "url": "http://127.0.0.1:8013/mulermoc-nom-54.html?scenario=scenarios/alkanes-user-3.scenario.json&v=workshop-freeze-normal-1#step=1",
+        "step": 0,
+        "dialogOpen": false,
+        "modal": false,
+        "active": "",
+        "visibility": "visible",
+        "focus": true,
+        "viewport": {
+          "width": 1280,
+          "height": 650
+        },
+        "heart": {
+          "raf": 20,
+          "timers": 5,
+          "lastRAF": 8617.2,
+          "lastTimer": 8593
+        },
+        "image": null,
+        "round": null
+      },
+      "elapsedSeconds": 9.048
+    }
+  ],
+  "sourceSHA256": "607a530a2d3ba151026517c61d6f7a31644e15abf82a687e778b7453d80089b7",
+  "scope": "Own fresh GUI; native fullscreen command, not actual physical green-button hover; actual trusted pointer Workshop interaction; author preview11; application source unchanged",
+  "limitations": [
+    "Same new profile, new page per run; browser resource cache can warm after first run",
+    "Instrumentation changes only owned page; promise wrappers and logging may affect scheduling",
+    "No existing Firefox493/55879 interaction; cannot establish what happened there"
+  ],
+  "javascriptErrors": [],
+  "failure": "Traceback (most recent call last):\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/firefox-workshop-freeze-20261109/driver.py\", line 102, in <module>\n    if not run['completed']:raise RuntimeError('Bounded matrix stopped on first failed run')\nRuntimeError: Bounded matrix stopped on first failed run\n"
+}

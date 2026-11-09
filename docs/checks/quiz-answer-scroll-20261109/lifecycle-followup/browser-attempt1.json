@@ -1,0 +1,1786 @@
+{
+  "completed": false,
+  "checks": [
+    "Same frozenproductionsourcehashes",
+    "Actualnative smoothpreference",
+    "Firsttargetreveal measuredmidmotionbeforesecondinput",
+    "Rapidsecondnativeclick selectsagreeingcomponent",
+    "Latestagreeingstatus visibleunderstickyheader",
+    "Rapidanswer settlesatlatesttarget withoutobsolete drift"
+  ],
+  "scenarios": {
+    "rapidSecondAnswer": {
+      "before": {
+        "time": "2026-11-09T05:31:30.983Z",
+        "step": 3,
+        "progress": "Κουίζ 1/3",
+        "viewport": {
+          "width": 1280,
+          "height": 650,
+          "dpr": 2
+        },
+        "active": {
+          "tag": "H1",
+          "id": ""
+        },
+        "dialog": {
+          "open": true,
+          "scrollTop": 0,
+          "clientHeight": 624,
+          "scrollHeight": 808,
+          "overflowY": "auto",
+          "rect": {
+            "x": 50,
+            "y": 12,
+            "width": 1180,
+            "height": 626,
+            "top": 12,
+            "right": 1230,
+            "bottom": 638,
+            "left": 50
+          }
+        },
+        "host": {
+          "scrollTop": 0,
+          "clientHeight": 699,
+          "scrollHeight": 699,
+          "overflowY": "visible"
+        },
+        "documentScrollTop": 0,
+        "header": {
+          "x": 51,
+          "y": 13,
+          "width": 1178,
+          "height": 108.83332824707031,
+          "top": 13,
+          "right": 1229,
+          "bottom": 121.83332824707031,
+          "left": 51
+        },
+        "usable": {
+          "top": 121.83332824707031,
+          "bottom": 638,
+          "height": 516.1666717529297
+        },
+        "elements": [
+          {
+            "selector": ".round-heading h1",
+            "present": true,
+            "displayed": true,
+            "text": "Επισκευή ονόματος",
+            "rect": {
+              "x": 73,
+              "y": 244.8333282470703,
+              "width": 1134,
+              "height": 43,
+              "top": 244.8333282470703,
+              "right": 1207,
+              "bottom": 287.8333282470703,
+              "left": 73
+            },
+            "visibleHeight": 43,
+            "fullyVisible": true,
+            "clippedTop": 0,
+            "clippedBottom": 0,
+            "display": "block"
+          },
+          {
+            "selector": ".round-heading p",
+            "present": true,
+            "displayed": true,
+            "text": "Έλεγξε το είδος των δεσμών ανάμεσα στα άτομα άνθρακα.",
+            "rect": {
+              "x": 73,
+              "y": 297.83331298828125,
+              "width": 810,
+              "height": 23.550003051757812,
+              "top": 297.83331298828125,
+              "right": 883,
+              "bottom": 321.38331604003906,
+              "left": 73
+            },
+            "visibleHeight": 23.550003051757812,
+            "fullyVisible": true,
+            "clippedTop": 0,
+            "clippedBottom": 0,
+            "display": "block"
+          },
+          {
+            "selector": ".order-controls",
+            "present": true,
+            "displayed": false,
+            "text": "",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            },
+            "visibleHeight": 0,
+            "fullyVisible": false,
+            "clippedTop": 0,
+            "clippedBottom": 0,
+            "display": "none"
+          },
+          {
+            "selector": ".check-helper",
+            "present": true,
+            "displayed": true,
+            "text": "Διάλεξε πρώτα το κομμάτι και έπειτα μια αντικατάσταση.",
+            "rect": {
+              "x": 625.88330078125,
+              "y": 685.38330078125,
+              "width": 558.11669921875,
+              "height": 17.150009155273438,
+              "top": 685.38330078125,
+              "right": 1184,
+              "bottom": 702.5333099365234,
+              "left": 625.88330078125
+            },
+            "visibleHeight": 0,
+            "fullyVisible": false,
+            "clippedTop": 0,
+            "clippedBottom": 64.53330993652344,
+            "display": "block"
+          },
+          {
+            "selector": ".name-parts",
+            "present": true,
+            "displayed": true,
+            "text": "προπίνιο",
+            "rect": {
+              "x": 625.88330078125,
+              "y": 565.38330078125,
+              "width": 558.11669921875,
+              "height": 47,
+              "top": 565.38330078125,
+              "right": 1184,
+              "bottom": 612.38330078125,
+              "left": 625.88330078125
+            },
+            "visibleHeight": 47,
+            "fullyVisible": true,
+            "clippedTop": 0,
+            "clippedBottom": 0,
+            "display": "flex"
+          },
+          {
+            "selector": ".part-selection-status",
+            "present": true,
+            "displayed": false,
+            "text": "",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            },
+            "visibleHeight": 0,
+            "fullyVisible": false,
+            "clippedTop": 0,
+            "clippedBottom": 0,
+            "display": "none"
+          },
+          {
+            "selector": ".choice-fieldset",
+            "present": true,
+            "displayed": false,
+            "text": "2. Διάλεξε την αντικατάστασηάνένίν",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            },
+            "visibleHeight": 0,
+            "fullyVisible": false,
+            "clippedTop": 0,
+            "clippedBottom": 0,
+            "display": "none"
+          },
+          {
+            "selector": ".choices",
+            "present": true,
+            "displayed": false,
+            "text": "άνένίν",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            },
+            "visibleHeight": 0,
+            "fullyVisible": false,
+            "clippedTop": 0,
+            "clippedBottom": 0,
+            "display": "flex"
+          },
+          {
+            "selector": ".candidate",
+            "present": true,
+            "displayed": false,
+            "text": "Η πρότασή σου για έλεγχοπροπίνιο",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            },
+            "visibleHeight": 0,
+            "fullyVisible": false,
+            "clippedTop": 0,
+            "clippedBottom": 0,
+            "display": "none"
+          },
+          {
+            "selector": ".repair-actions",
+            "present": true,
+            "displayed": true,
+            "text": "Έλεγχος",
+            "rect": {
+              "x": 625.88330078125,
+              "y": 628.38330078125,
+              "width": 558.11669921875,
+              "height": 47,
+              "top": 628.38330078125,
+              "right": 1184,
+              "bottom": 675.38330078125,
+              "left": 625.88330078125
+            },
+            "visibleHeight": 9.61669921875,
+            "fullyVisible": false,
+            "clippedTop": 0,
+            "clippedBottom": 37.38330078125,
+            "display": "flex"
+          },
+          {
+            "selector": ".feedback",
+            "present": true,
+            "displayed": false,
+            "text": "",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            },
+            "visibleHeight": 0,
+            "fullyVisible": false,
+            "clippedTop": 0,
+            "clippedBottom": 0,
+            "display": "none"
+          },
+          {
+            "selector": ".success-explanation",
+            "present": false
+          },
+          {
+            "selector": ".round-next button",
+            "present": false
+          }
+        ]
+      },
+      "oldDestination": 110.84999084472656,
+      "precomputedAgreeingPoint": {
+        "x": 660,
+        "y": 569
+      },
+      "measuredBeforeSecondInput": {
+        "ms": 110,
+        "scroll": 29.616666793823242,
+        "progress": "Κουίζ 1/3",
+        "selected": "nl-repair-1-part-component-6",
+        "agreeing": false,
+        "focusNext": false,
+        "focusText": "ίν"
+      },
+      "afterSecondInput": {
+        "ms": 131,
+        "scroll": 29.616666793823242,
+        "progress": "Κουίζ 1/3",
+        "selected": "nl-repair-1-part-component-5",
+        "agreeing": true,
+        "focusNext": false,
+        "focusText": "προπ"
+      },
+      "latestDestination": 42.78333854675293,
+      "trace": [
+        {
+          "ms": 29,
+          "scroll": 0,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-6",
+          "agreeing": false,
+          "status": "Αυτό το κομμάτι χρειάζεται επισκευή. Διάλεξε την αντικατάστασή του.",
+          "focus": {
+            "id": "nl-repair-1-part-component-6",
+            "tag": "BUTTON",
+            "text": "ίν"
+          }
+        },
+        {
+          "ms": 40,
+          "scroll": 0,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-6",
+          "agreeing": false,
+          "status": "Αυτό το κομμάτι χρειάζεται επισκευή. Διάλεξε την αντικατάστασή του.",
+          "focus": {
+            "id": "nl-repair-1-part-component-6",
+            "tag": "BUTTON",
+            "text": "ίν"
+          }
+        },
+        {
+          "ms": 103,
+          "scroll": 17.049999237060547,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-6",
+          "agreeing": false,
+          "status": "Αυτό το κομμάτι χρειάζεται επισκευή. Διάλεξε την αντικατάστασή του.",
+          "focus": {
+            "id": "nl-repair-1-part-component-6",
+            "tag": "BUTTON",
+            "text": "ίν"
+          }
+        },
+        {
+          "ms": 106,
+          "scroll": 29.616666793823242,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-6",
+          "agreeing": false,
+          "status": "Αυτό το κομμάτι χρειάζεται επισκευή. Διάλεξε την αντικατάστασή του.",
+          "focus": {
+            "id": "nl-repair-1-part-component-6",
+            "tag": "BUTTON",
+            "text": "ίν"
+          }
+        },
+        {
+          "ms": 144,
+          "scroll": 49.599998474121094,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 153,
+          "scroll": 57.53333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 186,
+          "scroll": 59.83333206176758,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 188,
+          "scroll": 59.83333206176758,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 209,
+          "scroll": 58.900001525878906,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 220,
+          "scroll": 57.68333435058594,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 238,
+          "scroll": 56,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 254,
+          "scroll": 54.46666717529297,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 271,
+          "scroll": 54.46666717529297,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 297,
+          "scroll": 51.36666488647461,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 304,
+          "scroll": 51.36666488647461,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 321,
+          "scroll": 49.68333435058594,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 337,
+          "scroll": 47.83333206176758,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 354,
+          "scroll": 47.83333206176758,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 372,
+          "scroll": 46.18333435058594,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 387,
+          "scroll": 46.18333435058594,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 404,
+          "scroll": 45.08333206176758,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 423,
+          "scroll": 44.599998474121094,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 437,
+          "scroll": 44.599998474121094,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 453,
+          "scroll": 44.29999923706055,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 471,
+          "scroll": 44,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 492,
+          "scroll": 43.766666412353516,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 503,
+          "scroll": 43.54999923706055,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 632,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 638,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 655,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 671,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 689,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 705,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 722,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 736,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 754,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 770,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 787,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 803,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 820,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 837,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 854,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 871,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 889,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 904,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 921,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 936,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 955,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 970,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 987,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 1005,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 1021,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 1038,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 1055,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 1072,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 1088,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 1104,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 1121,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 1136,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 1154,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 1171,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 1187,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 1203,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 1220,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 1238,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 1255,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 1272,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 1289,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 1309,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 1320,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 1337,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 1354,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 1370,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 1386,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 1405,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 1422,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 1438,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 1454,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 1470,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 1487,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 1505,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 1521,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 1537,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        },
+        {
+          "ms": 1553,
+          "scroll": 42.78333282470703,
+          "progress": "Κουίζ 1/3",
+          "selected": "nl-repair-1-part-component-5",
+          "agreeing": true,
+          "status": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+          "focus": {
+            "id": "nl-repair-1-part-component-5",
+            "tag": "BUTTON",
+            "text": "προπ"
+          }
+        }
+      ],
+      "settled": {
+        "time": "2026-11-09T05:31:32.782Z",
+        "step": 3,
+        "progress": "Κουίζ 1/3",
+        "viewport": {
+          "width": 1280,
+          "height": 650,
+          "dpr": 2
+        },
+        "active": {
+          "tag": "BUTTON",
+          "id": "nl-repair-1-part-component-5"
+        },
+        "dialog": {
+          "open": true,
+          "scrollTop": 42.78333282470703,
+          "clientHeight": 624,
+          "scrollHeight": 839,
+          "overflowY": "auto",
+          "rect": {
+            "x": 50,
+            "y": 12,
+            "width": 1180,
+            "height": 626,
+            "top": 12,
+            "right": 1230,
+            "bottom": 638,
+            "left": 50
+          }
+        },
+        "host": {
+          "scrollTop": 0,
+          "clientHeight": 730,
+          "scrollHeight": 730,
+          "overflowY": "visible"
+        },
+        "documentScrollTop": 0,
+        "header": {
+          "x": 51,
+          "y": 13,
+          "width": 1178,
+          "height": 108.83332824707031,
+          "top": 13,
+          "right": 1229,
+          "bottom": 121.83332824707031,
+          "left": 51
+        },
+        "usable": {
+          "top": 121.83332824707031,
+          "bottom": 638,
+          "height": 516.1666717529297
+        },
+        "elements": [
+          {
+            "selector": ".round-heading h1",
+            "present": true,
+            "displayed": true,
+            "text": "Επισκευή ονόματος",
+            "rect": {
+              "x": 73,
+              "y": 202.0500030517578,
+              "width": 1134,
+              "height": 43,
+              "top": 202.0500030517578,
+              "right": 1207,
+              "bottom": 245.0500030517578,
+              "left": 73
+            },
+            "visibleHeight": 43,
+            "fullyVisible": true,
+            "clippedTop": 0,
+            "clippedBottom": 0,
+            "display": "block"
+          },
+          {
+            "selector": ".round-heading p",
+            "present": true,
+            "displayed": true,
+            "text": "Έλεγξε το είδος των δεσμών ανάμεσα στα άτομα άνθρακα.",
+            "rect": {
+              "x": 73,
+              "y": 255.0500030517578,
+              "width": 810,
+              "height": 23.550003051757812,
+              "top": 255.0500030517578,
+              "right": 883,
+              "bottom": 278.6000061035156,
+              "left": 73
+            },
+            "visibleHeight": 23.550003051757812,
+            "fullyVisible": true,
+            "clippedTop": 0,
+            "clippedBottom": 0,
+            "display": "block"
+          },
+          {
+            "selector": ".order-controls",
+            "present": true,
+            "displayed": false,
+            "text": "",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            },
+            "visibleHeight": 0,
+            "fullyVisible": false,
+            "clippedTop": 0,
+            "clippedBottom": 0,
+            "display": "none"
+          },
+          {
+            "selector": ".check-helper",
+            "present": true,
+            "displayed": true,
+            "text": "Διάλεξε πρώτα το κομμάτι και έπειτα μια αντικατάσταση.",
+            "rect": {
+              "x": 625.88330078125,
+              "y": 695,
+              "width": 558.11669921875,
+              "height": 17.149993896484375,
+              "top": 695,
+              "right": 1184,
+              "bottom": 712.1499938964844,
+              "left": 625.88330078125
+            },
+            "visibleHeight": 0,
+            "fullyVisible": false,
+            "clippedTop": 0,
+            "clippedBottom": 74.14999389648438,
+            "display": "block"
+          },
+          {
+            "selector": ".name-parts",
+            "present": true,
+            "displayed": true,
+            "text": "προπίνιο",
+            "rect": {
+              "x": 625.88330078125,
+              "y": 522.5999755859375,
+              "width": 558.11669921875,
+              "height": 47,
+              "top": 522.5999755859375,
+              "right": 1184,
+              "bottom": 569.5999755859375,
+              "left": 625.88330078125
+            },
+            "visibleHeight": 47,
+            "fullyVisible": true,
+            "clippedTop": 0,
+            "clippedBottom": 0,
+            "display": "flex"
+          },
+          {
+            "selector": ".part-selection-status",
+            "present": true,
+            "displayed": true,
+            "text": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+            "rect": {
+              "x": 625.88330078125,
+              "y": 585.5999755859375,
+              "width": 558.11669921875,
+              "height": 39.399993896484375,
+              "top": 585.5999755859375,
+              "right": 1184,
+              "bottom": 624.9999694824219,
+              "left": 625.88330078125
+            },
+            "visibleHeight": 39.399993896484375,
+            "fullyVisible": true,
+            "clippedTop": 0,
+            "clippedBottom": 0,
+            "display": "block"
+          },
+          {
+            "selector": ".choice-fieldset",
+            "present": true,
+            "displayed": false,
+            "text": "2. Διάλεξε την αντικατάστασηάνένίν",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            },
+            "visibleHeight": 0,
+            "fullyVisible": false,
+            "clippedTop": 0,
+            "clippedBottom": 0,
+            "display": "none"
+          },
+          {
+            "selector": ".choices",
+            "present": true,
+            "displayed": false,
+            "text": "άνένίν",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            },
+            "visibleHeight": 0,
+            "fullyVisible": false,
+            "clippedTop": 0,
+            "clippedBottom": 0,
+            "display": "flex"
+          },
+          {
+            "selector": ".candidate",
+            "present": true,
+            "displayed": false,
+            "text": "Η πρότασή σου για έλεγχοπροπίνιο",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            },
+            "visibleHeight": 0,
+            "fullyVisible": false,
+            "clippedTop": 0,
+            "clippedBottom": 0,
+            "display": "none"
+          },
+          {
+            "selector": ".repair-actions",
+            "present": true,
+            "displayed": true,
+            "text": "Έλεγχος",
+            "rect": {
+              "x": 625.88330078125,
+              "y": 638,
+              "width": 558.11669921875,
+              "height": 47,
+              "top": 638,
+              "right": 1184,
+              "bottom": 685,
+              "left": 625.88330078125
+            },
+            "visibleHeight": 0,
+            "fullyVisible": false,
+            "clippedTop": 0,
+            "clippedBottom": 47,
+            "display": "flex"
+          },
+          {
+            "selector": ".feedback",
+            "present": true,
+            "displayed": false,
+            "text": "",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            },
+            "visibleHeight": 0,
+            "fullyVisible": false,
+            "clippedTop": 0,
+            "clippedBottom": 0,
+            "display": "none"
+          },
+          {
+            "selector": ".success-explanation",
+            "present": false
+          },
+          {
+            "selector": ".round-next button",
+            "present": false
+          }
+        ]
+      },
+      "state": {
+        "version": 1,
+        "seed": "4",
+        "currentRound": 0,
+        "states": [
+          {
+            "selectedPartId": "component-5",
+            "selectedValue": null,
+            "order": [],
+            "choiceOrder": [
+              2,
+              1,
+              0
+            ],
+            "attempts": 0,
+            "selectionMisses": 1,
+            "solved": false,
+            "submitted": false
+          },
+          {
+            "selectedPartId": null,
+            "selectedValue": null,
+            "order": [],
+            "choiceOrder": [
+              1,
+              0,
+              2
+            ],
+            "attempts": 0,
+            "selectionMisses": 0,
+            "solved": false,
+            "submitted": false
+          },
+          {
+            "selectedPartId": null,
+            "selectedValue": null,
+            "order": [],
+            "choiceOrder": [
+              2,
+              1,
+              0
+            ],
+            "attempts": 0,
+            "selectionMisses": 0,
+            "solved": false,
+            "submitted": false
+          }
+        ],
+        "solved": false
+      }
+    }
+  },
+  "role": "Developer targeted lifecycle evidence, not independent review",
+  "limits": [
+    "Two scenarios, one actual repair only; owned headless1280×650/DPR2, actualnativeinputs, no apphooks/prototypes",
+    "Only passive rAF/DOM/state reads and approved unsolvedseed4 setup",
+    "All pre-existing userGUI/profiles/driver21029 untouched"
+  ],
+  "javascriptErrors": [],
+  "productionHashes": {
+    "js/namelecule-game-repair.js": "7d0a0939841f0423377d0ccca66ee9554b70f8a61a7ff020cf833aa0755b5ac7",
+    "js/namelecule-generated-repair-checkpoint.js": "d99aaa972afa2a437bedf1e4eca3c835126f237e5333e33ac1d9d10d5b684d27",
+    "js/namelecule-quiz-checkpoints.js": "7bf5441b52b9b519db79f3e56adec97979668de172b8292c0a714355add35bb7",
+    "mulermoc-nom-54.html": "34ade6e22d3e9afaf8cfeb49d7a75fabada1a915b6d1550f58b83b323d68fb27"
+  },
+  "failure": "Traceback (most recent call last):\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/quiz-answer-scroll-20261109/lifecycle-followup/check.py\", line 64, in <module>\n    check(intermediate['selected'].endswith('-part-'+fixture['targetPartId']) and not intermediate['agreeing'],'Firsttargetreveal measuredmidmotionbeforesecondinput');check(second['agreeing'] and second['selected'].endswith('-part-'+wrong),'Rapidsecondnativeclick selectsagreeingcomponent');e=next(e for e in after['elements'] if e['selector']=='.part-selection-status');check(e['rect']['top']>=after['header']['bottom']+10 and e['rect']['bottom']<=after['usable']['bottom']-10,'Latestagreeingstatus visibleunderstickyheader');late=[v['scroll'] for v in trace if v['ms']>=900];check(bool(late) and max(late)-min(late)<1 and abs(after['dialog']['scrollTop']-latest_dest)<2,'Rapidanswer settlesatlatesttarget withoutobsolete drift');check(s['currentRound']==0 and not s['solved'] and s['states'][0]['selectedPartId']==wrong and ev('document.getElementById(\"nlQuizProgress\").textContent')=='Κουίζ 1/3','Rapidanswer preservescounter/state anddoesnotcompleterepair');snap('rapid-second-settled')\n  File \"owned-headless-bidi\", line 42, in ev\n    assert ok,label\n  File \"owned-headless-bidi\", line 24, in call\n    time.sleep(.15);g=geometry();m={'label':label,'geometry':g}\nAttributeError: 'dict' object has no attribute 'sendall'\n",
+  "captureFailure": "'dict' object has no attribute 'sendall'"
+}

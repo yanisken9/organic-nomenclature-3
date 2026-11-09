@@ -1,0 +1,918 @@
+{
+  "completed": false,
+  "role": "Developer browser verification; not independent review",
+  "checks": [
+    "All candidate content hashes match frozen metadata",
+    "Copied library alkane link resolves inside nested prefix",
+    "Normal learner presentation mode loaded from copied library",
+    "step4-desktop hides molecular view/name/menu",
+    "step4-desktop shows loaded logo/instructions/card and blocks Next",
+    "Unsolved gate4 rejects forward jump",
+    "s4 entry new round starts at top below fixed header",
+    "s4 entry quiz stays within viewport",
+    "step4-round1 actual counter",
+    "step4-round1 completion requires third actual repair",
+    "step4-round1 normal Next lock follows earned completion",
+    "step4-round1 Continue new round starts at top below fixed header",
+    "step4-round1 Continue quiz stays within viewport",
+    "step4-round2 actual counter",
+    "step4-round2 completion requires third actual repair",
+    "step4-round2 normal Next lock follows earned completion",
+    "step4-round2 Continue new round starts at top below fixed header",
+    "step4-round2 Continue quiz stays within viewport",
+    "step4-round3 actual counter",
+    "step4-round3 completion requires third actual repair",
+    "step4-round3 normal Next lock follows earned completion",
+    "Step5 second equivalent chain selectable",
+    "Step5 original chain restored",
+    "Step7 initial numbering left to right",
+    "Step7 opposite direction labels rendered",
+    "Step7 left direction restored",
+    "step11-desktop hides molecular view/name/menu",
+    "step11-desktop shows loaded logo/instructions/card and blocks Next",
+    "Unsolved gate11 rejects final-step jump",
+    "step11-mobile390 hides molecular view/name/menu",
+    "step11-mobile390 shows loaded logo/instructions/card and blocks Next",
+    "Step11 mobile390 no horizontal overflow",
+    "s11 entry new round starts at top below fixed header",
+    "s11 entry quiz stays within viewport",
+    "step11-round1 actual counter",
+    "step11-round1 completion requires third actual repair",
+    "step11-round1 normal Next lock follows earned completion",
+    "step11-round1 Continue new round starts at top below fixed header",
+    "step11-round1 Continue quiz stays within viewport",
+    "step11-round2 actual counter",
+    "step11-round2 completion requires third actual repair",
+    "step11-round2 normal Next lock follows earned completion",
+    "step11-round2 Continue new round starts at top below fixed header",
+    "step11-round2 Continue quiz stays within viewport",
+    "step11-round3 actual counter",
+    "step11-round3 completion requires third actual repair",
+    "step11-round3 normal Next lock follows earned completion",
+    "All6 actual repairs persisted; Continue enters final step12",
+    "Step12 restores molecular exploration and3D pane",
+    "All8 final alkane menu controls present",
+    "Methane has no skeletal representation 1280",
+    "methane condensed rendered 1280",
+    "methane expanded rendered 1280",
+    "methane prefixed3D model URL and atom count loaded",
+    "ethane condensed rendered 1280",
+    "ethane expanded rendered 1280",
+    "ethane skeletal rendered 1280",
+    "propane condensed rendered 1280",
+    "propane expanded rendered 1280",
+    "propane skeletal rendered 1280",
+    "butane condensed rendered 1280",
+    "butane expanded rendered 1280",
+    "butane skeletal rendered 1280"
+  ],
+  "rounds": [
+    {
+      "step": 4,
+      "round": 1,
+      "id": "engine-propane-bond-type-3ff25797",
+      "receipt": {
+        "version": 1,
+        "seed": "4",
+        "currentRound": 0,
+        "states": [
+          {
+            "selectedPartId": "component-6",
+            "selectedValue": "άν",
+            "order": [],
+            "choiceOrder": [
+              1,
+              0,
+              2
+            ],
+            "attempts": 1,
+            "selectionMisses": 0,
+            "solved": true,
+            "submitted": true
+          },
+          {
+            "selectedPartId": null,
+            "selectedValue": null,
+            "order": [],
+            "choiceOrder": [
+              2,
+              1,
+              0
+            ],
+            "attempts": 0,
+            "selectionMisses": 0,
+            "solved": false,
+            "submitted": false
+          },
+          {
+            "selectedPartId": null,
+            "selectedValue": null,
+            "order": [],
+            "choiceOrder": [
+              0,
+              1,
+              2
+            ],
+            "attempts": 0,
+            "selectionMisses": 0,
+            "solved": false,
+            "submitted": false
+          }
+        ],
+        "solved": false
+      }
+    },
+    {
+      "step": 4,
+      "round": 2,
+      "id": "engine-butane-parent-length-aaf59bef",
+      "receipt": {
+        "version": 1,
+        "seed": "4",
+        "currentRound": 1,
+        "states": [
+          {
+            "selectedPartId": "component-6",
+            "selectedValue": "άν",
+            "order": [],
+            "choiceOrder": [
+              1,
+              0,
+              2
+            ],
+            "attempts": 1,
+            "selectionMisses": 0,
+            "solved": true,
+            "submitted": true
+          },
+          {
+            "selectedPartId": "component-5",
+            "selectedValue": "βουτ",
+            "order": [],
+            "choiceOrder": [
+              2,
+              1,
+              0
+            ],
+            "attempts": 1,
+            "selectionMisses": 0,
+            "solved": true,
+            "submitted": true
+          },
+          {
+            "selectedPartId": null,
+            "selectedValue": null,
+            "order": [],
+            "choiceOrder": [
+              2,
+              1,
+              0
+            ],
+            "attempts": 0,
+            "selectionMisses": 0,
+            "solved": false,
+            "submitted": false
+          }
+        ],
+        "solved": false
+      }
+    },
+    {
+      "step": 4,
+      "round": 3,
+      "id": "engine-pentane-parent-length-5b7ba7a7",
+      "receipt": {
+        "version": 1,
+        "seed": "4",
+        "currentRound": 2,
+        "states": [
+          {
+            "selectedPartId": "component-6",
+            "selectedValue": "άν",
+            "order": [],
+            "choiceOrder": [
+              1,
+              0,
+              2
+            ],
+            "attempts": 1,
+            "selectionMisses": 0,
+            "solved": true,
+            "submitted": true
+          },
+          {
+            "selectedPartId": "component-5",
+            "selectedValue": "βουτ",
+            "order": [],
+            "choiceOrder": [
+              2,
+              1,
+              0
+            ],
+            "attempts": 1,
+            "selectionMisses": 0,
+            "solved": true,
+            "submitted": true
+          },
+          {
+            "selectedPartId": "component-5",
+            "selectedValue": "πεντ",
+            "order": [],
+            "choiceOrder": [
+              2,
+              1,
+              0
+            ],
+            "attempts": 1,
+            "selectionMisses": 0,
+            "solved": true,
+            "submitted": true
+          }
+        ],
+        "solved": true
+      }
+    },
+    {
+      "step": 11,
+      "round": 1,
+      "id": "engine-dimethyl_2_3_butane-branch-multiplier-74bb4f08",
+      "receipt": {
+        "version": 1,
+        "seed": "1",
+        "currentRound": 0,
+        "states": [
+          {
+            "selectedPartId": "component-1",
+            "selectedValue": "διμεθυλο",
+            "order": [],
+            "choiceOrder": [
+              0,
+              2,
+              1
+            ],
+            "attempts": 1,
+            "selectionMisses": 0,
+            "solved": true,
+            "submitted": true
+          },
+          {
+            "selectedPartId": null,
+            "selectedValue": null,
+            "order": [
+              "branch-group-2",
+              "branch-group-1"
+            ],
+            "choiceOrder": [],
+            "attempts": 0,
+            "selectionMisses": 0,
+            "solved": false,
+            "submitted": false
+          },
+          {
+            "selectedPartId": null,
+            "selectedValue": null,
+            "order": [],
+            "choiceOrder": [
+              2,
+              1,
+              0
+            ],
+            "attempts": 0,
+            "selectionMisses": 0,
+            "solved": false,
+            "submitted": false
+          }
+        ],
+        "solved": false
+      }
+    },
+    {
+      "step": 11,
+      "round": 2,
+      "id": "engine-ethyl_3_dimethyl_2_5_hexane-alphabetical-order-4d777eae",
+      "receipt": {
+        "version": 1,
+        "seed": "1",
+        "currentRound": 1,
+        "states": [
+          {
+            "selectedPartId": "component-1",
+            "selectedValue": "διμεθυλο",
+            "order": [],
+            "choiceOrder": [
+              0,
+              2,
+              1
+            ],
+            "attempts": 1,
+            "selectionMisses": 0,
+            "solved": true,
+            "submitted": true
+          },
+          {
+            "selectedPartId": "branch-group-1",
+            "selectedValue": null,
+            "order": [
+              "branch-group-1",
+              "branch-group-2"
+            ],
+            "choiceOrder": [],
+            "attempts": 1,
+            "selectionMisses": 0,
+            "solved": true,
+            "submitted": true
+          },
+          {
+            "selectedPartId": null,
+            "selectedValue": null,
+            "order": [],
+            "choiceOrder": [
+              2,
+              0,
+              1
+            ],
+            "attempts": 0,
+            "selectionMisses": 0,
+            "solved": false,
+            "submitted": false
+          }
+        ],
+        "solved": false
+      }
+    },
+    {
+      "step": 11,
+      "round": 3,
+      "id": "engine-methyl_2_pentane-parent-length-2c39b9b5",
+      "receipt": {
+        "version": 1,
+        "seed": "1",
+        "currentRound": 2,
+        "states": [
+          {
+            "selectedPartId": "component-1",
+            "selectedValue": "διμεθυλο",
+            "order": [],
+            "choiceOrder": [
+              0,
+              2,
+              1
+            ],
+            "attempts": 1,
+            "selectionMisses": 0,
+            "solved": true,
+            "submitted": true
+          },
+          {
+            "selectedPartId": "branch-group-1",
+            "selectedValue": null,
+            "order": [
+              "branch-group-1",
+              "branch-group-2"
+            ],
+            "choiceOrder": [],
+            "attempts": 1,
+            "selectionMisses": 0,
+            "solved": true,
+            "submitted": true
+          },
+          {
+            "selectedPartId": "component-5",
+            "selectedValue": "πεντ",
+            "order": [],
+            "choiceOrder": [
+              2,
+              0,
+              1
+            ],
+            "attempts": 1,
+            "selectionMisses": 0,
+            "solved": true,
+            "submitted": true
+          }
+        ],
+        "solved": true
+      }
+    }
+  ],
+  "geometry": [
+    {
+      "key": "methane",
+      "mode": "condensed",
+      "width": 1280,
+      "pageWidth": 1280,
+      "host": {
+        "x": 289,
+        "y": -46.5,
+        "width": 602,
+        "height": 420,
+        "top": -46.5,
+        "right": 891,
+        "bottom": 373.5,
+        "left": 289
+      },
+      "drawing": {
+        "left": 566.2000122070312,
+        "top": 148.75,
+        "right": 613.7666778564453,
+        "bottom": 178.46665954589844
+      },
+      "svg": true,
+      "atoms": 1,
+      "name": "μεθάνιο"
+    },
+    {
+      "key": "methane",
+      "mode": "expanded",
+      "width": 1280,
+      "pageWidth": 1280,
+      "host": {
+        "x": 289,
+        "y": -46.5,
+        "width": 602,
+        "height": 420,
+        "top": -46.5,
+        "right": 891,
+        "bottom": 373.5,
+        "left": 289
+      },
+      "drawing": {
+        "left": 550.25,
+        "top": 122.75,
+        "right": 629.7499694824219,
+        "bottom": 205.35000610351562
+      },
+      "svg": true,
+      "atoms": 5,
+      "name": "μεθάνιο"
+    },
+    {
+      "key": "ethane",
+      "mode": "condensed",
+      "width": 1280,
+      "pageWidth": 1280,
+      "host": {
+        "x": 289,
+        "y": -46.5,
+        "width": 602,
+        "height": 420,
+        "top": -46.5,
+        "right": 891,
+        "bottom": 373.5,
+        "left": 289
+      },
+      "drawing": {
+        "left": 535.6500244140625,
+        "top": 148.75,
+        "right": 644.3333282470703,
+        "bottom": 178.46665954589844
+      },
+      "svg": true,
+      "atoms": 2,
+      "name": "αιθάνιο"
+    },
+    {
+      "key": "ethane",
+      "mode": "expanded",
+      "width": 1280,
+      "pageWidth": 1280,
+      "host": {
+        "x": 289,
+        "y": -46.5,
+        "width": 602,
+        "height": 420,
+        "top": -46.5,
+        "right": 891,
+        "bottom": 373.5,
+        "left": 289
+      },
+      "drawing": {
+        "left": 521.433349609375,
+        "top": 122.61666870117188,
+        "right": 658.5500335693359,
+        "bottom": 205.23333740234375
+      },
+      "svg": true,
+      "atoms": 8,
+      "name": "αιθάνιο"
+    },
+    {
+      "key": "ethane",
+      "mode": "skeletal",
+      "width": 1280,
+      "pageWidth": 1280,
+      "host": {
+        "x": 289,
+        "y": -46.5,
+        "width": 602,
+        "height": 420,
+        "top": -46.5,
+        "right": 891,
+        "bottom": 373.5,
+        "left": 289
+      },
+      "drawing": {
+        "left": 564.816650390625,
+        "top": 162.88333129882812,
+        "right": 615.1833190917969,
+        "bottom": 164.11666870117188
+      },
+      "svg": true,
+      "atoms": 2,
+      "name": "αιθάνιο"
+    },
+    {
+      "key": "propane",
+      "mode": "condensed",
+      "width": 1280,
+      "pageWidth": 1280,
+      "host": {
+        "x": 289,
+        "y": -46.5,
+        "width": 602,
+        "height": 420,
+        "top": -46.5,
+        "right": 891,
+        "bottom": 373.5,
+        "left": 289
+      },
+      "drawing": {
+        "left": 505.08331298828125,
+        "top": 148.75,
+        "right": 674.8833160400391,
+        "bottom": 178.46665954589844
+      },
+      "svg": true,
+      "atoms": 3,
+      "name": "προπάνιο"
+    },
+    {
+      "key": "propane",
+      "mode": "expanded",
+      "width": 1280,
+      "pageWidth": 1280,
+      "host": {
+        "x": 289,
+        "y": -46.5,
+        "width": 602,
+        "height": 420,
+        "top": -46.5,
+        "right": 891,
+        "bottom": 373.5,
+        "left": 289
+      },
+      "drawing": {
+        "left": 492.66668701171875,
+        "top": 122.56666564941406,
+        "right": 687.3333435058594,
+        "bottom": 205.18333435058594
+      },
+      "svg": true,
+      "atoms": 11,
+      "name": "προπάνιο"
+    },
+    {
+      "key": "propane",
+      "mode": "skeletal",
+      "width": 1280,
+      "pageWidth": 1280,
+      "host": {
+        "x": 289,
+        "y": -46.5,
+        "width": 602,
+        "height": 420,
+        "top": -46.5,
+        "right": 891,
+        "bottom": 373.5,
+        "left": 289
+      },
+      "drawing": {
+        "left": 546.0999755859375,
+        "top": 150.4166717529297,
+        "right": 633.9000091552734,
+        "bottom": 176.5833282470703
+      },
+      "svg": true,
+      "atoms": 3,
+      "name": "προπάνιο"
+    },
+    {
+      "key": "butane",
+      "mode": "condensed",
+      "width": 1280,
+      "pageWidth": 1280,
+      "host": {
+        "x": 289,
+        "y": -46.5,
+        "width": 602,
+        "height": 420,
+        "top": -46.5,
+        "right": 891,
+        "bottom": 373.5,
+        "left": 289
+      },
+      "drawing": {
+        "left": 474.5333251953125,
+        "top": 148.75,
+        "right": 705.4333648681641,
+        "bottom": 178.46665954589844
+      },
+      "svg": true,
+      "atoms": 4,
+      "name": "βουτάνιο"
+    },
+    {
+      "key": "butane",
+      "mode": "expanded",
+      "width": 1280,
+      "pageWidth": 1280,
+      "host": {
+        "x": 289,
+        "y": -46.5,
+        "width": 602,
+        "height": 420,
+        "top": -46.5,
+        "right": 891,
+        "bottom": 373.5,
+        "left": 289
+      },
+      "drawing": {
+        "left": 463.8999938964844,
+        "top": 122.38333129882812,
+        "right": 716.1000213623047,
+        "bottom": 204.9499969482422
+      },
+      "svg": true,
+      "atoms": 14,
+      "name": "βουτάνιο"
+    },
+    {
+      "key": "butane",
+      "mode": "skeletal",
+      "width": 1280,
+      "pageWidth": 1280,
+      "host": {
+        "x": 289,
+        "y": -46.5,
+        "width": 602,
+        "height": 420,
+        "top": -46.5,
+        "right": 891,
+        "bottom": 373.5,
+        "left": 289
+      },
+      "drawing": {
+        "left": 524.2833251953125,
+        "top": 150.4166717529297,
+        "right": 655.7166748046875,
+        "bottom": 176.5833282470703
+      },
+      "svg": true,
+      "atoms": 4,
+      "name": "βουτάνιο"
+    }
+  ],
+  "models3D": [
+    {
+      "key": "methane",
+      "file": "http://127.0.0.1:60876/organic-nomenclature-3/reviews/alkanes-20261109/mols/nomeclature-moc2/methane_3D.sdf",
+      "atoms": 5,
+      "expectedAtoms": 5
+    }
+  ],
+  "lessonSteps": [
+    {
+      "step": 1,
+      "title": "Τι είναι τα αλκάνια;",
+      "selectedMol": "ethane",
+      "mode2D": "condensed",
+      "nextDisabled": false
+    },
+    {
+      "step": 2,
+      "title": "Ένα όνομα από τρία συνθετικά",
+      "selectedMol": "ethane",
+      "mode2D": "condensed",
+      "nextDisabled": false
+    },
+    {
+      "step": 3,
+      "title": "Αλκάνια χωρίς διακλαδώσεις",
+      "selectedMol": "butane",
+      "mode2D": "condensed",
+      "nextDisabled": false
+    },
+    {
+      "step": 4,
+      "title": "Συνεργείο ονομάτων",
+      "selectedMol": "pentane",
+      "mode2D": "condensed",
+      "nextDisabled": true
+    },
+    {
+      "step": 5,
+      "title": "Κύρια αλυσίδα και συνολικά άτομα C",
+      "selectedMol": "methyl_2_pentane",
+      "mode2D": "condensed",
+      "nextDisabled": false
+    },
+    {
+      "step": 6,
+      "title": "Θέση και όνομα μιας διακλάδωσης",
+      "selectedMol": "methyl_2_pentane",
+      "mode2D": "condensed",
+      "nextDisabled": false
+    },
+    {
+      "step": 7,
+      "title": "Δύο ίδιες διακλαδώσεις",
+      "selectedMol": "dimethyl_2_3_butane",
+      "mode2D": "condensed",
+      "nextDisabled": false
+    },
+    {
+      "step": 8,
+      "title": "Επιλογή κύριας αλυσίδας στο μεγάλο μόριο",
+      "selectedMol": "ethyl_3_dimethyl_2_5_hexane",
+      "mode2D": "condensed",
+      "nextDisabled": false
+    },
+    {
+      "step": 9,
+      "title": "Αρίθμηση με βάση την πρώτη διαφορετική θέση",
+      "selectedMol": "ethyl_3_dimethyl_2_5_hexane",
+      "mode2D": "condensed",
+      "nextDisabled": false
+    },
+    {
+      "step": 10,
+      "title": "Αλκύλια, αλφαβητική σειρά και πλήρες όνομα",
+      "selectedMol": "ethyl_3_dimethyl_2_5_hexane",
+      "mode2D": "condensed",
+      "nextDisabled": false
+    },
+    {
+      "step": 11,
+      "title": "Στο Συνεργείο: Με διακλαδώσεις",
+      "selectedMol": "ethyl_3_dimethyl_2_5_hexane",
+      "mode2D": "condensed",
+      "nextDisabled": true
+    },
+    {
+      "step": 12,
+      "title": "Όλα τα αλκάνια σε 2D και 3D",
+      "selectedMol": "ethyl_3_dimethyl_2_5_hexane",
+      "mode2D": "condensed",
+      "nextDisabled": false
+    }
+  ],
+  "notes": [],
+  "limitations": [
+    "Owned headless Firefox and viewport emulation only; no personal/GUI Firefox interaction or prior freeze diagnosis",
+    "No Safari/physical mobile/screen reader/conference-machine audit; no uninterrupted-operation guarantee",
+    "External JSmol/Google Fonts network dependencies retained; captured errors/resources reported separately",
+    "Seed4/seed1 unsolved starts only; all six correct repair receipts earned by actual native pointer actions",
+    "Bounded prefix integration; prior smooth-scroll/reduced-motion animation matrix not repeated"
+  ],
+  "candidateSHA256": "626811f62f84fa923500058ae1c1f329a203e2799925e79f2f2e33feb8f41013",
+  "base_url": "http://127.0.0.1:60876/organic-nomenclature-3/reviews/alkanes-20261109/",
+  "javascriptErrors": [],
+  "environment": {
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:159.0) Gecko/20100101 Firefox/159.0",
+    "url": "http://127.0.0.1:60876/organic-nomenclature-3/reviews/alkanes-20261109/mulermoc-nom-54.html?scenario=scenarios/alkanes-user-3.scenario.json&present=1&from=theory-library&v=alkanes-personal-20261106-r1#step=1",
+    "jsmolVersion": "2022-06-24 05:54:49 (JSmol/j2s)",
+    "jquery": "3.7.1"
+  },
+  "quizGeometry": [
+    {
+      "label": "s4 entry",
+      "scroll": 0,
+      "headerBottom": 121.83332824707031,
+      "titleTop": 244.8333282470703,
+      "objectiveTop": 297.83331298828125,
+      "progress": "Κουίζ 1/3",
+      "dialog": {
+        "x": 50,
+        "y": 12,
+        "width": 1180,
+        "height": 776,
+        "top": 12,
+        "right": 1230,
+        "bottom": 788,
+        "left": 50
+      },
+      "width": 1280,
+      "documentWidth": 1280
+    },
+    {
+      "label": "step4-round1 Continue",
+      "scroll": 0,
+      "headerBottom": 121.83332824707031,
+      "titleTop": 244.8333282470703,
+      "objectiveTop": 297.83331298828125,
+      "progress": "Κουίζ 2/3",
+      "dialog": {
+        "x": 50,
+        "y": 12,
+        "width": 1180,
+        "height": 776,
+        "top": 12,
+        "right": 1230,
+        "bottom": 788,
+        "left": 50
+      },
+      "width": 1280,
+      "documentWidth": 1280
+    },
+    {
+      "label": "step4-round2 Continue",
+      "scroll": 0,
+      "headerBottom": 121.83332824707031,
+      "titleTop": 244.8333282470703,
+      "objectiveTop": 297.83331298828125,
+      "progress": "Κουίζ 3/3",
+      "dialog": {
+        "x": 50,
+        "y": 12,
+        "width": 1180,
+        "height": 776,
+        "top": 12,
+        "right": 1230,
+        "bottom": 788,
+        "left": 50
+      },
+      "width": 1280,
+      "documentWidth": 1280
+    },
+    {
+      "label": "s11 entry",
+      "scroll": 0,
+      "headerBottom": 111.83332824707031,
+      "titleTop": 217.8333282470703,
+      "objectiveTop": 259.20001220703125,
+      "progress": "Κουίζ 1/3",
+      "dialog": {
+        "x": 6,
+        "y": 6,
+        "width": 378,
+        "height": 748,
+        "top": 6,
+        "right": 384,
+        "bottom": 754,
+        "left": 6
+      },
+      "width": 390,
+      "documentWidth": 390
+    },
+    {
+      "label": "step11-round1 Continue",
+      "scroll": 0,
+      "headerBottom": 111.83332824707031,
+      "titleTop": 217.8333282470703,
+      "objectiveTop": 259.20001220703125,
+      "progress": "Κουίζ 2/3",
+      "dialog": {
+        "x": 6,
+        "y": 6,
+        "width": 378,
+        "height": 748,
+        "top": 6,
+        "right": 384,
+        "bottom": 754,
+        "left": 6
+      },
+      "width": 390,
+      "documentWidth": 390
+    },
+    {
+      "label": "step11-round2 Continue",
+      "scroll": 0,
+      "headerBottom": 111.83332824707031,
+      "titleTop": 217.8333282470703,
+      "objectiveTop": 259.20001220703125,
+      "progress": "Κουίζ 3/3",
+      "dialog": {
+        "x": 6,
+        "y": 6,
+        "width": 378,
+        "height": 748,
+        "top": 6,
+        "right": 384,
+        "bottom": 754,
+        "left": 6
+      },
+      "width": 390,
+      "documentWidth": 390
+    }
+  ],
+  "model3DExceptions": [
+    {
+      "key": "ethane",
+      "error": "Timeout (()=>{try{const m=Jmol.getPropertyAsArray(jmolAppletNomeclature,\"modelInfo\").models;return m&&m.length===1&&m[0].file===new URL(nameExamples[selectedMol].file3D,document.baseURI).href&&Jmol.getPropertyAsArray(jmolAppletNomeclature,\"atomInfo\").length===allAtomsTypeList.length}catch(e){return false}})()"
+    },
+    {
+      "key": "propane",
+      "error": "Timeout (()=>{try{const m=Jmol.getPropertyAsArray(jmolAppletNomeclature,\"modelInfo\").models;return m&&m.length===1&&m[0].file===new URL(nameExamples[selectedMol].file3D,document.baseURI).href&&Jmol.getPropertyAsArray(jmolAppletNomeclature,\"atomInfo\").length===allAtomsTypeList.length}catch(e){return false}})()"
+    }
+  ]
+}

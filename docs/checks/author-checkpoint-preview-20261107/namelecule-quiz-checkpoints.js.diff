@@ -1,0 +1,55 @@
+--- before/js/namelecule-quiz-checkpoints.js
++++ js/namelecule-quiz-checkpoints.js
+@@ -3,6 +3,7 @@
+   "use strict";
+   const types = Object.create(null);
+   const records = new Map();
++  let preview = null; // Editor rehearsal only; never a stored learner receipt.
+   const own = (object, key) => Object.prototype.hasOwnProperty.call(object, key);
+   const clone = value => JSON.parse(JSON.stringify(value));
+   const storagePrefix = "namelecule:lesson-checkpoints:v1:";
+@@ -75,6 +76,7 @@
+ 
+   function recordFor(scenario) {
+     const content = signature(scenario);
++    if (isPreview(scenario)) return preview.record;
+     if (records.has(content)) return records.get(content);
+     const key = storagePrefix + hash(content);
+     let states = Object.create(null);
+@@ -101,6 +103,7 @@
+   }
+ 
+   function persist(record) {
++    if (record.temporary) return;
+     try {
+       global.sessionStorage.setItem(record.key, JSON.stringify({ version: 1, content: record.content, states: record.states }));
+       record.storageAvailable = true;
+@@ -322,6 +325,20 @@
+     closeDialog();
+     if (active && active.section) active.section.remove();
+     active = null;
++  }
++  function isPreview(scenario) {
++    return !!(preview && preview.scenario === scenario && preview.record.content === signature(scenario));
++  }
++  function endPreview() {
++    if (!preview) return;
++    preview = null;
++    onExit();
++  }
++  function beginPreview(scenario) {
++    endPreview();
++    onExit();
++    preview = { scenario, record: { key: null, content: signature(scenario),
++      states: Object.create(null), storageAvailable: true, temporary: true } };
+   }
+   function onStep(scenario, index) {
+     const step = scenario && scenario.steps && scenario.steps[index];
+@@ -364,5 +381,6 @@
+   }
+ 
+   global.NameleculeQuizCheckpoints = { registerType, validateCheckpoint, hasCheckpoints,
+-    resolveTarget, prepareTarget, isComplete, onStep, onExit, reset };
++    resolveTarget, prepareTarget, isComplete, onStep, onExit, reset,
++    beginPreview, endPreview, isPreview };
+ })(typeof window !== "undefined" ? window : globalThis);

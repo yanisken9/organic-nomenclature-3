@@ -1,0 +1,73 @@
+{
+  "date": "2026-11-08",
+  "status": "Read-only investigation complete; specific code plan awaiting user approval",
+  "request": "Step7 two equivalent numbering directions of the same dimethyl_2_3_butane parent",
+  "confirmed": {
+    "activeJSONSHA256": "57f2822ad5771743893b748fa353e20463f49e6a7917d44459d14d70b93d4cfb",
+    "canonicalParent": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "exactReverse": [
+      4,
+      3,
+      2,
+      1
+    ],
+    "exactReverseInPool": false,
+    "poolLength": 4,
+    "defaultAnalysis": "compSecondSub1 with numbering off",
+    "stemClickAnalysis": "compCarbonsCount shows1,2,3,4",
+    "existingChainNavigation": "switches distinct parent paths; not a supported numbering-direction control",
+    "browserJavaScriptErrors": 0,
+    "ownedFirefoxStopped": 43984
+  },
+  "proposal": {
+    "enabledOnly": "steps[6] of active lesson",
+    "field": "show.numberingDirection:true (new optional setting; default off elsewhere)",
+    "initialAnalysis": "compCarbonsCount",
+    "UI": [
+      "Αρίθμηση",
+      "Από αριστερά",
+      "Από δεξιά"
+    ],
+    "behavior": "Same parent atom IDs and geometry; display labels reverse only; selected direction visible; picking direction restores parent view when another name part hides numbering; keep nameparts interactive and note unchanged",
+    "state": "Preserve choice during zoom/resize and name clicks; reset on step exit/reentry, Stop, molecule/chain changes; no learner quiz state changes",
+    "validation": "Verify both non-null signatures equal within bounded neutral connected acyclic saturated C/H support; unverified chemical metadata/unsupported structures retain canonical direction. Never claim signatures alone guarantee arbitrary chemical equivalence. No core changes. Explicit component overrides retain priority.",
+    "projectPaths": [
+      "scenarios/alkanes-user-3.scenario.json",
+      "js/mulermoc-nom-scenario-54.js",
+      "js/mulermoc-nom-molview-54.js",
+      "css/mulermoc-nom-scenario-54.css",
+      "mulermoc-nom-54.html",
+      "docs/didactic-scenario-plan.md"
+    ],
+    "DesktopExport": "Refresh corresponding /Users/yannisskendros/Desktop/αρχεία  json/9Αλκάνια.json only after approval, with dated recovery snapshot and SHA256 verification; preserve earlier versions",
+    "checks": [
+      "Same parent IDs/index/name/locants2,3 before/after; reverse label coordinates; double-toggle restores",
+      "Nameparts, 2D representation modes, zoom/resize, desktop/mobile, keyboard/pointer controls",
+      "Step6→7→8 and step5 alternate chains; Exit/Stop/reenter/replay",
+      "Negative non-equivalent methyl_2_pentane and unsupported chemistry fail closed; existing ether explicit numbering overrides",
+      "Scenario validate/import/export/Update preserves newfield; Desktop exactbytes; core/MOL/SDF/otherJSON protected hashes",
+      "One fresh independent Reviewer after approved implementation"
+    ]
+  },
+  "agents": {
+    "explorer": "/root/step7_numbering_preflight_20261108: no existing direction setting; core intentionally dedups reverse, common fShowNumbering hook needed for replay",
+    "learning": "/root/step7_numbering_learning_20261108: two explicit choices, initial stem, existing note unchanged, no universal equivalence claim",
+    "chemistry": "/root/step7_numbering_chemistry_20261108: actual C6H14 graph and same-name reversal validated; CV-01P2 pre-existing signature limitation, not future universal equivalence proof; constrain resolver"
+  },
+  "baselineHashes": {
+    "scenarios/alkanes-user-3.scenario.json": "57f2822ad5771743893b748fa353e20463f49e6a7917d44459d14d70b93d4cfb",
+    "js/mulermoc-nom-scenario-54.js": "4d6d500dfed220d4e8ea672a407d6201a281ed9653514ad465111023b27dc381",
+    "js/mulermoc-nom-molview-54.js": "8fb5961c372f5fe0b5cfbe6a2a71181121563de905a7c451265b20d1027e434a",
+    "css/mulermoc-nom-scenario-54.css": "e4e362cbdfd6f9c964831ec6c9fc4a6e38522caf9dacf1c25b837542963b6db8",
+    "mulermoc-nom-54.html": "a8cf41730cf2413b4c85ed002503038b3a89dc1f3a7dc4f55ab1882f5174435c",
+    "docs/didactic-scenario-plan.md": "eef71ec1cb8d50378412456a282678c7890cd5f2d71413e4b4af223a3a48371d"
+  },
+  "noApplicationCodeChanged": true,
+  "noCoreChanged": true,
+  "upstream": "Alreadychecked2026-11-08:0fe3f14e, actualsyncf49b810; userhold remains"
+}

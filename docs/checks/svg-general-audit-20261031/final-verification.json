@@ -1,0 +1,38 @@
+{
+  "date": "2026-10-31",
+  "productionFilesUnchanged": 734,
+  "reviewedFiles": 33,
+  "reviewedFilesUnchanged": 30,
+  "changedAfterReview": {
+    "docs/SVG-GENERAL-AUDIT-20261031.md": {
+      "reviewed": "27b547fdfad40ea5be6b26d82dab7c21bbf4f485df250936a95c65e4532437cf",
+      "final": "23b5ed2d42d93915d46938d631c2334e7f31882615e3e0719a69636568457830"
+    },
+    "docs/checks/svg-general-audit-20261031/build-report.py": {
+      "reviewed": "6db87c524e2b393d6e2eaf3f45d8556dc2debd547a319ec8fe241d4fc902acfd",
+      "final": "6ef244c6515e6c1022657f0ccadd216e0ab707d8fe83fab2348dcf50f37f72c2"
+    },
+    "docs/checks/svg-general-audit-20261031/report.html": {
+      "reviewed": "02c52bb4041a2c0fd2630e53d3eb14f7a38a31541d1c45aadcbc121dbe86006b",
+      "final": "eaeca3c36e5f276e1f1624ac8432c29367396282d4f5bc8a996eeaa17468ca6e"
+    }
+  },
+  "checks": [
+    "Pinned dependencies unchanged",
+    "HEAD/index unchanged",
+    "Four startup errors verified against raw evidence",
+    "AST and direct execution of report generator passed",
+    "Final HTML differs from reviewed HTML only by disclosed startup paragraph; all scripts/SVGs and interaction code unchanged"
+  ],
+  "runtimeRerun": false,
+  "runtimeEvidence": "report-browser.json and PNGs belong to pre-disclosure reviewed report; interactive code unchanged",
+  "coreSessionStartSHA256": "d2138418ff630ab77e578b80ca8ba3a10cc1b877c3ab8c0e5c2735ffcd1f24a2",
+  "coreChangedThisSession": false,
+  "committed": false,
+  "published": false,
+  "visualPresentation": {
+    "command": "open -a Firefox docs/checks/svg-general-audit-20261031/report.html",
+    "exitCode": 0,
+    "userDisplayObserved": false
+  }
+}

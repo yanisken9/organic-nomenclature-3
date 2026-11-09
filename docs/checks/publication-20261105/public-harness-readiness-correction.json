@@ -1,0 +1,11 @@
+{
+  "file": "test-main.py",
+  "beforeSHA256": "de1f3f865c3dc2d895d1a43266684a5cf1500773a5a0c55be5dd7084bd9f4060",
+  "afterSHA256": "008e9b05bc90c8a460d2c92694d2a818882a8e3ecc6a6a2c9bad76eb5c73629d",
+  "retainedRun": "main-public-first-attempt.json",
+  "checksPassedBeforeFailure": 12,
+  "observed": "Next round ID changed but its public network image was not ready; repair buttons correctly disabled. Driver selected before awaiting diagram readiness.",
+  "correction": "Every candidate selection waits for current embedded diagram is-ready, exactly as initial opening already does. No appcode changes or disabled-control bypass.",
+  "diagnostics": "10retained cookie/JmolTracker messages; classification against prior public families follows.",
+  "publicRuntimeUnchanged": true
+}

@@ -1,0 +1,9 @@
+{
+  "completed": false,
+  "steps": {},
+  "checks": [],
+  "classification": "Developer actual UI evidence; author preview used to inspect11 without fabricating learner receipts",
+  "failure": "Timed out: fScenarioPresent().index===3&&!!document.getElementById(\"nlQuizOpen\")",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/alkane-step11-stop-20261109/check-before.py\", line 17, in <module>\n    ev('fScenarioGo(3);true');until('fScenarioPresent().index===3&&!!document.getElementById(\"nlQuizOpen\")')\n  File \"bidi\", line 51, in until\nAssertionError: Timed out: fScenarioPresent().index===3&&!!document.getElementById(\"nlQuizOpen\")\n",
+  "javascriptErrors": []
+}

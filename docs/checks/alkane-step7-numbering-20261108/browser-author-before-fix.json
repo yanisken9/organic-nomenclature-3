@@ -1,0 +1,21 @@
+{
+  "completed": false,
+  "checks": [
+    "Author screen opens step7 directly with direction control",
+    "Delayed initial highlight does not override a direction choice",
+    "Actual Update preserves optional numberingDirection flag",
+    "Actual export retains opt-in and omits transient selected direction",
+    "Actual exported Blob roundtrip validates",
+    "Stop/Exit clears transient direction and control"
+  ],
+  "limitations": [
+    "Owned headless Firefox; no personal browser interaction or freeze diagnosis",
+    "Viewport emulation, not physical mobile/Safari/screen reader or conference sequence",
+    "No full 3D audit; direction support requires2D-only step",
+    "Export actual Blob captured and validated; no browser download picker; actual Desktop export verified separately"
+  ],
+  "failure": "Timed out: MuLERMoCScenario.present&&!!document.getElementById(\"scNumberingLeft\")",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/alkane-step7-numbering-20261108/check-author.py\", line 71, in <module>\n    click('.scenarioPanel.active .srow[data-idx=\"6\"] .scPresentStep');until('MuLERMoCScenario.present&&!!document.getElementById(\"scNumberingLeft\")');wait_numbers([1,2,3,4]);check(True,'Author reentry also starts left with no persisted direction')\n  File \"bidi\", line 51, in until\n    def labels():return json.loads(ev('JSON.stringify([...document.querySelectorAll(\"#jsmeNomeclatureSVG text[id^=number]\")].map(e=>({text:e.textContent,x:Number(e.getAttribute(\"x\")),y:Number(e.getAttribute(\"y\"))})).sort((a,b)=>a.x-b.x))'))\nAssertionError: Timed out: MuLERMoCScenario.present&&!!document.getElementById(\"scNumberingLeft\")\n",
+  "javascriptErrors": [],
+  "finding": "DEV-01P2: Update during presentation captured global3D=true behind authored2D-only lessonchrome. Flag persisted but reentry disableddirectionUI. Export beforefix confirms show.viewers3Dtrue. Rootfix preserve authored2D-onlyviewerpermissions for opted-in presentation Update."
+}

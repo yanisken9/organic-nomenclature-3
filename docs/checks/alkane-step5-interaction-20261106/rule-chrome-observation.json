@@ -1,0 +1,6 @@
+{
+  "observed": "After new chain navigation and active stem clicks, existing fExplainNameComp showed the rule container even though personal step5 show.rule=false and its lesson title has no component-rule opt-in.",
+  "cause": "Chrome permissions were only reasserted before the final explanation repaint, and active name-box clicks did not call the existing post-control scenario hook.",
+  "correction": "Shared naming-chrome permission ceiling hides unrequested rule content. Existing post-control hook now runs after name clicks and chain swaps. It does not force-show empty/valid rule containers.",
+  "initial_functional_tests": "51passed0JSerrors; screenshots retained as initial evidence, targeted rule tests to follow."
+}
