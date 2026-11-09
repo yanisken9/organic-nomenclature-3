@@ -1,40 +1,45 @@
-# Current resume point — 2026-11-09 — Ενημερωμένη κύρια δημοσιεύτηκε, πλήρης αποθήκευση εκκρεμεί
+# Current resume point — 2026-11-09 — Δημοσίευση και πλήρης αποθήκευση ολοκληρώθηκαν
 
-Ο χρήστης ενέκρινε αποθήκευση παντού και γενικό σύνδεσμο, διευκρινίζοντας μόνο
-την υποδοχή. Δημοσιεύτηκαν ΜΟΝΟ12ήδηελεγμένα runtime/lesson/library αρχεία στο
-προσωπικόorigin/thesis-work, commit98c22050de2cd81f36db734fe1556e3871c9f91b,
-base2afe6135. Δεν δημοσιεύτηκε το προσωρινό reviews/ prefix. Όλα3789άλλαpublic
-αρχεία και49protectedReact/v52 ίδια. Καμία ενσωμάτωση καθηγητή (HOLD ισχύει),
-καμία νέα αλλαγή core/χημικούγράφου/MOL/SDF. SourceHEAD168e3ce/index25c21223…
-διατηρήθηκαν,10core ίδια με αρχή συνεδρίας. Τελικός μόνο σύνδεσμος:
+Ο χρήστης ζήτησε πλήρη αποθήκευση και μόνο τον γενικό σύνδεσμο της υποδοχής:
 https://yanisken9.github.io/organic-nomenclature-3/design/welcome-proposal.html?v=release-20261109
 
-Developer native integration:6πραγματικέςεπισκευές/gates4/11,12steps,chainchoices/
-numberingdirections/mobile;23available2Dcombinations×2viewports=46framingchecks,
-8actual3D/SDFcounts. Rootwelcome→library→activeuser3→gate4/Return/Exit και
-προηγούμενηReact smoke,0capturedpageJSerrors. Source JSON/desktop9 SHA607a530a…
-ίδια. Prefixmissing7assets ήταν fixture-only (root ήδηόλα14), διατηρήθηκεfailedrun.
-Skeletal2D-vs3Datomcount comparator ήταν harnessbug, στοχευμένα63finalchecks
-πέρασαν· interruptednormalrun χαρακτηρίζεται incomplete, όχι passingfullsuite.
-Fresh Reviewer `/root/review_save_publish_20261109` noP0/P1/P2/P3, exact12staged/
-54deliverables/42browserfiles/49protected/3789otherpublic και νέαsavehelperprimitives
-ελεγμέναανεξάρτητα. Browser παραμένει Developer evidence, όχι reviewerbrowserrun.
-Manifest2689e0d1… και review.json στο
-`docs/checks/alkane-teacher-link-20261109T060243Z/`. Actual live65HTTP/SHA πέρασαν,
-remoteHEAD98c22050ίδιο· bounded LIVE browser smoke ολοκληρώθηκε:10 checks, νέα owned headless συνεδρία έκλεισε.
-Η κονσόλα ΔΕΝ είναι καθαρή:3γνωστά Analytics cookie rejections,1JSmolTracker
-XFO/NS_ERROR_XFO_VIOLATION και4favicon404. Δεν καταγράφηκαν άλλες εξαιρέσεις
-ή αποτυχίες runtime assets. Live report7b6c0bda…/manifest1733e89d… στοbrowser-live/.
+Η κύρια δημοσιεύτηκε στο προσωπικό origin/thesis-work ως
+98c22050de2cd81f36db734fe1556e3871c9f91b: ακριβώς 12 ήδη ελεγμένα αρχεία,
+μαζί με το ενεργό μάθημα αλκανίων user-3. Όλες οι άλλες 3.789 δημόσιες πηγές
+και 49 προστατευμένα αρχεία React/v52 παρέμειναν ίδια. Το προσωρινό reviews/
+χρησιμοποιήθηκε μόνο σε δοκιμές. Δεν ενσωματώθηκαν εκκρεμή του καθηγητή: HOLD
+σε ισχύ, checked bfa9ce034e/v54.42, actual sync f49b810c. Source HEAD168e3ce,
+branch react-library-pilot και index25c21223… αμετάβλητα.
 
-Fullsourcecheckpoint (ReactWIPμαζί), ZIP/allSHA+CRC, bundleverify, recoveryZIP,
-δύοdatedfolders και Githubcheckpoint ΕΚΚΡΕΜΟΥΝ ακόμη. State:
-`communication/checkpoints/save-publish-20261109-state.json`, branch
-`checkpoint/namelecule-20261109-081249`. Reviewed helper414270fa…865d εκτελείται
-μόνομετάbrowser-live freeze/σημειώσεις. Κανέναclaimπλήρουςsaveμέχριchecks.
-Επόμενο: sourcefreeze→savehelper/externalcopies→checkpointpush→
-τελικέςσημειώσεις/bookkeepingdelta+bundle/twofolders→targetedindependentclosure.
-ΠαλιάFirefoxfreeze/JSmol/externalfonts-dependencies παραμένουν γνωστά· δεν
-δηλώνεται offlineπακέτοήσυνεδριακήετοιμότητα. ΠροσωπικάGUI δεν πειράχτηκαν.
+Πλήρες snapshot 5.002 αρχείων, με React WIP, σώθηκε ως
+be7336801a836b1d272f8dfc57c556a1c667a51e στο χωριστό GitHub branch
+checkpoint/namelecule-20261109-081249. ZIP, πλήρες bundle και recovery ZIP
+ελέγχθηκαν με SHA/CRC/bundle verify και αντιγράφηκαν στα δύο καθιερωμένα σημεία:
+`../Αποθηκεύσεις/2026-11-09-081249` και Desktop `αρχεία  json/Namelecule_09-11-2026`.
+Περιλαμβάνονται 14 σενάρια/328 βήματα, χωριστός πιλότος, launcher 10 αρχείων,
+σημειώσεις και σύνδεσμος. Desktop9 ίδιο με active JSON SHA607a530a… . Τα παλιά
+αντίγραφα διατηρήθηκαν. Μεταγενέστερα συνοδευτικά έχουν χωριστό χρονικό όριο:
+delta ZIP και συμπληρωματικό bundle που προϋποθέτει το πλήρες αρχικό bundle.
+Ακριβή hashes/commits/αποδείξεις στο communication/checkpoints και στην τελική
+απόδειξη αποθήκευσης· δεν δηλώνεται ελεγμένο offline πακέτο συνεδρίου.
+
+Developer: έξι πραγματικές επισκευές/δύο gates, 23 μορφές2D×δύο viewports,
+οκτώ πραγματικά3D, root welcome/library/lesson και προηγούμενη React. Live:
+65 ακριβή HTTP/SHA και 10 αλληλεπιδράσεις. Η κονσόλα ΔΕΝ είναι καθαρή:
+3 γνωστά Analytics cookies, JSmolTracker XFO και4favicon404, χωρίς άλλη
+καταγεγραμμένη εξαίρεση εφαρμογής/runtime asset failure σε αυτή τη διαδρομή.
+Fresh Reviewer /root/review_save_publish_20261109: χωρίς P0/P1/P2/P3, με
+ανεξάρτητη εξέταση diff/hashes/ZIP5002/bundle/recovery219/δύο αντιγράφων.
+Browser και remote query είναι Developer evidence. Αρχικές αποτυχίες fixture/
+harness διατηρήθηκαν με σαφή διάκριση. Evidence και review.json στο
+`docs/checks/alkane-teacher-link-20261109T060243Z/`.
+
+Κανένα από τα10 core δεν άλλαξε από την αρχή της συνεδρίας Nov9. Καμία νέα
+χημεία/MOL/SDF ή αλλαγή βοηθού εκκίνησης. Προσωπικά/GUI Firefox ανέπαφα· owned
+headless καθαρίστηκαν. Το παλιό freeze παραμένει υπό διερεύνηση. Συνεδριακή
+πρόβα στο τελικό Mac/browser/projector και offline προετοιμασία Φεβρουαρίου
+παραμένουν χωριστές εργασίες. Επόμενο: ο χρήστης/καθηγητής δοκιμάζει τον δημόσιο
+σύνδεσμο και συνεχίζουμε το ραφινάρισμα του μαθήματος.
 
 # 2026-11-09 — Εγκεκριμένη πλήρης αποθήκευση και γενικός σύνδεσμος, σε εξέλιξη
 
