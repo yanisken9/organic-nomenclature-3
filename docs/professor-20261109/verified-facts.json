@@ -1,0 +1,93 @@
+{
+  "date": "2026-11-09",
+  "period": "New work after report5Nov through9Nov; earlier engine/gates/12steps described as retained context",
+  "runtime_commit": "98c22050de2cd81f36db734fe1556e3871c9f91b",
+  "snapshot_commit": "be7336801a836b1d272f8dfc57c556a1c667a51e",
+  "checkpoint_at_report_start": "2cad3d64ef8810c864f023edd88f6c17481ad883",
+  "active_scenario": "scenarios/alkanes-user-3.scenario.json",
+  "active_scenario_sha256": "607a530a2d3ba151026517c61d6f7a31644e15abf82a687e778b7453d80089b7",
+  "lesson_steps": 12,
+  "active_library_lessons": 14,
+  "active_library_steps": 328,
+  "existing_alkane_graphs": 8,
+  "forms2d": 23,
+  "framing_checks": {
+    "combinations": 23,
+    "viewports": 2,
+    "checks": 46
+  },
+  "existing_3d_models_checked": 8,
+  "actual_repairs_in_release_run": 6,
+  "public_http_sha": 65,
+  "live_interactions": 10,
+  "core54_sha256": "8f3e5f76d96322faf7cf9251f4cae3eca204fe2f82bf5754fdce6ffc4cd5d5a9",
+  "core52_sha256": "d2138418ff630ab77e578b80ca8ba3a10cc1b877c3ab8c0e5c2735ffcd1f24a2",
+  "new_core_changes": false,
+  "actual_upstream_sync": "f49b810c93ec85d06163679aff4a8642ea1b4cd3",
+  "last_checked_upstream": "bfa9ce034eb8569fcbde988f939069d33bc7020a",
+  "upstream_integration": "On user hold",
+  "snapshot_source_files": 5002,
+  "latest_saved_source_and_explicit_receipts_before_report": 5008,
+  "review_attribution": "Independent source/hash/archive/evidence review; browser and remote queries by Developer",
+  "progress_limit": "UI schema unchanged; content-modified scenario uses new content-keyed progress without migration",
+  "open_limits": [
+    "PriorFirefoxFreezeUnresolved",
+    "PriorJSmolRestoreExceptionNotClosed",
+    "3AnalyticsCookieErrors+1JSmolTrackerXFO+4favicon404 in live run",
+    "ExternalJSmolCDN/fonts dependencies",
+    "No offlineconferencecertification",
+    "No newgraphs/adaptive-difficulty engine"
+  ],
+  "sources": {
+    "docs/checks/alkanes-json9-library-20261108/final-verification.json": {
+      "sha256": "45b9ef80cdd1f1a3d02dfa5cc668c525152f5b003fb9596a69cca8d3f24d8211",
+      "url": "https://github.com/yanisken9/organic-nomenclature-3/blob/2cad3d64ef8810c864f023edd88f6c17481ad883/docs/checks/alkanes-json9-library-20261108/final-verification.json"
+    },
+    "docs/checks/alkane-step5-interaction-20261106/review.json": {
+      "sha256": "20aff21fe09d8670f677e82617ba42b7501cd2406b038341367e84e43131fee9",
+      "url": "https://github.com/yanisken9/organic-nomenclature-3/blob/2cad3d64ef8810c864f023edd88f6c17481ad883/docs/checks/alkane-step5-interaction-20261106/review.json"
+    },
+    "docs/checks/alkane-step7-numbering-20261108/final-verification.json": {
+      "sha256": "8326c120ff473aa9a92308483d813d0783cd12b56c91ce9fd83431a734a40d8d",
+      "url": "https://github.com/yanisken9/organic-nomenclature-3/blob/2cad3d64ef8810c864f023edd88f6c17481ad883/docs/checks/alkane-step7-numbering-20261108/final-verification.json"
+    },
+    "docs/checks/author-checkpoint-preview-20261107/review.json": {
+      "sha256": "8ca76d8536f86525035dd85c0a59130b4af4dd94fc9b0e65a61393f0588574a7",
+      "url": "https://github.com/yanisken9/organic-nomenclature-3/blob/2cad3d64ef8810c864f023edd88f6c17481ad883/docs/checks/author-checkpoint-preview-20261107/review.json"
+    },
+    "docs/checks/alkane-quiz-feedback-20261107/review.json": {
+      "sha256": "463139daebbdb7e444dfef1dfca4fd283034f460625e28008dbdaa1119052233",
+      "url": "https://github.com/yanisken9/organic-nomenclature-3/blob/2cad3d64ef8810c864f023edd88f6c17481ad883/docs/checks/alkane-quiz-feedback-20261107/review.json"
+    },
+    "docs/checks/workshop-reset-removal-20261107/final-verification.json": {
+      "sha256": "8fe96f950fc1f22431f163d1f881007aeacf48460df029c8aa8be4287e20fa3b",
+      "url": "https://github.com/yanisken9/organic-nomenclature-3/blob/2cad3d64ef8810c864f023edd88f6c17481ad883/docs/checks/workshop-reset-removal-20261107/final-verification.json"
+    },
+    "docs/checks/quiz-header-progress-20261108/review.json": {
+      "sha256": "44a4a8883d2de3a7e0062820d1367463e44747111d0aca1d4b01cc292bdb8288",
+      "url": "https://github.com/yanisken9/organic-nomenclature-3/blob/2cad3d64ef8810c864f023edd88f6c17481ad883/docs/checks/quiz-header-progress-20261108/review.json"
+    },
+    "docs/checks/quiz-round-scroll-20261109/final-verification.json": {
+      "sha256": "cec68f032e0875d14ee0e1fc3fd2f4e43b4aa976b57051a785586f413f416f3f",
+      "url": "https://github.com/yanisken9/organic-nomenclature-3/blob/2cad3d64ef8810c864f023edd88f6c17481ad883/docs/checks/quiz-round-scroll-20261109/final-verification.json"
+    },
+    "docs/checks/quiz-answer-scroll-20261109/review.json": {
+      "sha256": "a6c8ccdfa01806ae6e426d45bbd68c4351f9e623973d167ce88bc403f0b94578",
+      "url": "https://github.com/yanisken9/organic-nomenclature-3/blob/2cad3d64ef8810c864f023edd88f6c17481ad883/docs/checks/quiz-answer-scroll-20261109/review.json"
+    },
+    "docs/checks/alkane-teacher-link-20261109T060243Z/review.json": {
+      "sha256": "7a3b4ee566249e3ad81492612562cb02f91c420e44b627b8880f7e9a1a2b4ae4",
+      "url": "https://github.com/yanisken9/organic-nomenclature-3/blob/2cad3d64ef8810c864f023edd88f6c17481ad883/docs/checks/alkane-teacher-link-20261109T060243Z/review.json"
+    },
+    "docs/checks/alkane-teacher-link-20261109T060243Z/live-http.json": {
+      "sha256": "5014a12e00acbf6bf8bad009e6549c192d22a1d4432bcbdf69cc6a76c4f31960",
+      "url": "https://github.com/yanisken9/organic-nomenclature-3/blob/2cad3d64ef8810c864f023edd88f6c17481ad883/docs/checks/alkane-teacher-link-20261109T060243Z/live-http.json"
+    },
+    "docs/checks/alkane-teacher-link-20261109T060243Z/browser-live/verification-report.json": {
+      "sha256": "7b6c0bdad68c5795739701b1c3312aae62a13baec5fb0aaf1e7fc1c7f1ab2bba",
+      "url": "https://github.com/yanisken9/organic-nomenclature-3/blob/2cad3d64ef8810c864f023edd88f6c17481ad883/docs/checks/alkane-teacher-link-20261109T060243Z/browser-live/verification-report.json"
+    }
+  },
+  "report_cutoff": "Report created after the pinned application/checkpoint release; report publication/save have separate documentary receipts.",
+  "library_molecules": 141
+}
