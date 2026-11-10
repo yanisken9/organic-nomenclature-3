@@ -1,0 +1,43 @@
+{
+  "date": "2026-11-10T10:00:35.681006+00:00",
+  "reviewer": "/root/review_save_release_20261110",
+  "role": "NAMELECULE_REVIEWER_V1_20261023",
+  "target": "review-target-r2.json",
+  "targetSHA256": "0923d6d05696ce39deac8ebdedb458b300a1a8b8c6b00df80854debce5d316c4",
+  "base": "05de7640245830656abb74d01dfe0c5333b2c2e1",
+  "runtimeCommit": "c5d465190740de5d8f1c90b7ce791ff22250e39e",
+  "newOpenFindings": [],
+  "resolvedFindings": [
+    {
+      "id": "RSAVE-001",
+      "severity": "P2",
+      "resolution": "Added two missing chemistry evidence files; independently verified hashes/path/patterns; original target unchanged."
+    }
+  ],
+  "independentChecks": [
+    "26runtime exact source/candidate/commit",
+    "49protectedReact/v52exact",
+    "226dependency hashes",
+    "14lessons328steps/141source3D/dynamicgameassets",
+    "24report source refs exact/allHTMLlinks",
+    "sourceHEAD/index preserved/savehelperAST+scope"
+  ],
+  "developerEvidence": {
+    "path": "docs/checks/save-publish-20261110-114933/browser/local-browser.json",
+    "sha256": "49fb4fd77212ceab255f60d687e37c572296005bfb15b8793e1293fbc9cabbdf",
+    "checks": 30,
+    "capturedJSErrors": 0
+  },
+  "independentExecutionLimits": [
+    "Did not rerun browser or historical chemistry suites",
+    "Archive execution/copies/upload/Pages/live status require Developer verification",
+    "Behavioral read-only restriction, not enforced sandbox"
+  ],
+  "nonfunctionalCheckObservation": "git diff --check reports trailing whitespace in added upstream-v55files; not changed during save",
+  "existingIssues": [
+    "EXISTING-ESC-001P2",
+    "personalFirefoxhang",
+    "JSmoltransition",
+    "externalproviders/offline/conferenceuntested"
+  ]
+}

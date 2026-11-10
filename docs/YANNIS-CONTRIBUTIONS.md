@@ -1,3 +1,34 @@
+# 2026-11-10 — Full save, professor report and personal Pages publication
+
+Current save contribution: comprehensive Greek professor report fivefiles,
+reviewed curated26path release composition (pre-existing reviewed runtime),
+operational save/finalize helpers, SHA/CRC/bundle and twofolder recovery evidence,
+requested Desktop9JSON export, publication receipts and current documentation.
+Fullsnapshot51d3cc74/6092sourcefiles uploaded; initialreport1b23171/56HTTPexact;
+runtimec5d46519/276HTTP,30local/12live boundedchecks completed. Finalstatusdocument
+commitbdf6706 pushed, firstdeploymentfailed and retryqueued; final6status-only
+delivery not yet verified. Comprehensive report1b and runtimec5 are verifiedlive.
+Closingmetadata outcome has explicit receipts and its own cutoff. Final artifacts/commit/cutoffs are in save-publish-20261110-state.json,
+not retroactively included in original immutableZIP.
+
+Necessary save-only correction: Git staging normalized ignored CRLF ICS;
+byte-check aborted before commit/archive/push. Fresh disposable clone disables
+clean conversions via own info/attributes; active projectattrs unchanged.
+Actual four-case Git regression and independent targeted review recorded.
+
+No runtime/core newly edited in this save. Core55 earlier authored/integrated
+and reviewed is now published; exactfilename js/mulermoc-nom-core-55.js.
+Core54/52 andall11save-startcorehashes unchanged. Sourcebranch/HEAD/index kept.
+Fullcheckpoint includes ReactWIP/internalnotes; publicReact/v52 protected49exact.
+Fresh independentReviewer verified composition+reports+helpers and actual save
+artifact hashes/inventories, with executionattribution. RSAVE-001P2 closed;
+nonfunctional upstream-v55 trailingwhitespace preserved. Finalfactualstatus-only
+reportupdate checked by Developer with initialdelivery proof; no runtimeedit.
+KnownFirefox/JSmol/EscapeP2/external3D/conference/offline limits disclosed.
+Live diagnostics8cookie+2XFO andnetwork7favicon+2XFO+1init55abort retained.
+Lastprofessorsync5ab24955, checked3640eff6with4newcommits notyetintegrated.
+No message sent to professor. User forwards supplied report/link.
+
 # 2026-11-10 - Optional completed triple header finished locally
 
 ## 2026-11-10 — Full save, professor report and publication (in progress)

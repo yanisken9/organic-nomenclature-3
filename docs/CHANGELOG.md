@@ -1,5 +1,21 @@
 # Changelog
 
+## 2026-11-10 — Published reviewed v55 and workshop; full save
+
+Published runtime c5d465190740de5d8f1c90b7ce791ff22250e39e from a disposable
+clone. Preserve public React/v52; do not publish local React WIP. Quiz objectives,
+condensed large molecule, magnifier, standalone parity and unlimited optional
+triples are included, with readiness/focus-safe final header actions.
+276liveHTTP/SHA,30localchecks/sixactualrepairs,12boundedlivechecks passed.
+Live diagnostic events remain disclosed; this is not conference/offline certification.
+Fullsnapshot51d3cc746a33ed26e9012a3d2c6b2e914b22c3a0/6092sourcefiles,
+ZIP/bundle/226file recovery archive and2datedfolders verified. Later final report/
+receipts have explicit separate metadata cutoff, not retroactive ZIP inclusion.
+No core authored/edited in this save task; already-reviewed core55 is newly
+published. Last actually integrated5ab24955 vs last checked3640eff6 (4newcommits
+not included). [Report](professor-20261110/update.html),
+[save evidence](checks/save-publish-20261110-114933/save-verification.json).
+
 ## 2026-11-10 — Namelecule v55 integration (local activation recorded separately)
 
 Implemented the approved f49b810→5ab24955 integration (80 commits) in a separate

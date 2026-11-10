@@ -2,15 +2,25 @@
   "date": "2026-11-10",
   "period": "After the published 2026-11-09 report; includes the later v55 integration and independently reviewed 2026-11-10 quiz/workshop/navigation work.",
   "publication": {
-    "status": "runtime-commit-created-not-pushed",
+    "status": "runtime-and-report-delivery-verified",
     "runtime_commit": "c5d465190740de5d8f1c90b7ce791ff22250e39e",
-    "full_checkpoint": null,
-    "public_http_sha_report": null,
-    "backup_report": null,
-    "report_review": null,
-    "note": "Runtime commit exists in disposable clone. Push, Pages, public HTTP/SHA, exact full checkpoint commit and verified backup receipts remain pending.",
-    "runtime_commit_created_in": "Disposable release clone; not pushed or publicly verified at this report cutoff.",
-    "full_checkpoint_branch": "checkpoint/namelecule-20261110-114933"
+    "full_checkpoint": "51d3cc746a33ed26e9012a3d2c6b2e914b22c3a0",
+    "public_http_sha_report": "docs/checks/save-publish-20261110-114933/public-runtime-http.json",
+    "backup_report": "docs/checks/save-publish-20261110-114933/save-verification.json",
+    "report_review": "docs/checks/save-publish-20261110-114933/independent-review.json",
+    "note": "Runtime276HTTP/SHA and12bounded livechecks, plus initialreportrevision56HTTP/SHA verified. Final documentary status update and closing metadata have distinct hashes/cutoff; not retroactively part of original full archive.",
+    "runtime_commit_created_in": "Disposable release clone, normally pushed to thesis-work; live runtime verified.",
+    "full_checkpoint_branch": "checkpoint/namelecule-20261110-114933",
+    "runtime_pushed": true,
+    "runtime_branch": "thesis-work",
+    "full_checkpoint_pushed": true,
+    "public_http_sha_count": 276,
+    "save_review_addendum": "docs/checks/save-publish-20261110-114933/independent-save-addendum.json",
+    "report_delivery_verified": true,
+    "closing_metadata_delta_status": "pending; final report, later notes/live proof are not retroactively included in initial full archive",
+    "final_report_targeted_review": "docs/checks/save-publish-20261110-114933/independent-report-factual-addendum.json",
+    "report_delivery_verified_revision": "1b23171d15a36639e13cb5109dc4f440084e6247",
+    "report_delivery_proof": "docs/checks/save-publish-20261110-114933/public-report-http-initial.json"
   },
   "previous_public_runtime": "98c22050de2cd81f36db734fe1556e3871c9f91b",
   "upstream": {
@@ -162,122 +172,281 @@
     "docs/checks/v54-merge-20261109/final-report.json": {
       "sha256": "317007f67e757395b3d963eea394f7462e536693d6fcfb9a2f8fd67f58976cd8",
       "relative_url": "../checks/v54-merge-20261109/final-report.json",
-      "pinned_url": null
+      "pinned_url": "https://github.com/yanisken9/organic-nomenclature-3/blob/51d3cc746a33ed26e9012a3d2c6b2e914b22c3a0/docs/checks/v54-merge-20261109/final-report.json"
     },
     "docs/checks/v54-merge-20261109/review-result.json": {
       "sha256": "6145dabeb97813aba72185b292f724c311f0b7277b950b340dd03c5803459f4b",
       "relative_url": "../checks/v54-merge-20261109/review-result.json",
-      "pinned_url": null
+      "pinned_url": "https://github.com/yanisken9/organic-nomenclature-3/blob/51d3cc746a33ed26e9012a3d2c6b2e914b22c3a0/docs/checks/v54-merge-20261109/review-result.json"
     },
     "docs/checks/v54-merge-20261109/upstream-traceability.json": {
       "sha256": "3f73c398e18464f918720ee8efefd5f2e9e68395224ae15da39b1b1901f2ded4",
       "relative_url": "../checks/v54-merge-20261109/upstream-traceability.json",
-      "pinned_url": null
+      "pinned_url": "https://github.com/yanisken9/organic-nomenclature-3/blob/51d3cc746a33ed26e9012a3d2c6b2e914b22c3a0/docs/checks/v54-merge-20261109/upstream-traceability.json"
     },
     "docs/checks/v54-merge-20261109/chemistry-validation-final.json": {
       "sha256": "770408f22e17aca6fc33a4a1d7e2847824131fba24846e4ca8b3550f25adabed",
       "relative_url": "../checks/v54-merge-20261109/chemistry-validation-final.json",
-      "pinned_url": null
+      "pinned_url": "https://github.com/yanisken9/organic-nomenclature-3/blob/51d3cc746a33ed26e9012a3d2c6b2e914b22c3a0/docs/checks/v54-merge-20261109/chemistry-validation-final.json"
     },
     "docs/checks/v54-merge-20261109/chemistry-validation-rv55-03.json": {
       "sha256": "86a1478410d7d765d82b79baa5e9673d3ad09f916b9328f8234f76845e48c0d6",
       "relative_url": "../checks/v54-merge-20261109/chemistry-validation-rv55-03.json",
-      "pinned_url": null
+      "pinned_url": "https://github.com/yanisken9/organic-nomenclature-3/blob/51d3cc746a33ed26e9012a3d2c6b2e914b22c3a0/docs/checks/v54-merge-20261109/chemistry-validation-rv55-03.json"
     },
     "docs/checks/alkane-quiz-presentation-20261110/final-report.json": {
       "sha256": "46382086017d078fc258753645b1c68664555143ab6a835dbdc5451843b0089f",
       "relative_url": "../checks/alkane-quiz-presentation-20261110/final-report.json",
-      "pinned_url": null
+      "pinned_url": "https://github.com/yanisken9/organic-nomenclature-3/blob/51d3cc746a33ed26e9012a3d2c6b2e914b22c3a0/docs/checks/alkane-quiz-presentation-20261110/final-report.json"
     },
     "docs/checks/alkane-quiz-presentation-20261110/independent-review.json": {
       "sha256": "bd47acee78ebbd895eab003c925356a7a9063609c8a3e670f9748740920d9357",
       "relative_url": "../checks/alkane-quiz-presentation-20261110/independent-review.json",
-      "pinned_url": null
+      "pinned_url": "https://github.com/yanisken9/organic-nomenclature-3/blob/51d3cc746a33ed26e9012a3d2c6b2e914b22c3a0/docs/checks/alkane-quiz-presentation-20261110/independent-review.json"
     },
     "docs/checks/quiz-zoom-icon-20261110/final-report.json": {
       "sha256": "631622195703d03a212170f3aeaf2484ca38c6fed2f0952846f37dd76c45f6c5",
       "relative_url": "../checks/quiz-zoom-icon-20261110/final-report.json",
-      "pinned_url": null
+      "pinned_url": "https://github.com/yanisken9/organic-nomenclature-3/blob/51d3cc746a33ed26e9012a3d2c6b2e914b22c3a0/docs/checks/quiz-zoom-icon-20261110/final-report.json"
     },
     "docs/checks/quiz-zoom-icon-20261110/independent-review.json": {
       "sha256": "5da9a9ee12f24f924db4316ceee96a743f03d2b8279859960549d67769df9357",
       "relative_url": "../checks/quiz-zoom-icon-20261110/independent-review.json",
-      "pinned_url": null
+      "pinned_url": "https://github.com/yanisken9/organic-nomenclature-3/blob/51d3cc746a33ed26e9012a3d2c6b2e914b22c3a0/docs/checks/quiz-zoom-icon-20261110/independent-review.json"
     },
     "docs/checks/workshop-lesson-parity-20261110/final-report.json": {
       "sha256": "143d052867bf543d8eaff0fc45b2fdd615502e9a97f918d5c3d5c699048fd752",
       "relative_url": "../checks/workshop-lesson-parity-20261110/final-report.json",
-      "pinned_url": null
+      "pinned_url": "https://github.com/yanisken9/organic-nomenclature-3/blob/51d3cc746a33ed26e9012a3d2c6b2e914b22c3a0/docs/checks/workshop-lesson-parity-20261110/final-report.json"
     },
     "docs/checks/workshop-lesson-parity-20261110/independent-review.json": {
       "sha256": "f3c8a544d3020f673b5e9c1a4c8ca098dbb0c9f8cd7f21f2406fa445712857ef",
       "relative_url": "../checks/workshop-lesson-parity-20261110/independent-review.json",
-      "pinned_url": null
+      "pinned_url": "https://github.com/yanisken9/organic-nomenclature-3/blob/51d3cc746a33ed26e9012a3d2c6b2e914b22c3a0/docs/checks/workshop-lesson-parity-20261110/independent-review.json"
     },
     "docs/checks/lesson-optional-triples-20261110/final-report.json": {
       "sha256": "d95cb3f1ee0af5a48e05be1be45f5ed5217680871068b3fc17b1ce0bb0d153c5",
       "relative_url": "../checks/lesson-optional-triples-20261110/final-report.json",
-      "pinned_url": null
+      "pinned_url": "https://github.com/yanisken9/organic-nomenclature-3/blob/51d3cc746a33ed26e9012a3d2c6b2e914b22c3a0/docs/checks/lesson-optional-triples-20261110/final-report.json"
     },
     "docs/checks/lesson-optional-triples-20261110/independent-review.json": {
       "sha256": "7f0f2915fe2ff8eb6faa3f4d815f8daa1e9563571c1f79383a8c0da217ae8f1a",
       "relative_url": "../checks/lesson-optional-triples-20261110/independent-review.json",
-      "pinned_url": null
+      "pinned_url": "https://github.com/yanisken9/organic-nomenclature-3/blob/51d3cc746a33ed26e9012a3d2c6b2e914b22c3a0/docs/checks/lesson-optional-triples-20261110/independent-review.json"
     },
     "docs/checks/practice-navigation-20261110/final-report.json": {
       "sha256": "57f168e564a03962752f9762e4a9b006d24314a805010df3e76093142e392844",
       "relative_url": "../checks/practice-navigation-20261110/final-report.json",
-      "pinned_url": null
+      "pinned_url": "https://github.com/yanisken9/organic-nomenclature-3/blob/51d3cc746a33ed26e9012a3d2c6b2e914b22c3a0/docs/checks/practice-navigation-20261110/final-report.json"
     },
     "docs/checks/practice-navigation-20261110/independent-review.json": {
       "sha256": "da9a5aed8028d86691751f0f99ba7a59fe62fe93fbeccc31b8790b9e597f428b",
       "relative_url": "../checks/practice-navigation-20261110/independent-review.json",
-      "pinned_url": null
+      "pinned_url": "https://github.com/yanisken9/organic-nomenclature-3/blob/51d3cc746a33ed26e9012a3d2c6b2e914b22c3a0/docs/checks/practice-navigation-20261110/independent-review.json"
     },
     "docs/checks/required-completion-navigation-20261110/final-report.json": {
       "sha256": "f69108426761b15491718bed5192d216f8cdf0e329901f4651e2cb7c7abc01ad",
       "relative_url": "../checks/required-completion-navigation-20261110/final-report.json",
-      "pinned_url": null
+      "pinned_url": "https://github.com/yanisken9/organic-nomenclature-3/blob/51d3cc746a33ed26e9012a3d2c6b2e914b22c3a0/docs/checks/required-completion-navigation-20261110/final-report.json"
     },
     "docs/checks/required-completion-navigation-20261110/independent-review-r2.json": {
       "sha256": "922e8cc30ac74d929b7a3e2ddfe558bad1eb3ef3d6167020b73e19a92c89e83f",
       "relative_url": "../checks/required-completion-navigation-20261110/independent-review-r2.json",
-      "pinned_url": null
+      "pinned_url": "https://github.com/yanisken9/organic-nomenclature-3/blob/51d3cc746a33ed26e9012a3d2c6b2e914b22c3a0/docs/checks/required-completion-navigation-20261110/independent-review-r2.json"
     },
     "docs/checks/required-completion-navigation-20261110/pre-existing-keyboard-issue.json": {
       "sha256": "05ea9eabe717f5d06f68c04cd638844205b1dd9532fbc2af2df3e0120e4299f3",
       "relative_url": "../checks/required-completion-navigation-20261110/pre-existing-keyboard-issue.json",
-      "pinned_url": null
+      "pinned_url": "https://github.com/yanisken9/organic-nomenclature-3/blob/51d3cc746a33ed26e9012a3d2c6b2e914b22c3a0/docs/checks/required-completion-navigation-20261110/pre-existing-keyboard-issue.json"
     },
     "docs/checks/optional-completion-navigation-20261110/final-report.json": {
       "sha256": "a30e9c300f22fc3eee5cb0c4c9ceb3bd98f236f63ba772c9587c9b4bb19827a3",
       "relative_url": "../checks/optional-completion-navigation-20261110/final-report.json",
-      "pinned_url": null
+      "pinned_url": "https://github.com/yanisken9/organic-nomenclature-3/blob/51d3cc746a33ed26e9012a3d2c6b2e914b22c3a0/docs/checks/optional-completion-navigation-20261110/final-report.json"
     },
     "docs/checks/optional-completion-navigation-20261110/independent-review.json": {
       "sha256": "de7cb90033b8ae7da829bef96ddf66d71db33a4eaead12362850b0d1c9d557db",
       "relative_url": "../checks/optional-completion-navigation-20261110/independent-review.json",
-      "pinned_url": null
+      "pinned_url": "https://github.com/yanisken9/organic-nomenclature-3/blob/51d3cc746a33ed26e9012a3d2c6b2e914b22c3a0/docs/checks/optional-completion-navigation-20261110/independent-review.json"
     },
     "docs/checks/firefox-hang-20261110/diagnostic-report.json": {
       "sha256": "d4f21ee9483b942bcfa72966eb2cbb4f94bff654225bcfd4d1474a86b5b0ba1b",
       "relative_url": "../checks/firefox-hang-20261110/diagnostic-report.json",
-      "pinned_url": null
+      "pinned_url": "https://github.com/yanisken9/organic-nomenclature-3/blob/51d3cc746a33ed26e9012a3d2c6b2e914b22c3a0/docs/checks/firefox-hang-20261110/diagnostic-report.json"
     },
     "docs/checks/firefox-hang-20261110/independent-review.json": {
       "sha256": "3ff261f385c5273b54d1f7cf5bd4d9e0cb6239b6e4df04d999fdd3d244f8ec76",
       "relative_url": "../checks/firefox-hang-20261110/independent-review.json",
-      "pinned_url": null
+      "pinned_url": "https://github.com/yanisken9/organic-nomenclature-3/blob/51d3cc746a33ed26e9012a3d2c6b2e914b22c3a0/docs/checks/firefox-hang-20261110/independent-review.json"
     },
     "docs/checks/firefox-hang-20261110/user-fullscreen-followup.json": {
       "sha256": "4be7a62f2fe3eb24e2ed89f4a6d37a82931b112f34d4348a1f56bf8983eac3ce",
       "relative_url": "../checks/firefox-hang-20261110/user-fullscreen-followup.json",
-      "pinned_url": null
+      "pinned_url": "https://github.com/yanisken9/organic-nomenclature-3/blob/51d3cc746a33ed26e9012a3d2c6b2e914b22c3a0/docs/checks/firefox-hang-20261110/user-fullscreen-followup.json"
     },
     "docs/checks/save-publish-20261110-114933/upstream-audit.json": {
       "sha256": "43e783ca3489da1c1fe90f6b31d1cbdaaf4365f1e07ca68e33593ddb2c1f2354",
       "relative_url": "../checks/save-publish-20261110-114933/upstream-audit.json",
-      "pinned_url": null
+      "pinned_url": "https://github.com/yanisken9/organic-nomenclature-3/blob/51d3cc746a33ed26e9012a3d2c6b2e914b22c3a0/docs/checks/save-publish-20261110-114933/upstream-audit.json"
+    },
+    "docs/checks/save-publish-20261110-114933/public-runtime-http.json": {
+      "sha256": "4cb872c74ac1951aee2ef2f8a19f067b2ef336a1e053c6ba467b5d30a175a2dd",
+      "relative_url": "../checks/save-publish-20261110-114933/public-runtime-http.json",
+      "pinned_url": null,
+      "branch_url": "https://github.com/yanisken9/organic-nomenclature-3/blob/checkpoint/namelecule-20261110-114933/docs/checks/save-publish-20261110-114933/public-runtime-http.json",
+      "pin_note": "Later receipt absent/different at initial full snapshot; moving checkpoint branch link, not immutable snapshot evidence."
+    },
+    "docs/checks/save-publish-20261110-114933/save-verification.json": {
+      "sha256": "5f399976202cc9890ce309d0f2627eb54bcc0bea17f544a62c5c16304b069980",
+      "relative_url": "../checks/save-publish-20261110-114933/save-verification.json",
+      "pinned_url": null,
+      "branch_url": "https://github.com/yanisken9/organic-nomenclature-3/blob/checkpoint/namelecule-20261110-114933/docs/checks/save-publish-20261110-114933/save-verification.json",
+      "pin_note": "Later receipt absent/different at initial full snapshot; moving checkpoint branch link, not immutable snapshot evidence."
+    },
+    "docs/checks/save-publish-20261110-114933/independent-review.json": {
+      "sha256": "fbf1158e38fa7c910ba6e4c0e0f750bc3126917498afe1fa07eab8eff6452643",
+      "relative_url": "../checks/save-publish-20261110-114933/independent-review.json",
+      "pinned_url": null,
+      "branch_url": "https://github.com/yanisken9/organic-nomenclature-3/blob/checkpoint/namelecule-20261110-114933/docs/checks/save-publish-20261110-114933/independent-review.json",
+      "pin_note": "Later receipt absent/different at initial full snapshot; moving checkpoint branch link, not immutable snapshot evidence."
+    },
+    "docs/checks/save-publish-20261110-114933/independent-save-addendum.json": {
+      "sha256": "afd09f645e7b8feb0a5feba641cb8050b01a6c15764d38a7a80c2c00bba64d29",
+      "relative_url": "../checks/save-publish-20261110-114933/independent-save-addendum.json",
+      "pinned_url": null,
+      "branch_url": "https://github.com/yanisken9/organic-nomenclature-3/blob/checkpoint/namelecule-20261110-114933/docs/checks/save-publish-20261110-114933/independent-save-addendum.json",
+      "pin_note": "Later receipt absent/different at initial full snapshot; moving checkpoint branch link, not immutable snapshot evidence."
+    },
+    "docs/checks/save-publish-20261110-114933/browser/local-browser.json": {
+      "sha256": "49fb4fd77212ceab255f60d687e37c572296005bfb15b8793e1293fbc9cabbdf",
+      "relative_url": "../checks/save-publish-20261110-114933/browser/local-browser.json",
+      "pinned_url": "https://github.com/yanisken9/organic-nomenclature-3/blob/51d3cc746a33ed26e9012a3d2c6b2e914b22c3a0/docs/checks/save-publish-20261110-114933/browser/local-browser.json"
+    },
+    "docs/checks/save-publish-20261110-114933/browser/live/live-browser.json": {
+      "sha256": "7c644ca79be8ddd87f5653056bc943ccac0da9d9605a874917af88cd879644d3",
+      "relative_url": "../checks/save-publish-20261110-114933/browser/live/live-browser.json",
+      "pinned_url": null,
+      "branch_url": "https://github.com/yanisken9/organic-nomenclature-3/blob/checkpoint/namelecule-20261110-114933/docs/checks/save-publish-20261110-114933/browser/live/live-browser.json",
+      "pin_note": "Live evidence postdates initial full snapshot; moving checkpoint branch link, not immutable snapshot evidence."
+    },
+    "docs/checks/save-publish-20261110-114933/browser/live/summary.json": {
+      "sha256": "ee4b1290cb35e5f871423b818fb878779a25a9e906c6aff24c04592109c301e9",
+      "relative_url": "../checks/save-publish-20261110-114933/browser/live/summary.json",
+      "pinned_url": null,
+      "branch_url": "https://github.com/yanisken9/organic-nomenclature-3/blob/checkpoint/namelecule-20261110-114933/docs/checks/save-publish-20261110-114933/browser/live/summary.json",
+      "pin_note": "Live evidence postdates initial full snapshot; moving checkpoint branch link, not immutable snapshot evidence."
+    },
+    "docs/checks/save-publish-20261110-114933/public-report-http-initial.json": {
+      "sha256": "8bd00472b4c49f1621fde0046fced90f08296d95b3897d13b63ed42930d1d74e",
+      "relative_url": "../checks/save-publish-20261110-114933/public-report-http-initial.json",
+      "pinned_url": "https://github.com/yanisken9/organic-nomenclature-3/blob/checkpoint/namelecule-20261110-114933/docs/checks/save-publish-20261110-114933/public-report-http-initial.json",
+      "pin_status": "Later proof; moving checkpoint branch, separate from original snapshot cutoff."
+    },
+    "docs/checks/save-publish-20261110-114933/independent-report-factual-addendum.json": {
+      "sha256": "48fcc00f3ed3ece450c36e112b43bc409e10595eff5246947adde3a91e74a099",
+      "relative_url": "../checks/save-publish-20261110-114933/independent-report-factual-addendum.json",
+      "pinned_url": "https://github.com/yanisken9/organic-nomenclature-3/blob/checkpoint/namelecule-20261110-114933/docs/checks/save-publish-20261110-114933/independent-report-factual-addendum.json",
+      "pin_status": "Later proof; moving checkpoint branch, separate from original snapshot cutoff."
+    }
+  },
+  "full_save": {
+    "snapshot_commit": "51d3cc746a33ed26e9012a3d2c6b2e914b22c3a0",
+    "source_files": 6092,
+    "cutoff_utc": "2026-11-10T09:58:20.038566+00:00",
+    "source_zip": "6092 source files plus manifest",
+    "recovery_zip": "226 recovery files plus manifest",
+    "archives": {
+      "communication/checkpoints/Namelecule-20261110-114933-full.zip": "848ee874737d4b8545438871594772254b1d5e637a9038e9723afc65906ac010",
+      "communication/checkpoints/Namelecule-20261110-114933-full.bundle": "b5bfc375e4782fa08a9811631fc83b607b45555466681e567093980d54e9574c",
+      "communication/checkpoints/Namelecule-20261110-114933-full-recovery.zip": "f6fbae57367eb3bd92a019009211203430e84735dfc906744566ad0f23185e30"
+    },
+    "zip_sha_crc_content_verified": true,
+    "bundle_verified": true,
+    "external_folders": {
+      "/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/Αποθηκεύσεις/2026-11-10-114933": {
+        "manifest_files": 44,
+        "separate_save_receipt": 1,
+        "physical_files": 45,
+        "all_sha256_verified": true
+      },
+      "/Users/yannisskendros/Desktop/αρχεία  json/Namelecule_10-11-2026": {
+        "manifest_files": 44,
+        "separate_save_receipt": 1,
+        "physical_files": 45,
+        "all_sha256_verified": true
+      }
+    },
+    "same_physical_computer": true,
+    "desktop_current_scenario_export": {
+      "source": "/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/scenarios/alkanes-user-3.scenario.json",
+      "destination": "/Users/yannisskendros/Desktop/αρχεία  json/9Αλκάνια.json",
+      "sha256": "607a530a2d3ba151026517c61d6f7a31644e15abf82a687e778b7453d80089b7",
+      "previousSHA256": "607a530a2d3ba151026517c61d6f7a31644e15abf82a687e778b7453d80089b7",
+      "backupIfDifferent": null,
+      "identicalBytesVerified": true
+    },
+    "later_material": "Final report/notes/live proof await explicit closing metadata delta and incremental bundle; initial ZIP has earlier report draft."
+  },
+  "release_checks": {
+    "local_browser_report": "docs/checks/save-publish-20261110-114933/browser/local-browser.json",
+    "local_checks": 30,
+    "local_actual_repairs": 6,
+    "local_captured_js_errors": 0,
+    "local_scope": [
+      "Owned isolated headlessFirefox desktop1280x800 only; no personalFirefox or intended conference machine tested.",
+      "Supported MULER_QUIET_FETCH suppresses irrelevant naming fetches; external naming availability and Internet-independent operation untested.",
+      "Bounded release replay; no full molecule/mode/lesson matrix or new chemistry certification.",
+      "Local smoke earns one required and one optional set via actual inputs. Live smoke is intentionally shorter."
+    ],
+    "runtime_exact_files": 26,
+    "public_http_sha_checks": 276,
+    "public_http_scope": "HTTP200+exactSHA currentruntime and226dependency union and49protectedReact/v52; not browser or externalservice certification.",
+    "live_browser_status": "completed bounded public replay12checks; no live earned repairs",
+    "consolidated_review": {
+      "reviewer": "/root/review_save_release_20261110",
+      "resolved": "RSAVE-001 P2 missing two chemistry evidence files",
+      "new_open_findings": [],
+      "save_addendum": "Archive hashes/6092source+226recovery/snapshot/copies independently verified; Developer supplies CRC, bundle connectivity, remote push."
+    },
+    "live_browser_report": "docs/checks/save-publish-20261110-114933/browser/live/live-browser.json",
+    "live_summary": "docs/checks/save-publish-20261110-114933/browser/live/summary.json",
+    "live_checks": 12,
+    "live_actual_repairs": 0,
+    "live_js_diagnostic_entries": 10,
+    "live_js_categories": {
+      "cookie-invalid-domain": 8,
+      "JmolTracker-XFrameOptions": 2
+    },
+    "live_network_responses": 181,
+    "live_network_failure_events": 10,
+    "live_network_failure_categories": {
+      "root_favicon404": 7,
+      "tracker_XFO": 2,
+      "spt_init55_NS_BINDING_ABORTED": 1
+    },
+    "live_network_abort_cause": "Undiagnosed; checked flow passed.",
+    "live_no_network_interception": true,
+    "live_quiet_fetch": "Supported naming calls only",
+    "live_scope": "Actual welcome3entries / Main55 141molecules422forms / methane5atomsource3D /14lessonlibrary / normal12stepalkane / gate4 / realrequiredquiz1of3 / Returnstilllocked / Exitlibrary / directauthoredWorkshopobjective andzoomEscape. No liveearnedrepair; localearned6.",
+    "owned_live_cleanup": {
+      "actions": [
+        {
+          "pid": 91594,
+          "signal": "TERM",
+          "matched": "/var/folders/2v/ds4vjvgj1_1000kq1fzg70q40000gn/T/namelecule-release-live-20261110-csx2qlhe"
+        },
+        {
+          "pid": 91593,
+          "signal": null,
+          "reason": "not running or exact ownership guard failed"
+        }
+      ],
+      "ports": {
+        "http": "refused",
+        "bidi": "refused",
+        "profileRemoved": true
+      },
+      "utc": "2026-11-10T10:03:59Z"
     }
   }
 }

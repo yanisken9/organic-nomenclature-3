@@ -1,0 +1,97 @@
+{
+  "checkedUTC": "2026-11-10T10:13:41.832232+00:00",
+  "run": 42796811941,
+  "jobs": [
+    {
+      "job": "build",
+      "status": "completed",
+      "conclusion": "success",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-10T10:10:05Z",
+          "completed_at": "2026-11-10T10:10:06Z"
+        },
+        {
+          "name": "Checkout",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-10T10:10:06Z",
+          "completed_at": "2026-11-10T10:10:10Z"
+        },
+        {
+          "name": "Upload artifact",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-10T10:10:10Z",
+          "completed_at": "2026-11-10T10:10:18Z"
+        },
+        {
+          "name": "Post Checkout",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-10T10:10:18Z",
+          "completed_at": "2026-11-10T10:10:18Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-10T10:10:18Z",
+          "completed_at": "2026-11-10T10:10:18Z"
+        }
+      ]
+    },
+    {
+      "job": "report-build-status",
+      "status": "completed",
+      "conclusion": "success",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-10T10:10:23Z",
+          "completed_at": "2026-11-10T10:10:23Z"
+        },
+        {
+          "name": "Report Build Status",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-10T10:10:24Z",
+          "completed_at": "2026-11-10T10:10:25Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-10T10:10:25Z",
+          "completed_at": "2026-11-10T10:10:25Z"
+        }
+      ]
+    },
+    {
+      "job": "deploy",
+      "status": "in_progress",
+      "conclusion": null,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-10T10:10:26Z",
+          "completed_at": "2026-11-10T10:10:27Z"
+        },
+        {
+          "name": "Deploy to GitHub Pages",
+          "status": "in_progress",
+          "conclusion": null,
+          "started_at": "2026-11-10T10:10:27Z",
+          "completed_at": null
+        }
+      ]
+    }
+  ]
+}

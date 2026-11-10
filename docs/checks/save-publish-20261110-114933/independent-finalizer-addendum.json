@@ -1,0 +1,21 @@
+{
+  "reviewer": "/root/review_save_release_20261110",
+  "role": "NAMELECULE_REVIEWER_V1_20261023",
+  "date": "2026-11-10T10:05:51.618401+00:00",
+  "target": "communication/checkpoints/finalize-save-20261110.py",
+  "sha256": "e3cca038a79c692aa3d3b05691a65384a567c77061e707ca43d333ca8b3dafa5",
+  "openFindings": [],
+  "checks": [
+    "AST/read-onlyscopereview",
+    "union source+nonarchivecommunication",
+    "validateddisposablecloneandruntimeinvariants",
+    "deltafulltree/deletions/cutoff",
+    "incrementalbundle explicitbase",
+    "exclusivearchives/SHAfoldercopies",
+    "closingreceiptaftercutoff"
+  ],
+  "limits": [
+    "ActualexecutionpendingreportLiveVerified",
+    "Noindependentarchiveexecution"
+  ]
+}
