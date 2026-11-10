@@ -1,3 +1,40 @@
+# Current resume point — 2026-11-10 12:24 UTC — Pages delivery recovered
+
+User supplied the failed Pages email for run42796811941. Its build succeeded;
+deploy failed with annotation "Timeout reached, aborting!". No underlying cause
+or global GitHub outage established. Existing app/report were already available.
+The earlier failed-job retry remained queued for two hours. Normal and force
+cancel both409 ("Cannot cancel a workflow re-run that has not yet queued");
+full rerun403 (already running). Old run is NOT claimed cancelled.
+
+One official POST /pages/builds201 started new run42815292226 for unchanged
+thesis-work bdf670685e32ea599ef05fb066aadf4920090e2f. All3jobs succeeded;
+deploy completed12:24:04UTC. All6 later status/proof files and welcome return
+HTTP200 with exact bdf blob SHA-256. This resolves the pending final-document
+delivery in the earlier save receipt, without changing app/configuration.
+Authoritative subsequent status: communication/checkpoints/
+Namelecule-20261110-pages-delivery-resolution.json; evidence in
+ docs/checks/pages-notification-20261110T121638Z/. Earlier archives/receipts retain
+their cutoffs. New follow-up archival result, if completed, is recorded separately.
+
+All11cores/all26runtime paths and sourceHEAD/index equal notification-start
+baseline. No core changed this session; core55 was already published before it.
+No new app/browser tests warranted for the operational retry. Existing Firefox,
+JSmol, EscapeP2, external-provider and conference/offline limits remain.
+Independent Reviewer /root/review_save_release_20261110 verified the six-file
+document-only bdf delta and previous save artifacts; final operational evidence
+completed its bounded follow-up with no new actionable finding. Reviewer locally
+verified7evidence hashes, the6file delta and7expected Git blobs. Live HTTP/API
+proof is Developer evidence; independent network reads failed DNS in Reviewer
+environment. Exact attribution: independent-review.json. Follow-up persistence
+is recorded in communication/checkpoints/Namelecule-20261110-pages-resolution-save-receipt.json.
+
+Fresh professor HEAD/history/CHANGELOG checked12:17UTC: priorchecked3640eff6 ->
+015b15d6723d8eb041223ec722956a38555bed4c,11new commits (15since actualsync5ab24955).
+Viewer/scenario/presentation overlaps; no upstream code integrated in this
+notification task. Next functional step: separate bounded integration assessment.
+Application/report links are unchanged. Personal Firefox untouched.
+
 # Final save closure - 2026-11-10
 
 Metadata checkpoint 30e022adaf4ca5ba633689e6a9606f3133437e24 verified/pushed:6355exact stagedfiles,272deltafiles;

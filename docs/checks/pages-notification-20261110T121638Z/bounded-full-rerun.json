@@ -1,0 +1,24 @@
+{
+  "time": "2026-11-10T12:22:42.749007+00:00",
+  "assertedHead": "bdf670685e32ea599ef05fb066aadf4920090e2f",
+  "events": [
+    {
+      "operation": "force-cancel-known-stale-rerun",
+      "http": 409,
+      "message": "Cannot cancel a workflow re-run that has not yet queued."
+    },
+    {
+      "operation": "rerun-complete-same-commit",
+      "http": 403,
+      "message": "This workflow is already running"
+    }
+  ],
+  "after": {
+    "http": 200,
+    "status": "queued",
+    "conclusion": null,
+    "run_attempt": 1,
+    "head_sha": "bdf670685e32ea599ef05fb066aadf4920090e2f",
+    "updated_at": "2026-11-10T10:22:03Z"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "checkedUTC": "2026-11-10T12:24:01.032759+00:00",
+  "commit": "bdf670685e32ea599ef05fb066aadf4920090e2f",
+  "checks": [
+    {
+      "path": "docs/checks/save-publish-20261110-114933/independent-report-factual-addendum.json",
+      "http": 200,
+      "expectedSHA256": "48fcc00f3ed3ece450c36e112b43bc409e10595eff5246947adde3a91e74a099",
+      "actualSHA256": "48fcc00f3ed3ece450c36e112b43bc409e10595eff5246947adde3a91e74a099",
+      "match": true
+    },
+    {
+      "path": "docs/checks/save-publish-20261110-114933/public-report-http-initial.json",
+      "http": 200,
+      "expectedSHA256": "8bd00472b4c49f1621fde0046fced90f08296d95b3897d13b63ed42930d1d74e",
+      "actualSHA256": "8bd00472b4c49f1621fde0046fced90f08296d95b3897d13b63ed42930d1d74e",
+      "match": true
+    },
+    {
+      "path": "docs/professor-20261110/links.json",
+      "http": 200,
+      "expectedSHA256": "dfe8680ba5fc9a3436fa0c0e56a37a673637ae04f9a591f0302a9ea7de8bd7c5",
+      "actualSHA256": "dfe8680ba5fc9a3436fa0c0e56a37a673637ae04f9a591f0302a9ea7de8bd7c5",
+      "match": true
+    },
+    {
+      "path": "docs/professor-20261110/links.txt",
+      "http": 200,
+      "expectedSHA256": "aa1d3d89584ca91f2902da1a23de31e6a0c0a434f1041eb81e0c669952d5a127",
+      "actualSHA256": "aa1d3d89584ca91f2902da1a23de31e6a0c0a434f1041eb81e0c669952d5a127",
+      "match": true
+    },
+    {
+      "path": "docs/professor-20261110/update.html",
+      "http": 200,
+      "expectedSHA256": "cad227ee6a4bf5ee3cf4bbddfce76a5237be8444175798e121466f7aa7e6a518",
+      "actualSHA256": "cad227ee6a4bf5ee3cf4bbddfce76a5237be8444175798e121466f7aa7e6a518",
+      "match": true
+    },
+    {
+      "path": "docs/professor-20261110/verified-facts.json",
+      "http": 200,
+      "expectedSHA256": "3bedcb5dcbb272a34c8dc45ef871e863989c7ad1b51fef4b9c960a82063e12a3",
+      "actualSHA256": "3bedcb5dcbb272a34c8dc45ef871e863989c7ad1b51fef4b9c960a82063e12a3",
+      "match": true
+    },
+    {
+      "path": "design/welcome-proposal.html",
+      "http": 200,
+      "expectedSHA256": "bf51e87ad962ac930fe926f0b2d7bb08cb9e2ba7dfff13dfc96734e74bfad9b5",
+      "actualSHA256": "bf51e87ad962ac930fe926f0b2d7bb08cb9e2ba7dfff13dfc96734e74bfad9b5",
+      "match": true
+    }
+  ],
+  "allExact": true
+}
