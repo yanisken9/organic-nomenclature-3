@@ -2,13 +2,13 @@
   "date": "2026-11-10",
   "period": "After the published 2026-11-09 report; includes the later v55 integration and independently reviewed 2026-11-10 quiz/workshop/navigation work.",
   "publication": {
-    "status": "runtime-live-http-sha-verified-report-delivery-pending",
+    "status": "runtime-and-report-delivery-verified",
     "runtime_commit": "c5d465190740de5d8f1c90b7ce791ff22250e39e",
     "full_checkpoint": "51d3cc746a33ed26e9012a3d2c6b2e914b22c3a0",
     "public_http_sha_report": "docs/checks/save-publish-20261110-114933/public-runtime-http.json",
     "backup_report": "docs/checks/save-publish-20261110-114933/save-verification.json",
     "report_review": "docs/checks/save-publish-20261110-114933/independent-review.json",
-    "note": "Runtime published,276HTTP/SHA and12bounded live checks passed with disclosed diagnostics. Original full snapshot/archives/external copies verified. Final report delivery/closing-delta evidence has separate cutoff.",
+    "note": "Runtime276HTTP/SHA and12bounded livechecks, plus initialreportrevision56HTTP/SHA verified. Final documentary status update and closing metadata have distinct hashes/cutoff; not retroactively part of original full archive.",
     "runtime_commit_created_in": "Disposable release clone, normally pushed to thesis-work; live runtime verified.",
     "full_checkpoint_branch": "checkpoint/namelecule-20261110-114933",
     "runtime_pushed": true,
@@ -16,9 +16,11 @@
     "full_checkpoint_pushed": true,
     "public_http_sha_count": 276,
     "save_review_addendum": "docs/checks/save-publish-20261110-114933/independent-save-addendum.json",
-    "report_delivery_verified": false,
+    "report_delivery_verified": true,
     "closing_metadata_delta_status": "pending; final report, later notes/live proof are not retroactively included in initial full archive",
-    "final_report_targeted_review": "pending at current factual cutoff; earlier consolidated release and save review remain recorded"
+    "final_report_targeted_review": "docs/checks/save-publish-20261110-114933/independent-report-factual-addendum.json",
+    "report_delivery_verified_revision": "1b23171d15a36639e13cb5109dc4f440084e6247",
+    "report_delivery_proof": "docs/checks/save-publish-20261110-114933/public-report-http-initial.json"
   },
   "previous_public_runtime": "98c22050de2cd81f36db734fe1556e3871c9f91b",
   "upstream": {
@@ -333,6 +335,18 @@
       "pinned_url": null,
       "branch_url": "https://github.com/yanisken9/organic-nomenclature-3/blob/checkpoint/namelecule-20261110-114933/docs/checks/save-publish-20261110-114933/browser/live/summary.json",
       "pin_note": "Live evidence postdates initial full snapshot; moving checkpoint branch link, not immutable snapshot evidence."
+    },
+    "docs/checks/save-publish-20261110-114933/public-report-http-initial.json": {
+      "sha256": "8bd00472b4c49f1621fde0046fced90f08296d95b3897d13b63ed42930d1d74e",
+      "relative_url": "../checks/save-publish-20261110-114933/public-report-http-initial.json",
+      "pinned_url": "https://github.com/yanisken9/organic-nomenclature-3/blob/checkpoint/namelecule-20261110-114933/docs/checks/save-publish-20261110-114933/public-report-http-initial.json",
+      "pin_status": "Later proof; moving checkpoint branch, separate from original snapshot cutoff."
+    },
+    "docs/checks/save-publish-20261110-114933/independent-report-factual-addendum.json": {
+      "sha256": "48fcc00f3ed3ece450c36e112b43bc409e10595eff5246947adde3a91e74a099",
+      "relative_url": "../checks/save-publish-20261110-114933/independent-report-factual-addendum.json",
+      "pinned_url": "https://github.com/yanisken9/organic-nomenclature-3/blob/checkpoint/namelecule-20261110-114933/docs/checks/save-publish-20261110-114933/independent-report-factual-addendum.json",
+      "pin_status": "Later proof; moving checkpoint branch, separate from original snapshot cutoff."
     }
   },
   "full_save": {
