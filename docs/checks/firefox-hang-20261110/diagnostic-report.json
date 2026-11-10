@@ -1,0 +1,78 @@
+{
+  "recordedAt": "2026-11-10T09:46:10.872533+02:00",
+  "request": "Diagnose recurring personal Firefox freeze; user identifies the visible website as ChatGPT.com.",
+  "scope": "Passive diagnosis only. No application code, browser settings, extension changes, navigation, close/restart, tab payload extraction or publication.",
+  "parentPid": 57800,
+  "environment": {
+    "firefox": "159.0.1",
+    "macOS": "14.8.9 (23J631)",
+    "architecture": "Intel X86_64",
+    "ramBytes": 8589934592
+  },
+  "observations": [
+    {
+      "privateFile": "/private/tmp/namelecule-firefox-hang-20261110-ulrmf7x9/personal-parent.sample.txt",
+      "sha256": "4d47c7a3beda4f7572b70b71a124b0830314bb730a0127966da0f9ec47180ceb",
+      "sampleTimestamp": "2026-11-10 09:42:24.041 +0200",
+      "mainThreadExcerpt": [
+        "550 Thread_2661872   DispatchQueue_1: com.apple.main-thread  (serial)",
+        "+                                         550 __NSFireDelayedPerform  (in Foundation) + 438  [0x7ff805a22300]",
+        "+                                           550 -[_NSThemeZoomWidgetCell showMenu:]  (in AppKit) + 314  [0x7ff808d9e9de]",
+        "+                                             550 -[NSThemeWidgetZoomMenuRemoteView showMenu:]  (in AppKit) + 46  [0x7ff80889a19f]",
+        "+                                               550 -[NSThemeWidgetZoomMenuRemoteView _showMenu:timestamp:]  (in AppKit) + 542  [0x7ff80889a3de]",
+        "+                                                         !     :         541 mach_msg2_trap  (in libsystem_kernel.dylib) + 10  [0x7ff8049300ae]"
+      ]
+    },
+    {
+      "privateFile": "/private/tmp/namelecule-firefox-hang-20261110-ulrmf7x9/personal-parent-second.sample.txt",
+      "sha256": "b5ea8ecda08a78d23530c2caa7438a4db6c14ca32514c827351737b19adbe3e8",
+      "sampleTimestamp": "2026-11-10 09:45:08.796 +0200",
+      "mainThreadExcerpt": [
+        "1782 Thread_2661872   DispatchQueue_1: com.apple.main-thread  (serial)",
+        "+                                         1782 __NSFireDelayedPerform  (in Foundation) + 438  [0x7ff805a22300]",
+        "+                                           1782 -[_NSThemeZoomWidgetCell showMenu:]  (in AppKit) + 314  [0x7ff808d9e9de]",
+        "+                                             1782 -[NSThemeWidgetZoomMenuRemoteView showMenu:]  (in AppKit) + 46  [0x7ff80889a19f]",
+        "+                                               1782 -[NSThemeWidgetZoomMenuRemoteView _showMenu:timestamp:]  (in AppKit) + 542  [0x7ff80889a3de]",
+        "+                                                         ! : | +         1762 mach_msg2_trap  (in libsystem_kernel.dylib) + 10  [0x7ff8049300ae]"
+      ]
+    }
+  ],
+  "comparison": {
+    "previousPersonalPid": 493,
+    "previousEvidenceDirectory": "docs/checks/firefox-freeze-20261109",
+    "sameNativeMenuPath": "_NSThemeZoomWidgetCell showMenu → NSThemeWidgetZoomMenuRemoteView showMenu/_showMenu:timestamp: → nested NSApplication event loop",
+    "sampleSeparationSeconds": 164.755,
+    "description": "The same path was observed in both bounded intervals. No observation covers the intervening gap. Earlier dedicated55879 quiz issue had responsive browser chrome and lacks this stack; it must remain a separate symptom."
+  },
+  "measuredFacts": [
+    "Current first sample:550main-thread samples traverse native zoom-menu path,541Machwait leaf.",
+    "Current second sample:1782main-thread samples traverse same path,1762Machwait leaf.",
+    "Strict executable guard verified PID57800 before second sample. Initial process-filter false positive corrected with provenance preserved.",
+    "First parentCPU snapshot1.1percent; personalchild snapshotCPU low. Memory query and swap snapshots recorded separately; no causal RAM claim.",
+    "23application/source/protected paths match preceding verified target; all11listed core versions unchanged."
+  ],
+  "interpretation": "Repeated native-menu event-loop nesting is a concrete lead for Firefox/macOS window UI investigation. This evidence alone does not establish a deadlock, initiating trigger, or which site/profile/extension/OS component caused it.",
+  "unknowns": [
+    "Current address-bar/menu responsiveness not yet confirmed by user.",
+    "Whether current episode followed green window-button hover/click or fullscreen transition.",
+    "No reproduction/control pair isolates a necessary/sufficient trigger.",
+    "Other open tabs and personal page contents were deliberately not inspected.",
+    "Memory snapshot does not establish current thrash or exclude other contributions."
+  ],
+  "nextStep": "Ask ordinary chat, not the frozen question panel: does the Firefox address bar/menu respond, and did this episode follow use of the macOS green window button? Preserve current process until any needed recovery is explicitly approved. Controlled reproduction must use an owned isolated profile, not personal tabs.",
+  "webResearch": {
+    "exactStackMatchFound": false,
+    "notes": "Primary Mozilla search did not establish a known bug matching this exact signature/environment. Similar fullscreen/tab-detach bug2051071 has a different stack/trigger/platform; no claimed fix applied. Troubleshoot Mode is a possible later controlled differential test, not a diagnosed remedy.",
+    "sources": [
+      "https://bugzilla.mozilla.org/show_bug.cgi?id=2051071",
+      "https://support.mozilla.org/en-US/kb/troubleshoot-extensions-themes-to-fix-problems"
+    ]
+  },
+  "privacy": "Raw samples remain in0700private temporary directory. Repository contains metadata and selected native stack symbols. No sessionstore payload, cookies, passwords, browsing history or personal-tab text extracted/uploaded.",
+  "review": {
+    "agent": "/root/review_firefox_hang_20261110",
+    "role": "Fresh-context read-only Reviewer; final frozen report verification pending",
+    "independentlyChecked": "Both private sample hashes, native main-thread symbols, raw timestamps, prior personal493 and dedicated55879 comparison; no browser probing/process control."
+  },
+  "coreReport": "No core.js or core-version file changed during this passive diagnostic contribution. No commit/push/publication."
+}

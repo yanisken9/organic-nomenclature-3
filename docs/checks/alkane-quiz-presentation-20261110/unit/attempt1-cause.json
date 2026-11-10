@@ -1,0 +1,9 @@
+{
+  "cause": "Uncontrolled Math.random in existing initialChoiceOrder produced different cold choice permutations. No production change. Before/after comparison now uses same controlled RNG for meaningful equality.",
+  "observedOnlyDifferences": [
+    "states.0.choiceOrder",
+    "states.1.choiceOrder",
+    "states.2.choiceOrder"
+  ],
+  "allOtherStateFieldsIdentical": true
+}

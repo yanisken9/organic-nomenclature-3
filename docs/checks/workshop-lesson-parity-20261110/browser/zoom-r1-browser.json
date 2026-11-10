@@ -1,0 +1,106 @@
+{
+  "completed": true,
+  "stage": "after",
+  "checks": [
+    {
+      "label": "Exact eight served source hashes",
+      "detail": {
+        "js/namelecule-game-repair.js": "a159409448ac8148f0628f4bdc07457953372e9af92873e90f15ebb6f7d586a3",
+        "js/namelecule-generated-repair-checkpoint.js": "91da84de2ba1c59e73b1c96ca15af265da440a016f49c83b0e32a58d951f3a04",
+        "js/namelecule-quiz-checkpoints.js": "ea7e2cbca4f41535c83d5ee672198dd6ae23bebd1467fc5b126062f67a09fe3b",
+        "css/namelecule-repair-round.css": "0b089ab96ffd9dcd96cb81bc035f7cfd8cbeece838022d6a77c10372d69b8f67",
+        "games/name-repair.html": "77295ce9243ae3cde77d920b1589aea5c5b989669eeb4041994de5da4a8d9083",
+        "mulermoc-nom-54.html": "5336b080acd569190e4f57b4e3fa9616455e7d65180d8507a429a75e0415ec03",
+        "mulermoc-nom-55.html": "225a0244412957cd7c6daabbfae699dc9a5d904aef1472659c772701ddacf37d",
+        "design/welcome-proposal.html": "e840ba7df478763049fa7e1f2922efe027daa4f668eccce2d9d1deb26d3ffaec"
+      }
+    }
+  ],
+  "measurements": [],
+  "actions": [
+    {
+      "click": "#set-alkanes-start",
+      "point": {
+        "x": 195,
+        "y": 567,
+        "top": 543.63330078125,
+        "bottom": 590.63330078125,
+        "safeTop": 3,
+        "safeBottom": 757,
+        "hit": true,
+        "disabled": false,
+        "dialog": false
+      }
+    },
+    {
+      "click": "#set-alkanes-unbranched-start",
+      "point": {
+        "x": 195,
+        "y": 594,
+        "top": 570.3499755859375,
+        "bottom": 617.3499755859375,
+        "safeTop": 3,
+        "safeBottom": 757,
+        "hit": true,
+        "disabled": false,
+        "dialog": false
+      }
+    },
+    {
+      "click": ".diagram-tools button",
+      "point": {
+        "x": 333,
+        "y": 473,
+        "top": 450.76666259765625,
+        "bottom": 494.76666259765625,
+        "safeTop": 3,
+        "safeBottom": 757,
+        "hit": true,
+        "disabled": false,
+        "dialog": false
+      }
+    },
+    {
+      "click": ".zoom-heading button",
+      "point": {
+        "x": 300,
+        "y": 272,
+        "top": 248.10000610351562,
+        "bottom": 295.1000061035156,
+        "safeTop": 3,
+        "safeBottom": 757,
+        "hit": true,
+        "disabled": false,
+        "dialog": false
+      }
+    }
+  ],
+  "role": "Developer browser evidence, not independent review",
+  "scope": [
+    "Exact eight-source before overlay, all other current runtime unchanged.",
+    "Deterministic unsolved seed via isolated crypto preload; every recorded success earned by learner pointer actions.",
+    "Owned headless isolated Firefox and ephemeral localhost only; personal GUI and8013 untouched."
+  ],
+  "target": {
+    "js/namelecule-game-repair.js": "a159409448ac8148f0628f4bdc07457953372e9af92873e90f15ebb6f7d586a3",
+    "js/namelecule-generated-repair-checkpoint.js": "91da84de2ba1c59e73b1c96ca15af265da440a016f49c83b0e32a58d951f3a04",
+    "js/namelecule-quiz-checkpoints.js": "ea7e2cbca4f41535c83d5ee672198dd6ae23bebd1467fc5b126062f67a09fe3b",
+    "css/namelecule-repair-round.css": "0b089ab96ffd9dcd96cb81bc035f7cfd8cbeece838022d6a77c10372d69b8f67",
+    "games/name-repair.html": "77295ce9243ae3cde77d920b1589aea5c5b989669eeb4041994de5da4a8d9083",
+    "mulermoc-nom-54.html": "5336b080acd569190e4f57b4e3fa9616455e7d65180d8507a429a75e0415ec03",
+    "mulermoc-nom-55.html": "225a0244412957cd7c6daabbfae699dc9a5d904aef1472659c772701ddacf37d",
+    "design/welcome-proposal.html": "e840ba7df478763049fa7e1f2922efe027daa4f668eccce2d9d1deb26d3ffaec"
+  },
+  "javascriptErrors": [],
+  "open": {
+    "disabled": false,
+    "expanded": "false"
+  },
+  "afterClose": {
+    "disabled": true,
+    "expanded": "false",
+    "modalPresent": false,
+    "focusOpener": false
+  },
+  "reopenBlocked": true
+}

@@ -1,0 +1,9 @@
+{
+  "success": false,
+  "exitCode": 0,
+  "stdout": "FAIL Error: Checkpoint controller unavailable\nassert@\n@\neval code@\neval@[native code]\nnewAdapter@docs/checks/required-completion-navigation-20261110/unit-r2/renderer-adapter/adapter-generated.js:1548:47\n@docs/checks/required-completion-navigation-20261110/unit-r2/renderer-adapter/adapter-generated.js:1567:23\n@docs/checks/required-completion-navigation-20261110/unit-r2/renderer-adapter/adapter-generated.js:1562:8\nglobal code@docs/checks/required-completion-navigation-20261110/unit-r2/renderer-adapter/adapter-generated.js:1608:3\n",
+  "stderr": "",
+  "result": null,
+  "role": "Developer evidence; not independent review",
+  "classification": "Harness failure: reused DOM literal had lexical window double distinct from globalThis; adapter IIFE correctly could not find global controller. Corrected harness window alias, no production change."
+}

@@ -203,6 +203,113 @@
     });
   }
 
+  function diagramZoomIcon() {
+    const icon = node("span", { class: "diagram-zoom-icon", "aria-hidden": "true" });
+    const sharedIcon = global.MuLERIcons && global.MuLERIcons.zoomIn;
+    // Main supplies the shared icon; isolated embedded mounts need no icon dependency.
+    icon.innerHTML = typeof sharedIcon === "string" && sharedIcon.trim() ? sharedIcon :
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="10" r="7"/><path d="M15 15l6 6M10 6v8M6 10h8"/></svg>';
+    const svg = icon.querySelector("svg");
+    if (svg) { svg.setAttribute("aria-hidden", "true"); svg.setAttribute("focusable", "false"); }
+    return icon;
+  }
+
+  const MISSION_REMINDERS = Object.freeze({
+    "parent-length": "Η αποστολή αφορά το πλήθος των ατόμων C της κύριας αλυσίδας.",
+    "bond-type": "Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+    "branch-locants": "Η αποστολή αφορά τις θέσεις σύνδεσης των διακλαδώσεων και τη φορά αρίθμησης.",
+    "branch-multiplier": "Η αποστολή αφορά το πλήθος των ίδιων διακλαδώσεων."
+  });
+  // Explicit compatibility metadata for the original authored questions.
+  // Generated questions carry their own semantic fault.kind; never infer it from a part label.
+  const AUTHORED_MISSIONS = Object.freeze({
+    "unbranched-parent-four": "parent-length",
+    "unbranched-parent-five": "parent-length",
+    "unbranched-single-bond": "bond-type",
+    "number-from-nearest": "branch-locants",
+    "two-methyl-groups": "branch-multiplier",
+    "alphabetical-branches": "alphabetical-order"
+  });
+  const AUTHORED_OBJECTIVES = Object.freeze({
+    "parent-length": "Έλεγξε το μήκος της κύριας αλυσίδας και το συνθετικό που το δηλώνει.",
+    "bond-type": "Έλεγξε το είδος των δεσμών μεταξύ ατόμων C.",
+    "branch-locants": "Έλεγξε τα σημεία σύνδεσης των διακλαδώσεων και τη φορά αρίθμησης.",
+    "branch-multiplier": "Έλεγξε πόσες ίδιες διακλαδώσεις υπάρχουν και πώς δηλώνεται το πλήθος τους.",
+    "alphabetical-order": "Έλεγξε την αλφαβητική σειρά των διαφορετικών διακλαδώσεων."
+  });
+
+  function presentationForRound(round, options) {
+    const basic = !options || options.difficulty !== "challenge";
+    const authored = Object.prototype.hasOwnProperty.call(AUTHORED_MISSIONS, round.id) ? AUTHORED_MISSIONS[round.id] : null;
+    const family = round.fault && round.fault.kind || authored;
+    const condensed = round.moleculeId === "ethyl_3_dimethyl_2_5_hexane";
+    const display = Object.assign({}, round);
+    if (condensed) {
+      display.asset = "assets/name-repair/condensed/ethyl_3_dimethyl_2_5_hexane.svg";
+      display.diagramAlt = "Συνεπτυγμένος συντακτικός τύπος αλκανίου. Φαίνονται οι δεσμοί μεταξύ ατόμων C και οι ομάδες CH₃, CH₂ και CH.";
+    }
+    if (basic && authored) display.objective = AUTHORED_OBJECTIVES[authored];
+    if (basic && round.kind === "replace" && Object.prototype.hasOwnProperty.call(MISSION_REMINDERS, family) &&
+        round.feedback && typeof round.feedback.wrongPart === "string") {
+      const reminder = MISSION_REMINDERS[family];
+      display.feedback = Object.assign({}, round.feedback, {
+        wrongPart: round.feedback.wrongPart.endsWith(reminder) ? round.feedback.wrongPart : round.feedback.wrongPart + " " + reminder
+      });
+    }
+    return { round: display, emphasizeObjective: true, compactDiagramZoom: true,
+      diagramRepresentation: condensed ? "condensed" : "expanded" };
+  }
+
+  // The same response-range policy serves a page and the lesson dialog.
+  // Each owner supplies its viewport and scroll geometry; no focus or answer state is changed.
+  function createResponseRevealer(options) {
+    let moving = false;
+    let disposed = false;
+    const interrupts = [];
+    function stop() {
+      if (disposed || !moving) return;
+      moving = false;
+      options.scrollTo(options.scrollTop(), "instant");
+    }
+    function reveal(request) {
+      if (disposed || !request || options.active && !options.active()) return;
+      const start = request.start, end = request.end || start;
+      if (!start || !end || !start.isConnected || !end.isConnected ||
+          !options.host.contains(start) || !options.host.contains(end) ||
+          typeof start.getBoundingClientRect !== "function" || typeof end.getBoundingClientRect !== "function") return;
+      stop();
+      const first = start.getBoundingClientRect(), last = end.getBoundingClientRect();
+      if (first.height <= 0 || last.height <= 0) return;
+      const viewport = options.viewport();
+      const top = viewport.top, bottom = viewport.bottom;
+      const rangeTop = Math.min(first.top, last.top), rangeBottom = Math.max(first.bottom, last.bottom);
+      if (![top, bottom, rangeTop, rangeBottom].every(Number.isFinite) || bottom <= top) return;
+      if (rangeTop >= top && rangeBottom <= bottom) return;
+      const delta = rangeBottom - rangeTop > bottom - top || rangeTop < top ? rangeTop - top : rangeBottom - bottom;
+      const current = options.scrollTop();
+      const destination = Math.max(0, Math.min(options.maxScroll(), current + delta));
+      if (!Number.isFinite(destination) || Math.abs(destination - current) < 1) return;
+      const reduced = typeof global.matchMedia === "function" && global.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      moving = !reduced;
+      options.scrollTo(destination, reduced ? "instant" : "smooth");
+    }
+    const target = options.interruptTarget;
+    if (target && typeof target.addEventListener === "function") {
+      ["wheel", "touchstart", "pointerdown", "keydown", "pagehide"].forEach(function (event) {
+        const eventOptions = { passive: true };
+        target.addEventListener(event, stop, eventOptions);
+        interrupts.push([event, eventOptions]);
+      });
+    }
+    return { reveal: reveal, stop: stop, destroy: function () {
+      if (disposed) return;
+      stop();
+      disposed = true;
+      interrupts.forEach(function (entry) { target.removeEventListener(entry[0], stop, entry[1]); });
+      interrupts.length = 0;
+    } };
+  }
+
   let nextMountId = 0;
   const mountedHosts = new WeakMap();
 
@@ -210,6 +317,9 @@
     assert(host && typeof host.replaceChildren === "function", "A round host is required");
     assert(options && typeof options === "object", "Round options are required");
     const data = validateRoundData(options.round);
+    const emphasizeObjective = options.emphasizeObjective === true;
+    const condensedDiagram = options.diagramRepresentation === "condensed";
+    const compactDiagramZoom = options.compactDiagramZoom === true;
     const existing = mountedHosts.get(host);
     if (existing) existing.destroy();
     const root = host;
@@ -219,13 +329,26 @@
     let destroyed = false;
     let refs = {};
     let mainImageStatus = "loading";
+    let lastSuccessActionsReady = null;
     let renderId = 0;
     let imageLoadId = 0;
     let zoomPanel = null;
     let zoomImage = null;
     let listeners = [];
-    const ownedClass = !standalone && !host.classList.contains("nl-repair-round");
+    const ownedClass = !host.classList.contains("nl-repair-round");
     if (ownedClass) host.classList.add("nl-repair-round");
+    const pageScroller = function () { return global.document.scrollingElement || global.document.documentElement; };
+    const pageReveal = standalone ? createResponseRevealer({
+      host: root, interruptTarget: global,
+      active: function () { return !destroyed && !zoomPanel && root.isConnected; },
+      viewport: function () { return { top: 12, bottom: global.document.documentElement.clientHeight - 12 }; },
+      scrollTop: function () { return pageScroller().scrollTop; },
+      maxScroll: function () { return pageScroller().scrollHeight - global.document.documentElement.clientHeight; },
+      scrollTo: function (top, behavior) {
+        if (typeof global.scrollTo === "function") global.scrollTo({ top: top, behavior: behavior });
+        else pageScroller().scrollTop = top;
+      }
+    }) : null;
     function controlId(id) { return prefix + id; }
     function round() { return data; }
     function state() { return currentState; }
@@ -235,9 +358,10 @@
       if (!destroyed && typeof options.onStateChange === "function") options.onStateChange(getState());
     }
     function revealResponse(reason, start, end) {
-      if (!standalone && !destroyed && typeof options.onReveal === "function") {
-        options.onReveal({ reason: reason, start: start, end: end || start });
-      }
+      if (destroyed) return;
+      const request = { reason: reason, start: start, end: end || start };
+      if (pageReveal) pageReveal.reveal(request);
+      else if (typeof options.onReveal === "function") options.onReveal(request);
     }
     function listen(element, event, handler) {
       const guarded = function (e) { if (!destroyed) handler(e); };
@@ -261,6 +385,7 @@
     }
     function destroy() {
       if (destroyed) return;
+      if (pageReveal) pageReveal.destroy();
       destroyed = true;
       renderId += 1;
       imageLoadId += 1;
@@ -290,15 +415,24 @@
       const heading = node("div", { class: "round-heading" });
       if (data.guided) heading.append(node("span", { class: "guided-pill", text: "Πρώτα δοκιμάζουμε μαζί" }));
       if (standalone && options.setTitle) heading.append(node("p", { class: "round-set-name", text: "Αλκάνια · " + options.setTitle }));
-      heading.append(node("h1", { text: data.title }), node("p", { text: data.objective }));
+      heading.append(node("h1", { text: data.title }), node("p", {
+        class: emphasizeObjective ? "round-objective is-emphasized" : "round-objective", text: data.objective
+      }));
       const steps = node("ol", { class: "compact-steps", "aria-label": "Βήματα αποστολής" }, ["Παρατήρησε τη δομή", "Επισκεύασε το όνομα", "Έλεγξε την επιλογή σου"].map(function (text, index) {
         return node("li", {}, [node("span", { "aria-hidden": "true", text: String(index + 1) }), text]);
       }));
       refs.image = node("img", { class: "diagram-image", alt: data.diagramAlt, draggable: "false" });
       refs.imageStatus = node("div", { class: "image-status", role: "status", "aria-live": "polite" });
-      refs.zoomButton = button("Μεγέθυνση σχεδίου", "quiet", showDiagramZoom);
+      refs.zoomButton = button(compactDiagramZoom ? "" : "Μεγέθυνση σχεδίου",
+        compactDiagramZoom ? "quiet diagram-zoom-button" : "quiet", showDiagramZoom);
+      if (compactDiagramZoom) {
+        refs.zoomButton.setAttribute("aria-label", "Μεγέθυνση σχεδίου");
+        refs.zoomButton.setAttribute("title", "Μεγέθυνση σχεδίου");
+        refs.zoomButton.setAttribute("aria-expanded", "false");
+        refs.zoomButton.append(diagramZoomIcon());
+      }
       const diagram = node("section", { class: "diagram-card", "aria-labelledby": controlId("diagram-heading") }, [
-        node("div", { class: "card-heading" }, [node("h2", { id: controlId("diagram-heading"), text: "Η δομή στο επίκεντρο" }), node("div", { class: "diagram-tools" }, [node("span", { text: "Ανεπτυγμένος τύπος" }), refs.zoomButton])]),
+        node("div", { class: "card-heading" }, [node("h2", { id: controlId("diagram-heading"), text: "Η δομή στο επίκεντρο" }), node("div", { class: "diagram-tools" }, [node("span", { class: condensedDiagram ? "diagram-representation-label" : "", text: condensedDiagram ? "Συνεπτυγμένος συντακτικός τύπος" : "Ανεπτυγμένος τύπος" }), refs.zoomButton])]),
         node("figure", { class: "diagram-figure" }, [node("div", { class: "diagram-stage" }, [refs.image]), node("figcaption", { text: "Παρατήρησε την κύρια αλυσίδα και τους κλάδους." })]),
         refs.imageStatus
       ]);
@@ -452,11 +586,18 @@
       const hasCandidate = data.kind === "order" || (hasTarget && current.selectedValue !== null);
       refs.checkButton.disabled = !enabled || !hasCandidate;
       refs.zoomButton.disabled = mainImageStatus !== "ready" || !!zoomPanel;
-      const continueButton = refs.next.querySelector("button");
-      if (continueButton) continueButton.disabled = !diagramsReady() || !current.solved;
+      const nextButtons = refs.next.querySelectorAll("button");
+      nextButtons.forEach(function (nextButton) {
+        nextButton.disabled = !diagramsReady() || !current.solved;
+      });
       refs.checkHelper.textContent = current.solved ? "Η επισκευή ολοκληρώθηκε. Συνέχισε όταν είσαι έτοιμος ή έτοιμη." : !diagramsReady() ? "Περιμένουμε να εμφανιστούν οι δομές πριν από τον έλεγχο." : data.kind === "order" ? "Επιλέγεις κλάδο, πατάς ένα βέλος και ελέγχεις τη νέα σειρά." : hasCandidate ? "Ο έλεγχος μετρά ως μία προσπάθεια. Μπορείς να δοκιμάσεις ξανά." : "Διάλεξε πρώτα το κομμάτι και έπειτα μια αντικατάσταση.";
       refs.sessionStats.textContent = "Προσπάθειες σε αυτή την " + (data.guided ? "πρόβα " : "αποστολή ") + current.attempts;
       if (restoreId) restoreFocus(restoreId);
+      const successActionsReady = nextButtons.length > 0 && diagramsReady() && current.solved;
+      if (!destroyed && successActionsReady !== lastSuccessActionsReady && typeof options.onSuccessActionsReady === "function") {
+        lastSuccessActionsReady = successActionsReady;
+        options.onSuccessActionsReady(successActionsReady);
+      }
     }
 
     function selectPart(id) {
@@ -500,6 +641,13 @@
         if (typeof options.onContinue === "function") options.onContinue(getState());
       });
       replaceChildren(refs.next, next);
+      if (typeof options.onNewPractice === "function") {
+        refs.next.classList.add("has-practice-action");
+        refs.next.append(button(options.newPracticeLabel || "Άλλη τριάδα για εξάσκηση", "secondary", function () {
+          if (destroyed || !diagramsReady() || !state().solved) return;
+          options.onNewPractice(getState());
+        }));
+      }
       updateControls();
       if (fresh) {
         next.focus({ preventScroll: true });
@@ -531,6 +679,7 @@
 
     function showDiagramZoom() {
       if (destroyed || mainImageStatus !== "ready" || zoomPanel) return;
+      if (pageReveal) pageReveal.stop();
       const dialog = node(standalone ? "dialog" : "section", { class: "zoom-dialog", "aria-labelledby": controlId("zoom-title") });
       zoomPanel = dialog;
       const close = button("Κλείσιμο", "secondary", closeZoom);
@@ -548,7 +697,7 @@
         viewport
       );
       if (standalone) {
-        listen(dialog, "close", function () { dialog.remove(); zoomPanel = null; });
+        listen(dialog, "close", function () { finishZoom(dialog); });
         document.body.append(dialog);
         dialog.showModal();
       } else {
@@ -559,21 +708,30 @@
           event.stopPropagation();
           closeZoom();
         });
-        refs.zoomButton.setAttribute("aria-expanded", "true");
-        refs.zoomButton.disabled = true;
         root.append(dialog);
       }
+      refs.zoomButton.setAttribute("aria-expanded", "true");
+      refs.zoomButton.disabled = true;
       close.focus();
+    }
+
+    function finishZoom(panel) {
+      if (destroyed || zoomPanel !== panel) return;
+      if (zoomImage) zoomImage.onerror = null;
+      zoomImage = null;
+      replaceChildren(panel);
+      panel.remove();
+      zoomPanel = null;
+      refs.zoomButton.setAttribute("aria-expanded", "false");
+      refs.zoomButton.disabled = mainImageStatus !== "ready";
+      refs.zoomButton.focus({ preventScroll: true });
     }
 
     function closeZoom() {
       if (!zoomPanel) return;
-      if (zoomImage) zoomImage.onerror = null;
+      // Native close is queued; restore controls only when that panel finishes.
       if (standalone) zoomPanel.close();
-      else { replaceChildren(zoomPanel); zoomPanel.remove(); zoomPanel = null; }
-      refs.zoomButton.setAttribute("aria-expanded", "false");
-      refs.zoomButton.disabled = mainImageStatus !== "ready" || !!zoomPanel;
-      refs.zoomButton.focus({ preventScroll: true });
+      else finishZoom(zoomPanel);
     }
 
     renderRound();
@@ -581,7 +739,9 @@
   }
 
   global.NameleculeRepairGame = {
-    mountRound: function (host, options) { return createRoundView(host, options, false); }
+    mountRound: function (host, options) { return createRoundView(host, options, false); },
+    presentationForRound: presentationForRound,
+    createResponseRevealer: createResponseRevealer
   };
   if (typeof document === "undefined") return;
 
@@ -857,17 +1017,9 @@
   }
 
   function progressList() {
-    return node("ol", { class: "progress", "aria-label": "Πρόοδος παιχνιδιού" }, activeSet.rounds.map(function (round, index) {
-      const complete = states[index].solved;
-      const current = index === roundIndex;
-      const label = "Κουίζ " + (index + 1);
-      const item = node("li", { class: current ? "is-current" : complete ? "is-complete" : "" }, [
-        node("span", { class: "progress-dot", "aria-hidden": "true", text: complete ? "✓" : String(index + 1) }),
-        node("span", { class: "progress-label", text: label + (complete ? " ολοκληρώθηκε" : current ? " σε εξέλιξη" : "") })
-      ]);
-      if (current) item.setAttribute("aria-current", "step");
-      return item;
-    }));
+    return node("p", { class: "progress round-progress-counter", role: "status", "aria-live": "polite",
+      "aria-atomic": "true", "aria-label": "Κουίζ " + (roundIndex + 1) + " από " + activeSet.rounds.length,
+      text: "Κουίζ " + (roundIndex + 1) + "/" + activeSet.rounds.length });
   }
 
   function round() { return activeSet.rounds[roundIndex]; }
@@ -876,8 +1028,9 @@
     pilotPhase = "round";
     if (activeRound) activeRound.destroy();
     const index = roundIndex;
-    activeRound = createRoundView(root, {
-      round: round(), initialState: state(), assetBase: "", progressList: progressList, setTitle: activeSet.title,
+    const presentation = presentationForRound(round(), { difficulty: pilot ? pilot.difficulty : "basic" });
+    activeRound = createRoundView(root, Object.assign({}, presentation, {
+      initialState: state(), assetBase: "", progressList: progressList, setTitle: activeSet.title,
       requestRestart: requestRestart,
       continueLabel: index === activeSet.rounds.length - 1 ? "Δες τις επισκευές σου  →" : "Επόμενο κουίζ  →",
       onStateChange: function (current) { states[index] = current; savePilotProgress(); },
@@ -885,7 +1038,7 @@
         if (index === activeSet.rounds.length - 1) renderResults();
         else { roundIndex += 1; renderRound(); }
       }
-    }, true);
+    }), true);
     if (pilot && !pilot.storageAvailable) root.append(node("p", { role: "status", class: "pilot-entry", text: "Ο browser δεν επιτρέπει αποθήκευση της προσπάθειας. Κράτησε αυτή τη σελίδα ανοιχτή μέχρι να τελειώσεις." }));
     savePilotProgress();
   }

@@ -1,0 +1,46 @@
+{
+  "status": "Approved; implementation in progress",
+  "request": "Unlimited optional three-question sets after original required set completed in alkane lesson",
+  "learnerFlow": [
+    "After original3correct, retain explanation and show Continue theory + Another triple for practice.",
+    "Same topic/basic difficulty in each gate4straight,11branched; current quiz1/3 remains.",
+    "Mark Optional practice and state initial triple complete, theory may continue any time, including incorrect/unfinished optional set, loading or error.",
+    "At end of each optional triple allow another or continue without cap.",
+    "Keep current optional attempt on same-tab refresh and Return/reopen; preserve existing earned progress."
+  ],
+  "sourcePaths": [
+    "js/namelecule-game-repair.js",
+    "js/namelecule-generated-repair-checkpoint.js",
+    "js/namelecule-quiz-checkpoints.js",
+    "css/namelecule-repair-round.css",
+    "css/namelecule-quiz-checkpoints.css",
+    "mulermoc-nom-54.html",
+    "mulermoc-nom-55.html"
+  ],
+  "implementation": [
+    "Keep original required earned receipt in existing states; optional practice per checkpoint in separate stored field. Do not replace required seed/answers or trust an unlocked boolean.",
+    "Opt-in adapter capability only for existing generated alkane sets, reuse unchanged generator/engine/round renderer; original lesson JSON unchanged.",
+    "Keep bounded optional generation cache separate from required reconstruction cache so many optional attempts cannot evict completion source.",
+    "Only current optional attempt per checkpoint retained, no growing all-attempt history.",
+    "Shared renderer optional secondary success action for last question only; responsive wrap; common dialog optional status/continue control available while loading/errors.",
+    "Refresh affected Main54/55 JS/CSS cache references."
+  ],
+  "verification": [
+    "Original required3 remains locked until actual success; existing earned receipts and preview isolation.",
+    "Both gates: new optional3, incorrect answer, partial exit/reopen, refresh, repeat and continue at any point keep mastery unlocked.",
+    "Exercise more than32 optional generations to cross current cache boundary; assert original required receipt still independently validated/unlocked and memory bounded.",
+    "Original old-receipt import, malformed optional state, cancelled/failed generation, rapid repeat click and stale async completion.",
+    "Counters/scroll/zoom/focus/keyboard/narrow screens; bounded standalone compatibility since renderer change opt-in.",
+    "One independent fresh Reviewer after logical implementation; no new chemical naming rules/data/core."
+  ],
+  "limits": [
+    "Random questions drawn from existing finite structures/faults; unlimited attempts does not mean all questions unique forever.",
+    "Progress persistence remains current-tab scope; no account or server synchronization."
+  ],
+  "coreChangePlanned": false,
+  "JSONExportRequired": false,
+  "publicationAuthorized": false,
+  "learningPreflight": "/root/optional_triples_learning_preflight read-only confirms optional flow, no loss of mastery, no new lesson steps.",
+  "approval": "User said nai in ordinary chat",
+  "approvedUTC": "2026-11-10T07:01:25.858186+00:00"
+}

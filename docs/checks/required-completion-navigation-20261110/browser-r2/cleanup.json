@@ -1,0 +1,36 @@
+{
+  "ownedFirefoxPID": 88350,
+  "ownedHelperPID": 88349,
+  "ownedOriginalServerPID": 88695,
+  "profileRemoved": true,
+  "ownedPorts": {
+    "beforeR1": {
+      "port": 57578,
+      "connectResult": 61
+    },
+    "afterR2": {
+      "port": 57579,
+      "connectResult": 61
+    },
+    "bidi": {
+      "port": 57580,
+      "connectResult": 61
+    },
+    "originalR0": {
+      "port": 58476,
+      "connectResult": 61
+    }
+  },
+  "uncontrolledProcessesBefore": {
+    "57800": "57800 S",
+    "55879": "55879 Ss",
+    "56371": "56371 Ss"
+  },
+  "uncontrolledProcessesAfter": {
+    "57800": "57800 S",
+    "55879": "55879 Ss",
+    "56371": "56371 Ss"
+  },
+  "actions": "SIGTERM exact owned originalHTTPserver and exact own headlessFirefox; helper exits when Firefox ends; remove exact own temporaryprofile. Personalbrowser processes untouched.",
+  "verifiedUTC": "2026-11-10T08:19:18Z"
+}

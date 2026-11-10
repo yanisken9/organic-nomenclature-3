@@ -1,0 +1,32 @@
+--- before/js/namelecule-quiz-checkpoints.js
++++ after/js/namelecule-quiz-checkpoints.js
+@@ -357,6 +357,7 @@
+   }
+   function updateDialog(context) {
+     dialog.querySelector("#nlQuizDialogTitle").textContent = text(context.practice ? "practiceTitle" : "label");
++    dialog.querySelector("#nlQuizBack").hidden = context.practice;
+     practiceNotice.textContent = text("practiceNote");
+     practiceNotice.hidden = !context.practice;
+     practiceContinue.textContent = text("continueLesson");
+--- before/mulermoc-nom-54.html
++++ after/mulermoc-nom-54.html
+@@ -368,7 +368,7 @@
+   <script src="js/mulermoc-nom-teaching-54.js?v=alkane-step5-interaction-20261106-r1"></script>
+   <script src="js/mulermoc-nom-note-54.js?v=v54-sync-20261104-r2"></script>
+   <script src="js/namelecule-game-repair.js?v=optional-triples-20261110-r1"></script>
+-  <script src="js/namelecule-quiz-checkpoints.js?v=optional-triples-20261110-r1"></script>
++  <script src="js/namelecule-quiz-checkpoints.js?v=practice-navigation-20261110-r1"></script>
+   <script src="js/namelecule-chemistry-client.js?v=verified-engines-20261105-r1"></script>
+   <script src="js/namelecule-repair-generator.js?v=engine-pilot-20261105-r1"></script>
+   <script src="js/namelecule-generated-repair-checkpoint.js?v=optional-triples-20261110-r1"></script>
+--- before/mulermoc-nom-55.html
++++ after/mulermoc-nom-55.html
+@@ -361,7 +361,7 @@
+   <script src="js/mulermoc-nom-teaching-55.js?v=namelecule-v55-20261110-r2"></script>
+   <script src="js/mulermoc-nom-note-55.js?v=namelecule-v55-20261110-r2"></script>
+   <script src="js/namelecule-game-repair.js?v=optional-triples-20261110-r1"></script>
+-  <script src="js/namelecule-quiz-checkpoints.js?v=optional-triples-20261110-r1"></script>
++  <script src="js/namelecule-quiz-checkpoints.js?v=practice-navigation-20261110-r1"></script>
+   <script src="js/namelecule-chemistry-client.js?v=verified-engines-20261105-r1"></script>
+   <script src="js/namelecule-repair-generator.js?v=engine-pilot-20261105-r1"></script>
+   <script src="js/namelecule-generated-repair-checkpoint.js?v=optional-triples-20261110-r1"></script>

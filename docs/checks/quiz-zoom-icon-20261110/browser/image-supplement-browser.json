@@ -1,0 +1,43 @@
+{
+  "stage": "image-supplement",
+  "completed": true,
+  "checks": [
+    {
+      "label": "frozen4 sources served",
+      "evidence": null
+    },
+    {
+      "label": "controlled real image request held: compact zoom disabled while loading",
+      "evidence": null
+    },
+    {
+      "label": "controlled real image request failed: zoom disabled with retry UI",
+      "evidence": null
+    },
+    {
+      "label": "frozen4 source unchanged",
+      "evidence": null
+    }
+  ],
+  "geometry": [],
+  "nativeActions": [],
+  "target": {
+    "js/namelecule-generated-repair-checkpoint.js": "7a067fdcefde58cf1dfa30af208e6355831d6fab34ffd8b1ed81a689cdeff375",
+    "js/namelecule-game-repair.js": "cceabe3b49aab02458c29408084b1affdc0c3e60324ce3a74be4308fd79b340e",
+    "css/namelecule-repair-round.css": "e6e83a96717112866ff6c4a1429cbf83fb99945cc900f7f4fac7a8253ebd7b9b",
+    "mulermoc-nom-55.html": "df2032255ead6d3e211720e83d675daa22cba9669bf25a809028204cf0fe4fd5"
+  },
+  "notes": [
+    "Developer-supplied browser evidence; no independent review claim.",
+    "Real Main55 lesson at step4 with deterministic unsolved seed4. Later direct step11 access, if used, is explicitly a navigation fixture, not proof of gate completion.",
+    "New owned isolated headless Firefox; no personal browser or GUI.",
+    "Before exact four-file overlay; runtime otherwise current."
+  ],
+  "scope": "Corrected controlled loading/error fixture only; no learner replay.",
+  "javascriptErrors": [],
+  "fixture": {
+    "requestURL": "http://127.0.0.1:53506/docs/checks/quiz-zoom-icon-20261110/browser/held/assets/name-repair/propane.svg",
+    "status": "Η δομή δεν εμφανίστηκε. Για να επισκευάσεις το όνομα, χρειάζεται πρώτα να δεις το μόριο.Φόρτωσε ξανά τη δομή",
+    "uses": "Original canonical asset unchanged; test-only assetBase resolves to request intercepted by BiDi."
+  }
+}

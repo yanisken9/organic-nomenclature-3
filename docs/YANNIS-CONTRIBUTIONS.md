@@ -1,3 +1,470 @@
+# 2026-11-10 - Optional completed triple header finished locally
+
+## 2026-11-10 — Full save, professor report and publication (in progress)
+
+Purpose: preserve all completed work and give the professor an updated public
+application/report. Earlier reviewed v55 and Nov10 quiz improvements are
+pre-existing contributions relative to THIS save, not newly authored runtime.
+Current save changes documentation/receipts/operational helper only; no core
+edited. Disposable clone runtime commit c5d465190740de5d8f1c90b7ce791ff22250e39e
+prepared, not yet uploaded. Exact26runtime paths and49protected publicReact/v52
+hashes at docs/checks/save-publish-20261110-114933/runtime-target.json.
+Fresh upstream audit lastsync5ab24955→checked3640eff6:4newcommits not included;
+separate integration required. Static dependency inventory226 checked, not
+external service certification. Full save, browser proof, review, remote/live
+verification and final metadata delta still pending at this dated entry.
+
+
+Approved controller/Main54/Main55 change completed at
+`docs/checks/optional-completion-navigation-20261110/target-r2.json`.
+Current optional receipt + final progress + enabled actions governs hiding;
+upper exit retained while incomplete/loading/error, restored on new triple.
+Native focused-upper loss was reproduced and corrected within same3paths:
+focus lower Continue before hiding, fail open if transfer unavailable.
+
+One fresh Reviewer found no new actionable issue: independently274JSC,
+3current/3before/3testedR1/20protected and all55unit/browser artifacts.
+Developer native stages3before/32testedR1/32finalR2+6focus,0capturedJSerrors,
+actual final third from genuine first-two prefix;3exact finalHTTP, own cleanup.
+Staged limitations and retained harness/focus failure evidence are in
+final-report.json; no uninterrupted wholelesson or universal reliability claim.
+No core/sharedrenderer/adapter/JSON/CSS/MOL/SDF/generator/answer changes,
+commit/push/publication/export. Existing keyboardP2 remains separately open.
+User reload needed; personalFirefox recovery remains unapproved.
+
+# 2026-11-10 - Optional completed header focus correction
+
+Within approved3paths, actual native focused-upper loss was reproduced and
+corrected by focus transfer before hiding, with safe fallback keeping exit.
+274controller checks,2specific counterfactuals,3exact finalHTTP. Native r2
+focused-lower visibility and naturalH1 passed; final imagefault/action tests
+and fresh independent review pending. Original and testedr1 snapshots remain.
+No core/renderer/adapter/JSON/CSS/MOL or publication/commit/export changes.
+Existing global keyboardP2 remains separately recorded and unchanged.
+
+# 2026-11-10 - Optional completed triple header implemented
+
+Approved3path change at optional-completion-navigation-20261110/target.json.
+Uses existing readiness plus verification of current optional receipt; safe
+fallback keeps upper Continue during loading/error/invalid state. Controller
+268 checks, original counterfactual failure,3exactHTTP/source comparisons.
+Browser before reproduced duplicate; native after and fresh review pending.
+20protected paths/11cores unchanged, no JSON/CSS/MOL/renderer/adapter changes.
+No commit/push/publication/export. Known pre-existing keyboardP2 remains open.
+
+# 2026-11-10 - Optional final Continue preflight
+
+Read-only trace and JSC probe confirm duplicate upper Continue after optional
+3/3 success.3path plan at docs/checks/optional-completion-navigation-20261110/,
+awaiting explicit approval. Proposed reuse of readiness plus validation of
+current optional receipt; no app/core/JSON change. Existing keyboard P2 and
+Firefox recovery remain separate pending work. No publication or commit.
+
+# 2026-11-10 - Final required quiz header completed locally
+
+Approved behavior completed at5frozen source paths in target-r2.json.
+The top Return hides when final success actions actually become usable,
+retaining it for loading/error/retry. Necessary renderer/adapter readiness
+hooks resolve independent R1(P2); original3path r1 and before5 are preserved.
+Fresh Reviewer closedR1, no new finding; independently checked560JSC and
+36unchanged default snapshots with declared doubles, source/evidence hashes.
+Developer native evidence:2originalbefore+45r1after+5R1faultrepro+23r2targeted,
+0capturedJSerrors,5exact finalHTTP, owned cleanup. Genuine receipt lineage,
+not full uninterrupted replay. `final-report.json` records conditions/limits.
+
+Existing keyboard P2 EXISTING-ESC-001 was independently traced and reproduced
+on original5file overlay andr2. It remains open and needs separate approved
+scope; no keyboard fix smuggled into this change. No core/JSON/CSS/MOL,
+generator/questions/solutions changes, commit/push/publication/export.
+User must reload local lesson. Personal Firefox unaffected by browser tests;
+its prior restart request still awaits approval.
+
+# 2026-11-10 - Required final header readiness correction
+
+Independent R1(P2) addressed within approved loading/error behavior using
+opt-in renderer->adapter->controller success-action readiness; final target
+now5paths at target-r2.json. Original5sources and reviewedR1 retained.
+Controller241 + renderer/adapter319 checks; unchanged defaults36snapshots;
+native image-delay/error/retry checks passing, final evidence/review pending.
+Additional Tab/BODYEscape issue reproduced on ORIGINAL5file baseline andr2;
+existingP2 recorded separately, no hotkey changes. No core/JSON/CSS/MOL,
+commit/push/publication/export. Scope, evidence and limitations are in
+`docs/checks/required-completion-navigation-20261110/`.
+
+# 2026-11-10 - Required final quiz header return
+
+Approved3path implementation in
+`docs/checks/required-completion-navigation-20261110/target.json`.
+Shared controller uses transient final progress plus validated completion;
+loading/error resets and existing optional behavior preserved. Before3 and
+diff recorded. Developer JSC223, original-source counterfactual, native2before+
+45after with genuine final repair,3exactHTTP checks. Lineage/limitations and
+owned cleanup in manifests. Fresh independent Reviewer inspecting frozen
+source/evidence; final verdict pending. No core/JSON/MOL/CSS change,
+commit/push/publication/export. This is unrelated to fixing personalFirefox hang.
+
+# 2026-11-10 — Προέλεγχος τελικών επιλογών κουίζ
+
+Read-only trace και JSC probe επιβεβαίωσαν ότι το επάνω Return μένει
+ορατό μετά verified τρίτη επιτυχία.3path plan σε
+`docs/checks/required-completion-navigation-20261110/`, προς έγκριση.
+Προβλέπεται κρύψιμο μόνο όταν εμφανίζονται οι τελικές κάτω επιλογές,
+διατηρώντας required loading/error και optional flow. Κανένα application/core
+ή JSON edit, commit/push/publication/export. Explorer μόνο ανάγνωση·
+οι runtime προέλεγχοι είναι Developer evidence με δηλωμένα doubles.
+
+# 2026-11-10 — Παθητική διάγνωση προσωπικού Firefox στο ChatGPT.com
+
+Διόρθωση follow-up: χειροκίνητη μετακίνηση παραθύρου χαμηλά. Μόνο native
+activation request accepted, όχι αποδεδειγμένη επαναφορά· Accessibility=false.
+Reviewer επιβεβαίωσε τα όρια. Ιδιωτικά stable recovery copies2 με hashes,
+ηλικίας~76λεπτών, χωρίς περιεχόμενο στο repo. Κανένα browserclose/restart ή
+corechange. Τεκμήρια window-activation/window-followup-review/recovery-backup.json.
+
+Follow-up: ο χρήστης επιβεβαίωσε fullscreen αλλά δεν έχει πρόσβαση στο
+παράθυρο· προτάθηκε ασφαλής χειροκίνητη έξοδος με πλήκτρα, αναμένεται
+αποτέλεσμα. Δεν εκτελέστηκε έλεγχος πλήκτρων ή κλείσιμο του browser.
+
+Μετά το νέο πάγωμα συλλέχθηκαν δύο3sec δείγματα του προσωπικούPID57800,
+με ιδιωτική αποθήκευση και sanitized metadata στο
+`docs/checks/firefox-hang-20261110/`. Επαναλαμβάνεται η διαδρομή native
+zoom-menu του macOS που είχε καταγραφεί στον προσωπικό493 στις9/11.
+Η επανάληψη είναι μετρημένη ένδειξη, χωρίς αποδεδειγμένο trigger/deadlock ή
+απόδοση σε συγκεκριμένο site. Δείγματα απέχουν164.755sec· δεν μετρήθηκε
+συνεχώς το ενδιάμεσο. Καταγράφηκε πίεση μνήμης χωρίς αυθαίρετη αιτιακή διάγνωση.
+
+Fresh read-only Reviewer /root/review_firefox_hang_20261110 επιβεβαίωσε τα ακριβή
+στοιχεία/όρια χωρίς actionableP0/P1/P2/P3 (5frozen αρχεία).23αρχεία εφαρμογής ίδια με προηγούμενο verified target,
+συμπεριλαμβανομένων11core versions. Κανένα runtime/core/JSON/MOL, preference,
+processcontrol, commit/push/publication. Δεν διαβάστηκαν προσωπικά κείμενα
+καρτελών. Επόμενο: επιβεβαίωση απόκρισης browserchrome/πράσινου κουμπιού και
+έπειτα ελεγχόμενη διάγνωση ή χωριστά εγκεκριμένη αποκατάσταση, εφόσον χρειάζεται.
+
+# 2026-11-10 — Μόνο συνέχεια στην προαιρετική εξάσκηση
+
+Με ρητή έγκριση χρήστη κρύβεται το Return μόνο σε optionalmode και
+επανεμφανίζεται στο requiredmode, στον ίδιο κοινό dialog.3paths:
+js/namelecule-quiz-checkpoints.js (μία hidden assignment),Main54/55cacheURL.
+Καταγραφή και recovery στο docs/checks/practice-navigation-20261110/.
+
+Independent Reviewer /root/review_practice_navigation_20261110 χωρίς ευρήματα:
+exact3/3/20/26,199JSC και baseline-failure verification. Developer12before+
+12after native checks,0JSerrors,320/390, Tab/Escape/Enter/Return/reuse,
+ιστορικόγνήσιο receipt διατηρείται· δεν δηλώνεται νέο fullquizreplay.3HTTP/SHA,
+ownedcleanup3ports/profile, προσωπικόςFirefox/8013 ανέπαφα. Όρια και αναφορά
+στο final-report.json. Κανένα core/scenarioJSON/MOL/άλλοςμηχανισμός,
+commit/push/publication/export. Επόμενο: συνέχεια με τις οδηγίες χρήστη.
+
+# 2026-11-10 — Προαιρετικές επιπλέον τριάδες μετά την επιτυχία του μαθήματος
+
+Υλοποιήθηκε το εγκεκριμένο σχέδιο στα7paths του
+`docs/checks/lesson-optional-triples-20261110/verification-target.json`:
+τρειςJS(renderer/adapter/controller),δύοCSS,Main54/Main55cacheURLs. Στις δύο
+στάσεις αλκανίων η αρχική επιτυχία αποθηκεύεται χωριστά από την προαιρετική
+εξάσκηση. Unlimited optional attempts, ίδιο topic/basic, συνέχεια οποτεδήποτε
+και current same-tab recovery· bounded practicecache2/required32. Opt-in UI
+κρατά standalone default. JSON μαθήματος και αλγόριθμος ερωτήσεων ίδια.
+
+Independent Reviewer /root/review_optional_triples_20261110 χωρίς actionable
+P0/P1/P2/P3: exact7+7+16/11unit/85browser, ανεξάρτητα395+194JSC.102renderer
+checks/24defaultsnapshots supplied με in-memory harness provenance. Native
+Developer evidence9earned θέσεις,261observations/45traces,lifecycle8,
+repeat/recovery/continue/loading/error/keyboard/zoom και320/390/1280.40optional
+unit generations διατήρησαν και τις2requiredreceipts με cache2/2.8HTTP/SHA,
+HEAD/index exact,3owned portsκλειστές, profileαφαιρέθηκε. ΠροσωπικόςFirefox και
+server8013 ανέπαφα. Baseline/before7/diff, final-report.json και ανεξάρτητη
+αναφορά στον ίδιο φάκελο. Τα source/evidence παραμένουν παγωμένα μετά το review.
+
+Εξηγημένες harness αποτυχίες διατηρούνται. Όρια: συνέχειες από γνήσια receipts,
+όχι uninterrupted replay, μη δοκιμασμένο nativeoptionalorder/optionalMain54/
+Safari/φυσικόκινητό/προβολέας/offline/συνεδριακόμηχάνημα/Firefoxfreeze. Μελλοντικές
+αδοκίμαστες choiceOrder μπορεί να αναδημιουργούνται· τρέχουσα πρόοδος και
+requiredreceipt διατηρούνται. Main55→54 fingerprint σκόπιμα διαφέρει. Κανένα
+core/generator/scenarioJSON/MOL/SDF, commit/push/publication/export σε αυτή
+τη συνεισφορά. Η παλαιότερη core55 ενσωμάτωση καταγράφεται χωριστά. Επόμενο:
+τοπική δοκιμή χρήστη, με σαφή όρια same-tab/πεπερασμένου υλικού.
+
+# 2026-11-10 — Σχεδιασμός προαιρετικών τριάδων μετά την επιτυχία
+
+Read-only preflight για το νέο αίτημα επιπλέον εξάσκησης στα gates4/11.
+Καταγράφηκε πλάνο7paths στο `docs/checks/lesson-optional-triples-20261110/`:
+χωριστό required receipt/practice, opt-in UI, bounded separate cache και
+διατήρηση παλιών receipts/refresh. Learning Designer εισηγήθηκε προαιρετική
+συνέχεια οποτεδήποτε και σαφή ένδειξη εξάσκησης. Προβλέπεται έλεγχος πέρα από
+32generations λόγω πραγματικού cache ορίου. Απεριόριστες προσπάθειες από
+πεπερασμένο υλικό, χωρίς υπόσχεση αιώνιας μοναδικότητας. Αναμένεται έγκριση.
+Live upstream HEAD/CHANGELOG ίδια με actual sync5ab24955. Μόνο planning/notes,
+κανένα runtime/core/JSON/MOL, commit/push/publication ή export.
+
+# 2026-11-10 — Ολοκλήρωση κοινής εμπειρίας κουίζ μαθήματος και Συνεργείου
+
+Υλοποιήθηκε το εγκεκριμένο parity plan στα8paths του
+`docs/checks/workshop-lesson-parity-20261110/verification-target-r2.json`:
+renderer, generated adapter, checkpoint controller, scoped CSS, game HTML,
+Main54/Main55 και welcome cache URL. Κοινή προετοιμασία μόνο παρουσίασης και
+παραμετροποιημένη κύλιση page/dialog. Το direct Workshop έχει ίδιο prominent
+objective, basic/authored reminder, condensed largest, compact zoom, counter και
+semantic reveal, με ουδέτερο challenge και ίδια canonical data/progress.
+
+Baseline/before8, reviewed-r1 snapshots και δύο ακριβή diffs επιτρέπουν επαναφορά.
+Independent Reviewer /root/review_workshop_parity_20261110: κανένα ανοικτό
+P0/P1/P2/P3. R1νέοP3 expanded state και R2παλιόP2 nativeClose-disabled opener
+διορθώθηκαν με κοινό guarded close finalizer. Independent SHA/diff8+8+18+140,
+JSC263+32+161 και οπτική επιθεώρηση supplied screenshots. Browser εκτέλεση
+Developer:19unique earned θέσεις σε συνέχειες (12direct,6lesson,1Main54),
+reduced12, zoom33, dialog4, Main54header5,10HTTP/SHA και cleanup9owned ports.
+Έκθεση/όρια: `final-report.json`, `independent-review.json` και
+`browser/final-browser-report.json` στον ίδιο φάκελο.
+
+Δεν δηλώνεται uninterrupted warm replay. Διατηρούνται αρχικό Main54 assertion
+αγνώστου αιτίας (diagnostic rerun exact bytes passed), προηγούμενο warm timeout
+χωρίς click delivery trace και όλες οι διαγνωστικές αποτυχίες harness. Η αλλαγή
+δεν τεκμηριώνει λύση του ιστορικού Firefox freeze ή συνεδριακή ετοιμότητα.
+Κανένα core/JSON/MOL/SDF, commit/push/δημοσίευση/export σε αυτή τη συνεισφορά.
+Η προηγούμενη core55 ενσωμάτωση είναι χωριστή. Τοπική εγκατάσταση8013 ακριβής,
+Safari open command ολοκληρώθηκε· Safari runtime ανελεγμένο. Προσωπικός Firefox
+ανέπαφος. Επόμενο: δοκιμή χρήστη στο ενημερωμένο direct Workshop.
+
+# 2026-11-10 — Εγκεκριμένη υλοποίηση κοινής εμπειρίας κουίζ (σε έλεγχο)
+
+Ο χρήστης ενέκρινε στην κανονική συζήτηση το πλήρες parity plan. Προτίμηση
+από αυτό το σημείο: ερωτήσεις μέσα στη συνομιλία, επειδή το ειδικό question
+panel κόλλησε. Τα8source/cache αρχεία του plan υλοποιήθηκαν και πάγωσαν.
+Κοινό display preset και κοινός response-range scroller εξυπηρετούν direct
+Workshop και lesson dialog. Κοινό scoped CSS δίνει prominent objective,
+counter1/3, condensed largest και compact zoom· challenge κρατά ουδετερότητα.
+Authored questions παίρνουν σαφή display mission από explicit supported
+legacy-ID metadata. Canonical questions/answers/IDs/seeds και storage contracts ίδια.
+
+Evidence: docs/checks/workshop-lesson-parity-20261110/. Developer263 actual
+pinned-engine/adapter checks και32 full controller/FakeNode checks πέρασαν.
+Focused helpers/browser full flows σε εξέλιξη· fresh Reviewer
+/root/review_workshop_parity_20261110 εξετάζει source8,14static evidence.
+Αναμένονται τελικές αποδείξεις πριν χαρακτηριστεί ολοκληρωμένο.
+Δεν άλλαξε core, generator, JSON, SVG/MOL/SDF/Main52· protected18 ίδια.
+Κανένα commit/push/δημοσίευση/export. Προσωπικός browser ανέπαφος.
+
+# 2026-11-10 — Προέλεγχος κοινής εμπειρίας μαθήματος και Συνεργείου
+
+Ο χρήστης ζήτησε όλες οι βελτιώσεις των κουίζ να ισχύουν και στο direct-entry
+Συνεργείο. Έγινε μόνο ανάγνωση source/CSS/δεδομένων και έλεγχος live professor
+HEAD (ίδιο5ab24955 με actual sync). Explorer και Learning Designer έδωσαν
+συγκεκριμένα κενά/όρια. Καταγράφηκαν baseline, audit και πλάνο8paths στο
+docs/checks/workshop-lesson-parity-20261110/, προς έγκριση πριν από κώδικα.
+Προτείνεται κοινή παρουσίαση και semantic reveal με διαφορετικό scroll owner,
+διατήρηση challenge ουδετερότητας και canonical data/progress. Δεν έγινε
+runtime/core/scenario/MOL αλλαγή, commit, push, publication ή export.
+
+# 2026-11-10 — Οπτική αποδοχή και κανονική χρήση των αλλαγών στα κουίζ
+
+Ο χρήστης ενέκρινε το οπτικό αποτέλεσμα και ζήτησε να ενσωματωθούν οι αλλαγές.
+Επιβεβαιώθηκε ότι η βιβλιοθήκη χρησιμοποιεί ήδη Main55 με τα ίδια ελεγμένα
+runtime αρχεία και το ίδιο μάθημα. Ως κανονική τοπική παρουσίαση κρατούνται:
+κεντραρισμένο/μεγαλύτερο ζητούμενο, συνεπτυγμένος τύπος του μεγάλου μορίου και
+compact φακός. Δεν χρειάστηκε νέο runtime diff ή δεύτερη μεταφορά αρχείων.
+
+Οκτώ HTTP/SHA έλεγχοι της κανονικής διαδρομής στο8013 πέρασαν: library/main,
+δύοJS/CSS, νέα SVG/provenance και scenario JSON. Τα έξι συνδυασμένα reviewed
+hashes και14protected ίδια· receipt στο
+docs/checks/quiz-zoom-icon-20261110/adoption-20261110.json.
+Πρόκειται για Developer έλεγχο διαδρομής/bytes, όχι νέο browser replay.
+Τα προηγούμενα independent reviews διατηρούνται για το ακριβώς ίδιο περιεχόμενο.
+Δεν χρειάστηκε νέο code review για καταγραφή αποδοχής χωρίς αλλαγή κώδικα.
+
+Νέες εγγραφές μόνο receipt και session/contribution notes. Κανένα core, runtime,
+JSON μαθήματος ή MOL/SDF δεν άλλαξε σε αυτή την εντολή. Κανένα commit/push/
+δημοσίευση ή JSONexport. Η προηγούμενη δημιουργία core55 ανήκει στη χωριστή
+ενσωμάτωση. Επόμενο: κανονική χρήση του τοπικού μαθήματος μέσω βιβλιοθήκης.
+
+# 2026-11-10 — Ολοκληρώθηκε το διακριτικό κουμπί μεγέθυνσης
+
+Με έγκριση συγκεκριμένου πλάνου αντικαταστάθηκε το κείμενο «Μεγέθυνση σχεδίου»
+από φακό, μόνο στα ενσωματωμένα generated κουίζ αλκανίων. Μπαίνει στην υπάρχουσα
+κεφαλίδα του μορίου, χωρίς επικάλυψη εικόνας. Έχει44x44 επιφάνεια,22px SVG,
+περιγραφή/title και εμφανές keyboard focus. Χρησιμοποιεί το υπάρχον shared
+εικονίδιο με self-contained fallback. Το standalone και άλλοι μη opted callers
+κρατούν το κείμενο· οι λειτουργίες zoom και ο μηχανισμός κατάστασης δεν άλλαξαν.
+
+Αρχεία: js/namelecule-generated-repair-checkpoint.js (προαιρετικό flag),
+js/namelecule-game-repair.js (παρουσίαση control), css/namelecule-repair-round.css
+(διαστάσεις/εμφάνιση) και mulermoc-nom-55.html (τρία cache URLs).
+Κανένα chemistry/scenario/diagram asset ή core δεν άλλαξε σε αυτή τη συνεισφορά.
+
+Developer έλεγχοι: δύο JavaScriptCore syntax compiles και ακριβής σύγκριση
+engine/zoom.74 browser assertions και21 screenshots, πριν/μετά1280/390/320,
+click/Enter/Space,Close/Escape/focus, διατήρηση απαντήσεων/προόδου, replacement
+και order/next, standalone/default/fallback και controlled loading/error.
+Μία αντικατάσταση και ένα order κερδήθηκαν πραγματικά. Η πρόσβαση στο order
+χρησιμοποίησε αυτούσια ιστορική earned receipt, καταγεγραμμένη με SHA· δεν
+δηλώνεται νέο fullsix replay. Οι αποτυχίες harness διατηρούνται με αιτίες και
+στοχευμένες διορθώσεις·0JSerrors στις product flows,1στο invalid test asset,
+0στη διορθωμένη fixture. Ο τοπικός8013 σερβίρει ακριβώς τα τέσσερα frozen αρχεία.
+
+Fresh independent Reviewer /root/review_quiz_zoom_icon_20261110: κανένα actionable
+P0/P1/P2/P3. Έλεγξε ακριβή sources/before/diff/protected/43artifacts και screenshots
+με read-only εργαλεία. Η εκτέλεση browser παραμένει Developer evidence.
+Χημικός/Pedagogical έλεγχος N/A για την αλλαγή control. Οι έλεγχοι αφορούν
+headless Firefox, όχι Safari runtime/φυσικό κινητό/offline/συνεδριακό εξοπλισμό
+ή το ιστορικό Firefox freeze. Άνοιξε η στατική σύγκριση στον Safari για τον χρήστη.
+
+Αποδείξεις, frozen hashes και recovery before4:
+docs/checks/quiz-zoom-icon-20261110/final-report.json, independent-review.json,
+closure-guard.json και browser/visual-comparison.html. Τελικά4source/4before/
+14protected/5evidence/43browser/HEAD/index ίδια.11core αμετάβλητα έναντι task
+baseline· η προηγούμενη core55 δημιουργία ανήκει στη χωριστή ενσωμάτωση.
+Μόνο owned test processes έκλεισαν με guards, έξι ports κλειστές, προσωπικός
+Firefox και8013 ανέπαφα. Κανένα νέο commit, push, publication ή JSON export.
+Live professorHEAD5ab24955 ίδιο με actual sync. Επόμενο: οπτική χρήση/αποδοχή
+της τοπικής δοκιμής· δεν μένει εγκεκριμένη εργασία υλοποίησης.
+
+# 2026-11-10 — Προέλεγχος συμπαγούς κουμπιού μεγέθυνσης
+
+Ελέγχθηκαν μόνο ανάγνωση ο renderer, ο generated adapter, το embedded CSS
+και υπάρχον εικονίδιο/δοκιμές. Στόχος είναι φακός αντί κειμένου στην υπάρχουσα
+κεφαλίδα του μορίου, μόνο στα ενσωματωμένα κουίζ αλκανίων, διατηρώντας
+τη μεγέθυνση, το focus και την πρόοδο. Έτοιμο συγκεκριμένο πλάνο και baseline
+στο docs/checks/quiz-zoom-icon-20261110/, προς έγκριση κατά AGENTS.md.
+Ο explorer /root/quiz_zoom_icon_preflight_20261110 έδωσε περιορισμένα read-only
+references για υπάρχον SVG και test helpers. Δεν χρειάστηκε χημικός ή
+παιδαγωγικός έλεγχος σε αυτόν τον προέλεγχο παρουσίασης.
+Live professor HEAD ίδιο5ab24955 με actual sync. Δεν άλλαξε κανένα core,
+runtime, scenario JSON ή MOL/SDF. Κανένα commit, push ή δημοσίευση.
+
+# 2026-11-10 — Ολοκληρώθηκε η παρουσίαση των ενσωματωμένων κουίζ αλκανίων
+
+Με ρητή έγκριση εφαρμόστηκε η παρατήρηση του καθηγητή: το ζητούμενο αποκτά
+μεγαλύτερη, έντονη γραμματοσειρά και κεντρική στοίχιση και το μεγάλο
+3-αιθυλο-2,5-διμεθυλοεξάνιο εμφανίζεται συνεπτυγμένο, σε κανονική εικόνα και
+μεγέθυνση. Η σωστή ετικέτα/alt δηλώνει τη μορφή, χωρίς ορατή αρίθμηση ή
+επισήμανση που αποκαλύπτει τη λύση. Τα μικρότερα μόρια παραμένουν ανεπτυγμένα.
+Το αυτόνομο Συνεργείο κρατά την προηγούμενη παρουσίασή του.
+
+Αρχεία της συνεισφοράς:
+- js/namelecule-generated-repair-checkpoint.js: display clone και προαιρετικές
+  ρυθμίσεις εικόνας/ζητουμένου για τον υπάρχοντα κατάλογο.
+- js/namelecule-game-repair.js: προαιρετική παρουσίαση embedded, συνεπές main/zoom
+  και ετικέτα μορφής· προφύλαξη για το standalone.
+- css/namelecule-repair-round.css: ζητούμενο 24px/20px, κεντραρισμένο και έντονο.
+- mulermoc-nom-55.html: τα τρία αντίστοιχα cache URLs.
+- games/assets/name-repair/condensed/ethyl_3_dimethyl_2_5_hexane.svg και
+  provenance.json: νέα εικόνα από την υπάρχουσα συνεπτυγμένη γεωμετρία και
+  ακριβής τεκμηρίωση πηγών/μετασχηματισμού.
+
+Οι canonical ερωτήσεις/λύσεις/IDs/seeds και ο μηχανισμός προόδου δεν άλλαξαν.
+Δεν έγινε αλλαγή στο JSON του μαθήματος, στον κατάλογο, στη γεννήτρια ή στα
+MOL/SDF. Η επιλογή συνεπτυγμένης εικόνας αφορά το συγκεκριμένο μεγάλο μόριο
+του σημερινού καταλόγου, δεν αποτελεί γενικό κανόνα μέτρησης πολυπλοκότητας.
+
+Developer evidence: 263 έλεγχοι πραγματικής pinned μηχανής/generator/adapter
+με DOM/transport/WebCrypto doubles· 70 browser πριν και 113 μετά, έξι native
+κερδισμένες επισκευές σε κάθε πλήρη ροή. Ελέγχθηκαν κύλιση, gates, replay/Exit,
+zoom, partial refresh και αυτούσια παλιά earned receipts έως το βήμα 12.
+Επιπλέον 11 στοχευμένοι έλεγχοι λανθασμένης αντικατάστασης/Έλεγχος/κλειδωμένης
+συνέχειας και διόρθωσης, καθώς και ακριβείς standalone objective μετρήσεις.
+Viewports 1280/390/320 σε owned headless Firefox, μηδέν καταγεγραμμένα JS
+errors στις ολοκληρωμένες αυτές διαδρομές. Όριο: προσομοίωση στενής οθόνης,
+όχι φυσικό κινητό/Safari/offline/προβολέας ή εγγύηση συνεδριακής συνέχειας.
+
+Ανεξάρτητος Chemistry Validator επιβεβαίωσε ισομορφισμό SVG/pinned expanded/
+Main55 condensed/γράφο από το όνομα, C10H22, εννέα απλούς C–C και σωστά CHn.
+Fresh Reviewer /root/review_alkane_quiz_presentation_20261110, βάση 168e3cec
+και πραγματικά before snapshots: κανένα actionable P0/P1/P2/P3.
+Τα EVID-01 (ακριβής standalone selector) και EVID-02 (αρνητικό submission)
+έκλεισαν με περιορισμένα συμπληρώματα, χωρίς production αλλαγές.
+Ο Reviewer εκτέλεσε ανεξάρτητα ελέγχους πηγής/hash/σύνταξης/αποδείξεων·
+η εκτέλεση browser παραμένει τεκμήριο Developer, όχι ανεξάρτητη εκτέλεση.
+
+Πλήρης καταγραφή: docs/checks/alkane-quiz-presentation-20261110/final-report.json,
+independent-review.json, closure-guard.json και browser/visual-comparison.html.
+Παγωμένα έξι source hashes, τέσσερα before, εννέα static evidence και
+59+12 browser artifacts ακριβή. Οι διαγνωσμένες αποτυχίες του harness κρατήθηκαν.
+Έκλεισαν μόνο οι owned test διεργασίες· ο προσωπικός Firefox δεν πειράχτηκε.
+
+Κανένα core δεν άλλαξε σε αυτή τη συνεισφορά: και τα 11 hashes ίδια με το task
+baseline. Η προηγούμενη δημιουργία core55 καταγράφεται χωριστά παρακάτω.
+Δεν δημιουργήθηκε commit, push, δημοσίευση ή JSON export. Live professor HEAD
+5ab24955 ίδιο με actual sync στον προέλεγχο. Δεν μένει εργασία υλοποίησης
+στο εγκεκριμένο scope· επόμενο βήμα η οπτική χρήση της τοπικής έκδοσης.
+
+# 2026-11-10 — Προέλεγχος παρουσίασης κουίζ αλκανίων
+
+Αίτημα: πιο εμφανές ζητούμενο και συνεπτυγμένος τύπος στα μεγάλα διακλαδισμένα.
+Read-only διερεύνηση renderer/adapter/CSS/καταλόγου και Learning Designer
+τεκμηρίωσαν πλάνο για τις έξι επισκευές, με νέα condensed εικόνα του μεγάλου
+3-αιθυλο-2,5-διμεθυλοεξανίου. Baseline και συγκεκριμένο πλάνο:
+docs/checks/alkane-quiz-presentation-20261110/. Live professorHEAD ίδιο5ab24955.
+Πλάνο προς έγκριση: τέσσερα code/cache paths και νέοSVG/provenance, έλεγχοι
+ροής/προόδου/κύλισης/zoom/mobile, targetedχημικόςέλεγχος και freshReviewer.
+Αναμένεται έγκριση πριν από υλοποίηση. Άλλαξαν μόνο notes/preflight evidence.
+Δεν άλλαξε κανένα runtime/core/JSON/MOL, ούτε έγινε commit ή δημοσίευση.
+
+# 2026-11-10 — Ολοκληρωμένη τοπική ενσωμάτωση καθηγητή v55
+
+Ο χρήστης ενέκρινε το συγκεκριμένο πλάνο και επέλεξε καταχώριση προσωρινού 3D
+με ρητή επιβεβαίωση. Το σημερινό έργο αφορά τη μετάβαση από πραγματικό sync
+f49b810 σε ελεγμένο upstream 5ab24955, 80 commits / 38 paths. Τα προϋπάρχοντα
+Namelecule MOL/SDF, μαθήματα, παιχνίδια, v54/v52 και React διατηρούνται.
+
+Στο χωριστό candidate δημιουργήθηκαν 15 αρχεία v55 και ενημερώθηκαν δύο
+navigation HTML και εννέα αρχεία τεκμηρίωσης. Ολόκληρη η λίστα/ακριβή hashes:
+`docs/checks/v54-merge-20261109/review-target.json`. Νέα μηχανή
+`js/mulermoc-nom-core-55.js`, με διατήρηση των τοπικών αυστηρών ελέγχων,
+διορθώσεις τεκμηριωμένων παραλείψεων κλάδων/πολλαπλασιαστών/EN και νέα
+upstream παραγωγή/ονοματολογία. Προσωρινό 3D με σωστό γράφο, επιβεβαίωση Accept
+και διαρκή ένδειξη μη επιβεβαιωμένης γεωμετρίας/σύγκλισης. Διατηρούνται οι
+ασύγχρονες προστασίες και η ακριβής παλιά μηχανή των υπαρχόντων κουίζ.
+
+Ο Chemistry Validator επικύρωσε ανεξάρτητα τις τελικές χημικές διορθώσεις.
+Ένας fresh Reviewer, `/root/review_v55_integration_20261110`, εντόπισε τρία P2:
+RV55-01 συμφωνία ελληνικού συστηματικού ονόματος/panel, RV55-02 ταυτόχρονα
+αιτήματα OpenClatura και RV55-03/CV55-12 ενδείξεις parity σε μη στερεογόνα CH2
+κατά το write MOL του JSmol. Διορθώθηκαν στο αιτιακό σημείο και πέρασαν
+ανεξάρτητο στοχευμένο επανέλεγχο. Το τελευταίο διορθώνει μόνο readback του
+JSmol· οι αυστηροί έλεγχοι πηγής, γράφου, stereo/query, φορτίου, ισοτόπων και H
+μένουν ίδιοι. Οι αποδείξεις χωρίζουν JSC, πραγματικό browser και fixtures.
+
+Ολοκληρώθηκαν το μάθημα 12 βημάτων/έξι επισκευές, 562 άμεσες απεικονίσεις
+ελέγχου γραμμάτων, 14 μαθήματα με 42 αντιπροσωπευτικά live snapshots,
+αντιστοιχίες 2D/3D, βαθμονόμηση 54/55, πραγματική ακύρωση/STOP/νέα υποβολή και
+περαιτέρω 200 βήματα JSmol, προσωρινή καταχώριση/SaveAll/import. Τα μερικά
+παλιότερα runs και τα harness failures διατηρούνται με τους περιορισμούς τους.
+Η συνολική ανεξάρτητη αποδοχή ολοκληρώθηκε χωρίς ανοικτά P0/P1 ή νέα P2/P3.
+Το exact local install των26αρχείων ολοκληρώθηκε. Τελικό primary smoke27/27,
+17HTTP hashes/44protected exact, διατήρηση earned/partial προόδου μετάrefresh
+και bounded54/52/React πέρασαν. Καταγράφηκε ένα JSmol nullplatform repaint στη
+μετάβαση52σεReact χωρίς παρατηρημένη αποτυχία των ελεγμένων ροών· αιτία/συσχέτιση
+με παλιό σφάλμα μη αποδεδειγμένη, P2 diagnostic retained. Η κονσόλα δεν είναι καθαρή.
+
+Υπάρχουν ελεγμένα before-install rollback και frozen 26-file candidate archive.
+Η τοπική κύρια πλέον v55, τα παλιά core ίδια· νέο core55 εγκαταστάθηκε. Κανένα
+νέο commit, push ή δημοσίευση. Ο προσωπικός Firefox δεν πειράχτηκε. Δεν
+δηλώνεται λύση του ιστορικού παγώματος, φυσική επικύρωση 3D ή συνεδριακή ετοιμότητα.
+Τελικά572protected/26installed/122candidate+13primary artifacts/παλιάcore/HEAD/
+index ίδια με τα αναμενόμενα. Μόνο3ownedPIDs έκλεισαν με guards, προσωπικός
+Firefox ανέπαφος. Αναφορά: docs/checks/v54-merge-20261109/final-report.json.
+Δεν υπάρχει νέο τοπικό commit reference· sourceHEAD168e3c, actualsync5ab24955.
+Επόμενο: οπτική αποδοχή/χρήση τοπικήςv55, και μόνο με σχετικό αίτημα αποθήκευση/
+checkpoint/δημοσίευση. Η ξεχωριστή διάγνωση Firefox/JSmol παραμένει ανοικτή.
+
+# 2026-11-09 — Προέλεγχος πλήρους ενσωμάτωσης καθηγητή στη v55
+
+Με νέο ρητό αίτημα ανακλήθηκε το HOLD. Διαβάστηκαν live upstream HEAD, history
+και CHANGELOG: actual sync f49b810 έως e76d3c0/v55, 75 εκκρεμή commits / 37 paths,
+16 νέα από previous checked bfa9ce0. Exact snapshots, baseline, diff, plan και
+actual-code JavaScriptCore findings στο `docs/checks/v54-merge-20261109/`.
+
+Read-only Chemistry Validator / viewer explorer / Planner / local explorer
+εντόπισαν πραγματικές naming, graph-identity και async3D αστοχίες. Παρουσιάστηκε
+συγκεκριμένο πλάνο νέας v55 με current54 ως recovery και διατήρηση 141 keys /
+422 μορφών / 14 JSON / 328 βημάτων / Namelecule branding. Ζητήθηκε πρόσθετη
+έγκριση για τις ουσιαστικές συγκρούσεις και επιλογή πολιτικής προσωρινού 3D.
+Η έγκριση εκκρεμεί. Οι probes είναι in-memory, όχι browser ή τελικό review.
+
+Κανένα runtime/core δεν άλλαξε, HEAD/index ίδια. Καμία ενσωμάτωση, commit,
+push ή δημοσίευση ακόμη. Επόμενο μετά την έγκριση: isolated candidate,
+verification, ένας fresh Reviewer και local install. Δεν δηλώνεται λύση
+του παλιού Firefox freeze ή ετοιμότητα συνεδρίου.
+
 # 2026-11-09 — Αναφορά καθηγητή για τις νέες εργασίες 6–9 Νοεμβρίου
 
 Κατόπιν αιτήματος δημιουργήθηκαν τα πέντε αρχεία στο docs/professor-20261109/:

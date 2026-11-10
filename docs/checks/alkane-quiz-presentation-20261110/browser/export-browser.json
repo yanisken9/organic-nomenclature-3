@@ -1,0 +1,197 @@
+{
+  "javascriptErrors": [],
+  "events": [
+    {
+      "type": "event",
+      "method": "log.entryAdded",
+      "params": {
+        "type": "console",
+        "method": "log",
+        "source": {
+          "realm": "c1347448-2d80-4e5d-bccb-4f5f97a727e9",
+          "context": "2f89d006-b20f-4e91-8537-8297c1445384",
+          "userContext": "default"
+        },
+        "args": [
+          {
+            "type": "string",
+            "value": "JSmol load jmolAppletNomeclature loadClazz..."
+          }
+        ],
+        "level": "info",
+        "text": "JSmol load jmolAppletNomeclature loadClazz...",
+        "timestamp": 1794283581116,
+        "stackTrace": {
+          "callFrames": [
+            {
+              "columnNumber": 484,
+              "functionName": "a._addExec",
+              "lineNumber": 158,
+              "url": "http://127.0.0.1:52134/js/vendor/jsmol/namelecule-20261031-r1/JSmol.min.js"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "event",
+      "method": "log.entryAdded",
+      "params": {
+        "type": "console",
+        "method": "log",
+        "source": {
+          "realm": "c1347448-2d80-4e5d-bccb-4f5f97a727e9",
+          "context": "2f89d006-b20f-4e91-8537-8297c1445384",
+          "userContext": "default"
+        },
+        "args": [
+          {
+            "type": "string",
+            "value": "JSmol load jmolAppletNomeclature start applet..."
+          }
+        ],
+        "level": "info",
+        "text": "JSmol load jmolAppletNomeclature start applet...",
+        "timestamp": 1794283581139,
+        "stackTrace": {
+          "callFrames": [
+            {
+              "columnNumber": 484,
+              "functionName": "a._addExec",
+              "lineNumber": 158,
+              "url": "http://127.0.0.1:52134/js/vendor/jsmol/namelecule-20261031-r1/JSmol.min.js"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "event",
+      "method": "log.entryAdded",
+      "params": {
+        "type": "console",
+        "method": "log",
+        "source": {
+          "realm": "c1347448-2d80-4e5d-bccb-4f5f97a727e9",
+          "context": "2f89d006-b20f-4e91-8537-8297c1445384",
+          "userContext": "default"
+        },
+        "args": [
+          {
+            "type": "string",
+            "value": "[ENGINE-EN-SYS] methane -> methane"
+          }
+        ],
+        "level": "info",
+        "text": "[ENGINE-EN-SYS] methane -> methane",
+        "timestamp": 1794283581659,
+        "stackTrace": {
+          "callFrames": [
+            {
+              "columnNumber": 12,
+              "functionName": "fPopulateEngineENFromGreek",
+              "lineNumber": 388,
+              "url": "http://127.0.0.1:52134/js/mulermoc-nom-name-en-55.js?v=namelecule-v55-20261110-r2"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "event",
+      "method": "log.entryAdded",
+      "params": {
+        "type": "console",
+        "method": "log",
+        "source": {
+          "realm": "c1347448-2d80-4e5d-bccb-4f5f97a727e9",
+          "context": "2f89d006-b20f-4e91-8537-8297c1445384",
+          "userContext": "default"
+        },
+        "args": [
+          {
+            "type": "string",
+            "value": "[ENGINE-EN] methane -> methane"
+          }
+        ],
+        "level": "info",
+        "text": "[ENGINE-EN] methane -> methane",
+        "timestamp": 1794283581659,
+        "stackTrace": {
+          "callFrames": [
+            {
+              "columnNumber": 12,
+              "functionName": "fPopulateEngineENFromGreek",
+              "lineNumber": 388,
+              "url": "http://127.0.0.1:52134/js/mulermoc-nom-name-en-55.js?v=namelecule-v55-20261110-r2"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "event",
+      "method": "log.entryAdded",
+      "params": {
+        "type": "console",
+        "method": "log",
+        "source": {
+          "realm": "c1347448-2d80-4e5d-bccb-4f5f97a727e9",
+          "context": "2f89d006-b20f-4e91-8537-8297c1445384",
+          "userContext": "default"
+        },
+        "args": [
+          {
+            "type": "string",
+            "value": "[SELECT] mol=methane SMILES=C SYSTEMATIC_EN=fetching…"
+          }
+        ],
+        "level": "info",
+        "text": "[SELECT] mol=methane SMILES=C SYSTEMATIC_EN=fetching…",
+        "timestamp": 1794283581663,
+        "stackTrace": {
+          "callFrames": [
+            {
+              "columnNumber": 10,
+              "functionName": "fLogMolSelectWithIUPAC",
+              "lineNumber": 492,
+              "url": "http://127.0.0.1:52134/js/mulermoc-nom-iupac-55.js?v=namelecule-v55-20261110-r2"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "event",
+      "method": "log.entryAdded",
+      "params": {
+        "type": "console",
+        "method": "log",
+        "source": {
+          "realm": "c1347448-2d80-4e5d-bccb-4f5f97a727e9",
+          "context": "2f89d006-b20f-4e91-8537-8297c1445384",
+          "userContext": "default"
+        },
+        "args": [
+          {
+            "type": "string",
+            "value": "JSmol exec jmolAppletNomeclature loadClazz null -- OK"
+          }
+        ],
+        "level": "info",
+        "text": "JSmol exec jmolAppletNomeclature loadClazz null -- OK",
+        "timestamp": 1794283581719,
+        "stackTrace": {
+          "callFrames": [
+            {
+              "columnNumber": 373,
+              "functionName": "l",
+              "lineNumber": 157,
+              "url": "http://127.0.0.1:52134/js/vendor/jsmol/namelecule-20261031-r1/JSmol.min.js"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

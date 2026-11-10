@@ -1,0 +1,260 @@
+{
+  "timestampUTC": "2026-11-09T22:15:36.775026+00:00",
+  "timestampAthens": "2026-11-10T00:15:36.780031+02:00",
+  "role": "NAMELECULE_DEVELOPER_V1_20261023",
+  "base": "Original core/frozen-manifest.json (816b2015 core55 /a4bcf58e EN55) with current54 introduction triage",
+  "scope": "One root-delegated correction unit CV55-07/08/09/10 in candidate core55/EN55 and owned core evidence only. Greek formatting unchanged; no general naming engine extension.",
+  "runtimeFiles": [
+    {
+      "path": "/private/tmp/namelecule-professor-merge-20261109-oxj7hfyy/candidate/js/mulermoc-nom-core-55.js",
+      "sha256": "6cbdbd0ce60f5d66ff3e6925cdfd48e470764baa02b6263f325eff356df5e270"
+    },
+    {
+      "path": "/private/tmp/namelecule-professor-merge-20261109-oxj7hfyy/candidate/js/mulermoc-nom-name-en-55.js",
+      "sha256": "e2dd570b5cbfe1f07a3c0ce29f8e4535aeda64bf36ee85741f7f0421871042c8"
+    }
+  ],
+  "findings": [
+    {
+      "id": "CV55-07",
+      "severity": "P2",
+      "resolution": "Intrinsic locant enclosure no longer depends on school/sys string inequality; fallback comp3 uses same gate. 6-(2-chloroethyl)undecane with exact joined boxes."
+    },
+    {
+      "id": "CV55-08",
+      "severity": "P2",
+      "resolution": "Ignore italic sec-/tert- for Roman sorting; tie uses italic prefix before locants. Keep full group permutation when G1 falls in the middle, retaining per-content IDs. Fixture school tertbutyl/ethyl/propyl and systematic ethyl/2-methylpropan-2-yl/propyl both exact."
+    },
+    {
+      "id": "CV55-09",
+      "severity": "P2",
+      "resolution": "Classify mapped locant-led carbon-substituted alkyl stems as substituted; use bis/tris/tetrakis for 2-methylpropyl and 2-methylpropan-2-yl while retaining di(propan-2-yl)/di(butan-2-yl)."
+    },
+    {
+      "id": "CV55-10",
+      "severity": "P1",
+      "introduction": "Inherited in current54, reproduced here before code edits; also present in frozen pre-correction55.",
+      "rootCause": "Halogen/nitro are ineligible for general alkyl prefix collection. Legacy path without decorated groups names only direct hetero groups and silently drops carbon branches.",
+      "resolution": "Failclosed when the legacy halo/nitro path has plain carbon branches and no decorated merge. Original unsaturated halo, analogous nitro and saturated halo probes decline; unbranched halo and supported decorated paths remain named.",
+      "verificationStatus": "Developer checks passed; independent targeted verification REQUIRED before declaring P1 closed."
+    }
+  ],
+  "verification": {
+    "coreBroad": {
+      "molecules": 141,
+      "namingParentRegressionCases": 844,
+      "namingParentDifferences": 0,
+      "coldInitCases": 844,
+      "exactMaps": 842,
+      "mapCases": 844,
+      "signatureMismatches": [],
+      "untranslatedMaps": [
+        {
+          "key": "penten_3_yne_1",
+          "mode": "expanded",
+          "cm": "algorithmic",
+          "exact": false,
+          "translated": null,
+          "chain3": [
+            5,
+            4,
+            3,
+            2,
+            1
+          ],
+          "signatureMatches": true,
+          "pool": [
+            [
+              1,
+              2,
+              3,
+              4,
+              5
+            ]
+          ],
+          "mappedPool": [
+            null
+          ]
+        },
+        {
+          "key": "penten_3_yne_1",
+          "mode": "expanded",
+          "cm": "data",
+          "exact": false,
+          "translated": null,
+          "chain3": [
+            5,
+            4,
+            3,
+            2,
+            1
+          ],
+          "signatureMatches": true,
+          "pool": [
+            [
+              1,
+              2,
+              3,
+              4,
+              5
+            ]
+          ],
+          "mappedPool": [
+            null
+          ]
+        }
+      ],
+      "generatorCases": 1263,
+      "generatorNamingDifferences": [],
+      "reorderedGraphMaps": 422,
+      "reorderedGraphMapFailures": [
+        {
+          "key": "penten_3_yne_1",
+          "mode": "expanded",
+          "exact": false
+        }
+      ],
+      "invalidInputChecks": 6,
+      "chemicalOraclePermutationCases": 240,
+      "chemicalGuardCases": 15,
+      "mapBoundaryCases": 4,
+      "generatorBentSp": [
+        {
+          "key": "butanenitrile",
+          "mode": "skeletal",
+          "inputBentSp": [
+            {
+              "atom": 1,
+              "cosine": -0.5000089280931208
+            }
+          ],
+          "results": [
+            {
+              "kind": "expanded",
+              "name": "βουτανονιτρίλιο",
+              "heavyAtoms": 5,
+              "atoms": 12,
+              "sameName": true,
+              "bentSp": [
+                {
+                  "atom": 1,
+                  "cosine": -0.5000089280931208
+                }
+              ],
+              "newBentSp": [],
+              "signatureMatches": true
+            }
+          ]
+        }
+      ],
+      "generatorNewBentSp": [],
+      "terminalSpDirectionCases": 4,
+      "unsupportedGeneratorSources": [
+        {
+          "key": "penten_3_yne_1",
+          "mode": "expanded",
+          "unsupported": true,
+          "results": []
+        }
+      ]
+    },
+    "englishOracle": {
+      "checks": 1084,
+      "libraryComparisons": 844,
+      "newCases": 92
+    },
+    "englishVariants": {
+      "cases": 844,
+      "variantAssemblies": 1688,
+      "differences": 42,
+      "mismatches": 0,
+      "keysWithMismatches": [],
+      "differenceReason": "Preserved local separator and terminal-e box fusion fixes on seven molecules; names identical to upstream55."
+    },
+    "targetedFixtures": 10,
+    "ruleBoundaryChecks": 20,
+    "boxIdInvariant": "CV55-08 comp1 stays systematic tert group; comp3 ethyl; comp3b propyl; display ids retain mapping in sorted order. All fixture IDs unique and joined school/sys text exact.",
+    "causalPrior": "CV55-01/02/03 retested; 13 local safeguard functions byte-identical to current54.",
+    "coreFunctionsUnchangedExceptGuessName": 64,
+    "primaryCore54SHA256Unchanged": "8f3e5f76d96322faf7cf9251f4cae3eca204fe2f82bf5754fdce6ffc4cd5d5a9",
+    "propertyMappingGeometryReuse": "No parser/writer/map/generator/geometry function changed in this correction. Original full-suite evidence retained; broad naming includes 1263 regenerated-name checks. Separate property and geometry suites not repeated.",
+    "static": [
+      {
+        "command": [
+          "git",
+          "diff",
+          "--no-index",
+          "--check",
+          "/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/v54-merge-20261109/core/corrections-20261110/before-core55.js",
+          "/private/tmp/namelecule-professor-merge-20261109-oxj7hfyy/candidate/js/mulermoc-nom-core-55.js"
+        ],
+        "exitCode": 1,
+        "output": "",
+        "meaning": "differences present; no whitespace errors"
+      },
+      {
+        "command": [
+          "git",
+          "diff",
+          "--no-index",
+          "--check",
+          "/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/v54-merge-20261109/core/corrections-20261110/before-name-en55.js",
+          "/private/tmp/namelecule-professor-merge-20261109-oxj7hfyy/candidate/js/mulermoc-nom-name-en-55.js"
+        ],
+        "exitCode": 1,
+        "output": "",
+        "meaning": "differences present; no whitespace errors"
+      }
+    ]
+  },
+  "commands": [
+    [
+      "python3",
+      "/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/v54-merge-20261109/core/test-corrections55.py",
+      "/private/tmp/namelecule-professor-merge-20261109-oxj7hfyy/candidate"
+    ],
+    [
+      "python3",
+      "/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/v54-merge-20261109/core/apply-corrections55.py",
+      "/private/tmp/namelecule-professor-merge-20261109-oxj7hfyy/candidate"
+    ],
+    [
+      "python3",
+      "/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/v54-merge-20261109/core/test-correction-regressions.py",
+      "/private/tmp/namelecule-professor-merge-20261109-oxj7hfyy/candidate"
+    ],
+    [
+      "python3",
+      "/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/v54-merge-20261109/core/test-correction-regressions.py",
+      "/private/tmp/namelecule-professor-merge-20261109-oxj7hfyy/candidate",
+      "--causal-only"
+    ],
+    [
+      "python3",
+      "/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/v54-merge-20261109/core/test-corrections55.py",
+      "/private/tmp/namelecule-professor-merge-20261109-oxj7hfyy/candidate",
+      "--check"
+    ]
+  ],
+  "testHarnessAdjustment": "The broad correction command completed core/naming/EN assertions, then exposed that the prior causal third so-called supported fixture omitted a 3-C side branch. The correction wrapper explicitly expects that case to decline under CV55-10, keeps the first two genuinely supported decorated cases, and reruns only the affected causal suite successfully. Historical evidence not overwritten.",
+  "primarySource": "https://iupac.qmul.ac.uk/BlueBook/P1.html",
+  "sourceSections": [
+    "P-14.5.1",
+    "P-14.5.2",
+    "P-14.5.3",
+    "P-16.3.2(c)",
+    "P-16.3.4(a)",
+    "P-16.3.5(a)",
+    "P-16.5.1.1",
+    "P-16.5.1.2"
+  ],
+  "sourceAccess": "Read using web tool during this correction unit; requirements interpreted narrowly for current supported structures.",
+  "limitations": [
+    "Actual macOS JavaScriptCore execution, not browser/visual evidence or independent review.",
+    "Viewer highlight behavior after sorted component navigation is for root browser validation; stable component IDs were checked numerically here.",
+    "Original exclusions remain: methane skeletal absent; literal [H] raw form unsupported; inherited expanded-source nitrile bend retained by H-only generation; plain multi-nitro EN multiplier omission remains outside this correction.",
+    "Independent chemistry/Reviewer targeted verification pending; CV55-10 P1 may not be declared closed from Developer evidence alone.",
+    "No primary runtime install, notes writes, stage, commit, push, publication, dependency installation or agents launched."
+  ],
+  "coreChangeReport": "Candidate mulermoc-nom-core-55.js now declines unsupported alkyl/halo or nitro combinations that omit carbon atoms; reproduced also on core54. name-en-55 fixes enclosure, order and substituted-stem multiplicity with Greek format preserved. Targeted/broad JSC checks passed. Independent P1 verification pending. Primary core54/core52 unchanged by this work. Candidate local only, no commit/publication."
+}

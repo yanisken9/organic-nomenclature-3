@@ -1,0 +1,6 @@
+Initial harness failure: whole-round equality for the order fixture incorrectly rejected the expected condensed asset/alt change. Corrected assertion compares only feedback for the replacement-only reminder requirement. Production code unchanged.
+
+Exception: Error: order presentation does not append replacement-only reminder
+check@docs/checks/workshop-lesson-parity-20261110/unit/presentation-reveal-harness.js:1092:49
+equal@docs/checks/workshop-lesson-parity-20261110/unit/presentation-reveal-harness.js:1093:36
+global code@docs/checks/workshop-lesson-parity-20261110/unit/presentation-reveal-harness.js:1183:6

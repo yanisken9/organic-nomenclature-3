@@ -1,0 +1,20 @@
+{
+  "approval": "User explicitly approved with ναι on2026-11-10",
+  "request": "Hide top Return once the final required quiz is solved and lower Continue/Another triple actions are shown.",
+  "files": [
+    "js/namelecule-quiz-checkpoints.js",
+    "mulermoc-nom-54.html",
+    "mulermoc-nom-55.html"
+  ],
+  "behavior": [
+    "Use current rendered final-round progress plus verified completion and practice support to hide required Return.",
+    "Refresh header on successful completion and restored rendered progress. Keep required Return during loading/error and earlier/incomplete rounds.",
+    "Preserve existing optional header behavior, Escape, completion validation, lower two actions and progress.",
+    "Shared behavior for generated alkane lesson checkpoints in both lesson stops; no question, solution or scenario edits."
+  ],
+  "verification": "Existing controller regression and bounded native browser before/after: final completion, reopen/refresh, loading/error, dialog reuse, lower Continue/Another triple,320/390width and one fresh independent Reviewer.",
+  "coreChanged": false,
+  "JSONExport": false,
+  "publication": false,
+  "explorer": "/root/quiz_completed_return_preflight (read-only source trace, no runtime claim)"
+}

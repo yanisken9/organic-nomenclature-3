@@ -1,0 +1,21 @@
+{
+  "files": {
+    "docs/checks/required-completion-navigation-20261110/unit/run.py": "1d4f5122e2b5543f841624d571d6a53273dc05efb5a1a701d8c72ac0559f3bc4",
+    "docs/checks/required-completion-navigation-20261110/unit/controller-harness-counterfactual.js": "a9856386de02ab5d2acb15c7e90403a308fc64735fa3196517f6c378e0533f9c",
+    "docs/checks/required-completion-navigation-20261110/unit/counterfactual.json": "8bf4b11b0cb9d0bf60da980d1423293452e59b81b9bddf30084e3213ce2f7887",
+    "docs/checks/required-completion-navigation-20261110/unit/cases.js": "93c6ebbefc0af8c3742d2966b973809401cb652607582a86c7e517bc4a164fd4",
+    "docs/checks/required-completion-navigation-20261110/unit/results.json": "2bb342dfaa4be7936d0f51655564b18d11fdfec3acf64283fead16846751bb68",
+    "docs/checks/required-completion-navigation-20261110/unit/controller-harness.js": "f806dbbd03995a970d91f49c6c090ed16c48ca9583c25c3de8e72203197a7755",
+    "docs/checks/required-completion-navigation-20261110/unit/counterfactual-pre-exit-status.json": "4c330b1e31ceffae4948696d2caf58222dc47bdfaaa502c256b9239d6dba46d9",
+    "docs/checks/required-completion-navigation-20261110/unit/failure-jsc-unicode-path.json": "956477af5ef54f0131ac0baea811721f3c6855a935961211bad8d91264c7e5c3"
+  },
+  "developerChecks": 223,
+  "existingChecks": 199,
+  "newCases": 24,
+  "counterfactualExpectedFailure": "Original controller fails at verified live third success hides Return.",
+  "retainedHarnessFailures": [
+    "JSC absolute Unicode path did not open; corrected to relative ASCII harness path.",
+    "JSC returns exit0 for printed Promise failure; runner now requires absence of FAIL and exits1 on detected failure. Original counterfactual already printed the correct new-behavior failure."
+  ],
+  "frozen": true
+}

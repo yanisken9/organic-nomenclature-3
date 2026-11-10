@@ -1,0 +1,97 @@
+{
+  "completed": false,
+  "stage": "after",
+  "checks": [
+    {
+      "label": "Exact eight served source hashes",
+      "detail": {
+        "js/namelecule-game-repair.js": "c4053848ced011ebbd3a0402ef4c2d7967be7671d4584a75b7646f2800bde297",
+        "js/namelecule-generated-repair-checkpoint.js": "91da84de2ba1c59e73b1c96ca15af265da440a016f49c83b0e32a58d951f3a04",
+        "js/namelecule-quiz-checkpoints.js": "ea7e2cbca4f41535c83d5ee672198dd6ae23bebd1467fc5b126062f67a09fe3b",
+        "css/namelecule-repair-round.css": "0b089ab96ffd9dcd96cb81bc035f7cfd8cbeece838022d6a77c10372d69b8f67",
+        "games/name-repair.html": "e1c902cf28119bbe69469ecbb91137bbd148499d8aeff778d81b977dfa0b8da0",
+        "mulermoc-nom-54.html": "6665dfe01620e05f0732afad912f6cfd180dc685af4b67ac09376a9166cf7df5",
+        "mulermoc-nom-55.html": "3eb1c906cb2469ad2b5c2d353d78be1f2df1b36a005dc2b95482ec6de2e49ea4",
+        "design/welcome-proposal.html": "bf51e87ad962ac930fe926f0b2d7bb08cb9e2ba7dfff13dfc96734e74bfad9b5"
+      }
+    },
+    {
+      "label": "Lesson opens at top",
+      "detail": null
+    },
+    {
+      "label": "Main54 genuine first-round receipt restored, gate stays locked",
+      "detail": null
+    },
+    {
+      "label": "Main54 native header Back closes dialog",
+      "detail": null
+    }
+  ],
+  "measurements": [],
+  "actions": [
+    {
+      "click": "#nlQuizOpen",
+      "point": {
+        "x": 1020,
+        "y": 249,
+        "top": 227.0500030517578,
+        "bottom": 271.0500030517578,
+        "safeTop": 3,
+        "safeBottom": 797,
+        "hit": true,
+        "disabled": false,
+        "dialog": false
+      }
+    },
+    {
+      "click": "#nlQuizBack",
+      "point": {
+        "x": 1117,
+        "y": 85,
+        "top": 62.83332824707031,
+        "bottom": 106.83332824707031,
+        "safeTop": 15,
+        "safeBottom": 785,
+        "hit": true,
+        "disabled": false,
+        "dialog": true
+      }
+    },
+    {
+      "click": "#nlQuizOpen",
+      "point": {
+        "x": 1020,
+        "y": 249,
+        "top": 227.0500030517578,
+        "bottom": 271.0500030517578,
+        "safeTop": 3,
+        "safeBottom": 797,
+        "hit": true,
+        "disabled": false,
+        "dialog": false
+      }
+    }
+  ],
+  "role": "Developer browser evidence, not independent review",
+  "scope": [
+    "Exact eight-source before overlay, all other current runtime unchanged.",
+    "Deterministic unsolved seed via isolated crypto preload; every recorded success earned by learner pointer actions.",
+    "Owned headless isolated Firefox and ephemeral localhost only; personal GUI and8013 untouched."
+  ],
+  "repairs": [],
+  "semanticActions": [],
+  "target": {
+    "js/namelecule-game-repair.js": "c4053848ced011ebbd3a0402ef4c2d7967be7671d4584a75b7646f2800bde297",
+    "js/namelecule-generated-repair-checkpoint.js": "91da84de2ba1c59e73b1c96ca15af265da440a016f49c83b0e32a58d951f3a04",
+    "js/namelecule-quiz-checkpoints.js": "ea7e2cbca4f41535c83d5ee672198dd6ae23bebd1467fc5b126062f67a09fe3b",
+    "css/namelecule-repair-round.css": "0b089ab96ffd9dcd96cb81bc035f7cfd8cbeece838022d6a77c10372d69b8f67",
+    "games/name-repair.html": "e1c902cf28119bbe69469ecbb91137bbd148499d8aeff778d81b977dfa0b8da0",
+    "mulermoc-nom-54.html": "6665dfe01620e05f0732afad912f6cfd180dc685af4b67ac09376a9166cf7df5",
+    "mulermoc-nom-55.html": "3eb1c906cb2469ad2b5c2d353d78be1f2df1b36a005dc2b95482ec6de2e49ea4",
+    "design/welcome-proposal.html": "bf51e87ad962ac930fe926f0b2d7bb08cb9e2ba7dfff13dfc96734e74bfad9b5"
+  },
+  "javascriptErrors": [],
+  "receiptLineage": "Exact genuine main54-s4r1 receipt from compatibility-r1-browser.json; no new earned repair claimed.",
+  "failure": "Traceback (most recent call last):\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/workshop-lesson-parity-20261110/browser/check-main54-header-r2.py\", line 63, in <module>\n    ev('Object.entries('+json.dumps(earned_storage,ensure_ascii=False)+').forEach(([k,v])=>sessionStorage.setItem(k,v));true');call('browsingContext.reload',{'context':ctx,'wait':'complete'});ready();ev('fScenarioGo(3);true');wait('fScenarioPresent().index===3&&!MuLERMoCScenario.checkpointPreparation');open_lesson();check(ev('!!document.querySelector(\".feedback.is-success\")&&document.getElementById(\"scNext\").disabled'),'Main54 genuine first-round receipt restored, gate stays locked');before=read('Object.fromEntries(Object.entries(sessionStorage))');click('#nlQuizBack');check(not ev('document.getElementById(\"nlQuizDialog\").open'),'Main54 native header Back closes dialog');click('#nlQuizOpen');image_ready();check(ev('!!document.querySelector(\".feedback.is-success\")')and before==read('Object.fromEntries(Object.entries(sessionStorage))'),'Main54 native reopen preserves exact receipt and success');OUT['completed']=True\n  File \"<string>\", line 20, in check\nAssertionError: ('Main54 native reopen preserves exact receipt and success', None)\n"
+}

@@ -1,0 +1,20 @@
+from pathlib import Path
+exec((Path(__file__).parent/'driver-common.py').read_text(),globals())
+HISTORY=ROOT/'docs/checks/required-completion-navigation-20261110/browser/after-browser.json'
+def ready():
+ app_ready();wait('!!fScenarioPresent()&&fScenarioPresent().index===3&&!MuLERMoCScenario.checkpointPreparation&&!document.documentElement.classList.contains("lesson-loading")',55);dismiss_rotate();wait('!document.getElementById("nlQuizOpen").disabled',55)
+def fault(mode):
+ p=json.loads((H/'fault-control.json').read_text());p['mode']=mode;(H/'fault-control.json').write_text(json.dumps(p)+'\n')
+def state():return read('(()=>{let b=document.getElementById("nlQuizBack"),i=document.querySelector(".diagram-image");return{backHidden:b.hidden,backRects:b.getClientRects().length,counter:document.getElementById("nlQuizProgress").textContent,image:{ready:i?.classList.contains("is-ready"),complete:i?.complete,width:i?.naturalWidth,src:i?.src},status:document.querySelector(".image-status")?.textContent,lower:[...document.querySelectorAll(".round-next button")].map(n=>({text:n.textContent,disabled:n.disabled})),complete:NameleculeQuizCheckpoints.isComplete(fScenarioPresent(),3),focus:document.activeElement.tagName}})()')
+def focus_snapshot():return read('(()=>{let n=document.activeElement,d=document.getElementById("nlQuizDialog");return{tag:n?.tagName,id:n?.id,closestDialog:n?.closest("dialog")?.id||null,dialogOpen:d?.open,hasFocus:document.hasFocus(),url:location.href,index:typeof fScenarioPresent==="function"?fScenarioPresent()?.index:null,events:JSON.parse(sessionStorage.getItem("__readinessKeyTrace")||"[]")}})()')
+def source_guard():
+ t=json.loads((H/'original-target.json').read_text())['files'];OUT['target']=t
+ for p,v in t.items():
+  with urllib.request.urlopen(P[STAGE+'_url']+p+'?guard='+str(time.time_ns()),timeout=15)as r:b=r.read()
+  assert hashlib.sha256(b).hexdigest()==v,p
+ check(True,'Exact originalR0five servedsourcehashes',t)
+try:
+ source_guard();viewport(390,760);navigate('mulermoc-nom-55.html?scenario=scenarios/alkanes-user-3.scenario.json&present=1&from=theory-library#step=4');ready();earned=json.loads(HISTORY.read_text())['newEarnedReceipt'];ev('sessionStorage.clear();Object.entries('+json.dumps(earned,ensure_ascii=False)+').forEach(([k,v])=>sessionStorage.setItem(k,v));true');call('browsingContext.reload',{'context':ctx,'wait':'complete'});ready();fault('delay');click('#nlQuizOpen');wait('document.querySelectorAll(".round-next button").length===2');ev('(()=>{sessionStorage.setItem("__readinessKeyTrace","[]");for(let type of ["keydown","keyup","focusin","focusout","pagehide"])window.addEventListener(type,e=>{let a=JSON.parse(sessionStorage.getItem("__readinessKeyTrace")||"[]"),n=e.target;a.push({type:e.type,key:e.key,code:e.code,trusted:e.isTrusted,targetTag:n?.tagName,targetId:n?.id,closest:n?.closest?.("dialog")?.id||null,activeTag:document.activeElement?.tagName,activeId:document.activeElement?.id,dialogOpen:document.getElementById("nlQuizDialog")?.open,url:location.href,ms:performance.now()});sessionStorage.setItem("__readinessKeyTrace",JSON.stringify(a))},true);document.getElementById("nlQuizBack").focus();return true})()');OUT['beforeTab']=focus_snapshot();key(chr(0xe004));OUT['afterTab']=focus_snapshot();save();shot('after-tab');key(chr(0xe00c));OUT['afterEscape']=focus_snapshot();save();shot('after-escape');OUT['completed']=True;OUT['diagnosticOnly']='Single explicit Return.focus -> actualnative Tab -> actualnative Escape. No cancellation/preventDefault or receipt mutations; observationlisteners record events to separate testtrace storage key.';print(json.dumps({k:OUT[k]for k in ['beforeTab','afterTab','afterEscape']},ensure_ascii=False),flush=True)
+except Exception:
+ OUT['failure']=traceback.format_exc();print(OUT['failure'],flush=True)
+finally:fault('normal');finish()

@@ -1,0 +1,35 @@
+{
+  "role": "Read-only Developer audit plus scoped explorer and Learning Designer",
+  "confirmedGaps": [
+    "Shared renderer explicitly excludes standalone from objective emphasis, compact zoom and representation options.",
+    "Only lesson adapter owns the condensed display clone and wrong-part mission reminders.",
+    "Shared semantic response triggers exist, but standalone suppresses onReveal and has no page-scroll callback.",
+    "Standalone has three progress circles instead of the lesson current-question counter.",
+    "Static authored rounds lack fault metadata; supported legacy round IDs need explicit semantic mapping, not ambiguous target-part inference."
+  ],
+  "alreadyShared": [
+    "Check label only; no per-round reset/hint; choices and candidate; incorrect replacement feedback; success explanation; attempts and image-loading gate.",
+    "Standalone logo, hub, two sets, results and return-to-sets confirmation remain separate shell behavior."
+  ],
+  "learningConstraints": [
+    "Generated challenge intentionally keeps neutral mission; do not reveal fault family in wrong-part feedback.",
+    "Current question1/3 remains1/3 after solving until Next; completion count is separate.",
+    "Use approved atoms C wording in newly revised display text.",
+    "Canonical rounds/IDs/answers/seeds and persistence contracts remain unchanged."
+  ],
+  "sourceReferences": [
+    "js/namelecule-game-repair.js:224-226,251-254,882-911",
+    "js/namelecule-generated-repair-checkpoint.js:9-23,148-158",
+    "js/namelecule-quiz-checkpoints.js:222-252",
+    "games/data/name-repair-alkanes.json",
+    "js/namelecule-repair-generator.js:178-186,725-729"
+  ],
+  "agents": [
+    "/root/workshop_parity_scroll_preflight_20261110",
+    "/root/workshop_parity_learning_preflight_20261110"
+  ],
+  "priorExactBrowserEvidence": "Current renderer matches previous quiz-zoom-icon reviewed target; previous standalone/default screenshots demonstrate retained old presentation. No new browser execution during this preflight.",
+  "unknowns": [
+    "Actual before/after page scroll and full parity runtime still to be tested after plan approval."
+  ]
+}

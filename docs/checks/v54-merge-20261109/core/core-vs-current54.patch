@@ -1,0 +1,866 @@
+diff --git "a/Users/yannisskendros/Desktop/\316\224\316\271\317\200\316\273\317\211\316\274\316\261\317\204\316\271\316\272\316\256 - \316\237\316\275\316\277\316\274\316\261\317\204\316\277\316\273\316\277\316\263\316\257\316\261/organic-nomenclature-3/js/mulermoc-nom-core-54.js" b/private/tmp/namelecule-professor-merge-20261109-oxj7hfyy/candidate/js/mulermoc-nom-core-55.js
+index c59f9f9..f164e5e 100644
+--- "a/Users/yannisskendros/Desktop/\316\224\316\271\317\200\316\273\317\211\316\274\316\261\317\204\316\271\316\272\316\256 - \316\237\316\275\316\277\316\274\316\261\317\204\316\277\316\273\316\277\316\263\316\257\316\261/organic-nomenclature-3/js/mulermoc-nom-core-54.js"	
++++ b/private/tmp/namelecule-professor-merge-20261109-oxj7hfyy/candidate/js/mulermoc-nom-core-55.js
+@@ -80,7 +80,9 @@ let alkoxyNames = {}
+ let nameMainCompList1 = []
+ let nameMainCompObj3 = {}
+ let nameMultiPrefix = []
+-let functionalGroupsOrder = []
++// Single source of truth for P-41 functional-group seniority
++// (carboxylicAcid > ester > cyanide > aldehyde > ketone > alcohol > amine;
++// nitro/ether/halogen unranked, lose to everything ranked).
+ const gFunctionalGroupsOrder = ["carboxylicAcid", "ester", "cyanide", "aldehyde", "ketone", "alcohol", "amine", "nitro"]
+ let molTaxonomy = ""
+ 
+@@ -200,8 +202,6 @@ function fInitNamingProps() {
+     }
+ 
+     nameMultiPrefix = ["", "δι", "τρι", "τετρα", "πεντα", "εξα", "επτα", "οκτα"]
+-
+-    functionalGroupsOrder = ["carboxylicAcid", "ester", "cyanide", "aldehyde", "ketone", "alcohol", "amine", "nitro"]
+ }
+ 
+ // ── fAnalyseStructure ─────────────────────────────────────────────────────
+@@ -2313,6 +2313,170 @@ function fGetHydrocarbonSubstituentInfo() {
+     return fDescribeCarbonBranches(mainChainAtomsList.map(n => n - 1), atomConnectivityList, allAtomsTypeList)
+ }
+ 
++// ── Fail-closed main-chain locants (v54.23) ─────────────────────────────────
++// indexOf()+1 yields 0 for off-main-chain atoms (the 0,0-dichloro bug). All
++// naming-output sites must route through here and decline on null — a wrong
++// locant is worse than no name (oracle-validated engine contract).
++function fMainChainLocant(atomNo1b) {
++    try {
++        if (!Array.isArray(mainChainAtomsList)) return null
++        const p = mainChainAtomsList.indexOf(atomNo1b)
++        return p >= 0 ? p + 1 : null
++    } catch (eL) { return null }
++}
++function fDeclineNaming(reason) {
++    throw new Error("[NOM-DECLINE] " + (reason || "unsupported structure"))
++}
++
++// ── Decorated (hetero-substituted alkyl) branches, v1 (v54.23) ─────────────
++// Single-hetero saturated acyclic branches only: exactly one F/Cl/Br/I or
++// nitro-N (N with >=1 O neighbour and exactly one C neighbour) on an
++// otherwise carbon-only branch; every C-C/C-hetero/main-attach bond single;
++// side graph a tree. Anything else (multi-hetero, unsaturated, non-halo/
++// nitro hetero, ambiguous longest base path) returns null for that branch —
++// left unclaimed so the fail-closed locant guards decline downstream.
++// School Greek forms (P3 blessing pending before UI exposure is claimed):
++// base = longest carbon path from the attach atom (attach = position 1);
++// L==1: heteroPrefix+base (χλωρομεθυλο); L>1: pos-heteroPrefix+base
++// (2-χλωροαιθυλο). Multiplied groups take parens iff the name carries a
++// locant digit (διχλωρομεθυλο vs δι(2-χλωροαιθυλο), P-16.3.4(a) analogue).
++function fIsNitroNitrogen(idx, typeList, connList) {
++    try {
++        if (!typeList || typeList[idx] !== "N" || !Array.isArray(connList[idx])) return false
++        const nbs = connList[idx]
++        let cCount = 0, oCount = 0
++        for (let i = 0; i < nbs.length; i++) {
++            const t = typeList[nbs[i]]
++            if (t === "C") cCount++
++            else if (t === "O") oCount++
++        }
++        return oCount >= 1 && cCount === 1
++    } catch (eN) { return false }
++}
++function fBondOrder1b(a1b, b1b) {
++    try {
++        if (!Array.isArray(bondList)) return null
++        for (let i = 0; i < bondList.length; i++) {
++            const b = bondList[i]
++            if (!Array.isArray(b)) continue
++            if ((b[0] === a1b && b[1] === b1b) || (b[0] === b1b && b[1] === a1b)) return b[2]
++        }
++        return null
++    } catch (eB) { return null }
++}
++function fDescribeDecoratedBranches(path, connList, typeList) {
++    try {
++        if (!Array.isArray(path) || !path.length) return []
++        const main = new Set(path), out = []
++        for (let pos = 0; pos < path.length; pos++) {
++            for (const attach of (connList[path[pos]] || [])) {
++                if (typeList[attach] !== "C" || main.has(attach)) continue
++                // carbon-only side fragment (same walk as fDescribeCarbonBranches)
++                const side = new Set([attach]), stack = [attach]
++                while (stack.length) {
++                    for (const n of (connList[stack.pop()] || [])) {
++                        if (typeList[n] !== "C" || main.has(n) || side.has(n)) continue
++                        side.add(n); stack.push(n)
++                    }
++                }
++                const dec = fNameDecoratedBranch(path[pos], attach, side, main, connList, typeList)
++                if (dec) {
++                    dec.locant = pos + 1
++                    out.push(dec)
++                }
++            }
++        }
++        return out
++    } catch (eD) { return [] }
++}
++function fNameDecoratedBranch(mainAtom0b, attach0b, side, main, connList, typeList) {
++    try {
++        // hetero attachments on the side fragment
++        const hets = []
++        for (const s of side) {
++            for (const nn of (connList[s] || [])) {
++                if (main.has(nn) || side.has(nn)) continue
++                const t = typeList[nn]
++                if (t === "H" || t === "" || t == null) continue
++                hets.push({ el: t, idx: nn, onSide: s })
++            }
++        }
++        if (hets.length !== 1) return null
++        const h = hets[0]
++        let heteroPrefix = null
++        if (Object.prototype.hasOwnProperty.call(nameMainCompObj3.halogen.substitute, h.el)) {
++            heteroPrefix = nameMainCompObj3.halogen.substitute[h.el]
++        } else if (h.el === "N" && fIsNitroNitrogen(h.idx, typeList, connList)) {
++            heteroPrefix = nameMainCompObj3.nitro.substitute
++        } else return null
++        // single bonds everywhere: main-attach, side C-C, side-hetero
++        if (fBondOrder1b(mainAtom0b + 1, attach0b + 1) !== 1 && typeof bondList !== "undefined" && bondList.length) {
++            // bondList may be absent in unit contexts; only enforce when known
++            const _o = fBondOrder1b(mainAtom0b + 1, attach0b + 1)
++            if (_o !== null && _o !== 1) return null
++        }
++        if (fBondOrder1b(h.onSide + 1, h.idx + 1) !== 1) {
++            const _ho = fBondOrder1b(h.onSide + 1, h.idx + 1)
++            if (_ho !== null && _ho !== 1) return null
++        }
++        const sideArr = Array.from(side)
++        let internal = 0
++        for (const s of sideArr) {
++            for (const nn of (connList[s] || [])) {
++                if (side.has(nn) && nn > s) {
++                    const _o = fBondOrder1b(s + 1, nn + 1)
++                    if (_o !== null && _o !== 1) return null
++                    internal++
++                }
++            }
++        }
++        if (internal !== sideArr.length - 1) return null // cyclic or bridged
++        // longest carbon path(s) from the attach atom
++        const paths = fLongestPathsFrom(attach0b, side, connList)
++        if (!paths.length) return null
++        const L = paths[0].length
++        // The v1 name describes one rooted path only. A fork would leave
++        // side carbons unnamed; leave it unclaimed so naming declines.
++        if (L !== side.size || L > 8 || !alkylSubstituentNames[L]) return null
++        // hetero must sit on every longest path at the same distance
++        let heteroDist = -1
++        for (const p of paths) {
++            if (p.length !== L) return null
++            const di = p.indexOf(h.onSide)
++            if (di < 0) return null
++            if (heteroDist < 0) heteroDist = di
++            else if (heteroDist !== di) return null
++        }
++        const base = alkylSubstituentNames[L]
++        let name
++        if (L === 1) name = heteroPrefix + base
++        else name = (heteroDist + 1) + "-" + heteroPrefix + base
++        return { name: name, hetero: h.el, heteroIdx: h.idx, length: L, atoms: sideArr, attach: attach0b }
++    } catch (eN2) { return null }
++}
++function fLongestPathsFrom(start, side, connList) {
++    const best = []
++    let bestLen = 0
++    function dfs(node, visited, path) {
++        if (path.length > bestLen) { bestLen = path.length; best.length = 0; best.push(path.slice()) }
++        else if (path.length === bestLen) best.push(path.slice())
++        for (const n of (connList[node] || [])) {
++            if (!side.has(n) || visited.has(n)) continue
++            visited.add(n); path.push(n)
++            dfs(n, visited, path)
++            path.pop(); visited.delete(n)
++        }
++    }
++    dfs(start, new Set([start]), [start])
++    return best
++}
++function fGetDecoratedBranchInfo() {
++    try {
++        if (!Array.isArray(mainChainAtomsList)) return []
++        return fDescribeDecoratedBranches(mainChainAtomsList.map(n => n - 1), atomConnectivityList, allAtomsTypeList)
++    } catch (eG) { return [] }
++}
++
+ function fCarbonBranchAlphabeticalKey(path, connList, typeList) {
+     return fDescribeCarbonBranches(path, connList, typeList)
+         .sort((a, b) => a.name < b.name ? -1 : a.name > b.name ? 1 : a.locant - b.locant)
+@@ -2792,13 +2956,26 @@ function fStripHydrogensMol(text) {
+   } catch (e) { return null; }
+ }
+ 
+-var MOLGEN_STDVALENCE = { C: 4, N: 3, O: 2, F: 1, Cl: 1, Br: 1, I: 1 };
+-
+-// Expanded form: heavy skeleton + explicit H at standard lengths, placed by
+-// largest-free-sector bisection (matches the stored 0.78-grid convention
+-// closely enough for depiction). Pre-existing explicit H are kept; missing
+-// ones use supported charge-aware valences. Unknown/query elements, radicals
+-// and declared stereochemistry fail closed rather than changing chemistry.
++var MOLGEN_STDVALENCE = { C: 4, N: 3, O: 2, F: 1, Cl: 1, Br: 1, I: 1, S: 2, P: 3 }; // S/P: single-bond default; hypervalent forms unsupported (no auto-H beyond this)
++
++// Minimum clearance for a newly placed H against placed atoms that are
++// neither its parent nor vicinal to it (same rule as the overlap harness:
++// geminal/vicinal closeness is natural). Below this, the next-largest
++// angular gap is tried; the best candidate always wins, so clean molecules
++// keep byte-identical coords and only colliding placements move.
++const MOLGEN_H_MINSEP = 0.4;
++
++// 2D layout bond lengths (MOL units, hardcoded — adjust manually here).
++// All heavy–heavy bonds share MOLGEN_CC_LEN in every slot (condensed,
++// expanded skeleton, zigzag); C–H bonds use MOLGEN_CH_LEN (~half of C–C).
++const MOLGEN_CC_LEN = 1.0;
++const MOLGEN_CH_LEN = 0.5;
++
++// Expanded form: heavy skeleton + explicit H at MOLGEN_CH_LEN, placed by
++// largest-free-sector bisection (connectivity is what matters). Pre-existing
++// explicit H are kept; missing ones are topped up. Elements outside
++// MOLGEN_STDVALENCE: kept, never added to (no silent H).
++// Missing H use supported charge-aware valences; query, radical and stereo inputs fail closed.
+ function fGenExpandedMol(text) {
+   try {
+     var m = fParseMolV2000(text);
+@@ -2818,7 +2995,7 @@ function fGenExpandedMol(text) {
+     for (var c = 0; c < n; c++) atoms.push(fCopyMolAtom2D(m.atoms[c]));
+     var bonds = [];
+     for (var d = 0; d < m.bonds.length; d++) bonds.push(fCopyMolBond2D(m.bonds[d], m.bonds[d][0], m.bonds[d][1]));
+-    var HLEN = 0.78;
++    var HLEN = MOLGEN_CH_LEN;
+     for (var h = 0; h < n; h++) {
+       var el = String(m.atoms[h].el || "");
+       if (!fIsHeavyEl2D(el)) continue;
+@@ -2845,16 +3022,113 @@ function fGenExpandedMol(text) {
+           angs.push(Math.atan2(p.y - atoms[h].y, p.x - atoms[h].x));
+         }
+         angs.sort(function (p1, p2) { return p1 - p2; });
+-        var bestA = 0;
+-        if (angs.length) {
+-          var bestG = -1;
++        // Candidate gaps, largest first. The old code took the largest gap
++        // unconditionally; we keep that as the first try (clean molecules are
++        // unaffected) and fall through to smaller gaps only on collision.
++        var gaps = [];
++        if (!angs.length) { gaps.push({ a: 0, g: 2 * Math.PI }); }
++        else {
+           for (var s = 0; s < angs.length; s++) {
+             var a1 = angs[s], a2 = (s + 1 < angs.length) ? angs[s + 1] : angs[0] + 2 * Math.PI;
+-            var g = a2 - a1;
+-            if (g > bestG) { bestG = g; bestA = a1 + g / 2; }
++            gaps.push({ a: a1 + (a2 - a1) / 2, g: a2 - a1 });
++          }
++          gaps.sort(function (g1, g2) { return g2.g - g1.g; });
++        }
++        var SEPN = MOLGEN_H_MINSEP;
++        // Clearance of a candidate point against placed atoms under the
++        // vicinal rule (harness-identical): the parent itself, atoms bonded
++        // to it, and H whose own parent is bonded to (or is) it are skipped.
++        var minClear = function (qx, qy, par) {
++          var md = 1e9;
++          for (var cI = 0; cI < atoms.length; cI++) {
++            if (cI === par) continue;
++            var cEl = String(atoms[cI].el || "");
++            var cIsH = (cEl === "H" || cEl === "h");
++            if (adj[cI].indexOf(par) >= 0) continue;
++            if (cIsH) {
++              var cPar = -1;
++              for (var cR = 0; cR < adj[cI].length; cR++) {
++                var cCand = adj[cI][cR];
++                if (!fIsHeavyEl2D(String(atoms[cCand].el || ""))) continue;
++                cPar = cCand; break;
++              }
++              if (cPar === par || (cPar >= 0 && adj[par].indexOf(cPar) >= 0)) continue;
++            }
++            var dd = Math.hypot(qx - atoms[cI].x, qy - atoms[cI].y);
++            if (dd < md) md = dd;
++          }
++          return md;
++        };
++        // Heavy parent of a placed H (its bond partner); -1 when unknown.
++        var heavyParOf = function (idx) {
++          for (var hR = 0; hR < adj[idx].length; hR++) {
++            var hCand = adj[idx][hR];
++            if (!fIsHeavyEl2D(String(atoms[hCand].el || ""))) continue;
++            return hCand;
++          }
++          return -1;
++        };
++        var bestX = atoms[h].x + HLEN, bestY = atoms[h].y, bestD = -1;
++        var splayed = false;
++        for (var gI = 0; gI < gaps.length; gI++) {
++          var cx = atoms[h].x + HLEN * Math.cos(gaps[gI].a);
++          var cy = atoms[h].y + HLEN * Math.sin(gaps[gI].a);
++          var md = minClear(cx, cy, h), mOff = -1;
++          if (md < SEPN) {
++            // Nearest offender, for the symmetric-splay attempt below.
++            var mBest = 1e9;
++            for (var oI = 0; oI < atoms.length; oI++) {
++              if (oI === h || adj[oI].indexOf(h) >= 0) continue;
++              var oEl = String(atoms[oI].el || "");
++              if ((oEl === "H" || oEl === "h")) {
++                var oPar = heavyParOf(oI);
++                if (oPar === h || (oPar >= 0 && adj[h].indexOf(oPar) >= 0)) continue;
++              }
++              var oD = Math.hypot(cx - atoms[oI].x, cy - atoms[oI].y);
++              if (oD < mBest) { mBest = oD; mOff = oI; }
++            }
++          }
++          if (md > bestD) { bestD = md; bestX = cx; bestY = cy; }
++          if (md >= SEPN) break;
++          // Symmetric splay (first colliding gap only): when the offender is
++          // a placed H, rotate it and the candidate apart by equal and
++          // opposite steps around their own parents (bond lengths kept), so
++          // both stay near their ideal sectors instead of one jumping sides.
++          // First clearing pair wins; otherwise the gap loop continues.
++          if (!splayed && gI === 0 && mOff >= 0) {
++            var oEl2 = String(atoms[mOff].el || "");
++            var oPar2 = heavyParOf(mOff);
++            if ((oEl2 === "H" || oEl2 === "h") && oPar2 >= 0) {
++              var aA0 = Math.atan2(atoms[mOff].y - atoms[oPar2].y, atoms[mOff].x - atoms[oPar2].x);
++              var aB0 = gaps[0].a;
++              var steps = [5, 10, 15, 20, 30, 45], sDone = false;
++              for (var sI = 0; sI < steps.length && !sDone; sI++) {
++                var rad = steps[sI] * Math.PI / 180;
++                var pairs = [[1, -1], [-1, 1]];
++                for (var pI = 0; pI < pairs.length && !sDone; pI++) {
++                  var ax = atoms[oPar2].x + HLEN * Math.cos(aA0 + pairs[pI][0] * rad);
++                  var ay = atoms[oPar2].y + HLEN * Math.sin(aA0 + pairs[pI][0] * rad);
++                  var bx = atoms[h].x + HLEN * Math.cos(aB0 + pairs[pI][1] * rad);
++                  var by = atoms[h].y + HLEN * Math.sin(aB0 + pairs[pI][1] * rad);
++                  var cA = minClear(ax, ay, oPar2), cB = minClear(bx, by, h);
++                  // A moved: exclude the candidate spot itself is unnecessary
++                  // (B not placed yet); but A must also clear B's new spot.
++                  var cAB = Math.hypot(ax - bx, ay - by);
++                  var cMin = Math.min(cA, cB, cAB);
++                  if (cMin > bestD) { bestD = cMin; bestX = bx; bestY = by; }
++                  if (cMin >= SEPN) {
++                    atoms[mOff].x = ax; atoms[mOff].y = ay;
++                    bestX = bx; bestY = by; bestD = cMin;
++                    sDone = true;
++                  }
++                }
++              }
++              splayed = true;
++              if (sDone) break;
++            }
+           }
+         }
+-        atoms.push({ x: atoms[h].x + HLEN * Math.cos(bestA), y: atoms[h].y + HLEN * Math.sin(bestA), el: "H", parentSourceIndex: h + 1 });
++        atoms.push({ x: bestX, y: bestY, el: "H", parentSourceIndex: h + 1 });
+         var ni = atoms.length - 1;
+         adj[h].push(ni); adj.push([h]);
+         bonds.push([h + 1, ni + 1, 1]);
+@@ -2864,8 +3138,8 @@ function fGenExpandedMol(text) {
+   } catch (e) { return null; }
+ }
+ 
+-// School-form condensed layout: main chain collinear (1.17 spacing, the
+-// stored-condensed convention), branches orthogonal alternating sides, sp
++// School-form condensed layout: main chain collinear (MOLGEN_CC_LEN spacing,
++// the stored-condensed convention), branches orthogonal alternating sides, sp
+ // centers stay on the line like the stored files. H atoms are dropped
+ // (condensed = heavy only). Chain entries are 1-based numbers into the source
+ // MOL's atom list (engine mainChainAtomsList of the same drawing).
+@@ -2897,21 +3171,70 @@ function fLinearizeMol(text, chain) {
+       if (map[x + 1] == null || map[y + 1] == null) continue;
+       adj[x].push(y); adj[y].push(x);
+     }
+-    var DX = 1.17, DY = 1.17;
++    var DX = MOLGEN_CC_LEN, DY = MOLGEN_CC_LEN;
+     var pos = {}, inChain = {};
+     for (var k = 0; k < ch.length; k++) { inChain[ch[k]] = true; pos[ch[k]] = { x: k * DX, y: 0 }; }
+     var visited = {};
+     for (var kc = 0; kc < ch.length; kc++) visited[ch[kc]] = true;
+     // Queue: {node, x, y, dx, dy} — first continuation keeps direction,
+-    // extra forks rotate 90° (rare in scope, depiction-only).
+-    // Keep terminal sp handling first; other terminal groups lean outward,
+-    // while a terminal ether link continues horizontally (upstream school form).
++    // extra forks try +90/-90 first, then diagonal relief (depiction-only).
++    // Terminal chain atoms lean their branches outward (±x): without this,
++    // end-group branches sit exactly above the anchor and geometry-based
++    // tests (e.g. HOOC-vs-COOH orientation) tie instead of deciding.
++    // Ether links (R-O-R) go fully horizontal from terminal atoms so C-O-C
++    // stays linear instead of kinking the R groups orthogonal.
++    // Overlap guard: quantized occupancy of placed atoms. Two methyls of
++    // the same tert-butyl centre used to receive the identical +90° rotation
++    // (perfect overlap); adjacent bulky branches could also land on each
++    // other. Candidates closer than LIN_MINSEP to a placed non-parent atom
++    // fall through to the next fallback angle (orthogonal first, diagonal
++    // relief next), so clean molecules keep byte-identical coords and only
++    // colliding placements move.
++    var LIN_MINSEP = 0.3 * DX;
++    // Claimed = queued but not yet placed (siblings pushed in the same
++    // batch are invisible to pos until popped — without this, two methyls of
++    // one tert-butyl centre both pass the check and land identically).
++    var _claimed = {};
++    var _linHit = function (x, y, selfNode, parentNode) {
++      try {
++        for (var _k in pos) {
++          if (!Object.prototype.hasOwnProperty.call(pos, _k)) continue;
++          var _ni = parseInt(_k, 10);
++          if (_ni === selfNode || _ni === parentNode) continue;
++          var _p = pos[_k];
++          var _ddx = _p.x - x, _ddy = _p.y - y;
++          if ((_ddx * _ddx + _ddy * _ddy) < LIN_MINSEP * LIN_MINSEP) return true;
++        }
++        for (var _q in _claimed) {
++          if (!Object.prototype.hasOwnProperty.call(_claimed, _q)) continue;
++          var _qi = parseInt(_q, 10);
++          if (_qi === selfNode || _qi === parentNode) continue;
++          var _c = _claimed[_q];
++          var _edx = _c.x - x, _edy = _c.y - y;
++          if ((_edx * _edx + _edy * _edy) < LIN_MINSEP * LIN_MINSEP) return true;
++        }
++      } catch (eH) {}
++      return false;
++    };
++    // Rotate a unit direction by degrees (length-preserving; diagonal
++    // fallbacks use 0.7071 so every bond stays MOLGEN_CC_LEN).
++    var _linRot = function (dx, dy, deg) {
++      try {
++        var r = deg * Math.PI / 180, c = Math.cos(r), s = Math.sin(r);
++        return [dx * c - dy * s, dx * s + dy * c];
++      } catch (eR) { return [dx, dy]; }
++    };
+     var queue = [];
++    // Stagger: neighbouring chain atoms open opposite sides when both carry
++    // non-ether branches, so adjacent tert-butyl centres never start on top
++    // of each other. Isolated branches keep the historical -1 start.
++    var _nextParity = 0;
+     for (var ci = 0; ci < ch.length; ci++) {
+-      var c0 = ch[ci], sideCount = 0, etherDone = false;
++      var c0 = ch[ci], sideCount = 0, etherDone = false, placedHere = 0;
+       var lean = 0;
+       if (ci === 0) lean = -0.5;
+       else if (ci === ch.length - 1) lean = 0.5;
++      var _startPar = _nextParity;
+       for (var nb = 0; nb < adj[c0].length; nb++) {
+         var br = adj[c0][nb];
+         if (visited[br]) continue;
+@@ -2925,6 +3248,7 @@ function fLinearizeMol(text, chain) {
+         if (terminalSp) {
+           var outward = ci === 0 ? -1 : 1;
+           queue.push({ node: br, x: (ci + outward) * DX, y: 0, dx: outward, dy: 0 });
++          _claimed[br] = { x: (ci + outward) * DX, y: 0 };
+           continue;
+         }
+         var isEtherLink = false;
+@@ -2939,30 +3263,90 @@ function fLinearizeMol(text, chain) {
+           }
+         } catch (eEl) { isEtherLink = false; }
+         if (isEtherLink) {
+-          var direction = ci === 0 ? -1 : 1;
+-          queue.push({ node: br, x: ci * DX + direction * DX, y: 0, dx: direction, dy: 0 });
++          var _dir = (ci === 0) ? -1 : 1;
++          queue.push({ node: br, x: ci * DX + _dir * DX, y: 0, dx: _dir, dy: 0, p: c0 });
++          try { _claimed[br] = { x: ci * DX + _dir * DX, y: 0 }; } catch (eCl2) {}
+           etherDone = true;
+           continue;
+         }
+-        var side = (sideCount % 2 === 0) ? -1 : 1;
++        var side = (((sideCount + _startPar) % 2) === 0) ? -1 : 1;
+         sideCount++;
+-        queue.push({ node: br, x: ci * DX + lean * DX, y: side * DY, dx: 0, dy: side });
++        // Orthogonal first; on collision try the opposite side, then the two
++        // diagonals (length-preserving). First non-colliding wins.
++        var _cands = [
++          [ci * DX + lean * DX, side * DY, 0, side],
++          [ci * DX + lean * DX, -side * DY, 0, -side],
++          [ci * DX + lean * DX + 0.7071 * DX, side * 0.7071 * DY, 0.7071, side * 0.7071],
++          [ci * DX + lean * DX - 0.7071 * DX, side * 0.7071 * DY, -0.7071, side * 0.7071]
++        ];
++        var _pick = _cands[0];
++        for (var _qi = 0; _qi < _cands.length; _qi++) {
++          if (!_linHit(_cands[_qi][0], _cands[_qi][1], br, c0)) { _pick = _cands[_qi]; break; }
++          _pick = _cands[_qi];
++        }
++        queue.push({ node: br, x: _pick[0], y: _pick[1], dx: _pick[2], dy: _pick[3], p: c0 });
++        try { _claimed[br] = { x: _pick[0], y: _pick[1] }; } catch (eCl) {}
++        placedHere++;
+       }
++      _nextParity = (placedHere > 0) ? (_startPar ^ 1) : 0;
+     }
+     while (queue.length) {
+       var it = queue.shift();
+       if (visited[it.node]) continue;
++      try { delete _claimed[it.node]; } catch (eDc) {}
++      // Pop-time recheck: a collider may have been placed after this item
++      // was queued (e.g. the neighbour branch centre). Relocate through the
++      // same fallback list before committing.
++      if (typeof it.p !== "undefined" && _linHit(it.x, it.y, it.node, it.p)) {
++        var _re = false;
++        for (var _ri = 0; _ri < 8; _ri++) {
++          var _rdeg = [0, 90, -90, 45, -45, 135, -135, 180][_ri];
++          var _rrv = _linRot(it.dx, it.dy, _rdeg);
++          var _rcx = pos[it.p].x + _rrv[0] * DX, _rcy = pos[it.p].y + _rrv[1] * DY;
++          if (!_linHit(_rcx, _rcy, it.node, it.p)) {
++            it.x = _rcx; it.y = _rcy; it.dx = _rrv[0]; it.dy = _rrv[1];
++            _re = true;
++            break;
++          }
++        }
++        if (!_re) { /* keep queued coords: overlap beats dropping the atom */ }
++      }
+       visited[it.node] = true;
+       pos[it.node] = { x: it.x, y: it.y };
+-      var first = true;
++      // Fan-out: first child continues straight; each extra fork prefers
++      // +90°, -90°, then ±45° diagonals, +135/-135, 180°. Every extra scans
++      // the same fallback list against occupancy, so the second tert-butyl
++      // methyl no longer duplicates the first — it takes -90° (or diagonal
++      // relief when both orthogonals are taken). Single/double-child nodes
++      // keep their historical coords (straight / +90°) when uncollided.
++      var _kids = [];
+       for (var w = 0; w < adj[it.node].length; w++) {
+         var cand = adj[it.node][w];
+         if (visited[cand]) continue;
+-        if (first) {
+-          queue.push({ node: cand, x: it.x + it.dx * DX, y: it.y + it.dy * DY, dx: it.dx, dy: it.dy });
+-          first = false;
+-        } else {
+-          queue.push({ node: cand, x: it.x - it.dy * DX, y: it.y + it.dx * DY, dx: -it.dy, dy: it.dx });
++        _kids.push(cand);
++      }
++      for (var ki = 0; ki < _kids.length; ki++) {
++        var _done = false;
++        // First child: straight unless occupied; extras: alternate +90/-90
++        // first (historical), diagonals on collision.
++        var _order = (ki === 0) ? [0, 90, -90, 45, -45, 135, -135, 180] : [90, -90, 45, -45, 135, -135, 0, 180];
++        // Avoid re-offering the exact angle an earlier sibling just took:
++        // occupancy catches it anyway (dist 0), this just orders better.
++        for (var fi = 0; fi < _order.length; fi++) {
++          var _deg = _order[fi];
++          var _rv = _linRot(it.dx, it.dy, _deg);
++          var _cx = it.x + _rv[0] * DX, _cy = it.y + _rv[1] * DY;
++          if (!_linHit(_cx, _cy, _kids[ki], it.node)) {
++            queue.push({ node: _kids[ki], x: _cx, y: _cy, dx: _rv[0], dy: _rv[1], p: it.node });
++            try { _claimed[_kids[ki]] = { x: _cx, y: _cy }; } catch (eCl3) {}
++            _done = true;
++            break;
++          }
++        }
++        if (!_done) {
++          var _rvf = _linRot(it.dx, it.dy, (ki === 0) ? 0 : 90);
++          queue.push({ node: _kids[ki], x: it.x + _rvf[0] * DX, y: it.y + _rvf[1] * DY, dx: _rvf[0], dy: _rvf[1], p: it.node });
++          try { _claimed[_kids[ki]] = { x: it.x + _rvf[0] * DX, y: it.y + _rvf[1] * DY }; } catch (eCl4) {}
+         }
+       }
+     }
+@@ -3033,7 +3417,7 @@ function fZigzagMol(text, chain) {
+     if (Object.keys(reached).length !== order.length || heavyBonds !== 2 * (order.length - 1) ||
+         ch.length !== chain.length || new Set(ch).size !== ch.length ||
+         ch.some(function (v, i) { return i && adj[ch[i - 1]].indexOf(v) < 0; })) return null;
+-    var L = 1.17, CX = L * 0.8660254, CY = L * 0.5;
++    var L = MOLGEN_CC_LEN, CX = L * 0.8660254, CY = L * 0.5;
+     var norm2 = function (vx, vy) {
+       var l = Math.sqrt(vx * vx + vy * vy);
+       if (!(l > 1e-9)) return null;
+@@ -3303,7 +3687,11 @@ function fGuessName(skipChainRecalc) {
+             currDouble = multiBondsObj.CCd[i]
+             bondAtom1 = bondList[currDouble - 1][0]
+             bondAtom2 = bondList[currDouble - 1][1]
+-            bondPos = Math.min(mainChainAtomsList.indexOf(bondAtom1), mainChainAtomsList.indexOf(bondAtom2)) + 1
++            // Fail-closed: an off-chain C-C multi-bond has no main-chain locant
++            // (indexOf()+1 would silently emit 0). Decline instead of guessing.
++            { const _ia = mainChainAtomsList.indexOf(bondAtom1), _ib = mainChainAtomsList.indexOf(bondAtom2)
++              if (_ia < 0 || _ib < 0) fDeclineNaming("C-C double bond off main chain")
++              bondPos = Math.min(_ia, _ib) + 1 }
+             sortedMultiDBonds.push(bondPos)
+         }
+         if (sortedMultiDBonds.length > 0) {
+@@ -3324,7 +3712,10 @@ function fGuessName(skipChainRecalc) {
+             currTriple = multiBondsObj.CCt[i]
+             bondAtom1 = bondList[currTriple - 1][0]
+             bondAtom2 = bondList[currTriple - 1][1]
+-            bondPos = Math.min(mainChainAtomsList.indexOf(bondAtom1), mainChainAtomsList.indexOf(bondAtom2)) + 1
++            // Fail-closed (cf. double-bond guard above).
++            { const _ia = mainChainAtomsList.indexOf(bondAtom1), _ib = mainChainAtomsList.indexOf(bondAtom2)
++              if (_ia < 0 || _ib < 0) fDeclineNaming("C-C triple bond off main chain")
++              bondPos = Math.min(_ia, _ib) + 1 }
+             sortedMultiTBonds.push(bondPos)
+         }
+         if (sortedMultiTBonds.length > 0) {
+@@ -3429,21 +3820,104 @@ function fGuessName(skipChainRecalc) {
+                     const _sb = nameMainCompObj3.halogen.substitute[b];
+                     return _sa < _sb ? -1 : (_sa > _sb ? 1 : 0);
+                 });
++                // Decorated (hetero-substituted alkyl) branches, v1: claim
++                // off-chain heteros here; unclaimed off-chain hetero declines
++                // below (fail-closed — never emit locant 0).
++                const _decAll = fGetDecoratedBranchInfo()
++                const _decClaimed = {}
++                for (let _di = 0; _di < _decAll.length; _di++) {
++                    _decClaimed[_decAll[_di].heteroIdx] = true
++                }
++                // Direct (on-chain) halogen locants per type; decorated-branch
++                // heteros are named as substituted-alkyl groups in the merge
++                // below. Off-chain and unclaimed → decline (fail-closed:
++                // indexOf()+1 would silently emit locant 0).
++                const _directLocs = {}
+                 for (let i = 0; i < sortedHalogens.length; i++) { // τρεχει για κάθε διαφορετικό αλογόνο που υπάρχει
+                     let currX = sortedHalogens[i]
+-                    myXpositions = ""
+-                    theCountPrefix = nameMultiPrefix[functionalGroupObj.halogen[currX].length - 1] // Δι, τρι, τετρα....
++                    const _direct = []
+                     for (let j = 0; j < functionalGroupObj.halogen[currX].length; j++) { // τρέχει για όλα τα άτομα του συγκεκριμένου αλογονου
+                         theXno = functionalGroupObj.halogen[currX][j]
+-                        currXPos = mainChainAtomsList.indexOf(atomConnectivityList[theXno][0] + 1) + 1
+-                        myXpositions += currXPos
+-                        if (j < functionalGroupObj.halogen[currX].length - 1) {
+-                            myXpositions += ","
++                        if (_decClaimed[theXno]) continue
++                        currXPos = fMainChainLocant(atomConnectivityList[theXno][0] + 1)
++                        if (currXPos == null) fDeclineNaming("halogen off main chain")
++                        _direct.push(currXPos)
++                    }
++                    _direct.sort(function (a, b) { return a - b; })
++                    _directLocs[currX] = _direct
++                }
++                if (!_decAll.length) {
++                    // Legacy path, byte-identical: one entry per halogen type
++                    // in Greek-alphabetical type order.
++                    for (let i = 0; i < sortedHalogens.length; i++) {
++                        let currX = sortedHalogens[i]
++                        const _direct = _directLocs[currX]
++                        myXpositions = ""
++                        for (let j = 0; j < _direct.length; j++) {
++                            myXpositions += _direct[j]
++                            if (j < _direct.length - 1) {
++                                myXpositions += ","
++                            }
++                        }
++                        theCountPrefix = nameMultiPrefix[_direct.length - 1] // Δι, τρι, τετρα....
++                        subPrefix = theCountPrefix + nameMainCompObj3.halogen.substitute[currX]
++                        comp0NumberList.push(myXpositions)
++                        comp0TextList.push(subPrefix)
++                    }
++                } else {
++                    // Merged path (new territory — no legacy output to preserve):
++                    // direct halogen + plain alkyl + decorated groups, sorted
++                    // Greek-alphabetically by substituent name. Parens iff
++                    // multiplied AND the name carries a locant digit.
++                    const _plain = fGetHydrocarbonSubstituentInfo()
++                    const _decAtoms = {}
++                    for (let _di = 0; _di < _decAll.length; _di++) {
++                        for (let _ai = 0; _ai < _decAll[_di].atoms.length; _ai++) {
++                            _decAtoms[_decAll[_di].atoms[_ai]] = true
++                        }
++                    }
++                    const _groups = {}
++                    for (let _hi = 0; _hi < sortedHalogens.length; _hi++) {
++                        const _hx = sortedHalogens[_hi]
++                        const _dl = _directLocs[_hx]
++                        if (_dl && _dl.length) {
++                            _groups[nameMainCompObj3.halogen.substitute[_hx]] = _dl.slice()
++                        }
++                    }
++                    for (let i = 0; i < _plain.length; i++) {
++                        const _b = _plain[i]
++                        let _overlap = false
++                        for (let _ai = 0; _ai < _b.atoms.length; _ai++) {
++                            if (_decAtoms[_b.atoms[_ai]]) { _overlap = true; break }
++                        }
++                        if (_overlap) continue
++                        if (!Object.prototype.hasOwnProperty.call(_groups, _b.name)) {
++                            _groups[_b.name] = []
++                        }
++                        _groups[_b.name].push(_b.locant)
++                    }
++                    for (let _di = 0; _di < _decAll.length; _di++) {
++                        const _d = _decAll[_di]
++                        if (!Object.prototype.hasOwnProperty.call(_groups, _d.name)) {
++                            _groups[_d.name] = []
++                        }
++                        _groups[_d.name].push(_d.locant)
++                    }
++                    const _mergedNames = Object.keys(_groups).sort(function (a, b) {
++                        return a < b ? -1 : (a > b ? 1 : 0);
++                    });
++                    for (let i = 0; i < _mergedNames.length; i++) {
++                        const _bName = _mergedNames[i]
++                        const _locants = _groups[_bName].sort(function (a, b) { return a - b; });
++                        let _label
++                        if (_locants.length > 1 && /\d/.test(_bName)) {
++                            _label = nameMultiPrefix[_locants.length - 1] + "(" + _bName + ")"
++                        } else {
++                            _label = nameMultiPrefix[_locants.length - 1] + _bName
+                         }
++                        comp0NumberList.push(_locants.join(","))
++                        comp0TextList.push(_label)
+                     }
+-                    subPrefix = theCountPrefix + nameMainCompObj3.halogen.substitute[currX]
+-                    comp0NumberList.push(myXpositions)
+-                    comp0TextList.push(subPrefix)
+                 }
+                 // comp0/comp0b assignment for any number of types happens below
+                 // (comp0NumberList block): first alphabetical type -> comp0,
+@@ -3463,27 +3937,99 @@ function fGuessName(skipChainRecalc) {
+                 myXpositions = ""
+                 sortedFunPositions = []
+                 theCountPrefix = nameMultiPrefix[myFunctionalGroups.length - 1] // Δι, τρι, τετρα....
++                // Decorated nitro branches claim their N here (v1); unclaimed
++                // off-chain N declines (fail-closed — never emit locant 0).
++                const _decNitro = fGetDecoratedBranchInfo()
++                const _decNitroClaimed = {}
++                for (let _dni = 0; _dni < _decNitro.length; _dni++) {
++                    _decNitroClaimed[_decNitro[_dni].heteroIdx] = true
++                }
++                const _directNitro = []
+                 for (let i = 0; i < myFunctionalGroups.length; i++) { // τρέχει για όλες τις εμφανίσεις της ΧΟ
+                     theXno = myFunctionalGroups[i]
+-                    currXPos = mainChainAtomsList.indexOf(atomConnectivityList[theXno][0] + 1) + 1
+-                    sortedFunPositions.push(currXPos)
++                    if (_decNitroClaimed[theXno]) continue
++                    currXPos = fMainChainLocant(atomConnectivityList[theXno][0] + 1)
++                    if (currXPos == null) fDeclineNaming("nitro off main chain")
++                    _directNitro.push(currXPos)
+                 }
+-                sortedFunPositions.sort((a, b) => a - b)
+-                for (let j = 0; j < sortedFunPositions.length; j++) {
+-                    myXpositions += sortedFunPositions[j]
+-                    if (j < sortedFunPositions.length - 1) {
+-                        myXpositions += ","
++                if (!_decNitro.length) {
++                    // Legacy path, byte-identical (count prefix computed but
++                    // unused, as before).
++                    sortedFunPositions = _directNitro
++                    sortedFunPositions.sort((a, b) => a - b)
++                    for (let j = 0; j < sortedFunPositions.length; j++) {
++                        myXpositions += sortedFunPositions[j]
++                        if (j < sortedFunPositions.length - 1) {
++                            myXpositions += ","
++                        }
++                    }
++                    if (mainChainAtomsList.length < 3) {
++                        myXpositions = ""
++                    } else {
++                        myXpositions += "-"
+                     }
+-                }
+-                if (mainChainAtomsList.length < 3) {
+-                    myXpositions = ""
+-                } else {
+-                    myXpositions += "-"
+-                }
+ 
+-                comp0 = myXpositions
+-                comp0Text = nameMainCompObj3.nitro.substitute
++                    comp0 = myXpositions
++                    comp0Text = nameMainCompObj3.nitro.substitute
+ 
++                    break;
++                }
++                // Merged path (new territory): direct nitro + plain alkyl +
++                // decorated groups via the prefix-slot machinery.
++                {
++                    const _plainN = fGetHydrocarbonSubstituentInfo()
++                    const _decAtomsN = {}
++                    for (let _dni = 0; _dni < _decNitro.length; _dni++) {
++                        for (let _ai = 0; _ai < _decNitro[_dni].atoms.length; _ai++) {
++                            _decAtomsN[_decNitro[_dni].atoms[_ai]] = true
++                        }
++                    }
++                    const _groupsN = {}
++                    if (_directNitro.length) {
++                        _directNitro.sort(function (a, b) { return a - b; })
++                        _groupsN[nameMainCompObj3.nitro.substitute] = _directNitro.slice()
++                    }
++                    for (let i = 0; i < _plainN.length; i++) {
++                        const _b = _plainN[i]
++                        let _overlap = false
++                        for (let _ai = 0; _ai < _b.atoms.length; _ai++) {
++                            if (_decAtomsN[_b.atoms[_ai]]) { _overlap = true; break }
++                        }
++                        if (_overlap) continue
++                        if (!Object.prototype.hasOwnProperty.call(_groupsN, _b.name)) {
++                            _groupsN[_b.name] = []
++                        }
++                        _groupsN[_b.name].push(_b.locant)
++                    }
++                    for (let _dni = 0; _dni < _decNitro.length; _dni++) {
++                        const _d = _decNitro[_dni]
++                        if (!Object.prototype.hasOwnProperty.call(_groupsN, _d.name)) {
++                            _groupsN[_d.name] = []
++                        }
++                        _groupsN[_d.name].push(_d.locant)
++                    }
++                    const _mergedN = Object.keys(_groupsN).sort(function (a, b) {
++                        return a < b ? -1 : (a > b ? 1 : 0);
++                    });
++                    for (let i = 0; i < _mergedN.length; i++) {
++                        const _bName = _mergedN[i]
++                        const _locants = _groupsN[_bName].sort(function (a, b) { return a - b; });
++                        let _label
++                        if (_locants.length > 1 && /\d/.test(_bName)) {
++                            _label = nameMultiPrefix[_locants.length - 1] + "(" + _bName + ")"
++                        } else {
++                            _label = nameMultiPrefix[_locants.length - 1] + _bName
++                        }
++                        comp0NumberList.push(_locants.join(","))
++                        comp0TextList.push(_label)
++                    }
++                }
++                if (bondPrefixDB !== "" || bondPrefixTB !== "") {
++                    // New territory with no legacy oracle: nitroalkene +
++                    // decorated branches has no attested naming (legacy drops
++                    // the DB locant even for plain nitroalkenes) — decline.
++                    fDeclineNaming("decorated nitro with parent multi-bond")
++                }
+                 break;
+             case "ketone":  // Κετόνες και Αλκοολες
+             case "alcohol":
+@@ -3494,7 +4040,9 @@ function fGuessName(skipChainRecalc) {
+                 theCountPrefix = nameMultiPrefix[myFunctionalGroups.length - 1] // Δι, τρι, τετρα....
+                 for (let i = 0; i < myFunctionalGroups.length; i++) { // τρέχει για όλες τις εμφανίσεις της ΧΟ
+                     theXno = myFunctionalGroups[i]
+-                    currXPos = mainChainAtomsList.indexOf(atomConnectivityList[theXno][0] + 1) + 1
++                    // Fail-closed: an off-chain O has no main-chain locant.
++                    currXPos = fMainChainLocant(atomConnectivityList[theXno][0] + 1)
++                    if (currXPos == null) fDeclineNaming(functionalGroupsList[0] + " O off main chain")
+                     sortedFunPositions.push(currXPos)
+                 }
+                 sortedFunPositions.sort((a, b) => a - b)
+@@ -3638,7 +4186,10 @@ function fGuessName(skipChainRecalc) {
+ 
+             for (let j = 0; j < currXOcount; j++) {
+                 theXno = functionalGroupObj[fgOrder[i]][currXOhetero][j] // ο αριθμός του ετερορατομου της τρεχουσας ΧΟ
+-                currXPos = mainChainAtomsList.indexOf(atomConnectivityList[theXno][0] + 1) + 1
++                // Fail-closed: multi-FG decorated naming is v2 — an off-chain
++                // substituent hetero (e.g. Cl inside a branch) declines here.
++                currXPos = fMainChainLocant(atomConnectivityList[theXno][0] + 1)
++                if (currXPos == null) fDeclineNaming("multi-FG substituent off main chain")
+                 sortedFunPositions.push(currXPos)
+             }
+             sortedFunPositions.sort((a, b) => a - b)
+@@ -3692,7 +4243,11 @@ function fGuessName(skipChainRecalc) {
+     // The twelve-slot contract has two multiple-bond positions; mixed alcohols
+     // carry the OH locant with the suffix rather than overwrite the triple locant.
+     if (functionalGroupsList[0] === 'alcohol' && fSupportsAlkylBranchPrefixes() && comp0NumberList.length) {
+-        const oh = functionalGroupObj.alcohol.O.map(o => mainChainAtomsList.indexOf(atomConnectivityList[o][0] + 1) + 1).sort((a,b) => a-b).join(',')
++        const oh = functionalGroupObj.alcohol.O.map(o => {
++            const _l = fMainChainLocant(atomConnectivityList[o][0] + 1)
++            if (_l == null) fDeclineNaming("alcohol O off main chain")
++            return _l
++        }).sort((a,b) => a-b).join(',')
+         const suffix = nameMultiPrefix[functionalGroupObj.alcohol.O.length - 1] + 'όλη'
+         const db = sortedMultiDBonds && sortedMultiDBonds.length, tb = sortedMultiTBonds && sortedMultiTBonds.length
+         if (db && tb) {
+@@ -3718,7 +4273,11 @@ function fGuessName(skipChainRecalc) {
+         fIsAcyclicKetoneGraph(atomConnectivityList, allAtomsTypeList, bondList) &&
+         !fIsAcyclicSaturatedMonoketoneGraph(atomConnectivityList, allAtomsTypeList, bondList)) {
+         const os = functionalGroupObj.ketone.O
+-        const loc = os.map(o => mainChainAtomsList.indexOf(atomConnectivityList[o][0]+1)+1).sort((a,b)=>a-b).join(',')
++        const loc = os.map(o => {
++            const _l = fMainChainLocant(atomConnectivityList[o][0]+1)
++            if (_l == null) fDeclineNaming("ketone O off main chain")
++            return _l
++        }).sort((a,b)=>a-b).join(',')
+         const suffix = nameMultiPrefix[os.length-1] + 'όνη'
+         const db = sortedMultiDBonds && sortedMultiDBonds.length, tb = sortedMultiTBonds && sortedMultiTBonds.length
+         const branched = comp0NumberList.length > 0

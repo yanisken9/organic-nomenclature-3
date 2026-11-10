@@ -1,0 +1,44 @@
+--- before
++++ /private/tmp/namelecule-professor-merge-20261109-oxj7hfyy/candidate/js/mulermoc-nom-molview-55.js
+@@ -2227,10 +2227,41 @@
+     });
+   } catch (e) { return false; }
+ }
++// JSmol's MOL writer can assign parity to ordinary CH2 carbons. Those
++// centers cannot carry tetrahedral stereochemistry. Normalize only this
++// demonstrated writer output, never imported/source SDF or potential C*.
++function fMolDraftNormalizeJSmolReadback(text, referenceMol) {
++  try {
++    var reference = fParseMolV2000(referenceMol), m = fParseMolV2000(text);
++    if (!fMolCanTransform2D(reference, true) || !m) return null;
++    var neighbors = m.atoms.map(function () { return []; });
++    m.bonds.forEach(function (b) {
++      neighbors[b[0] - 1].push([b[1] - 1, b[2]]);
++      neighbors[b[1] - 1].push([b[0] - 1, b[2]]);
++    });
++    var lines = String(text).split('\n'), changed = false;
++    m.atoms.forEach(function (a, i) {
++      if ((a.parity !== 1 && a.parity !== 2) || a.el !== 'C' || a.charge || a.radical ||
++          neighbors[i].length !== 4 || neighbors[i].some(function (v) { return v[1] !== 1; })) return;
++      var ordinaryH = neighbors[i].filter(function (v) {
++        var h = m.atoms[v[0]];
++        return h.el === 'H' && !h.massDifference && !h.isotope && !h.charge && !h.radical &&
++          !h.parity && neighbors[v[0]].length === 1;
++      });
++      if (ordinaryH.length < 2) return;
++      lines[i + 4] = lines[i + 4].substring(0, 39) + '  0' + lines[i + 4].substring(42);
++      changed = true;
++    });
++    // Every other field survives byte-for-byte. The caller still applies
++    // the unchanged strict graph/charge/isotope/query/stereo/H checks.
++    return changed ? lines.join('\n') : text;
++  } catch (e) { return null; }
++}
+ function fMolDraftReadBackSDF(expectHeavy, job) {
+   if (!fMolDraft3DCurrent(job)) return null;
+   var text = null;
+   try { text = fJSmolScriptEcho(job.applet, 'write MOL') || null; } catch (e) {}
++  text = fMolDraftNormalizeJSmolReadback(text, job.molText);
+   return fMolDraft3DCurrent(job) && fMolDraftValidSDF3D(text, expectHeavy, job.molText) ? text : null;
+ }
+ // Step budget + blind wait per minimize round (v55.x): the wait is

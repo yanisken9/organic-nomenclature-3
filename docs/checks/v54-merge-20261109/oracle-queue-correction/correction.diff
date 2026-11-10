@@ -1,0 +1,46 @@
+--- before
++++ /private/tmp/namelecule-professor-merge-20261109-oxj7hfyy/candidate/js/mulermoc-nom-iupac-55.js
+@@ -154,22 +154,19 @@
+ // draft preview) funnel through fFetchIUPAC_OC, so gating here covers all.
+ var __mulerOCGate = { last: 0, chain: Promise.resolve() };
+ function fOCGateWait() {
+-  var wait = 0;
+-  try {
+-    var now = Date.now();
+-    wait = 150 - (now - __mulerOCGate.last);
+-    if (!(wait > 0)) wait = 0;
+-  } catch (eG) { wait = 0; }
+-  var p = null;
+-  try {
+-    p = __mulerOCGate.chain.then(function () {
+-      if (wait > 0) return new Promise(function (r) { setTimeout(r, wait); });
+-      return null;
+-    });
+-  } catch (eC) { p = Promise.resolve(); }
+-  try {
+-    __mulerOCGate.chain = p.catch(function () {}).then(function () {});
+-  } catch (eS) {}
++  // Calculate the remaining delay in the queued turn, after the preceding
++  // caller has reserved its start. A delay captured before queuing lets a
++  // simultaneous burst observe the same old timestamp and bypass the gate.
++  var p = __mulerOCGate.chain.catch(function () {}).then(function () {
++    var wait = 150 - (Date.now() - __mulerOCGate.last);
++    if (wait > 0) return new Promise(function (r) { setTimeout(r, wait); });
++    return null;
++  }).then(function () {
++    __mulerOCGate.last = Date.now();
++  });
++  // A transport failure must not block later callers. The gate serializes
++  // request starts only; the network requests may still finish independently.
++  __mulerOCGate.chain = p.catch(function () {});
+   return p;
+ }
+ 
+@@ -188,7 +185,6 @@
+   const o = opts || {};
+   const timeoutMs = typeof o.timeoutMs === "number" ? o.timeoutMs : 8000;
+   try { await fOCGateWait(); } catch (eG) {}
+-  try { __mulerOCGate.last = Date.now(); } catch (eL) {}
+   const url =
+     "https://openclatura.org/name?smiles=" + encodeURIComponent(raw) + "&verify=0&format=json";
+   var ctrl = null, timer = null;

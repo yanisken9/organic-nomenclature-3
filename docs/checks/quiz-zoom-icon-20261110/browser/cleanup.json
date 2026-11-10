@@ -1,0 +1,38 @@
+{
+  "actions": [
+    {
+      "record": "process-before.json",
+      "pid": 81525,
+      "signal": null,
+      "reason": "Not running or exact signature absent"
+    },
+    {
+      "record": "process-before.json",
+      "pid": 81524,
+      "signal": null,
+      "reason": "Not running or exact signature absent"
+    },
+    {
+      "record": "process.json",
+      "pid": 81747,
+      "signal": "TERM",
+      "matchedToken": "/var/folders/2v/ds4vjvgj1_1000kq1fzg70q40000gn/T/namelecule-quiz-zoom-icon-20261110-uuedk75s"
+    },
+    {
+      "record": "process.json",
+      "pid": 81744,
+      "signal": "TERM",
+      "matchedToken": "docs/checks/quiz-zoom-icon-20261110/browser/owned-processes.py"
+    }
+  ],
+  "ports": {
+    "53341": "closed",
+    "53339": "closed",
+    "53340": "closed",
+    "53507": "closed",
+    "53505": "closed",
+    "53506": "closed"
+  },
+  "personalGUI": "Not targeted",
+  "UTC": "2026-11-10T05:34:44Z"
+}

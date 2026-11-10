@@ -1,0 +1,22 @@
+{
+  "completed": true,
+  "role": "Developer native Firefox evidence",
+  "before": 12,
+  "after": 12,
+  "javascriptErrors": {
+    "before": 0,
+    "after": 0
+  },
+  "verification": [
+    "Original optional header visibly reproduced both actions",
+    "Required Return remains visible and returns samecheckpoint; optional Return hidden/displaynone/no rect and excluded from native Tab",
+    "Optional Continue works via native Enter, Escape preserves same-step behavior; shared dialog required\u2192optional\u2192required updates correctly",
+    "320/390 layout and exact original earned receipt preserved"
+  ],
+  "receiptLineage": "before/after-browser.json exact historical previously earned required-s4r3; no new prerequisite success claim",
+  "limits": [
+    "Owned headless Firefox only; no Safari/physicalmobile/3D/conference-machine replay",
+    "Bounded header/navigation change only; no full lesson or new three-question replay"
+  ],
+  "cleanup": "cleanup.json"
+}

@@ -1,0 +1,104 @@
+{
+  "observationID": "PRIMARY-JSMOL-01",
+  "severity": "P2 retained diagnostic class; root cause unestablished",
+  "message": "TypeError: can't access property \"bufferedImage\", this.platform is null",
+  "timestampUTC": "2026-11-09T22:48:28.111000+00:00",
+  "actualContext": "dbfc60a4-bf50-48d1-999e-1bf27ad880cb",
+  "stackTrace": {
+    "callFrames": [
+      {
+        "columnNumber": 290,
+        "functionName": "",
+        "lineNumber": 869,
+        "url": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corejmol.z.js"
+      },
+      {
+        "columnNumber": 18,
+        "functionName": "",
+        "lineNumber": 2519,
+        "url": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corejmol.z.js"
+      },
+      {
+        "columnNumber": 349,
+        "functionName": "",
+        "lineNumber": 2522,
+        "url": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corejmol.z.js"
+      },
+      {
+        "columnNumber": 396,
+        "functionName": "",
+        "lineNumber": 2631,
+        "url": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corejmol.z.js"
+      },
+      {
+        "columnNumber": 227,
+        "functionName": "",
+        "lineNumber": 2633,
+        "url": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corejmol.z.js"
+      },
+      {
+        "columnNumber": 42,
+        "functionName": "",
+        "lineNumber": 1836,
+        "url": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corejmol.z.js"
+      },
+      {
+        "columnNumber": 86,
+        "functionName": "a.repaint/<",
+        "lineNumber": 182,
+        "url": "http://127.0.0.1:50780/organic-nomenclature-3/js/vendor/jsmol/namelecule-20261031-r1/JSmol.min.js"
+      },
+      {
+        "columnNumber": 33,
+        "functionName": "run",
+        "lineNumber": 87,
+        "url": "http://127.0.0.1:50780/organic-nomenclature-3/js/vendor/jsmol/namelecule-20261031-r1/JSmol.min.js"
+      }
+    ]
+  },
+  "navigationEvidence": {
+    "source": "Owned PRIMARY server tool session 67898 HTTP output, local Europe/Athens timestamps",
+    "requests": [
+      {
+        "localTime": "2026-11-10 00:48:26",
+        "path": "/organic-nomenclature-3/mulermoc-nom-52.html?v=primary-preserved-smoke",
+        "status": 200
+      },
+      {
+        "localTime": "2026-11-10 00:48:27",
+        "path": "/organic-nomenclature-3/spt/init-3.spt",
+        "status": 200
+      },
+      {
+        "localTime": "2026-11-10 00:48:28",
+        "path": "/organic-nomenclature-3/react-preview/dist/",
+        "status": 200
+      },
+      {
+        "localTime": "2026-11-10 00:48:28",
+        "path": "/organic-nomenclature-3/react-preview/dist/viewer-host.html?session=202f989f-f8b8-43c9-9688-e014c877f45d",
+        "status": 200
+      },
+      {
+        "localTime": "2026-11-10 00:48:30",
+        "path": "/organic-nomenclature-3/mols/nomeclature-moc2/ethanol_3D.sdf",
+        "status": 200
+      }
+    ]
+  },
+  "boundedAttribution": "Timestamp coincides with navigation from preserved v52 to public React. The stack is JSmol remote core repaint via the unchanged local JSmol wrapper. The emitting document within this top-level context and exact causal chain were not instrumented, so teardown origin is plausible rather than proved.",
+  "localVendor": {
+    "path": "js/vendor/jsmol/namelecule-20261031-r1/JSmol.min.js",
+    "baselineSHA256": "d99b1168acbbd55d59073943e6fde174513e8b815ddb88ae8f1bfa927961b323",
+    "currentSHA256": "d99b1168acbbd55d59073943e6fde174513e8b815ddb88ae8f1bfa927961b323",
+    "unchanged": true
+  },
+  "remoteCore": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corejmol.z.js; remote bytes/version not frozen in this smoke",
+  "priorSymptomEvidence": [
+    "docs/checks/publication-20261105/public-independent-assessment.json (PUB-JS1, existing open P2, causal identity unproved)",
+    "docs/checks/alkanes-two-part-20261105/REPORT.md:69 (earlier bufferedImage/platform-null observation)",
+    "docs/checks/alkanes-json9-library-20261108/console-classification.json"
+  ],
+  "observedEffect": "All 27 functional assertions completed. The preceding v52 source-matched methane model had 5 atoms; subsequent preserved React ethanol model had 9 atoms, and actual expanded/3D/2D switches passed. No asserted UI/model failure observed.",
+  "limits": "One real console exception retained; console is not clean. No claim of a root-cause fix, causal identity with earlier observations, remote-version identity, frequency, or uninterrupted future operation."
+}

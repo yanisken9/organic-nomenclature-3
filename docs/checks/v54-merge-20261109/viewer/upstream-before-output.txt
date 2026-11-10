@@ -1,0 +1,2 @@
+{"reproduced":["CV55-04 wrong identity same heavy count accepted","CV55-06 one-heavy methane rejected","VV55-01 replacement read and UFF fired after first wait"],"writes":["original:set forceField MMFF;","original:select all; minimize steps 500;","replacement:set forceField UFF;","replacement:select all; minimize steps 500;"],"reads":["replacement","replacement"]}
+{"reproduced":["VV55-02 existing provisional SDF prevents visible manual retry","CV55-05 explicit manual OK stores fallback without durable provisional status"],"source":"jsmol-unminimized","status":null}

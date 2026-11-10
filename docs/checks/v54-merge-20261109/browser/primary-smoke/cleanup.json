@@ -1,0 +1,59 @@
+{
+  "createdUTC": "2026-11-09T22:50:35.566445+00:00",
+  "ownedProcessActions": [
+    {
+      "pid": 76018,
+      "signal": "TERM",
+      "matchedToken": "/primary-smoke/server.py 50780"
+    },
+    {
+      "pid": 74701,
+      "signal": "TERM",
+      "matchedToken": "/browser/serve.py /private/tmp/namelecule-professor-merge-20261109-oxj7hfyy/candidate 49407"
+    },
+    {
+      "pid": 74840,
+      "signal": "TERM",
+      "matchedToken": "/var/folders/2v/ds4vjvgj1_1000kq1fzg70q40000gn/T/namelecule-v55-final-owned-firefox-r9dk6seo"
+    }
+  ],
+  "ownedProcessAfter": {
+    "primaryServerPID": {
+      "pid": 76018,
+      "psExit": 1,
+      "stillRunning": false,
+      "command": ""
+    },
+    "candidateServerPID": {
+      "pid": 74701,
+      "psExit": 1,
+      "stillRunning": false,
+      "command": ""
+    },
+    "firefoxPID": {
+      "pid": 74840,
+      "psExit": 1,
+      "stillRunning": false,
+      "command": ""
+    }
+  },
+  "ownedPortsAfter": {
+    "http_port": {
+      "port": 50780,
+      "accepting": false
+    },
+    "candidateHTTPPort": {
+      "port": 49407,
+      "accepting": false
+    },
+    "bidi_port": {
+      "port": 49629,
+      "accepting": false
+    }
+  },
+  "new13ArtifactsUnchanged": true,
+  "candidateFrozen122Unchanged": true,
+  "personalGUIFirefoxTouched": false,
+  "profileDeleted": false,
+  "sourceEdits": false
+}

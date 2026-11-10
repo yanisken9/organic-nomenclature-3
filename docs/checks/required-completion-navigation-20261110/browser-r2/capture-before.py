@@ -1,0 +1,17 @@
+from pathlib import Path
+exec((Path(__file__).parent/'driver-common.py').read_text(),globals())
+HISTORY=ROOT/'docs/checks/required-completion-navigation-20261110/browser/after-browser.json'
+def ready():
+ app_ready();wait('!!fScenarioPresent()&&fScenarioPresent().index===3&&!MuLERMoCScenario.checkpointPreparation&&!document.documentElement.classList.contains("lesson-loading")',55);dismiss_rotate();wait('!document.getElementById("nlQuizOpen").disabled',55)
+def fault(mode):
+ p=json.loads((H/'fault-control.json').read_text());p['mode']=mode;(H/'fault-control.json').write_text(json.dumps(p)+'\n')
+def state():return read('(()=>{let b=document.getElementById("nlQuizBack"),i=document.querySelector(".diagram-image");return{backHidden:b.hidden,backRects:b.getClientRects().length,counter:document.getElementById("nlQuizProgress").textContent,image:{ready:i?.classList.contains("is-ready"),complete:i?.complete,width:i?.naturalWidth,src:i?.src},status:document.querySelector(".image-status")?.textContent,lower:[...document.querySelectorAll(".round-next button")].map(n=>({text:n.textContent,disabled:n.disabled})),complete:NameleculeQuizCheckpoints.isComplete(fScenarioPresent(),3),focus:document.activeElement.tagName}})()')
+try:
+ source_guard();viewport(1280,800);navigate('mulermoc-nom-55.html?scenario=scenarios/alkanes-user-3.scenario.json&present=1&from=theory-library#step=4');ready();prior=json.loads(HISTORY.read_text());earned=prior['newEarnedReceipt'];OUT['receiptLineage']={'source':str(HISTORY.relative_to(ROOT))+' newEarnedReceipt','sha256':hashlib.sha256(HISTORY.read_bytes()).hexdigest(),'exactStorage':earned,'claim':'Exact completed receipt genuinely earned in immediately preceding native R1third repair; no new success claimed.'};ev('sessionStorage.clear();Object.entries('+json.dumps(earned,ensure_ascii=False)+').forEach(([k,v])=>sessionStorage.setItem(k,v));true');call('browsingContext.reload',{'context':ctx,'wait':'complete'});ready();fault('delay');click('#nlQuizOpen');wait('document.getElementById("nlQuizProgress").textContent==="Κουίζ 3/3"&&document.querySelectorAll(".round-next button").length===2');v=state();check(v['backHidden']and len(v['lower'])==2 and all(n['disabled']for n in v['lower']) and not v['image']['ready'],'R1actual delayed completed image hides Return while both lower actions disabled',v);shot('delayed-completed-header');fault('normal');image_ready();v=state();check(v['backHidden'] and all(not n['disabled']for n in v['lower']),'R1image release enables final pair',v);key(chr(0xe00c));call('browsingContext.reload',{'context':ctx,'wait':'complete'});ready();fault('error');click('#nlQuizOpen');wait('!!document.querySelector(".image-status button")');v=state();check(v['backHidden']and len(v['lower'])==2 and all(n['disabled']for n in v['lower']) and not v['image']['ready'],'R1actual image503 keeps Return hidden with two disabled lower actions',v);shot('error-completed-header');key(chr(0xe00c));check(ev('!document.getElementById("nlQuizDialog").open&&fScenarioPresent().index===3'),'R1Escape still closes failed image to checkpoint');OUT['faultScope']='Only owned HTTP server delays or503s exact /games/assets/name-repair/propane.svg. All5application sources byte-exact frozen R1; no app/state/callback mutation.';OUT['completed']=True
+except Exception:
+ OUT['failure']=traceback.format_exc();print(OUT['failure'],flush=True)
+ try:shot('failure')
+ except Exception:pass
+finally:
+ fault('normal');finish()
+if not OUT['completed']:raise SystemExit(1)

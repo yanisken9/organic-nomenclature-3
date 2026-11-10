@@ -1,0 +1,31 @@
+{
+  "ownedFirefoxPID": 87874,
+  "ownedHelperPID": 87873,
+  "profileRemoved": true,
+  "ownedPorts": {
+    "before_port": {
+      "port": 57221,
+      "connectResult": 61
+    },
+    "after_port": {
+      "port": 57222,
+      "connectResult": 61
+    },
+    "bidi_port": {
+      "port": 57223,
+      "connectResult": 61
+    }
+  },
+  "uncontrolledProcessesBefore": {
+    "57800": "57800 S",
+    "55879": "55879 Ss",
+    "56371": "56371 Ss"
+  },
+  "uncontrolledProcessesAfter": {
+    "57800": "57800 S",
+    "55879": "55879 Ss",
+    "56371": "56371 Ss"
+  },
+  "actions": "SIGTERM owned Firefox only; owned helper exits on child shutdown; remove exact owned temporary profile. No personal browser input/settings/close.",
+  "verifiedUTC": "2026-11-10T08:08:20Z"
+}

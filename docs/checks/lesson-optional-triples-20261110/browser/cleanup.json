@@ -1,0 +1,16 @@
+{
+  "scope": "Only exact owned Firefox profile and own test-server script, never personal Firefox or localhost8013",
+  "before": {
+    "firefox": "/Applications/Firefox.app/Contents/MacOS/firefox --headless --no-remote --profile /var/folders/2v/ds4vjvgj1_1000kq1fzg70q40000gn/T/namelecule-optional-triples-20261110-gab_zro5 --remote-debugging-port 55730",
+    "server": "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python docs/checks/lesson-optional-triples-20261110/browser/owned-processes.py"
+  },
+  "ports": {
+    "55728": true,
+    "55729": true,
+    "55730": true
+  },
+  "firefoxExited": true,
+  "serverExited": true,
+  "profileRemoved": true,
+  "UTC": "2026-11-10T07:15:42Z"
+}

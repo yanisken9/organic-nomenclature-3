@@ -1,0 +1,316 @@
+{
+  "sourceHashesAtStart": {
+    "mulermoc-nom-55.html": "bd7764ac34d8b1a2f15345b68416385f91d4b351b956f0581adb2cf4eadc6a25",
+    "js/jsme-nick-nomeclature-moc2-data_55.js": "9387cd654b2ff3cfb058d9b97ddcca798ac13f47f769b532f9c122277ff8dd0a",
+    "js/mulermoc-nom-core-55.js": "816b2015b96598d0596aaa513967906f9126db8376d49d9b96f98880f4acfae4",
+    "js/mulermoc-nom-molview-55.js": "1580d9bd72f270b72760784384efba8230e846ef7fa3f033aa71226eb6d7091d",
+    "js/mulermoc-nom-teaching-55.js": "92f5dd9708103a306c98cd7c19dc10082aa4c57d1744105fadf14074ea60ef00",
+    "js/mulermoc-nom-note-55.js": "e685355459afb7955fbe13e3b8e07c6283469b4d8acb98cfbcfa483c9f9be3ca",
+    "js/mulermoc-nom-scenario-55.js": "cd3ac936c7441589d8132d957e169f410973e941c3f737560b4349ea7d7ffce0",
+    "js/mulermoc-nom-iupac-55.js": "db5b6e249119e8d31c0dfa4ab6c8b28f766b3239fb78258cee3a6539ced594de",
+    "js/mulermoc-nom-lang-55.js": "46386d8c9b1bda0861fd6db3df8903fdbe56b413faa4984d8d62a190b37fcfbe",
+    "js/mulermoc-nom-name-en-55.js": "a4bcf58e343a3efc60e9035a3b3d76cb0bb32ed5dd38bfc48234fc1f71065bb1",
+    "js/ui-icons-55.js": "580277e98b0d29bc1df2a265d7e6e395500db9253ee8492349a145fd19a2c414",
+    "css/jsme-nick-55.css": "cb6f9d9546d1cd21218641c18dd55a21b2a1ccb1875295782d7b2bdb932bb970",
+    "css/mulermoc-nom-scenario-55.css": "00d81c4c94059b829141163a78f78d150eb12bfa8534fce50e49c90ca5702e84",
+    "css/namelecule-55.css": "042b0e93645dbc9fe5c9851bdd90a73b08f8c89fc4ef524302bd07ac7180e7a7",
+    "design/welcome-proposal.html": "17c04887fde8da210e7c4acd4e1458652948c0d277f180c67460e3e11ff54c2e",
+    "design/theory-library.html": "87e557a3455f14a851dc631c8d70bf93fe396f4a5ebdb8fde4fa78397158e8dc"
+  },
+  "completed": false,
+  "role": "Developer real isolated Firefox evidence; not independent review",
+  "checks": [
+    {
+      "label": "Cold55 startup has141 molecules/422forms",
+      "detail": null
+    },
+    {
+      "label": "Cold55 actual core/viewer55 scripts loaded",
+      "detail": null
+    },
+    {
+      "label": "Cold real methane3D has5atoms",
+      "detail": null
+    },
+    {
+      "label": "New/Edit and SaveAll chrome exists",
+      "detail": null
+    },
+    {
+      "label": "gr actual traditional/common→systematic name display changes",
+      "detail": {
+        "before": {
+          "name": "4-αιθυλο-3-ισοπροπυλο-2-μεθυλοεξανάλη",
+          "text": "Ονομασία   Υποκαταστάτες:ΚοινήΣυστηματικήΚύρια αλυσίδα:2/24- + αιθυλο + -3- + ισοπροπυλο + -2- + μεθυλο + εξ + αν + άλη"
+        },
+        "after": {
+          "name": "4-αιθυλο-3-ισοπροπυλο-2-μεθυλοεξανάλη",
+          "text": "Ονομασία   Υποκαταστάτες:ΚοινήΣυστηματικήΚύρια αλυσίδα:2/24-αιθυλο + -2-μεθυλο + -3-(προπαν-2-υλο) + εξ + αν + άλη"
+        }
+      }
+    },
+    {
+      "label": "gr name components remain selectable",
+      "detail": null
+    },
+    {
+      "label": "gr component selection keeps2D viewer usable",
+      "detail": null
+    }
+  ],
+  "limitations": [
+    "Headless Firefox and viewport emulation only; no personal Firefox interaction",
+    "Real external JSmol/fonts/oracle service failures are retained; controlled transports are explicitly labeled",
+    "No physical mobile/Safari/conference-machine/offline or uninterrupted-operation guarantee"
+  ],
+  "base_url": "http://127.0.0.1:65098/organic-nomenclature-3/",
+  "environment": {
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:159.0) Gecko/20100101 Firefox/159.0",
+    "url": "http://127.0.0.1:65098/organic-nomenclature-3/mulermoc-nom-55.html?lang=gr&v=cold55-1794261949865999000",
+    "jsmolVersion": "2022-06-24 05:54:49 (JSmol/j2s)",
+    "jquery": "3.7.1"
+  },
+  "coldExternalLookupState": {
+    "entry": {
+      "formula": "CH4",
+      "mainChain_Condensed": [
+        1
+      ],
+      "mainChain_Expanded": [
+        1
+      ],
+      "mainChain3D": [
+        1
+      ],
+      "structure2D_Condensed": "C\n  ChemDraw02062422462D\n\n  1  0  0  0  0  0  0  0  0  0999 V2000\n    0.0000    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\nM  END\n$$$$\n",
+      "structure2D_Expanded": "C\n  ChemDraw02062422282D\n\n  5  4  0  0  0  0  0  0  0  0999 V2000\n    0.0000    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.3094    0.0000    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.0000    0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.0000   -0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.3094    0.0000    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0      \n  1  3  1  0      \n  1  4  1  0      \n  1  5  1  0      \nM  END\n$$$$\n",
+      "structure2D_Skeletal": null,
+      "file3D": "mols/nomeclature-moc2/methane_3D.sdf",
+      "classification": {
+        "taxonomy": "Υδρογονάνθρακες",
+        "carbonCount": 1,
+        "principalFunctionalGroup": "hydrocarbon",
+        "bondSeries": "alkanes",
+        "seriesKey": "alkanes",
+        "chemicalClass": "hydrocarbons",
+        "functionalGroups": [
+          "hydrocarbon"
+        ]
+      },
+      "smiles": "C",
+      "engineEN_sys": "methane",
+      "engineEN": "methane"
+    }
+  },
+  "failure": "Traceback (most recent call last):\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/v54-merge-20261109/browser/test-shell-lessons.py\", line 17, in <module>\n    if ev('fMulerLang()')!=lang:pointer('#langSwitch [data-lang=\"'+lang+'\"]');app_ready();wait('fMulerLang()==='+json.dumps(lang)+'&&document.readyState===\"complete\"')\n  File \"owned55-support\", line 15, in wait\n    out['coldExternalLookupState']=read('({entry:nameExamples.methane,info:document.getElementById(\"molInfoPanel\")?.textContent})')\n  File \"owned55-bidi\", line 43, in ev\n    out['completed']=True\nRuntimeError: {'columnNumber': 0, 'exception': {'type': 'error'}, 'lineNumber': 0, 'stackTrace': {'callFrames': [{'columnNumber': 0, 'functionName': '', 'lineNumber': 0, 'url': 'http://127.0.0.1:65098/organic-nomenclature-3/mulermoc-nom-55.html?lang=en&v=cold55-1794261949865999000&mol=ethyl_4_isopropyl_3_methyl_2_hexanal'}]}, 'text': 'ReferenceError: fMulerLang is not defined'}\n",
+  "failureURL": "http://127.0.0.1:65098/organic-nomenclature-3/mulermoc-nom-55.html?lang=en&v=cold55-1794261949865999000&mol=ethyl_4_isopropyl_3_methyl_2_hexanal",
+  "sourceHashesAtFinish": {
+    "mulermoc-nom-55.html": "bd7764ac34d8b1a2f15345b68416385f91d4b351b956f0581adb2cf4eadc6a25",
+    "js/jsme-nick-nomeclature-moc2-data_55.js": "9387cd654b2ff3cfb058d9b97ddcca798ac13f47f769b532f9c122277ff8dd0a",
+    "js/mulermoc-nom-core-55.js": "816b2015b96598d0596aaa513967906f9126db8376d49d9b96f98880f4acfae4",
+    "js/mulermoc-nom-molview-55.js": "1580d9bd72f270b72760784384efba8230e846ef7fa3f033aa71226eb6d7091d",
+    "js/mulermoc-nom-teaching-55.js": "92f5dd9708103a306c98cd7c19dc10082aa4c57d1744105fadf14074ea60ef00",
+    "js/mulermoc-nom-note-55.js": "e685355459afb7955fbe13e3b8e07c6283469b4d8acb98cfbcfa483c9f9be3ca",
+    "js/mulermoc-nom-scenario-55.js": "cd3ac936c7441589d8132d957e169f410973e941c3f737560b4349ea7d7ffce0",
+    "js/mulermoc-nom-iupac-55.js": "db5b6e249119e8d31c0dfa4ab6c8b28f766b3239fb78258cee3a6539ced594de",
+    "js/mulermoc-nom-lang-55.js": "46386d8c9b1bda0861fd6db3df8903fdbe56b413faa4984d8d62a190b37fcfbe",
+    "js/mulermoc-nom-name-en-55.js": "a4bcf58e343a3efc60e9035a3b3d76cb0bb32ed5dd38bfc48234fc1f71065bb1",
+    "js/ui-icons-55.js": "580277e98b0d29bc1df2a265d7e6e395500db9253ee8492349a145fd19a2c414",
+    "css/jsme-nick-55.css": "cb6f9d9546d1cd21218641c18dd55a21b2a1ccb1875295782d7b2bdb932bb970",
+    "css/mulermoc-nom-scenario-55.css": "00d81c4c94059b829141163a78f78d150eb12bfa8534fce50e49c90ca5702e84",
+    "css/namelecule-55.css": "042b0e93645dbc9fe5c9851bdd90a73b08f8c89fc4ef524302bd07ac7180e7a7",
+    "design/welcome-proposal.html": "17c04887fde8da210e7c4acd4e1458652948c0d277f180c67460e3e11ff54c2e",
+    "design/theory-library.html": "87e557a3455f14a851dc631c8d70bf93fe396f4a5ebdb8fde4fa78397158e8dc"
+  },
+  "sourceChangedDuringRun": [],
+  "javascriptErrors": [],
+  "diagnosticEntries": [],
+  "resources": [
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/css/jsme-nick-55.css?v=namelecule-v55-20261110-r1",
+      "initiatorType": "link",
+      "duration": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/css/mulermoc-nom-scenario-55.css?v=namelecule-v55-20261110-r1",
+      "initiatorType": "link",
+      "duration": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/css/namelecule-55.css?v=namelecule-v55-20261110-r1",
+      "initiatorType": "link",
+      "duration": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/css/namelecule-repair-round.css?v=checkpoint-pilot-20261104-r1",
+      "initiatorType": "link",
+      "duration": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/css/namelecule-quiz-checkpoints.css?v=quiz-header-progress-20261108-r1",
+      "initiatorType": "link",
+      "duration": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "https://www.googletagmanager.com/gtag/js?id=G-1V8NWYY46Y",
+      "initiatorType": "script",
+      "duration": 73,
+      "responseStatus": 0
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/js/namelecule-label-metrics.js?v=20261031-r1",
+      "initiatorType": "script",
+      "duration": 72,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/js/vendor/jsme/namelecule-20261031-r1/jsme.nocache.js",
+      "initiatorType": "script",
+      "duration": 72,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/js/vendor/jquery/jquery-4.0.0.min.js",
+      "initiatorType": "script",
+      "duration": 73,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/js/vendor/dompurify/dompurify-3.4.17.min.js",
+      "initiatorType": "script",
+      "duration": 74,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/js/jsme-nick-nomeclature-moc2-data_55.js?v=namelecule-v55-20261110-r1",
+      "initiatorType": "script",
+      "duration": 74,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/js/ui-icons-55.js?v=namelecule-v55-20261110-r1",
+      "initiatorType": "script",
+      "duration": 75,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/js/mulermoc-nom-molview-55.js?v=namelecule-v55-20261110-r1",
+      "initiatorType": "script",
+      "duration": 59,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/js/mulermoc-nom-core-55.js?v=namelecule-v55-20261110-r1",
+      "initiatorType": "script",
+      "duration": 75,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/js/mulermoc-nom-teaching-55.js?v=namelecule-v55-20261110-r1",
+      "initiatorType": "script",
+      "duration": 76,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/js/mulermoc-nom-note-55.js?v=namelecule-v55-20261110-r1",
+      "initiatorType": "script",
+      "duration": 76,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/js/namelecule-game-repair.js?v=quiz-answer-reveal-20261109-r1",
+      "initiatorType": "script",
+      "duration": 77,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/js/namelecule-quiz-checkpoints.js?v=quiz-answer-reveal-20261109-r1",
+      "initiatorType": "script",
+      "duration": 77,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/js/namelecule-chemistry-client.js?v=verified-engines-20261105-r1",
+      "initiatorType": "script",
+      "duration": 77,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/js/namelecule-repair-generator.js?v=engine-pilot-20261105-r1",
+      "initiatorType": "script",
+      "duration": 77,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/js/namelecule-generated-repair-checkpoint.js?v=quiz-answer-reveal-20261109-r1",
+      "initiatorType": "script",
+      "duration": 77,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/js/mulermoc-nom-scenario-55.js?v=namelecule-v55-20261110-r1",
+      "initiatorType": "script",
+      "duration": 78,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/js/mulermoc-nom-iupac-55.js?v=namelecule-v55-20261110-r1",
+      "initiatorType": "script",
+      "duration": 78,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/js/mulermoc-nom-lang-55.js?v=namelecule-v55-20261110-r1",
+      "initiatorType": "script",
+      "duration": 77,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/js/mulermoc-nom-name-en-55.js?v=namelecule-v55-20261110-r1",
+      "initiatorType": "script",
+      "duration": 79,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/js/vendor/jsme/namelecule-20261031-r1/96E40B969193BD74B8A621486920E79C.cache.js",
+      "initiatorType": "script",
+      "duration": 81,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/js/vendor/jsme/namelecule-20261031-r1/jsa.css",
+      "initiatorType": "link",
+      "duration": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/js/vendor/jsme/namelecule-20261031-r1/gwt/chrome/chrome.css",
+      "initiatorType": "link",
+      "duration": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/js/vendor/jsme/namelecule-20261031-r1/gwt/chrome/mosaic.css",
+      "initiatorType": "link",
+      "duration": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/js/vendor/jsme/namelecule-20261031-r1/FEB169D74546A3B279D22AE09AFB86BD.cache.js",
+      "initiatorType": "script",
+      "duration": 4,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/js/vendor/jsmol/namelecule-20261031-r1/JSmol.min.js",
+      "initiatorType": "script",
+      "duration": 3,
+      "responseStatus": 200
+    }
+  ]
+}

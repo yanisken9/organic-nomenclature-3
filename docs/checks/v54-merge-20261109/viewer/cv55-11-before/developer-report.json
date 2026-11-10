@@ -1,0 +1,90 @@
+{
+  "role": "NAMELECULE_DEVELOPER_V1_20261023",
+  "timestampUTC": "2026-11-09T22:11:33.297606+00:00",
+  "state": "Frozen by delegated viewer Developer; awaiting primary browser verification and consolidated independent review",
+  "approvedRequest": "All professor changes through v55 plus graph/currentness/provisional safeguards, later routine sync to 5ab2495575bbbffeb0ac67f91d4d81857cb65970",
+  "comparison": {
+    "localSourceHEAD": "168e3cec01f941a84d40bbe0dc07156e7baa35d0",
+    "candidateHEAD": "29991c90b90caddec69a265abad8c1d24495e16c",
+    "upstreamBase": "f49b810c93ec85d06163679aff4a8642ea1b4cd3",
+    "initialTarget": "e76d3c071c0be98cbd63365f2590fe49fa9e6f36",
+    "latestTarget": "5ab2495575bbbffeb0ac67f91d4d81857cb65970",
+    "local54SHA256": "9e835f5e7c94ac736f7a4ca80ac3c67cc03f34eac2098ac5e9de3eb0eae9ba2f",
+    "latestUpstreamViewerSHA256": "a0a403e6719e7f41f8ea450361ebaf0901d1ee2ba37b4569691e4443c0695d10"
+  },
+  "runtimePathsOwned": [
+    "/private/tmp/namelecule-professor-merge-20261109-oxj7hfyy/candidate/js/mulermoc-nom-molview-55.js"
+  ],
+  "runtimeSHA256": "92601c85ed1cf734bb2e59deb63cfe0df08248d3818c6ecd091dd43c67cc5ce1",
+  "primaryRuntimeChanged": false,
+  "coreVersionedCoreChangedByThisAgent": false,
+  "changes": [
+    "Three-way current54/base54/target55 merge: 18 conflicts composed; local label metrics/atom anchors/fixed-C-C/font/full fit/skeletal/legacy lesson components and numbering retained",
+    "New/Edit-different derives all forms and confirms fork; Edit-same updates exactly one slot with sibling bytes unchanged; exact graph/metadata/layout echo ladder + bounded actual-applet restoration/deferred Cancel retained",
+    "PubChem/remote/local 3D all validate submitted heavy graph independent of atom order including bond order/charge/isotope; H additions checked for ordinary attached single bonds/valence; existing unsupported query/stereo/isotopic-H transformation boundaries fail closed",
+    "Graph-appropriate orientation-independent coordinate sanity accepts one-heavy methane/planar/linear geometry; movement used only as fallback diagnostic, never convergence evidence",
+    "3D jobs retain draft/epoch/submitId/smiles/source MOL/selection/mode/applet/revision ownership across preparation/each round/readback/manual retry/Cancel/Draw/navigation; shared load/zap wrapper revokes old jobs before model replacement",
+    "Later delta: graph-size 10..120s countdown, one Cancel/Escape wait overlay with page-only ticks, STOP only for owned running cancellation (not normal completion/idle/replacement), further rounds reload last saved provisional SDF and use actual upstream 200-step budget",
+    "Manual local result is provisional preview with no save modal; exact-conformation explicit confirmation occurs once at Accept; durable sdf3DStatus and sdf3DProvenance survive single/bundle export and reload and are visible in molecule info",
+    "Upstream viewer-settings registry and title-bar-only SaveAll sync adopted; all runtime init script references use new root-owned init-55.spt"
+  ],
+  "langKeysRequested": [
+    "draft3DProvisional",
+    "draftProvisionalConfirm",
+    "draftProvisionalKeep",
+    "draftMinSaveProvisional (initial path; no longer used after later delta)",
+    "draftMinProvisionalDone",
+    "accept3DGraphMismatch"
+  ],
+  "interfaces": {
+    "fSyncViewerSettingsUI": "shared registry sync for gear, language and scenario restore",
+    "metadata": [
+      "sdf3DSource",
+      "sdf3DStatus:source-provided|provisional",
+      "sdf3DProvenance:{source,graphMatched,geometryVerified:false,convergenceVerified:false,confirmation,confirmedAt}"
+    ],
+    "MOLMIN_FURTHER_STEPS": 200,
+    "furtherLabel": "runtime replaces +digits in translated draftMinMore with actual constant; avoids upstream +100/200 mismatch"
+  },
+  "checks": [
+    {
+      "command": "JavaScriptCore new Function(readFile(candidate viewer))",
+      "result": "PASS full source syntax"
+    },
+    {
+      "command": "python3 docs/checks/v54-merge-20261109/viewer/test-viewer.py",
+      "result": "PASS 45/45 deterministic actual-function cases; historical upstream probes reproduce 5 causal failures"
+    }
+  ],
+  "testLimitations": [
+    "Function tests use controlled applet/network/DOM/timer doubles and exact current function bodies; they do not execute real JSME/JSmol minimization or browser layout",
+    "Primary owns all-library geometry/naming, real browser and lesson/presentation replay, external-service checks, protected assets and independent review",
+    "Exact graph acceptance does not certify physical geometry or force-field convergence",
+    "Model replacement protection covers app-managed shared JSmol wrappers; arbitrary direct console/vendor calls bypassing wrappers are not guaranteed"
+  ],
+  "notesForPrimary": [
+    "Record this delegated contribution and test/review target in SESSION-NOTES/YANNIS-CONTRIBUTIONS; documentation maintenance not delegated to this worker",
+    "No stage/commit/push/publish/install, no agents launched, primary runtime and core files not edited",
+    "Intermediate merge/apply scripts document staged assembly, not a one-command reconstruction of final runtime; authoritative source is frozen candidate plus final diffs/hashes",
+    "Initial e76 target runtime/evidence preserved under viewer/initial-e76d3c0/; latest target tests and report are at viewer root"
+  ],
+  "evidencePaths": [
+    "docs/checks/v54-merge-20261109/viewer/actual-functions-output.txt",
+    "docs/checks/v54-merge-20261109/viewer/actual-functions-under-test.js",
+    "docs/checks/v54-merge-20261109/viewer/apply-causal3d.py",
+    "docs/checks/v54-merge-20261109/viewer/apply-later-upstream.py",
+    "docs/checks/v54-merge-20261109/viewer/causal3d.js",
+    "docs/checks/v54-merge-20261109/viewer/deterministic-results.json",
+    "docs/checks/v54-merge-20261109/viewer/initial-e76d3c0/deterministic-results.json",
+    "docs/checks/v54-merge-20261109/viewer/initial-e76d3c0/viewer55.js",
+    "docs/checks/v54-merge-20261109/viewer/local54-to-candidate55.diff",
+    "docs/checks/v54-merge-20261109/viewer/merge-viewer.py",
+    "docs/checks/v54-merge-20261109/viewer/test-before.js",
+    "docs/checks/v54-merge-20261109/viewer/test-cases.js",
+    "docs/checks/v54-merge-20261109/viewer/test-prelude.js",
+    "docs/checks/v54-merge-20261109/viewer/test-viewer.py",
+    "docs/checks/v54-merge-20261109/viewer/upstream-5ab24955-to-candidate55.diff",
+    "docs/checks/v54-merge-20261109/viewer/upstream-before-output.txt",
+    "docs/checks/v54-merge-20261109/viewer/upstream-before-probe.js"
+  ]
+}

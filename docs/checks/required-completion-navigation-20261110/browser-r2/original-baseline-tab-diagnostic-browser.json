@@ -1,0 +1,270 @@
+{
+  "completed": true,
+  "stage": "before",
+  "checks": [
+    {
+      "label": "Exact originalR0five servedsourcehashes",
+      "detail": {
+        "js/namelecule-quiz-checkpoints.js": "7afb670f61418118137e70ef392e2790ea0fafd32d3381cef730a02375266fc4",
+        "js/namelecule-game-repair.js": "d1649341e1b9181da180e0d62c12a0d0f27229af8d108048a3798c24944bf862",
+        "js/namelecule-generated-repair-checkpoint.js": "714e3b6140b28377a8af611c93350c42b0166e805f4dc62021055f8d5494b365",
+        "mulermoc-nom-54.html": "4bb68d9c7d2f089d796bd75932567caa794f1f80c8eb2b842d80a5806a782600",
+        "mulermoc-nom-55.html": "8788e94a8718e2546164aa570e94bd3cd7fbcd4d26dbfe3dfdaad799d1b98c58"
+      }
+    }
+  ],
+  "measurements": [],
+  "actions": [
+    {
+      "click": "#nlQuizOpen",
+      "point": {
+        "x": 134,
+        "y": 330,
+        "top": 308.316650390625,
+        "bottom": 352.316650390625,
+        "safeTop": 3,
+        "safeBottom": 757,
+        "hit": true,
+        "disabled": false,
+        "dialog": false
+      }
+    }
+  ],
+  "role": "Developer browser evidence, not independent review",
+  "scope": [
+    "Exact five-source before overlay, all other current runtime unchanged.",
+    "Deterministic unsolved seed via isolated crypto preload; every recorded success earned by learner pointer actions.",
+    "Owned headless isolated Firefox and ephemeral localhost only; personal GUI and 8013 untouched."
+  ],
+  "target": {
+    "js/namelecule-quiz-checkpoints.js": "7afb670f61418118137e70ef392e2790ea0fafd32d3381cef730a02375266fc4",
+    "js/namelecule-game-repair.js": "d1649341e1b9181da180e0d62c12a0d0f27229af8d108048a3798c24944bf862",
+    "js/namelecule-generated-repair-checkpoint.js": "714e3b6140b28377a8af611c93350c42b0166e805f4dc62021055f8d5494b365",
+    "mulermoc-nom-54.html": "4bb68d9c7d2f089d796bd75932567caa794f1f80c8eb2b842d80a5806a782600",
+    "mulermoc-nom-55.html": "8788e94a8718e2546164aa570e94bd3cd7fbcd4d26dbfe3dfdaad799d1b98c58"
+  },
+  "javascriptErrors": [],
+  "beforeTab": {
+    "tag": "BUTTON",
+    "id": "nlQuizBack",
+    "closestDialog": "nlQuizDialog",
+    "dialogOpen": true,
+    "hasFocus": true,
+    "url": "http://127.0.0.1:58476/mulermoc-nom-55.html?scenario=scenarios/alkanes-user-3.scenario.json&present=1&from=theory-library#step=4",
+    "index": 3,
+    "events": [
+      {
+        "type": "focusout",
+        "trusted": true,
+        "targetTag": "H1",
+        "targetId": "",
+        "closest": "nlQuizDialog",
+        "activeTag": "BODY",
+        "activeId": "",
+        "dialogOpen": true,
+        "url": "http://127.0.0.1:58476/mulermoc-nom-55.html?scenario=scenarios/alkanes-user-3.scenario.json&present=1&from=theory-library#step=4",
+        "ms": 4293
+      },
+      {
+        "type": "focusin",
+        "trusted": true,
+        "targetTag": "BUTTON",
+        "targetId": "nlQuizBack",
+        "closest": "nlQuizDialog",
+        "activeTag": "BUTTON",
+        "activeId": "nlQuizBack",
+        "dialogOpen": true,
+        "url": "http://127.0.0.1:58476/mulermoc-nom-55.html?scenario=scenarios/alkanes-user-3.scenario.json&present=1&from=theory-library#step=4",
+        "ms": 4294
+      }
+    ]
+  },
+  "afterTab": {
+    "tag": "BODY",
+    "id": "",
+    "closestDialog": null,
+    "dialogOpen": true,
+    "hasFocus": false,
+    "url": "http://127.0.0.1:58476/mulermoc-nom-55.html?scenario=scenarios/alkanes-user-3.scenario.json&present=1&from=theory-library#step=4",
+    "index": 3,
+    "events": [
+      {
+        "type": "focusout",
+        "trusted": true,
+        "targetTag": "H1",
+        "targetId": "",
+        "closest": "nlQuizDialog",
+        "activeTag": "BODY",
+        "activeId": "",
+        "dialogOpen": true,
+        "url": "http://127.0.0.1:58476/mulermoc-nom-55.html?scenario=scenarios/alkanes-user-3.scenario.json&present=1&from=theory-library#step=4",
+        "ms": 4293
+      },
+      {
+        "type": "focusin",
+        "trusted": true,
+        "targetTag": "BUTTON",
+        "targetId": "nlQuizBack",
+        "closest": "nlQuizDialog",
+        "activeTag": "BUTTON",
+        "activeId": "nlQuizBack",
+        "dialogOpen": true,
+        "url": "http://127.0.0.1:58476/mulermoc-nom-55.html?scenario=scenarios/alkanes-user-3.scenario.json&present=1&from=theory-library#step=4",
+        "ms": 4294
+      },
+      {
+        "type": "keydown",
+        "key": "Tab",
+        "code": "Tab",
+        "trusted": true,
+        "targetTag": "BUTTON",
+        "targetId": "nlQuizBack",
+        "closest": "nlQuizDialog",
+        "activeTag": "BUTTON",
+        "activeId": "nlQuizBack",
+        "dialogOpen": true,
+        "url": "http://127.0.0.1:58476/mulermoc-nom-55.html?scenario=scenarios/alkanes-user-3.scenario.json&present=1&from=theory-library#step=4",
+        "ms": 4303
+      },
+      {
+        "type": "focusout",
+        "trusted": true,
+        "targetTag": "BUTTON",
+        "targetId": "nlQuizBack",
+        "closest": "nlQuizDialog",
+        "activeTag": "BODY",
+        "activeId": "",
+        "dialogOpen": true,
+        "url": "http://127.0.0.1:58476/mulermoc-nom-55.html?scenario=scenarios/alkanes-user-3.scenario.json&present=1&from=theory-library#step=4",
+        "ms": 4307
+      },
+      {
+        "type": "keyup",
+        "key": "Tab",
+        "code": "Tab",
+        "trusted": true,
+        "targetTag": "BODY",
+        "targetId": "",
+        "closest": null,
+        "activeTag": "BODY",
+        "activeId": "",
+        "dialogOpen": true,
+        "url": "http://127.0.0.1:58476/mulermoc-nom-55.html?scenario=scenarios/alkanes-user-3.scenario.json&present=1&from=theory-library#step=4",
+        "ms": 4313
+      }
+    ]
+  },
+  "afterEscape": {
+    "tag": "BODY",
+    "id": "",
+    "closestDialog": null,
+    "hasFocus": false,
+    "url": "http://127.0.0.1:58476/design/theory-library.html?v=alkynes-library-20261022",
+    "index": null,
+    "events": [
+      {
+        "type": "focusout",
+        "trusted": true,
+        "targetTag": "H1",
+        "targetId": "",
+        "closest": "nlQuizDialog",
+        "activeTag": "BODY",
+        "activeId": "",
+        "dialogOpen": true,
+        "url": "http://127.0.0.1:58476/mulermoc-nom-55.html?scenario=scenarios/alkanes-user-3.scenario.json&present=1&from=theory-library#step=4",
+        "ms": 4293
+      },
+      {
+        "type": "focusin",
+        "trusted": true,
+        "targetTag": "BUTTON",
+        "targetId": "nlQuizBack",
+        "closest": "nlQuizDialog",
+        "activeTag": "BUTTON",
+        "activeId": "nlQuizBack",
+        "dialogOpen": true,
+        "url": "http://127.0.0.1:58476/mulermoc-nom-55.html?scenario=scenarios/alkanes-user-3.scenario.json&present=1&from=theory-library#step=4",
+        "ms": 4294
+      },
+      {
+        "type": "keydown",
+        "key": "Tab",
+        "code": "Tab",
+        "trusted": true,
+        "targetTag": "BUTTON",
+        "targetId": "nlQuizBack",
+        "closest": "nlQuizDialog",
+        "activeTag": "BUTTON",
+        "activeId": "nlQuizBack",
+        "dialogOpen": true,
+        "url": "http://127.0.0.1:58476/mulermoc-nom-55.html?scenario=scenarios/alkanes-user-3.scenario.json&present=1&from=theory-library#step=4",
+        "ms": 4303
+      },
+      {
+        "type": "focusout",
+        "trusted": true,
+        "targetTag": "BUTTON",
+        "targetId": "nlQuizBack",
+        "closest": "nlQuizDialog",
+        "activeTag": "BODY",
+        "activeId": "",
+        "dialogOpen": true,
+        "url": "http://127.0.0.1:58476/mulermoc-nom-55.html?scenario=scenarios/alkanes-user-3.scenario.json&present=1&from=theory-library#step=4",
+        "ms": 4307
+      },
+      {
+        "type": "keyup",
+        "key": "Tab",
+        "code": "Tab",
+        "trusted": true,
+        "targetTag": "BODY",
+        "targetId": "",
+        "closest": null,
+        "activeTag": "BODY",
+        "activeId": "",
+        "dialogOpen": true,
+        "url": "http://127.0.0.1:58476/mulermoc-nom-55.html?scenario=scenarios/alkanes-user-3.scenario.json&present=1&from=theory-library#step=4",
+        "ms": 4313
+      },
+      {
+        "type": "keydown",
+        "key": "Escape",
+        "code": "Escape",
+        "trusted": true,
+        "targetTag": "BODY",
+        "targetId": "",
+        "closest": null,
+        "activeTag": "BODY",
+        "activeId": "",
+        "dialogOpen": true,
+        "url": "http://127.0.0.1:58476/mulermoc-nom-55.html?scenario=scenarios/alkanes-user-3.scenario.json&present=1&from=theory-library#step=4",
+        "ms": 4722
+      },
+      {
+        "type": "keyup",
+        "key": "Escape",
+        "code": "Escape",
+        "trusted": true,
+        "targetTag": "BODY",
+        "targetId": "",
+        "closest": null,
+        "activeTag": "BODY",
+        "activeId": "",
+        "dialogOpen": false,
+        "url": "http://127.0.0.1:58476/mulermoc-nom-55.html?scenario=scenarios/alkanes-user-3.scenario.json&present=1&from=theory-library#step=4",
+        "ms": 4777
+      },
+      {
+        "type": "pagehide",
+        "trusted": true,
+        "closest": null,
+        "activeTag": "BODY",
+        "activeId": "",
+        "dialogOpen": false,
+        "url": "http://127.0.0.1:58476/mulermoc-nom-55.html?scenario=scenarios/alkanes-user-3.scenario.json&present=1&from=theory-library#step=4",
+        "ms": 4788
+      }
+    ]
+  },
+  "diagnosticOnly": "Single explicit Return.focus -> actualnative Tab -> actualnative Escape. No cancellation/preventDefault or receipt mutations; observationlisteners record events to separate testtrace storage key."
+}

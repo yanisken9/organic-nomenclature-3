@@ -1,0 +1,34 @@
+{
+  "id": "EXISTING-ESC-001",
+  "severity": "P2",
+  "status": "Pre-existing; outside current button/readiness correction",
+  "recordedAt": "2026-11-10T10:19:40.668508+02:00",
+  "scope": "Observed on Main55 in owned headless Firefox with image transport delay. No extrapolation to all browsers/versions.",
+  "reproduction": [
+    "Reopen genuinely completed required set with image deliberately pending.",
+    "Focus visible header Return; one trusted Tab moves focus outside document while dialog remains open.",
+    "One trusted Escape targets BODY; presentation exits to theory-library."
+  ],
+  "comparison": "Native worker reproduced same sequence with exact original pre-task5source overlay, not only reviewedR1. Existing controller keyboard handlers unchanged in actual before->r2diff.",
+  "source": [
+    {
+      "path": "js/mulermoc-nom-scenario-55.js",
+      "sha256": "0e21b0fea3b8d718cd5ea600cc35a1ff7a74a99cae0f8a30bca7560634d22776",
+      "lines": "5486-5500 and5015-5021",
+      "observation": "Document presentation handler lacks open-quiz guard; Escape invokes presentation exit. Exit calls checkpoint onExit then library navigation."
+    },
+    {
+      "path": "js/namelecule-quiz-checkpoints.js",
+      "lines": "317-319",
+      "observation": "Dialog-local keydown stops propagation for descendants; BODY-target event bypasses that local listener. Byte-identical to original."
+    }
+  ],
+  "causeLimit": "Missing global modal guard explains exit after BODY Escape. Root cause of Tab leaving document not proven; do not attribute to readiness patch. Original baseline did not snapshot scenario55 itself, but original UI overlay reproduces runtime and no scenario source edit occurred in this contribution.",
+  "evidence": [
+    "browser-r2/tab-diagnostic-browser.json",
+    "browser-r2/original-baseline-tab-diagnostic-browser.json"
+  ],
+  "nextStep": "Separate scoped plan for presentation shortcut handling while quiz dialog is open, preserving Escape to the same lesson step. Obtain approval before new code scope.",
+  "currentChange": "No keyboard handlers changed to suppress this observation. Current required final-button readiness behavior verified separately.",
+  "coreChanged": false
+}

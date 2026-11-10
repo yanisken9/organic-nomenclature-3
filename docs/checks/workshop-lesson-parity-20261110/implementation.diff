@@ -1,0 +1,471 @@
+--- before/js/namelecule-game-repair.js
++++ after/js/namelecule-game-repair.js
+@@ -214,6 +214,102 @@
+     return icon;
+   }
+ 
++  const MISSION_REMINDERS = Object.freeze({
++    "parent-length": "Η αποστολή αφορά το πλήθος των ατόμων C της κύριας αλυσίδας.",
++    "bond-type": "Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
++    "branch-locants": "Η αποστολή αφορά τις θέσεις σύνδεσης των διακλαδώσεων και τη φορά αρίθμησης.",
++    "branch-multiplier": "Η αποστολή αφορά το πλήθος των ίδιων διακλαδώσεων."
++  });
++  // Explicit compatibility metadata for the original authored questions.
++  // Generated questions carry their own semantic fault.kind; never infer it from a part label.
++  const AUTHORED_MISSIONS = Object.freeze({
++    "unbranched-parent-four": "parent-length",
++    "unbranched-parent-five": "parent-length",
++    "unbranched-single-bond": "bond-type",
++    "number-from-nearest": "branch-locants",
++    "two-methyl-groups": "branch-multiplier",
++    "alphabetical-branches": "alphabetical-order"
++  });
++  const AUTHORED_OBJECTIVES = Object.freeze({
++    "parent-length": "Έλεγξε το μήκος της κύριας αλυσίδας και το συνθετικό που το δηλώνει.",
++    "bond-type": "Έλεγξε το είδος των δεσμών μεταξύ ατόμων C.",
++    "branch-locants": "Έλεγξε τα σημεία σύνδεσης των διακλαδώσεων και τη φορά αρίθμησης.",
++    "branch-multiplier": "Έλεγξε πόσες ίδιες διακλαδώσεις υπάρχουν και πώς δηλώνεται το πλήθος τους.",
++    "alphabetical-order": "Έλεγξε την αλφαβητική σειρά των διαφορετικών διακλαδώσεων."
++  });
++
++  function presentationForRound(round, options) {
++    const basic = !options || options.difficulty !== "challenge";
++    const authored = Object.prototype.hasOwnProperty.call(AUTHORED_MISSIONS, round.id) ? AUTHORED_MISSIONS[round.id] : null;
++    const family = round.fault && round.fault.kind || authored;
++    const condensed = round.moleculeId === "ethyl_3_dimethyl_2_5_hexane";
++    const display = Object.assign({}, round);
++    if (condensed) {
++      display.asset = "assets/name-repair/condensed/ethyl_3_dimethyl_2_5_hexane.svg";
++      display.diagramAlt = "Συνεπτυγμένος συντακτικός τύπος αλκανίου. Φαίνονται οι δεσμοί μεταξύ ατόμων C και οι ομάδες CH₃, CH₂ και CH.";
++    }
++    if (basic && authored) display.objective = AUTHORED_OBJECTIVES[authored];
++    if (basic && round.kind === "replace" && Object.prototype.hasOwnProperty.call(MISSION_REMINDERS, family) &&
++        round.feedback && typeof round.feedback.wrongPart === "string") {
++      const reminder = MISSION_REMINDERS[family];
++      display.feedback = Object.assign({}, round.feedback, {
++        wrongPart: round.feedback.wrongPart.endsWith(reminder) ? round.feedback.wrongPart : round.feedback.wrongPart + " " + reminder
++      });
++    }
++    return { round: display, emphasizeObjective: true, compactDiagramZoom: true,
++      diagramRepresentation: condensed ? "condensed" : "expanded" };
++  }
++
++  // The same response-range policy serves a page and the lesson dialog.
++  // Each owner supplies its viewport and scroll geometry; no focus or answer state is changed.
++  function createResponseRevealer(options) {
++    let moving = false;
++    let disposed = false;
++    const interrupts = [];
++    function stop() {
++      if (disposed || !moving) return;
++      moving = false;
++      options.scrollTo(options.scrollTop(), "instant");
++    }
++    function reveal(request) {
++      if (disposed || !request || options.active && !options.active()) return;
++      const start = request.start, end = request.end || start;
++      if (!start || !end || !start.isConnected || !end.isConnected ||
++          !options.host.contains(start) || !options.host.contains(end) ||
++          typeof start.getBoundingClientRect !== "function" || typeof end.getBoundingClientRect !== "function") return;
++      stop();
++      const first = start.getBoundingClientRect(), last = end.getBoundingClientRect();
++      if (first.height <= 0 || last.height <= 0) return;
++      const viewport = options.viewport();
++      const top = viewport.top, bottom = viewport.bottom;
++      const rangeTop = Math.min(first.top, last.top), rangeBottom = Math.max(first.bottom, last.bottom);
++      if (![top, bottom, rangeTop, rangeBottom].every(Number.isFinite) || bottom <= top) return;
++      if (rangeTop >= top && rangeBottom <= bottom) return;
++      const delta = rangeBottom - rangeTop > bottom - top || rangeTop < top ? rangeTop - top : rangeBottom - bottom;
++      const current = options.scrollTop();
++      const destination = Math.max(0, Math.min(options.maxScroll(), current + delta));
++      if (!Number.isFinite(destination) || Math.abs(destination - current) < 1) return;
++      const reduced = typeof global.matchMedia === "function" && global.matchMedia("(prefers-reduced-motion: reduce)").matches;
++      moving = !reduced;
++      options.scrollTo(destination, reduced ? "instant" : "smooth");
++    }
++    const target = options.interruptTarget;
++    if (target && typeof target.addEventListener === "function") {
++      ["wheel", "touchstart", "pointerdown", "keydown", "pagehide"].forEach(function (event) {
++        const eventOptions = { passive: true };
++        target.addEventListener(event, stop, eventOptions);
++        interrupts.push([event, eventOptions]);
++      });
++    }
++    return { reveal: reveal, stop: stop, destroy: function () {
++      if (disposed) return;
++      stop();
++      disposed = true;
++      interrupts.forEach(function (entry) { target.removeEventListener(entry[0], stop, entry[1]); });
++      interrupts.length = 0;
++    } };
++  }
++
+   let nextMountId = 0;
+   const mountedHosts = new WeakMap();
+ 
+@@ -221,9 +317,9 @@
+     assert(host && typeof host.replaceChildren === "function", "A round host is required");
+     assert(options && typeof options === "object", "Round options are required");
+     const data = validateRoundData(options.round);
+-    const emphasizeObjective = !standalone && options.emphasizeObjective === true;
+-    const condensedDiagram = !standalone && options.diagramRepresentation === "condensed";
+-    const compactDiagramZoom = !standalone && options.compactDiagramZoom === true;
++    const emphasizeObjective = options.emphasizeObjective === true;
++    const condensedDiagram = options.diagramRepresentation === "condensed";
++    const compactDiagramZoom = options.compactDiagramZoom === true;
+     const existing = mountedHosts.get(host);
+     if (existing) existing.destroy();
+     const root = host;
+@@ -238,8 +334,20 @@
+     let zoomPanel = null;
+     let zoomImage = null;
+     let listeners = [];
+-    const ownedClass = !standalone && !host.classList.contains("nl-repair-round");
++    const ownedClass = !host.classList.contains("nl-repair-round");
+     if (ownedClass) host.classList.add("nl-repair-round");
++    const pageScroller = function () { return global.document.scrollingElement || global.document.documentElement; };
++    const pageReveal = standalone ? createResponseRevealer({
++      host: root, interruptTarget: global,
++      active: function () { return !destroyed && !zoomPanel && root.isConnected; },
++      viewport: function () { return { top: 12, bottom: global.document.documentElement.clientHeight - 12 }; },
++      scrollTop: function () { return pageScroller().scrollTop; },
++      maxScroll: function () { return pageScroller().scrollHeight - global.document.documentElement.clientHeight; },
++      scrollTo: function (top, behavior) {
++        if (typeof global.scrollTo === "function") global.scrollTo({ top: top, behavior: behavior });
++        else pageScroller().scrollTop = top;
++      }
++    }) : null;
+     function controlId(id) { return prefix + id; }
+     function round() { return data; }
+     function state() { return currentState; }
+@@ -249,9 +357,10 @@
+       if (!destroyed && typeof options.onStateChange === "function") options.onStateChange(getState());
+     }
+     function revealResponse(reason, start, end) {
+-      if (!standalone && !destroyed && typeof options.onReveal === "function") {
+-        options.onReveal({ reason: reason, start: start, end: end || start });
+-      }
++      if (destroyed) return;
++      const request = { reason: reason, start: start, end: end || start };
++      if (pageReveal) pageReveal.reveal(request);
++      else if (typeof options.onReveal === "function") options.onReveal(request);
+     }
+     function listen(element, event, handler) {
+       const guarded = function (e) { if (!destroyed) handler(e); };
+@@ -275,6 +384,7 @@
+     }
+     function destroy() {
+       if (destroyed) return;
++      if (pageReveal) pageReveal.destroy();
+       destroyed = true;
+       renderId += 1;
+       imageLoadId += 1;
+@@ -554,6 +664,7 @@
+ 
+     function showDiagramZoom() {
+       if (destroyed || mainImageStatus !== "ready" || zoomPanel) return;
++      if (pageReveal) pageReveal.stop();
+       const dialog = node(standalone ? "dialog" : "section", { class: "zoom-dialog", "aria-labelledby": controlId("zoom-title") });
+       zoomPanel = dialog;
+       const close = button("Κλείσιμο", "secondary", closeZoom);
+@@ -604,7 +715,9 @@
+   }
+ 
+   global.NameleculeRepairGame = {
+-    mountRound: function (host, options) { return createRoundView(host, options, false); }
++    mountRound: function (host, options) { return createRoundView(host, options, false); },
++    presentationForRound: presentationForRound,
++    createResponseRevealer: createResponseRevealer
+   };
+   if (typeof document === "undefined") return;
+ 
+@@ -880,17 +993,9 @@
+   }
+ 
+   function progressList() {
+-    return node("ol", { class: "progress", "aria-label": "Πρόοδος παιχνιδιού" }, activeSet.rounds.map(function (round, index) {
+-      const complete = states[index].solved;
+-      const current = index === roundIndex;
+-      const label = "Κουίζ " + (index + 1);
+-      const item = node("li", { class: current ? "is-current" : complete ? "is-complete" : "" }, [
+-        node("span", { class: "progress-dot", "aria-hidden": "true", text: complete ? "✓" : String(index + 1) }),
+-        node("span", { class: "progress-label", text: label + (complete ? " ολοκληρώθηκε" : current ? " σε εξέλιξη" : "") })
+-      ]);
+-      if (current) item.setAttribute("aria-current", "step");
+-      return item;
+-    }));
++    return node("p", { class: "progress round-progress-counter", role: "status", "aria-live": "polite",
++      "aria-atomic": "true", "aria-label": "Κουίζ " + (roundIndex + 1) + " από " + activeSet.rounds.length,
++      text: "Κουίζ " + (roundIndex + 1) + "/" + activeSet.rounds.length });
+   }
+ 
+   function round() { return activeSet.rounds[roundIndex]; }
+@@ -899,8 +1004,9 @@
+     pilotPhase = "round";
+     if (activeRound) activeRound.destroy();
+     const index = roundIndex;
+-    activeRound = createRoundView(root, {
+-      round: round(), initialState: state(), assetBase: "", progressList: progressList, setTitle: activeSet.title,
++    const presentation = presentationForRound(round(), { difficulty: pilot ? pilot.difficulty : "basic" });
++    activeRound = createRoundView(root, Object.assign({}, presentation, {
++      initialState: state(), assetBase: "", progressList: progressList, setTitle: activeSet.title,
+       requestRestart: requestRestart,
+       continueLabel: index === activeSet.rounds.length - 1 ? "Δες τις επισκευές σου  →" : "Επόμενο κουίζ  →",
+       onStateChange: function (current) { states[index] = current; savePilotProgress(); },
+@@ -908,7 +1014,7 @@
+         if (index === activeSet.rounds.length - 1) renderResults();
+         else { roundIndex += 1; renderRound(); }
+       }
+-    }, true);
++    }), true);
+     if (pilot && !pilot.storageAvailable) root.append(node("p", { role: "status", class: "pilot-entry", text: "Ο browser δεν επιτρέπει αποθήκευση της προσπάθειας. Κράτησε αυτή τη σελίδα ανοιχτή μέχρι να τελειώσεις." }));
+     savePilotProgress();
+   }
+--- before/js/namelecule-generated-repair-checkpoint.js
++++ after/js/namelecule-generated-repair-checkpoint.js
+@@ -6,19 +6,6 @@
+   const REVISION = "275d537b19f3ef0791c97d8d78c127f541a0579038ef1e8d65dadde611845690";
+   const CATALOG_SHA = "9778e30ea33f2f7cd4c8a472e46e90539856b861a54035a1d514c3246cccf724";
+   const recipeKeys = ["version", "setId", "difficulty", "roundCount", "generatorVersion", "catalogRevision", "engineSHA256"];
+-  const WRONG_PART_REMINDERS = Object.freeze({
+-    "parent-length": "Η αποστολή αφορά το πλήθος των ατόμων C της κύριας αλυσίδας.",
+-    "bond-type": "Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+-    "branch-locants": "Η αποστολή αφορά τις θέσεις σύνδεσης των διακλαδώσεων και τη φορά αρίθμησης.",
+-    "branch-multiplier": "Η αποστολή αφορά το πλήθος των ίδιων διακλαδώσεων."
+-  });
+-  // The lesson already introduces this catalog's ten-carbon molecule in
+-  // condensed form. Keep this display choice independent of the fault/seed.
+-  const CONDENSED_LESSON_DIAGRAM = Object.freeze({
+-    moleculeId: "ethyl_3_dimethyl_2_5_hexane",
+-    asset: "assets/name-repair/condensed/ethyl_3_dimethyl_2_5_hexane.svg",
+-    alt: "Συνεπτυγμένος συντακτικός τύπος αλκανίου. Φαίνονται οι δεσμοί μεταξύ ατόμων C και οι ομάδες CH₃, CH₂ και CH."
+-  });
+   const prepared = new Map();
+   let source = null;
+   function assert(condition, message) { if (!condition) throw new Error(message); }
+@@ -143,20 +130,6 @@
+     if (text) element.textContent = text;
+     return element;
+   }
+-  // Basic lesson rounds repeat the mission focus without changing the
+-  // canonical generated question used to restore and verify saved answers.
+-  function lessonRoundForDisplay(round) {
+-    const displayRound = round && round.moleculeId === CONDENSED_LESSON_DIAGRAM.moleculeId ?
+-      Object.assign({}, round, { asset: CONDENSED_LESSON_DIAGRAM.asset, diagramAlt: CONDENSED_LESSON_DIAGRAM.alt }) : round;
+-    const family = round && round.kind === "replace" && round.fault && round.fault.kind;
+-    if (!Object.prototype.hasOwnProperty.call(WRONG_PART_REMINDERS, family) ||
+-      !round.feedback || typeof round.feedback.wrongPart !== "string") return displayRound;
+-    return Object.assign({}, displayRound, {
+-      feedback: Object.assign({}, round.feedback, {
+-        wrongPart: round.feedback.wrongPart + " " + WRONG_PART_REMINDERS[family]
+-      })
+-    });
+-  }
+   function mount(host, options) {
+     const recipe = validate(options.round);
+     const controller = new AbortController();
+@@ -187,11 +160,9 @@
+       const roundHost = node("div", "nl-quiz-set-round");
+       host.replaceChildren(progress, roundHost);
+       host.setAttribute("aria-busy", "false");
+-      current = global.NameleculeRepairGame.mountRound(roundHost, {
+-        round: lessonRoundForDisplay(set.rounds[index]), initialState: state.states[index], assetBase: options.assetBase,
+-        emphasizeObjective: true,
+-        compactDiagramZoom: true,
+-        diagramRepresentation: set.rounds[index].moleculeId === CONDENSED_LESSON_DIAGRAM.moleculeId ? "condensed" : "expanded",
++      const presentation = global.NameleculeRepairGame.presentationForRound(set.rounds[index], { difficulty: recipe.difficulty });
++      current = global.NameleculeRepairGame.mountRound(roundHost, Object.assign({}, presentation, {
++        initialState: state.states[index], assetBase: options.assetBase,
+         continueLabel: index < 2 ? "Επόμενο κουίζ" : "Συνεχίζω τη θεωρία",
+         onReveal(request) {
+           if (!destroyed && state.currentRound === index && roundHost.isConnected &&
+@@ -218,7 +189,7 @@
+             if (heading) { heading.tabIndex = -1; heading.focus({ preventScroll: true }); }
+           } else if (state.solved && typeof options.onContinue === "function") options.onContinue();
+         }
+-      });
++      }));
+       reportProgress({ current: index + 1, total: recipe.roundCount });
+     }
+     function start() {
+--- before/js/namelecule-quiz-checkpoints.js
++++ after/js/namelecule-quiz-checkpoints.js
+@@ -14,7 +14,7 @@
+   let progressCounter = null;
+   let mounted = null;
+   let mountToken = 0;
+-  let revealingResponse = false;
++  let responseRevealer = null;
+ 
+   function registerType(name, adapter) {
+     if (!/^[a-z][a-z0-9-]{0,48}$/.test(name) || own(types, name) || !adapter ||
+@@ -221,35 +221,10 @@
+     progressCounter.textContent = valid ? text("counter") + " " + value.current + "/" + value.total : "";
+   }
+   function stopResponseScroll() {
+-    if (!revealingResponse || !dialog) return;
+-    revealingResponse = false;
+-    if (typeof dialog.scrollTo === "function") dialog.scrollTo({ top: dialog.scrollTop, behavior: "instant" });
++    if (responseRevealer) responseRevealer.stop();
+   }
+   function revealResponse(request) {
+-    if (!dialog || !dialog.open || !mountHost || !request) return;
+-    const start = request.start, end = request.end || start;
+-    if (!start || !end || !start.isConnected || !end.isConnected ||
+-      !mountHost.contains(start) || !mountHost.contains(end) ||
+-      typeof start.getBoundingClientRect !== "function" || typeof end.getBoundingClientRect !== "function") return;
+-    stopResponseScroll();
+-    const first = start.getBoundingClientRect(), last = end.getBoundingClientRect();
+-    if (first.height <= 0 || last.height <= 0) return;
+-    const box = dialog.getBoundingClientRect();
+-    const header = dialog.querySelector(".nl-quiz-dialog-header");
+-    const top = Math.max(box.top + dialog.clientTop, header ? header.getBoundingClientRect().bottom : box.top) + 12;
+-    const bottom = box.top + dialog.clientTop + dialog.clientHeight - 12;
+-    const rangeTop = Math.min(first.top, last.top), rangeBottom = Math.max(first.bottom, last.bottom);
+-    if (![top, bottom, rangeTop, rangeBottom].every(Number.isFinite) || bottom <= top) return;
+-    if (rangeTop >= top && rangeBottom <= bottom) return;
+-    // Keep a long explanation's beginning visible instead of jumping past it to Continue.
+-    const delta = rangeBottom - rangeTop > bottom - top || rangeTop < top ? rangeTop - top : rangeBottom - bottom;
+-    const destination = Math.max(0, Math.min(dialog.scrollHeight - dialog.clientHeight, dialog.scrollTop + delta));
+-    if (Math.abs(destination - dialog.scrollTop) < 1) return;
+-    const reducedMotion = typeof global.matchMedia === "function" && global.matchMedia("(prefers-reduced-motion: reduce)").matches;
+-    if (typeof dialog.scrollTo === "function") {
+-      revealingResponse = !reducedMotion;
+-      dialog.scrollTo({ top: destination, behavior: reducedMotion ? "instant" : "smooth" });
+-    } else dialog.scrollTop = destination;
++    if (responseRevealer) responseRevealer.reveal(request);
+   }
+   function destroyMount() {
+     stopResponseScroll();
+@@ -293,6 +268,21 @@
+       if (dialog.open && event.target && event.target.tagName === "IMG") retryButton.hidden = false;
+     }, true);
+     dialog.append(header, mountHost, retryButton);
++    responseRevealer = global.NameleculeRepairGame.createResponseRevealer({
++      host: mountHost,
++      active: () => !!(dialog && dialog.open),
++      viewport() {
++        const box = dialog.getBoundingClientRect();
++        return { top: Math.max(box.top + dialog.clientTop, header.getBoundingClientRect().bottom) + 12,
++          bottom: box.top + dialog.clientTop + dialog.clientHeight - 12 };
++      },
++      scrollTop: () => dialog.scrollTop,
++      maxScroll: () => dialog.scrollHeight - dialog.clientHeight,
++      scrollTo(top, behavior) {
++        if (typeof dialog.scrollTo === "function") dialog.scrollTo({ top: top, behavior: behavior });
++        else dialog.scrollTop = top;
++      }
++    });
+     dialog.addEventListener("cancel", event => { event.preventDefault(); closeDialog(); });
+     // Let the round handle its own keys first, then stop lesson arrows/Escape.
+     dialog.addEventListener("keydown", event => { stopResponseScroll(); event.stopPropagation(); });
+--- before/css/namelecule-repair-round.css
++++ after/css/namelecule-repair-round.css
+@@ -1,4 +1,4 @@
+-/* Embedded repair round only; the standalone theme remains independent. */
++/* Shared repair-round presentation; scope is mounted only for an active round. */
+ .nl-repair-round {
+   color-scheme: light;
+   --ink: #254c50;
+@@ -44,11 +44,22 @@
+ .nl-repair-round .quiet:hover:not(:disabled) { background: #e9efea; color: var(--ink); }
+ 
+ .nl-repair-round .workshop-logo-small { display: block; width: 36px; height: 36px; object-fit: contain; flex: 0 0 auto; }
+-.nl-repair-round .round-topbar .round-game-brand { display: flex; align-items: center; gap: 10px; margin: 0; }
+-.nl-repair-round .round-game-label { min-width: 0; }
++.nl-repair-round .round-topbar .round-game-brand { display: flex; align-items: center; gap: 10px; margin: 0; flex: 1 1 auto; min-width: 0; max-width: none; }
++.nl-repair-round .round-game-label { min-width: 0; overflow-wrap: anywhere; }
+ 
+-.nl-repair-round .round-topbar { display: flex; align-items: center; gap: 20px; justify-content: space-between; margin-bottom: 27px; }
+-.nl-repair-round .round-topbar .eyebrow { margin: 0; }
++.nl-repair-round .round-topbar { display: flex; align-items: center; gap: 12px; justify-content: space-between; margin-bottom: 27px; }
++.nl-repair-round .round-topbar .eyebrow { margin: 0; padding: 0; max-width: none; }
++.nl-repair-round .round-progress-counter {
++  display: block;
++  flex: 0 0 auto;
++  margin: 0;
++  padding: 4px 10px;
++  border-radius: 999px;
++  background: #254c50;
++  color: #fff;
++  font: 700 1.05rem/1.3 "Roboto Condensed", system-ui, sans-serif;
++  white-space: nowrap;
++}
+ .nl-repair-round .round-heading { margin-bottom: 22px; }
+ .nl-repair-round .round-heading h1 { font-size: clamp(28.8px, 3vw, 40px); letter-spacing: -.04em; margin-bottom: 10px; }
+ .nl-repair-round .round-heading p { color: var(--muted); max-width: 810px; font-size: 14.72px; margin: 0; }
+--- before/games/name-repair.html
++++ after/games/name-repair.html
+@@ -7,7 +7,8 @@
+   <title>Συνεργείο ονομάτων · Namelecule</title>
+   <meta name="description" content="Διάλεξε ένα σετ αποστολών στο Συνεργείο ονομάτων. Παρατήρησε τις δομές, επισκεύασε τα ονόματα και δες τις εξηγήσεις.">
+   <link rel="stylesheet" href="../css/namelecule-games.css?v=workshop-brand-20261105-r1">
+-  <script src="../js/namelecule-game-repair.js?v=workshop-reset-removal-20261107-r1" defer></script>
++  <link rel="stylesheet" href="../css/namelecule-repair-round.css?v=workshop-lesson-parity-20261110-r1">
++  <script src="../js/namelecule-game-repair.js?v=workshop-lesson-parity-20261110-r1" defer></script>
+ </head>
+ <body>
+   <a class="skip-link" href="#game-root">Πήγαινε στο παιχνίδι</a>
+--- before/mulermoc-nom-54.html
++++ after/mulermoc-nom-54.html
+@@ -48,7 +48,7 @@
+   <link rel="stylesheet" href="css/mulermoc-nom-scenario-54.css?v=step7-numbering-directions-20261108-r3" />
+ 
+   <link rel="stylesheet" href="css/namelecule-54.css?v=v54-sync-20261104-r2" />
+-  <link rel="stylesheet" href="css/namelecule-repair-round.css?v=checkpoint-pilot-20261104-r1" />
++  <link rel="stylesheet" href="css/namelecule-repair-round.css?v=workshop-lesson-parity-20261110-r1" />
+   <link rel="stylesheet" href="css/namelecule-quiz-checkpoints.css?v=quiz-header-progress-20261108-r1" />
+   <script src="js/namelecule-label-metrics.js?v=20261031-r1"></script>
+   <script src="js/vendor/jsme/namelecule-20261031-r1/jsme.nocache.js"></script>
+@@ -367,11 +367,11 @@
+   <script src="js/mulermoc-nom-molview-54.js?v=step7-numbering-directions-20261108-r3"></script>
+   <script src="js/mulermoc-nom-teaching-54.js?v=alkane-step5-interaction-20261106-r1"></script>
+   <script src="js/mulermoc-nom-note-54.js?v=v54-sync-20261104-r2"></script>
+-  <script src="js/namelecule-game-repair.js?v=quiz-answer-reveal-20261109-r1"></script>
+-  <script src="js/namelecule-quiz-checkpoints.js?v=quiz-answer-reveal-20261109-r1"></script>
++  <script src="js/namelecule-game-repair.js?v=workshop-lesson-parity-20261110-r1"></script>
++  <script src="js/namelecule-quiz-checkpoints.js?v=workshop-lesson-parity-20261110-r1"></script>
+   <script src="js/namelecule-chemistry-client.js?v=verified-engines-20261105-r1"></script>
+   <script src="js/namelecule-repair-generator.js?v=engine-pilot-20261105-r1"></script>
+-  <script src="js/namelecule-generated-repair-checkpoint.js?v=quiz-answer-reveal-20261109-r1"></script>
++  <script src="js/namelecule-generated-repair-checkpoint.js?v=workshop-lesson-parity-20261110-r1"></script>
+   <script src="js/mulermoc-nom-scenario-54.js?v=step7-numbering-directions-20261108-r3"></script>
+   <script src="js/mulermoc-nom-iupac-54.js?v=merge54-20261105-r1"></script>
+   <script src="js/mulermoc-nom-lang-54.js?v=merge54-20261105-r1"></script>
+--- before/mulermoc-nom-55.html
++++ after/mulermoc-nom-55.html
+@@ -48,7 +48,7 @@
+   <link rel="stylesheet" href="css/mulermoc-nom-scenario-55.css?v=namelecule-v55-20261110-r2" />
+ 
+   <link rel="stylesheet" href="css/namelecule-55.css?v=namelecule-v55-20261110-r2" />
+-  <link rel="stylesheet" href="css/namelecule-repair-round.css?v=quiz-zoom-icon-20261110-r1" />
++  <link rel="stylesheet" href="css/namelecule-repair-round.css?v=workshop-lesson-parity-20261110-r1" />
+   <link rel="stylesheet" href="css/namelecule-quiz-checkpoints.css?v=quiz-header-progress-20261108-r1" />
+   <script src="js/namelecule-label-metrics.js?v=20261031-r1"></script>
+   <script src="js/vendor/jsme/namelecule-20261031-r1/jsme.nocache.js"></script>
+@@ -360,11 +360,11 @@
+   <script src="js/mulermoc-nom-molview-55.js?v=namelecule-v55-20261110-r2"></script>
+   <script src="js/mulermoc-nom-teaching-55.js?v=namelecule-v55-20261110-r2"></script>
+   <script src="js/mulermoc-nom-note-55.js?v=namelecule-v55-20261110-r2"></script>
+-  <script src="js/namelecule-game-repair.js?v=quiz-zoom-icon-20261110-r1"></script>
+-  <script src="js/namelecule-quiz-checkpoints.js?v=quiz-answer-reveal-20261109-r1"></script>
++  <script src="js/namelecule-game-repair.js?v=workshop-lesson-parity-20261110-r1"></script>
++  <script src="js/namelecule-quiz-checkpoints.js?v=workshop-lesson-parity-20261110-r1"></script>
+   <script src="js/namelecule-chemistry-client.js?v=verified-engines-20261105-r1"></script>
+   <script src="js/namelecule-repair-generator.js?v=engine-pilot-20261105-r1"></script>
+-  <script src="js/namelecule-generated-repair-checkpoint.js?v=quiz-zoom-icon-20261110-r1"></script>
++  <script src="js/namelecule-generated-repair-checkpoint.js?v=workshop-lesson-parity-20261110-r1"></script>
+   <script src="js/mulermoc-nom-scenario-55.js?v=namelecule-v55-20261110-r2"></script>
+   <script src="js/mulermoc-nom-iupac-55.js?v=namelecule-v55-20261110-r2"></script>
+   <script src="js/mulermoc-nom-lang-55.js?v=namelecule-v55-20261110-r2"></script>
+--- before/design/welcome-proposal.html
++++ after/design/welcome-proposal.html
+@@ -16,7 +16,7 @@
+ <main><section class="hero"><span class="eyebrow">ΜΑΘΑΙΝΩ · ΣΥΝΔΕΩ · ΑΝΑΚΑΛΥΠΤΩ</span><h1>Κάθε μόριο έχει ένα όνομα<br><span>Ανακάλυψέ το&nbsp;!</span></h1><p>Σύνδεσε τη δομή με την ονομασία, μάθε βήμα βήμα και δοκίμασε τις γνώσεις&nbsp;σου</p></section><p class="choose">Διάλεξε από πού θέλεις να ξεκινήσεις</p>
+ <section class="cards" aria-label="Επιλογές εφαρμογής">
+ <article class="card one"><div class="icon"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 9C12 6 7 6 3 7v19c5-1 9-1 13 2 4-3 8-3 13-2V7c-4-1-9-1-13 2v19M7 12h5m-5 5h5m8-5h5m-5 5h5"/></svg></div><span class="label">ΘΕΩΡΙΑ</span><h2>Μαθαίνω βήμα βήμα</h2><p>Ανακάλυψε τους κανόνες ονοματολογίας μέσα από καθοδηγούμενα σενάρια και διαφορετικές εικόνες του ίδιου μορίου.</p><ul><li>Έτοιμα σενάρια θεωρίας</li><li>Για μελέτη ή για το μάθημα στην τάξη</li></ul><a class="action" style="text-decoration:none" href="theory-library.html?v=other-ketones-theory-20261026">Δες τη θεωρία <span aria-hidden="true">↗</span></a><small>Για μαθητές και εκπαιδευτικούς</small></article>
+-<article class="card two"><div class="icon"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M11 10h10c6 0 9 13 5 15-3 1-5-5-8-5h-4c-3 0-5 6-8 5-4-2-1-15 5-15ZM10 13v7m-3-3.5h6"/><circle cx="22" cy="14" r="1"/><circle cx="25" cy="18" r="1"/></svg></div><span class="label">ΑΣΚΗΣΕΙΣ &amp; ΠΑΙΧΝΙΔΙΑ</span><h2>Παίζω και εξασκούμαι</h2><p>Εντόπισε και διόρθωσε λάθη στα ονόματα οργανικών ενώσεων στο Συνεργείο ονομάτων.</p><ul><li>Σετ αποστολών ανά ομόλογη σειρά</li><li>Ανατροφοδότηση και εξηγήσεις των κανόνων</li></ul><a class="action" style="text-decoration:none" href="../games/name-repair.html?v=alkane-two-sets-20261104-r1">Συνεργείο ονομάτων <span aria-hidden="true">↗</span></a><small>Για μαθητές και εκπαιδευτικούς</small></article>
++<article class="card two"><div class="icon"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M11 10h10c6 0 9 13 5 15-3 1-5-5-8-5h-4c-3 0-5 6-8 5-4-2-1-15 5-15ZM10 13v7m-3-3.5h6"/><circle cx="22" cy="14" r="1"/><circle cx="25" cy="18" r="1"/></svg></div><span class="label">ΑΣΚΗΣΕΙΣ &amp; ΠΑΙΧΝΙΔΙΑ</span><h2>Παίζω και εξασκούμαι</h2><p>Εντόπισε και διόρθωσε λάθη στα ονόματα οργανικών ενώσεων στο Συνεργείο ονομάτων.</p><ul><li>Σετ αποστολών ανά ομόλογη σειρά</li><li>Ανατροφοδότηση και εξηγήσεις των κανόνων</li></ul><a class="action" style="text-decoration:none" href="../games/name-repair.html?v=workshop-lesson-parity-20261110-r1">Συνεργείο ονομάτων <span aria-hidden="true">↗</span></a><small>Για μαθητές και εκπαιδευτικούς</small></article>
+ <article class="card three"><div class="icon"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M18 5H6v23h20V16M15 19l2-6L26 4l4 4-9 9-6 2ZM24 6l4 4M10 23h10"/></svg></div><span class="label">ΓΙΑ ΕΚΠΑΙΔΕΥΤΙΚΟΥΣ</span><h2>Δημιουργώ το μάθημά μου</h2><p>Βρες έτοιμο υλικό για την τάξη σου ή φτιάξε τα δικά σου σενάρια θεωρίας και μαθησιακά παιχνίδια.</p><ul><li>Ο προσωπικός σου χώρος υλικού</li><li>Αποθήκευση και λήψη των δημιουργιών σου</li></ul><button class="action" data-panel="teacher">Χώρος εκπαιδευτικού <span aria-hidden="true">↗</span></button><small>Σύνδεση για τον προσωπικό σου χώρο</small></article>
+ </section>
+ <section class="representations"><div><span class="eyebrow">Η ΙΔΙΑ ΔΟΜΗ, ΑΛΛΗ ΟΠΤΙΚΗ</span><h2>Ένα μόριο.<br>Πολλοί τρόποι να το καταλάβεις.</h2><p>Από τον χημικό τύπο στο τρισδιάστατο μοντέλο και από τη δομή στο όνομα: κάθε αναπαράσταση σε βοηθά να δεις μια άλλη πλευρά του μορίου.</p></div><div><div class="rep-art"><div class="rep"><div class="formula">CH₃–CH₂–<b>OH</b></div><small>Συνεπτυγμένος συντακτικός</small></div><span class="equal" aria-hidden="true">↔</span><div class="rep"><svg class="expanded-ethanol" viewBox="0 0 180 115" role="img" aria-label="Ανεπτυγμένος συντακτικός τύπος αιθανόλης: δύο άνθρακες, έξι υδρογόνα και ένα οξυγόνο"><g stroke="#254c50" stroke-width="2"><path d="M26 59H41M59 59H81M99 59H121M140 59H155M50 45V28M50 73V91M90 45V28M90 73V91"/></g><g fill="#254c50" font-family="system-ui,sans-serif" font-size="18" text-anchor="middle"><text x="16" y="65">H</text><text x="50" y="65">C</text><text x="90" y="65">C</text><text x="166" y="65">H</text><text x="50" y="23">H</text><text x="90" y="23">H</text><text x="50" y="110">H</text><text x="90" y="110">H</text></g><text x="130" y="65" fill="#a54e40" font-family="system-ui,sans-serif" font-size="18" text-anchor="middle">O</text></svg><small>Ανεπτυγμένος συντακτικός</small></div><span class="equal" aria-hidden="true">↔</span><div class="rep"><div class="ethanol-model ethanol-static"><img src="assets/ethanol-3d-jsmol.png" width="1200" height="1200" alt="Τρισδιάστατο μοντέλο του ίδιου μορίου, εξαγμένο από το JSmol" decoding="async"></div><small>Τρισδιάστατο μοντέλο</small></div></div><div class="explore-entry"><a href="../mulermoc-nom-55.html">Εξερεύνησε ελεύθερα τα μόρια</a></div></div></section>

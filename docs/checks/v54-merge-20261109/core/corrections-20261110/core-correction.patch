@@ -1,0 +1,26 @@
+diff --git "a/Users/yannisskendros/Desktop/\316\224\316\271\317\200\316\273\317\211\316\274\316\261\317\204\316\271\316\272\316\256 - \316\237\316\275\316\277\316\274\316\261\317\204\316\277\316\273\316\277\316\263\316\257\316\261/organic-nomenclature-3/docs/checks/v54-merge-20261109/core/corrections-20261110/before-core55.js" b/private/tmp/namelecule-professor-merge-20261109-oxj7hfyy/candidate/js/mulermoc-nom-core-55.js
+index f164e5e..c24b0dc 100644
+--- "a/Users/yannisskendros/Desktop/\316\224\316\271\317\200\316\273\317\211\316\274\316\261\317\204\316\271\316\272\316\256 - \316\237\316\275\316\277\316\274\316\261\317\204\316\277\316\273\316\277\316\263\316\257\316\261/organic-nomenclature-3/docs/checks/v54-merge-20261109/core/corrections-20261110/before-core55.js"	
++++ b/private/tmp/namelecule-professor-merge-20261109-oxj7hfyy/candidate/js/mulermoc-nom-core-55.js
+@@ -3824,6 +3824,11 @@ function fGuessName(skipChainRecalc) {
+                 // off-chain heteros here; unclaimed off-chain hetero declines
+                 // below (fail-closed — never emit locant 0).
+                 const _decAll = fGetDecoratedBranchInfo()
++                // Without the decorated merge, this legacy path names direct
++                // halogens only. Decline carbon branches rather than omit them.
++                if (!_decAll.length && fGetHydrocarbonSubstituentInfo().length) {
++                    fDeclineNaming("unsupported alkyl/halogen branch combination")
++                }
+                 const _decClaimed = {}
+                 for (let _di = 0; _di < _decAll.length; _di++) {
+                     _decClaimed[_decAll[_di].heteroIdx] = true
+@@ -3940,6 +3945,9 @@ function fGuessName(skipChainRecalc) {
+                 // Decorated nitro branches claim their N here (v1); unclaimed
+                 // off-chain N declines (fail-closed — never emit locant 0).
+                 const _decNitro = fGetDecoratedBranchInfo()
++                if (!_decNitro.length && fGetHydrocarbonSubstituentInfo().length) {
++                    fDeclineNaming("unsupported alkyl/nitro branch combination")
++                }
+                 const _decNitroClaimed = {}
+                 for (let _dni = 0; _dni < _decNitro.length; _dni++) {
+                     _decNitroClaimed[_decNitro[_dni].heteroIdx] = true

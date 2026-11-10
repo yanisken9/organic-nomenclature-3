@@ -1,0 +1,116 @@
+diff --git "a/Users/yannisskendros/Desktop/\316\224\316\271\317\200\316\273\317\211\316\274\316\261\317\204\316\271\316\272\316\256 - \316\237\316\275\316\277\316\274\316\261\317\204\316\277\316\273\316\277\316\263\316\257\316\261/organic-nomenclature-3/docs/checks/v54-merge-20261109/core/corrections-20261110/before-name-en55.js" b/private/tmp/namelecule-professor-merge-20261109-oxj7hfyy/candidate/js/mulermoc-nom-name-en-55.js
+index 82ff6bb..e9cf0c0 100644
+--- "a/Users/yannisskendros/Desktop/\316\224\316\271\317\200\316\273\317\211\316\274\316\261\317\204\316\271\316\272\316\256 - \316\237\316\275\316\277\316\274\316\261\317\204\316\277\316\273\316\277\316\263\316\257\316\261/organic-nomenclature-3/docs/checks/v54-merge-20261109/core/corrections-20261110/before-name-en55.js"	
++++ b/private/tmp/namelecule-professor-merge-20261109-oxj7hfyy/candidate/js/mulermoc-nom-name-en-55.js
+@@ -291,13 +291,6 @@ function fPopulateEngineENFromGreek(key, variant) {
+     // original order, or a non-first group without digit locants).
+     var _jgroups = (typeof fENSubstGroups === "function") ? fENSubstGroups(S, SchJ, sys) : [];
+     var _jord = (typeof fENSortSubstGroups === "function") ? fENSortSubstGroups(_jgroups) : null;
+-    if (_jord) {
+-      try {
+-        var _jg1 = -1;
+-        for (var _jq = 0; _jq < _jord.length; _jq++) { if (_jgroups[_jord[_jq]].kind === "g1") { _jg1 = _jq; break; } }
+-        if (_jg1 > 0 && _jg1 < _jord.length - 1) _jord = null;
+-      } catch (eJQ) { _jord = null; }
+-    }
+     var pre;
+     if (_jord) {
+       pre = "";
+@@ -523,22 +516,17 @@ function fNameENBoxes(variant) {
+               push("comp3loc" + (li2 === 1 ? "" : String(li2 - 1)), "-" + br[bi2 + 1] + "-");
+             }
+           }
+-        } else { push("comp3", S(3)); }
++        } else {
++          var _bare3 = S(3);
++          if (sys && fENSysNeedsParens(_bare3, Sch(3), loc2)) _bare3 = "(" + _bare3 + ")";
++          push("comp3", _bare3);
++        }
+       };
+       // v54.41: full group order (G1 + slot-3 pieces). Null = legacy path
+       // below (single group, original order, or a non-first group without
+       // digit locants — fail-closed, today's exact output there).
+       var _groups = (typeof fENSubstGroups === "function") ? fENSubstGroups(S, Sch, sys) : [];
+       var _ord = (typeof fENSortSubstGroups === "function") ? fENSortSubstGroups(_groups) : null;
+-      if (_ord) {
+-        // G1 (if present) must sort first or last — anything else keeps the
+-        // legacy path (unattested; middle order has no box mapping).
+-        try {
+-          var _gqi = -1;
+-          for (var _gqj = 0; _gqj < _ord.length; _gqj++) { if (_groups[_ord[_gqj]].kind === "g1") { _gqi = _gqj; break; } }
+-          if (_gqi > 0 && _gqi < _ord.length - 1) _ord = null;
+-        } catch (eQ) { _ord = null; }
+-      }
+       if (_ord) {
+         var _emitted = false;
+         for (var _e = 0; _e < _ord.length; _e++) {
+@@ -688,15 +676,14 @@ function fSplitENBranchSys(schoolText, sysText, slot) {
+ // v54.36): a bare systematic name carrying an internal digit is ambiguous
+ // right after a parent locant run ("4-propan-2-yl"), so it nests in parens
+ // when the preceding component is a number locant: 4-(propan-2-yl)-.
+-// Differs-from-school required (toggle visibility, sort keys and verdicts
+-// keyed off unwrapped text stay byte-identical where sys equals school);
+-// already-parenthesized, unchanged, or digitless names pass through;
++// Intrinsic locants require enclosure even when school and systematic
++// text coincide. Already-parenthesized or digitless names pass through;
+ // empty locants (tiny chains, locant-free slots like the ester tail) mean
+ // no parens. Render/join-layer only — slots keep bare forms, so toggle
+ // visibility, splitting and idempotence are unaffected.
+ function fENSysNeedsParens(sysText, commonText, prevLocText) {
+   try {
+-    if (!sysText || sysText === commonText) return false;
++    if (!sysText) return false;
+     if (/[()]/.test(sysText)) return false;
+     if (!/\d/.test(sysText)) return false;
+     var loc = String(prevLocText == null ? "" : prevLocText).replace(/-/g, "");
+@@ -729,7 +716,8 @@ var EN_SYST_SUBST = {
+ function fIsSubstitutedStemEN(s) {
+   try {
+     var _t = String(s == null ? "" : s).toLowerCase();
+-    return /yl$/.test(_t) && /(chloro|bromo|fluoro|iodo|nitro)/.test(_t);
++    return /yl$/.test(_t) && (/(chloro|bromo|fluoro|iodo|nitro)/.test(_t) ||
++      /^\d[\d,]*-(?:di|tri|tetra)?(?:methyl|ethyl|propyl|butyl)/.test(_t));
+   }
+   catch (e) { return false; }
+ }
+@@ -793,7 +781,8 @@ function fSystematicSubstSlot(slot, text) {
+       var m2 = /^(di|tri|tetra)([a-z].*)$/.exec(w);
+       if (m2 && Object.prototype.hasOwnProperty.call(EN_SYST_SUBST, m2[2])) {
+         var s2 = EN_SYST_SUBST[m2[2]];
+-        out.push(/\d/.test(s2) ? m2[1] + "(" + s2 + ")" : m2[1] + s2);
++        var _mult = fIsSubstitutedStemEN(s2) ? fBisPrefixEN(m2[1]) : m2[1];
++        out.push(/\d/.test(s2) ? _mult + "(" + s2 + ")" : _mult + s2);
+       } else if (Object.prototype.hasOwnProperty.call(EN_SYST_SUBST, w)) {
+         out.push(EN_SYST_SUBST[w]);
+       } else {
+@@ -812,14 +801,14 @@ function fSystematicSubstSlot(slot, text) {
+ // by the first letter of the complete name (difluorobutyl under d,
+ // bis(chloromethyl) under b), leading locants skipped. (Resolves the v54.22
+ // limitation note: leading di/tri/tetra inside compound names no longer
+-// strips. sec-/tert- sort as plain Roman (P-14.5.3 tie-break only).)
++// strips. Italic sec-/tert- are ignored until the Roman-letter tie-break).
+ function fENSubstSortKey(nm) {
+   try {
+     var s = String(nm == null ? "" : nm).toLowerCase();
+     s = s.replace(/[()]/g, "");
+     s = s.replace(/^[\d,\s\-]+/, "");
+     if ((typeof fIsSubstitutedStemEN === "function") && fIsSubstitutedStemEN(s)) return s;
+-    return s.replace(/^(di|tri|tetra)(?=[a-z])/, "");
++    return s.replace(/^(di|tri|tetra)(?=[a-z])/, "").replace(/^(sec|tert)-/, "");
+   } catch (e) { return ""; }
+ }
+ // Numeric locants list for the P-14.5.4 tie-break (identical Roman letters ->
+@@ -896,6 +885,13 @@ function fENSortSubstGroups(gs) {
+       try { kb = fENSubstSortKey(gs[b].name); } catch (e2) {}
+       if (ka < kb) return -1;
+       if (ka > kb) return 1;
++      var italic = function (text) {
++        var m = /^(?:di|tri|tetra)?(sec|tert)-/.exec(String(text || "").toLowerCase());
++        return m ? m[1] : "";
++      };
++      var ia = italic(gs[a].name), ib = italic(gs[b].name);
++      if (ia < ib) return -1;
++      if (ia > ib) return 1;
+       var la = [], lb = [];
+       try { la = fENLocKey(gs[a].loc); } catch (e3) {}
+       try { lb = fENLocKey(gs[b].loc); } catch (e4) {}

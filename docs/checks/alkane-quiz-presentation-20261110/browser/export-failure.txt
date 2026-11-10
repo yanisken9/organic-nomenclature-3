@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/alkane-quiz-presentation-20261110/browser/export-condensed.py", line 16, in <module>
+    geometry=json.loads(ev('JSON.stringify({lines:[...document.querySelectorAll("#jsmeNomeclatureSVG svg line")].map(e=>({x1:e.getAttribute("x1"),y1:e.getAttribute("y1"),x2:e.getAttribute("x2"),y2:e.getAttribute("y2"),stroke:getComputedStyle(e).stroke})),atoms:allAtomsTypeList,bonds:allBondsList})'))
+  File "owned-bidi", line 43, in ev
+RuntimeError: {'columnNumber': 250, 'exception': {'type': 'error'}, 'lineNumber': 0, 'stackTrace': {'callFrames': [{'columnNumber': 250, 'functionName': '', 'lineNumber': 0, 'url': 'http://127.0.0.1:52134/mulermoc-nom-55.html?libs=local&export=quiz-presentation-20261110'}]}, 'text': 'ReferenceError: allBondsList is not defined'}

@@ -1,0 +1,35 @@
+{
+  "primaryRoot": "/Users/yannisskendros/Desktop/\u0394\u03b9\u03c0\u03bb\u03c9\u03bc\u03b1\u03c4\u03b9\u03ba\u03b7\u0301 - \u039f\u03bd\u03bf\u03bc\u03b1\u03c4\u03bf\u03bb\u03bf\u03b3\u03b9\u0301\u03b1/organic-nomenclature-3",
+  "http_port": 50780,
+  "base_url": "http://127.0.0.1:50780/organic-nomenclature-3/",
+  "primaryServerPID": 76018,
+  "bidi_port": 49629,
+  "firefoxPID": 74840,
+  "profile": "/var/folders/2v/ds4vjvgj1_1000kq1fzg70q40000gn/T/namelecule-v55-final-owned-firefox-r9dk6seo",
+  "candidateServerPID": 74701,
+  "candidateHTTPPort": 49407,
+  "candidateRoot": "/private/tmp/namelecule-professor-merge-20261109-oxj7hfyy/candidate",
+  "launchedUTC": "2026-11-09T22:46:20Z",
+  "cleanupGuard": "Only recorded PIDs after exact owned profile or ASCII script+port signatures; no personal GUI process",
+  "initialPrimaryServerPID": 75948,
+  "serverToolSession": 67898,
+  "serverLaunchCorrection": "Persistent exec session serves actual PRIMARY root at same URL; prior launcher process ended before any HTTP/UI check.",
+  "cleanup": [
+    {
+      "pid": 76018,
+      "signal": "TERM",
+      "matchedToken": "/primary-smoke/server.py 50780"
+    },
+    {
+      "pid": 74701,
+      "signal": "TERM",
+      "matchedToken": "/browser/serve.py /private/tmp/namelecule-professor-merge-20261109-oxj7hfyy/candidate 49407"
+    },
+    {
+      "pid": 74840,
+      "signal": "TERM",
+      "matchedToken": "/var/folders/2v/ds4vjvgj1_1000kq1fzg70q40000gn/T/namelecule-v55-final-owned-firefox-r9dk6seo"
+    }
+  ],
+  "cleanupUTC": "2026-11-09T22:50:21Z"
+}

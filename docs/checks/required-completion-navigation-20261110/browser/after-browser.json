@@ -1,0 +1,1435 @@
+{
+  "completed": true,
+  "stage": "after",
+  "checks": [
+    {
+      "label": "Exact three served source hashes",
+      "detail": {
+        "js/namelecule-quiz-checkpoints.js": "68b207d4c95f70c4002a742dd48e6e97c9b4eac1319cf132af11feda4e47b691",
+        "mulermoc-nom-54.html": "764a8d0eca8e05a8fbe6e42ed318bcc5917afb5e691250c8234f8c2f2c48b4dd",
+        "mulermoc-nom-55.html": "10ac3efd0b5c7048b64fc33bbc55942617fc54f0529238b0467ac5e535fa531e"
+      }
+    },
+    {
+      "label": "Historical first-two prefix does not unlock gate",
+      "detail": null
+    },
+    {
+      "label": "Exact prefix resumes second completed round",
+      "detail": null
+    },
+    {
+      "label": "Earlier completed second round retains Return",
+      "detail": {
+        "backHidden": false,
+        "backDisplay": "block",
+        "backRects": 1,
+        "continueHidden": true,
+        "continueDisplay": "none",
+        "lower": [
+          {
+            "text": "Επόμενο κουίζ",
+            "display": "flex",
+            "disabled": false
+          }
+        ],
+        "counter": "Κουίζ 2/3",
+        "success": true,
+        "index": 3,
+        "focus": "",
+        "title": "Μικρή στάση για επισκευή"
+      }
+    },
+    {
+      "label": "Final third unsolved retains Return",
+      "detail": {
+        "backHidden": false,
+        "backDisplay": "block",
+        "backRects": 1,
+        "continueHidden": true,
+        "continueDisplay": "none",
+        "lower": [],
+        "counter": "Κουίζ 3/3",
+        "success": false,
+        "index": 3,
+        "focus": "",
+        "title": "Μικρή στάση για επισκευή"
+      }
+    },
+    {
+      "label": "Unanswered final has disabled Check and locked gate",
+      "detail": null
+    },
+    {
+      "label": "Native final Check genuinely completes required triple",
+      "detail": null
+    },
+    {
+      "label": "Live third success hides top Return with two lower actions",
+      "detail": {
+        "backHidden": true,
+        "backDisplay": "none",
+        "backRects": 0,
+        "continueHidden": true,
+        "continueDisplay": "none",
+        "lower": [
+          {
+            "text": "Συνεχίζω τη θεωρία",
+            "display": "flex",
+            "disabled": false
+          },
+          {
+            "text": "Άλλη τριάδα για εξάσκηση",
+            "display": "flex",
+            "disabled": false
+          }
+        ],
+        "counter": "Κουίζ 3/3",
+        "success": true,
+        "index": 3,
+        "focus": "",
+        "title": "Μικρή στάση για επισκευή"
+      }
+    },
+    {
+      "label": "Completed header remains hidden at1280",
+      "detail": {
+        "backHidden": true,
+        "backDisplay": "none",
+        "backRects": 0,
+        "continueHidden": true,
+        "continueDisplay": "none",
+        "lower": [
+          {
+            "text": "Συνεχίζω τη θεωρία",
+            "display": "flex",
+            "disabled": false
+          },
+          {
+            "text": "Άλλη τριάδα για εξάσκηση",
+            "display": "flex",
+            "disabled": false
+          }
+        ],
+        "counter": "Κουίζ 3/3",
+        "success": true,
+        "index": 3,
+        "focus": "",
+        "title": "Μικρή στάση για επισκευή"
+      }
+    },
+    {
+      "label": "completed-header-1280 viewport/dialog fit",
+      "detail": {
+        "viewport": 1280,
+        "pageWidth": 1280,
+        "dialog": {
+          "x": 50,
+          "y": 12,
+          "width": 1180,
+          "height": 776,
+          "top": 12,
+          "right": 1230,
+          "bottom": 788,
+          "left": 50
+        },
+        "clientWidth": 1178,
+        "scrollWidth": 1178,
+        "header": {
+          "x": 51,
+          "y": 13,
+          "width": 1178,
+          "height": 58.83332824707031,
+          "top": 13,
+          "right": 1229,
+          "bottom": 71.83332824707031,
+          "left": 51
+        },
+        "buttons": [
+          {
+            "text": "Συνεχίζω τη θεωρία",
+            "rect": {
+              "x": 786.7833251953125,
+              "y": 1064.9166259765625,
+              "width": 181.2333221435547,
+              "height": 47,
+              "top": 1064.9166259765625,
+              "right": 968.0166473388672,
+              "bottom": 1111.9166259765625,
+              "left": 786.7833251953125
+            }
+          },
+          {
+            "text": "Άλλη τριάδα για εξάσκηση",
+            "rect": {
+              "x": 978.0166625976562,
+              "y": 1064.9166259765625,
+              "width": 228.98333740234375,
+              "height": 47,
+              "top": 1064.9166259765625,
+              "right": 1207,
+              "bottom": 1111.9166259765625,
+              "left": 978.0166625976562
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "completed-header-1280 controls fit width",
+      "detail": null
+    },
+    {
+      "label": "completed-actions-1280 viewport/dialog fit",
+      "detail": {
+        "viewport": 1280,
+        "pageWidth": 1280,
+        "dialog": {
+          "x": 50,
+          "y": 12,
+          "width": 1180,
+          "height": 776,
+          "top": 12,
+          "right": 1230,
+          "bottom": 788,
+          "left": 50
+        },
+        "clientWidth": 1178,
+        "scrollWidth": 1178,
+        "header": {
+          "x": 51,
+          "y": 13,
+          "width": 1178,
+          "height": 58.83332824707031,
+          "top": 13,
+          "right": 1229,
+          "bottom": 71.83332824707031,
+          "left": 51
+        },
+        "buttons": [
+          {
+            "text": "Συνεχίζω τη θεωρία",
+            "rect": {
+              "x": 786.7833251953125,
+              "y": 682.3499755859375,
+              "width": 181.2333221435547,
+              "height": 47,
+              "top": 682.3499755859375,
+              "right": 968.0166473388672,
+              "bottom": 729.3499755859375,
+              "left": 786.7833251953125
+            }
+          },
+          {
+            "text": "Άλλη τριάδα για εξάσκηση",
+            "rect": {
+              "x": 978.0166625976562,
+              "y": 682.3499755859375,
+              "width": 228.98333740234375,
+              "height": 47,
+              "top": 682.3499755859375,
+              "right": 1207,
+              "bottom": 729.3499755859375,
+              "left": 978.0166625976562
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "completed-actions-1280 controls fit width",
+      "detail": null
+    },
+    {
+      "label": "Completed header remains hidden at390",
+      "detail": {
+        "backHidden": true,
+        "backDisplay": "none",
+        "backRects": 0,
+        "continueHidden": true,
+        "continueDisplay": "none",
+        "lower": [
+          {
+            "text": "Συνεχίζω τη θεωρία",
+            "display": "flex",
+            "disabled": false
+          },
+          {
+            "text": "Άλλη τριάδα για εξάσκηση",
+            "display": "flex",
+            "disabled": false
+          }
+        ],
+        "counter": "Κουίζ 3/3",
+        "success": true,
+        "index": 3,
+        "focus": "",
+        "title": "Μικρή στάση για επισκευή"
+      }
+    },
+    {
+      "label": "completed-header-390 viewport/dialog fit",
+      "detail": {
+        "viewport": 390,
+        "pageWidth": 390,
+        "dialog": {
+          "x": 6,
+          "y": 6,
+          "width": 378,
+          "height": 748,
+          "top": 6,
+          "right": 384,
+          "bottom": 754,
+          "left": 6
+        },
+        "clientWidth": 376,
+        "scrollWidth": 376,
+        "header": {
+          "x": 7,
+          "y": 7,
+          "width": 376,
+          "height": 54.83332824707031,
+          "top": 7,
+          "right": 383,
+          "bottom": 61.83332824707031,
+          "left": 7
+        },
+        "buttons": [
+          {
+            "text": "Συνεχίζω τη θεωρία",
+            "rect": {
+              "x": 21,
+              "y": 1443.050048828125,
+              "width": 348,
+              "height": 47,
+              "top": 1443.050048828125,
+              "right": 369,
+              "bottom": 1490.050048828125,
+              "left": 21
+            }
+          },
+          {
+            "text": "Άλλη τριάδα για εξάσκηση",
+            "rect": {
+              "x": 21,
+              "y": 1500.050048828125,
+              "width": 348,
+              "height": 47,
+              "top": 1500.050048828125,
+              "right": 369,
+              "bottom": 1547.050048828125,
+              "left": 21
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "completed-header-390 controls fit width",
+      "detail": null
+    },
+    {
+      "label": "completed-actions-390 viewport/dialog fit",
+      "detail": {
+        "viewport": 390,
+        "pageWidth": 390,
+        "dialog": {
+          "x": 6,
+          "y": 6,
+          "width": 378,
+          "height": 748,
+          "top": 6,
+          "right": 384,
+          "bottom": 754,
+          "left": 6
+        },
+        "clientWidth": 376,
+        "scrollWidth": 376,
+        "header": {
+          "x": 7,
+          "y": 7,
+          "width": 376,
+          "height": 54.83332824707031,
+          "top": 7,
+          "right": 383,
+          "bottom": 61.83332824707031,
+          "left": 7
+        },
+        "buttons": [
+          {
+            "text": "Συνεχίζω τη θεωρία",
+            "rect": {
+              "x": 21,
+              "y": 599.3499755859375,
+              "width": 348,
+              "height": 47,
+              "top": 599.3499755859375,
+              "right": 369,
+              "bottom": 646.3499755859375,
+              "left": 21
+            }
+          },
+          {
+            "text": "Άλλη τριάδα για εξάσκηση",
+            "rect": {
+              "x": 21,
+              "y": 656.3499755859375,
+              "width": 348,
+              "height": 47,
+              "top": 656.3499755859375,
+              "right": 369,
+              "bottom": 703.3499755859375,
+              "left": 21
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "completed-actions-390 controls fit width",
+      "detail": null
+    },
+    {
+      "label": "Completed header remains hidden at320",
+      "detail": {
+        "backHidden": true,
+        "backDisplay": "none",
+        "backRects": 0,
+        "continueHidden": true,
+        "continueDisplay": "none",
+        "lower": [
+          {
+            "text": "Συνεχίζω τη θεωρία",
+            "display": "flex",
+            "disabled": false
+          },
+          {
+            "text": "Άλλη τριάδα για εξάσκηση",
+            "display": "flex",
+            "disabled": false
+          }
+        ],
+        "counter": "Κουίζ 3/3",
+        "success": true,
+        "index": 3,
+        "focus": "",
+        "title": "Μικρή στάση για επισκευή"
+      }
+    },
+    {
+      "label": "completed-header-320 viewport/dialog fit",
+      "detail": {
+        "viewport": 320,
+        "pageWidth": 320,
+        "dialog": {
+          "x": 6,
+          "y": 6,
+          "width": 308,
+          "height": 688,
+          "top": 6,
+          "right": 314,
+          "bottom": 694,
+          "left": 6
+        },
+        "clientWidth": 306,
+        "scrollWidth": 306,
+        "header": {
+          "x": 7,
+          "y": 7,
+          "width": 306,
+          "height": 67.56666564941406,
+          "top": 7,
+          "right": 313,
+          "bottom": 74.56666564941406,
+          "left": 7
+        },
+        "buttons": [
+          {
+            "text": "Συνεχίζω τη θεωρία",
+            "rect": {
+              "x": 21,
+              "y": 1549.6666259765625,
+              "width": 278,
+              "height": 47,
+              "top": 1549.6666259765625,
+              "right": 299,
+              "bottom": 1596.6666259765625,
+              "left": 21
+            }
+          },
+          {
+            "text": "Άλλη τριάδα για εξάσκηση",
+            "rect": {
+              "x": 21,
+              "y": 1606.6666259765625,
+              "width": 278,
+              "height": 47,
+              "top": 1606.6666259765625,
+              "right": 299,
+              "bottom": 1653.6666259765625,
+              "left": 21
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "completed-header-320 controls fit width",
+      "detail": null
+    },
+    {
+      "label": "completed-actions-320 viewport/dialog fit",
+      "detail": {
+        "viewport": 320,
+        "pageWidth": 320,
+        "dialog": {
+          "x": 6,
+          "y": 6,
+          "width": 308,
+          "height": 688,
+          "top": 6,
+          "right": 314,
+          "bottom": 694,
+          "left": 6
+        },
+        "clientWidth": 306,
+        "scrollWidth": 306,
+        "header": {
+          "x": 7,
+          "y": 7,
+          "width": 306,
+          "height": 67.56666564941406,
+          "top": 7,
+          "right": 313,
+          "bottom": 74.56666564941406,
+          "left": 7
+        },
+        "buttons": [
+          {
+            "text": "Συνεχίζω τη θεωρία",
+            "rect": {
+              "x": 21,
+              "y": 539.3499755859375,
+              "width": 278,
+              "height": 47,
+              "top": 539.3499755859375,
+              "right": 299,
+              "bottom": 586.3499755859375,
+              "left": 21
+            }
+          },
+          {
+            "text": "Άλλη τριάδα για εξάσκηση",
+            "rect": {
+              "x": 21,
+              "y": 596.3499755859375,
+              "width": 278,
+              "height": 47,
+              "top": 596.3499755859375,
+              "right": 299,
+              "bottom": 643.3499755859375,
+              "left": 21
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "completed-actions-320 controls fit width",
+      "detail": null
+    },
+    {
+      "label": "Native Tab between lower actions excludes hidden Return",
+      "detail": null
+    },
+    {
+      "label": "Native Escape closes completed dialog to same checkpoint",
+      "detail": null
+    },
+    {
+      "label": "Escape preserves earned required states",
+      "detail": null
+    },
+    {
+      "label": "Reopen completed required restores hidden Return",
+      "detail": {
+        "backHidden": true,
+        "backDisplay": "none",
+        "backRects": 0,
+        "continueHidden": true,
+        "continueDisplay": "none",
+        "lower": [
+          {
+            "text": "Συνεχίζω τη θεωρία",
+            "display": "flex",
+            "disabled": false
+          },
+          {
+            "text": "Άλλη τριάδα για εξάσκηση",
+            "display": "flex",
+            "disabled": false
+          }
+        ],
+        "counter": "Κουίζ 3/3",
+        "success": true,
+        "index": 3,
+        "focus": "",
+        "title": "Μικρή στάση για επισκευή"
+      }
+    },
+    {
+      "label": "Same-tab refresh completed required restores hidden Return",
+      "detail": {
+        "backHidden": true,
+        "backDisplay": "none",
+        "backRects": 0,
+        "continueHidden": true,
+        "continueDisplay": "none",
+        "lower": [
+          {
+            "text": "Συνεχίζω τη θεωρία",
+            "display": "flex",
+            "disabled": false
+          },
+          {
+            "text": "Άλλη τριάδα για εξάσκηση",
+            "display": "flex",
+            "disabled": false
+          }
+        ],
+        "counter": "Κουίζ 3/3",
+        "success": true,
+        "index": 3,
+        "focus": "",
+        "title": "Μικρή στάση για επισκευή"
+      }
+    },
+    {
+      "label": "Refresh preserves exact earned required states",
+      "detail": null
+    },
+    {
+      "label": "Lower Continue advances and preserves mastery",
+      "detail": null
+    },
+    {
+      "label": "Lower Another triple starts optional with existing header behavior",
+      "detail": {
+        "backHidden": true,
+        "backDisplay": "none",
+        "backRects": 0,
+        "continueHidden": false,
+        "continueDisplay": "block",
+        "lower": [],
+        "counter": "Κουίζ 1/3",
+        "success": false,
+        "index": 3,
+        "focus": "",
+        "title": "Προαιρετική εξάσκηση"
+      }
+    },
+    {
+      "label": "Another triple resets only optional counter and retains required mastery",
+      "detail": null
+    },
+    {
+      "label": "Optional native Tab excludes hidden Return",
+      "detail": null
+    },
+    {
+      "label": "Optional Escape remains same checkpoint",
+      "detail": null
+    },
+    {
+      "label": "Reused optional dialog returns to completed required header",
+      "detail": {
+        "backHidden": true,
+        "backDisplay": "none",
+        "backRects": 0,
+        "continueHidden": true,
+        "continueDisplay": "none",
+        "lower": [
+          {
+            "text": "Συνεχίζω τη θεωρία",
+            "display": "flex",
+            "disabled": false
+          },
+          {
+            "text": "Άλλη τριάδα για εξάσκηση",
+            "display": "flex",
+            "disabled": false
+          }
+        ],
+        "counter": "Κουίζ 3/3",
+        "success": true,
+        "index": 3,
+        "focus": "",
+        "title": "Μικρή στάση για επισκευή"
+      }
+    },
+    {
+      "label": "Reused required dialog restores optional header",
+      "detail": {
+        "backHidden": true,
+        "backDisplay": "none",
+        "backRects": 0,
+        "continueHidden": false,
+        "continueDisplay": "block",
+        "lower": [],
+        "counter": "Κουίζ 1/3",
+        "success": false,
+        "index": 3,
+        "focus": "",
+        "title": "Προαιρετική εξάσκηση"
+      }
+    },
+    {
+      "label": "Optional Continue advances preserving required mastery",
+      "detail": null
+    },
+    {
+      "label": "Next unsolved lesson gate reuses dialog without stale hidden Return",
+      "detail": {
+        "backHidden": false,
+        "backDisplay": "block",
+        "backRects": 1,
+        "continueHidden": true,
+        "continueDisplay": "none",
+        "lower": [],
+        "counter": "Κουίζ 1/3",
+        "success": false,
+        "index": 10,
+        "focus": "",
+        "title": "Μικρή στάση για επισκευή"
+      }
+    },
+    {
+      "label": "New gate remains locked at first quiz",
+      "detail": null
+    },
+    {
+      "label": "Visible Return closes next unsolved gate without unlocking",
+      "detail": null
+    },
+    {
+      "label": "Main54 distinct lesson cannot borrow Main55 mastery",
+      "detail": null
+    },
+    {
+      "label": "Main54 ordinary required header retains Return",
+      "detail": {
+        "backHidden": false,
+        "backDisplay": "block",
+        "backRects": 1,
+        "continueHidden": true,
+        "continueDisplay": "none",
+        "lower": [],
+        "counter": "Κουίζ 1/3",
+        "success": false,
+        "index": 3,
+        "focus": "",
+        "title": "Μικρή στάση για επισκευή"
+      }
+    },
+    {
+      "label": "Main54 required first round mounts with new controller URL",
+      "detail": null
+    },
+    {
+      "label": "Main54 Return closes while unsolved gate remains locked",
+      "detail": null
+    },
+    {
+      "label": "Exact three served source hashes",
+      "detail": {
+        "js/namelecule-quiz-checkpoints.js": "68b207d4c95f70c4002a742dd48e6e97c9b4eac1319cf132af11feda4e47b691",
+        "mulermoc-nom-54.html": "764a8d0eca8e05a8fbe6e42ed318bcc5917afb5e691250c8234f8c2f2c48b4dd",
+        "mulermoc-nom-55.html": "10ac3efd0b5c7048b64fc33bbc55942617fc54f0529238b0467ac5e535fa531e"
+      }
+    }
+  ],
+  "measurements": [
+    {
+      "label": "completed-header-1280",
+      "viewport": 1280,
+      "pageWidth": 1280,
+      "dialog": {
+        "x": 50,
+        "y": 12,
+        "width": 1180,
+        "height": 776,
+        "top": 12,
+        "right": 1230,
+        "bottom": 788,
+        "left": 50
+      },
+      "clientWidth": 1178,
+      "scrollWidth": 1178,
+      "header": {
+        "x": 51,
+        "y": 13,
+        "width": 1178,
+        "height": 58.83332824707031,
+        "top": 13,
+        "right": 1229,
+        "bottom": 71.83332824707031,
+        "left": 51
+      },
+      "buttons": [
+        {
+          "text": "Συνεχίζω τη θεωρία",
+          "rect": {
+            "x": 786.7833251953125,
+            "y": 1064.9166259765625,
+            "width": 181.2333221435547,
+            "height": 47,
+            "top": 1064.9166259765625,
+            "right": 968.0166473388672,
+            "bottom": 1111.9166259765625,
+            "left": 786.7833251953125
+          }
+        },
+        {
+          "text": "Άλλη τριάδα για εξάσκηση",
+          "rect": {
+            "x": 978.0166625976562,
+            "y": 1064.9166259765625,
+            "width": 228.98333740234375,
+            "height": 47,
+            "top": 1064.9166259765625,
+            "right": 1207,
+            "bottom": 1111.9166259765625,
+            "left": 978.0166625976562
+          }
+        }
+      ]
+    },
+    {
+      "label": "completed-actions-1280",
+      "viewport": 1280,
+      "pageWidth": 1280,
+      "dialog": {
+        "x": 50,
+        "y": 12,
+        "width": 1180,
+        "height": 776,
+        "top": 12,
+        "right": 1230,
+        "bottom": 788,
+        "left": 50
+      },
+      "clientWidth": 1178,
+      "scrollWidth": 1178,
+      "header": {
+        "x": 51,
+        "y": 13,
+        "width": 1178,
+        "height": 58.83332824707031,
+        "top": 13,
+        "right": 1229,
+        "bottom": 71.83332824707031,
+        "left": 51
+      },
+      "buttons": [
+        {
+          "text": "Συνεχίζω τη θεωρία",
+          "rect": {
+            "x": 786.7833251953125,
+            "y": 682.3499755859375,
+            "width": 181.2333221435547,
+            "height": 47,
+            "top": 682.3499755859375,
+            "right": 968.0166473388672,
+            "bottom": 729.3499755859375,
+            "left": 786.7833251953125
+          }
+        },
+        {
+          "text": "Άλλη τριάδα για εξάσκηση",
+          "rect": {
+            "x": 978.0166625976562,
+            "y": 682.3499755859375,
+            "width": 228.98333740234375,
+            "height": 47,
+            "top": 682.3499755859375,
+            "right": 1207,
+            "bottom": 729.3499755859375,
+            "left": 978.0166625976562
+          }
+        }
+      ]
+    },
+    {
+      "label": "completed-header-390",
+      "viewport": 390,
+      "pageWidth": 390,
+      "dialog": {
+        "x": 6,
+        "y": 6,
+        "width": 378,
+        "height": 748,
+        "top": 6,
+        "right": 384,
+        "bottom": 754,
+        "left": 6
+      },
+      "clientWidth": 376,
+      "scrollWidth": 376,
+      "header": {
+        "x": 7,
+        "y": 7,
+        "width": 376,
+        "height": 54.83332824707031,
+        "top": 7,
+        "right": 383,
+        "bottom": 61.83332824707031,
+        "left": 7
+      },
+      "buttons": [
+        {
+          "text": "Συνεχίζω τη θεωρία",
+          "rect": {
+            "x": 21,
+            "y": 1443.050048828125,
+            "width": 348,
+            "height": 47,
+            "top": 1443.050048828125,
+            "right": 369,
+            "bottom": 1490.050048828125,
+            "left": 21
+          }
+        },
+        {
+          "text": "Άλλη τριάδα για εξάσκηση",
+          "rect": {
+            "x": 21,
+            "y": 1500.050048828125,
+            "width": 348,
+            "height": 47,
+            "top": 1500.050048828125,
+            "right": 369,
+            "bottom": 1547.050048828125,
+            "left": 21
+          }
+        }
+      ]
+    },
+    {
+      "label": "completed-actions-390",
+      "viewport": 390,
+      "pageWidth": 390,
+      "dialog": {
+        "x": 6,
+        "y": 6,
+        "width": 378,
+        "height": 748,
+        "top": 6,
+        "right": 384,
+        "bottom": 754,
+        "left": 6
+      },
+      "clientWidth": 376,
+      "scrollWidth": 376,
+      "header": {
+        "x": 7,
+        "y": 7,
+        "width": 376,
+        "height": 54.83332824707031,
+        "top": 7,
+        "right": 383,
+        "bottom": 61.83332824707031,
+        "left": 7
+      },
+      "buttons": [
+        {
+          "text": "Συνεχίζω τη θεωρία",
+          "rect": {
+            "x": 21,
+            "y": 599.3499755859375,
+            "width": 348,
+            "height": 47,
+            "top": 599.3499755859375,
+            "right": 369,
+            "bottom": 646.3499755859375,
+            "left": 21
+          }
+        },
+        {
+          "text": "Άλλη τριάδα για εξάσκηση",
+          "rect": {
+            "x": 21,
+            "y": 656.3499755859375,
+            "width": 348,
+            "height": 47,
+            "top": 656.3499755859375,
+            "right": 369,
+            "bottom": 703.3499755859375,
+            "left": 21
+          }
+        }
+      ]
+    },
+    {
+      "label": "completed-header-320",
+      "viewport": 320,
+      "pageWidth": 320,
+      "dialog": {
+        "x": 6,
+        "y": 6,
+        "width": 308,
+        "height": 688,
+        "top": 6,
+        "right": 314,
+        "bottom": 694,
+        "left": 6
+      },
+      "clientWidth": 306,
+      "scrollWidth": 306,
+      "header": {
+        "x": 7,
+        "y": 7,
+        "width": 306,
+        "height": 67.56666564941406,
+        "top": 7,
+        "right": 313,
+        "bottom": 74.56666564941406,
+        "left": 7
+      },
+      "buttons": [
+        {
+          "text": "Συνεχίζω τη θεωρία",
+          "rect": {
+            "x": 21,
+            "y": 1549.6666259765625,
+            "width": 278,
+            "height": 47,
+            "top": 1549.6666259765625,
+            "right": 299,
+            "bottom": 1596.6666259765625,
+            "left": 21
+          }
+        },
+        {
+          "text": "Άλλη τριάδα για εξάσκηση",
+          "rect": {
+            "x": 21,
+            "y": 1606.6666259765625,
+            "width": 278,
+            "height": 47,
+            "top": 1606.6666259765625,
+            "right": 299,
+            "bottom": 1653.6666259765625,
+            "left": 21
+          }
+        }
+      ]
+    },
+    {
+      "label": "completed-actions-320",
+      "viewport": 320,
+      "pageWidth": 320,
+      "dialog": {
+        "x": 6,
+        "y": 6,
+        "width": 308,
+        "height": 688,
+        "top": 6,
+        "right": 314,
+        "bottom": 694,
+        "left": 6
+      },
+      "clientWidth": 306,
+      "scrollWidth": 306,
+      "header": {
+        "x": 7,
+        "y": 7,
+        "width": 306,
+        "height": 67.56666564941406,
+        "top": 7,
+        "right": 313,
+        "bottom": 74.56666564941406,
+        "left": 7
+      },
+      "buttons": [
+        {
+          "text": "Συνεχίζω τη θεωρία",
+          "rect": {
+            "x": 21,
+            "y": 539.3499755859375,
+            "width": 278,
+            "height": 47,
+            "top": 539.3499755859375,
+            "right": 299,
+            "bottom": 586.3499755859375,
+            "left": 21
+          }
+        },
+        {
+          "text": "Άλλη τριάδα για εξάσκηση",
+          "rect": {
+            "x": 21,
+            "y": 596.3499755859375,
+            "width": 278,
+            "height": 47,
+            "top": 596.3499755859375,
+            "right": 299,
+            "bottom": 643.3499755859375,
+            "left": 21
+          }
+        }
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "click": "#nlQuizOpen",
+      "point": {
+        "x": 1020,
+        "y": 277,
+        "top": 255.0500030517578,
+        "bottom": 299.0500030517578,
+        "safeTop": 3,
+        "safeBottom": 797,
+        "hit": true,
+        "disabled": false,
+        "dialog": false
+      }
+    },
+    {
+      "click": ".round-next button",
+      "point": {
+        "x": 1135,
+        "y": 706,
+        "top": 682.3499755859375,
+        "bottom": 729.3499755859375,
+        "safeTop": 124.83332824707031,
+        "safeBottom": 785,
+        "hit": true,
+        "disabled": false,
+        "dialog": true
+      }
+    },
+    {
+      "click": "[id$=\"part-component-6\"]",
+      "point": {
+        "x": 724,
+        "y": 602,
+        "top": 578.63330078125,
+        "bottom": 625.63330078125,
+        "safeTop": 124.83332824707031,
+        "safeBottom": 785,
+        "hit": true,
+        "disabled": false,
+        "dialog": true
+      }
+    },
+    {
+      "click": "[id$=\"choice-2\"]",
+      "point": {
+        "x": 731,
+        "y": 727,
+        "top": 705.0999755859375,
+        "bottom": 749.0999755859375,
+        "safeTop": 124.83332824707031,
+        "safeBottom": 785,
+        "hit": true,
+        "disabled": false,
+        "dialog": true
+      }
+    },
+    {
+      "click": "[id$=\"check-button\"]",
+      "point": {
+        "x": 701,
+        "y": 724,
+        "top": 700.8499755859375,
+        "bottom": 747.8499755859375,
+        "safeTop": 124.83332824707031,
+        "safeBottom": 785,
+        "hit": true,
+        "disabled": false,
+        "dialog": true
+      }
+    },
+    {
+      "click": "#nlQuizOpen",
+      "point": {
+        "x": 134,
+        "y": 350,
+        "top": 328.316650390625,
+        "bottom": 372.316650390625,
+        "safeTop": 3,
+        "safeBottom": 697,
+        "hit": true,
+        "disabled": false,
+        "dialog": false
+      }
+    },
+    {
+      "click": "#nlQuizOpen",
+      "point": {
+        "x": 134,
+        "y": 350,
+        "top": 328.316650390625,
+        "bottom": 372.316650390625,
+        "safeTop": 3,
+        "safeBottom": 697,
+        "hit": true,
+        "disabled": false,
+        "dialog": false
+      }
+    },
+    {
+      "click": ".round-next button",
+      "point": {
+        "x": 160,
+        "y": 641,
+        "top": 617.2666625976562,
+        "bottom": 664.2666625976562,
+        "safeTop": 77.56666564941406,
+        "safeBottom": 691,
+        "hit": true,
+        "disabled": false,
+        "dialog": true
+      }
+    },
+    {
+      "click": "#nlQuizOpen",
+      "point": {
+        "x": 134,
+        "y": 350,
+        "top": 328.316650390625,
+        "bottom": 372.316650390625,
+        "safeTop": 3,
+        "safeBottom": 697,
+        "hit": true,
+        "disabled": false,
+        "dialog": false
+      }
+    },
+    {
+      "click": ".round-next .secondary",
+      "point": {
+        "x": 160,
+        "y": 620,
+        "top": 596.3499755859375,
+        "bottom": 643.3499755859375,
+        "safeTop": 77.56666564941406,
+        "safeBottom": 691,
+        "hit": true,
+        "disabled": false,
+        "dialog": true
+      }
+    },
+    {
+      "click": "#nlQuizOpen",
+      "point": {
+        "x": 134,
+        "y": 350,
+        "top": 328.316650390625,
+        "bottom": 372.316650390625,
+        "safeTop": 3,
+        "safeBottom": 697,
+        "hit": true,
+        "disabled": false,
+        "dialog": false
+      }
+    },
+    {
+      "click": "#nlQuizPracticeOpen",
+      "point": {
+        "x": 135,
+        "y": 404,
+        "top": 382.316650390625,
+        "bottom": 426.316650390625,
+        "safeTop": 3,
+        "safeBottom": 697,
+        "hit": true,
+        "disabled": false,
+        "dialog": false
+      }
+    },
+    {
+      "click": "#nlQuizPracticeContinue",
+      "point": {
+        "x": 223,
+        "y": 87,
+        "top": 54.83332824707031,
+        "bottom": 118.43333435058594,
+        "safeTop": 9,
+        "safeBottom": 691,
+        "hit": true,
+        "disabled": false,
+        "dialog": true
+      }
+    },
+    {
+      "click": "#nlQuizOpen",
+      "point": {
+        "x": 133,
+        "y": 350,
+        "top": 328.316650390625,
+        "bottom": 372.316650390625,
+        "safeTop": 3,
+        "safeBottom": 697,
+        "hit": true,
+        "disabled": false,
+        "dialog": false
+      }
+    },
+    {
+      "click": "#nlQuizBack",
+      "point": {
+        "x": 223,
+        "y": 84,
+        "top": 54.83332824707031,
+        "bottom": 113.46665954589844,
+        "safeTop": 9,
+        "safeBottom": 691,
+        "hit": true,
+        "disabled": false,
+        "dialog": true
+      }
+    },
+    {
+      "click": "#nlQuizOpen",
+      "point": {
+        "x": 133,
+        "y": 302,
+        "top": 280.316650390625,
+        "bottom": 324.316650390625,
+        "safeTop": 3,
+        "safeBottom": 757,
+        "hit": true,
+        "disabled": false,
+        "dialog": false
+      }
+    },
+    {
+      "click": "#nlQuizBack",
+      "point": {
+        "x": 288,
+        "y": 77,
+        "top": 54.83332824707031,
+        "bottom": 98.83332824707031,
+        "safeTop": 9,
+        "safeBottom": 751,
+        "hit": true,
+        "disabled": false,
+        "dialog": true
+      }
+    }
+  ],
+  "role": "Developer browser evidence, not independent review",
+  "scope": [
+    "Only3 changed served sources compared to frozen target; other app/data runtime current unchanged.",
+    "Genuine exact historical first-two successful repairs imported; final third earned now by native pointer input. No fabricated solved fields or engine bypass.",
+    "Owned isolated Firefox headless profile and ephemeral localhost only. Personal browser processes and8013 untouched."
+  ],
+  "target": {
+    "js/namelecule-quiz-checkpoints.js": "68b207d4c95f70c4002a742dd48e6e97c9b4eac1319cf132af11feda4e47b691",
+    "mulermoc-nom-54.html": "764a8d0eca8e05a8fbe6e42ed318bcc5917afb5e691250c8234f8c2f2c48b4dd",
+    "mulermoc-nom-55.html": "10ac3efd0b5c7048b64fc33bbc55942617fc54f0529238b0467ac5e535fa531e"
+  },
+  "javascriptErrors": [],
+  "answerOracle": "Pass-through mountRound wrapper records canonical current round. No result/callback/state injection. Native pointer selects part, replacement, Check.",
+  "receiptLineage": {
+    "source": "docs/checks/lesson-optional-triples-20261110/browser/after-persistence-resume-browser.json repairs[required-s4r2].receipt",
+    "sha256": "3db2db5cca319c9e2c7cada2277434bcc237f686f512a406971b93a05b486505",
+    "exactImportedStorage": {
+      "namelecule:lesson-checkpoints:v1:3fbb1bcd": "{\"version\":1,\"content\":\"{\\\"version\\\":1,\\\"title\\\":\\\"Αλκάνια\\\",\\\"author\\\":\\\"Unknown\\\",\\\"steps\\\":[{\\\"n\\\":1,\\\"nameBoxLayout\\\":1,\\\"lang\\\":\\\"gr\\\",\\\"title\\\":\\\"Τι είναι τα αλκάνια;\\\",\\\"note\\\":\\\"<div>Τα <b>αλκάνια</b> είναι άκυκλοι κορεσμένοι υδρογονάνθρακες, που περιέχουν μόνο άτομα C και H και όλοι οι δεσμοί μεταξύ ατόμων C είναι απλοί. Έχουν γενικό μοριακό τύπο <b>C<sub>ν</sub>H<sub>2ν+2</sub></b>, με ν ≥ 1.</div><div><br></div><div>Το απλούστερο είναι το <b>μεθάνιο CH<sub>4</sub></b>.&nbsp;</div><div>Εδώ βλέπεις το <b>αιθάνιο C<sub>2</sub>H<sub>6</sub></b>&nbsp;με δύο άτομα C συνδεδεμένα με απλό δεσμό.</div>\\\",\\\"noteFormat\\\":\\\"html\\\",\\\"mode2D\\\":\\\"condensed\\\",\\\"mainChainMode\\\":\\\"algorithmic\\\",\\\"chainIdx\\\":0,\\\"etherNamingMode\\\":\\\"iupac\\\",\\\"substNamingMode\\\":\\\"school\\\",\\\"nameAnalysisMode\\\":\\\"none\\\",\\\"selectedRule\\\":null,\\\"style2D\\\":{\\\"atomColors\\\":true,\\\"colorMode\\\":\\\"atom\\\",\\\"zigzag\\\":false,\\\"zoom\\\":2},\\\"styleName\\\":{\\\"box\\\":true,\\\"cross\\\":true,\\\"etherNaming\\\":\\\"iupac\\\",\\\"panelOpen\\\":true,\\\"hidden\\\":[\\\"comp5\\\",\\\"comp6\\\",\\\"comp9\\\"]},\\\"styleHighlight\\\":{\\\"bondAtoms\\\":false,\\\"numberingAtoms\\\":true,\\\"numberingBonds\\\":true},\\\"styleText\\\":{\\\"fontSizePx\\\":null,\\\"textWidthPx\\\":null,\\\"columns\\\":null,\\\"position\\\":null},\\\"audio\\\":{\\\"narrate\\\":false},\\\"menuSubset\\\":[],\\\"menuGroups\\\":[\\\"molecules\\\"],\\\"view3D\\\":{\\\"style\\\":\\\"ballnstick\\\",\\\"spin\\\":false,\\\"showH\\\":true,\\\"atomSymbols\\\":true,\\\"moveto\\\":null},\\\"show\\\":{\\\"menu\\\":false,\\\"viewerButtons\\\":false,\\\"viewerSettings\\\":false,\\\"viewers\\\":{\\\"2D\\\":true,\\\"3D\\\":false},\\\"viewerMaxHeight\\\":420,\\\"viewerBothHeight\\\":null,\\\"controls\\\":{\\\"2D\\\":false,\\\"3D\\\":false},\\\"save\\\":{\\\"2D\\\":false,\\\"3D\\\":false},\\\"naming\\\":true,\\\"nameSettings\\\":false,\\\"nameEye\\\":false,\\\"nameExpanded\\\":false,\\\"audio\\\":false,\\\"rule\\\":false,\\\"text\\\":true,\\\"nameClick\\\":false},\\\"selectedMol\\\":\\\"ethane\\\"},{\\\"n\\\":2,\\\"nameBoxLayout\\\":1,\\\"lang\\\":\\\"gr\\\",\\\"title\\\":\\\"Ένα όνομα από τρία συνθετικά\\\",\\\"note\\\":\\\"Στο <b>αιθάνιο</b>, το <b>αιθ-</b> δηλώνει τα δύο άτομα C της κύριας αλυσίδας, το <b>-αν-</b> τους απλούς δεσμούς μεταξύ ατόμων C και το <b>-ιο</b> τη χημική τάξη των υδρογονανθράκων.<br><br>Επίλεξε κάθε συνθετικό στο όνομα και παρατήρησε τι επισημαίνεται. Αν θέλεις τις άλλες συλλαβές για το ίδιο συνθετικό, άνοιξε τον αντίστοιχο <b>κανόνα </b>κάτω από την εξήγηση.\\\",\\\"noteFormat\\\":\\\"html\\\",\\\"mode2D\\\":\\\"condensed\\\",\\\"mainChainMode\\\":\\\"algorithmic\\\",\\\"chainIdx\\\":0,\\\"etherNamingMode\\\":\\\"iupac\\\",\\\"substNamingMode\\\":\\\"school\\\",\\\"nameAnalysisMode\\\":\\\"compCarbonsCount\\\",\\\"selectedRule\\\":null,\\\"style2D\\\":{\\\"atomColors\\\":true,\\\"colorMode\\\":\\\"atom\\\",\\\"zigzag\\\":false,\\\"zoom\\\":2},\\\"styleName\\\":{\\\"box\\\":true,\\\"cross\\\":false,\\\"etherNaming\\\":\\\"iupac\\\",\\\"panelOpen\\\":false,\\\"hidden\\\":[]},\\\"styleHighlight\\\":{\\\"bondAtoms\\\":false,\\\"numberingAtoms\\\":true,\\\"numberingBonds\\\":true},\\\"styleText\\\":{\\\"fontSizePx\\\":null,\\\"textWidthPx\\\":null,\\\"columns\\\":null,\\\"position\\\":null},\\\"audio\\\":{\\\"narrate\\\":false},\\\"menuSubset\\\":[],\\\"menuGroups\\\":[\\\"molecules\\\"],\\\"view3D\\\":{\\\"style\\\":\\\"ballnstick\\\",\\\"spin\\\":false,\\\"showH\\\":true,\\\"atomSymbols\\\":true,\\\"moveto\\\":null},\\\"show\\\":{\\\"menu\\\":false,\\\"viewerButtons\\\":false,\\\"viewerSettings\\\":false,\\\"viewers\\\":{\\\"2D\\\":true,\\\"3D\\\":false},\\\"viewerMaxHeight\\\":420,\\\"viewerBothHeight\\\":null,\\\"controls\\\":{\\\"2D\\\":false,\\\"3D\\\":false},\\\"save\\\":{\\\"2D\\\":false,\\\"3D\\\":false},\\\"naming\\\":true,\\\"nameSettings\\\":false,\\\"nameEye\\\":false,\\\"nameExpanded\\\":false,\\\"audio\\\":false,\\\"rule\\\":true,\\\"text\\\":true,\\\"nameClick\\\":true},\\\"selectedMol\\\":\\\"ethane\\\"},{\\\"n\\\":3,\\\"nameBoxLayout\\\":1,\\\"lang\\\":\\\"gr\\\",\\\"title\\\":\\\"Αλκάνια χωρίς διακλαδώσεις\\\",\\\"note\\\":\\\"<div>Από το μενού σύγκρινε <b>μεθάνιο, αιθάνιο, προπάνιο, βουτάνιο και πεντάνιο</b>. Οι αλυσίδες τους έχουν 1, 2, 3, 4 και 5 άτομα C, με συλλαβές πρώτου συνθετικού αντίστοιχα&nbsp;<b>μεθ- ,&nbsp; αιθ- ,&nbsp; προπ- ,&nbsp; βουτ- ,&nbsp; πεντ-</b>.&nbsp;</div><div>Τα <b>-αν-</b> και <b>-ιο</b> παραμένουν ίδια.&nbsp;</div><div>Δεν γράφουμε θέση για τους απλούς δεσμούς μεταξύ ατόμων C.</div><br><div>Δοκίμασε συνεπτυγμένο, ανεπτυγμένο και σκελετικό τύπο. Η συνδεσμολογία παραμένει ίδια σε κάθε μορφή.&nbsp;<b><br></b></div><div><b>Το μεθάνιο δεν διαθέτει σκελετικό τύπο.</b></div>\\\",\\\"noteFormat\\\":\\\"html\\\",\\\"mode2D\\\":\\\"condensed\\\",\\\"mainChainMode\\\":\\\"algorithmic\\\",\\\"chainIdx\\\":0,\\\"etherNamingMode\\\":\\\"iupac\\\",\\\"substNamingMode\\\":\\\"school\\\",\\\"nameAnalysisMode\\\":\\\"compCarbonsCount\\\",\\\"selectedRule\\\":null,\\\"style2D\\\":{\\\"atomColors\\\":true,\\\"colorMode\\\":\\\"atom\\\",\\\"zigzag\\\":false,\\\"zoom\\\":2},\\\"styleName\\\":{\\\"box\\\":true,\\\"cross\\\":false,\\\"etherNaming\\\":\\\"iupac\\\",\\\"panelOpen\\\":false,\\\"hidden\\\":[]},\\\"styleHighlight\\\":{\\\"bondAtoms\\\":false,\\\"numberingAtoms\\\":true,\\\"numberingBonds\\\":true},\\\"styleText\\\":{\\\"fontSizePx\\\":null,\\\"textWidthPx\\\":null,\\\"columns\\\":null,\\\"position\\\":null},\\\"audio\\\":{\\\"narrate\\\":false},\\\"menuSubset\\\":[\\\"methane\\\",\\\"ethane\\\",\\\"propane\\\",\\\"butane\\\",\\\"pentane\\\"],\\\"menuGroups\\\":[\\\"molecules\\\"],\\\"view3D\\\":{\\\"style\\\":\\\"ballnstick\\\",\\\"spin\\\":false,\\\"showH\\\":true,\\\"atomSymbols\\\":true,\\\"moveto\\\":null},\\\"show\\\":{\\\"menu\\\":true,\\\"viewerButtons\\\":false,\\\"viewerSettings\\\":false,\\\"viewers\\\":{\\\"2D\\\":true,\\\"3D\\\":false},\\\"viewerMaxHeight\\\":420,\\\"viewerBothHeight\\\":null,\\\"controls\\\":{\\\"2D\\\":true,\\\"3D\\\":false},\\\"save\\\":{\\\"2D\\\":false,\\\"3D\\\":false},\\\"naming\\\":true,\\\"nameSettings\\\":true,\\\"nameEye\\\":false,\\\"nameExpanded\\\":false,\\\"audio\\\":false,\\\"rule\\\":false,\\\"text\\\":true,\\\"nameClick\\\":true},\\\"selectedMol\\\":\\\"butane\\\"},{\\\"n\\\":4,\\\"nameBoxLayout\\\":1,\\\"lang\\\":\\\"gr\\\",\\\"title\\\":\\\"Συνεργείο ονομάτων\\\",\\\"note\\\":\\\"Ώρα για μια μικρή στάση στο <b>Συνεργείο ονομάτων</b>. Άνοιξε το σετ <b>\\\\\\\"Χωρίς διακλαδώσεις\\\\\\\"</b>&nbsp;και επισκεύασε τρία ονόματα.<br><br>Μπορείς να δοκιμάσεις ξανά και να επιστρέψεις στη θεωρία. Η συνέχεια προς τα διακλαδισμένα αλκάνια ανοίγει αφού ολοκληρώσεις σωστά <b>και τις τρεις επισκευές</b> και διαβάσεις τις εξηγήσεις.\\\",\\\"noteFormat\\\":\\\"html\\\",\\\"mode2D\\\":\\\"condensed\\\",\\\"mainChainMode\\\":\\\"algorithmic\\\",\\\"chainIdx\\\":0,\\\"etherNamingMode\\\":\\\"iupac\\\",\\\"substNamingMode\\\":\\\"school\\\",\\\"nameAnalysisMode\\\":\\\"none\\\",\\\"selectedRule\\\":null,\\\"style2D\\\":{\\\"atomColors\\\":true,\\\"colorMode\\\":\\\"atom\\\",\\\"zigzag\\\":false,\\\"zoom\\\":2},\\\"styleName\\\":{\\\"box\\\":true,\\\"cross\\\":false,\\\"etherNaming\\\":\\\"iupac\\\",\\\"panelOpen\\\":false,\\\"hidden\\\":[]},\\\"styleHighlight\\\":{\\\"bondAtoms\\\":false,\\\"numberingAtoms\\\":true,\\\"numberingBonds\\\":true},\\\"styleText\\\":{\\\"fontSizePx\\\":null,\\\"textWidthPx\\\":null,\\\"columns\\\":null,\\\"position\\\":null},\\\"audio\\\":{\\\"narrate\\\":false},\\\"menuSubset\\\":[],\\\"menuGroups\\\":[\\\"molecules\\\"],\\\"view3D\\\":{\\\"style\\\":\\\"ballnstick\\\",\\\"spin\\\":false,\\\"showH\\\":true,\\\"atomSymbols\\\":true,\\\"moveto\\\":null},\\\"show\\\":{\\\"menu\\\":false,\\\"viewerButtons\\\":false,\\\"viewerSettings\\\":false,\\\"viewers\\\":{\\\"2D\\\":false,\\\"3D\\\":false},\\\"viewerMaxHeight\\\":420,\\\"viewerBothHeight\\\":null,\\\"controls\\\":{\\\"2D\\\":false,\\\"3D\\\":false},\\\"save\\\":{\\\"2D\\\":false,\\\"3D\\\":false},\\\"naming\\\":false,\\\"nameSettings\\\":false,\\\"nameEye\\\":false,\\\"nameExpanded\\\":false,\\\"audio\\\":false,\\\"rule\\\":false,\\\"text\\\":true,\\\"nameClick\\\":false},\\\"selectedMol\\\":\\\"pentane\\\",\\\"checkpoint\\\":{\\\"id\\\":\\\"alkanes-unbranched-workshop-v1\\\",\\\"type\\\":\\\"generated-name-repair-set\\\",\\\"version\\\":1,\\\"round\\\":{\\\"version\\\":1,\\\"setId\\\":\\\"alkanes-unbranched\\\",\\\"difficulty\\\":\\\"basic\\\",\\\"roundCount\\\":3,\\\"generatorVersion\\\":\\\"1.0.0\\\",\\\"catalogRevision\\\":\\\"275d537b19f3ef0791c97d8d78c127f541a0579038ef1e8d65dadde611845690\\\",\\\"engineSHA256\\\":\\\"3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306\\\"},\\\"openLabel\\\":\\\"πήγαινε στο συνεργείο\\\"},\\\"titleLogo\\\":\\\"workshop\\\"},{\\\"n\\\":5,\\\"nameBoxLayout\\\":1,\\\"lang\\\":\\\"gr\\\",\\\"title\\\":\\\"Κύρια αλυσίδα και συνολικά άτομα C\\\",\\\"note\\\":\\\"Στα διακλαδισμένα αλκάνια επιλέγουμε τη <b>μεγαλύτερη συνεχή ανθρακική αλυσίδα</b>. Εδώ έχει <b>πέντε άτομα C</b> και δίνει το συνθετικό <b>πεντ-</b>. Το μόριο έχει συνολικά έξι άτομα C. Το έκτο ανήκει στη διακλάδωση.<br><br>Ακολούθησε την επισημασμένη αλυσίδα. Μπορεί να αλλάζει κατεύθυνση στο σχέδιο. Κάνε κλικ στο εικονίδιο <b>\\\\\\\"Κύρια αλυσίδα\\\\\\\"</b> για να δεις ποιες είναι οι ισοδύναμες κύριες αλυσίδες. Μετράμε τα συνεχόμενα άτομα C της και όχι όλα τα άτομα C του μορίου.\\\",\\\"noteFormat\\\":\\\"html\\\",\\\"mode2D\\\":\\\"condensed\\\",\\\"mainChainMode\\\":\\\"algorithmic\\\",\\\"chainIdx\\\":0,\\\"etherNamingMode\\\":\\\"iupac\\\",\\\"substNamingMode\\\":\\\"school\\\",\\\"nameAnalysisMode\\\":\\\"compCarbonsCount\\\",\\\"selectedRule\\\":null,\\\"style2D\\\":{\\\"atomColors\\\":true,\\\"colorMode\\\":\\\"atom\\\",\\\"zigzag\\\":false,\\\"zoom\\\":2},\\\"styleName\\\":{\\\"box\\\":true,\\\"cross\\\":false,\\\"etherNaming\\\":\\\"iupac\\\",\\\"panelOpen\\\":false,\\\"hidden\\\":[\\\"comp0\\\",\\\"comp1\\\"],\\\"disabled\\\":[\\\"comp6\\\",\\\"comp9\\\"]},\\\"styleHighlight\\\":{\\\"bondAtoms\\\":false,\\\"numberingAtoms\\\":true,\\\"numberingBonds\\\":true},\\\"styleText\\\":{\\\"fontSizePx\\\":null,\\\"textWidthPx\\\":null,\\\"columns\\\":null,\\\"position\\\":null},\\\"audio\\\":{\\\"narrate\\\":false},\\\"menuSubset\\\":[],\\\"menuGroups\\\":[\\\"molecules\\\"],\\\"view3D\\\":{\\\"style\\\":\\\"ballnstick\\\",\\\"spin\\\":false,\\\"showH\\\":true,\\\"atomSymbols\\\":true,\\\"moveto\\\":null},\\\"show\\\":{\\\"menu\\\":false,\\\"viewerButtons\\\":false,\\\"viewerSettings\\\":false,\\\"viewers\\\":{\\\"2D\\\":true,\\\"3D\\\":false},\\\"viewerMaxHeight\\\":420,\\\"viewerBothHeight\\\":null,\\\"controls\\\":{\\\"2D\\\":true,\\\"3D\\\":false},\\\"save\\\":{\\\"2D\\\":false,\\\"3D\\\":false},\\\"naming\\\":true,\\\"nameSettings\\\":false,\\\"nameEye\\\":false,\\\"nameExpanded\\\":false,\\\"audio\\\":false,\\\"rule\\\":false,\\\"text\\\":true,\\\"nameClick\\\":true,\\\"chainNavigation\\\":true},\\\"selectedMol\\\":\\\"methyl_2_pentane\\\"},{\\\"n\\\":6,\\\"nameBoxLayout\\\":1,\\\"lang\\\":\\\"gr\\\",\\\"title\\\":\\\"Θέση και όνομα μιας διακλάδωσης\\\",\\\"note\\\":\\\"Αριθμούμε από το άκρο που δίνει στη διακλάδωση τη θέση <b>2</b>, αντί για 4. Η ομάδα <b>–CH<sub>3</sub></b> είναι μεθυλομάδα, άρα γράφουμε <b>2-μεθυλοπεντάνιο</b>: θέση - διακλάδωση - όνομα κύριας αλυσίδας.<br><br>Επίλεξε το <b>2-</b> και το <b>μεθυλο</b> για να συνδέσεις θέση και ομάδα. Στο <b>\\\\\\\"Ονόματα αλκυλίων και προθέματα\\\\\\\"</b>&nbsp;θα βρεις και τις άλλες αλκυλομάδες.\\\",\\\"noteFormat\\\":\\\"html\\\",\\\"mode2D\\\":\\\"condensed\\\",\\\"mainChainMode\\\":\\\"algorithmic\\\",\\\"chainIdx\\\":0,\\\"etherNamingMode\\\":\\\"iupac\\\",\\\"substNamingMode\\\":\\\"school\\\",\\\"nameAnalysisMode\\\":\\\"compSecondSub1\\\",\\\"selectedRule\\\":null,\\\"style2D\\\":{\\\"atomColors\\\":true,\\\"colorMode\\\":\\\"atom\\\",\\\"zigzag\\\":false,\\\"zoom\\\":2},\\\"styleName\\\":{\\\"box\\\":true,\\\"cross\\\":false,\\\"etherNaming\\\":\\\"iupac\\\",\\\"panelOpen\\\":false,\\\"hidden\\\":[]},\\\"styleHighlight\\\":{\\\"bondAtoms\\\":false,\\\"numberingAtoms\\\":true,\\\"numberingBonds\\\":true},\\\"styleText\\\":{\\\"fontSizePx\\\":null,\\\"textWidthPx\\\":null,\\\"columns\\\":null,\\\"position\\\":null},\\\"audio\\\":{\\\"narrate\\\":false},\\\"menuSubset\\\":[],\\\"menuGroups\\\":[\\\"molecules\\\"],\\\"view3D\\\":{\\\"style\\\":\\\"ballnstick\\\",\\\"spin\\\":false,\\\"showH\\\":true,\\\"atomSymbols\\\":true,\\\"moveto\\\":null},\\\"show\\\":{\\\"menu\\\":false,\\\"viewerButtons\\\":false,\\\"viewerSettings\\\":false,\\\"viewers\\\":{\\\"2D\\\":true,\\\"3D\\\":false},\\\"viewerMaxHeight\\\":420,\\\"viewerBothHeight\\\":null,\\\"controls\\\":{\\\"2D\\\":true,\\\"3D\\\":false},\\\"save\\\":{\\\"2D\\\":false,\\\"3D\\\":false},\\\"naming\\\":true,\\\"nameSettings\\\":false,\\\"nameEye\\\":false,\\\"nameExpanded\\\":false,\\\"audio\\\":false,\\\"rule\\\":true,\\\"text\\\":true,\\\"nameClick\\\":true},\\\"selectedMol\\\":\\\"methyl_2_pentane\\\"},{\\\"n\\\":7,\\\"nameBoxLayout\\\":1,\\\"lang\\\":\\\"gr\\\",\\\"title\\\":\\\"Δύο ίδιες διακλαδώσεις\\\",\\\"note\\\":\\\"Η κύρια αλυσίδα έχει <b>τέσσερα άτομα C</b>, ενώ το μόριο έχει συνολικά έξι άτομα C. Οι δύο μεθυλομάδες παίρνουν τις θέσεις <b>2,3</b> από οποιοδήποτε άκρο. Οι δύο αριθμήσεις είναι ισοδύναμες.<br><br>Επειδή οι ομάδες είναι δύο και ίδιες, χρησιμοποιούμε το πρόθεμα&nbsp;<b>δι-</b>και γράφουμε&nbsp;<b>2,3-διμεθυλοβουτάνιο</b>. Βάζουμε κόμμα ανάμεσα στους αριθμούς και παύλα ανάμεσα σε αριθμό και λέξη. Επίλεξε τα μέρη του ονόματος για να δεις την αντιστοιχία.\\\",\\\"noteFormat\\\":\\\"html\\\",\\\"mode2D\\\":\\\"condensed\\\",\\\"mainChainMode\\\":\\\"algorithmic\\\",\\\"chainIdx\\\":1,\\\"etherNamingMode\\\":\\\"iupac\\\",\\\"substNamingMode\\\":\\\"school\\\",\\\"nameAnalysisMode\\\":\\\"compCarbonsCount\\\",\\\"selectedRule\\\":null,\\\"style2D\\\":{\\\"atomColors\\\":true,\\\"colorMode\\\":\\\"atom\\\",\\\"zigzag\\\":false,\\\"zoom\\\":2},\\\"styleName\\\":{\\\"box\\\":true,\\\"cross\\\":false,\\\"etherNaming\\\":\\\"iupac\\\",\\\"panelOpen\\\":false,\\\"hidden\\\":[]},\\\"styleHighlight\\\":{\\\"bondAtoms\\\":false,\\\"numberingAtoms\\\":true,\\\"numberingBonds\\\":true},\\\"styleText\\\":{\\\"fontSizePx\\\":null,\\\"textWidthPx\\\":null,\\\"columns\\\":null,\\\"position\\\":null},\\\"audio\\\":{\\\"narrate\\\":false},\\\"menuSubset\\\":[],\\\"menuGroups\\\":[\\\"molecules\\\"],\\\"view3D\\\":{\\\"style\\\":\\\"ballnstick\\\",\\\"spin\\\":false,\\\"showH\\\":true,\\\"atomSymbols\\\":true,\\\"moveto\\\":null},\\\"show\\\":{\\\"menu\\\":false,\\\"viewerButtons\\\":false,\\\"viewerSettings\\\":false,\\\"viewers\\\":{\\\"2D\\\":true,\\\"3D\\\":false},\\\"viewerMaxHeight\\\":420,\\\"viewerBothHeight\\\":null,\\\"controls\\\":{\\\"2D\\\":true,\\\"3D\\\":false},\\\"save\\\":{\\\"2D\\\":false,\\\"3D\\\":false},\\\"naming\\\":true,\\\"nameSettings\\\":false,\\\"nameEye\\\":false,\\\"nameExpanded\\\":false,\\\"audio\\\":false,\\\"rule\\\":false,\\\"text\\\":true,\\\"nameClick\\\":true,\\\"numberingDirection\\\":true},\\\"selectedMol\\\":\\\"dimethyl_2_3_butane\\\"},{\\\"n\\\":8,\\\"nameBoxLayout\\\":1,\\\"lang\\\":\\\"gr\\\",\\\"title\\\":\\\"Επιλογή κύριας αλυσίδας στο μεγάλο μόριο\\\",\\\"note\\\":\\\"Το μόριο έχει <b>δέκα άτομα C</b>, αλλά η μεγαλύτερη συνεχής αλυσίδα έχει <b>έξι άτομα C</b> και δίνει το συνθετικό&nbsp;<b>εξ-</b>. Τα υπόλοιπα τέσσερα άτομα C βρίσκονται στις διακλαδώσεις.<br><br>Ανάμεσα σε ισομήκεις αλυσίδες προτιμούμε εκείνη με τις <b>περισσότερες διακλαδώσεις</b>. Η επιλεγμένη αλυσίδα έχει τρεις. Ακολούθησε τα έξι αριθμημένα άτομα C της.\\\",\\\"noteFormat\\\":\\\"html\\\",\\\"mode2D\\\":\\\"condensed\\\",\\\"mainChainMode\\\":\\\"algorithmic\\\",\\\"chainIdx\\\":1,\\\"etherNamingMode\\\":\\\"iupac\\\",\\\"substNamingMode\\\":\\\"school\\\",\\\"nameAnalysisMode\\\":\\\"compCarbonsCount\\\",\\\"selectedRule\\\":null,\\\"style2D\\\":{\\\"atomColors\\\":true,\\\"colorMode\\\":\\\"atom\\\",\\\"zigzag\\\":false,\\\"zoom\\\":2},\\\"styleName\\\":{\\\"box\\\":true,\\\"cross\\\":false,\\\"etherNaming\\\":\\\"iupac\\\",\\\"panelOpen\\\":false,\\\"hidden\\\":[\\\"comp0\\\",\\\"comp1\\\",\\\"comp2\\\",\\\"comp3\\\"]},\\\"styleHighlight\\\":{\\\"bondAtoms\\\":false,\\\"numberingAtoms\\\":true,\\\"numberingBonds\\\":true},\\\"styleText\\\":{\\\"fontSizePx\\\":null,\\\"textWidthPx\\\":null,\\\"columns\\\":null,\\\"position\\\":null},\\\"audio\\\":{\\\"narrate\\\":false},\\\"menuSubset\\\":[],\\\"menuGroups\\\":[\\\"molecules\\\"],\\\"view3D\\\":{\\\"style\\\":\\\"ballnstick\\\",\\\"spin\\\":false,\\\"showH\\\":true,\\\"atomSymbols\\\":true,\\\"moveto\\\":null},\\\"show\\\":{\\\"menu\\\":false,\\\"viewerButtons\\\":false,\\\"viewerSettings\\\":false,\\\"viewers\\\":{\\\"2D\\\":true,\\\"3D\\\":false},\\\"viewerMaxHeight\\\":420,\\\"viewerBothHeight\\\":null,\\\"controls\\\":{\\\"2D\\\":true,\\\"3D\\\":false},\\\"save\\\":{\\\"2D\\\":false,\\\"3D\\\":false},\\\"naming\\\":true,\\\"nameSettings\\\":false,\\\"nameEye\\\":false,\\\"nameExpanded\\\":false,\\\"audio\\\":false,\\\"rule\\\":false,\\\"text\\\":true,\\\"nameClick\\\":true},\\\"selectedMol\\\":\\\"ethyl_3_dimethyl_2_5_hexane\\\"},{\\\"n\\\":9,\\\"nameBoxLayout\\\":1,\\\"lang\\\":\\\"gr\\\",\\\"title\\\":\\\"Αρίθμηση με βάση την πρώτη διαφορετική θέση \\\",\\\"note\\\":\\\"Η μία φορά αρίθμησης δίνει θέσεις <b>2,3,5</b> και η αντίθετη <b>2,4,5</b>. Συγκρίνουμε τους αριθμούς με τη σειρά. Ο πρώτος είναι ίδιος, αλλά μετά το <b>3 είναι μικρότερο από το 4</b>.\\\\n\\\\nΚρατάμε επομένως τις θέσεις <b>2,3,5</b> και την ίδια αρίθμηση για όλες τις ομάδες. Ο κανόνας είναι ο <b>μικρότερος αριθμός στο πρώτο σημείο διαφοράς</b>. Το άθροισμα των θέσεων δεν καθορίζει την επιλογή.\\\",\\\"noteFormat\\\":\\\"text\\\",\\\"mode2D\\\":\\\"condensed\\\",\\\"mainChainMode\\\":\\\"algorithmic\\\",\\\"chainIdx\\\":1,\\\"etherNamingMode\\\":\\\"iupac\\\",\\\"substNamingMode\\\":\\\"school\\\",\\\"nameAnalysisMode\\\":\\\"compCarbonsCount\\\",\\\"selectedRule\\\":null,\\\"style2D\\\":{\\\"atomColors\\\":true,\\\"colorMode\\\":\\\"atom\\\",\\\"zigzag\\\":false,\\\"zoom\\\":2},\\\"styleName\\\":{\\\"box\\\":true,\\\"cross\\\":false,\\\"etherNaming\\\":\\\"iupac\\\",\\\"panelOpen\\\":false,\\\"hidden\\\":[\\\"comp0\\\",\\\"comp1\\\",\\\"comp2\\\",\\\"comp3\\\"]},\\\"styleHighlight\\\":{\\\"bondAtoms\\\":false,\\\"numberingAtoms\\\":true,\\\"numberingBonds\\\":true},\\\"styleText\\\":{\\\"fontSizePx\\\":null,\\\"textWidthPx\\\":null,\\\"columns\\\":null,\\\"position\\\":null},\\\"audio\\\":{\\\"narrate\\\":false},\\\"menuSubset\\\":[],\\\"menuGroups\\\":[\\\"molecules\\\"],\\\"view3D\\\":{\\\"style\\\":\\\"ballnstick\\\",\\\"spin\\\":false,\\\"showH\\\":true,\\\"atomSymbols\\\":true,\\\"moveto\\\":null},\\\"show\\\":{\\\"menu\\\":false,\\\"viewerButtons\\\":false,\\\"viewerSettings\\\":false,\\\"viewers\\\":{\\\"2D\\\":true,\\\"3D\\\":false},\\\"viewerMaxHeight\\\":420,\\\"viewerBothHeight\\\":null,\\\"controls\\\":{\\\"2D\\\":true,\\\"3D\\\":false},\\\"save\\\":{\\\"2D\\\":false,\\\"3D\\\":false},\\\"naming\\\":true,\\\"nameSettings\\\":false,\\\"nameEye\\\":false,\\\"nameExpanded\\\":false,\\\"audio\\\":false,\\\"rule\\\":false,\\\"text\\\":true,\\\"nameClick\\\":true},\\\"selectedMol\\\":\\\"ethyl_3_dimethyl_2_5_hexane\\\"},{\\\"n\\\":10,\\\"nameBoxLayout\\\":1,\\\"lang\\\":\\\"gr\\\",\\\"title\\\":\\\"Αλκύλια, αλφαβητική σειρά και πλήρες όνομα\\\",\\\"note\\\":\\\"Στη θέση <b>3</b> υπάρχει αιθυλομάδα <b>–CH<sub>2</sub>–CH<sub>3</sub></b>&nbsp;ενώ στις <b>2 </b>και<b> 5</b> δύο μεθυλομάδες. Γράφουμε το&nbsp;<b>αιθυλο-</b> πριν από το&nbsp;<b>μεθυλο-</b> αλφαβητικά (το α βρίσκεται πριν από το μ στο αλφάβητο), χωρίς να υπολογίζουμε το <b>δι-&nbsp;</b>, οπότε το όνομα είναι&nbsp;<b>3-αιθυλο-2,5-διμεθυλοεξάνιο</b>.<br><br>Επίλεξε τις θέσεις και τις ομάδες στο όνομα. Αν χρειαστεί, συμβουλέψου τον πίνακα <b>\\\\\\\"Ονόματα αλκυλίων και προθέματα\\\\\\\"</b>. Τα κόμματα χωρίζουν αριθμούς και οι παύλες αριθμούς από λέξεις.\\\",\\\"noteFormat\\\":\\\"html\\\",\\\"mode2D\\\":\\\"condensed\\\",\\\"mainChainMode\\\":\\\"algorithmic\\\",\\\"chainIdx\\\":0,\\\"etherNamingMode\\\":\\\"iupac\\\",\\\"substNamingMode\\\":\\\"school\\\",\\\"nameAnalysisMode\\\":\\\"compSecondSub1\\\",\\\"selectedRule\\\":null,\\\"style2D\\\":{\\\"atomColors\\\":true,\\\"colorMode\\\":\\\"atom\\\",\\\"zigzag\\\":false,\\\"zoom\\\":2},\\\"styleName\\\":{\\\"box\\\":true,\\\"cross\\\":false,\\\"etherNaming\\\":\\\"iupac\\\",\\\"panelOpen\\\":false,\\\"hidden\\\":[]},\\\"styleHighlight\\\":{\\\"bondAtoms\\\":false,\\\"numberingAtoms\\\":true,\\\"numberingBonds\\\":true},\\\"styleText\\\":{\\\"fontSizePx\\\":null,\\\"textWidthPx\\\":null,\\\"columns\\\":null,\\\"position\\\":null},\\\"audio\\\":{\\\"narrate\\\":false},\\\"menuSubset\\\":[],\\\"menuGroups\\\":[\\\"molecules\\\"],\\\"view3D\\\":{\\\"style\\\":\\\"ballnstick\\\",\\\"spin\\\":false,\\\"showH\\\":true,\\\"atomSymbols\\\":true,\\\"moveto\\\":null},\\\"show\\\":{\\\"menu\\\":false,\\\"viewerButtons\\\":false,\\\"viewerSettings\\\":false,\\\"viewers\\\":{\\\"2D\\\":true,\\\"3D\\\":false},\\\"viewerMaxHeight\\\":420,\\\"viewerBothHeight\\\":null,\\\"controls\\\":{\\\"2D\\\":true,\\\"3D\\\":false},\\\"save\\\":{\\\"2D\\\":false,\\\"3D\\\":false},\\\"naming\\\":true,\\\"nameSettings\\\":false,\\\"nameEye\\\":false,\\\"nameExpanded\\\":false,\\\"audio\\\":false,\\\"rule\\\":true,\\\"text\\\":true,\\\"nameClick\\\":true},\\\"selectedMol\\\":\\\"ethyl_3_dimethyl_2_5_hexane\\\"},{\\\"n\\\":11,\\\"nameBoxLayout\\\":1,\\\"lang\\\":\\\"gr\\\",\\\"title\\\":\\\"Στο Συνεργείο: Με διακλαδώσεις\\\",\\\"note\\\":\\\"Επίστρεψε στο <b>Συνεργείο ονομάτων</b> για το σετ <b>«Με διακλαδώσεις»</b>. Σε κάθε κουίζ εντόπισε το λάθος συνθετικό ή τη λανθασμένη σειρά και επισκεύασε το όνομα.<br><br>Διάβασε την εξήγηση κάθε σωστής επισκευής. Μπορείς να επαναλάβεις τις προσπάθειες. Αφού ολοκληρώσεις σωστά <b>και τα τρία κουίζ</b>, ανοίγει η τελική εξερεύνηση όλων των αλκανίων.\\\",\\\"noteFormat\\\":\\\"html\\\",\\\"mode2D\\\":\\\"condensed\\\",\\\"mainChainMode\\\":\\\"algorithmic\\\",\\\"chainIdx\\\":0,\\\"etherNamingMode\\\":\\\"iupac\\\",\\\"substNamingMode\\\":\\\"school\\\",\\\"nameAnalysisMode\\\":\\\"none\\\",\\\"selectedRule\\\":null,\\\"style2D\\\":{\\\"atomColors\\\":true,\\\"colorMode\\\":\\\"atom\\\",\\\"zigzag\\\":false,\\\"zoom\\\":2},\\\"styleName\\\":{\\\"box\\\":true,\\\"cross\\\":false,\\\"etherNaming\\\":\\\"iupac\\\",\\\"panelOpen\\\":false,\\\"hidden\\\":[]},\\\"styleHighlight\\\":{\\\"bondAtoms\\\":false,\\\"numberingAtoms\\\":true,\\\"numberingBonds\\\":true},\\\"styleText\\\":{\\\"fontSizePx\\\":null,\\\"textWidthPx\\\":null,\\\"columns\\\":null,\\\"position\\\":null},\\\"audio\\\":{\\\"narrate\\\":false},\\\"menuSubset\\\":[],\\\"menuGroups\\\":[\\\"molecules\\\"],\\\"view3D\\\":{\\\"style\\\":\\\"ballnstick\\\",\\\"spin\\\":false,\\\"showH\\\":true,\\\"atomSymbols\\\":true,\\\"moveto\\\":null},\\\"show\\\":{\\\"menu\\\":false,\\\"viewerButtons\\\":false,\\\"viewerSettings\\\":false,\\\"viewers\\\":{\\\"2D\\\":false,\\\"3D\\\":false},\\\"viewerMaxHeight\\\":420,\\\"viewerBothHeight\\\":null,\\\"controls\\\":{\\\"2D\\\":false,\\\"3D\\\":false},\\\"save\\\":{\\\"2D\\\":false,\\\"3D\\\":false},\\\"naming\\\":false,\\\"nameSettings\\\":false,\\\"nameEye\\\":false,\\\"nameExpanded\\\":false,\\\"audio\\\":false,\\\"rule\\\":false,\\\"text\\\":true,\\\"nameClick\\\":false},\\\"selectedMol\\\":\\\"ethyl_3_dimethyl_2_5_hexane\\\",\\\"checkpoint\\\":{\\\"id\\\":\\\"alkanes-branched-workshop-v1\\\",\\\"type\\\":\\\"generated-name-repair-set\\\",\\\"version\\\":1,\\\"round\\\":{\\\"version\\\":1,\\\"setId\\\":\\\"alkanes-branched\\\",\\\"difficulty\\\":\\\"basic\\\",\\\"roundCount\\\":3,\\\"generatorVersion\\\":\\\"1.0.0\\\",\\\"catalogRevision\\\":\\\"275d537b19f3ef0791c97d8d78c127f541a0579038ef1e8d65dadde611845690\\\",\\\"engineSHA256\\\":\\\"3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306\\\"},\\\"openLabel\\\":\\\"πήγαινε στο συνεργείο\\\"},\\\"titleLogo\\\":\\\"workshop\\\"},{\\\"n\\\":12,\\\"nameBoxLayout\\\":1,\\\"lang\\\":\\\"gr\\\",\\\"title\\\":\\\"Όλα τα αλκάνια σε 2D και 3D\\\",\\\"note\\\":\\\"Από το μενού διάλεξε οποιοδήποτε από τα <b>οκτώ αλκάνια</b>. Σύγκρινε συνεπτυγμένο, ανεπτυγμένο και σκελετικό τύπο με το 3D μοντέλο και επίλεξε τα συνθετικά του ονόματος για τις αντίστοιχες επισημάνσεις. Το μεθάνιο διαθέτει συνεπτυγμένο και ανεπτυγμένο τύπο, χωρίς σκελετικό.\\\\n\\\\nΧρησιμοποίησε τα εργαλεία 2D και 3D για μεγέθυνση και παρατήρηση. Περίστρεψε το 3D μοντέλο με το ποντίκι. Η συνδεσμολογία παραμένει ίδια, ενώ ο 2D τύπος δεν αποδίδει όλες τις γωνίες του μορίου στον χώρο.\\\",\\\"noteFormat\\\":\\\"text\\\",\\\"mode2D\\\":\\\"condensed\\\",\\\"mainChainMode\\\":\\\"algorithmic\\\",\\\"chainIdx\\\":0,\\\"etherNamingMode\\\":\\\"iupac\\\",\\\"substNamingMode\\\":\\\"school\\\",\\\"nameAnalysisMode\\\":\\\"none\\\",\\\"selectedRule\\\":null,\\\"style2D\\\":{\\\"atomColors\\\":true,\\\"colorMode\\\":\\\"atom\\\",\\\"zigzag\\\":false,\\\"zoom\\\":2},\\\"styleName\\\":{\\\"box\\\":true,\\\"cross\\\":false,\\\"etherNaming\\\":\\\"iupac\\\",\\\"panelOpen\\\":false,\\\"hidden\\\":[]},\\\"styleHighlight\\\":{\\\"bondAtoms\\\":false,\\\"numberingAtoms\\\":true,\\\"numberingBonds\\\":true},\\\"styleText\\\":{\\\"fontSizePx\\\":null,\\\"textWidthPx\\\":null,\\\"columns\\\":null,\\\"position\\\":null},\\\"audio\\\":{\\\"narrate\\\":false},\\\"menuSubset\\\":[\\\"methane\\\",\\\"ethane\\\",\\\"propane\\\",\\\"butane\\\",\\\"pentane\\\",\\\"methyl_2_pentane\\\",\\\"dimethyl_2_3_butane\\\",\\\"ethyl_3_dimethyl_2_5_hexane\\\"],\\\"menuGroups\\\":[\\\"molecules\\\"],\\\"view3D\\\":{\\\"style\\\":\\\"ballnstick\\\",\\\"spin\\\":false,\\\"showH\\\":true,\\\"atomSymbols\\\":true,\\\"moveto\\\":null},\\\"show\\\":{\\\"menu\\\":true,\\\"viewerButtons\\\":false,\\\"viewerSettings\\\":false,\\\"viewers\\\":{\\\"2D\\\":true,\\\"3D\\\":true},\\\"viewerMaxHeight\\\":420,\\\"viewerBothHeight\\\":840,\\\"controls\\\":{\\\"2D\\\":true,\\\"3D\\\":true},\\\"save\\\":{\\\"2D\\\":false,\\\"3D\\\":false},\\\"naming\\\":true,\\\"nameSettings\\\":true,\\\"nameEye\\\":false,\\\"nameExpanded\\\":false,\\\"audio\\\":false,\\\"rule\\\":false,\\\"text\\\":true,\\\"nameClick\\\":true},\\\"selectedMol\\\":\\\"ethyl_3_dimethyl_2_5_hexane\\\"}]}\",\"states\":{\"3\":{\"version\":1,\"seed\":\"44\",\"currentRound\":1,\"states\":[{\"selectedPartId\":\"component-5\",\"selectedValue\":\"μεθ\",\"order\":[],\"choiceOrder\":[2,1,0],\"attempts\":2,\"selectionMisses\":1,\"solved\":true,\"submitted\":true},{\"selectedPartId\":\"component-5\",\"selectedValue\":\"πεντ\",\"order\":[],\"choiceOrder\":[0,2,1],\"attempts\":1,\"selectionMisses\":0,\"solved\":true,\"submitted\":true},{\"selectedPartId\":null,\"selectedValue\":null,\"order\":[],\"choiceOrder\":[1,2,0],\"attempts\":0,\"selectionMisses\":0,\"solved\":false,\"submitted\":false}],\"solved\":false}},\"practices\":{}}"
+    },
+    "claim": "Byte-exact genuine historical first-two prefix; no new first/second success claimed. Third success earned in this run."
+  },
+  "finalCanonicalRound": {
+    "id": "engine-propane-bond-type-43fa0111",
+    "guided": false,
+    "title": "Επισκευή ονόματος",
+    "objective": "Έλεγξε το είδος των δεσμών ανάμεσα στα άτομα άνθρακα.",
+    "moleculeId": "propane",
+    "asset": "assets/name-repair/propane.svg",
+    "diagramAlt": "Ανεπτυγμένος συντακτικός τύπος αλκανίου. Τα άτομα και οι δεσμοί φαίνονται στο διάγραμμα.",
+    "correctName": "προπάνιο",
+    "successText": "Οι δεσμοί ανάμεσα στα 3 άτομα άνθρακα είναι απλοί. Γι’ αυτό χρησιμοποιούμε το συνθετικό «άν». Σωστό όνομα: προπάνιο.",
+    "fault": {
+      "kind": "bond-type",
+      "signature": "propane:bond-type:6:έν"
+    },
+    "kind": "replace",
+    "parts": [
+      {
+        "id": "component-5",
+        "text": "προπ",
+        "label": "Μήκος κύριας αλυσίδας"
+      },
+      {
+        "id": "component-6",
+        "text": "έν",
+        "label": "Είδος δεσμών"
+      },
+      {
+        "id": "component-9",
+        "text": "ιο",
+        "label": "Χημική τάξη"
+      }
+    ],
+    "targetPartId": "component-6",
+    "correctValue": "άν",
+    "choices": [
+      {
+        "value": "έν",
+        "label": "έν"
+      },
+      {
+        "value": "ίν",
+        "label": "ίν"
+      },
+      {
+        "value": "άν",
+        "label": "άν"
+      }
+    ],
+    "feedback": {
+      "wrongPart": "Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
+      "unchanged": "Διάλεξε μια αντικατάσταση πριν ελέγξεις την επισκευή.",
+      "incorrect": "Η επισκευή δεν συμφωνεί ακόμη με τη δομή. Δοκίμασε ξανά."
+    }
+  },
+  "newEarnedReceipt": {
+    "namelecule:lesson-checkpoints:v1:3fbb1bcd": "{\"version\":1,\"content\":\"{\\\"version\\\":1,\\\"title\\\":\\\"Αλκάνια\\\",\\\"author\\\":\\\"Unknown\\\",\\\"steps\\\":[{\\\"n\\\":1,\\\"nameBoxLayout\\\":1,\\\"lang\\\":\\\"gr\\\",\\\"title\\\":\\\"Τι είναι τα αλκάνια;\\\",\\\"note\\\":\\\"<div>Τα <b>αλκάνια</b> είναι άκυκλοι κορεσμένοι υδρογονάνθρακες, που περιέχουν μόνο άτομα C και H και όλοι οι δεσμοί μεταξύ ατόμων C είναι απλοί. Έχουν γενικό μοριακό τύπο <b>C<sub>ν</sub>H<sub>2ν+2</sub></b>, με ν ≥ 1.</div><div><br></div><div>Το απλούστερο είναι το <b>μεθάνιο CH<sub>4</sub></b>.&nbsp;</div><div>Εδώ βλέπεις το <b>αιθάνιο C<sub>2</sub>H<sub>6</sub></b>&nbsp;με δύο άτομα C συνδεδεμένα με απλό δεσμό.</div>\\\",\\\"noteFormat\\\":\\\"html\\\",\\\"mode2D\\\":\\\"condensed\\\",\\\"mainChainMode\\\":\\\"algorithmic\\\",\\\"chainIdx\\\":0,\\\"etherNamingMode\\\":\\\"iupac\\\",\\\"substNamingMode\\\":\\\"school\\\",\\\"nameAnalysisMode\\\":\\\"none\\\",\\\"selectedRule\\\":null,\\\"style2D\\\":{\\\"atomColors\\\":true,\\\"colorMode\\\":\\\"atom\\\",\\\"zigzag\\\":false,\\\"zoom\\\":2},\\\"styleName\\\":{\\\"box\\\":true,\\\"cross\\\":true,\\\"etherNaming\\\":\\\"iupac\\\",\\\"panelOpen\\\":true,\\\"hidden\\\":[\\\"comp5\\\",\\\"comp6\\\",\\\"comp9\\\"]},\\\"styleHighlight\\\":{\\\"bondAtoms\\\":false,\\\"numberingAtoms\\\":true,\\\"numberingBonds\\\":true},\\\"styleText\\\":{\\\"fontSizePx\\\":null,\\\"textWidthPx\\\":null,\\\"columns\\\":null,\\\"position\\\":null},\\\"audio\\\":{\\\"narrate\\\":false},\\\"menuSubset\\\":[],\\\"menuGroups\\\":[\\\"molecules\\\"],\\\"view3D\\\":{\\\"style\\\":\\\"ballnstick\\\",\\\"spin\\\":false,\\\"showH\\\":true,\\\"atomSymbols\\\":true,\\\"moveto\\\":null},\\\"show\\\":{\\\"menu\\\":false,\\\"viewerButtons\\\":false,\\\"viewerSettings\\\":false,\\\"viewers\\\":{\\\"2D\\\":true,\\\"3D\\\":false},\\\"viewerMaxHeight\\\":420,\\\"viewerBothHeight\\\":null,\\\"controls\\\":{\\\"2D\\\":false,\\\"3D\\\":false},\\\"save\\\":{\\\"2D\\\":false,\\\"3D\\\":false},\\\"naming\\\":true,\\\"nameSettings\\\":false,\\\"nameEye\\\":false,\\\"nameExpanded\\\":false,\\\"audio\\\":false,\\\"rule\\\":false,\\\"text\\\":true,\\\"nameClick\\\":false},\\\"selectedMol\\\":\\\"ethane\\\"},{\\\"n\\\":2,\\\"nameBoxLayout\\\":1,\\\"lang\\\":\\\"gr\\\",\\\"title\\\":\\\"Ένα όνομα από τρία συνθετικά\\\",\\\"note\\\":\\\"Στο <b>αιθάνιο</b>, το <b>αιθ-</b> δηλώνει τα δύο άτομα C της κύριας αλυσίδας, το <b>-αν-</b> τους απλούς δεσμούς μεταξύ ατόμων C και το <b>-ιο</b> τη χημική τάξη των υδρογονανθράκων.<br><br>Επίλεξε κάθε συνθετικό στο όνομα και παρατήρησε τι επισημαίνεται. Αν θέλεις τις άλλες συλλαβές για το ίδιο συνθετικό, άνοιξε τον αντίστοιχο <b>κανόνα </b>κάτω από την εξήγηση.\\\",\\\"noteFormat\\\":\\\"html\\\",\\\"mode2D\\\":\\\"condensed\\\",\\\"mainChainMode\\\":\\\"algorithmic\\\",\\\"chainIdx\\\":0,\\\"etherNamingMode\\\":\\\"iupac\\\",\\\"substNamingMode\\\":\\\"school\\\",\\\"nameAnalysisMode\\\":\\\"compCarbonsCount\\\",\\\"selectedRule\\\":null,\\\"style2D\\\":{\\\"atomColors\\\":true,\\\"colorMode\\\":\\\"atom\\\",\\\"zigzag\\\":false,\\\"zoom\\\":2},\\\"styleName\\\":{\\\"box\\\":true,\\\"cross\\\":false,\\\"etherNaming\\\":\\\"iupac\\\",\\\"panelOpen\\\":false,\\\"hidden\\\":[]},\\\"styleHighlight\\\":{\\\"bondAtoms\\\":false,\\\"numberingAtoms\\\":true,\\\"numberingBonds\\\":true},\\\"styleText\\\":{\\\"fontSizePx\\\":null,\\\"textWidthPx\\\":null,\\\"columns\\\":null,\\\"position\\\":null},\\\"audio\\\":{\\\"narrate\\\":false},\\\"menuSubset\\\":[],\\\"menuGroups\\\":[\\\"molecules\\\"],\\\"view3D\\\":{\\\"style\\\":\\\"ballnstick\\\",\\\"spin\\\":false,\\\"showH\\\":true,\\\"atomSymbols\\\":true,\\\"moveto\\\":null},\\\"show\\\":{\\\"menu\\\":false,\\\"viewerButtons\\\":false,\\\"viewerSettings\\\":false,\\\"viewers\\\":{\\\"2D\\\":true,\\\"3D\\\":false},\\\"viewerMaxHeight\\\":420,\\\"viewerBothHeight\\\":null,\\\"controls\\\":{\\\"2D\\\":false,\\\"3D\\\":false},\\\"save\\\":{\\\"2D\\\":false,\\\"3D\\\":false},\\\"naming\\\":true,\\\"nameSettings\\\":false,\\\"nameEye\\\":false,\\\"nameExpanded\\\":false,\\\"audio\\\":false,\\\"rule\\\":true,\\\"text\\\":true,\\\"nameClick\\\":true},\\\"selectedMol\\\":\\\"ethane\\\"},{\\\"n\\\":3,\\\"nameBoxLayout\\\":1,\\\"lang\\\":\\\"gr\\\",\\\"title\\\":\\\"Αλκάνια χωρίς διακλαδώσεις\\\",\\\"note\\\":\\\"<div>Από το μενού σύγκρινε <b>μεθάνιο, αιθάνιο, προπάνιο, βουτάνιο και πεντάνιο</b>. Οι αλυσίδες τους έχουν 1, 2, 3, 4 και 5 άτομα C, με συλλαβές πρώτου συνθετικού αντίστοιχα&nbsp;<b>μεθ- ,&nbsp; αιθ- ,&nbsp; προπ- ,&nbsp; βουτ- ,&nbsp; πεντ-</b>.&nbsp;</div><div>Τα <b>-αν-</b> και <b>-ιο</b> παραμένουν ίδια.&nbsp;</div><div>Δεν γράφουμε θέση για τους απλούς δεσμούς μεταξύ ατόμων C.</div><br><div>Δοκίμασε συνεπτυγμένο, ανεπτυγμένο και σκελετικό τύπο. Η συνδεσμολογία παραμένει ίδια σε κάθε μορφή.&nbsp;<b><br></b></div><div><b>Το μεθάνιο δεν διαθέτει σκελετικό τύπο.</b></div>\\\",\\\"noteFormat\\\":\\\"html\\\",\\\"mode2D\\\":\\\"condensed\\\",\\\"mainChainMode\\\":\\\"algorithmic\\\",\\\"chainIdx\\\":0,\\\"etherNamingMode\\\":\\\"iupac\\\",\\\"substNamingMode\\\":\\\"school\\\",\\\"nameAnalysisMode\\\":\\\"compCarbonsCount\\\",\\\"selectedRule\\\":null,\\\"style2D\\\":{\\\"atomColors\\\":true,\\\"colorMode\\\":\\\"atom\\\",\\\"zigzag\\\":false,\\\"zoom\\\":2},\\\"styleName\\\":{\\\"box\\\":true,\\\"cross\\\":false,\\\"etherNaming\\\":\\\"iupac\\\",\\\"panelOpen\\\":false,\\\"hidden\\\":[]},\\\"styleHighlight\\\":{\\\"bondAtoms\\\":false,\\\"numberingAtoms\\\":true,\\\"numberingBonds\\\":true},\\\"styleText\\\":{\\\"fontSizePx\\\":null,\\\"textWidthPx\\\":null,\\\"columns\\\":null,\\\"position\\\":null},\\\"audio\\\":{\\\"narrate\\\":false},\\\"menuSubset\\\":[\\\"methane\\\",\\\"ethane\\\",\\\"propane\\\",\\\"butane\\\",\\\"pentane\\\"],\\\"menuGroups\\\":[\\\"molecules\\\"],\\\"view3D\\\":{\\\"style\\\":\\\"ballnstick\\\",\\\"spin\\\":false,\\\"showH\\\":true,\\\"atomSymbols\\\":true,\\\"moveto\\\":null},\\\"show\\\":{\\\"menu\\\":true,\\\"viewerButtons\\\":false,\\\"viewerSettings\\\":false,\\\"viewers\\\":{\\\"2D\\\":true,\\\"3D\\\":false},\\\"viewerMaxHeight\\\":420,\\\"viewerBothHeight\\\":null,\\\"controls\\\":{\\\"2D\\\":true,\\\"3D\\\":false},\\\"save\\\":{\\\"2D\\\":false,\\\"3D\\\":false},\\\"naming\\\":true,\\\"nameSettings\\\":true,\\\"nameEye\\\":false,\\\"nameExpanded\\\":false,\\\"audio\\\":false,\\\"rule\\\":false,\\\"text\\\":true,\\\"nameClick\\\":true},\\\"selectedMol\\\":\\\"butane\\\"},{\\\"n\\\":4,\\\"nameBoxLayout\\\":1,\\\"lang\\\":\\\"gr\\\",\\\"title\\\":\\\"Συνεργείο ονομάτων\\\",\\\"note\\\":\\\"Ώρα για μια μικρή στάση στο <b>Συνεργείο ονομάτων</b>. Άνοιξε το σετ <b>\\\\\\\"Χωρίς διακλαδώσεις\\\\\\\"</b>&nbsp;και επισκεύασε τρία ονόματα.<br><br>Μπορείς να δοκιμάσεις ξανά και να επιστρέψεις στη θεωρία. Η συνέχεια προς τα διακλαδισμένα αλκάνια ανοίγει αφού ολοκληρώσεις σωστά <b>και τις τρεις επισκευές</b> και διαβάσεις τις εξηγήσεις.\\\",\\\"noteFormat\\\":\\\"html\\\",\\\"mode2D\\\":\\\"condensed\\\",\\\"mainChainMode\\\":\\\"algorithmic\\\",\\\"chainIdx\\\":0,\\\"etherNamingMode\\\":\\\"iupac\\\",\\\"substNamingMode\\\":\\\"school\\\",\\\"nameAnalysisMode\\\":\\\"none\\\",\\\"selectedRule\\\":null,\\\"style2D\\\":{\\\"atomColors\\\":true,\\\"colorMode\\\":\\\"atom\\\",\\\"zigzag\\\":false,\\\"zoom\\\":2},\\\"styleName\\\":{\\\"box\\\":true,\\\"cross\\\":false,\\\"etherNaming\\\":\\\"iupac\\\",\\\"panelOpen\\\":false,\\\"hidden\\\":[]},\\\"styleHighlight\\\":{\\\"bondAtoms\\\":false,\\\"numberingAtoms\\\":true,\\\"numberingBonds\\\":true},\\\"styleText\\\":{\\\"fontSizePx\\\":null,\\\"textWidthPx\\\":null,\\\"columns\\\":null,\\\"position\\\":null},\\\"audio\\\":{\\\"narrate\\\":false},\\\"menuSubset\\\":[],\\\"menuGroups\\\":[\\\"molecules\\\"],\\\"view3D\\\":{\\\"style\\\":\\\"ballnstick\\\",\\\"spin\\\":false,\\\"showH\\\":true,\\\"atomSymbols\\\":true,\\\"moveto\\\":null},\\\"show\\\":{\\\"menu\\\":false,\\\"viewerButtons\\\":false,\\\"viewerSettings\\\":false,\\\"viewers\\\":{\\\"2D\\\":false,\\\"3D\\\":false},\\\"viewerMaxHeight\\\":420,\\\"viewerBothHeight\\\":null,\\\"controls\\\":{\\\"2D\\\":false,\\\"3D\\\":false},\\\"save\\\":{\\\"2D\\\":false,\\\"3D\\\":false},\\\"naming\\\":false,\\\"nameSettings\\\":false,\\\"nameEye\\\":false,\\\"nameExpanded\\\":false,\\\"audio\\\":false,\\\"rule\\\":false,\\\"text\\\":true,\\\"nameClick\\\":false},\\\"selectedMol\\\":\\\"pentane\\\",\\\"checkpoint\\\":{\\\"id\\\":\\\"alkanes-unbranched-workshop-v1\\\",\\\"type\\\":\\\"generated-name-repair-set\\\",\\\"version\\\":1,\\\"round\\\":{\\\"version\\\":1,\\\"setId\\\":\\\"alkanes-unbranched\\\",\\\"difficulty\\\":\\\"basic\\\",\\\"roundCount\\\":3,\\\"generatorVersion\\\":\\\"1.0.0\\\",\\\"catalogRevision\\\":\\\"275d537b19f3ef0791c97d8d78c127f541a0579038ef1e8d65dadde611845690\\\",\\\"engineSHA256\\\":\\\"3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306\\\"},\\\"openLabel\\\":\\\"πήγαινε στο συνεργείο\\\"},\\\"titleLogo\\\":\\\"workshop\\\"},{\\\"n\\\":5,\\\"nameBoxLayout\\\":1,\\\"lang\\\":\\\"gr\\\",\\\"title\\\":\\\"Κύρια αλυσίδα και συνολικά άτομα C\\\",\\\"note\\\":\\\"Στα διακλαδισμένα αλκάνια επιλέγουμε τη <b>μεγαλύτερη συνεχή ανθρακική αλυσίδα</b>. Εδώ έχει <b>πέντε άτομα C</b> και δίνει το συνθετικό <b>πεντ-</b>. Το μόριο έχει συνολικά έξι άτομα C. Το έκτο ανήκει στη διακλάδωση.<br><br>Ακολούθησε την επισημασμένη αλυσίδα. Μπορεί να αλλάζει κατεύθυνση στο σχέδιο. Κάνε κλικ στο εικονίδιο <b>\\\\\\\"Κύρια αλυσίδα\\\\\\\"</b> για να δεις ποιες είναι οι ισοδύναμες κύριες αλυσίδες. Μετράμε τα συνεχόμενα άτομα C της και όχι όλα τα άτομα C του μορίου.\\\",\\\"noteFormat\\\":\\\"html\\\",\\\"mode2D\\\":\\\"condensed\\\",\\\"mainChainMode\\\":\\\"algorithmic\\\",\\\"chainIdx\\\":0,\\\"etherNamingMode\\\":\\\"iupac\\\",\\\"substNamingMode\\\":\\\"school\\\",\\\"nameAnalysisMode\\\":\\\"compCarbonsCount\\\",\\\"selectedRule\\\":null,\\\"style2D\\\":{\\\"atomColors\\\":true,\\\"colorMode\\\":\\\"atom\\\",\\\"zigzag\\\":false,\\\"zoom\\\":2},\\\"styleName\\\":{\\\"box\\\":true,\\\"cross\\\":false,\\\"etherNaming\\\":\\\"iupac\\\",\\\"panelOpen\\\":false,\\\"hidden\\\":[\\\"comp0\\\",\\\"comp1\\\"],\\\"disabled\\\":[\\\"comp6\\\",\\\"comp9\\\"]},\\\"styleHighlight\\\":{\\\"bondAtoms\\\":false,\\\"numberingAtoms\\\":true,\\\"numberingBonds\\\":true},\\\"styleText\\\":{\\\"fontSizePx\\\":null,\\\"textWidthPx\\\":null,\\\"columns\\\":null,\\\"position\\\":null},\\\"audio\\\":{\\\"narrate\\\":false},\\\"menuSubset\\\":[],\\\"menuGroups\\\":[\\\"molecules\\\"],\\\"view3D\\\":{\\\"style\\\":\\\"ballnstick\\\",\\\"spin\\\":false,\\\"showH\\\":true,\\\"atomSymbols\\\":true,\\\"moveto\\\":null},\\\"show\\\":{\\\"menu\\\":false,\\\"viewerButtons\\\":false,\\\"viewerSettings\\\":false,\\\"viewers\\\":{\\\"2D\\\":true,\\\"3D\\\":false},\\\"viewerMaxHeight\\\":420,\\\"viewerBothHeight\\\":null,\\\"controls\\\":{\\\"2D\\\":true,\\\"3D\\\":false},\\\"save\\\":{\\\"2D\\\":false,\\\"3D\\\":false},\\\"naming\\\":true,\\\"nameSettings\\\":false,\\\"nameEye\\\":false,\\\"nameExpanded\\\":false,\\\"audio\\\":false,\\\"rule\\\":false,\\\"text\\\":true,\\\"nameClick\\\":true,\\\"chainNavigation\\\":true},\\\"selectedMol\\\":\\\"methyl_2_pentane\\\"},{\\\"n\\\":6,\\\"nameBoxLayout\\\":1,\\\"lang\\\":\\\"gr\\\",\\\"title\\\":\\\"Θέση και όνομα μιας διακλάδωσης\\\",\\\"note\\\":\\\"Αριθμούμε από το άκρο που δίνει στη διακλάδωση τη θέση <b>2</b>, αντί για 4. Η ομάδα <b>–CH<sub>3</sub></b> είναι μεθυλομάδα, άρα γράφουμε <b>2-μεθυλοπεντάνιο</b>: θέση - διακλάδωση - όνομα κύριας αλυσίδας.<br><br>Επίλεξε το <b>2-</b> και το <b>μεθυλο</b> για να συνδέσεις θέση και ομάδα. Στο <b>\\\\\\\"Ονόματα αλκυλίων και προθέματα\\\\\\\"</b>&nbsp;θα βρεις και τις άλλες αλκυλομάδες.\\\",\\\"noteFormat\\\":\\\"html\\\",\\\"mode2D\\\":\\\"condensed\\\",\\\"mainChainMode\\\":\\\"algorithmic\\\",\\\"chainIdx\\\":0,\\\"etherNamingMode\\\":\\\"iupac\\\",\\\"substNamingMode\\\":\\\"school\\\",\\\"nameAnalysisMode\\\":\\\"compSecondSub1\\\",\\\"selectedRule\\\":null,\\\"style2D\\\":{\\\"atomColors\\\":true,\\\"colorMode\\\":\\\"atom\\\",\\\"zigzag\\\":false,\\\"zoom\\\":2},\\\"styleName\\\":{\\\"box\\\":true,\\\"cross\\\":false,\\\"etherNaming\\\":\\\"iupac\\\",\\\"panelOpen\\\":false,\\\"hidden\\\":[]},\\\"styleHighlight\\\":{\\\"bondAtoms\\\":false,\\\"numberingAtoms\\\":true,\\\"numberingBonds\\\":true},\\\"styleText\\\":{\\\"fontSizePx\\\":null,\\\"textWidthPx\\\":null,\\\"columns\\\":null,\\\"position\\\":null},\\\"audio\\\":{\\\"narrate\\\":false},\\\"menuSubset\\\":[],\\\"menuGroups\\\":[\\\"molecules\\\"],\\\"view3D\\\":{\\\"style\\\":\\\"ballnstick\\\",\\\"spin\\\":false,\\\"showH\\\":true,\\\"atomSymbols\\\":true,\\\"moveto\\\":null},\\\"show\\\":{\\\"menu\\\":false,\\\"viewerButtons\\\":false,\\\"viewerSettings\\\":false,\\\"viewers\\\":{\\\"2D\\\":true,\\\"3D\\\":false},\\\"viewerMaxHeight\\\":420,\\\"viewerBothHeight\\\":null,\\\"controls\\\":{\\\"2D\\\":true,\\\"3D\\\":false},\\\"save\\\":{\\\"2D\\\":false,\\\"3D\\\":false},\\\"naming\\\":true,\\\"nameSettings\\\":false,\\\"nameEye\\\":false,\\\"nameExpanded\\\":false,\\\"audio\\\":false,\\\"rule\\\":true,\\\"text\\\":true,\\\"nameClick\\\":true},\\\"selectedMol\\\":\\\"methyl_2_pentane\\\"},{\\\"n\\\":7,\\\"nameBoxLayout\\\":1,\\\"lang\\\":\\\"gr\\\",\\\"title\\\":\\\"Δύο ίδιες διακλαδώσεις\\\",\\\"note\\\":\\\"Η κύρια αλυσίδα έχει <b>τέσσερα άτομα C</b>, ενώ το μόριο έχει συνολικά έξι άτομα C. Οι δύο μεθυλομάδες παίρνουν τις θέσεις <b>2,3</b> από οποιοδήποτε άκρο. Οι δύο αριθμήσεις είναι ισοδύναμες.<br><br>Επειδή οι ομάδες είναι δύο και ίδιες, χρησιμοποιούμε το πρόθεμα&nbsp;<b>δι-</b>και γράφουμε&nbsp;<b>2,3-διμεθυλοβουτάνιο</b>. Βάζουμε κόμμα ανάμεσα στους αριθμούς και παύλα ανάμεσα σε αριθμό και λέξη. Επίλεξε τα μέρη του ονόματος για να δεις την αντιστοιχία.\\\",\\\"noteFormat\\\":\\\"html\\\",\\\"mode2D\\\":\\\"condensed\\\",\\\"mainChainMode\\\":\\\"algorithmic\\\",\\\"chainIdx\\\":1,\\\"etherNamingMode\\\":\\\"iupac\\\",\\\"substNamingMode\\\":\\\"school\\\",\\\"nameAnalysisMode\\\":\\\"compCarbonsCount\\\",\\\"selectedRule\\\":null,\\\"style2D\\\":{\\\"atomColors\\\":true,\\\"colorMode\\\":\\\"atom\\\",\\\"zigzag\\\":false,\\\"zoom\\\":2},\\\"styleName\\\":{\\\"box\\\":true,\\\"cross\\\":false,\\\"etherNaming\\\":\\\"iupac\\\",\\\"panelOpen\\\":false,\\\"hidden\\\":[]},\\\"styleHighlight\\\":{\\\"bondAtoms\\\":false,\\\"numberingAtoms\\\":true,\\\"numberingBonds\\\":true},\\\"styleText\\\":{\\\"fontSizePx\\\":null,\\\"textWidthPx\\\":null,\\\"columns\\\":null,\\\"position\\\":null},\\\"audio\\\":{\\\"narrate\\\":false},\\\"menuSubset\\\":[],\\\"menuGroups\\\":[\\\"molecules\\\"],\\\"view3D\\\":{\\\"style\\\":\\\"ballnstick\\\",\\\"spin\\\":false,\\\"showH\\\":true,\\\"atomSymbols\\\":true,\\\"moveto\\\":null},\\\"show\\\":{\\\"menu\\\":false,\\\"viewerButtons\\\":false,\\\"viewerSettings\\\":false,\\\"viewers\\\":{\\\"2D\\\":true,\\\"3D\\\":false},\\\"viewerMaxHeight\\\":420,\\\"viewerBothHeight\\\":null,\\\"controls\\\":{\\\"2D\\\":true,\\\"3D\\\":false},\\\"save\\\":{\\\"2D\\\":false,\\\"3D\\\":false},\\\"naming\\\":true,\\\"nameSettings\\\":false,\\\"nameEye\\\":false,\\\"nameExpanded\\\":false,\\\"audio\\\":false,\\\"rule\\\":false,\\\"text\\\":true,\\\"nameClick\\\":true,\\\"numberingDirection\\\":true},\\\"selectedMol\\\":\\\"dimethyl_2_3_butane\\\"},{\\\"n\\\":8,\\\"nameBoxLayout\\\":1,\\\"lang\\\":\\\"gr\\\",\\\"title\\\":\\\"Επιλογή κύριας αλυσίδας στο μεγάλο μόριο\\\",\\\"note\\\":\\\"Το μόριο έχει <b>δέκα άτομα C</b>, αλλά η μεγαλύτερη συνεχής αλυσίδα έχει <b>έξι άτομα C</b> και δίνει το συνθετικό&nbsp;<b>εξ-</b>. Τα υπόλοιπα τέσσερα άτομα C βρίσκονται στις διακλαδώσεις.<br><br>Ανάμεσα σε ισομήκεις αλυσίδες προτιμούμε εκείνη με τις <b>περισσότερες διακλαδώσεις</b>. Η επιλεγμένη αλυσίδα έχει τρεις. Ακολούθησε τα έξι αριθμημένα άτομα C της.\\\",\\\"noteFormat\\\":\\\"html\\\",\\\"mode2D\\\":\\\"condensed\\\",\\\"mainChainMode\\\":\\\"algorithmic\\\",\\\"chainIdx\\\":1,\\\"etherNamingMode\\\":\\\"iupac\\\",\\\"substNamingMode\\\":\\\"school\\\",\\\"nameAnalysisMode\\\":\\\"compCarbonsCount\\\",\\\"selectedRule\\\":null,\\\"style2D\\\":{\\\"atomColors\\\":true,\\\"colorMode\\\":\\\"atom\\\",\\\"zigzag\\\":false,\\\"zoom\\\":2},\\\"styleName\\\":{\\\"box\\\":true,\\\"cross\\\":false,\\\"etherNaming\\\":\\\"iupac\\\",\\\"panelOpen\\\":false,\\\"hidden\\\":[\\\"comp0\\\",\\\"comp1\\\",\\\"comp2\\\",\\\"comp3\\\"]},\\\"styleHighlight\\\":{\\\"bondAtoms\\\":false,\\\"numberingAtoms\\\":true,\\\"numberingBonds\\\":true},\\\"styleText\\\":{\\\"fontSizePx\\\":null,\\\"textWidthPx\\\":null,\\\"columns\\\":null,\\\"position\\\":null},\\\"audio\\\":{\\\"narrate\\\":false},\\\"menuSubset\\\":[],\\\"menuGroups\\\":[\\\"molecules\\\"],\\\"view3D\\\":{\\\"style\\\":\\\"ballnstick\\\",\\\"spin\\\":false,\\\"showH\\\":true,\\\"atomSymbols\\\":true,\\\"moveto\\\":null},\\\"show\\\":{\\\"menu\\\":false,\\\"viewerButtons\\\":false,\\\"viewerSettings\\\":false,\\\"viewers\\\":{\\\"2D\\\":true,\\\"3D\\\":false},\\\"viewerMaxHeight\\\":420,\\\"viewerBothHeight\\\":null,\\\"controls\\\":{\\\"2D\\\":true,\\\"3D\\\":false},\\\"save\\\":{\\\"2D\\\":false,\\\"3D\\\":false},\\\"naming\\\":true,\\\"nameSettings\\\":false,\\\"nameEye\\\":false,\\\"nameExpanded\\\":false,\\\"audio\\\":false,\\\"rule\\\":false,\\\"text\\\":true,\\\"nameClick\\\":true},\\\"selectedMol\\\":\\\"ethyl_3_dimethyl_2_5_hexane\\\"},{\\\"n\\\":9,\\\"nameBoxLayout\\\":1,\\\"lang\\\":\\\"gr\\\",\\\"title\\\":\\\"Αρίθμηση με βάση την πρώτη διαφορετική θέση \\\",\\\"note\\\":\\\"Η μία φορά αρίθμησης δίνει θέσεις <b>2,3,5</b> και η αντίθετη <b>2,4,5</b>. Συγκρίνουμε τους αριθμούς με τη σειρά. Ο πρώτος είναι ίδιος, αλλά μετά το <b>3 είναι μικρότερο από το 4</b>.\\\\n\\\\nΚρατάμε επομένως τις θέσεις <b>2,3,5</b> και την ίδια αρίθμηση για όλες τις ομάδες. Ο κανόνας είναι ο <b>μικρότερος αριθμός στο πρώτο σημείο διαφοράς</b>. Το άθροισμα των θέσεων δεν καθορίζει την επιλογή.\\\",\\\"noteFormat\\\":\\\"text\\\",\\\"mode2D\\\":\\\"condensed\\\",\\\"mainChainMode\\\":\\\"algorithmic\\\",\\\"chainIdx\\\":1,\\\"etherNamingMode\\\":\\\"iupac\\\",\\\"substNamingMode\\\":\\\"school\\\",\\\"nameAnalysisMode\\\":\\\"compCarbonsCount\\\",\\\"selectedRule\\\":null,\\\"style2D\\\":{\\\"atomColors\\\":true,\\\"colorMode\\\":\\\"atom\\\",\\\"zigzag\\\":false,\\\"zoom\\\":2},\\\"styleName\\\":{\\\"box\\\":true,\\\"cross\\\":false,\\\"etherNaming\\\":\\\"iupac\\\",\\\"panelOpen\\\":false,\\\"hidden\\\":[\\\"comp0\\\",\\\"comp1\\\",\\\"comp2\\\",\\\"comp3\\\"]},\\\"styleHighlight\\\":{\\\"bondAtoms\\\":false,\\\"numberingAtoms\\\":true,\\\"numberingBonds\\\":true},\\\"styleText\\\":{\\\"fontSizePx\\\":null,\\\"textWidthPx\\\":null,\\\"columns\\\":null,\\\"position\\\":null},\\\"audio\\\":{\\\"narrate\\\":false},\\\"menuSubset\\\":[],\\\"menuGroups\\\":[\\\"molecules\\\"],\\\"view3D\\\":{\\\"style\\\":\\\"ballnstick\\\",\\\"spin\\\":false,\\\"showH\\\":true,\\\"atomSymbols\\\":true,\\\"moveto\\\":null},\\\"show\\\":{\\\"menu\\\":false,\\\"viewerButtons\\\":false,\\\"viewerSettings\\\":false,\\\"viewers\\\":{\\\"2D\\\":true,\\\"3D\\\":false},\\\"viewerMaxHeight\\\":420,\\\"viewerBothHeight\\\":null,\\\"controls\\\":{\\\"2D\\\":true,\\\"3D\\\":false},\\\"save\\\":{\\\"2D\\\":false,\\\"3D\\\":false},\\\"naming\\\":true,\\\"nameSettings\\\":false,\\\"nameEye\\\":false,\\\"nameExpanded\\\":false,\\\"audio\\\":false,\\\"rule\\\":false,\\\"text\\\":true,\\\"nameClick\\\":true},\\\"selectedMol\\\":\\\"ethyl_3_dimethyl_2_5_hexane\\\"},{\\\"n\\\":10,\\\"nameBoxLayout\\\":1,\\\"lang\\\":\\\"gr\\\",\\\"title\\\":\\\"Αλκύλια, αλφαβητική σειρά και πλήρες όνομα\\\",\\\"note\\\":\\\"Στη θέση <b>3</b> υπάρχει αιθυλομάδα <b>–CH<sub>2</sub>–CH<sub>3</sub></b>&nbsp;ενώ στις <b>2 </b>και<b> 5</b> δύο μεθυλομάδες. Γράφουμε το&nbsp;<b>αιθυλο-</b> πριν από το&nbsp;<b>μεθυλο-</b> αλφαβητικά (το α βρίσκεται πριν από το μ στο αλφάβητο), χωρίς να υπολογίζουμε το <b>δι-&nbsp;</b>, οπότε το όνομα είναι&nbsp;<b>3-αιθυλο-2,5-διμεθυλοεξάνιο</b>.<br><br>Επίλεξε τις θέσεις και τις ομάδες στο όνομα. Αν χρειαστεί, συμβουλέψου τον πίνακα <b>\\\\\\\"Ονόματα αλκυλίων και προθέματα\\\\\\\"</b>. Τα κόμματα χωρίζουν αριθμούς και οι παύλες αριθμούς από λέξεις.\\\",\\\"noteFormat\\\":\\\"html\\\",\\\"mode2D\\\":\\\"condensed\\\",\\\"mainChainMode\\\":\\\"algorithmic\\\",\\\"chainIdx\\\":0,\\\"etherNamingMode\\\":\\\"iupac\\\",\\\"substNamingMode\\\":\\\"school\\\",\\\"nameAnalysisMode\\\":\\\"compSecondSub1\\\",\\\"selectedRule\\\":null,\\\"style2D\\\":{\\\"atomColors\\\":true,\\\"colorMode\\\":\\\"atom\\\",\\\"zigzag\\\":false,\\\"zoom\\\":2},\\\"styleName\\\":{\\\"box\\\":true,\\\"cross\\\":false,\\\"etherNaming\\\":\\\"iupac\\\",\\\"panelOpen\\\":false,\\\"hidden\\\":[]},\\\"styleHighlight\\\":{\\\"bondAtoms\\\":false,\\\"numberingAtoms\\\":true,\\\"numberingBonds\\\":true},\\\"styleText\\\":{\\\"fontSizePx\\\":null,\\\"textWidthPx\\\":null,\\\"columns\\\":null,\\\"position\\\":null},\\\"audio\\\":{\\\"narrate\\\":false},\\\"menuSubset\\\":[],\\\"menuGroups\\\":[\\\"molecules\\\"],\\\"view3D\\\":{\\\"style\\\":\\\"ballnstick\\\",\\\"spin\\\":false,\\\"showH\\\":true,\\\"atomSymbols\\\":true,\\\"moveto\\\":null},\\\"show\\\":{\\\"menu\\\":false,\\\"viewerButtons\\\":false,\\\"viewerSettings\\\":false,\\\"viewers\\\":{\\\"2D\\\":true,\\\"3D\\\":false},\\\"viewerMaxHeight\\\":420,\\\"viewerBothHeight\\\":null,\\\"controls\\\":{\\\"2D\\\":true,\\\"3D\\\":false},\\\"save\\\":{\\\"2D\\\":false,\\\"3D\\\":false},\\\"naming\\\":true,\\\"nameSettings\\\":false,\\\"nameEye\\\":false,\\\"nameExpanded\\\":false,\\\"audio\\\":false,\\\"rule\\\":true,\\\"text\\\":true,\\\"nameClick\\\":true},\\\"selectedMol\\\":\\\"ethyl_3_dimethyl_2_5_hexane\\\"},{\\\"n\\\":11,\\\"nameBoxLayout\\\":1,\\\"lang\\\":\\\"gr\\\",\\\"title\\\":\\\"Στο Συνεργείο: Με διακλαδώσεις\\\",\\\"note\\\":\\\"Επίστρεψε στο <b>Συνεργείο ονομάτων</b> για το σετ <b>«Με διακλαδώσεις»</b>. Σε κάθε κουίζ εντόπισε το λάθος συνθετικό ή τη λανθασμένη σειρά και επισκεύασε το όνομα.<br><br>Διάβασε την εξήγηση κάθε σωστής επισκευής. Μπορείς να επαναλάβεις τις προσπάθειες. Αφού ολοκληρώσεις σωστά <b>και τα τρία κουίζ</b>, ανοίγει η τελική εξερεύνηση όλων των αλκανίων.\\\",\\\"noteFormat\\\":\\\"html\\\",\\\"mode2D\\\":\\\"condensed\\\",\\\"mainChainMode\\\":\\\"algorithmic\\\",\\\"chainIdx\\\":0,\\\"etherNamingMode\\\":\\\"iupac\\\",\\\"substNamingMode\\\":\\\"school\\\",\\\"nameAnalysisMode\\\":\\\"none\\\",\\\"selectedRule\\\":null,\\\"style2D\\\":{\\\"atomColors\\\":true,\\\"colorMode\\\":\\\"atom\\\",\\\"zigzag\\\":false,\\\"zoom\\\":2},\\\"styleName\\\":{\\\"box\\\":true,\\\"cross\\\":false,\\\"etherNaming\\\":\\\"iupac\\\",\\\"panelOpen\\\":false,\\\"hidden\\\":[]},\\\"styleHighlight\\\":{\\\"bondAtoms\\\":false,\\\"numberingAtoms\\\":true,\\\"numberingBonds\\\":true},\\\"styleText\\\":{\\\"fontSizePx\\\":null,\\\"textWidthPx\\\":null,\\\"columns\\\":null,\\\"position\\\":null},\\\"audio\\\":{\\\"narrate\\\":false},\\\"menuSubset\\\":[],\\\"menuGroups\\\":[\\\"molecules\\\"],\\\"view3D\\\":{\\\"style\\\":\\\"ballnstick\\\",\\\"spin\\\":false,\\\"showH\\\":true,\\\"atomSymbols\\\":true,\\\"moveto\\\":null},\\\"show\\\":{\\\"menu\\\":false,\\\"viewerButtons\\\":false,\\\"viewerSettings\\\":false,\\\"viewers\\\":{\\\"2D\\\":false,\\\"3D\\\":false},\\\"viewerMaxHeight\\\":420,\\\"viewerBothHeight\\\":null,\\\"controls\\\":{\\\"2D\\\":false,\\\"3D\\\":false},\\\"save\\\":{\\\"2D\\\":false,\\\"3D\\\":false},\\\"naming\\\":false,\\\"nameSettings\\\":false,\\\"nameEye\\\":false,\\\"nameExpanded\\\":false,\\\"audio\\\":false,\\\"rule\\\":false,\\\"text\\\":true,\\\"nameClick\\\":false},\\\"selectedMol\\\":\\\"ethyl_3_dimethyl_2_5_hexane\\\",\\\"checkpoint\\\":{\\\"id\\\":\\\"alkanes-branched-workshop-v1\\\",\\\"type\\\":\\\"generated-name-repair-set\\\",\\\"version\\\":1,\\\"round\\\":{\\\"version\\\":1,\\\"setId\\\":\\\"alkanes-branched\\\",\\\"difficulty\\\":\\\"basic\\\",\\\"roundCount\\\":3,\\\"generatorVersion\\\":\\\"1.0.0\\\",\\\"catalogRevision\\\":\\\"275d537b19f3ef0791c97d8d78c127f541a0579038ef1e8d65dadde611845690\\\",\\\"engineSHA256\\\":\\\"3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306\\\"},\\\"openLabel\\\":\\\"πήγαινε στο συνεργείο\\\"},\\\"titleLogo\\\":\\\"workshop\\\"},{\\\"n\\\":12,\\\"nameBoxLayout\\\":1,\\\"lang\\\":\\\"gr\\\",\\\"title\\\":\\\"Όλα τα αλκάνια σε 2D και 3D\\\",\\\"note\\\":\\\"Από το μενού διάλεξε οποιοδήποτε από τα <b>οκτώ αλκάνια</b>. Σύγκρινε συνεπτυγμένο, ανεπτυγμένο και σκελετικό τύπο με το 3D μοντέλο και επίλεξε τα συνθετικά του ονόματος για τις αντίστοιχες επισημάνσεις. Το μεθάνιο διαθέτει συνεπτυγμένο και ανεπτυγμένο τύπο, χωρίς σκελετικό.\\\\n\\\\nΧρησιμοποίησε τα εργαλεία 2D και 3D για μεγέθυνση και παρατήρηση. Περίστρεψε το 3D μοντέλο με το ποντίκι. Η συνδεσμολογία παραμένει ίδια, ενώ ο 2D τύπος δεν αποδίδει όλες τις γωνίες του μορίου στον χώρο.\\\",\\\"noteFormat\\\":\\\"text\\\",\\\"mode2D\\\":\\\"condensed\\\",\\\"mainChainMode\\\":\\\"algorithmic\\\",\\\"chainIdx\\\":0,\\\"etherNamingMode\\\":\\\"iupac\\\",\\\"substNamingMode\\\":\\\"school\\\",\\\"nameAnalysisMode\\\":\\\"none\\\",\\\"selectedRule\\\":null,\\\"style2D\\\":{\\\"atomColors\\\":true,\\\"colorMode\\\":\\\"atom\\\",\\\"zigzag\\\":false,\\\"zoom\\\":2},\\\"styleName\\\":{\\\"box\\\":true,\\\"cross\\\":false,\\\"etherNaming\\\":\\\"iupac\\\",\\\"panelOpen\\\":false,\\\"hidden\\\":[]},\\\"styleHighlight\\\":{\\\"bondAtoms\\\":false,\\\"numberingAtoms\\\":true,\\\"numberingBonds\\\":true},\\\"styleText\\\":{\\\"fontSizePx\\\":null,\\\"textWidthPx\\\":null,\\\"columns\\\":null,\\\"position\\\":null},\\\"audio\\\":{\\\"narrate\\\":false},\\\"menuSubset\\\":[\\\"methane\\\",\\\"ethane\\\",\\\"propane\\\",\\\"butane\\\",\\\"pentane\\\",\\\"methyl_2_pentane\\\",\\\"dimethyl_2_3_butane\\\",\\\"ethyl_3_dimethyl_2_5_hexane\\\"],\\\"menuGroups\\\":[\\\"molecules\\\"],\\\"view3D\\\":{\\\"style\\\":\\\"ballnstick\\\",\\\"spin\\\":false,\\\"showH\\\":true,\\\"atomSymbols\\\":true,\\\"moveto\\\":null},\\\"show\\\":{\\\"menu\\\":true,\\\"viewerButtons\\\":false,\\\"viewerSettings\\\":false,\\\"viewers\\\":{\\\"2D\\\":true,\\\"3D\\\":true},\\\"viewerMaxHeight\\\":420,\\\"viewerBothHeight\\\":840,\\\"controls\\\":{\\\"2D\\\":true,\\\"3D\\\":true},\\\"save\\\":{\\\"2D\\\":false,\\\"3D\\\":false},\\\"naming\\\":true,\\\"nameSettings\\\":true,\\\"nameEye\\\":false,\\\"nameExpanded\\\":false,\\\"audio\\\":false,\\\"rule\\\":false,\\\"text\\\":true,\\\"nameClick\\\":true},\\\"selectedMol\\\":\\\"ethyl_3_dimethyl_2_5_hexane\\\"}]}\",\"states\":{\"3\":{\"version\":1,\"seed\":\"44\",\"currentRound\":2,\"states\":[{\"selectedPartId\":\"component-5\",\"selectedValue\":\"μεθ\",\"order\":[],\"choiceOrder\":[2,1,0],\"attempts\":2,\"selectionMisses\":1,\"solved\":true,\"submitted\":true},{\"selectedPartId\":\"component-5\",\"selectedValue\":\"πεντ\",\"order\":[],\"choiceOrder\":[0,2,1],\"attempts\":1,\"selectionMisses\":0,\"solved\":true,\"submitted\":true},{\"selectedPartId\":\"component-6\",\"selectedValue\":\"άν\",\"order\":[],\"choiceOrder\":[1,2,0],\"attempts\":1,\"selectionMisses\":0,\"solved\":true,\"submitted\":true}],\"solved\":true}},\"practices\":{}}"
+  },
+  "reopenFocus": {
+    "id": "",
+    "tag": "H1",
+    "hidden": false,
+    "rects": 1,
+    "inside": true
+  },
+  "reopenAfterNativeTabFocus": {
+    "id": "",
+    "tag": "BUTTON",
+    "hidden": false,
+    "rects": 1,
+    "inside": true
+  },
+  "refreshFocus": {
+    "id": "",
+    "tag": "H1",
+    "hidden": false,
+    "rects": 1,
+    "inside": true
+  },
+  "refreshAfterNativeTabFocus": {
+    "id": "",
+    "tag": "BUTTON",
+    "hidden": false,
+    "rects": 1,
+    "inside": true
+  },
+  "limitations": [
+    "Bounded final-third replay from byte-exact genuine first-two receipt; no uninterrupted full lesson replay.",
+    "Loading/error/malformed progress covered by primary Developer unit harness, not injected into this native run.",
+    "Main54 bounded unsolved mount/Return/cache smoke only; completed triple live verification performed on Main55.",
+    "Headless Firefox local verification only; no production/personal browser interaction, no guarantee of uninterrupted conference presentation."
+  ]
+}

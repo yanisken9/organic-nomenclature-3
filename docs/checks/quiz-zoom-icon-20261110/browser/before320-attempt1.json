@@ -1,0 +1,27 @@
+{
+  "stage": "before320",
+  "completed": false,
+  "checks": [
+    {
+      "label": "exact baseline4 served hashes",
+      "evidence": null
+    }
+  ],
+  "geometry": [],
+  "nativeActions": [],
+  "target": {
+    "js/namelecule-generated-repair-checkpoint.js": "c8f29708b0694f7c10bd4e6e08e07f7eb58969b71e5fe15d9eeea72b356d061d",
+    "js/namelecule-game-repair.js": "b793ae9aa3af5d4e210468d5bc6e2ca6f73d80f64e722e1e6f22bea17980c056",
+    "css/namelecule-repair-round.css": "5fda8d1648b6aaaa07cc5a6e407e4be0db792d7c52b2ddf4c70820abaecef74c",
+    "mulermoc-nom-55.html": "d90d97782df8b99a68de3922fc32659536c7cf8682854cc44069f91af8c2a803"
+  },
+  "notes": [
+    "Developer-supplied browser evidence; no independent review claim.",
+    "Real Main55 lesson at step4 with deterministic unsolved seed4. Later direct step11 access, if used, is explicitly a navigation fixture, not proof of gate completion.",
+    "New owned isolated headless Firefox; no personal browser or GUI.",
+    "Before exact four-file overlay; runtime otherwise current."
+  ],
+  "scope": "Reviewer-requested one-width baseline supplement; direct checkpoint target is navigation only, no earned claim.",
+  "javascriptErrors": [],
+  "failure": "Traceback (most recent call last):\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/quiz-zoom-icon-20261110/browser/check-before320.py\", line 42, in <module>\n    viewport(320,700);navigate('mulermoc-nom-55.html?scenario=scenarios/alkanes-user-3.scenario.json&present=1#step=4');ready();wait('fScenarioPresent().index===3');seed(3,'4');click('#nlQuizOpen');wait('!!document.querySelector(\"#nlQuizDialog[open] .diagram-image.is-ready\")');top();geometry('s4r1-entry',320);OUT['completed']=True;save()\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/quiz-zoom-icon-20261110/browser/check-before320.py\", line 24, in click\n    ev('document.querySelector('+json.dumps(sel)+').scrollIntoView({block:\"center\",behavior:\"instant\"});true');pause();p=read('(()=>{let n=document.querySelector('+json.dumps(sel)+'),r=n.getBoundingClientRect(),x=Math.round(r.x+r.width/2),y=Math.round(r.y+r.height/2),h=document.elementFromPoint(x,y);return{x,y,hit:n===h||n.contains(h),disabled:!!n.disabled}})()');assert p['hit']and not p['disabled'],(sel,p);pointer(p);OUT['nativeActions'].append({'click':sel,'point':p});pause()\nAssertionError: ('#nlQuizOpen', {'x': 160, 'y': 350, 'hit': False, 'disabled': False})\n"
+}

@@ -1,0 +1,22 @@
+{
+  "role": "Developer evidence; not independent review",
+  "sourceFreeze": "../../target-r2.json",
+  "checks": {
+    "renderer": 189,
+    "adapter": 130
+  },
+  "totalChecks": 319,
+  "passed": true,
+  "beforeComparison": "Actual R1 renderer30 default DOM snapshots and R1 adapter6 default receipt/action snapshots match current. Full original navigation/image-failure reproduction belongs to separately owned native browser-r2 evidence.",
+  "retainedHarnessFailures": {
+    "failure-harness-window.json": "Lexical window alias from reused DOM double; corrected without production changes.",
+    "failure-harness-remove-attribute.json": "Missing standard removeAttribute in reused DOM double; corrected without production changes."
+  },
+  "limits": [
+    "No native DOM/layout/image network or browser input claim.",
+    "Actual renderer and adapter are exercised together and separately; focused stale-callback probes invoke captured adapter callbacks as a deliberately adversarial renderer double.",
+    "Controller integration and native browser checks are separate root/browser-worker evidence.",
+    "Embedded mountRound only; no standalone game page startup/navigation runtime assertion.",
+    "No new independent chemical oracle matrix: pinned existing engine/generator are used to make genuine round data and receipts."
+  ]
+}

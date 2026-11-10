@@ -1,0 +1,101 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+*.log
+
+# Third-party libs now served via CDN
+jquery/
+JSmol.min.js
+snap/
+
+# Large JSmol j2s runtime (loaded from CDN)
+j2s/
+
+# Old / debug / work-in-progress files
+nomenclature_moc2_1_debug*.html
+nomenclature_moc2_1_RC-2[2-9].html
+nomenclature_moc2_1_RC-28-ruleCenter.html
+nomenclature-*.html
+nomenclature_moc2_1_RC-29.html
+dropMenu-1.html
+functional-groups.html
+homologues-seires.html
+nameing-tables.html
+table-FG-order.html
+
+# Older JS / data files not used by RC-31
+js/jsme-nick-nomeclature-moc2-[0-9].js
+js/jsme-nick-nomeclature-moc2-30.js
+
+# Older CSS / HTML versions
+css/jsme-nick-30.css
+nomenclature_moc2_1_RC-30.html
+
+# Research / source assets (not needed for deployment)
+res/
+
+# Files not used by RC-31
+imgs/homologs-series.svg
+js/jsme-nick-nomeclature-moc2-28-ruleCenter.js
+js/jsme-nick-nomeclature-moc2-28-ruleInMenu.js
+spt/init-2.spt
+mols/1st-Molecules-3D.sdf
+mols/funGroups-3D.sdf
+mols/homo/
+mols/nomeclature/
+js/jsme-nick-nomeclature-moc2-1[0-9].js
+js/jsme-nick-nomeclature-moc2-2[0-9].js
+js/jsme-nick-nomeclature-moc2-data_[1-4].js
+js/jsme-nick-nomeclature-[0-9].js
+js/jsme-nick-nomeclature-1[0-9].js
+js/jsme-nick-nomeclature-2[0-9].js
+js/jsme-nick-nomeclature-data*.js
+js/jsme-nick-functional-groups-1.js
+js/jsme-nick-fungroups-data.js
+js/jsme-nick-omologes-seires*.js
+js/*errrrrrr*
+js/*old*
+js/*___.js
+
+# Older CSS files not used by RC-30
+css/jsme-nick-[0-9].css
+css/jsme-nick-2[0-9].css
+
+# Not needed to run the project
+RDKit/
+imgs/*
+!imgs/image-svgrepo-Industrial-Sharp.svg
+docs/*.pdf
+mols/branched/
+
+# Analysis / dev notes
+Code-Analysis/
+
+# Local communication files (keep out of repo)
+communication/
+
+# ... but keep the archived museum copies (see archive/README.md)
+!archive/html/nomenclature_moc2_1_debug*.html
+!archive/html/nomenclature_moc2_1_RC-*.html
+!archive/html/nomenclature-*.html
+!archive/html/dropMenu-1.html
+!archive/html/functional-groups.html
+!archive/html/homologues-seires.html
+!archive/html/nameing-tables.html
+!archive/html/table-FG-order.html
+
+# Contributor archive not part of the published site
+archive/Giannis_Skendros/
+
+# Vendored small libraries (committed; see js/vendor/README.md)
+!js/vendor/
+!js/vendor/**
+
+docs/OPENCODE-V1-TO-V2-MIGRATION.md
+docs/OPENCODE-V1-TO-V2-MIGRATION-WSL.md
+docs/OPENCODE-V1-TO-V2-MIGRATION-WSL.md
+iupac/
+js/MULERMOC_methyl_4_ethoxybutanoate_data.js

@@ -1,0 +1,24 @@
+{
+  "candidateRoot": "/private/tmp/namelecule-professor-merge-20261109-oxj7hfyy/candidate",
+  "http_port": 65098,
+  "bidi_port": 65099,
+  "base_url": "http://127.0.0.1:65098/organic-nomenclature-3/",
+  "profile": "/var/folders/2v/ds4vjvgj1_1000kq1fzg70q40000gn/T/namelecule-v55-owned-firefox-yx5604ey",
+  "serverPID": 73840,
+  "firefoxPID": 73841,
+  "launchedUTC": "2026-11-09T22:05:39Z",
+  "cleanupGuard": "Only kill recorded PIDs when ps command includes exact owned profile/serve.py token; never personal GUI Firefox",
+  "cleanup": [
+    {
+      "pid": 73841,
+      "signal": null,
+      "reason": "not running or ownership token does not match"
+    },
+    {
+      "pid": 73840,
+      "signal": "TERM",
+      "token": "/docs/checks/v54-merge-20261109/browser/serve.py /private/tmp/namelecule-professor-merge-20261109-oxj7hfyy/candidate 65098"
+    }
+  ],
+  "cleanupUTC": "2026-11-09T22:18:16Z"
+}

@@ -1,0 +1,13 @@
+{
+  "sources": "verification-target.json exact8; reviewed-r1 copies preserved",
+  "direct": "browser/after-browser.json directCompleted true; all12 direct rounds genuinely earned",
+  "lessonGates": "browser/root-embedded-r1-final-browser.json six actual earned rounds across continuations, both gates pass",
+  "compatibility": "browser/compatibility-r1-browser.json library exit passes; Main54 actual first round earned, gate stays locked",
+  "partialHarnessFailures": {
+    "root-embedded-r1": "rotation prompt not dismissed after reload in narrow fixture",
+    "root-embedded-r1-final": "Exit fixture omitted from=theory-library; app correctly returned exploration",
+    "compatibility-r1": "helper wrongly rejects header controls above sticky header bottom despite actual hit=true",
+    "interruptions": "native manual and rapid checks pass; narrow lesson rotation prompt requires dismissal"
+  },
+  "navigation": "Trusted bounded7→8 passed. Earlier uninterrupted warm-sequence timeout lacks delivery evidence; not established as app regression; no claim reproduced or permanently fixed."
+}

@@ -1,4 +1,4 @@
-/* Embedded repair round only; the standalone theme remains independent. */
+/* Shared repair-round presentation; scope is mounted only for an active round. */
 .nl-repair-round {
   color-scheme: light;
   --ink: #254c50;
@@ -44,15 +44,35 @@
 .nl-repair-round .quiet:hover:not(:disabled) { background: #e9efea; color: var(--ink); }
 
 .nl-repair-round .workshop-logo-small { display: block; width: 36px; height: 36px; object-fit: contain; flex: 0 0 auto; }
-.nl-repair-round .round-topbar .round-game-brand { display: flex; align-items: center; gap: 10px; margin: 0; }
-.nl-repair-round .round-game-label { min-width: 0; }
+.nl-repair-round .round-topbar .round-game-brand { display: flex; align-items: center; gap: 10px; margin: 0; flex: 1 1 auto; min-width: 0; max-width: none; }
+.nl-repair-round .round-game-label { min-width: 0; overflow-wrap: anywhere; }
 
-.nl-repair-round .round-topbar { display: flex; align-items: center; gap: 20px; justify-content: space-between; margin-bottom: 27px; }
-.nl-repair-round .round-topbar .eyebrow { margin: 0; }
+.nl-repair-round .round-topbar { display: flex; align-items: center; gap: 12px; justify-content: space-between; margin-bottom: 27px; }
+.nl-repair-round .round-topbar .eyebrow { margin: 0; padding: 0; max-width: none; }
+.nl-repair-round .round-progress-counter {
+  display: block;
+  flex: 0 0 auto;
+  margin: 0;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #254c50;
+  color: #fff;
+  font: 700 1.05rem/1.3 "Roboto Condensed", system-ui, sans-serif;
+  white-space: nowrap;
+}
 .nl-repair-round .round-heading { margin-bottom: 22px; }
 .nl-repair-round .round-heading h1 { font-size: clamp(28.8px, 3vw, 40px); letter-spacing: -.04em; margin-bottom: 10px; }
 .nl-repair-round .round-heading p { color: var(--muted); max-width: 810px; font-size: 14.72px; margin: 0; }
 .nl-repair-round .round-heading .guided-pill { margin-bottom: 9px; }
+.nl-repair-round .round-heading .round-objective.is-emphasized {
+  margin: 12px auto 0;
+  max-width: 810px;
+  color: var(--ink);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.45;
+  text-align: center;
+}
 .nl-repair-round .guided-pill { display: inline-block; border-radius: 99px; padding: 3px 10px; background: var(--mint); font-weight: 700; color: var(--teal-dark); font-size: 10.56px; }
 .nl-repair-round .compact-steps { display: flex; flex-wrap: wrap; gap: 6px 18px; list-style: none; padding: 0; margin: 0 0 22px; font-size: 11.52px; color: var(--muted); }
 .nl-repair-round .compact-steps li { display: flex; gap: 7px; align-items: center; }
@@ -65,6 +85,18 @@
 .nl-repair-round .card-heading span { color: var(--muted); font-size: 10.4px; }
 .nl-repair-round .diagram-tools { display: flex; align-items: center; gap: 9px; flex-wrap: wrap; justify-content: flex-end; }
 .nl-repair-round .diagram-tools .quiet { min-height: 35px; padding: 5px 8px; font-size: 10.4px; border: 1px solid var(--line); }
+.nl-repair-round .diagram-tools .diagram-zoom-button {
+  flex: 0 0 44px;
+  width: 44px;
+  height: 44px;
+  min-height: 44px;
+  padding: 10px;
+  border-radius: 10px;
+  color: var(--ink);
+  background: white;
+}
+.nl-repair-round .diagram-zoom-icon { display: inline-flex; color: inherit; }
+.nl-repair-round .diagram-zoom-icon svg { display: block; width: 22px; height: 22px; }
 .nl-repair-round .diagram-figure { margin: 0; padding: 18px 17px 13px; }
 .nl-repair-round .diagram-stage { display: grid; place-items: center; min-height: 230px; border-radius: 12px; background-color: #fdfdfa; background-image: radial-gradient(#d9e1d5 .65px, transparent .65px); background-size: 14px 14px; }
 .nl-repair-round .diagram-image { width: auto; max-width: 100%; height: auto; object-fit: contain; display: block; background: #fdfdfa; border-radius: 10px; }
@@ -111,6 +143,8 @@
 .nl-repair-round .success-name { display: block; font-size: 17.44px; font-weight: 750; margin-bottom: 7px; overflow-wrap: anywhere; }
 .nl-repair-round .success-explanation { margin: 0; }
 .nl-repair-round .round-next { display: flex; justify-content: flex-end; margin-top: 16px; }
+.nl-repair-round .round-next.has-practice-action { gap: 10px; flex-wrap: wrap; }
+.nl-repair-round .round-next.has-practice-action > button { min-width: 0; white-space: normal; overflow-wrap: anywhere; }
 .nl-repair-round .session-row { display: flex; align-items: center; justify-content: space-between; gap: 14px; margin-top: 18px; color: var(--muted); font-size: 11.04px; }
 .nl-repair-round .session-row .quiet { font-size: 11.04px; min-height: 40px; padding: 7px 10px; }
 
@@ -137,11 +171,13 @@
   .nl-repair-round .round-topbar { margin-bottom: 18px; }
   .nl-repair-round .round-heading h1 { font-size: 28px; }
   .nl-repair-round .round-heading p { font-size: 14px; }
+  .nl-repair-round .round-heading .round-objective.is-emphasized { font-size: 20px; }
   .nl-repair-round .compact-steps { gap: 6px 12px; font-size: 12px; }
   .nl-repair-round .card-heading { padding: 14px 16px; }
   .nl-repair-round .diagram-figure { padding: 13px 11px 11px; }
   .nl-repair-round .diagram-stage { min-height: 172px; }
   .nl-repair-round .diagram-tools > span { display: none; }
+  .nl-repair-round .diagram-tools > .diagram-representation-label { display: inline; max-width: 100%; }
   .nl-repair-round .repair-card { padding: 17px; }
   .nl-repair-round .broken-name { padding: 11px; margin-bottom: 18px; }
   .nl-repair-round .part-button { padding: 9px 11px; font-size: 15px; }

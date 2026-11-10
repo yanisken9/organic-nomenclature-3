@@ -1,0 +1,66 @@
+{
+  "completed": true,
+  "role": "Developer targeted Reviewer evidence supplement",
+  "correction": "Original after-browser standalone probe selected .round-heading p, which resolves to .round-set-name in standalone. Its computed style/classes were not objective evidence. This supplement reads .round-objective directly; original frozen59 artifacts remain unchanged.",
+  "sourceTarget": {
+    "js/namelecule-generated-repair-checkpoint.js": "c8f29708b0694f7c10bd4e6e08e07f7eb58969b71e5fe15d9eeea72b356d061d",
+    "js/namelecule-game-repair.js": "b793ae9aa3af5d4e210468d5bc6e2ca6f73d80f64e722e1e6f22bea17980c056",
+    "css/namelecule-repair-round.css": "5fda8d1648b6aaaa07cc5a6e407e4be0db792d7c52b2ddf4c70820abaecef74c",
+    "mulermoc-nom-55.html": "d90d97782df8b99a68de3922fc32659536c7cf8682854cc44069f91af8c2a803",
+    "games/assets/name-repair/condensed/ethyl_3_dimethyl_2_5_hexane.svg": "ea16e3f63067f65ca088f52082a39c1f78d5bf32359b644c980f62e245057cb0",
+    "games/assets/name-repair/condensed/provenance.json": "82ef3a037a4ee027deae67a73ead4f9ba70eca1b513c823cf1fd8bb7c71c7bf4"
+  },
+  "measurements": [
+    {
+      "viewport": 1280,
+      "selector": ".round-objective",
+      "count": 1,
+      "objective": "Ένα συνθετικό δεν συμφωνεί με τη δομή. Επισκεύασέ το.",
+      "classes": "round-objective",
+      "font": "14.7167px",
+      "weight": "400",
+      "align": "start",
+      "rect": {
+        "x": 52,
+        "y": 168.18333435058594,
+        "width": 810,
+        "height": 23.550003051757812,
+        "top": 168.18333435058594,
+        "right": 862,
+        "bottom": 191.73333740234375,
+        "left": 52
+      },
+      "firstParagraphClass": "round-set-name",
+      "firstParagraphText": "Αλκάνια · Χωρίς διακλαδώσεις",
+      "source": "http://127.0.0.1:52811/games/assets/name-repair/butane.svg",
+      "representation": "Ανεπτυγμένος τύπος"
+    },
+    {
+      "viewport": 390,
+      "selector": ".round-objective",
+      "count": 1,
+      "objective": "Ένα συνθετικό δεν συμφωνεί με τη δομή. Επισκεύασέ το.",
+      "classes": "round-objective",
+      "font": "13.6px",
+      "weight": "400",
+      "align": "start",
+      "rect": {
+        "x": 18,
+        "y": 97.81666564941406,
+        "width": 354,
+        "height": 43.53334045410156,
+        "top": 97.81666564941406,
+        "right": 372,
+        "bottom": 141.35000610351562,
+        "left": 18
+      },
+      "firstParagraphClass": "round-set-name",
+      "firstParagraphText": "Αλκάνια · Χωρίς διακλαδώσεις",
+      "source": "http://127.0.0.1:52811/games/assets/name-repair/butane.svg",
+      "representation": "Ανεπτυγμένος τύπος"
+    }
+  ],
+  "scope": "One standalone default round, desktop1280 and narrow390; no additional learner flow or production edits",
+  "targetUnchanged": true,
+  "javascriptErrors": []
+}

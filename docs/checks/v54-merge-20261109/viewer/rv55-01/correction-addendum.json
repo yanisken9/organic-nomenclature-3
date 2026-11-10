@@ -1,0 +1,159 @@
+{
+  "finding": "RV55-01",
+  "severity": "P2",
+  "timestampUTC": "2026-11-09T22:32:45.284494+00:00",
+  "status": "Corrected and frozen for primary targeted verification/review addendum",
+  "runtimePath": "/private/tmp/namelecule-professor-merge-20261109-oxj7hfyy/candidate/js/mulermoc-nom-molview-55.js",
+  "baseSHA256": "fdca88ddb7317759d996423ad20016d9333f0f53ba4253a537c78ac95c473de5",
+  "finalSHA256": "2f4d198ba399282c7de51eb6a73f96516ca675dc87218438bb9fed3a632db59a",
+  "diff": "rv55-01.patch",
+  "changedFunctions": [
+    "fJoinGreekSysName"
+  ],
+  "unrelatedFunctionSectionsByteUnchanged": 329,
+  "unrelatedFunctionHashes": "targeted-results.json / unrelatedFunctionHashes",
+  "fix": "Join the rewritten cloned slots instead of the stale pre-transform snapshot. Concatenate already-hyphenated reordered pieces without inserting additional hyphens. Common slots, rendered panel, group IDs and common-name provenance helpers unchanged.",
+  "actualFixtures": [
+    {
+      "label": "actual library: isopropyl+dimethyl",
+      "joined": "3,5-διμεθυλο-4-(προπαν-2-υλο)-2-επτανόλη",
+      "expected": "3,5-διμεθυλο-4-(προπαν-2-υλο)-2-επτανόλη",
+      "panelJoined": "3,5-διμεθυλο-4-(προπαν-2-υλο)-2-επτανόλη",
+      "panelPrefix": [
+        {
+          "id": "comp2",
+          "text": "3,5-",
+          "tip": null
+        },
+        {
+          "id": "comp3",
+          "text": "διμεθυλο",
+          "tip": null
+        },
+        {
+          "id": "comp0",
+          "text": "-4-",
+          "tip": null
+        },
+        {
+          "id": "comp1",
+          "text": "(προπαν-2-υλο)",
+          "tip": "Common: 4-ισοπροπυλο-3,5-διμεθυλο-2-επτανόλη"
+        }
+      ],
+      "inputUnchanged": true,
+      "provenanceCorrect": true,
+      "pass": true
+    },
+    {
+      "label": "three substituents: ethyl methyl propan-2-yl",
+      "joined": "5-αιθυλο-3-μεθυλο-4-(προπαν-2-υλο)-2-επτανόλη",
+      "expected": "5-αιθυλο-3-μεθυλο-4-(προπαν-2-υλο)-2-επτανόλη",
+      "panelJoined": "5-αιθυλο-3-μεθυλο-4-(προπαν-2-υλο)-2-επτανόλη",
+      "panelPrefix": [
+        {
+          "id": "comp3loc",
+          "text": "5-",
+          "tip": null
+        },
+        {
+          "id": "comp3b",
+          "text": "αιθυλο",
+          "tip": null
+        },
+        {
+          "id": "comp2",
+          "text": "-3-",
+          "tip": null
+        },
+        {
+          "id": "comp3",
+          "text": "μεθυλο",
+          "tip": null
+        },
+        {
+          "id": "comp0",
+          "text": "-4-",
+          "tip": null
+        },
+        {
+          "id": "comp1",
+          "text": "(προπαν-2-υλο)",
+          "tip": "Common: 4-ισοπροπυλο-3-μεθυλο-5-αιθυλο-2-επτανόλη"
+        }
+      ],
+      "inputUnchanged": true,
+      "provenanceCorrect": true,
+      "pass": true
+    },
+    {
+      "label": "single transformed substituent retains parenthesization",
+      "joined": "4-(προπαν-2-υλο)-2-επτανόλη",
+      "expected": "4-(προπαν-2-υλο)-2-επτανόλη",
+      "panelJoined": null,
+      "panelPrefix": [],
+      "inputUnchanged": true,
+      "provenanceCorrect": true,
+      "pass": true
+    },
+    {
+      "label": "unchanged simple branch keeps common text",
+      "joined": "4-μεθυλο-2-επτανόλη",
+      "expected": "4-μεθυλο-2-επτανόλη",
+      "panelJoined": null,
+      "panelPrefix": [],
+      "inputUnchanged": true,
+      "provenanceCorrect": true,
+      "pass": true
+    },
+    {
+      "label": "ester two-word boundary unchanged",
+      "joined": "προπανικός προπαν-2-υλεστέρας",
+      "expected": "προπανικός προπαν-2-υλεστέρας",
+      "panelJoined": null,
+      "panelPrefix": [],
+      "inputUnchanged": true,
+      "provenanceCorrect": true,
+      "pass": true
+    }
+  ],
+  "verification": [
+    {
+      "command": "python3 docs/checks/v54-merge-20261109/viewer/rv55-01/test-greek-join.py",
+      "result": "5/5 after vs 2/5 before; naive snapshot-only refresh reproduces doubled hyphens in three-group fixture; 329 unrelated function sections byte unchanged."
+    },
+    {
+      "command": "python3 docs/checks/v54-merge-20261109/viewer/test-viewer.py",
+      "result": "55/55 PASS, full candidate syntax PASS; output 55case-regression-output.txt"
+    }
+  ],
+  "refreshedHistoricalEvidence": [
+    {
+      "path": "docs/checks/v54-merge-20261109/viewer/deterministic-results.json",
+      "oldSHA256": "c79a1e42628199441150feafde08656d3d898c8aaeb52ecb18f0dc3102fb4894",
+      "newSHA256": "d1925b7c89c3bf5b0c4688fd60555b28a1223a84c8024607eb18b510546e0829",
+      "reason": "Existing test-viewer.py rerun refreshed timestamp/runtime hash before root requested new-subdir-only evidence. Original old bytes unavailable and not reconstructed; old hash was read from frozen71 review-target before root updated that target. Other generated top-level harness/output bytes matched the old manifest."
+    }
+  ],
+  "historicalEvidencePolicy": "Old report hash is recorded explicitly; original bytes were not recovered or reconstructed. New RV55-01 artifacts are in rv55-01/. Prior developer-report/diffs were not rewritten; this addendum supersedes their viewer runtime hash.",
+  "coreFilesChangedByThisAgent": false,
+  "untested": [
+    "Actual browser whole-panel/name preview checks and targeted independent verification remain primary/Reviewer responsibilities."
+  ],
+  "newEvidencePaths": [
+    "docs/checks/v54-merge-20261109/viewer/rv55-01/55case-regression-output.txt",
+    "docs/checks/v54-merge-20261109/viewer/rv55-01/after-output.txt",
+    "docs/checks/v54-merge-20261109/viewer/rv55-01/after-probe.js",
+    "docs/checks/v54-merge-20261109/viewer/rv55-01/after-results.json",
+    "docs/checks/v54-merge-20261109/viewer/rv55-01/before-output.txt",
+    "docs/checks/v54-merge-20261109/viewer/rv55-01/before-probe.js",
+    "docs/checks/v54-merge-20261109/viewer/rv55-01/before-results.json",
+    "docs/checks/v54-merge-20261109/viewer/rv55-01/before-viewer55.js",
+    "docs/checks/v54-merge-20261109/viewer/rv55-01/naive-refresh-only-output.txt",
+    "docs/checks/v54-merge-20261109/viewer/rv55-01/naive-refresh-only-probe.js",
+    "docs/checks/v54-merge-20261109/viewer/rv55-01/naive-refresh-only-results.json",
+    "docs/checks/v54-merge-20261109/viewer/rv55-01/rv55-01.patch",
+    "docs/checks/v54-merge-20261109/viewer/rv55-01/targeted-results.json",
+    "docs/checks/v54-merge-20261109/viewer/rv55-01/test-greek-join.py"
+  ]
+}

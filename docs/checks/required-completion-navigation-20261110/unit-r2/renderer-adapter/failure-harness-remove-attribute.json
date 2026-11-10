@@ -1,0 +1,9 @@
+{
+  "success": false,
+  "exitCode": 0,
+  "stdout": "FAIL TypeError: host.removeAttribute is not a function. (In 'host.removeAttribute(\"aria-busy\")', 'host.removeAttribute' is undefined)\ndestroy@\n@docs/checks/required-completion-navigation-20261110/unit-r2/renderer-adapter/adapter-generated.js:1572:92\n",
+  "stderr": "",
+  "result": null,
+  "role": "Developer evidence; not independent review",
+  "classification": "Harness failure: reused TestElement lacks removeAttribute needed by actual adapter destroy. Added standard attribute deletion in DOM double; no production change."
+}

@@ -14,7 +14,13 @@
   let progressCounter = null;
   let mounted = null;
   let mountToken = 0;
-  let revealingResponse = false;
+  let responseRevealer = null;
+  let practiceContinue = null;
+  let practiceNotice = null;
+
+  function supportsPractice(adapter) {
+    return ["createPractice", "restorePractice", "mountPractice"].every(key => typeof adapter[key] === "function");
+  }
 
   function registerType(name, adapter) {
     if (!/^[a-z][a-z0-9-]{0,48}$/.test(name) || own(types, name) || !adapter ||
@@ -82,6 +88,7 @@
     if (records.has(content)) return records.get(content);
     const key = storagePrefix + hash(content);
     let states = Object.create(null);
+    let practices = Object.create(null);
     let storageAvailable = true;
     try {
       const saved = JSON.parse(global.sessionStorage.getItem(key) || "null");
@@ -94,12 +101,16 @@
             try {
               const spec = validateCheckpoint(step.checkpoint);
               states[index] = types[spec.type].restore(spec.round, saved.states[index]);
+              if (supportsPractice(types[spec.type]) && saved.practices && own(saved.practices, index)) {
+                try { practices[index] = types[spec.type].restorePractice(spec.round, saved.practices[index]); }
+                catch (_) { /* Optional progress cannot invalidate an earned required receipt. */ }
+              }
             } catch (_) { /* Invalid stored progress never unlocks a checkpoint. */ }
           }
         }
       }
     } catch (_) { storageAvailable = false; }
-    const result = { key, content, states, storageAvailable };
+    const result = { key, content, states, practices, storageAvailable };
     records.set(content, result);
     return result;
   }
@@ -107,7 +118,7 @@
   function persist(record) {
     if (record.temporary) return;
     try {
-      global.sessionStorage.setItem(record.key, JSON.stringify({ version: 1, content: record.content, states: record.states }));
+      global.sessionStorage.setItem(record.key, JSON.stringify({ version: 1, content: record.content, states: record.states, practices: record.practices }));
       record.storageAvailable = true;
     } catch (_) { record.storageAvailable = false; }
   }
@@ -192,6 +203,18 @@
       storage: "Progress is kept only while this page remains open; tab storage is unavailable.",
       reset: "New attempt", resetLabel: "Start this repair again" }
   };
+  Object.assign(words.gr, {
+    practice: "Άλλη τριάδα για εξάσκηση", resumePractice: "Συνέχισε την εξάσκηση",
+    practiceTitle: "Προαιρετική εξάσκηση", continueLesson: "Συνεχίζω τη θεωρία",
+    practiceNote: "Η αρχική τριάδα ολοκληρώθηκε. Μπορείς να συνεχίσεις τη θεωρία οποιαδήποτε στιγμή.",
+    preparing: "Επαληθεύεται η αποθηκευμένη πρόοδός σου…"
+  });
+  Object.assign(words.en, {
+    practice: "Another three for practice", resumePractice: "Resume practice",
+    practiceTitle: "Optional practice", continueLesson: "Continue the lesson",
+    practiceNote: "The required set is complete. You can continue the lesson at any time.",
+    preparing: "Checking your saved progress…"
+  });
   function text(key) {
     let lang = "gr";
     try { if (typeof global.fMulerLang === "function" && global.fMulerLang() === "en") lang = "en"; } catch (_) {}
@@ -221,35 +244,10 @@
     progressCounter.textContent = valid ? text("counter") + " " + value.current + "/" + value.total : "";
   }
   function stopResponseScroll() {
-    if (!revealingResponse || !dialog) return;
-    revealingResponse = false;
-    if (typeof dialog.scrollTo === "function") dialog.scrollTo({ top: dialog.scrollTop, behavior: "instant" });
+    if (responseRevealer) responseRevealer.stop();
   }
   function revealResponse(request) {
-    if (!dialog || !dialog.open || !mountHost || !request) return;
-    const start = request.start, end = request.end || start;
-    if (!start || !end || !start.isConnected || !end.isConnected ||
-      !mountHost.contains(start) || !mountHost.contains(end) ||
-      typeof start.getBoundingClientRect !== "function" || typeof end.getBoundingClientRect !== "function") return;
-    stopResponseScroll();
-    const first = start.getBoundingClientRect(), last = end.getBoundingClientRect();
-    if (first.height <= 0 || last.height <= 0) return;
-    const box = dialog.getBoundingClientRect();
-    const header = dialog.querySelector(".nl-quiz-dialog-header");
-    const top = Math.max(box.top + dialog.clientTop, header ? header.getBoundingClientRect().bottom : box.top) + 12;
-    const bottom = box.top + dialog.clientTop + dialog.clientHeight - 12;
-    const rangeTop = Math.min(first.top, last.top), rangeBottom = Math.max(first.bottom, last.bottom);
-    if (![top, bottom, rangeTop, rangeBottom].every(Number.isFinite) || bottom <= top) return;
-    if (rangeTop >= top && rangeBottom <= bottom) return;
-    // Keep a long explanation's beginning visible instead of jumping past it to Continue.
-    const delta = rangeBottom - rangeTop > bottom - top || rangeTop < top ? rangeTop - top : rangeBottom - bottom;
-    const destination = Math.max(0, Math.min(dialog.scrollHeight - dialog.clientHeight, dialog.scrollTop + delta));
-    if (Math.abs(destination - dialog.scrollTop) < 1) return;
-    const reducedMotion = typeof global.matchMedia === "function" && global.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (typeof dialog.scrollTo === "function") {
-      revealingResponse = !reducedMotion;
-      dialog.scrollTo({ top: destination, behavior: reducedMotion ? "instant" : "smooth" });
-    } else dialog.scrollTop = destination;
+    if (responseRevealer) responseRevealer.reveal(request);
   }
   function destroyMount() {
     stopResponseScroll();
@@ -275,6 +273,14 @@
     title.id = "nlQuizDialogTitle";
     const back = button("", "nl-quiz-button nl-quiz-back", closeDialog);
     back.id = "nlQuizBack";
+    practiceContinue = button("", "nl-quiz-button nl-quiz-practice-continue", () => { if (active) continueLesson(active); });
+    practiceContinue.id = "nlQuizPracticeContinue";
+    practiceContinue.hidden = true;
+    practiceNotice = node("p", "nl-quiz-practice-notice");
+    practiceNotice.id = "nlQuizPracticeNotice";
+    practiceNotice.hidden = true;
+    const copy = node("div", "nl-quiz-dialog-copy");
+    copy.append(title, practiceNotice);
     const actions = node("div", "nl-quiz-dialog-actions");
     progressCounter = node("span", "nl-quiz-round-progress");
     progressCounter.id = "nlQuizProgress";
@@ -282,8 +288,8 @@
     progressCounter.setAttribute("role", "status");
     progressCounter.setAttribute("aria-live", "polite");
     progressCounter.setAttribute("aria-atomic", "true");
-    actions.append(progressCounter, back);
-    header.append(title, actions);
+    actions.append(progressCounter, practiceContinue, back);
+    header.append(copy, actions);
     mountHost = node("div", "nl-quiz-host");
     mountHost.id = "nlQuizHost";
     retryButton = button("", "nl-quiz-button nl-quiz-retry", () => { if (active) mountQuestion(active); });
@@ -293,13 +299,28 @@
       if (dialog.open && event.target && event.target.tagName === "IMG") retryButton.hidden = false;
     }, true);
     dialog.append(header, mountHost, retryButton);
+    responseRevealer = global.NameleculeRepairGame.createResponseRevealer({
+      host: mountHost,
+      active: () => !!(dialog && dialog.open),
+      viewport() {
+        const box = dialog.getBoundingClientRect();
+        return { top: Math.max(box.top + dialog.clientTop, header.getBoundingClientRect().bottom) + 12,
+          bottom: box.top + dialog.clientTop + dialog.clientHeight - 12 };
+      },
+      scrollTop: () => dialog.scrollTop,
+      maxScroll: () => dialog.scrollHeight - dialog.clientHeight,
+      scrollTo(top, behavior) {
+        if (typeof dialog.scrollTo === "function") dialog.scrollTo({ top: top, behavior: behavior });
+        else dialog.scrollTop = top;
+      }
+    });
     dialog.addEventListener("cancel", event => { event.preventDefault(); closeDialog(); });
     // Let the round handle its own keys first, then stop lesson arrows/Escape.
     dialog.addEventListener("keydown", event => { stopResponseScroll(); event.stopPropagation(); });
     dialog.addEventListener("wheel", stopResponseScroll, { passive: true });
     dialog.addEventListener("touchstart", stopResponseScroll, { passive: true });
     dialog.addEventListener("pointerdown", stopResponseScroll, { passive: true });
-    dialog.addEventListener("close", destroyMount);
+    dialog.addEventListener("close", () => { if (!dialog.open) destroyMount(); });
     global.document.body.append(dialog);
   }
 
@@ -315,9 +336,12 @@
   function refreshCard(context) {
     if (active !== context) return;
     const done = isComplete(context.scenario, context.index);
-    context.status.textContent = text(done ? "done" : "instruction");
+    context.status.textContent = text(context.preparing ? "preparing" : done ? "done" : "instruction");
+    context.openButton.disabled = !!context.preparing;
     context.openButton.textContent = done ? text("revisit") : (context.spec.openLabel || text("open"));
     context.section.classList.toggle("nl-quiz-complete", done);
+    context.practiceButton.hidden = !done || !supportsPractice(types[context.spec.type]);
+    context.practiceButton.textContent = text(context.record.practices[context.index] ? "resumePractice" : "practice");
     context.storageNote.textContent = context.record.storageAvailable ? "" : text("storage");
     context.storageNote.hidden = context.record.storageAvailable;
   }
@@ -325,20 +349,92 @@
     refreshCard(context);
     if (typeof global.fScenarioPlayUi === "function") global.fScenarioPlayUi();
   }
+  function continueLesson(context) {
+    if (!currentContext(context) || !isComplete(context.scenario, context.index)) return;
+    const destination = context.index + 1;
+    closeDialog();
+    if (typeof global.fScenarioGo === "function") global.fScenarioGo(destination);
+  }
+  function updateDialog(context) {
+    const finalActions = context.finalRoundVisible === true && context.successActionsReady === true &&
+      supportsPractice(types[context.spec.type]) &&
+      isComplete(context.scenario, context.index);
+    let optionalFinalActions = false;
+    if (context.practice && finalActions) {
+      try {
+        optionalFinalActions = types[context.spec.type]
+          .restorePractice(context.spec.round, context.record.practices[context.index]).solved === true;
+      } catch (_) { /* Keep the independent exit when optional progress cannot be verified. */ }
+    }
+    if (optionalFinalActions && dialog.open && global.document.activeElement === practiceContinue) {
+      const actions = mountHost.querySelector(".round-next");
+      const next = actions && actions.querySelector("button");
+      if (next && !next.disabled) next.focus();
+      optionalFinalActions = !!next && global.document.activeElement === next;
+    }
+    dialog.querySelector("#nlQuizDialogTitle").textContent = text(context.practice ? "practiceTitle" : "label");
+    dialog.querySelector("#nlQuizBack").hidden = context.practice || finalActions;
+    practiceNotice.textContent = text("practiceNote");
+    practiceNotice.hidden = !context.practice;
+    practiceContinue.textContent = text("continueLesson");
+    practiceContinue.hidden = !context.practice || optionalFinalActions;
+  }
+  function newPractice(context) {
+    const adapter = types[context.spec.type];
+    if (!currentContext(context) || !supportsPractice(adapter) || !isComplete(context.scenario, context.index)) return;
+    context.record.practices[context.index] = adapter.createPractice(context.spec.round,
+      context.record.practices[context.index] || context.record.states[context.index]);
+    persist(context.record);
+    refreshCard(context);
+    openDialog(context, true);
+  }
+  function prepareRequired(context) {
+    const adapter = types[context.spec.type], saved = context.record.states[context.index];
+    if (!supportsPractice(adapter) || !saved || typeof adapter.prepare !== "function") return;
+    const abort = new AbortController();
+    context.preparationAbort = abort;
+    const original = JSON.stringify(saved);
+    try {
+      const pending = adapter.prepare(context.spec.round, clone(saved), { signal: abort.signal });
+      if (!pending || typeof pending.then !== "function") return;
+      context.preparing = true;
+      Promise.resolve(pending).then(state => {
+        if (abort.signal.aborted || !currentContext(context) || JSON.stringify(context.record.states[context.index]) !== original) return;
+        context.record.states[context.index] = adapter.restore(context.spec.round, state);
+        persist(context.record);
+      }).catch(() => { /* Open the original repair to retry; optional state never grants access. */ }).finally(() => {
+        if (!abort.signal.aborted && currentContext(context)) { context.preparing = false; updateNavigation(context); }
+      });
+    } catch (_) { /* The ordinary required mount retains its retry UI. */ }
+  }
   function mountQuestion(context) {
     if (!currentContext(context)) return;
     destroyMount();
+    context.finalRoundVisible = false;
+    context.successActionsReady = false;
     const token = mountToken;
     let visibleRound = null;
     retryButton.hidden = true;
     try {
       const spec = validateCheckpoint(context.spec);
-      mounted = types[spec.type].mount(mountHost, {
+      const adapter = types[spec.type];
+      const optional = context.practice && supportsPractice(adapter) && isComplete(context.scenario, context.index);
+      context.practice = !!optional;
+      updateDialog(context);
+      const states = optional ? context.record.practices : context.record.states;
+      const restore = optional ? adapter.restorePractice : adapter.restore;
+      const mount = optional ? adapter.mountPractice : adapter.mount;
+      mounted = mount(mountHost, {
         round: clone(spec.round), assetBase: "games/",
-        initialState: context.record.states[context.index] ? clone(context.record.states[context.index]) : null,
+        initialState: states[context.index] ? clone(states[context.index]) : null,
+        newPracticeLabel: text("practice"),
+        onNewPractice: supportsPractice(adapter) ? () => { if (token === mountToken) newPractice(context); } : undefined,
         onProgress(value) {
           if (token !== mountToken || !currentContext(context)) return;
           showProgress(value);
+          context.finalRoundVisible = validProgress(value) && value.current === value.total;
+          if (!context.finalRoundVisible) context.successActionsReady = false;
+          updateDialog(context);
           const nextRound = validProgress(value) ? value.current + "/" + value.total : null;
           // A new question starts above the fold; same-round updates keep the learner's scroll.
           if (nextRound !== visibleRound) {
@@ -347,6 +443,11 @@
           }
           visibleRound = nextRound;
         },
+        onSuccessActionsReady(ready) {
+          if (token !== mountToken || !currentContext(context)) return;
+          context.successActionsReady = ready === true;
+          updateDialog(context);
+        },
         onReveal(request) {
           if (token !== mountToken || !currentContext(context)) return;
           revealResponse(request);
@@ -354,36 +455,39 @@
         onStateChange(state) {
           if (token !== mountToken || !currentContext(context)) return;
           const wasComplete = isComplete(context.scenario, context.index);
-          context.record.states[context.index] = types[spec.type].restore(spec.round, state);
+          states[context.index] = restore(spec.round, state);
           persist(context.record);
           refreshCard(context);
           if (wasComplete !== isComplete(context.scenario, context.index)) updateNavigation(context);
         },
         onSolved(result, state) {
           if (token !== mountToken || !currentContext(context) || !result || result.kind !== "correct") return;
-          const normalized = types[spec.type].restore(spec.round, state);
+          const normalized = restore(spec.round, state);
           if (!normalized.solved) return;
-          context.record.states[context.index] = normalized;
+          states[context.index] = normalized;
           persist(context.record);
           updateNavigation(context);
+          updateDialog(context);
         },
         onContinue() {
           if (token !== mountToken || !currentContext(context) || !isComplete(context.scenario, context.index)) return;
-          const destination = context.index + 1;
-          closeDialog();
-          if (typeof global.fScenarioGo === "function") global.fScenarioGo(destination);
+          continueLesson(context);
         }
       });
     } catch (_) {
+      context.finalRoundVisible = false;
+      context.successActionsReady = false;
+      updateDialog(context);
       showProgress(null);
       mountHost.replaceChildren(node("p", "nl-quiz-error", text("error")));
       retryButton.hidden = false;
     }
   }
-  function openDialog(context) {
-    if (!currentContext(context)) return;
+  function openDialog(context, optional) {
+    if (!currentContext(context) || context.preparing) return;
+    context.practice = optional === true && supportsPractice(types[context.spec.type]) && isComplete(context.scenario, context.index);
     ensureDialog();
-    dialog.querySelector("#nlQuizDialogTitle").textContent = text("label");
+    updateDialog(context);
     dialog.querySelector("#nlQuizBack").textContent = text("back");
     retryButton.textContent = text("retry");
     if (typeof dialog.showModal !== "function") {
@@ -396,6 +500,7 @@
 
   function onExit() {
     closeDialog();
+    if (active && active.preparationAbort) active.preparationAbort.abort();
     if (active && active.section) active.section.remove();
     active = null;
   }
@@ -411,7 +516,7 @@
     endPreview();
     onExit();
     preview = { scenario, record: { key: null, content: signature(scenario),
-      states: Object.create(null), storageAvailable: true, temporary: true } };
+      states: Object.create(null), practices: Object.create(null), storageAvailable: true, temporary: true } };
   }
   function onStep(scenario, index) {
     const step = scenario && scenario.steps && scenario.steps[index];
@@ -436,19 +541,29 @@
     const context = { scenario, index, spec, section, status, storageNote, record: recordFor(scenario) };
     context.openButton = button("", "nl-quiz-button nl-quiz-open", () => openDialog(context));
     context.openButton.id = "nlQuizOpen";
-    section.append(copy, context.openButton);
+    context.practiceButton = button("", "nl-quiz-button nl-quiz-practice-open", () => {
+      if (context.record.practices[context.index]) openDialog(context, true);
+      else newPractice(context);
+    });
+    context.practiceButton.id = "nlQuizPracticeOpen";
+    context.practiceButton.hidden = true;
+    const actions = node("div", "nl-quiz-checkpoint-actions");
+    actions.append(context.openButton, context.practiceButton);
+    section.append(copy, actions);
     const note = global.document.getElementById("scStepText");
     const title = global.document.getElementById("pageTitle");
     if (note && note.parentNode) note.insertAdjacentElement("afterend", section);
     else if (title && title.parentNode) title.insertAdjacentElement("afterend", section);
     else global.document.body.append(section);
     active = context;
+    prepareRequired(context);
     refreshCard(context);
   }
 
   function reset(scenario) {
     const record = recordFor(scenario);
     record.states = Object.create(null);
+    record.practices = Object.create(null);
     persist(record);
     if (active && active.scenario === scenario) { closeDialog(); updateNavigation(active); }
   }

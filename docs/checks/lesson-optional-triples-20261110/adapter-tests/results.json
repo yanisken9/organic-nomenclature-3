@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "checks": 395,
+  "generatedCount": 47,
+  "requiredCacheSizeAfter40Optional": 2,
+  "practiceCacheSizeAfter40Optional": 2,
+  "optionalGenerationsInStress": 40,
+  "fetches": 6,
+  "analysisRequests": 32,
+  "sourceSHA256": "714e3b6140b28377a8af611c93350c42b0166e805f4dc62021055f8d5494b365",
+  "conditions": "JSC, real pinned chemistry engine/generator; mocked browser UI, crypto digest and transport",
+  "limitations": [
+    "No browser renderer execution",
+    "No controller/storage integration",
+    "No live network/Worker execution"
+  ]
+}

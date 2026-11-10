@@ -1,0 +1,28 @@
+{
+  "status": "Approved; implementation in progress",
+  "behavior": [
+    "Replace text zoom button only in embedded generated alkane quizzes with compact magnifier in existing diagram header, top-right inside molecule frame.",
+    "Use accessible button with title/aria-label,44x44 target and visible focus; same open/close/Escape/focus return.",
+    "Optional adapter setting; standalone and other embedded callers retain text default."
+  ],
+  "sourcePaths": [
+    "js/namelecule-generated-repair-checkpoint.js",
+    "js/namelecule-game-repair.js",
+    "css/namelecule-repair-round.css",
+    "mulermoc-nom-55.html"
+  ],
+  "verification": [
+    "Before/after real browser desktop1280 and narrow390/320; representation labels and drawing unobscured.",
+    "Native click/Enter/Space and close/Escape/focus return; no duplicate zoom, state/answer/progress preserved; next-question transition.",
+    "One replacement and one order round plus bounded standalone/default check.",
+    "One independent Reviewer, frozen hashes."
+  ],
+  "unchanged": [
+    "Core",
+    "MOL/SDF/diagram assets",
+    "Canonical questions/solutions",
+    "Scenario JSON and progress contract"
+  ],
+  "publication": false,
+  "approval": "User: Ναι, δοκίμασέ το με αυτό το πλάνο"
+}

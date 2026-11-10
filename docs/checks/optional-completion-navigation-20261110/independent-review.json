@@ -1,0 +1,42 @@
+{
+  "reviewer": "/root/review_optional_completed_header",
+  "roleId": "NAMELECULE_REVIEWER_V1_20261023",
+  "freshContext": true,
+  "target": "target-r2.json",
+  "newActionableFindings": [],
+  "independentExecution": {
+    "currentSources": 3,
+    "beforeSnapshots": 3,
+    "testedR1Snapshots": 3,
+    "protectedFiles": 20,
+    "coreVersions": 11,
+    "unitArtifacts": 10,
+    "browserArtifacts": 45,
+    "JSCChecks": 274,
+    "counterfactuals": "Original optional duplicate and tested-r1 focus loss both fail intended assertions; FAIL text inspected despite JSC exit0."
+  },
+  "verifiedBehavior": "Current optional receipt independently verified before hiding; actual action readiness/final progress required. Focus transfers before hiding currently focused upper Continue; missing/disabled/rejected target fails open. Existing natural heading focus preserved.",
+  "nativeDeveloperEvidence": {
+    "originalBefore": 3,
+    "testedR1Partial": 32,
+    "finalR2Behavior": 32,
+    "finalR2Focus": 6,
+    "capturedJSErrors": 0,
+    "notIndependentlyReplayed": true
+  },
+  "existingResidual": {
+    "id": "EXISTING-ESC-001",
+    "severity": "P2",
+    "status": "Open, pre-existing separate scope",
+    "reference": "../required-completion-navigation-20261110/pre-existing-keyboard-issue.json"
+  },
+  "limits": [
+    "Declared DOM/adapter/storage/cache/readiness/focus doubles in JSC.",
+    "Owned headless local Firefox; no uninterrupted full lesson, Safari, physical mobile or conference machine.",
+    "Wider1280/390/320layout measurements from testedR1; finalR2focus at390, boundedMain54smoke.",
+    "Reviewer inspected supplied screenshots but did not execute native browser."
+  ],
+  "noReviewerWrites": true,
+  "coreChanged": false,
+  "recordedAt": "2026-11-10T10:49:42.145414+02:00"
+}

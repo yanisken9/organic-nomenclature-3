@@ -1,0 +1,16 @@
+{
+  "capturedAt": "2026-11-10T09:45:13.696539+02:00",
+  "pid": 57800,
+  "sampleExitCode": 0,
+  "sampleSha256": "b5ea8ecda08a78d23530c2caa7438a4db6c14ca32514c827351737b19adbe3e8",
+  "privatePath": "/private/tmp/namelecule-firefox-hang-20261110-ulrmf7x9/personal-parent-second.sample.txt",
+  "mainThreadRelevantExcerpt": [
+    "    1782 Thread_2661872   DispatchQueue_1: com.apple.main-thread  (serial)",
+    "    +                                         1782 __NSFireDelayedPerform  (in Foundation) + 438  [0x7ff805a22300]",
+    "    +                                           1782 -[_NSThemeZoomWidgetCell showMenu:]  (in AppKit) + 314  [0x7ff808d9e9de]",
+    "    +                                             1782 -[NSThemeWidgetZoomMenuRemoteView showMenu:]  (in AppKit) + 46  [0x7ff80889a19f]",
+    "    +                                               1782 -[NSThemeWidgetZoomMenuRemoteView _showMenu:timestamp:]  (in AppKit) + 542  [0x7ff80889a3de]",
+    "    +                                                         ! : | +         1762 mach_msg2_trap  (in libsystem_kernel.dylib) + 10  [0x7ff8049300ae]"
+  ],
+  "noProcessControl": true
+}

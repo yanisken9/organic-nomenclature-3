@@ -1,0 +1,18 @@
+{
+  "base": "e76d3c071c0be98cbd63365f2590fe49fa9e6f36",
+  "target": "5ab2495575bbbffeb0ac67f91d4d81857cb65970",
+  "commits": "d871784fdf5348810e44ea97d8d09576fcc08b30\t2026-11-09\tv55: wait window+countdown, scaled wait, STOP discipline, save-dialog removal, further rounds\n0025687b299bd1fad2b4a1caf4fda0fee0be3d2f\t2026-11-09\tdocs: resume pointer -> d871784\n05513c201aba8827dd7996f08da2d754930d2e97\t2026-11-09\tcss cleanup\n3cb9890f911331e0f566c7a861d25ff05e54a308\t2026-11-09\tv55: settings cleanup (customMol row, atomSymbols to bar), data-lang i18n + viewer-settings registry\n5ab2495575bbbffeb0ac67f91d4d81857cb65970\t2026-11-09\tdocs: resume pointer -> 3cb9890\n",
+  "paths": [
+    "css/jsme-nick-55.css",
+    "css/mulermoc-nom-scenario-55.css",
+    "docs/CHANGELOG.md",
+    "docs/SESSION-NOTES.md",
+    "js/mulermoc-nom-lang-55.js",
+    "js/mulermoc-nom-molview-55.js",
+    "js/mulermoc-nom-scenario-55.js",
+    "mulermoc-nom-55.html",
+    "spt/init-3.spt"
+  ],
+  "stat": " css/jsme-nick-55.css             |  85 +++++++-\n css/mulermoc-nom-scenario-55.css |  63 ------\n docs/CHANGELOG.md                |  17 ++\n docs/SESSION-NOTES.md            |  39 +++-\n js/mulermoc-nom-lang-55.js       |  68 +++---\n js/mulermoc-nom-molview-55.js    | 456 ++++++++++++++++++++++++++++++---------\n js/mulermoc-nom-scenario-55.js   |  25 +--\n mulermoc-nom-55.html             |  32 ++-\n spt/init-3.spt                   |   3 +\n 9 files changed, 530 insertions(+), 258 deletions(-)\n",
+  "status": "Read-only laterdelta, notyetadopted"
+}

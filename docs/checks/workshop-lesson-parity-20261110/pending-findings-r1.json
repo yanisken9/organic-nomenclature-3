@@ -1,0 +1,31 @@
+{
+  "sourceRevision": "Frozen r1 in verification-target.json and reviewed-r1/ exact8 snapshots",
+  "reviewer": "/root/review_workshop_parity_20261110",
+  "findings": [
+    {
+      "id": "R1",
+      "severity": "P3",
+      "introduced": true,
+      "issue": "Standalone compact magnifier exposes aria-expanded=false while native modal open.",
+      "cause": "Expansion true is set only in embedded branch.",
+      "evidence": "browser/zoom-r1-browser.json and zoom-r1-escape-browser.json",
+      "resolutionStatus": "Pending bounded correction after frozen r1 replay"
+    },
+    {
+      "id": "R2",
+      "severity": "P2",
+      "introduced": false,
+      "issue": "Explicit Close-button path leaves standalone opener disabled and unfocused, preventing same-round reopen.",
+      "cause": "Native dialog close event is queued; closeZoom disables based on still-nonnull zoomPanel, then close listener clears panel without reenabling opener.",
+      "evidence": "Native Close plus700ms in browser/zoom-r1-browser.json; closeZoom/listener byte-identical to before baseline.",
+      "control": "Native Escape restores enabled opener/focus and can reopen in r1; preserve that behavior.",
+      "resolutionStatus": "Pending guarded shared close finalizer after frozen r1 replay"
+    }
+  ],
+  "correctionScope": "Within approved magnifier/open-close/focus/reliable flow acceptance, no new permission required.",
+  "plannedTargetedCheck": [
+    "Standalone and embedded open state, Close/Escape, repeated reopen, answer/state equality",
+    "Queued close followed by round destruction/navigation cannot focus stale controls or mutate newer panel"
+  ],
+  "noSourceEditsSinceFreeze": true
+}

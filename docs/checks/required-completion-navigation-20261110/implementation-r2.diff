@@ -1,0 +1,143 @@
+--- before/js/namelecule-quiz-checkpoints.js
++++ js/namelecule-quiz-checkpoints.js
+@@ -356,8 +356,11 @@
+     if (typeof global.fScenarioGo === "function") global.fScenarioGo(destination);
+   }
+   function updateDialog(context) {
++    const finalActions = context.finalRoundVisible === true && context.successActionsReady === true &&
++      supportsPractice(types[context.spec.type]) &&
++      isComplete(context.scenario, context.index);
+     dialog.querySelector("#nlQuizDialogTitle").textContent = text(context.practice ? "practiceTitle" : "label");
+-    dialog.querySelector("#nlQuizBack").hidden = context.practice;
++    dialog.querySelector("#nlQuizBack").hidden = context.practice || finalActions;
+     practiceNotice.textContent = text("practiceNote");
+     practiceNotice.hidden = !context.practice;
+     practiceContinue.textContent = text("continueLesson");
+@@ -394,6 +397,8 @@
+   function mountQuestion(context) {
+     if (!currentContext(context)) return;
+     destroyMount();
++    context.finalRoundVisible = false;
++    context.successActionsReady = false;
+     const token = mountToken;
+     let visibleRound = null;
+     retryButton.hidden = true;
+@@ -414,6 +419,9 @@
+         onProgress(value) {
+           if (token !== mountToken || !currentContext(context)) return;
+           showProgress(value);
++          context.finalRoundVisible = validProgress(value) && value.current === value.total;
++          if (!context.finalRoundVisible) context.successActionsReady = false;
++          updateDialog(context);
+           const nextRound = validProgress(value) ? value.current + "/" + value.total : null;
+           // A new question starts above the fold; same-round updates keep the learner's scroll.
+           if (nextRound !== visibleRound) {
+@@ -421,6 +429,11 @@
+             if (nextRound && dialog && dialog.open) dialog.scrollTop = 0;
+           }
+           visibleRound = nextRound;
++        },
++        onSuccessActionsReady(ready) {
++          if (token !== mountToken || !currentContext(context)) return;
++          context.successActionsReady = ready === true;
++          updateDialog(context);
+         },
+         onReveal(request) {
+           if (token !== mountToken || !currentContext(context)) return;
+@@ -441,6 +454,7 @@
+           states[context.index] = normalized;
+           persist(context.record);
+           updateNavigation(context);
++          updateDialog(context);
+         },
+         onContinue() {
+           if (token !== mountToken || !currentContext(context) || !isComplete(context.scenario, context.index)) return;
+@@ -448,6 +462,9 @@
+         }
+       });
+     } catch (_) {
++      context.finalRoundVisible = false;
++      context.successActionsReady = false;
++      updateDialog(context);
+       showProgress(null);
+       mountHost.replaceChildren(node("p", "nl-quiz-error", text("error")));
+       retryButton.hidden = false;
+--- before/js/namelecule-game-repair.js
++++ js/namelecule-game-repair.js
+@@ -329,6 +329,7 @@
+     let destroyed = false;
+     let refs = {};
+     let mainImageStatus = "loading";
++    let lastSuccessActionsReady = null;
+     let renderId = 0;
+     let imageLoadId = 0;
+     let zoomPanel = null;
+@@ -585,12 +586,18 @@
+       const hasCandidate = data.kind === "order" || (hasTarget && current.selectedValue !== null);
+       refs.checkButton.disabled = !enabled || !hasCandidate;
+       refs.zoomButton.disabled = mainImageStatus !== "ready" || !!zoomPanel;
+-      refs.next.querySelectorAll("button").forEach(function (nextButton) {
++      const nextButtons = refs.next.querySelectorAll("button");
++      nextButtons.forEach(function (nextButton) {
+         nextButton.disabled = !diagramsReady() || !current.solved;
+       });
+       refs.checkHelper.textContent = current.solved ? "Η επισκευή ολοκληρώθηκε. Συνέχισε όταν είσαι έτοιμος ή έτοιμη." : !diagramsReady() ? "Περιμένουμε να εμφανιστούν οι δομές πριν από τον έλεγχο." : data.kind === "order" ? "Επιλέγεις κλάδο, πατάς ένα βέλος και ελέγχεις τη νέα σειρά." : hasCandidate ? "Ο έλεγχος μετρά ως μία προσπάθεια. Μπορείς να δοκιμάσεις ξανά." : "Διάλεξε πρώτα το κομμάτι και έπειτα μια αντικατάσταση.";
+       refs.sessionStats.textContent = "Προσπάθειες σε αυτή την " + (data.guided ? "πρόβα " : "αποστολή ") + current.attempts;
+       if (restoreId) restoreFocus(restoreId);
++      const successActionsReady = nextButtons.length > 0 && diagramsReady() && current.solved;
++      if (!destroyed && successActionsReady !== lastSuccessActionsReady && typeof options.onSuccessActionsReady === "function") {
++        lastSuccessActionsReady = successActionsReady;
++        options.onSuccessActionsReady(successActionsReady);
++      }
+     }
+ 
+     function selectPart(id) {
+--- before/js/namelecule-generated-repair-checkpoint.js
++++ js/namelecule-generated-repair-checkpoint.js
+@@ -178,6 +178,12 @@
+       const roundOptions = Object.assign({}, presentation, {
+         initialState: state.states[index], assetBase: options.assetBase,
+         continueLabel: index < 2 ? "Επόμενο κουίζ" : "Συνεχίζω τη θεωρία",
++        onSuccessActionsReady(ready) {
++          if (!destroyed && state.currentRound === index && roundHost.isConnected &&
++            typeof options.onSuccessActionsReady === "function") {
++            options.onSuccessActionsReady(index === 2 && state.solved && ready === true);
++          }
++        },
+         onReveal(request) {
+           if (!destroyed && state.currentRound === index && roundHost.isConnected &&
+             typeof options.onReveal === "function") options.onReveal(request);
+--- before/mulermoc-nom-54.html
++++ mulermoc-nom-54.html
+@@ -367,11 +367,11 @@
+   <script src="js/mulermoc-nom-molview-54.js?v=step7-numbering-directions-20261108-r3"></script>
+   <script src="js/mulermoc-nom-teaching-54.js?v=alkane-step5-interaction-20261106-r1"></script>
+   <script src="js/mulermoc-nom-note-54.js?v=v54-sync-20261104-r2"></script>
+-  <script src="js/namelecule-game-repair.js?v=optional-triples-20261110-r1"></script>
+-  <script src="js/namelecule-quiz-checkpoints.js?v=practice-navigation-20261110-r1"></script>
++  <script src="js/namelecule-game-repair.js?v=required-completion-navigation-20261110-r2"></script>
++  <script src="js/namelecule-quiz-checkpoints.js?v=required-completion-navigation-20261110-r2"></script>
+   <script src="js/namelecule-chemistry-client.js?v=verified-engines-20261105-r1"></script>
+   <script src="js/namelecule-repair-generator.js?v=engine-pilot-20261105-r1"></script>
+-  <script src="js/namelecule-generated-repair-checkpoint.js?v=optional-triples-20261110-r1"></script>
++  <script src="js/namelecule-generated-repair-checkpoint.js?v=required-completion-navigation-20261110-r2"></script>
+   <script src="js/mulermoc-nom-scenario-54.js?v=step7-numbering-directions-20261108-r3"></script>
+   <script src="js/mulermoc-nom-iupac-54.js?v=merge54-20261105-r1"></script>
+   <script src="js/mulermoc-nom-lang-54.js?v=merge54-20261105-r1"></script>
+--- before/mulermoc-nom-55.html
++++ mulermoc-nom-55.html
+@@ -360,11 +360,11 @@
+   <script src="js/mulermoc-nom-molview-55.js?v=namelecule-v55-20261110-r2"></script>
+   <script src="js/mulermoc-nom-teaching-55.js?v=namelecule-v55-20261110-r2"></script>
+   <script src="js/mulermoc-nom-note-55.js?v=namelecule-v55-20261110-r2"></script>
+-  <script src="js/namelecule-game-repair.js?v=optional-triples-20261110-r1"></script>
+-  <script src="js/namelecule-quiz-checkpoints.js?v=practice-navigation-20261110-r1"></script>
++  <script src="js/namelecule-game-repair.js?v=required-completion-navigation-20261110-r2"></script>
++  <script src="js/namelecule-quiz-checkpoints.js?v=required-completion-navigation-20261110-r2"></script>
+   <script src="js/namelecule-chemistry-client.js?v=verified-engines-20261105-r1"></script>
+   <script src="js/namelecule-repair-generator.js?v=engine-pilot-20261105-r1"></script>
+-  <script src="js/namelecule-generated-repair-checkpoint.js?v=optional-triples-20261110-r1"></script>
++  <script src="js/namelecule-generated-repair-checkpoint.js?v=required-completion-navigation-20261110-r2"></script>
+   <script src="js/mulermoc-nom-scenario-55.js?v=namelecule-v55-20261110-r2"></script>
+   <script src="js/mulermoc-nom-iupac-55.js?v=namelecule-v55-20261110-r2"></script>
+   <script src="js/mulermoc-nom-lang-55.js?v=namelecule-v55-20261110-r2"></script>

@@ -1,0 +1,256 @@
+{
+  "UTC": "2026-11-10T06:46:34Z",
+  "role": "Developer browser evidence; independent assessment supplied separately",
+  "baselinePassed": true,
+  "segmentedRequiredFlowsPassed": true,
+  "uninterruptedWarmReplayClaimed": false,
+  "directCompleted": true,
+  "earnedRoundLabels": [
+    "authored-s1r1",
+    "authored-s1r2",
+    "authored-s1r3",
+    "authored-s2r1",
+    "authored-s2r2",
+    "authored-s2r3",
+    "generated-basic-r1",
+    "generated-basic-r2",
+    "generated-basic-r3",
+    "generated-challenge-r1",
+    "generated-challenge-r2",
+    "generated-challenge-r3",
+    "main54-s4r1",
+    "main55-s11r1",
+    "main55-s11r2",
+    "main55-s11r3",
+    "main55-s4r1",
+    "main55-s4r2",
+    "main55-s4r3"
+  ],
+  "missingRequiredRoundLabels": [],
+  "normalAssertionsAcrossRetainedContinuationAndCompatibility": 441,
+  "normalSemanticActions": 85,
+  "uniqueEarnedRoundPositions": 19,
+  "normalRecordedEarnedObservations": 20,
+  "reducedCompleted": true,
+  "reducedAssertions": 12,
+  "nativeManualAndRapidChecks": [
+    "Exact eight served source hashes",
+    "Normal isolated profile motion preference",
+    "Page manual interruption uses trusted native upward wheel",
+    "Page manual interruption settles short of original reveal destination",
+    "Page manual interrupted position settles stably",
+    "Rapid page actions frame latest wrong-part response and hide choices"
+  ],
+  "dialogCancellationCompleted": true,
+  "main54HeaderCompleted": true,
+  "r2ZoomCompleted": true,
+  "r2ZoomAssertions": 33,
+  "resolvedFindings": {
+    "R1/P3": "Native standalone expanded state now true while modal open; guarded finalizer restores false.",
+    "R2/pre-existingP2": "Explicit Close awaits queued native close finalizer; enabled/focus restored and same-round reopen passes, Escape retained."
+  },
+  "javascriptErrors": {
+    "before-browser.json": 0,
+    "before-largest-browser.json": 0,
+    "after-browser.json": 0,
+    "root-embedded-r1-final-browser.json": 0,
+    "compatibility-r1-browser.json": 0,
+    "reduced-browser.json": 0,
+    "interruptions-r1-retained.json": 0,
+    "interruptions-dialog-r2-browser.json": 0,
+    "main54-header-r2-browser.json": 0,
+    "main54-header-r2-diagnostic-browser.json": 0,
+    "zoom-r1-browser.json": 0,
+    "zoom-r1-escape-browser.json": 0,
+    "zoom-r2-browser.json": 0
+  },
+  "r1Target": {
+    "js/namelecule-game-repair.js": "a159409448ac8148f0628f4bdc07457953372e9af92873e90f15ebb6f7d586a3",
+    "js/namelecule-generated-repair-checkpoint.js": "91da84de2ba1c59e73b1c96ca15af265da440a016f49c83b0e32a58d951f3a04",
+    "js/namelecule-quiz-checkpoints.js": "ea7e2cbca4f41535c83d5ee672198dd6ae23bebd1467fc5b126062f67a09fe3b",
+    "css/namelecule-repair-round.css": "0b089ab96ffd9dcd96cb81bc035f7cfd8cbeece838022d6a77c10372d69b8f67",
+    "games/name-repair.html": "77295ce9243ae3cde77d920b1589aea5c5b989669eeb4041994de5da4a8d9083",
+    "mulermoc-nom-54.html": "5336b080acd569190e4f57b4e3fa9616455e7d65180d8507a429a75e0415ec03",
+    "mulermoc-nom-55.html": "225a0244412957cd7c6daabbfae699dc9a5d904aef1472659c772701ddacf37d",
+    "design/welcome-proposal.html": "e840ba7df478763049fa7e1f2922efe027daa4f668eccce2d9d1deb26d3ffaec"
+  },
+  "r2Target": {
+    "js/namelecule-game-repair.js": "c4053848ced011ebbd3a0402ef4c2d7967be7671d4584a75b7646f2800bde297",
+    "js/namelecule-generated-repair-checkpoint.js": "91da84de2ba1c59e73b1c96ca15af265da440a016f49c83b0e32a58d951f3a04",
+    "js/namelecule-quiz-checkpoints.js": "ea7e2cbca4f41535c83d5ee672198dd6ae23bebd1467fc5b126062f67a09fe3b",
+    "css/namelecule-repair-round.css": "0b089ab96ffd9dcd96cb81bc035f7cfd8cbeece838022d6a77c10372d69b8f67",
+    "games/name-repair.html": "e1c902cf28119bbe69469ecbb91137bbd148499d8aeff778d81b977dfa0b8da0",
+    "mulermoc-nom-54.html": "6665dfe01620e05f0732afad912f6cfd180dc685af4b67ac09376a9166cf7df5",
+    "mulermoc-nom-55.html": "3eb1c906cb2469ad2b5c2d353d78be1f2df1b36a005dc2b95482ec6de2e49ea4",
+    "design/welcome-proposal.html": "bf51e87ad962ac930fe926f0b2d7bb08cb9e2ba7dfff13dfc96734e74bfad9b5"
+  },
+  "lineage": {
+    "sources": "verification-target.json exact8; reviewed-r1 copies preserved",
+    "direct": "browser/after-browser.json directCompleted true; all12 direct rounds genuinely earned",
+    "lessonGates": "browser/root-embedded-r1-final-browser.json six actual earned rounds across continuations, both gates pass",
+    "compatibility": "browser/compatibility-r1-browser.json library exit passes; Main54 actual first round earned, gate stays locked",
+    "partialHarnessFailures": {
+      "root-embedded-r1": "rotation prompt not dismissed after reload in narrow fixture",
+      "root-embedded-r1-final": "Exit fixture omitted from=theory-library; app correctly returned exploration",
+      "compatibility-r1": "helper wrongly rejects header controls above sticky header bottom despite actual hit=true",
+      "interruptions": "native manual and rapid checks pass; narrow lesson rotation prompt requires dismissal"
+    },
+    "navigation": "Trusted bounded7→8 passed. Earlier uninterrupted warm-sequence timeout lacks delivery evidence; not established as app regression; no claim reproduced or permanently fixed."
+  },
+  "reports": {
+    "before-browser.json": {
+      "completedFlag": true,
+      "checks": 10,
+      "failureRetained": null
+    },
+    "before-largest-browser.json": {
+      "completedFlag": true,
+      "checks": 4,
+      "failureRetained": null
+    },
+    "after-browser.json": {
+      "completedFlag": false,
+      "checks": 364,
+      "failureRetained": "Traceback (most recent call last):\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/workshop-lesson-parity-20261110/browser/check-after-embedded-second.py\", line 58, in <module>\n    OUT=json.loads((H/'after-attempt5-next-nonadvance.json').read_text());OUT.pop('failure',None);exec((H/'check-embedded-second.py').read_text(),globals());OUT['completed']=True\n  File \"<string>\", line 5, in <module>\n  File \"owned-parity-bidi\", line 42, in ev\n    if tall:viewport(390,320)\n  File \"owned-parity-bidi\", line 26, in call\n    shot(label+'-zoom');key('\\ue00c');check(ev('document.activeElement===document.querySelector(\".diagram-tools button\")&&!document.querySelector(\".zoom-dialog\")'),label+' Escape closes zoom and restores focus')\nTypeError: 'dict' object is not callable\n"
+    },
+    "root-embedded-r1-final-browser.json": {
+      "completedFlag": false,
+      "checks": 426,
+      "failureRetained": "Traceback (most recent call last):\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/workshop-lesson-parity-20261110/browser/check-after-embedded-second.py\", line 60, in <module>\n    OUT=json.loads((H/'after-attempt5-next-nonadvance.json').read_text());OUT.pop('failure',None);exec((H/'check-embedded-second.py').read_text(),globals());OUT['completed']=True\n  File \"<string>\", line 17, in <module>\n  File \"<string>\", line 18, in wait\nAssertionError: Timeout location.pathname.endsWith(\"/design/theory-library.html\")\n"
+    },
+    "compatibility-r1-browser.json": {
+      "completedFlag": false,
+      "checks": 15,
+      "failureRetained": "Traceback (most recent call last):\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/workshop-lesson-parity-20261110/browser/check-final-compatibility.py\", line 67, in <module>\n    seed_lesson(3,'4');open_lesson();f=GAMES['4']['alkanes-unbranched']['rounds'][0];solve(f,'main54-s4r1',0,True);check(ev('document.getElementById(\"scNext\").disabled&&!NameleculeQuizCheckpoints.isComplete(fScenarioPresent(),3)'),'Main54 same-source earned first round leaves required gate locked');click('#nlQuizBack');check(not ev('document.getElementById(\"nlQuizDialog\").open'),'Main54 close returns to lesson');OUT['completed']=True\n  File \"<string>\", line 37, in click\n  File \"<string>\", line 35, in prepare\nAssertionError: ('Unreachable', '#nlQuizBack', {'x': 1117, 'y': 85, 'top': 62.83332824707031, 'bottom': 106.83332824707031, 'safeTop': 124.83332824707031, 'safeBottom': 785, 'hit': True, 'disabled': False, 'dialog': True})\n"
+    },
+    "reduced-browser.json": {
+      "completedFlag": true,
+      "checks": 12,
+      "failureRetained": null
+    },
+    "interruptions-r1-retained.json": {
+      "completedFlag": false,
+      "checks": 6,
+      "failureRetained": "Traceback (most recent call last):\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/workshop-lesson-parity-20261110/browser/check-interruptions.py\", line 13, in <module>\n    for i in (1,2,3):click('#scNext');wait('fScenarioPresent().index==='+str(i)+'&&!MuLERMoCScenario.checkpointPreparation')\n  File \"<string>\", line 37, in click\n  File \"<string>\", line 35, in prepare\nAssertionError: ('Unreachable', '#scNext', {'x': 249, 'y': 21, 'top': 8, 'bottom': 34, 'safeTop': 3, 'safeBottom': 757, 'hit': False, 'disabled': False, 'dialog': False})\n"
+    },
+    "interruptions-dialog-r2-browser.json": {
+      "completedFlag": true,
+      "checks": 4,
+      "failureRetained": null
+    },
+    "main54-header-r2-browser.json": {
+      "completedFlag": false,
+      "checks": 4,
+      "failureRetained": "Traceback (most recent call last):\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/workshop-lesson-parity-20261110/browser/check-main54-header-r2.py\", line 63, in <module>\n    ev('Object.entries('+json.dumps(earned_storage,ensure_ascii=False)+').forEach(([k,v])=>sessionStorage.setItem(k,v));true');call('browsingContext.reload',{'context':ctx,'wait':'complete'});ready();ev('fScenarioGo(3);true');wait('fScenarioPresent().index===3&&!MuLERMoCScenario.checkpointPreparation');open_lesson();check(ev('!!document.querySelector(\".feedback.is-success\")&&document.getElementById(\"scNext\").disabled'),'Main54 genuine first-round receipt restored, gate stays locked');before=read('Object.fromEntries(Object.entries(sessionStorage))');click('#nlQuizBack');check(not ev('document.getElementById(\"nlQuizDialog\").open'),'Main54 native header Back closes dialog');click('#nlQuizOpen');image_ready();check(ev('!!document.querySelector(\".feedback.is-success\")')and before==read('Object.fromEntries(Object.entries(sessionStorage))'),'Main54 native reopen preserves exact receipt and success');OUT['completed']=True\n  File \"<string>\", line 20, in check\nAssertionError: ('Main54 native reopen preserves exact receipt and success', None)\n"
+    },
+    "main54-header-r2-diagnostic-browser.json": {
+      "completedFlag": true,
+      "checks": 5,
+      "failureRetained": null
+    },
+    "zoom-r1-browser.json": {
+      "completedFlag": true,
+      "checks": 1,
+      "failureRetained": null
+    },
+    "zoom-r1-escape-browser.json": {
+      "completedFlag": true,
+      "checks": 1,
+      "failureRetained": null
+    },
+    "zoom-r2-browser.json": {
+      "completedFlag": true,
+      "checks": 33,
+      "failureRetained": null
+    }
+  },
+  "limitations": [
+    "One initial Main54 reopen equality check failed without snapshots; instrumented rerun passed exact storage/success. Original comparison cause remains unknown; no product correction claimed.",
+    "Headless Firefox on this machine only; no Safari runtime, personal GUI, real mobile device, conference-machine or freeze-resolution guarantee.",
+    "Actual authored6/generatedbasic3/challenge3/lesson6/Main54one success observations are retained across bounded continuations. These are not one uninterrupted warm replay.",
+    "Exact already-earned receipts copied only to resume navigation/zoom/header fixtures, with source lineage. No fabricated solved receipts.",
+    "Earlier warm7→8 timeout lacked delivery evidence. Bounded native trusted7→8 passed after reload/receipt restoration; original warm sequence remains unverified.",
+    "MULER_QUIET_FETCH enabled; no external naming-service availability claim.",
+    "Controlled queued-close/destroy fixture uses same-task programmatic handlers, not human timing.",
+    "r1 functional flows and r2 zoom/cache correction have separate exact source targets; unchanged prefix/suffix verified."
+  ],
+  "ownership": {
+    "process.json": {
+      "serverPID": 84217,
+      "serverScript": "/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/workshop-lesson-parity-20261110/browser/owned-processes.py",
+      "firefoxPID": 84218,
+      "profile": "/var/folders/2v/ds4vjvgj1_1000kq1fzg70q40000gn/T/namelecule-workshop-parity-20261110-uml9zzq5",
+      "bidi_port": 54971,
+      "before_port": 54969,
+      "after_port": 54970,
+      "before_url": "http://127.0.0.1:54969/",
+      "after_url": "http://127.0.0.1:54970/",
+      "launchedUTC": "2026-11-10T06:38:10Z",
+      "scope": "Only new headless isolated profile; before overlay uses exact frozen eight files; no personal GUI control"
+    },
+    "process-reduced.json": {
+      "serverPID": 83395,
+      "serverScript": "/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/workshop-lesson-parity-20261110/browser/owned-reduced.py",
+      "firefoxPID": 83396,
+      "profile": "/var/folders/2v/ds4vjvgj1_1000kq1fzg70q40000gn/T/namelecule-workshop-parity-reduced-20261110-hkj7qw02",
+      "bidi_port": 54389,
+      "before_port": 54387,
+      "after_port": 54388,
+      "before_url": "http://127.0.0.1:54387/",
+      "after_url": "http://127.0.0.1:54388/",
+      "launchedUTC": "2026-11-10T06:03:10Z",
+      "scope": "Only new headless isolated profile; before overlay uses exact frozen eight files; no personal GUI control"
+    },
+    "process-initial-r1.json": {
+      "serverPID": 83005,
+      "serverScript": "/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/workshop-lesson-parity-20261110/browser/owned-processes.py",
+      "firefoxPID": 83006,
+      "profile": "/var/folders/2v/ds4vjvgj1_1000kq1fzg70q40000gn/T/namelecule-workshop-parity-20261110-8nh9egwp",
+      "bidi_port": 54155,
+      "before_port": 54153,
+      "after_port": 54154,
+      "before_url": "http://127.0.0.1:54153/",
+      "after_url": "http://127.0.0.1:54154/",
+      "launchedUTC": "2026-11-10T05:57:34Z",
+      "scope": "Only new headless isolated profile; before overlay uses exact frozen eight files; no personal GUI control"
+    }
+  },
+  "cleanup": {
+    "actions": [
+      {
+        "record": "process.json",
+        "pid": 84218,
+        "signal": "TERM",
+        "matchedToken": "/var/folders/2v/ds4vjvgj1_1000kq1fzg70q40000gn/T/namelecule-workshop-parity-20261110-uml9zzq5"
+      },
+      {
+        "record": "process.json",
+        "pid": 84217,
+        "signal": "TERM",
+        "matchedToken": "docs/checks/workshop-lesson-parity-20261110/browser/owned-processes.py"
+      },
+      {
+        "record": "process-reduced.json",
+        "pid": 83396,
+        "signal": "TERM",
+        "matchedToken": "/var/folders/2v/ds4vjvgj1_1000kq1fzg70q40000gn/T/namelecule-workshop-parity-reduced-20261110-hkj7qw02"
+      },
+      {
+        "record": "process-reduced.json",
+        "pid": 83395,
+        "signal": "TERM",
+        "matchedToken": "docs/checks/workshop-lesson-parity-20261110/browser/owned-reduced.py"
+      }
+    ],
+    "ports": {
+      "54971": "closed",
+      "54969": "closed",
+      "54970": "closed",
+      "54389": "closed",
+      "54387": "closed",
+      "54388": "closed"
+    },
+    "personalGUI": "Not targeted",
+    "UTC": "2026-11-10T06:46:17Z"
+  }
+}

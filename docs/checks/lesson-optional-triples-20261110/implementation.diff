@@ -1,0 +1,551 @@
+--- before/js/namelecule-game-repair.js
++++ after/js/namelecule-game-repair.js
+@@ -585,8 +585,9 @@
+       const hasCandidate = data.kind === "order" || (hasTarget && current.selectedValue !== null);
+       refs.checkButton.disabled = !enabled || !hasCandidate;
+       refs.zoomButton.disabled = mainImageStatus !== "ready" || !!zoomPanel;
+-      const continueButton = refs.next.querySelector("button");
+-      if (continueButton) continueButton.disabled = !diagramsReady() || !current.solved;
++      refs.next.querySelectorAll("button").forEach(function (nextButton) {
++        nextButton.disabled = !diagramsReady() || !current.solved;
++      });
+       refs.checkHelper.textContent = current.solved ? "Η επισκευή ολοκληρώθηκε. Συνέχισε όταν είσαι έτοιμος ή έτοιμη." : !diagramsReady() ? "Περιμένουμε να εμφανιστούν οι δομές πριν από τον έλεγχο." : data.kind === "order" ? "Επιλέγεις κλάδο, πατάς ένα βέλος και ελέγχεις τη νέα σειρά." : hasCandidate ? "Ο έλεγχος μετρά ως μία προσπάθεια. Μπορείς να δοκιμάσεις ξανά." : "Διάλεξε πρώτα το κομμάτι και έπειτα μια αντικατάσταση.";
+       refs.sessionStats.textContent = "Προσπάθειες σε αυτή την " + (data.guided ? "πρόβα " : "αποστολή ") + current.attempts;
+       if (restoreId) restoreFocus(restoreId);
+@@ -633,6 +634,13 @@
+         if (typeof options.onContinue === "function") options.onContinue(getState());
+       });
+       replaceChildren(refs.next, next);
++      if (typeof options.onNewPractice === "function") {
++        refs.next.classList.add("has-practice-action");
++        refs.next.append(button(options.newPracticeLabel || "Άλλη τριάδα για εξάσκηση", "secondary", function () {
++          if (destroyed || !diagramsReady() || !state().solved) return;
++          options.onNewPractice(getState());
++        }));
++      }
+       updateControls();
+       if (fresh) {
+         next.focus({ preventScroll: true });
+--- before/js/namelecule-generated-repair-checkpoint.js
++++ after/js/namelecule-generated-repair-checkpoint.js
+@@ -7,6 +7,8 @@
+   const CATALOG_SHA = "9778e30ea33f2f7cd4c8a472e46e90539856b861a54035a1d514c3246cccf724";
+   const recipeKeys = ["version", "setId", "difficulty", "roundCount", "generatorVersion", "catalogRevision", "engineSHA256"];
+   const prepared = new Map();
++  // Optional attempts must never evict the sets used to verify earned progress.
++  const practices = new Map();
+   let source = null;
+   function assert(condition, message) { if (!condition) throw new Error(message); }
+   function cancelled() {
+@@ -41,12 +43,12 @@
+     });
+     return result;
+   }
+-  function restore(recipe, previous) {
++  function restoreFromCache(recipe, previous, cache) {
+     validate(recipe);
+     const seed = previous && previous.version === VERSION && seedValue(previous.seed);
+     if (!seed) return { version: VERSION, seed: null, currentRound: 0, states: [null, null, null], solved: false };
+     const raw = Array.isArray(previous.states) && previous.states.length === 3 ? previous.states.map(cleanRound) : [null, null, null];
+-    const set = prepared.get(key(recipe, seed));
++    const set = cache.get(key(recipe, seed));
+     let states = raw;
+     let currentRound = Number.isInteger(previous.currentRound) && previous.currentRound >= 0 && previous.currentRound < 3 ? previous.currentRound : 0;
+     let solved = false;
+@@ -62,6 +64,20 @@
+     }
+     return { version: VERSION, seed, currentRound, states, solved };
+   }
++  function restore(recipe, previous) { return restoreFromCache(recipe, previous, prepared); }
++  function restorePractice(recipe, previous) { return restoreFromCache(recipe, previous, practices); }
++  function freshSeed(previousSeed) {
++    const values = new Uint32Array(2);
++    global.crypto.getRandomValues(values);
++    const seed = String(values[0]) + String(values[1]);
++    // Even repeated random bytes must start a different immediate attempt.
++    return seed === previousSeed ? seed.slice(0, -1) + ((Number(seed.slice(-1)) + 1) % 10) : seed;
++  }
++  function createPractice(recipe, previous) {
++    validate(recipe);
++    return { version: VERSION, seed: freshSeed(seedValue(previous && previous.seed)),
++      currentRound: 0, states: [null, null, null], solved: false };
++  }
+   async function loadSource(signal) {
+     checkSignal(signal);
+     if (source) return source;
+@@ -89,11 +105,11 @@
+     source = { catalog, analyses };
+     return source;
+   }
+-  async function generate(recipe, seed, signal) {
++  async function generate(recipe, seed, signal, cache, limit) {
+     validate(recipe);
+     checkSignal(signal);
+     const cacheKey = key(recipe, seed);
+-    if (prepared.has(cacheKey)) return prepared.get(cacheKey);
++    if (cache.has(cacheKey)) return cache.get(cacheKey);
+     const controller = new AbortController();
+     const abort = () => controller.abort();
+     if (signal) signal.addEventListener("abort", abort, { once: true });
+@@ -106,8 +122,8 @@
+         { seed, difficulty: recipe.difficulty }));
+       const set = game.sets.find(entry => entry.id === recipe.setId);
+       assert(set && set.rounds.length === 3, "Το σετ επισκευών δεν είναι διαθέσιμο.");
+-      if (prepared.size >= 32) prepared.delete(prepared.keys().next().value);
+-      prepared.set(cacheKey, set);
++      if (cache.size >= limit) cache.delete(cache.keys().next().value);
++      cache.set(cacheKey, set);
+       return set;
+     } catch (error) {
+       controller.abort();
+@@ -122,7 +138,7 @@
+   function prepare(recipe, previous, options) {
+     const state = restore(recipe, previous);
+     if (!state.seed || prepared.has(key(recipe, state.seed))) return null;
+-    return generate(recipe, state.seed, options && options.signal).then(() => restore(recipe, state));
++    return generate(recipe, state.seed, options && options.signal, prepared, 32).then(() => restore(recipe, state));
+   }
+   function node(tag, className, text) {
+     const element = global.document.createElement(tag);
+@@ -130,20 +146,18 @@
+     if (text) element.textContent = text;
+     return element;
+   }
+-  function mount(host, options) {
++  function mountSet(host, options, practice) {
+     const recipe = validate(options.round);
++    const restoreState = practice ? restorePractice : restore;
++    const cache = practice ? practices : prepared;
+     const controller = new AbortController();
+-    let state = restore(recipe, options.initialState);
++    let state = restoreState(recipe, options.initialState);
+     let destroyed = false;
+     let current = null;
+     let token = 0;
+-    if (!state.seed) {
+-      const values = new Uint32Array(2);
+-      global.crypto.getRandomValues(values);
+-      state.seed = String(values[0]) + String(values[1]);
+-    }
++    if (!state.seed) state.seed = freshSeed(null);
+     function publish() {
+-      state = restore(recipe, state);
++      state = restoreState(recipe, state);
+       if (!destroyed && typeof options.onStateChange === "function") options.onStateChange(JSON.parse(JSON.stringify(state)));
+     }
+     function reportProgress(value) {
+@@ -161,7 +175,7 @@
+       host.replaceChildren(progress, roundHost);
+       host.setAttribute("aria-busy", "false");
+       const presentation = global.NameleculeRepairGame.presentationForRound(set.rounds[index], { difficulty: recipe.difficulty });
+-      current = global.NameleculeRepairGame.mountRound(roundHost, Object.assign({}, presentation, {
++      const roundOptions = Object.assign({}, presentation, {
+         initialState: state.states[index], assetBase: options.assetBase,
+         continueLabel: index < 2 ? "Επόμενο κουίζ" : "Συνεχίζω τη θεωρία",
+         onReveal(request) {
+@@ -189,7 +203,14 @@
+             if (heading) { heading.tabIndex = -1; heading.focus({ preventScroll: true }); }
+           } else if (state.solved && typeof options.onContinue === "function") options.onContinue();
+         }
+-      }));
++      });
++      if (index === 2 && typeof options.onNewPractice === "function") {
++        roundOptions.newPracticeLabel = options.newPracticeLabel;
++        roundOptions.onNewPractice = function () {
++          if (!destroyed && state.currentRound === index && state.solved && roundHost.isConnected) options.onNewPractice();
++        };
++      }
++      current = global.NameleculeRepairGame.mountRound(roundHost, roundOptions);
+       reportProgress({ current: index + 1, total: recipe.roundCount });
+     }
+     function start() {
+@@ -201,9 +222,9 @@
+       loading.setAttribute("role", "status");
+       host.replaceChildren(loading);
+       publish(); // Record the seed before any asynchronous work or refresh.
+-      generate(recipe, state.seed, controller.signal).then(set => {
++      generate(recipe, state.seed, controller.signal, cache, practice ? 2 : 32).then(set => {
+         if (destroyed || request !== token) return;
+-        state = restore(recipe, state);
++        state = restoreState(recipe, state);
+         publish();
+         render(set);
+       }).catch(error => {
+@@ -230,6 +251,9 @@
+       host.replaceChildren();
+     } };
+   }
++  function mount(host, options) { return mountSet(host, options, false); }
++  function mountPractice(host, options) { return mountSet(host, options, true); }
+   assert(global.NameleculeQuizCheckpoints, "Checkpoint controller unavailable");
+-  global.NameleculeQuizCheckpoints.registerType("generated-name-repair-set", { validate, restore, prepare, mount });
++  global.NameleculeQuizCheckpoints.registerType("generated-name-repair-set",
++    { validate, restore, prepare, mount, createPractice, restorePractice, mountPractice });
+ })(typeof window !== "undefined" ? window : globalThis);
+--- before/js/namelecule-quiz-checkpoints.js
++++ after/js/namelecule-quiz-checkpoints.js
+@@ -15,6 +15,12 @@
+   let mounted = null;
+   let mountToken = 0;
+   let responseRevealer = null;
++  let practiceContinue = null;
++  let practiceNotice = null;
++
++  function supportsPractice(adapter) {
++    return ["createPractice", "restorePractice", "mountPractice"].every(key => typeof adapter[key] === "function");
++  }
+ 
+   function registerType(name, adapter) {
+     if (!/^[a-z][a-z0-9-]{0,48}$/.test(name) || own(types, name) || !adapter ||
+@@ -82,6 +88,7 @@
+     if (records.has(content)) return records.get(content);
+     const key = storagePrefix + hash(content);
+     let states = Object.create(null);
++    let practices = Object.create(null);
+     let storageAvailable = true;
+     try {
+       const saved = JSON.parse(global.sessionStorage.getItem(key) || "null");
+@@ -94,12 +101,16 @@
+             try {
+               const spec = validateCheckpoint(step.checkpoint);
+               states[index] = types[spec.type].restore(spec.round, saved.states[index]);
++              if (supportsPractice(types[spec.type]) && saved.practices && own(saved.practices, index)) {
++                try { practices[index] = types[spec.type].restorePractice(spec.round, saved.practices[index]); }
++                catch (_) { /* Optional progress cannot invalidate an earned required receipt. */ }
++              }
+             } catch (_) { /* Invalid stored progress never unlocks a checkpoint. */ }
+           }
+         }
+       }
+     } catch (_) { storageAvailable = false; }
+-    const result = { key, content, states, storageAvailable };
++    const result = { key, content, states, practices, storageAvailable };
+     records.set(content, result);
+     return result;
+   }
+@@ -107,7 +118,7 @@
+   function persist(record) {
+     if (record.temporary) return;
+     try {
+-      global.sessionStorage.setItem(record.key, JSON.stringify({ version: 1, content: record.content, states: record.states }));
++      global.sessionStorage.setItem(record.key, JSON.stringify({ version: 1, content: record.content, states: record.states, practices: record.practices }));
+       record.storageAvailable = true;
+     } catch (_) { record.storageAvailable = false; }
+   }
+@@ -192,6 +203,18 @@
+       storage: "Progress is kept only while this page remains open; tab storage is unavailable.",
+       reset: "New attempt", resetLabel: "Start this repair again" }
+   };
++  Object.assign(words.gr, {
++    practice: "Άλλη τριάδα για εξάσκηση", resumePractice: "Συνέχισε την εξάσκηση",
++    practiceTitle: "Προαιρετική εξάσκηση", continueLesson: "Συνεχίζω τη θεωρία",
++    practiceNote: "Η αρχική τριάδα ολοκληρώθηκε. Μπορείς να συνεχίσεις τη θεωρία οποιαδήποτε στιγμή.",
++    preparing: "Επαληθεύεται η αποθηκευμένη πρόοδός σου…"
++  });
++  Object.assign(words.en, {
++    practice: "Another three for practice", resumePractice: "Resume practice",
++    practiceTitle: "Optional practice", continueLesson: "Continue the lesson",
++    practiceNote: "The required set is complete. You can continue the lesson at any time.",
++    preparing: "Checking your saved progress…"
++  });
+   function text(key) {
+     let lang = "gr";
+     try { if (typeof global.fMulerLang === "function" && global.fMulerLang() === "en") lang = "en"; } catch (_) {}
+@@ -250,6 +273,14 @@
+     title.id = "nlQuizDialogTitle";
+     const back = button("", "nl-quiz-button nl-quiz-back", closeDialog);
+     back.id = "nlQuizBack";
++    practiceContinue = button("", "nl-quiz-button nl-quiz-practice-continue", () => { if (active) continueLesson(active); });
++    practiceContinue.id = "nlQuizPracticeContinue";
++    practiceContinue.hidden = true;
++    practiceNotice = node("p", "nl-quiz-practice-notice");
++    practiceNotice.id = "nlQuizPracticeNotice";
++    practiceNotice.hidden = true;
++    const copy = node("div", "nl-quiz-dialog-copy");
++    copy.append(title, practiceNotice);
+     const actions = node("div", "nl-quiz-dialog-actions");
+     progressCounter = node("span", "nl-quiz-round-progress");
+     progressCounter.id = "nlQuizProgress";
+@@ -257,8 +288,8 @@
+     progressCounter.setAttribute("role", "status");
+     progressCounter.setAttribute("aria-live", "polite");
+     progressCounter.setAttribute("aria-atomic", "true");
+-    actions.append(progressCounter, back);
+-    header.append(title, actions);
++    actions.append(progressCounter, practiceContinue, back);
++    header.append(copy, actions);
+     mountHost = node("div", "nl-quiz-host");
+     mountHost.id = "nlQuizHost";
+     retryButton = button("", "nl-quiz-button nl-quiz-retry", () => { if (active) mountQuestion(active); });
+@@ -289,7 +320,7 @@
+     dialog.addEventListener("wheel", stopResponseScroll, { passive: true });
+     dialog.addEventListener("touchstart", stopResponseScroll, { passive: true });
+     dialog.addEventListener("pointerdown", stopResponseScroll, { passive: true });
+-    dialog.addEventListener("close", destroyMount);
++    dialog.addEventListener("close", () => { if (!dialog.open) destroyMount(); });
+     global.document.body.append(dialog);
+   }
+ 
+@@ -305,15 +336,59 @@
+   function refreshCard(context) {
+     if (active !== context) return;
+     const done = isComplete(context.scenario, context.index);
+-    context.status.textContent = text(done ? "done" : "instruction");
++    context.status.textContent = text(context.preparing ? "preparing" : done ? "done" : "instruction");
++    context.openButton.disabled = !!context.preparing;
+     context.openButton.textContent = done ? text("revisit") : (context.spec.openLabel || text("open"));
+     context.section.classList.toggle("nl-quiz-complete", done);
++    context.practiceButton.hidden = !done || !supportsPractice(types[context.spec.type]);
++    context.practiceButton.textContent = text(context.record.practices[context.index] ? "resumePractice" : "practice");
+     context.storageNote.textContent = context.record.storageAvailable ? "" : text("storage");
+     context.storageNote.hidden = context.record.storageAvailable;
+   }
+   function updateNavigation(context) {
+     refreshCard(context);
+     if (typeof global.fScenarioPlayUi === "function") global.fScenarioPlayUi();
++  }
++  function continueLesson(context) {
++    if (!currentContext(context) || !isComplete(context.scenario, context.index)) return;
++    const destination = context.index + 1;
++    closeDialog();
++    if (typeof global.fScenarioGo === "function") global.fScenarioGo(destination);
++  }
++  function updateDialog(context) {
++    dialog.querySelector("#nlQuizDialogTitle").textContent = text(context.practice ? "practiceTitle" : "label");
++    practiceNotice.textContent = text("practiceNote");
++    practiceNotice.hidden = !context.practice;
++    practiceContinue.textContent = text("continueLesson");
++    practiceContinue.hidden = !context.practice;
++  }
++  function newPractice(context) {
++    const adapter = types[context.spec.type];
++    if (!currentContext(context) || !supportsPractice(adapter) || !isComplete(context.scenario, context.index)) return;
++    context.record.practices[context.index] = adapter.createPractice(context.spec.round,
++      context.record.practices[context.index] || context.record.states[context.index]);
++    persist(context.record);
++    refreshCard(context);
++    openDialog(context, true);
++  }
++  function prepareRequired(context) {
++    const adapter = types[context.spec.type], saved = context.record.states[context.index];
++    if (!supportsPractice(adapter) || !saved || typeof adapter.prepare !== "function") return;
++    const abort = new AbortController();
++    context.preparationAbort = abort;
++    const original = JSON.stringify(saved);
++    try {
++      const pending = adapter.prepare(context.spec.round, clone(saved), { signal: abort.signal });
++      if (!pending || typeof pending.then !== "function") return;
++      context.preparing = true;
++      Promise.resolve(pending).then(state => {
++        if (abort.signal.aborted || !currentContext(context) || JSON.stringify(context.record.states[context.index]) !== original) return;
++        context.record.states[context.index] = adapter.restore(context.spec.round, state);
++        persist(context.record);
++      }).catch(() => { /* Open the original repair to retry; optional state never grants access. */ }).finally(() => {
++        if (!abort.signal.aborted && currentContext(context)) { context.preparing = false; updateNavigation(context); }
++      });
++    } catch (_) { /* The ordinary required mount retains its retry UI. */ }
+   }
+   function mountQuestion(context) {
+     if (!currentContext(context)) return;
+@@ -323,9 +398,18 @@
+     retryButton.hidden = true;
+     try {
+       const spec = validateCheckpoint(context.spec);
+-      mounted = types[spec.type].mount(mountHost, {
++      const adapter = types[spec.type];
++      const optional = context.practice && supportsPractice(adapter) && isComplete(context.scenario, context.index);
++      context.practice = !!optional;
++      updateDialog(context);
++      const states = optional ? context.record.practices : context.record.states;
++      const restore = optional ? adapter.restorePractice : adapter.restore;
++      const mount = optional ? adapter.mountPractice : adapter.mount;
++      mounted = mount(mountHost, {
+         round: clone(spec.round), assetBase: "games/",
+-        initialState: context.record.states[context.index] ? clone(context.record.states[context.index]) : null,
++        initialState: states[context.index] ? clone(states[context.index]) : null,
++        newPracticeLabel: text("practice"),
++        onNewPractice: supportsPractice(adapter) ? () => { if (token === mountToken) newPractice(context); } : undefined,
+         onProgress(value) {
+           if (token !== mountToken || !currentContext(context)) return;
+           showProgress(value);
+@@ -344,24 +428,22 @@
+         onStateChange(state) {
+           if (token !== mountToken || !currentContext(context)) return;
+           const wasComplete = isComplete(context.scenario, context.index);
+-          context.record.states[context.index] = types[spec.type].restore(spec.round, state);
++          states[context.index] = restore(spec.round, state);
+           persist(context.record);
+           refreshCard(context);
+           if (wasComplete !== isComplete(context.scenario, context.index)) updateNavigation(context);
+         },
+         onSolved(result, state) {
+           if (token !== mountToken || !currentContext(context) || !result || result.kind !== "correct") return;
+-          const normalized = types[spec.type].restore(spec.round, state);
++          const normalized = restore(spec.round, state);
+           if (!normalized.solved) return;
+-          context.record.states[context.index] = normalized;
++          states[context.index] = normalized;
+           persist(context.record);
+           updateNavigation(context);
+         },
+         onContinue() {
+           if (token !== mountToken || !currentContext(context) || !isComplete(context.scenario, context.index)) return;
+-          const destination = context.index + 1;
+-          closeDialog();
+-          if (typeof global.fScenarioGo === "function") global.fScenarioGo(destination);
++          continueLesson(context);
+         }
+       });
+     } catch (_) {
+@@ -370,10 +452,11 @@
+       retryButton.hidden = false;
+     }
+   }
+-  function openDialog(context) {
+-    if (!currentContext(context)) return;
++  function openDialog(context, optional) {
++    if (!currentContext(context) || context.preparing) return;
++    context.practice = optional === true && supportsPractice(types[context.spec.type]) && isComplete(context.scenario, context.index);
+     ensureDialog();
+-    dialog.querySelector("#nlQuizDialogTitle").textContent = text("label");
++    updateDialog(context);
+     dialog.querySelector("#nlQuizBack").textContent = text("back");
+     retryButton.textContent = text("retry");
+     if (typeof dialog.showModal !== "function") {
+@@ -386,6 +469,7 @@
+ 
+   function onExit() {
+     closeDialog();
++    if (active && active.preparationAbort) active.preparationAbort.abort();
+     if (active && active.section) active.section.remove();
+     active = null;
+   }
+@@ -401,7 +485,7 @@
+     endPreview();
+     onExit();
+     preview = { scenario, record: { key: null, content: signature(scenario),
+-      states: Object.create(null), storageAvailable: true, temporary: true } };
++      states: Object.create(null), practices: Object.create(null), storageAvailable: true, temporary: true } };
+   }
+   function onStep(scenario, index) {
+     const step = scenario && scenario.steps && scenario.steps[index];
+@@ -426,19 +510,29 @@
+     const context = { scenario, index, spec, section, status, storageNote, record: recordFor(scenario) };
+     context.openButton = button("", "nl-quiz-button nl-quiz-open", () => openDialog(context));
+     context.openButton.id = "nlQuizOpen";
+-    section.append(copy, context.openButton);
++    context.practiceButton = button("", "nl-quiz-button nl-quiz-practice-open", () => {
++      if (context.record.practices[context.index]) openDialog(context, true);
++      else newPractice(context);
++    });
++    context.practiceButton.id = "nlQuizPracticeOpen";
++    context.practiceButton.hidden = true;
++    const actions = node("div", "nl-quiz-checkpoint-actions");
++    actions.append(context.openButton, context.practiceButton);
++    section.append(copy, actions);
+     const note = global.document.getElementById("scStepText");
+     const title = global.document.getElementById("pageTitle");
+     if (note && note.parentNode) note.insertAdjacentElement("afterend", section);
+     else if (title && title.parentNode) title.insertAdjacentElement("afterend", section);
+     else global.document.body.append(section);
+     active = context;
++    prepareRequired(context);
+     refreshCard(context);
+   }
+ 
+   function reset(scenario) {
+     const record = recordFor(scenario);
+     record.states = Object.create(null);
++    record.practices = Object.create(null);
+     persist(record);
+     if (active && active.scenario === scenario) { closeDialog(); updateNavigation(active); }
+   }
+--- before/css/namelecule-repair-round.css
++++ after/css/namelecule-repair-round.css
+@@ -143,6 +143,8 @@
+ .nl-repair-round .success-name { display: block; font-size: 17.44px; font-weight: 750; margin-bottom: 7px; overflow-wrap: anywhere; }
+ .nl-repair-round .success-explanation { margin: 0; }
+ .nl-repair-round .round-next { display: flex; justify-content: flex-end; margin-top: 16px; }
++.nl-repair-round .round-next.has-practice-action { gap: 10px; flex-wrap: wrap; }
++.nl-repair-round .round-next.has-practice-action > button { min-width: 0; white-space: normal; overflow-wrap: anywhere; }
+ .nl-repair-round .session-row { display: flex; align-items: center; justify-content: space-between; gap: 14px; margin-top: 18px; color: var(--muted); font-size: 11.04px; }
+ .nl-repair-round .session-row .quiet { font-size: 11.04px; min-height: 40px; padding: 7px 10px; }
+ 
+--- before/css/namelecule-quiz-checkpoints.css
++++ after/css/namelecule-quiz-checkpoints.css
+@@ -62,6 +62,11 @@
+   border-bottom: 1px solid #c7dcd2;
+ }
+ .nl-quiz-dialog .nl-quiz-dialog-title { flex: 1; min-width: 0; margin: 0; font: 700 1.05rem/1.4 system-ui, sans-serif; }
++.nl-quiz-dialog-copy { flex: 1; min-width: 0; }
++.nl-quiz-practice-notice { margin: 6px 0 0; font-size: .9rem; line-height: 1.4; }
++.nl-quiz-checkpoint-actions { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 10px; }
++.nl-quiz-checkpoint-actions > button { max-width: 100%; }
++.nl-quiz-practice-continue { max-width: 100%; background: #254c50; color: #fff; }
+ .nl-quiz-dialog-actions { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; max-width: 55%; }
+ .nl-quiz-dialog .nl-quiz-dialog-actions .nl-quiz-back { max-width: 100%; }
+ .nl-quiz-round-progress {
+@@ -79,6 +84,7 @@
+ .nl-quiz-dialog [hidden], .nl-quiz-checkpoint [hidden] { display: none !important; }
+ @media (max-width: 650px) {
+   .nl-quiz-checkpoint { flex-direction: column; align-items: stretch; padding: 16px; }
++  .nl-quiz-checkpoint-actions { justify-content: flex-start; }
+   .nl-quiz-dialog { width: calc(100% - 12px); max-width: calc(100% - 12px); max-height: calc(100dvh - 12px); border-radius: 14px; }
+   .nl-quiz-dialog-header { padding: 12px; gap: 10px; align-items: flex-start; }
+   .nl-quiz-dialog .nl-quiz-host { padding: 14px; }
+--- before/mulermoc-nom-54.html
++++ after/mulermoc-nom-54.html
+@@ -48,8 +48,8 @@
+   <link rel="stylesheet" href="css/mulermoc-nom-scenario-54.css?v=step7-numbering-directions-20261108-r3" />
+ 
+   <link rel="stylesheet" href="css/namelecule-54.css?v=v54-sync-20261104-r2" />
+-  <link rel="stylesheet" href="css/namelecule-repair-round.css?v=workshop-lesson-parity-20261110-r1" />
+-  <link rel="stylesheet" href="css/namelecule-quiz-checkpoints.css?v=quiz-header-progress-20261108-r1" />
++  <link rel="stylesheet" href="css/namelecule-repair-round.css?v=optional-triples-20261110-r1" />
++  <link rel="stylesheet" href="css/namelecule-quiz-checkpoints.css?v=optional-triples-20261110-r1" />
+   <script src="js/namelecule-label-metrics.js?v=20261031-r1"></script>
+   <script src="js/vendor/jsme/namelecule-20261031-r1/jsme.nocache.js"></script>
+   <script src="js/vendor/jquery/jquery-4.0.0.min.js"></script>
+@@ -367,11 +367,11 @@
+   <script src="js/mulermoc-nom-molview-54.js?v=step7-numbering-directions-20261108-r3"></script>
+   <script src="js/mulermoc-nom-teaching-54.js?v=alkane-step5-interaction-20261106-r1"></script>
+   <script src="js/mulermoc-nom-note-54.js?v=v54-sync-20261104-r2"></script>
+-  <script src="js/namelecule-game-repair.js?v=workshop-lesson-parity-20261110-r2"></script>
+-  <script src="js/namelecule-quiz-checkpoints.js?v=workshop-lesson-parity-20261110-r1"></script>
++  <script src="js/namelecule-game-repair.js?v=optional-triples-20261110-r1"></script>
++  <script src="js/namelecule-quiz-checkpoints.js?v=optional-triples-20261110-r1"></script>
+   <script src="js/namelecule-chemistry-client.js?v=verified-engines-20261105-r1"></script>
+   <script src="js/namelecule-repair-generator.js?v=engine-pilot-20261105-r1"></script>
+-  <script src="js/namelecule-generated-repair-checkpoint.js?v=workshop-lesson-parity-20261110-r1"></script>
++  <script src="js/namelecule-generated-repair-checkpoint.js?v=optional-triples-20261110-r1"></script>
+   <script src="js/mulermoc-nom-scenario-54.js?v=step7-numbering-directions-20261108-r3"></script>
+   <script src="js/mulermoc-nom-iupac-54.js?v=merge54-20261105-r1"></script>
+   <script src="js/mulermoc-nom-lang-54.js?v=merge54-20261105-r1"></script>
+--- before/mulermoc-nom-55.html
++++ after/mulermoc-nom-55.html
+@@ -48,8 +48,8 @@
+   <link rel="stylesheet" href="css/mulermoc-nom-scenario-55.css?v=namelecule-v55-20261110-r2" />
+ 
+   <link rel="stylesheet" href="css/namelecule-55.css?v=namelecule-v55-20261110-r2" />
+-  <link rel="stylesheet" href="css/namelecule-repair-round.css?v=workshop-lesson-parity-20261110-r1" />
+-  <link rel="stylesheet" href="css/namelecule-quiz-checkpoints.css?v=quiz-header-progress-20261108-r1" />
++  <link rel="stylesheet" href="css/namelecule-repair-round.css?v=optional-triples-20261110-r1" />
++  <link rel="stylesheet" href="css/namelecule-quiz-checkpoints.css?v=optional-triples-20261110-r1" />
+   <script src="js/namelecule-label-metrics.js?v=20261031-r1"></script>
+   <script src="js/vendor/jsme/namelecule-20261031-r1/jsme.nocache.js"></script>
+   <script src="js/vendor/jquery/jquery-4.0.0.min.js"></script>
+@@ -360,11 +360,11 @@
+   <script src="js/mulermoc-nom-molview-55.js?v=namelecule-v55-20261110-r2"></script>
+   <script src="js/mulermoc-nom-teaching-55.js?v=namelecule-v55-20261110-r2"></script>
+   <script src="js/mulermoc-nom-note-55.js?v=namelecule-v55-20261110-r2"></script>
+-  <script src="js/namelecule-game-repair.js?v=workshop-lesson-parity-20261110-r2"></script>
+-  <script src="js/namelecule-quiz-checkpoints.js?v=workshop-lesson-parity-20261110-r1"></script>
++  <script src="js/namelecule-game-repair.js?v=optional-triples-20261110-r1"></script>
++  <script src="js/namelecule-quiz-checkpoints.js?v=optional-triples-20261110-r1"></script>
+   <script src="js/namelecule-chemistry-client.js?v=verified-engines-20261105-r1"></script>
+   <script src="js/namelecule-repair-generator.js?v=engine-pilot-20261105-r1"></script>
+-  <script src="js/namelecule-generated-repair-checkpoint.js?v=workshop-lesson-parity-20261110-r1"></script>
++  <script src="js/namelecule-generated-repair-checkpoint.js?v=optional-triples-20261110-r1"></script>
+   <script src="js/mulermoc-nom-scenario-55.js?v=namelecule-v55-20261110-r2"></script>
+   <script src="js/mulermoc-nom-iupac-55.js?v=namelecule-v55-20261110-r2"></script>
+   <script src="js/mulermoc-nom-lang-55.js?v=namelecule-v55-20261110-r2"></script>

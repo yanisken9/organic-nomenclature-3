@@ -1,0 +1,81 @@
+{
+  "UTC": "2026-11-10T05:40:00.579281+00:00",
+  "userAcceptance": "User liked the preview and explicitly requested incorporation of our changes.",
+  "status": "Accepted as normal local Main55 lesson presentation; no additional runtime edits were necessary.",
+  "lessonURL": "http://127.0.0.1:8013/mulermoc-nom-55.html?scenario=scenarios/alkanes-user-3.scenario.json&present=1&from=theory-library&v=alkanes-personal-20261106-r1",
+  "verifiedHTTP": [
+    {
+      "url": "http://127.0.0.1:8013/design/theory-library.html",
+      "localPath": "design/theory-library.html",
+      "status": 200,
+      "SHA256": "87e557a3455f14a851dc631c8d70bf93fe396f4a5ebdb8fde4fa78397158e8dc",
+      "matchesLocal": true
+    },
+    {
+      "url": "http://127.0.0.1:8013/mulermoc-nom-55.html?scenario=scenarios/alkanes-user-3.scenario.json&present=1&from=theory-library&v=alkanes-personal-20261106-r1",
+      "localPath": "mulermoc-nom-55.html",
+      "status": 200,
+      "SHA256": "df2032255ead6d3e211720e83d675daa22cba9669bf25a809028204cf0fe4fd5",
+      "matchesLocal": true
+    },
+    {
+      "url": "http://127.0.0.1:8013/js/namelecule-generated-repair-checkpoint.js?v=quiz-zoom-icon-20261110-r1",
+      "localPath": "js/namelecule-generated-repair-checkpoint.js",
+      "status": 200,
+      "SHA256": "7a067fdcefde58cf1dfa30af208e6355831d6fab34ffd8b1ed81a689cdeff375",
+      "matchesLocal": true
+    },
+    {
+      "url": "http://127.0.0.1:8013/js/namelecule-game-repair.js?v=quiz-zoom-icon-20261110-r1",
+      "localPath": "js/namelecule-game-repair.js",
+      "status": 200,
+      "SHA256": "cceabe3b49aab02458c29408084b1affdc0c3e60324ce3a74be4308fd79b340e",
+      "matchesLocal": true
+    },
+    {
+      "url": "http://127.0.0.1:8013/css/namelecule-repair-round.css?v=quiz-zoom-icon-20261110-r1",
+      "localPath": "css/namelecule-repair-round.css",
+      "status": 200,
+      "SHA256": "e6e83a96717112866ff6c4a1429cbf83fb99945cc900f7f4fac7a8253ebd7b9b",
+      "matchesLocal": true
+    },
+    {
+      "url": "http://127.0.0.1:8013/games/assets/name-repair/condensed/ethyl_3_dimethyl_2_5_hexane.svg",
+      "localPath": "games/assets/name-repair/condensed/ethyl_3_dimethyl_2_5_hexane.svg",
+      "status": 200,
+      "SHA256": "ea16e3f63067f65ca088f52082a39c1f78d5bf32359b644c980f62e245057cb0",
+      "matchesLocal": true
+    },
+    {
+      "url": "http://127.0.0.1:8013/games/assets/name-repair/condensed/provenance.json",
+      "localPath": "games/assets/name-repair/condensed/provenance.json",
+      "status": 200,
+      "SHA256": "82ef3a037a4ee027deae67a73ead4f9ba70eca1b513c823cf1fd8bb7c71c7bf4",
+      "matchesLocal": true
+    },
+    {
+      "url": "http://127.0.0.1:8013/scenarios/alkanes-user-3.scenario.json",
+      "localPath": "scenarios/alkanes-user-3.scenario.json",
+      "status": 200,
+      "SHA256": "607a530a2d3ba151026517c61d6f7a31644e15abf82a687e778b7453d80089b7",
+      "matchesLocal": true
+    }
+  ],
+  "exactReviewedCombinedSource": {
+    "js/namelecule-generated-repair-checkpoint.js": "7a067fdcefde58cf1dfa30af208e6355831d6fab34ffd8b1ed81a689cdeff375",
+    "js/namelecule-game-repair.js": "cceabe3b49aab02458c29408084b1affdc0c3e60324ce3a74be4308fd79b340e",
+    "css/namelecule-repair-round.css": "e6e83a96717112866ff6c4a1429cbf83fb99945cc900f7f4fac7a8253ebd7b9b",
+    "mulermoc-nom-55.html": "df2032255ead6d3e211720e83d675daa22cba9669bf25a809028204cf0fe4fd5",
+    "games/assets/name-repair/condensed/ethyl_3_dimethyl_2_5_hexane.svg": "ea16e3f63067f65ca088f52082a39c1f78d5bf32359b644c980f62e245057cb0",
+    "games/assets/name-repair/condensed/provenance.json": "82ef3a037a4ee027deae67a73ead4f9ba70eca1b513c823cf1fd8bb7c71c7bf4"
+  },
+  "protected14Unchanged": true,
+  "previousReview": "independent-review.json and prior alkane-quiz-presentation-20261110 review; same exact source contents.",
+  "newRuntimeEdits": [],
+  "newBrowserRun": false,
+  "basis": "Verified library route and HTTP exact contents; existing reviewed native browser interactions apply to these same files.",
+  "publication": false,
+  "commit": null,
+  "scenarioJSONChanged": false,
+  "coreChanged": false
+}

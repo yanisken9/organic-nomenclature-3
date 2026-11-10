@@ -1,4 +1,752 @@
-# Current resume point — 2026-11-09 — Αναφορά καθηγητή δημοσιεύτηκε
+# Current resume point - 2026-11-10 - Full save/report/publication in progress
+
+User explicitly requested save everything everywhere, professor report and link.
+Current reviewed source frozen against save-publish-20261110-114933/runtime-target.json;
+26path public overlay prepared in disposable clone, runtime commit
+c5d465190740de5d8f1c90b7ce791ff22250e39e, NOT uploaded at this point.
+Public base05de7640; checkpoint branch checkpoint/namelecule-20261110-114933.
+Source branch/index/HEAD preserved; no core/runtime edit in this save task.
+Core55 already integrated/reviewed earlier, now included in planned publication;
+54/52 and publicReact retained, localReact WIP belongs only to full checkpoint.
+
+Fresh upstream GitHEAD/history/CHANGELOG audit at2026-11-10T09:53Z succeeded:
+last actually integrated5ab24955, last checked3640eff6; four new commits
+(two code/two resume docs) overlap molview55/scenario55/lang55. New changes
+cover furtherminimization budget, PubChem heavy-count guards, hiding viewerCol,
+and stepdrawer show.naming/groups. Not silently integrated into reviewed save;
+separate bounded integration assessment remains next work.
+
+Report five-file Greek draft prepared under docs/professor-20261110; current
+publication/archive status pending. Owned headless release smoke in progress;
+no personalFirefox process control. Known Firefoxhang, JSmol transition and
+EXISTING-ESC-001P2 remain disclosed. No offline/conference readiness claim.
+New archives, SHA/CRC verification, two dated established folder copies and
+Desktop9AlkanesJSON refresh are planned; completion must be recorded with actual
+receipts. One independent release/report review before push. Later receipts
+and notes need explicit delta cutoff; do not claim their inclusion in prior ZIP.
+Next: finish candidate smoke, full snapshot/backups, consolidated independent
+review, publish and verify live application/report, then final delta/notes.
+
+# Current resume point - 2026-11-10 - Optional final header completed locally
+
+Approved3paths completed at optional-completion-navigation-20261110/target-r2.json:
+controller and Main54/55controller cache URLs. Every additional optional triple
+hides upper Continue only when CURRENT optional3/3 verifies solved and lower
+pair is usable. Earlier/unsolved/loading/error/retry/invalidcache keep it;
+new triple restores it. Focused upper transfers to enabled lower Continue
+before hiding, with fail-open fallback; natural heading focus preserved.
+
+Fresh Reviewer /root/review_optional_completed_header: no new actionable
+P0/P1/P2/P3. Independently exact3current/3before/3testedR1/20protected,
+11cores unchanged,10unit/45browser artifacts and274JSC with declared doubles.
+Two counterfactuals fail intended behavior. Native supplied stages:3original,
+32testedR1partial,32finalR2+6focus;0capturedJSerrors. Genuine historical prefixes
+and actual final third input, not uninterrupted lesson. Real delay/503/retry,
+reopen/refresh, loweractions/newtriple, required unchanged, boundedMain54.
+R1widths1280/390/320; R2focus390.3exact finalHTTP on8013. Own89202FF/89201helper
+stopped/profiledeleted/3portsrefused; personal GUI and8013 untouched by tests.
+
+Before3/testedR1/diffs/manifests/focus-failure retained; final-report.json and
+independent-review.json record evidence/limits. No core/renderer/adapter/
+generator/questions/solutions/JSON/CSS/MOL/SDF changed; no commit/push/
+publication/export. Reload local lesson for r2. ExistingP2EXISTING-ESC-001
+remains OPEN, separate approval needed for global presentation hotkey fix.
+No full lesson/Safari/physicalmobile/conference validation or Firefoxhang fix.
+PersonalFirefox close/restart remains unapproved. Next: user reload/test;
+separately plan existing keyboardP2 if requested.
+
+# Current resume point - 2026-11-10 - Optional completed header r2; final checks/review pending
+
+Approved3path update at optional-completion-navigation-20261110/target-r2.json.
+Upper Continue hides only after CURRENT optional receipt verifies solved and
+final usable-actions signal; returns for new triple/loading/error/invalidcache.
+During owned native testing, focused upper was hidden leaving BODY active.
+Necessary correction in same controller moves focus to enabled lower Continue
+BEFORE hiding; if missing/disabled/focusrejected, upper exit remains. Natural
+H1 focus unchanged. Developer-tested r1 preserved tested-r1/; originalbefore3
+and exact diffs retained. No sharedrenderer/adapter, core, JSON, CSS changes.
+
+Controller274checks with explicit DOM/adapter/cache/readiness/focus doubles;
+original and testedr1 counterfactuals fail intended criteria. Native r2focus
+passed with enabled lower button visibly inside390viewport; naturalH1retained.
+Remaining actual503/retry/loweractions/finalthird checks in progress. Prior
+r1partial native success and the actual focus failure remain evidence.
+3exact final localHTTP comparisons. Fresh independent Reviewer
+/root/review_optional_completed_header inspecting frozen source/unit target;
+final browser manifest and verdict pending. No commit/push/publication/export.
+Existing keyboardP2EXISTING-ESC-001 separate, no new globalhotkey changes or
+personalFirefox process control. Next: final evidence, Reviewer verdict,
+necessary bounded corrections, final report/notes and user reload.
+
+# Current resume point - 2026-11-10 - Optional final-header rule implemented; verification in progress
+
+User explicitly approved plan. Only3paths changed: shared checkpoint
+controller and its Main54/55 cache URLs. updateDialog additionally verifies
+CURRENT optional receipt through restorePractice before hiding upper Continue
+when final progress and actual enabled success actions are present. Missing,
+invalid or unavailable optional verification retains exit. No renderer,
+adapter, core, generator, scenarioJSON, CSS or molecule changes.
+Frozen target/before3 and20protected at
+`docs/checks/optional-completion-navigation-20261110/target.json`.
+Developer JSC268 (241existing+27new) passed with declared DOM/adapter/storage/
+readiness/cache doubles; original source counterfactual fails new condition.
+Original browser duplicate upper Continue reproduced using genuine optional
+receipt. After native flows in progress on owned isolated browser only.
+3localHTTP/source exact. Next: native finalization, one fresh independent
+Reviewer, necessary bounded corrections, final notes/report. No commit/push/
+publication/export. Known existing keyboard P2 and personalFirefox restart
+remain separate; no new action on either.
+
+# Current resume point - 2026-11-10 - Optional final header Continue; plan awaiting approval
+
+User requests same no-duplicate rule after successful third quiz of every
+additional optional triple: only lower Continue/Another triple remain.
+Read-only preflight reproduces top Continue hidden=false with current optional
+solved=true, readytrue,3/3; original required receipt unchanged. Explorer
+traced existing ready/final progress and restorePractice validation.
+Proposed3paths: controller updateDialog and Main54/55 controller cache URLs.
+Verify CURRENT optional receipt with restorePractice plus existing final
+usable-actions signal; keep upper Continue for earlier/unsolved/loading/
+error/retry, restore on new triple. No renderer/adapter/core/JSON/CSS change.
+Plan/baseline/preflight in docs/checks/optional-completion-navigation-20261110/.
+23paths match preceding independently reviewed r2, including11core versions.
+Await explicit approval in ordinary chat before code; then bounded unit/native
+checks and one fresh Reviewer. No commit/push/publication/export.
+Previous existing keyboard P2 remains separate; personalFirefox close/restart
+still unapproved and no process action taken.
+
+# Current resume point - 2026-11-10 - Completed required final-header change locally
+
+Approved request implemented in5paths at
+`docs/checks/required-completion-navigation-20261110/target-r2.json`:
+controller, generated adapter, shared renderer and Main54/55cache URLs.
+Top Return hides only after final rendered progress+verified mastery+actual
+enabled success actions; stays during required image loading/error/retry.
+Optional behavior and exact earned receipts remain. Reload lesson for r2.
+
+Fresh Reviewer /root/review_required_completion_header closed R1(P2), no new
+actionable finding. Independently exact5current/5before/3reviewedR1/18protected,
+11cores unchanged; JSC241controller+189renderer+130adapter=560 with explicit
+DOM/image/transport doubles;36default snapshots same. Native supplied evidence:
+originalUI2before, r1UI45after, R1faultrepro5, targetedr2image/actions23,0captured
+JSerrors. Genuine historical prefixes/restored receipts; real final third
+input, not uninterrupted lesson replay. Main55image lifecycle, boundedMain54,
+320/390/1280 priorstage.5exact finalHTTP on8013. All owned browser processes,
+profiles and ports cleaned. Originalbefore5+reviewedR1+diffs retained.
+
+Existing residual P2 EXISTING-ESC-001 remains OPEN: with pending image,
+focus Return -> Tab outside document -> BODYEscape may exit to library.
+Same native behavior on original5file overlay andr2; natural H1Escape works.
+Source55 global modal guard absent; initial Tab focus-loss cause unproved;
+scenario55 lacked initial snapshot. Separate plan/approval needed for hotkey
+fix. Report `pre-existing-keyboard-issue.json`; review and final-report.json
+state limits. No Safari/physicalmobile/full lesson/conference validation or
+Firefoxhang fix claim. No core/JSON/CSS/MOL or question/solution changes,
+commit/push/publication/export. PersonalFirefox restart still unapproved.
+Next: user reload/test; separately address existing hotkey P2 if approved.
+
+# Current resume point - 2026-11-10 - Final-header readiness correction r2; final review pending
+
+Approved UI behavior required retaining Return during loading/error. Fresh
+Reviewer found R1(P2): final progress arrives before restored IMG readiness,
+so lower buttons were disabled when Return hid. R1 preserved reviewed-r1/
+and recorded review-r1.json. Necessary correction now affects5paths: shared
+renderer+generated adapter+controller and Main54/55 cache URLs. Opt-in
+onSuccessActionsReady Boolean follows actual rendered/enabled buttons,
+forwarded only by current connected final round+verified solved set;
+controller additionally requires final progress/mastery and resets transient
+flags. Questions, answers, persistence, JSON, CSS and11core files unchanged.
+Frozen target-r2.json and implementation-r2.diff; originalbefore5 retained.
+
+Developer controller JSC241; real renderer/adapter319 with explicit DOM/image/
+transport doubles,30renderer+6adapter unchanged default snapshots. R1 source
+counterfactual fails exact loading criterion. Native R1delay/503 reproduced;
+r2targeted24checks pass image delay/error/Return/reopen/retry/ready, realthird,
+optional and both54/55cache URLs. Prior r1native2before+45after remain recorded.
+Five exact localHTTP/source checks pass. Final targeted Reviewer verification
+in progress, browser-r2 cleanup/finalmanifest pending.
+
+Additional keyboard case classified PRE-EXISTING by exact original5file UI
+overlay native replay: focus Return during pending image, Tab leaves document,
+Escape on BODY exits to library. Same on original andr2; natural H1Escape
+works. Missing openquiz guard in unchanged scenario55 document handler is
+traced; initial Tab focus-loss cause not proved. Separate P2 report
+pre-existing-keyboard-issue.json. No hotkey fix in current approved scope;
+next step is a separate concrete plan if user wants it. No source changes
+pending while target frozen, no commit/push/publication/export. Personal
+Firefox process control remains unapproved and untouched by these tests.
+
+# Current resume point - 2026-11-10 - Final quiz actions implemented; independent review pending
+
+User approved the concrete plan with affirmative reply. Only controller
+js/namelecule-quiz-checkpoints.js and Main54/55 cache URLs changed. Required
+Return hides after rendered final progress plus validated completion and
+practice support; transient flag resets on mount/null progress/outer error.
+Earlier required rounds/loading/error retain Return; optional behavior stays.
+Frozen source3/before3/protected20 and exact diff:
+docs/checks/required-completion-navigation-20261110/{target.json,implementation.diff}.
+No core/JSON/data/MOL/CSS changes, commit/push/publication/export.
+
+Developer JSC223 (199existing+24new) with explicit DOM/adapter/storage/answers
+doubles. Original controller counterfactual fails at the new expected behavior.
+Retained/explained harness failures: absolute Unicode path, and Promise error
+printing with JSC exit0; runner corrected. Native owned Firefox:2before+45after,
+0capturedJSerrors, real final third repair from exact genuine historical
+first-two prefix, reopen/refresh/focus/Tab/Escape,320/390/1280, both bottom
+actions, optional flow, next gate and boundedMain54. Not uninterrupted full
+lesson replay or a Firefox hang fix.3exact HTTP/source checks on8013.
+Owned87874Firefox/87873helper cleaned, profile removed,3ports refused;
+personal57800/55879/56371 untouched. Unit/browser artifacts frozen.
+Fresh Reviewer /root/review_required_completion_header inspecting exact target;
+final verdict pending. Next: review, necessary corrections, final report/notes.
+Use ordinary chat for user questions; do not reopen frozen question panel.
+Personal Firefox close/restart approval remains unanswered; no action taken.
+
+# Current resume point — 2026-11-10 — Απόκρυψη επάνω επιστροφής μετά την αρχική τριάδα, προς έγκριση
+
+Ο χρήστης ζητά να κρύβεται η επάνω «Επιστροφή στη θεωρία» όταν λυθεί
+το τρίτο κουίζ και εμφανιστούν οι δύο κάτω επιλογές. Read-only trace και
+JSC preflight με δηλωμένα DOM/adapter doubles αναπαράγουν Back.hidden=false
+με requiredComplete=true και progress3/3. Αιτία: updateDialog κοιτά μόνο
+context.practice και δεν ενημερώνεται μετά τη λύση. Explorer επιβεβαίωσε
+εξαρτήσεις και edge cases. Προτεινόμενη παροδική κατάσταση final-round
+rendered progress συν verified completion· required Back παραμένει σε
+loading/error/προηγούμενα κουίζ, optional συμπεριφορά ίδια.3paths controller
+και Main54/55cache URLs. Plan/baseline/preflight στο
+docs/checks/required-completion-navigation-20261110/.23paths ίδια με
+προηγούμενο verified target,11core ίδια. Αναμένεται ρητή έγκριση σε απλό
+chat πριν από κώδικα, μετά bounded έλεγχοι και fresh Reviewer. Κανένα
+commit/push/publication/JSONexport. Ο προσωπικόςFirefox παραμένει ανοιχτός·
+προηγούμενη ερώτηση για forceclose/restart δεν έχει εγκριθεί.
+
+# Current resume point — 2026-11-10 — Διάγνωση νέου παγώματος προσωπικού Firefox στο ChatGPT.com
+
+Νεότερη διόρθωση: ο χρήστης έσυρε ο ίδιος το παράθυρο πολύ χαμηλά για να
+μην ενοχλεί. Καταγράφηκαν δύο παράθυρα προσωπικούPID57800 σεY854/Y881,
+742×818, πριν από activation. Native αίτημα ενεργοποίησης έγινε δεκτό,
+χωρίς επιβεβαίωση προσκηνίου/μετακίνησης/απόκρισης. Accessibility=false,
+δεν επιχειρήθηκε AXwrite/permissionprompt. Πρώτος Swift helper timeout45sec·
+native fallbackexit0. Reviewer χωρίς ευρήματα με ρητά αυτά τα όρια.
+Ιδιωτικό stable backup δύο sessionstore αρχείων (SHAverified, χωρίς payload
+inspection) στο /private/tmp/namelecule-personal-firefox-recovery-20261110-ju3yuv5c.
+Πηγές περίπου76λεπτών παλιές στις09:54+0200· δεν εγγυώνται τρέχουσες
+καρτέλες/μη αποθηκευμένα κείμενα. Δεν έκλεισε/επανεκκίνησε κανένας Firefox.
+Επόμενο: ρητή έγκριση για στοχευμένο κλείσιμο/επανεκκίνηση, αν χρειαστεί.
+Καμία αλλαγή core/εφαρμογής, commit/push/publication.
+
+Νεότερη διευκρίνιση χρήστη: είχε πλήρη οθόνη· τώρα δεν έχει πρόσβαση στο
+παράθυρο, το περιγράφει ως σταλμένο πολύ χαμηλά στην οθόνη. Δεν επιβεβαιώνει
+ακόμη απόκριση browserchrome ή αν το παράθυρο ελαχιστοποιήθηκε/μετακινήθηκε.
+Προτάθηκε χειροκίνητα Command-Tab και Control-Command-F μία φορά για έξοδο
+από fullscreen, χωρίς δικό μας GUI/processcontrol. Αναμένεται αποτέλεσμα.
+Καταγραφή user-fullscreen-followup.json. Κανένα νέο core ή browser setting.
+
+Ο χρήστης αναφέρει νέο πάγωμα του προσωπικού Firefox και διευκρινίζει ότι
+βρισκόταν στο ChatGPT.com. Παθητική διάγνωση μόνο, χωρίς πλοήγηση, ρυθμίσεις,
+κλείσιμο/επανεκκίνηση ή ανάγνωση περιεχομένου προσωπικών καρτελών. Προσωπικός
+PID57800, ίδια διεργασία από την εγκεκριμένη επανεκκίνηση της 9/11· οι
+ξεχωριστοί55879/56371 δεν επηρεάστηκαν. Firefox159.0.1, macOS14.8.9, Intel8GiB.
+
+Δύο δείγματα3sec στις09:42:24.041 και09:45:08.796+0200:550/550 και1782/1782
+main-thread samples περνούν από _NSThemeZoomWidgetCell showMenu και
+NSThemeWidgetZoomMenuRemoteView σε nested event loop. Παρατήρηση του ίδιου
+μοτίβου σε δύο διαστήματα που απέχουν164.755sec, όχι απόδειξη συνεχούς
+κλειδώματος στο ενδιάμεσο ή αιτιακού trigger. Το ίδιο μοτίβο υπήρχε στον
+προσωπικό493 στις9/11, πριν/μετάEsc. Το παλιότερο quiz issue55879 με
+responsive browserchrome παραμένει διαφορετικό. Memorypressure query50%,
+level1 και swap4666.25MiB δεν αποδεικνύουν αιτία μνήμης. Δεν βρέθηκε
+τεκμηριωμένη αντιστοίχιση συγκεκριμένου Mozilla bug με το ακριβές συμβάν.
+
+Metadata/αποσπάσματα/hashes: docs/checks/firefox-hang-20261110/. Τα raw προσωπικά
+samples παραμένουν στο0700/private/tmp/namelecule-firefox-hang-20261110-ulrmf7x9,
+χωρίς εξαγωγή sessionstore/cookies/history/page text. Διορθώθηκε τεκμηριωμένα
+ένα process-filter falsepositive της ίδιας της διαγνωστικής εντολής.23paths
+ταυτίζονται με το προηγούμενο verified target, μεταξύ τους11core versions·
+κανένα αρχείο εφαρμογής/core/JSON/MOL δεν άλλαξε. Κανένα commit/push/publication.
+Ο live upstream έλεγχος της ίδιας συνεδρίας ήταν5ab24955, ίδιο με actualsync·
+δεν έγινε νέος συγχρονισμός για αυτή τη διάγνωση.
+
+Fresh read-only Reviewer /root/review_firefox_hang_20261110 επιβεβαίωσε
+ανεξάρτητα hashes, ακριβείς χρόνους και τη διάκριση γεγονότων/υποθέσεων.
+Τελική επαλήθευση: κανένα actionableP0/P1/P2/P3, exact5report/23source/11core·
+η ανεξάρτητη αναφορά αποθηκεύτηκε στο independent-review.json. Επόμενο: απλές ερωτήσεις στο
+chat για απόκριση γραμμής διευθύνσεων/μενού και πρόσφατη χρήση πράσινου
+κουμπιού macOS. Δεν έχει δοθεί έγκριση για forcequit της τωρινής διεργασίας.
+Η προηγούμενη επανεκκίνηση αποκατέστησε χρήση, δεν απέδειξε μόνιμη θεραπεία.
+
+# Current resume point — 2026-11-10 — Απλοποίηση κουμπιών προαιρετικής εξάσκησης ολοκληρώθηκε
+
+Ο χρήστης ενέκρινε «ναι, κάνε το»: στην προαιρετική τριάδα κρύβεται η
+«Επιστροφή στη θεωρία», μένει το «Συνεχίζω τη θεωρία». Στην υποχρεωτική
+επιστρέφει το Return· Escape διατηρεί την επιστροφή στο ίδιο βήμα. Μία
+hidden=context.practice στο updateDialog και δύο αντίστοιχα cache URLs54/55.
+Baseline/before3/target/diff και final-report.json στο
+`docs/checks/practice-navigation-20261110/`. Ανανέωση σελίδας για νέα έκδοση.
+
+Fresh Reviewer /root/review_practice_navigation_20261110: χωρίς actionable
+P0/P1/P2/P3, exact3current/3before/20protected/26evidence/HEAD/index. Independent
+JSC199 με δηλωμένα doubles και baseline substitution που αποτυγχάνει στο
+σωστό νέο κριτήριο. Developer nativeFirefox12before+12after,320/390,
+Return/Continue/Tab/Escape/reuse και exact requiredreceipt. Ιστορική γνήσια
+earnedreceipt με lineage, όχι νέα εκτέλεση προαπαιτουμένων.3HTTP/SHA στον8013
+ακριβή,3owned portsκλειστές/profileremoved, personalFirefox/8013 ανέπαφα.
+Κανένα core/JSON/generator/adapter/renderer/CSS/MOL άλλαξε σε αυτή τη συνεισφορά.
+Κανένα commit/push/publication/export. Όρια: Main55headless, Main54cache μόνο,
+όχι Safari/φυσικόκινητό/full lesson/συνεδριακόμηχάνημα ή λύσηπαγώματοςFirefox.
+Νεότερο upstream δεν ενσωματώθηκε εδώ· ο τελευταίος liveέλεγχος της ίδιας
+συνεδρίας5ab24955/CHANGELOG ταυτιζόταν με actualsync. Επόμενο: επόμενη αλλαγή
+που θα ορίσει ο χρήστης. Προτιμά απλές ερωτήσεις στο chat, όχι questionpanel.
+
+# Current resume point — 2026-11-10 — Απεριόριστες προαιρετικές τριάδες ολοκληρώθηκαν τοπικά
+
+Ο χρήστης ενέκρινε με «nai». Στις στάσεις4/11, μετά την υποχρεωτική επιτυχία,
+ο μαθητής επιλέγει «Άλλη τριάδα για εξάσκηση» όσες φορές θέλει ή συνεχίζει
+τη θεωρία. Required earned receipt χωριστά από record.practices· λάθος,
+ημιτελής προσπάθεια/loading/error δεν ξανακλειδώνουν. Ίδια θεματική/basic,
+μετρητής1/3, current practice σε same-tab Back/reopen/refresh. Cachepractice2
+χωριστά από required32, μόνο τρέχουσα προσπάθεια, όχι διογκούμενο ιστορικό.
+Opt-in δεύτερο success action στον κοινό renderer, σταθερό optional Continue,
+cold required receipt validation στο τρέχον βήμα, guard παλιού queuedclose.
+Τα7source/cache paths παγωμένα στο
+`docs/checks/lesson-optional-triples-20261110/verification-target.json`.
+Before7/baseline/diff και παλαιό parity recovery διατηρούνται. Τελική αναφορά
+`final-report.json`, οπτική σύγκριση `browser/visual-comparison.html`.
+
+Fresh Reviewer /root/review_optional_triples_20261110 χωρίς actionableP0/P1/P2/P3.
+Ανεξάρτητα exact7current/7before/16protected/11unit/85browser και JSC395adapter+
+194controller. Renderer102 και24default snapshots supplied Developer evidence,
+το αρχικό harness ήταν in-memory. Native Developer evidence:9earnedθέσεις
+(required3gate4,optional3κάθεgate),261observations/45traces,lifecycle8,
+320/390/1280,repeat/wrong/Back/reopen/refresh/Continue/loading/error/keyboard/
+zoom, boundedMain54/standalone. Συνέχειες με ακριβή γνήσια historical receipts,
+όχι αδιάκοπο replay. Κανένα νέο εύρημα εφαρμογής. Οι harness αποτυχίες
+διατηρούνται με αιτίες: future unattemptedchoiceOrder αναδημιουργείται αλλά
+τρέχουσα απάντηση και requiredreceipt διατηρούνται· Main55→54 receipt σωστά
+απορρίπτεται λόγω12substNamingMode διαφορές περιεχομένου. Δεν δοκιμάστηκε
+native optionalorder ή πλήρες optionalearnedMain54. Δεν τεκμηριώνονται Safari
+runtime/φυσικόκινητό/offline/προβολέας/συνεδριακόμηχάνημα ή λύση Firefoxfreeze.
+
+8HTTP/SHA στο8013 ακριβή, source7/protected16/HEAD/index και browser85 ακριβή.
+OwnedFF/server/profile καθαρίστηκαν,3θύρες κλειστές, personalFirefox/8013 ανέπαφα.
+Κανένα core/generator/scenarioJSON/MOL/SDF άλλαξε σε αυτή τη συνεισφορά.
+Η παλαιότερη core55 ενσωμάτωση είναι χωριστή. Κανένα commit/push/publication/
+JSONexport. Live professorHEAD/CHANGELOG5ab24955 ίδια με actualsync στο preflight.
+Επόμενο: δοκιμή χρήστη στο κανονικό τοπικό μάθημα. Οι τριάδες αντλούνται από
+πεπερασμένο υλικό, χωρίς υπόσχεση αιώνιας μοναδικότητας. Ερωτήσεις σε απλή
+συζήτηση, όχι ξεχωριστό questionpanel, σύμφωνα με προτίμηση χρήστη.
+
+# Current resume point — 2026-11-10 — Επιπλέον τριάδες υλοποιήθηκαν, verification/review σε εξέλιξη
+
+Ο χρήστης ενέκρινε το συγκεκριμένο πλάνο με «nai». Υλοποιήθηκαν και πάγωσαν
+τα7source/cache paths του `docs/checks/lesson-optional-triples-20261110/verification-target.json`.
+Required states παραμένουν χωριστά από record.practices. Adapter optional
+cache2 χωριστά από required32· μόνο τρέχουσα optional προσπάθεια ανά στάση.
+Τρίτη επιτυχία έχει προαιρετικό δεύτερο action, optional header επιτρέπει
+συνέχεια οποτεδήποτε· cold current-step required preparation επαληθεύει την
+αποθηκευμένη επιτυχία πριν ανοίξει optional. Shared queued-close guard δεν
+καταστρέφει ήδη επανανοιγμένο dialog. Core/generator/scenario/data αμετάβλητα.
+
+Developer/worker unit evidence: adapter395checks με real pinned engine/generator,
+40optional generations, requiredcache2/practicecache2· renderer102 και24default
+markup snapshots· controller194 με FakeDOM/probeadapter, flags/doubles δηλωμένα.
+Unit manifest παγωμένο. Browser worker έχει exactbefore7+6captures, εκτελεί
+actualafter υποχρεωτική3/optionalsets/refresh/continue/layout χωρίς πλαστά solved.
+Fresh Reviewer /root/review_optional_triples_20261110 επιθεωρεί frozen source,
+αναμένει τελικό browser manifest. Root δεν επεμβαίνει στο reviewtarget.
+Κανένα commit/push/publication/JSONexport. ΠροσωπικόςFirefox/8013 ανέπαφα.
+Επόμενο: native flows → evidence manifest → τελικό independent verdict → owned
+cleanup/local preview και τελικά notes. Δεν δηλώνεται ακόμη ολοκλήρωση.
+
+# Current resume point — 2026-11-10 — Προαιρετικές επιπλέον τριάδες στο μάθημα, προς έγκριση
+
+Νέο αίτημα χρήστη: μετά την επιτυχημένη υποχρεωτική τριάδα, να μπορεί να
+ζητά όσες επιπλέον τριάδες θέλει. Read-only trace: σήμερα κάθε checkpoint
+έχει μία μόνη seed/answers receipt· απλό reset θα ξανακλείδωνε το μάθημα.
+Πρόταση χωριστής προαιρετικής προσπάθειας, με διατήρηση επαληθευμένης αρχικής
+επιτυχίας, ίδια θεματική/basic, συνέχεια οποτεδήποτε και optional refresh/reopen.
+Prepared cache έχει όριο32· προαιρετική cache πρέπει να είναι χωριστή για να
+μην εκτοπίζει την required verification. Μόνο τρέχουσα optional προσπάθεια,
+όχι ιστορικό που μεγαλώνει. Learning Designer έκανε bounded read-only preflight.
+
+Συγκεκριμένο πλάνο7source/cache paths, baseline και checks:
+`docs/checks/lesson-optional-triples-20261110/{plan,baseline}.json`.
+Αναμένεται έγκριση σε απλή συζήτηση πριν από κώδικα. Δεν έγινε runtime αλλαγή.
+Live professor HEAD5ab24955 ίδιο με actual sync και lastchecked· raw CHANGELOG
+ακριβώς ίδιο με synchronized immutable snapshot, SHAca8341f9…10949· κανένα νέο
+commit/overlap. Κανένα core/JSON/MOL άλλαξε, commit/push/publication/export.
+Επόμενο μετά έγκριση: snapshots, χωριστή κατάσταση practice, bounded tests και
+fresh Reviewer. Προηγούμενο parity ολοκληρωμένο και recovery point διατηρούνται.
+
+# Current resume point — 2026-11-10 — Κοινή εμπειρία Συνεργείου ολοκληρώθηκε τοπικά
+
+Μεταφέρθηκαν όλες οι εγκεκριμένες βελτιώσεις του μαθήματος στην απευθείας
+είσοδο του Συνεργείου: εμφανές κεντραρισμένο ζητούμενο, στοχευμένη υπενθύμιση,
+συνεπτυγμένο μεγάλο μόριο, compact φακός, μετρητής1/3 και κοινή ομαλή κύλιση.
+Challenge παραμένει ουδέτερο. Τα8source/cache paths και η r2 είναι παγωμένα στο
+`docs/checks/workshop-lesson-parity-20261110/verification-target-r2.json`.
+Τελική αναφορά: `final-report.json`, οπτική σύγκριση `browser/visual-comparison.html`.
+Safari open command στο κανονικό8013 Συνεργείο ολοκληρώθηκε, όχι Safari runtime test.
+
+Fresh Reviewer /root/review_workshop_parity_20261110 ολοκλήρωσε χωρίς ανοικτό
+P0/P1/P2/P3. ΝέοR1/P3 aria-expanded και παλιόR2/P2 φακός disabled μετά από
+native Close έκλεισαν με guarded actual-close finalizer και33native zoom checks.
+Ανεξάρτητα ακριβή8current/8before/18protected/140browser και JSC263+32+161.
+Developer native evidence:12direct+6lesson+1Main54 earned θέσεις, σε συνέχειες,
+441assertion observations/85semantic actions, reduced12, dialog cancellation4,
+Main54header5. Δεν δηλώνεται ενιαίο αδιάκοπο warm replay. Ένα αρχικό Main54
+success/storage assertion απέτυχε χωρίς snapshots· diagnostic rerun πέρασε
+με ακριβή bytes, αρχική αιτία άγνωστη. Παλαιό warm7→8 timeout χωρίς delivery
+trace δεν τεκμηριώθηκε ως regression· bounded trusted7→8 πέρασε. Οι αποτυχίες
+harness και οι αβεβαιότητες διατηρούνται, όχι συμπέρασμα καθολικής αξιοπιστίας.
+
+10HTTP/SHA στον υπάρχοντα8013 ακριβή.9owned test ports κλειστές (3initial+6final),
+μόνο guarded test processes έκλεισαν· προσωπικός Firefox/8013 ανέπαφα. Source8,
+protected18, HEAD/index ακριβή μετά τον έλεγχο. Κανένα core/JSON/MOL/SDF άλλαξε
+σε αυτή τη συνεισφορά· η προγενέστερη ενσωμάτωση core55 καταγράφεται χωριστά.
+Κανένα commit/push/δημοσίευση/JSONexport. Live upstream HEAD5ab24955 ίδιο με
+actual sync στον αρχικό έλεγχο. Δεν τεκμηριώνεται λύση ιστορικού Firefox freeze,
+δοκιμή φυσικού κινητού/προβολέα/offline/συνεδριακού μηχανήματος. Επόμενο:
+δοκιμή χρήστη στο κανονικό τοπικό Συνεργείο. Προτίμηση: απλές ερωτήσεις στο chat,
+επειδή το ξεχωριστό question panel κόλλησε· όχι request_user_input_async.
+
+# Current resume point — 2026-11-10 — Κοινή εμπειρία Συνεργείου υλοποιήθηκε, verification/review σε εξέλιξη
+
+Εκκρεμή findings πριν την ολοκλήρωση: R1 νέοP3 (standalone aria-expanded
+μένει false όταν ανοίγει modal), R2 προϋπάρχονP2 (ρητό Κλείσιμο→queued native
+close αφήνει τον φακό disabled και χωρίς focus, δεν ξανανοίγει). Native Escape
+στο r1 λειτουργεί και πρέπει να διατηρηθεί. Native reproductions και source
+lineage στο pending-findings-r1.json. Πρώτα ολοκληρώνεται το frozen r1 replay,
+μετά guarded common close-finalizer correction και targeted r2 tests/review.
+Reviewed-r1/ κρατά ακριβή8 snapshots. Ο Reviewer ολοκλήρωσε source pass με
+μόνο αυτά τα ευρήματα· δεν γίνονται source edits εν μέσω browser r1 replay.
+Focused helper161 assertions πέρασαν· geometry/scroll doubles, όχι browser.
+
+
+Ο χρήστης ενέκρινε το πλήρες πλάνο με «ναι» στην κανονική συζήτηση.
+Το ξεχωριστό πλαίσιο ερώτησης του chat κόλλησε και δεν σκρόλαρε· στο εξής
+χρησιμοποιούμε απλές ερωτήσεις μέσα στη συζήτηση, όχι request_user_input_async.
+Αυτό αναφέρθηκε για το UI της ερώτησης, όχι ως νέο Namelecule/Firefox εύρημα.
+
+Υλοποιήθηκαν τα8εγκεκριμένα source/cache paths:
+js/namelecule-game-repair.js, js/namelecule-generated-repair-checkpoint.js,
+js/namelecule-quiz-checkpoints.js, css/namelecule-repair-round.css,
+games/name-repair.html, mulermoc-nom-54.html, mulermoc-nom-55.html,
+design/welcome-proposal.html. Source8 frozen στο
+docs/checks/workshop-lesson-parity-20261110/{verification-target,review-target}.json.
+Κοινό display preset (explicit authored question metadata, generated fault.kind),
+ίδιο validated condensed SVG, compact zoom, prominent objective, counter1/3.
+Challenge objective/reminder ουδέτερα. Κοινός response-range revealer με page
+ή dialog geometry, manual/reduced-motion/cancel/destroy lifecycle· scoped round
+CSS μόνο όσο παίζεται round, αφαιρείται σε hub/results.
+
+Developer263 πραγματικής pinned μηχανής/adapter με δηλωμένα doubles:
+4seeds×2sets exact canonical/display/earned receipts before/after.32 full
+controller tests με real shared factory και FakeNode geometry πέρασαν.
+Επιπλέον focused pure-helper tests εκτελούνται από worker. Αρχική JSC absolute
+Greek path αποτυχία του driver κρατήθηκε, relative path invocation πέρασε·
+δεν ήταν product fix. Browser worker πήρε exact8 before captures (και
+αναπαρήγαγε ότι οι επιλογές έμεναν κάτω από viewport χωρίς reveal). AFTER
+αρχικές presentation/native scroll/feedback δοκιμές περνούν, πλήρεις ροές τρέχουν.
+Τυχόν harness selector/probe failures κρατούνται, δεν δηλώνονται product defects.
+
+Fresh Reviewer /root/review_workshop_parity_20261110 διαβάζει frozen source8
+και14evidence, περιμένει τελικό browser/helper addendum. Κανένα source edit
+ενώ επιθεωρείται το target. Protected18 ίδια, περιλαμβανομένων11core,
+generator/catalog/authoredJSON/scenario/SVG/provenance/Main52. Κανένα core/
+JSON/MOL/SDF άλλαξε. Κανένα commit/push/publication/export, προσωπικός GUI
+Firefox/8013 ανέπαφα. Next: browser/helper results → same Reviewer verdict →
+owned cleanup → local preview και τελικά records. Δεν ζητείται νέα έγκριση
+για checks/corrections εντός του ήδη εγκεκριμένου scope.
+
+# Current resume point — 2026-11-10 — Πλάνο μεταφοράς όλων των βελτιώσεων στο Συνεργείο
+
+Ο χρήστης ζήτησε όλη την εμπειρία των κουίζ του μαθήματος και στο αυτόνομο
+Συνεργείο, με απευθείας είσοδο. Read-only audit και δύο στοχευμένοι agents
+(Explorer για scrolling/lifecycle, Learning Designer για feedback/difficulty)
+επιβεβαίωσαν τα κενά: objective emphasis, condensed largest, compact zoom,
+mission reminder, semantic smooth scroll και current-question counter.
+Check-only, success explanation, απουσία hint/reset είναι ήδη κοινά.
+
+Συγκεκριμένο πλάνο οκτώ runtime/cache paths, baseline και audit:
+docs/checks/workshop-lesson-parity-20261110/. Κοινή προετοιμασία μόνο προβολής
+και παραμετροποιημένη κοινή κύλιση, scoped round CSS και στα δύο contexts.
+Authored/basic σαφής στόχος και reminder, challenge ουδέτερο χωρίς αποκάλυψη
+κανόνα. Counter1/3 αλλάζει με Next. Canonical data/engine/progress ίδια.
+Αναμένεται έγκριση συγκεκριμένου πλάνου πριν από κώδικα. Δεν έγιναν runtime edits.
+
+Live professor HEAD5ab24955 ίδιο με actual sync, κανένα νέο commit στο check.
+Κανένα core/JSON/MOL άλλαξε σε αυτόν τον προέλεγχο. Κανένα commit/push/
+publication/export. Επόμενο μετά έγκριση: reversible snapshots, shared
+implementation, bounded authored/generated/embedded flows και fresh Reviewer.
+
+# Current resume point — 2026-11-10 — Αποδοχή αλλαγών ως κανονική παρουσίαση του μαθήματος
+
+Ο χρήστης είδε την προεπισκόπηση, την αποδέχτηκε και ζήτησε ενσωμάτωση.
+Επιβεβαιώθηκε ότι η κανονική βιβλιοθήκη οδηγεί ήδη στη Main55 και φορτώνει
+ακριβώς τα ελεγμένα αρχεία: μεγαλύτερο/κεντραρισμένο ζητούμενο, συνεπτυγμένη
+εικόνα του μεγάλου μορίου και διακριτικός φακός. Δεν χρειάστηκε πρόσθετη
+αλλαγή runtime, επειδή η προεπισκόπηση χρησιμοποιούσε τα ήδη εγκατεστημένα
+τοπικά αρχεία. Η οπτική αποδοχή καταγράφεται ως οριστική επιλογή παρουσίασης.
+
+Οκτώ πραγματικοί HTTP/SHA έλεγχοι στην κανονική διαδρομή8013 βιβλιοθήκης:
+library/main, δύοJS/CSS, SVG/provenance και ενεργό scenario JSON όλα ακριβή.
+Receipt: docs/checks/quiz-zoom-icon-20261110/adoption-20261110.json.
+Four current sources και δύο assets ίδια με τα αντίστοιχα reviewed hashes.
+Όλα14protected (11core/scenario/catalog/checkpoints) αμετάβλητα. Οι προηγούμενοι
+ανεξάρτητοι έλεγχοι και browser evidence ισχύουν για αυτά τα ίδια αρχεία·
+δεν δηλώνεται νέο browser replay ή νέο ανεξάρτητο review για μηδενικό code diff.
+
+Άλλαξαν μόνο αυτή η καταγραφή/συνεισφορές και το adoption receipt. Κανένα
+core άλλαξε σε αυτή την εντολή· η προγενέστερη core55 ενσωμάτωση είναι χωριστή.
+Κανένα commit/push/δημοσίευση/JSONexport. Η αποδοχή αφορά την κανονική τοπική
+v55· η δημόσια εφαρμογή δεν ενημερώθηκε από αυτή την εντολή. Επόμενο: χρήση
+του κανονικού μαθήματος από τη βιβλιοθήκη, με ανανέωση της ανοιχτής σελίδας.
+
+# Current resume point — 2026-11-10 — Ολοκληρώθηκε ο διακριτικός φακός στα κουίζ
+
+Το εγκεκριμένο κουμπί-φακός εφαρμόστηκε μόνο στα generated embedded κουίζ
+αλκανίων, στην υπάρχουσα κεφαλίδα του μορίου. Optional compactDiagramZoom
+στον adapter,44x44 στόχος/22px SVG, aria-label/title και εμφανές focus.
+Το standalone και μη opted embedded κρατούν το κείμενο. Ο engine και οι
+συναρτήσεις zoom open/close είναι ακριβώς ίδιες με πριν.
+
+Τέσσερα αρχεία: js/namelecule-generated-repair-checkpoint.js,
+js/namelecule-game-repair.js, css/namelecule-repair-round.css,
+mulermoc-nom-55.html. Baseline, before4, diff, exact frozen4 και τελικό report:
+docs/checks/quiz-zoom-icon-20261110/. Οπτική προεπισκόπηση:
+browser/visual-comparison.html, άνοιξε στον Safari με εντολή που ολοκληρώθηκε.
+Περιέχει σύνδεσμο πραγματικής δοκιμής8013 στο βήμα4· Safari runtime ανελεγμένο.
+
+Developer: δύο syntax compiles και exact engine/zoom invariants·74 bounded
+browser assertions σε headless Firefox, πριν/μετά1280/390/320. Native
+click/Enter/Space,Close/Escape/focus, ακριβής διατήρηση κατάστασης/προόδου,
+ένα replacement και ένα order earned, next transition, default/fallback,
+ελεγχόμενη φόρτωση/error. Το order προσπελάστηκε με αυτούσια prior earned
+receipt, με ακριβή προέλευση, όχι νέο fullsix replay. Οι αρχικές αποτυχίες
+harness κρατήθηκαν· η διορθωμένη fixture πέρασε.0JSerrors στις product flows,
+1στο invalid test asset,0στη διορθωμένη fixture. User8013 τέσσεραHTTP ακριβή.
+
+Fresh Reviewer /root/review_quiz_zoom_icon_20261110: κανένα actionableP0–P3.
+Ανεξάρτητα source/hash/evidence/οπτικός έλεγχος, όχι browser εκτέλεση.
+Τελικά4source/4before/14protected/5evidence/43browser/HEAD/index όλα ακριβή.
+Όλα11core ίδια· κανένα core/JSON/MOL άλλαξε σε αυτή την εργασία. Η προγενέστερη
+core55 ενσωμάτωση καταγράφεται χωριστά. Κανένα commit/push/δημοσίευση/JSONexport.
+Έξι owned ports κλειστές, μόνο owned test processes έκλεισαν με guards.
+Προσωπικός Firefox/8013 ανέπαφα. Live upstreamHEAD5ab24955 ίδιο με actualsync.
+Επόμενο: οπτική αποδοχή/δοκιμή από τον χρήστη. Δεν δηλώνεται λύση του ιστορικού
+Firefox freeze, δοκιμή φυσικού κινητού/offline/προβολέα ή συνεδριακή εγγύηση.
+
+# Current resume point — 2026-11-10 — Εγκεκριμένος φακός υλοποιήθηκε, έλεγχος σε εξέλιξη
+
+Ο χρήστης ενέκρινε το συγκεκριμένο πλάνο. Άλλαξαν μόνο οι τέσσερις code/cache
+διαδρομές του docs/checks/quiz-zoom-icon-20261110/plan.json. Optional flag στον
+generated adapter, υπάρχον shared icon με self-contained SVG fallback,44x44
+button/22px glyph στην ίδια κεφαλίδα. Standalone default ίδιο. JS syntax και
+ακριβής σύγκριση engine/zoom/state guards πέρασαν· όλα14protected ίδια.
+Four-source freeze/review-target έτοιμο. Browser worker κάνει bounded before/after
+checks και preview· Reviewer αρχίζει fresh, τελικό verdict μετά το browser.
+Δεν άλλαξε core/JSON/MOL, δεν έγινε commit ή δημοσίευση. Προσωπικός Firefox ανέπαφος.
+
+# Current resume point — 2026-11-10 — Προέλεγχος διακριτικού φακού στα κουίζ
+
+Ο χρήστης ζήτησε «δοκίμασέ το» για τη μετατροπή του μεγάλου κουμπιού
+«Μεγέθυνση σχεδίου» σε διακριτικό φακό μέσα στο πλαίσιο του μορίου.
+Read-only έλεγχος: το σημερινό control βρίσκεται ήδη στην κεφαλίδα του
+diagram card. Προτείνεται ίδια θέση επάνω δεξιά, προαιρετική ρύθμιση μόνο
+στον generated adapter, aria-label/title, στόχος44x44 και ίδια διαχείριση zoom.
+Έτοιμο συγκεκριμένο πλάνο τεσσάρων code/cache paths και baseline:
+docs/checks/quiz-zoom-icon-20261110/. Αναμένεται η έγκριση του συγκεκριμένου
+πλάνου κατά AGENTS.md πριν από αλλαγές κώδικα. Έγινε μόνο διερεύνηση/καταγραφή.
+
+Live upstream HEAD 5ab2495575bbbffeb0ac67f91d4d81857cb65970, ίδιο με actual
+sync και προηγούμενα immutable history/CHANGELOG evidence· κανένα νέο commit.
+Όλα τα core παραμένουν ίδια με το νέο baseline. Κανένα runtime/JSON/MOL
+δεν άλλαξε σε αυτόν τον προέλεγχο, ούτε έγινε commit/push/δημοσίευση.
+Επόμενο μετά την έγκριση: περιορισμένη υλοποίηση, πραγματικός browser έλεγχος
+click/πλήκτρων/focus/zoom/προόδου/mobile και ένας fresh Reviewer.
+
+# Current resume point — 2026-11-10 — Ολοκληρώθηκε η βελτίωση παρουσίασης κουίζ αλκανίων
+
+Εφαρμόστηκε το εγκεκριμένο πλάνο στα ενσωματωμένα κουίζ του μαθήματος:
+ζητούμενο κεντραρισμένο/έντονο (24px desktop, 20px στενή οθόνη) και το μεγάλο
+3-αιθυλο-2,5-διμεθυλοεξάνιο συνεπτυγμένο σε κανονική εικόνα και μεγέθυνση.
+Τα μικρότερα μόρια μένουν ανεπτυγμένα και το αυτόνομο Συνεργείο διατηρεί
+την παρουσίασή του. Κοινή προαιρετική υποστήριξη renderer, μόνο display
+clone στον adapter· ερωτήσεις, λύσεις, IDs, seeds και progress contract ίδια.
+
+Άλλαξαν τέσσερα code/cache αρχεία: js/namelecule-generated-repair-checkpoint.js,
+js/namelecule-game-repair.js, css/namelecule-repair-round.css,
+mulermoc-nom-55.html. Προστέθηκαν SVG και provenance στο
+games/assets/name-repair/condensed/. Ακριβή έξι hashes, before snapshots,
+διαφορά και τελικό report: docs/checks/alkane-quiz-presentation-20261110/.
+Οπτική σύγκριση: browser/visual-comparison.html σε αυτόν τον φάκελο.
+
+Έλεγχοι Developer: 263 μονάδας με πραγματική pinned μηχανή και δηλωμένα doubles,
+70 browser πριν / 113 μετά με έξι πραγματικές επισκευές ανά ροή, επιπλέον
+11 λανθασμένης αντικατάστασης/διόρθωσης και ακριβείς standalone μετρήσεις.
+Πέρασαν κύλιση, gates, zoom, refresh και αυτούσια παλιά earned receipts έως
+το βήμα 12, σε headless Firefox και viewports 1280/390/320. Οι αποτυχημένες
+υποθέσεις του harness διατηρούνται με διάγνωση· δεν έγιναν product fixes γι’ αυτές.
+Ο Chemistry Validator επικύρωσε ανεξάρτητα γράφο/CHn/C10H22/όνομα.
+Fresh Reviewer /root/review_alkane_quiz_presentation_20261110: κανένα actionable
+P0–P3. Δύο κενά τεκμηρίωσης έκλεισαν με στοχευμένα συμπληρώματα, χωρίς αλλαγή κώδικα.
+
+Τελική επαλήθευση: έξι source, τέσσερα before, εννέα static evidence, 59+12
+browser artifacts, 11 core/catalog/lesson JSON, HEAD/index όλα ακριβή.
+Κανένα core δεν άλλαξε σε αυτή την εργασία· η προηγούμενη δημιουργία core55
+ανήκει στη χωριστή ενσωμάτωση παρακάτω. Live upstream HEAD 5ab24955 ίδιο με
+actual sync κατά τον προέλεγχο, χωρίς νέα commits. Source HEAD 168e3cec.
+Κανένα νέο commit/push/publication/JSON export. Έκλεισαν μόνο οι τέσσερις
+owned test διεργασίες με guards, πέντε ports κλειστές, προσωπικός Firefox ανέπαφος.
+Το ιστορικό πάγωμα Firefox, Safari/φυσικό κινητό/offline/προβολέας δεν ελέγχθηκαν
+ούτε δηλώνονται λυμένα. Επόμενο: οπτική χρήση της τοπικής v55 από τον χρήστη.
+
+# 2026-11-10 — Ολοκληρώθηκε η τοπική ενσωμάτωση v55
+
+Actual upstream sync: f49b810c93ec85d06163679aff4a8642ea1b4cd3 →
+5ab2495575bbbffeb0ac67f91d4d81857cb65970 (80 commits / 38 paths).
+Last checked = 5ab24955. Η υποδοχή και η βιβλιοθήκη οδηγούν στη νέα v55.
+Εγκεκριμένο πλάνο και ρητή επιλογή προσωρινού 3D με graph match / Accept
+επιβεβαίωση / διαρκή ένδειξη μη επιβεβαιωμένης γεωμετρίας και σύγκλισης.
+Exact local install26 paths:15νέα runtime +2navigation +9documentation.
+Διατηρήθηκαν141μόρια/422μορφές,14αρχικά μαθήματα/328snapshots, όλα τα
+scenario JSON/MOL/SDF, η προηγούμενη v54/52/React και η ακριβής μηχανή των κουίζ.
+
+Νέο js/mulermoc-nom-core-55.js, SHA6cbdbd0…· όλα τα10υπάρχοντα core αρχεία
+ίδια με baseline. Source HEAD168e3c/index25c212… ίδια· κανένα νέο commit/push/
+publication. Τα παλιά source working-tree changes διατηρήθηκαν, δεν αποδίδονται
+στη σημερινή συνεισφορά. Η δημόσια εφαρμογή παραμένει στην προηγούμενη v54.
+
+Fresh Reviewer /root/review_v55_integration_20261110: χωρίς ανοικτόP0/P1 ή νέο
+P2/P3 στην παγωμένη ενσωμάτωση. RV55-01 ελληνικό systematic getter/panel,
+RV55-02 queued oracle throttle, RV55-03/CV55-12 μη στερεογόνοCH2 parity του
+JSmol διορθώθηκαν και επαληθεύτηκαν ανεξάρτητα. Chemistry Validator80+54
+assertions. Browser evidence: κανονική12βημη ροή/6επισκευές,562direct-render2D,
+14μαθήματα/42live snapshots, βαθμονόμηση54/55, actuallocalMin/STOP/recovery/
+further200, provisionalAccept/SaveAll/import και πλοήγηση. Παλιά/μερικά runs
+και fixtures διαχωρίζονται από τελικές στοχευμένες δοκιμές με hash lineage.
+
+Μετά την εγκατάσταση:27/27 bounded primary λειτουργικοί έλεγχοι,17ακριβήHTTP,
+44προστατευμένα assets, refresh με earned/partialquizprogress και λειτουργικές
+54/52/React. Καταγράφηκε ένα JSmol nullplatform repaint στη μετάβαση52σεReact·
+πριν/μετά τα μοντέλα/ροές πέρασαν. Αιτία/regression attribution μη αποδεδειγμένη,
+παραμένει διαγνωστικήP2 εκκρεμότητα· δεν δηλώνεται καθαρή κονσόλα ή λύση του
+ιστορικού παγώματος Firefox.572protected/26installed/παλιάcore/HEAD/index και
+122candidate+13primary evidence hashes επαληθεύτηκαν στο τέλος.
+
+Evidence: docs/checks/v54-merge-20261109/final-report.json και review-result.json.
+Rollback-before-install και frozen26file archive ελεγμένα· πλήρες παλιό recovery
+checkpoint29991c90 διατηρείται. Τα νέα μικρά archives δεν είναι πλήρες νέο backup.
+Μόνο3owned Firefox/serverPIDs έκλεισαν με guards, ports κλειστά. Προσωπικός
+Firefox ανέπαφος. Δεν πιστοποιούνται φυσικήσύγκλιση, offline/Safari/κινητό ή
+συνεδριακή αδιάλειπτη λειτουργία. Συγκεκριμένο επόμενο: χρήση/οπτική αποδοχή της
+τοπικήςv55· αν ζητηθεί αποθήκευση/δημοσίευση, νέο checkpoint/report/public verify.
+Η ξεχωριστή διάγνωση Firefox/JSmol παραμένει ανοικτή, χωρίς επέκταση scope.
+
+# 2026-11-09 — Εγκρίθηκε η ενσωμάτωση v55, υλοποίηση σε χωριστό candidate
+
+Ο χρήστης ενέκρινε ολόκληρο το συγκεκριμένο πλάνο και επέλεξε ρητά καταχώριση
+προσωρινού 3D με επιβεβαίωση, όπως upstream. Χημική ταυτότητα γράφου είναι
+υποχρεωτική και η προσωρινή γεωμετρία παραμένει σαφώς επισημασμένη/καταγεγραμμένη.
+Δεν απαιτείται νέα ερώτηση για αναγκαίες διορθώσεις μέσα σε αυτό το scope.
+
+Pinned αρχικό upstream f49b810 → e76d3c0/v55, 75 commits/37 paths.
+Κατά την υλοποίηση ελέγχθηκε και νέο HEAD5ab24955: +5 commits εντός του ίδιου
+scope αναμονής/ακύρωσης/ρυθμίσεων. Ενσωματώνονται συνολικά80 commits /38paths.
+Η ρητή επιβεβαίωση προσωρινού3D διατηρείται στο Accept, όχι διπλά στο Minimize. Plan/approval και
+preflight evidence στο docs/checks/v54-merge-20261109/. Candidate υπό δημιουργία:
+/private/tmp/namelecule-professor-merge-20261109-oxj7hfyy/candidate.
+Η σημερινή v54/52/React/JSON/MOL παραμένει αμετάβλητη. Χωριστοί ownership ρόλοι
+μπορούν να υλοποιήσουν ανεξάρτητα core, viewer και shell/teaching του candidate,
+με υποχρεωτικό ένα τελικό fresh Reviewer πριν από local install. Κανένα νέο
+commit/push/publication δεν έχει εξουσιοδοτηθεί. Προσωπικός Firefox ανέπαφος.
+Έχουν δημιουργηθεί τα νέα55 στο candidate. Core/EN unit και viewer45-case
+unit ολοκληρώθηκαν, αλλά η ανεξάρτητη χημική επικύρωση βρήκε επιπλέον όρια:
+CV55-07/08/09 EN παρενθέσεις/σειρά/bis και inheritedP1CV55-10 παράλειψη κλάδου.
+Developer correction πάγωσε σε core6cbdbd0…/ENe2dd570…, targeted επανέλεγχος
+σε εξέλιξη. Viewer54-independent assertions54 passed, P2CV55-11 chargedhalide-H
+boundary διορθώνεται από viewerowner. Root shell νέα data-lang/registry/CSS και
+init-55.spt έτοιμα,572protectedassets και oldruntime αμετάβλητα. Αρχική browser
+ροή πέρασε112checks/6repairs/46forms/8actual3D χωρίς JSerrors, αλλά περιεχόμενο
+viewer άλλαξε κατά τη δοκιμή· φυλάχτηκε ως pre-laterdelta, ΟΧΙ final evidence.
+Browser περιμένει finalfreeze για νέο replay/audit. Προσωπικός Firefox ανέπαφος.
+Επόμενο: τελευταίες bounded διορθώσεις/chemical recheck → frozen browser suite
+→ ένας fresh Reviewer → local install. Κανένας primary core δεν άλλαξε ακόμη·
+νέο core55 υπάρχει μόνο στο candidate. Καμία δημοσίευση/commit.
+
+# 2026-11-09 — Προέλεγχος v55 και υποβολή πλάνου
+
+Ο χρήστης ζήτησε ενσωμάτωση ΟΛΩΝ των αλλαγών του καθηγητή, ανακαλώντας το HOLD.
+Το live upstream HEAD, ιστορικό και CHANGELOG ελέγχθηκαν από το πραγματικό sync
+f49b810c93ec85d06163679aff4a8642ea1b4cd3 έως το pinned target
+e76d3c071c0be98cbd63365f2590fe49fa9e6f36 (v55): 75 εκκρεμή commits / 37 paths,
+16 νέα από το προηγούμενο checked bfa9ce034e/v54.42. Δεν έγινε ακόμη νέο sync.
+
+Αποδείξεις, snapshots, baseline, plan.json και preflight-findings.json:
+`docs/checks/v54-merge-20261109/`. Προσωρινό job:
+`/private/tmp/namelecule-professor-merge-20261109-oxj7hfyy`.
+Προέλεγχος από read-only Chemistry Validator, viewer explorer, Planner και
+local-baseline explorer. Μετρήθηκαν 18 viewer / 10 core / 2 EN / 2 Main54 /
+1 icons textual conflicts. Η καθαρή συγχώνευση scenario/teaching/CSS δεν
+αποτελεί απόδειξη σωστής λειτουργίας. Τα upstream δεδομένα έχουν ίδια 141 keys /
+422 μορφές, αλλά διαφέρουν 132 MOL κείμενα και πέντε μεταδεδομένα. Προτείνεται
+διατήρηση των σημερινών δεδομένων, σειράς και διορθωμένου τύπου οξέος.
+
+Παρουσιάστηκε συγκεκριμένο πλάνο: νέα v55, με current54/52/React ως έχουν,
+ίδια 14 JSON / 328 βήματα, progress/quiz engine και Namelecule branding.
+Μεταφορά όλων των τελικών upstream λειτουργιών και του νέου Edit μόνο στην
+επεξεργασμένη μορφή / New-or-fork και στις τρεις μορφές. Νέα αρχεία55 και δύο
+navigation HTML, δοκιμές χημείας/γεωμετρίας/browser/μαθημάτων και ένας fresh
+Reviewer πριν από σύνδεση με την υποδοχή. Δεν υπάρχει candidate runtime ακόμη.
+
+Actual-code JavaScriptCore probes (όχι live browser) αναπαρήγαγαν:
+CV55-01 απώλεια ατόμου C σε όνομα σύνθετης διακλάδωσης, CV55-02 διπλό πρόθεμα
+διχλωρο, CV55-03 απώλεια τοπικών locant/C9/charge guards από απλή αντικατάσταση,
+CV55-04 αποδοχή διαφορετικού 3D γράφου με ίδιο πλήθος ατόμων, CV55-05 manual OK
+σε planar jsmol-unminimized, CV55-06 orientation-dependent z-spread που απορρίπτει
+μεθάνιο. VV55-01 καθυστερημένος minimizer συνεχίζει σε αντικατασταθέν μοντέλο,
+VV55-02 ορατό manual retry μπλοκάρεται στον handler. Απαιτούνται περιορισμένες
+διορθώσεις στην αιτία, όχι γενική επέκταση της ονοματολογίας διακλαδώσεων.
+
+Υποβλήθηκε μία async ερώτηση έγκρισης πλάνου και πολιτικής προσωρινού 3D:
+(1) μόνο προεπισκόπηση, προτείνεται για τώρα, ή (2) και καταχώριση με ρητή
+επιβεβαίωση όπως upstream. Έλεγχος χημικού γράφου και σαφής ένδειξη προσωρινού
+ισχύουν και στα δύο. ΑΝΑΜΕΝΕΤΑΙ απάντηση. Το AGENTS.md απαιτεί έγκριση λόγω
+των συγκεκριμένων ουσιαστικών συγκρούσεων/πρόσθετων διορθώσεων. Η συνήθης
+ενσωμάτωση είναι ήδη εξουσιοδοτημένη· δεν ζητήθηκε ξανά γενική άδεια sync.
+Δεν αρχίζει εξαρτώμενη υλοποίηση πριν από την απάντηση.
+
+Preflight-verification.json: 281 runtime / 10 core / HEAD168e3ce / index25c212…
+αμετάβλητα. Κανένα core δεν άλλαξε σε όλη τη συνεδρία9/11. Known recovery
+checkpoint29991c90 και προηγούμενα archives διατηρούνται. Καμία νέα εντολή
+commit/push/publication ή παρέμβαση στον προσωπικό Firefox. Επόμενο μετά την
+απάντηση: καταγραφή έγκρισης/policy → isolated candidate → tests → freeze/review
+→ local install. Firefox freeze, εξωτερικές υπηρεσίες, συνεδριακή πρόβα και
+προετοιμασία offline παραμένουν ανοικτά.
+
+# 2026-11-09 — Έναρξη διερεύνησης πλήρους ενσωμάτωσης καθηγητή
+
+Ο χρήστης ζήτησε «μπορείς να ξεκινήσεις την ενσωμάτωση όλων των αλλαγών του καθηγητή;».
+Το προηγούμενο HOLD ανακλήθηκε από αυτό το ρητό αίτημα. Δεν υπάρχει νέα εντολή
+commit/push/δημοσίευσης για τη συγχώνευση. Τελευταίο πραγματικό sync:
+f49b810c93ec85d06163679aff4a8642ea1b4cd3, προηγούμενο checked bfa9ce034e/v54.42.
+Νέο read-only upstream clone σε /private/tmp/namelecule-professor-merge-20261109-oxj7hfyy/upstream
+δείχνει πλέον v55/HEAD e76d3c0 (9/11), με νέους μηχανισμούς tiered3D/Accept.
+Η ακριβής καταμέτρηση commits, snapshots και CHANGELOG βρίσκεται σε εξέλιξη.
+Αρχικός snapshot reader υπέθετε υπάρχον base path για νέο css55 και σταμάτησε·
+διορθώθηκε για πρόσθετα αρχεία, χωρίς καμία μεταβολή εφαρμογής.
+
+Baseline/status/281runtime hashes/10core hashes και job paths:
+`docs/checks/v54-merge-20261109/baseline.json`. Source HEAD168e3ce/index25c212…
+παραμένουν ίδια. Known complete recovery checkpoint29991c90, με τα προηγούμενα
+πλήρη archives. Read-only explorer επιβεβαίωσε προστασίες/currentlocal54 έναντι
+upstreambase και κατάλληλες test suites· οι παλιοί drivers χρειάζονται νέο output
+path, ώστε να μην αλλοιωθούν παλιές αποδείξεις. Κανένας κώδικας/core δεν άλλαξε.
+Επόμενο: πλήρης pinned diff/changelog και στοχευμένη προμελέτη core/viewer/v55,
+συγκεκριμένο πλάνο πριν από υλοποίηση, υποψήφιο χωριστό αντίγραφο και ανεξάρτητο
+review πριν εγκατάσταση στην κύρια. Καμία εγγύηση λύσης παλιού Firefox freeze.
+
+# 2026-11-09 — Αναφορά καθηγητή δημοσιεύτηκε
 
 Με το αίτημα «ετοίμασε κ ρεπορτ για τον καθηγητή» ολοκληρώθηκε χωριστή,
 τεκμηριωτική αναφορά για τις νέες εργασίες 6–9 Νοεμβρίου, μετά την αναφορά 5/11.

@@ -1,0 +1,19 @@
+{
+  "files": {
+    "docs/checks/optional-completion-navigation-20261110/unit-r2/controller-harness-original.js": "e36e57675eeeceabec60b6f2893bb5a0a7cf8176820cfdd150430267e0bd716e",
+    "docs/checks/optional-completion-navigation-20261110/unit-r2/run.py": "1d4f5122e2b5543f841624d571d6a53273dc05efb5a1a701d8c72ac0559f3bc4",
+    "docs/checks/optional-completion-navigation-20261110/unit-r2/controller-harness-counterfactual.js": "790c660d868d89bf47940db69b3be4820391b7aa7b2fe7144f10c5c74ec45b01",
+    "docs/checks/optional-completion-navigation-20261110/unit-r2/counterfactual.json": "910eefe79f7f510dca1cbe2fdae8ff3c3122c21c28a560f6eaee75a9499b6698",
+    "docs/checks/optional-completion-navigation-20261110/unit-r2/cases.js": "386d6dfd108899c5ee7244a7b3e7120d65ae291b334e65f29cea48c9abf5a052",
+    "docs/checks/optional-completion-navigation-20261110/unit-r2/counterfactual-tested-r1.json": "910eefe79f7f510dca1cbe2fdae8ff3c3122c21c28a560f6eaee75a9499b6698",
+    "docs/checks/optional-completion-navigation-20261110/unit-r2/results.json": "4b24e255fd16071f0c4e53e1b713e0a33188f823352d5519c884460a5be08138",
+    "docs/checks/optional-completion-navigation-20261110/unit-r2/controller-harness.js": "d94f3d371a42b7dd8ac8baa5b79cffc6a79be1ed7c963a86c5c21738b2c3a998",
+    "docs/checks/optional-completion-navigation-20261110/unit-r2/controller-harness-tested-r1.js": "790c660d868d89bf47940db69b3be4820391b7aa7b2fe7144f10c5c74ec45b01",
+    "docs/checks/optional-completion-navigation-20261110/unit-r2/counterfactual-original.json": "1ccaf63bb00d497afed33491a262ef131f1a2751373fdf35cba859266908cd7d"
+  },
+  "expectedCounterfactuals": {
+    "original": "Optional final upper Continue remains visible.",
+    "tested-r1": "Focused upper Continue hidden without valid lower focus transfer."
+  },
+  "scope": "Controller doubles; real native focus and network faults separately recorded."
+}

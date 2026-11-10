@@ -1,0 +1,44 @@
+{
+  "date": "2026-11-09T22:04:03.369425+00:00",
+  "files": {
+    "docs/CHEM-LIBRARIES.md": {
+      "sha256": "b1c1b412616000e216e2b725653895678075a0435164cd0795ce06792304cf0b",
+      "strategy": "Three-way documentation merge, retains local records; upstream baseline statements remain historical."
+    },
+    "docs/PROJECT-PLAN-GR.md": {
+      "sha256": "4d276f7e7211d5652b6f2c3d14146402bcf6fcb1454ba8525cd794d1d2e8d857",
+      "strategy": "Three-way documentation merge, retains local records; upstream baseline statements remain historical."
+    },
+    "docs/PROJECT-PLAN.md": {
+      "sha256": "01deeebe56d48a2c09b6fee051aa239f77574e0c8325093f15032cc6180d469b",
+      "strategy": "Three-way documentation merge, retains local records; upstream baseline statements remain historical."
+    },
+    "docs/REVIEW-EN-53.md": {
+      "sha256": "33d925cf67d102817e30864cafbe2c9e2f517228f91594a1ab3c7d5550194c12",
+      "strategy": "Three-way documentation merge, retains local records; upstream baseline statements remain historical."
+    },
+    "docs/STAGE2-AUTHORING-54.md": {
+      "sha256": "c510d419d341d26696fc7f4e10fabd43e961ebaaf46cc194d948affb0d204331",
+      "strategy": "Three-way documentation merge, retains local records; upstream baseline statements remain historical."
+    },
+    "docs/TEACHER-GUIDE-EN-53.md": {
+      "sha256": "f40ab664d235e58712e5ab6fac06ce5cb674219398bb630da0fa28479f8c048d",
+      "strategy": "Three-way documentation merge, retains local records; upstream baseline statements remain historical."
+    },
+    "docs/DATA-PHASE-PLAN.md": {
+      "sha256": "93880824e1b4e2c1bc5ea894e2b9dc4555bdc263dd4d25674dc314234a0ab84e",
+      "strategy": "New upstream planning reference, explicitly distinguished from implementation status."
+    },
+    "docs/CHANGELOG.md": {
+      "sha256": "5cedd86f006e527716c4fe84a7d4c2817f372f4224a9ef067d13ed06fb10c77d",
+      "strategy": "Preserve local history, labeled upstream release text and explicit candidate-status entry."
+    },
+    "README.md": {
+      "sha256": "ea7015d0cda59ff49be92524e204e0d9b8a9d774df7ac28979d16da24219b7ec",
+      "strategy": "Keep Namelecule identity/local historical records; new candidate status and pinned full professor README retained as source evidence."
+    }
+  },
+  "primaryDocumentationChanges": "Only current session/contribution/evidence until final install",
+  "upstreamSessionNotes": "Exact target archived under upstream/target/docs/SESSION-NOTES.md; do not replace local session history",
+  "gitignore": "Retain current private ignores/vendor allowlist. Upstream extra iupac/ and one experimental custom molecule ignore are not runtime features; artifacts absent here and must not override local saving policy."
+}

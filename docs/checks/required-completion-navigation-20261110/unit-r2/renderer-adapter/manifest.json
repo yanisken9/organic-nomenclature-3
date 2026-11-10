@@ -1,0 +1,36 @@
+{
+  "sourceSHA256": {
+    "js/namelecule-game-repair.js": "197d29dffc964d3d8dbcc17fe3f8bef8fca3da93ee04af6a30c113e18a64f880",
+    "js/namelecule-generated-repair-checkpoint.js": "4c5b79007c09af2caaf66f3094fb6cd0e1eee8548ec2220ba8efd02f10828cca",
+    "js/namelecule-repair-generator.js": "118304488b6eaee651490785903080c419239df3f646988f79ae0e2548527611",
+    "games/data/name-repair-alkanes.json": "0538e31934d55d1738305d28a2f41ffa8ff520bfe08119517b277b4c5f2cf2e4",
+    "docs/checks/alkane-checkpoint-pilot-20261104/repair/test-mount.py": "043cab409046b0aaa90f62a2c6d5a148af7c3029a691571643a73ce661168195",
+    "games/data/alkane-structures.json": "9778e30ea33f2f7cd4c8a472e46e90539856b861a54035a1d514c3246cccf724",
+    "js/chemistry-engines/3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306.js": "3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306",
+    "docs/checks/engine-workshop-20261105/generator/test-generator.py": "98e62b54032bac9ab88777acc9b6e7e9566931c04dab86498f7346c4f3f97dc0"
+  },
+  "beforeSHA256": {
+    "js/namelecule-game-repair.js": "d1649341e1b9181da180e0d62c12a0d0f27229af8d108048a3798c24944bf862",
+    "js/namelecule-generated-repair-checkpoint.js": "714e3b6140b28377a8af611c93350c42b0166e805f4dc62021055f8d5494b365"
+  },
+  "conditions": "System JavaScriptCore, actual production renderer+adapter+generator and pinned chemistry engine; DOM, image events, fetch/crypto/Worker transport are explicit doubles.",
+  "limits": [
+    "No native DOM/layout/image network or browser input claim.",
+    "Actual renderer and adapter are exercised together and separately; focused stale-callback probes invoke captured adapter callbacks as a deliberately adversarial renderer double.",
+    "Controller integration and native browser checks are separate root/browser-worker evidence."
+  ],
+  "artifactSHA256": {
+    "adapter-cases.js": "34afada3181d1b1aedf35ddf9ea7795b082278da3bb1ea36a584606eda100c2e",
+    "adapter-generated.js": "87126891ac71aa807f776eb9d7d4f21cfab749fbdd05ad39b4c4d2414e0616e5",
+    "adapter-results.json": "f9e6211e6f5fa5a3a929ac862cb438295fa15181415046a2675c37eb24dbc139",
+    "failure-harness-remove-attribute.json": "17101ffcfceec0ea57d4eb46270286b4b173ba10f549af8364aa5e878f84de4a",
+    "failure-harness-window.json": "ce842d39b2761a98e6893be1951a222b63851bc143a38948177f935a583e9d35",
+    "renderer-cases.js": "69c09b04d09d54d1af3d4182023dcf37dbb10cb1a7b04859017f95734dba12de",
+    "renderer-generated.js": "0a6a5a2e3792e38f78e9fcd9213bd04c4785a994d1f03d547ce3481c6a0a2e10",
+    "renderer-results.json": "9d98d8c1c9b587ffcf37abfca28007e10f37ca265149633aa398a8ecd485402c",
+    "run.py": "cadd50e988ee47be7a5ff2441b9106883f11290f922978104be339e7d938ee86",
+    "summary.json": "3559479db6e6e6296ccdf60e6bedd4dabb1f867afa9078cbbba4c06248e8c73b"
+  },
+  "success": true,
+  "freezeVerifiedAgainst": "docs/checks/required-completion-navigation-20261110/target-r2.json"
+}

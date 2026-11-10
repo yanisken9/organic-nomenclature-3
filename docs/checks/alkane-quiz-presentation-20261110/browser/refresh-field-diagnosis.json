@@ -1,0 +1,23 @@
+{
+  "rawStorageDifferences": [
+    {
+      "path": ".namelecule:lesson-checkpoints:v1:3fbb1bcd.states.3.states[2].choiceOrder[0]",
+      "before": 2,
+      "after": 0
+    },
+    {
+      "path": ".namelecule:lesson-checkpoints:v1:3fbb1bcd.states.3.states[2].choiceOrder[1]",
+      "before": 0,
+      "after": 1
+    },
+    {
+      "path": ".namelecule:lesson-checkpoints:v1:3fbb1bcd.states.3.states[2].choiceOrder[2]",
+      "before": 1,
+      "after": 2
+    }
+  ],
+  "earnedAndCurrentStatesEqual": true,
+  "candidateBefore": "βουτάνιο",
+  "candidateAfter": "βουτάνιο",
+  "explanation": "Only untouched third repair initial choiceOrder rerandomizes on actualreload; first earned and second unsubmitted complete states plus samecandidate preserved. Existing create/restore mechanism; source unchanged in approved UI change. Failed first wholeobject assertion preserved in attempt1; secondrun rawfullobjects preserved in after-browser progressRefresh."
+}

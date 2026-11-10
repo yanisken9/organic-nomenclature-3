@@ -1,0 +1,38 @@
+{
+  "status": "Approved; implementation in progress",
+  "scope": "Embedded generated alkane sets, sixrepairs at lessonsteps4/11; standalone defaultpresentation unchanged",
+  "behavior": [
+    "Center/enlarge each round.objective without rewriting mission or disclosing answer",
+    "Display currentlargebranched ethyl_3_dimethyl_2_5_hexane as existingcondensedrepresentation withoutnumbering/highlights; sameassetinzoom",
+    "Correct visible representationlabel and alt; other7molecules retaincurrentexpandedasset",
+    "Presentation only: canonicalquestions,IDs,seeds,solutions,receipts andMOL/SDF/scenarioJSON unchanged"
+  ],
+  "codePaths": [
+    "js/namelecule-generated-repair-checkpoint.js",
+    "js/namelecule-game-repair.js",
+    "css/namelecule-repair-round.css",
+    "mulermoc-nom-55.html"
+  ],
+  "newAssets": [
+    "games/assets/name-repair/condensed/ethyl_3_dimethyl_2_5_hexane.svg",
+    "games/assets/name-repair/condensed/provenance.json"
+  ],
+  "checks": [
+    "Recoverablebeforecopies/hashes",
+    "All6repairs bothgates,wrong/correctchoices/automaticresponse scroll/nextlock/refreshprogress",
+    "Desktop andnarrowviewport: promptreadability/nooverflow; main/zoom image/label agreement",
+    "Chemicalgraph/CHn correctness andnoanswerrevealinghighlights incondensedasset",
+    "Boundedstandalone/defaultpresentation check",
+    "OnefreshindependentReviewer afterlogicalunit, targetedcorrections"
+  ],
+  "roles": {
+    "learningDesignerPreflight": "/root/alkane_quiz_presentation_preflight_20261110 (readonly complete)",
+    "chemistryValidator": "Targetednewdiagramverification afterapproval",
+    "reviewer": "Fresh afterimplementation"
+  },
+  "coreChangePlanned": false,
+  "JSONExportRequired": false,
+  "commitPublishAuthorized": false,
+  "approvedUTC": "2026-11-10T04:05:03.335576+00:00",
+  "approval": "User: Ναι, προχώρα με αυτό το πλάνο"
+}

@@ -1,0 +1,273 @@
+{
+  "completed": true,
+  "role": "Developer bounded Reviewer supplement",
+  "checks": [
+    {
+      "label": "Quiz opens at top",
+      "detail": null
+    },
+    {
+      "label": "Expected seeded canonical objective",
+      "detail": null
+    },
+    {
+      "label": "Correct target response within sticky-header safe viewport",
+      "detail": {
+        "top": 666.2333374023438,
+        "bottom": 741,
+        "safeTop": 123.83332824707031,
+        "safeBottom": 741,
+        "scroll": 344.3333435058594
+      }
+    },
+    {
+      "label": "Incorrect replacement response within sticky-header safe viewport",
+      "detail": {
+        "top": 564.7333374023438,
+        "bottom": 741.0000152587891,
+        "safeTop": 123.83332824707031,
+        "safeBottom": 741,
+        "scroll": 537.5999755859375
+      }
+    },
+    {
+      "label": "Incorrect Check response within sticky-header safe viewport",
+      "detail": {
+        "top": 671.5,
+        "bottom": 741,
+        "safeTop": 123.83332824707031,
+        "safeBottom": 741,
+        "scroll": 624.0999755859375
+      }
+    },
+    {
+      "label": "Actual targeted incorrect feedback",
+      "detail": null
+    },
+    {
+      "label": "Wrong replacement keeps first round and required gate locked",
+      "detail": null
+    },
+    {
+      "label": "Corrected replacement response within sticky-header safe viewport",
+      "detail": {
+        "top": 493.08331298828125,
+        "bottom": 669.3499908447266,
+        "safeTop": 123.83332824707031,
+        "safeBottom": 741,
+        "scroll": 609.25
+      }
+    },
+    {
+      "label": "Corrected Check response within sticky-header safe viewport",
+      "detail": {
+        "top": 505.54998779296875,
+        "bottom": 741,
+        "safeTop": 123.83332824707031,
+        "safeBottom": 741,
+        "scroll": 790.0499877929688
+      }
+    },
+    {
+      "label": "Correction earns one repair and leaves remaining two required",
+      "detail": null
+    },
+    {
+      "label": "Receipt records one incorrect then one correct submitted attempt",
+      "detail": null
+    }
+  ],
+  "actions": [
+    {
+      "label": "Correct target",
+      "beforeScroll": 220,
+      "settled": {
+        "top": 666.2333374023438,
+        "bottom": 741,
+        "safeTop": 123.83332824707031,
+        "safeBottom": 741,
+        "scroll": 344.3333435058594
+      }
+    },
+    {
+      "label": "Incorrect replacement",
+      "beforeScroll": 344.3333435058594,
+      "settled": {
+        "top": 564.7333374023438,
+        "bottom": 741.0000152587891,
+        "safeTop": 123.83332824707031,
+        "safeBottom": 741,
+        "scroll": 537.5999755859375
+      }
+    },
+    {
+      "label": "Incorrect Check",
+      "beforeScroll": 537.5999755859375,
+      "settled": {
+        "top": 671.5,
+        "bottom": 741,
+        "safeTop": 123.83332824707031,
+        "safeBottom": 741,
+        "scroll": 624.0999755859375
+      }
+    },
+    {
+      "label": "Corrected replacement",
+      "beforeScroll": 624.0999755859375,
+      "settled": {
+        "top": 493.08331298828125,
+        "bottom": 669.3499908447266,
+        "safeTop": 123.83332824707031,
+        "safeBottom": 741,
+        "scroll": 609.25
+      }
+    },
+    {
+      "label": "Corrected Check",
+      "beforeScroll": 609.25,
+      "settled": {
+        "top": 505.54998779296875,
+        "bottom": 741,
+        "safeTop": 123.83332824707031,
+        "safeBottom": 741,
+        "scroll": 790.0499877929688
+      }
+    }
+  ],
+  "scope": "One actual generated embedded unsolved round: correct target, incorrect nonoriginal replacement, Check, locked gate and safe feedback, then correct replacement and earned repair. No full six-round rerun.",
+  "targetHashes": {
+    "js/namelecule-generated-repair-checkpoint.js": "c8f29708b0694f7c10bd4e6e08e07f7eb58969b71e5fe15d9eeea72b356d061d",
+    "js/namelecule-game-repair.js": "b793ae9aa3af5d4e210468d5bc6e2ca6f73d80f64e722e1e6f22bea17980c056",
+    "css/namelecule-repair-round.css": "5fda8d1648b6aaaa07cc5a6e407e4be0db792d7c52b2ddf4c70820abaecef74c",
+    "mulermoc-nom-55.html": "d90d97782df8b99a68de3922fc32659536c7cf8682854cc44069f91af8c2a803",
+    "games/assets/name-repair/condensed/ethyl_3_dimethyl_2_5_hexane.svg": "ea16e3f63067f65ca088f52082a39c1f78d5bf32359b644c980f62e245057cb0",
+    "games/assets/name-repair/condensed/provenance.json": "82ef3a037a4ee027deae67a73ead4f9ba70eca1b513c823cf1fd8bb7c71c7bf4"
+  },
+  "canonicalFixtureRoundId": "engine-propane-bond-type-3ff25797",
+  "fixtureSeed": "4",
+  "javascriptErrors": [],
+  "wrongChoice": {
+    "original": "ίν",
+    "incorrect": "έν",
+    "correct": "άν",
+    "expectedFeedback": "Η επισκευή δεν συμφωνεί ακόμη με τη δομή. Δοκίμασε ξανά."
+  },
+  "incorrectFeedback": "Η επισκευή δεν συμφωνεί ακόμη με τη δομή. Δοκίμασε ξανά.",
+  "receiptAfterIncorrect": {
+    "namelecule:lesson-checkpoints:v1:3fbb1bcd": {
+      "version": 1,
+      "content": "{\"version\":1,\"title\":\"Αλκάνια\",\"author\":\"Unknown\",\"steps\":[{\"n\":1,\"nameBoxLayout\":1,\"lang\":\"gr\",\"title\":\"Τι είναι τα αλκάνια;\",\"note\":\"<div>Τα <b>αλκάνια</b> είναι άκυκλοι κορεσμένοι υδρογονάνθρακες, που περιέχουν μόνο άτομα C και H και όλοι οι δεσμοί μεταξύ ατόμων C είναι απλοί. Έχουν γενικό μοριακό τύπο <b>C<sub>ν</sub>H<sub>2ν+2</sub></b>, με ν ≥ 1.</div><div><br></div><div>Το απλούστερο είναι το <b>μεθάνιο CH<sub>4</sub></b>.&nbsp;</div><div>Εδώ βλέπεις το <b>αιθάνιο C<sub>2</sub>H<sub>6</sub></b>&nbsp;με δύο άτομα C συνδεδεμένα με απλό δεσμό.</div>\",\"noteFormat\":\"html\",\"mode2D\":\"condensed\",\"mainChainMode\":\"algorithmic\",\"chainIdx\":0,\"etherNamingMode\":\"iupac\",\"substNamingMode\":\"school\",\"nameAnalysisMode\":\"none\",\"selectedRule\":null,\"style2D\":{\"atomColors\":true,\"colorMode\":\"atom\",\"zigzag\":false,\"zoom\":2},\"styleName\":{\"box\":true,\"cross\":true,\"etherNaming\":\"iupac\",\"panelOpen\":true,\"hidden\":[\"comp5\",\"comp6\",\"comp9\"]},\"styleHighlight\":{\"bondAtoms\":false,\"numberingAtoms\":true,\"numberingBonds\":true},\"styleText\":{\"fontSizePx\":null,\"textWidthPx\":null,\"columns\":null,\"position\":null},\"audio\":{\"narrate\":false},\"menuSubset\":[],\"menuGroups\":[\"molecules\"],\"view3D\":{\"style\":\"ballnstick\",\"spin\":false,\"showH\":true,\"atomSymbols\":true,\"moveto\":null},\"show\":{\"menu\":false,\"viewerButtons\":false,\"viewerSettings\":false,\"viewers\":{\"2D\":true,\"3D\":false},\"viewerMaxHeight\":420,\"viewerBothHeight\":null,\"controls\":{\"2D\":false,\"3D\":false},\"save\":{\"2D\":false,\"3D\":false},\"naming\":true,\"nameSettings\":false,\"nameEye\":false,\"nameExpanded\":false,\"audio\":false,\"rule\":false,\"text\":true,\"nameClick\":false},\"selectedMol\":\"ethane\"},{\"n\":2,\"nameBoxLayout\":1,\"lang\":\"gr\",\"title\":\"Ένα όνομα από τρία συνθετικά\",\"note\":\"Στο <b>αιθάνιο</b>, το <b>αιθ-</b> δηλώνει τα δύο άτομα C της κύριας αλυσίδας, το <b>-αν-</b> τους απλούς δεσμούς μεταξύ ατόμων C και το <b>-ιο</b> τη χημική τάξη των υδρογονανθράκων.<br><br>Επίλεξε κάθε συνθετικό στο όνομα και παρατήρησε τι επισημαίνεται. Αν θέλεις τις άλλες συλλαβές για το ίδιο συνθετικό, άνοιξε τον αντίστοιχο <b>κανόνα </b>κάτω από την εξήγηση.\",\"noteFormat\":\"html\",\"mode2D\":\"condensed\",\"mainChainMode\":\"algorithmic\",\"chainIdx\":0,\"etherNamingMode\":\"iupac\",\"substNamingMode\":\"school\",\"nameAnalysisMode\":\"compCarbonsCount\",\"selectedRule\":null,\"style2D\":{\"atomColors\":true,\"colorMode\":\"atom\",\"zigzag\":false,\"zoom\":2},\"styleName\":{\"box\":true,\"cross\":false,\"etherNaming\":\"iupac\",\"panelOpen\":false,\"hidden\":[]},\"styleHighlight\":{\"bondAtoms\":false,\"numberingAtoms\":true,\"numberingBonds\":true},\"styleText\":{\"fontSizePx\":null,\"textWidthPx\":null,\"columns\":null,\"position\":null},\"audio\":{\"narrate\":false},\"menuSubset\":[],\"menuGroups\":[\"molecules\"],\"view3D\":{\"style\":\"ballnstick\",\"spin\":false,\"showH\":true,\"atomSymbols\":true,\"moveto\":null},\"show\":{\"menu\":false,\"viewerButtons\":false,\"viewerSettings\":false,\"viewers\":{\"2D\":true,\"3D\":false},\"viewerMaxHeight\":420,\"viewerBothHeight\":null,\"controls\":{\"2D\":false,\"3D\":false},\"save\":{\"2D\":false,\"3D\":false},\"naming\":true,\"nameSettings\":false,\"nameEye\":false,\"nameExpanded\":false,\"audio\":false,\"rule\":true,\"text\":true,\"nameClick\":true},\"selectedMol\":\"ethane\"},{\"n\":3,\"nameBoxLayout\":1,\"lang\":\"gr\",\"title\":\"Αλκάνια χωρίς διακλαδώσεις\",\"note\":\"<div>Από το μενού σύγκρινε <b>μεθάνιο, αιθάνιο, προπάνιο, βουτάνιο και πεντάνιο</b>. Οι αλυσίδες τους έχουν 1, 2, 3, 4 και 5 άτομα C, με συλλαβές πρώτου συνθετικού αντίστοιχα&nbsp;<b>μεθ- ,&nbsp; αιθ- ,&nbsp; προπ- ,&nbsp; βουτ- ,&nbsp; πεντ-</b>.&nbsp;</div><div>Τα <b>-αν-</b> και <b>-ιο</b> παραμένουν ίδια.&nbsp;</div><div>Δεν γράφουμε θέση για τους απλούς δεσμούς μεταξύ ατόμων C.</div><br><div>Δοκίμασε συνεπτυγμένο, ανεπτυγμένο και σκελετικό τύπο. Η συνδεσμολογία παραμένει ίδια σε κάθε μορφή.&nbsp;<b><br></b></div><div><b>Το μεθάνιο δεν διαθέτει σκελετικό τύπο.</b></div>\",\"noteFormat\":\"html\",\"mode2D\":\"condensed\",\"mainChainMode\":\"algorithmic\",\"chainIdx\":0,\"etherNamingMode\":\"iupac\",\"substNamingMode\":\"school\",\"nameAnalysisMode\":\"compCarbonsCount\",\"selectedRule\":null,\"style2D\":{\"atomColors\":true,\"colorMode\":\"atom\",\"zigzag\":false,\"zoom\":2},\"styleName\":{\"box\":true,\"cross\":false,\"etherNaming\":\"iupac\",\"panelOpen\":false,\"hidden\":[]},\"styleHighlight\":{\"bondAtoms\":false,\"numberingAtoms\":true,\"numberingBonds\":true},\"styleText\":{\"fontSizePx\":null,\"textWidthPx\":null,\"columns\":null,\"position\":null},\"audio\":{\"narrate\":false},\"menuSubset\":[\"methane\",\"ethane\",\"propane\",\"butane\",\"pentane\"],\"menuGroups\":[\"molecules\"],\"view3D\":{\"style\":\"ballnstick\",\"spin\":false,\"showH\":true,\"atomSymbols\":true,\"moveto\":null},\"show\":{\"menu\":true,\"viewerButtons\":false,\"viewerSettings\":false,\"viewers\":{\"2D\":true,\"3D\":false},\"viewerMaxHeight\":420,\"viewerBothHeight\":null,\"controls\":{\"2D\":true,\"3D\":false},\"save\":{\"2D\":false,\"3D\":false},\"naming\":true,\"nameSettings\":true,\"nameEye\":false,\"nameExpanded\":false,\"audio\":false,\"rule\":false,\"text\":true,\"nameClick\":true},\"selectedMol\":\"butane\"},{\"n\":4,\"nameBoxLayout\":1,\"lang\":\"gr\",\"title\":\"Συνεργείο ονομάτων\",\"note\":\"Ώρα για μια μικρή στάση στο <b>Συνεργείο ονομάτων</b>. Άνοιξε το σετ <b>\\\"Χωρίς διακλαδώσεις\\\"</b>&nbsp;και επισκεύασε τρία ονόματα.<br><br>Μπορείς να δοκιμάσεις ξανά και να επιστρέψεις στη θεωρία. Η συνέχεια προς τα διακλαδισμένα αλκάνια ανοίγει αφού ολοκληρώσεις σωστά <b>και τις τρεις επισκευές</b> και διαβάσεις τις εξηγήσεις.\",\"noteFormat\":\"html\",\"mode2D\":\"condensed\",\"mainChainMode\":\"algorithmic\",\"chainIdx\":0,\"etherNamingMode\":\"iupac\",\"substNamingMode\":\"school\",\"nameAnalysisMode\":\"none\",\"selectedRule\":null,\"style2D\":{\"atomColors\":true,\"colorMode\":\"atom\",\"zigzag\":false,\"zoom\":2},\"styleName\":{\"box\":true,\"cross\":false,\"etherNaming\":\"iupac\",\"panelOpen\":false,\"hidden\":[]},\"styleHighlight\":{\"bondAtoms\":false,\"numberingAtoms\":true,\"numberingBonds\":true},\"styleText\":{\"fontSizePx\":null,\"textWidthPx\":null,\"columns\":null,\"position\":null},\"audio\":{\"narrate\":false},\"menuSubset\":[],\"menuGroups\":[\"molecules\"],\"view3D\":{\"style\":\"ballnstick\",\"spin\":false,\"showH\":true,\"atomSymbols\":true,\"moveto\":null},\"show\":{\"menu\":false,\"viewerButtons\":false,\"viewerSettings\":false,\"viewers\":{\"2D\":false,\"3D\":false},\"viewerMaxHeight\":420,\"viewerBothHeight\":null,\"controls\":{\"2D\":false,\"3D\":false},\"save\":{\"2D\":false,\"3D\":false},\"naming\":false,\"nameSettings\":false,\"nameEye\":false,\"nameExpanded\":false,\"audio\":false,\"rule\":false,\"text\":true,\"nameClick\":false},\"selectedMol\":\"pentane\",\"checkpoint\":{\"id\":\"alkanes-unbranched-workshop-v1\",\"type\":\"generated-name-repair-set\",\"version\":1,\"round\":{\"version\":1,\"setId\":\"alkanes-unbranched\",\"difficulty\":\"basic\",\"roundCount\":3,\"generatorVersion\":\"1.0.0\",\"catalogRevision\":\"275d537b19f3ef0791c97d8d78c127f541a0579038ef1e8d65dadde611845690\",\"engineSHA256\":\"3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306\"},\"openLabel\":\"πήγαινε στο συνεργείο\"},\"titleLogo\":\"workshop\"},{\"n\":5,\"nameBoxLayout\":1,\"lang\":\"gr\",\"title\":\"Κύρια αλυσίδα και συνολικά άτομα C\",\"note\":\"Στα διακλαδισμένα αλκάνια επιλέγουμε τη <b>μεγαλύτερη συνεχή ανθρακική αλυσίδα</b>. Εδώ έχει <b>πέντε άτομα C</b> και δίνει το συνθετικό <b>πεντ-</b>. Το μόριο έχει συνολικά έξι άτομα C. Το έκτο ανήκει στη διακλάδωση.<br><br>Ακολούθησε την επισημασμένη αλυσίδα. Μπορεί να αλλάζει κατεύθυνση στο σχέδιο. Κάνε κλικ στο εικονίδιο <b>\\\"Κύρια αλυσίδα\\\"</b> για να δεις ποιες είναι οι ισοδύναμες κύριες αλυσίδες. Μετράμε τα συνεχόμενα άτομα C της και όχι όλα τα άτομα C του μορίου.\",\"noteFormat\":\"html\",\"mode2D\":\"condensed\",\"mainChainMode\":\"algorithmic\",\"chainIdx\":0,\"etherNamingMode\":\"iupac\",\"substNamingMode\":\"school\",\"nameAnalysisMode\":\"compCarbonsCount\",\"selectedRule\":null,\"style2D\":{\"atomColors\":true,\"colorMode\":\"atom\",\"zigzag\":false,\"zoom\":2},\"styleName\":{\"box\":true,\"cross\":false,\"etherNaming\":\"iupac\",\"panelOpen\":false,\"hidden\":[\"comp0\",\"comp1\"],\"disabled\":[\"comp6\",\"comp9\"]},\"styleHighlight\":{\"bondAtoms\":false,\"numberingAtoms\":true,\"numberingBonds\":true},\"styleText\":{\"fontSizePx\":null,\"textWidthPx\":null,\"columns\":null,\"position\":null},\"audio\":{\"narrate\":false},\"menuSubset\":[],\"menuGroups\":[\"molecules\"],\"view3D\":{\"style\":\"ballnstick\",\"spin\":false,\"showH\":true,\"atomSymbols\":true,\"moveto\":null},\"show\":{\"menu\":false,\"viewerButtons\":false,\"viewerSettings\":false,\"viewers\":{\"2D\":true,\"3D\":false},\"viewerMaxHeight\":420,\"viewerBothHeight\":null,\"controls\":{\"2D\":true,\"3D\":false},\"save\":{\"2D\":false,\"3D\":false},\"naming\":true,\"nameSettings\":false,\"nameEye\":false,\"nameExpanded\":false,\"audio\":false,\"rule\":false,\"text\":true,\"nameClick\":true,\"chainNavigation\":true},\"selectedMol\":\"methyl_2_pentane\"},{\"n\":6,\"nameBoxLayout\":1,\"lang\":\"gr\",\"title\":\"Θέση και όνομα μιας διακλάδωσης\",\"note\":\"Αριθμούμε από το άκρο που δίνει στη διακλάδωση τη θέση <b>2</b>, αντί για 4. Η ομάδα <b>–CH<sub>3</sub></b> είναι μεθυλομάδα, άρα γράφουμε <b>2-μεθυλοπεντάνιο</b>: θέση - διακλάδωση - όνομα κύριας αλυσίδας.<br><br>Επίλεξε το <b>2-</b> και το <b>μεθυλο</b> για να συνδέσεις θέση και ομάδα. Στο <b>\\\"Ονόματα αλκυλίων και προθέματα\\\"</b>&nbsp;θα βρεις και τις άλλες αλκυλομάδες.\",\"noteFormat\":\"html\",\"mode2D\":\"condensed\",\"mainChainMode\":\"algorithmic\",\"chainIdx\":0,\"etherNamingMode\":\"iupac\",\"substNamingMode\":\"school\",\"nameAnalysisMode\":\"compSecondSub1\",\"selectedRule\":null,\"style2D\":{\"atomColors\":true,\"colorMode\":\"atom\",\"zigzag\":false,\"zoom\":2},\"styleName\":{\"box\":true,\"cross\":false,\"etherNaming\":\"iupac\",\"panelOpen\":false,\"hidden\":[]},\"styleHighlight\":{\"bondAtoms\":false,\"numberingAtoms\":true,\"numberingBonds\":true},\"styleText\":{\"fontSizePx\":null,\"textWidthPx\":null,\"columns\":null,\"position\":null},\"audio\":{\"narrate\":false},\"menuSubset\":[],\"menuGroups\":[\"molecules\"],\"view3D\":{\"style\":\"ballnstick\",\"spin\":false,\"showH\":true,\"atomSymbols\":true,\"moveto\":null},\"show\":{\"menu\":false,\"viewerButtons\":false,\"viewerSettings\":false,\"viewers\":{\"2D\":true,\"3D\":false},\"viewerMaxHeight\":420,\"viewerBothHeight\":null,\"controls\":{\"2D\":true,\"3D\":false},\"save\":{\"2D\":false,\"3D\":false},\"naming\":true,\"nameSettings\":false,\"nameEye\":false,\"nameExpanded\":false,\"audio\":false,\"rule\":true,\"text\":true,\"nameClick\":true},\"selectedMol\":\"methyl_2_pentane\"},{\"n\":7,\"nameBoxLayout\":1,\"lang\":\"gr\",\"title\":\"Δύο ίδιες διακλαδώσεις\",\"note\":\"Η κύρια αλυσίδα έχει <b>τέσσερα άτομα C</b>, ενώ το μόριο έχει συνολικά έξι άτομα C. Οι δύο μεθυλομάδες παίρνουν τις θέσεις <b>2,3</b> από οποιοδήποτε άκρο. Οι δύο αριθμήσεις είναι ισοδύναμες.<br><br>Επειδή οι ομάδες είναι δύο και ίδιες, χρησιμοποιούμε το πρόθεμα&nbsp;<b>δι-</b>και γράφουμε&nbsp;<b>2,3-διμεθυλοβουτάνιο</b>. Βάζουμε κόμμα ανάμεσα στους αριθμούς και παύλα ανάμεσα σε αριθμό και λέξη. Επίλεξε τα μέρη του ονόματος για να δεις την αντιστοιχία.\",\"noteFormat\":\"html\",\"mode2D\":\"condensed\",\"mainChainMode\":\"algorithmic\",\"chainIdx\":1,\"etherNamingMode\":\"iupac\",\"substNamingMode\":\"school\",\"nameAnalysisMode\":\"compCarbonsCount\",\"selectedRule\":null,\"style2D\":{\"atomColors\":true,\"colorMode\":\"atom\",\"zigzag\":false,\"zoom\":2},\"styleName\":{\"box\":true,\"cross\":false,\"etherNaming\":\"iupac\",\"panelOpen\":false,\"hidden\":[]},\"styleHighlight\":{\"bondAtoms\":false,\"numberingAtoms\":true,\"numberingBonds\":true},\"styleText\":{\"fontSizePx\":null,\"textWidthPx\":null,\"columns\":null,\"position\":null},\"audio\":{\"narrate\":false},\"menuSubset\":[],\"menuGroups\":[\"molecules\"],\"view3D\":{\"style\":\"ballnstick\",\"spin\":false,\"showH\":true,\"atomSymbols\":true,\"moveto\":null},\"show\":{\"menu\":false,\"viewerButtons\":false,\"viewerSettings\":false,\"viewers\":{\"2D\":true,\"3D\":false},\"viewerMaxHeight\":420,\"viewerBothHeight\":null,\"controls\":{\"2D\":true,\"3D\":false},\"save\":{\"2D\":false,\"3D\":false},\"naming\":true,\"nameSettings\":false,\"nameEye\":false,\"nameExpanded\":false,\"audio\":false,\"rule\":false,\"text\":true,\"nameClick\":true,\"numberingDirection\":true},\"selectedMol\":\"dimethyl_2_3_butane\"},{\"n\":8,\"nameBoxLayout\":1,\"lang\":\"gr\",\"title\":\"Επιλογή κύριας αλυσίδας στο μεγάλο μόριο\",\"note\":\"Το μόριο έχει <b>δέκα άτομα C</b>, αλλά η μεγαλύτερη συνεχής αλυσίδα έχει <b>έξι άτομα C</b> και δίνει το συνθετικό&nbsp;<b>εξ-</b>. Τα υπόλοιπα τέσσερα άτομα C βρίσκονται στις διακλαδώσεις.<br><br>Ανάμεσα σε ισομήκεις αλυσίδες προτιμούμε εκείνη με τις <b>περισσότερες διακλαδώσεις</b>. Η επιλεγμένη αλυσίδα έχει τρεις. Ακολούθησε τα έξι αριθμημένα άτομα C της.\",\"noteFormat\":\"html\",\"mode2D\":\"condensed\",\"mainChainMode\":\"algorithmic\",\"chainIdx\":1,\"etherNamingMode\":\"iupac\",\"substNamingMode\":\"school\",\"nameAnalysisMode\":\"compCarbonsCount\",\"selectedRule\":null,\"style2D\":{\"atomColors\":true,\"colorMode\":\"atom\",\"zigzag\":false,\"zoom\":2},\"styleName\":{\"box\":true,\"cross\":false,\"etherNaming\":\"iupac\",\"panelOpen\":false,\"hidden\":[\"comp0\",\"comp1\",\"comp2\",\"comp3\"]},\"styleHighlight\":{\"bondAtoms\":false,\"numberingAtoms\":true,\"numberingBonds\":true},\"styleText\":{\"fontSizePx\":null,\"textWidthPx\":null,\"columns\":null,\"position\":null},\"audio\":{\"narrate\":false},\"menuSubset\":[],\"menuGroups\":[\"molecules\"],\"view3D\":{\"style\":\"ballnstick\",\"spin\":false,\"showH\":true,\"atomSymbols\":true,\"moveto\":null},\"show\":{\"menu\":false,\"viewerButtons\":false,\"viewerSettings\":false,\"viewers\":{\"2D\":true,\"3D\":false},\"viewerMaxHeight\":420,\"viewerBothHeight\":null,\"controls\":{\"2D\":true,\"3D\":false},\"save\":{\"2D\":false,\"3D\":false},\"naming\":true,\"nameSettings\":false,\"nameEye\":false,\"nameExpanded\":false,\"audio\":false,\"rule\":false,\"text\":true,\"nameClick\":true},\"selectedMol\":\"ethyl_3_dimethyl_2_5_hexane\"},{\"n\":9,\"nameBoxLayout\":1,\"lang\":\"gr\",\"title\":\"Αρίθμηση με βάση την πρώτη διαφορετική θέση \",\"note\":\"Η μία φορά αρίθμησης δίνει θέσεις <b>2,3,5</b> και η αντίθετη <b>2,4,5</b>. Συγκρίνουμε τους αριθμούς με τη σειρά. Ο πρώτος είναι ίδιος, αλλά μετά το <b>3 είναι μικρότερο από το 4</b>.\\n\\nΚρατάμε επομένως τις θέσεις <b>2,3,5</b> και την ίδια αρίθμηση για όλες τις ομάδες. Ο κανόνας είναι ο <b>μικρότερος αριθμός στο πρώτο σημείο διαφοράς</b>. Το άθροισμα των θέσεων δεν καθορίζει την επιλογή.\",\"noteFormat\":\"text\",\"mode2D\":\"condensed\",\"mainChainMode\":\"algorithmic\",\"chainIdx\":1,\"etherNamingMode\":\"iupac\",\"substNamingMode\":\"school\",\"nameAnalysisMode\":\"compCarbonsCount\",\"selectedRule\":null,\"style2D\":{\"atomColors\":true,\"colorMode\":\"atom\",\"zigzag\":false,\"zoom\":2},\"styleName\":{\"box\":true,\"cross\":false,\"etherNaming\":\"iupac\",\"panelOpen\":false,\"hidden\":[\"comp0\",\"comp1\",\"comp2\",\"comp3\"]},\"styleHighlight\":{\"bondAtoms\":false,\"numberingAtoms\":true,\"numberingBonds\":true},\"styleText\":{\"fontSizePx\":null,\"textWidthPx\":null,\"columns\":null,\"position\":null},\"audio\":{\"narrate\":false},\"menuSubset\":[],\"menuGroups\":[\"molecules\"],\"view3D\":{\"style\":\"ballnstick\",\"spin\":false,\"showH\":true,\"atomSymbols\":true,\"moveto\":null},\"show\":{\"menu\":false,\"viewerButtons\":false,\"viewerSettings\":false,\"viewers\":{\"2D\":true,\"3D\":false},\"viewerMaxHeight\":420,\"viewerBothHeight\":null,\"controls\":{\"2D\":true,\"3D\":false},\"save\":{\"2D\":false,\"3D\":false},\"naming\":true,\"nameSettings\":false,\"nameEye\":false,\"nameExpanded\":false,\"audio\":false,\"rule\":false,\"text\":true,\"nameClick\":true},\"selectedMol\":\"ethyl_3_dimethyl_2_5_hexane\"},{\"n\":10,\"nameBoxLayout\":1,\"lang\":\"gr\",\"title\":\"Αλκύλια, αλφαβητική σειρά και πλήρες όνομα\",\"note\":\"Στη θέση <b>3</b> υπάρχει αιθυλομάδα <b>–CH<sub>2</sub>–CH<sub>3</sub></b>&nbsp;ενώ στις <b>2 </b>και<b> 5</b> δύο μεθυλομάδες. Γράφουμε το&nbsp;<b>αιθυλο-</b> πριν από το&nbsp;<b>μεθυλο-</b> αλφαβητικά (το α βρίσκεται πριν από το μ στο αλφάβητο), χωρίς να υπολογίζουμε το <b>δι-&nbsp;</b>, οπότε το όνομα είναι&nbsp;<b>3-αιθυλο-2,5-διμεθυλοεξάνιο</b>.<br><br>Επίλεξε τις θέσεις και τις ομάδες στο όνομα. Αν χρειαστεί, συμβουλέψου τον πίνακα <b>\\\"Ονόματα αλκυλίων και προθέματα\\\"</b>. Τα κόμματα χωρίζουν αριθμούς και οι παύλες αριθμούς από λέξεις.\",\"noteFormat\":\"html\",\"mode2D\":\"condensed\",\"mainChainMode\":\"algorithmic\",\"chainIdx\":0,\"etherNamingMode\":\"iupac\",\"substNamingMode\":\"school\",\"nameAnalysisMode\":\"compSecondSub1\",\"selectedRule\":null,\"style2D\":{\"atomColors\":true,\"colorMode\":\"atom\",\"zigzag\":false,\"zoom\":2},\"styleName\":{\"box\":true,\"cross\":false,\"etherNaming\":\"iupac\",\"panelOpen\":false,\"hidden\":[]},\"styleHighlight\":{\"bondAtoms\":false,\"numberingAtoms\":true,\"numberingBonds\":true},\"styleText\":{\"fontSizePx\":null,\"textWidthPx\":null,\"columns\":null,\"position\":null},\"audio\":{\"narrate\":false},\"menuSubset\":[],\"menuGroups\":[\"molecules\"],\"view3D\":{\"style\":\"ballnstick\",\"spin\":false,\"showH\":true,\"atomSymbols\":true,\"moveto\":null},\"show\":{\"menu\":false,\"viewerButtons\":false,\"viewerSettings\":false,\"viewers\":{\"2D\":true,\"3D\":false},\"viewerMaxHeight\":420,\"viewerBothHeight\":null,\"controls\":{\"2D\":true,\"3D\":false},\"save\":{\"2D\":false,\"3D\":false},\"naming\":true,\"nameSettings\":false,\"nameEye\":false,\"nameExpanded\":false,\"audio\":false,\"rule\":true,\"text\":true,\"nameClick\":true},\"selectedMol\":\"ethyl_3_dimethyl_2_5_hexane\"},{\"n\":11,\"nameBoxLayout\":1,\"lang\":\"gr\",\"title\":\"Στο Συνεργείο: Με διακλαδώσεις\",\"note\":\"Επίστρεψε στο <b>Συνεργείο ονομάτων</b> για το σετ <b>«Με διακλαδώσεις»</b>. Σε κάθε κουίζ εντόπισε το λάθος συνθετικό ή τη λανθασμένη σειρά και επισκεύασε το όνομα.<br><br>Διάβασε την εξήγηση κάθε σωστής επισκευής. Μπορείς να επαναλάβεις τις προσπάθειες. Αφού ολοκληρώσεις σωστά <b>και τα τρία κουίζ</b>, ανοίγει η τελική εξερεύνηση όλων των αλκανίων.\",\"noteFormat\":\"html\",\"mode2D\":\"condensed\",\"mainChainMode\":\"algorithmic\",\"chainIdx\":0,\"etherNamingMode\":\"iupac\",\"substNamingMode\":\"school\",\"nameAnalysisMode\":\"none\",\"selectedRule\":null,\"style2D\":{\"atomColors\":true,\"colorMode\":\"atom\",\"zigzag\":false,\"zoom\":2},\"styleName\":{\"box\":true,\"cross\":false,\"etherNaming\":\"iupac\",\"panelOpen\":false,\"hidden\":[]},\"styleHighlight\":{\"bondAtoms\":false,\"numberingAtoms\":true,\"numberingBonds\":true},\"styleText\":{\"fontSizePx\":null,\"textWidthPx\":null,\"columns\":null,\"position\":null},\"audio\":{\"narrate\":false},\"menuSubset\":[],\"menuGroups\":[\"molecules\"],\"view3D\":{\"style\":\"ballnstick\",\"spin\":false,\"showH\":true,\"atomSymbols\":true,\"moveto\":null},\"show\":{\"menu\":false,\"viewerButtons\":false,\"viewerSettings\":false,\"viewers\":{\"2D\":false,\"3D\":false},\"viewerMaxHeight\":420,\"viewerBothHeight\":null,\"controls\":{\"2D\":false,\"3D\":false},\"save\":{\"2D\":false,\"3D\":false},\"naming\":false,\"nameSettings\":false,\"nameEye\":false,\"nameExpanded\":false,\"audio\":false,\"rule\":false,\"text\":true,\"nameClick\":false},\"selectedMol\":\"ethyl_3_dimethyl_2_5_hexane\",\"checkpoint\":{\"id\":\"alkanes-branched-workshop-v1\",\"type\":\"generated-name-repair-set\",\"version\":1,\"round\":{\"version\":1,\"setId\":\"alkanes-branched\",\"difficulty\":\"basic\",\"roundCount\":3,\"generatorVersion\":\"1.0.0\",\"catalogRevision\":\"275d537b19f3ef0791c97d8d78c127f541a0579038ef1e8d65dadde611845690\",\"engineSHA256\":\"3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306\"},\"openLabel\":\"πήγαινε στο συνεργείο\"},\"titleLogo\":\"workshop\"},{\"n\":12,\"nameBoxLayout\":1,\"lang\":\"gr\",\"title\":\"Όλα τα αλκάνια σε 2D και 3D\",\"note\":\"Από το μενού διάλεξε οποιοδήποτε από τα <b>οκτώ αλκάνια</b>. Σύγκρινε συνεπτυγμένο, ανεπτυγμένο και σκελετικό τύπο με το 3D μοντέλο και επίλεξε τα συνθετικά του ονόματος για τις αντίστοιχες επισημάνσεις. Το μεθάνιο διαθέτει συνεπτυγμένο και ανεπτυγμένο τύπο, χωρίς σκελετικό.\\n\\nΧρησιμοποίησε τα εργαλεία 2D και 3D για μεγέθυνση και παρατήρηση. Περίστρεψε το 3D μοντέλο με το ποντίκι. Η συνδεσμολογία παραμένει ίδια, ενώ ο 2D τύπος δεν αποδίδει όλες τις γωνίες του μορίου στον χώρο.\",\"noteFormat\":\"text\",\"mode2D\":\"condensed\",\"mainChainMode\":\"algorithmic\",\"chainIdx\":0,\"etherNamingMode\":\"iupac\",\"substNamingMode\":\"school\",\"nameAnalysisMode\":\"none\",\"selectedRule\":null,\"style2D\":{\"atomColors\":true,\"colorMode\":\"atom\",\"zigzag\":false,\"zoom\":2},\"styleName\":{\"box\":true,\"cross\":false,\"etherNaming\":\"iupac\",\"panelOpen\":false,\"hidden\":[]},\"styleHighlight\":{\"bondAtoms\":false,\"numberingAtoms\":true,\"numberingBonds\":true},\"styleText\":{\"fontSizePx\":null,\"textWidthPx\":null,\"columns\":null,\"position\":null},\"audio\":{\"narrate\":false},\"menuSubset\":[\"methane\",\"ethane\",\"propane\",\"butane\",\"pentane\",\"methyl_2_pentane\",\"dimethyl_2_3_butane\",\"ethyl_3_dimethyl_2_5_hexane\"],\"menuGroups\":[\"molecules\"],\"view3D\":{\"style\":\"ballnstick\",\"spin\":false,\"showH\":true,\"atomSymbols\":true,\"moveto\":null},\"show\":{\"menu\":true,\"viewerButtons\":false,\"viewerSettings\":false,\"viewers\":{\"2D\":true,\"3D\":true},\"viewerMaxHeight\":420,\"viewerBothHeight\":840,\"controls\":{\"2D\":true,\"3D\":true},\"save\":{\"2D\":false,\"3D\":false},\"naming\":true,\"nameSettings\":true,\"nameEye\":false,\"nameExpanded\":false,\"audio\":false,\"rule\":false,\"text\":true,\"nameClick\":true},\"selectedMol\":\"ethyl_3_dimethyl_2_5_hexane\"}]}",
+      "states": {
+        "3": {
+          "version": 1,
+          "seed": "4",
+          "currentRound": 0,
+          "states": [
+            {
+              "selectedPartId": "component-6",
+              "selectedValue": "έν",
+              "order": [],
+              "choiceOrder": [
+                1,
+                0,
+                2
+              ],
+              "attempts": 1,
+              "selectionMisses": 0,
+              "solved": false,
+              "submitted": true
+            },
+            {
+              "selectedPartId": null,
+              "selectedValue": null,
+              "order": [],
+              "choiceOrder": [
+                0,
+                1,
+                2
+              ],
+              "attempts": 0,
+              "selectionMisses": 0,
+              "solved": false,
+              "submitted": false
+            },
+            {
+              "selectedPartId": null,
+              "selectedValue": null,
+              "order": [],
+              "choiceOrder": [
+                2,
+                0,
+                1
+              ],
+              "attempts": 0,
+              "selectionMisses": 0,
+              "solved": false,
+              "submitted": false
+            }
+          ],
+          "solved": false
+        }
+      }
+    }
+  },
+  "receiptAfterCorrect": {
+    "namelecule:lesson-checkpoints:v1:3fbb1bcd": {
+      "version": 1,
+      "content": "{\"version\":1,\"title\":\"Αλκάνια\",\"author\":\"Unknown\",\"steps\":[{\"n\":1,\"nameBoxLayout\":1,\"lang\":\"gr\",\"title\":\"Τι είναι τα αλκάνια;\",\"note\":\"<div>Τα <b>αλκάνια</b> είναι άκυκλοι κορεσμένοι υδρογονάνθρακες, που περιέχουν μόνο άτομα C και H και όλοι οι δεσμοί μεταξύ ατόμων C είναι απλοί. Έχουν γενικό μοριακό τύπο <b>C<sub>ν</sub>H<sub>2ν+2</sub></b>, με ν ≥ 1.</div><div><br></div><div>Το απλούστερο είναι το <b>μεθάνιο CH<sub>4</sub></b>.&nbsp;</div><div>Εδώ βλέπεις το <b>αιθάνιο C<sub>2</sub>H<sub>6</sub></b>&nbsp;με δύο άτομα C συνδεδεμένα με απλό δεσμό.</div>\",\"noteFormat\":\"html\",\"mode2D\":\"condensed\",\"mainChainMode\":\"algorithmic\",\"chainIdx\":0,\"etherNamingMode\":\"iupac\",\"substNamingMode\":\"school\",\"nameAnalysisMode\":\"none\",\"selectedRule\":null,\"style2D\":{\"atomColors\":true,\"colorMode\":\"atom\",\"zigzag\":false,\"zoom\":2},\"styleName\":{\"box\":true,\"cross\":true,\"etherNaming\":\"iupac\",\"panelOpen\":true,\"hidden\":[\"comp5\",\"comp6\",\"comp9\"]},\"styleHighlight\":{\"bondAtoms\":false,\"numberingAtoms\":true,\"numberingBonds\":true},\"styleText\":{\"fontSizePx\":null,\"textWidthPx\":null,\"columns\":null,\"position\":null},\"audio\":{\"narrate\":false},\"menuSubset\":[],\"menuGroups\":[\"molecules\"],\"view3D\":{\"style\":\"ballnstick\",\"spin\":false,\"showH\":true,\"atomSymbols\":true,\"moveto\":null},\"show\":{\"menu\":false,\"viewerButtons\":false,\"viewerSettings\":false,\"viewers\":{\"2D\":true,\"3D\":false},\"viewerMaxHeight\":420,\"viewerBothHeight\":null,\"controls\":{\"2D\":false,\"3D\":false},\"save\":{\"2D\":false,\"3D\":false},\"naming\":true,\"nameSettings\":false,\"nameEye\":false,\"nameExpanded\":false,\"audio\":false,\"rule\":false,\"text\":true,\"nameClick\":false},\"selectedMol\":\"ethane\"},{\"n\":2,\"nameBoxLayout\":1,\"lang\":\"gr\",\"title\":\"Ένα όνομα από τρία συνθετικά\",\"note\":\"Στο <b>αιθάνιο</b>, το <b>αιθ-</b> δηλώνει τα δύο άτομα C της κύριας αλυσίδας, το <b>-αν-</b> τους απλούς δεσμούς μεταξύ ατόμων C και το <b>-ιο</b> τη χημική τάξη των υδρογονανθράκων.<br><br>Επίλεξε κάθε συνθετικό στο όνομα και παρατήρησε τι επισημαίνεται. Αν θέλεις τις άλλες συλλαβές για το ίδιο συνθετικό, άνοιξε τον αντίστοιχο <b>κανόνα </b>κάτω από την εξήγηση.\",\"noteFormat\":\"html\",\"mode2D\":\"condensed\",\"mainChainMode\":\"algorithmic\",\"chainIdx\":0,\"etherNamingMode\":\"iupac\",\"substNamingMode\":\"school\",\"nameAnalysisMode\":\"compCarbonsCount\",\"selectedRule\":null,\"style2D\":{\"atomColors\":true,\"colorMode\":\"atom\",\"zigzag\":false,\"zoom\":2},\"styleName\":{\"box\":true,\"cross\":false,\"etherNaming\":\"iupac\",\"panelOpen\":false,\"hidden\":[]},\"styleHighlight\":{\"bondAtoms\":false,\"numberingAtoms\":true,\"numberingBonds\":true},\"styleText\":{\"fontSizePx\":null,\"textWidthPx\":null,\"columns\":null,\"position\":null},\"audio\":{\"narrate\":false},\"menuSubset\":[],\"menuGroups\":[\"molecules\"],\"view3D\":{\"style\":\"ballnstick\",\"spin\":false,\"showH\":true,\"atomSymbols\":true,\"moveto\":null},\"show\":{\"menu\":false,\"viewerButtons\":false,\"viewerSettings\":false,\"viewers\":{\"2D\":true,\"3D\":false},\"viewerMaxHeight\":420,\"viewerBothHeight\":null,\"controls\":{\"2D\":false,\"3D\":false},\"save\":{\"2D\":false,\"3D\":false},\"naming\":true,\"nameSettings\":false,\"nameEye\":false,\"nameExpanded\":false,\"audio\":false,\"rule\":true,\"text\":true,\"nameClick\":true},\"selectedMol\":\"ethane\"},{\"n\":3,\"nameBoxLayout\":1,\"lang\":\"gr\",\"title\":\"Αλκάνια χωρίς διακλαδώσεις\",\"note\":\"<div>Από το μενού σύγκρινε <b>μεθάνιο, αιθάνιο, προπάνιο, βουτάνιο και πεντάνιο</b>. Οι αλυσίδες τους έχουν 1, 2, 3, 4 και 5 άτομα C, με συλλαβές πρώτου συνθετικού αντίστοιχα&nbsp;<b>μεθ- ,&nbsp; αιθ- ,&nbsp; προπ- ,&nbsp; βουτ- ,&nbsp; πεντ-</b>.&nbsp;</div><div>Τα <b>-αν-</b> και <b>-ιο</b> παραμένουν ίδια.&nbsp;</div><div>Δεν γράφουμε θέση για τους απλούς δεσμούς μεταξύ ατόμων C.</div><br><div>Δοκίμασε συνεπτυγμένο, ανεπτυγμένο και σκελετικό τύπο. Η συνδεσμολογία παραμένει ίδια σε κάθε μορφή.&nbsp;<b><br></b></div><div><b>Το μεθάνιο δεν διαθέτει σκελετικό τύπο.</b></div>\",\"noteFormat\":\"html\",\"mode2D\":\"condensed\",\"mainChainMode\":\"algorithmic\",\"chainIdx\":0,\"etherNamingMode\":\"iupac\",\"substNamingMode\":\"school\",\"nameAnalysisMode\":\"compCarbonsCount\",\"selectedRule\":null,\"style2D\":{\"atomColors\":true,\"colorMode\":\"atom\",\"zigzag\":false,\"zoom\":2},\"styleName\":{\"box\":true,\"cross\":false,\"etherNaming\":\"iupac\",\"panelOpen\":false,\"hidden\":[]},\"styleHighlight\":{\"bondAtoms\":false,\"numberingAtoms\":true,\"numberingBonds\":true},\"styleText\":{\"fontSizePx\":null,\"textWidthPx\":null,\"columns\":null,\"position\":null},\"audio\":{\"narrate\":false},\"menuSubset\":[\"methane\",\"ethane\",\"propane\",\"butane\",\"pentane\"],\"menuGroups\":[\"molecules\"],\"view3D\":{\"style\":\"ballnstick\",\"spin\":false,\"showH\":true,\"atomSymbols\":true,\"moveto\":null},\"show\":{\"menu\":true,\"viewerButtons\":false,\"viewerSettings\":false,\"viewers\":{\"2D\":true,\"3D\":false},\"viewerMaxHeight\":420,\"viewerBothHeight\":null,\"controls\":{\"2D\":true,\"3D\":false},\"save\":{\"2D\":false,\"3D\":false},\"naming\":true,\"nameSettings\":true,\"nameEye\":false,\"nameExpanded\":false,\"audio\":false,\"rule\":false,\"text\":true,\"nameClick\":true},\"selectedMol\":\"butane\"},{\"n\":4,\"nameBoxLayout\":1,\"lang\":\"gr\",\"title\":\"Συνεργείο ονομάτων\",\"note\":\"Ώρα για μια μικρή στάση στο <b>Συνεργείο ονομάτων</b>. Άνοιξε το σετ <b>\\\"Χωρίς διακλαδώσεις\\\"</b>&nbsp;και επισκεύασε τρία ονόματα.<br><br>Μπορείς να δοκιμάσεις ξανά και να επιστρέψεις στη θεωρία. Η συνέχεια προς τα διακλαδισμένα αλκάνια ανοίγει αφού ολοκληρώσεις σωστά <b>και τις τρεις επισκευές</b> και διαβάσεις τις εξηγήσεις.\",\"noteFormat\":\"html\",\"mode2D\":\"condensed\",\"mainChainMode\":\"algorithmic\",\"chainIdx\":0,\"etherNamingMode\":\"iupac\",\"substNamingMode\":\"school\",\"nameAnalysisMode\":\"none\",\"selectedRule\":null,\"style2D\":{\"atomColors\":true,\"colorMode\":\"atom\",\"zigzag\":false,\"zoom\":2},\"styleName\":{\"box\":true,\"cross\":false,\"etherNaming\":\"iupac\",\"panelOpen\":false,\"hidden\":[]},\"styleHighlight\":{\"bondAtoms\":false,\"numberingAtoms\":true,\"numberingBonds\":true},\"styleText\":{\"fontSizePx\":null,\"textWidthPx\":null,\"columns\":null,\"position\":null},\"audio\":{\"narrate\":false},\"menuSubset\":[],\"menuGroups\":[\"molecules\"],\"view3D\":{\"style\":\"ballnstick\",\"spin\":false,\"showH\":true,\"atomSymbols\":true,\"moveto\":null},\"show\":{\"menu\":false,\"viewerButtons\":false,\"viewerSettings\":false,\"viewers\":{\"2D\":false,\"3D\":false},\"viewerMaxHeight\":420,\"viewerBothHeight\":null,\"controls\":{\"2D\":false,\"3D\":false},\"save\":{\"2D\":false,\"3D\":false},\"naming\":false,\"nameSettings\":false,\"nameEye\":false,\"nameExpanded\":false,\"audio\":false,\"rule\":false,\"text\":true,\"nameClick\":false},\"selectedMol\":\"pentane\",\"checkpoint\":{\"id\":\"alkanes-unbranched-workshop-v1\",\"type\":\"generated-name-repair-set\",\"version\":1,\"round\":{\"version\":1,\"setId\":\"alkanes-unbranched\",\"difficulty\":\"basic\",\"roundCount\":3,\"generatorVersion\":\"1.0.0\",\"catalogRevision\":\"275d537b19f3ef0791c97d8d78c127f541a0579038ef1e8d65dadde611845690\",\"engineSHA256\":\"3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306\"},\"openLabel\":\"πήγαινε στο συνεργείο\"},\"titleLogo\":\"workshop\"},{\"n\":5,\"nameBoxLayout\":1,\"lang\":\"gr\",\"title\":\"Κύρια αλυσίδα και συνολικά άτομα C\",\"note\":\"Στα διακλαδισμένα αλκάνια επιλέγουμε τη <b>μεγαλύτερη συνεχή ανθρακική αλυσίδα</b>. Εδώ έχει <b>πέντε άτομα C</b> και δίνει το συνθετικό <b>πεντ-</b>. Το μόριο έχει συνολικά έξι άτομα C. Το έκτο ανήκει στη διακλάδωση.<br><br>Ακολούθησε την επισημασμένη αλυσίδα. Μπορεί να αλλάζει κατεύθυνση στο σχέδιο. Κάνε κλικ στο εικονίδιο <b>\\\"Κύρια αλυσίδα\\\"</b> για να δεις ποιες είναι οι ισοδύναμες κύριες αλυσίδες. Μετράμε τα συνεχόμενα άτομα C της και όχι όλα τα άτομα C του μορίου.\",\"noteFormat\":\"html\",\"mode2D\":\"condensed\",\"mainChainMode\":\"algorithmic\",\"chainIdx\":0,\"etherNamingMode\":\"iupac\",\"substNamingMode\":\"school\",\"nameAnalysisMode\":\"compCarbonsCount\",\"selectedRule\":null,\"style2D\":{\"atomColors\":true,\"colorMode\":\"atom\",\"zigzag\":false,\"zoom\":2},\"styleName\":{\"box\":true,\"cross\":false,\"etherNaming\":\"iupac\",\"panelOpen\":false,\"hidden\":[\"comp0\",\"comp1\"],\"disabled\":[\"comp6\",\"comp9\"]},\"styleHighlight\":{\"bondAtoms\":false,\"numberingAtoms\":true,\"numberingBonds\":true},\"styleText\":{\"fontSizePx\":null,\"textWidthPx\":null,\"columns\":null,\"position\":null},\"audio\":{\"narrate\":false},\"menuSubset\":[],\"menuGroups\":[\"molecules\"],\"view3D\":{\"style\":\"ballnstick\",\"spin\":false,\"showH\":true,\"atomSymbols\":true,\"moveto\":null},\"show\":{\"menu\":false,\"viewerButtons\":false,\"viewerSettings\":false,\"viewers\":{\"2D\":true,\"3D\":false},\"viewerMaxHeight\":420,\"viewerBothHeight\":null,\"controls\":{\"2D\":true,\"3D\":false},\"save\":{\"2D\":false,\"3D\":false},\"naming\":true,\"nameSettings\":false,\"nameEye\":false,\"nameExpanded\":false,\"audio\":false,\"rule\":false,\"text\":true,\"nameClick\":true,\"chainNavigation\":true},\"selectedMol\":\"methyl_2_pentane\"},{\"n\":6,\"nameBoxLayout\":1,\"lang\":\"gr\",\"title\":\"Θέση και όνομα μιας διακλάδωσης\",\"note\":\"Αριθμούμε από το άκρο που δίνει στη διακλάδωση τη θέση <b>2</b>, αντί για 4. Η ομάδα <b>–CH<sub>3</sub></b> είναι μεθυλομάδα, άρα γράφουμε <b>2-μεθυλοπεντάνιο</b>: θέση - διακλάδωση - όνομα κύριας αλυσίδας.<br><br>Επίλεξε το <b>2-</b> και το <b>μεθυλο</b> για να συνδέσεις θέση και ομάδα. Στο <b>\\\"Ονόματα αλκυλίων και προθέματα\\\"</b>&nbsp;θα βρεις και τις άλλες αλκυλομάδες.\",\"noteFormat\":\"html\",\"mode2D\":\"condensed\",\"mainChainMode\":\"algorithmic\",\"chainIdx\":0,\"etherNamingMode\":\"iupac\",\"substNamingMode\":\"school\",\"nameAnalysisMode\":\"compSecondSub1\",\"selectedRule\":null,\"style2D\":{\"atomColors\":true,\"colorMode\":\"atom\",\"zigzag\":false,\"zoom\":2},\"styleName\":{\"box\":true,\"cross\":false,\"etherNaming\":\"iupac\",\"panelOpen\":false,\"hidden\":[]},\"styleHighlight\":{\"bondAtoms\":false,\"numberingAtoms\":true,\"numberingBonds\":true},\"styleText\":{\"fontSizePx\":null,\"textWidthPx\":null,\"columns\":null,\"position\":null},\"audio\":{\"narrate\":false},\"menuSubset\":[],\"menuGroups\":[\"molecules\"],\"view3D\":{\"style\":\"ballnstick\",\"spin\":false,\"showH\":true,\"atomSymbols\":true,\"moveto\":null},\"show\":{\"menu\":false,\"viewerButtons\":false,\"viewerSettings\":false,\"viewers\":{\"2D\":true,\"3D\":false},\"viewerMaxHeight\":420,\"viewerBothHeight\":null,\"controls\":{\"2D\":true,\"3D\":false},\"save\":{\"2D\":false,\"3D\":false},\"naming\":true,\"nameSettings\":false,\"nameEye\":false,\"nameExpanded\":false,\"audio\":false,\"rule\":true,\"text\":true,\"nameClick\":true},\"selectedMol\":\"methyl_2_pentane\"},{\"n\":7,\"nameBoxLayout\":1,\"lang\":\"gr\",\"title\":\"Δύο ίδιες διακλαδώσεις\",\"note\":\"Η κύρια αλυσίδα έχει <b>τέσσερα άτομα C</b>, ενώ το μόριο έχει συνολικά έξι άτομα C. Οι δύο μεθυλομάδες παίρνουν τις θέσεις <b>2,3</b> από οποιοδήποτε άκρο. Οι δύο αριθμήσεις είναι ισοδύναμες.<br><br>Επειδή οι ομάδες είναι δύο και ίδιες, χρησιμοποιούμε το πρόθεμα&nbsp;<b>δι-</b>και γράφουμε&nbsp;<b>2,3-διμεθυλοβουτάνιο</b>. Βάζουμε κόμμα ανάμεσα στους αριθμούς και παύλα ανάμεσα σε αριθμό και λέξη. Επίλεξε τα μέρη του ονόματος για να δεις την αντιστοιχία.\",\"noteFormat\":\"html\",\"mode2D\":\"condensed\",\"mainChainMode\":\"algorithmic\",\"chainIdx\":1,\"etherNamingMode\":\"iupac\",\"substNamingMode\":\"school\",\"nameAnalysisMode\":\"compCarbonsCount\",\"selectedRule\":null,\"style2D\":{\"atomColors\":true,\"colorMode\":\"atom\",\"zigzag\":false,\"zoom\":2},\"styleName\":{\"box\":true,\"cross\":false,\"etherNaming\":\"iupac\",\"panelOpen\":false,\"hidden\":[]},\"styleHighlight\":{\"bondAtoms\":false,\"numberingAtoms\":true,\"numberingBonds\":true},\"styleText\":{\"fontSizePx\":null,\"textWidthPx\":null,\"columns\":null,\"position\":null},\"audio\":{\"narrate\":false},\"menuSubset\":[],\"menuGroups\":[\"molecules\"],\"view3D\":{\"style\":\"ballnstick\",\"spin\":false,\"showH\":true,\"atomSymbols\":true,\"moveto\":null},\"show\":{\"menu\":false,\"viewerButtons\":false,\"viewerSettings\":false,\"viewers\":{\"2D\":true,\"3D\":false},\"viewerMaxHeight\":420,\"viewerBothHeight\":null,\"controls\":{\"2D\":true,\"3D\":false},\"save\":{\"2D\":false,\"3D\":false},\"naming\":true,\"nameSettings\":false,\"nameEye\":false,\"nameExpanded\":false,\"audio\":false,\"rule\":false,\"text\":true,\"nameClick\":true,\"numberingDirection\":true},\"selectedMol\":\"dimethyl_2_3_butane\"},{\"n\":8,\"nameBoxLayout\":1,\"lang\":\"gr\",\"title\":\"Επιλογή κύριας αλυσίδας στο μεγάλο μόριο\",\"note\":\"Το μόριο έχει <b>δέκα άτομα C</b>, αλλά η μεγαλύτερη συνεχής αλυσίδα έχει <b>έξι άτομα C</b> και δίνει το συνθετικό&nbsp;<b>εξ-</b>. Τα υπόλοιπα τέσσερα άτομα C βρίσκονται στις διακλαδώσεις.<br><br>Ανάμεσα σε ισομήκεις αλυσίδες προτιμούμε εκείνη με τις <b>περισσότερες διακλαδώσεις</b>. Η επιλεγμένη αλυσίδα έχει τρεις. Ακολούθησε τα έξι αριθμημένα άτομα C της.\",\"noteFormat\":\"html\",\"mode2D\":\"condensed\",\"mainChainMode\":\"algorithmic\",\"chainIdx\":1,\"etherNamingMode\":\"iupac\",\"substNamingMode\":\"school\",\"nameAnalysisMode\":\"compCarbonsCount\",\"selectedRule\":null,\"style2D\":{\"atomColors\":true,\"colorMode\":\"atom\",\"zigzag\":false,\"zoom\":2},\"styleName\":{\"box\":true,\"cross\":false,\"etherNaming\":\"iupac\",\"panelOpen\":false,\"hidden\":[\"comp0\",\"comp1\",\"comp2\",\"comp3\"]},\"styleHighlight\":{\"bondAtoms\":false,\"numberingAtoms\":true,\"numberingBonds\":true},\"styleText\":{\"fontSizePx\":null,\"textWidthPx\":null,\"columns\":null,\"position\":null},\"audio\":{\"narrate\":false},\"menuSubset\":[],\"menuGroups\":[\"molecules\"],\"view3D\":{\"style\":\"ballnstick\",\"spin\":false,\"showH\":true,\"atomSymbols\":true,\"moveto\":null},\"show\":{\"menu\":false,\"viewerButtons\":false,\"viewerSettings\":false,\"viewers\":{\"2D\":true,\"3D\":false},\"viewerMaxHeight\":420,\"viewerBothHeight\":null,\"controls\":{\"2D\":true,\"3D\":false},\"save\":{\"2D\":false,\"3D\":false},\"naming\":true,\"nameSettings\":false,\"nameEye\":false,\"nameExpanded\":false,\"audio\":false,\"rule\":false,\"text\":true,\"nameClick\":true},\"selectedMol\":\"ethyl_3_dimethyl_2_5_hexane\"},{\"n\":9,\"nameBoxLayout\":1,\"lang\":\"gr\",\"title\":\"Αρίθμηση με βάση την πρώτη διαφορετική θέση \",\"note\":\"Η μία φορά αρίθμησης δίνει θέσεις <b>2,3,5</b> και η αντίθετη <b>2,4,5</b>. Συγκρίνουμε τους αριθμούς με τη σειρά. Ο πρώτος είναι ίδιος, αλλά μετά το <b>3 είναι μικρότερο από το 4</b>.\\n\\nΚρατάμε επομένως τις θέσεις <b>2,3,5</b> και την ίδια αρίθμηση για όλες τις ομάδες. Ο κανόνας είναι ο <b>μικρότερος αριθμός στο πρώτο σημείο διαφοράς</b>. Το άθροισμα των θέσεων δεν καθορίζει την επιλογή.\",\"noteFormat\":\"text\",\"mode2D\":\"condensed\",\"mainChainMode\":\"algorithmic\",\"chainIdx\":1,\"etherNamingMode\":\"iupac\",\"substNamingMode\":\"school\",\"nameAnalysisMode\":\"compCarbonsCount\",\"selectedRule\":null,\"style2D\":{\"atomColors\":true,\"colorMode\":\"atom\",\"zigzag\":false,\"zoom\":2},\"styleName\":{\"box\":true,\"cross\":false,\"etherNaming\":\"iupac\",\"panelOpen\":false,\"hidden\":[\"comp0\",\"comp1\",\"comp2\",\"comp3\"]},\"styleHighlight\":{\"bondAtoms\":false,\"numberingAtoms\":true,\"numberingBonds\":true},\"styleText\":{\"fontSizePx\":null,\"textWidthPx\":null,\"columns\":null,\"position\":null},\"audio\":{\"narrate\":false},\"menuSubset\":[],\"menuGroups\":[\"molecules\"],\"view3D\":{\"style\":\"ballnstick\",\"spin\":false,\"showH\":true,\"atomSymbols\":true,\"moveto\":null},\"show\":{\"menu\":false,\"viewerButtons\":false,\"viewerSettings\":false,\"viewers\":{\"2D\":true,\"3D\":false},\"viewerMaxHeight\":420,\"viewerBothHeight\":null,\"controls\":{\"2D\":true,\"3D\":false},\"save\":{\"2D\":false,\"3D\":false},\"naming\":true,\"nameSettings\":false,\"nameEye\":false,\"nameExpanded\":false,\"audio\":false,\"rule\":false,\"text\":true,\"nameClick\":true},\"selectedMol\":\"ethyl_3_dimethyl_2_5_hexane\"},{\"n\":10,\"nameBoxLayout\":1,\"lang\":\"gr\",\"title\":\"Αλκύλια, αλφαβητική σειρά και πλήρες όνομα\",\"note\":\"Στη θέση <b>3</b> υπάρχει αιθυλομάδα <b>–CH<sub>2</sub>–CH<sub>3</sub></b>&nbsp;ενώ στις <b>2 </b>και<b> 5</b> δύο μεθυλομάδες. Γράφουμε το&nbsp;<b>αιθυλο-</b> πριν από το&nbsp;<b>μεθυλο-</b> αλφαβητικά (το α βρίσκεται πριν από το μ στο αλφάβητο), χωρίς να υπολογίζουμε το <b>δι-&nbsp;</b>, οπότε το όνομα είναι&nbsp;<b>3-αιθυλο-2,5-διμεθυλοεξάνιο</b>.<br><br>Επίλεξε τις θέσεις και τις ομάδες στο όνομα. Αν χρειαστεί, συμβουλέψου τον πίνακα <b>\\\"Ονόματα αλκυλίων και προθέματα\\\"</b>. Τα κόμματα χωρίζουν αριθμούς και οι παύλες αριθμούς από λέξεις.\",\"noteFormat\":\"html\",\"mode2D\":\"condensed\",\"mainChainMode\":\"algorithmic\",\"chainIdx\":0,\"etherNamingMode\":\"iupac\",\"substNamingMode\":\"school\",\"nameAnalysisMode\":\"compSecondSub1\",\"selectedRule\":null,\"style2D\":{\"atomColors\":true,\"colorMode\":\"atom\",\"zigzag\":false,\"zoom\":2},\"styleName\":{\"box\":true,\"cross\":false,\"etherNaming\":\"iupac\",\"panelOpen\":false,\"hidden\":[]},\"styleHighlight\":{\"bondAtoms\":false,\"numberingAtoms\":true,\"numberingBonds\":true},\"styleText\":{\"fontSizePx\":null,\"textWidthPx\":null,\"columns\":null,\"position\":null},\"audio\":{\"narrate\":false},\"menuSubset\":[],\"menuGroups\":[\"molecules\"],\"view3D\":{\"style\":\"ballnstick\",\"spin\":false,\"showH\":true,\"atomSymbols\":true,\"moveto\":null},\"show\":{\"menu\":false,\"viewerButtons\":false,\"viewerSettings\":false,\"viewers\":{\"2D\":true,\"3D\":false},\"viewerMaxHeight\":420,\"viewerBothHeight\":null,\"controls\":{\"2D\":true,\"3D\":false},\"save\":{\"2D\":false,\"3D\":false},\"naming\":true,\"nameSettings\":false,\"nameEye\":false,\"nameExpanded\":false,\"audio\":false,\"rule\":true,\"text\":true,\"nameClick\":true},\"selectedMol\":\"ethyl_3_dimethyl_2_5_hexane\"},{\"n\":11,\"nameBoxLayout\":1,\"lang\":\"gr\",\"title\":\"Στο Συνεργείο: Με διακλαδώσεις\",\"note\":\"Επίστρεψε στο <b>Συνεργείο ονομάτων</b> για το σετ <b>«Με διακλαδώσεις»</b>. Σε κάθε κουίζ εντόπισε το λάθος συνθετικό ή τη λανθασμένη σειρά και επισκεύασε το όνομα.<br><br>Διάβασε την εξήγηση κάθε σωστής επισκευής. Μπορείς να επαναλάβεις τις προσπάθειες. Αφού ολοκληρώσεις σωστά <b>και τα τρία κουίζ</b>, ανοίγει η τελική εξερεύνηση όλων των αλκανίων.\",\"noteFormat\":\"html\",\"mode2D\":\"condensed\",\"mainChainMode\":\"algorithmic\",\"chainIdx\":0,\"etherNamingMode\":\"iupac\",\"substNamingMode\":\"school\",\"nameAnalysisMode\":\"none\",\"selectedRule\":null,\"style2D\":{\"atomColors\":true,\"colorMode\":\"atom\",\"zigzag\":false,\"zoom\":2},\"styleName\":{\"box\":true,\"cross\":false,\"etherNaming\":\"iupac\",\"panelOpen\":false,\"hidden\":[]},\"styleHighlight\":{\"bondAtoms\":false,\"numberingAtoms\":true,\"numberingBonds\":true},\"styleText\":{\"fontSizePx\":null,\"textWidthPx\":null,\"columns\":null,\"position\":null},\"audio\":{\"narrate\":false},\"menuSubset\":[],\"menuGroups\":[\"molecules\"],\"view3D\":{\"style\":\"ballnstick\",\"spin\":false,\"showH\":true,\"atomSymbols\":true,\"moveto\":null},\"show\":{\"menu\":false,\"viewerButtons\":false,\"viewerSettings\":false,\"viewers\":{\"2D\":false,\"3D\":false},\"viewerMaxHeight\":420,\"viewerBothHeight\":null,\"controls\":{\"2D\":false,\"3D\":false},\"save\":{\"2D\":false,\"3D\":false},\"naming\":false,\"nameSettings\":false,\"nameEye\":false,\"nameExpanded\":false,\"audio\":false,\"rule\":false,\"text\":true,\"nameClick\":false},\"selectedMol\":\"ethyl_3_dimethyl_2_5_hexane\",\"checkpoint\":{\"id\":\"alkanes-branched-workshop-v1\",\"type\":\"generated-name-repair-set\",\"version\":1,\"round\":{\"version\":1,\"setId\":\"alkanes-branched\",\"difficulty\":\"basic\",\"roundCount\":3,\"generatorVersion\":\"1.0.0\",\"catalogRevision\":\"275d537b19f3ef0791c97d8d78c127f541a0579038ef1e8d65dadde611845690\",\"engineSHA256\":\"3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306\"},\"openLabel\":\"πήγαινε στο συνεργείο\"},\"titleLogo\":\"workshop\"},{\"n\":12,\"nameBoxLayout\":1,\"lang\":\"gr\",\"title\":\"Όλα τα αλκάνια σε 2D και 3D\",\"note\":\"Από το μενού διάλεξε οποιοδήποτε από τα <b>οκτώ αλκάνια</b>. Σύγκρινε συνεπτυγμένο, ανεπτυγμένο και σκελετικό τύπο με το 3D μοντέλο και επίλεξε τα συνθετικά του ονόματος για τις αντίστοιχες επισημάνσεις. Το μεθάνιο διαθέτει συνεπτυγμένο και ανεπτυγμένο τύπο, χωρίς σκελετικό.\\n\\nΧρησιμοποίησε τα εργαλεία 2D και 3D για μεγέθυνση και παρατήρηση. Περίστρεψε το 3D μοντέλο με το ποντίκι. Η συνδεσμολογία παραμένει ίδια, ενώ ο 2D τύπος δεν αποδίδει όλες τις γωνίες του μορίου στον χώρο.\",\"noteFormat\":\"text\",\"mode2D\":\"condensed\",\"mainChainMode\":\"algorithmic\",\"chainIdx\":0,\"etherNamingMode\":\"iupac\",\"substNamingMode\":\"school\",\"nameAnalysisMode\":\"none\",\"selectedRule\":null,\"style2D\":{\"atomColors\":true,\"colorMode\":\"atom\",\"zigzag\":false,\"zoom\":2},\"styleName\":{\"box\":true,\"cross\":false,\"etherNaming\":\"iupac\",\"panelOpen\":false,\"hidden\":[]},\"styleHighlight\":{\"bondAtoms\":false,\"numberingAtoms\":true,\"numberingBonds\":true},\"styleText\":{\"fontSizePx\":null,\"textWidthPx\":null,\"columns\":null,\"position\":null},\"audio\":{\"narrate\":false},\"menuSubset\":[\"methane\",\"ethane\",\"propane\",\"butane\",\"pentane\",\"methyl_2_pentane\",\"dimethyl_2_3_butane\",\"ethyl_3_dimethyl_2_5_hexane\"],\"menuGroups\":[\"molecules\"],\"view3D\":{\"style\":\"ballnstick\",\"spin\":false,\"showH\":true,\"atomSymbols\":true,\"moveto\":null},\"show\":{\"menu\":true,\"viewerButtons\":false,\"viewerSettings\":false,\"viewers\":{\"2D\":true,\"3D\":true},\"viewerMaxHeight\":420,\"viewerBothHeight\":840,\"controls\":{\"2D\":true,\"3D\":true},\"save\":{\"2D\":false,\"3D\":false},\"naming\":true,\"nameSettings\":true,\"nameEye\":false,\"nameExpanded\":false,\"audio\":false,\"rule\":false,\"text\":true,\"nameClick\":true},\"selectedMol\":\"ethyl_3_dimethyl_2_5_hexane\"}]}",
+      "states": {
+        "3": {
+          "version": 1,
+          "seed": "4",
+          "currentRound": 0,
+          "states": [
+            {
+              "selectedPartId": "component-6",
+              "selectedValue": "άν",
+              "order": [],
+              "choiceOrder": [
+                1,
+                0,
+                2
+              ],
+              "attempts": 2,
+              "selectionMisses": 0,
+              "solved": true,
+              "submitted": true
+            },
+            {
+              "selectedPartId": null,
+              "selectedValue": null,
+              "order": [],
+              "choiceOrder": [
+                1,
+                2,
+                0
+              ],
+              "attempts": 0,
+              "selectionMisses": 0,
+              "solved": false,
+              "submitted": false
+            },
+            {
+              "selectedPartId": null,
+              "selectedValue": null,
+              "order": [],
+              "choiceOrder": [
+                0,
+                2,
+                1
+              ],
+              "attempts": 0,
+              "selectionMisses": 0,
+              "solved": false,
+              "submitted": false
+            }
+          ],
+          "solved": false
+        }
+      }
+    }
+  },
+  "targetUnchanged": true
+}

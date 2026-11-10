@@ -1,0 +1,2920 @@
+{
+  "sourceHashesAtStart": {
+    "mulermoc-nom-55.html": "bd7764ac34d8b1a2f15345b68416385f91d4b351b956f0581adb2cf4eadc6a25",
+    "js/jsme-nick-nomeclature-moc2-data_55.js": "9387cd654b2ff3cfb058d9b97ddcca798ac13f47f769b532f9c122277ff8dd0a",
+    "js/mulermoc-nom-core-55.js": "816b2015b96598d0596aaa513967906f9126db8376d49d9b96f98880f4acfae4",
+    "js/mulermoc-nom-molview-55.js": "1580d9bd72f270b72760784384efba8230e846ef7fa3f033aa71226eb6d7091d",
+    "js/mulermoc-nom-teaching-55.js": "92f5dd9708103a306c98cd7c19dc10082aa4c57d1744105fadf14074ea60ef00",
+    "js/mulermoc-nom-note-55.js": "e685355459afb7955fbe13e3b8e07c6283469b4d8acb98cfbcfa483c9f9be3ca",
+    "js/mulermoc-nom-scenario-55.js": "cd3ac936c7441589d8132d957e169f410973e941c3f737560b4349ea7d7ffce0",
+    "js/mulermoc-nom-iupac-55.js": "db5b6e249119e8d31c0dfa4ab6c8b28f766b3239fb78258cee3a6539ced594de",
+    "js/mulermoc-nom-lang-55.js": "46386d8c9b1bda0861fd6db3df8903fdbe56b413faa4984d8d62a190b37fcfbe",
+    "js/mulermoc-nom-name-en-55.js": "a4bcf58e343a3efc60e9035a3b3d76cb0bb32ed5dd38bfc48234fc1f71065bb1",
+    "js/ui-icons-55.js": "580277e98b0d29bc1df2a265d7e6e395500db9253ee8492349a145fd19a2c414",
+    "css/jsme-nick-55.css": "cb6f9d9546d1cd21218641c18dd55a21b2a1ccb1875295782d7b2bdb932bb970",
+    "css/mulermoc-nom-scenario-55.css": "00d81c4c94059b829141163a78f78d150eb12bfa8534fce50e49c90ca5702e84",
+    "css/namelecule-55.css": "042b0e93645dbc9fe5c9851bdd90a73b08f8c89fc4ef524302bd07ac7180e7a7",
+    "design/welcome-proposal.html": "17c04887fde8da210e7c4acd4e1458652948c0d277f180c67460e3e11ff54c2e",
+    "design/theory-library.html": "87e557a3455f14a851dc631c8d70bf93fe396f4a5ebdb8fde4fa78397158e8dc"
+  },
+  "completed": true,
+  "role": "Developer real isolated Firefox evidence; not independent review",
+  "checks": [
+    "Copied library alkane link resolves inside nested prefix",
+    "Normal learner presentation mode loaded from copied library",
+    "step4-desktop hides molecular view/name/menu",
+    "step4-desktop shows loaded logo/instructions/card and blocks Next",
+    "Unsolved gate4 rejects forward jump",
+    "s4 entry new round starts at top below fixed header",
+    "s4 entry quiz stays within viewport",
+    "step4-round1 actual counter",
+    "step4-round1 completion requires third actual repair",
+    "step4-round1 normal Next lock follows earned completion",
+    "step4-round1 Continue new round starts at top below fixed header",
+    "step4-round1 Continue quiz stays within viewport",
+    "step4-round2 actual counter",
+    "step4-round2 completion requires third actual repair",
+    "step4-round2 normal Next lock follows earned completion",
+    "step4-round2 Continue new round starts at top below fixed header",
+    "step4-round2 Continue quiz stays within viewport",
+    "step4-round3 actual counter",
+    "step4-round3 completion requires third actual repair",
+    "step4-round3 normal Next lock follows earned completion",
+    "Actual refresh preserves first three earned repairs",
+    "Step5 second equivalent chain selectable",
+    "Step5 original chain restored",
+    "Step7 initial numbering left to right",
+    "Step7 opposite direction labels rendered",
+    "Step7 left direction restored",
+    "step11-desktop hides molecular view/name/menu",
+    "step11-desktop shows loaded logo/instructions/card and blocks Next",
+    "Unsolved gate11 rejects final-step jump",
+    "step11-mobile390 hides molecular view/name/menu",
+    "step11-mobile390 shows loaded logo/instructions/card and blocks Next",
+    "Step11 mobile390 no horizontal overflow",
+    "s11 entry new round starts at top below fixed header",
+    "s11 entry quiz stays within viewport",
+    "step11-round1 actual counter",
+    "step11-round1 completion requires third actual repair",
+    "step11-round1 normal Next lock follows earned completion",
+    "step11-round1 Continue new round starts at top below fixed header",
+    "step11-round1 Continue quiz stays within viewport",
+    "step11-round2 actual counter",
+    "step11-round2 completion requires third actual repair",
+    "step11-round2 normal Next lock follows earned completion",
+    "step11-round2 Continue new round starts at top below fixed header",
+    "step11-round2 Continue quiz stays within viewport",
+    "step11-round3 actual counter",
+    "step11-round3 completion requires third actual repair",
+    "step11-round3 normal Next lock follows earned completion",
+    "All6 actual repairs persisted; Continue enters final step12",
+    "Step12 restores molecular exploration and3D pane",
+    "All8 final alkane menu controls present",
+    "Methane has no skeletal representation 1280",
+    "methane condensed rendered 1280",
+    "methane expanded rendered 1280",
+    "methane prefixed3D model URL and sourceSDF atom count loaded",
+    "ethane condensed rendered 1280",
+    "ethane expanded rendered 1280",
+    "ethane skeletal rendered 1280",
+    "ethane prefixed3D model URL and sourceSDF atom count loaded",
+    "propane condensed rendered 1280",
+    "propane expanded rendered 1280",
+    "propane skeletal rendered 1280",
+    "propane prefixed3D model URL and sourceSDF atom count loaded",
+    "butane condensed rendered 1280",
+    "butane expanded rendered 1280",
+    "butane skeletal rendered 1280",
+    "butane prefixed3D model URL and sourceSDF atom count loaded",
+    "pentane condensed rendered 1280",
+    "pentane expanded rendered 1280",
+    "pentane skeletal rendered 1280",
+    "pentane prefixed3D model URL and sourceSDF atom count loaded",
+    "methyl_2_pentane condensed rendered 1280",
+    "methyl_2_pentane expanded rendered 1280",
+    "methyl_2_pentane skeletal rendered 1280",
+    "methyl_2_pentane prefixed3D model URL and sourceSDF atom count loaded",
+    "dimethyl_2_3_butane condensed rendered 1280",
+    "dimethyl_2_3_butane expanded rendered 1280",
+    "dimethyl_2_3_butane skeletal rendered 1280",
+    "dimethyl_2_3_butane prefixed3D model URL and sourceSDF atom count loaded",
+    "ethyl_3_dimethyl_2_5_hexane condensed rendered 1280",
+    "ethyl_3_dimethyl_2_5_hexane expanded rendered 1280",
+    "ethyl_3_dimethyl_2_5_hexane skeletal rendered 1280",
+    "ethyl_3_dimethyl_2_5_hexane prefixed3D model URL and sourceSDF atom count loaded",
+    "Methane has no skeletal representation 390",
+    "methane condensed rendered 390",
+    "methane expanded rendered 390",
+    "ethane condensed rendered 390",
+    "ethane expanded rendered 390",
+    "ethane skeletal rendered 390",
+    "propane condensed rendered 390",
+    "propane expanded rendered 390",
+    "propane skeletal rendered 390",
+    "butane condensed rendered 390",
+    "butane expanded rendered 390",
+    "butane skeletal rendered 390",
+    "pentane condensed rendered 390",
+    "pentane expanded rendered 390",
+    "pentane skeletal rendered 390",
+    "methyl_2_pentane condensed rendered 390",
+    "methyl_2_pentane expanded rendered 390",
+    "methyl_2_pentane skeletal rendered 390",
+    "dimethyl_2_3_butane condensed rendered 390",
+    "dimethyl_2_3_butane expanded rendered 390",
+    "dimethyl_2_3_butane skeletal rendered 390",
+    "ethyl_3_dimethyl_2_5_hexane condensed rendered 390",
+    "ethyl_3_dimethyl_2_5_hexane expanded rendered 390",
+    "ethyl_3_dimethyl_2_5_hexane skeletal rendered 390",
+    "All46 available2D representations bounded at desktop1280/mobile390",
+    "All8 actual3D models loaded from copied prefix",
+    "Mobile final viewer zoom pair retains molecule/mode",
+    "Completed workshop11 replay remains unlocked",
+    "Completed11→12 replay restores viewer panes",
+    "Normal Exit returns to copied prefixed library"
+  ],
+  "limitations": [
+    "Headless Firefox and viewport emulation only; no personal Firefox interaction",
+    "Real external JSmol/fonts/oracle service failures are retained; controlled transports are explicitly labeled",
+    "No physical mobile/Safari/conference-machine/offline or uninterrupted-operation guarantee"
+  ],
+  "base_url": "http://127.0.0.1:65098/organic-nomenclature-3/",
+  "rounds": [
+    {
+      "step": 4,
+      "round": 1,
+      "id": "engine-propane-bond-type-3ff25797",
+      "receipt": {
+        "version": 1,
+        "seed": "4",
+        "currentRound": 0,
+        "states": [
+          {
+            "selectedPartId": "component-6",
+            "selectedValue": "άν",
+            "order": [],
+            "choiceOrder": [
+              0,
+              1,
+              2
+            ],
+            "attempts": 1,
+            "selectionMisses": 0,
+            "solved": true,
+            "submitted": true
+          },
+          {
+            "selectedPartId": null,
+            "selectedValue": null,
+            "order": [],
+            "choiceOrder": [
+              2,
+              0,
+              1
+            ],
+            "attempts": 0,
+            "selectionMisses": 0,
+            "solved": false,
+            "submitted": false
+          },
+          {
+            "selectedPartId": null,
+            "selectedValue": null,
+            "order": [],
+            "choiceOrder": [
+              2,
+              0,
+              1
+            ],
+            "attempts": 0,
+            "selectionMisses": 0,
+            "solved": false,
+            "submitted": false
+          }
+        ],
+        "solved": false
+      }
+    },
+    {
+      "step": 4,
+      "round": 2,
+      "id": "engine-butane-parent-length-aaf59bef",
+      "receipt": {
+        "version": 1,
+        "seed": "4",
+        "currentRound": 1,
+        "states": [
+          {
+            "selectedPartId": "component-6",
+            "selectedValue": "άν",
+            "order": [],
+            "choiceOrder": [
+              0,
+              1,
+              2
+            ],
+            "attempts": 1,
+            "selectionMisses": 0,
+            "solved": true,
+            "submitted": true
+          },
+          {
+            "selectedPartId": "component-5",
+            "selectedValue": "βουτ",
+            "order": [],
+            "choiceOrder": [
+              2,
+              0,
+              1
+            ],
+            "attempts": 1,
+            "selectionMisses": 0,
+            "solved": true,
+            "submitted": true
+          },
+          {
+            "selectedPartId": null,
+            "selectedValue": null,
+            "order": [],
+            "choiceOrder": [
+              0,
+              1,
+              2
+            ],
+            "attempts": 0,
+            "selectionMisses": 0,
+            "solved": false,
+            "submitted": false
+          }
+        ],
+        "solved": false
+      }
+    },
+    {
+      "step": 4,
+      "round": 3,
+      "id": "engine-pentane-parent-length-5b7ba7a7",
+      "receipt": {
+        "version": 1,
+        "seed": "4",
+        "currentRound": 2,
+        "states": [
+          {
+            "selectedPartId": "component-6",
+            "selectedValue": "άν",
+            "order": [],
+            "choiceOrder": [
+              0,
+              1,
+              2
+            ],
+            "attempts": 1,
+            "selectionMisses": 0,
+            "solved": true,
+            "submitted": true
+          },
+          {
+            "selectedPartId": "component-5",
+            "selectedValue": "βουτ",
+            "order": [],
+            "choiceOrder": [
+              2,
+              0,
+              1
+            ],
+            "attempts": 1,
+            "selectionMisses": 0,
+            "solved": true,
+            "submitted": true
+          },
+          {
+            "selectedPartId": "component-5",
+            "selectedValue": "πεντ",
+            "order": [],
+            "choiceOrder": [
+              0,
+              1,
+              2
+            ],
+            "attempts": 1,
+            "selectionMisses": 0,
+            "solved": true,
+            "submitted": true
+          }
+        ],
+        "solved": true
+      }
+    },
+    {
+      "step": 11,
+      "round": 1,
+      "id": "engine-dimethyl_2_3_butane-branch-multiplier-74bb4f08",
+      "receipt": {
+        "version": 1,
+        "seed": "1",
+        "currentRound": 0,
+        "states": [
+          {
+            "selectedPartId": "component-1",
+            "selectedValue": "διμεθυλο",
+            "order": [],
+            "choiceOrder": [
+              1,
+              0,
+              2
+            ],
+            "attempts": 1,
+            "selectionMisses": 0,
+            "solved": true,
+            "submitted": true
+          },
+          {
+            "selectedPartId": null,
+            "selectedValue": null,
+            "order": [
+              "branch-group-2",
+              "branch-group-1"
+            ],
+            "choiceOrder": [],
+            "attempts": 0,
+            "selectionMisses": 0,
+            "solved": false,
+            "submitted": false
+          },
+          {
+            "selectedPartId": null,
+            "selectedValue": null,
+            "order": [],
+            "choiceOrder": [
+              0,
+              2,
+              1
+            ],
+            "attempts": 0,
+            "selectionMisses": 0,
+            "solved": false,
+            "submitted": false
+          }
+        ],
+        "solved": false
+      }
+    },
+    {
+      "step": 11,
+      "round": 2,
+      "id": "engine-ethyl_3_dimethyl_2_5_hexane-alphabetical-order-4d777eae",
+      "receipt": {
+        "version": 1,
+        "seed": "1",
+        "currentRound": 1,
+        "states": [
+          {
+            "selectedPartId": "component-1",
+            "selectedValue": "διμεθυλο",
+            "order": [],
+            "choiceOrder": [
+              1,
+              0,
+              2
+            ],
+            "attempts": 1,
+            "selectionMisses": 0,
+            "solved": true,
+            "submitted": true
+          },
+          {
+            "selectedPartId": "branch-group-1",
+            "selectedValue": null,
+            "order": [
+              "branch-group-1",
+              "branch-group-2"
+            ],
+            "choiceOrder": [],
+            "attempts": 1,
+            "selectionMisses": 0,
+            "solved": true,
+            "submitted": true
+          },
+          {
+            "selectedPartId": null,
+            "selectedValue": null,
+            "order": [],
+            "choiceOrder": [
+              1,
+              2,
+              0
+            ],
+            "attempts": 0,
+            "selectionMisses": 0,
+            "solved": false,
+            "submitted": false
+          }
+        ],
+        "solved": false
+      }
+    },
+    {
+      "step": 11,
+      "round": 3,
+      "id": "engine-methyl_2_pentane-parent-length-2c39b9b5",
+      "receipt": {
+        "version": 1,
+        "seed": "1",
+        "currentRound": 2,
+        "states": [
+          {
+            "selectedPartId": "component-1",
+            "selectedValue": "διμεθυλο",
+            "order": [],
+            "choiceOrder": [
+              1,
+              0,
+              2
+            ],
+            "attempts": 1,
+            "selectionMisses": 0,
+            "solved": true,
+            "submitted": true
+          },
+          {
+            "selectedPartId": "branch-group-1",
+            "selectedValue": null,
+            "order": [
+              "branch-group-1",
+              "branch-group-2"
+            ],
+            "choiceOrder": [],
+            "attempts": 1,
+            "selectionMisses": 0,
+            "solved": true,
+            "submitted": true
+          },
+          {
+            "selectedPartId": "component-5",
+            "selectedValue": "πεντ",
+            "order": [],
+            "choiceOrder": [
+              1,
+              2,
+              0
+            ],
+            "attempts": 1,
+            "selectionMisses": 0,
+            "solved": true,
+            "submitted": true
+          }
+        ],
+        "solved": true
+      }
+    }
+  ],
+  "geometry": [
+    {
+      "key": "methane",
+      "mode": "condensed",
+      "width": 1280,
+      "pageWidth": 1280,
+      "host": {
+        "x": 289,
+        "y": -46.5,
+        "width": 602,
+        "height": 420,
+        "top": -46.5,
+        "right": 891,
+        "bottom": 373.5,
+        "left": 289
+      },
+      "drawing": {
+        "left": 566.2000122070312,
+        "top": 148.75,
+        "right": 613.7666778564453,
+        "bottom": 178.46665954589844
+      },
+      "svg": true,
+      "atoms": 1,
+      "name": "μεθάνιο"
+    },
+    {
+      "key": "methane",
+      "mode": "expanded",
+      "width": 1280,
+      "pageWidth": 1280,
+      "host": {
+        "x": 289,
+        "y": -46.5,
+        "width": 602,
+        "height": 420,
+        "top": -46.5,
+        "right": 891,
+        "bottom": 373.5,
+        "left": 289
+      },
+      "drawing": {
+        "left": 550.25,
+        "top": 122.75,
+        "right": 629.7499694824219,
+        "bottom": 205.35000610351562
+      },
+      "svg": true,
+      "atoms": 5,
+      "name": "μεθάνιο"
+    },
+    {
+      "key": "ethane",
+      "mode": "condensed",
+      "width": 1280,
+      "pageWidth": 1280,
+      "host": {
+        "x": 289,
+        "y": -46.5,
+        "width": 602,
+        "height": 420,
+        "top": -46.5,
+        "right": 891,
+        "bottom": 373.5,
+        "left": 289
+      },
+      "drawing": {
+        "left": 535.6500244140625,
+        "top": 148.75,
+        "right": 644.3333282470703,
+        "bottom": 178.46665954589844
+      },
+      "svg": true,
+      "atoms": 2,
+      "name": "αιθάνιο"
+    },
+    {
+      "key": "ethane",
+      "mode": "expanded",
+      "width": 1280,
+      "pageWidth": 1280,
+      "host": {
+        "x": 289,
+        "y": -46.5,
+        "width": 602,
+        "height": 420,
+        "top": -46.5,
+        "right": 891,
+        "bottom": 373.5,
+        "left": 289
+      },
+      "drawing": {
+        "left": 521.433349609375,
+        "top": 122.43333435058594,
+        "right": 658.5500335693359,
+        "bottom": 205.0833282470703
+      },
+      "svg": true,
+      "atoms": 8,
+      "name": "αιθάνιο"
+    },
+    {
+      "key": "ethane",
+      "mode": "skeletal",
+      "width": 1280,
+      "pageWidth": 1280,
+      "host": {
+        "x": 289,
+        "y": -46.5,
+        "width": 602,
+        "height": 420,
+        "top": -46.5,
+        "right": 891,
+        "bottom": 373.5,
+        "left": 289
+      },
+      "drawing": {
+        "left": 564.816650390625,
+        "top": 162.88333129882812,
+        "right": 615.1833190917969,
+        "bottom": 164.11666870117188
+      },
+      "svg": true,
+      "atoms": 2,
+      "name": "αιθάνιο"
+    },
+    {
+      "key": "propane",
+      "mode": "condensed",
+      "width": 1280,
+      "pageWidth": 1280,
+      "host": {
+        "x": 289,
+        "y": -46.5,
+        "width": 602,
+        "height": 420,
+        "top": -46.5,
+        "right": 891,
+        "bottom": 373.5,
+        "left": 289
+      },
+      "drawing": {
+        "left": 505.08331298828125,
+        "top": 148.75,
+        "right": 674.8833160400391,
+        "bottom": 178.46665954589844
+      },
+      "svg": true,
+      "atoms": 3,
+      "name": "προπάνιο"
+    },
+    {
+      "key": "propane",
+      "mode": "expanded",
+      "width": 1280,
+      "pageWidth": 1280,
+      "host": {
+        "x": 289,
+        "y": -46.5,
+        "width": 602,
+        "height": 420,
+        "top": -46.5,
+        "right": 891,
+        "bottom": 373.5,
+        "left": 289
+      },
+      "drawing": {
+        "left": 492.66668701171875,
+        "top": 122.44999694824219,
+        "right": 687.3166809082031,
+        "bottom": 205.06666564941406
+      },
+      "svg": true,
+      "atoms": 11,
+      "name": "προπάνιο"
+    },
+    {
+      "key": "propane",
+      "mode": "skeletal",
+      "width": 1280,
+      "pageWidth": 1280,
+      "host": {
+        "x": 289,
+        "y": -46.5,
+        "width": 602,
+        "height": 420,
+        "top": -46.5,
+        "right": 891,
+        "bottom": 373.5,
+        "left": 289
+      },
+      "drawing": {
+        "left": 546.0999755859375,
+        "top": 150.4166717529297,
+        "right": 633.9000091552734,
+        "bottom": 176.5833282470703
+      },
+      "svg": true,
+      "atoms": 3,
+      "name": "προπάνιο"
+    },
+    {
+      "key": "butane",
+      "mode": "condensed",
+      "width": 1280,
+      "pageWidth": 1280,
+      "host": {
+        "x": 289,
+        "y": -46.5,
+        "width": 602,
+        "height": 420,
+        "top": -46.5,
+        "right": 891,
+        "bottom": 373.5,
+        "left": 289
+      },
+      "drawing": {
+        "left": 474.5333251953125,
+        "top": 148.75,
+        "right": 705.4333648681641,
+        "bottom": 178.46665954589844
+      },
+      "svg": true,
+      "atoms": 4,
+      "name": "βουτάνιο"
+    },
+    {
+      "key": "butane",
+      "mode": "expanded",
+      "width": 1280,
+      "pageWidth": 1280,
+      "host": {
+        "x": 289,
+        "y": -46.5,
+        "width": 602,
+        "height": 420,
+        "top": -46.5,
+        "right": 891,
+        "bottom": 373.5,
+        "left": 289
+      },
+      "drawing": {
+        "left": 463.8999938964844,
+        "top": 122.44999694824219,
+        "right": 716.1000213623047,
+        "bottom": 205.06666564941406
+      },
+      "svg": true,
+      "atoms": 14,
+      "name": "βουτάνιο"
+    },
+    {
+      "key": "butane",
+      "mode": "skeletal",
+      "width": 1280,
+      "pageWidth": 1280,
+      "host": {
+        "x": 289,
+        "y": -46.5,
+        "width": 602,
+        "height": 420,
+        "top": -46.5,
+        "right": 891,
+        "bottom": 373.5,
+        "left": 289
+      },
+      "drawing": {
+        "left": 524.2833251953125,
+        "top": 150.4166717529297,
+        "right": 655.7166748046875,
+        "bottom": 176.5833282470703
+      },
+      "svg": true,
+      "atoms": 4,
+      "name": "βουτάνιο"
+    },
+    {
+      "key": "pentane",
+      "mode": "condensed",
+      "width": 1280,
+      "pageWidth": 1280,
+      "host": {
+        "x": 289,
+        "y": -46.5,
+        "width": 602,
+        "height": 420,
+        "top": -46.5,
+        "right": 891,
+        "bottom": 373.5,
+        "left": 289
+      },
+      "drawing": {
+        "left": 443.98333740234375,
+        "top": 148.75,
+        "right": 736.0000152587891,
+        "bottom": 178.46665954589844
+      },
+      "svg": true,
+      "atoms": 5,
+      "name": "πεντάνιο"
+    },
+    {
+      "key": "pentane",
+      "mode": "expanded",
+      "width": 1280,
+      "pageWidth": 1280,
+      "host": {
+        "x": 289,
+        "y": -46.5,
+        "width": 602,
+        "height": 420,
+        "top": -46.5,
+        "right": 891,
+        "bottom": 373.5,
+        "left": 289
+      },
+      "drawing": {
+        "left": 435.08331298828125,
+        "top": 122.44999694824219,
+        "right": 744.9166717529297,
+        "bottom": 205.06666564941406
+      },
+      "svg": true,
+      "atoms": 17,
+      "name": "πεντάνιο"
+    },
+    {
+      "key": "pentane",
+      "mode": "skeletal",
+      "width": 1280,
+      "pageWidth": 1280,
+      "host": {
+        "x": 289,
+        "y": -46.5,
+        "width": 602,
+        "height": 420,
+        "top": -46.5,
+        "right": 891,
+        "bottom": 373.5,
+        "left": 289
+      },
+      "drawing": {
+        "left": 502.48333740234375,
+        "top": 150.4166717529297,
+        "right": 677.5166473388672,
+        "bottom": 176.5833282470703
+      },
+      "svg": true,
+      "atoms": 5,
+      "name": "πεντάνιο"
+    },
+    {
+      "key": "methyl_2_pentane",
+      "mode": "condensed",
+      "width": 1280,
+      "pageWidth": 1280,
+      "host": {
+        "x": 289,
+        "y": -46.5,
+        "width": 602,
+        "height": 420,
+        "top": -46.5,
+        "right": 891,
+        "bottom": 373.5,
+        "left": 289
+      },
+      "drawing": {
+        "left": 443.98333740234375,
+        "top": 118.19999694824219,
+        "right": 736.0000152587891,
+        "bottom": 209.03334045410156
+      },
+      "svg": true,
+      "atoms": 6,
+      "name": "2-μεθυλοπεντάνιο"
+    },
+    {
+      "key": "methyl_2_pentane",
+      "mode": "expanded",
+      "width": 1280,
+      "pageWidth": 1280,
+      "host": {
+        "x": 289,
+        "y": -46.5,
+        "width": 602,
+        "height": 420,
+        "top": -46.5,
+        "right": 891,
+        "bottom": 373.5,
+        "left": 289
+      },
+      "drawing": {
+        "left": 435.1333312988281,
+        "top": 93.68333435058594,
+        "right": 744.8666839599609,
+        "bottom": 233.8333282470703
+      },
+      "svg": true,
+      "atoms": 20,
+      "name": "2-μεθυλοπεντάνιο"
+    },
+    {
+      "key": "methyl_2_pentane",
+      "mode": "skeletal",
+      "width": 1280,
+      "pageWidth": 1280,
+      "host": {
+        "x": 289,
+        "y": -46.5,
+        "width": 602,
+        "height": 420,
+        "top": -46.5,
+        "right": 891,
+        "bottom": 373.5,
+        "left": 289
+      },
+      "drawing": {
+        "left": 502.51666259765625,
+        "top": 125.69999694824219,
+        "right": 677.4833221435547,
+        "bottom": 201.81666564941406
+      },
+      "svg": true,
+      "atoms": 6,
+      "name": "2-μεθυλοπεντάνιο"
+    },
+    {
+      "key": "dimethyl_2_3_butane",
+      "mode": "condensed",
+      "width": 1280,
+      "pageWidth": 1280,
+      "host": {
+        "x": 289,
+        "y": -46.5,
+        "width": 602,
+        "height": 420,
+        "top": -46.5,
+        "right": 891,
+        "bottom": 373.5,
+        "left": 289
+      },
+      "drawing": {
+        "left": 474.5333251953125,
+        "top": 87.63333129882812,
+        "right": 705.4333648681641,
+        "bottom": 239.5833282470703
+      },
+      "svg": true,
+      "atoms": 6,
+      "name": "2,3-διμεθυλοβουτάνιο"
+    },
+    {
+      "key": "dimethyl_2_3_butane",
+      "mode": "expanded",
+      "width": 1280,
+      "pageWidth": 1280,
+      "host": {
+        "x": 289,
+        "y": -46.5,
+        "width": 602,
+        "height": 420,
+        "top": -46.5,
+        "right": 891,
+        "bottom": 373.5,
+        "left": 289
+      },
+      "drawing": {
+        "left": 463.816650390625,
+        "top": 64.83332824707031,
+        "right": 716.1666717529297,
+        "bottom": 262.6999969482422
+      },
+      "svg": true,
+      "atoms": 20,
+      "name": "2,3-διμεθυλοβουτάνιο"
+    },
+    {
+      "key": "dimethyl_2_3_butane",
+      "mode": "skeletal",
+      "width": 1280,
+      "pageWidth": 1280,
+      "host": {
+        "x": 289,
+        "y": -46.5,
+        "width": 602,
+        "height": 420,
+        "top": -46.5,
+        "right": 891,
+        "bottom": 373.5,
+        "left": 289
+      },
+      "drawing": {
+        "left": 524.2833251953125,
+        "top": 100.53334045410156,
+        "right": 655.7166748046875,
+        "bottom": 226.46665954589844
+      },
+      "svg": true,
+      "atoms": 6,
+      "name": "2,3-διμεθυλοβουτάνιο"
+    },
+    {
+      "key": "ethyl_3_dimethyl_2_5_hexane",
+      "mode": "condensed",
+      "width": 1280,
+      "pageWidth": 1280,
+      "host": {
+        "x": 289,
+        "y": -46.5,
+        "width": 602,
+        "height": 420,
+        "top": -46.5,
+        "right": 891,
+        "bottom": 373.5,
+        "left": 289
+      },
+      "drawing": {
+        "left": 413.41668701171875,
+        "top": 57.08332824707031,
+        "right": 766.5500030517578,
+        "bottom": 270.1333312988281
+      },
+      "svg": true,
+      "atoms": 10,
+      "name": "3-αιθυλο-2,5-διμεθυλοεξάνιο"
+    },
+    {
+      "key": "ethyl_3_dimethyl_2_5_hexane",
+      "mode": "expanded",
+      "width": 1280,
+      "pageWidth": 1280,
+      "host": {
+        "x": 289,
+        "y": -46.5,
+        "width": 602,
+        "height": 420,
+        "top": -46.5,
+        "right": 891,
+        "bottom": 373.5,
+        "left": 289
+      },
+      "drawing": {
+        "left": 406.2166748046875,
+        "top": 36.03334045410156,
+        "right": 773.7666931152344,
+        "bottom": 291.4833526611328
+      },
+      "svg": true,
+      "atoms": 32,
+      "name": "3-αιθυλο-2,5-διμεθυλοεξάνιο"
+    },
+    {
+      "key": "ethyl_3_dimethyl_2_5_hexane",
+      "mode": "skeletal",
+      "width": 1280,
+      "pageWidth": 1280,
+      "host": {
+        "x": 289,
+        "y": -46.5,
+        "width": 602,
+        "height": 420,
+        "top": -46.5,
+        "right": 891,
+        "bottom": 373.5,
+        "left": 289
+      },
+      "drawing": {
+        "left": 480.73333740234375,
+        "top": 87.98333740234375,
+        "right": 699.2666473388672,
+        "bottom": 239.53334045410156
+      },
+      "svg": true,
+      "atoms": 10,
+      "name": "3-αιθυλο-2,5-διμεθυλοεξάνιο"
+    },
+    {
+      "key": "methane",
+      "mode": "condensed",
+      "width": 390,
+      "pageWidth": 390,
+      "host": {
+        "x": 39,
+        "y": -65.5,
+        "width": 332,
+        "height": 420,
+        "top": -65.5,
+        "right": 371,
+        "bottom": 354.5,
+        "left": 39
+      },
+      "drawing": {
+        "left": 181.1999969482422,
+        "top": 129.75,
+        "right": 228.76666259765625,
+        "bottom": 159.46665954589844
+      },
+      "svg": true,
+      "atoms": 1,
+      "name": "μεθάνιο"
+    },
+    {
+      "key": "methane",
+      "mode": "expanded",
+      "width": 390,
+      "pageWidth": 390,
+      "host": {
+        "x": 39,
+        "y": -65.5,
+        "width": 332,
+        "height": 420,
+        "top": -65.5,
+        "right": 371,
+        "bottom": 354.5,
+        "left": 39
+      },
+      "drawing": {
+        "left": 165.25,
+        "top": 103.75,
+        "right": 244.75,
+        "bottom": 186.35000610351562
+      },
+      "svg": true,
+      "atoms": 5,
+      "name": "μεθάνιο"
+    },
+    {
+      "key": "ethane",
+      "mode": "condensed",
+      "width": 390,
+      "pageWidth": 390,
+      "host": {
+        "x": 39,
+        "y": -65.5,
+        "width": 332,
+        "height": 420,
+        "top": -65.5,
+        "right": 371,
+        "bottom": 354.5,
+        "left": 39
+      },
+      "drawing": {
+        "left": 150.64999389648438,
+        "top": 129.75,
+        "right": 259.3333282470703,
+        "bottom": 159.46665954589844
+      },
+      "svg": true,
+      "atoms": 2,
+      "name": "αιθάνιο"
+    },
+    {
+      "key": "ethane",
+      "mode": "expanded",
+      "width": 390,
+      "pageWidth": 390,
+      "host": {
+        "x": 39,
+        "y": -65.5,
+        "width": 332,
+        "height": 420,
+        "top": -65.5,
+        "right": 371,
+        "bottom": 354.5,
+        "left": 39
+      },
+      "drawing": {
+        "left": 136.43333435058594,
+        "top": 103.43333435058594,
+        "right": 273.5500030517578,
+        "bottom": 186.0833282470703
+      },
+      "svg": true,
+      "atoms": 8,
+      "name": "αιθάνιο"
+    },
+    {
+      "key": "ethane",
+      "mode": "skeletal",
+      "width": 390,
+      "pageWidth": 390,
+      "host": {
+        "x": 39,
+        "y": -100.5,
+        "width": 332,
+        "height": 420,
+        "top": -100.5,
+        "right": 371,
+        "bottom": 319.5,
+        "left": 39
+      },
+      "drawing": {
+        "left": 179.68333435058594,
+        "top": 108.88333129882812,
+        "right": 230.31666564941406,
+        "bottom": 110.11666870117188
+      },
+      "svg": true,
+      "atoms": 2,
+      "name": "αιθάνιο"
+    },
+    {
+      "key": "propane",
+      "mode": "condensed",
+      "width": 390,
+      "pageWidth": 390,
+      "host": {
+        "x": 39,
+        "y": -65.5,
+        "width": 332,
+        "height": 420,
+        "top": -65.5,
+        "right": 371,
+        "bottom": 354.5,
+        "left": 39
+      },
+      "drawing": {
+        "left": 120.08332824707031,
+        "top": 129.75,
+        "right": 289.8833312988281,
+        "bottom": 159.46665954589844
+      },
+      "svg": true,
+      "atoms": 3,
+      "name": "προπάνιο"
+    },
+    {
+      "key": "propane",
+      "mode": "expanded",
+      "width": 390,
+      "pageWidth": 390,
+      "host": {
+        "x": 39,
+        "y": -65.5,
+        "width": 332,
+        "height": 420,
+        "top": -65.5,
+        "right": 371,
+        "bottom": 354.5,
+        "left": 39
+      },
+      "drawing": {
+        "left": 107.66667175292969,
+        "top": 103.44999694824219,
+        "right": 302.3166809082031,
+        "bottom": 186.06666564941406
+      },
+      "svg": true,
+      "atoms": 11,
+      "name": "προπάνιο"
+    },
+    {
+      "key": "propane",
+      "mode": "skeletal",
+      "width": 390,
+      "pageWidth": 390,
+      "host": {
+        "x": 39,
+        "y": -100.5,
+        "width": 332,
+        "height": 420,
+        "top": -100.5,
+        "right": 371,
+        "bottom": 319.5,
+        "left": 39
+      },
+      "drawing": {
+        "left": 160.86666870117188,
+        "top": 96.35000610351562,
+        "right": 249.13333129882812,
+        "bottom": 122.64999389648438
+      },
+      "svg": true,
+      "atoms": 3,
+      "name": "προπάνιο"
+    },
+    {
+      "key": "butane",
+      "mode": "condensed",
+      "width": 390,
+      "pageWidth": 390,
+      "host": {
+        "x": 39,
+        "y": -65.5,
+        "width": 332,
+        "height": 420,
+        "top": -65.5,
+        "right": 371,
+        "bottom": 354.5,
+        "left": 39
+      },
+      "drawing": {
+        "left": 89.53334045410156,
+        "top": 129.75,
+        "right": 320.43333435058594,
+        "bottom": 159.46665954589844
+      },
+      "svg": true,
+      "atoms": 4,
+      "name": "βουτάνιο"
+    },
+    {
+      "key": "butane",
+      "mode": "expanded",
+      "width": 390,
+      "pageWidth": 390,
+      "host": {
+        "x": 39,
+        "y": -65.5,
+        "width": 332,
+        "height": 420,
+        "top": -65.5,
+        "right": 371,
+        "bottom": 354.5,
+        "left": 39
+      },
+      "drawing": {
+        "left": 78.89999389648438,
+        "top": 103.44999694824219,
+        "right": 331.1000213623047,
+        "bottom": 186.06666564941406
+      },
+      "svg": true,
+      "atoms": 14,
+      "name": "βουτάνιο"
+    },
+    {
+      "key": "butane",
+      "mode": "skeletal",
+      "width": 390,
+      "pageWidth": 390,
+      "host": {
+        "x": 39,
+        "y": -100.5,
+        "width": 332,
+        "height": 420,
+        "top": -100.5,
+        "right": 371,
+        "bottom": 319.5,
+        "left": 39
+      },
+      "drawing": {
+        "left": 138.93333435058594,
+        "top": 96.35000610351562,
+        "right": 271.06666564941406,
+        "bottom": 122.64999389648438
+      },
+      "svg": true,
+      "atoms": 4,
+      "name": "βουτάνιο"
+    },
+    {
+      "key": "pentane",
+      "mode": "condensed",
+      "width": 390,
+      "pageWidth": 390,
+      "host": {
+        "x": 39,
+        "y": -65.5,
+        "width": 332,
+        "height": 420,
+        "top": -65.5,
+        "right": 371,
+        "bottom": 354.5,
+        "left": 39
+      },
+      "drawing": {
+        "left": 65.53334045410156,
+        "top": 129.60000610351562,
+        "right": 344.4833221435547,
+        "bottom": 158.06666564941406
+      },
+      "svg": true,
+      "atoms": 5,
+      "name": "πεντάνιο"
+    },
+    {
+      "key": "pentane",
+      "mode": "expanded",
+      "width": 390,
+      "pageWidth": 390,
+      "host": {
+        "x": 39,
+        "y": -65.5,
+        "width": 332,
+        "height": 420,
+        "top": -65.5,
+        "right": 371,
+        "bottom": 354.5,
+        "left": 39
+      },
+      "drawing": {
+        "left": 63.98333740234375,
+        "top": 106.56666564941406,
+        "right": 345.99998474121094,
+        "bottom": 181.89999389648438
+      },
+      "svg": true,
+      "atoms": 17,
+      "name": "πεντάνιο"
+    },
+    {
+      "key": "pentane",
+      "mode": "skeletal",
+      "width": 390,
+      "pageWidth": 390,
+      "host": {
+        "x": 39,
+        "y": -100.5,
+        "width": 332,
+        "height": 420,
+        "top": -100.5,
+        "right": 371,
+        "bottom": 319.5,
+        "left": 39
+      },
+      "drawing": {
+        "left": 117,
+        "top": 96.35000610351562,
+        "right": 293,
+        "bottom": 122.64999389648438
+      },
+      "svg": true,
+      "atoms": 5,
+      "name": "πεντάνιο"
+    },
+    {
+      "key": "methyl_2_pentane",
+      "mode": "condensed",
+      "width": 390,
+      "pageWidth": 390,
+      "host": {
+        "x": 39,
+        "y": -65.5,
+        "width": 332,
+        "height": 420,
+        "top": -65.5,
+        "right": 371,
+        "bottom": 354.5,
+        "left": 39
+      },
+      "drawing": {
+        "left": 65.53334045410156,
+        "top": 100.44999694824219,
+        "right": 344.4833221435547,
+        "bottom": 187.21665954589844
+      },
+      "svg": true,
+      "atoms": 6,
+      "name": "2-μεθυλοπεντάνιο"
+    },
+    {
+      "key": "methyl_2_pentane",
+      "mode": "expanded",
+      "width": 390,
+      "pageWidth": 390,
+      "host": {
+        "x": 39,
+        "y": -65.5,
+        "width": 332,
+        "height": 420,
+        "top": -65.5,
+        "right": 371,
+        "bottom": 354.5,
+        "left": 39
+      },
+      "drawing": {
+        "left": 64,
+        "top": 80.41667175292969,
+        "right": 345.99998474121094,
+        "bottom": 208.0500030517578
+      },
+      "svg": true,
+      "atoms": 20,
+      "name": "2-μεθυλοπεντάνιο"
+    },
+    {
+      "key": "methyl_2_pentane",
+      "mode": "skeletal",
+      "width": 390,
+      "pageWidth": 390,
+      "host": {
+        "x": 39,
+        "y": -100.5,
+        "width": 332,
+        "height": 420,
+        "top": -100.5,
+        "right": 371,
+        "bottom": 319.5,
+        "left": 39
+      },
+      "drawing": {
+        "left": 117.03334045410156,
+        "top": 71.5,
+        "right": 292.96665954589844,
+        "bottom": 148.03334045410156
+      },
+      "svg": true,
+      "atoms": 6,
+      "name": "2-μεθυλοπεντάνιο"
+    },
+    {
+      "key": "dimethyl_2_3_butane",
+      "mode": "condensed",
+      "width": 390,
+      "pageWidth": 390,
+      "host": {
+        "x": 39,
+        "y": -65.5,
+        "width": 332,
+        "height": 420,
+        "top": -65.5,
+        "right": 371,
+        "bottom": 354.5,
+        "left": 39
+      },
+      "drawing": {
+        "left": 89.53334045410156,
+        "top": 68.63333129882812,
+        "right": 320.43333435058594,
+        "bottom": 220.5833282470703
+      },
+      "svg": true,
+      "atoms": 6,
+      "name": "2,3-διμεθυλοβουτάνιο"
+    },
+    {
+      "key": "dimethyl_2_3_butane",
+      "mode": "expanded",
+      "width": 390,
+      "pageWidth": 390,
+      "host": {
+        "x": 39,
+        "y": -65.5,
+        "width": 332,
+        "height": 420,
+        "top": -65.5,
+        "right": 371,
+        "bottom": 354.5,
+        "left": 39
+      },
+      "drawing": {
+        "left": 78.81666564941406,
+        "top": 45.83332824707031,
+        "right": 331.1666717529297,
+        "bottom": 243.6999969482422
+      },
+      "svg": true,
+      "atoms": 20,
+      "name": "2,3-διμεθυλοβουτάνιο"
+    },
+    {
+      "key": "dimethyl_2_3_butane",
+      "mode": "skeletal",
+      "width": 390,
+      "pageWidth": 390,
+      "host": {
+        "x": 39,
+        "y": -100.5,
+        "width": 332,
+        "height": 420,
+        "top": -100.5,
+        "right": 371,
+        "bottom": 319.5,
+        "left": 39
+      },
+      "drawing": {
+        "left": 138.93333435058594,
+        "top": 46.19999694824219,
+        "right": 271.06666564941406,
+        "bottom": 172.8000030517578
+      },
+      "svg": true,
+      "atoms": 6,
+      "name": "2,3-διμεθυλοβουτάνιο"
+    },
+    {
+      "key": "ethyl_3_dimethyl_2_5_hexane",
+      "mode": "condensed",
+      "width": 390,
+      "pageWidth": 390,
+      "host": {
+        "x": 39,
+        "y": -65.5,
+        "width": 332,
+        "height": 420,
+        "top": -65.5,
+        "right": 371,
+        "bottom": 354.5,
+        "left": 39
+      },
+      "drawing": {
+        "left": 61.116668701171875,
+        "top": 57.73333740234375,
+        "right": 348.8500061035156,
+        "bottom": 231.18333435058594
+      },
+      "svg": true,
+      "atoms": 10,
+      "name": "3-αιθυλο-2,5-διμεθυλοεξάνιο"
+    },
+    {
+      "key": "ethyl_3_dimethyl_2_5_hexane",
+      "mode": "expanded",
+      "width": 390,
+      "pageWidth": 390,
+      "host": {
+        "x": 39,
+        "y": -65.5,
+        "width": 332,
+        "height": 420,
+        "top": -65.5,
+        "right": 371,
+        "bottom": 354.5,
+        "left": 39
+      },
+      "drawing": {
+        "left": 60.16667175292969,
+        "top": 43.633331298828125,
+        "right": 349.816650390625,
+        "bottom": 244.39999389648438
+      },
+      "svg": true,
+      "atoms": 32,
+      "name": "3-αιθυλο-2,5-διμεθυλοεξάνιο"
+    },
+    {
+      "key": "ethyl_3_dimethyl_2_5_hexane",
+      "mode": "skeletal",
+      "width": 390,
+      "pageWidth": 390,
+      "host": {
+        "x": 39,
+        "y": -100.5,
+        "width": 332,
+        "height": 420,
+        "top": -100.5,
+        "right": 371,
+        "bottom": 319.5,
+        "left": 39
+      },
+      "drawing": {
+        "left": 95.13333129882812,
+        "top": 33.58332824707031,
+        "right": 314.86668395996094,
+        "bottom": 185.9499969482422
+      },
+      "svg": true,
+      "atoms": 10,
+      "name": "3-αιθυλο-2,5-διμεθυλοεξάνιο"
+    }
+  ],
+  "models3D": [
+    {
+      "key": "methane",
+      "file": "http://127.0.0.1:65098/organic-nomenclature-3/mols/nomeclature-moc2/methane_3D.sdf",
+      "atoms": 5,
+      "expectedFromSourceSDF": 5
+    },
+    {
+      "key": "ethane",
+      "file": "http://127.0.0.1:65098/organic-nomenclature-3/mols/nomeclature-moc2/ethane_3D.sdf",
+      "atoms": 8,
+      "expectedFromSourceSDF": 8
+    },
+    {
+      "key": "propane",
+      "file": "http://127.0.0.1:65098/organic-nomenclature-3/mols/nomeclature-moc2/propane_3D.sdf",
+      "atoms": 11,
+      "expectedFromSourceSDF": 11
+    },
+    {
+      "key": "butane",
+      "file": "http://127.0.0.1:65098/organic-nomenclature-3/mols/nomeclature-moc2/butane_3D.sdf",
+      "atoms": 14,
+      "expectedFromSourceSDF": 14
+    },
+    {
+      "key": "pentane",
+      "file": "http://127.0.0.1:65098/organic-nomenclature-3/mols/nomeclature-moc2/pentane_3D.sdf",
+      "atoms": 17,
+      "expectedFromSourceSDF": 17
+    },
+    {
+      "key": "methyl_2_pentane",
+      "file": "http://127.0.0.1:65098/organic-nomenclature-3/mols/nomeclature-moc2/methyl_2_pentane_3D.sdf",
+      "atoms": 20,
+      "expectedFromSourceSDF": 20
+    },
+    {
+      "key": "dimethyl_2_3_butane",
+      "file": "http://127.0.0.1:65098/organic-nomenclature-3/mols/nomeclature-moc2/dimethyl_2_3_butane_3D.sdf",
+      "atoms": 20,
+      "expectedFromSourceSDF": 20
+    },
+    {
+      "key": "ethyl_3_dimethyl_2_5_hexane",
+      "file": "http://127.0.0.1:65098/organic-nomenclature-3/mols/nomeclature-moc2/ethyl_3_dimethyl_2_5_hexane_3D.sdf",
+      "atoms": 32,
+      "expectedFromSourceSDF": 32
+    }
+  ],
+  "lessonSteps": [
+    {
+      "step": 1,
+      "title": "Τι είναι τα αλκάνια;",
+      "selectedMol": "ethane",
+      "mode2D": "condensed",
+      "nextDisabled": false
+    },
+    {
+      "step": 2,
+      "title": "Ένα όνομα από τρία συνθετικά",
+      "selectedMol": "ethane",
+      "mode2D": "condensed",
+      "nextDisabled": false
+    },
+    {
+      "step": 3,
+      "title": "Αλκάνια χωρίς διακλαδώσεις",
+      "selectedMol": "butane",
+      "mode2D": "condensed",
+      "nextDisabled": false
+    },
+    {
+      "step": 4,
+      "title": "Συνεργείο ονομάτων",
+      "selectedMol": "pentane",
+      "mode2D": "condensed",
+      "nextDisabled": true
+    },
+    {
+      "step": 5,
+      "title": "Κύρια αλυσίδα και συνολικά άτομα C",
+      "selectedMol": "methyl_2_pentane",
+      "mode2D": "condensed",
+      "nextDisabled": false
+    },
+    {
+      "step": 5,
+      "title": "Κύρια αλυσίδα και συνολικά άτομα C",
+      "selectedMol": "methyl_2_pentane",
+      "mode2D": "condensed",
+      "nextDisabled": false
+    },
+    {
+      "step": 6,
+      "title": "Θέση και όνομα μιας διακλάδωσης",
+      "selectedMol": "methyl_2_pentane",
+      "mode2D": "condensed",
+      "nextDisabled": false
+    },
+    {
+      "step": 7,
+      "title": "Δύο ίδιες διακλαδώσεις",
+      "selectedMol": "dimethyl_2_3_butane",
+      "mode2D": "condensed",
+      "nextDisabled": false
+    },
+    {
+      "step": 8,
+      "title": "Επιλογή κύριας αλυσίδας στο μεγάλο μόριο",
+      "selectedMol": "ethyl_3_dimethyl_2_5_hexane",
+      "mode2D": "condensed",
+      "nextDisabled": false
+    },
+    {
+      "step": 9,
+      "title": "Αρίθμηση με βάση την πρώτη διαφορετική θέση",
+      "selectedMol": "ethyl_3_dimethyl_2_5_hexane",
+      "mode2D": "condensed",
+      "nextDisabled": false
+    },
+    {
+      "step": 10,
+      "title": "Αλκύλια, αλφαβητική σειρά και πλήρες όνομα",
+      "selectedMol": "ethyl_3_dimethyl_2_5_hexane",
+      "mode2D": "condensed",
+      "nextDisabled": false
+    },
+    {
+      "step": 11,
+      "title": "Στο Συνεργείο: Με διακλαδώσεις",
+      "selectedMol": "ethyl_3_dimethyl_2_5_hexane",
+      "mode2D": "condensed",
+      "nextDisabled": true
+    },
+    {
+      "step": 12,
+      "title": "Όλα τα αλκάνια σε 2D και 3D",
+      "selectedMol": "ethyl_3_dimethyl_2_5_hexane",
+      "mode2D": "condensed",
+      "nextDisabled": false
+    },
+    {
+      "step": 11,
+      "title": "Στο Συνεργείο: Με διακλαδώσεις",
+      "selectedMol": "ethyl_3_dimethyl_2_5_hexane",
+      "mode2D": "condensed",
+      "nextDisabled": false
+    },
+    {
+      "step": 12,
+      "title": "Όλα τα αλκάνια σε 2D και 3D",
+      "selectedMol": "ethyl_3_dimethyl_2_5_hexane",
+      "mode2D": "condensed",
+      "nextDisabled": false
+    }
+  ],
+  "notes": [
+    "Seed4/seed1 unsolved start fixtures only; no solved receipts fabricated. All six repairs earned through native pointer actions."
+  ],
+  "sourceHashesAtFinish": {
+    "mulermoc-nom-55.html": "bd7764ac34d8b1a2f15345b68416385f91d4b351b956f0581adb2cf4eadc6a25",
+    "js/jsme-nick-nomeclature-moc2-data_55.js": "9387cd654b2ff3cfb058d9b97ddcca798ac13f47f769b532f9c122277ff8dd0a",
+    "js/mulermoc-nom-core-55.js": "816b2015b96598d0596aaa513967906f9126db8376d49d9b96f98880f4acfae4",
+    "js/mulermoc-nom-molview-55.js": "299071ecf72c2c05288560f5dc23666025dcfad088520689854e5338bba23ca1",
+    "js/mulermoc-nom-teaching-55.js": "92f5dd9708103a306c98cd7c19dc10082aa4c57d1744105fadf14074ea60ef00",
+    "js/mulermoc-nom-note-55.js": "e685355459afb7955fbe13e3b8e07c6283469b4d8acb98cfbcfa483c9f9be3ca",
+    "js/mulermoc-nom-scenario-55.js": "cd3ac936c7441589d8132d957e169f410973e941c3f737560b4349ea7d7ffce0",
+    "js/mulermoc-nom-iupac-55.js": "db5b6e249119e8d31c0dfa4ab6c8b28f766b3239fb78258cee3a6539ced594de",
+    "js/mulermoc-nom-lang-55.js": "46386d8c9b1bda0861fd6db3df8903fdbe56b413faa4984d8d62a190b37fcfbe",
+    "js/mulermoc-nom-name-en-55.js": "a4bcf58e343a3efc60e9035a3b3d76cb0bb32ed5dd38bfc48234fc1f71065bb1",
+    "js/ui-icons-55.js": "580277e98b0d29bc1df2a265d7e6e395500db9253ee8492349a145fd19a2c414",
+    "css/jsme-nick-55.css": "cb6f9d9546d1cd21218641c18dd55a21b2a1ccb1875295782d7b2bdb932bb970",
+    "css/mulermoc-nom-scenario-55.css": "00d81c4c94059b829141163a78f78d150eb12bfa8534fce50e49c90ca5702e84",
+    "css/namelecule-55.css": "042b0e93645dbc9fe5c9851bdd90a73b08f8c89fc4ef524302bd07ac7180e7a7",
+    "design/welcome-proposal.html": "17c04887fde8da210e7c4acd4e1458652948c0d277f180c67460e3e11ff54c2e",
+    "design/theory-library.html": "87e557a3455f14a851dc631c8d70bf93fe396f4a5ebdb8fde4fa78397158e8dc"
+  },
+  "sourceChangedDuringRun": [
+    "js/mulermoc-nom-molview-55.js"
+  ],
+  "javascriptErrors": [],
+  "environment": {
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:159.0) Gecko/20100101 Firefox/159.0",
+    "url": "http://127.0.0.1:65098/organic-nomenclature-3/mulermoc-nom-55.html?scenario=scenarios/alkanes-user-3.scenario.json&present=1&from=theory-library&v=alkanes-personal-20261106-r1#step=1",
+    "jsmolVersion": "2022-06-24 05:54:49 (JSmol/j2s)",
+    "jquery": "3.7.1"
+  },
+  "quizGeometry": [
+    {
+      "label": "s4 entry",
+      "scroll": 0,
+      "headerBottom": 121.83332824707031,
+      "titleTop": 244.8333282470703,
+      "objectiveTop": 297.83331298828125,
+      "progress": "Κουίζ 1/3",
+      "dialog": {
+        "x": 50,
+        "y": 12,
+        "width": 1180,
+        "height": 776,
+        "top": 12,
+        "right": 1230,
+        "bottom": 788,
+        "left": 50
+      },
+      "width": 1280,
+      "documentWidth": 1280
+    },
+    {
+      "label": "step4-round1 Continue",
+      "scroll": 0,
+      "headerBottom": 121.83332824707031,
+      "titleTop": 244.8333282470703,
+      "objectiveTop": 297.83331298828125,
+      "progress": "Κουίζ 2/3",
+      "dialog": {
+        "x": 50,
+        "y": 12,
+        "width": 1180,
+        "height": 776,
+        "top": 12,
+        "right": 1230,
+        "bottom": 788,
+        "left": 50
+      },
+      "width": 1280,
+      "documentWidth": 1280
+    },
+    {
+      "label": "step4-round2 Continue",
+      "scroll": 0,
+      "headerBottom": 121.83332824707031,
+      "titleTop": 244.8333282470703,
+      "objectiveTop": 297.83331298828125,
+      "progress": "Κουίζ 3/3",
+      "dialog": {
+        "x": 50,
+        "y": 12,
+        "width": 1180,
+        "height": 776,
+        "top": 12,
+        "right": 1230,
+        "bottom": 788,
+        "left": 50
+      },
+      "width": 1280,
+      "documentWidth": 1280
+    },
+    {
+      "label": "s11 entry",
+      "scroll": 0,
+      "headerBottom": 111.83332824707031,
+      "titleTop": 217.8333282470703,
+      "objectiveTop": 259.20001220703125,
+      "progress": "Κουίζ 1/3",
+      "dialog": {
+        "x": 6,
+        "y": 6,
+        "width": 378,
+        "height": 748,
+        "top": 6,
+        "right": 384,
+        "bottom": 754,
+        "left": 6
+      },
+      "width": 390,
+      "documentWidth": 390
+    },
+    {
+      "label": "step11-round1 Continue",
+      "scroll": 0,
+      "headerBottom": 111.83332824707031,
+      "titleTop": 217.8333282470703,
+      "objectiveTop": 259.20001220703125,
+      "progress": "Κουίζ 2/3",
+      "dialog": {
+        "x": 6,
+        "y": 6,
+        "width": 378,
+        "height": 748,
+        "top": 6,
+        "right": 384,
+        "bottom": 754,
+        "left": 6
+      },
+      "width": 390,
+      "documentWidth": 390
+    },
+    {
+      "label": "step11-round2 Continue",
+      "scroll": 0,
+      "headerBottom": 111.83332824707031,
+      "titleTop": 217.8333282470703,
+      "objectiveTop": 259.20001220703125,
+      "progress": "Κουίζ 3/3",
+      "dialog": {
+        "x": 6,
+        "y": 6,
+        "width": 378,
+        "height": 748,
+        "top": 6,
+        "right": 384,
+        "bottom": 754,
+        "left": 6
+      },
+      "width": 390,
+      "documentWidth": 390
+    }
+  ],
+  "resources": [
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/css/jsme-nick-55.css?v=namelecule-v55-20261110-r1",
+      "initiatorType": "link",
+      "duration": 0,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/css/mulermoc-nom-scenario-55.css?v=namelecule-v55-20261110-r1",
+      "initiatorType": "link",
+      "duration": 0,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/css/namelecule-55.css?v=namelecule-v55-20261110-r1",
+      "initiatorType": "link",
+      "duration": 0,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/css/namelecule-repair-round.css?v=checkpoint-pilot-20261104-r1",
+      "initiatorType": "link",
+      "duration": 0,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/css/namelecule-quiz-checkpoints.css?v=quiz-header-progress-20261108-r1",
+      "initiatorType": "link",
+      "duration": 0,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/js/namelecule-label-metrics.js?v=20261031-r1",
+      "initiatorType": "script",
+      "duration": 37,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/js/vendor/jsme/namelecule-20261031-r1/jsme.nocache.js",
+      "initiatorType": "script",
+      "duration": 37,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/js/vendor/jquery/jquery-4.0.0.min.js",
+      "initiatorType": "script",
+      "duration": 38,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/js/vendor/dompurify/dompurify-3.4.17.min.js",
+      "initiatorType": "script",
+      "duration": 39,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/js/jsme-nick-nomeclature-moc2-data_55.js?v=namelecule-v55-20261110-r1",
+      "initiatorType": "script",
+      "duration": 40,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/js/ui-icons-55.js?v=namelecule-v55-20261110-r1",
+      "initiatorType": "script",
+      "duration": 42,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/js/mulermoc-nom-core-55.js?v=namelecule-v55-20261110-r1",
+      "initiatorType": "script",
+      "duration": 44,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "https://www.googletagmanager.com/gtag/js?id=G-1V8NWYY46Y",
+      "initiatorType": "script",
+      "duration": 62,
+      "transferSize": 0,
+      "responseStatus": 0
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/js/mulermoc-nom-teaching-55.js?v=namelecule-v55-20261110-r1",
+      "initiatorType": "script",
+      "duration": 44,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/js/mulermoc-nom-note-55.js?v=namelecule-v55-20261110-r1",
+      "initiatorType": "script",
+      "duration": 44,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/js/namelecule-game-repair.js?v=quiz-answer-reveal-20261109-r1",
+      "initiatorType": "script",
+      "duration": 44,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/js/namelecule-quiz-checkpoints.js?v=quiz-answer-reveal-20261109-r1",
+      "initiatorType": "script",
+      "duration": 44,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/js/namelecule-chemistry-client.js?v=verified-engines-20261105-r1",
+      "initiatorType": "script",
+      "duration": 45,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/js/namelecule-repair-generator.js?v=engine-pilot-20261105-r1",
+      "initiatorType": "script",
+      "duration": 45,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/js/namelecule-generated-repair-checkpoint.js?v=quiz-answer-reveal-20261109-r1",
+      "initiatorType": "script",
+      "duration": 45,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/js/mulermoc-nom-scenario-55.js?v=namelecule-v55-20261110-r1",
+      "initiatorType": "script",
+      "duration": 47,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/js/mulermoc-nom-iupac-55.js?v=namelecule-v55-20261110-r1",
+      "initiatorType": "script",
+      "duration": 47,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/js/mulermoc-nom-lang-55.js?v=namelecule-v55-20261110-r1",
+      "initiatorType": "script",
+      "duration": 47,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/js/mulermoc-nom-name-en-55.js?v=namelecule-v55-20261110-r1",
+      "initiatorType": "script",
+      "duration": 47,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/js/mulermoc-nom-molview-55.js?v=namelecule-v55-20261110-r1",
+      "initiatorType": "script",
+      "duration": 26,
+      "transferSize": 615604,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/js/vendor/jsme/namelecule-20261031-r1/96E40B969193BD74B8A621486920E79C.cache.js",
+      "initiatorType": "script",
+      "duration": 83,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/js/vendor/jsme/namelecule-20261031-r1/jsa.css",
+      "initiatorType": "link",
+      "duration": 0,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/js/vendor/jsme/namelecule-20261031-r1/gwt/chrome/chrome.css",
+      "initiatorType": "link",
+      "duration": 0,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/js/vendor/jsme/namelecule-20261031-r1/gwt/chrome/mosaic.css",
+      "initiatorType": "link",
+      "duration": 0,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/js/vendor/jsme/namelecule-20261031-r1/FEB169D74546A3B279D22AE09AFB86BD.cache.js",
+      "initiatorType": "script",
+      "duration": 26,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/js/vendor/jsmol/namelecule-20261031-r1/JSmol.min.js",
+      "initiatorType": "script",
+      "duration": 12,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/favicon.ico",
+      "initiatorType": "other",
+      "duration": 2,
+      "transferSize": 0,
+      "responseStatus": 404
+    },
+    {
+      "name": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/package.js",
+      "initiatorType": "xmlhttprequest",
+      "duration": 3,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/package.js",
+      "initiatorType": "xmlhttprequest",
+      "duration": 2,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corejmol.z.js",
+      "initiatorType": "xmlhttprequest",
+      "duration": 3,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/J/translation/PO.js",
+      "initiatorType": "xmlhttprequest",
+      "duration": 2,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corescript.z.js",
+      "initiatorType": "xmlhttprequest",
+      "duration": 4,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/J/api/JmolSelectionListener.js",
+      "initiatorType": "xmlhttprequest",
+      "duration": 2,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/J/translation/JmolApplet/el.po",
+      "initiatorType": "xmlhttprequest",
+      "duration": 1,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/mols/nomeclature-moc2/methane_3D.sdf",
+      "initiatorType": "fetch",
+      "duration": 1,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/scenarios/alkanes-user-3.scenario.json",
+      "initiatorType": "fetch",
+      "duration": 5,
+      "transferSize": 33572,
+      "responseStatus": 200
+    },
+    {
+      "name": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/coretext.z.js",
+      "initiatorType": "xmlhttprequest",
+      "duration": 2,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/mols/nomeclature-moc2/methane_3D.sdf",
+      "initiatorType": "xmlhttprequest",
+      "duration": 1,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/spt/init-54.spt",
+      "initiatorType": "xmlhttprequest",
+      "duration": 1,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/J/shape/Halos.js",
+      "initiatorType": "xmlhttprequest",
+      "duration": 2,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/games/data/alkane-structures.json",
+      "initiatorType": "fetch",
+      "duration": 4,
+      "transferSize": 15899,
+      "responseStatus": 200
+    },
+    {
+      "name": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/J/render/HalosRenderer.js",
+      "initiatorType": "xmlhttprequest",
+      "duration": 3,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/js/chemistry-engines/3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306.js",
+      "initiatorType": "fetch",
+      "duration": 7,
+      "transferSize": 217031,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/js/chemistry-engines/3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306.js",
+      "initiatorType": "fetch",
+      "duration": 8,
+      "transferSize": 217031,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/js/chemistry-engines/3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306.js",
+      "initiatorType": "fetch",
+      "duration": 8,
+      "transferSize": 217031,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/js/namelecule-chemistry-worker.js?v=verified-engines-20261105-r1",
+      "initiatorType": "other",
+      "duration": 5,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/js/namelecule-chemistry-worker.js?v=verified-engines-20261105-r1",
+      "initiatorType": "other",
+      "duration": 4,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/js/namelecule-chemistry-worker.js?v=verified-engines-20261105-r1",
+      "initiatorType": "other",
+      "duration": 17,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/js/namelecule-chemistry-worker.js?v=verified-engines-20261105-r1",
+      "initiatorType": "other",
+      "duration": 5,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/js/namelecule-chemistry-worker.js?v=verified-engines-20261105-r1",
+      "initiatorType": "other",
+      "duration": 5,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/js/namelecule-chemistry-worker.js?v=verified-engines-20261105-r1",
+      "initiatorType": "other",
+      "duration": 5,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/js/namelecule-chemistry-worker.js?v=verified-engines-20261105-r1",
+      "initiatorType": "other",
+      "duration": 3,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/js/namelecule-chemistry-worker.js?v=verified-engines-20261105-r1",
+      "initiatorType": "other",
+      "duration": 2,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/mols/nomeclature-moc2/ethyl_3_dimethyl_2_5_hexane_3D.sdf",
+      "initiatorType": "fetch",
+      "duration": 2,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/mols/nomeclature-moc2/ethyl_3_dimethyl_2_5_hexane_3D.sdf",
+      "initiatorType": "xmlhttprequest",
+      "duration": 6,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/spt/init-54.spt",
+      "initiatorType": "xmlhttprequest",
+      "duration": 3,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/games/assets/name-repair/dimethyl_2_3_butane.svg",
+      "initiatorType": "img",
+      "duration": 3,
+      "transferSize": 41103,
+      "responseStatus": 200
+    },
+    {
+      "name": "https://region1.google-analytics.com/g/collect?v=2&tid=G-1V8NWYY46Y&gtm=45je6b50v9247675757za208zd9247675757xf1&_p=1794262089458&gcd=13l3l3l2l1l1&npa=1&dma_cps=a&dma=1&_eu=AAAAAAQ&cid=251150218.1794261957&frm=0&ngs=1&pscdl=noapi&rcb=5&sr=1366x768&ul=el-gr&_s=1&tag_exp=115616986~115938466~115938468~118897920~118897930~119793972~120213116~120385422~120412526~120420416~120469145~120469153~121246026~121246034~123329124~123814183&sid=1794261956&sct=1&seg=1&dl=http%3A%2F%2F127.0.0.1%2Forganic-nomenclature-3%2Fmulermoc-nom-55.html%3Fscenario%3Dscenarios%2Falkanes-user-3.scenario.json%26present%3D1%26from%3Dtheory-library%26v%3Dalkanes-personal-20261106-r1&dr=http%3A%2F%2F127.0.0.1%3A65098%2Forganic-nomenclature-3%2Fdesign%2Ftheory-library.html%3Fv%3Dother-ketones-theory-20261026&dt=Acyclic%20Organic%20Compounds%20Nomenclature&en=page_view&_ee=1&tfd=5319",
+      "initiatorType": "fetch",
+      "duration": 653,
+      "transferSize": 0,
+      "responseStatus": 0
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/games/assets/name-repair/ethyl_3_dimethyl_2_5_hexane.svg",
+      "initiatorType": "img",
+      "duration": 6,
+      "transferSize": 65071,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/games/assets/name-repair/methyl_2_pentane.svg",
+      "initiatorType": "img",
+      "duration": 4,
+      "transferSize": 40736,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/mols/nomeclature-moc2/ethyl_3_dimethyl_2_5_hexane_3D.sdf",
+      "initiatorType": "fetch",
+      "duration": 4,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/mols/nomeclature-moc2/ethyl_3_dimethyl_2_5_hexane_3D.sdf",
+      "initiatorType": "xmlhttprequest",
+      "duration": 1,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/spt/init-54.spt",
+      "initiatorType": "xmlhttprequest",
+      "duration": 3,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/mols/nomeclature-moc2/methane_3D.sdf",
+      "initiatorType": "fetch",
+      "duration": 3,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "https://fonts.gstatic.com/s/roboto/v51/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBHMdazQ.woff2",
+      "initiatorType": "other",
+      "duration": 6,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/mols/nomeclature-moc2/methane_3D.sdf",
+      "initiatorType": "xmlhttprequest",
+      "duration": 14,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/spt/init-54.spt",
+      "initiatorType": "xmlhttprequest",
+      "duration": 2,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/coreprop.z.js",
+      "initiatorType": "xmlhttprequest",
+      "duration": 4,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/mols/nomeclature-moc2/ethane_3D.sdf",
+      "initiatorType": "fetch",
+      "duration": 13,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/mols/nomeclature-moc2/ethane_3D.sdf",
+      "initiatorType": "xmlhttprequest",
+      "duration": 2,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/spt/init-54.spt",
+      "initiatorType": "xmlhttprequest",
+      "duration": 2,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/mols/nomeclature-moc2/propane_3D.sdf",
+      "initiatorType": "fetch",
+      "duration": 60,
+      "transferSize": 2278,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/mols/nomeclature-moc2/propane_3D.sdf",
+      "initiatorType": "xmlhttprequest",
+      "duration": 3,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/spt/init-54.spt",
+      "initiatorType": "xmlhttprequest",
+      "duration": 2,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/mols/nomeclature-moc2/butane_3D.sdf",
+      "initiatorType": "fetch",
+      "duration": 3,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/mols/nomeclature-moc2/butane_3D.sdf",
+      "initiatorType": "xmlhttprequest",
+      "duration": 1,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/spt/init-54.spt",
+      "initiatorType": "xmlhttprequest",
+      "duration": 2,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/mols/nomeclature-moc2/pentane_3D.sdf",
+      "initiatorType": "fetch",
+      "duration": 15,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/mols/nomeclature-moc2/pentane_3D.sdf",
+      "initiatorType": "xmlhttprequest",
+      "duration": 5,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/spt/init-54.spt",
+      "initiatorType": "xmlhttprequest",
+      "duration": 2,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/mols/nomeclature-moc2/methyl_2_pentane_3D.sdf",
+      "initiatorType": "fetch",
+      "duration": 5,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/mols/nomeclature-moc2/methyl_2_pentane_3D.sdf",
+      "initiatorType": "xmlhttprequest",
+      "duration": 2,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/spt/init-54.spt",
+      "initiatorType": "xmlhttprequest",
+      "duration": 3,
+      "transferSize": 651,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/mols/nomeclature-moc2/dimethyl_2_3_butane_3D.sdf",
+      "initiatorType": "fetch",
+      "duration": 4,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/mols/nomeclature-moc2/dimethyl_2_3_butane_3D.sdf",
+      "initiatorType": "xmlhttprequest",
+      "duration": 1,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/spt/init-54.spt",
+      "initiatorType": "xmlhttprequest",
+      "duration": 2,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/mols/nomeclature-moc2/ethyl_3_dimethyl_2_5_hexane_3D.sdf",
+      "initiatorType": "fetch",
+      "duration": 3,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/mols/nomeclature-moc2/ethyl_3_dimethyl_2_5_hexane_3D.sdf",
+      "initiatorType": "xmlhttprequest",
+      "duration": 2,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/spt/init-54.spt",
+      "initiatorType": "xmlhttprequest",
+      "duration": 2,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/mols/nomeclature-moc2/methane_3D.sdf",
+      "initiatorType": "fetch",
+      "duration": 3,
+      "transferSize": 1102,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/mols/nomeclature-moc2/methane_3D.sdf",
+      "initiatorType": "xmlhttprequest",
+      "duration": 2,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/spt/init-54.spt",
+      "initiatorType": "xmlhttprequest",
+      "duration": 5,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/mols/nomeclature-moc2/ethane_3D.sdf",
+      "initiatorType": "fetch",
+      "duration": 4,
+      "transferSize": 2004,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/mols/nomeclature-moc2/ethane_3D.sdf",
+      "initiatorType": "xmlhttprequest",
+      "duration": 1,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/spt/init-54.spt",
+      "initiatorType": "xmlhttprequest",
+      "duration": 2,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/mols/nomeclature-moc2/propane_3D.sdf",
+      "initiatorType": "fetch",
+      "duration": 5,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/mols/nomeclature-moc2/propane_3D.sdf",
+      "initiatorType": "xmlhttprequest",
+      "duration": 2,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/spt/init-54.spt",
+      "initiatorType": "xmlhttprequest",
+      "duration": 1,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/mols/nomeclature-moc2/butane_3D.sdf",
+      "initiatorType": "fetch",
+      "duration": 3,
+      "transferSize": 2661,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/mols/nomeclature-moc2/butane_3D.sdf",
+      "initiatorType": "xmlhttprequest",
+      "duration": 1,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/spt/init-54.spt",
+      "initiatorType": "xmlhttprequest",
+      "duration": 1,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/mols/nomeclature-moc2/pentane_3D.sdf",
+      "initiatorType": "fetch",
+      "duration": 4,
+      "transferSize": 2981,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/mols/nomeclature-moc2/pentane_3D.sdf",
+      "initiatorType": "xmlhttprequest",
+      "duration": 3,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/spt/init-54.spt",
+      "initiatorType": "xmlhttprequest",
+      "duration": 2,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/mols/nomeclature-moc2/methyl_2_pentane_3D.sdf",
+      "initiatorType": "fetch",
+      "duration": 2,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/mols/nomeclature-moc2/methyl_2_pentane_3D.sdf",
+      "initiatorType": "xmlhttprequest",
+      "duration": 1,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/spt/init-54.spt",
+      "initiatorType": "xmlhttprequest",
+      "duration": 2,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/mols/nomeclature-moc2/dimethyl_2_3_butane_3D.sdf",
+      "initiatorType": "fetch",
+      "duration": 3,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/mols/nomeclature-moc2/dimethyl_2_3_butane_3D.sdf",
+      "initiatorType": "xmlhttprequest",
+      "duration": 1,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/spt/init-54.spt",
+      "initiatorType": "xmlhttprequest",
+      "duration": 1,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/mols/nomeclature-moc2/ethyl_3_dimethyl_2_5_hexane_3D.sdf",
+      "initiatorType": "fetch",
+      "duration": 10,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/mols/nomeclature-moc2/ethyl_3_dimethyl_2_5_hexane_3D.sdf",
+      "initiatorType": "xmlhttprequest",
+      "duration": 2,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/spt/init-54.spt",
+      "initiatorType": "xmlhttprequest",
+      "duration": 2,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/mols/nomeclature-moc2/ethyl_3_dimethyl_2_5_hexane_3D.sdf",
+      "initiatorType": "fetch",
+      "duration": 5,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/games/assets/name-repair/workshop-logo-3d-v1.png",
+      "initiatorType": "other",
+      "duration": 3,
+      "transferSize": 865877,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/mols/nomeclature-moc2/ethyl_3_dimethyl_2_5_hexane_3D.sdf",
+      "initiatorType": "xmlhttprequest",
+      "duration": 4,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/spt/init-54.spt",
+      "initiatorType": "xmlhttprequest",
+      "duration": 1,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/mols/nomeclature-moc2/ethyl_3_dimethyl_2_5_hexane_3D.sdf",
+      "initiatorType": "fetch",
+      "duration": 4,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/mols/nomeclature-moc2/ethyl_3_dimethyl_2_5_hexane_3D.sdf",
+      "initiatorType": "xmlhttprequest",
+      "duration": 2,
+      "transferSize": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:65098/organic-nomenclature-3/spt/init-54.spt",
+      "initiatorType": "xmlhttprequest",
+      "duration": 2,
+      "transferSize": 0,
+      "responseStatus": 200
+    }
+  ],
+  "finalReceipt": {
+    "key": "namelecule:lesson-checkpoints:v1:3fbb1bcd",
+    "content": "{\"version\":1,\"title\":\"Αλκάνια\",\"author\":\"Unknown\",\"steps\":[{\"n\":1,\"nameBoxLayout\":1,\"lang\":\"gr\",\"title\":\"Τι είναι τα αλκάνια;\",\"note\":\"<div>Τα <b>αλκάνια</b> είναι άκυκλοι κορεσμένοι υδρογονάνθρακες, που περιέχουν μόνο άτομα C και H και όλοι οι δεσμοί μεταξύ ατόμων C είναι απλοί. Έχουν γενικό μοριακό τύπο <b>C<sub>ν</sub>H<sub>2ν+2</sub></b>, με ν ≥ 1.</div><div><br></div><div>Το απλούστερο είναι το <b>μεθάνιο CH<sub>4</sub></b>.&nbsp;</div><div>Εδώ βλέπεις το <b>αιθάνιο C<sub>2</sub>H<sub>6</sub></b>&nbsp;με δύο άτομα C συνδεδεμένα με απλό δεσμό.</div>\",\"noteFormat\":\"html\",\"mode2D\":\"condensed\",\"mainChainMode\":\"algorithmic\",\"chainIdx\":0,\"etherNamingMode\":\"iupac\",\"substNamingMode\":\"school\",\"nameAnalysisMode\":\"none\",\"selectedRule\":null,\"style2D\":{\"atomColors\":true,\"colorMode\":\"atom\",\"zigzag\":false,\"zoom\":2},\"styleName\":{\"box\":true,\"cross\":true,\"etherNaming\":\"iupac\",\"panelOpen\":true,\"hidden\":[\"comp5\",\"comp6\",\"comp9\"]},\"styleHighlight\":{\"bondAtoms\":false,\"numberingAtoms\":true,\"numberingBonds\":true},\"styleText\":{\"fontSizePx\":null,\"textWidthPx\":null,\"columns\":null,\"position\":null},\"audio\":{\"narrate\":false},\"menuSubset\":[],\"menuGroups\":[\"molecules\"],\"view3D\":{\"style\":\"ballnstick\",\"spin\":false,\"showH\":true,\"atomSymbols\":true,\"moveto\":null},\"show\":{\"menu\":false,\"viewerButtons\":false,\"viewerSettings\":false,\"viewers\":{\"2D\":true,\"3D\":false},\"viewerMaxHeight\":420,\"viewerBothHeight\":null,\"controls\":{\"2D\":false,\"3D\":false},\"save\":{\"2D\":false,\"3D\":false},\"naming\":true,\"nameSettings\":false,\"nameEye\":false,\"nameExpanded\":false,\"audio\":false,\"rule\":false,\"text\":true,\"nameClick\":false},\"selectedMol\":\"ethane\"},{\"n\":2,\"nameBoxLayout\":1,\"lang\":\"gr\",\"title\":\"Ένα όνομα από τρία συνθετικά\",\"note\":\"Στο <b>αιθάνιο</b>, το <b>αιθ-</b> δηλώνει τα δύο άτομα C της κύριας αλυσίδας, το <b>-αν-</b> τους απλούς δεσμούς μεταξύ ατόμων C και το <b>-ιο</b> τη χημική τάξη των υδρογονανθράκων.<br><br>Επίλεξε κάθε συνθετικό στο όνομα και παρατήρησε τι επισημαίνεται. Αν θέλεις τις άλλες συλλαβές για το ίδιο συνθετικό, άνοιξε τον αντίστοιχο <b>κανόνα </b>κάτω από την εξήγηση.\",\"noteFormat\":\"html\",\"mode2D\":\"condensed\",\"mainChainMode\":\"algorithmic\",\"chainIdx\":0,\"etherNamingMode\":\"iupac\",\"substNamingMode\":\"school\",\"nameAnalysisMode\":\"compCarbonsCount\",\"selectedRule\":null,\"style2D\":{\"atomColors\":true,\"colorMode\":\"atom\",\"zigzag\":false,\"zoom\":2},\"styleName\":{\"box\":true,\"cross\":false,\"etherNaming\":\"iupac\",\"panelOpen\":false,\"hidden\":[]},\"styleHighlight\":{\"bondAtoms\":false,\"numberingAtoms\":true,\"numberingBonds\":true},\"styleText\":{\"fontSizePx\":null,\"textWidthPx\":null,\"columns\":null,\"position\":null},\"audio\":{\"narrate\":false},\"menuSubset\":[],\"menuGroups\":[\"molecules\"],\"view3D\":{\"style\":\"ballnstick\",\"spin\":false,\"showH\":true,\"atomSymbols\":true,\"moveto\":null},\"show\":{\"menu\":false,\"viewerButtons\":false,\"viewerSettings\":false,\"viewers\":{\"2D\":true,\"3D\":false},\"viewerMaxHeight\":420,\"viewerBothHeight\":null,\"controls\":{\"2D\":false,\"3D\":false},\"save\":{\"2D\":false,\"3D\":false},\"naming\":true,\"nameSettings\":false,\"nameEye\":false,\"nameExpanded\":false,\"audio\":false,\"rule\":true,\"text\":true,\"nameClick\":true},\"selectedMol\":\"ethane\"},{\"n\":3,\"nameBoxLayout\":1,\"lang\":\"gr\",\"title\":\"Αλκάνια χωρίς διακλαδώσεις\",\"note\":\"<div>Από το μενού σύγκρινε <b>μεθάνιο, αιθάνιο, προπάνιο, βουτάνιο και πεντάνιο</b>. Οι αλυσίδες τους έχουν 1, 2, 3, 4 και 5 άτομα C, με συλλαβές πρώτου συνθετικού αντίστοιχα&nbsp;<b>μεθ- ,&nbsp; αιθ- ,&nbsp; προπ- ,&nbsp; βουτ- ,&nbsp; πεντ-</b>.&nbsp;</div><div>Τα <b>-αν-</b> και <b>-ιο</b> παραμένουν ίδια.&nbsp;</div><div>Δεν γράφουμε θέση για τους απλούς δεσμούς μεταξύ ατόμων C.</div><br><div>Δοκίμασε συνεπτυγμένο, ανεπτυγμένο και σκελετικό τύπο. Η συνδεσμολογία παραμένει ίδια σε κάθε μορφή.&nbsp;<b><br></b></div><div><b>Το μεθάνιο δεν διαθέτει σκελετικό τύπο.</b></div>\",\"noteFormat\":\"html\",\"mode2D\":\"condensed\",\"mainChainMode\":\"algorithmic\",\"chainIdx\":0,\"etherNamingMode\":\"iupac\",\"substNamingMode\":\"school\",\"nameAnalysisMode\":\"compCarbonsCount\",\"selectedRule\":null,\"style2D\":{\"atomColors\":true,\"colorMode\":\"atom\",\"zigzag\":false,\"zoom\":2},\"styleName\":{\"box\":true,\"cross\":false,\"etherNaming\":\"iupac\",\"panelOpen\":false,\"hidden\":[]},\"styleHighlight\":{\"bondAtoms\":false,\"numberingAtoms\":true,\"numberingBonds\":true},\"styleText\":{\"fontSizePx\":null,\"textWidthPx\":null,\"columns\":null,\"position\":null},\"audio\":{\"narrate\":false},\"menuSubset\":[\"methane\",\"ethane\",\"propane\",\"butane\",\"pentane\"],\"menuGroups\":[\"molecules\"],\"view3D\":{\"style\":\"ballnstick\",\"spin\":false,\"showH\":true,\"atomSymbols\":true,\"moveto\":null},\"show\":{\"menu\":true,\"viewerButtons\":false,\"viewerSettings\":false,\"viewers\":{\"2D\":true,\"3D\":false},\"viewerMaxHeight\":420,\"viewerBothHeight\":null,\"controls\":{\"2D\":true,\"3D\":false},\"save\":{\"2D\":false,\"3D\":false},\"naming\":true,\"nameSettings\":true,\"nameEye\":false,\"nameExpanded\":false,\"audio\":false,\"rule\":false,\"text\":true,\"nameClick\":true},\"selectedMol\":\"butane\"},{\"n\":4,\"nameBoxLayout\":1,\"lang\":\"gr\",\"title\":\"Συνεργείο ονομάτων\",\"note\":\"Ώρα για μια μικρή στάση στο <b>Συνεργείο ονομάτων</b>. Άνοιξε το σετ <b>\\\"Χωρίς διακλαδώσεις\\\"</b>&nbsp;και επισκεύασε τρία ονόματα.<br><br>Μπορείς να δοκιμάσεις ξανά και να επιστρέψεις στη θεωρία. Η συνέχεια προς τα διακλαδισμένα αλκάνια ανοίγει αφού ολοκληρώσεις σωστά <b>και τις τρεις επισκευές</b> και διαβάσεις τις εξηγήσεις.\",\"noteFormat\":\"html\",\"mode2D\":\"condensed\",\"mainChainMode\":\"algorithmic\",\"chainIdx\":0,\"etherNamingMode\":\"iupac\",\"substNamingMode\":\"school\",\"nameAnalysisMode\":\"none\",\"selectedRule\":null,\"style2D\":{\"atomColors\":true,\"colorMode\":\"atom\",\"zigzag\":false,\"zoom\":2},\"styleName\":{\"box\":true,\"cross\":false,\"etherNaming\":\"iupac\",\"panelOpen\":false,\"hidden\":[]},\"styleHighlight\":{\"bondAtoms\":false,\"numberingAtoms\":true,\"numberingBonds\":true},\"styleText\":{\"fontSizePx\":null,\"textWidthPx\":null,\"columns\":null,\"position\":null},\"audio\":{\"narrate\":false},\"menuSubset\":[],\"menuGroups\":[\"molecules\"],\"view3D\":{\"style\":\"ballnstick\",\"spin\":false,\"showH\":true,\"atomSymbols\":true,\"moveto\":null},\"show\":{\"menu\":false,\"viewerButtons\":false,\"viewerSettings\":false,\"viewers\":{\"2D\":false,\"3D\":false},\"viewerMaxHeight\":420,\"viewerBothHeight\":null,\"controls\":{\"2D\":false,\"3D\":false},\"save\":{\"2D\":false,\"3D\":false},\"naming\":false,\"nameSettings\":false,\"nameEye\":false,\"nameExpanded\":false,\"audio\":false,\"rule\":false,\"text\":true,\"nameClick\":false},\"selectedMol\":\"pentane\",\"checkpoint\":{\"id\":\"alkanes-unbranched-workshop-v1\",\"type\":\"generated-name-repair-set\",\"version\":1,\"round\":{\"version\":1,\"setId\":\"alkanes-unbranched\",\"difficulty\":\"basic\",\"roundCount\":3,\"generatorVersion\":\"1.0.0\",\"catalogRevision\":\"275d537b19f3ef0791c97d8d78c127f541a0579038ef1e8d65dadde611845690\",\"engineSHA256\":\"3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306\"},\"openLabel\":\"πήγαινε στο συνεργείο\"},\"titleLogo\":\"workshop\"},{\"n\":5,\"nameBoxLayout\":1,\"lang\":\"gr\",\"title\":\"Κύρια αλυσίδα και συνολικά άτομα C\",\"note\":\"Στα διακλαδισμένα αλκάνια επιλέγουμε τη <b>μεγαλύτερη συνεχή ανθρακική αλυσίδα</b>. Εδώ έχει <b>πέντε άτομα C</b> και δίνει το συνθετικό <b>πεντ-</b>. Το μόριο έχει συνολικά έξι άτομα C. Το έκτο ανήκει στη διακλάδωση.<br><br>Ακολούθησε την επισημασμένη αλυσίδα. Μπορεί να αλλάζει κατεύθυνση στο σχέδιο. Κάνε κλικ στο εικονίδιο <b>\\\"Κύρια αλυσίδα\\\"</b> για να δεις ποιες είναι οι ισοδύναμες κύριες αλυσίδες. Μετράμε τα συνεχόμενα άτομα C της και όχι όλα τα άτομα C του μορίου.\",\"noteFormat\":\"html\",\"mode2D\":\"condensed\",\"mainChainMode\":\"algorithmic\",\"chainIdx\":0,\"etherNamingMode\":\"iupac\",\"substNamingMode\":\"school\",\"nameAnalysisMode\":\"compCarbonsCount\",\"selectedRule\":null,\"style2D\":{\"atomColors\":true,\"colorMode\":\"atom\",\"zigzag\":false,\"zoom\":2},\"styleName\":{\"box\":true,\"cross\":false,\"etherNaming\":\"iupac\",\"panelOpen\":false,\"hidden\":[\"comp0\",\"comp1\"],\"disabled\":[\"comp6\",\"comp9\"]},\"styleHighlight\":{\"bondAtoms\":false,\"numberingAtoms\":true,\"numberingBonds\":true},\"styleText\":{\"fontSizePx\":null,\"textWidthPx\":null,\"columns\":null,\"position\":null},\"audio\":{\"narrate\":false},\"menuSubset\":[],\"menuGroups\":[\"molecules\"],\"view3D\":{\"style\":\"ballnstick\",\"spin\":false,\"showH\":true,\"atomSymbols\":true,\"moveto\":null},\"show\":{\"menu\":false,\"viewerButtons\":false,\"viewerSettings\":false,\"viewers\":{\"2D\":true,\"3D\":false},\"viewerMaxHeight\":420,\"viewerBothHeight\":null,\"controls\":{\"2D\":true,\"3D\":false},\"save\":{\"2D\":false,\"3D\":false},\"naming\":true,\"nameSettings\":false,\"nameEye\":false,\"nameExpanded\":false,\"audio\":false,\"rule\":false,\"text\":true,\"nameClick\":true,\"chainNavigation\":true},\"selectedMol\":\"methyl_2_pentane\"},{\"n\":6,\"nameBoxLayout\":1,\"lang\":\"gr\",\"title\":\"Θέση και όνομα μιας διακλάδωσης\",\"note\":\"Αριθμούμε από το άκρο που δίνει στη διακλάδωση τη θέση <b>2</b>, αντί για 4. Η ομάδα <b>–CH<sub>3</sub></b> είναι μεθυλομάδα, άρα γράφουμε <b>2-μεθυλοπεντάνιο</b>: θέση - διακλάδωση - όνομα κύριας αλυσίδας.<br><br>Επίλεξε το <b>2-</b> και το <b>μεθυλο</b> για να συνδέσεις θέση και ομάδα. Στο <b>\\\"Ονόματα αλκυλίων και προθέματα\\\"</b>&nbsp;θα βρεις και τις άλλες αλκυλομάδες.\",\"noteFormat\":\"html\",\"mode2D\":\"condensed\",\"mainChainMode\":\"algorithmic\",\"chainIdx\":0,\"etherNamingMode\":\"iupac\",\"substNamingMode\":\"school\",\"nameAnalysisMode\":\"compSecondSub1\",\"selectedRule\":null,\"style2D\":{\"atomColors\":true,\"colorMode\":\"atom\",\"zigzag\":false,\"zoom\":2},\"styleName\":{\"box\":true,\"cross\":false,\"etherNaming\":\"iupac\",\"panelOpen\":false,\"hidden\":[]},\"styleHighlight\":{\"bondAtoms\":false,\"numberingAtoms\":true,\"numberingBonds\":true},\"styleText\":{\"fontSizePx\":null,\"textWidthPx\":null,\"columns\":null,\"position\":null},\"audio\":{\"narrate\":false},\"menuSubset\":[],\"menuGroups\":[\"molecules\"],\"view3D\":{\"style\":\"ballnstick\",\"spin\":false,\"showH\":true,\"atomSymbols\":true,\"moveto\":null},\"show\":{\"menu\":false,\"viewerButtons\":false,\"viewerSettings\":false,\"viewers\":{\"2D\":true,\"3D\":false},\"viewerMaxHeight\":420,\"viewerBothHeight\":null,\"controls\":{\"2D\":true,\"3D\":false},\"save\":{\"2D\":false,\"3D\":false},\"naming\":true,\"nameSettings\":false,\"nameEye\":false,\"nameExpanded\":false,\"audio\":false,\"rule\":true,\"text\":true,\"nameClick\":true},\"selectedMol\":\"methyl_2_pentane\"},{\"n\":7,\"nameBoxLayout\":1,\"lang\":\"gr\",\"title\":\"Δύο ίδιες διακλαδώσεις\",\"note\":\"Η κύρια αλυσίδα έχει <b>τέσσερα άτομα C</b>, ενώ το μόριο έχει συνολικά έξι άτομα C. Οι δύο μεθυλομάδες παίρνουν τις θέσεις <b>2,3</b> από οποιοδήποτε άκρο. Οι δύο αριθμήσεις είναι ισοδύναμες.<br><br>Επειδή οι ομάδες είναι δύο και ίδιες, χρησιμοποιούμε το πρόθεμα&nbsp;<b>δι-</b>και γράφουμε&nbsp;<b>2,3-διμεθυλοβουτάνιο</b>. Βάζουμε κόμμα ανάμεσα στους αριθμούς και παύλα ανάμεσα σε αριθμό και λέξη. Επίλεξε τα μέρη του ονόματος για να δεις την αντιστοιχία.\",\"noteFormat\":\"html\",\"mode2D\":\"condensed\",\"mainChainMode\":\"algorithmic\",\"chainIdx\":1,\"etherNamingMode\":\"iupac\",\"substNamingMode\":\"school\",\"nameAnalysisMode\":\"compCarbonsCount\",\"selectedRule\":null,\"style2D\":{\"atomColors\":true,\"colorMode\":\"atom\",\"zigzag\":false,\"zoom\":2},\"styleName\":{\"box\":true,\"cross\":false,\"etherNaming\":\"iupac\",\"panelOpen\":false,\"hidden\":[]},\"styleHighlight\":{\"bondAtoms\":false,\"numberingAtoms\":true,\"numberingBonds\":true},\"styleText\":{\"fontSizePx\":null,\"textWidthPx\":null,\"columns\":null,\"position\":null},\"audio\":{\"narrate\":false},\"menuSubset\":[],\"menuGroups\":[\"molecules\"],\"view3D\":{\"style\":\"ballnstick\",\"spin\":false,\"showH\":true,\"atomSymbols\":true,\"moveto\":null},\"show\":{\"menu\":false,\"viewerButtons\":false,\"viewerSettings\":false,\"viewers\":{\"2D\":true,\"3D\":false},\"viewerMaxHeight\":420,\"viewerBothHeight\":null,\"controls\":{\"2D\":true,\"3D\":false},\"save\":{\"2D\":false,\"3D\":false},\"naming\":true,\"nameSettings\":false,\"nameEye\":false,\"nameExpanded\":false,\"audio\":false,\"rule\":false,\"text\":true,\"nameClick\":true,\"numberingDirection\":true},\"selectedMol\":\"dimethyl_2_3_butane\"},{\"n\":8,\"nameBoxLayout\":1,\"lang\":\"gr\",\"title\":\"Επιλογή κύριας αλυσίδας στο μεγάλο μόριο\",\"note\":\"Το μόριο έχει <b>δέκα άτομα C</b>, αλλά η μεγαλύτερη συνεχής αλυσίδα έχει <b>έξι άτομα C</b> και δίνει το συνθετικό&nbsp;<b>εξ-</b>. Τα υπόλοιπα τέσσερα άτομα C βρίσκονται στις διακλαδώσεις.<br><br>Ανάμεσα σε ισομήκεις αλυσίδες προτιμούμε εκείνη με τις <b>περισσότερες διακλαδώσεις</b>. Η επιλεγμένη αλυσίδα έχει τρεις. Ακολούθησε τα έξι αριθμημένα άτομα C της.\",\"noteFormat\":\"html\",\"mode2D\":\"condensed\",\"mainChainMode\":\"algorithmic\",\"chainIdx\":1,\"etherNamingMode\":\"iupac\",\"substNamingMode\":\"school\",\"nameAnalysisMode\":\"compCarbonsCount\",\"selectedRule\":null,\"style2D\":{\"atomColors\":true,\"colorMode\":\"atom\",\"zigzag\":false,\"zoom\":2},\"styleName\":{\"box\":true,\"cross\":false,\"etherNaming\":\"iupac\",\"panelOpen\":false,\"hidden\":[\"comp0\",\"comp1\",\"comp2\",\"comp3\"]},\"styleHighlight\":{\"bondAtoms\":false,\"numberingAtoms\":true,\"numberingBonds\":true},\"styleText\":{\"fontSizePx\":null,\"textWidthPx\":null,\"columns\":null,\"position\":null},\"audio\":{\"narrate\":false},\"menuSubset\":[],\"menuGroups\":[\"molecules\"],\"view3D\":{\"style\":\"ballnstick\",\"spin\":false,\"showH\":true,\"atomSymbols\":true,\"moveto\":null},\"show\":{\"menu\":false,\"viewerButtons\":false,\"viewerSettings\":false,\"viewers\":{\"2D\":true,\"3D\":false},\"viewerMaxHeight\":420,\"viewerBothHeight\":null,\"controls\":{\"2D\":true,\"3D\":false},\"save\":{\"2D\":false,\"3D\":false},\"naming\":true,\"nameSettings\":false,\"nameEye\":false,\"nameExpanded\":false,\"audio\":false,\"rule\":false,\"text\":true,\"nameClick\":true},\"selectedMol\":\"ethyl_3_dimethyl_2_5_hexane\"},{\"n\":9,\"nameBoxLayout\":1,\"lang\":\"gr\",\"title\":\"Αρίθμηση με βάση την πρώτη διαφορετική θέση \",\"note\":\"Η μία φορά αρίθμησης δίνει θέσεις <b>2,3,5</b> και η αντίθετη <b>2,4,5</b>. Συγκρίνουμε τους αριθμούς με τη σειρά. Ο πρώτος είναι ίδιος, αλλά μετά το <b>3 είναι μικρότερο από το 4</b>.\\n\\nΚρατάμε επομένως τις θέσεις <b>2,3,5</b> και την ίδια αρίθμηση για όλες τις ομάδες. Ο κανόνας είναι ο <b>μικρότερος αριθμός στο πρώτο σημείο διαφοράς</b>. Το άθροισμα των θέσεων δεν καθορίζει την επιλογή.\",\"noteFormat\":\"text\",\"mode2D\":\"condensed\",\"mainChainMode\":\"algorithmic\",\"chainIdx\":1,\"etherNamingMode\":\"iupac\",\"substNamingMode\":\"school\",\"nameAnalysisMode\":\"compCarbonsCount\",\"selectedRule\":null,\"style2D\":{\"atomColors\":true,\"colorMode\":\"atom\",\"zigzag\":false,\"zoom\":2},\"styleName\":{\"box\":true,\"cross\":false,\"etherNaming\":\"iupac\",\"panelOpen\":false,\"hidden\":[\"comp0\",\"comp1\",\"comp2\",\"comp3\"]},\"styleHighlight\":{\"bondAtoms\":false,\"numberingAtoms\":true,\"numberingBonds\":true},\"styleText\":{\"fontSizePx\":null,\"textWidthPx\":null,\"columns\":null,\"position\":null},\"audio\":{\"narrate\":false},\"menuSubset\":[],\"menuGroups\":[\"molecules\"],\"view3D\":{\"style\":\"ballnstick\",\"spin\":false,\"showH\":true,\"atomSymbols\":true,\"moveto\":null},\"show\":{\"menu\":false,\"viewerButtons\":false,\"viewerSettings\":false,\"viewers\":{\"2D\":true,\"3D\":false},\"viewerMaxHeight\":420,\"viewerBothHeight\":null,\"controls\":{\"2D\":true,\"3D\":false},\"save\":{\"2D\":false,\"3D\":false},\"naming\":true,\"nameSettings\":false,\"nameEye\":false,\"nameExpanded\":false,\"audio\":false,\"rule\":false,\"text\":true,\"nameClick\":true},\"selectedMol\":\"ethyl_3_dimethyl_2_5_hexane\"},{\"n\":10,\"nameBoxLayout\":1,\"lang\":\"gr\",\"title\":\"Αλκύλια, αλφαβητική σειρά και πλήρες όνομα\",\"note\":\"Στη θέση <b>3</b> υπάρχει αιθυλομάδα <b>–CH<sub>2</sub>–CH<sub>3</sub></b>&nbsp;ενώ στις <b>2 </b>και<b> 5</b> δύο μεθυλομάδες. Γράφουμε το&nbsp;<b>αιθυλο-</b> πριν από το&nbsp;<b>μεθυλο-</b> αλφαβητικά (το α βρίσκεται πριν από το μ στο αλφάβητο), χωρίς να υπολογίζουμε το <b>δι-&nbsp;</b>, οπότε το όνομα είναι&nbsp;<b>3-αιθυλο-2,5-διμεθυλοεξάνιο</b>.<br><br>Επίλεξε τις θέσεις και τις ομάδες στο όνομα. Αν χρειαστεί, συμβουλέψου τον πίνακα <b>\\\"Ονόματα αλκυλίων και προθέματα\\\"</b>. Τα κόμματα χωρίζουν αριθμούς και οι παύλες αριθμούς από λέξεις.\",\"noteFormat\":\"html\",\"mode2D\":\"condensed\",\"mainChainMode\":\"algorithmic\",\"chainIdx\":0,\"etherNamingMode\":\"iupac\",\"substNamingMode\":\"school\",\"nameAnalysisMode\":\"compSecondSub1\",\"selectedRule\":null,\"style2D\":{\"atomColors\":true,\"colorMode\":\"atom\",\"zigzag\":false,\"zoom\":2},\"styleName\":{\"box\":true,\"cross\":false,\"etherNaming\":\"iupac\",\"panelOpen\":false,\"hidden\":[]},\"styleHighlight\":{\"bondAtoms\":false,\"numberingAtoms\":true,\"numberingBonds\":true},\"styleText\":{\"fontSizePx\":null,\"textWidthPx\":null,\"columns\":null,\"position\":null},\"audio\":{\"narrate\":false},\"menuSubset\":[],\"menuGroups\":[\"molecules\"],\"view3D\":{\"style\":\"ballnstick\",\"spin\":false,\"showH\":true,\"atomSymbols\":true,\"moveto\":null},\"show\":{\"menu\":false,\"viewerButtons\":false,\"viewerSettings\":false,\"viewers\":{\"2D\":true,\"3D\":false},\"viewerMaxHeight\":420,\"viewerBothHeight\":null,\"controls\":{\"2D\":true,\"3D\":false},\"save\":{\"2D\":false,\"3D\":false},\"naming\":true,\"nameSettings\":false,\"nameEye\":false,\"nameExpanded\":false,\"audio\":false,\"rule\":true,\"text\":true,\"nameClick\":true},\"selectedMol\":\"ethyl_3_dimethyl_2_5_hexane\"},{\"n\":11,\"nameBoxLayout\":1,\"lang\":\"gr\",\"title\":\"Στο Συνεργείο: Με διακλαδώσεις\",\"note\":\"Επίστρεψε στο <b>Συνεργείο ονομάτων</b> για το σετ <b>«Με διακλαδώσεις»</b>. Σε κάθε κουίζ εντόπισε το λάθος συνθετικό ή τη λανθασμένη σειρά και επισκεύασε το όνομα.<br><br>Διάβασε την εξήγηση κάθε σωστής επισκευής. Μπορείς να επαναλάβεις τις προσπάθειες. Αφού ολοκληρώσεις σωστά <b>και τα τρία κουίζ</b>, ανοίγει η τελική εξερεύνηση όλων των αλκανίων.\",\"noteFormat\":\"html\",\"mode2D\":\"condensed\",\"mainChainMode\":\"algorithmic\",\"chainIdx\":0,\"etherNamingMode\":\"iupac\",\"substNamingMode\":\"school\",\"nameAnalysisMode\":\"none\",\"selectedRule\":null,\"style2D\":{\"atomColors\":true,\"colorMode\":\"atom\",\"zigzag\":false,\"zoom\":2},\"styleName\":{\"box\":true,\"cross\":false,\"etherNaming\":\"iupac\",\"panelOpen\":false,\"hidden\":[]},\"styleHighlight\":{\"bondAtoms\":false,\"numberingAtoms\":true,\"numberingBonds\":true},\"styleText\":{\"fontSizePx\":null,\"textWidthPx\":null,\"columns\":null,\"position\":null},\"audio\":{\"narrate\":false},\"menuSubset\":[],\"menuGroups\":[\"molecules\"],\"view3D\":{\"style\":\"ballnstick\",\"spin\":false,\"showH\":true,\"atomSymbols\":true,\"moveto\":null},\"show\":{\"menu\":false,\"viewerButtons\":false,\"viewerSettings\":false,\"viewers\":{\"2D\":false,\"3D\":false},\"viewerMaxHeight\":420,\"viewerBothHeight\":null,\"controls\":{\"2D\":false,\"3D\":false},\"save\":{\"2D\":false,\"3D\":false},\"naming\":false,\"nameSettings\":false,\"nameEye\":false,\"nameExpanded\":false,\"audio\":false,\"rule\":false,\"text\":true,\"nameClick\":false},\"selectedMol\":\"ethyl_3_dimethyl_2_5_hexane\",\"checkpoint\":{\"id\":\"alkanes-branched-workshop-v1\",\"type\":\"generated-name-repair-set\",\"version\":1,\"round\":{\"version\":1,\"setId\":\"alkanes-branched\",\"difficulty\":\"basic\",\"roundCount\":3,\"generatorVersion\":\"1.0.0\",\"catalogRevision\":\"275d537b19f3ef0791c97d8d78c127f541a0579038ef1e8d65dadde611845690\",\"engineSHA256\":\"3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306\"},\"openLabel\":\"πήγαινε στο συνεργείο\"},\"titleLogo\":\"workshop\"},{\"n\":12,\"nameBoxLayout\":1,\"lang\":\"gr\",\"title\":\"Όλα τα αλκάνια σε 2D και 3D\",\"note\":\"Από το μενού διάλεξε οποιοδήποτε από τα <b>οκτώ αλκάνια</b>. Σύγκρινε συνεπτυγμένο, ανεπτυγμένο και σκελετικό τύπο με το 3D μοντέλο και επίλεξε τα συνθετικά του ονόματος για τις αντίστοιχες επισημάνσεις. Το μεθάνιο διαθέτει συνεπτυγμένο και ανεπτυγμένο τύπο, χωρίς σκελετικό.\\n\\nΧρησιμοποίησε τα εργαλεία 2D και 3D για μεγέθυνση και παρατήρηση. Περίστρεψε το 3D μοντέλο με το ποντίκι. Η συνδεσμολογία παραμένει ίδια, ενώ ο 2D τύπος δεν αποδίδει όλες τις γωνίες του μορίου στον χώρο.\",\"noteFormat\":\"text\",\"mode2D\":\"condensed\",\"mainChainMode\":\"algorithmic\",\"chainIdx\":0,\"etherNamingMode\":\"iupac\",\"substNamingMode\":\"school\",\"nameAnalysisMode\":\"none\",\"selectedRule\":null,\"style2D\":{\"atomColors\":true,\"colorMode\":\"atom\",\"zigzag\":false,\"zoom\":2},\"styleName\":{\"box\":true,\"cross\":false,\"etherNaming\":\"iupac\",\"panelOpen\":false,\"hidden\":[]},\"styleHighlight\":{\"bondAtoms\":false,\"numberingAtoms\":true,\"numberingBonds\":true},\"styleText\":{\"fontSizePx\":null,\"textWidthPx\":null,\"columns\":null,\"position\":null},\"audio\":{\"narrate\":false},\"menuSubset\":[\"methane\",\"ethane\",\"propane\",\"butane\",\"pentane\",\"methyl_2_pentane\",\"dimethyl_2_3_butane\",\"ethyl_3_dimethyl_2_5_hexane\"],\"menuGroups\":[\"molecules\"],\"view3D\":{\"style\":\"ballnstick\",\"spin\":false,\"showH\":true,\"atomSymbols\":true,\"moveto\":null},\"show\":{\"menu\":true,\"viewerButtons\":false,\"viewerSettings\":false,\"viewers\":{\"2D\":true,\"3D\":true},\"viewerMaxHeight\":420,\"viewerBothHeight\":840,\"controls\":{\"2D\":true,\"3D\":true},\"save\":{\"2D\":false,\"3D\":false},\"naming\":true,\"nameSettings\":true,\"nameEye\":false,\"nameExpanded\":false,\"audio\":false,\"rule\":false,\"text\":true,\"nameClick\":true},\"selectedMol\":\"ethyl_3_dimethyl_2_5_hexane\"}]}",
+    "record": {
+      "version": 1,
+      "content": "{\"version\":1,\"title\":\"Αλκάνια\",\"author\":\"Unknown\",\"steps\":[{\"n\":1,\"nameBoxLayout\":1,\"lang\":\"gr\",\"title\":\"Τι είναι τα αλκάνια;\",\"note\":\"<div>Τα <b>αλκάνια</b> είναι άκυκλοι κορεσμένοι υδρογονάνθρακες, που περιέχουν μόνο άτομα C και H και όλοι οι δεσμοί μεταξύ ατόμων C είναι απλοί. Έχουν γενικό μοριακό τύπο <b>C<sub>ν</sub>H<sub>2ν+2</sub></b>, με ν ≥ 1.</div><div><br></div><div>Το απλούστερο είναι το <b>μεθάνιο CH<sub>4</sub></b>.&nbsp;</div><div>Εδώ βλέπεις το <b>αιθάνιο C<sub>2</sub>H<sub>6</sub></b>&nbsp;με δύο άτομα C συνδεδεμένα με απλό δεσμό.</div>\",\"noteFormat\":\"html\",\"mode2D\":\"condensed\",\"mainChainMode\":\"algorithmic\",\"chainIdx\":0,\"etherNamingMode\":\"iupac\",\"substNamingMode\":\"school\",\"nameAnalysisMode\":\"none\",\"selectedRule\":null,\"style2D\":{\"atomColors\":true,\"colorMode\":\"atom\",\"zigzag\":false,\"zoom\":2},\"styleName\":{\"box\":true,\"cross\":true,\"etherNaming\":\"iupac\",\"panelOpen\":true,\"hidden\":[\"comp5\",\"comp6\",\"comp9\"]},\"styleHighlight\":{\"bondAtoms\":false,\"numberingAtoms\":true,\"numberingBonds\":true},\"styleText\":{\"fontSizePx\":null,\"textWidthPx\":null,\"columns\":null,\"position\":null},\"audio\":{\"narrate\":false},\"menuSubset\":[],\"menuGroups\":[\"molecules\"],\"view3D\":{\"style\":\"ballnstick\",\"spin\":false,\"showH\":true,\"atomSymbols\":true,\"moveto\":null},\"show\":{\"menu\":false,\"viewerButtons\":false,\"viewerSettings\":false,\"viewers\":{\"2D\":true,\"3D\":false},\"viewerMaxHeight\":420,\"viewerBothHeight\":null,\"controls\":{\"2D\":false,\"3D\":false},\"save\":{\"2D\":false,\"3D\":false},\"naming\":true,\"nameSettings\":false,\"nameEye\":false,\"nameExpanded\":false,\"audio\":false,\"rule\":false,\"text\":true,\"nameClick\":false},\"selectedMol\":\"ethane\"},{\"n\":2,\"nameBoxLayout\":1,\"lang\":\"gr\",\"title\":\"Ένα όνομα από τρία συνθετικά\",\"note\":\"Στο <b>αιθάνιο</b>, το <b>αιθ-</b> δηλώνει τα δύο άτομα C της κύριας αλυσίδας, το <b>-αν-</b> τους απλούς δεσμούς μεταξύ ατόμων C και το <b>-ιο</b> τη χημική τάξη των υδρογονανθράκων.<br><br>Επίλεξε κάθε συνθετικό στο όνομα και παρατήρησε τι επισημαίνεται. Αν θέλεις τις άλλες συλλαβές για το ίδιο συνθετικό, άνοιξε τον αντίστοιχο <b>κανόνα </b>κάτω από την εξήγηση.\",\"noteFormat\":\"html\",\"mode2D\":\"condensed\",\"mainChainMode\":\"algorithmic\",\"chainIdx\":0,\"etherNamingMode\":\"iupac\",\"substNamingMode\":\"school\",\"nameAnalysisMode\":\"compCarbonsCount\",\"selectedRule\":null,\"style2D\":{\"atomColors\":true,\"colorMode\":\"atom\",\"zigzag\":false,\"zoom\":2},\"styleName\":{\"box\":true,\"cross\":false,\"etherNaming\":\"iupac\",\"panelOpen\":false,\"hidden\":[]},\"styleHighlight\":{\"bondAtoms\":false,\"numberingAtoms\":true,\"numberingBonds\":true},\"styleText\":{\"fontSizePx\":null,\"textWidthPx\":null,\"columns\":null,\"position\":null},\"audio\":{\"narrate\":false},\"menuSubset\":[],\"menuGroups\":[\"molecules\"],\"view3D\":{\"style\":\"ballnstick\",\"spin\":false,\"showH\":true,\"atomSymbols\":true,\"moveto\":null},\"show\":{\"menu\":false,\"viewerButtons\":false,\"viewerSettings\":false,\"viewers\":{\"2D\":true,\"3D\":false},\"viewerMaxHeight\":420,\"viewerBothHeight\":null,\"controls\":{\"2D\":false,\"3D\":false},\"save\":{\"2D\":false,\"3D\":false},\"naming\":true,\"nameSettings\":false,\"nameEye\":false,\"nameExpanded\":false,\"audio\":false,\"rule\":true,\"text\":true,\"nameClick\":true},\"selectedMol\":\"ethane\"},{\"n\":3,\"nameBoxLayout\":1,\"lang\":\"gr\",\"title\":\"Αλκάνια χωρίς διακλαδώσεις\",\"note\":\"<div>Από το μενού σύγκρινε <b>μεθάνιο, αιθάνιο, προπάνιο, βουτάνιο και πεντάνιο</b>. Οι αλυσίδες τους έχουν 1, 2, 3, 4 και 5 άτομα C, με συλλαβές πρώτου συνθετικού αντίστοιχα&nbsp;<b>μεθ- ,&nbsp; αιθ- ,&nbsp; προπ- ,&nbsp; βουτ- ,&nbsp; πεντ-</b>.&nbsp;</div><div>Τα <b>-αν-</b> και <b>-ιο</b> παραμένουν ίδια.&nbsp;</div><div>Δεν γράφουμε θέση για τους απλούς δεσμούς μεταξύ ατόμων C.</div><br><div>Δοκίμασε συνεπτυγμένο, ανεπτυγμένο και σκελετικό τύπο. Η συνδεσμολογία παραμένει ίδια σε κάθε μορφή.&nbsp;<b><br></b></div><div><b>Το μεθάνιο δεν διαθέτει σκελετικό τύπο.</b></div>\",\"noteFormat\":\"html\",\"mode2D\":\"condensed\",\"mainChainMode\":\"algorithmic\",\"chainIdx\":0,\"etherNamingMode\":\"iupac\",\"substNamingMode\":\"school\",\"nameAnalysisMode\":\"compCarbonsCount\",\"selectedRule\":null,\"style2D\":{\"atomColors\":true,\"colorMode\":\"atom\",\"zigzag\":false,\"zoom\":2},\"styleName\":{\"box\":true,\"cross\":false,\"etherNaming\":\"iupac\",\"panelOpen\":false,\"hidden\":[]},\"styleHighlight\":{\"bondAtoms\":false,\"numberingAtoms\":true,\"numberingBonds\":true},\"styleText\":{\"fontSizePx\":null,\"textWidthPx\":null,\"columns\":null,\"position\":null},\"audio\":{\"narrate\":false},\"menuSubset\":[\"methane\",\"ethane\",\"propane\",\"butane\",\"pentane\"],\"menuGroups\":[\"molecules\"],\"view3D\":{\"style\":\"ballnstick\",\"spin\":false,\"showH\":true,\"atomSymbols\":true,\"moveto\":null},\"show\":{\"menu\":true,\"viewerButtons\":false,\"viewerSettings\":false,\"viewers\":{\"2D\":true,\"3D\":false},\"viewerMaxHeight\":420,\"viewerBothHeight\":null,\"controls\":{\"2D\":true,\"3D\":false},\"save\":{\"2D\":false,\"3D\":false},\"naming\":true,\"nameSettings\":true,\"nameEye\":false,\"nameExpanded\":false,\"audio\":false,\"rule\":false,\"text\":true,\"nameClick\":true},\"selectedMol\":\"butane\"},{\"n\":4,\"nameBoxLayout\":1,\"lang\":\"gr\",\"title\":\"Συνεργείο ονομάτων\",\"note\":\"Ώρα για μια μικρή στάση στο <b>Συνεργείο ονομάτων</b>. Άνοιξε το σετ <b>\\\"Χωρίς διακλαδώσεις\\\"</b>&nbsp;και επισκεύασε τρία ονόματα.<br><br>Μπορείς να δοκιμάσεις ξανά και να επιστρέψεις στη θεωρία. Η συνέχεια προς τα διακλαδισμένα αλκάνια ανοίγει αφού ολοκληρώσεις σωστά <b>και τις τρεις επισκευές</b> και διαβάσεις τις εξηγήσεις.\",\"noteFormat\":\"html\",\"mode2D\":\"condensed\",\"mainChainMode\":\"algorithmic\",\"chainIdx\":0,\"etherNamingMode\":\"iupac\",\"substNamingMode\":\"school\",\"nameAnalysisMode\":\"none\",\"selectedRule\":null,\"style2D\":{\"atomColors\":true,\"colorMode\":\"atom\",\"zigzag\":false,\"zoom\":2},\"styleName\":{\"box\":true,\"cross\":false,\"etherNaming\":\"iupac\",\"panelOpen\":false,\"hidden\":[]},\"styleHighlight\":{\"bondAtoms\":false,\"numberingAtoms\":true,\"numberingBonds\":true},\"styleText\":{\"fontSizePx\":null,\"textWidthPx\":null,\"columns\":null,\"position\":null},\"audio\":{\"narrate\":false},\"menuSubset\":[],\"menuGroups\":[\"molecules\"],\"view3D\":{\"style\":\"ballnstick\",\"spin\":false,\"showH\":true,\"atomSymbols\":true,\"moveto\":null},\"show\":{\"menu\":false,\"viewerButtons\":false,\"viewerSettings\":false,\"viewers\":{\"2D\":false,\"3D\":false},\"viewerMaxHeight\":420,\"viewerBothHeight\":null,\"controls\":{\"2D\":false,\"3D\":false},\"save\":{\"2D\":false,\"3D\":false},\"naming\":false,\"nameSettings\":false,\"nameEye\":false,\"nameExpanded\":false,\"audio\":false,\"rule\":false,\"text\":true,\"nameClick\":false},\"selectedMol\":\"pentane\",\"checkpoint\":{\"id\":\"alkanes-unbranched-workshop-v1\",\"type\":\"generated-name-repair-set\",\"version\":1,\"round\":{\"version\":1,\"setId\":\"alkanes-unbranched\",\"difficulty\":\"basic\",\"roundCount\":3,\"generatorVersion\":\"1.0.0\",\"catalogRevision\":\"275d537b19f3ef0791c97d8d78c127f541a0579038ef1e8d65dadde611845690\",\"engineSHA256\":\"3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306\"},\"openLabel\":\"πήγαινε στο συνεργείο\"},\"titleLogo\":\"workshop\"},{\"n\":5,\"nameBoxLayout\":1,\"lang\":\"gr\",\"title\":\"Κύρια αλυσίδα και συνολικά άτομα C\",\"note\":\"Στα διακλαδισμένα αλκάνια επιλέγουμε τη <b>μεγαλύτερη συνεχή ανθρακική αλυσίδα</b>. Εδώ έχει <b>πέντε άτομα C</b> και δίνει το συνθετικό <b>πεντ-</b>. Το μόριο έχει συνολικά έξι άτομα C. Το έκτο ανήκει στη διακλάδωση.<br><br>Ακολούθησε την επισημασμένη αλυσίδα. Μπορεί να αλλάζει κατεύθυνση στο σχέδιο. Κάνε κλικ στο εικονίδιο <b>\\\"Κύρια αλυσίδα\\\"</b> για να δεις ποιες είναι οι ισοδύναμες κύριες αλυσίδες. Μετράμε τα συνεχόμενα άτομα C της και όχι όλα τα άτομα C του μορίου.\",\"noteFormat\":\"html\",\"mode2D\":\"condensed\",\"mainChainMode\":\"algorithmic\",\"chainIdx\":0,\"etherNamingMode\":\"iupac\",\"substNamingMode\":\"school\",\"nameAnalysisMode\":\"compCarbonsCount\",\"selectedRule\":null,\"style2D\":{\"atomColors\":true,\"colorMode\":\"atom\",\"zigzag\":false,\"zoom\":2},\"styleName\":{\"box\":true,\"cross\":false,\"etherNaming\":\"iupac\",\"panelOpen\":false,\"hidden\":[\"comp0\",\"comp1\"],\"disabled\":[\"comp6\",\"comp9\"]},\"styleHighlight\":{\"bondAtoms\":false,\"numberingAtoms\":true,\"numberingBonds\":true},\"styleText\":{\"fontSizePx\":null,\"textWidthPx\":null,\"columns\":null,\"position\":null},\"audio\":{\"narrate\":false},\"menuSubset\":[],\"menuGroups\":[\"molecules\"],\"view3D\":{\"style\":\"ballnstick\",\"spin\":false,\"showH\":true,\"atomSymbols\":true,\"moveto\":null},\"show\":{\"menu\":false,\"viewerButtons\":false,\"viewerSettings\":false,\"viewers\":{\"2D\":true,\"3D\":false},\"viewerMaxHeight\":420,\"viewerBothHeight\":null,\"controls\":{\"2D\":true,\"3D\":false},\"save\":{\"2D\":false,\"3D\":false},\"naming\":true,\"nameSettings\":false,\"nameEye\":false,\"nameExpanded\":false,\"audio\":false,\"rule\":false,\"text\":true,\"nameClick\":true,\"chainNavigation\":true},\"selectedMol\":\"methyl_2_pentane\"},{\"n\":6,\"nameBoxLayout\":1,\"lang\":\"gr\",\"title\":\"Θέση και όνομα μιας διακλάδωσης\",\"note\":\"Αριθμούμε από το άκρο που δίνει στη διακλάδωση τη θέση <b>2</b>, αντί για 4. Η ομάδα <b>–CH<sub>3</sub></b> είναι μεθυλομάδα, άρα γράφουμε <b>2-μεθυλοπεντάνιο</b>: θέση - διακλάδωση - όνομα κύριας αλυσίδας.<br><br>Επίλεξε το <b>2-</b> και το <b>μεθυλο</b> για να συνδέσεις θέση και ομάδα. Στο <b>\\\"Ονόματα αλκυλίων και προθέματα\\\"</b>&nbsp;θα βρεις και τις άλλες αλκυλομάδες.\",\"noteFormat\":\"html\",\"mode2D\":\"condensed\",\"mainChainMode\":\"algorithmic\",\"chainIdx\":0,\"etherNamingMode\":\"iupac\",\"substNamingMode\":\"school\",\"nameAnalysisMode\":\"compSecondSub1\",\"selectedRule\":null,\"style2D\":{\"atomColors\":true,\"colorMode\":\"atom\",\"zigzag\":false,\"zoom\":2},\"styleName\":{\"box\":true,\"cross\":false,\"etherNaming\":\"iupac\",\"panelOpen\":false,\"hidden\":[]},\"styleHighlight\":{\"bondAtoms\":false,\"numberingAtoms\":true,\"numberingBonds\":true},\"styleText\":{\"fontSizePx\":null,\"textWidthPx\":null,\"columns\":null,\"position\":null},\"audio\":{\"narrate\":false},\"menuSubset\":[],\"menuGroups\":[\"molecules\"],\"view3D\":{\"style\":\"ballnstick\",\"spin\":false,\"showH\":true,\"atomSymbols\":true,\"moveto\":null},\"show\":{\"menu\":false,\"viewerButtons\":false,\"viewerSettings\":false,\"viewers\":{\"2D\":true,\"3D\":false},\"viewerMaxHeight\":420,\"viewerBothHeight\":null,\"controls\":{\"2D\":true,\"3D\":false},\"save\":{\"2D\":false,\"3D\":false},\"naming\":true,\"nameSettings\":false,\"nameEye\":false,\"nameExpanded\":false,\"audio\":false,\"rule\":true,\"text\":true,\"nameClick\":true},\"selectedMol\":\"methyl_2_pentane\"},{\"n\":7,\"nameBoxLayout\":1,\"lang\":\"gr\",\"title\":\"Δύο ίδιες διακλαδώσεις\",\"note\":\"Η κύρια αλυσίδα έχει <b>τέσσερα άτομα C</b>, ενώ το μόριο έχει συνολικά έξι άτομα C. Οι δύο μεθυλομάδες παίρνουν τις θέσεις <b>2,3</b> από οποιοδήποτε άκρο. Οι δύο αριθμήσεις είναι ισοδύναμες.<br><br>Επειδή οι ομάδες είναι δύο και ίδιες, χρησιμοποιούμε το πρόθεμα&nbsp;<b>δι-</b>και γράφουμε&nbsp;<b>2,3-διμεθυλοβουτάνιο</b>. Βάζουμε κόμμα ανάμεσα στους αριθμούς και παύλα ανάμεσα σε αριθμό και λέξη. Επίλεξε τα μέρη του ονόματος για να δεις την αντιστοιχία.\",\"noteFormat\":\"html\",\"mode2D\":\"condensed\",\"mainChainMode\":\"algorithmic\",\"chainIdx\":1,\"etherNamingMode\":\"iupac\",\"substNamingMode\":\"school\",\"nameAnalysisMode\":\"compCarbonsCount\",\"selectedRule\":null,\"style2D\":{\"atomColors\":true,\"colorMode\":\"atom\",\"zigzag\":false,\"zoom\":2},\"styleName\":{\"box\":true,\"cross\":false,\"etherNaming\":\"iupac\",\"panelOpen\":false,\"hidden\":[]},\"styleHighlight\":{\"bondAtoms\":false,\"numberingAtoms\":true,\"numberingBonds\":true},\"styleText\":{\"fontSizePx\":null,\"textWidthPx\":null,\"columns\":null,\"position\":null},\"audio\":{\"narrate\":false},\"menuSubset\":[],\"menuGroups\":[\"molecules\"],\"view3D\":{\"style\":\"ballnstick\",\"spin\":false,\"showH\":true,\"atomSymbols\":true,\"moveto\":null},\"show\":{\"menu\":false,\"viewerButtons\":false,\"viewerSettings\":false,\"viewers\":{\"2D\":true,\"3D\":false},\"viewerMaxHeight\":420,\"viewerBothHeight\":null,\"controls\":{\"2D\":true,\"3D\":false},\"save\":{\"2D\":false,\"3D\":false},\"naming\":true,\"nameSettings\":false,\"nameEye\":false,\"nameExpanded\":false,\"audio\":false,\"rule\":false,\"text\":true,\"nameClick\":true,\"numberingDirection\":true},\"selectedMol\":\"dimethyl_2_3_butane\"},{\"n\":8,\"nameBoxLayout\":1,\"lang\":\"gr\",\"title\":\"Επιλογή κύριας αλυσίδας στο μεγάλο μόριο\",\"note\":\"Το μόριο έχει <b>δέκα άτομα C</b>, αλλά η μεγαλύτερη συνεχής αλυσίδα έχει <b>έξι άτομα C</b> και δίνει το συνθετικό&nbsp;<b>εξ-</b>. Τα υπόλοιπα τέσσερα άτομα C βρίσκονται στις διακλαδώσεις.<br><br>Ανάμεσα σε ισομήκεις αλυσίδες προτιμούμε εκείνη με τις <b>περισσότερες διακλαδώσεις</b>. Η επιλεγμένη αλυσίδα έχει τρεις. Ακολούθησε τα έξι αριθμημένα άτομα C της.\",\"noteFormat\":\"html\",\"mode2D\":\"condensed\",\"mainChainMode\":\"algorithmic\",\"chainIdx\":1,\"etherNamingMode\":\"iupac\",\"substNamingMode\":\"school\",\"nameAnalysisMode\":\"compCarbonsCount\",\"selectedRule\":null,\"style2D\":{\"atomColors\":true,\"colorMode\":\"atom\",\"zigzag\":false,\"zoom\":2},\"styleName\":{\"box\":true,\"cross\":false,\"etherNaming\":\"iupac\",\"panelOpen\":false,\"hidden\":[\"comp0\",\"comp1\",\"comp2\",\"comp3\"]},\"styleHighlight\":{\"bondAtoms\":false,\"numberingAtoms\":true,\"numberingBonds\":true},\"styleText\":{\"fontSizePx\":null,\"textWidthPx\":null,\"columns\":null,\"position\":null},\"audio\":{\"narrate\":false},\"menuSubset\":[],\"menuGroups\":[\"molecules\"],\"view3D\":{\"style\":\"ballnstick\",\"spin\":false,\"showH\":true,\"atomSymbols\":true,\"moveto\":null},\"show\":{\"menu\":false,\"viewerButtons\":false,\"viewerSettings\":false,\"viewers\":{\"2D\":true,\"3D\":false},\"viewerMaxHeight\":420,\"viewerBothHeight\":null,\"controls\":{\"2D\":true,\"3D\":false},\"save\":{\"2D\":false,\"3D\":false},\"naming\":true,\"nameSettings\":false,\"nameEye\":false,\"nameExpanded\":false,\"audio\":false,\"rule\":false,\"text\":true,\"nameClick\":true},\"selectedMol\":\"ethyl_3_dimethyl_2_5_hexane\"},{\"n\":9,\"nameBoxLayout\":1,\"lang\":\"gr\",\"title\":\"Αρίθμηση με βάση την πρώτη διαφορετική θέση \",\"note\":\"Η μία φορά αρίθμησης δίνει θέσεις <b>2,3,5</b> και η αντίθετη <b>2,4,5</b>. Συγκρίνουμε τους αριθμούς με τη σειρά. Ο πρώτος είναι ίδιος, αλλά μετά το <b>3 είναι μικρότερο από το 4</b>.\\n\\nΚρατάμε επομένως τις θέσεις <b>2,3,5</b> και την ίδια αρίθμηση για όλες τις ομάδες. Ο κανόνας είναι ο <b>μικρότερος αριθμός στο πρώτο σημείο διαφοράς</b>. Το άθροισμα των θέσεων δεν καθορίζει την επιλογή.\",\"noteFormat\":\"text\",\"mode2D\":\"condensed\",\"mainChainMode\":\"algorithmic\",\"chainIdx\":1,\"etherNamingMode\":\"iupac\",\"substNamingMode\":\"school\",\"nameAnalysisMode\":\"compCarbonsCount\",\"selectedRule\":null,\"style2D\":{\"atomColors\":true,\"colorMode\":\"atom\",\"zigzag\":false,\"zoom\":2},\"styleName\":{\"box\":true,\"cross\":false,\"etherNaming\":\"iupac\",\"panelOpen\":false,\"hidden\":[\"comp0\",\"comp1\",\"comp2\",\"comp3\"]},\"styleHighlight\":{\"bondAtoms\":false,\"numberingAtoms\":true,\"numberingBonds\":true},\"styleText\":{\"fontSizePx\":null,\"textWidthPx\":null,\"columns\":null,\"position\":null},\"audio\":{\"narrate\":false},\"menuSubset\":[],\"menuGroups\":[\"molecules\"],\"view3D\":{\"style\":\"ballnstick\",\"spin\":false,\"showH\":true,\"atomSymbols\":true,\"moveto\":null},\"show\":{\"menu\":false,\"viewerButtons\":false,\"viewerSettings\":false,\"viewers\":{\"2D\":true,\"3D\":false},\"viewerMaxHeight\":420,\"viewerBothHeight\":null,\"controls\":{\"2D\":true,\"3D\":false},\"save\":{\"2D\":false,\"3D\":false},\"naming\":true,\"nameSettings\":false,\"nameEye\":false,\"nameExpanded\":false,\"audio\":false,\"rule\":false,\"text\":true,\"nameClick\":true},\"selectedMol\":\"ethyl_3_dimethyl_2_5_hexane\"},{\"n\":10,\"nameBoxLayout\":1,\"lang\":\"gr\",\"title\":\"Αλκύλια, αλφαβητική σειρά και πλήρες όνομα\",\"note\":\"Στη θέση <b>3</b> υπάρχει αιθυλομάδα <b>–CH<sub>2</sub>–CH<sub>3</sub></b>&nbsp;ενώ στις <b>2 </b>και<b> 5</b> δύο μεθυλομάδες. Γράφουμε το&nbsp;<b>αιθυλο-</b> πριν από το&nbsp;<b>μεθυλο-</b> αλφαβητικά (το α βρίσκεται πριν από το μ στο αλφάβητο), χωρίς να υπολογίζουμε το <b>δι-&nbsp;</b>, οπότε το όνομα είναι&nbsp;<b>3-αιθυλο-2,5-διμεθυλοεξάνιο</b>.<br><br>Επίλεξε τις θέσεις και τις ομάδες στο όνομα. Αν χρειαστεί, συμβουλέψου τον πίνακα <b>\\\"Ονόματα αλκυλίων και προθέματα\\\"</b>. Τα κόμματα χωρίζουν αριθμούς και οι παύλες αριθμούς από λέξεις.\",\"noteFormat\":\"html\",\"mode2D\":\"condensed\",\"mainChainMode\":\"algorithmic\",\"chainIdx\":0,\"etherNamingMode\":\"iupac\",\"substNamingMode\":\"school\",\"nameAnalysisMode\":\"compSecondSub1\",\"selectedRule\":null,\"style2D\":{\"atomColors\":true,\"colorMode\":\"atom\",\"zigzag\":false,\"zoom\":2},\"styleName\":{\"box\":true,\"cross\":false,\"etherNaming\":\"iupac\",\"panelOpen\":false,\"hidden\":[]},\"styleHighlight\":{\"bondAtoms\":false,\"numberingAtoms\":true,\"numberingBonds\":true},\"styleText\":{\"fontSizePx\":null,\"textWidthPx\":null,\"columns\":null,\"position\":null},\"audio\":{\"narrate\":false},\"menuSubset\":[],\"menuGroups\":[\"molecules\"],\"view3D\":{\"style\":\"ballnstick\",\"spin\":false,\"showH\":true,\"atomSymbols\":true,\"moveto\":null},\"show\":{\"menu\":false,\"viewerButtons\":false,\"viewerSettings\":false,\"viewers\":{\"2D\":true,\"3D\":false},\"viewerMaxHeight\":420,\"viewerBothHeight\":null,\"controls\":{\"2D\":true,\"3D\":false},\"save\":{\"2D\":false,\"3D\":false},\"naming\":true,\"nameSettings\":false,\"nameEye\":false,\"nameExpanded\":false,\"audio\":false,\"rule\":true,\"text\":true,\"nameClick\":true},\"selectedMol\":\"ethyl_3_dimethyl_2_5_hexane\"},{\"n\":11,\"nameBoxLayout\":1,\"lang\":\"gr\",\"title\":\"Στο Συνεργείο: Με διακλαδώσεις\",\"note\":\"Επίστρεψε στο <b>Συνεργείο ονομάτων</b> για το σετ <b>«Με διακλαδώσεις»</b>. Σε κάθε κουίζ εντόπισε το λάθος συνθετικό ή τη λανθασμένη σειρά και επισκεύασε το όνομα.<br><br>Διάβασε την εξήγηση κάθε σωστής επισκευής. Μπορείς να επαναλάβεις τις προσπάθειες. Αφού ολοκληρώσεις σωστά <b>και τα τρία κουίζ</b>, ανοίγει η τελική εξερεύνηση όλων των αλκανίων.\",\"noteFormat\":\"html\",\"mode2D\":\"condensed\",\"mainChainMode\":\"algorithmic\",\"chainIdx\":0,\"etherNamingMode\":\"iupac\",\"substNamingMode\":\"school\",\"nameAnalysisMode\":\"none\",\"selectedRule\":null,\"style2D\":{\"atomColors\":true,\"colorMode\":\"atom\",\"zigzag\":false,\"zoom\":2},\"styleName\":{\"box\":true,\"cross\":false,\"etherNaming\":\"iupac\",\"panelOpen\":false,\"hidden\":[]},\"styleHighlight\":{\"bondAtoms\":false,\"numberingAtoms\":true,\"numberingBonds\":true},\"styleText\":{\"fontSizePx\":null,\"textWidthPx\":null,\"columns\":null,\"position\":null},\"audio\":{\"narrate\":false},\"menuSubset\":[],\"menuGroups\":[\"molecules\"],\"view3D\":{\"style\":\"ballnstick\",\"spin\":false,\"showH\":true,\"atomSymbols\":true,\"moveto\":null},\"show\":{\"menu\":false,\"viewerButtons\":false,\"viewerSettings\":false,\"viewers\":{\"2D\":false,\"3D\":false},\"viewerMaxHeight\":420,\"viewerBothHeight\":null,\"controls\":{\"2D\":false,\"3D\":false},\"save\":{\"2D\":false,\"3D\":false},\"naming\":false,\"nameSettings\":false,\"nameEye\":false,\"nameExpanded\":false,\"audio\":false,\"rule\":false,\"text\":true,\"nameClick\":false},\"selectedMol\":\"ethyl_3_dimethyl_2_5_hexane\",\"checkpoint\":{\"id\":\"alkanes-branched-workshop-v1\",\"type\":\"generated-name-repair-set\",\"version\":1,\"round\":{\"version\":1,\"setId\":\"alkanes-branched\",\"difficulty\":\"basic\",\"roundCount\":3,\"generatorVersion\":\"1.0.0\",\"catalogRevision\":\"275d537b19f3ef0791c97d8d78c127f541a0579038ef1e8d65dadde611845690\",\"engineSHA256\":\"3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306\"},\"openLabel\":\"πήγαινε στο συνεργείο\"},\"titleLogo\":\"workshop\"},{\"n\":12,\"nameBoxLayout\":1,\"lang\":\"gr\",\"title\":\"Όλα τα αλκάνια σε 2D και 3D\",\"note\":\"Από το μενού διάλεξε οποιοδήποτε από τα <b>οκτώ αλκάνια</b>. Σύγκρινε συνεπτυγμένο, ανεπτυγμένο και σκελετικό τύπο με το 3D μοντέλο και επίλεξε τα συνθετικά του ονόματος για τις αντίστοιχες επισημάνσεις. Το μεθάνιο διαθέτει συνεπτυγμένο και ανεπτυγμένο τύπο, χωρίς σκελετικό.\\n\\nΧρησιμοποίησε τα εργαλεία 2D και 3D για μεγέθυνση και παρατήρηση. Περίστρεψε το 3D μοντέλο με το ποντίκι. Η συνδεσμολογία παραμένει ίδια, ενώ ο 2D τύπος δεν αποδίδει όλες τις γωνίες του μορίου στον χώρο.\",\"noteFormat\":\"text\",\"mode2D\":\"condensed\",\"mainChainMode\":\"algorithmic\",\"chainIdx\":0,\"etherNamingMode\":\"iupac\",\"substNamingMode\":\"school\",\"nameAnalysisMode\":\"none\",\"selectedRule\":null,\"style2D\":{\"atomColors\":true,\"colorMode\":\"atom\",\"zigzag\":false,\"zoom\":2},\"styleName\":{\"box\":true,\"cross\":false,\"etherNaming\":\"iupac\",\"panelOpen\":false,\"hidden\":[]},\"styleHighlight\":{\"bondAtoms\":false,\"numberingAtoms\":true,\"numberingBonds\":true},\"styleText\":{\"fontSizePx\":null,\"textWidthPx\":null,\"columns\":null,\"position\":null},\"audio\":{\"narrate\":false},\"menuSubset\":[\"methane\",\"ethane\",\"propane\",\"butane\",\"pentane\",\"methyl_2_pentane\",\"dimethyl_2_3_butane\",\"ethyl_3_dimethyl_2_5_hexane\"],\"menuGroups\":[\"molecules\"],\"view3D\":{\"style\":\"ballnstick\",\"spin\":false,\"showH\":true,\"atomSymbols\":true,\"moveto\":null},\"show\":{\"menu\":true,\"viewerButtons\":false,\"viewerSettings\":false,\"viewers\":{\"2D\":true,\"3D\":true},\"viewerMaxHeight\":420,\"viewerBothHeight\":840,\"controls\":{\"2D\":true,\"3D\":true},\"save\":{\"2D\":false,\"3D\":false},\"naming\":true,\"nameSettings\":true,\"nameEye\":false,\"nameExpanded\":false,\"audio\":false,\"rule\":false,\"text\":true,\"nameClick\":true},\"selectedMol\":\"ethyl_3_dimethyl_2_5_hexane\"}]}",
+      "states": {
+        "3": {
+          "version": 1,
+          "seed": "4",
+          "currentRound": 2,
+          "states": [
+            {
+              "selectedPartId": "component-6",
+              "selectedValue": "άν",
+              "order": [],
+              "choiceOrder": [
+                0,
+                1,
+                2
+              ],
+              "attempts": 1,
+              "selectionMisses": 0,
+              "solved": true,
+              "submitted": true
+            },
+            {
+              "selectedPartId": "component-5",
+              "selectedValue": "βουτ",
+              "order": [],
+              "choiceOrder": [
+                2,
+                0,
+                1
+              ],
+              "attempts": 1,
+              "selectionMisses": 0,
+              "solved": true,
+              "submitted": true
+            },
+            {
+              "selectedPartId": "component-5",
+              "selectedValue": "πεντ",
+              "order": [],
+              "choiceOrder": [
+                0,
+                1,
+                2
+              ],
+              "attempts": 1,
+              "selectionMisses": 0,
+              "solved": true,
+              "submitted": true
+            }
+          ],
+          "solved": true
+        },
+        "10": {
+          "version": 1,
+          "seed": "1",
+          "currentRound": 2,
+          "states": [
+            {
+              "selectedPartId": "component-1",
+              "selectedValue": "διμεθυλο",
+              "order": [],
+              "choiceOrder": [
+                1,
+                0,
+                2
+              ],
+              "attempts": 1,
+              "selectionMisses": 0,
+              "solved": true,
+              "submitted": true
+            },
+            {
+              "selectedPartId": "branch-group-1",
+              "selectedValue": null,
+              "order": [
+                "branch-group-1",
+                "branch-group-2"
+              ],
+              "choiceOrder": [],
+              "attempts": 1,
+              "selectionMisses": 0,
+              "solved": true,
+              "submitted": true
+            },
+            {
+              "selectedPartId": "component-5",
+              "selectedValue": "πεντ",
+              "order": [],
+              "choiceOrder": [
+                1,
+                2,
+                0
+              ],
+              "attempts": 1,
+              "selectionMisses": 0,
+              "solved": true,
+              "submitted": true
+            }
+          ],
+          "solved": true
+        }
+      }
+    }
+  },
+  "exitURL": "http://127.0.0.1:65098/organic-nomenclature-3/design/theory-library.html?v=alkynes-library-20261022"
+}

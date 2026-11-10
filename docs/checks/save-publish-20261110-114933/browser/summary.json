@@ -1,0 +1,74 @@
+{
+  "createdUTC": "2026-11-10T09:56:55Z",
+  "role": "Developer bounded release smoke evidence, not independent review",
+  "local": {
+    "completed": true,
+    "checks": 30,
+    "earnedActualRepairs": 6,
+    "runtimeHTTPHashes": 26,
+    "runtimeUnchangedAfter": true,
+    "capturedJavaScriptErrors": 0,
+    "capturedWarningsErrors": 0,
+    "source": "local-browser.json"
+  },
+  "attempts": [
+    {
+      "source": "local-attempt1-sidebar-scroll-browser.json",
+      "result": "Evidence harness could not scroll internal molecule sidebar; no app failure established. Corrected helper scrollIntoView before actual pointer inputs; original failure retained."
+    }
+  ],
+  "scope": [
+    "Actual welcome / Main55 with141molecules422forms and methane/dimethylbutane matching-source3D",
+    "Actual expanded skeletal condensed2Dmodes and zoompair",
+    "Actual welcome /14lessonlibrary/ normal12stepalkanelesson /requiredgate4",
+    "Three required and three optional successes all earned via actual Firefox pointerinput; no receiptimport, solutioncallback or readinessoverride",
+    "Required/optional completedheader rules; freshoptional1of3headerrestore; theory/libraryreturn",
+    "Direct authoredWorkshop emphasizedobjective, accessible44pxmagnifier, matchingzoomasset andEscape/focusreturn"
+  ],
+  "limitations": [
+    "Owned isolated headlessFirefox desktop1280x800 only; no personalFirefox or intended conference machine tested.",
+    "Supported MULER_QUIET_FETCH suppresses irrelevant naming fetches; external naming availability and Internet-independent operation untested.",
+    "Bounded release replay; no full molecule/mode/lesson matrix or new chemistry certification.",
+    "Local smoke earns one required and one optional set via actual inputs. Live smoke is intentionally shorter.",
+    "No capturedJSerrors/diagnostics in bounded isolatedrun does not close known JSmol/globalkeyboard issues.",
+    "Root checks protected publicReact/v52 exacthashes; no extra protectedruntime smoke repeated."
+  ],
+  "live": "Await root publication-ready signal.",
+  "process": "Localphase complete: ownedFirefox stopped by guarded PID/profile; helper/server exited withFirefox; bothportsrefused andprofiledeleted. No personalGUI control.",
+  "files": {
+    "check-release.py": "dffa84e7d5abf82047ddb2cb7528a1758ba73394ddfd183c931a4d54e455451d",
+    "cleanup.json": "1e84be3469e000d647fc21c1e029efb399ea75934360969c71626a926858a35a",
+    "firefox.log": "73a2fc6ab68c0067bc4de2564f975a61d97af45bcfb06a3aed291e6681263a28",
+    "local-attempt1-sidebar-scroll-browser.json": "ca8cd3ac0e55c65bc926cf7ff067672b9fe558c59f1b4a1c1956338d65759d2d",
+    "local-attempt1-sidebar-scroll-failure.png": "f29d9134832a64795ba9afcc5b3483ff294d2ea5db1ba88905076716e40aeb6a",
+    "local-browser.json": "49fb4fd77212ceab255f60d687e37c572296005bfb15b8793e1293fbc9cabbdf",
+    "local-main55.png": "58ce459e9f1101d121b828257216cdeddb65df83bd3e89feccc9c372e89cb74a",
+    "local-optional-completed.png": "7c5b86e1ee673beece9f36f4bf465020fb744204e969465efa770cbc60170c42",
+    "local-required-completed.png": "a1c5075fc238cae640e734b05113d8efd8025e0946543e52e3d379eba3311b01",
+    "local-required-first.png": "588cedaf31dc189affeaa7915b791425b812a10f134f91577c3fc226506aebd7",
+    "local-workshop-zoom.png": "dea7f876f027319ff2686fded9a3dac9b999ed06ee53f540f919cab08e945082",
+    "owned-processes.py": "e95bea653b5bfff6313563442ede1aaf08ed257da2ad581f05161545e3f5bf1b",
+    "process.json": "6b95a7d19affded9d87e1813c33243226eb7e8bce5df92c8b8d7ea90f6a9d812",
+    "server-requests.log": "ac7e99ed6608301434009fb94349329db93a37e25b2304e23908b37a593e7edc"
+  },
+  "cleanup": {
+    "actions": [
+      {
+        "pid": 91048,
+        "signal": "TERM",
+        "matched": "/var/folders/2v/ds4vjvgj1_1000kq1fzg70q40000gn/T/namelecule-release-20261110-hyq42tqh"
+      },
+      {
+        "pid": 91047,
+        "signal": null,
+        "reason": "not running or exact ownership guard failed"
+      }
+    ],
+    "ports": {
+      "http": "refused",
+      "bidi": "refused",
+      "profileRemoved": true
+    },
+    "utc": "2026-11-10T09:57:09Z"
+  }
+}

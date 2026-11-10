@@ -1,0 +1,9 @@
+{
+  "evidence": "browser/focused-upper-browser.json",
+  "status": "Necessary correction within approved optional header behavior",
+  "observed": "With genuine completed optional receipt and delayed image, focusing upper Continue then image release hides it and leaves BODY active outside open dialog.",
+  "correction": "Before hiding focused upper Continue, focus enabled lower Continue; if target missing/disabled or focus rejected keep upper exit visible.",
+  "scope": "Same3approved source paths; no global hotkey, renderer, adapter or persistence changes.",
+  "baseline": "tested-r1/ snapshots correspond to target.json.",
+  "independentReview": "No independent review claimed for tested-r1; one consolidated fresh review will inspect final target."
+}

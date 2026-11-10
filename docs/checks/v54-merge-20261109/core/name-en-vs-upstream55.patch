@@ -1,0 +1,87 @@
+diff --git "a/Users/yannisskendros/Desktop/\316\224\316\271\317\200\316\273\317\211\316\274\316\261\317\204\316\271\316\272\316\256 - \316\237\316\275\316\277\316\274\316\261\317\204\316\277\316\273\316\277\316\263\316\257\316\261/organic-nomenclature-3/docs/checks/v54-merge-20261109/upstream/target/js/mulermoc-nom-name-en-55.js" b/private/tmp/namelecule-professor-merge-20261109-oxj7hfyy/candidate/js/mulermoc-nom-name-en-55.js
+index 074d9c6..82ff6bb 100644
+--- "a/Users/yannisskendros/Desktop/\316\224\316\271\317\200\316\273\317\211\316\274\316\261\317\204\316\271\316\272\316\256 - \316\237\316\275\316\277\316\274\316\261\317\204\316\277\316\273\316\277\316\263\316\257\316\261/organic-nomenclature-3/docs/checks/v54-merge-20261109/upstream/target/js/mulermoc-nom-name-en-55.js"	
++++ b/private/tmp/namelecule-professor-merge-20261109-oxj7hfyy/candidate/js/mulermoc-nom-name-en-55.js
+@@ -136,7 +136,7 @@ function fAssembleBranchedEN(nCarbons, fg, kind, locants, subs) {
+ // Maps are slot-positional: C9 stem εν->non must not shadow infix εν->en.
+ var EN_STEM_GR = [
+   ["μεθ", "meth"], ["αιθ", "eth"], ["προπ", "prop"], ["βουτ", "but"], ["πεντ", "pent"],
+-  ["εξ", "hex"], ["επτ", "hept"], ["οκτ", "oct"], ["εν", "non"], ["δεκ", "dec"],
++  ["εξ", "hex"], ["επτ", "hept"], ["οκτ", "oct"], ["εννε", "non"], ["δεκ", "dec"],
+   ["ενδεκ", "undec"], ["δωδεκ", "dodec"], ["δεκατρι", "tridec"], ["δεκατεσσερ", "tetradec"], ["δεκαπεντ", "pentadec"],
+   ["δεκαεξ", "hexadec"], ["δεκαεπτ", "heptadec"], ["δεκαοκτ", "octadec"], ["δεκαεννι", "nonadec"], ["εικοσ", "icos"]
+ ];
+@@ -151,6 +151,7 @@ var EN_SUFFIX_GR = [
+   ["νιτρίλιο", "nitrile"], ["αμίνη", "amine"]
+ ];
+ var EN_SUB_GR = [
++  ["[μη υποστηριζόμενη ομάδα]", "[unsupported group]"],
+   ["ισο", "iso"],
+   ["τετρα", "tetra"], ["τρι", "tri"], ["δι", "di"],
+   ["μεθυλο", "methyl"], ["αιθυλο", "ethyl"], ["προπυλο", "propyl"], ["βουτυλο", "butyl"], ["πεντυλο", "pentyl"],
+@@ -194,6 +195,18 @@ function fGreekFragToEN(frag, slot) {
+   if (slot === 5) map = EN_STEM_GR;
+   else if (slot === 6 || slot === 8) map = EN_INFIX_GR;
+   else if (slot === 9) map = EN_SUFFIX_GR;
++  // Derive complete group tokens from the same carbon-count table as the
++  // parent. Map complete alkoxy/alkyl components before substring aliases;
++  // a C13/C19 prefix must not be partly translated as a multiplier.
++  if (map === EN_SUB_GR) {
++    map = map.slice();
++    EN_STEM_GR.forEach(function (pair, index) {
++      map.push([pair[0] + "οξυ", index >= 10 ? "(" + pair[1] + "yloxy)" : pair[1] + "oxy"]);
++      map.push([pair[0] + "υλο", pair[1] + "yl"]);
++      map.push([pair[0] + "υλ", pair[1] + "yl"]);
++      if (slot === 10) map.push([pair[0], pair[1] + "yl"]);
++    });
++  }
+   var best = fMapFrag(s, map);
+   // retry variants (tonos-stripped, lowercased): keep the fewest-Greek result
+   var cands = [s.toLowerCase(), fStripTonos(s), fStripTonos(s.toLowerCase())];
+@@ -393,11 +406,10 @@ function fPopulateEngineENFromGreek(key, variant) {
+ // systematic order and transliterated text. Returns
+ // { boxes: [[boxId, text]...], spaceAfter: boxId|null, isEster } or null
+ // (caller falls back to Greek render). Greek is never mutated here.
+-// variant "sys": systematic substituent forms (same slot transform as
+-// fPopulateEngineENFromGreek, so joined boxes match engineEN_sys).
+-// P-16.7.1(a) terminal-e elision for EN box boundaries: an "en"/"yn" infix box
+-// directly followed by a consonant-initial suffix box (no locant box
+-// between) takes back its terminal "e" (ynedioic, enedial, ynedione);
++// variant "sys": systematic substituent forms, matching engineEN_sys.
++// P-16.7.1(a) terminal-e fusion for EN box boundaries: an "en"/"yn" infix box
++// followed by a consonant-initial suffix, across any suffix locant box,
++// takes back its terminal "e" (ynedioic, enedial, ynedione);
+ // vowel-initial suffixes (oic acid, al, ol, one, e, amine, oate) fuse bare,
+ // and "an"/"diene"/"diyne" never change.
+ function fFuseEnInfixSuffix(infix, nextText) {
+@@ -429,6 +441,9 @@ function fNameENBoxes(variant) {
+     var stripLoc = function (s) { return String(s == null ? "" : s).replace(/^[-\s]+/, "").replace(/[-\s]+$/, ""); };
+     var comp1No = stripLoc(hasSub ? S(4) : (S(4) || S(0)));
+     var stem = S(5), infix = S(6), mid = stripLoc(S(7)), infix2 = stripLoc(S(8)), suffix = stripLoc(S(9));
++    // A fused suffix retains its leading separator when moved behind an
++    // unsaturation infix (e.g. yn + -1-ol), before splitting stable box IDs.
++    if (/^\d[\d,]*-.+/.test(suffix)) suffix = "-" + suffix;
+     if ((suffix === "nitrile" || suffix === "amine") && infix === "an") infix = "ane";
+     if (!comp1No && !mid && stem === "prop" && (infix === "en" || infix === "yn") &&
+         (suffix === "al" || suffix === "one" || suffix === "oic acid" || suffix === "nitrile" || suffix === "dioic acid")) comp1No = "2";
+@@ -588,14 +603,16 @@ function fNameENBoxes(variant) {
+       }
+       push("comp10", _t10); push("comp11", S(11));
+     }
+-    // P-16.7.1(a) elision at box seams: "yn"/"en" directly before a
+-    // consonant-initial suffix box regains its terminal "e"
++    // P-16.7.1(a) elision at box seams: "yn"/"en" before a
++    // consonant-initial suffix regains its terminal "e", across locants
+     // (ynedioic, enedial); vowel-initial suffixes fuse bare.
+     for (var _fi = 0; _fi + 1 < boxes.length; _fi++) {
+       try {
+         var _fb = boxes[_fi];
+-        if ((_fb[0] === "comp6" || _fb[0] === "comp8") && boxes[_fi + 1][0] === "comp9") {
+-          var _fused = (typeof fFuseEnInfixSuffix === "function") ? fFuseEnInfixSuffix(_fb[1], boxes[_fi + 1][1]) : _fb[1];
++        var _nextSuffix = _fi + 1;
++        while (_nextSuffix < boxes.length && /^-\d[\d,]*-$/.test(boxes[_nextSuffix][1])) _nextSuffix++;
++        if ((_fb[0] === "comp6" || _fb[0] === "comp8") && _nextSuffix < boxes.length && boxes[_nextSuffix][0] === "comp9") {
++          var _fused = (typeof fFuseEnInfixSuffix === "function") ? fFuseEnInfixSuffix(_fb[1], boxes[_nextSuffix][1]) : _fb[1];
+           if (_fused !== _fb[1]) boxes[_fi] = [_fb[0], _fused];
+         }
+       } catch (eF) { /* best-effort */ }

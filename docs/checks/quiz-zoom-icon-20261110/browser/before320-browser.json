@@ -1,0 +1,182 @@
+{
+  "stage": "before320",
+  "completed": true,
+  "checks": [
+    {
+      "label": "exact baseline4 served hashes",
+      "evidence": null
+    },
+    {
+      "label": "s4r1-entry no horizontal overflow",
+      "evidence": {
+        "width": 320,
+        "docWidth": 320,
+        "dialog": {
+          "x": 6,
+          "y": 6,
+          "width": 308,
+          "height": 688,
+          "top": 6,
+          "right": 314,
+          "bottom": 694,
+          "left": 6
+        },
+        "button": {
+          "rect": {
+            "x": 38,
+            "y": 521.7999877929688,
+            "width": 120.68333435058594,
+            "height": 35,
+            "top": 521.7999877929688,
+            "right": 158.68333435058594,
+            "bottom": 556.7999877929688,
+            "left": 38
+          },
+          "text": "Μεγέθυνση σχεδίου",
+          "aria": null,
+          "title": "",
+          "disabled": false,
+          "classes": "quiet"
+        },
+        "label": {
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          },
+          "text": "Ανεπτυγμένος τύπος",
+          "display": "none"
+        },
+        "image": {
+          "rect": {
+            "x": 48.16667175292969,
+            "y": 615.316650390625,
+            "width": 223.64999389648438,
+            "height": 110.94999694824219,
+            "top": 615.316650390625,
+            "right": 271.81666564941406,
+            "bottom": 726.2666473388672,
+            "left": 48.16667175292969
+          },
+          "src": "http://127.0.0.1:53505/games/assets/name-repair/propane.svg",
+          "alt": "Ανεπτυγμένος συντακτικός τύπος αλκανίου. Τα άτομα και οι δεσμοί φαίνονται στο διάγραμμα.",
+          "naturalWidth": 224
+        },
+        "card": {
+          "x": 21,
+          "y": 476.433349609375,
+          "width": 278,
+          "height": 338,
+          "top": 476.433349609375,
+          "right": 299,
+          "bottom": 814.433349609375,
+          "left": 21
+        },
+        "labelName": "s4r1-entry"
+      }
+    }
+  ],
+  "geometry": [
+    {
+      "width": 320,
+      "docWidth": 320,
+      "dialog": {
+        "x": 6,
+        "y": 6,
+        "width": 308,
+        "height": 688,
+        "top": 6,
+        "right": 314,
+        "bottom": 694,
+        "left": 6
+      },
+      "button": {
+        "rect": {
+          "x": 38,
+          "y": 521.7999877929688,
+          "width": 120.68333435058594,
+          "height": 35,
+          "top": 521.7999877929688,
+          "right": 158.68333435058594,
+          "bottom": 556.7999877929688,
+          "left": 38
+        },
+        "text": "Μεγέθυνση σχεδίου",
+        "aria": null,
+        "title": "",
+        "disabled": false,
+        "classes": "quiet"
+      },
+      "label": {
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "text": "Ανεπτυγμένος τύπος",
+        "display": "none"
+      },
+      "image": {
+        "rect": {
+          "x": 48.16667175292969,
+          "y": 615.316650390625,
+          "width": 223.64999389648438,
+          "height": 110.94999694824219,
+          "top": 615.316650390625,
+          "right": 271.81666564941406,
+          "bottom": 726.2666473388672,
+          "left": 48.16667175292969
+        },
+        "src": "http://127.0.0.1:53505/games/assets/name-repair/propane.svg",
+        "alt": "Ανεπτυγμένος συντακτικός τύπος αλκανίου. Τα άτομα και οι δεσμοί φαίνονται στο διάγραμμα.",
+        "naturalWidth": 224
+      },
+      "card": {
+        "x": 21,
+        "y": 476.433349609375,
+        "width": 278,
+        "height": 338,
+        "top": 476.433349609375,
+        "right": 299,
+        "bottom": 814.433349609375,
+        "left": 21
+      },
+      "labelName": "s4r1-entry"
+    }
+  ],
+  "nativeActions": [
+    {
+      "click": "#nlQuizOpen",
+      "point": {
+        "x": 160,
+        "y": 350,
+        "hit": true,
+        "disabled": false
+      }
+    }
+  ],
+  "target": {
+    "js/namelecule-generated-repair-checkpoint.js": "c8f29708b0694f7c10bd4e6e08e07f7eb58969b71e5fe15d9eeea72b356d061d",
+    "js/namelecule-game-repair.js": "b793ae9aa3af5d4e210468d5bc6e2ca6f73d80f64e722e1e6f22bea17980c056",
+    "css/namelecule-repair-round.css": "5fda8d1648b6aaaa07cc5a6e407e4be0db792d7c52b2ddf4c70820abaecef74c",
+    "mulermoc-nom-55.html": "d90d97782df8b99a68de3922fc32659536c7cf8682854cc44069f91af8c2a803"
+  },
+  "notes": [
+    "Developer-supplied browser evidence; no independent review claim.",
+    "Real Main55 lesson at step4 with deterministic unsolved seed4. Later direct step11 access, if used, is explicitly a navigation fixture, not proof of gate completion.",
+    "New owned isolated headless Firefox; no personal browser or GUI.",
+    "Before exact four-file overlay; runtime otherwise current."
+  ],
+  "scope": "Reviewer-requested one-width baseline supplement; direct checkpoint target is navigation only, no earned claim.",
+  "javascriptErrors": []
+}

@@ -1,0 +1,30 @@
+diff --git a/private/tmp/namelecule-professor-merge-20261109-oxj7hfyy/candidate/js/mulermoc-nom-molview-55.js b/private/tmp/namelecule-viewer-rv55-01-staged.js
+index 372267f..98cd742 100644
+--- a/private/tmp/namelecule-professor-merge-20261109-oxj7hfyy/candidate/js/mulermoc-nom-molview-55.js
++++ b/private/tmp/namelecule-viewer-rv55-01-staged.js
+@@ -8502,7 +8502,6 @@ function fSysFusedPieces() {
+ function fJoinGreekSysName(slots) {
+   try {
+     if (!Array.isArray(slots) || !slots.length) return null;
+-    var _parts = slots.filter(function (c) { return c != null && c !== ''; });
+     var _isEster = false;
+     try {
+       _isEster = (typeof functionalGroupsList !== "undefined" && functionalGroupsList &&
+@@ -8541,7 +8540,7 @@ function fJoinGreekSysName(slots) {
+           slots[0] = _jpre.length > 0 ? _jpre[0] : "";
+           slots[1] = _jpre.length > 1 ? _jpre[1] : "";
+           slots[2] = _jpre.length > 2 ? _jpre[2] : "";
+-          slots[3] = _jpre.length > 3 ? _jpre.slice(3).join("-") : "";
++          slots[3] = _jpre.length > 3 ? _jpre.slice(3).join("") : "";
+           if (fGRSysNeedsParens(slots[10], _jc[10], _jc[9])) slots[10] = "(" + slots[10] + ")";
+         } else {
+           if (fGRSysNeedsParens(slots[1], _jc[1], _jc[0])) slots[1] = "(" + slots[1] + ")";
+@@ -8580,7 +8579,7 @@ function fJoinGreekSysName(slots) {
+       var _tail = slots.slice(10).filter(function (c) { return c != null && c !== ''; });
+       return _join(_acid) + (_tail.length ? ' ' + _join(_tail) : '');
+     }
+-    return _join(_parts);
++    return _join(slots.filter(function (c) { return c != null && c !== ''; }));
+   } catch (eJ) { return null; }
+ }
+ 

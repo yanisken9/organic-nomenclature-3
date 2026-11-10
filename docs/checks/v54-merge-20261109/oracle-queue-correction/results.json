@@ -1,0 +1,474 @@
+{
+  "timestampUTC": "2026-11-09T22:30:57.222222+00:00",
+  "role": "Developer actual-function JavaScriptCore tests; virtual clock, controlled transport, no live service/browser",
+  "beforeSHA256": "db5b6e249119e8d31c0dfa4ab6c8b28f766b3239fb78258cee3a6539ced594de",
+  "afterSHA256": "dc284baa921018fcd0a78400ffba5fce049977e6509ff98f44a4c58c09696960",
+  "beforeBurst": {
+    "starts": [
+      {
+        "at": 100000,
+        "url": "https://openclatura.org/name?smiles=C&verify=0&format=json"
+      },
+      {
+        "at": 100000,
+        "url": "https://openclatura.org/name?smiles=C&verify=0&format=json"
+      },
+      {
+        "at": 100000,
+        "url": "https://openclatura.org/name?smiles=C&verify=0&format=json"
+      },
+      {
+        "at": 100000,
+        "url": "https://openclatura.org/name?smiles=C&verify=0&format=json"
+      },
+      {
+        "at": 100000,
+        "url": "https://openclatura.org/name?smiles=C&verify=0&format=json"
+      },
+      {
+        "at": 100000,
+        "url": "https://openclatura.org/name?smiles=C&verify=0&format=json"
+      },
+      {
+        "at": 100000,
+        "url": "https://openclatura.org/name?smiles=C&verify=0&format=json"
+      },
+      {
+        "at": 100000,
+        "url": "https://openclatura.org/name?smiles=C&verify=0&format=json"
+      },
+      {
+        "at": 100000,
+        "url": "https://openclatura.org/name?smiles=C&verify=0&format=json"
+      },
+      {
+        "at": 100000,
+        "url": "https://openclatura.org/name?smiles=C&verify=0&format=json"
+      },
+      {
+        "at": 100000,
+        "url": "https://openclatura.org/name?smiles=C&verify=0&format=json"
+      },
+      {
+        "at": 100000,
+        "url": "https://openclatura.org/name?smiles=C&verify=0&format=json"
+      },
+      {
+        "at": 100150,
+        "url": "https://openclatura.org/name?smiles=C&verify=0&format=json"
+      }
+    ],
+    "first": [
+      {
+        "ok": true,
+        "name": "methane"
+      },
+      {
+        "ok": true,
+        "name": "methane"
+      },
+      {
+        "ok": true,
+        "name": "methane"
+      },
+      {
+        "ok": true,
+        "name": "methane"
+      },
+      {
+        "ok": true,
+        "name": "methane"
+      },
+      {
+        "ok": true,
+        "name": "methane"
+      },
+      {
+        "ok": true,
+        "name": "methane"
+      },
+      {
+        "ok": true,
+        "name": "methane"
+      },
+      {
+        "ok": true,
+        "name": "methane"
+      },
+      {
+        "ok": true,
+        "name": "methane"
+      },
+      {
+        "ok": true,
+        "name": "methane"
+      },
+      {
+        "ok": true,
+        "name": "methane"
+      }
+    ],
+    "retry": {
+      "source": "openclatura",
+      "name": "methane",
+      "opsin": null,
+      "rulesHit": null,
+      "echoSmiles": null
+    },
+    "emptyRejected": true,
+    "finishedAt": 100150,
+    "minimumStartGap": 0
+  },
+  "cases": {
+    "burst": {
+      "starts": [
+        {
+          "at": 100000,
+          "url": "https://openclatura.org/name?smiles=C&verify=0&format=json"
+        },
+        {
+          "at": 100150,
+          "url": "https://openclatura.org/name?smiles=C&verify=0&format=json"
+        },
+        {
+          "at": 100300,
+          "url": "https://openclatura.org/name?smiles=C&verify=0&format=json"
+        },
+        {
+          "at": 100450,
+          "url": "https://openclatura.org/name?smiles=C&verify=0&format=json"
+        },
+        {
+          "at": 100600,
+          "url": "https://openclatura.org/name?smiles=C&verify=0&format=json"
+        },
+        {
+          "at": 100750,
+          "url": "https://openclatura.org/name?smiles=C&verify=0&format=json"
+        },
+        {
+          "at": 100900,
+          "url": "https://openclatura.org/name?smiles=C&verify=0&format=json"
+        },
+        {
+          "at": 101050,
+          "url": "https://openclatura.org/name?smiles=C&verify=0&format=json"
+        },
+        {
+          "at": 101200,
+          "url": "https://openclatura.org/name?smiles=C&verify=0&format=json"
+        },
+        {
+          "at": 101350,
+          "url": "https://openclatura.org/name?smiles=C&verify=0&format=json"
+        },
+        {
+          "at": 101500,
+          "url": "https://openclatura.org/name?smiles=C&verify=0&format=json"
+        },
+        {
+          "at": 101650,
+          "url": "https://openclatura.org/name?smiles=C&verify=0&format=json"
+        },
+        {
+          "at": 101800,
+          "url": "https://openclatura.org/name?smiles=C&verify=0&format=json"
+        }
+      ],
+      "first": [
+        {
+          "ok": true,
+          "name": "methane"
+        },
+        {
+          "ok": true,
+          "name": "methane"
+        },
+        {
+          "ok": true,
+          "name": "methane"
+        },
+        {
+          "ok": true,
+          "name": "methane"
+        },
+        {
+          "ok": true,
+          "name": "methane"
+        },
+        {
+          "ok": true,
+          "name": "methane"
+        },
+        {
+          "ok": true,
+          "name": "methane"
+        },
+        {
+          "ok": true,
+          "name": "methane"
+        },
+        {
+          "ok": true,
+          "name": "methane"
+        },
+        {
+          "ok": true,
+          "name": "methane"
+        },
+        {
+          "ok": true,
+          "name": "methane"
+        },
+        {
+          "ok": true,
+          "name": "methane"
+        }
+      ],
+      "retry": {
+        "source": "openclatura",
+        "name": "methane",
+        "opsin": null,
+        "rulesHit": null,
+        "echoSmiles": null
+      },
+      "emptyRejected": true,
+      "finishedAt": 101800,
+      "minimumStartGap": 150
+    },
+    "failures": {
+      "starts": [
+        {
+          "at": 100000,
+          "url": "https://openclatura.org/name?smiles=C&verify=0&format=json"
+        },
+        {
+          "at": 100150,
+          "url": "https://openclatura.org/name?smiles=C&verify=0&format=json"
+        },
+        {
+          "at": 100300,
+          "url": "https://openclatura.org/name?smiles=C&verify=0&format=json"
+        },
+        {
+          "at": 100450,
+          "url": "https://openclatura.org/name?smiles=C&verify=0&format=json"
+        },
+        {
+          "at": 100600,
+          "url": "https://openclatura.org/name?smiles=C&verify=0&format=json"
+        },
+        {
+          "at": 100750,
+          "url": "https://openclatura.org/name?smiles=C&verify=0&format=json"
+        },
+        {
+          "at": 100900,
+          "url": "https://openclatura.org/name?smiles=C&verify=0&format=json"
+        },
+        {
+          "at": 101050,
+          "url": "https://openclatura.org/name?smiles=C&verify=0&format=json"
+        },
+        {
+          "at": 101200,
+          "url": "https://openclatura.org/name?smiles=C&verify=0&format=json"
+        },
+        {
+          "at": 101350,
+          "url": "https://openclatura.org/name?smiles=C&verify=0&format=json"
+        },
+        {
+          "at": 101500,
+          "url": "https://openclatura.org/name?smiles=C&verify=0&format=json"
+        },
+        {
+          "at": 101650,
+          "url": "https://openclatura.org/name?smiles=C&verify=0&format=json"
+        },
+        {
+          "at": 101800,
+          "url": "https://openclatura.org/name?smiles=C&verify=0&format=json"
+        }
+      ],
+      "first": [
+        {
+          "ok": true,
+          "name": "methane"
+        },
+        {
+          "ok": false,
+          "error": "Error: OpenClatura network error for C: fixture network"
+        },
+        {
+          "ok": false,
+          "error": "Error: OpenClatura 429 for C"
+        },
+        {
+          "ok": false,
+          "error": "Error: OpenClatura: unnameable (fixture noanswer)"
+        },
+        {
+          "ok": true,
+          "name": "methane"
+        },
+        {
+          "ok": true,
+          "name": "methane"
+        },
+        {
+          "ok": true,
+          "name": "methane"
+        },
+        {
+          "ok": true,
+          "name": "methane"
+        },
+        {
+          "ok": true,
+          "name": "methane"
+        },
+        {
+          "ok": true,
+          "name": "methane"
+        },
+        {
+          "ok": true,
+          "name": "methane"
+        },
+        {
+          "ok": true,
+          "name": "methane"
+        }
+      ],
+      "retry": {
+        "source": "openclatura",
+        "name": "methane",
+        "opsin": null,
+        "rulesHit": null,
+        "echoSmiles": null
+      },
+      "emptyRejected": true,
+      "finishedAt": 101800,
+      "minimumStartGap": 150
+    },
+    "slow": {
+      "starts": [
+        {
+          "at": 100000,
+          "url": "https://openclatura.org/name?smiles=C&verify=0&format=json"
+        },
+        {
+          "at": 100150,
+          "url": "https://openclatura.org/name?smiles=C&verify=0&format=json"
+        },
+        {
+          "at": 100300,
+          "url": "https://openclatura.org/name?smiles=C&verify=0&format=json"
+        },
+        {
+          "at": 100450,
+          "url": "https://openclatura.org/name?smiles=C&verify=0&format=json"
+        },
+        {
+          "at": 100600,
+          "url": "https://openclatura.org/name?smiles=C&verify=0&format=json"
+        },
+        {
+          "at": 100750,
+          "url": "https://openclatura.org/name?smiles=C&verify=0&format=json"
+        },
+        {
+          "at": 100900,
+          "url": "https://openclatura.org/name?smiles=C&verify=0&format=json"
+        },
+        {
+          "at": 101050,
+          "url": "https://openclatura.org/name?smiles=C&verify=0&format=json"
+        },
+        {
+          "at": 101200,
+          "url": "https://openclatura.org/name?smiles=C&verify=0&format=json"
+        },
+        {
+          "at": 101350,
+          "url": "https://openclatura.org/name?smiles=C&verify=0&format=json"
+        },
+        {
+          "at": 101500,
+          "url": "https://openclatura.org/name?smiles=C&verify=0&format=json"
+        },
+        {
+          "at": 101650,
+          "url": "https://openclatura.org/name?smiles=C&verify=0&format=json"
+        },
+        {
+          "at": 102150,
+          "url": "https://openclatura.org/name?smiles=C&verify=0&format=json"
+        }
+      ],
+      "first": [
+        {
+          "ok": true,
+          "name": "methane"
+        },
+        {
+          "ok": true,
+          "name": "methane"
+        },
+        {
+          "ok": true,
+          "name": "methane"
+        },
+        {
+          "ok": true,
+          "name": "methane"
+        },
+        {
+          "ok": true,
+          "name": "methane"
+        },
+        {
+          "ok": true,
+          "name": "methane"
+        },
+        {
+          "ok": true,
+          "name": "methane"
+        },
+        {
+          "ok": true,
+          "name": "methane"
+        },
+        {
+          "ok": true,
+          "name": "methane"
+        },
+        {
+          "ok": true,
+          "name": "methane"
+        },
+        {
+          "ok": true,
+          "name": "methane"
+        },
+        {
+          "ok": true,
+          "name": "methane"
+        }
+      ],
+      "retry": {
+        "source": "openclatura",
+        "name": "methane",
+        "opsin": null,
+        "rulesHit": null,
+        "echoSmiles": null
+      },
+      "emptyRejected": true,
+      "finishedAt": 102650,
+      "minimumStartGap": 150
+    }
+  },
+  "passed": true,
+  "assertions": 15
+}

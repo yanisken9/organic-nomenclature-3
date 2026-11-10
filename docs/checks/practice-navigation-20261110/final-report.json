@@ -1,0 +1,30 @@
+{
+  "UTC": "2026-11-10T07:39:05.990631+00:00",
+  "status": "Complete locally; independent review clean",
+  "behavior": "Optional practice hides Return and retains Continue. Required view restores visible Return. Escape, progression, existing earned receipt unchanged.",
+  "sourceFiles": {
+    "js/namelecule-quiz-checkpoints.js": "7afb670f61418118137e70ef392e2790ea0fafd32d3381cef730a02375266fc4",
+    "mulermoc-nom-54.html": "4bb68d9c7d2f089d796bd75932567caa794f1f80c8eb2b842d80a5806a782600",
+    "mulermoc-nom-55.html": "8788e94a8718e2546164aa570e94bd3cd7fbcd4d26dbfe3dfdaad799d1b98c58"
+  },
+  "diff": "implementation.diff",
+  "verification": {
+    "controller": 199,
+    "nativeBefore": 12,
+    "nativeAfter": 12,
+    "jsErrors": 0,
+    "evidenceManifest": "evidence-manifest.json",
+    "independentReview": "independent-review.json",
+    "localHTTP": "local-http.json",
+    "cleanup": "browser/cleanup.json"
+  },
+  "coreChanged": false,
+  "scenarioJSONChanged": false,
+  "commitPushPublicationExport": false,
+  "limits": [
+    "Main55 headless Firefox only; Main54 cache URL verified without native replay",
+    "No new prerequisite earning/full lesson/Safari/physicalmobile/conference-machine replay",
+    "Behavioral no-write restriction, no enforced read-only sandbox claim"
+  ],
+  "nextStep": "Refresh current local lesson to see new script; continue user-directed improvements."
+}

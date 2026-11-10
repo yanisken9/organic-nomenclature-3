@@ -1,0 +1,34 @@
+--- before
++++ docs/CHANGELOG.md
+@@ -1,9 +1,27 @@
+ # Changelog
+ 
+-## 2026-11-10 — Namelecule v55 candidate under verification
+-
+-Approved integration of f49b810→5ab24955 (80 commits). Current v54/52/React, source MOL/SDF and scenario JSON are protected. New v55 composes professor features with strict chemical identity, metadata, graph-safe generation and async ownership checks; best-effort 3D may be saved only after explicit confirmation and retains provisional status. This entry records candidate work, not a completed review, installed release, commit or publication.
+-
++## 2026-11-10 — Namelecule v55 integration (local activation recorded separately)
++
++Implemented the approved f49b810→5ab24955 integration (80 commits) in a separate
++v55. Preserved current141records/422forms, all scenario JSON/source MOL/SDF,
++v54/v52/React, and the SHA-addressed engine used by existing generated quizzes.
++
++- Adopt professor GR/EN naming, systematic settings, OpenClatura second opinion,
++  slot-aware Edit/New-or-fork, save-all bundles and tiered/manual3D controls.
++- Retain strict graph/metadata/sp checks, async model ownership and acquisition
++  restoration. Decline unsupported branch names that would omit atoms; fix the
++  demonstrated multiplier, English ordering/parentheses and Greek join defects.
++- Permit graph-matched provisional3D only with explicit consent at Accept and
++  durable unverified-geometry/convergence provenance. Preserve query/stereo,
++  charge/isotope and hydrogen safety guards. At JSmol readback only, normalize
++  serializer parity on proven nonstereogenic CH2; raw imports remain strict.
++- Serialize OpenClatura request starts inside the throttle queue. Keep bounded
++  size-based minimizer wait, cancellation/STOP ownership and further200steps.
++
++New core55; existing core54/core52 unchanged. Exact review, local installation,
++checks and limitations: [integration report](checks/v54-merge-20261109/final-report.json).
++No new commit, push or publication; public v54 remains unchanged. Known personal
++Firefox freeze and conference-machine/offline verification remain open.
+ 
+ ## 2026-11-05 — Published reviewed runtime and verified full recovery snapshot
+ 

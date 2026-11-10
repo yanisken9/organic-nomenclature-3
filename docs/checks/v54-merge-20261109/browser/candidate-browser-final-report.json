@@ -1,0 +1,855 @@
+{
+  "createdUTC": "2026-11-09T22:41:00.588880+00:00",
+  "role": "Developer browser verification; independent review is root-controlled",
+  "status": "Candidate browser phases complete; no current blocking browser finding. Exact local install and bounded primary smoke remain parent-owned next steps.",
+  "candidate": "/private/tmp/namelecule-professor-merge-20261109-oxj7hfyy/candidate",
+  "upstreamTarget": "5ab2495575bbbffeb0ac67f91d4d81857cb65970",
+  "final17Manifest": {
+    "path": "../verification-target.json",
+    "sha256": "6555594b5c5821a5e5ad26b55f72dab118f014352c7ab7ef734d102e8d79ca21",
+    "files": {
+      "mulermoc-nom-55.html": "ce5c468aa884a99ee50dd997144ab78a0b55d0b3adeb62c508ccdfb80b3f4e0d",
+      "js/jsme-nick-nomeclature-moc2-data_55.js": "9387cd654b2ff3cfb058d9b97ddcca798ac13f47f769b532f9c122277ff8dd0a",
+      "js/mulermoc-nom-core-55.js": "6cbdbd0ce60f5d66ff3e6925cdfd48e470764baa02b6263f325eff356df5e270",
+      "js/mulermoc-nom-molview-55.js": "4f2fb1a53bc25e141f754ab0da5e31095c65b0318cf0a29c4fe7667fbb8d9ad5",
+      "js/mulermoc-nom-teaching-55.js": "92f5dd9708103a306c98cd7c19dc10082aa4c57d1744105fadf14074ea60ef00",
+      "js/mulermoc-nom-note-55.js": "e685355459afb7955fbe13e3b8e07c6283469b4d8acb98cfbcfa483c9f9be3ca",
+      "js/mulermoc-nom-scenario-55.js": "0e21b0fea3b8d718cd5ea600cc35a1ff7a74a99cae0f8a30bca7560634d22776",
+      "js/mulermoc-nom-iupac-55.js": "dc284baa921018fcd0a78400ffba5fce049977e6509ff98f44a4c58c09696960",
+      "js/mulermoc-nom-lang-55.js": "22fa52796f92dbeb8e480d511cf71bf48674fe229c85cdb538fcf32a517437d3",
+      "js/mulermoc-nom-name-en-55.js": "e2dd570b5cbfe1f07a3c0ce29f8e4535aeda64bf36ee85741f7f0421871042c8",
+      "js/ui-icons-55.js": "580277e98b0d29bc1df2a265d7e6e395500db9253ee8492349a145fd19a2c414",
+      "css/jsme-nick-55.css": "17c39115dfcf599f403013fb0202e5ecf55e695e4c6fa7fc4734ad1fce93d53e",
+      "css/mulermoc-nom-scenario-55.css": "b73fcd95bcdd0b694934b98923e8dc871312d3d9dca676894c2d98070bf30736",
+      "css/namelecule-55.css": "042b0e93645dbc9fe5c9851bdd90a73b08f8c89fc4ef524302bd07ac7180e7a7",
+      "spt/init-55.spt": "7446cb112f8606e7f0a186435fba8612ca1ab5d4f24537b6f3df7a01de95341a",
+      "design/welcome-proposal.html": "17c04887fde8da210e7c4acd4e1458652948c0d277f180c67460e3e11ff54c2e",
+      "design/theory-library.html": "87e557a3455f14a851dc631c8d70bf93fe396f4a5ebdb8fde4fa78397158e8dc"
+    }
+  },
+  "initial17Manifest": {
+    "path": "../verification-target-before-rv-corrections.json",
+    "sha256": "93130e500de4e83b5a025fbadbfdf2cb66132890b08ef8c419945d86450f0b4e",
+    "files": {
+      "mulermoc-nom-55.html": "ce5c468aa884a99ee50dd997144ab78a0b55d0b3adeb62c508ccdfb80b3f4e0d",
+      "js/jsme-nick-nomeclature-moc2-data_55.js": "9387cd654b2ff3cfb058d9b97ddcca798ac13f47f769b532f9c122277ff8dd0a",
+      "js/mulermoc-nom-core-55.js": "6cbdbd0ce60f5d66ff3e6925cdfd48e470764baa02b6263f325eff356df5e270",
+      "js/mulermoc-nom-molview-55.js": "fdca88ddb7317759d996423ad20016d9333f0f53ba4253a537c78ac95c473de5",
+      "js/mulermoc-nom-teaching-55.js": "92f5dd9708103a306c98cd7c19dc10082aa4c57d1744105fadf14074ea60ef00",
+      "js/mulermoc-nom-note-55.js": "e685355459afb7955fbe13e3b8e07c6283469b4d8acb98cfbcfa483c9f9be3ca",
+      "js/mulermoc-nom-scenario-55.js": "0e21b0fea3b8d718cd5ea600cc35a1ff7a74a99cae0f8a30bca7560634d22776",
+      "js/mulermoc-nom-iupac-55.js": "db5b6e249119e8d31c0dfa4ab6c8b28f766b3239fb78258cee3a6539ced594de",
+      "js/mulermoc-nom-lang-55.js": "22fa52796f92dbeb8e480d511cf71bf48674fe229c85cdb538fcf32a517437d3",
+      "js/mulermoc-nom-name-en-55.js": "e2dd570b5cbfe1f07a3c0ce29f8e4535aeda64bf36ee85741f7f0421871042c8",
+      "js/ui-icons-55.js": "580277e98b0d29bc1df2a265d7e6e395500db9253ee8492349a145fd19a2c414",
+      "css/jsme-nick-55.css": "17c39115dfcf599f403013fb0202e5ecf55e695e4c6fa7fc4734ad1fce93d53e",
+      "css/mulermoc-nom-scenario-55.css": "b73fcd95bcdd0b694934b98923e8dc871312d3d9dca676894c2d98070bf30736",
+      "css/namelecule-55.css": "042b0e93645dbc9fe5c9851bdd90a73b08f8c89fc4ef524302bd07ac7180e7a7",
+      "spt/init-55.spt": "7446cb112f8606e7f0a186435fba8612ca1ab5d4f24537b6f3df7a01de95341a",
+      "design/welcome-proposal.html": "17c04887fde8da210e7c4acd4e1458652948c0d277f180c67460e3e11ff54c2e",
+      "design/theory-library.html": "87e557a3455f14a851dc631c8d70bf93fe396f4a5ebdb8fde4fa78397158e8dc"
+    }
+  },
+  "phases": [
+    {
+      "report": "alkane12-browser.json",
+      "sha256": "c40a17bcb493f4a671579c2faa3a9e106b72a2a73e214530087aaed2c775a312",
+      "label": "Full normal12 learner flow",
+      "kind": "Native pointer repairs/mode/molecule actions",
+      "checks": 112,
+      "runtimeTarget": "initial-frozen17",
+      "sourceHashesAtStart": {
+        "mulermoc-nom-55.html": "ce5c468aa884a99ee50dd997144ab78a0b55d0b3adeb62c508ccdfb80b3f4e0d",
+        "js/jsme-nick-nomeclature-moc2-data_55.js": "9387cd654b2ff3cfb058d9b97ddcca798ac13f47f769b532f9c122277ff8dd0a",
+        "js/mulermoc-nom-core-55.js": "6cbdbd0ce60f5d66ff3e6925cdfd48e470764baa02b6263f325eff356df5e270",
+        "js/mulermoc-nom-molview-55.js": "fdca88ddb7317759d996423ad20016d9333f0f53ba4253a537c78ac95c473de5",
+        "js/mulermoc-nom-teaching-55.js": "92f5dd9708103a306c98cd7c19dc10082aa4c57d1744105fadf14074ea60ef00",
+        "js/mulermoc-nom-note-55.js": "e685355459afb7955fbe13e3b8e07c6283469b4d8acb98cfbcfa483c9f9be3ca",
+        "js/mulermoc-nom-scenario-55.js": "0e21b0fea3b8d718cd5ea600cc35a1ff7a74a99cae0f8a30bca7560634d22776",
+        "js/mulermoc-nom-iupac-55.js": "db5b6e249119e8d31c0dfa4ab6c8b28f766b3239fb78258cee3a6539ced594de",
+        "js/mulermoc-nom-lang-55.js": "22fa52796f92dbeb8e480d511cf71bf48674fe229c85cdb538fcf32a517437d3",
+        "js/mulermoc-nom-name-en-55.js": "e2dd570b5cbfe1f07a3c0ce29f8e4535aeda64bf36ee85741f7f0421871042c8",
+        "js/ui-icons-55.js": "580277e98b0d29bc1df2a265d7e6e395500db9253ee8492349a145fd19a2c414",
+        "css/jsme-nick-55.css": "17c39115dfcf599f403013fb0202e5ecf55e695e4c6fa7fc4734ad1fce93d53e",
+        "css/mulermoc-nom-scenario-55.css": "b73fcd95bcdd0b694934b98923e8dc871312d3d9dca676894c2d98070bf30736",
+        "css/namelecule-55.css": "042b0e93645dbc9fe5c9851bdd90a73b08f8c89fc4ef524302bd07ac7180e7a7",
+        "spt/init-55.spt": "7446cb112f8606e7f0a186435fba8612ca1ab5d4f24537b6f3df7a01de95341a",
+        "design/welcome-proposal.html": "17c04887fde8da210e7c4acd4e1458652948c0d277f180c67460e3e11ff54c2e",
+        "design/theory-library.html": "87e557a3455f14a851dc631c8d70bf93fe396f4a5ebdb8fde4fa78397158e8dc"
+      },
+      "sourceHashesAtFinish": {
+        "mulermoc-nom-55.html": "ce5c468aa884a99ee50dd997144ab78a0b55d0b3adeb62c508ccdfb80b3f4e0d",
+        "js/jsme-nick-nomeclature-moc2-data_55.js": "9387cd654b2ff3cfb058d9b97ddcca798ac13f47f769b532f9c122277ff8dd0a",
+        "js/mulermoc-nom-core-55.js": "6cbdbd0ce60f5d66ff3e6925cdfd48e470764baa02b6263f325eff356df5e270",
+        "js/mulermoc-nom-molview-55.js": "fdca88ddb7317759d996423ad20016d9333f0f53ba4253a537c78ac95c473de5",
+        "js/mulermoc-nom-teaching-55.js": "92f5dd9708103a306c98cd7c19dc10082aa4c57d1744105fadf14074ea60ef00",
+        "js/mulermoc-nom-note-55.js": "e685355459afb7955fbe13e3b8e07c6283469b4d8acb98cfbcfa483c9f9be3ca",
+        "js/mulermoc-nom-scenario-55.js": "0e21b0fea3b8d718cd5ea600cc35a1ff7a74a99cae0f8a30bca7560634d22776",
+        "js/mulermoc-nom-iupac-55.js": "db5b6e249119e8d31c0dfa4ab6c8b28f766b3239fb78258cee3a6539ced594de",
+        "js/mulermoc-nom-lang-55.js": "22fa52796f92dbeb8e480d511cf71bf48674fe229c85cdb538fcf32a517437d3",
+        "js/mulermoc-nom-name-en-55.js": "e2dd570b5cbfe1f07a3c0ce29f8e4535aeda64bf36ee85741f7f0421871042c8",
+        "js/ui-icons-55.js": "580277e98b0d29bc1df2a265d7e6e395500db9253ee8492349a145fd19a2c414",
+        "css/jsme-nick-55.css": "17c39115dfcf599f403013fb0202e5ecf55e695e4c6fa7fc4734ad1fce93d53e",
+        "css/mulermoc-nom-scenario-55.css": "b73fcd95bcdd0b694934b98923e8dc871312d3d9dca676894c2d98070bf30736",
+        "css/namelecule-55.css": "042b0e93645dbc9fe5c9851bdd90a73b08f8c89fc4ef524302bd07ac7180e7a7",
+        "spt/init-55.spt": "7446cb112f8606e7f0a186435fba8612ca1ab5d4f24537b6f3df7a01de95341a",
+        "design/welcome-proposal.html": "17c04887fde8da210e7c4acd4e1458652948c0d277f180c67460e3e11ff54c2e",
+        "design/theory-library.html": "87e557a3455f14a851dc631c8d70bf93fe396f4a5ebdb8fde4fa78397158e8dc"
+      },
+      "completed": true,
+      "javascriptErrors": 0
+    },
+    {
+      "report": "calibration-browser.json",
+      "sha256": "53b7214e0da32fd8644e6ea49a606229a86491dc25059a006dd60c529cc04d44",
+      "label": "Matched54/55 expanded calibration16",
+      "kind": "Direct renderer API metrics; original screenshots may show overlay/stale controls/3D and are not synchronized UI evidence",
+      "checks": 24,
+      "runtimeTarget": "initial-frozen17",
+      "sourceHashesAtStart": {
+        "mulermoc-nom-55.html": "ce5c468aa884a99ee50dd997144ab78a0b55d0b3adeb62c508ccdfb80b3f4e0d",
+        "js/jsme-nick-nomeclature-moc2-data_55.js": "9387cd654b2ff3cfb058d9b97ddcca798ac13f47f769b532f9c122277ff8dd0a",
+        "js/mulermoc-nom-core-55.js": "6cbdbd0ce60f5d66ff3e6925cdfd48e470764baa02b6263f325eff356df5e270",
+        "js/mulermoc-nom-molview-55.js": "fdca88ddb7317759d996423ad20016d9333f0f53ba4253a537c78ac95c473de5",
+        "js/mulermoc-nom-teaching-55.js": "92f5dd9708103a306c98cd7c19dc10082aa4c57d1744105fadf14074ea60ef00",
+        "js/mulermoc-nom-note-55.js": "e685355459afb7955fbe13e3b8e07c6283469b4d8acb98cfbcfa483c9f9be3ca",
+        "js/mulermoc-nom-scenario-55.js": "0e21b0fea3b8d718cd5ea600cc35a1ff7a74a99cae0f8a30bca7560634d22776",
+        "js/mulermoc-nom-iupac-55.js": "db5b6e249119e8d31c0dfa4ab6c8b28f766b3239fb78258cee3a6539ced594de",
+        "js/mulermoc-nom-lang-55.js": "22fa52796f92dbeb8e480d511cf71bf48674fe229c85cdb538fcf32a517437d3",
+        "js/mulermoc-nom-name-en-55.js": "e2dd570b5cbfe1f07a3c0ce29f8e4535aeda64bf36ee85741f7f0421871042c8",
+        "js/ui-icons-55.js": "580277e98b0d29bc1df2a265d7e6e395500db9253ee8492349a145fd19a2c414",
+        "css/jsme-nick-55.css": "17c39115dfcf599f403013fb0202e5ecf55e695e4c6fa7fc4734ad1fce93d53e",
+        "css/mulermoc-nom-scenario-55.css": "b73fcd95bcdd0b694934b98923e8dc871312d3d9dca676894c2d98070bf30736",
+        "css/namelecule-55.css": "042b0e93645dbc9fe5c9851bdd90a73b08f8c89fc4ef524302bd07ac7180e7a7",
+        "spt/init-55.spt": "7446cb112f8606e7f0a186435fba8612ca1ab5d4f24537b6f3df7a01de95341a",
+        "design/welcome-proposal.html": "17c04887fde8da210e7c4acd4e1458652948c0d277f180c67460e3e11ff54c2e",
+        "design/theory-library.html": "87e557a3455f14a851dc631c8d70bf93fe396f4a5ebdb8fde4fa78397158e8dc"
+      },
+      "sourceHashesAtFinish": {
+        "mulermoc-nom-55.html": "ce5c468aa884a99ee50dd997144ab78a0b55d0b3adeb62c508ccdfb80b3f4e0d",
+        "js/jsme-nick-nomeclature-moc2-data_55.js": "9387cd654b2ff3cfb058d9b97ddcca798ac13f47f769b532f9c122277ff8dd0a",
+        "js/mulermoc-nom-core-55.js": "6cbdbd0ce60f5d66ff3e6925cdfd48e470764baa02b6263f325eff356df5e270",
+        "js/mulermoc-nom-molview-55.js": "fdca88ddb7317759d996423ad20016d9333f0f53ba4253a537c78ac95c473de5",
+        "js/mulermoc-nom-teaching-55.js": "92f5dd9708103a306c98cd7c19dc10082aa4c57d1744105fadf14074ea60ef00",
+        "js/mulermoc-nom-note-55.js": "e685355459afb7955fbe13e3b8e07c6283469b4d8acb98cfbcfa483c9f9be3ca",
+        "js/mulermoc-nom-scenario-55.js": "0e21b0fea3b8d718cd5ea600cc35a1ff7a74a99cae0f8a30bca7560634d22776",
+        "js/mulermoc-nom-iupac-55.js": "db5b6e249119e8d31c0dfa4ab6c8b28f766b3239fb78258cee3a6539ced594de",
+        "js/mulermoc-nom-lang-55.js": "22fa52796f92dbeb8e480d511cf71bf48674fe229c85cdb538fcf32a517437d3",
+        "js/mulermoc-nom-name-en-55.js": "e2dd570b5cbfe1f07a3c0ce29f8e4535aeda64bf36ee85741f7f0421871042c8",
+        "js/ui-icons-55.js": "580277e98b0d29bc1df2a265d7e6e395500db9253ee8492349a145fd19a2c414",
+        "css/jsme-nick-55.css": "17c39115dfcf599f403013fb0202e5ecf55e695e4c6fa7fc4734ad1fce93d53e",
+        "css/mulermoc-nom-scenario-55.css": "b73fcd95bcdd0b694934b98923e8dc871312d3d9dca676894c2d98070bf30736",
+        "css/namelecule-55.css": "042b0e93645dbc9fe5c9851bdd90a73b08f8c89fc4ef524302bd07ac7180e7a7",
+        "spt/init-55.spt": "7446cb112f8606e7f0a186435fba8612ca1ab5d4f24537b6f3df7a01de95341a",
+        "design/welcome-proposal.html": "17c04887fde8da210e7c4acd4e1458652948c0d277f180c67460e3e11ff54c2e",
+        "design/theory-library.html": "87e557a3455f14a851dc631c8d70bf93fe396f4a5ebdb8fde4fa78397158e8dc"
+      },
+      "completed": true,
+      "javascriptErrors": 0
+    },
+    {
+      "report": "calibration-pointer-browser.json",
+      "sha256": "5ed9faca5e80f945e9bd1536d7e343510c3c7586ad8e41555c720377b51d0791",
+      "label": "Six pointer calibration supplements",
+      "kind": "Actual pointer molecule/Expanded selections, matching source3D readiness, then2D-only screenshots",
+      "checks": 12,
+      "runtimeTarget": "initial-frozen17",
+      "sourceHashesAtStart": {
+        "mulermoc-nom-55.html": "ce5c468aa884a99ee50dd997144ab78a0b55d0b3adeb62c508ccdfb80b3f4e0d",
+        "js/jsme-nick-nomeclature-moc2-data_55.js": "9387cd654b2ff3cfb058d9b97ddcca798ac13f47f769b532f9c122277ff8dd0a",
+        "js/mulermoc-nom-core-55.js": "6cbdbd0ce60f5d66ff3e6925cdfd48e470764baa02b6263f325eff356df5e270",
+        "js/mulermoc-nom-molview-55.js": "fdca88ddb7317759d996423ad20016d9333f0f53ba4253a537c78ac95c473de5",
+        "js/mulermoc-nom-teaching-55.js": "92f5dd9708103a306c98cd7c19dc10082aa4c57d1744105fadf14074ea60ef00",
+        "js/mulermoc-nom-note-55.js": "e685355459afb7955fbe13e3b8e07c6283469b4d8acb98cfbcfa483c9f9be3ca",
+        "js/mulermoc-nom-scenario-55.js": "0e21b0fea3b8d718cd5ea600cc35a1ff7a74a99cae0f8a30bca7560634d22776",
+        "js/mulermoc-nom-iupac-55.js": "db5b6e249119e8d31c0dfa4ab6c8b28f766b3239fb78258cee3a6539ced594de",
+        "js/mulermoc-nom-lang-55.js": "22fa52796f92dbeb8e480d511cf71bf48674fe229c85cdb538fcf32a517437d3",
+        "js/mulermoc-nom-name-en-55.js": "e2dd570b5cbfe1f07a3c0ce29f8e4535aeda64bf36ee85741f7f0421871042c8",
+        "js/ui-icons-55.js": "580277e98b0d29bc1df2a265d7e6e395500db9253ee8492349a145fd19a2c414",
+        "css/jsme-nick-55.css": "17c39115dfcf599f403013fb0202e5ecf55e695e4c6fa7fc4734ad1fce93d53e",
+        "css/mulermoc-nom-scenario-55.css": "b73fcd95bcdd0b694934b98923e8dc871312d3d9dca676894c2d98070bf30736",
+        "css/namelecule-55.css": "042b0e93645dbc9fe5c9851bdd90a73b08f8c89fc4ef524302bd07ac7180e7a7",
+        "spt/init-55.spt": "7446cb112f8606e7f0a186435fba8612ca1ab5d4f24537b6f3df7a01de95341a",
+        "design/welcome-proposal.html": "17c04887fde8da210e7c4acd4e1458652948c0d277f180c67460e3e11ff54c2e",
+        "design/theory-library.html": "87e557a3455f14a851dc631c8d70bf93fe396f4a5ebdb8fde4fa78397158e8dc"
+      },
+      "sourceHashesAtFinish": {
+        "mulermoc-nom-55.html": "ce5c468aa884a99ee50dd997144ab78a0b55d0b3adeb62c508ccdfb80b3f4e0d",
+        "js/jsme-nick-nomeclature-moc2-data_55.js": "9387cd654b2ff3cfb058d9b97ddcca798ac13f47f769b532f9c122277ff8dd0a",
+        "js/mulermoc-nom-core-55.js": "6cbdbd0ce60f5d66ff3e6925cdfd48e470764baa02b6263f325eff356df5e270",
+        "js/mulermoc-nom-molview-55.js": "fdca88ddb7317759d996423ad20016d9333f0f53ba4253a537c78ac95c473de5",
+        "js/mulermoc-nom-teaching-55.js": "92f5dd9708103a306c98cd7c19dc10082aa4c57d1744105fadf14074ea60ef00",
+        "js/mulermoc-nom-note-55.js": "e685355459afb7955fbe13e3b8e07c6283469b4d8acb98cfbcfa483c9f9be3ca",
+        "js/mulermoc-nom-scenario-55.js": "0e21b0fea3b8d718cd5ea600cc35a1ff7a74a99cae0f8a30bca7560634d22776",
+        "js/mulermoc-nom-iupac-55.js": "db5b6e249119e8d31c0dfa4ab6c8b28f766b3239fb78258cee3a6539ced594de",
+        "js/mulermoc-nom-lang-55.js": "22fa52796f92dbeb8e480d511cf71bf48674fe229c85cdb538fcf32a517437d3",
+        "js/mulermoc-nom-name-en-55.js": "e2dd570b5cbfe1f07a3c0ce29f8e4535aeda64bf36ee85741f7f0421871042c8",
+        "js/ui-icons-55.js": "580277e98b0d29bc1df2a265d7e6e395500db9253ee8492349a145fd19a2c414",
+        "css/jsme-nick-55.css": "17c39115dfcf599f403013fb0202e5ecf55e695e4c6fa7fc4734ad1fce93d53e",
+        "css/mulermoc-nom-scenario-55.css": "b73fcd95bcdd0b694934b98923e8dc871312d3d9dca676894c2d98070bf30736",
+        "css/namelecule-55.css": "042b0e93645dbc9fe5c9851bdd90a73b08f8c89fc4ef524302bd07ac7180e7a7",
+        "spt/init-55.spt": "7446cb112f8606e7f0a186435fba8612ca1ab5d4f24537b6f3df7a01de95341a",
+        "design/welcome-proposal.html": "17c04887fde8da210e7c4acd4e1458652948c0d277f180c67460e3e11ff54c2e",
+        "design/theory-library.html": "87e557a3455f14a851dc631c8d70bf93fe396f4a5ebdb8fde4fa78397158e8dc"
+      },
+      "completed": true,
+      "javascriptErrors": 0
+    },
+    {
+      "report": "lessons-browser.json",
+      "sha256": "fb4a099bc347f6292b316ea5500b67a942bf21b3b88efac4bb76ac0c5ab1fc34",
+      "label": "14lesson structures/representative replay",
+      "kind": "328 normalized snapshots +42 representative rendered snapshots and real Prev/Next; not328live3D transitions",
+      "checks": 88,
+      "runtimeTarget": "initial-frozen17",
+      "sourceHashesAtStart": {
+        "mulermoc-nom-55.html": "ce5c468aa884a99ee50dd997144ab78a0b55d0b3adeb62c508ccdfb80b3f4e0d",
+        "js/jsme-nick-nomeclature-moc2-data_55.js": "9387cd654b2ff3cfb058d9b97ddcca798ac13f47f769b532f9c122277ff8dd0a",
+        "js/mulermoc-nom-core-55.js": "6cbdbd0ce60f5d66ff3e6925cdfd48e470764baa02b6263f325eff356df5e270",
+        "js/mulermoc-nom-molview-55.js": "fdca88ddb7317759d996423ad20016d9333f0f53ba4253a537c78ac95c473de5",
+        "js/mulermoc-nom-teaching-55.js": "92f5dd9708103a306c98cd7c19dc10082aa4c57d1744105fadf14074ea60ef00",
+        "js/mulermoc-nom-note-55.js": "e685355459afb7955fbe13e3b8e07c6283469b4d8acb98cfbcfa483c9f9be3ca",
+        "js/mulermoc-nom-scenario-55.js": "0e21b0fea3b8d718cd5ea600cc35a1ff7a74a99cae0f8a30bca7560634d22776",
+        "js/mulermoc-nom-iupac-55.js": "db5b6e249119e8d31c0dfa4ab6c8b28f766b3239fb78258cee3a6539ced594de",
+        "js/mulermoc-nom-lang-55.js": "22fa52796f92dbeb8e480d511cf71bf48674fe229c85cdb538fcf32a517437d3",
+        "js/mulermoc-nom-name-en-55.js": "e2dd570b5cbfe1f07a3c0ce29f8e4535aeda64bf36ee85741f7f0421871042c8",
+        "js/ui-icons-55.js": "580277e98b0d29bc1df2a265d7e6e395500db9253ee8492349a145fd19a2c414",
+        "css/jsme-nick-55.css": "17c39115dfcf599f403013fb0202e5ecf55e695e4c6fa7fc4734ad1fce93d53e",
+        "css/mulermoc-nom-scenario-55.css": "b73fcd95bcdd0b694934b98923e8dc871312d3d9dca676894c2d98070bf30736",
+        "css/namelecule-55.css": "042b0e93645dbc9fe5c9851bdd90a73b08f8c89fc4ef524302bd07ac7180e7a7",
+        "spt/init-55.spt": "7446cb112f8606e7f0a186435fba8612ca1ab5d4f24537b6f3df7a01de95341a",
+        "design/welcome-proposal.html": "17c04887fde8da210e7c4acd4e1458652948c0d277f180c67460e3e11ff54c2e",
+        "design/theory-library.html": "87e557a3455f14a851dc631c8d70bf93fe396f4a5ebdb8fde4fa78397158e8dc"
+      },
+      "sourceHashesAtFinish": {
+        "mulermoc-nom-55.html": "ce5c468aa884a99ee50dd997144ab78a0b55d0b3adeb62c508ccdfb80b3f4e0d",
+        "js/jsme-nick-nomeclature-moc2-data_55.js": "9387cd654b2ff3cfb058d9b97ddcca798ac13f47f769b532f9c122277ff8dd0a",
+        "js/mulermoc-nom-core-55.js": "6cbdbd0ce60f5d66ff3e6925cdfd48e470764baa02b6263f325eff356df5e270",
+        "js/mulermoc-nom-molview-55.js": "fdca88ddb7317759d996423ad20016d9333f0f53ba4253a537c78ac95c473de5",
+        "js/mulermoc-nom-teaching-55.js": "92f5dd9708103a306c98cd7c19dc10082aa4c57d1744105fadf14074ea60ef00",
+        "js/mulermoc-nom-note-55.js": "e685355459afb7955fbe13e3b8e07c6283469b4d8acb98cfbcfa483c9f9be3ca",
+        "js/mulermoc-nom-scenario-55.js": "0e21b0fea3b8d718cd5ea600cc35a1ff7a74a99cae0f8a30bca7560634d22776",
+        "js/mulermoc-nom-iupac-55.js": "db5b6e249119e8d31c0dfa4ab6c8b28f766b3239fb78258cee3a6539ced594de",
+        "js/mulermoc-nom-lang-55.js": "22fa52796f92dbeb8e480d511cf71bf48674fe229c85cdb538fcf32a517437d3",
+        "js/mulermoc-nom-name-en-55.js": "e2dd570b5cbfe1f07a3c0ce29f8e4535aeda64bf36ee85741f7f0421871042c8",
+        "js/ui-icons-55.js": "580277e98b0d29bc1df2a265d7e6e395500db9253ee8492349a145fd19a2c414",
+        "css/jsme-nick-55.css": "17c39115dfcf599f403013fb0202e5ecf55e695e4c6fa7fc4734ad1fce93d53e",
+        "css/mulermoc-nom-scenario-55.css": "b73fcd95bcdd0b694934b98923e8dc871312d3d9dca676894c2d98070bf30736",
+        "css/namelecule-55.css": "042b0e93645dbc9fe5c9851bdd90a73b08f8c89fc4ef524302bd07ac7180e7a7",
+        "spt/init-55.spt": "7446cb112f8606e7f0a186435fba8612ca1ab5d4f24537b6f3df7a01de95341a",
+        "design/welcome-proposal.html": "17c04887fde8da210e7c4acd4e1458652948c0d277f180c67460e3e11ff54c2e",
+        "design/theory-library.html": "87e557a3455f14a851dc631c8d70bf93fe396f4a5ebdb8fde4fa78397158e8dc"
+      },
+      "completed": true,
+      "javascriptErrors": 0
+    },
+    {
+      "report": "real-minimize-browser.json",
+      "sha256": "b954f17f05587e719738fbc2c5f2e8dbf9befe7186d5d1a888bc04dd0370292c",
+      "label": "Actual local minimizer STOP/recovery/further",
+      "kind": "Real JSmol MMFF/UFF/STOP/local readback; remote3D/name lookup fixtures only",
+      "checks": 6,
+      "runtimeTarget": "final17",
+      "sourceHashesAtStart": {
+        "mulermoc-nom-55.html": "ce5c468aa884a99ee50dd997144ab78a0b55d0b3adeb62c508ccdfb80b3f4e0d",
+        "js/jsme-nick-nomeclature-moc2-data_55.js": "9387cd654b2ff3cfb058d9b97ddcca798ac13f47f769b532f9c122277ff8dd0a",
+        "js/mulermoc-nom-core-55.js": "6cbdbd0ce60f5d66ff3e6925cdfd48e470764baa02b6263f325eff356df5e270",
+        "js/mulermoc-nom-molview-55.js": "4f2fb1a53bc25e141f754ab0da5e31095c65b0318cf0a29c4fe7667fbb8d9ad5",
+        "js/mulermoc-nom-teaching-55.js": "92f5dd9708103a306c98cd7c19dc10082aa4c57d1744105fadf14074ea60ef00",
+        "js/mulermoc-nom-note-55.js": "e685355459afb7955fbe13e3b8e07c6283469b4d8acb98cfbcfa483c9f9be3ca",
+        "js/mulermoc-nom-scenario-55.js": "0e21b0fea3b8d718cd5ea600cc35a1ff7a74a99cae0f8a30bca7560634d22776",
+        "js/mulermoc-nom-iupac-55.js": "dc284baa921018fcd0a78400ffba5fce049977e6509ff98f44a4c58c09696960",
+        "js/mulermoc-nom-lang-55.js": "22fa52796f92dbeb8e480d511cf71bf48674fe229c85cdb538fcf32a517437d3",
+        "js/mulermoc-nom-name-en-55.js": "e2dd570b5cbfe1f07a3c0ce29f8e4535aeda64bf36ee85741f7f0421871042c8",
+        "js/ui-icons-55.js": "580277e98b0d29bc1df2a265d7e6e395500db9253ee8492349a145fd19a2c414",
+        "css/jsme-nick-55.css": "17c39115dfcf599f403013fb0202e5ecf55e695e4c6fa7fc4734ad1fce93d53e",
+        "css/mulermoc-nom-scenario-55.css": "b73fcd95bcdd0b694934b98923e8dc871312d3d9dca676894c2d98070bf30736",
+        "css/namelecule-55.css": "042b0e93645dbc9fe5c9851bdd90a73b08f8c89fc4ef524302bd07ac7180e7a7",
+        "spt/init-55.spt": "7446cb112f8606e7f0a186435fba8612ca1ab5d4f24537b6f3df7a01de95341a",
+        "design/welcome-proposal.html": "17c04887fde8da210e7c4acd4e1458652948c0d277f180c67460e3e11ff54c2e",
+        "design/theory-library.html": "87e557a3455f14a851dc631c8d70bf93fe396f4a5ebdb8fde4fa78397158e8dc"
+      },
+      "sourceHashesAtFinish": {
+        "mulermoc-nom-55.html": "ce5c468aa884a99ee50dd997144ab78a0b55d0b3adeb62c508ccdfb80b3f4e0d",
+        "js/jsme-nick-nomeclature-moc2-data_55.js": "9387cd654b2ff3cfb058d9b97ddcca798ac13f47f769b532f9c122277ff8dd0a",
+        "js/mulermoc-nom-core-55.js": "6cbdbd0ce60f5d66ff3e6925cdfd48e470764baa02b6263f325eff356df5e270",
+        "js/mulermoc-nom-molview-55.js": "4f2fb1a53bc25e141f754ab0da5e31095c65b0318cf0a29c4fe7667fbb8d9ad5",
+        "js/mulermoc-nom-teaching-55.js": "92f5dd9708103a306c98cd7c19dc10082aa4c57d1744105fadf14074ea60ef00",
+        "js/mulermoc-nom-note-55.js": "e685355459afb7955fbe13e3b8e07c6283469b4d8acb98cfbcfa483c9f9be3ca",
+        "js/mulermoc-nom-scenario-55.js": "0e21b0fea3b8d718cd5ea600cc35a1ff7a74a99cae0f8a30bca7560634d22776",
+        "js/mulermoc-nom-iupac-55.js": "dc284baa921018fcd0a78400ffba5fce049977e6509ff98f44a4c58c09696960",
+        "js/mulermoc-nom-lang-55.js": "22fa52796f92dbeb8e480d511cf71bf48674fe229c85cdb538fcf32a517437d3",
+        "js/mulermoc-nom-name-en-55.js": "e2dd570b5cbfe1f07a3c0ce29f8e4535aeda64bf36ee85741f7f0421871042c8",
+        "js/ui-icons-55.js": "580277e98b0d29bc1df2a265d7e6e395500db9253ee8492349a145fd19a2c414",
+        "css/jsme-nick-55.css": "17c39115dfcf599f403013fb0202e5ecf55e695e4c6fa7fc4734ad1fce93d53e",
+        "css/mulermoc-nom-scenario-55.css": "b73fcd95bcdd0b694934b98923e8dc871312d3d9dca676894c2d98070bf30736",
+        "css/namelecule-55.css": "042b0e93645dbc9fe5c9851bdd90a73b08f8c89fc4ef524302bd07ac7180e7a7",
+        "spt/init-55.spt": "7446cb112f8606e7f0a186435fba8612ca1ab5d4f24537b6f3df7a01de95341a",
+        "design/welcome-proposal.html": "17c04887fde8da210e7c4acd4e1458652948c0d277f180c67460e3e11ff54c2e",
+        "design/theory-library.html": "87e557a3455f14a851dc631c8d70bf93fe396f4a5ebdb8fde4fa78397158e8dc"
+      },
+      "completed": true,
+      "javascriptErrors": 0
+    },
+    {
+      "report": "provisional-save-browser.json",
+      "sha256": "ee5fbfa210360e2cc18e5632bc40be389877b5ec16635a1d87f1bbae879d6a3a",
+      "label": "Provisional persistence/SaveAll/import/Greek systematic",
+      "kind": "Actual JSME/UI/registry/Blob/import; name/selected3Dtier fixtures",
+      "checks": 11,
+      "runtimeTarget": "final17",
+      "sourceHashesAtStart": {
+        "mulermoc-nom-55.html": "ce5c468aa884a99ee50dd997144ab78a0b55d0b3adeb62c508ccdfb80b3f4e0d",
+        "js/jsme-nick-nomeclature-moc2-data_55.js": "9387cd654b2ff3cfb058d9b97ddcca798ac13f47f769b532f9c122277ff8dd0a",
+        "js/mulermoc-nom-core-55.js": "6cbdbd0ce60f5d66ff3e6925cdfd48e470764baa02b6263f325eff356df5e270",
+        "js/mulermoc-nom-molview-55.js": "4f2fb1a53bc25e141f754ab0da5e31095c65b0318cf0a29c4fe7667fbb8d9ad5",
+        "js/mulermoc-nom-teaching-55.js": "92f5dd9708103a306c98cd7c19dc10082aa4c57d1744105fadf14074ea60ef00",
+        "js/mulermoc-nom-note-55.js": "e685355459afb7955fbe13e3b8e07c6283469b4d8acb98cfbcfa483c9f9be3ca",
+        "js/mulermoc-nom-scenario-55.js": "0e21b0fea3b8d718cd5ea600cc35a1ff7a74a99cae0f8a30bca7560634d22776",
+        "js/mulermoc-nom-iupac-55.js": "dc284baa921018fcd0a78400ffba5fce049977e6509ff98f44a4c58c09696960",
+        "js/mulermoc-nom-lang-55.js": "22fa52796f92dbeb8e480d511cf71bf48674fe229c85cdb538fcf32a517437d3",
+        "js/mulermoc-nom-name-en-55.js": "e2dd570b5cbfe1f07a3c0ce29f8e4535aeda64bf36ee85741f7f0421871042c8",
+        "js/ui-icons-55.js": "580277e98b0d29bc1df2a265d7e6e395500db9253ee8492349a145fd19a2c414",
+        "css/jsme-nick-55.css": "17c39115dfcf599f403013fb0202e5ecf55e695e4c6fa7fc4734ad1fce93d53e",
+        "css/mulermoc-nom-scenario-55.css": "b73fcd95bcdd0b694934b98923e8dc871312d3d9dca676894c2d98070bf30736",
+        "css/namelecule-55.css": "042b0e93645dbc9fe5c9851bdd90a73b08f8c89fc4ef524302bd07ac7180e7a7",
+        "spt/init-55.spt": "7446cb112f8606e7f0a186435fba8612ca1ab5d4f24537b6f3df7a01de95341a",
+        "design/welcome-proposal.html": "17c04887fde8da210e7c4acd4e1458652948c0d277f180c67460e3e11ff54c2e",
+        "design/theory-library.html": "87e557a3455f14a851dc631c8d70bf93fe396f4a5ebdb8fde4fa78397158e8dc"
+      },
+      "sourceHashesAtFinish": {
+        "mulermoc-nom-55.html": "ce5c468aa884a99ee50dd997144ab78a0b55d0b3adeb62c508ccdfb80b3f4e0d",
+        "js/jsme-nick-nomeclature-moc2-data_55.js": "9387cd654b2ff3cfb058d9b97ddcca798ac13f47f769b532f9c122277ff8dd0a",
+        "js/mulermoc-nom-core-55.js": "6cbdbd0ce60f5d66ff3e6925cdfd48e470764baa02b6263f325eff356df5e270",
+        "js/mulermoc-nom-molview-55.js": "4f2fb1a53bc25e141f754ab0da5e31095c65b0318cf0a29c4fe7667fbb8d9ad5",
+        "js/mulermoc-nom-teaching-55.js": "92f5dd9708103a306c98cd7c19dc10082aa4c57d1744105fadf14074ea60ef00",
+        "js/mulermoc-nom-note-55.js": "e685355459afb7955fbe13e3b8e07c6283469b4d8acb98cfbcfa483c9f9be3ca",
+        "js/mulermoc-nom-scenario-55.js": "0e21b0fea3b8d718cd5ea600cc35a1ff7a74a99cae0f8a30bca7560634d22776",
+        "js/mulermoc-nom-iupac-55.js": "dc284baa921018fcd0a78400ffba5fce049977e6509ff98f44a4c58c09696960",
+        "js/mulermoc-nom-lang-55.js": "22fa52796f92dbeb8e480d511cf71bf48674fe229c85cdb538fcf32a517437d3",
+        "js/mulermoc-nom-name-en-55.js": "e2dd570b5cbfe1f07a3c0ce29f8e4535aeda64bf36ee85741f7f0421871042c8",
+        "js/ui-icons-55.js": "580277e98b0d29bc1df2a265d7e6e395500db9253ee8492349a145fd19a2c414",
+        "css/jsme-nick-55.css": "17c39115dfcf599f403013fb0202e5ecf55e695e4c6fa7fc4734ad1fce93d53e",
+        "css/mulermoc-nom-scenario-55.css": "b73fcd95bcdd0b694934b98923e8dc871312d3d9dca676894c2d98070bf30736",
+        "css/namelecule-55.css": "042b0e93645dbc9fe5c9851bdd90a73b08f8c89fc4ef524302bd07ac7180e7a7",
+        "spt/init-55.spt": "7446cb112f8606e7f0a186435fba8612ca1ab5d4f24537b6f3df7a01de95341a",
+        "design/welcome-proposal.html": "17c04887fde8da210e7c4acd4e1458652948c0d277f180c67460e3e11ff54c2e",
+        "design/theory-library.html": "87e557a3455f14a851dc631c8d70bf93fe396f4a5ebdb8fde4fa78397158e8dc"
+      },
+      "completed": true,
+      "javascriptErrors": 0
+    },
+    {
+      "report": "navigation-oracles-browser.json",
+      "sha256": "6aa01ec7abdb82a58730fc85c3551cc6a9d6e3034bccda1894642ddd61206a12",
+      "label": "History/loading/oracles/standalone",
+      "kind": "Actual Back/Forward/recovery/game; controlled oracle transport timing/outcomes",
+      "checks": 9,
+      "runtimeTarget": "final17",
+      "sourceHashesAtStart": {
+        "mulermoc-nom-55.html": "ce5c468aa884a99ee50dd997144ab78a0b55d0b3adeb62c508ccdfb80b3f4e0d",
+        "js/jsme-nick-nomeclature-moc2-data_55.js": "9387cd654b2ff3cfb058d9b97ddcca798ac13f47f769b532f9c122277ff8dd0a",
+        "js/mulermoc-nom-core-55.js": "6cbdbd0ce60f5d66ff3e6925cdfd48e470764baa02b6263f325eff356df5e270",
+        "js/mulermoc-nom-molview-55.js": "4f2fb1a53bc25e141f754ab0da5e31095c65b0318cf0a29c4fe7667fbb8d9ad5",
+        "js/mulermoc-nom-teaching-55.js": "92f5dd9708103a306c98cd7c19dc10082aa4c57d1744105fadf14074ea60ef00",
+        "js/mulermoc-nom-note-55.js": "e685355459afb7955fbe13e3b8e07c6283469b4d8acb98cfbcfa483c9f9be3ca",
+        "js/mulermoc-nom-scenario-55.js": "0e21b0fea3b8d718cd5ea600cc35a1ff7a74a99cae0f8a30bca7560634d22776",
+        "js/mulermoc-nom-iupac-55.js": "dc284baa921018fcd0a78400ffba5fce049977e6509ff98f44a4c58c09696960",
+        "js/mulermoc-nom-lang-55.js": "22fa52796f92dbeb8e480d511cf71bf48674fe229c85cdb538fcf32a517437d3",
+        "js/mulermoc-nom-name-en-55.js": "e2dd570b5cbfe1f07a3c0ce29f8e4535aeda64bf36ee85741f7f0421871042c8",
+        "js/ui-icons-55.js": "580277e98b0d29bc1df2a265d7e6e395500db9253ee8492349a145fd19a2c414",
+        "css/jsme-nick-55.css": "17c39115dfcf599f403013fb0202e5ecf55e695e4c6fa7fc4734ad1fce93d53e",
+        "css/mulermoc-nom-scenario-55.css": "b73fcd95bcdd0b694934b98923e8dc871312d3d9dca676894c2d98070bf30736",
+        "css/namelecule-55.css": "042b0e93645dbc9fe5c9851bdd90a73b08f8c89fc4ef524302bd07ac7180e7a7",
+        "spt/init-55.spt": "7446cb112f8606e7f0a186435fba8612ca1ab5d4f24537b6f3df7a01de95341a",
+        "design/welcome-proposal.html": "17c04887fde8da210e7c4acd4e1458652948c0d277f180c67460e3e11ff54c2e",
+        "design/theory-library.html": "87e557a3455f14a851dc631c8d70bf93fe396f4a5ebdb8fde4fa78397158e8dc"
+      },
+      "sourceHashesAtFinish": {
+        "mulermoc-nom-55.html": "ce5c468aa884a99ee50dd997144ab78a0b55d0b3adeb62c508ccdfb80b3f4e0d",
+        "js/jsme-nick-nomeclature-moc2-data_55.js": "9387cd654b2ff3cfb058d9b97ddcca798ac13f47f769b532f9c122277ff8dd0a",
+        "js/mulermoc-nom-core-55.js": "6cbdbd0ce60f5d66ff3e6925cdfd48e470764baa02b6263f325eff356df5e270",
+        "js/mulermoc-nom-molview-55.js": "4f2fb1a53bc25e141f754ab0da5e31095c65b0318cf0a29c4fe7667fbb8d9ad5",
+        "js/mulermoc-nom-teaching-55.js": "92f5dd9708103a306c98cd7c19dc10082aa4c57d1744105fadf14074ea60ef00",
+        "js/mulermoc-nom-note-55.js": "e685355459afb7955fbe13e3b8e07c6283469b4d8acb98cfbcfa483c9f9be3ca",
+        "js/mulermoc-nom-scenario-55.js": "0e21b0fea3b8d718cd5ea600cc35a1ff7a74a99cae0f8a30bca7560634d22776",
+        "js/mulermoc-nom-iupac-55.js": "dc284baa921018fcd0a78400ffba5fce049977e6509ff98f44a4c58c09696960",
+        "js/mulermoc-nom-lang-55.js": "22fa52796f92dbeb8e480d511cf71bf48674fe229c85cdb538fcf32a517437d3",
+        "js/mulermoc-nom-name-en-55.js": "e2dd570b5cbfe1f07a3c0ce29f8e4535aeda64bf36ee85741f7f0421871042c8",
+        "js/ui-icons-55.js": "580277e98b0d29bc1df2a265d7e6e395500db9253ee8492349a145fd19a2c414",
+        "css/jsme-nick-55.css": "17c39115dfcf599f403013fb0202e5ecf55e695e4c6fa7fc4734ad1fce93d53e",
+        "css/mulermoc-nom-scenario-55.css": "b73fcd95bcdd0b694934b98923e8dc871312d3d9dca676894c2d98070bf30736",
+        "css/namelecule-55.css": "042b0e93645dbc9fe5c9851bdd90a73b08f8c89fc4ef524302bd07ac7180e7a7",
+        "spt/init-55.spt": "7446cb112f8606e7f0a186435fba8612ca1ab5d4f24537b6f3df7a01de95341a",
+        "design/welcome-proposal.html": "17c04887fde8da210e7c4acd4e1458652948c0d277f180c67460e3e11ff54c2e",
+        "design/theory-library.html": "87e557a3455f14a851dc631c8d70bf93fe396f4a5ebdb8fde4fa78397158e8dc"
+      },
+      "completed": true,
+      "javascriptErrors": 0
+    }
+  ],
+  "allFormAudit": {
+    "report": "final-label-audit.json.gz",
+    "sha256": "5c644c8dc88012e8dabfd8dddaf19dcab529e5ae0fd86dbf1bd9f50af7407dae",
+    "runtimeTarget": "initial-frozen17",
+    "cases": 562,
+    "skeletalForms": 140,
+    "expandedForms": 141,
+    "widths": [
+      1500,
+      390
+    ],
+    "failures": 0,
+    "javascriptErrors": 0,
+    "scope": "Real SVG/raster/ownership audit via direct renderer API; not562manual UI flows. Standard mobile rotate overlay may cover the measured drawing; actual dismissal/visible2D interaction is covered by normal lesson and pointer supplements."
+  },
+  "coldSettingsSubset": {
+    "report": "shell-lessons-browser-before-player-ready.json",
+    "sha256": "084f718a08dd1d690815e52abf4839c67af3738a2c2a1c61a57956a9310af3a7",
+    "passedChecks": [
+      {
+        "label": "Cold55 startup has141 molecules/422forms",
+        "detail": null
+      },
+      {
+        "label": "Cold55 actual core/viewer55 scripts loaded",
+        "detail": null
+      },
+      {
+        "label": "Cold real methane3D has5atoms",
+        "detail": null
+      },
+      {
+        "label": "New/Edit and SaveAll chrome exists",
+        "detail": null
+      },
+      {
+        "label": "gr settingsregistry/barlabels translatewithoutlosingwidgets",
+        "detail": [
+          {
+            "key": "chainCalc",
+            "actual": "Υπολογισμός κύριας αλυσίδας:",
+            "expected": "Υπολογισμός κύριας αλυσίδας:",
+            "widget": true
+          },
+          {
+            "key": "showOrig2D",
+            "actual": "Σχεδίαση και προσθήκη μορίων:",
+            "expected": "Σχεδίαση και προσθήκη μορίων:",
+            "widget": true
+          },
+          {
+            "key": "autoLinearize",
+            "actual": "Αυτόματη γραμμικοποίηση:",
+            "expected": "Αυτόματη γραμμικοποίηση:",
+            "widget": true
+          },
+          {
+            "key": "hlAtoms",
+            "actual": "Επισήμανση ατόμων κατά την αρίθμηση:",
+            "expected": "Επισήμανση ατόμων κατά την αρίθμηση:",
+            "widget": true
+          },
+          {
+            "key": "hlBonds",
+            "actual": "Επισήμανση δεσμών κατά την αρίθμηση:",
+            "expected": "Επισήμανση δεσμών κατά την αρίθμηση:",
+            "widget": true
+          },
+          {
+            "key": "hlBondAtoms",
+            "actual": "Επισήμανση ατόμων δεσμών:",
+            "expected": "Επισήμανση ατόμων δεσμών:",
+            "widget": true
+          },
+          {
+            "key": "atomColor2D",
+            "actual": "Χρωματισμός ατόμων 2D:",
+            "expected": "Χρωματισμός ατόμων 2D:",
+            "widget": true
+          },
+          {
+            "key": "maxHeight1",
+            "actual": "Όριο ύψους μεμονωμένου viewer:",
+            "expected": "Όριο ύψους μεμονωμένου viewer:",
+            "widget": true
+          },
+          {
+            "key": "bothHeight",
+            "actual": "Ύψος δύο viewers (σύνολο):",
+            "expected": "Ύψος δύο viewers (σύνολο):",
+            "widget": true
+          },
+          {
+            "key": "atomSymbolsBar",
+            "actual": "Σύμβολα ατόμων",
+            "expected": "Σύμβολα ατόμων",
+            "widget": true
+          }
+        ]
+      },
+      {
+        "label": "gr latestsettingsregistry andsingleSaveAlllocation",
+        "detail": null
+      },
+      {
+        "label": "gr actual traditional/common→systematic name display changes",
+        "detail": {
+          "before": {
+            "name": "4-αιθυλο-3-ισοπροπυλο-2-μεθυλοεξανάλη",
+            "text": "Ονομασία   Υποκαταστάτες:ΚοινήΣυστηματικήΚύρια αλυσίδα:2/24- + αιθυλο + -3- + ισοπροπυλο + -2- + μεθυλο + εξ + αν + άλη"
+          },
+          "after": {
+            "name": "4-αιθυλο-3-ισοπροπυλο-2-μεθυλοεξανάλη",
+            "text": "Ονομασία   Υποκαταστάτες:ΚοινήΣυστηματικήΚύρια αλυσίδα:2/24-αιθυλο + -2-μεθυλο + -3-(προπαν-2-υλο) + εξ + αν + άλη"
+          }
+        }
+      },
+      {
+        "label": "gr name components remain selectable",
+        "detail": null
+      },
+      {
+        "label": "gr component selection keeps2D viewer usable",
+        "detail": null
+      },
+      {
+        "label": "en settingsregistry/barlabels translatewithoutlosingwidgets",
+        "detail": [
+          {
+            "key": "chainCalc",
+            "actual": "Main chain calculation:",
+            "expected": "Main chain calculation:",
+            "widget": true
+          },
+          {
+            "key": "showOrig2D",
+            "actual": "Enable drawing and adding new molecules:",
+            "expected": "Enable drawing and adding new molecules:",
+            "widget": true
+          },
+          {
+            "key": "autoLinearize",
+            "actual": "Auto-linearize:",
+            "expected": "Auto-linearize:",
+            "widget": true
+          },
+          {
+            "key": "hlAtoms",
+            "actual": "Highlight atoms on numbering:",
+            "expected": "Highlight atoms on numbering:",
+            "widget": true
+          },
+          {
+            "key": "hlBonds",
+            "actual": "Highlight bonds on numbering:",
+            "expected": "Highlight bonds on numbering:",
+            "widget": true
+          },
+          {
+            "key": "hlBondAtoms",
+            "actual": "Highlight bond atoms:",
+            "expected": "Highlight bond atoms:",
+            "widget": true
+          },
+          {
+            "key": "atomColor2D",
+            "actual": "2D atom coloring:",
+            "expected": "2D atom coloring:",
+            "widget": true
+          },
+          {
+            "key": "maxHeight1",
+            "actual": "Single viewer max height:",
+            "expected": "Single viewer max height:",
+            "widget": true
+          },
+          {
+            "key": "bothHeight",
+            "actual": "Two viewers height (total):",
+            "expected": "Two viewers height (total):",
+            "widget": true
+          },
+          {
+            "key": "atomSymbolsBar",
+            "actual": "Atom Symbols",
+            "expected": "Atom Symbols",
+            "widget": true
+          }
+        ]
+      },
+      {
+        "label": "en latestsettingsregistry andsingleSaveAlllocation",
+        "detail": null
+      },
+      {
+        "label": "en actual traditional/common→systematic name display changes",
+        "detail": {
+          "before": {
+            "name": "4-αιθυλο-3-ισοπροπυλο-2-μεθυλοεξανάλη",
+            "text": "Naming   Substituents:TraditionalSystematicMain chain:2/24- + ethyl + -3- + isopropyl + -2- + methyl + hex + an + al"
+          },
+          "after": {
+            "name": "4-αιθυλο-3-ισοπροπυλο-2-μεθυλοεξανάλη",
+            "text": "Naming   Substituents:TraditionalSystematicMain chain:2/24- + ethyl + -2- + methyl + -3- + (propan-2-yl) + hex + an + al"
+          }
+        }
+      },
+      {
+        "label": "en name components remain selectable",
+        "detail": null
+      },
+      {
+        "label": "en component selection keeps2D viewer usable",
+        "detail": null
+      },
+      {
+        "label": "gr settingsregistry/barlabels translatewithoutlosingwidgets",
+        "detail": [
+          {
+            "key": "chainCalc",
+            "actual": "Υπολογισμός κύριας αλυσίδας:",
+            "expected": "Υπολογισμός κύριας αλυσίδας:",
+            "widget": true
+          },
+          {
+            "key": "showOrig2D",
+            "actual": "Σχεδίαση και προσθήκη μορίων:",
+            "expected": "Σχεδίαση και προσθήκη μορίων:",
+            "widget": true
+          },
+          {
+            "key": "autoLinearize",
+            "actual": "Αυτόματη γραμμικοποίηση:",
+            "expected": "Αυτόματη γραμμικοποίηση:",
+            "widget": true
+          },
+          {
+            "key": "hlAtoms",
+            "actual": "Επισήμανση ατόμων κατά την αρίθμηση:",
+            "expected": "Επισήμανση ατόμων κατά την αρίθμηση:",
+            "widget": true
+          },
+          {
+            "key": "hlBonds",
+            "actual": "Επισήμανση δεσμών κατά την αρίθμηση:",
+            "expected": "Επισήμανση δεσμών κατά την αρίθμηση:",
+            "widget": true
+          },
+          {
+            "key": "hlBondAtoms",
+            "actual": "Επισήμανση ατόμων δεσμών:",
+            "expected": "Επισήμανση ατόμων δεσμών:",
+            "widget": true
+          },
+          {
+            "key": "atomColor2D",
+            "actual": "Χρωματισμός ατόμων 2D:",
+            "expected": "Χρωματισμός ατόμων 2D:",
+            "widget": true
+          },
+          {
+            "key": "maxHeight1",
+            "actual": "Όριο ύψους μεμονωμένου viewer:",
+            "expected": "Όριο ύψους μεμονωμένου viewer:",
+            "widget": true
+          },
+          {
+            "key": "bothHeight",
+            "actual": "Ύψος δύο viewers (σύνολο):",
+            "expected": "Ύψος δύο viewers (σύνολο):",
+            "widget": true
+          },
+          {
+            "key": "atomSymbolsBar",
+            "actual": "Σύμβολα ατόμων",
+            "expected": "Σύμβολα ατόμων",
+            "widget": true
+          }
+        ]
+      },
+      {
+        "label": "gr latestsettingsregistry andsingleSaveAlllocation",
+        "detail": null
+      },
+      {
+        "label": "gr actual traditional/common→systematic name display changes",
+        "detail": {
+          "before": {
+            "name": "4-αιθυλο-3-ισοπροπυλο-2-μεθυλοεξανάλη",
+            "text": "Ονομασία   Υποκαταστάτες:ΚοινήΣυστηματικήΚύρια αλυσίδα:2/24- + αιθυλο + -3- + ισοπροπυλο + -2- + μεθυλο + εξ + αν + άλη"
+          },
+          "after": {
+            "name": "4-αιθυλο-3-ισοπροπυλο-2-μεθυλοεξανάλη",
+            "text": "Ονομασία   Υποκαταστάτες:ΚοινήΣυστηματικήΚύρια αλυσίδα:2/24-αιθυλο + -2-μεθυλο + -3-(προπαν-2-υλο) + εξ + αν + άλη"
+          }
+        }
+      },
+      {
+        "label": "gr name components remain selectable",
+        "detail": null
+      },
+      {
+        "label": "gr component selection keeps2D viewer usable",
+        "detail": null
+      }
+    ],
+    "runtimeTarget": "initial-frozen17",
+    "subsequentHarnessFailure": "Combined run stopped when its programmatic lesson setup omitted MuLERMoCScenario.ready; resolved by explicit player-ready condition, then all14lesson phase passed. Cold/startup/settings subset is retained evidence, not a completed combined run."
+  },
+  "partialAuthoringReuse": {
+    "report": "authoring-partial-frozen17-report.json",
+    "sha256": "859e934f3c8cb92c06f20936a10e098cefd9a8a9980d216429531a74866c7d59",
+    "passedChecks": 25,
+    "runtimeTarget": "initial-frozen17",
+    "notRerunOnFinal17": true,
+    "failure": "Further-round reload rejected actual JSmol CH2 parity; raw failure preserved. Root RV55-03 correction was then verified by actual6 local-min/STOP/recovery/further checks and independent root source/chemical review."
+  },
+  "functionSectionLineage": {
+    "method": "SHA256 of top-level named function section, including following comments until the next top-level function; matches root viewer test extraction convention.",
+    "oldViewer": "viewer/rv55-01/before-viewer55.js",
+    "oldViewerSHA256": "fdca88ddb7317759d996423ad20016d9333f0f53ba4253a537c78ac95c473de5",
+    "currentViewerSHA256": "4f2fb1a53bc25e141f754ab0da5e31095c65b0318cf0a29c4fe7667fbb8d9ad5",
+    "sections": {
+      "fMolDraftEnter": {
+        "old": "0422d790c8cfc0a3095d8dfdcbd3d3035ad171f621ea41a5e3d54b11fc96d515",
+        "current": "0422d790c8cfc0a3095d8dfdcbd3d3035ad171f621ea41a5e3d54b11fc96d515",
+        "unchanged": true
+      },
+      "fMolDraftReadDrawing": {
+        "old": "feaf6dd8569b2d91cdc436ef6ba6a57e3de4e5274cb9beb9ae9dc2831b945505",
+        "current": "feaf6dd8569b2d91cdc436ef6ba6a57e3de4e5274cb9beb9ae9dc2831b945505",
+        "unchanged": true
+      },
+      "fMolDraftIsSameMolecule": {
+        "old": "e3dd336433d84efff158a8ce22f7e8414247fbab33e3490250efbf68a0b0fdf1",
+        "current": "e3dd336433d84efff158a8ce22f7e8414247fbab33e3490250efbf68a0b0fdf1",
+        "unchanged": true
+      },
+      "fMolDraftSyncBar": {
+        "old": "b9f2948ecfcf9ef40eb647613bfd34acf041f2f25fce4806ea71e7b9527aef65",
+        "current": "b9f2948ecfcf9ef40eb647613bfd34acf041f2f25fce4806ea71e7b9527aef65",
+        "unchanged": true
+      },
+      "fMolDraftSubmit": {
+        "old": "ad813557aac62f7a6488904547af901ec16bed62da14cb2a94389f468da84018",
+        "current": "ad813557aac62f7a6488904547af901ec16bed62da14cb2a94389f468da84018",
+        "unchanged": true
+      },
+      "fMolDraftAccept": {
+        "old": "0527ee66bda02f6f4e8d45aaf2d860f3dffca01ccdd434691ff71b8003ec8595",
+        "current": "0527ee66bda02f6f4e8d45aaf2d860f3dffca01ccdd434691ff71b8003ec8595",
+        "unchanged": true
+      },
+      "fMolDraftMinWaitShow": {
+        "old": "1a31f76f7cd3a6db4c1dab8a4cc6351b48d43a7715feac85f0d822dcc55f45b9",
+        "current": "1a31f76f7cd3a6db4c1dab8a4cc6351b48d43a7715feac85f0d822dcc55f45b9",
+        "unchanged": true
+      },
+      "fMolDraftMinWaitAbort": {
+        "old": "ca6ed04eb2dcc664cb7dd6ab7b4507f3e99e14d9501661966504ca4fc8cac3e2",
+        "current": "ca6ed04eb2dcc664cb7dd6ab7b4507f3e99e14d9501661966504ca4fc8cac3e2",
+        "unchanged": true
+      },
+      "fMolDraftManualMinimize": {
+        "old": "e7999d3eb0fdf91c8ebec21f71781169bb0a36c28ce250fe65415e3ae8d5eb51",
+        "current": "e7999d3eb0fdf91c8ebec21f71781169bb0a36c28ce250fe65415e3ae8d5eb51",
+        "unchanged": true
+      },
+      "fMolDraftSet3D": {
+        "old": "ec4a7b9136f782de75acf5e0d0b0ac66f454d25b145a721e407ce0e3000864c5",
+        "current": "ec4a7b9136f782de75acf5e0d0b0ac66f454d25b145a721e407ce0e3000864c5",
+        "unchanged": true
+      },
+      "fMolDraftDownloadBundle": {
+        "old": "4cfb81a54990dc4375a3c9e2bfea50b5df21aff50045a6211c912de935734ad2",
+        "current": "4cfb81a54990dc4375a3c9e2bfea50b5df21aff50045a6211c912de935734ad2",
+        "unchanged": true
+      },
+      "fMolDraftSaveAllCustom": {
+        "old": "be02c33fc258ca286c4dbb3bbe86176d90c6322aa047d3c070cc36903a5ee85d",
+        "current": "be02c33fc258ca286c4dbb3bbe86176d90c6322aa047d3c070cc36903a5ee85d",
+        "unchanged": true
+      },
+      "fMolDraftReadBackSDF": {
+        "old": "b9cd8173832ead8cee6aa25e2762b021707eef1e7b7ca354d3987496c02b10b9",
+        "current": "2e6effabe755fb5eb990ca04f231db2e1679a437c70533917535625599e1b85b",
+        "unchanged": false
+      },
+      "fJoinGreekSysName": {
+        "old": "46221cdc483ab8761fe29c376f0c1c79145c3ca52e51179b61fc662042e1a415",
+        "current": "98447598358b51eca70d45c5691c80f3246403cd1664d7d509dfad25d29ebf3d",
+        "unchanged": false
+      },
+      "fLoadMol2D": {
+        "old": "efb1a065aa75f8b6d3a776b51af8f2705368531ee5744a5f1d81423bee2ee618",
+        "current": "efb1a065aa75f8b6d3a776b51af8f2705368531ee5744a5f1d81423bee2ee618",
+        "unchanged": true
+      },
+      "fUpdateSVG": {
+        "old": "f3da53beeec4c9e710d2c89c5fe5dfba82dcd1544f2f95e5b1044aee01da2fc7",
+        "current": "f3da53beeec4c9e710d2c89c5fe5dfba82dcd1544f2f95e5b1044aee01da2fc7",
+        "unchanged": true
+      },
+      "fPrepareFixedCCAlkanePrototype": {
+        "old": "fcff53c05bbe5b54a37b3dc55aa90a436ffd0f866653ed7397be291e1230d411",
+        "current": "fcff53c05bbe5b54a37b3dc55aa90a436ffd0f866653ed7397be291e1230d411",
+        "unchanged": true
+      },
+      "fShowNameAnalysis": {
+        "old": "94841ac820de78b7dea7c6162afd7ea1675076dc78d63e9f9501b9faf4485c0b",
+        "current": "94841ac820de78b7dea7c6162afd7ea1675076dc78d63e9f9501b9faf4485c0b",
+        "unchanged": true
+      },
+      "fSelectMol": {
+        "old": "88aef3895aa5cb852a87137ef45252bd005b1f1066b142d731b77a9dd0d3eeeb",
+        "current": "88aef3895aa5cb852a87137ef45252bd005b1f1066b142d731b77a9dd0d3eeeb",
+        "unchanged": true
+      }
+    }
+  },
+  "reuseReferences": [
+    "../review-corrections-addendum.json",
+    "../review-rv55-03-addendum.json",
+    "../review-progress.json"
+  ],
+  "correctedFindings": {
+    "RV55-01": "Targeted final Greek getter/panel/draft passed in provisional-save-browser.json.",
+    "RV55-02": "Root JSC/Reviewer queue pacing verification; browser oracle fixtures cover state/error attribution, not the real throttle or external service availability.",
+    "RV55-03": "Real local minimize activeSTOP/recovery/configured200step further passed. Physical geometry/convergence remain unverified."
+  },
+  "visualEvidence": [
+    "pointer-calibration-v55-dimethyl_2_3_butane-1500.png",
+    "pointer-calibration-v55-isopropyl_4_dimethyl_3_5_heptanol_2-1500.png",
+    "pointer-calibration-v55-isopropyl_ethanoate-390.png",
+    "step12-1280.png",
+    "step12-390.png",
+    "real-local-minimize-provisional.png",
+    "provisional-info-saved.png"
+  ],
+  "limitations": [
+    "Owned headless Firefox and viewport emulation only; no personal GUI Firefox was touched.",
+    "No physical mobile/Safari/screenreader/conference-machine/cold offline acceptance; no uninterrupted-operation guarantee.",
+    "JSmol/font/vendor external dependencies remain; actual cold lookup/console warnings are retained separately. No all-network-success claim.",
+    "Name/oracle and selected3Dtier transports are explicitly controlled fixtures where labeled; actual local librarySDF3D and local minimizer phases are distinguished.",
+    "Geometry/readability raster checks do not certify nomenclature or molecular graph correctness; root core/chemistry suites supply separate evidence.",
+    "Passing local minimizer checks establishes guarded graph-matched provisional output and recovery, not physical convergence or optimized geometry.",
+    "Candidate React runtime was not exercised in this browser phase; bounded primary React smoke is pending after exact install.",
+    "Original raw calibration screenshots measure renderer output; use pointer supplements for synchronized visible UI evidence."
+  ],
+  "ownedProcessesKeptForPrimarySmoke": {
+    "candidateRoot": "/private/tmp/namelecule-professor-merge-20261109-oxj7hfyy/candidate",
+    "http_port": 49407,
+    "bidi_port": 49629,
+    "base_url": "http://127.0.0.1:49407/organic-nomenclature-3/",
+    "profile": "/var/folders/2v/ds4vjvgj1_1000kq1fzg70q40000gn/T/namelecule-v55-final-owned-firefox-r9dk6seo",
+    "serverPID": 74701,
+    "firefoxPID": 74840,
+    "launchedUTC": "2026-11-09T22:18:17Z",
+    "cleanupGuard": "Only kill recorded PIDs when ps command includes exact owned profile/serve.py token; never personal GUI Firefox",
+    "restartReason": "Owned successful diagnostic serialization error left its connection-specific BiDi session; restart owned private Firefox only"
+  },
+  "productionWritesByThisAgent": false,
+  "coreFilesChangedByThisAgent": false,
+  "noCommitPushPublication": true
+}

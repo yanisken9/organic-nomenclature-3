@@ -1,0 +1,785 @@
+diff --git "a/Users/yannisskendros/Desktop/\316\224\316\271\317\200\316\273\317\211\316\274\316\261\317\204\316\271\316\272\316\256 - \316\237\316\275\316\277\316\274\316\261\317\204\316\277\316\273\316\277\316\263\316\257\316\261/organic-nomenclature-3/docs/checks/v54-merge-20261109/upstream/target/js/mulermoc-nom-core-55.js" b/private/tmp/namelecule-professor-merge-20261109-oxj7hfyy/candidate/js/mulermoc-nom-core-55.js
+index 6777d58..f164e5e 100644
+--- "a/Users/yannisskendros/Desktop/\316\224\316\271\317\200\316\273\317\211\316\274\316\261\317\204\316\271\316\272\316\256 - \316\237\316\275\316\277\316\274\316\261\317\204\316\277\316\273\316\277\316\263\316\257\316\261/organic-nomenclature-3/docs/checks/v54-merge-20261109/upstream/target/js/mulermoc-nom-core-55.js"	
++++ b/private/tmp/namelecule-professor-merge-20261109-oxj7hfyy/candidate/js/mulermoc-nom-core-55.js
+@@ -65,6 +65,7 @@ let mainChainPool3DKey = null
+ // heavy-atom counts stop matching; cleared in fInitProps like the pools.
+ let molAtomMap2D3D = null
+ let molAtomMapKey = null
++let molAtomMapSource3D = null
+ 
+ // ── Naming globals ────────────────────────────────────────────────────────
+ let nameComponentsList = []
+@@ -156,7 +157,7 @@ function fGetMoleculeClassification() {
+ // ── fInitNamingProps ──────────────────────────────────────────────────────
+ 
+ function fInitNamingProps() {
+-    nameMainCompList1 = ["μεθ", "αιθ", "προπ", "βουτ", "πεντ", "εξ", "επτ", "οκτ", "εννεα", "δεκ", "ενδεκ", "δωδεκ", "δεκατρι", "δεκατεσσερ", "δεκαπεντ", "δεκαεξ", "δεκαεπτ", "δεκαοκτ", "δεκαεννι", "εικοσ"]
++    nameMainCompList1 = ["μεθ", "αιθ", "προπ", "βουτ", "πεντ", "εξ", "επτ", "οκτ", "εννε", "δεκ", "ενδεκ", "δωδεκ", "δεκατρι", "δεκατεσσερ", "δεκαπεντ", "δεκαεξ", "δεκαεπτ", "δεκαοκτ", "δεκαεννι", "εικοσ"]
+ 
+     nameMainCompObj3 = {
+         hydrocarbon: { suffix: "ιο", substitute: "" },
+@@ -185,7 +186,19 @@ function fInitNamingProps() {
+         5: "πεντυλο",
+         6: "εξυλο",
+         7: "επτυλο",
+-        8: "οκτυλο"
++        8: "οκτυλο",
++        9: "εννεϋλο",
++        10: "δεκυλο",
++        11: "ενδεκυλο",
++        12: "δωδεκυλο",
++        13: "δεκατριυλο",
++        14: "δεκατεσσερυλο",
++        15: "δεκαπεντυλο",
++        16: "δεκαεξυλο",
++        17: "δεκαεπτυλο",
++        18: "δεκαοκτυλο",
++        19: "δεκαεννυλο",
++        20: "εικοσυλο"
+     }
+ 
+     nameMultiPrefix = ["", "δι", "τρι", "τετρα", "πεντα", "εξα", "επτα", "οκτα"]
+@@ -2223,10 +2236,35 @@ function fRankChainPool(paths, req, scoreFn, orientFn, connList, typeList, bonds
+ // Common alkyl names include all three C4 shapes; systematic alkoxy retains
+ // only the established isopropoxy and the permitted tert-butoxy prefix.
+ // Other shapes return null for the existing caller fallback.
+-function fAlkylGroupName(len, attachC, kind, fragment, connList, typeList) {
+-    if (attachC == null || !fragment || ![3,4].includes(len)) return null
++function fAlkylGroupName(len, attachC, kind, fragment, connList, typeList, bonds) {
++    // The longer names are valid only for a saturated carbon path attached
++    // at an endpoint. Carbon count alone cannot identify an alkyl group.
++    const unavailable = "[μη υποστηριζόμενη ομάδα]"
++    if (attachC == null || !fragment) return len >= 9 ? unavailable : null
+     connList = connList || atomConnectivityList; typeList = typeList || allAtomsTypeList
+     const inside = new Set(fragment)
++    if (len >= 9) {
++        if (len > 20 || inside.size !== len || !inside.has(attachC) ||
++            [...inside].some(i => typeList[i] !== 'C')) return unavailable
++        if (!bonds) {
++            if (connList === atomConnectivityList && typeList === allAtomsTypeList) bonds = bondList
++            else if (connList === atomConnectivityList3D && typeList === allAtomsTypeList3D) bonds = bondList3D
++        }
++        if (!Array.isArray(bonds)) return unavailable
++        const internal = bonds.filter(b => inside.has(b[0] - 1) && inside.has(b[1] - 1))
++        if (internal.length !== len - 1 || internal.some(b => b[2] !== 1)) return unavailable
++        const degree = i => (connList[i] || []).filter(n => inside.has(n)).length
++        if (degree(attachC) !== 1 || [...inside].filter(i => degree(i) === 1).length !== 2 ||
++            [...inside].some(i => degree(i) < 1 || degree(i) > 2)) return unavailable
++        const seen = new Set([attachC]), stack = [attachC]
++        while (stack.length) for (const n of connList[stack.pop()] || []) {
++            if (inside.has(n) && !seen.has(n)) { seen.add(n); stack.push(n) }
++        }
++        if (seen.size !== len) return unavailable
++        if (kind === 'alkoxy') return alkoxyNames[len] || unavailable
++        return kind === 'substituent' ? (alkylSubstituentNames[len] || unavailable) : unavailable
++    }
++    if (![3,4].includes(len)) return null
+     if (inside.size !== len || [...inside].some(i => typeList[i] !== 'C')) return null
+     const degree = i => (connList[i] || []).filter(n => inside.has(n)).length
+     const d = degree(attachC), degrees = [...inside].map(degree).sort().join(',')
+@@ -2264,7 +2302,7 @@ function fDescribeCarbonBranches(path, connList, typeList) {
+                 locant: pos + 1, length: side.size, attach: attach,
+                 atoms: Array.from(side), signature: rooted(attach, new Set()),
+                 name: fAlkylGroupName(side.size, attach, "substituent", side, connList, typeList)
+-                    || alkylSubstituentNames[Math.min(side.size, 8)] || "αλκυλο"
++                    || alkylSubstituentNames[side.size] || "αλκυλο"
+             })
+         }
+     }
+@@ -2397,7 +2435,9 @@ function fNameDecoratedBranch(mainAtom0b, attach0b, side, main, connList, typeLi
+         const paths = fLongestPathsFrom(attach0b, side, connList)
+         if (!paths.length) return null
+         const L = paths[0].length
+-        if (L > 8 || !alkylSubstituentNames[L]) return null
++        // The v1 name describes one rooted path only. A fork would leave
++        // side carbons unnamed; leave it unclaimed so naming declines.
++        if (L !== side.size || L > 8 || !alkylSubstituentNames[L]) return null
+         // hetero must sit on every longest path at the same distance
+         let heteroDist = -1
+         for (const p of paths) {
+@@ -2490,21 +2530,18 @@ function fHorizontalEquivalentIndex(pool, reference) {
+     if (!pool.length || !Array.isArray(reference)) return -1
+     const signature = fNumberedChainSignature(reference, allAtomsTypeList, bondList)
+     if (signature === null) return -1
+-    let lines
++    let lines, countsLine
+     try {
+         const text = typeof jsmeNomeclatureApplet.molFile === 'function'
+             ? jsmeNomeclatureApplet.molFile()
+             : (typeof window !== 'undefined' && window.MOL2D && window.MOL2D[selectedMol]
+                 ? window.MOL2D[selectedMol][mode2D] : null)
+         if (!text) return -1
+-        lines = String(text).split(/\r?\n/)
+-        // Counts line located by shape (JSME depict output uses a 2-line
+-        // header); fail closed on mismatch exactly as before.
+-        const ci = (typeof fMolCountsLine === "function") ? fMolCountsLine(lines) : 3
+-        if (ci < 0 || Number((lines[ci] || "").slice(0, 3)) !== allAtomsTypeList.length) return -1
+-        var _ciOff = ci + 1
++        lines = text.split(/\r?\n/)
++        countsLine = fMolCountsLine(lines)
++        if (countsLine < 0 || Number(lines[countsLine].slice(0, 3)) !== allAtomsTypeList.length) return -1
+     } catch (e) { return -1 }
+-    const coords = lines.slice(_ciOff, _ciOff + allAtomsTypeList.length).map(line =>
++    const coords = lines.slice(countsLine + 1, countsLine + 1 + allAtomsTypeList.length).map(line =>
+         [Number(line.slice(0, 10)), Number(line.slice(10, 20))])
+     function score(chain) {
+         let vertical = 0, travel = 0, length = 0
+@@ -2663,17 +2700,16 @@ function fTranslateChain2D3D(chain) {
+         try { M = molAtomMap2D3D } catch (eG) { M = null }
+         var K = null
+         try { K = molAtomMapKey } catch (eK) { K = null; }
+-        if (!M || !M.arr || K !== selectedMol || M.n2 !== n2 || M.n3 !== n3) {
+-            M = fBuildHeavyMap2D3D(false);
+-            if (!M) {
+-                // Order-ignorant fallback: still bijective (symmetric chains
+-                // keep stepping), but single/double identity is unchecked
+-                // (keto/enol-class mismatch possible). Logged so REVIEW can
+-                // tell strict maps from fallback ones.
+-                try { console.warn("[map2D3D] strict build failed for " + selectedMol + ", trying order-ignorant fallback"); } catch (eW) {}
+-                M = fBuildHeavyMap2D3D(true);
+-            }
+-            try { molAtomMap2D3D = M; molAtomMapKey = selectedMol } catch (eS) {}
++        // Representation switches can reorder atoms without changing counts.
++        // Key every ordered graph input and the source records (which include
++        // charge/isotope/stereo fields), not just the selected molecule/size.
++        var source2D = null;
++        try { source2D = jsmeNomeclatureApplet.molFile(); } catch (eSource) {}
++        var graphKey = JSON.stringify([selectedMol, allAtomsTypeList, bondList,
++            allAtomsTypeList3D, bondList3D, source2D, molAtomMapSource3D]);
++        if (!M || !M.arr || K !== graphKey || M.n2 !== n2 || M.n3 !== n3) {
++            M = fBuildHeavyMap2D3D(false)
++            try { molAtomMap2D3D = M; molAtomMapKey = graphKey } catch (eS) {}
+         }
+         if (!M || !M.arr) return null
+         var out = []
+@@ -2695,21 +2731,26 @@ function fTranslateChain2D3D(chain) {
+ // Condensed = linear main chain + orthogonal branches (school form); expanded
+ // = condensed + explicit H; skeletal comes from JSME (molview side, scientific
+ // zigzag). Deterministic and offline. No DOM, no jQuery.
+-// V2000 counts-line locator: the counts line is NOT always at index 3.
+-// Stored MOLs use the standard 3-line header, but JSME depict output uses a
+-// 2-line header (name + blank), putting counts at index 2. Locate by shape
+-// instead of position: first line (within the first 8) that starts with two
+-// integers AND contains the V2000 tag. Atom/bond lines never contain the tag,
+-// so false positives are impossible in practice. Returns the line index or -1.
++// Locate a bounded V2000 counts line in standard or short JSME headers.
++// The atom and bond counts are separate three-column fields: contiguous
++// three-digit values (e.g. 101100) are valid and need no whitespace separator.
++// Versionless legacy records retain their standard index-3 counts line.
++// Returns the line index (0..7), or -1 when either fixed-width field is invalid.
+ function fMolCountsLine(lines) {
+   try {
+     if (!lines || !lines.length) return -1;
+-    var lim = Math.min(lines.length, 8);
+-    for (var i = 0; i < lim; i++) {
++    for (var i = 0, lim = Math.min(lines.length, 8); i < lim; i++) {
+       var L = lines[i];
+-      if (!L || L.indexOf("V2000") < 0) continue;
+-      if (/^\s*\d{1,3}\s+\d{1,3}\b/.test(L)) return i;
+-    }
++      if (typeof L !== 'string' || !/\bV2000\b/.test(L)) continue;
++      if (/^\d{1,3}$/.test(L.substring(0, 3).trim()) &&
++          /^\d{1,3}$/.test(L.substring(3, 6).trim())) return i;
++    }
++    // Older library SDFs omit the version tag. Preserve their existing strict
++    // standard-header read without treating arbitrary short-header lines as counts.
++    var legacy = lines[3];
++    if (typeof legacy === 'string' && !/V\d+/.test(legacy) &&
++        /^\d{1,3}$/.test(legacy.substring(0, 3).trim()) &&
++        /^\d{1,3}$/.test(legacy.substring(3, 6).trim())) return 3;
+   } catch (e) {}
+   return -1;
+ }
+@@ -2718,68 +2759,177 @@ function fParseMolV2000(text) {
+   try {
+     if (!text) return null;
+     var lines = String(text).split(/\r?\n/);
+-    if (lines.length < 5) return null;
+     var ci = fMolCountsLine(lines);
+     if (ci < 0) return null;
+-    var nA = parseInt(lines[ci].substring(0, 3), 10);
+-    var nB = parseInt(lines[ci].substring(3, 6), 10);
+-    if (!(nA >= 0) || !(nB >= 0)) return null;
+-    // Fail closed on truncated reads (JSME async-layout race can return a
+-    // header + counts line with a short/missing atom block): require the full
+-    // declared body to be present, require a non-empty element field per atom
+-    // (no phantom C@(0,0)), and require at least one valid bond when bonds
+-    // were declared for a multi-atom molecule.
+-    if (lines.length < ci + 1 + nA + nB) return null;
+-    var atoms = [], bonds = [];
++    var nA = Number(lines[ci].substring(0, 3)), nB = Number(lines[ci].substring(3, 6));
++    if (!Number.isInteger(nA) || !Number.isInteger(nB) || nA < 0 || nB < 0 || lines.length < ci + 1 + nA + nB) return null;
++    var atoms = [], bonds = [], chargeCodes = { 0: 0, 1: 3, 2: 2, 3: 1, 4: 0, 5: -1, 6: -2, 7: -3 };
+     for (var i = 0; i < nA; i++) {
+-      var L = lines[ci + 1 + i] || "";
+-      var _el = (L.substring(31, 34) || "").trim();
+-      if (!_el) return null;
+-      var _x = parseFloat(L.substring(0, 10)), _y = parseFloat(L.substring(10, 20)), _z = parseFloat(L.substring(20, 30));
+-      if (!isFinite(_x) || !isFinite(_y) || !isFinite(_z)) return null;
+-      atoms.push({ x: _x, y: _y, z: _z, el: _el });
++      var L = lines[ci + 1 + i], code = Number(L.substring(36, 39));
++      var x = Number(L.substring(0, 10)), y = Number(L.substring(10, 20)), z = Number(L.substring(20, 30));
++      var el = L.substring(31, 34).trim();
++      if (L.length < 34 || !el || !Number.isFinite(x) || !Number.isFinite(y) || !Number.isFinite(z) || !(code in chargeCodes)) return null;
++      atoms.push({ sourceIndex: i + 1, x: x, y: y, z: z, el: el, tail: L.substring(34), charge: chargeCodes[code],
++        massDifference: Number(L.substring(34, 36)), isotope: null, radical: code === 4 ? 2 : 0,
++        parity: Number(L.substring(39, 42)), hydrogenCount: Number(L.substring(42, 45)),
++        valence: Number(L.substring(48, 51)) });
+     }
+     for (var j = 0; j < nB; j++) {
+-      var parts = (lines[ci + 1 + nA + j] || "").trim().split(/\s+/);
+-      var a = parseInt(parts[0], 10), b = parseInt(parts[1], 10), o = parseInt(parts[2], 10);
+-      // Aromatic bonds (V2000 type 4) map to single for connectivity: dropping
+-      // them would disconnect (and de-ring) cyclic input, defeating the
+-      // draft ring-reject. Valence H-counts treat them as single — acceptable:
+-      // drafts are acyclic-only, so a type-4 bond never reaches H generation
+-      // on the accepted path. Other non-1..3 types (query bonds) stay dropped.
+-      if (o === 4) o = 1;
+-      if (!(o >= 1 && o <= 3)) continue;
+-      if (!(a >= 1 && a <= nA && b >= 1 && b <= nA)) continue;
+-      bonds.push([a, b, o]);
+-    }
+-    if (nA > 1 && nB > 0 && bonds.length === 0) return null;
+-    var head = [];
+-    for (var hi = Math.max(0, ci - 3); hi < ci; hi++) head.push(lines[hi] || "");
+-    while (head.length < 3) head.unshift("");
+-    return { head: head, atoms: atoms, bonds: bonds };
++      var B = lines[ci + 1 + nA + j], a = Number(B.substring(0, 3)), b = Number(B.substring(3, 6)), o = Number(B.substring(6, 9));
++      if (!Number.isInteger(a) || !Number.isInteger(b) || a < 1 || a > nA || b < 1 || b > nA || a === b || !Number.isInteger(o) || o < 1) return null;
++      var bond = [a, b, o]; bond.tail = B.substring(9); bond.sourceIndex = j + 1; bonds.push(bond);
++    }
++    var properties = [], ended = false;
++    for (var k = ci + 1 + nA + nB; k < lines.length; k++) {
++      var P = lines[k];
++      if (/^M  END\s*$/.test(P)) { ended = true; break; }
++      if (!P.trim()) continue;
++      var match = /^M  (CHG|ISO|RAD)\s+/.exec(P);
++      if (!match) { properties.push(P); continue; }
++      var fields = P.trim().split(/\s+/), count = Number(fields[2]);
++      if (!Number.isInteger(count) || count < 1 || fields.length !== 3 + 2 * count) return null;
++      for (var q = 0; q < count; q++) {
++        var index = Number(fields[3 + q * 2]), value = Number(fields[4 + q * 2]);
++        if (!Number.isInteger(index) || index < 1 || index > nA || !Number.isInteger(value)) return null;
++        atoms[index - 1][{ CHG: 'charge', ISO: 'isotope', RAD: 'radical' }[match[1]]] = value;
++      }
++    }
++    if (!ended) return null;
++    var head = lines.slice(Math.max(0, ci - 3), ci);
++    while (head.length < 3) head.unshift('');
++    return { head: head, countsTail: lines[ci].substring(6), atoms: atoms, bonds: bonds, properties: properties };
+   } catch (e) { return null; }
+ }
+ 
+-function fWriteMolV2000(head, atoms, bonds) {
++// Preserve atom/bond fields and known atom-indexed properties. Layout/stripping
++// reject unsupported annotations below; a plain parse/write can retain them.
++function fWriteMolV2000(head, atoms, bonds, metadata) {
+   try {
+-    var out = [];
+-    out.push(head && head[0] != null ? head[0] : "");
+-    out.push(head && head[1] != null ? head[1] : "  MuLERMoC 2D");
+-    out.push(head && head[2] != null ? head[2] : "");
+-    out.push(String(atoms.length).padStart(3, " ") + String(bonds.length).padStart(3, " ") + "  0  0  0  0  0  0  0  0  0  0999 V2000");
++    if (atoms.length > 999 || bonds.length > 999) return null;
++    var out = [], chargePairs = [], isotopePairs = [], radicalPairs = [];
++    out.push(head && head[0] != null ? head[0] : '');
++    out.push(head && head[1] != null ? head[1] : '  MuLERMoC 2D');
++    out.push(head && head[2] != null ? head[2] : '');
++    out.push(String(atoms.length).padStart(3, ' ') + String(bonds.length).padStart(3, ' ') +
++      (metadata && metadata.countsTail || '  0  0  0  0  0  0  0  0  0  0999 V2000'));
+     for (var i = 0; i < atoms.length; i++) {
+-      var a = atoms[i];
+-      out.push(a.x.toFixed(4).padStart(10, " ") + a.y.toFixed(4).padStart(10, " ") + "    0.0000 " + String(a.el || "C").padEnd(3, " ") + " 0  0  0  0  0  0  0  0  0  0  0  0");
++      var a = atoms[i], tail = a.tail != null ? a.tail : ' 0  0  0  0  0  0  0  0  0  0  0  0';
++      var charge = a.charge || 0, code = ({ 3: 1, 2: 2, 1: 3, '-1': 5, '-2': 6, '-3': 7 })[charge] || 0;
++      tail = tail.padEnd(5, ' '); tail = tail.substring(0, 2) + String(code).padStart(3, ' ') + tail.substring(5);
++      out.push(a.x.toFixed(4).padStart(10, ' ') + a.y.toFixed(4).padStart(10, ' ') +
++        Number(a.z || 0).toFixed(4).padStart(10, ' ') + ' ' + String(a.el || 'C').padEnd(3, ' ') + tail);
++      if (charge) chargePairs.push([i + 1, charge]);
++      if (a.isotope != null && a.isotope !== 0) isotopePairs.push([i + 1, a.isotope]);
++      if (a.radical) radicalPairs.push([i + 1, a.radical]);
+     }
+     for (var j = 0; j < bonds.length; j++) {
+       var b = bonds[j];
+-      out.push(String(b[0]).padStart(3, " ") + String(b[1]).padStart(3, " ") + String(b[2] || 1).padStart(3, " ") + "  0  0  0");
++      out.push(String(b[0]).padStart(3, ' ') + String(b[1]).padStart(3, ' ') + String(b[2]).padStart(3, ' ') +
++        (b.tail != null ? b.tail : '  0  0  0'));
++    }
++    if (metadata && metadata.properties) {
++      var properties = fRemapMolProperties2D(metadata, atoms, bonds);
++      if (!properties) return null;
++      out.push.apply(out, properties);
++    }
++    function property(kind, pairs) {
++      for (var at = 0; at < pairs.length; at += 8) {
++        var group = pairs.slice(at, at + 8);
++        out.push('M  ' + kind + String(group.length).padStart(3, ' ') + group.map(function (p) {
++          return String(p[0]).padStart(4, ' ') + String(p[1]).padStart(4, ' ');
++        }).join(''));
++      }
+     }
+-    out.push("M  END");
+-    return out.join("\n") + "\n";
++    property('CHG', chargePairs); property('ISO', isotopePairs); property('RAD', radicalPairs);
++    out.push('M  END');
++    return out.join('\n') + '\n';
+   } catch (e) { return null; }
+ }
+ 
++// Bounded SUP Sgroup support covers the library's expanded abbreviations.
++// Atom/bond lists follow reindexing; new H join their parent's group, and
++// crossing-bond vectors follow the new coordinates. Other group types/records
++// cannot be safely interpreted here and reject the transformation.
++function fRemapMolProperties2D(m, atoms, bonds) {
++  try {
++    var atomMap = {}, bondMap = {}, groups = {}, declared = {}, emitted = {}, out = [];
++    atoms.forEach(function (a, i) { if (a.sourceIndex) atomMap[a.sourceIndex] = i + 1; });
++    bonds.forEach(function (b, i) { if (b.sourceIndex) bondMap[b.sourceIndex] = i + 1; });
++    for (var i = 0; i < m.properties.length; i++) {
++      var line = m.properties[i], fields = line.trim().split(/\s+/), kind = fields[1];
++      if (kind === 'STY') {
++        var count = Number(fields[2]);
++        if (!Number.isInteger(count) || count < 1 || fields.length !== 3 + 2 * count) return null;
++        for (var j = 0; j < count; j++) {
++          if (fields[4 + 2 * j] !== 'SUP') return null;
++          declared[fields[3 + 2 * j]] = true;
++        }
++      } else if (kind === 'SAL') {
++        var g = fields[2], n = Number(fields[3]), members = fields.slice(4).map(Number);
++        if (members.length !== n || members.some(function (x) { return !Number.isInteger(x) || x < 1 || x > m.atoms.length; })) return null;
++        groups[g] = (groups[g] || []).concat(members);
++      } else if (!['SLB','SBL','SMT','SBV'].includes(kind)) return null;
++    }
++    if (Object.keys(groups).some(function (g) { return !declared[g]; })) return null;
++    function list(kind, group, values) {
++      if (!values.length) return false;
++      for (var k = 0; k < values.length; k += 15) {
++        var part = values.slice(k, k + 15);
++        out.push('M  ' + kind + String(group).padStart(4, ' ') + String(part.length).padStart(3, ' ') +
++          part.map(function (x) { return String(x).padStart(4, ' '); }).join(''));
++      }
++      return true;
++    }
++    for (var at = 0; at < m.properties.length; at++) {
++      var P = m.properties[at], f = P.trim().split(/\s+/), type = f[1];
++      if (type === 'SAL') {
++        if (emitted[f[2]]) continue;
++        emitted[f[2]] = true;
++        var members = groups[f[2]], mapped = members.filter(function (x) { return atomMap[x] != null; })
++          .map(function (x) { return atomMap[x]; });
++        atoms.forEach(function (a, index) {
++          if (a.parentSourceIndex && members.includes(a.parentSourceIndex)) mapped.push(index + 1);
++        });
++        if (!list(type, f[2], mapped)) return null;
++      } else if (type === 'SBL') {
++        var count = Number(f[3]), ids = f.slice(4).map(Number);
++        if (ids.length !== count || ids.some(function (x) { return !Number.isInteger(x) || x < 1 || x > m.bonds.length; })) return null;
++        var mappedBonds = ids.filter(function (x) { return bondMap[x] != null; }).map(function (x) { return bondMap[x]; });
++        if (!list(type, f[2], mappedBonds)) return null;
++      } else if (type === 'SBV') {
++        var newBond = bondMap[Number(f[3])], group = groups[f[2]];
++        if (!newBond || !group) return null;
++        var b = bonds[newBond - 1], sourceBond = m.bonds[Number(f[3]) - 1];
++        var firstInside = group.includes(sourceBond[0]), secondInside = group.includes(sourceBond[1]);
++        if (firstInside === secondInside) return null;
++        var inside = atoms[(firstInside ? b[0] : b[1]) - 1], outside = atoms[(firstInside ? b[1] : b[0]) - 1];
++        out.push('M  SBV' + String(f[2]).padStart(4, ' ') + String(newBond).padStart(4, ' ') +
++          (outside.x - inside.x).toFixed(4).padStart(10, ' ') + (outside.y - inside.y).toFixed(4).padStart(10, ' '));
++      } else out.push(P);
++    }
++    return out;
++  } catch (e) { return null; }
++}
++
++function fMolCanTransform2D(m, removeHydrogens) {
++  if (!m || !m.atoms.length || Number(m.countsTail.substring(6, 9)) ||
++      !fRemapMolProperties2D(m, m.atoms, m.bonds)) return false;
++  if (m.atoms.some(function (a) {
++    return a.parity || a.hydrogenCount || a.valence || a.radical ||
++      !['C','N','O','S','P','F','Cl','Br','I','H'].includes(a.el) ||
++      (a.el === 'H' && (a.charge || (removeHydrogens && (a.massDifference || a.isotope))));
++  })) return false;
++  return m.bonds.every(function (b) { return b[2] <= 3 && !Number((b.tail || '').substring(0, 3)); });
++}
++
++function fCopyMolAtom2D(a, x, y) {
++  return Object.assign({}, a, { x: x == null ? a.x : x, y: y == null ? a.y : y });
++}
++
++function fCopyMolBond2D(b, a, c) {
++  var copy = [a, c, b[2]]; copy.tail = b.tail; copy.sourceIndex = b.sourceIndex; return copy;
++}
++
+ function fIsHeavyEl2D(el) {
+   var s = String(el == null ? "" : el);
+   return !(s === "H" || s === "h" || s === "");
+@@ -2789,20 +2939,20 @@ function fIsHeavyEl2D(el) {
+ function fStripHydrogensMol(text) {
+   try {
+     var m = fParseMolV2000(text);
+-    if (!m || !m.atoms.length) return null;
++    if (!fMolCanTransform2D(m, true)) return null;
+     var map = {}, atoms = [];
+     for (var i = 0; i < m.atoms.length; i++) {
+       if (!fIsHeavyEl2D(m.atoms[i].el)) continue;
+       map[i + 1] = atoms.length + 1;
+-      atoms.push({ x: m.atoms[i].x, y: m.atoms[i].y, el: m.atoms[i].el });
++      atoms.push(fCopyMolAtom2D(m.atoms[i]));
+     }
+     if (!atoms.length) return null;
+     var bonds = [];
+     for (var j = 0; j < m.bonds.length; j++) {
+       var b = m.bonds[j];
+-      if (map[b[0]] && map[b[1]]) bonds.push([map[b[0]], map[b[1]], b[2]]);
++      if (map[b[0]] && map[b[1]]) bonds.push(fCopyMolBond2D(b, map[b[0]], map[b[1]]));
+     }
+-    return fWriteMolV2000(m.head, atoms, bonds);
++    return fWriteMolV2000(m.head, atoms, bonds, m);
+   } catch (e) { return null; }
+ }
+ 
+@@ -2825,10 +2975,11 @@ const MOLGEN_CH_LEN = 0.5;
+ // largest-free-sector bisection (connectivity is what matters). Pre-existing
+ // explicit H are kept; missing ones are topped up. Elements outside
+ // MOLGEN_STDVALENCE: kept, never added to (no silent H).
++// Missing H use supported charge-aware valences; query, radical and stereo inputs fail closed.
+ function fGenExpandedMol(text) {
+   try {
+     var m = fParseMolV2000(text);
+-    if (!m || !m.atoms.length) return null;
++    if (!fMolCanTransform2D(m, false)) return null;
+     var n = m.atoms.length;
+     var adj = [], ord = {};
+     for (var a = 0; a < n; a++) adj[a] = [];
+@@ -2841,21 +2992,28 @@ function fGenExpandedMol(text) {
+       if (!ord[k] || ord[k] < bb[2]) ord[k] = bb[2];
+     }
+     var atoms = [];
+-    for (var c = 0; c < n; c++) atoms.push({ x: m.atoms[c].x, y: m.atoms[c].y, el: m.atoms[c].el });
++    for (var c = 0; c < n; c++) atoms.push(fCopyMolAtom2D(m.atoms[c]));
+     var bonds = [];
+-    for (var d = 0; d < m.bonds.length; d++) bonds.push([m.bonds[d][0], m.bonds[d][1], m.bonds[d][2]]);
++    for (var d = 0; d < m.bonds.length; d++) bonds.push(fCopyMolBond2D(m.bonds[d], m.bonds[d][0], m.bonds[d][1]));
+     var HLEN = MOLGEN_CH_LEN;
+     for (var h = 0; h < n; h++) {
+       var el = String(m.atoms[h].el || "");
+       if (!fIsHeavyEl2D(el)) continue;
+-      var v = MOLGEN_STDVALENCE[el];
+-      if (v == null) continue;
++      var v = MOLGEN_STDVALENCE[el], charge = m.atoms[h].charge || 0;
++      if (charge) {
++        var chargedValences = { C: { '-1': 3, 1: 3 }, N: { '-1': 2, 1: 4 }, O: { '-1': 1, 1: 3 },
++          F: { '-1': 0 }, Cl: { '-1': 0 }, Br: { '-1': 0 }, I: { '-1': 0 } };
++        if (!chargedValences[el] || chargedValences[el][charge] == null) return null;
++        v = chargedValences[el][charge];
++      }
++      if (v == null) return null;
+       var used = 0;
+       for (var q = 0; q < adj[h].length; q++) {
+         var nb = adj[h][q];
+         var kk = (h < nb) ? h + "-" + nb : nb + "-" + h;
+         used += ord[kk] || 1;
+       }
++      if (used > v) return null;
+       var missing = v - used;
+       for (var t = 0; t < missing; t++) {
+         var angs = [];
+@@ -2970,13 +3128,13 @@ function fGenExpandedMol(text) {
+             }
+           }
+         }
+-        atoms.push({ x: bestX, y: bestY, el: "H" });
++        atoms.push({ x: bestX, y: bestY, el: "H", parentSourceIndex: h + 1 });
+         var ni = atoms.length - 1;
+         adj[h].push(ni); adj.push([h]);
+         bonds.push([h + 1, ni + 1, 1]);
+       }
+     }
+-    return fWriteMolV2000(m.head, atoms, bonds);
++    return fWriteMolV2000(m.head, atoms, bonds, m);
+   } catch (e) { return null; }
+ }
+ 
+@@ -2988,7 +3146,7 @@ function fGenExpandedMol(text) {
+ function fLinearizeMol(text, chain) {
+   try {
+     var m = fParseMolV2000(text);
+-    if (!m || !m.atoms.length) return null;
++    if (!fMolCanTransform2D(m, true)) return null;
+     if (!Array.isArray(chain) || !chain.length) return null;
+     var n = m.atoms.length;
+     var map = {}, order = [];
+@@ -3080,15 +3238,28 @@ function fLinearizeMol(text, chain) {
+       for (var nb = 0; nb < adj[c0].length; nb++) {
+         var br = adj[c0][nb];
+         if (visited[br]) continue;
++        // A terminal degree-two sp center continues the parent axis, even
++        // when its triple-bonded neighbor (e.g. nitrile N) is off the carbon
++        // parent. Orthogonal branch placement would bend C-C≡N by 90°.
++        var terminalSp = ch.length > 1 && (ci === 0 || ci === ch.length - 1) &&
++          adj[c0].length === 2 && m.bonds.some(function (bond) {
++            return bond[2] === 3 && (bond[0] === c0 + 1 || bond[1] === c0 + 1);
++          });
++        if (terminalSp) {
++          var outward = ci === 0 ? -1 : 1;
++          queue.push({ node: br, x: (ci + outward) * DX, y: 0, dx: outward, dy: 0 });
++          _claimed[br] = { x: (ci + outward) * DX, y: 0 };
++          continue;
++        }
+         var isEtherLink = false;
+         try {
+           if ((ci === 0 || ci === ch.length - 1) && !etherDone &&
+-              String(m.atoms[br].el || "").toUpperCase() === "O" && adj[br].length === 2) {
+-            var _cc = 0;
+-            for (var _oi = 0; _oi < adj[br].length; _oi++) {
+-              if (String(m.atoms[adj[br][_oi]].el || "").toUpperCase() === "C") _cc++;
++              String(m.atoms[br].el || '').toUpperCase() === 'O' && adj[br].length === 2) {
++            var carbonNeighbors = 0;
++            for (var oi = 0; oi < adj[br].length; oi++) {
++              if (String(m.atoms[adj[br][oi]].el || '').toUpperCase() === 'C') carbonNeighbors++;
+             }
+-            if (_cc === 2) isEtherLink = true;
++            if (carbonNeighbors === 2) isEtherLink = true;
+           }
+         } catch (eEl) { isEtherLink = false; }
+         if (isEtherLink) {
+@@ -3184,14 +3355,14 @@ function fLinearizeMol(text, chain) {
+       var oi = order[o];
+       var pp = pos[oi] || { x: m.atoms[oi].x, y: m.atoms[oi].y };
+       newIdx[oi + 1] = atoms.length + 1;
+-      atoms.push({ x: pp.x, y: pp.y, el: m.atoms[oi].el });
++      atoms.push(fCopyMolAtom2D(m.atoms[oi], pp.x, pp.y));
+     }
+     var bonds = [];
+     for (var j = 0; j < m.bonds.length; j++) {
+       var bj = m.bonds[j];
+-      if (newIdx[bj[0]] && newIdx[bj[1]]) bonds.push([newIdx[bj[0]], newIdx[bj[1]], bj[2]]);
++      if (newIdx[bj[0]] && newIdx[bj[1]]) bonds.push(fCopyMolBond2D(bj, newIdx[bj[0]], newIdx[bj[1]]));
+     }
+-    return fWriteMolV2000(m.head, atoms, bonds);
++    return fWriteMolV2000(m.head, atoms, bonds, m);
+   } catch (e) { return null; }
+ }
+ 
+@@ -3203,7 +3374,7 @@ function fLinearizeMol(text, chain) {
+ function fZigzagMol(text, chain) {
+   try {
+     var m = fParseMolV2000(text);
+-    if (!m || !m.atoms.length) return null;
++    if (!fMolCanTransform2D(m, true)) return null;
+     if (!Array.isArray(chain) || !chain.length) return null;
+     var n = m.atoms.length;
+     var map = {}, order = [];
+@@ -3234,6 +3405,18 @@ function fZigzagMol(text, chain) {
+       var kk = (a < c) ? a + "-" + c : c + "-" + a;
+       return ord[kk] || 1;
+     };
++    // This tree layout cannot safely reconstruct ring closure or disconnected
++    // fragments. Reject those inputs instead of stretching an unvisited edge.
++    var reached = {}, todo = [ch[0]], heavyBonds = 0;
++    while (todo.length) {
++      var node = todo.pop(); if (reached[node]) continue;
++      reached[node] = true;
++      adj[node].forEach(function (v) { if (!reached[v]) todo.push(v); });
++    }
++    order.forEach(function (v) { heavyBonds += adj[v].length; });
++    if (Object.keys(reached).length !== order.length || heavyBonds !== 2 * (order.length - 1) ||
++        ch.length !== chain.length || new Set(ch).size !== ch.length ||
++        ch.some(function (v, i) { return i && adj[ch[i - 1]].indexOf(v) < 0; })) return null;
+     var L = MOLGEN_CC_LEN, CX = L * 0.8660254, CY = L * 0.5;
+     var norm2 = function (vx, vy) {
+       var l = Math.sqrt(vx * vx + vy * vy);
+@@ -3274,6 +3457,10 @@ function fZigzagMol(text, chain) {
+           var r2 = (usedC % 2 === 1) ? 1 : -1;
+           bd = norm2(-bd.y * r2, bd.x * r2) || bd;
+         }
++        // Endpoint dIn carries a bond vector of length L, not a unit vector.
++        // Normalize every branch direction before multiplying by L below.
++        bd = norm2(bd.x, bd.y);
++        if (!bd) return null;
+         usedC++;
+         queue.push({ node: br, fx: c0, dx: bd.x, dy: bd.y, rot: 0 });
+       }
+@@ -3298,19 +3485,107 @@ function fZigzagMol(text, chain) {
+         queue.push({ node: cand, fx: it.node, dx: nd.x, dy: nd.y });
+       }
+     }
++    // The first continuation of an off-parent subtree used to stay straight.
++    // Correct only the affected degree-two pivot by rotating an entire side:
++    // all generated bond lengths and every other local angle remain invariant.
++    function turn(ids, pivot, angle) {
++      var co = Math.cos(angle), si = Math.sin(angle);
++      ids.forEach(function (v) {
++        var x = pos[v].x - pivot.x, y = pos[v].y - pivot.y;
++        pos[v] = { x: pivot.x + x * co - y * si, y: pivot.y + x * si + y * co };
++      });
++    }
++    function cross(p, a, b, c) {
++      return (p[b].x - p[a].x) * (p[c].y - p[a].y) - (p[b].y - p[a].y) * (p[c].x - p[a].x);
++    }
++    function crossing(p, a, b, c, d) {
++      return cross(p, a, b, c) * cross(p, a, b, d) < -1e-10 &&
++        cross(p, c, d, a) * cross(p, c, d, b) < -1e-10;
++    }
++    function atomBondDistance(p, i, a, b) {
++      var dx = p[b].x - p[a].x, dy = p[b].y - p[a].y, length = dx * dx + dy * dy;
++      var t = length ? Math.max(0, Math.min(1, ((p[i].x - p[a].x) * dx + (p[i].y - p[a].y) * dy) / length)) : 0;
++      return Math.hypot(p[i].x - p[a].x - t * dx, p[i].y - p[a].y - t * dy);
++    }
++    var edges = m.bonds.filter(function (b) { return map[b[0]] != null && map[b[1]] != null; })
++      .map(function (b) { return [b[0] - 1, b[1] - 1]; });
++    function safe(previous) {
++      for (var i = 0; i < order.length; i++) for (var j = 0; j < i; j++) {
++        var a = order[i], b = order[j];
++        if (adj[a].indexOf(b) >= 0) continue;
++        var old = Math.hypot(previous[a].x - previous[b].x, previous[a].y - previous[b].y);
++        var now = Math.hypot(pos[a].x - pos[b].x, pos[a].y - pos[b].y);
++        if (now < L * 0.45 && now < old - 1e-6) return false;
++      }
++      for (var e = 0; e < edges.length; e++) {
++        var a = edges[e][0], b = edges[e][1];
++        for (var j = 0; j < order.length; j++) {
++          var v = order[j]; if (v === a || v === b) continue;
++          var old = atomBondDistance(previous, v, a, b), now = atomBondDistance(pos, v, a, b);
++          if (now < L * 0.12 && now < old - 1e-6) return false;
++        }
++        for (var d = 0; d < e; d++) {
++          var c = edges[d][0], q = edges[d][1];
++          if (a === c || a === q || b === c || b === q) continue;
++          if (crossing(pos, a, b, c, q) && !crossing(previous, a, b, c, q)) return false;
++        }
++      }
++      return true;
++    }
++    for (var at = 0; at < order.length; at++) {
++      var center = order[at], el = m.atoms[center].el;
++      if (adj[center].length !== 2 || (el !== 'C' && el !== 'O')) continue;
++      var ns = adj[center], orders = ns.map(function (v) { return bo(center, v); });
++      if (el === 'O' && (m.atoms[center].charge || orders.some(function (v) { return v !== 1; }))) return null;
++      if (el === 'C' && orders[0] + orders[1] > 4) return null;
++      var sp = el === 'C' && (orders.indexOf(3) >= 0 || (orders[0] === 2 && orders[1] === 2));
++      var target = sp ? Math.PI : 2 * Math.PI / 3;
++      var sides = ns.map(function (start) {
++        var seen = {}, ids = [], todo = [start]; seen[center] = true;
++        while (todo.length) {
++          var v = todo.pop(); if (seen[v]) continue;
++          seen[v] = true; ids.push(v);
++          adj[v].forEach(function (q) { if (!seen[q]) todo.push(q); });
++        }
++        return { start: start, ids: ids };
++      });
++      // Keep C1 and as much of the resolved parent as possible fixed.
++      sides.sort(function (a, b) {
++        return Number(a.ids.indexOf(ch[0]) >= 0) - Number(b.ids.indexOf(ch[0]) >= 0) ||
++          a.ids.filter(function (v) { return ch.indexOf(v) >= 0; }).length -
++          b.ids.filter(function (v) { return ch.indexOf(v) >= 0; }).length || a.ids.length - b.ids.length;
++      });
++      var moving = sides[0], fixed = ns[0] === moving.start ? ns[1] : ns[0], pivot = pos[center];
++      if (moving.ids.indexOf(fixed) >= 0) return null;
++      var from = Math.atan2(pos[moving.start].y - pivot.y, pos[moving.start].x - pivot.x);
++      var base = Math.atan2(pos[fixed].y - pivot.y, pos[fixed].x - pivot.x);
++      var choices = [target, -target].map(function (t) { return Math.atan2(Math.sin(base + t - from), Math.cos(base + t - from)); });
++      choices.sort(function (a, b) { return Math.abs(a) - Math.abs(b); });
++      if (Math.abs(choices[0]) < 1e-7) continue;
++      var previous = {};
++      order.forEach(function (v) { previous[v] = { x: pos[v].x, y: pos[v].y }; });
++      var repaired = false;
++      for (var trial = 0; trial < choices.length; trial++) {
++        order.forEach(function (v) { pos[v] = { x: previous[v].x, y: previous[v].y }; });
++        turn(moving.ids, pivot, choices[trial]);
++        if (safe(previous)) { repaired = true; break; }
++      }
++      // An unsafe generated layout is not a successful deterministic rung.
++      if (!repaired) return null;
++    }
+     var atoms = [], newIdx = {};
+     for (var o = 0; o < order.length; o++) {
+       var oi = order[o];
+       var pp = pos[oi] || { x: m.atoms[oi].x, y: m.atoms[oi].y };
+       newIdx[oi + 1] = atoms.length + 1;
+-      atoms.push({ x: pp.x, y: pp.y, el: m.atoms[oi].el });
++      atoms.push(fCopyMolAtom2D(m.atoms[oi], pp.x, pp.y));
+     }
+     var bonds = [];
+     for (var j = 0; j < m.bonds.length; j++) {
+       var bj = m.bonds[j];
+-      if (newIdx[bj[0]] && newIdx[bj[1]]) bonds.push([newIdx[bj[0]], newIdx[bj[1]], bj[2]]);
++      if (newIdx[bj[0]] && newIdx[bj[1]]) bonds.push(fCopyMolBond2D(bj, newIdx[bj[0]], newIdx[bj[1]]));
+     }
+-    return fWriteMolV2000(m.head, atoms, bonds);
++    return fWriteMolV2000(m.head, atoms, bonds, m);
+   } catch (e) { return null; }
+ }
+ 
+@@ -3420,7 +3695,7 @@ function fGuessName(skipChainRecalc) {
+             sortedMultiDBonds.push(bondPos)
+         }
+         if (sortedMultiDBonds.length > 0) {
+-            sortedMultiDBonds.sort()
++            sortedMultiDBonds.sort((a, b) => a - b)
+         }
+         for (let i = 0; i < sortedMultiDBonds.length; i++) {
+             bondPrefixDB += sortedMultiDBonds[i]
+@@ -3444,7 +3719,7 @@ function fGuessName(skipChainRecalc) {
+             sortedMultiTBonds.push(bondPos)
+         }
+         if (sortedMultiTBonds.length > 0) {
+-            sortedMultiTBonds.sort()
++            sortedMultiTBonds.sort((a, b) => a - b)
+         }
+         for (let i = 0; i < sortedMultiTBonds.length; i++) {
+             bondPrefixTB += sortedMultiTBonds[i]
+@@ -3606,7 +3881,7 @@ function fGuessName(skipChainRecalc) {
+                         const _hx = sortedHalogens[_hi]
+                         const _dl = _directLocs[_hx]
+                         if (_dl && _dl.length) {
+-                            _groups[nameMultiPrefix[_dl.length - 1] + nameMainCompObj3.halogen.substitute[_hx]] = _dl.slice()
++                            _groups[nameMainCompObj3.halogen.substitute[_hx]] = _dl.slice()
+                         }
+                     }
+                     for (let i = 0; i < _plain.length; i++) {
+@@ -3681,7 +3956,7 @@ function fGuessName(skipChainRecalc) {
+                     // Legacy path, byte-identical (count prefix computed but
+                     // unused, as before).
+                     sortedFunPositions = _directNitro
+-                    sortedFunPositions.sort()
++                    sortedFunPositions.sort((a, b) => a - b)
+                     for (let j = 0; j < sortedFunPositions.length; j++) {
+                         myXpositions += sortedFunPositions[j]
+                         if (j < sortedFunPositions.length - 1) {
+@@ -3712,7 +3987,7 @@ function fGuessName(skipChainRecalc) {
+                     const _groupsN = {}
+                     if (_directNitro.length) {
+                         _directNitro.sort(function (a, b) { return a - b; })
+-                        _groupsN[nameMultiPrefix[_directNitro.length - 1] + nameMainCompObj3.nitro.substitute] = _directNitro.slice()
++                        _groupsN[nameMainCompObj3.nitro.substitute] = _directNitro.slice()
+                     }
+                     for (let i = 0; i < _plainN.length; i++) {
+                         const _b = _plainN[i]
+@@ -3770,7 +4045,7 @@ function fGuessName(skipChainRecalc) {
+                     if (currXPos == null) fDeclineNaming(functionalGroupsList[0] + " O off main chain")
+                     sortedFunPositions.push(currXPos)
+                 }
+-                sortedFunPositions.sort()
++                sortedFunPositions.sort((a, b) => a - b)
+                 for (let j = 0; j < sortedFunPositions.length; j++) {
+                     myXpositions += sortedFunPositions[j]
+                     if (j < sortedFunPositions.length - 1) {
+@@ -3917,7 +4192,7 @@ function fGuessName(skipChainRecalc) {
+                 if (currXPos == null) fDeclineNaming("multi-FG substituent off main chain")
+                 sortedFunPositions.push(currXPos)
+             }
+-            sortedFunPositions.sort()
++            sortedFunPositions.sort((a, b) => a - b)
+             for (let j = 0; j < sortedFunPositions.length; j++) {
+                 myXpositions += sortedFunPositions[j]
+                 if (j < sortedFunPositions.length - 1) {
+@@ -4124,6 +4399,7 @@ function fParseSDF3D(text) {
+                 break
+         }
+     }
++    molAtomMapSource3D = String(text)
+ }
+ 
+ // ── fDetectMolType3D ──────────────────────────────────────────────────────

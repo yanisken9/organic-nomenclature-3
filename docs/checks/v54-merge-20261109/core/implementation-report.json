@@ -1,0 +1,242 @@
+{
+  "timestampUTC": "2026-11-09T22:05:05.677792+00:00",
+  "role": "NAMELECULE_DEVELOPER_V1_20261023",
+  "scope": "Approved three-way core55/EN55 merge in isolated candidate only, no source/data54/runtime install; notes returned to root.",
+  "primary": "/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3",
+  "candidate": "/private/tmp/namelecule-professor-merge-20261109-oxj7hfyy/candidate",
+  "primaryHEAD": "168e3cec01f941a84d40bbe0dc07156e7baa35d0",
+  "candidateHEAD": "29991c90b90caddec69a265abad8c1d24495e16c",
+  "upstreamBase": "f49b810c93ec85d06163679aff4a8642ea1b4cd3",
+  "upstreamTarget": "e76d3c071c0be98cbd63365f2590fe49fa9e6f36",
+  "runtimeChangedPaths": [
+    "js/mulermoc-nom-core-55.js",
+    "js/mulermoc-nom-name-en-55.js"
+  ],
+  "authorship": {
+    "upstream": "New generation controls, collision-aware H/linear branching and skeletal splay; decorated groups and failclosed off-chain naming; EN systemic branch assembly, alphabetic order, component splits, icos spelling.",
+    "localPreserved": "Strict metadata/counts/query/stereo/charge/isotope/SUP parser/writer; numeric locants, C9-C20 guarded groups, exact graph mapping/cache, terminal sp and safe tree guards; Greek nonane stem and EN suffix separator/fusion.",
+    "localCorrections": [
+      "CV55-01 only claim decorated rooted carbon path when L===side.size, otherwise downstream naming decline.",
+      "CV55-02 direct halo/nitro keys use base group; multiplicity applied once at final merge.",
+      "Terminal sp placement participates in new linearizer occupancy without changing its axis."
+    ]
+  },
+  "tests": [
+    {
+      "command": [
+        "python3",
+        "/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/v54-merge-20261109/core/test-core55.py",
+        "/private/tmp/namelecule-professor-merge-20261109-oxj7hfyy/candidate"
+      ],
+      "status": "passed",
+      "result": "/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/v54-merge-20261109/core/core55-results.json",
+      "summary": {
+        "molecules": 141,
+        "namingParentRegressionCases": 844,
+        "namingParentDifferences": 0,
+        "coldInitCases": 844,
+        "exactMaps": 842,
+        "mapCases": 844,
+        "signatureMismatches": [],
+        "untranslatedMaps": [
+          {
+            "key": "penten_3_yne_1",
+            "mode": "expanded",
+            "cm": "algorithmic",
+            "exact": false,
+            "translated": null,
+            "chain3": [
+              5,
+              4,
+              3,
+              2,
+              1
+            ],
+            "signatureMatches": true,
+            "pool": [
+              [
+                1,
+                2,
+                3,
+                4,
+                5
+              ]
+            ],
+            "mappedPool": [
+              null
+            ]
+          },
+          {
+            "key": "penten_3_yne_1",
+            "mode": "expanded",
+            "cm": "data",
+            "exact": false,
+            "translated": null,
+            "chain3": [
+              5,
+              4,
+              3,
+              2,
+              1
+            ],
+            "signatureMatches": true,
+            "pool": [
+              [
+                1,
+                2,
+                3,
+                4,
+                5
+              ]
+            ],
+            "mappedPool": [
+              null
+            ]
+          }
+        ],
+        "generatorCases": 1263,
+        "generatorNamingDifferences": [],
+        "reorderedGraphMaps": 422,
+        "reorderedGraphMapFailures": [
+          {
+            "key": "penten_3_yne_1",
+            "mode": "expanded",
+            "exact": false
+          }
+        ],
+        "invalidInputChecks": 6,
+        "chemicalOraclePermutationCases": 240,
+        "chemicalGuardCases": 15,
+        "mapBoundaryCases": 4,
+        "generatorBentSp": [
+          {
+            "key": "butanenitrile",
+            "mode": "skeletal",
+            "inputBentSp": [
+              {
+                "atom": 1,
+                "cosine": -0.5000089280931208
+              }
+            ],
+            "results": [
+              {
+                "kind": "expanded",
+                "name": "βουτανονιτρίλιο",
+                "heavyAtoms": 5,
+                "atoms": 12,
+                "sameName": true,
+                "bentSp": [
+                  {
+                    "atom": 1,
+                    "cosine": -0.5000089280931208
+                  }
+                ],
+                "newBentSp": [],
+                "signatureMatches": true
+              }
+            ]
+          }
+        ],
+        "generatorNewBentSp": [],
+        "terminalSpDirectionCases": 4,
+        "unsupportedGeneratorSources": [
+          {
+            "key": "penten_3_yne_1",
+            "mode": "expanded",
+            "unsupported": true,
+            "results": []
+          }
+        ]
+      },
+      "additionalResults": [
+        "mol-properties55-results.json",
+        "map-transitions55-results.json",
+        "geometry-results.json"
+      ]
+    },
+    {
+      "command": [
+        "python3",
+        "/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/v54-merge-20261109/core/test-naming55.py",
+        "/private/tmp/namelecule-professor-merge-20261109-oxj7hfyy/candidate"
+      ],
+      "status": "passed",
+      "result": "/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/v54-merge-20261109/core/naming-results.json",
+      "summary": {
+        "passed": true,
+        "checks": 1084
+      }
+    },
+    {
+      "command": [
+        "python3",
+        "/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/v54-merge-20261109/core/test-causal-probes.py",
+        "/private/tmp/namelecule-professor-merge-20261109-oxj7hfyy/candidate"
+      ],
+      "status": "passed",
+      "result": "/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/v54-merge-20261109/core/causal-probes-results.json",
+      "summary": {
+        "passed": true,
+        "checks": null
+      }
+    },
+    {
+      "command": [
+        "python3",
+        "/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/v54-merge-20261109/core/test-en-variants.py",
+        "/private/tmp/namelecule-professor-merge-20261109-oxj7hfyy/candidate"
+      ],
+      "status": "passed",
+      "result": "/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/v54-merge-20261109/core/en-variants-results.json",
+      "summary": {
+        "cases": 844,
+        "variantAssemblies": 1688,
+        "differences": 42,
+        "mismatches": 0,
+        "keysWithMismatches": [],
+        "differenceReason": "Preserved local separator and terminal-e box fusion fixes on seven molecules; names identical to upstream55."
+      }
+    }
+  ],
+  "checks": [
+    {
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/v54-merge-20261109/upstream/target/js/mulermoc-nom-core-55.js",
+        "/private/tmp/namelecule-professor-merge-20261109-oxj7hfyy/candidate/js/mulermoc-nom-core-55.js"
+      ],
+      "exitCode": 1,
+      "output": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/v54-merge-20261109/upstream/target/js/mulermoc-nom-name-en-55.js",
+        "/private/tmp/namelecule-professor-merge-20261109-oxj7hfyy/candidate/js/mulermoc-nom-name-en-55.js"
+      ],
+      "exitCode": 1,
+      "output": ""
+    }
+  ],
+  "failuresDuringDevelopment": [
+    "node --check unavailable because node is not on PATH; actual JavaScriptCore compilations/execution passed instead.",
+    "First reused naming oracle retained old C20 eicos expectation; approved upstream icos required updating expected oracle only, final pass.",
+    "Added guard identity test initially referenced nonexistent top-level fInitProps; removed that test-harness reference, final 13 actual functions compare byte-identical."
+  ],
+  "limitations": [
+    "JavaScriptCore pure runtime checks are Developer evidence, not independent review or browser/visual evidence.",
+    "Missing methane skeletal source; literal [H] in penten_3_yne_1 expanded remains unsupported for strict transforms/raw maps.",
+    "Inherited bent nitrile geometry in input is preserved by expanded H-only generation; the skeletal generator repairs geometry and no new bent sp centers were generated.",
+    "Plain multi-nitro English multiplicity omission predates this merge and remains; decorated direct nitro multiplicity corrected within approved scope.",
+    "Greek complex/decorated nomenclature beyond the bounded rooted path engine remains unsupported; no general naming expansion or IUPAC-wide certification.",
+    "No live external naming oracle, JSME Submit/Accept, browser framing, viewer/network/navigation checks in this owned core task; root coordinates those.",
+    "Independent Reviewer and chemistry validation pending at root. No staging, commit, push, publication, dependency installation or primary runtime writes."
+  ],
+  "coreChangeReportGR": "Δημιουργήθηκε νέο τοπικό mulermoc-nom-core-55.js στο χωριστό candidate από upstream e76d3c0 με διατήρηση των τοπικών χημικών δικλίδων. Προστέθηκαν οι upstream έλεγχοι παραγωγής/διάταξης και ονοματολογία διακλαδώσεων, με απόρριψη μη υποστηριζόμενης διακλάδωσης που έχανε άτομα C και μία μόνο εφαρμογή πολλαπλασιαστή αλογόνων/νίτρο. Έγιναν ευρείς έλεγχοι JavaScriptCore ονομάτων/γράφων/μεταδεδομένων/γεωμετρίας με τους καταγεγραμμένους περιορισμούς. Core54/core52 αμετάβλητα από αυτή την εργασία. Μόνο τοπικό candidate, χωρίς commit ή δημοσίευση· ανεξάρτητο review εκκρεμεί."
+}

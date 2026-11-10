@@ -1,0 +1,100 @@
+--- before/js/namelecule-generated-repair-checkpoint.js
++++ after/js/namelecule-generated-repair-checkpoint.js
+@@ -190,6 +190,7 @@
+       current = global.NameleculeRepairGame.mountRound(roundHost, {
+         round: lessonRoundForDisplay(set.rounds[index]), initialState: state.states[index], assetBase: options.assetBase,
+         emphasizeObjective: true,
++        compactDiagramZoom: true,
+         diagramRepresentation: set.rounds[index].moleculeId === CONDENSED_LESSON_DIAGRAM.moleculeId ? "condensed" : "expanded",
+         continueLabel: index < 2 ? "Επόμενο κουίζ" : "Συνεχίζω τη θεωρία",
+         onReveal(request) {
+--- before/js/namelecule-game-repair.js
++++ after/js/namelecule-game-repair.js
+@@ -203,6 +203,17 @@
+     });
+   }
+ 
++  function diagramZoomIcon() {
++    const icon = node("span", { class: "diagram-zoom-icon", "aria-hidden": "true" });
++    const sharedIcon = global.MuLERIcons && global.MuLERIcons.zoomIn;
++    // Main supplies the shared icon; isolated embedded mounts need no icon dependency.
++    icon.innerHTML = typeof sharedIcon === "string" && sharedIcon.trim() ? sharedIcon :
++      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="10" r="7"/><path d="M15 15l6 6M10 6v8M6 10h8"/></svg>';
++    const svg = icon.querySelector("svg");
++    if (svg) { svg.setAttribute("aria-hidden", "true"); svg.setAttribute("focusable", "false"); }
++    return icon;
++  }
++
+   let nextMountId = 0;
+   const mountedHosts = new WeakMap();
+ 
+@@ -212,6 +223,7 @@
+     const data = validateRoundData(options.round);
+     const emphasizeObjective = !standalone && options.emphasizeObjective === true;
+     const condensedDiagram = !standalone && options.diagramRepresentation === "condensed";
++    const compactDiagramZoom = !standalone && options.compactDiagramZoom === true;
+     const existing = mountedHosts.get(host);
+     if (existing) existing.destroy();
+     const root = host;
+@@ -300,7 +312,14 @@
+       }));
+       refs.image = node("img", { class: "diagram-image", alt: data.diagramAlt, draggable: "false" });
+       refs.imageStatus = node("div", { class: "image-status", role: "status", "aria-live": "polite" });
+-      refs.zoomButton = button("Μεγέθυνση σχεδίου", "quiet", showDiagramZoom);
++      refs.zoomButton = button(compactDiagramZoom ? "" : "Μεγέθυνση σχεδίου",
++        compactDiagramZoom ? "quiet diagram-zoom-button" : "quiet", showDiagramZoom);
++      if (compactDiagramZoom) {
++        refs.zoomButton.setAttribute("aria-label", "Μεγέθυνση σχεδίου");
++        refs.zoomButton.setAttribute("title", "Μεγέθυνση σχεδίου");
++        refs.zoomButton.setAttribute("aria-expanded", "false");
++        refs.zoomButton.append(diagramZoomIcon());
++      }
+       const diagram = node("section", { class: "diagram-card", "aria-labelledby": controlId("diagram-heading") }, [
+         node("div", { class: "card-heading" }, [node("h2", { id: controlId("diagram-heading"), text: "Η δομή στο επίκεντρο" }), node("div", { class: "diagram-tools" }, [node("span", { class: condensedDiagram ? "diagram-representation-label" : "", text: condensedDiagram ? "Συνεπτυγμένος συντακτικός τύπος" : "Ανεπτυγμένος τύπος" }), refs.zoomButton])]),
+         node("figure", { class: "diagram-figure" }, [node("div", { class: "diagram-stage" }, [refs.image]), node("figcaption", { text: "Παρατήρησε την κύρια αλυσίδα και τους κλάδους." })]),
+--- before/css/namelecule-repair-round.css
++++ after/css/namelecule-repair-round.css
+@@ -74,6 +74,18 @@
+ .nl-repair-round .card-heading span { color: var(--muted); font-size: 10.4px; }
+ .nl-repair-round .diagram-tools { display: flex; align-items: center; gap: 9px; flex-wrap: wrap; justify-content: flex-end; }
+ .nl-repair-round .diagram-tools .quiet { min-height: 35px; padding: 5px 8px; font-size: 10.4px; border: 1px solid var(--line); }
++.nl-repair-round .diagram-tools .diagram-zoom-button {
++  flex: 0 0 44px;
++  width: 44px;
++  height: 44px;
++  min-height: 44px;
++  padding: 10px;
++  border-radius: 10px;
++  color: var(--ink);
++  background: white;
++}
++.nl-repair-round .diagram-zoom-icon { display: inline-flex; color: inherit; }
++.nl-repair-round .diagram-zoom-icon svg { display: block; width: 22px; height: 22px; }
+ .nl-repair-round .diagram-figure { margin: 0; padding: 18px 17px 13px; }
+ .nl-repair-round .diagram-stage { display: grid; place-items: center; min-height: 230px; border-radius: 12px; background-color: #fdfdfa; background-image: radial-gradient(#d9e1d5 .65px, transparent .65px); background-size: 14px 14px; }
+ .nl-repair-round .diagram-image { width: auto; max-width: 100%; height: auto; object-fit: contain; display: block; background: #fdfdfa; border-radius: 10px; }
+--- before/mulermoc-nom-55.html
++++ after/mulermoc-nom-55.html
+@@ -48,7 +48,7 @@
+   <link rel="stylesheet" href="css/mulermoc-nom-scenario-55.css?v=namelecule-v55-20261110-r2" />
+ 
+   <link rel="stylesheet" href="css/namelecule-55.css?v=namelecule-v55-20261110-r2" />
+-  <link rel="stylesheet" href="css/namelecule-repair-round.css?v=alkane-quiz-presentation-20261110-r1" />
++  <link rel="stylesheet" href="css/namelecule-repair-round.css?v=quiz-zoom-icon-20261110-r1" />
+   <link rel="stylesheet" href="css/namelecule-quiz-checkpoints.css?v=quiz-header-progress-20261108-r1" />
+   <script src="js/namelecule-label-metrics.js?v=20261031-r1"></script>
+   <script src="js/vendor/jsme/namelecule-20261031-r1/jsme.nocache.js"></script>
+@@ -360,11 +360,11 @@
+   <script src="js/mulermoc-nom-molview-55.js?v=namelecule-v55-20261110-r2"></script>
+   <script src="js/mulermoc-nom-teaching-55.js?v=namelecule-v55-20261110-r2"></script>
+   <script src="js/mulermoc-nom-note-55.js?v=namelecule-v55-20261110-r2"></script>
+-  <script src="js/namelecule-game-repair.js?v=alkane-quiz-presentation-20261110-r1"></script>
++  <script src="js/namelecule-game-repair.js?v=quiz-zoom-icon-20261110-r1"></script>
+   <script src="js/namelecule-quiz-checkpoints.js?v=quiz-answer-reveal-20261109-r1"></script>
+   <script src="js/namelecule-chemistry-client.js?v=verified-engines-20261105-r1"></script>
+   <script src="js/namelecule-repair-generator.js?v=engine-pilot-20261105-r1"></script>
+-  <script src="js/namelecule-generated-repair-checkpoint.js?v=alkane-quiz-presentation-20261110-r1"></script>
++  <script src="js/namelecule-generated-repair-checkpoint.js?v=quiz-zoom-icon-20261110-r1"></script>
+   <script src="js/mulermoc-nom-scenario-55.js?v=namelecule-v55-20261110-r2"></script>
+   <script src="js/mulermoc-nom-iupac-55.js?v=namelecule-v55-20261110-r2"></script>
+   <script src="js/mulermoc-nom-lang-55.js?v=namelecule-v55-20261110-r2"></script>

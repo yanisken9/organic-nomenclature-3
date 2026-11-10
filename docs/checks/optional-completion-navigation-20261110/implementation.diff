@@ -1,0 +1,45 @@
+--- before/js/namelecule-quiz-checkpoints.js
++++ js/namelecule-quiz-checkpoints.js
+@@ -359,12 +359,19 @@
+     const finalActions = context.finalRoundVisible === true && context.successActionsReady === true &&
+       supportsPractice(types[context.spec.type]) &&
+       isComplete(context.scenario, context.index);
++    let optionalFinalActions = false;
++    if (context.practice && finalActions) {
++      try {
++        optionalFinalActions = types[context.spec.type]
++          .restorePractice(context.spec.round, context.record.practices[context.index]).solved === true;
++      } catch (_) { /* Keep the independent exit when optional progress cannot be verified. */ }
++    }
+     dialog.querySelector("#nlQuizDialogTitle").textContent = text(context.practice ? "practiceTitle" : "label");
+     dialog.querySelector("#nlQuizBack").hidden = context.practice || finalActions;
+     practiceNotice.textContent = text("practiceNote");
+     practiceNotice.hidden = !context.practice;
+     practiceContinue.textContent = text("continueLesson");
+-    practiceContinue.hidden = !context.practice;
++    practiceContinue.hidden = !context.practice || optionalFinalActions;
+   }
+   function newPractice(context) {
+     const adapter = types[context.spec.type];
+--- before/mulermoc-nom-54.html
++++ mulermoc-nom-54.html
+@@ -368,7 +368,7 @@
+   <script src="js/mulermoc-nom-teaching-54.js?v=alkane-step5-interaction-20261106-r1"></script>
+   <script src="js/mulermoc-nom-note-54.js?v=v54-sync-20261104-r2"></script>
+   <script src="js/namelecule-game-repair.js?v=required-completion-navigation-20261110-r2"></script>
+-  <script src="js/namelecule-quiz-checkpoints.js?v=required-completion-navigation-20261110-r2"></script>
++  <script src="js/namelecule-quiz-checkpoints.js?v=optional-completion-navigation-20261110-r1"></script>
+   <script src="js/namelecule-chemistry-client.js?v=verified-engines-20261105-r1"></script>
+   <script src="js/namelecule-repair-generator.js?v=engine-pilot-20261105-r1"></script>
+   <script src="js/namelecule-generated-repair-checkpoint.js?v=required-completion-navigation-20261110-r2"></script>
+--- before/mulermoc-nom-55.html
++++ mulermoc-nom-55.html
+@@ -361,7 +361,7 @@
+   <script src="js/mulermoc-nom-teaching-55.js?v=namelecule-v55-20261110-r2"></script>
+   <script src="js/mulermoc-nom-note-55.js?v=namelecule-v55-20261110-r2"></script>
+   <script src="js/namelecule-game-repair.js?v=required-completion-navigation-20261110-r2"></script>
+-  <script src="js/namelecule-quiz-checkpoints.js?v=required-completion-navigation-20261110-r2"></script>
++  <script src="js/namelecule-quiz-checkpoints.js?v=optional-completion-navigation-20261110-r1"></script>
+   <script src="js/namelecule-chemistry-client.js?v=verified-engines-20261105-r1"></script>
+   <script src="js/namelecule-repair-generator.js?v=engine-pilot-20261105-r1"></script>
+   <script src="js/namelecule-generated-repair-checkpoint.js?v=required-completion-navigation-20261110-r2"></script>

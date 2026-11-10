@@ -1,0 +1,606 @@
+{
+  "sourceHashesAtStart": {
+    "mulermoc-nom-55.html": "ce5c468aa884a99ee50dd997144ab78a0b55d0b3adeb62c508ccdfb80b3f4e0d",
+    "js/jsme-nick-nomeclature-moc2-data_55.js": "9387cd654b2ff3cfb058d9b97ddcca798ac13f47f769b532f9c122277ff8dd0a",
+    "js/mulermoc-nom-core-55.js": "6cbdbd0ce60f5d66ff3e6925cdfd48e470764baa02b6263f325eff356df5e270",
+    "js/mulermoc-nom-molview-55.js": "2f4d198ba399282c7de51eb6a73f96516ca675dc87218438bb9fed3a632db59a",
+    "js/mulermoc-nom-teaching-55.js": "92f5dd9708103a306c98cd7c19dc10082aa4c57d1744105fadf14074ea60ef00",
+    "js/mulermoc-nom-note-55.js": "e685355459afb7955fbe13e3b8e07c6283469b4d8acb98cfbcfa483c9f9be3ca",
+    "js/mulermoc-nom-scenario-55.js": "0e21b0fea3b8d718cd5ea600cc35a1ff7a74a99cae0f8a30bca7560634d22776",
+    "js/mulermoc-nom-iupac-55.js": "dc284baa921018fcd0a78400ffba5fce049977e6509ff98f44a4c58c09696960",
+    "js/mulermoc-nom-lang-55.js": "22fa52796f92dbeb8e480d511cf71bf48674fe229c85cdb538fcf32a517437d3",
+    "js/mulermoc-nom-name-en-55.js": "e2dd570b5cbfe1f07a3c0ce29f8e4535aeda64bf36ee85741f7f0421871042c8",
+    "js/ui-icons-55.js": "580277e98b0d29bc1df2a265d7e6e395500db9253ee8492349a145fd19a2c414",
+    "css/jsme-nick-55.css": "17c39115dfcf599f403013fb0202e5ecf55e695e4c6fa7fc4734ad1fce93d53e",
+    "css/mulermoc-nom-scenario-55.css": "b73fcd95bcdd0b694934b98923e8dc871312d3d9dca676894c2d98070bf30736",
+    "css/namelecule-55.css": "042b0e93645dbc9fe5c9851bdd90a73b08f8c89fc4ef524302bd07ac7180e7a7",
+    "spt/init-55.spt": "7446cb112f8606e7f0a186435fba8612ca1ab5d4f24537b6f3df7a01de95341a",
+    "design/welcome-proposal.html": "17c04887fde8da210e7c4acd4e1458652948c0d277f180c67460e3e11ff54c2e",
+    "design/theory-library.html": "87e557a3455f14a851dc631c8d70bf93fe396f4a5ebdb8fde4fa78397158e8dc"
+  },
+  "completed": true,
+  "role": "Developer real isolated Firefox evidence; not independent review",
+  "checks": [],
+  "limitations": [
+    "Headless Firefox and viewport emulation only; no personal Firefox interaction",
+    "Real external JSmol/fonts/oracle service failures are retained; controlled transports are explicitly labeled",
+    "No physical mobile/Safari/conference-machine/offline or uninterrupted-operation guarantee"
+  ],
+  "base_url": "http://127.0.0.1:49407/organic-nomenclature-3/",
+  "scope": "Diagnostic only while unrelated Greek-name/IUPAC corrections land; no final frozen-target pass claimed. Name/3D PubChem fixtures supply graph-matched C8; actual reload/readback methods stay real.",
+  "immediateReload": false,
+  "readbacks": [
+    {
+      "time": 1794263525165,
+      "current": true,
+      "revision": 3,
+      "jobRevision": 3,
+      "valid": false,
+      "parsed": true,
+      "atoms": 26,
+      "heavy": 8,
+      "graphMatched": false,
+      "text": "string\n__Jmol-16.11102600323D 1   1.00000     0.00000     0\nJmol version 16.4.23  2026-08-24 10:15 EXTRACT: ({0:25})\n 26 25  0  0  0  0            999 V2000\n   -0.6084   -0.4286    0.0387 C   0  0  2  0  0  0\n    0.6320    0.4677    0.0288 C   0  0  2  0  0  0\n   -1.9251    0.3534    0.0307 C   0  0  2  0  0  0\n    1.9162   -0.3646    0.0134 C   0  0  2  0  0  0\n   -3.1635   -0.5416   -0.0336 C   0  0  2  0  0  0\n    3.1566    0.5275   -0.0351 C   0  0  2  0  0  0\n   -4.4429    0.2810   -0.0264 C   0  0  0  0  0  0\n    4.4352   -0.2948   -0.0166 C   0  0  0  0  0  0\n   -0.5822   -1.0768    0.9233 H   0  0  0  0  0  0\n   -0.5814   -1.0883   -0.8377 H   0  0  0  0  0  0\n    0.6221    1.1178    0.9119 H   0  0  0  0  0  0\n    0.6044    1.1188   -0.8533 H   0  0  0  0  0  0\n   -1.9307    1.0354   -0.8287 H   0  0  0  0  0  0\n   -1.9737    0.9790    0.9306 H   0  0  0  0  0  0\n    1.9126   -1.0331   -0.8562 H   0  0  0  0  0  0\n    1.9522   -0.9984    0.9079 H   0  0  0  0  0  0\n   -3.1698   -1.2275    0.8214 H   0  0  0  0  0  0\n   -3.1320   -1.1542   -0.9419 H   0  0  0  0  0  0\n    3.1575    1.2109    0.8221 H   0  0  0  0  0  0\n    3.1369    1.1437   -0.9415 H   0  0  0  0  0  0\n   -4.5183    0.8815    0.8858 H   0  0  0  0  0  0\n   -4.4800    0.9564   -0.8871 H   0  0  0  0  0  0\n   -5.3163   -0.3770   -0.0729 H   0  0  0  0  0  0\n    5.3093    0.3628   -0.0530 H   0  0  0  0  0  0\n    4.4807   -0.9684   -0.8784 H   0  0  0  0  0  0\n    4.5011   -0.8974    0.8948 H   0  0  0  0  0  0\n  1  2  1\n  1  3  1\n  1  9  1\n  1 10  1\n  2  4  1\n  2 11  1\n  2 12  1\n  3  5  1\n  3 13  1\n  3 14  1\n  4  6  1\n  4 15  1\n  4 16  1\n  5  7  1\n  5 17  1\n  5 18  1\n  6  8  1\n  6 19  1\n  6 20  1\n  7 21  1\n  7 22  1\n  7 23  1\n  8 24  1\n  8 25  1\n  8 26  1\nM  END\n\n",
+      "delayFromPreviousMs": 0
+    },
+    {
+      "time": 1794263525295,
+      "current": true,
+      "revision": 3,
+      "jobRevision": 3,
+      "valid": false,
+      "parsed": true,
+      "atoms": 26,
+      "heavy": 8,
+      "graphMatched": false,
+      "text": "string\n__Jmol-16.11102600323D 1   1.00000     0.00000     0\nJmol version 16.4.23  2026-08-24 10:15 EXTRACT: ({0:25})\n 26 25  0  0  0  0            999 V2000\n   -0.6084   -0.4286    0.0387 C   0  0  2  0  0  0\n    0.6320    0.4677    0.0288 C   0  0  2  0  0  0\n   -1.9251    0.3534    0.0307 C   0  0  2  0  0  0\n    1.9162   -0.3646    0.0134 C   0  0  2  0  0  0\n   -3.1635   -0.5416   -0.0336 C   0  0  2  0  0  0\n    3.1566    0.5275   -0.0351 C   0  0  2  0  0  0\n   -4.4429    0.2810   -0.0264 C   0  0  0  0  0  0\n    4.4352   -0.2948   -0.0166 C   0  0  0  0  0  0\n   -0.5822   -1.0768    0.9233 H   0  0  0  0  0  0\n   -0.5814   -1.0883   -0.8377 H   0  0  0  0  0  0\n    0.6221    1.1178    0.9119 H   0  0  0  0  0  0\n    0.6044    1.1188   -0.8533 H   0  0  0  0  0  0\n   -1.9307    1.0354   -0.8287 H   0  0  0  0  0  0\n   -1.9737    0.9790    0.9306 H   0  0  0  0  0  0\n    1.9126   -1.0331   -0.8562 H   0  0  0  0  0  0\n    1.9522   -0.9984    0.9079 H   0  0  0  0  0  0\n   -3.1698   -1.2275    0.8214 H   0  0  0  0  0  0\n   -3.1320   -1.1542   -0.9419 H   0  0  0  0  0  0\n    3.1575    1.2109    0.8221 H   0  0  0  0  0  0\n    3.1369    1.1437   -0.9415 H   0  0  0  0  0  0\n   -4.5183    0.8815    0.8858 H   0  0  0  0  0  0\n   -4.4800    0.9564   -0.8871 H   0  0  0  0  0  0\n   -5.3163   -0.3770   -0.0729 H   0  0  0  0  0  0\n    5.3093    0.3628   -0.0530 H   0  0  0  0  0  0\n    4.4807   -0.9684   -0.8784 H   0  0  0  0  0  0\n    4.5011   -0.8974    0.8948 H   0  0  0  0  0  0\n  1  2  1\n  1  3  1\n  1  9  1\n  1 10  1\n  2  4  1\n  2 11  1\n  2 12  1\n  3  5  1\n  3 13  1\n  3 14  1\n  4  6  1\n  4 15  1\n  4 16  1\n  5  7  1\n  5 17  1\n  5 18  1\n  6  8  1\n  6 19  1\n  6 20  1\n  7 21  1\n  7 22  1\n  7 23  1\n  8 24  1\n  8 25  1\n  8 26  1\nM  END\n\n",
+      "delayFromPreviousMs": 100
+    },
+    {
+      "time": 1794263525727,
+      "current": true,
+      "revision": 3,
+      "jobRevision": 3,
+      "valid": false,
+      "parsed": true,
+      "atoms": 26,
+      "heavy": 8,
+      "graphMatched": false,
+      "text": "string\n__Jmol-16.11102600323D 1   1.00000     0.00000     0\nJmol version 16.4.23  2026-08-24 10:15 EXTRACT: ({0:25})\n 26 25  0  0  0  0            999 V2000\n   -0.6084   -0.4286    0.0387 C   0  0  2  0  0  0\n    0.6320    0.4677    0.0288 C   0  0  2  0  0  0\n   -1.9251    0.3534    0.0307 C   0  0  2  0  0  0\n    1.9162   -0.3646    0.0134 C   0  0  2  0  0  0\n   -3.1635   -0.5416   -0.0336 C   0  0  2  0  0  0\n    3.1566    0.5275   -0.0351 C   0  0  2  0  0  0\n   -4.4429    0.2810   -0.0264 C   0  0  0  0  0  0\n    4.4352   -0.2948   -0.0166 C   0  0  0  0  0  0\n   -0.5822   -1.0768    0.9233 H   0  0  0  0  0  0\n   -0.5814   -1.0883   -0.8377 H   0  0  0  0  0  0\n    0.6221    1.1178    0.9119 H   0  0  0  0  0  0\n    0.6044    1.1188   -0.8533 H   0  0  0  0  0  0\n   -1.9307    1.0354   -0.8287 H   0  0  0  0  0  0\n   -1.9737    0.9790    0.9306 H   0  0  0  0  0  0\n    1.9126   -1.0331   -0.8562 H   0  0  0  0  0  0\n    1.9522   -0.9984    0.9079 H   0  0  0  0  0  0\n   -3.1698   -1.2275    0.8214 H   0  0  0  0  0  0\n   -3.1320   -1.1542   -0.9419 H   0  0  0  0  0  0\n    3.1575    1.2109    0.8221 H   0  0  0  0  0  0\n    3.1369    1.1437   -0.9415 H   0  0  0  0  0  0\n   -4.5183    0.8815    0.8858 H   0  0  0  0  0  0\n   -4.4800    0.9564   -0.8871 H   0  0  0  0  0  0\n   -5.3163   -0.3770   -0.0729 H   0  0  0  0  0  0\n    5.3093    0.3628   -0.0530 H   0  0  0  0  0  0\n    4.4807   -0.9684   -0.8784 H   0  0  0  0  0  0\n    4.5011   -0.8974    0.8948 H   0  0  0  0  0  0\n  1  2  1\n  1  3  1\n  1  9  1\n  1 10  1\n  2  4  1\n  2 11  1\n  2 12  1\n  3  5  1\n  3 13  1\n  3 14  1\n  4  6  1\n  4 15  1\n  4 16  1\n  5  7  1\n  5 17  1\n  5 18  1\n  6  8  1\n  6 19  1\n  6 20  1\n  7 21  1\n  7 22  1\n  7 23  1\n  8 24  1\n  8 25  1\n  8 26  1\nM  END\n\n",
+      "delayFromPreviousMs": 400
+    },
+    {
+      "time": 1794263526750,
+      "current": true,
+      "revision": 3,
+      "jobRevision": 3,
+      "valid": false,
+      "parsed": true,
+      "atoms": 26,
+      "heavy": 8,
+      "graphMatched": false,
+      "text": "string\n__Jmol-16.11102600323D 1   1.00000     0.00000     0\nJmol version 16.4.23  2026-08-24 10:15 EXTRACT: ({0:25})\n 26 25  0  0  0  0            999 V2000\n   -0.6084   -0.4286    0.0387 C   0  0  2  0  0  0\n    0.6320    0.4677    0.0288 C   0  0  2  0  0  0\n   -1.9251    0.3534    0.0307 C   0  0  2  0  0  0\n    1.9162   -0.3646    0.0134 C   0  0  2  0  0  0\n   -3.1635   -0.5416   -0.0336 C   0  0  2  0  0  0\n    3.1566    0.5275   -0.0351 C   0  0  2  0  0  0\n   -4.4429    0.2810   -0.0264 C   0  0  0  0  0  0\n    4.4352   -0.2948   -0.0166 C   0  0  0  0  0  0\n   -0.5822   -1.0768    0.9233 H   0  0  0  0  0  0\n   -0.5814   -1.0883   -0.8377 H   0  0  0  0  0  0\n    0.6221    1.1178    0.9119 H   0  0  0  0  0  0\n    0.6044    1.1188   -0.8533 H   0  0  0  0  0  0\n   -1.9307    1.0354   -0.8287 H   0  0  0  0  0  0\n   -1.9737    0.9790    0.9306 H   0  0  0  0  0  0\n    1.9126   -1.0331   -0.8562 H   0  0  0  0  0  0\n    1.9522   -0.9984    0.9079 H   0  0  0  0  0  0\n   -3.1698   -1.2275    0.8214 H   0  0  0  0  0  0\n   -3.1320   -1.1542   -0.9419 H   0  0  0  0  0  0\n    3.1575    1.2109    0.8221 H   0  0  0  0  0  0\n    3.1369    1.1437   -0.9415 H   0  0  0  0  0  0\n   -4.5183    0.8815    0.8858 H   0  0  0  0  0  0\n   -4.4800    0.9564   -0.8871 H   0  0  0  0  0  0\n   -5.3163   -0.3770   -0.0729 H   0  0  0  0  0  0\n    5.3093    0.3628   -0.0530 H   0  0  0  0  0  0\n    4.4807   -0.9684   -0.8784 H   0  0  0  0  0  0\n    4.5011   -0.8974    0.8948 H   0  0  0  0  0  0\n  1  2  1\n  1  3  1\n  1  9  1\n  1 10  1\n  2  4  1\n  2 11  1\n  2 12  1\n  3  5  1\n  3 13  1\n  3 14  1\n  4  6  1\n  4 15  1\n  4 16  1\n  5  7  1\n  5 17  1\n  5 18  1\n  6  8  1\n  6 19  1\n  6 20  1\n  7 21  1\n  7 22  1\n  7 23  1\n  8 24  1\n  8 25  1\n  8 26  1\nM  END\n\n",
+      "delayFromPreviousMs": 1000
+    }
+  ],
+  "trace": [
+    {
+      "kind": "echo",
+      "command": "write MOL",
+      "time": 1794263525020,
+      "text": "\n"
+    },
+    {
+      "kind": "valid",
+      "time": 1794263525020,
+      "bytes": 3770,
+      "heavy": 8,
+      "valid": true,
+      "input": true
+    },
+    {
+      "kind": "writer",
+      "time": 1794263525020,
+      "command": "frank off;load data \"model.sdf\"\n356\n  -OEChem-11042602283D\n\n 26 25  0     0  0  0  0  0  0999 V2000\n   -0.6084   -0.4286    0.0387 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.6320",
+      "before": 2,
+      "after": 3,
+      "own": true,
+      "current": true
+    },
+    {
+      "kind": "writer",
+      "time": 1794263525020,
+      "command": "select all;",
+      "before": 3,
+      "after": 3,
+      "own": true,
+      "current": true
+    },
+    {
+      "kind": "echo",
+      "command": "write MOL",
+      "time": 1794263525037,
+      "text": "string\n__Jmol-16.11102600323D 1   1.00000     0.00000     0\nJmol version 16.4.23  2026-08-24 10:15 EXTRACT: ({0:25})\n 26 25  0  0  0  0            999 V2000\n   -0.6084   -0.4286    0.0387 C   0  0  2  0  0  0\n    0.6320    0.4677    0.0288 C   0  0  2  0  0  0\n   -1.9251    0.3534    0.0307 C   0  0  2  0  0  0\n    1.9162   -0.3646    0.0134 C   0  0  2  0  0  0\n   -3.1635   -0.5416   -0.0336 C   0  0  2  0  0  0\n    3.1566    0.5275   -0.0351 C   0  0  2  0  0  0\n   -4.4429    0.2810   -0.0264 C   0  0  0  0  0  0\n    4.4352   -0.2948   -0.0166 C   0  0  0  0  0  0\n   -0.5822   -1.0768    0.9233 H   0  0  0  0  0  0\n   -0.5814   -1.0883   -0.8377 H   0  0  0  0  0  0\n    0.6221    1.1178    0.9119 H   0  0  0  0  0  0\n    0.6044    1.1188   -0.8533 H   0  0  0  0  0  0\n   -1.9307    1.0354   -0.8287 H   0  0  0  0  0  0\n   -1.9737    0.9790    0.9306 H   0  0  0  0  0  0\n    1.9126   -1.0331   -0.8562 H   0  0  0  0  0  0\n    1.9522   -0.9984    0.9079 H   0  0  0  0  0  0\n   -3.1698   -1.2275    0.8214 H   0  0  0  0  0  0\n   -3.1320   -1.1542   -0.9419 H   0  0  0  0  0  0\n    3.1575    1.2109    0.8221 H   0  0  0  0  0  0\n    3.1369    1.1437   -0.9415 H   0  0  0  0  0  0\n   -4.5183    0.8815    0.8858 H   0  0  0  0  0  0\n   -4.4800    0.9564   -0.8871 H   0  0  0  0  0  0\n   -5.3163   -0.3770   -0.0729 H   0  0  0  0  0  0\n    5.3093    0.3628   -0.0530 H   0  0  0  0  0  0\n    4.4807   -0.9684   -0.8784 H   0  0  0  0  0  0\n    4.5011   -0.8974    0.8948 H   0  0  0  0  0  0\n  1  2  1\n  1  3  1\n  1  9  1\n  1 10  1\n  2  4  1\n  2 11  1\n  2 12  1\n  3  5  1\n  3 13  1\n  3 14  1\n  4  6  1\n  4 15  1\n  4 16  1\n  5  7  1\n  5 17  1\n  5 18  1\n  6  8  1\n  6 19  1\n  6 20  1\n  7 21  1\n  7 22  1\n  7 23  1\n  8 24  1\n  8 25  1\n  8 26  1\nM  END\n\n"
+    },
+    {
+      "kind": "valid",
+      "time": 1794263525037,
+      "bytes": 1767,
+      "heavy": 8,
+      "valid": false,
+      "input": true
+    },
+    {
+      "kind": "echo",
+      "command": "write MOL",
+      "time": 1794263525165,
+      "text": "string\n__Jmol-16.11102600323D 1   1.00000     0.00000     0\nJmol version 16.4.23  2026-08-24 10:15 EXTRACT: ({0:25})\n 26 25  0  0  0  0            999 V2000\n   -0.6084   -0.4286    0.0387 C   0  0  2  0  0  0\n    0.6320    0.4677    0.0288 C   0  0  2  0  0  0\n   -1.9251    0.3534    0.0307 C   0  0  2  0  0  0\n    1.9162   -0.3646    0.0134 C   0  0  2  0  0  0\n   -3.1635   -0.5416   -0.0336 C   0  0  2  0  0  0\n    3.1566    0.5275   -0.0351 C   0  0  2  0  0  0\n   -4.4429    0.2810   -0.0264 C   0  0  0  0  0  0\n    4.4352   -0.2948   -0.0166 C   0  0  0  0  0  0\n   -0.5822   -1.0768    0.9233 H   0  0  0  0  0  0\n   -0.5814   -1.0883   -0.8377 H   0  0  0  0  0  0\n    0.6221    1.1178    0.9119 H   0  0  0  0  0  0\n    0.6044    1.1188   -0.8533 H   0  0  0  0  0  0\n   -1.9307    1.0354   -0.8287 H   0  0  0  0  0  0\n   -1.9737    0.9790    0.9306 H   0  0  0  0  0  0\n    1.9126   -1.0331   -0.8562 H   0  0  0  0  0  0\n    1.9522   -0.9984    0.9079 H   0  0  0  0  0  0\n   -3.1698   -1.2275    0.8214 H   0  0  0  0  0  0\n   -3.1320   -1.1542   -0.9419 H   0  0  0  0  0  0\n    3.1575    1.2109    0.8221 H   0  0  0  0  0  0\n    3.1369    1.1437   -0.9415 H   0  0  0  0  0  0\n   -4.5183    0.8815    0.8858 H   0  0  0  0  0  0\n   -4.4800    0.9564   -0.8871 H   0  0  0  0  0  0\n   -5.3163   -0.3770   -0.0729 H   0  0  0  0  0  0\n    5.3093    0.3628   -0.0530 H   0  0  0  0  0  0\n    4.4807   -0.9684   -0.8784 H   0  0  0  0  0  0\n    4.5011   -0.8974    0.8948 H   0  0  0  0  0  0\n  1  2  1\n  1  3  1\n  1  9  1\n  1 10  1\n  2  4  1\n  2 11  1\n  2 12  1\n  3  5  1\n  3 13  1\n  3 14  1\n  4  6  1\n  4 15  1\n  4 16  1\n  5  7  1\n  5 17  1\n  5 18  1\n  6  8  1\n  6 19  1\n  6 20  1\n  7 21  1\n  7 22  1\n  7 23  1\n  8 24  1\n  8 25  1\n  8 26  1\nM  END\n\n"
+    },
+    {
+      "kind": "valid",
+      "time": 1794263525165,
+      "bytes": 1767,
+      "heavy": 8,
+      "valid": false,
+      "input": true
+    },
+    {
+      "kind": "echo",
+      "command": "write MOL",
+      "time": 1794263525295,
+      "text": "string\n__Jmol-16.11102600323D 1   1.00000     0.00000     0\nJmol version 16.4.23  2026-08-24 10:15 EXTRACT: ({0:25})\n 26 25  0  0  0  0            999 V2000\n   -0.6084   -0.4286    0.0387 C   0  0  2  0  0  0\n    0.6320    0.4677    0.0288 C   0  0  2  0  0  0\n   -1.9251    0.3534    0.0307 C   0  0  2  0  0  0\n    1.9162   -0.3646    0.0134 C   0  0  2  0  0  0\n   -3.1635   -0.5416   -0.0336 C   0  0  2  0  0  0\n    3.1566    0.5275   -0.0351 C   0  0  2  0  0  0\n   -4.4429    0.2810   -0.0264 C   0  0  0  0  0  0\n    4.4352   -0.2948   -0.0166 C   0  0  0  0  0  0\n   -0.5822   -1.0768    0.9233 H   0  0  0  0  0  0\n   -0.5814   -1.0883   -0.8377 H   0  0  0  0  0  0\n    0.6221    1.1178    0.9119 H   0  0  0  0  0  0\n    0.6044    1.1188   -0.8533 H   0  0  0  0  0  0\n   -1.9307    1.0354   -0.8287 H   0  0  0  0  0  0\n   -1.9737    0.9790    0.9306 H   0  0  0  0  0  0\n    1.9126   -1.0331   -0.8562 H   0  0  0  0  0  0\n    1.9522   -0.9984    0.9079 H   0  0  0  0  0  0\n   -3.1698   -1.2275    0.8214 H   0  0  0  0  0  0\n   -3.1320   -1.1542   -0.9419 H   0  0  0  0  0  0\n    3.1575    1.2109    0.8221 H   0  0  0  0  0  0\n    3.1369    1.1437   -0.9415 H   0  0  0  0  0  0\n   -4.5183    0.8815    0.8858 H   0  0  0  0  0  0\n   -4.4800    0.9564   -0.8871 H   0  0  0  0  0  0\n   -5.3163   -0.3770   -0.0729 H   0  0  0  0  0  0\n    5.3093    0.3628   -0.0530 H   0  0  0  0  0  0\n    4.4807   -0.9684   -0.8784 H   0  0  0  0  0  0\n    4.5011   -0.8974    0.8948 H   0  0  0  0  0  0\n  1  2  1\n  1  3  1\n  1  9  1\n  1 10  1\n  2  4  1\n  2 11  1\n  2 12  1\n  3  5  1\n  3 13  1\n  3 14  1\n  4  6  1\n  4 15  1\n  4 16  1\n  5  7  1\n  5 17  1\n  5 18  1\n  6  8  1\n  6 19  1\n  6 20  1\n  7 21  1\n  7 22  1\n  7 23  1\n  8 24  1\n  8 25  1\n  8 26  1\nM  END\n\n"
+    },
+    {
+      "kind": "valid",
+      "time": 1794263525295,
+      "bytes": 1767,
+      "heavy": 8,
+      "valid": false,
+      "input": true
+    },
+    {
+      "kind": "echo",
+      "command": "write MOL",
+      "time": 1794263525727,
+      "text": "string\n__Jmol-16.11102600323D 1   1.00000     0.00000     0\nJmol version 16.4.23  2026-08-24 10:15 EXTRACT: ({0:25})\n 26 25  0  0  0  0            999 V2000\n   -0.6084   -0.4286    0.0387 C   0  0  2  0  0  0\n    0.6320    0.4677    0.0288 C   0  0  2  0  0  0\n   -1.9251    0.3534    0.0307 C   0  0  2  0  0  0\n    1.9162   -0.3646    0.0134 C   0  0  2  0  0  0\n   -3.1635   -0.5416   -0.0336 C   0  0  2  0  0  0\n    3.1566    0.5275   -0.0351 C   0  0  2  0  0  0\n   -4.4429    0.2810   -0.0264 C   0  0  0  0  0  0\n    4.4352   -0.2948   -0.0166 C   0  0  0  0  0  0\n   -0.5822   -1.0768    0.9233 H   0  0  0  0  0  0\n   -0.5814   -1.0883   -0.8377 H   0  0  0  0  0  0\n    0.6221    1.1178    0.9119 H   0  0  0  0  0  0\n    0.6044    1.1188   -0.8533 H   0  0  0  0  0  0\n   -1.9307    1.0354   -0.8287 H   0  0  0  0  0  0\n   -1.9737    0.9790    0.9306 H   0  0  0  0  0  0\n    1.9126   -1.0331   -0.8562 H   0  0  0  0  0  0\n    1.9522   -0.9984    0.9079 H   0  0  0  0  0  0\n   -3.1698   -1.2275    0.8214 H   0  0  0  0  0  0\n   -3.1320   -1.1542   -0.9419 H   0  0  0  0  0  0\n    3.1575    1.2109    0.8221 H   0  0  0  0  0  0\n    3.1369    1.1437   -0.9415 H   0  0  0  0  0  0\n   -4.5183    0.8815    0.8858 H   0  0  0  0  0  0\n   -4.4800    0.9564   -0.8871 H   0  0  0  0  0  0\n   -5.3163   -0.3770   -0.0729 H   0  0  0  0  0  0\n    5.3093    0.3628   -0.0530 H   0  0  0  0  0  0\n    4.4807   -0.9684   -0.8784 H   0  0  0  0  0  0\n    4.5011   -0.8974    0.8948 H   0  0  0  0  0  0\n  1  2  1\n  1  3  1\n  1  9  1\n  1 10  1\n  2  4  1\n  2 11  1\n  2 12  1\n  3  5  1\n  3 13  1\n  3 14  1\n  4  6  1\n  4 15  1\n  4 16  1\n  5  7  1\n  5 17  1\n  5 18  1\n  6  8  1\n  6 19  1\n  6 20  1\n  7 21  1\n  7 22  1\n  7 23  1\n  8 24  1\n  8 25  1\n  8 26  1\nM  END\n\n"
+    },
+    {
+      "kind": "valid",
+      "time": 1794263525727,
+      "bytes": 1767,
+      "heavy": 8,
+      "valid": false,
+      "input": true
+    },
+    {
+      "kind": "echo",
+      "command": "write MOL",
+      "time": 1794263526750,
+      "text": "string\n__Jmol-16.11102600323D 1   1.00000     0.00000     0\nJmol version 16.4.23  2026-08-24 10:15 EXTRACT: ({0:25})\n 26 25  0  0  0  0            999 V2000\n   -0.6084   -0.4286    0.0387 C   0  0  2  0  0  0\n    0.6320    0.4677    0.0288 C   0  0  2  0  0  0\n   -1.9251    0.3534    0.0307 C   0  0  2  0  0  0\n    1.9162   -0.3646    0.0134 C   0  0  2  0  0  0\n   -3.1635   -0.5416   -0.0336 C   0  0  2  0  0  0\n    3.1566    0.5275   -0.0351 C   0  0  2  0  0  0\n   -4.4429    0.2810   -0.0264 C   0  0  0  0  0  0\n    4.4352   -0.2948   -0.0166 C   0  0  0  0  0  0\n   -0.5822   -1.0768    0.9233 H   0  0  0  0  0  0\n   -0.5814   -1.0883   -0.8377 H   0  0  0  0  0  0\n    0.6221    1.1178    0.9119 H   0  0  0  0  0  0\n    0.6044    1.1188   -0.8533 H   0  0  0  0  0  0\n   -1.9307    1.0354   -0.8287 H   0  0  0  0  0  0\n   -1.9737    0.9790    0.9306 H   0  0  0  0  0  0\n    1.9126   -1.0331   -0.8562 H   0  0  0  0  0  0\n    1.9522   -0.9984    0.9079 H   0  0  0  0  0  0\n   -3.1698   -1.2275    0.8214 H   0  0  0  0  0  0\n   -3.1320   -1.1542   -0.9419 H   0  0  0  0  0  0\n    3.1575    1.2109    0.8221 H   0  0  0  0  0  0\n    3.1369    1.1437   -0.9415 H   0  0  0  0  0  0\n   -4.5183    0.8815    0.8858 H   0  0  0  0  0  0\n   -4.4800    0.9564   -0.8871 H   0  0  0  0  0  0\n   -5.3163   -0.3770   -0.0729 H   0  0  0  0  0  0\n    5.3093    0.3628   -0.0530 H   0  0  0  0  0  0\n    4.4807   -0.9684   -0.8784 H   0  0  0  0  0  0\n    4.5011   -0.8974    0.8948 H   0  0  0  0  0  0\n  1  2  1\n  1  3  1\n  1  9  1\n  1 10  1\n  2  4  1\n  2 11  1\n  2 12  1\n  3  5  1\n  3 13  1\n  3 14  1\n  4  6  1\n  4 15  1\n  4 16  1\n  5  7  1\n  5 17  1\n  5 18  1\n  6  8  1\n  6 19  1\n  6 20  1\n  7 21  1\n  7 22  1\n  7 23  1\n  8 24  1\n  8 25  1\n  8 26  1\nM  END\n\n"
+    },
+    {
+      "kind": "valid",
+      "time": 1794263526750,
+      "bytes": 1767,
+      "heavy": 8,
+      "valid": false,
+      "input": true
+    }
+  ],
+  "submittedMol": "\nJME 2023-07-31 Tue Nov 10 00:32:04 GMT+200 2026\n\n  8  7  0  0  0  0  0  0  0  0999 V2000\n    0.0000    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.4000    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.8000    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    4.2000    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    5.6000    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    7.0000    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    8.4000    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    9.8000    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0  0  0  0\n  2  3  1  0  0  0  0\n  3  4  1  0  0  0  0\n  4  5  1  0  0  0  0\n  5  6  1  0  0  0  0\n  6  7  1  0  0  0  0\n  7  8  1  0  0  0  0\nM  END\n",
+  "initialEcho": "\n",
+  "sourceHashesAtFinish": {
+    "mulermoc-nom-55.html": "ce5c468aa884a99ee50dd997144ab78a0b55d0b3adeb62c508ccdfb80b3f4e0d",
+    "js/jsme-nick-nomeclature-moc2-data_55.js": "9387cd654b2ff3cfb058d9b97ddcca798ac13f47f769b532f9c122277ff8dd0a",
+    "js/mulermoc-nom-core-55.js": "6cbdbd0ce60f5d66ff3e6925cdfd48e470764baa02b6263f325eff356df5e270",
+    "js/mulermoc-nom-molview-55.js": "2f4d198ba399282c7de51eb6a73f96516ca675dc87218438bb9fed3a632db59a",
+    "js/mulermoc-nom-teaching-55.js": "92f5dd9708103a306c98cd7c19dc10082aa4c57d1744105fadf14074ea60ef00",
+    "js/mulermoc-nom-note-55.js": "e685355459afb7955fbe13e3b8e07c6283469b4d8acb98cfbcfa483c9f9be3ca",
+    "js/mulermoc-nom-scenario-55.js": "0e21b0fea3b8d718cd5ea600cc35a1ff7a74a99cae0f8a30bca7560634d22776",
+    "js/mulermoc-nom-iupac-55.js": "dc284baa921018fcd0a78400ffba5fce049977e6509ff98f44a4c58c09696960",
+    "js/mulermoc-nom-lang-55.js": "22fa52796f92dbeb8e480d511cf71bf48674fe229c85cdb538fcf32a517437d3",
+    "js/mulermoc-nom-name-en-55.js": "e2dd570b5cbfe1f07a3c0ce29f8e4535aeda64bf36ee85741f7f0421871042c8",
+    "js/ui-icons-55.js": "580277e98b0d29bc1df2a265d7e6e395500db9253ee8492349a145fd19a2c414",
+    "css/jsme-nick-55.css": "17c39115dfcf599f403013fb0202e5ecf55e695e4c6fa7fc4734ad1fce93d53e",
+    "css/mulermoc-nom-scenario-55.css": "b73fcd95bcdd0b694934b98923e8dc871312d3d9dca676894c2d98070bf30736",
+    "css/namelecule-55.css": "042b0e93645dbc9fe5c9851bdd90a73b08f8c89fc4ef524302bd07ac7180e7a7",
+    "spt/init-55.spt": "7446cb112f8606e7f0a186435fba8612ca1ab5d4f24537b6f3df7a01de95341a",
+    "design/welcome-proposal.html": "17c04887fde8da210e7c4acd4e1458652948c0d277f180c67460e3e11ff54c2e",
+    "design/theory-library.html": "87e557a3455f14a851dc631c8d70bf93fe396f4a5ebdb8fde4fa78397158e8dc"
+  },
+  "javascriptErrors": [],
+  "allConsoleEntries": [
+    {
+      "type": "console",
+      "method": "log",
+      "source": {
+        "realm": "f3f44376-f0e1-4c72-87b3-ad85bdb11bb0",
+        "context": "5a7844fa-3bc2-4b49-a4aa-b7ad19eb60ee",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "JSmol load jmolAppletNomeclature loadClazz..."
+        }
+      ],
+      "level": "info",
+      "text": "JSmol load jmolAppletNomeclature loadClazz...",
+      "timestamp": 1794263521608,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 484,
+            "functionName": "a._addExec",
+            "lineNumber": 158,
+            "url": "http://127.0.0.1:49407/organic-nomenclature-3/js/vendor/jsmol/namelecule-20261031-r1/JSmol.min.js"
+          }
+        ]
+      }
+    },
+    {
+      "type": "console",
+      "method": "log",
+      "source": {
+        "realm": "f3f44376-f0e1-4c72-87b3-ad85bdb11bb0",
+        "context": "5a7844fa-3bc2-4b49-a4aa-b7ad19eb60ee",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "JSmol load jmolAppletNomeclature start applet..."
+        }
+      ],
+      "level": "info",
+      "text": "JSmol load jmolAppletNomeclature start applet...",
+      "timestamp": 1794263521684,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 484,
+            "functionName": "a._addExec",
+            "lineNumber": 158,
+            "url": "http://127.0.0.1:49407/organic-nomenclature-3/js/vendor/jsmol/namelecule-20261031-r1/JSmol.min.js"
+          }
+        ]
+      }
+    },
+    {
+      "type": "console",
+      "method": "log",
+      "source": {
+        "realm": "f3f44376-f0e1-4c72-87b3-ad85bdb11bb0",
+        "context": "5a7844fa-3bc2-4b49-a4aa-b7ad19eb60ee",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "[LANG] applied EN (strings + tooltips/aria observer), lang=en"
+        }
+      ],
+      "level": "info",
+      "text": "[LANG] applied EN (strings + tooltips/aria observer), lang=en",
+      "timestamp": 1794263522041,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 10,
+            "functionName": "fApplyMulerLangPilot",
+            "lineNumber": 378,
+            "url": "http://127.0.0.1:49407/organic-nomenclature-3/js/mulermoc-nom-lang-55.js?v=namelecule-v55-20261110-r2"
+          }
+        ]
+      }
+    },
+    {
+      "type": "console",
+      "method": "log",
+      "source": {
+        "realm": "f3f44376-f0e1-4c72-87b3-ad85bdb11bb0",
+        "context": "5a7844fa-3bc2-4b49-a4aa-b7ad19eb60ee",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "JSmol exec jmolAppletNomeclature loadClazz null -- OK"
+        }
+      ],
+      "level": "info",
+      "text": "JSmol exec jmolAppletNomeclature loadClazz null -- OK",
+      "timestamp": 1794263522376,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 373,
+            "functionName": "l",
+            "lineNumber": 157,
+            "url": "http://127.0.0.1:49407/organic-nomenclature-3/js/vendor/jsmol/namelecule-20261031-r1/JSmol.min.js"
+          }
+        ]
+      }
+    },
+    {
+      "type": "console",
+      "method": "log",
+      "source": {
+        "realm": "f3f44376-f0e1-4c72-87b3-ad85bdb11bb0",
+        "context": "5a7844fa-3bc2-4b49-a4aa-b7ad19eb60ee",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "JSmol exec jmolAppletNomeclature start applet null -- OK"
+        }
+      ],
+      "level": "info",
+      "text": "JSmol exec jmolAppletNomeclature start applet null -- OK",
+      "timestamp": 1794263522741,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 373,
+            "functionName": "l",
+            "lineNumber": 157,
+            "url": "http://127.0.0.1:49407/organic-nomenclature-3/js/vendor/jsmol/namelecule-20261031-r1/JSmol.min.js"
+          }
+        ]
+      }
+    },
+    {
+      "type": "console",
+      "method": "log",
+      "source": {
+        "realm": "f3f44376-f0e1-4c72-87b3-ad85bdb11bb0",
+        "context": "5a7844fa-3bc2-4b49-a4aa-b7ad19eb60ee",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "[ENGINE-EN-SYS] methane -> methane"
+        }
+      ],
+      "level": "info",
+      "text": "[ENGINE-EN-SYS] methane -> methane",
+      "timestamp": 1794263523358,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 12,
+            "functionName": "fPopulateEngineENFromGreek",
+            "lineNumber": 388,
+            "url": "http://127.0.0.1:49407/organic-nomenclature-3/js/mulermoc-nom-name-en-55.js?v=namelecule-v55-20261110-r2"
+          }
+        ]
+      }
+    },
+    {
+      "type": "console",
+      "method": "log",
+      "source": {
+        "realm": "f3f44376-f0e1-4c72-87b3-ad85bdb11bb0",
+        "context": "5a7844fa-3bc2-4b49-a4aa-b7ad19eb60ee",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "[ENGINE-EN] methane -> methane"
+        }
+      ],
+      "level": "info",
+      "text": "[ENGINE-EN] methane -> methane",
+      "timestamp": 1794263523360,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 12,
+            "functionName": "fPopulateEngineENFromGreek",
+            "lineNumber": 388,
+            "url": "http://127.0.0.1:49407/organic-nomenclature-3/js/mulermoc-nom-name-en-55.js?v=namelecule-v55-20261110-r2"
+          }
+        ]
+      }
+    },
+    {
+      "type": "console",
+      "method": "log",
+      "source": {
+        "realm": "f3f44376-f0e1-4c72-87b3-ad85bdb11bb0",
+        "context": "5a7844fa-3bc2-4b49-a4aa-b7ad19eb60ee",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "[SELECT] mol=methane SMILES=C SYSTEMATIC_EN=fetching…"
+        }
+      ],
+      "level": "info",
+      "text": "[SELECT] mol=methane SMILES=C SYSTEMATIC_EN=fetching…",
+      "timestamp": 1794263523370,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 10,
+            "functionName": "fLogMolSelectWithIUPAC",
+            "lineNumber": 492,
+            "url": "http://127.0.0.1:49407/organic-nomenclature-3/js/mulermoc-nom-iupac-55.js?v=namelecule-v55-20261110-r2"
+          }
+        ]
+      }
+    },
+    {
+      "type": "console",
+      "method": "warn",
+      "source": {
+        "realm": "f3f44376-f0e1-4c72-87b3-ad85bdb11bb0",
+        "context": "5a7844fa-3bc2-4b49-a4aa-b7ad19eb60ee",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "[fCalcMainChain] LENGTH MISMATCH  \"methane\"  calc=[1,2,3,4,5,6,7,8]  stored=[1]"
+        }
+      ],
+      "level": "warn",
+      "text": "[fCalcMainChain] LENGTH MISMATCH  \"methane\"  calc=[1,2,3,4,5,6,7,8]  stored=[1]",
+      "timestamp": 1794263524573,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 16,
+            "functionName": "fValidateMainChain",
+            "lineNumber": 1563,
+            "url": "http://127.0.0.1:49407/organic-nomenclature-3/js/mulermoc-nom-core-55.js?v=namelecule-v55-20261110-r2"
+          }
+        ]
+      }
+    },
+    {
+      "type": "console",
+      "method": "warn",
+      "source": {
+        "realm": "f3f44376-f0e1-4c72-87b3-ad85bdb11bb0",
+        "context": "5a7844fa-3bc2-4b49-a4aa-b7ad19eb60ee",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "[fCalcMainChain] LENGTH MISMATCH  \"methane\"  calc=[1,2,3,4,5,6,7,8]  stored=[1]"
+        }
+      ],
+      "level": "warn",
+      "text": "[fCalcMainChain] LENGTH MISMATCH  \"methane\"  calc=[1,2,3,4,5,6,7,8]  stored=[1]",
+      "timestamp": 1794263524586,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 16,
+            "functionName": "fValidateMainChain",
+            "lineNumber": 1563,
+            "url": "http://127.0.0.1:49407/organic-nomenclature-3/js/mulermoc-nom-core-55.js?v=namelecule-v55-20261110-r2"
+          }
+        ]
+      }
+    },
+    {
+      "type": "console",
+      "method": "log",
+      "source": {
+        "realm": "f3f44376-f0e1-4c72-87b3-ad85bdb11bb0",
+        "context": "5a7844fa-3bc2-4b49-a4aa-b7ad19eb60ee",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "[ENGINE-EN] __draft__ -> octane"
+        }
+      ],
+      "level": "info",
+      "text": "[ENGINE-EN] __draft__ -> octane",
+      "timestamp": 1794263524605,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 12,
+            "functionName": "fPopulateEngineENFromGreek",
+            "lineNumber": 388,
+            "url": "http://127.0.0.1:49407/organic-nomenclature-3/js/mulermoc-nom-name-en-55.js?v=namelecule-v55-20261110-r2"
+          }
+        ]
+      }
+    },
+    {
+      "type": "console",
+      "method": "log",
+      "source": {
+        "realm": "f3f44376-f0e1-4c72-87b3-ad85bdb11bb0",
+        "context": "5a7844fa-3bc2-4b49-a4aa-b7ad19eb60ee",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "[ENGINE-EN-SYS] __draft__ -> octane"
+        }
+      ],
+      "level": "info",
+      "text": "[ENGINE-EN-SYS] __draft__ -> octane",
+      "timestamp": 1794263524606,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 12,
+            "functionName": "fPopulateEngineENFromGreek",
+            "lineNumber": 388,
+            "url": "http://127.0.0.1:49407/organic-nomenclature-3/js/mulermoc-nom-name-en-55.js?v=namelecule-v55-20261110-r2"
+          }
+        ]
+      }
+    },
+    {
+      "type": "console",
+      "method": "log",
+      "source": {
+        "realm": "f3f44376-f0e1-4c72-87b3-ad85bdb11bb0",
+        "context": "5a7844fa-3bc2-4b49-a4aa-b7ad19eb60ee",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "[EN-CHECK-OC] draft: predicted=\"octane\" openclatura=\"octane\" verdict=match"
+        }
+      ],
+      "level": "info",
+      "text": "[EN-CHECK-OC] draft: predicted=\"octane\" openclatura=\"octane\" verdict=match",
+      "timestamp": 1794263524607,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 20,
+            "functionName": "fMolDraftSubmit/<",
+            "lineNumber": 2725,
+            "url": "http://127.0.0.1:49407/organic-nomenclature-3/js/mulermoc-nom-molview-55.js?v=namelecule-v55-20261110-r2"
+          }
+        ]
+      }
+    },
+    {
+      "type": "console",
+      "method": "warn",
+      "source": {
+        "realm": "f3f44376-f0e1-4c72-87b3-ad85bdb11bb0",
+        "context": "5a7844fa-3bc2-4b49-a4aa-b7ad19eb60ee",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "[fCalcMainChain3D] LENGTH MISMATCH  \"methane\"  calc=[7,5,3,1,2,4,6,8]  stored=[1]"
+        }
+      ],
+      "level": "warn",
+      "text": "[fCalcMainChain3D] LENGTH MISMATCH  \"methane\"  calc=[7,5,3,1,2,4,6,8]  stored=[1]",
+      "timestamp": 1794263524737,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 16,
+            "functionName": "fValidateMainChain3D",
+            "lineNumber": 2002,
+            "url": "http://127.0.0.1:49407/organic-nomenclature-3/js/mulermoc-nom-core-55.js?v=namelecule-v55-20261110-r2"
+          }
+        ]
+      }
+    }
+  ]
+}

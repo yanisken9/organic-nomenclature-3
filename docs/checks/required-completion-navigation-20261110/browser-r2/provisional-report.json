@@ -1,0 +1,22 @@
+{
+  "status": "R2readiness checks complete; keyboardTabEscape reproduction sent to Developer and unresolved.",
+  "role": "Developer browser evidence; not independent review",
+  "beforeCompleted": true,
+  "afterReadinessCompleted": true,
+  "afterReadinessChecks": 23,
+  "tabEscape": "Single bounded repeat confirmed Return.focus→nativeTab puts activeBODY/hasFocusfalse while dialogopen; single nativeEscape navigates lesson to theorylibrary. Exact trustedkeydown/up/focus trace retained. Cause not yet attributed; do not label harness-only.",
+  "artifacts": [
+    "before-browser.json",
+    "before-delayed-completed-header.png",
+    "before-error-completed-header.png",
+    "after-attempt1-tab-escape-browser.json",
+    "after-final-browser.json",
+    "tab-diagnostic-browser.json",
+    "tab-diagnostic-after-tab.png",
+    "tab-diagnostic-after-escape.png"
+  ],
+  "sourceTarget": "frozen-target.json",
+  "pending": "Primary Developer investigates keyboardrouting. Do not declare entire requested behavior complete until disposition.",
+  "ownedProcess": "process.json; running isolated pending requested verification; no personalbrowser control.",
+  "recordedUTC": "2026-11-10T08:16:55Z"
+}

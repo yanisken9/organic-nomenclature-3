@@ -1,0 +1,28 @@
+{
+  "role": "Developer checks; browser verified separately",
+  "syntax": [
+    {
+      "file": "js/namelecule-generated-repair-checkpoint.js",
+      "check": "JavaScriptCore new Function syntax only",
+      "exitCode": 0,
+      "stdout": "syntax OK",
+      "stderr": ""
+    },
+    {
+      "file": "js/namelecule-game-repair.js",
+      "check": "JavaScriptCore new Function syntax only",
+      "exitCode": 0,
+      "stdout": "syntax OK",
+      "stderr": ""
+    }
+  ],
+  "invariants": {
+    "adapterOnlyOptionalDisplayFlag": true,
+    "engineUnchanged": true,
+    "zoomOpenCloseFunctionsUnchanged": true,
+    "protected14Unchanged": true
+  },
+  "limitations": [
+    "Syntax compilation and exact comparisons only; no browser runtime execution in this check."
+  ]
+}

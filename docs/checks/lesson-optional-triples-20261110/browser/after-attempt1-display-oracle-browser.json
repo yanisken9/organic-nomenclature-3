@@ -1,0 +1,430 @@
+{
+  "completed": false,
+  "stage": "after",
+  "checks": [
+    {
+      "label": "Exact seven served source hashes",
+      "detail": {
+        "js/namelecule-game-repair.js": "d1649341e1b9181da180e0d62c12a0d0f27229af8d108048a3798c24944bf862",
+        "js/namelecule-generated-repair-checkpoint.js": "714e3b6140b28377a8af611c93350c42b0166e805f4dc62021055f8d5494b365",
+        "js/namelecule-quiz-checkpoints.js": "389b2f06b9f961114a702736d44b1ac98e7457a9f770e73a04ea14951bbe4ab7",
+        "css/namelecule-repair-round.css": "412678635b54693b542a1b70fcb104e623ea369e246219c98e70b1f053477031",
+        "css/namelecule-quiz-checkpoints.css": "988b50c3f7080606ede565c2b5b98c8b47e7df51eca15ae736c1bae957d8ed75",
+        "mulermoc-nom-54.html": "680f67ee1fa43d268228ac0abd6d39ebb225b215b56e4e322f7f6ed2aad089e7",
+        "mulermoc-nom-55.html": "f89bcd5fde30b7f489977e6113ba02a42e851252d0d88b19ac3ae5d6a0b87246"
+      }
+    },
+    {
+      "label": "Empty gate4 mandatory locked and optional card unavailable",
+      "detail": null
+    },
+    {
+      "label": "Lesson opens at top",
+      "detail": null
+    },
+    {
+      "label": "required-s4r1 current-question position before check",
+      "detail": "Κουίζ 1/3"
+    },
+    {
+      "label": "required-s4r1 wrong-part semantic response framed",
+      "detail": {
+        "top": 676.433349609375,
+        "bottom": 715.8333435058594,
+        "safeTop": 133.8333282470703,
+        "safeBottom": 775,
+        "scroll": 0,
+        "dialog": true
+      }
+    },
+    {
+      "label": "required-s4r1 wrong-part focus retained during reveal",
+      "detail": null
+    }
+  ],
+  "measurements": [],
+  "actions": [
+    {
+      "click": "#scNext",
+      "point": {
+        "x": 694,
+        "y": 21,
+        "top": 8,
+        "bottom": 34,
+        "safeTop": 3,
+        "safeBottom": 797,
+        "hit": true,
+        "disabled": false,
+        "dialog": false
+      }
+    },
+    {
+      "click": "#scNext",
+      "point": {
+        "x": 694,
+        "y": 21,
+        "top": 8,
+        "bottom": 34,
+        "safeTop": 3,
+        "safeBottom": 797,
+        "hit": true,
+        "disabled": false,
+        "dialog": false
+      }
+    },
+    {
+      "click": "#scNext",
+      "point": {
+        "x": 694,
+        "y": 21,
+        "top": 8,
+        "bottom": 34,
+        "safeTop": 3,
+        "safeBottom": 797,
+        "hit": true,
+        "disabled": false,
+        "dialog": false
+      }
+    },
+    {
+      "click": "#nlQuizOpen",
+      "point": {
+        "x": 1020,
+        "y": 277,
+        "top": 255.0500030517578,
+        "bottom": 299.0500030517578,
+        "safeTop": 3,
+        "safeBottom": 797,
+        "hit": true,
+        "disabled": false,
+        "dialog": false
+      }
+    }
+  ],
+  "role": "Developer browser evidence, not independent review",
+  "scope": [
+    "Exact seven-source before overlay, all other current runtime unchanged.",
+    "Deterministic unsolved seed via isolated crypto preload; every recorded success earned by learner pointer actions.",
+    "Owned headless isolated Firefox and ephemeral localhost only; personal GUI and 8013 untouched."
+  ],
+  "repairs": [],
+  "semanticActions": [
+    {
+      "label": "required-s4r1 wrong-part",
+      "range": [
+        ".part-selection-status",
+        ".part-selection-status"
+      ],
+      "before": {
+        "top": 0,
+        "bottom": 0,
+        "safeTop": 133.8333282470703,
+        "safeBottom": 775,
+        "scroll": 0,
+        "dialog": true
+      },
+      "after": {
+        "top": 676.433349609375,
+        "bottom": 715.8333435058594,
+        "safeTop": 133.8333282470703,
+        "safeBottom": 775,
+        "scroll": 0,
+        "dialog": true
+      },
+      "trace": [
+        {
+          "ms": 0,
+          "y": 0,
+          "focus": ""
+        },
+        {
+          "ms": 16,
+          "y": 0,
+          "focus": "nl-repair-1-part-component-6"
+        },
+        {
+          "ms": 29,
+          "y": 0,
+          "focus": "nl-repair-1-part-component-6"
+        },
+        {
+          "ms": 44,
+          "y": 0,
+          "focus": "nl-repair-1-part-component-6"
+        },
+        {
+          "ms": 62,
+          "y": 0,
+          "focus": "nl-repair-1-part-component-6"
+        },
+        {
+          "ms": 78,
+          "y": 0,
+          "focus": "nl-repair-1-part-component-6"
+        },
+        {
+          "ms": 96,
+          "y": 0,
+          "focus": "nl-repair-1-part-component-6"
+        },
+        {
+          "ms": 112,
+          "y": 0,
+          "focus": "nl-repair-1-part-component-6"
+        },
+        {
+          "ms": 129,
+          "y": 0,
+          "focus": "nl-repair-1-part-component-6"
+        },
+        {
+          "ms": 146,
+          "y": 0,
+          "focus": "nl-repair-1-part-component-6"
+        },
+        {
+          "ms": 162,
+          "y": 0,
+          "focus": "nl-repair-1-part-component-6"
+        },
+        {
+          "ms": 179,
+          "y": 0,
+          "focus": "nl-repair-1-part-component-6"
+        },
+        {
+          "ms": 195,
+          "y": 0,
+          "focus": "nl-repair-1-part-component-6"
+        },
+        {
+          "ms": 211,
+          "y": 0,
+          "focus": "nl-repair-1-part-component-6"
+        },
+        {
+          "ms": 228,
+          "y": 0,
+          "focus": "nl-repair-1-part-component-6"
+        },
+        {
+          "ms": 244,
+          "y": 0,
+          "focus": "nl-repair-1-part-component-6"
+        },
+        {
+          "ms": 262,
+          "y": 0,
+          "focus": "nl-repair-1-part-component-6"
+        },
+        {
+          "ms": 278,
+          "y": 0,
+          "focus": "nl-repair-1-part-component-6"
+        },
+        {
+          "ms": 295,
+          "y": 0,
+          "focus": "nl-repair-1-part-component-6"
+        },
+        {
+          "ms": 312,
+          "y": 0,
+          "focus": "nl-repair-1-part-component-6"
+        },
+        {
+          "ms": 328,
+          "y": 0,
+          "focus": "nl-repair-1-part-component-6"
+        },
+        {
+          "ms": 345,
+          "y": 0,
+          "focus": "nl-repair-1-part-component-6"
+        },
+        {
+          "ms": 362,
+          "y": 0,
+          "focus": "nl-repair-1-part-component-6"
+        },
+        {
+          "ms": 379,
+          "y": 0,
+          "focus": "nl-repair-1-part-component-6"
+        },
+        {
+          "ms": 395,
+          "y": 0,
+          "focus": "nl-repair-1-part-component-6"
+        },
+        {
+          "ms": 412,
+          "y": 0,
+          "focus": "nl-repair-1-part-component-6"
+        },
+        {
+          "ms": 429,
+          "y": 0,
+          "focus": "nl-repair-1-part-component-6"
+        },
+        {
+          "ms": 446,
+          "y": 0,
+          "focus": "nl-repair-1-part-component-6"
+        },
+        {
+          "ms": 462,
+          "y": 0,
+          "focus": "nl-repair-1-part-component-6"
+        },
+        {
+          "ms": 479,
+          "y": 0,
+          "focus": "nl-repair-1-part-component-6"
+        },
+        {
+          "ms": 495,
+          "y": 0,
+          "focus": "nl-repair-1-part-component-6"
+        },
+        {
+          "ms": 514,
+          "y": 0,
+          "focus": "nl-repair-1-part-component-6"
+        },
+        {
+          "ms": 530,
+          "y": 0,
+          "focus": "nl-repair-1-part-component-6"
+        },
+        {
+          "ms": 544,
+          "y": 0,
+          "focus": "nl-repair-1-part-component-6"
+        },
+        {
+          "ms": 562,
+          "y": 0,
+          "focus": "nl-repair-1-part-component-6"
+        },
+        {
+          "ms": 579,
+          "y": 0,
+          "focus": "nl-repair-1-part-component-6"
+        },
+        {
+          "ms": 595,
+          "y": 0,
+          "focus": "nl-repair-1-part-component-6"
+        },
+        {
+          "ms": 613,
+          "y": 0,
+          "focus": "nl-repair-1-part-component-6"
+        },
+        {
+          "ms": 628,
+          "y": 0,
+          "focus": "nl-repair-1-part-component-6"
+        },
+        {
+          "ms": 646,
+          "y": 0,
+          "focus": "nl-repair-1-part-component-6"
+        },
+        {
+          "ms": 662,
+          "y": 0,
+          "focus": "nl-repair-1-part-component-6"
+        },
+        {
+          "ms": 679,
+          "y": 0,
+          "focus": "nl-repair-1-part-component-6"
+        },
+        {
+          "ms": 694,
+          "y": 0,
+          "focus": "nl-repair-1-part-component-6"
+        },
+        {
+          "ms": 713,
+          "y": 0,
+          "focus": "nl-repair-1-part-component-6"
+        },
+        {
+          "ms": 727,
+          "y": 0,
+          "focus": "nl-repair-1-part-component-6"
+        },
+        {
+          "ms": 746,
+          "y": 0,
+          "focus": "nl-repair-1-part-component-6"
+        },
+        {
+          "ms": 762,
+          "y": 0,
+          "focus": "nl-repair-1-part-component-6"
+        },
+        {
+          "ms": 778,
+          "y": 0,
+          "focus": "nl-repair-1-part-component-6"
+        },
+        {
+          "ms": 796,
+          "y": 0,
+          "focus": "nl-repair-1-part-component-6"
+        },
+        {
+          "ms": 812,
+          "y": 0,
+          "focus": "nl-repair-1-part-component-6"
+        },
+        {
+          "ms": 829,
+          "y": 0,
+          "focus": "nl-repair-1-part-component-6"
+        },
+        {
+          "ms": 845,
+          "y": 0,
+          "focus": "nl-repair-1-part-component-6"
+        },
+        {
+          "ms": 862,
+          "y": 0,
+          "focus": "nl-repair-1-part-component-6"
+        },
+        {
+          "ms": 878,
+          "y": 0,
+          "focus": "nl-repair-1-part-component-6"
+        },
+        {
+          "ms": 894,
+          "y": 0,
+          "focus": "nl-repair-1-part-component-6"
+        },
+        {
+          "ms": 916,
+          "y": 0,
+          "focus": "nl-repair-1-part-component-6"
+        }
+      ]
+    }
+  ],
+  "target": {
+    "js/namelecule-game-repair.js": "d1649341e1b9181da180e0d62c12a0d0f27229af8d108048a3798c24944bf862",
+    "js/namelecule-generated-repair-checkpoint.js": "714e3b6140b28377a8af611c93350c42b0166e805f4dc62021055f8d5494b365",
+    "js/namelecule-quiz-checkpoints.js": "389b2f06b9f961114a702736d44b1ac98e7457a9f770e73a04ea14951bbe4ab7",
+    "css/namelecule-repair-round.css": "412678635b54693b542a1b70fcb104e623ea369e246219c98e70b1f053477031",
+    "css/namelecule-quiz-checkpoints.css": "988b50c3f7080606ede565c2b5b98c8b47e7df51eca15ae736c1bae957d8ed75",
+    "mulermoc-nom-54.html": "680f67ee1fa43d268228ac0abd6d39ebb225b215b56e4e322f7f6ed2aad089e7",
+    "mulermoc-nom-55.html": "f89bcd5fde30b7f489977e6113ba02a42e851252d0d88b19ac3ae5d6a0b87246"
+  },
+  "javascriptErrors": [],
+  "answerOracle": "Pass-through wrapper records actual mounted canonical options.round; source/engine unchanged, every new answer uses native input. Deterministic crypto only controls unsolved seed.",
+  "failure": "Traceback (most recent call last):\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/lesson-optional-triples-20261110/browser/check-after.py\", line 32, in <module>\n    f=current_round();solve(f,'required-s4r'+str(ri+1),ri,True,extensive=ri==0);check(complete(3)==(ri==2),'Gate4 only actual third success earns access '+str(ri+1))\n  File \"<string>\", line 31, in solve\n  File \"<string>\", line 20, in check\nAssertionError: ('required-s4r1 basic/authored reminder appended', 'Αυτό το συνθετικό συμφωνεί με τη δομή. Η αποστολή αφορά το πλήθος των ατόμων C της κύριας αλυσίδας.')\n"
+}

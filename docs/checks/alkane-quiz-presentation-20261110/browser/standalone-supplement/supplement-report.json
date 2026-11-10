@@ -1,0 +1,93 @@
+{
+  "completed": true,
+  "frozenUTC": "2026-11-10T04:19:19Z",
+  "role": "Developer bounded independent-Reviewer-requested evidence supplement",
+  "original59ManifestSHA256": "f35c00bc3a93b67e99a00675e8d093b10c483898464e3f844a4b3e6d64739740",
+  "original59Unchanged": true,
+  "sixSourceUnchanged": true,
+  "sourceHashes": {
+    "js/namelecule-generated-repair-checkpoint.js": "c8f29708b0694f7c10bd4e6e08e07f7eb58969b71e5fe15d9eeea72b356d061d",
+    "js/namelecule-game-repair.js": "b793ae9aa3af5d4e210468d5bc6e2ca6f73d80f64e722e1e6f22bea17980c056",
+    "css/namelecule-repair-round.css": "5fda8d1648b6aaaa07cc5a6e407e4be0db792d7c52b2ddf4c70820abaecef74c",
+    "mulermoc-nom-55.html": "d90d97782df8b99a68de3922fc32659536c7cf8682854cc44069f91af8c2a803",
+    "games/assets/name-repair/condensed/ethyl_3_dimethyl_2_5_hexane.svg": "ea16e3f63067f65ca088f52082a39c1f78d5bf32359b644c980f62e245057cb0",
+    "games/assets/name-repair/condensed/provenance.json": "82ef3a037a4ee027deae67a73ead4f9ba70eca1b513c823cf1fd8bb7c71c7bf4"
+  },
+  "originalMeasurementCorrection": "Original after-browser standalone typography measurement .round-heading p resolves to .round-set-name. It did not measure the objective. That original check retains its source/asset/label observations only. This supplement directly measures .round-objective and confirms default objective presentation.",
+  "standaloneObjective": {
+    "report": "standalone-objective.json",
+    "SHA256": "83d1b02fc38d7e29218a6bd7c52d721e090fc4ece58f096351c64dd8e7ab1a59",
+    "selector": ".round-objective",
+    "desktop1280": {
+      "viewport": 1280,
+      "selector": ".round-objective",
+      "count": 1,
+      "objective": "Ένα συνθετικό δεν συμφωνεί με τη δομή. Επισκεύασέ το.",
+      "classes": "round-objective",
+      "font": "14.7167px",
+      "weight": "400",
+      "align": "start",
+      "rect": {
+        "x": 52,
+        "y": 168.18333435058594,
+        "width": 810,
+        "height": 23.550003051757812,
+        "top": 168.18333435058594,
+        "right": 862,
+        "bottom": 191.73333740234375,
+        "left": 52
+      },
+      "firstParagraphClass": "round-set-name",
+      "firstParagraphText": "Αλκάνια · Χωρίς διακλαδώσεις",
+      "source": "http://127.0.0.1:52811/games/assets/name-repair/butane.svg",
+      "representation": "Ανεπτυγμένος τύπος"
+    },
+    "narrow390": {
+      "viewport": 390,
+      "selector": ".round-objective",
+      "count": 1,
+      "objective": "Ένα συνθετικό δεν συμφωνεί με τη δομή. Επισκεύασέ το.",
+      "classes": "round-objective",
+      "font": "13.6px",
+      "weight": "400",
+      "align": "start",
+      "rect": {
+        "x": 18,
+        "y": 97.81666564941406,
+        "width": 354,
+        "height": 43.53334045410156,
+        "top": 97.81666564941406,
+        "right": 372,
+        "bottom": 141.35000610351562,
+        "left": 18
+      },
+      "firstParagraphClass": "round-set-name",
+      "firstParagraphText": "Αλκάνια · Χωρίς διακλαδώσεις",
+      "source": "http://127.0.0.1:52811/games/assets/name-repair/butane.svg",
+      "representation": "Ανεπτυγμένος τύπος"
+    },
+    "conclusion": "Unemphasized class round-objective, weight400, text-align start, desktop14.7167px/narrow13.6px; expanded drawing. Existing css/namelecule-games.css .92rem/.85rem declarations remain in effect."
+  },
+  "wrongReplacement": {
+    "report": "wrong-answer-browser.json",
+    "SHA256": "f908fb306c51bf177f967fc81dca9ee73b7d3c540291cd39de0af4581b2fb2c7",
+    "checks": 11,
+    "wrongChoice": {
+      "original": "ίν",
+      "incorrect": "έν",
+      "correct": "άν",
+      "expectedFeedback": "Η επισκευή δεν συμφωνεί ακόμη με τη δομή. Δοκίμασε ξανά."
+    },
+    "incorrectFeedback": "Η επισκευή δεν συμφωνεί ακόμη με τη δομή. Δοκίμασε ξανά.",
+    "conclusion": "Native correct target then nonoriginal/noncorrect replacement and Check produced targeted incorrect feedback in sticky-header safe viewport, unchanged counter and locked gate. Correction then earned one repair, attempts1 to2, with two required repairs remaining."
+  },
+  "recordedJavaScriptErrors": 0,
+  "boundedHarnessCorrection": "First standalone probe assumed narrow font >=14px; actual existing standalone games stylesheet uses .85rem=13.6px. Initial measurement preserved in initial-font-bound.json and assertion corrected; no application change.",
+  "scope": "Only one standalone round at desktop/narrow and one embedded incorrect-then-correct repair at390px; no full replay repeated",
+  "cleanup": "cleanup.json written separately after freeze; operational log and cleanup excluded from manifest",
+  "limitations": [
+    "Owned headless Firefox; no physical-mobile/Safari/offline testing",
+    "MULER_QUIET_FETCH supported setting for embedded test; no external service availability or conference continuity guarantee",
+    "No production/source/asset edits, publication, commits or personal GUI control"
+  ]
+}
