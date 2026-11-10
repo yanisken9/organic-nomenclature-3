@@ -1,0 +1,75 @@
+{
+  "completedUTC": "2026-11-10T04:21:07.231897+00:00",
+  "status": "Completed locally; independent review complete",
+  "approval": "User approved the concrete plan: Ναι, προχώρα με αυτό το πλάνο",
+  "objective": "Improve prominence of embedded alkane quiz objective and readability of the largest branched molecule.",
+  "sourceHead": "168e3cec01f941a84d40bbe0dc07156e7baa35d0",
+  "sourceTarget": {
+    "js/namelecule-generated-repair-checkpoint.js": "c8f29708b0694f7c10bd4e6e08e07f7eb58969b71e5fe15d9eeea72b356d061d",
+    "js/namelecule-game-repair.js": "b793ae9aa3af5d4e210468d5bc6e2ca6f73d80f64e722e1e6f22bea17980c056",
+    "css/namelecule-repair-round.css": "5fda8d1648b6aaaa07cc5a6e407e4be0db792d7c52b2ddf4c70820abaecef74c",
+    "mulermoc-nom-55.html": "d90d97782df8b99a68de3922fc32659536c7cf8682854cc44069f91af8c2a803",
+    "games/assets/name-repair/condensed/ethyl_3_dimethyl_2_5_hexane.svg": "ea16e3f63067f65ca088f52082a39c1f78d5bf32359b644c980f62e245057cb0",
+    "games/assets/name-repair/condensed/provenance.json": "82ef3a037a4ee027deae67a73ead4f9ba70eca1b513c823cf1fd8bb7c71c7bf4"
+  },
+  "behavior": [
+    "All embedded generated alkane objectives centered and bold;24px desktop,20px narrow.",
+    "Largest current alkane ethyl_3_dimethyl_2_5_hexane shown condensed in main and zoom with correct representation label/alt, no visible answer cues.",
+    "Smaller molecules retain expanded diagrams; standalone default objective and diagrams retain their presentation.",
+    "Canonical question/solution IDs, seeds, progress format, pinned engine, lesson JSON, catalog and MOL/SDF not changed."
+  ],
+  "verification": {
+    "unitChecks": 263,
+    "unitAttribution": "Developer; real pinned engine/generator/adapter with DOM/transport/WebCrypto doubles",
+    "browserBeforeChecks": 70,
+    "browserAfterChecks": 113,
+    "actualEarnedRepairsPerFullRun": 6,
+    "negativeReplacementChecks": 11,
+    "browserAttribution": "Developer owned isolated headless Firefox",
+    "viewports": [
+      1280,
+      390,
+      320
+    ],
+    "recordedJSErrorsInCompletedRuns": 0,
+    "oldAuthenticEarnedReceipts": "Exact objects restored; both gates complete and step12 reached",
+    "chemistry": "Independent exact graph/valence/CHn/nomenclature validation; C10H22,9 single C-C bonds",
+    "independentReviewer": "No actionable findings; two evidence observations resolved by bounded supplements",
+    "finalHashes": {
+      "sourceTarget6": true,
+      "beforeSnapshots4": true,
+      "protectedCoreCatalogLesson13": true,
+      "staticEvidence9": true,
+      "finalAddendum7": true,
+      "head": true,
+      "index": true,
+      "browser/artifact-manifest.json": true,
+      "browser/standalone-supplement/supplement-manifest.json": true
+    }
+  },
+  "records": {
+    "review-target.json": "6b9f3124bab9b37bd8201188beb7781e5f8df6b4a564ba272314ebc395175ebb",
+    "review-browser-addendum.json": "2b70175dde3b6fe163d38625da2a48d4ce75405af86ef3250f62180b862700c6",
+    "independent-review.json": "bd47acee78ebbd895eab003c925356a7a9063609c8a3e670f9748740920d9357",
+    "closure-guard.json": "7c72fa051c748d4bc69162790e76a5fd82f56560f4c59081f5689ef825180403",
+    "chemical-validation.json": "d9b36478dab1d0b79d754653e4ecf4b85f2beb72bb861f56de6a6c8e1639b4e6",
+    "unit/results.json": "4a8e5ecf2e1aac6d89e66e45d5a31f78fb44004195fa7e032013549b9131f63e"
+  },
+  "comparison": "browser/visual-comparison.html",
+  "recovery": "Exact four pre-change source files in before/ and baseline hashes; source diff retained.",
+  "upstream": "Live professor HEAD5ab2495575bbbffeb0ac67f91d4d81857cb65970 equals last actually synchronized revision; no new release in this task preflight.",
+  "coreReport": "No core changed against this task baseline; all11 core hashes exact. Previous v55 integration and new core55 are a separate earlier contribution.",
+  "commit": null,
+  "push": false,
+  "publication": false,
+  "JSONExport": false,
+  "cleanup": "Only original/mini test processes closed under exact ownership guards; all five owned ports closed; personal Firefox untouched.",
+  "limitations": [
+    "Headless Firefox and simulated narrow viewports only.",
+    "Historical personal Firefox freezing was not diagnosed or fixed in this presentation-only task.",
+    "No offline, physical projector, Safari or uninterrupted conference operation validation.",
+    "No commit, push, publication or scenario export."
+  ],
+  "harnessDiagnostics": "Retained failed test assumptions and exact causes; no production corrections for harness entropy, future untouched choiceOrder restore or early async receipt probes.",
+  "nextStep": "User can refresh local Main55 lesson and review visual comparison; no pending implementation work in approved scope."
+}

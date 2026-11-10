@@ -1,0 +1,86 @@
+{
+  "completed": true,
+  "checks": 12,
+  "networkResponses": 181,
+  "capturedJavaScriptErrorEntries": 10,
+  "errorCategories": {
+    "cookie-invalid-domain": 8,
+    "JmolTracker-XFrameOptions": 2
+  },
+  "networkFailureCount": 10,
+  "networkFailureSummary": [
+    {
+      "url": "https://yanisken9.github.io/favicon.ico",
+      "status": 404,
+      "error": null,
+      "count": 7
+    },
+    {
+      "url": "https://chemapps.stolaf.edu/jmol/JmolTracker.php?id=UA-45940799-1&applet=Jmol._Canvas2D%20(Jmol)&version=2022-06-24%2005:54:49%20(JSmol/j2s)&appver=16.4.23&url=https%3A%2F%2Fyanisken9.github.io%2Forganic-nomenclature-3%2Fmulermoc-nom-55.html",
+      "status": null,
+      "error": "NS_ERROR_XFO_VIOLATION",
+      "count": 1
+    },
+    {
+      "url": "https://yanisken9.github.io/organic-nomenclature-3/spt/init-55.spt",
+      "status": null,
+      "error": "NS_BINDING_ABORTED",
+      "count": 1
+    },
+    {
+      "url": "https://chemapps.stolaf.edu/jmol/JmolTracker.php?id=UA-45940799-1&applet=Jmol._Canvas2D%20(Jmol)&version=2022-06-24%2005:54:49%20(JSmol/j2s)&appver=16.4.23&url=https%3A%2F%2Fyanisken9.github.io%2Forganic-nomenclature-3%2Fmulermoc-nom-55.html%3Fscenario%3Dscenarios%2Falkanes-user-3.scenario.json%26present%3D1%26from%3Dtheory-library%26v%3Dalkanes-personal-20261106-r1",
+      "status": null,
+      "error": "NS_ERROR_XFO_VIOLATION",
+      "count": 1
+    }
+  ],
+  "externalResponseHosts": {
+    "yanisken9.github.io": 7,
+    "www.googletagmanager.com": 2,
+    "region1.google-analytics.com": 5,
+    "fonts.googleapis.com": 1,
+    "fonts.gstatic.com": 25,
+    "chemapps.stolaf.edu": 23
+  },
+  "reportURL": "Deliberately skipped pending root publication.",
+  "liveScope": "Actual welcome3entries / Main55 141molecules422forms / methane5atomsource3D /14lessonlibrary / normal12stepalkane / gate4 / realrequiredquiz1of3 / Returnstilllocked / Exitlibrary / directauthoredWorkshopobjective andzoomEscape. No liveearnedrepair; localearned6.",
+  "limitations": [
+    "Owned isolated headlessFirefox desktop1280x800 only; no personalFirefox or intended conference machine tested.",
+    "Supported MULER_QUIET_FETCH suppresses irrelevant naming fetches; external naming availability and Internet-independent operation untested.",
+    "Bounded release replay; no full molecule/mode/lesson matrix or new chemistry certification.",
+    "Live smoke opens firstrequiredquiz and directauthoredWorkshop; localphase earned required/optional sets. Professorreport deliberately skipped pendingpublication.",
+    "Console contains invalid-domain analytics cookie rejections and JmolTracker X-Frame-Options failures. These remain visible; no clean-console claim.",
+    "External JSmol, fonts and analytics responded in this run; no guarantee of ongoing externalavailability or offline/conferenceoperation.",
+    "No network interception used. Quietfetch only supported namingfetchsuppression."
+  ],
+  "cleanup": {
+    "actions": [
+      {
+        "pid": 91594,
+        "signal": "TERM",
+        "matched": "/var/folders/2v/ds4vjvgj1_1000kq1fzg70q40000gn/T/namelecule-release-live-20261110-csx2qlhe"
+      },
+      {
+        "pid": 91593,
+        "signal": null,
+        "reason": "not running or exact ownership guard failed"
+      }
+    ],
+    "ports": {
+      "http": "refused",
+      "bidi": "refused",
+      "profileRemoved": true
+    },
+    "utc": "2026-11-10T10:03:59Z"
+  },
+  "files": {
+    "check-live.py": "fc3852516dfbe9c66f5c74ee47d38e7244f906fb3d7804514f324167e9c22593",
+    "cleanup.json": "15d0ba4f29c56e9f48a08ab549852a1f8f21125263a77a36757e2c15e9f6296d",
+    "firefox.log": "5b5a756c23f30314486b23df9491a3f27e8d51252c062a4cb735e21ebb2183fa",
+    "live-browser.json": "7c644ca79be8ddd87f5653056bc943ccac0da9d9605a874917af88cd879644d3",
+    "live-required-first.png": "e428ea843a4cbc71dd868430c5e7bbdb21f2c1238dd64cbabb35ffbce09f4af3",
+    "live-workshop-zoom.png": "dea7f876f027319ff2686fded9a3dac9b999ed06ee53f540f919cab08e945082",
+    "owned-processes.py": "154d627097e252a0a5097d37b41d1558cfa4763e34008d69f45193833e697592",
+    "process.json": "2d078390e3bb60522f660307ed48a2a17185eb533865b45f256026ef9b737146"
+  }
+}

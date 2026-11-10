@@ -1,0 +1,438 @@
+{
+  "date": "2026-11-10",
+  "period": "After the published 2026-11-09 report; includes the later v55 integration and independently reviewed 2026-11-10 quiz/workshop/navigation work.",
+  "publication": {
+    "status": "runtime-live-http-sha-verified-report-delivery-pending",
+    "runtime_commit": "c5d465190740de5d8f1c90b7ce791ff22250e39e",
+    "full_checkpoint": "51d3cc746a33ed26e9012a3d2c6b2e914b22c3a0",
+    "public_http_sha_report": "docs/checks/save-publish-20261110-114933/public-runtime-http.json",
+    "backup_report": "docs/checks/save-publish-20261110-114933/save-verification.json",
+    "report_review": "docs/checks/save-publish-20261110-114933/independent-review.json",
+    "note": "Runtime published,276HTTP/SHA and12bounded live checks passed with disclosed diagnostics. Original full snapshot/archives/external copies verified. Final report delivery/closing-delta evidence has separate cutoff.",
+    "runtime_commit_created_in": "Disposable release clone, normally pushed to thesis-work; live runtime verified.",
+    "full_checkpoint_branch": "checkpoint/namelecule-20261110-114933",
+    "runtime_pushed": true,
+    "runtime_branch": "thesis-work",
+    "full_checkpoint_pushed": true,
+    "public_http_sha_count": 276,
+    "save_review_addendum": "docs/checks/save-publish-20261110-114933/independent-save-addendum.json",
+    "report_delivery_verified": false,
+    "closing_metadata_delta_status": "pending; final report, later notes/live proof are not retroactively included in initial full archive",
+    "final_report_targeted_review": "pending at current factual cutoff; earlier consolidated release and save review remain recorded"
+  },
+  "previous_public_runtime": "98c22050de2cd81f36db734fe1556e3871c9f91b",
+  "upstream": {
+    "previous_actual_sync": "f49b810c93ec85d06163679aff4a8642ea1b4cd3",
+    "actual_sync": "5ab2495575bbbffeb0ac67f91d4d81857cb65970",
+    "commits_integrated": 80,
+    "upstream_paths_reviewed": 38,
+    "latest_live_audit": "docs/checks/save-publish-20261110-114933/upstream-audit.json",
+    "last_checked": "3640eff6aaf097df13110682ee4f5ff59221b7c1",
+    "live_audit_utc": "2026-11-10T09:53:07.885619+00:00",
+    "new_commits_after_sync": 4,
+    "new_commits_integrated_this_save": false,
+    "new_changes": "Two code and two resume-document commits: further minimization200to100, PubChem heavy-count guard, viewerCol hidden when both viewers off; step-drawer viewers/naming groups and show.naming master preserves values.",
+    "next_step": "Separate read-only integration review of the four commits; current save publishes the already reviewed5ab24955-based release."
+  },
+  "library": {
+    "molecules": 141,
+    "available_2d_forms": 422,
+    "active_lessons": 14,
+    "active_lesson_steps": 328,
+    "protected_assets_exact_at_v55_integration": 572,
+    "active_scenario": "scenarios/alkanes-user-3.scenario.json",
+    "active_scenario_sha256": "607a530a2d3ba151026517c61d6f7a31644e15abf82a687e778b7453d80089b7",
+    "alkane_lesson_steps": 12,
+    "required_gates_steps": [
+      4,
+      11
+    ],
+    "required_repairs_each": 3,
+    "new_molecule_graphs_this_period": 0
+  },
+  "core": {
+    "current_save_report_task_authored_core_change": false,
+    "earlier_integrated_new_file": "js/mulermoc-nom-core-55.js",
+    "core55_sha256": "6cbdbd0ce60f5d66ff3e6925cdfd48e470764baa02b6263f325eff356df5e270",
+    "core54_sha256": "8f3e5f76d96322faf7cf9251f4cae3eca204fe2f82bf5754fdce6ffc4cd5d5a9",
+    "core52_sha256": "d2138418ff630ab77e578b80ca8ba3a10cc1b877c3ab8c0e5c2735ffcd1f24a2",
+    "previous_core54_52_modified_in_v55_integration": false,
+    "behavior": "Professor v55 composition with preserved strict graph/metadata/geometry guards and locally authored branch omission/multiplier corrections. Subsequent quiz/UI features did not change core."
+  },
+  "features": [
+    {
+      "unit": "v55 integration",
+      "report": "docs/checks/v54-merge-20261109/final-report.json",
+      "review": "docs/checks/v54-merge-20261109/review-result.json",
+      "checks": "Broad actual JavaScriptCore naming/graph/mapping/geometry/EN suites; independent Chemistry Validator 80 initial and54 targeted assertions; 27/27 bounded post-install primary checks; see separate scopes in source.",
+      "limits": "One JSmol platform-null transition exception retained; authoring25 partial checks are not a full final rerun."
+    },
+    {
+      "unit": "Embedded objective and condensed large molecule",
+      "report": "docs/checks/alkane-quiz-presentation-20261110/final-report.json",
+      "review": "docs/checks/alkane-quiz-presentation-20261110/independent-review.json",
+      "checks": "263 Developer unit assertions with declared doubles;70before/113after browser assertions;6earned repairs per full run; desktop1280/narrow390/320; independent molecular validation.",
+      "superseded": "Original standalone presentation unchanged at this stage; superseded by approved Workshop parity."
+    },
+    {
+      "unit": "Compact zoom icon",
+      "report": "docs/checks/quiz-zoom-icon-20261110/final-report.json",
+      "review": "docs/checks/quiz-zoom-icon-20261110/independent-review.json",
+      "checks": "74 bounded Developer Firefox assertions; state/selection/storage across zoom; existing zoom functions unchanged.",
+      "superseded": "Originally opt-in embedded only; approved parity subsequently adopts direct Workshop presentation."
+    },
+    {
+      "unit": "Standalone Workshop parity",
+      "report": "docs/checks/workshop-lesson-parity-20261110/final-report.json",
+      "review": "docs/checks/workshop-lesson-parity-20261110/independent-review.json",
+      "checks": "Reviewer independently ran263adapter/32controller/161helpers; supplied12direct+6lesson+1Main54earned repairs across bounded continuations.",
+      "limits": "Initial Main54 reopen comparison cause unknown; instrumented rerun exact. Earlier warm7to8 sequence unverified; bounded replay passed."
+    },
+    {
+      "unit": "Unlimited optional triples",
+      "report": "docs/checks/lesson-optional-triples-20261110/final-report.json",
+      "review": "docs/checks/lesson-optional-triples-20261110/independent-review.json",
+      "checks": "Independent adapter395/controller194; Developer renderer102 with original in-memory harness not retained for independent rerun;261browser observations,9earned positions.",
+      "limits": "Finite catalog permits repeated questions. Same-tab state. Main54 optional earned flow not fully replayed."
+    },
+    {
+      "unit": "Optional header navigation",
+      "report": "docs/checks/practice-navigation-20261110/final-report.json",
+      "review": "docs/checks/practice-navigation-20261110/independent-review.json",
+      "checks": "Independent199controller; Developer12before/12after; no new earning or full lesson replay."
+    },
+    {
+      "unit": "Required final completion actions",
+      "report": "docs/checks/required-completion-navigation-20261110/final-report.json",
+      "review": "docs/checks/required-completion-navigation-20261110/independent-review-r2.json",
+      "checks": "Independent560JSC with explicit DOM/image/transport doubles and36unchanged defaults; Developer native stages preserved2original/45r1/5fault/23r2.",
+      "correction": "R1 P2 action-readiness finding closed in r2; upper Return remains in image loading/error/retry.",
+      "residual": "EXISTING-ESC-001 P2 open, reproduced with original5file overlay."
+    },
+    {
+      "unit": "Optional final completion and focus",
+      "report": "docs/checks/optional-completion-navigation-20261110/final-report.json",
+      "review": "docs/checks/optional-completion-navigation-20261110/independent-review.json",
+      "checks": "Independent274controller with explicit doubles; Developer native3before/32r1partial/32r2behavior/6r2focus.",
+      "correction": "Focused upper Continue moves to enabled lower Continue before hiding; if transfer unavailable, upper exit retained.",
+      "limits": "Wider1280/390/320from testedr1; finalr2focus at390; boundedMain54."
+    }
+  ],
+  "compatibility": {
+    "stored_library_and_sources": "141keys/order/4222D bytes and saved MOL/SDF preserved in integration; no new mandatory fields for existing catalog records.",
+    "generated_quiz_engine": "Existing SHA-addressed preserved engine; canonical question/solution IDs and recipes retained by quiz/UI changes.",
+    "required_progress": "Original earned receipts revalidated; optional progress is separate, bounded2current cache/required32, current attempt per checkpoint; existing required answer schema unchanged.",
+    "cross_version_limit": "Scenario content/signature determines progress. Main55 school substNamingMode absent from Main54 changes signature; no automatic receipt migration or account synchronization claim.",
+    "lesson_json": "No active scenario JSON authored in new v55/quiz UI units; export is outside this report task.",
+    "react": "Previous published React retained; no new React build in this release scope."
+  },
+  "open_limits": [
+    {
+      "id": "EXISTING-ESC-001",
+      "severity": "P2",
+      "status": "open",
+      "detail": "Main55 owned Firefox: delayed image, focus Return then Tab outside document, BODY Escape can exit to library. Global presentation handler lacks open-quiz guard; initial focus-loss cause not proved. Separate approved fix needed."
+    },
+    {
+      "id": "Firefox-native-window-menu",
+      "status": "unresolved",
+      "detail": "Passive samples on personal Firefox at user-reported ChatGPT.com show native macOS zoom-menu nesting; fullscreen use confirmed. No deadlock/trigger/site cause or permanent fix established."
+    },
+    {
+      "id": "JSmol-transition",
+      "status": "open",
+      "detail": "One platform-null repaint exception during v52-to-React primary transition; checked models/flows passed before/after; connection with historical restore error unproved."
+    },
+    {
+      "id": "3D-provisional",
+      "status": "limited-trust",
+      "detail": "Exact graph and visible provisional status plus explicit consent required; geometry/convergence not verified. Graph equivalence does not establish physically sound conformation."
+    },
+    {
+      "id": "Chemistry-support",
+      "status": "bounded",
+      "detail": "Complex unsupported branch/functional-group combinations can be declined; existing strict parse/literal[H]/methane skeletal and documented naming/geometry limitations remain."
+    },
+    {
+      "id": "External-services",
+      "status": "dependency",
+      "detail": "JSmol/CDN/fonts/PubChem/OpenClatura and network availability remain dependencies; controlled service fixtures do not prove uptime."
+    },
+    {
+      "id": "Conference-offline",
+      "status": "not-certified",
+      "detail": "No intended-machine/projector/cold-start/recovery/Safari/physical-mobile/offline or uninterrupted final sequence certification."
+    }
+  ],
+  "evidence_attribution": "Browser runs and public network checks belong to Developer; fresh-context Reviewers independently inspect frozen source/hashes and specified in-memory checks. No independent browser-execution claim. Counts are heterogeneous, not additive reliability or learning measures.",
+  "historical_status": "Each dated final-report records its original local-only completion state. This report and later publication receipts supersede release status only; they do not rewrite historical evidence.",
+  "sources": {
+    "docs/checks/v54-merge-20261109/final-report.json": {
+      "sha256": "317007f67e757395b3d963eea394f7462e536693d6fcfb9a2f8fd67f58976cd8",
+      "relative_url": "../checks/v54-merge-20261109/final-report.json",
+      "pinned_url": "https://github.com/yanisken9/organic-nomenclature-3/blob/51d3cc746a33ed26e9012a3d2c6b2e914b22c3a0/docs/checks/v54-merge-20261109/final-report.json"
+    },
+    "docs/checks/v54-merge-20261109/review-result.json": {
+      "sha256": "6145dabeb97813aba72185b292f724c311f0b7277b950b340dd03c5803459f4b",
+      "relative_url": "../checks/v54-merge-20261109/review-result.json",
+      "pinned_url": "https://github.com/yanisken9/organic-nomenclature-3/blob/51d3cc746a33ed26e9012a3d2c6b2e914b22c3a0/docs/checks/v54-merge-20261109/review-result.json"
+    },
+    "docs/checks/v54-merge-20261109/upstream-traceability.json": {
+      "sha256": "3f73c398e18464f918720ee8efefd5f2e9e68395224ae15da39b1b1901f2ded4",
+      "relative_url": "../checks/v54-merge-20261109/upstream-traceability.json",
+      "pinned_url": "https://github.com/yanisken9/organic-nomenclature-3/blob/51d3cc746a33ed26e9012a3d2c6b2e914b22c3a0/docs/checks/v54-merge-20261109/upstream-traceability.json"
+    },
+    "docs/checks/v54-merge-20261109/chemistry-validation-final.json": {
+      "sha256": "770408f22e17aca6fc33a4a1d7e2847824131fba24846e4ca8b3550f25adabed",
+      "relative_url": "../checks/v54-merge-20261109/chemistry-validation-final.json",
+      "pinned_url": "https://github.com/yanisken9/organic-nomenclature-3/blob/51d3cc746a33ed26e9012a3d2c6b2e914b22c3a0/docs/checks/v54-merge-20261109/chemistry-validation-final.json"
+    },
+    "docs/checks/v54-merge-20261109/chemistry-validation-rv55-03.json": {
+      "sha256": "86a1478410d7d765d82b79baa5e9673d3ad09f916b9328f8234f76845e48c0d6",
+      "relative_url": "../checks/v54-merge-20261109/chemistry-validation-rv55-03.json",
+      "pinned_url": "https://github.com/yanisken9/organic-nomenclature-3/blob/51d3cc746a33ed26e9012a3d2c6b2e914b22c3a0/docs/checks/v54-merge-20261109/chemistry-validation-rv55-03.json"
+    },
+    "docs/checks/alkane-quiz-presentation-20261110/final-report.json": {
+      "sha256": "46382086017d078fc258753645b1c68664555143ab6a835dbdc5451843b0089f",
+      "relative_url": "../checks/alkane-quiz-presentation-20261110/final-report.json",
+      "pinned_url": "https://github.com/yanisken9/organic-nomenclature-3/blob/51d3cc746a33ed26e9012a3d2c6b2e914b22c3a0/docs/checks/alkane-quiz-presentation-20261110/final-report.json"
+    },
+    "docs/checks/alkane-quiz-presentation-20261110/independent-review.json": {
+      "sha256": "bd47acee78ebbd895eab003c925356a7a9063609c8a3e670f9748740920d9357",
+      "relative_url": "../checks/alkane-quiz-presentation-20261110/independent-review.json",
+      "pinned_url": "https://github.com/yanisken9/organic-nomenclature-3/blob/51d3cc746a33ed26e9012a3d2c6b2e914b22c3a0/docs/checks/alkane-quiz-presentation-20261110/independent-review.json"
+    },
+    "docs/checks/quiz-zoom-icon-20261110/final-report.json": {
+      "sha256": "631622195703d03a212170f3aeaf2484ca38c6fed2f0952846f37dd76c45f6c5",
+      "relative_url": "../checks/quiz-zoom-icon-20261110/final-report.json",
+      "pinned_url": "https://github.com/yanisken9/organic-nomenclature-3/blob/51d3cc746a33ed26e9012a3d2c6b2e914b22c3a0/docs/checks/quiz-zoom-icon-20261110/final-report.json"
+    },
+    "docs/checks/quiz-zoom-icon-20261110/independent-review.json": {
+      "sha256": "5da9a9ee12f24f924db4316ceee96a743f03d2b8279859960549d67769df9357",
+      "relative_url": "../checks/quiz-zoom-icon-20261110/independent-review.json",
+      "pinned_url": "https://github.com/yanisken9/organic-nomenclature-3/blob/51d3cc746a33ed26e9012a3d2c6b2e914b22c3a0/docs/checks/quiz-zoom-icon-20261110/independent-review.json"
+    },
+    "docs/checks/workshop-lesson-parity-20261110/final-report.json": {
+      "sha256": "143d052867bf543d8eaff0fc45b2fdd615502e9a97f918d5c3d5c699048fd752",
+      "relative_url": "../checks/workshop-lesson-parity-20261110/final-report.json",
+      "pinned_url": "https://github.com/yanisken9/organic-nomenclature-3/blob/51d3cc746a33ed26e9012a3d2c6b2e914b22c3a0/docs/checks/workshop-lesson-parity-20261110/final-report.json"
+    },
+    "docs/checks/workshop-lesson-parity-20261110/independent-review.json": {
+      "sha256": "f3c8a544d3020f673b5e9c1a4c8ca098dbb0c9f8cd7f21f2406fa445712857ef",
+      "relative_url": "../checks/workshop-lesson-parity-20261110/independent-review.json",
+      "pinned_url": "https://github.com/yanisken9/organic-nomenclature-3/blob/51d3cc746a33ed26e9012a3d2c6b2e914b22c3a0/docs/checks/workshop-lesson-parity-20261110/independent-review.json"
+    },
+    "docs/checks/lesson-optional-triples-20261110/final-report.json": {
+      "sha256": "d95cb3f1ee0af5a48e05be1be45f5ed5217680871068b3fc17b1ce0bb0d153c5",
+      "relative_url": "../checks/lesson-optional-triples-20261110/final-report.json",
+      "pinned_url": "https://github.com/yanisken9/organic-nomenclature-3/blob/51d3cc746a33ed26e9012a3d2c6b2e914b22c3a0/docs/checks/lesson-optional-triples-20261110/final-report.json"
+    },
+    "docs/checks/lesson-optional-triples-20261110/independent-review.json": {
+      "sha256": "7f0f2915fe2ff8eb6faa3f4d815f8daa1e9563571c1f79383a8c0da217ae8f1a",
+      "relative_url": "../checks/lesson-optional-triples-20261110/independent-review.json",
+      "pinned_url": "https://github.com/yanisken9/organic-nomenclature-3/blob/51d3cc746a33ed26e9012a3d2c6b2e914b22c3a0/docs/checks/lesson-optional-triples-20261110/independent-review.json"
+    },
+    "docs/checks/practice-navigation-20261110/final-report.json": {
+      "sha256": "57f168e564a03962752f9762e4a9b006d24314a805010df3e76093142e392844",
+      "relative_url": "../checks/practice-navigation-20261110/final-report.json",
+      "pinned_url": "https://github.com/yanisken9/organic-nomenclature-3/blob/51d3cc746a33ed26e9012a3d2c6b2e914b22c3a0/docs/checks/practice-navigation-20261110/final-report.json"
+    },
+    "docs/checks/practice-navigation-20261110/independent-review.json": {
+      "sha256": "da9a5aed8028d86691751f0f99ba7a59fe62fe93fbeccc31b8790b9e597f428b",
+      "relative_url": "../checks/practice-navigation-20261110/independent-review.json",
+      "pinned_url": "https://github.com/yanisken9/organic-nomenclature-3/blob/51d3cc746a33ed26e9012a3d2c6b2e914b22c3a0/docs/checks/practice-navigation-20261110/independent-review.json"
+    },
+    "docs/checks/required-completion-navigation-20261110/final-report.json": {
+      "sha256": "f69108426761b15491718bed5192d216f8cdf0e329901f4651e2cb7c7abc01ad",
+      "relative_url": "../checks/required-completion-navigation-20261110/final-report.json",
+      "pinned_url": "https://github.com/yanisken9/organic-nomenclature-3/blob/51d3cc746a33ed26e9012a3d2c6b2e914b22c3a0/docs/checks/required-completion-navigation-20261110/final-report.json"
+    },
+    "docs/checks/required-completion-navigation-20261110/independent-review-r2.json": {
+      "sha256": "922e8cc30ac74d929b7a3e2ddfe558bad1eb3ef3d6167020b73e19a92c89e83f",
+      "relative_url": "../checks/required-completion-navigation-20261110/independent-review-r2.json",
+      "pinned_url": "https://github.com/yanisken9/organic-nomenclature-3/blob/51d3cc746a33ed26e9012a3d2c6b2e914b22c3a0/docs/checks/required-completion-navigation-20261110/independent-review-r2.json"
+    },
+    "docs/checks/required-completion-navigation-20261110/pre-existing-keyboard-issue.json": {
+      "sha256": "05ea9eabe717f5d06f68c04cd638844205b1dd9532fbc2af2df3e0120e4299f3",
+      "relative_url": "../checks/required-completion-navigation-20261110/pre-existing-keyboard-issue.json",
+      "pinned_url": "https://github.com/yanisken9/organic-nomenclature-3/blob/51d3cc746a33ed26e9012a3d2c6b2e914b22c3a0/docs/checks/required-completion-navigation-20261110/pre-existing-keyboard-issue.json"
+    },
+    "docs/checks/optional-completion-navigation-20261110/final-report.json": {
+      "sha256": "a30e9c300f22fc3eee5cb0c4c9ceb3bd98f236f63ba772c9587c9b4bb19827a3",
+      "relative_url": "../checks/optional-completion-navigation-20261110/final-report.json",
+      "pinned_url": "https://github.com/yanisken9/organic-nomenclature-3/blob/51d3cc746a33ed26e9012a3d2c6b2e914b22c3a0/docs/checks/optional-completion-navigation-20261110/final-report.json"
+    },
+    "docs/checks/optional-completion-navigation-20261110/independent-review.json": {
+      "sha256": "de7cb90033b8ae7da829bef96ddf66d71db33a4eaead12362850b0d1c9d557db",
+      "relative_url": "../checks/optional-completion-navigation-20261110/independent-review.json",
+      "pinned_url": "https://github.com/yanisken9/organic-nomenclature-3/blob/51d3cc746a33ed26e9012a3d2c6b2e914b22c3a0/docs/checks/optional-completion-navigation-20261110/independent-review.json"
+    },
+    "docs/checks/firefox-hang-20261110/diagnostic-report.json": {
+      "sha256": "d4f21ee9483b942bcfa72966eb2cbb4f94bff654225bcfd4d1474a86b5b0ba1b",
+      "relative_url": "../checks/firefox-hang-20261110/diagnostic-report.json",
+      "pinned_url": "https://github.com/yanisken9/organic-nomenclature-3/blob/51d3cc746a33ed26e9012a3d2c6b2e914b22c3a0/docs/checks/firefox-hang-20261110/diagnostic-report.json"
+    },
+    "docs/checks/firefox-hang-20261110/independent-review.json": {
+      "sha256": "3ff261f385c5273b54d1f7cf5bd4d9e0cb6239b6e4df04d999fdd3d244f8ec76",
+      "relative_url": "../checks/firefox-hang-20261110/independent-review.json",
+      "pinned_url": "https://github.com/yanisken9/organic-nomenclature-3/blob/51d3cc746a33ed26e9012a3d2c6b2e914b22c3a0/docs/checks/firefox-hang-20261110/independent-review.json"
+    },
+    "docs/checks/firefox-hang-20261110/user-fullscreen-followup.json": {
+      "sha256": "4be7a62f2fe3eb24e2ed89f4a6d37a82931b112f34d4348a1f56bf8983eac3ce",
+      "relative_url": "../checks/firefox-hang-20261110/user-fullscreen-followup.json",
+      "pinned_url": "https://github.com/yanisken9/organic-nomenclature-3/blob/51d3cc746a33ed26e9012a3d2c6b2e914b22c3a0/docs/checks/firefox-hang-20261110/user-fullscreen-followup.json"
+    },
+    "docs/checks/save-publish-20261110-114933/upstream-audit.json": {
+      "sha256": "43e783ca3489da1c1fe90f6b31d1cbdaaf4365f1e07ca68e33593ddb2c1f2354",
+      "relative_url": "../checks/save-publish-20261110-114933/upstream-audit.json",
+      "pinned_url": "https://github.com/yanisken9/organic-nomenclature-3/blob/51d3cc746a33ed26e9012a3d2c6b2e914b22c3a0/docs/checks/save-publish-20261110-114933/upstream-audit.json"
+    },
+    "docs/checks/save-publish-20261110-114933/public-runtime-http.json": {
+      "sha256": "4cb872c74ac1951aee2ef2f8a19f067b2ef336a1e053c6ba467b5d30a175a2dd",
+      "relative_url": "../checks/save-publish-20261110-114933/public-runtime-http.json",
+      "pinned_url": null,
+      "branch_url": "https://github.com/yanisken9/organic-nomenclature-3/blob/checkpoint/namelecule-20261110-114933/docs/checks/save-publish-20261110-114933/public-runtime-http.json",
+      "pin_note": "Later receipt absent/different at initial full snapshot; moving checkpoint branch link, not immutable snapshot evidence."
+    },
+    "docs/checks/save-publish-20261110-114933/save-verification.json": {
+      "sha256": "5f399976202cc9890ce309d0f2627eb54bcc0bea17f544a62c5c16304b069980",
+      "relative_url": "../checks/save-publish-20261110-114933/save-verification.json",
+      "pinned_url": null,
+      "branch_url": "https://github.com/yanisken9/organic-nomenclature-3/blob/checkpoint/namelecule-20261110-114933/docs/checks/save-publish-20261110-114933/save-verification.json",
+      "pin_note": "Later receipt absent/different at initial full snapshot; moving checkpoint branch link, not immutable snapshot evidence."
+    },
+    "docs/checks/save-publish-20261110-114933/independent-review.json": {
+      "sha256": "fbf1158e38fa7c910ba6e4c0e0f750bc3126917498afe1fa07eab8eff6452643",
+      "relative_url": "../checks/save-publish-20261110-114933/independent-review.json",
+      "pinned_url": null,
+      "branch_url": "https://github.com/yanisken9/organic-nomenclature-3/blob/checkpoint/namelecule-20261110-114933/docs/checks/save-publish-20261110-114933/independent-review.json",
+      "pin_note": "Later receipt absent/different at initial full snapshot; moving checkpoint branch link, not immutable snapshot evidence."
+    },
+    "docs/checks/save-publish-20261110-114933/independent-save-addendum.json": {
+      "sha256": "afd09f645e7b8feb0a5feba641cb8050b01a6c15764d38a7a80c2c00bba64d29",
+      "relative_url": "../checks/save-publish-20261110-114933/independent-save-addendum.json",
+      "pinned_url": null,
+      "branch_url": "https://github.com/yanisken9/organic-nomenclature-3/blob/checkpoint/namelecule-20261110-114933/docs/checks/save-publish-20261110-114933/independent-save-addendum.json",
+      "pin_note": "Later receipt absent/different at initial full snapshot; moving checkpoint branch link, not immutable snapshot evidence."
+    },
+    "docs/checks/save-publish-20261110-114933/browser/local-browser.json": {
+      "sha256": "49fb4fd77212ceab255f60d687e37c572296005bfb15b8793e1293fbc9cabbdf",
+      "relative_url": "../checks/save-publish-20261110-114933/browser/local-browser.json",
+      "pinned_url": "https://github.com/yanisken9/organic-nomenclature-3/blob/51d3cc746a33ed26e9012a3d2c6b2e914b22c3a0/docs/checks/save-publish-20261110-114933/browser/local-browser.json"
+    },
+    "docs/checks/save-publish-20261110-114933/browser/live/live-browser.json": {
+      "sha256": "7c644ca79be8ddd87f5653056bc943ccac0da9d9605a874917af88cd879644d3",
+      "relative_url": "../checks/save-publish-20261110-114933/browser/live/live-browser.json",
+      "pinned_url": null,
+      "branch_url": "https://github.com/yanisken9/organic-nomenclature-3/blob/checkpoint/namelecule-20261110-114933/docs/checks/save-publish-20261110-114933/browser/live/live-browser.json",
+      "pin_note": "Live evidence postdates initial full snapshot; moving checkpoint branch link, not immutable snapshot evidence."
+    },
+    "docs/checks/save-publish-20261110-114933/browser/live/summary.json": {
+      "sha256": "ee4b1290cb35e5f871423b818fb878779a25a9e906c6aff24c04592109c301e9",
+      "relative_url": "../checks/save-publish-20261110-114933/browser/live/summary.json",
+      "pinned_url": null,
+      "branch_url": "https://github.com/yanisken9/organic-nomenclature-3/blob/checkpoint/namelecule-20261110-114933/docs/checks/save-publish-20261110-114933/browser/live/summary.json",
+      "pin_note": "Live evidence postdates initial full snapshot; moving checkpoint branch link, not immutable snapshot evidence."
+    }
+  },
+  "full_save": {
+    "snapshot_commit": "51d3cc746a33ed26e9012a3d2c6b2e914b22c3a0",
+    "source_files": 6092,
+    "cutoff_utc": "2026-11-10T09:58:20.038566+00:00",
+    "source_zip": "6092 source files plus manifest",
+    "recovery_zip": "226 recovery files plus manifest",
+    "archives": {
+      "communication/checkpoints/Namelecule-20261110-114933-full.zip": "848ee874737d4b8545438871594772254b1d5e637a9038e9723afc65906ac010",
+      "communication/checkpoints/Namelecule-20261110-114933-full.bundle": "b5bfc375e4782fa08a9811631fc83b607b45555466681e567093980d54e9574c",
+      "communication/checkpoints/Namelecule-20261110-114933-full-recovery.zip": "f6fbae57367eb3bd92a019009211203430e84735dfc906744566ad0f23185e30"
+    },
+    "zip_sha_crc_content_verified": true,
+    "bundle_verified": true,
+    "external_folders": {
+      "/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/Αποθηκεύσεις/2026-11-10-114933": {
+        "manifest_files": 44,
+        "separate_save_receipt": 1,
+        "physical_files": 45,
+        "all_sha256_verified": true
+      },
+      "/Users/yannisskendros/Desktop/αρχεία  json/Namelecule_10-11-2026": {
+        "manifest_files": 44,
+        "separate_save_receipt": 1,
+        "physical_files": 45,
+        "all_sha256_verified": true
+      }
+    },
+    "same_physical_computer": true,
+    "desktop_current_scenario_export": {
+      "source": "/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/scenarios/alkanes-user-3.scenario.json",
+      "destination": "/Users/yannisskendros/Desktop/αρχεία  json/9Αλκάνια.json",
+      "sha256": "607a530a2d3ba151026517c61d6f7a31644e15abf82a687e778b7453d80089b7",
+      "previousSHA256": "607a530a2d3ba151026517c61d6f7a31644e15abf82a687e778b7453d80089b7",
+      "backupIfDifferent": null,
+      "identicalBytesVerified": true
+    },
+    "later_material": "Final report/notes/live proof await explicit closing metadata delta and incremental bundle; initial ZIP has earlier report draft."
+  },
+  "release_checks": {
+    "local_browser_report": "docs/checks/save-publish-20261110-114933/browser/local-browser.json",
+    "local_checks": 30,
+    "local_actual_repairs": 6,
+    "local_captured_js_errors": 0,
+    "local_scope": [
+      "Owned isolated headlessFirefox desktop1280x800 only; no personalFirefox or intended conference machine tested.",
+      "Supported MULER_QUIET_FETCH suppresses irrelevant naming fetches; external naming availability and Internet-independent operation untested.",
+      "Bounded release replay; no full molecule/mode/lesson matrix or new chemistry certification.",
+      "Local smoke earns one required and one optional set via actual inputs. Live smoke is intentionally shorter."
+    ],
+    "runtime_exact_files": 26,
+    "public_http_sha_checks": 276,
+    "public_http_scope": "HTTP200+exactSHA currentruntime and226dependency union and49protectedReact/v52; not browser or externalservice certification.",
+    "live_browser_status": "completed bounded public replay12checks; no live earned repairs",
+    "consolidated_review": {
+      "reviewer": "/root/review_save_release_20261110",
+      "resolved": "RSAVE-001 P2 missing two chemistry evidence files",
+      "new_open_findings": [],
+      "save_addendum": "Archive hashes/6092source+226recovery/snapshot/copies independently verified; Developer supplies CRC, bundle connectivity, remote push."
+    },
+    "live_browser_report": "docs/checks/save-publish-20261110-114933/browser/live/live-browser.json",
+    "live_summary": "docs/checks/save-publish-20261110-114933/browser/live/summary.json",
+    "live_checks": 12,
+    "live_actual_repairs": 0,
+    "live_js_diagnostic_entries": 10,
+    "live_js_categories": {
+      "cookie-invalid-domain": 8,
+      "JmolTracker-XFrameOptions": 2
+    },
+    "live_network_responses": 181,
+    "live_network_failure_events": 10,
+    "live_network_failure_categories": {
+      "root_favicon404": 7,
+      "tracker_XFO": 2,
+      "spt_init55_NS_BINDING_ABORTED": 1
+    },
+    "live_network_abort_cause": "Undiagnosed; checked flow passed.",
+    "live_no_network_interception": true,
+    "live_quiet_fetch": "Supported naming calls only",
+    "live_scope": "Actual welcome3entries / Main55 141molecules422forms / methane5atomsource3D /14lessonlibrary / normal12stepalkane / gate4 / realrequiredquiz1of3 / Returnstilllocked / Exitlibrary / directauthoredWorkshopobjective andzoomEscape. No liveearnedrepair; localearned6.",
+    "owned_live_cleanup": {
+      "actions": [
+        {
+          "pid": 91594,
+          "signal": "TERM",
+          "matched": "/var/folders/2v/ds4vjvgj1_1000kq1fzg70q40000gn/T/namelecule-release-live-20261110-csx2qlhe"
+        },
+        {
+          "pid": 91593,
+          "signal": null,
+          "reason": "not running or exact ownership guard failed"
+        }
+      ],
+      "ports": {
+        "http": "refused",
+        "bidi": "refused",
+        "profileRemoved": true
+      },
+      "utc": "2026-11-10T10:03:59Z"
+    }
+  }
+}

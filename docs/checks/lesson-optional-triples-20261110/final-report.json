@@ -1,0 +1,78 @@
+{
+  "UTC": "2026-11-10T07:18:32.937403+00:00",
+  "status": "Approved optional-triple feature completed locally, independent review clean",
+  "sourceFiles": {
+    "js/namelecule-game-repair.js": "d1649341e1b9181da180e0d62c12a0d0f27229af8d108048a3798c24944bf862",
+    "js/namelecule-generated-repair-checkpoint.js": "714e3b6140b28377a8af611c93350c42b0166e805f4dc62021055f8d5494b365",
+    "js/namelecule-quiz-checkpoints.js": "389b2f06b9f961114a702736d44b1ac98e7457a9f770e73a04ea14951bbe4ab7",
+    "css/namelecule-repair-round.css": "412678635b54693b542a1b70fcb104e623ea369e246219c98e70b1f053477031",
+    "css/namelecule-quiz-checkpoints.css": "988b50c3f7080606ede565c2b5b98c8b47e7df51eca15ae736c1bae957d8ed75",
+    "mulermoc-nom-54.html": "680f67ee1fa43d268228ac0abd6d39ebb225b215b56e4e322f7f6ed2aad089e7",
+    "mulermoc-nom-55.html": "f89bcd5fde30b7f489977e6113ba02a42e851252d0d88b19ac3ae5d6a0b87246"
+  },
+  "approvedPlan": "plan.json",
+  "baseline": "baseline.json",
+  "before": "before/",
+  "actualDiff": "implementation.diff",
+  "behavior": [
+    "Required gate4 and11 first3success remain required, original completion independently revalidated",
+    "Another three for practice on third success; unlimited optional attempts, same topic/basic difficulty",
+    "Optional progress stored separately; continue at any time including wrong/partial/loading/error, initial gate stays unlocked",
+    "Current optional seed/position/answers/choice order retained in same-tab Back/reopen/refresh; future unattempted options may reshuffle",
+    "Bounded separate practice cache2, required32; only current optional attempt stored per checkpoint",
+    "Optional action in shared renderer is opt-in; default standalone remains unchanged"
+  ],
+  "verification": {
+    "adapter": {
+      "checks": 395,
+      "realPinnedEngineGenerator": true,
+      "stressOptionalGenerations": 40,
+      "requiredCacheSizeAfterStress": 2,
+      "practiceCacheSizeAfterStress": 2
+    },
+    "controller": {
+      "checks": 194,
+      "doubles": "FakeDOM/probeadapter/storage/abort"
+    },
+    "renderer": {
+      "checks": 102,
+      "defaultBeforeAfterMarkupSnapshots": 24,
+      "originalHarness": "in-memory; supplied evidence only"
+    },
+    "browser": "browser/final-browser-report.json",
+    "browserEarnedPositions": 9,
+    "browserMainObservations": 261,
+    "semanticTraces": 45,
+    "lifecycleChecks": 8,
+    "independentReview": "independent-review.json",
+    "integrity": "final-integrity.json",
+    "localHTTP": "local-http.json"
+  },
+  "diagnostics": {
+    "reopen": "Whole optional record comparison included future unattempted randomized choiceOrder. Measured current attempt and required receipt unchanged.",
+    "crossHostReceipt": "Main55 substNamingMode=school on12steps is absent from Main54 runtime; signature deliberately differs; no receipt remapping/fabricated success.",
+    "retainedFailures": "browser/final-browser-report.json harnessFailuresRetained; root manifest-reader type assumption corrected in final-integrity.json, no artifact changes."
+  },
+  "limits": [
+    "Generated seed44 branched optional sample contained replacement rounds only; no native optional-order claim. Existing adapter/controller/renderer tests cover order separately.",
+    "Main54 optional earned flow, physical mobile, Safari runtime, projector, offline/cold-conference machine, historical freeze resolution.",
+    "Finite generated catalog means unlimited attempts do not guarantee forever-unique questions.",
+    "Same-tab progress, not account synchronization or reopening in a different browser.",
+    "Finite catalog permits repeat questions despite unlimited attempts.",
+    "Browser replay uses explicit exact historical earned receipts for prerequisite continuation; no claim of full uninterrupted warm replay."
+  ],
+  "upstream": "At preflight live HEAD5ab24955 and CHANGELOG match actual synchronized snapshot; no new commits then.",
+  "coreChangedDuringThisApprovedWork": false,
+  "scenarioJSONChanged": false,
+  "JSONExportRequired": false,
+  "commitPushPublication": false,
+  "ownershipCleanup": "browser/cleanup.json exactowned processes/profile removed,3ports closed; personalFirefox/8013 unchanged",
+  "preview": "browser/visual-comparison.html",
+  "normalLessonURL": "http://127.0.0.1:8013/mulermoc-nom-55.html?scenario=scenarios/alkanes-user-3.scenario.json&present=1&from=theory-library&v=optional-triples-20261110-r1#step=4",
+  "nextStep": "User trial in local current lesson; publication requires authorization.",
+  "previewOpen": {
+    "browser": "Safari",
+    "commandExit": 0,
+    "runtimeVerified": false
+  }
+}

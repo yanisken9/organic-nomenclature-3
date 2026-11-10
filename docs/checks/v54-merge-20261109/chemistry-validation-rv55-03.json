@@ -1,0 +1,22 @@
+{
+  "timestampUTC": "2026-11-09T22:38:06.875552+00:00",
+  "validator": "/root/merge_v55_chemistry_preflight_20261109",
+  "finding": "CV55-12 / RV55-03 P2",
+  "status": "targeted independent verification passed; no findings in boundedcorrection",
+  "runtimeSHA256": "4f2fb1a53bc25e141f754ab0da5e31095c65b0318cf0a29c4fe7667fbb8d9ad5",
+  "coreSHA256": "6cbdbd0ce60f5d66ff3e6925cdfd48e470764baa02b6263f325eff356df5e270",
+  "independentAssertions": 54,
+  "checks": [
+    "Actual capturedC8 passes readback, exactly6paritydigits changed, otherbytes/coordsidentical",
+    "Parity1/CRLF,cleanbytes,idempotence",
+    "PotentialC*,H/D,charged/radicalH/C,nonCparity,parity3,wedge/query,alteredelement/topology/isotope,stereo/queryreference rejected",
+    "Staleownerreadback blocked",
+    "Strictgraphvalidatorsunchanged; exactonenormalizationcallsite inside readback"
+  ],
+  "execution": "Read-onlyPython/JSC stdin; nofileswrittenbyvalidator",
+  "limits": [
+    "Realbrowser and physicalminimizer not independentlyexecuted",
+    "Geometry/convergence remainunverified",
+    "ConsolidatedReviewer finalacceptance separate"
+  ]
+}
