@@ -6,13 +6,9 @@
   const REVISION = "275d537b19f3ef0791c97d8d78c127f541a0579038ef1e8d65dadde611845690";
   const CATALOG_SHA = "9778e30ea33f2f7cd4c8a472e46e90539856b861a54035a1d514c3246cccf724";
   const recipeKeys = ["version", "setId", "difficulty", "roundCount", "generatorVersion", "catalogRevision", "engineSHA256"];
-  const WRONG_PART_REMINDERS = Object.freeze({
-    "parent-length": "Η αποστολή αφορά το πλήθος των ατόμων C της κύριας αλυσίδας.",
-    "bond-type": "Η αποστολή αφορά το είδος των δεσμών μεταξύ ατόμων C.",
-    "branch-locants": "Η αποστολή αφορά τις θέσεις σύνδεσης των διακλαδώσεων και τη φορά αρίθμησης.",
-    "branch-multiplier": "Η αποστολή αφορά το πλήθος των ίδιων διακλαδώσεων."
-  });
   const prepared = new Map();
+  // Optional attempts must never evict the sets used to verify earned progress.
+  const practices = new Map();
   let source = null;
   function assert(condition, message) { if (!condition) throw new Error(message); }
   function cancelled() {
@@ -47,12 +43,12 @@
     });
     return result;
   }
-  function restore(recipe, previous) {
+  function restoreFromCache(recipe, previous, cache) {
     validate(recipe);
     const seed = previous && previous.version === VERSION && seedValue(previous.seed);
     if (!seed) return { version: VERSION, seed: null, currentRound: 0, states: [null, null, null], solved: false };
     const raw = Array.isArray(previous.states) && previous.states.length === 3 ? previous.states.map(cleanRound) : [null, null, null];
-    const set = prepared.get(key(recipe, seed));
+    const set = cache.get(key(recipe, seed));
     let states = raw;
     let currentRound = Number.isInteger(previous.currentRound) && previous.currentRound >= 0 && previous.currentRound < 3 ? previous.currentRound : 0;
     let solved = false;
@@ -67,6 +63,20 @@
       } else { currentRound = Math.min(currentRound, 2); solved = true; }
     }
     return { version: VERSION, seed, currentRound, states, solved };
+  }
+  function restore(recipe, previous) { return restoreFromCache(recipe, previous, prepared); }
+  function restorePractice(recipe, previous) { return restoreFromCache(recipe, previous, practices); }
+  function freshSeed(previousSeed) {
+    const values = new Uint32Array(2);
+    global.crypto.getRandomValues(values);
+    const seed = String(values[0]) + String(values[1]);
+    // Even repeated random bytes must start a different immediate attempt.
+    return seed === previousSeed ? seed.slice(0, -1) + ((Number(seed.slice(-1)) + 1) % 10) : seed;
+  }
+  function createPractice(recipe, previous) {
+    validate(recipe);
+    return { version: VERSION, seed: freshSeed(seedValue(previous && previous.seed)),
+      currentRound: 0, states: [null, null, null], solved: false };
   }
   async function loadSource(signal) {
     checkSignal(signal);
@@ -95,11 +105,11 @@
     source = { catalog, analyses };
     return source;
   }
-  async function generate(recipe, seed, signal) {
+  async function generate(recipe, seed, signal, cache, limit) {
     validate(recipe);
     checkSignal(signal);
     const cacheKey = key(recipe, seed);
-    if (prepared.has(cacheKey)) return prepared.get(cacheKey);
+    if (cache.has(cacheKey)) return cache.get(cacheKey);
     const controller = new AbortController();
     const abort = () => controller.abort();
     if (signal) signal.addEventListener("abort", abort, { once: true });
@@ -112,8 +122,8 @@
         { seed, difficulty: recipe.difficulty }));
       const set = game.sets.find(entry => entry.id === recipe.setId);
       assert(set && set.rounds.length === 3, "Το σετ επισκευών δεν είναι διαθέσιμο.");
-      if (prepared.size >= 32) prepared.delete(prepared.keys().next().value);
-      prepared.set(cacheKey, set);
+      if (cache.size >= limit) cache.delete(cache.keys().next().value);
+      cache.set(cacheKey, set);
       return set;
     } catch (error) {
       controller.abort();
@@ -128,7 +138,7 @@
   function prepare(recipe, previous, options) {
     const state = restore(recipe, previous);
     if (!state.seed || prepared.has(key(recipe, state.seed))) return null;
-    return generate(recipe, state.seed, options && options.signal).then(() => restore(recipe, state));
+    return generate(recipe, state.seed, options && options.signal, prepared, 32).then(() => restore(recipe, state));
   }
   function node(tag, className, text) {
     const element = global.document.createElement(tag);
@@ -136,32 +146,18 @@
     if (text) element.textContent = text;
     return element;
   }
-  // Basic lesson rounds repeat the mission focus without changing the
-  // canonical generated question used to restore and verify saved answers.
-  function lessonRoundForDisplay(round) {
-    const family = round && round.kind === "replace" && round.fault && round.fault.kind;
-    if (!Object.prototype.hasOwnProperty.call(WRONG_PART_REMINDERS, family) ||
-      !round.feedback || typeof round.feedback.wrongPart !== "string") return round;
-    return Object.assign({}, round, {
-      feedback: Object.assign({}, round.feedback, {
-        wrongPart: round.feedback.wrongPart + " " + WRONG_PART_REMINDERS[family]
-      })
-    });
-  }
-  function mount(host, options) {
+  function mountSet(host, options, practice) {
     const recipe = validate(options.round);
+    const restoreState = practice ? restorePractice : restore;
+    const cache = practice ? practices : prepared;
     const controller = new AbortController();
-    let state = restore(recipe, options.initialState);
+    let state = restoreState(recipe, options.initialState);
     let destroyed = false;
     let current = null;
     let token = 0;
-    if (!state.seed) {
-      const values = new Uint32Array(2);
-      global.crypto.getRandomValues(values);
-      state.seed = String(values[0]) + String(values[1]);
-    }
+    if (!state.seed) state.seed = freshSeed(null);
     function publish() {
-      state = restore(recipe, state);
+      state = restoreState(recipe, state);
       if (!destroyed && typeof options.onStateChange === "function") options.onStateChange(JSON.parse(JSON.stringify(state)));
     }
     function reportProgress(value) {
@@ -178,9 +174,16 @@
       const roundHost = node("div", "nl-quiz-set-round");
       host.replaceChildren(progress, roundHost);
       host.setAttribute("aria-busy", "false");
-      current = global.NameleculeRepairGame.mountRound(roundHost, {
-        round: lessonRoundForDisplay(set.rounds[index]), initialState: state.states[index], assetBase: options.assetBase,
+      const presentation = global.NameleculeRepairGame.presentationForRound(set.rounds[index], { difficulty: recipe.difficulty });
+      const roundOptions = Object.assign({}, presentation, {
+        initialState: state.states[index], assetBase: options.assetBase,
         continueLabel: index < 2 ? "Επόμενο κουίζ" : "Συνεχίζω τη θεωρία",
+        onSuccessActionsReady(ready) {
+          if (!destroyed && state.currentRound === index && roundHost.isConnected &&
+            typeof options.onSuccessActionsReady === "function") {
+            options.onSuccessActionsReady(index === 2 && state.solved && ready === true);
+          }
+        },
         onReveal(request) {
           if (!destroyed && state.currentRound === index && roundHost.isConnected &&
             typeof options.onReveal === "function") options.onReveal(request);
@@ -207,6 +210,13 @@
           } else if (state.solved && typeof options.onContinue === "function") options.onContinue();
         }
       });
+      if (index === 2 && typeof options.onNewPractice === "function") {
+        roundOptions.newPracticeLabel = options.newPracticeLabel;
+        roundOptions.onNewPractice = function () {
+          if (!destroyed && state.currentRound === index && state.solved && roundHost.isConnected) options.onNewPractice();
+        };
+      }
+      current = global.NameleculeRepairGame.mountRound(roundHost, roundOptions);
       reportProgress({ current: index + 1, total: recipe.roundCount });
     }
     function start() {
@@ -218,9 +228,9 @@
       loading.setAttribute("role", "status");
       host.replaceChildren(loading);
       publish(); // Record the seed before any asynchronous work or refresh.
-      generate(recipe, state.seed, controller.signal).then(set => {
+      generate(recipe, state.seed, controller.signal, cache, practice ? 2 : 32).then(set => {
         if (destroyed || request !== token) return;
-        state = restore(recipe, state);
+        state = restoreState(recipe, state);
         publish();
         render(set);
       }).catch(error => {
@@ -247,6 +257,9 @@
       host.replaceChildren();
     } };
   }
+  function mount(host, options) { return mountSet(host, options, false); }
+  function mountPractice(host, options) { return mountSet(host, options, true); }
   assert(global.NameleculeQuizCheckpoints, "Checkpoint controller unavailable");
-  global.NameleculeQuizCheckpoints.registerType("generated-name-repair-set", { validate, restore, prepare, mount });
+  global.NameleculeQuizCheckpoints.registerType("generated-name-repair-set",
+    { validate, restore, prepare, mount, createPractice, restorePractice, mountPractice });
 })(typeof window !== "undefined" ? window : globalThis);

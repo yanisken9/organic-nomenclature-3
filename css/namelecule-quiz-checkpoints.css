@@ -62,6 +62,11 @@
   border-bottom: 1px solid #c7dcd2;
 }
 .nl-quiz-dialog .nl-quiz-dialog-title { flex: 1; min-width: 0; margin: 0; font: 700 1.05rem/1.4 system-ui, sans-serif; }
+.nl-quiz-dialog-copy { flex: 1; min-width: 0; }
+.nl-quiz-practice-notice { margin: 6px 0 0; font-size: .9rem; line-height: 1.4; }
+.nl-quiz-checkpoint-actions { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 10px; }
+.nl-quiz-checkpoint-actions > button { max-width: 100%; }
+.nl-quiz-practice-continue { max-width: 100%; background: #254c50; color: #fff; }
 .nl-quiz-dialog-actions { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; max-width: 55%; }
 .nl-quiz-dialog .nl-quiz-dialog-actions .nl-quiz-back { max-width: 100%; }
 .nl-quiz-round-progress {
@@ -79,6 +84,7 @@
 .nl-quiz-dialog [hidden], .nl-quiz-checkpoint [hidden] { display: none !important; }
 @media (max-width: 650px) {
   .nl-quiz-checkpoint { flex-direction: column; align-items: stretch; padding: 16px; }
+  .nl-quiz-checkpoint-actions { justify-content: flex-start; }
   .nl-quiz-dialog { width: calc(100% - 12px); max-width: calc(100% - 12px); max-height: calc(100dvh - 12px); border-radius: 14px; }
   .nl-quiz-dialog-header { padding: 12px; gap: 10px; align-items: flex-start; }
   .nl-quiz-dialog .nl-quiz-host { padding: 14px; }
