@@ -1,0 +1,47 @@
+{
+  "recordedUTC": "2026-11-11T04:34:04.274567+00:00",
+  "source": "Developer tool execution transcript; not independent execution evidence.",
+  "normalOpen": {
+    "executable": "/usr/bin/open",
+    "arguments": [
+      "-n",
+      "-a",
+      "/Applications/Firefox.app",
+      "--args",
+      "--new-instance",
+      "--profile",
+      "/Users/yannisskendros/Library/Application Support/Firefox/Profiles/4bou5fna.default-release-1"
+    ],
+    "noURL": true,
+    "noAutomationArgument": true,
+    "initialBroadPsGuardStoppedBeforeChanges": true
+  },
+  "cleanup": {
+    "targetPIDs": [
+      55879,
+      56371,
+      94903
+    ],
+    "protectedPersonalPID": 3805,
+    "requireCategoryTemporaryTest": true,
+    "beforeEachSignalGuard": [
+      "Exact Firefox executable prefix",
+      "Expected temporary profile string",
+      "remote-debugging-port flag",
+      "Actual command and lstart equal captured before operation"
+    ],
+    "signalsExecuted": [
+      "SIGTERM"
+    ],
+    "noMassKill": true,
+    "pollingRace": "Initial post-signal info() read command then lstart in two ps calls; process94903 exited between reads, raising CalledProcessError. Signal loop already complete.",
+    "followupVerification": "One ps snapshot confirmed only original personal3805 with exact expected command remains.",
+    "SIGKILLReached": false
+  },
+  "limitations": [
+    "Operational outcomes are Developer execution evidence plus direct user feedback.",
+    "Different profile, startup state, cookies, automation connection and elapsed time are not individually isolated.",
+    "Successful normal-profile search does not prove exact Google scoring mechanism or guarantee future absence of CAPTCHA.",
+    "No network/proxy/VPN preference edit, personal reset, cookie/history/password deletion or automated Google Search request."
+  ]
+}

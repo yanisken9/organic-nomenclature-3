@@ -1,0 +1,48 @@
+{
+  "status": "Read-only diagnosis; new user preference needs clarification before a changed layout/fit plan",
+  "userReport": "Screenshot shows last answer tile partly clipped at right edge of dashed answer viewport; joined candidate below fully visible",
+  "confirmedCause": "Current approved nowrap+max-content+horizontal-overflow design allows row wider than viewport; previous tests established reachability, not simultaneous visibility of all pieces",
+  "evidenceReused": "docs/checks/name-builder-single-line-20261111/browser/layout.json",
+  "measuredLongestCases": [
+    {
+      "viewport": 1280,
+      "clientWidth": 575,
+      "scrollWidth": 900
+    },
+    {
+      "viewport": 390,
+      "clientWidth": 330,
+      "scrollWidth": 892
+    },
+    {
+      "viewport": 320,
+      "clientWidth": 260,
+      "scrollWidth": 892
+    }
+  ],
+  "screenshotSequence": [
+    "4,5-",
+    "διμεθυλο",
+    "-5-",
+    "εξ",
+    "εν",
+    "-1-",
+    "ιν",
+    "όνη"
+  ],
+  "minimumEightTileWidthBeforeLongerGlyphGrowth": 394,
+  "constraints": [
+    "Current same-width column cannot fit every name and arbitrary extra-tile answers simultaneously in a readable single row",
+    "Reducing answer-only gaps/padding can help typical cases; cannot promise universal fit",
+    "If horizontal scrolling is rejected, a layout constraint or wrapping/font constraint must change"
+  ],
+  "sourceHashes": {
+    "games/name-builder.html": "798baf8db7057799efab40080747dce9c673e0ea4c1fcc4fac21cb8da73beaa4",
+    "css/namelecule-name-builder.css": "8f2035985c9bb699f2b54b11ac40887c0687e76e48a738d435af59481ff3ff6a",
+    "js/namelecule-name-builder.js": "119717a768ea7460b14e0d8b59a691426b08af11d6ca07930105c191cc2df36e"
+  },
+  "sourceChangesMade": false,
+  "all11CoresUnchanged": true,
+  "explorer": "/root/name_builder_game_explore; read-only CSS/JS and existing supplied browser evidence, no new browser run",
+  "nextStep": "Clarify whether user prioritizes entire row visible without scrolling and accepts greater answer width, or retains columns with explicitly accepted scrolling fallback"
+}

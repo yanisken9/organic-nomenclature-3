@@ -1,0 +1,32 @@
+{
+  "role": "Independent read-only Chemistry Validator",
+  "agent": "/root/name_builder_game_chemistry_scope",
+  "roleId": "NAMELECULE_CHEMISTRY_VALIDATOR_V1_20261023",
+  "engineAssertionsPassed": 6604,
+  "additionalAssertionsPassed": 1196,
+  "rounds": 141,
+  "rootDistractors": 1128,
+  "independentlySpecifiedNamedGraphs": 36,
+  "series": 18,
+  "ethers": 11,
+  "esters": 9,
+  "independentGraphFormulaValenceChargeFormsPassed": 421,
+  "euphonySpacingCases": 34,
+  "duplicateFixture": "Identical copies interchangeable with multiplicity and ester boundary preserved; missing/extra rejected",
+  "actionableNewFindings": [],
+  "inheritedExclusion": {
+    "path": "js/jsme-nick-nomeclature-moc2-data_55.js",
+    "line": 3757,
+    "variable": "penten_3_yne_1_2D_Expanded",
+    "atom": 6,
+    "value": "[H]",
+    "reason": "Ordinary-element valence parser declined existing form",
+    "priorRecord": "docs/checks/v54-merge-20261109/final-report.json:146"
+  },
+  "limitations": [
+    "No independent actual browser execution; Firefox evidence belongs to Developer",
+    "No visual rendering, SDF/3D correspondence, stereochemistry, external naming service or unrestricted IUPAC certification"
+  ],
+  "changesMade": false,
+  "origin": "Record of specialist final message, no rerun or invented artifact output"
+}

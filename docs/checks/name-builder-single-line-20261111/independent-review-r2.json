@@ -1,0 +1,27 @@
+{
+  "roleId": "NAMELECULE_REVIEWER_V1_20261023",
+  "agent": "/root/review_name_builder_single_line_r1",
+  "reviewType": "Targeted final verification of NB-SL-01; not second full review",
+  "target": "review-target-r2.json",
+  "finding": "NB-SL-01",
+  "severity": "P2",
+  "state": "CLOSED by independent targeted verification",
+  "independentChecks": [
+    "39 current manifest hashes",
+    "Exact r1CSS reconstructed by removing only10pxbottompadding",
+    "Exact r1HTML reconstructed by reversing2cachetokens",
+    "UI JS unchanged fromr1",
+    "31protected hashes including11cores unchanged",
+    "JavaScriptCore new Function parse check PASS",
+    "Independent visual inspection of3Developer clearance PNGs: candidate/success glyphs clear above active scrollbars"
+  ],
+  "developerEvidence": "7targeted actualFirefox checks completed at1280/390/320; runtime execution not independent",
+  "rawLogObservation": "Independent prefix count confirms0timeoutwarnings before contextclose,1after in targetedreplay (pagehide->post),2internalBiDi errors preclose. Similar warnings preexistlayout; notalloriginalwarningphasesproven.",
+  "newFindings": [],
+  "limitations": [
+    "Physical devices/other browsers unverified",
+    "No offline/conference readiness certification",
+    "Earlier preserved harness assertion wrongly required scrolling for fitting success name"
+  ],
+  "writesByReviewer": false
+}

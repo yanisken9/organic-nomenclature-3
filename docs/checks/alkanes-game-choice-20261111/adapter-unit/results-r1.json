@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "checks": 89,
+  "fetches": 6,
+  "frameCount": 9,
+  "analyses": 8,
+  "distinctBranchedIds": [
+    "methyl_2_pentane",
+    "dimethyl_2_3_butane",
+    "ethyl_3_dimethyl_2_5_hexane"
+  ],
+  "sourceSHA256": {
+    "js/namelecule-generated-repair-checkpoint.js": "0e3db17644ddaac83a41d34f6658b915a6d6047898fa51b84fab69a7d25eb9d9",
+    "js/namelecule-game-choice-checkpoint.js": "cc6e68fb9d6f1ed074c9ddf768bf9ede4250e32163d8b0e793f18139928c694c"
+  },
+  "conditions": "JSC; real pinned chemistry engine/generator/name-builder engine; fake DOM, bridge, crypto digest and transport",
+  "limitations": [
+    "No actual browser renderer or native child viewer execution",
+    "No live Worker/network execution",
+    "Controller/storage/browser integration requires separate Root evidence"
+  ]
+}

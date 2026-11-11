@@ -1,0 +1,30 @@
+{
+  "chemistry": {
+    "agent": "/root/choice_chemistry_validation",
+    "role": "Read-only Chemistry Validator, separate context",
+    "finding": "CHEM-01 P2 at adapter46: io identifies hydrocarbons, not uniquely alkanes. Root corrected nonmethane sentence and clarified methane; validator targeted verified hash cc6e68fb9d6f1ed074c9ddf768bf9ede4250e32163d8b0e793f18139928c694c. No remaining chemical findings.",
+    "reportedIndependentChecks": [
+      "stdout-only Python/JSC in-memory:384Builder rounds over64seeds/set/all8molecules, distinct triples/vocabulary5or6/methane modes/correct-incomplete-reversed checks",
+      "Native55 vs pinned engine:23available2D forms names/12slots/parent lengths",
+      "Independent carbon-tree graph, valence, H, charge checks23forms+8SDFs; independent parent-chain enumeration incl locants/branch ordering"
+    ],
+    "limitations": [
+      "No browser or realWorkertransport/DOMserialization by Validator; root owns runtime evidence",
+      "No broad IUPAC certification; Greek educational conventions and fixed8alkane set only"
+    ]
+  },
+  "learning": {
+    "agent": "/root/choice_learning_validation",
+    "role": "Read-only Learning Designer, separate context",
+    "finding": "LD-P2-01 same explanation inconsistency; addressed with Chemistry Validator wording and targeted validation. No other actionable learning finding.",
+    "checks": [
+      "Other10steps/settings/moleculeIDs/viewerflags invariant",
+      "same-game3distinct criteria and optional earned-access text clear",
+      "postCheck explanation/no wrong-answer solution spoiler",
+      "No claim of equivalent assessment difficulty or demonstrated transfer of learning"
+    ],
+    "limitations": [
+      "Source/content inspection, not browser usability or learning outcomes"
+    ]
+  }
+}

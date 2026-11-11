@@ -1,0 +1,253 @@
+{
+  "completed": true,
+  "checks": [
+    {
+      "label": "Mouse drop into upper padding inserts at intended 0",
+      "detail": {
+        "sx": 90,
+        "sy": 806,
+        "tx": 654,
+        "ty": 242,
+        "tile": "tile-191yzpf-h",
+        "scroll": 0,
+        "viewport": 900,
+        "zone": {
+          "x": 645.566650390625,
+          "y": 234.28334045410156,
+          "width": 579.433349609375,
+          "height": 145,
+          "top": 234.28334045410156,
+          "right": 1225,
+          "bottom": 379.28334045410156,
+          "left": 645.566650390625
+        }
+      }
+    },
+    {
+      "label": "Removal restores exact answer 0",
+      "detail": null
+    },
+    {
+      "label": "Mouse drop into upper padding inserts at intended 6",
+      "detail": {
+        "sx": 90,
+        "sy": 806,
+        "tx": 923,
+        "ty": 250,
+        "tile": "tile-191yzpf-h",
+        "scroll": 247.06666564941406,
+        "viewport": 900,
+        "zone": {
+          "x": 645.566650390625,
+          "y": 241.81666564941406,
+          "width": 579.433349609375,
+          "height": 145,
+          "top": 241.81666564941406,
+          "right": 1225,
+          "bottom": 386.81666564941406,
+          "left": 645.566650390625
+        }
+      }
+    },
+    {
+      "label": "Removal restores exact answer 6",
+      "detail": null
+    },
+    {
+      "label": "Mouse drop into upper padding inserts at intended 12",
+      "detail": {
+        "sx": 90,
+        "sy": 806,
+        "tx": 1217,
+        "ty": 250,
+        "tile": "tile-191yzpf-h",
+        "scroll": 324.5833435058594,
+        "viewport": 900,
+        "zone": {
+          "x": 645.566650390625,
+          "y": 241.81666564941406,
+          "width": 579.433349609375,
+          "height": 145,
+          "top": 241.81666564941406,
+          "right": 1225,
+          "bottom": 386.81666564941406,
+          "left": 645.566650390625
+        }
+      }
+    },
+    {
+      "label": "Removal restores exact answer 12",
+      "detail": null
+    },
+    {
+      "label": "Stationary edge drag continues horizontal scrolling",
+      "detail": {
+        "start": 0,
+        "end": 243
+      }
+    },
+    {
+      "label": "Held drag does not prematurely add a tile",
+      "detail": null
+    },
+    {
+      "label": "Lost capture cancels scrolling/ghost without changing answer",
+      "detail": null
+    },
+    {
+      "label": "Trusted touch inserts in scrolled narrow row",
+      "detail": {
+        "sx": 58,
+        "sy": 684,
+        "tx": 183,
+        "ty": 199,
+        "tile": "tile-191yzpf-h",
+        "scroll": 365.7833251953125,
+        "viewport": 844,
+        "zone": {
+          "x": 28,
+          "y": 191.4166717529297,
+          "width": 334,
+          "height": 120,
+          "top": 191.4166717529297,
+          "right": 362,
+          "bottom": 311.4166717529297,
+          "left": 28
+        }
+      }
+    },
+    {
+      "label": "Touch removal and drag cleanup preserve answer",
+      "detail": null
+    }
+  ],
+  "moves": [
+    {
+      "index": 0,
+      "points": {
+        "sx": 90,
+        "sy": 806,
+        "tx": 654,
+        "ty": 242,
+        "tile": "tile-191yzpf-h",
+        "scroll": 0,
+        "viewport": 900,
+        "zone": {
+          "x": 645.566650390625,
+          "y": 234.28334045410156,
+          "width": 579.433349609375,
+          "height": 145,
+          "top": 234.28334045410156,
+          "right": 1225,
+          "bottom": 379.28334045410156,
+          "left": 645.566650390625
+        }
+      },
+      "actual": [
+        "tile-191yzpf-h",
+        "tile-191yzpf-0",
+        "tile-191yzpf-1",
+        "tile-191yzpf-2",
+        "tile-191yzpf-3",
+        "tile-191yzpf-4",
+        "tile-191yzpf-5",
+        "tile-191yzpf-6",
+        "tile-191yzpf-7",
+        "tile-191yzpf-8",
+        "tile-191yzpf-9",
+        "tile-191yzpf-a",
+        "tile-191yzpf-b"
+      ]
+    },
+    {
+      "index": 6,
+      "points": {
+        "sx": 90,
+        "sy": 806,
+        "tx": 923,
+        "ty": 250,
+        "tile": "tile-191yzpf-h",
+        "scroll": 247.06666564941406,
+        "viewport": 900,
+        "zone": {
+          "x": 645.566650390625,
+          "y": 241.81666564941406,
+          "width": 579.433349609375,
+          "height": 145,
+          "top": 241.81666564941406,
+          "right": 1225,
+          "bottom": 386.81666564941406,
+          "left": 645.566650390625
+        }
+      },
+      "actual": [
+        "tile-191yzpf-0",
+        "tile-191yzpf-1",
+        "tile-191yzpf-2",
+        "tile-191yzpf-3",
+        "tile-191yzpf-4",
+        "tile-191yzpf-5",
+        "tile-191yzpf-h",
+        "tile-191yzpf-6",
+        "tile-191yzpf-7",
+        "tile-191yzpf-8",
+        "tile-191yzpf-9",
+        "tile-191yzpf-a",
+        "tile-191yzpf-b"
+      ]
+    },
+    {
+      "index": 12,
+      "points": {
+        "sx": 90,
+        "sy": 806,
+        "tx": 1217,
+        "ty": 250,
+        "tile": "tile-191yzpf-h",
+        "scroll": 324.5833435058594,
+        "viewport": 900,
+        "zone": {
+          "x": 645.566650390625,
+          "y": 241.81666564941406,
+          "width": 579.433349609375,
+          "height": 145,
+          "top": 241.81666564941406,
+          "right": 1225,
+          "bottom": 386.81666564941406,
+          "left": 645.566650390625
+        }
+      },
+      "actual": [
+        "tile-191yzpf-0",
+        "tile-191yzpf-1",
+        "tile-191yzpf-2",
+        "tile-191yzpf-3",
+        "tile-191yzpf-4",
+        "tile-191yzpf-5",
+        "tile-191yzpf-6",
+        "tile-191yzpf-7",
+        "tile-191yzpf-8",
+        "tile-191yzpf-9",
+        "tile-191yzpf-a",
+        "tile-191yzpf-b",
+        "tile-191yzpf-h"
+      ]
+    }
+  ],
+  "role": "Developer actual trusted-pointer evidence",
+  "original": [
+    "tile-191yzpf-0",
+    "tile-191yzpf-1",
+    "tile-191yzpf-2",
+    "tile-191yzpf-3",
+    "tile-191yzpf-4",
+    "tile-191yzpf-5",
+    "tile-191yzpf-6",
+    "tile-191yzpf-7",
+    "tile-191yzpf-8",
+    "tile-191yzpf-9",
+    "tile-191yzpf-a",
+    "tile-191yzpf-b"
+  ],
+  "javascriptErrors": []
+}

@@ -1,3 +1,300 @@
+# 2026-11-11 — External Firefox opened for alkane game-choice trial
+
+At userrequest opened normal isolated user-facingFirefoxPID15999/newlesson#step4, preservingpersonal/previouspreviewbrowsers. VerifiedservedHTMLHTTP200/exactdiskbytes andrunninglaunch; didnotinstrumentorclaimfreshvisualcheck. Launchrecord `docs/checks/alkanes-game-choice-preview-20261111/launch.json`; keepwindowopen. Operationalfollowuponly; no applicationsource/corechanges/commit/push/publication. All11corehashesstillbaseline.
+
+# 2026-11-11 — Two alternative games integrated into alkane lesson
+
+Implemented approved12appfile scope recorded in `docs/checks/alkanes-game-choice-20261111/final-report.json`: neutral game choices with bothlogos at4/11,3distinctcorrectmoleculeswithinonegame, pergamepartial and independent earnedreceipt, optional same/othergame/theory, preserved counter/feedback/scroll/footer flow. Reused controlled existingBuilder UI/nativeviewer with canonicalWorker/name-pieces checks; added narrow oldauthoredcontent migration without resetresurrection. Other10steps/settings/IDs/recipes unchanged. Desktop9export byteequal33319bytes/SHA b9e2a611 with datedbaselinebackup; receipt `communication/checkpoints/alkanes-json-export-20261111-game-choice.json`.
+
+Scientific/learning review corrected io→hydrocarbons explanation. Fresh independent Reviewer `/root/review_alkane_game_choice` foundR1P2 staleoptionalgame repeat andR2P2 unboundedcanonicaldata load; bothcorrected and independently targetedverified. Final41source/evidence and46runtime targets/11cores matched;10screenshots independently inspected; no NEW actionable finding remains. Developer333controller/243renderer/148adapter/30Builder+5sourceinvariant units,44focused actualFirefox checks passed; real bothgames/bothgates/fulltriples, mixedlock, partial/cold/optional,8controllednativeidentities/modes/zoom,320/390/finalexploration exercised. Earlier partialharnessruns retained as incomplete, not relabeledpassing. Migrationfixture used oldauthoredJSON undercurrentMain55 with authenticcompatiblecurrentRepair evidence, not actualoldimplementationexecution. ChemistryValidator reported384round/23forms+8SDF independentchecks; Reviewer inspected rather than reran molecular checks.
+
+Retained existing P2: JSmolbufferedImage/platform-null exception inreload; message/first6remote frames matchpriorevidence, rootcause/frequency/causalidentityunproved. Functionalflowpassed but no cleanconsole/conference/offline/physicaltouch/otherbrowser/newmachine claim. Ownedheadless/serverclosed, userbrowsersuntouched; localpreview verified. All11corefiles unchanged againsttaskbaseline; no commit/push/publication. Concrete source/unit/runtime/review hashes and limits in finalreport/manifests. Next:usertrial; separate retainedJSmoldiagnosis/conferencequalification.
+
+# 2026-11-11 — Alternative alkane lesson games implementation and review in progress
+
+Implemented approved Workshop/NameBuilder alternatives at gates4/11 in12appfiles, exactbaseline/changedpaths under `docs/checks/alkanes-game-choice-20261111/`. Three distinctcorrectmoleculeswithinonegame earn independently revalidatedaccess; separatepergamepartial/optional/earned evidence, controlledexistingBuilder UI/nativeviewer, exactoldWorkshopmigration. ActiveJSON other10steps/settings/IDs/recipes unchanged; Desktop9currentcopy refreshed withdatedbackup/byteequality (`communication/checkpoints/alkanes-json-export-20261111-game-choice.json`). Scientificwordingio→hydrocarbons corrected per ChemistryValidator/LearningDesigner. Source/declaredmockunits and actualownedFirefox flows recorded separately. Fresh independentReviewer identifiedR1P2 repeatwronggame afterrequiredreopen (controllerfixed333checks/counterfactual), R2P2 unboundedcanonicalBuilderloading (targetedfixunderway). Do not claim complete untilfinalruntime/review;11cores unchanged, no commit/push/publication. Normaluserbrowsers untouched.
+
+# 2026-11-11 — Read-only plan for two alternative alkane checkpoint games
+
+Investigated requested Workshop/Name Builder choice at lesson steps4/11 with3molecules per chosen game and optional othergame/repetition/theory afterunlock. Scoped Explorer, Learning Designer and Planner supplied read-only findings. Proposed architecture,12affected app files, verification/migration/export contracts and limits in `docs/checks/alkanes-game-choice-preflight-20261111/plan.json`; not implemented or approved yet. Confirmed existing8molecule pools, exact active scenario/current Desktop9mapping+identical bytes, fresh upstreamHEAD/changelog2c3f74f6 with0newcommits since priorcheck and34pending since sync5ab24955. Recorded11corehashes; no application/core changes, runtime checks, commit/push/publication. Next: concrete plan approval, implementation and scientific/independent review.
+
+# 2026-11-11 — Two game links with logos in the welcome card
+
+Implemented approved one-file update in `design/welcome-proposal.html`: existing Workshop plus Χτίσε το όνομα, each with its40pxlogo inside second card; native same-tab links, scoped spacing/icon CSS and updated descriptive/availability copy. Preserved pre-existing welcome/v55 changes, neighboring cards, inline script and all game code. Developer actual isolatedFirefox28checks across4widths verified icons/layout, trusted clicks and returns for both games, keyboard entry/default Builder round/one tile choice, preserved theory URL and teacher dialog. Evidence/before/diff/hash records in `docs/checks/welcome-game-entries-20261111/`. Root inspected1500/320screenshots. All25protected paths including11cores unchanged. Own headless/server closed; user browsers untouched. Fresh independent Reviewer `/root/review_welcome_game_entries` completed frozen14file review with no actionable P0/P1/P2/P3 findings or corrections. Independently checked source delta/14target and25protected hashes/4screenshots;28browser checks remain Developer evidence. Final report and exact preview HTTP/SHA verification recorded in the evidence folder; local-only access, public deployment not performed. No commit/push/publication.
+
+# 2026-11-11 — Accepted logo integrated beside game title
+
+Following explicit two-file plan approval, integrated blank wall-and-trowel icon in `games/name-builder.html` with responsive styling in `css/namelecule-name-builder.css` and updated CSS cache query. Changes limited to branding/title row; accepted image and all game JS/viewer/chemistry preserved. Before snapshots, hashes and exact diff under `docs/checks/name-builder-icon-integration-20261111/`. Developer actual isolatedFirefox38checks across5widths,18trusted bank additions,2correct answer flows and missing-image fallback passed;0captured JS exceptions. Root visually checked1500/320screenshots. All17protected paths including11cores unchanged; owned headless/server closed and user browsers untouched. Frozen21file target reviewed in fresh context by independent Reviewer `/root/review_builder_logo_integration`: no actionable P0/P1/P2/P3 findings or corrections. Independent hash/diff/HTML/CSS/7screenshot checks; runtime evidence is Developer-supplied. Final report and preview HTTP/SHA checks recorded in the evidence folder. No commit/push/publication.
+
+# 2026-11-11 — User accepted the blank game icon
+
+User visually accepted `games/assets/name-builder/name-builder-logo-3d-blank-v1.png` with «ναι, ωραίο». Only acceptance records updated; image/provenance and independent review target unchanged. No app integration or core/code change, commit, push or publication.
+
+# 2026-11-11 — Building-wall and trowel icon proposal, blank blocks
+
+Created a new 3D icon proposal for Χτίσε το όνομα matching the Workshop style, using the built-in image_gen tool. User revised the initial draft to remove specific syllables; latest PNG has blank block faces. Saved `games/assets/name-builder/name-builder-logo-3d-blank-v1.png` and `games/assets/name-builder/provenance.json` with exact prompts and source paths. Scope is artwork only, not game integration. Developer verified1254×1254 RGBA PNG and protected app/source/core invariance. Frozen target and checks under `docs/checks/name-builder-icon-20261111/`; fresh independent asset Reviewer `/root/review_builder_icon_blank` returned no actionable P0/P1/P2/P3 findings after visual, PNG/alpha/CRC, hash/provenance and protected source/core checks. Runtime/placement/small-size checks remain outside this unused-asset scope. No app/core edits, commit, push, publication or browser intervention.
+
+# 2026-11-11 — Read-only investigation of reported tile substitution
+
+User reported a different component after a bank-tile click, then confirmed it no longer recurred. Developer recorded36trusted selections at1280/1024/390px, all exact identity matches, with no captured JS exceptions. Four served app files matched disk. Read-only Explorer inspected ID/shuffle/render/event routes. No cause established and no fix claimed or implemented. Diagnostic scripts/events/results are under `docs/checks/name-builder-click-identity-20261111/`; all16recorded app/source hashes and11cores unchanged. Only diagnostic deliverables and project records were added/updated; no independent Reviewer verdict, commit, push, publication or user browser intervention. Own headless/server closed. Next evidence needed if recurrent: clicked label, resulting label and original pointer/screen sequence.
+
+# 2026-11-11 — Smaller answer tiles after user-reported edge clipping
+
+At user's explicit choice kept currentcolumns and furthercompacted answertiles:
+CSSgap6→3px,minwidth44→32px,horizontalpadding11→5px. Font1.03rem and46pxheight,
+bank/viewer/JS/naming unchanged. ParentHTML only refreshesCSS cachetoken. Twofile
+bounded reusable CSS change, no molecule-specific rule or promiseofuniversalfit.
+
+Developer sameDOM/source preflight reproduced8piece clipping at1024(client441,
+scroll516). Final13compact+12trustedpointerchecks passed: all8screenshotpieces
+andall9fullcorrectpieces visible, samefont/height; exactname/success/keyboard;
+long12at1280/390/320 keptone line/bothendsreachable; mouseinsert0/6/12,edge/cancel,
+touch390and32×46pxselection. Longanswersstillscrollwherewidthcannotfitallpieces.
+
+Fresh Reviewer /root/review_compact_answer_tiles independently verified22frozen
+hashes,32protectedhashes/11cores, exactCSS/HTMLdelta,harnessassertions and4PNGs.
+No actionablefindings/corrections. Runtimechecks areDeveloper evidence. Rawlog
+BiDi/pagehidewarnings persist (also preexisting); no rawconsoleclean/browserhangfix
+claim. Physicaldevices/otherbrowsers/offline/conferencecertificationnotperformed.
+Allownedheadlesstestprocesses closed; personalFirefoxuntouched. Normal local
+preview49897 and full evidence: docs/checks/name-builder-compact-tiles-20261111/.
+No corechanges, commit/push/publication orupstreamsync; HEAD/indexunchanged.
+Fresh upstreamaudit2c3f74f6unchanged,34commits pending sinceactualsync5ab24955.
+
+# 2026-11-11 — Clipped answer edge reported after single-line trial
+
+User finds partially visible last tile unacceptable. Read-only diagnosis confirms
+this is the current horizontal viewport behavior; earlier tests established one
+line/scroll reachability, not simultaneous visibility of every name piece. Joined
+candidate uses less width than separate padded tiles. Explorer validated CSS cause
+and actual prior long-row900px vs575available. No new source/core edits, browser
+launch or publication. Evidence and constraints: docs/checks/name-builder-visible-
+name-20261111/preflight.json. Pending clarification of whole-row visibility versus
+preserving current columns/scroll fallback before revised implementation plan.
+
+# 2026-11-11 — Single-line names while preserving the game layout
+
+Implemented user's approved refinement in3files only: games/name-builder.html,
+css/namelecule-name-builder.css,js/namelecule-name-builder.js. Kept existingdesktop
+columns and responsive behavior. Compact answer tiles never wrap/shrink; assembled
+candidate/success remain singleline with localhorizontaloverflow when necessary.
+Keyboard focus reveals selectedtile withoutverticalpagejump; drag useshorizontal
+position, supportscontinuousedge scrolling andcapture-loss cleanup. Namedfocusable
+scrollregions preserve keyboard access. Chemistry/core/viewer/data unchanged.
+
+Reproduced original longest57character/12piece name at3desktop/4narrow tile rows
+and2textlines. Developer actual isolatedFirefox40layout+11nativepointerchecks pass,
+including1280/390/320 widths, exactnames,mouseinsert0/6/12/touch,keyboardscroll/
+reorder,edge/cancel andsame-model2D/3Dpreservation. FreshindependentReviewer found
+P2 NB-SL-01 nativebaroverlap. Added10pxbottomclearance+cachetokenr2;7targetedbrowser
+checks pass. Reviewer independentlyclosedNB-SL-01 after3PNGinspection,39hashes,
+exactCSS/HTMLdelta,unchangedJS,31protectedpath/11corechecks andJavaScriptCoreparse.
+No other actionablefindings. No independentbrowser execution claimed.
+
+Full evidence/beforebackups/frozenhashes andfinalreport:
+ docs/checks/name-builder-single-line-20261111/. Preservedharnessfailurewhich
+incorrectlyrequiredscrollforanonoverflowingdesktopname. RawFirefoxlogs contain
+internalBiDierrors andpagehidetimeoutwarnings; targetedphaseprobe observedwarning
+onlyaftercontextclose(0.097s) with0timeoutbeforeclose,notproofofallolderphases.
+PersonalFirefoxuntouched;allownedheadlessclosed. Physicaldevices/otherbrowsers,
+offline andconferencesequencenotcertified. Normal localpreview49897remainsactive.
+
+All11cores/31protectedpaths andGitHEAD/index matchsessionbaseline. No commit/push/
+publication orupstreamsync. Latestupstreamaudit2c3f74f6unchanged,34commits pending
+sinceactualsync5ab24955. Next:usertrieslocalgamewithnewsinglelinelayout.
+
+# 2026-11-11 — Single-line name layout investigation, source changes pending approval
+
+Latest user decision keeps current side-by-side Χτίσε το όνομα layout. Isolated
+headless Firefox reproduces longest57character/12piece name wrapping: desktop3
+answer rows/2candidate lines, narrow4rows/2lines. Identified inherited flex-wrap
+and overflow-wrap rules; read-only Explorer confirmed horizontal focus/drag/drop
+requirements. Proposed bounded HTML/CSS/UI change for compact single-row answer,
+single-line candidate/success, readable text and local horizontal scrolling only
+when needed. Concrete plan/evidence/backups: docs/checks/name-builder-single-line-
+20261111/. No source intervention until plan approval. No Reviewer of future
+implementation yet. Headless closed, personal Firefox untouched;11cores unchanged.
+Upstream HEAD/changelog reread:2c3f74f6 unchanged since last check,34commits pending
+since last actual sync5ab24955. No merge, commit/push/publication or implementation.
+
+# 2026-11-11 — New nomenclature assembly game, local reviewed prototype
+
+Implemented approved Χτίσε το όνομα: assigned molecule starts condensed2D;
+learner drags/clicks semantic correct and distractor tiles into ordered answer,
+reorders/removes via pointer or keyboard and presses Έλεγχος. Existing55 naming
+engine and visible name grammar supply all141targets/18classes; no hardcoded
+full-name bank or arbitrary splitting. One persistent generated viewer supports
+available representations of the same molecule, preserving answer and success.
+Bounded guarded load/readiness/error/retry behavior; explicit same-model3Dgraph
+and queued rendering checks. New files: games/name-builder.html,
+games/name-builder-viewer.html, css/namelecule-name-builder.css,
+js/namelecule-name-builder.js, js/namelecule-name-builder-engine.js,
+js/namelecule-name-builder-host.js, tools/build-name-builder-host.py.
+
+Separately approved shared spt/init-55.spt:35 comment semicolon changed to comma;
+actual JSmol parse failure reproduced before. Numerical settings unchanged. Old
+unversioned script persisted in browser cache; prototype-only generator binds
+init URL to content SHA. Same-profile original replay then passed. Existing
+core/data/Main/viewer/Workshop/welcome sources untouched. No integration or publish.
+
+Developer checks:141molecules/422available2D/141actual3D/18series,16interactions,
+11emulated-touch/keyboard/resize,9recovery/zoom/ester/Back and19sharedMain/lesson/
+Workshop checks, no recorded JS errors. Shared lesson replay used provenance-
+checked, content-exact six genuinely earned old quiz receipts. Source syntax,
+generator reproducibility and baseline hashes passed. Headless test processes
+closed with PID/profile guards; personal browser untouched. Normal preview at
+http://127.0.0.1:49897/games/name-builder.html remains available locally.
+
+Fresh independent Reviewer /root/review_name_builder_prototype_r1 found no
+P0/P1/P2/P3 issue in frozen14path target, independently reran23/24domain,28host,
+7init checks and source/hash comparisons. Chemistry Validator independently ran
+6604+1196assertions and36specifiedgraphs;421forms passed own graph/formula/valence/
+charge checks. Existing expanded '[H]' atom6/data55:3757 excluded from ordinary-
+element valence parser, not changed. No universal chemical/3D certification.
+
+Evidence and exact source/test hashes: docs/checks/name-builder-prototype-20261111/
+final-report.json, independent-review.json, chemistry-assessment.json and manifest.
+Retained unpaced native zoom/queue timeout; paced flow passes but no general
+rapid-click fix claimed. Physical devices, other browsers, persisted BFCache,
+reduced-motion runtime/offline and intended conference sequence remain unverified.
+No commit/push/publication, upstream sync or core edits. All11cores and Git index/
+HEAD match session-start baseline. Next: user trial, then agreed refinements and
+possible integration in the games welcome flow.
+
+# 2026-11-11 — Name-builder game read-only preflight and proposal
+
+Investigated requested full-name assembly game, not implemented. User clarified
+assigned molecule with switchable available representations, preserving answer.
+Explorer/Chemistry Validator ran in-memory JavaScriptCore on existing55:141
+molecules/422forms, zero execution failures or name differences; raw-part join
+fails34molecules due euphony/word boundaries. Learning Designer advised semantic
+tiles, bounded meaningful distractors, explicit Check and accessible alternatives.
+
+Propose isolated parent game and generated same-origin55 viewer host using
+current displayed-name grammar, existing2D3Dpipeline and safe readiness/messages.
+Exact proposed paths, source hashes, evidence attribution and planned acceptance
+in docs/checks/name-builder-preflight-20261111.json. Plan requires approval before
+source edits. Independent implementation review will follow working prototype;
+current chemical preflight is not certification of all naming or browser flows.
+No application/core changes, browser tests, commit/push/publication. All11cores
+unchanged against earlier same-session baseline; existing upstream pending work
+not integrated. This contribution is investigation/planning only.
+
+# 2026-11-11 — Broader abstract with educator creation axis (r3)
+
+At user's request removed focus on a single named game and alkane lesson;
+generalized learning/practice and included third welcome-card educator authoring.
+Existing scenario editor distinguished from planned personal workspace and
+future game/across-series expansion. New revised TXT/DOCX under
+ docs/conference-2027/Namelecule_Abstract_ENEPHET_2027_GR_revised.*;
+old r2 draft and original professor DOCX unchanged. Body234 /title+body243words.
+
+Learning Designer provided bounded read-only factual scope advice. Fresh Reviewer
+/root/review_abstract_general_scope_r3 verified frozen3file hashes, prior/source
+invariance, counts, exact5paragraphTXT/DOCXmatch, CRC/XML, wording and relevant
+sources; independently inspected Developer-generated preview. No actionable
+findings. Textutil and11core/index/HEAD checks are Developer evidence; no actual
+Word visual-render check or app runtime tests. Review/validation provenance in
+ docs/conference-2027/abstract-20261111-r3-independent-review.json.
+No core/application change, commit/push/publication or conference submission.
+Authorship/affiliations remain for user/professor agreement; no learner outcomes
+invented. Full prior versions retained, no override of user-opened old Word file.
+
+# 2026-11-11 — Draft oral-conference abstract and editable Word
+
+Prepared Greek abstract from professor's older development abstract, official
+ENEPHET oral rules and verified Namelecule feature evidence. Current r2 body239
+words / title+body248, under200–300limit. Development/design report, including
+linked representations, naming engine and generated repair sets, two-part alkane
+lesson and checkpoint gates; no fabricated learner outcomes or author list.
+Original professor DOCX untouched. TXT/DOCX and provenance/check records under
+ docs/conference-2027/Namelecule_Abstract_ENEPHET_2027_GR_draft.*.
+
+Fresh independent Reviewer inspected frozen r1; ABS-001P2 engine-answer overclaim
+corrected by qualifying generated sets, both formats. Isolated Developer checks
+closed P2: exact paragraphs and textutil token match, ZIPCRC/XML,239/248counts,
+new hashes and readable complete r2 QuickLook thumbnail. Actual Word rendering
+not performed; no independent review of r2 claimed. Preserved r1 and full review
+attribution/limits in docs/conference-2027/abstract-20261111-independent-review.json.
+Author order/affiliations and final wording remain for professor/user. No app/core
+change, app runtime testing, commit/push/publication or conference submission.
+All11cores/sourceHEAD/index unchanged against same-session baseline. Earlier
+upstream audit has19new/34pending commits, no integration in this contribution.
+
+# 2026-11-11 — Personal Firefox recovered and temporary test instances closed
+
+Measured current profile confusion: the only onscreen Firefox was yesterday's
+clean diagnostic profile; original personal not running. Opened existing default
+personal profile without URL/debug flags. User confirmed Google search worked;
+after explicit saved-work consent, closed all three temporary instances using
+guarded SIGTERM. Only normal personal3805 remains; old debug endpoints closed.
+User confirmed a second address-bar search also worked. Exact Google challenge
+cause was not isolated and no permanent elimination is claimed.
+
+Seven personal and nine temporary available session files privately backed up;
+no payload decoded, settings manually changed, profile reset, cookie/history/
+password deletion or Google search automation. Evidence at
+ docs/checks/google-recaptcha-20261111T042628Z/. Fresh independent Reviewer and
+bounded factual addendum found no actionable issue: hash/default-profile/privacy
+metadata checks independent; execution/process/network Developer evidence and
+two searches direct user evidence. Foreground probe empty, not focus proof.
+Source HEAD/index/all11cores unchanged; no commit/push/publication. Original
+native green-menu hang remains unresolved and separate.
+
+Adopt process/profile ownership checks and close GUI diagnostics after use,
+unless explicit user retention, to prevent our test/personal profile confusion.
+Fresh upstream2c3f74f6 audit:19new sincechecked,34pending since actualsync5ab24955;
+no integration. Current result/review and final direct-user confirmation record
+completion under the observed conditions, not universal browser reliability.
+
+# 2026-11-11 — Correct browser profile and cleanup after recurring Google CAPTCHA
+
+Measured wrongactiveprofile: initialonly3temporarydebugparents, currentvisible
+Firefox94903 was yesterdaycleanprofile2; originalpersonalnotrunning. Opened
+existingpersonalprofilewithoutURL/automation; userconfirmedmanualGoogleworks.
+Afterexplicitsavedworkconsent, closed3temps withguardedSIGTERM, onlypersonal3805
+remains;3olddebugendpointsclosed. Personal7+temporary9availablesessionfiles
+backedupprivately; no payloaddecoded. No preferences/reset/deletion, automated
+Googlequeries/CAPTCHA solving or application/corecodechange. Evidence at
+ docs/checks/google-recaptcha-20261111T042628Z/; firstpreflightselfmatch and
+postsignalpollrace recorded, no runtimefailureclaim. ExactGooglemechanism not
+isolated; finalmanualaddressbarcheck and frozen10file independentreview pending.
+Adoptprofileownershipcheck/normalpersonalentry and closeownedGUItests afteruse
+unlessexplicitkeep; obtainsaveconfirmationforuserediting. This preventsourprofile
+confusion, not a guarantee against Google's future challenges. Freshupstream
+2c3f74f6:19newsincechecked/34sinceactualsync, nointegration. SourceHEAD/index/11cores
+unchanged; no commit/push/publication. Originalnativewindowhang remainsseparate.
+
+# 2026-11-10 — Personal Firefox recovery completed; root cause still open
+
+Closed only confirmed personal57800 by guardedSIGTERM; twoexistingNamelecule
+parents preserved. Seven session restore files privatebackup, no payload read
+or unsavedinput guarantee. Independent fresh Reviewer verified9hashes, native
+mainthread and previoussameprocess timestamp, guards/privacy; no actionable
+finding. Process exit is Developer evidence (Reviewerps denied). No application,
+core/settings edit, reset, commit/push/publication or personal restart.
+Owned clean GUI94903 live driver63317 passed2BiDifullscreen/normalroundtrips;
+physicalgreenbutton question awaitsuser (tool nativeinputpermissionabsent).
+Initial diagnosticquote error preserved; its ownedbrowser closed. Permanent
+prevention not established; current-result.json records concrete nextstep.
+Officialstable159.0.1 matchesinstalled; upstreamcheck unchanged015b15d6.
+Evidence: docs/checks/firefox-recovery-20261110T125322Z/; rawsamples/sessionbackup
+privateonly. No new report or upstreamcode integration in this recovery.
+
+# 2026-11-10 — Targeted personal Firefox recovery and native-menu diagnosis
+
+User authorized closing the frozen browser and investigating recurrence.
+Fresh parent samples + exact PID/executable/profile checks identified personal
+57800; same native zoom-menu path as earlier. Seven available session restore
+files copied privately and verified, without reading contents. Graceful AppKit
+attempt timed out; SIGTERM closed57800, dedicated55879/56371 preserved. No app,
+core or browser preference/reset change; no permanent fix claimed. Evidence:
+ docs/checks/firefox-recovery-20261110T125322Z/; raw samples/backup private.
+Current native-input permissions absent; controlled physical-hover reproduction
+and bounded independent interpretation review pending. Fresh professor HEAD/
+CHANGELOG check unchanged015b15d6; actualintegrated5ab24955 retained. No commit,
+push/publication or personal restart in this recovery at this point.
+
 # 2026-11-10 — Successful final Pages delivery after timeout
 
 Operational follow-up to the user's failure notification, completing the

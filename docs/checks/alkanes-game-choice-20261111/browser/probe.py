@@ -1,0 +1,17 @@
+from pathlib import Path
+exec((Path(__file__).with_name('driver.py')).read_text())
+try:
+ open_page('mulermoc-nom-55.html?scenario=scenarios/alkanes-user-3.scenario.json&present=1&from=theory-library#step=4')
+ app_ready()
+ wait('!!fScenarioPresent()&&fScenarioPresent().steps.length===12&&!MuLERMoCScenario.checkpointPreparation&&!document.documentElement.classList.contains("lesson-loading")',55)
+ print(json.dumps(read('({index:fScenarioPresent().index,open:document.getElementById("nlQuizOpen")?.textContent,modules:typeof NameleculeGeneratedRepairCheckpoint,errors:document.querySelector(".nl-quiz-error")?.textContent})'),ensure_ascii=False))
+ click('#nlQuizOpen');wait('!!document.querySelector(".nl-game-choice-card")')
+ shot('choice-desktop.png')
+ print(json.dumps(read('[...document.querySelectorAll(".nl-game-choice-card")].map(e=>({text:e.textContent,src:e.querySelector("img").currentSrc,complete:e.querySelector("img").naturalWidth}))'),ensure_ascii=False))
+ click('.nl-game-choice-card:nth-child(2)')
+ wait('!!document.querySelector(".nl-builder-frame")')
+ wait('!!document.querySelector(".nl-builder-frame").contentDocument?.querySelector("#bank-tiles button")||!!document.querySelector(".nl-builder-error")',60)
+ print(json.dumps(read('({error:document.querySelector(".nl-builder-error")?.textContent,frame:document.querySelector(".nl-builder-frame")?.contentDocument?.getElementById("game-status")?.textContent,progress:document.getElementById("nlQuizProgress")?.textContent})'),ensure_ascii=False))
+ shot('builder-first-desktop.png')
+ print('jsErrors',json.dumps(js_errors,ensure_ascii=False))
+finally:finish()

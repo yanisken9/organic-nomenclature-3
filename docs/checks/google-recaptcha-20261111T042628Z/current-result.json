@@ -1,0 +1,52 @@
+{
+  "recordedUTC": "2026-11-11T04:37:25.590018+00:00",
+  "request": "Correct recurring Google unusual-traffic challenge; user suspected previous Firefox recovery.",
+  "observedDivergence": {
+    "initialParentSnapshot": "Only three temporary test Firefox parents; original personal profile not running.",
+    "onscreenFirefoxOwnerAtInspection": 94903,
+    "onscreenOwnerProfile": "Previous clean diagnostic profile2 with remote debugging flag.",
+    "screenshotWasNotDirectlyMappedAtCaptureTime": true
+  },
+  "operationsCompleted": [
+    "Privately backed up seven available personal session restore files, without decoding contents.",
+    "Opened original personal profile through LaunchServices without URL or automation flags; parent3805.",
+    "User reported first manual Google search works without challenge.",
+    "User confirmed work saved and explicitly authorized closing all3temporary Firefox instances.",
+    "Guarded SIGTERM closed55879,56371,94903; exactly original personal3805 remains.",
+    "Known three loopback diagnostic endpoints unavailable after closure."
+  ],
+  "validation": {
+    "firstNormalProfileGoogleSearch": "Direct user confirmation: no challenge, works normally.",
+    "secondAddressBarSearchAfterCleanup": "Direct user confirmation: yes, works normally without CAPTCHA.",
+    "normalProcessAndFlags": "Developer process observations.",
+    "networkProxyAudit": "No enabled system proxy keys or configured connectedVPN found by bounded reads; not a full tunnel/traffic audit.",
+    "GoogleChallengeMechanism": "Unknown: profile state, cookies, automation connection and elapsed time were not individually isolated.",
+    "permanentCAPTCHAEliminationProved": false,
+    "successfulManualSearchCount": 2
+  },
+  "privacyAndScope": {
+    "settingsManuallyEdited": false,
+    "personalProfileReset": false,
+    "cookiesHistoryPasswordsDeleted": false,
+    "GoogleSearchesAutomated": false,
+    "CAPTCHASolvedByAgent": false,
+    "applicationCoreEdited": false,
+    "commitPushPublication": false,
+    "rawSessionBackupsPrivateOnly": true
+  },
+  "futureOperationalRule": [
+    "Before interacting with a Firefox window, verify its process/profile ownership.",
+    "Personal browsing must use the existing personal profile without diagnostic connection.",
+    "Prefer headless tests; close owned GUI test browsers after tests unless user explicitly requests keeping them.",
+    "If user has used a test browser for editing, obtain confirmation that work is saved before closure."
+  ],
+  "evidence": "review-target.json; diagnostic-endpoints-closed.json; user-feedback.json",
+  "independentReview": {
+    "path": "independent-review.json",
+    "noActionableFindings": true,
+    "includesTargetedFinalUserAddendum": true
+  },
+  "externalDependency": "Google controls the challenge and its undisclosed scoring; successful tests cannot guarantee it never returns.",
+  "status": "Normal personal Firefox use restored; three temporary test instances closed; two user manual searches successful.",
+  "finalUserConfirmation": "user-confirmation-after-cleanup.json"
+}

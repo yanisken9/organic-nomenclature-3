@@ -1,0 +1,64 @@
+{
+  "completed": false,
+  "checks": [
+    {
+      "label": "Longest exact answer still succeeds",
+      "detail": null
+    },
+    {
+      "label": "Scrollbar clearance and keyboard scroll #candidate-name 1280",
+      "detail": {
+        "selector": "#candidate-name",
+        "viewport": 1280,
+        "pageWidth": 1280,
+        "name": "2-αιθυλο-3-ισοπροπυλο-6,6-διμεθυλο-2-επτεν-4-ινοδιικό οξύ",
+        "scroll": 71.86666870117188,
+        "padding": "10px",
+        "bottomClearance": 13.883331298828125,
+        "textLines": 1
+      }
+    }
+  ],
+  "geometry": [
+    {
+      "selector": "#candidate-name",
+      "viewport": 1280,
+      "pageWidth": 1280,
+      "name": "2-αιθυλο-3-ισοπροπυλο-6,6-διμεθυλο-2-επτεν-4-ινοδιικό οξύ",
+      "scroll": 71.86666870117188,
+      "padding": "10px",
+      "bottomClearance": 13.883331298828125,
+      "textLines": 1
+    },
+    {
+      "selector": "#feedback strong",
+      "viewport": 1280,
+      "pageWidth": 1280,
+      "name": "2-αιθυλο-3-ισοπροπυλο-6,6-διμεθυλο-2-επτεν-4-ινοδιικό οξύ",
+      "scroll": 0,
+      "padding": "10px",
+      "bottomClearance": 13.083358764648438,
+      "textLines": 1
+    }
+  ],
+  "role": "Developer targeted actual-browser evidence; correction NB-SL-01",
+  "failure": "Traceback (most recent call last):\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/name-builder-single-line-20261111/browser/clearance.py\", line 30, in <module>\n    check(g['scroll']>0 and g['textLines']==1 and g['bottomClearance']>=10 and g['pageWidth']<=width,'Scrollbar clearance and keyboard scroll '+selector+' '+str(width),g)\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/name-builder-single-line-20261111/browser/clearance.py\", line 11, in check\n    assert ok,(label,detail)\nAssertionError: ('Scrollbar clearance and keyboard scroll #feedback strong 1280', {'selector': '#feedback strong', 'viewport': 1280, 'pageWidth': 1280, 'name': '2-αιθυλο-3-ισοπροπυλο-6,6-διμεθυλο-2-επτεν-4-ινοδιικό οξύ', 'scroll': 0, 'padding': '10px', 'bottomClearance': 13.083358764648438, 'textLines': 1})\n",
+  "beforeContextCloseLog": {
+    "bytes": 717,
+    "timeoutWarnings": 0,
+    "bidiWeakMapErrors": 2
+  },
+  "contextCloseSeconds": 0.09444457100000037,
+  "afterContextCloseLog": {
+    "bytes": 1084,
+    "timeoutWarnings": 1,
+    "bidiWeakMapErrors": 2
+  },
+  "afterOwnedFirefoxStopLog": {
+    "bytes": 1234,
+    "timeoutWarnings": 1,
+    "bidiWeakMapErrors": 2
+  },
+  "onlyOwnedHeadlessStopped": true,
+  "personalFirefoxControlled": false
+}

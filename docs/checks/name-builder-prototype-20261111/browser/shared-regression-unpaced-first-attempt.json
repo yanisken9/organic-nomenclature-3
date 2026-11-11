@@ -1,0 +1,186 @@
+{
+  "completed": false,
+  "checks": [
+    {
+      "label": "Fresh origin serves exact corrected shared init",
+      "detail": null
+    },
+    {
+      "label": "Ordinary Main55 cold-origin actual model graph and queued init completion without parse error",
+      "detail": {
+        "id": "ethane",
+        "atoms": 8,
+        "bonds": 7,
+        "error": ""
+      }
+    },
+    {
+      "label": "Main55 condensed name preserved",
+      "detail": null
+    },
+    {
+      "label": "Main55 expanded name preserved",
+      "detail": null
+    },
+    {
+      "label": "Main55 skeletal name preserved",
+      "detail": null
+    }
+  ],
+  "role": "Developer real-browser bounded shared-script regression",
+  "baseURL": "http://127.0.0.1:49897/",
+  "models": [
+    {
+      "molecule": "ethane",
+      "name": "αιθάνιο",
+      "model": [
+        {
+          "_ipt": 0,
+          "atomCount": 8,
+          "bondCount": 7,
+          "chainCount": 1,
+          "file": "http://127.0.0.1:49897/mols/nomeclature-moc2/ethane_3D.sdf",
+          "file_model": "1.1",
+          "groupCount": 1,
+          "moleculeCount": 1,
+          "name": "6324",
+          "num": 1,
+          "title": "6324",
+          "vibrationVectors": false
+        }
+      ],
+      "atoms": [
+        {
+          "n": 1,
+          "s": "C"
+        },
+        {
+          "n": 2,
+          "s": "C"
+        },
+        {
+          "n": 3,
+          "s": "H"
+        },
+        {
+          "n": 4,
+          "s": "H"
+        },
+        {
+          "n": 5,
+          "s": "H"
+        },
+        {
+          "n": 6,
+          "s": "H"
+        },
+        {
+          "n": 7,
+          "s": "H"
+        },
+        {
+          "n": 8,
+          "s": "H"
+        }
+      ],
+      "bonds": [
+        [
+          1,
+          2,
+          1
+        ],
+        [
+          1,
+          3,
+          1
+        ],
+        [
+          1,
+          4,
+          1
+        ],
+        [
+          1,
+          5,
+          1
+        ],
+        [
+          2,
+          6,
+          1
+        ],
+        [
+          2,
+          7,
+          1
+        ],
+        [
+          2,
+          8,
+          1
+        ]
+      ],
+      "expectedAtoms": [
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H"
+      ],
+      "expectedBonds": [
+        [
+          1,
+          2,
+          1
+        ],
+        [
+          1,
+          3,
+          1
+        ],
+        [
+          1,
+          4,
+          1
+        ],
+        [
+          1,
+          5,
+          1
+        ],
+        [
+          2,
+          6,
+          1
+        ],
+        [
+          2,
+          7,
+          1
+        ],
+        [
+          2,
+          8,
+          1
+        ]
+      ],
+      "error": "",
+      "marker": 76547119,
+      "canvas": {
+        "x": 381,
+        "y": 762,
+        "width": 618,
+        "height": 337,
+        "top": 762,
+        "right": 999,
+        "bottom": 1099,
+        "left": 381
+      }
+    }
+  ],
+  "failure": "Traceback (most recent call last):\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/name-builder-prototype-20261111/browser/shared-regression.py\", line 30, in <module>\n    ev('fToggleViewer3D();fToggleViewer3D();fZoom3D(1);fZoom3D(-1);true');expect_model('ethane','Main55 visibility/zoom replay')\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/name-builder-prototype-20261111/browser/shared-regression.py\", line 17, in expect_model\n    wait('+Jmol.evaluateVar(jmolAppletNomeclature,\"regressionMarker\")==='+str(marker),30)\n  File \"<string>\", line 21, in wait\nAssertionError: Timed out: +Jmol.evaluateVar(jmolAppletNomeclature,\"regressionMarker\")===76547493\n",
+  "javascriptErrors": []
+}

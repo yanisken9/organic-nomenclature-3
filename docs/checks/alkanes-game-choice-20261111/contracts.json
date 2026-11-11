@@ -1,0 +1,110 @@
+{
+  "channel": "namelecule-builder-lesson-v1",
+  "activation": "Only parent!==window and URL lessonSession matches /^[A-Za-z0-9_-]{16,128}$/; standalone default unchanged.",
+  "childReady": {
+    "channel": "namelecule-builder-lesson-v1",
+    "session": "URL lessonSession",
+    "type": "ready"
+  },
+  "parentLoad": {
+    "channel": "namelecule-builder-lesson-v1",
+    "session": "same nonce",
+    "command": "load",
+    "requestId": 1,
+    "attemptId": "stable per-triple identity",
+    "moleculeId": "allowed alkane id",
+    "round": "NameleculeNameBuilderEngine.validateRound canonical round including bounded vocabulary, representations and stable roundId",
+    "bankSeed": "stable string",
+    "initialState": {
+      "answer": [
+        "tile IDs"
+      ],
+      "selected": null,
+      "attempts": 0,
+      "submitted": false
+    },
+    "explanation": "plain text"
+  },
+  "childEvents": [
+    {
+      "type": "loaded",
+      "requestId": 1,
+      "attemptId": "...",
+      "moleculeId": "...",
+      "state": "same state shape"
+    },
+    {
+      "type": "state",
+      "requestId": 1,
+      "attemptId": "...",
+      "moleculeId": "...",
+      "state": {
+        "answer": [
+          "tile IDs"
+        ],
+        "selected": null,
+        "attempts": 0,
+        "submitted": false
+      }
+    },
+    {
+      "type": "resize",
+      "requestId": 1,
+      "attemptId": "...",
+      "moleculeId": "...",
+      "height": "finite body content height, bounded80..8000"
+    },
+    {
+      "type": "reveal",
+      "requestId": 1,
+      "attemptId": "...",
+      "moleculeId": "...",
+      "startY": "body relative",
+      "endY": "body relative"
+    },
+    {
+      "type": "exit",
+      "requestId": 1,
+      "attemptId": "...",
+      "moleculeId": "..."
+    },
+    {
+      "type": "error",
+      "requestId": 1,
+      "attemptId": "...",
+      "moleculeId": "...",
+      "message": "plain text"
+    }
+  ],
+  "rules": [
+    "All events include channel/session; except startup ready they also include requestId/attemptId/moleculeId.",
+    "Both sides verify origin, exact sourceWindow, session, active identities. Never grant from solved flags.",
+    "Child verifies native viewer correctName and ordered piece text+separators match parent canonical before enabling. Roles may differ; compare semantic text, not DOM ID role.",
+    "Bank uses parent canonical round and bankSeed so IDs reproduce. Child restores only valid unique IDs; parent independently reconstructs/evaluates every snapshot.",
+    "submitted becomes false on any answer mutation; true only on Check. Attempts increments on Check. Child restores solved UI only from exact submitted canonical answer.",
+    "Child sends state after every answer mutation and submission, loaded after native ready. Parent owns triple next/final actions; child hides standalone Next molecule and own completion-navigation.",
+    "Success explanation is plain text supplied in canonical envelope. Existing answer/feedback UI and depiction/zoom remain reused.",
+    "Body ResizeObserver sends actual body bounds height (avoid viewport scrollHeight feedback loop). Parent expands iframe and uses outer lesson dialog as one vertical scroller.",
+    "Parent adapter may use invisible positioned start/end markers for controller revealResponse on child reveal. Child Escape posts exit; no cross-frame lesson arrow handling.",
+    "Frame removed/aborted on adapter destroy; nested native viewer destroyed on pagehide. Late callbacks rejected."
+  ],
+  "adapterController": {
+    "type": "alkane-game-choice-set",
+    "recipe": {
+      "version": 1,
+      "setId": "alkanes-unbranched|alkanes-branched",
+      "difficulty": "basic",
+      "roundCount": 3,
+      "generatorVersion": "1.0.0",
+      "catalogRevision": "existing pinned revision",
+      "engineSHA256": "existing pinned hash"
+    },
+    "immutableGeneratedExport": "NameleculeGeneratedRepairCheckpoint = Object.freeze({adapter:Object.freeze(existing adapter methods), loadCanonicalInput(signal), freshSeed(previousSeed)})",
+    "labels": "Composite adapter labels(recipe,lang) -> overrides for label/instruction/open/done/revisit/practiceTitle/practiceNote.",
+    "optionalActions": "Controller newPractice(context, gameId) passes third arg {game: gameId} to adapter.createPractice. Composite adapter otherGame(recipe,state) returns repair or builder. onOtherGame callback/otherGameLabel passed through existing generated set to optional renderer footer action, only after final success.",
+    "close": "Controller mount options onClose() closes to current checkpoint without granting access. Composite uses for child exit.",
+    "migration": "Optional adapter.migrateRecord(scenario,{signature,read}) invoked only when current sessionStorage record absent; read(projectedScenario) validates old key/version/full content equality. Composite returns {states,practices} with wrapped raw repair evidence; controller normalizes per adapter. No scanning or overwriting old record. Explicit present current record/reset wins."
+  },
+  "recipeNote": "The composite outer round can keep the same seven-key recipe values under a distinct registered checkpoint type; do not add keys to existing repair recipe.",
+  "footers": "Parent Builder final actions and Repair final actions use .round-next and first continue button data-checkpoint-continue for supported focus handoff; onSuccessActionsReady only when enabled footer actually exists."
+}

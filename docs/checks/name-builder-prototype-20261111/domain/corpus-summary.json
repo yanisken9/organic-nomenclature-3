@@ -1,0 +1,34 @@
+{
+  "scope": "Developer pure-domain evaluation of supplied actual-Firefox host corpus; no new browser execution or independent chemistry certification",
+  "baseCommit": "168e3cec01f941a84d40bbe0dc07156e7baa35d0",
+  "source": "docs/checks/name-builder-prototype-20261111/browser/corpus-2d.json",
+  "sourceSHA256": "fa5ff9e4fd350a9fbf6496347c30f7e4cc4eb8e8afdca22da1363e592ff5959d",
+  "engine": "js/namelecule-name-builder-engine.js",
+  "engineSHA256": "1c7e477325ae07b02d5218ef0833236f95eade7b6003a3aa07545f91b414f8a2",
+  "engineMatchesBrowserCorpus": true,
+  "command": "/System/Library/Frameworks/JavaScriptCore.framework/Versions/A/Helpers/jsc -e 'var NAME_BUILDER_CORPUS=\"docs/checks/name-builder-prototype-20261111/browser/corpus-2d.json\"; load(\"docs/checks/name-builder-prototype-20261111/domain/contracts.js\");'",
+  "results": {
+    "checksPassed": 24,
+    "checksFailed": 0,
+    "pureContractChecks": 23,
+    "realRounds": 141,
+    "seriesCount": 18,
+    "bankBuiltExactSolutionsPassed": 141,
+    "missingTileRejectionsPassed": 141,
+    "wrongRootRejectionsPassed": 141,
+    "totalRequiredPieces": 758,
+    "namesWithSpaces": 30,
+    "actualCorpusRepeatedVisibleValues": []
+  },
+  "inheritedBrowserEvidence": {
+    "forms2D": 422,
+    "failures": 0,
+    "javascriptErrors": 0
+  },
+  "limitations": [
+    "422 browser form checks supplied by root; this task executed JavaScriptCore only.",
+    "Current real corpus has no repeated equal visible tile values; abstract fixture verifies duplicate-copy interchange with spacing.",
+    "No shared init changes, application runtime or browser execution in this follow-up."
+  ],
+  "coreChanged": false
+}

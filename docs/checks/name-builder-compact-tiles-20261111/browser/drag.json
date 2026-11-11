@@ -1,0 +1,263 @@
+{
+  "completed": true,
+  "checks": [
+    {
+      "label": "Mouse drop into upper padding inserts at intended 0",
+      "detail": {
+        "sx": 103,
+        "sy": 806,
+        "tx": 654,
+        "ty": 232,
+        "tile": "tile-b6aauy-j",
+        "scroll": 0,
+        "viewport": 900,
+        "zone": {
+          "x": 645.566650390625,
+          "y": 224.28334045410156,
+          "width": 579.433349609375,
+          "height": 145,
+          "top": 224.28334045410156,
+          "right": 1225,
+          "bottom": 369.28334045410156,
+          "left": 645.566650390625
+        }
+      }
+    },
+    {
+      "label": "Removal restores exact answer 0",
+      "detail": null
+    },
+    {
+      "label": "Mouse drop into upper padding inserts at intended 6",
+      "detail": {
+        "sx": 103,
+        "sy": 806,
+        "tx": 929,
+        "ty": 250,
+        "tile": "tile-b6aauy-j",
+        "scroll": 147.5833282470703,
+        "viewport": 900,
+        "zone": {
+          "x": 645.566650390625,
+          "y": 241.81666564941406,
+          "width": 579.433349609375,
+          "height": 145,
+          "top": 241.81666564941406,
+          "right": 1225,
+          "bottom": 386.81666564941406,
+          "left": 645.566650390625
+        }
+      }
+    },
+    {
+      "label": "Removal restores exact answer 6",
+      "detail": null
+    },
+    {
+      "label": "Mouse drop into upper padding inserts at intended 12",
+      "detail": {
+        "sx": 103,
+        "sy": 806,
+        "tx": 1217,
+        "ty": 250,
+        "tile": "tile-b6aauy-j",
+        "scroll": 147.5833282470703,
+        "viewport": 900,
+        "zone": {
+          "x": 645.566650390625,
+          "y": 241.81666564941406,
+          "width": 579.433349609375,
+          "height": 145,
+          "top": 241.81666564941406,
+          "right": 1225,
+          "bottom": 386.81666564941406,
+          "left": 645.566650390625
+        }
+      }
+    },
+    {
+      "label": "Removal restores exact answer 12",
+      "detail": null
+    },
+    {
+      "label": "Stationary edge drag continues horizontal scrolling",
+      "detail": {
+        "start": 0,
+        "end": 147.5833282470703
+      }
+    },
+    {
+      "label": "Held drag does not prematurely add a tile",
+      "detail": null
+    },
+    {
+      "label": "Lost capture cancels scrolling/ghost without changing answer",
+      "detail": null
+    },
+    {
+      "label": "Trusted touch inserts in scrolled narrow row",
+      "detail": {
+        "sx": 69,
+        "sy": 684,
+        "tx": 186,
+        "ty": 189,
+        "tile": "tile-b6aauy-j",
+        "scroll": 269.76666259765625,
+        "viewport": 844,
+        "zone": {
+          "x": 28,
+          "y": 181.4166717529297,
+          "width": 334,
+          "height": 120,
+          "top": 181.4166717529297,
+          "right": 362,
+          "bottom": 301.4166717529297,
+          "left": 28
+        }
+      }
+    },
+    {
+      "label": "Touch removal and drag cleanup preserve answer",
+      "detail": null
+    },
+    {
+      "label": "Trusted touch selects a compact32px answer tile",
+      "detail": {
+        "x": 59,
+        "y": 422,
+        "id": "tile-b6aauy-0",
+        "width": 32,
+        "height": 46
+      }
+    }
+  ],
+  "moves": [
+    {
+      "index": 0,
+      "points": {
+        "sx": 103,
+        "sy": 806,
+        "tx": 654,
+        "ty": 232,
+        "tile": "tile-b6aauy-j",
+        "scroll": 0,
+        "viewport": 900,
+        "zone": {
+          "x": 645.566650390625,
+          "y": 224.28334045410156,
+          "width": 579.433349609375,
+          "height": 145,
+          "top": 224.28334045410156,
+          "right": 1225,
+          "bottom": 369.28334045410156,
+          "left": 645.566650390625
+        }
+      },
+      "actual": [
+        "tile-b6aauy-j",
+        "tile-b6aauy-0",
+        "tile-b6aauy-1",
+        "tile-b6aauy-2",
+        "tile-b6aauy-3",
+        "tile-b6aauy-4",
+        "tile-b6aauy-5",
+        "tile-b6aauy-6",
+        "tile-b6aauy-7",
+        "tile-b6aauy-8",
+        "tile-b6aauy-9",
+        "tile-b6aauy-a",
+        "tile-b6aauy-b"
+      ]
+    },
+    {
+      "index": 6,
+      "points": {
+        "sx": 103,
+        "sy": 806,
+        "tx": 929,
+        "ty": 250,
+        "tile": "tile-b6aauy-j",
+        "scroll": 147.5833282470703,
+        "viewport": 900,
+        "zone": {
+          "x": 645.566650390625,
+          "y": 241.81666564941406,
+          "width": 579.433349609375,
+          "height": 145,
+          "top": 241.81666564941406,
+          "right": 1225,
+          "bottom": 386.81666564941406,
+          "left": 645.566650390625
+        }
+      },
+      "actual": [
+        "tile-b6aauy-0",
+        "tile-b6aauy-1",
+        "tile-b6aauy-2",
+        "tile-b6aauy-3",
+        "tile-b6aauy-4",
+        "tile-b6aauy-5",
+        "tile-b6aauy-j",
+        "tile-b6aauy-6",
+        "tile-b6aauy-7",
+        "tile-b6aauy-8",
+        "tile-b6aauy-9",
+        "tile-b6aauy-a",
+        "tile-b6aauy-b"
+      ]
+    },
+    {
+      "index": 12,
+      "points": {
+        "sx": 103,
+        "sy": 806,
+        "tx": 1217,
+        "ty": 250,
+        "tile": "tile-b6aauy-j",
+        "scroll": 147.5833282470703,
+        "viewport": 900,
+        "zone": {
+          "x": 645.566650390625,
+          "y": 241.81666564941406,
+          "width": 579.433349609375,
+          "height": 145,
+          "top": 241.81666564941406,
+          "right": 1225,
+          "bottom": 386.81666564941406,
+          "left": 645.566650390625
+        }
+      },
+      "actual": [
+        "tile-b6aauy-0",
+        "tile-b6aauy-1",
+        "tile-b6aauy-2",
+        "tile-b6aauy-3",
+        "tile-b6aauy-4",
+        "tile-b6aauy-5",
+        "tile-b6aauy-6",
+        "tile-b6aauy-7",
+        "tile-b6aauy-8",
+        "tile-b6aauy-9",
+        "tile-b6aauy-a",
+        "tile-b6aauy-b",
+        "tile-b6aauy-j"
+      ]
+    }
+  ],
+  "role": "Developer actual trusted-pointer evidence",
+  "original": [
+    "tile-b6aauy-0",
+    "tile-b6aauy-1",
+    "tile-b6aauy-2",
+    "tile-b6aauy-3",
+    "tile-b6aauy-4",
+    "tile-b6aauy-5",
+    "tile-b6aauy-6",
+    "tile-b6aauy-7",
+    "tile-b6aauy-8",
+    "tile-b6aauy-9",
+    "tile-b6aauy-a",
+    "tile-b6aauy-b"
+  ],
+  "javascriptErrors": []
+}

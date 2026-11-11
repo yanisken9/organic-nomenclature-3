@@ -1,0 +1,36 @@
+--- before/games/name-builder.html
++++ games/name-builder.html
+@@ -5,7 +5,7 @@
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="theme-color" content="#254c50">
+   <title>Χτίσε το όνομα · Namelecule</title>
+-  <link rel="stylesheet" href="../css/namelecule-name-builder.css?v=name-builder-compact-20261111-r1">
++  <link rel="stylesheet" href="../css/namelecule-name-builder.css?v=name-builder-logo-20261111-r1">
+   <script src="../js/namelecule-name-builder-engine.js?v=name-builder-20261111-r1" defer></script>
+   <script src="../js/namelecule-name-builder.js?v=name-builder-single-line-20261111-r2" defer></script>
+ </head>
+@@ -18,7 +18,10 @@
+   <main class="game" id="game">
+     <section class="intro" aria-labelledby="game-title">
+       <p class="eyebrow">ΠΑΙΧΝΙΔΙ ΟΝΟΜΑΤΟΛΟΓΙΑΣ</p>
+-      <h1 id="game-title">Χτίσε το όνομα</h1>
++      <div class="builder-title">
++        <img class="builder-logo" src="assets/name-builder/name-builder-logo-3d-blank-v1.png" width="128" height="128" alt="" aria-hidden="true">
++        <h1 id="game-title">Χτίσε το όνομα</h1>
++      </div>
+       <p class="objective">Παρατήρησε τη δομή. Διάλεξε τα κατάλληλα συνθετικά και βάλε τα στη σωστή σειρά.</p>
+       <p class="intro-detail">Σύρε τα πλακίδια στο πλαίσιο ή πάτησέ τα για να τα προσθέσεις. Μερικά περισσεύουν.</p>
+     </section>
+
+--- before/css/namelecule-name-builder.css
++++ css/namelecule-name-builder.css
+@@ -3,4 +3,9 @@
+ @media(min-width:1400px){.viewer-wrap{height:385px}.answer-zone{min-height:170px}}
+ @media(max-width:850px){.workspace{grid-template-columns:1fr}.site-header{padding:17px 20px}.brand{max-width:195px}.game{padding:22px 18px}.viewer-wrap{height:300px}.panel{border-radius:20px}.answer-zone{min-height:120px}.intro{margin-bottom:14px}.answer-content{padding:18px}.bank-panel{margin-top:18px}}
+ @media(max-width:430px){.game{padding:18px 12px}.site-header{padding:14px 15px}.brand{max-width:165px}.back-link{font-size:.8rem;padding:9px 12px}.panel-header{padding:14px 16px}.objective{font-size:1.16rem}.intro-detail{font-size:.85rem}.viewer-wrap{height:270px}.representations{gap:6px;padding:12px 12px 4px}.representations button{font-size:.73rem;padding:8px}.tile-button{padding:11px 13px;min-height:47px;font-size:1.03rem}.tiles{gap:8px}.answer-content{padding:15px}.answer-zone{padding:13px}.bank-zone{padding:16px}.bank-note{font-size:.73rem}.bank-panel h2{font-size:.96rem}.primary,.secondary{padding:12px 17px;font-size:.88rem}.candidate .candidate-name{font-size:1.1rem}}
++.builder-title{display:flex;align-items:center;justify-content:center;gap:18px;margin-bottom:17px}
++.builder-title h1{margin:0;min-width:0}
++.builder-logo{display:block;width:128px;height:128px;object-fit:contain;flex:0 0 auto}
++@media(max-width:550px){.builder-title{gap:12px}.builder-logo{width:88px;height:88px}}
++@media(max-width:380px){.builder-logo{width:72px;height:72px}}
+ @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important}}

@@ -1,0 +1,39 @@
+{
+  "checks": [
+    {
+      "label": "R2 stalled noncooperative catalog reaches bounded retry",
+      "passed": true,
+      "detail": 45.035889471000004
+    },
+    {
+      "label": "R2 no unverified native frame or answers",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "R2 timeout never grants access",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "Builder verified/native ready",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "R2 retry succeeds using real verified Worker/native path",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "R2 retry alone never unlocks",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "solved": [],
+  "conditions": "Owned headless Firefox; actual production UI, native viewer and verified chemistry Worker. Read-only preload observes bridge loads for deterministic test inputs; trusted pointer input submits answers.",
+  "passed": true,
+  "elapsed": 45.035889471000004,
+  "jsExceptions": []
+}

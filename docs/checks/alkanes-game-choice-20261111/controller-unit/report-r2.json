@@ -1,0 +1,33 @@
+{
+  "date": "2026-11-11",
+  "finding": "R1 P2",
+  "status": "Controller source frozen after targeted correction; adapter implementation and browser/independent targeted verification owned by root",
+  "cause": "onNewPractice omitted game and createPractice preferred saved optional state, which could belong to the opposite game while reviewing the completed required game.",
+  "correction": "Optional adapter.practiceGame(recipe, displayed required/practice state) supplies explicit game on same-game action; no-hook adapters keep previous undefined-game/default behavior.",
+  "sourceSHA256": {
+    "js/namelecule-quiz-checkpoints.js": "15173e98d8ca0b7d29b8ee81e9efc82acae275184af3924b307aebfe23a851cc",
+    "js/namelecule-game-repair.js": "fb678db2bc750473653ed20fd176c9fb7d2824ef2ed68716a1baa40044af39b7"
+  },
+  "verification": {
+    "counterfactual": "Exact frozen R1 controller with added regression reproduces Builder required + opposite optional + required reopen repeat failure before source change; controller-counterfactual-r1-results.json records expected failure.",
+    "corrected": "333 controller checks pass in system JavaScriptCore, including both game directions, optional repeat current game and legacy no-hook default.",
+    "renderer": "Unchanged by R1 correction; previous 243 renderer checks remain evidence for unchanged SHA.",
+    "command": "python3 docs/checks/alkanes-game-choice-20261111/controller-unit/run-r2.py"
+  },
+  "evidence": "Original R1 files including report.json preserved unchanged; full copied snapshot in r1-evidence/. New r2 results and report are separate.",
+  "limitations": [
+    "Developer evidence, not independent review.",
+    "Adapter hook in production composite, native iframe/browser flow, actual canonical chemistry and consolidated review remain root/other owners.",
+    "DOM/storage/focus and practice adapter used here are explicit doubles."
+  ],
+  "otherChanges": "No Repair source, core, notes, git/index, commit or publication changes by this correction.",
+  "artifactSHA256": {
+    "run-r2.py": "6d3c71b169a513636c7f3d77849c2cfd738b3840d724a5ba0ff4c3e1dd91f678",
+    "choice-cases.js": "667a1051590b4326913f1ce676ebdb51c44e3b43241d24cf58ede369a5591f54",
+    "controller-r2-harness.js": "94f17bcb8dd55ffa5c752cfe2131ec19c59b3a95407b219fd151e26115bf8857",
+    "controller-r2-results.json": "1993d767f74a30c295c60da46a72138a1ee9ae1abae8dd215f7c885b40cb444c",
+    "controller-counterfactual-r1-harness.js": "b17e86a3b1938855fc8263c3bb22f9fb882bb704c372b023ef62e786dcabc245",
+    "controller-counterfactual-r1-results.json": "e46330ba2f702b37df60157775f78326e9e298e7085e3d9fc0a71e2406670bbb",
+    "R1-correction-r2.diff": "d97853d62ccae473a87ecad634280f7b901cdf009b8811e168ad3156095f13c3"
+  }
+}

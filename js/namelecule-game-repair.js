@@ -640,12 +640,20 @@
         if (!diagramsReady() || !state().solved) return;
         if (typeof options.onContinue === "function") options.onContinue(getState());
       });
+      next.setAttribute("data-checkpoint-continue", "");
       replaceChildren(refs.next, next);
       if (typeof options.onNewPractice === "function") {
         refs.next.classList.add("has-practice-action");
         refs.next.append(button(options.newPracticeLabel || "Άλλη τριάδα για εξάσκηση", "secondary", function () {
           if (destroyed || !diagramsReady() || !state().solved) return;
           options.onNewPractice(getState());
+        }));
+      }
+      if (typeof options.onOtherGame === "function") {
+        refs.next.classList.add("has-other-game-action");
+        refs.next.append(button(options.otherGameLabel || "Άλλο παιχνίδι", "secondary", function () {
+          if (destroyed || !diagramsReady() || !state().solved) return;
+          options.onOtherGame(getState());
         }));
       }
       updateControls();

@@ -1,0 +1,69 @@
+{
+  "completedUTC": "2026-11-11T06:25:27.416402+00:00",
+  "status": "Approved single-line layout implemented, verified and independently reviewed",
+  "previewURL": "http://127.0.0.1:49897/games/name-builder.html?v=single-line-20261111-r2",
+  "changedFiles": {
+    "games/name-builder.html": "798baf8db7057799efab40080747dce9c673e0ea4c1fcc4fac21cb8da73beaa4",
+    "css/namelecule-name-builder.css": "8f2035985c9bb699f2b54b11ac40887c0687e76e48a738d435af59481ff3ff6a",
+    "js/namelecule-name-builder.js": "119717a768ea7460b14e0d8b59a691426b08af11d6ca07930105c191cc2df36e"
+  },
+  "behavior": [
+    "Current desktop side-by-side layout and responsive breakpoint retained",
+    "Answer pieces in compact readable single row; bank may wrap",
+    "Candidate/success name one line with inner horizontal scrolling only if necessary",
+    "Keyboard reveals selected tile without moving page vertically",
+    "Scroll-aware mouse/touch insertion and continuous edge scrolling with capture-loss cancellation",
+    "10pxtextscrollbar clearance after independentP2review"
+  ],
+  "beforeAfter": {
+    "longestNameCharacters": 57,
+    "pieces": 12,
+    "desktop1280Before": {
+      "tileRows": 3,
+      "candidateLines": 2
+    },
+    "narrow390Before": {
+      "tileRows": 4,
+      "candidateLines": 2
+    },
+    "after1280_390_320": {
+      "tileRows": 1,
+      "candidateLines": 1,
+      "successLines": 1
+    }
+  },
+  "verification": {
+    "layoutChecksOnR1": 40,
+    "trustedPointerChecksOnR1": 11,
+    "targetedR2ClearanceChecks": 7,
+    "r2ChangesFromR1": "CSSbottompadding+2cachetokens only, JSunchanged; independentlyconfirmed",
+    "capturedJavaScriptErrors": 0,
+    "independentReviewR1": "independent-review-r1.json",
+    "independentTargetedR2": "independent-review-r2.json",
+    "all31ProtectedPathsAnd11CoresUnchanged": true,
+    "HEADAndIndexUnchanged": true,
+    "servedFinalFiles": {
+      "games/name-builder.html": {
+        "status": 200,
+        "sha256": "798baf8db7057799efab40080747dce9c673e0ea4c1fcc4fac21cb8da73beaa4"
+      },
+      "css/namelecule-name-builder.css": {
+        "status": 200,
+        "sha256": "8f2035985c9bb699f2b54b11ac40887c0687e76e48a738d435af59481ff3ff6a"
+      },
+      "js/namelecule-name-builder.js": {
+        "status": 200,
+        "sha256": "119717a768ea7460b14e0d8b59a691426b08af11d6ca07930105c191cc2df36e"
+      }
+    }
+  },
+  "ownedTestBrowsersClosed": true,
+  "personalFirefoxControlled": false,
+  "noCommitPushPublication": true,
+  "limits": [
+    "Actual runtime checks used isolated headlessFirefox and emulatedtouch, not physicaldevice/otherbrowsers",
+    "RawFirefoxlogs include2internalBiDierrors andpagehide warnings, despite emptypageJSerrorarrays; observedtargetedwarning onlyaftercontextclose in0.097s, earlierphasesnotallproven",
+    "No generalFirefoxhang, offline or conference-readinessfix claimed"
+  ],
+  "nextStep": "User tries updated local prototype; further refinements/integration require their own agreedscope"
+}

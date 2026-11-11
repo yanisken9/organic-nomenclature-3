@@ -1,0 +1,53 @@
+{
+  "completedUTC": "2026-11-11T06:01:37.152977+00:00",
+  "status": "Local isolated prototype implemented, verified and independently reviewed; ready for user trial",
+  "name": "Χτίσε το όνομα",
+  "previewURL": "http://127.0.0.1:49897/games/name-builder.html",
+  "sourceBase": "168e3cec01f941a84d40bbe0dc07156e7baa35d0",
+  "sourceFiles": [
+    "games/name-builder.html",
+    "games/name-builder-viewer.html",
+    "js/namelecule-name-builder.js",
+    "js/namelecule-name-builder-host.js",
+    "js/namelecule-name-builder-engine.js",
+    "css/namelecule-name-builder.css",
+    "tools/build-name-builder-host.py",
+    "spt/init-55.spt"
+  ],
+  "behaviors": [
+    "Assigned molecule with condensed2D initial form and shuffled correct/distractor semantic name tiles",
+    "Pointer drag/drop plus click, emulated touch and keyboard addition/reorder/removal",
+    "Explicit Έλεγχος, wrong-order/missing rejection and correct-name success",
+    "Same-molecule available2D/3D depiction switches preserve answer/bank/solved state",
+    "Single generated55viewer with native naming/display and bounded guarded protocol/readiness/retry",
+    "Approved shared init comment correction plus prototype content-bound script URL"
+  ],
+  "verification": {
+    "corpus": "141 molecules,4222D forms,141 actual model/graph-ready3D,18 series",
+    "actualBrowserChecks": {
+      "interactions": 16,
+      "accessibility": 11,
+      "supplement": 9,
+      "sharedMainLessonWorkshop": 19
+    },
+    "syntaxAndGeneratedHost": true,
+    "independentReview": "independent-review.json",
+    "chemistrySpecialist": "chemistry-assessment.json",
+    "coreAndProtectedSourceInvariance": "baseline-invariance.json",
+    "ownedDiagnosticCleanup": "browser/cleanup.json"
+  },
+  "remainingLimits": [
+    "Only owned headless Firefox actual-browser tests, not physical devices or other browsers",
+    "Persisted BFCache restoration and reduced-motion runtime not verified",
+    "No offline, universal IUPAC or conference readiness certification",
+    "Unpaced native zoom/queue diagnostic timed out; paced replay passed without proving a general rapid-interaction fix",
+    "Inherited expanded [H] parser exclusion in penten_3_yne_1 remains; no data change",
+    "Earlier diagnostic/harness failures retained; supplied browser execution belongs to Developer"
+  ],
+  "publication": false,
+  "commit": false,
+  "push": false,
+  "coreChanges": false,
+  "personalFirefoxTouchedForThisFeature": false,
+  "nextStep": "User tries local prototype; refine gameplay within a newly agreed bounded plan before integration into welcome/library."
+}

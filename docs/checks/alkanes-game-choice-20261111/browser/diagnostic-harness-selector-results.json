@@ -1,0 +1,49 @@
+{
+  "checks": [
+    {
+      "label": "Direct gate4 valid",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "Both logo choices present",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "Builder verified/native ready",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "Builder verified/native ready",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "Required unbranched1 load identity",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "Required unbranched1 actual clicked tile identity",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "Required unbranched1 expanded preserves answer",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "Required unbranched1 skeletal preserves answer",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "solved": [],
+  "conditions": "Owned headless Firefox; actual production UI, native viewer and verified chemistry Worker. Read-only preload observes bridge loads for deterministic test inputs; trusted pointer input submits answers.",
+  "passed": false,
+  "failure": "RuntimeError({'columnNumber': 61, 'exception': {'type': 'error'}, 'lineNumber': 0, 'stackTrace': {'callFrames': [{'columnNumber': 61, 'functionName': '', 'lineNumber': 0, 'url': 'http://127.0.0.1:53089/mulermoc-nom-55.html?scenario=scenarios/alkanes-user-3.scenario.json&present=1&from=theory-library#step=4'}]}, 'text': \"SyntaxError: Document.querySelector: '[data-representation=3d]' is not a valid selector\"})",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/alkanes-game-choice-20261111/browser/integration.py\", line 79, in <module>\n    first=bsolve('Required unbranched1',representation=True,partial_refresh=True);check(not rec()['states']['3']['solved'],'One builder result remains locked');footer('Required first',False)\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/alkanes-game-choice-20261111/browser/integration.py\", line 47, in bsolve\n    bc('[data-representation='+mode+']');wait('document.querySelector(\".nl-builder-frame\").contentDocument.querySelector(\"[data-representation='+mode+']\").getAttribute(\"aria-pressed\")===\"true\"',55)\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/alkanes-game-choice-20261111/browser/integration.py\", line 31, in bc\n    def bc(sel):clickel(bel(sel))\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/alkanes-game-choice-20261111/browser/integration.py\", line 27, in clickel\n    ev('('+expr+').scrollIntoView({block:\"center\",inline:\"nearest\",behavior:\"instant\"});true');pause(.12)\n  File \"owned-name-builder-bidi\", line 43, in ev\n    check(bread('document.querySelector(\"#answer-tiles button\").dataset.tileId')==ids[0],label+' actual clicked tile identity')\nRuntimeError: {'columnNumber': 61, 'exception': {'type': 'error'}, 'lineNumber': 0, 'stackTrace': {'callFrames': [{'columnNumber': 61, 'functionName': '', 'lineNumber': 0, 'url': 'http://127.0.0.1:53089/mulermoc-nom-55.html?scenario=scenarios/alkanes-user-3.scenario.json&present=1&from=theory-library#step=4'}]}, 'text': \"SyntaxError: Document.querySelector: '[data-representation=3d]' is not a valid selector\"}\n"
+}

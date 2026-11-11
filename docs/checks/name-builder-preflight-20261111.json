@@ -1,0 +1,90 @@
+{
+  "recordedUTC": "2026-11-11T05:17:27.010890+00:00",
+  "status": "Read-only investigation complete; implementation plan requires user approval.",
+  "objective": "New name-assembly game: assigned molecular structural representation, correct and distractor name-component tiles dragged into ordered central frame, explicit correctness check and success message.",
+  "userClarification": "Game supplies an initial form, e.g.condensed2D. Learner may inspect other available representations of the SAME molecule. No molecule-picker requirement.",
+  "proposedWorkingName": "Χτίσε το όνομα",
+  "baseCommit": "168e3cec01f941a84d40bbe0dc07156e7baa35d0",
+  "currentSourceHashes": {
+    "mulermoc-nom-55.html": "cd728cce5139e86c9aee02d1f518390e2661b45488e7fb799c0880f362cb9b0a",
+    "js/jsme-nick-nomeclature-moc2-data_55.js": "9387cd654b2ff3cfb058d9b97ddcca798ac13f47f769b532f9c122277ff8dd0a",
+    "js/mulermoc-nom-core-55.js": "6cbdbd0ce60f5d66ff3e6925cdfd48e470764baa02b6263f325eff356df5e270",
+    "js/mulermoc-nom-molview-55.js": "4f2fb1a53bc25e141f754ab0da5e31095c65b0318cf0a29c4fe7667fbb8d9ad5",
+    "js/mulermoc-nom-teaching-55.js": "92f5dd9708103a306c98cd7c19dc10082aa4c57d1744105fadf14074ea60ef00",
+    "js/namelecule-game-repair.js": "197d29dffc964d3d8dbcc17fe3f8bef8fca3da93ee04af6a30c113e18a64f880",
+    "js/namelecule-chemistry-client.js": "13f882de81ba00c2f5ced2adf4a9d97e2c66cf5ed7035bf344ea53dd7430db44",
+    "js/namelecule-chemistry-worker.js": "86b14771559761d1e6aa9f0120927b3303c58f090a39ab0c6274639f987b3c34",
+    "games/name-repair.html": "e1c902cf28119bbe69469ecbb91137bbd148499d8aeff778d81b977dfa0b8da0",
+    "design/welcome-proposal.html": "bf51e87ad962ac930fe926f0b2d7bb08cb9e2ba7dfff13dfc96734e74bfad9b5"
+  },
+  "measuredCorpus": {
+    "molecules": 141,
+    "available2DForms": 422,
+    "condensed": 141,
+    "expanded": 141,
+    "skeletal": 140,
+    "missingSkeletal": [
+      "methane"
+    ],
+    "classificationKeys": 18
+  },
+  "explorerEvidence": {
+    "agent": "/root/name_builder_game_explore",
+    "execution": "In-memory macOS JavaScriptCore, existing PREFIX/TAIL AST literals; no file writes",
+    "analyses": 422,
+    "exceptions": 0,
+    "crossRepresentationNameDifferences": 0,
+    "limitations": "Engine execution only, not browser or independent chemical validation."
+  },
+  "chemistryEvidence": {
+    "agent": "/root/name_builder_game_chemistry_scope",
+    "execution": "Independent read-only JavaScriptCore stored/algorithmic source analyses; no file writes",
+    "analyses": 844,
+    "exceptions": 0,
+    "crossModeOrRepresentationNameDifferences": 0,
+    "rawJoinMismatchAnalyses": 204,
+    "rawJoinMismatchMolecules": 34,
+    "limitations": "Engine consistency does not certify all chemical naming. Euphony, locants and ester boundary need real adapter."
+  },
+  "learningDesigner": "/root/name_builder_game_learning_design; initial free-molecule-selection recommendation superseded by user clarification.",
+  "implementationConstraints": [
+    "Use existing Greek school convention per attempt",
+    "Engine/actual displayed-name grammar, never arbitrary split or raw-slot join",
+    "Validate assembled target/segments against same molecule before ready",
+    "Identical tile values interchangeable with multiplicity",
+    "All correct pieces plus bounded relevant distractors, shuffled",
+    "Parent owns answer; representation switches preserve it",
+    "Drag plus click/touch/keyboard equivalents",
+    "No full name/numbered chain answer leak before success",
+    "Existing old repair worker limited to alkanes; do not repurpose it for all classes",
+    "Reuse current55 actual 2D/3D pipeline in one same-origin host; avoid new geometry implementation",
+    "Request IDs/origin/source validation, cancellation, viewer readiness and recovery"
+  ],
+  "proposedNewPaths": [
+    "games/name-builder.html",
+    "games/name-builder-viewer.html",
+    "js/namelecule-name-builder.js",
+    "js/namelecule-name-builder-engine.js",
+    "js/namelecule-name-builder-host.js",
+    "css/namelecule-name-builder.css",
+    "tools/build-name-builder-host.py",
+    "docs/checks/name-builder-prototype-20261111/"
+  ],
+  "plannedVerification": [
+    "All141 molecule target-piece roundtrips and all422available2Dforms",
+    "Correct/wrong/missing/extra/order/duplicate-piece cases",
+    "Representative all18series chemical checks with special ethers/esters/mixed suffixes",
+    "Partial and solved answer preserved on form/2D3D switches",
+    "Cold load/zoom/resize/rapid switching/error recovery",
+    "Mouse/touch/keyboard narrow/wide screen",
+    "3D available-model/readiness and load checks",
+    "Existing Workshop/basic lesson smoke because shared source reused",
+    "Fresh independent Reviewer after approved logical unit, frozen target/hashes"
+  ],
+  "applicationOrCoreChanged": false,
+  "all11CoresUnchanged": true,
+  "newGameImplemented": false,
+  "browserTestingPerformed": false,
+  "commitPushPublication": false,
+  "upstreamContext": "Earlier same-session04:28UTC auditHEAD2c3f74f6,19new since checked015b15d6;34pending since actualsync5ab24955. No integration for this planning task."
+}

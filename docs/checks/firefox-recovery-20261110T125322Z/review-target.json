@@ -1,0 +1,19 @@
+{
+  "baseCommit": "168e3cec01f941a84d40bbe0dc07156e7baa35d0",
+  "frozenUTC": "2026-11-10T12:58:21.428635+00:00",
+  "scope": "Read-only diagnostic/recovery evidence. No app code changes.",
+  "files": {
+    "docs/checks/firefox-recovery-20261110T125322Z/baseline.json": "8510fe1729ec275296979cd5c03b1ec19922d801ccdcae69bb596182ed8f0a32",
+    "docs/checks/firefox-recovery-20261110T125322Z/process-and-sample-summary.json": "7a1665998e7a17c90110b16cab5fa0971cc796d4f46f588c1abe4592b4a83579",
+    "docs/checks/firefox-recovery-20261110T125322Z/private-session-backup-summary.json": "1935606566678976c836afc2273e10bbf427e009fd2720a82cea29566da0afe1",
+    "docs/checks/firefox-recovery-20261110T125322Z/targeted-close.json": "e107d4a3926a3aa9d8b1263dd8dd5584187bb33dc40b47f7360510bdded1a82d",
+    "docs/checks/firefox-recovery-20261110T125322Z/native-test-capabilities.json": "f4e2ad2e70d040b7248b10a0aaec783ceb6f8ba11ecc6cc99b1ffc522662c9f9",
+    "docs/checks/firefox-recovery-20261110T125322Z/upstream-check.json": "c7775f867f04ee63535fc373dc12e4e32aea1306d360a947cc33a9d2b77a75d1"
+  },
+  "privateSamples": {
+    "/private/tmp/firefox-recovery-20261110T125322Z/sample-55879.txt": "7fbeae7a7ff2aac680face14afff15fb4ae448589ec3b507a132060072c32ac1",
+    "/private/tmp/firefox-recovery-20261110T125322Z/sample-56371.txt": "43ede4a37794f4e51b1fb00b4ff4682f0a0aa8c399504581997684ac3cf47b8f",
+    "/private/tmp/firefox-recovery-20261110T125322Z/sample-57800.txt": "5ae2b750a4daf2433583046702f49852deaf8dad23c758af76298a00e19af1ee"
+  },
+  "limits": "Graceful terminate command timed out, not proved delivered. Raw profile/session payload must not be read; only copied-file metadata is in target. Controlled test is separate and not yet frozen."
+}

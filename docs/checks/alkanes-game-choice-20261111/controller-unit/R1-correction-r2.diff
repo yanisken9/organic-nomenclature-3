@@ -1,0 +1,15 @@
+--- reviewed-r1/js/namelecule-quiz-checkpoints.js
++++ corrected-r2/js/namelecule-quiz-checkpoints.js
+@@ -496,7 +496,11 @@
+         round: clone(spec.round), assetBase: "games/",
+         initialState: states[context.index] ? clone(states[context.index]) : null,
+         newPracticeLabel: text("practice", context),
+-        onNewPractice: supportsPractice(adapter) ? () => { if (token === mountToken && currentContext(context)) newPractice(context); } : undefined,
++        onNewPractice: supportsPractice(adapter) ? () => {
++          if (token !== mountToken || !currentContext(context)) return;
++          const game = typeof adapter.practiceGame === "function" ? adapter.practiceGame(spec.round, states[context.index]) : undefined;
++          newPractice(context, game);
++        } : undefined,
+         otherGameLabel: text("otherGame", context),
+         onOtherGame: supportsPractice(adapter) && typeof adapter.otherGame === "function" ? () => {
+           if (token !== mountToken || !currentContext(context) || !isComplete(context.scenario, context.index)) return;

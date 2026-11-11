@@ -1,0 +1,233 @@
+{
+  "completed": true,
+  "checks": [
+    {
+      "passed": true,
+      "label": "Native 2D zoom pair preserves answer",
+      "detail": null
+    },
+    {
+      "passed": true,
+      "label": "Load failure preserves partial answer and blocks checking",
+      "detail": null
+    },
+    {
+      "passed": true,
+      "label": "Retry recovers same representation without resetting answer",
+      "detail": null
+    },
+    {
+      "passed": true,
+      "label": "Forged wrong-source reply ignored",
+      "detail": null
+    },
+    {
+      "passed": true,
+      "label": "Native 3D zoom pair preserves answer and requested model",
+      "detail": null
+    },
+    {
+      "passed": true,
+      "label": "Corrected fingerprinted init executes with no JSmol parse error",
+      "detail": {
+        "orientation": {
+          "axisAngle": [
+            1.9379248006760652,
+            0.14285714285714263,
+            -0.2161563887066419,
+            102.15425534908871
+          ],
+          "center": "center {-2.7755575615628914e-17 0 0}",
+          "centerPt": [
+            -2.7755575615628914e-17,
+            0,
+            0
+          ],
+          "modelRadius": 2.732949950259303,
+          "moveTo": "moveto 1.0 { 991 73 -111 102.15} 50.0 0.0 0.0 {-2.7755575615628914e-17 0 0} 2.732949950259303 {0 0 0} 0 0 0 3.0 0.0 0.0;",
+          "quaternion": [
+            0.7711308230937657,
+            0.05684510880805131,
+            -0.08601203404909158,
+            0.6282736802366228
+          ],
+          "rotateXYZ": "reset;center {-2.7755575615628914e-17 0 0}; rotate x 101.53; rotate y 11.78; rotate z -1.19; zoom 50.0;",
+          "rotateZYZ": "reset;center {-2.7755575615628914e-17 0 0}; rotate z 77.99; rotate y 101.29; rotate z -93.58; zoom 50.0;",
+          "rotationMatrix": [
+            [
+              0.9787411272066777,
+              0.19574822544133552,
+              -0.06122448979591871
+            ],
+            [
+              -0.020408163265306367,
+              -0.20408163265306156,
+              -0.9787411272066775
+            ],
+            [
+              -0.20408163265306134,
+              0.9591836734693877,
+              -0.19574822544133577
+            ]
+          ],
+          "transXPercent": 0,
+          "transYPercent": 0,
+          "zoom": 50
+        },
+        "error": "",
+        "resources": [
+          "http://127.0.0.1:65312/spt/init-55.spt?v=096f339ab8a3a88cad525f45586a5540f5a2612cdcda5453fb7a110ca2bbd1b1",
+          "http://127.0.0.1:65312/spt/init-55.spt?v=096f339ab8a3a88cad525f45586a5540f5a2612cdcda5453fb7a110ca2bbd1b1"
+        ],
+        "ready": true
+      }
+    },
+    {
+      "passed": true,
+      "label": "Ester actual UI composes engine target including word boundary",
+      "detail": null
+    },
+    {
+      "passed": true,
+      "label": "Ester UI full name accepted",
+      "detail": null
+    },
+    {
+      "passed": true,
+      "label": "History Back returns to a working viewer",
+      "detail": {
+        "frame": "name-builder-viewer.html?session=db78889a678fa470bdf60e8a8bdbedfe4021",
+        "status": "Διάλεξε τα συνθετικά και χτίσε το όνομα.",
+        "bank": 13
+      }
+    }
+  ],
+  "role": "Developer actual-browser evidence",
+  "threeD": {
+    "orientation": {
+      "axisAngle": [
+        1.9379248006760652,
+        0.14285714285714263,
+        -0.2161563887066419,
+        102.15425534908871
+      ],
+      "center": "center {-2.7755575615628914e-17 0 0}",
+      "centerPt": [
+        -2.7755575615628914e-17,
+        0,
+        0
+      ],
+      "modelRadius": 2.732949950259303,
+      "moveTo": "moveto 1.0 { 991 73 -111 102.15} 50.0 0.0 0.0 {-2.7755575615628914e-17 0 0} 2.732949950259303 {0 0 0} 0 0 0 3.0 0.0 0.0;",
+      "quaternion": [
+        0.7711308230937657,
+        0.05684510880805131,
+        -0.08601203404909158,
+        0.6282736802366228
+      ],
+      "rotateXYZ": "reset;center {-2.7755575615628914e-17 0 0}; rotate x 101.53; rotate y 11.78; rotate z -1.19; zoom 50.0;",
+      "rotateZYZ": "reset;center {-2.7755575615628914e-17 0 0}; rotate z 77.99; rotate y 101.29; rotate z -93.58; zoom 50.0;",
+      "rotationMatrix": [
+        [
+          0.9787411272066777,
+          0.19574822544133552,
+          -0.06122448979591871
+        ],
+        [
+          -0.020408163265306367,
+          -0.20408163265306156,
+          -0.9787411272066775
+        ],
+        [
+          -0.20408163265306134,
+          0.9591836734693877,
+          -0.19574822544133577
+        ]
+      ],
+      "transXPercent": 0,
+      "transYPercent": 0,
+      "zoom": 50
+    },
+    "error": "",
+    "resources": [
+      "http://127.0.0.1:65312/spt/init-55.spt?v=096f339ab8a3a88cad525f45586a5540f5a2612cdcda5453fb7a110ca2bbd1b1",
+      "http://127.0.0.1:65312/spt/init-55.spt?v=096f339ab8a3a88cad525f45586a5540f5a2612cdcda5453fb7a110ca2bbd1b1"
+    ],
+    "ready": true
+  },
+  "esterRound": {
+    "channel": "namelecule-name-builder-v1",
+    "session": "798d98923946f944b80b87761d44174ca19a",
+    "requestId": 1,
+    "roundId": "798d98923946f944b80b87761d44174ca19a-1",
+    "moleculeId": "isopropyl_ethanoate",
+    "type": "round",
+    "representation": "condensed",
+    "correctName": "αιθανικός ισοπροπυλεστέρας",
+    "pieces": [
+      {
+        "text": "αιθ",
+        "separatorBefore": "",
+        "role": "comp5"
+      },
+      {
+        "text": "αν",
+        "separatorBefore": "",
+        "role": "comp6"
+      },
+      {
+        "text": "ικός",
+        "separatorBefore": "",
+        "role": "comp9"
+      },
+      {
+        "text": "ισοπροπυλ",
+        "separatorBefore": " ",
+        "role": "comp10"
+      },
+      {
+        "text": "εστέρας",
+        "separatorBefore": "",
+        "role": "comp11"
+      }
+    ],
+    "representations": [
+      "condensed",
+      "expanded",
+      "skeletal",
+      "3d"
+    ],
+    "series": "ester",
+    "parentLength": 2,
+    "vocabulary": {
+      "roots": [
+        "μεθ",
+        "αιθ",
+        "προπ",
+        "βουτ",
+        "πεντ",
+        "εξ",
+        "επτ",
+        "οκτ",
+        "εννε",
+        "δεκ",
+        "ενδεκ",
+        "δωδεκ",
+        "δεκατρι",
+        "δεκατεσσερ",
+        "δεκαπεντ",
+        "δεκαεξ",
+        "δεκαεπτ",
+        "δεκαοκτ",
+        "δεκαεννι",
+        "εικοσ"
+      ]
+    }
+  },
+  "history": {
+    "frame": "name-builder-viewer.html?session=db78889a678fa470bdf60e8a8bdbedfe4021",
+    "status": "Διάλεξε τα συνθετικά και χτίσε το όνομα.",
+    "bank": 13
+  },
+  "javascriptErrors": []
+}

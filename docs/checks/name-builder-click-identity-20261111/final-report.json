@@ -1,0 +1,58 @@
+{
+  "status": "Read-only investigation complete; no reproduction, no application code change; user reports observation not currently recurring",
+  "cause": "Unknown. No root-cause or permanent fix claim.",
+  "browserChecks": {
+    "trustedBankClicks": 36,
+    "widths": [
+      1280,
+      1024,
+      390
+    ],
+    "mismatches": 0,
+    "capturedJavaScriptExceptions": 0,
+    "completed": true
+  },
+  "servedFilesMatchDisk": true,
+  "sourceInvariance": {
+    "js/namelecule-name-builder.js": true,
+    "js/namelecule-name-builder-engine.js": true,
+    "games/name-builder.html": true,
+    "css/namelecule-name-builder.css": true,
+    "spt/init-55.spt": true,
+    "js/mulermoc-nom-core-42.js": true,
+    "js/mulermoc-nom-core-43.js": true,
+    "js/mulermoc-nom-core-44.js": true,
+    "js/mulermoc-nom-core-45.js": true,
+    "js/mulermoc-nom-core-48.js": true,
+    "js/mulermoc-nom-core-49.js": true,
+    "js/mulermoc-nom-core-50.js": true,
+    "js/mulermoc-nom-core-51.js": true,
+    "js/mulermoc-nom-core-52.js": true,
+    "js/mulermoc-nom-core-54.js": true,
+    "js/mulermoc-nom-core-55.js": true
+  },
+  "coreChanges": false,
+  "upstreamHead": "2c3f74f6c110400154efb6001657a3e514b97a70",
+  "newUpstreamCommitsSinceCheck": 0,
+  "pendingCommitsSinceActualSync": 34,
+  "upstreamIntegration": false,
+  "independentCodeExploration": "/root/builder_click_preflight, static scoped inspection only; not an independent Reviewer verdict",
+  "limitations": [
+    "Intermittent user observation not reproduced; exact original clicked label/result unknown.",
+    "Physical mouse/touchpad sequence and user-facing GUI session not instrumented.",
+    "No clean raw Firefox console or browser-hang fix claim."
+  ],
+  "applicationSourceEdits": [],
+  "commitPushPublication": false,
+  "cleanup": {
+    "closedUTC": "2026-11-11T07:39:10.956679+00:00",
+    "serverPID": 11311,
+    "firefoxPID": 11312,
+    "profileIdentityGuard": true,
+    "ownedDiagnosticFirefoxClosed": true,
+    "personalFirefoxControlled": false,
+    "userFacingPreview11004Controlled": false,
+    "normalPreview49897Controlled": false
+  },
+  "nextStep": "If observed again, capture clicked tile label, resulting value and screen state before refresh; reproduce that sequence before proposing implementation."
+}

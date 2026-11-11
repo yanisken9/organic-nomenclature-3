@@ -1,0 +1,31 @@
+{
+  "completedUTC": "2026-11-11T08:24:38.015232+00:00",
+  "status": "Completed approved local integration; independently reviewed, no findings",
+  "sourceChanges": [
+    "games/name-builder.html",
+    "css/namelecule-name-builder.css"
+  ],
+  "behavior": "Accepted blank wall-and-trowel icon beside the unchanged game title; responsive128/88/72px logo with reserved dimensions and decorative semantics",
+  "previewURL": "http://127.0.0.1:49897/games/name-builder.html?v=logo-20261111-r1&molecule=dimethyl_4_5_hexen_5_yn_1_one_3",
+  "before": "docs/checks/name-builder-icon-integration-20261111/before/",
+  "frozenTarget": "docs/checks/name-builder-icon-integration-20261111/review-target-r1.json",
+  "sourceHashes": {
+    "games/name-builder.html": "9af23052ad4c864adec4887a319c278e4e02c818a9885e0058651b42e6e50e82",
+    "css/namelecule-name-builder.css": "5dc1be7fefb09a56840966a00a91c47d62d419edf07f45072ede02c43cd43e28"
+  },
+  "developerBrowserChecks": 38,
+  "capturedJSExceptions": 0,
+  "independentReview": "docs/checks/name-builder-icon-integration-20261111/independent-review.json",
+  "findings": [],
+  "coreChanges": false,
+  "coreFilesUnchanged": 11,
+  "protectedFilesUnchanged": 17,
+  "userBrowsersControlled": false,
+  "diagnosticHeadlessClosed": true,
+  "previewHTTPMatchesDisk": true,
+  "commitPushPublication": false,
+  "limitations": [
+    "Other browsers, physical devices, screen reader, offline/conference flow not checked",
+    "Chemistry/MOL/SDF/educational sequence unchanged; checks N/A"
+  ]
+}

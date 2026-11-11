@@ -1,0 +1,39 @@
+{
+  "reviewer": "/root/review_google_profile_recovery_20261111",
+  "roleID": "NAMELECULE_REVIEWER_V1_20261023",
+  "recordedUTC": "2026-11-11T04:37:25.590018+00:00",
+  "baseCommit": "168e3cec01f941a84d40bbe0dc07156e7baa35d0",
+  "originalTarget": "review-target.json",
+  "targetedAddendum": "review-final-user-addendum.json",
+  "findings": [],
+  "independentlyVerified": [
+    "Original ten frozen file SHA256 hashes; all remain unchanged.",
+    "Two final addendum file SHA256 hashes.",
+    "Source HEAD, index and all eleven core hashes equal baseline.",
+    "profiles.ini maps Firefox installation default to original personal profile.",
+    "Five private backup directories current-user-owned with mode0700; metadata only.",
+    "Frozen records do not decode or include private session payload."
+  ],
+  "directUserEvidence": [
+    "Initial CAPTCHA recurred after manual completion.",
+    "First manual search in reopened normal Firefox succeeded.",
+    "User explicitly saved work and authorized closing three temporary Firefox instances.",
+    "Second manual address-bar search after cleanup succeeded."
+  ],
+  "developerEvidence": [
+    "Initial process inventory and current onscreen window94903 ownership.",
+    "Normal personal3805 launch, guarded SIGTERM cleanup and final one-parent snapshot.",
+    "Three old loopback diagnostic endpoints unavailable.",
+    "Backup byte copy/hash execution and upstream audit."
+  ],
+  "limits": [
+    "Reviewer ps blocked Operation not permitted; no independent process/browser/network replay.",
+    "Foreground probe empty: not evidence of which window received first search.",
+    "After-cleanup process snapshot plus direct-user second test support recovery under reported conditions.",
+    "Exact Google challenge cause and permanent elimination unproven; profile/cookies/debug/time not individually isolated.",
+    "Future ownership/GUI lifecycle handling is an adopted operating rule, not an independently tested persistent mechanism."
+  ],
+  "runtimeChemistryTests": "N/A; no application changes.",
+  "reviewerWrites": false,
+  "noCoreChanges": true
+}

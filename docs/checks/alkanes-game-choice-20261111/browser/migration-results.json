@@ -1,0 +1,97 @@
+{
+  "checks": [
+    {
+      "label": "Old exact lesson runtime loaded",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "Actual old Workshop receipt migrates and revalidates before step5",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "Migration preserves exact original triple",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "Old record bytes unchanged",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "Explicit current reset survives refresh without old-record resurrection",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "solved": [],
+  "conditions": "Owned headless Firefox; actual production UI, native viewer and verified chemistry Worker. Read-only preload observes bridge loads for deterministic test inputs; trusted pointer input submits answers.",
+  "passed": true,
+  "jsExceptions": [
+    {
+      "type": "javascript",
+      "level": "error",
+      "source": {
+        "realm": "6a185133-05d3-43ff-8daf-a5098bf553b7",
+        "context": "27c76e4c-7d8f-468b-916b-c91ea4d637a0",
+        "userContext": "default"
+      },
+      "text": "TypeError: can't access property \"bufferedImage\", this.platform is null",
+      "timestamp": 1794389160907,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 290,
+            "functionName": "",
+            "lineNumber": 869,
+            "url": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corejmol.z.js"
+          },
+          {
+            "columnNumber": 18,
+            "functionName": "",
+            "lineNumber": 2519,
+            "url": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corejmol.z.js"
+          },
+          {
+            "columnNumber": 349,
+            "functionName": "",
+            "lineNumber": 2522,
+            "url": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corejmol.z.js"
+          },
+          {
+            "columnNumber": 396,
+            "functionName": "",
+            "lineNumber": 2631,
+            "url": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corejmol.z.js"
+          },
+          {
+            "columnNumber": 227,
+            "functionName": "",
+            "lineNumber": 2633,
+            "url": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corejmol.z.js"
+          },
+          {
+            "columnNumber": 42,
+            "functionName": "",
+            "lineNumber": 1836,
+            "url": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corejmol.z.js"
+          },
+          {
+            "columnNumber": 86,
+            "functionName": "a.repaint/<",
+            "lineNumber": 182,
+            "url": "http://127.0.0.1:53089/js/vendor/jsmol/namelecule-20261031-r1/JSmol.min.js"
+          },
+          {
+            "columnNumber": 33,
+            "functionName": "run",
+            "lineNumber": 87,
+            "url": "http://127.0.0.1:53089/js/vendor/jsmol/namelecule-20261031-r1/JSmol.min.js"
+          }
+        ]
+      }
+    }
+  ]
+}

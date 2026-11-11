@@ -1,0 +1,14 @@
+{
+  "reproduced": true,
+  "checks": 9,
+  "sourceRevision": "r1 exact SHA-checked sources",
+  "conditions": "JSC virtual45s timers; deliberately stalled fetch ignoring AbortSignal",
+  "observed": {
+    "directLoadPendingAfter45s": true,
+    "mountNoTimeoutRetry": true,
+    "coldPreparePendingAfter45s": true
+  },
+  "limitations": [
+    "Mock transport and virtual time; no actual45s browser wait"
+  ]
+}

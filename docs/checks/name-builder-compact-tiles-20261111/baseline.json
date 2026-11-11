@@ -1,0 +1,51 @@
+{
+  "status": "Implemented bounded user-selected compaction; final checks/review pending",
+  "plan": "Change answer-only minwidth/horizontalpadding/gap, preserve font and46pxheight, bank/layout/viewer/JS; update onlyCSS cache token inHTML. Compare screenshot8piece case and full9piece name at1024, long12piece/narrow fallback, nativepointer+keyboard and independentReview.",
+  "beforeHashes": {
+    "css/namelecule-name-builder.css": "8f2035985c9bb699f2b54b11ac40887c0687e76e48a738d435af59481ff3ff6a",
+    "games/name-builder.html": "798baf8db7057799efab40080747dce9c673e0ea4c1fcc4fac21cb8da73beaa4"
+  },
+  "protectedHashes": {
+    "games/name-builder-viewer.html": "10139019ed77c98305149ab1e94c8ec5497ea9719341af00a655998c56824a01",
+    "js/namelecule-name-builder-host.js": "9ab1aa1c92d05d058a26347e060cf3e114aa5eaaed0a61e9d75c7c77831c156e",
+    "js/namelecule-name-builder-engine.js": "1c7e477325ae07b02d5218ef0833236f95eade7b6003a3aa07545f91b414f8a2",
+    "tools/build-name-builder-host.py": "176d76be1bd35927ef078abc17d6cdebecca6520f8ccb56e4008d075959462ea",
+    "spt/init-55.spt": "096f339ab8a3a88cad525f45586a5540f5a2612cdcda5453fb7a110ca2bbd1b1",
+    "docs/checks/name-builder-prototype-20261111/domain/contracts-corpus-result.json": "387ae509246b885b6ea24b3ddb5bbfe5b74a783b3dbb11d1a110e0717d5cc863",
+    "docs/checks/name-builder-prototype-20261111/domain/contracts-result.json": "8ee7f9f8e2953591ccb5734698c324aeebe494917f0b7843bc74382990baf430",
+    "docs/checks/name-builder-prototype-20261111/domain/contracts.js": "513a509fb3ae67e43a607d2550a06453cc896b9f5af24bba97c9ee24de38b1d8",
+    "docs/checks/name-builder-prototype-20261111/domain/corpus-summary.json": "bc0481b685198987cc825a039755eb1e3d089be34163989cb18bc6c753606d63",
+    "docs/checks/name-builder-prototype-20261111/host/init-version-test.js": "f2f99c7f236de5ead87f9f8270a3c3fa65ea83824566adab45499d48c8313363",
+    "docs/checks/name-builder-prototype-20261111/host/protocol-test.js": "55400aef74962696b641183a847106a99b773d935c03ed65d55bbf1aec06e69f",
+    "js/mulermoc-nom-core-42.js": "a7b95d7fd9eb8589c2f441205ddd3751bd6da9bf9834fa60d9a5b5d2d2aa2b83",
+    "js/mulermoc-nom-core-43.js": "93373c8ea49d6489350c4c7eee36d444b0f6ff5c13c500aa9662d4997575ac21",
+    "js/mulermoc-nom-core-44.js": "3bb8773be785992ec581d4cdd11a58a6bb5a833ed429ae07287839b436e523e1",
+    "js/mulermoc-nom-core-45.js": "dde5fb6350a0374e1ebda69e0870cbfce0bbed027b8219f33bc4de3c4cf9ae74",
+    "js/mulermoc-nom-core-48.js": "37dad911ed73af0768fc922186cb94e71df7df1144b2c1e75aee4c9202ce6c0d",
+    "js/mulermoc-nom-core-49.js": "ae85dd22b94292ed539ff2a858a1a6fe3672af90298662e5c6860fb411a65951",
+    "js/mulermoc-nom-core-50.js": "0f79b5af20b9c3b4504673876abc03b6c162af316c33dff55fd55e0c22a43fd9",
+    "js/mulermoc-nom-core-51.js": "096d617853646de0dfd67bcbde3e32252aebcb98e7525b05e6f7e71ccb48a5fc",
+    "js/mulermoc-nom-core-52.js": "d2138418ff630ab77e578b80ca8ba3a10cc1b877c3ab8c0e5c2735ffcd1f24a2",
+    "js/mulermoc-nom-core-54.js": "8f3e5f76d96322faf7cf9251f4cae3eca204fe2f82bf5754fdce6ffc4cd5d5a9",
+    "js/mulermoc-nom-core-55.js": "6cbdbd0ce60f5d66ff3e6925cdfd48e470764baa02b6263f325eff356df5e270",
+    "mulermoc-nom-55.html": "cd728cce5139e86c9aee02d1f518390e2661b45488e7fb799c0880f362cb9b0a",
+    "js/jsme-nick-nomeclature-moc2-data_55.js": "9387cd654b2ff3cfb058d9b97ddcca798ac13f47f769b532f9c122277ff8dd0a",
+    "js/mulermoc-nom-molview-55.js": "4f2fb1a53bc25e141f754ab0da5e31095c65b0318cf0a29c4fe7667fbb8d9ad5",
+    "js/mulermoc-nom-teaching-55.js": "92f5dd9708103a306c98cd7c19dc10082aa4c57d1744105fadf14074ea60ef00",
+    "js/namelecule-game-repair.js": "197d29dffc964d3d8dbcc17fe3f8bef8fca3da93ee04af6a30c113e18a64f880",
+    "js/namelecule-chemistry-client.js": "13f882de81ba00c2f5ced2adf4a9d97e2c66cf5ed7035bf344ea53dd7430db44",
+    "js/namelecule-chemistry-worker.js": "86b14771559761d1e6aa9f0120927b3303c58f090a39ab0c6274639f987b3c34",
+    "games/name-repair.html": "e1c902cf28119bbe69469ecbb91137bbd148499d8aeff778d81b977dfa0b8da0",
+    "design/welcome-proposal.html": "bf51e87ad962ac930fe926f0b2d7bb08cb9e2ba7dfff13dfc96734e74bfad9b5",
+    "js/namelecule-name-builder.js": "119717a768ea7460b14e0d8b59a691426b08af11d6ca07930105c191cc2df36e"
+  },
+  "coreChanged": false,
+  "commitPushPublication": false,
+  "selectedCSS": {
+    "gap": "3px (was6)",
+    "minWidth": "32px (was44)",
+    "horizontalPadding": "5px (was11)",
+    "font": "unchanged1.03rem",
+    "minHeight": "unchanged46px"
+  }
+}

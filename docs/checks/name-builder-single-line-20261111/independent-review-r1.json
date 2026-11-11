@@ -1,0 +1,39 @@
+{
+  "roleId": "NAMELECULE_REVIEWER_V1_20261023",
+  "agent": "/root/review_name_builder_single_line_r1",
+  "base": "168e3cec01f941a84d40bbe0dc07156e7baa35d0",
+  "manifest": "review-target-r1.json",
+  "freshContext": true,
+  "readOnlyBehavior": true,
+  "findings": [
+    {
+      "id": "NB-SL-01",
+      "severity": "P2",
+      "file": "css/namelecule-name-builder.css",
+      "line": 2,
+      "selector": ".single-line-name",
+      "requirement": "Name remains readable while horizontal scrollbar is visible",
+      "evidence": "Reviewer independently inspected Developer after-1280/390/320 screenshots; candidate lower glyph strokes overlapped native scrollbar",
+      "correction": "Shared 10px bottom padding for candidate/success; targeted visual verification pending",
+      "state": "Correction written; verification pending"
+    }
+  ],
+  "otherActionableFindings": [],
+  "independentChecks": [
+    "25 target and31 protected hashes including11cores",
+    "3source diffs/state/focus/drop/RAFcleanup",
+    "HTMLassetpaths/IDs",
+    "Developer screenshotvisualinspection"
+  ],
+  "syntaxNote": "node unavailable; no independent syntax run in r1",
+  "developerChecksInspected": {
+    "layout": 40,
+    "drag": 11
+  },
+  "rawLogLimitation": "Raw Firefox log includes BiDi WeakMap errors and two pagehide->cancelTouch timeout warnings despite empty captured JSerror arrays. Exact phase correlation for original run unverified; similar warnings preexist layout in prior prototype log. Not a demonstrated new source regression.",
+  "limitations": [
+    "No independent runtime browser execution",
+    "No physical-device/other-browser/offline/conference certification"
+  ],
+  "changesByReviewer": false
+}

@@ -1,0 +1,70 @@
+{
+  "baseCommit": "168e3cec01f941a84d40bbe0dc07156e7baa35d0",
+  "scope": "Approved logo integration: HTML wrapper/decorative image plus scoped responsive CSS and CSS cache query only. Game JS, viewer, chemistry and accepted artwork unchanged.",
+  "files": {
+    "games/name-builder.html": "9af23052ad4c864adec4887a319c278e4e02c818a9885e0058651b42e6e50e82",
+    "css/namelecule-name-builder.css": "5dc1be7fefb09a56840966a00a91c47d62d419edf07f45072ede02c43cd43e28",
+    "games/assets/name-builder/name-builder-logo-3d-blank-v1.png": "9721dc62c33c80c3a4993de388ffe50a8b8d15c9a761963f7d31d9d5177e7b54",
+    "games/assets/name-builder/provenance.json": "17a2296c61bfae7c3a5e0a644ea496905a3dbd38bcda25f9184a4d9d2f121af8",
+    "docs/checks/name-builder-icon-integration-20261111/before/css/namelecule-name-builder.css": "fa11a143b9ec89136ab3a9b64fdf0f52788946a732cf2174e9441c5404d6422d",
+    "docs/checks/name-builder-icon-integration-20261111/before/games/name-builder.html": "484c7421c8cbdb68b49bcc081e2f831aafba5b1d54fe63b2c1a47d1df40d9412",
+    "docs/checks/name-builder-icon-integration-20261111/baseline.json": "a6295b6c1c7fa3e5bfcbb2b0bdabc0b5bcf7f8136cd1c3e7841a19148b21602d",
+    "docs/checks/name-builder-icon-integration-20261111/implementation.diff": "7f5048343f6baff62fc809e3e9409ee9d7f7a40a6c71e9a8a0dcf5f8296f49a2",
+    "docs/checks/name-builder-icon-integration-20261111/source-invariance.json": "0e5b155ee1c058f6d63749e8fd5038101d73c7d87f99405b7a02454f98991faa",
+    "docs/checks/name-builder-icon-integration-20261111/browser/check.py": "f43dbdeba6a9fb6d30daed648a7344164857f1df31bd7ccafdaa1fb0967aec24",
+    "docs/checks/name-builder-icon-integration-20261111/browser/check.json": "f8344a807a4de49fb7c84cfb0c0ad1163e7cdecf2466100a74720d5c7f4d893e",
+    "docs/checks/name-builder-icon-integration-20261111/browser/driver.py": "553fbd92e0d216b9f3fde3896949251b2c4c83479d2c92d87a3761b0ce993f28",
+    "docs/checks/name-builder-icon-integration-20261111/browser/owned-processes.py": "dda2ff599489e1fb6e63a97884307255cf4242c55afa63ad55edc3483d133e5d",
+    "docs/checks/name-builder-icon-integration-20261111/browser/cleanup.json": "e4e9eba8e472c7fe7e21a81c2e1d3caca638a0c59713dd006f928deaf08da7a8",
+    "docs/checks/name-builder-icon-integration-20261111/browser/header-1024.png": "b1670fe1f80560363434e70883d135aafb0130ef4719ffe6e62f56e9c91bf470",
+    "docs/checks/name-builder-icon-integration-20261111/browser/header-1500.png": "215bfd11f99ab8102a4ff26ccd883008767f4dcc4c5a260c6df46680c578956b",
+    "docs/checks/name-builder-icon-integration-20261111/browser/header-320.png": "2bb30dec4a0f9ab1cef661d82bece1ffdeb2877f2eb3c99b7a8e4f15368fcbf6",
+    "docs/checks/name-builder-icon-integration-20261111/browser/header-390.png": "1c571ef46f425a86c556a6187e4fa474eea6a84be52d058002960b59a589786d",
+    "docs/checks/name-builder-icon-integration-20261111/browser/header-550.png": "f227c3e7852028c465c429db1c0229d2df943febbb0210387d342dbec64f6c48",
+    "docs/checks/name-builder-icon-integration-20261111/browser/success-1024.png": "e75aa6cd5ec20a219dc172030df33f712a6d0be22e53a32f8f3f70abfbe1793a",
+    "docs/checks/name-builder-icon-integration-20261111/browser/success-390.png": "46ca10f7ca616a1ce3aeb94aadce9cab6f6e8cc2a48ef8971c3c3b31bc902828"
+  },
+  "changedAppSources": [
+    "games/name-builder.html",
+    "css/namelecule-name-builder.css"
+  ],
+  "alreadyReviewedUnchangedAssetPaths": [
+    "games/assets/name-builder/name-builder-logo-3d-blank-v1.png",
+    "games/assets/name-builder/provenance.json"
+  ],
+  "protectedHashes": {
+    "js/namelecule-name-builder.js": "119717a768ea7460b14e0d8b59a691426b08af11d6ca07930105c191cc2df36e",
+    "js/namelecule-name-builder-engine.js": "1c7e477325ae07b02d5218ef0833236f95eade7b6003a3aa07545f91b414f8a2",
+    "spt/init-55.spt": "096f339ab8a3a88cad525f45586a5540f5a2612cdcda5453fb7a110ca2bbd1b1",
+    "js/mulermoc-nom-core-42.js": "a7b95d7fd9eb8589c2f441205ddd3751bd6da9bf9834fa60d9a5b5d2d2aa2b83",
+    "js/mulermoc-nom-core-43.js": "93373c8ea49d6489350c4c7eee36d444b0f6ff5c13c500aa9662d4997575ac21",
+    "js/mulermoc-nom-core-44.js": "3bb8773be785992ec581d4cdd11a58a6bb5a833ed429ae07287839b436e523e1",
+    "js/mulermoc-nom-core-45.js": "dde5fb6350a0374e1ebda69e0870cbfce0bbed027b8219f33bc4de3c4cf9ae74",
+    "js/mulermoc-nom-core-48.js": "37dad911ed73af0768fc922186cb94e71df7df1144b2c1e75aee4c9202ce6c0d",
+    "js/mulermoc-nom-core-49.js": "ae85dd22b94292ed539ff2a858a1a6fe3672af90298662e5c6860fb411a65951",
+    "js/mulermoc-nom-core-50.js": "0f79b5af20b9c3b4504673876abc03b6c162af316c33dff55fd55e0c22a43fd9",
+    "js/mulermoc-nom-core-51.js": "096d617853646de0dfd67bcbde3e32252aebcb98e7525b05e6f7e71ccb48a5fc",
+    "js/mulermoc-nom-core-52.js": "d2138418ff630ab77e578b80ca8ba3a10cc1b877c3ab8c0e5c2735ffcd1f24a2",
+    "js/mulermoc-nom-core-54.js": "8f3e5f76d96322faf7cf9251f4cae3eca204fe2f82bf5754fdce6ffc4cd5d5a9",
+    "js/mulermoc-nom-core-55.js": "6cbdbd0ce60f5d66ff3e6925cdfd48e470764baa02b6263f325eff356df5e270",
+    "games/assets/name-builder/name-builder-logo-3d-blank-v1.png": "9721dc62c33c80c3a4993de388ffe50a8b8d15c9a761963f7d31d9d5177e7b54",
+    "games/assets/name-builder/provenance.json": "17a2296c61bfae7c3a5e0a644ea496905a3dbd38bcda25f9184a4d9d2f121af8",
+    "games/name-builder-viewer.html": "10139019ed77c98305149ab1e94c8ec5497ea9719341af00a655998c56824a01"
+  },
+  "developerBrowserEvidence": {
+    "checks": 38,
+    "widths": [
+      1500,
+      1024,
+      550,
+      390,
+      320
+    ],
+    "trustedBankClicks": 18,
+    "correctFullAnswerFlows": 2,
+    "capturedJSExceptions": 0,
+    "imageFailureFallback": "Title and next action remain usable after deliberate broken image src fixture"
+  },
+  "coreChanges": false,
+  "commitPushPublication": false
+}

@@ -1,0 +1,25 @@
+{
+  "startedUTC": "2026-11-10T12:55:42.296104+00:00",
+  "targetPID": 57800,
+  "targetCategory": "personal",
+  "otherParentPIDsProtected": [
+    55879,
+    56371
+  ],
+  "steps": [
+    {
+      "method": "NSRunningApplication.terminate",
+      "timeoutSeconds": 25
+    },
+    {
+      "method": "SIGTERM",
+      "pid": 57800
+    }
+  ],
+  "targetClosed": true,
+  "otherParentPIDsStillRunning": {
+    "55879": true,
+    "56371": true
+  },
+  "finishedUTC": "2026-11-10T12:56:14.580939+00:00"
+}

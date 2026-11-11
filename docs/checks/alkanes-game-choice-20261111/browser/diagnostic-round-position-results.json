@@ -1,0 +1,244 @@
+{
+  "checks": [
+    {
+      "label": "Direct step11 cannot bypass gate4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "Builder verified/native ready",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "Builder verified/native ready",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "Mixed builder1 load identity",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "Mixed builder1 actual clicked tile identity",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "Mixed builder1 composed name exact",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "Mixed builder1 correct native check",
+      "passed": true,
+      "detail": "feedback success"
+    },
+    {
+      "label": "Mixed builder1 explanation supplied",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "Builder verified/native ready",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "Builder verified/native ready",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "Mixed builder2 load identity",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "Mixed builder2 actual clicked tile identity",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "Mixed builder2 composed name exact",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "Mixed builder2 correct native check",
+      "passed": true,
+      "detail": "feedback success"
+    },
+    {
+      "label": "Mixed builder2 explanation supplied",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "Two Builder successes not enough",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "Mixed2Builder+1Repair does not unlock",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "Mixed pergame evidence survives cold refresh",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "Builder verified/native ready",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "Builder verified/native ready",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "Returning to partial Builder resumes third",
+      "passed": false,
+      "detail": null
+    }
+  ],
+  "solved": [
+    {
+      "label": "Mixed builder1",
+      "game": "builder",
+      "moleculeId": "methane",
+      "name": "μεθάνιο",
+      "load": {
+        "channel": "namelecule-builder-lesson-v1",
+        "session": "12vd6mx0rxqsg805pd3211wnwgkq",
+        "command": "load",
+        "requestId": 1,
+        "attemptId": "builder-alkanes-unbranched-34431982043167113709",
+        "moleculeId": "methane",
+        "round": {
+          "roundId": "lesson-builder-alkanes-unbranched-34431982043167113709-0",
+          "moleculeId": "methane",
+          "correctName": "μεθάνιο",
+          "series": "alkanes",
+          "parentLength": 1,
+          "pieces": [
+            {
+              "text": "μεθ",
+              "separatorBefore": "",
+              "role": "slot-5"
+            },
+            {
+              "text": "άν",
+              "separatorBefore": "",
+              "role": "slot-6"
+            },
+            {
+              "text": "ιο",
+              "separatorBefore": "",
+              "role": "slot-9"
+            }
+          ],
+          "representations": [
+            "condensed",
+            "expanded",
+            "3d"
+          ],
+          "vocabulary": {
+            "roots": [
+              "μεθ",
+              "αιθ",
+              "προπ",
+              "βουτ",
+              "πεντ"
+            ]
+          }
+        },
+        "bankSeed": "lesson-builder-alkanes-unbranched-34431982043167113709-0:bank",
+        "initialState": {
+          "answer": [],
+          "selected": null,
+          "attempts": 0,
+          "submitted": false,
+          "solved": false
+        },
+        "explanation": "Το «μεθ» δηλώνει το ένα άτομο C της κύριας αλυσίδας. Το μεθάνιο έχει ένα άτομο C και δεν έχει δεσμούς μεταξύ ατόμων C. Ανήκει στους κορεσμένους υδρογονάνθρακες, δηλαδή στα αλκάνια, και το «ιο» δηλώνει τη χημική τάξη των υδρογονανθράκων."
+      }
+    },
+    {
+      "label": "Mixed builder2",
+      "game": "builder",
+      "moleculeId": "pentane",
+      "name": "πεντάνιο",
+      "load": {
+        "channel": "namelecule-builder-lesson-v1",
+        "session": "12vd6mx0rxqsg805pd3211wnwgkq",
+        "command": "load",
+        "requestId": 2,
+        "attemptId": "builder-alkanes-unbranched-34431982043167113709",
+        "moleculeId": "pentane",
+        "round": {
+          "roundId": "lesson-builder-alkanes-unbranched-34431982043167113709-1",
+          "moleculeId": "pentane",
+          "correctName": "πεντάνιο",
+          "series": "alkanes",
+          "parentLength": 5,
+          "pieces": [
+            {
+              "text": "πεντ",
+              "separatorBefore": "",
+              "role": "slot-5"
+            },
+            {
+              "text": "άν",
+              "separatorBefore": "",
+              "role": "slot-6"
+            },
+            {
+              "text": "ιο",
+              "separatorBefore": "",
+              "role": "slot-9"
+            }
+          ],
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ],
+          "vocabulary": {
+            "roots": [
+              "μεθ",
+              "αιθ",
+              "προπ",
+              "βουτ",
+              "πεντ"
+            ]
+          }
+        },
+        "bankSeed": "lesson-builder-alkanes-unbranched-34431982043167113709-1:bank",
+        "initialState": {
+          "answer": [],
+          "selected": null,
+          "attempts": 0,
+          "submitted": false,
+          "solved": false
+        },
+        "explanation": "Το «πεντ» δηλώνει τα 5 άτομα C της κύριας αλυσίδας. Το «άν» δηλώνει τους απλούς δεσμούς μεταξύ ατόμων C και το «ιο» τη χημική τάξη των υδρογονανθράκων."
+      }
+    },
+    {
+      "label": "Mixed repair1",
+      "game": "repair",
+      "moleculeId": "propane",
+      "kind": "replace"
+    }
+  ],
+  "conditions": "Owned headless Firefox; actual production UI, native viewer and verified chemistry Worker. Read-only preload observes bridge loads for deterministic test inputs; trusted pointer input submits answers.",
+  "passed": false,
+  "failure": "AssertionError(('Returning to partial Builder resumes third', None))",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/alkanes-game-choice-20261111/browser/matrix.py\", line 81, in <module>\n    choose('builder');builder_ready();check(ev('document.getElementById(\"nlQuizProgress\").textContent')=='Κουίζ 3/3','Returning to partial Builder resumes third');choose('repair');wait('!!document.querySelector(\".diagram-image.is-ready\")');click('.round-next button');wait('!!document.querySelector(\".diagram-image.is-ready\")')\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/alkanes-game-choice-20261111/browser/matrix.py\", line 6, in check\n    if not ok:raise AssertionError((label,detail))\nAssertionError: ('Returning to partial Builder resumes third', None)\n"
+}

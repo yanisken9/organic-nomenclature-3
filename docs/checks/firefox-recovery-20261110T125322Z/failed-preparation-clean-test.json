@@ -1,0 +1,11 @@
+{
+  "automatedChecks": [],
+  "physicalGreenMenuTestCompleted": false,
+  "personalBrowserRestarted": false,
+  "profileOverrides": [
+    "default-browser prompt off",
+    "homepage migration ignored",
+    "aboutwelcome off"
+  ],
+  "failure": "Traceback (most recent call last):\n  File \"/private/tmp/firefox-recovery-20261110T125322Z/clean-driver.py\", line 19, in <module>\n    ev('document.title=\"ΔΟΚΙΜΗ FIREFOX — καθαρό παράθυρο\"; document.body.innerHTML=\"<main style=\\\"font:24px system-ui;max-width:850px;margin:55px auto;padding:25px;color:#214e51\\\"><h1>Καθαρό δοκιμαστικό παράθυρο Firefox</h1><p>Αυτή είναι κενή σελίδα ελέγχου, χωρίς Namelecule ή πρόσθετα.</p><p>Δοκίμασε το πράσινο κουμπί πάνω αριστερά όπως συνήθως. Έπειτα πάτησε στο κουμπί παρακάτω.</p><button id=\\\"probe\\\" style=\\\"font:24px system-ui;padding:18px\\\">Έλεγχος απόκρισης: 0</button><p id=\\\"tick\\\"></p></main>\";window.__clicks=0;window.__ticks=0;document.querySelector(\"#probe\").onclick=()=>{document.querySelector(\"#probe\").textContent=\"Έλεγχος απόκρισης: \"+(++__clicks)};setInterval(()=>{document.querySelector(\"#tick\").textContent=\"Ο έλεγχος λειτουργεί: \"+(++__ticks)},1000);true')\n  File \"bounded-owned-diagnostic\", line 43, in ev\nRuntimeError: {'columnNumber': 39, 'exception': {'type': 'error'}, 'lineNumber': 305, 'stackTrace': {'callFrames': []}, 'text': 'SyntaxError: unexpected token: identifier'}\n"
+}

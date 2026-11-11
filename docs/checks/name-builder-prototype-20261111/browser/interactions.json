@@ -1,0 +1,309 @@
+{
+  "checks": [
+    {
+      "label": "Initial real engine target ethane",
+      "detail": null
+    },
+    {
+      "label": "Target name hidden in learner viewer",
+      "detail": {
+        "frame": {
+          "x": 83,
+          "y": 456.76666259765625,
+          "width": 623.7166748046875,
+          "height": 385,
+          "top": 456.76666259765625,
+          "right": 706.7166748046875,
+          "bottom": 841.7666625976562,
+          "left": 83
+        },
+        "child": [
+          {
+            "selector": "#viewerCol",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 624,
+              "height": 385,
+              "top": 0,
+              "right": 624,
+              "bottom": 385,
+              "left": 0
+            }
+          },
+          {
+            "selector": "#jsmeNomeclatureDIV",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 624,
+              "height": 385,
+              "top": 0,
+              "right": 624,
+              "bottom": 385,
+              "left": 0
+            }
+          },
+          {
+            "selector": "#jsmeNomeclatureSVG",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 624,
+              "height": 385,
+              "top": 0,
+              "right": 624,
+              "bottom": 385,
+              "left": 0
+            }
+          },
+          {
+            "selector": "#jsmeNomeclatureSVG svg",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 624,
+              "height": 385,
+              "top": 0,
+              "right": 624,
+              "bottom": 385,
+              "left": 0
+            }
+          }
+        ],
+        "host": {
+          "started": true,
+          "stopped": false,
+          "lastId": 1,
+          "revision": 1,
+          "selectedMol": "ethane",
+          "representation": "condensed",
+          "ready": true
+        },
+        "bodyText": "CH3CH3"
+      }
+    },
+    {
+      "label": "Trusted mouse drag adds correct tile",
+      "detail": {
+        "sx": 684,
+        "sy": 816,
+        "tx": 1074,
+        "ty": 302
+      }
+    },
+    {
+      "label": "Expanded switch preserves exact answer and bank",
+      "detail": null
+    },
+    {
+      "label": "Actual requested3D graph ready",
+      "detail": null
+    },
+    {
+      "label": "3D switch preserves partial answer",
+      "detail": null
+    },
+    {
+      "label": "Skeletal switch preserves partial answer",
+      "detail": null
+    },
+    {
+      "label": "Missing tile attempt rejected",
+      "detail": null
+    },
+    {
+      "label": "Wrong order assembled by native clicks",
+      "detail": null
+    },
+    {
+      "label": "Wrong order rejected",
+      "detail": null
+    },
+    {
+      "label": "Native ArrowLeft reorders selected tile",
+      "detail": null
+    },
+    {
+      "label": "Correct order receives success",
+      "detail": null
+    },
+    {
+      "label": "Candidate exactly matches engine full target",
+      "detail": null
+    },
+    {
+      "label": "Solved answer and feedback survive representation switch",
+      "detail": null
+    },
+    {
+      "label": "Next molecule starts a fresh attempt",
+      "detail": null
+    },
+    {
+      "label": "390px has no horizontal overflow",
+      "detail": null
+    }
+  ],
+  "completed": true,
+  "round": {
+    "channel": "namelecule-name-builder-v1",
+    "session": "1fddf02822eed05ba1f391519a1ab54d469a",
+    "requestId": 1,
+    "roundId": "1fddf02822eed05ba1f391519a1ab54d469a-1",
+    "moleculeId": "ethane",
+    "type": "round",
+    "representation": "condensed",
+    "correctName": "αιθάνιο",
+    "pieces": [
+      {
+        "text": "αιθ",
+        "separatorBefore": "",
+        "role": "comp5"
+      },
+      {
+        "text": "άν",
+        "separatorBefore": "",
+        "role": "comp6"
+      },
+      {
+        "text": "ιο",
+        "separatorBefore": "",
+        "role": "comp9"
+      }
+    ],
+    "representations": [
+      "condensed",
+      "expanded",
+      "skeletal",
+      "3d"
+    ],
+    "series": "alkanes",
+    "parentLength": 2,
+    "vocabulary": {
+      "roots": [
+        "μεθ",
+        "αιθ",
+        "προπ",
+        "βουτ",
+        "πεντ",
+        "εξ",
+        "επτ",
+        "οκτ",
+        "εννε",
+        "δεκ",
+        "ενδεκ",
+        "δωδεκ",
+        "δεκατρι",
+        "δεκατεσσερ",
+        "δεκαπεντ",
+        "δεκαεξ",
+        "δεκαεπτ",
+        "δεκαοκτ",
+        "δεκαεννι",
+        "εικοσ"
+      ]
+    }
+  },
+  "initialGeometry": {
+    "frame": {
+      "x": 83,
+      "y": 456.76666259765625,
+      "width": 623.7166748046875,
+      "height": 385,
+      "top": 456.76666259765625,
+      "right": 706.7166748046875,
+      "bottom": 841.7666625976562,
+      "left": 83
+    },
+    "child": [
+      {
+        "selector": "#viewerCol",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 624,
+          "height": 385,
+          "top": 0,
+          "right": 624,
+          "bottom": 385,
+          "left": 0
+        }
+      },
+      {
+        "selector": "#jsmeNomeclatureDIV",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 624,
+          "height": 385,
+          "top": 0,
+          "right": 624,
+          "bottom": 385,
+          "left": 0
+        }
+      },
+      {
+        "selector": "#jsmeNomeclatureSVG",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 624,
+          "height": 385,
+          "top": 0,
+          "right": 624,
+          "bottom": 385,
+          "left": 0
+        }
+      },
+      {
+        "selector": "#jsmeNomeclatureSVG svg",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 624,
+          "height": 385,
+          "top": 0,
+          "right": 624,
+          "bottom": 385,
+          "left": 0
+        }
+      }
+    ],
+    "host": {
+      "started": true,
+      "stopped": false,
+      "lastId": 1,
+      "revision": 1,
+      "selectedMol": "ethane",
+      "representation": "condensed",
+      "ready": true
+    },
+    "bodyText": "CH3CH3"
+  },
+  "dragPoints": {
+    "sx": 684,
+    "sy": 816,
+    "tx": 1074,
+    "ty": 302
+  },
+  "dragEvents": [
+    {
+      "type": "pointerdown",
+      "target": "tile-button",
+      "text": "αιθ",
+      "x": 684,
+      "y": 816,
+      "types": null
+    },
+    {
+      "type": "mousedown",
+      "target": "tile-button",
+      "text": "αιθ",
+      "x": 684,
+      "y": 816,
+      "types": null
+    }
+  ],
+  "javascriptErrors": []
+}

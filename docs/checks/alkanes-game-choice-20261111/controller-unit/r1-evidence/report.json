@@ -1,0 +1,44 @@
+{
+  "date": "2026-11-11",
+  "status": "Owned source target frozen for root integration and consolidated independent review",
+  "role": "Developer subagent /root/implement_choice_controller; not independent Reviewer",
+  "sourceSHA256": {
+    "js/namelecule-quiz-checkpoints.js": "0f0e03b69cd6f4b4d243d1e1b102466262ba92be873a4844a8270205f52983f3",
+    "js/namelecule-game-repair.js": "fb678db2bc750473653ed20fd176c9fb7d2824ef2ed68716a1baa40044af39b7"
+  },
+  "approvedScope": "Controller optional adapter migration, labels, alternate-game practice and close callbacks; supported final-action focus; opt-in third Repair action.",
+  "checks": {
+    "controller": 318,
+    "repairRenderer": 243,
+    "runtime": "System JavaScriptCore",
+    "legacyRendererSnapshots": "30 across all six static rounds, default UI structurally equal except nonvisual continuation marker",
+    "syntax": "Actual controller and renderer source parsed/executed by unit harnesses."
+  },
+  "behavior": [
+    "Migration only when exact current sessionStorage key is absent; explicitly present reset, empty or malformed current values block migration.",
+    "Projected old-key reader requires version1/full content signature and never overwrites the old record; converted progress normalized through current registered adapters.",
+    "Required/practice storage, preview, cancellation, direct gate resolution and storage denial preserve prior behavior in bounded controller doubles.",
+    "Optional alternate-game uses separate practice record and createPractice third argument {game}; child close is guarded and never advances or grants access.",
+    "Header exit suppression requires verified completion, explicit readiness and an actual enabled visible footer, with accepted focus handoff before hiding a focused header action.",
+    "Legacy Repair callers receive the same actions/UI plus a nonvisual continuation marker; third action exists only when onOtherGame supplied."
+  ],
+  "limitations": [
+    "DOM, focus, storage, transport, adapter canonical trust and async preparation are declared doubles; actual renderer state evaluation is production code.",
+    "No real browser, actual iframe/Worker messaging, generated chemistry or full active-lesson replay performed by this subagent; root and other assigned roles own integration.",
+    "No independent review yet; root will consolidate after all sources are frozen."
+  ],
+  "otherChanges": "No core, notes, git/index, commit, push or publication changes by this agent.",
+  "artifacts": {
+    "run.py": "0f6dca13a5a168bbd48a2d8deab35f17d0c6f1bf750bbfe735d973cb483aca4e",
+    "cases.js": "2a711a412ccbf29f3506c418427e11df470395cd11197c1ddbbc31e4303508ff",
+    "renderer-cases.js": "788a5b2d20d0fe33afc479c6b15df26e1436e62f72a40da6bd5da429e09caecf",
+    "controller-harness.js": "d01ee9155080ce480c2d9110f10409c711bb2126f330e52ad5459cd21929b852",
+    "renderer-harness.js": "33bb43609c3b7f7163175e2d285e17c8b2c5fb9d2872f9513a68cb0f5fe6dbbd",
+    "renderer-results.json": "2f9d20beb5cdf59bf4bb2caf710f90995df6b6ac63a0064d2e7484818e35b655",
+    "controller-results.json": "ae66b9004a631c1cba576f977838e449588dc70d7058356f28b3dd3912f77872",
+    "manifest.json": "8b98779f8c89b494fdf62c5fc716bbebc16827b82a584cb728429e9638f09d8c",
+    "implementation.diff": "37e8360ec142447109b5b630e9420434bfef4b7fe0959b412cd8c2593177a313",
+    "fake-dom.js": "73401c82b7c79daccc0355e37fc679773102f85e1e3a0b40a0312ab71846b5e5",
+    "choice-cases.js": "0c795782ab6da8b2adb883fde751b470d754c61df1f5b98c823bfd42fb85154d"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "status": "passed",
+  "syntax": true,
+  "checkCount": 30,
+  "checks": [
+    "lesson-ready-identity",
+    "lesson-mode-hides-next",
+    "wrong-parent-source-ignored",
+    "wrong-origin-and-session-ignored",
+    "canonical-load-native-command",
+    "duplicate-request-ignored",
+    "native-roles-ignored-bounded-root-prefix-accepted",
+    "finite-content-body-size",
+    "wrong-check-records-evidence",
+    "answer-edit-clears-submission-preserves-attempts",
+    "representation-preserves-answer",
+    "successful-check-records-second-attempt",
+    "explanation-appended-as-plain-text",
+    "lesson-reveal-uses-body-coordinates",
+    "escape-exit-contains-identities",
+    "native-arrow-keys-do-not-exit-lesson",
+    "native-focused-escape-exits-lesson",
+    "submitted-correct-restore-rechecks-and-locks",
+    "unsubmitted-correct-restore-does-not-solve",
+    "duplicate-answer-id-rejected",
+    "unsupported-topic-molecule-rejected",
+    "native-canonical-mismatch-fails-closed",
+    "stale-native-response-does-not-enable",
+    "latest-request-loads",
+    "pagehide-stops-native-and-late-events",
+    "parent-load-queued-before-native-ready",
+    "queued-parent-load-activates-after-native-ready",
+    "standalone-default-preserved-{\"top\":true}",
+    "standalone-default-preserved-{\"search\":\"\"}",
+    "standalone-default-preserved-{\"search\":\"?lessonSession=bad\"}"
+  ],
+  "limitations": [
+    "Mock DOM and synthetic message/native rounds only; no real browser, trusted input, chemistry, viewer, layout or parent persistence evidence."
+  ]
+}

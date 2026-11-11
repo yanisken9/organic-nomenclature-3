@@ -1,0 +1,35 @@
+{
+  "recordedUTC": "2026-11-10T13:00:21.340620+00:00",
+  "installedFirefox": "159.0.1",
+  "installedBuild": "15926.11.2",
+  "macOS": "14.8.9",
+  "primaryReferences": [
+    {
+      "url": "https://support.mozilla.org/en-US/kb/firefox-hangs-or-not-responding",
+      "role": "General hang troubleshooting, not diagnosis of this native menu signature."
+    },
+    {
+      "url": "https://support.mozilla.org/en-US/kb/diagnose-firefox-issues-using-troubleshoot-mode",
+      "role": "Supported reversible test to compare extensions/themes/acceleration/window customizations."
+    },
+    {
+      "url": "https://bugzilla.mozilla.org/show_bug.cgi?id=2051071",
+      "role": "Different native fullscreen/tab-detach Dock-XPC hang, fixed155; not evidence of this showMenu issue in159.0.1."
+    }
+  ],
+  "exactPublishedBugMatchEstablished": false,
+  "currentSampleFinding": "Personal57800 mainthread inside AppKit showMenu/_showMenu:timestamp during3ssample, matching previously recorded personal-instance samples.",
+  "unknowns": [
+    "The initial user action or other trigger is not captured.",
+    "Native nested event loop alone does not prove deadlock, Firefox-only defect, OS-only defect, extension interference, or complete absence of website influence.",
+    "Automated fullscreen transitions bypass the physical green-button hover menu.",
+    "Temporary workaround avoiding that menu would not be a verified permanent cure."
+  ],
+  "personalSettingsChanged": false,
+  "officialStableVersion": {
+    "version": "159.0.1",
+    "checkedUTC": "2026-11-10T13:01:34.945451+00:00",
+    "source": "https://product-details.mozilla.org/1.0/firefox_versions.json",
+    "installedMatches": true
+  }
+}

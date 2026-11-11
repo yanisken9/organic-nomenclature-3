@@ -1,0 +1,141 @@
+{
+  "before": {
+    "calls": [
+      {
+        "command": "frank off;load mols/nomeclature-moc2/ethane_3D.sdf; select all; center selected;script spt/init-55.spt;",
+        "result": null
+      },
+      {
+        "command": " select all and not _Xx;  spacefill 24%; wireframe 0.13;set labelFront off;select none",
+        "result": null
+      },
+      {
+        "command": "select all;  selectionHalos off; color bonds none; color atoms none;",
+        "result": null
+      },
+      {
+        "command": "select all; labels %e;select none;",
+        "result": null
+      },
+      {
+        "command": " set echo  off;",
+        "result": null
+      },
+      {
+        "command": "select all; labels %e;select none;",
+        "result": null
+      },
+      {
+        "command": "rotate  off;",
+        "result": null
+      },
+      {
+        "command": "select all;  selectionHalos off; color bonds none; color atoms none;",
+        "result": null
+      },
+      {
+        "command": "select all; labels %e;select none;",
+        "result": null
+      },
+      {
+        "command": " set echo  off;",
+        "result": null
+      },
+      {
+        "command": "select all; labels %e;select none;",
+        "result": null
+      },
+      {
+        "command": "rotate  off;",
+        "result": null
+      },
+      {
+        "command": "nameBuilderRevision = 2;",
+        "result": null
+      }
+    ],
+    "selected": "ethane",
+    "name": "αιθάνιο",
+    "svg": true,
+    "graph": true,
+    "host": {
+      "started": true,
+      "stopped": false,
+      "lastId": 2,
+      "revision": 2,
+      "selectedMol": "ethane",
+      "representation": "3d",
+      "ready": false
+    },
+    "camel": "",
+    "lower": ""
+  },
+  "asyncReturn": null,
+  "afterAsync": {
+    "value": 812,
+    "calls": [
+      {
+        "command": "frank off;load mols/nomeclature-moc2/ethane_3D.sdf; select all; center selected;script spt/init-55.spt;",
+        "result": null
+      },
+      {
+        "command": " select all and not _Xx;  spacefill 24%; wireframe 0.13;set labelFront off;select none",
+        "result": null
+      },
+      {
+        "command": "select all;  selectionHalos off; color bonds none; color atoms none;",
+        "result": null
+      },
+      {
+        "command": "select all; labels %e;select none;",
+        "result": null
+      },
+      {
+        "command": " set echo  off;",
+        "result": null
+      },
+      {
+        "command": "select all; labels %e;select none;",
+        "result": null
+      },
+      {
+        "command": "rotate  off;",
+        "result": null
+      },
+      {
+        "command": "select all;  selectionHalos off; color bonds none; color atoms none;",
+        "result": null
+      },
+      {
+        "command": "select all; labels %e;select none;",
+        "result": null
+      },
+      {
+        "command": " set echo  off;",
+        "result": null
+      },
+      {
+        "command": "select all; labels %e;select none;",
+        "result": null
+      },
+      {
+        "command": "rotate  off;",
+        "result": null
+      },
+      {
+        "command": "nameBuilderRevision = 2;",
+        "result": null
+      },
+      {
+        "command": "namebuilderasync = 812;",
+        "result": null
+      }
+    ],
+    "ready": true
+  },
+  "camelWait": {
+    "status": "5,scriptTerminated,1,Jmol script terminated successfully\n3,scriptEcho,0,99\n2,scriptStatus,0,script 23 started\n4,scriptStatus,0,Script completed\n6,scriptStatus,0,Jmol script terminated\n1,scriptStarted,23,nameBuilderRevision = 99; print nameBuilderRevision;\n",
+    "camel": 99,
+    "lower": 99
+  }
+}

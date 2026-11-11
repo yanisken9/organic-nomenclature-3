@@ -1,0 +1,66 @@
+{
+  "date": "2026-11-11",
+  "status": "Read-only feature planning; no application edits approved yet",
+  "request": "Alternative Workshop/NameBuilder at both alkane gates,3correct distinct molecules in one game unlock; afterunlock continue theory/othergame/moretriples.",
+  "activeScenario": "scenarios/alkanes-user-3.scenario.json",
+  "steps": 12,
+  "gates": [
+    {
+      "step": 4,
+      "id": "alkanes-unbranched-workshop-v1",
+      "type": "generated-name-repair-set",
+      "recipe": {
+        "version": 1,
+        "setId": "alkanes-unbranched",
+        "difficulty": "basic",
+        "roundCount": 3,
+        "generatorVersion": "1.0.0",
+        "catalogRevision": "275d537b19f3ef0791c97d8d78c127f541a0579038ef1e8d65dadde611845690",
+        "engineSHA256": "3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306"
+      }
+    },
+    {
+      "step": 11,
+      "id": "alkanes-branched-workshop-v1",
+      "type": "generated-name-repair-set",
+      "recipe": {
+        "version": 1,
+        "setId": "alkanes-branched",
+        "difficulty": "basic",
+        "roundCount": 3,
+        "generatorVersion": "1.0.0",
+        "catalogRevision": "275d537b19f3ef0791c97d8d78c127f541a0579038ef1e8d65dadde611845690",
+        "engineSHA256": "3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306"
+      }
+    }
+  ],
+  "catalogMoleculeIDs": [
+    "methane",
+    "ethane",
+    "propane",
+    "butane",
+    "pentane",
+    "methyl_2_pentane",
+    "dimethyl_2_3_butane",
+    "ethyl_3_dimethyl_2_5_hexane"
+  ],
+  "desktopExportMapping": "/Users/yannisskendros/Desktop/αρχεία  json/9Αλκάνια.json",
+  "desktopCopyExists": true,
+  "activeSHA256": "607a530a2d3ba151026517c61d6f7a31644e15abf82a687e778b7453d80089b7",
+  "desktopSHA256": "607a530a2d3ba151026517c61d6f7a31644e15abf82a687e778b7453d80089b7",
+  "coreHashes": {
+    "js/mulermoc-nom-core-42.js": "a7b95d7fd9eb8589c2f441205ddd3751bd6da9bf9834fa60d9a5b5d2d2aa2b83",
+    "js/mulermoc-nom-core-43.js": "93373c8ea49d6489350c4c7eee36d444b0f6ff5c13c500aa9662d4997575ac21",
+    "js/mulermoc-nom-core-44.js": "3bb8773be785992ec581d4cdd11a58a6bb5a833ed429ae07287839b436e523e1",
+    "js/mulermoc-nom-core-45.js": "dde5fb6350a0374e1ebda69e0870cbfce0bbed027b8219f33bc4de3c4cf9ae74",
+    "js/mulermoc-nom-core-48.js": "37dad911ed73af0768fc922186cb94e71df7df1144b2c1e75aee4c9202ce6c0d",
+    "js/mulermoc-nom-core-49.js": "ae85dd22b94292ed539ff2a858a1a6fe3672af90298662e5c6860fb411a65951",
+    "js/mulermoc-nom-core-50.js": "0f79b5af20b9c3b4504673876abc03b6c162af316c33dff55fd55e0c22a43fd9",
+    "js/mulermoc-nom-core-51.js": "096d617853646de0dfd67bcbde3e32252aebcb98e7525b05e6f7e71ccb48a5fc",
+    "js/mulermoc-nom-core-52.js": "d2138418ff630ab77e578b80ca8ba3a10cc1b877c3ab8c0e5c2735ffcd1f24a2",
+    "js/mulermoc-nom-core-54.js": "8f3e5f76d96322faf7cf9251f4cae3eca204fe2f82bf5754fdce6ffc4cd5d5a9",
+    "js/mulermoc-nom-core-55.js": "6cbdbd0ce60f5d66ff3e6925cdfd48e470764baa02b6263f325eff356df5e270"
+  },
+  "implementationStarted": false,
+  "commitPushPublication": false
+}

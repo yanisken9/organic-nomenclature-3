@@ -1,0 +1,2545 @@
+{
+  "samples": [
+    {
+      "svgPresent": true,
+      "name": "αιθάνιο",
+      "graphReady": true,
+      "markerVars": {
+        "_animmovie": false,
+        "_animtimesec": 0,
+        "_applet": true,
+        "_atomhovered": -1,
+        "_currentfilenumber": 1,
+        "_currentframe": 0,
+        "_currentmodelnumberinfile": 1,
+        "_currentmorphframe": 0,
+        "_depthplane": "{-23.261102372327354 109.3271811499385 -22.311265604842383 311}",
+        "_errormessage": "command expected\n----line 35 command 19 of http://127.0.0.1:65312/spt/init-55.spt:\n         geometry<<<< << quality remains provisional . set minimizationCriterion 0.01\n----line 1 command 2 of http://127.0.0.1:65312/spt/init-55.spt:\n         script \"spt/init-55.spt\"",
+        "_filetype": "Mol",
+        "_firstframe": "1.1",
+        "_frameid": 1000001,
+        "_headless": false,
+        "_height": 385,
+        "_hoverenabled": false,
+        "_hoverlabel": "%U",
+        "_is2d": true,
+        "_ismovie": false,
+        "_jsv": false,
+        "_lastframe": "1.1",
+        "_loadpoint": 3,
+        "_loadscript": "",
+        "_memory": "0.0/0.0",
+        "_modelfile": "http://127.0.0.1:65312/mols/nomeclature-moc2/ethane_3D.sdf",
+        "_modelindex": 0,
+        "_modelname": "6324",
+        "_modelnumber": "1.1",
+        "_modeltitle": "6324",
+        "_modeltype": "mol",
+        "_morphcount": 0,
+        "_multitouchclient": false,
+        "_multitouchserver": false,
+        "_navigating": false,
+        "_nprocessors": 1,
+        "_pickinfo": "",
+        "_restrict": "\"ALL\"",
+        "_signedapplet": true,
+        "_slabplane": "{-23.261102372327354 109.3271811499385 -22.311265604842383 -312}",
+        "_usecommandthread": false,
+        "_version": 1604023,
+        "_versiondate": "16.4.23  2026-08-24 10:15",
+        "_width": 624,
+        "allowembeddedscripts": true,
+        "allowgestures": false,
+        "allowkeystrokes": false,
+        "allowmodelkit": true,
+        "allowmoveatoms": false,
+        "allowmultitouch": true,
+        "allowrotateselected": false,
+        "ambientpercent": 45,
+        "animationfps": 10,
+        "animationmode": "once",
+        "animframecallback": "",
+        "antialiasdisplay": true,
+        "antialiasimages": true,
+        "antialiastranslucent": true,
+        "appendnew": true,
+        "appletproxy": "",
+        "appletreadycallback": "Jmol._readyCallback",
+        "applysymmetrytobonds": false,
+        "atommovedcallback": "",
+        "atompicking": true,
+        "atomtypes": "",
+        "audiocallback": "",
+        "autobond": true,
+        "autofps": false,
+        "axesmode": 0,
+        "axesoffset": 0,
+        "axesorientationrasmol": false,
+        "axesposition": false,
+        "axesscale": 2,
+        "axeswindow": true,
+        "axis1color": "[xff0000]",
+        "axis2color": "[x008000]",
+        "axis3color": "[x0000ff]",
+        "backgroundcolor": "[xffffff]",
+        "backgroundmodel": "",
+        "bondingversion": 0,
+        "bondmodeor": false,
+        "bondpicking": false,
+        "bondradiusmilliangstroms": 150,
+        "bondtolerance": 0.45,
+        "calculationcallback": "",
+        "cameradepth": 3,
+        "cartoonbaseedges": false,
+        "cartoonblockheight": 0.5,
+        "cartoonblocks": false,
+        "cartoonfancy": false,
+        "cartoonladders": false,
+        "cartoonrockets": false,
+        "cartoonsteps": false,
+        "celshading": false,
+        "celshadingpower": 10,
+        "chaincasesensitive": false,
+        "ciprule6full": false,
+        "clickcallback": "",
+        "colorrasmol": false,
+        "contextdepthmax": 100,
+        "currentlocalpath": "",
+        "dataseparator": "~~~",
+        "debugscript": false,
+        "defaultanglelabel": "%VALUE %UNITS",
+        "defaultcolorscheme": "jmol",
+        "defaultdirectory": "http://127.0.0.1:65312/",
+        "defaultdirectorylocal": "",
+        "defaultdistancelabel": "%VALUE %UNITS",
+        "defaultdrawarrowscale": 0.5,
+        "defaultdropscript": "zap; load SYNC \"%FILE\";if (%ALLOWCARTOONS && _loadScript == '' && defaultLoadScript == '' && _filetype == 'Pdb') {if ({(protein or nucleic)&*/1.1} && {*/1.1}[1].groupindex != {*/1.1}[0].groupindex){select protein or nucleic;cartoons only;}if ({visible && cartoons > 0}){color structure}else{wireframe -0.1};if (!{visible}){select !visible;wireframe 0.15;color none;select !visible;spacefill 23%};select *}",
+        "defaultlabelpdb": "%m%r",
+        "defaultlabelxyz": "%a",
+        "defaultlattice": "{0 0 0}",
+        "defaultloadfilter": "",
+        "defaultloadscript": "",
+        "defaults": "Jmol",
+        "defaultstructuredssp": true,
+        "defaulttorsionlabel": "%VALUE %UNITS",
+        "defaulttranslucent": 0.5,
+        "defaultvdw": "Auto",
+        "delaymaximumms": 0,
+        "depth": 0,
+        "diffusepercent": 84,
+        "dipolescale": 1,
+        "disablepopupmenu": true,
+        "displaycellparameters": true,
+        "dotdensity": 3,
+        "dotscale": 1,
+        "dotsselectedonly": false,
+        "dotsurface": true,
+        "doubleprecision": false,
+        "dragdropcallback": "",
+        "dragselected": false,
+        "drawfontsize": 16,
+        "drawhover": false,
+        "drawpicking": false,
+        "dsspcalculatehydrogenalways": true,
+        "echocallback": "",
+        "elementkey": false,
+        "ellipsoidarcs": false,
+        "ellipsoidarrows": false,
+        "ellipsoidaxes": false,
+        "ellipsoidaxisdiameter": 0.02,
+        "ellipsoidball": true,
+        "ellipsoiddotcount": 200,
+        "ellipsoiddots": false,
+        "ellipsoidfill": false,
+        "energyunits": "kJ",
+        "errorcallback": "",
+        "evalcallback": "",
+        "exportdrivers": "Idtf;Maya;Povray;Vrml;X3d;Stl;Tachyon;Obj",
+        "exportscale": 0,
+        "fontcaching": true,
+        "fontscaling": false,
+        "forceautobond": false,
+        "forcefield": "MMFF",
+        "fractionalrelative": true,
+        "gestureswipefactor": 1,
+        "greyscalerendering": false,
+        "hbondhxdistancemaximum": 2.5,
+        "hbondsangleminimum": 90,
+        "hbondsbackbone": false,
+        "hbondsdistancemaximum": 3.25,
+        "hbondsrasmol": true,
+        "hbondssolid": false,
+        "helixstep": 1,
+        "helppath": "https://chemapps.stolaf.edu/jmol/docs/index.htm",
+        "hermitelevel": 0,
+        "hiddenlinesdashed": false,
+        "hidenameinpopup": false,
+        "hidenavigationpoint": false,
+        "hidenotselected": false,
+        "highresolution": false,
+        "historylevel": 0,
+        "hovercallback": "",
+        "hoverdelay": 0.5,
+        "hoverlabel": "",
+        "imagecallback": "",
+        "imagestate": true,
+        "infofontsize": 20,
+        "iskiosk": false,
+        "isosurfacekey": false,
+        "isosurfacepropertysmoothing": true,
+        "isosurfacepropertysmoothingpower": 7,
+        "jmolinjspecview": true,
+        "justifymeasurements": false,
+        "labelkey": false,
+        "labelpointerwidth": 2,
+        "language": "el",
+        "legacyautobonding": false,
+        "legacyhaddition": false,
+        "legacyjavafloat": false,
+        "loadatomdatatolerance": 0.01,
+        "loadformat": "https://files.rcsb.org/download/%FILE.pdb",
+        "loadligandformat": "https://files.rcsb.org/ligands/download/%FILE.cif",
+        "loadstructcallback": "",
+        "logcommands": false,
+        "logfile": "",
+        "loggestures": false,
+        "loglevel": 4,
+        "macrodirectory": "https://chemapps.stolaf.edu/jmol/macros",
+        "measureallmodels": false,
+        "measurecallback": "",
+        "measurementlabels": true,
+        "measurementunits": "nanometers",
+        "meshscale": 1,
+        "messagecallback": "",
+        "messagestylechime": false,
+        "minbonddistance": 0.4,
+        "minimizationcallback": "",
+        "minimizationcriterion": 0.001,
+        "minimizationmaxatoms": 200,
+        "minimizationrefresh": true,
+        "minimizationreportsteps": 10,
+        "minimizationsilent": false,
+        "minimizationsteps": 100,
+        "minpixelselradius": 6,
+        "mode2d": false,
+        "modelkitcallback": "",
+        "modelkitmode": false,
+        "modulationscale": 1,
+        "monitorenergy": false,
+        "mousedragfactor": 1,
+        "mousewheelfactor": 1.15,
+        "multiplebondbananas": false,
+        "multiplebondradiusfactor": 0,
+        "multiplebondspacing": -1,
+        "multiprocessor": false,
+        "navfps": 10,
+        "navigationdepth": 0,
+        "navigationmode": false,
+        "navigationperiodic": false,
+        "navigationslab": 0,
+        "navigationspeed": 5,
+        "navx": 0,
+        "navy": 0,
+        "navz": 0,
+        "nbocharges": true,
+        "nihresolverformat": "https://cactus.nci.nih.gov/chemical/structure",
+        "nmrpredictformat": "https://www.nmrdb.org/service/predictor?POST?molfile=",
+        "nmrurlformat": "https://www.nmrdb.org/new_predictor?POST?molfile=",
+        "nodelay": false,
+        "occupancythreshold": 50,
+        "partialdots": false,
+        "particleradius": 20,
+        "pathforallfiles": "",
+        "pdbaddhydrogens": false,
+        "pdbgetheader": false,
+        "pdbsequential": false,
+        "percentvdwatom": 23,
+        "perspectivedepth": true,
+        "perspectivemodel": 11,
+        "phongexponent": 64,
+        "pickcallback": "",
+        "picked": [],
+        "pickedlist": [],
+        "picking": "identify",
+        "pickingspinrate": 10,
+        "pickingstyle": "toggle",
+        "picklabel": "",
+        "platformspeed": 10,
+        "pointgroupdistancetolerance": 0.2,
+        "pointgrouplineartolerance": 8,
+        "preservestate": true,
+        "propertyatomnumbercolumncount": 0,
+        "propertyatomnumberfield": 0,
+        "propertycolorscheme": "roygb",
+        "propertydatacolumncount": 0,
+        "propertydatafield": 0,
+        "pubchemformat": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/%FILE/SDF?record_type=3d",
+        "quaternionframe": "p",
+        "rangeselected": false,
+        "refreshing": true,
+        "repaintwaitms": 1000,
+        "resizecallback": "",
+        "ribbonaspectratio": 16,
+        "ribbonborder": false,
+        "rocketbarrels": false,
+        "rotationradius": 2.732949950259303,
+        "saveproteinstructurestate": true,
+        "scaleangstromsperinch": 0,
+        "scriptcallback": "",
+        "scriptqueue": true,
+        "scriptreportinglevel": 0,
+        "selectallmodels": true,
+        "selectcallback": "",
+        "selecthetero": true,
+        "selecthydrogen": true,
+        "selectionhalos": false,
+        "servicecallback": "",
+        "sheetsmoothing": 1,
+        "showaxes": false,
+        "showboundbox": false,
+        "showfrank": false,
+        "showhiddenselectionhalos": false,
+        "showhydrogens": true,
+        "showkeystrokes": true,
+        "showmeasurements": true,
+        "showmodulationvectors": false,
+        "showmultiplebonds": true,
+        "shownavigationpointalways": false,
+        "showscript": 0,
+        "showtiming": false,
+        "showunitcell": false,
+        "showunitcelldetails": true,
+        "slab": 100,
+        "slabbyatom": false,
+        "slabbymolecule": false,
+        "slabenabled": false,
+        "slabrange": 0,
+        "smallmoleculemaxatoms": 40000,
+        "smartaromatic": true,
+        "smilesurlformat": "https://cactus.nci.nih.gov/chemical/structure/%FILE/file?format=sdf&get3d=true",
+        "solventprobe": false,
+        "solventproberadius": 1.2,
+        "specular": true,
+        "specularexponent": -6,
+        "specularpercent": 22,
+        "specularpower": 40,
+        "spinfps": 30,
+        "spinx": 0,
+        "spiny": 30,
+        "spinz": 0,
+        "ssbondsbackbone": false,
+        "starwidth": 0.05,
+        "statusreporting": true,
+        "stereodegrees": -5,
+        "strandcount": 5,
+        "strandcountformeshribbon": 7,
+        "strandcountforstrands": 5,
+        "structuremodifiedcallback": "",
+        "strutdefaultradius": 0.3,
+        "strutlengthmaximum": 7,
+        "strutsmultiple": false,
+        "strutspacing": 6,
+        "symmetryhermannmauguin": false,
+        "synccallback": "",
+        "syncmouse": false,
+        "syncscript": false,
+        "syncstereo": false,
+        "testflag1": false,
+        "testflag2": false,
+        "testflag3": false,
+        "testflag4": false,
+        "tracealpha": true,
+        "translucent": true,
+        "twistedsheets": false,
+        "undoauto": false,
+        "undomax": 20,
+        "useminimizationthread": true,
+        "usenumberlocalization": true,
+        "vectorscale": 1,
+        "vectorscentered": false,
+        "vectorsymmetry": false,
+        "vectortrail": 0,
+        "vibrationperiod": 1,
+        "vibrationscale": 1,
+        "visualrange": 5,
+        "waitformoveto": true,
+        "windowcentered": true,
+        "wireframerotation": false,
+        "zdepth": 0,
+        "zerobasedxyzrasmol": false,
+        "zoomenabled": true,
+        "zoomheight": false,
+        "zoomlarge": true,
+        "zshade": false,
+        "zshadepower": 3,
+        "zslab": 50
+      },
+      "scriptReturn": "5,scriptTerminated,1,Jmol script terminated successfully\n3,scriptEcho,0,731\n2,scriptStatus,0,script 5 started\n4,scriptStatus,0,Script completed\n6,scriptStatus,0,Jmol script terminated\n1,scriptStarted,5,namebuilderprobe = 731; print namebuilderprobe;\n",
+      "probeRead": 731,
+      "probeDeprecated": 731,
+      "host": {
+        "started": true,
+        "stopped": false,
+        "lastId": 2,
+        "revision": 2,
+        "selectedMol": "ethane",
+        "representation": "3d",
+        "ready": false
+      },
+      "live": true,
+      "modelInfo": {
+        "canSkipLoad": true,
+        "isTainted": false,
+        "modelCount": 1,
+        "modelCountSelected": 1,
+        "modelIndex": 0,
+        "modelSetHasVibrationVectors": false,
+        "modelSetName": "6324",
+        "modelSetProperties": {
+          "PATH_KEY": ".PATH",
+          "PATH_SEPARATOR": "/"
+        },
+        "models": [
+          {
+            "_ipt": 0,
+            "atomCount": 8,
+            "bondCount": 7,
+            "chainCount": 1,
+            "file": "http://127.0.0.1:65312/mols/nomeclature-moc2/ethane_3D.sdf",
+            "file_model": "1.1",
+            "groupCount": 1,
+            "moleculeCount": 1,
+            "name": "6324",
+            "num": 1,
+            "title": "6324",
+            "vibrationVectors": false
+          }
+        ],
+        "modelsSelected": [
+          0
+        ]
+      },
+      "atoms": [
+        {
+          "_ipt": 0,
+          "atomIndex": 0,
+          "atomno": 1,
+          "bondCount": 4,
+          "clickabilityFlags": 48,
+          "colix": -32762,
+          "color": "[x909090]",
+          "coord": [
+            -0.756,
+            0,
+            0
+          ],
+          "element": "carbon",
+          "elemno": 6,
+          "formalCharge": 0,
+          "info": "C1 #1",
+          "model": "1",
+          "partialCharge": 0,
+          "radius": 0.85,
+          "shape": "tetrahedral",
+          "spacefill": 0.408,
+          "sym": "C",
+          "visibilityFlags": 63,
+          "visible": true,
+          "x": -0.756,
+          "y": 0,
+          "z": 0
+        },
+        {
+          "_ipt": 1,
+          "atomIndex": 1,
+          "atomno": 2,
+          "bondCount": 4,
+          "clickabilityFlags": 48,
+          "colix": -32762,
+          "color": "[x909090]",
+          "coord": [
+            0.756,
+            0,
+            0
+          ],
+          "element": "carbon",
+          "elemno": 6,
+          "formalCharge": 0,
+          "info": "C2 #2",
+          "model": "1",
+          "partialCharge": 0,
+          "radius": 0.85,
+          "shape": "tetrahedral",
+          "spacefill": 0.408,
+          "sym": "C",
+          "visibilityFlags": 63,
+          "visible": true,
+          "x": 0.756,
+          "y": 0,
+          "z": 0
+        },
+        {
+          "_ipt": 2,
+          "atomIndex": 2,
+          "atomno": 3,
+          "bondCount": 1,
+          "clickabilityFlags": 48,
+          "colix": -32767,
+          "color": "[xffffff]",
+          "coord": [
+            -1.1404,
+            0.6586000000000001,
+            0.7845000000000001
+          ],
+          "element": "hydrogen",
+          "elemno": 1,
+          "formalCharge": 0,
+          "info": "H3 #3",
+          "model": "1",
+          "partialCharge": 0,
+          "radius": 0.55,
+          "shape": "",
+          "spacefill": 0.264,
+          "sym": "H",
+          "visibilityFlags": 63,
+          "visible": true,
+          "x": -1.1404,
+          "y": 0.6586000000000001,
+          "z": 0.7845000000000001
+        },
+        {
+          "_ipt": 3,
+          "atomIndex": 3,
+          "atomno": 4,
+          "bondCount": 1,
+          "clickabilityFlags": 48,
+          "colix": -32767,
+          "color": "[xffffff]",
+          "coord": [
+            -1.1404,
+            0.3501,
+            -0.9626
+          ],
+          "element": "hydrogen",
+          "elemno": 1,
+          "formalCharge": 0,
+          "info": "H4 #4",
+          "model": "1",
+          "partialCharge": 0,
+          "radius": 0.55,
+          "shape": "",
+          "spacefill": 0.264,
+          "sym": "H",
+          "visibilityFlags": 63,
+          "visible": true,
+          "x": -1.1404,
+          "y": 0.3501,
+          "z": -0.9626
+        },
+        {
+          "_ipt": 4,
+          "atomIndex": 4,
+          "atomno": 5,
+          "bondCount": 1,
+          "clickabilityFlags": 48,
+          "colix": -32767,
+          "color": "[xffffff]",
+          "coord": [
+            -1.1405,
+            -1.0087,
+            0.1781
+          ],
+          "element": "hydrogen",
+          "elemno": 1,
+          "formalCharge": 0,
+          "info": "H5 #5",
+          "model": "1",
+          "partialCharge": 0,
+          "radius": 0.55,
+          "shape": "",
+          "spacefill": 0.264,
+          "sym": "H",
+          "visibilityFlags": 63,
+          "visible": true,
+          "x": -1.1405,
+          "y": -1.0087,
+          "z": 0.1781
+        },
+        {
+          "_ipt": 5,
+          "atomIndex": 5,
+          "atomno": 6,
+          "bondCount": 1,
+          "clickabilityFlags": 48,
+          "colix": -32767,
+          "color": "[xffffff]",
+          "coord": [
+            1.1404,
+            -0.3501,
+            0.9626
+          ],
+          "element": "hydrogen",
+          "elemno": 1,
+          "formalCharge": 0,
+          "info": "H6 #6",
+          "model": "1",
+          "partialCharge": 0,
+          "radius": 0.55,
+          "shape": "",
+          "spacefill": 0.264,
+          "sym": "H",
+          "visibilityFlags": 63,
+          "visible": true,
+          "x": 1.1404,
+          "y": -0.3501,
+          "z": 0.9626
+        },
+        {
+          "_ipt": 6,
+          "atomIndex": 6,
+          "atomno": 7,
+          "bondCount": 1,
+          "clickabilityFlags": 48,
+          "colix": -32767,
+          "color": "[xffffff]",
+          "coord": [
+            1.1405,
+            1.0087,
+            -0.1781
+          ],
+          "element": "hydrogen",
+          "elemno": 1,
+          "formalCharge": 0,
+          "info": "H7 #7",
+          "model": "1",
+          "partialCharge": 0,
+          "radius": 0.55,
+          "shape": "",
+          "spacefill": 0.264,
+          "sym": "H",
+          "visibilityFlags": 63,
+          "visible": true,
+          "x": 1.1405,
+          "y": 1.0087,
+          "z": -0.1781
+        },
+        {
+          "_ipt": 7,
+          "atomIndex": 7,
+          "atomno": 8,
+          "bondCount": 1,
+          "clickabilityFlags": 48,
+          "colix": -32767,
+          "color": "[xffffff]",
+          "coord": [
+            1.1404,
+            -0.6586000000000001,
+            -0.7845000000000001
+          ],
+          "element": "hydrogen",
+          "elemno": 1,
+          "formalCharge": 0,
+          "info": "H8 #8",
+          "model": "1",
+          "partialCharge": 0,
+          "radius": 0.55,
+          "shape": "",
+          "spacefill": 0.264,
+          "sym": "H",
+          "visibilityFlags": 63,
+          "visible": true,
+          "x": 1.1404,
+          "y": -0.6586000000000001,
+          "z": -0.7845000000000001
+        }
+      ],
+      "bonds": [
+        {
+          "_bpt": 0,
+          "atom1": {
+            "_ipt": 0,
+            "atomIndex": 0,
+            "atomno": 1,
+            "info": "C1 #1",
+            "sym": "C"
+          },
+          "atom2": {
+            "_ipt": 1,
+            "atomIndex": 1,
+            "atomno": 2,
+            "info": "C2 #2",
+            "sym": "C"
+          },
+          "colix": 0,
+          "edge_type": 1,
+          "jmol_order": "0x1",
+          "length_Ang": 1.512,
+          "order": 1,
+          "radius": 0.13,
+          "type": "single",
+          "visible": true
+        },
+        {
+          "_bpt": 1,
+          "atom1": {
+            "_ipt": 0,
+            "atomIndex": 0,
+            "atomno": 1,
+            "info": "C1 #1",
+            "sym": "C"
+          },
+          "atom2": {
+            "_ipt": 2,
+            "atomIndex": 2,
+            "atomno": 3,
+            "info": "H3 #3",
+            "sym": "H"
+          },
+          "colix": 0,
+          "edge_type": 1,
+          "jmol_order": "0x1",
+          "length_Ang": 1.0940555607463454,
+          "order": 1,
+          "radius": 0.13,
+          "type": "single",
+          "visible": true
+        },
+        {
+          "_bpt": 2,
+          "atom1": {
+            "_ipt": 0,
+            "atomIndex": 0,
+            "atomno": 1,
+            "info": "C1 #1",
+            "sym": "C"
+          },
+          "atom2": {
+            "_ipt": 3,
+            "atomIndex": 3,
+            "atomno": 4,
+            "info": "H4 #4",
+            "sym": "H"
+          },
+          "colix": 0,
+          "edge_type": 1,
+          "jmol_order": "0x1",
+          "length_Ang": 1.0940439342183659,
+          "order": 1,
+          "radius": 0.13,
+          "type": "single",
+          "visible": true
+        },
+        {
+          "_bpt": 3,
+          "atom1": {
+            "_ipt": 0,
+            "atomIndex": 0,
+            "atomno": 1,
+            "info": "C1 #1",
+            "sym": "C"
+          },
+          "atom2": {
+            "_ipt": 4,
+            "atomIndex": 4,
+            "atomno": 5,
+            "info": "H5 #5",
+            "sym": "H"
+          },
+          "colix": 0,
+          "edge_type": 1,
+          "jmol_order": "0x1",
+          "length_Ang": 1.0940911982097288,
+          "order": 1,
+          "radius": 0.13,
+          "type": "single",
+          "visible": true
+        },
+        {
+          "_bpt": 4,
+          "atom1": {
+            "_ipt": 1,
+            "atomIndex": 1,
+            "atomno": 2,
+            "info": "C2 #2",
+            "sym": "C"
+          },
+          "atom2": {
+            "_ipt": 5,
+            "atomIndex": 5,
+            "atomno": 6,
+            "info": "H6 #6",
+            "sym": "H"
+          },
+          "colix": 0,
+          "edge_type": 1,
+          "jmol_order": "0x1",
+          "length_Ang": 1.0940439342183659,
+          "order": 1,
+          "radius": 0.13,
+          "type": "single",
+          "visible": true
+        },
+        {
+          "_bpt": 5,
+          "atom1": {
+            "_ipt": 1,
+            "atomIndex": 1,
+            "atomno": 2,
+            "info": "C2 #2",
+            "sym": "C"
+          },
+          "atom2": {
+            "_ipt": 6,
+            "atomIndex": 6,
+            "atomno": 7,
+            "info": "H7 #7",
+            "sym": "H"
+          },
+          "colix": 0,
+          "edge_type": 1,
+          "jmol_order": "0x1",
+          "length_Ang": 1.0940911982097288,
+          "order": 1,
+          "radius": 0.13,
+          "type": "single",
+          "visible": true
+        },
+        {
+          "_bpt": 6,
+          "atom1": {
+            "_ipt": 1,
+            "atomIndex": 1,
+            "atomno": 2,
+            "info": "C2 #2",
+            "sym": "C"
+          },
+          "atom2": {
+            "_ipt": 7,
+            "atomIndex": 7,
+            "atomno": 8,
+            "info": "H8 #8",
+            "sym": "H"
+          },
+          "colix": 0,
+          "edge_type": 1,
+          "jmol_order": "0x1",
+          "length_Ang": 1.0940555607463454,
+          "order": 1,
+          "radius": 0.13,
+          "type": "single",
+          "visible": true
+        }
+      ],
+      "expectedAtoms": [
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H"
+      ],
+      "expectedBonds": [
+        [
+          1,
+          2,
+          1
+        ],
+        [
+          1,
+          3,
+          1
+        ],
+        [
+          1,
+          4,
+          1
+        ],
+        [
+          1,
+          5,
+          1
+        ],
+        [
+          2,
+          6,
+          1
+        ],
+        [
+          2,
+          7,
+          1
+        ],
+        [
+          2,
+          8,
+          1
+        ]
+      ],
+      "file": "mols/nomeclature-moc2/ethane_3D.sdf",
+      "base": "http://127.0.0.1:65312/",
+      "div3D": {
+        "style": "",
+        "display": "block",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 624,
+          "height": 385,
+          "top": 0,
+          "right": 624,
+          "bottom": 385,
+          "left": 0
+        }
+      },
+      "canvases": [
+        {
+          "w": 624,
+          "h": 385
+        }
+      ],
+      "visibleText": ""
+    }
+  ],
+  "events": [
+    {
+      "channel": "namelecule-name-builder-v1",
+      "session": "5f1c1dd7aa8acff38b720ca5dace11eb6859",
+      "requestId": 0,
+      "roundId": null,
+      "moleculeId": null,
+      "type": "ready",
+      "inventory": [
+        {
+          "id": "isopropyl_4_dimethyl_3_6_octen_3_yn_7_dione_2_5",
+          "series": "ketone",
+          "carbonCount": 13,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "penten_1_yn_4_one_3",
+          "series": "ketone",
+          "carbonCount": 5,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "dimethyl_4_5_hexen_5_yn_1_one_3",
+          "series": "ketone",
+          "carbonCount": 8,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "methyl_6_hepten_3_dione_2_5",
+          "series": "ketone",
+          "carbonCount": 8,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "ethyl_3_methyl_4_octen_3_yn_5_dione_2_7",
+          "series": "ketone",
+          "carbonCount": 11,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "pentanone_3",
+          "series": "ketone",
+          "carbonCount": 5,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "dimethyl_2_4_pentanone_3",
+          "series": "ketone",
+          "carbonCount": 7,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "trimethyl_3_4_4_pentanone_2",
+          "series": "ketone",
+          "carbonCount": 8,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "diethyl_4_5_dimethyl_2_6_heptanone_3",
+          "series": "ketone",
+          "carbonCount": 13,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "propenal",
+          "series": "aldehyde",
+          "carbonCount": 3,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "methyl_2_propenal",
+          "series": "aldehyde",
+          "carbonCount": 4,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "propanedial",
+          "series": "aldehyde",
+          "carbonCount": 3,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "methyl_3_penten_2_dial",
+          "series": "aldehyde",
+          "carbonCount": 6,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "ethyl_4_penten_4_yn_2_al",
+          "series": "aldehyde",
+          "carbonCount": 7,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "isopropyl_2_buten_2_dial",
+          "series": "aldehyde",
+          "carbonCount": 7,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "ethyl_2_methyl_3_hexen_2_yn_4_dial",
+          "series": "aldehyde",
+          "carbonCount": 9,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "methane",
+          "series": "alkanes",
+          "carbonCount": 1,
+          "representations": [
+            "condensed",
+            "expanded",
+            "3d"
+          ]
+        },
+        {
+          "id": "methanoicacid",
+          "series": "carboxylicAcid",
+          "carbonCount": 1,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "ethane",
+          "series": "alkanes",
+          "carbonCount": 2,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "ethene",
+          "series": "alkenes",
+          "carbonCount": 2,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "methanal",
+          "series": "aldehyde",
+          "carbonCount": 1,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "methyl_2_propanal",
+          "series": "aldehyde",
+          "carbonCount": 4,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "dimethyl_2_3_butanal",
+          "series": "aldehyde",
+          "carbonCount": 6,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "ethyl_2_methyl_3_pentanal",
+          "series": "aldehyde",
+          "carbonCount": 8,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "ethyl_4_isopropyl_3_methyl_2_hexanal",
+          "series": "aldehyde",
+          "carbonCount": 12,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "ethanal",
+          "series": "aldehyde",
+          "carbonCount": 2,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "ethanenitrile",
+          "series": "cyanide",
+          "carbonCount": 2,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "propane",
+          "series": "alkanes",
+          "carbonCount": 3,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "propene",
+          "series": "alkenes",
+          "carbonCount": 3,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "propadiene",
+          "series": "alkadienes",
+          "carbonCount": 3,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "propionicacid",
+          "series": "carboxylicAcid",
+          "carbonCount": 3,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "butane",
+          "series": "alkanes",
+          "carbonCount": 4,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "butanal",
+          "series": "aldehyde",
+          "carbonCount": 4,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "butanenitrile",
+          "series": "cyanide",
+          "carbonCount": 4,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "pentane",
+          "series": "alkanes",
+          "carbonCount": 5,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "butene_1",
+          "series": "alkenes",
+          "carbonCount": 4,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "propanol_1",
+          "series": "alcohol",
+          "carbonCount": 3,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "penten_4_ol_2",
+          "series": "alcohol",
+          "carbonCount": 5,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "penten_1_one_3",
+          "series": "ketone",
+          "carbonCount": 5,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "butanol_1",
+          "series": "alcohol",
+          "carbonCount": 4,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "pentanone_2",
+          "series": "ketone",
+          "carbonCount": 5,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "butene_2",
+          "series": "alkenes",
+          "carbonCount": 4,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "pentadiene_1_3",
+          "series": "alkadienes",
+          "carbonCount": 5,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "propyne",
+          "series": "alkynes",
+          "carbonCount": 3,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "propanal",
+          "series": "aldehyde",
+          "carbonCount": 3,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "butanoic_acid",
+          "series": "carboxylicAcid",
+          "carbonCount": 4,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "propanenitrile",
+          "series": "cyanide",
+          "carbonCount": 3,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "pentanoic_acid",
+          "series": "carboxylicAcid",
+          "carbonCount": 5,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "pentanal",
+          "series": "aldehyde",
+          "carbonCount": 5,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "butene_3_ol_2",
+          "series": "alcohol",
+          "carbonCount": 4,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "penten_2_ol_1",
+          "series": "alcohol",
+          "carbonCount": 5,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "pentyn_4_one_2",
+          "series": "ketone",
+          "carbonCount": 5,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "propenoic_acid",
+          "series": "carboxylicAcid",
+          "carbonCount": 3,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "propynal",
+          "series": "aldehyde",
+          "carbonCount": 3,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "penten_3_yne_1",
+          "series": "enynes",
+          "carbonCount": 5,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "hexen_1_yne_4",
+          "series": "enynes",
+          "carbonCount": 6,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "buten_1_yne_3",
+          "series": "enynes",
+          "carbonCount": 4,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "hexen_2_yne_4",
+          "series": "enynes",
+          "carbonCount": 6,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "chlorobutane_1",
+          "series": "halogen",
+          "carbonCount": 4,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "bromopropane_2",
+          "series": "halogen",
+          "carbonCount": 3,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "bromo_4_butene_1",
+          "series": "halogen",
+          "carbonCount": 4,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "bromo_3_chloropentane_1",
+          "series": "halogen",
+          "carbonCount": 5,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "bromo_2_chlorobutane_3",
+          "series": "halogen",
+          "carbonCount": 4,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "propanediol_1_2",
+          "series": "alcohol",
+          "carbonCount": 3,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "propanedioic_acid",
+          "series": "carboxylicAcid",
+          "carbonCount": 3,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "propanetriol",
+          "series": "alcohol",
+          "carbonCount": 3,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "dichlorobutane_2_2",
+          "series": "halogen",
+          "carbonCount": 4,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "trichloropentane_1_1_2",
+          "series": "halogen",
+          "carbonCount": 5,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "hydroxypropanoic_acid_2",
+          "series": "hydroxyAcids",
+          "carbonCount": 3,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "hydroxybutanenitrile_2",
+          "series": "hydroxyNitriles",
+          "carbonCount": 4,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "Oxopropanoic_acid",
+          "series": "oxoCarboxylicAcids",
+          "carbonCount": 3,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "aminobutanoic_acid_3",
+          "series": "aminoAcids",
+          "carbonCount": 4,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "hydroxypropanenitrile_2",
+          "series": "hydroxyNitriles",
+          "carbonCount": 3,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "oxobutanoic_acid",
+          "series": "oxoCarboxylicAcids",
+          "carbonCount": 4,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "dihydroxybutanedioic_acid_2_3",
+          "series": "hydroxyAcids",
+          "carbonCount": 4,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "ethanol",
+          "series": "alcohol",
+          "carbonCount": 2,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "propanone",
+          "series": "ketone",
+          "carbonCount": 3,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "butanone",
+          "series": "ketone",
+          "carbonCount": 4,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "nitroethane",
+          "series": "nitro",
+          "carbonCount": 2,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "nitropropane_2",
+          "series": "nitro",
+          "carbonCount": 3,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "methyl_2_pentane",
+          "series": "alkanes",
+          "carbonCount": 6,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "dimethyl_2_3_butane",
+          "series": "alkanes",
+          "carbonCount": 6,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "methyl_2_propene",
+          "series": "alkenes",
+          "carbonCount": 4,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "methyl_3_butene_1",
+          "series": "alkenes",
+          "carbonCount": 5,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "ethyl_3_dimethyl_2_5_hexene_2",
+          "series": "alkenes",
+          "carbonCount": 10,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "ethyl_3_dimethyl_2_5_hexane",
+          "series": "alkanes",
+          "carbonCount": 10,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "methyl_propyl_ether",
+          "series": "ether",
+          "carbonCount": 4,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "ethyl_propyl_ether",
+          "series": "ether",
+          "carbonCount": 5,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "ethyl_isopropyl_ether",
+          "series": "ether",
+          "carbonCount": 5,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "butyl_methyl_ether",
+          "series": "ether",
+          "carbonCount": 5,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "isobutyl_isopropyl_ether",
+          "series": "ether",
+          "carbonCount": 7,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "ethyl_sec_butyl_ether",
+          "series": "ether",
+          "carbonCount": 6,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "tert_butyl_isopropyl_ether",
+          "series": "ether",
+          "carbonCount": 7,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "ethyl_methyl_ether",
+          "series": "ether",
+          "carbonCount": 3,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "dimethylether",
+          "series": "ether",
+          "carbonCount": 2,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "diethyl_ether",
+          "series": "ether",
+          "carbonCount": 4,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "isopropyl_methyl_ether",
+          "series": "ether",
+          "carbonCount": 4,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "ethanoic_methyl_ester",
+          "series": "ester",
+          "carbonCount": 3,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "propanoic_methyl_ester",
+          "series": "ester",
+          "carbonCount": 4,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "methyl_methanoate",
+          "series": "ester",
+          "carbonCount": 2,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "isopropyl_ethanoate",
+          "series": "ester",
+          "carbonCount": 5,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "butyne_1",
+          "series": "alkynes",
+          "carbonCount": 4,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "butyne_2",
+          "series": "alkynes",
+          "carbonCount": 4,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "methyl_3_butyne_1",
+          "series": "alkynes",
+          "carbonCount": 5,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "methyl_3_pentyne_1",
+          "series": "alkynes",
+          "carbonCount": 6,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "methyl_4_pentyne_2",
+          "series": "alkynes",
+          "carbonCount": 6,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "ethyl_4_dimethyl_3_5_heptyne_1",
+          "series": "alkynes",
+          "carbonCount": 11,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "ethyne",
+          "series": "alkynes",
+          "carbonCount": 2,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "butadiene_1_3",
+          "series": "alkadienes",
+          "carbonCount": 4,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "butadiene_1_2",
+          "series": "alkadienes",
+          "carbonCount": 4,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "pentadiene_1_4",
+          "series": "alkadienes",
+          "carbonCount": 5,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "methyl_3_pentadiene_1_3",
+          "series": "alkadienes",
+          "carbonCount": 6,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "dimethyl_2_3_pentadiene_1_3",
+          "series": "alkadienes",
+          "carbonCount": 7,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "ethyl_3_dimethyl_4_5_hexadiene_1_4",
+          "series": "alkadienes",
+          "carbonCount": 10,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "methyl_2_buten_1_yne_3",
+          "series": "enynes",
+          "carbonCount": 5,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "dimethyl_2_3_penten_1_yne_4",
+          "series": "enynes",
+          "carbonCount": 7,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "ethyl_4_dimethyl_2_3_hepten_2_yne_5",
+          "series": "enynes",
+          "carbonCount": 11,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "butanol_2",
+          "series": "alcohol",
+          "carbonCount": 4,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "methyl_4_pentanol_2",
+          "series": "alcohol",
+          "carbonCount": 6,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "dimethyl_2_2_pentanol_3",
+          "series": "alcohol",
+          "carbonCount": 7,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "isopropyl_4_dimethyl_3_5_heptanol_2",
+          "series": "alcohol",
+          "carbonCount": 12,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "methyl_2_propanediol_1_2",
+          "series": "alcohol",
+          "carbonCount": 4,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "methyl_3_buten_3_ol_2",
+          "series": "alcohol",
+          "carbonCount": 5,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "methyl_3_pentyn_4_ol_2",
+          "series": "alcohol",
+          "carbonCount": 6,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "methyl_4_penten_4_yn_2_ol_1",
+          "series": "alcohol",
+          "carbonCount": 6,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "ethyl_3_methyl_4_hexen_3_yn_5_ol_2",
+          "series": "alcohol",
+          "carbonCount": 9,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "methyl_2_propanoic_acid",
+          "series": "carboxylicAcid",
+          "carbonCount": 4,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "dimethyl_2_2_propanoic_acid",
+          "series": "carboxylicAcid",
+          "carbonCount": 5,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "ethyl_2_methyl_3_pentanoic_acid",
+          "series": "carboxylicAcid",
+          "carbonCount": 8,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "ethyl_3_isopropyl_2_dimethyl_4_5_hexanoic_acid",
+          "series": "carboxylicAcid",
+          "carbonCount": 13,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "methyl_2_propenoic_acid",
+          "series": "carboxylicAcid",
+          "carbonCount": 4,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "ethyl_2_methyl_3_penten_2_yn_4_oic_acid",
+          "series": "carboxylicAcid",
+          "carbonCount": 8,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "ethyl_3_isopropyl_2_dimethyl_4_5_hexadien_2_4_dioic_acid",
+          "series": "carboxylicAcid",
+          "carbonCount": 13,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "ethyl_2_isopropyl_3_dimethyl_6_6_hepten_2_yn_4_dioic_acid",
+          "series": "carboxylicAcid",
+          "carbonCount": 14,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "penten_2_yn_4_oic_acid",
+          "series": "carboxylicAcid",
+          "carbonCount": 5,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "hexen_2_yn_4_dioic_acid",
+          "series": "carboxylicAcid",
+          "carbonCount": 6,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "sec_butyl_ethanoate",
+          "series": "ester",
+          "carbonCount": 6,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "butyl_propanoate",
+          "series": "ester",
+          "carbonCount": 7,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "tert_butyl_methanoate",
+          "series": "ester",
+          "carbonCount": 5,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "isobutyl_2_methylpropanoate",
+          "series": "ester",
+          "carbonCount": 8,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        },
+        {
+          "id": "isopropyl_2_3_dimethylbutanoate",
+          "series": "ester",
+          "carbonCount": 9,
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ]
+        }
+      ]
+    },
+    {
+      "channel": "namelecule-name-builder-v1",
+      "session": "5f1c1dd7aa8acff38b720ca5dace11eb6859",
+      "requestId": 1,
+      "roundId": "5f1c1dd7aa8acff38b720ca5dace11eb6859-1",
+      "moleculeId": "ethane",
+      "type": "busy",
+      "representation": "condensed"
+    },
+    {
+      "channel": "namelecule-name-builder-v1",
+      "session": "5f1c1dd7aa8acff38b720ca5dace11eb6859",
+      "requestId": 1,
+      "roundId": "5f1c1dd7aa8acff38b720ca5dace11eb6859-1",
+      "moleculeId": "ethane",
+      "type": "round",
+      "representation": "condensed",
+      "correctName": "αιθάνιο",
+      "pieces": [
+        {
+          "text": "αιθ",
+          "separatorBefore": "",
+          "role": "comp5"
+        },
+        {
+          "text": "άν",
+          "separatorBefore": "",
+          "role": "comp6"
+        },
+        {
+          "text": "ιο",
+          "separatorBefore": "",
+          "role": "comp9"
+        }
+      ],
+      "representations": [
+        "condensed",
+        "expanded",
+        "skeletal",
+        "3d"
+      ],
+      "series": "alkanes",
+      "parentLength": 2,
+      "vocabulary": {
+        "roots": [
+          "μεθ",
+          "αιθ",
+          "προπ",
+          "βουτ",
+          "πεντ",
+          "εξ",
+          "επτ",
+          "οκτ",
+          "εννε",
+          "δεκ",
+          "ενδεκ",
+          "δωδεκ",
+          "δεκατρι",
+          "δεκατεσσερ",
+          "δεκαπεντ",
+          "δεκαεξ",
+          "δεκαεπτ",
+          "δεκαοκτ",
+          "δεκαεννι",
+          "εικοσ"
+        ]
+      }
+    },
+    {
+      "channel": "namelecule-name-builder-v1",
+      "session": "5f1c1dd7aa8acff38b720ca5dace11eb6859",
+      "requestId": 2,
+      "roundId": "5f1c1dd7aa8acff38b720ca5dace11eb6859-1",
+      "moleculeId": "ethane",
+      "type": "busy",
+      "representation": "3d"
+    }
+  ],
+  "javascriptErrors": []
+}

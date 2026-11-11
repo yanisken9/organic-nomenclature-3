@@ -1,0 +1,23 @@
+{
+  "utc": "2026-11-11T05:50:53.791327+00:00",
+  "baseCommit": "168e3cec01f941a84d40bbe0dc07156e7baa35d0",
+  "frozenPaths": {
+    "games/name-builder.html": "528e5ffc6b0daa8bfa8920eb2dd4eb50ea97dea8a0022617ef57d0ab0e1c9344",
+    "games/name-builder-viewer.html": "10139019ed77c98305149ab1e94c8ec5497ea9719341af00a655998c56824a01",
+    "js/namelecule-name-builder.js": "80ed7669dca1c98ae223aed0ebad2a3c2142cd32d8fef663a6ad4f5237471810",
+    "js/namelecule-name-builder-host.js": "9ab1aa1c92d05d058a26347e060cf3e114aa5eaaed0a61e9d75c7c77831c156e",
+    "js/namelecule-name-builder-engine.js": "1c7e477325ae07b02d5218ef0833236f95eade7b6003a3aa07545f91b414f8a2",
+    "css/namelecule-name-builder.css": "643e5c2634b7ab409e04c06c8b8727abaea3b169cbe2887f411e4c82d0dfc180",
+    "tools/build-name-builder-host.py": "176d76be1bd35927ef078abc17d6cdebecca6520f8ccb56e4008d075959462ea",
+    "spt/init-55.spt": "096f339ab8a3a88cad525f45586a5540f5a2612cdcda5453fb7a110ca2bbd1b1",
+    "docs/checks/name-builder-prototype-20261111/domain/contracts-corpus-result.json": "387ae509246b885b6ea24b3ddb5bbfe5b74a783b3dbb11d1a110e0717d5cc863",
+    "docs/checks/name-builder-prototype-20261111/domain/contracts-result.json": "8ee7f9f8e2953591ccb5734698c324aeebe494917f0b7843bc74382990baf430",
+    "docs/checks/name-builder-prototype-20261111/domain/contracts.js": "513a509fb3ae67e43a607d2550a06453cc896b9f5af24bba97c9ee24de38b1d8",
+    "docs/checks/name-builder-prototype-20261111/domain/corpus-summary.json": "bc0481b685198987cc825a039755eb1e3d089be34163989cb18bc6c753606d63",
+    "docs/checks/name-builder-prototype-20261111/host/init-version-test.js": "f2f99c7f236de5ead87f9f8270a3c3fa65ea83824566adab45499d48c8313363",
+    "docs/checks/name-builder-prototype-20261111/host/protocol-test.js": "55400aef74962696b641183a847106a99b773d935c03ed65d55bbf1aec06e69f"
+  },
+  "sharedBefore": "docs/checks/name-builder-prototype-20261111/before-shared-init-55.spt",
+  "scope": "New isolated prototype, plus approved semicolon-to-comma comment correction in shared init. No existing core/data/Main changes. All other working-tree changes preexisting.",
+  "runtimeEvidenceAvailable": "browser/interactions.json:16 actual Firefox checks, browser/corpus-2d.json:141/422 forms on prior host URL revision; current corpus.json being generated, do not read until completed."
+}

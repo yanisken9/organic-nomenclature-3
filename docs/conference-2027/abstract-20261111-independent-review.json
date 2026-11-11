@@ -1,0 +1,57 @@
+{
+  "recordedUTC": "2026-11-11T04:52:53.094375+00:00",
+  "reviewer": "/root/review_conference_abstract_20261111",
+  "roleID": "NAMELECULE_REVIEWER_V1_20261023",
+  "freshContext": true,
+  "reviewedRevision": "r1",
+  "baseCommit": "168e3cec01f941a84d40bbe0dc07156e7baa35d0",
+  "reviewTarget": "docs/conference-2027/reviewed-r1/abstract-20261111-review-target.json",
+  "independentChecks": [
+    "AGENTS.md and REVIEW-CHECKLIST.md read",
+    "Frozen hashes verified, including original professor DOCX",
+    "ZIP CRC and all XML parsed",
+    "Five DOCX/TXT paragraphs exactly matched",
+    "236 body words / 245 including title in r1",
+    "Old abstract, verified feature evidence, relevant checkpoint data and code inspected",
+    "Official oral-abstract guidelines and deadline checked"
+  ],
+  "findings": [
+    {
+      "id": "ABS-001",
+      "severity": "P2",
+      "path": "docs/conference-2027/Namelecule_Abstract_ENEPHET_2027_GR_draft.txt:7 and corresponding DOCX paragraph",
+      "issue": "Unqualified attribution of all game correct answers to the naming engine; default authored route uses stored correctValue while source=engine uses generated answers.",
+      "evidence": [
+        "js/namelecule-game-repair.js:58",
+        "js/namelecule-game-repair.js:756",
+        "js/namelecule-game-repair.js:828",
+        "js/namelecule-game-repair.js:913",
+        "js/namelecule-repair-generator.js:185"
+      ],
+      "resolution": "Applied Reviewer recommended qualifier to generated sets, in both TXT and DOCX.",
+      "correctedSentence": "Στα παραγόμενα σετ ασκήσεων, οι ορθές απαντήσεις προκύπτουν από την ανάλυση της μηχανής ονοματολογίας.",
+      "status": "Closed by Developer isolated verification; no independent r2 re-review claimed."
+    }
+  ],
+  "otherFindings": "No other actionable issue reported for r1; no invented participants, learning gains or authors; prior-group engine credit clear.",
+  "finalRevision": "r2-ABS-001",
+  "finalTarget": "docs/conference-2027/abstract-20261111-final-target.json",
+  "developerFinalChecks": [
+    "239 body words / 248 with title",
+    "Exact five-paragraph TXT/DOCX match",
+    "ZIP CRC/XML parse",
+    "textutil exact-token import",
+    "Refreshed QuickLook thumbnail visually inspected",
+    "Final target/source document/all 11 core hashes/source HEAD/index invariant"
+  ],
+  "limitations": [
+    "Reviewer did not execute Word or QuickLook rendering; these are Developer evidence.",
+    "No actual Microsoft Word rendering performed.",
+    "No classroom evaluation data supplied; educational effectiveness remains future work.",
+    "No conference acceptance claim.",
+    "Runtime and chemical regression tests N/A: prose/document artifacts only.",
+    "Reviewer no-write restriction behavioral; shared filesystem, not independently enforced isolation."
+  ],
+  "applicationOrCoreChanged": false,
+  "commitPushPublicationSubmission": false
+}

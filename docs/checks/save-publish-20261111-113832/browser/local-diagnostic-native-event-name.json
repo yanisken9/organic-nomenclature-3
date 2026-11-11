@@ -1,0 +1,20 @@
+{
+  "checks": [
+    {
+      "label": "Exact served release overlay HTTP/SHA",
+      "passed": true,
+      "detail": 37
+    },
+    {
+      "label": "Welcome threecards and both game logos",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "solved": [],
+  "conditions": "Owned headless Firefox; actual production UI, native viewer and verified chemistry Worker. Read-only preload observes bridge loads for deterministic test inputs; trusted pointer input submits answers.",
+  "stage": "local",
+  "passed": false,
+  "failure": "AssertionError('Timed out: window.__builderEvents?.some(e=>e.type===\"loaded\")')",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/save-publish-20261111-113832/browser/check-release.py\", line 87, in <module>\n    click('a[href*=\"games/name-builder.html\"]');wait('!!document.querySelector(\"#bank-tiles button\")',60);wait('window.__builderEvents?.some(e=>e.type===\"loaded\")');load=read('__builderEvents.filter(e=>e.type===\"loaded\").at(-1)');check(load['moleculeId']=='ethane','Welcome direct Builder defaults to ethane/native loaded')\n  File \"<string>\", line 23, in wait\nAssertionError: Timed out: window.__builderEvents?.some(e=>e.type===\"loaded\")\n"
+}

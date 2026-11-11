@@ -1,0 +1,72 @@
+{
+  "date": "2026-11-11",
+  "status": "Proposed implementation plan; awaiting user approval",
+  "objective": "At active alkane lesson steps4 and11, offer Workshop OR Name Builder. Three distinct correct molecules within one selected game unlock that gate. After earning access, offer theory continuation, other game, or another triple of the same game.",
+  "behavior": [
+    "Both game choices appear inside the lesson, with their accepted existing logos.",
+    "Step4 samples3distinct IDs from methane/ethane/propane/butane/pentane; step11 uses the3existing branched molecules.",
+    "Partial progress is separate per game. A mixed2+1 result cannot unlock. A successful validated Check counts, not a tile selection or unverified solved boolean.",
+    "Show molecule-specific correct-answer explanation before final actions. Maintain progress counter1/3–3/3 and existing smooth-scroll behavior, with reduced-motion support.",
+    "At final success, show Continue theory / Another triple / Other game; avoid duplicate header continuation when the footer is usable. Optional unfinished/error/loading states retain a route to already unlocked theory.",
+    "After the first successful triple, keep a separate revalidated earned receipt that cannot be replaced by optional attempts. Refresh in same tab restores valid progress; sessionStorage denial keeps honest in-memory-only notice.",
+    "Narrow verified migration from the exact prior authored lesson preserves eligible old Workshop partial/completed evidence without loosening global signature validation or resurrecting an explicit reset.",
+    "Keep standalone games and legacy single-game lessons compatible; reuse existing Builder UI in a controlled embedded mode rather than duplicate it.",
+    "Lesson Builder accepts only allowed topic IDs, stable bank seeds and bounded root vocabulary1–5/1–6; answers re-evaluated independently by parent against verified Worker-derived canonical parts.",
+    "Diagram name/pieces must match canonical expected input before answers enable. Representation switches preserve answer. Methane has no skeletal form. No answer or gate receipt in URL.",
+    "Branch repeats reuse the same3available molecules with shuffled presentation; do not promise3newmolecules."
+  ],
+  "architecture": [
+    "New alkane-game-choice-set adapter with separate required/practice records, earned winner receipt and a controlled iframe bridge.",
+    "Expose only narrow immutable generated-repair adapter/canonical-analysis API; retain existing seven-key generated-repair recipe unchanged.",
+    "Builder lesson messaging uses dedicated channel plus matching origin/source/nonce/attempt/molecule/request. Parent reconstructs bank and evaluates actual submitted tile evidence, ignoring bare solved claims.",
+    "Migration projects current scenario back to frozen prior values only if both changed gates match the approved new blueprint; exact full signature equality required at the single derived old key. New record/reset takes precedence. Revalidate old answers through pinned generator before recognizing earned access.",
+    "Add optional third completion action and supported focus/ready plumbing; preserve defaults for all old callers.",
+    "Regenerate derived viewer host from Main55 using existing build-name-builder-host.py and run --check."
+  ],
+  "affectedAppFiles": [
+    "js/namelecule-game-choice-checkpoint.js (new)",
+    "js/namelecule-generated-repair-checkpoint.js",
+    "js/namelecule-quiz-checkpoints.js",
+    "js/namelecule-game-repair.js",
+    "games/name-builder.html",
+    "js/namelecule-name-builder.js",
+    "css/namelecule-name-builder.css",
+    "css/namelecule-quiz-checkpoints.css",
+    "mulermoc-nom-55.html",
+    "mulermoc-nom-54.html (compatibility/dependency/cache URLs)",
+    "games/name-builder-viewer.html (generated)",
+    "scenarios/alkanes-user-3.scenario.json (only gates4/11 and their copy)"
+  ],
+  "unchangedScope": [
+    "Core files and naming algorithms",
+    "MOL/SDF and molecular graph data",
+    "Other series and ordinary theory steps",
+    "Existing accepted logos and welcome entry links",
+    "Standalone default game flows"
+  ],
+  "export": {
+    "mapping": "communication/checkpoints/alkanes-json-export-20261109.json",
+    "source": "scenarios/alkanes-user-3.scenario.json",
+    "destination": "/Users/yannisskendros/Desktop/αρχεία  json/9Αλκάνια.json",
+    "conditions": "Use exact mapped path/Unicode; preserve dated recovery copy; update export receipt and verify identical bytes/SHA-256 after final reviewed JSON."
+  },
+  "verification": [
+    "Each game independently unlocks each gate only after3distinct correct submissions; incomplete/wrong/mixed/duplicate/tampered receipts fail closed.",
+    "Legacy completed/partial Workshop receipts migrate only for exact compatible content; altered steps/recipes do not migrate; reset not undone.",
+    "Refresh at choice/partial answers/one-two successes/earned access/optional attempts; optional failure, switching and repeated triples never relock.",
+    "Both gates through normal next/back, hash/direct later-step entry and isolated author preview; preserve12step lesson/final2D3Dexploration.",
+    "Nested viewer load/timeout/retry, cancellation/close/game switch, stale messages, storage denial and no late writes after teardown.",
+    "Trusted mouse/keyboard/touch-style interaction, scroll, focus, desktop/narrow layouts, zoom and2D/3Drepresentation switches.",
+    "Standalone Builder/Workshop, existing single-game checkpoints, Main54 and representative ordinary lessons.",
+    "Chemistry Validator: canonical Worker/native Builder name pieces for all8molecules, vocabulary and explanations; Learning Designer: gate texts/feedback/sequence; one fresh independent consolidated Reviewer after implementation."
+  ],
+  "baseline": "docs/checks/alkanes-game-choice-preflight-20261111/findings.json",
+  "upstream": "docs/checks/alkanes-game-choice-preflight-20261111/upstream-read.json",
+  "coreChangesProposed": false,
+  "commitPushPublication": false,
+  "limitations": [
+    "Per-tab progress, not cross-device learner history.",
+    "Shared three-success criterion does not establish equal difficulty or equivalent learning evidence between games.",
+    "No conference/offline/general browser-hang guarantee from this scoped change."
+  ]
+}

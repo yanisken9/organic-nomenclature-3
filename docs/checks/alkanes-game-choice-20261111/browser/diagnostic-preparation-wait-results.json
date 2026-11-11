@@ -1,0 +1,64 @@
+{
+  "checks": [
+    {
+      "label": "Direct gate4 valid",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "Both logo choices present",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "Builder verified/native ready",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "Builder verified/native ready",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "Required unbranched1 load identity",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "Required unbranched1 actual clicked tile identity",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "Required unbranched1 expanded preserves answer",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "Required unbranched1 skeletal preserves answer",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "Required unbranched1 3d preserves answer",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "Required unbranched1 condensed preserves answer",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "Required unbranched1 zoom preserves answer",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "solved": [],
+  "conditions": "Owned headless Firefox; actual production UI, native viewer and verified chemistry Worker. Read-only preload observes bridge loads for deterministic test inputs; trusted pointer input submits answers.",
+  "passed": false,
+  "failure": "AssertionError(('#nlQuizOpen', {'x': 1148, 'y': 322, 'disabled': True}))",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/alkanes-game-choice-20261111/browser/integration.py\", line 79, in <module>\n    first=bsolve('Required unbranched1',representation=True,partial_refresh=True);check(not rec()['states']['3']['solved'],'One builder result remains locked');footer('Required first',False)\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/alkanes-game-choice-20261111/browser/integration.py\", line 52, in bsolve\n    before=rec();call('browsingContext.reload',{'context':ctx,'wait':'complete'});ready();open_gate();builder_ready();check(bread('[...document.querySelectorAll(\"#answer-tiles button\")].map(e=>e.dataset.tileId)')==[ids[0]],label+' cold refresh partial preserved');check(bread('document.querySelector(\"#answer-tiles button\").getAttribute(\"aria-pressed\")')=='true',label+' selected answer retained')\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/alkanes-game-choice-20261111/browser/integration.py\", line 14, in open_gate\n    def open_gate():click('#nlQuizOpen');wait('document.getElementById(\"nlQuizDialog\").open')\n  File \"<string>\", line 31, in click\nAssertionError: ('#nlQuizOpen', {'x': 1148, 'y': 322, 'disabled': True})\n"
+}

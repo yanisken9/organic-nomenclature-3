@@ -1,0 +1,130 @@
+{
+  "runtime": "macOS JavaScriptCore",
+  "fixturePurpose": "Pure domain response contracts; not independent chemical certification",
+  "passed": 24,
+  "failed": 0,
+  "results": [
+    {
+      "check": "butane-contract: exact visible solution",
+      "passed": true
+    },
+    {
+      "check": "butane-contract: required multiplicity and safe engine distractors",
+      "passed": true
+    },
+    {
+      "check": "butane-contract: missing extra wrong order and wrong tile fail",
+      "passed": true
+    },
+    {
+      "check": "ester-spacing-contract: exact visible solution",
+      "passed": true
+    },
+    {
+      "check": "ester-spacing-contract: required multiplicity and safe engine distractors",
+      "passed": true
+    },
+    {
+      "check": "ester-spacing-contract: missing extra wrong order and wrong tile fail",
+      "passed": true
+    },
+    {
+      "check": "euphony-contract: exact visible solution",
+      "passed": true
+    },
+    {
+      "check": "euphony-contract: required multiplicity and safe engine distractors",
+      "passed": true
+    },
+    {
+      "check": "euphony-contract: missing extra wrong order and wrong tile fail",
+      "passed": true
+    },
+    {
+      "check": "repeated-visible-values-contract: exact visible solution",
+      "passed": true
+    },
+    {
+      "check": "repeated-visible-values-contract: required multiplicity and safe engine distractors",
+      "passed": true
+    },
+    {
+      "check": "repeated-visible-values-contract: missing extra wrong order and wrong tile fail",
+      "passed": true
+    },
+    {
+      "check": "equal visible copies interchange across spacing boundaries",
+      "passed": true
+    },
+    {
+      "check": "one copy cannot replace two required copies",
+      "passed": true
+    },
+    {
+      "check": "NFC equivalence accepted but accents and punctuation preserved",
+      "passed": true
+    },
+    {
+      "check": "internal spaces remain meaningful",
+      "passed": true
+    },
+    {
+      "check": "seeded banks deterministic and input unchanged",
+      "passed": true
+    },
+    {
+      "check": "small engine vocabulary produces small bank without fabricated words",
+      "passed": true
+    },
+    {
+      "check": "distractor cannot fuse answer pieces into the same complete spelling",
+      "passed": true
+    },
+    {
+      "check": "nearby roots selected for the initial bank",
+      "passed": true
+    },
+    {
+      "check": "malformed rounds fail before bank creation",
+      "passed": true
+    },
+    {
+      "check": "malformed attempts give generic failure without exceptions",
+      "passed": true
+    },
+    {
+      "check": "visible answer values never interpreted as instructions",
+      "passed": true
+    },
+    {
+      "check": "real host corpus contract",
+      "passed": true
+    }
+  ],
+  "corpus": {
+    "rounds": 141,
+    "uniqueMolecules": 141,
+    "series": [
+      "alcohol",
+      "aldehyde",
+      "alkadienes",
+      "alkanes",
+      "alkenes",
+      "alkynes",
+      "aminoAcids",
+      "carboxylicAcid",
+      "cyanide",
+      "enynes",
+      "ester",
+      "ether",
+      "halogen",
+      "hydroxyAcids",
+      "hydroxyNitriles",
+      "ketone",
+      "nitro",
+      "oxoCarboxylicAcids"
+    ],
+    "totalPieces": 758,
+    "namesWithSpaces": 30
+  }
+}

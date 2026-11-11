@@ -1,0 +1,49 @@
+{
+  "recordedUTC": "2026-11-10T13:01:34.946096+00:00",
+  "personalFirefoxClosed": true,
+  "personalFirefoxRestarted": false,
+  "otherExistingFirefoxParentsPreserved": [
+    55879,
+    56371
+  ],
+  "method": "Guarded SIGTERM after unconfirmed graceful attempt timeout.",
+  "causeFinding": "Same personal process as prior reports; native green-button zoom-menu path reproduced in fresh sample. Initiating cause remains unknown.",
+  "installedStableVersionCurrent": true,
+  "settingsChanged": false,
+  "applicationCodeChanged": false,
+  "coreChanged": false,
+  "commitPushPublication": false,
+  "independentReview": "independent-review.json",
+  "controlledTest": {
+    "ownedPID": 94903,
+    "title": "ΔΟΚΙΜΗ FIREFOX — καθαρό παράθυρο",
+    "automatedNormalFullscreenRoundtrips": 2,
+    "physicalGreenButtonTest": "awaiting user observation; tool lacks native input permission",
+    "lastObservation": {
+      "windows": [
+        {
+          "active": true,
+          "clientWindow": "bd77b9cf-e90e-4832-9c5d-b71327022321",
+          "height": 996,
+          "state": "normal",
+          "width": 1280,
+          "x": 4,
+          "y": 25
+        }
+      ],
+      "page": {
+        "clicks": 0,
+        "ticks": 94,
+        "focus": true,
+        "width": 1280,
+        "height": 911
+      }
+    },
+    "initialDiagnosticPreparationQuotingFailurePreserved": true,
+    "openForUserTest": true,
+    "driverExecSession": 63317
+  },
+  "rawDiagnosticsPrivateOnly": "/private/tmp/firefox-recovery-20261110T125322Z",
+  "nextStep": "User tries physical green button/hover on clean owned blank page and response button; capture status/sample before recovery if freeze occurs.",
+  "preventionComplete": false
+}

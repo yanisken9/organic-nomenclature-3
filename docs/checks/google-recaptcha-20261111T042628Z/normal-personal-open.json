@@ -1,0 +1,62 @@
+{
+  "startedUTC": "2026-11-11T04:29:55.736673+00:00",
+  "completedUTC": "2026-11-11T04:29:56.028785+00:00",
+  "operation": "Open existing personal profile through LaunchServices, new normal instance, no URL or automation flag.",
+  "openExit": 0,
+  "normalPersonalProcesses": [
+    {
+      "pid": 3805,
+      "ppid": 1,
+      "elapsed": "00:01",
+      "command": "/Applications/Firefox.app/Contents/MacOS/firefox --new-instance --profile /Users/yannisskendros/Library/Application Support/Firefox/Profiles/4bou5fna.default-release-1",
+      "remoteDebuggingFlag": false
+    }
+  ],
+  "sessionBackup": {
+    "privateDirectory": "/private/tmp/google-recaptcha-20261111T042628Z/personal-before-normal-open",
+    "files": [
+      {
+        "relativePath": "sessionCheckpoints.json",
+        "sha256": "00ad9799527c3fd21f3a85012565eae817490f3e0d417413bf9567bb5909f6a2",
+        "bytes": 90
+      },
+      {
+        "relativePath": "sessionstore-backups/recovery.baklz4",
+        "sha256": "4e8e44939bf05c0f61c6ec58662eef0680b05c7d8708a0a35913afdf8f5321d3",
+        "bytes": 18299
+      },
+      {
+        "relativePath": "sessionstore-backups/upgrade.jsonlz4-20261102144711",
+        "sha256": "fd4712cf6f5cd517f4268a59b050d8953b65ec883978db6cc50f182a26131072",
+        "bytes": 27535
+      },
+      {
+        "relativePath": "sessionstore-backups/upgrade.jsonlz4-20261022150525",
+        "sha256": "c894407d82467d0384590e6398f7769cfb490775d77cc41e4296f7b6b70c8d14",
+        "bytes": 25384
+      },
+      {
+        "relativePath": "sessionstore-backups/recovery.jsonlz4",
+        "sha256": "deb79ad91b46df035588ac3f3373351a1081670d1850dc8ac3f3d522ac68a2b1",
+        "bytes": 18307
+      },
+      {
+        "relativePath": "sessionstore-backups/upgrade.jsonlz4-20261019185856",
+        "sha256": "3890342fc7f22b74255b7dbe21ee336b4d28df28a1df56a52bc367e51af841c5",
+        "bytes": 22246
+      },
+      {
+        "relativePath": "sessionstore-backups/previous.jsonlz4",
+        "sha256": "fd4712cf6f5cd517f4268a59b050d8953b65ec883978db6cc50f182a26131072",
+        "bytes": 27535
+      }
+    ],
+    "contentsNotRead": true
+  },
+  "otherFirefoxInstancesClosed": false,
+  "settingsEdited": false,
+  "cookiesHistoryPasswordsDeleted": false,
+  "profileReset": false,
+  "searchSent": false,
+  "initialPreflightError": "Initial substring ps guard matched its own shell command and stopped before any mutation; retried with exact executable-prefix parse."
+}

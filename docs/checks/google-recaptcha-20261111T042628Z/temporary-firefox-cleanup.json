@@ -1,0 +1,93 @@
+{
+  "completedUTC": "2026-11-11T04:32:57.807113+00:00",
+  "userAuthorization": "Έχω αποθηκεύσει, κλείσε τους (all three temporary test Firefox instances)",
+  "targets": [
+    {
+      "pid": 55879,
+      "profile": "/private/tmp/namelecule-manual-window-20261109-s94vrzqg",
+      "signalExecuted": "SIGTERM",
+      "closed": true,
+      "availableSessionBackups": [
+        {
+          "relativePath": "sessionCheckpoints.json",
+          "sha256": "00ad9799527c3fd21f3a85012565eae817490f3e0d417413bf9567bb5909f6a2",
+          "bytes": 90
+        },
+        {
+          "relativePath": "sessionstore-backups/recovery.baklz4",
+          "sha256": "992f1ad9f906561bbc19cf6f9091565cb287d2f0ad2dec2eb1685efbedcbad96",
+          "bytes": 19536
+        },
+        {
+          "relativePath": "sessionstore-backups/recovery.jsonlz4",
+          "sha256": "02677653c63b8a201d04179806ffafa4a2b9f5fdbecb3ebf7ee4f0526cab6155",
+          "bytes": 18401
+        }
+      ],
+      "privateBackupDirectory": "/private/tmp/google-recaptcha-20261111T042628Z/temporary-55879-session"
+    },
+    {
+      "pid": 56371,
+      "profile": "/var/folders/2v/ds4vjvgj1_1000kq1fzg70q40000gn/T/namelecule-workshop-gui-20261109-efi1o_1v",
+      "signalExecuted": "SIGTERM",
+      "closed": true,
+      "availableSessionBackups": [
+        {
+          "relativePath": "sessionCheckpoints.json",
+          "sha256": "00ad9799527c3fd21f3a85012565eae817490f3e0d417413bf9567bb5909f6a2",
+          "bytes": 90
+        },
+        {
+          "relativePath": "sessionstore-backups/recovery.baklz4",
+          "sha256": "2a0ec7d184de19aace57f7844dd4b24406773740b1cd6f222eaddb71629c917b",
+          "bytes": 5317
+        },
+        {
+          "relativePath": "sessionstore-backups/recovery.jsonlz4",
+          "sha256": "166fa1a4d494056a0db2d1ae05eed82f1e19d2f9d1c44e5ceef1d6dc0fa80c75",
+          "bytes": 5607
+        }
+      ],
+      "privateBackupDirectory": "/private/tmp/google-recaptcha-20261111T042628Z/temporary-56371-session"
+    },
+    {
+      "pid": 94903,
+      "profile": "/private/tmp/firefox-recovery-20261110T125322Z/clean-profile-2",
+      "signalExecuted": "SIGTERM",
+      "closed": true,
+      "availableSessionBackups": [
+        {
+          "relativePath": "sessionCheckpoints.json",
+          "sha256": "00ad9799527c3fd21f3a85012565eae817490f3e0d417413bf9567bb5909f6a2",
+          "bytes": 90
+        },
+        {
+          "relativePath": "sessionstore-backups/recovery.baklz4",
+          "sha256": "6331696f1cd74f9d13d4991b1c630b171210a776947e00c17fe638affcd519f1",
+          "bytes": 7409
+        },
+        {
+          "relativePath": "sessionstore-backups/recovery.jsonlz4",
+          "sha256": "44f421300db9086d8fd083c16f953099d765e6e919a90190ee56fe704b313206",
+          "bytes": 7416
+        }
+      ],
+      "privateBackupDirectory": "/private/tmp/google-recaptcha-20261111T042628Z/temporary-94903-session"
+    }
+  ],
+  "personalPID": 3805,
+  "personalStillRunningSameCommand": true,
+  "remainingFirefoxParents": [
+    {
+      "pid": 3805,
+      "ppid": 1,
+      "started": "Wed Nov 11 06:29:55 2026",
+      "command": "/Applications/Firefox.app/Contents/MacOS/firefox --new-instance --profile /Users/yannisskendros/Library/Application Support/Firefox/Profiles/4bou5fna.default-release-1"
+    }
+  ],
+  "profilesDeleted": false,
+  "cookiesHistoryPasswordsDeleted": false,
+  "GoogleSearchAutomation": false,
+  "executionNote": "All three guarded SIGTERM calls completed. Initial command then encountered ps race while awaiting processes already exiting; no SIGKILL was reached. This final single-snapshot check confirms all targets gone and exactly one original personal parent remains.",
+  "scopeOfGuard": "Before each signal, actual command and lstart had to equal captured values; actual command had to start with exact Firefox executable and contain expected temporary profile plus remote-debugging flag. No killall/pkill."
+}

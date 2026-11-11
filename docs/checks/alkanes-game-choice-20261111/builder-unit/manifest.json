@@ -1,0 +1,44 @@
+{
+  "paths": {
+    "games/name-builder.html": {
+      "before": "9af23052ad4c864adec4887a319c278e4e02c818a9885e0058651b42e6e50e82",
+      "after": "20e85af5f718b76031443a87d2394f71a25290e3705d5066cb055541380eddb3"
+    },
+    "js/namelecule-name-builder.js": {
+      "before": "119717a768ea7460b14e0d8b59a691426b08af11d6ca07930105c191cc2df36e",
+      "after": "cdb5c792a3037a6223adb9148c099c811bfd94562fe876cb5bb537086955feea"
+    },
+    "css/namelecule-name-builder.css": {
+      "before": "5dc1be7fefb09a56840966a00a91c47d62d419edf07f45072ede02c43cd43e28",
+      "after": "d9ad67895fa1508f273b4f37161a37fe0ef283e653a1bcfd33649508e80999c2"
+    }
+  },
+  "invariants": {
+    "html_only_cache_urls_changed": true,
+    "focus_place_remove_move_tile_keyboard_click_code_unchanged": true,
+    "drop_drag_touch_autoscroll_code_unchanged": true,
+    "all_existing_css_before_reduced_motion_unchanged": true,
+    "existing_reduced_motion_css_unchanged": true
+  },
+  "unit": {
+    "file": "docs/checks/alkanes-game-choice-20261111/builder-unit/bridge-ui-unit.js",
+    "sha256": "598320918e5e378b124aaa51d1124f0d046feed296e06a43b2fc77c88248ac92",
+    "checks": 30,
+    "runtime": "System JavaScriptCore jsc"
+  },
+  "contractDeviations": [],
+  "bounds": {
+    "attemptIdLength": 160,
+    "roundIdLength": 128,
+    "bankSeedLength": 256,
+    "explanationLength": 8000,
+    "allowedMolecules": 8,
+    "vocabularyRoots": [
+      5,
+      6
+    ]
+  },
+  "remaining": "Root actual browser/chemistry/parent persistence/reviewer checks pending. Synthetic unit checks are not runtime viewer evidence.",
+  "coreChanges": false,
+  "commitPushPublish": false
+}
