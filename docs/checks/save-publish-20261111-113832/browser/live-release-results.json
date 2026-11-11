@@ -1,0 +1,244 @@
+{
+  "checks": [
+    {
+      "label": "Exact served release overlay HTTP/SHA",
+      "passed": true,
+      "detail": 37
+    },
+    {
+      "label": "Welcome threecards and both game logos",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "Welcome direct Builder defaults to ethane/native loaded",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "Direct Builder expanded preserves selected tile",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "Direct Builder condensed preserves selected tile",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "Standalone actual complete name Check succeeds",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "Welcome direct Workshop landing works",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "Welcome Theory opens14lesson library",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "Library opens actual12step alkane lesson",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "Gate4 locks Next",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "Gate4 bothgame choices",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "Builder verified/native ready",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "Builder verified/native ready",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "Live first actual Builder Check load identity",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "Live first actual Builder Check actual clicked tile identity",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "Live first actual Builder Check composed name exact",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "Live first actual Builder Check correct native check",
+      "passed": true,
+      "detail": "feedback success"
+    },
+    {
+      "label": "Live first actual Builder Check explanation supplied",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "Live oneBuilder answer keeps gate locked",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "Live Escape retains lock with partialprogress",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "Professor report rendered",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "solved": [
+    {
+      "label": "Live first actual Builder Check",
+      "game": "builder",
+      "moleculeId": "butane",
+      "name": "βουτάνιο",
+      "load": {
+        "channel": "namelecule-builder-lesson-v1",
+        "session": "01qiqyu1ru7u1h0n1jae20wy45o8",
+        "command": "load",
+        "requestId": 1,
+        "attemptId": "builder-alkanes-unbranched-4696093602940578192",
+        "moleculeId": "butane",
+        "round": {
+          "roundId": "lesson-builder-alkanes-unbranched-4696093602940578192-0",
+          "moleculeId": "butane",
+          "correctName": "βουτάνιο",
+          "series": "alkanes",
+          "parentLength": 4,
+          "pieces": [
+            {
+              "text": "βουτ",
+              "separatorBefore": "",
+              "role": "slot-5"
+            },
+            {
+              "text": "άν",
+              "separatorBefore": "",
+              "role": "slot-6"
+            },
+            {
+              "text": "ιο",
+              "separatorBefore": "",
+              "role": "slot-9"
+            }
+          ],
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ],
+          "vocabulary": {
+            "roots": [
+              "μεθ",
+              "αιθ",
+              "προπ",
+              "βουτ",
+              "πεντ"
+            ]
+          }
+        },
+        "bankSeed": "lesson-builder-alkanes-unbranched-4696093602940578192-0:bank",
+        "initialState": {
+          "answer": [],
+          "selected": null,
+          "attempts": 0,
+          "submitted": false,
+          "solved": false
+        },
+        "explanation": "Το «βουτ» δηλώνει τα 4 άτομα C της κύριας αλυσίδας. Το «άν» δηλώνει τους απλούς δεσμούς μεταξύ ατόμων C και το «ιο» τη χημική τάξη των υδρογονανθράκων."
+      }
+    }
+  ],
+  "conditions": "Owned headless Firefox; actual production UI, native viewer and verified chemistry Worker. Read-only preload observes bridge loads for deterministic test inputs; trusted pointer input submits answers.",
+  "stage": "live",
+  "passed": true,
+  "jsExceptions": [
+    {
+      "type": "javascript",
+      "level": "error",
+      "source": {
+        "realm": "3d53327b-1a6d-4eb7-b2b1-8810cc070d69",
+        "context": "23622320129",
+        "userContext": "default"
+      },
+      "text": "Η φόρτωση του «https://chemapps.stolaf.edu/jmol/JmolTracker.php?id=UA-45940799-1&applet=Jmol._Canvas2D%20(Jmol)&version=2022-06-24%2005:54:49%20(JSmol/j2s)&appver=16.4.23&url=https%3A%2F%2Fyanisken9.github.io%2Forganic-nomenclature-3%2Fgames%2Fname-builder-viewer.html%3Fsession%3D4313e3810780bb96490c1b35fb83a5a1e334» σε ένα πλαίσιο απορρίπτεται από την οδηγία «X-Frame-Options» που έχει οριστεί σε «sameorigin».",
+      "timestamp": 1794391672743
+    },
+    {
+      "type": "javascript",
+      "level": "error",
+      "source": {
+        "realm": "d811c30e-4d6f-49f2-860c-953cfdf51e06",
+        "context": "748281d1-e974-4f96-90ad-7028c9b05559",
+        "userContext": "default"
+      },
+      "text": "Η φόρτωση του «https://chemapps.stolaf.edu/jmol/JmolTracker.php?id=UA-45940799-1&applet=Jmol._Canvas2D%20(Jmol)&version=2022-06-24%2005:54:49%20(JSmol/j2s)&appver=16.4.23&url=https%3A%2F%2Fyanisken9.github.io%2Forganic-nomenclature-3%2Fmulermoc-nom-55.html%3Fscenario%3Dscenarios%2Falkanes-user-3.scenario.json%26present%3D1%26from%3Dtheory-library%26v%3Dalkanes-personal-20261106-r1» σε ένα πλαίσιο απορρίπτεται από την οδηγία «X-Frame-Options» που έχει οριστεί σε «sameorigin».",
+      "timestamp": 1794391679285
+    },
+    {
+      "type": "javascript",
+      "level": "error",
+      "source": {
+        "realm": "d811c30e-4d6f-49f2-860c-953cfdf51e06",
+        "context": "748281d1-e974-4f96-90ad-7028c9b05559",
+        "userContext": "default"
+      },
+      "text": "Το cookie «_ga_1V8NWYY46Y» έχει απορριφθεί λόγω μη έγκυρου τομέα.",
+      "timestamp": 1794391679800
+    },
+    {
+      "type": "javascript",
+      "level": "error",
+      "source": {
+        "realm": "d811c30e-4d6f-49f2-860c-953cfdf51e06",
+        "context": "748281d1-e974-4f96-90ad-7028c9b05559",
+        "userContext": "default"
+      },
+      "text": "Το cookie «_ga_1V8NWYY46Y» έχει απορριφθεί λόγω μη έγκυρου τομέα.",
+      "timestamp": 1794391679801
+    },
+    {
+      "type": "javascript",
+      "level": "error",
+      "source": {
+        "realm": "d811c30e-4d6f-49f2-860c-953cfdf51e06",
+        "context": "748281d1-e974-4f96-90ad-7028c9b05559",
+        "userContext": "default"
+      },
+      "text": "Το cookie «_ga» έχει απορριφθεί λόγω μη έγκυρου τομέα.",
+      "timestamp": 1794391679801
+    },
+    {
+      "type": "javascript",
+      "level": "error",
+      "source": {
+        "realm": "66cc1a80-c1c0-4cc5-a175-352cb8e73dfa",
+        "context": "23622320135",
+        "userContext": "default"
+      },
+      "text": "Η φόρτωση του «https://chemapps.stolaf.edu/jmol/JmolTracker.php?id=UA-45940799-1&applet=Jmol._Canvas2D%20(Jmol)&version=2022-06-24%2005:54:49%20(JSmol/j2s)&appver=16.4.23&url=https%3A%2F%2Fyanisken9.github.io%2Forganic-nomenclature-3%2Fgames%2Fname-builder-viewer.html%3Fsession%3D30ec5c275c96f9bb2813861e460193e41f44» σε ένα πλαίσιο απορρίπτεται από την οδηγία «X-Frame-Options» που έχει οριστεί σε «sameorigin».",
+      "timestamp": 1794391685638
+    }
+  ]
+}

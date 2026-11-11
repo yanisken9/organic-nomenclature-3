@@ -2,10 +2,9 @@
   "date": "2026-11-11",
   "preparedUTC": "2026-11-11T09:42:27.417437+00:00",
   "scope": "New work after Nov10 publicreport. Evidence digests recorded at report preparation; root updates final publication metadata after proof.",
-  "publicationStatus": "PENDING",
-  "runtimeCommit": null,
-  "publicRuntimeVerified": false,
-  "reportPublicVerified": false,
+  "publicationStatus": "RUNTIME_LIVE_VERIFIED",
+  "runtimeCommit": "597accb8b17184be00761da2e65b4365a03e2654",
+  "publicRuntimeVerified": true,
   "coreChanged": false,
   "coreFilesUnchanged": 11,
   "sources": [
@@ -209,21 +208,28 @@
         "S11",
         "S17"
       ]
-    },
-    {
-      "id": "F12",
-      "claim": "New save/publication pending at draft preparation. Prior publiccommit bdf670685e32ea599ef05fb066aadf4920090e2f has successfulPagesrun42815292226; this does not establish Nov11 content as live.",
-      "sources": [
-        "S17"
-      ]
     }
   ],
   "limits": [
     "Supplied evidence read, not re-executed by report author.",
     "Currentmachine ownedheadlessFirefox only; no physicaldevice/otherbrowser/offline/conferencequalification.",
     "Existing JSmol diagnostic rootcause/frequency/identity unproved.",
-    "Migrationfixture uses old authoredJSON normalized in currentMain55 plus authentic compatible currentRepair evidence, not original oldapp execution.",
-    "No backup counts/commit/publication claims added before root verification."
+    "Migrationfixture uses old authoredJSON normalized in currentMain55 plus authentic compatible currentRepair evidence, not original oldapp execution."
   ],
-  "sourceReadValidation": "All17 source byte lengths equal stat before/after and mtimes stable; final hash verification rerun. Initial iCloud dataless read returned empty bytes for one1304bytefile and was rejected/corrected, not accepted as source."
+  "sourceReadValidation": "All17 source byte lengths equal stat before/after and mtimes stable; final hash verification rerun. Initial iCloud dataless read returned empty bytes for one1304bytefile and was rejected/corrected, not accepted as source.",
+  "fullSnapshotCommit": "ccfb9ed5840b9ed36d26a7d98716a709723e3206",
+  "sourceFileCount": 6539,
+  "recoveryFileCount": 235,
+  "backupFolders": [
+    "/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/Αποθηκεύσεις/2026-11-11-113832",
+    "/Users/yannisskendros/Desktop/αρχεία  json/Namelecule_11-11-2026"
+  ],
+  "finalizedUTC": "2026-11-11T10:08:32.226960+00:00",
+  "reportDeliveryVerification": "Performed after these report bytes are published; closing receipt is saved in both backup folders, outside archive cutoffs.",
+  "candidateReleaseChecks": 48,
+  "deliveryEvidence": {
+    "http": "docs/checks/save-publish-20261111-113832/public-runtime-http.json",
+    "pages": "docs/checks/save-publish-20261111-113832/runtime-pages-status.json",
+    "browser": "docs/checks/save-publish-20261111-113832/browser/live-release-results.json"
+  }
 }
