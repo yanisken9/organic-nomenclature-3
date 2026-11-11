@@ -90,8 +90,46 @@
     let states = Object.create(null);
     let practices = Object.create(null);
     let storageAvailable = true;
+    let migrated = false;
     try {
-      const saved = JSON.parse(global.sessionStorage.getItem(key) || "null");
+      const current = global.sessionStorage.getItem(key);
+      let saved = JSON.parse(current || "null");
+      if (current === null) {
+        // Migration is opt-in and reads only an adapter's exact projected old
+        // lesson. A present current record (including an empty reset) wins.
+        const seen = new Set();
+        const read = projected => {
+          const previousContent = signature(projected);
+          let raw;
+          try { raw = global.sessionStorage.getItem(storagePrefix + hash(previousContent)); }
+          catch (error) { storageAvailable = false; throw error; }
+          const previous = JSON.parse(raw || "null");
+          return previous && previous.version === 1 && previous.content === previousContent &&
+            previous.states && typeof previous.states === "object" && !Array.isArray(previous.states) ? clone(previous) : null;
+        };
+        const converted = { states: Object.create(null), practices: Object.create(null) };
+        for (const step of scenario.steps) {
+          if (!step || !own(step, "checkpoint")) continue;
+          const adapter = types[step.checkpoint.type];
+          if (!adapter || seen.has(adapter) || typeof adapter.migrateRecord !== "function") continue;
+          seen.add(adapter);
+          try {
+            const value = adapter.migrateRecord(clone(scenario), { signature, read });
+            if (!value || typeof value !== "object" || value.then) continue;
+            for (const field of ["states", "practices"]) {
+              if (value[field] && typeof value[field] === "object" && !Array.isArray(value[field])) {
+                for (let index = 0; index < scenario.steps.length; index++) {
+                  if (own(value[field], index) && !own(converted[field], index)) converted[field][index] = value[field][index];
+                }
+              }
+            }
+          } catch (_) { /* An ineligible old lesson never changes current progress. */ }
+        }
+        if (Object.keys(converted.states).length) {
+          saved = { version: 1, content, states: converted.states, practices: converted.practices };
+          migrated = true;
+        }
+      }
       // Compare the whole content as well as its short storage key. A hash
       // collision or edited/reordered question cannot reuse another receipt.
       if (saved && saved.version === 1 && saved.content === content && saved.states && typeof saved.states === "object") {
@@ -112,6 +150,7 @@
     } catch (_) { storageAvailable = false; }
     const result = { key, content, states, practices, storageAvailable };
     records.set(content, result);
+    if (migrated) persist(result);
     return result;
   }
 
@@ -205,19 +244,32 @@
   };
   Object.assign(words.gr, {
     practice: "Άλλη τριάδα για εξάσκηση", resumePractice: "Συνέχισε την εξάσκηση",
+    otherGame: "Άλλο παιχνίδι",
     practiceTitle: "Προαιρετική εξάσκηση", continueLesson: "Συνεχίζω τη θεωρία",
     practiceNote: "Η αρχική τριάδα ολοκληρώθηκε. Μπορείς να συνεχίσεις τη θεωρία οποιαδήποτε στιγμή.",
     preparing: "Επαληθεύεται η αποθηκευμένη πρόοδός σου…"
   });
   Object.assign(words.en, {
     practice: "Another three for practice", resumePractice: "Resume practice",
+    otherGame: "Other game",
     practiceTitle: "Optional practice", continueLesson: "Continue the lesson",
     practiceNote: "The required set is complete. You can continue the lesson at any time.",
     preparing: "Checking your saved progress…"
   });
-  function text(key) {
+  function language() {
     let lang = "gr";
     try { if (typeof global.fMulerLang === "function" && global.fMulerLang() === "en") lang = "en"; } catch (_) {}
+    return lang;
+  }
+  function text(key, context) {
+    const lang = language();
+    if (context) {
+      const adapter = types[context.spec.type];
+      try {
+        const labels = typeof adapter.labels === "function" && adapter.labels(context.spec.round, lang);
+        if (labels && typeof labels[key] === "string" && labels[key].trim()) return labels[key].trim();
+      } catch (_) { /* Optional labels retain existing repair defaults on failure. */ }
+    }
     return words[lang][key];
   }
   function node(tag, className, value) {
@@ -336,12 +388,13 @@
   function refreshCard(context) {
     if (active !== context) return;
     const done = isComplete(context.scenario, context.index);
-    context.status.textContent = text(context.preparing ? "preparing" : done ? "done" : "instruction");
+    context.heading.textContent = text("label", context);
+    context.status.textContent = text(context.preparing ? "preparing" : done ? "done" : "instruction", context);
     context.openButton.disabled = !!context.preparing;
-    context.openButton.textContent = done ? text("revisit") : (context.spec.openLabel || text("open"));
+    context.openButton.textContent = done ? text("revisit", context) : (context.spec.openLabel || text("open", context));
     context.section.classList.toggle("nl-quiz-complete", done);
     context.practiceButton.hidden = !done || !supportsPractice(types[context.spec.type]);
-    context.practiceButton.textContent = text(context.record.practices[context.index] ? "resumePractice" : "practice");
+    context.practiceButton.textContent = text(context.record.practices[context.index] ? "resumePractice" : "practice", context);
     context.storageNote.textContent = context.record.storageAvailable ? "" : text("storage");
     context.storageNote.hidden = context.record.storageAvailable;
   }
@@ -356,9 +409,16 @@
     if (typeof global.fScenarioGo === "function") global.fScenarioGo(destination);
   }
   function updateDialog(context) {
+    const marked = mountHost.querySelector("[data-checkpoint-continue]");
+    const actions = mountHost.querySelector(".round-next");
+    const footer = marked || (actions && actions.querySelector("button"));
+    let footerReady = !!(footer && !footer.disabled && mountHost.contains(footer));
+    for (let parent = footer; footerReady && parent && parent !== mountHost; parent = parent.parentNode) {
+      if (parent.hidden) footerReady = false;
+    }
     const finalActions = context.finalRoundVisible === true && context.successActionsReady === true &&
       supportsPractice(types[context.spec.type]) &&
-      isComplete(context.scenario, context.index);
+      footerReady && isComplete(context.scenario, context.index);
     let optionalFinalActions = false;
     if (context.practice && finalActions) {
       try {
@@ -366,24 +426,32 @@
           .restorePractice(context.spec.round, context.record.practices[context.index]).solved === true;
       } catch (_) { /* Keep the independent exit when optional progress cannot be verified. */ }
     }
-    if (optionalFinalActions && dialog.open && global.document.activeElement === practiceContinue) {
-      const actions = mountHost.querySelector(".round-next");
-      const next = actions && actions.querySelector("button");
-      if (next && !next.disabled) next.focus();
-      optionalFinalActions = !!next && global.document.activeElement === next;
-    }
-    dialog.querySelector("#nlQuizDialogTitle").textContent = text(context.practice ? "practiceTitle" : "label");
-    dialog.querySelector("#nlQuizBack").hidden = context.practice || finalActions;
-    practiceNotice.textContent = text("practiceNote");
+    dialog.querySelector("#nlQuizDialogTitle").textContent = text(context.practice ? "practiceTitle" : "label", context);
+    practiceNotice.textContent = text("practiceNote", context);
     practiceNotice.hidden = !context.practice;
     practiceContinue.textContent = text("continueLesson");
-    practiceContinue.hidden = !context.practice || optionalFinalActions;
+    const back = dialog.querySelector("#nlQuizBack");
+    let hideBack = context.practice || finalActions;
+    let hideContinue = !context.practice || optionalFinalActions;
+    if (hideContinue && dialog.open && global.document.activeElement === practiceContinue) {
+      const target = footerReady ? footer : !hideBack ? back : null;
+      if (target === back) back.hidden = false;
+      if (target) target.focus({ preventScroll: true });
+      hideContinue = !!target && global.document.activeElement === target;
+    }
+    practiceContinue.hidden = hideContinue;
+    if (hideBack && dialog.open && global.document.activeElement === back) {
+      const target = footerReady ? footer : context.practice && !practiceContinue.hidden ? practiceContinue : null;
+      if (target) target.focus({ preventScroll: true });
+      hideBack = !!target && global.document.activeElement === target;
+    }
+    back.hidden = hideBack;
   }
-  function newPractice(context) {
+  function newPractice(context, gameId) {
     const adapter = types[context.spec.type];
     if (!currentContext(context) || !supportsPractice(adapter) || !isComplete(context.scenario, context.index)) return;
     context.record.practices[context.index] = adapter.createPractice(context.spec.round,
-      context.record.practices[context.index] || context.record.states[context.index]);
+      context.record.practices[context.index] || context.record.states[context.index], { game: gameId });
     persist(context.record);
     refreshCard(context);
     openDialog(context, true);
@@ -427,8 +495,20 @@
       mounted = mount(mountHost, {
         round: clone(spec.round), assetBase: "games/",
         initialState: states[context.index] ? clone(states[context.index]) : null,
-        newPracticeLabel: text("practice"),
-        onNewPractice: supportsPractice(adapter) ? () => { if (token === mountToken) newPractice(context); } : undefined,
+        newPracticeLabel: text("practice", context),
+        onNewPractice: supportsPractice(adapter) ? () => {
+          if (token !== mountToken || !currentContext(context)) return;
+          const game = typeof adapter.practiceGame === "function" ? adapter.practiceGame(spec.round, states[context.index]) : undefined;
+          newPractice(context, game);
+        } : undefined,
+        otherGameLabel: text("otherGame", context),
+        onOtherGame: supportsPractice(adapter) && typeof adapter.otherGame === "function" ? () => {
+          if (token !== mountToken || !currentContext(context) || !isComplete(context.scenario, context.index)) return;
+          newPractice(context, adapter.otherGame(spec.round, states[context.index]));
+        } : undefined,
+        onClose() {
+          if (token === mountToken && currentContext(context)) closeDialog();
+        },
         onProgress(value) {
           if (token !== mountToken || !currentContext(context)) return;
           showProgress(value);
@@ -538,7 +618,7 @@
     const storageNote = node("p", "nl-quiz-storage-note");
     storageNote.hidden = true;
     copy.append(heading, status, storageNote);
-    const context = { scenario, index, spec, section, status, storageNote, record: recordFor(scenario) };
+    const context = { scenario, index, spec, section, heading, status, storageNote, record: recordFor(scenario) };
     context.openButton = button("", "nl-quiz-button nl-quiz-open", () => openDialog(context));
     context.openButton.id = "nlQuizOpen";
     context.practiceButton = button("", "nl-quiz-button nl-quiz-practice-open", () => {

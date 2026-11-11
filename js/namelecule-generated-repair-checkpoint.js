@@ -10,6 +10,7 @@
   // Optional attempts must never evict the sets used to verify earned progress.
   const practices = new Map();
   let source = null;
+  let canonicalInput = null;
   function assert(condition, message) { if (!condition) throw new Error(message); }
   function cancelled() {
     const error = new Error("Η προετοιμασία ακυρώθηκε.");
@@ -102,8 +103,55 @@
       analyses.push.apply(analyses, batch);
     }
     checkSignal(signal);
-    source = { catalog, analyses };
-    return source;
+    return { catalog, analyses };
+  }
+  function freeze(value) {
+    if (value && typeof value === "object" && !Object.isFrozen(value)) {
+      Object.keys(value).forEach(key => freeze(value[key]));
+      Object.freeze(value);
+    }
+    return value;
+  }
+  async function loadCanonicalInput(signal) {
+    checkSignal(signal);
+    if (canonicalInput) return canonicalInput;
+    const controller = new AbortController();
+    let timedOut = false;
+    let rejectAbort;
+    // Reject independently of fetch/Worker cooperation: an ignored signal must
+    // still leave both mounting and cold receipt preparation with a retry path.
+    const aborted = new Promise((_, reject) => { rejectAbort = reject; });
+    const onAbort = () => rejectAbort(timedOut ? new Error("Η προετοιμασία άργησε. Δοκίμασε ξανά.") : cancelled());
+    const abort = () => controller.abort();
+    controller.signal.addEventListener("abort", onAbort, { once: true });
+    if (signal) signal.addEventListener("abort", abort, { once: true });
+    const timer = global.setTimeout(() => { timedOut = true; abort(); }, 45000);
+    try {
+      const loading = (async () => {
+        const input = await loadSource(controller.signal);
+        checkSignal(controller.signal);
+        // The pinned generator validates names, all twelve parts, vocabulary and
+        // the numbered parent/branch graph against each unchanged source MOL.
+        global.NameleculeRepairEngine.validateGameData(global.NameleculeRepairGenerator.createGame(
+          input.catalog, input.analyses, { seed: "0", difficulty: "basic" }));
+        checkSignal(controller.signal);
+        const verified = freeze(input);
+        // Commit caches only while this request is still live. A late response
+        // from a transport ignoring abort cannot populate either cache.
+        checkSignal(controller.signal);
+        source = verified;
+        canonicalInput = verified;
+        return verified;
+      })();
+      return await Promise.race([loading, aborted]);
+    } catch (error) {
+      controller.abort();
+      throw error;
+    } finally {
+      global.clearTimeout(timer);
+      controller.signal.removeEventListener("abort", onAbort);
+      if (signal) signal.removeEventListener("abort", abort);
+    }
   }
   async function generate(recipe, seed, signal, cache, limit) {
     validate(recipe);
@@ -115,7 +163,7 @@
     if (signal) signal.addEventListener("abort", abort, { once: true });
     const timer = global.setTimeout(abort, 45000);
     try {
-      const input = await loadSource(controller.signal);
+      const input = await loadCanonicalInput(controller.signal);
       checkSignal(signal);
       checkSignal(controller.signal);
       const game = global.NameleculeRepairEngine.validateGameData(global.NameleculeRepairGenerator.createGame(input.catalog, input.analyses,
@@ -216,6 +264,12 @@
           if (!destroyed && state.currentRound === index && state.solved && roundHost.isConnected) options.onNewPractice();
         };
       }
+      if (index === 2 && typeof options.onOtherGame === "function") {
+        roundOptions.otherGameLabel = options.otherGameLabel;
+        roundOptions.onOtherGame = function () {
+          if (!destroyed && state.currentRound === index && state.solved && roundHost.isConnected) options.onOtherGame();
+        };
+      }
       current = global.NameleculeRepairGame.mountRound(roundHost, roundOptions);
       reportProgress({ current: index + 1, total: recipe.roundCount });
     }
@@ -260,6 +314,7 @@
   function mount(host, options) { return mountSet(host, options, false); }
   function mountPractice(host, options) { return mountSet(host, options, true); }
   assert(global.NameleculeQuizCheckpoints, "Checkpoint controller unavailable");
-  global.NameleculeQuizCheckpoints.registerType("generated-name-repair-set",
-    { validate, restore, prepare, mount, createPractice, restorePractice, mountPractice });
+  const adapter = Object.freeze({ validate, restore, prepare, mount, createPractice, restorePractice, mountPractice });
+  global.NameleculeGeneratedRepairCheckpoint = Object.freeze({ adapter, loadCanonicalInput, freshSeed });
+  global.NameleculeQuizCheckpoints.registerType("generated-name-repair-set", adapter);
 })(typeof window !== "undefined" ? window : globalThis);

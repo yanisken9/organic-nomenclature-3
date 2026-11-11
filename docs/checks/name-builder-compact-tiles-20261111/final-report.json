@@ -1,0 +1,47 @@
+{
+  "completedUTC": "2026-11-11T07:07:04.843910+00:00",
+  "status": "User-selected compact answer tiles implemented and independently reviewed",
+  "previewURL": "http://127.0.0.1:49897/games/name-builder.html?v=compact-tiles-20261111-r1&molecule=dimethyl_4_5_hexen_5_yn_1_one_3",
+  "visualResultURL": "http://127.0.0.1:49897/docs/checks/name-builder-compact-tiles-20261111/browser/after-full-1024.png",
+  "changedFiles": {
+    "css/namelecule-name-builder.css": "fa11a143b9ec89136ab3a9b64fdf0f52788946a732cf2174e9441c5404d6422d",
+    "games/name-builder.html": "484c7421c8cbdb68b49bcc081e2f831aafba5b1d54fe63b2c1a47d1df40d9412"
+  },
+  "CSSDelta": {
+    "answerGap": "6->3px",
+    "answerMinWidth": "44->32px",
+    "answerHorizontalPadding": "11->5px",
+    "font": "unchanged1.03rem/16.48px",
+    "height": "unchanged46px"
+  },
+  "unchanged": "Layout, bank, all JS/engine/viewer/data and sharedinit unchanged;32protectedpaths/11cores/HEAD/indexmatchbaseline",
+  "verified": "Screenshot8andfull9pieces allsimultaneouslyvisible at1024; exactname/success/keyboard; longest12at1280/390/320still1lineandendsreachable. Trustedpointerinsert0/6/12,removal,edge/capture,touch390and32x46selectionpassed.",
+  "DeveloperChecks": {
+    "compact": 13,
+    "trustedPointer": 12,
+    "capturedJavaScriptErrors": 0
+  },
+  "independentReview": "independent-review.json",
+  "finalHTTPHashes": {
+    "games/name-builder.html": {
+      "status": 200,
+      "sha256": "484c7421c8cbdb68b49bcc081e2f831aafba5b1d54fe63b2c1a47d1df40d9412"
+    },
+    "css/namelecule-name-builder.css": {
+      "status": 200,
+      "sha256": "fa11a143b9ec89136ab3a9b64fdf0f52788946a732cf2174e9441c5404d6422d"
+    }
+  },
+  "ownedDiagnosticsClosed": true,
+  "personalFirefoxControlled": false,
+  "coreChanges": false,
+  "committedPushedPublished": false,
+  "limitations": [
+    "BrowserexecutionisDeveloper, not independentruntime",
+    "Long/narrow/extraanswers keepacceptedlocalhorizontal scroll",
+    "RawFirefoxlogs retainBiDiWeakMaperrors andpagehidetimeoutwarnings similarlytopriorlog; nocleanrawconsole/fixclaimed",
+    "Physicaldevices/otherbrowsers/offline/conferenceauditunverified",
+    "Chemistry/viewerwideN/A forCSS-onlydelta"
+  ],
+  "nextStep": "User tries compact tiles; do not imply universal simultaneous fit of all long/extra answers"
+}
