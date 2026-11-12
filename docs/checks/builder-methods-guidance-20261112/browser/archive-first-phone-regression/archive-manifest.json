@@ -1,0 +1,59 @@
+{
+  "recordedUTC": "2026-11-12T06:03:18.917709+00:00",
+  "purpose": "Preserve exact first failed expanded-phone-guidance runtime, source hashes are in layout-results.json and original frozen manifest pointer in process receipts.",
+  "files": {
+    "verify.py": {
+      "sha256": "5c98249adf4d3a62b748f81c77d9c8ed2beadc18656f59e22b02602ddc84797f",
+      "bytes": 17174
+    },
+    "driver.py": {
+      "sha256": "553fbd92e0d216b9f3fde3896949251b2c4c83479d2c92d87a3761b0ce993f28",
+      "bytes": 2116
+    },
+    "helpers.py": {
+      "sha256": "e241e5d5a0ea6022aab288cafd6cc0a3abfd9f16244d90169332a082b6ceb964",
+      "bytes": 8148
+    },
+    "interaction-helpers.py": {
+      "sha256": "d0934eb112483c3811009692bb9935248a166cebd61e29954e2ef7bb35de272d",
+      "bytes": 10979
+    },
+    "gesture-helpers.py": {
+      "sha256": "46ce02d4cc53555c506242d4b726bdf99ecba3daec878ef6bec144fcb36aa977",
+      "bytes": 19762
+    },
+    "process.json": {
+      "sha256": "d4d82a84d462480b0c6582bc97c4a237dfd12194ab1488557a6791b64a370685",
+      "bytes": 1084
+    },
+    "layout-process.json": {
+      "sha256": "d4d82a84d462480b0c6582bc97c4a237dfd12194ab1488557a6791b64a370685",
+      "bytes": 1084
+    },
+    "layout-cleanup.json": {
+      "sha256": "f268f1f3ffadedeb0b9257d199ba4799e25b3a56469d6fc92d8a36bd4649d94c",
+      "bytes": 1168
+    },
+    "layout-results.json": {
+      "sha256": "1f3335158b05969971dac194b127bec5ae140d6f97711a823250922207397ada",
+      "bytes": 68376
+    },
+    "layout-firefox.log": {
+      "sha256": "dc67f3168896382b654e91c4648a2a546b566e38b20be8242846a164be4be4eb",
+      "bytes": 2198
+    },
+    "lesson-390-initial.png": {
+      "sha256": "2eeefafb8c756ae9a10dbd78493e6c957015bedbd665413cc44ecdb2870f0f00",
+      "bytes": 80227
+    },
+    "lesson-390-populated.png": {
+      "sha256": "7143813573bb1b71d5331fae529a19e2dcbf7f83e9954943b872866bff4d9813",
+      "bytes": 82590
+    },
+    "layout-failure.png": {
+      "sha256": "7143813573bb1b71d5331fae529a19e2dcbf7f83e9954943b872866bff4d9813",
+      "bytes": 82590
+    }
+  },
+  "warningProvenance": "Firefox stderr contains SWGL/BiDi errors and script-timeout stack. Log has no timestamps; shutdown attribution was not established. Subscribed page JS/console errors were empty; HTTP favicon404 recorded."
+}

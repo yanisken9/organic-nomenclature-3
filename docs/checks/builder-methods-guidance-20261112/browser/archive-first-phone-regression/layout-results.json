@@ -1,0 +1,2363 @@
+{
+  "checks": [
+    {
+      "label": "target reachable without test scrolling: #rotatePromptDismiss",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "x": 195,
+        "y": 465,
+        "localX": 194.99166870117188,
+        "localY": 465.2833251953125,
+        "fullyVisible": true,
+        "usable": {
+          "left": 0,
+          "top": 0,
+          "right": 390,
+          "bottom": 760
+        },
+        "bounds": {
+          "left": 117.5,
+          "top": 447.7833251953125,
+          "right": 272.48333740234375,
+          "bottom": 482.7833251953125
+        },
+        "frames": [
+          {
+            "width": 390,
+            "height": 760,
+            "scrollY": 0
+          }
+        ],
+        "dialogScrollTop": null
+      }
+    },
+    {
+      "label": "Builder verified/native ready",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "gesture geometry target exists: #check-answer",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "selector": "#check-answer",
+        "local": {
+          "x": 100.5,
+          "y": 1387.0833740234375
+        },
+        "global": {
+          "x": 122,
+          "y": 716
+        },
+        "rect": {
+          "left": 28,
+          "top": 1363.0833740234375,
+          "right": 173,
+          "bottom": 1411.0833740234375,
+          "width": 145,
+          "height": 48
+        },
+        "globalRect": {
+          "left": 49,
+          "right": 194,
+          "top": 692.0000610351562,
+          "bottom": 740.0000610351562,
+          "width": 145,
+          "height": 48
+        },
+        "insideGame": true,
+        "visibleGame": true,
+        "globalInside": true,
+        "reason": null,
+        "hit": {
+          "tag": "BUTTON",
+          "id": "check-answer",
+          "tileId": null,
+          "inAnswer": false,
+          "inBank": false
+        },
+        "topHit": {
+          "tag": "IFRAME",
+          "id": null,
+          "tileId": null,
+          "inAnswer": false,
+          "inBank": false
+        },
+        "selectorHit": true,
+        "gameViewport": {
+          "width": 348,
+          "height": 1529,
+          "scrollX": 0,
+          "scrollY": 0
+        },
+        "topViewport": {
+          "width": 390,
+          "height": 760
+        },
+        "frames": [
+          {
+            "x": 121.5,
+            "y": 716.0000610351562,
+            "left": 21,
+            "top": -671.0833129882812,
+            "scaleX": 1,
+            "scaleY": 1,
+            "width": 390,
+            "height": 760,
+            "hit": {
+              "tag": "IFRAME",
+              "id": null,
+              "tileId": null,
+              "inAnswer": false,
+              "inBank": false
+            },
+            "expectedFrameId": null,
+            "visible": true
+          }
+        ]
+      }
+    },
+    {
+      "label": "gesture geometry target exists: #answer-zone",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "selector": "#answer-zone",
+        "local": {
+          "x": 174,
+          "y": 859
+        },
+        "global": {
+          "x": 195,
+          "y": 188
+        },
+        "rect": {
+          "left": 28,
+          "top": 799,
+          "right": 320,
+          "bottom": 919,
+          "width": 292,
+          "height": 120
+        },
+        "globalRect": {
+          "left": 49,
+          "right": 341,
+          "top": 127.91668701171875,
+          "bottom": 247.91668701171875,
+          "width": 292,
+          "height": 120
+        },
+        "insideGame": true,
+        "visibleGame": true,
+        "globalInside": true,
+        "reason": null,
+        "hit": {
+          "tag": "P",
+          "id": "empty-answer",
+          "tileId": null,
+          "inAnswer": true,
+          "inBank": false
+        },
+        "topHit": {
+          "tag": "IFRAME",
+          "id": null,
+          "tileId": null,
+          "inAnswer": false,
+          "inBank": false
+        },
+        "selectorHit": true,
+        "gameViewport": {
+          "width": 348,
+          "height": 1529,
+          "scrollX": 0,
+          "scrollY": 0
+        },
+        "topViewport": {
+          "width": 390,
+          "height": 760
+        },
+        "frames": [
+          {
+            "x": 195,
+            "y": 187.91668701171875,
+            "left": 21,
+            "top": -671.0833129882812,
+            "scaleX": 1,
+            "scaleY": 1,
+            "width": 390,
+            "height": 760,
+            "hit": {
+              "tag": "IFRAME",
+              "id": null,
+              "tileId": null,
+              "inAnswer": false,
+              "inBank": false
+            },
+            "expectedFrameId": null,
+            "visible": true
+          }
+        ]
+      }
+    },
+    {
+      "label": "gesture geometry target exists: #bank-zone",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "selector": "#bank-zone",
+        "local": {
+          "x": 174,
+          "y": 1036.0166625976562
+        },
+        "global": {
+          "x": 195,
+          "y": 365
+        },
+        "rect": {
+          "left": 29,
+          "top": 955.0166625976562,
+          "right": 319,
+          "bottom": 1117.0166625976562,
+          "width": 290,
+          "height": 162
+        },
+        "globalRect": {
+          "left": 50,
+          "right": 340,
+          "top": 283.933349609375,
+          "bottom": 445.933349609375,
+          "width": 290,
+          "height": 162
+        },
+        "insideGame": true,
+        "visibleGame": true,
+        "globalInside": true,
+        "reason": null,
+        "hit": {
+          "tag": "BUTTON",
+          "id": null,
+          "tileId": "tile-hhi2ca-4",
+          "inAnswer": false,
+          "inBank": true
+        },
+        "topHit": {
+          "tag": "IFRAME",
+          "id": null,
+          "tileId": null,
+          "inAnswer": false,
+          "inBank": false
+        },
+        "selectorHit": true,
+        "gameViewport": {
+          "width": 348,
+          "height": 1529,
+          "scrollX": 0,
+          "scrollY": 0
+        },
+        "topViewport": {
+          "width": 390,
+          "height": 760
+        },
+        "frames": [
+          {
+            "x": 195,
+            "y": 364.933349609375,
+            "left": 21,
+            "top": -671.0833129882812,
+            "scaleX": 1,
+            "scaleY": 1,
+            "width": 390,
+            "height": 760,
+            "hit": {
+              "tag": "IFRAME",
+              "id": null,
+              "tileId": null,
+              "inAnswer": false,
+              "inBank": false
+            },
+            "expectedFrameId": null,
+            "visible": true
+          }
+        ]
+      }
+    },
+    {
+      "label": "lesson-390-initial three explicit method rows",
+      "passed": true,
+      "detail": [
+        {
+          "top": 1131.0166015625,
+          "bottom": 1172.7832794189453,
+          "left": 40,
+          "right": 311,
+          "height": 41.76667785644531,
+          "width": 271,
+          "fontSize": "14.4px",
+          "fontWeight": "400",
+          "display": "block",
+          "overflow": "visible",
+          "scrollHeight": 42,
+          "clientHeight": 42,
+          "text": "Προσθήκη: Σύρε το εικονίδιο στο πλαίσιο ή κάνε κλικ επάνω του.",
+          "labelWeight": "780"
+        },
+        {
+          "top": 1176.7833251953125,
+          "bottom": 1282.316650390625,
+          "left": 40,
+          "right": 311,
+          "height": 105.5333251953125,
+          "width": 271,
+          "fontSize": "14.4px",
+          "fontWeight": "400",
+          "display": "block",
+          "overflow": "visible",
+          "scrollHeight": 106,
+          "clientHeight": 106,
+          "text": "Αλλαγή σειράς: Σύρε το εικονίδιο στη σωστή θέση μέσα στο πλαίσιο ή επίλεξέ το με κλικ και χρησιμοποίησε τα κουμπιά «Αριστερά»–«Δεξιά» ή τα πλήκτρα ← →.",
+          "labelWeight": "780"
+        },
+        {
+          "top": 1286.316650390625,
+          "bottom": 1350.0833129882812,
+          "left": 40,
+          "right": 311,
+          "height": 63.76666259765625,
+          "width": 271,
+          "fontSize": "14.4px",
+          "fontWeight": "400",
+          "display": "block",
+          "overflow": "visible",
+          "scrollHeight": 64,
+          "clientHeight": 64,
+          "text": "Αφαίρεση: Σύρε και άφησε το εικονίδιο έξω από το πλαίσιο ή επίλεξέ το με κλικ και πάτησε «Αφαίρεση» ή Delete.",
+          "labelWeight": "780"
+        }
+      ]
+    },
+    {
+      "label": "lesson-390-initial readable rows and bold labels",
+      "passed": true,
+      "detail": [
+        {
+          "top": 1131.0166015625,
+          "bottom": 1172.7832794189453,
+          "left": 40,
+          "right": 311,
+          "height": 41.76667785644531,
+          "width": 271,
+          "fontSize": "14.4px",
+          "fontWeight": "400",
+          "display": "block",
+          "overflow": "visible",
+          "scrollHeight": 42,
+          "clientHeight": 42,
+          "text": "Προσθήκη: Σύρε το εικονίδιο στο πλαίσιο ή κάνε κλικ επάνω του.",
+          "labelWeight": "780"
+        },
+        {
+          "top": 1176.7833251953125,
+          "bottom": 1282.316650390625,
+          "left": 40,
+          "right": 311,
+          "height": 105.5333251953125,
+          "width": 271,
+          "fontSize": "14.4px",
+          "fontWeight": "400",
+          "display": "block",
+          "overflow": "visible",
+          "scrollHeight": 106,
+          "clientHeight": 106,
+          "text": "Αλλαγή σειράς: Σύρε το εικονίδιο στη σωστή θέση μέσα στο πλαίσιο ή επίλεξέ το με κλικ και χρησιμοποίησε τα κουμπιά «Αριστερά»–«Δεξιά» ή τα πλήκτρα ← →.",
+          "labelWeight": "780"
+        },
+        {
+          "top": 1286.316650390625,
+          "bottom": 1350.0833129882812,
+          "left": 40,
+          "right": 311,
+          "height": 63.76666259765625,
+          "width": 271,
+          "fontSize": "14.4px",
+          "fontWeight": "400",
+          "display": "block",
+          "overflow": "visible",
+          "scrollHeight": 64,
+          "clientHeight": 64,
+          "text": "Αφαίρεση: Σύρε και άφησε το εικονίδιο έξω από το πλαίσιο ή επίλεξέ το με κλικ και πάτησε «Αφαίρεση» ή Delete.",
+          "labelWeight": "780"
+        }
+      ]
+    },
+    {
+      "label": "lesson-390-initial full guidance has no internal clipping",
+      "passed": true,
+      "detail": {
+        "top": 1124.0166015625,
+        "bottom": 1357.083267211914,
+        "left": 28,
+        "right": 320,
+        "height": 233.06666564941406,
+        "width": 292,
+        "fontSize": "14.4px",
+        "fontWeight": "400",
+        "display": "block",
+        "overflow": "visible",
+        "scrollHeight": 231,
+        "clientHeight": 231
+      }
+    },
+    {
+      "label": "lesson-390-initial no horizontal page overflow",
+      "passed": true,
+      "detail": {
+        "width": 348,
+        "page": 348,
+        "body": 348
+      }
+    },
+    {
+      "label": "lesson-390-initial answer remains one line",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "lesson-390 initial answer and bank automatically visible",
+      "passed": true,
+      "detail": {
+        "width": 348,
+        "pageWidth": 348,
+        "bodyWidth": 348,
+        "scrollY": 0,
+        "help": {
+          "top": 1124.0166015625,
+          "bottom": 1357.083267211914,
+          "left": 28,
+          "right": 320,
+          "height": 233.06666564941406,
+          "width": 292,
+          "fontSize": "14.4px",
+          "fontWeight": "400",
+          "display": "block",
+          "overflow": "visible",
+          "scrollHeight": 231,
+          "clientHeight": 231
+        },
+        "rows": [
+          {
+            "top": 1131.0166015625,
+            "bottom": 1172.7832794189453,
+            "left": 40,
+            "right": 311,
+            "height": 41.76667785644531,
+            "width": 271,
+            "fontSize": "14.4px",
+            "fontWeight": "400",
+            "display": "block",
+            "overflow": "visible",
+            "scrollHeight": 42,
+            "clientHeight": 42,
+            "text": "Προσθήκη: Σύρε το εικονίδιο στο πλαίσιο ή κάνε κλικ επάνω του.",
+            "labelWeight": "780"
+          },
+          {
+            "top": 1176.7833251953125,
+            "bottom": 1282.316650390625,
+            "left": 40,
+            "right": 311,
+            "height": 105.5333251953125,
+            "width": 271,
+            "fontSize": "14.4px",
+            "fontWeight": "400",
+            "display": "block",
+            "overflow": "visible",
+            "scrollHeight": 106,
+            "clientHeight": 106,
+            "text": "Αλλαγή σειράς: Σύρε το εικονίδιο στη σωστή θέση μέσα στο πλαίσιο ή επίλεξέ το με κλικ και χρησιμοποίησε τα κουμπιά «Αριστερά»–«Δεξιά» ή τα πλήκτρα ← →.",
+            "labelWeight": "780"
+          },
+          {
+            "top": 1286.316650390625,
+            "bottom": 1350.0833129882812,
+            "left": 40,
+            "right": 311,
+            "height": 63.76666259765625,
+            "width": 271,
+            "fontSize": "14.4px",
+            "fontWeight": "400",
+            "display": "block",
+            "overflow": "visible",
+            "scrollHeight": 64,
+            "clientHeight": 64,
+            "text": "Αφαίρεση: Σύρε και άφησε το εικονίδιο έξω από το πλαίσιο ή επίλεξέ το με κλικ και πάτησε «Αφαίρεση» ή Delete.",
+            "labelWeight": "780"
+          }
+        ],
+        "answer": {
+          "top": 799,
+          "bottom": 919,
+          "left": 28,
+          "right": 320,
+          "height": 120,
+          "width": 292,
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "display": "flex",
+          "overflow": "auto hidden",
+          "scrollHeight": 116,
+          "clientHeight": 116
+        },
+        "bank": {
+          "top": 955.0166625976562,
+          "bottom": 1117.0166625976562,
+          "left": 29,
+          "right": 319,
+          "height": 162,
+          "width": 290,
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "display": "block",
+          "overflow": "visible",
+          "scrollHeight": 162,
+          "clientHeight": 162
+        },
+        "controls": {
+          "top": 0,
+          "bottom": 0,
+          "left": 0,
+          "right": 0,
+          "height": 0,
+          "width": 0,
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "display": "none",
+          "overflow": "visible",
+          "scrollHeight": 0,
+          "clientHeight": 0
+        },
+        "check": {
+          "top": 1363.0833740234375,
+          "bottom": 1411.0833740234375,
+          "left": 28,
+          "right": 173,
+          "height": 48,
+          "width": 145,
+          "fontSize": "14.0833px",
+          "fontWeight": "760",
+          "display": "block",
+          "overflow": "visible",
+          "scrollHeight": 46,
+          "clientHeight": 46
+        },
+        "buttons": [
+          {
+            "top": 0,
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "height": 0,
+            "width": 0,
+            "fontSize": "14.4px",
+            "fontWeight": "750",
+            "display": "inline-block",
+            "overflow": "visible",
+            "scrollHeight": 0,
+            "clientHeight": 0,
+            "name": "← Αριστερά"
+          },
+          {
+            "top": 0,
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "height": 0,
+            "width": 0,
+            "fontSize": "14.4px",
+            "fontWeight": "750",
+            "display": "inline-block",
+            "overflow": "visible",
+            "scrollHeight": 0,
+            "clientHeight": 0,
+            "name": "Δεξιά →"
+          },
+          {
+            "top": 0,
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "height": 0,
+            "width": 0,
+            "fontSize": "14.4px",
+            "fontWeight": "750",
+            "display": "inline-block",
+            "overflow": "visible",
+            "scrollHeight": 0,
+            "clientHeight": 0,
+            "name": "Αφαίρεση"
+          }
+        ],
+        "answerRows": 0,
+        "label": "lesson-390-initial",
+        "embedded": true,
+        "checkVisibility": {
+          "fullyVisible": true,
+          "bounds": {
+            "left": 49,
+            "right": 194,
+            "top": 692.0000610351562,
+            "bottom": 740.0000610351562,
+            "width": 145,
+            "height": 48
+          },
+          "usable": {
+            "left": 7,
+            "top": 111.83332824707031,
+            "right": 383,
+            "bottom": 753
+          },
+          "probe": {
+            "ok": true,
+            "selector": "#check-answer",
+            "local": {
+              "x": 100.5,
+              "y": 1387.0833740234375
+            },
+            "global": {
+              "x": 122,
+              "y": 716
+            },
+            "rect": {
+              "left": 28,
+              "top": 1363.0833740234375,
+              "right": 173,
+              "bottom": 1411.0833740234375,
+              "width": 145,
+              "height": 48
+            },
+            "globalRect": {
+              "left": 49,
+              "right": 194,
+              "top": 692.0000610351562,
+              "bottom": 740.0000610351562,
+              "width": 145,
+              "height": 48
+            },
+            "insideGame": true,
+            "visibleGame": true,
+            "globalInside": true,
+            "reason": null,
+            "hit": {
+              "tag": "BUTTON",
+              "id": "check-answer",
+              "tileId": null,
+              "inAnswer": false,
+              "inBank": false
+            },
+            "topHit": {
+              "tag": "IFRAME",
+              "id": null,
+              "tileId": null,
+              "inAnswer": false,
+              "inBank": false
+            },
+            "selectorHit": true,
+            "gameViewport": {
+              "width": 348,
+              "height": 1529,
+              "scrollX": 0,
+              "scrollY": 0
+            },
+            "topViewport": {
+              "width": 390,
+              "height": 760
+            },
+            "frames": [
+              {
+                "x": 121.5,
+                "y": 716.0000610351562,
+                "left": 21,
+                "top": -671.0833129882812,
+                "scaleX": 1,
+                "scaleY": 1,
+                "width": 390,
+                "height": 760,
+                "hit": {
+                  "tag": "IFRAME",
+                  "id": null,
+                  "tileId": null,
+                  "inAnswer": false,
+                  "inBank": false
+                },
+                "expectedFrameId": null,
+                "visible": true
+              }
+            ]
+          }
+        },
+        "answerVisibility": {
+          "fullyVisible": true,
+          "bounds": {
+            "left": 49,
+            "right": 341,
+            "top": 127.91668701171875,
+            "bottom": 247.91668701171875,
+            "width": 292,
+            "height": 120
+          },
+          "usable": {
+            "left": 7,
+            "top": 111.83332824707031,
+            "right": 383,
+            "bottom": 753
+          },
+          "probe": {
+            "ok": true,
+            "selector": "#answer-zone",
+            "local": {
+              "x": 174,
+              "y": 859
+            },
+            "global": {
+              "x": 195,
+              "y": 188
+            },
+            "rect": {
+              "left": 28,
+              "top": 799,
+              "right": 320,
+              "bottom": 919,
+              "width": 292,
+              "height": 120
+            },
+            "globalRect": {
+              "left": 49,
+              "right": 341,
+              "top": 127.91668701171875,
+              "bottom": 247.91668701171875,
+              "width": 292,
+              "height": 120
+            },
+            "insideGame": true,
+            "visibleGame": true,
+            "globalInside": true,
+            "reason": null,
+            "hit": {
+              "tag": "P",
+              "id": "empty-answer",
+              "tileId": null,
+              "inAnswer": true,
+              "inBank": false
+            },
+            "topHit": {
+              "tag": "IFRAME",
+              "id": null,
+              "tileId": null,
+              "inAnswer": false,
+              "inBank": false
+            },
+            "selectorHit": true,
+            "gameViewport": {
+              "width": 348,
+              "height": 1529,
+              "scrollX": 0,
+              "scrollY": 0
+            },
+            "topViewport": {
+              "width": 390,
+              "height": 760
+            },
+            "frames": [
+              {
+                "x": 195,
+                "y": 187.91668701171875,
+                "left": 21,
+                "top": -671.0833129882812,
+                "scaleX": 1,
+                "scaleY": 1,
+                "width": 390,
+                "height": 760,
+                "hit": {
+                  "tag": "IFRAME",
+                  "id": null,
+                  "tileId": null,
+                  "inAnswer": false,
+                  "inBank": false
+                },
+                "expectedFrameId": null,
+                "visible": true
+              }
+            ]
+          }
+        },
+        "bankVisibility": {
+          "fullyVisible": true,
+          "bounds": {
+            "left": 50,
+            "right": 340,
+            "top": 283.933349609375,
+            "bottom": 445.933349609375,
+            "width": 290,
+            "height": 162
+          },
+          "usable": {
+            "left": 7,
+            "top": 111.83332824707031,
+            "right": 383,
+            "bottom": 753
+          },
+          "probe": {
+            "ok": true,
+            "selector": "#bank-zone",
+            "local": {
+              "x": 174,
+              "y": 1036.0166625976562
+            },
+            "global": {
+              "x": 195,
+              "y": 365
+            },
+            "rect": {
+              "left": 29,
+              "top": 955.0166625976562,
+              "right": 319,
+              "bottom": 1117.0166625976562,
+              "width": 290,
+              "height": 162
+            },
+            "globalRect": {
+              "left": 50,
+              "right": 340,
+              "top": 283.933349609375,
+              "bottom": 445.933349609375,
+              "width": 290,
+              "height": 162
+            },
+            "insideGame": true,
+            "visibleGame": true,
+            "globalInside": true,
+            "reason": null,
+            "hit": {
+              "tag": "BUTTON",
+              "id": null,
+              "tileId": "tile-hhi2ca-4",
+              "inAnswer": false,
+              "inBank": true
+            },
+            "topHit": {
+              "tag": "IFRAME",
+              "id": null,
+              "tileId": null,
+              "inAnswer": false,
+              "inBank": false
+            },
+            "selectorHit": true,
+            "gameViewport": {
+              "width": 348,
+              "height": 1529,
+              "scrollX": 0,
+              "scrollY": 0
+            },
+            "topViewport": {
+              "width": 390,
+              "height": 760
+            },
+            "frames": [
+              {
+                "x": 195,
+                "y": 364.933349609375,
+                "left": 21,
+                "top": -671.0833129882812,
+                "scaleX": 1,
+                "scaleY": 1,
+                "width": 390,
+                "height": 760,
+                "hit": {
+                  "tag": "IFRAME",
+                  "id": null,
+                  "tileId": null,
+                  "inAnswer": false,
+                  "inBank": false
+                },
+                "expectedFrameId": null,
+                "visible": true
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "label": "target reachable without test scrolling: #bank-tiles [data-tile-id=\"tile-hhi2ca-2\"]",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "x": 103,
+        "y": 314,
+        "localX": 82,
+        "localY": 985.0166625976562,
+        "fullyVisible": true,
+        "usable": {
+          "left": 7,
+          "top": 111.83332824707031,
+          "right": 383,
+          "bottom": 753
+        },
+        "bounds": {
+          "left": 60,
+          "top": 291.933349609375,
+          "right": 146,
+          "bottom": 335.933349609375
+        },
+        "frames": [
+          {
+            "width": 348,
+            "height": 1529,
+            "scrollY": 0
+          },
+          {
+            "width": 390,
+            "height": 760,
+            "scrollY": 196.31666564941406
+          }
+        ],
+        "dialogScrollTop": 976.2833251953125
+      }
+    },
+    {
+      "label": "gesture geometry target exists: #check-answer",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "selector": "#check-answer",
+        "local": {
+          "x": 100.5,
+          "y": 1454.2833251953125
+        },
+        "global": {
+          "x": 122,
+          "y": 779
+        },
+        "rect": {
+          "left": 28,
+          "top": 1430.2833251953125,
+          "right": 173,
+          "bottom": 1478.2833251953125,
+          "width": 145,
+          "height": 48
+        },
+        "globalRect": {
+          "left": 49,
+          "right": 194,
+          "top": 755.1166381835938,
+          "bottom": 803.1166381835938,
+          "width": 145,
+          "height": 48
+        },
+        "insideGame": true,
+        "visibleGame": false,
+        "globalInside": false,
+        "reason": "parent viewport/clipping/overlay",
+        "hit": {
+          "tag": "BUTTON",
+          "id": "check-answer",
+          "tileId": null,
+          "inAnswer": false,
+          "inBank": false
+        },
+        "topHit": null,
+        "selectorHit": true,
+        "gameViewport": {
+          "width": 348,
+          "height": 1596,
+          "scrollX": 0,
+          "scrollY": 0
+        },
+        "topViewport": {
+          "width": 390,
+          "height": 760
+        },
+        "frames": [
+          {
+            "x": 121.5,
+            "y": 779.1166381835938,
+            "left": 21,
+            "top": -675.1666870117188,
+            "scaleX": 1,
+            "scaleY": 1,
+            "width": 390,
+            "height": 760,
+            "hit": null,
+            "expectedFrameId": null,
+            "visible": false
+          }
+        ]
+      }
+    },
+    {
+      "label": "gesture geometry target exists: #answer-zone",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "selector": "#answer-zone",
+        "local": {
+          "x": 174,
+          "y": 841
+        },
+        "global": {
+          "x": 195,
+          "y": 166
+        },
+        "rect": {
+          "left": 28,
+          "top": 799,
+          "right": 320,
+          "bottom": 883,
+          "width": 292,
+          "height": 84
+        },
+        "globalRect": {
+          "left": 49,
+          "right": 341,
+          "top": 123.83331298828125,
+          "bottom": 207.83331298828125,
+          "width": 292,
+          "height": 84
+        },
+        "insideGame": true,
+        "visibleGame": true,
+        "globalInside": true,
+        "reason": null,
+        "hit": {
+          "tag": "BUTTON",
+          "id": null,
+          "tileId": "tile-hhi2ca-2",
+          "inAnswer": true,
+          "inBank": false
+        },
+        "topHit": {
+          "tag": "IFRAME",
+          "id": null,
+          "tileId": null,
+          "inAnswer": false,
+          "inBank": false
+        },
+        "selectorHit": true,
+        "gameViewport": {
+          "width": 348,
+          "height": 1596,
+          "scrollX": 0,
+          "scrollY": 0
+        },
+        "topViewport": {
+          "width": 390,
+          "height": 760
+        },
+        "frames": [
+          {
+            "x": 195,
+            "y": 165.83331298828125,
+            "left": 21,
+            "top": -675.1666870117188,
+            "scaleX": 1,
+            "scaleY": 1,
+            "width": 390,
+            "height": 760,
+            "hit": {
+              "tag": "IFRAME",
+              "id": null,
+              "tileId": null,
+              "inAnswer": false,
+              "inBank": false
+            },
+            "expectedFrameId": null,
+            "visible": true
+          }
+        ]
+      }
+    },
+    {
+      "label": "gesture geometry target exists: #bank-zone",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "selector": "#bank-zone",
+        "local": {
+          "x": 174,
+          "y": 975.0166625976562
+        },
+        "global": {
+          "x": 195,
+          "y": 300
+        },
+        "rect": {
+          "left": 29,
+          "top": 919.0166625976562,
+          "right": 319,
+          "bottom": 1031.0166625976562,
+          "width": 290,
+          "height": 112
+        },
+        "globalRect": {
+          "left": 50,
+          "right": 340,
+          "top": 243.8499755859375,
+          "bottom": 355.8499755859375,
+          "width": 290,
+          "height": 112
+        },
+        "insideGame": true,
+        "visibleGame": true,
+        "globalInside": true,
+        "reason": null,
+        "hit": {
+          "tag": "UL",
+          "id": "bank-tiles",
+          "tileId": null,
+          "inAnswer": false,
+          "inBank": true
+        },
+        "topHit": {
+          "tag": "IFRAME",
+          "id": null,
+          "tileId": null,
+          "inAnswer": false,
+          "inBank": false
+        },
+        "selectorHit": true,
+        "gameViewport": {
+          "width": 348,
+          "height": 1596,
+          "scrollX": 0,
+          "scrollY": 0
+        },
+        "topViewport": {
+          "width": 390,
+          "height": 760
+        },
+        "frames": [
+          {
+            "x": 195,
+            "y": 299.8499755859375,
+            "left": 21,
+            "top": -675.1666870117188,
+            "scaleX": 1,
+            "scaleY": 1,
+            "width": 390,
+            "height": 760,
+            "hit": {
+              "tag": "IFRAME",
+              "id": null,
+              "tileId": null,
+              "inAnswer": false,
+              "inBank": false
+            },
+            "expectedFrameId": null,
+            "visible": true
+          }
+        ]
+      }
+    },
+    {
+      "label": "lesson-390-populated three explicit method rows",
+      "passed": true,
+      "detail": [
+        {
+          "top": 1045.0166015625,
+          "bottom": 1086.7832794189453,
+          "left": 40,
+          "right": 311,
+          "height": 41.76667785644531,
+          "width": 271,
+          "fontSize": "14.4px",
+          "fontWeight": "400",
+          "display": "block",
+          "overflow": "visible",
+          "scrollHeight": 42,
+          "clientHeight": 42,
+          "text": "Προσθήκη: Σύρε το εικονίδιο στο πλαίσιο ή κάνε κλικ επάνω του.",
+          "labelWeight": "780"
+        },
+        {
+          "top": 1090.7833251953125,
+          "bottom": 1196.316650390625,
+          "left": 40,
+          "right": 311,
+          "height": 105.5333251953125,
+          "width": 271,
+          "fontSize": "14.4px",
+          "fontWeight": "400",
+          "display": "block",
+          "overflow": "visible",
+          "scrollHeight": 106,
+          "clientHeight": 106,
+          "text": "Αλλαγή σειράς: Σύρε το εικονίδιο στη σωστή θέση μέσα στο πλαίσιο ή επίλεξέ το με κλικ και χρησιμοποίησε τα κουμπιά «Αριστερά»–«Δεξιά» ή τα πλήκτρα ← →.",
+          "labelWeight": "780"
+        },
+        {
+          "top": 1200.316650390625,
+          "bottom": 1264.0833129882812,
+          "left": 40,
+          "right": 311,
+          "height": 63.76666259765625,
+          "width": 271,
+          "fontSize": "14.4px",
+          "fontWeight": "400",
+          "display": "block",
+          "overflow": "visible",
+          "scrollHeight": 64,
+          "clientHeight": 64,
+          "text": "Αφαίρεση: Σύρε και άφησε το εικονίδιο έξω από το πλαίσιο ή επίλεξέ το με κλικ και πάτησε «Αφαίρεση» ή Delete.",
+          "labelWeight": "780"
+        }
+      ]
+    },
+    {
+      "label": "lesson-390-populated readable rows and bold labels",
+      "passed": true,
+      "detail": [
+        {
+          "top": 1045.0166015625,
+          "bottom": 1086.7832794189453,
+          "left": 40,
+          "right": 311,
+          "height": 41.76667785644531,
+          "width": 271,
+          "fontSize": "14.4px",
+          "fontWeight": "400",
+          "display": "block",
+          "overflow": "visible",
+          "scrollHeight": 42,
+          "clientHeight": 42,
+          "text": "Προσθήκη: Σύρε το εικονίδιο στο πλαίσιο ή κάνε κλικ επάνω του.",
+          "labelWeight": "780"
+        },
+        {
+          "top": 1090.7833251953125,
+          "bottom": 1196.316650390625,
+          "left": 40,
+          "right": 311,
+          "height": 105.5333251953125,
+          "width": 271,
+          "fontSize": "14.4px",
+          "fontWeight": "400",
+          "display": "block",
+          "overflow": "visible",
+          "scrollHeight": 106,
+          "clientHeight": 106,
+          "text": "Αλλαγή σειράς: Σύρε το εικονίδιο στη σωστή θέση μέσα στο πλαίσιο ή επίλεξέ το με κλικ και χρησιμοποίησε τα κουμπιά «Αριστερά»–«Δεξιά» ή τα πλήκτρα ← →.",
+          "labelWeight": "780"
+        },
+        {
+          "top": 1200.316650390625,
+          "bottom": 1264.0833129882812,
+          "left": 40,
+          "right": 311,
+          "height": 63.76666259765625,
+          "width": 271,
+          "fontSize": "14.4px",
+          "fontWeight": "400",
+          "display": "block",
+          "overflow": "visible",
+          "scrollHeight": 64,
+          "clientHeight": 64,
+          "text": "Αφαίρεση: Σύρε και άφησε το εικονίδιο έξω από το πλαίσιο ή επίλεξέ το με κλικ και πάτησε «Αφαίρεση» ή Delete.",
+          "labelWeight": "780"
+        }
+      ]
+    },
+    {
+      "label": "lesson-390-populated full guidance has no internal clipping",
+      "passed": true,
+      "detail": {
+        "top": 1038.0166015625,
+        "bottom": 1271.083267211914,
+        "left": 28,
+        "right": 320,
+        "height": 233.06666564941406,
+        "width": 292,
+        "fontSize": "14.4px",
+        "fontWeight": "400",
+        "display": "block",
+        "overflow": "visible",
+        "scrollHeight": 231,
+        "clientHeight": 231
+      }
+    },
+    {
+      "label": "lesson-390-populated no horizontal page overflow",
+      "passed": true,
+      "detail": {
+        "width": 348,
+        "page": 348,
+        "body": 348
+      }
+    },
+    {
+      "label": "lesson-390-populated answer remains one line",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "lesson-390 needed check action automatically visible after construction",
+      "passed": false,
+      "detail": {
+        "fullyVisible": false,
+        "bounds": {
+          "left": 49,
+          "right": 194,
+          "top": 755.1166381835938,
+          "bottom": 803.1166381835938,
+          "width": 145,
+          "height": 48
+        },
+        "usable": {
+          "left": 7,
+          "top": 111.83332824707031,
+          "right": 383,
+          "bottom": 753
+        },
+        "probe": {
+          "ok": true,
+          "selector": "#check-answer",
+          "local": {
+            "x": 100.5,
+            "y": 1454.2833251953125
+          },
+          "global": {
+            "x": 122,
+            "y": 779
+          },
+          "rect": {
+            "left": 28,
+            "top": 1430.2833251953125,
+            "right": 173,
+            "bottom": 1478.2833251953125,
+            "width": 145,
+            "height": 48
+          },
+          "globalRect": {
+            "left": 49,
+            "right": 194,
+            "top": 755.1166381835938,
+            "bottom": 803.1166381835938,
+            "width": 145,
+            "height": 48
+          },
+          "insideGame": true,
+          "visibleGame": false,
+          "globalInside": false,
+          "reason": "parent viewport/clipping/overlay",
+          "hit": {
+            "tag": "BUTTON",
+            "id": "check-answer",
+            "tileId": null,
+            "inAnswer": false,
+            "inBank": false
+          },
+          "topHit": null,
+          "selectorHit": true,
+          "gameViewport": {
+            "width": 348,
+            "height": 1596,
+            "scrollX": 0,
+            "scrollY": 0
+          },
+          "topViewport": {
+            "width": 390,
+            "height": 760
+          },
+          "frames": [
+            {
+              "x": 121.5,
+              "y": 779.1166381835938,
+              "left": 21,
+              "top": -675.1666870117188,
+              "scaleX": 1,
+              "scaleY": 1,
+              "width": 390,
+              "height": 760,
+              "hit": null,
+              "expectedFrameId": null,
+              "visible": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "solved": [],
+  "conditions": "Actual native viewer and canonical engine in owned headless Firefox. Navigation helpers may scroll lesson navigation; all Builder construction/check controls use trusted pointer/keyboard input with no test scrolling or DOM focus.",
+  "phase": "layout",
+  "sourceSHA256": {
+    "games/name-builder.html": "bcabb9a5f682e15cf1b01d1723a29af030d7679fb8d793dec35e15ef90e888be",
+    "css/namelecule-name-builder.css": "91c7ba2f88e9afada969169ab6663517dfb427655fd54f9fd7776b897d55532b",
+    "js/namelecule-game-choice-checkpoint.js": "d5533ac5082854eb5e54b0420e38af1c76258d9caf10cf2f549f6251860f54d2",
+    "mulermoc-nom-54.html": "67faf37b992513f99b2b08cac40b0ebd97793318ae2413ea1d4d70b123ac3530",
+    "mulermoc-nom-55.html": "22339651e53a6b0ead417ca99269f4432be63d1c74a69778f55f70235a833177",
+    "design/welcome-proposal.html": "1a3d84aba9a8cc209e039ecfdd00f4294ea4902497e204730d93e5b52b111800",
+    "js/namelecule-name-builder-engine.js": "1c7e477325ae07b02d5218ef0833236f95eade7b6003a3aa07545f91b414f8a2",
+    "games/name-builder-viewer.html": "2fb40724a061e59ff97cf6e2eebc8f05fb233f08b236e013aba3f429d2e7aa51",
+    "scenarios/alkanes-user-3.scenario.json": "b9e2a61183385a8fee70d17f715c018b1bc261448821a4d286a7dd3322cce2b4",
+    "js/mulermoc-nom-core-43.js": "93373c8ea49d6489350c4c7eee36d444b0f6ff5c13c500aa9662d4997575ac21",
+    "js/mulermoc-nom-core-42.js": "a7b95d7fd9eb8589c2f441205ddd3751bd6da9bf9834fa60d9a5b5d2d2aa2b83",
+    "js/mulermoc-nom-core-52.js": "d2138418ff630ab77e578b80ca8ba3a10cc1b877c3ab8c0e5c2735ffcd1f24a2",
+    "js/mulermoc-nom-core-49.js": "ae85dd22b94292ed539ff2a858a1a6fe3672af90298662e5c6860fb411a65951",
+    "js/mulermoc-nom-core-48.js": "37dad911ed73af0768fc922186cb94e71df7df1144b2c1e75aee4c9202ce6c0d",
+    "js/mulermoc-nom-core-45.js": "dde5fb6350a0374e1ebda69e0870cbfce0bbed027b8219f33bc4de3c4cf9ae74",
+    "js/mulermoc-nom-core-55.js": "6cbdbd0ce60f5d66ff3e6925cdfd48e470764baa02b6263f325eff356df5e270",
+    "js/mulermoc-nom-core-51.js": "096d617853646de0dfd67bcbde3e32252aebcb98e7525b05e6f7e71ccb48a5fc",
+    "js/mulermoc-nom-core-50.js": "0f79b5af20b9c3b4504673876abc03b6c162af316c33dff55fd55e0c22a43fd9",
+    "js/mulermoc-nom-core-44.js": "3bb8773be785992ec581d4cdd11a58a6bb5a833ed429ae07287839b436e523e1",
+    "js/mulermoc-nom-core-54.js": "8f3e5f76d96322faf7cf9251f4cae3eca204fe2f82bf5754fdce6ffc4cd5d5a9",
+    "js/namelecule-quiz-checkpoints.js": "f52d83aecc582f3214db022a076fbb82af1f187588eccf16d5756a030d67785b",
+    "js/namelecule-name-builder.js": "4b851548731c8f2164c395ccdb84f9357c53ea3008a81bf52f58bedd03007f3a"
+  },
+  "layouts": [
+    {
+      "width": 348,
+      "pageWidth": 348,
+      "bodyWidth": 348,
+      "scrollY": 0,
+      "help": {
+        "top": 1124.0166015625,
+        "bottom": 1357.083267211914,
+        "left": 28,
+        "right": 320,
+        "height": 233.06666564941406,
+        "width": 292,
+        "fontSize": "14.4px",
+        "fontWeight": "400",
+        "display": "block",
+        "overflow": "visible",
+        "scrollHeight": 231,
+        "clientHeight": 231
+      },
+      "rows": [
+        {
+          "top": 1131.0166015625,
+          "bottom": 1172.7832794189453,
+          "left": 40,
+          "right": 311,
+          "height": 41.76667785644531,
+          "width": 271,
+          "fontSize": "14.4px",
+          "fontWeight": "400",
+          "display": "block",
+          "overflow": "visible",
+          "scrollHeight": 42,
+          "clientHeight": 42,
+          "text": "Προσθήκη: Σύρε το εικονίδιο στο πλαίσιο ή κάνε κλικ επάνω του.",
+          "labelWeight": "780"
+        },
+        {
+          "top": 1176.7833251953125,
+          "bottom": 1282.316650390625,
+          "left": 40,
+          "right": 311,
+          "height": 105.5333251953125,
+          "width": 271,
+          "fontSize": "14.4px",
+          "fontWeight": "400",
+          "display": "block",
+          "overflow": "visible",
+          "scrollHeight": 106,
+          "clientHeight": 106,
+          "text": "Αλλαγή σειράς: Σύρε το εικονίδιο στη σωστή θέση μέσα στο πλαίσιο ή επίλεξέ το με κλικ και χρησιμοποίησε τα κουμπιά «Αριστερά»–«Δεξιά» ή τα πλήκτρα ← →.",
+          "labelWeight": "780"
+        },
+        {
+          "top": 1286.316650390625,
+          "bottom": 1350.0833129882812,
+          "left": 40,
+          "right": 311,
+          "height": 63.76666259765625,
+          "width": 271,
+          "fontSize": "14.4px",
+          "fontWeight": "400",
+          "display": "block",
+          "overflow": "visible",
+          "scrollHeight": 64,
+          "clientHeight": 64,
+          "text": "Αφαίρεση: Σύρε και άφησε το εικονίδιο έξω από το πλαίσιο ή επίλεξέ το με κλικ και πάτησε «Αφαίρεση» ή Delete.",
+          "labelWeight": "780"
+        }
+      ],
+      "answer": {
+        "top": 799,
+        "bottom": 919,
+        "left": 28,
+        "right": 320,
+        "height": 120,
+        "width": 292,
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "display": "flex",
+        "overflow": "auto hidden",
+        "scrollHeight": 116,
+        "clientHeight": 116
+      },
+      "bank": {
+        "top": 955.0166625976562,
+        "bottom": 1117.0166625976562,
+        "left": 29,
+        "right": 319,
+        "height": 162,
+        "width": 290,
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "display": "block",
+        "overflow": "visible",
+        "scrollHeight": 162,
+        "clientHeight": 162
+      },
+      "controls": {
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 0,
+        "height": 0,
+        "width": 0,
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "display": "none",
+        "overflow": "visible",
+        "scrollHeight": 0,
+        "clientHeight": 0
+      },
+      "check": {
+        "top": 1363.0833740234375,
+        "bottom": 1411.0833740234375,
+        "left": 28,
+        "right": 173,
+        "height": 48,
+        "width": 145,
+        "fontSize": "14.0833px",
+        "fontWeight": "760",
+        "display": "block",
+        "overflow": "visible",
+        "scrollHeight": 46,
+        "clientHeight": 46
+      },
+      "buttons": [
+        {
+          "top": 0,
+          "bottom": 0,
+          "left": 0,
+          "right": 0,
+          "height": 0,
+          "width": 0,
+          "fontSize": "14.4px",
+          "fontWeight": "750",
+          "display": "inline-block",
+          "overflow": "visible",
+          "scrollHeight": 0,
+          "clientHeight": 0,
+          "name": "← Αριστερά"
+        },
+        {
+          "top": 0,
+          "bottom": 0,
+          "left": 0,
+          "right": 0,
+          "height": 0,
+          "width": 0,
+          "fontSize": "14.4px",
+          "fontWeight": "750",
+          "display": "inline-block",
+          "overflow": "visible",
+          "scrollHeight": 0,
+          "clientHeight": 0,
+          "name": "Δεξιά →"
+        },
+        {
+          "top": 0,
+          "bottom": 0,
+          "left": 0,
+          "right": 0,
+          "height": 0,
+          "width": 0,
+          "fontSize": "14.4px",
+          "fontWeight": "750",
+          "display": "inline-block",
+          "overflow": "visible",
+          "scrollHeight": 0,
+          "clientHeight": 0,
+          "name": "Αφαίρεση"
+        }
+      ],
+      "answerRows": 0,
+      "label": "lesson-390-initial",
+      "embedded": true,
+      "checkVisibility": {
+        "fullyVisible": true,
+        "bounds": {
+          "left": 49,
+          "right": 194,
+          "top": 692.0000610351562,
+          "bottom": 740.0000610351562,
+          "width": 145,
+          "height": 48
+        },
+        "usable": {
+          "left": 7,
+          "top": 111.83332824707031,
+          "right": 383,
+          "bottom": 753
+        },
+        "probe": {
+          "ok": true,
+          "selector": "#check-answer",
+          "local": {
+            "x": 100.5,
+            "y": 1387.0833740234375
+          },
+          "global": {
+            "x": 122,
+            "y": 716
+          },
+          "rect": {
+            "left": 28,
+            "top": 1363.0833740234375,
+            "right": 173,
+            "bottom": 1411.0833740234375,
+            "width": 145,
+            "height": 48
+          },
+          "globalRect": {
+            "left": 49,
+            "right": 194,
+            "top": 692.0000610351562,
+            "bottom": 740.0000610351562,
+            "width": 145,
+            "height": 48
+          },
+          "insideGame": true,
+          "visibleGame": true,
+          "globalInside": true,
+          "reason": null,
+          "hit": {
+            "tag": "BUTTON",
+            "id": "check-answer",
+            "tileId": null,
+            "inAnswer": false,
+            "inBank": false
+          },
+          "topHit": {
+            "tag": "IFRAME",
+            "id": null,
+            "tileId": null,
+            "inAnswer": false,
+            "inBank": false
+          },
+          "selectorHit": true,
+          "gameViewport": {
+            "width": 348,
+            "height": 1529,
+            "scrollX": 0,
+            "scrollY": 0
+          },
+          "topViewport": {
+            "width": 390,
+            "height": 760
+          },
+          "frames": [
+            {
+              "x": 121.5,
+              "y": 716.0000610351562,
+              "left": 21,
+              "top": -671.0833129882812,
+              "scaleX": 1,
+              "scaleY": 1,
+              "width": 390,
+              "height": 760,
+              "hit": {
+                "tag": "IFRAME",
+                "id": null,
+                "tileId": null,
+                "inAnswer": false,
+                "inBank": false
+              },
+              "expectedFrameId": null,
+              "visible": true
+            }
+          ]
+        }
+      },
+      "answerVisibility": {
+        "fullyVisible": true,
+        "bounds": {
+          "left": 49,
+          "right": 341,
+          "top": 127.91668701171875,
+          "bottom": 247.91668701171875,
+          "width": 292,
+          "height": 120
+        },
+        "usable": {
+          "left": 7,
+          "top": 111.83332824707031,
+          "right": 383,
+          "bottom": 753
+        },
+        "probe": {
+          "ok": true,
+          "selector": "#answer-zone",
+          "local": {
+            "x": 174,
+            "y": 859
+          },
+          "global": {
+            "x": 195,
+            "y": 188
+          },
+          "rect": {
+            "left": 28,
+            "top": 799,
+            "right": 320,
+            "bottom": 919,
+            "width": 292,
+            "height": 120
+          },
+          "globalRect": {
+            "left": 49,
+            "right": 341,
+            "top": 127.91668701171875,
+            "bottom": 247.91668701171875,
+            "width": 292,
+            "height": 120
+          },
+          "insideGame": true,
+          "visibleGame": true,
+          "globalInside": true,
+          "reason": null,
+          "hit": {
+            "tag": "P",
+            "id": "empty-answer",
+            "tileId": null,
+            "inAnswer": true,
+            "inBank": false
+          },
+          "topHit": {
+            "tag": "IFRAME",
+            "id": null,
+            "tileId": null,
+            "inAnswer": false,
+            "inBank": false
+          },
+          "selectorHit": true,
+          "gameViewport": {
+            "width": 348,
+            "height": 1529,
+            "scrollX": 0,
+            "scrollY": 0
+          },
+          "topViewport": {
+            "width": 390,
+            "height": 760
+          },
+          "frames": [
+            {
+              "x": 195,
+              "y": 187.91668701171875,
+              "left": 21,
+              "top": -671.0833129882812,
+              "scaleX": 1,
+              "scaleY": 1,
+              "width": 390,
+              "height": 760,
+              "hit": {
+                "tag": "IFRAME",
+                "id": null,
+                "tileId": null,
+                "inAnswer": false,
+                "inBank": false
+              },
+              "expectedFrameId": null,
+              "visible": true
+            }
+          ]
+        }
+      },
+      "bankVisibility": {
+        "fullyVisible": true,
+        "bounds": {
+          "left": 50,
+          "right": 340,
+          "top": 283.933349609375,
+          "bottom": 445.933349609375,
+          "width": 290,
+          "height": 162
+        },
+        "usable": {
+          "left": 7,
+          "top": 111.83332824707031,
+          "right": 383,
+          "bottom": 753
+        },
+        "probe": {
+          "ok": true,
+          "selector": "#bank-zone",
+          "local": {
+            "x": 174,
+            "y": 1036.0166625976562
+          },
+          "global": {
+            "x": 195,
+            "y": 365
+          },
+          "rect": {
+            "left": 29,
+            "top": 955.0166625976562,
+            "right": 319,
+            "bottom": 1117.0166625976562,
+            "width": 290,
+            "height": 162
+          },
+          "globalRect": {
+            "left": 50,
+            "right": 340,
+            "top": 283.933349609375,
+            "bottom": 445.933349609375,
+            "width": 290,
+            "height": 162
+          },
+          "insideGame": true,
+          "visibleGame": true,
+          "globalInside": true,
+          "reason": null,
+          "hit": {
+            "tag": "BUTTON",
+            "id": null,
+            "tileId": "tile-hhi2ca-4",
+            "inAnswer": false,
+            "inBank": true
+          },
+          "topHit": {
+            "tag": "IFRAME",
+            "id": null,
+            "tileId": null,
+            "inAnswer": false,
+            "inBank": false
+          },
+          "selectorHit": true,
+          "gameViewport": {
+            "width": 348,
+            "height": 1529,
+            "scrollX": 0,
+            "scrollY": 0
+          },
+          "topViewport": {
+            "width": 390,
+            "height": 760
+          },
+          "frames": [
+            {
+              "x": 195,
+              "y": 364.933349609375,
+              "left": 21,
+              "top": -671.0833129882812,
+              "scaleX": 1,
+              "scaleY": 1,
+              "width": 390,
+              "height": 760,
+              "hit": {
+                "tag": "IFRAME",
+                "id": null,
+                "tileId": null,
+                "inAnswer": false,
+                "inBank": false
+              },
+              "expectedFrameId": null,
+              "visible": true
+            }
+          ]
+        }
+      }
+    },
+    {
+      "width": 348,
+      "pageWidth": 348,
+      "bodyWidth": 348,
+      "scrollY": 0,
+      "help": {
+        "top": 1038.0166015625,
+        "bottom": 1271.083267211914,
+        "left": 28,
+        "right": 320,
+        "height": 233.06666564941406,
+        "width": 292,
+        "fontSize": "14.4px",
+        "fontWeight": "400",
+        "display": "block",
+        "overflow": "visible",
+        "scrollHeight": 231,
+        "clientHeight": 231
+      },
+      "rows": [
+        {
+          "top": 1045.0166015625,
+          "bottom": 1086.7832794189453,
+          "left": 40,
+          "right": 311,
+          "height": 41.76667785644531,
+          "width": 271,
+          "fontSize": "14.4px",
+          "fontWeight": "400",
+          "display": "block",
+          "overflow": "visible",
+          "scrollHeight": 42,
+          "clientHeight": 42,
+          "text": "Προσθήκη: Σύρε το εικονίδιο στο πλαίσιο ή κάνε κλικ επάνω του.",
+          "labelWeight": "780"
+        },
+        {
+          "top": 1090.7833251953125,
+          "bottom": 1196.316650390625,
+          "left": 40,
+          "right": 311,
+          "height": 105.5333251953125,
+          "width": 271,
+          "fontSize": "14.4px",
+          "fontWeight": "400",
+          "display": "block",
+          "overflow": "visible",
+          "scrollHeight": 106,
+          "clientHeight": 106,
+          "text": "Αλλαγή σειράς: Σύρε το εικονίδιο στη σωστή θέση μέσα στο πλαίσιο ή επίλεξέ το με κλικ και χρησιμοποίησε τα κουμπιά «Αριστερά»–«Δεξιά» ή τα πλήκτρα ← →.",
+          "labelWeight": "780"
+        },
+        {
+          "top": 1200.316650390625,
+          "bottom": 1264.0833129882812,
+          "left": 40,
+          "right": 311,
+          "height": 63.76666259765625,
+          "width": 271,
+          "fontSize": "14.4px",
+          "fontWeight": "400",
+          "display": "block",
+          "overflow": "visible",
+          "scrollHeight": 64,
+          "clientHeight": 64,
+          "text": "Αφαίρεση: Σύρε και άφησε το εικονίδιο έξω από το πλαίσιο ή επίλεξέ το με κλικ και πάτησε «Αφαίρεση» ή Delete.",
+          "labelWeight": "780"
+        }
+      ],
+      "answer": {
+        "top": 799,
+        "bottom": 883,
+        "left": 28,
+        "right": 320,
+        "height": 84,
+        "width": 292,
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "display": "flex",
+        "overflow": "auto hidden",
+        "scrollHeight": 80,
+        "clientHeight": 80
+      },
+      "bank": {
+        "top": 919.0166625976562,
+        "bottom": 1031.0166625976562,
+        "left": 29,
+        "right": 319,
+        "height": 112,
+        "width": 290,
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "display": "block",
+        "overflow": "visible",
+        "scrollHeight": 112,
+        "clientHeight": 112
+      },
+      "controls": {
+        "top": 1277.0833740234375,
+        "bottom": 1355.5167083740234,
+        "left": 28,
+        "right": 320,
+        "height": 78.43333435058594,
+        "width": 292,
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "display": "grid",
+        "overflow": "visible",
+        "scrollHeight": 78,
+        "clientHeight": 78
+      },
+      "check": {
+        "top": 1430.2833251953125,
+        "bottom": 1478.2833251953125,
+        "left": 28,
+        "right": 173,
+        "height": 48,
+        "width": 145,
+        "fontSize": "14.0833px",
+        "fontWeight": "760",
+        "display": "block",
+        "overflow": "visible",
+        "scrollHeight": 46,
+        "clientHeight": 46
+      },
+      "buttons": [
+        {
+          "top": 1311.5166015625,
+          "bottom": 1355.5166015625,
+          "left": 28,
+          "right": 104.21665954589844,
+          "height": 44,
+          "width": 76.21665954589844,
+          "fontSize": "14.4px",
+          "fontWeight": "750",
+          "display": "block",
+          "overflow": "visible",
+          "scrollHeight": 40,
+          "clientHeight": 40,
+          "name": "← Αριστερά"
+        },
+        {
+          "top": 1311.5166015625,
+          "bottom": 1355.5166015625,
+          "left": 109.21665954589844,
+          "right": 185.43333435058594,
+          "height": 44,
+          "width": 76.2166748046875,
+          "fontSize": "14.4px",
+          "fontWeight": "750",
+          "display": "block",
+          "overflow": "visible",
+          "scrollHeight": 40,
+          "clientHeight": 40,
+          "name": "Δεξιά →"
+        },
+        {
+          "top": 1311.5166015625,
+          "bottom": 1355.5166015625,
+          "left": 190.43333435058594,
+          "right": 320,
+          "height": 44,
+          "width": 129.56666564941406,
+          "fontSize": "14.4px",
+          "fontWeight": "750",
+          "display": "block",
+          "overflow": "visible",
+          "scrollHeight": 40,
+          "clientHeight": 40,
+          "name": "Αφαίρεση"
+        }
+      ],
+      "answerRows": 1,
+      "label": "lesson-390-populated",
+      "embedded": true,
+      "checkVisibility": {
+        "fullyVisible": false,
+        "bounds": {
+          "left": 49,
+          "right": 194,
+          "top": 755.1166381835938,
+          "bottom": 803.1166381835938,
+          "width": 145,
+          "height": 48
+        },
+        "usable": {
+          "left": 7,
+          "top": 111.83332824707031,
+          "right": 383,
+          "bottom": 753
+        },
+        "probe": {
+          "ok": true,
+          "selector": "#check-answer",
+          "local": {
+            "x": 100.5,
+            "y": 1454.2833251953125
+          },
+          "global": {
+            "x": 122,
+            "y": 779
+          },
+          "rect": {
+            "left": 28,
+            "top": 1430.2833251953125,
+            "right": 173,
+            "bottom": 1478.2833251953125,
+            "width": 145,
+            "height": 48
+          },
+          "globalRect": {
+            "left": 49,
+            "right": 194,
+            "top": 755.1166381835938,
+            "bottom": 803.1166381835938,
+            "width": 145,
+            "height": 48
+          },
+          "insideGame": true,
+          "visibleGame": false,
+          "globalInside": false,
+          "reason": "parent viewport/clipping/overlay",
+          "hit": {
+            "tag": "BUTTON",
+            "id": "check-answer",
+            "tileId": null,
+            "inAnswer": false,
+            "inBank": false
+          },
+          "topHit": null,
+          "selectorHit": true,
+          "gameViewport": {
+            "width": 348,
+            "height": 1596,
+            "scrollX": 0,
+            "scrollY": 0
+          },
+          "topViewport": {
+            "width": 390,
+            "height": 760
+          },
+          "frames": [
+            {
+              "x": 121.5,
+              "y": 779.1166381835938,
+              "left": 21,
+              "top": -675.1666870117188,
+              "scaleX": 1,
+              "scaleY": 1,
+              "width": 390,
+              "height": 760,
+              "hit": null,
+              "expectedFrameId": null,
+              "visible": false
+            }
+          ]
+        }
+      },
+      "answerVisibility": {
+        "fullyVisible": true,
+        "bounds": {
+          "left": 49,
+          "right": 341,
+          "top": 123.83331298828125,
+          "bottom": 207.83331298828125,
+          "width": 292,
+          "height": 84
+        },
+        "usable": {
+          "left": 7,
+          "top": 111.83332824707031,
+          "right": 383,
+          "bottom": 753
+        },
+        "probe": {
+          "ok": true,
+          "selector": "#answer-zone",
+          "local": {
+            "x": 174,
+            "y": 841
+          },
+          "global": {
+            "x": 195,
+            "y": 166
+          },
+          "rect": {
+            "left": 28,
+            "top": 799,
+            "right": 320,
+            "bottom": 883,
+            "width": 292,
+            "height": 84
+          },
+          "globalRect": {
+            "left": 49,
+            "right": 341,
+            "top": 123.83331298828125,
+            "bottom": 207.83331298828125,
+            "width": 292,
+            "height": 84
+          },
+          "insideGame": true,
+          "visibleGame": true,
+          "globalInside": true,
+          "reason": null,
+          "hit": {
+            "tag": "BUTTON",
+            "id": null,
+            "tileId": "tile-hhi2ca-2",
+            "inAnswer": true,
+            "inBank": false
+          },
+          "topHit": {
+            "tag": "IFRAME",
+            "id": null,
+            "tileId": null,
+            "inAnswer": false,
+            "inBank": false
+          },
+          "selectorHit": true,
+          "gameViewport": {
+            "width": 348,
+            "height": 1596,
+            "scrollX": 0,
+            "scrollY": 0
+          },
+          "topViewport": {
+            "width": 390,
+            "height": 760
+          },
+          "frames": [
+            {
+              "x": 195,
+              "y": 165.83331298828125,
+              "left": 21,
+              "top": -675.1666870117188,
+              "scaleX": 1,
+              "scaleY": 1,
+              "width": 390,
+              "height": 760,
+              "hit": {
+                "tag": "IFRAME",
+                "id": null,
+                "tileId": null,
+                "inAnswer": false,
+                "inBank": false
+              },
+              "expectedFrameId": null,
+              "visible": true
+            }
+          ]
+        }
+      },
+      "bankVisibility": {
+        "fullyVisible": true,
+        "bounds": {
+          "left": 50,
+          "right": 340,
+          "top": 243.8499755859375,
+          "bottom": 355.8499755859375,
+          "width": 290,
+          "height": 112
+        },
+        "usable": {
+          "left": 7,
+          "top": 111.83332824707031,
+          "right": 383,
+          "bottom": 753
+        },
+        "probe": {
+          "ok": true,
+          "selector": "#bank-zone",
+          "local": {
+            "x": 174,
+            "y": 975.0166625976562
+          },
+          "global": {
+            "x": 195,
+            "y": 300
+          },
+          "rect": {
+            "left": 29,
+            "top": 919.0166625976562,
+            "right": 319,
+            "bottom": 1031.0166625976562,
+            "width": 290,
+            "height": 112
+          },
+          "globalRect": {
+            "left": 50,
+            "right": 340,
+            "top": 243.8499755859375,
+            "bottom": 355.8499755859375,
+            "width": 290,
+            "height": 112
+          },
+          "insideGame": true,
+          "visibleGame": true,
+          "globalInside": true,
+          "reason": null,
+          "hit": {
+            "tag": "UL",
+            "id": "bank-tiles",
+            "tileId": null,
+            "inAnswer": false,
+            "inBank": true
+          },
+          "topHit": {
+            "tag": "IFRAME",
+            "id": null,
+            "tileId": null,
+            "inAnswer": false,
+            "inBank": false
+          },
+          "selectorHit": true,
+          "gameViewport": {
+            "width": 348,
+            "height": 1596,
+            "scrollX": 0,
+            "scrollY": 0
+          },
+          "topViewport": {
+            "width": 390,
+            "height": 760
+          },
+          "frames": [
+            {
+              "x": 195,
+              "y": 299.8499755859375,
+              "left": 21,
+              "top": -675.1666870117188,
+              "scaleX": 1,
+              "scaleY": 1,
+              "width": 390,
+              "height": 760,
+              "hit": {
+                "tag": "IFRAME",
+                "id": null,
+                "tileId": null,
+                "inAnswer": false,
+                "inBank": false
+              },
+              "expectedFrameId": null,
+              "visible": true
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "failure": "Traceback (most recent call last):\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/builder-methods-guidance-20261112/browser/verify.py\", line 249, in <module>\n    check(populated['checkVisibility']['fullyVisible'],\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/builder-methods-guidance-20261112/browser/helpers.py\", line 6, in check\n    if not ok:raise AssertionError((label,detail))\nAssertionError: ('lesson-390 needed check action automatically visible after construction', {'fullyVisible': False, 'bounds': {'left': 49, 'right': 194, 'top': 755.1166381835938, 'bottom': 803.1166381835938, 'width': 145, 'height': 48}, 'usable': {'left': 7, 'top': 111.83332824707031, 'right': 383, 'bottom': 753}, 'probe': {'ok': True, 'selector': '#check-answer', 'local': {'x': 100.5, 'y': 1454.2833251953125}, 'global': {'x': 122, 'y': 779}, 'rect': {'left': 28, 'top': 1430.2833251953125, 'right': 173, 'bottom': 1478.2833251953125, 'width': 145, 'height': 48}, 'globalRect': {'left': 49, 'right': 194, 'top': 755.1166381835938, 'bottom': 803.1166381835938, 'width': 145, 'height': 48}, 'insideGame': True, 'visibleGame': False, 'globalInside': False, 'reason': 'parent viewport/clipping/overlay', 'hit': {'tag': 'BUTTON', 'id': 'check-answer', 'tileId': None, 'inAnswer': False, 'inBank': False}, 'topHit': None, 'selectorHit': True, 'gameViewport': {'width': 348, 'height': 1596, 'scrollX': 0, 'scrollY': 0}, 'topViewport': {'width': 390, 'height': 760}, 'frames': [{'x': 121.5, 'y': 779.1166381835938, 'left': 21, 'top': -675.1666870117188, 'scaleX': 1, 'scaleY': 1, 'width': 390, 'height': 760, 'hit': None, 'expectedFrameId': None, 'visible': False}]}})\n",
+  "javascriptErrors": [],
+  "consoleWarningsAndErrors": [],
+  "httpErrors": [
+    {
+      "code": 404,
+      "path": "/favicon.ico",
+      "message": "File not found"
+    }
+  ],
+  "sourceUnchangedDuringRun": {
+    "games/name-builder.html": true,
+    "css/namelecule-name-builder.css": true,
+    "js/namelecule-game-choice-checkpoint.js": true,
+    "mulermoc-nom-54.html": true,
+    "mulermoc-nom-55.html": true,
+    "design/welcome-proposal.html": true,
+    "js/namelecule-name-builder-engine.js": true,
+    "games/name-builder-viewer.html": true,
+    "scenarios/alkanes-user-3.scenario.json": true,
+    "js/mulermoc-nom-core-43.js": true,
+    "js/mulermoc-nom-core-42.js": true,
+    "js/mulermoc-nom-core-52.js": true,
+    "js/mulermoc-nom-core-49.js": true,
+    "js/mulermoc-nom-core-48.js": true,
+    "js/mulermoc-nom-core-45.js": true,
+    "js/mulermoc-nom-core-55.js": true,
+    "js/mulermoc-nom-core-51.js": true,
+    "js/mulermoc-nom-core-50.js": true,
+    "js/mulermoc-nom-core-44.js": true,
+    "js/mulermoc-nom-core-54.js": true,
+    "js/namelecule-quiz-checkpoints.js": true,
+    "js/namelecule-name-builder.js": true
+  }
+}

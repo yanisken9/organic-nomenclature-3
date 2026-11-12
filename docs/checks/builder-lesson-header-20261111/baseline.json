@@ -1,0 +1,55 @@
+{
+  "date": "2026-11-11",
+  "HEAD": "168e3cec01f941a84d40bbe0dc07156e7baa35d0",
+  "indexSHA256": "25c212236906eff396f0a3521653f16eea1f5d57dfc5e32ba4477ad25930f964",
+  "files": {
+    "js/namelecule-game-choice-checkpoint.js": "726f17ca56516002a22b6fe90b35e3c2eb36125cb63f5e29f4620a5f5a59caeb",
+    "css/namelecule-quiz-checkpoints.css": "d9159640bfe7afcd0b4a44566f92198c71a69bacef1892ab1bcee0f3a74eca8b",
+    "mulermoc-nom-54.html": "ff6c7c492764a683f4a398beebc7e5b24fa7700a164487ea5f429986d4ff0488",
+    "mulermoc-nom-55.html": "9d741405b6e608f26b3afb1f6ce7decee94ba32e0188acb0d85bf7794678d965"
+  },
+  "coreFiles": {
+    "js/mulermoc-nom-core-42.js": "a7b95d7fd9eb8589c2f441205ddd3751bd6da9bf9834fa60d9a5b5d2d2aa2b83",
+    "js/mulermoc-nom-core-43.js": "93373c8ea49d6489350c4c7eee36d444b0f6ff5c13c500aa9662d4997575ac21",
+    "js/mulermoc-nom-core-44.js": "3bb8773be785992ec581d4cdd11a58a6bb5a833ed429ae07287839b436e523e1",
+    "js/mulermoc-nom-core-45.js": "dde5fb6350a0374e1ebda69e0870cbfce0bbed027b8219f33bc4de3c4cf9ae74",
+    "js/mulermoc-nom-core-48.js": "37dad911ed73af0768fc922186cb94e71df7df1144b2c1e75aee4c9202ce6c0d",
+    "js/mulermoc-nom-core-49.js": "ae85dd22b94292ed539ff2a858a1a6fe3672af90298662e5c6860fb411a65951",
+    "js/mulermoc-nom-core-50.js": "0f79b5af20b9c3b4504673876abc03b6c162af316c33dff55fd55e0c22a43fd9",
+    "js/mulermoc-nom-core-51.js": "096d617853646de0dfd67bcbde3e32252aebcb98e7525b05e6f7e71ccb48a5fc",
+    "js/mulermoc-nom-core-52.js": "d2138418ff630ab77e578b80ca8ba3a10cc1b877c3ab8c0e5c2735ffcd1f24a2",
+    "js/mulermoc-nom-core-54.js": "8f3e5f76d96322faf7cf9251f4cae3eca204fe2f82bf5754fdce6ffc4cd5d5a9",
+    "js/mulermoc-nom-core-55.js": "6cbdbd0ce60f5d66ff3e6925cdfd48e470764baa02b6263f325eff356df5e270"
+  },
+  "objective": "Embedded alkane NameBuilder centered large title and existinglogo, Workshop-consistent branding.",
+  "cause": "Lesson CSS intentionally hides standalone .builder-title; parent mountBuilder renders unstyled h2.",
+  "proposedFiles": [
+    "js/namelecule-game-choice-checkpoint.js",
+    "css/namelecule-quiz-checkpoints.css",
+    "mulermoc-nom-54.html",
+    "mulermoc-nom-55.html"
+  ],
+  "proposedImplementation": "Parent centeredtitlewrapper+decorativelogo keeping sameh2/focus; scopedresponsiveCSS; Main54/55cachetokens. Iframe/standalone/state/answers/JSON/core unchanged.",
+  "verification": [
+    "Bothgates4/11",
+    "Rounds/optionalrepeat/headercount/progress",
+    "Switchgame/partialrestore/actualcorrectunlock",
+    "Feedbackscroll/headerfit320/390/desktop/resize",
+    "IndependentfreshReviewer"
+  ],
+  "approval": "User approved with ναι",
+  "explorer": "/root/builder_lesson_header_scope read-only confirms rootcause/scope",
+  "beforeDirectory": "docs/checks/builder-lesson-header-20261111/before",
+  "protectedFiles": {
+    "games/name-builder.html": "20e85af5f718b76031443a87d2394f71a25290e3705d5066cb055541380eddb3",
+    "css/namelecule-name-builder.css": "d9ad67895fa1508f273b4f37161a37fe0ef283e653a1bcfd33649508e80999c2",
+    "js/namelecule-name-builder.js": "cdb5c792a3037a6223adb9148c099c811bfd94562fe876cb5bb537086955feea",
+    "js/namelecule-name-builder-engine.js": "1c7e477325ae07b02d5218ef0833236f95eade7b6003a3aa07545f91b414f8a2",
+    "js/namelecule-generated-repair-checkpoint.js": "a87dc24c3e337c246fbc9a312607a5f2c3328d60119869e501785b6d08961d6c",
+    "js/namelecule-quiz-checkpoints.js": "15173e98d8ca0b7d29b8ee81e9efc82acae275184af3924b307aebfe23a851cc",
+    "js/namelecule-game-repair.js": "fb678db2bc750473653ed20fd176c9fb7d2824ef2ed68716a1baa40044af39b7",
+    "css/namelecule-repair-round.css": "412678635b54693b542a1b70fcb104e623ea369e246219c98e70b1f053477031",
+    "scenarios/alkanes-user-3.scenario.json": "b9e2a61183385a8fee70d17f715c018b1bc261448821a4d286a7dd3322cce2b4",
+    "games/assets/name-builder/name-builder-logo-3d-blank-v1.png": "9721dc62c33c80c3a4993de388ffe50a8b8d15c9a761963f7d31d9d5177e7b54"
+  }
+}

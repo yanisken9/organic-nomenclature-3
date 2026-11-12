@@ -1,0 +1,200 @@
+{
+  "recordedUTC": "2026-11-11T23:21:14.551773+00:00",
+  "sourceSHA256": {
+    "games/name-builder.html": "1dd91702686436871d61f6579805334b5aa911bbe774d7c90dcf0b650883222f",
+    "css/namelecule-name-builder.css": "a2fe30b3b773c0c0cf0518f41d8e931ba58d2162133bd32231076545aa16d21c",
+    "js/namelecule-name-builder.js": "44f3d19be6d7812935c449feec690773bcc1d23897501e69d3667e06efffab74",
+    "js/namelecule-game-choice-checkpoint.js": "6f847f4ed3d98cfca392d1044c12662cecf1f663c32d846bdb5fe36ce89b05bd",
+    "js/namelecule-quiz-checkpoints.js": "f52d83aecc582f3214db022a076fbb82af1f187588eccf16d5756a030d67785b",
+    "mulermoc-nom-54.html": "4ba5460c25f40bc1b0bc344c2fa53d5e3344ae01e5293266d23b21cd1a783d56",
+    "mulermoc-nom-55.html": "e9420f50d73f2f1d14dae588e9d3f3ac9a8b3e948b8fce23fc48c248c4e6bf83"
+  },
+  "protectedUnchanged": {
+    "js/namelecule-name-builder-engine.js": true,
+    "games/name-builder-viewer.html": true,
+    "scenarios/alkanes-user-3.scenario.json": true,
+    "js/mulermoc-nom-core-43.js": true,
+    "js/mulermoc-nom-core-42.js": true,
+    "js/mulermoc-nom-core-52.js": true,
+    "js/mulermoc-nom-core-49.js": true,
+    "js/mulermoc-nom-core-48.js": true,
+    "js/mulermoc-nom-core-45.js": true,
+    "js/mulermoc-nom-core-55.js": true,
+    "js/mulermoc-nom-core-51.js": true,
+    "js/mulermoc-nom-core-50.js": true,
+    "js/mulermoc-nom-core-44.js": true,
+    "js/mulermoc-nom-core-54.js": true
+  },
+  "HEADUnchanged": true,
+  "gitIndexUnchanged": true,
+  "diagnosticPythonAST": "pass",
+  "sourceJavaScriptSyntax": "pass",
+  "reviewStatus": "pending",
+  "commitPushPublish": "none",
+  "runs": {
+    "flow-normal-results.json": {
+      "completed": false,
+      "checks": 238,
+      "failedChecks": [],
+      "solved": [
+        {
+          "label": "gate4-round1",
+          "moleculeId": "pentane",
+          "name": "πεντάνιο"
+        },
+        {
+          "label": "gate4-round2",
+          "moleculeId": "ethane",
+          "name": "αιθάνιο"
+        },
+        {
+          "label": "gate4-round3",
+          "moleculeId": "methane",
+          "name": "μεθάνιο"
+        },
+        {
+          "label": "shared Workshop smoke",
+          "game": "repair",
+          "moleculeId": "dimethyl_2_3_butane",
+          "kind": "replace"
+        },
+        {
+          "label": "gate11-round1",
+          "moleculeId": "methyl_2_pentane",
+          "name": "2-μεθυλοπεντάνιο"
+        },
+        {
+          "label": "gate11-round2",
+          "moleculeId": "dimethyl_2_3_butane",
+          "name": "2,3-διμεθυλοβουτάνιο"
+        },
+        {
+          "label": "gate11-round3",
+          "moleculeId": "ethyl_3_dimethyl_2_5_hexane",
+          "name": "3-αιθυλο-2,5-διμεθυλοεξάνιο"
+        }
+      ],
+      "capturedJavaScriptExceptions": 0,
+      "failure": "Traceback (most recent call last):\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/builder-tile-workspace-20261112/browser/flow.py\", line 128, in <module>\n    click('#nlQuizPracticeOpen');wait('document.getElementById(\"nlQuizDialog\").open');builder_ready();entry('phone390-new-triple')\n  File \"<string>\", line 21, in wait\nAssertionError: Timed out: document.getElementById(\"nlQuizDialog\").open\n",
+      "sourceSHA256": {
+        "games/name-builder.html": "ca5ae97506e4f778b045dcc3abe5dedef2a7e3d61cd23cc8dcfc619c76f78ff5",
+        "css/namelecule-name-builder.css": "674335c07082f6f5593b2abb1b7628a82a0012a80ce908ae442de382b1c76422",
+        "js/namelecule-name-builder.js": "243e402bdb65ffb4d293a32372fd1ff4808769d5a12e5eead8e6b9294d2327ab",
+        "js/namelecule-game-choice-checkpoint.js": "5aedf0f2e64d3887bd956741988af1a79fc19c3346778eee02a4d1de7b1711f9",
+        "js/namelecule-quiz-checkpoints.js": "6c02a7336752c75f4fca3a5a568f38f02a3a4a8b35e41355d204a3aeec29cb15",
+        "mulermoc-nom-54.html": "dc9758ed6825223461dd785c211924f481f4be6be93a0eee0e8e24201710fdbe",
+        "mulermoc-nom-55.html": "d7ea045d12da373dcdcb0d3b94dccee72c9cc3aafc73d1b170daea593af766fc"
+      },
+      "sourceUnchangedDuringRun": {
+        "games/name-builder.html": true,
+        "css/namelecule-name-builder.css": true,
+        "js/namelecule-name-builder.js": true,
+        "js/namelecule-game-choice-checkpoint.js": true,
+        "js/namelecule-quiz-checkpoints.js": true,
+        "mulermoc-nom-54.html": true,
+        "mulermoc-nom-55.html": true
+      }
+    },
+    "flow-remaining-results.json": {
+      "completed": true,
+      "checks": 93,
+      "failedChecks": [],
+      "solved": [
+        {
+          "label": "phone390-round1",
+          "moleculeId": "butane",
+          "name": "βουτάνιο"
+        }
+      ],
+      "capturedJavaScriptExceptions": 0,
+      "failure": null,
+      "sourceSHA256": {
+        "games/name-builder.html": "ca5ae97506e4f778b045dcc3abe5dedef2a7e3d61cd23cc8dcfc619c76f78ff5",
+        "css/namelecule-name-builder.css": "674335c07082f6f5593b2abb1b7628a82a0012a80ce908ae442de382b1c76422",
+        "js/namelecule-name-builder.js": "243e402bdb65ffb4d293a32372fd1ff4808769d5a12e5eead8e6b9294d2327ab",
+        "js/namelecule-game-choice-checkpoint.js": "5aedf0f2e64d3887bd956741988af1a79fc19c3346778eee02a4d1de7b1711f9",
+        "js/namelecule-quiz-checkpoints.js": "6c02a7336752c75f4fca3a5a568f38f02a3a4a8b35e41355d204a3aeec29cb15",
+        "mulermoc-nom-54.html": "dc9758ed6825223461dd785c211924f481f4be6be93a0eee0e8e24201710fdbe",
+        "mulermoc-nom-55.html": "d7ea045d12da373dcdcb0d3b94dccee72c9cc3aafc73d1b170daea593af766fc"
+      },
+      "sourceUnchangedDuringRun": {
+        "games/name-builder.html": true,
+        "css/namelecule-name-builder.css": true,
+        "js/namelecule-name-builder.js": true,
+        "js/namelecule-game-choice-checkpoint.js": true,
+        "js/namelecule-quiz-checkpoints.js": true,
+        "mulermoc-nom-54.html": true,
+        "mulermoc-nom-55.html": true
+      }
+    },
+    "flow-interrupt-results.json": {
+      "completed": true,
+      "checks": 41,
+      "failedChecks": [],
+      "solved": [
+        {
+          "label": "R2-standalone",
+          "moleculeId": "ethane",
+          "name": "αιθάνιο"
+        }
+      ],
+      "capturedJavaScriptExceptions": 0,
+      "failure": null,
+      "sourceSHA256": {
+        "games/name-builder.html": "1dd91702686436871d61f6579805334b5aa911bbe774d7c90dcf0b650883222f",
+        "css/namelecule-name-builder.css": "a2fe30b3b773c0c0cf0518f41d8e931ba58d2162133bd32231076545aa16d21c",
+        "js/namelecule-name-builder.js": "44f3d19be6d7812935c449feec690773bcc1d23897501e69d3667e06efffab74",
+        "js/namelecule-game-choice-checkpoint.js": "6f847f4ed3d98cfca392d1044c12662cecf1f663c32d846bdb5fe36ce89b05bd",
+        "js/namelecule-quiz-checkpoints.js": "f52d83aecc582f3214db022a076fbb82af1f187588eccf16d5756a030d67785b",
+        "mulermoc-nom-54.html": "4ba5460c25f40bc1b0bc344c2fa53d5e3344ae01e5293266d23b21cd1a783d56",
+        "mulermoc-nom-55.html": "e9420f50d73f2f1d14dae588e9d3f3ac9a8b3e948b8fce23fc48c248c4e6bf83"
+      },
+      "sourceUnchangedDuringRun": {
+        "games/name-builder.html": true,
+        "css/namelecule-name-builder.css": true,
+        "js/namelecule-name-builder.js": true,
+        "js/namelecule-game-choice-checkpoint.js": true,
+        "js/namelecule-quiz-checkpoints.js": true,
+        "mulermoc-nom-54.html": true,
+        "mulermoc-nom-55.html": true
+      }
+    },
+    "flow-reduced-results.json": {
+      "completed": true,
+      "checks": 25,
+      "failedChecks": [],
+      "solved": [],
+      "capturedJavaScriptExceptions": 0,
+      "failure": null,
+      "sourceSHA256": {
+        "games/name-builder.html": "1dd91702686436871d61f6579805334b5aa911bbe774d7c90dcf0b650883222f",
+        "css/namelecule-name-builder.css": "a2fe30b3b773c0c0cf0518f41d8e931ba58d2162133bd32231076545aa16d21c",
+        "js/namelecule-name-builder.js": "44f3d19be6d7812935c449feec690773bcc1d23897501e69d3667e06efffab74",
+        "js/namelecule-game-choice-checkpoint.js": "6f847f4ed3d98cfca392d1044c12662cecf1f663c32d846bdb5fe36ce89b05bd",
+        "js/namelecule-quiz-checkpoints.js": "f52d83aecc582f3214db022a076fbb82af1f187588eccf16d5756a030d67785b",
+        "mulermoc-nom-54.html": "4ba5460c25f40bc1b0bc344c2fa53d5e3344ae01e5293266d23b21cd1a783d56",
+        "mulermoc-nom-55.html": "e9420f50d73f2f1d14dae588e9d3f3ac9a8b3e948b8fce23fc48c248c4e6bf83"
+      },
+      "sourceUnchangedDuringRun": {
+        "games/name-builder.html": true,
+        "css/namelecule-name-builder.css": true,
+        "js/namelecule-name-builder.js": true,
+        "js/namelecule-game-choice-checkpoint.js": true,
+        "js/namelecule-quiz-checkpoints.js": true,
+        "mulermoc-nom-54.html": true,
+        "mulermoc-nom-55.html": true
+      }
+    }
+  },
+  "evidenceInterpretation": [
+    "R1 normal run passed238 assertions and completed six actual Builder lesson molecules plus Workshop smoke, both earned gates, partial-answer refresh and optional practice. Overall run did NOT complete: phone setup was blocked by existing portrait prompt.",
+    "R1 remaining completed93 assertions after trusted dismissal of that prompt:390/320px, next round/partial reload, Main54, longest standalone name and next molecule.",
+    "R2 interrupt completed41 assertions on final seven source hashes: actual native motion then trusted Shift cancellation both lesson and standalone, genuine empty bank64px and actual drag-return, correct standalone ethane round.",
+    "R2 reduced completed25 assertions on final source: actual reduced-motion profile, instant reveal, wrong feedback, representation changes preserve partial answer, stable iframe height.",
+    "R2 changes after R1 are recorded as cache tokens, a64px empty-bank target and bounded same-position interruption correction. Full six lesson rounds were not repeated on R2; targeted affected checks were repeated.",
+    "Native cancellation first failed despite trusted input and delivered parent instant command. Isolated plain DOM/native control reproduced and distinguished same-position command from adjacent retarget/restore. Internal browser cause not claimed.",
+    "No captured JavaScript exceptions does not establish a clean console or uninterrupted conference operation. External JSmol/graphics dependencies remain.",
+    "On narrow screens construction is prioritized; molecule above and all content cannot simultaneously fit. Normal vertical manual navigation remains available.",
+    "No personal Firefox/profile changes in this UI task; all browser work uses owned disposable profiles. Previous personal Firefox freeze investigation remains unresolved."
+  ]
+}

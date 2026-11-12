@@ -1,0 +1,787 @@
+{
+  "checks": [
+    {
+      "label": "Builder verified/native ready",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "Builder verified/native ready",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "Replay gate4 Builder 1 load identity",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "Replay gate4 Builder 1 actual clicked tile identity",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "Replay gate4 Builder 1 composed name exact",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "Replay gate4 Builder 1 correct native check",
+      "passed": true,
+      "detail": "feedback success"
+    },
+    {
+      "label": "Replay gate4 Builder 1 explanation supplied",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "Builder verified/native ready",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "Builder verified/native ready",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "Replay gate4 Builder 2 load identity",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "Replay gate4 Builder 2 actual clicked tile identity",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "Replay gate4 Builder 2 composed name exact",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "Replay gate4 Builder 2 correct native check",
+      "passed": true,
+      "detail": "feedback success"
+    },
+    {
+      "label": "Replay gate4 Builder 2 explanation supplied",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "Builder verified/native ready",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "Builder verified/native ready",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "Replay gate4 Builder 3 load identity",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "Replay gate4 Builder 3 actual clicked tile identity",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "Replay gate4 Builder 3 composed name exact",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "Replay gate4 Builder 3 correct native check",
+      "passed": true,
+      "detail": "feedback success"
+    },
+    {
+      "label": "Replay gate4 Builder 3 explanation supplied",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "Fresh replay earns gate4 through genuine Builder triple",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "Replay gate11 Workshop 1 footer action count",
+      "passed": true,
+      "detail": {
+        "buttons": [
+          "Επόμενο κουίζ"
+        ],
+        "header": [
+          {
+            "text": "Συνεχίζω τη θεωρία",
+            "hidden": true
+          },
+          {
+            "text": "Επιστροφή στη θεωρία",
+            "hidden": false
+          }
+        ],
+        "count": "Κουίζ 1/3"
+      }
+    },
+    {
+      "label": "Exact meaningful Workshop progress survives cold reload",
+      "passed": false,
+      "detail": {
+        "before": {
+          "version": 1,
+          "seed": "1180036876174996133",
+          "currentRound": 1,
+          "states": [
+            {
+              "selectedPartId": "component-5",
+              "selectedValue": "πεντ",
+              "order": [],
+              "choiceOrder": [
+                0,
+                1,
+                2
+              ],
+              "attempts": 1,
+              "selectionMisses": 0,
+              "solved": true,
+              "submitted": true
+            },
+            {
+              "selectedPartId": null,
+              "selectedValue": null,
+              "order": [],
+              "choiceOrder": [
+                0,
+                1,
+                2
+              ],
+              "attempts": 0,
+              "selectionMisses": 0,
+              "solved": false,
+              "submitted": false
+            },
+            {
+              "selectedPartId": null,
+              "selectedValue": null,
+              "order": [],
+              "choiceOrder": [
+                1,
+                0,
+                2
+              ],
+              "attempts": 0,
+              "selectionMisses": 0,
+              "solved": false,
+              "submitted": false
+            }
+          ],
+          "solved": false
+        },
+        "after": {
+          "version": 1,
+          "seed": "1180036876174996133",
+          "currentRound": 1,
+          "states": [
+            {
+              "selectedPartId": "component-5",
+              "selectedValue": "πεντ",
+              "order": [],
+              "choiceOrder": [
+                0,
+                1,
+                2
+              ],
+              "attempts": 1,
+              "selectionMisses": 0,
+              "solved": true,
+              "submitted": true
+            },
+            {
+              "selectedPartId": null,
+              "selectedValue": null,
+              "order": [],
+              "choiceOrder": [
+                0,
+                1,
+                2
+              ],
+              "attempts": 0,
+              "selectionMisses": 0,
+              "solved": false,
+              "submitted": false
+            },
+            {
+              "selectedPartId": null,
+              "selectedValue": null,
+              "order": [],
+              "choiceOrder": [
+                1,
+                2,
+                0
+              ],
+              "attempts": 0,
+              "selectionMisses": 0,
+              "solved": false,
+              "submitted": false
+            }
+          ],
+          "solved": false
+        },
+        "fullDiff": [
+          {
+            "path": ".states[2].choiceOrder[1]",
+            "before": 0,
+            "after": 2
+          },
+          {
+            "path": ".states[2].choiceOrder[2]",
+            "before": 2,
+            "after": 0
+          }
+        ],
+        "semanticBefore": {
+          "seed": "1180036876174996133",
+          "currentRound": 1,
+          "solved": false,
+          "states": [
+            {
+              "selectedPartId": "component-5",
+              "selectedValue": "πεντ",
+              "attempts": 1,
+              "selectionMisses": 0,
+              "solved": true,
+              "submitted": true,
+              "order": [],
+              "choiceOrder": [
+                0,
+                1,
+                2
+              ]
+            },
+            {
+              "selectedPartId": null,
+              "selectedValue": null,
+              "attempts": 0,
+              "selectionMisses": 0,
+              "solved": false,
+              "submitted": false,
+              "order": [],
+              "choiceOrder": [
+                0,
+                1,
+                2
+              ]
+            },
+            {
+              "selectedPartId": null,
+              "selectedValue": null,
+              "attempts": 0,
+              "selectionMisses": 0,
+              "solved": false,
+              "submitted": false,
+              "order": [],
+              "choiceOrder": [
+                1,
+                0,
+                2
+              ]
+            }
+          ]
+        },
+        "semanticAfter": {
+          "seed": "1180036876174996133",
+          "currentRound": 1,
+          "solved": false,
+          "states": [
+            {
+              "selectedPartId": "component-5",
+              "selectedValue": "πεντ",
+              "attempts": 1,
+              "selectionMisses": 0,
+              "solved": true,
+              "submitted": true,
+              "order": [],
+              "choiceOrder": [
+                0,
+                1,
+                2
+              ]
+            },
+            {
+              "selectedPartId": null,
+              "selectedValue": null,
+              "attempts": 0,
+              "selectionMisses": 0,
+              "solved": false,
+              "submitted": false,
+              "order": [],
+              "choiceOrder": [
+                0,
+                1,
+                2
+              ]
+            },
+            {
+              "selectedPartId": null,
+              "selectedValue": null,
+              "attempts": 0,
+              "selectionMisses": 0,
+              "solved": false,
+              "submitted": false,
+              "order": [],
+              "choiceOrder": [
+                1,
+                2,
+                0
+              ]
+            }
+          ]
+        },
+        "semanticDiff": [
+          {
+            "path": ".states[2].choiceOrder[1]",
+            "before": 0,
+            "after": 2
+          },
+          {
+            "path": ".states[2].choiceOrder[2]",
+            "before": 2,
+            "after": 0
+          }
+        ]
+      }
+    }
+  ],
+  "solved": [
+    {
+      "label": "Replay gate4 Builder 1",
+      "game": "builder",
+      "moleculeId": "butane",
+      "name": "βουτάνιο",
+      "load": {
+        "channel": "namelecule-builder-lesson-v1",
+        "session": "1eme2y01ci2tnb0sgl7g90sitzwq",
+        "command": "load",
+        "requestId": 1,
+        "attemptId": "builder-alkanes-unbranched-29882195302335595296",
+        "moleculeId": "butane",
+        "round": {
+          "roundId": "lesson-builder-alkanes-unbranched-29882195302335595296-0",
+          "moleculeId": "butane",
+          "correctName": "βουτάνιο",
+          "series": "alkanes",
+          "parentLength": 4,
+          "pieces": [
+            {
+              "text": "βουτ",
+              "separatorBefore": "",
+              "role": "slot-5"
+            },
+            {
+              "text": "άν",
+              "separatorBefore": "",
+              "role": "slot-6"
+            },
+            {
+              "text": "ιο",
+              "separatorBefore": "",
+              "role": "slot-9"
+            }
+          ],
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ],
+          "vocabulary": {
+            "roots": [
+              "μεθ",
+              "αιθ",
+              "προπ",
+              "βουτ",
+              "πεντ"
+            ]
+          }
+        },
+        "bankSeed": "lesson-builder-alkanes-unbranched-29882195302335595296-0:bank",
+        "initialState": {
+          "answer": [],
+          "selected": null,
+          "attempts": 0,
+          "submitted": false,
+          "solved": false
+        },
+        "explanation": "Το «βουτ» δηλώνει τα 4 άτομα C της κύριας αλυσίδας. Το «άν» δηλώνει τους απλούς δεσμούς μεταξύ ατόμων C και το «ιο» τη χημική τάξη των υδρογονανθράκων."
+      }
+    },
+    {
+      "label": "Replay gate4 Builder 2",
+      "game": "builder",
+      "moleculeId": "methane",
+      "name": "μεθάνιο",
+      "load": {
+        "channel": "namelecule-builder-lesson-v1",
+        "session": "1eme2y01ci2tnb0sgl7g90sitzwq",
+        "command": "load",
+        "requestId": 2,
+        "attemptId": "builder-alkanes-unbranched-29882195302335595296",
+        "moleculeId": "methane",
+        "round": {
+          "roundId": "lesson-builder-alkanes-unbranched-29882195302335595296-1",
+          "moleculeId": "methane",
+          "correctName": "μεθάνιο",
+          "series": "alkanes",
+          "parentLength": 1,
+          "pieces": [
+            {
+              "text": "μεθ",
+              "separatorBefore": "",
+              "role": "slot-5"
+            },
+            {
+              "text": "άν",
+              "separatorBefore": "",
+              "role": "slot-6"
+            },
+            {
+              "text": "ιο",
+              "separatorBefore": "",
+              "role": "slot-9"
+            }
+          ],
+          "representations": [
+            "condensed",
+            "expanded",
+            "3d"
+          ],
+          "vocabulary": {
+            "roots": [
+              "μεθ",
+              "αιθ",
+              "προπ",
+              "βουτ",
+              "πεντ"
+            ]
+          }
+        },
+        "bankSeed": "lesson-builder-alkanes-unbranched-29882195302335595296-1:bank",
+        "initialState": {
+          "answer": [],
+          "selected": null,
+          "attempts": 0,
+          "submitted": false,
+          "solved": false
+        },
+        "explanation": "Το «μεθ» δηλώνει το ένα άτομο C της κύριας αλυσίδας. Το μεθάνιο έχει ένα άτομο C και δεν έχει δεσμούς μεταξύ ατόμων C. Ανήκει στους κορεσμένους υδρογονάνθρακες, δηλαδή στα αλκάνια, και το «ιο» δηλώνει τη χημική τάξη των υδρογονανθράκων."
+      }
+    },
+    {
+      "label": "Replay gate4 Builder 3",
+      "game": "builder",
+      "moleculeId": "ethane",
+      "name": "αιθάνιο",
+      "load": {
+        "channel": "namelecule-builder-lesson-v1",
+        "session": "1eme2y01ci2tnb0sgl7g90sitzwq",
+        "command": "load",
+        "requestId": 3,
+        "attemptId": "builder-alkanes-unbranched-29882195302335595296",
+        "moleculeId": "ethane",
+        "round": {
+          "roundId": "lesson-builder-alkanes-unbranched-29882195302335595296-2",
+          "moleculeId": "ethane",
+          "correctName": "αιθάνιο",
+          "series": "alkanes",
+          "parentLength": 2,
+          "pieces": [
+            {
+              "text": "αιθ",
+              "separatorBefore": "",
+              "role": "slot-5"
+            },
+            {
+              "text": "άν",
+              "separatorBefore": "",
+              "role": "slot-6"
+            },
+            {
+              "text": "ιο",
+              "separatorBefore": "",
+              "role": "slot-9"
+            }
+          ],
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ],
+          "vocabulary": {
+            "roots": [
+              "μεθ",
+              "αιθ",
+              "προπ",
+              "βουτ",
+              "πεντ"
+            ]
+          }
+        },
+        "bankSeed": "lesson-builder-alkanes-unbranched-29882195302335595296-2:bank",
+        "initialState": {
+          "answer": [],
+          "selected": null,
+          "attempts": 0,
+          "submitted": false,
+          "solved": false
+        },
+        "explanation": "Το «αιθ» δηλώνει τα 2 άτομα C της κύριας αλυσίδας. Το «άν» δηλώνει τους απλούς δεσμούς μεταξύ ατόμων C και το «ιο» τη χημική τάξη των υδρογονανθράκων."
+      }
+    },
+    {
+      "label": "Replay gate11 Workshop 1",
+      "game": "repair",
+      "moleculeId": "methyl_2_pentane",
+      "kind": "replace"
+    }
+  ],
+  "conditions": "Owned headless Firefox; actual production UI, native viewer and verified chemistry Worker. Read-only preload observes bridge loads for deterministic test inputs; trusted pointer input submits answers.",
+  "textSamples": [],
+  "fontEvidence": [],
+  "heights": [],
+  "restore": {
+    "before": {
+      "version": 1,
+      "seed": "1180036876174996133",
+      "currentRound": 1,
+      "states": [
+        {
+          "selectedPartId": "component-5",
+          "selectedValue": "πεντ",
+          "order": [],
+          "choiceOrder": [
+            0,
+            1,
+            2
+          ],
+          "attempts": 1,
+          "selectionMisses": 0,
+          "solved": true,
+          "submitted": true
+        },
+        {
+          "selectedPartId": null,
+          "selectedValue": null,
+          "order": [],
+          "choiceOrder": [
+            0,
+            1,
+            2
+          ],
+          "attempts": 0,
+          "selectionMisses": 0,
+          "solved": false,
+          "submitted": false
+        },
+        {
+          "selectedPartId": null,
+          "selectedValue": null,
+          "order": [],
+          "choiceOrder": [
+            1,
+            0,
+            2
+          ],
+          "attempts": 0,
+          "selectionMisses": 0,
+          "solved": false,
+          "submitted": false
+        }
+      ],
+      "solved": false
+    },
+    "after": {
+      "version": 1,
+      "seed": "1180036876174996133",
+      "currentRound": 1,
+      "states": [
+        {
+          "selectedPartId": "component-5",
+          "selectedValue": "πεντ",
+          "order": [],
+          "choiceOrder": [
+            0,
+            1,
+            2
+          ],
+          "attempts": 1,
+          "selectionMisses": 0,
+          "solved": true,
+          "submitted": true
+        },
+        {
+          "selectedPartId": null,
+          "selectedValue": null,
+          "order": [],
+          "choiceOrder": [
+            0,
+            1,
+            2
+          ],
+          "attempts": 0,
+          "selectionMisses": 0,
+          "solved": false,
+          "submitted": false
+        },
+        {
+          "selectedPartId": null,
+          "selectedValue": null,
+          "order": [],
+          "choiceOrder": [
+            1,
+            2,
+            0
+          ],
+          "attempts": 0,
+          "selectionMisses": 0,
+          "solved": false,
+          "submitted": false
+        }
+      ],
+      "solved": false
+    },
+    "fullDiff": [
+      {
+        "path": ".states[2].choiceOrder[1]",
+        "before": 0,
+        "after": 2
+      },
+      {
+        "path": ".states[2].choiceOrder[2]",
+        "before": 2,
+        "after": 0
+      }
+    ],
+    "semanticBefore": {
+      "seed": "1180036876174996133",
+      "currentRound": 1,
+      "solved": false,
+      "states": [
+        {
+          "selectedPartId": "component-5",
+          "selectedValue": "πεντ",
+          "attempts": 1,
+          "selectionMisses": 0,
+          "solved": true,
+          "submitted": true,
+          "order": [],
+          "choiceOrder": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "selectedPartId": null,
+          "selectedValue": null,
+          "attempts": 0,
+          "selectionMisses": 0,
+          "solved": false,
+          "submitted": false,
+          "order": [],
+          "choiceOrder": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "selectedPartId": null,
+          "selectedValue": null,
+          "attempts": 0,
+          "selectionMisses": 0,
+          "solved": false,
+          "submitted": false,
+          "order": [],
+          "choiceOrder": [
+            1,
+            0,
+            2
+          ]
+        }
+      ]
+    },
+    "semanticAfter": {
+      "seed": "1180036876174996133",
+      "currentRound": 1,
+      "solved": false,
+      "states": [
+        {
+          "selectedPartId": "component-5",
+          "selectedValue": "πεντ",
+          "attempts": 1,
+          "selectionMisses": 0,
+          "solved": true,
+          "submitted": true,
+          "order": [],
+          "choiceOrder": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "selectedPartId": null,
+          "selectedValue": null,
+          "attempts": 0,
+          "selectionMisses": 0,
+          "solved": false,
+          "submitted": false,
+          "order": [],
+          "choiceOrder": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "selectedPartId": null,
+          "selectedValue": null,
+          "attempts": 0,
+          "selectionMisses": 0,
+          "solved": false,
+          "submitted": false,
+          "order": [],
+          "choiceOrder": [
+            1,
+            2,
+            0
+          ]
+        }
+      ]
+    },
+    "semanticDiff": [
+      {
+        "path": ".states[2].choiceOrder[1]",
+        "before": 0,
+        "after": 2
+      },
+      {
+        "path": ".states[2].choiceOrder[2]",
+        "before": 2,
+        "after": 0
+      }
+    ]
+  },
+  "passed": false,
+  "failure": "AssertionError(('Exact meaningful Workshop progress survives cold reload', {'before': {'version': 1, 'seed': '1180036876174996133', 'currentRound': 1, 'states': [{'selectedPartId': 'component-5', 'selectedValue': 'πεντ', 'order': [], 'choiceOrder': [0, 1, 2], 'attempts': 1, 'selectionMisses': 0, 'solved': True, 'submitted': True}, {'selectedPartId': None, 'selectedValue': None, 'order': [], 'choiceOrder': [0, 1, 2], 'attempts': 0, 'selectionMisses': 0, 'solved': False, 'submitted': False}, {'selectedPartId': None, 'selectedValue': None, 'order': [], 'choiceOrder': [1, 0, 2], 'attempts': 0, 'selectionMisses': 0, 'solved': False, 'submitted': False}], 'solved': False}, 'after': {'version': 1, 'seed': '1180036876174996133', 'currentRound': 1, 'states': [{'selectedPartId': 'component-5', 'selectedValue': 'πεντ', 'order': [], 'choiceOrder': [0, 1, 2], 'attempts': 1, 'selectionMisses': 0, 'solved': True, 'submitted': True}, {'selectedPartId': None, 'selectedValue': None, 'order': [], 'choiceOrder': [0, 1, 2], 'attempts': 0, 'selectionMisses': 0, 'solved': False, 'submitted': False}, {'selectedPartId': None, 'selectedValue': None, 'order': [], 'choiceOrder': [1, 2, 0], 'attempts': 0, 'selectionMisses': 0, 'solved': False, 'submitted': False}], 'solved': False}, 'fullDiff': [{'path': '.states[2].choiceOrder[1]', 'before': 0, 'after': 2}, {'path': '.states[2].choiceOrder[2]', 'before': 2, 'after': 0}], 'semanticBefore': {'seed': '1180036876174996133', 'currentRound': 1, 'solved': False, 'states': [{'selectedPartId': 'component-5', 'selectedValue': 'πεντ', 'attempts': 1, 'selectionMisses': 0, 'solved': True, 'submitted': True, 'order': [], 'choiceOrder': [0, 1, 2]}, {'selectedPartId': None, 'selectedValue': None, 'attempts': 0, 'selectionMisses': 0, 'solved': False, 'submitted': False, 'order': [], 'choiceOrder': [0, 1, 2]}, {'selectedPartId': None, 'selectedValue': None, 'attempts': 0, 'selectionMisses': 0, 'solved': False, 'submitted': False, 'order': [], 'choiceOrder': [1, 0, 2]}]}, 'semanticAfter': {'seed': '1180036876174996133', 'currentRound': 1, 'solved': False, 'states': [{'selectedPartId': 'component-5', 'selectedValue': 'πεντ', 'attempts': 1, 'selectionMisses': 0, 'solved': True, 'submitted': True, 'order': [], 'choiceOrder': [0, 1, 2]}, {'selectedPartId': None, 'selectedValue': None, 'attempts': 0, 'selectionMisses': 0, 'solved': False, 'submitted': False, 'order': [], 'choiceOrder': [0, 1, 2]}, {'selectedPartId': None, 'selectedValue': None, 'attempts': 0, 'selectionMisses': 0, 'solved': False, 'submitted': False, 'order': [], 'choiceOrder': [1, 2, 0]}]}, 'semanticDiff': [{'path': '.states[2].choiceOrder[1]', 'before': 0, 'after': 2}, {'path': '.states[2].choiceOrder[2]', 'before': 2, 'after': 0}]}))",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/game-header-text-parity-20261111/browser/remaining.py\", line 24, in <module>\n    check(not OUT['restore']['semanticDiff'],'Exact meaningful Workshop progress survives cold reload',OUT['restore']);verify(sample('repair','Workshop after semantic restore'),'Workshop after semantic restore')\n  File \"<string>\", line 6, in check\nAssertionError: ('Exact meaningful Workshop progress survives cold reload', {'before': {'version': 1, 'seed': '1180036876174996133', 'currentRound': 1, 'states': [{'selectedPartId': 'component-5', 'selectedValue': 'πεντ', 'order': [], 'choiceOrder': [0, 1, 2], 'attempts': 1, 'selectionMisses': 0, 'solved': True, 'submitted': True}, {'selectedPartId': None, 'selectedValue': None, 'order': [], 'choiceOrder': [0, 1, 2], 'attempts': 0, 'selectionMisses': 0, 'solved': False, 'submitted': False}, {'selectedPartId': None, 'selectedValue': None, 'order': [], 'choiceOrder': [1, 0, 2], 'attempts': 0, 'selectionMisses': 0, 'solved': False, 'submitted': False}], 'solved': False}, 'after': {'version': 1, 'seed': '1180036876174996133', 'currentRound': 1, 'states': [{'selectedPartId': 'component-5', 'selectedValue': 'πεντ', 'order': [], 'choiceOrder': [0, 1, 2], 'attempts': 1, 'selectionMisses': 0, 'solved': True, 'submitted': True}, {'selectedPartId': None, 'selectedValue': None, 'order': [], 'choiceOrder': [0, 1, 2], 'attempts': 0, 'selectionMisses': 0, 'solved': False, 'submitted': False}, {'selectedPartId': None, 'selectedValue': None, 'order': [], 'choiceOrder': [1, 2, 0], 'attempts': 0, 'selectionMisses': 0, 'solved': False, 'submitted': False}], 'solved': False}, 'fullDiff': [{'path': '.states[2].choiceOrder[1]', 'before': 0, 'after': 2}, {'path': '.states[2].choiceOrder[2]', 'before': 2, 'after': 0}], 'semanticBefore': {'seed': '1180036876174996133', 'currentRound': 1, 'solved': False, 'states': [{'selectedPartId': 'component-5', 'selectedValue': 'πεντ', 'attempts': 1, 'selectionMisses': 0, 'solved': True, 'submitted': True, 'order': [], 'choiceOrder': [0, 1, 2]}, {'selectedPartId': None, 'selectedValue': None, 'attempts': 0, 'selectionMisses': 0, 'solved': False, 'submitted': False, 'order': [], 'choiceOrder': [0, 1, 2]}, {'selectedPartId': None, 'selectedValue': None, 'attempts': 0, 'selectionMisses': 0, 'solved': False, 'submitted': False, 'order': [], 'choiceOrder': [1, 0, 2]}]}, 'semanticAfter': {'seed': '1180036876174996133', 'currentRound': 1, 'solved': False, 'states': [{'selectedPartId': 'component-5', 'selectedValue': 'πεντ', 'attempts': 1, 'selectionMisses': 0, 'solved': True, 'submitted': True, 'order': [], 'choiceOrder': [0, 1, 2]}, {'selectedPartId': None, 'selectedValue': None, 'attempts': 0, 'selectionMisses': 0, 'solved': False, 'submitted': False, 'order': [], 'choiceOrder': [0, 1, 2]}, {'selectedPartId': None, 'selectedValue': None, 'attempts': 0, 'selectionMisses': 0, 'solved': False, 'submitted': False, 'order': [], 'choiceOrder': [1, 2, 0]}]}, 'semanticDiff': [{'path': '.states[2].choiceOrder[1]', 'before': 0, 'after': 2}, {'path': '.states[2].choiceOrder[2]', 'before': 2, 'after': 0}]})\n",
+  "jsExceptions": []
+}

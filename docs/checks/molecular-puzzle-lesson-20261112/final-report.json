@@ -1,0 +1,46 @@
+{
+  "date": "2026-11-12",
+  "status": "complete-local-reviewed",
+  "baseHEAD": "168e3cec01f941a84d40bbe0dc07156e7baa35d0",
+  "approvedScope": "Third Molecular Puzzle game in alkane lesson steps4/11; three distinct correct matching-set molecules unlock, stored partial/earned progress and optional practice/other-game/theory choices.",
+  "changedApplicationFiles": [
+    "js/namelecule-game-choice-checkpoint.js",
+    "js/namelecule-molecular-puzzle.js",
+    "css/namelecule-molecular-puzzle.css",
+    "games/molecular-puzzle.html",
+    "mulermoc-nom-54.html",
+    "mulermoc-nom-55.html"
+  ],
+  "reviewTargetSHA256": "c9ab66db341f2c650ed71bd2754c125d5d0f94560897d4099d8e1097883152ee",
+  "sourceHashesStillMatch": true,
+  "protectedPathsUnchanged": 21,
+  "coreFilesUnchanged": 11,
+  "lessonJSONUnchanged": true,
+  "verification": {
+    "browserSummary": "browser/summary.json",
+    "finalBrowserPasses": 77,
+    "priorAdditionalBrowserPasses": 79,
+    "independentReviewerAssertions": 160,
+    "chemistryValidatorAssertions": 199,
+    "adapterWorkerAssertions": 36,
+    "appJSErrors": 0
+  },
+  "reviewer": "/root/review_puzzle_lesson_full",
+  "reviewFindings": [],
+  "externalLessonLaunch": "external-lesson-launch.json",
+  "publication": "local only; no commit/push/publication/export",
+  "upstreamAudit": {
+    "lastChecked": "1734bfb5e5f26d1619060f1c7a5ac3b64317abbd",
+    "lastActuallySynchronized": "5ab2495575bbbffeb0ac67f91d4d81857cb65970",
+    "source": "same-session prior audit reused; no new sync"
+  },
+  "limitations": [
+    "Reviewer inspected Developer browser evidence; no independent browser replay.",
+    "Phone test is solved-state resize at390px and Continue, not a full new phone construction.",
+    "Main54 is third-game load smoke, not full triple.",
+    "No new complete old-game triple replay, physical device/conference/offline/native Firefox hang qualification.",
+    "Google Fonts retains existing network/cache dependency.",
+    "Prior run1/run2 incomplete driver attempts preserved; final paced hit-tested replay passed.",
+    "CLI dispatch to existing GUI Firefox verified, native UI response not measured."
+  ]
+}

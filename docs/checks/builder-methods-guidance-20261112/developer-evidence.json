@@ -1,0 +1,161 @@
+{
+  "recordedUTC": "2026-11-12T06:17:05.177579+00:00",
+  "scope": "Developer evidence for approved instructions+mobile disclosure; independent review still pending.",
+  "approvals": [
+    "approved-plan.json",
+    "approved-mobile-extension.json"
+  ],
+  "sourceFreezeSHA256": "37e12df46bdcfe31f6358a89176201a61a00d2eb6bb0bd64b29e32794e63764e",
+  "runtimeSummary": "browser/verification-summary.json",
+  "runs": [
+    {
+      "revision": "R2",
+      "results": "browser/layout-results.json",
+      "completed": true,
+      "passed": 289,
+      "checks": 289,
+      "failed": []
+    },
+    {
+      "revision": "R3",
+      "results": "browser/flow-results.json",
+      "completed": false,
+      "passed": 172,
+      "checks": 173,
+      "failed": [
+        {
+          "label": "target reachable without test scrolling: #answer-tiles [data-tile-id=\"tile-1d6p32p-0\"]",
+          "detail": {
+            "ok": false,
+            "reason": "target center outside viewport",
+            "x": 1020.0416488647461,
+            "y": -18.25,
+            "hit": null,
+            "frames": [
+              {
+                "width": 1134,
+                "height": 981,
+                "scrollY": 0
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "revision": "R3",
+      "results": "browser/embedded-flow-results.json",
+      "completed": false,
+      "passed": 116,
+      "checks": 117,
+      "failed": [
+        {
+          "label": "target reachable without test scrolling: #nlQuizReturn",
+          "detail": {
+            "ok": false,
+            "reason": "target missing"
+          }
+        }
+      ]
+    },
+    {
+      "revision": "R3",
+      "results": "browser/resume-only-results.json",
+      "completed": true,
+      "passed": 15,
+      "checks": 15,
+      "failed": []
+    }
+  ],
+  "caseCoverage": {
+    "R2sixLayouts": "Standalone and embedded at1500x900,390x760,320x740: three full instruction rows/14.4px type/bold labels/no page horizontal overflow/internal clipping, native initial open/closed defaults, real click/Enter toggles,44px controls, construction/check and wrong-feedback framing;320 desktop/phone breakpoint resize. Full-open root-viewport visibility was not asserted in R2.",
+    "R3phonePairs": [
+      {
+        "viewport": [
+          390,
+          760
+        ],
+        "exactSameAnswerIDs": [
+          "tile-1d6p32p-0"
+        ],
+        "openHeight": 281.066650390625,
+        "openBounds": {
+          "left": 49,
+          "right": 341,
+          "top": 458.93328857421875,
+          "bottom": 739.9999389648438,
+          "width": 292,
+          "height": 281.066650390625
+        },
+        "openFullyVisible": true,
+        "closedHeight": 58,
+        "closedCheckBounds": {
+          "left": 49,
+          "right": 194,
+          "top": 676.1333618164062,
+          "bottom": 724.1333618164062,
+          "width": 145,
+          "height": 48
+        },
+        "closedCheckFullyVisible": true
+      },
+      {
+        "viewport": [
+          320,
+          740
+        ],
+        "exactSameAnswerIDs": [
+          "tile-1d6p32p-0"
+        ],
+        "openHeight": 364.6000061035156,
+        "openBounds": {
+          "left": 49,
+          "right": 271,
+          "top": 355.39990234375,
+          "bottom": 719.9999084472656,
+          "width": 222,
+          "height": 364.6000061035156
+        },
+        "openFullyVisible": true,
+        "closedHeight": 58,
+        "closedCheckBounds": {
+          "left": 49,
+          "right": 194,
+          "top": 594.683349609375,
+          "bottom": 642.683349609375,
+          "width": 145,
+          "height": 48
+        },
+        "closedCheckFullyVisible": true
+      }
+    ],
+    "R3standaloneMethods": "Actual click add; inside drag reorder; left/right buttons; left/right keyboard arrows; Delete; focused Enter re-add; remove button; completed outside drag return; genuine partial wrong feedback and canonical ethane success.",
+    "R3embeddedMethods": "Same actual methods; real page reload preserves exact partial IDs and canonical seed; wrong feedback and genuine correct native result; completed-round receipt retained; first solved round does not prematurely unlock gate; actual next action reaches2/3.",
+    "R3embeddedCanonicalRound": {
+      "moleculeId": "butane",
+      "correctName": "βουτάνιο"
+    },
+    "R3backReopen": "Corrected actual #nlQuizBack control closes to theory and reopen restores exact genuine partial IDs/molecule and complete saved round/progress record; resumed check automatically visible.15checks completed without failure.",
+    "resume": {
+      "moleculeId": "propane",
+      "answerIDs": [
+        "tile-1hv6phq-0"
+      ],
+      "recordUnchanged": true
+    }
+  },
+  "fixedRegression": "R1threefullrows increasedcriticalconstructionheight and placedCheckbelowmobileviewport. Approvednativephonefold+existingregionrevealer preservesfullcopy14.4px and44pxcontrols; actualR3same-stateopen/close fitshelp/Check respectively.",
+  "warningsAndLimits": "browser/verification-summary.json warnings/diagnosticFailures/limits retained, no clean-console/nativeGUI-freeze/conference-readiness claim.",
+  "rootVisualInspections": [
+    "browser/lesson-1500-populated.png",
+    "browser/lesson-320-populated.png",
+    "browser/lesson-390-instructions-open.png (R2partialviewport evidence; R3addressed)",
+    "browser/same-populated-phone-320-open.png",
+    "browser/standalone-methods-success.png"
+  ],
+  "cleanup": "verified-runtime-cleanup.json:5testPIDpairs/10portsconfirmedclosed",
+  "HTTP": "http-results.json:7localHTTP200/diskmatches",
+  "noCoreOrEngineViewerScenarioSharedControllerChange": true,
+  "noCommitPushPublication": true,
+  "initialToolingAssertion": "Staticcache update incorrectly expected token insideCSS, corrected before runtime; no appbehaviorfailure."
+}

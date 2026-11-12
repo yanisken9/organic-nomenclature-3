@@ -1,0 +1,83 @@
+{
+  "checks": [
+    {
+      "label": "enabled control [data-hydrogens=\"4\"]",
+      "passed": true
+    },
+    {
+      "label": "selected hovered chemical label keeps dark background and white text",
+      "passed": true
+    },
+    {
+      "label": "enabled control #check-answer",
+      "passed": true
+    },
+    {
+      "label": "final-CSS genuine methane success",
+      "passed": true
+    },
+    {
+      "label": "solved diagram label remains fully opaque",
+      "passed": true
+    },
+    {
+      "label": "existing game title/objective/logo-height parity 1440",
+      "passed": true
+    },
+    {
+      "label": "logo and no frame overflow 1440",
+      "passed": true
+    },
+    {
+      "label": "existing game title/objective/logo-height parity 760",
+      "passed": false
+    }
+  ],
+  "scope": "Final CSS only: real hover/solved labels and parent-vs-frame heading typography.",
+  "process": {
+    "ownedPID": 39606,
+    "profile": "/var/folders/2v/ds4vjvgj1_1000kq1fzg70q40000gn/T/namelecule-puzzle-test-1mdh0emz",
+    "serverPort": 52695,
+    "bidiPort": 52696
+  },
+  "selectedHover": {
+    "background": "rgb(37, 76, 80)",
+    "color": "rgb(255, 255, 255)",
+    "opacity": "1"
+  },
+  "typography": [
+    {
+      "viewport": [
+        1440,
+        1000
+      ],
+      "title": "40px",
+      "family": "Roboto Condensed, sans-serif",
+      "weight": "700",
+      "lineHeight": "44.8px",
+      "letterSpacing": "-1.6px",
+      "objective": "24px",
+      "logoHeight": 88,
+      "logoLoaded": true,
+      "overflow": false
+    },
+    {
+      "viewport": [
+        760,
+        900
+      ],
+      "title": "28px",
+      "family": "Roboto Condensed, sans-serif",
+      "weight": "700",
+      "lineHeight": "31.3667px",
+      "letterSpacing": "-1.12px",
+      "objective": "20px",
+      "logoHeight": 88,
+      "logoLoaded": true,
+      "overflow": false
+    }
+  ],
+  "failure": "Traceback (most recent call last):\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/molecular-puzzle-20261112/browser/presentation.py\", line 27, in <module>\n    check(row['title']==title and row['objective']==objective and row['logoHeight']==logo,'existing game title/objective/logo-height parity '+str(width))\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/molecular-puzzle-20261112/browser/presentation.py\", line 12, in check\n    click('[data-hydrogens=\"4\"]')\nAssertionError: existing game title/objective/logo-height parity 760\n",
+  "javascriptErrors": [],
+  "ownedBrowserExited": true
+}

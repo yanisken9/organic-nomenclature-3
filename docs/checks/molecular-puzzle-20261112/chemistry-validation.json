@@ -1,0 +1,21 @@
+{
+  "recordedUTC": "2026-11-12T07:33:51.681169+00:00",
+  "reviewer": "/root/molecular_puzzle_chemistry",
+  "role": "NAMELECULE_CHEMISTRY_VALIDATOR_V1_20261023",
+  "sourceFile": "js/namelecule-molecular-puzzle-engine.js",
+  "SHA256": "6141bec0a6313dfd057ce1a6d057fe2a3cd1850f2b770f63929b4d312c0b55d1",
+  "assertions": 225,
+  "execution": "Independent actual source execution in functions.exec V8, memory only. No browser/UI/3D or writes. This JSON is Developer transcription of returned report.",
+  "coverage": [
+    "8 source MOLs vs separately name-built graphs using independent adjacency/backtracking oracle",
+    "8 ID/order permutations per target; reversed chains",
+    "64 target pairs correct only on diagonal",
+    "same formula/same CHn count 3-methylpentane rejected for 2-methylpentane",
+    "CH4, exact fixed H, under/overvalence, cycles, disconnected, duplicates, endpoint and order errors",
+    "16 malformed-source rejections"
+  ],
+  "findings": [],
+  "limitations": [
+    "Fixed eight-molecule catalog only. No arbitrary MOL import. parseMol does not interpret atom parity/valence fields, bond stereo or counts chiral flag; four such mutated out-of-pool MOLs accepted. Define/validate these fields before future arbitrary imports."
+  ]
+}

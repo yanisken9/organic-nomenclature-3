@@ -1,0 +1,78 @@
+{
+  "checks": [
+    {
+      "label": "cold lesson reaches first gate",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "cold first gate blocks continuation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "third puzzle choice available",
+      "passed": true,
+      "detail": [
+        "Συνεργείο ονομάτωνΕντόπισε το λάθος και επισκεύασε το όνομα.",
+        "Χτίσε το όνομαΔιάλεξε τα συνθετικά και βάλε τα στη σωστή σειρά.",
+        "Μοριακό παζλΔιάβασε το όνομα και σύνδεσε τα κομμάτια του μορίου."
+      ]
+    },
+    {
+      "label": "legacy Workshop remains accessible and not auto solved",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "third puzzle choice available",
+      "passed": true,
+      "detail": [
+        "Συνεργείο ονομάτωνΕντόπισε το λάθος και επισκεύασε το όνομα.",
+        "Χτίσε το όνομαΔιάλεξε τα συνθετικά και βάλε τα στη σωστή σειρά.",
+        "Μοριακό παζλΔιάβασε το όνομα και σύνδεσε τα κομμάτια του μορίου."
+      ]
+    },
+    {
+      "label": "legacy Builder remains accessible and independent",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "rounds": [],
+  "startedUTC": "2026-11-12T08:06:54.333333+00:00",
+  "sourceBefore": {
+    "js/namelecule-game-choice-checkpoint.js": "c6ffa9dc5a9b0ff09cf2303f4d8e4036825b3bae13a7eaac1a5cc0e5466cc092",
+    "js/namelecule-molecular-puzzle.js": "19b78dde772890afc9645909eaf10790f3d675a8fcb93f815cce3c825fa9ebc5",
+    "css/namelecule-molecular-puzzle.css": "5bf5dc0660060a8a06e1698956e9a434382bcd60e119197b0d08e54f942a68ea",
+    "games/molecular-puzzle.html": "35cdfcd0d03dcc1a1795a839f72a33d54471c9e038de567b48d7a60358be0726",
+    "mulermoc-nom-54.html": "8457e9abe0e1ffdf40615956164a418a2395ea9f71a68d57b8f3cac3ae9258d8",
+    "mulermoc-nom-55.html": "2d57ac1b9beb503c2982cd4d43e42b9996c3dfb1a203033f9c14c100119e6c51"
+  },
+  "scope": "Full Main55 alkane lesson gates 4/11 and Main54 smoke; actual palette/node/bond/check inputs, no injected answer or progress. Read-only bridge-load observer.",
+  "process": {
+    "ownedPID": 41218,
+    "profile": "/var/folders/2v/ds4vjvgj1_1000kq1fzg70q40000gn/T/namelecule-puzzle-full-lesson-20261112-06ngg6sr",
+    "serverPort": 53710,
+    "bidiPort": 53711,
+    "baseURL": "http://127.0.0.1:53710/"
+  },
+  "httpErrors": [
+    {
+      "code": 404,
+      "path": "/favicon.ico"
+    }
+  ],
+  "failure": "Traceback (most recent call last):\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/molecular-puzzle-lesson-20261112/browser/verify.py\", line 137, in <module>\n    open_gate();choose('repair');check(not rec()['states']['3']['solved'],'legacy Workshop remains accessible and not auto solved');choose('builder');check(not rec()['states']['3']['solved'],'legacy Builder remains accessible and independent');choose('puzzle')\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/molecular-puzzle-lesson-20261112/browser/verify.py\", line 44, in choose\n    wait('document.querySelectorAll(\".nl-game-choice-card\").length===3')\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/molecular-puzzle-lesson-20261112/browser/verify.py\", line 24, in wait\n    raise AssertionError('Timed out: '+expr)\nAssertionError: Timed out: document.querySelectorAll(\".nl-game-choice-card\").length===3\n",
+  "javascriptErrors": [],
+  "sourceAfter": {
+    "js/namelecule-game-choice-checkpoint.js": "c6ffa9dc5a9b0ff09cf2303f4d8e4036825b3bae13a7eaac1a5cc0e5466cc092",
+    "js/namelecule-molecular-puzzle.js": "19b78dde772890afc9645909eaf10790f3d675a8fcb93f815cce3c825fa9ebc5",
+    "css/namelecule-molecular-puzzle.css": "5bf5dc0660060a8a06e1698956e9a434382bcd60e119197b0d08e54f942a68ea",
+    "games/molecular-puzzle.html": "35cdfcd0d03dcc1a1795a839f72a33d54471c9e038de567b48d7a60358be0726",
+    "mulermoc-nom-54.html": "8457e9abe0e1ffdf40615956164a418a2395ea9f71a68d57b8f3cac3ae9258d8",
+    "mulermoc-nom-55.html": "2d57ac1b9beb503c2982cd4d43e42b9996c3dfb1a203033f9c14c100119e6c51"
+  },
+  "sourceUnchangedDuringRun": true,
+  "ownedBrowserExited": true
+}

@@ -1,0 +1,494 @@
+{
+  "recordedUTC": "2026-11-12T06:38:11.051854+00:00",
+  "contractResult": "FAILED for actual released placed tile at embedded parent sticky header",
+  "counts": {
+    "performed": 8,
+    "contractPass": 6,
+    "contractFailure": 2
+  },
+  "sourceToken": "http://127.0.0.1:51134/js/namelecule-name-builder.js?v=builder-methods-20261112-r3",
+  "sourceFreeze": "docs/checks/builder-methods-guidance-20261112/runtime-source-freeze.json",
+  "all7SourceAnd15ProtectedUnchanged": true,
+  "coreChanges": false,
+  "measuredFacts": [
+    "Bank,12px below answer and molecule-viewer releases restore exact original bank order at1280x600 and1500x900.",
+    "Parentheaderrelease is a trusted pointerup inside top browser viewport, outsideanswer, with parent hit nlQuizDialogTitle; exact placed tile stays inanswer atbothsizes.",
+    "Pointerup precedes lostpointercapture, and no blur or pointercancel is observed inthese8gestures."
+  ],
+  "causalTrace": {
+    "js/namelecule-name-builder.js:453": "Parent point is valid viewport point but parent elementFromPoint is title instead of game iframe, so visibleDropTarget returns null.",
+    "js/namelecule-name-builder.js:468": "touchEnd cancels ghost and exits on !target before remove(id) at470.",
+    "docs/checks/builder-placement-controls-20261112/browser/matrix.py:38": "Old matrix explicitly expects header release to cancel, so existing current-semantics checks do not establish usercontract."
+  },
+  "helperCheckCaveat": "187 helper/source-geometry checks pass under the existing visibleGame conditional oracle. User-contract outcomes are recorded separately: 2 failures. This is diagnostic evidence, not passing acceptance or a fix.",
+  "cases": [
+    {
+      "label": "embedded-1280x600-bank",
+      "contractPassed": true,
+      "exactBankOrderRestored": true,
+      "pointerType": "mouse",
+      "distance": 144.0,
+      "actualTrustedRelease": {
+        "type": "pointerup",
+        "trusted": true,
+        "pointerId": 1,
+        "pointerType": "mouse",
+        "primary": true,
+        "button": 0,
+        "x": 837,
+        "y": 471.6333312988281,
+        "globalX": 910,
+        "globalY": 350,
+        "targetId": "tile-1pvkgnf-3",
+        "hit": "bank-tiles",
+        "hitInAnswer": false,
+        "hitInBank": true,
+        "hitMoleculeFrame": false,
+        "visibleGame": true,
+        "insideAnswer": false,
+        "answerRect": {
+          "left": 575.0999755859375,
+          "right": 1099,
+          "top": 255.46665954589844,
+          "bottom": 400.46665954589844
+        },
+        "dropIndex": 0,
+        "scrollY": 0,
+        "frames": [
+          {
+            "x": 910,
+            "y": 350,
+            "visible": true,
+            "hit": "IFRAME"
+          }
+        ],
+        "time": 7429
+      },
+      "observedBlur": false,
+      "observedPointerCancel": false,
+      "terminalSequence": [
+        [
+          "pointerup",
+          7429
+        ],
+        [
+          "lostpointercapture",
+          7431
+        ]
+      ]
+    },
+    {
+      "label": "embedded-1280x600-bottom",
+      "contractPassed": true,
+      "exactBankOrderRestored": true,
+      "pointerType": "mouse",
+      "distance": 85.0,
+      "actualTrustedRelease": {
+        "type": "pointerup",
+        "trusted": true,
+        "pointerId": 1,
+        "pointerType": "mouse",
+        "primary": true,
+        "button": 0,
+        "x": 837,
+        "y": 412.6333312988281,
+        "globalX": 910,
+        "globalY": 291,
+        "targetId": "tile-1pvkgnf-3",
+        "hit": "DIV",
+        "hitInAnswer": false,
+        "hitInBank": false,
+        "hitMoleculeFrame": false,
+        "visibleGame": true,
+        "insideAnswer": false,
+        "answerRect": {
+          "left": 575.0999755859375,
+          "right": 1099,
+          "top": 255.46665954589844,
+          "bottom": 400.46665954589844
+        },
+        "dropIndex": 0,
+        "scrollY": 0,
+        "frames": [
+          {
+            "x": 910,
+            "y": 291,
+            "visible": true,
+            "hit": "IFRAME"
+          }
+        ],
+        "time": 9658
+      },
+      "observedBlur": false,
+      "observedPointerCancel": false,
+      "terminalSequence": [
+        [
+          "pointerup",
+          9658
+        ],
+        [
+          "lostpointercapture",
+          9660
+        ]
+      ]
+    },
+    {
+      "label": "embedded-1280x600-molecule",
+      "contractPassed": true,
+      "exactBankOrderRestored": true,
+      "pointerType": "mouse",
+      "distance": 572.1992659904415,
+      "actualTrustedRelease": {
+        "type": "pointerup",
+        "trusted": true,
+        "pointerId": 1,
+        "pointerType": "mouse",
+        "primary": true,
+        "button": 0,
+        "x": 271,
+        "y": 411.6333312988281,
+        "globalX": 344,
+        "globalY": 290,
+        "targetId": "tile-1pvkgnf-3",
+        "hit": "molecule-viewer",
+        "hitInAnswer": false,
+        "hitInBank": false,
+        "hitMoleculeFrame": true,
+        "visibleGame": true,
+        "insideAnswer": false,
+        "answerRect": {
+          "left": 575.0999755859375,
+          "right": 1099,
+          "top": 255.46665954589844,
+          "bottom": 400.46665954589844
+        },
+        "dropIndex": 0,
+        "scrollY": 0,
+        "frames": [
+          {
+            "x": 344,
+            "y": 290,
+            "visible": true,
+            "hit": "IFRAME"
+          }
+        ],
+        "time": 11661
+      },
+      "observedBlur": false,
+      "observedPointerCancel": false,
+      "terminalSequence": [
+        [
+          "pointerup",
+          11661
+        ],
+        [
+          "lostpointercapture",
+          11664
+        ]
+      ]
+    },
+    {
+      "label": "embedded-1280x600-parent-header",
+      "contractPassed": false,
+      "exactBankOrderRestored": false,
+      "pointerType": "mouse",
+      "distance": 303.67910695337605,
+      "actualTrustedRelease": {
+        "type": "pointerup",
+        "trusted": true,
+        "pointerId": 1,
+        "pointerType": "mouse",
+        "primary": true,
+        "button": 0,
+        "x": 567,
+        "y": 188.63333129882812,
+        "globalX": 640,
+        "globalY": 67,
+        "targetId": "tile-1pvkgnf-3",
+        "hit": "DIV",
+        "hitInAnswer": false,
+        "hitInBank": false,
+        "hitMoleculeFrame": false,
+        "visibleGame": false,
+        "insideAnswer": false,
+        "answerRect": {
+          "left": 575.0999755859375,
+          "right": 1099,
+          "top": 255.46665954589844,
+          "bottom": 400.46665954589844
+        },
+        "dropIndex": 0,
+        "scrollY": 0,
+        "frames": [
+          {
+            "x": 640,
+            "y": 67,
+            "visible": false,
+            "hit": "nlQuizDialogTitle"
+          }
+        ],
+        "time": 13809
+      },
+      "observedBlur": false,
+      "observedPointerCancel": false,
+      "terminalSequence": [
+        [
+          "pointerup",
+          13809
+        ],
+        [
+          "lostpointercapture",
+          13809
+        ]
+      ]
+    },
+    {
+      "label": "embedded-1500x900-bank",
+      "contractPassed": true,
+      "exactBankOrderRestored": true,
+      "pointerType": "mouse",
+      "distance": 144.0,
+      "actualTrustedRelease": {
+        "type": "pointerup",
+        "trusted": true,
+        "pointerId": 1,
+        "pointerType": "mouse",
+        "primary": true,
+        "button": 0,
+        "x": 837,
+        "y": 471.7833251953125,
+        "globalX": 1020,
+        "globalY": 446.99998474121094,
+        "targetId": "tile-1pvkgnf-3",
+        "hit": "bank-tiles",
+        "hitInAnswer": false,
+        "hitInBank": true,
+        "hitMoleculeFrame": false,
+        "visibleGame": true,
+        "insideAnswer": false,
+        "answerRect": {
+          "left": 575.0999755859375,
+          "right": 1099,
+          "top": 255.46665954589844,
+          "bottom": 400.46665954589844
+        },
+        "dropIndex": 0,
+        "scrollY": 0,
+        "frames": [
+          {
+            "x": 1020,
+            "y": 446.99998474121094,
+            "visible": true,
+            "hit": "IFRAME"
+          }
+        ],
+        "time": 17809
+      },
+      "observedBlur": false,
+      "observedPointerCancel": false,
+      "terminalSequence": [
+        [
+          "pointerup",
+          17809
+        ],
+        [
+          "lostpointercapture",
+          17812
+        ]
+      ]
+    },
+    {
+      "label": "embedded-1500x900-bottom",
+      "contractPassed": true,
+      "exactBankOrderRestored": true,
+      "pointerType": "mouse",
+      "distance": 85.0,
+      "actualTrustedRelease": {
+        "type": "pointerup",
+        "trusted": true,
+        "pointerId": 1,
+        "pointerType": "mouse",
+        "primary": true,
+        "button": 0,
+        "x": 837,
+        "y": 412.7833251953125,
+        "globalX": 1020,
+        "globalY": 387.99998474121094,
+        "targetId": "tile-1pvkgnf-3",
+        "hit": "DIV",
+        "hitInAnswer": false,
+        "hitInBank": false,
+        "hitMoleculeFrame": false,
+        "visibleGame": true,
+        "insideAnswer": false,
+        "answerRect": {
+          "left": 575.0999755859375,
+          "right": 1099,
+          "top": 255.46665954589844,
+          "bottom": 400.46665954589844
+        },
+        "dropIndex": 0,
+        "scrollY": 0,
+        "frames": [
+          {
+            "x": 1020,
+            "y": 387.99998474121094,
+            "visible": true,
+            "hit": "IFRAME"
+          }
+        ],
+        "time": 20195
+      },
+      "observedBlur": false,
+      "observedPointerCancel": false,
+      "terminalSequence": [
+        [
+          "pointerup",
+          20195
+        ],
+        [
+          "lostpointercapture",
+          20197
+        ]
+      ]
+    },
+    {
+      "label": "embedded-1500x900-molecule",
+      "contractPassed": true,
+      "exactBankOrderRestored": true,
+      "pointerType": "mouse",
+      "distance": 572.1992659904415,
+      "actualTrustedRelease": {
+        "type": "pointerup",
+        "trusted": true,
+        "pointerId": 1,
+        "pointerType": "mouse",
+        "primary": true,
+        "button": 0,
+        "x": 271,
+        "y": 411.7833251953125,
+        "globalX": 454,
+        "globalY": 386.99998474121094,
+        "targetId": "tile-1pvkgnf-3",
+        "hit": "molecule-viewer",
+        "hitInAnswer": false,
+        "hitInBank": false,
+        "hitMoleculeFrame": true,
+        "visibleGame": true,
+        "insideAnswer": false,
+        "answerRect": {
+          "left": 575.0999755859375,
+          "right": 1099,
+          "top": 255.46665954589844,
+          "bottom": 400.46665954589844
+        },
+        "dropIndex": 0,
+        "scrollY": 0,
+        "frames": [
+          {
+            "x": 454,
+            "y": 386.99998474121094,
+            "visible": true,
+            "hit": "IFRAME"
+          }
+        ],
+        "time": 22330
+      },
+      "observedBlur": false,
+      "observedPointerCancel": false,
+      "terminalSequence": [
+        [
+          "pointerup",
+          22330
+        ],
+        [
+          "lostpointercapture",
+          22333
+        ]
+      ]
+    },
+    {
+      "label": "embedded-1500x900-parent-header",
+      "contractPassed": false,
+      "exactBankOrderRestored": false,
+      "pointerType": "mouse",
+      "distance": 358.6028393626099,
+      "actualTrustedRelease": {
+        "type": "pointerup",
+        "trusted": true,
+        "pointerId": 1,
+        "pointerType": "mouse",
+        "primary": true,
+        "button": 0,
+        "x": 567,
+        "y": 91.78333282470703,
+        "globalX": 750,
+        "globalY": 66.99999237060547,
+        "targetId": "tile-1pvkgnf-3",
+        "hit": "P",
+        "hitInAnswer": false,
+        "hitInBank": false,
+        "hitMoleculeFrame": false,
+        "visibleGame": false,
+        "insideAnswer": false,
+        "answerRect": {
+          "left": 575.0999755859375,
+          "right": 1099,
+          "top": 255.46665954589844,
+          "bottom": 400.46665954589844
+        },
+        "dropIndex": 0,
+        "scrollY": 0,
+        "frames": [
+          {
+            "x": 750,
+            "y": 66.99999237060547,
+            "visible": false,
+            "hit": "nlQuizDialogTitle"
+          }
+        ],
+        "time": 24381
+      },
+      "observedBlur": false,
+      "observedPointerCancel": false,
+      "terminalSequence": [
+        [
+          "pointerup",
+          24381
+        ],
+        [
+          "lostpointercapture",
+          24381
+        ]
+      ]
+    }
+  ],
+  "cleanup": {
+    "diagnosticPID": 37226,
+    "script": "/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/builder-outside-drop-recurrence-preflight-20261112/browser/preflight.py",
+    "ownedHeadlessOnly": true,
+    "serverPID": 37226,
+    "serverPort": 51134,
+    "firefoxPID": 37227,
+    "profile": "/var/folders/2v/ds4vjvgj1_1000kq1fzg70q40000gn/T/namelecule-outside-drop-preflight-20261112-o5v79lf3",
+    "bidiPort": 51135,
+    "baseURL": "http://127.0.0.1:51134/",
+    "helperOrigins": "Unmodified copies of builder-placement-controls-20261112/browser/{helpers,interaction-helpers,gesture-helpers,driver}.py",
+    "ownedFirefoxExited": true,
+    "ownedServerClosed": true,
+    "ownedBidiClosed": true,
+    "cleanupUTC": "2026-11-12T06:37:37.517089+00:00"
+  },
+  "postExitVerification": {
+    "diagnosticPIDAbsent": true,
+    "firefoxPIDAbsent": true,
+    "serverPortClosed": true,
+    "bidiPortClosed": true
+  },
+  "limitations": [
+    "One isolated headless Firefox on current local bytes; not proof of exact endpoint used by user GUI instance36690.",
+    "No physicaltouch/pen, other browsers, browserchrome/outsideviewport, nativeOS blur or trusted pointercancel reproduction.",
+    "Not conference/offline qualification; no fix or application change implemented.",
+    "One favicon.ico404; no observed page JavaScript errors. Firefox remote-agent WeakMap stderr diagnostics retained infirefox.log."
+  ]
+}

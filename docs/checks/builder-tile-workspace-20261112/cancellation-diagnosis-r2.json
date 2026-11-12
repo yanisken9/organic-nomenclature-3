@@ -1,0 +1,14 @@
+{
+  "recordedUTC": "2026-11-11T23:18:14.303271+00:00",
+  "finding": "Native same-position cancellation did not stop an active smooth scroll in actual embedded and standalone Builder.",
+  "eventTrace": "Trusted Shift reached focused check-answer; authenticated message and instant same-position call were observed; no later smooth call. Continued to original destination.",
+  "isolatedControl": "cancel-api-results.json: same-instant, same-auto, assignment and zero-relative all continued in both window and element; adjacent retarget then restore stopped both. This is measured API behavior, not a claim about Firefox internal fault.",
+  "correction": "Same seven approved app paths: Builder local stop and Builder-scoped dialog scroll owner retarget one CSS pixel then restore within one task. Generic Workshop owner behavior kept. Min bank height64px preserves empty drag-return area (R1 CSS probe18px). R2 cache URLs.",
+  "references": [
+    "https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollTo",
+    "https://firefox-source-docs.mozilla.org/gfx/AsyncPanZoom.html"
+  ],
+  "R1Evidence": "Six native lesson Builder rounds, one Workshop smoke, optional/partial restore/next steps; remaining/mobile/Main54/long standalone93checks and reduced25checks completed. Original normal run238checks stopped at existing portrait prompt before mobile; continuation dismissed it via actual UI.",
+  "R2Verification": "Focused event-traced interruption, genuinely empty bank drag return and correct standalone round running in owned session10272. Reviewer not started.",
+  "coreChanged": false
+}

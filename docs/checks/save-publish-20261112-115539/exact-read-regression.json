@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "checks": [
+    "ordinary exact read",
+    "nonempty stat plus repeatedly empty reads rejected",
+    "one transient cloud-empty read retried to exact bytes",
+    "transient macOS canceled read retried without accepting missing bytes",
+    "persistent canceled read fails after bounded retries",
+    "unrelated I/O failure propagated",
+    "atomic copied executable retains source permissions and exact bytes",
+    "genuine zero-length file accepted"
+  ],
+  "scope": "Controlled real file descriptor/stat with explicit empty-read double; not an iCloud provider reliability guarantee."
+}

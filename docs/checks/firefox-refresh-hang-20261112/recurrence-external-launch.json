@@ -1,0 +1,110 @@
+{
+  "recordedUTC": "2026-11-12T06:28:37.003052+00:00",
+  "status": "owned-previews-closed-with-user-approval-durable-diagnosis-open",
+  "latestPID": 36367,
+  "launchReceipt": "docs/checks/builder-methods-guidance-20261112/external-launch.json",
+  "launchVerificationCorrection": "Receipt contains ownWindows=[]; processRunning and activationAccepted do not establish visible-window or responsiveness success. Subsequent window8038 at1280x738 observed; user reports complete browser unresponsiveness.",
+  "mainStack": {
+    "sampleCount": 1948,
+    "nativeZoomMenuCount": 1948,
+    "path": "_NSThemeZoomWidgetCell showMenu → NSThemeWidgetZoomMenuRemoteView _showMenu nested AppKit event loop"
+  },
+  "sampledContentMain": {
+    "PID": 36378,
+    "samples": 1520,
+    "observed": "ConditionVariable wait, no demonstrated active JS loop in this sampled process"
+  },
+  "sampledGPU": {
+    "PID": 36370,
+    "samples": 1477,
+    "observed": "AppKit normal event wait, not proof of GPU deadlock"
+  },
+  "otherContentProcessesNotSampled": true,
+  "census": {
+    "firefoxParents": 5,
+    "temporaryPreviews": [
+      11004,
+      15999,
+      34456,
+      36367
+    ],
+    "personalParentKept": 29197
+  },
+  "memoryMeasurement": {
+    "physicalGiB": 8,
+    "memoryPressureQFreePercent": 61,
+    "swapUsedMiB": 8837,
+    "interpretation": "Measurement time only; cannot establish historical memory causation."
+  },
+  "privateRawEvidence": "/private/tmp/namelecule-launch-hang-20261112-0bxbykaa",
+  "recoveryCopies": {
+    "files": 23,
+    "live": true,
+    "unsavedTextGuaranteed": false,
+    "originalProfilesPreserved": true
+  },
+  "facts": [
+    "The root opened four currently running separate temporary GUI preview instances across requests.",
+    "Current new isolated profile also exhibits native menu stack.",
+    "After explicit user consent, closed only the four identified preview parents; fresh post-check found no their owned processes/windows. Personal29197 identity remained unchanged.",
+    "No change to application source, core, personal profile, Firefox install, system preferences or permissions."
+  ],
+  "hypotheses": [
+    "Native Firefox/AppKit window-menu interaction is the present blocking path; exact trigger remains unproven.",
+    "Repeated separate GUI launch route/activation and accumulated processes are uncontrolled confounds, not proven causes."
+  ],
+  "next": "Do not add more separate previews by default. Native zoom-menu trigger and direct-binary versus LaunchServices comparison remain untested; controlled browser diagnosis required before any durable-fix claim.",
+  "durableFix": false,
+  "coreChangedThisIncident": false,
+  "committed": false,
+  "published": false,
+  "cleanup": {
+    "approval": "Ναι, έχω αποθηκεύσει — κλείσε τους δοκιμαστικούς",
+    "parentPIDsClosed": [
+      11004,
+      15999,
+      34456,
+      36367
+    ],
+    "remainingOwnedParents": [],
+    "remainingOwnedProcesses": [],
+    "remainingOwnedOnscreenWindows": [],
+    "personalIdentityUnchanged": true,
+    "normalQuitAttemptError": "execution error: Error: TypeError: a.terminate is not a function. (In 'a.terminate()', 'a.terminate' is true) (-2700)",
+    "SIGTERMTargets": [
+      15999,
+      34456,
+      36367
+    ],
+    "SIGKILLUsed": false,
+    "originalProfilesPreserved": true,
+    "newBrowserLaunched": false
+  },
+  "coreFilesUnchanged": 11,
+  "finalAppHashesUnchanged": {
+    "sourceSHA256": 7,
+    "protectedSHA256": 15
+  },
+  "independentReviewer": {
+    "agent": "/root/review_firefox_launch_recurrence",
+    "role": "NAMELECULE_REVIEWER_V1_20261023",
+    "context": "fresh, read-only",
+    "evidence": "Independently read Developer-collected raw main sample/census, source records and official Mozilla docs; no independent UI execution. Cleanup is subsequent Developer evidence.",
+    "finding": {
+      "id": "FF-LAUNCH-R1",
+      "severity": "P2",
+      "file": "docs/checks/builder-methods-guidance-20261112/external-launch.json:67",
+      "issue": "Scope overstates onscreen PID/window verification; ownWindows=[] in original receipt.",
+      "resolution": "Supplemental launchVerificationCorrection in this dated report explicitly retracts that verification; original receipt preserved.",
+      "status": "closed-by-Developer-documentation-correction"
+    },
+    "otherAssessment": "Fresh1948/1948 stack confirms same native wait state, not root trigger. Multiple instances and launch route remain unproven variables. Personal29197 also uses --no-remote, so no clean normal-launch control exists.",
+    "officialReferences": [
+      "https://firefox-source-docs.mozilla.org/browser/CommandLineParameters.html",
+      "https://support.mozilla.org/en-US/kb/profile-manager-create-remove-switch-firefox-profiles"
+    ],
+    "sampleSHA256": "b7dc77058fe50953854c812744136273899830cd830cc0902b0eb8137ba9e538",
+    "censusSHA256": "350c51e594e8625f6b3e48884da7455125c51b651c3de2b990bad04dffa0c963"
+  },
+  "lastUpdatedUTC": "2026-11-12T06:30:42.207281+00:00"
+}

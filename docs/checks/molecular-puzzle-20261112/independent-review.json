@@ -1,0 +1,34 @@
+{
+  "reviewer": "/root/review_molecular_puzzle",
+  "role": "NAMELECULE_REVIEWER_V1_20261023",
+  "reviewedManifestSHA256": "b9079a3f0f3a95990dbe4e88e66501512da7bd5a1ccf799b65f5fd06a58bef6a",
+  "findings": [
+    {
+      "id": "MP-R1",
+      "severity": "P2",
+      "source": "css/namelecule-molecular-puzzle.css:6 and games/molecular-puzzle.html:8",
+      "issue": "Roboto Condensed declared but no font faces loaded in child or preview. Parent font registrations do not supply childdocument. Computedfamily-only tests insufficient.",
+      "status": "open"
+    },
+    {
+      "id": "MP-R2",
+      "severity": "P2",
+      "source": "js/namelecule-molecular-puzzle.js:401",
+      "issue": "Sequential freePoint can return null during resize; old invalid/clipped/overlapping positions are retained. Memory reproduction ten default palette groups617x360→270x260 gives13.4931px overlap.",
+      "status": "open"
+    }
+  ],
+  "independentChecks": [
+    "66 target+29 protected hashes twice,11coresunchanged",
+    "All5appfiles read; local deps/MOL/pinnedcorehashes verified",
+    "85 in-memory V8 assertions incl8sources/namegraphs/all64pairs/wrongisomer/invalids",
+    "Read suppliedPNG, no actualbrowserreplay"
+  ],
+  "limitations": [
+    "Nativepicker/OSgestures/conferencemachine untested",
+    "Source-extracted resize reproduction, not browser execution"
+  ],
+  "noP0P1Found": true,
+  "filesWrittenByReviewer": false,
+  "recordedBy": "Developer transcription of returned independent report"
+}

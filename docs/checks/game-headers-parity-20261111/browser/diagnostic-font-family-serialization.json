@@ -1,0 +1,781 @@
+{
+  "checks": [
+    {
+      "label": "Builder verified/native ready",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "Builder natural desktop expected common title typography",
+      "passed": false,
+      "detail": {
+        "game": "builder",
+        "label": "Builder natural desktop",
+        "width": 1500,
+        "height": 1000,
+        "fontFamily": "Roboto Condensed, sans-serif",
+        "fontSize": "40px",
+        "fontWeight": "700",
+        "lineHeight": "44.8px",
+        "letterSpacing": "-1.6px",
+        "textAlign": "center",
+        "headingText": "Χτίσε το όνομα",
+        "headingCount": 1,
+        "logoCount": 1,
+        "logoSrc": "http://127.0.0.1:57731/games/assets/name-builder/name-builder-logo-3d-blank-v1.png",
+        "logoLoaded": true,
+        "decorative": true,
+        "logoWidth": 88,
+        "logoHeight": 88,
+        "logoCenter": 750,
+        "headingCenter": 749.9916839599609,
+        "hostCenter": 750,
+        "headingTop": 305.83331298828125,
+        "headingBottom": 350.63331604003906,
+        "logoTop": 209.8333282470703,
+        "logoBottom": 297.8333282470703,
+        "stickyBottom": 121.83332824707031,
+        "dialogBottom": 988,
+        "scrollTop": 0,
+        "focused": true,
+        "tabIndex": -1,
+        "parentOverflow": false,
+        "dialogOverflow": false,
+        "headingOverflow": false,
+        "childOverflow": false,
+        "caption": null
+      }
+    }
+  ],
+  "solved": [],
+  "conditions": "Owned headless Firefox; actual production UI, native viewer and verified chemistry Worker. Read-only preload observes bridge loads for deterministic test inputs; trusted pointer input submits answers.",
+  "styles": [
+    {
+      "game": "builder",
+      "label": "Builder natural desktop",
+      "width": 1500,
+      "height": 1000,
+      "fontFamily": "Roboto Condensed, sans-serif",
+      "fontSize": "40px",
+      "fontWeight": "700",
+      "lineHeight": "44.8px",
+      "letterSpacing": "-1.6px",
+      "textAlign": "center",
+      "headingText": "Χτίσε το όνομα",
+      "headingCount": 1,
+      "logoCount": 1,
+      "logoSrc": "http://127.0.0.1:57731/games/assets/name-builder/name-builder-logo-3d-blank-v1.png",
+      "logoLoaded": true,
+      "decorative": true,
+      "logoWidth": 88,
+      "logoHeight": 88,
+      "logoCenter": 750,
+      "headingCenter": 749.9916839599609,
+      "hostCenter": 750,
+      "headingTop": 305.83331298828125,
+      "headingBottom": 350.63331604003906,
+      "logoTop": 209.8333282470703,
+      "logoBottom": 297.8333282470703,
+      "stickyBottom": 121.83332824707031,
+      "dialogBottom": 988,
+      "scrollTop": 0,
+      "focused": true,
+      "tabIndex": -1,
+      "parentOverflow": false,
+      "dialogOverflow": false,
+      "headingOverflow": false,
+      "childOverflow": false,
+      "caption": null
+    }
+  ],
+  "naturalEntries": [],
+  "matchedShots": {},
+  "limits": [
+    "Owned headless Firefox/macOS and local HTTP only; no personal GUI, public deployment, other browser, real touch or conference/offline guarantee.",
+    "Six genuine completions exercise required gate4 Builder and gate11 Workshop; this CSS-only unit does not repeat broad chemistry or 3D regression checks.",
+    "Paired screenshots preserve the games normal independent random seeds; the molecule can differ between games."
+  ],
+  "passed": false,
+  "failure": "AssertionError(('Builder natural desktop expected common title typography', {'game': 'builder', 'label': 'Builder natural desktop', 'width': 1500, 'height': 1000, 'fontFamily': 'Roboto Condensed, sans-serif', 'fontSize': '40px', 'fontWeight': '700', 'lineHeight': '44.8px', 'letterSpacing': '-1.6px', 'textAlign': 'center', 'headingText': 'Χτίσε το όνομα', 'headingCount': 1, 'logoCount': 1, 'logoSrc': 'http://127.0.0.1:57731/games/assets/name-builder/name-builder-logo-3d-blank-v1.png', 'logoLoaded': True, 'decorative': True, 'logoWidth': 88, 'logoHeight': 88, 'logoCenter': 750, 'headingCenter': 749.9916839599609, 'hostCenter': 750, 'headingTop': 305.83331298828125, 'headingBottom': 350.63331604003906, 'logoTop': 209.8333282470703, 'logoBottom': 297.8333282470703, 'stickyBottom': 121.83332824707031, 'dialogBottom': 988, 'scrollTop': 0, 'focused': True, 'tabIndex': -1, 'parentOverflow': False, 'dialogOverflow': False, 'headingOverflow': False, 'childOverflow': False, 'caption': None}))",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/game-headers-parity-20261111/browser/parity.py\", line 40, in <module>\n    measure('builder','Builder natural desktop',natural=True,shotname='builder-desktop.png');OUT['matchedShots']['builder']={'file':'builder-desktop.png','moleculeId':bread('__lessonLoad.moleculeId'),'viewport':[1500,1000]}\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/game-headers-parity-20261111/browser/parity.py\", line 19, in measure\n    check(d['fontFamily']=='\"Roboto Condensed\", sans-serif' and abs(float(d['fontSize'][:-2])-expect)<.05 and d['fontWeight']=='700' and abs(float(d['lineHeight'][:-2])-expect*1.12)<.05,label+' expected common title typography',d)\n  File \"<string>\", line 6, in check\nAssertionError: ('Builder natural desktop expected common title typography', {'game': 'builder', 'label': 'Builder natural desktop', 'width': 1500, 'height': 1000, 'fontFamily': 'Roboto Condensed, sans-serif', 'fontSize': '40px', 'fontWeight': '700', 'lineHeight': '44.8px', 'letterSpacing': '-1.6px', 'textAlign': 'center', 'headingText': 'Χτίσε το όνομα', 'headingCount': 1, 'logoCount': 1, 'logoSrc': 'http://127.0.0.1:57731/games/assets/name-builder/name-builder-logo-3d-blank-v1.png', 'logoLoaded': True, 'decorative': True, 'logoWidth': 88, 'logoHeight': 88, 'logoCenter': 750, 'headingCenter': 749.9916839599609, 'hostCenter': 750, 'headingTop': 305.83331298828125, 'headingBottom': 350.63331604003906, 'logoTop': 209.8333282470703, 'logoBottom': 297.8333282470703, 'stickyBottom': 121.83332824707031, 'dialogBottom': 988, 'scrollTop': 0, 'focused': True, 'tabIndex': -1, 'parentOverflow': False, 'dialogOverflow': False, 'headingOverflow': False, 'childOverflow': False, 'caption': None})\n",
+  "jsExceptions": [],
+  "consoleEntries": [
+    {
+      "type": "console",
+      "method": "log",
+      "source": {
+        "realm": "56458f68-51cb-4542-9323-bfc45da8c062",
+        "context": "487d6313-6672-4c33-b893-04281d756b67",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "JSmol load jmolAppletNomeclature loadClazz..."
+        }
+      ],
+      "level": "info",
+      "text": "JSmol load jmolAppletNomeclature loadClazz...",
+      "timestamp": 1794411507969,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 484,
+            "functionName": "a._addExec",
+            "lineNumber": 158,
+            "url": "http://127.0.0.1:57731/js/vendor/jsmol/namelecule-20261031-r1/JSmol.min.js"
+          }
+        ]
+      }
+    },
+    {
+      "type": "console",
+      "method": "log",
+      "source": {
+        "realm": "56458f68-51cb-4542-9323-bfc45da8c062",
+        "context": "487d6313-6672-4c33-b893-04281d756b67",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "JSmol load jmolAppletNomeclature start applet..."
+        }
+      ],
+      "level": "info",
+      "text": "JSmol load jmolAppletNomeclature start applet...",
+      "timestamp": 1794411507981,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 484,
+            "functionName": "a._addExec",
+            "lineNumber": 158,
+            "url": "http://127.0.0.1:57731/js/vendor/jsmol/namelecule-20261031-r1/JSmol.min.js"
+          }
+        ]
+      }
+    },
+    {
+      "type": "console",
+      "method": "log",
+      "source": {
+        "realm": "56458f68-51cb-4542-9323-bfc45da8c062",
+        "context": "487d6313-6672-4c33-b893-04281d756b67",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "JSmol exec jmolAppletNomeclature loadClazz null -- OK"
+        }
+      ],
+      "level": "info",
+      "text": "JSmol exec jmolAppletNomeclature loadClazz null -- OK",
+      "timestamp": 1794411508093,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 373,
+            "functionName": "l",
+            "lineNumber": 157,
+            "url": "http://127.0.0.1:57731/js/vendor/jsmol/namelecule-20261031-r1/JSmol.min.js"
+          }
+        ]
+      }
+    },
+    {
+      "type": "console",
+      "method": "log",
+      "source": {
+        "realm": "56458f68-51cb-4542-9323-bfc45da8c062",
+        "context": "487d6313-6672-4c33-b893-04281d756b67",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "JSmol exec jmolAppletNomeclature start applet null -- OK"
+        }
+      ],
+      "level": "info",
+      "text": "JSmol exec jmolAppletNomeclature start applet null -- OK",
+      "timestamp": 1794411510290,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 373,
+            "functionName": "l",
+            "lineNumber": 157,
+            "url": "http://127.0.0.1:57731/js/vendor/jsmol/namelecule-20261031-r1/JSmol.min.js"
+          }
+        ]
+      }
+    },
+    {
+      "type": "console",
+      "method": "log",
+      "source": {
+        "realm": "56458f68-51cb-4542-9323-bfc45da8c062",
+        "context": "487d6313-6672-4c33-b893-04281d756b67",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "[ENGINE-EN-SYS] methane -> methane"
+        }
+      ],
+      "level": "info",
+      "text": "[ENGINE-EN-SYS] methane -> methane",
+      "timestamp": 1794411511182,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 12,
+            "functionName": "fPopulateEngineENFromGreek",
+            "lineNumber": 388,
+            "url": "http://127.0.0.1:57731/js/mulermoc-nom-name-en-55.js?v=namelecule-v55-20261110-r2"
+          }
+        ]
+      }
+    },
+    {
+      "type": "console",
+      "method": "log",
+      "source": {
+        "realm": "56458f68-51cb-4542-9323-bfc45da8c062",
+        "context": "487d6313-6672-4c33-b893-04281d756b67",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "[ENGINE-EN] methane -> methane"
+        }
+      ],
+      "level": "info",
+      "text": "[ENGINE-EN] methane -> methane",
+      "timestamp": 1794411511183,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 12,
+            "functionName": "fPopulateEngineENFromGreek",
+            "lineNumber": 388,
+            "url": "http://127.0.0.1:57731/js/mulermoc-nom-name-en-55.js?v=namelecule-v55-20261110-r2"
+          }
+        ]
+      }
+    },
+    {
+      "type": "console",
+      "method": "log",
+      "source": {
+        "realm": "56458f68-51cb-4542-9323-bfc45da8c062",
+        "context": "487d6313-6672-4c33-b893-04281d756b67",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "[SELECT] mol=methane SMILES=C SYSTEMATIC_EN=fetching…"
+        }
+      ],
+      "level": "info",
+      "text": "[SELECT] mol=methane SMILES=C SYSTEMATIC_EN=fetching…",
+      "timestamp": 1794411511188,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 10,
+            "functionName": "fLogMolSelectWithIUPAC",
+            "lineNumber": 492,
+            "url": "http://127.0.0.1:57731/js/mulermoc-nom-iupac-55.js?v=namelecule-v55-20261110-r2"
+          }
+        ]
+      }
+    },
+    {
+      "type": "console",
+      "method": "log",
+      "source": {
+        "realm": "56458f68-51cb-4542-9323-bfc45da8c062",
+        "context": "487d6313-6672-4c33-b893-04281d756b67",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "[ENGINE-EN-SYS] pentane -> pentane"
+        }
+      ],
+      "level": "info",
+      "text": "[ENGINE-EN-SYS] pentane -> pentane",
+      "timestamp": 1794411511906,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 12,
+            "functionName": "fPopulateEngineENFromGreek",
+            "lineNumber": 388,
+            "url": "http://127.0.0.1:57731/js/mulermoc-nom-name-en-55.js?v=namelecule-v55-20261110-r2"
+          }
+        ]
+      }
+    },
+    {
+      "type": "console",
+      "method": "log",
+      "source": {
+        "realm": "56458f68-51cb-4542-9323-bfc45da8c062",
+        "context": "487d6313-6672-4c33-b893-04281d756b67",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "[ENGINE-EN] pentane -> pentane"
+        }
+      ],
+      "level": "info",
+      "text": "[ENGINE-EN] pentane -> pentane",
+      "timestamp": 1794411511907,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 12,
+            "functionName": "fPopulateEngineENFromGreek",
+            "lineNumber": 388,
+            "url": "http://127.0.0.1:57731/js/mulermoc-nom-name-en-55.js?v=namelecule-v55-20261110-r2"
+          }
+        ]
+      }
+    },
+    {
+      "type": "console",
+      "method": "log",
+      "source": {
+        "realm": "56458f68-51cb-4542-9323-bfc45da8c062",
+        "context": "487d6313-6672-4c33-b893-04281d756b67",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "[SELECT] mol=pentane SMILES=CCCCC SYSTEMATIC_EN=fetching…"
+        }
+      ],
+      "level": "info",
+      "text": "[SELECT] mol=pentane SMILES=CCCCC SYSTEMATIC_EN=fetching…",
+      "timestamp": 1794411511910,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 10,
+            "functionName": "fLogMolSelectWithIUPAC",
+            "lineNumber": 492,
+            "url": "http://127.0.0.1:57731/js/mulermoc-nom-iupac-55.js?v=namelecule-v55-20261110-r2"
+          }
+        ]
+      }
+    },
+    {
+      "type": "console",
+      "method": "log",
+      "source": {
+        "realm": "56458f68-51cb-4542-9323-bfc45da8c062",
+        "context": "487d6313-6672-4c33-b893-04281d756b67",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "[IUPAC-EN] SMILES=C -> retained=\"methane\" systematic=\"methane\" (via pubchem, CID 297)"
+        }
+      ],
+      "level": "info",
+      "text": "[IUPAC-EN] SMILES=C -> retained=\"methane\" systematic=\"methane\" (via pubchem, CID 297)",
+      "timestamp": 1794411512806,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 10,
+            "functionName": "fFetchIUPAC_EN",
+            "lineNumber": 263,
+            "url": "http://127.0.0.1:57731/js/mulermoc-nom-iupac-55.js?v=namelecule-v55-20261110-r2"
+          }
+        ]
+      }
+    },
+    {
+      "type": "console",
+      "method": "log",
+      "source": {
+        "realm": "56458f68-51cb-4542-9323-bfc45da8c062",
+        "context": "487d6313-6672-4c33-b893-04281d756b67",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "[IUPAC-EN] methane: SMILES=C retained=\"methane\" systematic=\"methane\""
+        }
+      ],
+      "level": "info",
+      "text": "[IUPAC-EN] methane: SMILES=C retained=\"methane\" systematic=\"methane\"",
+      "timestamp": 1794411512807,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 14,
+            "functionName": "fLogMolSelectWithIUPAC/<",
+            "lineNumber": 530,
+            "url": "http://127.0.0.1:57731/js/mulermoc-nom-iupac-55.js?v=namelecule-v55-20261110-r2"
+          }
+        ]
+      }
+    },
+    {
+      "type": "console",
+      "method": "log",
+      "source": {
+        "realm": "56458f68-51cb-4542-9323-bfc45da8c062",
+        "context": "487d6313-6672-4c33-b893-04281d756b67",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "[IUPAC-EN] SMILES=CCCCC -> retained=\"pentane\" systematic=\"pentane\" (via pubchem, CID 8003)"
+        }
+      ],
+      "level": "info",
+      "text": "[IUPAC-EN] SMILES=CCCCC -> retained=\"pentane\" systematic=\"pentane\" (via pubchem, CID 8003)",
+      "timestamp": 1794411513028,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 10,
+            "functionName": "fFetchIUPAC_EN",
+            "lineNumber": 263,
+            "url": "http://127.0.0.1:57731/js/mulermoc-nom-iupac-55.js?v=namelecule-v55-20261110-r2"
+          }
+        ]
+      }
+    },
+    {
+      "type": "console",
+      "method": "log",
+      "source": {
+        "realm": "56458f68-51cb-4542-9323-bfc45da8c062",
+        "context": "487d6313-6672-4c33-b893-04281d756b67",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "[IUPAC-EN] pentane: SMILES=CCCCC retained=\"pentane\" systematic=\"pentane\""
+        }
+      ],
+      "level": "info",
+      "text": "[IUPAC-EN] pentane: SMILES=CCCCC retained=\"pentane\" systematic=\"pentane\"",
+      "timestamp": 1794411513029,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 14,
+            "functionName": "fLogMolSelectWithIUPAC/<",
+            "lineNumber": 530,
+            "url": "http://127.0.0.1:57731/js/mulermoc-nom-iupac-55.js?v=namelecule-v55-20261110-r2"
+          }
+        ]
+      }
+    },
+    {
+      "type": "console",
+      "method": "log",
+      "source": {
+        "realm": "f70c483b-618f-4dc2-b84d-24d2431c20db",
+        "context": "15032385539",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "JSmol load jmolAppletNomeclature loadClazz..."
+        }
+      ],
+      "level": "info",
+      "text": "JSmol load jmolAppletNomeclature loadClazz...",
+      "timestamp": 1794411513744,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 484,
+            "functionName": "a._addExec",
+            "lineNumber": 158,
+            "url": "http://127.0.0.1:57731/js/vendor/jsmol/namelecule-20261031-r1/JSmol.min.js"
+          }
+        ]
+      }
+    },
+    {
+      "type": "console",
+      "method": "log",
+      "source": {
+        "realm": "f70c483b-618f-4dc2-b84d-24d2431c20db",
+        "context": "15032385539",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "JSmol load jmolAppletNomeclature start applet..."
+        }
+      ],
+      "level": "info",
+      "text": "JSmol load jmolAppletNomeclature start applet...",
+      "timestamp": 1794411513744,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 484,
+            "functionName": "a._addExec",
+            "lineNumber": 158,
+            "url": "http://127.0.0.1:57731/js/vendor/jsmol/namelecule-20261031-r1/JSmol.min.js"
+          }
+        ]
+      }
+    },
+    {
+      "type": "console",
+      "method": "log",
+      "source": {
+        "realm": "f70c483b-618f-4dc2-b84d-24d2431c20db",
+        "context": "15032385539",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "JSmol exec jmolAppletNomeclature loadClazz null -- OK"
+        }
+      ],
+      "level": "info",
+      "text": "JSmol exec jmolAppletNomeclature loadClazz null -- OK",
+      "timestamp": 1794411513844,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 373,
+            "functionName": "l",
+            "lineNumber": 157,
+            "url": "http://127.0.0.1:57731/js/vendor/jsmol/namelecule-20261031-r1/JSmol.min.js"
+          }
+        ]
+      }
+    },
+    {
+      "type": "console",
+      "method": "log",
+      "source": {
+        "realm": "f70c483b-618f-4dc2-b84d-24d2431c20db",
+        "context": "15032385539",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "JSmol exec jmolAppletNomeclature start applet null -- OK"
+        }
+      ],
+      "level": "info",
+      "text": "JSmol exec jmolAppletNomeclature start applet null -- OK",
+      "timestamp": 1794411514068,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 373,
+            "functionName": "l",
+            "lineNumber": 157,
+            "url": "http://127.0.0.1:57731/js/vendor/jsmol/namelecule-20261031-r1/JSmol.min.js"
+          }
+        ]
+      }
+    },
+    {
+      "type": "console",
+      "method": "log",
+      "source": {
+        "realm": "f70c483b-618f-4dc2-b84d-24d2431c20db",
+        "context": "15032385539",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "[ENGINE-EN-SYS] methane -> methane"
+        }
+      ],
+      "level": "info",
+      "text": "[ENGINE-EN-SYS] methane -> methane",
+      "timestamp": 1794411515759,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 12,
+            "functionName": "fPopulateEngineENFromGreek",
+            "lineNumber": 388,
+            "url": "http://127.0.0.1:57731/js/mulermoc-nom-name-en-55.js?v=namelecule-v55-20261110-r2"
+          }
+        ]
+      }
+    },
+    {
+      "type": "console",
+      "method": "log",
+      "source": {
+        "realm": "f70c483b-618f-4dc2-b84d-24d2431c20db",
+        "context": "15032385539",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "[ENGINE-EN] methane -> methane"
+        }
+      ],
+      "level": "info",
+      "text": "[ENGINE-EN] methane -> methane",
+      "timestamp": 1794411515760,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 12,
+            "functionName": "fPopulateEngineENFromGreek",
+            "lineNumber": 388,
+            "url": "http://127.0.0.1:57731/js/mulermoc-nom-name-en-55.js?v=namelecule-v55-20261110-r2"
+          }
+        ]
+      }
+    },
+    {
+      "type": "console",
+      "method": "log",
+      "source": {
+        "realm": "f70c483b-618f-4dc2-b84d-24d2431c20db",
+        "context": "15032385539",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "[SELECT] mol=methane SMILES=C SYSTEMATIC_EN=fetching…"
+        }
+      ],
+      "level": "info",
+      "text": "[SELECT] mol=methane SMILES=C SYSTEMATIC_EN=fetching…",
+      "timestamp": 1794411515762,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 10,
+            "functionName": "fLogMolSelectWithIUPAC",
+            "lineNumber": 492,
+            "url": "http://127.0.0.1:57731/js/mulermoc-nom-iupac-55.js?v=namelecule-v55-20261110-r2"
+          }
+        ]
+      }
+    },
+    {
+      "type": "console",
+      "method": "log",
+      "source": {
+        "realm": "f70c483b-618f-4dc2-b84d-24d2431c20db",
+        "context": "15032385539",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "[ENGINE-EN-SYS] ethane -> ethane"
+        }
+      ],
+      "level": "info",
+      "text": "[ENGINE-EN-SYS] ethane -> ethane",
+      "timestamp": 1794411516082,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 12,
+            "functionName": "fPopulateEngineENFromGreek",
+            "lineNumber": 388,
+            "url": "http://127.0.0.1:57731/js/mulermoc-nom-name-en-55.js?v=namelecule-v55-20261110-r2"
+          }
+        ]
+      }
+    },
+    {
+      "type": "console",
+      "method": "log",
+      "source": {
+        "realm": "f70c483b-618f-4dc2-b84d-24d2431c20db",
+        "context": "15032385539",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "[ENGINE-EN] ethane -> ethane"
+        }
+      ],
+      "level": "info",
+      "text": "[ENGINE-EN] ethane -> ethane",
+      "timestamp": 1794411516082,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 12,
+            "functionName": "fPopulateEngineENFromGreek",
+            "lineNumber": 388,
+            "url": "http://127.0.0.1:57731/js/mulermoc-nom-name-en-55.js?v=namelecule-v55-20261110-r2"
+          }
+        ]
+      }
+    },
+    {
+      "type": "console",
+      "method": "log",
+      "source": {
+        "realm": "f70c483b-618f-4dc2-b84d-24d2431c20db",
+        "context": "15032385539",
+        "userContext": "default"
+      },
+      "args": [
+        {
+          "type": "string",
+          "value": "[SELECT] mol=ethane SMILES=CC SYSTEMATIC_EN=fetching…"
+        }
+      ],
+      "level": "info",
+      "text": "[SELECT] mol=ethane SMILES=CC SYSTEMATIC_EN=fetching…",
+      "timestamp": 1794411516084,
+      "stackTrace": {
+        "callFrames": [
+          {
+            "columnNumber": 10,
+            "functionName": "fLogMolSelectWithIUPAC",
+            "lineNumber": 492,
+            "url": "http://127.0.0.1:57731/js/mulermoc-nom-iupac-55.js?v=namelecule-v55-20261110-r2"
+          }
+        ]
+      }
+    }
+  ],
+  "sourceSHA256": {
+    "css/namelecule-quiz-checkpoints.css": "4ce245024e272146c53f9134f86666b467352978aa1f6f7e21959da95f96e3ef",
+    "mulermoc-nom-54.html": "915ccdd093b03a317c1d4a55be58a3e4225ee64b95fb00c09f99fc3a151dc9c1",
+    "mulermoc-nom-55.html": "93ed76523808b5c3b084afabdf16e334bb0de90d7458ed134b182ff8daa7ea24"
+  }
+}

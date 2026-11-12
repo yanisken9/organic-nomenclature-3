@@ -1,0 +1,47 @@
+{
+  "checks": [],
+  "startedUTC": "2026-11-12T07:22:52.919442+00:00",
+  "process": {
+    "ownedPID": 39227,
+    "profile": "/var/folders/2v/ds4vjvgj1_1000kq1fzg70q40000gn/T/namelecule-puzzle-test-h6bo_pfm",
+    "serverPort": 52244,
+    "bidiPort": 52245
+  },
+  "names": [
+    "μεθάνιο",
+    "αιθάνιο",
+    "προπάνιο",
+    "βουτάνιο",
+    "πεντάνιο",
+    "2-μεθυλοπεντάνιο",
+    "2,3-διμεθυλοβουτάνιο",
+    "3-αιθυλο-2,5-διμεθυλοεξάνιο"
+  ],
+  "entry": {
+    "height": 1000,
+    "bank": {
+      "x": 184,
+      "y": 1124.066650390625,
+      "width": 1072,
+      "height": 66,
+      "top": 1124.066650390625,
+      "right": 1256,
+      "bottom": 1190.066650390625,
+      "left": 184
+    },
+    "board": {
+      "x": 183,
+      "y": 726.0499877929688,
+      "width": 1074,
+      "height": 360,
+      "top": 726.0499877929688,
+      "right": 1257,
+      "bottom": 1086.0499877929688,
+      "left": 183
+    },
+    "scrollHeight": 1637
+  },
+  "failure": "Traceback (most recent call last):\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/molecular-puzzle-20261112/browser/verify.py\", line 82, in <module>\n    targets=read('await (async()=>{const c=await(await fetch(\"data/alkane-structures.json\")).json();return c.molecules.map(m=>NameleculeMolecularPuzzleEngine.parseMol(m.mol))})()')\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/molecular-puzzle-20261112/browser/verify.py\", line 13, in read\n    def read(expr):return json.loads(ev('JSON.stringify('+expr+')'))\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/tools/namelecule_bidi.py\", line 43, in ev\n    if result.get('type')=='exception':raise RuntimeError(result.get('exceptionDetails'))\nRuntimeError: {'columnNumber': 15, 'exception': {'type': 'error'}, 'lineNumber': 0, 'stackTrace': {'callFrames': [{'columnNumber': 15, 'functionName': '', 'lineNumber': 0, 'url': 'http://127.0.0.1:52244/games/molecular-puzzle.html'}]}, 'text': 'ReferenceError: await is not defined'}\n",
+  "javascriptErrors": [],
+  "ownedBrowserExited": true
+}

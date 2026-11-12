@@ -1,0 +1,21 @@
+{
+  "recordedUTC": "2026-11-12T06:33:18.140700+00:00",
+  "evidenceType": "user-confirmed actual GUI response",
+  "userQuestion": "Άνοιξε το ένα νέο παράθυρο του μαθήματος. Αν πατήσεις στη γραμμή διευθύνσεων και μετά σε ένα κουμπί του μαθήματος, ανταποκρίνονται και τα δύο;",
+  "userAnswer": "Ναι, λειτουργούν και τα δύο",
+  "PID": 36690,
+  "launchReceipt": "docs/checks/firefox-refresh-hang-20261112/launchservices-preview.json",
+  "launchReceiptSHA256": "34b6424c22f861b0d7d216b7ffd2f4fdea86af40197f52352f601c5729a01f44",
+  "addressbarResponds": true,
+  "lessonButtonResponds": true,
+  "status": "single-preview-functional-user-confirmed-durable-cause-open",
+  "durableFixEstablished": false,
+  "limitations": [
+    "Single user-confirmed response check, no sustained or conference qualification.",
+    "Preview count, launch route, no-remote removal and profile reuse changed; no causal factor isolated."
+  ],
+  "browserClosed": false,
+  "newBrowserLaunchedForConfirmation": false,
+  "applicationChangedForConfirmation": false,
+  "coreChanged": false
+}

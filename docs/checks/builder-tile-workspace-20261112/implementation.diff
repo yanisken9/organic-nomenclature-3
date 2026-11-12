@@ -1,0 +1,333 @@
+--- session-before/games/name-builder.html
++++ final/games/name-builder.html
+@@ -5,9 +5,9 @@
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="theme-color" content="#254c50">
+   <title>Χτίσε το όνομα · Namelecule</title>
+-  <link rel="stylesheet" href="../css/namelecule-name-builder.css?v=game-header-text-parity-20261111-r1">
++  <link rel="stylesheet" href="../css/namelecule-name-builder.css?v=builder-workspace-20261112-r2">
+   <script src="../js/namelecule-name-builder-engine.js?v=name-builder-20261111-r1" defer></script>
+-  <script src="../js/namelecule-name-builder.js?v=name-builder-lesson-20261111-r1" defer></script>
++  <script src="../js/namelecule-name-builder.js?v=builder-workspace-20261112-r2" defer></script>
+ </head>
+ <body>
+   <a class="skip-link" href="#answer-title">Πήγαινε στη σύνθεση του ονόματος</a>
+@@ -48,6 +48,10 @@
+             <p id="empty-answer" class="empty-answer">Φέρε εδώ τα συνθετικά του ονόματος</p>
+             <ol id="answer-tiles" class="tiles answer-tiles" aria-label="Επιλεγμένα συνθετικά με τη σειρά τους"></ol>
+           </div>
++          <section class="panel bank-panel" aria-labelledby="bank-title">
++            <div class="panel-header"><h2 id="bank-title">Τα διαθέσιμα συνθετικά</h2><span class="bank-note">Διάλεξε όσα χρειάζονται</span></div>
++            <div id="bank-zone" class="bank-zone"><ul id="bank-tiles" class="tiles bank-tiles" aria-label="Συνθετικά για επιλογή"></ul></div>
++          </section>
+           <p id="answer-help" class="helper">Πάτησε ένα επιλεγμένο πλακίδιο για μετακίνηση ή αφαίρεση. Με το πληκτρολόγιο: αριστερά, δεξιά και Delete. Για μεγάλα ονόματα, κύλησε οριζόντια.</p>
+           <div id="tile-controls" class="tile-controls" hidden><span id="selected-tile-label"></span><button type="button" id="move-before" class="small-button">Πριν</button><button type="button" id="move-after" class="small-button">Μετά</button><button type="button" id="remove-tile" class="small-button">Αφαίρεση</button></div>
+           <div id="candidate" class="candidate" hidden><p>Η πρότασή σου</p><p id="candidate-name" class="candidate-name single-line-name" tabindex="0" role="region" aria-label="Η πρότασή σου"></p></div>
+@@ -56,10 +60,6 @@
+         </div>
+       </section>
+     </div>
+-    <section class="panel bank-panel" aria-labelledby="bank-title">
+-      <div class="panel-header"><h2 id="bank-title">Τα διαθέσιμα συνθετικά</h2><span class="bank-note">Διάλεξε όσα χρειάζονται</span></div>
+-      <div id="bank-zone" class="bank-zone"><ul id="bank-tiles" class="tiles bank-tiles" aria-label="Συνθετικά για επιλογή"></ul></div>
+-    </section>
+     <p class="keyboard-note">Μπορείς να παίξεις και χωρίς σύρσιμο: Tab για επιλογή πλακιδίου και Enter για προσθήκη.</p>
+     <div id="move-announcement" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></div>
+     <noscript><p>Το παιχνίδι χρειάζεται JavaScript για να εμφανίσει τη δομή και να ελέγξει το όνομα.</p></noscript>
+--- session-before/css/namelecule-name-builder.css
++++ final/css/namelecule-name-builder.css
+@@ -1,8 +1,8 @@
+ :root{color-scheme:light;--ink:#254c50;--teal:#397f7d;--mint:#e1f0eb;--line:#c9dcd5;--paper:#faf9f5;--white:#fff;--muted:#567173;--warm:#fbf0e5;--error:#8a462c;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--paper);font-synthesis:none}
+-*{box-sizing:border-box}body{margin:0}button,a{-webkit-tap-highlight-color:transparent}button{font:inherit;color:inherit;cursor:pointer}button:disabled{cursor:default;opacity:.5}a{color:inherit}button:focus-visible,a:focus-visible,[tabindex="-1"]:focus-visible{outline:3px solid #bc7148;outline-offset:4px}button[hidden],[hidden]{display:none!important}.site-header{max-width:1400px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:22px 32px;border-bottom:1px solid var(--line)}.brand{display:inline-flex;max-width:245px}.brand img{width:100%;height:auto}.back-link{text-decoration:none;font-weight:750;padding:12px 20px;border:1px solid var(--line);border-radius:14px;background:var(--white)}.game{max-width:1400px;margin:0 auto;padding:25px 32px 32px}.intro{text-align:center;max-width:1050px;margin:0 auto 18px}.eyebrow{font-size:.78rem;letter-spacing:.16em;font-weight:800;color:var(--teal);margin:4px 0 10px}h1{font-size:clamp(2.1rem,4.3vw,3.7rem);letter-spacing:-.045em;line-height:1.06;margin:0 0 17px}h2{font-size:1.08rem;margin:0;font-weight:780}.objective{font-size:clamp(1.16rem,2vw,1.52rem);line-height:1.5;font-weight:750;margin:0 0 9px}.intro-detail{font-size:.98rem;color:var(--muted);margin:0;line-height:1.5}.game-status{min-height:2.4em;font-size:.93rem;line-height:1.5;text-align:center;padding:5px 0 12px;color:var(--muted)}.game-status.error{color:var(--error)}.workspace{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:22px;align-items:stretch}.panel{border:1px solid var(--line);border-radius:24px;background:var(--white);overflow:hidden}.panel-header{display:flex;align-items:center;justify-content:space-between;gap:12px;background:var(--mint);padding:17px 22px;min-height:65px}.zoom-controls{display:flex;gap:8px}.icon-button{width:34px;height:34px;border:1px solid #accac1;background:white;border-radius:9px;font-size:1.35rem;line-height:1}.viewer-wrap{position:relative;height:350px;background:#fff}iframe{display:block;width:100%;height:100%;border:0;background:#fff}.viewer-mask{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:10px;text-align:center;padding:25px;background:rgba(255,255,255,.98);z-index:2}.viewer-mask p{line-height:1.6;max-width:30em;margin:0}.representations{display:flex;flex-wrap:wrap;gap:7px;padding:13px 16px 4px;border-top:1px solid #e4ede7}.representations button{border:1px solid var(--line);border-radius:10px;background:#f6faf8;padding:9px 11px;font-size:.83rem;min-height:38px}.representations button[aria-pressed="true"]{background:var(--ink);color:white;border-color:var(--ink);opacity:1}.representation-note{font-size:.8rem;line-height:1.5;color:var(--muted);padding:5px 18px 15px;margin:0;min-height:3em}.answer-content{padding:22px}.answer-zone{min-width:0;max-width:100%;overflow-x:auto;overflow-y:hidden;overscroll-behavior-x:contain;border:2px dashed #8eb8aa;border-radius:19px;min-height:145px;background:#f7fbf8;display:flex;flex-direction:column;justify-content:center;padding:17px;transition:background .12s,border-color .12s}.answer-zone.drag-over{background:#daeee3;border-color:#387e70;box-shadow:inset 0 0 0 2px #9ac6b6}.empty-answer{text-align:center;line-height:1.6;color:var(--muted);margin:15px 0}.tiles{list-style:none;display:flex;flex-wrap:wrap;gap:10px;padding:0;margin:0;align-items:center}.tiles.answer-tiles{flex-wrap:nowrap;gap:3px;width:max-content;min-width:100%;justify-content:center;min-height:0}.tiles li{display:flex;max-width:100%;position:relative}.answer-tiles>li{flex:0 0 auto;max-width:none}.tile-button{display:block;max-width:100%;border:1.5px solid #abcbbd;background:#f1f8f3;border-radius:13px;padding:13px 17px;min-height:53px;min-width:52px;font-size:1.18rem;font-weight:780;line-height:1.25;overflow-wrap:anywhere;touch-action:none;user-select:none;-webkit-user-select:none;transition:background .1s,box-shadow .1s}.tile-button:hover:not(:disabled){background:#e1f0e8;border-color:var(--teal)}.answer-tiles .tile-button{max-width:none;min-width:32px;min-height:46px;padding:10px 5px;font-size:1.03rem;white-space:nowrap;overflow-wrap:normal;background:#dbeee6}.tile-button.selected{background:var(--ink);color:white;box-shadow:0 0 0 3px #badacf;border-color:var(--ink)}.tile-button.dragging{opacity:.35}.touch-ghost{position:fixed;z-index:1000;pointer-events:none;margin:0;background:var(--ink)!important;color:#fff;box-shadow:0 8px 30px #254c5040;opacity:.95;transform:translate(-50%,-50%);max-width:240px}.helper{font-size:.8rem;line-height:1.6;color:var(--muted);margin:12px 0}.tile-controls{display:flex;flex-wrap:wrap;gap:7px;align-items:center;margin:12px 0}.tile-controls span{font-size:.85rem;max-width:100%;overflow-wrap:anywhere;margin-right:5px}.small-button{background:#fff;border:1px solid var(--line);border-radius:9px;padding:8px 12px;min-height:39px;font-size:.82rem}.candidate{background:#f2f7f2;border:1px solid #d7e4d8;border-radius:15px;padding:13px 17px;margin:17px 0}.candidate p{margin:0;color:var(--muted);font-size:.82rem}.candidate .candidate-name{color:var(--ink);font-size:1.28rem;font-weight:780;line-height:1.6;margin-top:3px}.check-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}.primary,.secondary{min-height:48px;border-radius:13px;padding:12px 22px;font-weight:760;border:1.5px solid var(--ink);font-size:.96rem}.primary{background:var(--ink);color:white;min-width:145px}.primary:disabled{background:#90a4a5;border-color:#90a4a5;color:white;opacity:1}.secondary{background:white;border-color:#b2cdc3}.feedback{padding:16px 18px;margin-top:18px;border-radius:14px;background:var(--warm);border:1px solid #e2cbb7;line-height:1.6;font-size:.95rem}.feedback.success{background:var(--mint);border-color:#afd1be}.feedback strong{display:block;font-size:1.1rem;margin-bottom:5px}.single-line-name{min-width:0;max-width:100%;padding-bottom:10px;white-space:nowrap;overflow-wrap:normal;overflow-x:auto;overflow-y:hidden;overscroll-behavior-x:contain}.answer-zone:focus-visible,.single-line-name:focus-visible{outline:3px solid #bc7148;outline-offset:3px}.bank-panel{margin-top:22px}.bank-note{font-size:.85rem;font-weight:550;color:var(--muted)}.bank-zone{padding:22px;min-height:100px}.bank-zone.drag-over{background:var(--mint)}.keyboard-note{font-size:.82rem;text-align:center;color:var(--muted);line-height:1.6;margin:18px 0 0}.site-footer{text-align:center;padding:22px 20px;color:var(--muted);font-size:.8rem;border-top:1px solid var(--line)}.sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}.skip-link{position:fixed;top:8px;left:8px;transform:translateY(-160%);z-index:100;background:white;padding:14px;border:2px solid var(--ink);border-radius:10px}.skip-link:focus{transform:none}
++*{box-sizing:border-box}body{margin:0}button,a{-webkit-tap-highlight-color:transparent}button{font:inherit;color:inherit;cursor:pointer}button:disabled{cursor:default;opacity:.5}a{color:inherit}button:focus-visible,a:focus-visible,[tabindex="-1"]:focus-visible{outline:3px solid #bc7148;outline-offset:4px}button[hidden],[hidden]{display:none!important}.site-header{max-width:1400px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:22px 32px;border-bottom:1px solid var(--line)}.brand{display:inline-flex;max-width:245px}.brand img{width:100%;height:auto}.back-link{text-decoration:none;font-weight:750;padding:12px 20px;border:1px solid var(--line);border-radius:14px;background:var(--white)}.game{max-width:1400px;margin:0 auto;padding:25px 32px 32px}.intro{text-align:center;max-width:1050px;margin:0 auto 18px}.eyebrow{font-size:.78rem;letter-spacing:.16em;font-weight:800;color:var(--teal);margin:4px 0 10px}h1{font-size:clamp(2.1rem,4.3vw,3.7rem);letter-spacing:-.045em;line-height:1.06;margin:0 0 17px}h2{font-size:1.08rem;margin:0;font-weight:780}.objective{font-size:clamp(1.16rem,2vw,1.52rem);line-height:1.5;font-weight:750;margin:0 0 9px}.intro-detail{font-size:.98rem;color:var(--muted);margin:0;line-height:1.5}.game-status{min-height:2.4em;font-size:.93rem;line-height:1.5;text-align:center;padding:5px 0 12px;color:var(--muted)}.game-status.error{color:var(--error)}.workspace{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:22px;align-items:stretch}.panel{border:1px solid var(--line);border-radius:24px;background:var(--white);overflow:hidden}.panel-header{display:flex;align-items:center;justify-content:space-between;gap:12px;background:var(--mint);padding:17px 22px;min-height:65px}.zoom-controls{display:flex;gap:8px}.icon-button{width:34px;height:34px;border:1px solid #accac1;background:white;border-radius:9px;font-size:1.35rem;line-height:1}.viewer-wrap{position:relative;height:350px;background:#fff}iframe{display:block;width:100%;height:100%;border:0;background:#fff}.viewer-mask{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:10px;text-align:center;padding:25px;background:rgba(255,255,255,.98);z-index:2}.viewer-mask p{line-height:1.6;max-width:30em;margin:0}.representations{display:flex;flex-wrap:wrap;gap:7px;padding:13px 16px 4px;border-top:1px solid #e4ede7}.representations button{border:1px solid var(--line);border-radius:10px;background:#f6faf8;padding:9px 11px;font-size:.83rem;min-height:38px}.representations button[aria-pressed="true"]{background:var(--ink);color:white;border-color:var(--ink);opacity:1}.representation-note{font-size:.8rem;line-height:1.5;color:var(--muted);padding:5px 18px 15px;margin:0;min-height:3em}.answer-content{padding:22px}.answer-zone{min-width:0;max-width:100%;overflow-x:auto;overflow-y:hidden;overscroll-behavior-x:contain;border:2px dashed #8eb8aa;border-radius:19px;min-height:145px;background:#f7fbf8;display:flex;flex-direction:column;justify-content:center;padding:17px;transition:background .12s,border-color .12s}.answer-zone.drag-over{background:#daeee3;border-color:#387e70;box-shadow:inset 0 0 0 2px #9ac6b6}.empty-answer{text-align:center;line-height:1.6;color:var(--muted);margin:15px 0}.tiles{list-style:none;display:flex;flex-wrap:wrap;gap:10px;padding:0;margin:0;align-items:center}.tiles.answer-tiles{flex-wrap:nowrap;gap:3px;width:max-content;min-width:100%;justify-content:center;min-height:0}.tiles li{display:flex;max-width:100%;position:relative}.answer-tiles>li{flex:0 0 auto;max-width:none}.tile-button{display:block;max-width:100%;border:1.5px solid #abcbbd;background:#f1f8f3;border-radius:13px;padding:13px 17px;min-height:53px;min-width:52px;font-size:1.18rem;font-weight:780;line-height:1.25;overflow-wrap:anywhere;touch-action:none;user-select:none;-webkit-user-select:none;transition:background .1s,box-shadow .1s}.tile-button:hover:not(:disabled){background:#e1f0e8;border-color:var(--teal)}.answer-tiles .tile-button{max-width:none;min-width:32px;min-height:46px;padding:10px 5px;font-size:1.03rem;white-space:nowrap;overflow-wrap:normal;background:#dbeee6}.tile-button.selected{background:var(--ink);color:white;box-shadow:0 0 0 3px #badacf;border-color:var(--ink)}.tile-button.dragging{opacity:.35}.touch-ghost{position:fixed;z-index:1000;pointer-events:none;margin:0;background:var(--ink)!important;color:#fff;box-shadow:0 8px 30px #254c5040;opacity:.95;transform:translate(-50%,-50%);max-width:240px}.helper{font-size:.8rem;line-height:1.6;color:var(--muted);margin:12px 0}.tile-controls{display:flex;flex-wrap:wrap;gap:7px;align-items:center;margin:12px 0}.tile-controls span{font-size:.85rem;max-width:100%;overflow-wrap:anywhere;margin-right:5px}.small-button{background:#fff;border:1px solid var(--line);border-radius:9px;padding:8px 12px;min-height:39px;font-size:.82rem}.candidate{background:#f2f7f2;border:1px solid #d7e4d8;border-radius:15px;padding:13px 17px;margin:17px 0}.candidate p{margin:0;color:var(--muted);font-size:.82rem}.candidate .candidate-name{color:var(--ink);font-size:1.28rem;font-weight:780;line-height:1.6;margin-top:3px}.check-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}.primary,.secondary{min-height:48px;border-radius:13px;padding:12px 22px;font-weight:760;border:1.5px solid var(--ink);font-size:.96rem}.primary{background:var(--ink);color:white;min-width:145px}.primary:disabled{background:#90a4a5;border-color:#90a4a5;color:white;opacity:1}.secondary{background:white;border-color:#b2cdc3}.feedback{padding:16px 18px;margin-top:18px;border-radius:14px;background:var(--warm);border:1px solid #e2cbb7;line-height:1.6;font-size:.95rem}.feedback.success{background:var(--mint);border-color:#afd1be}.feedback strong{display:block;font-size:1.1rem;margin-bottom:5px}.single-line-name{min-width:0;max-width:100%;padding-bottom:10px;white-space:nowrap;overflow-wrap:normal;overflow-x:auto;overflow-y:hidden;overscroll-behavior-x:contain}.answer-zone:focus-visible,.single-line-name:focus-visible{outline:3px solid #bc7148;outline-offset:3px}.bank-panel{margin-top:8px;border-radius:16px}.bank-panel .panel-header{min-height:0;padding:4px 10px;gap:2px 8px;flex-wrap:wrap}.bank-panel h2{font-size:.88rem;line-height:1.35}.bank-note{font-size:.73rem;line-height:1.35;font-weight:550;color:var(--muted)}.bank-zone{padding:8px 10px 10px;min-height:64px}.bank-zone.drag-over{background:var(--mint)}.keyboard-note{font-size:.82rem;text-align:center;color:var(--muted);line-height:1.6;margin:18px 0 0}.site-footer{text-align:center;padding:22px 20px;color:var(--muted);font-size:.8rem;border-top:1px solid var(--line)}.sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}.skip-link{position:fixed;top:8px;left:8px;transform:translateY(-160%);z-index:100;background:white;padding:14px;border:2px solid var(--ink);border-radius:10px}.skip-link:focus{transform:none}
+ @media(min-width:1400px){.viewer-wrap{height:385px}.answer-zone{min-height:170px}}
+-@media(max-width:850px){.workspace{grid-template-columns:1fr}.site-header{padding:17px 20px}.brand{max-width:195px}.game{padding:22px 18px}.viewer-wrap{height:300px}.panel{border-radius:20px}.answer-zone{min-height:120px}.intro{margin-bottom:14px}.answer-content{padding:18px}.bank-panel{margin-top:18px}}
+-@media(max-width:430px){.game{padding:18px 12px}.site-header{padding:14px 15px}.brand{max-width:165px}.back-link{font-size:.8rem;padding:9px 12px}.panel-header{padding:14px 16px}.objective{font-size:1.16rem}.intro-detail{font-size:.85rem}.viewer-wrap{height:270px}.representations{gap:6px;padding:12px 12px 4px}.representations button{font-size:.73rem;padding:8px}.tile-button{padding:11px 13px;min-height:47px;font-size:1.03rem}.tiles{gap:8px}.answer-content{padding:15px}.answer-zone{padding:13px}.bank-zone{padding:16px}.bank-note{font-size:.73rem}.bank-panel h2{font-size:.96rem}.primary,.secondary{padding:12px 17px;font-size:.88rem}.candidate .candidate-name{font-size:1.1rem}}
++@media(max-width:850px){.workspace{grid-template-columns:1fr}.site-header{padding:17px 20px}.brand{max-width:195px}.game{padding:22px 18px}.viewer-wrap{height:300px}.panel{border-radius:20px}.answer-zone{min-height:120px}.intro{margin-bottom:14px}.answer-content{padding:18px}}
++@media(max-width:430px){.game{padding:18px 12px}.site-header{padding:14px 15px}.brand{max-width:165px}.back-link{font-size:.8rem;padding:9px 12px}.panel-header{padding:14px 16px}.objective{font-size:1.16rem}.intro-detail{font-size:.85rem}.viewer-wrap{height:270px}.representations{gap:6px;padding:12px 12px 4px}.representations button{font-size:.73rem;padding:8px}.tile-button{padding:11px 13px;min-height:47px;font-size:1.03rem}.tiles{gap:8px}.answer-content{padding:15px}.answer-zone{padding:13px}.primary,.secondary{padding:12px 17px;font-size:.88rem}.candidate .candidate-name{font-size:1.1rem}}
+ .builder-title{display:flex;align-items:center;justify-content:center;gap:18px;margin-bottom:17px}
+ .builder-title h1{margin:0;min-width:0}
+ .builder-logo{display:block;width:128px;height:128px;object-fit:contain;flex:0 0 auto}
+--- session-before/js/namelecule-name-builder.js
++++ final/js/namelecule-name-builder.js
+@@ -7,7 +7,7 @@
+   const lessonChannel = 'namelecule-builder-lesson-v1';
+   const lessonSession = new URLSearchParams(location.search).get('lessonSession');
+   const lesson = parent !== window && /^[A-Za-z0-9_-]{16,128}$/.test(lessonSession || '')
+-    ? { current: null, lastId: 0, resizeFrame: null, revealFrame: null, lastHeight: null, observer: null } : null;
++    ? { current: null, lastId: 0, resizeFrame: null, lastHeight: null, observer: null } : null;
+   const lessonMolecules = ['methane', 'ethane', 'propane', 'butane', 'pentane',
+     'methyl_2_pentane', 'dimethyl_2_3_butane', 'ethyl_3_dimethyl_2_5_hexane'];
+   const $ = id => document.getElementById(id);
+@@ -17,6 +17,7 @@
+   const state = { inventory: [], deck: [], round: null, bank: [], answer: [], selected: null,
+     representation: '', busy: true, failed: false, solved: false, stopped: false, roundNumber: 0,
+     pending: null, nextId: 0, retry: null, touch: null, suppressClickUntil: 0, attempts: 0, submitted: false };
++  const scrolling = { frame: null, moving: false };
+   const representationButtons = Array.from(document.querySelectorAll('[data-representation]'));
+   const startupTimer = setTimeout(() => fail('Η προβολή του μορίου άργησε να ξεκινήσει. Μπορείς να δοκιμάσεις ξανά.', () => location.reload()), 45000);
+ 
+@@ -46,20 +47,60 @@
+       }
+     });
+   }
+-  function revealFeedback() {
+-    if (!lesson) {
+-      $('feedback').scrollIntoView({ block: 'nearest', behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+-      return;
+-    }
+-    if (lesson.revealFrame !== null) cancelAnimationFrame(lesson.revealFrame);
+-    const current = lesson.current;
+-    lesson.revealFrame = requestAnimationFrame(() => {
+-      lesson.revealFrame = null;
+-      if (!current?.ready || current !== lesson.current || state.stopped || $('feedback').hidden) return;
+-      const body = document.body.getBoundingClientRect(), feedback = $('feedback').getBoundingClientRect();
+-      postLesson('reveal', { startY: Math.max(0, feedback.top - body.top), endY: Math.max(0, feedback.bottom - body.top) });
+-    });
+-  }
++  function stopLocalReveal() {
++    if (scrolling.frame !== null) cancelAnimationFrame(scrolling.frame);
++    scrolling.frame = null;
++    if (scrolling.moving) {
++      const top = scrollY, left = scrollX;
++      const max = Math.max(0, (document.scrollingElement || document.documentElement).scrollHeight - innerHeight);
++      // A same-position write can leave a native animation running. Retarget
++      // and restore in one turn so cancellation does not leave a position change.
++      const adjacent = top < max ? Math.min(max, top + 1) : Math.max(0, top - 1);
++      if (adjacent !== top) window.scrollTo({ top: adjacent, left, behavior: 'instant' });
++      window.scrollTo({ top, left, behavior: 'instant' });
++    }
++    scrolling.moving = false;
++  }
++  function interruptReveal() {
++    stopLocalReveal();
++    if (lesson?.current?.ready) postLesson('scroll-interrupt', {});
++  }
++  function revealRange(purpose) {
++    stopLocalReveal();
++    scheduleSize();
++    const current = lesson?.current;
++    const round = state.round;
++    // Let the content-height message reach the lesson before its range request.
++    scrolling.frame = requestAnimationFrame(() => {
++      scrolling.frame = requestAnimationFrame(() => {
++        scrolling.frame = null;
++        if (state.stopped || state.busy || state.failed || state.touch || !round || round !== state.round ||
++            (lesson && (!current?.ready || current !== lesson.current))) return;
++        const feedback = purpose === 'feedback';
++        const start = feedback ? $('feedback') : $('answer-zone');
++        const end = feedback ? start : $('check-answer');
++        if (start.hidden || !start.isConnected || !end.isConnected) return;
++        const first = start.getBoundingClientRect(), last = end.getBoundingClientRect();
++        if (first.height <= 0 || last.height <= 0) return;
++        if (lesson) {
++          const body = document.body.getBoundingClientRect();
++          postLesson('reveal', { purpose, startY: Math.max(0, first.top - body.top), endY: Math.max(0, last.bottom - body.top) });
++          return;
++        }
++        const top = 12, bottom = innerHeight - 12;
++        if (bottom <= top || (first.top >= top && last.bottom <= bottom)) return;
++        // An oversized construction area starts at the answer and nearby bank;
++        // never jump past the available pieces to a button at its far end.
++        const delta = last.bottom - first.top > bottom - top || first.top < top ? first.top - top : last.bottom - bottom;
++        const destination = Math.max(0, Math.min(document.documentElement.scrollHeight - innerHeight, scrollY + delta));
++        if (Math.abs(destination - scrollY) < 1) return;
++        const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
++        scrolling.moving = !reduced;
++        window.scrollTo({ top: destination, left: scrollX, behavior: reduced ? 'instant' : 'smooth' });
++      });
++    });
++  }
++  function revealFeedback() { revealRange('feedback'); }
+   function validateLessonLoad(data) {
+     if (typeof data.attemptId !== 'string' || !data.attemptId || data.attemptId.length > 160 ||
+         !lessonMolecules.includes(data.moleculeId) || typeof data.bankSeed !== 'string' || !data.bankSeed || data.bankSeed.length > 256 ||
+@@ -187,7 +228,7 @@
+   }
+   async function loadRound(moleculeId, controlled = null) {
+     if (state.stopped || (lesson && controlled !== lesson.current)) return;
+-    cancelTouch(); state.busy = true; state.failed = false; state.solved = false;
++    stopLocalReveal(); cancelTouch(); state.busy = true; state.failed = false; state.solved = false;
+     state.attempts = 0; state.submitted = false;
+     if (controlled) controlled.ready = false;
+     state.answer = []; state.selected = null; state.round = null; state.bank = [];
+@@ -213,8 +254,9 @@
+       if (controlled) {
+         controlled.ready = true;
+         postLesson('loaded', { state: snapshot() }); scheduleSize();
+-        if (state.submitted) revealFeedback();
+       }
++      if (state.submitted) revealFeedback();
++      else revealRange('entry');
+     } catch (error) {
+       if (error.message === 'superseded' || state.stopped || ticket !== state.roundNumber || (controlled && controlled !== lesson.current)) return;
+       fail(lesson ? 'Δεν επαληθεύτηκε η προβολή αυτού του μορίου. Δοκίμασε ξανά ή επέστρεψε στην επιλογή παιχνιδιού.'
+@@ -295,12 +337,14 @@
+     if (previous >= 0) { state.answer.splice(previous, 1); if (previous < index) index--; }
+     state.answer.splice(Math.max(0, Math.min(index, state.answer.length)), 0, id);
+     state.selected = id; clearFeedback(); render(); focusTile(id, true);
++    revealRange('construction');
+     announce('Προστέθηκε το «' + tileById(id).text + '» στη θέση ' + (state.answer.indexOf(id) + 1) + '.');
+   }
+   function remove(id) {
+     if (!editable()) return;
+     const index = state.answer.indexOf(id); if (index < 0) return;
+     state.answer.splice(index, 1); state.selected = null; clearFeedback(); render(); focusTile(id, false);
++    revealRange('construction');
+     announce('Το «' + tileById(id).text + '» επέστρεψε στα διαθέσιμα συνθετικά.');
+   }
+   function move(id, delta) {
+@@ -308,6 +352,7 @@
+     if (!editable() || index < 0 || target < 0 || target >= state.answer.length) return;
+     [state.answer[index], state.answer[target]] = [state.answer[target], state.answer[index]];
+     state.selected = id; clearFeedback(); render(); focusTile(id, true);
++    revealRange('construction');
+     announce('Το «' + tileById(id).text + '» μετακινήθηκε στη θέση ' + (target + 1) + '.');
+   }
+   function tileButton(tile, inAnswer, index) {
+@@ -319,7 +364,7 @@
+     button.addEventListener('click', () => {
+       if (!editable() || Date.now() < state.suppressClickUntil) return;
+       if (!inAnswer) place(tile.id, state.answer.length);
+-      else { state.selected = state.selected === tile.id ? null : tile.id; render(); focusTile(tile.id, true); }
++      else { state.selected = state.selected === tile.id ? null : tile.id; render(); focusTile(tile.id, true); revealRange('construction'); }
+     });
+     button.addEventListener('keydown', event => {
+       if (!inAnswer || !editable()) return;
+@@ -448,16 +493,23 @@
+     if (lesson && event.key === 'Escape') { event.preventDefault(); postLesson('exit', {}); }
+   }
+   window.addEventListener('keydown', lessonExitKey);
+-  if (lesson) frame.addEventListener('load', () => {
+-    // Keys in the native depiction frame do not bubble to this document.
+-    // The source is our same-origin viewer, and only Escape crosses frames.
+-    try { frame.contentWindow.addEventListener('keydown', lessonExitKey); } catch (_) { /* viewer load failed */ }
++  ['wheel', 'touchstart', 'pointerdown', 'keydown'].forEach(type => {
++    window.addEventListener(type, interruptReveal, { capture: true, passive: true });
++  });
++  frame.addEventListener('load', () => {
++    // Native viewer input does not bubble to this document. Its same-origin
++    // window forwards interruption and the existing lesson Escape behavior.
++    try {
++      frame.contentWindow.addEventListener('keydown', lessonExitKey);
++      ['wheel', 'touchstart', 'pointerdown', 'keydown'].forEach(type => {
++        frame.contentWindow.addEventListener(type, interruptReveal, { capture: true, passive: true });
++      });
++    } catch (_) { /* viewer load failed */ }
+   });
+   window.addEventListener('pagehide', () => {
+-    clearTimeout(startupTimer); cancelTouch();
++    clearTimeout(startupTimer); stopLocalReveal(); cancelTouch();
+     if (lesson) {
+       if (lesson.resizeFrame !== null) cancelAnimationFrame(lesson.resizeFrame);
+-      if (lesson.revealFrame !== null) cancelAnimationFrame(lesson.revealFrame);
+       lesson.observer?.disconnect(); lesson.current = null;
+     }
+     if (state.pending) { clearTimeout(state.pending.timer); state.pending.reject(new Error('superseded')); state.pending = null; }
+--- session-before/js/namelecule-game-choice-checkpoint.js
++++ final/js/namelecule-game-choice-checkpoint.js
+@@ -254,7 +254,7 @@
+     function publish() { state = restoreBuilder(recipe, state, practice); if (!destroyed && typeof options.onStateChange === "function") options.onStateChange(clone(state)); }
+     function clearTimer() { if (timeout) global.clearTimeout(timeout); timeout = null; }
+     function stopFrame() { clearTimer(); active = null; if (frame) { frame.remove(); frame = null; } if (footer) footer.remove(); footer = null; ready(false); }
+-    function reveal(start, end) { if (!destroyed && typeof options.onReveal === "function") options.onReveal({ kind: "builder-feedback", start, end: end || start }); }
++    function reveal(start, end, purpose) { if (!destroyed && typeof options.onReveal === "function") options.onReveal({ kind: "builder-" + purpose, start, end: end || start }); }
+     function failure(message) {
+       if (destroyed) return;
+       stopFrame(); progress(null); host.setAttribute("aria-busy", "false");
+@@ -293,7 +293,7 @@
+       [startMarker, endMarker].forEach(marker => { marker.setAttribute("aria-hidden", "true"); marker.style.cssText = "position:absolute;width:1px;height:1px;pointer-events:none;left:0;top:0"; });
+       stage.append(frame, startMarker, endMarker); host.replaceChildren(title, stage); host.setAttribute("aria-busy", "true");
+       active = { requestId: ++requestId, index, entry, stage, startMarker, endMarker, loaded: false };
+-      frame.src = new URL("games/name-builder.html?lessonSession=" + session + "&v=game-header-text-parity-20261111-r1", global.document.baseURI).href;
++      frame.src = new URL("games/name-builder.html?lessonSession=" + session + "&v=builder-workspace-20261112-r2", global.document.baseURI).href;
+       progress({ current: index + 1, total: 3 });
+       timeout = global.setTimeout(() => failure("Το παιχνίδι άργησε να φορτώσει. Η προσπάθειά σου διατηρήθηκε. Δοκίμασε ξανά."), 60000);
+       heading.tabIndex = -1; heading.focus({ preventScroll: true });
+@@ -312,6 +312,10 @@
+       if (data.requestId !== context.requestId || data.attemptId !== attemptId || data.moleculeId !== context.entry.round.moleculeId) return;
+       if (data.type === "error") { failure("Δεν ήταν δυνατή η ασφαλής προετοιμασία του μορίου. Δοκίμασε ξανά."); return; }
+       if (data.type === "exit") { if (typeof options.onClose === "function") options.onClose(); return; }
++      if (data.type === "scroll-interrupt") {
++        if (context.loaded && typeof options.onScrollInterrupt === "function") options.onScrollInterrupt();
++        return;
++      }
+       if (data.type === "loaded" || data.type === "state") {
+         if (data.type === "state" && !context.loaded) return;
+         if (data.type === "loaded") { context.loaded = true; clearTimer(); host.setAttribute("aria-busy", "false"); }
+@@ -324,8 +328,10 @@
+         frame.style.height = Math.ceil(data.height) + "px";
+       } else if (data.type === "reveal" && context.loaded && Number.isFinite(data.startY) && Number.isFinite(data.endY) &&
+         data.startY >= 0 && data.endY >= data.startY && data.endY <= 8000) {
++        const purpose = data.purpose === undefined ? "feedback" : data.purpose;
++        if (!["entry", "construction", "feedback"].includes(purpose)) return;
+         context.startMarker.style.top = data.startY + "px"; context.endMarker.style.top = data.endY + "px";
+-        reveal(context.startMarker, footer || context.endMarker);
++        reveal(context.startMarker, purpose === "feedback" && footer ? footer : context.endMarker, purpose);
+       }
+     }
+     function start() {
+--- session-before/js/namelecule-quiz-checkpoints.js
++++ final/js/namelecule-quiz-checkpoints.js
+@@ -362,7 +362,16 @@
+       scrollTop: () => dialog.scrollTop,
+       maxScroll: () => dialog.scrollHeight - dialog.clientHeight,
+       scrollTo(top, behavior) {
+-        if (typeof dialog.scrollTo === "function") dialog.scrollTo({ top: top, behavior: behavior });
++        if (typeof dialog.scrollTo === "function") {
++          // Builder input crosses an iframe. A same-position native write did
++          // not cancel in the measured browser; retarget and restore atomically.
++          if (behavior === "instant" && top === dialog.scrollTop && mountHost.querySelector(".nl-builder-frame")) {
++            const max = Math.max(0, dialog.scrollHeight - dialog.clientHeight);
++            const adjacent = top < max ? Math.min(max, top + 1) : Math.max(0, top - 1);
++            if (adjacent !== top) dialog.scrollTo({ top: adjacent, behavior: "instant" });
++          }
++          dialog.scrollTo({ top: top, behavior: behavior });
++        }
+         else dialog.scrollTop = top;
+       }
+     });
+@@ -532,6 +541,9 @@
+           if (token !== mountToken || !currentContext(context)) return;
+           revealResponse(request);
+         },
++        onScrollInterrupt() {
++          if (token === mountToken && currentContext(context)) stopResponseScroll();
++        },
+         onStateChange(state) {
+           if (token !== mountToken || !currentContext(context)) return;
+           const wasComplete = isComplete(context.scenario, context.index);
+--- session-before/mulermoc-nom-54.html
++++ final/mulermoc-nom-54.html
+@@ -368,12 +368,12 @@
+   <script src="js/mulermoc-nom-teaching-54.js?v=alkane-step5-interaction-20261106-r1"></script>
+   <script src="js/mulermoc-nom-note-54.js?v=v54-sync-20261104-r2"></script>
+   <script src="js/namelecule-game-repair.js?v=choice-games-20261111-r1"></script>
+-  <script src="js/namelecule-quiz-checkpoints.js?v=choice-games-20261111-r2"></script>
++  <script src="js/namelecule-quiz-checkpoints.js?v=builder-workspace-20261112-r2"></script>
+   <script src="js/namelecule-chemistry-client.js?v=verified-engines-20261105-r1"></script>
+   <script src="js/namelecule-repair-generator.js?v=engine-pilot-20261105-r1"></script>
+   <script src="js/namelecule-generated-repair-checkpoint.js?v=choice-games-20261111-r2"></script>
+   <script src="js/namelecule-name-builder-engine.js?v=name-builder-20261111-r1"></script>
+-  <script src="js/namelecule-game-choice-checkpoint.js?v=game-header-text-parity-20261111-r1"></script>
++  <script src="js/namelecule-game-choice-checkpoint.js?v=builder-workspace-20261112-r2"></script>
+   <script src="js/mulermoc-nom-scenario-54.js?v=step7-numbering-directions-20261108-r3"></script>
+   <script src="js/mulermoc-nom-iupac-54.js?v=merge54-20261105-r1"></script>
+   <script src="js/mulermoc-nom-lang-54.js?v=merge54-20261105-r1"></script>
+--- session-before/mulermoc-nom-55.html
++++ final/mulermoc-nom-55.html
+@@ -361,12 +361,12 @@
+   <script src="js/mulermoc-nom-teaching-55.js?v=namelecule-v55-20261110-r2"></script>
+   <script src="js/mulermoc-nom-note-55.js?v=namelecule-v55-20261110-r2"></script>
+   <script src="js/namelecule-game-repair.js?v=choice-games-20261111-r1"></script>
+-  <script src="js/namelecule-quiz-checkpoints.js?v=choice-games-20261111-r2"></script>
++  <script src="js/namelecule-quiz-checkpoints.js?v=builder-workspace-20261112-r2"></script>
+   <script src="js/namelecule-chemistry-client.js?v=verified-engines-20261105-r1"></script>
+   <script src="js/namelecule-repair-generator.js?v=engine-pilot-20261105-r1"></script>
+   <script src="js/namelecule-generated-repair-checkpoint.js?v=choice-games-20261111-r2"></script>
+   <script src="js/namelecule-name-builder-engine.js?v=name-builder-20261111-r1"></script>
+-  <script src="js/namelecule-game-choice-checkpoint.js?v=game-header-text-parity-20261111-r1"></script>
++  <script src="js/namelecule-game-choice-checkpoint.js?v=builder-workspace-20261112-r2"></script>
+   <script src="js/mulermoc-nom-scenario-55.js?v=namelecule-v55-20261110-r2"></script>
+   <script src="js/mulermoc-nom-iupac-55.js?v=namelecule-v55-20261110-r2"></script>
+   <script src="js/mulermoc-nom-lang-55.js?v=namelecule-v55-20261110-r2"></script>

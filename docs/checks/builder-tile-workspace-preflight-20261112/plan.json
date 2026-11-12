@@ -1,0 +1,32 @@
+{
+  "status": "awaiting-user-approval",
+  "scope": "Shared Name Builder workspace in standalone and embedded alkane game. No implementation yet.",
+  "paths": [
+    "games/name-builder.html",
+    "css/namelecule-name-builder.css",
+    "js/namelecule-name-builder.js",
+    "js/namelecule-game-choice-checkpoint.js",
+    "js/namelecule-quiz-checkpoints.js",
+    "mulermoc-nom-54.html",
+    "mulermoc-nom-55.html"
+  ],
+  "behavior": [
+    "Move bank into answer construction panel immediately below answer zone; compact separation before help/controls/candidate/check/feedback. Keep tile IDs, pointer targets and one-line name.",
+    "Purpose-specific smooth reveal after ready/next round, relevant clipped construction changes, and check/feedback/success. Preserve visible content and focus; account for iframe sizing and sticky lesson header.",
+    "Stop scrolling on user input including iframe-originated input; never start an automatic reveal during active drag. Honor reduced motion.",
+    "Refresh CSS/JS/iframe cache URLs in Builder HTML and Main54/55. Preserve completed rounds, saved answers and earned lesson unlocks."
+  ],
+  "verification": [
+    "Before/after actual geometry in desktop and small widths, initial bank visibility and shorter drag distance.",
+    "Trusted pointer drag/click and keyboard add/reorder/remove; long-name horizontal containment; check wrong/right and reveal without manual test scrolling.",
+    "Three rounds, next-round entry, partial refresh, optional practice and return, both lesson gates; standalone and Workshop shared-controller smoke.",
+    "Reduced-motion/user-interruption checks and independent fresh-context Reviewer."
+  ],
+  "excluded": [
+    "naming engine/core",
+    "molecular sources/viewer geometry",
+    "scenario JSON",
+    "commit/push/publication"
+  ],
+  "knownLayoutLimit": "Small screens cannot show full molecular viewer, header and all construction controls simultaneously; auto reveal should prioritize the useful interaction region without shrinking text excessively."
+}

@@ -1,0 +1,24 @@
+{
+  "recordedUTC": "2026-11-12T06:32:50.476486+00:00",
+  "Reviewer": "/root/review_firefox_launch_recurrence",
+  "role": "NAMELECULE_REVIEWER_V1_20261023",
+  "finding": "FF-LAUNCH-R1",
+  "status": "closed-independent-targeted-verification",
+  "newActionableFindings": [],
+  "reviewedSHA256": {
+    "docs/checks/firefox-refresh-hang-20261112/recurrence-external-launch.json": "83c098fb7dd04dbcd0b208f6cec234694c022672b458efba45094875c6d43786",
+    "docs/checks/firefox-refresh-hang-20261112/launchservices-preview.json": "34b6424c22f861b0d7d216b7ffd2f4fdea86af40197f52352f601c5729a01f44"
+  },
+  "independentSampleRead": {
+    "PID": 36690,
+    "mainSamples": 592,
+    "nativeZoomMenuPresent": false,
+    "source": "Developer-collected sample independently inspected; no live Reviewer UI check"
+  },
+  "limitations": [
+    "Actual UI response remains user-unconfirmed.",
+    "Preview count, launch route, removal of no-remote and profile reuse are uncontrolled changes. No isolated cause/prevention claim.",
+    "Cleanup/window/process counts are Developer evidence, not independently re-executed."
+  ],
+  "coreChanged": false
+}

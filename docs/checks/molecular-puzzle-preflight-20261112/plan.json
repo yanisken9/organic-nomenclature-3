@@ -1,0 +1,49 @@
+{
+  "recordedUTC": "2026-11-12T07:06:37.165665+00:00",
+  "status": "awaiting-user-approval-for-prototype-code",
+  "userObjective": "Μοριακό παζλ, name→condensed2D assembled from fragments, same style as currenttwo games, eventually standalonewelcome and alkanelessonchoice. First user wants game+logo preview.",
+  "confirmedChoice": "User selected CH3/CH2/CH/C groups plus bonds. Add CH4 for methane.",
+  "firstScope": "Functional isolatedprototype using existing8alkanes. Actualwelcome/lesson/checkpointintegration follows afterusertrial, separateapprovalscope.",
+  "newCodeFiles": [
+    "games/molecular-puzzle.html",
+    "css/namelecule-molecular-puzzle.css",
+    "js/namelecule-molecular-puzzle-engine.js",
+    "js/namelecule-molecular-puzzle.js",
+    "design/molecular-puzzle-preview.html"
+  ],
+  "assets": "games/assets/molecular-puzzle/ sevenversioneddrafts; currentcandidate flat playful CH3/CH2/OH different-shapedjigsawtiles v7, nohorizontalbondstrokes. Fullprompts/provenance retained. Logoalone doesnotexpand proposedfirstgamepoolbeyond8alkanes.",
+  "interaction": [
+    "Showcompoundname prominently, empty2Dassemblyboard with adjacent reusable CH4/CH3/CH2/CH/C andsinglebond palette; no targetslottemplate or preanswerstructure.",
+    "Add andmovegroups bydragorclick; bondtool connects explicitly selectedtwo groups, withdirectdrag equivalent whereclear. Allinteractionshaveclick/keyboardpath; noTabinstruction.",
+    "Select/removegroupor bond, dragplacedgroupoutsideboardreturns/removes it withincidentbonds, undo lastchange. Clearfeedbackonedit andretaincandidateafterwronganswer.",
+    "Check andOthermolecule, explicitsuccessmessage, readable labels andconnectedbonds nooverlap/clipping. Mobileinstructionscollapse and viewportframingascurrentBuilder, respectuserinterruption/reducedmotion.",
+    "Standalone appearance and separate lesson-like preview shell using samegame. This previewsfutureembedding withouttouchingactivegates/progress."
+  ],
+  "chemistry": [
+    "Fetch existing provenancebacked8MOLrecords, verifies sourcehashes, derive displayednames through unchanged pinned chemistryclient. No separate inverse-nameparser or hand-written namelist.",
+    "New pure bounded graphengine checks oneconnectedacyclic singlebondcarbon graph, valid fixedCHn counts (H+degree=4), no self/duplicateedges/overvalence.",
+    "Grade targettreeisomorphism independentofcoordinates/order/atomIDs/orientation; accept equivalentgraphs and reject sameformula wrongisomers.",
+    "Noneofthese8needs bareCcorrect; keepCavailable asreusabletypeofpiece, donotclaimnewquaternarytargets."
+  ],
+  "verification": [
+    "All8validtargets and reordered/reversednodeIDs; wrongsameformula+sameCHncounts isomer 3methylpentane vs2methylpentane; disconnected/cyclic/invalidlabels/bonds/CH4connections.",
+    "Real add/move/connect/remove/undo/check/retry/roundswitch in desktop/mobile standalone andlesson-preview, piecebankclose/boardfit/labels/resize/dragcancellation andsafeoutside drops.",
+    "Knownvalence correctness andgraphmatch tested separately fromview; ChemistryValidator then freshindependentReviewer of finalfrozenworkingtree, codeanddeliverables."
+  ],
+  "unchanged": [
+    "Noactivewelcome/library/lessonJSON/checkpoint/currentgames/sharedCSS/core/viewerdatachanges forprototype.",
+    "No commit,push,publication orautomaticintegration.",
+    "KeepcurrentGUIFirefox36690andpersonal29197, no extraparallelGUIbrowsers."
+  ],
+  "existingReadOnlyDependencies": [
+    "games/data/alkane-structures.json",
+    "js/namelecule-chemistry-client.js",
+    "js/namelecule-chemistry-worker.js",
+    "js/jsme-nick-nomeclature-moc2-data_55.js",
+    "games/name-repair.html",
+    "css/namelecule-repair-round.css",
+    "css/namelecule-quiz-checkpoints.css"
+  ],
+  "laterWork": "Afteruseracceptsprototype+logo, planreviewedthirdgame integration intoalkanechoices with3correctmolecules andexistingprogress/optionalpractice safeguards.",
+  "coreChangesPlanned": false
+}

@@ -1,0 +1,516 @@
+{
+  "checks": [
+    {
+      "label": "Builder verified/native ready",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "genuine lesson load available",
+      "passed": true,
+      "detail": {
+        "channel": "namelecule-builder-lesson-v1",
+        "session": "0ub9c7i020p82d1l7s3un1urn4mq",
+        "command": "load",
+        "requestId": 1,
+        "attemptId": "builder-alkanes-unbranched-31201801811196972001",
+        "moleculeId": "propane",
+        "round": {
+          "roundId": "lesson-builder-alkanes-unbranched-31201801811196972001-0",
+          "moleculeId": "propane",
+          "correctName": "προπάνιο",
+          "series": "alkanes",
+          "parentLength": 3,
+          "pieces": [
+            {
+              "text": "προπ",
+              "separatorBefore": "",
+              "role": "slot-5"
+            },
+            {
+              "text": "άν",
+              "separatorBefore": "",
+              "role": "slot-6"
+            },
+            {
+              "text": "ιο",
+              "separatorBefore": "",
+              "role": "slot-9"
+            }
+          ],
+          "representations": [
+            "condensed",
+            "expanded",
+            "skeletal",
+            "3d"
+          ],
+          "vocabulary": {
+            "roots": [
+              "μεθ",
+              "αιθ",
+              "προπ",
+              "βουτ",
+              "πεντ"
+            ]
+          }
+        },
+        "bankSeed": "lesson-builder-alkanes-unbranched-31201801811196972001-0:bank",
+        "initialState": {
+          "answer": [],
+          "selected": null,
+          "attempts": 0,
+          "submitted": false,
+          "solved": false
+        },
+        "explanation": "Το «προπ» δηλώνει τα 3 άτομα C της κύριας αλυσίδας. Το «άν» δηλώνει τους απλούς δεσμούς μεταξύ ατόμων C και το «ιο» τη χημική τάξη των υδρογονανθράκων."
+      }
+    },
+    {
+      "label": "lesson load molecule identity",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "rendered tile IDs match genuine seeded bank",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "genuine piece has unused matching tile",
+      "passed": true,
+      "detail": {
+        "text": "προπ",
+        "separatorBefore": "",
+        "role": "slot-5"
+      }
+    },
+    {
+      "label": "genuine piece has unused matching tile",
+      "passed": true,
+      "detail": {
+        "text": "άν",
+        "separatorBefore": "",
+        "role": "slot-6"
+      }
+    },
+    {
+      "label": "genuine piece has unused matching tile",
+      "passed": true,
+      "detail": {
+        "text": "ιο",
+        "separatorBefore": "",
+        "role": "slot-9"
+      }
+    },
+    {
+      "label": "target reachable without test scrolling: #bank-tiles [data-tile-id=\"tile-1hv6phq-0\"]",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "x": 812,
+        "y": 707,
+        "localX": 628.8833084106445,
+        "localY": 533.9833374023438,
+        "fullyVisible": true,
+        "usable": {
+          "left": 161,
+          "top": 121.83332824707031,
+          "right": 1339,
+          "bottom": 987
+        },
+        "bounds": {
+          "left": 769.0999755859375,
+          "top": 680.4666748046875,
+          "right": 854.6666412353516,
+          "bottom": 733.4666748046875
+        },
+        "frames": [
+          {
+            "width": 1134,
+            "height": 883,
+            "scrollY": 0
+          },
+          {
+            "width": 1500,
+            "height": 1000,
+            "scrollY": 0
+          }
+        ],
+        "dialogScrollTop": 187.64999389648438
+      }
+    },
+    {
+      "label": "target reachable without test scrolling: #nlQuizBack",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "x": 1227,
+        "y": 85,
+        "localX": 1226.7082901000977,
+        "localY": 84.83332824707031,
+        "fullyVisible": true,
+        "usable": {
+          "left": 0,
+          "top": 0,
+          "right": 1500,
+          "bottom": 1000
+        },
+        "bounds": {
+          "left": 1134.4166259765625,
+          "top": 62.83332824707031,
+          "right": 1318.9999542236328,
+          "bottom": 106.83332824707031
+        },
+        "frames": [
+          {
+            "width": 1500,
+            "height": 1000,
+            "scrollY": 0
+          }
+        ],
+        "dialogScrollTop": 285.4166564941406
+      }
+    },
+    {
+      "label": "actual Back button returns to theory",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "Builder verified/native ready",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "actual return/reopen resumes exact genuine partial round",
+      "passed": true,
+      "detail": {
+        "before": {
+          "answer": [
+            "tile-1hv6phq-0"
+          ],
+          "bank": [
+            "tile-1hv6phq-1",
+            "tile-1hv6phq-2",
+            "tile-1hv6phq-4",
+            "tile-1hv6phq-5",
+            "tile-1hv6phq-3",
+            "tile-1hv6phq-6"
+          ],
+          "selected": "tile-1hv6phq-0",
+          "focusedId": "tile-1hv6phq-0",
+          "focusedInAnswer": true,
+          "focusedInBank": false,
+          "candidate": "προπ",
+          "feedback": {
+            "hidden": true,
+            "success": false,
+            "text": ""
+          },
+          "load": {
+            "channel": "namelecule-builder-lesson-v1",
+            "session": "0ub9c7i020p82d1l7s3un1urn4mq",
+            "command": "load",
+            "requestId": 1,
+            "attemptId": "builder-alkanes-unbranched-31201801811196972001",
+            "moleculeId": "propane",
+            "round": {
+              "roundId": "lesson-builder-alkanes-unbranched-31201801811196972001-0",
+              "moleculeId": "propane",
+              "correctName": "προπάνιο",
+              "series": "alkanes",
+              "parentLength": 3,
+              "pieces": [
+                {
+                  "text": "προπ",
+                  "separatorBefore": "",
+                  "role": "slot-5"
+                },
+                {
+                  "text": "άν",
+                  "separatorBefore": "",
+                  "role": "slot-6"
+                },
+                {
+                  "text": "ιο",
+                  "separatorBefore": "",
+                  "role": "slot-9"
+                }
+              ],
+              "representations": [
+                "condensed",
+                "expanded",
+                "skeletal",
+                "3d"
+              ],
+              "vocabulary": {
+                "roots": [
+                  "μεθ",
+                  "αιθ",
+                  "προπ",
+                  "βουτ",
+                  "πεντ"
+                ]
+              }
+            },
+            "bankSeed": "lesson-builder-alkanes-unbranched-31201801811196972001-0:bank",
+            "initialState": {
+              "answer": [],
+              "selected": null,
+              "attempts": 0,
+              "submitted": false,
+              "solved": false
+            },
+            "explanation": "Το «προπ» δηλώνει τα 3 άτομα C της κύριας αλυσίδας. Το «άν» δηλώνει τους απλούς δεσμούς μεταξύ ατόμων C και το «ιο» τη χημική τάξη των υδρογονανθράκων."
+          },
+          "scrollY": 0,
+          "answerScrollLeft": 0
+        },
+        "after": {
+          "answer": [
+            "tile-1hv6phq-0"
+          ],
+          "bank": [
+            "tile-1hv6phq-1",
+            "tile-1hv6phq-2",
+            "tile-1hv6phq-4",
+            "tile-1hv6phq-5",
+            "tile-1hv6phq-3",
+            "tile-1hv6phq-6"
+          ],
+          "selected": "tile-1hv6phq-0",
+          "focusedId": null,
+          "focusedInAnswer": false,
+          "focusedInBank": false,
+          "candidate": "προπ",
+          "feedback": {
+            "hidden": true,
+            "success": false,
+            "text": ""
+          },
+          "load": {
+            "channel": "namelecule-builder-lesson-v1",
+            "session": "00r51uk1jrl2nq0ytdc6k04059sc",
+            "command": "load",
+            "requestId": 1,
+            "attemptId": "builder-alkanes-unbranched-31201801811196972001",
+            "moleculeId": "propane",
+            "round": {
+              "roundId": "lesson-builder-alkanes-unbranched-31201801811196972001-0",
+              "moleculeId": "propane",
+              "correctName": "προπάνιο",
+              "series": "alkanes",
+              "parentLength": 3,
+              "pieces": [
+                {
+                  "text": "προπ",
+                  "separatorBefore": "",
+                  "role": "slot-5"
+                },
+                {
+                  "text": "άν",
+                  "separatorBefore": "",
+                  "role": "slot-6"
+                },
+                {
+                  "text": "ιο",
+                  "separatorBefore": "",
+                  "role": "slot-9"
+                }
+              ],
+              "representations": [
+                "condensed",
+                "expanded",
+                "skeletal",
+                "3d"
+              ],
+              "vocabulary": {
+                "roots": [
+                  "μεθ",
+                  "αιθ",
+                  "προπ",
+                  "βουτ",
+                  "πεντ"
+                ]
+              }
+            },
+            "bankSeed": "lesson-builder-alkanes-unbranched-31201801811196972001-0:bank",
+            "initialState": {
+              "answer": [
+                "tile-1hv6phq-0"
+              ],
+              "selected": "tile-1hv6phq-0",
+              "attempts": 0,
+              "submitted": false,
+              "solved": false
+            },
+            "explanation": "Το «προπ» δηλώνει τα 3 άτομα C της κύριας αλυσίδας. Το «άν» δηλώνει τους απλούς δεσμούς μεταξύ ατόμων C και το «ιο» τη χημική τάξη των υδρογονανθράκων."
+          },
+          "scrollY": 0,
+          "answerScrollLeft": 0
+        }
+      }
+    },
+    {
+      "label": "actual Back/reopen preserves complete recorded round/progress evidence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "gesture geometry target exists: #check-answer",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "selector": "#check-answer",
+        "local": {
+          "x": 647.5999755859375,
+          "y": 874.7833251953125
+        },
+        "global": {
+          "x": 831,
+          "y": 950
+        },
+        "rect": {
+          "left": 575.0999755859375,
+          "top": 850.7833251953125,
+          "right": 720.0999755859375,
+          "bottom": 898.7833251953125,
+          "width": 145,
+          "height": 48
+        },
+        "globalRect": {
+          "left": 758.0999755859375,
+          "right": 903.0999755859375,
+          "top": 925.9999847412109,
+          "bottom": 973.9999847412109,
+          "width": 145,
+          "height": 48
+        },
+        "insideGame": true,
+        "visibleGame": true,
+        "globalInside": true,
+        "reason": null,
+        "hit": {
+          "tag": "BUTTON",
+          "id": "check-answer",
+          "tileId": null,
+          "inAnswer": false,
+          "inBank": false
+        },
+        "topHit": {
+          "tag": "IFRAME",
+          "id": null,
+          "tileId": null,
+          "inAnswer": false,
+          "inBank": false
+        },
+        "selectorHit": true,
+        "gameViewport": {
+          "width": 1134,
+          "height": 981,
+          "scrollX": 0,
+          "scrollY": 0
+        },
+        "topViewport": {
+          "width": 1500,
+          "height": 1000
+        },
+        "frames": [
+          {
+            "x": 830.5999755859375,
+            "y": 949.9999847412109,
+            "left": 183,
+            "top": 75.21665954589844,
+            "scaleX": 1,
+            "scaleY": 1,
+            "width": 1500,
+            "height": 1000,
+            "hit": {
+              "tag": "IFRAME",
+              "id": null,
+              "tileId": null,
+              "inAnswer": false,
+              "inBank": false
+            },
+            "expectedFrameId": null,
+            "visible": true
+          }
+        ]
+      }
+    },
+    {
+      "label": "reopened partial round automatically frames usable check",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "solved": [],
+  "conditions": "Actual native viewer and canonical engine in owned headless Firefox. Navigation helpers may scroll lesson navigation; all Builder construction/check controls use trusted pointer/keyboard input with no test scrolling or DOM focus.",
+  "phase": "resume-only",
+  "sourceSHA256": {
+    "games/name-builder.html": "99069718d24ccbeafdc5ab70cb77c77844338ba9b42865e2b2be1fa3c30e0073",
+    "css/namelecule-name-builder.css": "6d6a4cf6a30b21757b26ebf1ab7df82aff79034afe4207cfda349ec76b383fde",
+    "js/namelecule-game-choice-checkpoint.js": "48ad7ff15c998642cd1fd8eb75acc9371da470575c0deb2b6676bdd469fe4299",
+    "mulermoc-nom-54.html": "267bfd57243e64ba7c85a2c27d770500e4497e39efa4bf3876d5888782f828f1",
+    "mulermoc-nom-55.html": "2056b8b341be0ca014f1fe533d273ba7113139d0f429eef50cad1d06e7ed1050",
+    "design/welcome-proposal.html": "0228bff73c85cc47a45f15c75a66a9eb34f74ab1facdbd2677a80ebd565b83c7",
+    "js/namelecule-name-builder.js": "2e0cffbc5b9ab59a2ac8daf942b7853eab88db8f29c29a55bf68c49d3e2e3000",
+    "js/namelecule-name-builder-engine.js": "1c7e477325ae07b02d5218ef0833236f95eade7b6003a3aa07545f91b414f8a2",
+    "games/name-builder-viewer.html": "2fb40724a061e59ff97cf6e2eebc8f05fb233f08b236e013aba3f429d2e7aa51",
+    "scenarios/alkanes-user-3.scenario.json": "b9e2a61183385a8fee70d17f715c018b1bc261448821a4d286a7dd3322cce2b4",
+    "js/mulermoc-nom-core-43.js": "93373c8ea49d6489350c4c7eee36d444b0f6ff5c13c500aa9662d4997575ac21",
+    "js/mulermoc-nom-core-42.js": "a7b95d7fd9eb8589c2f441205ddd3751bd6da9bf9834fa60d9a5b5d2d2aa2b83",
+    "js/mulermoc-nom-core-52.js": "d2138418ff630ab77e578b80ca8ba3a10cc1b877c3ab8c0e5c2735ffcd1f24a2",
+    "js/mulermoc-nom-core-49.js": "ae85dd22b94292ed539ff2a858a1a6fe3672af90298662e5c6860fb411a65951",
+    "js/mulermoc-nom-core-48.js": "37dad911ed73af0768fc922186cb94e71df7df1144b2c1e75aee4c9202ce6c0d",
+    "js/mulermoc-nom-core-45.js": "dde5fb6350a0374e1ebda69e0870cbfce0bbed027b8219f33bc4de3c4cf9ae74",
+    "js/mulermoc-nom-core-55.js": "6cbdbd0ce60f5d66ff3e6925cdfd48e470764baa02b6263f325eff356df5e270",
+    "js/mulermoc-nom-core-51.js": "096d617853646de0dfd67bcbde3e32252aebcb98e7525b05e6f7e71ccb48a5fc",
+    "js/mulermoc-nom-core-50.js": "0f79b5af20b9c3b4504673876abc03b6c162af316c33dff55fd55e0c22a43fd9",
+    "js/mulermoc-nom-core-44.js": "3bb8773be785992ec581d4cdd11a58a6bb5a833ed429ae07287839b436e523e1",
+    "js/mulermoc-nom-core-54.js": "8f3e5f76d96322faf7cf9251f4cae3eca204fe2f82bf5754fdce6ffc4cd5d5a9",
+    "js/namelecule-quiz-checkpoints.js": "f52d83aecc582f3214db022a076fbb82af1f187588eccf16d5756a030d67785b"
+  },
+  "resumed": {
+    "moleculeId": "propane",
+    "answerIDs": [
+      "tile-1hv6phq-0"
+    ],
+    "recordUnchanged": true
+  },
+  "completed": true,
+  "javascriptErrors": [],
+  "consoleWarningsAndErrors": [],
+  "httpErrors": [
+    {
+      "code": 404,
+      "path": "/favicon.ico",
+      "message": "File not found"
+    }
+  ],
+  "warningProvenance": "Subscribed page console warnings/errors and Firefox stderr are separate evidence. Firefox stderr has no timestamps; no shutdown attribution is inferred for any warning or timeout.",
+  "sourceUnchangedDuringRun": {
+    "games/name-builder.html": true,
+    "css/namelecule-name-builder.css": true,
+    "js/namelecule-game-choice-checkpoint.js": true,
+    "mulermoc-nom-54.html": true,
+    "mulermoc-nom-55.html": true,
+    "design/welcome-proposal.html": true,
+    "js/namelecule-name-builder.js": true,
+    "js/namelecule-name-builder-engine.js": true,
+    "games/name-builder-viewer.html": true,
+    "scenarios/alkanes-user-3.scenario.json": true,
+    "js/mulermoc-nom-core-43.js": true,
+    "js/mulermoc-nom-core-42.js": true,
+    "js/mulermoc-nom-core-52.js": true,
+    "js/mulermoc-nom-core-49.js": true,
+    "js/mulermoc-nom-core-48.js": true,
+    "js/mulermoc-nom-core-45.js": true,
+    "js/mulermoc-nom-core-55.js": true,
+    "js/mulermoc-nom-core-51.js": true,
+    "js/mulermoc-nom-core-50.js": true,
+    "js/mulermoc-nom-core-44.js": true,
+    "js/mulermoc-nom-core-54.js": true,
+    "js/namelecule-quiz-checkpoints.js": true
+  }
+}

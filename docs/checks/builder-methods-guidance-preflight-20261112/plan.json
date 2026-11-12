@@ -1,0 +1,71 @@
+{
+  "recordedUTC": "2026-11-12T05:52:41.024122+00:00",
+  "status": "read-only-plan-awaits-user-approval",
+  "request": "User supplied comprehensive explicit instructions for addition/reorder/removal in Builder.",
+  "proposedWording": [
+    {
+      "label": "Προσθήκη",
+      "text": "Σύρε το εικονίδιο στο πλαίσιο ή κάνε κλικ επάνω του."
+    },
+    {
+      "label": "Αλλαγή σειράς",
+      "text": "Σύρε το εικονίδιο στη σωστή θέση μέσα στο πλαίσιο ή επίλεξέ το με κλικ και χρησιμοποίησε τα κουμπιά «Αριστερά»–«Δεξιά» ή τα πλήκτρα ← →."
+    },
+    {
+      "label": "Αφαίρεση",
+      "text": "Σύρε και άφησε το εικονίδιο έξω από το πλαίσιο ή επίλεξέ το με κλικ και πάτησε «Αφαίρεση» ή Delete."
+    }
+  ],
+  "presentation": "Three distinct readable rows with bold action labels, existing accessible hint reference preserved; no Tab instruction. Shared standalone/embedded lesson.",
+  "applicationPaths": [
+    "games/name-builder.html",
+    "css/namelecule-name-builder.css",
+    "js/namelecule-game-choice-checkpoint.js",
+    "mulermoc-nom-54.html",
+    "mulermoc-nom-55.html",
+    "design/welcome-proposal.html"
+  ],
+  "sourceSHA256": {
+    "games/name-builder.html": "c81cf117b70feab5cff44aefeba0b87d477a01441766995edc5e63c404da3c04",
+    "css/namelecule-name-builder.css": "9df7a55e438d55ffbe6621c789fbbc280b74c3bef9e03ff250191cd7a89381bd",
+    "js/namelecule-game-choice-checkpoint.js": "83cf7c307bcfe75c8ef4ac6a2ccad59ac304b2849a49bdbd01148103aeab741e",
+    "mulermoc-nom-54.html": "09c3abd285165860141eabfaefa62e8185230da8f4b9f375c3544c9009b19f00",
+    "mulermoc-nom-55.html": "abab43ae4d83057a2b6d449ec25c2857bb2b55ad56b90645b5a51406372b752f",
+    "design/welcome-proposal.html": "32db1e4ab2af1f9036d34e136231c497825589faff5ac39a9e4ce94fcdaa0e03"
+  },
+  "protectedBaselineSHA256": {
+    "js/namelecule-name-builder-engine.js": "1c7e477325ae07b02d5218ef0833236f95eade7b6003a3aa07545f91b414f8a2",
+    "games/name-builder-viewer.html": "2fb40724a061e59ff97cf6e2eebc8f05fb233f08b236e013aba3f429d2e7aa51",
+    "scenarios/alkanes-user-3.scenario.json": "b9e2a61183385a8fee70d17f715c018b1bc261448821a4d286a7dd3322cce2b4",
+    "js/mulermoc-nom-core-43.js": "93373c8ea49d6489350c4c7eee36d444b0f6ff5c13c500aa9662d4997575ac21",
+    "js/mulermoc-nom-core-42.js": "a7b95d7fd9eb8589c2f441205ddd3751bd6da9bf9834fa60d9a5b5d2d2aa2b83",
+    "js/mulermoc-nom-core-52.js": "d2138418ff630ab77e578b80ca8ba3a10cc1b877c3ab8c0e5c2735ffcd1f24a2",
+    "js/mulermoc-nom-core-49.js": "ae85dd22b94292ed539ff2a858a1a6fe3672af90298662e5c6860fb411a65951",
+    "js/mulermoc-nom-core-48.js": "37dad911ed73af0768fc922186cb94e71df7df1144b2c1e75aee4c9202ce6c0d",
+    "js/mulermoc-nom-core-45.js": "dde5fb6350a0374e1ebda69e0870cbfce0bbed027b8219f33bc4de3c4cf9ae74",
+    "js/mulermoc-nom-core-55.js": "6cbdbd0ce60f5d66ff3e6925cdfd48e470764baa02b6263f325eff356df5e270",
+    "js/mulermoc-nom-core-51.js": "096d617853646de0dfd67bcbde3e32252aebcb98e7525b05e6f7e71ccb48a5fc",
+    "js/mulermoc-nom-core-50.js": "0f79b5af20b9c3b4504673876abc03b6c162af316c33dff55fd55e0c22a43fd9",
+    "js/mulermoc-nom-core-44.js": "3bb8773be785992ec581d4cdd11a58a6bb5a833ed429ae07287839b436e523e1",
+    "js/mulermoc-nom-core-54.js": "8f3e5f76d96322faf7cf9251f4cae3eca204fe2f82bf5754fdce6ffc4cd5d5a9",
+    "js/namelecule-quiz-checkpoints.js": "f52d83aecc582f3214db022a076fbb82af1f187588eccf16d5756a030d67785b"
+  },
+  "interactionJSBaseline": {
+    "js/namelecule-name-builder.js": "4b851548731c8f2164c395ccdb84f9357c53ea3008a81bf52f58bedd03007f3a"
+  },
+  "baseCommit": "168e3cec01f941a84d40bbe0dc07156e7baa35d0",
+  "gitIndexSHA256": "25c212236906eff396f0a3521653f16eea1f5d57dfc5e32ba4477ad25930f964",
+  "investigation": [
+    "Current helper omits click/keyboard alternatives and explicit dragreorder; screenshot and sharedHTML match.",
+    "ReadonlyExplorer confirmed focus after tileclick/reorder supports arrows/Delete. Clicking alreadyselected tile togglesoff: use select-by-click wording.",
+    "Reorder requires releasewithinanswerbox; removal requires releaseoutside onvalidvisiblegamesurface."
+  ],
+  "verificationPlan": [
+    "Exact text and IDs/ARIA; no handler/answer/progress/core changes.",
+    "Real standalone and embedded desktop/small-screen checks for row readability/overflow and useful next-content reveal, especially increased instructionheight.",
+    "Representative click/drag/reorder/remove methods and preserved completion/progress; independent scoped Reviewer."
+  ],
+  "sourceEdited": false,
+  "coreChanged": false,
+  "approvalRule": "AGENTS.md:67-70 requires concrete plan approval before code intervention."
+}

@@ -1,0 +1,106 @@
+{
+  "checks": [
+    {
+      "label": "target reachable without test scrolling: #rotatePromptDismiss",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "x": 195,
+        "y": 465,
+        "localX": 194.99166870117188,
+        "localY": 465.2833251953125,
+        "fullyVisible": true,
+        "usable": {
+          "left": 0,
+          "top": 0,
+          "right": 390,
+          "bottom": 760
+        },
+        "bounds": {
+          "left": 117.5,
+          "top": 447.7833251953125,
+          "right": 272.48333740234375,
+          "bottom": 482.7833251953125
+        },
+        "frames": [
+          {
+            "width": 390,
+            "height": 760,
+            "scrollY": 0
+          }
+        ],
+        "dialogScrollTop": null
+      }
+    },
+    {
+      "label": "Existing portrait prompt dismissed by trusted user action",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "Builder verified/native ready",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "target reachable without test scrolling: #rotatePromptDismiss",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "x": 195,
+        "y": 465,
+        "localX": 194.99166870117188,
+        "localY": 465.2833251953125,
+        "fullyVisible": true,
+        "usable": {
+          "left": 0,
+          "top": 0,
+          "right": 390,
+          "bottom": 760
+        },
+        "bounds": {
+          "left": 117.5,
+          "top": 447.7833251953125,
+          "right": 272.48333740234375,
+          "bottom": 482.7833251953125
+        },
+        "frames": [
+          {
+            "width": 390,
+            "height": 760,
+            "scrollY": 186
+          }
+        ],
+        "dialogScrollTop": null
+      }
+    },
+    {
+      "label": "Existing portrait prompt dismissed by trusted user action",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "solved": [],
+  "conditions": "Actual production UI/native viewer and canonical chemistry. Builder actions use trusted input with NO test scrolling/focus. Navigation/game selection and unchanged Workshop smoke use existing setup helpers.",
+  "mode": "remaining",
+  "sourceSHA256": {
+    "games/name-builder.html": "cd4180131bb998216be2610c8291c13e7da8582e1e5594a9aeb03ace50d0812a",
+    "css/namelecule-name-builder.css": "9df7a55e438d55ffbe6621c789fbbc280b74c3bef9e03ff250191cd7a89381bd",
+    "js/namelecule-name-builder.js": "4b851548731c8f2164c395ccdb84f9357c53ea3008a81bf52f58bedd03007f3a",
+    "js/namelecule-game-choice-checkpoint.js": "bf6694ccb03dd50737d4a56ae9c4df4e20357aed9fc9579a8e0a3ae7fdcca381",
+    "mulermoc-nom-54.html": "c3320a10efe774583d5f8065d59478845d63151a02565958e179c79069aced68",
+    "mulermoc-nom-55.html": "e93beea313b8e7a4353dff90ff762026c0e9ce3414c375c330360e0e40ef3707",
+    "design/welcome-proposal.html": "586195b1acc15a7a9466faa1d71fa10adc51ef8d96faae46a7a604bd4e0ad879"
+  },
+  "failure": "Traceback (most recent call last):\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/builder-placement-controls-20261112/browser/flow.py\", line 113, in <module>\n    call('browsingContext.reload',{'context':ctx,'wait':'complete'});ready();dismiss_orientation();install_scroll_trace();open_gate();builder_ready()\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/builder-placement-controls-20261112/browser/flow.py\", line 28, in install_scroll_trace\n    ev('''(() => {const d=document.getElementById('nlQuizDialog'),original=d.scrollTo;\n  File \"owned-name-builder-bidi\", line 43, in ev\n    OUT.setdefault('geometry',[]).append({'label':label,'data':data,'dialogScrollTop':read('document.getElementById(\"nlQuizDialog\").scrollTop')})\nRuntimeError: {'columnNumber': 65, 'exception': {'type': 'error'}, 'lineNumber': 0, 'stackTrace': {'callFrames': [{'columnNumber': 65, 'functionName': '', 'lineNumber': 0, 'url': 'http://127.0.0.1:64790/mulermoc-nom-55.html?scenario=scenarios/alkanes-user-3.scenario.json&present=1&from=theory-library#step=4'}, {'columnNumber': 19, 'functionName': '', 'lineNumber': 3, 'url': 'http://127.0.0.1:64790/mulermoc-nom-55.html?scenario=scenarios/alkanes-user-3.scenario.json&present=1&from=theory-library#step=4'}]}, 'text': 'TypeError: can\\'t access property \"scrollTo\", d is null'}\n",
+  "javascriptErrors": [],
+  "sourceUnchangedDuringRun": {
+    "games/name-builder.html": true,
+    "css/namelecule-name-builder.css": true,
+    "js/namelecule-name-builder.js": true,
+    "js/namelecule-game-choice-checkpoint.js": true,
+    "mulermoc-nom-54.html": true,
+    "mulermoc-nom-55.html": true,
+    "design/welcome-proposal.html": true
+  }
+}

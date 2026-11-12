@@ -1,0 +1,34 @@
+{
+  "recordedUTC": "2026-11-12T07:51:46.742385+00:00",
+  "reviewer": "/root/review_molecular_puzzle",
+  "role": "NAMELECULE_REVIEWER_V1_20261023",
+  "scope": "Targeted MP-R1/MP-R2 correction review, separate from first66path review. Developer transcription of returned Reviewer report.",
+  "manifestSHA256": "8078f48b5cd592444721a9505945d767ea202c453f1470ba66a055cca615df52",
+  "targetPaths": 22,
+  "protectedPaths": 29,
+  "hashMismatches": 0,
+  "findings": {
+    "MP-R1": "closed: exact existing font URL registered in both documents; supplied actual fontface/glyph evidence inspected",
+    "MP-R2": "closed: simultaneous fit and whole-candidate packing including resize/undo/solved;388independentinmemorychecks preservegraph andstableframing"
+  },
+  "newActionableFindings": [],
+  "independentChecks": [
+    "22target+29protected hashes twice",
+    "Actual extractedframefunctions388inmemorychecks including original10piecereproduction and1..32pieces across4boardgeometries",
+    "Read CSS/preview fontdependency diffs and inspected actualsupplied font/resizePNG and harness"
+  ],
+  "suppliedNotIndependentlyExecuted": [
+    "Before41 browserchecks",
+    "After84targetedbrowserchecks",
+    "Final244UI+92enginebrowserchecks",
+    "ChemistryValidator225inmemoryassertions"
+  ],
+  "browserReplayedByReviewer": false,
+  "filesWrittenByReviewer": false,
+  "limitations": [
+    "External GoogleFonts exact typography dependency",
+    "Nativepicker/nativeOS/pen/outsidebrowser/conferencemachine notqualified",
+    "Learnercontrolledgeometry mayhavearbitrarylinecrossings",
+    "No live lessonintegration/progressunlock/publication"
+  ]
+}

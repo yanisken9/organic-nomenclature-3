@@ -1,0 +1,342 @@
+{
+  "completedUTC": "2026-11-11T16:18:59.437492+00:00",
+  "userAcceptedVisualResult": true,
+  "acceptanceMessage": "User said the result looks good while final records were being completed.",
+  "changedAppFiles": [
+    "css/namelecule-name-builder.css",
+    "css/namelecule-quiz-checkpoints.css",
+    "games/name-builder.html",
+    "js/namelecule-game-choice-checkpoint.js",
+    "mulermoc-nom-54.html",
+    "mulermoc-nom-55.html"
+  ],
+  "rootCause": "Earlier title-only CSS in parent document did not style the Builder objective andinstructions inside its independent iframe. Responsive conditions also queried different viewport widths.",
+  "behavior": "Builder lesson objective24px/20px at available760px,700,1.45,max810;secondary11.52/12px,400,1.6. Workshop game-choice query uses existing named allocation container,matching iframeviewport. Existing sharedtitles/logos retained.",
+  "actualBeforeAndAfter": {
+    "typographyAcceptancePassed": true,
+    "comparisonPassed": true,
+    "before": {
+      "checks": 11,
+      "samples": [
+        {
+          "game": "builder",
+          "outerWidth": 1500,
+          "allocation": 1134,
+          "objective": "16.8px",
+          "objectiveWeight": "750",
+          "secondary": "14.0833px"
+        },
+        {
+          "game": "builder",
+          "outerWidth": 800,
+          "allocation": 730,
+          "objective": "16.8px",
+          "objectiveWeight": "750",
+          "secondary": "14.0833px"
+        },
+        {
+          "game": "repair",
+          "outerWidth": 1500,
+          "allocation": 1134,
+          "objective": "24px",
+          "objectiveWeight": "700",
+          "secondary": "11.5167px"
+        },
+        {
+          "game": "repair",
+          "outerWidth": 800,
+          "allocation": 730,
+          "objective": "24px",
+          "objectiveWeight": "700",
+          "secondary": "11.5167px"
+        }
+      ],
+      "evidence": "before-results.json; four real before PNGs; all six overridden HTTP files matched frozen SHA256"
+    },
+    "after": {
+      "exactWidthPairs": [
+        {
+          "width": 1500,
+          "allocation": 1134,
+          "objective": "24px",
+          "secondary": "11.5167px"
+        },
+        {
+          "width": 850,
+          "allocation": 780,
+          "objective": "24px",
+          "secondary": "11.5167px"
+        },
+        {
+          "width": 830,
+          "allocation": 760,
+          "objective": "20px",
+          "secondary": "12px"
+        },
+        {
+          "width": 800,
+          "allocation": 730,
+          "objective": "20px",
+          "secondary": "12px"
+        },
+        {
+          "width": 768,
+          "allocation": 698,
+          "objective": "20px",
+          "secondary": "12px"
+        },
+        {
+          "width": 760,
+          "allocation": 690,
+          "objective": "20px",
+          "secondary": "12px"
+        },
+        {
+          "width": 650,
+          "allocation": 608,
+          "objective": "20px",
+          "secondary": "12px"
+        },
+        {
+          "width": 390,
+          "allocation": 348,
+          "objective": "20px",
+          "secondary": "12px"
+        },
+        {
+          "width": 320,
+          "allocation": 278,
+          "objective": "20px",
+          "secondary": "12px"
+        }
+      ],
+      "matchingFields": [
+        "fontFamily",
+        "fontSize",
+        "fontWeight",
+        "lineHeight",
+        "letterSpacing"
+      ],
+      "objectiveMaxWidth": "810px both games",
+      "secondaryAlignment": "Kept original intentional alignment; not part of font equality.",
+      "records": "diagnostic-whole-object-restore-results.json (all width/type/layout/flow checks before the known harness overconstraint are retained)",
+      "pairedShots": {
+        "builder": {
+          "file": "builder-desktop.png",
+          "moleculeId": "ethane",
+          "viewport": [
+            1500,
+            1000
+          ]
+        },
+        "repair": {
+          "file": "workshop-desktop.png",
+          "moleculeId": "butane",
+          "viewport": [
+            1500,
+            1000
+          ]
+        }
+      }
+    },
+    "fonts": [
+      {
+        "label": "Current Builder parent+iframe",
+        "parent": {
+          "status": "loaded",
+          "readyWithin3s": true,
+          "checks": {
+            "roboto70040": true,
+            "system70024": true
+          },
+          "registeredRobotoCondensedFaces": 126,
+          "loadedRobotoCondensedFaces": 8,
+          "loadedFamilies": [
+            "\"Source Sans 3\"",
+            "Roboto",
+            "Roboto Condensed"
+          ],
+          "fontResourceCount": 24
+        },
+        "iframe": {
+          "status": "loaded",
+          "readyWithin3s": true,
+          "checks": {
+            "roboto70040": true,
+            "system70024": true
+          },
+          "registeredRobotoCondensedFaces": 0,
+          "loadedRobotoCondensedFaces": 0,
+          "loadedFamilies": [],
+          "fontResourceCount": 0
+        }
+      },
+      {
+        "label": "Current Workshop parent",
+        "parent": {
+          "status": "loaded",
+          "readyWithin3s": true,
+          "checks": {
+            "roboto70040": true,
+            "system70024": true
+          },
+          "registeredRobotoCondensedFaces": 126,
+          "loadedRobotoCondensedFaces": 8,
+          "loadedFamilies": [
+            "\"Source Sans 3\"",
+            "Roboto",
+            "Roboto Condensed"
+          ],
+          "fontResourceCount": 24
+        },
+        "iframe": null
+      }
+    ],
+    "fontLimits": "Parent FontFaceSet registered/loaded Roboto Condensed faces are measured. Objectives/secondary text use system-ui in both games; iframe has zero registered webfont faces. FontFaceSet.check can succeed via fallback and alone does not prove a specific font. External font service/network availability remains a dependency for parent webfonts. Initial before font probe serialized its Promise as empty objects; no before font-loading claim is made. Corrected after font evidence includes actual awaited FontFaceSets.",
+    "nativeReplay": {
+      "originalPartialCompletions": 4,
+      "diagnosticRepeatCompletions": 4,
+      "finalReplayCompletions": [
+        {
+          "game": "builder",
+          "moleculeId": "pentane"
+        },
+        {
+          "game": "builder",
+          "moleculeId": "methane"
+        },
+        {
+          "game": "builder",
+          "moleculeId": "ethane"
+        },
+        {
+          "game": "repair",
+          "moleculeId": "ethyl_3_dimethyl_2_5_hexane"
+        },
+        {
+          "game": "repair",
+          "moleculeId": "methyl_2_pentane"
+        },
+        {
+          "game": "repair",
+          "moleculeId": "dimethyl_2_3_butane"
+        }
+      ],
+      "finalReplayCompletedChecks": 39,
+      "finalReplayInterrupted": "Parent instructed stop. Exact owned replay received SIGINT after genuine gate4+gate11 triples and corrected semantic restore check had completed, during Main54 readiness. No whole-run PASS is claimed for the interrupted replay.",
+      "scope": "No broad chemistry or 3D retest."
+    },
+    "restoreFinding": {
+      "resolution": "HARNESS OVERCONSTRAINT; no app change",
+      "proof": "diagnostic-future-choice-order-diff.json + offline-restore-check.json (7 checks) + existing restoreFromCache source",
+      "behavior": "Only untouched future third-round choiceOrder regenerated. Seed, currentRound, completed/current saved answer, attempts, submitted/solved state and order stayed exact. Existing generator intentionally resets future states after first unsolved round.",
+      "firstRunLimit": "The first failure did not capture field-level diff; the targeted repeat did.",
+      "correctedLiveCheck": "remaining-results.json restore.semanticDiff is empty after excluding only the permutation of a completely untouched future round."
+    },
+    "comparison": {
+      "checks": 10,
+      "HTTP200": 4,
+      "files": [
+        "comparison-desktop.png",
+        "comparison-mobile.png"
+      ]
+    },
+    "status": {
+      "actualReadyAndSuccessTypographyMeasured": true,
+      "explicitLoadingTransitionCaptured": false,
+      "actualErrorFlowExercised": false,
+      "existingErrorColorRuleUnchanged": ".game-status.error{color:var(--error)}",
+      "existingStatusRoleMarkupUnchanged": "<div id=\"game-status\" class=\"game-status\" role=\"status\">",
+      "limit": "No synthetic error bridge or network interception was added. Error and explicit loading-transition behavior remain untested in this unit."
+    },
+    "otherModes": "Main54 runtime check was interrupted during readiness; standalone and legacy runtime continuation was not repeated in this unit. Prior unit evidence exists, and this unit static protected/source checks passed; no new runtime claim is made for these modes.",
+    "sourceSHA256": {
+      "css/namelecule-name-builder.css": "1f26cf7e01a81fe4bc9d8e085dafe47155770826ee3216ffaf65681c768cea13",
+      "css/namelecule-quiz-checkpoints.css": "09a9861c3f420820ab215ebf86f729749b35f59e008f6b7a36fb1d269e86f8dd",
+      "games/name-builder.html": "7bc68ece47a6ba5d50cbab7e28efa55a4f96a5d09f235f35b8c9d23aca2f7f70",
+      "js/namelecule-game-choice-checkpoint.js": "de3f8eb838627dce573869c66c31ef3e8f45c59b38013f8d54f44d0b72af6bfc",
+      "mulermoc-nom-54.html": "dac68af98e8c0b955efdec74843d2a06739d0d6ee03404bff46332f37f20b038",
+      "mulermoc-nom-55.html": "b343aaa2edde8d0f43a5c3e6ff30d91da171a0ae1558880cdf0a392602d609a2"
+    },
+    "protectedAndCoreUnchanged": {
+      "js/mulermoc-nom-core-42.js": true,
+      "js/mulermoc-nom-core-43.js": true,
+      "js/mulermoc-nom-core-44.js": true,
+      "js/mulermoc-nom-core-45.js": true,
+      "js/mulermoc-nom-core-48.js": true,
+      "js/mulermoc-nom-core-49.js": true,
+      "js/mulermoc-nom-core-50.js": true,
+      "js/mulermoc-nom-core-51.js": true,
+      "js/mulermoc-nom-core-52.js": true,
+      "js/mulermoc-nom-core-54.js": true,
+      "js/mulermoc-nom-core-55.js": true,
+      "js/namelecule-name-builder.js": true,
+      "js/namelecule-name-builder-engine.js": true,
+      "js/namelecule-generated-repair-checkpoint.js": true,
+      "js/namelecule-game-repair.js": true,
+      "css/namelecule-repair-round.css": true,
+      "scenarios/alkanes-user-3.scenario.json": true,
+      "games/name-repair.html": true
+    },
+    "jsExceptionsCaptured": 0,
+    "warnings": "Owned Firefox stderr retains internal BiDi WeakMap and molview font-refresh shutdown timeout warnings. No clean-console or uninterrupted reliability guarantee.",
+    "cleanup": {
+      "serverPID": 23969,
+      "firefoxPID": 23972,
+      "identityGuardsPassed": true,
+      "serverExited": true,
+      "firefoxExited": true,
+      "scope": "Only owned headless and its server; no personal or user-facing GUI browser control.",
+      "closedHTTPPorts": {
+        "58284": true,
+        "58283": true
+      }
+    },
+    "agentWriteScope": "Only this new browser/ harness/evidence; app/core/JSON/Git/notes and previous evidence were not edited."
+  },
+  "independentReview": {
+    "reviewer": "/root/review_game_header_text_parity",
+    "role": "NAMELECULE_REVIEWER_V1_20261023",
+    "freshContext": true,
+    "behavioralReadOnly": true,
+    "enforcedReadOnlyClaimed": false,
+    "manifestSHA256": "ff1c3655df7501dd4cbfa9bc25b1ca082f1d0a5f7762a8028d51d0f833211aab",
+    "targetHashesVerifiedTwice": 62,
+    "protectedHashesVerifiedTwice": 18,
+    "findings": [],
+    "ownChecks": [
+      "Read AGENTS and REVIEW-CHECKLIST",
+      "Six source snapshots/exact diff,cache-chain andCSS cascade/container scoping",
+      "HEAD/index/hashes start andend",
+      "Recalculated supplied9width typography equality",
+      "Viewed10PNGs before/after/320/comparison/feedback",
+      "HTML references andJSON consistency",
+      "Both detailed restore diffs agree with unchanged future-state-reset source",
+      "Git whitespace check no diagnostics"
+    ],
+    "browserExecution": "Developer evidence, no independent browser execution",
+    "nodeCheck": "Node unavailable; JS delta independently verified as URL string only",
+    "restoreLimit": "First raw failure lacks field-level evidence; its precise cause cannot independently be established. Two later exact diffs identify only untouched future choiceOrder and preserve current/completed state.",
+    "limitations": [
+      "Main54runtime/standalone/legacy continuation andloading/error transitions notcompletedthisunit",
+      "Interrupted replay not a whole-run PASS; actual6final nativecompletions and39checks recorded",
+      "Firefox stderr has internalBiDierrors and timeoutwarnings inrepair lifecycle,molview fontrefresh andJSmolrepaint(browser/firefox.log:94)",
+      "No otherbrowser/touch/offline/conference reliability guarantee",
+      "Chemistry/MOL/SDF/3D/educational-content validation N/A for typography/cache scope"
+    ],
+    "coreUnchanged": 11,
+    "correctionsRequired": false
+  },
+  "postReviewReverified": {
+    "target": 62,
+    "protected": 18,
+    "HEADUnchanged": true,
+    "indexUnchanged": true
+  },
+  "coreChanged": false,
+  "localComparisonURL": "http://127.0.0.1:57115/docs/checks/game-header-text-parity-20261111/comparison.html",
+  "preview": "Dispatched via macOS open to existing Firefox; no new debug/profile process and no window closure requested.",
+  "published": false,
+  "commitOrPush": false,
+  "scopeNote": "Final review/launch/notes records are outside prior frozen target; app andfrozen evidence unchanged. Original failedwhole-object tests are diagnostics, not productregressions proven by those tests."
+}

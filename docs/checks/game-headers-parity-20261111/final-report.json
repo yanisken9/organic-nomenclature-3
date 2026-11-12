@@ -1,0 +1,72 @@
+{
+  "completedUTC": "2026-11-11T15:44:18.533192+00:00",
+  "approvedRequest": "Inside the alkane lesson match Builder TITLE typography to Workshop, center existing Workshop logo above its current heading, and supply actual new two-game comparison. User approved exact 3-file CSS/cache plan.",
+  "changedAppFiles": [
+    "css/namelecule-quiz-checkpoints.css",
+    "mulermoc-nom-54.html",
+    "mulermoc-nom-55.html"
+  ],
+  "behavior": "Embedded Builder and game-choice Workshop titles share Roboto Condensed700,1.12 line height,clamp28.8–40px desktop and28px <=760. Existing Workshop logo centered above current heading,88px/64px <=650; caption and set progress preserved.",
+  "developerChecks": {
+    "parity": 171,
+    "comparison": 10,
+    "genuineUICompletions": 6,
+    "viewportWidths": [
+      1500,
+      768,
+      760,
+      650,
+      390,
+      320
+    ],
+    "coreUnchanged": 11,
+    "otherProtectedUnchanged": 8,
+    "HEADUnchanged": true,
+    "indexUnchanged": true
+  },
+  "independentReview": {
+    "reviewer": "/root/review_game_headers_parity",
+    "role": "NAMELECULE_REVIEWER_V1_20261023",
+    "freshContext": true,
+    "readOnlyBehavioral": true,
+    "enforcedReadOnlyClaimed": false,
+    "manifestSHA256": "06d50cab77edd2164ef80624a2d02e892df6c12c9ada0f12afd0e0e211966f10",
+    "findings": [],
+    "targetFilesVerifiedTwice": 38,
+    "protectedFilesVerifiedTwice": 19,
+    "independentChecks": [
+      "Read AGENTS and REVIEW-CHECKLIST",
+      "Exact snapshot/source diff and3app changes",
+      "HEAD/index and frozen hashes start/end",
+      "Actual DOM/CSS cascade scope",
+      "7HTML references resolve",
+      "PNG CRC/decompression and14screenshots visually inspected",
+      "Stored result consistency and recorded6width title equality"
+    ],
+    "browserExecution": "Developer evidence only; reviewer did not launch browser",
+    "correctionsRequired": false,
+    "limits": [
+      "Actual font face loading not measured; external font service remains dependency",
+      "Firefox raw log includes internal BiDi errors and molview font-refresh timeout warnings",
+      "Other browsers/touch/public/offline/conference not tested",
+      "No chemistry/MOL/SDF/3D/teaching content change; those categories N/A"
+    ],
+    "coreFilesUnchanged": 11
+  },
+  "frozenTargetReverifiedAfterReview": {
+    "target": 38,
+    "protected": 19
+  },
+  "localComparisonURL": "http://127.0.0.1:57115/docs/checks/game-headers-parity-20261111/comparison.html",
+  "externalPreviewOpened": true,
+  "limitations": [
+    "Owned headless Firefox/macOS and local HTTP only; no personal GUI, public deployment, other browser, real touch or conference/offline guarantee.",
+    "Six genuine completions exercise required gate4 Builder and gate11 Workshop; this CSS-only unit does not repeat broad chemistry or 3D regression checks.",
+    "Paired screenshots preserve the games normal independent random seeds; the molecule can differ between games.",
+    "Computed font-family/size/weight/line-height/letter-spacing parity verified; document.fonts actual face loading was not measured before the completed BiDi sessions closed. Availability of the requested font and any external font service remains an operating dependency.",
+    "Firefox stderr retains internal BiDi WeakMap warnings and a molview font-refresh timeout warning during tab shutdown. Zero captured page JavaScript exceptions does not mean a clean stderr or universal reliability."
+  ],
+  "coreChanged": false,
+  "commitPushPublication": false,
+  "scope": "Local only; public release remains earlier state. Informational review/final/launch records are outside prior frozen target; no app/evidence target changed."
+}

@@ -1,0 +1,202 @@
+{
+  "recordedUTC": "2026-11-12T05:43:13.148314+00:00",
+  "userReport": "Known lesson Firefox froze when trying page reload. User confirms browser root opened; exact input route pending clarification.",
+  "target": {
+    "parentPID": 34456,
+    "ownedTemporaryProfile": "/private/tmp/namelecule-builder-preview-20261112-0zgk2gk7",
+    "menuServicePID": 34687,
+    "association": "launchctl print pid/34456 names creator firefox34456 and ThemeWidgetControlViewService34687 in its process domain."
+  },
+  "environment": {
+    "recordedUTC": "2026-11-12T05:40:16.628835+00:00",
+    "rawPrivateDirectory": "/private/tmp/namelecule-firefox-hang-20261112-v0l5ele7",
+    "samplePIDs": [
+      34456,
+      34460,
+      34466,
+      34472
+    ],
+    "actions": "Read-only process sampling. No browser restart or preferences changed.",
+    "FirefoxVersion": "159.0.1",
+    "FirefoxBuild": "15926.11.2",
+    "macOS": "ProductName:\t\tmacOS\nProductVersion:\t\t14.8.9\nBuildVersion:\t\t23J631"
+  },
+  "sourceBaselineSHA256": {
+    "games/name-builder.html": "c81cf117b70feab5cff44aefeba0b87d477a01441766995edc5e63c404da3c04",
+    "js/namelecule-game-choice-checkpoint.js": "83cf7c307bcfe75c8ef4ac6a2ccad59ac304b2849a49bdbd01148103aeab741e",
+    "mulermoc-nom-54.html": "09c3abd285165860141eabfaefa62e8185230da8f4b9f375c3544c9009b19f00",
+    "mulermoc-nom-55.html": "abab43ae4d83057a2b6d449ec25c2857bb2b55ad56b90645b5a51406372b752f",
+    "design/welcome-proposal.html": "32db1e4ab2af1f9036d34e136231c497825589faff5ac39a9e4ce94fcdaa0e03"
+  },
+  "protectedBaselineSHA256": {
+    "js/namelecule-name-builder-engine.js": "1c7e477325ae07b02d5218ef0833236f95eade7b6003a3aa07545f91b414f8a2",
+    "games/name-builder-viewer.html": "2fb40724a061e59ff97cf6e2eebc8f05fb233f08b236e013aba3f429d2e7aa51",
+    "scenarios/alkanes-user-3.scenario.json": "b9e2a61183385a8fee70d17f715c018b1bc261448821a4d286a7dd3322cce2b4",
+    "js/mulermoc-nom-core-43.js": "93373c8ea49d6489350c4c7eee36d444b0f6ff5c13c500aa9662d4997575ac21",
+    "js/mulermoc-nom-core-42.js": "a7b95d7fd9eb8589c2f441205ddd3751bd6da9bf9834fa60d9a5b5d2d2aa2b83",
+    "js/mulermoc-nom-core-52.js": "d2138418ff630ab77e578b80ca8ba3a10cc1b877c3ab8c0e5c2735ffcd1f24a2",
+    "js/mulermoc-nom-core-49.js": "ae85dd22b94292ed539ff2a858a1a6fe3672af90298662e5c6860fb411a65951",
+    "js/mulermoc-nom-core-48.js": "37dad911ed73af0768fc922186cb94e71df7df1144b2c1e75aee4c9202ce6c0d",
+    "js/mulermoc-nom-core-45.js": "dde5fb6350a0374e1ebda69e0870cbfce0bbed027b8219f33bc4de3c4cf9ae74",
+    "js/mulermoc-nom-core-55.js": "6cbdbd0ce60f5d66ff3e6925cdfd48e470764baa02b6263f325eff356df5e270",
+    "js/mulermoc-nom-core-51.js": "096d617853646de0dfd67bcbde3e32252aebcb98e7525b05e6f7e71ccb48a5fc",
+    "js/mulermoc-nom-core-50.js": "0f79b5af20b9c3b4504673876abc03b6c162af316c33dff55fd55e0c22a43fd9",
+    "js/mulermoc-nom-core-44.js": "3bb8773be785992ec581d4cdd11a58a6bb5a833ed429ae07287839b436e523e1",
+    "js/mulermoc-nom-core-54.js": "8f3e5f76d96322faf7cf9251f4cae3eca204fe2f82bf5754fdce6ffc4cd5d5a9",
+    "js/namelecule-quiz-checkpoints.js": "f52d83aecc582f3214db022a076fbb82af1f187588eccf16d5756a030d67785b"
+  },
+  "measurements": {
+    "parentMainThreadFirstSample": {
+      "allSamples": 2438,
+      "zoomMenuSamples": 2438,
+      "nestedMachWaitSamples": 2425
+    },
+    "parentSecondSample": {
+      "allSamples": 1331,
+      "zoomMenuSamples": 1331,
+      "nestedMachWaitSamples": 1319
+    },
+    "GPUAndTwoContentSamples": "Main threads mostly event/condition waits; no demonstrated hot loop in sampled snapshots.",
+    "serviceSample": "2495 main samples ordinary NSViewService event wait, not proof helper itself malfunctioned."
+  },
+  "hypotheses": [
+    "Native zoom-menu routing/modal state involved; exact trigger and durable remedy unproven.",
+    "No sample establishes Namelecule or JSmol as cause; no categorical exoneration of page triggers."
+  ],
+  "rawPrivateEvidence": [
+    {
+      "path": "/private/tmp/namelecule-firefox-hang-20261112-v0l5ele7/34456.sample.txt",
+      "sha256": "a9e318876fe7d9e4ee46b0d708135d563a552968697b394814eafe8d23f4273c"
+    },
+    {
+      "path": "/private/tmp/namelecule-firefox-hang-20261112-v0l5ele7/34456.second.sample.txt",
+      "sha256": "66f5787c894870bd01908ed1c53af0006f50e38f61ebed0abef8ce8d4e30cf02"
+    },
+    {
+      "path": "/private/tmp/namelecule-firefox-hang-20261112-v0l5ele7/34460.sample.txt",
+      "sha256": "befd066b1733440b6ee11dd5260b3a2e609cff778a832f54c1ce7cdfac1f4ab4"
+    },
+    {
+      "path": "/private/tmp/namelecule-firefox-hang-20261112-v0l5ele7/34466.sample.txt",
+      "sha256": "5020b3dd5aef951651df3fb62f0d3c35de34dc41deb1a25fe0ff4592b6ad98af"
+    },
+    {
+      "path": "/private/tmp/namelecule-firefox-hang-20261112-v0l5ele7/34472.sample.txt",
+      "sha256": "3032b14f2878754eff00d79514422481e48cef040deaf35858db62719f84d198"
+    },
+    {
+      "path": "/private/tmp/namelecule-firefox-hang-20261112-v0l5ele7/34687.procinfo.txt",
+      "sha256": "feef84abd63cb0cc1031e880ef12698a74840b6ad8119207c39e30c2921b6f68"
+    },
+    {
+      "path": "/private/tmp/namelecule-firefox-hang-20261112-v0l5ele7/34687.sample.txt",
+      "sha256": "51ab2034435713bd73898203bbfc391d54de9f4a1fc6db5ab730c9c31dbef41c"
+    },
+    {
+      "path": "/private/tmp/namelecule-firefox-hang-20261112-v0l5ele7/launchctl-pid-34456.txt",
+      "sha256": "0f1368de67fad266c5f89741636b8946cde485ea75ce5c872e006ca07ba2e66c"
+    },
+    {
+      "path": "/private/tmp/namelecule-firefox-hang-20261112-v0l5ele7/launchctl-pid-34687.txt",
+      "sha256": "efc5140e603978d3fb6edfc4771cf3244dafa4cf0b287fa56b9c2a0f41eca58c"
+    },
+    {
+      "path": "/private/tmp/namelecule-firefox-hang-20261112-v0l5ele7/metadata.json",
+      "sha256": "89ad774e4498bf9f2e44b80581893994c022f0c60afcdd2ee9590857f46735d1"
+    }
+  ],
+  "plan": "Preserve owned-profile recovery files. Assess scoped dismissal/restart of exact associated menu service as recovery only, then compare inert-page versus lesson and native window-menu behavior before recommending durable environment/app changes. No personal Firefox or system preferences altered.",
+  "appEdited": false,
+  "coreChanged": false,
+  "privateRecoveryCopies": [
+    {
+      "relativePath": "sessionstore-backups/recovery.baklz4",
+      "sha256": "46c6af48982b4a7b8535e57974a14a4ccd3ad2c6f993d53dea0fa6a63065c42b",
+      "bytes": 2350
+    },
+    {
+      "relativePath": "sessionstore-backups/recovery.jsonlz4",
+      "sha256": "010190417a394f89c2ff802a87971f91a7dea6b7d77193adf74c0d73223d8de0",
+      "bytes": 3471
+    },
+    {
+      "relativePath": "prefs.js",
+      "sha256": "b3a1d0d02c1e2023da4942bed285bf035e73dbaec7838457546941c332dd69e4",
+      "bytes": 14677
+    },
+    {
+      "relativePath": "xulstore.json",
+      "sha256": "bebdf45e4e66740ed63adbefcbca3b0c01171913ff4df01ed3c24d33817b1b3f",
+      "bytes": 139
+    },
+    {
+      "relativePath": "webappsstore.sqlite",
+      "sha256": "645b2e2c23a53d763abf3ce4cb02f8f9c59bafc01009dbaa6543bbd6f6716a05",
+      "bytes": 98304
+    },
+    {
+      "relativePath": "webappsstore.sqlite-wal",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    }
+  ],
+  "recoveryLimit": "Live profile recovery files; not a transaction-consistent full backup or guarantee of unsaved text. Intended next recovery does not terminate browser.",
+  "recoveryExperiment": {
+    "recordedUTC": "2026-11-12T05:43:36.178773+00:00",
+    "parentPID": 34456,
+    "identityAndAssociationRechecked": true,
+    "signal": "SIGTERM",
+    "scope": "Only the exact window-menu helper associated with own Firefox. No browser or personal processes terminated. No settings/source changed.",
+    "recoveryOnly": true,
+    "oldServicePresent": true,
+    "sameFirefoxParentPresent": true,
+    "serviceEntryAfter": [
+      "34687      - \tcom.apple.appkit.xpc.ThemeWidgetControlViewService",
+      "0xba1a3    M   A   com.apple.appkit.xpc.ThemeWidgetControlViewService"
+    ],
+    "postSampleHasZoomMenu": false,
+    "signalTargetPID": 34687,
+    "actualServiceTerminationVerified": false,
+    "note": "Helper remained at same PID after SIGTERM; do not describe it as successfully restarted. Same Firefox main stack subsequently lacked zoom-menu frames; user actions concurrent/unknown and UI/reload confirmation pending."
+  },
+  "responseAfterSignal": "Post sample3s contains no nativezoommenu frames, parentPID unchanged. User responsiveness/reload pending. No persistent remedy established.",
+  "memoryObservation": "memory_pressure -Q reported59% system free at measurement, hardware8GB. Does not establish memory conditions at trigger.",
+  "knownWindowUtilityProcessMatches": [],
+  "latestOfficialFirefoxRelease": {
+    "local": "159.0.1",
+    "official": "160.0",
+    "released": "2026-11-10",
+    "source": "https://www.firefox.com/en-US/firefox/160.0/releasenotes/",
+    "matchedSpecificFix": false,
+    "installedOrUpdated": false
+  },
+  "additionalSamples": [
+    {
+      "path": "/private/tmp/namelecule-firefox-hang-20261112-v0l5ele7/34687.sample.txt",
+      "sha256": "51ab2034435713bd73898203bbfc391d54de9f4a1fc6db5ab730c9c31dbef41c"
+    },
+    {
+      "path": "/private/tmp/namelecule-firefox-hang-20261112-v0l5ele7/34456.second.sample.txt",
+      "sha256": "66f5787c894870bd01908ed1c53af0006f50e38f61ebed0abef8ce8d4e30cf02"
+    },
+    {
+      "path": "/private/tmp/namelecule-firefox-hang-20261112-v0l5ele7/34456.after-service.sample.txt",
+      "sha256": "f5476e902421bee48559c3a498e7eb8c43b52c54bc8aa2390602cb277d35cf1e"
+    },
+    {
+      "path": "/private/tmp/namelecule-firefox-hang-20261112-v0l5ele7/service-recovery.json",
+      "sha256": "5211dd4df1b5dd7972987b02e8b2a00cd9510fa1da32244f89e8eccf85c636b5"
+    },
+    {
+      "path": "/private/tmp/namelecule-firefox-hang-20261112-v0l5ele7/launchctl-pid-34456.txt",
+      "sha256": "0f1368de67fad266c5f89741636b8946cde485ea75ce5c872e006ca07ba2e66c"
+    }
+  ],
+  "userValidation": {
+    "recordedUTC": "2026-11-12T05:46:35.754940+00:00",
+    "originalRefresh": "Clicked circular reloadbutton. Prior greenbutton use not answered.",
+    "recovery": "User confirms sameFirefox addressbar responsive and CmdR completed.",
+    "inertPageControl": "User reports new about:blank tab plus2s physical greenbutton hover then move tocenter/addressbar remains functional. Single negative control, not proof of pagecause or fullreproduction."
+  },
+  "actualUIRecoveryConfirmed": true
+}

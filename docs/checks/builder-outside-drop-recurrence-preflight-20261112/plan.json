@@ -1,0 +1,34 @@
+{
+  "recordedUTC": "2026-11-12T06:39:34.228806+00:00",
+  "status": "awaiting-user-approval",
+  "basis": "User wants any released tile outside answer returned to original bank below. Prior approved placement plan limited removal to valid game viewport; new plan extends to same-origin parent page regions within top page viewport.",
+  "intendedBehavior": [
+    "Completed active drag released outside the visible answer frame anywhere in the current page returns the exact placed tile to its original bank order. This includes parent header and surrounding page.",
+    "Keep correct inside-answer placement/reordering and exit-then-reentry.",
+    "Keep bank-origin outside drops unchanged, subthreshold clicks, cancellation/blur/lostcapture and outside-page release safe; no removal without completed drag.",
+    "Use shared Builder logic for standalone and embedded alkane lesson, leaving saved answers/progress/seed/evaluation unchanged."
+  ],
+  "paths": [
+    "js/namelecule-name-builder.js",
+    "games/name-builder.html",
+    "js/namelecule-game-choice-checkpoint.js",
+    "mulermoc-nom-54.html",
+    "mulermoc-nom-55.html",
+    "design/welcome-proposal.html"
+  ],
+  "implementationBoundary": "Decouple actual top-page release validity from visible answer hit testing in common pointer termination, map same-origin frame coordinates including scaling/borders. Keep existing remove/render bank order. Only refresh normal cache entries. No CSS/controller/engine/core/viewer/JSON change.",
+  "verification": [
+    "Repeat exact eight preflight trusted gestures at1280x600 and1500x900: before6passes/2headerfailures; verify bothheaderfailures fixed and originalbankIDorder preserved.",
+    "Representative desktop/phone standalone and embedded add/inside reorder/reentry/remove/bankno-op, cancellation/blur/lostcapture/outside-page handling; distinguish actual events from synthetic handler checks.",
+    "Partial progress refresh, cleared wrong feedback and solved lock; preserve trusted mouse/touch controls and framing.",
+    "Independent fresh Reviewer on exact frozen source/diff/evidence. Verify no core/protected changes and close only owned transient headless test process/server."
+  ],
+  "nonChanges": [
+    "Core/engine/chemistry/representation/viewer/scenarioJSON",
+    "No commit/push/publication",
+    "No closure/restart/new GUI Firefox; preserve36690/personal29197"
+  ],
+  "measuredPreflight": "browser/summary.json",
+  "exactUserPhysicalEndpointConfirmed": false,
+  "preflightSummarySHA256": "626b65d7c8e2b29688674b3d30fb55a89f55f94fc6044210c881d8006faa8f72"
+}

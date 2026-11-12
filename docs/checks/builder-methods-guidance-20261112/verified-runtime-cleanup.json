@@ -1,0 +1,122 @@
+{
+  "recordedUTC": "2026-11-12T06:15:02.195016+00:00",
+  "checks": [
+    {
+      "receipt": "browser/archive-first-phone-regression/layout-cleanup.json",
+      "processes": [
+        {
+          "PID": 35503,
+          "absent": true
+        },
+        {
+          "PID": 35504,
+          "absent": true
+        }
+      ],
+      "ports": [
+        {
+          "port": 49545,
+          "closed": true
+        },
+        {
+          "port": 49544,
+          "closed": true
+        }
+      ]
+    },
+    {
+      "receipt": "browser/layout-cleanup.json",
+      "processes": [
+        {
+          "PID": 35709,
+          "absent": true
+        },
+        {
+          "PID": 35710,
+          "absent": true
+        }
+      ],
+      "ports": [
+        {
+          "port": 49785,
+          "closed": true
+        },
+        {
+          "port": 49784,
+          "closed": true
+        }
+      ]
+    },
+    {
+      "receipt": "browser/flow-cleanup.json",
+      "processes": [
+        {
+          "PID": 35847,
+          "absent": true
+        },
+        {
+          "PID": 35848,
+          "absent": true
+        }
+      ],
+      "ports": [
+        {
+          "port": 50076,
+          "closed": true
+        },
+        {
+          "port": 50074,
+          "closed": true
+        }
+      ]
+    },
+    {
+      "receipt": "browser/embedded-flow-cleanup.json",
+      "processes": [
+        {
+          "PID": 35921,
+          "absent": true
+        },
+        {
+          "PID": 35922,
+          "absent": true
+        }
+      ],
+      "ports": [
+        {
+          "port": 50248,
+          "closed": true
+        },
+        {
+          "port": 50247,
+          "closed": true
+        }
+      ]
+    },
+    {
+      "receipt": "browser/resume-only-cleanup.json",
+      "processes": [
+        {
+          "PID": 35997,
+          "absent": true
+        },
+        {
+          "PID": 35998,
+          "absent": true
+        }
+      ],
+      "ports": [
+        {
+          "port": 50413,
+          "closed": true
+        },
+        {
+          "port": 50412,
+          "closed": true
+        }
+      ]
+    }
+  ],
+  "all7source15protectedUnchanged": true,
+  "scope": "Read-only exact ownedtestPID/port checks. No user/personalbrowsercontrol."
+}

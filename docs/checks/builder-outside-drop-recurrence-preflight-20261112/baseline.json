@@ -1,0 +1,42 @@
+{
+  "recordedUTC": "2026-11-12T06:36:41.086025+00:00",
+  "userRequest": "Placed tile released outside answer should leave answer and return to original bank position below.",
+  "applicationChanged": false,
+  "baselineHEAD": "168e3cec01f941a84d40bbe0dc07156e7baa35d0",
+  "indexSHA256": "25c212236906eff396f0a3521653f16eea1f5d57dfc5e32ba4477ad25930f964",
+  "sourceSHA256": {
+    "games/name-builder.html": "99069718d24ccbeafdc5ab70cb77c77844338ba9b42865e2b2be1fa3c30e0073",
+    "css/namelecule-name-builder.css": "6d6a4cf6a30b21757b26ebf1ab7df82aff79034afe4207cfda349ec76b383fde",
+    "js/namelecule-game-choice-checkpoint.js": "48ad7ff15c998642cd1fd8eb75acc9371da470575c0deb2b6676bdd469fe4299",
+    "mulermoc-nom-54.html": "267bfd57243e64ba7c85a2c27d770500e4497e39efa4bf3876d5888782f828f1",
+    "mulermoc-nom-55.html": "2056b8b341be0ca014f1fe533d273ba7113139d0f429eef50cad1d06e7ed1050",
+    "design/welcome-proposal.html": "0228bff73c85cc47a45f15c75a66a9eb34f74ab1facdbd2677a80ebd565b83c7",
+    "js/namelecule-name-builder.js": "2e0cffbc5b9ab59a2ac8daf942b7853eab88db8f29c29a55bf68c49d3e2e3000"
+  },
+  "protectedSHA256": {
+    "js/namelecule-name-builder-engine.js": "1c7e477325ae07b02d5218ef0833236f95eade7b6003a3aa07545f91b414f8a2",
+    "games/name-builder-viewer.html": "2fb40724a061e59ff97cf6e2eebc8f05fb233f08b236e013aba3f429d2e7aa51",
+    "scenarios/alkanes-user-3.scenario.json": "b9e2a61183385a8fee70d17f715c018b1bc261448821a4d286a7dd3322cce2b4",
+    "js/mulermoc-nom-core-43.js": "93373c8ea49d6489350c4c7eee36d444b0f6ff5c13c500aa9662d4997575ac21",
+    "js/mulermoc-nom-core-42.js": "a7b95d7fd9eb8589c2f441205ddd3751bd6da9bf9834fa60d9a5b5d2d2aa2b83",
+    "js/mulermoc-nom-core-52.js": "d2138418ff630ab77e578b80ca8ba3a10cc1b877c3ab8c0e5c2735ffcd1f24a2",
+    "js/mulermoc-nom-core-49.js": "ae85dd22b94292ed539ff2a858a1a6fe3672af90298662e5c6860fb411a65951",
+    "js/mulermoc-nom-core-48.js": "37dad911ed73af0768fc922186cb94e71df7df1144b2c1e75aee4c9202ce6c0d",
+    "js/mulermoc-nom-core-45.js": "dde5fb6350a0374e1ebda69e0870cbfce0bbed027b8219f33bc4de3c4cf9ae74",
+    "js/mulermoc-nom-core-55.js": "6cbdbd0ce60f5d66ff3e6925cdfd48e470764baa02b6263f325eff356df5e270",
+    "js/mulermoc-nom-core-51.js": "096d617853646de0dfd67bcbde3e32252aebcb98e7525b05e6f7e71ccb48a5fc",
+    "js/mulermoc-nom-core-50.js": "0f79b5af20b9c3b4504673876abc03b6c162af316c33dff55fd55e0c22a43fd9",
+    "js/mulermoc-nom-core-44.js": "3bb8773be785992ec581d4cdd11a58a6bb5a833ed429ae07287839b436e523e1",
+    "js/mulermoc-nom-core-54.js": "8f3e5f76d96322faf7cf9251f4cae3eca204fe2f82bf5754fdce6ffc4cd5d5a9",
+    "js/namelecule-quiz-checkpoints.js": "f52d83aecc582f3214db022a076fbb82af1f187588eccf16d5756a030d67785b"
+  },
+  "existingCodeFinding": {
+    "file": "js/namelecule-name-builder.js",
+    "lines": "437–470",
+    "behavior": "Completed active outside-answer pointerup is discarded if release hit lies outside game iframe or parent hits differ. Existing bank render retains original order.",
+    "oldTestOracle": "docs/checks/builder-placement-controls-20261112/browser/matrix.py headercase expected cancellation; old oracle not proof of broader requirement."
+  },
+  "runtimePreflight": "One owned transient headless Firefox/server delegated to builder_outside_drop_repro; artifacts browser/ only. No control of user GUI36690/personal29197.",
+  "userClarification": "User did not understand endpoint-options question. Root clarified releasepoint; no exact reported endpoint confirmed. Test broad requested outside-answer semantics, do not claim exact physical failure reproduced if only headercase fails.",
+  "implementationApproval": "No new code changes yet. Present concrete bounded plan after reproduction."
+}

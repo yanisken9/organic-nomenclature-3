@@ -1,0 +1,15 @@
+{
+  "reviewedIssues": [
+    "MP-R1",
+    "MP-R2"
+  ],
+  "corrections": {
+    "MP-R1": "Own CSS and preview now load exact existing Google Fonts URL from css/jsme-nick-55.css:1, not legacy styles. FontFaceSet loaded2Greekfaces; canvas231.6833vsfallback264.2333; actual rendered Builder class reference and puzzle heading identical212.4833px. External font dependency explicitly retained, no offline guarantee.",
+    "MP-R2": "frameNodes() frames complete candidate in render(), including resize/undo/solved state; all-or-nothing fitting with deterministic whole-candidate packing fallback; surface grows for maximum32pieces, no groups/bonds/labels discarded. CSS breakpoint650matchesbounds; no target-derived layout. Actual before unsolved+solved overlap6/9 at617.1667→270 reproduced; after0overlap/clip with10nodes9bonds;320/390/desktop and32groupbound+undo checked."
+  },
+  "targetedBrowserChecks": 84,
+  "actualBeforeChecks": 41,
+  "newRuntimeFailures": [],
+  "independentReview": "pending targeted follow-up",
+  "fontExternalDependency": "Same fonts.googleapis.com/fonts.gstatic.com resources as active Main55; initial Internet access or cached fonts needed for exact typography. Local game/core assets otherwise unchanged; no offline fallback/release qualification claim."
+}

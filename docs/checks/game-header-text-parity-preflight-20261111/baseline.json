@@ -1,0 +1,41 @@
+{
+  "recordedUTC": "2026-11-11T15:57:35.465142+00:00",
+  "userCorrection": "Header typography visibly still differs. Prior fix/test covered titles only, not objective/instructions.",
+  "sourceFacts": {
+    "BuilderObjectiveCSS": "lesson-mode1.05rem=16.8px,weight750,line1.5 inside independent iframe",
+    "WorkshopObjectiveCSS": "24px,700,1.45;20px at outer<=760",
+    "secondaryReference": "Workshop compact-steps11.52px/normal/1.6;12px at narrow widths",
+    "titleEvidence": "Earlier actual browser recorded both titles40px/RobotoCondensed700/44.8px line; not objective typography",
+    "responsiveBoundary": "Builder iframe viewport differs from outer viewport. Proposed existing Workshop nl-repair container query matches allocated iframe width."
+  },
+  "proposedTarget": {
+    "css/namelecule-name-builder.css": "d9ad67895fa1508f273b4f37161a37fe0ef283e653a1bcfd33649508e80999c2",
+    "css/namelecule-quiz-checkpoints.css": "4ce245024e272146c53f9134f86666b467352978aa1f6f7e21959da95f96e3ef",
+    "games/name-builder.html": "20e85af5f718b76031443a87d2394f71a25290e3705d5066cb055541380eddb3",
+    "js/namelecule-game-choice-checkpoint.js": "700e50f232d45498fbfe5b4dee90c345673168386124e9b5525165b8cfdc7224",
+    "mulermoc-nom-54.html": "915ccdd093b03a317c1d4a55be58a3e4225ee64b95fb00c09f99fc3a151dc9c1",
+    "mulermoc-nom-55.html": "93ed76523808b5c3b084afabdf16e334bb0de90d7458ed134b182ff8daa7ea24"
+  },
+  "cores": {
+    "js/mulermoc-nom-core-42.js": "a7b95d7fd9eb8589c2f441205ddd3751bd6da9bf9834fa60d9a5b5d2d2aa2b83",
+    "js/mulermoc-nom-core-43.js": "93373c8ea49d6489350c4c7eee36d444b0f6ff5c13c500aa9662d4997575ac21",
+    "js/mulermoc-nom-core-44.js": "3bb8773be785992ec581d4cdd11a58a6bb5a833ed429ae07287839b436e523e1",
+    "js/mulermoc-nom-core-45.js": "dde5fb6350a0374e1ebda69e0870cbfce0bbed027b8219f33bc4de3c4cf9ae74",
+    "js/mulermoc-nom-core-48.js": "37dad911ed73af0768fc922186cb94e71df7df1144b2c1e75aee4c9202ce6c0d",
+    "js/mulermoc-nom-core-49.js": "ae85dd22b94292ed539ff2a858a1a6fe3672af90298662e5c6860fb411a65951",
+    "js/mulermoc-nom-core-50.js": "0f79b5af20b9c3b4504673876abc03b6c162af316c33dff55fd55e0c22a43fd9",
+    "js/mulermoc-nom-core-51.js": "096d617853646de0dfd67bcbde3e32252aebcb98e7525b05e6f7e71ccb48a5fc",
+    "js/mulermoc-nom-core-52.js": "d2138418ff630ab77e578b80ca8ba3a10cc1b877c3ab8c0e5c2735ffcd1f24a2",
+    "js/mulermoc-nom-core-54.js": "8f3e5f76d96322faf7cf9251f4cae3eca204fe2f82bf5754fdce6ffc4cd5d5a9",
+    "js/mulermoc-nom-core-55.js": "6cbdbd0ce60f5d66ff3e6925cdfd48e470764baa02b6263f325eff356df5e270"
+  },
+  "HEAD": "168e3cec01f941a84d40bbe0dc07156e7baa35d0",
+  "indexSHA256": "25c212236906eff396f0a3521653f16eea1f5d57dfc5e32ba4477ad25930f964",
+  "approved": false,
+  "appChangedThisUnit": false,
+  "priorEvidence": [
+    "docs/checks/game-headers-parity-20261111/browser/builder-desktop.png",
+    "docs/checks/game-headers-parity-20261111/browser/workshop-desktop.png"
+  ],
+  "upstream": "Last successful check15:31UTC126eda46;0new since prior audit,actualsync5ab24955,49pending;no sync in this continuity task."
+}

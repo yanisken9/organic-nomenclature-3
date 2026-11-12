@@ -1,0 +1,391 @@
+{
+  "recordedUTC": "2026-11-12T06:15:44.225927+00:00",
+  "status": "Bounded evidence complete; application remains for consolidated independent review. No further browser runs scheduled.",
+  "authorRole": "Developer supplied runtime evidence; not independent review.",
+  "finalFreeze": {
+    "manifest": "../runtime-source-freeze.json",
+    "sha256": "37e12df46bdcfe31f6358a89176201a61a00d2eb6bb0bd64b29e32794e63764e",
+    "sourceFiles": 7,
+    "protectedFiles": 15,
+    "currentHashesMatch": true,
+    "protectedCoreCount": 11
+  },
+  "conditions": {
+    "browser": "Owned disposable headless Firefox on this Mac; actual production pages/native viewer/canonical engine.",
+    "input": "Trusted BiDi pointer and keyboard. Builder construction/check/drag targets are never scrolled or focused by test helpers. Lesson entry/navigation helpers may perform setup scrolling; that setup is distinguished from construction evidence.",
+    "noPersonalBrowserControl": true,
+    "noApplicationEditsByHarnessAgent": true
+  },
+  "runs": [
+    {
+      "version": "R2",
+      "results": "layout-results.json",
+      "completed": true,
+      "checks": 289,
+      "passed": 289,
+      "failed": [],
+      "sourceAndProtectedUnchanged": true,
+      "sourceHashCount": 22,
+      "capturedPageJavascriptErrors": [],
+      "capturedPageConsoleWarningsAndErrors": [],
+      "httpErrors": [
+        {
+          "code": 404,
+          "path": "/favicon.ico",
+          "message": "File not found"
+        }
+      ],
+      "cleanup": {
+        "receipt": "layout-cleanup.json",
+        "firefoxPID": 35710,
+        "bidiPort": 49785,
+        "serverPort": 49784,
+        "ownedFirefoxExited": true,
+        "bidiPortClosed": true,
+        "serverPortClosed": true
+      }
+    },
+    {
+      "version": "R3",
+      "results": "flow-results.json",
+      "completed": false,
+      "checks": 173,
+      "passed": 172,
+      "failed": [
+        {
+          "label": "target reachable without test scrolling: #answer-tiles [data-tile-id=\"tile-1d6p32p-0\"]",
+          "detail": {
+            "ok": false,
+            "reason": "target center outside viewport",
+            "x": 1020.0416488647461,
+            "y": -18.25,
+            "hit": null,
+            "frames": [
+              {
+                "width": 1134,
+                "height": 981,
+                "scrollY": 0
+              }
+            ]
+          }
+        }
+      ],
+      "sourceAndProtectedUnchanged": true,
+      "sourceHashCount": 22,
+      "capturedPageJavascriptErrors": [],
+      "capturedPageConsoleWarningsAndErrors": [],
+      "httpErrors": [
+        {
+          "code": 404,
+          "path": "/favicon.ico",
+          "message": "File not found"
+        }
+      ],
+      "cleanup": {
+        "receipt": "flow-cleanup.json",
+        "firefoxPID": 35848,
+        "bidiPort": 50076,
+        "serverPort": 50074,
+        "ownedFirefoxExited": true,
+        "bidiPortClosed": true,
+        "serverPortClosed": true
+      }
+    },
+    {
+      "version": "R3",
+      "results": "embedded-flow-results.json",
+      "completed": false,
+      "checks": 117,
+      "passed": 116,
+      "failed": [
+        {
+          "label": "target reachable without test scrolling: #nlQuizReturn",
+          "detail": {
+            "ok": false,
+            "reason": "target missing"
+          }
+        }
+      ],
+      "sourceAndProtectedUnchanged": true,
+      "sourceHashCount": 22,
+      "capturedPageJavascriptErrors": [],
+      "capturedPageConsoleWarningsAndErrors": [],
+      "httpErrors": [
+        {
+          "code": 404,
+          "path": "/favicon.ico",
+          "message": "File not found"
+        }
+      ],
+      "cleanup": {
+        "receipt": "embedded-flow-cleanup.json",
+        "firefoxPID": 35922,
+        "bidiPort": 50248,
+        "serverPort": 50247,
+        "ownedFirefoxExited": true,
+        "bidiPortClosed": true,
+        "serverPortClosed": true
+      }
+    },
+    {
+      "version": "R3",
+      "results": "resume-only-results.json",
+      "completed": true,
+      "checks": 15,
+      "passed": 15,
+      "failed": [],
+      "sourceAndProtectedUnchanged": true,
+      "sourceHashCount": 22,
+      "capturedPageJavascriptErrors": [],
+      "capturedPageConsoleWarningsAndErrors": [],
+      "httpErrors": [
+        {
+          "code": 404,
+          "path": "/favicon.ico",
+          "message": "File not found"
+        }
+      ],
+      "cleanup": {
+        "receipt": "resume-only-cleanup.json",
+        "firefoxPID": 35998,
+        "bidiPort": 50413,
+        "serverPort": 50412,
+        "ownedFirefoxExited": true,
+        "bidiPortClosed": true,
+        "serverPortClosed": true
+      }
+    }
+  ],
+  "coverage": {
+    "R2sixLayouts": "Standalone and embedded at1500x900,390x760,320x740: three full instruction rows/14.4px type/bold labels/no page horizontal overflow/internal clipping, native initial open/closed defaults, real click/Enter toggles,44px controls, construction/check and wrong-feedback framing;320 desktop/phone breakpoint resize. Full-open root-viewport visibility was not asserted in R2.",
+    "R3phonePairs": [
+      {
+        "viewport": [
+          390,
+          760
+        ],
+        "exactSameAnswerIDs": [
+          "tile-1d6p32p-0"
+        ],
+        "openHeight": 281.066650390625,
+        "openBounds": {
+          "left": 49,
+          "right": 341,
+          "top": 458.93328857421875,
+          "bottom": 739.9999389648438,
+          "width": 292,
+          "height": 281.066650390625
+        },
+        "openFullyVisible": true,
+        "closedHeight": 58,
+        "closedCheckBounds": {
+          "left": 49,
+          "right": 194,
+          "top": 676.1333618164062,
+          "bottom": 724.1333618164062,
+          "width": 145,
+          "height": 48
+        },
+        "closedCheckFullyVisible": true
+      },
+      {
+        "viewport": [
+          320,
+          740
+        ],
+        "exactSameAnswerIDs": [
+          "tile-1d6p32p-0"
+        ],
+        "openHeight": 364.6000061035156,
+        "openBounds": {
+          "left": 49,
+          "right": 271,
+          "top": 355.39990234375,
+          "bottom": 719.9999084472656,
+          "width": 222,
+          "height": 364.6000061035156
+        },
+        "openFullyVisible": true,
+        "closedHeight": 58,
+        "closedCheckBounds": {
+          "left": 49,
+          "right": 194,
+          "top": 594.683349609375,
+          "bottom": 642.683349609375,
+          "width": 145,
+          "height": 48
+        },
+        "closedCheckFullyVisible": true
+      }
+    ],
+    "R3standaloneMethods": "Actual click add; inside drag reorder; left/right buttons; left/right keyboard arrows; Delete; focused Enter re-add; remove button; completed outside drag return; genuine partial wrong feedback and canonical ethane success.",
+    "R3embeddedMethods": "Same actual methods; real page reload preserves exact partial IDs and canonical seed; wrong feedback and genuine correct native result; completed-round receipt retained; first solved round does not prematurely unlock gate; actual next action reaches2/3.",
+    "R3embeddedCanonicalRound": {
+      "moleculeId": "butane",
+      "correctName": "βουτάνιο"
+    },
+    "R3backReopen": "Corrected actual #nlQuizBack control closes to theory and reopen restores exact genuine partial IDs/molecule and complete saved round/progress record; resumed check automatically visible.15checks completed without failure.",
+    "resume": {
+      "moleculeId": "propane",
+      "answerIDs": [
+        "tile-1hv6phq-0"
+      ],
+      "recordUnchanged": true
+    }
+  },
+  "diagnosticFailures": [
+    {
+      "version": "R1",
+      "archive": "archive-first-phone-regression",
+      "observed": "Expanded instructions after one actual tile add placed check top755.12/bottom803.12 below usable753 at390x760. Root corrected with approved native disclosure; successful R2/R3 evidence follows."
+    },
+    {
+      "version": "R3",
+      "archive": "archive-r3-passed-phones-setup-failure",
+      "observed": "After both phone disclosure pairs passed, harness tried clearing a tile after desktop resize; target center y=-18.25 outside viewport. Source intentionally does not force scroll on desktop media reopen. Original geometry and failed assertion retained for independent Reviewer classification; it was not silently marked passed."
+    },
+    {
+      "version": "R3",
+      "archive": "archive-r3-embedded-methods-selector-failure",
+      "observed": "All embedded methods/canonical/refresh/next passed; obsolete harness #nlQuizReturn selector failed final step. Actual product control is #nlQuizBack. Corrected only remaining Back/reopen case in resume-only; original117check run retained."
+    }
+  ],
+  "warnings": {
+    "provenance": "Captured subscribed page JavaScript and warn/error arrays were empty for these runs; Firefox stderr separately logged internal BiDi/Realm/SWGL errors and script-timeout warnings. Raw stderr has no timestamps; no shutdown-stage or root-cause attribution is established. HTTP favicon404 is recorded. These warnings are not dismissed as harmless.",
+    "runs": {
+      "layout": {
+        "stderrLog": "layout-firefox.log",
+        "scriptTimeoutHeaders": [
+          "JavaScript warning: https://www.googletagmanager.com/gtag/js?id=G-1V8NWYY46Y, line 470: Script terminated by timeout at:",
+          "JavaScript warning: http://127.0.0.1:49784/js/mulermoc-nom-molview-55.js?v=namelecule-v55-20261110-r2, line 7294: Script terminated by timeout at:",
+          "JavaScript warning: http://127.0.0.1:49784/js/mulermoc-nom-molview-55.js?v=namelecule-v55-20261110-r2, line 7294: Script terminated by timeout at:",
+          "JavaScript warning: http://127.0.0.1:49784/js/namelecule-name-builder.js?v=builder-methods-20261112-r2, line 51: Script terminated by timeout at:",
+          "JavaScript warning: http://127.0.0.1:49784/js/mulermoc-nom-molview-55.js?v=namelecule-v55-20261110-r2, line 7294: Script terminated by timeout at:",
+          "JavaScript warning: http://127.0.0.1:49784/js/namelecule-name-builder.js?v=builder-methods-20261112-r2, line 63: Script terminated by timeout at:"
+        ],
+        "internalErrorHeaders": [
+          "JavaScript error: chrome://remote/content/shared/Realm.sys.mjs, line 184: TypeError: argument is not a global object",
+          "JavaScript error: chrome://remote/content/webdriver-bidi/modules/root/browsingContext.sys.mjs, line 3041: TypeError: WeakMap key null must be an object or an unregistered symbol",
+          "JavaScript error: resource:///modules/AboutHomeStartupCache.sys.mjs, line 880: TypeError: can't access property \"trace\", this.log is null"
+        ],
+        "otherWarnings": [
+          "[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt",
+          "[WARN  rkv::backend::impl_safe::environment] `load_ratio()` is irrelevant for this storage backend."
+        ]
+      },
+      "flow": {
+        "stderrLog": "flow-firefox.log",
+        "scriptTimeoutHeaders": [
+          "JavaScript warning: http://127.0.0.1:50074/js/namelecule-name-builder.js?v=builder-methods-20261112-r3, line 472: Script terminated by timeout at:",
+          "JavaScript warning: http://127.0.0.1:50074/js/namelecule-name-builder.js?v=builder-methods-20261112-r3, line 559: Script terminated by timeout at:"
+        ],
+        "internalErrorHeaders": [
+          "JavaScript error: chrome://remote/content/shared/Realm.sys.mjs, line 184: TypeError: argument is not a global object",
+          "JavaScript error: chrome://remote/content/webdriver-bidi/modules/root/browsingContext.sys.mjs, line 3041: TypeError: WeakMap key null must be an object or an unregistered symbol"
+        ],
+        "otherWarnings": [
+          "[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt",
+          "[WARN  rkv::backend::impl_safe::environment] `load_ratio()` is irrelevant for this storage backend."
+        ]
+      },
+      "embedded-flow": {
+        "stderrLog": "embedded-flow-firefox.log",
+        "scriptTimeoutHeaders": [
+          "JavaScript warning: https://www.googletagmanager.com/gtag/js?id=G-1V8NWYY46Y, line 470: Script terminated by timeout at:"
+        ],
+        "internalErrorHeaders": [
+          "JavaScript error: chrome://remote/content/shared/Realm.sys.mjs, line 184: TypeError: argument is not a global object",
+          "JavaScript error: chrome://remote/content/webdriver-bidi/modules/root/browsingContext.sys.mjs, line 3041: TypeError: WeakMap key null must be an object or an unregistered symbol"
+        ],
+        "otherWarnings": [
+          "[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt",
+          "[WARN  rkv::backend::impl_safe::environment] `load_ratio()` is irrelevant for this storage backend."
+        ]
+      },
+      "resume-only": {
+        "stderrLog": "resume-only-firefox.log",
+        "scriptTimeoutHeaders": [
+          "JavaScript warning: http://127.0.0.1:50412/js/mulermoc-nom-molview-55.js?v=namelecule-v55-20261110-r2, line 7294: Script terminated by timeout at:"
+        ],
+        "internalErrorHeaders": [
+          "JavaScript error: chrome://remote/content/shared/Realm.sys.mjs, line 184: TypeError: argument is not a global object",
+          "JavaScript error: chrome://remote/content/webdriver-bidi/modules/root/browsingContext.sys.mjs, line 3041: TypeError: WeakMap key null must be an object or an unregistered symbol"
+        ],
+        "otherWarnings": [
+          "[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt",
+          "[WARN  rkv::backend::impl_safe::environment] `load_ratio()` is irrelevant for this storage backend."
+        ]
+      }
+    }
+  },
+  "limits": [
+    "Representative UI checks only; no full6round suite or new optional three-round-practice unlock replay.",
+    "R2six-layout evidence and final R3targeted evidence are explicitly separate versions; final R3did not repeat all6layouts.",
+    "Actual post-phone-to-desktop-resize offscreen geometry remains available for Reviewer assessment.",
+    "Browser stderr warnings/timeouts remain unresolved; no clean-console or uninterrupted-operation guarantee.",
+    "Headless tests do not establish resolution of the user’s separate native Mac Firefox GUI hang or conference/offline readiness.",
+    "Only owned temporary profiles/processes/ports were used; no commit/push/publication."
+  ],
+  "keyEvidence": [
+    "archive-first-phone-regression/layout-results.json",
+    "archive-r2-successful-layout/layout-results.json",
+    "flow-results.json",
+    "embedded-flow-results.json",
+    "resume-only-results.json",
+    "same-populated-phone-390-open.png",
+    "same-populated-phone-390-closed.png",
+    "same-populated-phone-320-open.png",
+    "same-populated-phone-320-closed.png",
+    "standalone-methods-success.png",
+    "embedded-native-correct.png",
+    "embedded-back-reopen.png"
+  ],
+  "allOwnedCleanupRecords": [
+    {
+      "receipt": "archive-first-phone-regression/layout-cleanup.json",
+      "firefoxPID": 35504,
+      "bidiPort": 49545,
+      "serverPort": 49544,
+      "ownedFirefoxExited": true,
+      "bidiPortClosed": true,
+      "serverPortClosed": true
+    },
+    {
+      "receipt": "layout-cleanup.json",
+      "firefoxPID": 35710,
+      "bidiPort": 49785,
+      "serverPort": 49784,
+      "ownedFirefoxExited": true,
+      "bidiPortClosed": true,
+      "serverPortClosed": true
+    },
+    {
+      "receipt": "flow-cleanup.json",
+      "firefoxPID": 35848,
+      "bidiPort": 50076,
+      "serverPort": 50074,
+      "ownedFirefoxExited": true,
+      "bidiPortClosed": true,
+      "serverPortClosed": true
+    },
+    {
+      "receipt": "embedded-flow-cleanup.json",
+      "firefoxPID": 35922,
+      "bidiPort": 50248,
+      "serverPort": 50247,
+      "ownedFirefoxExited": true,
+      "bidiPortClosed": true,
+      "serverPortClosed": true
+    },
+    {
+      "receipt": "resume-only-cleanup.json",
+      "firefoxPID": 35998,
+      "bidiPort": 50413,
+      "serverPort": 50412,
+      "ownedFirefoxExited": true,
+      "bidiPortClosed": true,
+      "serverPortClosed": true
+    }
+  ],
+  "allOwnedProcessesAndPortsVerifiedClosed": true
+}

@@ -1,0 +1,15 @@
+{
+  "recordedUTC": "2026-11-12T05:49:40.956293+00:00",
+  "agent": "/root/builder_tile_scroll_scope",
+  "result": "No identified supported Firefox preference specifically disables nativegreenbutton remotezoommenu in official159.0.1 sources. Bounded negative finding, not universal proof.",
+  "sources": [
+    "https://github.com/mozilla-firefox/firefox/blob/FIREFOX_159_0_1_RELEASE/widget/cocoa/nsCocoaWindow.mm#L4972",
+    "https://bugzilla.mozilla.org/show_bug.cgi?id=1700679",
+    "https://github.com/mozilla-firefox/firefox/blob/FIREFOX_159_0_1_RELEASE/modules/libpref/init/all.js#L2848"
+  ],
+  "distinctions": [
+    "widget.macos.native-context-menus controls Gecko contextmenus, not evidenced titlebar menu.",
+    "full-screen-api.macos-native-full-screen concerns DOM Fullscreen API, not established titlebar workaround."
+  ],
+  "settingsChanged": false
+}

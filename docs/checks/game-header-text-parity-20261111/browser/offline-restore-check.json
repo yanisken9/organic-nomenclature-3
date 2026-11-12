@@ -1,0 +1,37 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "label": "Generator identity and active/earned progress unchanged",
+      "passed": true
+    },
+    {
+      "label": "Completed/current round exact state retained 0",
+      "passed": true
+    },
+    {
+      "label": "Completed/current round exact state retained 1",
+      "passed": true
+    },
+    {
+      "label": "All future untouched fields except choice permutation unchanged 2",
+      "passed": true
+    },
+    {
+      "label": "Future round has no attempted/selected/earned progress 2",
+      "passed": true
+    },
+    {
+      "label": "Future choices remain same legal permutation 2",
+      "passed": true
+    },
+    {
+      "label": "Existing restoreFromCache explicitly regenerates future unvisited state",
+      "passed": true
+    }
+  ],
+  "source": "js/namelecule-generated-repair-checkpoint.js:62",
+  "input": "diagnostic-future-choice-order-diff.json",
+  "finding": "HARNESS OVERCONSTRAINT: exact future unvisited choice permutation is not a saved-progress invariant. Current/earned progress is exact; no app change made.",
+  "originalWholeObjectFailure": "Original run did not capture exact state diff before closing. Targeted repeat reproduced the overconstraint and recorded the exact future-only diff."
+}

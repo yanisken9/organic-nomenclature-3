@@ -1,0 +1,226 @@
+{
+  "checks": [
+    {
+      "label": "enabled control #next-molecule",
+      "passed": true
+    },
+    {
+      "label": "enabled control #next-molecule",
+      "passed": true
+    },
+    {
+      "label": "enabled control #next-molecule",
+      "passed": true
+    },
+    {
+      "label": "enabled control #next-molecule",
+      "passed": true
+    },
+    {
+      "label": "enabled control #next-molecule",
+      "passed": true
+    },
+    {
+      "label": "enabled control #next-molecule",
+      "passed": true
+    },
+    {
+      "label": "enabled control #next-molecule",
+      "passed": true
+    },
+    {
+      "label": "enabled control [data-hydrogens=\"3\"]",
+      "passed": true
+    },
+    {
+      "label": "enabled control [data-hydrogens=\"1\"]",
+      "passed": true
+    },
+    {
+      "label": "enabled control [data-hydrogens=\"1\"]",
+      "passed": true
+    },
+    {
+      "label": "enabled control [data-hydrogens=\"2\"]",
+      "passed": true
+    },
+    {
+      "label": "enabled control [data-hydrogens=\"1\"]",
+      "passed": true
+    },
+    {
+      "label": "enabled control [data-hydrogens=\"3\"]",
+      "passed": true
+    },
+    {
+      "label": "enabled control [data-hydrogens=\"3\"]",
+      "passed": true
+    },
+    {
+      "label": "enabled control [data-hydrogens=\"2\"]",
+      "passed": true
+    },
+    {
+      "label": "enabled control [data-hydrogens=\"3\"]",
+      "passed": true
+    },
+    {
+      "label": "enabled control [data-hydrogens=\"3\"]",
+      "passed": true
+    },
+    {
+      "label": "enabled control #bond-tool",
+      "passed": true
+    },
+    {
+      "label": "enabled control [data-node-id=\"piece-1\"]",
+      "passed": true
+    },
+    {
+      "label": "enabled control [data-node-id=\"piece-2\"]",
+      "passed": true
+    },
+    {
+      "label": "enabled control [data-node-id=\"piece-2\"]",
+      "passed": true
+    },
+    {
+      "label": "enabled control [data-node-id=\"piece-3\"]",
+      "passed": true
+    },
+    {
+      "label": "enabled control [data-node-id=\"piece-2\"]",
+      "passed": true
+    },
+    {
+      "label": "enabled control [data-node-id=\"piece-7\"]",
+      "passed": true
+    },
+    {
+      "label": "enabled control [data-node-id=\"piece-3\"]",
+      "passed": true
+    },
+    {
+      "label": "enabled control [data-node-id=\"piece-4\"]",
+      "passed": true
+    },
+    {
+      "label": "enabled control [data-node-id=\"piece-3\"]",
+      "passed": true
+    },
+    {
+      "label": "enabled control [data-node-id=\"piece-8\"]",
+      "passed": true
+    },
+    {
+      "label": "enabled control [data-node-id=\"piece-4\"]",
+      "passed": true
+    },
+    {
+      "label": "enabled control [data-node-id=\"piece-5\"]",
+      "passed": true
+    },
+    {
+      "label": "enabled control [data-node-id=\"piece-5\"]",
+      "passed": true
+    },
+    {
+      "label": "enabled control [data-node-id=\"piece-6\"]",
+      "passed": true
+    },
+    {
+      "label": "enabled control [data-node-id=\"piece-5\"]",
+      "passed": true
+    },
+    {
+      "label": "enabled control [data-node-id=\"piece-10\"]",
+      "passed": true
+    },
+    {
+      "label": "enabled control [data-node-id=\"piece-8\"]",
+      "passed": true
+    },
+    {
+      "label": "enabled control [data-node-id=\"piece-9\"]",
+      "passed": true
+    },
+    {
+      "label": "enabled control #check-answer",
+      "passed": true
+    },
+    {
+      "label": "real largest graph correctly graded before solved resize",
+      "passed": true
+    },
+    {
+      "label": "resize preserves all10groups and9bonds",
+      "passed": true
+    },
+    {
+      "label": "reproduced no loaded heading font faces despite declaredfamily",
+      "passed": true
+    },
+    {
+      "label": "reproduced actual unsolved large construction overlap/clipping",
+      "passed": true
+    }
+  ],
+  "mode": "before",
+  "scope": "Real trusted 10-piece graph UI plus unsolved/solved resize. FontFaceSet and rendered glyph metrics, not computed family alone.",
+  "process": {
+    "ownedPID": 39944,
+    "profile": "/var/folders/2v/ds4vjvgj1_1000kq1fzg70q40000gn/T/namelecule-puzzle-test-7n2tdgqu",
+    "serverPort": 52924,
+    "bidiPort": 52925
+  },
+  "fontFaces": {
+    "count": 0,
+    "faces": [],
+    "actualWidth": 264.23333740234375,
+    "fallbackWidth": 264.23333740234375
+  },
+  "desktop": {
+    "count": 10,
+    "bonds": 9,
+    "overlap": [],
+    "clipped": [],
+    "board": {
+      "width": 617.1666870117188,
+      "height": 360
+    }
+  },
+  "unsolved320": {
+    "count": 10,
+    "bonds": 9,
+    "overlap": [
+      [
+        6,
+        9
+      ]
+    ],
+    "clipped": [],
+    "board": {
+      "width": 270,
+      "height": 260
+    }
+  },
+  "solved320": {
+    "count": 10,
+    "bonds": 9,
+    "overlap": [
+      [
+        6,
+        9
+      ]
+    ],
+    "clipped": [],
+    "board": {
+      "width": 270,
+      "height": 260
+    }
+  },
+  "reproduced": true,
+  "completed": true,
+  "javascriptErrors": [],
+  "ownedBrowserExited": true
+}

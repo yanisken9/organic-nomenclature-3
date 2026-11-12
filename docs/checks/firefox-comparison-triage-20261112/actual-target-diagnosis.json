@@ -1,0 +1,58 @@
+{
+  "recordedUTC": "2026-11-11T22:37:02.237913+00:00",
+  "actualWindowOwnerPID": 3805,
+  "windowID": 7170,
+  "windowBounds": {
+    "X": 87,
+    "Y": 25,
+    "Width": 1114,
+    "Height": 818
+  },
+  "identificationEvidence": "User screenshot rectangle and visible tabs match OS window metadata. Comparison is also open inside personal Firefox. Previous temporary-browser identification was insufficient.",
+  "previousTemporaryComparisonPID": 28247,
+  "previousTemporaryComparisonClosedNormally": true,
+  "reportedWindowStillPresentAfterThatClose": true,
+  "positiveRecoveryConfirmationRetracted": true,
+  "foregroundObserverPID": 28709,
+  "foregroundObserverStopped": true,
+  "foregroundPIDAloneDidNotIdentifyReportedWindow": true,
+  "actualPersonalBrowserClosed": true,
+  "sessionRecoveryBackup": "Private copies of three recovery files verified with SHA-256; no raw session contents in repository. Unsaved page input is not guaranteed.",
+  "privateDiagnosticPointer": "/private/tmp/namelecule-actual-firefox-hang.json",
+  "nativeSample": {
+    "durationSeconds": 3,
+    "mainThreadSamples": 1518,
+    "zoomMenuPathSamples": 1518,
+    "nestedMachWaitSamples": 1502,
+    "path": "__NSFireDelayedPerform -> _NSThemeZoomWidgetCell showMenu: -> NSThemeWidgetZoomMenuRemoteView _showMenu:timestamp: -> nested event loop",
+    "interpretation": "Recurring native window-menu involvement in actual personal browser; does not prove deadlock, initiating action, root cause, website responsibility or prevention.",
+    "readOnlySecondAssessment": "/root/builder_lesson_header_scope confirmed signature and limitations; not an app-code independent review."
+  },
+  "normalRestartApprovalRequested": true,
+  "approvalStatus": "Normal quit failed; user then explicitly approved forced close and restart. Completed targeted SIGTERM and same-profile restart; user response/window restoration confirmation pending.",
+  "browserPreferencesChanged": false,
+  "rawPrivateArtifactsInRepo": false,
+  "applicationHashesMatchAcceptedReview": {
+    "css/namelecule-name-builder.css": true,
+    "css/namelecule-quiz-checkpoints.css": true,
+    "games/name-builder.html": true,
+    "js/namelecule-game-choice-checkpoint.js": true,
+    "mulermoc-nom-54.html": true,
+    "mulermoc-nom-55.html": true
+  },
+  "allElevenCoreHashesMatchAcceptedReview": {
+    "js/mulermoc-nom-core-42.js": true,
+    "js/mulermoc-nom-core-43.js": true,
+    "js/mulermoc-nom-core-44.js": true,
+    "js/mulermoc-nom-core-45.js": true,
+    "js/mulermoc-nom-core-48.js": true,
+    "js/mulermoc-nom-core-49.js": true,
+    "js/mulermoc-nom-core-50.js": true,
+    "js/mulermoc-nom-core-51.js": true,
+    "js/mulermoc-nom-core-52.js": true,
+    "js/mulermoc-nom-core-54.js": true,
+    "js/mulermoc-nom-core-55.js": true
+  },
+  "commitPushPublication": false,
+  "recoveryReceipt": "docs/checks/firefox-comparison-triage-20261112/personal-forced-restart.json"
+}

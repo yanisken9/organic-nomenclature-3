@@ -1,0 +1,110 @@
+{
+  "passed": true,
+  "parityChecks": 171,
+  "comparisonChecks": 10,
+  "comparisonHTTP200": 4,
+  "genuineCompletions": [
+    {
+      "game": "builder",
+      "moleculeId": "methane"
+    },
+    {
+      "game": "builder",
+      "moleculeId": "propane"
+    },
+    {
+      "game": "builder",
+      "moleculeId": "butane"
+    },
+    {
+      "game": "repair",
+      "moleculeId": "ethyl_3_dimethyl_2_5_hexane"
+    },
+    {
+      "game": "repair",
+      "moleculeId": "methyl_2_pentane"
+    },
+    {
+      "game": "repair",
+      "moleculeId": "dimethyl_2_3_butane"
+    }
+  ],
+  "computedStyleRecords": 24,
+  "exactTypographyWidths": [
+    1500,
+    768,
+    760,
+    650,
+    390,
+    320
+  ],
+  "sourceSHA256": {
+    "css/namelecule-quiz-checkpoints.css": "4ce245024e272146c53f9134f86666b467352978aa1f6f7e21959da95f96e3ef",
+    "mulermoc-nom-54.html": "915ccdd093b03a317c1d4a55be58a3e4225ee64b95fb00c09f99fc3a151dc9c1",
+    "mulermoc-nom-55.html": "93ed76523808b5c3b084afabdf16e334bb0de90d7458ed134b182ff8daa7ea24"
+  },
+  "protectedAndCoresUnchanged": {
+    "js/namelecule-game-choice-checkpoint.js": true,
+    "js/namelecule-game-repair.js": true,
+    "js/namelecule-generated-repair-checkpoint.js": true,
+    "css/namelecule-repair-round.css": true,
+    "css/namelecule-name-builder.css": true,
+    "games/name-builder.html": true,
+    "games/name-repair.html": true,
+    "scenarios/alkanes-user-3.scenario.json": true,
+    "js/mulermoc-nom-core-42.js": true,
+    "js/mulermoc-nom-core-43.js": true,
+    "js/mulermoc-nom-core-44.js": true,
+    "js/mulermoc-nom-core-45.js": true,
+    "js/mulermoc-nom-core-48.js": true,
+    "js/mulermoc-nom-core-49.js": true,
+    "js/mulermoc-nom-core-50.js": true,
+    "js/mulermoc-nom-core-51.js": true,
+    "js/mulermoc-nom-core-52.js": true,
+    "js/mulermoc-nom-core-54.js": true,
+    "js/mulermoc-nom-core-55.js": true
+  },
+  "matchedScreenshots": {
+    "builder": {
+      "file": "builder-desktop.png",
+      "moleculeId": "methane",
+      "viewport": [
+        1500,
+        1000
+      ]
+    },
+    "repair": {
+      "file": "workshop-desktop.png",
+      "moleculeId": "propane",
+      "viewport": [
+        1500,
+        1000
+      ]
+    }
+  },
+  "jsExceptionsCaptured": 0,
+  "fontEvidence": "Computed font-family/size/weight/line-height/letter-spacing parity verified; document.fonts actual face loading was not measured before the completed BiDi sessions closed. Availability of the requested font and any external font service remains an operating dependency.",
+  "warnings": [
+    "Firefox stderr retains internal BiDi WeakMap warnings and a molview font-refresh timeout warning during tab shutdown. Zero captured page JavaScript exceptions does not mean a clean stderr or universal reliability."
+  ],
+  "diagnostics": [
+    {
+      "file": "diagnostic-font-family-serialization.json",
+      "reason": "First harness expected optional quotes in font-family serialization; Firefox returned equivalent unquoted Roboto Condensed, sans-serif. Normalized the expected serialization and full final run passed; no app code correction."
+    }
+  ],
+  "limits": [
+    "Owned headless Firefox/macOS and local HTTP only; no personal GUI, public deployment, other browser, real touch or conference/offline guarantee.",
+    "Six genuine completions exercise required gate4 Builder and gate11 Workshop; this CSS-only unit does not repeat broad chemistry or 3D regression checks.",
+    "Paired screenshots preserve the games normal independent random seeds; the molecule can differ between games."
+  ],
+  "cleanup": {
+    "serverPID": 23085,
+    "firefoxPID": 23086,
+    "identityGuardsPassed": true,
+    "serverExited": true,
+    "firefoxExited": true,
+    "scope": "Only owned headless and its server; no personal or user-facing GUI browser control."
+  },
+  "changesByThisAgent": "Only new browser evidence/harness in this directory; no app/core/JSON/Git/rootnotes/other evidence changed."
+}

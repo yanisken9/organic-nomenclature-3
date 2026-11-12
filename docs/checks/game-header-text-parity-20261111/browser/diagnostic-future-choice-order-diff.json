@@ -1,0 +1,224 @@
+{
+  "before": {
+    "version": 1,
+    "seed": "1180036876174996133",
+    "currentRound": 1,
+    "states": [
+      {
+        "selectedPartId": "component-5",
+        "selectedValue": "πεντ",
+        "order": [],
+        "choiceOrder": [
+          0,
+          1,
+          2
+        ],
+        "attempts": 1,
+        "selectionMisses": 0,
+        "solved": true,
+        "submitted": true
+      },
+      {
+        "selectedPartId": null,
+        "selectedValue": null,
+        "order": [],
+        "choiceOrder": [
+          0,
+          1,
+          2
+        ],
+        "attempts": 0,
+        "selectionMisses": 0,
+        "solved": false,
+        "submitted": false
+      },
+      {
+        "selectedPartId": null,
+        "selectedValue": null,
+        "order": [],
+        "choiceOrder": [
+          1,
+          0,
+          2
+        ],
+        "attempts": 0,
+        "selectionMisses": 0,
+        "solved": false,
+        "submitted": false
+      }
+    ],
+    "solved": false
+  },
+  "after": {
+    "version": 1,
+    "seed": "1180036876174996133",
+    "currentRound": 1,
+    "states": [
+      {
+        "selectedPartId": "component-5",
+        "selectedValue": "πεντ",
+        "order": [],
+        "choiceOrder": [
+          0,
+          1,
+          2
+        ],
+        "attempts": 1,
+        "selectionMisses": 0,
+        "solved": true,
+        "submitted": true
+      },
+      {
+        "selectedPartId": null,
+        "selectedValue": null,
+        "order": [],
+        "choiceOrder": [
+          0,
+          1,
+          2
+        ],
+        "attempts": 0,
+        "selectionMisses": 0,
+        "solved": false,
+        "submitted": false
+      },
+      {
+        "selectedPartId": null,
+        "selectedValue": null,
+        "order": [],
+        "choiceOrder": [
+          1,
+          2,
+          0
+        ],
+        "attempts": 0,
+        "selectionMisses": 0,
+        "solved": false,
+        "submitted": false
+      }
+    ],
+    "solved": false
+  },
+  "fullDiff": [
+    {
+      "path": ".states[2].choiceOrder[1]",
+      "before": 0,
+      "after": 2
+    },
+    {
+      "path": ".states[2].choiceOrder[2]",
+      "before": 2,
+      "after": 0
+    }
+  ],
+  "semanticBefore": {
+    "seed": "1180036876174996133",
+    "currentRound": 1,
+    "solved": false,
+    "states": [
+      {
+        "selectedPartId": "component-5",
+        "selectedValue": "πεντ",
+        "attempts": 1,
+        "selectionMisses": 0,
+        "solved": true,
+        "submitted": true,
+        "order": [],
+        "choiceOrder": [
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "selectedPartId": null,
+        "selectedValue": null,
+        "attempts": 0,
+        "selectionMisses": 0,
+        "solved": false,
+        "submitted": false,
+        "order": [],
+        "choiceOrder": [
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "selectedPartId": null,
+        "selectedValue": null,
+        "attempts": 0,
+        "selectionMisses": 0,
+        "solved": false,
+        "submitted": false,
+        "order": [],
+        "choiceOrder": [
+          1,
+          0,
+          2
+        ]
+      }
+    ]
+  },
+  "semanticAfter": {
+    "seed": "1180036876174996133",
+    "currentRound": 1,
+    "solved": false,
+    "states": [
+      {
+        "selectedPartId": "component-5",
+        "selectedValue": "πεντ",
+        "attempts": 1,
+        "selectionMisses": 0,
+        "solved": true,
+        "submitted": true,
+        "order": [],
+        "choiceOrder": [
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "selectedPartId": null,
+        "selectedValue": null,
+        "attempts": 0,
+        "selectionMisses": 0,
+        "solved": false,
+        "submitted": false,
+        "order": [],
+        "choiceOrder": [
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "selectedPartId": null,
+        "selectedValue": null,
+        "attempts": 0,
+        "selectionMisses": 0,
+        "solved": false,
+        "submitted": false,
+        "order": [],
+        "choiceOrder": [
+          1,
+          2,
+          0
+        ]
+      }
+    ]
+  },
+  "semanticDiff": [
+    {
+      "path": ".states[2].choiceOrder[1]",
+      "before": 0,
+      "after": 2
+    },
+    {
+      "path": ".states[2].choiceOrder[2]",
+      "before": 2,
+      "after": 0
+    }
+  ]
+}

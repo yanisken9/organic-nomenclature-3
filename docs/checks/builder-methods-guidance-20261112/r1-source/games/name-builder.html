@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="el">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#254c50">
+  <title>Χτίσε το όνομα · Namelecule</title>
+  <link rel="stylesheet" href="../css/namelecule-name-builder.css?v=builder-methods-20261112-r1">
+  <script src="../js/namelecule-name-builder-engine.js?v=name-builder-20261111-r1" defer></script>
+  <script src="../js/namelecule-name-builder.js?v=builder-placement-20261112-r3" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#answer-title">Πήγαινε στη σύνθεση του ονόματος</a>
+  <header class="site-header">
+    <a class="brand" href="../design/welcome-proposal.html" aria-label="Namelecule — Υποδοχή"><img src="../design/assets/namelecule-methane-v1.png" width="2172" height="724" alt="Namelecule"></a>
+    <a class="back-link" href="../design/welcome-proposal.html">Υποδοχή</a>
+  </header>
+  <main class="game" id="game">
+    <section class="intro" aria-labelledby="game-title">
+      <p class="eyebrow">ΠΑΙΧΝΙΔΙ ΟΝΟΜΑΤΟΛΟΓΙΑΣ</p>
+      <div class="builder-title">
+        <img class="builder-logo" src="assets/name-builder/name-builder-logo-3d-blank-v1.png" width="128" height="128" alt="" aria-hidden="true">
+        <h1 id="game-title">Χτίσε το όνομα</h1>
+      </div>
+      <p class="objective">Παρατήρησε τη δομή. Διάλεξε τα κατάλληλα συνθετικά και βάλε τα στη σωστή σειρά.</p>
+      <p class="intro-detail">Σύρε τα πλακίδια στο πλαίσιο ή πάτησέ τα για να τα προσθέσεις. Μερικά περισσεύουν.</p>
+    </section>
+    <div id="game-status" class="game-status" role="status">Ετοιμάζουμε τη δομή και τα συνθετικά.</div>
+    <div class="workspace">
+      <section class="panel molecule-panel" aria-labelledby="molecule-title">
+        <div class="panel-header"><h2 id="molecule-title">Το μόριο</h2><div class="zoom-controls" aria-label="Μέγεθος μοριακού σχεδίου"><button id="zoom-out" class="icon-button" type="button" aria-label="Σμίκρυνση μορίου" title="Σμίκρυνση" disabled>−</button><button id="zoom-in" class="icon-button" type="button" aria-label="Μεγέθυνση μορίου" title="Μεγέθυνση" disabled>+</button></div></div>
+        <div class="viewer-wrap" id="viewer-wrap" aria-busy="true">
+          <iframe id="molecule-viewer" title="Μοριακή δομή για την άσκηση" sandbox="allow-scripts allow-same-origin" referrerpolicy="same-origin"></iframe>
+          <div class="viewer-mask" id="viewer-mask"><p id="viewer-message">Φορτώνουμε το μοριακό σχέδιο.</p><button id="retry-load" class="secondary" type="button" hidden>Δοκίμασε ξανά</button></div>
+        </div>
+        <div class="representations" role="group" aria-label="Απεικόνιση του ίδιου μορίου">
+          <button type="button" data-representation="condensed" aria-pressed="false" disabled>Συνεπτυγμένος</button>
+          <button type="button" data-representation="expanded" aria-pressed="false" disabled>Ανεπτυγμένος</button>
+          <button type="button" data-representation="skeletal" aria-pressed="false" disabled>Σκελετικός</button>
+          <button type="button" data-representation="3d" aria-pressed="false" disabled>3D</button>
+        </div>
+        <p id="representation-note" class="representation-note">Μπορείς να δεις διαφορετικές απεικονίσεις του ίδιου μορίου.</p>
+      </section>
+      <section class="panel answer-panel" aria-labelledby="answer-title">
+        <div class="panel-header"><h2 id="answer-title" tabindex="-1">Το όνομα που χτίζεις</h2></div>
+        <div class="answer-content">
+          <div id="answer-zone" class="answer-zone" tabindex="0" role="region" aria-describedby="answer-help" aria-label="Πλαίσιο σύνθεσης ονόματος">
+            <p id="empty-answer" class="empty-answer">Φέρε εδώ τα συνθετικά του ονόματος</p>
+            <ol id="answer-tiles" class="tiles answer-tiles" aria-label="Επιλεγμένα συνθετικά με τη σειρά τους"></ol>
+          </div>
+          <section class="panel bank-panel" aria-labelledby="bank-title">
+            <div class="panel-header"><h2 id="bank-title">Τα διαθέσιμα συνθετικά</h2><span class="bank-note">Διάλεξε όσα χρειάζονται</span></div>
+            <div id="bank-zone" class="bank-zone"><ul id="bank-tiles" class="tiles bank-tiles" aria-label="Συνθετικά για επιλογή"></ul></div>
+          </section>
+          <p id="answer-help" class="helper">
+            <span class="helper-method"><strong>Προσθήκη:</strong> Σύρε το εικονίδιο στο πλαίσιο ή κάνε κλικ επάνω του.</span>
+            <span class="helper-method"><strong>Αλλαγή σειράς:</strong> Σύρε το εικονίδιο στη σωστή θέση μέσα στο πλαίσιο ή επίλεξέ το με κλικ και χρησιμοποίησε τα κουμπιά «Αριστερά»–«Δεξιά» ή τα πλήκτρα <kbd>← →</kbd>.</span>
+            <span class="helper-method"><strong>Αφαίρεση:</strong> Σύρε και άφησε το εικονίδιο έξω από το πλαίσιο ή επίλεξέ το με κλικ και πάτησε «Αφαίρεση» ή <kbd>Delete</kbd>.</span>
+          </p>
+          <div id="tile-controls" class="tile-controls" hidden><span class="selected-tile">Επιλεγμένο: <strong id="selected-tile-label"></strong></span><button type="button" id="move-before" class="small-button" aria-label="← Αριστερά"><span aria-hidden="true">←</span><span class="move-button-word"> Αριστερά</span></button><button type="button" id="move-after" class="small-button" aria-label="Δεξιά →"><span class="move-button-word">Δεξιά </span><span aria-hidden="true">→</span></button><button type="button" id="remove-tile" class="small-button">Αφαίρεση</button></div>
+          <div id="candidate" class="candidate" hidden><p>Η πρότασή σου</p><p id="candidate-name" class="candidate-name single-line-name" tabindex="0" role="region" aria-label="Η πρότασή σου"></p></div>
+          <div class="check-row"><button id="check-answer" class="primary" type="button" disabled>Έλεγχος</button><button id="next-molecule" class="secondary" type="button" disabled>Άλλο μόριο</button></div>
+          <div id="feedback" class="feedback" role="status" hidden></div>
+        </div>
+      </section>
+    </div>
+    <p class="keyboard-note">Πληκτρολόγιο: Enter για προσθήκη, ← → για μετακίνηση και Delete για αφαίρεση. Για μεγάλα ονόματα, κύλησε οριζόντια.</p>
+    <div id="move-announcement" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></div>
+    <noscript><p>Το παιχνίδι χρειάζεται JavaScript για να εμφανίσει τη δομή και να ελέγξει το όνομα.</p></noscript>
+  </main>
+  <footer class="site-footer">Namelecule · Μια εφαρμογή της πλατφόρμας MuLERMoCs</footer>
+</body>
+</html>

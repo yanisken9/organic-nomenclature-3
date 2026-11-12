@@ -1,0 +1,97 @@
+{
+  "checks": [
+    {
+      "label": "welcome title and brand loaded",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "library alkane entry points to active Main55",
+      "passed": true,
+      "detail": "http://127.0.0.1:54767/mulermoc-nom-55.html?scenario=scenarios/alkanes-user-3.scenario.json&present=1&from=theory-library&v=alkanes-personal-20261106-r1"
+    },
+    {
+      "label": "welcome/library actual clicks open lesson at step1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "cold gate4 requires earned triple",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "lesson exposes all three games",
+      "passed": true,
+      "detail": [
+        "Συνεργείο ονομάτωνΕντόπισε το λάθος και επισκεύασε το όνομα.",
+        "Χτίσε το όνομαΔιάλεξε τα συνθετικά και βάλε τα στη σωστή σειρά.",
+        "Μοριακό παζλΔιάβασε το όνομα και σύνδεσε τα κομμάτια του μορίου."
+      ]
+    }
+  ],
+  "startedUTC": "2026-11-12T09:56:08.221156+00:00",
+  "sourceBefore": {
+    "design/welcome-proposal.html": "d7e1ab4c9b5e28e72274b4096c004fa7c39da596abf0d408c75df738d0be5c01",
+    "design/theory-library.html": "87e557a3455f14a851dc631c8d70bf93fe396f4a5ebdb8fde4fa78397158e8dc",
+    "mulermoc-nom-55.html": "2d57ac1b9beb503c2982cd4d43e42b9996c3dfb1a203033f9c14c100119e6c51",
+    "js/namelecule-game-choice-checkpoint.js": "c6ffa9dc5a9b0ff09cf2303f4d8e4036825b3bae13a7eaac1a5cc0e5466cc092",
+    "games/molecular-puzzle.html": "35cdfcd0d03dcc1a1795a839f72a33d54471c9e038de567b48d7a60358be0726",
+    "js/namelecule-molecular-puzzle.js": "19b78dde772890afc9645909eaf10790f3d675a8fcb93f815cce3c825fa9ebc5",
+    "js/namelecule-molecular-puzzle-engine.js": "6141bec0a6313dfd057ce1a6d057fe2a3cd1850f2b770f63929b4d312c0b55d1",
+    "css/namelecule-molecular-puzzle.css": "5bf5dc0660060a8a06e1698956e9a434382bcd60e119197b0d08e54f942a68ea",
+    "games/name-builder.html": "ad4bf42abe5ddb71b2408ef1fa039e20f0587ab81a8a97b4dd2c6441fdc71a0d",
+    "js/namelecule-name-builder.js": "2aecb1164f413adfa3fde15c269ae7f3a8fcb58c2a82bc5c8737a777116b7cdd",
+    "css/namelecule-name-builder.css": "6d6a4cf6a30b21757b26ebf1ab7df82aff79034afe4207cfda349ec76b383fde",
+    "games/name-repair.html": "e1c902cf28119bbe69469ecbb91137bbd148499d8aeff778d81b977dfa0b8da0",
+    "js/namelecule-game-repair.js": "fb678db2bc750473653ed20fd176c9fb7d2824ef2ed68716a1baa40044af39b7",
+    "scenarios/alkanes-user-3.scenario.json": "b9e2a61183385a8fee70d17f715c018b1bc261448821a4d286a7dd3322cce2b4"
+  },
+  "scope": "Release smoke after completed full triple/progress/regression runs. Real welcome/library/lesson links and trusted game controls. No fabricated receipts and no repeat of all already verified triples.",
+  "baseURL": "http://127.0.0.1:54767/",
+  "process": {
+    "ownedPID": 43443,
+    "profile": "/var/folders/2v/ds4vjvgj1_1000kq1fzg70q40000gn/T/namelecule-release-smoke-20261112-fqzoe21w",
+    "bidiPort": 54768,
+    "serveRoot": "/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3",
+    "ownedServerPort": 54767
+  },
+  "httpErrors": [
+    {
+      "path": "/favicon.ico",
+      "code": 404
+    }
+  ],
+  "welcomeGames": [
+    {
+      "text": "Συνεργείο ονομάτων↗",
+      "href": "http://127.0.0.1:54767/games/name-repair.html?v=workshop-lesson-parity-20261110-r2"
+    },
+    {
+      "text": "Χτίσε το όνομα↗",
+      "href": "http://127.0.0.1:54767/games/name-builder.html?v=builder-outside-drop-20261112-r1"
+    }
+  ],
+  "lessonURL": "http://127.0.0.1:54767/mulermoc-nom-55.html?scenario=scenarios/alkanes-user-3.scenario.json&present=1&from=theory-library&v=alkanes-personal-20261106-r1#step=1",
+  "failure": "Traceback (most recent call last):\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/save-publish-20261112/browser/smoke.py\", line 77, in <module>\n    click('.nl-game-choice-card:nth-child(3)');wait('!!document.querySelector(\".nl-puzzle-frame\").contentDocument?.querySelector(\"#assembly-board[aria-busy=false]\")')\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/save-publish-20261112/browser/smoke.py\", line 23, in wait\n    if ev(expr):return\n  File \"owned-release-smoke\", line 43, in ev\n    data=call('browsingContext.captureScreenshot',{'context':ctx,'origin':'viewport'});(HERE/(SUFFIX+'-'+name)).write_bytes(base64.b64decode(data['data']))\nRuntimeError: {'columnNumber': 11, 'exception': {'type': 'error'}, 'lineNumber': 0, 'stackTrace': {'callFrames': [{'columnNumber': 11, 'functionName': '', 'lineNumber': 0, 'url': 'http://127.0.0.1:54767/mulermoc-nom-55.html?scenario=scenarios/alkanes-user-3.scenario.json&present=1&from=theory-library&v=alkanes-personal-20261106-r1#step=4'}]}, 'text': 'TypeError: can\\'t access property \"contentDocument\", document.querySelector(...) is null'}\n",
+  "failureLocation": "http://127.0.0.1:54767/mulermoc-nom-55.html?scenario=scenarios/alkanes-user-3.scenario.json&present=1&from=theory-library&v=alkanes-personal-20261106-r1#step=4",
+  "javascriptErrors": [],
+  "sourceAfter": {
+    "design/welcome-proposal.html": "d7e1ab4c9b5e28e72274b4096c004fa7c39da596abf0d408c75df738d0be5c01",
+    "design/theory-library.html": "87e557a3455f14a851dc631c8d70bf93fe396f4a5ebdb8fde4fa78397158e8dc",
+    "mulermoc-nom-55.html": "2d57ac1b9beb503c2982cd4d43e42b9996c3dfb1a203033f9c14c100119e6c51",
+    "js/namelecule-game-choice-checkpoint.js": "c6ffa9dc5a9b0ff09cf2303f4d8e4036825b3bae13a7eaac1a5cc0e5466cc092",
+    "games/molecular-puzzle.html": "35cdfcd0d03dcc1a1795a839f72a33d54471c9e038de567b48d7a60358be0726",
+    "js/namelecule-molecular-puzzle.js": "19b78dde772890afc9645909eaf10790f3d675a8fcb93f815cce3c825fa9ebc5",
+    "js/namelecule-molecular-puzzle-engine.js": "6141bec0a6313dfd057ce1a6d057fe2a3cd1850f2b770f63929b4d312c0b55d1",
+    "css/namelecule-molecular-puzzle.css": "5bf5dc0660060a8a06e1698956e9a434382bcd60e119197b0d08e54f942a68ea",
+    "games/name-builder.html": "ad4bf42abe5ddb71b2408ef1fa039e20f0587ab81a8a97b4dd2c6441fdc71a0d",
+    "js/namelecule-name-builder.js": "2aecb1164f413adfa3fde15c269ae7f3a8fcb58c2a82bc5c8737a777116b7cdd",
+    "css/namelecule-name-builder.css": "6d6a4cf6a30b21757b26ebf1ab7df82aff79034afe4207cfda349ec76b383fde",
+    "games/name-repair.html": "e1c902cf28119bbe69469ecbb91137bbd148499d8aeff778d81b977dfa0b8da0",
+    "js/namelecule-game-repair.js": "fb678db2bc750473653ed20fd176c9fb7d2824ef2ed68716a1baa40044af39b7",
+    "scenarios/alkanes-user-3.scenario.json": "b9e2a61183385a8fee70d17f715c018b1bc261448821a4d286a7dd3322cce2b4"
+  },
+  "sourceUnchangedDuringRun": true,
+  "ownedBrowserExited": true
+}

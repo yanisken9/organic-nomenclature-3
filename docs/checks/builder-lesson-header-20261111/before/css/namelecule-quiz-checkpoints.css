@@ -1,0 +1,147 @@
+/* Checkpoint surfaces only. The molecular viewers keep their existing layout. */
+.nl-quiz-checkpoint {
+  box-sizing: border-box;
+  width: min(calc(100% - 28px), 990px);
+  margin: 0 auto 24px;
+  padding: 18px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  border: 2px solid #a9ccc2;
+  border-radius: 16px;
+  background: #eef6f1;
+  color: #254c50;
+  font-family: "Roboto Condensed", system-ui, sans-serif;
+}
+.nl-quiz-checkpoint .nl-quiz-checkpoint-heading { margin: 0 0 5px; font-size: 1.15rem; line-height: 1.3; }
+.nl-quiz-checkpoint .nl-quiz-checkpoint-status { margin: 0; font-size: 1rem; line-height: 1.45; }
+.nl-quiz-checkpoint .nl-quiz-storage-note { font-size: .88rem; margin: 8px 0 0; }
+.nl-quiz-complete { border-color: #397b78; }
+.nl-quiz-button {
+  box-sizing: border-box;
+  border: 1px solid #397b78;
+  border-radius: 10px;
+  min-height: 44px;
+  padding: 10px 16px;
+  font: 600 1rem/1.3 "Roboto Condensed", system-ui, sans-serif;
+  cursor: pointer;
+  background: #fff;
+  color: #254c50;
+  touch-action: manipulation;
+}
+.nl-quiz-open { background: #254c50; color: #fff; flex-shrink: 0; }
+.nl-quiz-button:hover { background: #dfefe6; color: #254c50; }
+.nl-quiz-button:focus-visible { outline: 3px solid #a6633d; outline-offset: 3px; }
+.nl-quiz-dialog {
+  box-sizing: border-box;
+  width: min(1180px, calc(100% - 24px));
+  max-width: calc(100% - 24px);
+  max-height: calc(100dvh - 24px);
+  margin: auto;
+  padding: 0;
+  overflow: auto;
+  border: 1px solid #a9c7be;
+  border-radius: 20px;
+  background: #faf9f5;
+  color: #254c50;
+  font: 16px/1.5 system-ui, sans-serif;
+  box-shadow: 0 20px 70px #1634364d;
+}
+.nl-quiz-dialog::backdrop { background: #153738a6; }
+.nl-quiz-dialog-header {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 20px;
+  background: #e1efea;
+  border-bottom: 1px solid #c7dcd2;
+}
+.nl-quiz-dialog .nl-quiz-dialog-title { flex: 1; min-width: 0; margin: 0; font: 700 1.05rem/1.4 system-ui, sans-serif; }
+.nl-quiz-dialog-copy { flex: 1; min-width: 0; }
+.nl-quiz-practice-notice { margin: 6px 0 0; font-size: .9rem; line-height: 1.4; }
+.nl-quiz-checkpoint-actions { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 10px; }
+.nl-quiz-checkpoint-actions > button { max-width: 100%; }
+.nl-quiz-practice-continue { max-width: 100%; background: #254c50; color: #fff; }
+.nl-quiz-dialog-actions { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; max-width: 55%; }
+.nl-quiz-dialog .nl-quiz-dialog-actions .nl-quiz-back { max-width: 100%; }
+.nl-quiz-round-progress {
+  box-sizing: border-box;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #254c50;
+  color: #fff;
+  font: 700 1.05rem/1.3 "Roboto Condensed", system-ui, sans-serif;
+  white-space: nowrap;
+}
+.nl-quiz-dialog .nl-quiz-host { padding: 22px; }
+.nl-quiz-dialog .nl-quiz-retry { margin: 0 22px 20px; }
+.nl-quiz-dialog .nl-quiz-error { margin: 0; padding: 22px; }
+.nl-quiz-dialog [hidden], .nl-quiz-checkpoint [hidden] { display: none !important; }
+@media (max-width: 650px) {
+  .nl-quiz-checkpoint { flex-direction: column; align-items: stretch; padding: 16px; }
+  .nl-quiz-checkpoint-actions { justify-content: flex-start; }
+  .nl-quiz-dialog { width: calc(100% - 12px); max-width: calc(100% - 12px); max-height: calc(100dvh - 12px); border-radius: 14px; }
+  .nl-quiz-dialog-header { padding: 12px; gap: 10px; align-items: flex-start; }
+  .nl-quiz-dialog .nl-quiz-host { padding: 14px; }
+  .nl-quiz-dialog .nl-quiz-dialog-title { font-size: .95rem; }
+  .nl-quiz-dialog .nl-quiz-back { font-size: .88rem; max-width: 170px; }
+}
+
+.nl-quiz-set-progress { margin: 0 0 14px; font-weight: 700; color: #397b78; }
+.nl-quiz-loading { padding: 28px 14px; }
+.lesson-checkpoint-preparation {
+  position: fixed;
+  z-index: 12000;
+  left: 50%;
+  bottom: 24px;
+  transform: translateX(-50%);
+  box-sizing: border-box;
+  width: min(580px, calc(100% - 28px));
+  padding: 18px 22px;
+  border: 2px solid #397b78;
+  border-radius: 16px;
+  background: #eef6f1;
+  color: #254c50;
+  box-shadow: 0 8px 30px #16343633;
+  font: 16px/1.5 system-ui, sans-serif;
+}
+.lesson-checkpoint-preparation p { margin: 0 0 12px; }
+.lesson-checkpoint-preparation-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+.lesson-checkpoint-preparation.is-error { border-color: #a6633d; }
+
+/* Cold receipt restoration is part of the loading stage, not the boot molecule. */
+.lesson-checkpoint-preparation.is-cold {
+  position: static;
+  transform: none;
+  margin: 0;
+  flex-shrink: 0;
+}
+
+/* Alternative game choices share the lesson's dialog and progress controls. */
+.nl-game-choice-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.nl-game-choice-card { display: flex; align-items: center; gap: 16px; min-width: 0; min-height: 140px; padding: 22px; border: 1px solid #a9ccc2; border-radius: 16px; background: #fff; color: #254c50; font: inherit; text-align: left; cursor: pointer; }
+.nl-game-choice-card img { display: block; width: 72px; height: 72px; object-fit: contain; flex: 0 0 auto; }
+.nl-game-choice-card strong { display: block; font-size: 1.2rem; }
+.nl-game-choice-card p { margin: 8px 0 0; }
+.nl-game-choice-card:hover { background: #eef6f1; }
+.nl-game-choice-card:focus-visible { outline: 3px solid #a6633d; outline-offset: 3px; }
+.nl-game-choice-switch { margin: 0 0 16px; }
+.nl-builder-stage { position: relative; min-width: 0; }
+.nl-builder-frame { display: block; width: 100%; min-height: 160px; max-width: 100%; border: 0; background: #faf9f5; }
+.nl-builder-marker { position: absolute; left: 0; width: 1px; height: 1px; pointer-events: none; }
+.nl-builder-actions, .nl-builder-actions .round-next { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 12px; margin-top: 18px; }
+.nl-builder-actions button { min-height: 44px; max-width: 100%; }
+.nl-builder-actions .primary { background: #254c50; color: #fff; }
+.nl-builder-error { padding: 18px; border: 1px solid #a6633d; border-radius: 12px; background: #fbf0e5; }
+@media (max-width: 650px) {
+  .nl-game-choice-grid { grid-template-columns: 1fr; }
+  .nl-game-choice-card { padding: 16px; gap: 12px; min-height: 116px; }
+  .nl-game-choice-card img { width: 56px; height: 56px; }
+  .nl-builder-actions { justify-content: stretch; }
+  .nl-builder-actions button { flex: 1 1 100%; }
+}

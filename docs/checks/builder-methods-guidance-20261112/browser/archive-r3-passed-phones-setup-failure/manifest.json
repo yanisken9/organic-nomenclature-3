@@ -1,0 +1,23 @@
+{
+  "recordedUTC": "2026-11-12T06:11:05.462247+00:00",
+  "purpose": "Preserve exact successful R3standalone/phone checks and subsequent harness setup failure after intentional desktop resize without reveal.",
+  "files": {
+    "verify.py": "4a232431315ca786f8a5b88088180cb7bf54dd074a85ea3cdd8fc8583f5005bc",
+    "driver.py": "553fbd92e0d216b9f3fde3896949251b2c4c83479d2c92d87a3761b0ce993f28",
+    "helpers.py": "e241e5d5a0ea6022aab288cafd6cc0a3abfd9f16244d90169332a082b6ceb964",
+    "interaction-helpers.py": "d0934eb112483c3811009692bb9935248a166cebd61e29954e2ef7bb35de272d",
+    "gesture-helpers.py": "46ce02d4cc53555c506242d4b726bdf99ecba3daec878ef6bec144fcb36aa977",
+    "flow-process.json": "42801ddae254cc42ad25c91839dc79e49b77825f960ef5aff131b4fbbe598c4a",
+    "flow-cleanup.json": "f09b5fc0db87249430bd791c5f9010d9f41d1ce53bb30f43b71cc985ef48bb27",
+    "flow-results.json": "dde5acc9ca775be012aaac022b05bdd3eee3ab44e1c051b6a88c99c521ef803e",
+    "flow-firefox.log": "1bbc59bb122e4fb7ce52a262d3ac6991d0789e8cc42ed83c6bd1193524364486",
+    "flow-failure.png": "27487c1a51c6414a3657da5dc8e56a318804764c54aa088bedc0e3f862617614",
+    "standalone-methods-success.png": "92e4e967b21be19632292e11ec241da0322677b759698fdd082d7d6cf64f51da",
+    "same-populated-phone-390-open.png": "e51bb9f64f6c18d13c176c5dde8e5a78653434144667dd1f6021ac42f90fb751",
+    "same-populated-phone-390-closed.png": "a2608efbdcdf2459885f2411c5e364e394798b7f3d422ed28144587d0703edd8",
+    "same-populated-phone-320-open.png": "ce45958a57db4f925ede6a4ba2195e700bbe75d5b26764e7c8b77c0e1c598000",
+    "same-populated-phone-320-closed.png": "4fcb9c564621964bb76a8a69a726eef65a6f472fc234746caede248fac29acd8"
+  },
+  "executedRunnerSHA256": "4a232431315ca786f8a5b88088180cb7bf54dd074a85ea3cdd8fc8583f5005bc",
+  "assessment": "Actual post-phone-to-desktop-resize answer point was outside viewport (y=-18.25). Source intentionally does not force desktop reopen scrolling. The failed assertion was in harness cleanup before remaining desktop methods; classification is left for independent Reviewer rather than treated as automatically a product defect or exonerated."
+}

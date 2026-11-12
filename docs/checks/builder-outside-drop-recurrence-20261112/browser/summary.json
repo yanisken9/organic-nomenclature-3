@@ -1,0 +1,1056 @@
+{
+  "recordedUTC": "2026-11-12T06:47:58.166108+00:00",
+  "scope": "Bounded Developer runtime evidence for approved six-file drop-validity fix. No app source edits by diagnostic agent.",
+  "overall": "Planned bounded verification completed using initialpass plus one targeted continuation; initial incomplete run retained.",
+  "baselineComparison": {
+    "preflightContractPass": 6,
+    "preflightContractFailure": 2,
+    "afterSameEightCasesPass": 8,
+    "afterSameEightCasesFailure": 0,
+    "preflightEvidence": "docs/checks/builder-outside-drop-recurrence-preflight-20261112/browser/summary.json"
+  },
+  "counts": {
+    "baselineTrustedCompletionGestures": 8,
+    "additionalDesktopCompletionGestures": 4,
+    "phone390CompletionGestures": 2,
+    "standaloneCompletionGestures": 2,
+    "totalTrustedCompletionGestures": 16,
+    "explicitlyInducedOrSyntheticGuardChecks": 4,
+    "partialParentReload": 1,
+    "genuineCorrectResponseWithDOMSolvedLockChecks": 1
+  },
+  "sourceFreeze": "docs/checks/builder-outside-drop-recurrence-20261112/runtime-source-freeze.json",
+  "cacheToken": "builder-outside-drop-20261112-r1",
+  "sourceCount": 6,
+  "protectedCount": 16,
+  "bothRunsSourceAndProtectedUnchanged": true,
+  "currentSourceAndProtectedStillMatch": true,
+  "coreChangedByDiagnosticAgent": false,
+  "firstPass": {
+    "results": "results.json",
+    "status": "Incomplete after 8baseline+4additionalgestures and syntheticpointercancel guard passed.",
+    "retainedArchive": "initial-attempt-no-movement-capture-flush/manifest.json",
+    "failedDiagnosticAssertion": "programmatic-capture-release cancellation cleaned ghost before release",
+    "failureInterpretation": "Capture-release API was followed by a BiDi move to the unchanged coordinates; ghost remained at pre-up observation. No terminal trace was retained for that failed guard, so no native cancellation or app lostcapture regression is established.",
+    "helperChecks": 288,
+    "failedHelperChecks": 1
+  },
+  "targetedContinuation": {
+    "results": "remaining/results.json",
+    "status": "Completed",
+    "repeatedBaselineGestures": 0,
+    "helperChecks": 124,
+    "failedHelperChecks": 0,
+    "captureFlushEvidence": "After releasePointerCapture, a genuine2px move produced trusted lostpointercapture at6155 before trustedpointerup at6414. Ghost cleared and exactanswer/bank order persisted.",
+    "interpretation": "Targeted evidence resolves the guard exercise without app source changes. It supports an insufficient event-flush assumption in the first harness; no assertion that this reproduced nativeOS captureloss."
+  },
+  "baselineCases": [
+    {
+      "label": "embedded-1280x600-bank",
+      "contractPassed": true,
+      "exactBankOrderRestored": true,
+      "release": {
+        "type": "pointerup",
+        "trusted": true,
+        "pointerId": 1,
+        "pointerType": "mouse",
+        "primary": true,
+        "button": 0,
+        "x": 837,
+        "y": 471.6333312988281,
+        "globalX": 910,
+        "globalY": 350,
+        "targetId": "tile-1ona31m-4",
+        "hit": "BUTTON",
+        "hitInAnswer": false,
+        "hitInBank": true,
+        "hitMoleculeFrame": false,
+        "visibleGame": true,
+        "insideAnswer": false,
+        "answerRect": {
+          "left": 575.0999755859375,
+          "right": 1099,
+          "top": 255.46665954589844,
+          "bottom": 400.46665954589844
+        },
+        "dropIndex": 0,
+        "scrollY": 0,
+        "frames": [
+          {
+            "x": 910,
+            "y": 350,
+            "visible": true,
+            "hit": "IFRAME"
+          }
+        ],
+        "time": 7040
+      },
+      "terminalSequence": [
+        [
+          "pointerup",
+          true,
+          7040
+        ],
+        [
+          "lostpointercapture",
+          true,
+          7051
+        ]
+      ]
+    },
+    {
+      "label": "embedded-1280x600-bottom",
+      "contractPassed": true,
+      "exactBankOrderRestored": true,
+      "release": {
+        "type": "pointerup",
+        "trusted": true,
+        "pointerId": 1,
+        "pointerType": "mouse",
+        "primary": true,
+        "button": 0,
+        "x": 837,
+        "y": 412.6333312988281,
+        "globalX": 910,
+        "globalY": 291,
+        "targetId": "tile-1ona31m-4",
+        "hit": "DIV",
+        "hitInAnswer": false,
+        "hitInBank": false,
+        "hitMoleculeFrame": false,
+        "visibleGame": true,
+        "insideAnswer": false,
+        "answerRect": {
+          "left": 575.0999755859375,
+          "right": 1099,
+          "top": 255.46665954589844,
+          "bottom": 400.46665954589844
+        },
+        "dropIndex": 0,
+        "scrollY": 0,
+        "frames": [
+          {
+            "x": 910,
+            "y": 291,
+            "visible": true,
+            "hit": "IFRAME"
+          }
+        ],
+        "time": 9415
+      },
+      "terminalSequence": [
+        [
+          "pointerup",
+          true,
+          9415
+        ],
+        [
+          "lostpointercapture",
+          true,
+          9417
+        ]
+      ]
+    },
+    {
+      "label": "embedded-1280x600-molecule",
+      "contractPassed": true,
+      "exactBankOrderRestored": true,
+      "release": {
+        "type": "pointerup",
+        "trusted": true,
+        "pointerId": 1,
+        "pointerType": "mouse",
+        "primary": true,
+        "button": 0,
+        "x": 271,
+        "y": 411.6333312988281,
+        "globalX": 344,
+        "globalY": 290,
+        "targetId": "tile-1ona31m-4",
+        "hit": "molecule-viewer",
+        "hitInAnswer": false,
+        "hitInBank": false,
+        "hitMoleculeFrame": true,
+        "visibleGame": true,
+        "insideAnswer": false,
+        "answerRect": {
+          "left": 575.0999755859375,
+          "right": 1099,
+          "top": 255.46665954589844,
+          "bottom": 400.46665954589844
+        },
+        "dropIndex": 0,
+        "scrollY": 0,
+        "frames": [
+          {
+            "x": 344,
+            "y": 290,
+            "visible": true,
+            "hit": "IFRAME"
+          }
+        ],
+        "time": 11465
+      },
+      "terminalSequence": [
+        [
+          "pointerup",
+          true,
+          11465
+        ],
+        [
+          "lostpointercapture",
+          true,
+          11468
+        ]
+      ]
+    },
+    {
+      "label": "embedded-1280x600-parent-header",
+      "contractPassed": true,
+      "exactBankOrderRestored": true,
+      "release": {
+        "type": "pointerup",
+        "trusted": true,
+        "pointerId": 1,
+        "pointerType": "mouse",
+        "primary": true,
+        "button": 0,
+        "x": 567,
+        "y": 188.63333129882812,
+        "globalX": 640,
+        "globalY": 67,
+        "targetId": "tile-1ona31m-4",
+        "hit": "DIV",
+        "hitInAnswer": false,
+        "hitInBank": false,
+        "hitMoleculeFrame": false,
+        "visibleGame": false,
+        "insideAnswer": false,
+        "answerRect": {
+          "left": 575.0999755859375,
+          "right": 1099,
+          "top": 255.46665954589844,
+          "bottom": 400.46665954589844
+        },
+        "dropIndex": 0,
+        "scrollY": 0,
+        "frames": [
+          {
+            "x": 640,
+            "y": 67,
+            "visible": false,
+            "hit": "nlQuizDialogTitle"
+          }
+        ],
+        "time": 13434
+      },
+      "terminalSequence": [
+        [
+          "pointerup",
+          true,
+          13434
+        ],
+        [
+          "lostpointercapture",
+          true,
+          13436
+        ]
+      ]
+    },
+    {
+      "label": "embedded-1500x900-bank",
+      "contractPassed": true,
+      "exactBankOrderRestored": true,
+      "release": {
+        "type": "pointerup",
+        "trusted": true,
+        "pointerId": 1,
+        "pointerType": "mouse",
+        "primary": true,
+        "button": 0,
+        "x": 837,
+        "y": 471.7833251953125,
+        "globalX": 1020,
+        "globalY": 446.99998474121094,
+        "targetId": "tile-1ona31m-4",
+        "hit": "BUTTON",
+        "hitInAnswer": false,
+        "hitInBank": true,
+        "hitMoleculeFrame": false,
+        "visibleGame": true,
+        "insideAnswer": false,
+        "answerRect": {
+          "left": 575.0999755859375,
+          "right": 1099,
+          "top": 255.46665954589844,
+          "bottom": 400.46665954589844
+        },
+        "dropIndex": 0,
+        "scrollY": 0,
+        "frames": [
+          {
+            "x": 1020,
+            "y": 446.99998474121094,
+            "visible": true,
+            "hit": "IFRAME"
+          }
+        ],
+        "time": 16832
+      },
+      "terminalSequence": [
+        [
+          "pointerup",
+          true,
+          16832
+        ],
+        [
+          "lostpointercapture",
+          true,
+          16835
+        ]
+      ]
+    },
+    {
+      "label": "embedded-1500x900-bottom",
+      "contractPassed": true,
+      "exactBankOrderRestored": true,
+      "release": {
+        "type": "pointerup",
+        "trusted": true,
+        "pointerId": 1,
+        "pointerType": "mouse",
+        "primary": true,
+        "button": 0,
+        "x": 837,
+        "y": 412.7833251953125,
+        "globalX": 1020,
+        "globalY": 387.99998474121094,
+        "targetId": "tile-1ona31m-4",
+        "hit": "DIV",
+        "hitInAnswer": false,
+        "hitInBank": false,
+        "hitMoleculeFrame": false,
+        "visibleGame": true,
+        "insideAnswer": false,
+        "answerRect": {
+          "left": 575.0999755859375,
+          "right": 1099,
+          "top": 255.46665954589844,
+          "bottom": 400.46665954589844
+        },
+        "dropIndex": 0,
+        "scrollY": 0,
+        "frames": [
+          {
+            "x": 1020,
+            "y": 387.99998474121094,
+            "visible": true,
+            "hit": "IFRAME"
+          }
+        ],
+        "time": 18983
+      },
+      "terminalSequence": [
+        [
+          "pointerup",
+          true,
+          18983
+        ],
+        [
+          "lostpointercapture",
+          true,
+          18986
+        ]
+      ]
+    },
+    {
+      "label": "embedded-1500x900-molecule",
+      "contractPassed": true,
+      "exactBankOrderRestored": true,
+      "release": {
+        "type": "pointerup",
+        "trusted": true,
+        "pointerId": 1,
+        "pointerType": "mouse",
+        "primary": true,
+        "button": 0,
+        "x": 271,
+        "y": 411.7833251953125,
+        "globalX": 454,
+        "globalY": 386.99998474121094,
+        "targetId": "tile-1ona31m-4",
+        "hit": "molecule-viewer",
+        "hitInAnswer": false,
+        "hitInBank": false,
+        "hitMoleculeFrame": true,
+        "visibleGame": true,
+        "insideAnswer": false,
+        "answerRect": {
+          "left": 575.0999755859375,
+          "right": 1099,
+          "top": 255.46665954589844,
+          "bottom": 400.46665954589844
+        },
+        "dropIndex": 0,
+        "scrollY": 0,
+        "frames": [
+          {
+            "x": 454,
+            "y": 386.99998474121094,
+            "visible": true,
+            "hit": "IFRAME"
+          }
+        ],
+        "time": 21301
+      },
+      "terminalSequence": [
+        [
+          "pointerup",
+          true,
+          21301
+        ],
+        [
+          "lostpointercapture",
+          true,
+          21303
+        ]
+      ]
+    },
+    {
+      "label": "embedded-1500x900-parent-header",
+      "contractPassed": true,
+      "exactBankOrderRestored": true,
+      "release": {
+        "type": "pointerup",
+        "trusted": true,
+        "pointerId": 1,
+        "pointerType": "mouse",
+        "primary": true,
+        "button": 0,
+        "x": 567,
+        "y": 91.78333282470703,
+        "globalX": 750,
+        "globalY": 66.99999237060547,
+        "targetId": "tile-1ona31m-4",
+        "hit": "P",
+        "hitInAnswer": false,
+        "hitInBank": false,
+        "hitMoleculeFrame": false,
+        "visibleGame": false,
+        "insideAnswer": false,
+        "answerRect": {
+          "left": 575.0999755859375,
+          "right": 1099,
+          "top": 255.46665954589844,
+          "bottom": 400.46665954589844
+        },
+        "dropIndex": 0,
+        "scrollY": 0,
+        "frames": [
+          {
+            "x": 750,
+            "y": 66.99999237060547,
+            "visible": false,
+            "hit": "nlQuizDialogTitle"
+          }
+        ],
+        "time": 23432
+      },
+      "terminalSequence": [
+        [
+          "pointerup",
+          true,
+          23432
+        ],
+        [
+          "lostpointercapture",
+          true,
+          23434
+        ]
+      ]
+    }
+  ],
+  "additionalGestures": [
+    {
+      "label": "desktop-inside-reorder",
+      "answerAfter": [
+        "tile-1ona31m-3",
+        "tile-1ona31m-0",
+        "tile-1ona31m-4"
+      ],
+      "release": {
+        "type": "pointerup",
+        "trusted": true,
+        "pointerId": 1,
+        "pointerType": "mouse",
+        "primary": true,
+        "button": 0,
+        "x": 995,
+        "y": 327.7833251953125,
+        "globalX": 1178,
+        "globalY": 302.99998474121094,
+        "targetId": "tile-1ona31m-4",
+        "hit": "answer-tiles",
+        "hitInAnswer": true,
+        "hitInBank": false,
+        "hitMoleculeFrame": false,
+        "visibleGame": true,
+        "insideAnswer": true,
+        "answerRect": {
+          "left": 575.0999755859375,
+          "right": 1099,
+          "top": 255.46665954589844,
+          "bottom": 400.46665954589844
+        },
+        "dropIndex": 3,
+        "scrollY": 0,
+        "frames": [
+          {
+            "x": 1178,
+            "y": 302.99998474121094,
+            "visible": true,
+            "hit": "IFRAME"
+          }
+        ],
+        "time": 26931
+      },
+      "bankIDs": [
+        "tile-1ona31m-6",
+        "tile-1ona31m-1",
+        "tile-1ona31m-5",
+        "tile-1ona31m-2"
+      ]
+    },
+    {
+      "label": "desktop-exit-reenter-answer",
+      "answerAfter": [
+        "tile-1ona31m-4",
+        "tile-1ona31m-3",
+        "tile-1ona31m-0"
+      ],
+      "release": {
+        "type": "pointerup",
+        "trusted": true,
+        "pointerId": 1,
+        "pointerType": "mouse",
+        "primary": true,
+        "button": 0,
+        "x": 680,
+        "y": 327.7833251953125,
+        "globalX": 863,
+        "globalY": 302.99998474121094,
+        "targetId": "tile-1ona31m-4",
+        "hit": "answer-tiles",
+        "hitInAnswer": true,
+        "hitInBank": false,
+        "hitMoleculeFrame": false,
+        "visibleGame": true,
+        "insideAnswer": true,
+        "answerRect": {
+          "left": 575.0999755859375,
+          "right": 1099,
+          "top": 255.46665954589844,
+          "bottom": 400.46665954589844
+        },
+        "dropIndex": 0,
+        "scrollY": 0,
+        "frames": [
+          {
+            "x": 863,
+            "y": 302.99998474121094,
+            "visible": true,
+            "hit": "IFRAME"
+          }
+        ],
+        "time": 28404
+      },
+      "bankIDs": [
+        "tile-1ona31m-6",
+        "tile-1ona31m-1",
+        "tile-1ona31m-5",
+        "tile-1ona31m-2"
+      ]
+    },
+    {
+      "label": "desktop-bank-origin-header-no-op",
+      "answerAfter": [],
+      "release": {
+        "type": "pointerup",
+        "trusted": true,
+        "pointerId": 1,
+        "pointerType": "mouse",
+        "primary": true,
+        "button": 0,
+        "x": 567,
+        "y": 85,
+        "globalX": 750,
+        "globalY": 67,
+        "targetId": "tile-1ona31m-4",
+        "hit": "P",
+        "hitInAnswer": false,
+        "hitInBank": false,
+        "hitMoleculeFrame": false,
+        "visibleGame": false,
+        "insideAnswer": false,
+        "answerRect": {
+          "left": 575.0999755859375,
+          "right": 1099,
+          "top": 255.46665954589844,
+          "bottom": 400.46665954589844
+        },
+        "dropIndex": 0,
+        "scrollY": 0,
+        "frames": [
+          {
+            "x": 750,
+            "y": 67,
+            "visible": false,
+            "hit": "nlQuizDialogTitle"
+          }
+        ],
+        "time": 33133
+      },
+      "bankIDs": [
+        "tile-1ona31m-4",
+        "tile-1ona31m-3",
+        "tile-1ona31m-0",
+        "tile-1ona31m-6",
+        "tile-1ona31m-1",
+        "tile-1ona31m-5",
+        "tile-1ona31m-2"
+      ]
+    },
+    {
+      "label": "desktop-wrong-feedback-header-correction",
+      "answerAfter": [],
+      "release": {
+        "type": "pointerup",
+        "trusted": true,
+        "pointerId": 1,
+        "pointerType": "mouse",
+        "primary": true,
+        "button": 0,
+        "x": 567,
+        "y": 192.4166717529297,
+        "globalX": 750,
+        "globalY": 67,
+        "targetId": "tile-1ona31m-4",
+        "hit": "DIV",
+        "hitInAnswer": false,
+        "hitInBank": false,
+        "hitMoleculeFrame": false,
+        "visibleGame": false,
+        "insideAnswer": false,
+        "answerRect": {
+          "left": 575.0999755859375,
+          "right": 1099,
+          "top": 255.46665954589844,
+          "bottom": 400.46665954589844
+        },
+        "dropIndex": 0,
+        "scrollY": 0,
+        "frames": [
+          {
+            "x": 750,
+            "y": 67,
+            "visible": false,
+            "hit": "nlQuizDialogTitle"
+          }
+        ],
+        "time": 35752
+      },
+      "bankIDs": [
+        "tile-1ona31m-4",
+        "tile-1ona31m-3",
+        "tile-1ona31m-0",
+        "tile-1ona31m-6",
+        "tile-1ona31m-1",
+        "tile-1ona31m-5",
+        "tile-1ona31m-2"
+      ]
+    },
+    {
+      "label": "phone390-parent-header-return",
+      "answerAfter": [],
+      "release": {
+        "type": "pointerup",
+        "trusted": true,
+        "pointerId": 0,
+        "pointerType": "mouse",
+        "primary": true,
+        "button": 0,
+        "x": 174,
+        "y": 622.2166748046875,
+        "globalX": 195,
+        "globalY": 59,
+        "targetId": "tile-1krxkz9-5",
+        "hit": "DIV",
+        "hitInAnswer": false,
+        "hitInBank": false,
+        "hitMoleculeFrame": false,
+        "visibleGame": false,
+        "insideAnswer": false,
+        "answerRect": {
+          "left": 28,
+          "right": 320,
+          "top": 799,
+          "bottom": 883
+        },
+        "dropIndex": 1,
+        "scrollY": 0,
+        "frames": [
+          {
+            "x": 195,
+            "y": 59,
+            "visible": false,
+            "hit": "DIV"
+          }
+        ],
+        "time": 5644
+      },
+      "bankIDs": [
+        "tile-1krxkz9-5",
+        "tile-1krxkz9-6",
+        "tile-1krxkz9-4",
+        "tile-1krxkz9-3",
+        "tile-1krxkz9-1",
+        "tile-1krxkz9-2",
+        "tile-1krxkz9-0"
+      ]
+    },
+    {
+      "label": "phone390-visible-bank-return",
+      "answerAfter": [],
+      "release": {
+        "type": "pointerup",
+        "trusted": true,
+        "pointerId": 0,
+        "pointerType": "mouse",
+        "primary": true,
+        "button": 0,
+        "x": 174,
+        "y": 975.2166748046875,
+        "globalX": 195,
+        "globalY": 412,
+        "targetId": "tile-1krxkz9-5",
+        "hit": "bank-tiles",
+        "hitInAnswer": false,
+        "hitInBank": true,
+        "hitMoleculeFrame": false,
+        "visibleGame": true,
+        "insideAnswer": false,
+        "answerRect": {
+          "left": 28,
+          "right": 320,
+          "top": 799,
+          "bottom": 883
+        },
+        "dropIndex": 1,
+        "scrollY": 0,
+        "frames": [
+          {
+            "x": 195,
+            "y": 412,
+            "visible": true,
+            "hit": "IFRAME"
+          }
+        ],
+        "time": 7440
+      },
+      "bankIDs": [
+        "tile-1krxkz9-5",
+        "tile-1krxkz9-6",
+        "tile-1krxkz9-4",
+        "tile-1krxkz9-3",
+        "tile-1krxkz9-1",
+        "tile-1krxkz9-2",
+        "tile-1krxkz9-0"
+      ]
+    },
+    {
+      "label": "standalone-visible-bottom-return",
+      "answerAfter": [],
+      "release": {
+        "type": "pointerup",
+        "trusted": true,
+        "pointerId": 0,
+        "pointerType": "mouse",
+        "primary": true,
+        "button": 0,
+        "x": 935,
+        "y": 169,
+        "globalX": 935,
+        "globalY": 169,
+        "targetId": "tile-qqoay1-0",
+        "hit": "DIV",
+        "hitInAnswer": false,
+        "hitInBank": false,
+        "hitMoleculeFrame": false,
+        "visibleGame": true,
+        "insideAnswer": false,
+        "answerRect": {
+          "left": 645.566650390625,
+          "right": 1225,
+          "top": 12,
+          "bottom": 157
+        },
+        "dropIndex": 0,
+        "scrollY": 529.0166625976562,
+        "frames": [],
+        "time": 7141
+      },
+      "bankIDs": [
+        "tile-qqoay1-0",
+        "tile-qqoay1-6",
+        "tile-qqoay1-4",
+        "tile-qqoay1-8",
+        "tile-qqoay1-a",
+        "tile-qqoay1-9",
+        "tile-qqoay1-5",
+        "tile-qqoay1-7",
+        "tile-qqoay1-2",
+        "tile-qqoay1-1",
+        "tile-qqoay1-3"
+      ]
+    },
+    {
+      "label": "standalone-bank-origin-outside-no-op",
+      "answerAfter": [],
+      "release": {
+        "type": "pointerup",
+        "trusted": true,
+        "pointerId": 0,
+        "pointerType": "mouse",
+        "primary": true,
+        "button": 0,
+        "x": 935,
+        "y": 169,
+        "globalX": 935,
+        "globalY": 169,
+        "targetId": "tile-qqoay1-0",
+        "hit": "DIV",
+        "hitInAnswer": false,
+        "hitInBank": false,
+        "hitMoleculeFrame": false,
+        "visibleGame": true,
+        "insideAnswer": false,
+        "answerRect": {
+          "left": 645.566650390625,
+          "right": 1225,
+          "top": 12,
+          "bottom": 157
+        },
+        "dropIndex": 0,
+        "scrollY": 529.0166625976562,
+        "frames": [],
+        "time": 8190
+      },
+      "bankIDs": [
+        "tile-qqoay1-0",
+        "tile-qqoay1-6",
+        "tile-qqoay1-4",
+        "tile-qqoay1-8",
+        "tile-qqoay1-a",
+        "tile-qqoay1-9",
+        "tile-qqoay1-5",
+        "tile-qqoay1-7",
+        "tile-qqoay1-2",
+        "tile-qqoay1-1",
+        "tile-qqoay1-3"
+      ]
+    }
+  ],
+  "guards": [
+    {
+      "kind": "synthetic-pointercancel",
+      "answerAndBankPreserved": true,
+      "ghostCleanBeforeActualUp": "checked in initialrun assertion",
+      "nativeDeviceCancellationClaim": false,
+      "terminalSequence": [
+        [
+          "pointercancel",
+          false,
+          37500
+        ],
+        [
+          "lostpointercapture",
+          true,
+          37711
+        ],
+        [
+          "pointerup",
+          true,
+          37711
+        ]
+      ]
+    },
+    {
+      "kind": "programmatic-capture-release",
+      "answerAndBankPreserved": true,
+      "ghostCleanBeforeActualUp": true,
+      "nativeDeviceCancellationClaim": false,
+      "terminalSequence": [
+        [
+          "lostpointercapture",
+          true,
+          6155
+        ],
+        [
+          "pointerup",
+          true,
+          6414
+        ]
+      ]
+    },
+    {
+      "kind": "synthetic-window-blur",
+      "answerAndBankPreserved": true,
+      "ghostCleanBeforeActualUp": true,
+      "nativeDeviceCancellationClaim": false,
+      "terminalSequence": [
+        [
+          "lostpointercapture",
+          true,
+          9156
+        ],
+        [
+          "pointerup",
+          true,
+          9156
+        ]
+      ]
+    },
+    {
+      "kind": "synthetic-outside-browser-pointerup",
+      "answerAndBankPreserved": true,
+      "ghostCleanBeforeActualUp": true,
+      "nativeDeviceCancellationClaim": false,
+      "terminalSequence": [
+        [
+          "pointerup",
+          false,
+          11628
+        ],
+        [
+          "lostpointercapture",
+          true,
+          11832
+        ],
+        [
+          "pointerup",
+          true,
+          11832
+        ]
+      ]
+    }
+  ],
+  "partialRefresh": {
+    "beforeAnswer": [
+      "tile-izcsni-0",
+      "tile-izcsni-1"
+    ],
+    "afterAnswer": [
+      "tile-izcsni-0",
+      "tile-izcsni-1"
+    ],
+    "exactAnswerAndBankPreserved": true,
+    "genuineRoundAndBankSeedPreserved": true
+  },
+  "solvedResponse": {
+    "moleculeId": "pentane",
+    "candidate": "πεντάνιο",
+    "success": true,
+    "lock": {
+      "tiles": [
+        {
+          "id": "tile-izcsni-0",
+          "disabled": true
+        },
+        {
+          "id": "tile-izcsni-1",
+          "disabled": true
+        },
+        {
+          "id": "tile-izcsni-2",
+          "disabled": true
+        },
+        {
+          "id": "tile-izcsni-6",
+          "disabled": true
+        },
+        {
+          "id": "tile-izcsni-3",
+          "disabled": true
+        },
+        {
+          "id": "tile-izcsni-4",
+          "disabled": true
+        },
+        {
+          "id": "tile-izcsni-5",
+          "disabled": true
+        }
+      ],
+      "controlsHidden": true,
+      "check": true,
+      "before": true,
+      "after": true
+    },
+    "attemptedGestureLimitation": "An attempted gesture used computed solvedtile coordinates without verifying visibility/hit. Screenshot shows answer above stickyheader. Do not count it as a proven trustedhit on disabled solvedtile; DOMdisabled/hidden checks and unchangedstate are the supplied lock evidence."
+  },
+  "cleanup": [
+    {
+      "receipt": "cleanup.json",
+      "diagnosticPID": 37484,
+      "script": "/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/builder-outside-drop-recurrence-20261112/browser/verify.py",
+      "ownedHeadlessOnly": true,
+      "serverPID": 37484,
+      "serverPort": 51367,
+      "firefoxPID": 37485,
+      "profile": "/var/folders/2v/ds4vjvgj1_1000kq1fzg70q40000gn/T/namelecule-outside-drop-after-20261112-jb0xhe5z",
+      "bidiPort": 51368,
+      "baseURL": "http://127.0.0.1:51367/",
+      "helperOrigins": "Copies of builder-placement-controls-20261112/browser helpers; gesture oracle adapted to approved topviewport+visibleanswer contract.",
+      "ownedFirefoxExited": true,
+      "ownedServerClosed": true,
+      "ownedBidiClosed": true,
+      "cleanupUTC": "2026-11-12T06:44:23.687632+00:00",
+      "postExitVerification": {
+        "diagnosticPIDAbsent": true,
+        "firefoxPIDAbsent": true,
+        "serverPortClosed": true,
+        "bidiPortClosed": true
+      }
+    },
+    {
+      "receipt": "remaining/cleanup.json",
+      "diagnosticPID": 37540,
+      "script": "/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/builder-outside-drop-recurrence-20261112/browser/remaining/verify.py",
+      "ownedHeadlessOnly": true,
+      "serverPID": 37540,
+      "serverPort": 51500,
+      "firefoxPID": 37541,
+      "profile": "/var/folders/2v/ds4vjvgj1_1000kq1fzg70q40000gn/T/namelecule-outside-drop-remaining-20261112-9fkzgd10",
+      "bidiPort": 51501,
+      "baseURL": "http://127.0.0.1:51500/",
+      "helperOrigins": "Copies of builder-placement-controls-20261112/browser helpers; gesture oracle adapted to approved topviewport+visibleanswer contract.",
+      "ownedFirefoxExited": true,
+      "ownedServerClosed": true,
+      "ownedBidiClosed": true,
+      "cleanupUTC": "2026-11-12T06:46:53.595950+00:00",
+      "postExitVerification": {
+        "diagnosticPIDAbsent": true,
+        "firefoxPIDAbsent": true,
+        "serverPortClosed": true,
+        "bidiPortClosed": true
+      }
+    }
+  ],
+  "warningsAndLimits": [
+    "No observed page JavaScript errors in either run; favicon.ico404 in each. Firefox stderr includes remote-agent WeakMap/global-object diagnostics and tracker messages retained in each firefox.log. These browserstderr observations are not counted as clean-console evidence.",
+    "Pointercancel, windowblur and outsidebrowserpointerup guards are synthetic after actual trusteddrag; captureloss is programmatically induced via DOM capture API. No nativeOS/hardware cancellation or real release outsidebrowser was validated.",
+    "Phone390 uses trustedmouse input in a viewport. Physicaltouch/pen and freshtrustedtouch gestures were not replayed inthis scoped fix verification;320 was not run because no concrete390problem arose.",
+    "No sixroundset replay, browserchrome interaction, personal/userGUI control, otherbrowser, screenreader, offline or conference-machine qualification.",
+    "User actual physicaldrop endpoint remains unknown. This reproduces and resolves the demonstrated parentheader contractfailure on currentlocalbytes."
+  ]
+}

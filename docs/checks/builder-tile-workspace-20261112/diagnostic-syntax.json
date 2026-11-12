@@ -1,0 +1,13 @@
+{
+  "checks": [
+    {
+      "file": "flow.py",
+      "inMemoryAST": "PASS"
+    },
+    {
+      "file": "interaction-helpers.py",
+      "inMemoryAST": "PASS"
+    }
+  ],
+  "priorPyCompile": "Cache write outside sandbox denied; no application failure. Replaced by in-memory AST parsing."
+}

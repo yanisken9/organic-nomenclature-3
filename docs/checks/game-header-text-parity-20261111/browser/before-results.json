@@ -1,0 +1,454 @@
+{
+  "checks": [
+    {
+      "label": "Before origin serves exact frozen css/namelecule-name-builder.css",
+      "passed": true,
+      "detail": {
+        "path": "css/namelecule-name-builder.css",
+        "sha256": "d9ad67895fa1508f273b4f37161a37fe0ef283e653a1bcfd33649508e80999c2",
+        "bytes": 9176
+      }
+    },
+    {
+      "label": "Before origin serves exact frozen css/namelecule-quiz-checkpoints.css",
+      "passed": true,
+      "detail": {
+        "path": "css/namelecule-quiz-checkpoints.css",
+        "sha256": "4ce245024e272146c53f9134f86666b467352978aa1f6f7e21959da95f96e3ef",
+        "bytes": 7525
+      }
+    },
+    {
+      "label": "Before origin serves exact frozen games/name-builder.html",
+      "passed": true,
+      "detail": {
+        "path": "games/name-builder.html",
+        "sha256": "20e85af5f718b76031443a87d2394f71a25290e3705d5066cb055541380eddb3",
+        "bytes": 6740
+      }
+    },
+    {
+      "label": "Before origin serves exact frozen js/namelecule-game-choice-checkpoint.js",
+      "passed": true,
+      "detail": {
+        "path": "js/namelecule-game-choice-checkpoint.js",
+        "sha256": "700e50f232d45498fbfe5b4dee90c345673168386124e9b5525165b8cfdc7224",
+        "bytes": 31730
+      }
+    },
+    {
+      "label": "Before origin serves exact frozen mulermoc-nom-54.html",
+      "passed": true,
+      "detail": {
+        "path": "mulermoc-nom-54.html",
+        "sha256": "915ccdd093b03a317c1d4a55be58a3e4225ee64b95fb00c09f99fc3a151dc9c1",
+        "bytes": 21167
+      }
+    },
+    {
+      "label": "Before origin serves exact frozen mulermoc-nom-55.html",
+      "passed": true,
+      "detail": {
+        "path": "mulermoc-nom-55.html",
+        "sha256": "93ed76523808b5c3b084afabdf16e334bb0de90d7458ed134b182ff8daa7ea24",
+        "bytes": 21079
+      }
+    },
+    {
+      "label": "Builder verified/native ready",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "Reproduced before Builder smaller objective 1500",
+      "passed": true,
+      "detail": {
+        "text": "Παρατήρησε τη δομή. Διάλεξε τα κατάλληλα συνθετικά και βάλε τα στη σωστή σειρά.",
+        "fontFamily": "system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif",
+        "fontSize": "16.8px",
+        "fontWeight": "750",
+        "lineHeight": "25.2px",
+        "letterSpacing": "normal",
+        "maxWidth": "none",
+        "textAlign": "center",
+        "width": 1050,
+        "height": 25.199996948242188
+      }
+    },
+    {
+      "label": "Reproduced before Builder smaller objective 800",
+      "passed": true,
+      "detail": {
+        "text": "Παρατήρησε τη δομή. Διάλεξε τα κατάλληλα συνθετικά και βάλε τα στη σωστή σειρά.",
+        "fontFamily": "system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif",
+        "fontSize": "16.8px",
+        "fontWeight": "750",
+        "lineHeight": "25.2px",
+        "letterSpacing": "normal",
+        "maxWidth": "none",
+        "textAlign": "center",
+        "width": 706,
+        "height": 50.399993896484375
+      }
+    },
+    {
+      "label": "Reproduced before Workshop larger objective 1500",
+      "passed": true,
+      "detail": {
+        "text": "Έλεγξε το μήκος της κύριας αλυσίδας και το συνθετικό που το δηλώνει.",
+        "fontFamily": "system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif",
+        "fontSize": "24px",
+        "fontWeight": "700",
+        "lineHeight": "34.8px",
+        "letterSpacing": "normal",
+        "maxWidth": "810px",
+        "textAlign": "center",
+        "width": 810,
+        "height": 69.59999084472656
+      }
+    },
+    {
+      "label": "Reproduced before Workshop larger objective 800",
+      "passed": true,
+      "detail": {
+        "text": "Έλεγξε το μήκος της κύριας αλυσίδας και το συνθετικό που το δηλώνει.",
+        "fontFamily": "system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif",
+        "fontSize": "24px",
+        "fontWeight": "700",
+        "lineHeight": "34.8px",
+        "letterSpacing": "normal",
+        "maxWidth": "810px",
+        "textAlign": "center",
+        "width": 730,
+        "height": 69.60000610351562
+      }
+    }
+  ],
+  "solved": [],
+  "conditions": "Owned headless Firefox; actual production UI, native viewer and verified chemistry Worker. Read-only preload observes bridge loads for deterministic test inputs; trusted pointer input submits answers.",
+  "textSamples": [
+    {
+      "label": "Before Builder 1500",
+      "game": "builder",
+      "outerWidth": 1500,
+      "outerHeight": 1000,
+      "allocation": 1134,
+      "hostWidth": 1134,
+      "title": {
+        "text": "Χτίσε το όνομα",
+        "fontFamily": "Roboto Condensed, sans-serif",
+        "fontSize": "40px",
+        "fontWeight": "700",
+        "lineHeight": "44.8px",
+        "letterSpacing": "-1.6px",
+        "maxWidth": "100%",
+        "textAlign": "center",
+        "width": 225.14999389648438,
+        "height": 44.80000305175781
+      },
+      "objective": {
+        "text": "Παρατήρησε τη δομή. Διάλεξε τα κατάλληλα συνθετικά και βάλε τα στη σωστή σειρά.",
+        "fontFamily": "system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif",
+        "fontSize": "16.8px",
+        "fontWeight": "750",
+        "lineHeight": "25.2px",
+        "letterSpacing": "normal",
+        "maxWidth": "none",
+        "textAlign": "center",
+        "width": 1050,
+        "height": 25.199996948242188
+      },
+      "secondary": {
+        "text": "Σύρε τα πλακίδια στο πλαίσιο ή πάτησέ τα για να τα προσθέσεις. Μερικά περισσεύουν.",
+        "fontFamily": "system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif",
+        "fontSize": "14.0833px",
+        "fontWeight": "400",
+        "lineHeight": "21.1333px",
+        "letterSpacing": "normal",
+        "maxWidth": "none",
+        "textAlign": "center",
+        "width": 1050,
+        "height": 21.133331298828125
+      },
+      "status": {
+        "text": "Διάλεξε τα συνθετικά και χτίσε το όνομα.",
+        "fontFamily": "system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif",
+        "fontSize": "14.8833px",
+        "fontWeight": "400",
+        "lineHeight": "22.3333px",
+        "letterSpacing": "normal",
+        "maxWidth": "none",
+        "textAlign": "center",
+        "width": 1110,
+        "height": 39.333343505859375,
+        "error": false
+      },
+      "logoCount": 1,
+      "logoLoaded": true,
+      "logoDecorative": true,
+      "logoWidth": 88,
+      "logoCenter": 750,
+      "hostCenter": 750,
+      "headingCenter": 749.9916839599609,
+      "headingTop": 305.83331298828125,
+      "headingBottom": 350.63331604003906,
+      "logoTop": 209.8333282470703,
+      "logoBottom": 297.8333282470703,
+      "stickyBottom": 121.83332824707031,
+      "dialogBottom": 988,
+      "scrollTop": 0,
+      "focused": true,
+      "tabIndex": -1,
+      "parentOverflow": false,
+      "dialogOverflow": false,
+      "childOverflow": false,
+      "caption": null
+    },
+    {
+      "label": "Before Builder 800",
+      "game": "builder",
+      "outerWidth": 800,
+      "outerHeight": 1000,
+      "allocation": 730,
+      "hostWidth": 730,
+      "title": {
+        "text": "Χτίσε το όνομα",
+        "fontFamily": "Roboto Condensed, sans-serif",
+        "fontSize": "28.8px",
+        "fontWeight": "700",
+        "lineHeight": "32.25px",
+        "letterSpacing": "-1.152px",
+        "maxWidth": "100%",
+        "textAlign": "center",
+        "width": 162.14999389648438,
+        "height": 32.25
+      },
+      "objective": {
+        "text": "Παρατήρησε τη δομή. Διάλεξε τα κατάλληλα συνθετικά και βάλε τα στη σωστή σειρά.",
+        "fontFamily": "system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif",
+        "fontSize": "16.8px",
+        "fontWeight": "750",
+        "lineHeight": "25.2px",
+        "letterSpacing": "normal",
+        "maxWidth": "none",
+        "textAlign": "center",
+        "width": 706,
+        "height": 50.399993896484375
+      },
+      "secondary": {
+        "text": "Σύρε τα πλακίδια στο πλαίσιο ή πάτησέ τα για να τα προσθέσεις. Μερικά περισσεύουν.",
+        "fontFamily": "system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif",
+        "fontSize": "14.0833px",
+        "fontWeight": "400",
+        "lineHeight": "21.1333px",
+        "letterSpacing": "normal",
+        "maxWidth": "none",
+        "textAlign": "center",
+        "width": 706,
+        "height": 21.133346557617188
+      },
+      "status": {
+        "text": "Διάλεξε τα συνθετικά και χτίσε το όνομα.",
+        "fontFamily": "system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif",
+        "fontSize": "14.8833px",
+        "fontWeight": "400",
+        "lineHeight": "22.3333px",
+        "letterSpacing": "normal",
+        "maxWidth": "none",
+        "textAlign": "center",
+        "width": 706,
+        "height": 39.33332824707031,
+        "error": false
+      },
+      "logoCount": 1,
+      "logoLoaded": true,
+      "logoDecorative": true,
+      "logoWidth": 88,
+      "logoCenter": 400,
+      "hostCenter": 400,
+      "headingCenter": 399.99168395996094,
+      "headingTop": 305.83331298828125,
+      "headingBottom": 338.08331298828125,
+      "logoTop": 209.8333282470703,
+      "logoBottom": 297.8333282470703,
+      "stickyBottom": 121.83332824707031,
+      "dialogBottom": 988,
+      "scrollTop": 0,
+      "focused": true,
+      "tabIndex": -1,
+      "parentOverflow": false,
+      "dialogOverflow": false,
+      "childOverflow": false,
+      "caption": null
+    },
+    {
+      "label": "Before Workshop 1500",
+      "game": "repair",
+      "outerWidth": 1500,
+      "outerHeight": 1000,
+      "allocation": 1134,
+      "hostWidth": 1134,
+      "title": {
+        "text": "Επισκευή ονόματος",
+        "fontFamily": "Roboto Condensed, sans-serif",
+        "fontSize": "40px",
+        "fontWeight": "700",
+        "lineHeight": "44.8px",
+        "letterSpacing": "-1.6px",
+        "maxWidth": "100%",
+        "textAlign": "center",
+        "width": 1134,
+        "height": 44.80000305175781
+      },
+      "objective": {
+        "text": "Έλεγξε το μήκος της κύριας αλυσίδας και το συνθετικό που το δηλώνει.",
+        "fontFamily": "system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif",
+        "fontSize": "24px",
+        "fontWeight": "700",
+        "lineHeight": "34.8px",
+        "letterSpacing": "normal",
+        "maxWidth": "810px",
+        "textAlign": "center",
+        "width": 810,
+        "height": 69.59999084472656
+      },
+      "secondary": {
+        "text": "1Παρατήρησε τη δομή2Επισκεύασε το όνομα3Έλεγξε την επιλογή σου",
+        "fontFamily": "system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif",
+        "fontSize": "11.5167px",
+        "fontWeight": "400",
+        "lineHeight": "18.4333px",
+        "letterSpacing": "normal",
+        "maxWidth": "none",
+        "textAlign": "start",
+        "width": 1134,
+        "height": 19
+      },
+      "status": null,
+      "logoCount": 1,
+      "logoLoaded": true,
+      "logoDecorative": true,
+      "logoWidth": 88,
+      "logoCenter": 750,
+      "hostCenter": 750,
+      "headingCenter": 750,
+      "headingTop": 369.683349609375,
+      "headingBottom": 414.4833526611328,
+      "logoTop": 247.8333282470703,
+      "logoBottom": 335.8333282470703,
+      "stickyBottom": 121.83332824707031,
+      "dialogBottom": 988,
+      "scrollTop": 0,
+      "focused": true,
+      "tabIndex": -1,
+      "parentOverflow": false,
+      "dialogOverflow": false,
+      "childOverflow": false,
+      "caption": "ΣΥΝΕΡΓΕΙΟ ΟΝΟΜΑΤΩΝ"
+    },
+    {
+      "label": "Before Workshop 800",
+      "game": "repair",
+      "outerWidth": 800,
+      "outerHeight": 1000,
+      "allocation": 730,
+      "hostWidth": 730,
+      "title": {
+        "text": "Επισκευή ονόματος",
+        "fontFamily": "Roboto Condensed, sans-serif",
+        "fontSize": "28.8px",
+        "fontWeight": "700",
+        "lineHeight": "32.25px",
+        "letterSpacing": "-1.152px",
+        "maxWidth": "100%",
+        "textAlign": "center",
+        "width": 730,
+        "height": 32.25
+      },
+      "objective": {
+        "text": "Έλεγξε το μήκος της κύριας αλυσίδας και το συνθετικό που το δηλώνει.",
+        "fontFamily": "system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif",
+        "fontSize": "24px",
+        "fontWeight": "700",
+        "lineHeight": "34.8px",
+        "letterSpacing": "normal",
+        "maxWidth": "810px",
+        "textAlign": "center",
+        "width": 730,
+        "height": 69.60000610351562
+      },
+      "secondary": {
+        "text": "1Παρατήρησε τη δομή2Επισκεύασε το όνομα3Έλεγξε την επιλογή σου",
+        "fontFamily": "system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif",
+        "fontSize": "11.5167px",
+        "fontWeight": "400",
+        "lineHeight": "18.4333px",
+        "letterSpacing": "normal",
+        "maxWidth": "none",
+        "textAlign": "start",
+        "width": 730,
+        "height": 19
+      },
+      "status": null,
+      "logoCount": 1,
+      "logoLoaded": true,
+      "logoDecorative": true,
+      "logoWidth": 88,
+      "logoCenter": 400,
+      "hostCenter": 400,
+      "headingCenter": 400,
+      "headingTop": 369.683349609375,
+      "headingBottom": 401.933349609375,
+      "logoTop": 247.8333282470703,
+      "logoBottom": 335.8333282470703,
+      "stickyBottom": 121.83332824707031,
+      "dialogBottom": 988,
+      "scrollTop": 0,
+      "focused": true,
+      "tabIndex": -1,
+      "parentOverflow": false,
+      "dialogOverflow": false,
+      "childOverflow": false,
+      "caption": "ΣΥΝΕΡΓΕΙΟ ΟΝΟΜΑΤΩΝ"
+    }
+  ],
+  "fontEvidence": [
+    {},
+    {}
+  ],
+  "heights": [],
+  "baselineHTTP": [
+    {
+      "path": "css/namelecule-name-builder.css",
+      "sha256": "d9ad67895fa1508f273b4f37161a37fe0ef283e653a1bcfd33649508e80999c2",
+      "bytes": 9176
+    },
+    {
+      "path": "css/namelecule-quiz-checkpoints.css",
+      "sha256": "4ce245024e272146c53f9134f86666b467352978aa1f6f7e21959da95f96e3ef",
+      "bytes": 7525
+    },
+    {
+      "path": "games/name-builder.html",
+      "sha256": "20e85af5f718b76031443a87d2394f71a25290e3705d5066cb055541380eddb3",
+      "bytes": 6740
+    },
+    {
+      "path": "js/namelecule-game-choice-checkpoint.js",
+      "sha256": "700e50f232d45498fbfe5b4dee90c345673168386124e9b5525165b8cfdc7224",
+      "bytes": 31730
+    },
+    {
+      "path": "mulermoc-nom-54.html",
+      "sha256": "915ccdd093b03a317c1d4a55be58a3e4225ee64b95fb00c09f99fc3a151dc9c1",
+      "bytes": 21167
+    },
+    {
+      "path": "mulermoc-nom-55.html",
+      "sha256": "93ed76523808b5c3b084afabdf16e334bb0de90d7458ed134b182ff8daa7ea24",
+      "bytes": 21079
+    }
+  ],
+  "passed": true,
+  "jsExceptions": []
+}

@@ -1,0 +1,91 @@
+--- before/css/namelecule-name-builder.css
++++ after/css/namelecule-name-builder.css
+@@ -12,7 +12,8 @@
+ .lesson-mode,.lesson-mode body{background:transparent;overflow-x:hidden}
+ .lesson-mode .game{padding:14px 12px 20px}
+ .lesson-mode .intro .eyebrow,.lesson-mode .builder-title{display:none}
+-.lesson-mode .objective{font-size:1.05rem}
+-.lesson-mode .intro-detail{font-size:.88rem}
++.lesson-mode .objective{max-width:810px;margin:12px auto 0;font-size:24px;font-weight:700;line-height:1.45}
++.lesson-mode .intro-detail,.lesson-mode .game-status{font-size:11.52px;font-weight:400;line-height:1.6}
++@media(max-width:760px){.lesson-mode .objective{font-size:20px}.lesson-mode .intro-detail,.lesson-mode .game-status{font-size:12px}}
+ .lesson-mode .feedback .lesson-explanation{margin:12px 0 0;white-space:pre-line}
+ @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important}}
+--- before/css/namelecule-quiz-checkpoints.css
++++ after/css/namelecule-quiz-checkpoints.css
+@@ -139,6 +139,13 @@
+ .nl-game-choice-repair .round-topbar { justify-content: center; margin: 6px 0 10px; }
+ .nl-game-choice-repair .round-topbar .round-game-brand { display: grid; justify-items: center; gap: 8px; max-width: 100%; text-align: center; }
+ .nl-game-choice-repair .workshop-logo-small { width: 88px; height: 88px; }
++.nl-game-choice-repair .round-heading .round-objective.is-emphasized { font-size: 24px; }
++.nl-game-choice-repair .compact-steps { font-size: 11.52px; font-weight: 400; line-height: 1.6; }
++/* Match the Builder iframe viewport to the existing Workshop content container. */
++@container nl-repair (max-width: 760px) {
++  .nl-game-choice-repair .round-heading .round-objective.is-emphasized { font-size: 20px; }
++  .nl-game-choice-repair .compact-steps { font-size: 12px; }
++}
+ .nl-builder-stage { position: relative; min-width: 0; }
+ .nl-builder-frame { display: block; width: 100%; min-height: 160px; max-width: 100%; border: 0; background: #faf9f5; }
+ .nl-builder-marker { position: absolute; left: 0; width: 1px; height: 1px; pointer-events: none; }
+--- before/games/name-builder.html
++++ after/games/name-builder.html
+@@ -5,7 +5,7 @@
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="theme-color" content="#254c50">
+   <title>Χτίσε το όνομα · Namelecule</title>
+-  <link rel="stylesheet" href="../css/namelecule-name-builder.css?v=name-builder-lesson-20261111-r1">
++  <link rel="stylesheet" href="../css/namelecule-name-builder.css?v=game-header-text-parity-20261111-r1">
+   <script src="../js/namelecule-name-builder-engine.js?v=name-builder-20261111-r1" defer></script>
+   <script src="../js/namelecule-name-builder.js?v=name-builder-lesson-20261111-r1" defer></script>
+ </head>
+--- before/js/namelecule-game-choice-checkpoint.js
++++ after/js/namelecule-game-choice-checkpoint.js
+@@ -293,7 +293,7 @@
+       [startMarker, endMarker].forEach(marker => { marker.setAttribute("aria-hidden", "true"); marker.style.cssText = "position:absolute;width:1px;height:1px;pointer-events:none;left:0;top:0"; });
+       stage.append(frame, startMarker, endMarker); host.replaceChildren(title, stage); host.setAttribute("aria-busy", "true");
+       active = { requestId: ++requestId, index, entry, stage, startMarker, endMarker, loaded: false };
+-      frame.src = new URL("games/name-builder.html?lessonSession=" + session + "&v=alkanes-game-choice-20261111-r1", global.document.baseURI).href;
++      frame.src = new URL("games/name-builder.html?lessonSession=" + session + "&v=game-header-text-parity-20261111-r1", global.document.baseURI).href;
+       progress({ current: index + 1, total: 3 });
+       timeout = global.setTimeout(() => failure("Το παιχνίδι άργησε να φορτώσει. Η προσπάθειά σου διατηρήθηκε. Δοκίμασε ξανά."), 60000);
+       heading.tabIndex = -1; heading.focus({ preventScroll: true });
+--- before/mulermoc-nom-54.html
++++ after/mulermoc-nom-54.html
+@@ -49,7 +49,7 @@
+ 
+   <link rel="stylesheet" href="css/namelecule-54.css?v=v54-sync-20261104-r2" />
+   <link rel="stylesheet" href="css/namelecule-repair-round.css?v=optional-triples-20261110-r1" />
+-  <link rel="stylesheet" href="css/namelecule-quiz-checkpoints.css?v=game-headers-parity-20261111-r1" />
++  <link rel="stylesheet" href="css/namelecule-quiz-checkpoints.css?v=game-header-text-parity-20261111-r1" />
+   <script src="js/namelecule-label-metrics.js?v=20261031-r1"></script>
+   <script src="js/vendor/jsme/namelecule-20261031-r1/jsme.nocache.js"></script>
+   <script src="js/vendor/jquery/jquery-4.0.0.min.js"></script>
+@@ -373,7 +373,7 @@
+   <script src="js/namelecule-repair-generator.js?v=engine-pilot-20261105-r1"></script>
+   <script src="js/namelecule-generated-repair-checkpoint.js?v=choice-games-20261111-r2"></script>
+   <script src="js/namelecule-name-builder-engine.js?v=name-builder-20261111-r1"></script>
+-  <script src="js/namelecule-game-choice-checkpoint.js?v=builder-header-20261111-r1"></script>
++  <script src="js/namelecule-game-choice-checkpoint.js?v=game-header-text-parity-20261111-r1"></script>
+   <script src="js/mulermoc-nom-scenario-54.js?v=step7-numbering-directions-20261108-r3"></script>
+   <script src="js/mulermoc-nom-iupac-54.js?v=merge54-20261105-r1"></script>
+   <script src="js/mulermoc-nom-lang-54.js?v=merge54-20261105-r1"></script>
+--- before/mulermoc-nom-55.html
++++ after/mulermoc-nom-55.html
+@@ -49,7 +49,7 @@
+ 
+   <link rel="stylesheet" href="css/namelecule-55.css?v=namelecule-v55-20261110-r2" />
+   <link rel="stylesheet" href="css/namelecule-repair-round.css?v=optional-triples-20261110-r1" />
+-  <link rel="stylesheet" href="css/namelecule-quiz-checkpoints.css?v=game-headers-parity-20261111-r1" />
++  <link rel="stylesheet" href="css/namelecule-quiz-checkpoints.css?v=game-header-text-parity-20261111-r1" />
+   <script src="js/namelecule-label-metrics.js?v=20261031-r1"></script>
+   <script src="js/vendor/jsme/namelecule-20261031-r1/jsme.nocache.js"></script>
+   <script src="js/vendor/jquery/jquery-4.0.0.min.js"></script>
+@@ -366,7 +366,7 @@
+   <script src="js/namelecule-repair-generator.js?v=engine-pilot-20261105-r1"></script>
+   <script src="js/namelecule-generated-repair-checkpoint.js?v=choice-games-20261111-r2"></script>
+   <script src="js/namelecule-name-builder-engine.js?v=name-builder-20261111-r1"></script>
+-  <script src="js/namelecule-game-choice-checkpoint.js?v=builder-header-20261111-r1"></script>
++  <script src="js/namelecule-game-choice-checkpoint.js?v=game-header-text-parity-20261111-r1"></script>
+   <script src="js/mulermoc-nom-scenario-55.js?v=namelecule-v55-20261110-r2"></script>
+   <script src="js/mulermoc-nom-iupac-55.js?v=namelecule-v55-20261110-r2"></script>
+   <script src="js/mulermoc-nom-lang-55.js?v=namelecule-v55-20261110-r2"></script>
