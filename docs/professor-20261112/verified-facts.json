@@ -1,0 +1,289 @@
+{
+  "date": "2026-11-12",
+  "preparedUTC": "2026-11-12T09:56:33.480095+00:00",
+  "scope": "Today-reviewed Builder improvements and Molecular Puzzle prototype plus full alkane-lesson integration. Report author inspected supplied evidence and current relevant source; did not rerun application/browser/chemistry tests.",
+  "publicationStatus": "CANDIDATE_PREPARED",
+  "runtimeCommit": null,
+  "publicRuntimeVerified": false,
+  "fullSnapshotCommit": null,
+  "backupFolders": [],
+  "publicationEvidence": null,
+  "coreChanged": false,
+  "coreFilesUnchanged": 11,
+  "lastActuallySynchronizedUpstream": "5ab2495575bbbffeb0ac67f91d4d81857cb65970",
+  "lastCheckedUpstream": "1734bfb5e5f26d1619060f1c7a5ac3b64317abbd",
+  "pendingUpstreamCommitsAtPreparation": 51,
+  "upstreamScope": "Same-session recorded audit reused. Current resume records a fresh unchanged HEAD/CHANGELOG check and51already-known pending commits. No upstream integration in this contribution. Final release audit to be attached by release coordinator.",
+  "sources": [
+    {
+      "id": "S01",
+      "path": "docs/checks/builder-tile-workspace-20261112/final-report.json",
+      "sha256": "e5f09f85cf7be3a0625a108f4ed5cf5340e7d295a007da4e8da5a70227135d9b",
+      "bytes": 6900
+    },
+    {
+      "id": "S02",
+      "path": "docs/checks/builder-placement-controls-20261112/final-report.json",
+      "sha256": "28a65d7026b3df114dcac913c32047880630b77b680e08368093e630658cc6ed",
+      "bytes": 13846
+    },
+    {
+      "id": "S03",
+      "path": "docs/checks/builder-methods-guidance-20261112/final-report.json",
+      "sha256": "5478eb029e9c64b7380718eb584473e42cbbd52c652c4c489418586fdef30c57",
+      "bytes": 3657
+    },
+    {
+      "id": "S04",
+      "path": "docs/checks/builder-outside-drop-recurrence-20261112/final-report.json",
+      "sha256": "e022d5ee7beb0b3cc2264a530debd837a7a024ea2cafc3b0ab34b1131be36b51",
+      "bytes": 2184
+    },
+    {
+      "id": "S05",
+      "path": "docs/checks/builder-guidance-no-tab-20261112/final-report.json",
+      "sha256": "b6941bcd3a450d4921a8513e8472034e176cae4ac52a540ae6d47c7148474a09",
+      "bytes": 1898
+    },
+    {
+      "id": "S06",
+      "path": "docs/checks/molecular-puzzle-20261112/final-report.json",
+      "sha256": "243c806a5bb3e04d58b63898d1a055a410e3ca8486b345522d80b29e4b57ff5d",
+      "bytes": 3391
+    },
+    {
+      "id": "S07",
+      "path": "docs/checks/molecular-puzzle-20261112/targeted-review.json",
+      "sha256": "48d004fba173a885645cab6ad7815ba9bbb577d382bafad2dea47a04f152c311",
+      "bytes": 1635
+    },
+    {
+      "id": "S08",
+      "path": "docs/checks/molecular-puzzle-20261112/chemistry-validation.json",
+      "sha256": "146abafa5298a31aebd122cfbdc0a315e04321e40e632fc32f75f2d8eff29945",
+      "bytes": 1255
+    },
+    {
+      "id": "S09",
+      "path": "docs/checks/molecular-puzzle-lesson-20261112/final-report.json",
+      "sha256": "8320f262dd672b30fd06daa0d2e04563f914a0df548979023be4f7955aeafc35",
+      "bytes": 2142
+    },
+    {
+      "id": "S10",
+      "path": "docs/checks/molecular-puzzle-lesson-20261112/independent-review.json",
+      "sha256": "10e5b75dbbe9c64961a68950cefc66e2e73cc9d45fea6c612bbed891cf1e5eeb",
+      "bytes": 917
+    },
+    {
+      "id": "S11",
+      "path": "docs/checks/molecular-puzzle-lesson-20261112/independent-runtime-followup.json",
+      "sha256": "beb4ec3cd5d4c213710a823c79c54ac2eb90322c1b7a86154a8601a652c58e0b",
+      "bytes": 889
+    },
+    {
+      "id": "S12",
+      "path": "docs/checks/molecular-puzzle-lesson-20261112/chemical-validation.json",
+      "sha256": "c90cddb314a16f6f20b0f67233a522116262695b613f0e66bb766ce9d07076ea",
+      "bytes": 596
+    },
+    {
+      "id": "S13",
+      "path": "docs/checks/molecular-puzzle-lesson-20261112/browser/summary.json",
+      "sha256": "c042e48ad8e7bffdeaa0858c9461bce5c867ceb4b1d810b5cc7199e8d8588d8b",
+      "bytes": 1838
+    },
+    {
+      "id": "S14",
+      "path": "docs/checks/builder-tile-workspace-preflight-20261112/upstream-audit.json",
+      "sha256": "4eb55e3e632ba0aa3c167d1de086da24c09dd1b3f94a769de0927e14f0ca07b1",
+      "bytes": 1192
+    },
+    {
+      "id": "S15",
+      "path": "games/data/alkane-structures.json",
+      "sha256": "9778e30ea33f2f7cd4c8a472e46e90539856b861a54035a1d514c3246cccf724",
+      "bytes": 15599
+    },
+    {
+      "id": "S16",
+      "path": "games/assets/molecular-puzzle/flat-v7-provenance.json",
+      "sha256": "3393428a6030ed76c99a4f92a41fd39f5a4b6f3b686a55f790b436b85824fc91",
+      "bytes": 2844
+    }
+  ],
+  "currentApplicationDigestsAtPreparation": [
+    {
+      "path": "games/name-builder.html",
+      "sha256": "ad4bf42abe5ddb71b2408ef1fa039e20f0587ab81a8a97b4dd2c6441fdc71a0d",
+      "bytes": 7793
+    },
+    {
+      "path": "css/namelecule-name-builder.css",
+      "sha256": "6d6a4cf6a30b21757b26ebf1ab7df82aff79034afe4207cfda349ec76b383fde",
+      "bytes": 11481
+    },
+    {
+      "path": "js/namelecule-name-builder.js",
+      "sha256": "2aecb1164f413adfa3fde15c269ae7f3a8fcb58c2a82bc5c8737a777116b7cdd",
+      "bytes": 35804
+    },
+    {
+      "path": "games/molecular-puzzle.html",
+      "sha256": "35cdfcd0d03dcc1a1795a839f72a33d54471c9e038de567b48d7a60358be0726",
+      "bytes": 8414
+    },
+    {
+      "path": "css/namelecule-molecular-puzzle.css",
+      "sha256": "5bf5dc0660060a8a06e1698956e9a434382bcd60e119197b0d08e54f942a68ea",
+      "bytes": 10258
+    },
+    {
+      "path": "js/namelecule-molecular-puzzle-engine.js",
+      "sha256": "6141bec0a6313dfd057ce1a6d057fe2a3cd1850f2b770f63929b4d312c0b55d1",
+      "bytes": 11878
+    },
+    {
+      "path": "js/namelecule-molecular-puzzle.js",
+      "sha256": "19b78dde772890afc9645909eaf10790f3d675a8fcb93f815cce3c825fa9ebc5",
+      "bytes": 30224
+    },
+    {
+      "path": "js/namelecule-game-choice-checkpoint.js",
+      "sha256": "c6ffa9dc5a9b0ff09cf2303f4d8e4036825b3bae13a7eaac1a5cc0e5466cc092",
+      "bytes": 45409
+    },
+    {
+      "path": "js/namelecule-quiz-checkpoints.js",
+      "sha256": "f52d83aecc582f3214db022a076fbb82af1f187588eccf16d5756a030d67785b",
+      "bytes": 33121
+    },
+    {
+      "path": "mulermoc-nom-54.html",
+      "sha256": "8457e9abe0e1ffdf40615956164a418a2395ea9f71a68d57b8f3cac3ae9258d8",
+      "bytes": 21270
+    },
+    {
+      "path": "mulermoc-nom-55.html",
+      "sha256": "2d57ac1b9beb503c2982cd4d43e42b9996c3dfb1a203033f9c14c100119e6c51",
+      "bytes": 21182
+    },
+    {
+      "path": "design/welcome-proposal.html",
+      "sha256": "d7e1ab4c9b5e28e72274b4096c004fa7c39da596abf0d408c75df738d0be5c01",
+      "bytes": 15204
+    },
+    {
+      "path": "games/assets/molecular-puzzle/molecular-puzzle-logo-flat-v7.png",
+      "sha256": "f495dccbe4cb9621fe8fba105dd5a000ed78b5f85da9a2b9eb8347378435457c",
+      "bytes": 956862
+    }
+  ],
+  "facts": [
+    {
+      "id": "F01",
+      "claim": "Builder bank immediately below answer; measured gap370.2→36.02desktop and260.93→53.78phone390. Purpose-aware reveal/reducedmotion/interruption; no promise all content simultaneously fits narrow screens.",
+      "sources": [
+        "S01"
+      ]
+    },
+    {
+      "id": "F02",
+      "claim": "Responsive compact three-column bank and populated-answer sizing preserve one-line names/local horizontal scrolling and meaningful>=44px controls. FinalR3mobile190/reduced69; R2sixactual lessonrounds834checks predate later boundedchanges.",
+      "sources": [
+        "S02"
+      ]
+    },
+    {
+      "id": "F03",
+      "claim": "Exact add/reorder/remove instructions; noTabwording. Native initiallycollapsed instructions at<=600px. Partial finalR3runs172/173+116/117retain driverfailures; targetedremaining15/15. No full final six-round rerun claim.",
+      "sources": [
+        "S03",
+        "S05"
+      ]
+    },
+    {
+      "id": "F04",
+      "claim": "Rootcause parentiframevisibilityguard cancelled completed headerrelease. Before2headerfailures, after8/8cases; exacttile returns originalbankorder.16trustedmouse gestures and4inducedguards; no nativeOS/outsidebrowser/freshtrustedtouch guarantee.",
+      "sources": [
+        "S04"
+      ]
+    },
+    {
+      "id": "F05",
+      "claim": "Molecular Puzzle fixed8existingalkanes,CH4/CH3/CH2/CH/C palette,singlebondgraphgrading independent of geometry.225independentchemicalassertions include sameformula/sameCHncount wrongisomer rejection. No arbitraryMOL/stereo support.",
+      "sources": [
+        "S06",
+        "S08",
+        "S15"
+      ]
+    },
+    {
+      "id": "F06",
+      "claim": "Selectedflat-v7logo and same actualregisteredheadingfont family/metrics as existinggames. TwoP2missingfont/resizeoverlap corrected and closed;84Developerbrowsercorrectionchecks+388independentmemoryframingchecks.",
+      "sources": [
+        "S06",
+        "S07",
+        "S16"
+      ]
+    },
+    {
+      "id": "F07",
+      "claim": "Prototype final244UI+92engineDeveloperchecks,zeroappJSerrors. Browser evidence is supplied evidence; Reviewermemoryexecution is independent; no independent browser replay.",
+      "sources": [
+        "S06",
+        "S07"
+      ]
+    },
+    {
+      "id": "F08",
+      "claim": "Fullintegration thirdgame atgates4/11,3distinct source-matchedunbranched/branched molecules withinonegameunlock. Parent independently grades graph receipts; partial/earnedreload, freshoptionaltriple retainingunlock, theory/threegamechooser. JSON unchanged,no newexport.",
+      "sources": [
+        "S09",
+        "S10",
+        "S12"
+      ]
+    },
+    {
+      "id": "F09",
+      "claim": "Integration final77Developerbrowserchecks passed,actualgate4/11construction+navigation4→11→12,zeroappJSerrors. Priorincomplete79passrun and6passrun retained; independentReviewer160memoryassertions,199independentchemicaladapterassertionscontrolledfixtures. Finalreviewruntimeconditionclosed aftersuppliedevidenceinspection.",
+      "sources": [
+        "S09",
+        "S10",
+        "S11",
+        "S12",
+        "S13"
+      ]
+    },
+    {
+      "id": "F10",
+      "claim": "Currentwelcome still has two standalonegameentries; Puzzle is directgames/molecular-puzzle.html and thirdlessonchoice. No thirdwelcomegameentryclaim.",
+      "sources": [
+        "S09"
+      ],
+      "sourceInspection": "design/welcome-proposal.html and js/namelecule-game-choice-checkpoint.js at recordedapplicationdigests"
+    },
+    {
+      "id": "F11",
+      "claim": "All11cores unchanged throughouttodayrecordedunits; no newupstreamsync. Checked1734bfb5 differs from actualsync5ab24955. Pending51 fromcurrentresume/same-sessioncoordinatoraudit.",
+      "sources": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S06",
+        "S09",
+        "S14"
+      ]
+    }
+  ],
+  "limits": [
+    "Source/evidence inspection only by report author; reported runtime and Validator results were not rerun by report author.",
+    "New integrationphoneevidence only solvedstate390pxresize/Continue; Main54 thirdgameloadsmoke; no newfulloldgametriplereplay.",
+    "NativeFirefoxhangrootcause/recurrenceprevention unresolved. Recovery is not permanentfix proof. ExistingJSmoldiagnostics remain.",
+    "GoogleFonts inherits currentnetwork/cachedependency; no offline/physicaldevice/conferencemachinequalification.",
+    "Apr23–25 2027Volos presentationreliability is an acceptancecriterion,not a readiness guarantee.",
+    "Publication/save/linkverification pending at preparation; planned links do not establish newruntime is publicly served."
+  ],
+  "sourceReadValidation": "Each source read length equals stat before/after and mtime remained stable. Evidence hashes identify preparation-time content; separate publication evidence must identify final delivered content."
+}

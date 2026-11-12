@@ -362,7 +362,16 @@
       scrollTop: () => dialog.scrollTop,
       maxScroll: () => dialog.scrollHeight - dialog.clientHeight,
       scrollTo(top, behavior) {
-        if (typeof dialog.scrollTo === "function") dialog.scrollTo({ top: top, behavior: behavior });
+        if (typeof dialog.scrollTo === "function") {
+          // Builder input crosses an iframe. A same-position native write did
+          // not cancel in the measured browser; retarget and restore atomically.
+          if (behavior === "instant" && top === dialog.scrollTop && mountHost.querySelector(".nl-builder-frame")) {
+            const max = Math.max(0, dialog.scrollHeight - dialog.clientHeight);
+            const adjacent = top < max ? Math.min(max, top + 1) : Math.max(0, top - 1);
+            if (adjacent !== top) dialog.scrollTo({ top: adjacent, behavior: "instant" });
+          }
+          dialog.scrollTo({ top: top, behavior: behavior });
+        }
         else dialog.scrollTop = top;
       }
     });
@@ -531,6 +540,9 @@
         onReveal(request) {
           if (token !== mountToken || !currentContext(context)) return;
           revealResponse(request);
+        },
+        onScrollInterrupt() {
+          if (token === mountToken && currentContext(context)) stopResponseScroll();
         },
         onStateChange(state) {
           if (token !== mountToken || !currentContext(context)) return;

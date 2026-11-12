@@ -7,7 +7,7 @@
   const lessonChannel = 'namelecule-builder-lesson-v1';
   const lessonSession = new URLSearchParams(location.search).get('lessonSession');
   const lesson = parent !== window && /^[A-Za-z0-9_-]{16,128}$/.test(lessonSession || '')
-    ? { current: null, lastId: 0, resizeFrame: null, revealFrame: null, lastHeight: null, observer: null } : null;
+    ? { current: null, lastId: 0, resizeFrame: null, lastHeight: null, observer: null } : null;
   const lessonMolecules = ['methane', 'ethane', 'propane', 'butane', 'pentane',
     'methyl_2_pentane', 'dimethyl_2_3_butane', 'ethyl_3_dimethyl_2_5_hexane'];
   const $ = id => document.getElementById(id);
@@ -17,6 +17,7 @@
   const state = { inventory: [], deck: [], round: null, bank: [], answer: [], selected: null,
     representation: '', busy: true, failed: false, solved: false, stopped: false, roundNumber: 0,
     pending: null, nextId: 0, retry: null, touch: null, suppressClickUntil: 0, attempts: 0, submitted: false };
+  const scrolling = { frame: null, moving: false };
   const representationButtons = Array.from(document.querySelectorAll('[data-representation]'));
   const startupTimer = setTimeout(() => fail('Η προβολή του μορίου άργησε να ξεκινήσει. Μπορείς να δοκιμάσεις ξανά.', () => location.reload()), 45000);
 
@@ -46,20 +47,60 @@
       }
     });
   }
-  function revealFeedback() {
-    if (!lesson) {
-      $('feedback').scrollIntoView({ block: 'nearest', behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
-      return;
+  function stopLocalReveal() {
+    if (scrolling.frame !== null) cancelAnimationFrame(scrolling.frame);
+    scrolling.frame = null;
+    if (scrolling.moving) {
+      const top = scrollY, left = scrollX;
+      const max = Math.max(0, (document.scrollingElement || document.documentElement).scrollHeight - innerHeight);
+      // A same-position write can leave a native animation running. Retarget
+      // and restore in one turn so cancellation does not leave a position change.
+      const adjacent = top < max ? Math.min(max, top + 1) : Math.max(0, top - 1);
+      if (adjacent !== top) window.scrollTo({ top: adjacent, left, behavior: 'instant' });
+      window.scrollTo({ top, left, behavior: 'instant' });
     }
-    if (lesson.revealFrame !== null) cancelAnimationFrame(lesson.revealFrame);
-    const current = lesson.current;
-    lesson.revealFrame = requestAnimationFrame(() => {
-      lesson.revealFrame = null;
-      if (!current?.ready || current !== lesson.current || state.stopped || $('feedback').hidden) return;
-      const body = document.body.getBoundingClientRect(), feedback = $('feedback').getBoundingClientRect();
-      postLesson('reveal', { startY: Math.max(0, feedback.top - body.top), endY: Math.max(0, feedback.bottom - body.top) });
+    scrolling.moving = false;
+  }
+  function interruptReveal() {
+    stopLocalReveal();
+    if (lesson?.current?.ready) postLesson('scroll-interrupt', {});
+  }
+  function revealRange(purpose, region) {
+    stopLocalReveal();
+    scheduleSize();
+    const current = lesson?.current;
+    const round = state.round;
+    // Let the content-height message reach the lesson before its range request.
+    scrolling.frame = requestAnimationFrame(() => {
+      scrolling.frame = requestAnimationFrame(() => {
+        scrolling.frame = null;
+        if (state.stopped || state.busy || state.failed || state.touch || !round || round !== state.round ||
+            (lesson && (!current?.ready || current !== lesson.current))) return;
+        const feedback = purpose === 'feedback';
+        const start = region || (feedback ? $('feedback') : $('answer-zone'));
+        const end = region || (feedback ? start : $('check-answer'));
+        if (start.hidden || !start.isConnected || !end.isConnected) return;
+        const first = start.getBoundingClientRect(), last = end.getBoundingClientRect();
+        if (first.height <= 0 || last.height <= 0) return;
+        if (lesson) {
+          const body = document.body.getBoundingClientRect();
+          postLesson('reveal', { purpose, startY: Math.max(0, first.top - body.top), endY: Math.max(0, last.bottom - body.top) });
+          return;
+        }
+        const top = 12, bottom = innerHeight - 12;
+        if (bottom <= top || (first.top >= top && last.bottom <= bottom)) return;
+        // An oversized construction area starts at the answer and nearby bank;
+        // never jump past the available pieces to a button at its far end.
+        const delta = last.bottom - first.top > bottom - top || first.top < top ? first.top - top : last.bottom - bottom;
+        const destination = Math.max(0, Math.min(document.documentElement.scrollHeight - innerHeight, scrollY + delta));
+        if (Math.abs(destination - scrollY) < 1) return;
+        const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+        scrolling.moving = !reduced;
+        window.scrollTo({ top: destination, left: scrollX, behavior: reduced ? 'instant' : 'smooth' });
+      });
     });
   }
+  function revealFeedback() { revealRange('feedback'); }
   function validateLessonLoad(data) {
     if (typeof data.attemptId !== 'string' || !data.attemptId || data.attemptId.length > 160 ||
         !lessonMolecules.includes(data.moleculeId) || typeof data.bankSeed !== 'string' || !data.bankSeed || data.bankSeed.length > 256 ||
@@ -187,7 +228,7 @@
   }
   async function loadRound(moleculeId, controlled = null) {
     if (state.stopped || (lesson && controlled !== lesson.current)) return;
-    cancelTouch(); state.busy = true; state.failed = false; state.solved = false;
+    stopLocalReveal(); cancelTouch(); state.busy = true; state.failed = false; state.solved = false;
     state.attempts = 0; state.submitted = false;
     if (controlled) controlled.ready = false;
     state.answer = []; state.selected = null; state.round = null; state.bank = [];
@@ -213,8 +254,9 @@
       if (controlled) {
         controlled.ready = true;
         postLesson('loaded', { state: snapshot() }); scheduleSize();
-        if (state.submitted) revealFeedback();
       }
+      if (state.submitted) revealFeedback();
+      else revealRange('entry');
     } catch (error) {
       if (error.message === 'superseded' || state.stopped || ticket !== state.roundNumber || (controlled && controlled !== lesson.current)) return;
       fail(lesson ? 'Δεν επαληθεύτηκε η προβολή αυτού του μορίου. Δοκίμασε ξανά ή επέστρεψε στην επιλογή παιχνιδιού.'
@@ -295,12 +337,14 @@
     if (previous >= 0) { state.answer.splice(previous, 1); if (previous < index) index--; }
     state.answer.splice(Math.max(0, Math.min(index, state.answer.length)), 0, id);
     state.selected = id; clearFeedback(); render(); focusTile(id, true);
+    revealRange('construction');
     announce('Προστέθηκε το «' + tileById(id).text + '» στη θέση ' + (state.answer.indexOf(id) + 1) + '.');
   }
   function remove(id) {
     if (!editable()) return;
     const index = state.answer.indexOf(id); if (index < 0) return;
     state.answer.splice(index, 1); state.selected = null; clearFeedback(); render(); focusTile(id, false);
+    revealRange('construction');
     announce('Το «' + tileById(id).text + '» επέστρεψε στα διαθέσιμα συνθετικά.');
   }
   function move(id, delta) {
@@ -308,6 +352,7 @@
     if (!editable() || index < 0 || target < 0 || target >= state.answer.length) return;
     [state.answer[index], state.answer[target]] = [state.answer[target], state.answer[index]];
     state.selected = id; clearFeedback(); render(); focusTile(id, true);
+    revealRange('construction');
     announce('Το «' + tileById(id).text + '» μετακινήθηκε στη θέση ' + (target + 1) + '.');
   }
   function tileButton(tile, inAnswer, index) {
@@ -319,7 +364,7 @@
     button.addEventListener('click', () => {
       if (!editable() || Date.now() < state.suppressClickUntil) return;
       if (!inAnswer) place(tile.id, state.answer.length);
-      else { state.selected = state.selected === tile.id ? null : tile.id; render(); focusTile(tile.id, true); }
+      else { state.selected = state.selected === tile.id ? null : tile.id; render(); focusTile(tile.id, true); revealRange('construction'); }
     });
     button.addEventListener('keydown', event => {
       if (!inAnswer || !editable()) return;
@@ -389,14 +434,42 @@
     viewport.scrollLeft += direction * 9;
     if (viewport.scrollLeft !== previous) touch.scrollFrame = requestAnimationFrame(scrollDraggedAnswer);
   }
+  function dropContext(x, y) {
+    if (!Number.isFinite(x) || !Number.isFinite(y)) return null;
+    let target = x >= 0 && y >= 0 && x < innerWidth && y < innerHeight
+      ? document.elementFromPoint(x, y) : null;
+    // Placement needs a visible answer hit. Removal also accepts a completed
+    // release over the surrounding page, beyond this iframe or its clipping.
+    let view = window;
+    try {
+      while (view !== view.parent) {
+        const frame = view.frameElement;
+        if (!frame || !frame.offsetWidth || !frame.offsetHeight) return null;
+        const bounds = frame.getBoundingClientRect();
+        const scaleX = bounds.width / frame.offsetWidth, scaleY = bounds.height / frame.offsetHeight;
+        if (!Number.isFinite(scaleX) || !Number.isFinite(scaleY) || scaleX <= 0 || scaleY <= 0) return null;
+        x = bounds.left + (frame.clientLeft + x) * scaleX;
+        y = bounds.top + (frame.clientTop + y) * scaleY;
+        view = view.parent;
+        if (x < 0 || y < 0 || x >= view.innerWidth || y >= view.innerHeight ||
+            view.document.elementFromPoint(x, y) !== frame) target = null;
+      }
+    } catch (_) { return null; }
+    if (!Number.isFinite(x) || !Number.isFinite(y) || x < 0 || y < 0 || x >= view.innerWidth || y >= view.innerHeight) return null;
+    return { target };
+  }
   function touchEnd(event) {
     const touch = state.touch; if (!touch || event.pointerId !== touch.pointerId) return;
-    const active = touch.active, id = touch.id;
-    const target = document.elementFromPoint(event.clientX, event.clientY);
+    const active = touch.active, id = touch.id, placed = state.answer.includes(id);
+    const drop = active ? dropContext(event.clientX, event.clientY) : null;
+    const bounds = $('answer-zone').getBoundingClientRect();
+    const inside = event.clientX >= bounds.left && event.clientX <= bounds.right &&
+      event.clientY >= bounds.top && event.clientY <= bounds.bottom;
     if (active) { event.preventDefault(); state.suppressClickUntil = Date.now() + 600; }
     cancelTouch();
-    if (active && target?.closest('#answer-zone')) place(id, dropIndex(event.clientX));
-    else if (active && target?.closest('#bank-zone')) remove(id);
+    if (!active || !drop) return;
+    if (inside && drop.target?.closest('#answer-zone')) place(id, dropIndex(event.clientX));
+    else if (placed) remove(id);
   }
   function cancelTouch() {
     const touch = state.touch; if (!touch) return;
@@ -438,6 +511,21 @@
   $('remove-tile').addEventListener('click', () => remove(state.selected));
   $('next-molecule').addEventListener('click', () => { if (!state.busy && state.inventory.length) loadRound(nextMolecule()); });
   $('retry-load').addEventListener('click', () => state.retry?.());
+  const guidance = $('answer-help');
+  const compactGuidance = matchMedia('(max-width:600px)');
+  function updateGuidanceLayout() {
+    if (state.stopped) return;
+    guidance.open = !compactGuidance.matches;
+    scheduleSize();
+  }
+  guidance.addEventListener('toggle', () => {
+    if (state.stopped) return;
+    scheduleSize();
+    if (guidance.open && compactGuidance.matches) revealRange('construction', guidance);
+    else if (!guidance.open) revealRange($('feedback').hidden ? 'construction' : 'feedback');
+  });
+  compactGuidance.addEventListener('change', updateGuidanceLayout);
+  updateGuidanceLayout();
   representationButtons.forEach(button => button.addEventListener('click', () => changeRepresentation(button.dataset.representation)));
   $('zoom-in').addEventListener('click', () => { if (!state.busy && !state.failed) post('zoom', { roundId: state.round.roundId, moleculeId: state.round.moleculeId, direction: 1 }); });
   $('zoom-out').addEventListener('click', () => { if (!state.busy && !state.failed) post('zoom', { roundId: state.round.roundId, moleculeId: state.round.moleculeId, direction: -1 }); });
@@ -448,16 +536,24 @@
     if (lesson && event.key === 'Escape') { event.preventDefault(); postLesson('exit', {}); }
   }
   window.addEventListener('keydown', lessonExitKey);
-  if (lesson) frame.addEventListener('load', () => {
-    // Keys in the native depiction frame do not bubble to this document.
-    // The source is our same-origin viewer, and only Escape crosses frames.
-    try { frame.contentWindow.addEventListener('keydown', lessonExitKey); } catch (_) { /* viewer load failed */ }
+  ['wheel', 'touchstart', 'pointerdown', 'keydown'].forEach(type => {
+    window.addEventListener(type, interruptReveal, { capture: true, passive: true });
+  });
+  frame.addEventListener('load', () => {
+    // Native viewer input does not bubble to this document. Its same-origin
+    // window forwards interruption and the existing lesson Escape behavior.
+    try {
+      frame.contentWindow.addEventListener('keydown', lessonExitKey);
+      ['wheel', 'touchstart', 'pointerdown', 'keydown'].forEach(type => {
+        frame.contentWindow.addEventListener(type, interruptReveal, { capture: true, passive: true });
+      });
+    } catch (_) { /* viewer load failed */ }
   });
   window.addEventListener('pagehide', () => {
-    clearTimeout(startupTimer); cancelTouch();
+    clearTimeout(startupTimer); stopLocalReveal(); cancelTouch();
+    compactGuidance.removeEventListener('change', updateGuidanceLayout);
     if (lesson) {
       if (lesson.resizeFrame !== null) cancelAnimationFrame(lesson.resizeFrame);
-      if (lesson.revealFrame !== null) cancelAnimationFrame(lesson.revealFrame);
       lesson.observer?.disconnect(); lesson.current = null;
     }
     if (state.pending) { clearTimeout(state.pending.timer); state.pending.reject(new Error('superseded')); state.pending = null; }

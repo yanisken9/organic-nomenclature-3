@@ -1,0 +1,45 @@
+{
+  "status": "complete-developer-runtime-evidence",
+  "actualPasses": 77,
+  "priorAdditionalPassingChecks": 79,
+  "finalCompleted": true,
+  "sourcesUnchanged": true,
+  "javascriptErrors": [],
+  "gate4IDs": [
+    "pentane",
+    "methane",
+    "propane"
+  ],
+  "gate11IDs": [
+    "ethyl_3_dimethyl_2_5_hexane",
+    "methyl_2_pentane",
+    "dimethyl_2_3_butane"
+  ],
+  "ownedBrowserExited": true,
+  "preservedPriorRuns": [
+    {
+      "path": "run1/results.json",
+      "checksPassed": 79,
+      "stoppedReason": "Rapid trusted navigation input missed Next during lesson UI settling; completed remaining run adds paced hit-tested actual navigation."
+    },
+    {
+      "path": "run2/results.json",
+      "checksPassed": 6,
+      "stoppedReason": "Switcher hit point hidden under sticky dialog header after automatic entry reveal; corrected test helper performs geometry hit-testing before trusted click."
+    }
+  ],
+  "limits": [
+    "Developer runtime evidence, not independent execution.",
+    "No native OS full-screen/freezing reliability claim.",
+    "No new old-game full triple replay; existing games were opened and independent pending progress observed in run1."
+  ],
+  "evidence": {
+    "remaining.py": "4e92e10364c39beae2a15b5ee91d5ac521a53a46df0ce4b802353de7c08a0a14",
+    "phone-gate11-solved.png": "171aa29a24b18d801d9ddbc0f9505d1020f00a54cff71818adfc40bc31bea4ad",
+    "gate11-solved.png": "20c4d2490fdcd2fe84db08e7a797b68652a25bfaf400a1e47a5a1234b2555254",
+    "results.json": "888880037816101bae703be6c0ad3aa68559dec6aae41bccf60dc49ad28b26b6",
+    "verify.py": "3f58bab197084e8e3abd8c4411b238429d29b9c90b16e5c9909e86e93b636c78",
+    "main54-third-game.png": "c1e428263c38b16879b8fbe223c5d61e3e6d219f28313b240f3604dbad72a556",
+    "gate4-solved.png": "92fb6ce5bc0d265dedc0ad8b72346fc81be4633cb575c1fe6386b29e47994564"
+  }
+}

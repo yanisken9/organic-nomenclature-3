@@ -131,6 +131,21 @@
 .nl-game-choice-card:hover { background: #eef6f1; }
 .nl-game-choice-card:focus-visible { outline: 3px solid #a6633d; outline-offset: 3px; }
 .nl-game-choice-switch { margin: 0 0 16px; }
+.nl-builder-title { display: grid; justify-items: center; gap: 8px; min-width: 0; margin: 6px 0 10px; text-align: center; }
+.nl-builder-logo { display: block; width: 88px; height: 88px; object-fit: contain; }
+.nl-builder-title .nl-builder-heading,
+.nl-game-choice-repair .round-heading h1 { min-width: 0; max-width: 100%; font-family: "Roboto Condensed", sans-serif; font-size: clamp(28.8px, 3vw, 40px); font-weight: 700; line-height: 1.12; letter-spacing: -.04em; text-align: center; overflow-wrap: anywhere; }
+.nl-builder-title .nl-builder-heading { margin: 0; }
+.nl-game-choice-repair .round-topbar { justify-content: center; margin: 6px 0 10px; }
+.nl-game-choice-repair .round-topbar .round-game-brand { display: grid; justify-items: center; gap: 8px; max-width: 100%; text-align: center; }
+.nl-game-choice-repair .workshop-logo-small { width: 88px; height: 88px; }
+.nl-game-choice-repair .round-heading .round-objective.is-emphasized { font-size: 24px; }
+.nl-game-choice-repair .compact-steps { font-size: 11.52px; font-weight: 400; line-height: 1.6; }
+/* Match the Builder iframe viewport to the existing Workshop content container. */
+@container nl-repair (max-width: 760px) {
+  .nl-game-choice-repair .round-heading .round-objective.is-emphasized { font-size: 20px; }
+  .nl-game-choice-repair .compact-steps { font-size: 12px; }
+}
 .nl-builder-stage { position: relative; min-width: 0; }
 .nl-builder-frame { display: block; width: 100%; min-height: 160px; max-width: 100%; border: 0; background: #faf9f5; }
 .nl-builder-marker { position: absolute; left: 0; width: 1px; height: 1px; pointer-events: none; }
@@ -138,7 +153,12 @@
 .nl-builder-actions button { min-height: 44px; max-width: 100%; }
 .nl-builder-actions .primary { background: #254c50; color: #fff; }
 .nl-builder-error { padding: 18px; border: 1px solid #a6633d; border-radius: 12px; background: #fbf0e5; }
+@media (max-width: 760px) {
+  .nl-builder-title .nl-builder-heading,
+  .nl-game-choice-repair .round-heading h1 { font-size: 28px; }
+}
 @media (max-width: 650px) {
+  .nl-builder-logo, .nl-game-choice-repair .workshop-logo-small { width: 64px; height: 64px; }
   .nl-game-choice-grid { grid-template-columns: 1fr; }
   .nl-game-choice-card { padding: 16px; gap: 12px; min-height: 116px; }
   .nl-game-choice-card img { width: 56px; height: 56px; }

@@ -1,23 +1,27 @@
-/* One lesson gate, two independent games. Only a rechecked triple earns access. */
+/* One lesson gate, three independent games. Only a rechecked triple earns access. */
 (function (global) {
   "use strict";
   const VERSION = 1;
   const CHANNEL = "namelecule-builder-lesson-v1";
+  const PUZZLE_CHANNEL = "namelecule-puzzle-lesson-v1";
   const generated = global.NameleculeGeneratedRepairCheckpoint;
   const repair = generated.adapter;
   const builder = global.NameleculeNameBuilderEngine;
+  const puzzle = global.NameleculeMolecularPuzzleEngine;
   const clone = value => JSON.parse(JSON.stringify(value));
   const own = (value, key) => Object.prototype.hasOwnProperty.call(value, key);
-  const validGame = value => value === "repair" || value === "builder";
+  const validGame = value => value === "repair" || value === "builder" || value === "puzzle";
   const seedValue = value => typeof value === "string" && /^[0-9]{1,20}$/.test(value) ? value : null;
   let canonical = null;
   const REQUIRED = new Map();
   const PRACTICE = new Map();
+  const PUZZLE_REQUIRED = new Map();
+  const PUZZLE_PRACTICE = new Map();
   function assert(condition, message) { if (!condition) throw new Error(message); }
   function cancelled(signal) {
     if (signal && signal.aborted) { const error = new Error("Checkpoint preparation cancelled"); error.name = "AbortError"; throw error; }
   }
-  function validate(recipe) { repair.validate(recipe); assert(builder, "Name builder engine unavailable"); return recipe; }
+  function validate(recipe) { repair.validate(recipe); assert(builder && puzzle, "Name game engines unavailable"); return recipe; }
   function key(recipe, seed) { return recipe.setId + ":" + seed; }
   function hash(text) {
     let value = 2166136261;
@@ -106,8 +110,73 @@
     }
     return state;
   }
+  function puzzleSet(recipe, seed, practice) {
+    const cache = practice ? PUZZLE_PRACTICE : PUZZLE_REQUIRED;
+    const cacheKey = key(recipe, seed);
+    if (cache.has(cacheKey)) return cache.get(cacheKey);
+    if (!canonical || !seed) return null;
+    const branched = recipe.setId === "alkanes-branched";
+    const eligible = canonical.analyses.filter(analysis => (analysis.branches.length > 0) === branched);
+    const chosen = shuffled(eligible, JSON.stringify(["puzzle-v1", recipe.setId, recipe.catalogRevision, seed])).slice(0, 3);
+    assert(chosen.length === 3 && new Set(chosen.map(analysis => analysis.moleculeId)).size === 3, "Three distinct puzzle structures unavailable");
+    const rounds = chosen.map(analysis => {
+      const source = canonical.catalog.molecules.find(molecule => molecule.id === analysis.moleculeId);
+      assert(source, "Puzzle source unavailable");
+      return { moleculeId: analysis.moleculeId, name: analysis.name.normalize("NFC"), target: puzzle.parseMol(source.mol), explanation: explanation(analysis) };
+    });
+    const set = { rounds };
+    if (practice && cache.size >= 2) cache.delete(cache.keys().next().value);
+    cache.set(cacheKey, set);
+    return set;
+  }
+  function emptyPuzzle(seed) { return { version: VERSION, seed: seed || null, currentRound: 0, states: [null, null, null], solved: false }; }
+  function puzzleSnapshot(entry, raw) {
+    const blank = { graph: { nodes: [], bonds: [] }, attempts: 0, submitted: false, solved: false };
+    if (!raw || typeof raw !== "object" || !raw.graph || !Array.isArray(raw.graph.nodes) || !Array.isArray(raw.graph.bonds) ||
+      raw.graph.nodes.length > 32 || raw.graph.bonds.length > 64) return blank;
+    const nodes = raw.graph.nodes, bonds = raw.graph.bonds;
+    const ids = new Set();
+    for (const value of nodes) {
+      if (!value || typeof value.id !== "string" || !value.id.length || value.id.length > 128 || ids.has(value.id) ||
+        !Number.isInteger(value.hydrogens) || value.hydrogens < 0 || value.hydrogens > 4 ||
+        !Number.isFinite(value.x) || value.x < 0 || value.x > 720 || !Number.isFinite(value.y) || value.y < 0 || value.y > 360) return blank;
+      ids.add(value.id);
+    }
+    const edges = new Set();
+    for (const value of bonds) {
+      if (!value || typeof value.a !== "string" || typeof value.b !== "string" || value.a === value.b ||
+        !ids.has(value.a) || !ids.has(value.b) || value.order !== 1) return blank;
+      const edge = JSON.stringify(value.a < value.b ? [value.a, value.b] : [value.b, value.a]);
+      if (edges.has(edge)) return blank;
+      edges.add(edge);
+    }
+    const graph = { nodes: nodes.map(value => ({ id: value.id, hydrogens: value.hydrogens, x: value.x, y: value.y })),
+      bonds: bonds.map(value => ({ a: value.a, b: value.b, order: 1 })) };
+    const attempts = Number.isSafeInteger(raw.attempts) && raw.attempts >= 0 ? raw.attempts : 0;
+    const submitted = raw.submitted === true && attempts > 0 && nodes.length > 0;
+    return { graph, attempts, submitted, solved: !!entry && submitted && puzzle.grade(graph, entry.target).correct === true };
+  }
+  function restorePuzzle(recipe, previous, practice) {
+    const seed = previous && previous.version === VERSION && seedValue(previous.seed);
+    if (!seed) return emptyPuzzle(null);
+    const state = emptyPuzzle(seed);
+    const set = puzzleSet(recipe, seed, practice);
+    const raw = Array.isArray(previous.states) && previous.states.length === 3 ? previous.states : [null, null, null];
+    state.states = raw.map((value, index) => puzzleSnapshot(set && set.rounds[index], value));
+    state.currentRound = Number.isInteger(previous.currentRound) && previous.currentRound >= 0 && previous.currentRound < 3 ? previous.currentRound : 0;
+    if (set) {
+      const first = state.states.findIndex(value => !value.solved);
+      if (first >= 0) {
+        state.currentRound = Math.min(state.currentRound, first);
+        for (let index = first + 1; index < 3; index++) state.states[index] = puzzleSnapshot(set.rounds[index], null);
+      } else state.solved = true;
+    }
+    return state;
+  }
   function restoreGame(recipe, game, raw, practice) {
-    return game === "builder" ? restoreBuilder(recipe, raw, practice) : (practice ? repair.restorePractice : repair.restore)(recipe, raw);
+    if (game === "builder") return restoreBuilder(recipe, raw, practice);
+    if (game === "puzzle") return restorePuzzle(recipe, raw, practice);
+    return (practice ? repair.restorePractice : repair.restore)(recipe, raw);
   }
   function restoreComposite(recipe, previous, practice) {
     validate(recipe);
@@ -116,7 +185,7 @@
     // Migrated Workshop answers remain raw evidence, never an imported boolean.
     const legacy = raw.legacyRepair;
     const state = { version: VERSION, selected: validGame(raw.selected) ? raw.selected : (legacy ? "repair" : null),
-      games: { repair: restoreGame(recipe, "repair", legacy || games.repair, practice), builder: restoreGame(recipe, "builder", games.builder, practice) },
+      games: { repair: restoreGame(recipe, "repair", legacy || games.repair, practice), builder: restoreGame(recipe, "builder", games.builder, practice), puzzle: restoreGame(recipe, "puzzle", games.puzzle, practice) },
       earned: null, solved: false };
     if (raw.earned && validGame(raw.earned.game)) {
       const evidence = restoreGame(recipe, raw.earned.game, raw.earned.evidence, practice);
@@ -126,7 +195,7 @@
     // The first verified winning triple becomes the independent receipt. Later
     // optional attempts cannot overwrite it or combine evidence across games.
     if (!state.earned) {
-      const winner = [state.selected, "repair", "builder"].find(game => validGame(game) && state.games[game].solved);
+      const winner = [state.selected, "repair", "builder", "puzzle"].find(game => validGame(game) && state.games[game].solved);
       if (winner) { state.earned = { game: winner, evidence: clone(state.games[winner]) }; state.solved = true; }
     }
     return state;
@@ -143,24 +212,26 @@
     const signal = options && options.signal;
     const repairEvidence = [state.games.repair, state.earned && state.earned.game === "repair" && state.earned.evidence].filter(Boolean);
     const jobs = repairEvidence.map(value => repair.prepare(recipe, value, { signal })).filter(Boolean);
-    const builderEvidence = [state.games.builder, state.earned && state.earned.game === "builder" && state.earned.evidence].filter(Boolean);
-    if (!canonical && builderEvidence.some(value => value.seed)) jobs.push(loadInput(signal));
+    const graphEvidence = [state.games.builder, state.games.puzzle,
+      state.earned && (state.earned.game === "builder" || state.earned.game === "puzzle") && state.earned.evidence].filter(Boolean);
+    if (!canonical && graphEvidence.some(value => value.seed)) jobs.push(loadInput(signal));
     if (!jobs.length) return null;
     return Promise.all(jobs).then(() => { cancelled(signal); return restore(recipe, state); });
   }
   function createPractice(recipe, previous, options) {
     validate(recipe);
-    const game = options && validGame(options.game) ? options.game : previous && validGame(previous.selected) ? previous.selected : "repair";
+    const game = options && options.game === null ? null : options && validGame(options.game) ? options.game : previous && validGame(previous.selected) ? previous.selected : "repair";
     const state = restorePractice(recipe, null);
     state.selected = game;
-    const old = previous && previous.games && previous.games[game];
-    state.games[game] = game === "repair" ? repair.createPractice(recipe, old) : emptyBuilder(generated.freshSeed(old && old.seed));
+    if (game) {
+      const old = previous && previous.games && previous.games[game];
+      state.games[game] = game === "repair" ? repair.createPractice(recipe, old) : (game === "puzzle" ? emptyPuzzle : emptyBuilder)(generated.freshSeed(old && old.seed));
+    }
     return state;
   }
   function otherGame(recipe, state) {
     validate(recipe);
-    const selected = state && (state.selected || state.earned && state.earned.game);
-    return selected === "builder" ? "repair" : "builder";
+    return null;
   }
   function practiceGame(recipe, state) {
     validate(recipe);
@@ -203,9 +274,11 @@
       const note = node("p", "nl-game-choice-note", "Τρία διαφορετικά μόρια στο ίδιο παιχνίδι ανοίγουν τη συνέχεια. Η πρόοδός σου κρατιέται χωριστά για κάθε παιχνίδι.");
       const grid = node("div", "nl-game-choice-grid");
       [["repair", "Συνεργείο ονομάτων", "Εντόπισε το λάθος και επισκεύασε το όνομα.", "name-repair/workshop-logo-3d-v1.png"],
-        ["builder", "Χτίσε το όνομα", "Διάλεξε τα συνθετικά και βάλε τα στη σωστή σειρά.", "name-builder/name-builder-logo-3d-blank-v1.png"]].forEach(([game, label, detail, image]) => {
+        ["builder", "Χτίσε το όνομα", "Διάλεξε τα συνθετικά και βάλε τα στη σωστή σειρά.", "name-builder/name-builder-logo-3d-blank-v1.png"],
+        ["puzzle", "Μοριακό παζλ", "Διάβασε το όνομα και σύνδεσε τα κομμάτια του μορίου.", "molecular-puzzle/molecular-puzzle-logo-flat-v7.png"]].forEach(([game, label, detail, image]) => {
         const card = button("", "nl-game-choice-card", () => { state.selected = game; publish(); render(); });
         const img = node("img"); img.src = new URL("games/assets/" + image, global.document.baseURI).href; img.width = 40; img.height = 40; img.alt = ""; img.setAttribute("aria-hidden", "true");
+        if (game === "puzzle") { img.width = 120; img.height = 64; img.style.cssText = "width:120px;height:64px;object-fit:contain;flex-shrink:0"; }
         const copy = node("div", "nl-game-choice-copy"); copy.append(node("strong", "", label), node("span", "", detail));
         card.append(img, copy); grid.append(card);
       });
@@ -218,7 +291,7 @@
       const game = state.selected;
       const activeToken = token;
       const switcher = button("Άλλαξε παιχνίδι", "nl-quiz-button nl-game-choice-switch", choose);
-      const gameHost = node("div", game === "builder" ? "nl-builder-host" : "nl-game-choice-repair");
+      const gameHost = node("div", game === "repair" ? "nl-game-choice-repair" : "nl-builder-host");
       host.replaceChildren(switcher, gameHost);
       function accept(raw) {
         if (destroyed || token !== activeToken) return;
@@ -235,7 +308,7 @@
         onOtherGame: options.onOtherGame,
         otherGameLabel: options.otherGameLabel || "Άλλο παιχνίδι"
       });
-      current = game === "repair" ? (practice ? repair.mountPractice : repair.mount)(gameHost, settings) : mountBuilder(gameHost, settings, practice);
+      current = game === "repair" ? (practice ? repair.mountPractice : repair.mount)(gameHost, settings) : (game === "puzzle" ? mountPuzzle : mountBuilder)(gameHost, settings, practice);
     }
     if (state.selected) render(); else choose();
     return { destroy() { if (destroyed) return; stop(); destroyed = true; host.replaceChildren(); } };
@@ -254,7 +327,7 @@
     function publish() { state = restoreBuilder(recipe, state, practice); if (!destroyed && typeof options.onStateChange === "function") options.onStateChange(clone(state)); }
     function clearTimer() { if (timeout) global.clearTimeout(timeout); timeout = null; }
     function stopFrame() { clearTimer(); active = null; if (frame) { frame.remove(); frame = null; } if (footer) footer.remove(); footer = null; ready(false); }
-    function reveal(start, end) { if (!destroyed && typeof options.onReveal === "function") options.onReveal({ kind: "builder-feedback", start, end: end || start }); }
+    function reveal(start, end, purpose) { if (!destroyed && typeof options.onReveal === "function") options.onReveal({ kind: "builder-" + purpose, start, end: end || start }); }
     function failure(message) {
       if (destroyed) return;
       stopFrame(); progress(null); host.setAttribute("aria-busy", "false");
@@ -282,13 +355,18 @@
       stopFrame();
       const index = state.currentRound, entry = set.rounds[index];
       const heading = node("h2", "nl-builder-heading", "Χτίσε το όνομα");
+      const title = node("div", "nl-builder-title");
+      const logo = node("img", "nl-builder-logo");
+      logo.src = new URL("games/assets/name-builder/name-builder-logo-3d-blank-v1.png", global.document.baseURI).href;
+      logo.width = 88; logo.height = 88; logo.alt = ""; logo.setAttribute("aria-hidden", "true");
+      title.append(logo, heading);
       const stage = node("div", "nl-builder-stage");
       frame = node("iframe", "nl-builder-frame"); frame.title = "Χτίσε το όνομα — μόριο " + (index + 1) + " από 3"; frame.style.height = "700px";
       const startMarker = node("span", "nl-builder-marker"), endMarker = node("span", "nl-builder-marker");
       [startMarker, endMarker].forEach(marker => { marker.setAttribute("aria-hidden", "true"); marker.style.cssText = "position:absolute;width:1px;height:1px;pointer-events:none;left:0;top:0"; });
-      stage.append(frame, startMarker, endMarker); host.replaceChildren(heading, stage); host.setAttribute("aria-busy", "true");
+      stage.append(frame, startMarker, endMarker); host.replaceChildren(title, stage); host.setAttribute("aria-busy", "true");
       active = { requestId: ++requestId, index, entry, stage, startMarker, endMarker, loaded: false };
-      frame.src = new URL("games/name-builder.html?lessonSession=" + session + "&v=alkanes-game-choice-20261111-r1", global.document.baseURI).href;
+      frame.src = new URL("games/name-builder.html?lessonSession=" + session + "&v=builder-outside-drop-20261112-r1", global.document.baseURI).href;
       progress({ current: index + 1, total: 3 });
       timeout = global.setTimeout(() => failure("Το παιχνίδι άργησε να φορτώσει. Η προσπάθειά σου διατηρήθηκε. Δοκίμασε ξανά."), 60000);
       heading.tabIndex = -1; heading.focus({ preventScroll: true });
@@ -307,6 +385,10 @@
       if (data.requestId !== context.requestId || data.attemptId !== attemptId || data.moleculeId !== context.entry.round.moleculeId) return;
       if (data.type === "error") { failure("Δεν ήταν δυνατή η ασφαλής προετοιμασία του μορίου. Δοκίμασε ξανά."); return; }
       if (data.type === "exit") { if (typeof options.onClose === "function") options.onClose(); return; }
+      if (data.type === "scroll-interrupt") {
+        if (context.loaded && typeof options.onScrollInterrupt === "function") options.onScrollInterrupt();
+        return;
+      }
       if (data.type === "loaded" || data.type === "state") {
         if (data.type === "state" && !context.loaded) return;
         if (data.type === "loaded") { context.loaded = true; clearTimer(); host.setAttribute("aria-busy", "false"); }
@@ -319,8 +401,10 @@
         frame.style.height = Math.ceil(data.height) + "px";
       } else if (data.type === "reveal" && context.loaded && Number.isFinite(data.startY) && Number.isFinite(data.endY) &&
         data.startY >= 0 && data.endY >= data.startY && data.endY <= 8000) {
+        const purpose = data.purpose === undefined ? "feedback" : data.purpose;
+        if (!["entry", "construction", "feedback"].includes(purpose)) return;
         context.startMarker.style.top = data.startY + "px"; context.endMarker.style.top = data.endY + "px";
-        reveal(context.startMarker, footer || context.endMarker);
+        reveal(context.startMarker, purpose === "feedback" && footer ? footer : context.endMarker, purpose);
       }
     }
     function start() {
@@ -328,6 +412,106 @@
       stopFrame(); progress(null); host.setAttribute("aria-busy", "true"); host.replaceChildren(node("p", "nl-quiz-loading", "Ετοιμάζουμε τις τρεις δομές και τα συνθετικά…")); publish();
       loadInput(controller.signal).then(() => { if (destroyed) return; state = restoreBuilder(recipe, state, practice); publish(); render(builderSet(recipe, state.seed, practice)); })
         .catch(error => { if (!destroyed && error.name !== "AbortError") failure("Οι δομές δεν φορτώθηκαν. Δοκίμασε ξανά ή επέστρεψε στη θεωρία."); });
+    }
+    global.addEventListener("message", receive); start();
+    return { destroy() { if (destroyed) return; stopFrame(); progress(null); destroyed = true; controller.abort(); global.removeEventListener("message", receive); host.replaceChildren(); host.removeAttribute("aria-busy"); } };
+  }
+  function mountPuzzle(host, options, practice) {
+    const recipe = options.round;
+    let state = restorePuzzle(recipe, options.initialState, practice);
+    if (!state.seed) state.seed = generated.freshSeed(null);
+    const controller = new AbortController();
+    let destroyed = false, frame = null, timeout = null, requestId = 0, active = null, footer = null;
+    const values = new Uint32Array(4); global.crypto.getRandomValues(values);
+    const session = Array.from(values, value => value.toString(36).padStart(7, "0")).join("");
+    const attemptId = "puzzle-" + recipe.setId + "-" + state.seed;
+    function ready(value) { if (!destroyed && typeof options.onSuccessActionsReady === "function") options.onSuccessActionsReady(value === true); }
+    function progress(value) { if (!destroyed && typeof options.onProgress === "function") options.onProgress(value); }
+    function publish() { state = restorePuzzle(recipe, state, practice); if (!destroyed && typeof options.onStateChange === "function") options.onStateChange(clone(state)); }
+    function clearTimer() { if (timeout) global.clearTimeout(timeout); timeout = null; }
+    function stopFrame() { clearTimer(); active = null; if (frame) { frame.remove(); frame = null; } if (footer) footer.remove(); footer = null; ready(false); }
+    function failure(message) {
+      if (destroyed) return;
+      stopFrame(); progress(null); host.setAttribute("aria-busy", "false");
+      const error = node("p", "nl-builder-error nl-quiz-error", message); error.setAttribute("role", "alert");
+      host.replaceChildren(error, button("Δοκίμασε ξανά", "nl-quiz-button", start));
+    }
+    function actions(set, index, stage) {
+      if (destroyed || !active || !active.loaded || !state.states[index].solved) return;
+      if (footer) footer.remove();
+      footer = node("div", "round-next nl-builder-actions nl-puzzle-actions");
+      const next = button(index < 2 ? "Επόμενο κουίζ" : "Συνεχίζω τη θεωρία", "nl-quiz-button primary", () => {
+        if (destroyed || !state.states[index].solved) return;
+        if (index < 2) { state.currentRound = index + 1; publish(); render(set); }
+        else if (state.solved && typeof options.onContinue === "function") options.onContinue();
+      });
+      if (index === 2) next.setAttribute("data-checkpoint-continue", "");
+      footer.append(next);
+      if (index === 2 && typeof options.onNewPractice === "function") footer.append(button(options.newPracticeLabel || "Άλλη τριάδα για εξάσκηση", "nl-quiz-button secondary", options.onNewPractice));
+      if (index === 2 && typeof options.onOtherGame === "function") footer.append(button(options.otherGameLabel || "Άλλο παιχνίδι", "nl-quiz-button secondary", options.onOtherGame));
+      stage.after(footer); ready(index === 2 && state.solved && footer.isConnected && !next.disabled);
+    }
+    function render(set) {
+      if (destroyed) return;
+      stopFrame();
+      const index = state.currentRound, entry = set.rounds[index];
+      const stage = node("div", "nl-builder-stage nl-puzzle-stage");
+      frame = node("iframe", "nl-builder-frame nl-puzzle-frame");
+      frame.title = "Μοριακό παζλ — μόριο " + (index + 1) + " από 3"; frame.style.height = "700px";
+      const startMarker = node("span", "nl-builder-marker"), endMarker = node("span", "nl-builder-marker");
+      [startMarker, endMarker].forEach(marker => { marker.setAttribute("aria-hidden", "true"); marker.style.cssText = "position:absolute;width:1px;height:1px;pointer-events:none;left:0;top:0"; });
+      // The child owns its logo/title; the same header is never rendered twice.
+      stage.append(frame, startMarker, endMarker); host.replaceChildren(stage); host.setAttribute("aria-busy", "true");
+      active = { requestId: ++requestId, index, entry, stage, startMarker, endMarker, loaded: false };
+      frame.src = new URL("games/molecular-puzzle.html?embedded=1&lessonSession=" + session + "&v=puzzle-lesson-20261112-r1", global.document.baseURI).href;
+      progress({ current: index + 1, total: 3 });
+      timeout = global.setTimeout(() => failure("Το παζλ άργησε να φορτώσει. Η προσπάθειά σου διατηρήθηκε. Δοκίμασε ξανά."), 60000);
+    }
+    function receive(event) {
+      if (destroyed || !frame || event.origin !== global.location.origin || event.source !== frame.contentWindow) return;
+      const data = event.data;
+      if (!data || typeof data !== "object" || data.channel !== PUZZLE_CHANNEL || data.session !== session || !active) return;
+      const context = active;
+      if (data.type === "ready") {
+        if (context.loaded) return;
+        frame.contentWindow.postMessage({ channel: PUZZLE_CHANNEL, session, command: "load", requestId: context.requestId, attemptId,
+          moleculeId: context.entry.moleculeId, correctName: context.entry.name,
+          initialState: puzzleSnapshot(context.entry, state.states[context.index]), explanation: context.entry.explanation }, global.location.origin);
+        return;
+      }
+      if (data.requestId !== context.requestId || data.attemptId !== attemptId || data.moleculeId !== context.entry.moleculeId) return;
+      if (data.type === "error") { failure("Δεν ήταν δυνατή η ασφαλής προετοιμασία του παζλ. Δοκίμασε ξανά."); return; }
+      if (data.type === "exit") { if (typeof options.onClose === "function") options.onClose(); return; }
+      if (data.type === "scroll-interrupt") {
+        if (context.loaded && typeof options.onScrollInterrupt === "function") options.onScrollInterrupt();
+        return;
+      }
+      if (data.type === "loaded" || data.type === "state") {
+        if (data.type === "state" && !context.loaded) return;
+        if (data.type === "loaded") { context.loaded = true; clearTimer(); host.setAttribute("aria-busy", "false"); }
+        // Never trust a child solved flag: recheck its bounded graph against the
+        // independently verified source MOL before recording any earned access.
+        state.states[context.index] = puzzleSnapshot(context.entry, data.state); publish();
+        if (state.states[context.index].solved) {
+          actions(puzzleSet(recipe, state.seed, practice), context.index, context.stage);
+          if (state.solved && typeof options.onSolved === "function") options.onSolved({ kind: "correct" }, clone(state));
+        } else { if (footer) footer.remove(); footer = null; ready(false); }
+      } else if (data.type === "resize" && Number.isFinite(data.height) && data.height >= 80 && data.height <= 8000) {
+        frame.style.height = Math.ceil(data.height) + "px";
+      } else if (data.type === "reveal" && context.loaded && Number.isFinite(data.startY) && Number.isFinite(data.endY) &&
+        data.startY >= 0 && data.endY >= data.startY && data.endY <= 8000) {
+        const purpose = data.purpose === undefined ? "feedback" : data.purpose;
+        if (!["entry", "construction", "feedback"].includes(purpose)) return;
+        context.startMarker.style.top = data.startY + "px"; context.endMarker.style.top = data.endY + "px";
+        if (typeof options.onReveal === "function") options.onReveal({ kind: "puzzle-" + purpose, start: context.startMarker,
+          end: purpose === "feedback" && footer ? footer : context.endMarker });
+      }
+    }
+    function start() {
+      if (destroyed) return;
+      stopFrame(); progress(null); host.setAttribute("aria-busy", "true"); host.replaceChildren(node("p", "nl-quiz-loading", "Ετοιμάζουμε τα τρία μόρια του παζλ…")); publish();
+      loadInput(controller.signal).then(() => { if (destroyed) return; state = restorePuzzle(recipe, state, practice); publish(); render(puzzleSet(recipe, state.seed, practice)); })
+        .catch(error => { if (!destroyed && error.name !== "AbortError") failure("Οι δομές του παζλ δεν φορτώθηκαν. Δοκίμασε ξανά ή επέστρεψε στη θεωρία."); });
     }
     global.addEventListener("message", receive); start();
     return { destroy() { if (destroyed) return; stopFrame(); progress(null); destroyed = true; controller.abort(); global.removeEventListener("message", receive); host.replaceChildren(); host.removeAttribute("aria-busy"); } };
