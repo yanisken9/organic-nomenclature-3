@@ -1,0 +1,25 @@
+--- finalize-serial-before.py
++++ finalize.py
+@@ -2,7 +2,7 @@
+ The closing receipt deliberately follows the archive cutoff.
+ """
+ from pathlib import Path
+-import sys,importlib.util,json,datetime,subprocess,hashlib,os
++import sys,importlib.util,json,datetime,subprocess,hashlib,os,concurrent.futures
+ sys.dont_write_bytecode=True
+ H=Path(__file__).resolve().parent
+ spec=importlib.util.spec_from_file_location("release_ops",H/"release-ops.py");o=importlib.util.module_from_spec(spec);spec.loader.exec_module(o)
+@@ -15,8 +15,11 @@
+  c=o.ownclone(s,"checkpointClone");assert h.git(c,"rev-parse","HEAD").decode().strip()==s["checkpointSnapshotCommit"]
+  assert not h.git(c,"status","--porcelain","-z")
+  paths=sorted(set(h.source_paths(R))|set(h.recovery_paths(R)))
+- frozen=Path(s["job"])/"frozen-final-metadata";assert not frozen.exists();frozen.mkdir()
+- hashes={p:o.copydata(h.relative_path(R,p),h.relative_path(frozen,p))for p in paths}
++ frozen=Path(s["job"])/"frozen-final-metadata-r2";assert not frozen.exists();frozen.mkdir()
++ def freeze_one(p):
++  return p,o.copydata(h.relative_path(R,p),h.relative_path(frozen,p))
++ with concurrent.futures.ThreadPoolExecutor(max_workers=6)as pool:
++  hashes=dict(pool.map(freeze_one,paths))
+  assert not h.secret_findings(frozen,paths)
+  old={os.fsdecode(p)for p in h.git(c,"ls-files","-z").split(b"\0")if p}
+  for p in old-set(paths):h.relative_path(c,p).unlink(missing_ok=True)

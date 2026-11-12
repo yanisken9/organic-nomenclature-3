@@ -70,7 +70,7 @@ try:
  exec(compile((ROOT/'tools/namelecule_bidi.py').read_text().replace('s.settimeout(60)','s.settimeout(30)'),'owned-release-smoke','exec'))
  call('browsingContext.setViewport',{'context':ctx,'viewport':{'width':1440,'height':1000},'devicePixelRatio':1})
  page('design/welcome-proposal.html');wait('!!document.querySelector(".card.one .action")')
- check(ev('document.title.includes("Namelecule")&&document.querySelector(".brand img").complete'),'welcome title and brand loaded');OUT['welcomeGames']=read('[...document.querySelectorAll(".game-action")].map(e=>({text:e.textContent.trim(),href:e.href}))');shot('welcome.png')
+ wait('document.title.includes("Namelecule")&&document.querySelector(".brand img").complete&&document.querySelector(".brand img").naturalWidth>0');check(ev('document.title.includes("Namelecule")&&document.querySelector(".brand img").naturalWidth>0'),'welcome title and brand loaded');OUT['welcomeGames']=read('[...document.querySelectorAll(".game-action")].map(e=>({text:e.textContent.trim(),href:e.href}))');shot('welcome.png')
  click('.card.one .action');wait('location.pathname.endsWith("/design/theory-library.html")&&!!document.querySelector("#alkanes-title")')
  link=read('document.querySelector(".lesson:first-child .action").href');check('mulermoc-nom-55.html?' in link and 'alkanes-user-3.scenario.json' in link,'library alkane entry points to active Main55',link)
  click('.lesson:first-child .action');ready();check(read('fScenarioPresent().index')==0,'welcome/library actual clicks open lesson at step1');OUT['lessonURL']=read('location.href')

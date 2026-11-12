@@ -1,0 +1,32 @@
+Namelecule — ανάκτηση αποθήκευσης 12/11/2026
+
+Αρχεία αρχικής αποθήκευσης:
+Namelecule-20261112-115539-full.zip: πλήρεις πηγές, manifest SHA-256, αρχικός χρονικός περιορισμός.
+Namelecule-20261112-115539-full.bundle: πλήρες ιστορικό Git και κλάδος checkpoint/namelecule-20261112-115539.
+Namelecule-20261112-115539-full-recovery.zip: επιπλέον λειτουργικές καταγραφές communication, ίδιο χρονικό όριο.
+
+Μετά την επιβεβαίωση δημόσιας παράδοσης θα προστεθούν:
+Namelecule-20261112-115539-final-metadata.zip και .bundle: μεταγενέστερη αναφορά, σημειώσεις και αποδείξεις.
+Το incremental metadata bundle απαιτεί το προηγούμενο full snapshot.
+Το closing-delivery.json δημιουργείται μετά από τα δύο χρονικά όρια και αντιγράφεται χωριστά.
+Τα παλαιότερα αντίγραφα διατηρούνται· παλιά αναδρομικά archives και ιδιωτικά browser profiles δεν επανασυσκευάζονται.
+
+Για ακριβή πηγαία αρχεία προτιμήστε την αποσυμπίεση ZIP σε ΝΕΟ φάκελο. Επαληθεύστε CRC και SNAPSHOT-MANIFEST.json.
+Για Git: clone --no-checkout του full.bundle σε ΝΕΟ φάκελο, προσθέστε πρώτα στο .git/info/attributes τη γραμμή:
+* -text -eol -filter -ident
+και μόνο μετά κάντε checkout τον παραπάνω checkpoint κλάδο. Έτσι διατηρούνται CRLF και raw bytes.
+Για το incremental bundle: fetch από το αρχείο metadata.bundle αφού έχει εισαχθεί το full snapshot, μετά checkout του τελικού checkpoint.
+Το πλήρες bundle ελέγχεται επιπλέον σε χωριστό disposable clone πριν θεωρηθεί ολοκληρωμένη η αποθήκευση.
+
+Οι δύο νέοι φάκελοι είναι:
+/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/Αποθηκεύσεις/2026-11-12-115539
+/Users/yannisskendros/Desktop/αρχεία  json/Namelecule_12-11-2026
+Βρίσκονται στον ίδιο υπολογιστή, όχι σε δύο φυσικούς δίσκους.
+Το Namelecule.app περιλαμβάνεται με διατήρηση δικαιωμάτων εκτέλεσης. Η ρύθμιση της διαδρομής χρειάζεται ενημέρωση αν μεταφερθεί το έργο.
+
+Υποδοχή: https://yanisken9.github.io/organic-nomenclature-3/design/welcome-proposal.html?v=release-20261112
+Αναφορά: https://yanisken9.github.io/organic-nomenclature-3/docs/professor-20261112/update.html
+
+Πλήρης συνεδριακή δοκιμή και λειτουργία χωρίς Internet απαιτούν ξεχωριστή προετοιμασία. Οι Google Fonts/JSmol/εξωτερικές υπηρεσίες διατηρούν τις γνωστές εξαρτήσεις τους.
+Δεν έγιναν αλλαγές core ή νέα ενσωμάτωση upstream σε αυτήν την αποθήκευση.
+Η πραγματική ολοκλήρωση και τα commit/hash καταγράφονται στο state/receipts, όχι στις παραπάνω προγραμματισμένες ονομασίες.
