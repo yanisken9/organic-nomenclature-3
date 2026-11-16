@@ -2,15 +2,21 @@
   "date": "2026-11-16",
   "preparedUTC": "2026-11-16T09:32:46.630314+00:00",
   "scope": "Professor report covering the locally completed v56/v57 integrations and four reviewed 2026-11-16 logical units. The report author inspected result documents, actual manifests and selected evidence metadata, and verified current bytes. The report author did not rerun application, browser or chemistry tests.",
-  "publicationStatus": "PENDING",
+  "publicationStatus": "RUNTIME_LIVE_VERIFIED",
   "delivery": {
-    "status": "PENDING",
-    "publicRuntimeVerified": false,
-    "runtimeCommit": null,
-    "fullSnapshotCommit": null,
-    "backupCopiesVerified": false,
-    "evidence": [],
-    "note": "Release coordinator must update after actual source/public-byte/browser and backup verification. This draft claims no new full save or publication success."
+    "runtimeCommit": "81db1b2c5007cc8df9f1f198a4223611e3e985b7",
+    "snapshotCommit": "c5b8353180b3e56e7036c3b5bbd8a591f68ffda7",
+    "sourceFiles": 9182,
+    "recoveryFiles": 250,
+    "folderNames": [
+      "2026-11-16-113102",
+      "Namelecule_16-11-2026"
+    ],
+    "publicHTTPFiles": 184,
+    "browserEvidence": "docs/checks/save-publish-20261116-113102/browser/public-results.json",
+    "metadataCutoffSeparate": true,
+    "checkpointLargeFilesLosslesslyEncoded": true,
+    "launcherReferencesOriginalProject": true
   },
   "previousPublishedBaseline": {
     "report": "docs/professor-20261112/update.html",
@@ -173,7 +179,7 @@
         "bytes": 179637
       }
     ],
-    "publicationPending": true
+    "publicationPending": false
   },
   "upstream": {
     "lastActuallySynchronized": "b73d8b6330cfdb9d83c000a513be7052763aa083",
@@ -191,7 +197,7 @@
     "sha256": "d5e85fca80cb1ddb04b9776e910fbe6ee642ea9ee2407acecebd5de585947e82",
     "bytes": 35104
   },
-  "scenarioExport": "Prior levels export is documented separately. Release coordinator verifies the current Desktop export and dated recovery bytes. The report author performed no new export.",
+  "scenarioExport": "Current source scenario and existing Desktop export are byte-identical, verified during full save; no lesson data edited by this save.",
   "limitations": [
     "Actual 125/200 browser zoom remains unverified.",
     "3D in the new viewport flow remains unverified. Setup did not reach the 3D control; the cause is not attributed to JSmol.",
@@ -337,11 +343,11 @@
     "HTMLParser found balanced tags and unique IDs, including delivery; all relative href targets exist.",
     "Both JSON artifacts parse; plainlinks.txt and links.txt match byte for byte; 20 source-record SHA-256 values match current files.",
     "No private absolute filesystem path appears in the five report deliverables.",
-    "SAVE-01 documentation closure: linked proof files explicitly allowlisted; private Desktop export mappings referenced as checkpoint-only, without public hyperlinks."
+    "SAVE-01 documentation closure: linked proof files explicitly allowlisted; private Desktop export mappings referenced as checkpoint-only, without public hyperlinks.",
+    "Release coordinator completed candidate visual QA and independent release review; actual public runtime/browser and two mirror proofs recorded separately."
   ],
   "reportChecksPending": [
-    "Release-coordinator visual rendering QA.",
-    "Fresh independent report review.",
-    "Delivery and upstream audit completion by release coordinator."
-  ]
+    "Final report bytes after this factual update require their own publication and HTTP verification; closing receipt follows metadata cutoff."
+  ],
+  "finalizedUTC": "2026-11-16T09:52:37.721249+00:00"
 }
