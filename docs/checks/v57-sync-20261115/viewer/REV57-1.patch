@@ -1,0 +1,14 @@
+--- docs/checks/v57-sync-20261115/viewer/before-REV57-1.js	2026-11-15 18:53:35
++++ /private/tmp/namelecule-v57-sync-20261115-l4r9e5_s/candidate/js/mulermoc-nom-molview-57.js	2026-11-15 18:53:35
+@@ -2798,7 +2798,10 @@
+         for (var m = 0; m < bondList3D.length; m++) {
+           var mb = bondList3D[m];
+           if (!mb) continue;
+-          if (set[mb[0]] && set[mb[1]]) script += "select atomno=" + mb[0] + ", atomno=" + mb[1] + "; color bond [" + cyan + "];";
++          // Bond picks own exact bond identities. Their endpoint union may
++          // also contain both ends of an unselected bridge between two picks.
++          // Atom picks retain the existing both-endpoints bond paint policy.
++          if (sb.length ? sb.indexOf(m + 1) >= 0 : set[mb[0]] && set[mb[1]]) script += "select atomno=" + mb[0] + ", atomno=" + mb[1] + "; color bond [" + cyan + "];";
+         }
+       }
+     } catch (eB) {}

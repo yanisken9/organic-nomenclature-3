@@ -1,0 +1,37 @@
+--- local56/before-core57.js
++++ candidate/js/mulermoc-nom-core-57.js
+@@ -1000,10 +1000,16 @@
+         }
+     }
+ 
+-    // Two eligible terminal CHO/COOH groups tie: compare bonds, then alkyl locants.
+-    if ((fIsAcyclicAldehydeGraph(atomConnectivityList, allAtomsTypeList, bondList) ||
+-        fIsAcyclicUnsaturatedAcidGraph(atomConnectivityList, allAtomsTypeList, bondList)) &&
+-        termFgKeys.filter(k => oriented.includes(Number(k)) && terminalFgCarbons[k] === forcedC1Priority).length === 2) forcedC1 = -1
++    // Two eligible terminal FG carbons of equal top priority tie (diacids,
++    // dialdehydes, dinitriles — any graph): no forced C1; the locant tiers
++    // below decide, and full ties keep the input order, i.e. the chain is
++    // direction-free. (The old aldehyde/unsaturated-acid-only condition
++    // missed saturated diacids such as propanedioic and
++    // 2,3-dihydroxybutanedioic acid, pinning an arbitrary direction.)
++    // Single-terminal and mixed-priority (oxo-acid) cases are untouched: the
++    // === forcedC1Priority filter still isolates exactly those.
++    if (forcedC1 >= 0 &&
++        termFgKeys.filter(k => oriented.includes(Number(k)) && terminalFgCarbons[k] === forcedC1Priority).length >= 2) forcedC1 = -1
+     if (forcedC1 >= 0) {
+         // Forced-C1 must be at index 0
+         if (oriented[oriented.length - 1] === forcedC1) {
+@@ -1677,9 +1683,10 @@
+         }
+     }
+ 
+-    if ((fIsAcyclicAldehydeGraph(atomConnectivityList3D, allAtomsTypeList3D, bondList3D) ||
+-        fIsAcyclicUnsaturatedAcidGraph(atomConnectivityList3D, allAtomsTypeList3D, bondList3D)) &&
+-        termFgKeys3D.filter(k => oriented3D.includes(Number(k)) && terminalFgCarbons3D[k] === forcedC1Priority3D).length === 2) forcedC1_3D = -1
++    // Mirror 2D: equal top-priority terminal groups leave direction to the
++    // locant tiers; complete ties preserve the supplied path in either view.
++    if (forcedC1_3D >= 0 &&
++        termFgKeys3D.filter(k => oriented3D.includes(Number(k)) && terminalFgCarbons3D[k] === forcedC1Priority3D).length >= 2) forcedC1_3D = -1
+     if (forcedC1_3D >= 0) {
+         if (oriented3D[oriented3D.length - 1] === forcedC1_3D) {
+             oriented3D = oriented3D.slice().reverse()

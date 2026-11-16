@@ -1,0 +1,142 @@
+{
+  "recordedUTC": "2026-11-15T06:27:03.546976+00:00",
+  "status": "Approved by user: ναι, 2026-11-15; implementation and necessary checks/review authorized",
+  "objective": "Molecular Detective: highlighted name constituent -> learner selects corresponding regions on expanded2D",
+  "userSteering": "Return to Detective after completed professor sync; logo already approved. No specific implementation plan approved yet.",
+  "baseline": {
+    "head": "168e3cec01f941a84d40bbe0dc07156e7baa35d0",
+    "indexSHA256": "caafccaca7019b42993bc27ec3834bbc90178430d217bf0c92439e6346f845db",
+    "lastActuallySynchronized": "e75a37baeda9017666628c9f2f3428ffdd3a2f1c",
+    "priorSyncClosure": "../v56-sync-20261115/closing-receipt.json",
+    "currentCoreSHA256": "01e4b44578dc9ed6c8a484c5d38ee8a56e44ce2fc81ac6cf479a8333718ee8b5",
+    "viewerSHA256": "2840d9282f6eb91124b22b6bef46df035f6c07320473e5bf2944e96e3372e8d3",
+    "allCoreHashes": {
+      "js/mulermoc-nom-core-42.js": "a7b95d7fd9eb8589c2f441205ddd3751bd6da9bf9834fa60d9a5b5d2d2aa2b83",
+      "js/mulermoc-nom-core-43.js": "93373c8ea49d6489350c4c7eee36d444b0f6ff5c13c500aa9662d4997575ac21",
+      "js/mulermoc-nom-core-44.js": "3bb8773be785992ec581d4cdd11a58a6bb5a833ed429ae07287839b436e523e1",
+      "js/mulermoc-nom-core-45.js": "dde5fb6350a0374e1ebda69e0870cbfce0bbed027b8219f33bc4de3c4cf9ae74",
+      "js/mulermoc-nom-core-48.js": "37dad911ed73af0768fc922186cb94e71df7df1144b2c1e75aee4c9202ce6c0d",
+      "js/mulermoc-nom-core-49.js": "ae85dd22b94292ed539ff2a858a1a6fe3672af90298662e5c6860fb411a65951",
+      "js/mulermoc-nom-core-50.js": "0f79b5af20b9c3b4504673876abc03b6c162af316c33dff55fd55e0c22a43fd9",
+      "js/mulermoc-nom-core-51.js": "096d617853646de0dfd67bcbde3e32252aebcb98e7525b05e6f7e71ccb48a5fc",
+      "js/mulermoc-nom-core-52.js": "d2138418ff630ab77e578b80ca8ba3a10cc1b877c3ab8c0e5c2735ffcd1f24a2",
+      "js/mulermoc-nom-core-54.js": "8f3e5f76d96322faf7cf9251f4cae3eca204fe2f82bf5754fdce6ffc4cd5d5a9",
+      "js/mulermoc-nom-core-55.js": "6cbdbd0ce60f5d66ff3e6925cdfd48e470764baa02b6263f325eff356df5e270",
+      "js/mulermoc-nom-core-56.js": "01e4b44578dc9ed6c8a484c5d38ee8a56e44ce2fc81ac6cf479a8333718ee8b5"
+    }
+  },
+  "newImplementationFiles": [
+    "games/molecular-detective.html",
+    "css/namelecule-molecular-detective.css",
+    "js/namelecule-molecular-detective.js",
+    "js/namelecule-molecular-detective-engine.js",
+    "js/namelecule-molecular-detective-host.js",
+    "games/molecular-detective-viewer.html",
+    "tools/build-molecular-detective-host.py",
+    "design/molecular-detective-preview.html"
+  ],
+  "existingRuntimeFilesToEdit": [],
+  "recordUpdates": [
+    "docs/SESSION-NOTES.md",
+    "docs/YANNIS-CONTRIBUTIONS.md",
+    "dated plan/evidence/review records"
+  ],
+  "prototypeScope": {
+    "standalone": true,
+    "lessonLookPreview": true,
+    "welcomeLibraryOrActualLessonIntegration": false,
+    "publication": false,
+    "persistentExistingGameProgressChanges": false,
+    "starterMoleculeKeys": [
+      "ethane",
+      "butane",
+      "methyl_2_pentane",
+      "dimethyl_2_3_butane",
+      "ethene",
+      "butene_1",
+      "butene_2",
+      "butyne_1",
+      "butyne_2",
+      "butadiene_1_2",
+      "butadiene_1_3",
+      "ethanol",
+      "butanol_2",
+      "propanal",
+      "propanone",
+      "pentanone_3",
+      "methanoicacid"
+    ],
+    "deferredLargerExample": "ethyl_3_dimethyl_2_5_hexane",
+    "missionFamilies": [
+      "parent-chain carbon atoms",
+      "all named C-C single/double/triple graph bonds",
+      "carbon atoms of methyl/dimethyl branches",
+      "literal hydroxyl/aldehyde/carbonyl/carboxyl groups as atom sets"
+    ],
+    "noMissionsFor": [
+      "hydrocarbon -ιο",
+      "empty target, including methanoicacid -αν-",
+      "isolated punctuation/multiplier/locant"
+    ]
+  },
+  "learnerFlow": [
+    "Approved logo, centered heading/objective; match lesson/Puzzle Roboto Condensed heading and existing system-ui body/palette/card styles through new scoped CSS",
+    "Whole native name, one colored and underlined constituent, alongside expanded2D; no correct region prehighlighting/numbering",
+    "Each prompt explicitly requests atoms OR bonds; click/touch toggles; one required kind per mission",
+    "Explicit Έλεγχος; preserve incorrect attempt for editing; no automatic solution coloring or transition",
+    "Success gives a short chemical explanation and Επόμενη αποστολή; Καθαρισμός επιλογής and zoom controls available",
+    "New mission clears old selection/feedback. Zoom/resize retains current attempt. Responsive standalone and lesson-look preview"
+  ],
+  "gradingContract": {
+    "type": "Exact unordered raw atom-ID or bond-ID sets; no interchange",
+    "mainChain": "Accept each chemically valid complete parent separately; neither click order nor direction graded",
+    "equivalentBranches": "Each validated equivalent branch set accepted separately, not unioned",
+    "carbonBranches": "Branch C atoms only, excluding parent attachment C and H",
+    "hydroxylAtoms": "O and its bonded H",
+    "aldehydeAtoms": "Aldehyde carbon, oxygen and aldehydic H",
+    "carbonylAtoms": "Carbonyl C and O only, excluding adjacent alpha C atoms",
+    "carboxylAtoms": "Carboxyl C, both O and hydroxyl H; exclude formyl H in methanoicacid",
+    "bondIdentity": "Use actual graph edges/order and bond IDs, not union of endpoint atoms",
+    "nativeIsolation": "New child keeps MulerQuizTarget=null, MulerSelectPurpose=free and nameAnalysisMode=none; shared native quiz policies remain unchanged"
+  },
+  "technicalReuse": {
+    "host": "New generated Main56 child; existing Builder Main55 host/generator preserved",
+    "selection": "Use existing native geometry, hit-test pipeline and current 1-based selections; new isolated bridge observes state, validates kind and sends origin/session/request/molecule/revision-bound messages",
+    "name": "Serialize actual native name boxes with exact NFC roundtrip",
+    "target": "Native resolver metadata reused only when matching literal game target; explicit graph-derived functional groups and bond targets for differences",
+    "view": "Existing fit/zoom/resize with actual iframe height; 2D readiness verified independently of hidden3D",
+    "dependencies": "Native Main56 still initializes hidden JSmol; removing its lifecycle is outside this scope. Existing external fonts/vendor dependencies and prior local3D readback issue remain."
+  },
+  "verification": [
+    "Every supported mission atom/bond oracle and valid alternatives; no empty missions",
+    "Wrong kind, H vs C, C-H vs C-C, extra/missing/wrong selections and arbitrary selection order",
+    "1,3-butadiene regression: correct double bonds {1,3}; reject {1,2,3} despite same endpoint union",
+    "Exact ketone carbonyl boundaries and methanoicacid exclusions",
+    "Equivalent parent/branch alternatives, including rejection of invalid mixed alternative sets",
+    "Meaningful ID-permutation checks for graph-derived targets",
+    "Genuine desktop and viewport-emulated mobile clicks/touch where available, toggling/clear/Escape, submit/retry/next",
+    "Zoom/resize/current-molecule readiness, rapid mission changes, stale messages, reload/retry",
+    "Computed typography/layout comparison with existing Puzzle/lesson headings; 320/390px page framing and feedback visibility",
+    "Protect shared core/viewer/MOL/SDF/scenarios and existing game progress; compare baseline hashes",
+    "Consolidated fresh independent Reviewer after implementation; targeted corrections per protocol"
+  ],
+  "planningEvidence": {
+    "explorer": "/root/detective_v56_api_plan: final source APIs/lines; no writes/browser",
+    "chemistry": "/root/detective_v56_targets_plan: readonly Node/vm probes for18keys plus expanded bond tables; recommended17; no prototype/browser validation",
+    "learning": "/root/detective_v56_flow_plan: readonly UX/typography review, no visual runtime verification",
+    "importantObservedRisks": [
+      "Native bonds grade endpoint atom unions, so wrong edges can pass",
+      "Native H redirection and ordered parent selection do not match literal Detective contract",
+      "Native ketone group includes alpha C atoms; game requires explicit carbonyl-only definition",
+      "Source inherited hidden JSmol lifecycle remains even in expanded-only child"
+    ]
+  },
+  "skill": "Sites local-only workflow; use current checkout, no registration or deployment",
+  "coreChangeRecord": "No additional core changes during Detective planning. The earlier same-session sync added core56 and preserved11oldcores; exact record in sync closure.",
+  "approvedAtUTC": "2026-11-15T06:31:20.982724+00:00",
+  "implementation": {
+    "status": "Completed locally, independent Reviewer no actionable findings",
+    "evidence": "../molecular-detective-implementation-20261115/final-report.json",
+    "recordedUTC": "2026-11-15T06:50:16.486456+00:00"
+  }
+}

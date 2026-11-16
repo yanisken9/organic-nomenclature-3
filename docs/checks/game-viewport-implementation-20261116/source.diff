@@ -1,0 +1,1883 @@
+--- a/design/welcome-proposal.html
++++ b/design/welcome-proposal.html
+@@ -24,10 +24,10 @@
+ <section class="cards" aria-label="Επιλογές εφαρμογής">
+ <article class="card one"><div class="icon"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 9C12 6 7 6 3 7v19c5-1 9-1 13 2 4-3 8-3 13-2V7c-4-1-9-1-13 2v19M7 12h5m-5 5h5m8-5h5m-5 5h5"/></svg></div><span class="label">ΘΕΩΡΙΑ</span><h2>Μαθαίνω βήμα βήμα</h2><p>Ανακάλυψε τους κανόνες ονοματολογίας μέσα από καθοδηγούμενα σενάρια και διαφορετικές εικόνες του ίδιου μορίου.</p><ul><li>Έτοιμα σενάρια θεωρίας</li><li>Για μελέτη ή για το μάθημα στην τάξη</li></ul><a class="action" style="text-decoration:none" href="theory-library.html?v=other-ketones-theory-20261026">Δες τη θεωρία <span aria-hidden="true">↗</span></a><small>Για μαθητές και εκπαιδευτικούς</small></article>
+ <article class="card two"><div class="icon"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M11 10h10c6 0 9 13 5 15-3 1-5-5-8-5h-4c-3 0-5 6-8 5-4-2-1-15 5-15ZM10 13v7m-3-3.5h6"/><circle cx="22" cy="14" r="1"/><circle cx="25" cy="18" r="1"/></svg></div><span class="label">ΑΣΚΗΣΕΙΣ &amp; ΠΑΙΧΝΙΔΙΑ</span><h2>Παίζω και εξασκούμαι</h2><p>Επισκεύασε ονόματα, σύνθεσέ τα ή σύνδεσε το όνομα με τη δομή μέσα από τέσσερα παιχνίδια.</p><ul><li>Συνεργείο, σύνθεση, παζλ και αποστολές</li><li>Εξηγήσεις για τις επιλογές σου</li></ul><div class="game-actions">
+-<a class="action game-action" href="../games/name-repair.html?v=alkane-levels-20261116-r1"><span class="game-action-logo" aria-hidden="true"><img src="../games/assets/name-repair/workshop-logo-3d-v1.png" width="1254" height="1254" alt=""></span><span class="game-action-label">Συνεργείο ονομάτων</span><span class="game-action-arrow" aria-hidden="true">↗</span></a>
+-<a class="action game-action" href="../games/name-builder.html?v=alkane-levels-20261116-r1"><span class="game-action-logo" aria-hidden="true"><img src="../games/assets/name-builder/name-builder-logo-3d-blank-v1.png" width="1254" height="1254" alt=""></span><span class="game-action-label">Χτίσε το όνομα</span><span class="game-action-arrow" aria-hidden="true">↗</span></a>
+-<a class="action game-action" href="../games/molecular-puzzle.html?v=alkane-levels-20261116-r1"><span class="game-action-logo" aria-hidden="true"><img src="../games/assets/molecular-puzzle/molecular-puzzle-logo-flat-v7.png" width="2148" height="732" alt=""></span><span class="game-action-label">Μοριακό παζλ</span><span class="game-action-arrow" aria-hidden="true">↗</span></a>
+-<a class="action game-action" href="../games/molecular-detective.html?v=alkane-levels-20261116-r2"><span class="game-action-logo" aria-hidden="true"><img src="../games/assets/molecular-detective/molecular-detective-logo-molecule-v2.png" width="1254" height="1254" alt=""></span><span class="game-action-label">Μοριακός ντεντέκτιβ</span><span class="game-action-arrow" aria-hidden="true">↗</span></a>
++<a class="action game-action" href="../games/name-repair.html?v=game-viewport-20261116-r1"><span class="game-action-logo" aria-hidden="true"><img src="../games/assets/name-repair/workshop-logo-3d-v1.png" width="1254" height="1254" alt=""></span><span class="game-action-label">Συνεργείο ονομάτων</span><span class="game-action-arrow" aria-hidden="true">↗</span></a>
++<a class="action game-action" href="../games/name-builder.html?v=game-viewport-20261116-r1"><span class="game-action-logo" aria-hidden="true"><img src="../games/assets/name-builder/name-builder-logo-3d-blank-v1.png" width="1254" height="1254" alt=""></span><span class="game-action-label">Χτίσε το όνομα</span><span class="game-action-arrow" aria-hidden="true">↗</span></a>
++<a class="action game-action" href="../games/molecular-puzzle.html?v=game-viewport-20261116-r1"><span class="game-action-logo" aria-hidden="true"><img src="../games/assets/molecular-puzzle/molecular-puzzle-logo-flat-v7.png" width="2148" height="732" alt=""></span><span class="game-action-label">Μοριακό παζλ</span><span class="game-action-arrow" aria-hidden="true">↗</span></a>
++<a class="action game-action" href="../games/molecular-detective.html?v=game-viewport-20261116-r1"><span class="game-action-logo" aria-hidden="true"><img src="../games/assets/molecular-detective/molecular-detective-logo-molecule-v2.png" width="1254" height="1254" alt=""></span><span class="game-action-label">Μοριακός ντεντέκτιβ</span><span class="game-action-arrow" aria-hidden="true">↗</span></a>
+ </div><small>Για μαθητές και εκπαιδευτικούς</small></article>
+ <article class="card three"><div class="icon"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M18 5H6v23h20V16M15 19l2-6L26 4l4 4-9 9-6 2ZM24 6l4 4M10 23h10"/></svg></div><span class="label">ΓΙΑ ΕΚΠΑΙΔΕΥΤΙΚΟΥΣ</span><h2>Δημιουργώ το μάθημά μου</h2><p>Βρες έτοιμο υλικό για την τάξη σου ή φτιάξε τα δικά σου σενάρια θεωρίας και μαθησιακά παιχνίδια.</p><ul><li>Ο προσωπικός σου χώρος υλικού</li><li>Αποθήκευση και λήψη των δημιουργιών σου</li></ul><button class="action" data-panel="teacher">Χώρος εκπαιδευτικού <span aria-hidden="true">↗</span></button><small>Σύνδεση για τον προσωπικό σου χώρο</small></article>
+ </section>
+--- a/games/name-repair.html
++++ b/games/name-repair.html
+@@ -6,11 +6,13 @@
+   <meta name="theme-color" content="#254c50">
+   <title>Συνεργείο ονομάτων · Namelecule</title>
+   <meta name="description" content="Διάλεξε ένα σετ αποστολών στο Συνεργείο ονομάτων. Παρατήρησε τις δομές, επισκεύασε τα ονόματα και δες τις εξηγήσεις.">
+-  <link rel="stylesheet" href="../css/namelecule-games.css?v=workshop-brand-20261105-r1">
+-  <link rel="stylesheet" href="../css/namelecule-repair-round.css?v=workshop-lesson-parity-20261110-r1">
+-  <link rel="stylesheet" href="../css/namelecule-game-levels.css?v=alkane-levels-20261116-r1">
+-  <script src="../js/namelecule-game-levels.js?v=alkane-levels-20261116-r1" defer></script>
+-  <script src="../js/namelecule-game-repair.js?v=alkane-levels-20261116-r1" defer></script>
++  <link rel="stylesheet" href="../css/namelecule-games.css?v=game-viewport-20261116-r1">
++  <link rel="stylesheet" href="../css/namelecule-repair-round.css?v=game-viewport-20261116-r1">
++  <link rel="stylesheet" href="../css/namelecule-game-levels.css?v=game-viewport-20261116-r1">
++  <link rel="stylesheet" href="../css/namelecule-game-viewport.css?v=game-viewport-20261116-r1">
++  <script src="../js/namelecule-game-viewport.js?v=game-viewport-20261116-r1" defer></script>
++  <script src="../js/namelecule-game-levels.js?v=game-viewport-20261116-r1" defer></script>
++  <script src="../js/namelecule-game-repair.js?v=game-viewport-20261116-r1" defer></script>
+ </head>
+ <body>
+   <a class="skip-link" href="#game-root">Πήγαινε στο παιχνίδι</a>
+--- a/games/name-builder.html
++++ b/games/name-builder.html
+@@ -5,11 +5,13 @@
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="theme-color" content="#254c50">
+   <title>Χτίσε το όνομα · Namelecule</title>
+-  <link rel="stylesheet" href="../css/namelecule-name-builder.css?v=builder-methods-20261112-r3">
+-  <link rel="stylesheet" href="../css/namelecule-game-levels.css?v=alkane-levels-20261116-r1">
+-  <script src="../js/namelecule-game-levels.js?v=alkane-levels-20261116-r1" defer></script>
++  <link rel="stylesheet" href="../css/namelecule-name-builder.css?v=game-viewport-20261116-r1">
++  <link rel="stylesheet" href="../css/namelecule-game-levels.css?v=game-viewport-20261116-r1">
++  <link rel="stylesheet" href="../css/namelecule-game-viewport.css?v=game-viewport-20261116-r1">
++  <script src="../js/namelecule-game-viewport.js?v=game-viewport-20261116-r1" defer></script>
++  <script src="../js/namelecule-game-levels.js?v=game-viewport-20261116-r1" defer></script>
+   <script src="../js/namelecule-name-builder-engine.js?v=name-builder-20261111-r1" defer></script>
+-  <script src="../js/namelecule-name-builder.js?v=alkane-levels-20261116-r1" defer></script>
++  <script src="../js/namelecule-name-builder.js?v=game-viewport-20261116-r1" defer></script>
+ </head>
+ <body>
+   <a class="skip-link" href="#answer-title">Πήγαινε στη σύνθεση του ονόματος</a>
+--- a/games/molecular-puzzle.html
++++ b/games/molecular-puzzle.html
+@@ -5,13 +5,15 @@
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="theme-color" content="#254c50">
+   <title>Μοριακό παζλ · Namelecule</title>
+-  <link rel="stylesheet" href="../css/namelecule-name-builder.css?v=builder-methods-20261112-r3">
+-  <link rel="stylesheet" href="../css/namelecule-molecular-puzzle.css?v=puzzle-lesson-20261112-r1">
+-  <link rel="stylesheet" href="../css/namelecule-game-levels.css?v=alkane-levels-20261116-r1">
+-  <script src="../js/namelecule-game-levels.js?v=alkane-levels-20261116-r1" defer></script>
++  <link rel="stylesheet" href="../css/namelecule-name-builder.css?v=game-viewport-20261116-r1">
++  <link rel="stylesheet" href="../css/namelecule-molecular-puzzle.css?v=game-viewport-20261116-r1">
++  <link rel="stylesheet" href="../css/namelecule-game-levels.css?v=game-viewport-20261116-r1">
++  <link rel="stylesheet" href="../css/namelecule-game-viewport.css?v=game-viewport-20261116-r1">
++  <script src="../js/namelecule-game-viewport.js?v=game-viewport-20261116-r1" defer></script>
++  <script src="../js/namelecule-game-levels.js?v=game-viewport-20261116-r1" defer></script>
+   <script src="../js/namelecule-chemistry-client.js?v=puzzle-prototype-20261112-r1" defer></script>
+   <script src="../js/namelecule-molecular-puzzle-engine.js?v=puzzle-prototype-20261112-r1" defer></script>
+-  <script src="../js/namelecule-molecular-puzzle.js?v=alkane-levels-20261116-r1" defer></script>
++  <script src="../js/namelecule-molecular-puzzle.js?v=game-viewport-20261116-r1" defer></script>
+ </head>
+ <body>
+   <a class="skip-link" href="#assembly-title">Πήγαινε στη σύνθεση της δομής</a>
+--- a/games/molecular-detective.html
++++ b/games/molecular-detective.html
+@@ -6,11 +6,13 @@
+   <meta name="theme-color" content="#254c50">
+   <title>Μοριακός ντεντέκτιβ · Namelecule</title>
+   <link rel="stylesheet" href="../css/namelecule-name-builder.css?v=builder-methods-20261112-r3">
+-  <link rel="stylesheet" href="../css/namelecule-molecular-detective.css?v=four-games-20261116-r1">
+-  <link rel="stylesheet" href="../css/namelecule-game-levels.css?v=alkane-levels-20261116-r1">
+-  <script src="../js/namelecule-game-levels.js?v=alkane-levels-20261116-r1" defer></script>
++  <link rel="stylesheet" href="../css/namelecule-molecular-detective.css?v=game-viewport-20261116-r1">
++  <link rel="stylesheet" href="../css/namelecule-game-levels.css?v=game-viewport-20261116-r1">
++  <link rel="stylesheet" href="../css/namelecule-game-viewport.css?v=game-viewport-20261116-r1">
++  <script src="../js/namelecule-game-viewport.js?v=game-viewport-20261116-r1" defer></script>
++  <script src="../js/namelecule-game-levels.js?v=game-viewport-20261116-r1" defer></script>
+   <script src="../js/namelecule-molecular-detective-engine.js?v=alkane-levels-20261116-r1" defer></script>
+-  <script src="../js/namelecule-molecular-detective.js?v=alkane-levels-20261116-r2" defer></script>
++  <script src="../js/namelecule-molecular-detective.js?v=game-viewport-20261116-r1" defer></script>
+ </head>
+ <body>
+   <a class="skip-link" href="#mission-title">Πήγαινε στην αποστολή</a>
+--- a/js/namelecule-game-repair.js
++++ b/js/namelecule-game-repair.js
+@@ -320,6 +320,8 @@
+     const emphasizeObjective = options.emphasizeObjective === true;
+     const condensedDiagram = options.diagramRepresentation === "condensed";
+     const compactDiagramZoom = options.compactDiagramZoom === true;
++    // New hosts explicitly opt in; older Main/native hosts retain their layout.
++    const viewportEnabled = options.viewport === true && !!global.NameleculeGameViewport;
+     const existing = mountedHosts.get(host);
+     if (existing) existing.destroy();
+     const root = host;
+@@ -335,10 +337,14 @@
+     let zoomPanel = null;
+     let zoomImage = null;
+     let listeners = [];
++    let viewport = null;
++    let pagers = [];
++    let viewportStage = "edit";
++    let viewportView = "answer";
+     const ownedClass = !host.classList.contains("nl-repair-round");
+     if (ownedClass) host.classList.add("nl-repair-round");
+     const pageScroller = function () { return global.document.scrollingElement || global.document.documentElement; };
+-    const pageReveal = standalone ? createResponseRevealer({
++    const pageReveal = standalone && !viewportEnabled ? createResponseRevealer({
+       host: root, interruptTarget: global,
+       active: function () { return !destroyed && !zoomPanel && root.isConnected; },
+       viewport: function () { return { top: 12, bottom: global.document.documentElement.clientHeight - 12 }; },
+@@ -358,7 +364,7 @@
+       if (!destroyed && typeof options.onStateChange === "function") options.onStateChange(getState());
+     }
+     function revealResponse(reason, start, end) {
+-      if (destroyed) return;
++      if (destroyed || viewportEnabled) return;
+       const request = { reason: reason, start: start, end: end || start };
+       if (pageReveal) pageReveal.reveal(request);
+       else if (typeof options.onReveal === "function") options.onReveal(request);
+@@ -386,6 +392,10 @@
+     function destroy() {
+       if (destroyed) return;
+       if (pageReveal) pageReveal.destroy();
++      if (viewport) viewport.destroy();
++      pagers.forEach(function (pager) { pager.destroy(); }); pagers = [];
++      host.classList.remove("nl-repair-viewport", "nl-repair-sequential");
++      ["data-repair-stage", "data-repair-view", "data-repair-step"].forEach(function (name) { host.removeAttribute(name); });
+       destroyed = true;
+       renderId += 1;
+       imageLoadId += 1;
+@@ -404,7 +414,7 @@
+         mountedHosts.delete(host);
+       }
+     }
+-    const api = { destroy: destroy, getState: getState };
++    const api = { destroy: destroy, getState: getState, refresh: function () { if (viewport) viewport.refresh(); refreshPagers(); } };
+     mountedHosts.set(host, api);
+ 
+     function renderRound() {
+@@ -467,21 +477,94 @@
+         node("div", { class: "session-row" }, [refs.sessionStats].concat(standalone ? [button("Επιστροφή στα σετ", "quiet", options.requestRestart)] : []))
+       ]);
+       root.replaceChildren(screen);
++      if (viewportEnabled) configureViewport(screen, heading, diagram, repair);
+       root.setAttribute("aria-busy", "false");
+       loadDiagram(currentRender);
+       updateControls();
+       const title = heading.querySelector("h1");
+       title.tabIndex = -1;
+       title.focus({ preventScroll: true });
+-      if (standalone) window.scrollTo({ top: 0, behavior: "instant" });
++      if (standalone && !viewportEnabled) window.scrollTo({ top: 0, behavior: "instant" });
+       if (state().solved) showSuccess(evaluateRepair(data, state()), false);
+       else if (state().submitted) {
+         const result = evaluateRepair(data, state());
+-        if (result.message) replaceChildren(refs.feedback, node("p", { text: result.message }));
++        if (result.message) { replaceChildren(refs.feedback, node("p", { text: result.message })); if (viewportEnabled) showViewportFeedback(false); }
+       }
+       if (data.kind === "replace" && state().selectedPartId && state().selectedPartId !== data.targetPartId) {
+         refs.selectionStatus.textContent = data.feedback.wrongPart;
+       }
++    }
++
++    function refreshPagers() {
++      if (destroyed) return;
++      pagers.forEach(function (pager) { pager.refresh(); });
++    }
++    function setViewportStage(stage, view) {
++      viewportStage = stage;
++      if (view) viewportView = view;
++      root.setAttribute("data-repair-stage", stage);
++      root.setAttribute("data-repair-view", viewportView);
++      if (refs.stageTabs) refs.stageTabs.querySelectorAll("[data-repair-view-button]").forEach(function (control) {
++        control.setAttribute("aria-pressed", String(stage === "edit" && control.dataset.repairViewButton === viewportView));
++      });
++      refreshPagers();
++      if (viewport) viewport.refresh();
++      publishSuccessActionsReady();
++    }
++    function showViewportFeedback(solved) {
++      if (!viewportEnabled) return;
++      refs.feedbackBack.hidden = solved;
++      refs.feedbackInspect.hidden = !solved;
++      refs.feedbackHeading.textContent = solved ? "Η επισκευή ολοκληρώθηκε" : "Παρατήρησε την εξήγηση";
++      setViewportStage("feedback");
++      refs.feedbackHeading.focus({ preventScroll: true });
++    }
++    function configureViewport(screen, heading, diagram, repair) {
++      root.classList.add("nl-repair-viewport");
++      const tabs = node("div", { class: "repair-stage-tabs", "aria-label": "Προβολή αποστολής" });
++      [ ["structure", "Δομή"], ["answer", "Επισκευή"] ].forEach(function (entry) {
++        const control = button(entry[1], "secondary repair-view-button", function () { setViewportStage("edit", entry[0]); });
++        control.dataset.repairViewButton = entry[0]; tabs.append(control);
++      });
++      tabs.append(button("Οδηγίες", "quiet", function () { setViewportStage("instructions"); refs.instructionsHeading.focus({ preventScroll: true }); }));
++      refs.stageTabs = tabs;
++      heading.after(tabs);
++      const partHeading = repair.querySelector(".step-heading"), partDescription = repair.querySelector(".step-description");
++      const partPage = node("div", { class: "repair-part-page" }, [partHeading, refs.parts, refs.orderControls]);
++      const choicePage = node("div", { class: "repair-choice-page" }, [
++        button("← Κομμάτια ονόματος", "quiet", function () { root.dataset.repairStep = "parts"; refreshPagers(); }), refs.choiceFieldset
++      ]);
++      repair.querySelector(".broken-name").after(partPage, choicePage);
++      partDescription.remove(); refs.selectionStatus.remove();
++      const instructions = node("section", { class: "repair-instructions-stage" }, [
++        node("div", { class: "repair-stage-heading" }, [refs.instructionsHeading = node("h2", { tabindex: "-1", text: "Πώς επισκευάζω το όνομα" }), button("Στην επισκευή", "secondary", function () { setViewportStage("edit", "answer"); })]),
++        refs.instructionsContent = node("div", { class: "repair-instructions-content" }, [
++          node("p", { text: round().objective }), screen.querySelector(".compact-steps"), partDescription,
++          node("p", { text: "Διάλεξε κομμάτι και αντικατάσταση ή μετακίνησε έναν κλάδο με τα βέλη. Η μεγέθυνση ανοίγει ολόκληρη τη δομή σε χωριστή προβολή." }), refs.selectionStatus, refs.checkHelper
++        ])
++      ]);
++      const feedbackStage = node("section", { class: "repair-feedback-stage" }, [
++        node("div", { class: "repair-stage-heading" }, [refs.feedbackHeading = node("h2", { tabindex: "-1", text: "Παρατήρησε την εξήγηση" }),
++          refs.feedbackBack = button("Επιστροφή στην προσπάθεια", "secondary", function () { setViewportStage("edit", "answer"); refs.checkButton.focus({ preventScroll: true }); }),
++          refs.feedbackInspect = button("Δες τη δομή", "secondary", function () { setViewportStage("edit", "structure"); })]),
++        refs.feedback, refs.next
++      ]);
++      screen.append(instructions, feedbackStage);
++      repair.querySelector(".repair-actions").append(button("Δες την εξήγηση", "quiet repair-feedback-open", function () { showViewportFeedback(state().solved); }));
++      refs.feedbackOpen = repair.querySelector(".repair-feedback-open"); refs.feedbackOpen.hidden = true;
++      // A solved structure remains inspectable, with a direct route back to its actions.
++      tabs.append(refs.feedbackReturn = button("Στην εξήγηση", "secondary", function () { showViewportFeedback(state().solved); }));
++      refs.feedbackReturn.hidden = true;
++      root.dataset.repairStep = round().kind === "replace" && state().selectedPartId === round().targetPartId ? "choices" : "parts";
++      setViewportStage("edit", "answer");
++      [ [refs.parts, "y", "Κομμάτια ονόματος"], [refs.choices, "y", "Αντικαταστάσεις"],
++        [repair.querySelector(".broken-name"), "x", "Όνομα για επισκευή"], [refs.candidateName, "x", "Η πρότασή σου"],
++        [refs.instructionsContent, "y", "Οδηγίες"], [refs.feedback, "y", "Εξήγηση επισκευής"] ].forEach(function (entry) {
++        pagers.push(global.NameleculeGameViewport.pager(entry[0], { axis: entry[1], label: entry[2], overlap: entry[0] === refs.parts || entry[0] === refs.choices ? 64 : undefined }));
++      });
++      viewport = global.NameleculeGameViewport.mount(root, { kind: "repair", document: standalone, onResize: function (size) {
++        root.classList.toggle("nl-repair-sequential", size.narrow || size.height < 430); refreshPagers();
++      } });
+     }
+ 
+     function loadDiagram(currentRender) {
+@@ -592,11 +675,22 @@
+       });
+       refs.checkHelper.textContent = current.solved ? "Η επισκευή ολοκληρώθηκε. Συνέχισε όταν είσαι έτοιμος ή έτοιμη." : !diagramsReady() ? "Περιμένουμε να εμφανιστούν οι δομές πριν από τον έλεγχο." : data.kind === "order" ? "Επιλέγεις κλάδο, πατάς ένα βέλος και ελέγχεις τη νέα σειρά." : hasCandidate ? "Ο έλεγχος μετρά ως μία προσπάθεια. Μπορείς να δοκιμάσεις ξανά." : "Διάλεξε πρώτα το κομμάτι και έπειτα μια αντικατάσταση.";
+       refs.sessionStats.textContent = "Προσπάθειες σε αυτή την " + (data.guided ? "πρόβα " : "αποστολή ") + current.attempts;
++      if (viewportEnabled) {
++        refs.feedbackOpen.hidden = !current.submitted;
++        refs.feedbackReturn.hidden = !current.submitted;
++        refreshPagers();
++      }
+       if (restoreId) restoreFocus(restoreId);
+-      const successActionsReady = nextButtons.length > 0 && diagramsReady() && current.solved;
+-      if (!destroyed && successActionsReady !== lastSuccessActionsReady && typeof options.onSuccessActionsReady === "function") {
+-        lastSuccessActionsReady = successActionsReady;
+-        options.onSuccessActionsReady(successActionsReady);
++      publishSuccessActionsReady();
++    }
++
++    function publishSuccessActionsReady() {
++      const nextButtons = refs.next ? refs.next.querySelectorAll("button") : [];
++      const stageVisible = !viewportEnabled || viewportStage === "feedback" && Array.from(nextButtons).some(function (control) { return control.getClientRects().length > 0; });
++      const ready = nextButtons.length > 0 && diagramsReady() && state().solved && stageVisible;
++      if (!destroyed && ready !== lastSuccessActionsReady && typeof options.onSuccessActionsReady === "function") {
++        lastSuccessActionsReady = ready;
++        options.onSuccessActionsReady(ready);
+       }
+     }
+ 
+@@ -617,14 +711,19 @@
+       } else {
+         refs.selectionStatus.textContent = "Ο κλάδος επιλέχθηκε. Μετακίνησέ τον με τα κουμπιά Αριστερά και Δεξιά.";
+       }
+-      updateControls(controlId("part-" + id));
++      if (viewportEnabled && round().kind === "replace") root.dataset.repairStep = id === round().targetPartId ? "choices" : "parts";
++      updateControls(viewportEnabled && id === round().targetPartId ? controlId("choice-" + current.choiceOrder[0]) : controlId("part-" + id));
+       emitState();
++      if (viewportEnabled && round().kind === "replace" && id !== round().targetPartId) {
++        replaceChildren(refs.feedback, node("p", { text: round().feedback.wrongPart })); showViewportFeedback(false);
++      }
+       if (round().kind === "order") revealResponse("order-controls", refs.selectionStatus, refs.orderControls);
+       else if (id === round().targetPartId) revealResponse("replacement-options", refs.choiceFieldset);
+       else revealResponse("selection-feedback", refs.selectionStatus);
+     }
+ 
+     function clearFeedback() {
++      if (viewportEnabled) setViewportStage("edit", "answer");
+       refs.feedback.classList.remove("is-success");
+       replaceChildren(refs.feedback);
+     }
+@@ -636,6 +735,7 @@
+         node("span", { class: "success-name", text: round().correctName }),
+         node("p", { class: "success-explanation", text: result.message })
+       );
++      if (viewportEnabled) pagers.push(global.NameleculeGameViewport.pager(refs.feedback.querySelector(".success-name"), { axis: "x", label: "Σωστό όνομα" }));
+       const next = button(options.continueLabel || "Συνεχίζω τη θεωρία", "primary", function () {
+         if (!diagramsReady() || !state().solved) return;
+         if (typeof options.onContinue === "function") options.onContinue(getState());
+@@ -657,6 +757,7 @@
+         }));
+       }
+       updateControls();
++      if (viewportEnabled) showViewportFeedback(true);
+       if (fresh) {
+         next.focus({ preventScroll: true });
+         if (standalone) root.querySelector(".progress").replaceWith(options.progressList());
+@@ -681,6 +782,7 @@
+         replaceChildren(refs.feedback, node("p", { text: result.message }));
+         updateControls(controlId("check-button"));
+         emitState();
++        if (viewportEnabled) showViewportFeedback(false);
+         revealResponse("check-feedback", refs.feedback);
+       }
+     }
+@@ -688,7 +790,7 @@
+     function showDiagramZoom() {
+       if (destroyed || mainImageStatus !== "ready" || zoomPanel) return;
+       if (pageReveal) pageReveal.stop();
+-      const dialog = node(standalone ? "dialog" : "section", { class: "zoom-dialog", "aria-labelledby": controlId("zoom-title") });
++      const dialog = node(standalone && !viewportEnabled ? "dialog" : "section", { class: viewportEnabled ? "zoom-dialog repair-zoom-overlay" : "zoom-dialog", "aria-labelledby": controlId("zoom-title") });
+       zoomPanel = dialog;
+       const close = button("Κλείσιμο", "secondary", closeZoom);
+       const image = node("img", { class: "zoom-image", alt: round().diagramAlt });
+@@ -699,18 +801,34 @@
+         replaceChildren(viewport, node("p", { role: "status", text: "Η εικόνα δεν εμφανίστηκε. Κλείσε τη μεγέθυνση και δοκίμασε ξανά." }));
+       };
+       image.src = assetBase + round().asset;
++      if (viewportEnabled) {
++        let scale = 1;
++        const zoomTools = node("div", { class: "repair-zoom-controls", role: "group", "aria-label": "Μέγεθος σχεδίου" });
++        [-1, 1].forEach(function (direction) { zoomTools.append(button(direction < 0 ? "−" : "+", "secondary", function () {
++          scale = Math.max(1, Math.min(4, scale + direction * .5)); image.style.width = (scale * 100) + "%"; image.style.height = (scale * 100) + "%"; image.style.maxWidth = "none";
++        }, { "aria-label": direction < 0 ? "Σμίκρυνση σχεδίου" : "Μεγέθυνση σχεδίου" })); });
++        refs.zoomTools = zoomTools;
++      }
+       dialog.append(
+         node("div", { class: "zoom-heading" }, [node("h2", { id: controlId("zoom-title"), text: "Η δομή σε αρχικό μέγεθος" }), close]),
+         node("p", { text: "Αν η εικόνα δεν χωρά, μετακινήσου μέσα στο πλαίσιο με αφή ή τα πλήκτρα βέλους." }),
+         viewport
+       );
+-      if (standalone) {
++      if (viewportEnabled) dialog.querySelector(".zoom-heading").insertBefore(refs.zoomTools, close);
++      if (standalone && !viewportEnabled) {
+         listen(dialog, "close", function () { finishZoom(dialog); });
+         document.body.append(dialog);
+         dialog.showModal();
+       } else {
+-        dialog.setAttribute("role", "region");
++        dialog.setAttribute("role", viewportEnabled ? "dialog" : "region");
++        if (viewportEnabled) { dialog.setAttribute("aria-modal", "true"); root.querySelector(".round-screen").inert = true; }
+         listen(dialog, "keydown", function (event) {
++          if (viewportEnabled && event.key === "Tab") {
++            const targets = Array.from(dialog.querySelectorAll("button, [tabindex=\"0\"]"));
++            const first = targets[0], last = targets[targets.length - 1];
++            if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
++            else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
++          }
+           if (event.key !== "Escape") return;
+           event.preventDefault();
+           event.stopPropagation();
+@@ -730,6 +848,7 @@
+       replaceChildren(panel);
+       panel.remove();
+       zoomPanel = null;
++      if (viewportEnabled) root.querySelector(".round-screen").inert = false;
+       refs.zoomButton.setAttribute("aria-expanded", "false");
+       refs.zoomButton.disabled = mainImageStatus !== "ready";
+       refs.zoomButton.focus({ preventScroll: true });
+@@ -738,7 +857,7 @@
+     function closeZoom() {
+       if (!zoomPanel) return;
+       // Native close is queued; restore controls only when that panel finishes.
+-      if (standalone) zoomPanel.close();
++      if (standalone && !viewportEnabled) zoomPanel.close();
+       else finishZoom(zoomPanel);
+     }
+ 
+@@ -760,6 +879,8 @@
+   let roundIndex = 0;
+   let states = [];
+   let activeRound = null;
++  let pageViewport = null;
++  let pagePagers = [];
+   let renderId = 0;
+   const entryParams = new URLSearchParams(window.location.search);
+   const enginePilot = entryParams.get("source") !== "authored";
+@@ -869,7 +990,7 @@
+   async function preparePilot(signal) {
+     if (!global.NameleculeChemistryClient) await loadPilotScript("../js/namelecule-chemistry-client.js?v=verified-engines-20261105-r1");
+     if (!global.NameleculeRepairGenerator) await loadPilotScript("../js/namelecule-repair-generator.js?v=engine-pilot-20261105-r2");
+-    if (!global.NameleculeGeneratedRepairCheckpoint) await loadPilotScript("../js/namelecule-generated-repair-checkpoint.js?v=alkane-levels-20261116-r1");
++    if (!global.NameleculeGeneratedRepairCheckpoint) await loadPilotScript("../js/namelecule-generated-repair-checkpoint.js?v=game-viewport-20261116-r1");
+     const provider = global.NameleculeGeneratedRepairCheckpoint;
+     // v1 source identity belongs to the recorded standalone attempt (8 OR 14).
+     // A normal new entry opens the structural level picker with full14 input.
+@@ -987,13 +1108,24 @@
+   function focusHeading() {
+     const heading = root.querySelector("h1");
+     if (heading) { heading.tabIndex = -1; heading.focus({ preventScroll: true }); }
+-    window.scrollTo({ top: 0, behavior: "instant" });
++    if (!global.NameleculeGameViewport) window.scrollTo({ top: 0, behavior: "instant" });
++  }
++
++  function clearPageViewport() {
++    if (pageViewport) { pageViewport.destroy(); pageViewport = null; }
++    pagePagers.forEach(function (pager) { pager.destroy(); }); pagePagers = [];
+   }
+ 
+   function replaceRoot(content) {
++    clearPageViewport();
+     if (activeRound) { activeRound.destroy(); activeRound = null; }
+     if (levelControls) { levelControls.destroy(); levelControls = null; }
+     root.replaceChildren(content);
++    if (global.NameleculeGameViewport) {
++      content.querySelectorAll(".result-name").forEach(function (name) { pagePagers.push(global.NameleculeGameViewport.pager(name, { axis: "x", label: "Ολοκληρωμένο όνομα" })); });
++      pagePagers.push(global.NameleculeGameViewport.pager(content, { axis: "y", label: "Επιλογή και αποτελέσματα Συνεργείου" }));
++      pageViewport = global.NameleculeGameViewport.mount(root, { kind: "repair-entry", onResize: function () { pagePagers.forEach(function (pager) { pager.refresh(); }); } });
++    }
+     root.setAttribute("aria-busy", "false");
+   }
+ 
+@@ -1150,13 +1282,14 @@
+   function round() { return activeSet.rounds[roundIndex]; }
+   function state() { return states[roundIndex]; }
+   function renderRound() {
++    clearPageViewport();
+     pilotPhase = "round";
+     if (activeRound) activeRound.destroy();
+     if (levelControls) { levelControls.destroy(); levelControls = null; }
+     const index = roundIndex;
+     const presentation = presentationForRound(round(), { difficulty: pilot ? pilot.difficulty : "basic" });
+     activeRound = createRoundView(root, Object.assign({}, presentation, {
+-      initialState: state(), assetBase: "", progressList: progressList, setTitle: activeSet.title,
++      initialState: state(), assetBase: "", progressList: progressList, setTitle: activeSet.title, viewport: !!global.NameleculeGameViewport,
+       requestRestart: requestRestart,
+       continueLabel: index === activeSet.rounds.length - 1 ? "Δες τις επισκευές σου  →" : "Επόμενο κουίζ  →",
+       onStateChange: function (current) { states[index] = current; savePilotProgress(); },
+--- a/js/namelecule-name-builder.js
++++ b/js/namelecule-name-builder.js
+@@ -19,6 +19,9 @@
+   const state = { inventory: [], round: null, bank: [], answer: [], selected: null,
+     representation: '', busy: true, failed: false, solved: false, stopped: false, roundNumber: 0,
+     pending: null, nextId: 0, retry: null, touch: null, suppressClickUntil: 0, attempts: 0, submitted: false };
++  const Viewport = window.NameleculeGameViewport;
++  const viewportEnabled = !!Viewport && (!lesson || new URLSearchParams(location.search).get('viewport') === '1');
++  let viewportUI = null;
+   const scrolling = { frame: null, moving: false };
+   const representationButtons = Array.from(document.querySelectorAll('[data-representation]'));
+   const startupTimer = setTimeout(() => fail('Η προβολή του μορίου άργησε να ξεκινήσει. Μπορείς να δοκιμάσεις ξανά.', () => location.reload()), 45000);
+@@ -37,6 +40,7 @@
+     scheduleSize();
+   }
+   function scheduleSize() {
++    if (viewportEnabled) { viewportUI?.refresh(); return; }
+     if (!lesson || lesson.resizeFrame !== null || state.stopped) return;
+     lesson.resizeFrame = requestAnimationFrame(() => {
+       lesson.resizeFrame = null;
+@@ -65,10 +69,12 @@
+     scrolling.moving = false;
+   }
+   function interruptReveal() {
++    if (viewportEnabled) return;
+     stopLocalReveal();
+     if (lesson?.current?.ready) postLesson('scroll-interrupt', {});
+   }
+   function revealRange(purpose, region) {
++    if (viewportEnabled) { viewportUI?.refresh(); return; }
+     stopLocalReveal();
+     scheduleSize();
+     const current = lesson?.current;
+@@ -147,6 +153,10 @@
+   function receiveLesson(event) {
+     if (!lesson || state.stopped || event.origin !== location.origin || event.source !== parent) return;
+     const data = event.data;
++    if (data?.command === 'viewport') {
++      if (viewportEnabled && validViewportMessage(data)) viewportUI?.refresh();
++      return;
++    }
+     if (!data || data.channel !== lessonChannel || data.session !== lessonSession || data.command !== 'load' ||
+         !Number.isSafeInteger(data.requestId) || data.requestId <= lesson.lastId) return;
+     lesson.lastId = data.requestId;
+@@ -160,6 +170,62 @@
+         postLesson('error', { message: error.message }, { ...data, context });
+       }
+     }
++  }
++  function validViewportMessage(data) {
++    const current = lesson?.current;
++    if (!current || data.channel !== lessonChannel || data.session !== lessonSession ||
++        data.requestId !== current.requestId || data.attemptId !== current.attemptId || data.moleculeId !== current.moleculeId ||
++        !Number.isFinite(data.height) || data.height <= 0 || !Number.isFinite(data.width) || data.width <= 0) return false;
++    try {
++      const context = validateLessonContext(data);
++      return current.context ? !!context && Levels.contextKey(context) === Levels.contextKey(current.context) : context === null;
++    } catch (_) { return false; }
++  }
++  function createViewportUI() {
++    const root = $('game'), pagers = [], buttons = new Map();
++    let mounted = null, feedbackName = null;
++    const nav = document.createElement('nav'); nav.className = 'builder-view-nav'; nav.setAttribute('aria-label', 'Προβολές άσκησης');
++    const stages = [['editing', 'Σύνθεση'], ['bank', 'Συνθετικά'], ['molecule', 'Μόριο'], ['name', 'Όνομα'], ['help', 'Οδηγίες'], ['feedback', 'Σχόλιο']];
++    stages.forEach(([key, label]) => {
++      const button = document.createElement('button'); button.type = 'button'; button.textContent = label;
++      button.dataset.view = key; button.addEventListener('click', () => stage(key)); nav.append(button); buttons.set(key, button);
++    });
++    root.querySelector('.workspace').before(nav);
++    function section(className) { const el = document.createElement('section'); el.className = className; root.append(el); return el; }
++    const help = section('builder-help-stage'), name = section('builder-name-stage'), feedback = section('builder-feedback-stage');
++    help.setAttribute('aria-label', 'Οδηγίες χειρισμού'); help.append($('answer-help')); $('answer-help').open = true;
++    name.setAttribute('aria-label', 'Επιθεώρηση ονόματος'); name.append($('candidate'));
++    feedback.setAttribute('aria-label', 'Ανατροφοδότηση'); feedback.append($('feedback'));
++    const actions = document.createElement('div'); actions.className = 'builder-feedback-actions';
++    const back = document.createElement('button'); back.type = 'button'; back.className = 'secondary'; back.textContent = 'Επιστροφή στη σύνθεση';
++    back.addEventListener('click', () => stage('editing')); actions.append(back); feedback.append(actions);
++    const nextHome = $('next-molecule').parentNode;
++    pagers.push(Viewport.pager($('answer-zone'), { axis: 'x', label: 'Συνθετικά του ονόματος' }));
++    pagers.push(Viewport.pager($('bank-zone'), { axis: 'y', label: 'Διαθέσιμα συνθετικά' }));
++    pagers.push(Viewport.pager($('candidate-name'), { axis: 'x', label: 'Πλήρες όνομα' }));
++    pagers.push(Viewport.pager($('answer-help').querySelector('.helper-methods'), { axis: 'y', label: 'Οδηγίες' }));
++    pagers.push(Viewport.pager($('feedback'), { axis: 'y', label: 'Ανατροφοδότηση' }));
++    function refresh() { pagers.forEach(pager => pager.refresh()); feedbackName?.refresh(); mounted?.refresh(); }
++    function stage(key) {
++      if (key === 'feedback' && $('feedback').hidden) key = 'editing';
++      root.dataset.builderView = key;
++      buttons.forEach((button, view) => { button.setAttribute('aria-pressed', String(view === key)); button.hidden = view === 'feedback' && $('feedback').hidden; });
++      if (key === 'feedback') actions.append($('next-molecule')); else nextHome.append($('next-molecule'));
++      refresh();
++    }
++    root.addEventListener('nl-level-stage', event => { root.classList.toggle('builder-choosing', !!event.detail.expanded); refresh(); });
++    mounted = Viewport.mount(root, { kind: 'builder', onResize({ width, height }) {
++      root.classList.toggle('builder-compact', width < 850 || height < 440);
++      pagers.forEach(pager => pager.refresh());
++    } });
++    root.querySelector('.keyboard-note').textContent = 'Enter: προσθήκη · ← →: μετακίνηση · Delete: αφαίρεση. Για μεγάλα ονόματα χρησιμοποίησε τα κουμπιά σελίδας.';
++    stage('editing');
++    return { stage, refresh, clearFeedbackName() { feedbackName?.destroy(); feedbackName = null; },
++      feedback(correct) {
++        const fullName = $('feedback').querySelector('.single-line-name');
++        if (fullName) feedbackName = Viewport.pager(fullName, { axis: 'x', label: 'Σωστό όνομα' });
++        back.textContent = correct ? 'Επιθεώρηση σύνθεσης' : 'Επιστροφή στη σύνθεση'; stage('feedback');
++      }, destroy() { feedbackName?.destroy(); pagers.forEach(pager => pager.destroy()); mounted?.destroy(); } };
+   }
+   function announce(text) { $('move-announcement').textContent = text; }
+   function setStatus(text, error) { $('game-status').textContent = text; $('game-status').classList.toggle('error', !!error); }
+@@ -272,7 +338,7 @@
+     if ([1, 2, 3].some(level => Levels.poolFor(level, ids).length !== [5, 4, 5][level - 1])) {
+       throw new Error('Η βιβλιοθήκη των 14 αλκανίων δεν είναι πλήρης.');
+     }
+-    practice.controls = Levels.mount($('game-levels'), { availableIds: ids, allowedLevels: [1, 2, 3], selectedLevel: null,
++    practice.controls = Levels.mount($('game-levels'), { compact: viewportEnabled, availableIds: ids, allowedLevels: [1, 2, 3], selectedLevel: null,
+       category: 'alkanes', otherCount: ids.filter(id => Levels.levelFor(id) === null).length, onSelect: selectPractice });
+     state.busy = false; mask('Διάλεξε επίπεδο για να ανατεθεί ένα μόριο.');
+     setStatus('Διάλεξε επίπεδο για αυτόματη ανάθεση μορίου.'); updateControls();
+@@ -284,7 +350,7 @@
+     state.attempts = 0; state.submitted = false;
+     if (controlled) controlled.ready = false;
+     state.answer = []; state.selected = null; state.round = null; state.bank = [];
+-    $('feedback').hidden = true; $('candidate').hidden = true;
++    $('feedback').hidden = true; $('candidate').hidden = true; viewportUI?.stage('editing');
+     $('bank-tiles').replaceChildren(); $('answer-tiles').replaceChildren(); $('empty-answer').hidden = false;
+     $('answer-zone').scrollLeft = 0; $('candidate-name').scrollLeft = 0;
+     mask('Ετοιμάζουμε τη δομή και τα συνθετικά.'); setStatus('Ετοιμάζουμε το επόμενο μόριο.'); updateControls();
+@@ -375,6 +441,12 @@
+     const container = $(inAnswer ? 'answer-tiles' : 'bank-tiles');
+     const button = Array.from(container.querySelectorAll('button')).find(item => item.dataset.tileId === id);
+     if (!button) return;
++    if (viewportEnabled && !inAnswer) {
++      const bounds = $('bank-zone').getBoundingClientRect(), tile = button.getBoundingClientRect();
++      if (!bounds.width || !bounds.height) { $('answer-zone').focus({ preventScroll: true }); return; }
++      if (tile.top < bounds.top) $('bank-zone').scrollTop += tile.top - bounds.top;
++      else if (tile.bottom > bounds.bottom) $('bank-zone').scrollTop += tile.bottom - bounds.bottom;
++    }
+     button.focus({ preventScroll: true });
+     if (inAnswer) {
+       const viewport = $('answer-zone'), bounds = viewport.getBoundingClientRect(), tile = button.getBoundingClientRect();
+@@ -471,8 +543,10 @@
+     if (target?.closest('#answer-zone')) $('answer-zone').classList.add('drag-over');
+     if (target?.closest('#bank-zone')) $('bank-zone').classList.add('drag-over');
+     if (touch.scrollFrame === null) touch.scrollFrame = requestAnimationFrame(scrollDraggedAnswer);
+-    if (event.clientY < 45) window.scrollBy(0, -14);
+-    else if (event.clientY > innerHeight - 45) window.scrollBy(0, 14);
++    if (!viewportEnabled) {
++      if (event.clientY < 45) window.scrollBy(0, -14);
++      else if (event.clientY > innerHeight - 45) window.scrollBy(0, 14);
++    }
+   }
+   function scrollDraggedAnswer() {
+     const touch = state.touch; if (!touch || !touch.active) return;
+@@ -535,6 +609,7 @@
+     clearDropStyles();
+   }
+   function showFeedback(result) {
++    viewportUI?.clearFeedbackName();
+     $('feedback').replaceChildren(); $('feedback').hidden = false;
+     $('feedback').classList.toggle('success', result.correct);
+     if (result.correct) {
+@@ -549,6 +624,7 @@
+         explanation.textContent = lesson.current.explanation; $('feedback').append(explanation);
+       }
+     } else $('feedback').textContent = result.message;
++    viewportUI?.feedback(result.correct);
+   }
+   $('check-answer').addEventListener('click', () => {
+     if (!editable() || !state.answer.length || state.attempts >= Number.MAX_SAFE_INTEGER) return;
+@@ -567,7 +643,7 @@
+   const compactGuidance = matchMedia('(max-width:600px)');
+   function updateGuidanceLayout() {
+     if (state.stopped) return;
+-    guidance.open = !compactGuidance.matches;
++    guidance.open = viewportEnabled || !compactGuidance.matches;
+     scheduleSize();
+   }
+   guidance.addEventListener('toggle', () => {
+@@ -602,7 +678,7 @@
+     } catch (_) { /* viewer load failed */ }
+   });
+   window.addEventListener('pagehide', () => {
+-    clearTimeout(startupTimer); stopLocalReveal(); cancelTouch(); practice.controls?.destroy();
++    clearTimeout(startupTimer); stopLocalReveal(); cancelTouch(); viewportUI?.destroy(); practice.controls?.destroy();
+     compactGuidance.removeEventListener('change', updateGuidanceLayout);
+     if (lesson) {
+       if (lesson.resizeFrame !== null) cancelAnimationFrame(lesson.resizeFrame);
+@@ -616,9 +692,12 @@
+     document.documentElement.classList.add('lesson-mode');
+     $('game-levels').hidden = true;
+     $('next-molecule').hidden = true;
+-    lesson.observer = new ResizeObserver(scheduleSize); lesson.observer.observe(document.body);
+-    window.addEventListener('resize', scheduleSize);
++    if (!viewportEnabled) {
++      lesson.observer = new ResizeObserver(scheduleSize); lesson.observer.observe(document.body);
++      window.addEventListener('resize', scheduleSize);
++    }
+     postLesson('ready', {});
+   }
++  if (viewportEnabled) viewportUI = createViewportUI();
+   frame.src = 'name-builder-viewer.html?v=alkane-pool-20261116-r1&session=' + encodeURIComponent(nonce);
+ })();
+--- a/js/namelecule-molecular-puzzle.js
++++ b/js/namelecule-molecular-puzzle.js
+@@ -11,6 +11,9 @@
+   const CHANNEL = 'namelecule-puzzle-lesson-v1';
+   const lesson = parent !== window && /^[A-Za-z0-9_-]{16,128}$/.test(lessonSession || '')
+     ? { current: null, lastRequest: 0, lastSnapshot: null, lastHeight: null, sizeFrame: null } : null;
++  const Viewport = window.NameleculeGameViewport;
++  const viewportEnabled = !!Viewport && (!lesson || new URL(location.href).searchParams.get('viewport') === '1');
++  let viewportUI = null;
+   const LEGACY_IDS = Object.freeze(['methane', 'ethane', 'propane', 'butane', 'pentane',
+     'methyl_2_pentane', 'dimethyl_2_3_butane', 'ethyl_3_dimethyl_2_5_hexane']);
+   const ENGINE_SHA = '3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306';
+@@ -60,6 +63,56 @@
+     if (signature !== lesson.lastSnapshot) { lesson.lastSnapshot = signature; postLesson('state', { state: value }); }
+   }
+ 
++  function validViewportMessage(data) {
++    const controlled = lesson?.current;
++    if (!controlled || data.channel !== CHANNEL || data.session !== lessonSession ||
++        data.requestId !== controlled.requestId || data.attemptId !== controlled.attemptId || data.moleculeId !== controlled.moleculeId ||
++        !Number.isFinite(data.height) || data.height <= 0 || !Number.isFinite(data.width) || data.width <= 0) return false;
++    try {
++      const context = validateLessonContext(data);
++      return controlled.context ? !!context && Levels.contextKey(context) === Levels.contextKey(controlled.context) : context === null;
++    } catch (_) { return false; }
++  }
++  function createViewportUI() {
++    const root = $('game'), panel = root.querySelector('.puzzle-assembly-panel');
++    const content = root.querySelector('.puzzle-assembly-content'), buttons = new Map(), pagers = [];
++    let mounted = null;
++    const nav = document.createElement('nav'); nav.className = 'puzzle-view-nav'; nav.setAttribute('aria-label', 'Προβολές άσκησης');
++    [['editing', 'Σχέδιο'], ['pieces', 'Κομμάτια'], ['tools', 'Εργαλεία'], ['name', 'Όνομα'], ['help', 'Οδηγίες'], ['feedback', 'Σχόλιο']].forEach(([key, label]) => {
++      const button = document.createElement('button'); button.type = 'button'; button.textContent = label;
++      button.dataset.view = key; button.addEventListener('click', () => stage(key)); buttons.set(key, button); nav.append(button);
++    });
++    panel.before(nav);
++    const port = document.createElement('div'); port.className = 'puzzle-board-port'; board.before(port); port.append(board);
++    const side = document.createElement('div'); side.className = 'puzzle-side'; content.append(side);
++    ['.puzzle-bank', '.puzzle-tools', '.puzzle-selection-controls', '.puzzle-interaction-status', '.check-row'].forEach(selector => side.append(content.querySelector(selector)));
++    const help = document.createElement('section'); help.className = 'puzzle-help-stage'; help.setAttribute('aria-label', 'Οδηγίες χειρισμού'); help.append($('instructions')); root.append(help);
++    const feedback = document.createElement('section'); feedback.className = 'puzzle-feedback-stage'; feedback.setAttribute('aria-label', 'Ανατροφοδότηση'); feedback.append($('feedback')); root.append(feedback);
++    const actions = document.createElement('div'); actions.className = 'puzzle-feedback-actions'; feedback.append(actions);
++    const back = document.createElement('button'); back.className = 'secondary'; back.type = 'button'; back.textContent = 'Επιστροφή στο σχέδιο';
++    back.addEventListener('click', () => stage('editing')); actions.append(back);
++    const nextHome = $('next-molecule').parentNode;
++    pagers.push(Viewport.pager(port, { axis: 'y', overlap: 64, label: 'Πλαίσιο σύνθεσης — όλα τα κομμάτια' }));
++    pagers.push(Viewport.pager($('target-name'), { axis: 'x', label: 'Πλήρες όνομα' }));
++    pagers.push(Viewport.pager($('instructions').querySelector('.helper-methods'), { axis: 'y', label: 'Οδηγίες' }));
++    pagers.push(Viewport.pager($('feedback'), { axis: 'y', label: 'Ανατροφοδότηση' }));
++    function refresh() { pagers.forEach(pager => pager.refresh()); mounted?.refresh(); }
++    function stage(key) {
++      if (key === 'feedback' && $('feedback').hidden) key = 'editing';
++      root.dataset.puzzleView = key;
++      buttons.forEach((button, view) => { button.setAttribute('aria-pressed', String(view === key)); button.hidden = view === 'feedback' && $('feedback').hidden; });
++      if (key === 'feedback') actions.append($('next-molecule')); else nextHome.append($('next-molecule'));
++      refresh();
++    }
++    root.addEventListener('nl-level-stage', event => { root.classList.toggle('puzzle-choosing', !!event.detail.expanded); refresh(); });
++    mounted = Viewport.mount(root, { kind: 'puzzle', onResize({ width, height }) {
++      root.classList.toggle('puzzle-compact', width < 900 || height < 570);
++      pagers.forEach(pager => pager.refresh());
++    } });
++    stage('editing');
++    return { refresh, stage, feedback(correct) { back.textContent = correct ? 'Επιθεώρηση σχεδίου' : 'Επιστροφή στο σχέδιο'; stage('feedback'); },
++      destroy() { pagers.forEach(pager => pager.destroy()); mounted?.destroy(); } };
++  }
+   function announce(text) { $('interaction-status').textContent = text; }
+   function clearFeedback() {
+     $('feedback').hidden = true;
+@@ -213,6 +266,7 @@
+     publish();
+   }
+   function postSize() {
++    if (viewportEnabled) { viewportUI?.refresh(); return; }
+     if (lesson) {
+       if (lesson.sizeFrame !== null || stopped) return;
+       lesson.sizeFrame = requestAnimationFrame(() => {
+@@ -225,6 +279,7 @@
+   }
+   function cancelReveal() { clearTimeout(revealTimer); }
+   function reveal(el) {
++    if (viewportEnabled) { viewportUI?.refresh(); return; }
+     cancelReveal();
+     revealTimer = setTimeout(() => {
+       const r = el.getBoundingClientRect();
+@@ -239,6 +294,7 @@
+     }, 180);
+   }
+   ['wheel', 'touchstart', 'pointerdown', 'keydown'].forEach(type => addEventListener(type, () => {
++    if (viewportEnabled) return;
+     cancelReveal(); if (lesson && lesson.current && lesson.current.loaded) postLesson('scroll-interrupt', {});
+   }, { passive: true }));
+ 
+@@ -358,7 +414,7 @@
+       solved = true; bonding = false; bondStart = null;
+       $('game-status').textContent = 'Σωστά! Η δομή σου αντιστοιχεί στο όνομα ' + current.name + '.';
+     }
+-    render(); reveal($('feedback'));
++    render(); viewportUI?.feedback(result.correct); reveal($('feedback'));
+   });
+ 
+   // Pointer capture stays on a stable container: rendering node buttons never loses a drag.
+@@ -431,7 +487,7 @@
+     $('target-name').textContent = current.name;
+ 
+     $('game-status').textContent = 'Διάβασε το όνομα και φτιάξε τον συνεπτυγμένο τύπο του μορίου.';
+-    clearFeedback(); announce('Νέο μόριο. Το πλαίσιο είναι κενό.'); render();
++    clearFeedback(); viewportUI?.stage('editing'); announce('Νέο μόριο. Το πλαίσιο είναι κενό.'); render();
+     reveal($('piece-bank'));
+   }
+   function freshSeed() { return Array.from(crypto.getRandomValues(new Uint32Array(4)), n => n.toString(16).padStart(8, '0')).join(''); }
+@@ -464,13 +520,13 @@
+       const result = E.grade(graph, current.target); solved = result.correct;
+       $('feedback').hidden = false; $('feedback').textContent = result.message; $('feedback').classList.toggle('success', solved);
+     }
+-    render(); announce('Η προηγούμενη προσπάθειά σου σε αυτό το επίπεδο διατηρήθηκε.');
++    render(); if (submitted) viewportUI?.feedback(solved); announce('Η προηγούμενη προσπάθειά σου σε αυτό το επίπεδο διατηρήθηκε.');
+   }
+   function preparePractice() {
+     if (!Levels) throw new Error('Δεν φορτώθηκαν τα επίπεδα του παιχνιδιού. Ανανέωσε τη σελίδα.');
+     const ids = catalog.map(m => m.id);
+     if ([1, 2, 3].some(level => Levels.poolFor(level, ids).length !== [5, 4, 5][level - 1])) throw new Error('Η βιβλιοθήκη των 14 αλκανίων δεν είναι πλήρης.');
+-    if (!practice.controls) practice.controls = Levels.mount($('game-levels'), { availableIds: ids,
++    if (!practice.controls) practice.controls = Levels.mount($('game-levels'), { compact: viewportEnabled, availableIds: ids,
+       allowedLevels: [1, 2, 3], selectedLevel: null, category: 'alkanes', onSelect: selectPractice });
+     busy = true; current = null;
+     $('target-name').textContent = 'Διάλεξε επίπεδο για να εμφανιστεί το όνομα.';
+@@ -504,6 +560,10 @@
+   addEventListener('message', async event => {
+     if (!lesson || stopped || event.origin !== location.origin || event.source !== parent) return;
+     const d = event.data;
++    if (d?.command === 'viewport') {
++      if (viewportEnabled && validViewportMessage(d)) viewportUI?.refresh();
++      return;
++    }
+     if (!d || d.channel !== CHANNEL || d.session !== lessonSession || d.command !== 'load' ||
+         !Number.isSafeInteger(d.requestId) || d.requestId <= lesson.lastRequest ||
+         typeof d.attemptId !== 'string' || !d.attemptId || d.attemptId.length > 160) return;
+@@ -539,7 +599,7 @@
+       $('feedback').hidden = false; $('feedback').textContent = result.message; $('feedback').classList.toggle('success', solved);
+       if (solved && controlled.explanation) { const p = document.createElement('p'); p.textContent = controlled.explanation; $('feedback').append(p); }
+     }
+-    render();
++    render(); if (submitted) viewportUI?.feedback(solved);
+     lesson.lastSnapshot = JSON.stringify(snapshot()); controlled.loaded = true; lesson.lastHeight = null;
+     postLesson('loaded', { state: snapshot() }); postSize(); reveal($('piece-bank'));
+   });
+@@ -547,7 +607,7 @@
+   $('retry-load').addEventListener('click', () => load(lesson
+     ? (lesson.current?.context?.source === 'enriched' ? CURRENT_CATALOG : LEGACY_CATALOG) : catalogDescriptor));
+   const media = matchMedia('(max-width:600px)');
+-  function instructionsMode() { $('instructions').open = !media.matches; }
++  function instructionsMode() { $('instructions').open = viewportEnabled || !media.matches; }
+   media.addEventListener('change', instructionsMode); instructionsMode();
+   async function digest(value) {
+     const bytes = await crypto.subtle.digest('SHA-256', typeof value === 'string' ? new TextEncoder().encode(value) : value);
+@@ -603,15 +663,18 @@
+     } finally { clearTimeout(timer); if (request === loadingSerial) { controls(); postSize(); } }
+   }
+   let resizePending = 0;
+-  new ResizeObserver(() => {
++  const boardObserver = new ResizeObserver(() => {
+     cancelAnimationFrame(resizePending);
+     resizePending = requestAnimationFrame(() => {
+       if (drag) finishDrag(null, true);
+       // render() frames the entire candidate, including solved/undo states.
+       render();
+     });
+-  }).observe(board);
+-  new ResizeObserver(postSize).observe(document.body);
+-  addEventListener('pagehide', () => { if (loadController) loadController.abort(); finishDrag(null, true); cancelReveal(); stopped = true; practice.controls?.destroy(); if (lesson && lesson.sizeFrame !== null) cancelAnimationFrame(lesson.sizeFrame); });
++  });
++  boardObserver.observe(board);
++  const bodyObserver = viewportEnabled ? null : new ResizeObserver(postSize);
++  bodyObserver?.observe(document.body);
++  addEventListener('pagehide', () => { if (loadController) loadController.abort(); finishDrag(null, true); cancelReveal(); stopped = true; viewportUI?.destroy(); boardObserver.disconnect(); bodyObserver?.disconnect(); media.removeEventListener('change', instructionsMode); cancelAnimationFrame(resizePending); practice.controls?.destroy(); if (lesson && lesson.sizeFrame !== null) cancelAnimationFrame(lesson.sizeFrame); });
++  if (viewportEnabled) viewportUI = createViewportUI();
+   load();
+ }());
+--- a/js/namelecule-molecular-detective.js
++++ b/js/namelecule-molecular-detective.js
+@@ -11,6 +11,13 @@
+   const lessonSession = params.get('lessonSession');
+   const lesson = parent !== window && /^[A-Za-z0-9_-]{16,128}$/.test(lessonSession || '')
+     ? {current: null, lastId: 0, nativeReady: false, lastHeight: null, lastSnapshot: null, resizeFrame: null, observer: null} : null;
++  const viewportEnabled = !!window.NameleculeGameViewport && (!lesson || params.get('viewport') === '1');
++  let viewport = null;
++  let feedbackPager = null;
++  let cluePager = null;
++  let namePager = null;
++  let feedbackView = false;
++  let viewportResizeFrame = null;
+   const lessonMolecules = ['methane', 'ethane', 'propane', 'butane', 'pentane', 'methyl_2_pentane', 'dimethyl_2_3_butane', 'ethyl_3_dimethyl_2_5_hexane'];
+   if (params.get('embedded') === '1' || lesson) document.body.classList.add('detective-embedded');
+   document.body.classList.toggle('detective-controlled', !!lesson);
+@@ -76,7 +83,7 @@
+     parent.postMessage({channel: lessonChannel, session: lessonSession, ...identity, type, ...data}, location.origin);
+   }
+   function scheduleSize() {
+-    if (!lesson || lesson.resizeFrame !== null || state.stopped) return;
++    if (viewportEnabled || !lesson || lesson.resizeFrame !== null || state.stopped) return;
+     lesson.resizeFrame = requestAnimationFrame(() => {
+       lesson.resizeFrame = null;
+       if (!lesson.current?.ready || state.stopped) return;
+@@ -108,6 +115,7 @@
+   function interruptReveal() { stopLocalReveal(); if (lesson?.current?.ready) postLesson('scroll-interrupt'); }
+   function revealRange(purpose) {
+     stopLocalReveal(); scheduleSize();
++    if (viewportEnabled) return;
+     const current = lesson?.current, roundId = state.roundId;
+     scrolling.frame = requestAnimationFrame(() => {
+       scrolling.frame = requestAnimationFrame(() => {
+@@ -161,8 +169,22 @@
+   function receiveLesson(event) {
+     if (!lesson || state.stopped || event.source !== parent || event.origin !== location.origin) return;
+     const data = event.data;
+-    if (!data || data.channel !== lessonChannel || data.session !== lessonSession || data.command !== 'load' ||
+-        !Number.isSafeInteger(data.requestId) || data.requestId <= lesson.lastId) return;
++    if (!data || data.channel !== lessonChannel || data.session !== lessonSession) return;
++    if (viewportEnabled && data.command === 'viewport') {
++      const current = lesson.current;
++      if (!current || data.requestId !== current.requestId || data.attemptId !== current.attemptId ||
++          data.moleculeId !== current.moleculeId || data.missionId !== current.missionId ||
++          !Number.isFinite(data.height) || data.height < 80 || data.height > 8000 ||
++          !Number.isFinite(data.width) || data.width < 80 || data.width > 16000) return;
++      if (current.context) {
++        try { if (!data.context || levels.contextKey(levels.validateContext(data.context)) !== levels.contextKey(current.context)) return; }
++        catch (_) { return; }
++      } else if (Object.prototype.hasOwnProperty.call(data, 'context')) return;
++      // The iframe's actual viewport is the sole size authority; the parent owns it.
++      viewport?.refresh(); refreshViewport();
++      return;
++    }
++    if (data.command !== 'load' || !Number.isSafeInteger(data.requestId) || data.requestId <= lesson.lastId) return;
+     lesson.lastId = data.requestId;
+     try {
+       const current = validateLessonLoad(data);
+@@ -185,6 +207,7 @@
+     for (const id of ['check-answer', 'zoom-in', 'zoom-out']) ui[id].disabled = !ready;
+     ui['clear-selection'].disabled = !ready || !(state.atoms.length || state.bonds.length);
+     ui['next-mission'].hidden = !!lesson || !ready || !state.correct;
++    if (viewportEnabled && $('detective-feedback-open')) $('detective-feedback-open').hidden = ui.feedback.hidden;
+   }
+   function watch(message, milliseconds = 30000) {
+     clearTimeout(deadline);
+@@ -201,6 +224,7 @@
+     ui.feedback.hidden = true;
+     ui.feedback.replaceChildren();
+     ui.feedback.classList.remove('success');
++    if (viewportEnabled) setFeedbackView(false);
+     updateControls();
+     scheduleSize();
+   }
+@@ -231,6 +255,11 @@
+     ui['mission-name'].setAttribute('aria-label', 'Όνομα ένωσης: ' + state.snapshot.correctName + '. Επισημασμένο συνθετικό: ' + (clue?.text || ''));
+     ui['mission-prompt'].textContent = state.mission.prompt;
+     ui['selection-kind'].textContent = state.mission.kind === 'atoms' ? 'Επιλογή ατόμων' : 'Επιλογή δεσμών';
++    if (viewportEnabled && $('detective-show-clue')) {
++      $('detective-show-clue').textContent = 'Στοιχείο: ' + (clue?.text || 'Όνομα');
++      $('game').dataset.detectiveView = 'structure';
++    }
++    refreshViewport();
+   }
+   function configure(index, initialState = null) {
+     if (lesson && !initialState) return;
+@@ -371,6 +400,7 @@
+     const end = document.createElement('span'); end.id = 'detective-feedback-end'; end.className = 'detective-feedback-end'; end.setAttribute('aria-hidden', 'true'); ui.feedback.append(end);
+     ui.feedback.classList.toggle('success', result.correct);
+     ui.feedback.hidden = false;
++    if (viewportEnabled) setFeedbackView(true);
+     updateControls(); scheduleSize();
+   }
+   function check() {
+@@ -381,7 +411,8 @@
+   function next() {
+     if (lesson || !state.correct || state.phase !== 'active') return;
+     draw();
+-    $('mission-title').focus({preventScroll: true});
++    const focusTarget = viewportEnabled && $('game').classList.contains('nl-vp-narrow') ? $('detective-show-clue') : $('mission-title');
++    focusTarget.focus({preventScroll: true});
+   }
+   function start() {
+     if (!engine?.starterIds?.length || (!lesson && !levels)) { fail('Το παιχνίδι δεν μπόρεσε να ξεκινήσει. Δοκίμασε ξανά.'); return; }
+@@ -403,6 +434,8 @@
+     send('stop'); state.stopped = true;
+     clearTimeout(deadline); cancelAnimationFrame(resizeFrame); resizeFrame = null;
+     stopLocalReveal();
++    if (viewportResizeFrame !== null) cancelAnimationFrame(viewportResizeFrame);
++    viewportResizeFrame = null; viewport?.destroy(); viewport = null;
+     if (lesson) {
+       if (lesson.resizeFrame !== null) cancelAnimationFrame(lesson.resizeFrame);
+       lesson.resizeFrame = null; lesson.observer?.disconnect(); lesson.nativeReady = false;
+@@ -426,6 +459,7 @@
+       window.addEventListener('message', receiveLesson);
+       window.addEventListener('pagehide', stop, {once: true});
+       lesson?.observer?.observe(document.body);
++      if (viewportEnabled) mountViewport();
+       start();
+     }
+   });
+@@ -434,7 +468,10 @@
+     if (resizeFrame || state.phase !== 'active') return;
+     resizeFrame = requestAnimationFrame(() => { resizeFrame = null; if (!state.stopped && state.phase === 'active') send('resize', {missionId: state.bridgeMissionId}); });
+   });
+-  function lessonExitKey(event) { if (lesson && event.key === 'Escape') { event.preventDefault(); postLesson('exit'); } }
++  function lessonExitKey(event) {
++    if (viewportEnabled && event.key === 'Escape' && feedbackView) { event.preventDefault(); event.stopPropagation(); setFeedbackView(false); ui['check-answer'].focus({preventScroll: true}); return; }
++    if (lesson && event.key === 'Escape') { event.preventDefault(); postLesson('exit'); }
++  }
+   window.addEventListener('keydown', lessonExitKey);
+   ['wheel', 'touchstart', 'pointerdown', 'keydown'].forEach(type => window.addEventListener(type, interruptReveal, {capture: true, passive: true}));
+   ui['molecule-viewer'].addEventListener('load', () => {
+@@ -446,13 +483,67 @@
+   });
+   if (!lesson && levels) {
+     levelControls = levels.mount(ui['game-levels'], {availableIds: alkaneIds, allowedLevels: [1, 2, 3], selectedLevel: null,
+-      category: 'alkanes', otherCount: otherIds.length, onSelect: selectAssignment});
++      category: 'alkanes', otherCount: otherIds.length, compact: viewportEnabled, onSelect: selectAssignment});
+   }
+   if (lesson) {
+     if (ui['game-levels']) ui['game-levels'].hidden = true;
+     document.documentElement.classList.add('lesson-mode');
+-    lesson.observer = new ResizeObserver(scheduleSize); lesson.observer.observe(document.body);
+-  }
++    if (!viewportEnabled) { lesson.observer = new ResizeObserver(scheduleSize); lesson.observer.observe(document.body); }
++  }
++  function refreshViewport() {
++    if (!viewportEnabled || state.stopped) return;
++    feedbackPager?.refresh(); cluePager?.refresh(); namePager?.refresh();
++    if (viewportResizeFrame !== null) return;
++    viewportResizeFrame = requestAnimationFrame(() => {
++      viewportResizeFrame = null;
++      if (!state.stopped && state.phase === 'active' && !feedbackView) send('resize', {missionId: state.bridgeMissionId});
++    });
++  }
++  function setFeedbackView(enabled) {
++    if (!viewportEnabled) return;
++    feedbackView = enabled;
++    $('game').classList.toggle('detective-feedback-view', enabled);
++    if ($('detective-feedback-stage')) $('detective-feedback-stage').hidden = !enabled;
++    if (enabled) {
++      $('detective-feedback-title').textContent = state.correct ? 'Η υπόθεση λύθηκε' : 'Παρατήρησε την εξήγηση';
++      $('detective-feedback-back').textContent = state.correct ? 'Δες την επιλογή σου' : 'Επιστροφή στην προσπάθεια';
++      $('detective-feedback-title').focus({preventScroll: true});
++    }
++    feedbackPager?.refresh(); viewport?.refresh(); refreshViewport();
++  }
++  function mountViewport() {
++    if (viewport || !viewportEnabled) return;
++    viewport = window.NameleculeGameViewport.mount($('game'), {kind: 'detective', onResize: refreshViewport});
++  }
++  function configureViewport() {
++    const game = $('game'); game.classList.add('detective-viewport');
++    const makeButton = (text, id, handler) => {
++      const result = document.createElement('button'); result.type = 'button'; result.className = 'secondary'; result.textContent = text; result.id = id; result.addEventListener('click', handler); return result;
++    };
++    const stage = document.createElement('section'); stage.id = 'detective-feedback-stage'; stage.className = 'detective-feedback-stage'; stage.hidden = true;
++    const heading = document.createElement('div'); heading.className = 'detective-feedback-heading';
++    const title = document.createElement('h2'); title.id = 'detective-feedback-title'; title.tabIndex = -1;
++    const back = makeButton('Επιστροφή στην προσπάθεια', 'detective-feedback-back', () => { setFeedbackView(false); ui['check-answer'].focus({preventScroll: true}); });
++    heading.append(title, back);
++    stage.append(heading, ui.feedback, ui['next-mission']); game.append(stage);
++    const views = document.createElement('div'); views.className = 'detective-stage-tabs';
++    const showView = view => { game.dataset.detectiveView = view; for (const button of views.querySelectorAll('button')) button.setAttribute('aria-pressed', String(button.dataset.detectiveViewButton === view)); refreshViewport(); };
++    const clueButton = makeButton('Στοιχείο στο όνομα', 'detective-show-clue', () => showView('clue')); clueButton.dataset.detectiveViewButton = 'clue';
++    const moleculeButton = makeButton('Μόριο & επιλογή', 'detective-show-structure', () => showView('structure')); moleculeButton.dataset.detectiveViewButton = 'structure';
++    views.append(clueButton, moleculeButton); document.querySelector('.detective-workspace').before(views);
++    showView('structure');
++    ui['check-answer'].parentNode.append(makeButton('Εξήγηση', 'detective-feedback-open', () => setFeedbackView(true)));
++    $('detective-feedback-open').hidden = true;
++    const clue = document.querySelector('.detective-clue-content');
++    // Long names remain one line, with button paging. The highlighted piece is unchanged.
++    namePager = window.NameleculeGameViewport.pager(ui['mission-name'], {axis: 'x', label: 'Πλήρες όνομα ένωσης'});
++    cluePager = window.NameleculeGameViewport.pager(ui['mission-prompt'], {axis: 'y', label: 'Αποστολή'});
++    feedbackPager = window.NameleculeGameViewport.pager(ui.feedback, {axis: 'y', label: 'Εξήγηση αποστολής'});
++    game.addEventListener('nl-level-stage', refreshViewport);
++    mountViewport();
++    game.classList.toggle('nl-vp-level-selection', !!game.querySelector('.nl-game-levels.is-expanded'));
++  }
++  if (viewportEnabled) configureViewport();
+   window.NameleculeMolecularDetective = Object.freeze({snapshot: () => ({category: assignment.category, level: assignment.level, phase: state.phase, moleculeId: state.moleculeId, roundId: state.roundId, missionId: state.mission?.id, bridgeMissionId: state.bridgeMissionId, missionIndex: state.missions.indexOf(state.mission), missionCount: state.missions.length, kind: state.mission?.kind, ...snapshot(), selectionRevision: state.selectionRevision, correct: state.correct, requestId: state.requestId})});
+   start();
+ })();
+--- a/css/namelecule-games.css
++++ b/css/namelecule-games.css
+@@ -353,3 +353,20 @@
+   .workshop-title .workshop-logo { width: 88px; height: 88px; }
+   .workshop-title h1 { font-size: 2.25rem; }
+ }
++
++/* Standalone viewport shell; shared/native legacy hosts do not acquire this class. */
++body.nl-vp-document:has(#game-root) .header-inner { padding: 5px 18px; gap: 12px; }
++body.nl-vp-document:has(#game-root) .brand { width: 150px; }
++body.nl-vp-document:has(#game-root) .exit-link { padding: 5px 12px; }
++body.nl-vp-document:has(#game-root) .game-root { min-height: 0; padding: 8px 18px; }
++body.nl-vp-document:has(#game-root) .site-footer { display: none; }
++.game-root.nl-game-viewport:not(.nl-repair-round) { display: grid; grid-template-rows: minmax(0,1fr); }
++.game-root.nl-game-viewport:not(.nl-repair-round) > .nl-vp-pager { height: 100%; min-height: 0; }
++.game-root.nl-game-viewport .workshop-hub .workshop-hero { padding: 8px 0 14px; }
++.game-root.nl-game-viewport .workshop-hub .workshop-hero h1 { font-size: 28px; margin-bottom: 8px; }
++.game-root.nl-game-viewport .workshop-hub .workshop-hero p { font-size: 14px; }
++.game-root.nl-game-viewport .workshop-hub .workshop-sets { padding: 6px 0 12px; }
++.game-root.nl-game-viewport .workshop-hub .workshop-set-card { padding: 16px; }
++.game-root.nl-game-viewport .result-name { white-space: nowrap; overflow-wrap: normal; }
++.game-root.nl-game-viewport .result-item .nl-vp-pager-x { height: 30px; }
++.game-root.nl-game-viewport .result-item .nl-vp-pager-x.is-overflow { height: 70px; }
+--- a/css/namelecule-repair-round.css
++++ b/css/namelecule-repair-round.css
+@@ -193,3 +193,94 @@
+ @media (prefers-reduced-motion: reduce) {
+   .nl-repair-round *, .nl-repair-round *::before, .nl-repair-round *::after { scroll-behavior: auto !important; animation: none !important; transition: none !important; }
+ }
++
++/* Explicit viewport contract, used only by new opt-in hosts. */
++.nl-repair-round.nl-repair-viewport { position: relative; height: var(--nl-vp-height); min-height: 0; overflow: hidden; line-height: 1.4; }
++.nl-repair-viewport .round-screen { display: grid; grid-template-rows: auto auto auto minmax(0, 1fr) auto; gap: 7px; height: 100%; min-height: 0; }
++.nl-repair-viewport .round-topbar, .nl-repair-viewport .round-heading, .nl-repair-viewport .session-row { margin: 0; }
++.nl-repair-viewport .round-heading h1 { font-size: 19px; margin: 0 0 3px; line-height: 1.2; }
++.nl-repair-viewport .round-heading .round-objective.is-emphasized, .nl-repair-viewport .round-heading p { font-size: 15px; line-height: 1.35; text-align: left; margin: 0; }
++.nl-repair-viewport .round-set-name { display: inline; font-size: 12px; }
++.nl-repair-viewport .workshop-logo-small { width: 28px; height: 28px; }
++.nl-repair-viewport .round-topbar .eyebrow { font-size: 10px; }
++.nl-repair-viewport .round-progress-counter { font-size: 14px; }
++.nl-repair-viewport .repair-stage-tabs { display: flex; gap: 6px; min-width: 0; align-items: center; }
++.nl-repair-viewport .repair-stage-tabs button { min-height: 34px; padding: 5px 10px; font-size: 12px; }
++.nl-repair-viewport .repair-view-button { display: none; }
++.nl-repair-viewport .bench { grid-row: 4; grid-template-columns: minmax(0, .95fr) minmax(0, 1.15fr); align-items: stretch; gap: 12px; min-height: 0; }
++.nl-repair-viewport .visual-side, .nl-repair-viewport .repair-side { display: flex; min-height: 0; }
++.nl-repair-viewport .diagram-card { width: 100%; display: grid; grid-template-rows: auto minmax(0, 1fr) auto; border-radius: 15px; min-height: 0; }
++.nl-repair-viewport .card-heading { padding: 6px 10px; gap: 4px; flex-wrap: nowrap; }
++.nl-repair-viewport .card-heading h2 { font-size: 12px; }
++.nl-repair-viewport .diagram-tools > span { display: none; }
++.nl-repair-viewport .diagram-tools .diagram-zoom-button { width: 36px; height: 36px; min-height: 36px; flex-basis: 36px; padding: 6px; }
++.nl-repair-viewport .diagram-figure { display: grid; grid-template-rows: minmax(0,1fr) auto; min-height: 0; padding: 8px; }
++.nl-repair-viewport .diagram-stage { height: 100%; min-height: 0; overflow: hidden; }
++.nl-repair-viewport .diagram-image { width: 100%; height: 100%; min-height: 0; max-height: 100%; object-fit: contain; }
++.nl-repair-viewport .diagram-figure figcaption { font-size: 11px; padding-top: 4px; }
++.nl-repair-viewport .image-status { padding: 0 8px; font-size: 12px; }
++.nl-repair-viewport .image-status:empty { display: none; }
++.nl-repair-viewport .repair-card { width: 100%; min-height: 0; display: flex; flex-direction: column; gap: 6px; padding: 10px; border-radius: 15px; }
++.nl-repair-viewport .repair-card > .section-label { font-size: 10px; margin: 0; }
++.nl-repair-viewport .repair-card > .nl-vp-pager-x { flex: 0 0 auto; height: 40px; }
++.nl-repair-viewport .broken-name { white-space: nowrap; overflow-wrap: normal; font-size: 16px; line-height: 1.5; padding: 5px 8px; margin: 0; }
++.nl-repair-viewport .repair-part-page, .nl-repair-viewport .repair-choice-page { display: flex; flex: 1 1 0; flex-direction: column; gap: 5px; min-height: 0; }
++.nl-repair-viewport .repair-part-page > .nl-vp-pager { flex: 1 1 0; min-height: 0; }
++.nl-repair-viewport .step-heading { font-size: 13px; margin: 0; }
++.nl-repair-viewport .name-parts, .nl-repair-viewport .choices { align-content: flex-start; margin: 0; padding: 3px; gap: 6px; }
++.nl-repair-viewport .part-button { min-height: 40px; padding: 7px 10px; font-size: 15px; }
++.nl-repair-viewport .choice-button { min-height: 40px; padding: 7px 10px; font-size: 14px; }
++.nl-repair-viewport .choice-fieldset { flex: 1 1 0; display: flex; flex-direction: column; min-height: 0; margin: 0; }
++.nl-repair-viewport .choice-fieldset > .nl-vp-pager { min-height: 0; flex: 1 1 0; }
++.nl-repair-viewport .choice-fieldset legend { font-size: 13px; margin: 0 0 5px; }
++.nl-repair-viewport .repair-choice-page > .quiet { align-self: flex-start; min-height: 29px; padding: 3px 7px; font-size: 12px; }
++.nl-repair-viewport .order-controls { margin: 0; flex: 0 0 auto; }
++.nl-repair-viewport .order-controls .secondary { min-height: 36px; padding: 5px 10px; }
++.nl-repair-viewport[data-repair-step="parts"] .repair-choice-page, .nl-repair-viewport[data-repair-step="choices"] .repair-part-page { display: none; }
++.nl-repair-viewport .candidate { flex: 0 0 auto; padding: 4px 8px; margin: 0; }
++.nl-repair-viewport .candidate-label { font-size: 10px; margin: 0; }
++.nl-repair-viewport .candidate .nl-vp-pager { height: 29px; }
++.nl-repair-viewport .candidate-name { font-size: 15px; white-space: nowrap; overflow-wrap: normal; line-height: 1.5; }
++.nl-repair-viewport .repair-actions { flex: 0 0 auto; gap: 5px; }
++.nl-repair-viewport .repair-actions .primary { min-height: 40px; padding: 7px 18px; min-width: 120px; }
++.nl-repair-viewport .repair-actions .quiet { min-height: 34px; font-size: 11px; padding: 4px 8px; }
++.nl-repair-viewport .session-row { grid-row: 5; font-size: 11px; min-height: 24px; }
++.nl-repair-viewport .session-row .quiet { min-height: 28px; padding: 3px 8px; }
++.nl-repair-viewport .repair-feedback-stage, .nl-repair-viewport .repair-instructions-stage { display: none; grid-row: 4; min-height: 0; border: 1px solid var(--line); border-radius: 15px; background: white; padding: 12px; gap: 8px; }
++.nl-repair-viewport .repair-stage-heading { display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: center; justify-content: space-between; }
++.nl-repair-viewport .repair-stage-heading h2 { margin: 0; font-size: 17px; }
++.nl-repair-viewport .repair-stage-heading button { min-height: 36px; padding: 5px 10px; font-size: 12px; }
++.nl-repair-viewport .repair-feedback-stage > .nl-vp-pager, .nl-repair-viewport .repair-instructions-stage > .nl-vp-pager { min-height: 0; }
++.nl-repair-viewport .feedback { margin: 0; padding: 12px; font-size: 15px; }
++.nl-repair-viewport .feedback p { margin: 0; }
++.nl-repair-viewport .success-title { font-size: 17px; }
++.nl-repair-viewport .success-name { white-space: nowrap; overflow-wrap: normal; font-size: 18px; overflow-x: auto; }
++.nl-repair-viewport .round-next { gap: 7px; margin: 0; flex-wrap: wrap; }
++.nl-repair-viewport .round-next button { width: auto; min-height: 39px; padding: 7px 12px; font-size: 13px; }
++.nl-repair-viewport .repair-instructions-content { padding: 3px; font-size: 15px; }
++.nl-repair-viewport .repair-instructions-content .compact-steps { display: grid; margin-bottom: 12px; font-size: 14px; }
++.nl-repair-viewport .repair-instructions-content p, .nl-repair-viewport .repair-instructions-content .part-selection-status, .nl-repair-viewport .repair-instructions-content .step-description, .nl-repair-viewport .repair-instructions-content .check-helper { font-size: 15px; margin: 0 0 12px; }
++.nl-repair-viewport[data-repair-stage="feedback"] .bench, .nl-repair-viewport[data-repair-stage="instructions"] .bench { display: none; }
++.nl-repair-viewport[data-repair-stage="feedback"] .repair-feedback-stage { display: grid; grid-template-rows: auto minmax(0,1fr) auto; }
++.nl-repair-viewport[data-repair-stage="instructions"] .repair-instructions-stage { display: grid; grid-template-rows: auto minmax(0,1fr); }
++.nl-repair-viewport.nl-repair-sequential .repair-view-button { display: inline-flex; }
++.nl-repair-viewport.nl-repair-sequential .bench { grid-template-columns: minmax(0, 1fr); }
++.nl-repair-viewport.nl-repair-sequential[data-repair-view="answer"] .visual-side, .nl-repair-viewport.nl-repair-sequential[data-repair-view="structure"] .repair-side { display: none; }
++.nl-repair-viewport .repair-stage-tabs [aria-pressed="true"] { background: var(--ink); color: white; }
++.nl-repair-viewport .repair-zoom-overlay { position: absolute; z-index: 20; inset: 0; width: 100%; height: 100%; max-height: 100%; margin: 0; display: grid; grid-template-rows: auto auto minmax(0, 1fr); gap: 8px; padding: 12px; }
++.nl-repair-viewport .repair-zoom-overlay p { margin: 0; }
++.nl-repair-viewport .repair-zoom-overlay .zoom-viewport { min-height: 0; max-height: none; padding: 10px; }
++.nl-repair-viewport .repair-zoom-overlay .zoom-image { width: 100%; height: 100%; max-width: 100%; object-fit: contain; }
++@media (max-width: 550px) {
++  .nl-repair-viewport .round-heading h1 { font-size: 16px; }
++  .nl-repair-viewport .round-heading .round-objective.is-emphasized { font-size: 14px; }
++  .nl-repair-viewport .round-game-label { font-size: 9px; }
++  .nl-repair-viewport .repair-stage-tabs { gap: 4px; }
++  .nl-repair-viewport .repair-stage-tabs button { padding: 5px 8px; }
++}
++.nl-repair-viewport .repair-card > .nl-vp-pager-x.is-overflow { height: 74px; }
++.nl-repair-viewport .candidate .nl-vp-pager-x.is-overflow { height: 67px; }
++.nl-repair-viewport .feedback .nl-vp-pager-x { height: 35px; }
++.nl-repair-viewport .feedback .nl-vp-pager-x.is-overflow { height: 73px; }
++.nl-repair-viewport .repair-zoom-controls { display: flex; gap: 6px; margin-left: auto; }
++.nl-repair-viewport .repair-zoom-controls button { min-height: 36px; min-width: 40px; padding: 5px 10px; }
+--- a/css/namelecule-name-builder.css
++++ b/css/namelecule-name-builder.css
+@@ -26,3 +26,23 @@
+ .helper summary{display:none}
+ .helper summary:focus-visible{outline:3px solid #bc7148;outline-offset:2px;border-radius:4px}
+ @media(max-width:600px){.helper summary{display:list-item;min-height:44px;padding:10px 0;cursor:pointer;font-weight:780}.helper[open] .helper-methods{padding-top:4px}}
++
++/* The v57/standalone viewport contract is opt-in; legacy lesson flow stays intact. */
++.nl-vp-document .site-header{height:46px;padding:4px 14px;max-width:1400px}.nl-vp-document .brand{max-width:132px}.nl-vp-document .back-link{padding:6px 12px;font-size:.8rem}.nl-vp-document .site-footer{display:none}
++#game.nl-game-viewport[data-nl-vp-kind="builder"]{display:flex;flex-direction:column;gap:6px;height:var(--nl-vp-height);min-height:0;max-width:1400px;padding:6px 12px;overflow:hidden}
++#game.nl-game-viewport[data-nl-vp-kind="builder"] .intro{margin:0;max-width:none;flex:none}#game.nl-game-viewport[data-nl-vp-kind="builder"] .eyebrow,#game.nl-game-viewport[data-nl-vp-kind="builder"] .intro-detail,#game.nl-game-viewport[data-nl-vp-kind="builder"] .representation-note,#game.nl-game-viewport[data-nl-vp-kind="builder"]>.keyboard-note{display:none}
++#game.nl-game-viewport .builder-title{margin:0;gap:10px;justify-content:flex-start}#game.nl-game-viewport .builder-logo{width:36px;height:36px}#game.nl-game-viewport .builder-title h1{font-size:1.15rem;letter-spacing:0}#game.nl-game-viewport[data-nl-vp-kind="builder"] .objective{font-size:1rem;line-height:1.35;margin:0;text-align:left;max-width:none}
++#game.nl-game-viewport[data-nl-vp-kind="builder"] .game-status{font-size:.8rem;line-height:1.25;padding:0;min-height:1.25em;flex:none}
++.builder-view-nav{display:flex;flex-wrap:wrap;gap:5px;flex:none}.builder-view-nav button{border:1px solid var(--line);border-radius:8px;background:#fff;min-height:36px;padding:5px 10px;font-size:.84rem;font-weight:700}.builder-view-nav button[aria-pressed=true]{background:var(--ink);color:#fff}.builder-view-nav button[data-view=bank]{display:none}
++#game.nl-game-viewport[data-nl-vp-kind="builder"] .workspace{flex:1;min-height:0;gap:10px;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr)}
++#game.nl-game-viewport[data-nl-vp-kind="builder"] .panel{border-radius:12px;min-height:0}#game.nl-game-viewport[data-nl-vp-kind="builder"] .panel-header{padding:5px 10px;min-height:38px;flex:none}#game.nl-game-viewport[data-nl-vp-kind="builder"] h2{font-size:.9rem}#game.nl-game-viewport[data-nl-vp-kind="builder"] .molecule-panel{display:flex;flex-direction:column}#game.nl-game-viewport[data-nl-vp-kind="builder"] .viewer-wrap{height:auto;min-height:0;flex:1}#game.nl-game-viewport[data-nl-vp-kind="builder"] .representations{gap:5px;padding:5px;flex:none}#game.nl-game-viewport[data-nl-vp-kind="builder"] .representations button{padding:5px 7px;font-size:.76rem;min-height:36px}
++#game.nl-game-viewport[data-nl-vp-kind="builder"] .answer-panel{display:flex;flex-direction:column}#game.nl-game-viewport[data-nl-vp-kind="builder"] .answer-content{display:flex;flex-direction:column;gap:6px;flex:1;min-height:0;padding:8px}#game.nl-game-viewport[data-nl-vp-kind="builder"] .answer-content>.nl-vp-pager{flex:none}
++#game.nl-game-viewport[data-nl-vp-kind="builder"] .answer-zone{min-height:64px;height:64px;padding:6px;overflow-y:hidden;justify-content:center}#game.nl-game-viewport[data-nl-vp-kind="builder"] .empty-answer{font-size:.85rem;line-height:1.3;margin:0}#game.nl-game-viewport[data-nl-vp-kind="builder"] .answer-tiles .tile-button{min-height:42px;font-size:1rem;padding:7px 5px}#game.nl-game-viewport[data-nl-vp-kind="builder"] .bank-panel{flex:1;display:flex;flex-direction:column;margin:0;min-height:92px}#game.nl-game-viewport[data-nl-vp-kind="builder"] .bank-panel .panel-header{min-height:26px;padding:3px 8px}#game.nl-game-viewport[data-nl-vp-kind="builder"] .bank-panel>.nl-vp-pager{flex:1;min-height:0}#game.nl-game-viewport[data-nl-vp-kind="builder"] .bank-zone{height:100%;min-height:0;padding:6px}#game.nl-game-viewport[data-nl-vp-kind="builder"] .bank-tiles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:5px}#game.nl-game-viewport[data-nl-vp-kind="builder"] .bank-tiles>li{min-width:0}#game.nl-game-viewport[data-nl-vp-kind="builder"] .bank-tiles .tile-button{width:100%;min-height:44px;padding:7px 5px;font-size:1rem}
++#game.nl-game-viewport[data-nl-vp-kind="builder"] .tile-controls{display:flex;flex-wrap:wrap;gap:5px;margin:0;flex:none}#game.nl-game-viewport[data-nl-vp-kind="builder"] .selected-tile{padding:4px 6px;max-width:100%;font-size:.76rem}#game.nl-game-viewport[data-nl-vp-kind="builder"] .small-button{min-height:36px;padding:5px 8px;font-size:.8rem}#game.nl-game-viewport[data-nl-vp-kind="builder"] .check-row{margin:0;gap:6px;flex:none}#game.nl-game-viewport[data-nl-vp-kind="builder"] .primary,#game.nl-game-viewport[data-nl-vp-kind="builder"] .secondary{min-height:40px;padding:7px 12px;min-width:0;font-size:.85rem}
++.builder-help-stage,.builder-name-stage,.builder-feedback-stage{display:none;min-height:0;flex:1}.builder-feedback-actions{display:flex;gap:8px;flex-wrap:wrap;flex:none}.builder-help-stage .helper{margin:0;min-height:0;flex:1;display:flex;flex-direction:column}.builder-help-stage .helper>.nl-vp-pager{min-height:0;flex:1}.builder-help-stage .helper-methods{min-height:0;line-height:1.6;font-size:1rem}.builder-help-stage .helper-method+.helper-method{margin-top:16px}.builder-name-stage .candidate{margin:0;min-width:0;width:100%}.builder-name-stage .candidate-name{font-size:1.25rem;white-space:nowrap}.builder-feedback-stage>.nl-vp-pager{min-height:0;flex:1}.builder-feedback-stage .feedback{margin:0;padding:12px;font-size:1rem;line-height:1.6}.builder-feedback-stage .feedback>.nl-vp-pager-x{max-height:110px;margin-bottom:10px}.builder-feedback-stage .single-line-name{font-size:1.1rem;white-space:nowrap;min-height:40px}
++#game[data-builder-view=help]>.workspace,#game[data-builder-view=name]>.workspace,#game[data-builder-view=feedback]>.workspace{display:none}#game[data-builder-view=help]>.builder-help-stage,#game[data-builder-view=name]>.builder-name-stage,#game[data-builder-view=feedback]>.builder-feedback-stage{display:flex;flex-direction:column;gap:8px}#game[data-builder-view=molecule]>.workspace{grid-template-columns:1fr}#game[data-builder-view=molecule] .answer-panel{display:none}
++#game.builder-compact .builder-view-nav button[data-view=bank]{display:block}#game.builder-compact .workspace{grid-template-columns:1fr!important}#game.builder-compact[data-builder-view=editing] .molecule-panel,#game.builder-compact[data-builder-view=bank] .molecule-panel{display:none}#game.builder-compact[data-builder-view=editing] .bank-panel{display:none}#game.builder-compact[data-builder-view=editing] .answer-content{justify-content:flex-start}#game.builder-compact[data-builder-view=editing] .check-row{margin-top:auto}#game.builder-compact[data-builder-view=bank] .tile-controls,#game.builder-compact[data-builder-view=bank] .check-row{display:none!important}#game.builder-compact .bank-tiles{grid-template-columns:repeat(3,minmax(0,1fr))!important}
++#game.builder-choosing>.workspace,#game.builder-choosing>.builder-view-nav,#game.builder-choosing>.builder-help-stage,#game.builder-choosing>.builder-name-stage,#game.builder-choosing>.builder-feedback-stage{display:none}#game.builder-choosing>#game-levels{flex:1;min-height:0}
++@media(max-width:500px){#game.nl-game-viewport[data-nl-vp-kind="builder"]{padding:4px 7px;gap:4px}.builder-view-nav{gap:4px}.builder-view-nav button{padding:5px 7px;font-size:.78rem;min-height:38px}#game.nl-game-viewport[data-nl-vp-kind="builder"] .objective{font-size:.92rem}.builder-feedback-actions button{flex:1}}
++#game.nl-game-viewport[data-nl-vp-kind="builder"][data-builder-view=molecule]>.workspace{grid-template-columns:1fr}
++#game.nl-game-viewport[data-nl-vp-kind="builder"][data-builder-view=molecule] .answer-panel{display:none}
+--- a/css/namelecule-molecular-puzzle.css
++++ b/css/namelecule-molecular-puzzle.css
+@@ -107,3 +107,20 @@
+ @media (prefers-reduced-motion: reduce) {
+   .puzzle-game *, .puzzle-game *::before, .puzzle-game *::after { scroll-behavior: auto !important; transition: none !important; }
+ }
++
++/* Explicit viewport views keep the whole 32-piece workspace reachable by pages. */
++#game.puzzle-game.nl-game-viewport{display:flex;flex-direction:column;gap:5px;height:var(--nl-vp-height);min-height:0;max-width:1400px;padding:6px 12px;overflow:hidden}
++#game.puzzle-game.nl-game-viewport .intro{margin:0;max-width:none;flex:none}#game.puzzle-game.nl-game-viewport .eyebrow,#game.puzzle-game.nl-game-viewport .intro-detail{display:none}#game.puzzle-game.nl-game-viewport .puzzle-title{display:flex;align-items:center;justify-content:flex-start;gap:9px;margin:0}#game.puzzle-game.nl-game-viewport .puzzle-logo{width:98px;height:34px}#game.puzzle-game.nl-game-viewport .puzzle-title h1{font-size:1.15rem}#game.puzzle-game.nl-game-viewport .objective{font-size:.95rem;line-height:1.3;text-align:left;max-width:none;margin:0}#game.puzzle-game.nl-game-viewport .game-status{font-size:.78rem;line-height:1.25;padding:0;min-height:1.25em;flex:none}#game.puzzle-game.nl-game-viewport .puzzle-round-tools{margin:0;flex:none}#game.puzzle-game.nl-game-viewport .puzzle-round-tools:not(:has(button:not([hidden]))){display:none}
++#game.puzzle-game.nl-game-viewport .puzzle-name-card{position:static;flex:none;padding:5px 10px;margin:0;border-radius:10px;z-index:auto;min-width:0}#game.puzzle-game.nl-game-viewport .puzzle-name-card>p:first-child{font-size:.74rem;line-height:1.25}#game.puzzle-game.nl-game-viewport .puzzle-target-name{font-size:1.15rem;line-height:1.45;white-space:nowrap;overflow-wrap:normal;min-width:0;width:100%;padding:0;margin:0;min-height:29px;text-align:center}
++.puzzle-view-nav{display:flex;flex-wrap:wrap;gap:5px;flex:none}.puzzle-view-nav button{border:1px solid var(--line);border-radius:8px;background:#fff;min-height:36px;padding:5px 9px;font-size:.82rem;font-weight:700}.puzzle-view-nav button[aria-pressed=true]{background:var(--ink);color:#fff}.puzzle-view-nav button[data-view=pieces],.puzzle-view-nav button[data-view=tools]{display:none}
++#game.puzzle-game.nl-game-viewport .puzzle-assembly-panel{min-height:0;flex:1;display:flex;flex-direction:column;border-radius:12px}#game.puzzle-game.nl-game-viewport .puzzle-assembly-panel>.panel-header{min-height:38px;padding:4px 8px;flex:none}#game.puzzle-game.nl-game-viewport .puzzle-assembly-panel>.panel-header h2{font-size:.9rem}#game.puzzle-game.nl-game-viewport .puzzle-assembly-content{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:8px;padding:8px;flex:1;min-height:0;align-items:stretch}#game.puzzle-game.nl-game-viewport .puzzle-assembly-content>.nl-vp-pager{grid-column:1;grid-row:1;min-height:0}#game.puzzle-game.nl-game-viewport .puzzle-board-port{min-height:0;height:100%;padding:0}#game.puzzle-game.nl-game-viewport .puzzle-board{height:100%;min-height:0;border-radius:12px;grid-area:auto;align-self:auto}#game.puzzle-game.nl-game-viewport .puzzle-side{display:flex;flex-direction:column;gap:7px;min-height:0;grid-column:2;grid-row:1}#game.puzzle-game.nl-game-viewport .puzzle-side>*{grid-area:auto;margin:0;flex:none}#game.puzzle-game.nl-game-viewport .puzzle-bank{border-radius:10px}#game.puzzle-game.nl-game-viewport .puzzle-bank .panel-header{padding:3px 6px;min-height:24px}#game.puzzle-game.nl-game-viewport .puzzle-piece-bank{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:5px;padding:5px}#game.puzzle-game.nl-game-viewport .puzzle-piece{min-width:0;min-height:44px;padding:6px 3px;font-size:1.05rem}#game.puzzle-game.nl-game-viewport .puzzle-tools{gap:5px}#game.puzzle-game.nl-game-viewport .small-button{min-height:36px;font-size:.78rem;padding:5px 8px}#game.puzzle-game.nl-game-viewport .puzzle-selection-controls{gap:5px}#game.puzzle-game.nl-game-viewport .puzzle-selection-controls .selected-tile{flex:1 1 100%;min-height:24px;padding:3px 6px;font-size:.78rem}#game.puzzle-game.nl-game-viewport .puzzle-move-controls{gap:5px}#game.puzzle-game.nl-game-viewport .puzzle-move-controls .small-button{min-width:36px;padding:5px}#game.puzzle-game.nl-game-viewport .puzzle-interaction-status{font-size:.8rem;line-height:1.35;min-height:1.35em}#game.puzzle-game.nl-game-viewport .check-row{gap:6px;margin:0;margin-top:auto;flex:none}#game.puzzle-game.nl-game-viewport .primary,#game.puzzle-game.nl-game-viewport .secondary{min-height:40px;min-width:0;font-size:.85rem;padding:7px 12px}
++.puzzle-help-stage,.puzzle-feedback-stage{display:none;min-height:0;flex:1}.puzzle-help-stage .helper{display:flex;flex-direction:column;min-height:0;flex:1;margin:0}.puzzle-help-stage .helper>.nl-vp-pager{min-height:0;flex:1}.puzzle-help-stage .helper-methods{min-height:0;font-size:1rem;line-height:1.6}.puzzle-help-stage .helper-method+.helper-method{margin-top:16px}.puzzle-feedback-stage>.nl-vp-pager{min-height:0;flex:1}.puzzle-feedback-stage .feedback{font-size:1rem;line-height:1.6;padding:12px;margin:0}.puzzle-feedback-actions{display:flex;flex-wrap:wrap;gap:8px;flex:none}
++#game[data-puzzle-view=help]>.puzzle-assembly-panel,#game[data-puzzle-view=feedback]>.puzzle-assembly-panel,#game[data-puzzle-view=name]>.puzzle-assembly-panel{display:none}#game[data-puzzle-view=help]>.puzzle-help-stage,#game[data-puzzle-view=feedback]>.puzzle-feedback-stage{display:flex;flex-direction:column;gap:8px}#game[data-puzzle-view=name]>.puzzle-name-card{flex:1;display:flex;flex-direction:column;justify-content:center;min-height:0}#game[data-puzzle-view=name] .puzzle-target-name{font-size:1.4rem;min-height:50px}
++#game.puzzle-compact .puzzle-view-nav button[data-view=pieces],#game.puzzle-compact .puzzle-view-nav button[data-view=tools]{display:block}#game.puzzle-compact .puzzle-assembly-content{display:flex!important;flex-direction:column;gap:5px;padding:6px!important}#game.puzzle-compact .puzzle-assembly-content>.nl-vp-pager{min-height:0;flex:1}#game.puzzle-compact .puzzle-side{display:contents!important}#game.puzzle-compact[data-puzzle-view=editing] .puzzle-bank,#game.puzzle-compact[data-puzzle-view=editing] .puzzle-selection-controls,#game.puzzle-compact[data-puzzle-view=editing] .puzzle-interaction-status{display:none}#game.puzzle-compact[data-puzzle-view=editing] .puzzle-tools{display:flex;flex-wrap:nowrap}#game.puzzle-compact[data-puzzle-view=editing] .check-row{margin:0}#game.puzzle-compact[data-puzzle-view=pieces] .puzzle-tools,#game.puzzle-compact[data-puzzle-view=pieces] .puzzle-selection-controls,#game.puzzle-compact[data-puzzle-view=pieces] .puzzle-interaction-status,#game.puzzle-compact[data-puzzle-view=pieces] .check-row{display:none}#game.puzzle-compact[data-puzzle-view=tools] .puzzle-assembly-content>.nl-vp-pager,#game.puzzle-compact[data-puzzle-view=tools] .puzzle-bank{display:none}#game.puzzle-compact[data-puzzle-view=tools] .puzzle-selection-controls{display:flex;flex-wrap:wrap}#game.puzzle-compact[data-puzzle-view=tools] .puzzle-move-controls .small-button{min-width:44px;min-height:44px}#game.puzzle-compact[data-puzzle-view=tools] .puzzle-interaction-status{flex:1}#game.puzzle-compact .bank-note{display:none}
++#game.puzzle-choosing>.puzzle-assembly-panel,#game.puzzle-choosing>.puzzle-view-nav,#game.puzzle-choosing>.puzzle-name-card,#game.puzzle-choosing>.puzzle-help-stage,#game.puzzle-choosing>.puzzle-feedback-stage{display:none}#game.puzzle-choosing>#game-levels{min-height:0;flex:1}
++.puzzle-controlled #game.nl-game-viewport .puzzle-title{display:none}
++@media(max-width:500px){#game.puzzle-game.nl-game-viewport{padding:4px 7px;gap:4px}.puzzle-view-nav{gap:4px}.puzzle-view-nav button{padding:5px 6px;font-size:.76rem;min-height:38px}.puzzle-feedback-actions button{flex:1}#game.puzzle-game.nl-game-viewport .puzzle-node{font-size:1rem;width:50px}}
++/* Stage visibility must outrank the opted-in panel's flex layout. */
++#game.puzzle-game.nl-game-viewport[data-puzzle-view=help]>.puzzle-assembly-panel,#game.puzzle-game.nl-game-viewport[data-puzzle-view=feedback]>.puzzle-assembly-panel,#game.puzzle-game.nl-game-viewport[data-puzzle-view=name]>.puzzle-assembly-panel,#game.puzzle-game.nl-game-viewport.puzzle-choosing>.puzzle-assembly-panel{display:none}
++#game.puzzle-game.nl-game-viewport[data-puzzle-view=name]>.puzzle-name-card{flex:1;display:flex;flex-direction:column;justify-content:center;min-height:0}
++#game.puzzle-game.nl-game-viewport[data-puzzle-view=name] .puzzle-target-name{font-size:1.4rem;min-height:50px}
+--- a/css/namelecule-molecular-detective.css
++++ b/css/namelecule-molecular-detective.css
+@@ -67,3 +67,61 @@
+ @media (prefers-reduced-motion: reduce) {
+   .detective-game *, .detective-game *::before, .detective-game *::after { scroll-behavior: auto !important; transition: none !important; }
+ }
++
++/* New standalone pages and viewport=1 lesson hosts share this bounded stage. */
++body.nl-vp-document:has(.detective-viewport) .site-header { padding: 5px 18px; }
++body.nl-vp-document:has(.detective-viewport) .brand { width: 150px; }
++body.nl-vp-document:has(.detective-viewport) .back-link { padding: 6px 12px; font-size: 12px; }
++body.nl-vp-document:has(.detective-viewport) .site-footer { display: none; }
++.detective-game.detective-viewport, body.detective-embedded .detective-game.detective-viewport { display: grid; grid-template-rows: auto auto auto auto minmax(0, 1fr); gap: 6px; min-height: 0; padding: 8px 16px; overflow: hidden; }
++.detective-viewport .intro { margin: 0; }
++.detective-viewport .intro > .eyebrow, .detective-viewport .intro-detail { display: none; }
++.detective-viewport .detective-title { display: flex; justify-content: center; gap: 8px; margin: 0; }
++.detective-viewport .detective-logo { width: 32px; height: 32px; }
++.detective-viewport .detective-title h1 { font-size: 21px; line-height: 1.2; }
++.detective-viewport .objective, .lesson-mode .detective-viewport .objective { font-size: 14px; line-height: 1.35; margin: 3px 0 0; }
++.detective-viewport .game-status, body.detective-embedded .detective-viewport .game-status { font-size: 12px; line-height: 1.3; min-height: 0; margin: 0; padding: 0; }
++.detective-viewport .detective-round-tools { margin: 0; min-height: 0; }
++.detective-viewport #game-levels { width: 100%; }
++.detective-viewport .detective-workspace { min-height: 0; gap: 10px; grid-template-rows: minmax(0, 1fr) auto; }
++.detective-viewport .panel { border-radius: 15px; min-height: 0; }
++.detective-viewport .panel-header { min-height: 38px; padding: 5px 10px; gap: 6px; }
++.detective-viewport .panel-header h2 { font-size: 13px; }
++.detective-viewport .detective-kind { font-size: 11px; }
++.detective-viewport .detective-molecule { display: grid; grid-template-rows: auto minmax(0,1fr); }
++.detective-viewport .detective-molecule .viewer-wrap { min-height: 0; height: 100%; }
++.detective-viewport .detective-view-note { display: none; }
++.detective-viewport .detective-clue { display: grid; grid-template-rows: auto minmax(0,1fr); }
++.detective-viewport .detective-clue-content { display: grid; grid-template-rows: auto minmax(0,1fr); gap: 8px; padding: 10px; min-height: 0; }
++.detective-viewport .detective-clue-content > .nl-vp-pager-x { height: 47px; }
++.detective-viewport .detective-clue-content > .nl-vp-pager-x.is-overflow { height: 85px; }
++.detective-viewport .detective-name { margin: 0; padding: 3px 0 8px; font-size: 23px; line-height: 1.5; white-space: nowrap; overflow-wrap: normal; }
++.detective-viewport .detective-prompt { margin: 0; font-size: 16px; line-height: 1.5; padding: 3px; }
++.detective-viewport .detective-answer-content { padding: 9px 10px; }
++.detective-viewport .detective-help { font-size: 12px; margin-bottom: 4px; }
++.detective-viewport .detective-selection-status { font-size: 12px; min-height: 0; }
++.detective-viewport .check-row { margin-top: 6px; gap: 6px; }
++.detective-viewport .check-row button { min-height: 38px; padding: 6px 12px; font-size: 13px; }
++.detective-viewport .detective-stage-tabs { display: none; gap: 6px; min-width: 0; }
++.detective-viewport .detective-stage-tabs button { min-height: 36px; padding: 5px 10px; font-size: 12px; min-width: 0; }
++.detective-viewport .detective-stage-tabs [aria-pressed="true"] { color: white; background: var(--ink); }
++.detective-viewport .detective-feedback-stage { grid-row: 5; display: grid; grid-template-rows: auto minmax(0,1fr) auto; min-height: 0; gap: 8px; padding: 12px; background: white; border: 1px solid var(--line); border-radius: 15px; }
++.detective-viewport .detective-feedback-heading { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px; }
++.detective-viewport .detective-feedback-heading h2 { font-size: 17px; }
++.detective-viewport .detective-feedback-heading button { padding: 6px 10px; min-height: 36px; font-size: 12px; }
++.detective-viewport .detective-feedback-stage > .nl-vp-pager { min-height: 0; }
++.detective-viewport .feedback { margin: 0; font-size: 16px; }
++.detective-viewport .detective-next { margin: 0; justify-self: end; min-height: 40px; padding: 7px 15px; font-size: 14px; }
++.detective-viewport.detective-feedback-view .detective-workspace, .detective-viewport.detective-feedback-view .detective-stage-tabs { display: none; }
++.detective-viewport.nl-vp-level-selection .detective-workspace, .detective-viewport.nl-vp-level-selection .detective-stage-tabs { display: none; }
++.detective-viewport.nl-vp-narrow .detective-stage-tabs { display: flex; }
++.detective-viewport.nl-vp-narrow .detective-workspace { grid-template-columns: minmax(0,1fr); grid-template-rows: minmax(0,1fr) auto; }
++.detective-viewport.nl-vp-narrow .detective-molecule, .detective-viewport.nl-vp-narrow .detective-clue { grid-column: 1; grid-row: 1; }
++.detective-viewport.nl-vp-narrow .detective-answer { grid-column: 1; grid-row: 2; }
++.detective-viewport.nl-vp-narrow[data-detective-view="structure"] .detective-clue, .detective-viewport.nl-vp-narrow[data-detective-view="clue"] .detective-molecule { display: none; }
++@media (max-width: 550px) {
++  .detective-game.detective-viewport, body.detective-embedded .detective-game.detective-viewport { padding: 6px 9px; }
++  .detective-viewport .detective-title h1 { font-size: 18px; }
++  .detective-viewport .objective, .lesson-mode .detective-viewport .objective { font-size: 13px; }
++  .detective-viewport .detective-logo { width: 28px; height: 28px; }
++}
+--- a/js/namelecule-game-levels.js
++++ b/js/namelecule-game-levels.js
+@@ -193,6 +193,9 @@
+   function mount(host, options) {
+     assert(host && typeof host.appendChild === "function" && host.ownerDocument, "Invalid controls host");
+     let state = checkedState(options || {}), destroyed = false;
++    const compact = !!(options && options.compact === true);
++    const canCloseSelection = options && options.selectionRequired === false;
++    let expanded = compact && !canCloseSelection && state.category === "alkanes" && state.selectedLevel === null;
+     const doc = host.ownerDocument;
+     function node(tag, className, text) {
+       const result = doc.createElement(tag);
+@@ -202,6 +205,11 @@
+     }
+     const root = node("section", "nl-game-levels");
+     root.setAttribute("aria-label", "Επίπεδα παιχνιδιού");
++    const summary = node("div", "nl-game-levels__summary");
++    const summaryText = node("span", "nl-game-levels__current");
++    const change = node("button", "nl-game-levels__change", "Άλλαξε επίπεδο"); change.type = "button";
++    summary.append(summaryText, change); summary.hidden = !compact;
++    root.classList.toggle("nl-game-levels--compact", compact);
+     const categories = node("div", "nl-game-levels__categories");
+     categories.setAttribute("role", "group"); categories.setAttribute("aria-label", "Κατηγορία ενώσεων");
+     const alkaneButton = node("button", "nl-game-levels__category", "Αλκάνια");
+@@ -224,18 +232,20 @@
+       levels.appendChild(button);
+     });
+     const note = node("p", "nl-game-levels__note"); note.setAttribute("aria-live", "polite");
+-    [categories, title, levels, note].forEach(function (child) { root.appendChild(child); });
++    [summary, categories, title, levels, note].forEach(function (child) { root.appendChild(child); });
+     host.appendChild(root);
+     function select(category, level) {
+       if (destroyed) return;
+       if (category === "other" && !state.otherCount) return;
+       if (level !== null && (!state.allowedLevels.includes(level) || !poolFor(level, state.availableIds).length)) return;
+       state = checkedState(Object.assign({}, state, { category: category, selectedLevel: level }));
++      if (compact) expanded = false;
+       render();
+       if (state.onSelect) state.onSelect({ category: state.category, level: state.selectedLevel });
+     }
+     alkaneButton.addEventListener("click", function () { select("alkanes", state.selectedLevel); });
+     otherButton.addEventListener("click", function () { select("other", null); });
++    change.addEventListener("click", function () { expanded = !expanded; render(); });
+     function render() {
+       categories.hidden = !state.otherCount;
+       alkaneButton.setAttribute("aria-pressed", String(state.category === "alkanes"));
+@@ -259,6 +269,24 @@
+       else if (state.selectedLevel === null) note.textContent = state.allowedLevels.some(function (level) { return poolFor(level, state.availableIds).length; }) ?
+         "Επίλεξε επίπεδο για αυτόματη ανάθεση μορίου." : "Δεν υπάρχουν διαθέσιμα μόρια για αυτά τα επίπεδα.";
+       else note.textContent = label(state.selectedLevel) + " · Αυτόματη ανάθεση μορίου.";
++      if (compact) {
++        const requirement = state.requirements && state.requirements[state.selectedLevel];
++        const requirementText = requirement ? requirement === "required" ? " · Υποχρεωτικό" : " · Προαιρετικό" : "";
++        summaryText.textContent = state.category === "other" ? "Άλλες διαθέσιμες ενώσεις" :
++          state.selectedLevel === null ? options.compactLabel || "Επίλεξε επίπεδο" : label(state.selectedLevel) + requirementText +
++            (state.completedLevels.includes(state.selectedLevel) ? " · Ολοκληρώθηκε" : "");
++        change.textContent = expanded ? "Επιστροφή στο παιχνίδι" : "Άλλαξε επίπεδο";
++        change.hidden = state.allowedLevels.length === 1 && !state.otherCount;
++        change.disabled = expanded && !canCloseSelection && state.selectedLevel === null && state.category !== "other";
++        change.setAttribute("aria-expanded", String(expanded));
++        categories.hidden = !expanded || !state.otherCount;
++        title.hidden = levels.hidden = !expanded || state.category !== "alkanes";
++        note.hidden = !expanded;
++        root.classList.toggle("is-expanded", expanded);
++        const viewport = root.closest(".nl-game-viewport, .nl-vp-choice");
++        if (viewport) viewport.classList.toggle("nl-vp-level-selection", expanded);
++        if (typeof global.CustomEvent === "function") root.dispatchEvent(new global.CustomEvent("nl-level-stage", { bubbles: true, detail: { expanded: expanded } }));
++      }
+     }
+     render();
+     return Object.freeze({
+--- a/css/namelecule-game-levels.css
++++ b/css/namelecule-game-levels.css
+@@ -18,3 +18,14 @@
+ .nl-game-levels__note{margin:11px 0 0;font-size:.83rem;line-height:1.5;color:#456762;overflow-wrap:anywhere}
+ .nl-game-levels button:focus-visible{outline:3px solid #a75930;outline-offset:3px}
+ @media(max-width:600px){.nl-game-levels{padding:12px;margin:12px auto 16px}.nl-game-levels__buttons{grid-template-columns:1fr;gap:8px}.nl-game-levels__button{min-height:94px;padding:11px 13px;gap:3px}.nl-game-levels__count{margin-top:0}.nl-game-levels__categories{gap:7px;margin-bottom:12px}.nl-game-levels__category{font-size:.85rem;padding:10px 12px}.nl-game-levels__name{font-size:.94rem}}
++.nl-game-levels--compact{width:100%;max-width:100%;margin:0;padding:5px 8px;border-radius:10px}
++.nl-game-levels__summary{display:flex;align-items:center;justify-content:space-between;gap:8px;min-width:0}
++.nl-game-levels__current{font-size:.88rem;font-weight:750;line-height:1.3}
++.nl-game-levels__change{flex:0 0 auto;min-height:34px;padding:5px 8px;border:1px solid #83aca0;border-radius:8px;background:#fff;color:#254c50;font:600 .84rem/1.2 system-ui,sans-serif;cursor:pointer}
++.nl-game-levels--compact.is-expanded{padding:10px}
++.nl-game-levels--compact.is-expanded .nl-game-levels__summary{margin-bottom:8px}
++.nl-game-levels--compact .nl-game-levels__button{min-height:94px;padding:9px 10px;gap:3px}
++.nl-game-levels--compact .nl-game-levels__heading{margin:5px 0 8px}
++.nl-game-levels--compact .nl-game-levels__categories{margin:5px 0 8px}
++.nl-game-levels--compact .nl-game-levels__note{margin:6px 0 0}
++@media(max-width:600px){.nl-game-levels--compact .nl-game-levels__buttons{grid-template-columns:1fr;gap:5px}.nl-game-levels--compact .nl-game-levels__button{min-height:68px;padding:7px 9px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2px 6px}.nl-game-levels--compact .nl-game-levels__description{font-size:.78rem}.nl-game-levels--compact .nl-game-levels__name{font-size:.84rem}.nl-game-levels--compact .nl-game-levels__count{font-size:.76rem}.nl-game-levels--compact .nl-game-levels__status{font-size:.76rem}.nl-game-levels__current{font-size:.81rem}.nl-game-levels__change{font-size:.77rem}}
+--- a/js/namelecule-quiz-checkpoints.js
++++ b/js/namelecule-quiz-checkpoints.js
+@@ -299,6 +299,7 @@
+     if (responseRevealer) responseRevealer.stop();
+   }
+   function revealResponse(request) {
++    if (dialog && dialog.classList.contains("nl-vp-dialog")) return;
+     if (responseRevealer) responseRevealer.reveal(request);
+   }
+   function destroyMount() {
+@@ -495,6 +496,8 @@
+     try {
+       const spec = validateCheckpoint(context.spec);
+       const adapter = types[spec.type];
++      const viewport = !!global.NameleculeGameViewport && spec.type === "alkane-game-choice-set";
++      dialog.classList.toggle("nl-vp-dialog", viewport);
+       const optional = context.practice && supportsPractice(adapter) && isComplete(context.scenario, context.index);
+       context.practice = !!optional;
+       updateDialog(context);
+@@ -502,6 +505,7 @@
+       const restore = optional ? adapter.restorePractice : adapter.restore;
+       const mount = optional ? adapter.mountPractice : adapter.mount;
+       mounted = mount(mountHost, {
++        viewport,
+         round: clone(spec.round), assetBase: "games/",
+         initialState: states[context.index] ? clone(states[context.index]) : null,
+         newPracticeLabel: text("practice", context),
+--- a/css/namelecule-quiz-checkpoints.css
++++ b/css/namelecule-quiz-checkpoints.css
+@@ -134,17 +134,17 @@
+ .nl-builder-title { display: grid; justify-items: center; gap: 8px; min-width: 0; margin: 6px 0 10px; text-align: center; }
+ .nl-builder-logo { display: block; width: 88px; height: 88px; object-fit: contain; }
+ .nl-builder-title .nl-builder-heading,
+-.nl-game-choice-repair .round-heading h1 { min-width: 0; max-width: 100%; font-family: "Roboto Condensed", sans-serif; font-size: clamp(28.8px, 3vw, 40px); font-weight: 700; line-height: 1.12; letter-spacing: -.04em; text-align: center; overflow-wrap: anywhere; }
++.nl-game-choice-repair:not(.nl-vp-slot) .round-heading h1 { min-width: 0; max-width: 100%; font-family: "Roboto Condensed", sans-serif; font-size: clamp(28.8px, 3vw, 40px); font-weight: 700; line-height: 1.12; letter-spacing: -.04em; text-align: center; overflow-wrap: anywhere; }
+ .nl-builder-title .nl-builder-heading { margin: 0; }
+-.nl-game-choice-repair .round-topbar { justify-content: center; margin: 6px 0 10px; }
+-.nl-game-choice-repair .round-topbar .round-game-brand { display: grid; justify-items: center; gap: 8px; max-width: 100%; text-align: center; }
+-.nl-game-choice-repair .workshop-logo-small { width: 88px; height: 88px; }
+-.nl-game-choice-repair .round-heading .round-objective.is-emphasized { font-size: 24px; }
+-.nl-game-choice-repair .compact-steps { font-size: 11.52px; font-weight: 400; line-height: 1.6; }
++.nl-game-choice-repair:not(.nl-vp-slot) .round-topbar { justify-content: center; margin: 6px 0 10px; }
++.nl-game-choice-repair:not(.nl-vp-slot) .round-topbar .round-game-brand { display: grid; justify-items: center; gap: 8px; max-width: 100%; text-align: center; }
++.nl-game-choice-repair:not(.nl-vp-slot) .workshop-logo-small { width: 88px; height: 88px; }
++.nl-game-choice-repair:not(.nl-vp-slot) .round-heading .round-objective.is-emphasized { font-size: 24px; }
++.nl-game-choice-repair:not(.nl-vp-slot) .compact-steps { font-size: 11.52px; font-weight: 400; line-height: 1.6; }
+ /* Match the Builder iframe viewport to the existing Workshop content container. */
+ @container nl-repair (max-width: 760px) {
+-  .nl-game-choice-repair .round-heading .round-objective.is-emphasized { font-size: 20px; }
+-  .nl-game-choice-repair .compact-steps { font-size: 12px; }
++  .nl-game-choice-repair:not(.nl-vp-slot) .round-heading .round-objective.is-emphasized { font-size: 20px; }
++  .nl-game-choice-repair:not(.nl-vp-slot) .compact-steps { font-size: 12px; }
+ }
+ .nl-builder-stage { position: relative; min-width: 0; }
+ .nl-builder-frame { display: block; width: 100%; min-height: 160px; max-width: 100%; border: 0; background: #faf9f5; }
+@@ -155,10 +155,10 @@
+ .nl-builder-error { padding: 18px; border: 1px solid #a6633d; border-radius: 12px; background: #fbf0e5; }
+ @media (max-width: 760px) {
+   .nl-builder-title .nl-builder-heading,
+-  .nl-game-choice-repair .round-heading h1 { font-size: 28px; }
++  .nl-game-choice-repair:not(.nl-vp-slot) .round-heading h1 { font-size: 28px; }
+ }
+ @media (max-width: 650px) {
+-  .nl-builder-logo, .nl-game-choice-repair .workshop-logo-small { width: 64px; height: 64px; }
++  .nl-builder-logo, .nl-game-choice-repair:not(.nl-vp-slot) .workshop-logo-small { width: 64px; height: 64px; }
+   .nl-game-choice-grid { grid-template-columns: 1fr; }
+   .nl-game-choice-card { padding: 16px; gap: 12px; min-height: 116px; }
+   .nl-game-choice-card img { width: 56px; height: 56px; }
+--- a/js/namelecule-game-choice-checkpoint.js
++++ b/js/namelecule-game-choice-checkpoint.js
+@@ -20,7 +20,7 @@
+     const promise = new Promise((resolve, reject) => {
+       const script = global.document.createElement("script");
+       const base = moduleURL || new URL("js/namelecule-game-choice-checkpoint.js", global.document.baseURI).href;
+-      script.src = new URL(file + "?v=alkane-levels-20261116-r2", base).href;
++      script.src = new URL(file + "?v=game-viewport-20261116-r1", base).href;
+       const timer = global.setTimeout(() => finish(new Error("Detective dependency timed out")), 45000);
+       function finish(error) {
+         global.clearTimeout(timer); script.onload = script.onerror = null;
+@@ -451,6 +451,8 @@
+   }
+   function mountLevels(host, options, practice) {
+     const recipe = validate(options.round);
++    const viewport = options.viewport === true && !!global.NameleculeGameViewport;
++    if (viewport) host.classList.add("nl-vp-choice");
+     let state = restoreLevels(recipe, options.initialState, practice), current = null, selector = null, destroyed = false, token = 0;
+     const ready = value => { if (!destroyed && options.onSuccessActionsReady) options.onSuccessActionsReady(value === true && state.solved); };
+     const progress = value => { if (!destroyed && options.onProgress) options.onProgress(value); };
+@@ -496,9 +498,14 @@
+       }
+       const game = state.selected, activeToken = token;
+       const levelHost = node("div"), gameHost = node("div", game === "repair" ? "nl-game-choice-repair" : "nl-builder-host");
+-      host.replaceChildren(button("Άλλαξε παιχνίδι", "nl-quiz-button nl-game-choice-switch", choose), status, levelHost, gameHost);
++      const switcher = button("Άλλαξε παιχνίδι", "nl-quiz-button nl-game-choice-switch", choose);
++      if (viewport) {
++        const toolbar = node("div", "nl-vp-choice-toolbar"); levelHost.classList.add("nl-vp-choice-levels"); gameHost.classList.add("nl-vp-slot");
++        toolbar.append(switcher, levelHost); host.replaceChildren(toolbar, status, gameHost);
++      } else host.replaceChildren(switcher, status, levelHost, gameHost);
+       const requirements = Object.fromEntries(recipe.allowedLevels.map(level => [level, recipe.requiredLevels.includes(level) ? "required" : "optional"]));
+       selector = levels().mount(levelHost, { availableIds: levels().poolFor(1).concat(levels().poolFor(2), levels().poolFor(3)), allowedLevels: recipe.allowedLevels,
++        compact: viewport, selectionRequired: state.selectedLevel !== "legacy", compactLabel: state.selectedLevel === "legacy" ? "Προηγούμενη προσπάθεια" : undefined,
+         selectedLevel: Number.isInteger(state.selectedLevel) ? state.selectedLevel : null, requirements, completedLevels: completed(),
+         onSelect: value => { if (value.category === "alkanes" && value.level !== null) selectLevel(value.level, false); } });
+       if (state.games[game].legacy) levelHost.append(button("Προηγούμενη προσπάθεια", "nl-quiz-button secondary", () => { state.selectedLevel = "legacy"; state.activeLevels[game] = "legacy"; publish(); render(); }));
+@@ -541,7 +548,7 @@
+       }); }
+     }
+     render();
+-    return { destroy() { if (destroyed) return; stop(); destroyed = true; host.replaceChildren(); } };
++    return { destroy() { if (destroyed) return; stop(); destroyed = true; if (viewport) host.classList.remove("nl-vp-choice", "nl-vp-level-selection"); host.replaceChildren(); } };
+   }
+ 
+   function labels(_recipe, lang) {
+@@ -565,6 +572,8 @@
+   function mountComposite(host, options, practice) {
+     if (options.round.version === 2) return mountLevels(host, options, practice);
+     const recipe = validate(options.round);
++    const viewport = options.viewport === true && !!global.NameleculeGameViewport;
++    if (viewport) host.classList.add("nl-vp-choice");
+     const normalize = practice ? restorePractice : restore;
+     let state = normalize(recipe, options.initialState);
+     let current = null, destroyed = false, token = 0;
+@@ -601,6 +610,7 @@
+       const activeToken = token;
+       const switcher = button("Άλλαξε παιχνίδι", "nl-quiz-button nl-game-choice-switch", choose);
+       const gameHost = node("div", game === "repair" ? "nl-game-choice-repair" : "nl-builder-host");
++      if (viewport) gameHost.classList.add("nl-vp-slot");
+       host.replaceChildren(switcher, gameHost);
+       function accept(raw) {
+         if (destroyed || token !== activeToken) return;
+@@ -621,14 +631,15 @@
+         : (game === "detective" ? mountDetective : game === "puzzle" ? mountPuzzle : mountBuilder)(gameHost, settings, practice);
+     }
+     if (state.selected) render(); else choose();
+-    return { destroy() { if (destroyed) return; stop(); destroyed = true; host.replaceChildren(); } };
++    return { destroy() { if (destroyed) return; stop(); destroyed = true; if (viewport) host.classList.remove("nl-vp-choice", "nl-vp-level-selection"); host.replaceChildren(); } };
+   }
+   function mountBuilder(host, options, practice) {
+     const recipe = options.round;
++    const viewport = options.viewport === true && !!global.NameleculeGameViewport;
+     let state = restoreBuilder(recipe, options.initialState, practice);
+     if (!state.seed) state.seed = generated.freshSeed(null);
+     const controller = new AbortController();
+-    let destroyed = false, frame = null, timeout = null, requestId = 0, active = null, footer = null;
++    let destroyed = false, frame = null, timeout = null, requestId = 0, active = null, footer = null, viewportFrame = null;
+     const values = new Uint32Array(4); global.crypto.getRandomValues(values);
+     const session = Array.from(values, value => value.toString(36).padStart(7, "0")).join("");
+     const wireContext = recipe.version === 2 ? levels().makeContext({ source: "enriched", level: recipe.level, seed: state.seed }) : null;
+@@ -637,7 +648,7 @@
+     function progress(value) { if (!destroyed && typeof options.onProgress === "function") options.onProgress(value); }
+     function publish() { state = restoreBuilder(recipe, state, practice); if (!destroyed && typeof options.onStateChange === "function") options.onStateChange(clone(state)); }
+     function clearTimer() { if (timeout) global.clearTimeout(timeout); timeout = null; }
+-    function stopFrame() { clearTimer(); active = null; if (frame) { frame.remove(); frame = null; } if (footer) footer.remove(); footer = null; ready(false); }
++    function stopFrame() { clearTimer(); if (viewportFrame) viewportFrame.destroy(); viewportFrame = null; active = null; if (frame) { frame.remove(); frame = null; } if (footer) footer.remove(); footer = null; ready(false); }
+     function reveal(start, end, purpose) { if (!destroyed && typeof options.onReveal === "function") options.onReveal({ kind: "builder-" + purpose, start, end: end || start }); }
+     function failure(message) {
+       if (destroyed) return;
+@@ -677,7 +688,10 @@
+       [startMarker, endMarker].forEach(marker => { marker.setAttribute("aria-hidden", "true"); marker.style.cssText = "position:absolute;width:1px;height:1px;pointer-events:none;left:0;top:0"; });
+       stage.append(frame, startMarker, endMarker); host.replaceChildren(title, stage); host.setAttribute("aria-busy", "true");
+       active = { requestId: ++requestId, index, entry, stage, startMarker, endMarker, loaded: false };
+-      frame.src = new URL("games/name-builder.html?lessonSession=" + session + "&v=alkane-levels-20261116-r1", global.document.baseURI).href;
++      frame.src = new URL("games/name-builder.html?lessonSession=" + session + "&v=game-viewport-20261116-r1" + (viewport ? "&viewport=1" : "") + "", global.document.baseURI).href;
++      if (viewport) viewportFrame = global.NameleculeGameViewport.fitFrame(frame, { stage, channel: CHANNEL, session,
++        identity: () => active && ({ requestId: active.requestId, attemptId, moleculeId: active.entry.round.moleculeId,
++          ...(wireContext ? { context: wireContext } : {}) }) });
+       progress({ current: index + 1, total: 3 });
+       timeout = global.setTimeout(() => failure("Το παιχνίδι άργησε να φορτώσει. Η προσπάθειά σου διατηρήθηκε. Δοκίμασε ξανά."), 60000);
+       heading.tabIndex = -1; heading.focus({ preventScroll: true });
+@@ -710,7 +724,8 @@
+           if (state.solved && typeof options.onSolved === "function") options.onSolved({ kind: "correct" }, clone(state));
+         } else { if (footer) footer.remove(); footer = null; ready(false); }
+       } else if (data.type === "resize" && Number.isFinite(data.height) && data.height >= 80 && data.height <= 8000) {
+-        frame.style.height = Math.ceil(data.height) + "px";
++        if (!viewport) frame.style.height = Math.ceil(data.height) + "px";
++        else if (viewportFrame) viewportFrame.refresh();
+       } else if (data.type === "reveal" && context.loaded && Number.isFinite(data.startY) && Number.isFinite(data.endY) &&
+         data.startY >= 0 && data.endY >= data.startY && data.endY <= 8000) {
+         const purpose = data.purpose === undefined ? "feedback" : data.purpose;
+@@ -730,10 +745,11 @@
+   }
+   function mountPuzzle(host, options, practice) {
+     const recipe = options.round;
++    const viewport = options.viewport === true && !!global.NameleculeGameViewport;
+     let state = restorePuzzle(recipe, options.initialState, practice);
+     if (!state.seed) state.seed = generated.freshSeed(null);
+     const controller = new AbortController();
+-    let destroyed = false, frame = null, timeout = null, requestId = 0, active = null, footer = null;
++    let destroyed = false, frame = null, timeout = null, requestId = 0, active = null, footer = null, viewportFrame = null;
+     const values = new Uint32Array(4); global.crypto.getRandomValues(values);
+     const session = Array.from(values, value => value.toString(36).padStart(7, "0")).join("");
+     const wireContext = recipe.version === 2 ? levels().makeContext({ source: "enriched", level: recipe.level, seed: state.seed }) : null;
+@@ -742,7 +758,7 @@
+     function progress(value) { if (!destroyed && typeof options.onProgress === "function") options.onProgress(value); }
+     function publish() { state = restorePuzzle(recipe, state, practice); if (!destroyed && typeof options.onStateChange === "function") options.onStateChange(clone(state)); }
+     function clearTimer() { if (timeout) global.clearTimeout(timeout); timeout = null; }
+-    function stopFrame() { clearTimer(); active = null; if (frame) { frame.remove(); frame = null; } if (footer) footer.remove(); footer = null; ready(false); }
++    function stopFrame() { clearTimer(); if (viewportFrame) viewportFrame.destroy(); viewportFrame = null; active = null; if (frame) { frame.remove(); frame = null; } if (footer) footer.remove(); footer = null; ready(false); }
+     function failure(message) {
+       if (destroyed) return;
+       stopFrame(); progress(null); host.setAttribute("aria-busy", "false");
+@@ -776,7 +792,10 @@
+       // The child owns its logo/title; the same header is never rendered twice.
+       stage.append(frame, startMarker, endMarker); host.replaceChildren(stage); host.setAttribute("aria-busy", "true");
+       active = { requestId: ++requestId, index, entry, stage, startMarker, endMarker, loaded: false };
+-      frame.src = new URL("games/molecular-puzzle.html?embedded=1&lessonSession=" + session + "&v=alkane-levels-20261116-r1", global.document.baseURI).href;
++      frame.src = new URL("games/molecular-puzzle.html?embedded=1&lessonSession=" + session + "&v=game-viewport-20261116-r1" + (viewport ? "&viewport=1" : "") + "", global.document.baseURI).href;
++      if (viewport) viewportFrame = global.NameleculeGameViewport.fitFrame(frame, { stage, channel: PUZZLE_CHANNEL, session,
++        identity: () => active && ({ requestId: active.requestId, attemptId, moleculeId: active.entry.moleculeId,
++          ...(wireContext ? { context: wireContext } : {}) }) });
+       progress({ current: index + 1, total: 3 });
+       timeout = global.setTimeout(() => failure("Το παζλ άργησε να φορτώσει. Η προσπάθειά σου διατηρήθηκε. Δοκίμασε ξανά."), 60000);
+     }
+@@ -811,7 +830,8 @@
+           if (state.solved && typeof options.onSolved === "function") options.onSolved({ kind: "correct" }, clone(state));
+         } else { if (footer) footer.remove(); footer = null; ready(false); }
+       } else if (data.type === "resize" && Number.isFinite(data.height) && data.height >= 80 && data.height <= 8000) {
+-        frame.style.height = Math.ceil(data.height) + "px";
++        if (!viewport) frame.style.height = Math.ceil(data.height) + "px";
++        else if (viewportFrame) viewportFrame.refresh();
+       } else if (data.type === "reveal" && context.loaded && Number.isFinite(data.startY) && Number.isFinite(data.endY) &&
+         data.startY >= 0 && data.endY >= data.startY && data.endY <= 8000) {
+         const purpose = data.purpose === undefined ? "feedback" : data.purpose;
+--- a/js/namelecule-molecular-detective-lesson.js
++++ b/js/namelecule-molecular-detective-lesson.js
+@@ -117,9 +117,11 @@
+   }
+   function mount(host, options, practice) {
+     const recipe = options.round, input = options.input;
++    const viewport = options.viewport === true && !!global.NameleculeGameViewport;
+     let state = restore(recipe, options.initialState, input, practice);
+     if (!state.seed) state.seed = global.NameleculeGeneratedRepairCheckpoint.freshSeed(null);
+     let destroyed = false, frame = null, active = null, timer = null, footer = null, requestId = 0;
++    let viewportFrame = null;
+     const random = new Uint32Array(4); global.crypto.getRandomValues(random);
+     const session = Array.from(random, n => n.toString(36).padStart(7, "0")).join("");
+     const wireContext = recipe.version === 2 ? levelContext(recipe, state.seed) : null;
+@@ -133,6 +135,7 @@
+       if (!destroyed && typeof options.onStateChange === "function") options.onStateChange(clone(state));
+     }
+     function stopFrame() {
++      if (viewportFrame) viewportFrame.destroy(); viewportFrame = null;
+       if (timer) global.clearTimeout(timer); timer = null;
+       active = null;
+       if (frame) frame.remove(); frame = null;
+@@ -176,7 +179,11 @@
+       [start, end].forEach(marker => { marker.setAttribute("aria-hidden", "true"); });
+       stage.append(frame, start, end); host.replaceChildren(heading, stage); host.setAttribute("aria-busy", "true");
+       active = { requestId: ++requestId, index, entry, stage, start, end, loaded: false, sent: false, stateRevision: -1 };
+-      frame.src = new URL("games/molecular-detective.html?lessonSession=" + session + "&embedded=1&v=alkane-levels-20261116-r2", global.document.baseURI).href;
++      frame.src = new URL("games/molecular-detective.html?lessonSession=" + session + "&embedded=1&v=game-viewport-20261116-r1" + (viewport ? "&viewport=1" : "") + "", global.document.baseURI).href;
++      if (viewport) viewportFrame = global.NameleculeGameViewport.fitFrame(frame, { stage, channel: CHANNEL, session,
++        identity: () => active && ({ requestId: active.requestId, attemptId,
++          moleculeId: active.entry.snapshot.moleculeId, missionId: active.entry.mission.id,
++          ...(wireContext ? { context: wireContext } : {}) }) });
+       progress({ current: index + 1, total: 3 });
+       timer = global.setTimeout(() => fail("Ο Ντεντέκτιβ άργησε να φορτώσει. Η προσπάθειά σου διατηρήθηκε. Δοκίμασε ξανά."), 90000);
+       heading.focus({ preventScroll: true });
+@@ -213,7 +220,8 @@
+           if (state.solved && typeof options.onSolved === "function") options.onSolved({ kind: "correct" }, clone(state));
+         } else { if (footer) footer.remove(); footer = null; ready(false); }
+       } else if (data.type === "resize" && Number.isFinite(data.height) && data.height >= 80 && data.height <= 8000) {
+-        frame.style.height = Math.ceil(data.height) + "px";
++        if (!viewport) frame.style.height = Math.ceil(data.height) + "px";
++        else if (viewportFrame) viewportFrame.refresh();
+       } else if (data.type === "scroll-interrupt" && context.loaded) {
+         if (typeof options.onScrollInterrupt === "function") options.onScrollInterrupt();
+       } else if (data.type === "reveal" && context.loaded && Number.isFinite(data.startY) && Number.isFinite(data.endY) &&
+--- a/js/namelecule-generated-repair-checkpoint.js
++++ b/js/namelecule-generated-repair-checkpoint.js
+@@ -311,6 +311,8 @@
+   }
+   function mountSet(host, options, practice) {
+     const recipe = validate(options.round);
++    const viewport = options.viewport === true && !!global.NameleculeGameViewport;
++    if (viewport) host.classList.add("nl-vp-repair-set");
+     requireLevel(recipe);
+     const restoreState = practice ? restorePractice : restore;
+     const cache = practice ? practices : prepared;
+@@ -336,10 +338,12 @@
+       const progress = node("p", "nl-quiz-set-progress", headerProgress ? set.title : "Κουίζ " + (index + 1) + " από 3 · " + set.title);
+       if (!headerProgress) progress.setAttribute("role", "status");
+       const roundHost = node("div", "nl-quiz-set-round");
++      if (viewport) roundHost.classList.add("nl-vp-slot");
+       host.replaceChildren(progress, roundHost);
+       host.setAttribute("aria-busy", "false");
+       const presentation = global.NameleculeRepairGame.presentationForRound(set.rounds[index], { difficulty: recipe.difficulty });
+       const roundOptions = Object.assign({}, presentation, {
++        viewport,
+         initialState: state.states[index], assetBase: options.assetBase,
+         onSuccessActionsReady(ready) {
+           if (!destroyed && state.currentRound === index && roundHost.isConnected &&
+@@ -431,6 +435,7 @@
+       controller.abort();
+       destroyRound();
+       host.removeAttribute("aria-busy");
++      if (viewport) host.classList.remove("nl-vp-repair-set");
+       host.replaceChildren();
+     } };
+   }
+--- a/mulermoc-nom-57.html
++++ b/mulermoc-nom-57.html
+@@ -48,8 +48,8 @@
+   <link rel="stylesheet" href="css/mulermoc-nom-scenario-57.css?v=namelecule-v57-20261115-r1" />
+ 
+   <link rel="stylesheet" href="css/namelecule-57.css?v=namelecule-v57-20261115-r1" />
+-  <link rel="stylesheet" href="css/namelecule-repair-round.css?v=optional-triples-20261110-r1" />
+-  <link rel="stylesheet" href="css/namelecule-quiz-checkpoints.css?v=four-games-20261116-r1" />
++  <link rel="stylesheet" href="css/namelecule-repair-round.css?v=game-viewport-20261116-r1" />
++  <link rel="stylesheet" href="css/namelecule-quiz-checkpoints.css?v=game-viewport-20261116-r1" />
+   <script src="js/namelecule-label-metrics.js?v=20261031-r1"></script>
+   <script src="js/vendor/jsme/namelecule-20261031-r1/jsme.nocache.js"></script>
+   <script src="js/vendor/jquery/jquery-4.0.0.min.js"></script>
+@@ -101,7 +101,8 @@
+       disableInitialConsole: true,
+     };
+   </script>
+-  <link rel="stylesheet" href="css/namelecule-game-levels.css?v=alkane-levels-20261116-r1">
++  <link rel="stylesheet" href="css/namelecule-game-levels.css?v=game-viewport-20261116-r1">
++  <link rel="stylesheet" href="css/namelecule-game-viewport.css?v=game-viewport-20261116-r1">
+ </head>
+ 
+ <body>
+@@ -374,15 +375,16 @@
+   <script src="js/mulermoc-nom-molview-57.js?v=four-games-hydration-20261116-r1"></script>
+   <script src="js/mulermoc-nom-teaching-57.js?v=namelecule-v57-20261115-r1"></script>
+   <script src="js/mulermoc-nom-note-57.js?v=namelecule-v57-20261115-r1"></script>
+-  <script src="js/namelecule-game-levels.js?v=alkane-levels-20261116-r1"></script>
+-  <script src="js/namelecule-game-repair.js?v=alkane-levels-20261116-r1"></script>
+-  <script src="js/namelecule-quiz-checkpoints.js?v=builder-workspace-20261112-r2"></script>
++  <script src="js/namelecule-game-viewport.js?v=game-viewport-20261116-r1"></script>
++  <script src="js/namelecule-game-levels.js?v=game-viewport-20261116-r1"></script>
++  <script src="js/namelecule-game-repair.js?v=game-viewport-20261116-r1"></script>
++  <script src="js/namelecule-quiz-checkpoints.js?v=game-viewport-20261116-r1"></script>
+   <script src="js/namelecule-chemistry-client.js?v=verified-engines-20261105-r1"></script>
+   <script src="js/namelecule-repair-generator.js?v=engine-pilot-20261105-r1"></script>
+-  <script src="js/namelecule-generated-repair-checkpoint.js?v=alkane-levels-20261116-r2"></script>
++  <script src="js/namelecule-generated-repair-checkpoint.js?v=game-viewport-20261116-r1"></script>
+   <script src="js/namelecule-name-builder-engine.js?v=name-builder-20261111-r1"></script>
+   <script src="js/namelecule-molecular-puzzle-engine.js?v=puzzle-lesson-20261112-r1"></script>
+-  <script src="js/namelecule-game-choice-checkpoint.js?v=alkane-levels-20261116-r3"></script>
++  <script src="js/namelecule-game-choice-checkpoint.js?v=game-viewport-20261116-r1"></script>
+   <script src="js/mulermoc-nom-scenario-57.js?v=namelecule-v57-20261115-r1"></script>
+   <script src="js/mulermoc-nom-iupac-57.js?v=namelecule-v57-20261115-r1"></script>
+   <script src="js/mulermoc-nom-lang-57.js?v=namelecule-v57-20261115-r1"></script>
+--- a/js/namelecule-game-viewport.js
++++ b/js/namelecule-game-viewport.js
+@@ -0,0 +1,137 @@
++/* Optional presentation only. Game evidence, chemistry and grading stay owned
++ * by the existing controllers. Older hosts need not load this module. */
++(function (global) {
++  "use strict";
++  const doc = global.document, mounted = new WeakMap();
++  let documentOwners = 0;
++  function later(callback) { return global.requestAnimationFrame(callback); }
++  function cancel(id) { if (id !== null) global.cancelAnimationFrame(id); }
++  function observeResize(target, callback) {
++    if (!global.ResizeObserver || !target) return null;
++    const observer = new global.ResizeObserver(callback); observer.observe(target); return observer;
++  }
++  function mount(root, options) {
++    options = options || {};
++    if (!root || !doc) throw new Error("Missing game viewport root");
++    if (mounted.has(root)) mounted.get(root).destroy();
++    let dead = false, task = null, previous = "";
++    const originalHeight = root.style.getPropertyValue("--nl-vp-height");
++    const originalWidth = root.style.getPropertyValue("--nl-vp-width");
++    const ownsDocument = options.document !== false && !root.closest(".nl-vp-dialog");
++    root.classList.add("nl-game-viewport");
++    if (options.kind) root.setAttribute("data-nl-vp-kind", options.kind);
++    if (ownsDocument) { documentOwners++; doc.documentElement.classList.add("nl-vp-document"); doc.body.classList.add("nl-vp-document"); }
++    function measure() {
++      task = null; if (dead || !root.isConnected) return;
++      const rect = root.getBoundingClientRect(), slot = root.closest(".nl-vp-slot");
++      const viewportHeight = Math.min(global.innerHeight, global.visualViewport ? global.visualViewport.height : global.innerHeight);
++      const bottom = slot ? Math.min(viewportHeight, slot.getBoundingClientRect().bottom) : viewportHeight - 8;
++      const height = Math.max(80, Math.floor(bottom - Math.max(0, rect.top)));
++      const width = Math.max(80, Math.floor(Math.min(global.innerWidth, rect.width || root.clientWidth || global.innerWidth)));
++      const key = width + ":" + height;
++      if (key === previous) return; previous = key;
++      root.style.setProperty("--nl-vp-height", height + "px"); root.style.setProperty("--nl-vp-width", width + "px");
++      root.classList.toggle("nl-vp-narrow", width < 760 || height < 430);
++      const detail = { height, width, narrow: width < 760 || height < 430 };
++      if (typeof options.onResize === "function") options.onResize(detail);
++      root.dispatchEvent(new global.CustomEvent("nl-viewport-change", { bubbles: true, detail }));
++    }
++    function refresh() { if (!dead && task === null) task = later(measure); }
++    const observer = observeResize(root.parentElement, refresh);
++    global.addEventListener("resize", refresh);
++    if (global.visualViewport) global.visualViewport.addEventListener("resize", refresh);
++    const api = { refresh, destroy() {
++      if (dead) return; dead = true; cancel(task); task = null;
++      if (observer) observer.disconnect(); global.removeEventListener("resize", refresh);
++      if (global.visualViewport) global.visualViewport.removeEventListener("resize", refresh);
++      root.classList.remove("nl-game-viewport", "nl-vp-narrow"); root.removeAttribute("data-nl-vp-kind");
++      if (originalHeight) root.style.setProperty("--nl-vp-height", originalHeight); else root.style.removeProperty("--nl-vp-height");
++      if (originalWidth) root.style.setProperty("--nl-vp-width", originalWidth); else root.style.removeProperty("--nl-vp-width");
++      if (ownsDocument && --documentOwners === 0) { doc.documentElement.classList.remove("nl-vp-document"); doc.body.classList.remove("nl-vp-document"); }
++      if (mounted.get(root) === api) mounted.delete(root);
++    } };
++    mounted.set(root, api); refresh(); return api;
++  }
++  function pager(content, options) {
++    options = options || {};
++    if (!content || !content.parentNode || !doc) throw new Error("Missing paged content");
++    const horizontal = options.axis === "x", wrapper = doc.createElement("div"), nav = doc.createElement("nav");
++    wrapper.className = "nl-vp-pager nl-vp-pager-" + (horizontal ? "x" : "y");
++    nav.className = "nl-vp-pager-nav"; nav.setAttribute("aria-label", options.label || "Σελίδες περιεχομένου");
++    const previous = doc.createElement("button"), next = doc.createElement("button"), count = doc.createElement("span");
++    previous.type = next.type = "button"; previous.textContent = "←"; next.textContent = "→";
++    previous.setAttribute("aria-label", "Προηγούμενη σελίδα — " + (options.label || "περιεχόμενο"));
++    next.setAttribute("aria-label", "Επόμενη σελίδα — " + (options.label || "περιεχόμενο"));
++    count.setAttribute("aria-live", "polite"); count.setAttribute("aria-atomic", "true");
++    nav.append(previous, count, next); content.before(wrapper); wrapper.append(content, nav);
++    content.classList.add("nl-vp-page-content", "nl-vp-page-window");
++    let dead = false, task = null;
++    function metrics() {
++      const size = horizontal ? content.clientWidth : content.clientHeight;
++      const total = horizontal ? content.scrollWidth : content.scrollHeight;
++      const position = horizontal ? content.scrollLeft : content.scrollTop;
++      const line = parseFloat(global.getComputedStyle(content).lineHeight) || 24;
++      const explicitOverlap = !horizontal && Number.isFinite(options.overlap) && options.overlap > 0;
++      const overlap = explicitOverlap ? Math.min(Math.max(0, size - 24), options.overlap) : Math.min(size / 4, horizontal ? 24 : line);
++      const step = Math.max(24, size - overlap);
++      return { size, maximum: Math.max(0, total - size), position, step };
++    }
++    function refresh() {
++      if (dead) return;
++      const m = metrics(), overflow = m.size > 0 && m.maximum > 2;
++      wrapper.classList.toggle("is-overflow", overflow); nav.hidden = !overflow;
++      previous.disabled = m.position <= 1; next.disabled = m.position >= m.maximum - 1;
++      const pages = Math.ceil(m.maximum / m.step) + 1;
++      const current = m.position >= m.maximum - 1 ? pages : Math.min(pages, Math.floor((m.position + 1) / m.step) + 1);
++      count.textContent = overflow ? "Σελίδα " + current + "/" + pages : "";
++    }
++    function schedule() { if (!dead && task === null) task = later(() => { task = null; refresh(); }); }
++    function go(direction) {
++      const m = metrics(), position = Math.max(0, Math.min(m.maximum, m.position + direction * m.step));
++      if (horizontal) content.scrollLeft = position; else content.scrollTop = position;
++      refresh();
++    }
++    previous.addEventListener("click", () => go(-1)); next.addEventListener("click", () => go(1));
++    content.addEventListener("scroll", schedule, { passive: true }); global.addEventListener("resize", schedule);
++    const observer = observeResize(content, schedule);
++    const mutation = global.MutationObserver ? new global.MutationObserver(schedule) : null;
++    if (mutation) mutation.observe(content, { subtree: true, childList: true, characterData: true });
++    refresh();
++    return { refresh, previous: () => go(-1), next: () => go(1), element: wrapper, destroy() {
++      if (dead) return; dead = true; cancel(task); if (observer) observer.disconnect(); if (mutation) mutation.disconnect();
++      content.removeEventListener("scroll", schedule); global.removeEventListener("resize", schedule);
++      content.classList.remove("nl-vp-page-content", "nl-vp-page-window");
++      if (wrapper.parentNode) { wrapper.before(content); wrapper.remove(); }
++    } };
++  }
++  /* The parent owns iframe height. Natural child resize reports are ignored only
++   * for opted-in hosts; this protocol never reads or changes answer evidence. */
++  function fitFrame(frame, options) {
++    options = options || {};
++    const stage = options.stage || frame.parentElement;
++    let dead = false, task = null, last = "";
++    frame.classList.add("nl-vp-frame"); stage.classList.add("nl-vp-fit-stage");
++    function measure(force) {
++      task = null; if (dead || !frame.isConnected) return;
++      const rect = stage.getBoundingClientRect();
++      const width = Math.max(80, Math.floor(rect.width)), height = Math.max(80, Math.floor(rect.height));
++      const identity = typeof options.identity === "function" ? options.identity() : options.identity;
++      if (!identity) return;
++      const key = width + ":" + height + ":" + identity.requestId;
++      if (!force && key === last) return; last = key;
++      frame.style.height = height + "px";
++      if (frame.contentWindow && options.channel && options.session) frame.contentWindow.postMessage({
++        channel: options.channel, session: options.session, ...identity,
++        command: "viewport", viewportVersion: 1, width, height
++      }, global.location.origin);
++    }
++    function refresh() { if (!dead && task === null) task = later(() => measure(false)); }
++    const observer = observeResize(stage, refresh);
++    const onLoad = () => measure(true); frame.addEventListener("load", onLoad); global.addEventListener("resize", refresh);
++    refresh();
++    return { refresh, destroy() { if (dead) return; dead = true; cancel(task); if (observer) observer.disconnect();
++      frame.removeEventListener("load", onLoad); global.removeEventListener("resize", refresh);
++      frame.classList.remove("nl-vp-frame"); stage.classList.remove("nl-vp-fit-stage"); } };
++  }
++  global.NameleculeGameViewport = Object.freeze({ version: 1, mount, pager, fitFrame });
++})(typeof window !== "undefined" ? window : globalThis);
+--- a/css/namelecule-game-viewport.css
++++ b/css/namelecule-game-viewport.css
+@@ -0,0 +1,42 @@
++/* Opt-in presentational contract: original hosts retain their natural layout. */
++html.nl-vp-document,body.nl-vp-document{box-sizing:border-box;height:100%;min-height:0;margin:0;overflow:hidden}
++.nl-game-viewport{box-sizing:border-box;min-width:0;min-height:0;height:var(--nl-vp-height,calc(100dvh - 16px));max-height:var(--nl-vp-height,calc(100dvh - 16px))}
++.nl-game-viewport [hidden],.nl-vp-dialog [hidden],.nl-vp-pager-nav[hidden]{display:none!important}
++.nl-vp-pager{display:grid;grid-template-rows:minmax(0,1fr) auto;min-width:0;min-height:0;max-width:100%;max-height:100%;position:relative}
++.nl-vp-page-content{box-sizing:border-box;min-width:0;min-height:0;max-width:100%;max-height:100%;overflow:hidden!important;scroll-behavior:auto!important;overscroll-behavior:contain}
++.nl-vp-pager-x>.nl-vp-page-content{width:100%}
++.nl-vp-pager-nav{display:flex;align-items:center;justify-content:center;gap:10px;min-height:36px;padding:2px 4px;box-sizing:border-box;color:#254c50;font:600 .82rem/1.2 system-ui,sans-serif}
++.nl-vp-pager-nav button{box-sizing:border-box;min-height:32px;min-width:40px;border:1px solid #83aca0;border-radius:8px;background:#edf6f0;color:#254c50;font:700 1rem/1 system-ui,sans-serif;cursor:pointer}
++.nl-vp-pager-nav button:disabled{opacity:.45;cursor:default}
++.nl-vp-pager-nav button:focus-visible{outline:3px solid #a75930;outline-offset:2px}
++.nl-vp-fit-stage{position:relative;flex:1 1 0;min-height:0;min-width:0;overflow:hidden}
++.nl-vp-frame{display:block;box-sizing:border-box;min-height:0!important;max-height:100%;width:100%;max-width:100%;border:0}
++.nl-vp-dialog{height:calc(100dvh - 24px);max-height:calc(100dvh - 24px);overflow:hidden}
++.nl-vp-dialog[open]{display:flex;flex-direction:column}
++.nl-vp-dialog .nl-quiz-dialog-header{position:static;flex:0 0 auto;padding:8px 12px;gap:10px}
++.nl-vp-dialog .nl-quiz-dialog-actions{flex-direction:row;align-items:center;max-width:65%;gap:8px}
++.nl-vp-dialog .nl-quiz-dialog-actions .nl-quiz-button{padding:7px 10px;min-height:36px;font-size:.88rem}
++.nl-vp-dialog .nl-quiz-round-progress{font-size:.92rem}
++.nl-vp-dialog .nl-quiz-host{display:flex;flex-direction:column;flex:1 1 0;min-height:0;min-width:0;padding:8px 12px}
++.nl-vp-choice{display:flex;flex-direction:column;flex:1 1 0;min-height:0;gap:6px}
++.nl-vp-choice-toolbar{display:flex;align-items:flex-start;flex:0 0 auto;gap:8px;min-height:0}
++.nl-vp-choice-toolbar>.nl-game-choice-switch{flex:0 0 auto;margin:0;min-height:34px;padding:6px 8px;font-size:.84rem}
++.nl-vp-choice-toolbar>.nl-vp-choice-levels{flex:1 1 0;min-width:0}
++.nl-vp-choice-toolbar .nl-game-levels{margin:0}
++.nl-vp-repair-set{display:flex;flex:1 1 0;flex-direction:column;min-height:0}
++.nl-vp-repair-set>.nl-quiz-set-progress{margin:0 0 3px;font-size:.8rem;line-height:1.25;flex:0 0 auto}
++.nl-vp-choice>.nl-game-choice-switch{align-self:flex-start;flex:0 0 auto;margin:0;min-height:34px;padding:5px 10px;font-size:.88rem}
++.nl-vp-choice>.nl-game-choice-note{flex:0 0 auto;font-size:.87rem;line-height:1.3;margin:0}
++.nl-vp-choice>.nl-vp-choice-levels{flex:0 0 auto;min-height:0}
++.nl-vp-slot{display:flex;flex-direction:column;flex:1 1 0;min-width:0;min-height:0}
++.nl-vp-slot>.nl-builder-title{display:none}
++.nl-vp-slot>.nl-builder-stage,.nl-vp-slot>.nl-detective-stage{flex:1 1 0;min-height:0}
++.nl-vp-dialog .nl-builder-actions,.nl-vp-dialog .nl-builder-actions .round-next,.nl-vp-dialog .nl-detective-actions{flex:0 0 auto;gap:6px;margin:5px 0 0;justify-content:flex-end}
++.nl-vp-dialog .nl-builder-actions button,.nl-vp-dialog .nl-detective-actions button{min-height:36px;padding:7px 10px;font-size:.88rem}
++.nl-vp-choice .nl-game-choice-grid{flex:1 1 0;min-height:0;grid-template-rows:repeat(2,minmax(0,1fr));gap:10px}
++.nl-vp-choice .nl-game-choice-card{min-height:0;padding:12px;gap:10px}
++.nl-vp-choice .nl-game-choice-card img{width:56px;height:56px}
++.nl-vp-choice .nl-game-choice-copy strong{font-size:1.08rem}
++.nl-vp-choice .nl-game-choice-copy span{font-size:.85rem;line-height:1.3}
++.nl-vp-choice.nl-vp-level-selection>.nl-vp-slot{display:none}
++@media(max-width:650px){.nl-vp-dialog{height:calc(100dvh - 12px);max-height:calc(100dvh - 12px)}.nl-vp-dialog .nl-quiz-dialog-title{font-size:.84rem;line-height:1.25}.nl-vp-dialog .nl-quiz-dialog-header{padding:6px 8px;gap:6px}.nl-vp-dialog .nl-quiz-dialog-actions{max-width:66%;gap:5px;flex-wrap:wrap;justify-content:flex-end}.nl-vp-dialog .nl-quiz-host{padding:6px 8px}.nl-vp-choice .nl-game-choice-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.nl-vp-choice .nl-game-choice-card{flex-direction:column;justify-content:center;text-align:center;padding:8px;gap:5px}.nl-vp-choice .nl-game-choice-copy strong{font-size:.96rem}.nl-vp-choice .nl-game-choice-copy span{font-size:.8rem}.nl-vp-dialog .nl-builder-actions button,.nl-vp-dialog .nl-detective-actions button{flex:1 1 auto;min-height:36px;padding:6px 8px;font-size:.82rem}.nl-vp-pager-nav{min-height:40px}.nl-vp-pager-nav button{min-height:36px}}

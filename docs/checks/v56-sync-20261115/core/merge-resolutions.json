@@ -1,0 +1,44 @@
+[
+  {
+    "file": "core",
+    "choice": "ours",
+    "ours": "        // Representation switches can reorder atoms without changing counts.\n        // Key every ordered graph input and the source records (which include\n        // charge/isotope/stereo fields), not just the selected molecule/size.\n        var source2D = null;\n        try { source2D = jsmeNomeclatureApplet.molFile(); } catch (eSource) {}\n        var graphKey = JSON.stringify([selectedMol, allAtomsTypeList, bondList,\n            allAtomsTypeList3D, bondList3D, source2D, molAtomMapSource3D]);\n        if (!M || !M.arr || K !== graphKey || M.n2 !== n2 || M.n3 !== n3) {\n            M = fBuildHeavyMap2D3D(false)\n            try { molAtomMap2D3D = M; molAtomMapKey = graphKey } catch (eS) {}\n",
+    "theirs": "        if (!M || !M.arr || K !== selectedMol || M.n2 !== n2 || M.n3 !== n3) {\n            M = fBuildHeavyMap2D3D(false);\n            if (!M) {\n                // Order-ignorant fallback: still bijective (symmetric chains\n                // keep stepping), but single/double identity is unchecked\n                // (keto/enol-class mismatch possible). Logged so REVIEW can\n                // tell strict maps from fallback ones.\n                try { /* console.warn(\"[map2D3D] strict build failed for \" + selectedMol + \", trying order-ignorant fallback\"); */ } catch (eW) {}\n                M = fBuildHeavyMap2D3D(true);\n            }\n            try { molAtomMap2D3D = M; molAtomMapKey = selectedMol } catch (eS) {}\n"
+  },
+  {
+    "file": "core",
+    "choice": "ours",
+    "ours": "            sortedMultiDBonds.sort((a, b) => a - b)\n",
+    "theirs": "            sortedMultiDBonds.sort(function (a, b) { return a - b })\n"
+  },
+  {
+    "file": "core",
+    "choice": "ours",
+    "ours": "            sortedMultiTBonds.sort((a, b) => a - b)\n",
+    "theirs": "            sortedMultiTBonds.sort(function (a, b) { return a - b })\n"
+  },
+  {
+    "file": "core",
+    "choice": "ours",
+    "ours": "                    sortedFunPositions.sort((a, b) => a - b)\n",
+    "theirs": "                    sortedFunPositions.sort(function (a, b) { return a - b })\n"
+  },
+  {
+    "file": "core",
+    "choice": "ours",
+    "ours": "                sortedFunPositions.sort((a, b) => a - b)\n",
+    "theirs": "                sortedFunPositions.sort(function (a, b) { return a - b })\n"
+  },
+  {
+    "file": "core",
+    "choice": "theirs",
+    "ours": "                sortedFunPositions.push(currXPos)\n            }\n            sortedFunPositions.sort((a, b) => a - b)\n            for (let j = 0; j < sortedFunPositions.length; j++) {\n                myXpositions += sortedFunPositions[j]\n                if (j < sortedFunPositions.length - 1) {\n                    myXpositions += \",\"\n                } else {\n                    myXpositions += \"-\"\n                }\n",
+    "theirs": "                _locs.push(currXPos)\n"
+  },
+  {
+    "file": "name-en",
+    "choice": "theirs",
+    "ours": "    // P-16.7.1(a) elision at box seams: \"yn\"/\"en\" before a\n    // consonant-initial suffix regains its terminal \"e\", across locants\n    // (ynedioic, enedial); vowel-initial suffixes fuse bare.\n",
+    "theirs": "    // P-16.7.1(a) elision at box seams: \"yn\"/\"en\" directly before a\n    // consonant-initial suffix box regains its terminal \"e\"\n    // (ynedioic, enedial); vowel-initial suffixes fuse bare. Locant-led\n    // di/tri-suffixes (yne-2,7-dione) fuse against locants+suffix combined.\n"
+  }
+]

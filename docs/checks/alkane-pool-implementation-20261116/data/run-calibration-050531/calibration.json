@@ -1,0 +1,65 @@
+{
+  "completed": true,
+  "checks": [
+    {
+      "label": "old/new actual native Expanded comparison captured",
+      "detail": null
+    }
+  ],
+  "role": "Developer actual isolated Firefox; not independent browser review",
+  "limits": [
+    "Native headless Firefox; viewport emulation, not physical mobile or conference/offline qualification",
+    "JSmol remote j2s/fonts/services dependencies remain",
+    "Personal Firefox and user preview server untouched"
+  ],
+  "inputSurfaceAtStart": {
+    "innerWidth": 1500,
+    "innerHeight": 1000,
+    "outerWidth": 1800,
+    "outerHeight": 1400,
+    "screenWidth": 1800,
+    "screenHeight": 1400
+  },
+  "comparison": [
+    {
+      "id": "methyl_2_pentane",
+      "name": "2-μεθυλοπεντάνιο",
+      "CC": 1187,
+      "font": 453.48615090735433,
+      "ratio": 2.6175,
+      "calibration": "1.679578336693905",
+      "displayPolicy": null,
+      "bbox": {
+        "x": 381,
+        "y": 372,
+        "width": 618,
+        "height": 337,
+        "top": 372,
+        "right": 999,
+        "bottom": 709,
+        "left": 381
+      }
+    },
+    {
+      "id": "methyl_2_butane",
+      "name": "2-μεθυλοβουτάνιο",
+      "CC": 1200,
+      "font": 420,
+      "ratio": 2.857142857142857,
+      "calibration": null,
+      "displayPolicy": "namelecule-alkane-20261030",
+      "bbox": {
+        "x": 381,
+        "y": 372,
+        "width": 618,
+        "height": 337,
+        "top": 372,
+        "right": 999,
+        "bottom": 709,
+        "left": 381
+      }
+    }
+  ],
+  "javascriptErrors": [],
+  "diagnostics": []
+}

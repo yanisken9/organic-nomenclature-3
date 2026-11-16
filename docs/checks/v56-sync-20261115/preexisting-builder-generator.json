@@ -1,0 +1,13 @@
+{
+  "status": "Pre-existing generated-host drift, no sync regression; unchanged55 host deliberately preserved",
+  "generatorCheckPassed": false,
+  "allThreeSourcePathsMatchSessionBaseline": true,
+  "paths": [
+    "games/name-builder-viewer.html",
+    "tools/build-name-builder-host.py",
+    "mulermoc-nom-55.html"
+  ],
+  "diffLines": 27,
+  "diff": "preexisting-builder-generator.diff",
+  "next": "Actual existing Builder runtime replay under candidate56 parent; do not regenerate legacy55 host as unrelated fix."
+}

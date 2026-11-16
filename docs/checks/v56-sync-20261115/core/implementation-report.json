@@ -1,0 +1,307 @@
+{
+  "timestampUTC": "2026-11-15T05:14:32.490677+00:00",
+  "scope": "Composed candidate core56/EN56 only, reviewed install owned by root",
+  "candidate": "/private/tmp/namelecule-v56-sync-20261115-nqi71wns/candidate",
+  "primary": "/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3",
+  "upstreamBase": "5ab2495575bbbffeb0ac67f91d4d81857cb65970",
+  "upstreamTarget": "e75a37baeda9017666628c9f2f3428ffdd3a2f1c",
+  "primaryBaseHEAD": "168e3cec01f941a84d40bbe0dc07156e7baa35d0",
+  "targets": {
+    "/private/tmp/namelecule-v56-sync-20261115-nqi71wns/candidate/js/mulermoc-nom-core-56.js": {
+      "sha256": "01e4b44578dc9ed6c8a484c5d38ee8a56e44ce2fc81ac6cf479a8333718ee8b5",
+      "bytes": 256724
+    },
+    "/private/tmp/namelecule-v56-sync-20261115-nqi71wns/candidate/js/mulermoc-nom-name-en-56.js": {
+      "sha256": "092fcf2701c5d48dc93cbeee993153950846307588c39e75d195f9d96bb58c2d",
+      "bytes": 54442
+    }
+  },
+  "preserved55": {
+    "/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/js/mulermoc-nom-core-55.js": {
+      "sha256": "6cbdbd0ce60f5d66ff3e6925cdfd48e470764baa02b6263f325eff356df5e270",
+      "equalFrozenBefore": true
+    },
+    "/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/js/mulermoc-nom-name-en-55.js": {
+      "sha256": "e2dd570b5cbfe1f07a3c0ce29f8e4535aeda64bf36ee85741f7f0421871042c8",
+      "equalFrozenBefore": true
+    }
+  },
+  "checks": [
+    {
+      "command": [
+        "node",
+        "--check",
+        "/private/tmp/namelecule-v56-sync-20261115-nqi71wns/candidate/js/mulermoc-nom-core-56.js"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "--",
+        "/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/js/mulermoc-nom-core-55.js",
+        "/private/tmp/namelecule-v56-sync-20261115-nqi71wns/candidate/js/mulermoc-nom-core-56.js"
+      ],
+      "exitCode": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "/private/tmp/namelecule-v56-sync-20261115-nqi71wns/candidate/js/mulermoc-nom-name-en-56.js"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "--",
+        "/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/js/mulermoc-nom-name-en-55.js",
+        "/private/tmp/namelecule-v56-sync-20261115-nqi71wns/candidate/js/mulermoc-nom-name-en-56.js"
+      ],
+      "exitCode": 1,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "adoptedUpstream": [
+    "Supported element/group whitelist; unsupported drafts decline",
+    "Only principal alcohol/ketone/amine anchors orient parent in2D/3D; acid outranks ester",
+    "Nitro exact1C+2O recognition, safe C anchor and terminalN-O handling in2D/3D",
+    "Multi-FG separate locants, halogen prefixes, principal suffix locant and accent source",
+    "Polynitro multiplicity; numeric sorting agrees with already-correct local guards",
+    "EN locant-led dione/diol terminal e restoration and diene connecting vowel on stem box"
+  ],
+  "preservedLocal": [
+    "Strict fixed-width MOL parser/writer and counts, CHG/ISO/SUP/property metadata retention, query/stereo failclosed transforms",
+    "Exact2D/3D bond-order mapping and graph/source-key cache invalidation, no automatic relaxed mapping",
+    "sp-linearization, safe acyclic generation, source identity and formula/charge/isotope retention",
+    "Guarded linear endpoint C9-C20 group names, numeric locants, Greek nonane stem",
+    "Decorated fragment must cover all sidecarbons; direct halo/nitro multiplicity applied once",
+    "Plain carbon branch with direct halogen/nitro must decline rather than omit branch",
+    "EN intrinsic locant enclosures, complete systematic alphabetical order with stable IDs, sec/tert collation, compound bis/tris/tetrakis"
+  ],
+  "compositionCorrections": [
+    {
+      "id": "V56-COMP-EN01",
+      "cause": "Upstream eager second-infix fusion also runs on bare dial, producing yne-dial while boxes yield ynedial",
+      "change": "Apply eager restoration only to the documented locant-led di/tri suffixes; bare dial follows existing shared final assembly",
+      "before": "2-ethyl-3-methylhex-2-en-4-yne-dial",
+      "after": "2-ethyl-3-methylhex-2-en-4-ynedial",
+      "evidence": "upstream-chemistry-results.json/dial"
+    },
+    {
+      "id": "V56-COMP-EN02",
+      "cause": "Local locant-skipping and new upstream full suffix fusion must both survive merge",
+      "change": "Accumulate intervening suffix locants before invoking v56 fFuseEnInfixSuffix; stable component IDs preserved",
+      "evidence": "en-results.json and upstream-chemistry-results.json/suffixFusion"
+    }
+  ],
+  "testResults": {
+    "core56-results.json": {
+      "molecules": 141,
+      "namingParentRegressionCases": 842,
+      "namingParentDifferences": 0,
+      "coldInitCases": 842,
+      "exactMaps": 842,
+      "mapCases": 842,
+      "signatureMismatches": [],
+      "untranslatedMaps": [],
+      "generatorCases": 1263,
+      "generatorNamingDifferences": [],
+      "reorderedGraphMaps": 421,
+      "reorderedGraphMapFailures": [],
+      "invalidInputChecks": 6,
+      "chemicalOraclePermutationCases": 240,
+      "chemicalGuardCases": 15,
+      "mapBoundaryCases": 4,
+      "generatorBentSp": [
+        {
+          "key": "butanenitrile",
+          "mode": "skeletal",
+          "inputBentSp": [
+            {
+              "atom": 1,
+              "cosine": -0.5000089280931208
+            }
+          ],
+          "results": [
+            {
+              "kind": "expanded",
+              "name": "βουτανονιτρίλιο",
+              "heavyAtoms": 5,
+              "atoms": 12,
+              "sameName": true,
+              "bentSp": [
+                {
+                  "atom": 1,
+                  "cosine": -0.5000089280931208
+                }
+              ],
+              "newBentSp": [],
+              "signatureMatches": true
+            }
+          ]
+        }
+      ],
+      "generatorNewBentSp": [],
+      "terminalSpDirectionCases": 4,
+      "unsupportedGeneratorSources": []
+    },
+    "mol-properties56-results.json": {
+      "molecules": 141,
+      "roundtripCases": 422,
+      "generatorGraphFormulaChargeCases": 1684,
+      "unsupportedSources": [
+        {
+          "key": "penten_3_yne_1",
+          "mode": "expanded",
+          "reason": "unsupported literal element/query label"
+        }
+      ],
+      "deliberateFixtures": 13,
+      "namedNitroCases": 24,
+      "negativeButeneMap": true
+    },
+    "map-transitions56-results.json": {
+      "molecules": 141,
+      "exactPersistentTransitions": 1684,
+      "unsupportedRawLabelCases": [
+        {
+          "key": "penten_3_yne_1",
+          "mode": "expanded",
+          "cm": "algorithmic",
+          "reason": "raw literal [H] naming outside whitelist"
+        },
+        {
+          "key": "penten_3_yne_1",
+          "mode": "expanded",
+          "cm": "algorithmic",
+          "reason": "raw literal [H] naming outside whitelist"
+        },
+        {
+          "key": "penten_3_yne_1",
+          "mode": "expanded",
+          "cm": "data",
+          "reason": "raw literal [H] naming outside whitelist"
+        },
+        {
+          "key": "penten_3_yne_1",
+          "mode": "expanded",
+          "cm": "data",
+          "reason": "raw literal [H] naming outside whitelist"
+        }
+      ],
+      "sameSizeMutationRejected": true
+    },
+    "geometry-results.json": {
+      "forms": 422,
+      "molecules": 141,
+      "missing": [
+        {
+          "key": "methane",
+          "mode": "skeletal"
+        }
+      ],
+      "generated": 421,
+      "skipped": [
+        {
+          "key": "penten_3_yne_1",
+          "mode": "expanded",
+          "reason": "unsupported raw literal [H] label; no naming coercion"
+        }
+      ],
+      "failures": 0,
+      "expectedHeavyBondLength": 1.0
+    },
+    "en-results.json": {
+      "molecules": 141,
+      "rawSupportedForms": 421,
+      "cases": 842,
+      "variantAssemblies": 1684,
+      "differences": 54,
+      "keysChanged": [
+        "butadiene_1_2",
+        "butadiene_1_3",
+        "dimethyl_2_3_pentadiene_1_3",
+        "ethyl_3_dimethyl_4_5_hexadiene_1_4",
+        "ethyl_3_isopropyl_2_dimethyl_4_5_hexadien_2_4_dioic_acid",
+        "methyl_3_pentadiene_1_3",
+        "pentadiene_1_3",
+        "pentadiene_1_4",
+        "propadiene"
+      ],
+      "mismatches": 0,
+      "rawExcluded": [
+        {
+          "key": "penten_3_yne_1",
+          "mode": "expanded",
+          "cm": "algorithmic",
+          "reason": "Error: [NOM-DECLINE] unsupported element [H]"
+        },
+        {
+          "key": "penten_3_yne_1",
+          "mode": "expanded",
+          "cm": "data",
+          "reason": "Error: [NOM-DECLINE] unsupported element [H]"
+        }
+      ]
+    },
+    "upstream-chemistry-results.json": {
+      "fixtures": 32,
+      "expectedNamed": 21,
+      "expectedDeclined": 11,
+      "mirrored3D": 21,
+      "matchingBoxAssemblies": 42,
+      "suffixFusionChecks": 7,
+      "failures": [],
+      "actualRuntime": "macOS JavaScriptCore actual project functions; raw hand-built tree fixtures, no JSME"
+    },
+    "naming-results.json": {
+      "completed": true,
+      "checks": 1082,
+      "libraryComparisons": 842,
+      "newCases": 92
+    },
+    "causal-probes-results.json": {
+      "passed": true
+    },
+    "preserved-corrections-results.json": {
+      "passed": true
+    }
+  },
+  "testCommands": [
+    "python3 docs/checks/v56-sync-20261115/core/test-core56.py (core/property/map components passed; initial final geometry harness stopped at raw [H]; corrected geometry rerun separately)",
+    "python3 docs/checks/v56-sync-20261115/core/test-geometry56.py",
+    "python3 docs/checks/v56-sync-20261115/core/test-naming56.py",
+    "python3 docs/checks/v56-sync-20261115/core/test-en56.py",
+    "python3 docs/checks/v56-sync-20261115/core/test-preserved56.py",
+    "python3 docs/checks/v56-sync-20261115/core/test-upstream-chemistry56.py"
+  ],
+  "developmentFailuresAndResolution": [
+    "Historical geometry harness tried naming raw literal [H] despite new whitelist; harness now explicitly records skipped raw source with no label coercion. No molecular source edited.",
+    "Initial EN all-library run exposed upstream yne-dial regression on12 assemblies; bounded causal correction has before/after actualJS evidence and full EN rerun0mismatches.",
+    "Historical exact-preservation assertion included fDetectMolType, intentionally changed by upstream nitro fixes;12 unaffected safeguards verified byte-identical instead. No chemistry assertion weakened."
+  ],
+  "limitations": [
+    "Developer JavaScriptCore tests with applet graph stubs are actual project analysis functions, not actual JSME/DOM/browser execution or independent review. Parent coordinates those checks.",
+    "141molecules422available sourceforms inventoried.421raw-supported forms named/mapped; penten_3_yne_1 expanded contains literal [H], intentionally excluded and rejects; actual JSME normalization requires separate evidence.",
+    "Methane skeletal source absent;422available forms means423potential minus1missing.",
+    "Expanded H-only generation preserves inherited bent butanenitrile skeletal input; central skeletal/linear geometry repairs sp and creates no new bent sp centers.",
+    "Existing incomplete general IUPAC/branched-decorated/cyclic/multiFGmultiplebond support remains failclosed. No broad new naming scope or live external naming oracle.",
+    "No commit/stage/push/publication, primary install, dependency install, conference-machine or offline guarantee. Independent chemistry/reviewer decisions pending root."
+  ],
+  "coreChangeReportGR": "Στο χωριστό τοπικό candidate δημιουργήθηκε το mulermoc-nom-core-56.js από upstream e75a37ba με διατήρηση των τοπικών χημικών δικλίδων της55. Υιοθετήθηκαν οι έλεγχοι υποστηριζόμενων ομάδων/στοιχείων, η προτεραιότητα κύριας χαρακτηριστικής ομάδας και οξέος, η ασφαλής ανίχνευση νίτρο και η πλήρης πολυομαδική αρίθμηση. Τα υφιστάμενα core55 και παλαιότερα παρέμειναν αμετάβλητα. Έγιναν οι καταγεγραμμένοι ευρείς έλεγχοι JavaScriptCore ονομάτων, γράφων2D/3D, μεταδεδομένων και γεωμετρίας· η εξαίρεση raw[H] δηλώνεται χωριστά. Μόνο τοπικό candidate, χωρίς commit ή δημοσίευση· ανεξάρτητο review και browser έλεγχοι συντονίζονται από τον κύριο Developer."
+}

@@ -1,0 +1,37 @@
+{
+  "recordedUTC": "2026-11-15T17:15:00.734454+00:00",
+  "independentReviewClosed": true,
+  "requiredRuntimeChecksPassed": true,
+  "frozenManifestSHA256": "c3064d271474635343afdd52151e1711c7deaee359f13e5cbbb5e320948544a4",
+  "checks": {
+    "native": {
+      "path": "native-browser/run-native57-165722/native57.json",
+      "checks": 39
+    },
+    "raster": {
+      "path": "native-browser/run-raster-165814/raster.json.gz",
+      "cases": 562
+    },
+    "lessonProgressDetective": {
+      "path": "browser/summary.json",
+      "checks": 352,
+      "genuineCorrectUIAttempts": 31
+    },
+    "actualFallback": {
+      "path": "native-browser/run-limits57-171416/limits57.json",
+      "checks": 8
+    },
+    "independentChemistry": [
+      "independent-chemistry-core.json",
+      "independent-chemistry-viewer.json",
+      "independent-raw-map-inventory.json"
+    ],
+    "independentReviewer": [
+      "independent-review-initial.json",
+      "independent-review-final.json"
+    ]
+  },
+  "scope": "Approved17pathlocalprofessorsync. No conference/offline/physicalmobile/personalFirefox qualification. Stereo/queryunsupportedmappingfallsbackto2D. Priornew3Dreadbackdiagnosisnotresolved.",
+  "commit": false,
+  "publication": false
+}

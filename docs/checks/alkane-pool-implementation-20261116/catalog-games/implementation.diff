@@ -1,0 +1,343 @@
+--- before/tools/build-alkane-game-catalog.py
++++ tools/build-alkane-game-catalog.py
+@@ -1,9 +1,9 @@
+ #!/usr/bin/env python3
+-"""Reproduce the opt-in Workshop's structure-only alkane catalog.
++"""Reproduce the versioned, structure-only alkane game catalogs.
+ 
+-Reads only string literals from data54; it never evaluates JavaScript or stores
+-names, selected chains, components or correct answers. Run with --check to
+-verify that the checked-in JSON still matches its exact sources.
++Reads legacy data54 string literals and curated expanded MOL files; it never
++evaluates JavaScript or stores names, selected chains or answers. Run --check to
++verify the legacy catalog, or add --catalog-v2 for the curated 14-molecule pool.
+ """
+ from pathlib import Path
+ import argparse
+@@ -14,8 +14,15 @@
+ 
+ ROOT = Path(__file__).resolve().parents[1]
+ DATA = "js/jsme-nick-nomeclature-moc2-data_54.js"
+-ENGINE = "js/mulermoc-nom-core-54.js"
++ENGINE = "js/chemistry-engines/3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306.js"
+ OUTPUT = "games/data/alkane-structures.json"
++OUTPUT_V2 = "games/data/alkane-structures-v2.json"
++PACK = "data/namelecule-alkanes-v1/manifest.json"
++LEGACY_SHA = "9778e30ea33f2f7cd4c8a472e46e90539856b861a54035a1d514c3246cccf724"
++PACK_IDS = (
++    "methyl_2_butane", "methyl_3_pentane", "ethyl_3_pentane",
++    "dimethyl_2_2_propane", "dimethyl_2_2_butane", "ethyl_3_methyl_2_pentane",
++)
+ MOLECULE_IDS = (
+     "methane", "ethane", "propane", "butane", "pentane",
+     "methyl_2_pentane", "dimethyl_2_3_butane",
+@@ -45,6 +52,12 @@
+     return mol
+ 
+ 
++def serialize_catalog(catalog):
++    canonical = json.dumps(catalog, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
++    catalog["revision"] = sha256(canonical.encode("utf-8"))
++    return json.dumps(catalog, ensure_ascii=False, indent=2) + "\n"
++
++
+ def build_catalog():
+     source_bytes = (ROOT / DATA).read_bytes()
+     source = source_bytes.decode("utf-8")
+@@ -64,25 +77,72 @@
+         "source": {"file": DATA, "sha256": sha256(source_bytes)},
+         "molecules": molecules,
+     }
+-    canonical = json.dumps(catalog, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
+-    catalog["revision"] = sha256(canonical.encode("utf-8"))
+-    return json.dumps(catalog, ensure_ascii=False, indent=2) + "\n"
++    return serialize_catalog(catalog)
++
++
++def build_catalog_v2():
++    # Existing receipts identify the exact legacy bytes and engine. Import its
++    # eight entries intact rather than regenerating them from a newer library.
++    legacy_bytes = (ROOT / OUTPUT).read_bytes()
++    if sha256(legacy_bytes) != LEGACY_SHA or legacy_bytes.decode("utf-8") != build_catalog():
++        raise ValueError("The immutable legacy catalog no longer matches its pinned sources")
++    legacy = json.loads(legacy_bytes)
++    pack_bytes = (ROOT / PACK).read_bytes()
++    pack = json.loads(pack_bytes)
++    records = pack.get("molecules", [])
++    if (pack.get("schemaVersion") != 1 or pack.get("id") != "namelecule-alkanes-v1"
++            or not isinstance(records, list) or tuple(m.get("id") for m in records) != PACK_IDS):
++        raise ValueError("Unexpected curated alkane pack identity or molecule order")
++    molecules = legacy["molecules"].copy()
++    for record in records:
++        molecule_id = record["id"]
++        relative = record.get("files", {}).get("expanded")
++        expected_path = f"mols/namelecule-alkanes-v1/{molecule_id}_2D_Expanded.mol"
++        if relative != expected_path:
++            raise ValueError(f"Unexpected expanded MOL source for {molecule_id}")
++        mol_bytes = (ROOT / relative).read_bytes()
++        if sha256(mol_bytes) != record.get("sha256", {}).get("expanded"):
++            raise ValueError(f"Expanded MOL source hash differs for {molecule_id}")
++        mol = mol_bytes.decode("utf-8")
++        lines = mol.splitlines()
++        if len(lines) < 5 or "V2000" not in lines[3] or "M  END" not in lines:
++            raise ValueError(f"Invalid expanded source MOL for {molecule_id}")
++        molecules.append({
++            "id": molecule_id,
++            "mol": mol,
++            "asset": f"assets/name-repair/expanded-v2/{molecule_id}.svg",
++            "condensedAsset": f"assets/name-repair/condensed-v2/{molecule_id}.svg",
++            "diagramAlt": "Ανεπτυγμένος μοριακός τύπος με σύμβολα άνθρακα και υδρογόνου και απλούς δεσμούς.",
++            "sourceSHA256": sha256(mol_bytes),
++        })
++    return serialize_catalog({
++        "schemaVersion": 1,
++        "catalogVersion": 2,
++        "engineSHA256": legacy["engineSHA256"],
++        "source": {
++            "legacy": {"file": OUTPUT, "sha256": sha256(legacy_bytes), "revision": legacy["revision"]},
++            "pack": {"file": PACK, "sha256": sha256(pack_bytes), "id": pack["id"]},
++        },
++        "molecules": molecules,
++    })
+ 
+ 
+ def main():
+     parser = argparse.ArgumentParser(description=__doc__)
+     parser.add_argument("--check", action="store_true", help="Compare without writing")
+-    parser.add_argument("--output", type=Path, default=ROOT / OUTPUT)
++    parser.add_argument("--catalog-v2", action="store_true", help="Build/check the curated 14-molecule catalog")
++    parser.add_argument("--output", type=Path)
+     args = parser.parse_args()
+-    expected = build_catalog()
++    output = args.output or ROOT / (OUTPUT_V2 if args.catalog_v2 else OUTPUT)
++    expected = build_catalog_v2() if args.catalog_v2 else build_catalog()
+     if args.check:
+-        if not args.output.exists() or args.output.read_text(encoding="utf-8") != expected:
+-            raise SystemExit(f"Catalog differs from current sources: {args.output}")
+-        print("Catalog matches data54 and core54; eight structure-only entries.")
++        if not output.exists() or output.read_text(encoding="utf-8") != expected:
++            raise SystemExit(f"Catalog differs from current sources: {output}")
++        print("Catalog matches pinned sources; " + ("14" if args.catalog_v2 else "eight") + " structure-only entries.")
+     else:
+-        args.output.parent.mkdir(parents=True, exist_ok=True)
+-        args.output.write_text(expected, encoding="utf-8")
+-        print(f"Wrote {args.output}")
++        output.parent.mkdir(parents=True, exist_ok=True)
++        output.write_text(expected, encoding="utf-8")
++        print(f"Wrote {output}")
+ 
+ 
+ if __name__ == "__main__":
+--- before/games/data/alkane-structures-v2.json
++++ games/data/alkane-structures-v2.json
+@@ -0,0 +1,124 @@
++{
++  "schemaVersion": 1,
++  "catalogVersion": 2,
++  "engineSHA256": "3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306",
++  "source": {
++    "legacy": {
++      "file": "games/data/alkane-structures.json",
++      "sha256": "9778e30ea33f2f7cd4c8a472e46e90539856b861a54035a1d514c3246cccf724",
++      "revision": "275d537b19f3ef0791c97d8d78c127f541a0579038ef1e8d65dadde611845690"
++    },
++    "pack": {
++      "file": "data/namelecule-alkanes-v1/manifest.json",
++      "sha256": "1ea6176be7a849f5e5d65a4230c6940e7f28147ad18ef4bafd80cefbe18fa9b2",
++      "id": "namelecule-alkanes-v1"
++    }
++  },
++  "molecules": [
++    {
++      "id": "methane",
++      "mol": "C\n  ChemDraw02062422282D\n\n  5  4  0  0  0  0  0  0  0  0999 V2000\n    0.0000    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.3094    0.0000    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.0000    0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.0000   -0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.3094    0.0000    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0      \n  1  3  1  0      \n  1  4  1  0      \n  1  5  1  0      \nM  END\n$$$$\n",
++      "asset": "assets/name-repair/methane.svg",
++      "diagramAlt": "Ανεπτυγμένος μοριακός τύπος με σύμβολα άνθρακα και υδρογόνου και απλούς δεσμούς.",
++      "sourceSHA256": "87cd9c1ff78c5f8600e4d97a81e879851936b3c049b373fb619418e8fb03c127"
++    },
++    {
++      "id": "ethane",
++      "mol": "CC\n  ChemDraw02062422282D\n\n  8  7  0  0  0  0  0  0  0  0999 V2000\n   -0.3094    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.3094    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.6188    0.0000    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.3094    0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.3094   -0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.3094   -0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.3094    0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.6188    0.0000    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0      \n  2  3  1  0      \n  2  4  1  0      \n  2  5  1  0      \n  1  6  1  0      \n  1  7  1  0      \n  1  8  1  0      \nM  END\n$$$$\n",
++      "asset": "assets/name-repair/ethane.svg",
++      "diagramAlt": "Ανεπτυγμένος μοριακός τύπος με σύμβολα άνθρακα και υδρογόνου και απλούς δεσμούς.",
++      "sourceSHA256": "c7127c7ee954657beffb8d61e1ccc57f7b927e43fd1ab6e66ebf7ae63800392b"
++    },
++    {
++      "id": "propane",
++      "mol": "CCC\n  ChemDraw02062422282D\n\n 11 10  0  0  0  0  0  0  0  0999 V2000\n   -0.9282    0.0000    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.6188    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.0000    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.6188    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.9282    0.0000    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.6188   -0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.6188    0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.0000   -0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.0000    0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.6188   -0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.6188    0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0      \n  2  3  1  0      \n  3  4  1  0      \n  4  5  1  0      \n  2  6  1  0      \n  2  7  1  0      \n  3  8  1  0      \n  3  9  1  0      \n  4 10  1  0      \n  4 11  1  0      \nM  END\n$$$$\n",
++      "asset": "assets/name-repair/propane.svg",
++      "diagramAlt": "Ανεπτυγμένος μοριακός τύπος με σύμβολα άνθρακα και υδρογόνου και απλούς δεσμούς.",
++      "sourceSHA256": "ef357caa1c57c7b9ecee59721a623a0391c7a29fc9d4c51bfd0a7af8327113e1"
++    },
++    {
++      "id": "butane",
++      "mol": "CCCC\n  ChemDraw02062422282D\n\n 14 13  0  0  0  0  0  0  0  0999 V2000\n   -1.2376    0.0000    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.9282    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.3094    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.3094    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.9282    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.2376    0.0000    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.9282   -0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.9282    0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.3094   -0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.3094    0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.3094   -0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.3094    0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.9282   -0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.9282    0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0      \n  2  3  1  0      \n  3  4  1  0      \n  4  5  1  0      \n  5  6  1  0      \n  2  7  1  0      \n  2  8  1  0      \n  3  9  1  0      \n  3 10  1  0      \n  4 11  1  0      \n  4 12  1  0      \n  5 13  1  0      \n  5 14  1  0      \nM  END\n$$$$\n",
++      "asset": "assets/name-repair/butane.svg",
++      "diagramAlt": "Ανεπτυγμένος μοριακός τύπος με σύμβολα άνθρακα και υδρογόνου και απλούς δεσμούς.",
++      "sourceSHA256": "92ac2ae0fdd9af97ff7c0306d5ef0fb06cc367265af0e1d4cecc6eddbe6eb84b"
++    },
++    {
++      "id": "pentane",
++      "mol": "CCCCC\n  ChemDraw02062422282D\n\n 17 16  0  0  0  0  0  0  0  0999 V2000\n   -1.2376    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.6188    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.0000    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.6188    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.2376    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.2376   -0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.5470    0.0000    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.2376    0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.6188   -0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.6188    0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.0000   -0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.0000    0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.6188   -0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.6188    0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.2376   -0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.5470    0.0000    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.2376    0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0      \n  2  3  1  0      \n  3  4  1  0      \n  4  5  1  0      \n  1  6  1  0      \n  1  7  1  0      \n  1  8  1  0      \n  2  9  1  0      \n  2 10  1  0      \n  3 11  1  0      \n  3 12  1  0      \n  4 13  1  0      \n  4 14  1  0      \n  5 15  1  0      \n  5 16  1  0      \n  5 17  1  0      \nM  END\n$$$$\n",
++      "asset": "assets/name-repair/pentane.svg",
++      "diagramAlt": "Ανεπτυγμένος μοριακός τύπος με σύμβολα άνθρακα και υδρογόνου και απλούς δεσμούς.",
++      "sourceSHA256": "d5912e8643efe232d0aba4bca8e6b94603f1eb02d9b33486cd7b223ef37a9b56"
++    },
++    {
++      "id": "methyl_2_pentane",
++      "mol": "CCCC(C)C\n  ChemDraw09282620572D\n\n 20 19  0  0  0  0  0  0  0  0999 V2000\n   -1.2376   -0.2785    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.6188   -0.2785    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.0000   -0.2785    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.6188   -0.2785    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.6188    0.3403    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.2376   -0.2785    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.2376    0.0309    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.2376   -0.5879    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.5470   -0.2785    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.6188   -0.5879    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.0000   -0.5879    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.0000    0.0309    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.6188   -0.5879    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.6188    0.0309    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.5470   -0.2785    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.2376    0.0309    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.2376   -0.5879    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.9282    0.3403    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.3094    0.3403    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.6188    0.6497    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0      \n  2  3  1  0      \n  3  4  1  0      \n  2  5  1  0      \n  4  6  1  0      \n  1  7  1  0      \n  1  8  1  0      \n  1  9  1  0      \n  2 10  1  0      \n  3 11  1  0      \n  3 12  1  0      \n  4 13  1  0      \n  4 14  1  0      \n  6 15  1  0      \n  6 16  1  0      \n  6 17  1  0      \n  5 18  1  0      \n  5 19  1  0      \n  5 20  1  0      \nM  END\n\n",
++      "asset": "assets/name-repair/methyl_2_pentane.svg",
++      "diagramAlt": "Ανεπτυγμένος μοριακός τύπος με σύμβολα άνθρακα και υδρογόνου και απλούς δεσμούς.",
++      "sourceSHA256": "857455c46c5d0a2404b45f84737ff8972ece3cb01b6e8a55d88db49dc76f7863"
++    },
++    {
++      "id": "dimethyl_2_3_butane",
++      "mol": "dimethyl_2_3_butane_2D_Expanded.mol\n  ChemDraw10152618582D\n\n 20 19  0  0  0  0  0  0  0  0999 V2000\n   -0.9282    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.3094    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.3094    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.9282    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.3094   -0.6188    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.3094    0.6188    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.2376    0.0000    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.9282    0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.9282   -0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.2376    0.0000    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.9282   -0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.9282    0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.3094    0.9282    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.0000    0.6188    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.6188    0.6188    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.3094   -0.9282    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.6188   -0.6188    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.0000   -0.6188    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.3094    0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.3094   -0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0      \n  2  3  1  0      \n  3  4  1  0      \n  2  5  1  0      \n  3  6  1  0      \n  1  7  1  0      \n  1  8  1  0      \n  1  9  1  0      \n  4 10  1  0      \n  4 11  1  0      \n  4 12  1  0      \n  6 13  1  0      \n  6 14  1  0      \n  6 15  1  0      \n  5 16  1  0      \n  5 17  1  0      \n  5 18  1  0      \n  2 19  1  0      \n  3 20  1  0      \nM  END\n",
++      "asset": "assets/name-repair/dimethyl_2_3_butane.svg",
++      "diagramAlt": "Ανεπτυγμένος μοριακός τύπος με σύμβολα άνθρακα και υδρογόνου και απλούς δεσμούς.",
++      "sourceSHA256": "1d1ece4d387192b5d593b5f4ab9f2b123f426d93860750f7960ce8bb76bfa118"
++    },
++    {
++      "id": "ethyl_3_dimethyl_2_5_hexane",
++      "mol": "ethyl_3_dimethyl_2_5_hexane_2D_Expanded.mol\n  Namelecule        2D\n\n 32 31  0  0  0  0  0  0  0  0999 V2000\n   -1.5470    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.9282    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.3094    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.3094    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.9282    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.5470    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.9282    0.6188    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.3094   -0.6188    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.3094   -1.2376    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.9282    0.6188    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.8564    0.0000    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.5470   -0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.5470    0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.3094   -0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.3094    0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.9282   -0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.8564    0.0000    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.5470   -0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.5470    0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.9282    0.9282    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.6188    0.6188    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.2376    0.6188    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.0000   -0.6188    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.6188   -0.6188    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.3094   -1.5470    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.0000   -1.2376    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.6188   -1.2376    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.9282    0.9282    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.2376    0.6188    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.6188    0.6188    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.9282   -0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.3094    0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0  0  0  0\n  2  3  1  0  0  0  0\n  3  4  1  0  0  0  0\n  4  5  1  0  0  0  0\n  5  6  1  0  0  0  0\n  2  7  1  0  0  0  0\n  3  8  1  0  0  0  0\n  8  9  1  0  0  0  0\n  5 10  1  0  0  0  0\n  1 11  1  0  0  0  0\n  1 12  1  0  0  0  0\n  1 13  1  0  0  0  0\n  4 14  1  0  0  0  0\n  4 15  1  0  0  0  0\n  5 16  1  0  0  0  0\n  6 17  1  0  0  0  0\n  6 18  1  0  0  0  0\n  6 19  1  0  0  0  0\n  7 20  1  0  0  0  0\n  7 21  1  0  0  0  0\n  7 22  1  0  0  0  0\n  8 23  1  0  0  0  0\n  8 24  1  0  0  0  0\n  9 25  1  0  0  0  0\n  9 26  1  0  0  0  0\n  9 27  1  0  0  0  0\n 10 28  1  0  0  0  0\n 10 29  1  0  0  0  0\n 10 30  1  0  0  0  0\n  2 31  1  0  0  0  0\n  3 32  1  0  0  0  0\nM  END\n",
++      "asset": "assets/name-repair/ethyl_3_dimethyl_2_5_hexane.svg",
++      "diagramAlt": "Ανεπτυγμένος μοριακός τύπος με σύμβολα άνθρακα και υδρογόνου και απλούς δεσμούς.",
++      "sourceSHA256": "f861678ce6b4780a6563076233e969c4e2662572d10c76ba760fde46bdebf597"
++    },
++    {
++      "id": "methyl_2_butane",
++      "mol": "methyl_2_butane\n  Namelecule 2D\n\n 17 16  0  0  0  0  0  0  0  0999 V2000\n   -0.9282    0.3094    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.3094    0.3094    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.3094    0.3094    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.9282    0.3094    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.3094   -0.3094    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.9282    0.6188    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.2376    0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.9282    0.0000    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.3094    0.6188    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.3094    0.6188    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.3094    0.0000    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.2376    0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.9282    0.6188    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.9282    0.0000    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.0000   -0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.6188   -0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.3094   -0.6188    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0  0  0  0\n  2  3  1  0  0  0  0\n  3  4  1  0  0  0  0\n  2  5  1  0  0  0  0\n  1  6  1  0  0  0\n  1  7  1  0  0  0\n  1  8  1  0  0  0\n  2  9  1  0  0  0\n  3 10  1  0  0  0\n  3 11  1  0  0  0\n  4 12  1  0  0  0\n  4 13  1  0  0  0\n  4 14  1  0  0  0\n  5 15  1  0  0  0\n  5 16  1  0  0  0\n  5 17  1  0  0  0\nM  END\n",
++      "asset": "assets/name-repair/expanded-v2/methyl_2_butane.svg",
++      "condensedAsset": "assets/name-repair/condensed-v2/methyl_2_butane.svg",
++      "diagramAlt": "Ανεπτυγμένος μοριακός τύπος με σύμβολα άνθρακα και υδρογόνου και απλούς δεσμούς.",
++      "sourceSHA256": "ffd817974a5a8583b49452e8873211aed58f97bdebb32657e8666c5c79dc1164"
++    },
++    {
++      "id": "methyl_3_pentane",
++      "mol": "methyl_3_pentane\n  Namelecule 2D\n\n 20 19  0  0  0  0  0  0  0  0999 V2000\n   -1.2376    0.3094    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.6188    0.3094    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.0000    0.3094    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.6188    0.3094    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.2376    0.3094    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.0000   -0.3094    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.2376    0.6188    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.5470    0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.2376    0.0000    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.6188    0.6188    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.6188    0.0000    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.0000    0.6188    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.6188    0.6188    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.6188    0.0000    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.5470    0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.2376    0.6188    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.2376    0.0000    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.3094   -0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.3094   -0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.0000   -0.6188    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0  0  0  0\n  2  3  1  0  0  0  0\n  3  4  1  0  0  0  0\n  4  5  1  0  0  0  0\n  3  6  1  0  0  0  0\n  1  7  1  0  0  0\n  1  8  1  0  0  0\n  1  9  1  0  0  0\n  2 10  1  0  0  0\n  2 11  1  0  0  0\n  3 12  1  0  0  0\n  4 13  1  0  0  0\n  4 14  1  0  0  0\n  5 15  1  0  0  0\n  5 16  1  0  0  0\n  5 17  1  0  0  0\n  6 18  1  0  0  0\n  6 19  1  0  0  0\n  6 20  1  0  0  0\nM  END\n",
++      "asset": "assets/name-repair/expanded-v2/methyl_3_pentane.svg",
++      "condensedAsset": "assets/name-repair/condensed-v2/methyl_3_pentane.svg",
++      "diagramAlt": "Ανεπτυγμένος μοριακός τύπος με σύμβολα άνθρακα και υδρογόνου και απλούς δεσμούς.",
++      "sourceSHA256": "3ccbb969c3e5eaaaf3f471a195e6bf347be7add8e015bd2d074db3b519d57385"
++    },
++    {
++      "id": "ethyl_3_pentane",
++      "mol": "ethyl_3_pentane\n  Namelecule 2D\n\n 23 22  0  0  0  0  0  0  0  0999 V2000\n   -1.2376    0.6188    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.6188    0.6188    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.0000    0.6188    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.6188    0.6188    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.2376    0.6188    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.0000    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.0000   -0.6188    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.2376    0.9282    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.5470    0.6188    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.2376    0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.6188    0.9282    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.6188    0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.0000    0.9282    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.6188    0.9282    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.6188    0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.5470    0.6188    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.2376    0.9282    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.2376    0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.3094    0.0000    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.3094    0.0000    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.3094   -0.6188    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.3094   -0.6188    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.0000   -0.9282    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0  0  0  0\n  2  3  1  0  0  0  0\n  3  4  1  0  0  0  0\n  4  5  1  0  0  0  0\n  3  6  1  0  0  0  0\n  6  7  1  0  0  0  0\n  1  8  1  0  0  0\n  1  9  1  0  0  0\n  1 10  1  0  0  0\n  2 11  1  0  0  0\n  2 12  1  0  0  0\n  3 13  1  0  0  0\n  4 14  1  0  0  0\n  4 15  1  0  0  0\n  5 16  1  0  0  0\n  5 17  1  0  0  0\n  5 18  1  0  0  0\n  6 19  1  0  0  0\n  6 20  1  0  0  0\n  7 21  1  0  0  0\n  7 22  1  0  0  0\n  7 23  1  0  0  0\nM  END\n",
++      "asset": "assets/name-repair/expanded-v2/ethyl_3_pentane.svg",
++      "condensedAsset": "assets/name-repair/condensed-v2/ethyl_3_pentane.svg",
++      "diagramAlt": "Ανεπτυγμένος μοριακός τύπος με σύμβολα άνθρακα και υδρογόνου και απλούς δεσμούς.",
++      "sourceSHA256": "fa021b0c49b489c7392f93effe2afc0b36af2b4fa50100aa53418f1e35b99555"
++    },
++    {
++      "id": "dimethyl_2_2_propane",
++      "mol": "dimethyl_2_2_propane\n  Namelecule 2D\n\n 17 16  0  0  0  0  0  0  0  0999 V2000\n   -0.6188    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.0000    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.6188    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.0000   -0.6188    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.0000    0.6188    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.6188    0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.9282    0.0000    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.6188   -0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.9282    0.0000    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.6188    0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.6188   -0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.3094   -0.6188    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.3094   -0.6188    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.0000   -0.9282    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.3094    0.6188    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.0000    0.9282    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.3094    0.6188    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0  0  0  0\n  2  3  1  0  0  0  0\n  2  4  1  0  0  0  0\n  2  5  1  0  0  0  0\n  1  6  1  0  0  0\n  1  7  1  0  0  0\n  1  8  1  0  0  0\n  3  9  1  0  0  0\n  3 10  1  0  0  0\n  3 11  1  0  0  0\n  4 12  1  0  0  0\n  4 13  1  0  0  0\n  4 14  1  0  0  0\n  5 15  1  0  0  0\n  5 16  1  0  0  0\n  5 17  1  0  0  0\nM  END\n",
++      "asset": "assets/name-repair/expanded-v2/dimethyl_2_2_propane.svg",
++      "condensedAsset": "assets/name-repair/condensed-v2/dimethyl_2_2_propane.svg",
++      "diagramAlt": "Ανεπτυγμένος μοριακός τύπος με σύμβολα άνθρακα και υδρογόνου και απλούς δεσμούς.",
++      "sourceSHA256": "841e8f517ee8527d1cefcd82d3c38a2e2604c207baf8fcc5c7dd9dac4e5a42d4"
++    },
++    {
++      "id": "dimethyl_2_2_butane",
++      "mol": "dimethyl_2_2_butane\n  Namelecule 2D\n\n 20 19  0  0  0  0  0  0  0  0999 V2000\n   -0.9282    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.3094    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.3094    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.9282    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.3094   -0.6188    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.3094    0.6188    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.9282    0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.2376    0.0000    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.9282   -0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.3094    0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.3094   -0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.2376    0.0000    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.9282    0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.9282   -0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.0000   -0.6188    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.6188   -0.6188    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.3094   -0.9282    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.0000    0.6188    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.3094    0.9282    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.6188    0.6188    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0  0  0  0\n  2  3  1  0  0  0  0\n  3  4  1  0  0  0  0\n  2  5  1  0  0  0  0\n  2  6  1  0  0  0  0\n  1  7  1  0  0  0\n  1  8  1  0  0  0\n  1  9  1  0  0  0\n  3 10  1  0  0  0\n  3 11  1  0  0  0\n  4 12  1  0  0  0\n  4 13  1  0  0  0\n  4 14  1  0  0  0\n  5 15  1  0  0  0\n  5 16  1  0  0  0\n  5 17  1  0  0  0\n  6 18  1  0  0  0\n  6 19  1  0  0  0\n  6 20  1  0  0  0\nM  END\n",
++      "asset": "assets/name-repair/expanded-v2/dimethyl_2_2_butane.svg",
++      "condensedAsset": "assets/name-repair/condensed-v2/dimethyl_2_2_butane.svg",
++      "diagramAlt": "Ανεπτυγμένος μοριακός τύπος με σύμβολα άνθρακα και υδρογόνου και απλούς δεσμούς.",
++      "sourceSHA256": "2dc5056aeeb2c5af0ee6ce7ecf7b817bed1ec737fa5e722fcbd4ff5c5f37634a"
++    },
++    {
++      "id": "ethyl_3_methyl_2_pentane",
++      "mol": "ethyl_3_methyl_2_pentane\n  Namelecule 2D\n\n 26 25  0  0  0  0  0  0  0  0999 V2000\n   -1.2376   -0.3094    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.6188   -0.3094    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.0000   -0.3094    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.6188   -0.3094    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.2376   -0.3094    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.6188   -0.9282    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.0000    0.3094    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.0000    0.9282    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.2376    0.0000    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.5470   -0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.2376   -0.6188    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.6188    0.0000    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.0000   -0.6188    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.6188    0.0000    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.6188   -0.6188    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.5470   -0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.2376    0.0000    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.2376   -0.6188    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.3094   -0.9282    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.9282   -0.9282    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.6188   -1.2376    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.3094    0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.3094    0.3094    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.3094    0.9282    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.0000    1.2376    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.3094    0.9282    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0  0  0  0\n  2  3  1  0  0  0  0\n  3  4  1  0  0  0  0\n  4  5  1  0  0  0  0\n  2  6  1  0  0  0  0\n  3  7  1  0  0  0  0\n  7  8  1  0  0  0  0\n  1  9  1  0  0  0\n  1 10  1  0  0  0\n  1 11  1  0  0  0\n  2 12  1  0  0  0\n  3 13  1  0  0  0\n  4 14  1  0  0  0\n  4 15  1  0  0  0\n  5 16  1  0  0  0\n  5 17  1  0  0  0\n  5 18  1  0  0  0\n  6 19  1  0  0  0\n  6 20  1  0  0  0\n  6 21  1  0  0  0\n  7 22  1  0  0  0\n  7 23  1  0  0  0\n  8 24  1  0  0  0\n  8 25  1  0  0  0\n  8 26  1  0  0  0\nM  END\n",
++      "asset": "assets/name-repair/expanded-v2/ethyl_3_methyl_2_pentane.svg",
++      "condensedAsset": "assets/name-repair/condensed-v2/ethyl_3_methyl_2_pentane.svg",
++      "diagramAlt": "Ανεπτυγμένος μοριακός τύπος με σύμβολα άνθρακα και υδρογόνου και απλούς δεσμούς.",
++      "sourceSHA256": "b397bc6f0e02e0b292205352639da14ae2da2db18cc059e482498ca3ee0c16b0"
++    }
++  ],
++  "revision": "bb48fe6cbb689c2bad82cc15d47f53e49f4f021894183c6b228f97bf6902292f"
++}
+--- before/js/namelecule-molecular-puzzle.js
++++ js/namelecule-molecular-puzzle.js
+@@ -10,6 +10,20 @@
+   const CHANNEL = 'namelecule-puzzle-lesson-v1';
+   const lesson = parent !== window && /^[A-Za-z0-9_-]{16,128}$/.test(lessonSession || '')
+     ? { current: null, lastRequest: 0, lastSnapshot: null, lastHeight: null, sizeFrame: null } : null;
++  const LEGACY_IDS = Object.freeze(['methane', 'ethane', 'propane', 'butane', 'pentane',
++    'methyl_2_pentane', 'dimethyl_2_3_butane', 'ethyl_3_dimethyl_2_5_hexane']);
++  const ENGINE_SHA = '3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306';
++  const LEGACY_CATALOG = Object.freeze({ version: 1, file: 'data/alkane-structures.json',
++    sha256: '9778e30ea33f2f7cd4c8a472e46e90539856b861a54035a1d514c3246cccf724',
++    revision: '275d537b19f3ef0791c97d8d78c127f541a0579038ef1e8d65dadde611845690', ids: LEGACY_IDS });
++  const CURRENT_CATALOG = Object.freeze({ version: 2, file: 'data/alkane-structures-v2.json',
++    sha256: '2c4d9a95a77291f13c4a422644aefdae7f23448c2eed7b9d2ef4913da6de92b2',
++    revision: 'bb48fe6cbb689c2bad82cc15d47f53e49f4f021894183c6b228f97bf6902292f',
++    ids: Object.freeze([...LEGACY_IDS, 'methyl_2_butane', 'methyl_3_pentane', 'ethyl_3_pentane',
++      'dimethyl_2_2_propane', 'dimethyl_2_2_butane', 'ethyl_3_methyl_2_pentane']) });
++  // Standalone state lives only in this page. Saved lesson attempts belong to
++  // the parent, whose unchanged recipes and receipts still pin the legacy pool.
++  const catalogDescriptor = lesson ? LEGACY_CATALOG : CURRENT_CATALOG;
+   document.body.classList.toggle('puzzle-embedded', embedded);
+   document.body.classList.toggle('puzzle-controlled', !!lesson);
+   function presentationType() {
+@@ -469,8 +483,8 @@
+   const media = matchMedia('(max-width:600px)');
+   function instructionsMode() { $('instructions').open = !media.matches; }
+   media.addEventListener('change', instructionsMode); instructionsMode();
+-  async function digest(text) {
+-    const bytes = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(text));
++  async function digest(value) {
++    const bytes = await crypto.subtle.digest('SHA-256', typeof value === 'string' ? new TextEncoder().encode(value) : value);
+     return Array.from(new Uint8Array(bytes), b => b.toString(16).padStart(2, '0')).join('');
+   }
+   async function load() {
+@@ -482,10 +496,17 @@
+     busy = true; controls(); $('retry-load').hidden = true; $('game-status').classList.remove('error');
+     $('game-status').textContent = 'Ετοιμάζουμε τα ονόματα και τα κομμάτια του παζλ.';
+     try {
+-      const response = await fetch(new URL('data/alkane-structures.json', location.href), { signal });
++      const response = await fetch(new URL(catalogDescriptor.file, location.href), { cache: 'no-cache', signal });
+       if (!response.ok) throw new Error('Δεν φορτώθηκαν τα δεδομένα των μορίων.');
+-      const data = await response.json();
+-      if (data.schemaVersion !== 1 || !Array.isArray(data.molecules) || data.molecules.length !== 8) throw new Error('Τα δεδομένα του παιχνιδιού δεν είναι συμβατά.');
++      const bytes = await response.arrayBuffer();
++      if (await digest(bytes) !== catalogDescriptor.sha256) throw new Error('Ο έλεγχος της έκδοσης των μορίων απέτυχε.');
++      const data = JSON.parse(new TextDecoder().decode(bytes));
++      if (data.schemaVersion !== 1 || (data.catalogVersion || 1) !== catalogDescriptor.version ||
++          data.revision !== catalogDescriptor.revision || data.engineSHA256 !== ENGINE_SHA ||
++          !Array.isArray(data.molecules) || data.molecules.length !== catalogDescriptor.ids.length ||
++          data.molecules.some((m, index) => !m || m.id !== catalogDescriptor.ids[index])) {
++        throw new Error('Τα δεδομένα του παιχνιδιού δεν είναι συμβατά.');
++      }
+       const ready = [];
+       for (const m of data.molecules) {
+         if (signal.aborted) throw new Error('Η φόρτωση ακυρώθηκε.');
+--- before/games/molecular-puzzle.html
++++ games/molecular-puzzle.html
+@@ -9,7 +9,7 @@
+   <link rel="stylesheet" href="../css/namelecule-molecular-puzzle.css?v=puzzle-lesson-20261112-r1">
+   <script src="../js/namelecule-chemistry-client.js?v=puzzle-prototype-20261112-r1" defer></script>
+   <script src="../js/namelecule-molecular-puzzle-engine.js?v=puzzle-prototype-20261112-r1" defer></script>
+-  <script src="../js/namelecule-molecular-puzzle.js?v=puzzle-lesson-20261112-r1" defer></script>
++  <script src="../js/namelecule-molecular-puzzle.js?v=alkane-pool-20261116-r1" defer></script>
+ </head>
+ <body>
+   <a class="skip-link" href="#assembly-title">Πήγαινε στη σύνθεση της δομής</a>
+--- before/js/namelecule-name-builder.js
++++ js/namelecule-name-builder.js
+@@ -567,5 +567,5 @@
+     window.addEventListener('resize', scheduleSize);
+     postLesson('ready', {});
+   }
+-  frame.src = 'name-builder-viewer.html?session=' + encodeURIComponent(nonce);
++  frame.src = 'name-builder-viewer.html?v=alkane-pool-20261116-r1&session=' + encodeURIComponent(nonce);
+ })();
+--- before/games/name-builder.html
++++ games/name-builder.html
+@@ -7,7 +7,7 @@
+   <title>Χτίσε το όνομα · Namelecule</title>
+   <link rel="stylesheet" href="../css/namelecule-name-builder.css?v=builder-methods-20261112-r3">
+   <script src="../js/namelecule-name-builder-engine.js?v=name-builder-20261111-r1" defer></script>
+-  <script src="../js/namelecule-name-builder.js?v=builder-outside-drop-20261112-r1" defer></script>
++  <script src="../js/namelecule-name-builder.js?v=alkane-pool-20261116-r1" defer></script>
+ </head>
+ <body>
+   <a class="skip-link" href="#answer-title">Πήγαινε στη σύνθεση του ονόματος</a>

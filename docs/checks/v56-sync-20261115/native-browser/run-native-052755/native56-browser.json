@@ -1,0 +1,611 @@
+{
+  "sourceHashesAtStart": {
+    "mulermoc-nom-56.html": "0cbccdd7984dc8a6fae66b4da338d957b13e7490b366a5aab27c207a4573b816",
+    "js/jsme-nick-nomeclature-moc2-data_56.js": "9387cd654b2ff3cfb058d9b97ddcca798ac13f47f769b532f9c122277ff8dd0a",
+    "js/mulermoc-nom-core-56.js": "01e4b44578dc9ed6c8a484c5d38ee8a56e44ce2fc81ac6cf479a8333718ee8b5",
+    "js/mulermoc-nom-molview-56.js": "5f86d5e80baee771fe7aa76767dd41258e354ae082033f3cc44d6572e1386a17",
+    "js/mulermoc-nom-teaching-56.js": "9f2e513c70032fbdb2eed1b2d7e4b3d4ffa993e438d98236df38b7b2b5295574",
+    "js/mulermoc-nom-note-56.js": "e685355459afb7955fbe13e3b8e07c6283469b4d8acb98cfbcfa483c9f9be3ca",
+    "js/mulermoc-nom-scenario-56.js": "17c74502a3900b11d4b43293b1000518ceb4bc27f1769a1b236f8cf6d0d1b55e",
+    "js/mulermoc-nom-iupac-56.js": "54d7fab6761dec93a2c55cd725fa0e60200a54ee01f1f9bf17b23e0893210972",
+    "js/mulermoc-nom-lang-56.js": "15f1791cc483d3e38acbfbb400fb287fa6248aaeb6d6027c9c81c28e0c9ee891",
+    "js/mulermoc-nom-name-en-56.js": "092fcf2701c5d48dc93cbeee993153950846307588c39e75d195f9d96bb58c2d",
+    "js/ui-icons-56.js": "1cf84313e1b5103c3d8844f1a3e92f7588e2a6861f96fb7a1a3ba4de8fefccfc",
+    "css/jsme-nick-56.css": "fb85f29949e23808dcd3da58218a712a8e2ffa78371a6956df56f631e1b8261e",
+    "css/mulermoc-nom-scenario-56.css": "326f9d516a3839fa88223e6ce2976cf2d14aa925f8d7895da439fb1cba732a2c",
+    "css/namelecule-56.css": "042b0e93645dbc9fe5c9851bdd90a73b08f8c89fc4ef524302bd07ac7180e7a7",
+    "spt/init-56.spt": "b3c60d85cc7108a3cb35cd230555a5195ea5b67fd125fd08e2d3d0c16903a823",
+    "design/welcome-proposal.html": "f8b8af09804b8af97ad4941e535d5ec18b9ea5d6a351b3fa6117c1b62b2ccd09",
+    "design/theory-library.html": "2470affec6d84a61da4a61ed87b5ade80a50203e76d8b629825a867c565d28b1"
+  },
+  "completed": true,
+  "role": "Developer real isolated Firefox evidence; not independent review",
+  "checks": [
+    {
+      "label": "new56 retains all141 molecules",
+      "detail": null
+    },
+    {
+      "label": "selection entry visible in normal exploration",
+      "detail": null
+    },
+    {
+      "label": "trusted selection entry actually arms native mode",
+      "detail": [
+        {
+          "phase": "before",
+          "active": false,
+          "present": false,
+          "draft": false,
+          "stack": "@https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corejmol.z.js:62:21\nfToggleAtomSelect@http://127.0.0.1:52158/mulermoc-nom-56.html?lang=en&mol=ethane&v=native56-1794720476666503000:1:222\nonclick@http://127.0.0.1:52158/mulermoc-nom-56.html?lang=en&mol=ethane&v=native56-1794720476666503000:1:1\n"
+        },
+        {
+          "phase": "after",
+          "active": true
+        }
+      ]
+    },
+    {
+      "label": "ethane native root mission has two C atoms",
+      "detail": null
+    },
+    {
+      "label": "native atom coordinate lies on actual viewer",
+      "detail": {
+        "atom": 1,
+        "point": {
+          "x": 659.4315208052849,
+          "y": 540.6110968352668,
+          "hit": true
+        }
+      }
+    },
+    {
+      "label": "partial native selection remains armed",
+      "detail": null
+    },
+    {
+      "label": "partial native selection shows teacher live hint",
+      "detail": null
+    },
+    {
+      "label": "native atom coordinate lies on actual viewer",
+      "detail": {
+        "atom": 2,
+        "point": {
+          "x": 720.5426301365351,
+          "y": 540.6110968352668,
+          "hit": true
+        }
+      }
+    },
+    {
+      "label": "exact native chain produces green component reward",
+      "detail": null
+    },
+    {
+      "label": "exact native verdict is successful",
+      "detail": null
+    },
+    {
+      "label": "normal component remains selected outside picking after reward",
+      "detail": null
+    },
+    {
+      "label": "native sticky component survives plain molecule change",
+      "detail": null
+    },
+    {
+      "label": "overview table opens",
+      "detail": null
+    },
+    {
+      "label": "overview returns to individual explanation",
+      "detail": null
+    },
+    {
+      "label": "real JSME normalizes preserved literal[H] source to H",
+      "detail": {
+        "atom": "H",
+        "rawContains": true,
+        "name": "3-πεντεν-1-ίνιο",
+        "types": [
+          "C",
+          "C",
+          "C",
+          "C",
+          "C",
+          "H",
+          "H",
+          "H",
+          "H",
+          "H",
+          "H"
+        ]
+      }
+    },
+    {
+      "label": "real normalized literalH molecule remains named",
+      "detail": null
+    },
+    {
+      "label": "trusted selection entry actually arms native mode",
+      "detail": [
+        {
+          "phase": "before",
+          "active": false,
+          "present": false,
+          "draft": false,
+          "stack": "@https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corejmol.z.js:62:21\nfToggleAtomSelect@http://127.0.0.1:52158/mulermoc-nom-56.html?lang=en&mol=ethane&v=native56-1794720476666503000:1:222\nonclick@http://127.0.0.1:52158/mulermoc-nom-56.html?lang=en&mol=ethane&v=native56-1794720476666503000:1:1\n"
+        },
+        {
+          "phase": "after",
+          "active": true
+        },
+        {
+          "phase": "before",
+          "active": true,
+          "present": false,
+          "draft": false,
+          "stack": "@https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corejmol.z.js:62:21\nfToggleAtomSelect@http://127.0.0.1:52158/mulermoc-nom-56.html?lang=en&mol=ethane&v=native56-1794720476666503000:1:222\nonclick@http://127.0.0.1:52158/mulermoc-nom-56.html?lang=en&mol=ethane&v=native56-1794720476666503000:1:1\n"
+        },
+        {
+          "phase": "after",
+          "active": false
+        },
+        {
+          "phase": "before",
+          "active": false,
+          "present": false,
+          "draft": false,
+          "stack": "@https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corejmol.z.js:62:21\nfToggleAtomSelect@http://127.0.0.1:52158/mulermoc-nom-56.html?lang=en&mol=ethane&v=native56-1794720476666503000:1:222\nonclick@http://127.0.0.1:52158/mulermoc-nom-56.html?lang=en&mol=ethane&v=native56-1794720476666503000:1:1\n"
+        },
+        {
+          "phase": "after",
+          "active": true
+        }
+      ]
+    },
+    {
+      "label": "native atom coordinate lies on actual viewer",
+      "detail": {
+        "atom": 6,
+        "point": {
+          "x": 661.2049602577249,
+          "y": 569.5273193345463,
+          "hit": true
+        }
+      }
+    },
+    {
+      "label": "teacher armed-quiz H-to-parent policy preserved explicitly",
+      "detail": null
+    },
+    {
+      "label": "native atom coordinate lies on actual viewer",
+      "detail": {
+        "atom": 2,
+        "point": {
+          "x": 718.8174972522252,
+          "y": 540.7670719273417,
+          "hit": true
+        }
+      }
+    },
+    {
+      "label": "expanded H-to-parent/native chain completes as teacher56",
+      "detail": null
+    },
+    {
+      "label": "branched native mission retains equivalent parent candidates",
+      "detail": [
+        [
+          3,
+          2,
+          4,
+          5,
+          6
+        ],
+        [
+          1,
+          2,
+          4,
+          5,
+          6
+        ]
+      ]
+    },
+    {
+      "label": "native atom coordinate lies on actual viewer",
+      "detail": {
+        "atom": 1,
+        "point": {
+          "x": 646.3843698427081,
+          "y": 502.75570721179247,
+          "hit": true
+        }
+      }
+    },
+    {
+      "label": "native atom coordinate lies on actual viewer",
+      "detail": {
+        "atom": 2,
+        "point": {
+          "x": 646.3843698427081,
+          "y": 553.0814417526126,
+          "hit": true
+        }
+      }
+    },
+    {
+      "label": "native atom coordinate lies on actual viewer",
+      "detail": {
+        "atom": 4,
+        "point": {
+          "x": 690.0000064447522,
+          "y": 578.2443090230227,
+          "hit": true
+        }
+      }
+    },
+    {
+      "label": "native atom coordinate lies on actual viewer",
+      "detail": {
+        "atom": 5,
+        "point": {
+          "x": 733.6156430467963,
+          "y": 553.0814417526126,
+          "hit": true
+        }
+      }
+    },
+    {
+      "label": "native atom coordinate lies on actual viewer",
+      "detail": {
+        "atom": 6,
+        "point": {
+          "x": 777.1641786694527,
+          "y": 578.2443090230227,
+          "hit": true
+        }
+      }
+    },
+    {
+      "label": "alternative valid native parent is accepted",
+      "detail": null
+    },
+    {
+      "label": "native successful drawing survives390px resize",
+      "detail": null
+    },
+    {
+      "label": "selection entry remains hidden in actual lesson presentation",
+      "detail": null
+    },
+    {
+      "label": "scenario replay does not arm native quiz",
+      "detail": null
+    }
+  ],
+  "limitations": [
+    "Headless Firefox and viewport emulation only; no personal Firefox interaction",
+    "Real external JSmol/fonts/oracle service failures are retained; controlled transports are explicitly labeled",
+    "No physical mobile/Safari/conference-machine/offline or uninterrupted-operation guarantee"
+  ],
+  "base_url": "http://127.0.0.1:52158/",
+  "focusBeforeActivation": true,
+  "focusAfterActivation": true,
+  "actualLiteralHydrogen": {
+    "atom": "H",
+    "rawContains": true,
+    "name": "3-πεντεν-1-ίνιο",
+    "types": [
+      "C",
+      "C",
+      "C",
+      "C",
+      "C",
+      "H",
+      "H",
+      "H",
+      "H",
+      "H",
+      "H"
+    ]
+  },
+  "sourceHashesAtFinish": {
+    "mulermoc-nom-56.html": "0cbccdd7984dc8a6fae66b4da338d957b13e7490b366a5aab27c207a4573b816",
+    "js/jsme-nick-nomeclature-moc2-data_56.js": "9387cd654b2ff3cfb058d9b97ddcca798ac13f47f769b532f9c122277ff8dd0a",
+    "js/mulermoc-nom-core-56.js": "01e4b44578dc9ed6c8a484c5d38ee8a56e44ce2fc81ac6cf479a8333718ee8b5",
+    "js/mulermoc-nom-molview-56.js": "5f86d5e80baee771fe7aa76767dd41258e354ae082033f3cc44d6572e1386a17",
+    "js/mulermoc-nom-teaching-56.js": "9f2e513c70032fbdb2eed1b2d7e4b3d4ffa993e438d98236df38b7b2b5295574",
+    "js/mulermoc-nom-note-56.js": "e685355459afb7955fbe13e3b8e07c6283469b4d8acb98cfbcfa483c9f9be3ca",
+    "js/mulermoc-nom-scenario-56.js": "17c74502a3900b11d4b43293b1000518ceb4bc27f1769a1b236f8cf6d0d1b55e",
+    "js/mulermoc-nom-iupac-56.js": "54d7fab6761dec93a2c55cd725fa0e60200a54ee01f1f9bf17b23e0893210972",
+    "js/mulermoc-nom-lang-56.js": "15f1791cc483d3e38acbfbb400fb287fa6248aaeb6d6027c9c81c28e0c9ee891",
+    "js/mulermoc-nom-name-en-56.js": "092fcf2701c5d48dc93cbeee993153950846307588c39e75d195f9d96bb58c2d",
+    "js/ui-icons-56.js": "1cf84313e1b5103c3d8844f1a3e92f7588e2a6861f96fb7a1a3ba4de8fefccfc",
+    "css/jsme-nick-56.css": "fb85f29949e23808dcd3da58218a712a8e2ffa78371a6956df56f631e1b8261e",
+    "css/mulermoc-nom-scenario-56.css": "326f9d516a3839fa88223e6ce2976cf2d14aa925f8d7895da439fb1cba732a2c",
+    "css/namelecule-56.css": "042b0e93645dbc9fe5c9851bdd90a73b08f8c89fc4ef524302bd07ac7180e7a7",
+    "spt/init-56.spt": "b3c60d85cc7108a3cb35cd230555a5195ea5b67fd125fd08e2d3d0c16903a823",
+    "design/welcome-proposal.html": "f8b8af09804b8af97ad4941e535d5ec18b9ea5d6a351b3fa6117c1b62b2ccd09",
+    "design/theory-library.html": "2470affec6d84a61da4a61ed87b5ade80a50203e76d8b629825a867c565d28b1"
+  },
+  "sourceChangedDuringRun": [],
+  "frozenTargetMatchesAtFinish": true,
+  "javascriptErrors": [],
+  "diagnosticEntries": [],
+  "resources": [
+    {
+      "name": "http://127.0.0.1:52158/css/jsme-nick-56.css?v=namelecule-v56-20261115-r1",
+      "initiatorType": "link",
+      "duration": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:52158/css/mulermoc-nom-scenario-56.css?v=namelecule-v56-20261115-r1",
+      "initiatorType": "link",
+      "duration": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:52158/css/namelecule-56.css?v=namelecule-v56-20261115-r1",
+      "initiatorType": "link",
+      "duration": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:52158/css/namelecule-repair-round.css?v=optional-triples-20261110-r1",
+      "initiatorType": "link",
+      "duration": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:52158/css/namelecule-quiz-checkpoints.css?v=game-header-text-parity-20261111-r1",
+      "initiatorType": "link",
+      "duration": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:52158/js/namelecule-label-metrics.js?v=20261031-r1",
+      "initiatorType": "script",
+      "duration": 8,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:52158/js/vendor/jsme/namelecule-20261031-r1/jsme.nocache.js",
+      "initiatorType": "script",
+      "duration": 8,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:52158/js/vendor/jquery/jquery-4.0.0.min.js",
+      "initiatorType": "script",
+      "duration": 8,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:52158/js/vendor/dompurify/dompurify-3.4.17.min.js",
+      "initiatorType": "script",
+      "duration": 8,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:52158/js/jsme-nick-nomeclature-moc2-data_56.js?v=namelecule-v56-20261115-r1",
+      "initiatorType": "script",
+      "duration": 8,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:52158/js/ui-icons-56.js?v=namelecule-v56-20261115-r1",
+      "initiatorType": "script",
+      "duration": 8,
+      "responseStatus": 200
+    },
+    {
+      "name": "https://www.googletagmanager.com/gtag/js?id=G-1V8NWYY46Y",
+      "initiatorType": "script",
+      "duration": 8,
+      "responseStatus": 0
+    },
+    {
+      "name": "http://127.0.0.1:52158/js/mulermoc-nom-core-56.js?v=namelecule-v56-20261115-r1",
+      "initiatorType": "script",
+      "duration": 8,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:52158/js/mulermoc-nom-molview-56.js?v=namelecule-v56-20261115-r1",
+      "initiatorType": "script",
+      "duration": 8,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:52158/js/mulermoc-nom-teaching-56.js?v=namelecule-v56-20261115-r1",
+      "initiatorType": "script",
+      "duration": 8,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:52158/js/mulermoc-nom-note-56.js?v=namelecule-v56-20261115-r1",
+      "initiatorType": "script",
+      "duration": 8,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:52158/js/namelecule-game-repair.js?v=choice-games-20261111-r1",
+      "initiatorType": "script",
+      "duration": 8,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:52158/js/namelecule-quiz-checkpoints.js?v=builder-workspace-20261112-r2",
+      "initiatorType": "script",
+      "duration": 8,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:52158/js/namelecule-chemistry-client.js?v=verified-engines-20261105-r1",
+      "initiatorType": "script",
+      "duration": 8,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:52158/js/namelecule-repair-generator.js?v=engine-pilot-20261105-r1",
+      "initiatorType": "script",
+      "duration": 8,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:52158/js/namelecule-generated-repair-checkpoint.js?v=choice-games-20261111-r2",
+      "initiatorType": "script",
+      "duration": 8,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:52158/js/namelecule-name-builder-engine.js?v=name-builder-20261111-r1",
+      "initiatorType": "script",
+      "duration": 8,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:52158/js/namelecule-molecular-puzzle-engine.js?v=puzzle-lesson-20261112-r1",
+      "initiatorType": "script",
+      "duration": 8,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:52158/js/namelecule-game-choice-checkpoint.js?v=puzzle-lesson-20261112-r1",
+      "initiatorType": "script",
+      "duration": 8,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:52158/js/mulermoc-nom-scenario-56.js?v=namelecule-v56-20261115-r1",
+      "initiatorType": "script",
+      "duration": 8,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:52158/js/mulermoc-nom-iupac-56.js?v=namelecule-v56-20261115-r1",
+      "initiatorType": "script",
+      "duration": 8,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:52158/js/mulermoc-nom-lang-56.js?v=namelecule-v56-20261115-r1",
+      "initiatorType": "script",
+      "duration": 8,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:52158/js/mulermoc-nom-name-en-56.js?v=namelecule-v56-20261115-r1",
+      "initiatorType": "script",
+      "duration": 9,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:52158/js/vendor/jsme/namelecule-20261031-r1/96E40B969193BD74B8A621486920E79C.cache.js",
+      "initiatorType": "script",
+      "duration": 10,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:52158/js/vendor/jsme/namelecule-20261031-r1/jsa.css",
+      "initiatorType": "link",
+      "duration": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:52158/js/vendor/jsme/namelecule-20261031-r1/gwt/chrome/chrome.css",
+      "initiatorType": "link",
+      "duration": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:52158/js/vendor/jsme/namelecule-20261031-r1/gwt/chrome/mosaic.css",
+      "initiatorType": "link",
+      "duration": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:52158/js/vendor/jsme/namelecule-20261031-r1/FEB169D74546A3B279D22AE09AFB86BD.cache.js",
+      "initiatorType": "script",
+      "duration": 1,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:52158/js/vendor/jsmol/namelecule-20261031-r1/JSmol.min.js",
+      "initiatorType": "script",
+      "duration": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:52158/favicon.ico",
+      "initiatorType": "other",
+      "duration": 10,
+      "responseStatus": 404
+    },
+    {
+      "name": "http://127.0.0.1:52158/mols/nomeclature-moc2/methane_3D.sdf",
+      "initiatorType": "fetch",
+      "duration": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/package.js",
+      "initiatorType": "xmlhttprequest",
+      "duration": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/package.js",
+      "initiatorType": "xmlhttprequest",
+      "duration": 1,
+      "responseStatus": 200
+    },
+    {
+      "name": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corejmol.z.js",
+      "initiatorType": "xmlhttprequest",
+      "duration": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/J/translation/PO.js",
+      "initiatorType": "xmlhttprequest",
+      "duration": 1,
+      "responseStatus": 200
+    },
+    {
+      "name": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corescript.z.js",
+      "initiatorType": "xmlhttprequest",
+      "duration": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/J/api/JmolSelectionListener.js",
+      "initiatorType": "xmlhttprequest",
+      "duration": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/J/translation/JmolApplet/el.po",
+      "initiatorType": "xmlhttprequest",
+      "duration": 1,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:52158/scenarios/alkanes-user-3.scenario.json",
+      "initiatorType": "fetch",
+      "duration": 1,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:52158/mols/nomeclature-moc2/ethane_3D.sdf",
+      "initiatorType": "fetch",
+      "duration": 0,
+      "responseStatus": 200
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+BEFORE:
+Live === "function" && !fJSmolLive()) return;
+    try {
+      if (typeof fJSmolScriptWait === "function") { if (fJSmolScriptWait(jmolAppletNomeclature, "zap;") === null) return; }
+    } catch (eZ) {}
+    var ok = false;
+
+LOCAL:
+    try { if (typeof fJSmolLoadInlineSDF === "function") ok = !!fJSmolLoadInlineSDF(jmolAppletNomeclature, d.molText, "script spt/init-55.spt;"); } catch (eL) { ok = false; }
+
+UPSTREAM:
+    try { if (typeof fJSmolLoadInlineSDF === "function") ok = !!fJSmolLoadInlineSDF(jmolAppletNomeclature, d.molText, "script spt/init-3-56.spt;"); } catch (eL) { ok = false; }
+
+AFTER:
+    if (!ok) return;
+    try {
+      var b3 = document.getElementById("view3DBtn");
+      if (b3 && !b3.classList.contains("active") && typeof fToggleViewer3D === "function") {
+        fToggleViewer3D

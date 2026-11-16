@@ -1,0 +1,97 @@
+{
+  "recordedUTC": "2026-11-15T06:36:54.289949+00:00",
+  "role": "NAMELECULE_DEVELOPER_V1_20261023",
+  "scope": "Approved isolated Molecular Detective native56 child host",
+  "comparisonBase": "168e3cec01f941a84d40bbe0dc07156e7baa35d0",
+  "changedFiles": {
+    "js/namelecule-molecular-detective-host.js": "177e7fc961d44b23c28b9650ef15deead4377f692fa866eadb96daac892608c0",
+    "tools/build-molecular-detective-host.py": "0beacd21731ef4111001264332f1e1be34c532b98a38eb45692712bd33efa3f2",
+    "games/molecular-detective-viewer.html": "87cc4788612c173ee266e11457e7cf265f3da06f1d93791e93655a8db98f38ae"
+  },
+  "protectedBaselineCount": 678,
+  "protectedMismatches": [],
+  "checks": [
+    {
+      "command": "node --check js/namelecule-molecular-detective-host.js",
+      "result": "pass"
+    },
+    {
+      "command": "python3 tools/build-molecular-detective-host.py",
+      "result": "generated only owned child"
+    },
+    {
+      "command": "python3 tools/build-molecular-detective-host.py --check",
+      "result": "pass"
+    },
+    {
+      "command": "node docs/checks/molecular-detective-implementation-20261115/host/protocol-fixtures.cjs",
+      "result": "34/34 controlled native-function/protocol fixtures pass",
+      "actualBrowser": false
+    }
+  ],
+  "fixtureSetupCorrections": [
+    "Merged source MOL2D registry into fixture nameExamples, matching native fInitData",
+    "Normalized VM cross-realm expected arrays for Node strict assertion"
+  ],
+  "protocol": {
+    "channel": "namelecule-molecular-detective-v1",
+    "commands": [
+      "load",
+      "configure",
+      "clear",
+      "zoom",
+      "resize",
+      "stop"
+    ],
+    "commandField": "type or command",
+    "events": [
+      "ready",
+      "busy",
+      "round",
+      "configured",
+      "selection",
+      "zoom",
+      "resize",
+      "stopped",
+      "error"
+    ],
+    "envelope": [
+      "channel",
+      "session",
+      "requestId",
+      "roundId",
+      "moleculeId",
+      "type"
+    ],
+    "selectionFields": [
+      "atoms",
+      "bonds",
+      "selectionRevision",
+      "kind",
+      "missionId"
+    ],
+    "snapshotFields": [
+      "moleculeId",
+      "correctName",
+      "pieces",
+      "atoms",
+      "bonds",
+      "chemicalClass",
+      "series"
+    ],
+    "diagnostics": "NameleculeMolecularDetectiveHost.snapshot(), serializeName(), getSnapshot(); all read-only"
+  },
+  "coreChanges": false,
+  "notesForPrimary": [
+    "Do not claim independent review: these are Developer fixtures.",
+    "Root owns project session/contribution notes and actual browser verification.",
+    "No core/viewer/MOL/SDF/scenario/legacy game edits in this host unit.",
+    "Main56 hidden JSmol initialization and external dependencies remain; 2D readiness does not wait on its model."
+  ],
+  "untested": [
+    "Actual rendering/pointer/touch/mobile/resizes and browser message flow (delegated to primary)",
+    "Actual conference machine, cold offline startup and physical devices",
+    "Atom/bond keyboard picking is not extended; native Escape and parent button keyboard navigation remain."
+  ],
+  "freeze": "No further host target editing until primary requests a correction."
+}

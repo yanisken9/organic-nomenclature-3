@@ -1,0 +1,111 @@
+--- reviewed/games/name-repair.html
++++ corrected/games/name-repair.html
+@@ -8,7 +8,7 @@
+   <meta name="description" content="Διάλεξε ένα σετ αποστολών στο Συνεργείο ονομάτων. Παρατήρησε τις δομές, επισκεύασε τα ονόματα και δες τις εξηγήσεις.">
+   <link rel="stylesheet" href="../css/namelecule-games.css?v=workshop-brand-20261105-r1">
+   <link rel="stylesheet" href="../css/namelecule-repair-round.css?v=workshop-lesson-parity-20261110-r1">
+-  <script src="../js/namelecule-game-repair.js?v=alkane-pool-20261116-r1" defer></script>
++  <script src="../js/namelecule-game-repair.js?v=alkane-pool-20261116-r2" defer></script>
+ </head>
+ <body>
+   <a class="skip-link" href="#game-root">Πήγαινε στο παιχνίδι</a>
+--- reviewed/js/namelecule-game-repair.js
++++ corrected/js/namelecule-game-repair.js
+@@ -857,8 +857,9 @@
+     let input = await provider.loadCanonicalInput(signal, descriptor);
+     if (signal.aborted) throw new DOMException("Cancelled", "AbortError");
+     let restored = install(input);
+-    if (!restored && resumeLegacy) {
+-      // An invalid old record is not rewritten as a new old-catalog attempt.
++    if (descriptor.id === "legacy" && (!restored || !["round", "results"].includes(pilotPhase))) {
++      // Only an actual recorded round/results belongs to the legacy catalog.
++      // Missing, invalid or menu-only records must not create fresh legacy seeds.
+       descriptor = provider.catalogDescriptor("enriched");
+       input = await provider.loadCanonicalInput(signal, descriptor);
+       if (signal.aborted) throw new DOMException("Cancelled", "AbortError");
+@@ -889,14 +890,18 @@
+     ]);
+   }
+ 
++  function redirectLegacyAttempt(setId) {
++    if (!pilot || pilot.catalog.revision !== global.NameleculeGeneratedRepairCheckpoint.catalogDescriptor("legacy").revision) return false;
++    const target = new URL("name-repair.html", location.href);
++    target.searchParams.set("catalog", "enriched");
++    if (setId) target.searchParams.set("startSet", setId);
++    else target.searchParams.set("pickSet", "1");
++    location.assign(target.href);
++    return true;
++  }
++
+   function startSet(setId) {
+-    if (pilot && pilot.catalog.revision === global.NameleculeGeneratedRepairCheckpoint.catalogDescriptor("legacy").revision && entryParams.get("catalog") !== "legacy") {
+-      const target = new URL("name-repair.html", location.href);
+-      target.searchParams.set("catalog", "enriched");
+-      target.searchParams.set("startSet", setId);
+-      location.assign(target.href);
+-      return;
+-    }
++    if (redirectLegacyAttempt(setId)) return;
+     if (pilot) generatePilotGame(newSeed());
+     activeSet = game.sets.find(function (entry) { return entry.id === setId; });
+     roundIndex = 0;
+@@ -949,10 +954,17 @@
+       if (token !== loadToken) return;
+       root.setAttribute("aria-busy", "false");
+       const requestedSet = entryParams.get("startSet");
+-      if (pilot && ["alkanes-unbranched", "alkanes-branched"].includes(requestedSet)) {
+-        entryParams.delete("startSet");
+-        const url = new URL(location.href); url.searchParams.delete("startSet");
++      const hasStartCommand = entryParams.has("startSet"), hasPickerCommand = entryParams.has("pickSet");
++      const pickerCommand = entryParams.get("pickSet");
++      if (hasStartCommand || hasPickerCommand) {
++        entryParams.delete("startSet"); entryParams.delete("pickSet");
++        const url = new URL(location.href); url.searchParams.delete("startSet"); url.searchParams.delete("pickSet");
+         history.replaceState(null, "", url.href);
++      }
++      if (pilot && hasPickerCommand && !hasStartCommand && pickerCommand === "1") {
++        activeSet = null; states = []; roundIndex = 0;
++        renderSetPicker(); focusHeading();
++      } else if (pilot && hasStartCommand && !hasPickerCommand && ["alkanes-unbranched", "alkanes-branched"].includes(requestedSet)) {
+         startSet(requestedSet);
+       } else if (pilot && pilotPhase === "round") renderRound();
+       else if (pilot && pilotPhase === "results") renderResults();
+@@ -1014,7 +1026,10 @@
+     ]);
+     if (enginePilot && pilot.catalog.revision !== global.NameleculeGeneratedRepairCheckpoint.catalogDescriptor("legacy").revision) {
+       const old = readPilotProgress(legacyPilotStorageKey);
+-      if (old && old.catalogRevision === global.NameleculeGeneratedRepairCheckpoint.catalogDescriptor("legacy").revision) {
++      if (old && old.version === 1 && old.generatorVersion === global.NameleculeRepairGenerator.version &&
++          old.engineSHA256 === global.NameleculeGeneratedRepairCheckpoint.catalogDescriptor("legacy").engineSHA256 &&
++          old.catalogRevision === global.NameleculeGeneratedRepairCheckpoint.catalogDescriptor("legacy").revision &&
++          ["round", "results"].includes(old.phase)) {
+         welcome.append(node("p", { class: "pilot-entry" }, [node("a", { href: "name-repair.html?source=engine&catalog=legacy", text: "Συνέχισε την προηγούμενη εξάσκηση" })]));
+       }
+     }
+@@ -1023,6 +1038,7 @@
+   }
+ 
+   function renderSetPicker() {
++    if (redirectLegacyAttempt()) return;
+     pilotPhase = "picker";
+     renderId += 1;
+     const cards = game.sets.map(function (set) {
+@@ -1101,6 +1117,7 @@
+   }
+ 
+   function restartGame() {
++    if (redirectLegacyAttempt()) return;
+     roundIndex = 0;
+     states = [];
+     activeSet = null;
+--- reviewed/mulermoc-nom-57.html
++++ corrected/mulermoc-nom-57.html
+@@ -373,7 +373,7 @@
+   <script src="js/mulermoc-nom-molview-57.js?v=alkane-pool-20261116-r1"></script>
+   <script src="js/mulermoc-nom-teaching-57.js?v=namelecule-v57-20261115-r1"></script>
+   <script src="js/mulermoc-nom-note-57.js?v=namelecule-v57-20261115-r1"></script>
+-  <script src="js/namelecule-game-repair.js?v=alkane-pool-20261116-r1"></script>
++  <script src="js/namelecule-game-repair.js?v=alkane-pool-20261116-r2"></script>
+   <script src="js/namelecule-quiz-checkpoints.js?v=builder-workspace-20261112-r2"></script>
+   <script src="js/namelecule-chemistry-client.js?v=verified-engines-20261105-r1"></script>
+   <script src="js/namelecule-repair-generator.js?v=engine-pilot-20261105-r1"></script>

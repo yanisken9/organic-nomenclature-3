@@ -1,0 +1,104 @@
+--- before/js/mulermoc-nom-molview-55.js
++++ after/js/mulermoc-nom-molview-55.js
+@@ -4234,15 +4234,24 @@
+ function fInitData() {
+   for (let prop in nameExamples) {
+     const _m = (window.MOL2D && window.MOL2D[prop]) || {};
+-    const my2D_Condensed = _m.condensed !== undefined ? _m.condensed : null;
+-    const my2D_Expanded = _m.expanded !== undefined ? _m.expanded : null;
+-    const my2D_Skeletal = _m.skeletal !== undefined ? _m.skeletal : null;
++    const _customs = window.nameExamplesCustom;
++    const _custom = _customs && Object.prototype.hasOwnProperty.call(_customs, prop) &&
++      nameExamples[prop] === _customs[prop] ? _customs[prop] : null;
++    // JSME startup and document-ready both hydrate the catalog. Read every
++    // registered custom source value before writing its shared record again.
++    const my2D_Condensed = _m.condensed !== undefined ? _m.condensed :
++      _custom && _custom.structure2D_Condensed !== undefined ? _custom.structure2D_Condensed : null;
++    const my2D_Expanded = _m.expanded !== undefined ? _m.expanded :
++      _custom && _custom.structure2D_Expanded !== undefined ? _custom.structure2D_Expanded : null;
++    const my2D_Skeletal = _m.skeletal !== undefined ? _m.skeletal :
++      _custom && _custom.structure2D_Skeletal !== undefined ? _custom.structure2D_Skeletal : null;
++    const my3D = _custom && Object.prototype.hasOwnProperty.call(_custom, "file3D") ?
++      _custom.file3D : "mols/nomeclature-moc2/" + prop + "_3D.sdf";
+ 
+     nameExamples[prop].structure2D_Condensed = my2D_Condensed;
+     nameExamples[prop].structure2D_Expanded = my2D_Expanded;
+     nameExamples[prop].structure2D_Skeletal = my2D_Skeletal;
+ 
+-    const my3D = "mols/nomeclature-moc2/" + prop + "_3D.sdf";
+     nameExamples[prop].file3D = my3D;
+   }
+ }
+--- before/js/mulermoc-nom-molview-56.js
++++ after/js/mulermoc-nom-molview-56.js
+@@ -7627,15 +7627,24 @@
+ function fInitData() {
+   for (let prop in nameExamples) {
+     const _m = (window.MOL2D && window.MOL2D[prop]) || {};
+-    const my2D_Condensed = _m.condensed !== undefined ? _m.condensed : null;
+-    const my2D_Expanded = _m.expanded !== undefined ? _m.expanded : null;
+-    const my2D_Skeletal = _m.skeletal !== undefined ? _m.skeletal : null;
++    const _customs = window.nameExamplesCustom;
++    const _custom = _customs && Object.prototype.hasOwnProperty.call(_customs, prop) &&
++      nameExamples[prop] === _customs[prop] ? _customs[prop] : null;
++    // JSME startup and document-ready both hydrate the catalog. Read every
++    // registered custom source value before writing its shared record again.
++    const my2D_Condensed = _m.condensed !== undefined ? _m.condensed :
++      _custom && _custom.structure2D_Condensed !== undefined ? _custom.structure2D_Condensed : null;
++    const my2D_Expanded = _m.expanded !== undefined ? _m.expanded :
++      _custom && _custom.structure2D_Expanded !== undefined ? _custom.structure2D_Expanded : null;
++    const my2D_Skeletal = _m.skeletal !== undefined ? _m.skeletal :
++      _custom && _custom.structure2D_Skeletal !== undefined ? _custom.structure2D_Skeletal : null;
++    const my3D = _custom && Object.prototype.hasOwnProperty.call(_custom, "file3D") ?
++      _custom.file3D : "mols/nomeclature-moc2/" + prop + "_3D.sdf";
+ 
+     nameExamples[prop].structure2D_Condensed = my2D_Condensed;
+     nameExamples[prop].structure2D_Expanded = my2D_Expanded;
+     nameExamples[prop].structure2D_Skeletal = my2D_Skeletal;
+ 
+-    const my3D = "mols/nomeclature-moc2/" + prop + "_3D.sdf";
+     nameExamples[prop].file3D = my3D;
+   }
+ }
+--- before/js/mulermoc-nom-molview-57.js
++++ after/js/mulermoc-nom-molview-57.js
+@@ -8268,15 +8268,24 @@
+ function fInitData() {
+   for (let prop in nameExamples) {
+     const _m = (window.MOL2D && window.MOL2D[prop]) || {};
+-    const my2D_Condensed = _m.condensed !== undefined ? _m.condensed : null;
+-    const my2D_Expanded = _m.expanded !== undefined ? _m.expanded : null;
+-    const my2D_Skeletal = _m.skeletal !== undefined ? _m.skeletal : null;
++    const _customs = window.nameExamplesCustom;
++    const _custom = _customs && Object.prototype.hasOwnProperty.call(_customs, prop) &&
++      nameExamples[prop] === _customs[prop] ? _customs[prop] : null;
++    // JSME startup and document-ready both hydrate the catalog. Read every
++    // registered custom source value before writing its shared record again.
++    const my2D_Condensed = _m.condensed !== undefined ? _m.condensed :
++      _custom && _custom.structure2D_Condensed !== undefined ? _custom.structure2D_Condensed : null;
++    const my2D_Expanded = _m.expanded !== undefined ? _m.expanded :
++      _custom && _custom.structure2D_Expanded !== undefined ? _custom.structure2D_Expanded : null;
++    const my2D_Skeletal = _m.skeletal !== undefined ? _m.skeletal :
++      _custom && _custom.structure2D_Skeletal !== undefined ? _custom.structure2D_Skeletal : null;
++    const my3D = _custom && Object.prototype.hasOwnProperty.call(_custom, "file3D") ?
++      _custom.file3D : "mols/nomeclature-moc2/" + prop + "_3D.sdf";
+ 
+     nameExamples[prop].structure2D_Condensed = my2D_Condensed;
+     nameExamples[prop].structure2D_Expanded = my2D_Expanded;
+     nameExamples[prop].structure2D_Skeletal = my2D_Skeletal;
+ 
+-    const my3D = "mols/nomeclature-moc2/" + prop + "_3D.sdf";
+     nameExamples[prop].file3D = my3D;
+   }
+ }
+--- before/games/name-builder-viewer.html
++++ after/games/name-builder-viewer.html
+@@ -402,7 +402,7 @@
+        <script src="js/MULERMOC_dimethyl_ether_data.js?v=54.1"></script> -->
+   <script src="js/ui-icons-55.js?v=namelecule-v55-20261110-r2"></script>
+   <script src="js/mulermoc-nom-core-55.js?v=namelecule-v55-20261110-r2"></script>
+-  <script src="js/mulermoc-nom-molview-55.js?v=2dfde418f2444cbd61cc61ae20c1ef451d970e60d1408c66942c472878269c8d"></script>
++  <script src="js/mulermoc-nom-molview-55.js?v=035e81d3d0ef1bc962a72a6092916f5078ac68a5a4e1ae75d471b5eba185c532"></script>
+   <script src="js/mulermoc-nom-teaching-55.js?v=namelecule-v55-20261110-r2"></script>
+   <script src="js/mulermoc-nom-note-55.js?v=namelecule-v55-20261110-r2"></script>
+   <script src="js/namelecule-game-repair.js?v=choice-games-20261111-r1"></script>

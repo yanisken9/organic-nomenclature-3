@@ -1,0 +1,87 @@
+{
+  "checkedDate": "2026-11-16",
+  "lastActuallySynchronized": "b73d8b6330cfdb9d83c000a513be7052763aa083",
+  "lastPreviouslyChecked": "a4f8aaa7dfcbd4328889b7d8b2d0d24bc6588f37",
+  "currentProfessorHEAD": "838d8c7882b292d3e320e7d8edd636262c2649f9",
+  "newCommitsSinceLastCheck": [
+    {
+      "sha": "838d8c7882b292d3e320e7d8edd636262c2649f9",
+      "date": "2026-11-16T08:57:27Z",
+      "title": "v57: reps lock on solved/target-less display"
+    }
+  ],
+  "previousPendingCommits": 6,
+  "currentPendingCommits": 7,
+  "changelogBlob": "ad4d517981dc3d310166ac2535f63ed63bcb5cad",
+  "compare": {
+    "repository_full_name": "nick-charistos/organic-nomenclature-3",
+    "base": "a4f8aaa7dfcbd4328889b7d8b2d0d24bc6588f37",
+    "head": "838d8c7882b292d3e320e7d8edd636262c2649f9",
+    "status": "ahead",
+    "ahead_by": 1,
+    "behind_by": 0,
+    "total_commits": 1,
+    "too_large": null,
+    "base_commit": {
+      "sha": "a4f8aaa7dfcbd4328889b7d8b2d0d24bc6588f37",
+      "url": "https://api.github.com/repos/nick-charistos/organic-nomenclature-3/commits/a4f8aaa7dfcbd4328889b7d8b2d0d24bc6588f37",
+      "html_url": "https://github.com/nick-charistos/organic-nomenclature-3/commit/a4f8aaa7dfcbd4328889b7d8b2d0d24bc6588f37"
+    },
+    "merge_base_commit": {
+      "sha": "a4f8aaa7dfcbd4328889b7d8b2d0d24bc6588f37",
+      "url": "https://api.github.com/repos/nick-charistos/organic-nomenclature-3/commits/a4f8aaa7dfcbd4328889b7d8b2d0d24bc6588f37",
+      "html_url": "https://github.com/nick-charistos/organic-nomenclature-3/commit/a4f8aaa7dfcbd4328889b7d8b2d0d24bc6588f37"
+    },
+    "files": [
+      {
+        "filename": "css/jsme-nick-57.css",
+        "status": "modified",
+        "additions": 7,
+        "deletions": 0,
+        "changes": 7,
+        "previous_filename": null
+      },
+      {
+        "filename": "docs/CHANGELOG.md",
+        "status": "modified",
+        "additions": 3,
+        "deletions": 2,
+        "changes": 5,
+        "previous_filename": null
+      },
+      {
+        "filename": "docs/SESSION-NOTES.md",
+        "status": "modified",
+        "additions": 7,
+        "deletions": 1,
+        "changes": 8,
+        "previous_filename": null
+      },
+      {
+        "filename": "js/mulermoc-nom-molview-57.js",
+        "status": "modified",
+        "additions": 65,
+        "deletions": 3,
+        "changes": 68,
+        "previous_filename": null
+      },
+      {
+        "filename": "js/mulermoc-nom-teaching-57.js",
+        "status": "modified",
+        "additions": 3,
+        "deletions": 0,
+        "changes": 3,
+        "previous_filename": null
+      },
+      {
+        "filename": "tools/muler-harness/probe-3d-pick.js",
+        "status": "modified",
+        "additions": 15,
+        "deletions": 0,
+        "changes": 15,
+        "previous_filename": null
+      }
+    ]
+  },
+  "decision": "Retain already reviewed local b73d8b63-derived v57 for this save/publication; new representations lock overlaps pending 2D/3D customizations and requires separate synthesis/validation. No upstream code integration in save."
+}

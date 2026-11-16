@@ -1,0 +1,303 @@
+{
+  "recordedUTC": "2026-11-16T05:34:16.822265+00:00",
+  "role": "Developer actual isolated headlessFirefox; not independent browser review",
+  "evidence": "docs/checks/alkane-pool-implementation-20261116/data/run-alternate-chains-053254/alternate-chains.json",
+  "runCleanup": "docs/checks/alkane-pool-implementation-20261116/data/run-alternate-chains-053254/run.json",
+  "frozenTarget": "docs/checks/alkane-pool-implementation-20261116/verification-target.json",
+  "frozenTargetSHA256": "fa6d2c813dc32cfda74cdabc11b24084cc4de5e08027af82acfb5ea6747a7c70",
+  "frozen67FilesUnchanged": true,
+  "harnessSHA256": "182f7d192b7a15635ff2c4b6b25c62073c2dd253027932869c8e69bc36d1ebaf",
+  "completed": true,
+  "cases": 9,
+  "checks": 256,
+  "JSexceptions": 0,
+  "harnessCorrections": [],
+  "productEdits": false,
+  "maxGeometryNormalizedDelta": 0.0038219162037165244,
+  "maxReturnedGeometryDeltaSVGUnits": 0.0,
+  "actualAlternateParentCarbonPicksIntoLoaded3D": 3,
+  "summary": [
+    {
+      "id": "methyl_2_butane",
+      "mode": "condensed",
+      "pool": 2,
+      "indices": [
+        0,
+        1,
+        0
+      ],
+      "2Dparents": [
+        [
+          1,
+          2,
+          3,
+          4
+        ],
+        [
+          5,
+          2,
+          3,
+          4
+        ],
+        [
+          1,
+          2,
+          3,
+          4
+        ]
+      ],
+      "allFramesFit": true
+    },
+    {
+      "id": "methyl_2_butane",
+      "mode": "expanded",
+      "pool": 2,
+      "indices": [
+        0,
+        1,
+        0
+      ],
+      "2Dparents": [
+        [
+          1,
+          2,
+          3,
+          4
+        ],
+        [
+          5,
+          2,
+          3,
+          4
+        ],
+        [
+          1,
+          2,
+          3,
+          4
+        ]
+      ],
+      "allFramesFit": true
+    },
+    {
+      "id": "methyl_2_butane",
+      "mode": "skeletal",
+      "pool": 2,
+      "indices": [
+        0,
+        1,
+        0
+      ],
+      "2Dparents": [
+        [
+          1,
+          2,
+          3,
+          4
+        ],
+        [
+          5,
+          2,
+          3,
+          4
+        ],
+        [
+          1,
+          2,
+          3,
+          4
+        ]
+      ],
+      "allFramesFit": true
+    },
+    {
+      "id": "dimethyl_2_2_butane",
+      "mode": "condensed",
+      "pool": 3,
+      "indices": [
+        0,
+        1,
+        0
+      ],
+      "2Dparents": [
+        [
+          1,
+          2,
+          3,
+          4
+        ],
+        [
+          6,
+          2,
+          3,
+          4
+        ],
+        [
+          1,
+          2,
+          3,
+          4
+        ]
+      ],
+      "allFramesFit": true
+    },
+    {
+      "id": "dimethyl_2_2_butane",
+      "mode": "expanded",
+      "pool": 3,
+      "indices": [
+        0,
+        1,
+        0
+      ],
+      "2Dparents": [
+        [
+          1,
+          2,
+          3,
+          4
+        ],
+        [
+          6,
+          2,
+          3,
+          4
+        ],
+        [
+          1,
+          2,
+          3,
+          4
+        ]
+      ],
+      "allFramesFit": true
+    },
+    {
+      "id": "dimethyl_2_2_butane",
+      "mode": "skeletal",
+      "pool": 3,
+      "indices": [
+        0,
+        1,
+        0
+      ],
+      "2Dparents": [
+        [
+          1,
+          2,
+          3,
+          4
+        ],
+        [
+          6,
+          2,
+          3,
+          4
+        ],
+        [
+          1,
+          2,
+          3,
+          4
+        ]
+      ],
+      "allFramesFit": true
+    },
+    {
+      "id": "dimethyl_2_2_propane",
+      "mode": "condensed",
+      "pool": 6,
+      "indices": [
+        0,
+        1,
+        0
+      ],
+      "2Dparents": [
+        [
+          1,
+          2,
+          5
+        ],
+        [
+          1,
+          2,
+          4
+        ],
+        [
+          1,
+          2,
+          5
+        ]
+      ],
+      "allFramesFit": true
+    },
+    {
+      "id": "dimethyl_2_2_propane",
+      "mode": "expanded",
+      "pool": 6,
+      "indices": [
+        0,
+        1,
+        0
+      ],
+      "2Dparents": [
+        [
+          1,
+          2,
+          5
+        ],
+        [
+          1,
+          2,
+          4
+        ],
+        [
+          1,
+          2,
+          5
+        ]
+      ],
+      "allFramesFit": true
+    },
+    {
+      "id": "dimethyl_2_2_propane",
+      "mode": "skeletal",
+      "pool": 6,
+      "indices": [
+        0,
+        1,
+        0
+      ],
+      "2Dparents": [
+        [
+          1,
+          2,
+          5
+        ],
+        [
+          1,
+          2,
+          4
+        ],
+        [
+          1,
+          2,
+          5
+        ]
+      ],
+      "allFramesFit": true
+    }
+  ],
+  "cleanup": {
+    "ownedBrowserExited": true,
+    "ownedServerClosed": true,
+    "ownedProfileRemoved": true
+  },
+  "limits": [
+    "Nine desktop1500x1000cases only; existing205/318checks cover narrowwidth/zoom separately.",
+    "Tests1→2→1, not exhaustivebrowsertraversalofeveryeligiblechain; exhaustivechemical/permutationcoverage is separate evidence.",
+    "Actualalternate-carbonpointerpicking checked in Expanded only;3Dparentmapping checked acrossallninecases.",
+    "No personalFirefox, physicalmobile/conference/offline or optimizerqualification."
+  ],
+  "coreChange": "No core/source/runtime edits in this verification; full67frozenfilehashes match."
+}

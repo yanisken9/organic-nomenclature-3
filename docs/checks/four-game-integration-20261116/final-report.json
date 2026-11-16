@@ -1,0 +1,76 @@
+{
+  "recordedUTC": "2026-11-16T06:47:26.584168+00:00",
+  "status": "Complete locally; independent review and bounded runtime checks accepted",
+  "manifestSHA256": "1aeef0391e4fe93338e6773196adb6cb85f21f1854b9a399ec30e312f308aa75",
+  "baseCommit": "168e3cec01f941a84d40bbe0dc07156e7baa35d0",
+  "productFiles": 16,
+  "coreFilesComparedUnchanged": 13,
+  "indexUnchanged": true,
+  "HEADUnchanged": true,
+  "runtimeReports": [
+    {
+      "path": "docs/checks/four-game-integration-20261116/lesson-browser/run-detective-required-063759/results.json",
+      "SHA256": "0c3766fc60b29935d6fa59e3e429f1c3c37b4407297b3529fa97cb8b354b889a",
+      "checks": 202,
+      "correctUIAnswers": 6,
+      "capturedJavaScriptExceptions": 0,
+      "ownedResourcesCleaned": true,
+      "role": "Developer actual browser evidence, not independent execution"
+    },
+    {
+      "path": "docs/checks/four-game-integration-20261116/lesson-browser/run-detective-required-063940/chrome-results.json",
+      "SHA256": "08be268a0db51331804969ce7f6c9593f98a7a3349ff2473c3762d002cb36c69",
+      "checks": 690,
+      "correctUIAnswers": 6,
+      "capturedJavaScriptExceptions": 0,
+      "ownedResourcesCleaned": true,
+      "role": "Developer actual browser evidence, not independent execution"
+    },
+    {
+      "path": "docs/checks/four-game-integration-20261116/lesson-browser/run-old3-repair-064449/chrome-results.json",
+      "SHA256": "3797b45af9585dd7a5733910a021cf7857b3c59249383968ea2d0a61b4886eee",
+      "checks": 43,
+      "correctUIAnswers": 3,
+      "capturedJavaScriptExceptions": 0,
+      "ownedResourcesCleaned": true,
+      "role": "Developer actual browser evidence, not independent execution"
+    },
+    {
+      "path": "docs/checks/four-game-integration-20261116/lesson-browser/run-old3-builder-064519/chrome-results.json",
+      "SHA256": "ff0fa4ab9e3ac734bb3f0442631c2a58bfa6a1b0da2f9200e94dcc25466f2ab6",
+      "checks": 19,
+      "correctUIAnswers": 0,
+      "capturedJavaScriptExceptions": 0,
+      "ownedResourcesCleaned": true,
+      "role": "Developer actual browser evidence, not independent execution"
+    },
+    {
+      "path": "docs/checks/four-game-integration-20261116/lesson-browser/run-old3-puzzle-064547/chrome-results.json",
+      "SHA256": "212862cdf31d4dc808702e43f34a29fad812474490f008c0ff652ab942a82c82",
+      "checks": 19,
+      "correctUIAnswers": 0,
+      "capturedJavaScriptExceptions": 0,
+      "ownedResourcesCleaned": true,
+      "role": "Developer actual browser evidence, not independent execution"
+    }
+  ],
+  "welcomeReport": "welcome-scenario/browser-060158/results.json",
+  "sourceReview": "review-targeted.json",
+  "exportCheckpoint": "communication/checkpoints/alkanes-json-export-20261116-four-games.json",
+  "exportByteIdentical": true,
+  "limitations": [
+    "Builder/Puzzle earned-triple migration independently covered in memory; actual legacy browser rerun limited to their partial progress. Repair partial and earned migration replayed in browser.",
+    "Optional Detective triple and other-game switches passed earlier190-check prefix; no second full optional replay after the narrow preparation/hydration corrections. Final required-gate pointer navigation passed in both browsers.",
+    "Old Repair regenerates distractor order for untouched future rounds in both archived/current adapters; active raw user progress is invariant. Initial overly strict full-state assertion failures retained.",
+    "Headless/CSS viewport evidence does not qualify personal Firefox, physical mobile, conference/offline operation.",
+    "JSmol/fonts/services remain external dependencies. Chrome recorded six cancelled Document ERR_ABORTED events during navigation; no captured application JavaScript exceptions."
+  ],
+  "coreChanges": false,
+  "commit": false,
+  "push": false,
+  "publication": false,
+  "fullBackup": false,
+  "independentReviewNoOpenFindings": true,
+  "browserAggregate": "lesson-browser/final-browser-results.json",
+  "updatedUTC": "2026-11-16T06:48:27.367003+00:00"
+}

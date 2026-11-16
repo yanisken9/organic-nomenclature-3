@@ -1,0 +1,5998 @@
+{
+  "sourceHashesAtStart": {
+    "mulermoc-nom-56.html": "0cbccdd7984dc8a6fae66b4da338d957b13e7490b366a5aab27c207a4573b816",
+    "js/jsme-nick-nomeclature-moc2-data_56.js": "9387cd654b2ff3cfb058d9b97ddcca798ac13f47f769b532f9c122277ff8dd0a",
+    "js/mulermoc-nom-core-56.js": "01e4b44578dc9ed6c8a484c5d38ee8a56e44ce2fc81ac6cf479a8333718ee8b5",
+    "js/mulermoc-nom-molview-56.js": "9a0d9561a93401744ac3189a05edf3b67222c3b29bf7e50cd2152c06dbd6e53d",
+    "js/mulermoc-nom-teaching-56.js": "9f2e513c70032fbdb2eed1b2d7e4b3d4ffa993e438d98236df38b7b2b5295574",
+    "js/mulermoc-nom-note-56.js": "e685355459afb7955fbe13e3b8e07c6283469b4d8acb98cfbcfa483c9f9be3ca",
+    "js/mulermoc-nom-scenario-56.js": "f06ad3c197d3cc7b543a7879d838b18ceb4b97116b9a1626462b45eb387290f1",
+    "js/mulermoc-nom-iupac-56.js": "54d7fab6761dec93a2c55cd725fa0e60200a54ee01f1f9bf17b23e0893210972",
+    "js/mulermoc-nom-lang-56.js": "071cc85df6ce89e42e6b124806d0bd0f24b5aeb49dbaac2fe7955e7905802b34",
+    "js/mulermoc-nom-name-en-56.js": "092fcf2701c5d48dc93cbeee993153950846307588c39e75d195f9d96bb58c2d",
+    "js/ui-icons-56.js": "1cf84313e1b5103c3d8844f1a3e92f7588e2a6861f96fb7a1a3ba4de8fefccfc",
+    "css/jsme-nick-56.css": "fb85f29949e23808dcd3da58218a712a8e2ffa78371a6956df56f631e1b8261e",
+    "css/mulermoc-nom-scenario-56.css": "326f9d516a3839fa88223e6ce2976cf2d14aa925f8d7895da439fb1cba732a2c",
+    "css/namelecule-56.css": "042b0e93645dbc9fe5c9851bdd90a73b08f8c89fc4ef524302bd07ac7180e7a7",
+    "spt/init-56.spt": "b3c60d85cc7108a3cb35cd230555a5195ea5b67fd125fd08e2d3d0c16903a823",
+    "design/welcome-proposal.html": "f8b8af09804b8af97ad4941e535d5ec18b9ea5d6a351b3fa6117c1b62b2ccd09",
+    "design/theory-library.html": "2470affec6d84a61da4a61ed87b5ade80a50203e76d8b629825a867c565d28b1"
+  },
+  "completed": true,
+  "role": "Developer real isolated Firefox evidence; not independent review",
+  "checks": [],
+  "limitations": [
+    "Headless Firefox and viewport emulation only; no personal Firefox interaction",
+    "Real external JSmol/fonts/oracle service failures are retained; controlled transports are explicitly labeled",
+    "No physical mobile/Safari/conference-machine/offline or uninterrupted-operation guarantee"
+  ],
+  "base_url": "http://127.0.0.1:53283/",
+  "cases": [
+    {
+      "mol": "ethane",
+      "mode": "condensed",
+      "bond": 0,
+      "rawBond": [
+        1,
+        2,
+        1
+      ],
+      "line": {
+        "x1": 4221,
+        "y1": 2528,
+        "x2": 4971,
+        "y2": 2528
+      },
+      "anchors": [
+        {
+          "atom": 0,
+          "x": 4385.966064453125,
+          "y": 2586.3636474609375,
+          "w": 559.02294921875,
+          "h": 340.000244140625
+        },
+        {
+          "atom": 1,
+          "x": 5135.966064453125,
+          "y": 2586.3636474609375,
+          "w": 559.02294921875,
+          "h": 340.000244140625
+        }
+      ],
+      "rects": [
+        {
+          "atom": 0,
+          "x": 4116.7529296875,
+          "y": 2399.385986328125,
+          "w": 541.052734375,
+          "h": 324.92724609375
+        },
+        {
+          "atom": 1,
+          "x": 4866.7529296875,
+          "y": 2399.385986328125,
+          "w": 541.052734375,
+          "h": 324.92724609375
+        }
+      ],
+      "glyphs": [
+        {
+          "atom": 0,
+          "x": 4106.45458984375,
+          "y": 2416.363525390625,
+          "w": 559.02294921875,
+          "h": 340.000244140625
+        },
+        {
+          "atom": 1,
+          "x": 4856.45458984375,
+          "y": 2416.363525390625,
+          "w": 559.02294921875,
+          "h": 340.000244140625
+        }
+      ],
+      "mid": {
+        "x": 4596,
+        "y": 2528,
+        "insideGlyph": [
+          0
+        ],
+        "old": {
+          "kind": "atom",
+          "atom": 1
+        },
+        "now": {
+          "kind": "atom",
+          "atom": 1
+        }
+      },
+      "visibleSamples": [
+        {
+          "t": 0.6,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.61,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.62,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.63,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.64,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.65,
+          "old": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          }
+        },
+        {
+          "t": 0.66,
+          "old": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          }
+        },
+        {
+          "t": 0.67,
+          "old": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          }
+        },
+        {
+          "t": 0.68,
+          "old": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          }
+        },
+        {
+          "t": 0.69,
+          "old": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          }
+        },
+        {
+          "t": 0.7,
+          "old": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          }
+        },
+        {
+          "t": 0.71,
+          "old": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          }
+        },
+        {
+          "t": 0.72,
+          "old": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          }
+        },
+        {
+          "t": 0.73,
+          "old": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          }
+        },
+        {
+          "t": 0.74,
+          "old": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          }
+        },
+        {
+          "t": 0.75,
+          "old": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          }
+        },
+        {
+          "t": 0.76,
+          "old": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          }
+        },
+        {
+          "t": 0.77,
+          "old": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          }
+        },
+        {
+          "t": 0.78,
+          "old": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          }
+        },
+        {
+          "t": 0.79,
+          "old": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          }
+        },
+        {
+          "t": 0.8,
+          "old": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          }
+        },
+        {
+          "t": 0.81,
+          "old": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          }
+        },
+        {
+          "t": 0.82,
+          "old": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          }
+        },
+        {
+          "t": 0.83,
+          "old": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          }
+        },
+        {
+          "t": 0.84,
+          "old": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          }
+        }
+      ],
+      "choice": {
+        "t": 0.72,
+        "x": 4761,
+        "y": 2528,
+        "visible": true,
+        "clearance": 95.45458984375,
+        "old": {
+          "kind": "atom",
+          "atom": 2,
+          "vertex": 1
+        },
+        "now": {
+          "kind": "atom",
+          "atom": 2,
+          "vertex": 1
+        },
+        "screen": {
+          "x": 689.9898405894637,
+          "y": 535.8555405139923
+        }
+      },
+      "actualSelection": {
+        "atoms": [
+          2
+        ],
+        "bonds": []
+      }
+    },
+    {
+      "mol": "ethane",
+      "mode": "expanded",
+      "bond": 0,
+      "rawBond": [
+        1,
+        2,
+        1
+      ],
+      "line": {
+        "x1": 7394,
+        "y1": 4423,
+        "x2": 8706,
+        "y2": 4423
+      },
+      "anchors": [
+        {
+          "atom": 0,
+          "x": 7393.907485961914,
+          "y": 4477.2572021484375,
+          "w": 453.0083312988281,
+          "h": 524.016357421875
+        },
+        {
+          "atom": 1,
+          "x": 8705.907485961914,
+          "y": 4477.2572021484375,
+          "w": 453.0083312988281,
+          "h": 524.016357421875
+        },
+        {
+          "atom": 2,
+          "x": 9361.297134399414,
+          "y": 4477.0130615234375,
+          "w": 453.0083312988281,
+          "h": 524.016357421875
+        },
+        {
+          "atom": 3,
+          "x": 8705.297134399414,
+          "y": 3821.0130615234375,
+          "w": 453.0083312988281,
+          "h": 524.016357421875
+        },
+        {
+          "atom": 4,
+          "x": 8705.297134399414,
+          "y": 5133.0130615234375,
+          "w": 453.0083312988281,
+          "h": 524.016357421875
+        },
+        {
+          "atom": 5,
+          "x": 7393.297134399414,
+          "y": 5133.0130615234375,
+          "w": 453.0083312988281,
+          "h": 524.016357421875
+        },
+        {
+          "atom": 6,
+          "x": 7393.297134399414,
+          "y": 3821.0130615234375,
+          "w": 453.0083312988281,
+          "h": 524.016357421875
+        },
+        {
+          "atom": 7,
+          "x": 6736.297134399414,
+          "y": 4477.0130615234375,
+          "w": 453.0083312988281,
+          "h": 524.016357421875
+        }
+      ],
+      "rects": [
+        {
+          "atom": 0,
+          "x": 7133.35888671875,
+          "y": 4162.35888671875,
+          "w": 521.2822265625,
+          "h": 521.2822265625
+        },
+        {
+          "atom": 1,
+          "x": 8445.3583984375,
+          "y": 4162.35888671875,
+          "w": 521.2822265625,
+          "h": 521.2822265625
+        },
+        {
+          "atom": 2,
+          "x": 9101.3583984375,
+          "y": 4162.35888671875,
+          "w": 521.2822265625,
+          "h": 521.2822265625
+        },
+        {
+          "atom": 3,
+          "x": 8445.3583984375,
+          "y": 3506.35888671875,
+          "w": 521.2822265625,
+          "h": 521.2822265625
+        },
+        {
+          "atom": 4,
+          "x": 8445.3583984375,
+          "y": 4818.35888671875,
+          "w": 521.2822265625,
+          "h": 521.2822265625
+        },
+        {
+          "atom": 5,
+          "x": 7133.35888671875,
+          "y": 4818.35888671875,
+          "w": 521.2822265625,
+          "h": 521.2822265625
+        },
+        {
+          "atom": 6,
+          "x": 7133.35888671875,
+          "y": 3506.35888671875,
+          "w": 521.2822265625,
+          "h": 521.2822265625
+        },
+        {
+          "atom": 7,
+          "x": 6476.35888671875,
+          "y": 4162.35888671875,
+          "w": 521.2822265625,
+          "h": 521.2822265625
+        }
+      ],
+      "glyphs": [
+        {
+          "atom": 0,
+          "x": 7167.4033203125,
+          "y": 4215.2490234375,
+          "w": 453.0083312988281,
+          "h": 524.016357421875
+        },
+        {
+          "atom": 1,
+          "x": 8479.4033203125,
+          "y": 4215.2490234375,
+          "w": 453.0083312988281,
+          "h": 524.016357421875
+        },
+        {
+          "atom": 2,
+          "x": 9134.79296875,
+          "y": 4215.0048828125,
+          "w": 453.0083312988281,
+          "h": 524.016357421875
+        },
+        {
+          "atom": 3,
+          "x": 8478.79296875,
+          "y": 3559.0048828125,
+          "w": 453.0083312988281,
+          "h": 524.016357421875
+        },
+        {
+          "atom": 4,
+          "x": 8478.79296875,
+          "y": 4871.0048828125,
+          "w": 453.0083312988281,
+          "h": 524.016357421875
+        },
+        {
+          "atom": 5,
+          "x": 7166.79296875,
+          "y": 4871.0048828125,
+          "w": 453.0083312988281,
+          "h": 524.016357421875
+        },
+        {
+          "atom": 6,
+          "x": 7166.79296875,
+          "y": 3559.0048828125,
+          "w": 453.0083312988281,
+          "h": 524.016357421875
+        },
+        {
+          "atom": 7,
+          "x": 6509.79296875,
+          "y": 4215.0048828125,
+          "w": 453.0083312988281,
+          "h": 524.016357421875
+        }
+      ],
+      "mid": {
+        "x": 8050,
+        "y": 4423,
+        "insideGlyph": [],
+        "old": {
+          "kind": "bond",
+          "bond": 1,
+          "pair": [
+            1,
+            2
+          ]
+        },
+        "now": {
+          "kind": "bond",
+          "bond": 1,
+          "pair": [
+            1,
+            2
+          ]
+        }
+      },
+      "visibleSamples": [
+        {
+          "t": 0.2,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.21,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.22,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.23,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.24,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.25,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.26,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.27,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.28,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.29,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.3,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.31,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.32,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.33,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.34,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.35,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.36,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.37,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.38,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.39,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.4,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.41,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.42,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.43,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.44,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.45,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.46,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.47,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.48,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.49,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.5,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.51,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.52,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.53,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.54,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.55,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.56,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.57,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.58,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.59,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.6,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.61,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.62,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.63,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.64,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.65,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.66,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.67,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.68,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.69,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.7,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.71,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.72,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.73,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.74,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.75,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.76,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.77,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.78,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.79,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.8,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        }
+      ],
+      "choice": {
+        "t": 0.5,
+        "x": 8050,
+        "y": 4423,
+        "visible": true,
+        "clearance": 395.3583984375,
+        "old": {
+          "kind": "bond",
+          "bond": 1,
+          "pair": [
+            1,
+            2
+          ]
+        },
+        "now": {
+          "kind": "bond",
+          "bond": 1,
+          "pair": [
+            1,
+            2
+          ]
+        },
+        "screen": {
+          "x": 690.0445610359311,
+          "y": 538.3900663219392
+        }
+      },
+      "actualSelection": {
+        "atoms": [],
+        "bonds": [
+          1
+        ]
+      }
+    },
+    {
+      "mol": "ethane",
+      "mode": "skeletal",
+      "bond": 0,
+      "rawBond": [
+        1,
+        2,
+        1
+      ],
+      "line": {
+        "x1": 4221,
+        "y1": 2528,
+        "x2": 4971,
+        "y2": 2528
+      },
+      "anchors": [],
+      "rects": [],
+      "glyphs": [],
+      "mid": {
+        "x": 4596,
+        "y": 2528,
+        "insideGlyph": [],
+        "old": {
+          "kind": "bond",
+          "bond": 1,
+          "pair": [
+            1,
+            2
+          ]
+        },
+        "now": {
+          "kind": "bond",
+          "bond": 1,
+          "pair": [
+            1,
+            2
+          ]
+        }
+      },
+      "visibleSamples": [
+        {
+          "t": 0.01,
+          "old": {
+            "kind": "atom",
+            "atom": 1,
+            "vertex": 0
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 1,
+            "vertex": 0
+          }
+        },
+        {
+          "t": 0.02,
+          "old": {
+            "kind": "atom",
+            "atom": 1,
+            "vertex": 0
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 1,
+            "vertex": 0
+          }
+        },
+        {
+          "t": 0.03,
+          "old": {
+            "kind": "atom",
+            "atom": 1,
+            "vertex": 0
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 1,
+            "vertex": 0
+          }
+        },
+        {
+          "t": 0.04,
+          "old": {
+            "kind": "atom",
+            "atom": 1,
+            "vertex": 0
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 1,
+            "vertex": 0
+          }
+        },
+        {
+          "t": 0.05,
+          "old": {
+            "kind": "atom",
+            "atom": 1,
+            "vertex": 0
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 1,
+            "vertex": 0
+          }
+        },
+        {
+          "t": 0.06,
+          "old": {
+            "kind": "atom",
+            "atom": 1,
+            "vertex": 0
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 1,
+            "vertex": 0
+          }
+        },
+        {
+          "t": 0.07,
+          "old": {
+            "kind": "atom",
+            "atom": 1,
+            "vertex": 0
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 1,
+            "vertex": 0
+          }
+        },
+        {
+          "t": 0.08,
+          "old": {
+            "kind": "atom",
+            "atom": 1,
+            "vertex": 0
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 1,
+            "vertex": 0
+          }
+        },
+        {
+          "t": 0.09,
+          "old": {
+            "kind": "atom",
+            "atom": 1,
+            "vertex": 0
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 1,
+            "vertex": 0
+          }
+        },
+        {
+          "t": 0.1,
+          "old": {
+            "kind": "atom",
+            "atom": 1,
+            "vertex": 0
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 1,
+            "vertex": 0
+          }
+        },
+        {
+          "t": 0.11,
+          "old": {
+            "kind": "atom",
+            "atom": 1,
+            "vertex": 0
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 1,
+            "vertex": 0
+          }
+        },
+        {
+          "t": 0.12,
+          "old": {
+            "kind": "atom",
+            "atom": 1,
+            "vertex": 0
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 1,
+            "vertex": 0
+          }
+        },
+        {
+          "t": 0.13,
+          "old": {
+            "kind": "atom",
+            "atom": 1,
+            "vertex": 0
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 1,
+            "vertex": 0
+          }
+        },
+        {
+          "t": 0.14,
+          "old": {
+            "kind": "atom",
+            "atom": 1,
+            "vertex": 0
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 1,
+            "vertex": 0
+          }
+        },
+        {
+          "t": 0.15,
+          "old": {
+            "kind": "atom",
+            "atom": 1,
+            "vertex": 0
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 1,
+            "vertex": 0
+          }
+        },
+        {
+          "t": 0.16,
+          "old": {
+            "kind": "atom",
+            "atom": 1,
+            "vertex": 0
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 1,
+            "vertex": 0
+          }
+        },
+        {
+          "t": 0.17,
+          "old": {
+            "kind": "atom",
+            "atom": 1,
+            "vertex": 0
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 1,
+            "vertex": 0
+          }
+        },
+        {
+          "t": 0.18,
+          "old": {
+            "kind": "atom",
+            "atom": 1,
+            "vertex": 0
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 1,
+            "vertex": 0
+          }
+        },
+        {
+          "t": 0.19,
+          "old": {
+            "kind": "atom",
+            "atom": 1,
+            "vertex": 0
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 1,
+            "vertex": 0
+          }
+        },
+        {
+          "t": 0.2,
+          "old": {
+            "kind": "atom",
+            "atom": 1,
+            "vertex": 0
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 1,
+            "vertex": 0
+          }
+        },
+        {
+          "t": 0.21,
+          "old": {
+            "kind": "atom",
+            "atom": 1,
+            "vertex": 0
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 1,
+            "vertex": 0
+          }
+        },
+        {
+          "t": 0.22,
+          "old": {
+            "kind": "atom",
+            "atom": 1,
+            "vertex": 0
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 1,
+            "vertex": 0
+          }
+        },
+        {
+          "t": 0.23,
+          "old": {
+            "kind": "atom",
+            "atom": 1,
+            "vertex": 0
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 1,
+            "vertex": 0
+          }
+        },
+        {
+          "t": 0.24,
+          "old": {
+            "kind": "atom",
+            "atom": 1,
+            "vertex": 0
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 1,
+            "vertex": 0
+          }
+        },
+        {
+          "t": 0.25,
+          "old": {
+            "kind": "atom",
+            "atom": 1,
+            "vertex": 0
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 1,
+            "vertex": 0
+          }
+        },
+        {
+          "t": 0.26,
+          "old": {
+            "kind": "atom",
+            "atom": 1,
+            "vertex": 0
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 1,
+            "vertex": 0
+          }
+        },
+        {
+          "t": 0.27,
+          "old": {
+            "kind": "atom",
+            "atom": 1,
+            "vertex": 0
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 1,
+            "vertex": 0
+          }
+        },
+        {
+          "t": 0.28,
+          "old": {
+            "kind": "atom",
+            "atom": 1,
+            "vertex": 0
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 1,
+            "vertex": 0
+          }
+        },
+        {
+          "t": 0.29,
+          "old": {
+            "kind": "atom",
+            "atom": 1,
+            "vertex": 0
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 1,
+            "vertex": 0
+          }
+        },
+        {
+          "t": 0.3,
+          "old": {
+            "kind": "atom",
+            "atom": 1,
+            "vertex": 0
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 1,
+            "vertex": 0
+          }
+        },
+        {
+          "t": 0.31,
+          "old": {
+            "kind": "atom",
+            "atom": 1,
+            "vertex": 0
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 1,
+            "vertex": 0
+          }
+        },
+        {
+          "t": 0.32,
+          "old": {
+            "kind": "atom",
+            "atom": 1,
+            "vertex": 0
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 1,
+            "vertex": 0
+          }
+        },
+        {
+          "t": 0.33,
+          "old": {
+            "kind": "atom",
+            "atom": 1,
+            "vertex": 0
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 1,
+            "vertex": 0
+          }
+        },
+        {
+          "t": 0.34,
+          "old": {
+            "kind": "atom",
+            "atom": 1,
+            "vertex": 0
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 1,
+            "vertex": 0
+          }
+        },
+        {
+          "t": 0.35,
+          "old": {
+            "kind": "atom",
+            "atom": 1,
+            "vertex": 0
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 1,
+            "vertex": 0
+          }
+        },
+        {
+          "t": 0.36,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.37,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.38,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.39,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.4,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.41,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.42,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.43,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.44,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.45,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.46,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.47,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.48,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.49,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.5,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.51,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.52,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.53,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.54,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.55,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.56,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.57,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.58,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.59,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.6,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.61,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.62,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.63,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.64,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.65,
+          "old": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          }
+        },
+        {
+          "t": 0.66,
+          "old": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          }
+        },
+        {
+          "t": 0.67,
+          "old": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          }
+        },
+        {
+          "t": 0.68,
+          "old": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          }
+        },
+        {
+          "t": 0.69,
+          "old": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          }
+        },
+        {
+          "t": 0.7,
+          "old": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          }
+        },
+        {
+          "t": 0.71,
+          "old": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          }
+        },
+        {
+          "t": 0.72,
+          "old": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          }
+        },
+        {
+          "t": 0.73,
+          "old": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          }
+        },
+        {
+          "t": 0.74,
+          "old": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          }
+        },
+        {
+          "t": 0.75,
+          "old": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          }
+        },
+        {
+          "t": 0.76,
+          "old": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          }
+        },
+        {
+          "t": 0.77,
+          "old": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          }
+        },
+        {
+          "t": 0.78,
+          "old": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          }
+        },
+        {
+          "t": 0.79,
+          "old": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          }
+        },
+        {
+          "t": 0.8,
+          "old": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          }
+        },
+        {
+          "t": 0.81,
+          "old": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          }
+        },
+        {
+          "t": 0.82,
+          "old": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          }
+        },
+        {
+          "t": 0.83,
+          "old": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          }
+        },
+        {
+          "t": 0.84,
+          "old": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          }
+        },
+        {
+          "t": 0.85,
+          "old": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          }
+        },
+        {
+          "t": 0.86,
+          "old": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          }
+        },
+        {
+          "t": 0.87,
+          "old": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          }
+        },
+        {
+          "t": 0.88,
+          "old": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          }
+        },
+        {
+          "t": 0.89,
+          "old": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          }
+        },
+        {
+          "t": 0.9,
+          "old": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          }
+        },
+        {
+          "t": 0.91,
+          "old": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          }
+        },
+        {
+          "t": 0.92,
+          "old": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          }
+        },
+        {
+          "t": 0.93,
+          "old": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          }
+        },
+        {
+          "t": 0.94,
+          "old": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          }
+        },
+        {
+          "t": 0.95,
+          "old": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          }
+        },
+        {
+          "t": 0.96,
+          "old": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          }
+        },
+        {
+          "t": 0.97,
+          "old": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          }
+        },
+        {
+          "t": 0.98,
+          "old": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          }
+        },
+        {
+          "t": 0.99,
+          "old": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          }
+        }
+      ],
+      "choice": {
+        "t": 0.01,
+        "x": 4228.5,
+        "y": 2528,
+        "visible": true,
+        "clearance": null,
+        "old": {
+          "kind": "atom",
+          "atom": 1,
+          "vertex": 0
+        },
+        "now": {
+          "kind": "atom",
+          "atom": 1,
+          "vertex": 0
+        },
+        "screen": {
+          "x": 665.3403731770813,
+          "y": 540.4999892711639
+        }
+      },
+      "actualSelection": {
+        "atoms": [
+          1
+        ],
+        "bonds": []
+      }
+    },
+    {
+      "mol": "propane",
+      "mode": "condensed",
+      "bond": 0,
+      "rawBond": [
+        1,
+        2,
+        1
+      ],
+      "line": {
+        "x1": 3847,
+        "y1": 2528,
+        "x2": 4597,
+        "y2": 2528
+      },
+      "anchors": [
+        {
+          "atom": 0,
+          "x": 4011.966064453125,
+          "y": 2586.3636474609375,
+          "w": 559.02294921875,
+          "h": 340.000244140625
+        },
+        {
+          "atom": 1,
+          "x": 4761.966064453125,
+          "y": 2586.3636474609375,
+          "w": 559.02294921875,
+          "h": 340.000244140625
+        },
+        {
+          "atom": 2,
+          "x": 5511.966064453125,
+          "y": 2586.3636474609375,
+          "w": 559.02294921875,
+          "h": 340.000244140625
+        }
+      ],
+      "rects": [
+        {
+          "atom": 0,
+          "x": 3742.753173828125,
+          "y": 2399.385986328125,
+          "w": 541.052978515625,
+          "h": 324.92724609375
+        },
+        {
+          "atom": 1,
+          "x": 4492.7529296875,
+          "y": 2399.385986328125,
+          "w": 541.474609375,
+          "h": 320.81396484375
+        },
+        {
+          "atom": 2,
+          "x": 5242.7529296875,
+          "y": 2399.385986328125,
+          "w": 541.052734375,
+          "h": 324.92724609375
+        }
+      ],
+      "glyphs": [
+        {
+          "atom": 0,
+          "x": 3732.45458984375,
+          "y": 2416.363525390625,
+          "w": 559.02294921875,
+          "h": 340.000244140625
+        },
+        {
+          "atom": 1,
+          "x": 4482.45458984375,
+          "y": 2416.363525390625,
+          "w": 559.02294921875,
+          "h": 340.000244140625
+        },
+        {
+          "atom": 2,
+          "x": 5232.45458984375,
+          "y": 2416.363525390625,
+          "w": 559.02294921875,
+          "h": 340.000244140625
+        }
+      ],
+      "mid": {
+        "x": 4222,
+        "y": 2528,
+        "insideGlyph": [
+          0
+        ],
+        "old": {
+          "kind": "atom",
+          "atom": 1
+        },
+        "now": {
+          "kind": "atom",
+          "atom": 1
+        }
+      },
+      "visibleSamples": [
+        {
+          "t": 0.6,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.61,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.62,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.63,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.64,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.65,
+          "old": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          }
+        },
+        {
+          "t": 0.66,
+          "old": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          }
+        },
+        {
+          "t": 0.67,
+          "old": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          }
+        },
+        {
+          "t": 0.68,
+          "old": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          }
+        },
+        {
+          "t": 0.69,
+          "old": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          }
+        },
+        {
+          "t": 0.7,
+          "old": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          }
+        },
+        {
+          "t": 0.71,
+          "old": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          }
+        },
+        {
+          "t": 0.72,
+          "old": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          }
+        },
+        {
+          "t": 0.73,
+          "old": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          }
+        },
+        {
+          "t": 0.74,
+          "old": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          }
+        },
+        {
+          "t": 0.75,
+          "old": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          }
+        },
+        {
+          "t": 0.76,
+          "old": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          }
+        },
+        {
+          "t": 0.77,
+          "old": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          }
+        },
+        {
+          "t": 0.78,
+          "old": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          }
+        },
+        {
+          "t": 0.79,
+          "old": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          }
+        },
+        {
+          "t": 0.8,
+          "old": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          }
+        },
+        {
+          "t": 0.81,
+          "old": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          }
+        },
+        {
+          "t": 0.82,
+          "old": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          }
+        },
+        {
+          "t": 0.83,
+          "old": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          }
+        },
+        {
+          "t": 0.84,
+          "old": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          },
+          "now": {
+            "kind": "atom",
+            "atom": 2,
+            "vertex": 1
+          }
+        }
+      ],
+      "choice": {
+        "t": 0.72,
+        "x": 4387,
+        "y": 2528,
+        "visible": true,
+        "clearance": 95.45458984375,
+        "old": {
+          "kind": "atom",
+          "atom": 2,
+          "vertex": 1
+        },
+        "now": {
+          "kind": "atom",
+          "atom": 2,
+          "vertex": 1
+        },
+        "screen": {
+          "x": 659.4342854693532,
+          "y": 535.8555405139923
+        }
+      },
+      "actualSelection": {
+        "atoms": [
+          2
+        ],
+        "bonds": []
+      }
+    },
+    {
+      "mol": "butene_1",
+      "mode": "expanded",
+      "bond": 0,
+      "rawBond": [
+        1,
+        2,
+        1
+      ],
+      "line": {
+        "x1": 5460,
+        "y1": 3972,
+        "x2": 6638,
+        "y2": 3972
+      },
+      "anchors": [
+        {
+          "atom": 0,
+          "x": 5458.809921264648,
+          "y": 4021.814697265625,
+          "w": 406.7497253417969,
+          "h": 470.5068359375
+        },
+        {
+          "atom": 1,
+          "x": 6636.809921264648,
+          "y": 4021.814697265625,
+          "w": 406.7497253417969,
+          "h": 470.5068359375
+        },
+        {
+          "atom": 2,
+          "x": 7815.809921264648,
+          "y": 4021.814697265625,
+          "w": 406.7497253417969,
+          "h": 470.5068359375
+        },
+        {
+          "atom": 3,
+          "x": 8993.809432983398,
+          "y": 4021.814697265625,
+          "w": 406.7497253417969,
+          "h": 470.5068359375
+        },
+        {
+          "atom": 4,
+          "x": 5458.258163452148,
+          "y": 4610.59375,
+          "w": 406.7497253417969,
+          "h": 470.5068359375
+        },
+        {
+          "atom": 5,
+          "x": 4868.258163452148,
+          "y": 4021.593994140625,
+          "w": 406.7497253417969,
+          "h": 470.5068359375
+        },
+        {
+          "atom": 6,
+          "x": 5458.258163452148,
+          "y": 3431.593994140625,
+          "w": 406.7497253417969,
+          "h": 470.5068359375
+        },
+        {
+          "atom": 7,
+          "x": 6636.258163452148,
+          "y": 4610.59375,
+          "w": 406.7497253417969,
+          "h": 470.5068359375
+        },
+        {
+          "atom": 8,
+          "x": 6636.258163452148,
+          "y": 3431.593994140625,
+          "w": 406.7497253417969,
+          "h": 470.5068359375
+        },
+        {
+          "atom": 9,
+          "x": 7815.258163452148,
+          "y": 4610.59375,
+          "w": 406.7497253417969,
+          "h": 470.5068359375
+        },
+        {
+          "atom": 10,
+          "x": 9583.257675170898,
+          "y": 4021.593994140625,
+          "w": 406.7497253417969,
+          "h": 470.5068359375
+        },
+        {
+          "atom": 11,
+          "x": 8993.257675170898,
+          "y": 4610.59375,
+          "w": 406.7497253417969,
+          "h": 470.5068359375
+        }
+      ],
+      "rects": [
+        {
+          "atom": 0,
+          "x": 5225.97412109375,
+          "y": 3737.97412109375,
+          "w": 468.05224609375,
+          "h": 468.05224609375
+        },
+        {
+          "atom": 1,
+          "x": 6403.97412109375,
+          "y": 3737.97412109375,
+          "w": 468.05224609375,
+          "h": 468.05224609375
+        },
+        {
+          "atom": 2,
+          "x": 7582.97412109375,
+          "y": 3737.97412109375,
+          "w": 468.05224609375,
+          "h": 468.05224609375
+        },
+        {
+          "atom": 3,
+          "x": 8760.9736328125,
+          "y": 3737.97412109375,
+          "w": 468.0517578125,
+          "h": 468.05224609375
+        },
+        {
+          "atom": 4,
+          "x": 5225.97412109375,
+          "y": 4326.97412109375,
+          "w": 468.05224609375,
+          "h": 468.05224609375
+        },
+        {
+          "atom": 5,
+          "x": 4635.97412109375,
+          "y": 3737.97412109375,
+          "w": 468.05224609375,
+          "h": 468.05224609375
+        },
+        {
+          "atom": 6,
+          "x": 5225.97412109375,
+          "y": 3147.97412109375,
+          "w": 468.05224609375,
+          "h": 468.052001953125
+        },
+        {
+          "atom": 7,
+          "x": 6403.97412109375,
+          "y": 4326.97412109375,
+          "w": 468.05224609375,
+          "h": 468.05224609375
+        },
+        {
+          "atom": 8,
+          "x": 6403.97412109375,
+          "y": 3147.97412109375,
+          "w": 468.05224609375,
+          "h": 468.052001953125
+        },
+        {
+          "atom": 9,
+          "x": 7582.97412109375,
+          "y": 4326.97412109375,
+          "w": 468.05224609375,
+          "h": 468.05224609375
+        },
+        {
+          "atom": 10,
+          "x": 9350.9736328125,
+          "y": 3737.97412109375,
+          "w": 468.0517578125,
+          "h": 468.05224609375
+        },
+        {
+          "atom": 11,
+          "x": 8760.9736328125,
+          "y": 4326.97412109375,
+          "w": 468.0517578125,
+          "h": 468.05224609375
+        }
+      ],
+      "glyphs": [
+        {
+          "atom": 0,
+          "x": 5255.43505859375,
+          "y": 3786.561279296875,
+          "w": 406.7497253417969,
+          "h": 470.5068359375
+        },
+        {
+          "atom": 1,
+          "x": 6433.43505859375,
+          "y": 3786.561279296875,
+          "w": 406.7497253417969,
+          "h": 470.5068359375
+        },
+        {
+          "atom": 2,
+          "x": 7612.43505859375,
+          "y": 3786.561279296875,
+          "w": 406.7497253417969,
+          "h": 470.5068359375
+        },
+        {
+          "atom": 3,
+          "x": 8790.4345703125,
+          "y": 3786.561279296875,
+          "w": 406.7497253417969,
+          "h": 470.5068359375
+        },
+        {
+          "atom": 4,
+          "x": 5254.88330078125,
+          "y": 4375.34033203125,
+          "w": 406.7497253417969,
+          "h": 470.5068359375
+        },
+        {
+          "atom": 5,
+          "x": 4664.88330078125,
+          "y": 3786.340576171875,
+          "w": 406.7497253417969,
+          "h": 470.5068359375
+        },
+        {
+          "atom": 6,
+          "x": 5254.88330078125,
+          "y": 3196.340576171875,
+          "w": 406.7497253417969,
+          "h": 470.5068359375
+        },
+        {
+          "atom": 7,
+          "x": 6432.88330078125,
+          "y": 4375.34033203125,
+          "w": 406.7497253417969,
+          "h": 470.5068359375
+        },
+        {
+          "atom": 8,
+          "x": 6432.88330078125,
+          "y": 3196.340576171875,
+          "w": 406.7497253417969,
+          "h": 470.5068359375
+        },
+        {
+          "atom": 9,
+          "x": 7611.88330078125,
+          "y": 4375.34033203125,
+          "w": 406.7497253417969,
+          "h": 470.5068359375
+        },
+        {
+          "atom": 10,
+          "x": 9379.8828125,
+          "y": 3786.340576171875,
+          "w": 406.7497253417969,
+          "h": 470.5068359375
+        },
+        {
+          "atom": 11,
+          "x": 8789.8828125,
+          "y": 4375.34033203125,
+          "w": 406.7497253417969,
+          "h": 470.5068359375
+        }
+      ],
+      "mid": {
+        "x": 6049,
+        "y": 3972,
+        "insideGlyph": [],
+        "old": {
+          "kind": "bond",
+          "bond": 1,
+          "pair": [
+            1,
+            2
+          ]
+        },
+        "now": {
+          "kind": "bond",
+          "bond": 1,
+          "pair": [
+            1,
+            2
+          ]
+        }
+      },
+      "visibleSamples": [
+        {
+          "t": 0.2,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.21,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.22,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.23,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.24,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.25,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.26,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.27,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.28,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.29,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.3,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.31,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.32,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.33,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.34,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.35,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.36,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.37,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.38,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.39,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.4,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.41,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.42,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.43,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.44,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.45,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.46,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.47,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.48,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.49,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.5,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.51,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.52,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.53,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.54,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.55,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.56,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.57,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.58,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.59,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.6,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.61,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.62,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.63,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.64,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.65,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.66,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.67,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.68,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.69,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.7,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.71,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.72,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.73,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.74,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.75,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.76,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.77,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.78,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.79,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "t": 0.8,
+          "old": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          },
+          "now": {
+            "kind": "bond",
+            "bond": 1,
+            "pair": [
+              1,
+              2
+            ]
+          }
+        }
+      ],
+      "choice": {
+        "t": 0.5,
+        "x": 6049,
+        "y": 3972,
+        "visible": true,
+        "clearance": 354.9736328125,
+        "old": {
+          "kind": "bond",
+          "bond": 1,
+          "pair": [
+            1,
+            2
+          ]
+        },
+        "now": {
+          "kind": "bond",
+          "bond": 1,
+          "pair": [
+            1,
+            2
+          ]
+        },
+        "screen": {
+          "x": 632.467117447406,
+          "y": 538.3613792210817
+        }
+      },
+      "actualSelection": {
+        "atoms": [],
+        "bonds": [
+          1
+        ]
+      }
+    }
+  ],
+  "sourceHashesAtFinish": {
+    "mulermoc-nom-56.html": "0cbccdd7984dc8a6fae66b4da338d957b13e7490b366a5aab27c207a4573b816",
+    "js/jsme-nick-nomeclature-moc2-data_56.js": "9387cd654b2ff3cfb058d9b97ddcca798ac13f47f769b532f9c122277ff8dd0a",
+    "js/mulermoc-nom-core-56.js": "01e4b44578dc9ed6c8a484c5d38ee8a56e44ce2fc81ac6cf479a8333718ee8b5",
+    "js/mulermoc-nom-molview-56.js": "9a0d9561a93401744ac3189a05edf3b67222c3b29bf7e50cd2152c06dbd6e53d",
+    "js/mulermoc-nom-teaching-56.js": "9f2e513c70032fbdb2eed1b2d7e4b3d4ffa993e438d98236df38b7b2b5295574",
+    "js/mulermoc-nom-note-56.js": "e685355459afb7955fbe13e3b8e07c6283469b4d8acb98cfbcfa483c9f9be3ca",
+    "js/mulermoc-nom-scenario-56.js": "f06ad3c197d3cc7b543a7879d838b18ceb4b97116b9a1626462b45eb387290f1",
+    "js/mulermoc-nom-iupac-56.js": "54d7fab6761dec93a2c55cd725fa0e60200a54ee01f1f9bf17b23e0893210972",
+    "js/mulermoc-nom-lang-56.js": "071cc85df6ce89e42e6b124806d0bd0f24b5aeb49dbaac2fe7955e7905802b34",
+    "js/mulermoc-nom-name-en-56.js": "092fcf2701c5d48dc93cbeee993153950846307588c39e75d195f9d96bb58c2d",
+    "js/ui-icons-56.js": "1cf84313e1b5103c3d8844f1a3e92f7588e2a6861f96fb7a1a3ba4de8fefccfc",
+    "css/jsme-nick-56.css": "fb85f29949e23808dcd3da58218a712a8e2ffa78371a6956df56f631e1b8261e",
+    "css/mulermoc-nom-scenario-56.css": "326f9d516a3839fa88223e6ce2976cf2d14aa925f8d7895da439fb1cba732a2c",
+    "css/namelecule-56.css": "042b0e93645dbc9fe5c9851bdd90a73b08f8c89fc4ef524302bd07ac7180e7a7",
+    "spt/init-56.spt": "b3c60d85cc7108a3cb35cd230555a5195ea5b67fd125fd08e2d3d0c16903a823",
+    "design/welcome-proposal.html": "f8b8af09804b8af97ad4941e535d5ec18b9ea5d6a351b3fa6117c1b62b2ccd09",
+    "design/theory-library.html": "2470affec6d84a61da4a61ed87b5ade80a50203e76d8b629825a867c565d28b1"
+  },
+  "sourceChangedDuringRun": [],
+  "frozenTargetMatchesAtFinish": true,
+  "javascriptErrors": [],
+  "diagnosticEntries": [],
+  "resources": [
+    {
+      "name": "http://127.0.0.1:53283/css/namelecule-56.css?v=namelecule-v56-20261115-r1",
+      "initiatorType": "link",
+      "duration": 7,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:53283/css/jsme-nick-56.css?v=namelecule-v56-20261115-r1",
+      "initiatorType": "link",
+      "duration": 7,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:53283/css/namelecule-repair-round.css?v=optional-triples-20261110-r1",
+      "initiatorType": "link",
+      "duration": 7,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:53283/css/namelecule-quiz-checkpoints.css?v=game-header-text-parity-20261111-r1",
+      "initiatorType": "link",
+      "duration": 8,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:53283/css/mulermoc-nom-scenario-56.css?v=namelecule-v56-20261115-r1",
+      "initiatorType": "link",
+      "duration": 8,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:53283/js/namelecule-label-metrics.js?v=20261031-r1",
+      "initiatorType": "script",
+      "duration": 8,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:53283/js/vendor/jsme/namelecule-20261031-r1/jsme.nocache.js",
+      "initiatorType": "script",
+      "duration": 9,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:53283/js/vendor/dompurify/dompurify-3.4.17.min.js",
+      "initiatorType": "script",
+      "duration": 9,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:53283/js/ui-icons-56.js?v=namelecule-v56-20261115-r1",
+      "initiatorType": "script",
+      "duration": 9,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:53283/js/jsme-nick-nomeclature-moc2-data_56.js?v=namelecule-v56-20261115-r1",
+      "initiatorType": "script",
+      "duration": 9,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:53283/js/vendor/jquery/jquery-4.0.0.min.js",
+      "initiatorType": "script",
+      "duration": 9,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:53283/js/mulermoc-nom-core-56.js?v=namelecule-v56-20261115-r1",
+      "initiatorType": "script",
+      "duration": 9,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:53283/js/mulermoc-nom-note-56.js?v=namelecule-v56-20261115-r1",
+      "initiatorType": "script",
+      "duration": 9,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:53283/js/namelecule-game-repair.js?v=choice-games-20261111-r1",
+      "initiatorType": "script",
+      "duration": 11,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:53283/js/mulermoc-nom-teaching-56.js?v=namelecule-v56-20261115-r1",
+      "initiatorType": "script",
+      "duration": 11,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:53283/js/namelecule-quiz-checkpoints.js?v=builder-workspace-20261112-r2",
+      "initiatorType": "script",
+      "duration": 11,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:53283/js/namelecule-repair-generator.js?v=engine-pilot-20261105-r1",
+      "initiatorType": "script",
+      "duration": 11,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:53283/js/namelecule-generated-repair-checkpoint.js?v=choice-games-20261111-r2",
+      "initiatorType": "script",
+      "duration": 11,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:53283/js/namelecule-chemistry-client.js?v=verified-engines-20261105-r1",
+      "initiatorType": "script",
+      "duration": 11,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:53283/js/namelecule-name-builder-engine.js?v=name-builder-20261111-r1",
+      "initiatorType": "script",
+      "duration": 11,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:53283/js/namelecule-molecular-puzzle-engine.js?v=puzzle-lesson-20261112-r1",
+      "initiatorType": "script",
+      "duration": 13,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:53283/js/namelecule-game-choice-checkpoint.js?v=puzzle-lesson-20261112-r1",
+      "initiatorType": "script",
+      "duration": 13,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:53283/js/mulermoc-nom-molview-56.js?v=namelecule-v56-20261115-r1",
+      "initiatorType": "script",
+      "duration": 13,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:53283/js/mulermoc-nom-lang-56.js?v=namelecule-v56-20261115-r1",
+      "initiatorType": "script",
+      "duration": 13,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:53283/js/mulermoc-nom-scenario-56.js?v=namelecule-v56-20261115-r1",
+      "initiatorType": "script",
+      "duration": 13,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:53283/js/mulermoc-nom-name-en-56.js?v=namelecule-v56-20261115-r1",
+      "initiatorType": "script",
+      "duration": 13,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:53283/js/mulermoc-nom-iupac-56.js?v=namelecule-v56-20261115-r1",
+      "initiatorType": "script",
+      "duration": 13,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:53283/js/vendor/jsme/namelecule-20261031-r1/96E40B969193BD74B8A621486920E79C.cache.js",
+      "initiatorType": "script",
+      "duration": 15,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:53283/assets/namelecule-methane-v1.png",
+      "initiatorType": "img",
+      "duration": 81,
+      "responseStatus": 200
+    },
+    {
+      "name": "https://www.googletagmanager.com/gtag/js?id=G-1V8NWYY46Y",
+      "initiatorType": "script",
+      "duration": 243,
+      "responseStatus": 0
+    },
+    {
+      "name": "https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Roboto+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Sans+3:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap",
+      "initiatorType": "css",
+      "duration": 137,
+      "responseStatus": 0
+    },
+    {
+      "name": "http://127.0.0.1:53283/js/vendor/jsme/namelecule-20261031-r1/jsa.css",
+      "initiatorType": "link",
+      "duration": 1,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:53283/js/vendor/jsme/namelecule-20261031-r1/gwt/chrome/chrome.css",
+      "initiatorType": "link",
+      "duration": 1,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:53283/js/vendor/jsme/namelecule-20261031-r1/gwt/chrome/mosaic.css",
+      "initiatorType": "link",
+      "duration": 1,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:53283/js/vendor/jsme/namelecule-20261031-r1/FEB169D74546A3B279D22AE09AFB86BD.cache.js",
+      "initiatorType": "script",
+      "duration": 1,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:53283/js/vendor/jsmol/namelecule-20261031-r1/JSmol.min.js",
+      "initiatorType": "script",
+      "duration": 1,
+      "responseStatus": 200
+    },
+    {
+      "name": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/img/JSmol_spinner.gif",
+      "initiatorType": "css",
+      "duration": 591,
+      "responseStatus": 0
+    },
+    {
+      "name": "https://fonts.gstatic.com/s/roboto/v51/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMaxKUBHMdazTgWw.woff2",
+      "initiatorType": "other",
+      "duration": 99,
+      "responseStatus": 200
+    },
+    {
+      "name": "https://fonts.gstatic.com/s/sourcesans3/v20/nwpStKy2OAdR1K-IwhWudF-R3wwaZejf5HdF8Q.woff2",
+      "initiatorType": "other",
+      "duration": 130,
+      "responseStatus": 200
+    },
+    {
+      "name": "https://fonts.gstatic.com/s/sourcesans3/v20/nwpStKy2OAdR1K-IwhWudF-R3wwaZejf5HdF8Q.woff2",
+      "initiatorType": "other",
+      "duration": 130,
+      "responseStatus": 200
+    },
+    {
+      "name": "https://fonts.gstatic.com/s/sourcesans3/v20/nwpStKy2OAdR1K-IwhWudF-R3w8aZejf5Hc.woff2",
+      "initiatorType": "other",
+      "duration": 139,
+      "responseStatus": 200
+    },
+    {
+      "name": "https://fonts.gstatic.com/s/sourcesans3/v20/nwpStKy2OAdR1K-IwhWudF-R3w8aZejf5Hc.woff2",
+      "initiatorType": "other",
+      "duration": 142,
+      "responseStatus": 200
+    },
+    {
+      "name": "https://fonts.gstatic.com/s/sourcesans3/v20/nwpStKy2OAdR1K-IwhWudF-R3w8aZejf5Hc.woff2",
+      "initiatorType": "other",
+      "duration": 142,
+      "responseStatus": 200
+    },
+    {
+      "name": "https://fonts.gstatic.com/s/robotocondensed/v31/ieVl2ZhZI2eCN5jzbjEETS9weq8-19K7DQk6YvM.woff2",
+      "initiatorType": "other",
+      "duration": 155,
+      "responseStatus": 200
+    },
+    {
+      "name": "https://fonts.gstatic.com/s/sourcesans3/v20/nwpStKy2OAdR1K-IwhWudF-R3wwaZejf5HdF8Q.woff2",
+      "initiatorType": "other",
+      "duration": 129,
+      "responseStatus": 200
+    },
+    {
+      "name": "https://fonts.gstatic.com/s/robotocondensed/v31/ieVl2ZhZI2eCN5jzbjEETS9weq8-19G7DQk6YvNkeg.woff2",
+      "initiatorType": "other",
+      "duration": 130,
+      "responseStatus": 200
+    },
+    {
+      "name": "https://fonts.gstatic.com/s/robotocondensed/v31/ieVl2ZhZI2eCN5jzbjEETS9weq8-19G7DQk6YvNkeg.woff2",
+      "initiatorType": "other",
+      "duration": 140,
+      "responseStatus": 200
+    },
+    {
+      "name": "https://fonts.gstatic.com/s/roboto/v51/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBHMdazQ.woff2",
+      "initiatorType": "other",
+      "duration": 152,
+      "responseStatus": 200
+    },
+    {
+      "name": "https://fonts.gstatic.com/s/robotocondensed/v31/ieVl2ZhZI2eCN5jzbjEETS9weq8-19K7DQk6YvM.woff2",
+      "initiatorType": "other",
+      "duration": 156,
+      "responseStatus": 200
+    },
+    {
+      "name": "https://fonts.gstatic.com/s/robotocondensed/v31/ieVl2ZhZI2eCN5jzbjEETS9weq8-19K7DQk6YvM.woff2",
+      "initiatorType": "other",
+      "duration": 156,
+      "responseStatus": 200
+    },
+    {
+      "name": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/img/cursor_wait.gif",
+      "initiatorType": "img",
+      "duration": 442,
+      "responseStatus": 0
+    },
+    {
+      "name": "https://fonts.gstatic.com/s/robotocondensed/v31/ieVl2ZhZI2eCN5jzbjEETS9weq8-19K7DQk6YvM.woff2",
+      "initiatorType": "other",
+      "duration": 141,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:53283/favicon.ico",
+      "initiatorType": "other",
+      "duration": 668,
+      "responseStatus": 404
+    },
+    {
+      "name": "https://fonts.gstatic.com/s/sourcesans3/v20/nwpMtKy2OAdR1K-IwhWudF-R3woqZ-LYxnV18A.woff2",
+      "initiatorType": "other",
+      "duration": 113,
+      "responseStatus": 200
+    },
+    {
+      "name": "https://region1.google-analytics.com/g/collect?v=2&tid=G-1V8NWYY46Y&gtm=45je6bb1v9247675757za208zd9247675757xf1&_p=1794721478278&gcd=13l3l3l2l1l1&npa=1&dma_cps=a&dma=1&cid=996886653.1794721479&frm=0&ngs=1&pscdl=noapi&rcb=7&sr=1366x768&ul=el-gr&_s=1&tag_exp=115938465~115938469~118897920~118897930~120213116~120385423~120412526~120420416~120469145~120469153~121246026~121246034~123988487&sid=1794721478&sct=1&seg=0&dl=http%3A%2F%2F127.0.0.1%2Fmulermoc-nom-56.html%3Flang%3Den%26mol%3Dethane%26v%3Dvisible-bond-1794721478226176000&dt=Acyclic%20Organic%20Compounds%20Nomenclature&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&tfd=319",
+      "initiatorType": "fetch",
+      "duration": 122,
+      "responseStatus": 0
+    },
+    {
+      "name": "https://fonts.gstatic.com/s/roboto/v51/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMawCUBHMdazTgWw.woff2",
+      "initiatorType": "other",
+      "duration": 50,
+      "responseStatus": 200
+    },
+    {
+      "name": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/package.js",
+      "initiatorType": "xmlhttprequest",
+      "duration": 460,
+      "responseStatus": 200
+    },
+    {
+      "name": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/package.js",
+      "initiatorType": "xmlhttprequest",
+      "duration": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corejmol.z.js",
+      "initiatorType": "xmlhttprequest",
+      "duration": 1043,
+      "responseStatus": 200
+    },
+    {
+      "name": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/J/translation/PO.js",
+      "initiatorType": "xmlhttprequest",
+      "duration": 147,
+      "responseStatus": 200
+    },
+    {
+      "name": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/corescript.z.js",
+      "initiatorType": "xmlhttprequest",
+      "duration": 180,
+      "responseStatus": 200
+    },
+    {
+      "name": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/J/api/JmolSelectionListener.js",
+      "initiatorType": "xmlhttprequest",
+      "duration": 147,
+      "responseStatus": 200
+    },
+    {
+      "name": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/J/translation/JmolApplet/el.po",
+      "initiatorType": "xmlhttprequest",
+      "duration": 152,
+      "responseStatus": 200
+    },
+    {
+      "name": "https://fonts.gstatic.com/s/robotocondensed/v31/ieVl2ZhZI2eCN5jzbjEETS9weq8-19K7DQk6YvM.woff2",
+      "initiatorType": "other",
+      "duration": 1,
+      "responseStatus": 200
+    },
+    {
+      "name": "https://fonts.gstatic.com/s/roboto/v51/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBHMdazQ.woff2",
+      "initiatorType": "other",
+      "duration": 1,
+      "responseStatus": 200
+    },
+    {
+      "name": "https://fonts.gstatic.com/s/roboto/v51/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMaxKUBHMdazTgWw.woff2",
+      "initiatorType": "other",
+      "duration": 1,
+      "responseStatus": 200
+    },
+    {
+      "name": "https://fonts.gstatic.com/s/roboto/v51/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMawCUBHMdazTgWw.woff2",
+      "initiatorType": "other",
+      "duration": 1,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:53283/mols/nomeclature-moc2/methane_3D.sdf",
+      "initiatorType": "fetch",
+      "duration": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:53283/js/vendor/jsme/namelecule-20261031-r1/clear.cache.gif",
+      "initiatorType": "img",
+      "duration": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:53283/mols/nomeclature-moc2/ethane_3D.sdf",
+      "initiatorType": "fetch",
+      "duration": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:53283/scenarios/%CE%91%CE%BB%CE%BA%CE%AC%CE%BD%CE%B9%CE%B1-%CE%91%CE%B9%CE%B8%CE%AC%CE%BD%CE%B9%CE%BF-%CF%84%CE%B5%CF%83%CF%84.scenario.json",
+      "initiatorType": "fetch",
+      "duration": 1,
+      "responseStatus": 200
+    },
+    {
+      "name": "https://fonts.gstatic.com/s/robotocondensed/v31/ieVl2ZhZI2eCN5jzbjEETS9weq8-19G7DQk6YvNkeg.woff2",
+      "initiatorType": "other",
+      "duration": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "https://fonts.gstatic.com/s/roboto/v51/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBHMdazQ.woff2",
+      "initiatorType": "other",
+      "duration": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/core/coretext.z.js",
+      "initiatorType": "xmlhttprequest",
+      "duration": 158,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:53283/mols/nomeclature-moc2/methane_3D.sdf",
+      "initiatorType": "xmlhttprequest",
+      "duration": 1,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:53283/spt/init-56.spt",
+      "initiatorType": "xmlhttprequest",
+      "duration": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/J/shape/Halos.js",
+      "initiatorType": "xmlhttprequest",
+      "duration": 147,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:53283/mols/nomeclature-moc2/ethane_3D.sdf",
+      "initiatorType": "xmlhttprequest",
+      "duration": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:53283/spt/init-56.spt",
+      "initiatorType": "xmlhttprequest",
+      "duration": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "https://chemapps.stolaf.edu/jmol/jsmol/j2s/J/render/HalosRenderer.js",
+      "initiatorType": "xmlhttprequest",
+      "duration": 145,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:53283/mols/nomeclature-moc2/ethane_3D.sdf",
+      "initiatorType": "fetch",
+      "duration": 1,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:53283/mols/nomeclature-moc2/ethane_3D.sdf",
+      "initiatorType": "xmlhttprequest",
+      "duration": 1,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:53283/spt/init-56.spt",
+      "initiatorType": "xmlhttprequest",
+      "duration": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:53283/mols/nomeclature-moc2/ethane_3D.sdf",
+      "initiatorType": "fetch",
+      "duration": 1,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:53283/mols/nomeclature-moc2/ethane_3D.sdf",
+      "initiatorType": "xmlhttprequest",
+      "duration": 1,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:53283/spt/init-56.spt",
+      "initiatorType": "xmlhttprequest",
+      "duration": 2,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:53283/mols/nomeclature-moc2/ethane_3D.sdf",
+      "initiatorType": "fetch",
+      "duration": 1,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:53283/mols/nomeclature-moc2/ethane_3D.sdf",
+      "initiatorType": "xmlhttprequest",
+      "duration": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:53283/spt/init-56.spt",
+      "initiatorType": "xmlhttprequest",
+      "duration": 1,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:53283/mols/nomeclature-moc2/propane_3D.sdf",
+      "initiatorType": "fetch",
+      "duration": 2,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:53283/mols/nomeclature-moc2/propane_3D.sdf",
+      "initiatorType": "xmlhttprequest",
+      "duration": 2,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:53283/spt/init-56.spt",
+      "initiatorType": "xmlhttprequest",
+      "duration": 1,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:53283/mols/nomeclature-moc2/butene_1_3D.sdf",
+      "initiatorType": "fetch",
+      "duration": 1,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:53283/mols/nomeclature-moc2/butene_1_3D.sdf",
+      "initiatorType": "xmlhttprequest",
+      "duration": 0,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:53283/spt/init-56.spt",
+      "initiatorType": "xmlhttprequest",
+      "duration": 0,
+      "responseStatus": 200
+    }
+  ]
+}

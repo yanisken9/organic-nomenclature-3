@@ -1,0 +1,51 @@
+{
+  "recordedUTC": "2026-11-16T05:57:34.159691+00:00",
+  "agent": "/root/four_game_detective_canonical_host",
+  "status": "owned product target frozen; root overall review pending",
+  "baseCommit": "168e3cec01f941a84d40bbe0dc07156e7baa35d0",
+  "approvedPlan": "docs/FOUR-GAME-INTEGRATION-PLAN-20261116.md",
+  "exactProductPaths": [
+    "js/namelecule-molecular-detective-engine.js",
+    "js/namelecule-molecular-detective-host.js"
+  ],
+  "sha256": {
+    "js/namelecule-molecular-detective-engine.js": "862dea9451cb6b337df251b4779562e7a33e414a3226ac81b1857a60bd645686",
+    "js/namelecule-molecular-detective-host.js": "42caa8ec6a3ab833661cfc16fb543fd2cc7e8b7b4b30e7b1cad941fd4a90b35f"
+  },
+  "baselineSHA256": {
+    "js/namelecule-molecular-detective-engine.js": "f60c184b8e7750aece3ef6ce8870bddb05808978272b81d4b9184da2455ba1c5",
+    "js/namelecule-molecular-detective-host.js": "177e7fc961d44b23c28b9650ef15deead4377f692fa866eadb96daac892608c0"
+  },
+  "evidenceSHA256": {
+    "docs/checks/four-game-integration-20261116/canonical-host/canonical-results.json": "15a189600d8b7a31a64b2f50b6a9f4b65998534f5c9e8824b9a0d509446d3afc",
+    "docs/checks/four-game-integration-20261116/canonical-host/canonical-snapshots.json": "3972e061c8a84965f110aa0bfb7d5e710fa0a292311751b4684350ccd2bb0e47",
+    "docs/checks/four-game-integration-20261116/canonical-host/check-canonical.cjs": "8fd5ffcb89f709f61566e758e617f6c7f81edf4f6cbb943bdb4d97c956f95a89",
+    "docs/checks/four-game-integration-20261116/canonical-host/check-host.cjs": "5fd3d44952d30e1cc07636d978537c2ba4930db22d40278f011b52e95b5147f1",
+    "docs/checks/four-game-integration-20261116/canonical-host/host-results.json": "7412cdaa4f7329fba2c5a5b24cb3b393824b66665fcefc886b43d1f1a84b3bae"
+  },
+  "checks": {
+    "nodeSyntax": true,
+    "diffWhitespace": true,
+    "oldEngineRegression": {
+      "assertions": 6026,
+      "molecules": 27,
+      "missions": 69,
+      "alternatives": 108
+    },
+    "canonicalMemory": {
+      "assertions": 401,
+      "molecules": 8,
+      "missions": 19,
+      "alternatives": 33
+    },
+    "nativeFunctionProtocolMemory": {
+      "checks": 61
+    }
+  },
+  "limits": [
+    "No browser launched; root owns generated viewer rebuild and browser/integration checks.",
+    "Controlled host fixtures execute actual native state/clear/toggle/picker functions plus bridge, with mocked DOM/rendering.",
+    "canonicalSnapshot accepts caller-verified legacy catalog bytes and pinned core54 analysis; provider performs cryptographic verification.",
+    "No core, source MOL, catalog, chemical rules, mission targets, generator, commit, or publication changed by this agent."
+  ]
+}

@@ -5,11 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#254c50">
   <title>Μοριακό παζλ · Namelecule</title>
-  <link rel="stylesheet" href="../css/namelecule-name-builder.css?v=builder-methods-20261112-r3">
-  <link rel="stylesheet" href="../css/namelecule-molecular-puzzle.css?v=puzzle-lesson-20261112-r1">
+  <link rel="stylesheet" href="../css/namelecule-name-builder.css?v=game-viewport-20261116-r1">
+  <link rel="stylesheet" href="../css/namelecule-molecular-puzzle.css?v=game-viewport-20261116-r1">
+  <link rel="stylesheet" href="../css/namelecule-game-levels.css?v=game-viewport-20261116-r1">
+  <link rel="stylesheet" href="../css/namelecule-game-viewport.css?v=game-viewport-20261116-r1">
+  <script src="../js/namelecule-game-viewport.js?v=game-viewport-20261116-r1" defer></script>
+  <script src="../js/namelecule-game-levels.js?v=game-viewport-20261116-r1" defer></script>
   <script src="../js/namelecule-chemistry-client.js?v=puzzle-prototype-20261112-r1" defer></script>
   <script src="../js/namelecule-molecular-puzzle-engine.js?v=puzzle-prototype-20261112-r1" defer></script>
-  <script src="../js/namelecule-molecular-puzzle.js?v=puzzle-lesson-20261112-r1" defer></script>
+  <script src="../js/namelecule-molecular-puzzle.js?v=game-viewport-20261116-r1" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#assembly-title">Πήγαινε στη σύνθεση της δομής</a>
@@ -27,10 +31,9 @@
       <p class="objective">Διάβασε το όνομα. Διάλεξε τα κατάλληλα κομμάτια και σύνδεσέ τα για να σχηματίσεις τον συνεπτυγμένο τύπο του μορίου.</p>
       <p class="intro-detail">Από το όνομα στη δομή, με ομάδες ατόμων και απλούς δεσμούς.</p>
     </section>
+    <div id="game-levels"></div>
     <div id="game-status" class="game-status" role="status">Ετοιμάζουμε το όνομα και τα κομμάτια.</div>
     <div class="puzzle-round-tools">
-      <label for="round-select">Μόριο για εξάσκηση</label>
-      <select id="round-select" disabled aria-label="Επίλεξε μόριο για εξάσκηση"></select>
       <button id="retry-load" class="secondary" type="button" hidden>Δοκίμασε ξανά</button>
     </div>
     <section class="puzzle-name-card" aria-labelledby="target-label">

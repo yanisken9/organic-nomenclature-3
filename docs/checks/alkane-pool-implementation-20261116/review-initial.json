@@ -1,0 +1,44 @@
+{
+  "recordedUTC": "2026-11-16T05:31:21.550612+00:00",
+  "role": "Root transcription of independent read-only Reviewer report",
+  "reviewer": "/root/alkane_pool_independent_review",
+  "freshContext": true,
+  "initialTarget": "verification-target.json",
+  "initialManifestSHA256": "b510d4c2831a9cc6fbe512d6cbc63470621d261b0d91e6dc8d829481454b3894",
+  "targetFiles": 67,
+  "hashesVerifiedByReviewer": true,
+  "findings": [
+    {
+      "id": "REV-ALK-1",
+      "severity": "P2",
+      "path": "js/namelecule-game-repair.js",
+      "line": 893,
+      "requirement": "New standalone attempts enriched14; old attempt replay remains own version",
+      "behavior": "UI legacy-resume URL catalog=legacy exempts startSet migration, allowing fresh legacy8 seed and legacy namespace save",
+      "reproduction": "Resume old attempt → finish/return to picker → choose a new set",
+      "ownEvidence": "Reviewer executed actual extracted startSet; implicit legacy migrated, explicit legacy UI path generated legacy new attempt",
+      "status": "Closed; see review-final.json"
+    }
+  ],
+  "noP0P1": true,
+  "ownChecks": [
+    "Read instructions/checklist/plan/approval/exact diff",
+    "67 current and19 before hashes and final recheck",
+    "Read-only generators --check and exporter --check-inputs",
+    "In-memory compilation10JS/AST5Python",
+    "24 actual molecular forms formulas/valence/full expanded-SDF maps",
+    "69 own Detective assertions and6026 Developer-authored harness assertions executed without --write",
+    "12 SVG hashes/source provenance and no known script/highlight markers",
+    "Preserved sourceMain55/56/legacycatalog/scenario hashes"
+  ],
+  "suppliedEvidence": [
+    "Native205/raster318/host24/SVG12 Developer checks",
+    "Independent ChemistryValidator report",
+    "Builder6/204check partial run; stopped on test helper key collision"
+  ],
+  "limits": [
+    "No independent browser/visual/pointer/conference/offline/external download checks",
+    "Game replay and alternate chain interactions were pending at review cutoff",
+    "Read-only restriction behavioral, no enforced isolation"
+  ]
+}

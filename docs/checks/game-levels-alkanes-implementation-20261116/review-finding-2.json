@@ -1,0 +1,24 @@
+{
+  "recordedUTC": "2026-11-16T07:47:56.038597+00:00",
+  "id": "REV-LEVELS-2",
+  "severity": "P2",
+  "source": "IndependentReviewer DOMfixture old/current actualcontroller with missing engine",
+  "status": "Independently CLOSED",
+  "observed": "Early engine.starterIds.slice dereference throws before existing Greek startup error/retry recovery, standalone andcontrolled.",
+  "cause": "New inventory derivation before existing start missing-engineguard.",
+  "requiredFix": "Guard inventory derivation to preserve existing safe start/fail boundary; testabsentenginebothmodes.",
+  "reviewBefore": "review-before-engine-guard/",
+  "oldManifestSHA256": "fa33bb755cce72b3c697fc87b88704e669a9587a0579ab2b1bd859f4816f5150",
+  "actualBrowserAtOldCut": [
+    "Chrome required99/9",
+    "Firefoxoptional169/12",
+    "ChromeBuilder91/4"
+  ],
+  "allOwnedBrowserResourcesCleaned": true,
+  "controllerSHA256": "c373300edd8147ae673306efc424e215db2b76e1862d0c7546e364f3d76b13aa",
+  "afterEvidence": "repair-detective/engine-guard/after-results.json",
+  "beforeEvidence": "repair-detective/engine-guard/before-reproduction.json",
+  "finalManifestSHA256": "c2967247f859a15e02677892de75ca897a68ce2cd5bb0ad96a0db28c4aa79d3e",
+  "independentOwnAssertions": 8,
+  "reviewer": "/root/levels_independent_implementation_review"
+}

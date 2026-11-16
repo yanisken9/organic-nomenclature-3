@@ -1,0 +1,74 @@
+{
+  "recordedUTC": "2026-11-16T05:06:12.097904+00:00",
+  "role": "ROLE_ID=NAMELECULE_DEVELOPER_V1_20261023; Developer implementation and checks, not independent review",
+  "approvedScope": "User-approved six-alkane enrichment plan plus same-molecule standards; Detective full14alkanes/all13oldnonalkanes, generic parent/branch targets. No lesson/levels/welcome integration.",
+  "comparisonBaseCommit": "168e3cec01f941a84d40bbe0dc07156e7baa35d0",
+  "comparisonBaseline": "Current pre-intervention bytes copied under detective/before; preexisting files are untracked in Git and not attributed to this unit.",
+  "changedRuntimeFiles": [
+    "js/namelecule-molecular-detective-engine.js",
+    "js/namelecule-molecular-detective.js",
+    "games/molecular-detective.html"
+  ],
+  "runtimeFilesSHA256": {
+    "js/namelecule-molecular-detective-engine.js": "f60c184b8e7750aece3ef6ce8870bddb05808978272b81d4b9184da2455ba1c5",
+    "js/namelecule-molecular-detective.js": "7ae2a0f0e604bc45b1a956b632e6051f385ac0aa3c5d81b5f968272974f2bca2",
+    "js/namelecule-molecular-detective-host.js": "177e7fc961d44b23c28b9650ef15deead4377f692fa866eadb96daac892608c0",
+    "games/molecular-detective.html": "a46afc3a04504c33d6759f65e326eb4312b3133447b75b4da77c6696ddec431c"
+  },
+  "beforeSHA256": {
+    "js/namelecule-molecular-detective-engine.js": "020340742102bf2ec5810975fe45b64ba642c3aa409c11b3f0359fb3801b26d6",
+    "js/namelecule-molecular-detective.js": "3b8dba409435fd0e07259d6e7da3e207e34feb9749a7ee035f7087a6b27abd43",
+    "js/namelecule-molecular-detective-host.js": "177e7fc961d44b23c28b9650ef15deead4377f692fa866eadb96daac892608c0",
+    "games/molecular-detective.html": "adb26d75b51ee61e408668c986a796a5dae377644a49725591ca04ff4505b1e9"
+  },
+  "unchangedInspectedHost": "js/namelecule-molecular-detective-host.js; native56 expanded geometry/picking/painting, raw H, 2D readiness and same-origin/source/session/request/round/mission guards preserved without changes.",
+  "behavior": [
+    "Bounded27identityreferencegraphs derive targets from actual expanded snapshot, with no selected atom IDs in profiles.",
+    "Alkane longest C path, maximum connected outside C components, lowest sorted locant vector; all equivalent eligible atom sets retained.",
+    "Connected outside C components produce methyl/dimethyl and ethyl-family missions, including mixed oldC10/newC8 molecules.",
+    "Methane root-only, no empty C-C mission; exact atom/bondset grading unchanged.",
+    "Controller labels cover all27; methyl and ethyl familylabels explicit; engine/controller/childURL cache version alkane-pool-20261116-r1."
+  ],
+  "measuredBefore": {
+    "oldEngineChecks": {
+      "completed": true,
+      "checks": 641,
+      "molecules": 17,
+      "missionCount": 41,
+      "acceptedAlternatives": 49
+    },
+    "tenAdditionalIDs": "All10rejected as unsupported-molecule; before-unsupported.json records exact results."
+  },
+  "checks": [
+    {
+      "command": "node docs/checks/alkane-pool-implementation-20261116/detective/check-engine.cjs --write",
+      "result": "PASS",
+      "assertions": 6026,
+      "molecules": 27,
+      "missions": 69,
+      "acceptedAlternatives": 108,
+      "coverage": "Actualdata56+curatedcustomexpandedMOL/nativecore56analysis; staticindependentexpectedsets; exact17oldmissionsvsbeforeengine; exhaustiveC-onlysubsetsall14; allacceptedsets; rawH/C-H/wrongkind/empty/partial/extra/reversedselection/IDpermutation; identityandshapeerrors; methane; quaternaryC; C10badlongestparents."
+    },
+    {
+      "command": "node docs/checks/alkane-pool-implementation-20261116/detective/protocol-fixtures.cjs > docs/checks/alkane-pool-implementation-20261116/detective/host-protocol-27-results.json",
+      "result": "PASS",
+      "checks": 44,
+      "coverage": "27actualsourcegraphs in controlled native-function fixtures plus source/origin/session/replay/staleround/mission/clear/resize/zoom/rawH/wrongkind/stop guards; no browser simulation claim."
+    },
+    {
+      "command": "node --check js/namelecule-molecular-detective-engine.js && node --check js/namelecule-molecular-detective-host.js && node --check js/namelecule-molecular-detective.js",
+      "result": "PASS"
+    }
+  ],
+  "remainingVerification": [
+    "Root/dataworker regenerate generated viewer with actual commonbundle; root owns browser verification of all27 and real native clicks/zoom/resize.",
+    "Independent Chemistry and consolidated Reviewer are coordinated by root; none claimed by this Developer.",
+    "Rerun source-based harness if inputbundle graphs or name processing change; inputSHA256 recorded in results.json."
+  ],
+  "coreFilesChanged": false,
+  "coreReportGR": "Στο αντικείμενο Detective δεν έγιναν αλλαγές σε core.js ή versioned core.",
+  "commit": false,
+  "published": false,
+  "frozen": true,
+  "nextStep": "Root may consume these frozen3runtimefiles and evidence for its consolidated review; Developer has stopped editing review target."
+}

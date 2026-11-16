@@ -1,0 +1,39 @@
+{
+  "kind": "Developer isolated generator verification",
+  "passed": true,
+  "checks": 8,
+  "results": [
+    {
+      "label": "legacy generator reproduces exact bytes with pinned engine",
+      "passed": true
+    },
+    {
+      "label": "version2 generator reproduces exact bytes",
+      "passed": true
+    },
+    {
+      "label": "isolated source tree reproduces version2",
+      "passed": true
+    },
+    {
+      "label": "unexpected molecule ID rejected",
+      "passed": true
+    },
+    {
+      "label": "noncanonical/path-traversal source rejected",
+      "passed": true
+    },
+    {
+      "label": "incorrect expanded source SHA rejected",
+      "passed": true
+    },
+    {
+      "label": "invalid MOL rejected even with matching supplied source SHA",
+      "passed": true
+    },
+    {
+      "label": "mutated pinned engine cannot silently regenerate legacy receipts",
+      "passed": true
+    }
+  ]
+}

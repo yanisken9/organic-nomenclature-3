@@ -1,0 +1,18 @@
+{
+  "comparisonBase": "168e3cec01f941a84d40bbe0dc07156e7baa35d0",
+  "sha256": {
+    "tools/build-alkane-game-catalog.py": "e5fd721ff49ae4d25a50e7acf32c135fb9c09b154f85719b897d8b7e937a926e",
+    "games/data/alkane-structures.json": "9778e30ea33f2f7cd4c8a472e46e90539856b861a54035a1d514c3246cccf724",
+    "js/namelecule-molecular-puzzle.js": "19b78dde772890afc9645909eaf10790f3d675a8fcb93f815cce3c825fa9ebc5",
+    "games/molecular-puzzle.html": "35cdfcd0d03dcc1a1795a839f72a33d54471c9e038de567b48d7a60358be0726",
+    "js/namelecule-name-builder.js": "2aecb1164f413adfa3fde15c269ae7f3a8fcb58c2a82bc5c8737a777116b7cdd",
+    "games/name-builder.html": "ad4bf42abe5ddb71b2408ef1fa039e20f0587ab81a8a97b4dd2c6441fdc71a0d"
+  },
+  "legacyCheckBefore": {
+    "command": "python3 tools/build-alkane-game-catalog.py --check",
+    "exitCode": 1,
+    "output": "Catalog differs from current sources: games/data/alkane-structures.json",
+    "cause": "Generator uses current core54 instead of immutable catalog engine snapshot."
+  },
+  "puzzlePersistence": "No storage calls: standalone graph lives in closure; controlled snapshot/receipts belong to unchanged lesson parent."
+}

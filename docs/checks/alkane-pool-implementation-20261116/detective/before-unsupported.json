@@ -1,0 +1,105 @@
+{
+  "role": "Developer measured baseline",
+  "starterIds": [
+    "ethane",
+    "butane",
+    "methyl_2_pentane",
+    "dimethyl_2_3_butane",
+    "ethene",
+    "butene_1",
+    "butene_2",
+    "butyne_1",
+    "butyne_2",
+    "butadiene_1_2",
+    "butadiene_1_3",
+    "ethanol",
+    "butanol_2",
+    "propanal",
+    "propanone",
+    "pentanone_3",
+    "methanoicacid"
+  ],
+  "failures": [
+    {
+      "moleculeId": "methane",
+      "result": {
+        "valid": false,
+        "code": "unsupported-molecule",
+        "message": "Το μόριο δεν ανήκει στο αρχικό σύνολο των 17 μορίων."
+      }
+    },
+    {
+      "moleculeId": "propane",
+      "result": {
+        "valid": false,
+        "code": "unsupported-molecule",
+        "message": "Το μόριο δεν ανήκει στο αρχικό σύνολο των 17 μορίων."
+      }
+    },
+    {
+      "moleculeId": "pentane",
+      "result": {
+        "valid": false,
+        "code": "unsupported-molecule",
+        "message": "Το μόριο δεν ανήκει στο αρχικό σύνολο των 17 μορίων."
+      }
+    },
+    {
+      "moleculeId": "ethyl_3_dimethyl_2_5_hexane",
+      "result": {
+        "valid": false,
+        "code": "unsupported-molecule",
+        "message": "Το μόριο δεν ανήκει στο αρχικό σύνολο των 17 μορίων."
+      }
+    },
+    {
+      "moleculeId": "methyl_2_butane",
+      "result": {
+        "valid": false,
+        "code": "unsupported-molecule",
+        "message": "Το μόριο δεν ανήκει στο αρχικό σύνολο των 17 μορίων."
+      }
+    },
+    {
+      "moleculeId": "methyl_3_pentane",
+      "result": {
+        "valid": false,
+        "code": "unsupported-molecule",
+        "message": "Το μόριο δεν ανήκει στο αρχικό σύνολο των 17 μορίων."
+      }
+    },
+    {
+      "moleculeId": "ethyl_3_pentane",
+      "result": {
+        "valid": false,
+        "code": "unsupported-molecule",
+        "message": "Το μόριο δεν ανήκει στο αρχικό σύνολο των 17 μορίων."
+      }
+    },
+    {
+      "moleculeId": "dimethyl_2_2_propane",
+      "result": {
+        "valid": false,
+        "code": "unsupported-molecule",
+        "message": "Το μόριο δεν ανήκει στο αρχικό σύνολο των 17 μορίων."
+      }
+    },
+    {
+      "moleculeId": "dimethyl_2_2_butane",
+      "result": {
+        "valid": false,
+        "code": "unsupported-molecule",
+        "message": "Το μόριο δεν ανήκει στο αρχικό σύνολο των 17 μορίων."
+      }
+    },
+    {
+      "moleculeId": "ethyl_3_methyl_2_pentane",
+      "result": {
+        "valid": false,
+        "code": "unsupported-molecule",
+        "message": "Το μόριο δεν ανήκει στο αρχικό σύνολο των 17 μορίων."
+      }
+    }
+  ],
+  "cause": "Bounded 17-profile allowlist rejects all10 additional IDs before graph inspection; methyl-only branch flattening and unrestricted longest paths cannot represent ethyl/mixed cases."
+}

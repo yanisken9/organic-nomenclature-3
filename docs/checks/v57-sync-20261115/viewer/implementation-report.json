@@ -1,0 +1,92 @@
+{
+  "role": "NAMELECULE_DEVELOPER_V1_20261023",
+  "recordedUTC": "2026-11-15T16:54:15.568947+00:00",
+  "status": "Frozen after bounded REV57-1/P2 correction; primary owns native/raster/lesson final verification",
+  "approvedScope": "Professor57 sync viewer only plus causal strict cache/H correspondence/mirror ownership/current model generation corrections; existing56/Detective pinned host untouched",
+  "comparisonBase": {
+    "sourceHEAD": "168e3cec01f941a84d40bbe0dc07156e7baa35d0",
+    "upstreamActualSynchronized": "e75a37baeda9017666628c9f2f3428ffdd3a2f1c",
+    "upstreamTarget": "b73d8b6330cfdb9d83c000a513be7052763aa083",
+    "local56SourceSHA256": "2840d9282f6eb91124b22b6bef46df035f6c07320473e5bf2944e96e3372e8d3",
+    "versionRenamedCandidateBeforeSHA256": "39bcd1ae0d51bf62af19ebf4a7117a06106dbf2627e63c1a48e6607da95fa3a1"
+  },
+  "target": {
+    "path": "/private/tmp/namelecule-v57-sync-20261115-l4r9e5_s/candidate/js/mulermoc-nom-molview-57.js",
+    "SHA256": "ae4e498361b994d55d2eafe8eb0a3b578c416ed770de0eb65d9dc74e9c800684"
+  },
+  "changedCanonicalRepositoryPaths": [],
+  "coreChangedByThisWorker": false,
+  "coreFilenamesChangedByThisWorker": [],
+  "composition": {
+    "mergeConflictDecisions": "conflict-decisions.json",
+    "conflicts": 5,
+    "obsoleteMinimizerNotReintroduced": true,
+    "localDraftFunctionsByteIdentical": 92,
+    "allUnchangedFunctionCount": 417,
+    "exactUpstreamImports": [
+      "fToggleAtomSelect",
+      "fMulerQuizPurposeFor",
+      "fMulerSelectClear3DIfEmpty",
+      "fMulerHeteroPrefixAtomsForMode",
+      "fMulerQuizResolveTarget",
+      "fMulerBondTargetIsLocant",
+      "fMulerSelectPushState",
+      "fMulerSelectBindOnce",
+      "fMulerNumberAid"
+    ],
+    "locallyAuthored": "Per-load source/generation/completion + live model validation; strict core cache reuse; metadata guarded H bijection; direct-contributor mirror rebuild; strict callback payload checks; unmapped armed picks fail closed with feedback; lifecycle picking replay",
+    "sourceDiff": "source.diff",
+    "functionIdentityProof": "function-identities.json"
+  },
+  "actualChecks": [
+    {
+      "command": "node --check /private/tmp/namelecule-v57-sync-20261115-l4r9e5_s/candidate/js/mulermoc-nom-molview-57.js",
+      "result": "PASS"
+    },
+    {
+      "command": "python3 docs/checks/v57-sync-20261115/viewer/test-selection.py",
+      "result": "34/34 actual-function deterministic cases, including three original upstream-before failures and REV57-1 before/after paint semantics"
+    },
+    {
+      "command": "node docs/checks/v57-sync-20261115/viewer/prove-preservation.js",
+      "result": "417 existing functions byte-identical, all92 existing draft/inline-load helpers byte-identical;14 existing functions changed,29 added"
+    },
+    {
+      "command": "diff -u docs/checks/v57-sync-20261115/viewer/before.js /private/tmp/namelecule-v57-sync-20261115-l4r9e5_s/candidate/js/mulermoc-nom-molview-57.js",
+      "result": "Expected differences saved source.diff"
+    }
+  ],
+  "suppliedPrimaryEvidence": [
+    "native-browser/run-api-164031/api.json actual JSmol JavaScript tail",
+    "native-browser/run-api-164232/api.json actual modelInfo/atomInfo/bondInfo schema",
+    "native-browser/run-first57-164514/first57.json actual57 startup ownership-ready, 3D O click to2D O and re-clickclear, zeroJS exceptions"
+  ],
+  "untestedOrLimited": [
+    "No independent review performed by this worker; primary must obtain consolidated fresh Reviewer",
+    "No actual browser executed by this worker; primary broader native H/bond/quiz/stale/Present/lesson/geometry matrices pending at cutoff",
+    "Equivalent explicit H paired deterministically only for matching per-parent metadata groups; no invented implicit H targets",
+    "Stereo/query/unsupported metadata correspondences intentionally fail closed; strict old heavy helper alone is not formal/full chemistry correspondence",
+    "Externally hosted unpinned j2s and other services remain dependencies",
+    "Actual physical optimizer/convergence unchanged and unverified; no conference/offline guarantee"
+  ],
+  "stageCommitPushPublish": false,
+  "notesForPrimary": "Record viewer scope, frozen hash, 30 deterministic cases, 92 preserved draft helper identities, exact upstream vs locally authored code distinction and native evidence/remaining limits in session/contribution notes.",
+  "reviewCorrections": [
+    {
+      "finding": "REV57-1",
+      "severity": "P2",
+      "file": "/private/tmp/namelecule-v57-sync-20261115-l4r9e5_s/candidate/js/mulermoc-nom-molview-57.js",
+      "function": "fMulerSelectPush3D",
+      "previousFrozenSHA256": "d4f400e7c3d254c6151cb2ddd307771d043d223d9588b862073bedd1f70f3e72",
+      "correctedSHA256": "ae4e498361b994d55d2eafe8eb0a3b578c416ed770de0eb65d9dc74e9c800684",
+      "cause": "Bond selection endpoint union was reused to infer bond colors and included an unselected bridge between disjoint selected bonds.",
+      "change": "Bond state paints only explicit bonds3D identities; atom state keeps the existing both-endpoints policy.",
+      "scope": "Only fMulerSelectPush3D changed in runtime; exact before frozen copy and patch saved.",
+      "beforeEvidenceSuppliedByPrimary": "native-browser/run-bond-paint57-165246/bond-paint57.json",
+      "developerVerification": "34/34 deterministic actual functions, including before bridge repro, exact disjoint colors/halos, deselect and atom control; syntax passes",
+      "patch": "REV57-1.patch",
+      "beforeSnapshot": "before-REV57-1.js",
+      "remaining": "Primary native JSmol color readback and final matrices pending at cutoff."
+    }
+  ]
+}

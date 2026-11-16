@@ -1,0 +1,777 @@
+--- before/games/name-repair.html
++++ games/name-repair.html
+@@ -6,11 +6,13 @@
+   <meta name="theme-color" content="#254c50">
+   <title>Συνεργείο ονομάτων · Namelecule</title>
+   <meta name="description" content="Διάλεξε ένα σετ αποστολών στο Συνεργείο ονομάτων. Παρατήρησε τις δομές, επισκεύασε τα ονόματα και δες τις εξηγήσεις.">
+-  <link rel="stylesheet" href="../css/namelecule-games.css?v=workshop-brand-20261105-r1">
+-  <link rel="stylesheet" href="../css/namelecule-repair-round.css?v=workshop-lesson-parity-20261110-r1">
+-  <link rel="stylesheet" href="../css/namelecule-game-levels.css?v=alkane-levels-20261116-r1">
+-  <script src="../js/namelecule-game-levels.js?v=alkane-levels-20261116-r1" defer></script>
+-  <script src="../js/namelecule-game-repair.js?v=alkane-levels-20261116-r1" defer></script>
++  <link rel="stylesheet" href="../css/namelecule-games.css?v=game-viewport-20261116-r1">
++  <link rel="stylesheet" href="../css/namelecule-repair-round.css?v=game-viewport-20261116-r1">
++  <link rel="stylesheet" href="../css/namelecule-game-levels.css?v=game-viewport-20261116-r1">
++  <link rel="stylesheet" href="../css/namelecule-game-viewport.css?v=game-viewport-20261116-r1">
++  <script src="../js/namelecule-game-viewport.js?v=game-viewport-20261116-r1" defer></script>
++  <script src="../js/namelecule-game-levels.js?v=game-viewport-20261116-r1" defer></script>
++  <script src="../js/namelecule-game-repair.js?v=game-viewport-20261116-r1" defer></script>
+ </head>
+ <body>
+   <a class="skip-link" href="#game-root">Πήγαινε στο παιχνίδι</a>
+--- before/games/molecular-detective.html
++++ games/molecular-detective.html
+@@ -6,11 +6,13 @@
+   <meta name="theme-color" content="#254c50">
+   <title>Μοριακός ντεντέκτιβ · Namelecule</title>
+   <link rel="stylesheet" href="../css/namelecule-name-builder.css?v=builder-methods-20261112-r3">
+-  <link rel="stylesheet" href="../css/namelecule-molecular-detective.css?v=four-games-20261116-r1">
+-  <link rel="stylesheet" href="../css/namelecule-game-levels.css?v=alkane-levels-20261116-r1">
+-  <script src="../js/namelecule-game-levels.js?v=alkane-levels-20261116-r1" defer></script>
++  <link rel="stylesheet" href="../css/namelecule-molecular-detective.css?v=game-viewport-20261116-r1">
++  <link rel="stylesheet" href="../css/namelecule-game-levels.css?v=game-viewport-20261116-r1">
++  <link rel="stylesheet" href="../css/namelecule-game-viewport.css?v=game-viewport-20261116-r1">
++  <script src="../js/namelecule-game-viewport.js?v=game-viewport-20261116-r1" defer></script>
++  <script src="../js/namelecule-game-levels.js?v=game-viewport-20261116-r1" defer></script>
+   <script src="../js/namelecule-molecular-detective-engine.js?v=alkane-levels-20261116-r1" defer></script>
+-  <script src="../js/namelecule-molecular-detective.js?v=alkane-levels-20261116-r2" defer></script>
++  <script src="../js/namelecule-molecular-detective.js?v=game-viewport-20261116-r1" defer></script>
+ </head>
+ <body>
+   <a class="skip-link" href="#mission-title">Πήγαινε στην αποστολή</a>
+--- before/js/namelecule-game-repair.js
++++ js/namelecule-game-repair.js
+@@ -320,6 +320,8 @@
+     const emphasizeObjective = options.emphasizeObjective === true;
+     const condensedDiagram = options.diagramRepresentation === "condensed";
+     const compactDiagramZoom = options.compactDiagramZoom === true;
++    // New hosts explicitly opt in; older Main/native hosts retain their layout.
++    const viewportEnabled = options.viewport === true && !!global.NameleculeGameViewport;
+     const existing = mountedHosts.get(host);
+     if (existing) existing.destroy();
+     const root = host;
+@@ -335,10 +337,14 @@
+     let zoomPanel = null;
+     let zoomImage = null;
+     let listeners = [];
++    let viewport = null;
++    let pagers = [];
++    let viewportStage = "edit";
++    let viewportView = "answer";
+     const ownedClass = !host.classList.contains("nl-repair-round");
+     if (ownedClass) host.classList.add("nl-repair-round");
+     const pageScroller = function () { return global.document.scrollingElement || global.document.documentElement; };
+-    const pageReveal = standalone ? createResponseRevealer({
++    const pageReveal = standalone && !viewportEnabled ? createResponseRevealer({
+       host: root, interruptTarget: global,
+       active: function () { return !destroyed && !zoomPanel && root.isConnected; },
+       viewport: function () { return { top: 12, bottom: global.document.documentElement.clientHeight - 12 }; },
+@@ -358,7 +364,7 @@
+       if (!destroyed && typeof options.onStateChange === "function") options.onStateChange(getState());
+     }
+     function revealResponse(reason, start, end) {
+-      if (destroyed) return;
++      if (destroyed || viewportEnabled) return;
+       const request = { reason: reason, start: start, end: end || start };
+       if (pageReveal) pageReveal.reveal(request);
+       else if (typeof options.onReveal === "function") options.onReveal(request);
+@@ -386,6 +392,10 @@
+     function destroy() {
+       if (destroyed) return;
+       if (pageReveal) pageReveal.destroy();
++      if (viewport) viewport.destroy();
++      pagers.forEach(function (pager) { pager.destroy(); }); pagers = [];
++      host.classList.remove("nl-repair-viewport", "nl-repair-sequential");
++      ["data-repair-stage", "data-repair-view", "data-repair-step"].forEach(function (name) { host.removeAttribute(name); });
+       destroyed = true;
+       renderId += 1;
+       imageLoadId += 1;
+@@ -404,7 +414,7 @@
+         mountedHosts.delete(host);
+       }
+     }
+-    const api = { destroy: destroy, getState: getState };
++    const api = { destroy: destroy, getState: getState, refresh: function () { if (viewport) viewport.refresh(); refreshPagers(); } };
+     mountedHosts.set(host, api);
+ 
+     function renderRound() {
+@@ -467,21 +477,94 @@
+         node("div", { class: "session-row" }, [refs.sessionStats].concat(standalone ? [button("Επιστροφή στα σετ", "quiet", options.requestRestart)] : []))
+       ]);
+       root.replaceChildren(screen);
++      if (viewportEnabled) configureViewport(screen, heading, diagram, repair);
+       root.setAttribute("aria-busy", "false");
+       loadDiagram(currentRender);
+       updateControls();
+       const title = heading.querySelector("h1");
+       title.tabIndex = -1;
+       title.focus({ preventScroll: true });
+-      if (standalone) window.scrollTo({ top: 0, behavior: "instant" });
++      if (standalone && !viewportEnabled) window.scrollTo({ top: 0, behavior: "instant" });
+       if (state().solved) showSuccess(evaluateRepair(data, state()), false);
+       else if (state().submitted) {
+         const result = evaluateRepair(data, state());
+-        if (result.message) replaceChildren(refs.feedback, node("p", { text: result.message }));
++        if (result.message) { replaceChildren(refs.feedback, node("p", { text: result.message })); if (viewportEnabled) showViewportFeedback(false); }
+       }
+       if (data.kind === "replace" && state().selectedPartId && state().selectedPartId !== data.targetPartId) {
+         refs.selectionStatus.textContent = data.feedback.wrongPart;
+       }
++    }
++
++    function refreshPagers() {
++      if (destroyed) return;
++      pagers.forEach(function (pager) { pager.refresh(); });
++    }
++    function setViewportStage(stage, view) {
++      viewportStage = stage;
++      if (view) viewportView = view;
++      root.setAttribute("data-repair-stage", stage);
++      root.setAttribute("data-repair-view", viewportView);
++      if (refs.stageTabs) refs.stageTabs.querySelectorAll("[data-repair-view-button]").forEach(function (control) {
++        control.setAttribute("aria-pressed", String(stage === "edit" && control.dataset.repairViewButton === viewportView));
++      });
++      refreshPagers();
++      if (viewport) viewport.refresh();
++      publishSuccessActionsReady();
++    }
++    function showViewportFeedback(solved) {
++      if (!viewportEnabled) return;
++      refs.feedbackBack.hidden = solved;
++      refs.feedbackInspect.hidden = !solved;
++      refs.feedbackHeading.textContent = solved ? "Η επισκευή ολοκληρώθηκε" : "Παρατήρησε την εξήγηση";
++      setViewportStage("feedback");
++      refs.feedbackHeading.focus({ preventScroll: true });
++    }
++    function configureViewport(screen, heading, diagram, repair) {
++      root.classList.add("nl-repair-viewport");
++      const tabs = node("div", { class: "repair-stage-tabs", "aria-label": "Προβολή αποστολής" });
++      [ ["structure", "Δομή"], ["answer", "Επισκευή"] ].forEach(function (entry) {
++        const control = button(entry[1], "secondary repair-view-button", function () { setViewportStage("edit", entry[0]); });
++        control.dataset.repairViewButton = entry[0]; tabs.append(control);
++      });
++      tabs.append(button("Οδηγίες", "quiet", function () { setViewportStage("instructions"); refs.instructionsHeading.focus({ preventScroll: true }); }));
++      refs.stageTabs = tabs;
++      heading.after(tabs);
++      const partHeading = repair.querySelector(".step-heading"), partDescription = repair.querySelector(".step-description");
++      const partPage = node("div", { class: "repair-part-page" }, [partHeading, refs.parts, refs.orderControls]);
++      const choicePage = node("div", { class: "repair-choice-page" }, [
++        button("← Κομμάτια ονόματος", "quiet", function () { root.dataset.repairStep = "parts"; refreshPagers(); }), refs.choiceFieldset
++      ]);
++      repair.querySelector(".broken-name").after(partPage, choicePage);
++      partDescription.remove(); refs.selectionStatus.remove();
++      const instructions = node("section", { class: "repair-instructions-stage" }, [
++        node("div", { class: "repair-stage-heading" }, [refs.instructionsHeading = node("h2", { tabindex: "-1", text: "Πώς επισκευάζω το όνομα" }), button("Στην επισκευή", "secondary", function () { setViewportStage("edit", "answer"); })]),
++        refs.instructionsContent = node("div", { class: "repair-instructions-content" }, [
++          node("p", { text: round().objective }), screen.querySelector(".compact-steps"), partDescription,
++          node("p", { text: "Διάλεξε κομμάτι και αντικατάσταση ή μετακίνησε έναν κλάδο με τα βέλη. Η μεγέθυνση ανοίγει ολόκληρη τη δομή σε χωριστή προβολή." }), refs.selectionStatus, refs.checkHelper
++        ])
++      ]);
++      const feedbackStage = node("section", { class: "repair-feedback-stage" }, [
++        node("div", { class: "repair-stage-heading" }, [refs.feedbackHeading = node("h2", { tabindex: "-1", text: "Παρατήρησε την εξήγηση" }),
++          refs.feedbackBack = button("Επιστροφή στην προσπάθεια", "secondary", function () { setViewportStage("edit", "answer"); refs.checkButton.focus({ preventScroll: true }); }),
++          refs.feedbackInspect = button("Δες τη δομή", "secondary", function () { setViewportStage("edit", "structure"); })]),
++        refs.feedback, refs.next
++      ]);
++      screen.append(instructions, feedbackStage);
++      repair.querySelector(".repair-actions").append(button("Δες την εξήγηση", "quiet repair-feedback-open", function () { showViewportFeedback(state().solved); }));
++      refs.feedbackOpen = repair.querySelector(".repair-feedback-open"); refs.feedbackOpen.hidden = true;
++      // A solved structure remains inspectable, with a direct route back to its actions.
++      tabs.append(refs.feedbackReturn = button("Στην εξήγηση", "secondary", function () { showViewportFeedback(state().solved); }));
++      refs.feedbackReturn.hidden = true;
++      root.dataset.repairStep = round().kind === "replace" && state().selectedPartId === round().targetPartId ? "choices" : "parts";
++      setViewportStage("edit", "answer");
++      [ [refs.parts, "y", "Κομμάτια ονόματος"], [refs.choices, "y", "Αντικαταστάσεις"],
++        [repair.querySelector(".broken-name"), "x", "Όνομα για επισκευή"], [refs.candidateName, "x", "Η πρότασή σου"],
++        [refs.instructionsContent, "y", "Οδηγίες"], [refs.feedback, "y", "Εξήγηση επισκευής"] ].forEach(function (entry) {
++        pagers.push(global.NameleculeGameViewport.pager(entry[0], { axis: entry[1], label: entry[2], overlap: entry[0] === refs.parts || entry[0] === refs.choices ? 64 : undefined }));
++      });
++      viewport = global.NameleculeGameViewport.mount(root, { kind: "repair", document: standalone, onResize: function (size) {
++        root.classList.toggle("nl-repair-sequential", size.narrow || size.height < 430); refreshPagers();
++      } });
+     }
+ 
+     function loadDiagram(currentRender) {
+@@ -592,11 +675,22 @@
+       });
+       refs.checkHelper.textContent = current.solved ? "Η επισκευή ολοκληρώθηκε. Συνέχισε όταν είσαι έτοιμος ή έτοιμη." : !diagramsReady() ? "Περιμένουμε να εμφανιστούν οι δομές πριν από τον έλεγχο." : data.kind === "order" ? "Επιλέγεις κλάδο, πατάς ένα βέλος και ελέγχεις τη νέα σειρά." : hasCandidate ? "Ο έλεγχος μετρά ως μία προσπάθεια. Μπορείς να δοκιμάσεις ξανά." : "Διάλεξε πρώτα το κομμάτι και έπειτα μια αντικατάσταση.";
+       refs.sessionStats.textContent = "Προσπάθειες σε αυτή την " + (data.guided ? "πρόβα " : "αποστολή ") + current.attempts;
++      if (viewportEnabled) {
++        refs.feedbackOpen.hidden = !current.submitted;
++        refs.feedbackReturn.hidden = !current.submitted;
++        refreshPagers();
++      }
+       if (restoreId) restoreFocus(restoreId);
+-      const successActionsReady = nextButtons.length > 0 && diagramsReady() && current.solved;
+-      if (!destroyed && successActionsReady !== lastSuccessActionsReady && typeof options.onSuccessActionsReady === "function") {
+-        lastSuccessActionsReady = successActionsReady;
+-        options.onSuccessActionsReady(successActionsReady);
++      publishSuccessActionsReady();
++    }
++
++    function publishSuccessActionsReady() {
++      const nextButtons = refs.next ? refs.next.querySelectorAll("button") : [];
++      const stageVisible = !viewportEnabled || viewportStage === "feedback" && Array.from(nextButtons).some(function (control) { return control.getClientRects().length > 0; });
++      const ready = nextButtons.length > 0 && diagramsReady() && state().solved && stageVisible;
++      if (!destroyed && ready !== lastSuccessActionsReady && typeof options.onSuccessActionsReady === "function") {
++        lastSuccessActionsReady = ready;
++        options.onSuccessActionsReady(ready);
+       }
+     }
+ 
+@@ -617,14 +711,19 @@
+       } else {
+         refs.selectionStatus.textContent = "Ο κλάδος επιλέχθηκε. Μετακίνησέ τον με τα κουμπιά Αριστερά και Δεξιά.";
+       }
+-      updateControls(controlId("part-" + id));
++      if (viewportEnabled && round().kind === "replace") root.dataset.repairStep = id === round().targetPartId ? "choices" : "parts";
++      updateControls(viewportEnabled && id === round().targetPartId ? controlId("choice-" + current.choiceOrder[0]) : controlId("part-" + id));
+       emitState();
++      if (viewportEnabled && round().kind === "replace" && id !== round().targetPartId) {
++        replaceChildren(refs.feedback, node("p", { text: round().feedback.wrongPart })); showViewportFeedback(false);
++      }
+       if (round().kind === "order") revealResponse("order-controls", refs.selectionStatus, refs.orderControls);
+       else if (id === round().targetPartId) revealResponse("replacement-options", refs.choiceFieldset);
+       else revealResponse("selection-feedback", refs.selectionStatus);
+     }
+ 
+     function clearFeedback() {
++      if (viewportEnabled) setViewportStage("edit", "answer");
+       refs.feedback.classList.remove("is-success");
+       replaceChildren(refs.feedback);
+     }
+@@ -636,6 +735,7 @@
+         node("span", { class: "success-name", text: round().correctName }),
+         node("p", { class: "success-explanation", text: result.message })
+       );
++      if (viewportEnabled) pagers.push(global.NameleculeGameViewport.pager(refs.feedback.querySelector(".success-name"), { axis: "x", label: "Σωστό όνομα" }));
+       const next = button(options.continueLabel || "Συνεχίζω τη θεωρία", "primary", function () {
+         if (!diagramsReady() || !state().solved) return;
+         if (typeof options.onContinue === "function") options.onContinue(getState());
+@@ -657,6 +757,7 @@
+         }));
+       }
+       updateControls();
++      if (viewportEnabled) showViewportFeedback(true);
+       if (fresh) {
+         next.focus({ preventScroll: true });
+         if (standalone) root.querySelector(".progress").replaceWith(options.progressList());
+@@ -681,6 +782,7 @@
+         replaceChildren(refs.feedback, node("p", { text: result.message }));
+         updateControls(controlId("check-button"));
+         emitState();
++        if (viewportEnabled) showViewportFeedback(false);
+         revealResponse("check-feedback", refs.feedback);
+       }
+     }
+@@ -688,7 +790,7 @@
+     function showDiagramZoom() {
+       if (destroyed || mainImageStatus !== "ready" || zoomPanel) return;
+       if (pageReveal) pageReveal.stop();
+-      const dialog = node(standalone ? "dialog" : "section", { class: "zoom-dialog", "aria-labelledby": controlId("zoom-title") });
++      const dialog = node(standalone && !viewportEnabled ? "dialog" : "section", { class: viewportEnabled ? "zoom-dialog repair-zoom-overlay" : "zoom-dialog", "aria-labelledby": controlId("zoom-title") });
+       zoomPanel = dialog;
+       const close = button("Κλείσιμο", "secondary", closeZoom);
+       const image = node("img", { class: "zoom-image", alt: round().diagramAlt });
+@@ -699,18 +801,34 @@
+         replaceChildren(viewport, node("p", { role: "status", text: "Η εικόνα δεν εμφανίστηκε. Κλείσε τη μεγέθυνση και δοκίμασε ξανά." }));
+       };
+       image.src = assetBase + round().asset;
++      if (viewportEnabled) {
++        let scale = 1;
++        const zoomTools = node("div", { class: "repair-zoom-controls", role: "group", "aria-label": "Μέγεθος σχεδίου" });
++        [-1, 1].forEach(function (direction) { zoomTools.append(button(direction < 0 ? "−" : "+", "secondary", function () {
++          scale = Math.max(1, Math.min(4, scale + direction * .5)); image.style.width = (scale * 100) + "%"; image.style.height = (scale * 100) + "%"; image.style.maxWidth = "none";
++        }, { "aria-label": direction < 0 ? "Σμίκρυνση σχεδίου" : "Μεγέθυνση σχεδίου" })); });
++        refs.zoomTools = zoomTools;
++      }
+       dialog.append(
+         node("div", { class: "zoom-heading" }, [node("h2", { id: controlId("zoom-title"), text: "Η δομή σε αρχικό μέγεθος" }), close]),
+         node("p", { text: "Αν η εικόνα δεν χωρά, μετακινήσου μέσα στο πλαίσιο με αφή ή τα πλήκτρα βέλους." }),
+         viewport
+       );
+-      if (standalone) {
++      if (viewportEnabled) dialog.querySelector(".zoom-heading").insertBefore(refs.zoomTools, close);
++      if (standalone && !viewportEnabled) {
+         listen(dialog, "close", function () { finishZoom(dialog); });
+         document.body.append(dialog);
+         dialog.showModal();
+       } else {
+-        dialog.setAttribute("role", "region");
++        dialog.setAttribute("role", viewportEnabled ? "dialog" : "region");
++        if (viewportEnabled) { dialog.setAttribute("aria-modal", "true"); root.querySelector(".round-screen").inert = true; }
+         listen(dialog, "keydown", function (event) {
++          if (viewportEnabled && event.key === "Tab") {
++            const targets = Array.from(dialog.querySelectorAll("button, [tabindex=\"0\"]"));
++            const first = targets[0], last = targets[targets.length - 1];
++            if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
++            else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
++          }
+           if (event.key !== "Escape") return;
+           event.preventDefault();
+           event.stopPropagation();
+@@ -730,6 +848,7 @@
+       replaceChildren(panel);
+       panel.remove();
+       zoomPanel = null;
++      if (viewportEnabled) root.querySelector(".round-screen").inert = false;
+       refs.zoomButton.setAttribute("aria-expanded", "false");
+       refs.zoomButton.disabled = mainImageStatus !== "ready";
+       refs.zoomButton.focus({ preventScroll: true });
+@@ -738,7 +857,7 @@
+     function closeZoom() {
+       if (!zoomPanel) return;
+       // Native close is queued; restore controls only when that panel finishes.
+-      if (standalone) zoomPanel.close();
++      if (standalone && !viewportEnabled) zoomPanel.close();
+       else finishZoom(zoomPanel);
+     }
+ 
+@@ -760,6 +879,8 @@
+   let roundIndex = 0;
+   let states = [];
+   let activeRound = null;
++  let pageViewport = null;
++  let pagePagers = [];
+   let renderId = 0;
+   const entryParams = new URLSearchParams(window.location.search);
+   const enginePilot = entryParams.get("source") !== "authored";
+@@ -869,7 +990,7 @@
+   async function preparePilot(signal) {
+     if (!global.NameleculeChemistryClient) await loadPilotScript("../js/namelecule-chemistry-client.js?v=verified-engines-20261105-r1");
+     if (!global.NameleculeRepairGenerator) await loadPilotScript("../js/namelecule-repair-generator.js?v=engine-pilot-20261105-r2");
+-    if (!global.NameleculeGeneratedRepairCheckpoint) await loadPilotScript("../js/namelecule-generated-repair-checkpoint.js?v=alkane-levels-20261116-r1");
++    if (!global.NameleculeGeneratedRepairCheckpoint) await loadPilotScript("../js/namelecule-generated-repair-checkpoint.js?v=game-viewport-20261116-r1");
+     const provider = global.NameleculeGeneratedRepairCheckpoint;
+     // v1 source identity belongs to the recorded standalone attempt (8 OR 14).
+     // A normal new entry opens the structural level picker with full14 input.
+@@ -987,13 +1108,24 @@
+   function focusHeading() {
+     const heading = root.querySelector("h1");
+     if (heading) { heading.tabIndex = -1; heading.focus({ preventScroll: true }); }
+-    window.scrollTo({ top: 0, behavior: "instant" });
++    if (!global.NameleculeGameViewport) window.scrollTo({ top: 0, behavior: "instant" });
++  }
++
++  function clearPageViewport() {
++    if (pageViewport) { pageViewport.destroy(); pageViewport = null; }
++    pagePagers.forEach(function (pager) { pager.destroy(); }); pagePagers = [];
+   }
+ 
+   function replaceRoot(content) {
++    clearPageViewport();
+     if (activeRound) { activeRound.destroy(); activeRound = null; }
+     if (levelControls) { levelControls.destroy(); levelControls = null; }
+     root.replaceChildren(content);
++    if (global.NameleculeGameViewport) {
++      content.querySelectorAll(".result-name").forEach(function (name) { pagePagers.push(global.NameleculeGameViewport.pager(name, { axis: "x", label: "Ολοκληρωμένο όνομα" })); });
++      pagePagers.push(global.NameleculeGameViewport.pager(content, { axis: "y", label: "Επιλογή και αποτελέσματα Συνεργείου" }));
++      pageViewport = global.NameleculeGameViewport.mount(root, { kind: "repair-entry", onResize: function () { pagePagers.forEach(function (pager) { pager.refresh(); }); } });
++    }
+     root.setAttribute("aria-busy", "false");
+   }
+ 
+@@ -1150,13 +1282,14 @@
+   function round() { return activeSet.rounds[roundIndex]; }
+   function state() { return states[roundIndex]; }
+   function renderRound() {
++    clearPageViewport();
+     pilotPhase = "round";
+     if (activeRound) activeRound.destroy();
+     if (levelControls) { levelControls.destroy(); levelControls = null; }
+     const index = roundIndex;
+     const presentation = presentationForRound(round(), { difficulty: pilot ? pilot.difficulty : "basic" });
+     activeRound = createRoundView(root, Object.assign({}, presentation, {
+-      initialState: state(), assetBase: "", progressList: progressList, setTitle: activeSet.title,
++      initialState: state(), assetBase: "", progressList: progressList, setTitle: activeSet.title, viewport: !!global.NameleculeGameViewport,
+       requestRestart: requestRestart,
+       continueLabel: index === activeSet.rounds.length - 1 ? "Δες τις επισκευές σου  →" : "Επόμενο κουίζ  →",
+       onStateChange: function (current) { states[index] = current; savePilotProgress(); },
+--- before/js/namelecule-molecular-detective.js
++++ js/namelecule-molecular-detective.js
+@@ -11,6 +11,13 @@
+   const lessonSession = params.get('lessonSession');
+   const lesson = parent !== window && /^[A-Za-z0-9_-]{16,128}$/.test(lessonSession || '')
+     ? {current: null, lastId: 0, nativeReady: false, lastHeight: null, lastSnapshot: null, resizeFrame: null, observer: null} : null;
++  const viewportEnabled = !!window.NameleculeGameViewport && (!lesson || params.get('viewport') === '1');
++  let viewport = null;
++  let feedbackPager = null;
++  let cluePager = null;
++  let namePager = null;
++  let feedbackView = false;
++  let viewportResizeFrame = null;
+   const lessonMolecules = ['methane', 'ethane', 'propane', 'butane', 'pentane', 'methyl_2_pentane', 'dimethyl_2_3_butane', 'ethyl_3_dimethyl_2_5_hexane'];
+   if (params.get('embedded') === '1' || lesson) document.body.classList.add('detective-embedded');
+   document.body.classList.toggle('detective-controlled', !!lesson);
+@@ -76,7 +83,7 @@
+     parent.postMessage({channel: lessonChannel, session: lessonSession, ...identity, type, ...data}, location.origin);
+   }
+   function scheduleSize() {
+-    if (!lesson || lesson.resizeFrame !== null || state.stopped) return;
++    if (viewportEnabled || !lesson || lesson.resizeFrame !== null || state.stopped) return;
+     lesson.resizeFrame = requestAnimationFrame(() => {
+       lesson.resizeFrame = null;
+       if (!lesson.current?.ready || state.stopped) return;
+@@ -108,6 +115,7 @@
+   function interruptReveal() { stopLocalReveal(); if (lesson?.current?.ready) postLesson('scroll-interrupt'); }
+   function revealRange(purpose) {
+     stopLocalReveal(); scheduleSize();
++    if (viewportEnabled) return;
+     const current = lesson?.current, roundId = state.roundId;
+     scrolling.frame = requestAnimationFrame(() => {
+       scrolling.frame = requestAnimationFrame(() => {
+@@ -161,8 +169,22 @@
+   function receiveLesson(event) {
+     if (!lesson || state.stopped || event.source !== parent || event.origin !== location.origin) return;
+     const data = event.data;
+-    if (!data || data.channel !== lessonChannel || data.session !== lessonSession || data.command !== 'load' ||
+-        !Number.isSafeInteger(data.requestId) || data.requestId <= lesson.lastId) return;
++    if (!data || data.channel !== lessonChannel || data.session !== lessonSession) return;
++    if (viewportEnabled && data.command === 'viewport') {
++      const current = lesson.current;
++      if (!current || data.requestId !== current.requestId || data.attemptId !== current.attemptId ||
++          data.moleculeId !== current.moleculeId || data.missionId !== current.missionId ||
++          !Number.isFinite(data.height) || data.height < 80 || data.height > 8000 ||
++          !Number.isFinite(data.width) || data.width < 80 || data.width > 16000) return;
++      if (current.context) {
++        try { if (!data.context || levels.contextKey(levels.validateContext(data.context)) !== levels.contextKey(current.context)) return; }
++        catch (_) { return; }
++      } else if (Object.prototype.hasOwnProperty.call(data, 'context')) return;
++      // The iframe's actual viewport is the sole size authority; the parent owns it.
++      viewport?.refresh(); refreshViewport();
++      return;
++    }
++    if (data.command !== 'load' || !Number.isSafeInteger(data.requestId) || data.requestId <= lesson.lastId) return;
+     lesson.lastId = data.requestId;
+     try {
+       const current = validateLessonLoad(data);
+@@ -185,6 +207,7 @@
+     for (const id of ['check-answer', 'zoom-in', 'zoom-out']) ui[id].disabled = !ready;
+     ui['clear-selection'].disabled = !ready || !(state.atoms.length || state.bonds.length);
+     ui['next-mission'].hidden = !!lesson || !ready || !state.correct;
++    if (viewportEnabled && $('detective-feedback-open')) $('detective-feedback-open').hidden = ui.feedback.hidden;
+   }
+   function watch(message, milliseconds = 30000) {
+     clearTimeout(deadline);
+@@ -201,6 +224,7 @@
+     ui.feedback.hidden = true;
+     ui.feedback.replaceChildren();
+     ui.feedback.classList.remove('success');
++    if (viewportEnabled) setFeedbackView(false);
+     updateControls();
+     scheduleSize();
+   }
+@@ -231,6 +255,11 @@
+     ui['mission-name'].setAttribute('aria-label', 'Όνομα ένωσης: ' + state.snapshot.correctName + '. Επισημασμένο συνθετικό: ' + (clue?.text || ''));
+     ui['mission-prompt'].textContent = state.mission.prompt;
+     ui['selection-kind'].textContent = state.mission.kind === 'atoms' ? 'Επιλογή ατόμων' : 'Επιλογή δεσμών';
++    if (viewportEnabled && $('detective-show-clue')) {
++      $('detective-show-clue').textContent = 'Στοιχείο: ' + (clue?.text || 'Όνομα');
++      $('game').dataset.detectiveView = 'structure';
++    }
++    refreshViewport();
+   }
+   function configure(index, initialState = null) {
+     if (lesson && !initialState) return;
+@@ -371,6 +400,7 @@
+     const end = document.createElement('span'); end.id = 'detective-feedback-end'; end.className = 'detective-feedback-end'; end.setAttribute('aria-hidden', 'true'); ui.feedback.append(end);
+     ui.feedback.classList.toggle('success', result.correct);
+     ui.feedback.hidden = false;
++    if (viewportEnabled) setFeedbackView(true);
+     updateControls(); scheduleSize();
+   }
+   function check() {
+@@ -381,7 +411,8 @@
+   function next() {
+     if (lesson || !state.correct || state.phase !== 'active') return;
+     draw();
+-    $('mission-title').focus({preventScroll: true});
++    const focusTarget = viewportEnabled && $('game').classList.contains('nl-vp-narrow') ? $('detective-show-clue') : $('mission-title');
++    focusTarget.focus({preventScroll: true});
+   }
+   function start() {
+     if (!engine?.starterIds?.length || (!lesson && !levels)) { fail('Το παιχνίδι δεν μπόρεσε να ξεκινήσει. Δοκίμασε ξανά.'); return; }
+@@ -403,6 +434,8 @@
+     send('stop'); state.stopped = true;
+     clearTimeout(deadline); cancelAnimationFrame(resizeFrame); resizeFrame = null;
+     stopLocalReveal();
++    if (viewportResizeFrame !== null) cancelAnimationFrame(viewportResizeFrame);
++    viewportResizeFrame = null; viewport?.destroy(); viewport = null;
+     if (lesson) {
+       if (lesson.resizeFrame !== null) cancelAnimationFrame(lesson.resizeFrame);
+       lesson.resizeFrame = null; lesson.observer?.disconnect(); lesson.nativeReady = false;
+@@ -426,6 +459,7 @@
+       window.addEventListener('message', receiveLesson);
+       window.addEventListener('pagehide', stop, {once: true});
+       lesson?.observer?.observe(document.body);
++      if (viewportEnabled) mountViewport();
+       start();
+     }
+   });
+@@ -434,7 +468,10 @@
+     if (resizeFrame || state.phase !== 'active') return;
+     resizeFrame = requestAnimationFrame(() => { resizeFrame = null; if (!state.stopped && state.phase === 'active') send('resize', {missionId: state.bridgeMissionId}); });
+   });
+-  function lessonExitKey(event) { if (lesson && event.key === 'Escape') { event.preventDefault(); postLesson('exit'); } }
++  function lessonExitKey(event) {
++    if (viewportEnabled && event.key === 'Escape' && feedbackView) { event.preventDefault(); event.stopPropagation(); setFeedbackView(false); ui['check-answer'].focus({preventScroll: true}); return; }
++    if (lesson && event.key === 'Escape') { event.preventDefault(); postLesson('exit'); }
++  }
+   window.addEventListener('keydown', lessonExitKey);
+   ['wheel', 'touchstart', 'pointerdown', 'keydown'].forEach(type => window.addEventListener(type, interruptReveal, {capture: true, passive: true}));
+   ui['molecule-viewer'].addEventListener('load', () => {
+@@ -446,13 +483,67 @@
+   });
+   if (!lesson && levels) {
+     levelControls = levels.mount(ui['game-levels'], {availableIds: alkaneIds, allowedLevels: [1, 2, 3], selectedLevel: null,
+-      category: 'alkanes', otherCount: otherIds.length, onSelect: selectAssignment});
++      category: 'alkanes', otherCount: otherIds.length, compact: viewportEnabled, onSelect: selectAssignment});
+   }
+   if (lesson) {
+     if (ui['game-levels']) ui['game-levels'].hidden = true;
+     document.documentElement.classList.add('lesson-mode');
+-    lesson.observer = new ResizeObserver(scheduleSize); lesson.observer.observe(document.body);
+-  }
++    if (!viewportEnabled) { lesson.observer = new ResizeObserver(scheduleSize); lesson.observer.observe(document.body); }
++  }
++  function refreshViewport() {
++    if (!viewportEnabled || state.stopped) return;
++    feedbackPager?.refresh(); cluePager?.refresh(); namePager?.refresh();
++    if (viewportResizeFrame !== null) return;
++    viewportResizeFrame = requestAnimationFrame(() => {
++      viewportResizeFrame = null;
++      if (!state.stopped && state.phase === 'active' && !feedbackView) send('resize', {missionId: state.bridgeMissionId});
++    });
++  }
++  function setFeedbackView(enabled) {
++    if (!viewportEnabled) return;
++    feedbackView = enabled;
++    $('game').classList.toggle('detective-feedback-view', enabled);
++    if ($('detective-feedback-stage')) $('detective-feedback-stage').hidden = !enabled;
++    if (enabled) {
++      $('detective-feedback-title').textContent = state.correct ? 'Η υπόθεση λύθηκε' : 'Παρατήρησε την εξήγηση';
++      $('detective-feedback-back').textContent = state.correct ? 'Δες την επιλογή σου' : 'Επιστροφή στην προσπάθεια';
++      $('detective-feedback-title').focus({preventScroll: true});
++    }
++    feedbackPager?.refresh(); viewport?.refresh(); refreshViewport();
++  }
++  function mountViewport() {
++    if (viewport || !viewportEnabled) return;
++    viewport = window.NameleculeGameViewport.mount($('game'), {kind: 'detective', onResize: refreshViewport});
++  }
++  function configureViewport() {
++    const game = $('game'); game.classList.add('detective-viewport');
++    const makeButton = (text, id, handler) => {
++      const result = document.createElement('button'); result.type = 'button'; result.className = 'secondary'; result.textContent = text; result.id = id; result.addEventListener('click', handler); return result;
++    };
++    const stage = document.createElement('section'); stage.id = 'detective-feedback-stage'; stage.className = 'detective-feedback-stage'; stage.hidden = true;
++    const heading = document.createElement('div'); heading.className = 'detective-feedback-heading';
++    const title = document.createElement('h2'); title.id = 'detective-feedback-title'; title.tabIndex = -1;
++    const back = makeButton('Επιστροφή στην προσπάθεια', 'detective-feedback-back', () => { setFeedbackView(false); ui['check-answer'].focus({preventScroll: true}); });
++    heading.append(title, back);
++    stage.append(heading, ui.feedback, ui['next-mission']); game.append(stage);
++    const views = document.createElement('div'); views.className = 'detective-stage-tabs';
++    const showView = view => { game.dataset.detectiveView = view; for (const button of views.querySelectorAll('button')) button.setAttribute('aria-pressed', String(button.dataset.detectiveViewButton === view)); refreshViewport(); };
++    const clueButton = makeButton('Στοιχείο στο όνομα', 'detective-show-clue', () => showView('clue')); clueButton.dataset.detectiveViewButton = 'clue';
++    const moleculeButton = makeButton('Μόριο & επιλογή', 'detective-show-structure', () => showView('structure')); moleculeButton.dataset.detectiveViewButton = 'structure';
++    views.append(clueButton, moleculeButton); document.querySelector('.detective-workspace').before(views);
++    showView('structure');
++    ui['check-answer'].parentNode.append(makeButton('Εξήγηση', 'detective-feedback-open', () => setFeedbackView(true)));
++    $('detective-feedback-open').hidden = true;
++    const clue = document.querySelector('.detective-clue-content');
++    // Long names remain one line, with button paging. The highlighted piece is unchanged.
++    namePager = window.NameleculeGameViewport.pager(ui['mission-name'], {axis: 'x', label: 'Πλήρες όνομα ένωσης'});
++    cluePager = window.NameleculeGameViewport.pager(ui['mission-prompt'], {axis: 'y', label: 'Αποστολή'});
++    feedbackPager = window.NameleculeGameViewport.pager(ui.feedback, {axis: 'y', label: 'Εξήγηση αποστολής'});
++    game.addEventListener('nl-level-stage', refreshViewport);
++    mountViewport();
++    game.classList.toggle('nl-vp-level-selection', !!game.querySelector('.nl-game-levels.is-expanded'));
++  }
++  if (viewportEnabled) configureViewport();
+   window.NameleculeMolecularDetective = Object.freeze({snapshot: () => ({category: assignment.category, level: assignment.level, phase: state.phase, moleculeId: state.moleculeId, roundId: state.roundId, missionId: state.mission?.id, bridgeMissionId: state.bridgeMissionId, missionIndex: state.missions.indexOf(state.mission), missionCount: state.missions.length, kind: state.mission?.kind, ...snapshot(), selectionRevision: state.selectionRevision, correct: state.correct, requestId: state.requestId})});
+   start();
+ })();
+--- before/css/namelecule-games.css
++++ css/namelecule-games.css
+@@ -353,3 +353,20 @@
+   .workshop-title .workshop-logo { width: 88px; height: 88px; }
+   .workshop-title h1 { font-size: 2.25rem; }
+ }
++
++/* Standalone viewport shell; shared/native legacy hosts do not acquire this class. */
++body.nl-vp-document:has(#game-root) .header-inner { padding: 5px 18px; gap: 12px; }
++body.nl-vp-document:has(#game-root) .brand { width: 150px; }
++body.nl-vp-document:has(#game-root) .exit-link { padding: 5px 12px; }
++body.nl-vp-document:has(#game-root) .game-root { min-height: 0; padding: 8px 18px; }
++body.nl-vp-document:has(#game-root) .site-footer { display: none; }
++.game-root.nl-game-viewport:not(.nl-repair-round) { display: grid; grid-template-rows: minmax(0,1fr); }
++.game-root.nl-game-viewport:not(.nl-repair-round) > .nl-vp-pager { height: 100%; min-height: 0; }
++.game-root.nl-game-viewport .workshop-hub .workshop-hero { padding: 8px 0 14px; }
++.game-root.nl-game-viewport .workshop-hub .workshop-hero h1 { font-size: 28px; margin-bottom: 8px; }
++.game-root.nl-game-viewport .workshop-hub .workshop-hero p { font-size: 14px; }
++.game-root.nl-game-viewport .workshop-hub .workshop-sets { padding: 6px 0 12px; }
++.game-root.nl-game-viewport .workshop-hub .workshop-set-card { padding: 16px; }
++.game-root.nl-game-viewport .result-name { white-space: nowrap; overflow-wrap: normal; }
++.game-root.nl-game-viewport .result-item .nl-vp-pager-x { height: 30px; }
++.game-root.nl-game-viewport .result-item .nl-vp-pager-x.is-overflow { height: 70px; }
+--- before/css/namelecule-repair-round.css
++++ css/namelecule-repair-round.css
+@@ -193,3 +193,94 @@
+ @media (prefers-reduced-motion: reduce) {
+   .nl-repair-round *, .nl-repair-round *::before, .nl-repair-round *::after { scroll-behavior: auto !important; animation: none !important; transition: none !important; }
+ }
++
++/* Explicit viewport contract, used only by new opt-in hosts. */
++.nl-repair-round.nl-repair-viewport { position: relative; height: var(--nl-vp-height); min-height: 0; overflow: hidden; line-height: 1.4; }
++.nl-repair-viewport .round-screen { display: grid; grid-template-rows: auto auto auto minmax(0, 1fr) auto; gap: 7px; height: 100%; min-height: 0; }
++.nl-repair-viewport .round-topbar, .nl-repair-viewport .round-heading, .nl-repair-viewport .session-row { margin: 0; }
++.nl-repair-viewport .round-heading h1 { font-size: 19px; margin: 0 0 3px; line-height: 1.2; }
++.nl-repair-viewport .round-heading .round-objective.is-emphasized, .nl-repair-viewport .round-heading p { font-size: 15px; line-height: 1.35; text-align: left; margin: 0; }
++.nl-repair-viewport .round-set-name { display: inline; font-size: 12px; }
++.nl-repair-viewport .workshop-logo-small { width: 28px; height: 28px; }
++.nl-repair-viewport .round-topbar .eyebrow { font-size: 10px; }
++.nl-repair-viewport .round-progress-counter { font-size: 14px; }
++.nl-repair-viewport .repair-stage-tabs { display: flex; gap: 6px; min-width: 0; align-items: center; }
++.nl-repair-viewport .repair-stage-tabs button { min-height: 34px; padding: 5px 10px; font-size: 12px; }
++.nl-repair-viewport .repair-view-button { display: none; }
++.nl-repair-viewport .bench { grid-row: 4; grid-template-columns: minmax(0, .95fr) minmax(0, 1.15fr); align-items: stretch; gap: 12px; min-height: 0; }
++.nl-repair-viewport .visual-side, .nl-repair-viewport .repair-side { display: flex; min-height: 0; }
++.nl-repair-viewport .diagram-card { width: 100%; display: grid; grid-template-rows: auto minmax(0, 1fr) auto; border-radius: 15px; min-height: 0; }
++.nl-repair-viewport .card-heading { padding: 6px 10px; gap: 4px; flex-wrap: nowrap; }
++.nl-repair-viewport .card-heading h2 { font-size: 12px; }
++.nl-repair-viewport .diagram-tools > span { display: none; }
++.nl-repair-viewport .diagram-tools .diagram-zoom-button { width: 36px; height: 36px; min-height: 36px; flex-basis: 36px; padding: 6px; }
++.nl-repair-viewport .diagram-figure { display: grid; grid-template-rows: minmax(0,1fr) auto; min-height: 0; padding: 8px; }
++.nl-repair-viewport .diagram-stage { height: 100%; min-height: 0; overflow: hidden; }
++.nl-repair-viewport .diagram-image { width: 100%; height: 100%; min-height: 0; max-height: 100%; object-fit: contain; }
++.nl-repair-viewport .diagram-figure figcaption { font-size: 11px; padding-top: 4px; }
++.nl-repair-viewport .image-status { padding: 0 8px; font-size: 12px; }
++.nl-repair-viewport .image-status:empty { display: none; }
++.nl-repair-viewport .repair-card { width: 100%; min-height: 0; display: flex; flex-direction: column; gap: 6px; padding: 10px; border-radius: 15px; }
++.nl-repair-viewport .repair-card > .section-label { font-size: 10px; margin: 0; }
++.nl-repair-viewport .repair-card > .nl-vp-pager-x { flex: 0 0 auto; height: 40px; }
++.nl-repair-viewport .broken-name { white-space: nowrap; overflow-wrap: normal; font-size: 16px; line-height: 1.5; padding: 5px 8px; margin: 0; }
++.nl-repair-viewport .repair-part-page, .nl-repair-viewport .repair-choice-page { display: flex; flex: 1 1 0; flex-direction: column; gap: 5px; min-height: 0; }
++.nl-repair-viewport .repair-part-page > .nl-vp-pager { flex: 1 1 0; min-height: 0; }
++.nl-repair-viewport .step-heading { font-size: 13px; margin: 0; }
++.nl-repair-viewport .name-parts, .nl-repair-viewport .choices { align-content: flex-start; margin: 0; padding: 3px; gap: 6px; }
++.nl-repair-viewport .part-button { min-height: 40px; padding: 7px 10px; font-size: 15px; }
++.nl-repair-viewport .choice-button { min-height: 40px; padding: 7px 10px; font-size: 14px; }
++.nl-repair-viewport .choice-fieldset { flex: 1 1 0; display: flex; flex-direction: column; min-height: 0; margin: 0; }
++.nl-repair-viewport .choice-fieldset > .nl-vp-pager { min-height: 0; flex: 1 1 0; }
++.nl-repair-viewport .choice-fieldset legend { font-size: 13px; margin: 0 0 5px; }
++.nl-repair-viewport .repair-choice-page > .quiet { align-self: flex-start; min-height: 29px; padding: 3px 7px; font-size: 12px; }
++.nl-repair-viewport .order-controls { margin: 0; flex: 0 0 auto; }
++.nl-repair-viewport .order-controls .secondary { min-height: 36px; padding: 5px 10px; }
++.nl-repair-viewport[data-repair-step="parts"] .repair-choice-page, .nl-repair-viewport[data-repair-step="choices"] .repair-part-page { display: none; }
++.nl-repair-viewport .candidate { flex: 0 0 auto; padding: 4px 8px; margin: 0; }
++.nl-repair-viewport .candidate-label { font-size: 10px; margin: 0; }
++.nl-repair-viewport .candidate .nl-vp-pager { height: 29px; }
++.nl-repair-viewport .candidate-name { font-size: 15px; white-space: nowrap; overflow-wrap: normal; line-height: 1.5; }
++.nl-repair-viewport .repair-actions { flex: 0 0 auto; gap: 5px; }
++.nl-repair-viewport .repair-actions .primary { min-height: 40px; padding: 7px 18px; min-width: 120px; }
++.nl-repair-viewport .repair-actions .quiet { min-height: 34px; font-size: 11px; padding: 4px 8px; }
++.nl-repair-viewport .session-row { grid-row: 5; font-size: 11px; min-height: 24px; }
++.nl-repair-viewport .session-row .quiet { min-height: 28px; padding: 3px 8px; }
++.nl-repair-viewport .repair-feedback-stage, .nl-repair-viewport .repair-instructions-stage { display: none; grid-row: 4; min-height: 0; border: 1px solid var(--line); border-radius: 15px; background: white; padding: 12px; gap: 8px; }
++.nl-repair-viewport .repair-stage-heading { display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: center; justify-content: space-between; }
++.nl-repair-viewport .repair-stage-heading h2 { margin: 0; font-size: 17px; }
++.nl-repair-viewport .repair-stage-heading button { min-height: 36px; padding: 5px 10px; font-size: 12px; }
++.nl-repair-viewport .repair-feedback-stage > .nl-vp-pager, .nl-repair-viewport .repair-instructions-stage > .nl-vp-pager { min-height: 0; }
++.nl-repair-viewport .feedback { margin: 0; padding: 12px; font-size: 15px; }
++.nl-repair-viewport .feedback p { margin: 0; }
++.nl-repair-viewport .success-title { font-size: 17px; }
++.nl-repair-viewport .success-name { white-space: nowrap; overflow-wrap: normal; font-size: 18px; overflow-x: auto; }
++.nl-repair-viewport .round-next { gap: 7px; margin: 0; flex-wrap: wrap; }
++.nl-repair-viewport .round-next button { width: auto; min-height: 39px; padding: 7px 12px; font-size: 13px; }
++.nl-repair-viewport .repair-instructions-content { padding: 3px; font-size: 15px; }
++.nl-repair-viewport .repair-instructions-content .compact-steps { display: grid; margin-bottom: 12px; font-size: 14px; }
++.nl-repair-viewport .repair-instructions-content p, .nl-repair-viewport .repair-instructions-content .part-selection-status, .nl-repair-viewport .repair-instructions-content .step-description, .nl-repair-viewport .repair-instructions-content .check-helper { font-size: 15px; margin: 0 0 12px; }
++.nl-repair-viewport[data-repair-stage="feedback"] .bench, .nl-repair-viewport[data-repair-stage="instructions"] .bench { display: none; }
++.nl-repair-viewport[data-repair-stage="feedback"] .repair-feedback-stage { display: grid; grid-template-rows: auto minmax(0,1fr) auto; }
++.nl-repair-viewport[data-repair-stage="instructions"] .repair-instructions-stage { display: grid; grid-template-rows: auto minmax(0,1fr); }
++.nl-repair-viewport.nl-repair-sequential .repair-view-button { display: inline-flex; }
++.nl-repair-viewport.nl-repair-sequential .bench { grid-template-columns: minmax(0, 1fr); }
++.nl-repair-viewport.nl-repair-sequential[data-repair-view="answer"] .visual-side, .nl-repair-viewport.nl-repair-sequential[data-repair-view="structure"] .repair-side { display: none; }
++.nl-repair-viewport .repair-stage-tabs [aria-pressed="true"] { background: var(--ink); color: white; }
++.nl-repair-viewport .repair-zoom-overlay { position: absolute; z-index: 20; inset: 0; width: 100%; height: 100%; max-height: 100%; margin: 0; display: grid; grid-template-rows: auto auto minmax(0, 1fr); gap: 8px; padding: 12px; }
++.nl-repair-viewport .repair-zoom-overlay p { margin: 0; }
++.nl-repair-viewport .repair-zoom-overlay .zoom-viewport { min-height: 0; max-height: none; padding: 10px; }
++.nl-repair-viewport .repair-zoom-overlay .zoom-image { width: 100%; height: 100%; max-width: 100%; object-fit: contain; }
++@media (max-width: 550px) {
++  .nl-repair-viewport .round-heading h1 { font-size: 16px; }
++  .nl-repair-viewport .round-heading .round-objective.is-emphasized { font-size: 14px; }
++  .nl-repair-viewport .round-game-label { font-size: 9px; }
++  .nl-repair-viewport .repair-stage-tabs { gap: 4px; }
++  .nl-repair-viewport .repair-stage-tabs button { padding: 5px 8px; }
++}
++.nl-repair-viewport .repair-card > .nl-vp-pager-x.is-overflow { height: 74px; }
++.nl-repair-viewport .candidate .nl-vp-pager-x.is-overflow { height: 67px; }
++.nl-repair-viewport .feedback .nl-vp-pager-x { height: 35px; }
++.nl-repair-viewport .feedback .nl-vp-pager-x.is-overflow { height: 73px; }
++.nl-repair-viewport .repair-zoom-controls { display: flex; gap: 6px; margin-left: auto; }
++.nl-repair-viewport .repair-zoom-controls button { min-height: 36px; min-width: 40px; padding: 5px 10px; }
+--- before/css/namelecule-molecular-detective.css
++++ css/namelecule-molecular-detective.css
+@@ -67,3 +67,61 @@
+ @media (prefers-reduced-motion: reduce) {
+   .detective-game *, .detective-game *::before, .detective-game *::after { scroll-behavior: auto !important; transition: none !important; }
+ }
++
++/* New standalone pages and viewport=1 lesson hosts share this bounded stage. */
++body.nl-vp-document:has(.detective-viewport) .site-header { padding: 5px 18px; }
++body.nl-vp-document:has(.detective-viewport) .brand { width: 150px; }
++body.nl-vp-document:has(.detective-viewport) .back-link { padding: 6px 12px; font-size: 12px; }
++body.nl-vp-document:has(.detective-viewport) .site-footer { display: none; }
++.detective-game.detective-viewport, body.detective-embedded .detective-game.detective-viewport { display: grid; grid-template-rows: auto auto auto auto minmax(0, 1fr); gap: 6px; min-height: 0; padding: 8px 16px; overflow: hidden; }
++.detective-viewport .intro { margin: 0; }
++.detective-viewport .intro > .eyebrow, .detective-viewport .intro-detail { display: none; }
++.detective-viewport .detective-title { display: flex; justify-content: center; gap: 8px; margin: 0; }
++.detective-viewport .detective-logo { width: 32px; height: 32px; }
++.detective-viewport .detective-title h1 { font-size: 21px; line-height: 1.2; }
++.detective-viewport .objective, .lesson-mode .detective-viewport .objective { font-size: 14px; line-height: 1.35; margin: 3px 0 0; }
++.detective-viewport .game-status, body.detective-embedded .detective-viewport .game-status { font-size: 12px; line-height: 1.3; min-height: 0; margin: 0; padding: 0; }
++.detective-viewport .detective-round-tools { margin: 0; min-height: 0; }
++.detective-viewport #game-levels { width: 100%; }
++.detective-viewport .detective-workspace { min-height: 0; gap: 10px; grid-template-rows: minmax(0, 1fr) auto; }
++.detective-viewport .panel { border-radius: 15px; min-height: 0; }
++.detective-viewport .panel-header { min-height: 38px; padding: 5px 10px; gap: 6px; }
++.detective-viewport .panel-header h2 { font-size: 13px; }
++.detective-viewport .detective-kind { font-size: 11px; }
++.detective-viewport .detective-molecule { display: grid; grid-template-rows: auto minmax(0,1fr); }
++.detective-viewport .detective-molecule .viewer-wrap { min-height: 0; height: 100%; }
++.detective-viewport .detective-view-note { display: none; }
++.detective-viewport .detective-clue { display: grid; grid-template-rows: auto minmax(0,1fr); }
++.detective-viewport .detective-clue-content { display: grid; grid-template-rows: auto minmax(0,1fr); gap: 8px; padding: 10px; min-height: 0; }
++.detective-viewport .detective-clue-content > .nl-vp-pager-x { height: 47px; }
++.detective-viewport .detective-clue-content > .nl-vp-pager-x.is-overflow { height: 85px; }
++.detective-viewport .detective-name { margin: 0; padding: 3px 0 8px; font-size: 23px; line-height: 1.5; white-space: nowrap; overflow-wrap: normal; }
++.detective-viewport .detective-prompt { margin: 0; font-size: 16px; line-height: 1.5; padding: 3px; }
++.detective-viewport .detective-answer-content { padding: 9px 10px; }
++.detective-viewport .detective-help { font-size: 12px; margin-bottom: 4px; }
++.detective-viewport .detective-selection-status { font-size: 12px; min-height: 0; }
++.detective-viewport .check-row { margin-top: 6px; gap: 6px; }
++.detective-viewport .check-row button { min-height: 38px; padding: 6px 12px; font-size: 13px; }
++.detective-viewport .detective-stage-tabs { display: none; gap: 6px; min-width: 0; }
++.detective-viewport .detective-stage-tabs button { min-height: 36px; padding: 5px 10px; font-size: 12px; min-width: 0; }
++.detective-viewport .detective-stage-tabs [aria-pressed="true"] { color: white; background: var(--ink); }
++.detective-viewport .detective-feedback-stage { grid-row: 5; display: grid; grid-template-rows: auto minmax(0,1fr) auto; min-height: 0; gap: 8px; padding: 12px; background: white; border: 1px solid var(--line); border-radius: 15px; }
++.detective-viewport .detective-feedback-heading { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px; }
++.detective-viewport .detective-feedback-heading h2 { font-size: 17px; }
++.detective-viewport .detective-feedback-heading button { padding: 6px 10px; min-height: 36px; font-size: 12px; }
++.detective-viewport .detective-feedback-stage > .nl-vp-pager { min-height: 0; }
++.detective-viewport .feedback { margin: 0; font-size: 16px; }
++.detective-viewport .detective-next { margin: 0; justify-self: end; min-height: 40px; padding: 7px 15px; font-size: 14px; }
++.detective-viewport.detective-feedback-view .detective-workspace, .detective-viewport.detective-feedback-view .detective-stage-tabs { display: none; }
++.detective-viewport.nl-vp-level-selection .detective-workspace, .detective-viewport.nl-vp-level-selection .detective-stage-tabs { display: none; }
++.detective-viewport.nl-vp-narrow .detective-stage-tabs { display: flex; }
++.detective-viewport.nl-vp-narrow .detective-workspace { grid-template-columns: minmax(0,1fr); grid-template-rows: minmax(0,1fr) auto; }
++.detective-viewport.nl-vp-narrow .detective-molecule, .detective-viewport.nl-vp-narrow .detective-clue { grid-column: 1; grid-row: 1; }
++.detective-viewport.nl-vp-narrow .detective-answer { grid-column: 1; grid-row: 2; }
++.detective-viewport.nl-vp-narrow[data-detective-view="structure"] .detective-clue, .detective-viewport.nl-vp-narrow[data-detective-view="clue"] .detective-molecule { display: none; }
++@media (max-width: 550px) {
++  .detective-game.detective-viewport, body.detective-embedded .detective-game.detective-viewport { padding: 6px 9px; }
++  .detective-viewport .detective-title h1 { font-size: 18px; }
++  .detective-viewport .objective, .lesson-mode .detective-viewport .objective { font-size: 13px; }
++  .detective-viewport .detective-logo { width: 28px; height: 28px; }
++}

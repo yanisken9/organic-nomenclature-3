@@ -1,0 +1,68 @@
+--- before-engine-guard/js/namelecule-molecular-detective.js
++++ js/namelecule-molecular-detective.js
+@@ -17,8 +17,8 @@
+   const state = {phase: 'startup', session: '', requestId: 0, roundSerial: 0, missionSerial: 0, roundId: null, moleculeId: null, snapshot: null, missions: [], mission: null, bridgeMissionId: null, loadRequestId: 0, configureRequestId: 0, selectionRevision: -1, atoms: [], bonds: [], attempts: 0, submitted: false, restoring: null, correct: false, stopped: false};
+   let levelControls = null;
+   const assignment = {category: 'alkanes', level: null, deck: null, nativeReady: false, slots: new Map(), slot: null, restoring: null};
+-  const alkaneIds = engine.starterIds.slice(0, 14);
+-  const otherIds = engine.starterIds.slice(14);
++  const alkaneIds = engine?.starterIds?.slice(0, 14) || [];
++  const otherIds = engine?.starterIds?.slice(14) || [];
+   function newSeed() { const values = new Uint32Array(2); crypto.getRandomValues(values); return values[0] + ':' + values[1]; }
+   function clearAssignment() {
+     clearTimeout(deadline); stopLocalReveal();
+--- before-engine-guard/games/molecular-detective.html
++++ games/molecular-detective.html
+@@ -10,7 +10,7 @@
+   <link rel="stylesheet" href="../css/namelecule-game-levels.css?v=alkane-levels-20261116-r1">
+   <script src="../js/namelecule-game-levels.js?v=alkane-levels-20261116-r1" defer></script>
+   <script src="../js/namelecule-molecular-detective-engine.js?v=alkane-levels-20261116-r1" defer></script>
+-  <script src="../js/namelecule-molecular-detective.js?v=alkane-levels-20261116-r1" defer></script>
++  <script src="../js/namelecule-molecular-detective.js?v=alkane-levels-20261116-r2" defer></script>
+ </head>
+ <body>
+   <a class="skip-link" href="#mission-title">Πήγαινε στην αποστολή</a>
+--- before-engine-guard/js/namelecule-molecular-detective-lesson.js
++++ js/namelecule-molecular-detective-lesson.js
+@@ -176,7 +176,7 @@
+       [start, end].forEach(marker => { marker.setAttribute("aria-hidden", "true"); });
+       stage.append(frame, start, end); host.replaceChildren(heading, stage); host.setAttribute("aria-busy", "true");
+       active = { requestId: ++requestId, index, entry, stage, start, end, loaded: false, sent: false, stateRevision: -1 };
+-      frame.src = new URL("games/molecular-detective.html?lessonSession=" + session + "&embedded=1&v=alkane-levels-20261116-r1", global.document.baseURI).href;
++      frame.src = new URL("games/molecular-detective.html?lessonSession=" + session + "&embedded=1&v=alkane-levels-20261116-r2", global.document.baseURI).href;
+       progress({ current: index + 1, total: 3 });
+       timer = global.setTimeout(() => fail("Ο Ντεντέκτιβ άργησε να φορτώσει. Η προσπάθειά σου διατηρήθηκε. Δοκίμασε ξανά."), 90000);
+       heading.focus({ preventScroll: true });
+--- before-engine-guard/js/namelecule-game-choice-checkpoint.js
++++ js/namelecule-game-choice-checkpoint.js
+@@ -20,7 +20,7 @@
+     const promise = new Promise((resolve, reject) => {
+       const script = global.document.createElement("script");
+       const base = moduleURL || new URL("js/namelecule-game-choice-checkpoint.js", global.document.baseURI).href;
+-      script.src = new URL(file + "?v=alkane-levels-20261116-r1", base).href;
++      script.src = new URL(file + "?v=alkane-levels-20261116-r2", base).href;
+       const timer = global.setTimeout(() => finish(new Error("Detective dependency timed out")), 45000);
+       function finish(error) {
+         global.clearTimeout(timer); script.onload = script.onerror = null;
+--- before-engine-guard/mulermoc-nom-57.html
++++ mulermoc-nom-57.html
+@@ -382,7 +382,7 @@
+   <script src="js/namelecule-generated-repair-checkpoint.js?v=alkane-levels-20261116-r2"></script>
+   <script src="js/namelecule-name-builder-engine.js?v=name-builder-20261111-r1"></script>
+   <script src="js/namelecule-molecular-puzzle-engine.js?v=puzzle-lesson-20261112-r1"></script>
+-  <script src="js/namelecule-game-choice-checkpoint.js?v=alkane-levels-20261116-r2"></script>
++  <script src="js/namelecule-game-choice-checkpoint.js?v=alkane-levels-20261116-r3"></script>
+   <script src="js/mulermoc-nom-scenario-57.js?v=namelecule-v57-20261115-r1"></script>
+   <script src="js/mulermoc-nom-iupac-57.js?v=namelecule-v57-20261115-r1"></script>
+   <script src="js/mulermoc-nom-lang-57.js?v=namelecule-v57-20261115-r1"></script>
+--- before-engine-guard/design/welcome-proposal.html
++++ design/welcome-proposal.html
+@@ -27,7 +27,7 @@
+ <a class="action game-action" href="../games/name-repair.html?v=alkane-levels-20261116-r1"><span class="game-action-logo" aria-hidden="true"><img src="../games/assets/name-repair/workshop-logo-3d-v1.png" width="1254" height="1254" alt=""></span><span class="game-action-label">Συνεργείο ονομάτων</span><span class="game-action-arrow" aria-hidden="true">↗</span></a>
+ <a class="action game-action" href="../games/name-builder.html?v=alkane-levels-20261116-r1"><span class="game-action-logo" aria-hidden="true"><img src="../games/assets/name-builder/name-builder-logo-3d-blank-v1.png" width="1254" height="1254" alt=""></span><span class="game-action-label">Χτίσε το όνομα</span><span class="game-action-arrow" aria-hidden="true">↗</span></a>
+ <a class="action game-action" href="../games/molecular-puzzle.html?v=alkane-levels-20261116-r1"><span class="game-action-logo" aria-hidden="true"><img src="../games/assets/molecular-puzzle/molecular-puzzle-logo-flat-v7.png" width="2148" height="732" alt=""></span><span class="game-action-label">Μοριακό παζλ</span><span class="game-action-arrow" aria-hidden="true">↗</span></a>
+-<a class="action game-action" href="../games/molecular-detective.html?v=alkane-levels-20261116-r1"><span class="game-action-logo" aria-hidden="true"><img src="../games/assets/molecular-detective/molecular-detective-logo-molecule-v2.png" width="1254" height="1254" alt=""></span><span class="game-action-label">Μοριακός ντεντέκτιβ</span><span class="game-action-arrow" aria-hidden="true">↗</span></a>
++<a class="action game-action" href="../games/molecular-detective.html?v=alkane-levels-20261116-r2"><span class="game-action-logo" aria-hidden="true"><img src="../games/assets/molecular-detective/molecular-detective-logo-molecule-v2.png" width="1254" height="1254" alt=""></span><span class="game-action-label">Μοριακός ντεντέκτιβ</span><span class="game-action-arrow" aria-hidden="true">↗</span></a>
+ </div><small>Για μαθητές και εκπαιδευτικούς</small></article>
+ <article class="card three"><div class="icon"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M18 5H6v23h20V16M15 19l2-6L26 4l4 4-9 9-6 2ZM24 6l4 4M10 23h10"/></svg></div><span class="label">ΓΙΑ ΕΚΠΑΙΔΕΥΤΙΚΟΥΣ</span><h2>Δημιουργώ το μάθημά μου</h2><p>Βρες έτοιμο υλικό για την τάξη σου ή φτιάξε τα δικά σου σενάρια θεωρίας και μαθησιακά παιχνίδια.</p><ul><li>Ο προσωπικός σου χώρος υλικού</li><li>Αποθήκευση και λήψη των δημιουργιών σου</li></ul><button class="action" data-panel="teacher">Χώρος εκπαιδευτικού <span aria-hidden="true">↗</span></button><small>Σύνδεση για τον προσωπικό σου χώρο</small></article>
+ </section>

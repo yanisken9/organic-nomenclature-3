@@ -1,0 +1,210 @@
+diff --git a/docs/checks/v56-sync-20261115/upstream/target/js/mulermoc-nom-name-en-56.js b/private/tmp/namelecule-v56-sync-20261115-nqi71wns/candidate/js/mulermoc-nom-name-en-56.js
+index 932b103..e2d14ba 100644
+--- a/docs/checks/v56-sync-20261115/upstream/target/js/mulermoc-nom-name-en-56.js
++++ b/private/tmp/namelecule-v56-sync-20261115-nqi71wns/candidate/js/mulermoc-nom-name-en-56.js
+@@ -136,7 +136,7 @@ function fAssembleBranchedEN(nCarbons, fg, kind, locants, subs) {
+ // Maps are slot-positional: C9 stem εν->non must not shadow infix εν->en.
+ var EN_STEM_GR = [
+   ["μεθ", "meth"], ["αιθ", "eth"], ["προπ", "prop"], ["βουτ", "but"], ["πεντ", "pent"],
+-  ["εξ", "hex"], ["επτ", "hept"], ["οκτ", "oct"], ["εν", "non"], ["δεκ", "dec"],
++  ["εξ", "hex"], ["επτ", "hept"], ["οκτ", "oct"], ["εννε", "non"], ["δεκ", "dec"],
+   ["ενδεκ", "undec"], ["δωδεκ", "dodec"], ["δεκατρι", "tridec"], ["δεκατεσσερ", "tetradec"], ["δεκαπεντ", "pentadec"],
+   ["δεκαεξ", "hexadec"], ["δεκαεπτ", "heptadec"], ["δεκαοκτ", "octadec"], ["δεκαεννι", "nonadec"], ["εικοσ", "icos"]
+ ];
+@@ -151,6 +151,7 @@ var EN_SUFFIX_GR = [
+   ["νιτρίλιο", "nitrile"], ["αμίνη", "amine"]
+ ];
+ var EN_SUB_GR = [
++  ["[μη υποστηριζόμενη ομάδα]", "[unsupported group]"],
+   ["ισο", "iso"],
+   ["τετρα", "tetra"], ["τρι", "tri"], ["δι", "di"],
+   ["μεθυλο", "methyl"], ["αιθυλο", "ethyl"], ["προπυλο", "propyl"], ["βουτυλο", "butyl"], ["πεντυλο", "pentyl"],
+@@ -194,6 +195,18 @@ function fGreekFragToEN(frag, slot) {
+   if (slot === 5) map = EN_STEM_GR;
+   else if (slot === 6 || slot === 8) map = EN_INFIX_GR;
+   else if (slot === 9) map = EN_SUFFIX_GR;
++  // Derive complete group tokens from the same carbon-count table as the
++  // parent. Map complete alkoxy/alkyl components before substring aliases;
++  // a C13/C19 prefix must not be partly translated as a multiplier.
++  if (map === EN_SUB_GR) {
++    map = map.slice();
++    EN_STEM_GR.forEach(function (pair, index) {
++      map.push([pair[0] + "οξυ", index >= 10 ? "(" + pair[1] + "yloxy)" : pair[1] + "oxy"]);
++      map.push([pair[0] + "υλο", pair[1] + "yl"]);
++      map.push([pair[0] + "υλ", pair[1] + "yl"]);
++      if (slot === 10) map.push([pair[0], pair[1] + "yl"]);
++    });
++  }
+   var best = fMapFrag(s, map);
+   // retry variants (tonos-stripped, lowercased): keep the fewest-Greek result
+   var cands = [s.toLowerCase(), fStripTonos(s), fStripTonos(s.toLowerCase())];
+@@ -278,13 +291,6 @@ function fPopulateEngineENFromGreek(key, variant) {
+     // original order, or a non-first group without digit locants).
+     var _jgroups = (typeof fENSubstGroups === "function") ? fENSubstGroups(S, SchJ, sys) : [];
+     var _jord = (typeof fENSortSubstGroups === "function") ? fENSortSubstGroups(_jgroups) : null;
+-    if (_jord) {
+-      try {
+-        var _jg1 = -1;
+-        for (var _jq = 0; _jq < _jord.length; _jq++) { if (_jgroups[_jord[_jq]].kind === "g1") { _jg1 = _jq; break; } }
+-        if (_jg1 > 0 && _jg1 < _jord.length - 1) _jord = null;
+-      } catch (eJQ) { _jord = null; }
+-    }
+     var pre;
+     if (_jord) {
+       pre = "";
+@@ -332,7 +338,7 @@ function fPopulateEngineENFromGreek(key, variant) {
+         // di/tri-suffixes (yne-2,7-dione); mono suffixes fuse bare (yn-1-ol).
+         var infix2U = infix2;
+         try {
+-          if ((infix2 === "en" || infix2 === "yn") && typeof fFuseEnInfixSuffix === "function") {
++          if ((infix2 === "en" || infix2 === "yn") && /^-?\d[\d,]*-(di|tri)(one|ol|al|oic)/i.test(suffix) && typeof fFuseEnInfixSuffix === "function") {
+             var _f2 = fFuseEnInfixSuffix(infix2, suffix) || infix2;
+             if (_f2 !== infix2) infix2U = _f2;
+           }
+@@ -402,11 +408,10 @@ function fPopulateEngineENFromGreek(key, variant) {
+ // systematic order and transliterated text. Returns
+ // { boxes: [[boxId, text]...], spaceAfter: boxId|null, isEster } or null
+ // (caller falls back to Greek render). Greek is never mutated here.
+-// variant "sys": systematic substituent forms (same slot transform as
+-// fPopulateEngineENFromGreek, so joined boxes match engineEN_sys).
+-// P-16.7.1(a) terminal-e elision for EN box boundaries: an "en"/"yn" infix box
+-// directly followed by a consonant-initial suffix box (no locant box
+-// between) takes back its terminal "e" (ynedioic, enedial, ynedione);
++// variant "sys": systematic substituent forms, matching engineEN_sys.
++// P-16.7.1(a) terminal-e fusion for EN box boundaries: an "en"/"yn" infix box
++// followed by a consonant-initial suffix, across any suffix locant box,
++// takes back its terminal "e" (ynedioic, enedial, ynedione);
+ // vowel-initial suffixes (oic acid, al, ol, one, e, amine, oate) fuse bare,
+ // and "an"/"diene"/"diyne" never change. Locant-led di/tri-suffixes keep
+ // the "e" too (yne-2,7-dione, ene-2,5-diol); mono suffixes (2-one, 1-ol)
+@@ -444,6 +449,9 @@ function fNameENBoxes(variant) {
+     var stripLoc = function (s) { return String(s == null ? "" : s).replace(/^[-\s]+/, "").replace(/[-\s]+$/, ""); };
+     var comp1No = stripLoc(hasSub ? S(4) : (S(4) || S(0)));
+     var stem = S(5), infix = S(6), mid = stripLoc(S(7)), infix2 = stripLoc(S(8)), suffix = stripLoc(S(9));
++    // A fused suffix retains its leading separator when moved behind an
++    // unsaturation infix (e.g. yn + -1-ol), before splitting stable box IDs.
++    if (/^\d[\d,]*-.+/.test(suffix)) suffix = "-" + suffix;
+     if ((suffix === "nitrile" || suffix === "amine") && infix === "an") infix = "ane";
+     if (!comp1No && !mid && stem === "prop" && (infix === "en" || infix === "yn") &&
+         (suffix === "al" || suffix === "one" || suffix === "oic acid" || suffix === "nitrile" || suffix === "dioic acid")) comp1No = "2";
+@@ -523,22 +531,17 @@ function fNameENBoxes(variant) {
+               push("comp3loc" + (li2 === 1 ? "" : String(li2 - 1)), "-" + br[bi2 + 1] + "-");
+             }
+           }
+-        } else { push("comp3", S(3)); }
++        } else {
++          var _bare3 = S(3);
++          if (sys && fENSysNeedsParens(_bare3, Sch(3), loc2)) _bare3 = "(" + _bare3 + ")";
++          push("comp3", _bare3);
++        }
+       };
+       // v54.41: full group order (G1 + slot-3 pieces). Null = legacy path
+       // below (single group, original order, or a non-first group without
+       // digit locants — fail-closed, today's exact output there).
+       var _groups = (typeof fENSubstGroups === "function") ? fENSubstGroups(S, Sch, sys) : [];
+       var _ord = (typeof fENSortSubstGroups === "function") ? fENSortSubstGroups(_groups) : null;
+-      if (_ord) {
+-        // G1 (if present) must sort first or last — anything else keeps the
+-        // legacy path (unattested; middle order has no box mapping).
+-        try {
+-          var _gqi = -1;
+-          for (var _gqj = 0; _gqj < _ord.length; _gqj++) { if (_groups[_ord[_gqj]].kind === "g1") { _gqi = _gqj; break; } }
+-          if (_gqi > 0 && _gqi < _ord.length - 1) _ord = null;
+-        } catch (eQ) { _ord = null; }
+-      }
+       if (_ord) {
+         var _emitted = false;
+         for (var _e = 0; _e < _ord.length; _e++) {
+@@ -618,12 +621,17 @@ function fNameENBoxes(variant) {
+     for (var _fi = 0; _fi + 1 < boxes.length; _fi++) {
+       try {
+         var _fb = boxes[_fi];
+-        if ((_fb[0] === "comp6" || _fb[0] === "comp8") && boxes[_fi + 1][0] === "comp9") {
+-          var _fused = (typeof fFuseEnInfixSuffix === "function") ? fFuseEnInfixSuffix(_fb[1], boxes[_fi + 1][1]) : _fb[1];
++        var _nextSuffix = _fi + 1, _suffixText = "";
++        // Preserve local fusion across a suffix locant while passing the full
++        // locant-led suffix to v56's e-restoration rule (yne-2,7-dione).
++        while (_nextSuffix < boxes.length && /^-\d[\d,]*-$/.test(boxes[_nextSuffix][1])) {
++          _suffixText += boxes[_nextSuffix][1];
++          _nextSuffix++;
++        }
++        if ((_fb[0] === "comp6" || _fb[0] === "comp8") && _nextSuffix < boxes.length && boxes[_nextSuffix][0] === "comp9") {
++          _suffixText += boxes[_nextSuffix][1];
++          var _fused = (typeof fFuseEnInfixSuffix === "function") ? fFuseEnInfixSuffix(_fb[1], _suffixText) : _fb[1];
+           if (_fused !== _fb[1]) boxes[_fi] = [_fb[0], _fused];
+-        } else if ((_fb[0] === "comp6" || _fb[0] === "comp8") && boxes[_fi + 1][0] === "comp9loc" && _fi + 2 < boxes.length && boxes[_fi + 2][0] === "comp9") {
+-          var _fused2 = (typeof fFuseEnInfixSuffix === "function") ? fFuseEnInfixSuffix(_fb[1], String(boxes[_fi + 1][1]) + String(boxes[_fi + 2][1])) : _fb[1];
+-          if (_fused2 !== _fb[1]) boxes[_fi] = [_fb[0], _fused2];
+         }
+       } catch (eF) { /* best-effort */ }
+     }
+@@ -698,15 +706,14 @@ function fSplitENBranchSys(schoolText, sysText, slot) {
+ // v54.36): a bare systematic name carrying an internal digit is ambiguous
+ // right after a parent locant run ("4-propan-2-yl"), so it nests in parens
+ // when the preceding component is a number locant: 4-(propan-2-yl)-.
+-// Differs-from-school required (toggle visibility, sort keys and verdicts
+-// keyed off unwrapped text stay byte-identical where sys equals school);
+-// already-parenthesized, unchanged, or digitless names pass through;
++// Intrinsic locants require enclosure even when school and systematic
++// text coincide. Already-parenthesized or digitless names pass through;
+ // empty locants (tiny chains, locant-free slots like the ester tail) mean
+ // no parens. Render/join-layer only — slots keep bare forms, so toggle
+ // visibility, splitting and idempotence are unaffected.
+ function fENSysNeedsParens(sysText, commonText, prevLocText) {
+   try {
+-    if (!sysText || sysText === commonText) return false;
++    if (!sysText) return false;
+     if (/[()]/.test(sysText)) return false;
+     if (!/\d/.test(sysText)) return false;
+     var loc = String(prevLocText == null ? "" : prevLocText).replace(/-/g, "");
+@@ -739,7 +746,8 @@ var EN_SYST_SUBST = {
+ function fIsSubstitutedStemEN(s) {
+   try {
+     var _t = String(s == null ? "" : s).toLowerCase();
+-    return /yl$/.test(_t) && /(chloro|bromo|fluoro|iodo|nitro)/.test(_t);
++    return /yl$/.test(_t) && (/(chloro|bromo|fluoro|iodo|nitro)/.test(_t) ||
++      /^\d[\d,]*-(?:di|tri|tetra)?(?:methyl|ethyl|propyl|butyl)/.test(_t));
+   }
+   catch (e) { return false; }
+ }
+@@ -803,7 +811,8 @@ function fSystematicSubstSlot(slot, text) {
+       var m2 = /^(di|tri|tetra)([a-z].*)$/.exec(w);
+       if (m2 && Object.prototype.hasOwnProperty.call(EN_SYST_SUBST, m2[2])) {
+         var s2 = EN_SYST_SUBST[m2[2]];
+-        out.push(/\d/.test(s2) ? m2[1] + "(" + s2 + ")" : m2[1] + s2);
++        var _mult = fIsSubstitutedStemEN(s2) ? fBisPrefixEN(m2[1]) : m2[1];
++        out.push(/\d/.test(s2) ? _mult + "(" + s2 + ")" : _mult + s2);
+       } else if (Object.prototype.hasOwnProperty.call(EN_SYST_SUBST, w)) {
+         out.push(EN_SYST_SUBST[w]);
+       } else {
+@@ -822,14 +831,14 @@ function fSystematicSubstSlot(slot, text) {
+ // by the first letter of the complete name (difluorobutyl under d,
+ // bis(chloromethyl) under b), leading locants skipped. (Resolves the v54.22
+ // limitation note: leading di/tri/tetra inside compound names no longer
+-// strips. sec-/tert- sort as plain Roman (P-14.5.3 tie-break only).)
++// strips. Italic sec-/tert- are ignored until the Roman-letter tie-break).
+ function fENSubstSortKey(nm) {
+   try {
+     var s = String(nm == null ? "" : nm).toLowerCase();
+     s = s.replace(/[()]/g, "");
+     s = s.replace(/^[\d,\s\-]+/, "");
+     if ((typeof fIsSubstitutedStemEN === "function") && fIsSubstitutedStemEN(s)) return s;
+-    return s.replace(/^(di|tri|tetra)(?=[a-z])/, "");
++    return s.replace(/^(di|tri|tetra)(?=[a-z])/, "").replace(/^(sec|tert)-/, "");
+   } catch (e) { return ""; }
+ }
+ // Numeric locants list for the P-14.5.4 tie-break (identical Roman letters ->
+@@ -906,6 +915,13 @@ function fENSortSubstGroups(gs) {
+       try { kb = fENSubstSortKey(gs[b].name); } catch (e2) {}
+       if (ka < kb) return -1;
+       if (ka > kb) return 1;
++      var italic = function (text) {
++        var m = /^(?:di|tri|tetra)?(sec|tert)-/.exec(String(text || "").toLowerCase());
++        return m ? m[1] : "";
++      };
++      var ia = italic(gs[a].name), ib = italic(gs[b].name);
++      if (ia < ib) return -1;
++      if (ia > ib) return 1;
+       var la = [], lb = [];
+       try { la = fENLocKey(gs[a].loc); } catch (e3) {}
+       try { lb = fENLocKey(gs[b].loc); } catch (e4) {}

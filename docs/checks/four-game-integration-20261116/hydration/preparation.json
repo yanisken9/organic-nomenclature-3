@@ -1,0 +1,20 @@
+{
+  "recordedUTC": "2026-11-16T06:28:27.850354+00:00",
+  "status": "before reproduced; fixed expectations prepared awaiting approved source change",
+  "usageBefore": "node docs/checks/four-game-integration-20261116/hydration/check-hydration.cjs --expect-before",
+  "usageAfter": "node docs/checks/four-game-integration-20261116/hydration/check-hydration.cjs --expect-fixed",
+  "checksBefore": 372,
+  "versions": [
+    55,
+    56,
+    57
+  ],
+  "productEdits": false,
+  "browserLaunch": false,
+  "filesSHA256": {
+    "before-functions.json": "0d95f09dd24aa788182d89d493a43c4562f8fd810bbeed3bed3b1a401a3b1904",
+    "before-results.json": "7c301f0f2851e72c18dbf640fd2fa5e1a2640f8c8b881b8557c54609a394f722",
+    "check-hydration.cjs": "db19b54c33f1e886dc0f5ea23b5a035457330108506197ca1e8f5753d3605dbf"
+  },
+  "initialHarnessCorrection": "VM window must alias the context global object, as browser Window does. Separate window mock hid nameExamplesCustom from native own-key merge; fixed harness without touching product."
+}

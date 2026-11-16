@@ -1,5 +1,25 @@
 # Changelog
 
+## Namelecule local v57 — 2026-11-15
+
+- Composed professor content e75a37ba→b73d8b63:4commits/26paths, preserving local guards/customizations. Fifteen new version57 files, welcome/library14lessons routed57; old56 retained. No commit/push/publication.
+- Added native3D atom/bond picking, hetero-prefix quizzes and bond-position/type numbering-aid split. Strict source/graph/H/contributor/model-completion ownership; corrected independently found unselected-bridge color.
+- Core57 changes only equal-terminal-priority orientation in2D plusmatching3D, with allotherlocal56bytes preserved. All12oldcores/688protectedpaths/MOL/SDF/scenarios/React/games/progress unchanged. Earlier same-session56 addition remains separate.
+- Independent Chemistry/Reviewer and actual native39/raster562/lesson-progress352+31correct/fallback8/installed17HTTP18UI passed. PointerExit is verified viaEscape only; headless pointer delivery remains unqualified. Unsupportedstereo/querymapping uses explained2Dfallback; raw279/422 is notruntimecoverage. External services andoldnew3Dreadback/conference/offline qualification remain explicit limits. See [report](V57-SYNC-20261115.md).
+- Molecular Detective prototype/logo completed earlier inthissession; unchanged standalone/native56host inthissync. Commonleveltrial remains paused.
+
+## Namelecule local v56 — 2026-11-15
+
+- Composed professor content from `5ab24955` to `e75a37ba`: 62 commits / 54 paths reviewed, 11 new since prior audit. Source Git HEAD/index unchanged; no commits replayed, staged or published.
+- Added 15 runtime files and two navigation routes. Preserved old versions, React, MOL/SDF, scenario, game and progress contracts. Retained guarded 3D and provisional consent alongside new PubChem JSmol/fetch tiers.
+- Core56 adopts principal-group, numeric-locant and nitro fixes while retaining local metadata, mapping, sp, C9–C20, complete-branch and multiplier guards. English fusion correction preserves ynedial and locant-led dione/diol forms.
+- Added native selection/quiz/overview/sticky features to local geometry/framing. Corrected visible-bond picking versus a labeled atom's implicit vertex; native H/endpoint-region grading policy retained.
+- Independent Reviewer R1/P2 rule visibility and R2/P3 «άτομα C» wording findings closed; targeted measured picking and actual pointer checks passed.
+- Developer evidence: games 313, migration 30, raster 562, final native 31, pointer 14, controlled-provider authoring 35, rule/wording 9, installed root 17 HTTP/SHA and 17 UI checks. Exact cutoffs and independent checks are in the report.
+- Actual local JSmol readback failure reproduces in unchanged v55 and v56; no real local optimizer success claimed. Existing Builder generator drift documented. Firefox recurrence prevention, offline use and conference readiness remain unverified.
+- See [v56 sync report](V56-SYNC-20261115.md). Detective code remains deferred; approved logo retained.
+
+
 ## 2026-11-10 — Published reviewed v55 and workshop; full save
 
 Published runtime c5d465190740de5d8f1c90b7ce791ff22250e39e from a disposable

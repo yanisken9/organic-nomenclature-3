@@ -1,0 +1,24 @@
+--- before/js/namelecule-molecular-detective.js
++++ js/namelecule-molecular-detective.js
+@@ -17,8 +17,8 @@
+   const state = {phase: 'startup', session: '', requestId: 0, roundSerial: 0, missionSerial: 0, roundId: null, moleculeId: null, snapshot: null, missions: [], mission: null, bridgeMissionId: null, loadRequestId: 0, configureRequestId: 0, selectionRevision: -1, atoms: [], bonds: [], attempts: 0, submitted: false, restoring: null, correct: false, stopped: false};
+   let levelControls = null;
+   const assignment = {category: 'alkanes', level: null, deck: null, nativeReady: false, slots: new Map(), slot: null, restoring: null};
+-  const alkaneIds = engine.starterIds.slice(0, 14);
+-  const otherIds = engine.starterIds.slice(14);
++  const alkaneIds = engine?.starterIds?.slice(0, 14) || [];
++  const otherIds = engine?.starterIds?.slice(14) || [];
+   function newSeed() { const values = new Uint32Array(2); crypto.getRandomValues(values); return values[0] + ':' + values[1]; }
+   function clearAssignment() {
+     clearTimeout(deadline); stopLocalReveal();
+--- before/games/molecular-detective.html
++++ games/molecular-detective.html
+@@ -10,7 +10,7 @@
+   <link rel="stylesheet" href="../css/namelecule-game-levels.css?v=alkane-levels-20261116-r1">
+   <script src="../js/namelecule-game-levels.js?v=alkane-levels-20261116-r1" defer></script>
+   <script src="../js/namelecule-molecular-detective-engine.js?v=alkane-levels-20261116-r1" defer></script>
+-  <script src="../js/namelecule-molecular-detective.js?v=alkane-levels-20261116-r1" defer></script>
++  <script src="../js/namelecule-molecular-detective.js?v=alkane-levels-20261116-r2" defer></script>
+ </head>
+ <body>
+   <a class="skip-link" href="#mission-title">Πήγαινε στην αποστολή</a>

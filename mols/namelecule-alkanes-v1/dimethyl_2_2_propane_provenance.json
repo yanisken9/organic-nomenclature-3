@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "id": "dimethyl_2_2_propane",
+  "source3D": {
+    "provider": "PubChem",
+    "pubchemCID": 10041,
+    "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/10041/SDF?record_type=3d",
+    "retrievedUTC": "2026-11-16T05:02:39.704753+00:00",
+    "sha256": "5f657bec0934b4c94a37f6316baf17602085814c353c955478a469f385156c69",
+    "bytes": 2560,
+    "geometry": "Unmodified PubChem source conformer; no local minimization or optimizer-convergence claim."
+  },
+  "source2D": {
+    "type": "Locally authored new curated records",
+    "graphSource": "Approved pool-first-plan.json carbon edges",
+    "nativePipeline": {
+      "file": "js/mulermoc-nom-core-57.js",
+      "sha256": "c41b722db2fb3748f827d19ee1f05d7d8f680bb9f51c664305baa7d49c132c7e",
+      "functions": [
+        "fLinearizeMol",
+        "fGenExpandedMol",
+        "fZigzagMol"
+      ],
+      "generatorUnits": {
+        "CC": 1.0,
+        "CH": 0.5
+      }
+    },
+    "normalization": {
+      "condensedCC": 0.825,
+      "expandedCC": 0.6188,
+      "expandedCH": 0.3094,
+      "skeletalCC": 0.825,
+      "expandedHPolicy": "Free orthogonal axes at each saturated carbon, matching the existing eight school-form alkanes; parent horizontal.",
+      "reference": "js/jsme-nick-nomeclature-moc2-data_57.js; methyl_2_pentane and old-eight-geometry.json",
+      "source3DTransformed": false,
+      "skeletalQuaternaryPolicy": "For a degree-four parent center with two off-parent sides, rotate complete sides to exterior bisector +/-30 degrees; preserve 120-degree parent zigzag, all lengths and other local angles. No molecule-ID exception."
+    }
+  },
+  "atomCorrespondence": {
+    "indexBase": 1,
+    "heavy2DAcrossForms": "Carbon IDs 1..N are identical in all three 2D forms.",
+    "carbon2DTo3D": [
+      2,
+      1,
+      3,
+      4,
+      5
+    ],
+    "expandedTo3D": [
+      2,
+      1,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "parentTo3D": [
+      2,
+      1,
+      3
+    ],
+    "hydrogenEquivalence": "Explicit H are bijectively matched by bonded carbon; symmetry-equivalent H order is arbitrary. These constitutionally achiral alkanes encode no stereochemistry."
+  },
+  "validation": {
+    "neutral": true,
+    "isotopeFree": true,
+    "connectedAcyclic": true,
+    "singleBondsOnly": true,
+    "formula": "C5H12",
+    "carbonValence": 4,
+    "hydrogenValence": 1,
+    "constitutionallyAchiral": true,
+    "achiralityMethod": "Rooted-tree substituent equality at each tetrahedral carbon, including explicit H.",
+    "graphIdentity": "Element/bond-preserving full 2D-expanded-to-source3D bijection",
+    "CC3DRange": [
+      1.5353194944375583,
+      1.5354188809572455
+    ],
+    "CH3DRange": [
+      1.0957456730464417,
+      1.0958907472919004
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "recordedUTC": "2026-11-16T06:13:17.391366+00:00",
+  "status": "Preparedonly; noChrome/server/profile launched",
+  "available": "GoogleChrome executable installed; Node24.22nativeWebSocket available; no local Playwright/Puppeteer/ws/Pythonbrowserpackages",
+  "dependencies": "Pythonstandardlibraryonly, minimal localCDPWebSocket handshake/framing including fragments,ping/close",
+  "approach": "Reuse current exact frozen-source DOM/oracle/UI tests by narrow BiDi→CDP adapter; no appstate injection",
+  "mapped": [
+    "Runtime.evaluate",
+    "Page.navigate/reload/captureScreenshot",
+    "Emulation.setDeviceMetricsOverride",
+    "Input.dispatchMouseEvent",
+    "Input.dispatchKeyEvent",
+    "Target.createTarget/closeTarget",
+    "Page.addScriptToEvaluateOnNewDocument"
+  ],
+  "usage": "NAMELECULE_FOUR_GAME_CHROME_READY=frozen NAMELECULE_FOUR_GAME_BROWSER_READY=frozen NAMELECULE_FOUR_GAME_FROZEN_MANIFEST=docs/checks/four-game-integration-20261116/verification-target.json NAMELECULE_FOUR_GAME_REPLAY_MODE=detective-required python3 docs/checks/four-game-integration-20261116/lesson-browser/replay-chrome.py",
+  "browserPolicy": "--headless=new, unique /private/tmp userdatadir, ephemeraldebugport bound127.0.0.1; onlyownedPID/profile/server cleanup",
+  "sha256": "4948ba8ce0c3602c6ed6af13d29d6031e723cd1d4b56e58d888c8f2c369da61f",
+  "verification": "PythonASTparseonly; mandatoryseparateChromegrantcheckedbefore loading sharedprefix or starting resources",
+  "limits": [
+    "PreparedtransportnotyettestedagainstactualChrome; diagnostic harnesscorrectionsmaybenecessary",
+    "ChromePASSwouldqualifyChromeonly; FirefoxContinue remainsunqualified andpriorrootcauseunestablished",
+    "Node/Pythonbrowserdependenciesnotinstalled; no browserprofile/settings/productionfiles changed"
+  ]
+}

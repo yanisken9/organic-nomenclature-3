@@ -1,0 +1,63 @@
+{
+  "recordedUTC": "2026-11-15T16:39:10.375823+00:00",
+  "status": "Final consolidated evidence complete; no worker browser remains; slot returned to root. Author Exit pointer routing unresolved and disclosed; genuine keyboard Exit/Play, games and migration verified.",
+  "upstreamCapturedReview": {
+    "base": "e75a37baeda9017666628c9f2f3428ffdd3a2f1c",
+    "target": "b73d8b6330cfdb9d83c000a513be7052763aa083",
+    "fourCommits": "94050151,3e28d4e4,31ca436e,b73d8b63",
+    "source": "../compare.json and ../upstream/target/docs/CHANGELOG.md; root handles remote freshness and integration"
+  },
+  "adaptedFrom": {
+    "replay": "../../v56-sync-20261115/browser/replay.py",
+    "migration": "../../v56-sync-20261115/browser/migration.py"
+  },
+  "sourceAPIs": [
+    "fScenarioPresent",
+    "fScenarioIsAuthorPreview",
+    "NameleculeGeneratedRepairCheckpoint.loadCanonicalInput",
+    "NameleculeRepairGenerator.createGame",
+    "NameleculeNameBuilderEngine.createBank",
+    "NameleculeMolecularPuzzleEngine.parseMol",
+    "NameleculeMolecularDetective.snapshot",
+    "NameleculeMolecularDetectiveHost.getSnapshot",
+    "fMulerSelectGeom"
+  ],
+  "inputMethod": "BiDi trusted pointer input and production Check; readonly engines choose correct input; no receipt/solved/state injection",
+  "plannedRuns": [
+    "puzzle-run1",
+    "builder-run1",
+    "repair-run1",
+    "author-run1",
+    "migration-run1",
+    "detective-run1"
+  ],
+  "ownership": "Only this browser directory, owned temporary profiles, loopback servers and Firefox PIDs",
+  "scriptsSHA256": {
+    "author_exit.py": "0fc0523356e6afbd5b92876b2265d01a96261b6cffc1f4dabfb22be78a497d1d",
+    "detective.py": "602924b76104010120de7e8ab199af709738def937513dd8a9bd4ae3f08fc734",
+    "migration.py": "3ce97c8e28553bdc4226a0aaaa6c88ff56246c98f39717fc53ee438d9098c38f",
+    "replay.py": "0759ca1474269921d2fccc6b0fc014755ff5ccfff16c2829c06f1131f82df696",
+    "run_all.py": "0c9511ea03faa87b436127987fb04a820b81a2dd52a14089b3951b5282a238ff",
+    "summarize.py": "0b8d7070a6fec08f3baf3985c7c773a021201e9f86c9effa06dc519ee8e4e4cc"
+  },
+  "coreFilesChangedByWorker": false,
+  "staticVerification": "All5 Python scripts compiled in memory with python3 -B; no pycache/browser/profile/server created.",
+  "harnessCorrection": {
+    "recordedUTC": "2026-11-15T16:56:29.320192+00:00",
+    "fixed": {
+      "replay.py": 6
+    },
+    "cause": "Broad version56→57 string replacement also transformed SHA256 names. Corrected all6 tokens in replay.py; original and adapted replay/migration diffs inspected for other numeric changes.",
+    "checks": "All5 compiled in memory; every hashlib attribute resolves; extracted sha() executed against own replay.py and equals SHA-256. No browser/server/profile created.",
+    "otherAccidentalNumericReplacementsFound": false
+  },
+  "finalVerification": {
+    "recordedUTC": "2026-11-15T17:14:36.770835+00:00",
+    "completedChecks": 352,
+    "genuineCorrectUIAttempts": 31,
+    "supportingAuthorTraversalAssertionsNotAdded": 6,
+    "summaryGeneratorCorrection": "Initial summary generation assumed failed-run completed key was present; changed to get(...,False). No browser/application rerun or source change.",
+    "currentPythonScriptsCompiled": 6,
+    "coreFilesChangedByWorker": false
+  }
+}

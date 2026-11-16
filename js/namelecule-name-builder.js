@@ -3,6 +3,7 @@
 (function () {
   'use strict';
   const Engine = window.NameleculeNameBuilderEngine;
+  const Levels = window.NameleculeGameLevels;
   const channel = 'namelecule-name-builder-v1';
   const lessonChannel = 'namelecule-builder-lesson-v1';
   const lessonSession = new URLSearchParams(location.search).get('lessonSession');
@@ -14,9 +15,13 @@
   const frame = $('molecule-viewer');
   const nonce = Array.from(crypto.getRandomValues(new Uint8Array(18)), b => b.toString(16).padStart(2, '0')).join('');
   const forms = ['condensed', 'expanded', 'skeletal', '3d'];
-  const state = { inventory: [], deck: [], round: null, bank: [], answer: [], selected: null,
+  const practice = { category: 'alkanes', level: null, slots: new Map(), controls: null };
+  const state = { inventory: [], round: null, bank: [], answer: [], selected: null,
     representation: '', busy: true, failed: false, solved: false, stopped: false, roundNumber: 0,
     pending: null, nextId: 0, retry: null, touch: null, suppressClickUntil: 0, attempts: 0, submitted: false };
+  const Viewport = window.NameleculeGameViewport;
+  const viewportEnabled = !!Viewport && (!lesson || new URLSearchParams(location.search).get('viewport') === '1');
+  let viewportUI = null;
   const scrolling = { frame: null, moving: false };
   const representationButtons = Array.from(document.querySelectorAll('[data-representation]'));
   const startupTimer = setTimeout(() => fail('Η προβολή του μορίου άργησε να ξεκινήσει. Μπορείς να δοκιμάσεις ξανά.', () => location.reload()), 45000);
@@ -26,7 +31,8 @@
   }
   function postLesson(type, data, current = lesson?.current) {
     if (!lesson || state.stopped || (type !== 'ready' && !current)) return;
-    const identity = current ? { requestId: current.requestId, attemptId: current.attemptId, moleculeId: current.moleculeId } : {};
+    const identity = current && type !== 'ready' ? { requestId: current.requestId, attemptId: current.attemptId, moleculeId: current.moleculeId,
+      ...(current.context ? { context: current.context } : {}) } : {};
     parent.postMessage({ channel: lessonChannel, session: lessonSession, ...identity, type, ...data }, location.origin);
   }
   function publishSnapshot() {
@@ -34,6 +40,7 @@
     scheduleSize();
   }
   function scheduleSize() {
+    if (viewportEnabled) { viewportUI?.refresh(); return; }
     if (!lesson || lesson.resizeFrame !== null || state.stopped) return;
     lesson.resizeFrame = requestAnimationFrame(() => {
       lesson.resizeFrame = null;
@@ -62,10 +69,12 @@
     scrolling.moving = false;
   }
   function interruptReveal() {
+    if (viewportEnabled) return;
     stopLocalReveal();
     if (lesson?.current?.ready) postLesson('scroll-interrupt', {});
   }
   function revealRange(purpose, region) {
+    if (viewportEnabled) { viewportUI?.refresh(); return; }
     stopLocalReveal();
     scheduleSize();
     const current = lesson?.current;
@@ -101,12 +110,21 @@
     });
   }
   function revealFeedback() { revealRange('feedback'); }
+  function validateLessonContext(data) {
+    if (!Object.prototype.hasOwnProperty.call(data, 'context')) return null;
+    if (!Levels) throw new Error('Δεν φορτώθηκε η πολιτική των επιπέδων.');
+    const context = Levels.validateContext(data.context);
+    if (context.seed === null || !Levels.contextIds(context).includes(data.moleculeId)) throw new Error('Το μόριο δεν ανήκει στην προσπάθεια αυτού του επιπέδου.');
+    return context;
+  }
   function validateLessonLoad(data) {
+    const context = validateLessonContext(data);
+    const allowedIds = context ? Levels.contextIds(context) : lessonMolecules;
     if (typeof data.attemptId !== 'string' || !data.attemptId || data.attemptId.length > 160 ||
-        !lessonMolecules.includes(data.moleculeId) || typeof data.bankSeed !== 'string' || !data.bankSeed || data.bankSeed.length > 256 ||
+        !allowedIds.includes(data.moleculeId) || typeof data.bankSeed !== 'string' || !data.bankSeed || data.bankSeed.length > 256 ||
         typeof data.explanation !== 'string' || data.explanation.length > 8000) throw new Error('Μη έγκυρα δεδομένα άσκησης.');
     const round = Engine.validateRound(data.round);
-    const rootCount = lessonMolecules.indexOf(data.moleculeId) < 5 ? 5 : 6;
+    const rootCount = context?.source === 'enriched' ? (context.level < 3 ? 5 : 6) : lessonMolecules.indexOf(data.moleculeId) < 5 ? 5 : 6;
     if (round.moleculeId !== data.moleculeId || round.roundId.length > 128 || round.series !== 'alkanes' ||
         round.parentLength > rootCount || round.vocabulary.roots.length !== rootCount || !round.representations.includes('condensed')) {
       throw new Error('Το μόριο δεν αντιστοιχεί σε αυτή την άσκηση.');
@@ -119,7 +137,7 @@
         !Number.isSafeInteger(initial.attempts) || initial.attempts < 0 || typeof initial.submitted !== 'boolean' ||
         (initial.submitted && (!initial.attempts || !initial.answer.length))) throw new Error('Η αποθηκευμένη προσπάθεια δεν επαληθεύτηκε.');
     return { requestId: data.requestId, attemptId: data.attemptId, moleculeId: data.moleculeId, round,
-      bankSeed: data.bankSeed, explanation: data.explanation,
+      ...(context ? { context } : {}), bankSeed: data.bankSeed, explanation: data.explanation,
       initialState: { answer: initial.answer.slice(), selected: initial.selected, attempts: initial.attempts, submitted: initial.submitted }, ready: false };
   }
   function verifyLessonRound(actual, canonical) {
@@ -135,6 +153,10 @@
   function receiveLesson(event) {
     if (!lesson || state.stopped || event.origin !== location.origin || event.source !== parent) return;
     const data = event.data;
+    if (data?.command === 'viewport') {
+      if (viewportEnabled && validViewportMessage(data)) viewportUI?.refresh();
+      return;
+    }
     if (!data || data.channel !== lessonChannel || data.session !== lessonSession || data.command !== 'load' ||
         !Number.isSafeInteger(data.requestId) || data.requestId <= lesson.lastId) return;
     lesson.lastId = data.requestId;
@@ -143,10 +165,67 @@
       lesson.current = current; lesson.lastHeight = null;
       if (state.inventory.length) loadRound(current.moleculeId, current);
     } catch (error) {
-      if (typeof data.attemptId === 'string' && data.attemptId.length <= 160 && lessonMolecules.includes(data.moleculeId)) {
-        postLesson('error', { message: error.message }, data);
+      if (typeof data.attemptId === 'string' && data.attemptId.length <= 160) {
+        let context = null; try { context = validateLessonContext(data); } catch (_) { /* Reject unknown context without legacy fallback. */ }
+        postLesson('error', { message: error.message }, { ...data, context });
       }
     }
+  }
+  function validViewportMessage(data) {
+    const current = lesson?.current;
+    if (!current || data.channel !== lessonChannel || data.session !== lessonSession ||
+        data.requestId !== current.requestId || data.attemptId !== current.attemptId || data.moleculeId !== current.moleculeId ||
+        !Number.isFinite(data.height) || data.height <= 0 || !Number.isFinite(data.width) || data.width <= 0) return false;
+    try {
+      const context = validateLessonContext(data);
+      return current.context ? !!context && Levels.contextKey(context) === Levels.contextKey(current.context) : context === null;
+    } catch (_) { return false; }
+  }
+  function createViewportUI() {
+    const root = $('game'), pagers = [], buttons = new Map();
+    let mounted = null, feedbackName = null;
+    const nav = document.createElement('nav'); nav.className = 'builder-view-nav'; nav.setAttribute('aria-label', 'Προβολές άσκησης');
+    const stages = [['editing', 'Σύνθεση'], ['bank', 'Συνθετικά'], ['molecule', 'Μόριο'], ['name', 'Όνομα'], ['help', 'Οδηγίες'], ['feedback', 'Σχόλιο']];
+    stages.forEach(([key, label]) => {
+      const button = document.createElement('button'); button.type = 'button'; button.textContent = label;
+      button.dataset.view = key; button.addEventListener('click', () => stage(key)); nav.append(button); buttons.set(key, button);
+    });
+    root.querySelector('.workspace').before(nav);
+    function section(className) { const el = document.createElement('section'); el.className = className; root.append(el); return el; }
+    const help = section('builder-help-stage'), name = section('builder-name-stage'), feedback = section('builder-feedback-stage');
+    help.setAttribute('aria-label', 'Οδηγίες χειρισμού'); help.append($('answer-help')); $('answer-help').open = true;
+    name.setAttribute('aria-label', 'Επιθεώρηση ονόματος'); name.append($('candidate'));
+    feedback.setAttribute('aria-label', 'Ανατροφοδότηση'); feedback.append($('feedback'));
+    const actions = document.createElement('div'); actions.className = 'builder-feedback-actions';
+    const back = document.createElement('button'); back.type = 'button'; back.className = 'secondary'; back.textContent = 'Επιστροφή στη σύνθεση';
+    back.addEventListener('click', () => stage('editing')); actions.append(back); feedback.append(actions);
+    const nextHome = $('next-molecule').parentNode;
+    pagers.push(Viewport.pager($('answer-zone'), { axis: 'x', label: 'Συνθετικά του ονόματος' }));
+    pagers.push(Viewport.pager($('bank-zone'), { axis: 'y', label: 'Διαθέσιμα συνθετικά' }));
+    pagers.push(Viewport.pager($('candidate-name'), { axis: 'x', label: 'Πλήρες όνομα' }));
+    pagers.push(Viewport.pager($('answer-help').querySelector('.helper-methods'), { axis: 'y', label: 'Οδηγίες' }));
+    pagers.push(Viewport.pager($('feedback'), { axis: 'y', label: 'Ανατροφοδότηση' }));
+    function refresh() { pagers.forEach(pager => pager.refresh()); feedbackName?.refresh(); mounted?.refresh(); }
+    function stage(key) {
+      if (key === 'feedback' && $('feedback').hidden) key = 'editing';
+      root.dataset.builderView = key;
+      buttons.forEach((button, view) => { button.setAttribute('aria-pressed', String(view === key)); button.hidden = view === 'feedback' && $('feedback').hidden; });
+      if (key === 'feedback') actions.append($('next-molecule')); else nextHome.append($('next-molecule'));
+      refresh();
+    }
+    root.addEventListener('nl-level-stage', event => { root.classList.toggle('builder-choosing', !!event.detail.expanded); refresh(); });
+    mounted = Viewport.mount(root, { kind: 'builder', onResize({ width, height }) {
+      root.classList.toggle('builder-compact', width < 850 || height < 440);
+      pagers.forEach(pager => pager.refresh());
+    } });
+    root.querySelector('.keyboard-note').textContent = 'Enter: προσθήκη · ← →: μετακίνηση · Delete: αφαίρεση. Για μεγάλα ονόματα χρησιμοποίησε τα κουμπιά σελίδας.';
+    stage('editing');
+    return { stage, refresh, clearFeedbackName() { feedbackName?.destroy(); feedbackName = null; },
+      feedback(correct) {
+        const fullName = $('feedback').querySelector('.single-line-name');
+        if (fullName) feedbackName = Viewport.pager(fullName, { axis: 'x', label: 'Σωστό όνομα' });
+        back.textContent = correct ? 'Επιθεώρηση σύνθεσης' : 'Επιστροφή στη σύνθεση'; stage('feedback');
+      }, destroy() { feedbackName?.destroy(); pagers.forEach(pager => pager.destroy()); mounted?.destroy(); } };
   }
   function announce(text) { $('move-announcement').textContent = text; }
   function setStatus(text, error) { $('game-status').textContent = text; $('game-status').classList.toggle('error', !!error); }
@@ -172,7 +251,7 @@
     });
     $('zoom-in').disabled = $('zoom-out').disabled = !enabled;
     $('check-answer').disabled = !enabled || !state.answer.length || state.solved;
-    $('next-molecule').disabled = !state.inventory.length || state.busy;
+    $('next-molecule').disabled = !state.inventory.length || state.busy || (!lesson && !practiceSlot());
     document.querySelectorAll('.tile-button').forEach(button => {
       button.disabled = !enabled || state.solved;
       button.draggable = false;
@@ -215,29 +294,69 @@
       return { ...entry, representations: [...new Set(entry.representations)] };
     });
   }
-  function randomIndex(length) { const n = new Uint32Array(1); crypto.getRandomValues(n); return n[0] % length; }
-  function nextMolecule() {
-    if (!state.deck.length) {
-      state.deck = state.inventory.map(entry => entry.id);
-      for (let i = state.deck.length - 1; i > 0; i--) {
-        const j = randomIndex(i + 1); [state.deck[i], state.deck[j]] = [state.deck[j], state.deck[i]];
-      }
-      if (state.round && state.deck.length > 1 && state.deck.at(-1) === state.round.moleculeId) state.deck.reverse();
-    }
-    return state.deck.pop();
+  function freshSeed() { return Array.from(crypto.getRandomValues(new Uint32Array(4)), n => n.toString(16).padStart(8, '0')).join(''); }
+  function practiceKey() { return practice.category === 'other' ? 'other' : practice.level === null ? null : 'alkanes-' + practice.level; }
+  function practiceSlot() { return practice.slots.get(practiceKey()); }
+  function savePractice() {
+    const slot = practiceSlot();
+    if (slot && state.round) slot.saved = { moleculeId: state.round.moleculeId, roundId: state.round.roundId,
+      initialState: snapshot(), representation: state.representation };
   }
-  async function loadRound(moleculeId, controlled = null) {
+  function invalidateRound() {
+    // Invalidate the previous asynchronous response before clearing its UI.
+    state.roundNumber += 1;
+    if (state.pending) { clearTimeout(state.pending.timer); state.pending.reject(new Error('superseded')); state.pending = null; }
+    stopLocalReveal(); cancelTouch();
+  }
+  function nextMolecule() { return practiceSlot()?.deck.next(); }
+  function selectPractice(selection) {
+    if (lesson || state.stopped) return;
+    const category = selection.category, level = category === 'other' ? null : selection.level;
+    if (category === practice.category && level === practice.level) return;
+    savePractice(); invalidateRound();
+    practice.category = category; practice.level = level;
+    practice.controls.set({ category, selectedLevel: level });
+    const key = practiceKey();
+    if (!key) {
+      state.round = null; state.bank = []; state.answer = []; state.selected = null;
+      state.busy = false; state.failed = false; state.solved = false;
+      $('feedback').hidden = true; $('candidate').hidden = true;
+      render(); mask('Διάλεξε επίπεδο για να ανατεθεί ένα μόριο.');
+      setStatus('Διάλεξε επίπεδο για αυτόματη ανάθεση μορίου.'); return;
+    }
+    if (!practice.slots.has(key)) {
+      const ids = state.inventory.map(entry => entry.id);
+      const pool = category === 'other' ? ids.filter(id => Levels.levelFor(id) === null) : Levels.poolFor(level, ids);
+      practice.slots.set(key, { deck: Levels.createDeck(pool, { seed: freshSeed(), avoid: state.round?.moleculeId }), saved: null });
+    }
+    const saved = practiceSlot().saved;
+    loadRound(saved ? saved.moleculeId : nextMolecule(), null, saved);
+  }
+  function preparePractice() {
+    if (!Levels) throw new Error('Δεν φορτώθηκαν τα επίπεδα του παιχνιδιού. Ανανέωσε τη σελίδα.');
+    const ids = state.inventory.map(entry => entry.id);
+    if ([1, 2, 3].some(level => Levels.poolFor(level, ids).length !== [5, 4, 5][level - 1])) {
+      throw new Error('Η βιβλιοθήκη των 14 αλκανίων δεν είναι πλήρης.');
+    }
+    practice.controls = Levels.mount($('game-levels'), { compact: viewportEnabled, availableIds: ids, allowedLevels: [1, 2, 3], selectedLevel: null,
+      category: 'alkanes', otherCount: ids.filter(id => Levels.levelFor(id) === null).length, onSelect: selectPractice });
+    state.busy = false; mask('Διάλεξε επίπεδο για να ανατεθεί ένα μόριο.');
+    setStatus('Διάλεξε επίπεδο για αυτόματη ανάθεση μορίου.'); updateControls();
+  }
+  async function loadRound(moleculeId, controlled = null, saved = null) {
     if (state.stopped || (lesson && controlled !== lesson.current)) return;
-    stopLocalReveal(); cancelTouch(); state.busy = true; state.failed = false; state.solved = false;
+    invalidateRound();
+    state.busy = true; state.failed = false; state.solved = false;
     state.attempts = 0; state.submitted = false;
     if (controlled) controlled.ready = false;
     state.answer = []; state.selected = null; state.round = null; state.bank = [];
-    $('feedback').hidden = true; $('candidate').hidden = true;
+    $('feedback').hidden = true; $('candidate').hidden = true; viewportUI?.stage('editing');
     $('bank-tiles').replaceChildren(); $('answer-tiles').replaceChildren(); $('empty-answer').hidden = false;
     $('answer-zone').scrollLeft = 0; $('candidate-name').scrollLeft = 0;
     mask('Ετοιμάζουμε τη δομή και τα συνθετικά.'); setStatus('Ετοιμάζουμε το επόμενο μόριο.'); updateControls();
-    const ticket = ++state.roundNumber;
-    const roundId = controlled ? controlled.round.roundId : nonce + '-' + ticket;
+    const ticket = state.roundNumber;
+    const roundId = controlled ? controlled.round.roundId : saved ? saved.roundId : nonce + '-' + ticket;
+    if (!lesson && practiceSlot()) practiceSlot().saved = saved || { moleculeId, roundId, initialState: snapshot(), representation: 'condensed' };
     try {
       const result = await request('load', { moleculeId, roundId, representation: 'condensed' });
       if (state.stopped || ticket !== state.roundNumber || (controlled && controlled !== lesson.current)) return;
@@ -246,7 +365,8 @@
       if (controlled) verifyLessonRound(actual, controlled.round);
       state.round = controlled ? controlled.round : actual;
       state.bank = Engine.createBank(state.round, { seed: controlled ? controlled.bankSeed : roundId });
-      if (controlled) Object.assign(state, controlled.initialState, { answer: controlled.initialState.answer.slice() });
+      const initial = controlled ? controlled.initialState : saved?.initialState;
+      if (initial) Object.assign(state, initial, { answer: initial.answer.slice() });
       state.representation = 'condensed'; state.busy = false; state.failed = false;
       mask(''); setStatus('Διάλεξε τα συνθετικά και χτίσε το όνομα.');
       if (state.submitted) showFeedback(Engine.evaluate(state.round, answerTiles()));
@@ -257,10 +377,11 @@
       }
       if (state.submitted) revealFeedback();
       else revealRange('entry');
+      if (saved && saved.representation !== 'condensed' && state.round?.representations.includes(saved.representation)) await changeRepresentation(saved.representation);
     } catch (error) {
       if (error.message === 'superseded' || state.stopped || ticket !== state.roundNumber || (controlled && controlled !== lesson.current)) return;
       fail(lesson ? 'Δεν επαληθεύτηκε η προβολή αυτού του μορίου. Δοκίμασε ξανά ή επέστρεψε στην επιλογή παιχνιδιού.'
-        : 'Δεν ήταν δυνατή η προετοιμασία αυτού του μορίου. Δοκίμασε ξανά ή διάλεξε «Άλλο μόριο».', () => loadRound(moleculeId, controlled));
+        : 'Δεν ήταν δυνατή η προετοιμασία αυτού του μορίου. Δοκίμασε ξανά ή διάλεξε «Άλλο μόριο».', () => loadRound(moleculeId, controlled, saved));
     }
   }
   async function changeRepresentation(representation) {
@@ -300,10 +421,7 @@
           else setStatus('Ετοιμάζουμε το μόριο της άσκησης.');
           return;
         }
-        const requested = new URLSearchParams(location.search).get('molecule');
-        const initial = state.inventory.some(entry => entry.id === requested) ? requested
-          : state.inventory.some(entry => entry.id === 'ethane') ? 'ethane' : state.inventory[0].id;
-        loadRound(initial);
+        preparePractice();
       } catch (error) { fail(error.message, () => location.reload()); }
       return;
     }
@@ -323,6 +441,12 @@
     const container = $(inAnswer ? 'answer-tiles' : 'bank-tiles');
     const button = Array.from(container.querySelectorAll('button')).find(item => item.dataset.tileId === id);
     if (!button) return;
+    if (viewportEnabled && !inAnswer) {
+      const bounds = $('bank-zone').getBoundingClientRect(), tile = button.getBoundingClientRect();
+      if (!bounds.width || !bounds.height) { $('answer-zone').focus({ preventScroll: true }); return; }
+      if (tile.top < bounds.top) $('bank-zone').scrollTop += tile.top - bounds.top;
+      else if (tile.bottom > bounds.bottom) $('bank-zone').scrollTop += tile.bottom - bounds.bottom;
+    }
     button.focus({ preventScroll: true });
     if (inAnswer) {
       const viewport = $('answer-zone'), bounds = viewport.getBoundingClientRect(), tile = button.getBoundingClientRect();
@@ -419,8 +543,10 @@
     if (target?.closest('#answer-zone')) $('answer-zone').classList.add('drag-over');
     if (target?.closest('#bank-zone')) $('bank-zone').classList.add('drag-over');
     if (touch.scrollFrame === null) touch.scrollFrame = requestAnimationFrame(scrollDraggedAnswer);
-    if (event.clientY < 45) window.scrollBy(0, -14);
-    else if (event.clientY > innerHeight - 45) window.scrollBy(0, 14);
+    if (!viewportEnabled) {
+      if (event.clientY < 45) window.scrollBy(0, -14);
+      else if (event.clientY > innerHeight - 45) window.scrollBy(0, 14);
+    }
   }
   function scrollDraggedAnswer() {
     const touch = state.touch; if (!touch || !touch.active) return;
@@ -483,6 +609,7 @@
     clearDropStyles();
   }
   function showFeedback(result) {
+    viewportUI?.clearFeedbackName();
     $('feedback').replaceChildren(); $('feedback').hidden = false;
     $('feedback').classList.toggle('success', result.correct);
     if (result.correct) {
@@ -497,6 +624,7 @@
         explanation.textContent = lesson.current.explanation; $('feedback').append(explanation);
       }
     } else $('feedback').textContent = result.message;
+    viewportUI?.feedback(result.correct);
   }
   $('check-answer').addEventListener('click', () => {
     if (!editable() || !state.answer.length || state.attempts >= Number.MAX_SAFE_INTEGER) return;
@@ -509,13 +637,13 @@
   $('move-before').addEventListener('click', () => move(state.selected, -1));
   $('move-after').addEventListener('click', () => move(state.selected, 1));
   $('remove-tile').addEventListener('click', () => remove(state.selected));
-  $('next-molecule').addEventListener('click', () => { if (!state.busy && state.inventory.length) loadRound(nextMolecule()); });
+  $('next-molecule').addEventListener('click', () => { if (!lesson && !state.busy && practiceSlot()) loadRound(nextMolecule()); });
   $('retry-load').addEventListener('click', () => state.retry?.());
   const guidance = $('answer-help');
   const compactGuidance = matchMedia('(max-width:600px)');
   function updateGuidanceLayout() {
     if (state.stopped) return;
-    guidance.open = !compactGuidance.matches;
+    guidance.open = viewportEnabled || !compactGuidance.matches;
     scheduleSize();
   }
   guidance.addEventListener('toggle', () => {
@@ -550,7 +678,7 @@
     } catch (_) { /* viewer load failed */ }
   });
   window.addEventListener('pagehide', () => {
-    clearTimeout(startupTimer); stopLocalReveal(); cancelTouch();
+    clearTimeout(startupTimer); stopLocalReveal(); cancelTouch(); viewportUI?.destroy(); practice.controls?.destroy();
     compactGuidance.removeEventListener('change', updateGuidanceLayout);
     if (lesson) {
       if (lesson.resizeFrame !== null) cancelAnimationFrame(lesson.resizeFrame);
@@ -562,10 +690,14 @@
   if (!Engine) { clearTimeout(startupTimer); fail('Δεν φορτώθηκε ο μηχανισμός του παιχνιδιού. Ανανέωσε τη σελίδα.', () => location.reload()); return; }
   if (lesson) {
     document.documentElement.classList.add('lesson-mode');
+    $('game-levels').hidden = true;
     $('next-molecule').hidden = true;
-    lesson.observer = new ResizeObserver(scheduleSize); lesson.observer.observe(document.body);
-    window.addEventListener('resize', scheduleSize);
+    if (!viewportEnabled) {
+      lesson.observer = new ResizeObserver(scheduleSize); lesson.observer.observe(document.body);
+      window.addEventListener('resize', scheduleSize);
+    }
     postLesson('ready', {});
   }
-  frame.src = 'name-builder-viewer.html?session=' + encodeURIComponent(nonce);
+  if (viewportEnabled) viewportUI = createViewportUI();
+  frame.src = 'name-builder-viewer.html?v=alkane-pool-20261116-r1&session=' + encodeURIComponent(nonce);
 })();

@@ -1,0 +1,184 @@
+{
+  "recordedUTC": "2026-11-15T05:46:45.517007+00:00",
+  "scope": "Actual extracted classifier with measured original ethane midpoint and deterministic geometry. Native pointer/browser validation remains with root.",
+  "runs": {
+    "before": {
+      "sha256": "5f86d5e80baee771fe7aa76767dd41258e354ae082033f3cc44d6572e1386a17",
+      "exitCode": 0,
+      "output": {
+        "cases": 19,
+        "passed": 13,
+        "results": [
+          {
+            "name": "measured condensed ethane midpoint selects actual C-C bond",
+            "pass": false,
+            "error": "Error: expected {\"kind\":\"bond\",\"bond\":1,\"pair\":[1,2]}, got {\"kind\":\"atom\",\"atom\":1}"
+          },
+          {
+            "name": "direct visible carbon label retains atom priority over bond corridor",
+            "pass": true
+          },
+          {
+            "name": "wide visible formula label remains selectable beyond loose atom radius",
+            "pass": false,
+            "error": "Error: expected {\"kind\":\"atom\",\"atom\":1}, got {\"kind\":\"atom\",\"atom\":2,\"vertex\":1}"
+          },
+          {
+            "name": "bond-purpose armed mission retains native bond endpoint result",
+            "pass": false,
+            "error": "Error: expected {\"kind\":\"bond\",\"bond\":1,\"pair\":[1,2]}, got {\"kind\":\"atom\",\"atom\":1}"
+          },
+          {
+            "name": "parallel multiple-bond strokes retain their source bond identity",
+            "pass": false,
+            "error": "Error: expected {\"kind\":\"bond\",\"bond\":1,\"pair\":[1,2]}, got {\"kind\":\"atom\",\"atom\":1}"
+          },
+          {
+            "name": "diagonal bond corridor remains selectable between implicit vertices",
+            "pass": true
+          },
+          {
+            "name": "main-chain armed mission ignores actual bond interior",
+            "pass": false,
+            "error": "Error: expected {\"ignore\":true}, got {\"kind\":\"atom\",\"atom\":1}"
+          },
+          {
+            "name": "FG atom-only mission ignores actual bond interior",
+            "pass": false,
+            "error": "Error: expected {\"ignore\":true}, got {\"kind\":\"atom\",\"atom\":1}"
+          },
+          {
+            "name": "loose atom fallback remains available away from any bond or vertex",
+            "pass": true
+          },
+          {
+            "name": "isolated atom retains loose fallback without bond groups",
+            "pass": true
+          },
+          {
+            "name": "empty canvas still returns null",
+            "pass": true
+          },
+          {
+            "name": "expanded free H label remains literal H selection",
+            "pass": true
+          },
+          {
+            "name": "expanded armed non-target H retains native parent redirect",
+            "pass": true
+          },
+          {
+            "name": "expanded target H remains distinct in armed mission",
+            "pass": true
+          },
+          {
+            "name": "skeletal implicit vertex retains topological atom identity",
+            "pass": true
+          },
+          {
+            "name": "skeletal hetero glyph takes priority at its vertex",
+            "pass": true
+          },
+          {
+            "name": "compacted free label retains whole fragment priority",
+            "pass": true
+          },
+          {
+            "name": "compacted main-chain label retains carbon anchor-only policy",
+            "pass": true
+          },
+          {
+            "name": "compacted N/S group retains whole-fragment policy during main-chain purpose",
+            "pass": true
+          }
+        ]
+      }
+    },
+    "after": {
+      "sha256": "2840d9282f6eb91124b22b6bef46df035f6c07320473e5bf2944e96e3372e8d3",
+      "exitCode": 0,
+      "output": {
+        "cases": 19,
+        "passed": 19,
+        "results": [
+          {
+            "name": "measured condensed ethane midpoint selects actual C-C bond",
+            "pass": true
+          },
+          {
+            "name": "direct visible carbon label retains atom priority over bond corridor",
+            "pass": true
+          },
+          {
+            "name": "wide visible formula label remains selectable beyond loose atom radius",
+            "pass": true
+          },
+          {
+            "name": "bond-purpose armed mission retains native bond endpoint result",
+            "pass": true
+          },
+          {
+            "name": "parallel multiple-bond strokes retain their source bond identity",
+            "pass": true
+          },
+          {
+            "name": "diagonal bond corridor remains selectable between implicit vertices",
+            "pass": true
+          },
+          {
+            "name": "main-chain armed mission ignores actual bond interior",
+            "pass": true
+          },
+          {
+            "name": "FG atom-only mission ignores actual bond interior",
+            "pass": true
+          },
+          {
+            "name": "loose atom fallback remains available away from any bond or vertex",
+            "pass": true
+          },
+          {
+            "name": "isolated atom retains loose fallback without bond groups",
+            "pass": true
+          },
+          {
+            "name": "empty canvas still returns null",
+            "pass": true
+          },
+          {
+            "name": "expanded free H label remains literal H selection",
+            "pass": true
+          },
+          {
+            "name": "expanded armed non-target H retains native parent redirect",
+            "pass": true
+          },
+          {
+            "name": "expanded target H remains distinct in armed mission",
+            "pass": true
+          },
+          {
+            "name": "skeletal implicit vertex retains topological atom identity",
+            "pass": true
+          },
+          {
+            "name": "skeletal hetero glyph takes priority at its vertex",
+            "pass": true
+          },
+          {
+            "name": "compacted free label retains whole fragment priority",
+            "pass": true
+          },
+          {
+            "name": "compacted main-chain label retains carbon anchor-only policy",
+            "pass": true
+          },
+          {
+            "name": "compacted N/S group retains whole-fragment policy during main-chain purpose",
+            "pass": true
+          }
+        ]
+      }
+    }
+  }
+}

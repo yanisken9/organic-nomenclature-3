@@ -1,0 +1,25 @@
+--- viewer56-before-9a0d9561
++++ viewer56-after-implicit-vertex-ownership
+@@ -2314,9 +2314,11 @@
+     // when a wide formula extends beyond the loose center radius. Keep that
+     // radius only as a fallback: it must not steal a visible bond interior.
+     var best = null, bd = Infinity, loose = null, ld = rAtom * rAtom;
++    var visibleAnchorAtoms = {};
+     for (var i = 0; i < anchors.length; i++) {
+       var anchor = anchors[i];
+       if (!anchor || anchor.atom == null || isNaN(anchor.atom)) continue;
++      if (anchor.w > 0 && anchor.h > 0) visibleAnchorAtoms[anchor.atom] = true;
+       var dx = anchor.x - px, dy = anchor.y - py, d2 = dx * dx + dy * dy;
+       if (anchor.w > 0 && anchor.h > 0 &&
+           px >= anchor.x - anchor.w / 2 && px <= anchor.x + anchor.w / 2 &&
+@@ -2345,6 +2347,10 @@
+     // (verts/vassign come from the per-render geometry cache above).
+     var bv = null, bvd = rAtom * rAtom;
+     for (var v = 0; v < verts.length; v++) {
++      // A labeled atom is already represented by its visible glyph above.
++      // Its raw bond endpoint must not add an implicit-atom halo over the
++      // adjacent visible bond. Unlabeled skeletal atoms keep vertex picking.
++      if (visibleAnchorAtoms[vAssign[v]]) continue;
+       var dx2 = verts[v].x - px, dy2 = verts[v].y - py, d22 = dx2 * dx2 + dy2 * dy2;
+       if (d22 <= bvd) { bvd = d22; bv = v; }
+     }

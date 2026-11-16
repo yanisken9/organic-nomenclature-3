@@ -1,0 +1,27 @@
+{
+  "recordedUTC": "2026-11-15T05:47:05.951954+00:00",
+  "status": "frozen after approved measured implicit-vertex ownership correction; browser and independent verification pending with root",
+  "initialSHA256": "5f86d5e80baee771fe7aa76767dd41258e354ae082033f3cc44d6572e1386a17",
+  "previousSHA256": "9a0d9561a93401744ac3189a05edf3b67222c3b29bf7e50cd2152c06dbd6e53d",
+  "finalSHA256": "2840d9282f6eb91124b22b6bef46df035f6c07320473e5bf2944e96e3372e8d3",
+  "bytes": 830489,
+  "path": "/private/tmp/namelecule-v56-sync-20261115-nqi71wns/candidate/js/mulermoc-nom-molview-56.js",
+  "changedFunction": "fMulerSelectPick",
+  "correctedHypothesis": "The prior claim that raw midpoint4596,2528 was outside the actualCH3 glyph is disproven by measured glyphwidth559.02294921875. The earlier width330 test is a synthetic narrow-label fixture, not a faithful replay of that actual raw midpoint. Actual midpoint liesinsideC1 glyph and correctlyselectsC1 in allrevisions. Original snapshots and tests are retained; this addendum supersedes the initial causalclaim.",
+  "measuredCause": "An independent visible bond point4761,2528 liesoutsideall actualglyphs/backplates. Both5f86 and9a classify it as atom2/vertex1 because the supposed implicit-vertex loop also considers explicitlylabeledatoms. Trusted browser pointer producedatoms[2],bonds[] beforethisfix.",
+  "sourceEvidence": "../native-browser/run-bond-diagnostic-054437/visible-bond-diagnostic.json",
+  "correction": "Register atoms with visiblepositive labelanchor bounds, and skip theirrawendpointvertices in the implicit-vertex loop. Native implicitC vertices remain selectable; directglyphpriority, visiblebondcorridors, loosefallback, Hparentredirect andquizgrading are unchanged. No moleculeconstants, geometry, MOL orsourceatomID changes.",
+  "verification": {
+    "syntax": "node --check passed",
+    "actualMeasuredFullGlyphAndVisibleGap": "before5f86 4/10; before9a4/10; after10/10",
+    "previousSyntheticClassifierVariations": "19/19 after",
+    "actualFunction3DAndDraftRegressions": "61/61 after",
+    "ownershipAndLifecycle": "3/3 after"
+  },
+  "limitations": [
+    "Actual trusted-pointer rerun and final raster checks remain root evidence pending.",
+    "The10new tests execute the realclassifier with actualmeasuredglyph/gap data plus isolatedgeometryvariations, not a browser.",
+    "Retained nativeimplicit-vertex tolerance applies only to atoms with no visiblepositive labelanchor; thisfix doesnot redesign that policy."
+  ],
+  "freeze": "No more candidateviewer edits after thisrecord unlessroot authorizes corrections."
+}

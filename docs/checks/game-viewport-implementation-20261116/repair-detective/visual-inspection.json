@@ -1,0 +1,28 @@
+{
+  "recordedUTC": "2026-11-16T08:52:36.886629+00:00",
+  "role": "Developer visual QA after browser cleanup",
+  "testedRun": "browser-085106/results.json",
+  "status": "resolved by root Developer; independently reviewed target managed by root",
+  "finding": {
+    "id": "D-VIEW-01",
+    "severity": "P1",
+    "cause": "css/namelecule-name-builder.css #game.nl-game-viewport:not(.puzzle-game) also matches Detective because it imports this shared theme. The ID specificity wins over Detective root grid and narrow molecule hide.",
+    "observed": "At390x700 the clue and molecule have the same visible rect after clue-tab click; iframe overlays the full clue. The button appears selected but mission text is not visible.",
+    "evidence": [
+      "browser-085106/detective-390-clue.png",
+      "browser-085106/results.json measurement tag390-clue"
+    ],
+    "requiredCorrection": "Scope Builder viewport rules to the Builder or exclude Detective; recheck Detective all four layouts, actual clue visibility, correct next and native picking.",
+    "sourceEdits": "none while frozen reviewer target active"
+  },
+  "limits": [
+    "68 harness assertions passed, but initial geometry assertion only checked the clue rectangle and missed overlap. This is not complete acceptance."
+  ],
+  "resolution": {
+    "owner": "root Developer",
+    "changedDependency": "css/namelecule-name-builder.css",
+    "behavior": "Scoped all39 generic Builder viewport selectors positively to data-nl-vp-kind=\"builder\". Detective grid and narrow clue/molecule visibility now use their own CSS.",
+    "verification": "browser-085441/results.json:41PASS, screenshot detective-390-clue visually inspected, actual clue hit and moleculehidden asserted, native picks/next reverified",
+    "sourceSHA256": "77e59a4a42ce0bbc188de029f9ef7b68891f1a71561ff9184962bdeba97c8cd5"
+  }
+}

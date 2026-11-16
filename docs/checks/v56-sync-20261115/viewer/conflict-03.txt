@@ -1,0 +1,89 @@
+BEFORE:
+ePending3D(); } catch (eP3) {} return false; }
+    }
+    else if (typeof Jmol !== "undefined" && Jmol && typeof Jmol.script === "function") Jmol.script(applet, cmd);
+    return true;
+  } catch (eIn) { return false; }
+}
+
+
+LOCAL:
+
+UPSTREAM:
+// ── v55 tiered 3D (JSmol PubChem → page-fetch PubChem → JSmol Cactus → local UFF minimize) ──
+// Tier 1 resolves `:smiles:`/`:cid:` (PubChem) inside the JSmol applet
+// (proxy-routed, no page-side fetch/CORS); tier 1b is the page-side PUG fetch
+// fallback (covers applet-dead/proxy-blocked cases); tier 2 resolves `$SMILES`
+// via NCI/CADD Cactus (generates 3D even without a PubChem record — NOT
+// PubChem); tier 3 builds 3D offline from the 2D MOL via JSmol.
+// fMolDraftValidSDF3D: parse + heavy count + non-flat z (fail closed).
+// fMolDraftLocal3DFromMol: displays the minimized model AND extracts SDF text
+// back (molFile property first, `show MOL` fallback); null on any gap.
+function fMolDraftValidSDF3D(sdf, expectHeavy) {
+  try {
+    if (!sdf || sdf.indexOf("V2000") < 0) return false;
+    if (typeof fParseMolV2000 !== "function") return true;
+    var p = fParseMolV2000(sdf);
+    if (!p || !p.atoms || !p.atoms.length) return false;
+    // z-spread over HEAVY atoms only (v55.7): light-H numerical noise can fake
+    // spread on an otherwise flat scaffold; a "3D" model with a flat heavy
+    // skeleton is not 3D.
+    var h = 0, zMin = Infinity, zMax = -Infinity, i;
+    for (i = 0; i < p.atoms.length; i++) {
+      var e = String(p.atoms[i].el || "");
+      if (!e || e === "H" || e === "h") continue;
+      h++;
+      var z = p.atoms[i].z;
+      if (typeof z === "number" && isFinite(z)) { if (z < zMin) zMin = z; if (z > zMax) zMax = z; }
+    }
+    if (expectHeavy && h !== expectHeavy) return false;
+    if (!h) return false;
+    if (zMin === Infinity) return true; // 2D-only parse: accept shape, caller decides flatness
+    if ((zMax - zMin) < 1e-3) return false; // flat = un-minimized 2D
+    return true;
+  } catch (eV) { return false; }
+}
+
+// Shared SDF read-back (v55.8): `write MOL` only. Translate-test proved it
+// the sole live-model serializer in this build (`molFile` returns an
+// unparseable column layout; `show MOL` is not a command; `fileContents` is
+// a stale dump that never reflects the live model). First V2000-valid
+// (heavy count + heavy-only z-spread) wins; method + length + heavy count +
+// heavy z-spread + verdict are logged.
+function fMolDraftReadBackSDF(expectHeavy) {
+  var t = null;
+  try { if (typeof fJSmolScriptEcho === "function") t = fJSmolScriptEcho(jmolAppletNomeclature, "write MOL") || null; } catch (eM) { t = null; }
+  var ok = false, len = 0, h = 0, zs = -1;
+  try { len = t ? t.length : 0; } catch (eL0) { len = 0; }
+  try {
+    if (t && t.indexOf("V2000") >= 0 && typeof fParseMolV2000 === "function") {
+      var p = fParseMolV2000(t);
+      if (p && p.atoms && p.atoms.length) {
+        var zMin = Infinity, zMax = -Infinity;
+        for (var k = 0; k < p.atoms.length; k++) {
+          var e = String(p.atoms[k].el || "");
+          if (!e || e === "H" || e === "h") continue;
+          h++;
+          var z = p.atoms[k].z;
+          if (typeof z === "number" && isFinite(z)) { if (z < zMin) zMin = z; if (z > zMax) zMax = z; }
+        }
+        if (zMin !== Infinity) { try { zs = zMax - zMin; } catch (eZs) { zs = -1; } }
+        ok = !!(typeof fMolDraftValidSDF3D === "function" && fMolDraftValidSDF3D(t, expectHeavy));
+      }
+    }
+  } catch (eV) { ok = false; }
+  try {
+    var _zs = (zs < 0) ? "n/a" : (zs.toFixed ? zs.toFixed(3) : String(zs));
+    // console.log("[SDF-3D] read-back writeMOL: " + len + " chars, heavy=" + h + ", zspread=" + _zs + ", valid=" + ok);
+  } catch (eLg) {}
+  return ok ? t : null;
+}
+
+// Mean heavy-atom displacement between two MOL texts (v55.8); -1 on any gap.
+// Heavy order is preserved by add-H (Hs append), so index-wise compare holds.
+
+AFTER:
+function fMolDraftMeanDisplacement(beforeMol, afterSDF) {
+  try {
+    if (typeof fParseMolV2000 !== "function" || !beforeMol || !afterSDF) return -1;
+    var a = fParseMolV2000(beforeMol), b = fParseM

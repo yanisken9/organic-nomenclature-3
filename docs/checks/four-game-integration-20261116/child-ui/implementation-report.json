@@ -1,0 +1,49 @@
+{
+  "recordedUTC": "2026-11-16T05:59:59.102605+00:00",
+  "role": "Developer child UI implementation",
+  "baseCommit": "168e3cec01f941a84d40bbe0dc07156e7baa35d0",
+  "ownedPaths": {
+    "js/namelecule-molecular-detective.js": "a786158ea0480d683ba85b09a47d3e897922029d82cd112974c9978663a33775",
+    "games/molecular-detective.html": "8d0ccded705b2924c9367acf88ff3c3a0a657be16ecd7a17bb6b5456cfd0af7e",
+    "css/namelecule-molecular-detective.css": "446e2345bc1924252e150c746eccaaff56a4d0dc76afa8060f008366fdf542ad"
+  },
+  "changes": [
+    "Optional lessonSession lesson protocol with native startup readiness, one latest-load startup queue, fixed8 lesson boundary, full native/canonical assertion, exact canonical mission, native raw restore, loaded native snapshot proof",
+    "Raw-only state with actual check attempts/submitted plus strictly monotonic stateRevision, reset submitted/correct feedback on edits; standalone selectors27 and Next behavior retained",
+    "Parent-owned lesson actions/retry; lesson selectors/site header/footer hidden, existing hero/logo retained",
+    "Content height ResizeObserver, bound entry/feedback reveal ranges and end marker, local/native user interruption and Escape forwarding, bfcache listener restoration",
+    "Detective asset/native viewer cache URLs four-games-20261116-r1"
+  ],
+  "protocol": {
+    "channel": "namelecule-detective-lesson-v1",
+    "load": "{channel,session,command:\"load\",requestId,attemptId,moleculeId,snapshot,missionId,initialState:{atoms,bonds,attempts,submitted},explanation}",
+    "ready": "Sent only after native ready + all27 inventory; no active identity. One validated latest load may queue during native startup.",
+    "responseIdentity": [
+      "requestId",
+      "attemptId",
+      "moleculeId",
+      "missionId"
+    ],
+    "loaded": "{identity,type:\"loaded\",state:{atoms,bonds,attempts,submitted},stateRevision:0,snapshot:actualNativeSnapshot}",
+    "state": "{identity,type:\"state\",state:{atoms,bonds,attempts,submitted},stateRevision:monotonicPerLoad}",
+    "otherResponses": [
+      "error{message}",
+      "resize{height}",
+      "reveal{purpose:entry|feedback,startY,endY}",
+      "scroll-interrupt",
+      "exit"
+    ],
+    "trust": "Parent supplies canonical expected; child derives missions from native snapshot only after complete equality; loaded returns actual native source proof for parent revalidation. No accepted sets or solved flag emitted."
+  },
+  "verification": {
+    "nodeSyntax": "passed",
+    "controlledFixtures": "results.json:40/40 passed; Developer supplied DOM/native-message execution, no browser rendering",
+    "html": "unique IDs, local dependency existence, cache URLs passed"
+  },
+  "limits": [
+    "No browser launched in this child assignment; native JSME picking/rendering, actual CSS responsive layout, real ResizeObserver/scrolling and full parent replay need root browser validation",
+    "No independent review performed by this Developer worker; root consolidates fresh Reviewer",
+    "External Google font dependency retained",
+    "No core changes, commits, staging, push or publication"
+  ]
+}

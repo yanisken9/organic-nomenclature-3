@@ -1,15 +1,44 @@
-"""Generate a React molecule host around the current v52 application."""
+"""Reproduce the retained React molecule host without replacing existing files."""
 from pathlib import Path
 import argparse
+import hashlib
 import re
 import json
 
 root = Path(__file__).resolve().parents[2]
 preview = root / 'react-preview'
-source = (root / 'mulermoc-nom-52.html').read_text()
-# Avoid adding another analytics page view. The source is untouched.
-source, count = re.subn(r'  <!-- Google tag \(gtag.js\) -->.*?(?=  <title>)', '', source, count=1, flags=re.S)
-assert count == 1
+
+def frozen_template():
+    """Validate the retained inputs before computing or creating any output."""
+    manifest = json.loads((preview / 'preserved-main-20261030/PROVENANCE.json').read_text())
+    frozen = manifest['frozenReact']
+    if (frozen['moleculeCount'], frozen['lessonCount'], frozen['stepCount']) != (126, 12, 283):
+        raise ValueError('Frozen React inventory must remain 126 molecules, 12 lessons / 283 steps')
+    for name, expected in frozen['inputs'].items():
+        path = root / name
+        if not path.is_file() or hashlib.sha256(path.read_bytes()).hexdigest() != expected:
+            raise ValueError('Frozen React input differs or is missing: ' + name)
+    return (root / frozen['template']).read_text(), frozen
+
+
+def publish_host(destination, source, frozen, check):
+    """Check existing bytes; create missing outputs exclusively, never replace."""
+    raw = source.encode('utf-8')
+    name = destination.relative_to(root).as_posix()
+    if hashlib.sha256(raw).hexdigest() != frozen['outputs'][name]:
+        raise ValueError('Generated host differs from the retained React baseline: ' + name)
+    if destination.exists():
+        if destination.read_bytes() != raw:
+            raise ValueError('Existing host differs; refusing to overwrite: ' + name)
+        return 'Verified existing'
+    if check:
+        raise ValueError('Host is missing; --check never creates files: ' + name)
+    # Exclusive creation also prevents overwriting a file created concurrently.
+    with destination.open('xb') as stream:
+        stream.write(raw)
+    return 'Created missing'
+
+source, frozen = frozen_template()
 source = source.replace('<head>', '<head>\n  <base href="../../" />', 1)
 css = '''
 html, body { margin:0!important; padding:0!important; width:100%!important; height:100%!important; overflow:hidden!important; min-width:0!important; background:white!important; }
@@ -28,7 +57,8 @@ source = source.replace('</head>', '<style>\n' + css + '\n</style>\n<script>JSmo
 bridge = (preview / 'public/viewer-host-bridge.js').read_text()
 catalog = json.loads((preview / 'src/molecules.json').read_text())
 ids = [m['id'] for m in catalog]
-assert ids and len(ids) == len(set(ids))
+if len(ids) != frozen['moleculeCount'] or len(ids) != len(set(ids)):
+    raise ValueError('Frozen React molecule IDs must remain 126 unique entries')
 assert all(re.fullmatch(r'[A-Za-z0-9_]+', key) for key in ids)
 assert 'ethanol' in ids
 assert all(isinstance(m['title'], str) and isinstance(m['formula'], str) for m in catalog)
@@ -43,8 +73,5 @@ dest = preview / 'public/viewer-host.html'
 parser = argparse.ArgumentParser()
 parser.add_argument('--check', action='store_true')
 args = parser.parse_args()
-if args.check:
-    assert dest.read_text() == source, 'Rebuild viewer host'
-else:
-    dest.write_text(source)
-print('Viewer host matches current v52 source' if args.check else 'Generated viewer host')
+result = publish_host(dest, source, frozen, args.check)
+print(result + ' frozen React viewer host (126 molecules)')

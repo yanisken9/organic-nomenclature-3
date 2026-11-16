@@ -1,0 +1,89 @@
+{
+  "recordedUTC": "2026-11-16T06:15:13.361221+00:00",
+  "status": "One granted bounded run completed; no source changes; browser slot returned",
+  "run": "docs/checks/four-game-integration-20261116/continue-diagnostic/run-061336",
+  "checksPassed": 97,
+  "correctGenuineUIAnswers": 3,
+  "facts": {
+    "traceCount": 9,
+    "events": [
+      {
+        "seq": 6,
+        "reason": "event-before",
+        "eventType": "keydown",
+        "eventKey": "Enter",
+        "trusted": true,
+        "counter": "4/12",
+        "dialogOpen": true,
+        "iframeCount": 2,
+        "utc": "2026-11-16T06:14:00.373Z"
+      },
+      {
+        "seq": 7,
+        "reason": "before-microtask",
+        "eventType": "keydown",
+        "eventKey": "Enter",
+        "trusted": true,
+        "counter": "4/12",
+        "dialogOpen": true,
+        "iframeCount": 2,
+        "utc": "2026-11-16T06:14:00.373Z"
+      },
+      {
+        "seq": 8,
+        "reason": "event-before",
+        "eventType": "click",
+        "eventKey": null,
+        "trusted": true,
+        "counter": "4/12",
+        "dialogOpen": true,
+        "iframeCount": 2,
+        "utc": "2026-11-16T06:14:00.374Z"
+      },
+      {
+        "seq": 9,
+        "reason": "before-microtask",
+        "eventType": "click",
+        "eventKey": null,
+        "trusted": true,
+        "counter": "4/12",
+        "dialogOpen": true,
+        "iframeCount": 2,
+        "utc": "2026-11-16T06:14:00.374Z"
+      }
+    ],
+    "allObservedCounters": [
+      "4/12"
+    ],
+    "step5Observed": false,
+    "heartbeatStoppedAfterTrustedClick": true,
+    "secondsWithoutTelemetry": 35.111256499999996,
+    "firefoxParentExitedBeforeCleanup": null,
+    "ownedProcessesPresentBeforeCleanup": 10,
+    "postTimeoutReadOnlyScriptOrScreenshotCalls": 0,
+    "sourceUnchanged": true,
+    "frozenManifestSHA256": "908093208d0ca410c702650b51fc629fae7142d0d2afef50a74fe00a703f2c9c"
+  },
+  "interpretation": "Trusted Enter and trusted click were delivered to Continue. DOM observation/event-loop heartbeats ceased after capture/microtask while last observed state was4/12 with dialogopen2iframes. Main Firefox and9ownedchildprocesses remained present until cleanup. This rules out claiming input was never delivered or parent-process exit before boundary; it does not identify exact application versus Firefox/renderer fault. Step5 never observed.",
+  "logFacts": [
+    "RemoteAgent WeakMap key null errors",
+    "input._dispatchEvent actor13 timeout",
+    "crashreporter Glean PermissionDenied panic"
+  ],
+  "cleanup": {
+    "ownedProcessesRemaining": "",
+    "ownedPortsClosed": {
+      "serverPort": true,
+      "bidiPort": true
+    },
+    "ownedProfileRemoved": true,
+    "runnerBrowserExited": true,
+    "runnerServerClosed": true
+  },
+  "artifacts": {
+    "run-061336/trace.jsonl": "930fe2a73eda5bd04daab738435da6a2c294f259451e3cfc170b2331a259e771",
+    "run-061336/results.json": "433e3ed3f78cb6f30e988ae442b78c2b97bb13203bbfffa2fadd2da1b6d0784d",
+    "run-061336/firefox.log": "212664750bf3dc534ce17fbbd01d6ffd2e0825b9aa8f444a05bd188c9dab03bf"
+  },
+  "nextDiagnostic": "Root-controlled alternate Chromium run can discriminate Firefox-specific behavior; source tracing should inspect the synchronous Continue/dialogcleanup path without inferring a rootcause from BiDi errors alone."
+}

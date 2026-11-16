@@ -1,0 +1,66 @@
+{
+  "completed": false,
+  "checks": [
+    {
+      "label": "17 available molecule controls",
+      "detail": null
+    },
+    {
+      "label": "Genuine UI check incorrect",
+      "detail": {
+        "phase": "active",
+        "moleculeId": "ethane",
+        "roundId": "detective-round-1",
+        "missionId": "ethane:comp5:parent-chain",
+        "bridgeMissionId": "ethane:comp5:parent-chain:1",
+        "missionIndex": 0,
+        "missionCount": 2,
+        "kind": "atoms",
+        "atoms": [],
+        "bonds": [],
+        "selectionRevision": 1,
+        "correct": false,
+        "requestId": 2
+      }
+    },
+    {
+      "label": "Empty attempt handled without solution",
+      "detail": null
+    }
+  ],
+  "role": "Developer actual headless Firefox, viewport emulation; not independent browser review",
+  "limits": [
+    "No personal/GUI Firefox or physical device test",
+    "No offline/conference/uninterrupted-operation claim",
+    "External font/vendor dependencies retained"
+  ],
+  "runtimeAtStart": {
+    "games/molecular-detective.html": "e1cb6fd8871cbd227fa5beebb35d8ff02f3b998b70b04254ab319478732ef902",
+    "css/namelecule-molecular-detective.css": "9d556692f54e19872b04c74705fa03a27c0d9f573734f92f550b719789147d52",
+    "js/namelecule-molecular-detective.js": "3b8dba409435fd0e07259d6e7da3e207e34feb9749a7ee035f7087a6b27abd43",
+    "js/namelecule-molecular-detective-engine.js": "020340742102bf2ec5810975fe45b64ba642c3aa409c11b3f0359fb3801b26d6",
+    "js/namelecule-molecular-detective-host.js": "177e7fc961d44b23c28b9650ef15deead4377f692fa866eadb96daac892608c0",
+    "games/molecular-detective-viewer.html": "87cc4788612c173ee266e11457e7cf265f3da06f1d93791e93655a8db98f38ae",
+    "tools/build-molecular-detective-host.py": "0beacd21731ef4111001264332f1e1be34c532b98a38eb45692712bd33efa3f2",
+    "design/molecular-detective-preview.html": "ffbf5a05a49a0db30dfc1d6dfb4288116e9f4759d48ecdf7417be1b26403ec04"
+  },
+  "controlMethod": "Molecule/mission select value + change event; molecule answers use genuine WebDriver pointer actions at visible SVG anchors/bond interiors. No direct selection setter or fabricated target.",
+  "failure": "Traceback (most recent call last):\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/molecular-detective-implementation-20261115/browser/acceptance.py\", line 77, in <module>\n    pick('atoms',3)\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/molecular-detective-implementation-20261115/browser/acceptance.py\", line 59, in pick\n    pointer_at(point['x'], point['y'], touch)\n  File \"detective-support\", line 21, in pointer_at\n    'methanoicacid': {'parent-chain': [[1]], 'carboxyl': [[1,2,4,5]]}\n  File \"owned-detective-bidi\", line 35, in call\n    def choose_family(family):\nRuntimeError: {'type': 'error', 'id': 45, 'error': 'move target out of bounds', 'message': 'Move target (11159, 6076) is out of bounds of viewport dimensions (1500, 1000)', 'stacktrace': 'RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:14:8\\nWebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:169:5\\nMoveTargetOutOfBoundsError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:488:5\\nassertTargetInViewPort@chrome://remote/content/shared/webdriver/Actions.sys.mjs:3280:11\\n_assertInViewPort@chrome://remote/content/webdriver-bidi/modules/windowglobal/input.sys.mjs:208:17\\nhandleCommand@chrome://remote/content/shared/messagehandler/MessageHandler.sys.mjs:299:33\\nreceiveMessage@chrome://remote/content/shared/messagehandler/transports/js-window-actors/MessageHandlerFrameChild.sys.mjs:78:37\\n'}\n",
+  "stateAtFailure": {
+    "phase": "active",
+    "moleculeId": "ethane",
+    "roundId": "detective-round-1",
+    "missionId": "ethane:comp5:parent-chain",
+    "bridgeMissionId": "ethane:comp5:parent-chain:1",
+    "missionIndex": 0,
+    "missionCount": 2,
+    "kind": "atoms",
+    "atoms": [],
+    "bonds": [],
+    "selectionRevision": 1,
+    "correct": false,
+    "requestId": 2
+  },
+  "javascriptErrors": [],
+  "diagnostics": []
+}

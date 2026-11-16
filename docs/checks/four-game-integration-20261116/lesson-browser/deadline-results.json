@@ -1,0 +1,23 @@
+{
+  "recordedUTC": "2026-11-16T06:33:34.377100+00:00",
+  "role": "Developer transport memory tests; no browser/network",
+  "completed": true,
+  "checks": 3,
+  "records": [
+    {
+      "label": "CDP absolute command timeout despite continuous notifications",
+      "passed": true,
+      "elapsedSeconds": 0.030397541000000004
+    },
+    {
+      "label": "BiDi absolute command timeout despite continuous event frames",
+      "passed": true,
+      "elapsedSeconds": 0.030363875000000005
+    },
+    {
+      "label": "Process deadline bounds the whole replay",
+      "passed": true,
+      "elapsedSeconds": 1.959000000009703e-06
+    }
+  ]
+}

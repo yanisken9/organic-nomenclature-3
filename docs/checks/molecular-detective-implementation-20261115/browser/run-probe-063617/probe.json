@@ -1,0 +1,223 @@
+{
+  "completed": true,
+  "checks": [
+    {
+      "label": "Initial real game startup active",
+      "detail": {
+        "phase": "active",
+        "moleculeId": "ethane",
+        "roundId": "detective-round-1",
+        "missionId": "ethane:comp5:parent-chain",
+        "bridgeMissionId": "ethane:comp5:parent-chain:1",
+        "missionIndex": 0,
+        "missionCount": 2,
+        "kind": "atoms",
+        "atoms": [],
+        "bonds": [],
+        "selectionRevision": 1,
+        "correct": false,
+        "requestId": 2
+      }
+    }
+  ],
+  "role": "Developer actual headless Firefox, viewport emulation; not independent browser review",
+  "limits": [
+    "No personal/GUI Firefox or physical device test",
+    "No offline/conference/uninterrupted-operation claim",
+    "External font/vendor dependencies retained"
+  ],
+  "graph": {
+    "moleculeId": "ethane",
+    "correctName": "αιθάνιο",
+    "pieces": [
+      {
+        "id": "comp5",
+        "text": "αιθ",
+        "separatorBefore": "",
+        "mode": "compCarbonsCount"
+      },
+      {
+        "id": "comp6",
+        "text": "άν",
+        "separatorBefore": "",
+        "mode": "compBondType"
+      },
+      {
+        "id": "comp9",
+        "text": "ιο",
+        "separatorBefore": "",
+        "mode": "compSuffix"
+      }
+    ],
+    "atoms": [
+      {
+        "id": 1,
+        "element": "C"
+      },
+      {
+        "id": 2,
+        "element": "C"
+      },
+      {
+        "id": 3,
+        "element": "H"
+      },
+      {
+        "id": 4,
+        "element": "H"
+      },
+      {
+        "id": 5,
+        "element": "H"
+      },
+      {
+        "id": 6,
+        "element": "H"
+      },
+      {
+        "id": 7,
+        "element": "H"
+      },
+      {
+        "id": 8,
+        "element": "H"
+      }
+    ],
+    "bonds": [
+      {
+        "id": 1,
+        "a": 1,
+        "b": 2,
+        "order": 1
+      },
+      {
+        "id": 2,
+        "a": 2,
+        "b": 3,
+        "order": 1
+      },
+      {
+        "id": 3,
+        "a": 2,
+        "b": 4,
+        "order": 1
+      },
+      {
+        "id": 4,
+        "a": 2,
+        "b": 5,
+        "order": 1
+      },
+      {
+        "id": 5,
+        "a": 1,
+        "b": 6,
+        "order": 1
+      },
+      {
+        "id": 6,
+        "a": 1,
+        "b": 7,
+        "order": 1
+      },
+      {
+        "id": 7,
+        "a": 1,
+        "b": 8,
+        "order": 1
+      }
+    ],
+    "chemicalClass": "hydrocarbons",
+    "series": "alkanes"
+  },
+  "geometry": {
+    "keys": [
+      "key",
+      "groups",
+      "anchors",
+      "comp",
+      "verts",
+      "vassign",
+      "med",
+      "byBond"
+    ],
+    "anchors": [
+      {
+        "atom": 0,
+        "x": 7693.045837402344,
+        "y": 4910.161041259766,
+        "w": 453.3553466796875,
+        "h": 524.4177856445312
+      },
+      {
+        "atom": 1,
+        "x": 9006.045837402344,
+        "y": 4910.161041259766,
+        "w": 453.3553466796875,
+        "h": 524.4177856445312
+      },
+      {
+        "atom": 2,
+        "x": 9661.435485839844,
+        "y": 4909.916900634766,
+        "w": 453.3553466796875,
+        "h": 524.4177856445312
+      }
+    ],
+    "groups": [
+      {
+        "bond": 0,
+        "lines": [
+          {
+            "x1": 7693,
+            "y1": 4856,
+            "x2": 9006,
+            "y2": 4856
+          }
+        ],
+        "rep": {
+          "x1": 7693,
+          "y1": 4856,
+          "x2": 9006,
+          "y2": 4856
+        }
+      },
+      {
+        "bond": 1,
+        "lines": [
+          {
+            "x1": 9006,
+            "y1": 4856,
+            "x2": 9662,
+            "y2": 4856
+          }
+        ],
+        "rep": {
+          "x1": 9006,
+          "y1": 4856,
+          "x2": 9662,
+          "y2": 4856
+        }
+      },
+      {
+        "bond": 2,
+        "lines": [
+          {
+            "x1": 9006,
+            "y1": 4856,
+            "x2": 9006,
+            "y2": 4200
+          }
+        ],
+        "rep": {
+          "x1": 9006,
+          "y1": 4856,
+          "x2": 9006,
+          "y2": 4200
+        }
+      }
+    ]
+  },
+  "javascriptErrors": [],
+  "diagnostics": []
+}

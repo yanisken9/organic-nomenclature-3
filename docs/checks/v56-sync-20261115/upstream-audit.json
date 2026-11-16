@@ -1,0 +1,488 @@
+{
+  "recordedUTC": "2026-11-15T05:01:41.482539+00:00",
+  "previouslyChecked": "1734bfb5e5f26d1619060f1c7a5ac3b64317abbd",
+  "lastActuallySynchronized": "5ab2495575bbbffeb0ac67f91d4d81857cb65970",
+  "upstreamIntegratedThisTask": false,
+  "currentHEAD": "e75a37baeda9017666628c9f2f3428ffdd3a2f1c",
+  "remoteHEADRead": true,
+  "newHistory": {
+    "status": "ahead",
+    "aheadBy": 11,
+    "totalCommits": 11,
+    "commits": [
+      {
+        "sha": "6b726e588917784619ddf8ff96c13d6f00f5e53f",
+        "date": "2026-11-12T12:01:26Z",
+        "message": "v55: italic sec-/tert- prefixes (display layer) + explainChip + docs"
+      },
+      {
+        "sha": "394e2bd7fbc91d03d671ba71f3d30ef75042ea47",
+        "date": "2026-11-12T12:06:57Z",
+        "message": "v56: fork from v55 + selection-mode button (icon, entry, flag, gates)"
+      },
+      {
+        "sha": "2616ec9cfef6cd7b9aea8ee4c69c7b3fcad5d2f3",
+        "date": "2026-11-12T14:18:59Z",
+        "message": "selecting 2d svg part 1"
+      },
+      {
+        "sha": "1cf865b6ba0a89aa19c87ffe0cf1b202b1396860",
+        "date": "2026-11-12T14:19:44Z",
+        "message": "v56: 2D click-to-select atoms/bonds (phase 1B) + compacted-group pick"
+      },
+      {
+        "sha": "b852c86f43cb14ba684e58da0ce3c6e60507a279",
+        "date": "2026-11-12T18:11:17Z",
+        "message": "v56: native-channel cyan selection + hover preview + pick accuracy"
+      },
+      {
+        "sha": "becc6180058cfa42795f8682e9a38949dcbb1ece",
+        "date": "2026-11-12T21:27:48Z",
+        "message": "v56: quiz 1C — selection, order, direction, multi-chain + hover"
+      },
+      {
+        "sha": "a57d8eb76a02efc69525b0937e85636bef655ed4",
+        "date": "2026-11-13T12:20:34Z",
+        "message": "v56: main-chain compacted-carbon picks, paint hardening, skeletal vertex joints"
+      },
+      {
+        "sha": "97ddc8b391b20932a238f0c904f31faf55851807",
+        "date": "2026-11-13T13:27:53Z",
+        "message": "v56: final-only quiz verdicts, selection-mode viewer ownership, explain-all fix"
+      },
+      {
+        "sha": "e21cb46c787157207854c51155ef31f255b0b545",
+        "date": "2026-11-13T19:07:23Z",
+        "message": "v56: core chemistry review fixes + quiz live hints + sticky re-arm + harness hardening"
+      },
+      {
+        "sha": "ceb012de458b1c9ad7b1421ea3743045051d7873",
+        "date": "2026-11-14T19:27:11Z",
+        "message": "v56: bond-locant FG match gate, branch wording/numbering, ether alkoxy quizzes, single-bond verdicts"
+      },
+      {
+        "sha": "e75a37baeda9017666628c9f2f3428ffdd3a2f1c",
+        "date": "2026-11-14T19:57:24Z",
+        "message": "index to v56; css veryLightEarth panel"
+      }
+    ],
+    "changedPaths": [
+      "css/jsme-nick-56.css",
+      "css/mulermoc-nom-scenario-56.css",
+      "docs/CHANGELOG.md",
+      "docs/REVIEW-CORE-MOLVIEW-56.md",
+      "docs/ROADMAP.md",
+      "docs/SESSION-NOTES.md",
+      "index.html",
+      "js/jsme-nick-nomeclature-moc2-data_56.js",
+      "js/mulermoc-nom-core-56.js",
+      "js/mulermoc-nom-iupac-56.js",
+      "js/mulermoc-nom-lang-56.js",
+      "js/mulermoc-nom-molview-55.js",
+      "js/mulermoc-nom-molview-56.js",
+      "js/mulermoc-nom-name-en-56.js",
+      "js/mulermoc-nom-note-56.js",
+      "js/mulermoc-nom-scenario-56.js",
+      "js/mulermoc-nom-teaching-56.js",
+      "js/ui-icons.js",
+      "mulermoc-nom-56.html",
+      "spt/init-3-56.spt",
+      "spt/init-3.spt",
+      "tools/muler-harness/README.md",
+      "tools/muler-harness/audit.js",
+      "tools/muler-harness/probe-bond-quiz.js",
+      "tools/muler-harness/probe-branch-quiz.js",
+      "tools/muler-harness/probe-compact-main.js",
+      "tools/muler-harness/probe-coverage56.js",
+      "tools/muler-harness/probe-explain-all.js",
+      "tools/muler-harness/probe-fg-quiz.js",
+      "tools/muler-harness/probe-final.js",
+      "tools/muler-harness/probe-frag2.js",
+      "tools/muler-harness/probe-loc-quiz.js",
+      "tools/muler-harness/probe-mode-quiz.js",
+      "tools/muler-harness/probe-pick7.js",
+      "tools/muler-harness/probe-quiz.js",
+      "tools/muler-harness/probe-shift.js",
+      "tools/muler-harness/probe-skel-joints.js",
+      "tools/muler-harness/probe-smoke56.js",
+      "tools/muler-harness/server.js",
+      "zz-test-core56.html"
+    ]
+  },
+  "pendingHistory": {
+    "status": "ahead",
+    "aheadBy": 62,
+    "totalCommits": 62,
+    "commits": [
+      {
+        "sha": "85ba7e5f1ffdcc44d92d4e71b8f814be14c852f5",
+        "date": "2026-11-10T08:49:09Z",
+        "message": "v55: drift fixes (further 100, steps/criterion docs, pubchem heavy check) + present viewerCol hide"
+      },
+      {
+        "sha": "4edf8109cc8cdd719bd976b3a11949b9a85988f0",
+        "date": "2026-11-10T08:49:20Z",
+        "message": "docs: resume pointer -> 85ba7e5"
+      },
+      {
+        "sha": "b76865471fcac4b94019f75951774d4091f9cd6c",
+        "date": "2026-11-10T09:19:33Z",
+        "message": "v55: step drawer button groups (viewers/naming rows + show.naming master)"
+      },
+      {
+        "sha": "3640eff6aaf097df13110682ee4f5ff59221b7c1",
+        "date": "2026-11-10T09:19:41Z",
+        "message": "docs: resume pointer -> b768654"
+      },
+      {
+        "sha": "52a9256217d680b2b6dbfdfb45444af373db240f",
+        "date": "2026-11-10T09:46:21Z",
+        "message": "v55: naming master hides analysisCol + owner note-embed CSS"
+      },
+      {
+        "sha": "e4cf0db0d41e49a704d49a894b66f6b8b6bf3f85",
+        "date": "2026-11-10T09:46:30Z",
+        "message": "docs: resume pointer -> 52a9256"
+      },
+      {
+        "sha": "73833caf792a9aec9136b4dcc5b62b502874e7d6",
+        "date": "2026-11-10T10:15:12Z",
+        "message": "v55: present content max conditional (wide viewer + text clamp only when side cols hide)"
+      },
+      {
+        "sha": "6ea235919b3e2cce243bcf2005d3e29033fa2806",
+        "date": "2026-11-10T10:15:20Z",
+        "message": "docs: resume pointer -> 73833ca"
+      },
+      {
+        "sha": "34df0c0a842dc85cfb7ed3ea26fbb3cd08d877b1",
+        "date": "2026-11-10T10:28:33Z",
+        "message": "v55: present single-column max 900px (menu/viewer/analysis lone col)"
+      },
+      {
+        "sha": "4ed2fddb607b77b6323e228765f14aaf5213b4be",
+        "date": "2026-11-10T11:29:42Z",
+        "message": "v55: drawer collapse accordion + icons + tooltip fixes + single-col 900px + dev-banner hide in present"
+      },
+      {
+        "sha": "1daf48c251ed2e8b7f73a6a6881a2fd4fbe2b912",
+        "date": "2026-11-10T11:29:50Z",
+        "message": "docs: resume pointer -> 4ed2fdd"
+      },
+      {
+        "sha": "3b51fa94b57006c8a4d9e3c60cb3687d0979223d",
+        "date": "2026-11-10T11:54:58Z",
+        "message": "v55: review v55 (minimize/present guards, restore classes, no-write render, i18n) + docs to v55"
+      },
+      {
+        "sha": "08d4decaa50d52b1802e96f01a8bf2d9e3d0d554",
+        "date": "2026-11-10T11:55:07Z",
+        "message": "docs: resume pointer -> 3b51fa9"
+      },
+      {
+        "sha": "2b267a613b56ef3031723a41a820374cd68fff73",
+        "date": "2026-11-10T12:06:10Z",
+        "message": "v55: sticky hidden comps across menu browsing + docs"
+      },
+      {
+        "sha": "015b15d6723d8eb041223ec722956a38555bed4c",
+        "date": "2026-11-10T12:06:18Z",
+        "message": "docs: resume pointer -> 2b267a6"
+      },
+      {
+        "sha": "0cde8a71623177a794d5b9b3a6cc16dd560b7eda",
+        "date": "2026-11-10T15:01:31Z",
+        "message": "v55: draft 3D status helper (fix unclosed row, drop dup block) + handmade CSS polish"
+      },
+      {
+        "sha": "827601e37ace866aced49d926f39097b81d47e46",
+        "date": "2026-11-10T17:27:31Z",
+        "message": "v55: EN narration — stop hijacking narrate toggle, skip hidden comps, i18n toggle tip"
+      },
+      {
+        "sha": "3b527f013fd8087a35cafbf5312c8f3e7f5a854e",
+        "date": "2026-11-10T17:48:36Z",
+        "message": "v55: EN component explanations via English voice (fSpeakMuler), Greek unchanged"
+      },
+      {
+        "sha": "eb42c1cddaa29afb856907f2b0ed2d5c2c3f39f7",
+        "date": "2026-11-10T18:03:10Z",
+        "message": "v55: EN boxes — euphony vowel on stem (penta/-1,3-), yne-2,7-dione fusion + comp9loc dash"
+      },
+      {
+        "sha": "77f9e9588ec5275abb0198185a508801896a572e",
+        "date": "2026-11-10T18:52:35Z",
+        "message": "v55: retire systematic-component diff tint (tooltip kept)"
+      },
+      {
+        "sha": "c6c814abd709dda3de534d41c0768f51b9a59a29",
+        "date": "2026-11-10T19:02:02Z",
+        "message": "v55: viewer height never exceeds width + scroll-stable viewport (mobile)"
+      },
+      {
+        "sha": "2cfab0cb3ffcf93b955445744b8022fbdc0071e5",
+        "date": "2026-11-10T19:17:35Z",
+        "message": "v55: collapsible menuCol via title icon (rail), retire menuToggle, present stash"
+      },
+      {
+        "sha": "e74aa0aac98c6794df7a1558349646494c046fe6",
+        "date": "2026-11-10T19:42:52Z",
+        "message": "v55: menu collapse icon to title right (pick toggle owns left)"
+      },
+      {
+        "sha": "35ad7052f2db56c26fd2512488b0d2cfc54dafd2",
+        "date": "2026-11-10T19:52:24Z",
+        "message": "v55: menu rail keeps vertical MENU, pick truly hidden, viewer expands animated, collapse tooltip wired"
+      },
+      {
+        "sha": "2a0f27bc15d72259e1adc9f7988be3cf7db4304f",
+        "date": "2026-11-10T20:00:12Z",
+        "message": "v55: menu collapse button follows toggle language (darkBlue expanded)"
+      },
+      {
+        "sha": "bded7f252e7ab0e0c9869759bbc1348dd0e5953b",
+        "date": "2026-11-10T20:02:10Z",
+        "message": "v55: menu collapse hover follows title-bar convention (darkEarth)"
+      },
+      {
+        "sha": "9b4f3e7aced30ce7d388eff746631b8f1f1fc0fc",
+        "date": "2026-11-10T20:05:09Z",
+        "message": "v55: collapsed-menu viewer cap 850px (900 budget minus rail and gap)"
+      },
+      {
+        "sha": "aa910ea10a802b69d8748d06c12ccaabc7639be4",
+        "date": "2026-11-10T20:09:21Z",
+        "message": "v55: share freed menu width viewer+80/naming+110, row total conserved"
+      },
+      {
+        "sha": "56fd94b0059dd5c0cdcde57b8c5a046da30f6f3c",
+        "date": "2026-11-10T20:12:39Z",
+        "message": "docs: v55 batch — narration, EN boxes, viewer heights, collapsible menu + pointer to aa910ea"
+      },
+      {
+        "sha": "0e8a26bc5548c616dac63f922d3e2b61e4d513cc",
+        "date": "2026-11-10T20:24:40Z",
+        "message": "v55: explain-all overview table (per-component rows, shared mode map, quiet scrape)"
+      },
+      {
+        "sha": "09be95d8649a3b76a3a43031690b92851e78afb5",
+        "date": "2026-11-10T20:43:56Z",
+        "message": "v55: overview button tooltip skin + owner table/selection styling"
+      },
+      {
+        "sha": "8e8f4a0cc7ba250d750005b4b0268029eaca8da0",
+        "date": "2026-11-10T20:51:10Z",
+        "message": "docs: v55 explain-all overview table + pointer to 09be95d"
+      },
+      {
+        "sha": "d360e5dcca56c43dd58b1590648f14ef6d980a9d",
+        "date": "2026-11-10T20:51:26Z",
+        "message": "v55: owner styling — selected overview row vibrantGreen, scenario edge buttons z-index 600"
+      },
+      {
+        "sha": "2c3f74f6c110400154efb6001657a3e514b97a70",
+        "date": "2026-11-10T20:54:22Z",
+        "message": "v55: overview rows honor Present click-lock + locked CSS semicolon"
+      },
+      {
+        "sha": "da0319d1abba1cdb3b6682048ceabc0ff52f7aa9",
+        "date": "2026-11-11T09:06:39Z",
+        "message": "v55: silence console noise (comment-out, keep MULER_DEBUG) + changelog"
+      },
+      {
+        "sha": "9ff6b59ec7e9fe862ada731476774783f602d1de",
+        "date": "2026-11-11T09:06:53Z",
+        "message": "docs: resume pointer -> da0319d"
+      },
+      {
+        "sha": "935fbf21b11f7d308bc11b3a078361cf8d2327b7",
+        "date": "2026-11-11T09:17:49Z",
+        "message": "v55: overview scrape paints nothing (quiet guards on chain/main-chain/ester-3D) + changelog"
+      },
+      {
+        "sha": "cd4e559e101252b1003b76a8b8dcd647fe22103a",
+        "date": "2026-11-11T09:18:11Z",
+        "message": "docs: resume pointer -> 935fbf2"
+      },
+      {
+        "sha": "d4e58488b43fd98e6c59b62818090b54c8b69740",
+        "date": "2026-11-11T09:27:05Z",
+        "message": "v55: overview scrape quiet guards on bond painters (multi/single 2D+3D) + changelog"
+      },
+      {
+        "sha": "2ec27b223ecbad3304d119d07c0d86750320df6e",
+        "date": "2026-11-11T09:27:13Z",
+        "message": "docs: resume pointer -> d4e5848"
+      },
+      {
+        "sha": "7960808dccce74f1ffa450c10490184d47f89dca",
+        "date": "2026-11-11T09:31:49Z",
+        "message": "v55: sticky component selection across molecules (mode survives select; scenario seeds step mode) + changelog"
+      },
+      {
+        "sha": "2b6e5b1cbd786a32b0411a6925ea59863db2dd61",
+        "date": "2026-11-11T09:31:58Z",
+        "message": "docs: resume pointer -> 7960808"
+      },
+      {
+        "sha": "bc63433249f868e7b78b59779fc6f269029f1c63",
+        "date": "2026-11-11T09:37:31Z",
+        "message": "v55: hidden overview rows stay with dashed chip (row-hidden) + changelog"
+      },
+      {
+        "sha": "12b4d983740e5ff9a3818a0883ab5362e7634a15",
+        "date": "2026-11-11T09:38:03Z",
+        "message": "docs: resume pointer -> bc63433"
+      },
+      {
+        "sha": "b6a0835db7c2e598a07813e2ad69dfa804761a72",
+        "date": "2026-11-11T10:14:25Z",
+        "message": "v55: all-hidden overview table stays visible (Fix-3 verdicts honor table-on) + changelog"
+      },
+      {
+        "sha": "dde3722974d724932cd7fda31f75763b19720eff",
+        "date": "2026-11-11T10:14:33Z",
+        "message": "docs: resume pointer -> b6a0835"
+      },
+      {
+        "sha": "b247b984b683892b123b635082a80cb70d5909c9",
+        "date": "2026-11-11T10:19:23Z",
+        "message": "v55: overview toggle relabel (Explain naming) + docs"
+      },
+      {
+        "sha": "96375109235936bbf4dbe6505272d51773f7e47b",
+        "date": "2026-11-11T10:19:32Z",
+        "message": "docs: resume pointer -> b247b98"
+      },
+      {
+        "sha": "126eda4678daf530f5c5e07981978f0551627e27",
+        "date": "2026-11-11T15:05:20Z",
+        "message": "css tweak"
+      },
+      {
+        "sha": "978e527af24db90ff8005659f5065edd90ec2665",
+        "date": "2026-11-11T17:43:44Z",
+        "message": "v55: JSmol PubChem 3D tier + tooltip audit fixes + rail title expand + bondAtoms default + chainMode hide + docs"
+      },
+      {
+        "sha": "1734bfb5e5f26d1619060f1c7a5ac3b64317abbd",
+        "date": "2026-11-11T17:50:45Z",
+        "message": "css tweak"
+      },
+      {
+        "sha": "6b726e588917784619ddf8ff96c13d6f00f5e53f",
+        "date": "2026-11-12T12:01:26Z",
+        "message": "v55: italic sec-/tert- prefixes (display layer) + explainChip + docs"
+      },
+      {
+        "sha": "394e2bd7fbc91d03d671ba71f3d30ef75042ea47",
+        "date": "2026-11-12T12:06:57Z",
+        "message": "v56: fork from v55 + selection-mode button (icon, entry, flag, gates)"
+      },
+      {
+        "sha": "2616ec9cfef6cd7b9aea8ee4c69c7b3fcad5d2f3",
+        "date": "2026-11-12T14:18:59Z",
+        "message": "selecting 2d svg part 1"
+      },
+      {
+        "sha": "1cf865b6ba0a89aa19c87ffe0cf1b202b1396860",
+        "date": "2026-11-12T14:19:44Z",
+        "message": "v56: 2D click-to-select atoms/bonds (phase 1B) + compacted-group pick"
+      },
+      {
+        "sha": "b852c86f43cb14ba684e58da0ce3c6e60507a279",
+        "date": "2026-11-12T18:11:17Z",
+        "message": "v56: native-channel cyan selection + hover preview + pick accuracy"
+      },
+      {
+        "sha": "becc6180058cfa42795f8682e9a38949dcbb1ece",
+        "date": "2026-11-12T21:27:48Z",
+        "message": "v56: quiz 1C — selection, order, direction, multi-chain + hover"
+      },
+      {
+        "sha": "a57d8eb76a02efc69525b0937e85636bef655ed4",
+        "date": "2026-11-13T12:20:34Z",
+        "message": "v56: main-chain compacted-carbon picks, paint hardening, skeletal vertex joints"
+      },
+      {
+        "sha": "97ddc8b391b20932a238f0c904f31faf55851807",
+        "date": "2026-11-13T13:27:53Z",
+        "message": "v56: final-only quiz verdicts, selection-mode viewer ownership, explain-all fix"
+      },
+      {
+        "sha": "e21cb46c787157207854c51155ef31f255b0b545",
+        "date": "2026-11-13T19:07:23Z",
+        "message": "v56: core chemistry review fixes + quiz live hints + sticky re-arm + harness hardening"
+      },
+      {
+        "sha": "ceb012de458b1c9ad7b1421ea3743045051d7873",
+        "date": "2026-11-14T19:27:11Z",
+        "message": "v56: bond-locant FG match gate, branch wording/numbering, ether alkoxy quizzes, single-bond verdicts"
+      },
+      {
+        "sha": "e75a37baeda9017666628c9f2f3428ffdd3a2f1c",
+        "date": "2026-11-14T19:57:24Z",
+        "message": "index to v56; css veryLightEarth panel"
+      }
+    ],
+    "changedPaths": [
+      "README.md",
+      "css/jsme-nick-55.css",
+      "css/jsme-nick-56.css",
+      "css/mulermoc-nom-scenario-55.css",
+      "css/mulermoc-nom-scenario-56.css",
+      "docs/CHANGELOG.md",
+      "docs/LAYERS-PLAN.md",
+      "docs/PROJECT-PLAN-GR.md",
+      "docs/PROJECT-PLAN.md",
+      "docs/REVIEW-CORE-MOLVIEW-56.md",
+      "docs/ROADMAP.md",
+      "docs/SESSION-NOTES.md",
+      "docs/didactic-scenario-plan.md",
+      "index.html",
+      "js/jsme-nick-nomeclature-moc2-data_56.js",
+      "js/mulermoc-nom-core-55.js",
+      "js/mulermoc-nom-core-56.js",
+      "js/mulermoc-nom-iupac-55.js",
+      "js/mulermoc-nom-iupac-56.js",
+      "js/mulermoc-nom-lang-55.js",
+      "js/mulermoc-nom-lang-56.js",
+      "js/mulermoc-nom-molview-55.js",
+      "js/mulermoc-nom-molview-56.js",
+      "js/mulermoc-nom-name-en-55.js",
+      "js/mulermoc-nom-name-en-56.js",
+      "js/mulermoc-nom-note-56.js",
+      "js/mulermoc-nom-scenario-55.js",
+      "js/mulermoc-nom-scenario-56.js",
+      "js/mulermoc-nom-teaching-55.js",
+      "js/mulermoc-nom-teaching-56.js",
+      "js/ui-icons.js",
+      "mulermoc-nom-55.html",
+      "mulermoc-nom-56.html",
+      "spt/init-3-56.spt",
+      "spt/init-3.spt",
+      "tools/muler-harness/README.md",
+      "tools/muler-harness/audit.js",
+      "tools/muler-harness/probe-bond-quiz.js",
+      "tools/muler-harness/probe-branch-quiz.js",
+      "tools/muler-harness/probe-compact-main.js",
+      "tools/muler-harness/probe-coverage56.js",
+      "tools/muler-harness/probe-explain-all.js",
+      "tools/muler-harness/probe-fg-quiz.js",
+      "tools/muler-harness/probe-final.js",
+      "tools/muler-harness/probe-frag2.js",
+      "tools/muler-harness/probe-loc-quiz.js",
+      "tools/muler-harness/probe-mode-quiz.js",
+      "tools/muler-harness/probe-pick7.js",
+      "tools/muler-harness/probe-quiz.js",
+      "tools/muler-harness/probe-shift.js",
+      "tools/muler-harness/probe-skel-joints.js",
+      "tools/muler-harness/probe-smoke56.js",
+      "tools/muler-harness/server.js",
+      "zz-test-core56.html"
+    ]
+  },
+  "currentChangelogSHA256": "7e3a7a91496f13504d111eb147262d26f7f7521d8fb7367941b9aaa1802c1604",
+  "synchronizedChangelogSHA256": "ca8341f9e8b9be814c56339a9a6f14ade955508349c195c92e67151aacc10949",
+  "changelogRead": true
+}

@@ -1,0 +1,409 @@
+{
+  "recordedUTC": "2026-11-16T05:57:17.656Z",
+  "role": "Developer memory execution",
+  "completed": true,
+  "checks": 401,
+  "molecules": 8,
+  "missionCount": 19,
+  "acceptedAlternatives": 33,
+  "old27": {
+    "missions": 69,
+    "acceptedAlternatives": 108
+  },
+  "records": [
+    {
+      "moleculeId": "methane",
+      "sourceSHA256": "87cd9c1ff78c5f8600e4d97a81e879851936b3c049b373fb619418e8fb03c127",
+      "correctName": "μεθάνιο",
+      "carbonIds": [
+        1
+      ],
+      "missions": [
+        {
+          "id": "methane:comp5:parent-chain",
+          "accepted": [
+            [
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "moleculeId": "ethane",
+      "sourceSHA256": "c7127c7ee954657beffb8d61e1ccc57f7b927e43fd1ab6e66ebf7ae63800392b",
+      "correctName": "αιθάνιο",
+      "carbonIds": [
+        1,
+        2
+      ],
+      "missions": [
+        {
+          "id": "ethane:comp5:parent-chain",
+          "accepted": [
+            [
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "id": "ethane:comp6:single-bonds",
+          "accepted": [
+            [
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "moleculeId": "propane",
+      "sourceSHA256": "ef357caa1c57c7b9ecee59721a623a0391c7a29fc9d4c51bfd0a7af8327113e1",
+      "correctName": "προπάνιο",
+      "carbonIds": [
+        2,
+        3,
+        4
+      ],
+      "missions": [
+        {
+          "id": "propane:comp5:parent-chain",
+          "accepted": [
+            [
+              2,
+              3,
+              4
+            ]
+          ]
+        },
+        {
+          "id": "propane:comp6:single-bonds",
+          "accepted": [
+            [
+              2,
+              3
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "moleculeId": "butane",
+      "sourceSHA256": "92ac2ae0fdd9af97ff7c0306d5ef0fb06cc367265af0e1d4cecc6eddbe6eb84b",
+      "correctName": "βουτάνιο",
+      "carbonIds": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "missions": [
+        {
+          "id": "butane:comp5:parent-chain",
+          "accepted": [
+            [
+              2,
+              3,
+              4,
+              5
+            ]
+          ]
+        },
+        {
+          "id": "butane:comp6:single-bonds",
+          "accepted": [
+            [
+              2,
+              3,
+              4
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "moleculeId": "pentane",
+      "sourceSHA256": "d5912e8643efe232d0aba4bca8e6b94603f1eb02d9b33486cd7b223ef37a9b56",
+      "correctName": "πεντάνιο",
+      "carbonIds": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "missions": [
+        {
+          "id": "pentane:comp5:parent-chain",
+          "accepted": [
+            [
+              1,
+              2,
+              3,
+              4,
+              5
+            ]
+          ]
+        },
+        {
+          "id": "pentane:comp6:single-bonds",
+          "accepted": [
+            [
+              1,
+              2,
+              3,
+              4
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "moleculeId": "methyl_2_pentane",
+      "sourceSHA256": "857455c46c5d0a2404b45f84737ff8972ece3cb01b6e8a55d88db49dc76f7863",
+      "correctName": "2-μεθυλοπεντάνιο",
+      "carbonIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "missions": [
+        {
+          "id": "methyl_2_pentane:comp1:branches",
+          "accepted": [
+            [
+              1
+            ],
+            [
+              5
+            ]
+          ]
+        },
+        {
+          "id": "methyl_2_pentane:comp5:parent-chain",
+          "accepted": [
+            [
+              1,
+              2,
+              3,
+              4,
+              6
+            ],
+            [
+              2,
+              3,
+              4,
+              5,
+              6
+            ]
+          ]
+        },
+        {
+          "id": "methyl_2_pentane:comp6:single-bonds",
+          "accepted": [
+            [
+              1,
+              2,
+              3,
+              4,
+              5
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "moleculeId": "dimethyl_2_3_butane",
+      "sourceSHA256": "1d1ece4d387192b5d593b5f4ab9f2b123f426d93860750f7960ce8bb76bfa118",
+      "correctName": "2,3-διμεθυλοβουτάνιο",
+      "carbonIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "missions": [
+        {
+          "id": "dimethyl_2_3_butane:comp1:branches",
+          "accepted": [
+            [
+              1,
+              4
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              4,
+              5
+            ],
+            [
+              5,
+              6
+            ]
+          ]
+        },
+        {
+          "id": "dimethyl_2_3_butane:comp5:parent-chain",
+          "accepted": [
+            [
+              1,
+              2,
+              3,
+              4
+            ],
+            [
+              1,
+              2,
+              3,
+              6
+            ],
+            [
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              2,
+              3,
+              5,
+              6
+            ]
+          ]
+        },
+        {
+          "id": "dimethyl_2_3_butane:comp6:single-bonds",
+          "accepted": [
+            [
+              1,
+              2,
+              3,
+              4,
+              5
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "moleculeId": "ethyl_3_dimethyl_2_5_hexane",
+      "sourceSHA256": "f861678ce6b4780a6563076233e969c4e2662572d10c76ba760fde46bdebf597",
+      "correctName": "3-αιθυλο-2,5-διμεθυλοεξάνιο",
+      "carbonIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "missions": [
+        {
+          "id": "ethyl_3_dimethyl_2_5_hexane:comp1:ethyl-branches",
+          "accepted": [
+            [
+              8,
+              9
+            ]
+          ]
+        },
+        {
+          "id": "ethyl_3_dimethyl_2_5_hexane:comp3:branches",
+          "accepted": [
+            [
+              1,
+              10
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              6,
+              7
+            ],
+            [
+              7,
+              10
+            ]
+          ]
+        },
+        {
+          "id": "ethyl_3_dimethyl_2_5_hexane:comp5:parent-chain",
+          "accepted": [
+            [
+              1,
+              2,
+              3,
+              4,
+              5,
+              10
+            ],
+            [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            [
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            [
+              2,
+              3,
+              4,
+              5,
+              7,
+              10
+            ]
+          ]
+        },
+        {
+          "id": "ethyl_3_dimethyl_2_5_hexane:comp6:single-bonds",
+          "accepted": [
+            [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "sourceSHA256": {
+    "js/namelecule-molecular-detective-engine.js": "862dea9451cb6b337df251b4779562e7a33e414a3226ac81b1857a60bd645686",
+    "js/namelecule-molecular-detective-host.js": "42caa8ec6a3ab833661cfc16fb543fd2cc7e8b7b4b30e7b1cad941fd4a90b35f",
+    "js/chemistry-engines/3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306.js": "3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306"
+  },
+  "limitations": [
+    "No browser/JSME rendering, click or responsive validation in this memory test.",
+    "canonicalSnapshot expects verified catalog bytes and pinned Worker analysis from its caller; it does not independently cryptographically verify provenance.",
+    "Canonical construction is limited to the approved legacy eight alkanes; existing missions/grade remain the bounded 27-molecule API."
+  ]
+}

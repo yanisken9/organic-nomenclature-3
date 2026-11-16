@@ -1,0 +1,1204 @@
+--- before/design/welcome-proposal.html
++++ design/welcome-proposal.html
+@@ -3,10 +3,12 @@
+ <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Namelecule — Καλώς ήρθες</title>
+ <style>
+ .card.two .game-actions{display:flex;flex-direction:column;gap:10px;width:100%}
+-.card.two .game-action{gap:10px;justify-content:flex-start;text-decoration:none;min-height:64px}
+-.card.two .game-action img{display:block;width:40px;height:40px;object-fit:contain;flex:0 0 auto;background:#faf9f5;border-radius:9px;padding:3px}
+-.card.two .game-action-label{min-width:0}
+-.card.two .game-action-arrow{margin-left:auto;flex:0 0 auto}
++.card.two .game-action{display:grid;grid-template-columns:84px minmax(0,1fr) auto;gap:8px;justify-content:initial;text-decoration:none;min-height:80px;padding:10px 12px}
++.card.two .game-action-logo{display:grid;place-items:center;width:84px;height:56px;background:#faf9f5;border-radius:9px;padding:4px}
++.card.two .game-action-logo img{display:block;width:100%;height:100%;object-fit:contain;min-width:0;min-height:0}
++.card.two .game-action-label{min-width:0;overflow-wrap:anywhere;line-height:1.4}
++.card.two .game-action-arrow{justify-self:end}
++@media(min-width:901px) and (max-width:1100px){.card.two .game-action{grid-template-columns:minmax(0,1fr) auto}.card.two .game-action-logo{grid-column:1/-1;width:100%;height:64px}}
+ :root{--ink:#254c50;--muted:#627777;--paper:#faf9f5;--mint:#e1efea;--sky:#e7eff7;--peach:#f7dfcf;--line:#dce5df;--teal:#397b78}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 system-ui,-apple-system,sans-serif}a{color:inherit}button{font:inherit;cursor:pointer}header{background:#fff;border-bottom:1px solid var(--line)}.top{max-width:1200px;margin:auto;padding:14px 28px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{max-width:360px}.brand img{width:100%;height:auto;display:block}.brand small{display:block;padding-left:23%;font-size:10px;color:var(--muted);margin-top:-8px}.login{background:transparent;border:1px solid #b3c9c3;border-radius:30px;padding:10px 22px;font-weight:600}.login:hover{background:var(--mint)}main{max-width:1200px;margin:auto;padding:0 28px}.hero{text-align:center;padding:55px 0 36px;position:relative}.eyebrow{font-size:11px;letter-spacing:2px;font-weight:700;color:var(--teal)}h1{font-size:clamp(34px,4.5vw,56px);line-height:1.2;letter-spacing:-1.8px;margin:17px 0 20px;font-weight:700}h1 span{color:var(--teal)}.hero p{max-width:850px;margin:auto;color:var(--muted);font-size:18px}.choose{text-align:center;font-size:14px;color:var(--muted);margin:0 0 20px}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.card{padding:28px;border:1px solid var(--line);border-radius:23px;background:#fff;display:flex;flex-direction:column;align-items:flex-start;position:relative}.card.one{background:linear-gradient(150deg,#e1efea 0%,#f5faf6 100%)}.card.two{background:linear-gradient(150deg,#e7eff7 0%,#f5f8fc 100%)}.card.three{background:linear-gradient(150deg,#f7dfcf 0%,#fcf6f0 100%)}.icon{width:55px;height:55px;display:grid;place-items:center;border-radius:17px;background:#ffffffb0;margin-bottom:22px}.icon svg{width:30px;height:30px;stroke:var(--ink);stroke-width:1.7;fill:none;stroke-linecap:round;stroke-linejoin:round}.label{font-size:10px;letter-spacing:1.3px;font-weight:700;color:var(--muted);margin-bottom:9px}.card h2{font-size:24px;letter-spacing:-.6px;line-height:1.25;margin:0 0 14px}.card p{font-size:15px;color:#516c6d;margin:0 0 20px;flex:1}.card ul{list-style:none;padding:0;margin:0 0 26px;font-size:13px;color:#516c6d}.card li{margin:6px 0}.card li::before{content:'✓';margin-right:9px;color:var(--teal)}.action{width:100%;padding:12px 16px;background:var(--ink);border:0;border-radius:12px;color:white;font-size:14px;font-weight:600;display:flex;align-items:center;justify-content:space-between}.action:hover{background:var(--teal)}.card small{margin-top:12px;color:var(--muted);font-size:11px}.representations{margin:44px 0 36px;display:grid;grid-template-columns:1fr 1.15fr;gap:35px;align-items:center;border-top:1px solid var(--line);padding-top:36px}.representations h2{font-size:27px;letter-spacing:-.7px;line-height:1.3;margin:10px 0 15px}.representations p{color:var(--muted);font-size:15px}.rep-art{display:flex;align-items:center;justify-content:space-around;gap:12px;background:white;border:1px solid var(--line);border-radius:20px;padding:23px 16px}.rep{display:flex;flex-direction:column;align-items:center;gap:8px;min-width:0}.rep svg{height:75px;width:110px}.rep small{font-size:11px;color:var(--muted)}.formula{height:75px;display:flex;align-items:center;font-size:21px;white-space:nowrap}.formula b{color:#a54e40;font-weight:500}.equal{color:#9aada7}.molecule-name{font-size:14px;color:var(--teal);font-weight:650;text-align:center;margin-top:12px}.footer{border-top:1px solid var(--line);padding:20px 0;display:flex;justify-content:space-between;gap:20px;color:var(--muted);font-size:11px}.footer a{text-decoration:none}.preview-note{max-width:1200px;margin:0 auto;padding:12px 28px;color:var(--muted);font-size:11px;text-align:center;background:#edf3ef}dialog{border:1px solid var(--line);border-radius:22px;max-width:480px;width:calc(100% - 32px);padding:28px;color:var(--ink);background:var(--paper)}dialog::backdrop{background:#254c5066}dialog h2{margin:0 0 12px;font-size:23px}dialog p{color:var(--muted);font-size:15px}dialog a{display:inline-block;margin:8px 0 18px}dialog button{border:0;border-radius:10px;padding:10px 18px;background:var(--ink);color:white}button:focus-visible,a:focus-visible{outline:3px solid var(--teal);outline-offset:4px}@media(max-width:900px){.cards{grid-template-columns:1fr}.card{padding:24px}.card p{max-width:650px}.card ul{margin-bottom:18px}.icon{margin-bottom:14px}.representations{grid-template-columns:1fr}.action{max-width:350px}.hero{padding:35px 0 28px}.brand{max-width:300px}}@media(max-width:550px){.top{padding:12px 16px;gap:12px}.brand{max-width:245px}.brand small{font-size:8px;margin-top:0}.login{padding:8px 12px;font-size:12px}main{padding:0 18px}h1{letter-spacing:-1px}.hero p{font-size:16px}.rep-art{gap:4px;padding:16px 8px}.rep svg{width:80px}.formula{font-size:16px}.footer{flex-direction:column;gap:8px}}@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto}}
+ </style><style>.rep-art{flex-wrap:wrap;row-gap:20px}.rep .expanded-ethanol{width:155px;height:120px}.ethanol-model{width:190px;height:150px;border:0;background:#fff;border-radius:12px}.formula{height:120px}.rep{flex:0 0 auto}@media(max-width:550px){.rep-art{gap:14px}.rep .expanded-ethanol{width:140px}.ethanol-model{width:210px;height:165px}}</style><style>
+ .representations{grid-template-columns:1fr;gap:24px}
+@@ -21,15 +23,17 @@
+ <main><section class="hero"><span class="eyebrow">ΜΑΘΑΙΝΩ · ΣΥΝΔΕΩ · ΑΝΑΚΑΛΥΠΤΩ</span><h1>Κάθε μόριο έχει ένα όνομα<br><span>Ανακάλυψέ το&nbsp;!</span></h1><p>Σύνδεσε τη δομή με την ονομασία, μάθε βήμα βήμα και δοκίμασε τις γνώσεις&nbsp;σου</p></section><p class="choose">Διάλεξε από πού θέλεις να ξεκινήσεις</p>
+ <section class="cards" aria-label="Επιλογές εφαρμογής">
+ <article class="card one"><div class="icon"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 9C12 6 7 6 3 7v19c5-1 9-1 13 2 4-3 8-3 13-2V7c-4-1-9-1-13 2v19M7 12h5m-5 5h5m8-5h5m-5 5h5"/></svg></div><span class="label">ΘΕΩΡΙΑ</span><h2>Μαθαίνω βήμα βήμα</h2><p>Ανακάλυψε τους κανόνες ονοματολογίας μέσα από καθοδηγούμενα σενάρια και διαφορετικές εικόνες του ίδιου μορίου.</p><ul><li>Έτοιμα σενάρια θεωρίας</li><li>Για μελέτη ή για το μάθημα στην τάξη</li></ul><a class="action" style="text-decoration:none" href="theory-library.html?v=other-ketones-theory-20261026">Δες τη θεωρία <span aria-hidden="true">↗</span></a><small>Για μαθητές και εκπαιδευτικούς</small></article>
+-<article class="card two"><div class="icon"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M11 10h10c6 0 9 13 5 15-3 1-5-5-8-5h-4c-3 0-5 6-8 5-4-2-1-15 5-15ZM10 13v7m-3-3.5h6"/><circle cx="22" cy="14" r="1"/><circle cx="25" cy="18" r="1"/></svg></div><span class="label">ΑΣΚΗΣΕΙΣ &amp; ΠΑΙΧΝΙΔΙΑ</span><h2>Παίζω και εξασκούμαι</h2><p>Εντόπισε λάθη ή χτίσε ονόματα οργανικών ενώσεων μέσα από σύντομα παιχνίδια.</p><ul><li>Επισκευή και σύνθεση ονομάτων</li><li>Ανατροφοδότηση για τις επιλογές σου</li></ul><div class="game-actions">
+-<a class="action game-action" href="../games/name-repair.html?v=workshop-lesson-parity-20261110-r2"><img src="../games/assets/name-repair/workshop-logo-3d-v1.png" width="40" height="40" alt="" aria-hidden="true"><span class="game-action-label">Συνεργείο ονομάτων</span><span class="game-action-arrow" aria-hidden="true">↗</span></a>
+-<a class="action game-action" href="../games/name-builder.html?v=builder-outside-drop-20261112-r1"><img src="../games/assets/name-builder/name-builder-logo-3d-blank-v1.png" width="40" height="40" alt="" aria-hidden="true"><span class="game-action-label">Χτίσε το όνομα</span><span class="game-action-arrow" aria-hidden="true">↗</span></a>
++<article class="card two"><div class="icon"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M11 10h10c6 0 9 13 5 15-3 1-5-5-8-5h-4c-3 0-5 6-8 5-4-2-1-15 5-15ZM10 13v7m-3-3.5h6"/><circle cx="22" cy="14" r="1"/><circle cx="25" cy="18" r="1"/></svg></div><span class="label">ΑΣΚΗΣΕΙΣ &amp; ΠΑΙΧΝΙΔΙΑ</span><h2>Παίζω και εξασκούμαι</h2><p>Επισκεύασε ονόματα, σύνθεσέ τα ή σύνδεσε το όνομα με τη δομή μέσα από τέσσερα παιχνίδια.</p><ul><li>Συνεργείο, σύνθεση, παζλ και αποστολές</li><li>Εξηγήσεις για τις επιλογές σου</li></ul><div class="game-actions">
++<a class="action game-action" href="../games/name-repair.html?v=workshop-lesson-parity-20261110-r2"><span class="game-action-logo" aria-hidden="true"><img src="../games/assets/name-repair/workshop-logo-3d-v1.png" width="1254" height="1254" alt=""></span><span class="game-action-label">Συνεργείο ονομάτων</span><span class="game-action-arrow" aria-hidden="true">↗</span></a>
++<a class="action game-action" href="../games/name-builder.html?v=builder-outside-drop-20261112-r1"><span class="game-action-logo" aria-hidden="true"><img src="../games/assets/name-builder/name-builder-logo-3d-blank-v1.png" width="1254" height="1254" alt=""></span><span class="game-action-label">Χτίσε το όνομα</span><span class="game-action-arrow" aria-hidden="true">↗</span></a>
++<a class="action game-action" href="../games/molecular-puzzle.html?v=four-games-20261116-r1"><span class="game-action-logo" aria-hidden="true"><img src="../games/assets/molecular-puzzle/molecular-puzzle-logo-flat-v7.png" width="2148" height="732" alt=""></span><span class="game-action-label">Μοριακό παζλ</span><span class="game-action-arrow" aria-hidden="true">↗</span></a>
++<a class="action game-action" href="../games/molecular-detective.html?v=four-games-20261116-r1"><span class="game-action-logo" aria-hidden="true"><img src="../games/assets/molecular-detective/molecular-detective-logo-molecule-v2.png" width="1254" height="1254" alt=""></span><span class="game-action-label">Μοριακός ντεντέκτιβ</span><span class="game-action-arrow" aria-hidden="true">↗</span></a>
+ </div><small>Για μαθητές και εκπαιδευτικούς</small></article>
+ <article class="card three"><div class="icon"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M18 5H6v23h20V16M15 19l2-6L26 4l4 4-9 9-6 2ZM24 6l4 4M10 23h10"/></svg></div><span class="label">ΓΙΑ ΕΚΠΑΙΔΕΥΤΙΚΟΥΣ</span><h2>Δημιουργώ το μάθημά μου</h2><p>Βρες έτοιμο υλικό για την τάξη σου ή φτιάξε τα δικά σου σενάρια θεωρίας και μαθησιακά παιχνίδια.</p><ul><li>Ο προσωπικός σου χώρος υλικού</li><li>Αποθήκευση και λήψη των δημιουργιών σου</li></ul><button class="action" data-panel="teacher">Χώρος εκπαιδευτικού <span aria-hidden="true">↗</span></button><small>Σύνδεση για τον προσωπικό σου χώρο</small></article>
+ </section>
+ <section class="representations"><div><span class="eyebrow">Η ΙΔΙΑ ΔΟΜΗ, ΑΛΛΗ ΟΠΤΙΚΗ</span><h2>Ένα μόριο.<br>Πολλοί τρόποι να το καταλάβεις.</h2><p>Από τον χημικό τύπο στο τρισδιάστατο μοντέλο και από τη δομή στο όνομα: κάθε αναπαράσταση σε βοηθά να δεις μια άλλη πλευρά του μορίου.</p></div><div><div class="rep-art"><div class="rep"><div class="formula">CH₃–CH₂–<b>OH</b></div><small>Συνεπτυγμένος συντακτικός</small></div><span class="equal" aria-hidden="true">↔</span><div class="rep"><svg class="expanded-ethanol" viewBox="0 0 180 115" role="img" aria-label="Ανεπτυγμένος συντακτικός τύπος αιθανόλης: δύο άνθρακες, έξι υδρογόνα και ένα οξυγόνο"><g stroke="#254c50" stroke-width="2"><path d="M26 59H41M59 59H81M99 59H121M140 59H155M50 45V28M50 73V91M90 45V28M90 73V91"/></g><g fill="#254c50" font-family="system-ui,sans-serif" font-size="18" text-anchor="middle"><text x="16" y="65">H</text><text x="50" y="65">C</text><text x="90" y="65">C</text><text x="166" y="65">H</text><text x="50" y="23">H</text><text x="90" y="23">H</text><text x="50" y="110">H</text><text x="90" y="110">H</text></g><text x="130" y="65" fill="#a54e40" font-family="system-ui,sans-serif" font-size="18" text-anchor="middle">O</text></svg><small>Ανεπτυγμένος συντακτικός</small></div><span class="equal" aria-hidden="true">↔</span><div class="rep"><div class="ethanol-model ethanol-static"><img src="assets/ethanol-3d-jsmol.png" width="1200" height="1200" alt="Τρισδιάστατο μοντέλο του ίδιου μορίου, εξαγμένο από το JSmol" decoding="async"></div><small>Τρισδιάστατο μοντέλο</small></div></div><div class="explore-entry"><a href="../mulermoc-nom-57.html">Εξερεύνησε ελεύθερα τα μόρια</a></div></div></section>
+ <footer class="footer"><span>Namelecule · Μια εφαρμογή της πλατφόρμας MuLERMoCs</span><a href="../mulermoc-nom-57.html">Συντελεστές στην εφαρμογή ↗</a></footer></main>
+-<div class="preview-note">Η βιβλιοθήκη θεωρίας, το Συνεργείο ονομάτων και το «Χτίσε το όνομα» είναι διαθέσιμα. Η σύνδεση εκπαιδευτικών είναι υπό σχεδιασμό.</div>
++<div class="preview-note">Η βιβλιοθήκη θεωρίας και τα τέσσερα παιχνίδια — «Συνεργείο ονομάτων», «Χτίσε το όνομα», «Μοριακό παζλ» και «Μοριακός ντεντέκτιβ» — είναι διαθέσιμα. Η σύνδεση εκπαιδευτικών είναι υπό σχεδιασμό.</div>
+ <dialog id="details" aria-labelledby="dialog-title"><h2 id="dialog-title"></h2><p id="dialog-copy"></p><a id="dialog-link" href="../mulermoc-nom-57.html"></a><form method="dialog"><button>Κλείσιμο</button></form></dialog>
+ <script>
+ const panels={teacher:['Χώρος εκπαιδευτικού','Ο προσωπικός χώρος με σύνδεση, αποθήκευση και λήψη υλικού είναι υπό σχεδιασμό. Σήμερα μπορείς να ανοίξεις την εφαρμογή και να χρησιμοποιήσεις το εργαλείο σεναρίων.','Άνοιγμα εφαρμογής','../mulermoc-nom-57.html'],login:['Σύνδεση','Η σύνδεση εκπαιδευτικών είναι υπό σχεδιασμό. Για τους μαθητές δεν έχει αποφασιστεί ακόμη αν θα υπάρχει λογαριασμός.']};
+--- before/js/namelecule-game-choice-checkpoint.js
++++ js/namelecule-game-choice-checkpoint.js
+@@ -1,4 +1,4 @@
+-/* One lesson gate, three independent games. Only a rechecked triple earns access. */
++/* One lesson gate, four independent games. Only a rechecked triple earns access. */
+ (function (global) {
+   "use strict";
+   const VERSION = 1;
+@@ -10,8 +10,62 @@
+   const puzzle = global.NameleculeMolecularPuzzleEngine;
+   const clone = value => JSON.parse(JSON.stringify(value));
+   const own = (value, key) => Object.prototype.hasOwnProperty.call(value, key);
+-  const validGame = value => value === "repair" || value === "builder" || value === "puzzle";
++  const validGame = value => value === "repair" || value === "builder" || value === "puzzle" || value === "detective";
+   const seedValue = value => typeof value === "string" && /^[0-9]{1,20}$/.test(value) ? value : null;
++  const moduleURL = global.document?.currentScript?.src || null;
++  const scripts = new Map();
++  function loadScript(file, api) {
++    if (global[api]) return Promise.resolve();
++    if (scripts.has(file)) return scripts.get(file);
++    const promise = new Promise((resolve, reject) => {
++      const script = global.document.createElement("script");
++      const base = moduleURL || new URL("js/namelecule-game-choice-checkpoint.js", global.document.baseURI).href;
++      script.src = new URL(file + "?v=four-games-20261116-r1", base).href;
++      const timer = global.setTimeout(() => finish(new Error("Detective dependency timed out")), 45000);
++      function finish(error) {
++        global.clearTimeout(timer); script.onload = script.onerror = null;
++        if (error) { scripts.delete(file); script.remove(); reject(error); }
++        else if (!global[api]) { scripts.delete(file); script.remove(); reject(new Error("Detective API unavailable")); }
++        else resolve();
++      }
++      script.onload = () => finish(); script.onerror = () => finish(new Error("Detective dependency failed"));
++      global.document.head.append(script);
++    });
++    scripts.set(file, promise); return promise;
++  }
++  function loadDetective(signal) {
++    return Promise.all([loadInput(signal), loadScript("namelecule-molecular-detective-engine.js", "NameleculeMolecularDetectiveEngine")
++      .then(() => loadScript("namelecule-molecular-detective-lesson.js", "NameleculeMolecularDetectiveLesson"))])
++      .then(() => { cancelled(signal); });
++  }
++  function detectivePending(raw) {
++    const state = { version: VERSION, seed: raw && raw.version === VERSION && seedValue(raw.seed) || null,
++      currentRound: raw && Number.isInteger(raw.currentRound) && raw.currentRound >= 0 && raw.currentRound < 3 ? raw.currentRound : 0,
++      states: [null, null, null], solved: false };
++    const values = raw && Array.isArray(raw.states) && raw.states.length === 3 ? raw.states : [null, null, null];
++    state.states = values.map(value => {
++      const blank = { atoms: [], bonds: [], attempts: 0, submitted: false, solved: false };
++      if (!value || !Array.isArray(value.atoms) || !Array.isArray(value.bonds) || value.atoms.length > 40 || value.bonds.length > 39 ||
++          [value.atoms, value.bonds].some(ids => ids.some(id => !Number.isSafeInteger(id) || id < 1 || id > 40) || new Set(ids).size !== ids.length)) return blank;
++      const attempts = Number.isSafeInteger(value.attempts) && value.attempts >= 0 ? value.attempts : 0;
++      return { atoms: value.atoms.slice(), bonds: value.bonds.slice(), attempts,
++        submitted: value.submitted === true && attempts > 0 && !!(value.atoms.length || value.bonds.length), solved: false };
++    });
++    return state;
++  }
++  function mountDetective(host, options, practice) {
++    const controller = new AbortController(); let inner = null, destroyed = false;
++    host.setAttribute("aria-busy", "true"); host.replaceChildren(node("p", "nl-quiz-loading", "Ετοιμάζουμε τις τρεις αποστολές του Ντεντέκτιβ…"));
++    loadDetective(controller.signal).then(() => {
++      if (destroyed) return;
++      inner = global.NameleculeMolecularDetectiveLesson.mount(host, Object.assign({}, options, { input: canonical }), practice);
++    }).catch(error => {
++      if (destroyed || error.name === "AbortError") return;
++      host.removeAttribute("aria-busy");
++      host.replaceChildren(node("p", "nl-quiz-error", "Οι αποστολές δεν φορτώθηκαν. Η προσπάθεια διατηρήθηκε. Επίλεξε ξανά τον Ντεντέκτιβ για επανάληψη."));
++    });
++    return { destroy() { if (destroyed) return; destroyed = true; controller.abort(); if (inner) inner.destroy(); host.replaceChildren(); host.removeAttribute("aria-busy"); } };
++  }
+   let canonical = null;
+   const REQUIRED = new Map();
+   const PRACTICE = new Map();
+@@ -174,6 +228,8 @@
+     return state;
+   }
+   function restoreGame(recipe, game, raw, practice) {
++    if (game === "detective") return global.NameleculeMolecularDetectiveLesson
++      ? global.NameleculeMolecularDetectiveLesson.restore(recipe, raw, canonical, practice) : detectivePending(raw);
+     if (game === "builder") return restoreBuilder(recipe, raw, practice);
+     if (game === "puzzle") return restorePuzzle(recipe, raw, practice);
+     return (practice ? repair.restorePractice : repair.restore)(recipe, raw);
+@@ -185,7 +241,7 @@
+     // Migrated Workshop answers remain raw evidence, never an imported boolean.
+     const legacy = raw.legacyRepair;
+     const state = { version: VERSION, selected: validGame(raw.selected) ? raw.selected : (legacy ? "repair" : null),
+-      games: { repair: restoreGame(recipe, "repair", legacy || games.repair, practice), builder: restoreGame(recipe, "builder", games.builder, practice), puzzle: restoreGame(recipe, "puzzle", games.puzzle, practice) },
++      games: { repair: restoreGame(recipe, "repair", legacy || games.repair, practice), builder: restoreGame(recipe, "builder", games.builder, practice), puzzle: restoreGame(recipe, "puzzle", games.puzzle, practice), detective: restoreGame(recipe, "detective", games.detective, practice) },
+       earned: null, solved: false };
+     if (raw.earned && validGame(raw.earned.game)) {
+       const evidence = restoreGame(recipe, raw.earned.game, raw.earned.evidence, practice);
+@@ -195,7 +251,7 @@
+     // The first verified winning triple becomes the independent receipt. Later
+     // optional attempts cannot overwrite it or combine evidence across games.
+     if (!state.earned) {
+-      const winner = [state.selected, "repair", "builder", "puzzle"].find(game => validGame(game) && state.games[game].solved);
++      const winner = [state.selected, "repair", "builder", "puzzle", "detective"].find(game => validGame(game) && state.games[game].solved);
+       if (winner) { state.earned = { game: winner, evidence: clone(state.games[winner]) }; state.solved = true; }
+     }
+     return state;
+@@ -215,6 +271,12 @@
+     const graphEvidence = [state.games.builder, state.games.puzzle,
+       state.earned && (state.earned.game === "builder" || state.earned.game === "puzzle") && state.earned.evidence].filter(Boolean);
+     if (!canonical && graphEvidence.some(value => value.seed)) jobs.push(loadInput(signal));
++    const detectiveEvidence = [state.games.detective, state.earned && state.earned.game === "detective" && state.earned.evidence].filter(Boolean);
++    // Navigation retries after asynchronous preparation. Once inputs and both
++    // APIs are available, restoration above is synchronous: returning another
++    // Promise here would keep scenario navigation in an endless retry loop.
++    const detectiveReady = canonical && global.NameleculeMolecularDetectiveEngine && global.NameleculeMolecularDetectiveLesson;
++    if (!detectiveReady && detectiveEvidence.some(value => value.seed)) jobs.push(loadDetective(signal));
+     if (!jobs.length) return null;
+     return Promise.all(jobs).then(() => { cancelled(signal); return restore(recipe, state); });
+   }
+@@ -225,7 +287,9 @@
+     state.selected = game;
+     if (game) {
+       const old = previous && previous.games && previous.games[game];
+-      state.games[game] = game === "repair" ? repair.createPractice(recipe, old) : (game === "puzzle" ? emptyPuzzle : emptyBuilder)(generated.freshSeed(old && old.seed));
++      state.games[game] = game === "repair" ? repair.createPractice(recipe, old) : game === "detective"
++        ? detectivePending({ version: VERSION, seed: generated.freshSeed(old && old.seed) })
++        : (game === "puzzle" ? emptyPuzzle : emptyBuilder)(generated.freshSeed(old && old.seed));
+     }
+     return state;
+   }
+@@ -275,7 +339,8 @@
+       const grid = node("div", "nl-game-choice-grid");
+       [["repair", "Συνεργείο ονομάτων", "Εντόπισε το λάθος και επισκεύασε το όνομα.", "name-repair/workshop-logo-3d-v1.png"],
+         ["builder", "Χτίσε το όνομα", "Διάλεξε τα συνθετικά και βάλε τα στη σωστή σειρά.", "name-builder/name-builder-logo-3d-blank-v1.png"],
+-        ["puzzle", "Μοριακό παζλ", "Διάβασε το όνομα και σύνδεσε τα κομμάτια του μορίου.", "molecular-puzzle/molecular-puzzle-logo-flat-v7.png"]].forEach(([game, label, detail, image]) => {
++        ["puzzle", "Μοριακό παζλ", "Διάβασε το όνομα και σύνδεσε τα κομμάτια του μορίου.", "molecular-puzzle/molecular-puzzle-logo-flat-v7.png"],
++        ["detective", "Μοριακός ντεντέκτιβ", "Βρες στον ανεπτυγμένο τύπο όσα δηλώνει το συνθετικό.", "molecular-detective/molecular-detective-logo-molecule-v2.png"]].forEach(([game, label, detail, image]) => {
+         const card = button("", "nl-game-choice-card", () => { state.selected = game; publish(); render(); });
+         const img = node("img"); img.src = new URL("games/assets/" + image, global.document.baseURI).href; img.width = 40; img.height = 40; img.alt = ""; img.setAttribute("aria-hidden", "true");
+         if (game === "puzzle") { img.width = 120; img.height = 64; img.style.cssText = "width:120px;height:64px;object-fit:contain;flex-shrink:0"; }
+@@ -308,7 +373,8 @@
+         onOtherGame: options.onOtherGame,
+         otherGameLabel: options.otherGameLabel || "Άλλο παιχνίδι"
+       });
+-      current = game === "repair" ? (practice ? repair.mountPractice : repair.mount)(gameHost, settings) : (game === "puzzle" ? mountPuzzle : mountBuilder)(gameHost, settings, practice);
++      current = game === "repair" ? (practice ? repair.mountPractice : repair.mount)(gameHost, settings)
++        : (game === "detective" ? mountDetective : game === "puzzle" ? mountPuzzle : mountBuilder)(gameHost, settings, practice);
+     }
+     if (state.selected) render(); else choose();
+     return { destroy() { if (destroyed) return; stop(); destroyed = true; host.replaceChildren(); } };
+@@ -519,24 +585,40 @@
+   // Exact frozen authored-field projection. The controller reads only the one
+   // derived legacy key and checks its complete signature; it never scans storage.
+   const OLD_FIELDS = {"3":{"title":{"present":true,"value":"Συνεργείο ονομάτων"},"note":{"present":true,"value":"Ώρα για μια μικρή στάση στο <b>Συνεργείο ονομάτων</b>. Άνοιξε το σετ <b>\"Χωρίς διακλαδώσεις\"</b>&nbsp;και επισκεύασε τρία ονόματα.<br><br>Μπορείς να δοκιμάσεις ξανά και να επιστρέψεις στη θεωρία. Η συνέχεια προς τα διακλαδισμένα αλκάνια ανοίγει αφού ολοκληρώσεις σωστά <b>και τις τρεις επισκευές</b> και διαβάσεις τις εξηγήσεις."},"checkpoint":{"present":true,"value":{"id":"alkanes-unbranched-workshop-v1","type":"generated-name-repair-set","version":1,"round":{"version":1,"setId":"alkanes-unbranched","difficulty":"basic","roundCount":3,"generatorVersion":"1.0.0","catalogRevision":"275d537b19f3ef0791c97d8d78c127f541a0579038ef1e8d65dadde611845690","engineSHA256":"3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306"},"openLabel":"πήγαινε στο συνεργείο"}},"titleLogo":{"present":true,"value":"workshop"}},"10":{"title":{"present":true,"value":"Στο Συνεργείο: Με διακλαδώσεις"},"note":{"present":true,"value":"Επίστρεψε στο <b>Συνεργείο ονομάτων</b> για το σετ <b>«Με διακλαδώσεις»</b>. Σε κάθε κουίζ εντόπισε το λάθος συνθετικό ή τη λανθασμένη σειρά και επισκεύασε το όνομα.<br><br>Διάβασε την εξήγηση κάθε σωστής επισκευής. Μπορείς να επαναλάβεις τις προσπάθειες. Αφού ολοκληρώσεις σωστά <b>και τα τρία κουίζ</b>, ανοίγει η τελική εξερεύνηση όλων των αλκανίων."},"checkpoint":{"present":true,"value":{"id":"alkanes-branched-workshop-v1","type":"generated-name-repair-set","version":1,"round":{"version":1,"setId":"alkanes-branched","difficulty":"basic","roundCount":3,"generatorVersion":"1.0.0","catalogRevision":"275d537b19f3ef0791c97d8d78c127f541a0579038ef1e8d65dadde611845690","engineSHA256":"3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306"},"openLabel":"πήγαινε στο συνεργείο"}},"titleLogo":{"present":true,"value":"workshop"}}};
+-  const NEW_FIELDS = {"3":{"title":{"present":true,"value":"Εξάσκηση χωρίς διακλαδώσεις"},"note":{"present":true,"value":"Ώρα για μια μικρή στάση. Διάλεξε το <b>Συνεργείο ονομάτων</b> για να επισκευάσεις ονόματα ή το <b>Χτίσε το όνομα</b> για να τα σχηματίσεις από συνθετικά.\n\nΟλοκλήρωσε σωστά <b>τρία διαφορετικά μόρια χωρίς διακλαδώσεις στο ίδιο παιχνίδι</b> και δες τις εξηγήσεις. Έπειτα μπορείς να συνεχίσεις τη θεωρία, να δοκιμάσεις το άλλο παιχνίδι ή να εξασκηθείς σε άλλη τριάδα."},"checkpoint":{"present":true,"value":{"id":"alkanes-unbranched-workshop-v1","type":"alkane-game-choice-set","version":1,"round":{"version":1,"setId":"alkanes-unbranched","difficulty":"basic","roundCount":3,"generatorVersion":"1.0.0","catalogRevision":"275d537b19f3ef0791c97d8d78c127f541a0579038ef1e8d65dadde611845690","engineSHA256":"3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306"},"openLabel":"Διάλεξε παιχνίδι"}},"titleLogo":{"present":false,"value":null}},"10":{"title":{"present":true,"value":"Εξάσκηση με διακλαδώσεις"},"note":{"present":true,"value":"Διάλεξε το <b>Συνεργείο ονομάτων</b> ή το <b>Χτίσε το όνομα</b> για τρία διακλαδισμένα αλκάνια. Σύνδεσε την κύρια αλυσίδα, τις θέσεις και τις ομάδες με τα συνθετικά του ονόματος.\n\nΑφού ολοκληρώσεις σωστά <b>και τα τρία μόρια στο ίδιο παιχνίδι</b> και δεις τις εξηγήσεις, μπορείς να συνεχίσεις στην τελική εξερεύνηση, να δοκιμάσεις το άλλο παιχνίδι ή να εξασκηθείς σε άλλη τριάδα."},"checkpoint":{"present":true,"value":{"id":"alkanes-branched-workshop-v1","type":"alkane-game-choice-set","version":1,"round":{"version":1,"setId":"alkanes-branched","difficulty":"basic","roundCount":3,"generatorVersion":"1.0.0","catalogRevision":"275d537b19f3ef0791c97d8d78c127f541a0579038ef1e8d65dadde611845690","engineSHA256":"3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306"},"openLabel":"Διάλεξε παιχνίδι"}},"titleLogo":{"present":false,"value":null}}};
++  const THREE_FIELDS = {"3":{"title":{"present":true,"value":"Εξάσκηση χωρίς διακλαδώσεις"},"note":{"present":true,"value":"Ώρα για μια μικρή στάση. Διάλεξε το <b>Συνεργείο ονομάτων</b> για να επισκευάσεις ονόματα ή το <b>Χτίσε το όνομα</b> για να τα σχηματίσεις από συνθετικά.\n\nΟλοκλήρωσε σωστά <b>τρία διαφορετικά μόρια χωρίς διακλαδώσεις στο ίδιο παιχνίδι</b> και δες τις εξηγήσεις. Έπειτα μπορείς να συνεχίσεις τη θεωρία, να δοκιμάσεις το άλλο παιχνίδι ή να εξασκηθείς σε άλλη τριάδα."},"checkpoint":{"present":true,"value":{"id":"alkanes-unbranched-workshop-v1","type":"alkane-game-choice-set","version":1,"round":{"version":1,"setId":"alkanes-unbranched","difficulty":"basic","roundCount":3,"generatorVersion":"1.0.0","catalogRevision":"275d537b19f3ef0791c97d8d78c127f541a0579038ef1e8d65dadde611845690","engineSHA256":"3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306"},"openLabel":"Διάλεξε παιχνίδι"}},"titleLogo":{"present":false,"value":null}},"10":{"title":{"present":true,"value":"Εξάσκηση με διακλαδώσεις"},"note":{"present":true,"value":"Διάλεξε το <b>Συνεργείο ονομάτων</b> ή το <b>Χτίσε το όνομα</b> για τρία διακλαδισμένα αλκάνια. Σύνδεσε την κύρια αλυσίδα, τις θέσεις και τις ομάδες με τα συνθετικά του ονόματος.\n\nΑφού ολοκληρώσεις σωστά <b>και τα τρία μόρια στο ίδιο παιχνίδι</b> και δεις τις εξηγήσεις, μπορείς να συνεχίσεις στην τελική εξερεύνηση, να δοκιμάσεις το άλλο παιχνίδι ή να εξασκηθείς σε άλλη τριάδα."},"checkpoint":{"present":true,"value":{"id":"alkanes-branched-workshop-v1","type":"alkane-game-choice-set","version":1,"round":{"version":1,"setId":"alkanes-branched","difficulty":"basic","roundCount":3,"generatorVersion":"1.0.0","catalogRevision":"275d537b19f3ef0791c97d8d78c127f541a0579038ef1e8d65dadde611845690","engineSHA256":"3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306"},"openLabel":"Διάλεξε παιχνίδι"}},"titleLogo":{"present":false,"value":null}}};
++  const NEW_FIELDS = {"3":{"title":{"present":true,"value":"Εξάσκηση χωρίς διακλαδώσεις"},"note":{"present":true,"value":"Διάλεξε ένα από τα τέσσερα παιχνίδια. <b>Συνεργείο ονομάτων</b> (επισκευή ονόματος), <b>Χτίσε το όνομα</b> (σύνθεση από συνθετικά), <b>Μοριακό παζλ</b> (από το όνομα στη δομή) ή <b>Μοριακός ντεντέκτιβ</b> (βρες στη δομή όσα δηλώνει το επισημασμένο συνθετικό του σωστού ονόματος).\n\nΟλοκλήρωσε σωστά <b>τρία διαφορετικά μόρια χωρίς διακλαδώσεις στο ίδιο παιχνίδι</b> και δες την εξήγηση μετά από κάθε σωστή απάντηση. Στον Ντεντέκτιβ χρειάζεται <b>μία αποστολή ανά μόριο</b>. Έπειτα μπορείς να συνεχίσεις τη θεωρία, να εξασκηθείς σε άλλη τριάδα ή να δοκιμάσεις άλλο παιχνίδι."},"checkpoint":{"present":true,"value":{"id":"alkanes-unbranched-workshop-v1","type":"alkane-game-choice-set","version":1,"round":{"version":1,"setId":"alkanes-unbranched","difficulty":"basic","roundCount":3,"generatorVersion":"1.0.0","catalogRevision":"275d537b19f3ef0791c97d8d78c127f541a0579038ef1e8d65dadde611845690","engineSHA256":"3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306"},"openLabel":"Διάλεξε παιχνίδι"}},"titleLogo":{"present":false,"value":null}},"10":{"title":{"present":true,"value":"Εξάσκηση με διακλαδώσεις"},"note":{"present":true,"value":"Διάλεξε ένα από τα τέσσερα παιχνίδια. <b>Συνεργείο ονομάτων</b> (επισκευή ονόματος), <b>Χτίσε το όνομα</b> (σύνθεση από συνθετικά), <b>Μοριακό παζλ</b> (από το όνομα στη δομή) ή <b>Μοριακός ντεντέκτιβ</b> (βρες στη δομή όσα δηλώνει το επισημασμένο συνθετικό του σωστού ονόματος).\n\nΟλοκλήρωσε σωστά <b>τρία διαφορετικά μόρια με διακλαδώσεις στο ίδιο παιχνίδι</b> και δες την εξήγηση μετά από κάθε σωστή απάντηση. Στον Ντεντέκτιβ χρειάζεται <b>μία αποστολή ανά μόριο</b>. Έπειτα μπορείς να συνεχίσεις στην τελική εξερεύνηση, να εξασκηθείς σε άλλη τριάδα ή να δοκιμάσεις άλλο παιχνίδι."},"checkpoint":{"present":true,"value":{"id":"alkanes-branched-workshop-v1","type":"alkane-game-choice-set","version":1,"round":{"version":1,"setId":"alkanes-branched","difficulty":"basic","roundCount":3,"generatorVersion":"1.0.0","catalogRevision":"275d537b19f3ef0791c97d8d78c127f541a0579038ef1e8d65dadde611845690","engineSHA256":"3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306"},"openLabel":"Διάλεξε παιχνίδι"}},"titleLogo":{"present":false,"value":null}}};
+   function same(left, right) { return JSON.stringify(left) === JSON.stringify(right); }
++  function projectFields(scenario, from, to) {
++    const projected = clone(scenario);
++    for (const index of Object.keys(from)) {
++      const step = scenario.steps[index];
++      if (!step || typeof step !== "object") return null;
++      for (const field of Object.keys(from[index])) {
++        const expected = from[index][field];
++        if (own(step, field) !== expected.present || expected.present && !same(step[field], expected.value)) return null;
++        const prior = to[index][field];
++        if (prior.present) projected.steps[index][field] = clone(prior.value); else delete projected.steps[index][field];
++      }
++    }
++    return projected;
++  }
+   function migrateRecord(scenario, options) {
+     if (!scenario || !Array.isArray(scenario.steps) || scenario.steps.length !== 12 || !options || typeof options.read !== "function") return null;
+-    const projected = clone(scenario);
+-    for (const index of Object.keys(NEW_FIELDS)) {
+-      const step = scenario.steps[index];
+-      if (!step || typeof step !== "object") return null;
+-      for (const field of Object.keys(NEW_FIELDS[index])) {
+-        const expected = NEW_FIELDS[index][field];
+-        if (own(step, field) !== expected.present || expected.present && !same(step[field], expected.value)) return null;
+-        const prior = OLD_FIELDS[index][field];
+-        if (prior.present) projected.steps[index][field] = clone(prior.value); else delete projected.steps[index][field];
+-      }
+-    }
+-    const old = options.read(projected);
++    const three = projectFields(scenario, NEW_FIELDS, THREE_FIELDS);
++    if (!three) return null;
++    const current = options.read(three);
++    const states = {}, practices = {};
++    if (current) {
++      // A present three-game reset also wins over an older Repair receipt.
++      for (const index of Object.keys(NEW_FIELDS)) {
++        if (current.states && own(current.states, index)) states[index] = clone(current.states[index]);
++        if (current.practices && own(current.practices, index)) practices[index] = clone(current.practices[index]);
++      }
++      return { states, practices };
++    }
++    const older = projectFields(three, THREE_FIELDS, OLD_FIELDS);
++    const old = older && options.read(older);
+     if (!old || !old.states || typeof old.states !== "object") return null;
+-    const states = {}, practices = {};
+     for (const index of Object.keys(NEW_FIELDS)) {
+       if (own(old.states, index)) states[index] = { version: VERSION, selected: "repair", legacyRepair: clone(old.states[index]) };
+       if (old.practices && own(old.practices, index)) practices[index] = { version: VERSION, selected: "repair", legacyRepair: clone(old.practices[index]) };
+--- before/js/namelecule-molecular-detective-engine.js
++++ js/namelecule-molecular-detective-engine.js
+@@ -166,6 +166,70 @@
+     catch (problem) { return { valid: false, code: problem.code || 'snapshot-invalid', message: problem.message }; }
+   }
+ 
++  // The lesson supplies an already digest-verified legacy catalog entry and
++  // the analysis of those exact bytes by its pinned core54 Worker. This pure
++  // adapter preserves the full MOL indexes; heavy-only indexes are different
++  // for, among others, propane and butane, whose first atom is H.
++  function canonicalSnapshot(molecule, analysis) {
++    if (!molecule || starterIds.slice(0, 8).indexOf(molecule.id) < 0 ||
++        typeof molecule.mol !== 'string' || molecule.mol.length > 100000 ||
++        !/^[a-f0-9]{64}$/.test(molecule.sourceSHA256 || '') || !analysis ||
++        analysis.moleculeId !== molecule.id ||
++        analysis.engineSHA256 !== '3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306' ||
++        typeof analysis.name !== 'string' || !Array.isArray(analysis.parts) || analysis.parts.length !== 12 ||
++        !analysis.classification || analysis.classification.chemicalClass !== 'hydrocarbons' ||
++        analysis.classification.seriesKey !== 'alkanes') {
++      throw error('canonical-input', 'Η επαληθευμένη πηγή και η ανάλυση του μαθήματος δεν συμφωνούν.');
++    }
++    var lines = molecule.mol.split(/\r?\n/), counts = lines[3] || '';
++    var atomCount = Number(counts.slice(0, 3)), bondCount = Number(counts.slice(3, 6));
++    if (!/^\s*\d+\s*$/.test(counts.slice(0, 3)) || !/^\s*\d+\s*$/.test(counts.slice(3, 6)) ||
++        !/V2000\s*$/.test(counts) || !idValid(atomCount) || atomCount > 40 || bondCount !== atomCount - 1 ||
++        !lines.slice(4 + atomCount + bondCount).some(function (line) { return /^M  END\s*$/.test(line); })) {
++      throw error('canonical-source', 'Ο ανεπτυγμένος μοριακός τύπος του μαθήματος δεν είναι έγκυρος.');
++    }
++    var atoms = lines.slice(4, 4 + atomCount).map(function (line, i) {
++      return { id: i + 1, element: line.slice(31, 34).trim() };
++    });
++    var bonds = lines.slice(4 + atomCount, 4 + atomCount + bondCount).map(function (line, i) {
++      return { id: i + 1, a: Number(line.slice(0, 3)), b: Number(line.slice(3, 6)), order: Number(line.slice(6, 9)) };
++    });
++    var modes = ['compNumber1', 'compSecondSub1', 'compNumber2', 'compSecondSub2',
++      'compBondPos', 'compCarbonsCount', 'compBondType', 'compEndNumber', 'compBondType2', 'compSuffix'];
++    var pieces = [];
++    analysis.parts.forEach(function (part, slot) {
++      if (part == null || part === '') return;
++      // The eight approved alkanes use the native, unsplit school boxes and
++      // have no word separator or Greek euphony boundary to transform.
++      if (typeof part !== 'string' || [0, 1, 2, 3, 5, 6, 9].indexOf(slot) < 0 || !part.trim()) {
++        throw error('canonical-pieces', 'Τα συνθετικά είναι εκτός του επαληθευμένου συνόλου του μαθήματος.');
++      }
++      pieces.push({ id: 'comp' + slot, text: part.normalize('NFC'), separatorBefore: '', mode: modes[slot] });
++    });
++    var snapshot = { moleculeId: molecule.id, sourceMOL: molecule.mol, correctName: analysis.name.normalize('NFC'),
++      pieces: pieces, atoms: atoms, bonds: bonds, chemicalClass: analysis.classification.chemicalClass,
++      series: analysis.classification.seriesKey };
++    inspect(snapshot);
++    return snapshot;
++  }
++
++  function assertCanonicalSnapshot(expected, actual) {
++    if (!expected || typeof expected.sourceMOL !== 'string' || !expected.sourceMOL || !actual ||
++        ['moleculeId', 'sourceMOL', 'correctName', 'chemicalClass', 'series'].some(function (field) {
++          return actual[field] !== expected[field];
++        })) throw error('canonical-mismatch', 'Η προβολή δεν συμφωνεί με την επαληθευμένη αποστολή.');
++    inspect(expected);
++    inspect(actual);
++    [['pieces', ['id', 'text', 'separatorBefore', 'mode']], ['atoms', ['id', 'element']],
++      ['bonds', ['id', 'a', 'b', 'order']]].forEach(function (entry) {
++      var field = entry[0], keys = entry[1];
++      if (actual[field].length !== expected[field].length || expected[field].some(function (item, i) {
++        return keys.some(function (key) { return actual[field][i][key] !== item[key]; });
++      })) throw error('canonical-mismatch', 'Τα συνθετικά ή οι δείκτες της προβολής δεν συμφωνούν με την αποστολή.');
++    });
++    return actual;
++  }
++
+   function uniqueSets(sets) {
+     var seen = new Set();
+     return sets.map(sorted).filter(function (ids) {
+@@ -371,7 +435,8 @@
+     return { correct: exact, kind: exact ? 'exact' : 'incorrect' };
+   }
+ 
+-  var api = Object.freeze({ starterIds: starterIds, missions: missions, grade: grade, validateSnapshot: validateSnapshot });
++  var api = Object.freeze({ starterIds: starterIds, missions: missions, grade: grade, validateSnapshot: validateSnapshot,
++    canonicalSnapshot: canonicalSnapshot, assertCanonicalSnapshot: assertCanonicalSnapshot });
+   root.NameleculeMolecularDetectiveEngine = api;
+   if (typeof module !== 'undefined' && module.exports) module.exports = api;
+ })(typeof window !== 'undefined' ? window : globalThis);
+--- before/js/namelecule-molecular-detective.js
++++ js/namelecule-molecular-detective.js
+@@ -8,11 +8,114 @@
+   const labels = {methane: 'Μεθάνιο', ethane: 'Αιθάνιο', propane: 'Προπάνιο', butane: 'Βουτάνιο', pentane: 'Πεντάνιο', methyl_2_pentane: '2-μεθυλοπεντάνιο', dimethyl_2_3_butane: '2,3-διμεθυλοβουτάνιο', ethyl_3_dimethyl_2_5_hexane: '3-αιθυλο-2,5-διμεθυλοεξάνιο', methyl_2_butane: '2-μεθυλοβουτάνιο', methyl_3_pentane: '3-μεθυλοπεντάνιο', ethyl_3_pentane: '3-αιθυλοπεντάνιο', dimethyl_2_2_propane: '2,2-διμεθυλοπροπάνιο', dimethyl_2_2_butane: '2,2-διμεθυλοβουτάνιο', ethyl_3_methyl_2_pentane: '3-αιθυλο-2-μεθυλοπεντάνιο', ethene: 'Αιθένιο', butene_1: '1-βουτένιο', butene_2: '2-βουτένιο', butyne_1: '1-βουτίνιο', butyne_2: '2-βουτίνιο', butadiene_1_2: '1,2-βουταδιένιο', butadiene_1_3: '1,3-βουταδιένιο', ethanol: 'Αιθανόλη', butanol_2: '2-βουτανόλη', propanal: 'Προπανάλη', propanone: 'Προπανόνη', pentanone_3: '3-πεντανόνη', methanoicacid: 'Μεθανικό οξύ'};
+   const familyLabels = {'parent-chain': 'Κύρια αλυσίδα', 'single-bonds': 'Απλοί δεσμοί', 'double-bonds': 'Διπλοί δεσμοί', 'triple-bonds': 'Τριπλοί δεσμοί', branches: 'Μεθυλομάδες', 'ethyl-branches': 'Αιθυλομάδες', hydroxyl: 'Υδροξύλιο', aldehyde: 'Αλδεϋδομάδα', carbonyl: 'Καρβονύλιο', carboxyl: 'Καρβοξύλιο'};
+   const params = new URLSearchParams(location.search);
+-  if (params.get('embedded') === '1') document.body.classList.add('detective-embedded');
+-  const state = {phase: 'startup', session: '', requestId: 0, roundSerial: 0, missionSerial: 0, roundId: null, moleculeId: null, snapshot: null, missions: [], mission: null, bridgeMissionId: null, loadRequestId: 0, configureRequestId: 0, selectionRevision: -1, atoms: [], bonds: [], correct: false, stopped: false};
++  const lessonChannel = 'namelecule-detective-lesson-v1';
++  const lessonSession = params.get('lessonSession');
++  const lesson = parent !== window && /^[A-Za-z0-9_-]{16,128}$/.test(lessonSession || '')
++    ? {current: null, lastId: 0, nativeReady: false, lastHeight: null, lastSnapshot: null, resizeFrame: null, observer: null} : null;
++  const lessonMolecules = ['methane', 'ethane', 'propane', 'butane', 'pentane', 'methyl_2_pentane', 'dimethyl_2_3_butane', 'ethyl_3_dimethyl_2_5_hexane'];
++  if (params.get('embedded') === '1' || lesson) document.body.classList.add('detective-embedded');
++  document.body.classList.toggle('detective-controlled', !!lesson);
++  const state = {phase: 'startup', session: '', requestId: 0, roundSerial: 0, missionSerial: 0, roundId: null, moleculeId: null, snapshot: null, missions: [], mission: null, bridgeMissionId: null, loadRequestId: 0, configureRequestId: 0, selectionRevision: -1, atoms: [], bonds: [], attempts: 0, submitted: false, restoring: null, correct: false, stopped: false};
+   let deadline;
+   let resizeFrame;
+-  const sameSelection = (a, b) => JSON.stringify(a) === JSON.stringify(b);
++  const scrolling = {frame: null, moving: false};
++  const sameSelection = (a, b) => a.length === b.length && a.every(id => b.includes(id));
++  function snapshot() { return {atoms: state.atoms.slice(), bonds: state.bonds.slice(), attempts: state.attempts, submitted: state.submitted}; }
++  function postLesson(type, data = {}, current = lesson?.current) {
++    if (!lesson || state.stopped || (type !== 'ready' && !current)) return;
++    const identity = current ? {requestId: current.requestId, attemptId: current.attemptId, moleculeId: current.moleculeId, missionId: current.missionId} : {};
++    parent.postMessage({channel: lessonChannel, session: lessonSession, ...identity, type, ...data}, location.origin);
++  }
++  function scheduleSize() {
++    if (!lesson || lesson.resizeFrame !== null || state.stopped) return;
++    lesson.resizeFrame = requestAnimationFrame(() => {
++      lesson.resizeFrame = null;
++      if (!lesson.current?.ready || state.stopped) return;
++      const height = Math.max(80, Math.min(8000, Math.ceil(document.body.getBoundingClientRect().height)));
++      if (Number.isFinite(height) && height !== lesson.lastHeight) { lesson.lastHeight = height; postLesson('resize', {height}); }
++    });
++  }
++  function publishSnapshot() {
++    if (lesson?.current?.ready && state.phase === 'active') {
++      const value = snapshot(), signature = JSON.stringify(value);
++      lesson.current.initialState = value;
++      if (signature !== lesson.lastSnapshot) { lesson.lastSnapshot = signature; postLesson('state', {state: value, stateRevision: ++lesson.current.stateRevision}); }
++    }
++    scheduleSize();
++  }
++  function stopLocalReveal() {
++    if (scrolling.frame !== null) cancelAnimationFrame(scrolling.frame);
++    scrolling.frame = null;
++    if (scrolling.moving) {
++      const top = scrollY, left = scrollX;
++      const max = Math.max(0, (document.scrollingElement || document.documentElement).scrollHeight - innerHeight);
++      const adjacent = top < max ? Math.min(max, top + 1) : Math.max(0, top - 1);
++      if (adjacent !== top) window.scrollTo({top: adjacent, left, behavior: 'instant'});
++      window.scrollTo({top, left, behavior: 'instant'});
++    }
++    scrolling.moving = false;
++  }
++  function interruptReveal() { stopLocalReveal(); if (lesson?.current?.ready) postLesson('scroll-interrupt'); }
++  function revealRange(purpose) {
++    stopLocalReveal(); scheduleSize();
++    const current = lesson?.current, roundId = state.roundId;
++    scrolling.frame = requestAnimationFrame(() => {
++      scrolling.frame = requestAnimationFrame(() => {
++        scrolling.frame = null;
++        if (state.stopped || state.phase !== 'active' || roundId !== state.roundId || (lesson && (!current?.ready || current !== lesson.current))) return;
++        const firstNode = purpose === 'feedback' ? ui.feedback : $('mission-title');
++        const lastNode = purpose === 'feedback' ? $('detective-feedback-end') : ui['mission-prompt'];
++        if (firstNode.hidden || !firstNode.isConnected || !lastNode.isConnected) return;
++        const first = firstNode.getBoundingClientRect(), last = lastNode.getBoundingClientRect();
++        if (first.height <= 0 || last.height <= 0) return;
++        if (lesson) {
++          const body = document.body.getBoundingClientRect();
++          postLesson('reveal', {purpose, startY: Math.max(0, first.top - body.top), endY: Math.max(0, last.bottom - body.top)});
++          return;
++        }
++        const top = 12, bottom = innerHeight - 12;
++        if (bottom <= top || (first.top >= top && last.bottom <= bottom)) return;
++        const delta = last.bottom - first.top > bottom - top || first.top < top ? first.top - top : last.bottom - bottom;
++        const destination = Math.max(0, Math.min(document.documentElement.scrollHeight - innerHeight, scrollY + delta));
++        const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
++        scrolling.moving = !reduced;
++        window.scrollTo({top: destination, left: scrollX, behavior: reduced ? 'instant' : 'smooth'});
++      });
++    });
++  }
++  function validateLessonLoad(data) {
++    if (typeof data.attemptId !== 'string' || !data.attemptId || data.attemptId.length > 160 || !lessonMolecules.includes(data.moleculeId) ||
++        typeof data.missionId !== 'string' || !data.missionId || data.missionId.length > 256 ||
++        typeof data.explanation !== 'string' || data.explanation.length > 8000 || data.snapshot?.moleculeId !== data.moleculeId) throw new Error('Μη έγκυρα δεδομένα άσκησης.');
++    // This boundary verifies the complete canonical graph, source and name;
++    // the parent's accepted sets are never part of the protocol.
++    engine.assertCanonicalSnapshot(data.snapshot, data.snapshot);
++    const mission = engine.missions(data.snapshot).find(item => item.id === data.missionId);
++    if (!mission) throw new Error('Η αποστολή δεν αντιστοιχεί σε αυτή την άσκηση.');
++    const raw = data.initialState || {atoms: [], bonds: [], attempts: 0, submitted: false};
++    const known = (ids, all) => Array.isArray(ids) && ids.length <= all.length && new Set(ids).size === ids.length && ids.every(id => Number.isSafeInteger(id) && all.some(item => item.id === id));
++    if (!known(raw.atoms, data.snapshot.atoms) || !known(raw.bonds, data.snapshot.bonds) ||
++        (mission.kind === 'atoms' ? raw.bonds.length : raw.atoms.length) ||
++        !Number.isSafeInteger(raw.attempts) || raw.attempts < 0 || typeof raw.submitted !== 'boolean' || (raw.submitted && !raw.attempts)) throw new Error('Η αποθηκευμένη προσπάθεια δεν επαληθεύτηκε.');
++    return {requestId: data.requestId, attemptId: data.attemptId, moleculeId: data.moleculeId, missionId: data.missionId,
++      snapshot: structuredClone(data.snapshot), explanation: data.explanation,
++      initialState: {atoms: raw.atoms.slice(), bonds: raw.bonds.slice(), attempts: raw.attempts, submitted: raw.submitted}, stateRevision: 0, ready: false};
++  }
++  function receiveLesson(event) {
++    if (!lesson || state.stopped || event.source !== parent || event.origin !== location.origin) return;
++    const data = event.data;
++    if (!data || data.channel !== lessonChannel || data.session !== lessonSession || data.command !== 'load' ||
++        !Number.isSafeInteger(data.requestId) || data.requestId <= lesson.lastId) return;
++    lesson.lastId = data.requestId;
++    try {
++      const current = validateLessonLoad(data);
++      stopLocalReveal(); lesson.current = current; lesson.lastHeight = null; lesson.lastSnapshot = null;
++      if (lesson.nativeReady) load(current.moleculeId);
++      // Until native startup completes this is a single bounded latest-load queue.
++    } catch (error) {
++      if (typeof data.attemptId === 'string' && typeof data.moleculeId === 'string' && typeof data.missionId === 'string') postLesson('error', {message: error.message}, data);
++    }
++  }
+   function status(text, error = false) { ui['game-status'].textContent = text; ui['game-status'].classList.toggle('error', error); }
+   function busy(message) {
+     ui['viewer-mask'].hidden = false;
+@@ -26,7 +129,7 @@
+     ui['mission-select'].disabled = !ready;
+     for (const id of ['check-answer', 'zoom-in', 'zoom-out']) ui[id].disabled = !ready;
+     ui['clear-selection'].disabled = !ready || !(state.atoms.length || state.bonds.length);
+-    ui['next-mission'].hidden = !ready || !state.correct;
++    ui['next-mission'].hidden = !!lesson || !ready || !state.correct;
+   }
+   function watch(message, milliseconds = 30000) {
+     clearTimeout(deadline);
+@@ -37,19 +140,23 @@
+     ui['molecule-viewer'].contentWindow?.postMessage({channel, session: state.session, requestId, roundId: state.roundId, moleculeId: state.moleculeId, command, ...extra}, location.origin);
+     return requestId;
+   }
+-  function clearFeedback() {
++  function clearFeedback(resetSubmitted = true) {
+     state.correct = false;
++    if (resetSubmitted) state.submitted = false;
+     ui.feedback.hidden = true;
+     ui.feedback.replaceChildren();
+     ui.feedback.classList.remove('success');
+     updateControls();
++    scheduleSize();
+   }
+   function fail(message) {
+     clearTimeout(deadline);
+     state.phase = 'error';
+     busy(message);
+     status(message, true);
+-    ui['retry-load'].hidden = false;
++    ui['retry-load'].hidden = !!lesson;
++    if (lesson?.current) { lesson.current.ready = false; postLesson('error', {message}); }
++    scheduleSize();
+   }
+   function renderName() {
+     const fragment = document.createDocumentFragment();
+@@ -70,27 +177,36 @@
+     ui['mission-prompt'].textContent = state.mission.prompt;
+     ui['selection-kind'].textContent = state.mission.kind === 'atoms' ? 'Επιλογή ατόμων' : 'Επιλογή δεσμών';
+   }
+-  function configure(index) {
++  function configure(index, initialState = null) {
++    if (lesson && !initialState) return;
+     if (!state.snapshot || !Number.isInteger(index) || !state.missions[index]) return;
+     state.phase = 'configuring';
+     state.mission = state.missions[index];
+     state.bridgeMissionId = state.mission.id + ':' + (++state.missionSerial);
+     state.selectionRevision = -1;
+     state.atoms = []; state.bonds = [];
++    state.attempts = initialState?.attempts || 0;
++    state.submitted = initialState?.submitted || false;
++    state.restoring = initialState;
+     ui['mission-select'].value = String(index);
+-    clearFeedback(); renderName();
++    clearFeedback(false); renderName();
+     ui['selection-status'].textContent = 'Δεν έχεις επιλέξει ακόμη κάτι.';
+     busy('Ετοιμάζουμε την αποστολή.');
+-    state.configureRequestId = send('configure', {kind: state.mission.kind, missionId: state.bridgeMissionId});
++    state.configureRequestId = send('configure', {kind: state.mission.kind, missionId: state.bridgeMissionId,
++      ...(initialState ? {initialSelection: {atoms: initialState.atoms.slice(), bonds: initialState.bonds.slice()}} : {})});
+     watch('Η αποστολή δεν ετοιμάστηκε. Δοκίμασε ξανά.');
+   }
+   function load(id) {
+     if (!engine.starterIds.includes(id)) return;
++    if (lesson && (!lesson.nativeReady || lesson.current?.moleculeId !== id)) return;
++    stopLocalReveal();
++    if (lesson) lesson.current.ready = false;
+     state.phase = 'loading';
+     state.moleculeId = id;
+     state.roundId = 'detective-round-' + (++state.roundSerial);
+     state.snapshot = null; state.missions = []; state.mission = null; state.bridgeMissionId = null;
+     state.atoms = []; state.bonds = [];
++    state.attempts = 0; state.submitted = false; state.restoring = null;
+     clearFeedback();
+     ui['molecule-select'].value = id;
+     ui['mission-select'].replaceChildren();
+@@ -107,7 +223,8 @@
+     if (!Array.isArray(data.atoms) || !Array.isArray(data.bonds) || !Number.isSafeInteger(data.selectionRevision) || data.selectionRevision < 0) return false;
+     const knownAtoms = new Set(state.snapshot.atoms.map(a => a.id));
+     const knownBonds = new Set(state.snapshot.bonds.map(b => b.id));
+-    return data.atoms.every(a => Number.isSafeInteger(a) && knownAtoms.has(a)) && data.bonds.every(b => Number.isSafeInteger(b) && knownBonds.has(b)) && new Set(data.atoms).size === data.atoms.length && new Set(data.bonds).size === data.bonds.length;
++    return !(state.mission.kind === 'atoms' ? data.bonds.length : data.atoms.length) &&
++      data.atoms.every(a => Number.isSafeInteger(a) && knownAtoms.has(a)) && data.bonds.every(b => Number.isSafeInteger(b) && knownBonds.has(b)) && new Set(data.atoms).size === data.atoms.length && new Set(data.bonds).size === data.bonds.length;
+   }
+   function receive(event) {
+     const data = event.data;
+@@ -115,6 +232,13 @@
+     if (data.type === 'ready' && state.phase === 'startup') {
+       if (!Array.isArray(data.inventory) || engine.starterIds.some(id => !data.inventory.some(item => item.id === id))) { fail('Δεν είναι διαθέσιμα όλα τα μόρια της εξάσκησης.'); return; }
+       clearTimeout(deadline);
++      if (lesson) {
++        lesson.nativeReady = true;
++        postLesson('ready', {}, null);
++        if (lesson.current) load(lesson.current.moleculeId);
++        else { status('Περιμένουμε το μόριο του μαθήματος.'); busy('Περιμένουμε την αποστολή του μαθήματος.'); }
++        return;
++      }
+       const first = engine.starterIds.includes(params.get('molecule')) ? params.get('molecule') : engine.starterIds[0];
+       load(first);
+       return;
+@@ -127,6 +251,7 @@
+     if (data.type === 'round' && state.phase === 'loading' && data.requestId === state.loadRequestId) {
+       try {
+         if (data.snapshot?.moleculeId !== state.moleculeId) throw new Error('Molecule mismatch');
++        if (lesson) engine.assertCanonicalSnapshot(lesson.current.snapshot, data.snapshot);
+         state.missions = engine.missions(data.snapshot);
+         if (!state.missions.length) throw new Error('No supported missions');
+         state.snapshot = data.snapshot;
+@@ -138,52 +263,68 @@
+           item.textContent = (familyLabels[mission.family] || 'Στοιχείο στο όνομα') + ' — ' + (piece?.text || '');
+           return item;
+         }));
+-        configure(0);
++        const index = lesson ? state.missions.findIndex(mission => mission.id === lesson.current.missionId) : 0;
++        if (index < 0) throw new Error('Canonical mission mismatch');
++        configure(index, lesson?.current?.initialState || null);
+       } catch (error) { fail('Η αποστολή αυτού του μορίου δεν είναι διαθέσιμη. Δοκίμασε ξανά.'); }
+       return;
+     }
+     if (!state.snapshot || data.missionId !== state.bridgeMissionId || data.requestId < state.configureRequestId || data.kind !== state.mission?.kind) return;
+-    if (data.type === 'configured' && state.phase === 'configuring') {
++    let configured = false;
++    if (data.type === 'configured' && state.phase === 'configuring' && data.requestId === state.configureRequestId) {
+       if (!validSelection(data)) { fail('Η επιλογή δεν μπόρεσε να ετοιμαστεί. Δοκίμασε ξανά.'); return; }
++      if (state.restoring && (!sameSelection(state.restoring.atoms, data.atoms) || !sameSelection(state.restoring.bonds, data.bonds))) { fail('Η αποθηκευμένη επιλογή δεν εμφανίστηκε σωστά. Δοκίμασε ξανά.'); return; }
+       clearTimeout(deadline);
+       state.phase = 'active';
+       ui['viewer-mask'].hidden = true;
+       ui['viewer-wrap'].setAttribute('aria-busy', 'false');
+       ui['retry-load'].hidden = true;
+       status('Παρατήρησε το επισημασμένο συνθετικό και επίλεξε όσα ζητά η αποστολή.');
++      configured = true;
+     }
+     if (['configured', 'selection'].includes(data.type) && state.phase === 'active' && validSelection(data) && (data.selectionRevision > state.selectionRevision || (data.selectionRevision === state.selectionRevision && sameSelection(state.atoms, data.atoms) && sameSelection(state.bonds, data.bonds)))) {
+       const changed = !sameSelection(state.atoms, data.atoms) || !sameSelection(state.bonds, data.bonds);
+       state.selectionRevision = data.selectionRevision;
+       state.atoms = data.atoms.slice(); state.bonds = data.bonds.slice();
+-      if (changed) clearFeedback();
++      if (changed && !configured) clearFeedback();
+       const count = state.mission.kind === 'atoms' ? state.atoms.length : state.bonds.length;
+       ui['selection-status'].textContent = count ? (state.mission.kind === 'atoms' ? 'Επιλεγμένα άτομα: ' : 'Επιλεγμένοι δεσμοί: ') + count : 'Δεν έχεις επιλέξει ακόμη κάτι.';
+       if (data.note === 'WRONG_KIND') status(state.mission.kind === 'atoms' ? 'Σε αυτή την αποστολή επίλεξε άτομα, πατώντας στα σύμβολά τους.' : 'Σε αυτή την αποστολή επίλεξε δεσμούς, πατώντας στις γραμμές τους.');
+       updateControls();
+-    }
+-  }
+-  function revealFeedback() {
+-    requestAnimationFrame(() => {
+-      const bounds = ui.feedback.getBoundingClientRect();
+-      if (bounds.bottom > innerHeight || bounds.top < 0) ui.feedback.scrollIntoView({block: 'nearest', behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'});
+-    });
+-  }
+-  function check() {
+-    if (state.phase !== 'active') return;
++      if (configured) {
++        state.restoring = null;
++        if (state.submitted) showFeedback();
++        if (lesson) {
++          lesson.current.ready = true;
++          lesson.current.initialState = snapshot();
++          lesson.lastSnapshot = JSON.stringify(snapshot());
++          lesson.current.stateRevision = 0;
++          postLesson('loaded', {state: snapshot(), snapshot: state.snapshot, stateRevision: 0});
++          scheduleSize(); revealRange(state.submitted ? 'feedback' : 'entry');
++        }
++      } else publishSnapshot();
++    }
++  }
++  function showFeedback() {
+     const result = engine.grade(state.mission, {atoms: state.atoms, bonds: state.bonds});
+     state.correct = result.correct;
+     const heading = document.createElement('strong');
+     const message = document.createElement('p');
+     heading.textContent = result.correct ? '✓ Η υπόθεση λύθηκε!' : result.kind === 'empty' ? 'Κάνε πρώτα μια επιλογή' : 'Παρατήρησε ξανά τα στοιχεία';
+-    message.textContent = result.correct ? state.mission.explanation : result.kind === 'empty' ? 'Επίλεξε στο μοριακό σχέδιο όσα ζητά η αποστολή.' : 'Η επιλογή δεν αντιστοιχεί ακόμη στο επισημασμένο συνθετικό. Μπορείς να τη διορθώσεις και να δοκιμάσεις ξανά.';
++    message.textContent = result.correct ? (lesson?.current?.explanation || state.mission.explanation) : result.kind === 'empty' ? 'Επίλεξε στο μοριακό σχέδιο όσα ζητά η αποστολή.' : 'Η επιλογή δεν αντιστοιχεί ακόμη στο επισημασμένο συνθετικό. Μπορείς να τη διορθώσεις και να δοκιμάσεις ξανά.';
+     ui.feedback.replaceChildren(heading, message);
++    const end = document.createElement('span'); end.id = 'detective-feedback-end'; end.className = 'detective-feedback-end'; end.setAttribute('aria-hidden', 'true'); ui.feedback.append(end);
+     ui.feedback.classList.toggle('success', result.correct);
+     ui.feedback.hidden = false;
+-    updateControls(); revealFeedback();
++    updateControls(); scheduleSize();
++  }
++  function check() {
++    if (state.phase !== 'active') return;
++    state.attempts++; state.submitted = true;
++    showFeedback(); publishSnapshot(); revealRange('feedback');
+   }
+   function next() {
+-    if (!state.correct || state.phase !== 'active') return;
++    if (lesson || !state.correct || state.phase !== 'active') return;
+     const index = state.missions.indexOf(state.mission);
+     if (index + 1 < state.missions.length) configure(index + 1);
+     else load(engine.starterIds[(engine.starterIds.indexOf(state.moleculeId) + 1) % engine.starterIds.length]);
+@@ -192,44 +333,70 @@
+   function start() {
+     if (!engine?.starterIds?.length) { fail('Το παιχνίδι δεν μπόρεσε να ξεκινήσει. Δοκίμασε ξανά.'); return; }
+     clearTimeout(deadline);
++    stopLocalReveal();
++    if (lesson) { lesson.nativeReady = false; lesson.lastHeight = null; if (lesson.current) lesson.current.ready = false; }
+     state.phase = 'startup'; state.session = crypto.randomUUID().replaceAll('-', ''); state.requestId = 0;
+     state.snapshot = null; state.mission = null; state.bridgeMissionId = null;
+-    state.atoms = []; state.bonds = [];
++    state.atoms = []; state.bonds = []; state.attempts = 0; state.submitted = false; state.restoring = null;
+     clearFeedback(); busy('Φορτώνουμε τον ανεπτυγμένο τύπο.');
+     status('Ετοιμάζουμε την πρώτη αποστολή.');
+     ui['retry-load'].hidden = true;
+     ui['molecule-select'].replaceChildren(...engine.starterIds.map(id => { const option = document.createElement('option'); option.value = id; option.textContent = labels[id] || id; return option; }));
+-    ui['molecule-viewer'].src = 'molecular-detective-viewer.html?v=alkane-pool-20261116-r1&session=' + state.session;
++    ui['molecule-viewer'].src = 'molecular-detective-viewer.html?v=four-games-20261116-r1&session=' + state.session;
+     watch('Η προβολή του μορίου δεν ξεκίνησε. Δοκίμασε ξανά.', 45000);
+   }
+   function stop() {
+     if (state.stopped) return;
+     send('stop'); state.stopped = true;
+-    clearTimeout(deadline); cancelAnimationFrame(resizeFrame);
++    clearTimeout(deadline); cancelAnimationFrame(resizeFrame); resizeFrame = null;
++    stopLocalReveal();
++    if (lesson) {
++      if (lesson.resizeFrame !== null) cancelAnimationFrame(lesson.resizeFrame);
++      lesson.resizeFrame = null; lesson.observer?.disconnect(); lesson.nativeReady = false;
++    }
+     window.removeEventListener('message', receive);
+-  }
+-  ui['molecule-select'].addEventListener('change', () => load(ui['molecule-select'].value));
+-  ui['mission-select'].addEventListener('change', () => configure(Number(ui['mission-select'].value)));
++    window.removeEventListener('message', receiveLesson);
++  }
++  ui['molecule-select'].addEventListener('change', () => { if (!lesson) load(ui['molecule-select'].value); });
++  ui['mission-select'].addEventListener('change', () => { if (!lesson) configure(Number(ui['mission-select'].value)); });
+   ui['check-answer'].addEventListener('click', check);
+   ui['clear-selection'].addEventListener('click', () => { if (state.phase === 'active') send('clear', {missionId: state.bridgeMissionId}); });
+   ui['next-mission'].addEventListener('click', next);
+   ui['zoom-in'].addEventListener('click', () => { if (state.phase === 'active') send('zoom', {direction: 1, missionId: state.bridgeMissionId}); });
+   ui['zoom-out'].addEventListener('click', () => { if (state.phase === 'active') send('zoom', {direction: -1, missionId: state.bridgeMissionId}); });
+-  ui['retry-load'].addEventListener('click', start);
++  ui['retry-load'].addEventListener('click', () => { if (!lesson) start(); });
+   window.addEventListener('message', receive);
++  window.addEventListener('message', receiveLesson);
+   window.addEventListener('pagehide', stop, {once: true});
+   window.addEventListener('pageshow', event => {
+     if (event.persisted && state.stopped) {
+       state.stopped = false;
+       window.addEventListener('message', receive);
++      window.addEventListener('message', receiveLesson);
+       window.addEventListener('pagehide', stop, {once: true});
++      lesson?.observer?.observe(document.body);
+       start();
+     }
+   });
+   window.addEventListener('resize', () => {
++    scheduleSize();
+     if (resizeFrame || state.phase !== 'active') return;
+     resizeFrame = requestAnimationFrame(() => { resizeFrame = null; if (!state.stopped && state.phase === 'active') send('resize', {missionId: state.bridgeMissionId}); });
+   });
+-  window.NameleculeMolecularDetective = Object.freeze({snapshot: () => ({phase: state.phase, moleculeId: state.moleculeId, roundId: state.roundId, missionId: state.mission?.id, bridgeMissionId: state.bridgeMissionId, missionIndex: state.missions.indexOf(state.mission), missionCount: state.missions.length, kind: state.mission?.kind, atoms: state.atoms.slice(), bonds: state.bonds.slice(), selectionRevision: state.selectionRevision, correct: state.correct, requestId: state.requestId})});
++  function lessonExitKey(event) { if (lesson && event.key === 'Escape') { event.preventDefault(); postLesson('exit'); } }
++  window.addEventListener('keydown', lessonExitKey);
++  ['wheel', 'touchstart', 'pointerdown', 'keydown'].forEach(type => window.addEventListener(type, interruptReveal, {capture: true, passive: true}));
++  ui['molecule-viewer'].addEventListener('load', () => {
++    // Input in the native same-origin frame does not bubble through its owner.
++    try {
++      ui['molecule-viewer'].contentWindow.addEventListener('keydown', lessonExitKey);
++      ['wheel', 'touchstart', 'pointerdown', 'keydown'].forEach(type => ui['molecule-viewer'].contentWindow.addEventListener(type, interruptReveal, {capture: true, passive: true}));
++    } catch (_) { /* The ordinary startup/retry path reports viewer failures. */ }
++  });
++  if (lesson) {
++    document.documentElement.classList.add('lesson-mode');
++    lesson.observer = new ResizeObserver(scheduleSize); lesson.observer.observe(document.body);
++  }
++  window.NameleculeMolecularDetective = Object.freeze({snapshot: () => ({phase: state.phase, moleculeId: state.moleculeId, roundId: state.roundId, missionId: state.mission?.id, bridgeMissionId: state.bridgeMissionId, missionIndex: state.missions.indexOf(state.mission), missionCount: state.missions.length, kind: state.mission?.kind, ...snapshot(), selectionRevision: state.selectionRevision, correct: state.correct, requestId: state.requestId})});
+   start();
+ })();
+--- before/js/namelecule-molecular-detective-host.js
++++ js/namelecule-molecular-detective-host.js
+@@ -90,7 +90,8 @@
+     if (!current?.ready || selectedMol !== current.moleculeId || mode2D !== 'expanded')
+       throw new Error('Current expanded round is not ready');
+     const classification = nameExamples[selectedMol].classification;
+-    return {moleculeId: selectedMol, ...serializeName(), ...actualGraph(),
++    return {moleculeId: selectedMol, sourceMOL: nameExamples[selectedMol].structure2D_Expanded,
++      ...serializeName(), ...actualGraph(),
+       chemicalClass: classification.chemicalClass, series: classification.seriesKey};
+   }
+   function pickGeometryReady(graph) {
+@@ -129,6 +130,16 @@
+         (kind === 'atoms' && bonds.length) || (kind === 'bonds' && atoms.length))
+       throw new Error('Invalid native selection');
+     return {atoms, bonds};
++  }
++  function initialSelection(value, selectionKind) {
++    if (value === undefined) return {atoms: [], bonds: []};
++    if (!value || !Array.isArray(value.atoms) || !Array.isArray(value.bonds) ||
++        value.atoms.some(id => !Number.isSafeInteger(id) || id < 1 || id > allAtomsTypeList.length) ||
++        value.bonds.some(id => !Number.isSafeInteger(id) || id < 1 || id > bondList.length) ||
++        new Set(value.atoms).size !== value.atoms.length || new Set(value.bonds).size !== value.bonds.length ||
++        (selectionKind === 'atoms' && value.bonds.length) || (selectionKind === 'bonds' && value.atoms.length))
++      throw new Error('Invalid initial native selection');
++    return {atoms: value.atoms.slice(), bonds: value.bonds.slice()};
+   }
+   function sendSelection(type = 'selection', request = selectionContext, extra = {}) {
+     if (!activeMission()) return;
+@@ -176,7 +187,8 @@
+             const classification = nameExamples[selectedMol].classification;
+             if (!classification?.chemicalClass || !classification.seriesKey) throw new Error('Missing native classification');
+             request.ready = true;
+-            request.snapshot = {moleculeId: selectedMol, ...data, ...graph,
++            request.snapshot = {moleculeId: selectedMol, sourceMOL: nameExamples[selectedMol].structure2D_Expanded,
++              ...data, ...graph,
+               chemicalClass: classification.chemicalClass, series: classification.seriesKey};
+             root.dataset.molecularDetectiveVisible = 'true';
+             send({type: 'round', snapshot: request.snapshot}, request);
+@@ -246,6 +258,9 @@
+         if (!['atoms', 'bonds'].includes(data.kind) || !validToken(data.missionId, 256)) {
+           error('INVALID_MISSION', 'Μη έγκυρη αποστολή.', request); return;
+         }
++        // Recheck the loaded expanded graph before restoring any raw IDs.
++        getSnapshot();
++        const restored = initialSelection(data.initialSelection, data.kind);
+         ++revision;
+         kind = data.kind;
+         missionId = data.missionId;
+@@ -253,10 +268,17 @@
+         quiet(() => {
+           fixConvention();
+           fMulerSelectClear();
+-          fMulerSelectState().active = true;
++          const state = fMulerSelectState();
++          state.active = true;
++          state.molKey = fMulerSelectMolKey();
++          state.atoms2D = restored.atoms.slice();
++          state.bonds2D = restored.bonds.slice();
+           document.getElementById('jsmeNomeclatureSVG').classList.add('selecting');
+           paintSelection();
+         });
++        const applied = selected();
++        if (['atoms', 'bonds'].some(field => applied[field].join(',') !== restored[field].slice().sort((a, b) => a - b).join(',')))
++          throw new Error('Initial native selection was not applied');
+         sendSelection('configured', request);
+         return;
+       }
+--- before/games/molecular-detective.html
++++ games/molecular-detective.html
+@@ -6,9 +6,9 @@
+   <meta name="theme-color" content="#254c50">
+   <title>Μοριακός ντεντέκτιβ · Namelecule</title>
+   <link rel="stylesheet" href="../css/namelecule-name-builder.css?v=builder-methods-20261112-r3">
+-  <link rel="stylesheet" href="../css/namelecule-molecular-detective.css?v=detective-20261115-r1">
+-  <script src="../js/namelecule-molecular-detective-engine.js?v=alkane-pool-20261116-r1" defer></script>
+-  <script src="../js/namelecule-molecular-detective.js?v=alkane-pool-20261116-r1" defer></script>
++  <link rel="stylesheet" href="../css/namelecule-molecular-detective.css?v=four-games-20261116-r1">
++  <script src="../js/namelecule-molecular-detective-engine.js?v=four-games-20261116-r1" defer></script>
++  <script src="../js/namelecule-molecular-detective.js?v=four-games-20261116-r1" defer></script>
+ </head>
+ <body>
+   <a class="skip-link" href="#mission-title">Πήγαινε στην αποστολή</a>
+--- before/css/namelecule-molecular-detective.css
++++ css/namelecule-molecular-detective.css
+@@ -29,10 +29,15 @@
+ .detective-view-note { padding: 12px 18px; margin: 0; color: var(--muted); border-top: 1px solid #e4ede7; text-align: center; font-size: .8rem; }
+ .detective-game .feedback { margin-top: 14px; }
+ .detective-game .feedback p { margin: 0; }
++.detective-feedback-end { display: block; height: 1px; }
+ .detective-game .viewer-mask[hidden] { display: none; }
+ body.detective-embedded .site-header, body.detective-embedded .site-footer, body.detective-embedded .eyebrow { display: none; }
+ body.detective-embedded .detective-game { max-width: 1180px; padding: 16px 22px 24px; }
+ body.detective-embedded .game-status { min-height: 1.5em; padding-bottom: 8px; }
++body.detective-controlled .detective-round-tools label,
++body.detective-controlled .detective-round-tools select,
++body.detective-controlled #next-mission { display: none; }
++body.detective-controlled .detective-round-tools:has(#retry-load[hidden]) { display: none; }
+ 
+ @media (max-width: 850px) {
+   .detective-workspace { grid-template-columns: minmax(0, 1fr); grid-template-rows: auto auto auto; gap: 14px; }
+--- before/css/namelecule-quiz-checkpoints.css
++++ css/namelecule-quiz-checkpoints.css
+@@ -165,3 +165,11 @@
+   .nl-builder-actions { justify-content: stretch; }
+   .nl-builder-actions button { flex: 1 1 100%; }
+ }
++
++/* Detective keeps the game's visible logo/title inside its child document. */
++.nl-detective-heading { position:absolute;width:1px;height:1px;margin:-1px;overflow:hidden;clip-path:inset(50%); }
++.nl-detective-stage { position:relative;min-width:0; }
++.nl-detective-frame { display:block;width:100%;border:0;background:transparent; }
++.nl-detective-marker { position:absolute;width:1px;height:1px;pointer-events:none;left:0;top:0; }
++.nl-detective-actions { display:flex;flex-wrap:wrap;gap:12px;justify-content:flex-end;margin-top:18px; }
++@media(max-width:600px){.nl-detective-actions .nl-quiz-button{flex:1 1 100%;}}
+--- before/games/molecular-detective-viewer.html
++++ games/molecular-detective-viewer.html
+@@ -408,7 +408,7 @@
+        <script src="js/MULERMOC_dimethyl_ether_data.js?v=54.1"></script> -->
+   <script src="js/ui-icons-56.js?v=namelecule-v56-20261115-r1"></script>
+   <script src="js/mulermoc-nom-core-56.js?v=namelecule-v56-20261115-r1"></script>
+-  <script src="js/mulermoc-nom-molview-56.js?v=e484618054e26d9cdd871ea340a57f400dc7db1e816de1917a332fd1c5c5d47e"></script>
++  <script src="js/mulermoc-nom-molview-56.js?v=b6ea87d2340cdeaaff10e79369a92657856474b53a24da1d90eb5818b53eeb06"></script>
+   <script src="js/mulermoc-nom-teaching-56.js?v=namelecule-v56-20261115-r1"></script>
+   <script src="js/mulermoc-nom-note-56.js?v=namelecule-v56-20261115-r1"></script>
+   <script src="js/namelecule-game-repair.js?v=choice-games-20261111-r1"></script>
+@@ -434,7 +434,7 @@
+       if (el) el.style.display = "none";
+     }
+   </script>
+-<script src="js/namelecule-molecular-detective-host.js?v=177e7fc961d44b23c28b9650ef15deead4377f692fa866eadb96daac892608c0"></script>
++<script src="js/namelecule-molecular-detective-host.js?v=42caa8ec6a3ab833661cfc16fb543fd2cc7e8b7b4b30e7b1cad941fd4a90b35f"></script>
+ </body>
+ 
+ </html>
+--- before/scenarios/alkanes-user-3.scenario.json
++++ scenarios/alkanes-user-3.scenario.json
+@@ -263,7 +263,7 @@
+       "nameBoxLayout": 1,
+       "lang": "gr",
+       "title": "Εξάσκηση χωρίς διακλαδώσεις",
+-      "note": "Ώρα για μια μικρή στάση. Διάλεξε το <b>Συνεργείο ονομάτων</b> για να επισκευάσεις ονόματα ή το <b>Χτίσε το όνομα</b> για να τα σχηματίσεις από συνθετικά.\n\nΟλοκλήρωσε σωστά <b>τρία διαφορετικά μόρια χωρίς διακλαδώσεις στο ίδιο παιχνίδι</b> και δες τις εξηγήσεις. Έπειτα μπορείς να συνεχίσεις τη θεωρία, να δοκιμάσεις το άλλο παιχνίδι ή να εξασκηθείς σε άλλη τριάδα.",
++      "note": "Διάλεξε ένα από τα τέσσερα παιχνίδια. <b>Συνεργείο ονομάτων</b> (επισκευή ονόματος), <b>Χτίσε το όνομα</b> (σύνθεση από συνθετικά), <b>Μοριακό παζλ</b> (από το όνομα στη δομή) ή <b>Μοριακός ντεντέκτιβ</b> (βρες στη δομή όσα δηλώνει το επισημασμένο συνθετικό του σωστού ονόματος).\n\nΟλοκλήρωσε σωστά <b>τρία διαφορετικά μόρια χωρίς διακλαδώσεις στο ίδιο παιχνίδι</b> και δες την εξήγηση μετά από κάθε σωστή απάντηση. Στον Ντεντέκτιβ χρειάζεται <b>μία αποστολή ανά μόριο</b>. Έπειτα μπορείς να συνεχίσεις τη θεωρία, να εξασκηθείς σε άλλη τριάδα ή να δοκιμάσεις άλλο παιχνίδι.",
+       "noteFormat": "html",
+       "mode2D": "condensed",
+       "mainChainMode": "algorithmic",
+@@ -857,7 +857,7 @@
+       "nameBoxLayout": 1,
+       "lang": "gr",
+       "title": "Εξάσκηση με διακλαδώσεις",
+-      "note": "Διάλεξε το <b>Συνεργείο ονομάτων</b> ή το <b>Χτίσε το όνομα</b> για τρία διακλαδισμένα αλκάνια. Σύνδεσε την κύρια αλυσίδα, τις θέσεις και τις ομάδες με τα συνθετικά του ονόματος.\n\nΑφού ολοκληρώσεις σωστά <b>και τα τρία μόρια στο ίδιο παιχνίδι</b> και δεις τις εξηγήσεις, μπορείς να συνεχίσεις στην τελική εξερεύνηση, να δοκιμάσεις το άλλο παιχνίδι ή να εξασκηθείς σε άλλη τριάδα.",
++      "note": "Διάλεξε ένα από τα τέσσερα παιχνίδια. <b>Συνεργείο ονομάτων</b> (επισκευή ονόματος), <b>Χτίσε το όνομα</b> (σύνθεση από συνθετικά), <b>Μοριακό παζλ</b> (από το όνομα στη δομή) ή <b>Μοριακός ντεντέκτιβ</b> (βρες στη δομή όσα δηλώνει το επισημασμένο συνθετικό του σωστού ονόματος).\n\nΟλοκλήρωσε σωστά <b>τρία διαφορετικά μόρια με διακλαδώσεις στο ίδιο παιχνίδι</b> και δες την εξήγηση μετά από κάθε σωστή απάντηση. Στον Ντεντέκτιβ χρειάζεται <b>μία αποστολή ανά μόριο</b>. Έπειτα μπορείς να συνεχίσεις στην τελική εξερεύνηση, να εξασκηθείς σε άλλη τριάδα ή να δοκιμάσεις άλλο παιχνίδι.",
+       "noteFormat": "html",
+       "mode2D": "condensed",
+       "mainChainMode": "algorithmic",
+--- before/mulermoc-nom-57.html
++++ mulermoc-nom-57.html
+@@ -49,7 +49,7 @@
+ 
+   <link rel="stylesheet" href="css/namelecule-57.css?v=namelecule-v57-20261115-r1" />
+   <link rel="stylesheet" href="css/namelecule-repair-round.css?v=optional-triples-20261110-r1" />
+-  <link rel="stylesheet" href="css/namelecule-quiz-checkpoints.css?v=game-header-text-parity-20261111-r1" />
++  <link rel="stylesheet" href="css/namelecule-quiz-checkpoints.css?v=four-games-20261116-r1" />
+   <script src="js/namelecule-label-metrics.js?v=20261031-r1"></script>
+   <script src="js/vendor/jsme/namelecule-20261031-r1/jsme.nocache.js"></script>
+   <script src="js/vendor/jquery/jquery-4.0.0.min.js"></script>
+@@ -370,7 +370,7 @@
+        <script src="js/MULERMOC_dimethyl_ether_data.js?v=54.1"></script> -->
+   <script src="js/ui-icons-57.js?v=namelecule-v57-20261115-r1"></script>
+   <script src="js/mulermoc-nom-core-57.js?v=namelecule-v57-20261115-r1"></script>
+-  <script src="js/mulermoc-nom-molview-57.js?v=alkane-pool-20261116-r1"></script>
++  <script src="js/mulermoc-nom-molview-57.js?v=four-games-hydration-20261116-r1"></script>
+   <script src="js/mulermoc-nom-teaching-57.js?v=namelecule-v57-20261115-r1"></script>
+   <script src="js/mulermoc-nom-note-57.js?v=namelecule-v57-20261115-r1"></script>
+   <script src="js/namelecule-game-repair.js?v=alkane-pool-20261116-r2"></script>
+@@ -380,7 +380,7 @@
+   <script src="js/namelecule-generated-repair-checkpoint.js?v=alkane-pool-20261116-r1"></script>
+   <script src="js/namelecule-name-builder-engine.js?v=name-builder-20261111-r1"></script>
+   <script src="js/namelecule-molecular-puzzle-engine.js?v=puzzle-lesson-20261112-r1"></script>
+-  <script src="js/namelecule-game-choice-checkpoint.js?v=puzzle-lesson-20261112-r1"></script>
++  <script src="js/namelecule-game-choice-checkpoint.js?v=four-games-20261116-r3"></script>
+   <script src="js/mulermoc-nom-scenario-57.js?v=namelecule-v57-20261115-r1"></script>
+   <script src="js/mulermoc-nom-iupac-57.js?v=namelecule-v57-20261115-r1"></script>
+   <script src="js/mulermoc-nom-lang-57.js?v=namelecule-v57-20261115-r1"></script>
+--- before/js/mulermoc-nom-molview-55.js
++++ js/mulermoc-nom-molview-55.js
+@@ -4234,15 +4234,24 @@
+ function fInitData() {
+   for (let prop in nameExamples) {
+     const _m = (window.MOL2D && window.MOL2D[prop]) || {};
+-    const my2D_Condensed = _m.condensed !== undefined ? _m.condensed : null;
+-    const my2D_Expanded = _m.expanded !== undefined ? _m.expanded : null;
+-    const my2D_Skeletal = _m.skeletal !== undefined ? _m.skeletal : null;
++    const _customs = window.nameExamplesCustom;
++    const _custom = _customs && Object.prototype.hasOwnProperty.call(_customs, prop) &&
++      nameExamples[prop] === _customs[prop] ? _customs[prop] : null;
++    // JSME startup and document-ready both hydrate the catalog. Read every
++    // registered custom source value before writing its shared record again.
++    const my2D_Condensed = _m.condensed !== undefined ? _m.condensed :
++      _custom && _custom.structure2D_Condensed !== undefined ? _custom.structure2D_Condensed : null;
++    const my2D_Expanded = _m.expanded !== undefined ? _m.expanded :
++      _custom && _custom.structure2D_Expanded !== undefined ? _custom.structure2D_Expanded : null;
++    const my2D_Skeletal = _m.skeletal !== undefined ? _m.skeletal :
++      _custom && _custom.structure2D_Skeletal !== undefined ? _custom.structure2D_Skeletal : null;
++    const my3D = _custom && Object.prototype.hasOwnProperty.call(_custom, "file3D") ?
++      _custom.file3D : "mols/nomeclature-moc2/" + prop + "_3D.sdf";
+ 
+     nameExamples[prop].structure2D_Condensed = my2D_Condensed;
+     nameExamples[prop].structure2D_Expanded = my2D_Expanded;
+     nameExamples[prop].structure2D_Skeletal = my2D_Skeletal;
+ 
+-    const my3D = "mols/nomeclature-moc2/" + prop + "_3D.sdf";
+     nameExamples[prop].file3D = my3D;
+   }
+ }
+--- before/js/mulermoc-nom-molview-56.js
++++ js/mulermoc-nom-molview-56.js
+@@ -7627,15 +7627,24 @@
+ function fInitData() {
+   for (let prop in nameExamples) {
+     const _m = (window.MOL2D && window.MOL2D[prop]) || {};
+-    const my2D_Condensed = _m.condensed !== undefined ? _m.condensed : null;
+-    const my2D_Expanded = _m.expanded !== undefined ? _m.expanded : null;
+-    const my2D_Skeletal = _m.skeletal !== undefined ? _m.skeletal : null;
++    const _customs = window.nameExamplesCustom;
++    const _custom = _customs && Object.prototype.hasOwnProperty.call(_customs, prop) &&
++      nameExamples[prop] === _customs[prop] ? _customs[prop] : null;
++    // JSME startup and document-ready both hydrate the catalog. Read every
++    // registered custom source value before writing its shared record again.
++    const my2D_Condensed = _m.condensed !== undefined ? _m.condensed :
++      _custom && _custom.structure2D_Condensed !== undefined ? _custom.structure2D_Condensed : null;
++    const my2D_Expanded = _m.expanded !== undefined ? _m.expanded :
++      _custom && _custom.structure2D_Expanded !== undefined ? _custom.structure2D_Expanded : null;
++    const my2D_Skeletal = _m.skeletal !== undefined ? _m.skeletal :
++      _custom && _custom.structure2D_Skeletal !== undefined ? _custom.structure2D_Skeletal : null;
++    const my3D = _custom && Object.prototype.hasOwnProperty.call(_custom, "file3D") ?
++      _custom.file3D : "mols/nomeclature-moc2/" + prop + "_3D.sdf";
+ 
+     nameExamples[prop].structure2D_Condensed = my2D_Condensed;
+     nameExamples[prop].structure2D_Expanded = my2D_Expanded;
+     nameExamples[prop].structure2D_Skeletal = my2D_Skeletal;
+ 
+-    const my3D = "mols/nomeclature-moc2/" + prop + "_3D.sdf";
+     nameExamples[prop].file3D = my3D;
+   }
+ }
+--- before/js/mulermoc-nom-molview-57.js
++++ js/mulermoc-nom-molview-57.js
+@@ -8268,15 +8268,24 @@
+ function fInitData() {
+   for (let prop in nameExamples) {
+     const _m = (window.MOL2D && window.MOL2D[prop]) || {};
+-    const my2D_Condensed = _m.condensed !== undefined ? _m.condensed : null;
+-    const my2D_Expanded = _m.expanded !== undefined ? _m.expanded : null;
+-    const my2D_Skeletal = _m.skeletal !== undefined ? _m.skeletal : null;
++    const _customs = window.nameExamplesCustom;
++    const _custom = _customs && Object.prototype.hasOwnProperty.call(_customs, prop) &&
++      nameExamples[prop] === _customs[prop] ? _customs[prop] : null;
++    // JSME startup and document-ready both hydrate the catalog. Read every
++    // registered custom source value before writing its shared record again.
++    const my2D_Condensed = _m.condensed !== undefined ? _m.condensed :
++      _custom && _custom.structure2D_Condensed !== undefined ? _custom.structure2D_Condensed : null;
++    const my2D_Expanded = _m.expanded !== undefined ? _m.expanded :
++      _custom && _custom.structure2D_Expanded !== undefined ? _custom.structure2D_Expanded : null;
++    const my2D_Skeletal = _m.skeletal !== undefined ? _m.skeletal :
++      _custom && _custom.structure2D_Skeletal !== undefined ? _custom.structure2D_Skeletal : null;
++    const my3D = _custom && Object.prototype.hasOwnProperty.call(_custom, "file3D") ?
++      _custom.file3D : "mols/nomeclature-moc2/" + prop + "_3D.sdf";
+ 
+     nameExamples[prop].structure2D_Condensed = my2D_Condensed;
+     nameExamples[prop].structure2D_Expanded = my2D_Expanded;
+     nameExamples[prop].structure2D_Skeletal = my2D_Skeletal;
+ 
+-    const my3D = "mols/nomeclature-moc2/" + prop + "_3D.sdf";
+     nameExamples[prop].file3D = my3D;
+   }
+ }
+--- before/games/name-builder-viewer.html
++++ games/name-builder-viewer.html
+@@ -402,7 +402,7 @@
+        <script src="js/MULERMOC_dimethyl_ether_data.js?v=54.1"></script> -->
+   <script src="js/ui-icons-55.js?v=namelecule-v55-20261110-r2"></script>
+   <script src="js/mulermoc-nom-core-55.js?v=namelecule-v55-20261110-r2"></script>
+-  <script src="js/mulermoc-nom-molview-55.js?v=2dfde418f2444cbd61cc61ae20c1ef451d970e60d1408c66942c472878269c8d"></script>
++  <script src="js/mulermoc-nom-molview-55.js?v=035e81d3d0ef1bc962a72a6092916f5078ac68a5a4e1ae75d471b5eba185c532"></script>
+   <script src="js/mulermoc-nom-teaching-55.js?v=namelecule-v55-20261110-r2"></script>
+   <script src="js/mulermoc-nom-note-55.js?v=namelecule-v55-20261110-r2"></script>
+   <script src="js/namelecule-game-repair.js?v=choice-games-20261111-r1"></script>
+--- before/js/namelecule-molecular-detective-lesson.js
++++ js/namelecule-molecular-detective-lesson.js
+@@ -0,0 +1,200 @@
++/* A verified, seeded three-molecule Detective attempt inside a lesson gate. */
++(function (global) {
++  "use strict";
++  const VERSION = 1, CHANNEL = "namelecule-detective-lesson-v1";
++  const required = new Map(), optional = new Map();
++  const clone = value => JSON.parse(JSON.stringify(value));
++  const engine = () => global.NameleculeMolecularDetectiveEngine;
++  const validSeed = value => typeof value === "string" && /^[0-9]{1,20}$/.test(value);
++  function assert(ok, message) { if (!ok) throw new Error(message); }
++  function shuffle(values, seed) {
++    let state = 2166136261;
++    for (let i = 0; i < seed.length; i++) state = Math.imul(state ^ seed.charCodeAt(i), 16777619);
++    const out = values.slice();
++    for (let i = out.length - 1; i > 0; i--) {
++      state = (state + 0x6d2b79f5) | 0;
++      let n = Math.imul(state ^ (state >>> 15), state | 1);
++      n ^= n + Math.imul(n ^ (n >>> 7), n | 61);
++      const j = Math.floor((((n ^ (n >>> 14)) >>> 0) / 4294967296) * (i + 1));
++      [out[i], out[j]] = [out[j], out[i]];
++    }
++    return out;
++  }
++  function getSet(recipe, seed, input, practice) {
++    assert(validSeed(seed) && input && engine(), "Detective canonical input unavailable");
++    assert(input.catalog.revision === recipe.catalogRevision && input.catalog.engineSHA256 === recipe.engineSHA256,
++      "Detective catalog does not match the required recipe");
++    const cache = practice ? optional : required;
++    const key = JSON.stringify([recipe.setId, recipe.catalogRevision, recipe.engineSHA256, seed]);
++    if (cache.has(key)) return cache.get(key);
++    const branched = recipe.setId === "alkanes-branched";
++    const eligible = input.analyses.filter(a => (a.branches.length > 0) === branched);
++    const chosen = shuffle(eligible, JSON.stringify(["detective-v1", recipe.setId, recipe.catalogRevision, seed])).slice(0, 3);
++    assert(chosen.length === 3 && new Set(chosen.map(a => a.moleculeId)).size === 3, "Three distinct Detective molecules unavailable");
++    const used = new Map();
++    const rounds = chosen.map((analysis, index) => {
++      const molecule = input.catalog.molecules.find(m => m.id === analysis.moleculeId);
++      assert(molecule, "Missing Detective molecule");
++      const snapshot = engine().canonicalSnapshot(molecule, analysis);
++      const missions = shuffle(engine().missions(snapshot), JSON.stringify(["mission-v1", seed, index, analysis.moleculeId]));
++      const minimum = Math.min(...missions.map(m => used.get(m.family) || 0));
++      const mission = missions.find(m => (used.get(m.family) || 0) === minimum);
++      assert(mission && mission.accepted.length && mission.accepted.every(set => set.length), "Empty Detective mission");
++      used.set(mission.family, (used.get(mission.family) || 0) + 1);
++      return { snapshot, mission };
++    });
++    const set = { rounds };
++    if (cache.size >= (practice ? 2 : 32)) cache.delete(cache.keys().next().value);
++    cache.set(key, set);
++    return set;
++  }
++  function blank() { return { atoms: [], bonds: [], attempts: 0, submitted: false, solved: false }; }
++  function snapshot(entry, raw) {
++    const out = blank();
++    if (!raw || typeof raw !== "object" || !Array.isArray(raw.atoms) || !Array.isArray(raw.bonds) ||
++        raw.atoms.length > 40 || raw.bonds.length > 39 ||
++        [raw.atoms, raw.bonds].some(ids => ids.some(id => !Number.isSafeInteger(id) || id < 1 || id > 40) || new Set(ids).size !== ids.length)) return out;
++    if (entry) {
++      const atoms = new Set(entry.snapshot.atoms.map(a => a.id)), bonds = new Set(entry.snapshot.bonds.map(b => b.id));
++      if (raw.atoms.some(id => !atoms.has(id)) || raw.bonds.some(id => !bonds.has(id))) return out;
++    }
++    out.atoms = raw.atoms.slice(); out.bonds = raw.bonds.slice();
++    out.attempts = Number.isSafeInteger(raw.attempts) && raw.attempts >= 0 ? raw.attempts : 0;
++    out.submitted = raw.submitted === true && out.attempts > 0 && !!(out.atoms.length || out.bonds.length);
++    out.solved = !!(entry && out.submitted && engine().grade(entry.mission, out).correct === true);
++    return out;
++  }
++  function restore(recipe, raw, input, practice) {
++    const state = { version: VERSION, seed: raw && raw.version === VERSION && validSeed(raw.seed) ? raw.seed : null,
++      currentRound: 0, states: [blank(), blank(), blank()], solved: false };
++    if (!state.seed) return state;
++    const set = input && engine() ? getSet(recipe, state.seed, input, practice) : null;
++    const values = raw && Array.isArray(raw.states) && raw.states.length === 3 ? raw.states : [null, null, null];
++    state.states = values.map((value, index) => snapshot(set && set.rounds[index], value));
++    state.currentRound = Number.isInteger(raw.currentRound) && raw.currentRound >= 0 && raw.currentRound < 3 ? raw.currentRound : 0;
++    if (set) {
++      const first = state.states.findIndex(s => !s.solved);
++      if (first >= 0) {
++        state.currentRound = Math.min(state.currentRound, first);
++        for (let i = first + 1; i < 3; i++) state.states[i] = blank();
++      } else { state.solved = true; state.currentRound = 2; }
++    }
++    return state;
++  }
++  function node(tag, className, text) {
++    const value = global.document.createElement(tag);
++    if (className) value.className = className;
++    if (text !== undefined) value.textContent = text;
++    return value;
++  }
++  function button(text, className, action) {
++    const value = node("button", className, text); value.type = "button"; value.addEventListener("click", action); return value;
++  }
++  function mount(host, options, practice) {
++    const recipe = options.round, input = options.input;
++    let state = restore(recipe, options.initialState, input, practice);
++    if (!state.seed) state.seed = global.NameleculeGeneratedRepairCheckpoint.freshSeed(null);
++    let destroyed = false, frame = null, active = null, timer = null, footer = null, requestId = 0;
++    const random = new Uint32Array(4); global.crypto.getRandomValues(random);
++    const session = Array.from(random, n => n.toString(36).padStart(7, "0")).join("");
++    const attemptId = "detective-" + recipe.setId + "-" + state.seed;
++    const ready = value => { if (!destroyed && typeof options.onSuccessActionsReady === "function") options.onSuccessActionsReady(value === true); };
++    const progress = value => { if (!destroyed && typeof options.onProgress === "function") options.onProgress(value); };
++    function publish() {
++      state = restore(recipe, state, input, practice);
++      if (!destroyed && typeof options.onStateChange === "function") options.onStateChange(clone(state));
++    }
++    function stopFrame() {
++      if (timer) global.clearTimeout(timer); timer = null;
++      active = null;
++      if (frame) frame.remove(); frame = null;
++      if (footer) footer.remove(); footer = null;
++      ready(false);
++    }
++    function fail(message) {
++      if (destroyed) return;
++      stopFrame(); progress(null); host.removeAttribute("aria-busy");
++      const error = node("p", "nl-quiz-error", message); error.setAttribute("role", "alert");
++      host.replaceChildren(error, button("Δοκίμασε ξανά", "nl-quiz-button", render));
++    }
++    function actions(context) {
++      if (destroyed || active !== context || !context.loaded || !state.states[context.index].solved) return;
++      if (footer) footer.remove();
++      footer = node("div", "round-next nl-detective-actions");
++      const index = context.index;
++      const next = button(index < 2 ? "Επόμενο κουίζ" : "Συνεχίζω τη θεωρία", "nl-quiz-button primary", () => {
++        if (destroyed || !state.states[index].solved) return;
++        if (index < 2) { state.currentRound = index + 1; publish(); render(); }
++        else if (state.solved && typeof options.onContinue === "function") options.onContinue();
++      });
++      if (index === 2) next.setAttribute("data-checkpoint-continue", "");
++      footer.append(next);
++      if (index === 2 && typeof options.onNewPractice === "function") footer.append(button(options.newPracticeLabel || "Άλλη τριάδα για εξάσκηση", "nl-quiz-button secondary", options.onNewPractice));
++      if (index === 2 && typeof options.onOtherGame === "function") footer.append(button(options.otherGameLabel || "Άλλο παιχνίδι", "nl-quiz-button secondary", options.onOtherGame));
++      context.stage.after(footer);
++      ready(index === 2 && state.solved && footer.isConnected && !next.disabled);
++    }
++    function render() {
++      if (destroyed) return;
++      stopFrame(); publish();
++      const set = getSet(recipe, state.seed, input, practice), index = state.currentRound, entry = set.rounds[index];
++      const heading = node("h2", "nl-detective-heading", "Μοριακός ντεντέκτιβ"); heading.tabIndex = -1;
++      const stage = node("div", "nl-detective-stage");
++      frame = node("iframe", "nl-detective-frame"); frame.title = "Μοριακός ντεντέκτιβ — μόριο " + (index + 1) + " από 3";
++      frame.setAttribute("sandbox", "allow-scripts allow-same-origin"); frame.style.height = "850px";
++      const start = node("span", "nl-detective-marker"), end = node("span", "nl-detective-marker");
++      [start, end].forEach(marker => { marker.setAttribute("aria-hidden", "true"); });
++      stage.append(frame, start, end); host.replaceChildren(heading, stage); host.setAttribute("aria-busy", "true");
++      active = { requestId: ++requestId, index, entry, stage, start, end, loaded: false, sent: false, stateRevision: -1 };
++      frame.src = new URL("games/molecular-detective.html?lessonSession=" + session + "&embedded=1&v=four-games-20261116-r1", global.document.baseURI).href;
++      progress({ current: index + 1, total: 3 });
++      timer = global.setTimeout(() => fail("Ο Ντεντέκτιβ άργησε να φορτώσει. Η προσπάθειά σου διατηρήθηκε. Δοκίμασε ξανά."), 90000);
++      heading.focus({ preventScroll: true });
++    }
++    function receive(event) {
++      if (destroyed || !frame || !active || event.source !== frame.contentWindow || event.origin !== global.location.origin) return;
++      const data = event.data, context = active;
++      if (!data || data.channel !== CHANNEL || data.session !== session) return;
++      if (data.type === "ready") {
++        if (context.sent) return;
++        context.sent = true;
++        frame.contentWindow.postMessage({ channel: CHANNEL, session, command: "load", requestId: context.requestId, attemptId,
++          moleculeId: context.entry.snapshot.moleculeId, snapshot: context.entry.snapshot, missionId: context.entry.mission.id,
++          initialState: (({ atoms, bonds, attempts, submitted }) => ({ atoms, bonds, attempts, submitted }))(snapshot(context.entry, state.states[context.index])), explanation: context.entry.mission.explanation }, global.location.origin);
++        return;
++      }
++      if (data.requestId !== context.requestId || data.attemptId !== attemptId || data.moleculeId !== context.entry.snapshot.moleculeId || data.missionId !== context.entry.mission.id) return;
++      if (data.type === "error") { fail("Η αποστολή δεν μπόρεσε να επαληθευτεί. Η προσπάθεια διατηρήθηκε. Δοκίμασε ξανά."); return; }
++      if (data.type === "exit") { if (typeof options.onClose === "function") options.onClose(); return; }
++      if (data.type === "loaded" || data.type === "state") {
++        if (data.type === "state" && !context.loaded || data.type === "loaded" && context.loaded) return;
++        if (!Number.isSafeInteger(data.stateRevision) || data.stateRevision < 0 || data.stateRevision <= context.stateRevision) return;
++        if (data.type === "loaded") {
++          try { engine().assertCanonicalSnapshot(context.entry.snapshot, data.snapshot); }
++          catch (_) { fail("Το σχέδιο δεν συμφωνεί με το μόριο της αποστολής. Δοκίμασε ξανά."); return; }
++          context.loaded = true;
++          if (timer) global.clearTimeout(timer); timer = null; host.removeAttribute("aria-busy");
++        }
++        context.stateRevision = data.stateRevision;
++        state.states[context.index] = snapshot(context.entry, data.state); publish();
++        if (state.states[context.index].solved) {
++          actions(context);
++          if (state.solved && typeof options.onSolved === "function") options.onSolved({ kind: "correct" }, clone(state));
++        } else { if (footer) footer.remove(); footer = null; ready(false); }
++      } else if (data.type === "resize" && Number.isFinite(data.height) && data.height >= 80 && data.height <= 8000) {
++        frame.style.height = Math.ceil(data.height) + "px";
++      } else if (data.type === "scroll-interrupt" && context.loaded) {
++        if (typeof options.onScrollInterrupt === "function") options.onScrollInterrupt();
++      } else if (data.type === "reveal" && context.loaded && Number.isFinite(data.startY) && Number.isFinite(data.endY) &&
++          data.startY >= 0 && data.endY >= data.startY && data.endY <= 8000 && ["entry", "feedback"].includes(data.purpose)) {
++        context.start.style.top = data.startY + "px"; context.end.style.top = data.endY + "px";
++        if (typeof options.onReveal === "function") options.onReveal({ kind: "detective-" + data.purpose, start: context.start,
++          end: data.purpose === "feedback" && footer ? footer : context.end });
++      }
++    }
++    global.addEventListener("message", receive); render();
++    return { destroy() { if (destroyed) return; stopFrame(); progress(null); destroyed = true;
++      global.removeEventListener("message", receive); host.replaceChildren(); host.removeAttribute("aria-busy"); } };
++  }
++  global.NameleculeMolecularDetectiveLesson = Object.freeze({ restore, getSet, snapshot, mount });
++})(typeof window !== "undefined" ? window : globalThis);

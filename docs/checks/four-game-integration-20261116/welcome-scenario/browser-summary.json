@@ -1,0 +1,29 @@
+{
+  "recordedUTC": "2026-11-16T06:02:40.612722+00:00",
+  "role": "Developer visual inspection of actual saved Firefox screenshots; not independent review",
+  "result": "passed",
+  "screenshotsInspected": [
+    "browser-060158/welcome-1500.png",
+    "browser-060158/welcome-1200.png",
+    "browser-060158/welcome-901.png",
+    "browser-060158/welcome-900.png",
+    "browser-060158/welcome-390.png"
+  ],
+  "observed": "All four links and logos are visible with complete Greek labels. Wide Puzzle logo is contained; square logos retain proportions. 901 px uses stacked logo/label links; 900 and 390 px use single-column cards. No clipping or overlapping text observed in these screenshots.",
+  "browserReport": "browser-060158/results.json",
+  "checks": 43,
+  "javascriptExceptions": 0,
+  "onlyHTTPError": "favicon.ico 404",
+  "ownedCleanup": {
+    "ownedBrowserExited": true,
+    "ownedServerClosed": true,
+    "ownedProfileRemoved": true
+  },
+  "sourceUnchanged": true,
+  "earlierInfrastructureFailure": "browser-060147/results.json: sandbox loopback bind denied before browser launch; same approved run succeeded after sandbox escalation.",
+  "limits": [
+    "Isolated headless Firefox with CSS viewport emulation; physical mobile/personal Firefox/conference/offline reliability unqualified.",
+    "Actual game answer replays belong to the parent integration suite.",
+    "JSmol j2s/fonts/remote services remain external dependencies."
+  ]
+}

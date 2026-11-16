@@ -1,3 +1,29 @@
+> **2026-11-14 — retained React baseline (generator correction):** React retains
+> exactly 126 molecules and 12 lessons / 283 steps. Both host generators use
+> `preserved-main-20261030/host-template.html`, recovered from the two existing
+> hosts, rather than the current Main52 HTML. The existing hosts, catalogs,
+> components, bridges, core, molecular files and scenarios are unchanged.
+>
+> `preserved-main-20261030/PROVENANCE.json` records the template origin and SHA-256
+> of retained inputs and expected outputs. The historical `sourceCommit` applies
+> to the two preserved JavaScript files, not to the recovered HTML template.
+> Generators fail on input/output drift. Existing identical hosts are checked
+> without writing; differing hosts are never replaced. Normal mode can create a
+> missing host exclusively (needed because viewer-host.html is ignored).
+> `--check` is strictly read-only and fails if a host is missing.
+>
+> Normal build no longer runs sync-content or sync-molecules. Existing catalogs
+> are deliberate frozen inputs; those legacy sync tools target newer shared
+> sources and are not parity checks for this baseline. A catalog refresh is a
+> separate migration requiring explicit review and updated evidence.
+>
+> Read-only verification from this directory:
+> `python3 -B tools/build-viewer-host.py --check` and
+> `python3 -B tools/build-lesson-host.py --check`.
+> These checks establish byte reproducibility, not browser behavior or offline
+> operation. Shared root dependencies and external JSmol/CDN requirements remain.
+> No production build or browser tests were run for this correction.
+
 > **2026-10-27 — 3D PNG:** the React PNG action follows the active 2D/3D view.
 > 3D calls unchanged native52 `fSaveJmolPng`: original Save Image filename prompt,
 > current representation/H/labels/highlights/camera, footer and1200×1200PNG.
@@ -98,8 +124,9 @@
 > name/common-name/formula search. `tools/sync-molecules.mjs` generates metadata
 > using the unchanged main52 naming/classification engine and explicit-H SDF
 > atom counts. It does not maintain another chemical naming algorithm or copy
-> coordinates. Build regenerates this catalog before generating the host.
-> `node tools/sync-molecules.mjs --check` checks it without writing.
+> coordinates. This describes the historical synchronization workflow. The
+> retained 2026-11-14 baseline does not regenerate this catalog during build;
+> the legacy sync check is not a parity check for the frozen catalog.
 >
 > The selector preserves the current model when filters exclude it; clearing
 > returns focus to search. Selection/filters have no persistent storage. All377
@@ -161,14 +188,12 @@ categories/lessons/formula data, rather than a replay of the old library DOM tre
 welcome/shared-shell bridge. That bridge creates React elements from trusted
 node data without raw HTML injection, iframes or execution of embedded scripts.
 
-`tools/sync-content.py` extracts the checked source pages into `src/content.json`
-at build time. The library catalog has stable category/lesson IDs, titles,
-descriptions, formula tokens/restrictions, topics, player URLs and actual step
-counts checked against the existing scenario JSONs. The legacy welcome panels
-are parsed as a data literal, without executing JavaScript. Styles and source
-hashes are retained. The snapshot is generated data: edit the established source
-pages and lesson files, then rebuild. Do not maintain a separate React syllabus.
-Read-only parity check: `python3 tools/sync-content.py --check`.
+`src/content.json` is the retained React content input with 12 lessons / 283
+steps. The lesson generator checks its pinned bytes, scenario inputs, step counts
+and per-step titles before constructing the host. `tools/sync-content.py` is a
+legacy extraction tool for a separately reviewed migration; normal build does
+not invoke it or sync-molecules. Do not refresh these snapshots as part of the
+host-generator correction.
 
 The catalog is the normalized part of this pilot; the welcome/shared shell still
 uses the compatibility bridge. Existing app viewers/player remain outside React.
@@ -229,11 +254,12 @@ same-origin iframe. Both sides check origin, source window, protocol/session;
 request IDs discard stale replies. Cleanup removes listeners/timers and unloads
 the frame. This is lifecycle/DOM separation, **not a security sandbox**.
 
-`tools/build-viewer-host.py` generates ignored `public/viewer-host.html` from the
-unchanged `mulermoc-nom-51.html`, adds relative base/layout CSS and the classic
+`tools/build-viewer-host.py` reproduces ignored `public/viewer-host.html` from
+`preserved-main-20261030/host-template.html`, adding base/layout CSS and the classic
 `public/viewer-host-bridge.js`, injects the catalog's allowed IDs into that script,
-and strips analytics from this generated copy. Build the host before using it;
-the standalone bridge source contains the build-time ID placeholder.
+and retains the analytics-free template. Missing hosts can be created; existing
+hosts must already match exactly and are not rewritten. The standalone bridge
+source contains the build-time ID placeholder; it is injected during generation.
 The original page, engine/viewer/data/teaching/scripts/MOLs remain unchanged.
 The bridge uses the complete existing SVG post-processing pipeline; it does not
 draw a replacement molecule. The generated page hides authoring controls but

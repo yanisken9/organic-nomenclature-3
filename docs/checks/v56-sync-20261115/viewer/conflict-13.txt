@@ -1,0 +1,31 @@
+BEFORE:
+ διαθέσιμη. Δοκίμασε ξανά ή επίλεξε άλλη μορφή.";
+    host.appendChild(status);
+    console.warn("Namelecule 2D rendering unavailable", error);
+  }
+}
+
+function fBuildMoleculeSVG() {
+  if (!jsmeNomeclatureApplet) return;
+
+LOCAL:
+  // Stage 1 precedes native label layout. Stage 2 is fFit2DSVG below, after
+  // functional labels are finalized. Numbering/highlights reuse stable atom IDs.
+  fApplySkeletalLayout();
+
+UPSTREAM:
+  // Selection state into the applet BEFORE the SVG string is read, so the
+  // render below already carries the merged component+selection colors.
+  try { if (typeof fMulerSelectPushState === "function") fMulerSelectPushState(); } catch (eSelPush) {}
+  // Fresh line layout per render: the compaction below records its removed
+  // bonds for the selection line groups (stale indices would shift picks).
+  try { if (typeof window !== "undefined") window.__mulerRemovedBondIdx = []; } catch (eRB2) {}
+  // Render epoch for the selection geometry cache (hover reads it at 60 Hz;
+  // zoom/repaint bumps it so cached hit-testing never goes stale).
+  try { if (typeof window !== "undefined") window.__mulerSelRenderSeq = ((typeof window.__mulerSelRenderSeq === "number") ? window.__mulerSelRenderSeq : 0) + 1; } catch (eSq) {}
+
+AFTER:
+  compactNumberingLabelMap = {};
+  let mySVG = jsmeNomeclatureApplet.getMolecularAreaGraphicsString();
+  // Fix JSME highlight malformation BEFORE HTML parsing
+  // Bug 1: fill/stroke attributes corru

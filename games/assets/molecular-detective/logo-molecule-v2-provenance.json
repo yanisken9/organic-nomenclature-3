@@ -1,0 +1,26 @@
+{
+  "recordedUTC": "2026-11-15T06:57:53.071726+00:00",
+  "tool": "built-in image_gen",
+  "mode": "precise-object-edit",
+  "editTarget": "games/assets/molecular-detective/molecular-detective-logo-3d-v1.png",
+  "source": "/Users/yannisskendros/.codex/generated_images/01a16a5d-703b-71f3-9b57-113ca1048841/exec-45b222b9-2bab-4ffe-a2e2-b46c21bffc47.png",
+  "asset": "games/assets/molecular-detective/molecular-detective-logo-molecule-v2.png",
+  "sha256": "fcef858dcd74e3d8e65e3813f69ca8bed8e9b4ce9f1e2a779ae34eb7ad1fa2dd",
+  "size": [
+    1254,
+    1254
+  ],
+  "pngColorType": 6,
+  "alphaChannelPresent": true,
+  "transparentBackgroundRequested": true,
+  "promptFile": "logo-molecule-v2-prompt.txt",
+  "originalPreserved": true,
+  "purpose": "New visual variant requested by user: magnifier examines a small molecule; methane depicted symbolically",
+  "status": "Integrated in gameHTML at explicit user request; lesson-look inherits same image",
+  "checks": "Exact source/copy SHA, PNG RGBA header; root visual inspection and independent visual chemistry check: one central atom, four terminal atoms, four single bonds consistent with symbolic methane; no measured tetrahedral-angle claim.",
+  "appIntegration": true,
+  "runtimeChanges": {
+    "games/molecular-detective.html": "Only logo img src changed from v1 to molecule-v2"
+  },
+  "gameplayCSS_JS_CoreUnchanged": true
+}

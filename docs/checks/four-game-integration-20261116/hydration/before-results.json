@@ -1,0 +1,45 @@
+{
+  "recordedUTC": "2026-11-16T06:27:56.183Z",
+  "role": "Developer memory execution; not independent review",
+  "expectation": "before",
+  "completed": true,
+  "checks": 372,
+  "records": [
+    {
+      "version": 55,
+      "reproduced": true,
+      "curatedMolecules": 6,
+      "nullForms": 18,
+      "wrongSDFRoutes": 6
+    },
+    {
+      "version": 56,
+      "reproduced": true,
+      "curatedMolecules": 6,
+      "nullForms": 18,
+      "wrongSDFRoutes": 6
+    },
+    {
+      "version": 57,
+      "reproduced": true,
+      "curatedMolecules": 6,
+      "nullForms": 18,
+      "wrongSDFRoutes": 6
+    }
+  ],
+  "sourceSHA256": {
+    "js/mulermoc-nom-molview-55.js": "2dfde418f2444cbd61cc61ae20c1ef451d970e60d1408c66942c472878269c8d",
+    "js/jsme-nick-nomeclature-moc2-data_55.js": "9387cd654b2ff3cfb058d9b97ddcca798ac13f47f769b532f9c122277ff8dd0a",
+    "js/mulermoc-nom-molview-56.js": "e484618054e26d9cdd871ea340a57f400dc7db1e816de1917a332fd1c5c5d47e",
+    "js/jsme-nick-nomeclature-moc2-data_56.js": "9387cd654b2ff3cfb058d9b97ddcca798ac13f47f769b532f9c122277ff8dd0a",
+    "js/mulermoc-nom-molview-57.js": "f26f0aae522c0ea5a034e97d1f8f486a4f5bb1ef715e59276f80d0760dca0941",
+    "js/jsme-nick-nomeclature-moc2-data_57.js": "9387cd654b2ff3cfb058d9b97ddcca798ac13f47f769b532f9c122277ff8dd0a",
+    "js/MULERMOC_namelecule_alkanes_v1_data.js": "262c6561aaff7a88919cda715835e7f455d64756218aeb66e3e4949ba569a75c"
+  },
+  "beforeBodyFileSHA256": "0d95f09dd24aa788182d89d493a43c4562f8fd810bbeed3bed3b1a401a3b1904",
+  "limitations": [
+    "Actual fInitData bodies and actual base data/curated bundle are executed; only the own-key/native custom merge block is fixture-equivalent, not the full fClassifyAllMolecules analysis.",
+    "No browser callbacks, JSME/3D loading, user interactions, chemical naming or molecular geometry are certified by this memory test.",
+    "The before case intentionally reproduces the demonstrated data loss; passing --expect-before does not indicate application correctness."
+  ]
+}

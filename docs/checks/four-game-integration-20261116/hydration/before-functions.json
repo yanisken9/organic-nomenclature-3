@@ -1,0 +1,28 @@
+{
+  "recordedUTC": "2026-11-16T06:27:46.928Z",
+  "role": "Developer recorded source baseline",
+  "scope": "Actual fInitData bodies only; complete source file digests identify their pre-approval files.",
+  "functions": {
+    "55": {
+      "file": "js/mulermoc-nom-molview-55.js",
+      "body": "function fInitData() {\n  for (let prop in nameExamples) {\n    const _m = (window.MOL2D && window.MOL2D[prop]) || {};\n    const my2D_Condensed = _m.condensed !== undefined ? _m.condensed : null;\n    const my2D_Expanded = _m.expanded !== undefined ? _m.expanded : null;\n    const my2D_Skeletal = _m.skeletal !== undefined ? _m.skeletal : null;\n\n    nameExamples[prop].structure2D_Condensed = my2D_Condensed;\n    nameExamples[prop].structure2D_Expanded = my2D_Expanded;\n    nameExamples[prop].structure2D_Skeletal = my2D_Skeletal;\n\n    const my3D = \"mols/nomeclature-moc2/\" + prop + \"_3D.sdf\";\n    nameExamples[prop].file3D = my3D;\n  }\n}",
+      "sha256": "2dfde418f2444cbd61cc61ae20c1ef451d970e60d1408c66942c472878269c8d"
+    },
+    "56": {
+      "file": "js/mulermoc-nom-molview-56.js",
+      "body": "function fInitData() {\n  for (let prop in nameExamples) {\n    const _m = (window.MOL2D && window.MOL2D[prop]) || {};\n    const my2D_Condensed = _m.condensed !== undefined ? _m.condensed : null;\n    const my2D_Expanded = _m.expanded !== undefined ? _m.expanded : null;\n    const my2D_Skeletal = _m.skeletal !== undefined ? _m.skeletal : null;\n\n    nameExamples[prop].structure2D_Condensed = my2D_Condensed;\n    nameExamples[prop].structure2D_Expanded = my2D_Expanded;\n    nameExamples[prop].structure2D_Skeletal = my2D_Skeletal;\n\n    const my3D = \"mols/nomeclature-moc2/\" + prop + \"_3D.sdf\";\n    nameExamples[prop].file3D = my3D;\n  }\n}",
+      "sha256": "e484618054e26d9cdd871ea340a57f400dc7db1e816de1917a332fd1c5c5d47e"
+    },
+    "57": {
+      "file": "js/mulermoc-nom-molview-57.js",
+      "body": "function fInitData() {\n  for (let prop in nameExamples) {\n    const _m = (window.MOL2D && window.MOL2D[prop]) || {};\n    const my2D_Condensed = _m.condensed !== undefined ? _m.condensed : null;\n    const my2D_Expanded = _m.expanded !== undefined ? _m.expanded : null;\n    const my2D_Skeletal = _m.skeletal !== undefined ? _m.skeletal : null;\n\n    nameExamples[prop].structure2D_Condensed = my2D_Condensed;\n    nameExamples[prop].structure2D_Expanded = my2D_Expanded;\n    nameExamples[prop].structure2D_Skeletal = my2D_Skeletal;\n\n    const my3D = \"mols/nomeclature-moc2/\" + prop + \"_3D.sdf\";\n    nameExamples[prop].file3D = my3D;\n  }\n}",
+      "sha256": "f26f0aae522c0ea5a034e97d1f8f486a4f5bb1ef715e59276f80d0760dca0941"
+    }
+  },
+  "extraBeforeHashes": {
+    "js/mulermoc-nom-molview-55.js": "2dfde418f2444cbd61cc61ae20c1ef451d970e60d1408c66942c472878269c8d",
+    "js/mulermoc-nom-molview-56.js": "e484618054e26d9cdd871ea340a57f400dc7db1e816de1917a332fd1c5c5d47e",
+    "js/mulermoc-nom-molview-57.js": "f26f0aae522c0ea5a034e97d1f8f486a4f5bb1ef715e59276f80d0760dca0941",
+    "games/name-builder-viewer.html": "2977d5b5f9a611eee579843ebbe2e76e638e4bab5678325cdab1e17c80a77be1"
+  }
+}

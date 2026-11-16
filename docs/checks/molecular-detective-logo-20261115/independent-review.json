@@ -1,0 +1,28 @@
+{
+  "recordedUTC": "2026-11-15T07:01:26.055706+00:00",
+  "reviewer": "/root/review_molecular_detective_20261115",
+  "recordedBy": "Developer transcription of returned independent targeted report",
+  "target": "review-target.json",
+  "targetSHA256": "8bee0e140421e375671ab03c01ca70255b74f906a57e1ade96fd7c5953abd657",
+  "findings": {
+    "MD-LOGO-R1": {
+      "severity": "P3",
+      "path": "games/assets/molecular-detective/logo-molecule-v2-provenance.json",
+      "problem": "noRuntimeOrCoreChanges true contradicted the actual HTML image-src edit",
+      "resolution": "Removed combined flag; explicit oneHTMLsrcchange and gameplayCSS_JS_CoreUnchanged true",
+      "status": "Closed by Developer metadata checks per bounded P3 protocol",
+      "beforeSHA256": "39e9e00fc374c1a209f1d54d3b8fc8edad221cf27326d6bfff3a2b84aa832253",
+      "afterSHA256": "70c10ccea83c41ff75626e792530554fce57bdb5c1e08bf62d5b62d1f3f116bb"
+    }
+  },
+  "otherwise": "No actionable findings in logo integration",
+  "independentChecks": [
+    "4frozenhashes and prechangeHTML vs priorreview",
+    "Diff has only imgsrc change atline23; newpath resolves",
+    "BothPNGs1254square8bitRGBA, original/new/standalonescreenshot visuallyinspected",
+    "Allotherpreviousprototypefiles and12corehashes unchanged"
+  ],
+  "developerBrowserEvidenceInspected": "browser/run-logo-065917/logo.json:5passed0JSexceptions,standalone+lessonload; noindependentbrowserexecution",
+  "limits": "SymbolicCH4count/topology, notmeasuredtetrahedralgeometry",
+  "noWritesOrCoreChangesByReviewer": true
+}

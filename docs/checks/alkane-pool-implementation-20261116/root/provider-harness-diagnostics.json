@@ -1,0 +1,7 @@
+{
+  "recordedUTC": "2026-11-16T05:13:30.960763+00:00",
+  "initialFailure": "Compared two independently initialized empty legacy UI states; choiceOrder initialization intentionally uses Math.random, so array order differs without a saved snapshot.",
+  "correction": "Generate old normalized initial snapshot once, pass that exact saved snapshot through current cold preparation; still compare exact generated rounds and validate forged solved rejection separately.",
+  "productSourceChangedForThisFailure": false,
+  "followup": "Existing restoreFromCache intentionally reinitializes unvisited future rounds after first unsolved; their empty UI choiceOrder is randomized again. Controlled identical Math.random in both VM contexts compares same normalization inputs. Current visited partial/earned snapshots and exact generated rounds are still compared; no product change."
+}

@@ -1,0 +1,24 @@
+{
+  "global": "NameleculeGameLevels",
+  "module": "BrowserIIFE + Nodeexport whereuseful",
+  "API": {
+    "isTrial": "isTrial({lesson:false}={}) -> bool: querylevels=1, no controlledlesson; failclosediflessonSessionparampresent",
+    "tierFor": "tierFor(id)->1|2|3|null, audited8alkaneIDmap",
+    "poolFor": "poolFor(level,availableIds)->knowneligibleIDs; no unsupported fallback",
+    "createDeck": "createDeck(ids,{seed,avoid}={}) -> {next()}; uniformseededshufflebag, avoidimmediaterepeatswhen>=2 inclrefill; singletonreturnssoleid",
+    "mount": "mount(host,{game,availableIds,onChange}) -> {select(level),get level(),destroy()}; onChange(level,ids) sync/asynccontrollercallback, NO autochoosedefault; levelbuttonsremainusablewhileloading so callerinvalidatestickets"
+  },
+  "DOM": "[data-nl-level-panel], button[data-nl-level=\"1|2|3\"], visiblecountsdistinctmolecules, no extra selectionmode/molecule/missionUI; isolated .nl-levels-trial CSS",
+  "mapping": {
+    "methane": 1,
+    "ethane": 1,
+    "propane": 1,
+    "butane": 1,
+    "pentane": 1,
+    "methyl_2_pentane": 2,
+    "dimethyl_2_3_butane": 3,
+    "ethyl_3_dimethyl_2_5_hexane": 3
+  },
+  "consumers": "RootDetective +workerBuilder/Puzzle +workerWorkshop; coordinatechanges beforeAPIedits",
+  "trialState": "Inmemoryonly; no changes legacy storage/receipts; currentlesson wins"
+}

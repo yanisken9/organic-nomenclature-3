@@ -1,0 +1,319 @@
+{
+  "recordedUTC": "2026-11-16T06:27:49.796639+00:00",
+  "run": "docs/checks/four-game-integration-20261116/continue-diagnostic/run-stage-062532",
+  "status": "Single granted stage diagnostic completed with explicit owned-browser stop; no further probe",
+  "controlledInstrumentation": "Runtime observational wrappers around main iframe remove/fScenarioGo and native speechSynthesis.cancel/Jmol.script; preserves original this,args,return,exceptions. This is not identical uninstrumented execution.",
+  "checksPassed": 88,
+  "correctGenuineUIAnswers": 3,
+  "manifestSHA256": "908093208d0ca410c702650b51fc629fae7142d0d2afef50a74fe00a703f2c9c",
+  "sourceUnchanged": true,
+  "trace": {
+    "receivedCount": 112690,
+    "minimumSeq": 1,
+    "maximumSeq": 141333,
+    "firstReceivedUTC": "2026-11-16T06:25:53.097637+00:00",
+    "lastReceivedUTC": "2026-11-16T06:27:14+00:00",
+    "reasonCounts": {
+      "main-Element-prototype-setup-read-before": 1,
+      "main-Element-prototype-setup-read-after": 1,
+      "main-iframe-remove-original-setup-read-before": 1,
+      "main-iframe-remove-original-setup-read-after": 1,
+      "main-iframe-remove-descriptor-setup-read-before": 1,
+      "main-iframe-remove-descriptor-setup-read-after": 1,
+      "main-iframe-remove-setup-write-before": 1,
+      "main-iframe-remove-setup-write-after": 1,
+      "main-iframe-remove-verification-setup-read-before": 1,
+      "main-iframe-remove-verification-setup-read-after": 1,
+      "main-fScenarioGo-original-setup-read-before": 1,
+      "main-fScenarioGo-original-setup-read-after": 1,
+      "main-fScenarioGo-descriptor-setup-read-before": 1,
+      "main-fScenarioGo-descriptor-setup-read-after": 1,
+      "main-fScenarioGo-setup-write-before": 1,
+      "main-fScenarioGo-setup-write-after": 1,
+      "main-fScenarioGo-verification-setup-read-before": 1,
+      "main-fScenarioGo-verification-setup-read-after": 1,
+      "outerUI-window-setup-read-before": 1,
+      "outerUI-window-setup-read-after": 1,
+      "native-window-setup-read-before": 1,
+      "native-window-setup-read-after": 1,
+      "native-speech-descriptor-0-setup-read-before": 1,
+      "native-speech-descriptor-0-setup-read-after": 1,
+      "native-speech-descriptor-result": 1,
+      "native-speech-get-setup-write-before": 1,
+      "native-speech-get-setup-write-after": 1,
+      "native-speech-hook-descriptor-setup-read-before": 1,
+      "native-speech-hook-descriptor-setup-read-after": 1,
+      "native-Jmol-object-setup-read-before": 1,
+      "native-Jmol-object-setup-read-after": 1,
+      "native-Jmol-script-original-setup-read-before": 1,
+      "native-Jmol-script-original-setup-read-after": 1,
+      "native-Jmol-script-descriptor-setup-read-before": 1,
+      "native-Jmol-script-descriptor-setup-read-after": 1,
+      "native-Jmol-script-setup-write-before": 1,
+      "native-Jmol-script-setup-write-after": 1,
+      "native-Jmol-script-verification-setup-read-before": 1,
+      "native-Jmol-script-verification-setup-read-after": 1,
+      "stage-wrappers-installed": 1,
+      "observer-installed": 1,
+      "interval": 4,
+      "event-before": 2,
+      "before-microtask": 2,
+      "main-iframe-remove-before": 1,
+      "outerUI-pagehide-capture": 1,
+      "native-speech-get-before": 1,
+      "native-pagehide-capture": 1,
+      "native-speech-get-after": 1,
+      "native-speech-cancel-original-setup-read-before": 1,
+      "native-speech-cancel-original-setup-read-after": 1,
+      "native-speech-cancel-descriptor-setup-read-before": 1,
+      "native-speech-cancel-descriptor-setup-read-after": 1,
+      "native-speech-cancel-setup-write-before": 1,
+      "native-speech-cancel-setup-write-after": 1,
+      "native-speech-cancel-verification-setup-read-before": 1,
+      "native-speech-cancel-verification-setup-read-after": 1,
+      "native-speech-cancel-before": 1,
+      "native-speech-cancel-after": 1,
+      "native-Jmol-script-before": 1,
+      "native-Jmol-script-after": 1,
+      "main-iframe-remove-after": 1,
+      "main-fScenarioGo-before": 56378,
+      "main-fScenarioGo-after": 56243,
+      "outerUI-pagehide-microtask": 1,
+      "native-pagehide-microtask": 1
+    },
+    "sourceOrderNote": "Sort browser.seq for call ordering; independentHTTP arrival can reorder small adjacent packets.",
+    "setupProof": [
+      {
+        "run": "run-stage-062532",
+        "seq": 40,
+        "reason": "stage-wrappers-installed",
+        "utc": "2026-11-16T06:25:53.099Z",
+        "performance": 1026,
+        "counter": "4/12",
+        "pageTitle": "Εξάσκηση χωρίς διακλαδώσεις",
+        "documentTitle": "Ονοματολογία Άκυκλων Οργανικών Ενώσεων",
+        "dialogOpen": true,
+        "dialogConnected": true,
+        "iframeCount": 2,
+        "lessonText": "Διάλεξε ένα από τα τέσσερα παιχνίδια. Συνεργείο ονομάτων (επισκευή ονόματος), Χτίσε το όνομα (σύνθεση από συνθετικά), Μο",
+        "quizProgress": "Κουίζ 3/3",
+        "active": {
+          "tag": "H2",
+          "id": null,
+          "text": "Μοριακός ντεντέκτιβ"
+        },
+        "nextDisabled": false,
+        "visibility": "visible",
+        "wrappers": [
+          {
+            "label": "main-iframe-remove",
+            "installed": true,
+            "ownOriginal": true,
+            "originalName": "remove",
+            "originalLength": 0,
+            "originalWritable": true,
+            "originalConfigurable": true
+          },
+          {
+            "label": "main-fScenarioGo",
+            "installed": true,
+            "ownOriginal": true,
+            "originalName": "fScenarioGo",
+            "originalLength": 1,
+            "originalWritable": true,
+            "originalConfigurable": false
+          },
+          {
+            "label": "outerUI-pagehide-capture",
+            "installed": true
+          },
+          {
+            "label": "native-pagehide-capture",
+            "installed": true
+          },
+          {
+            "label": "native-speech-get",
+            "installed": true,
+            "descriptorDepth": 0,
+            "originalConfigurable": true,
+            "originalEnumerable": true,
+            "originalSetterPreserved": true,
+            "serviceGetterReadDuringSetup": false
+          },
+          {
+            "label": "native-Jmol-script",
+            "installed": true,
+            "ownOriginal": true,
+            "originalName": "",
+            "originalLength": 2,
+            "originalWritable": true,
+            "originalConfigurable": true
+          }
+        ]
+      }
+    ],
+    "firstStageSequence": [
+      {
+        "seq": 50,
+        "utc": "2026-11-16T06:25:53.974Z",
+        "reason": "main-iframe-remove-before",
+        "counter": "4/12",
+        "dialogOpen": true,
+        "iframeCount": 2,
+        "command": null
+      },
+      {
+        "seq": 51,
+        "utc": "2026-11-16T06:25:53.976Z",
+        "reason": "outerUI-pagehide-capture",
+        "counter": "4/12",
+        "dialogOpen": true,
+        "iframeCount": 1,
+        "command": null
+      },
+      {
+        "seq": 52,
+        "utc": "2026-11-16T06:25:53.977Z",
+        "reason": "native-pagehide-capture",
+        "counter": "4/12",
+        "dialogOpen": true,
+        "iframeCount": 1,
+        "command": null
+      },
+      {
+        "seq": 53,
+        "utc": "2026-11-16T06:25:53.977Z",
+        "reason": "native-speech-get-before",
+        "counter": "4/12",
+        "dialogOpen": true,
+        "iframeCount": 1,
+        "command": null
+      },
+      {
+        "seq": 54,
+        "utc": "2026-11-16T06:25:53.977Z",
+        "reason": "native-speech-get-after",
+        "counter": "4/12",
+        "dialogOpen": true,
+        "iframeCount": 1,
+        "command": null
+      },
+      {
+        "seq": 63,
+        "utc": "2026-11-16T06:25:53.978Z",
+        "reason": "native-speech-cancel-before",
+        "counter": "4/12",
+        "dialogOpen": true,
+        "iframeCount": 1,
+        "command": null
+      },
+      {
+        "seq": 64,
+        "utc": "2026-11-16T06:25:53.978Z",
+        "reason": "native-speech-cancel-after",
+        "counter": "4/12",
+        "dialogOpen": true,
+        "iframeCount": 1,
+        "command": null
+      },
+      {
+        "seq": 65,
+        "utc": "2026-11-16T06:25:53.978Z",
+        "reason": "native-Jmol-script-before",
+        "counter": "4/12",
+        "dialogOpen": true,
+        "iframeCount": 1,
+        "command": "spin off;"
+      },
+      {
+        "seq": 66,
+        "utc": "2026-11-16T06:25:53.981Z",
+        "reason": "native-Jmol-script-after",
+        "counter": "4/12",
+        "dialogOpen": true,
+        "iframeCount": 1,
+        "command": "spin off;"
+      },
+      {
+        "seq": 67,
+        "utc": "2026-11-16T06:25:53.983Z",
+        "reason": "main-iframe-remove-after",
+        "counter": "4/12",
+        "dialogOpen": true,
+        "iframeCount": 1,
+        "command": null
+      }
+    ],
+    "navigation": {
+      "main-fScenarioGo-before": {
+        "first": {
+          "seq": 68,
+          "utc": "2026-11-16T06:25:53.996Z",
+          "counter": "4/12",
+          "dialogOpen": false,
+          "iframeCount": 1,
+          "destination": 4
+        },
+        "last": {
+          "seq": 141332,
+          "utc": "2026-11-16T06:26:26.076Z",
+          "counter": "4/12",
+          "dialogOpen": false,
+          "iframeCount": 1,
+          "destination": 4
+        }
+      },
+      "main-fScenarioGo-after": {
+        "first": {
+          "seq": 69,
+          "utc": "2026-11-16T06:25:53.997Z",
+          "counter": "4/12",
+          "dialogOpen": false,
+          "iframeCount": 1,
+          "destination": 4
+        },
+        "last": {
+          "seq": 141333,
+          "utc": "2026-11-16T06:26:26.076Z",
+          "counter": "4/12",
+          "dialogOpen": false,
+          "iframeCount": 1,
+          "destination": 4
+        }
+      }
+    },
+    "step5DOMObserved": false
+  },
+  "facts": [
+    "All6 hooks/capture observers installed beforeactivation; zero speechgetter-before packets during setup.",
+    "Speech serviceget/cancel, Jmol spin-off and mainiframe.remove allreturned during observedunload.",
+    "Thereafter tensofthousands mainfScenarioGo(destination4) before/after pairs at4/12 withdialogclosed; no furtherinterval/rAF progress.",
+    "This corroborates repeatednavigation/microtask starvation; exactsourcecausalguard diagnosis belongs to root evidence, not wrapper-selfassessment."
+  ],
+  "limits": [
+    "Instrumented runtime, not identical uninstrumentedexecution; wrappers andhighvolumePOST add timing/networkload.",
+    "50s observerinterval could notexecute whilemicrotaskqueue starved; sockettimeoutwas inactivity-based andnetworktraffic prolongedcall. ExternalownedPIDtermination recorded inexternal-stop.json; no spontaneous processcrashclaim.",
+    "No postblockedBiDi script/screenshotcalls; no gate11/old3 probes.",
+    "Received112690 beacons have sequencegaps up to141333; packetcounts are receivedobservations/lowerbounds, not guaranteed exactcalltotals. IndependentHTTP arrival canreorder nearby beacons; usebrowser.seq."
+  ],
+  "cleanup": {
+    "ownedBrowserExited": true,
+    "ownedServerClosed": true,
+    "ownedProfileRemoved": true,
+    "ownedPIDsVerifiedGone": true,
+    "ownedPIDCheckOutput": "",
+    "ownedPortsVerifiedClosed": {
+      "serverPort": true,
+      "bidiPort": true
+    },
+    "profileAbsent": true,
+    "verifiedUTC": "2026-11-16T06:28:05.670260+00:00"
+  },
+  "hashes": {
+    "trace.jsonl": "c2cd5d6ea59b0f5059bc9a1b752213ace0222371538938e5000d15917a0f28dc",
+    "results.json": "f889b23c7cc027ab07280b7c3247c32732db366e2dfccc425cf73ea7c652e24c",
+    "firefox.log": "0d9a39565b8a305ea4d82ebd9063b310bd31ac6b2d77844fc9d9b8c02baf6fed",
+    "external-stop.json": "1a337561fb989b1e0727883ace95546a10ee43aa31071758a80fcf07935108fa"
+  },
+  "losslessTraceArchive": "trace-archive.json"
+}

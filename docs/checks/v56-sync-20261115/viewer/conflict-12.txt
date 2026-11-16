@@ -1,0 +1,384 @@
+BEFORE:
+.previousElementSibling]) {
+      el.setAttribute('visibility','hidden');
+      el.setAttribute('data-hidden-carbon-h','true');
+    }
+  }
+}
+
+// ── fUpdateSVG ────────────────────────────────────────────────────────────
+
+
+LOCAL:
+// Use the same viewport policy for every 2D representation. Measure molecular
+// bonds/labels only: backgrounds and highlight shapes must not affect centering.
+// Reserve numbering room up front so its animation never moves the drawing.
+// A shared library frame prevents molecule-by-molecule label magnification.
+// Cache geometry only; the pixel size is recomputed for each visible viewport.
+let uniform2DLibraryFrame = null;
+function fPrepareFixedCCAlkanePrototype() {
+  const esterScale = ["ethanoic_methyl_ester", "propanoic_methyl_ester", "methyl_methanoate", "isopropyl_ethanoate", "sec_butyl_ethanoate", "butyl_propanoate", "tert_butyl_methanoate", "isobutyl_2_methylpropanoate", "isopropyl_2_3_dimethylbutanoate"].includes(selectedMol);
+  const carbonylScale = ["ethanal", "butanal", "propanal", "propynal", "pentanal", "methanal", "methyl_2_propanal", "dimethyl_2_3_butanal", "ethyl_2_methyl_3_pentanal", "ethyl_4_isopropyl_3_methyl_2_hexanal", "propenal", "methyl_2_propenal", "propanedial", "methyl_3_penten_2_dial", "ethyl_4_penten_4_yn_2_al", "isopropyl_2_buten_2_dial", "ethyl_2_methyl_3_hexen_2_yn_4_dial", "penten_1_one_3", "pentanone_2", "pentyn_4_one_2", "butanone", "propanone", "pentanone_3", "dimethyl_2_4_pentanone_3", "trimethyl_3_4_4_pentanone_2", "diethyl_4_5_dimethyl_2_6_heptanone_3", "penten_1_yn_4_one_3", "dimethyl_4_5_hexen_5_yn_1_one_3", "methyl_6_hepten_3_dione_2_5", "ethyl_3_methyl_4_octen_3_yn_5_dione_2_7", "isopropyl_4_dimethyl_3_6_octen_3_yn_7_dione_2_5", "methanoicacid", "propionicacid", "butanoic_acid", "propenoic_acid", "propanedioic_acid", "hydroxypropanoic_acid_2", "Oxopropanoic_acid", "aminobutanoic_acid_3", "pentanoic_acid", "oxobutanoic_acid", "dihydroxybutanedioic_acid_2_3", "methyl_2_propanoic_acid", "dimethyl_2_2_propanoic_acid", "ethyl_2_methyl_3_pentanoic_acid", "ethyl_3_isopropyl_2_dimethyl_4_5_hexanoic_acid", "methyl_2_propenoic_acid", "ethyl_2_methyl_3_penten_2_yn_4_oic_acid", "ethyl_3_isopropyl_2_dimethyl_4_5_hexadien_2_4_dioic_acid", "ethyl_2_isopropyl_3_dimethyl_6_6_hepten_2_yn_4_dioic_acid", "penten_2_yn_4_oic_acid", "hexen_2_yn_4_dioic_acid"].includes(selectedMol);
+  const etherScale = ["dimethylether", "ethyl_methyl_ether", "diethyl_ether",
+    "isopropyl_methyl_ether", "methyl_propyl_ether", "ethyl_propyl_ether",
+    "ethyl_isopropyl_ether", "butyl_methyl_ether", "ethyl_sec_butyl_ether",
+    "isobutyl_isopropyl_ether", "tert_butyl_isopropyl_ether"].includes(selectedMol);
+  if (mode2D !== "expanded" ||
+      (!etherScale && !carbonylScale && !esterScale && !["methane", "ethane", "propane", "butane", "pentane",
+        "methyl_2_pentane", "dimethyl_2_3_butane", "ethyl_3_dimethyl_2_5_hexane",
+        "ethene", "propene", "butene_1", "butene_2", "methyl_2_propene",
+        "methyl_3_butene_1", "ethyl_3_dimethyl_2_5_hexene_2",
+        "propyne", "ethyne", "butyne_1", "butyne_2", "methyl_3_butyne_1",
+        "methyl_3_pentyne_1", "methyl_4_pentyne_2", "ethyl_4_dimethyl_3_5_heptyne_1",
+        "propadiene", "pentadiene_1_3", "butadiene_1_3", "butadiene_1_2",
+        "pentadiene_1_4", "methyl_3_pentadiene_1_3", "dimethyl_2_3_pentadiene_1_3",
+        "ethyl_3_dimethyl_4_5_hexadiene_1_4",
+        "penten_3_yne_1", "hexen_1_yne_4", "buten_1_yne_3", "hexen_2_yne_4",
+        "methyl_2_buten_1_yne_3", "dimethyl_2_3_penten_1_yne_4",
+        "ethyl_4_dimethyl_2_3_hepten_2_yne_5",
+        "propanol_1", "penten_4_ol_2", "butanol_1", "butene_3_ol_2", "penten_2_ol_1", "propanediol_1_2", "propanetriol", "ethanol", "butanol_2", "methyl_4_pentanol_2", "dimethyl_2_2_pentanol_3", "methyl_2_propanediol_1_2", "methyl_3_buten_3_ol_2", "methyl_3_pentyn_4_ol_2", "methyl_4_penten_4_yn_2_ol_1", "ethyl_3_methyl_4_hexen_3_yn_5_ol_2", "isopropyl_4_dimethyl_3_5_heptanol_2"].includes(selectedMol))) return;
+  const svg = molSvg?.node;
+  if (!svg || svg.dataset.alkaneFixedCCScale) return;
+  const lines = [...svg.querySelectorAll("line")];
+  if (lines.length !== bondList.reduce((sum,bond)=>sum+bond[2],0)) return;
+  const anchors = new Map(), lengths = [], hydrogenLengths = [];
+  for (let i = 0; i < bondList.length; i++) {
+    const [a, b, order] = bondList[i];
+    if (![1,2,3].includes(order)) return;
+    // Multiple-bond strokes can be offset from their atom centers. Derive centers
+    // from single C-C/C-H bonds, using the actual bond-to-SVG primitive map.
+    // Prefer single-bond anchors. A cumulene center can have only double
+    // bonds; its missing anchor is resolved from validated stroke pairs below.
+    if (order > 1) continue;
+    const line = lines[svgBondList[i]-1];
+    if (!line) return;
+    const p = {x: Number(line.getAttribute("x1")), y: Number(line.getAttribute("y1"))};
+    const q = {x: Number(line.getAttribute("x2")), y: Number(line.getAttribute("y2"))};
+    if (![p.x, p.y, q.x, q.y].every(Number.isFinite)) return;
+    for (const [atom, point] of [[a - 1, p], [b - 1, q]]) {
+      const previous = anchors.get(atom);
+      if (previous && Math.hypot(previous.x - point.x, previous.y - point.y) > 0.01) return;
+      anchors.set(atom, point);
+    }
+    if ((allAtomsTypeList[a - 1] === "C" && allAtomsTypeList[b - 1] === "H") ||
+        (allAtomsTypeList[a - 1] === "H" && allAtomsTypeList[b - 1] === "C")) {
+      hydrogenLengths.push(Math.hypot(q.x - p.x, q.y - p.y));
+    }
+  }
+  if (anchors.size !== allAtomsTypeList.length) {
+    // Symmetric, parallel native double strokes identify their centerline.
+    // Validate both endpoints against every existing anchor before accepting
+    // missing centers. No atom or bond geometry is moved by this operation.
+    for (let i=0;i<bondList.length;i++) {
+      const [a,b,order]=bondList[i];
+      if (order!==2) continue;
+      const pair=lines.slice(svgBondList[i]-1,svgBondList[i]+1);
+      if (pair.length!==2) return;
+      const points=pair.map(line=>({
+        p:{x:Number(line.getAttribute("x1")),y:Number(line.getAttribute("y1"))},
+        q:{x:Number(line.getAttribute("x2")),y:Number(line.getAttribute("y2"))}
+      }));
+      if (points.some(v=>![v.p.x,v.p.y,v.q.x,v.q.y].every(Number.isFinite))) return;
+      const vectors=points.map(v=>({x:v.q.x-v.p.x,y:v.q.y-v.p.y}));
+      const lengths=vectors.map(v=>Math.hypot(v.x,v.y));
+      if (lengths.some(v=>!(v>0)) || Math.abs(lengths[0]-lengths[1])>2 ||
+          Math.abs(vectors[0].x*vectors[1].y-vectors[0].y*vectors[1].x)>lengths[0]*lengths[1]*.001 ||
+          vectors[0].x*vectors[1].x+vectors[0].y*vectors[1].y<=0) return;
+      for (const [atom,end] of [[a-1,"p"],[b-1,"q"]]) {
+        const point={x:(points[0][end].x+points[1][end].x)/2,
+          y:(points[0][end].y+points[1][end].y)/2};
+        const previous=anchors.get(atom);
+        // One native unit allows only the producer's integer rounding.
+        if (previous && Math.hypot(previous.x-point.x,previous.y-point.y)>1) return;
+        if (!previous) anchors.set(atom,point);
+      }
+    }
+  }
+  if (anchors.size !== allAtomsTypeList.length) return;
+  for (const [a,b] of bondList) {
+    const first=allAtomsTypeList[a-1], second=allAtomsTypeList[b-1];
+    // Normalized drawings share the same heavy-bond unit. C-O includes
+    // C=O, so methanal and methanoic acid also calibrate without any C-C.
+    if (!(first === "C" && second === "C") &&
+        !((etherScale || carbonylScale || esterScale) &&
+          ((first === "C" && second === "O") || (first === "O" && second === "C"))) &&
+        !(carbonylScale &&
+          ((first === "C" && second === "N") || (first === "N" && second === "C")))) continue;
+    const p=anchors.get(a-1),q=anchors.get(b-1);
+    lengths.push(Math.hypot(q.x-p.x,q.y-p.y));
+  }
+  // Methane has no C-C. Its C-H/font uses half the common C-C/font unit.
+  // This is a calibration value only; native atom anchors and bonds stay intact.
+  if (!lengths.length && selectedMol === "methane") {
+    lengths.push(...hydrogenLengths.map(length => length * 2));
+  }
+  if (!lengths.length || anchors.size !== allAtomsTypeList.length) return;
+  lengths.sort((a, b) => a - b);
+  // Original reference C-C/font 3.49, shortened by the approved 25%.
+  // The existing calibration/backplate/numbering pipeline is shared by the
+  // alkenes, alkynes and dienes; the historical dataset name stays for callers.
+  // Change label size around native atom anchors, never molecular geometry.
+  const font = lengths[Math.floor(lengths.length / 2)] / 2.6175;
+  if (!(font > 0)) return;
+  const context = document.createElement("canvas").getContext("2d");
+  if (!context) return;
+  const texts = fGetRenderedAtomTextMap(false, true), changes = [];
+  for (const [atom, anchor] of anchors) {
+    const label = texts[atom];
+    const symbol = allAtomsTypeList[atom];
+    const raw = label?.node.textContent.replace(/\s+/g, "");
+    if (!label || !(raw === symbol || (carbonylScale &&
+        ((symbol === "O" && ["OH", "HO"].includes(raw)) ||
+         (symbol === "N" && raw === "NH2"))))) return;
+    const originalFont = parseFloat(label.attr("font-size"));
+    const x = Number(label.attr("x")), y = Number(label.attr("y"));
+    if (!(originalFont > 0) || ![x, y].every(Number.isFinite)) return;
+    const style = getComputedStyle(label.node);
+    context.font = `${style.fontStyle} ${style.fontWeight} ${font}px ${style.fontFamily}`;
+    const ink = context.measureText(allAtomsTypeList[atom]);
+    const cx = (ink.actualBoundingBoxRight - ink.actualBoundingBoxLeft) / 2;
+    const cy = (ink.actualBoundingBoxAscent - ink.actualBoundingBoxDescent) / 2;
+    if (![cx, cy].every(Number.isFinite)) return;
+    const prefix = raw === "HO" ? context.measureText("H").width : 0;
+    // Keep implicit-H labels intact. Queue all changes, including numeric
+    // subscript offsets, so a later validation failure leaves the drawing intact.
+    const offsets = [];
+    for (const tspan of label.node.querySelectorAll("tspan[dy]")) {
+      const dy = tspan.getAttribute("dy");
+      if (/^-?\d+(?:\.\d+)?$/.test(dy))
+        offsets.push([tspan, String(Number(dy) * font / originalFont)]);
+    }
+    changes.push([label, {x: anchor.x - cx - prefix, y: anchor.y + cy,
+      "font-size": font + "px"}, anchor, offsets]);
+  }
+  changes.forEach(([label, attributes, anchor, offsets]) => {
+    label.attr(attributes);
+    offsets.forEach(([node, dy]) => node.setAttribute("dy", dy));
+    label.node.dataset.fixedCCAtomX = String(anchor.x);
+    label.node.dataset.fixedCCAtomY = String(anchor.y);
+  });
+  svg.dataset.alkaneFixedCCScale = String(font / 270);
+}
+
+function fGetUniform2DLibraryFrame() {
+  if (uniform2DLibraryFrame) return uniform2DLibraryFrame;
+  let spanX = 1, spanY = 1;
+  const inventory = window.MOL2D || {};
+  Object.values(inventory).forEach(function (forms) {
+    Object.values(forms).forEach(function (mol) {
+      if (typeof mol !== 'string' || !mol.trim()) return;
+      const lines = mol.split('\n'), counts = lines[3] || '';
+      const na = Number(counts.slice(0,3)), nb = Number(counts.slice(3,6));
+      if (!(na > 0)) return;
+      const atoms = lines.slice(4,4+na).map(l => ({
+        x:Number(l.slice(0,10)), y:Number(l.slice(10,20)), symbol:l.slice(31,34).trim()
+      }));
+      if (atoms.some(a => !Number.isFinite(a.x) || !Number.isFinite(a.y))) return;
+      const heavyLengths = [], allLengths = [];
+      lines.slice(4+na,4+na+nb).forEach(function (line) {
+        const a=atoms[Number(line.slice(0,3))-1], b=atoms[Number(line.slice(3,6))-1];
+        if (!a || !b) return;
+        const length=Math.hypot(b.x-a.x,b.y-a.y);
+        if (!(length > 0)) return;
+        allLengths.push(length);
+        if (a.symbol !== 'H' && b.symbol !== 'H') heavyLengths.push(length);
+      });
+      const lengths=(heavyLengths.length ? heavyLengths : allLengths).sort((a,b)=>a-b);
+      const unit=lengths.length ? lengths[Math.floor(lengths.length/2)] : 1;
+      spanX=Math.max(spanX,(Math.max(...atoms.map(a=>a.x))-Math.min(...atoms.map(a=>a.x)))/unit);
+      spanY=Math.max(spanY,(Math.max(...atoms.map(a=>a.y))-Math.min(...atoms.map(a=>a.y)))/unit);
+    });
+  });
+  // Native JSME uses up to ~3.7 em per heavy bond; reserve label/number margins.
+  uniform2DLibraryFrame = {width:spanX*4+5, height:spanY*4+5};
+  return uniform2DLibraryFrame;
+}
+
+function fFit2DSVG() {
+  const svg = document.querySelector("#jsmeNomeclatureSVG svg");
+  if (!svg || !svg.getClientRects().length) return;
+  try {
+    const rootMatrix = svg.getCTM();
+    if (!rootMatrix) return;
+    const inverse = rootMatrix.inverse();
+    let left = Infinity, top = Infinity, right = -Infinity, bottom = -Infinity;
+    svg.querySelectorAll("line, text, path").forEach(function (el) {
+      if (el.closest("defs") || (el.id || "").indexOf("number") === 0) return;
+      if (el.hasAttribute('data-hidden-carbon-h')) return;
+      const matrix = el.getCTM();
+      if (!matrix) return;
+      const box = el.getBBox();
+      const transform = inverse.multiply(matrix);
+      [[box.x, box.y], [box.x + box.width, box.y],
+       [box.x, box.y + box.height], [box.x + box.width, box.y + box.height]].forEach(function (xy) {
+        const p = svg.createSVGPoint();
+        p.x = xy[0]; p.y = xy[1];
+        const q = p.matrixTransform(transform);
+        left = Math.min(left, q.x); right = Math.max(right, q.x);
+        top = Math.min(top, q.y); bottom = Math.max(bottom, q.y);
+      });
+    });
+    // Single atoms and horizontal/vertical skeletal bonds are valid drawings.
+    if (![left, top, right, bottom].every(Number.isFinite)) return;
+    if (!svg.dataset.baseViewport) {
+      const box = svg.viewBox.baseVal;
+      svg.dataset.baseViewport = JSON.stringify([
+        box.width || svg.width.baseVal.value,
+        box.height || svg.height.baseVal.value,
+      ]);
+    }
+    const size = JSON.parse(svg.dataset.baseViewport);
+    if (!(size[0] > 0 && size[1] > 0)) return;
+    const viewport = svg.parentNode.getBoundingClientRect();
+    const aspect = viewport.width > 0 && viewport.height > 0
+      ? viewport.width / viewport.height : size[0] / size[1];
+    // Numbers are inserted in the first drawing group, whose coordinates
+    // JSME scales down. Convert their clearance into root SVG units too.
+    const numberGroup = svg.querySelector("g");
+    const numberMatrix = numberGroup && numberGroup.getCTM();
+    const numberTransform = numberMatrix ? inverse.multiply(numberMatrix) : null;
+    // Reserve numbering clearance without forcing the largest library drawing
+    // back to a smaller label size (all numbered forms are browser-checked).
+    const prototypeNumberScale = Number(svg.dataset.alkaneFixedCCScale) || 1;
+    const numberPaddingX = numberTransform
+      ? 350 * prototypeNumberScale * (Math.abs(numberTransform.a) + Math.abs(numberTransform.c)) : 0;
+    const numberPaddingY = numberTransform
+      ? 350 * prototypeNumberScale * (Math.abs(numberTransform.b) + Math.abs(numberTransform.d)) : 0;
+    const margin = Math.max(right - left, bottom - top) * 0.04;
+    const paddingX = Math.max(numberPaddingX, margin);
+    const paddingY = Math.max(numberPaddingY, margin);
+    let desiredWidth = size[0];
+    const label = svg.querySelector('text:not([id^="number"])');
+    if (label && viewport.width > 0 && viewport.height > 0) {
+      const frame=fGetUniform2DLibraryFrame();
+      const fontSize=parseFloat(getComputedStyle(label).fontSize);
+      const matrix=label.getCTM();
+      const local=matrix && inverse.multiply(matrix);
+      const fontInRoot=local && fontSize*Math.hypot(local.a,local.b);
+      const zoom=molZoom2D/MOL_ZOOM_DEFAULT;
+      // Main can request readable labels, with the bounds below fitting large
+      // drawings. Saved embedded hosts retain their existing common scale.
+      const pageScale=Number(document.documentElement.getAttribute("data-namelecule-2d-scale"));
+      const initialScale=Number.isFinite(pageScale) && pageScale > 0 ? pageScale : 1;
+      const pageFont=Number(document.documentElement.getAttribute("data-namelecule-2d-font-size"));
+      const pixels=Number.isFinite(pageFont) && pageFont > 0 ? pageFont*zoom
+        : Math.min(18,viewport.width/frame.width,viewport.height/frame.height)*zoom*1.15*initialScale;
+      if (fontInRoot > 0 && pixels > 0) {
+        desiredWidth=viewport.width*fontInRoot/pixels;
+        svg.dataset.uniformAtomFontPixels=String(pixels);
+      }
+    }
+    // Free editor input beyond the library frame still fits without clipping.
+    const width = Math.max(desiredWidth, right - left + paddingX * 2,
+      (bottom - top + paddingY * 2) * aspect);
+    const height = width / aspect;
+    svg.setAttribute("viewBox", [(left + right - width) / 2,
+      (top + bottom - height) / 2, width, height].join(" "));
+    svg.setAttribute("preserveAspectRatio", "xMidYMid meet");
+    svg.style.width = "100%";
+    svg.style.height = "100%";
+    // Font bounds depend on the final viewBox (including browser hinting).
+    fRefreshLabelBackplates();
+  } catch (eFit) {
+    /* Hidden/uninitialized drawings are fitted on the next visible render. */
+  }
+}
+
+// JSME labels collinear sp carbons even in its skeletal depiction. Its bond
+// lines already reach the atom centers; the label backplates mask those lines.
+// Remove the paired labels/backplates, keeping the separate atom/bond highlights.
+
+
+UPSTREAM:
+var MULER_SELECT_SEQ_DY = 300;  // selection badge baseline below label bottom, SVG units
+
+// Selection-sequence badges (v56 1C order dimension): one per picked atom,
+// numbered by selection order, below the label (locants live above). White
+// text + cyan halo, tagged mulerSelNum* and skipped by highlight scraping
+// like the numbering badges. Painted per render from live state — toggle,
+// re-pick, exact-clear and mode switches renumber automatically.
+// Main-chain only: FG and free selections paint the highlight with no numbers.
+function fMulerSelectSeqBadges() {
+  try {
+    if (typeof fMulerSelectPresenting === "function" && fMulerSelectPresenting()) return;
+    try { if (typeof fMulerSelectPurpose === "function" && fMulerSelectPurpose() !== "mainChain") return; } catch (eP) { return; }
+    var sel = (typeof fMulerSelectState === "function") ? fMulerSelectState() : null;
+    var atoms = (sel && sel.active === true && Array.isArray(sel.atoms2D)) ? sel.atoms2D : [];
+    if (!atoms.length) return;
+    if (typeof molSvg === "undefined" || !molSvg) return;
+    var geom = null;
+    try { if (typeof fMulerSelectGeom === "function") geom = fMulerSelectGeom(); } catch (eG) { geom = null; }
+    var anchors = (geom && geom.anchors) || [];
+    var byAtom = {};
+    try { for (var ai = 0; ai < anchors.length; ai++) { if (anchors[ai] && !(anchors[ai].atom in byAtom)) byAtom[anchors[ai].atom] = anchors[ai]; } } catch (eA) {}
+    var compByAnchor = {}, selectedSet = {};
+    try {
+      var cList = (geom && geom.comp) || [];
+      for (var ci = 0; ci < cList.length; ci++) {
+        if (cList[ci] && typeof cList[ci].anchor === "number") compByAnchor[cList[ci].anchor] = cList[ci];
+      }
+      for (var si = 0; si < atoms.length; si++) selectedSet[atoms[si]] = true;
+    } catch (eCA) {}
+    var verts = (geom && geom.verts) || [], va = (geom && geom.vassign) || [];
+    // Expanded compensation mirrors fShowNumbering (the equalizer shrinks
+    // the model while overlay glyphs stay fixed-size).
+    var numFS = 380, numSW = 60, numK = 1;
+    try {
+      var _nf = 1, _nm = "condensed";
+      try { _nf = (typeof fMol2DModeScaleFactor === "function") ? fMol2DModeScaleFactor() : 1; } catch (eNF) { _nf = 1; }
+      try { _nm = (typeof mode2D !== "undefined") ? mode2D : "condensed"; } catch (eNM) { _nm = "condensed"; }
+      if (_nm === "expanded" && _nf !== 1) {
+        numFS = 380 / _nf;
+        if (!(numFS > 0) || !isFinite(numFS)) numFS = 380;
+        if (numFS < 296) numFS = 296;
+        if (numFS > 844) numFS = 844;
+        numSW = numFS * 60 / 380;
+        numK = numFS / 380;
+      }
+    } catch (eNK) { numFS = 380; numSW = 60; numK = 1; }
+    var gWrap = null;
+    try { gWrap = molSvg.select("g"); } catch (eGW) { gWrap = null; }
+    if (!gWrap || !gWrap.node) return;
+    for (var i = 0; i < atoms.length; i++) {
+      var a0 = atoms[i] - 1, bx = null, by = null;
+      try {
+        var cm = compByAnchor[a0];
+        var cmHiddenPicked = false;
+        if (cm && Array.isArray(cm.members)) {
+          for (var cmi = 0; cmi < cm.members.length; cmi++) {
+            if (cm.members[cmi] !== atoms[i] && selectedSet[cm.members[cmi]]) { cmHiddenPicked = true; break; }
+          }
+        }
+        if (cm && !cmHiddenPicked && cm.atomBox && cm.atomBox.w > 0 && cm.atomBox.h > 0) {
+          bx = cm.atomBox.x + cm.atomBox.w / 2;
+          by = cm.atomBox.y + cm.atomBox.h / 2 + MULER_SELECT_SEQ_DY * numK;
+        } else {
+          var an = byAtom[a0];
+          if (an && an.w > 0 && an.h > 0) { bx = an.x; by = an.y + an.h / 2 + MULER_SELECT_SEQ_DY * numK; }
+          else {
+            for (var vi = 0; vi < verts.length; vi++) {
+              if (va[vi] === a0) { bx = verts[vi].x; by = verts[vi].y + MULER_HOVER_DOT_R + MULER_SELECT_SEQ_DY * numK; break; }
+            }
+            if (bx === null || bx === undefined) continue;
+          }
+        }
+      } catch (eB) { continue; }
+      try {
+        var _cyan = (typeof MULER_SELECT_CYAN !== "undefined" && MULER_SELECT_CYAN) ? MULER_SELECT_CYAN : "#7ddfff";
+        var s = "<text id='mulerSelNum" + i + "' x='" + Math.round(bx) + "' y='" + Math.round(by) + "' font-size='" + Math.round(numFS) + "px' font-weight='bold' font-family='Arial, sans-serif' text-anchor='middle' fill='" + _cyan + "' stroke='#000000' stroke-width='" + Math.round(numSW) + "px' paint-order='stroke' class='mulerSelNum'>" + (i + 1) + "</text>";
+        var nel = null;
+        try { nel = (typeof MuSVG !== "undefined" && MuSVG.parse) ? MuSVG.parse(s) : null; } catch (eP) { nel = null; }
+        if (nel) gWrap.append(nel);
+      } catch (eN) {}
+    }
+  } catch (e) {}
+}
+
+
+AFTER:
+function fUpdateSVG() {
+  try {
+    fBuildMoleculeSVG();
+    document.getElementById("jsmeNomeclatureSVG").removeAttribute("data-label-error");
+  } catch (error) {
+    // Never leave an obsolete molec

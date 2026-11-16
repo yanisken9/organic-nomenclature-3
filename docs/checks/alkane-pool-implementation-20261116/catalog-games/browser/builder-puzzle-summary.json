@@ -1,0 +1,124 @@
+{
+  "role": "Developer browser verification; not independent review",
+  "status": "Builder/Puzzle complete; Workshop/Detective hold pending corrected freeze",
+  "freezeSHA256": "b510d4c2831a9cc6fbe512d6cbc63470621d261b0d91e6dc8d829481454b3894",
+  "builder": {
+    "path": "docs/checks/alkane-pool-implementation-20261116/catalog-games/browser/run-052545/results.json",
+    "completed": false,
+    "checks": 204,
+    "correctUIAttempts": 6,
+    "games": [
+      "builder"
+    ],
+    "failure": "Traceback (most recent call last):\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/alkane-pool-implementation-20261116/catalog-games/browser/replay-new-six.py\", line 196, in <module>\n    for record in NEW:puzzle_round(record)\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/alkane-pool-implementation-20261116/catalog-games/browser/replay-new-six.py\", line 127, in puzzle_round\n    select_puzzle(index)\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/alkane-pool-implementation-20261116/catalog-games/browser/replay-new-six.py\", line 121, in select_puzzle\n    click('#round-select');key('\\ue010') # End reaches a deterministic last option.\nTypeError: 'str' object is not callable\n",
+    "jsExceptions": 0,
+    "sourceUnchanged": true,
+    "browserExited": true,
+    "serverClosed": true,
+    "profileRemoved": true
+  },
+  "puzzleAndMandatoryLegacyGate4": {
+    "path": "docs/checks/alkane-pool-implementation-20261116/catalog-games/browser/run-053000/results.json",
+    "completed": true,
+    "checks": 212,
+    "correctUIAttempts": 6,
+    "games": [
+      "puzzle"
+    ],
+    "failure": null,
+    "jsExceptions": 0,
+    "sourceUnchanged": true,
+    "browserExited": true,
+    "serverClosed": true,
+    "profileRemoved": true
+  },
+  "genuineCorrectAnswers": 12,
+  "runs": [
+    {
+      "path": "docs/checks/alkane-pool-implementation-20261116/catalog-games/browser/run-052532/results.json",
+      "completed": false,
+      "checks": 0,
+      "correctUIAttempts": 0,
+      "games": [],
+      "failure": "Traceback (most recent call last):\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/alkane-pool-implementation-20261116/catalog-games/browser/replay-new-six.py\", line 172, in <module>\n    server=http.server.ThreadingHTTPServer(('127.0.0.1',0),Handler);threading.Thread(target=server.serve_forever,daemon=True).start()\n  File \"/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/socketserver.py\", line 452, in __init__\n    self.server_bind()\n  File \"/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/server.py\", line 138, in server_bind\n    socketserver.TCPServer.server_bind(self)\n  File \"/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/socketserver.py\", line 466, in server_bind\n    self.socket.bind(self.server_address)\nPermissionError: [Errno 1] Operation not permitted\n",
+      "jsExceptions": 0,
+      "sourceUnchanged": true,
+      "browserExited": true,
+      "serverClosed": true,
+      "profileRemoved": null
+    },
+    {
+      "path": "docs/checks/alkane-pool-implementation-20261116/catalog-games/browser/run-052545/results.json",
+      "completed": false,
+      "checks": 204,
+      "correctUIAttempts": 6,
+      "games": [
+        "builder"
+      ],
+      "failure": "Traceback (most recent call last):\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/alkane-pool-implementation-20261116/catalog-games/browser/replay-new-six.py\", line 196, in <module>\n    for record in NEW:puzzle_round(record)\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/alkane-pool-implementation-20261116/catalog-games/browser/replay-new-six.py\", line 127, in puzzle_round\n    select_puzzle(index)\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/alkane-pool-implementation-20261116/catalog-games/browser/replay-new-six.py\", line 121, in select_puzzle\n    click('#round-select');key('\\ue010') # End reaches a deterministic last option.\nTypeError: 'str' object is not callable\n",
+      "jsExceptions": 0,
+      "sourceUnchanged": true,
+      "browserExited": true,
+      "serverClosed": true,
+      "profileRemoved": true
+    },
+    {
+      "path": "docs/checks/alkane-pool-implementation-20261116/catalog-games/browser/run-052705/results.json",
+      "completed": false,
+      "checks": 4,
+      "correctUIAttempts": 0,
+      "games": [],
+      "failure": "Traceback (most recent call last):\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/alkane-pool-implementation-20261116/catalog-games/browser/replay-new-six.py\", line 199, in <module>\n    for record in NEW:puzzle_round(record)\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/alkane-pool-implementation-20261116/catalog-games/browser/replay-new-six.py\", line 127, in puzzle_round\n    select_puzzle(index)\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/alkane-pool-implementation-20261116/catalog-games/browser/replay-new-six.py\", line 124, in select_puzzle\n    wait('document.getElementById(\"round-select\").selectedIndex==='+str(index))\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/alkane-pool-implementation-20261116/catalog-games/browser/replay-new-six.py\", line 53, in wait\n    raise AssertionError('Timed out: '+expr)\nAssertionError: Timed out: document.getElementById(\"round-select\").selectedIndex===8\n",
+      "jsExceptions": 0,
+      "sourceUnchanged": true,
+      "browserExited": true,
+      "serverClosed": true,
+      "profileRemoved": true
+    },
+    {
+      "path": "docs/checks/alkane-pool-implementation-20261116/catalog-games/browser/run-052859/results.json",
+      "completed": false,
+      "checks": 4,
+      "correctUIAttempts": 0,
+      "games": [],
+      "failure": "Traceback (most recent call last):\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/alkane-pool-implementation-20261116/catalog-games/browser/replay-new-six.py\", line 202, in <module>\n    for record in NEW:puzzle_round(record)\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/alkane-pool-implementation-20261116/catalog-games/browser/replay-new-six.py\", line 130, in puzzle_round\n    select_puzzle(index)\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/alkane-pool-implementation-20261116/catalog-games/browser/replay-new-six.py\", line 126, in select_puzzle\n    wait('document.getElementById(\"round-select\").selectedIndex==='+str(index),10)\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/alkane-pool-implementation-20261116/catalog-games/browser/replay-new-six.py\", line 53, in wait\n    raise AssertionError('Timed out: '+expr)\nAssertionError: Timed out: document.getElementById(\"round-select\").selectedIndex===8\n",
+      "jsExceptions": 0,
+      "sourceUnchanged": true,
+      "browserExited": true,
+      "serverClosed": true,
+      "profileRemoved": true
+    },
+    {
+      "path": "docs/checks/alkane-pool-implementation-20261116/catalog-games/browser/run-052936/results.json",
+      "completed": false,
+      "checks": 3,
+      "correctUIAttempts": 0,
+      "games": [],
+      "failure": "Traceback (most recent call last):\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/alkane-pool-implementation-20261116/catalog-games/browser/replay-new-six.py\", line 204, in <module>\n    for record in NEW:puzzle_round(record)\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/alkane-pool-implementation-20261116/catalog-games/browser/replay-new-six.py\", line 132, in puzzle_round\n    select_puzzle(index)\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/alkane-pool-implementation-20261116/catalog-games/browser/replay-new-six.py\", line 128, in select_puzzle\n    wait('document.getElementById(\"round-select\").selectedIndex==='+str(position),5)\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/alkane-pool-implementation-20261116/catalog-games/browser/replay-new-six.py\", line 53, in wait\n    raise AssertionError('Timed out: '+expr)\nAssertionError: Timed out: document.getElementById(\"round-select\").selectedIndex===1\n",
+      "jsExceptions": 0,
+      "sourceUnchanged": true,
+      "browserExited": true,
+      "serverClosed": true,
+      "profileRemoved": true
+    },
+    {
+      "path": "docs/checks/alkane-pool-implementation-20261116/catalog-games/browser/run-053000/results.json",
+      "completed": true,
+      "checks": 212,
+      "correctUIAttempts": 6,
+      "games": [
+        "puzzle"
+      ],
+      "failure": null,
+      "jsExceptions": 0,
+      "sourceUnchanged": true,
+      "browserExited": true,
+      "serverClosed": true,
+      "profileRemoved": true
+    }
+  ],
+  "nativeSelectQualification": false,
+  "nativeSelectLimit": "Trusted key events reached the select but did not change selection in headless Firefox. Actual Puzzle fixtures were reached with the production Next button; failed attempts retained. No app fix or product-failure claim.",
+  "runtimeEdits": false,
+  "browserSlotReturned": true
+}

@@ -1,0 +1,217 @@
+--- review-before-cache/js/namelecule-generated-repair-checkpoint.js
++++ js/namelecule-generated-repair-checkpoint.js
+@@ -129,7 +129,19 @@
+     const seed = previous && previous.version === VERSION && seedValue(previous.seed);
+     if (!seed) return { version: VERSION, seed: null, currentRound: 0, states: [null, null, null], solved: false };
+     const raw = Array.isArray(previous.states) && previous.states.length === 3 ? previous.states.map(cleanRound) : [null, null, null];
+-    const set = cache.get(key(recipe, seed));
++    const cacheKey = key(recipe, seed);
++    let set = cache.get(cacheKey);
++    // Cached rounds are an optimization, never proof of earned access. Once a
++    // source has passed its byte/engine checks, deterministically reconstruct
++    // a required receipt even if an old round was evicted from the small cache.
++    if (!set && cache === prepared) {
++      const descriptor = catalogDescriptor(recipe.catalogRevision);
++      const input = canonicalInputs.get(catalogKey(descriptor));
++      if (input) {
++        set = buildSet(recipe, seed, input);
++        rememberSet(cache, cacheKey, set, 32);
++      }
++    }
+     let states = raw;
+     let currentRound = Number.isInteger(previous.currentRound) && previous.currentRound >= 0 && previous.currentRound < 3 ? previous.currentRound : 0;
+     let solved = false;
+@@ -242,6 +254,19 @@
+       if (signal) signal.removeEventListener("abort", abort);
+     }
+   }
++  function rememberSet(cache, cacheKey, set, limit) {
++    if (!cache.has(cacheKey) && cache.size >= limit) cache.delete(cache.keys().next().value);
++    cache.set(cacheKey, set);
++  }
++  function buildSet(recipe, seed, canonicalInput) {
++    const input = recipe.version === 2 ? levelAPI().createGenerationInput(canonicalInput, recipe.level) : canonicalInput;
++    const game = global.NameleculeRepairEngine.validateGameData(global.NameleculeRepairGenerator.createGame(input.catalog, input.analyses,
++      { seed, difficulty: recipe.difficulty }));
++    const setId = recipe.version === 2 ? (recipe.level === 1 ? "alkanes-unbranched" : "alkanes-branched") : recipe.setId;
++    const set = game.sets.find(entry => entry.id === setId);
++    assert(set && set.rounds.length === 3, "Repair set unavailable");
++    return set;
++  }
+   async function generate(recipe, seed, signal, cache, limit) {
+     validate(recipe);
+     checkSignal(signal);
+@@ -255,14 +280,8 @@
+       const canonicalInput = await loadCanonicalInput(controller.signal, recipe.catalogRevision);
+       checkSignal(signal);
+       checkSignal(controller.signal);
+-      const input = recipe.version === 2 ? levelAPI().createGenerationInput(canonicalInput, recipe.level) : canonicalInput;
+-      const game = global.NameleculeRepairEngine.validateGameData(global.NameleculeRepairGenerator.createGame(input.catalog, input.analyses,
+-        { seed, difficulty: recipe.difficulty }));
+-      const setId = recipe.version === 2 ? (recipe.level === 1 ? "alkanes-unbranched" : "alkanes-branched") : recipe.setId;
+-      const set = game.sets.find(entry => entry.id === setId);
+-      assert(set && set.rounds.length === 3, "Το σετ επισκευών δεν είναι διαθέσιμο.");
+-      if (cache.size >= limit) cache.delete(cache.keys().next().value);
+-      cache.set(cacheKey, set);
++      const set = buildSet(recipe, seed, canonicalInput);
++      rememberSet(cache, cacheKey, set, limit);
+       return set;
+     } catch (error) {
+       controller.abort();
+@@ -278,6 +297,11 @@
+     const state = restore(recipe, previous);
+     if (!state.seed || prepared.has(key(recipe, state.seed))) return null;
+     return generate(recipe, state.seed, options && options.signal, prepared, 32).then(() => restore(recipe, state));
++  }
++  function preparePractice(recipe, previous, options) {
++    const state = restorePractice(recipe, previous);
++    if (!state.seed || practices.has(key(recipe, state.seed))) return null;
++    return generate(recipe, state.seed, options && options.signal, practices, 2).then(() => restorePractice(recipe, state));
+   }
+   function node(tag, className, text) {
+     const element = global.document.createElement(tag);
+@@ -412,7 +436,7 @@
+   }
+   function mount(host, options) { return mountSet(host, options, false); }
+   function mountPractice(host, options) { return mountSet(host, options, true); }
+-  const adapter = Object.freeze({ validate, restore, prepare, mount, createPractice, restorePractice, mountPractice });
++  const adapter = Object.freeze({ validate, restore, prepare, preparePractice, mount, createPractice, restorePractice, mountPractice });
+   global.NameleculeGeneratedRepairCheckpoint = Object.freeze({ adapter, loadCanonicalInput, catalogDescriptor, freshSeed, roundRecipe });
+   if (global.NameleculeQuizCheckpoints) global.NameleculeQuizCheckpoints.registerType("generated-name-repair-set", adapter);
+ })(typeof window !== "undefined" ? window : globalThis);
+--- review-before-cache/js/namelecule-game-choice-checkpoint.js
++++ js/namelecule-game-choice-checkpoint.js
+@@ -324,7 +324,7 @@
+     assert(expectedSlot === "legacy" ? context.source === "legacy" : context.source === "enriched" && context.level === Number(expectedSlot), "Attempt level/source mismatch");
+     const progress = restoreGame(attemptRecipe(recipe, context), game, value.progress, practice);
+     assert(progress.seed === context.seed, "Attempt source cannot be restored");
+-    return { context, progress };
++    return { context, progress, practice: practice === true };
+   }
+   function legacyAttempt(recipe, game, progress, practice) {
+     if (!progress || !seedValue(progress.seed)) return null;
+@@ -342,7 +342,8 @@
+       for (const [game] of LEVEL_GAMES) {
+         const slots = raw.games && raw.games[game];
+         if (slots && typeof slots === "object") for (const slot of ["legacy", ...recipe.allowedLevels.map(String)]) {
+-          if (own(slots, slot)) state.games[game][slot] = restoreAttempt(recipe, game, slots[slot], practice, slot);
++          if (own(slots, slot)) state.games[game][slot] = restoreAttempt(recipe, game, slots[slot],
++            practice || slots[slot].practice === true || slot !== "legacy" && !recipe.requiredLevels.includes(Number(slot)), slot);
+         }
+         const active = raw.activeLevels && raw.activeLevels[game];
+         if (active === "legacy" && state.games[game].legacy || recipe.allowedLevels.includes(active)) state.activeLevels[game] = active;
+@@ -388,19 +389,28 @@
+   }
+   function levelEvidence(recipe, state) {
+     const evidence = [];
+-    for (const [game] of LEVEL_GAMES) if (state.games[game].legacy) evidence.push({ game, attempt: state.games[game].legacy });
+-    if (state.selected && state.selectedLevel !== null && state.games[state.selected][state.selectedLevel]) evidence.push({ game: state.selected, attempt: state.games[state.selected][state.selectedLevel] });
+-    for (const level of recipe.allowedLevels) if (state.receipts[level]) evidence.push(state.receipts[level]);
+-    if (state.legacyEarned) evidence.push(state.legacyEarned);
++    for (const [game] of LEVEL_GAMES) if (state.games[game].legacy) evidence.push({ game, attempt: state.games[game].legacy, practice: state.games[game].legacy.practice === true });
++    if (state.selected && state.selectedLevel !== null && state.games[state.selected][state.selectedLevel]) {
++      const attempt = state.games[state.selected][state.selectedLevel];
++      evidence.push({ game: state.selected, attempt, practice: attempt.practice === true });
++    }
++    // Receipt verification always uses the required cache, even when the
++    // currently displayed attempt is optional or repeats an earned level.
++    for (const level of recipe.allowedLevels) if (state.receipts[level]) evidence.push(Object.assign({}, state.receipts[level], { practice: false }));
++    if (state.legacyEarned) evidence.push(Object.assign({}, state.legacyEarned, { practice: false }));
+     return evidence;
+   }
+   function prepareLevels(recipe, previous, options, practice) {
+     const state = restoreLevels(recipe, previous, practice), signal = options && options.signal;
+     const jobs = [], seen = new Set();
+-    for (const { game, attempt } of levelEvidence(recipe, state)) {
+-      const round = attemptRecipe(recipe, attempt.context), identity = game + ":" + levels().contextKey(attempt.context);
++    for (const { game, attempt, practice: optional } of levelEvidence(recipe, state)) {
++      const round = attemptRecipe(recipe, attempt.context), identity = game + ":" + levels().contextKey(attempt.context) + ":" + optional;
+       if (seen.has(identity)) continue; seen.add(identity);
+-      if (game === "repair") { const pending = repair.prepare(round, attempt.progress, { signal }); if (pending) jobs.push(pending); }
++      if (game === "repair") {
++        const prepareRound = optional ? repair.preparePractice : repair.prepare;
++        assert(typeof prepareRound === "function", "Repair preparation API unavailable");
++        const pending = prepareRound(round, attempt.progress, { signal }); if (pending) jobs.push(pending);
++      }
+       else if (game === "detective") {
+         if (!canonicalFor(round) || !global.NameleculeMolecularDetectiveEngine || !global.NameleculeMolecularDetectiveLesson) {
+           const id = "detective:" + round.catalogRevision;
+@@ -415,10 +425,10 @@
+     // Warm sources/rounds must return null, rather than enqueue another retry.
+     return jobs.length ? Promise.all(jobs).then(() => { cancelled(signal); return restoreLevels(recipe, state, practice); }) : null;
+   }
+-  function newLevelAttempt(recipe, game, level, previousSeed) {
++  function newLevelAttempt(recipe, game, level, previousSeed, practice) {
+     const seed = generated.freshSeed(previousSeed || null);
+     const context = levels().makeContext({ source: "enriched", level, seed });
+-    return restoreAttempt(recipe, game, { context, progress: { version: 1, seed, currentRound: 0, states: [null, null, null], solved: false } }, false, String(level));
++    return { context, progress: { version: 1, seed, currentRound: 0, states: [null, null, null], solved: false }, practice: practice === true };
+   }
+   function createLevelPractice(recipe, previous, options) {
+     const state = restoreLevels(recipe, previous, true);
+@@ -427,7 +437,7 @@
+     if (state.selected) {
+       const level = recipe.allowedLevels.includes(state.selectedLevel) ? state.selectedLevel : recipe.allowedLevels[0];
+       const old = state.games[state.selected][level];
+-      state.games[state.selected][level] = newLevelAttempt(recipe, state.selected, level, old && old.context.seed);
++      state.games[state.selected][level] = newLevelAttempt(recipe, state.selected, level, old && old.context.seed, true);
+       state.selectedLevel = level; state.activeLevels[state.selected] = level;
+     }
+     return restoreLevels(recipe, state, true);
+@@ -460,7 +470,8 @@
+     function selectLevel(level, fresh) {
+       assert(recipe.allowedLevels.includes(level), "Unavailable level at this checkpoint");
+       const game = state.selected, old = state.games[game][level];
+-      if (!old || fresh || state.resetOnSelect) state.games[game][level] = newLevelAttempt(recipe, game, level, old && old.context.seed);
++      const optional = practice || !recipe.requiredLevels.includes(level) || !!(state.receipts[level] && state.receipts[level].attempt.progress.solved);
++      if (!old || fresh || state.resetOnSelect) state.games[game][level] = newLevelAttempt(recipe, game, level, old && old.context.seed, optional);
+       state.resetOnSelect = false; state.selectedLevel = level; state.activeLevels[game] = level; publish(); render();
+     }
+     function choose() { state.selected = null; state.selectedLevel = null; publish(); render(); }
+@@ -493,14 +504,18 @@
+       if (state.games[game].legacy) levelHost.append(button("Προηγούμενη προσπάθεια", "nl-quiz-button secondary", () => { state.selectedLevel = "legacy"; state.activeLevels[game] = "legacy"; publish(); render(); }));
+       const slot = state.selectedLevel;
+       if (slot === null) { gameHost.append(node("p", "nl-game-choice-note", "Διάλεξε επίπεδο. Κάθε υποχρεωτικό επίπεδο χρειάζεται τη δική του τριάδα, με παιχνίδι της επιλογής σου.")); publish(); return; }
+-      if (!state.games[game][slot]) { if (slot === "legacy") { choose(); return; } state.games[game][slot] = newLevelAttempt(recipe, game, slot, null); }
++      if (!state.games[game][slot]) {
++        if (slot === "legacy") { choose(); return; }
++        state.games[game][slot] = newLevelAttempt(recipe, game, slot, null, practice || !recipe.requiredLevels.includes(slot) || !!state.receipts[slot]);
++      }
+       const abort = new AbortController(); current = { destroy() { abort.abort(); } }; publish();
+       function start() {
+         if (destroyed || token !== activeToken || abort.signal.aborted) return;
+         const attempt = state.games[game][slot], context = clone(attempt.context), round = attemptRecipe(recipe, context);
++        const innerPractice = practice || attempt.practice === true;
+         function accept(raw) {
+           if (destroyed || token !== activeToken || raw.seed !== context.seed) return;
+-          state.games[game][slot] = restoreAttempt(recipe, game, { context, progress: raw }, practice, String(slot)); publish();
++          state.games[game][slot] = restoreAttempt(recipe, game, { context, progress: raw }, innerPractice, String(slot)); publish();
+         }
+         const settings = Object.assign({}, options, { round, initialState: clone(attempt.progress), onStateChange: accept,
+           continueLabel: () => state.solved ? "Συνεχίζω τη θεωρία" : "Επόμενο υποχρεωτικό επίπεδο",
+@@ -516,8 +531,8 @@
+           },
+           onOtherGame() { if (state.solved && options.onOtherGame) options.onOtherGame(); else choose(); }
+         });
+-        current = game === "repair" ? (practice ? repair.mountPractice : repair.mount)(gameHost, settings)
+-          : (game === "detective" ? mountDetective : game === "puzzle" ? mountPuzzle : mountBuilder)(gameHost, settings, practice);
++        current = game === "repair" ? (innerPractice ? repair.mountPractice : repair.mount)(gameHost, settings)
++          : (game === "detective" ? mountDetective : game === "puzzle" ? mountPuzzle : mountBuilder)(gameHost, settings, innerPractice);
+       }
+       const pending = prepareLevels(recipe, state, { signal: abort.signal }, practice);
+       if (!pending) start();
+--- review-before-cache/mulermoc-nom-57.html
++++ mulermoc-nom-57.html
+@@ -379,10 +379,10 @@
+   <script src="js/namelecule-quiz-checkpoints.js?v=builder-workspace-20261112-r2"></script>
+   <script src="js/namelecule-chemistry-client.js?v=verified-engines-20261105-r1"></script>
+   <script src="js/namelecule-repair-generator.js?v=engine-pilot-20261105-r1"></script>
+-  <script src="js/namelecule-generated-repair-checkpoint.js?v=alkane-levels-20261116-r1"></script>
++  <script src="js/namelecule-generated-repair-checkpoint.js?v=alkane-levels-20261116-r2"></script>
+   <script src="js/namelecule-name-builder-engine.js?v=name-builder-20261111-r1"></script>
+   <script src="js/namelecule-molecular-puzzle-engine.js?v=puzzle-lesson-20261112-r1"></script>
+-  <script src="js/namelecule-game-choice-checkpoint.js?v=alkane-levels-20261116-r1"></script>
++  <script src="js/namelecule-game-choice-checkpoint.js?v=alkane-levels-20261116-r2"></script>
+   <script src="js/mulermoc-nom-scenario-57.js?v=namelecule-v57-20261115-r1"></script>
+   <script src="js/mulermoc-nom-iupac-57.js?v=namelecule-v57-20261115-r1"></script>
+   <script src="js/mulermoc-nom-lang-57.js?v=namelecule-v57-20261115-r1"></script>

@@ -1,0 +1,32 @@
+BEFORE:
+es}).`)
+    : fTX(`Δηλώνει το όνομα και το πλήθος (${group.members.length}) των ανθρακικών διακλαδώσεων (${names}).`, `Indicates the name and the number (${group.members.length}) of the carbon branches (${names}).`);
+}
+
+
+LOCAL:
+function fGetHydrocarbonBranchHighlight(slot) {
+
+UPSTREAM:
+function fGetNameComponentLocants(component) {
+  if (component === null || component === undefined) return [];
+  return String(component)
+    .replace(/^-+|-+$/g, "")
+    .split(/[,\-]+/)
+    .map(function (n) {
+      return parseInt(n, 10);
+    })
+    .filter(function (n) {
+      return Number.isFinite(n) && n > 0;
+    });
+}
+
+function fGetHydrocarbonBranchHighlight(slot, modeOverride) {
+
+AFTER:
+  if (!Array.isArray(mainChainAtomsList) || mainChainAtomsList.length === 0) {
+    return { atoms: [], bonds: [] };
+  }
+
+  const mainSet = new Set(mainChainAtomsList.map((n) => n - 1));
+  // Optional 

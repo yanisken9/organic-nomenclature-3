@@ -1,0 +1,42 @@
+{
+  "startedUTC": "2026-11-15T16:59:17.930561+00:00",
+  "sequential": true,
+  "runs": [
+    {
+      "run": "puzzle-run1",
+      "script": "replay.py",
+      "exitCode": 0,
+      "completed": true,
+      "checks": 115,
+      "correctUIAttempts": 9,
+      "cleanup": true
+    },
+    {
+      "run": "builder-run1",
+      "script": "replay.py",
+      "exitCode": 0,
+      "completed": true,
+      "checks": 114,
+      "correctUIAttempts": 9,
+      "cleanup": true
+    },
+    {
+      "run": "repair-run1",
+      "script": "replay.py",
+      "exitCode": 0,
+      "completed": true,
+      "checks": 74,
+      "correctUIAttempts": 9,
+      "cleanup": true
+    },
+    {
+      "run": "author-run1",
+      "script": "replay.py",
+      "exitCode": 1,
+      "completed": false,
+      "checks": 6,
+      "correctUIAttempts": 0,
+      "cleanup": true
+    }
+  ]
+}

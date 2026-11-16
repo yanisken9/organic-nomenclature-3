@@ -1,0 +1,42 @@
+{
+  "recordedUTC": "2026-11-16T07:23:08.998231+00:00",
+  "role": "Developer subagent /root/levels_builder_puzzle_implementation",
+  "baseHEAD": "168e3cec01f941a84d40bbe0dc07156e7baa35d0",
+  "status": "Four runtime files frozen for root integration and independent review; browser checks pending",
+  "paths": {
+    "games/name-builder.html": {
+      "beforeSHA256": "cda58c9d3dd09f48042cd8353ad46dc61243e9c93c8b71d926c87585f65b66af",
+      "sha256": "2851339aa6205f8f1c74b4e6021d420b67b0872cd8160e517e3c5bc9e728cfe5"
+    },
+    "js/namelecule-name-builder.js": {
+      "beforeSHA256": "6fcd1b1f57f0f6ecebbaa4faad10765dee76d5e9d78dcc8a60fd51ab3ecdd93b",
+      "sha256": "6e82be550bf116d64c9965b980e8ca30da1edc7fe4086046e1d36a6e51c1fb05"
+    },
+    "games/molecular-puzzle.html": {
+      "beforeSHA256": "9d6d9960e3b6de55bad3a9e5342851e5632bd251e208877b271b794aa324452c",
+      "sha256": "59adddec99da0e53ff8ace74307a11dd1a522a25a7f122e92fc3a8dc292517b7"
+    },
+    "js/namelecule-molecular-puzzle.js": {
+      "beforeSHA256": "052dc73b1682e53ea83e92681f3b7ab758ceb6817790037ae71b93cd18c8b685",
+      "sha256": "8e0d9743c2ab079c5751b4d65d09e7e29c569264694469167e969bff3c1aebc7"
+    }
+  },
+  "checks": {
+    "script": "docs/checks/game-levels-alkanes-implementation-20261116/builder-puzzle/check-runtime.cjs",
+    "result": "docs/checks/game-levels-alkanes-implementation-20261116/builder-puzzle/runtime-results.json",
+    "passed": 54,
+    "conditions": "Actual runtime controller execution in NodeVM with DOM/native/chemistry-analysis fixtures; not independent or browser verification"
+  },
+  "limitations": [
+    "Native viewer rendering, drag/keyboard interaction, actual3D, zoom, resize and visual/accessibility browser checks remain root work.",
+    "Full parent integration/regrade/lesson replay remains root work.",
+    "No refresh persistence added to standalone Builder or Puzzle."
+  ],
+  "changes": [
+    "Explicit shared alkane level selector, no assignment until selection.",
+    "Standalone cryptographically seeded per-level shuffle bags; Builder other133 auto-category preserved.",
+    "Bounded current-page partials per3levels/othercategory, with stale native request/catalog invalidation.",
+    "Exact validated lesson context identity echo, legacy8 absence compatibility without Levelsglobal, enriched14 source catalog verification/cache and name/graph matching."
+  ],
+  "prohibitedFiles": "No core/native host/pure engine/catalog/MOL/SDF/runtime beyond4ownedpaths edited."
+}

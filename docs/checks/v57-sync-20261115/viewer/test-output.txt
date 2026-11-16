@@ -1,0 +1,143 @@
+{
+  "cases": 34,
+  "passed": 34,
+  "failed": [],
+  "results": [
+    {
+      "name": "BEFORE reproduces C/H shared-membership loss",
+      "passed": true
+    },
+    {
+      "name": "BEFORE reproduces explicit target H folding to O",
+      "passed": true
+    },
+    {
+      "name": "BEFORE strict-order mismatch revives relaxed mapping",
+      "passed": true
+    },
+    {
+      "name": "AFTER strict-order mismatch fails closed and stale cache is not reused",
+      "passed": true
+    },
+    {
+      "name": "AFTER same-count graph reorder rebuilds source-aware cache",
+      "passed": true
+    },
+    {
+      "name": "AFTER free explicit H remains H and equivalent H mapping is bijective",
+      "passed": true
+    },
+    {
+      "name": "AFTER OH and aldehyde target H remain distinct",
+      "passed": true
+    },
+    {
+      "name": "AFTER C + H - H retains C contributed by selected C",
+      "passed": true
+    },
+    {
+      "name": "AFTER H1 + H2 - H1 retains C contributed by H2",
+      "passed": true
+    },
+    {
+      "name": "AFTER 2D deselection removes all matching 3D contributors",
+      "passed": true
+    },
+    {
+      "name": "AFTER counterpart 3D toggle removes mirrored direct 2D membership",
+      "passed": true
+    },
+    {
+      "name": "AFTER fragment mirrored full set toggles off completely",
+      "passed": true
+    },
+    {
+      "name": "AFTER bond payload checked against identity endpoints index/order without fallback",
+      "passed": true
+    },
+    {
+      "name": "AFTER atoms and bonds stay exclusive across viewer directions",
+      "passed": true
+    },
+    {
+      "name": "AFTER invalid atom indices applet and echo are ignored",
+      "passed": true
+    },
+    {
+      "name": "AFTER unmatched implicit H is free-only; armed pick gives useful feedback",
+      "passed": true
+    },
+    {
+      "name": "AFTER formal metadata mismatch cannot be silently mirrored",
+      "passed": true
+    },
+    {
+      "name": "AFTER model completion and matching parsed-source gates are both required",
+      "passed": true
+    },
+    {
+      "name": "AFTER old generation parse and completion cannot unlock newer same-source load",
+      "passed": true
+    },
+    {
+      "name": "AFTER external/draft-owned model replacement revokes picking and paint",
+      "passed": true
+    },
+    {
+      "name": "AFTER cold readiness/reload replay restores selection only after right model is ready",
+      "passed": true
+    },
+    {
+      "name": "AFTER Present disables native picking and exit restores it; draft blocks cyan paint",
+      "passed": true
+    },
+    {
+      "name": "AFTER cyan paint rebuilds full selected set and reselects all halo atoms",
+      "passed": true
+    },
+    {
+      "name": "AFTER valid model readback checks file, atom order/metadata/coordinates and counts",
+      "passed": true
+    },
+    {
+      "name": "AFTER real clear resets private contributions as well as public membership",
+      "passed": true
+    },
+    {
+      "name": "AFTER actual 2D representation epoch drops all counterpart memberships",
+      "passed": true
+    },
+    {
+      "name": "AFTER actual loader queues token tail but never treats submission as completion",
+      "passed": true
+    },
+    {
+      "name": "AFTER actual parser ignores stale same-molecule generation before mutating arrays",
+      "passed": true
+    },
+    {
+      "name": "AFTER double silent tap clears only within 450ms and 8px; real pick breaks chain",
+      "passed": true
+    },
+    {
+      "name": "AFTER actual press/release classifier leaves rotation and single silent clicks unchanged",
+      "passed": true
+    },
+    {
+      "name": "REV57-1 BEFORE reproduces unselected bridge color from two disjoint bond picks",
+      "passed": true
+    },
+    {
+      "name": "REV57-1 AFTER disjoint bond picks color exact identities and keep endpoint halos",
+      "passed": true
+    },
+    {
+      "name": "REV57-1 AFTER deselecting disjoint bond rebuilds paint without stale bridge/endpoints",
+      "passed": true
+    },
+    {
+      "name": "REV57-1 AFTER atom picks retain both-endpoints bond coloring control",
+      "passed": true
+    }
+  ]
+}

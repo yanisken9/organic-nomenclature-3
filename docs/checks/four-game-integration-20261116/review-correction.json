@@ -1,0 +1,20 @@
+{
+  "finding": "REV-FOUR-1",
+  "severity": "P3",
+  "changed": {
+    "js/namelecule-game-choice-checkpoint.js": {
+      "before": "35cba6aa48c81276fb713116d30eec2c462e7eaf0568aa9749137181e6bcdf46",
+      "after": "42b6533b0aba658a33bf575f41766614174d9ccb57e02852720e0cc94aa58aa0"
+    },
+    "scenarios/alkanes-user-3.scenario.json": {
+      "before": "2f3832588e84e9a56e629b27df7de2d1fcf1bad1e0ec78e7fb0ce6b7bed81df5",
+      "after": "f2409b58ac5cb92698815738a726bc1848b252b1f31ce472594832d356a98031"
+    },
+    "mulermoc-nom-57.html": {
+      "before": "205da07010632a490c00117033f8aadabb226408b0315ffd660ac430afaecedd",
+      "after": "dd42ceb69320c7131ff183e927d736869056de4bde937975dd256b7125d0b9ca"
+    }
+  },
+  "behavior": "Only two note colon characters replaced with periods; matching exact migration NEW_FIELDS updated; active cache URLr2",
+  "finalManifestSHA256": "908093208d0ca410c702650b51fc629fae7142d0d2afef50a74fe00a703f2c9c"
+}

@@ -1,0 +1,2786 @@
+{
+  "comparison": "Version-renamed local reviewed56 baseline to candidate57; exact upstream57 function identities separately identified",
+  "beforeSHA256": "39bcd1ae0d51bf62af19ebf4a7117a06106dbf2627e63c1a48e6607da95fa3a1",
+  "afterSHA256": "ae4e498361b994d55d2eafe8eb0a3b578c416ed770de0eb65d9dc74e9c800684",
+  "unchangedCount": 417,
+  "changed": [
+    "fToggleAtomSelect",
+    "fMulerQuizPurposeFor",
+    "fMulerSelectClear",
+    "fMulerSelectToggle",
+    "fMulerQuizResolveTarget",
+    "fMulerQuizRefresh",
+    "fMulerSelectPushState",
+    "fMulerSelectRepaint",
+    "fMulerSelectBindOnce",
+    "fMulerNumberAid",
+    "fJSmolScript",
+    "fJSmolScriptWait",
+    "fLoadMol3D",
+    "fFetchAndParse3D"
+  ],
+  "added": [
+    "fMuler3DSourceKey",
+    "fMuler3DBeginLoad",
+    "fMuler3DWillScript",
+    "fMuler3DModelReady",
+    "fMuler3DValidateLiveModel",
+    "fMuler3DReplaySelection",
+    "fMuler3DParsedSource",
+    "fMulerHeavyMapCached",
+    "fMulerSelectFullMap",
+    "fMulerMap2D3D",
+    "fMulerMap3D2D",
+    "fMulerSelectPairFor2D",
+    "fMulerSelectNormalized3D",
+    "fMulerSelectBondPairFor2D",
+    "fMulerSelectBondPairFor3D",
+    "fMulerSelectContributors",
+    "fMulerSelectRebuildMirrors",
+    "fMulerSelect3DFeedback",
+    "fMulerSelectQuiz3DBlocked",
+    "fMulerSelectCallbackIndex",
+    "fMulerSelectPush3D",
+    "fMulerSelectClear3DPaint",
+    "fMulerSelectClear3DIfEmpty",
+    "fMulerSelectPickingScript",
+    "fMulerSelectSync3DPicking",
+    "fMulerHeteroPrefixAtomsForMode",
+    "fMulerBondTargetIsLocant",
+    "fMulerSelect3DSilentSettle",
+    "fMulerSelectBind3DClear"
+  ],
+  "allExistingDraftFunctionsByteIdentical": 92,
+  "unchanged": [
+    "fNameCompHidden",
+    "fNameEyeVisible",
+    "fNameCompBox",
+    "jsmeOnLoad",
+    "fClassifyAllMolecules",
+    "fInitViewerSettingsBtn",
+    "fToggleViewer2D",
+    "fToggleViewer3D",
+    "fViewerHeightControlsSync",
+    "fSetSettingChecked",
+    "fSyncAtomColorModeRadios",
+    "fSyncViewerSettingsUI",
+    "fToggleViewerSettings",
+    "fMolDraftT",
+    "fMolDraftToast",
+    "fMolDraftPresenting",
+    "fMolDraftVariantMol",
+    "fMolDraftBarEl",
+    "fMolDraftShowBar",
+    "fMolDraftHideBar",
+    "fMolDraftSyncBar",
+    "fMolDraftShowEditor",
+    "fMolDraftShowPreviewView",
+    "fMolDraftBackToEdit",
+    "fMolDraftAutoTidy",
+    "fMolDraftBeautify",
+    "fMolDraftMarkStale",
+    "fMolDraftWatchEdits",
+    "fMolDraftClearNaming",
+    "fMolDraftSyncEntryButtons",
+    "fMulerSelectOn",
+    "fMulerSelectSyncEntry",
+    "fMulerSelectPurpose",
+    "fMulerSelectCompactCarbonOnly",
+    "fMulerSelectState",
+    "fMulerSelectActive",
+    "fMulerSelectMolKey",
+    "fMulerSelectPresenting",
+    "fMulerSelectClearLayer",
+    "fMulerSelectLineGroups",
+    "fMulerSelectVertices",
+    "fMulerSelectVertexAtoms",
+    "fMulerSelectAnchors",
+    "fMulerSelectHeteroAnchors",
+    "fMulerSelectMedianBond",
+    "fMulerSelectCompactRect",
+    "fRectBox",
+    "fUnionBox",
+    "fMulerSelectCompactBoxes",
+    "fMulerSelectCompacted",
+    "fMulerSelectNormalizeMainChainCompacts",
+    "fMulerSelectGeom",
+    "fMulerHoverBoxForPick",
+    "fMulerHoverClear",
+    "fMulerHoverPaint",
+    "fMulerHoverTick",
+    "fMulerQuizHydrogenParent",
+    "fMulerSelectPick",
+    "fMulerMainChainResolved",
+    "fMulerFGInstances",
+    "fMulerFGHeavyAtoms",
+    "fMulerSuffixResolved",
+    "fMulerEtherResolved",
+    "fMulerEsterResolved",
+    "fMulerMultiBondAtoms",
+    "fMulerBondAtomsPos1",
+    "fMulerBondAtomsPos2",
+    "fMulerSingleBondAtoms",
+    "fMulerQuizEffectiveAtoms",
+    "fMulerBondTypeResolved",
+    "fMulerBondType2Resolved",
+    "fMulerBondAtomsForMode",
+    "fMulerBranchAtomsForMode",
+    "fMulerChainSolved",
+    "fMulerQuizBoxIdForMode",
+    "fMulerFGPositionAtoms",
+    "fMulerBondPosResolved",
+    "fMulerNumber1Resolved",
+    "fMulerEndNumberResolved",
+    "fMulerQuizTargetSet",
+    "fMulerQuizCompare",
+    "fMulerQuizHasHetero",
+    "fMulerQuizPartialBreak",
+    "fMulerQuizMainChainPool",
+    "fMulerQuizChainsEqual",
+    "fMulerQuizSymmetricChain",
+    "fMulerQuizComparePool",
+    "fMulerQuizAnchorOf",
+    "fMulerQuizBonded",
+    "fMulerQuizWalkBreak",
+    "fMulerQuizVerdictEl",
+    "fMulerBranchTargetIsLocant",
+    "fMulerBondIsSingle",
+    "fMulerQuizVerdict",
+    "fMulerQuizPrompt",
+    "fMulerQuizDisarm",
+    "fMulerQuizRearmSticky",
+    "fMulerQuizBoxShowsLocant",
+    "fMulerBoxMatchesTarget",
+    "fMulerQuizArmForBox",
+    "fMulerSelectMergeBgArg",
+    "fMulerSelectPush",
+    "fMulerSelectWrapBgChannel",
+    "fMulerSelectIsSelectionFill",
+    "fMulerFillMatches",
+    "fMulerSelectCompactAnchorEllipse",
+    "fMulerSelectRoundedRectPath",
+    "fMulerSelectCompactPaintPass",
+    "fMolDraftAutoLinearizeOn",
+    "fMolDraftEnter",
+    "fEditMolDraft",
+    "fNewMolDraft",
+    "fMolDraftHasRing",
+    "fMolDraftNorm",
+    "fMolDraftPCMatch",
+    "fMolDraftStrayH",
+    "fMolDraftIsSameMolecule",
+    "fMolDraftRefreshAcceptKey",
+    "fMolDraftBondOrderMap",
+    "fMolDraftAtomEl",
+    "fMolDraftHeavyNbs",
+    "fMolDraftHCount",
+    "fMolDraftGroup",
+    "fMolDraftBondSym",
+    "fMolDraftExcl",
+    "fMolDraftRenderNode",
+    "fMolDraftRenderChildren",
+    "fMolDraftExpandedFormula",
+    "fMolDraftEsc",
+    "fMulerItalicSecTert",
+    "fMolDraftReadDrawing",
+    "fMolDraftSetVerdict",
+    "fMolDraftVerdictCtrl",
+    "fMolDraftSDF3DStatusHTML",
+    "fMolDraftRenderPreview",
+    "fJSmolLoadInlineSDF",
+    "fMolDraftMeanDisplacement",
+    "fMolDraftMovedEnough",
+    "fMolDraftUntangle2D",
+    "fMolDraftJiggleZ",
+    "fMolDraftMinWaitClose",
+    "fMolDraftMinWaitShow",
+    "fMolDraft3DCurrent",
+    "fMolDraft3DInvalidate",
+    "fMolDraft3DBegin",
+    "fMolDraft3DWillScript",
+    "fMolDraft3DWrite",
+    "fMolDraft3DLoad",
+    "fMolDraft3DWait",
+    "fMolDraftGraphMap",
+    "fMolDraftValidSDF3D",
+    "fMolDraftNormalizeJSmolReadback",
+    "fMolDraftReadBackSDF",
+    "fMolDraftMinWaitSecs",
+    "fMolDraftLocal3DRelaxFF",
+    "fMolDraftLocal3DRelaxBoth",
+    "fMolDraftLocal3DPrepare",
+    "fMolDraftLocal3DFromMol",
+    "fMolDraft3DProvenance",
+    "fMolDraftSet3D",
+    "fMolDraftMinStopEngine",
+    "fMolDraftMinWaitAbort",
+    "fMolDraftLocal3DReloadMinimized",
+    "fMolDraftManualMinimize",
+    "fMolDraftJSmolLoadAndReadBack",
+    "fMolDraftPubChem3DFromJSmol",
+    "fMolDraftRemote3DFromJSmol",
+    "fMolDraftFetchSDF3DTiered",
+    "fMolDraftShow3D",
+    "fMolDraftRestoreChainMode",
+    "fMolDraftSandboxAnalyse",
+    "fMolDraftSubmit",
+    "fMolDraftShowFlat3D",
+    "fMolDraftTeardownDisplay",
+    "fMolDraftCancel",
+    "fMolDraftSlugBase",
+    "fMolDraftMakeKey",
+    "fMolDraftFileSlug",
+    "fMolDraftMarkNewCustom",
+    "fMolDraftNewCustomKeys",
+    "fMolDraftDownloadSingle",
+    "fMolDraftDownloadBundle",
+    "fMolDraftSaveAllCustom",
+    "fMolDraftSyncSaveBtn",
+    "fMolDraftAccept",
+    "fMolDraftSyncButtons",
+    "fViewerMaxHeightFull",
+    "fViewerMaxHeightEnsureFullBtn",
+    "fViewerMaxHeightToggleFull",
+    "fViewerMaxHeightSync",
+    "fViewerMaxHeightFromUi",
+    "fInitViewerMaxHeight",
+    "fViewerBothHeightEnsureFullBtn",
+    "fViewerBothHeightToggleFull",
+    "fViewerBothHeightSync",
+    "fViewerBothHeightFromUi",
+    "fInitViewerBothHeight",
+    "fToggleNameSettings",
+    "fMulerENCommonName",
+    "fToggleMolInfo",
+    "fMulerMolInfoRefresh",
+    "fRenderMolInfo",
+    "fCopyMolSmiles",
+    "fInitData",
+    "fMakeAnnotatedSkeletal",
+    "fUpdateChainModeButton",
+    "fUpdateDiagr2DButton",
+    "fSyncAtomColorModeDisabled",
+    "fSelectMol",
+    "fDeselectMol",
+    "fInitProps",
+    "fShowMolName",
+    "fSkeletalLayoutMol",
+    "fApplySkeletalLayout",
+    "fFormylHydrogenLeftMol",
+    "fLoadMol2D",
+    "fMol2DModeScaleFactor",
+    "fMol2DModeScale",
+    "fApplyMol2DFont",
+    "fApplyMol2DScale",
+    "fReapplyZoomScale2D",
+    "fZoom2D",
+    "fZoom3D",
+    "fRemainingImplicitCarbonHydrogens",
+    "fAddHydrogens2SVG",
+    "fGetCompactedAtomSkipSet",
+    "fGetRenderedAtomTextMap",
+    "fGetRenderedAtomRectMap",
+    "fGetAttachedHydrogenIndices",
+    "fFindBondIndexByAtoms",
+    "fRemoveBondLinesByBondIndex",
+    "fBuildTextAttrsFromElement",
+    "fReplaceTextElementMarkup",
+    "fShouldReverseCompactLabel",
+    "fGetReversedCompactLabelAttrs",
+    "fGetForwardCompactLabelAttrs",
+    "fGetReverseCompactRightEdge",
+    "fFindNearestHighlightCircle",
+    "fGetNodeAttr",
+    "fBuildCompactGeometryHint",
+    "fCreateCompactLabelRect",
+    "fResizeCompactLabelRect",
+    "fCollectHighlightRectsNearText",
+    "fCollectHighlightCirclesNearText",
+    "fGetCompactLabelNumberX",
+    "fBuildCompactAtomTspan",
+    "fGetCompactAtomFill",
+    "fGetHydrogenGroupParentSymbol",
+    "fGetAtomColor2D",
+    "fGetDisplayAtomFill",
+    "fGetOwnTextFromSvgNode",
+    "fResolveAtomSymbolFromLabelNode",
+    "fResolveParentSymbolForHydrogenTspan",
+    "fBuildTextNodeAtomIndexMap",
+    "fIsHighlightFillColor",
+    "fBuildHighlightedTextNodeSet",
+    "fApplyAtomColors2DToSVGLabels",
+    "fApplyCHBondColors2D",
+    "fShouldReverseAldehydeLabel",
+    "fCompactFunctionalGroups2D",
+    "fWrapStandaloneHydrogenTextsAsTspan",
+    "fMarkExpandedHydrogens",
+    "fRefreshLabelBackplates",
+    "fValidate2DBondVisibility",
+    "fMolHasSpCarbon",
+    "fHideSkeletalSpCarbons",
+    "fHideEsterSkeletalCarbonHydrogens",
+    "fPrepareFixedCCAlkanePrototype",
+    "fGetUniform2DLibraryFrame",
+    "fFit2DSVG",
+    "fMulerSelectSeqBadges",
+    "fUpdateSVG",
+    "fBuildMoleculeSVG",
+    "fNumberingAnchor2D",
+    "fRefreshFontDrawing2D",
+    "fCancelFontRefresh2D",
+    "patchtheNitrogen",
+    "fJSmolLive",
+    "fMulerNotePending3D",
+    "fJSmolScriptEcho",
+    "fJSmolGetPropertyAsArray",
+    "fJSmolGetPropertyAsString",
+    "fJSmolResizeApplet",
+    "fMulerSafeJSmol",
+    "showAtomSymbols3D",
+    "showHydrogens3D",
+    "rotate3D",
+    "fGetNameBoxes",
+    "fDrawNameBoxes",
+    "fFitNameToWidth",
+    "fScheduleNameFit",
+    "fFitNameComponents",
+    "fInitNameFitObserver",
+    "fNameExpandOpen",
+    "fNameExplainPortalIn",
+    "fNameExplainPortalOut",
+    "fNameExpandReserve",
+    "fNameExplainAnchor",
+    "fNameExpandClose",
+    "fNameExpandSync",
+    "fNameExpandPaintBtn",
+    "fDisplayedEngineEN",
+    "fMulerVerdictState",
+    "fMulerApplyVerdict",
+    "fMulerENFetchDone",
+    "fMulerOCVerdict",
+    "fMulerApplyOCVerdict",
+    "fMulerOCFetchDone",
+    "fGRSystOneStem",
+    "fGRSysNeedsParens",
+    "fSystematicGRSubstSlot",
+    "fGreekSysSlots",
+    "fSysFusedPieces",
+    "fJoinGreekSysName",
+    "fShowNameAnalysis",
+    "fNameExpandRepinDelayed",
+    "fClearHighlights",
+    "fIsENMode",
+    "fBranchNoun",
+    "fTaxonomyEN",
+    "fRule4KeysForFGs",
+    "fGetFGInstance",
+    "fGetSecondaryGroupNounSuffix",
+    "fGetPrincipalGroupNounSuffix",
+    "fGetBranchDisplayName",
+    "fGetNameComponentLocants",
+    "fGetNameComponentMultiplier",
+    "fIsMultiLocantComponent",
+    "fAlcoholOHNameComponent",
+    "fAlcoholOHPositionText",
+    "fSplitSuffixLocantsActive",
+    "fSplitBranchPiecesActive",
+    "fSplitBranchPieces",
+    "fGRSubstSortKey",
+    "fGRLocKey",
+    "fGRSubstGroups",
+    "fGRSortSubstGroups",
+    "fGetHydrocarbonBranchPiece",
+    "fBranchPieceBoxId",
+    "fBranchedSaturatedKetonePosition",
+    "fSequentialKetoneNumberingTarget",
+    "fShowAnalysisNumbering",
+    "fExplainNameComp",
+    "fExplainAllKey",
+    "fNameExplainTableBuild",
+    "fNameExplainTableRender",
+    "fNameExplainTableShow",
+    "fShowRule",
+    "fAdjustRuleContainerHeight",
+    "fMainChainKeySuffix",
+    "fHighLightMainChain",
+    "fHighLightMainChainBonds",
+    "fMainChainPoolLive",
+    "fChainStepper3DFresh",
+    "fApplyChainStep",
+    "fStepMainChain",
+    "fRenderChainStepper",
+    "fChainStepperHTML",
+    "fSeparateAcidPrefixBoxes",
+    "fAcidPrefixBoxGroups",
+    "fGetHydrocarbonBranchGroup",
+    "fHydrocarbonBranchSlot",
+    "fHydrocarbonBranchExplanation",
+    "fGetHydrocarbonBranchHighlight",
+    "fGetHydrocarbonBranchHighlight3D",
+    "fPaintBranchHighlightAtoms",
+    "fGetEtherAlkoxyC",
+    "fGetEtherAlkoxyChain",
+    "fGetEtherAlkoxyC3D",
+    "fGetEtherAlkoxyChain3D",
+    "fGetEtherGroupFragment3D",
+    "fGetEtherCommonParts",
+    "fAlkylNumberingOrder",
+    "fEsterAlcoholNumbering",
+    "fEsterAlcoholNumbering3D",
+    "fEsterAcidNumbering3D",
+    "fEsterAcidNumbering",
+    "fEtherAlkoxyNumbering",
+    "fEtherAlkoxyNumbering3D",
+    "fGetEsterAlcoholChain",
+    "fGetEsterAlcoholC3D",
+    "fGetEsterAlcoholChain3D",
+    "fGetEsterAcidChain",
+    "fGetEsterAcidParentChain",
+    "fGetEsterAcidParentChain3D",
+    "fGetEsterAcidC3D",
+    "fGetEsterAcidChain3D",
+    "fIsSingleEster",
+    "fGetEsterTriad",
+    "fGetEsterGroupFragment",
+    "fGetEsterGroupFragment3D",
+    "fGetEsterTriad3D",
+    "fUpdateEtherNamingButton",
+    "fUpdateSubstNamingButton",
+    "fHighlightAtomChain",
+    "fHighlightAtomChain3D",
+    "fColorFragmentBonds3D",
+    "fHighlightFG",
+    "fHighlightFG3D",
+    "fEquivalentParentNumberingDirections",
+    "fLocantEmphasisIndices",
+    "fShowNumbering",
+    "fShowNumber",
+    "fShowNumbering3D",
+    "removeEcho3D",
+    "fShowNumber3D",
+    "fShowBondAtoms",
+    "fShowNumberingBonds",
+    "fHighlightMultiBonds",
+    "fHighlightMultiBonds3D",
+    "fHighlightSingleBondsCC",
+    "fHighlightSingleBondsCC3D",
+    "fSetMolVis3D",
+    "fStableViewportH",
+    "fViewerHeights2D3D",
+    "fResizeViewers",
+    "fInitZoomObserver2D"
+  ],
+  "exactUpstreamImports": [
+    "fToggleAtomSelect",
+    "fMulerQuizPurposeFor",
+    "fMulerSelectClear3DIfEmpty",
+    "fMulerHeteroPrefixAtomsForMode",
+    "fMulerQuizResolveTarget",
+    "fMulerBondTargetIsLocant",
+    "fMulerSelectPushState",
+    "fMulerSelectBindOnce",
+    "fMulerNumberAid"
+  ],
+  "functions": {
+    "fNameCompHidden": {
+      "before": "d261cf589e03b4e899f8fbfae6798d41afa2d0a2ef7c0f16a3b9c9d167fc24e5",
+      "after": "d261cf589e03b4e899f8fbfae6798d41afa2d0a2ef7c0f16a3b9c9d167fc24e5",
+      "upstream": "d261cf589e03b4e899f8fbfae6798d41afa2d0a2ef7c0f16a3b9c9d167fc24e5"
+    },
+    "fNameEyeVisible": {
+      "before": "031585a0e1fa3fb0aa129f898bd81f99a58e3c7d521526bda6b85ec7abf011a0",
+      "after": "031585a0e1fa3fb0aa129f898bd81f99a58e3c7d521526bda6b85ec7abf011a0",
+      "upstream": "031585a0e1fa3fb0aa129f898bd81f99a58e3c7d521526bda6b85ec7abf011a0"
+    },
+    "fNameCompBox": {
+      "before": "82d9ec6428d4d130bb2a4530e20efc04085dfd51e0735f298fe14edff4f8ff77",
+      "after": "82d9ec6428d4d130bb2a4530e20efc04085dfd51e0735f298fe14edff4f8ff77",
+      "upstream": "82d9ec6428d4d130bb2a4530e20efc04085dfd51e0735f298fe14edff4f8ff77"
+    },
+    "jsmeOnLoad": {
+      "before": "d9ffd92a768c320db1a0512a7506316bb01492773130c9c8c2d2ae9ad2a44013",
+      "after": "d9ffd92a768c320db1a0512a7506316bb01492773130c9c8c2d2ae9ad2a44013",
+      "upstream": "35454052633bfb903923c9a1df249a93ce486a937ee86e62e65eba31d7420d2e"
+    },
+    "fClassifyAllMolecules": {
+      "before": "4a354767f6a9be6841851a85df6b3d5a00526cea5ef2ab52e86ae53f6e5ea0b0",
+      "after": "4a354767f6a9be6841851a85df6b3d5a00526cea5ef2ab52e86ae53f6e5ea0b0",
+      "upstream": "4a354767f6a9be6841851a85df6b3d5a00526cea5ef2ab52e86ae53f6e5ea0b0"
+    },
+    "fInitViewerSettingsBtn": {
+      "before": "3fb501be0761d26e7cceb56d76ed4bccf35ec3ab2688ee75d14367a9c1653dd9",
+      "after": "3fb501be0761d26e7cceb56d76ed4bccf35ec3ab2688ee75d14367a9c1653dd9",
+      "upstream": "3fb501be0761d26e7cceb56d76ed4bccf35ec3ab2688ee75d14367a9c1653dd9"
+    },
+    "fToggleViewer2D": {
+      "before": "3a3deebfc003db6a86c94ed80065adc0d37cddc3bbdfa295e7953b23c0f9d74b",
+      "after": "3a3deebfc003db6a86c94ed80065adc0d37cddc3bbdfa295e7953b23c0f9d74b",
+      "upstream": "3a3deebfc003db6a86c94ed80065adc0d37cddc3bbdfa295e7953b23c0f9d74b"
+    },
+    "fToggleViewer3D": {
+      "before": "8a8fa5dc2ec8277d6834e3575c3eac56484dbf0e2df2238ab07735dc63d93f1e",
+      "after": "8a8fa5dc2ec8277d6834e3575c3eac56484dbf0e2df2238ab07735dc63d93f1e",
+      "upstream": "8a8fa5dc2ec8277d6834e3575c3eac56484dbf0e2df2238ab07735dc63d93f1e"
+    },
+    "fViewerHeightControlsSync": {
+      "before": "1ee38ff078f9fb14a5c0cb71cbc61317f3abda5ba726d158636ad0ea78c3fe58",
+      "after": "1ee38ff078f9fb14a5c0cb71cbc61317f3abda5ba726d158636ad0ea78c3fe58",
+      "upstream": "1ee38ff078f9fb14a5c0cb71cbc61317f3abda5ba726d158636ad0ea78c3fe58"
+    },
+    "fSetSettingChecked": {
+      "before": "a5761ada4d4ced2fccb376566be8070508bd7039b94fec7571402582dcfd9b3c",
+      "after": "a5761ada4d4ced2fccb376566be8070508bd7039b94fec7571402582dcfd9b3c",
+      "upstream": "a5761ada4d4ced2fccb376566be8070508bd7039b94fec7571402582dcfd9b3c"
+    },
+    "fSyncAtomColorModeRadios": {
+      "before": "df57d1e925010434b86a26b87d974fac1846a24a1e48e25c62feed85f51d8d71",
+      "after": "df57d1e925010434b86a26b87d974fac1846a24a1e48e25c62feed85f51d8d71",
+      "upstream": "df57d1e925010434b86a26b87d974fac1846a24a1e48e25c62feed85f51d8d71"
+    },
+    "fSyncViewerSettingsUI": {
+      "before": "88e48c6977d32b940c59247e9b4c3230bc6646ff8747945476669fa6f764b54e",
+      "after": "88e48c6977d32b940c59247e9b4c3230bc6646ff8747945476669fa6f764b54e",
+      "upstream": "88e48c6977d32b940c59247e9b4c3230bc6646ff8747945476669fa6f764b54e"
+    },
+    "fToggleViewerSettings": {
+      "before": "6efd310b29c7e67189aaa851cddf4a7e9f2aae9bb07c0d87a85561dcf0806e16",
+      "after": "6efd310b29c7e67189aaa851cddf4a7e9f2aae9bb07c0d87a85561dcf0806e16",
+      "upstream": "6efd310b29c7e67189aaa851cddf4a7e9f2aae9bb07c0d87a85561dcf0806e16"
+    },
+    "fMolDraftT": {
+      "before": "3e5fa4e2f0817ee27fc20404f00759979ff2f1dcd9da5e31b5152f33d3da7680",
+      "after": "3e5fa4e2f0817ee27fc20404f00759979ff2f1dcd9da5e31b5152f33d3da7680",
+      "upstream": "3e5fa4e2f0817ee27fc20404f00759979ff2f1dcd9da5e31b5152f33d3da7680"
+    },
+    "fMolDraftToast": {
+      "before": "9a3f3b38aae1a33674a4d89f85f328db587a6f459c701ec12f4aa7c8e6615464",
+      "after": "9a3f3b38aae1a33674a4d89f85f328db587a6f459c701ec12f4aa7c8e6615464",
+      "upstream": "9a3f3b38aae1a33674a4d89f85f328db587a6f459c701ec12f4aa7c8e6615464"
+    },
+    "fMolDraftPresenting": {
+      "before": "173e733a65ecb50cf4f1790100eb3c7376a84553638d9bbdcf83f52fed00e653",
+      "after": "173e733a65ecb50cf4f1790100eb3c7376a84553638d9bbdcf83f52fed00e653",
+      "upstream": "173e733a65ecb50cf4f1790100eb3c7376a84553638d9bbdcf83f52fed00e653"
+    },
+    "fMolDraftVariantMol": {
+      "before": "006f83abdf12a6556a5bf0c2ae8817185a14336c84423eb4500d3afdd7081f99",
+      "after": "006f83abdf12a6556a5bf0c2ae8817185a14336c84423eb4500d3afdd7081f99",
+      "upstream": "006f83abdf12a6556a5bf0c2ae8817185a14336c84423eb4500d3afdd7081f99"
+    },
+    "fMolDraftBarEl": {
+      "before": "fd8ef5b48ba53d24589d6ffb0ff713489e10587fb6215aa9225248fba5cc0dbd",
+      "after": "fd8ef5b48ba53d24589d6ffb0ff713489e10587fb6215aa9225248fba5cc0dbd",
+      "upstream": "fd8ef5b48ba53d24589d6ffb0ff713489e10587fb6215aa9225248fba5cc0dbd"
+    },
+    "fMolDraftShowBar": {
+      "before": "986a93648904f17440eebacbb4a23c8462e9233a3b16e8528cd1e5495084de26",
+      "after": "986a93648904f17440eebacbb4a23c8462e9233a3b16e8528cd1e5495084de26",
+      "upstream": "986a93648904f17440eebacbb4a23c8462e9233a3b16e8528cd1e5495084de26"
+    },
+    "fMolDraftHideBar": {
+      "before": "db9e14096c5fd4b86dd50ddfd1007d93b3bd0f1b180ab9c68461eb11501f9488",
+      "after": "db9e14096c5fd4b86dd50ddfd1007d93b3bd0f1b180ab9c68461eb11501f9488",
+      "upstream": "db9e14096c5fd4b86dd50ddfd1007d93b3bd0f1b180ab9c68461eb11501f9488"
+    },
+    "fMolDraftSyncBar": {
+      "before": "9567c589a78b6a9e4649976f38ceea7035e14ece59f5d992ddacc4afaf9219d5",
+      "after": "9567c589a78b6a9e4649976f38ceea7035e14ece59f5d992ddacc4afaf9219d5",
+      "upstream": "35f1309b5be283cbb8e97b0afaeb4df7df2291e11e604d68e6e29ff58a3bac0f"
+    },
+    "fMolDraftShowEditor": {
+      "before": "817533fcc9f1a5c6ac487e5c6bc3d2c409d56056f5b0223f0ed6b754ab4bbbb2",
+      "after": "817533fcc9f1a5c6ac487e5c6bc3d2c409d56056f5b0223f0ed6b754ab4bbbb2",
+      "upstream": "817533fcc9f1a5c6ac487e5c6bc3d2c409d56056f5b0223f0ed6b754ab4bbbb2"
+    },
+    "fMolDraftShowPreviewView": {
+      "before": "718d255be8d518a025763253d0465ae5b19f8dff8c2ca5622a4c58686f3ae14f",
+      "after": "718d255be8d518a025763253d0465ae5b19f8dff8c2ca5622a4c58686f3ae14f",
+      "upstream": "718d255be8d518a025763253d0465ae5b19f8dff8c2ca5622a4c58686f3ae14f"
+    },
+    "fMolDraftBackToEdit": {
+      "before": "6de61a6245027f62e89501d8a5bd0559d053a241622bdf02b25f116c548a322c",
+      "after": "6de61a6245027f62e89501d8a5bd0559d053a241622bdf02b25f116c548a322c",
+      "upstream": "f825520ff0f1663f75f293bdf006b50a9265f5e07358917786009ff4ce5fba8b"
+    },
+    "fMolDraftAutoTidy": {
+      "before": "eae5662d28113f3d75082ee7666711dabd5f6da2c6437d1f6e240db731fd6d2b",
+      "after": "eae5662d28113f3d75082ee7666711dabd5f6da2c6437d1f6e240db731fd6d2b",
+      "upstream": "1233a708ae71aec7935e8a5ddc5acf257e3067a58e66b9176004bc7964c31526"
+    },
+    "fMolDraftBeautify": {
+      "before": "a0e357946734248e958ad222010589219ab1ae4c8492502acd80826578c7d721",
+      "after": "a0e357946734248e958ad222010589219ab1ae4c8492502acd80826578c7d721",
+      "upstream": "5a2cb9e598b1e2169e4b08e2e13533c1d56ade17e986642236f4d64192cfd2d3"
+    },
+    "fMolDraftMarkStale": {
+      "before": "f5e95ebad7bfe5f232b4e0840e10f199857a7f9d29afb128a9936d505a24fa99",
+      "after": "f5e95ebad7bfe5f232b4e0840e10f199857a7f9d29afb128a9936d505a24fa99",
+      "upstream": "e832d40dcd2b0801f79d7a7eb6f41526b713625789413791a100fe2b572a9f91"
+    },
+    "fMolDraftWatchEdits": {
+      "before": "e018dbba20a45f3d0b2ce105a6dc871610eea1a06ffe0ea6de82d38b6eab8d0b",
+      "after": "e018dbba20a45f3d0b2ce105a6dc871610eea1a06ffe0ea6de82d38b6eab8d0b",
+      "upstream": "e018dbba20a45f3d0b2ce105a6dc871610eea1a06ffe0ea6de82d38b6eab8d0b"
+    },
+    "fMolDraftClearNaming": {
+      "before": "1d9984b327e7f89283a9a8bbfa8fa5176e7fba4143e7a0a008aaeba6ff0d0550",
+      "after": "1d9984b327e7f89283a9a8bbfa8fa5176e7fba4143e7a0a008aaeba6ff0d0550",
+      "upstream": "1d9984b327e7f89283a9a8bbfa8fa5176e7fba4143e7a0a008aaeba6ff0d0550"
+    },
+    "fMolDraftSyncEntryButtons": {
+      "before": "2661fc47303c31a5110733f8b635afaa7b0b52820b5d1db217f8878d3d95d326",
+      "after": "2661fc47303c31a5110733f8b635afaa7b0b52820b5d1db217f8878d3d95d326",
+      "upstream": "2661fc47303c31a5110733f8b635afaa7b0b52820b5d1db217f8878d3d95d326"
+    },
+    "fMulerSelectOn": {
+      "before": "832472f4ec9f623a42bef03d3bf31a1f5f72c446b59671d5be491b7aa6f317bd",
+      "after": "832472f4ec9f623a42bef03d3bf31a1f5f72c446b59671d5be491b7aa6f317bd",
+      "upstream": "832472f4ec9f623a42bef03d3bf31a1f5f72c446b59671d5be491b7aa6f317bd"
+    },
+    "fMulerSelectSyncEntry": {
+      "before": "9f67762d7bfb92b4afc7b7886a7ae40711d75673054c8ff671e5a7d3c3d63601",
+      "after": "9f67762d7bfb92b4afc7b7886a7ae40711d75673054c8ff671e5a7d3c3d63601",
+      "upstream": "9f67762d7bfb92b4afc7b7886a7ae40711d75673054c8ff671e5a7d3c3d63601"
+    },
+    "fToggleAtomSelect": {
+      "before": "fbd5ee04bb389e960f8dcc64e83d68931035c52794b2bb7ff46269de038315c1",
+      "after": "2550e7931ea1286eefa8fd34741dd4e9d47c5329e07c21566dbe3e38c66b0c65",
+      "upstream": "2550e7931ea1286eefa8fd34741dd4e9d47c5329e07c21566dbe3e38c66b0c65"
+    },
+    "fMulerSelectPurpose": {
+      "before": "7e4b2a8b411b47b32c9f4bdc8e7c2e252efae6dd0475373eba0177645cb02297",
+      "after": "7e4b2a8b411b47b32c9f4bdc8e7c2e252efae6dd0475373eba0177645cb02297",
+      "upstream": "7e4b2a8b411b47b32c9f4bdc8e7c2e252efae6dd0475373eba0177645cb02297"
+    },
+    "fMulerQuizPurposeFor": {
+      "before": "06834819695364858541bc57eb9cf7dc3dff6d6e3712c04793962313cec74131",
+      "after": "1ef27b688537f94d83b91c79d24eb07e533b307c5f5c5846e98023ac7da9b5f1",
+      "upstream": "1ef27b688537f94d83b91c79d24eb07e533b307c5f5c5846e98023ac7da9b5f1"
+    },
+    "fMulerSelectCompactCarbonOnly": {
+      "before": "75a70f0e7d4c34b57daef32b6c20d27baffafa6f3b39802eab9b6fa1179159c2",
+      "after": "75a70f0e7d4c34b57daef32b6c20d27baffafa6f3b39802eab9b6fa1179159c2",
+      "upstream": "75a70f0e7d4c34b57daef32b6c20d27baffafa6f3b39802eab9b6fa1179159c2"
+    },
+    "fMulerSelectState": {
+      "before": "1d6d9d4e844690571d79f6bb49136ac66121a942cb0af11ea220b0ab73e1508a",
+      "after": "1d6d9d4e844690571d79f6bb49136ac66121a942cb0af11ea220b0ab73e1508a",
+      "upstream": "1d6d9d4e844690571d79f6bb49136ac66121a942cb0af11ea220b0ab73e1508a"
+    },
+    "fMulerSelectActive": {
+      "before": "5d378887e994229857e69c08fb1c6b0f85b43d3654113c612fdfce03fe74be38",
+      "after": "5d378887e994229857e69c08fb1c6b0f85b43d3654113c612fdfce03fe74be38",
+      "upstream": "5d378887e994229857e69c08fb1c6b0f85b43d3654113c612fdfce03fe74be38"
+    },
+    "fMulerSelectMolKey": {
+      "before": "2c2d73a0fc4c0a1b2ed66cfb13d81b1b8df1e8515f29c011a37efc00d3dfc389",
+      "after": "2c2d73a0fc4c0a1b2ed66cfb13d81b1b8df1e8515f29c011a37efc00d3dfc389",
+      "upstream": "2c2d73a0fc4c0a1b2ed66cfb13d81b1b8df1e8515f29c011a37efc00d3dfc389"
+    },
+    "fMulerSelectPresenting": {
+      "before": "04ffa41f9e0ad0993df2668dc566d3c8f490edd57dfa9ed7d107b6f2af533245",
+      "after": "04ffa41f9e0ad0993df2668dc566d3c8f490edd57dfa9ed7d107b6f2af533245",
+      "upstream": "04ffa41f9e0ad0993df2668dc566d3c8f490edd57dfa9ed7d107b6f2af533245"
+    },
+    "fMulerSelectClearLayer": {
+      "before": "3137c18bd65c5e5e6b4367469274780a841beb5b25afd77cc283c8c22f3a5dd7",
+      "after": "3137c18bd65c5e5e6b4367469274780a841beb5b25afd77cc283c8c22f3a5dd7",
+      "upstream": "3137c18bd65c5e5e6b4367469274780a841beb5b25afd77cc283c8c22f3a5dd7"
+    },
+    "fMulerSelectClear": {
+      "before": "4249a72215fbb6db99eb7e8c496acec8e5cfeb94ae933fe64a44b02eda4b237f",
+      "after": "a983761459df34707b633740acc39d5bce4759a9080ae20d773b435b935aa9f2",
+      "upstream": "0a3b3fb3bdc11bfaf895389ec3724450ac405036563eb397913fe39d6bca0e48"
+    },
+    "fMulerSelectLineGroups": {
+      "before": "1bd1afe6f2b7c0d236ff925fcb49fb82dc8f37970dba4edb993627086cc7cf85",
+      "after": "1bd1afe6f2b7c0d236ff925fcb49fb82dc8f37970dba4edb993627086cc7cf85",
+      "upstream": "1bd1afe6f2b7c0d236ff925fcb49fb82dc8f37970dba4edb993627086cc7cf85"
+    },
+    "fMulerSelectVertices": {
+      "before": "c20b045f2512484db2862d101a791c567ae899829a2cc057c6291d544954d0f8",
+      "after": "c20b045f2512484db2862d101a791c567ae899829a2cc057c6291d544954d0f8",
+      "upstream": "c20b045f2512484db2862d101a791c567ae899829a2cc057c6291d544954d0f8"
+    },
+    "fMulerSelectVertexAtoms": {
+      "before": "04e142e34f1b77bed4e0ddee2de39953f0248e2f3f5afd837444dee0a8275078",
+      "after": "04e142e34f1b77bed4e0ddee2de39953f0248e2f3f5afd837444dee0a8275078",
+      "upstream": "04e142e34f1b77bed4e0ddee2de39953f0248e2f3f5afd837444dee0a8275078"
+    },
+    "fMulerSelectAnchors": {
+      "before": "886f6d8e16ad75005df87c4feff0addbb1fe2ed9ddd4a25a8bba20cca20bc3ef",
+      "after": "886f6d8e16ad75005df87c4feff0addbb1fe2ed9ddd4a25a8bba20cca20bc3ef",
+      "upstream": "886f6d8e16ad75005df87c4feff0addbb1fe2ed9ddd4a25a8bba20cca20bc3ef"
+    },
+    "fMulerSelectHeteroAnchors": {
+      "before": "5584cc7fee771188f0cb134d0a99ba134c19c3b6816e577190d13c680bb842df",
+      "after": "5584cc7fee771188f0cb134d0a99ba134c19c3b6816e577190d13c680bb842df",
+      "upstream": "7519f0edd9c4083ef86a5514eb1114e3f24a5d090e5ff5a1b110ea9e1736f073"
+    },
+    "fMulerSelectMedianBond": {
+      "before": "d71427347815b30c4547b026bb4317bb492e8d41d4f34f8fe465c67c0c6e5028",
+      "after": "d71427347815b30c4547b026bb4317bb492e8d41d4f34f8fe465c67c0c6e5028",
+      "upstream": "d71427347815b30c4547b026bb4317bb492e8d41d4f34f8fe465c67c0c6e5028"
+    },
+    "fMulerSelectCompactRect": {
+      "before": "04623bf5c245ea7a9c7c0716d9536958df10ab9f370800eb86ea0854b213840f",
+      "after": "04623bf5c245ea7a9c7c0716d9536958df10ab9f370800eb86ea0854b213840f",
+      "upstream": "04623bf5c245ea7a9c7c0716d9536958df10ab9f370800eb86ea0854b213840f"
+    },
+    "fRectBox": {
+      "before": "f3c9c250fb24569603ee63645c6ed39812c9d1d1b2051ba1375db0cd7863bafb",
+      "after": "f3c9c250fb24569603ee63645c6ed39812c9d1d1b2051ba1375db0cd7863bafb",
+      "upstream": "f3c9c250fb24569603ee63645c6ed39812c9d1d1b2051ba1375db0cd7863bafb"
+    },
+    "fUnionBox": {
+      "before": "65cbce8c15f1baf178720eaa9bb028e79a26f5acb1d74d71ada58ea403818cd0",
+      "after": "65cbce8c15f1baf178720eaa9bb028e79a26f5acb1d74d71ada58ea403818cd0",
+      "upstream": "65cbce8c15f1baf178720eaa9bb028e79a26f5acb1d74d71ada58ea403818cd0"
+    },
+    "fMulerSelectCompactBoxes": {
+      "before": "d5030f6b3e1162b8edc4ff9d05ff5b0415877d92fbd2c76328d14fd891c9ec18",
+      "after": "d5030f6b3e1162b8edc4ff9d05ff5b0415877d92fbd2c76328d14fd891c9ec18",
+      "upstream": "d5030f6b3e1162b8edc4ff9d05ff5b0415877d92fbd2c76328d14fd891c9ec18"
+    },
+    "fMulerSelectCompacted": {
+      "before": "676c2433d78bb4eeb9106b4d332e347dafbc75a0142dc5edfa638eb2a69c5f56",
+      "after": "676c2433d78bb4eeb9106b4d332e347dafbc75a0142dc5edfa638eb2a69c5f56",
+      "upstream": "676c2433d78bb4eeb9106b4d332e347dafbc75a0142dc5edfa638eb2a69c5f56"
+    },
+    "fMulerSelectNormalizeMainChainCompacts": {
+      "before": "8068154bdfd38644b32a094edd191aa68122b6550090f85a2ce33e1d671c66e7",
+      "after": "8068154bdfd38644b32a094edd191aa68122b6550090f85a2ce33e1d671c66e7",
+      "upstream": "8068154bdfd38644b32a094edd191aa68122b6550090f85a2ce33e1d671c66e7"
+    },
+    "fMulerSelectGeom": {
+      "before": "d5fd244707e4a1b78387045ceafbe16495545dba02e91bdd88e532016bf602c4",
+      "after": "d5fd244707e4a1b78387045ceafbe16495545dba02e91bdd88e532016bf602c4",
+      "upstream": "d5fd244707e4a1b78387045ceafbe16495545dba02e91bdd88e532016bf602c4"
+    },
+    "fMulerHoverBoxForPick": {
+      "before": "4e9c39f3e64476572970a1866c5774b876f70ba7c133a68d607e10562d9d1e0e",
+      "after": "4e9c39f3e64476572970a1866c5774b876f70ba7c133a68d607e10562d9d1e0e",
+      "upstream": "4e9c39f3e64476572970a1866c5774b876f70ba7c133a68d607e10562d9d1e0e"
+    },
+    "fMulerHoverClear": {
+      "before": "df119fa1d151a58346fd73c1a209eff3aece1bea67cc3d5f462bc4e05e0cf0c1",
+      "after": "df119fa1d151a58346fd73c1a209eff3aece1bea67cc3d5f462bc4e05e0cf0c1",
+      "upstream": "df119fa1d151a58346fd73c1a209eff3aece1bea67cc3d5f462bc4e05e0cf0c1"
+    },
+    "fMulerHoverPaint": {
+      "before": "5b343a59730f29594e95b5570bbae810b87ac3f785aef8312f9260f6eb9f619e",
+      "after": "5b343a59730f29594e95b5570bbae810b87ac3f785aef8312f9260f6eb9f619e",
+      "upstream": "5b343a59730f29594e95b5570bbae810b87ac3f785aef8312f9260f6eb9f619e"
+    },
+    "fMulerHoverTick": {
+      "before": "08848ee3e40e214f330cca96f6136d1a2ea83e3d6416f8b36568aaf83a67b0cd",
+      "after": "08848ee3e40e214f330cca96f6136d1a2ea83e3d6416f8b36568aaf83a67b0cd",
+      "upstream": "08848ee3e40e214f330cca96f6136d1a2ea83e3d6416f8b36568aaf83a67b0cd"
+    },
+    "fMulerQuizHydrogenParent": {
+      "before": "9c2694b06fab3754df5c513c104f4a1d1f52d95e209a46017c611e289aca1b63",
+      "after": "9c2694b06fab3754df5c513c104f4a1d1f52d95e209a46017c611e289aca1b63",
+      "upstream": "9c2694b06fab3754df5c513c104f4a1d1f52d95e209a46017c611e289aca1b63"
+    },
+    "fMulerSelectPick": {
+      "before": "0a426593b61e26b5d7a703cc711053d0804779a79600519ab908c20d222a226f",
+      "after": "0a426593b61e26b5d7a703cc711053d0804779a79600519ab908c20d222a226f",
+      "upstream": "156e9f7b2528b7eeda3b4c81bbd92f29905518e5462e507a6e567d2a4aac6097"
+    },
+    "fMuler3DSourceKey": {
+      "before": null,
+      "after": "3eb2adeef0a85ce40ff5490ea8659ab3c309873fd3d6f905b54d019076aa25c1",
+      "upstream": null
+    },
+    "fMuler3DBeginLoad": {
+      "before": null,
+      "after": "e29dd93b445fb539befc5fa993982a9b3e3d0c0477a7e95ca1308a68872a6657",
+      "upstream": null
+    },
+    "fMuler3DWillScript": {
+      "before": null,
+      "after": "ba320798c75a1403af8491c21474acc9f995cbb74743ec7f6f215ae5e65abe9f",
+      "upstream": null
+    },
+    "fMuler3DModelReady": {
+      "before": null,
+      "after": "3f9487c9e94dd334e87565878429c9950c7c9e07e4eff0c4b4c1ca99c974d4b2",
+      "upstream": null
+    },
+    "fMuler3DValidateLiveModel": {
+      "before": null,
+      "after": "3b32caa9065ad1fe412cfe5449c01c5bfe8b2251dbd1675e8734845a6d9be42a",
+      "upstream": null
+    },
+    "fMuler3DReplaySelection": {
+      "before": null,
+      "after": "545ea96ac3743512877358a08520276970d49fea32ed7b7898c3cd4344dd1ca8",
+      "upstream": null
+    },
+    "fMuler3DParsedSource": {
+      "before": null,
+      "after": "fd882de9ec14cc740de204978c601780e1cf340ca0266b381d4d6117fab4d919",
+      "upstream": null
+    },
+    "fMulerHeavyMapCached": {
+      "before": null,
+      "after": "47733684b07925217f7f4d6fdcd6547bcdab548eea75f587b2dcfd692600c67a",
+      "upstream": "d50188986b00a66721b10ad81ae043ead99102ea0fb9c31348523ed1e514e260"
+    },
+    "fMulerSelectFullMap": {
+      "before": null,
+      "after": "50a3140a1262fc7defb97880f2f80ea5757dcf8ac67ebdf307607a7269900d14",
+      "upstream": null
+    },
+    "fMulerMap2D3D": {
+      "before": null,
+      "after": "e674b5b9d6cceb73200068de61d293e7efea0fa2354ab898bb5656943fba2e36",
+      "upstream": "364d7c90d5b105680ee23de30aee1465ee5c0a6b30055b967e9ba970304e5c53"
+    },
+    "fMulerMap3D2D": {
+      "before": null,
+      "after": "2f631078c42d663572109fc1f3d3f4da5adebcde0dd311aa7663d26b2f435b48",
+      "upstream": "6db701c0580e9cde627c9980f55ac1d0a80718833c072b96bdc29a3f4fc70a51"
+    },
+    "fMulerSelectPairFor2D": {
+      "before": null,
+      "after": "364a4127e47dadb15a8114fde923e55ca0da2cf17bfc4b9d0552c06cf34e5b69",
+      "upstream": "622486f25bd92cc35048e44258b18b4d78af9e87987c1a5fb7d16fdccef14acd"
+    },
+    "fMulerSelectNormalized3D": {
+      "before": null,
+      "after": "012ba3d9c54e215dc8ebfef589d67c1703b923b7c1e3b57c233b31ea09f615b9",
+      "upstream": null
+    },
+    "fMulerSelectBondPairFor2D": {
+      "before": null,
+      "after": "a8d2ac3118eebc8a25658ecd0716520db2c8f00373424a366dfb054715edd18e",
+      "upstream": "7d33060cdd1f3ebae51a426fbb81e87bf769748f4c1ef74b18f168ddebd3caa1"
+    },
+    "fMulerSelectBondPairFor3D": {
+      "before": null,
+      "after": "4b0fdf8094d7c881d68c4a66ecd5b8a66aec78210cc8505e92b32e57564ee3e3",
+      "upstream": null
+    },
+    "fMulerSelectContributors": {
+      "before": null,
+      "after": "9cace08e2fab21fcd2e30d824d9852b01e764d8a9fa7c2dd9dd7153675fc0d04",
+      "upstream": null
+    },
+    "fMulerSelectRebuildMirrors": {
+      "before": null,
+      "after": "78ce6db2d51878ac0573dbb0a2e9fe96bd2192f0a42d97c7bc751897c82508aa",
+      "upstream": null
+    },
+    "fMulerSelect3DFeedback": {
+      "before": null,
+      "after": "41d69154142243246cdf46ae320664cdfb899b7453ec7f78aec8974f6fbccbe9",
+      "upstream": null
+    },
+    "fMulerSelectQuiz3DBlocked": {
+      "before": null,
+      "after": "4ea9e22124556ef2a15e70bdba752c40d383206ef7b5748c74182bd7a095ff07",
+      "upstream": null
+    },
+    "fMulerSelectToggle": {
+      "before": "e66cff8e5b739b0277fc565c29f8d253fb499f54d54fc6ee34400060218f47ce",
+      "after": "bf5ad989ecc44726d8db775e2e1e1813a7ff2315f6c217d8d9b9172ab9e602e7",
+      "upstream": "9462dd87a1420451dd798db1a64df1f91b78e3faf7d37948cab4c5f50df6b51c"
+    },
+    "fMulerSelectCallbackIndex": {
+      "before": null,
+      "after": "4406ea872da2c6026dadb7aaed8adb12037e165dd21fff45f064fb5f2a2e14c3",
+      "upstream": null
+    },
+    "fMulerSelectPush3D": {
+      "before": null,
+      "after": "215d520ecd1f38d551eaaa212bdb9d94cff47a4786f0be952acb7fe2a67ba86f",
+      "upstream": "d2a75a76d75e9c93250728faf8b4cec82e2ffc7448c68e99cd129abbc88efb04"
+    },
+    "fMulerSelectClear3DPaint": {
+      "before": null,
+      "after": "3adac9ed2056eef546be4efda65273d572f30a5b0178f6480b3b66d7a928e87d",
+      "upstream": "27629d711c371b0ab08d8cf7b30adae444e35392c481a1a7f9c4d28690cb0854"
+    },
+    "fMulerSelectClear3DIfEmpty": {
+      "before": null,
+      "after": "ca0d217d1eaa4fa97d7c05e3df937cefcd4bb0f5878f22bb1f0abb4918fb5efa",
+      "upstream": "ca0d217d1eaa4fa97d7c05e3df937cefcd4bb0f5878f22bb1f0abb4918fb5efa"
+    },
+    "fMulerSelectPickingScript": {
+      "before": null,
+      "after": "b2d37b03b824bde7a389306e16e72f4f93e1608d5aa5279e8826883046b48dff",
+      "upstream": "6444dbbbd0ba5ebdb81acdaf7cb12399ce062b6126c735a70aae78c81f5eeebd"
+    },
+    "fMulerSelectSync3DPicking": {
+      "before": null,
+      "after": "0dc2088c6bfcfbba421d9383b1870b8f0da6bd33d791f9be89f8e788a1921e52",
+      "upstream": "d8d87d33feaa118d9cfd35677fdb783a898c893df334bc790a4fb281673ac5b3"
+    },
+    "fMulerMainChainResolved": {
+      "before": "47eb6f97d0e40bd7d6cb99558da718f4c4863acc0494cabbb13e82931c3bf1e3",
+      "after": "47eb6f97d0e40bd7d6cb99558da718f4c4863acc0494cabbb13e82931c3bf1e3",
+      "upstream": "47eb6f97d0e40bd7d6cb99558da718f4c4863acc0494cabbb13e82931c3bf1e3"
+    },
+    "fMulerFGInstances": {
+      "before": "3e0b6b623f14b0045bd2defdcb2e5f4b418e8b59d6d791f49b5405a4e5339389",
+      "after": "3e0b6b623f14b0045bd2defdcb2e5f4b418e8b59d6d791f49b5405a4e5339389",
+      "upstream": "3e0b6b623f14b0045bd2defdcb2e5f4b418e8b59d6d791f49b5405a4e5339389"
+    },
+    "fMulerFGHeavyAtoms": {
+      "before": "c1ee48236a665e395cddfaa3616dc3a1ef2ece267e18700a0de2bf34f7f22c0f",
+      "after": "c1ee48236a665e395cddfaa3616dc3a1ef2ece267e18700a0de2bf34f7f22c0f",
+      "upstream": "c1ee48236a665e395cddfaa3616dc3a1ef2ece267e18700a0de2bf34f7f22c0f"
+    },
+    "fMulerSuffixResolved": {
+      "before": "c82726f031df77e0d296007d91913d0cd34a9690cb10faa6524be6b9d7159b8e",
+      "after": "c82726f031df77e0d296007d91913d0cd34a9690cb10faa6524be6b9d7159b8e",
+      "upstream": "c82726f031df77e0d296007d91913d0cd34a9690cb10faa6524be6b9d7159b8e"
+    },
+    "fMulerEtherResolved": {
+      "before": "70484878ab897ba2610b6c877dde02a34920a3e7f438217dd8d3f35cba6c08ff",
+      "after": "70484878ab897ba2610b6c877dde02a34920a3e7f438217dd8d3f35cba6c08ff",
+      "upstream": "70484878ab897ba2610b6c877dde02a34920a3e7f438217dd8d3f35cba6c08ff"
+    },
+    "fMulerEsterResolved": {
+      "before": "7aee0a4af8227c321d8688d12cb94eb6814ce8d100baef72d0010982c347ca11",
+      "after": "7aee0a4af8227c321d8688d12cb94eb6814ce8d100baef72d0010982c347ca11",
+      "upstream": "7aee0a4af8227c321d8688d12cb94eb6814ce8d100baef72d0010982c347ca11"
+    },
+    "fMulerMultiBondAtoms": {
+      "before": "08bb21760dcd22e4f30db4efa8e281280aba6606c4d09d083bb2249384d6c193",
+      "after": "08bb21760dcd22e4f30db4efa8e281280aba6606c4d09d083bb2249384d6c193",
+      "upstream": "08bb21760dcd22e4f30db4efa8e281280aba6606c4d09d083bb2249384d6c193"
+    },
+    "fMulerBondAtomsPos1": {
+      "before": "37c8b488aef21caab7f457e4ab4cbb940783906dae94a86c4b315b7aaa6d7850",
+      "after": "37c8b488aef21caab7f457e4ab4cbb940783906dae94a86c4b315b7aaa6d7850",
+      "upstream": "37c8b488aef21caab7f457e4ab4cbb940783906dae94a86c4b315b7aaa6d7850"
+    },
+    "fMulerBondAtomsPos2": {
+      "before": "078f9561007030e6a2e873115004c761073af346ceca66b8e9202af286740ced",
+      "after": "078f9561007030e6a2e873115004c761073af346ceca66b8e9202af286740ced",
+      "upstream": "078f9561007030e6a2e873115004c761073af346ceca66b8e9202af286740ced"
+    },
+    "fMulerSingleBondAtoms": {
+      "before": "cc4e0b1b2f4b8b2155e406a4a960c9b284132bf53727c19b16091a35b9d68855",
+      "after": "cc4e0b1b2f4b8b2155e406a4a960c9b284132bf53727c19b16091a35b9d68855",
+      "upstream": "cc4e0b1b2f4b8b2155e406a4a960c9b284132bf53727c19b16091a35b9d68855"
+    },
+    "fMulerQuizEffectiveAtoms": {
+      "before": "a5309abb01efe58c20e840e5ef5e93b8f2036ca9618b56ebb38060fd1f9394cf",
+      "after": "a5309abb01efe58c20e840e5ef5e93b8f2036ca9618b56ebb38060fd1f9394cf",
+      "upstream": "a5309abb01efe58c20e840e5ef5e93b8f2036ca9618b56ebb38060fd1f9394cf"
+    },
+    "fMulerBondTypeResolved": {
+      "before": "7a83995bab4a6ab95196d7570b1562a7ce28b819f1be26818499e7c33e54ca0c",
+      "after": "7a83995bab4a6ab95196d7570b1562a7ce28b819f1be26818499e7c33e54ca0c",
+      "upstream": "7a83995bab4a6ab95196d7570b1562a7ce28b819f1be26818499e7c33e54ca0c"
+    },
+    "fMulerBondType2Resolved": {
+      "before": "146a293280ad67338392a82d5b2fe78f81a3af9c6017ef7574982a18c5ca28ad",
+      "after": "146a293280ad67338392a82d5b2fe78f81a3af9c6017ef7574982a18c5ca28ad",
+      "upstream": "146a293280ad67338392a82d5b2fe78f81a3af9c6017ef7574982a18c5ca28ad"
+    },
+    "fMulerBondAtomsForMode": {
+      "before": "bccf56d77f69732f73d54535ceb0fd8902954af9fa16c00c9dac78e197220105",
+      "after": "bccf56d77f69732f73d54535ceb0fd8902954af9fa16c00c9dac78e197220105",
+      "upstream": "bccf56d77f69732f73d54535ceb0fd8902954af9fa16c00c9dac78e197220105"
+    },
+    "fMulerBranchAtomsForMode": {
+      "before": "bd55a67a6316fb5eb775c850ffa98bfed3a4282c8fe779aff2083f60cce43f19",
+      "after": "bd55a67a6316fb5eb775c850ffa98bfed3a4282c8fe779aff2083f60cce43f19",
+      "upstream": "bd55a67a6316fb5eb775c850ffa98bfed3a4282c8fe779aff2083f60cce43f19"
+    },
+    "fMulerHeteroPrefixAtomsForMode": {
+      "before": null,
+      "after": "9bd4ec65cdc4e417edfab1c35672c076b4dedbac9ccb4e76d501fea8c205822d",
+      "upstream": "9bd4ec65cdc4e417edfab1c35672c076b4dedbac9ccb4e76d501fea8c205822d"
+    },
+    "fMulerChainSolved": {
+      "before": "5456d24d155c0f03428844bef56dfed1559f6fc441a0329dace79dadd47a9189",
+      "after": "5456d24d155c0f03428844bef56dfed1559f6fc441a0329dace79dadd47a9189",
+      "upstream": "5456d24d155c0f03428844bef56dfed1559f6fc441a0329dace79dadd47a9189"
+    },
+    "fMulerQuizBoxIdForMode": {
+      "before": "4ba655492af45e21d932d5ae37223fe4233dbdcf9b36736eabe9f6a672cced70",
+      "after": "4ba655492af45e21d932d5ae37223fe4233dbdcf9b36736eabe9f6a672cced70",
+      "upstream": "4ba655492af45e21d932d5ae37223fe4233dbdcf9b36736eabe9f6a672cced70"
+    },
+    "fMulerFGPositionAtoms": {
+      "before": "60d5cee15b4fb819c407f861e6f87b8b91780e2e7bf555d629e7da719d3dd5bc",
+      "after": "60d5cee15b4fb819c407f861e6f87b8b91780e2e7bf555d629e7da719d3dd5bc",
+      "upstream": "60d5cee15b4fb819c407f861e6f87b8b91780e2e7bf555d629e7da719d3dd5bc"
+    },
+    "fMulerBondPosResolved": {
+      "before": "d0e9a1d72e20532baca56487d8109d5e54e8e069bb8a07de629da98ae11a40a1",
+      "after": "d0e9a1d72e20532baca56487d8109d5e54e8e069bb8a07de629da98ae11a40a1",
+      "upstream": "d0e9a1d72e20532baca56487d8109d5e54e8e069bb8a07de629da98ae11a40a1"
+    },
+    "fMulerNumber1Resolved": {
+      "before": "be653a440c301be19526c1b050c5043ba49e42a53d11cb32c3d82ac55e5148c1",
+      "after": "be653a440c301be19526c1b050c5043ba49e42a53d11cb32c3d82ac55e5148c1",
+      "upstream": "be653a440c301be19526c1b050c5043ba49e42a53d11cb32c3d82ac55e5148c1"
+    },
+    "fMulerEndNumberResolved": {
+      "before": "f4ed185a711aebf52c9ec66ce4f67b7671edbe28fe60c8028d456689c56cf201",
+      "after": "f4ed185a711aebf52c9ec66ce4f67b7671edbe28fe60c8028d456689c56cf201",
+      "upstream": "f4ed185a711aebf52c9ec66ce4f67b7671edbe28fe60c8028d456689c56cf201"
+    },
+    "fMulerQuizTargetSet": {
+      "before": "27d1b13d1eef3138721bf0c1e0e60e8a62ac29c5c540ad299b7bcdf7619bb18e",
+      "after": "27d1b13d1eef3138721bf0c1e0e60e8a62ac29c5c540ad299b7bcdf7619bb18e",
+      "upstream": "27d1b13d1eef3138721bf0c1e0e60e8a62ac29c5c540ad299b7bcdf7619bb18e"
+    },
+    "fMulerQuizResolveTarget": {
+      "before": "0a861b2dda73771409bdaa1a9a638fff68cdba0a334234155cdf4973029361d4",
+      "after": "2ba353944510d76d53ba3e67b87fe7ff6ca539b58f7ac7418ba46a570ad692ef",
+      "upstream": "2ba353944510d76d53ba3e67b87fe7ff6ca539b58f7ac7418ba46a570ad692ef"
+    },
+    "fMulerQuizCompare": {
+      "before": "b57a77da928c7befc91ca19ed60b1f6f9e746378bbb5d5013e182649ef76faaa",
+      "after": "b57a77da928c7befc91ca19ed60b1f6f9e746378bbb5d5013e182649ef76faaa",
+      "upstream": "b57a77da928c7befc91ca19ed60b1f6f9e746378bbb5d5013e182649ef76faaa"
+    },
+    "fMulerQuizHasHetero": {
+      "before": "91462ab4576a7fa775c943c743b45b9538e036a0cdcbe86f85aa54ed08437f9e",
+      "after": "91462ab4576a7fa775c943c743b45b9538e036a0cdcbe86f85aa54ed08437f9e",
+      "upstream": "91462ab4576a7fa775c943c743b45b9538e036a0cdcbe86f85aa54ed08437f9e"
+    },
+    "fMulerQuizPartialBreak": {
+      "before": "bcc5a01ccea8037d7c4e106f77b24dc8d5981cbccf5d1b8870e3285534e5ef9d",
+      "after": "bcc5a01ccea8037d7c4e106f77b24dc8d5981cbccf5d1b8870e3285534e5ef9d",
+      "upstream": "bcc5a01ccea8037d7c4e106f77b24dc8d5981cbccf5d1b8870e3285534e5ef9d"
+    },
+    "fMulerQuizMainChainPool": {
+      "before": "c68f87f80434765b98135766cfddb3b5febb8c6ec26c15a8fc1c563fd17c01e8",
+      "after": "c68f87f80434765b98135766cfddb3b5febb8c6ec26c15a8fc1c563fd17c01e8",
+      "upstream": "c68f87f80434765b98135766cfddb3b5febb8c6ec26c15a8fc1c563fd17c01e8"
+    },
+    "fMulerQuizChainsEqual": {
+      "before": "8cf3094ef6b89fa62e747c56e69b20705cae9d3ff595bcd301b64bbb78295f53",
+      "after": "8cf3094ef6b89fa62e747c56e69b20705cae9d3ff595bcd301b64bbb78295f53",
+      "upstream": "8cf3094ef6b89fa62e747c56e69b20705cae9d3ff595bcd301b64bbb78295f53"
+    },
+    "fMulerQuizSymmetricChain": {
+      "before": "213e58fc9da3cb29d82ec49da05db518d7495246d3cea3c8f7634119313a3e62",
+      "after": "213e58fc9da3cb29d82ec49da05db518d7495246d3cea3c8f7634119313a3e62",
+      "upstream": "213e58fc9da3cb29d82ec49da05db518d7495246d3cea3c8f7634119313a3e62"
+    },
+    "fMulerQuizComparePool": {
+      "before": "633489062f711dd5832b884a0a19ab8f54821c64efb7320715aad65b18d59790",
+      "after": "633489062f711dd5832b884a0a19ab8f54821c64efb7320715aad65b18d59790",
+      "upstream": "633489062f711dd5832b884a0a19ab8f54821c64efb7320715aad65b18d59790"
+    },
+    "fMulerQuizAnchorOf": {
+      "before": "da43a9484ce6c2e1233291e59351dc8b263a667f32bcf702ca736196249d6b25",
+      "after": "da43a9484ce6c2e1233291e59351dc8b263a667f32bcf702ca736196249d6b25",
+      "upstream": "da43a9484ce6c2e1233291e59351dc8b263a667f32bcf702ca736196249d6b25"
+    },
+    "fMulerQuizBonded": {
+      "before": "f032176d11b48b9275792739b721667204002b387ce5f4fc4252b1c5de0c81b5",
+      "after": "f032176d11b48b9275792739b721667204002b387ce5f4fc4252b1c5de0c81b5",
+      "upstream": "f032176d11b48b9275792739b721667204002b387ce5f4fc4252b1c5de0c81b5"
+    },
+    "fMulerQuizWalkBreak": {
+      "before": "619c73177b503018636bf416361d35f43ce8b2c9156d73fdc3ea98baf2acf7c2",
+      "after": "619c73177b503018636bf416361d35f43ce8b2c9156d73fdc3ea98baf2acf7c2",
+      "upstream": "619c73177b503018636bf416361d35f43ce8b2c9156d73fdc3ea98baf2acf7c2"
+    },
+    "fMulerQuizVerdictEl": {
+      "before": "2a9c3fe45f1e9492a141d6d02f51f713aa357d12f1d51bb21e189cb9bf90ed44",
+      "after": "2a9c3fe45f1e9492a141d6d02f51f713aa357d12f1d51bb21e189cb9bf90ed44",
+      "upstream": "cab796d9325ff915a9a752d9b0640404ffbe79c644dcc7c4a120640fb46b624e"
+    },
+    "fMulerBranchTargetIsLocant": {
+      "before": "d4aee99169c0ee0a9107f885dee27cf337199f877492d8ab759136c76098888b",
+      "after": "d4aee99169c0ee0a9107f885dee27cf337199f877492d8ab759136c76098888b",
+      "upstream": "d4aee99169c0ee0a9107f885dee27cf337199f877492d8ab759136c76098888b"
+    },
+    "fMulerBondTargetIsLocant": {
+      "before": null,
+      "after": "d9fc12b17c912860afe71b3d1893f0a353533588723e92346c1a2d09f0ab72fb",
+      "upstream": "d9fc12b17c912860afe71b3d1893f0a353533588723e92346c1a2d09f0ab72fb"
+    },
+    "fMulerBondIsSingle": {
+      "before": "972ecdd82e4ca4acaaa2c5453d03f5cf50c692da01dbc4100c2f529672b2748a",
+      "after": "972ecdd82e4ca4acaaa2c5453d03f5cf50c692da01dbc4100c2f529672b2748a",
+      "upstream": "972ecdd82e4ca4acaaa2c5453d03f5cf50c692da01dbc4100c2f529672b2748a"
+    },
+    "fMulerQuizVerdict": {
+      "before": "44266af6ae74e3714db62161e438e3d92eec3f0a4d5a2fa8af0136082b42b960",
+      "after": "44266af6ae74e3714db62161e438e3d92eec3f0a4d5a2fa8af0136082b42b960",
+      "upstream": "1261e3eb7357cd46ad01b94b34fa970b663529a74b9e6154b361829f1bb5a812"
+    },
+    "fMulerQuizPrompt": {
+      "before": "5aa2108fb6ec372ebd99bb168f1946fd3797dc401540f4251a1e62337cca9a9a",
+      "after": "5aa2108fb6ec372ebd99bb168f1946fd3797dc401540f4251a1e62337cca9a9a",
+      "upstream": "5aa2108fb6ec372ebd99bb168f1946fd3797dc401540f4251a1e62337cca9a9a"
+    },
+    "fMulerQuizDisarm": {
+      "before": "f37f89101c87e583d4005306fdcf5259f9881a538e7689a45c0d4aaaace2420e",
+      "after": "f37f89101c87e583d4005306fdcf5259f9881a538e7689a45c0d4aaaace2420e",
+      "upstream": "f37f89101c87e583d4005306fdcf5259f9881a538e7689a45c0d4aaaace2420e"
+    },
+    "fMulerQuizRearmSticky": {
+      "before": "4fa5a9e87a15ba57d9e2488f35f9a3885423bff817bc383c34aaba3da39bceca",
+      "after": "4fa5a9e87a15ba57d9e2488f35f9a3885423bff817bc383c34aaba3da39bceca",
+      "upstream": "4fa5a9e87a15ba57d9e2488f35f9a3885423bff817bc383c34aaba3da39bceca"
+    },
+    "fMulerQuizBoxShowsLocant": {
+      "before": "c60f8826480d11724c8f0fe18a70f3bf2856f64e9bd7e131a5c3e7e477dc4f24",
+      "after": "c60f8826480d11724c8f0fe18a70f3bf2856f64e9bd7e131a5c3e7e477dc4f24",
+      "upstream": "c60f8826480d11724c8f0fe18a70f3bf2856f64e9bd7e131a5c3e7e477dc4f24"
+    },
+    "fMulerBoxMatchesTarget": {
+      "before": "e5b0537e1f16344760b1ecfa29a57161fc10b86efdfd6d26fedfc332951d74f5",
+      "after": "e5b0537e1f16344760b1ecfa29a57161fc10b86efdfd6d26fedfc332951d74f5",
+      "upstream": "e5b0537e1f16344760b1ecfa29a57161fc10b86efdfd6d26fedfc332951d74f5"
+    },
+    "fMulerQuizArmForBox": {
+      "before": "b7df3e75da438d2b5fcf2c661e162b5de6e2cb306f22bcd7773692da23ebd82f",
+      "after": "b7df3e75da438d2b5fcf2c661e162b5de6e2cb306f22bcd7773692da23ebd82f",
+      "upstream": "b7df3e75da438d2b5fcf2c661e162b5de6e2cb306f22bcd7773692da23ebd82f"
+    },
+    "fMulerQuizRefresh": {
+      "before": "4a251fcbce5ec1c50d080a592ee3e54f962bb4a20024e28717e43c022b5e1bf0",
+      "after": "7a4d04761cd46c0d864ef43731f5c864c314fac51c84f222742cb18f3bfda6f8",
+      "upstream": "4a251fcbce5ec1c50d080a592ee3e54f962bb4a20024e28717e43c022b5e1bf0"
+    },
+    "fMulerSelectMergeBgArg": {
+      "before": "867872ba657f1080194e2cc5827cf10acd208d4522032a1598cbddb830f11dc2",
+      "after": "867872ba657f1080194e2cc5827cf10acd208d4522032a1598cbddb830f11dc2",
+      "upstream": "867872ba657f1080194e2cc5827cf10acd208d4522032a1598cbddb830f11dc2"
+    },
+    "fMulerSelectPush": {
+      "before": "c7d4a6b2485a088e5e58f29ecce3652c50d5361903540a0c150ea1e503b4b8fc",
+      "after": "c7d4a6b2485a088e5e58f29ecce3652c50d5361903540a0c150ea1e503b4b8fc",
+      "upstream": "c7d4a6b2485a088e5e58f29ecce3652c50d5361903540a0c150ea1e503b4b8fc"
+    },
+    "fMulerSelectWrapBgChannel": {
+      "before": "28c2c8ca5c0ed282f2e88b8fa4d1d5ce2cf06e677e230155dc6b0e92361b10aa",
+      "after": "28c2c8ca5c0ed282f2e88b8fa4d1d5ce2cf06e677e230155dc6b0e92361b10aa",
+      "upstream": "28c2c8ca5c0ed282f2e88b8fa4d1d5ce2cf06e677e230155dc6b0e92361b10aa"
+    },
+    "fMulerSelectPushState": {
+      "before": "20d1cc97a7937ca243af1fdecefb69b94c0183391374f3f4cf3266153c38ef9b",
+      "after": "6a8a22c6ca251b8172aa84828c940fee8b36c46223f22de34bd17e50cf22af2c",
+      "upstream": "6a8a22c6ca251b8172aa84828c940fee8b36c46223f22de34bd17e50cf22af2c"
+    },
+    "fMulerSelectIsSelectionFill": {
+      "before": "73fd86c992c995a4e490e768e80b75d2b8055f5436e84db261e644858bfe624d",
+      "after": "73fd86c992c995a4e490e768e80b75d2b8055f5436e84db261e644858bfe624d",
+      "upstream": "73fd86c992c995a4e490e768e80b75d2b8055f5436e84db261e644858bfe624d"
+    },
+    "fMulerFillMatches": {
+      "before": "0d29bd41cf1e6f2bf71a5ce125f3b697d73f459588c302678b732efc22439573",
+      "after": "0d29bd41cf1e6f2bf71a5ce125f3b697d73f459588c302678b732efc22439573",
+      "upstream": "0d29bd41cf1e6f2bf71a5ce125f3b697d73f459588c302678b732efc22439573"
+    },
+    "fMulerSelectCompactAnchorEllipse": {
+      "before": "d8729ccf06bcf06afa12814d5b80af2dd81fb65cefb7306a83162d453b7392c8",
+      "after": "d8729ccf06bcf06afa12814d5b80af2dd81fb65cefb7306a83162d453b7392c8",
+      "upstream": "d8729ccf06bcf06afa12814d5b80af2dd81fb65cefb7306a83162d453b7392c8"
+    },
+    "fMulerSelectRoundedRectPath": {
+      "before": "89adeef8fada4f9c22c5f6a73cf66d5ba09b1bfb78ccda711d267fa1d8810a5b",
+      "after": "89adeef8fada4f9c22c5f6a73cf66d5ba09b1bfb78ccda711d267fa1d8810a5b",
+      "upstream": "89adeef8fada4f9c22c5f6a73cf66d5ba09b1bfb78ccda711d267fa1d8810a5b"
+    },
+    "fMulerSelectCompactPaintPass": {
+      "before": "825a3b63de0bfaf36fbf01b766bcc656befa4f3ddb15406ac60164dd7c6a3619",
+      "after": "825a3b63de0bfaf36fbf01b766bcc656befa4f3ddb15406ac60164dd7c6a3619",
+      "upstream": "825a3b63de0bfaf36fbf01b766bcc656befa4f3ddb15406ac60164dd7c6a3619"
+    },
+    "fMulerSelectRepaint": {
+      "before": "ae2264604fca10759709c95486d8cc585131041205001c2634fe18441aece529",
+      "after": "6ea907bd0290b2f5c982c40811fca07152754862a28c0d0e0864a9d122781665",
+      "upstream": "abe722021574dbe63b3e19be0a0a5722fb608c7edee55ff4a1ab2f9874ecd926"
+    },
+    "fMulerSelectBindOnce": {
+      "before": "b59f6b2a994a27efdc7cd8f16a3a8cd959a12cc72ee32c5bc1de08c93bea86b0",
+      "after": "74b395a7b938a28dbc487a4702eeba24600a70ee398e0b47032846cea9a69b42",
+      "upstream": "74b395a7b938a28dbc487a4702eeba24600a70ee398e0b47032846cea9a69b42"
+    },
+    "fMulerSelect3DSilentSettle": {
+      "before": null,
+      "after": "a371e05e23e9ea6e5914d25d4b50ae67ec7d81f54749aa35e345e52634e81cea",
+      "upstream": "6152f3d02631907043f4fdde069f61520197c755b2a3881c80180ab2d2c9aa54"
+    },
+    "fMulerSelectBind3DClear": {
+      "before": null,
+      "after": "75ca3e227e64935e0395e1f3c74ade7ff1c159b1ff3bf5ac057b648cd12ff854",
+      "upstream": "06e601491bf604214bd9e83de67acf5f4a6c0ab4cab096a89087d4ea958b9314"
+    },
+    "fMolDraftAutoLinearizeOn": {
+      "before": "536d78668d6ad9652e5de7d4d0a2f1f8e54132501cc4939b79918eac8dc53e34",
+      "after": "536d78668d6ad9652e5de7d4d0a2f1f8e54132501cc4939b79918eac8dc53e34",
+      "upstream": "536d78668d6ad9652e5de7d4d0a2f1f8e54132501cc4939b79918eac8dc53e34"
+    },
+    "fMolDraftEnter": {
+      "before": "b08f277f443602dd5a993af7be205f0d9843d84fa249e939698b28447d24987a",
+      "after": "b08f277f443602dd5a993af7be205f0d9843d84fa249e939698b28447d24987a",
+      "upstream": "40f8dce2887605b78f0d8cc6bc83ed8a20859b5998e89a5945c114ce9bf0b39b"
+    },
+    "fEditMolDraft": {
+      "before": "be9f12e5d51919e2e412703a0394a8bbc7e820479447824e60a3b1d56d742e76",
+      "after": "be9f12e5d51919e2e412703a0394a8bbc7e820479447824e60a3b1d56d742e76",
+      "upstream": "be9f12e5d51919e2e412703a0394a8bbc7e820479447824e60a3b1d56d742e76"
+    },
+    "fNewMolDraft": {
+      "before": "5eabd5f56b0273a1b182b9cd69e52aff8f6f82d82815c065dcca65d4aa7a2c3f",
+      "after": "5eabd5f56b0273a1b182b9cd69e52aff8f6f82d82815c065dcca65d4aa7a2c3f",
+      "upstream": "5eabd5f56b0273a1b182b9cd69e52aff8f6f82d82815c065dcca65d4aa7a2c3f"
+    },
+    "fMolDraftHasRing": {
+      "before": "2681517062398854504fc17810c1dd6457ddd5032ce07896425fc1c1c4e7c0e7",
+      "after": "2681517062398854504fc17810c1dd6457ddd5032ce07896425fc1c1c4e7c0e7",
+      "upstream": "2681517062398854504fc17810c1dd6457ddd5032ce07896425fc1c1c4e7c0e7"
+    },
+    "fMolDraftNorm": {
+      "before": "3a962de649f0ffd95b7cbfa9a2c7a9bc0edf873c17605a5f8d9322e4b877af24",
+      "after": "3a962de649f0ffd95b7cbfa9a2c7a9bc0edf873c17605a5f8d9322e4b877af24",
+      "upstream": "3a962de649f0ffd95b7cbfa9a2c7a9bc0edf873c17605a5f8d9322e4b877af24"
+    },
+    "fMolDraftPCMatch": {
+      "before": "0b0e623fbe3fda1c643508b942748bf669018061d3aabff65bbbe67cfacde433",
+      "after": "0b0e623fbe3fda1c643508b942748bf669018061d3aabff65bbbe67cfacde433",
+      "upstream": "0b0e623fbe3fda1c643508b942748bf669018061d3aabff65bbbe67cfacde433"
+    },
+    "fMolDraftStrayH": {
+      "before": "3d8b1019101efb7f2991e9bfdd9a08a079eeffeae8b14a72b665f89e300bcf0b",
+      "after": "3d8b1019101efb7f2991e9bfdd9a08a079eeffeae8b14a72b665f89e300bcf0b",
+      "upstream": "3d8b1019101efb7f2991e9bfdd9a08a079eeffeae8b14a72b665f89e300bcf0b"
+    },
+    "fMolDraftIsSameMolecule": {
+      "before": "ebb6778e7826fab8a412246fe08db351ac75c2a282fc8e3a961bcc4b9cd59ccb",
+      "after": "ebb6778e7826fab8a412246fe08db351ac75c2a282fc8e3a961bcc4b9cd59ccb",
+      "upstream": "ebb6778e7826fab8a412246fe08db351ac75c2a282fc8e3a961bcc4b9cd59ccb"
+    },
+    "fMolDraftRefreshAcceptKey": {
+      "before": "99c99934cb1925c859b3ccb7b06b4a39a4144a4068b77b5f8efa4bbd25fa0abe",
+      "after": "99c99934cb1925c859b3ccb7b06b4a39a4144a4068b77b5f8efa4bbd25fa0abe",
+      "upstream": "99c99934cb1925c859b3ccb7b06b4a39a4144a4068b77b5f8efa4bbd25fa0abe"
+    },
+    "fMolDraftBondOrderMap": {
+      "before": "a236df3069d8899cd07b103268243e490cd924a2bce16915bfa603120ff256dc",
+      "after": "a236df3069d8899cd07b103268243e490cd924a2bce16915bfa603120ff256dc",
+      "upstream": "a236df3069d8899cd07b103268243e490cd924a2bce16915bfa603120ff256dc"
+    },
+    "fMolDraftAtomEl": {
+      "before": "49e29d53da68a205017aaae78e4bd284bf2a8dfeb49dde0daef472f4eb3cddfe",
+      "after": "49e29d53da68a205017aaae78e4bd284bf2a8dfeb49dde0daef472f4eb3cddfe",
+      "upstream": "49e29d53da68a205017aaae78e4bd284bf2a8dfeb49dde0daef472f4eb3cddfe"
+    },
+    "fMolDraftHeavyNbs": {
+      "before": "dfdcafdc7b87d0e9feb5d3edc7ddfd66c559fbc7a256ea1cfbeb646ed6a7f4d7",
+      "after": "dfdcafdc7b87d0e9feb5d3edc7ddfd66c559fbc7a256ea1cfbeb646ed6a7f4d7",
+      "upstream": "dfdcafdc7b87d0e9feb5d3edc7ddfd66c559fbc7a256ea1cfbeb646ed6a7f4d7"
+    },
+    "fMolDraftHCount": {
+      "before": "4f591fec56b0dbca5f6b7188c07be7ba9ade810b30be40aa225e09d4d796f5a7",
+      "after": "4f591fec56b0dbca5f6b7188c07be7ba9ade810b30be40aa225e09d4d796f5a7",
+      "upstream": "4f591fec56b0dbca5f6b7188c07be7ba9ade810b30be40aa225e09d4d796f5a7"
+    },
+    "fMolDraftGroup": {
+      "before": "3c5aceb7505caa08041b8f8253bb775586e75020af6711058bfe58c2c6b70274",
+      "after": "3c5aceb7505caa08041b8f8253bb775586e75020af6711058bfe58c2c6b70274",
+      "upstream": "3c5aceb7505caa08041b8f8253bb775586e75020af6711058bfe58c2c6b70274"
+    },
+    "fMolDraftBondSym": {
+      "before": "6ba15c33a13eb12273f98ba8d9b43fa2f259ed1455a6205e3939d55e05184916",
+      "after": "6ba15c33a13eb12273f98ba8d9b43fa2f259ed1455a6205e3939d55e05184916",
+      "upstream": "6ba15c33a13eb12273f98ba8d9b43fa2f259ed1455a6205e3939d55e05184916"
+    },
+    "fMolDraftExcl": {
+      "before": "c6cecdebd7cf4c467160d3214eb797780185d8fc902a8d7a7be131a580a126e9",
+      "after": "c6cecdebd7cf4c467160d3214eb797780185d8fc902a8d7a7be131a580a126e9",
+      "upstream": "c6cecdebd7cf4c467160d3214eb797780185d8fc902a8d7a7be131a580a126e9"
+    },
+    "fMolDraftRenderNode": {
+      "before": "51da6f0e438663e310dd9b0a27c6cb464b072e360e997aa9c00de3c0522c9e46",
+      "after": "51da6f0e438663e310dd9b0a27c6cb464b072e360e997aa9c00de3c0522c9e46",
+      "upstream": "51da6f0e438663e310dd9b0a27c6cb464b072e360e997aa9c00de3c0522c9e46"
+    },
+    "fMolDraftRenderChildren": {
+      "before": "64ad353d63693bb9d80ad9083745f60253fd28b9b527e6ef66d714bf5bfff602",
+      "after": "64ad353d63693bb9d80ad9083745f60253fd28b9b527e6ef66d714bf5bfff602",
+      "upstream": "64ad353d63693bb9d80ad9083745f60253fd28b9b527e6ef66d714bf5bfff602"
+    },
+    "fMolDraftExpandedFormula": {
+      "before": "996336552a94fec4f366e6bec35f3ac3d013b262b23b8af55557ca615201ce1f",
+      "after": "996336552a94fec4f366e6bec35f3ac3d013b262b23b8af55557ca615201ce1f",
+      "upstream": "996336552a94fec4f366e6bec35f3ac3d013b262b23b8af55557ca615201ce1f"
+    },
+    "fMolDraftEsc": {
+      "before": "92502a87a34466723d1916d6a57cb1e4a3efab3ed7b2aa6006f2398ce2ecfe83",
+      "after": "92502a87a34466723d1916d6a57cb1e4a3efab3ed7b2aa6006f2398ce2ecfe83",
+      "upstream": "92502a87a34466723d1916d6a57cb1e4a3efab3ed7b2aa6006f2398ce2ecfe83"
+    },
+    "fMulerItalicSecTert": {
+      "before": "da63ad87c261deb6d16599db2c7cc4f5325f6478303d17fb5449119c6efd53f8",
+      "after": "da63ad87c261deb6d16599db2c7cc4f5325f6478303d17fb5449119c6efd53f8",
+      "upstream": "da63ad87c261deb6d16599db2c7cc4f5325f6478303d17fb5449119c6efd53f8"
+    },
+    "fMolDraftReadDrawing": {
+      "before": "3c12bde212d492ed13561c57e0ba0ceb7e60f543fb1ca2ee5493a26d317b2da4",
+      "after": "3c12bde212d492ed13561c57e0ba0ceb7e60f543fb1ca2ee5493a26d317b2da4",
+      "upstream": "3c12bde212d492ed13561c57e0ba0ceb7e60f543fb1ca2ee5493a26d317b2da4"
+    },
+    "fMolDraftSetVerdict": {
+      "before": "eb3ad55dfbdda362baae7bd7510101fe342d664ca941d84f688ebc75c2662bb6",
+      "after": "eb3ad55dfbdda362baae7bd7510101fe342d664ca941d84f688ebc75c2662bb6",
+      "upstream": "eb3ad55dfbdda362baae7bd7510101fe342d664ca941d84f688ebc75c2662bb6"
+    },
+    "fMolDraftVerdictCtrl": {
+      "before": "51e286ddda001609620566b1a94e6e195dcc0b8b094ac911e03c27f6522fd4dd",
+      "after": "51e286ddda001609620566b1a94e6e195dcc0b8b094ac911e03c27f6522fd4dd",
+      "upstream": "51e286ddda001609620566b1a94e6e195dcc0b8b094ac911e03c27f6522fd4dd"
+    },
+    "fMolDraftSDF3DStatusHTML": {
+      "before": "439f8eef4cb1cff1aaf74092c07e54e23261334323382ca7e26f1d747241fe38",
+      "after": "439f8eef4cb1cff1aaf74092c07e54e23261334323382ca7e26f1d747241fe38",
+      "upstream": "b583e371daafbeb9c996aa9ff11a28aa9e995efd41125f4ad1d101520d6368a1"
+    },
+    "fMolDraftRenderPreview": {
+      "before": "e0ad69c63e11314ba979877afa9f3356aef5c8059cc6e193c07f7ca7ccf31ed3",
+      "after": "e0ad69c63e11314ba979877afa9f3356aef5c8059cc6e193c07f7ca7ccf31ed3",
+      "upstream": "e0ad69c63e11314ba979877afa9f3356aef5c8059cc6e193c07f7ca7ccf31ed3"
+    },
+    "fJSmolLoadInlineSDF": {
+      "before": "22bc97131281dcc65883b359efa93b8081644c8e0c4169be2cb80c307eec9f8e",
+      "after": "22bc97131281dcc65883b359efa93b8081644c8e0c4169be2cb80c307eec9f8e",
+      "upstream": "87584d54d33eecab068f15f07c3d80cdb668f521c73e98515b38e35cfa9ba561"
+    },
+    "fMolDraftMeanDisplacement": {
+      "before": "dcb75459d1515e18a66f6a20e086ddf1027ca81c66775e320be304dafddf1775",
+      "after": "dcb75459d1515e18a66f6a20e086ddf1027ca81c66775e320be304dafddf1775",
+      "upstream": "dcb75459d1515e18a66f6a20e086ddf1027ca81c66775e320be304dafddf1775"
+    },
+    "fMolDraftMovedEnough": {
+      "before": "9f6273d5b94a7d67fb4f2c4f01c982e18a8ba3482402b1451799deb04ef4dec8",
+      "after": "9f6273d5b94a7d67fb4f2c4f01c982e18a8ba3482402b1451799deb04ef4dec8",
+      "upstream": "9f6273d5b94a7d67fb4f2c4f01c982e18a8ba3482402b1451799deb04ef4dec8"
+    },
+    "fMolDraftUntangle2D": {
+      "before": "b2a965f4f2c83537ad8a073d7c86198b31e329495cca9e266c6555cb9b15ca41",
+      "after": "b2a965f4f2c83537ad8a073d7c86198b31e329495cca9e266c6555cb9b15ca41",
+      "upstream": "b2a965f4f2c83537ad8a073d7c86198b31e329495cca9e266c6555cb9b15ca41"
+    },
+    "fMolDraftJiggleZ": {
+      "before": "4c6d73d7824b4281181560c037394caac3d1b04475900857e8b83448cb4ff94a",
+      "after": "4c6d73d7824b4281181560c037394caac3d1b04475900857e8b83448cb4ff94a",
+      "upstream": "4c6d73d7824b4281181560c037394caac3d1b04475900857e8b83448cb4ff94a"
+    },
+    "fMolDraftMinWaitClose": {
+      "before": "ff059f18bc868bcac3f8783914a01f10809a8b61fb9e4253ce0c6dda9f38bd75",
+      "after": "ff059f18bc868bcac3f8783914a01f10809a8b61fb9e4253ce0c6dda9f38bd75",
+      "upstream": "9873719253ce77bbda29e3377551d4705c2bd360c655f681a05b6643e5fb7c1b"
+    },
+    "fMolDraftMinWaitShow": {
+      "before": "0bb8faf13528092e440dc64e41ee2651cdde9ee52685407b800e0481fb820e73",
+      "after": "0bb8faf13528092e440dc64e41ee2651cdde9ee52685407b800e0481fb820e73",
+      "upstream": "c2606ff09f0835d820fe9c9dd48fca544a3e616332aa983a2d03b26b3bff88ad"
+    },
+    "fMolDraft3DCurrent": {
+      "before": "6d9670b82c851196a6b15bccb2bf8f1d7c5496a51f06f2cd735679f6354c634e",
+      "after": "6d9670b82c851196a6b15bccb2bf8f1d7c5496a51f06f2cd735679f6354c634e",
+      "upstream": null
+    },
+    "fMolDraft3DInvalidate": {
+      "before": "4d24362e4f2a105c78985629e6c803e3b9076e5369558ffaedb2a8724738ecda",
+      "after": "4d24362e4f2a105c78985629e6c803e3b9076e5369558ffaedb2a8724738ecda",
+      "upstream": null
+    },
+    "fMolDraft3DBegin": {
+      "before": "183c1049df773f94138fefbecbaa28166e429dce15463e7bc2c48ca76612cfff",
+      "after": "183c1049df773f94138fefbecbaa28166e429dce15463e7bc2c48ca76612cfff",
+      "upstream": null
+    },
+    "fMolDraft3DWillScript": {
+      "before": "35ef221445942930ec12223e9ef0e41c461d7019548469f4cce4379255a40af2",
+      "after": "35ef221445942930ec12223e9ef0e41c461d7019548469f4cce4379255a40af2",
+      "upstream": null
+    },
+    "fMolDraft3DWrite": {
+      "before": "f1f3b7c365e4e47ebc4181ad5d9a5ba130a1aa8e71984e0f6f88b7a36c2e58c1",
+      "after": "f1f3b7c365e4e47ebc4181ad5d9a5ba130a1aa8e71984e0f6f88b7a36c2e58c1",
+      "upstream": null
+    },
+    "fMolDraft3DLoad": {
+      "before": "c9b85b52a4d87fc903b0892f27eadefa2cd4dcd27973c03daa9d9d9af37ef14f",
+      "after": "c9b85b52a4d87fc903b0892f27eadefa2cd4dcd27973c03daa9d9d9af37ef14f",
+      "upstream": null
+    },
+    "fMolDraft3DWait": {
+      "before": "f2b561d1933e96f2f32d1366aaa3825a66ec09fa13369ea38272a778fee3d5d2",
+      "after": "f2b561d1933e96f2f32d1366aaa3825a66ec09fa13369ea38272a778fee3d5d2",
+      "upstream": null
+    },
+    "fMolDraftGraphMap": {
+      "before": "efd0351560fa8b7a2d5e62f18d804997c54c019846fd44c7e55e6bc197fe898f",
+      "after": "efd0351560fa8b7a2d5e62f18d804997c54c019846fd44c7e55e6bc197fe898f",
+      "upstream": null
+    },
+    "fMolDraftValidSDF3D": {
+      "before": "bd4208d9377a8eb6091c8b0ddfe48693b2ee08448a234f42ab472fbed3891b1c",
+      "after": "bd4208d9377a8eb6091c8b0ddfe48693b2ee08448a234f42ab472fbed3891b1c",
+      "upstream": "6fe308fe41a98129d4c1a49c13be064a80041ac8d9e73c1bbca36f14f63e5ee5"
+    },
+    "fMolDraftNormalizeJSmolReadback": {
+      "before": "1f9e2fefbbfcf63780d16ceba7a316f0fc50c0742b9938aa9484df6a43dac977",
+      "after": "1f9e2fefbbfcf63780d16ceba7a316f0fc50c0742b9938aa9484df6a43dac977",
+      "upstream": null
+    },
+    "fMolDraftReadBackSDF": {
+      "before": "1c2253c59359ede5efeada93ff8ad77324d402d2a0ca69470894b9ca443735fc",
+      "after": "1c2253c59359ede5efeada93ff8ad77324d402d2a0ca69470894b9ca443735fc",
+      "upstream": "9f288a0b47b6fa267c9167e8305760e299b35f7893392e700109452e6470742b"
+    },
+    "fMolDraftMinWaitSecs": {
+      "before": "56fa1c9616a4ee014c99df6543a2408cfd65416a5ab5142fbea304d89df5025d",
+      "after": "56fa1c9616a4ee014c99df6543a2408cfd65416a5ab5142fbea304d89df5025d",
+      "upstream": "56fa1c9616a4ee014c99df6543a2408cfd65416a5ab5142fbea304d89df5025d"
+    },
+    "fMolDraftLocal3DRelaxFF": {
+      "before": "a18c841492abbbec92cd5343aeb5cef28e8de3ad80a7b2985072e19ddba81701",
+      "after": "a18c841492abbbec92cd5343aeb5cef28e8de3ad80a7b2985072e19ddba81701",
+      "upstream": "6ad1e9f17516f1e43b6aaa9efec40c46f127804bca649c8d4564f5a846ac4270"
+    },
+    "fMolDraftLocal3DRelaxBoth": {
+      "before": "895d69b383676af9077d7dc4d0a1dd706d2703357349ec73bd36b8a3dafd767c",
+      "after": "895d69b383676af9077d7dc4d0a1dd706d2703357349ec73bd36b8a3dafd767c",
+      "upstream": "f828b8869514c89743a588d3b13cd977e11b68985affe5008aa18f91df053c61"
+    },
+    "fMolDraftLocal3DPrepare": {
+      "before": "c006a43e2be877a6c4985991636384a60eb748a6d96476d96eb9520fc6bdbc4c",
+      "after": "c006a43e2be877a6c4985991636384a60eb748a6d96476d96eb9520fc6bdbc4c",
+      "upstream": "9a1a5f95e58551e55d30447704e35b611b077ba893e8f0022b2d3c4d06eb0c2b"
+    },
+    "fMolDraftLocal3DFromMol": {
+      "before": "5d4f670ffc97d00f93ede74f59b9e2123fdf3705fd11a7dc9e2826fae9c5110d",
+      "after": "5d4f670ffc97d00f93ede74f59b9e2123fdf3705fd11a7dc9e2826fae9c5110d",
+      "upstream": "23ef24a703c4b266efdcc1fabce1dc890e471d8df616229deab13cf6aab03887"
+    },
+    "fMolDraft3DProvenance": {
+      "before": "6b3bffcc360e8d6f5de7eed6fe717d32fc8e08e160421bd179c983c018852ed3",
+      "after": "6b3bffcc360e8d6f5de7eed6fe717d32fc8e08e160421bd179c983c018852ed3",
+      "upstream": null
+    },
+    "fMolDraftSet3D": {
+      "before": "ffb25c1f355035d58085aa95af442b169487e4891c66f7eb4f7b77be2a3a2d68",
+      "after": "ffb25c1f355035d58085aa95af442b169487e4891c66f7eb4f7b77be2a3a2d68",
+      "upstream": null
+    },
+    "fMolDraftMinStopEngine": {
+      "before": "1ad220509bb6455e31f60c5851d978646191dcee18791fc31eadd7d3b498132f",
+      "after": "1ad220509bb6455e31f60c5851d978646191dcee18791fc31eadd7d3b498132f",
+      "upstream": "caf02b047fff196df8631bbe04b984a67388ddaf8b5d79ba572e4be46ff28f2a"
+    },
+    "fMolDraftMinWaitAbort": {
+      "before": "e17a397832ad3cb2fb2bf6487572493d5cf726abf82cb20419b04c9f4b6b0ba3",
+      "after": "e17a397832ad3cb2fb2bf6487572493d5cf726abf82cb20419b04c9f4b6b0ba3",
+      "upstream": "281a201016b44e98393d29fa010cf14b708d85d8578c657cff99c8d515460326"
+    },
+    "fMolDraftLocal3DReloadMinimized": {
+      "before": "a518abd9378f4eccb1cdd01720907feb6be521ee568c3e7bc243045de9628feb",
+      "after": "a518abd9378f4eccb1cdd01720907feb6be521ee568c3e7bc243045de9628feb",
+      "upstream": "4a6d43af752a436123bed0d849f65162ff61f1bf2b12aa977bfc48646cadcda9"
+    },
+    "fMolDraftManualMinimize": {
+      "before": "cce91b49eecf105a255a917ff9922941ce48df026a5a06ea6e2193f8cb9a29e0",
+      "after": "cce91b49eecf105a255a917ff9922941ce48df026a5a06ea6e2193f8cb9a29e0",
+      "upstream": "a9f11b9166d9e5f856c0ec676f8a019b0dcd993947f3435e57ef71e0b5e0eb8b"
+    },
+    "fMolDraftJSmolLoadAndReadBack": {
+      "before": "20c24b06aa12efc43dbe3a2d5dff5f2604d806a68988aef977d6eddc43ca1a06",
+      "after": "20c24b06aa12efc43dbe3a2d5dff5f2604d806a68988aef977d6eddc43ca1a06",
+      "upstream": "75a6135d8aceb387bd77b0860e3d408334bed59ad690a25240317510eadf03df"
+    },
+    "fMolDraftPubChem3DFromJSmol": {
+      "before": "d809ebf030925c7fbc73240878c2925ef9f81216f381ba2d445a0f75cd347bbe",
+      "after": "d809ebf030925c7fbc73240878c2925ef9f81216f381ba2d445a0f75cd347bbe",
+      "upstream": "102d92030562f84b8f38d7287a281a3fa9ca4141e08c97d7fc6971b98235f3ba"
+    },
+    "fMolDraftRemote3DFromJSmol": {
+      "before": "2123c8eba017d9a7b5c7a27892ce4c4716f76d5daaebc2869fe8522caf593d9f",
+      "after": "2123c8eba017d9a7b5c7a27892ce4c4716f76d5daaebc2869fe8522caf593d9f",
+      "upstream": "16f5ad2f0521f052984b3d67c6c19a823bc56b26e3a25041c0c6845157a50fab"
+    },
+    "fMolDraftFetchSDF3DTiered": {
+      "before": "30cae64b80e3dce81073d26caad8ed4a00443c2a79d469cba763be03e883b200",
+      "after": "30cae64b80e3dce81073d26caad8ed4a00443c2a79d469cba763be03e883b200",
+      "upstream": "ec8902cff1680130f6ffd88b2a562e23d3ad4bef2600223be61144c87fd9d9cc"
+    },
+    "fMolDraftShow3D": {
+      "before": "99a0fbe917a2cba650a40d72b118f8e5bb90357208793b9f3a216999352573e6",
+      "after": "99a0fbe917a2cba650a40d72b118f8e5bb90357208793b9f3a216999352573e6",
+      "upstream": "77220742688ff741c89901f39b56b7a88b5b4144ec1a5081f727d9cc1bc2e43e"
+    },
+    "fMolDraftRestoreChainMode": {
+      "before": "32f5b018a6b64ccd474024a0d45dd774981b556068418e336230fcc87b708893",
+      "after": "32f5b018a6b64ccd474024a0d45dd774981b556068418e336230fcc87b708893",
+      "upstream": "32f5b018a6b64ccd474024a0d45dd774981b556068418e336230fcc87b708893"
+    },
+    "fMolDraftSandboxAnalyse": {
+      "before": "46c3f50f34cb5a7356b3bcc512c82a3d13a5549232896965c648dee381a946b8",
+      "after": "46c3f50f34cb5a7356b3bcc512c82a3d13a5549232896965c648dee381a946b8",
+      "upstream": "047c0881a6b83bfc17c9b091d0c52d415c8139ceaa8699229a5866d9ffc86e46"
+    },
+    "fMolDraftSubmit": {
+      "before": "50eba0cb7f890c4408cf93b2dac1b382cc9a9d44299fcdb69194945691898ed0",
+      "after": "50eba0cb7f890c4408cf93b2dac1b382cc9a9d44299fcdb69194945691898ed0",
+      "upstream": "132d989aec235d6b5b4ad72eababaa52c0cfaebd78319d52aa9e7ae4bf191e25"
+    },
+    "fMolDraftShowFlat3D": {
+      "before": "d72bdadb75d00159ba87a414b83d7833fc46553099cb7523d0d9e43a26a47c67",
+      "after": "d72bdadb75d00159ba87a414b83d7833fc46553099cb7523d0d9e43a26a47c67",
+      "upstream": "a0b2df3c8ad3aeecf71449a86fa5c35443a5a5cf4df59aad1e88318b29f39ed7"
+    },
+    "fMolDraftTeardownDisplay": {
+      "before": "6e1829f186f36b1908bb4e87c9dae1b81ac4e7a7f3f31cf036968d6761ca1afd",
+      "after": "6e1829f186f36b1908bb4e87c9dae1b81ac4e7a7f3f31cf036968d6761ca1afd",
+      "upstream": "f43be539ba3aa7140609f977d6d8082462466d6bc6d84b05e1410cdf11c2c386"
+    },
+    "fMolDraftCancel": {
+      "before": "8c7975f667b3db494ec99d3ac172d247c9574c0f0e4e31efbaff7af8fb8dabd9",
+      "after": "8c7975f667b3db494ec99d3ac172d247c9574c0f0e4e31efbaff7af8fb8dabd9",
+      "upstream": "3921fe04247332746987f8b0ccc1c3fb8bf2864d1c1d29b05277a40376f9bf49"
+    },
+    "fMolDraftSlugBase": {
+      "before": "f54c4bda3676cff58207b4c66295f7b7f15d2c8b39b026a59c7d567a65ece1af",
+      "after": "f54c4bda3676cff58207b4c66295f7b7f15d2c8b39b026a59c7d567a65ece1af",
+      "upstream": "f54c4bda3676cff58207b4c66295f7b7f15d2c8b39b026a59c7d567a65ece1af"
+    },
+    "fMolDraftMakeKey": {
+      "before": "5ea5fa459ef16d307298cad9a5537b5a7163d4e510b1a35ddffb99b095290537",
+      "after": "5ea5fa459ef16d307298cad9a5537b5a7163d4e510b1a35ddffb99b095290537",
+      "upstream": "5ea5fa459ef16d307298cad9a5537b5a7163d4e510b1a35ddffb99b095290537"
+    },
+    "fMolDraftFileSlug": {
+      "before": "5b0702e6b2bab5d7a7722029d15f6d140255dba106ea5ffe983bf7fdaf840182",
+      "after": "5b0702e6b2bab5d7a7722029d15f6d140255dba106ea5ffe983bf7fdaf840182",
+      "upstream": "5b0702e6b2bab5d7a7722029d15f6d140255dba106ea5ffe983bf7fdaf840182"
+    },
+    "fMolDraftMarkNewCustom": {
+      "before": "da3255952ac0c8aed50277462c4e23f3ce14422472b0b56118d725166cfe56ff",
+      "after": "da3255952ac0c8aed50277462c4e23f3ce14422472b0b56118d725166cfe56ff",
+      "upstream": "da3255952ac0c8aed50277462c4e23f3ce14422472b0b56118d725166cfe56ff"
+    },
+    "fMolDraftNewCustomKeys": {
+      "before": "cebf1432b895e0c6fc08ca130af773b46828b167d973898ddffcf79a1a0ca297",
+      "after": "cebf1432b895e0c6fc08ca130af773b46828b167d973898ddffcf79a1a0ca297",
+      "upstream": "cebf1432b895e0c6fc08ca130af773b46828b167d973898ddffcf79a1a0ca297"
+    },
+    "fMolDraftDownloadSingle": {
+      "before": "caab62c552b1913541bbab169095816fee35aa6345c2f63011664d3a9a23d081",
+      "after": "caab62c552b1913541bbab169095816fee35aa6345c2f63011664d3a9a23d081",
+      "upstream": "7a6af35922ede9a07bde4473bbc7fe4e0a27fa86355f03421cd7dcb4ce4429ae"
+    },
+    "fMolDraftDownloadBundle": {
+      "before": "234a77ede67981b93790821f5933bed5817349a68222a579730c464a4684453a",
+      "after": "234a77ede67981b93790821f5933bed5817349a68222a579730c464a4684453a",
+      "upstream": "234a77ede67981b93790821f5933bed5817349a68222a579730c464a4684453a"
+    },
+    "fMolDraftSaveAllCustom": {
+      "before": "b0933a881e849bf748d5ee2a12fdbb752cedeac9b8f6538fd443643318b390dd",
+      "after": "b0933a881e849bf748d5ee2a12fdbb752cedeac9b8f6538fd443643318b390dd",
+      "upstream": "b0933a881e849bf748d5ee2a12fdbb752cedeac9b8f6538fd443643318b390dd"
+    },
+    "fMolDraftSyncSaveBtn": {
+      "before": "aa070fb2fb2d530eebb2a2e724dc68b74011e7cf55faf1bceebf9e29e2f34bb4",
+      "after": "aa070fb2fb2d530eebb2a2e724dc68b74011e7cf55faf1bceebf9e29e2f34bb4",
+      "upstream": "aa070fb2fb2d530eebb2a2e724dc68b74011e7cf55faf1bceebf9e29e2f34bb4"
+    },
+    "fMolDraftAccept": {
+      "before": "175e29120cf5c3f4e42aa37d388e7b3e7f864cb46fbb40373830549ff8baece7",
+      "after": "175e29120cf5c3f4e42aa37d388e7b3e7f864cb46fbb40373830549ff8baece7",
+      "upstream": "490b0af75d5a180553478776cc5ccbbe0081e6870b84bf500e0f038a210d55fd"
+    },
+    "fMolDraftSyncButtons": {
+      "before": "a3904c92cee8195954ccecc39e4c870825c976bee04d11795ff13ed9e3a93835",
+      "after": "a3904c92cee8195954ccecc39e4c870825c976bee04d11795ff13ed9e3a93835",
+      "upstream": "a3904c92cee8195954ccecc39e4c870825c976bee04d11795ff13ed9e3a93835"
+    },
+    "fViewerMaxHeightFull": {
+      "before": "403eb4213ddebe0cff4f446b319f14cc2920499b8b358ccf9891a03a4302deb0",
+      "after": "403eb4213ddebe0cff4f446b319f14cc2920499b8b358ccf9891a03a4302deb0",
+      "upstream": "403eb4213ddebe0cff4f446b319f14cc2920499b8b358ccf9891a03a4302deb0"
+    },
+    "fViewerMaxHeightEnsureFullBtn": {
+      "before": "07d79881781c22ca93a19ee9bf5fa90c73c8b77d571ed1634d1d87ac4cef94d0",
+      "after": "07d79881781c22ca93a19ee9bf5fa90c73c8b77d571ed1634d1d87ac4cef94d0",
+      "upstream": "07d79881781c22ca93a19ee9bf5fa90c73c8b77d571ed1634d1d87ac4cef94d0"
+    },
+    "fViewerMaxHeightToggleFull": {
+      "before": "461117abe177bdd8d85e4aedb3bfae24aac86f7f3abb804336dfb848a1280b20",
+      "after": "461117abe177bdd8d85e4aedb3bfae24aac86f7f3abb804336dfb848a1280b20",
+      "upstream": "461117abe177bdd8d85e4aedb3bfae24aac86f7f3abb804336dfb848a1280b20"
+    },
+    "fViewerMaxHeightSync": {
+      "before": "41c1af98ecd9e0a85f3077139eeb3300300900ace716b80792b6ef071b42ebf6",
+      "after": "41c1af98ecd9e0a85f3077139eeb3300300900ace716b80792b6ef071b42ebf6",
+      "upstream": "41c1af98ecd9e0a85f3077139eeb3300300900ace716b80792b6ef071b42ebf6"
+    },
+    "fViewerMaxHeightFromUi": {
+      "before": "e80abc66cb233cdb7a300036ee7c2cbb9a39b4e30a8d4f66a5753275d2434ee5",
+      "after": "e80abc66cb233cdb7a300036ee7c2cbb9a39b4e30a8d4f66a5753275d2434ee5",
+      "upstream": "e80abc66cb233cdb7a300036ee7c2cbb9a39b4e30a8d4f66a5753275d2434ee5"
+    },
+    "fInitViewerMaxHeight": {
+      "before": "4c52fccb80bb2f52383c8a7c5f1104ccdc3ed124edd439583437e66180140bd5",
+      "after": "4c52fccb80bb2f52383c8a7c5f1104ccdc3ed124edd439583437e66180140bd5",
+      "upstream": "4c52fccb80bb2f52383c8a7c5f1104ccdc3ed124edd439583437e66180140bd5"
+    },
+    "fViewerBothHeightEnsureFullBtn": {
+      "before": "84889196098ecbd543b1c943016416a5646b25c943238731c78e0800dc4c85ce",
+      "after": "84889196098ecbd543b1c943016416a5646b25c943238731c78e0800dc4c85ce",
+      "upstream": "84889196098ecbd543b1c943016416a5646b25c943238731c78e0800dc4c85ce"
+    },
+    "fViewerBothHeightToggleFull": {
+      "before": "821dd762f0ec2e55ec238fea7041f973f574b59758ec7d923616bf31685849b3",
+      "after": "821dd762f0ec2e55ec238fea7041f973f574b59758ec7d923616bf31685849b3",
+      "upstream": "821dd762f0ec2e55ec238fea7041f973f574b59758ec7d923616bf31685849b3"
+    },
+    "fViewerBothHeightSync": {
+      "before": "49bccd3ca15a930e6223cb4ec01bdcfddb094d8bfb011d2345d06f7188b0de2a",
+      "after": "49bccd3ca15a930e6223cb4ec01bdcfddb094d8bfb011d2345d06f7188b0de2a",
+      "upstream": "49bccd3ca15a930e6223cb4ec01bdcfddb094d8bfb011d2345d06f7188b0de2a"
+    },
+    "fViewerBothHeightFromUi": {
+      "before": "7e79907cf36664419b38da08d4c21af91b831c7bf372b9d7768de7ed7a25a1fb",
+      "after": "7e79907cf36664419b38da08d4c21af91b831c7bf372b9d7768de7ed7a25a1fb",
+      "upstream": "7e79907cf36664419b38da08d4c21af91b831c7bf372b9d7768de7ed7a25a1fb"
+    },
+    "fInitViewerBothHeight": {
+      "before": "414f9d2f2bfc2c456a0d3d71881f1de65de75c29a35fdd856bd2269fd1696985",
+      "after": "414f9d2f2bfc2c456a0d3d71881f1de65de75c29a35fdd856bd2269fd1696985",
+      "upstream": "414f9d2f2bfc2c456a0d3d71881f1de65de75c29a35fdd856bd2269fd1696985"
+    },
+    "fToggleNameSettings": {
+      "before": "619080f7bcb7ee89e563f2e03341a8de349532f09d72e7c91c8f16293f28e7c5",
+      "after": "619080f7bcb7ee89e563f2e03341a8de349532f09d72e7c91c8f16293f28e7c5",
+      "upstream": "619080f7bcb7ee89e563f2e03341a8de349532f09d72e7c91c8f16293f28e7c5"
+    },
+    "fMulerENCommonName": {
+      "before": "1d4d43f80ca2d7814314e8d2c54a283ccd195bb753b0080d1b5c534b3f8cecbb",
+      "after": "1d4d43f80ca2d7814314e8d2c54a283ccd195bb753b0080d1b5c534b3f8cecbb",
+      "upstream": "1d4d43f80ca2d7814314e8d2c54a283ccd195bb753b0080d1b5c534b3f8cecbb"
+    },
+    "fToggleMolInfo": {
+      "before": "ff1e2757ea3fdf61c558c8974ac4990aba202d9516b68154bf5621c534563494",
+      "after": "ff1e2757ea3fdf61c558c8974ac4990aba202d9516b68154bf5621c534563494",
+      "upstream": "ff1e2757ea3fdf61c558c8974ac4990aba202d9516b68154bf5621c534563494"
+    },
+    "fMulerMolInfoRefresh": {
+      "before": "2beddb35995f47451a392f299b9f7a12a824d35703fac4702525044a58b2e950",
+      "after": "2beddb35995f47451a392f299b9f7a12a824d35703fac4702525044a58b2e950",
+      "upstream": "2beddb35995f47451a392f299b9f7a12a824d35703fac4702525044a58b2e950"
+    },
+    "fRenderMolInfo": {
+      "before": "990253854acf8d0072fe72dfd2ee3e59df353e5482109bf1a3f2a00aa1e81ed3",
+      "after": "990253854acf8d0072fe72dfd2ee3e59df353e5482109bf1a3f2a00aa1e81ed3",
+      "upstream": "2777b50ce753be9d1347b72ac2e1144d15e610fa557ed730c0210bc494a35d9c"
+    },
+    "fCopyMolSmiles": {
+      "before": "dc72083160f380c632515cbb5d65f91ea3afc9e0b81b6739f57670cbfb963c94",
+      "after": "dc72083160f380c632515cbb5d65f91ea3afc9e0b81b6739f57670cbfb963c94",
+      "upstream": "dc72083160f380c632515cbb5d65f91ea3afc9e0b81b6739f57670cbfb963c94"
+    },
+    "fInitData": {
+      "before": "182fddd5f56baf5ee53083eac7499524b6bca399144f7e8b8089a2bebbbbe552",
+      "after": "182fddd5f56baf5ee53083eac7499524b6bca399144f7e8b8089a2bebbbbe552",
+      "upstream": "182fddd5f56baf5ee53083eac7499524b6bca399144f7e8b8089a2bebbbbe552"
+    },
+    "fMakeAnnotatedSkeletal": {
+      "before": "353adfa4b490f126a45f5f490c59cc290bb8decb0df46f4c22765647ac5243ce",
+      "after": "353adfa4b490f126a45f5f490c59cc290bb8decb0df46f4c22765647ac5243ce",
+      "upstream": "c16e32c197082989566fddbf9574a5900fde6a39f469c6207af1ca276b8f4ac5"
+    },
+    "fUpdateChainModeButton": {
+      "before": "5c7bb9e20d3d4b8864c3027e4db9b63a9f0f413569d90a93aae80e6bb6f94d02",
+      "after": "5c7bb9e20d3d4b8864c3027e4db9b63a9f0f413569d90a93aae80e6bb6f94d02",
+      "upstream": "5c7bb9e20d3d4b8864c3027e4db9b63a9f0f413569d90a93aae80e6bb6f94d02"
+    },
+    "fUpdateDiagr2DButton": {
+      "before": "5b906d0b0a14f3a8b1ffc5eecdbe1ec1ab620cae47c86cb19527ac62fb1d37e6",
+      "after": "5b906d0b0a14f3a8b1ffc5eecdbe1ec1ab620cae47c86cb19527ac62fb1d37e6",
+      "upstream": "5b906d0b0a14f3a8b1ffc5eecdbe1ec1ab620cae47c86cb19527ac62fb1d37e6"
+    },
+    "fSyncAtomColorModeDisabled": {
+      "before": "bd333f3d47faa5674bc1f8d29472fbc2ec1b2ae07b40852b9ab70a4594071182",
+      "after": "bd333f3d47faa5674bc1f8d29472fbc2ec1b2ae07b40852b9ab70a4594071182",
+      "upstream": "bd333f3d47faa5674bc1f8d29472fbc2ec1b2ae07b40852b9ab70a4594071182"
+    },
+    "fSelectMol": {
+      "before": "a4378ff7b32a9e1eee44beae312193ce1d96f0e0e09b854dad02757e321da75a",
+      "after": "a4378ff7b32a9e1eee44beae312193ce1d96f0e0e09b854dad02757e321da75a",
+      "upstream": "faab86e70ace79d5e2a4cf5fadbafbba99ca0709f643236d09227f21cf978f7c"
+    },
+    "fDeselectMol": {
+      "before": "d23605d7b6ae9e02ac287a9dfa4077f356cde826cf150fc30a42c88f29dad02a",
+      "after": "d23605d7b6ae9e02ac287a9dfa4077f356cde826cf150fc30a42c88f29dad02a",
+      "upstream": "f83d7d610b9f66813b2fd170703fa226d45b2bb7c8563f3941db0724c8256e5d"
+    },
+    "fInitProps": {
+      "before": "792ec2a2e324ec973a69f1ee6fab8664370099056fa655c889e4a4771e87635e",
+      "after": "792ec2a2e324ec973a69f1ee6fab8664370099056fa655c889e4a4771e87635e",
+      "upstream": "792ec2a2e324ec973a69f1ee6fab8664370099056fa655c889e4a4771e87635e"
+    },
+    "fShowMolName": {
+      "before": "01559609aca532d38bff51a267afa82c9436998a1624cc958a8a8dd270e27da0",
+      "after": "01559609aca532d38bff51a267afa82c9436998a1624cc958a8a8dd270e27da0",
+      "upstream": "01559609aca532d38bff51a267afa82c9436998a1624cc958a8a8dd270e27da0"
+    },
+    "fSkeletalLayoutMol": {
+      "before": "06d05c7337aef08c5d1d63130b7c0e5436bbbb9f94d29524ba28ae8ad400d40c",
+      "after": "06d05c7337aef08c5d1d63130b7c0e5436bbbb9f94d29524ba28ae8ad400d40c",
+      "upstream": null
+    },
+    "fApplySkeletalLayout": {
+      "before": "fe7323b311489934682231f058613980302891caa84b583ca8a7dbbbe48b3069",
+      "after": "fe7323b311489934682231f058613980302891caa84b583ca8a7dbbbe48b3069",
+      "upstream": null
+    },
+    "fFormylHydrogenLeftMol": {
+      "before": "32309a170e93437c2735aeee29b91e38216dcdb87f776ac458a8bbd278df69c4",
+      "after": "32309a170e93437c2735aeee29b91e38216dcdb87f776ac458a8bbd278df69c4",
+      "upstream": null
+    },
+    "fLoadMol2D": {
+      "before": "fc67b338113e419ac3ad10f8adf5ab7faacc71a5b0adab27613331130e4a3b70",
+      "after": "fc67b338113e419ac3ad10f8adf5ab7faacc71a5b0adab27613331130e4a3b70",
+      "upstream": "926b10e38ee9fb7c82b4e379b1b48d59dfe4e8b2c01c20f11f34731875ab1260"
+    },
+    "fMol2DModeScaleFactor": {
+      "before": "81478fc26c3b610def3afd7a9b2accb0827c3de9bf5d8f351f809ad6519e9a2a",
+      "after": "81478fc26c3b610def3afd7a9b2accb0827c3de9bf5d8f351f809ad6519e9a2a",
+      "upstream": "81478fc26c3b610def3afd7a9b2accb0827c3de9bf5d8f351f809ad6519e9a2a"
+    },
+    "fMol2DModeScale": {
+      "before": "da43be1a193abc8c90470e059922b3f01a42840f2c3b4263299202ca304616cb",
+      "after": "da43be1a193abc8c90470e059922b3f01a42840f2c3b4263299202ca304616cb",
+      "upstream": "da43be1a193abc8c90470e059922b3f01a42840f2c3b4263299202ca304616cb"
+    },
+    "fApplyMol2DFont": {
+      "before": "702e23b7064b326a75d55cb5f37e04e8a0ce13e1484feb3c41317abbfcc8ac0f",
+      "after": "702e23b7064b326a75d55cb5f37e04e8a0ce13e1484feb3c41317abbfcc8ac0f",
+      "upstream": "702e23b7064b326a75d55cb5f37e04e8a0ce13e1484feb3c41317abbfcc8ac0f"
+    },
+    "fApplyMol2DScale": {
+      "before": "3332f28f3ecb7055fe2279c8ae86ab771de5e88ae8ddf4e4214e7a5851e5006b",
+      "after": "3332f28f3ecb7055fe2279c8ae86ab771de5e88ae8ddf4e4214e7a5851e5006b",
+      "upstream": "3332f28f3ecb7055fe2279c8ae86ab771de5e88ae8ddf4e4214e7a5851e5006b"
+    },
+    "fReapplyZoomScale2D": {
+      "before": "2700a5c43e9ab7819939d85fe2804ed96a9770e29a89384c4e4313f327950536",
+      "after": "2700a5c43e9ab7819939d85fe2804ed96a9770e29a89384c4e4313f327950536",
+      "upstream": "2700a5c43e9ab7819939d85fe2804ed96a9770e29a89384c4e4313f327950536"
+    },
+    "fZoom2D": {
+      "before": "6c893da0a79bf8080e8f2fa96df852118f26d0d70d853d05407bbfa67aad7924",
+      "after": "6c893da0a79bf8080e8f2fa96df852118f26d0d70d853d05407bbfa67aad7924",
+      "upstream": "6c893da0a79bf8080e8f2fa96df852118f26d0d70d853d05407bbfa67aad7924"
+    },
+    "fZoom3D": {
+      "before": "0e223c5b2fd7f86e29be87f24a5793d7af407d7f13b7d512a59a009f3f7d5302",
+      "after": "0e223c5b2fd7f86e29be87f24a5793d7af407d7f13b7d512a59a009f3f7d5302",
+      "upstream": "0e223c5b2fd7f86e29be87f24a5793d7af407d7f13b7d512a59a009f3f7d5302"
+    },
+    "fRemainingImplicitCarbonHydrogens": {
+      "before": "482e60a84aa05432431ad1a4a8d6fb8523de4322047885410abbaed24e037128",
+      "after": "482e60a84aa05432431ad1a4a8d6fb8523de4322047885410abbaed24e037128",
+      "upstream": null
+    },
+    "fAddHydrogens2SVG": {
+      "before": "c9c7d9469888e4c6e62dcc84e04c2414c6f0937e8c7d5bae2636e2d40d933828",
+      "after": "c9c7d9469888e4c6e62dcc84e04c2414c6f0937e8c7d5bae2636e2d40d933828",
+      "upstream": "94fa0f8d3edebaa1953c524440c8a70bd92bf568c0e5773fff143799fb8c2872"
+    },
+    "fGetCompactedAtomSkipSet": {
+      "before": "27108dd0c6e1560b5ff8c8da154e52b5bf4a63ab89c01e1d1a68cac7bd37e6ab",
+      "after": "27108dd0c6e1560b5ff8c8da154e52b5bf4a63ab89c01e1d1a68cac7bd37e6ab",
+      "upstream": "27108dd0c6e1560b5ff8c8da154e52b5bf4a63ab89c01e1d1a68cac7bd37e6ab"
+    },
+    "fGetRenderedAtomTextMap": {
+      "before": "d1a915958b099fd17926e846dcbd08b8d212a38e5846cf8aca20a5c6ec4de124",
+      "after": "d1a915958b099fd17926e846dcbd08b8d212a38e5846cf8aca20a5c6ec4de124",
+      "upstream": "110080320d8bf304d6477e14e58b0b0ea7bb7037cc2c0861fef1bc88b6dccdfa"
+    },
+    "fGetRenderedAtomRectMap": {
+      "before": "fd715bf0b2dd2c6b910b144e75e58eccb1eb6afe6899214681568049ad0f7d60",
+      "after": "fd715bf0b2dd2c6b910b144e75e58eccb1eb6afe6899214681568049ad0f7d60",
+      "upstream": "e1d721efe4658ee9d982a4e5b17f460f9da29b02e0cea575a917ca044800e3cd"
+    },
+    "fGetAttachedHydrogenIndices": {
+      "before": "4cb01a0eb3b06698a7c0ed1efadbaf99f391501da780a1e7d1b434ce070cf5c0",
+      "after": "4cb01a0eb3b06698a7c0ed1efadbaf99f391501da780a1e7d1b434ce070cf5c0",
+      "upstream": "4cb01a0eb3b06698a7c0ed1efadbaf99f391501da780a1e7d1b434ce070cf5c0"
+    },
+    "fFindBondIndexByAtoms": {
+      "before": "3aaa5451591ee36a42a8aaf178188e35bbe112234d533455610e7f4a142296b1",
+      "after": "3aaa5451591ee36a42a8aaf178188e35bbe112234d533455610e7f4a142296b1",
+      "upstream": "3aaa5451591ee36a42a8aaf178188e35bbe112234d533455610e7f4a142296b1"
+    },
+    "fRemoveBondLinesByBondIndex": {
+      "before": "049ef6679422b41ed79b0e3ee3d1e5385fa8871cc6c5037951ac8a58c6f13af7",
+      "after": "049ef6679422b41ed79b0e3ee3d1e5385fa8871cc6c5037951ac8a58c6f13af7",
+      "upstream": "049ef6679422b41ed79b0e3ee3d1e5385fa8871cc6c5037951ac8a58c6f13af7"
+    },
+    "fBuildTextAttrsFromElement": {
+      "before": "dfcc43fb7515e3162274890887e95654b2b6047892c50a0c7da9a5cdfc28d2f9",
+      "after": "dfcc43fb7515e3162274890887e95654b2b6047892c50a0c7da9a5cdfc28d2f9",
+      "upstream": "4bd8a578364eb6fa5eb7bff46a84c246b511761d2fa2b4b197d5c5e3df5f7b46"
+    },
+    "fReplaceTextElementMarkup": {
+      "before": "93b3799915d9289560864de89acd130d25805a8b7e56d916b1c5e4e285566f60",
+      "after": "93b3799915d9289560864de89acd130d25805a8b7e56d916b1c5e4e285566f60",
+      "upstream": "93b3799915d9289560864de89acd130d25805a8b7e56d916b1c5e4e285566f60"
+    },
+    "fShouldReverseCompactLabel": {
+      "before": "e4e29039ea3ad50d2b1ecc877752b5b9492189fb5393ece3ea14b344084f0faf",
+      "after": "e4e29039ea3ad50d2b1ecc877752b5b9492189fb5393ece3ea14b344084f0faf",
+      "upstream": "e4e29039ea3ad50d2b1ecc877752b5b9492189fb5393ece3ea14b344084f0faf"
+    },
+    "fGetReversedCompactLabelAttrs": {
+      "before": "10aa3cb0814ed11db0e9deb9dce1f1d28c8beb2670ea67e8d4869a916bed656c",
+      "after": "10aa3cb0814ed11db0e9deb9dce1f1d28c8beb2670ea67e8d4869a916bed656c",
+      "upstream": "10aa3cb0814ed11db0e9deb9dce1f1d28c8beb2670ea67e8d4869a916bed656c"
+    },
+    "fGetForwardCompactLabelAttrs": {
+      "before": "24d5bc636fea4919400d66e07ba0e562ccc793f99f0c9950e1d925fa20b5a822",
+      "after": "24d5bc636fea4919400d66e07ba0e562ccc793f99f0c9950e1d925fa20b5a822",
+      "upstream": "24d5bc636fea4919400d66e07ba0e562ccc793f99f0c9950e1d925fa20b5a822"
+    },
+    "fGetReverseCompactRightEdge": {
+      "before": "8818353a208192e7068dfe44913adfd1292b9539a757508ac617a2add3129f40",
+      "after": "8818353a208192e7068dfe44913adfd1292b9539a757508ac617a2add3129f40",
+      "upstream": "8818353a208192e7068dfe44913adfd1292b9539a757508ac617a2add3129f40"
+    },
+    "fFindNearestHighlightCircle": {
+      "before": "07a58c9948c34c14f6cba067c02cdfaf0775242e76f54d4afc4e7c6188cd95dc",
+      "after": "07a58c9948c34c14f6cba067c02cdfaf0775242e76f54d4afc4e7c6188cd95dc",
+      "upstream": "07a58c9948c34c14f6cba067c02cdfaf0775242e76f54d4afc4e7c6188cd95dc"
+    },
+    "fGetNodeAttr": {
+      "before": "2dda541d7e6913b4c3d5891fd0befa12f77e899a635bcbe470307f3d6785e953",
+      "after": "2dda541d7e6913b4c3d5891fd0befa12f77e899a635bcbe470307f3d6785e953",
+      "upstream": "2dda541d7e6913b4c3d5891fd0befa12f77e899a635bcbe470307f3d6785e953"
+    },
+    "fBuildCompactGeometryHint": {
+      "before": "e009080e2e7dca87a1d3a671565e0c557b67f3bab20d981d3360c08c1857439a",
+      "after": "e009080e2e7dca87a1d3a671565e0c557b67f3bab20d981d3360c08c1857439a",
+      "upstream": "e009080e2e7dca87a1d3a671565e0c557b67f3bab20d981d3360c08c1857439a"
+    },
+    "fCreateCompactLabelRect": {
+      "before": "5f5be0ed23e29ebe0795d79208aa69933c2d670fa38890c3d74c4f10221e52a0",
+      "after": "5f5be0ed23e29ebe0795d79208aa69933c2d670fa38890c3d74c4f10221e52a0",
+      "upstream": "5f5be0ed23e29ebe0795d79208aa69933c2d670fa38890c3d74c4f10221e52a0"
+    },
+    "fResizeCompactLabelRect": {
+      "before": "d512413c5e0c09b62c9a73a8072805effbbf0b6669c87a6cfb2a101a7e3794bf",
+      "after": "d512413c5e0c09b62c9a73a8072805effbbf0b6669c87a6cfb2a101a7e3794bf",
+      "upstream": "d512413c5e0c09b62c9a73a8072805effbbf0b6669c87a6cfb2a101a7e3794bf"
+    },
+    "fCollectHighlightRectsNearText": {
+      "before": "56b7273eee2c1972b9b808c50f837afdedf6c2ccbc424c56a14d2fd1999b67ff",
+      "after": "56b7273eee2c1972b9b808c50f837afdedf6c2ccbc424c56a14d2fd1999b67ff",
+      "upstream": "31d78f5537b7e765cc5c857319e366747a93f6209d67f7c4d28ab04074a4edb9"
+    },
+    "fCollectHighlightCirclesNearText": {
+      "before": "147e91d9615dc29ea365df7074b440043d04ec238247752645b126ee5df70f74",
+      "after": "147e91d9615dc29ea365df7074b440043d04ec238247752645b126ee5df70f74",
+      "upstream": "147e91d9615dc29ea365df7074b440043d04ec238247752645b126ee5df70f74"
+    },
+    "fGetCompactLabelNumberX": {
+      "before": "74cec7de68d3d545a100109c3246cfb9da731eebb62d8efdcc977b71e5c12478",
+      "after": "74cec7de68d3d545a100109c3246cfb9da731eebb62d8efdcc977b71e5c12478",
+      "upstream": "74cec7de68d3d545a100109c3246cfb9da731eebb62d8efdcc977b71e5c12478"
+    },
+    "fBuildCompactAtomTspan": {
+      "before": "93062bc95834a4687f8864db7ff55e867afd8baf3479fb8bf484a3aeb65fdb41",
+      "after": "93062bc95834a4687f8864db7ff55e867afd8baf3479fb8bf484a3aeb65fdb41",
+      "upstream": "93062bc95834a4687f8864db7ff55e867afd8baf3479fb8bf484a3aeb65fdb41"
+    },
+    "fGetCompactAtomFill": {
+      "before": "7167886caef57411221e5c17862fec4f5f718fbf328b2174de09eb7c3ef9c2ce",
+      "after": "7167886caef57411221e5c17862fec4f5f718fbf328b2174de09eb7c3ef9c2ce",
+      "upstream": "7167886caef57411221e5c17862fec4f5f718fbf328b2174de09eb7c3ef9c2ce"
+    },
+    "fGetHydrogenGroupParentSymbol": {
+      "before": "7c0870d9db226ed79e5b8ebbb2931dd3fca0259492a1a640800270c3db7b5c14",
+      "after": "7c0870d9db226ed79e5b8ebbb2931dd3fca0259492a1a640800270c3db7b5c14",
+      "upstream": "7c0870d9db226ed79e5b8ebbb2931dd3fca0259492a1a640800270c3db7b5c14"
+    },
+    "fGetAtomColor2D": {
+      "before": "5a886d6193cb6b2340162c5a3a057679fe928dc6d9ada4e5e86bf922806b8883",
+      "after": "5a886d6193cb6b2340162c5a3a057679fe928dc6d9ada4e5e86bf922806b8883",
+      "upstream": "5a886d6193cb6b2340162c5a3a057679fe928dc6d9ada4e5e86bf922806b8883"
+    },
+    "fGetDisplayAtomFill": {
+      "before": "97e28a7bab388669b90bed5d4200b88d37ace733a206935daf2d8d43040cc6a8",
+      "after": "97e28a7bab388669b90bed5d4200b88d37ace733a206935daf2d8d43040cc6a8",
+      "upstream": "97e28a7bab388669b90bed5d4200b88d37ace733a206935daf2d8d43040cc6a8"
+    },
+    "fGetOwnTextFromSvgNode": {
+      "before": "aff3a404daf010a1e6384c58ef74e75f0f2958acec16caacd31e3408f3b46695",
+      "after": "aff3a404daf010a1e6384c58ef74e75f0f2958acec16caacd31e3408f3b46695",
+      "upstream": "aff3a404daf010a1e6384c58ef74e75f0f2958acec16caacd31e3408f3b46695"
+    },
+    "fResolveAtomSymbolFromLabelNode": {
+      "before": "b13e28fc9db9eee50cc34e9f6b20b72162f23881125193a5b451de98860c1f19",
+      "after": "b13e28fc9db9eee50cc34e9f6b20b72162f23881125193a5b451de98860c1f19",
+      "upstream": "b13e28fc9db9eee50cc34e9f6b20b72162f23881125193a5b451de98860c1f19"
+    },
+    "fResolveParentSymbolForHydrogenTspan": {
+      "before": "8895400f7dde578b363bdb61d565ea97eb1b492aed91342ef7b8658863f0ffbd",
+      "after": "8895400f7dde578b363bdb61d565ea97eb1b492aed91342ef7b8658863f0ffbd",
+      "upstream": "8895400f7dde578b363bdb61d565ea97eb1b492aed91342ef7b8658863f0ffbd"
+    },
+    "fBuildTextNodeAtomIndexMap": {
+      "before": "b5440fe95abbd7558457e0d7742811bec18d53f4e6943fc2607cf0e297610a09",
+      "after": "b5440fe95abbd7558457e0d7742811bec18d53f4e6943fc2607cf0e297610a09",
+      "upstream": "b5440fe95abbd7558457e0d7742811bec18d53f4e6943fc2607cf0e297610a09"
+    },
+    "fIsHighlightFillColor": {
+      "before": "8c5a3ed26dc42581bd6bbc3a9af72d714cbd48523226e711551c3e1c335035fe",
+      "after": "8c5a3ed26dc42581bd6bbc3a9af72d714cbd48523226e711551c3e1c335035fe",
+      "upstream": "79ecf9aeac9ed81a7dc351283001ef39d5bb301b726db7ae1d88a9d963e0c932"
+    },
+    "fBuildHighlightedTextNodeSet": {
+      "before": "4dcf73f90ff4400df5d98edf0b9e85795b6d625e9d0d6044a976f2a133fa6fa8",
+      "after": "4dcf73f90ff4400df5d98edf0b9e85795b6d625e9d0d6044a976f2a133fa6fa8",
+      "upstream": "4dcf73f90ff4400df5d98edf0b9e85795b6d625e9d0d6044a976f2a133fa6fa8"
+    },
+    "fApplyAtomColors2DToSVGLabels": {
+      "before": "e49e9ad1a25f0a44394e149d40301eec18a85335b2762f60c08507a03e8f67bd",
+      "after": "e49e9ad1a25f0a44394e149d40301eec18a85335b2762f60c08507a03e8f67bd",
+      "upstream": "e49e9ad1a25f0a44394e149d40301eec18a85335b2762f60c08507a03e8f67bd"
+    },
+    "fApplyCHBondColors2D": {
+      "before": "b5f05db931ee613462dea188e488d72893f16248c28d4b39bfe490837cf99d8b",
+      "after": "b5f05db931ee613462dea188e488d72893f16248c28d4b39bfe490837cf99d8b",
+      "upstream": "b5f05db931ee613462dea188e488d72893f16248c28d4b39bfe490837cf99d8b"
+    },
+    "fShouldReverseAldehydeLabel": {
+      "before": "655af2d178bf6051bc42fa9f12be4c9e49ae0f04c36de9f586c12d0f1bcd888e",
+      "after": "655af2d178bf6051bc42fa9f12be4c9e49ae0f04c36de9f586c12d0f1bcd888e",
+      "upstream": "655af2d178bf6051bc42fa9f12be4c9e49ae0f04c36de9f586c12d0f1bcd888e"
+    },
+    "fCompactFunctionalGroups2D": {
+      "before": "b6c1f6e1dfaa738ecf09b9065edc303014f00f1dbd475a70dcf3886c66d5ec04",
+      "after": "b6c1f6e1dfaa738ecf09b9065edc303014f00f1dbd475a70dcf3886c66d5ec04",
+      "upstream": "cb7a44d207b02df548b7fb84665366d331cfe82d15eec60c009276081acfe868"
+    },
+    "fWrapStandaloneHydrogenTextsAsTspan": {
+      "before": "df618ec5981013db5073dd9a675f5a3610cc9d47fd0153b30ae912c72a530875",
+      "after": "df618ec5981013db5073dd9a675f5a3610cc9d47fd0153b30ae912c72a530875",
+      "upstream": "df618ec5981013db5073dd9a675f5a3610cc9d47fd0153b30ae912c72a530875"
+    },
+    "fMarkExpandedHydrogens": {
+      "before": "36d68f478d5c351ee900c2296858147df438264f36b7b9251a08f1729b4e32d4",
+      "after": "36d68f478d5c351ee900c2296858147df438264f36b7b9251a08f1729b4e32d4",
+      "upstream": "36d68f478d5c351ee900c2296858147df438264f36b7b9251a08f1729b4e32d4"
+    },
+    "fRefreshLabelBackplates": {
+      "before": "a5d10dc2e56bfe3ec07844e3c054416715d660c95d9728424348ab94adee6c53",
+      "after": "a5d10dc2e56bfe3ec07844e3c054416715d660c95d9728424348ab94adee6c53",
+      "upstream": null
+    },
+    "fValidate2DBondVisibility": {
+      "before": "aa16d8786cecb848f5b2097869fcdbaac18a0274babe950e4b4aeff7b88759c2",
+      "after": "aa16d8786cecb848f5b2097869fcdbaac18a0274babe950e4b4aeff7b88759c2",
+      "upstream": null
+    },
+    "fMolHasSpCarbon": {
+      "before": "778454671d89d39efcfd2d80753f1c364217715574c01a907ea6d8e30737ba51",
+      "after": "778454671d89d39efcfd2d80753f1c364217715574c01a907ea6d8e30737ba51",
+      "upstream": "778454671d89d39efcfd2d80753f1c364217715574c01a907ea6d8e30737ba51"
+    },
+    "fHideSkeletalSpCarbons": {
+      "before": "07f6611a24e6c12fc9f7f04c1185895414d5681a29cc59cdc62b2541a59afab4",
+      "after": "07f6611a24e6c12fc9f7f04c1185895414d5681a29cc59cdc62b2541a59afab4",
+      "upstream": "07f6611a24e6c12fc9f7f04c1185895414d5681a29cc59cdc62b2541a59afab4"
+    },
+    "fHideEsterSkeletalCarbonHydrogens": {
+      "before": "2943343c9636686de08d037cf11c2dc175815f22393ce62941bb78d864e3c7cd",
+      "after": "2943343c9636686de08d037cf11c2dc175815f22393ce62941bb78d864e3c7cd",
+      "upstream": null
+    },
+    "fPrepareFixedCCAlkanePrototype": {
+      "before": "60d45d4f9a2531ba2a99e26ab06c310d51f07f97088cf5786b7a5b60842211bd",
+      "after": "60d45d4f9a2531ba2a99e26ab06c310d51f07f97088cf5786b7a5b60842211bd",
+      "upstream": null
+    },
+    "fGetUniform2DLibraryFrame": {
+      "before": "b989f87b938f05bc96cf582ae0a0f87aca9749555b39531e732b2485696a7662",
+      "after": "b989f87b938f05bc96cf582ae0a0f87aca9749555b39531e732b2485696a7662",
+      "upstream": null
+    },
+    "fFit2DSVG": {
+      "before": "cbd2a751f3a67976f94548c401f7d62dffcc39464fa6100174fb5b36aa5b4517",
+      "after": "cbd2a751f3a67976f94548c401f7d62dffcc39464fa6100174fb5b36aa5b4517",
+      "upstream": null
+    },
+    "fMulerSelectSeqBadges": {
+      "before": "12f8efe5b71edd1dfb5bc46a66f77885a58a0b21303513806e3076bf334208e4",
+      "after": "12f8efe5b71edd1dfb5bc46a66f77885a58a0b21303513806e3076bf334208e4",
+      "upstream": "12f8efe5b71edd1dfb5bc46a66f77885a58a0b21303513806e3076bf334208e4"
+    },
+    "fUpdateSVG": {
+      "before": "da13a45fcc4f9c25d7e1c4a9c0830c8b890067e7f9923bb42d34abb92119b5cc",
+      "after": "da13a45fcc4f9c25d7e1c4a9c0830c8b890067e7f9923bb42d34abb92119b5cc",
+      "upstream": "5a50f597932436a0baec81c9219628e3bb13f680efd5de94e2ab65425467ff0b"
+    },
+    "fBuildMoleculeSVG": {
+      "before": "92f50b02a685137a7fd7909a75d8952117d7925f280366bdaaa428b9a9a9a8b8",
+      "after": "92f50b02a685137a7fd7909a75d8952117d7925f280366bdaaa428b9a9a9a8b8",
+      "upstream": null
+    },
+    "fNumberingAnchor2D": {
+      "before": "b095d99dcd7a4554c48038032be4d0c7df0d8c324d26f0203ca6dbd5c16c2058",
+      "after": "b095d99dcd7a4554c48038032be4d0c7df0d8c324d26f0203ca6dbd5c16c2058",
+      "upstream": null
+    },
+    "fRefreshFontDrawing2D": {
+      "before": "7f79e94b1d35796cc08a1f39905775a5cb8aaba8c04a889ec91d4bfb249d5910",
+      "after": "7f79e94b1d35796cc08a1f39905775a5cb8aaba8c04a889ec91d4bfb249d5910",
+      "upstream": null
+    },
+    "fMulerNumberAid": {
+      "before": "a94d67d684520e77d634533ad93f5c0abf6e1f93c13b370accf33d76098e7439",
+      "after": "32c49de7102a490b111970f0de5ff9008d789575b3c8981a7c409340def5f794",
+      "upstream": "32c49de7102a490b111970f0de5ff9008d789575b3c8981a7c409340def5f794"
+    },
+    "fCancelFontRefresh2D": {
+      "before": "ea8b895a200e1e2d5bbb9aeeb091e3f52c07b587a74a3e76951af9ba57031b6a",
+      "after": "ea8b895a200e1e2d5bbb9aeeb091e3f52c07b587a74a3e76951af9ba57031b6a",
+      "upstream": null
+    },
+    "patchtheNitrogen": {
+      "before": "a356f3c8d14b3b9cc762f26c3e6296251b27c6c7d2a747af6958d5bdfc4ed39c",
+      "after": "a356f3c8d14b3b9cc762f26c3e6296251b27c6c7d2a747af6958d5bdfc4ed39c",
+      "upstream": "66668535faf6d8eb8a2136c6b3f769f9d31a22afd470602a28fa65116701a750"
+    },
+    "fJSmolLive": {
+      "before": "81b3e76386e3e2658f87bf22e75fc0dfc7136ab977c95de87184afc49148500b",
+      "after": "81b3e76386e3e2658f87bf22e75fc0dfc7136ab977c95de87184afc49148500b",
+      "upstream": "81b3e76386e3e2658f87bf22e75fc0dfc7136ab977c95de87184afc49148500b"
+    },
+    "fMulerNotePending3D": {
+      "before": "fc056195f11ffe4cb67f0ebee6e2bd30100be85e4eb72ff2775f6d4ecedde34c",
+      "after": "fc056195f11ffe4cb67f0ebee6e2bd30100be85e4eb72ff2775f6d4ecedde34c",
+      "upstream": "fc056195f11ffe4cb67f0ebee6e2bd30100be85e4eb72ff2775f6d4ecedde34c"
+    },
+    "fJSmolScript": {
+      "before": "49f02ce652084ce077b79d8cddc608b3c9ce6c48350e50c9974dcba300b6d0dd",
+      "after": "b457c4b6abf991b6ea86493d660b785f000d07e71982b7e806ed2b10db15fe25",
+      "upstream": "c39e56e50b542806a5f22f8742b79a7cfb268a1884f490dbc12ca52ec6c464fb"
+    },
+    "fJSmolScriptWait": {
+      "before": "03e3575ee713dc33b9c9cecef78e1f59eabcdc96e644489a7f948c69e4229be8",
+      "after": "e28cbadd9b52d08f10fe7be1410210d2f4c3870155d5cf9947fee667803797f7",
+      "upstream": "379cb5c6f5a599a192d77339051c07c3f0d8c9ddb04ac90165553e4fc6f045aa"
+    },
+    "fJSmolScriptEcho": {
+      "before": "5ff422ed9e2a4cdc51daf4d26ec984cc54e2d300440f1dd7c6e914bde840a5a9",
+      "after": "5ff422ed9e2a4cdc51daf4d26ec984cc54e2d300440f1dd7c6e914bde840a5a9",
+      "upstream": "5ff422ed9e2a4cdc51daf4d26ec984cc54e2d300440f1dd7c6e914bde840a5a9"
+    },
+    "fJSmolGetPropertyAsArray": {
+      "before": "3052bc17cd2944605dc4ac7b9516618b7cfb858a772ddbc27cb6004d43931809",
+      "after": "3052bc17cd2944605dc4ac7b9516618b7cfb858a772ddbc27cb6004d43931809",
+      "upstream": "3052bc17cd2944605dc4ac7b9516618b7cfb858a772ddbc27cb6004d43931809"
+    },
+    "fJSmolGetPropertyAsString": {
+      "before": "ef32e3e05219832bed1c08e056b6eeec907dc394387e45ea8c3891c460b6e0e6",
+      "after": "ef32e3e05219832bed1c08e056b6eeec907dc394387e45ea8c3891c460b6e0e6",
+      "upstream": "ef32e3e05219832bed1c08e056b6eeec907dc394387e45ea8c3891c460b6e0e6"
+    },
+    "fJSmolResizeApplet": {
+      "before": "131b993df82593a6d6e930f948381bd2dfa4a2e290c99e0cca5bdaf47001513f",
+      "after": "131b993df82593a6d6e930f948381bd2dfa4a2e290c99e0cca5bdaf47001513f",
+      "upstream": "131b993df82593a6d6e930f948381bd2dfa4a2e290c99e0cca5bdaf47001513f"
+    },
+    "fMulerSafeJSmol": {
+      "before": "cc609d2b958b6279b9a60a24b1ba7e4113a5e83ad230d701830a8567881e706f",
+      "after": "cc609d2b958b6279b9a60a24b1ba7e4113a5e83ad230d701830a8567881e706f",
+      "upstream": "cc609d2b958b6279b9a60a24b1ba7e4113a5e83ad230d701830a8567881e706f"
+    },
+    "fLoadMol3D": {
+      "before": "1b88bcb2e7bfdb5e03ac15f02336bd4b1cc3fc0456ed0982e5b9fdc71b77bcb9",
+      "after": "603619d94a1ce05b434754960c93c0fbe7a9ec74e4e8496251c38b1352a4be01",
+      "upstream": "407b4f75f5bc668a9615333a3be912300a9757b539823d0bf85a50452d4d398a"
+    },
+    "fFetchAndParse3D": {
+      "before": "2e51c4c65c9dd8e9142c6c87a0927794dfee2c7a91ea0acbb453a5fe073bc357",
+      "after": "41b1db154d3f0ad4a03255bb86339e9ce19d0cc115604ad1e0fa96cbd798312a",
+      "upstream": "2e51c4c65c9dd8e9142c6c87a0927794dfee2c7a91ea0acbb453a5fe073bc357"
+    },
+    "showAtomSymbols3D": {
+      "before": "6ea09d6f18ab1cc400081d232c10a05ee3659d796a21df818087d09b908d65e1",
+      "after": "6ea09d6f18ab1cc400081d232c10a05ee3659d796a21df818087d09b908d65e1",
+      "upstream": "6ea09d6f18ab1cc400081d232c10a05ee3659d796a21df818087d09b908d65e1"
+    },
+    "showHydrogens3D": {
+      "before": "a9dc1424556cece392142be2f0b15c9b95f75a54e36b33ac2c5babeec5528ae1",
+      "after": "a9dc1424556cece392142be2f0b15c9b95f75a54e36b33ac2c5babeec5528ae1",
+      "upstream": "a9dc1424556cece392142be2f0b15c9b95f75a54e36b33ac2c5babeec5528ae1"
+    },
+    "rotate3D": {
+      "before": "8eb7703ea7cc3cb18a519b1c9eaa870ae55c587e5a149fdc438ecc70b66d24a3",
+      "after": "8eb7703ea7cc3cb18a519b1c9eaa870ae55c587e5a149fdc438ecc70b66d24a3",
+      "upstream": "8eb7703ea7cc3cb18a519b1c9eaa870ae55c587e5a149fdc438ecc70b66d24a3"
+    },
+    "fGetNameBoxes": {
+      "before": "e1aeb815b74a80fcef0e720fd02a5077bd25c2410a7ff744d4e9735a587e98ff",
+      "after": "e1aeb815b74a80fcef0e720fd02a5077bd25c2410a7ff744d4e9735a587e98ff",
+      "upstream": "e1aeb815b74a80fcef0e720fd02a5077bd25c2410a7ff744d4e9735a587e98ff"
+    },
+    "fDrawNameBoxes": {
+      "before": "992b4a10a82d49c5e1b0bebb11428465b58e2b82d9c1ca84c7eb987594b74a88",
+      "after": "992b4a10a82d49c5e1b0bebb11428465b58e2b82d9c1ca84c7eb987594b74a88",
+      "upstream": "992b4a10a82d49c5e1b0bebb11428465b58e2b82d9c1ca84c7eb987594b74a88"
+    },
+    "fFitNameToWidth": {
+      "before": "bb867ec20c570d210dcd519396833840742e57d7d41504ce607ef0b40d428273",
+      "after": "bb867ec20c570d210dcd519396833840742e57d7d41504ce607ef0b40d428273",
+      "upstream": null
+    },
+    "fScheduleNameFit": {
+      "before": "14da5f780d0207d342e7c3c0992634c2efb9c21b28d1c51cfa886a55734daab0",
+      "after": "14da5f780d0207d342e7c3c0992634c2efb9c21b28d1c51cfa886a55734daab0",
+      "upstream": null
+    },
+    "fFitNameComponents": {
+      "before": "bd2a7247beb6550e44eb3c5e380bd183acb7abf3e1d39234a87d556a73a0dad8",
+      "after": "bd2a7247beb6550e44eb3c5e380bd183acb7abf3e1d39234a87d556a73a0dad8",
+      "upstream": "554f3369ffe6a36bfadf842e0e577ce0d2e9a5f6871adb1bdf4483dfd6da2281"
+    },
+    "fInitNameFitObserver": {
+      "before": "f16195439fccc7f7ea85bc0ed0cbb42d5d0b06674ef96d810be5118e6bb62255",
+      "after": "f16195439fccc7f7ea85bc0ed0cbb42d5d0b06674ef96d810be5118e6bb62255",
+      "upstream": "8d7a0a70ac6cf75396d7388ed6f3e7c96590ff835c99c9a5055f71e549df3647"
+    },
+    "fNameExpandOpen": {
+      "before": "71214919689f583e10e7331ee5501e5d5856cb960351f4a59d4578f7902c3173",
+      "after": "71214919689f583e10e7331ee5501e5d5856cb960351f4a59d4578f7902c3173",
+      "upstream": "f9e9527e20e2d5c0cc51e7f4657daa50a26a16a104c1f8b81706298777c1d997"
+    },
+    "fNameExplainPortalIn": {
+      "before": "3ca263b302742d54c168a20306f5436613b21bfdc2483626a740cb1926058e90",
+      "after": "3ca263b302742d54c168a20306f5436613b21bfdc2483626a740cb1926058e90",
+      "upstream": "3ca263b302742d54c168a20306f5436613b21bfdc2483626a740cb1926058e90"
+    },
+    "fNameExplainPortalOut": {
+      "before": "65a829f2ad3c31355e112ee631b8d4e637ca7669ccdc981235f6099c7cc43a39",
+      "after": "65a829f2ad3c31355e112ee631b8d4e637ca7669ccdc981235f6099c7cc43a39",
+      "upstream": "65a829f2ad3c31355e112ee631b8d4e637ca7669ccdc981235f6099c7cc43a39"
+    },
+    "fNameExpandReserve": {
+      "before": "ff05dbb5393691f96a944d5785216671e28de8809a66fb6cc8a76dd8146c6b9a",
+      "after": "ff05dbb5393691f96a944d5785216671e28de8809a66fb6cc8a76dd8146c6b9a",
+      "upstream": "ff05dbb5393691f96a944d5785216671e28de8809a66fb6cc8a76dd8146c6b9a"
+    },
+    "fNameExplainAnchor": {
+      "before": "4e8f726c754f3765c4e3e93cc866452a33248c8133859f7ef9e82b7b17a7de30",
+      "after": "4e8f726c754f3765c4e3e93cc866452a33248c8133859f7ef9e82b7b17a7de30",
+      "upstream": "4e8f726c754f3765c4e3e93cc866452a33248c8133859f7ef9e82b7b17a7de30"
+    },
+    "fNameExpandClose": {
+      "before": "32218aed6c2d22f359b3a4dbdd5619d89574156d480a71afa9054e0eba046281",
+      "after": "32218aed6c2d22f359b3a4dbdd5619d89574156d480a71afa9054e0eba046281",
+      "upstream": "32218aed6c2d22f359b3a4dbdd5619d89574156d480a71afa9054e0eba046281"
+    },
+    "fNameExpandSync": {
+      "before": "de6dd3c1d7028c9750002ffdf63664c06000411a5a82136f6488b94f1308dca3",
+      "after": "de6dd3c1d7028c9750002ffdf63664c06000411a5a82136f6488b94f1308dca3",
+      "upstream": "de6dd3c1d7028c9750002ffdf63664c06000411a5a82136f6488b94f1308dca3"
+    },
+    "fNameExpandPaintBtn": {
+      "before": "6fc095980039b92087e5ecf0d9eafda6d7c9dab1e4465e08c5b4ac7a6cf2f5ea",
+      "after": "6fc095980039b92087e5ecf0d9eafda6d7c9dab1e4465e08c5b4ac7a6cf2f5ea",
+      "upstream": "6fc095980039b92087e5ecf0d9eafda6d7c9dab1e4465e08c5b4ac7a6cf2f5ea"
+    },
+    "fDisplayedEngineEN": {
+      "before": "b379e99d430600a9da623361d8916b1785169c20e54697b6fc047b8964ec9af3",
+      "after": "b379e99d430600a9da623361d8916b1785169c20e54697b6fc047b8964ec9af3",
+      "upstream": "b379e99d430600a9da623361d8916b1785169c20e54697b6fc047b8964ec9af3"
+    },
+    "fMulerVerdictState": {
+      "before": "d7f8f7cfa16f663ffd491ad1b68c58a3ceddbb6b825b9fdb43ed173948102a66",
+      "after": "d7f8f7cfa16f663ffd491ad1b68c58a3ceddbb6b825b9fdb43ed173948102a66",
+      "upstream": "d7f8f7cfa16f663ffd491ad1b68c58a3ceddbb6b825b9fdb43ed173948102a66"
+    },
+    "fMulerApplyVerdict": {
+      "before": "90fc907c9b30eb59379cd1222ca3ee08f5d7f5c5e62c995b1089fbd97637c589",
+      "after": "90fc907c9b30eb59379cd1222ca3ee08f5d7f5c5e62c995b1089fbd97637c589",
+      "upstream": "90fc907c9b30eb59379cd1222ca3ee08f5d7f5c5e62c995b1089fbd97637c589"
+    },
+    "fMulerENFetchDone": {
+      "before": "749e9facb5c36d752c9dac8e50a191466db97a0564e7719216d3e493e688c281",
+      "after": "749e9facb5c36d752c9dac8e50a191466db97a0564e7719216d3e493e688c281",
+      "upstream": "749e9facb5c36d752c9dac8e50a191466db97a0564e7719216d3e493e688c281"
+    },
+    "fMulerOCVerdict": {
+      "before": "fea7b27beb5b31011269ae572ab95e48e2b4be78589290a697b98c35244adaa8",
+      "after": "fea7b27beb5b31011269ae572ab95e48e2b4be78589290a697b98c35244adaa8",
+      "upstream": "fea7b27beb5b31011269ae572ab95e48e2b4be78589290a697b98c35244adaa8"
+    },
+    "fMulerApplyOCVerdict": {
+      "before": "81f4c492ad8140908fb5a6920b8c3615b87cee6a80517f7b709056eb509f8e34",
+      "after": "81f4c492ad8140908fb5a6920b8c3615b87cee6a80517f7b709056eb509f8e34",
+      "upstream": "81f4c492ad8140908fb5a6920b8c3615b87cee6a80517f7b709056eb509f8e34"
+    },
+    "fMulerOCFetchDone": {
+      "before": "000cd0c3024b037e259cc14b5ddfb7c5c3b0aafc90b64f020b4dd48d47474005",
+      "after": "000cd0c3024b037e259cc14b5ddfb7c5c3b0aafc90b64f020b4dd48d47474005",
+      "upstream": "000cd0c3024b037e259cc14b5ddfb7c5c3b0aafc90b64f020b4dd48d47474005"
+    },
+    "fGRSystOneStem": {
+      "before": "911335cea5f63a49319af5aead977b788a9ea5b125521496a82ff19cd9bbb1d8",
+      "after": "911335cea5f63a49319af5aead977b788a9ea5b125521496a82ff19cd9bbb1d8",
+      "upstream": "911335cea5f63a49319af5aead977b788a9ea5b125521496a82ff19cd9bbb1d8"
+    },
+    "fGRSysNeedsParens": {
+      "before": "c24bc842fed7a3a90972c73e8258336daa102138b2491d6ad36bcb1fe4bd0617",
+      "after": "c24bc842fed7a3a90972c73e8258336daa102138b2491d6ad36bcb1fe4bd0617",
+      "upstream": "c24bc842fed7a3a90972c73e8258336daa102138b2491d6ad36bcb1fe4bd0617"
+    },
+    "fSystematicGRSubstSlot": {
+      "before": "da58bd63e7ec834a1b30a2f91d0fb078c9fd7ce22fd21c59bfb978059e7080db",
+      "after": "da58bd63e7ec834a1b30a2f91d0fb078c9fd7ce22fd21c59bfb978059e7080db",
+      "upstream": "da58bd63e7ec834a1b30a2f91d0fb078c9fd7ce22fd21c59bfb978059e7080db"
+    },
+    "fGreekSysSlots": {
+      "before": "92901842f696315a98b28add0fa064ae2cde88b8d81a5ef8d396d570a6bfdd67",
+      "after": "92901842f696315a98b28add0fa064ae2cde88b8d81a5ef8d396d570a6bfdd67",
+      "upstream": "92901842f696315a98b28add0fa064ae2cde88b8d81a5ef8d396d570a6bfdd67"
+    },
+    "fSysFusedPieces": {
+      "before": "8f1a44a448f1ed2ce609219558986b839261b912ca593054a6712942937315bc",
+      "after": "8f1a44a448f1ed2ce609219558986b839261b912ca593054a6712942937315bc",
+      "upstream": "8f1a44a448f1ed2ce609219558986b839261b912ca593054a6712942937315bc"
+    },
+    "fJoinGreekSysName": {
+      "before": "c46d42044fe7e35692461eb43008d0e7ddbca257e434572fd9a02c7f6b9453c8",
+      "after": "c46d42044fe7e35692461eb43008d0e7ddbca257e434572fd9a02c7f6b9453c8",
+      "upstream": "a8b286f87d773713f5a7dc07b1c4853c5f112cad7fb6cd4cde016a5b3311efd0"
+    },
+    "fShowNameAnalysis": {
+      "before": "d0e547c115509b960afc6464fe4aca4a511981bb6ffd882794e1ae29d797e901",
+      "after": "d0e547c115509b960afc6464fe4aca4a511981bb6ffd882794e1ae29d797e901",
+      "upstream": "c5ccba861c5d6fe155f6669b05ea57648c8a8d7e5885ec82f1773db061c74edc"
+    },
+    "fNameExpandRepinDelayed": {
+      "before": "ad634e5a98ead3f6236a6bdf4d63a0b420d1b5728d5d221f67b0c2801c1ab69c",
+      "after": "ad634e5a98ead3f6236a6bdf4d63a0b420d1b5728d5d221f67b0c2801c1ab69c",
+      "upstream": "ad634e5a98ead3f6236a6bdf4d63a0b420d1b5728d5d221f67b0c2801c1ab69c"
+    },
+    "fClearHighlights": {
+      "before": "e666e95cd646fa040295998e20f60d9ad6d57c92261cde52106667363cedc7d8",
+      "after": "e666e95cd646fa040295998e20f60d9ad6d57c92261cde52106667363cedc7d8",
+      "upstream": "e666e95cd646fa040295998e20f60d9ad6d57c92261cde52106667363cedc7d8"
+    },
+    "fIsENMode": {
+      "before": "9259331407764d8e02148ad1775346742c4b24b846a68d5b50e39b0a9885dc34",
+      "after": "9259331407764d8e02148ad1775346742c4b24b846a68d5b50e39b0a9885dc34",
+      "upstream": "9259331407764d8e02148ad1775346742c4b24b846a68d5b50e39b0a9885dc34"
+    },
+    "fBranchNoun": {
+      "before": "102e2abf90696acbe6e74a4a4e76a0ddc9fdf15ec3a8400a09309f9f6b8cda08",
+      "after": "102e2abf90696acbe6e74a4a4e76a0ddc9fdf15ec3a8400a09309f9f6b8cda08",
+      "upstream": "102e2abf90696acbe6e74a4a4e76a0ddc9fdf15ec3a8400a09309f9f6b8cda08"
+    },
+    "fTaxonomyEN": {
+      "before": "43d0c31e925b7f594cb71c2d69587d1ca4d80452f876c937f21adf41ad0488a6",
+      "after": "43d0c31e925b7f594cb71c2d69587d1ca4d80452f876c937f21adf41ad0488a6",
+      "upstream": "43d0c31e925b7f594cb71c2d69587d1ca4d80452f876c937f21adf41ad0488a6"
+    },
+    "fRule4KeysForFGs": {
+      "before": "5a45c873f500d642fc8da72ae973b22ac10da86db772df7c0d5c0c6fe858f7a7",
+      "after": "5a45c873f500d642fc8da72ae973b22ac10da86db772df7c0d5c0c6fe858f7a7",
+      "upstream": "5a45c873f500d642fc8da72ae973b22ac10da86db772df7c0d5c0c6fe858f7a7"
+    },
+    "fGetFGInstance": {
+      "before": "929bbe4f750df062a24a560d2b20319b7f9e539a72a246252da6c630acaf8a78",
+      "after": "929bbe4f750df062a24a560d2b20319b7f9e539a72a246252da6c630acaf8a78",
+      "upstream": "929bbe4f750df062a24a560d2b20319b7f9e539a72a246252da6c630acaf8a78"
+    },
+    "fGetSecondaryGroupNounSuffix": {
+      "before": "f72f32f4f12fa878ad0cac83efee29510836a496a088d27cabf5f1aefb2c0719",
+      "after": "f72f32f4f12fa878ad0cac83efee29510836a496a088d27cabf5f1aefb2c0719",
+      "upstream": "f72f32f4f12fa878ad0cac83efee29510836a496a088d27cabf5f1aefb2c0719"
+    },
+    "fGetPrincipalGroupNounSuffix": {
+      "before": "5221dea86be8dfd6f7401daa7183e36f0cdf7128925800c1e0c9689f9f8ac481",
+      "after": "5221dea86be8dfd6f7401daa7183e36f0cdf7128925800c1e0c9689f9f8ac481",
+      "upstream": "5221dea86be8dfd6f7401daa7183e36f0cdf7128925800c1e0c9689f9f8ac481"
+    },
+    "fGetBranchDisplayName": {
+      "before": "f4b064822853b5d8821112bb24973e42c41fc65862ae97eb6d1b20226485fe87",
+      "after": "f4b064822853b5d8821112bb24973e42c41fc65862ae97eb6d1b20226485fe87",
+      "upstream": "f4b064822853b5d8821112bb24973e42c41fc65862ae97eb6d1b20226485fe87"
+    },
+    "fGetNameComponentLocants": {
+      "before": "24bd0a923a8fcd8ef61504e16bb5476a8f0c7ad8fc051662de370674f223697f",
+      "after": "24bd0a923a8fcd8ef61504e16bb5476a8f0c7ad8fc051662de370674f223697f",
+      "upstream": "24bd0a923a8fcd8ef61504e16bb5476a8f0c7ad8fc051662de370674f223697f"
+    },
+    "fGetNameComponentMultiplier": {
+      "before": "ecf2e77d27bef478c0ec17982719967f68dc539324d4d617981cd3b5c0db0323",
+      "after": "ecf2e77d27bef478c0ec17982719967f68dc539324d4d617981cd3b5c0db0323",
+      "upstream": "ecf2e77d27bef478c0ec17982719967f68dc539324d4d617981cd3b5c0db0323"
+    },
+    "fIsMultiLocantComponent": {
+      "before": "6c28e3900b2608a964847b646599886ed4b95bf92d0a098bec47ec5bf218fe97",
+      "after": "6c28e3900b2608a964847b646599886ed4b95bf92d0a098bec47ec5bf218fe97",
+      "upstream": "6c28e3900b2608a964847b646599886ed4b95bf92d0a098bec47ec5bf218fe97"
+    },
+    "fAlcoholOHNameComponent": {
+      "before": "e8525c85ca072a66d6da0bf0372cd219ecf0672f8ff54031e7aa59d8c1e3289f",
+      "after": "e8525c85ca072a66d6da0bf0372cd219ecf0672f8ff54031e7aa59d8c1e3289f",
+      "upstream": "e8525c85ca072a66d6da0bf0372cd219ecf0672f8ff54031e7aa59d8c1e3289f"
+    },
+    "fAlcoholOHPositionText": {
+      "before": "798986d871fe1f88939b3ab17752185435a3932b6505baec72371d01cfde0e02",
+      "after": "798986d871fe1f88939b3ab17752185435a3932b6505baec72371d01cfde0e02",
+      "upstream": "798986d871fe1f88939b3ab17752185435a3932b6505baec72371d01cfde0e02"
+    },
+    "fSplitSuffixLocantsActive": {
+      "before": "5ffe29d0db0ec0631fa251c8f8911e7623ca50e9de95678b82dc84c9e8535c08",
+      "after": "5ffe29d0db0ec0631fa251c8f8911e7623ca50e9de95678b82dc84c9e8535c08",
+      "upstream": "5ffe29d0db0ec0631fa251c8f8911e7623ca50e9de95678b82dc84c9e8535c08"
+    },
+    "fSplitBranchPiecesActive": {
+      "before": "e720c787f66e95a6649eadb057744a6724c020b881efdd485722fcd7c09a2360",
+      "after": "e720c787f66e95a6649eadb057744a6724c020b881efdd485722fcd7c09a2360",
+      "upstream": "e720c787f66e95a6649eadb057744a6724c020b881efdd485722fcd7c09a2360"
+    },
+    "fSplitBranchPieces": {
+      "before": "755fd439fbfc6076326e2af9de28ebcf28499b7c15d62c0bac99191c95ca13f7",
+      "after": "755fd439fbfc6076326e2af9de28ebcf28499b7c15d62c0bac99191c95ca13f7",
+      "upstream": "755fd439fbfc6076326e2af9de28ebcf28499b7c15d62c0bac99191c95ca13f7"
+    },
+    "fGRSubstSortKey": {
+      "before": "92514b0784502e04efd95e192ce888823213e142eaf8a891106d909f7f0c8e26",
+      "after": "92514b0784502e04efd95e192ce888823213e142eaf8a891106d909f7f0c8e26",
+      "upstream": "92514b0784502e04efd95e192ce888823213e142eaf8a891106d909f7f0c8e26"
+    },
+    "fGRLocKey": {
+      "before": "7e49b2010f314862a4fc1cd42ed1e80d7eb437a02b3cd7f6af03791a5ff0de56",
+      "after": "7e49b2010f314862a4fc1cd42ed1e80d7eb437a02b3cd7f6af03791a5ff0de56",
+      "upstream": "7e49b2010f314862a4fc1cd42ed1e80d7eb437a02b3cd7f6af03791a5ff0de56"
+    },
+    "fGRSubstGroups": {
+      "before": "0ab8de6d2b23a08b5d1eeb41424423a7912de86a2be99a1c0e3f7bc888c258d4",
+      "after": "0ab8de6d2b23a08b5d1eeb41424423a7912de86a2be99a1c0e3f7bc888c258d4",
+      "upstream": "0ab8de6d2b23a08b5d1eeb41424423a7912de86a2be99a1c0e3f7bc888c258d4"
+    },
+    "fGRSortSubstGroups": {
+      "before": "285f2e106047c9d8963c72a58dca3f70ba12173904c68547c446434c32b7a55a",
+      "after": "285f2e106047c9d8963c72a58dca3f70ba12173904c68547c446434c32b7a55a",
+      "upstream": "285f2e106047c9d8963c72a58dca3f70ba12173904c68547c446434c32b7a55a"
+    },
+    "fGetHydrocarbonBranchPiece": {
+      "before": "30afe70b8df7ba94f10223a24becbd340b57ff9e25faf3eec15302a353527753",
+      "after": "30afe70b8df7ba94f10223a24becbd340b57ff9e25faf3eec15302a353527753",
+      "upstream": "30afe70b8df7ba94f10223a24becbd340b57ff9e25faf3eec15302a353527753"
+    },
+    "fBranchPieceBoxId": {
+      "before": "3c6a938f91caaa371e1474f9febc930925d7e546ef6739cc5fa2bef9eab28854",
+      "after": "3c6a938f91caaa371e1474f9febc930925d7e546ef6739cc5fa2bef9eab28854",
+      "upstream": "3c6a938f91caaa371e1474f9febc930925d7e546ef6739cc5fa2bef9eab28854"
+    },
+    "fBranchedSaturatedKetonePosition": {
+      "before": "cb379aca657a6db3a9104f6ff466b1ae6c6c8b50b0a525689c3e5f6b957bb342",
+      "after": "cb379aca657a6db3a9104f6ff466b1ae6c6c8b50b0a525689c3e5f6b957bb342",
+      "upstream": "cb379aca657a6db3a9104f6ff466b1ae6c6c8b50b0a525689c3e5f6b957bb342"
+    },
+    "fSequentialKetoneNumberingTarget": {
+      "before": "bf195ccb9b4c9d4c15a3f35be469a6a70a2514a3eb56f19fe4b9f1bae4d66c7d",
+      "after": "bf195ccb9b4c9d4c15a3f35be469a6a70a2514a3eb56f19fe4b9f1bae4d66c7d",
+      "upstream": "ad55897cb9f19b71c3ad48423848f9921040ed98333154cee01041b4ce7ae29f"
+    },
+    "fShowAnalysisNumbering": {
+      "before": "ea22282b67cac1b6ed16d9955f57361f84ffaeadec81490f08a5d5a41c1d9ec0",
+      "after": "ea22282b67cac1b6ed16d9955f57361f84ffaeadec81490f08a5d5a41c1d9ec0",
+      "upstream": "ea22282b67cac1b6ed16d9955f57361f84ffaeadec81490f08a5d5a41c1d9ec0"
+    },
+    "fExplainNameComp": {
+      "before": "0ae60aef5416a0058ab133b0d45403dbf8d06e2b2d01ce01dbbea9f8570dd2e5",
+      "after": "0ae60aef5416a0058ab133b0d45403dbf8d06e2b2d01ce01dbbea9f8570dd2e5",
+      "upstream": "1b01f4069cc9c2ab54335e02ae71c6431f73ec439d1b1dc0aa69e34826c8b2cb"
+    },
+    "fExplainAllKey": {
+      "before": "59095697d2a1c655b09d3d6893b4e6606e2dff8ff65cd21099a49fb72d026543",
+      "after": "59095697d2a1c655b09d3d6893b4e6606e2dff8ff65cd21099a49fb72d026543",
+      "upstream": "59095697d2a1c655b09d3d6893b4e6606e2dff8ff65cd21099a49fb72d026543"
+    },
+    "fNameExplainTableBuild": {
+      "before": "45f6e8bb0d8a0691f681e4846f6ff298a71a5ce33a20a89d2c32bde7a30512db",
+      "after": "45f6e8bb0d8a0691f681e4846f6ff298a71a5ce33a20a89d2c32bde7a30512db",
+      "upstream": "45f6e8bb0d8a0691f681e4846f6ff298a71a5ce33a20a89d2c32bde7a30512db"
+    },
+    "fNameExplainTableRender": {
+      "before": "2fa1cabe26843a64fd8aea510193523df289bde26980f5a31d1d4fdc82fd891b",
+      "after": "2fa1cabe26843a64fd8aea510193523df289bde26980f5a31d1d4fdc82fd891b",
+      "upstream": "2fa1cabe26843a64fd8aea510193523df289bde26980f5a31d1d4fdc82fd891b"
+    },
+    "fNameExplainTableShow": {
+      "before": "90facc89bdfb69bc85ccd287a7a57f08d403683c0181acd9cfbda1fae0812e43",
+      "after": "90facc89bdfb69bc85ccd287a7a57f08d403683c0181acd9cfbda1fae0812e43",
+      "upstream": "90facc89bdfb69bc85ccd287a7a57f08d403683c0181acd9cfbda1fae0812e43"
+    },
+    "fShowRule": {
+      "before": "99d3f6c074aecdd0d349b1349efd1a91a74a828b31767b922830eb06226c4a0c",
+      "after": "99d3f6c074aecdd0d349b1349efd1a91a74a828b31767b922830eb06226c4a0c",
+      "upstream": "1ddea5b8c8ae4f5ef1860fe1188a3ecd23ee1ff19bfeb9c6274ab6311a27caac"
+    },
+    "fAdjustRuleContainerHeight": {
+      "before": "6223b86be8c7c4d98be1ac862b0c321c213749fe26d6e518e8be5f028d420a70",
+      "after": "6223b86be8c7c4d98be1ac862b0c321c213749fe26d6e518e8be5f028d420a70",
+      "upstream": "6223b86be8c7c4d98be1ac862b0c321c213749fe26d6e518e8be5f028d420a70"
+    },
+    "fMainChainKeySuffix": {
+      "before": "edee4b7bd387b5f65e906a18c90fbbbcd934493c21253e16cb744fc91982cee8",
+      "after": "edee4b7bd387b5f65e906a18c90fbbbcd934493c21253e16cb744fc91982cee8",
+      "upstream": "edee4b7bd387b5f65e906a18c90fbbbcd934493c21253e16cb744fc91982cee8"
+    },
+    "fHighLightMainChain": {
+      "before": "ee89b4ca3548cda5a48ced4e626ff861bf603559cdec8218c35182a90aeb944a",
+      "after": "ee89b4ca3548cda5a48ced4e626ff861bf603559cdec8218c35182a90aeb944a",
+      "upstream": "1ffaf1cae8468c9098aec8f6af6d8ea088710ea769556ad96a1a59eed9573759"
+    },
+    "fHighLightMainChainBonds": {
+      "before": "f5462bb2db7c75bbabaad6d06132eb3fbaa6da00266b8a5253f7b8ce01f6fd2d",
+      "after": "f5462bb2db7c75bbabaad6d06132eb3fbaa6da00266b8a5253f7b8ce01f6fd2d",
+      "upstream": "c0116e88b8e240f427c57555edaa91edb24902e7d0550608d5d1687f17d28d56"
+    },
+    "fMainChainPoolLive": {
+      "before": "c4b064d5670b7d2f09e4c7fcad841dc7cda5bc5ddd90ef7e98ca40fcd129cb7d",
+      "after": "c4b064d5670b7d2f09e4c7fcad841dc7cda5bc5ddd90ef7e98ca40fcd129cb7d",
+      "upstream": "c4b064d5670b7d2f09e4c7fcad841dc7cda5bc5ddd90ef7e98ca40fcd129cb7d"
+    },
+    "fChainStepper3DFresh": {
+      "before": "008fee53a371f161c59d343788f9d10a4a7f4185ee0bcc3409ce44ae8b018501",
+      "after": "008fee53a371f161c59d343788f9d10a4a7f4185ee0bcc3409ce44ae8b018501",
+      "upstream": "008fee53a371f161c59d343788f9d10a4a7f4185ee0bcc3409ce44ae8b018501"
+    },
+    "fApplyChainStep": {
+      "before": "54332abd7c69297e5bfdc7a9961c03b44c5aba744a2e2ec17e78777043f197f2",
+      "after": "54332abd7c69297e5bfdc7a9961c03b44c5aba744a2e2ec17e78777043f197f2",
+      "upstream": "afa6ffe5c50cdf65bc5f293e33d52c7f4aaf0f65347a72d69e1610a72458aea1"
+    },
+    "fStepMainChain": {
+      "before": "92640a84ded49f4909a076e63c92ccfe2a3d1cdaf8371c32839e836728ed4633",
+      "after": "92640a84ded49f4909a076e63c92ccfe2a3d1cdaf8371c32839e836728ed4633",
+      "upstream": "92640a84ded49f4909a076e63c92ccfe2a3d1cdaf8371c32839e836728ed4633"
+    },
+    "fRenderChainStepper": {
+      "before": "d96d86215ba57442ed0420db013a06a1be333d715c5428c40ee59bae9eef085f",
+      "after": "d96d86215ba57442ed0420db013a06a1be333d715c5428c40ee59bae9eef085f",
+      "upstream": "d96d86215ba57442ed0420db013a06a1be333d715c5428c40ee59bae9eef085f"
+    },
+    "fChainStepperHTML": {
+      "before": "c55a3b797737bdcb9aea4f0a5bed91151ebab34b44f0e68e9b5647f1d909f93d",
+      "after": "c55a3b797737bdcb9aea4f0a5bed91151ebab34b44f0e68e9b5647f1d909f93d",
+      "upstream": "c55a3b797737bdcb9aea4f0a5bed91151ebab34b44f0e68e9b5647f1d909f93d"
+    },
+    "fSeparateAcidPrefixBoxes": {
+      "before": "bdfc767e0c072b745bfb1cabe99bab13e6f73b24bb531b82af4d1cb43142cf58",
+      "after": "bdfc767e0c072b745bfb1cabe99bab13e6f73b24bb531b82af4d1cb43142cf58",
+      "upstream": null
+    },
+    "fAcidPrefixBoxGroups": {
+      "before": "eee9aa91f72bd17ec57422b051ec38cf45ce92ae5495ad7b8b355375f0f919b3",
+      "after": "eee9aa91f72bd17ec57422b051ec38cf45ce92ae5495ad7b8b355375f0f919b3",
+      "upstream": null
+    },
+    "fGetHydrocarbonBranchGroup": {
+      "before": "06678327f9cccd17a77dc62e8d5b3754ce5db8d1c37da2e2bc43af38039f9526",
+      "after": "06678327f9cccd17a77dc62e8d5b3754ce5db8d1c37da2e2bc43af38039f9526",
+      "upstream": "9db7c5c06459fd3830c99a7c91d9081d38d7f7f837396963f4ce53471090f50e"
+    },
+    "fHydrocarbonBranchSlot": {
+      "before": "c335c2338efce072b93e4d7c2c2964b98c9cd7cb50c73413cc211b7573dc9eb3",
+      "after": "c335c2338efce072b93e4d7c2c2964b98c9cd7cb50c73413cc211b7573dc9eb3",
+      "upstream": "682301b67547b28dae794f382977a61cb088b52684af7b4c17259cb3a70ef5f7"
+    },
+    "fHydrocarbonBranchExplanation": {
+      "before": "ab24edfb2d944a620ed01872d655f742e2c9f614bb8ee2c1da7b77a6fcb25613",
+      "after": "ab24edfb2d944a620ed01872d655f742e2c9f614bb8ee2c1da7b77a6fcb25613",
+      "upstream": "ab24edfb2d944a620ed01872d655f742e2c9f614bb8ee2c1da7b77a6fcb25613"
+    },
+    "fGetHydrocarbonBranchHighlight": {
+      "before": "b2c593782e4201b3b08cba1431dd8caf25df527744763b873c77ddbc6bc08bfa",
+      "after": "b2c593782e4201b3b08cba1431dd8caf25df527744763b873c77ddbc6bc08bfa",
+      "upstream": "b2c593782e4201b3b08cba1431dd8caf25df527744763b873c77ddbc6bc08bfa"
+    },
+    "fGetHydrocarbonBranchHighlight3D": {
+      "before": "c43925d0265ad8c47e83818f8af133d848909c4f73e346ffa8df0f9d504e0e0f",
+      "after": "c43925d0265ad8c47e83818f8af133d848909c4f73e346ffa8df0f9d504e0e0f",
+      "upstream": "c43925d0265ad8c47e83818f8af133d848909c4f73e346ffa8df0f9d504e0e0f"
+    },
+    "fPaintBranchHighlightAtoms": {
+      "before": "1787729bace5c739de8dfe0fe15fa13002386425be908d771954a007054ec29a",
+      "after": "1787729bace5c739de8dfe0fe15fa13002386425be908d771954a007054ec29a",
+      "upstream": "1787729bace5c739de8dfe0fe15fa13002386425be908d771954a007054ec29a"
+    },
+    "fGetEtherAlkoxyC": {
+      "before": "2d1bc8405a84317fee8808c4aa4106bd1ad981570376f2f9bba870f676364f93",
+      "after": "2d1bc8405a84317fee8808c4aa4106bd1ad981570376f2f9bba870f676364f93",
+      "upstream": "2d1bc8405a84317fee8808c4aa4106bd1ad981570376f2f9bba870f676364f93"
+    },
+    "fGetEtherAlkoxyChain": {
+      "before": "cfe9351950946977607b13a11a465e572af1e1088c7459e4b3d2cc74e9e4fc0e",
+      "after": "cfe9351950946977607b13a11a465e572af1e1088c7459e4b3d2cc74e9e4fc0e",
+      "upstream": "cfe9351950946977607b13a11a465e572af1e1088c7459e4b3d2cc74e9e4fc0e"
+    },
+    "fGetEtherAlkoxyC3D": {
+      "before": "1e7d7d2055c89f405ecd53a1d85c4f38037687917250b65a3676c8dc6f9c1492",
+      "after": "1e7d7d2055c89f405ecd53a1d85c4f38037687917250b65a3676c8dc6f9c1492",
+      "upstream": "1e7d7d2055c89f405ecd53a1d85c4f38037687917250b65a3676c8dc6f9c1492"
+    },
+    "fGetEtherAlkoxyChain3D": {
+      "before": "de5acbd3292322b1e8b9ece97049b7184780ef945da51507616e1f6a94919251",
+      "after": "de5acbd3292322b1e8b9ece97049b7184780ef945da51507616e1f6a94919251",
+      "upstream": "de5acbd3292322b1e8b9ece97049b7184780ef945da51507616e1f6a94919251"
+    },
+    "fGetEtherGroupFragment3D": {
+      "before": "9c0c7fa66bd4fbd68b0350265e67b94504d6f01df3a84785da2513b67b2f0e2f",
+      "after": "9c0c7fa66bd4fbd68b0350265e67b94504d6f01df3a84785da2513b67b2f0e2f",
+      "upstream": "9c0c7fa66bd4fbd68b0350265e67b94504d6f01df3a84785da2513b67b2f0e2f"
+    },
+    "fGetEtherCommonParts": {
+      "before": "a70ae73dd5e70b7afe517add8c5c8c2cdb422e07a5edc42bc47e1ee8f47e4a39",
+      "after": "a70ae73dd5e70b7afe517add8c5c8c2cdb422e07a5edc42bc47e1ee8f47e4a39",
+      "upstream": "a70ae73dd5e70b7afe517add8c5c8c2cdb422e07a5edc42bc47e1ee8f47e4a39"
+    },
+    "fAlkylNumberingOrder": {
+      "before": "a33e612eaa727295b6f3b7495577fe556e53f909c6b1bd99a00249adcce34c3a",
+      "after": "a33e612eaa727295b6f3b7495577fe556e53f909c6b1bd99a00249adcce34c3a",
+      "upstream": "a33e612eaa727295b6f3b7495577fe556e53f909c6b1bd99a00249adcce34c3a"
+    },
+    "fEsterAlcoholNumbering": {
+      "before": "09f82662a5272bf6d228dbcb4445b2da8a9ef48aeb35e86948e21ff898a24770",
+      "after": "09f82662a5272bf6d228dbcb4445b2da8a9ef48aeb35e86948e21ff898a24770",
+      "upstream": "09f82662a5272bf6d228dbcb4445b2da8a9ef48aeb35e86948e21ff898a24770"
+    },
+    "fEsterAlcoholNumbering3D": {
+      "before": "d9f6400f9838eef510a2b0a8f3b6cf6e9f25f2a5de2c9ca232ec7f4b7cdc1445",
+      "after": "d9f6400f9838eef510a2b0a8f3b6cf6e9f25f2a5de2c9ca232ec7f4b7cdc1445",
+      "upstream": "d9f6400f9838eef510a2b0a8f3b6cf6e9f25f2a5de2c9ca232ec7f4b7cdc1445"
+    },
+    "fEsterAcidNumbering3D": {
+      "before": "115ca338235a5e2d290811a32c89f034a2a31684766002276d231de3e81282c7",
+      "after": "115ca338235a5e2d290811a32c89f034a2a31684766002276d231de3e81282c7",
+      "upstream": "115ca338235a5e2d290811a32c89f034a2a31684766002276d231de3e81282c7"
+    },
+    "fEsterAcidNumbering": {
+      "before": "e180df9fe325649e5661a386c0777515466d668cf367cb85e7343b386891f0fa",
+      "after": "e180df9fe325649e5661a386c0777515466d668cf367cb85e7343b386891f0fa",
+      "upstream": "e180df9fe325649e5661a386c0777515466d668cf367cb85e7343b386891f0fa"
+    },
+    "fEtherAlkoxyNumbering": {
+      "before": "4a0dfc1797a4387ad9ee09ae661fbdb1eb8135b9e8e65bb0b82e3e680ed4bf46",
+      "after": "4a0dfc1797a4387ad9ee09ae661fbdb1eb8135b9e8e65bb0b82e3e680ed4bf46",
+      "upstream": "4a0dfc1797a4387ad9ee09ae661fbdb1eb8135b9e8e65bb0b82e3e680ed4bf46"
+    },
+    "fEtherAlkoxyNumbering3D": {
+      "before": "30a28e4349f814118fce9ef5bd1d406f1aeffa82e10a21e4487c0c596e9a27d7",
+      "after": "30a28e4349f814118fce9ef5bd1d406f1aeffa82e10a21e4487c0c596e9a27d7",
+      "upstream": "30a28e4349f814118fce9ef5bd1d406f1aeffa82e10a21e4487c0c596e9a27d7"
+    },
+    "fGetEsterAlcoholChain": {
+      "before": "327f9599c9f1875a5f97850e63f699932f0d30575816f86ff9076bfcf2d05923",
+      "after": "327f9599c9f1875a5f97850e63f699932f0d30575816f86ff9076bfcf2d05923",
+      "upstream": "327f9599c9f1875a5f97850e63f699932f0d30575816f86ff9076bfcf2d05923"
+    },
+    "fGetEsterAlcoholC3D": {
+      "before": "5f6634929ac1f4430bb4c4edff932d43649ab232c8c7689db716af1a36942854",
+      "after": "5f6634929ac1f4430bb4c4edff932d43649ab232c8c7689db716af1a36942854",
+      "upstream": "5f6634929ac1f4430bb4c4edff932d43649ab232c8c7689db716af1a36942854"
+    },
+    "fGetEsterAlcoholChain3D": {
+      "before": "e33c7b69e98ee7944f8c7a00111dd3a6ebc896feebe85a6542255f57bbf55a31",
+      "after": "e33c7b69e98ee7944f8c7a00111dd3a6ebc896feebe85a6542255f57bbf55a31",
+      "upstream": "e33c7b69e98ee7944f8c7a00111dd3a6ebc896feebe85a6542255f57bbf55a31"
+    },
+    "fGetEsterAcidChain": {
+      "before": "ed676a0d4f1f6a53d2815800e0a487f5639012639148d9472ae58be06c69fca9",
+      "after": "ed676a0d4f1f6a53d2815800e0a487f5639012639148d9472ae58be06c69fca9",
+      "upstream": "ed676a0d4f1f6a53d2815800e0a487f5639012639148d9472ae58be06c69fca9"
+    },
+    "fGetEsterAcidParentChain": {
+      "before": "9d382a46f99b336f2f5a99c5b8c38a5dc6dd6f8a4a1533fa7c8488fe4f7cb877",
+      "after": "9d382a46f99b336f2f5a99c5b8c38a5dc6dd6f8a4a1533fa7c8488fe4f7cb877",
+      "upstream": "9d382a46f99b336f2f5a99c5b8c38a5dc6dd6f8a4a1533fa7c8488fe4f7cb877"
+    },
+    "fGetEsterAcidParentChain3D": {
+      "before": "b18dc034c2a0cd88299da2e46d39a7053c03a444151a18163dfaedb3c5a9ad13",
+      "after": "b18dc034c2a0cd88299da2e46d39a7053c03a444151a18163dfaedb3c5a9ad13",
+      "upstream": "b18dc034c2a0cd88299da2e46d39a7053c03a444151a18163dfaedb3c5a9ad13"
+    },
+    "fGetEsterAcidC3D": {
+      "before": "b2c2bfb0b84b497685209636324a3d6ba5b530f878353a8a2e5aaab79795802f",
+      "after": "b2c2bfb0b84b497685209636324a3d6ba5b530f878353a8a2e5aaab79795802f",
+      "upstream": "b2c2bfb0b84b497685209636324a3d6ba5b530f878353a8a2e5aaab79795802f"
+    },
+    "fGetEsterAcidChain3D": {
+      "before": "2d7d18e316f3c9d15230f120fc5d688622319797775ad7875566b58fec387f77",
+      "after": "2d7d18e316f3c9d15230f120fc5d688622319797775ad7875566b58fec387f77",
+      "upstream": "2d7d18e316f3c9d15230f120fc5d688622319797775ad7875566b58fec387f77"
+    },
+    "fIsSingleEster": {
+      "before": "58ccf2e7b26a4c9bfb37231ce10049d7e6996622c9177de4cb8716fb959de5c8",
+      "after": "58ccf2e7b26a4c9bfb37231ce10049d7e6996622c9177de4cb8716fb959de5c8",
+      "upstream": "58ccf2e7b26a4c9bfb37231ce10049d7e6996622c9177de4cb8716fb959de5c8"
+    },
+    "fGetEsterTriad": {
+      "before": "9ef6f881b57d43cc85c0effd1d1e313b768e7586c3ed33e32047481d2fd7f022",
+      "after": "9ef6f881b57d43cc85c0effd1d1e313b768e7586c3ed33e32047481d2fd7f022",
+      "upstream": "9ef6f881b57d43cc85c0effd1d1e313b768e7586c3ed33e32047481d2fd7f022"
+    },
+    "fGetEsterGroupFragment": {
+      "before": "d19ab3192450bf23e359c94d6e4816ea7d121c5eb8334ef6bfeacef003f8828c",
+      "after": "d19ab3192450bf23e359c94d6e4816ea7d121c5eb8334ef6bfeacef003f8828c",
+      "upstream": "d19ab3192450bf23e359c94d6e4816ea7d121c5eb8334ef6bfeacef003f8828c"
+    },
+    "fGetEsterGroupFragment3D": {
+      "before": "ed69dda35e1c88cad70ca799f846d8f787ca235eddf3a380eb8d1267e36641dd",
+      "after": "ed69dda35e1c88cad70ca799f846d8f787ca235eddf3a380eb8d1267e36641dd",
+      "upstream": "ed69dda35e1c88cad70ca799f846d8f787ca235eddf3a380eb8d1267e36641dd"
+    },
+    "fGetEsterTriad3D": {
+      "before": "5b309739ff3e4fee4b70f938a93a758e74f01a8705c32fe6561c1db29addb431",
+      "after": "5b309739ff3e4fee4b70f938a93a758e74f01a8705c32fe6561c1db29addb431",
+      "upstream": "5b309739ff3e4fee4b70f938a93a758e74f01a8705c32fe6561c1db29addb431"
+    },
+    "fUpdateEtherNamingButton": {
+      "before": "24e3de98c3b9acb3a390e547dbcf0f0e15ab54f2a0fcfc0070f341d7490cf977",
+      "after": "24e3de98c3b9acb3a390e547dbcf0f0e15ab54f2a0fcfc0070f341d7490cf977",
+      "upstream": "24e3de98c3b9acb3a390e547dbcf0f0e15ab54f2a0fcfc0070f341d7490cf977"
+    },
+    "fUpdateSubstNamingButton": {
+      "before": "663f011ba70b27ce30710086c653d4fa688c5dec0af3550c952a587837fa3868",
+      "after": "663f011ba70b27ce30710086c653d4fa688c5dec0af3550c952a587837fa3868",
+      "upstream": "663f011ba70b27ce30710086c653d4fa688c5dec0af3550c952a587837fa3868"
+    },
+    "fHighlightAtomChain": {
+      "before": "f5fca68f7b5a7698615b450c3a4640bb1a6e4ba033e5b5fa8c7d35a934c70866",
+      "after": "f5fca68f7b5a7698615b450c3a4640bb1a6e4ba033e5b5fa8c7d35a934c70866",
+      "upstream": "f5fca68f7b5a7698615b450c3a4640bb1a6e4ba033e5b5fa8c7d35a934c70866"
+    },
+    "fHighlightAtomChain3D": {
+      "before": "5dc6ebeaec7a368566ade2dc58011b812b3c586c3870d22e423e4bc82fcee7f0",
+      "after": "5dc6ebeaec7a368566ade2dc58011b812b3c586c3870d22e423e4bc82fcee7f0",
+      "upstream": "ff20e7f97e6a9abd34c9163a2d5f3d8a62fbce879e333bc86b74b8716b698027"
+    },
+    "fColorFragmentBonds3D": {
+      "before": "48d4a589abe65bc8babf19d9df4ab126ff4c137e1b0cf2997b36e1e27dcf6ac2",
+      "after": "48d4a589abe65bc8babf19d9df4ab126ff4c137e1b0cf2997b36e1e27dcf6ac2",
+      "upstream": "bc1a852680d1302c151142d701de78c7121ecbf073365fc3b543f0dbdb34b39f"
+    },
+    "fHighlightFG": {
+      "before": "dcbe112c5e8b3b363be9ecf1bfcb0d44e41e511808dae787e12c4cd1e48ec40c",
+      "after": "dcbe112c5e8b3b363be9ecf1bfcb0d44e41e511808dae787e12c4cd1e48ec40c",
+      "upstream": "30325cc7f37d250ca59a999e59da6af867c4a71f06d9d56defd4faa0169608c1"
+    },
+    "fHighlightFG3D": {
+      "before": "777fe48d1d94eccdeb6126d9cc3ff43357a9337ea7df8825876bf8d4089c1b0f",
+      "after": "777fe48d1d94eccdeb6126d9cc3ff43357a9337ea7df8825876bf8d4089c1b0f",
+      "upstream": "202475216e250a3a05d1afd7daa7405593f63a3f7ba087e6c0ccb00bbd1f2178"
+    },
+    "fEquivalentParentNumberingDirections": {
+      "before": "93d72c95c76c649d58b100e4f2742809cffc2798514c9c5f4f6faf9004194bd2",
+      "after": "93d72c95c76c649d58b100e4f2742809cffc2798514c9c5f4f6faf9004194bd2",
+      "upstream": null
+    },
+    "fLocantEmphasisIndices": {
+      "before": "03c54faf48a423f9845ec39c73064df6cab486868603b0a6b0f9179d145e2eb5",
+      "after": "03c54faf48a423f9845ec39c73064df6cab486868603b0a6b0f9179d145e2eb5",
+      "upstream": "03c54faf48a423f9845ec39c73064df6cab486868603b0a6b0f9179d145e2eb5"
+    },
+    "fShowNumbering": {
+      "before": "2aa6de941f90ba3a57b7eabf65374ace70208f7fbb39e376656daa88612b3e57",
+      "after": "2aa6de941f90ba3a57b7eabf65374ace70208f7fbb39e376656daa88612b3e57",
+      "upstream": "7451f4e0b5da62d100edd61e06df27581caaddf03b3fbbd462d7a33c9f56b2c2"
+    },
+    "fShowNumber": {
+      "before": "6f718817de61a6b3502983acd1c53e886fe8ffe1a292fcdcb251c51131d84465",
+      "after": "6f718817de61a6b3502983acd1c53e886fe8ffe1a292fcdcb251c51131d84465",
+      "upstream": "6f718817de61a6b3502983acd1c53e886fe8ffe1a292fcdcb251c51131d84465"
+    },
+    "fShowNumbering3D": {
+      "before": "24e88ec68f0c1739102434add0cc2f7c2168591e8595a098ec1d9574b7081088",
+      "after": "24e88ec68f0c1739102434add0cc2f7c2168591e8595a098ec1d9574b7081088",
+      "upstream": "4100534a87dfc96ee43289f6821b90c24dfa1de359f683fa322f9d2f0a8ada39"
+    },
+    "removeEcho3D": {
+      "before": "909af5c1d630d7cea01ac71c8f494b22df02c80c9f130503c972e4eabc48f8f1",
+      "after": "909af5c1d630d7cea01ac71c8f494b22df02c80c9f130503c972e4eabc48f8f1",
+      "upstream": "909af5c1d630d7cea01ac71c8f494b22df02c80c9f130503c972e4eabc48f8f1"
+    },
+    "fShowNumber3D": {
+      "before": "ab2ce5fddc1ea2815f7b66be9700d4d0bbbebba352f407a9f919059be6bfebad",
+      "after": "ab2ce5fddc1ea2815f7b66be9700d4d0bbbebba352f407a9f919059be6bfebad",
+      "upstream": "385d9de8f9d3b5419ec93907bcf3571a49562f3a352783e5a639b6782c8fb9c9"
+    },
+    "fShowBondAtoms": {
+      "before": "c051db055472953d65676fed2051c265e89cd2b472c0af57768aee588c19d69a",
+      "after": "c051db055472953d65676fed2051c265e89cd2b472c0af57768aee588c19d69a",
+      "upstream": "c051db055472953d65676fed2051c265e89cd2b472c0af57768aee588c19d69a"
+    },
+    "fShowNumberingBonds": {
+      "before": "f2feadb63a2e97c2b8d2e6995f5d052eae383797c8ba0279062f5b9ae199f0ff",
+      "after": "f2feadb63a2e97c2b8d2e6995f5d052eae383797c8ba0279062f5b9ae199f0ff",
+      "upstream": "f2feadb63a2e97c2b8d2e6995f5d052eae383797c8ba0279062f5b9ae199f0ff"
+    },
+    "fHighlightMultiBonds": {
+      "before": "8a58a636a671542994abc92ecf8c63e7bac93c59b84b51fbb8803e33dd8bc4cf",
+      "after": "8a58a636a671542994abc92ecf8c63e7bac93c59b84b51fbb8803e33dd8bc4cf",
+      "upstream": "8a58a636a671542994abc92ecf8c63e7bac93c59b84b51fbb8803e33dd8bc4cf"
+    },
+    "fHighlightMultiBonds3D": {
+      "before": "caf5cd4631a6479ca7e183ec602d39cf30f7db499e362c2c02540a59704b515c",
+      "after": "caf5cd4631a6479ca7e183ec602d39cf30f7db499e362c2c02540a59704b515c",
+      "upstream": "a7a50c80696800d58eed329a27f99f8f6460ea19dc752f63319081bc9f92758a"
+    },
+    "fHighlightSingleBondsCC": {
+      "before": "0c5d01fc868602dac2dca591577476043595ecd9c4e27dd1ee7071941abf98e6",
+      "after": "0c5d01fc868602dac2dca591577476043595ecd9c4e27dd1ee7071941abf98e6",
+      "upstream": "0c5d01fc868602dac2dca591577476043595ecd9c4e27dd1ee7071941abf98e6"
+    },
+    "fHighlightSingleBondsCC3D": {
+      "before": "558b15f26dc93ee453e2823909fdc2c5ebddab6aa2cb7b6e0046ff6c9d72ef1c",
+      "after": "558b15f26dc93ee453e2823909fdc2c5ebddab6aa2cb7b6e0046ff6c9d72ef1c",
+      "upstream": "c0fd5b395a736548f039251083b27e85a75ca23584d1e94cae7fc63cf52c58d2"
+    },
+    "fSetMolVis3D": {
+      "before": "5d91e16d02f54e34a4ab04b30d4e0714d8f9b66eb7008d352d19941684989d5b",
+      "after": "5d91e16d02f54e34a4ab04b30d4e0714d8f9b66eb7008d352d19941684989d5b",
+      "upstream": "5d91e16d02f54e34a4ab04b30d4e0714d8f9b66eb7008d352d19941684989d5b"
+    },
+    "fStableViewportH": {
+      "before": "c0acf725d41d6446dbd85d33f3db40ddd7682039beb82e937ec1c080689e0cb2",
+      "after": "c0acf725d41d6446dbd85d33f3db40ddd7682039beb82e937ec1c080689e0cb2",
+      "upstream": "c0acf725d41d6446dbd85d33f3db40ddd7682039beb82e937ec1c080689e0cb2"
+    },
+    "fViewerHeights2D3D": {
+      "before": "115d979636199e39e12f257a70399050448df91ee6b0584c3153de6736c83b85",
+      "after": "115d979636199e39e12f257a70399050448df91ee6b0584c3153de6736c83b85",
+      "upstream": "115d979636199e39e12f257a70399050448df91ee6b0584c3153de6736c83b85"
+    },
+    "fResizeViewers": {
+      "before": "007d166f953145f02aae8becb6882d143cb45517a7c558ffd66635e730ffa9b3",
+      "after": "007d166f953145f02aae8becb6882d143cb45517a7c558ffd66635e730ffa9b3",
+      "upstream": "007d166f953145f02aae8becb6882d143cb45517a7c558ffd66635e730ffa9b3"
+    },
+    "fInitZoomObserver2D": {
+      "before": "e29affcceb163a2c3060cc781aa811458b1d2edcf60c518807cf8b76d9595b96",
+      "after": "e29affcceb163a2c3060cc781aa811458b1d2edcf60c518807cf8b76d9595b96",
+      "upstream": "e29affcceb163a2c3060cc781aa811458b1d2edcf60c518807cf8b76d9595b96"
+    }
+  }
+}

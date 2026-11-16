@@ -1,0 +1,26 @@
+{
+  "recordedUTC": "2026-11-15T06:44:01.526878+00:00",
+  "validator": "/root/detective_v56_targets_plan",
+  "role": "NAMELECULE_CHEMISTRY_VALIDATOR_V1_20261023",
+  "recordedBy": "Developer transcription of independent returned specialist report",
+  "target": "js/namelecule-molecular-detective-engine.js",
+  "targetSHA256": "020340742102bf2ec5810975fe45b64ba642c3aa409c11b3f0359fb3801b26d6",
+  "verdict": "No actionable P0-P3 findings within frozen17-molecule engine scope",
+  "independentAssertions": 945,
+  "missions": 41,
+  "acceptedAlternatives": 49,
+  "independentChecks": [
+    "Name-derived heavy graphs by adjacency backtracking, formulas, explicit-H valences, actual expanded MOL tables",
+    "Connected-carbon-subset independent parent paths and corresponding branch complements",
+    "Literal OH/CHO/CO/COOH boundaries; no alphaC or acid formylH",
+    "Exact single/multiple C-C bond IDs; no empty acid bond task; diene endpoint-union false positive rejected",
+    "Every omission/extra, opposite kind, unordered selection, complete nonconsecutive ID permutations"
+  ],
+  "developerEvidenceDistinct": "Engine641assertions supplied, not counted as independent",
+  "limits": [
+    "Fixed approved pool/snapshots, not arbitrary substituted names or general nomenclature",
+    "No browser, pixel picking, host serialization or interaction validation",
+    "Does not replace consolidated Reviewer"
+  ],
+  "noWritesOrCoreChanges": true
+}

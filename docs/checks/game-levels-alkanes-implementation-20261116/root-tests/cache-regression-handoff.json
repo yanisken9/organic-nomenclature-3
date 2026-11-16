@@ -1,0 +1,43 @@
+{
+  "recordedUTC": "2026-11-16T07:42:36.178Z",
+  "finding": "REV-LEVELS-1",
+  "before": "repair-cache-before.json",
+  "after": "repair-cache-after.json",
+  "beforeObserved": {
+    "label": "L3-required-cache-generation-31",
+    "isComplete": false,
+    "navigated": false,
+    "aggregateSolved": false,
+    "receipts": [
+      {
+        "level": 1,
+        "seed": "901",
+        "verified": false
+      },
+      {
+        "level": 2,
+        "seed": "902",
+        "verified": true
+      }
+    ]
+  },
+  "afterChecks": 138,
+  "afterFailures": 0,
+  "sourceStable": true,
+  "finalCuts": {
+    "js/namelecule-generated-repair-checkpoint.js": "9e05fb77c1f9d0dca9198fa62ddb72a9d1ae45ff3048826cd2d341b493f70001",
+    "js/namelecule-game-choice-checkpoint.js": "4001de58ad00783fbe5bede9a3ef92edb5422589be5314abe4890852250def46",
+    "js/namelecule-quiz-checkpoints.js": "f52d83aecc582f3214db022a076fbb82af1f187588eccf16d5756a030d67785b"
+  },
+  "compositeGroups": 11,
+  "compositePassed": true,
+  "providerGroups": 7,
+  "providerPassed": true,
+  "testAdjustment": "REV-LEVELS-1: canonical-source-cold prepare is async; new required contexts against an already byte/engine-verified source now return synchronous null after reconstruction. Round/state comparisons unchanged.",
+  "previousEvidencePreserved": "before-cache-regression/",
+  "runtimeEditsByWorker": false,
+  "browserExecution": false,
+  "independentReview": false,
+  "unresolvedFindings": [],
+  "scope": "Actual QCP controller isComplete/continueLesson through VM-only hooks plus actual provider/Composite/pinned engines. Correct raw answer fixtures are memory-only."
+}

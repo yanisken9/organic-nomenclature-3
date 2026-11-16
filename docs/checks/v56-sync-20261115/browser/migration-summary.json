@@ -1,0 +1,132 @@
+{
+  "recordedUTC": "2026-11-15T05:36:44.370231+00:00",
+  "passed": true,
+  "checks": 30,
+  "genuineCorrectUIAttempts": 3,
+  "candidate": "/private/tmp/namelecule-v56-sync-20261115-nqi71wns/candidate",
+  "result": "migration-run2/results.json",
+  "resultSHA256": "b02762952c97e282560cb96ae115cf5168539137967928cb416f8493c0afabff",
+  "sameOrigin": "http://127.0.0.1:52789/",
+  "routes": [
+    "mulermoc-nom-55.html",
+    "mulermoc-nom-56.html"
+  ],
+  "sameTabSessionStorage": true,
+  "normalizedStepDifferences": [],
+  "signaturesEqual": true,
+  "normalizedSignatureSHA256": {
+    "before55Partial": "3e7899045308661835a98d7716554905b97926882b9abcd814bbeb5c3c8cef64",
+    "after56Partial": "3e7899045308661835a98d7716554905b97926882b9abcd814bbeb5c3c8cef64"
+  },
+  "matchingStorageKeys": {
+    "before55Partial": [
+      "namelecule:lesson-checkpoints:v1:2feede3e"
+    ],
+    "after56Partial": [
+      "namelecule:lesson-checkpoints:v1:2feede3e"
+    ],
+    "before55Earned": [
+      "namelecule:lesson-checkpoints:v1:2feede3e"
+    ],
+    "after56Earned": [
+      "namelecule:lesson-checkpoints:v1:2feede3e"
+    ]
+  },
+  "partialPreserved": true,
+  "earned55DistinctMolecules": [
+    "butane",
+    "propane",
+    "methane"
+  ],
+  "earnedPreserved": true,
+  "earnedGateAllowsStep5": true,
+  "actual56IndexAfterEarnedRestore": 4,
+  "sourcePaths": 35,
+  "sourceHashesBeforeHTTPAfterIdentical": true,
+  "matchesOriginal313SourceFreeze": true,
+  "javascriptExceptions": 0,
+  "cleanup": {
+    "migration-run1": {
+      "pid": 11135,
+      "pidAbsent": true,
+      "profileAbsent": true,
+      "bidiPort": 52631,
+      "bidiClosed": true,
+      "serverPort": 52630,
+      "serverClosed": true
+    },
+    "migration-run2": {
+      "pid": 11256,
+      "pidAbsent": true,
+      "profileAbsent": true,
+      "bidiPort": 52790,
+      "bidiClosed": true,
+      "serverPort": 52789,
+      "serverClosed": true
+    }
+  },
+  "failedHarnessAttempt": {
+    "run": "migration-run1",
+    "successfulAssertions": 8,
+    "partialMigrationPassed": true,
+    "reason": "Attempted Undo after reload, but undo history is intentionally transient and button was disabled. Corrected run2 finished restored graph directly using actual remaining groups/bonds/Check. No app change or fabricated receipt.",
+    "evidence": "migration-run1/results.json"
+  },
+  "httpErrors": [
+    {
+      "path": "/favicon.ico",
+      "code": 404
+    }
+  ],
+  "externalRequests": [
+    {
+      "event": "network.beforeRequestSent",
+      "host": "fonts.googleapis.com",
+      "status": null,
+      "count": 3
+    },
+    {
+      "event": "network.beforeRequestSent",
+      "host": "fonts.gstatic.com",
+      "status": null,
+      "count": 25
+    },
+    {
+      "event": "network.beforeRequestSent",
+      "host": "pubchem.ncbi.nlm.nih.gov",
+      "status": null,
+      "count": 15
+    },
+    {
+      "event": "network.fetchError",
+      "host": "openclatura.org",
+      "status": null,
+      "count": 1
+    },
+    {
+      "event": "network.responseCompleted",
+      "host": "fonts.googleapis.com",
+      "status": 200,
+      "count": 3
+    },
+    {
+      "event": "network.responseCompleted",
+      "host": "fonts.gstatic.com",
+      "status": 200,
+      "count": 25
+    },
+    {
+      "event": "network.responseCompleted",
+      "host": "pubchem.ncbi.nlm.nih.gov",
+      "status": 200,
+      "count": 14
+    }
+  ],
+  "limits": [
+    "Developer execution in one owned headless Firefox and ephemeral same-origin localhost; not independent Reviewer execution or published/native-machine qualification.",
+    "Measures current active alkane scenario and Puzzle partial/earned evidence; no claim that arbitrary other historical scenarios or storage from another browser/device were migrated.",
+    "Fonts/PubChem retain external-network dependencies.",
+    "Original313 summary and67-file manifest remain untouched; this supplemental evidence has its own manifest."
+  ],
+  "ownedChanges": "Only migration.py and supplemental evidence in this directory; no application/core/controller/game/scenario edits, commit or publication."
+}

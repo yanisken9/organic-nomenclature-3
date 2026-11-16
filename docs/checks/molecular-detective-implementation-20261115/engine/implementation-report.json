@@ -1,0 +1,54 @@
+{
+  "recordedUTC": "2026-11-15T06:36:01.328949+00:00",
+  "role": "NAMELECULE_DEVELOPER_V1_20261023",
+  "scope": "Approved bounded Molecular Detective engine only; exact17 starter pool. Parent records approval, shared notes, browser evidence and consolidated independent review.",
+  "comparisonBase": "168e3cec01f941a84d40bbe0dc07156e7baa35d0",
+  "pathsSHA256": {
+    "js/namelecule-molecular-detective-engine.js": "020340742102bf2ec5810975fe45b64ba642c3aa409c11b3f0359fb3801b26d6",
+    "docs/checks/molecular-detective-implementation-20261115/engine/check-engine.js": "9b58756c86d4c21a3709be40c4ef397604bcb31768b2a44ab3cd1501bfc7446d",
+    "docs/checks/molecular-detective-implementation-20261115/engine/results.json": "f8c16a86abe13caeb9f64ae226659aeea890a21de737c49e509f8df149a20d69",
+    "docs/checks/molecular-detective-implementation-20261115/engine/snapshots.json": "8f1df784be98c85033f0ece0b22d5d666380362ee81d8d94809376e702ae957f"
+  },
+  "checks": [
+    {
+      "command": "node --check js/namelecule-molecular-detective-engine.js",
+      "exit": 0
+    },
+    {
+      "command": "node docs/checks/molecular-detective-implementation-20261115/engine/check-engine.js --write",
+      "exit": 0,
+      "assertions": 641,
+      "molecules": 17,
+      "missions": 41,
+      "acceptedAlternatives": 49
+    },
+    {
+      "command": "git diff --check -- js/namelecule-molecular-detective-engine.js docs/checks/molecular-detective-implementation-20261115/engine",
+      "exit": 0
+    }
+  ],
+  "initialDiagnostic": "Initial negative-test expectation used code bond for removed explicitH. Actual engine rejected at expanded-valence; corrected test expectation, final complete run passed. No runtime defect was hidden.",
+  "api": {
+    "global": "window.NameleculeMolecularDetectiveEngine",
+    "frozen": true,
+    "starterIds": "frozen array of17 approved keys",
+    "missions": "snapshot -> array {id,pieceId,kind,family,prompt,explanation,accepted:array of sorted numeric ID sets}; throws coded Error for invalid or unsupported input/targets",
+    "grade": "(mission,{atoms:[],bonds:[]}) -> {correct,kind:exact|empty|wrong-kind|incorrect}; rawH remainsH, sets unordered; throws only invalidmission",
+    "validateSnapshot": "snapshot -> {valid,code,message?}; graph/shape/classification check, not complete mission recognition"
+  },
+  "coreChangesByThisAgent": false,
+  "currentCore56SHA256": "01e4b44578dc9ed6c8a484c5d38ee8a56e44ce2fc81ac6cf479a8333718ee8b5",
+  "core56MatchesPlanBaseline": true,
+  "upstreamImports": [],
+  "locallyAuthoredRuntime": [
+    "js/namelecule-molecular-detective-engine.js"
+  ],
+  "limitations": [
+    "Only17 supported starter molecules. Parent selection equivalence applies to the two bounded branched alkane trees, not arbitrary nomenclature.",
+    "This is Developer regression execution, not independent review. No browser/DOM/JSME click/typography tests performed by this agent.",
+    "Test namepieces use actual core56 names/components and the native Greek euphony rule. Actual host DOM serialization is verified separately by parent.",
+    "No external-service behavior, physical device, offline or conference reliability qualification."
+  ],
+  "documentationHandoff": "Primary agent should record changed runtime/evidence paths, actual checks, no core edits here, and review outcomes in session/contribution notes. No shared notes were written by engine agent.",
+  "gitActions": "No stage, commit, push or publication."
+}

@@ -1,0 +1,316 @@
+{
+  "recordedUTC": "2026-11-16T08:04:38.458821+00:00",
+  "role": "Developer browser evidence; not independent review",
+  "runs": [
+    {
+      "path": "run-chrome-legacy-migration-080010/results.json",
+      "sha256": "9c5e0a3d5d0aebb6b4fe9a560c57d793f8684d26539d61058f944daf96a1476c",
+      "engine": "chrome",
+      "mode": "legacy-migration",
+      "completed": true,
+      "checks": 94,
+      "genuineCorrectAnswers": 3,
+      "cut": "c2967247f859a15e02677892de75ca897a68ce2cd5bb0ad96a0db28c4aa79d3e",
+      "sourceUnchanged": true,
+      "javascriptExceptions": 0,
+      "networkErrors": [
+        {
+          "kind": "Network.loadingFailed",
+          "errorText": "net::ERR_ABORTED",
+          "canceled": true,
+          "type": "Document",
+          "url": null
+        },
+        {
+          "kind": "Network.loadingFailed",
+          "errorText": "net::ERR_ABORTED",
+          "canceled": true,
+          "type": "Document",
+          "url": null
+        },
+        {
+          "kind": "Network.loadingFailed",
+          "errorText": "net::ERR_ABORTED",
+          "canceled": true,
+          "type": "Document",
+          "url": null
+        }
+      ],
+      "ownedBrowserExited": true,
+      "ownedServerClosed": true,
+      "ownedProfileRemoved": true,
+      "cacheVariants": {},
+      "failure": []
+    },
+    {
+      "path": "run-chrome-lesson-required-detective-074401/results.json",
+      "sha256": "cfc1d1cf46655ae8ea0fba1796e499b7b1cfc65ac5ee462864ef2e3e57eb1825",
+      "engine": "chrome",
+      "mode": "lesson-required-detective",
+      "completed": false,
+      "checks": 0,
+      "genuineCorrectAnswers": 0,
+      "cut": "fa33bb755cce72b3c697fc87b88704e669a9587a0579ab2b1bd859f4816f5150",
+      "sourceUnchanged": true,
+      "javascriptExceptions": 0,
+      "networkErrors": [],
+      "ownedBrowserExited": true,
+      "ownedServerClosed": true,
+      "ownedProfileRemoved": null,
+      "cacheVariants": {},
+      "failure": [
+        "PermissionError: [Errno 1] Operation not permitted"
+      ]
+    },
+    {
+      "path": "run-chrome-lesson-required-detective-074417/results.json",
+      "sha256": "f1f7a47035cf44bea59fd1cbccb42e0eda49775ad243bc71cd3e46d0bd7eb1bb",
+      "engine": "chrome",
+      "mode": "lesson-required-detective",
+      "completed": true,
+      "checks": 99,
+      "genuineCorrectAnswers": 9,
+      "cut": "fa33bb755cce72b3c697fc87b88704e669a9587a0579ab2b1bd859f4816f5150",
+      "sourceUnchanged": true,
+      "javascriptExceptions": 0,
+      "networkErrors": [],
+      "ownedBrowserExited": true,
+      "ownedServerClosed": true,
+      "ownedProfileRemoved": true,
+      "cacheVariants": {},
+      "failure": []
+    },
+    {
+      "path": "run-chrome-native-cache-075447/results.json",
+      "sha256": "12dadd3f679045e8076fbbe97ef429bc7429cb28cb9b0bcbb262ae3754b82212",
+      "engine": "chrome",
+      "mode": "native-cache",
+      "completed": true,
+      "checks": 46,
+      "genuineCorrectAnswers": 4,
+      "cut": "c2967247f859a15e02677892de75ca897a68ce2cd5bb0ad96a0db28c4aa79d3e",
+      "sourceUnchanged": true,
+      "javascriptExceptions": 0,
+      "networkErrors": [
+        {
+          "kind": "Network.loadingFailed",
+          "errorText": "net::ERR_ABORTED",
+          "canceled": true,
+          "type": "Document",
+          "url": null
+        },
+        {
+          "kind": "Network.loadingFailed",
+          "errorText": "net::ERR_ABORTED",
+          "canceled": true,
+          "type": "Document",
+          "url": null
+        }
+      ],
+      "ownedBrowserExited": true,
+      "ownedServerClosed": true,
+      "ownedProfileRemoved": true,
+      "cacheVariants": {},
+      "failure": []
+    },
+    {
+      "path": "run-chrome-native-cache-080246/results.json",
+      "sha256": "21cc938fe4fd39c8d588eca5296319ed623c3e2af15bfd94a0f557b405c9e123",
+      "engine": "chrome",
+      "mode": "native-cache",
+      "completed": true,
+      "checks": 52,
+      "genuineCorrectAnswers": 4,
+      "cut": "c2967247f859a15e02677892de75ca897a68ce2cd5bb0ad96a0db28c4aa79d3e",
+      "sourceUnchanged": true,
+      "javascriptExceptions": 0,
+      "networkErrors": [
+        {
+          "kind": "Network.loadingFailed",
+          "errorText": "net::ERR_ABORTED",
+          "canceled": true,
+          "type": "Document",
+          "url": null
+        },
+        {
+          "kind": "Network.loadingFailed",
+          "errorText": "net::ERR_ABORTED",
+          "canceled": true,
+          "type": "Document",
+          "url": null
+        }
+      ],
+      "ownedBrowserExited": true,
+      "ownedServerClosed": true,
+      "ownedProfileRemoved": true,
+      "cacheVariants": {
+        "mix-a": {
+          "js/namelecule-game-repair.js": "new",
+          "js/namelecule-generated-repair-checkpoint.js": "old",
+          "js/namelecule-game-choice-checkpoint.js": "new"
+        },
+        "mix-b": {
+          "js/namelecule-game-repair.js": "old",
+          "js/namelecule-generated-repair-checkpoint.js": "new",
+          "js/namelecule-game-choice-checkpoint.js": "old"
+        }
+      },
+      "failure": []
+    },
+    {
+      "path": "run-chrome-standalone-builder-074658/results.json",
+      "sha256": "1fdd4e4fb48a37c9e07739b6eced67f770bec56cb2a08eaee38266a1f4084532",
+      "engine": "chrome",
+      "mode": "standalone-builder",
+      "completed": true,
+      "checks": 91,
+      "genuineCorrectAnswers": 4,
+      "cut": "fa33bb755cce72b3c697fc87b88704e669a9587a0579ab2b1bd859f4816f5150",
+      "sourceUnchanged": true,
+      "javascriptExceptions": 0,
+      "networkErrors": [],
+      "ownedBrowserExited": true,
+      "ownedServerClosed": true,
+      "ownedProfileRemoved": true,
+      "cacheVariants": {},
+      "failure": []
+    },
+    {
+      "path": "run-chrome-standalone-detective-075133/results.json",
+      "sha256": "1c1d6e6bb4b375866753170a50ab944ca15c0fa3609344ccebeb1783debe7c08",
+      "engine": "chrome",
+      "mode": "standalone-detective",
+      "completed": false,
+      "checks": 11,
+      "genuineCorrectAnswers": 1,
+      "cut": "c2967247f859a15e02677892de75ca897a68ce2cd5bb0ad96a0db28c4aa79d3e",
+      "sourceUnchanged": true,
+      "javascriptExceptions": 0,
+      "networkErrors": [],
+      "ownedBrowserExited": true,
+      "ownedServerClosed": true,
+      "ownedProfileRemoved": true,
+      "cacheVariants": {},
+      "failure": [
+        "AssertionError: ('Harness has no visible hit point', 'document.querySelector(\"#next-mission\")', {'x': 0, 'y': 0, 'hit': False, 'disabled': False, 'headerAction': False, 'headerBottom': 0, 'dialogBottom': 1000})"
+      ]
+    },
+    {
+      "path": "run-chrome-standalone-detective-075229/results.json",
+      "sha256": "718fc1c10e3f18f9f027c40a16bf708c6b386743da7b240f077aa0f7b15beeef",
+      "engine": "chrome",
+      "mode": "standalone-detective",
+      "completed": true,
+      "checks": 177,
+      "genuineCorrectAnswers": 19,
+      "cut": "c2967247f859a15e02677892de75ca897a68ce2cd5bb0ad96a0db28c4aa79d3e",
+      "sourceUnchanged": true,
+      "javascriptExceptions": 0,
+      "networkErrors": [],
+      "ownedBrowserExited": true,
+      "ownedServerClosed": true,
+      "ownedProfileRemoved": true,
+      "cacheVariants": {},
+      "failure": []
+    },
+    {
+      "path": "run-chrome-standalone-puzzle-075034/results.json",
+      "sha256": "a0f4109e332ed5487f7defa48e43ce847912a6702312123b04eea0f261c0c63d",
+      "engine": "chrome",
+      "mode": "standalone-puzzle",
+      "completed": true,
+      "checks": 105,
+      "genuineCorrectAnswers": 3,
+      "cut": "c2967247f859a15e02677892de75ca897a68ce2cd5bb0ad96a0db28c4aa79d3e",
+      "sourceUnchanged": true,
+      "javascriptExceptions": 0,
+      "networkErrors": [],
+      "ownedBrowserExited": true,
+      "ownedServerClosed": true,
+      "ownedProfileRemoved": true,
+      "cacheVariants": {},
+      "failure": []
+    },
+    {
+      "path": "run-chrome-standalone-repair-075400/results.json",
+      "sha256": "27ca237257ff16e7d6348b477a049cc7974fdaeb44113b015bb437dfa33e7717",
+      "engine": "chrome",
+      "mode": "standalone-repair",
+      "completed": true,
+      "checks": 60,
+      "genuineCorrectAnswers": 9,
+      "cut": "c2967247f859a15e02677892de75ca897a68ce2cd5bb0ad96a0db28c4aa79d3e",
+      "sourceUnchanged": true,
+      "javascriptExceptions": 0,
+      "networkErrors": [],
+      "ownedBrowserExited": true,
+      "ownedServerClosed": true,
+      "ownedProfileRemoved": true,
+      "cacheVariants": {},
+      "failure": []
+    },
+    {
+      "path": "run-firefox-lesson-optional-detective-074545/results.json",
+      "sha256": "df35a50aa766f6d0890614aaa6e82cfa11e28f6f9ed1b3ebc1327371a6ef1489",
+      "engine": "firefox",
+      "mode": "lesson-optional-detective",
+      "completed": true,
+      "checks": 169,
+      "genuineCorrectAnswers": 12,
+      "cut": "fa33bb755cce72b3c697fc87b88704e669a9587a0579ab2b1bd859f4816f5150",
+      "sourceUnchanged": true,
+      "javascriptExceptions": 0,
+      "networkErrors": [],
+      "ownedBrowserExited": true,
+      "ownedServerClosed": true,
+      "ownedProfileRemoved": true,
+      "cacheVariants": {},
+      "failure": []
+    }
+  ],
+  "successfulTotals": {
+    "checks": 893,
+    "genuineCorrectAnswers": 67
+  },
+  "byCut": {
+    "c2967247f859a15e02677892de75ca897a68ce2cd5bb0ad96a0db28c4aa79d3e": {
+      "runs": 6,
+      "checks": 534,
+      "genuineCorrectAnswers": 42
+    },
+    "fa33bb755cce72b3c697fc87b88704e669a9587a0579ab2b1bd859f4816f5150": {
+      "runs": 3,
+      "checks": 359,
+      "genuineCorrectAnswers": 25
+    }
+  },
+  "failuresRetained": {
+    "074401": "Sandbox loopback bind denied before browser startup; exact approved task rerun with escalation.",
+    "075133": "Harness attempted completion-only Detective Next on unsolved second assignment. Corrected harness solves every bag assignment; next final-cut run passed. Initial failure capture erroneously called lesson rec() on standalone and failed; failed report preserved."
+  },
+  "limitations": [
+    "Headless isolated Chrome and Firefox with CSS390 emulation; no physical mobile, personal Firefox, conference machine or offline guarantee.",
+    "Full required lesson and Firefox optional/crossgame flows are fa33-cut; final c296 differs only missing-Detective-engine guard and cache chain, whose normal controlled startup/raw partial cold reload were exercised at finalcut.",
+    "Missing-engine browser network-block fixture was not run; Developer and independent Reviewer VM evidence belongs to root records.",
+    "Standalone Detective other13 category exercised with one genuine answer; source count/band and remaining-profile oracle validation are separate VM evidence.",
+    "Parent v2 complete triples were browser-exercised for Detective L1/L2/L3 and Puzzle L2. All4games/all3levels were exercised standalone; legacy parent evidence includes4partials, Builder/D native cache answers and genuine Repair-earned migration. New parent Builder/Repair full v2 triples are not claimed as browser coverage.",
+    "Author preview uses explicitly authorized public author APIs; Export delivery was intercepted only to inspect actual generated Blob in memory, then restored; FileReader Import API was actual. No Save dialog/download/disk export tested here.",
+    "Coherent old3/new3 and fixed mix-a/mix-b cached-JS compatibility use exact HTTP source aliases and fresh/warm reloads, not arbitrary uncontrolled cache states.",
+    "Native3D actual model/representation/zoom cycle was recorded for one randomly assigned L2 Builder molecule at fa33; no final-cut exhaustive14 3D browser coverage claim."
+  ],
+  "existingObservedIssue": {
+    "scope": "Existing status wording, not a new regression finding",
+    "evidence": "legacy-puzzle-current-bank-droparea-390.png shows one restored CH3 while the interaction announcement still says Νέο μόριο. Το πλαίσιο είναι κενό. Both before17 and current Puzzle call startRound() before restoring graph and do not replace that announcement. Raw graph/context restore passed. No product change made for this pre-existing wording."
+  },
+  "allOwnedResourcesClean": true,
+  "runLockAbsent": true,
+  "visualInspection": {
+    "filesViewed": [
+      "run-chrome-legacy-migration-080010/gate11-visible-level-badges-390.png",
+      "run-chrome-legacy-migration-080010/gate11-visible-level-badges-1500.png",
+      "run-chrome-legacy-migration-080010/legacy-builder-current-bank-droparea-390.png",
+      "run-chrome-legacy-migration-080010/legacy-puzzle-current-bank-droparea-390.png"
+    ],
+    "observed": "Both viewport badge panels visibly state required1/2 and optional3; Builder/Puzzle bank is directly below its construction area, existing controls remain below bank. No horizontal clipping observed in these four screenshots."
+  }
+}

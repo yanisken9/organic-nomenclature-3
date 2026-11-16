@@ -1,0 +1,173 @@
+{
+  "recordedUTC": "2026-11-16T06:47:02.275246+00:00",
+  "role": "Developer actual browser execution; not independent browser execution",
+  "status": "Completed bounded final browser checks; exclusive browser slot returned",
+  "frozenManifestSHA256": "1aeef0391e4fe93338e6773196adb6cb85f21f1854b9a399ec30e312f308aa75",
+  "completedRuns": [
+    {
+      "path": "docs/checks/four-game-integration-20261116/lesson-browser/run-detective-required-063759/results.json",
+      "sha256": "0c3766fc60b29935d6fa59e3e429f1c3c37b4407297b3529fa97cb8b354b889a",
+      "engine": "Firefox",
+      "mode": "detective-required",
+      "checks": 202,
+      "correctUIAttempts": 6,
+      "actual3DModels": 0,
+      "capturedJSexceptions": 0,
+      "continueInput": "pointer",
+      "legacyCases": [],
+      "allFrozenHTTPBeforeAfterEqual": true,
+      "ownedCleanup": true,
+      "exactExecutedHarnessSHA256": "5e227d49bde30ce1d8dd246c28ab4df12d231150e13d74fc0b6fad3f72af646e",
+      "exactExecutedSharedSHA256": null,
+      "executedArchives": {}
+    },
+    {
+      "path": "docs/checks/four-game-integration-20261116/lesson-browser/run-detective-required-063940/chrome-results.json",
+      "sha256": "08be268a0db51331804969ce7f6c9593f98a7a3349ff2473c3762d002cb36c69",
+      "engine": "Google Chrome headless / direct CDP; Developer execution",
+      "mode": "detective-required",
+      "checks": 690,
+      "correctUIAttempts": 6,
+      "actual3DModels": 6,
+      "capturedJSexceptions": 0,
+      "continueInput": "pointer",
+      "legacyCases": [],
+      "allFrozenHTTPBeforeAfterEqual": true,
+      "ownedCleanup": true,
+      "exactExecutedHarnessSHA256": "f888dfe2fb37e261651a6967184267ebaf9ee13874f21bd2147edfb3fccd00e3",
+      "exactExecutedSharedSHA256": "1fdcc06b26cafb7163ffead5049170d07cb9f5b3e9284655bf330107ecb4249d",
+      "executedArchives": {
+        "docs/checks/four-game-integration-20261116/lesson-browser/harness-snapshots/replay-detective-1fdcc06b26cafb7163ffead5049170d07cb9f5b3e9284655bf330107ecb4249d.py": "1fdcc06b26cafb7163ffead5049170d07cb9f5b3e9284655bf330107ecb4249d",
+        "docs/checks/four-game-integration-20261116/lesson-browser/harness-snapshots/replay-chrome-5c678dcf671871337598ff228af624afb13f8ee05ee625e6c821b0c05bb09ce3.py": "5c678dcf671871337598ff228af624afb13f8ee05ee625e6c821b0c05bb09ce3",
+        "docs/checks/four-game-integration-20261116/lesson-browser/harness-snapshots/replay-chrome-hydration-f888dfe2fb37e261651a6967184267ebaf9ee13874f21bd2147edfb3fccd00e3.py": "f888dfe2fb37e261651a6967184267ebaf9ee13874f21bd2147edfb3fccd00e3"
+      }
+    },
+    {
+      "path": "docs/checks/four-game-integration-20261116/lesson-browser/run-old3-builder-064519/chrome-results.json",
+      "sha256": "ff0fa4ab9e3ac734bb3f0442631c2a58bfa6a1b0da2f9200e94dcc25466f2ab6",
+      "engine": "Google Chrome headless / direct CDP; Developer execution",
+      "mode": "old3-builder",
+      "checks": 19,
+      "correctUIAttempts": 0,
+      "actual3DModels": 0,
+      "capturedJSexceptions": 0,
+      "continueInput": "pointer",
+      "legacyCases": [
+        "partial"
+      ],
+      "allFrozenHTTPBeforeAfterEqual": true,
+      "ownedCleanup": true,
+      "exactExecutedHarnessSHA256": "5c678dcf671871337598ff228af624afb13f8ee05ee625e6c821b0c05bb09ce3",
+      "exactExecutedSharedSHA256": "f729f078df558ce73fbb905c5d906681c5c295157c98267335e1e535b2f91eb4",
+      "executedArchives": {
+        "replay-detective.py": {
+          "path": "/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/four-game-integration-20261116/lesson-browser/harness-snapshots/replay-detective-f729f078df558ce73fbb905c5d906681c5c295157c98267335e1e535b2f91eb4.py",
+          "sha256": "f729f078df558ce73fbb905c5d906681c5c295157c98267335e1e535b2f91eb4"
+        },
+        "replay-chrome.py": {
+          "path": "/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/four-game-integration-20261116/lesson-browser/harness-snapshots/replay-chrome-5c678dcf671871337598ff228af624afb13f8ee05ee625e6c821b0c05bb09ce3.py",
+          "sha256": "5c678dcf671871337598ff228af624afb13f8ee05ee625e6c821b0c05bb09ce3"
+        },
+        "legacy-solve-helpers.py": {
+          "path": "/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/four-game-integration-20261116/lesson-browser/harness-snapshots/legacy-solve-helpers-37c06b6da15842426c6ad10d05de8cdd486a27ba25b524b7e0ed7c6c3a20b1fc.py",
+          "sha256": "37c06b6da15842426c6ad10d05de8cdd486a27ba25b524b7e0ed7c6c3a20b1fc"
+        }
+      }
+    },
+    {
+      "path": "docs/checks/four-game-integration-20261116/lesson-browser/run-old3-puzzle-064547/chrome-results.json",
+      "sha256": "212862cdf31d4dc808702e43f34a29fad812474490f008c0ff652ab942a82c82",
+      "engine": "Google Chrome headless / direct CDP; Developer execution",
+      "mode": "old3-puzzle",
+      "checks": 19,
+      "correctUIAttempts": 0,
+      "actual3DModels": 0,
+      "capturedJSexceptions": 0,
+      "continueInput": "pointer",
+      "legacyCases": [
+        "partial"
+      ],
+      "allFrozenHTTPBeforeAfterEqual": true,
+      "ownedCleanup": true,
+      "exactExecutedHarnessSHA256": "5c678dcf671871337598ff228af624afb13f8ee05ee625e6c821b0c05bb09ce3",
+      "exactExecutedSharedSHA256": "f729f078df558ce73fbb905c5d906681c5c295157c98267335e1e535b2f91eb4",
+      "executedArchives": {
+        "replay-chrome.py": {
+          "path": "/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/four-game-integration-20261116/lesson-browser/harness-snapshots/replay-chrome-5c678dcf671871337598ff228af624afb13f8ee05ee625e6c821b0c05bb09ce3.py",
+          "sha256": "5c678dcf671871337598ff228af624afb13f8ee05ee625e6c821b0c05bb09ce3"
+        },
+        "replay-detective.py": {
+          "path": "/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/four-game-integration-20261116/lesson-browser/harness-snapshots/replay-detective-f729f078df558ce73fbb905c5d906681c5c295157c98267335e1e535b2f91eb4.py",
+          "sha256": "f729f078df558ce73fbb905c5d906681c5c295157c98267335e1e535b2f91eb4"
+        },
+        "legacy-solve-helpers.py": {
+          "path": "/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/four-game-integration-20261116/lesson-browser/harness-snapshots/legacy-solve-helpers-37c06b6da15842426c6ad10d05de8cdd486a27ba25b524b7e0ed7c6c3a20b1fc.py",
+          "sha256": "37c06b6da15842426c6ad10d05de8cdd486a27ba25b524b7e0ed7c6c3a20b1fc"
+        }
+      }
+    },
+    {
+      "path": "docs/checks/four-game-integration-20261116/lesson-browser/run-old3-repair-064449/chrome-results.json",
+      "sha256": "3797b45af9585dd7a5733910a021cf7857b3c59249383968ea2d0a61b4886eee",
+      "engine": "Google Chrome headless / direct CDP; Developer execution",
+      "mode": "old3-repair",
+      "checks": 43,
+      "correctUIAttempts": 3,
+      "actual3DModels": 0,
+      "capturedJSexceptions": 0,
+      "continueInput": "pointer",
+      "legacyCases": [
+        "partial",
+        "earned"
+      ],
+      "allFrozenHTTPBeforeAfterEqual": true,
+      "ownedCleanup": true,
+      "exactExecutedHarnessSHA256": "5c678dcf671871337598ff228af624afb13f8ee05ee625e6c821b0c05bb09ce3",
+      "exactExecutedSharedSHA256": "f729f078df558ce73fbb905c5d906681c5c295157c98267335e1e535b2f91eb4",
+      "executedArchives": {
+        "replay-chrome.py": {
+          "path": "/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/four-game-integration-20261116/lesson-browser/harness-snapshots/replay-chrome-5c678dcf671871337598ff228af624afb13f8ee05ee625e6c821b0c05bb09ce3.py",
+          "sha256": "5c678dcf671871337598ff228af624afb13f8ee05ee625e6c821b0c05bb09ce3"
+        },
+        "legacy-solve-helpers.py": {
+          "path": "/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/four-game-integration-20261116/lesson-browser/harness-snapshots/legacy-solve-helpers-37c06b6da15842426c6ad10d05de8cdd486a27ba25b524b7e0ed7c6c3a20b1fc.py",
+          "sha256": "37c06b6da15842426c6ad10d05de8cdd486a27ba25b524b7e0ed7c6c3a20b1fc"
+        },
+        "replay-detective.py": {
+          "path": "/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/four-game-integration-20261116/lesson-browser/harness-snapshots/replay-detective-f729f078df558ce73fbb905c5d906681c5c295157c98267335e1e535b2f91eb4.py",
+          "sha256": "f729f078df558ce73fbb905c5d906681c5c295157c98267335e1e535b2f91eb4"
+        }
+      }
+    }
+  ],
+  "totals": {
+    "checks": 973,
+    "genuineCorrectSubmissions": 15,
+    "capturedJSexceptions": 0
+  },
+  "verified": [
+    "Firefox actual required Detective gates4/11,6raw nativeSVG/Check corrects,exact partial+earned reload,alternateparent,commoncounter/locking,390resize,andtrustedpointerContinue5/12.",
+    "Chrome actualMain57/Builder55/Detector56all147 forms;18new2Drepresentationloadsandsixsingle3DmodelswithcorrectcuratedSDFpaths;requiredDetective6corrects/bothgates/pointerContinue5/12.",
+    "Allthreeactualarchivedbeforeadapter/scenariopartialprogressmigrates,currentrecordwinslatergenuineoldkeychanges;genuineRepair3moleculeearnedreceiptmigratesandallowsstep5."
+  ],
+  "normalizationLimit": "Only untouched future Repair distractor choiceOrder may normalize; active question/choices/selection/order/attempts/seed/priorrawuserprogress and earnedreceipt remain exact. Failurecaptures064210/064319retained; unchangedgeneratedrestore91–95 and root/Reviewer same-version comparator establish existing behavior.",
+  "earlierEvidence": "Prior190passingcheck/6correct prefix covered optional Detective triple and3other-game switches before finalP1/hydrationfix; retained separately, not counted in final16 totals or represented as a full completed run.",
+  "remainingUntested": [
+    "Builder/Puzzle earned browsertriples not rerun; independent/source/memory restore coverage belongs to root.",
+    "No fresh optionalfinaltriple/switch replay after finalP1fix; earlier actual prefix and final adapter/source checks remain bounded evidence.",
+    "No physical mobile, personal browser, offline or conference demonstration qualification; JSmol j2s/fonts/services remain external dependencies.",
+    "3D model loading/graph sanity does not certify energy/experimental geometry."
+  ],
+  "failuresRetained": [
+    "SandboxloopbackEPERM before browserlaunch",
+    "Stale feedbackselector harnessassumption",
+    "Pre-fix Firefoxwarm-providerContinue loop and diagnostic failures",
+    "Chrome URLfragment CDP shim mismatch",
+    "Pre-fix commoncustomhydration overwrite inChrome",
+    "Overstrict unplayed Repair distractor-order equality assertion"
+  ],
+  "productEditsDuringFinalBrowserRuns": false,
+  "coreEditsByThisAgent": false,
+  "personalBrowsersAndPreview8013Touched": false,
+  "metadataAudit": "Original inaccurate limits sentences are retained with explicit limitClarification. Exact executed Firefox202 and Chrome690 shared sources are SHA-matched archives with delta/identity records; later old3 runs archive execution sources at startup."
+}

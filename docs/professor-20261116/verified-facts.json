@@ -1,0 +1,347 @@
+{
+  "date": "2026-11-16",
+  "preparedUTC": "2026-11-16T09:32:46.630314+00:00",
+  "scope": "Professor report covering the locally completed v56/v57 integrations and four reviewed 2026-11-16 logical units. The report author inspected result documents, actual manifests and selected evidence metadata, and verified current bytes. The report author did not rerun application, browser or chemistry tests.",
+  "publicationStatus": "PENDING",
+  "delivery": {
+    "status": "PENDING",
+    "publicRuntimeVerified": false,
+    "runtimeCommit": null,
+    "fullSnapshotCommit": null,
+    "backupCopiesVerified": false,
+    "evidence": [],
+    "note": "Release coordinator must update after actual source/public-byte/browser and backup verification. This draft claims no new full save or publication success."
+  },
+  "previousPublishedBaseline": {
+    "report": "docs/professor-20261112/update.html",
+    "finalRevisionReportedByCoordinator": "72ea8c17",
+    "mainVersion": 55
+  },
+  "activeMainVersion": 57,
+  "libraryMolecules": 147,
+  "alkaneCatalogMolecules": 14,
+  "newAlkanes": [
+    "2-μεθυλοβουτάνιο",
+    "3-μεθυλοπεντάνιο",
+    "3-αιθυλοπεντάνιο",
+    "2,2-διμεθυλοπροπάνιο",
+    "2,2-διμεθυλοβουτάνιο",
+    "3-αιθυλο-2-μεθυλοπεντάνιο"
+  ],
+  "gameNames": [
+    "Συνεργείο ονομάτων",
+    "Χτίσε το όνομα",
+    "Μοριακό παζλ",
+    "Μοριακός ντεντέκτιβ"
+  ],
+  "entryPoints": {
+    "welcome": "Second existing card: all four games",
+    "alkaneLessonSteps": [
+      4,
+      11
+    ]
+  },
+  "levelPolicy": {
+    "classifier": "Number of alkyl substituents outside an appropriate parent chain; not total C atoms or an empirical learner-difficulty measure",
+    "bands": [
+      {
+        "level": 1,
+        "label": "Βασικό",
+        "alkylSubstituents": 0,
+        "molecules": 5
+      },
+      {
+        "level": 2,
+        "label": "Ενδιάμεσο",
+        "alkylSubstituents": 1,
+        "molecules": 4
+      },
+      {
+        "level": 3,
+        "label": "Προχωρημένο",
+        "alkylSubstituents": "2 or more",
+        "molecules": 5
+      }
+    ],
+    "requiredByStep": {
+      "4": [
+        1
+      ],
+      "11": [
+        1,
+        2
+      ]
+    },
+    "optionalLevels": [
+      3
+    ],
+    "perRequiredLevel": "Three different correct molecules within the same game, level and attempt. Another game may be used at the next level.",
+    "step11Basic": "Fresh attempt in this stop; step4 completion alone does not substitute.",
+    "step12Molecules": 14,
+    "legacy": "Existing attempts retain their original source contract; earned unlocks remain valid."
+  },
+  "viewportAcceptance": {
+    "manifest": {
+      "path": "docs/checks/game-viewport-implementation-20261116/verification-target.json",
+      "sha256": "52c43a50100392ef764e950402d4ed774f6d80e236abc03b61be1faa94afb7bf",
+      "bytes": 8647
+    },
+    "finalTargetFiles": 24,
+    "beforeFiles": 22,
+    "targetViewportsCSSpx": [
+      [
+        1024,
+        640
+      ],
+      [
+        1280,
+        720
+      ],
+      [
+        1440,
+        900
+      ],
+      [
+        390,
+        700
+      ]
+    ],
+    "browserZoomPercentVerified": 100,
+    "Chrome": "All 16 initial game/size views, required mixed triples, optional3 does not unlock, partial/earned cold restore, all 12 steps, real Puzzle pointer/Delete/Undo.",
+    "Firefox": "Detective at 4 sizes, genuine triple/earned restore/Continue, native55/56 compatibility; not the same full cross-product.",
+    "realBrowser125and200ZoomVerified": false,
+    "newLayout3DVerified": false,
+    "browserEvidenceRole": "Developer execution, independently inspected by Reviewer; no independent Reviewer browser execution.",
+    "manifestCurrentByteChecks": {
+      "files": {
+        "count": 24,
+        "mismatches": []
+      },
+      "protectedDependencies": {
+        "count": 16,
+        "mismatches": []
+      },
+      "coreBaseline": {
+        "count": 13,
+        "mismatches": []
+      }
+    }
+  },
+  "independentReview": {
+    "units": [
+      "alkane-pool",
+      "four-game-integration",
+      "game-levels-alkanes",
+      "game-viewport"
+    ],
+    "freshContext": true,
+    "reviewerBrowserExecution": false,
+    "newOpenActionableFindingsWithinReviewedScope": [],
+    "preexistingOpenFindings": [
+      {
+        "id": "PRE-LEVELS-1",
+        "severity": "P3",
+        "behavior": "Puzzle may announce an empty canvas after restoration of a non-empty graph; no graph or progress loss."
+      }
+    ]
+  },
+  "core": {
+    "authoredOrModifiedDuring20261116UnitsAndSave": false,
+    "existingCoreFilesAtSaveStart": 13,
+    "includedFrom20261115Sync": [
+      {
+        "path": "js/mulermoc-nom-core-56.js",
+        "sha256": "01e4b44578dc9ed6c8a484c5d38ee8a56e44ce2fc81ac6cf479a8333718ee8b5",
+        "bytes": 256724
+      },
+      {
+        "path": "js/mulermoc-nom-core-57.js",
+        "sha256": "c41b722db2fb3748f827d19ee1f05d7d8f680bb9f51c664305baa7d49c132c7e",
+        "bytes": 257047
+      }
+    ],
+    "v57Behavior": "fOrientChainPath and fOrientChainPath3D orient equivalent terminal characteristic groups consistently in 2D/3D.",
+    "retainedEarlierCores": [
+      {
+        "path": "js/mulermoc-nom-core-55.js",
+        "sha256": "6cbdbd0ce60f5d66ff3e6925cdfd48e470764baa02b6263f325eff356df5e270",
+        "bytes": 248664
+      },
+      {
+        "path": "js/mulermoc-nom-core-52.js",
+        "sha256": "d2138418ff630ab77e578b80ca8ba3a10cc1b877c3ab8c0e5c2735ffcd1f24a2",
+        "bytes": 179637
+      }
+    ],
+    "publicationPending": true
+  },
+  "upstream": {
+    "lastActuallySynchronized": "b73d8b6330cfdb9d83c000a513be7052763aa083",
+    "lastCheckedReportedByReleaseCoordinator": "838d8c7882b292d3e320e7d8edd636262c2649f9",
+    "newCommitDateReportedUTC": "2026-11-16 08:57 UTC",
+    "pendingCommitsReported": 7,
+    "newestScope": "v57 solved/targetless representation locks: molview/teaching/CSS plus probe/changelog; no core.",
+    "integratedDuringSave": false,
+    "overlap": "Known 3D changes require separate composition with local customizations.",
+    "auditEvidencePending": false,
+    "auditEvidence": "docs/checks/save-publish-20261116-113102/upstream-audit.json"
+  },
+  "scenario": {
+    "path": "scenarios/alkanes-user-3.scenario.json",
+    "sha256": "d5e85fca80cb1ddb04b9776e910fbe6ee642ea9ee2407acecebd5de585947e82",
+    "bytes": 35104
+  },
+  "scenarioExport": "Prior levels export is documented separately. Release coordinator verifies the current Desktop export and dated recovery bytes. The report author performed no new export.",
+  "limitations": [
+    "Actual 125/200 browser zoom remains unverified.",
+    "3D in the new viewport flow remains unverified. Setup did not reach the 3D control; the cause is not attributed to JSmol.",
+    "Earlier Firefox fast-switch/basic-click cause is unproven. Later guarded fixture and native input success do not establish the cause.",
+    "No personal Firefox freeze, offline, physical mobile or conference qualification.",
+    "3D mapping does not generally support stereochemistry/query structures.",
+    "Prior v55/v56 empty JSmol writeMOL readback does not certify the actual optimizer.",
+    "External JSmol/fonts/services dependencies remain.",
+    "No measured learning effect."
+  ],
+  "sources": [
+    {
+      "path": "docs/V56-SYNC-20261115.md",
+      "sha256": "1e5b808d1a262a232fbef9f88e5f819f54284c39c43eea3d1ea6060929dfa575",
+      "bytes": 9178
+    },
+    {
+      "path": "docs/V57-SYNC-20261115.md",
+      "sha256": "6c849d0bf1203ad4a41ec9e511693dbb61cceb32fdd8f220414f8f03f2b06b6a",
+      "bytes": 10012
+    },
+    {
+      "path": "docs/ALKANE-POOL-RESULTS-20261116.md",
+      "sha256": "cbdad58c75049e2ebdff1875442312d1437572594523098d92e42dc0000d5263",
+      "bytes": 8091
+    },
+    {
+      "path": "docs/FOUR-GAME-INTEGRATION-RESULTS-20261116.md",
+      "sha256": "20de57e40772b81385883b6fc7ba50b156b7ba47685f3ec5c6923f59becac216",
+      "bytes": 9936
+    },
+    {
+      "path": "docs/GAME-LEVELS-ALKANES-RESULTS-20261116.md",
+      "sha256": "26d351bca999b71c3f8498d0a84a4e8be2e104c8c16b7597967d784244533616",
+      "bytes": 13314
+    },
+    {
+      "path": "docs/GAME-VIEWPORT-RESULTS-20261116.md",
+      "sha256": "76770bf05ca87e1f5ea77b112b1eb1fc81b49b9108a73cf37644bde0f0366cc9",
+      "bytes": 16802
+    },
+    {
+      "path": "docs/checks/alkane-pool-implementation-20261116/verification-target.json",
+      "sha256": "fa6d2c813dc32cfda74cdabc11b24084cc4de5e08027af82acfb5ea6747a7c70",
+      "bytes": 14177
+    },
+    {
+      "path": "docs/checks/alkane-pool-implementation-20261116/review-final.json",
+      "sha256": "54c960d20bc43bc7ab4838034293ef4854591ec7eb5000ca3cb705dbd7a324fc",
+      "bytes": 1861
+    },
+    {
+      "path": "docs/checks/alkane-pool-implementation-20261116/independent-chemistry.json",
+      "sha256": "0c2a5ffc1f02b6087e5803cd67382956c4fe922af52d0614cd281d589437f9cf",
+      "bytes": 1561
+    },
+    {
+      "path": "docs/checks/four-game-integration-20261116/verification-target.json",
+      "sha256": "1aeef0391e4fe93338e6773196adb6cb85f21f1854b9a399ec30e312f308aa75",
+      "bytes": 4052
+    },
+    {
+      "path": "docs/checks/four-game-integration-20261116/review-targeted.json",
+      "sha256": "0549e4662a2f1c617245d31f7d9ffe82b6500400c25c26695c591b3891d6a5e0",
+      "bytes": 2913
+    },
+    {
+      "path": "docs/checks/game-levels-alkanes-implementation-20261116/verification-target.json",
+      "sha256": "c2967247f859a15e02677892de75ca897a68ce2cd5bb0ad96a0db28c4aa79d3e",
+      "bytes": 6569
+    },
+    {
+      "path": "docs/checks/game-levels-alkanes-implementation-20261116/review-final.json",
+      "sha256": "ee23864e1d3f266daf46974d5474393fd1046b6859760abe3ceb6dc0399a7b13",
+      "bytes": 2847
+    },
+    {
+      "path": "docs/checks/game-levels-alkanes-implementation-20261116/independent-chemistry.json",
+      "sha256": "b4a04d2ed12aa76e09070ca53b125d51f3931cb3d8dfbfd2c04b74441922477c",
+      "bytes": 2133
+    },
+    {
+      "path": "docs/checks/game-viewport-implementation-20261116/verification-target.json",
+      "sha256": "52c43a50100392ef764e950402d4ed774f6d80e236abc03b61be1faa94afb7bf",
+      "bytes": 8647
+    },
+    {
+      "path": "docs/checks/game-viewport-implementation-20261116/review-final.json",
+      "sha256": "2f953dd7bbc4c2cb77b62fa28d8119c44d107adabaab410fa96cec2ec20d41e0",
+      "bytes": 2775
+    },
+    {
+      "path": "docs/checks/game-viewport-implementation-20261116/resolutions-final.json",
+      "sha256": "1f4d81875867435e573005e01d68c18c66d7c27a65cb128a5201e0ba2b6fe7f3",
+      "bytes": 1057
+    },
+    {
+      "path": "docs/checks/game-viewport-implementation-20261116/lesson-browser/acceptance-summary.json",
+      "sha256": "50ceafe74559d5ef8c7ea96f27463e3b596cb9c2c765662a157fbfa8da38704d",
+      "bytes": 12182
+    },
+    {
+      "path": "games/data/alkane-structures-v2.json",
+      "sha256": "2c4d9a95a77291f13c4a422644aefdae7f23448c2eed7b9d2ef4913da6de92b2",
+      "bytes": 30504
+    },
+    {
+      "path": "scenarios/alkanes-user-3.scenario.json",
+      "sha256": "d5e85fca80cb1ddb04b9776e910fbe6ee642ea9ee2407acecebd5de585947e82",
+      "bytes": 35104
+    }
+  ],
+  "runtimeSourceHashes": {
+    "design/welcome-proposal.html": "b7e49f70b0bd94bb34079be4e9ff8d274e47520353f6b6a905235924d5e7bf20",
+    "games/name-repair.html": "c3619bacff7fcf33313adf2fcac523219765ad9df9c34ff87ec5bede41c0f985",
+    "games/name-builder.html": "1094762820bd670d229d2e32b03280d83346ea7c155394e7d109f0549975efd6",
+    "games/molecular-puzzle.html": "3ecca10d2709fee71a65238518b1c10a01edbb3994b3b4d2ce60e79aef339b48",
+    "games/molecular-detective.html": "18192a9bb320e37e9754d362b50378f19ad1c2450c9bacf6971d60657c22437d",
+    "js/namelecule-game-repair.js": "03a28ed4c5c75a4ed4c8a729807e890941c7ded978b5c7c9fee8526c797c343c",
+    "js/namelecule-name-builder.js": "d8b94cbde0743712c99ce256246498029bf70a37c764c489b1c23dcf14bbd98b",
+    "js/namelecule-molecular-puzzle.js": "85353a8edf551dd8e7d525e9007fb796d898bd4d84d854ee4b16443fadf5d6b3",
+    "js/namelecule-molecular-detective.js": "728a30781c664ee1f09ccbe17672f5b0981ed9171adc62eda9ee2ea8d40d6547",
+    "css/namelecule-games.css": "666b64b604682c2d281349f3c10051c73bfbd03f794b111b111d25997c6be8dd",
+    "css/namelecule-repair-round.css": "052b97e330cdb45f29823c38a31d5e54aa406b983d5cad16dff6ae4a9723450b",
+    "css/namelecule-name-builder.css": "77e59a4a42ce0bbc188de029f9ef7b68891f1a71561ff9184962bdeba97c8cd5",
+    "css/namelecule-molecular-puzzle.css": "561ea01bb2f06c618853f8b74124baa254d328284fe61fe5be73766959c20e08",
+    "css/namelecule-molecular-detective.css": "2be8426b8aa398d41fda6945081c5640032a24a47e1950241a66e22ad72c3bad",
+    "js/namelecule-game-levels.js": "63e83cfddb31be303e8f4e9f0b79066dc86eacf7ccc546d22a07f2359203708d",
+    "css/namelecule-game-levels.css": "5295a13b7be25c83caee0d3054b33789ed480d8ea0c4065fe6bc8d6b53dc63fa",
+    "js/namelecule-quiz-checkpoints.js": "b1c837b8ad99c05371598e0ca50c758cf0b0f570a6987e9077b96e52ed5821cd",
+    "css/namelecule-quiz-checkpoints.css": "63175dfe5fb57ae712eae3217a9432a3b4fd75effd86e8e877ff75b48b617cf4",
+    "js/namelecule-game-choice-checkpoint.js": "8b315d12b6045667a381e8784f8018f8b767505aedf4a6b215f4d1e718c8c2bf",
+    "js/namelecule-molecular-detective-lesson.js": "b6522b618d27f9d1ec88538444ec55e494863fe842152d2c1d468e49a3e93699",
+    "js/namelecule-generated-repair-checkpoint.js": "02ad755ebf8a8b0e48455683b0ab355d60fc75e9b45518798197868f36491e4e",
+    "mulermoc-nom-57.html": "2e0c04fa16137e8c3dffd0737810430d6ae33e6a525dce6c5c1c2dda0f9415cb",
+    "js/namelecule-game-viewport.js": "f66565beac63ff52ef879c4de5f15050af67d4c3692bcbb989153022473b4d6f",
+    "css/namelecule-game-viewport.css": "d30d883fc064e74907c541b7cbe273cbca6aad935fc4d816fcccd3f6307b269d"
+  },
+  "reportAuthorChecks": [
+    "Read current AGENTS/README/resume point and relevant result documents.",
+    "Compared all 24 frozen runtime, 16 protected dependency and 13 core SHA-256 values against actual current bytes: zero mismatches.",
+    "Created only professor-20261116 deliverables; no application edits, browser execution, commit, push, publication or direct professor message.",
+    "HTMLParser found balanced tags and unique IDs, including delivery; all relative href targets exist.",
+    "Both JSON artifacts parse; plainlinks.txt and links.txt match byte for byte; 20 source-record SHA-256 values match current files.",
+    "No private absolute filesystem path appears in the five report deliverables.",
+    "SAVE-01 documentation closure: linked proof files explicitly allowlisted; private Desktop export mappings referenced as checkpoint-only, without public hyperlinks."
+  ],
+  "reportChecksPending": [
+    "Release-coordinator visual rendering QA.",
+    "Fresh independent report review.",
+    "Delivery and upstream audit completion by release coordinator."
+  ]
+}

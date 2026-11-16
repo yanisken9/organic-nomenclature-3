@@ -1,0 +1,60 @@
+{
+  "recordedUTC": "2026-11-16T07:23:50.926420+00:00",
+  "role": "Developer subagent /root/levels_repair_detective_implementation",
+  "status": "FROZEN for root integration and independent review; no further runtime edits until findings",
+  "baseCommit": "168e3cec01f941a84d40bbe0dc07156e7baa35d0",
+  "approvedPlan": "docs/GAME-LEVELS-ALKANES-PLAN-20261116.md",
+  "paths": {
+    "games/name-repair.html": {
+      "beforeSHA256": "d2ccc1362aac8e884e311e4dbabc7a29fa0cbab10326b996d6ea0c4b426659c2",
+      "SHA256": "60c189989d967565b4085234b64d95e265486c3174e49bc36d03d4a17c26e6df",
+      "untrackedInGit": true
+    },
+    "js/namelecule-game-repair.js": {
+      "beforeSHA256": "35e859c839011fe4ee7ff3eef63f60f1525b380890c1f46e0ed96cb287062f10",
+      "SHA256": "d210d836c373999d9d5912aa333d8326296f70bf9b17ac1a69737fbd7f7dcb72",
+      "untrackedInGit": true
+    },
+    "games/molecular-detective.html": {
+      "beforeSHA256": "8d0ccded705b2924c9367acf88ff3c3a0a657be16ecd7a17bb6b5456cfd0af7e",
+      "SHA256": "543e861ee5ed9d1015680b243d2f9fe1d25a8f2bf1bb840be9e9118dcdc0fd0c",
+      "untrackedInGit": true
+    },
+    "js/namelecule-molecular-detective.js": {
+      "beforeSHA256": "a786158ea0480d683ba85b09a47d3e897922029d82cd112974c9978663a33775",
+      "SHA256": "f8d27269024bd48e170c63da11a17b996f86b617af1e61598913c7c2546fcb94",
+      "untrackedInGit": true
+    },
+    "js/namelecule-molecular-detective-engine.js": {
+      "beforeSHA256": "862dea9451cb6b337df251b4779562e7a33e414a3226ac81b1857a60bd645686",
+      "SHA256": "b9f10b165313631c80c8c136a6364e9222414ea74e154a0c4adffb13032f1f95",
+      "untrackedInGit": true
+    }
+  },
+  "checks": {
+    "detective-runtime-results.json": 151,
+    "workshop-canonical-results.json": 341
+  },
+  "tests": "Actual source controller/functions under explicit DOM/native/storage fixtures; exact pinned/core56 source comparisons. Developer evidence only.",
+  "browserExecuted": false,
+  "scopeNotes": [
+    "Workshop new standalone sessions select5/4/5 levels, use versioned14/9/10 projection and expose only selected compatible set; original generator unchanged.",
+    "Workshop v1 records retain their own8/14 source and guidance and are restored as Previous attempt; v2uses separate per-level sessionStorage keys and exact normalized context.",
+    "Detective uses shuffled per-level/other13 decks and exactlyone valid mission per draw, L2/3exclude single-bonds; current states stay in4bounded memoryslots.",
+    "Present controlled child contexts validated exactly, non-null seed and source/band IDs required. Missingcontext retains old8allowlist without common module. Replies echo supplied normalized contexts. Parent regrading belongs to root-owned lesson.",
+    "Canonical adapter supports14while preserving38missions/77alternatives and unchanged27profile targets."
+  ],
+  "limits": [
+    "No browsers, actual native pointer/zoom/resize/retry or conference-machine validation performed by this subagent.",
+    "Canonical constructor assumes provenance has been verified by provider.",
+    "DOM fixtures do not establish visual behavior. Root integration/browser verification and consolidated independent review pending."
+  ],
+  "fixtureCorrections": [
+    "Detective shim added browser structuredClone and canonical sourceMOL before completed151checks.",
+    "Workshop forged-answer fixture changed attempts for all round kinds (selectedValue is inapplicable to ordering rounds); native API fixture corrected to real NameleculeRepairGame name."
+  ],
+  "coreChangedBySubagent": false,
+  "commit": false,
+  "push": false,
+  "publication": false
+}

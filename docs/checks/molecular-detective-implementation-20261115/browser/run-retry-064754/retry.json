@@ -1,0 +1,76 @@
+{
+  "completed": true,
+  "checks": [
+    {
+      "label": "Missing child cannot expose an answerable mission",
+      "detail": null
+    },
+    {
+      "label": "Bounded actual startup failure exposes visible Retry",
+      "detail": null
+    },
+    {
+      "label": "Retry creates a new child/session and reaches active actual graph",
+      "detail": null
+    },
+    {
+      "label": "Genuine UI check correct",
+      "detail": {
+        "phase": "active",
+        "moleculeId": "ethane",
+        "roundId": "detective-round-1",
+        "missionId": "ethane:comp5:parent-chain",
+        "bridgeMissionId": "ethane:comp5:parent-chain:1",
+        "missionIndex": 0,
+        "missionCount": 2,
+        "kind": "atoms",
+        "atoms": [
+          1,
+          2
+        ],
+        "bonds": [],
+        "selectionRevision": 3,
+        "correct": true,
+        "requestId": 2
+      }
+    },
+    {
+      "label": "Controlled child failure/retry has no captured JavaScript exceptions",
+      "detail": []
+    },
+    {
+      "label": "Eight runtime hashes unchanged during retry check",
+      "detail": null
+    }
+  ],
+  "role": "Developer actual headless Firefox, viewport emulation; not independent browser review",
+  "limits": [
+    "No personal/GUI Firefox or physical device test",
+    "No offline/conference/uninterrupted-operation claim",
+    "External font/vendor dependencies retained"
+  ],
+  "runtimeAtStart": {
+    "games/molecular-detective.html": "e1cb6fd8871cbd227fa5beebb35d8ff02f3b998b70b04254ab319478732ef902",
+    "css/namelecule-molecular-detective.css": "9d556692f54e19872b04c74705fa03a27c0d9f573734f92f550b719789147d52",
+    "js/namelecule-molecular-detective.js": "3b8dba409435fd0e07259d6e7da3e207e34feb9749a7ee035f7087a6b27abd43",
+    "js/namelecule-molecular-detective-engine.js": "020340742102bf2ec5810975fe45b64ba642c3aa409c11b3f0359fb3801b26d6",
+    "js/namelecule-molecular-detective-host.js": "177e7fc961d44b23c28b9650ef15deead4377f692fa866eadb96daac892608c0",
+    "games/molecular-detective-viewer.html": "87cc4788612c173ee266e11457e7cf265f3da06f1d93791e93655a8db98f38ae",
+    "tools/build-molecular-detective-host.py": "0beacd21731ef4111001264332f1e1be34c532b98a38eb45692712bd33efa3f2",
+    "design/molecular-detective-preview.html": "ffbf5a05a49a0db30dfc1d6dfb4288116e9f4759d48ecdf7417be1b26403ec04"
+  },
+  "controlMethod": "Molecule/mission select value + change event; molecule answers use genuine WebDriver pointer actions at visible SVG anchors/bond interiors. No direct selection setter or fabricated target.",
+  "scope": "Controlled server404 for first generated-child request only; real parent timeout and user Retry, then real native child and actual correct atom picks. Does not claim an external-service outage reproduction.",
+  "runtimeAtFinish": {
+    "games/molecular-detective.html": "e1cb6fd8871cbd227fa5beebb35d8ff02f3b998b70b04254ab319478732ef902",
+    "css/namelecule-molecular-detective.css": "9d556692f54e19872b04c74705fa03a27c0d9f573734f92f550b719789147d52",
+    "js/namelecule-molecular-detective.js": "3b8dba409435fd0e07259d6e7da3e207e34feb9749a7ee035f7087a6b27abd43",
+    "js/namelecule-molecular-detective-engine.js": "020340742102bf2ec5810975fe45b64ba642c3aa409c11b3f0359fb3801b26d6",
+    "js/namelecule-molecular-detective-host.js": "177e7fc961d44b23c28b9650ef15deead4377f692fa866eadb96daac892608c0",
+    "games/molecular-detective-viewer.html": "87cc4788612c173ee266e11457e7cf265f3da06f1d93791e93655a8db98f38ae",
+    "tools/build-molecular-detective-host.py": "0beacd21731ef4111001264332f1e1be34c532b98a38eb45692712bd33efa3f2",
+    "design/molecular-detective-preview.html": "ffbf5a05a49a0db30dfc1d6dfb4288116e9f4759d48ecdf7417be1b26403ec04"
+  },
+  "javascriptErrors": [],
+  "diagnostics": []
+}

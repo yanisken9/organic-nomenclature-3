@@ -1,0 +1,50 @@
+{
+  "date": "2026-11-16",
+  "head": "a4f8aaa7dfcbd4328889b7d8b2d0d24bc6588f37",
+  "recent": [
+    {
+      "sha": "a4f8aaa7dfcbd4328889b7d8b2d0d24bc6588f37",
+      "date": "2026-11-15T21:32:52Z",
+      "subject": "v57: strict 3D paint + condensed/skeletal group completion"
+    },
+    {
+      "sha": "3a335b2b4ec021405e434d19a9dcdddccdcd1224",
+      "date": "2026-11-15T20:30:51Z",
+      "subject": "v57: free-mode H↔H rank mirroring via live bond lists"
+    },
+    {
+      "sha": "d94a17a38c10fba491fef9fcd955b02fcc54bfd5",
+      "date": "2026-11-15T19:49:30Z",
+      "subject": "Merge branch 'main' of https://github.com/nick-charistos/organic-nomenclature-3"
+    },
+    {
+      "sha": "46a9d309279da6eea3a0d32f6006e00f69f48bc9",
+      "date": "2026-11-15T19:45:36Z",
+      "subject": "v57: headless 3D regression probe + changelog note"
+    },
+    {
+      "sha": "1ffdb70dfd0fb6b32ec52f88edb900d5a6641d71",
+      "date": "2026-11-15T19:24:15Z",
+      "subject": "v57: quiz progress tints, 3D sequence numbers, class-only verdict"
+    },
+    {
+      "sha": "d90eedac47a85da8ea38418c5104ed8a9152679c",
+      "date": "2026-11-15T16:09:52Z",
+      "subject": "itignore"
+    },
+    {
+      "sha": "b73d8b6330cfdb9d83c000a513be7052763aa083",
+      "date": "2026-11-15T16:09:52Z",
+      "subject": "itignore"
+    },
+    {
+      "sha": "31ca436ef039b627e5d20bd17bfc56e740727cc9",
+      "date": "2026-11-15T16:00:23Z",
+      "subject": "v57: index to v57; 3D atom/bond picking via JSmol pickCallback"
+    }
+  ],
+  "changelogBlob": "0cea0be08273f5c2dea69bb1912434510e6a07bf",
+  "changelogTop": "# Changelog\n\nAll notable changes to the Οργανική Ονοματολογία MuLERMoC.\n\n---\n\n## [v57] (3D atom/bond picking via JSmol pickCallback; LIVE, `index.html` → v57)\n\nForked from v56 (`mulermoc-nom-57.html` + `js/*-57.js` + `css/*-57.css` + `jsme-nick-nomeclature-moc2-data_57.js` + `spt/init-3-57.spt` + `zz-test-core57.html`, `?v=57.0`; `ui-icons.js` stays shared). v56 files untouched. No chemistry changes (`core-57.js` is a byte copy of `core-56.js`).\n\n### 3D picking (v57 working tree)\n- Spike (owner-run, corrected against bundled sources): `set pickCallback` delivers `(htmlName, strInfo, atomIndex, map)` — the page function is applied to the data array. Each atom click fires twice (bitset echo with index -1, then the authoritative 0-based index); each bond click fires once with index -3 and a `[\"bond\", identity, x, y, z]` payload, but only with `set bondPicking true` (the reporting path needs the flag; without it bond clicks are silent). `show picked` reads back empty; drag-rotate emits no callback.\n- `window.__mulerPickCb` (`molview-57.js`): armed/draft/Present/molecule guards; the page function receives `(htmlName, strInfo, atomIndex, map)` — `>= 0` toggles that atom, `-1` is the bitset echo (ignored, exactly-once per click), `-3` reports a bond with a `[\"bond\", identity, x, y, z]` payload (identity head = 1-based bond position, `#N` pair = endpoint atomnos, cross-validated against `bondList3D`). Bond picks mirror into `bonds2D` and are ignored by atoms-only quizzes; armed H picks fold onto the heavy parent in state and paint (mirrors the 2D armed pick), except target hydroxyl/aldehyde H which stays atomic and is now selectable from 3D. Free-mode H picks mirror H↔H by sibling rank in bond-list order (the connectivity table has no H rows, so all H neighbor lookups use the live `bondList`/`bondList3D` instead).\n- Mirror-at-toggle both directions through the cached heavy map (`fMulerHeavyMapCached`, same discipline as `fTranslateChain2D3D`): 3D picks land in `atoms2D/bonds2D` too, so quiz compare/refresh/verdicts work unchanged. Unmappable atoms fail closed (3D-only record, documented).\n- Paint: `fMulerSelectPush3D` strict full-rebuild cyan (`MULER_SELECT_CYAN`) via `fMulerSelectPaintSets3D` — atom picks paint atoms only, bond picks paint exactly the picked bonds (never endpoints/cross-highlight, 2D parity); condensed/skeletal group completion is paint-only (fully-selected compacted fragments add member heavies + internal 3D bonds, every picked heavy adds H neighbors + C-H bonds, skeletal branch picks add the whole alkyl branch off `mainChainAtoms3D`); condensed 3D atom picks delegate to the 2D unit (whole fragment, or anchor-only under main-chain carbon rule) through the shared toggle. Empty state is a no-op (never auto-resets, reward-green safe); skipped when off/Present. Picking scoped to armed sessions (`set picking atom` + `set bondPicking true`), appended to both `fLoadMol3D` scripts so `init-3-57.spt` (`picking OFF`) cannot override; restored on disarm.\n- 3D background double-tap clear: single silent taps do nothing (bond tap vs background is unknowable page-side); a second silent tap within ~450ms/~8px clears via the 2D empty-canvas path. Any genuine pick breaks the chain, so fast atom picking can never misfire it; empty state never fires (mirrors the Esc guard), so no spurious `select all` console echoes.\n- No automatic chain numbering while selecting: arming never paints locants in either viewer (leftover 2D badges are wiped by the re-render; 3D echoes were never painted). Instead, picked carbons show pick-sequence numbers in cyan in both viewers — 2D `mulerSelNum` badges and new 3D `mulerSelSeq3D` echoes (`fMulerSelectSeq3D`, rebuilt per repaint, main-chain purpose only, auto-renumbered on toggle, cleared on disarm/empty/exact). 3D settings toggles (`showAtomSymbols3D`, `showHydrogens3D`) no longer resurrect classic 3D numbering while armed (viewer-owns-viewer guard). Verdict line is class-only now (`mulerQuiz-<kind>` + `mulerQuiz-hidden`; the stale `col = \"var\"` inline override is gone) — restyle freely under `#mulerQuizVerdict` in `css/jsme-nick-57.css`, seeded to match the previous rendered colors.\n- Quiz progress tints (armed only): quiz-capable unsolved components get `.quizTodo` (`--veryLightEarth`); solved boxes return to default white and fall back to the classic path with active highlights (the viewer-owns-viewer guard admits solved modes, so green + numbering + explanation paint even while armed; unsolved modes and deselect stay quiet). Solved boxes never re-arm. Per-molecule solved sets (`window.__mulerQuizSolved`), cleared when select mode toggles off (fresh round); hydrocarbon `-io` and other atom-less boxes stay default. Chain-first redirects skip solved chains (stash task arms directly).",
+  "lastSynchronized": "b73d8b6330cfdb9d83c000a513be7052763aa083",
+  "lastPreviouslyChecked": "a4f8aaa7dfcbd4328889b7d8b2d0d24bc6588f37"
+}

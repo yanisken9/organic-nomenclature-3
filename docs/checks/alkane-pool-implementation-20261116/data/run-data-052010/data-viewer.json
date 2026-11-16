@@ -1,0 +1,129 @@
+{
+  "completed": false,
+  "checks": [
+    {
+      "label": "Native library merges six customs into147 records",
+      "detail": null
+    },
+    {
+      "label": "methyl_2_butane condensed actual name and atomcount",
+      "detail": {
+        "id": "methyl_2_butane",
+        "name": "2-μεθυλοβουτάνιο",
+        "mode": "condensed",
+        "atoms": 5,
+        "atoms3D": 17,
+        "chain": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "ratio": null,
+        "calibration": null,
+        "displayPolicy": "namelecule-alkane-20261030"
+      }
+    },
+    {
+      "label": "methyl_2_butane condensed complete drawing inside viewport",
+      "detail": {
+        "viewport": {
+          "left": 381,
+          "top": 136.5,
+          "right": 999,
+          "bottom": 473.5,
+          "width": 618,
+          "height": 337
+        },
+        "drawing": {
+          "left": 574.5333251953125,
+          "top": 259.70001220703125,
+          "right": 805.4333648681641,
+          "bottom": 350.5333251953125
+        },
+        "margins": {
+          "left": 193.5333251953125,
+          "top": 123.20001220703125,
+          "right": 193.56663513183594,
+          "bottom": 122.9666748046875
+        },
+        "count": 9,
+        "inside": true,
+        "centeringError": {
+          "x": -0.01665496826171875,
+          "y": 0.116668701171875
+        }
+      }
+    }
+  ],
+  "role": "Developer actual isolated Firefox; not independent browser review",
+  "limits": [
+    "Native headless Firefox; viewport emulation, not physical mobile or conference/offline qualification",
+    "JSmol remote j2s/fonts/services dependencies remain",
+    "Personal Firefox and user preview server untouched"
+  ],
+  "inputSurfaceAtStart": {
+    "innerWidth": 1500,
+    "innerHeight": 1000,
+    "outerWidth": 1800,
+    "outerHeight": 1400,
+    "screenWidth": 1800,
+    "screenHeight": 1400
+  },
+  "rootApprovedCurrentHashes": {
+    "mulermoc-nom-57.html": "b40e005d0d2ec8e4d3828538e6e2515dbb46433cd8d1bf570be658bc183ee27a",
+    "tools/build-name-builder-host.py": "e4fa80ee463ab4e41e18b1bda6af0d01be9f782f79dc1bb73e5c5c800ec5b12c",
+    "tools/build-molecular-detective-host.py": "ba0c9bb5ab77e351ac0656eec7e95ef89ab984c395ddc1b7544db7111094e7d4",
+    "js/mulermoc-nom-molview-55.js": "2dfde418f2444cbd61cc61ae20c1ef451d970e60d1408c66942c472878269c8d",
+    "js/mulermoc-nom-molview-56.js": "e484618054e26d9cdd871ea340a57f400dc7db1e816de1917a332fd1c5c5d47e",
+    "js/mulermoc-nom-molview-57.js": "f26f0aae522c0ea5a034e97d1f8f486a4f5bb1ef715e59276f80d0760dca0941"
+  },
+  "molecules": [],
+  "failure": "Traceback (most recent call last):\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/alkane-pool-implementation-20261116/data/test-data.py\", line 28, in <module>\n    check(read('nameAnalysisMode')=='compCarbonsCount'and numbers==molecule['parentC'],key+' '+mode+' parent highlight and numbering',numbers)\n  File \"owned-alkane-support\", line 15, in check\n    check(read('Object.keys(nameExamples).length')==147,'Native library merges six customs into147 records')\nAssertionError: ('methyl_2_butane condensed parent highlight and numbering', 5)\n",
+  "atFailure": {
+    "id": "methyl_2_butane",
+    "name": "2-μεθυλοβουτάνιο",
+    "mode": "condensed",
+    "atoms": 5,
+    "atoms3D": 17,
+    "chain": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "ratio": null,
+    "calibration": null,
+    "displayPolicy": "namelecule-alkane-20261030"
+  },
+  "frameAtFailure": {
+    "viewport": {
+      "left": 381,
+      "top": 372,
+      "right": 999,
+      "bottom": 709,
+      "width": 618,
+      "height": 337
+    },
+    "drawing": {
+      "left": 574.5333251953125,
+      "top": 468.1499938964844,
+      "right": 805.4333648681641,
+      "bottom": 586.0333251953125
+    },
+    "margins": {
+      "left": 193.5333251953125,
+      "top": 96.14999389648438,
+      "right": 193.56663513183594,
+      "bottom": 122.9666748046875
+    },
+    "count": 14,
+    "inside": true,
+    "centeringError": {
+      "x": -0.01665496826171875,
+      "y": -13.408340454101562
+    }
+  },
+  "javascriptErrors": [],
+  "diagnostics": []
+}

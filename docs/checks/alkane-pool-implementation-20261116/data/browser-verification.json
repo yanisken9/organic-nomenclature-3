@@ -1,0 +1,90 @@
+{
+  "recordedUTC": "2026-11-16T05:24:20.901125+00:00",
+  "role": "Developer actual task-owned headless Firefox; not independent browser review",
+  "runs": {
+    "data": {
+      "evidence": "docs/checks/alkane-pool-implementation-20261116/data/run-data-052139/data-viewer.json",
+      "completed": true,
+      "checks": 205,
+      "JSexceptions": 0,
+      "ownedCleanup": {
+        "ownedBrowserExited": true,
+        "ownedServerClosed": true,
+        "ownedProfileRemoved": true
+      },
+      "newExpandedRatios": {
+        "methyl_2_butane": 2.6175,
+        "methyl_3_pentane": 2.6175,
+        "ethyl_3_pentane": 2.6175,
+        "dimethyl_2_2_propane": 2.6175,
+        "dimethyl_2_2_butane": 2.6175,
+        "ethyl_3_methyl_2_pentane": 2.6175
+      }
+    },
+    "old-expanded": {
+      "evidence": "docs/checks/alkane-pool-implementation-20261116/data/run-old-expanded-052318/old-expanded.json",
+      "completed": true,
+      "checks": 3,
+      "JSexceptions": 0,
+      "ownedCleanup": {
+        "ownedBrowserExited": true,
+        "ownedServerClosed": true,
+        "ownedProfileRemoved": true
+      },
+      "rasterCases": 318,
+      "oldExpanded": 282,
+      "newAllForms": 36,
+      "failures": []
+    },
+    "host-calibration": {
+      "evidence": "docs/checks/alkane-pool-implementation-20261116/data/run-host-calibration-052356/host-calibration.json",
+      "completed": true,
+      "checks": 24,
+      "JSexceptions": 0,
+      "ownedCleanup": {
+        "ownedBrowserExited": true,
+        "ownedServerClosed": true,
+        "ownedProfileRemoved": true
+      },
+      "ratios": {
+        "55": {
+          "methyl_2_pentane": 2.6175,
+          "ethyl_3_dimethyl_2_5_hexane": 2.6175,
+          "methyl_2_butane": 2.6175,
+          "dimethyl_2_2_propane": 2.6175,
+          "ethyl_3_methyl_2_pentane": 2.6175
+        },
+        "56": {
+          "methyl_2_pentane": 2.6175,
+          "ethyl_3_dimethyl_2_5_hexane": 2.6175,
+          "methyl_2_butane": 2.6175,
+          "dimethyl_2_2_propane": 2.6175,
+          "ethyl_3_methyl_2_pentane": 2.6175
+        }
+      }
+    }
+  },
+  "beforeCalibration": {
+    "evidence": "docs/checks/alkane-pool-implementation-20261116/data/run-calibration-050531/calibration.json",
+    "oldRatio": 2.6175,
+    "newRatio": 2.857142857142857,
+    "afterRatio": 2.6175
+  },
+  "harnessCorrections": [
+    {
+      "evidence": "docs/checks/alkane-pool-implementation-20261116/data/run-data-052010/data-viewer.json",
+      "cause": "Test manually re-entered fShowNumbering(0) while native click animation was already active, without resetting its cursor. Corrected test to await native animation only. No product edit."
+    },
+    {
+      "evidence": "docs/checks/alkane-pool-implementation-20261116/data/run-data-052054/data-viewer.json",
+      "cause": "Test clicked an already preserved parent-highlight component after mode switch, toggling it off. Corrected test to inspect state and click only when not already active. No product edit."
+    }
+  ],
+  "limits": [
+    "Actual headless Firefox on this machine with native1800x1400 input surface and1500x1000/390pxCSS viewport; not personal Firefox, physicalmobile/conference/offline qualification.",
+    "Host55/56 check opens generated nativehost directly and enables its documented display attributes; game handshake/round grading belongs to root/otherworkers.",
+    "Native6data checks include actual PubChemSDFload and genuine2Dpointerpick mirrored into3D; not optimizer/conformer convergence certification.",
+    "RemoteJSmolj2s/fonts/services remain dependencies."
+  ],
+  "coreChange": "No core edits;13sessionbaselinecorehashes verified unchanged in source-target.json."
+}

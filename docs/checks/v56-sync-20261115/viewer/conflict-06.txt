@@ -1,0 +1,19 @@
+BEFORE:
+ wrapper returns false: keep the 2D-only note and surface
+  // the standard pending-3D path instead of recording an invisible 3D model.
+  var _issued = false;
+  try {
+    if (typeof fJSmolLoadInlineSDF === "function") {
+
+LOCAL:
+      _issued = !!fJSmolLoadInlineSDF(jmolAppletNomeclature, sdf, "script spt/init-55.spt;");
+
+UPSTREAM:
+      _issued = !!fJSmolLoadInlineSDF(jmolAppletNomeclature, sdf, "script spt/init-3-56.spt;");
+
+AFTER:
+    }
+  } catch (eJ) { _issued = false; }
+  if (!_issued) {
+    try { if (typeof fMulerNotePending3D === "function") fMulerNotePending3D(); } catch (eP3b) {}
+    try { fMolDraftToast(fMolDraftT("submi

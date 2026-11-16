@@ -1,0 +1,59 @@
+BEFORE:
+
+        typeof applet.molFile !== "function" || typeof applet.readMolFile !== "function" ||
+        typeof applet.clear !== "function") return null;
+    var priorMol, priorScale, captured = false, out = null;
+    try {
+
+LOCAL:
+      priorMol = applet.molFile();
+      if (typeof priorMol !== "string") return null;
+      if (typeof applet.getMolecularAreaScale !== "function" || typeof applet.setMolecularAreaScale !== "function") return null;
+      priorScale = applet.getMolecularAreaScale();
+      if (!Number.isFinite(priorScale)) return null;
+      captured = true;
+      applet.clear();
+      var cleared = applet.molFile();
+      var empty = cleared ? fParseMolV2000(cleared) : null;
+      if (cleared && (!empty || empty.atoms.length)) return null;
+      applet.readGenericMolecularInput(smiles);
+      if (typeof applet.deferredRepaint === "function") applet.deferredRepaint();
+      for (var ri = 0; ri < 6; ri++) {
+        if (!liveDraft()) break;
+        var result = null, parsed = null;
+        try { result = applet.molFile(); parsed = result ? fParseMolV2000(result) : null; } catch (eRead) {}
+        if (parsed && parsed.atoms.length && expectHeavy > 0 &&
+            parsed.atoms.filter(function (a) { return fIsHeavyEl2D(a.el); }).length === expectHeavy) {
+          out = result;
+          break;
+        }
+        if (ri === 0 && typeof applet.repaint === "function") applet.repaint();
+        if (ri < 5) await new Promise(function (resolve) { setTimeout(resolve, 120); });
+
+UPSTREAM:
+      if (!smiles || !applet) return null;
+      if (typeof applet.readGenericMolecularInput !== "function") return null;
+      if (typeof applet.molFile !== "function") return null;
+      if (typeof applet.readMolFile === "function" && typeof applet.clear === "function") {
+        try { applet.clear(); } catch (eC) {}
+      }
+      try { applet.readGenericMolecularInput(smiles); } catch (eI) { return null; }
+      try { if (typeof applet.deferredRepaint === "function") applet.deferredRepaint(); } catch (eRp) {}
+      var out = "", ri, MAX = 6, GAP = 120;
+      for (ri = 0; ri < MAX; ri++) {
+        try { out = applet.molFile() || ""; } catch (eM) { out = ""; }
+        if (_good(out)) {
+          if (ri > 0) { try { /* console.log("[draft] skeletal: depict settled after " + (ri + 1) + " reads"); */ } catch (eLg) {} }
+          break;
+        }
+        if (ri === 0) { try { if (typeof applet.repaint === "function") applet.repaint(); } catch (eRp2) {} }
+        else { try { /* console.log("[draft] skeletal: depict read " + (ri + 1) + " not stable yet"); */ } catch (eLg2) {} }
+        if (ri < MAX - 1) await _sleep(GAP);
+
+AFTER:
+      }
+    } catch (eD) { out = null; }
+    finally {
+      if (captured && ownsDraft()) {
+        try { if (priorMol) applet.readMolFile(priorMol); else applet.clear(); }
+        catch (eR) { out = 

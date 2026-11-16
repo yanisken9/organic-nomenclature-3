@@ -1,0 +1,25 @@
+{
+  "recordedUTC": "2026-11-15T16:08:56.732216+00:00",
+  "status": "Not approved as written; user rejects manual choice even optional",
+  "requestedMeaning": "Automatic random choice from existing supported pool; no novel graph generation",
+  "runtimeFiles": [
+    "js/namelecule-molecular-detective.js"
+  ],
+  "behavior": [
+    "At startup automatically choose one of the current17supportedmolecules and one of its valid missions",
+    "After correct answer and Next choose another molecule and a valid mission automatically",
+    "Shuffle currentmoleculepool toreduce repeats; prevent immediate repeat atcycleboundary",
+    "Existing molecule/missiondropdowns remain usable asoptional manual exploration",
+    "Keep exactgrading,graphdata,core,logo,geometry,progress andactual lessonintegration scope unchanged"
+  ],
+  "checks": [
+    "Randomstartup/next/validmissionselection",
+    "No immediate repeats,shufflebagcycleboundaries",
+    "Optionalmanualselection/Next interactions and newroundclearing",
+    "Retry and stale/currentmessageguards with randomloads",
+    "Genuinecorrectanswers/next in standalone andlessonlook,zoom/resize",
+    "Protectedruntime/core hashes and bounded fresh independentReview"
+  ],
+  "codeChanged": false,
+  "supersedingUserDecision": "No manual molecule/mission dropdowns. Discuss common difficulty levels across all games and automatic random existing-molecule assignments."
+}

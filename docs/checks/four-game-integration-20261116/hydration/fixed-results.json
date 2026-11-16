@@ -1,0 +1,60 @@
+{
+  "recordedUTC": "2026-11-16T06:32:07.234Z",
+  "role": "Developer memory execution; not independent review",
+  "expectation": "fixed",
+  "completed": true,
+  "checks": 1539,
+  "records": [
+    {
+      "version": 55,
+      "verified": true,
+      "baseMolecules": 141,
+      "totalMolecules": 147,
+      "curatedMolecules": 6,
+      "cyclesPerStartupOrder": 3,
+      "startupOrders": 3,
+      "collisionPreserved": true,
+      "explicitMissingFormsAndEmpty3DPreserved": true,
+      "MOL2DPriority": true
+    },
+    {
+      "version": 56,
+      "verified": true,
+      "baseMolecules": 141,
+      "totalMolecules": 147,
+      "curatedMolecules": 6,
+      "cyclesPerStartupOrder": 3,
+      "startupOrders": 3,
+      "collisionPreserved": true,
+      "explicitMissingFormsAndEmpty3DPreserved": true,
+      "MOL2DPriority": true
+    },
+    {
+      "version": 57,
+      "verified": true,
+      "baseMolecules": 141,
+      "totalMolecules": 147,
+      "curatedMolecules": 6,
+      "cyclesPerStartupOrder": 3,
+      "startupOrders": 3,
+      "collisionPreserved": true,
+      "explicitMissingFormsAndEmpty3DPreserved": true,
+      "MOL2DPriority": true
+    }
+  ],
+  "sourceSHA256": {
+    "js/mulermoc-nom-molview-55.js": "035e81d3d0ef1bc962a72a6092916f5078ac68a5a4e1ae75d471b5eba185c532",
+    "js/jsme-nick-nomeclature-moc2-data_55.js": "9387cd654b2ff3cfb058d9b97ddcca798ac13f47f769b532f9c122277ff8dd0a",
+    "js/mulermoc-nom-molview-56.js": "b6ea87d2340cdeaaff10e79369a92657856474b53a24da1d90eb5818b53eeb06",
+    "js/jsme-nick-nomeclature-moc2-data_56.js": "9387cd654b2ff3cfb058d9b97ddcca798ac13f47f769b532f9c122277ff8dd0a",
+    "js/mulermoc-nom-molview-57.js": "0f9096dd0f8197575362f489b570027991d48043cf658cab7f5618a494e76731",
+    "js/jsme-nick-nomeclature-moc2-data_57.js": "9387cd654b2ff3cfb058d9b97ddcca798ac13f47f769b532f9c122277ff8dd0a",
+    "js/MULERMOC_namelecule_alkanes_v1_data.js": "262c6561aaff7a88919cda715835e7f455d64756218aeb66e3e4949ba569a75c"
+  },
+  "beforeBodyFileSHA256": "0d95f09dd24aa788182d89d493a43c4562f8fd810bbeed3bed3b1a401a3b1904",
+  "limitations": [
+    "Actual fInitData bodies and actual base data/curated bundle are executed; only the own-key/native custom merge block is fixture-equivalent, not the full fClassifyAllMolecules analysis.",
+    "No browser callbacks, JSME/3D loading, user interactions, chemical naming or molecular geometry are certified by this memory test.",
+    "The before case intentionally reproduces the demonstrated data loss; passing --expect-before does not indicate application correctness."
+  ]
+}

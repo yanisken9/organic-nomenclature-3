@@ -1,0 +1,37 @@
+{
+  "recordedUTC": "2026-11-16T07:49:00.769236+00:00",
+  "finding": "REV-LEVELS-2 / P2",
+  "status": "FROZEN for independent targeted verification",
+  "baseCommit": "168e3cec01f941a84d40bbe0dc07156e7baa35d0",
+  "runtimePaths": {
+    "js/namelecule-molecular-detective.js": {
+      "beforeSHA256": "f8d27269024bd48e170c63da11a17b996f86b617af1e61598913c7c2546fcb94",
+      "SHA256": "c373300edd8147ae673306efc424e215db2b76e1862d0c7546e364f3d76b13aa"
+    },
+    "games/molecular-detective.html": {
+      "beforeSHA256": "543e861ee5ed9d1015680b243d2f9fe1d25a8f2bf1bb840be9e9118dcdc0fd0c",
+      "SHA256": "39e873abb0b28f4d87f444ee8b0750723d0963f774ac11b4b4faf4ed29b57035"
+    }
+  },
+  "behavior": "Guard only the two inventory derivations so absent engine reaches existing start()/fail() boundary; Greek failure and retry ownership remain unchanged. No false quiz or chemical target change.",
+  "checks": {
+    "missingEngineBeforeModes": 2,
+    "missingEngineAfterModes": 2,
+    "goodEngineExistingControllerChecks": 151,
+    "syntax": "node --check js/namelecule-molecular-detective.js passed"
+  },
+  "limitations": [
+    "Actual controller executed with DOM/native fixtures, not a browser.",
+    "Controlled lesson retains existing parent-owned retry and hides local retry.",
+    "No proof of recovery after an external script outage resolves."
+  ],
+  "independentReviewPending": true,
+  "coreChangedBySubagent": false,
+  "commit": false,
+  "publication": false,
+  "otherOwnedRuntimePathsUnchanged": {
+    "games/name-repair.html": true,
+    "js/namelecule-game-repair.js": true,
+    "js/namelecule-molecular-detective-engine.js": true
+  }
+}

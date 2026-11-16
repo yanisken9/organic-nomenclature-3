@@ -1,0 +1,23 @@
+BEFORE:
+&& Number.isFinite(initialZoom) && initialZoom > 0)
+    ? "zoom " + initialZoom + ";"
+    : "";
+  fJSmolScript(
+    jmolAppletNomeclature,
+    "frank off;load " +
+      myMol3D +
+      "; select all; center selected;" +
+
+LOCAL:
+      "script spt/init-55.spt;" + zoomCmd + movetoCmd,
+
+UPSTREAM:
+      "script spt/init-3-56.spt;" + zoomCmd + movetoCmd,
+
+AFTER:
+  );
+  fSetMolVis3D();
+  // A fresh load satisfies any pending one-shot exit reload (e.g. molecule
+  // picked while 3D hidden after a no-3D exit: already loaded, reopen is instant).
+  try {
+    if (t

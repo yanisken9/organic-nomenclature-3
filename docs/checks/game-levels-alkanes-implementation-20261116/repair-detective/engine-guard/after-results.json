@@ -1,0 +1,41 @@
+{
+  "recordedUTC": "2026-11-16T07:48:47.679Z",
+  "role": "Developer actual controller VM under DOM/native fixtures; not browser evidence",
+  "before": [
+    {
+      "mode": "standalone",
+      "reproduced": true,
+      "error": "Cannot read properties of undefined (reading 'starterIds')"
+    },
+    {
+      "mode": "controlled lesson",
+      "reproduced": true,
+      "error": "Cannot read properties of undefined (reading 'starterIds')"
+    }
+  ],
+  "after": [
+    {
+      "mode": "standalone",
+      "noException": true,
+      "phase": "error",
+      "greekFailureVisible": true,
+      "localRetryVisible": true,
+      "nativeCommands": 0,
+      "falseQuiz": false
+    },
+    {
+      "mode": "controlled lesson",
+      "noException": true,
+      "phase": "error",
+      "greekFailureVisible": true,
+      "localRetryVisible": false,
+      "nativeCommands": 0,
+      "falseQuiz": false
+    }
+  ],
+  "checks": 4,
+  "limitations": [
+    "The controlled lesson intentionally retains existing parent-owned retry behavior; local retry is hidden by fail().",
+    "This check does not load a browser or prove recovery after an external engine script failure resolves."
+  ]
+}

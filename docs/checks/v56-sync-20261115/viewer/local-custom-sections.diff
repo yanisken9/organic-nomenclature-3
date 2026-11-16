@@ -1,0 +1,1278 @@
+--- local55:jsmeOnLoad
++++ candidate56:jsmeOnLoad
+@@ -14,11 +14,11 @@
+ 
+   let bgAtom = [
+     "#7ddfff",
+-    "#ffc37d",
++    "#7ddfff", // palette slot 2: v56 user-selection cyan (JSME slots are 1-based — slot N is bgAtom[N-1]; slot 9 green stays)
+     "#00ffff",
+     "#ffcc66",
+     "#ffff00",
+-    "#ff9999",
++    "#f74f4f", // palette slot 6 (reserved: quiz-wrong red, unused for now)
+     "#33ccff",
+     "#ff99ff",
+     "#D8EEDC",
+@@ -27,6 +27,7 @@
+     "#93bfff",
+   ];
+   jsmeNomeclatureApplet.setBackGroundColorPalette(bgAtom);
++  try { if (typeof fMulerSelectWrapBgChannel === "function") fMulerSelectWrapBgChannel(); } catch (eSelWrap) {}
+ 
+   carbonHydrogens = Array(jsmeNomeclatureApplet.totalNumberOfAtoms()).fill(0);
+ 
+@@ -49,7 +50,7 @@
+     try { jsmeEditDraftApplet.setMolecularAreaLineWidth(0.6); } catch (eL2) {}
+     try { jsmeEditDraftApplet.setBackGroundColorPalette(bgAtom); } catch (eP2) {}
+   } catch (eDraft) {
+-    try { console.warn("[draft] edit applet unavailable", eDraft); } catch (eL3) {}
++    try { /* console.warn("[draft] edit applet unavailable", eDraft); */ } catch (eL3) {}
+     try { jsmeEditDraftApplet = null; } catch (eN) {}
+   }
+ 
+--- local55:fMolDraftEnter
++++ candidate56:fMolDraftEnter
+@@ -29,6 +29,10 @@
+   window.MulerDraft = { mode: mode, sourceMol: sourceMol, variant: variant, had3D: had3D };
+   try { window.MulerDraft._epoch = (window._MulerDraftEpoch = (window._MulerDraftEpoch || 0) + 1); } catch (eEp) { try { window.MulerDraft._epoch = Date.now(); } catch (eEp2) {} }
+   try { window.MulerDraft._submitId = 0; window.MulerDraft.accepting = false; } catch (eSi) {}
++  // Fresh canvas on New (blank drawing, naming placeholder): clear any sticky
++  // hidden set so the preview starts fully visible. Edit keeps the live set
++  // (template is the visible variant the author was just looking at).
++  try { if (mode === "new" && typeof window !== "undefined") window.nameHiddenComps = []; } catch (eH) {}
+   // Update-in-place only when an Edit redraws the SAME molecule (beautify).
+   // Edit producing a different molecule always forks a new custom entry;
+   // stored (141) templates are never overwritten (option a). Source identity
+@@ -63,6 +67,28 @@
+     var _ob = document.getElementById(mode === "edit" ? "newMolBtn" : "editMolBtn");
+     if (_ob) _ob.classList.add("btnInactive");
+   } catch (eOb) {}
++  // Selection mode (v56) cannot survive draft entry: the draft clears naming
++  // and highlights, so an armed selection would point at stale state. Exit
++  // the mode and dim its button (same display-only contract as above; the
++  // toggle handler early-returns while a draft is live). Teardown restores
++  // via the normal fSelectMol → fMolDraftSyncButtons path.
++  try {
++    if (typeof window !== "undefined" && window.MulerUserSelection && window.MulerUserSelection.active === true) {
++      window.MulerUserSelection.active = false;
++      try { window.MulerUserSelection.atoms2D = []; window.MulerUserSelection.bonds2D = []; window.MulerUserSelection.atoms3D = []; window.MulerUserSelection.bonds3D = []; window.MulerUserSelection.groups = []; } catch (eClr) {}
++      try { if (typeof fMulerSelectPush === "function") fMulerSelectPush(); } catch (ePush) {}
++      try { if (typeof fMulerHoverClear === "function") fMulerHoverClear(); } catch (eHC2) {}
++      try { if (typeof fMulerQuizDisarm === "function") fMulerQuizDisarm(); } catch (eQD3) {}
++    }
++  } catch (eSel) {}
++  try {
++    var _selB = document.getElementById("selectAtomsBtn");
++    if (_selB) { _selB.classList.remove("active"); _selB.classList.add("btnInactive"); }
++  } catch (eSb) {}
++  try {
++    var _selSvg = document.getElementById("jsmeNomeclatureSVG");
++    if (_selSvg) _selSvg.classList.remove("selecting");
++  } catch (eSv) {}
+   // Edit applet must exist (constructed at boot; guarded so a draft-only
+   // failure never strands the UI mid-chrome — nothing visible changed yet).
+   try {
+--- local55:fMolDraftRenderPreview
++++ candidate56:fMolDraftRenderPreview
+@@ -8,10 +8,10 @@
+     var clsGR = vGR === "correct" ? " draftV-correct" : (vGR === "wrong" ? " draftV-wrong" : "");
+     var clsEN = vEN === "correct" ? " draftV-correct" : (vEN === "wrong" ? " draftV-wrong" : "");
+     var html = "<div class='draftPreview'><div class='draftPreviewTitle'>" + fMolDraftEsc(fMolDraftT("draftPreviewTitle", "Πρόβλεψη Ονομασίας")) + "</div>" +
+-      "<div class='draftVRow'>" + fMolDraftVerdictCtrl("gr", vGR, false) + "<div class='draftEngine" + clsGR + "'>" + fMolDraftEsc((d.engineName_sys ? fMolDraftT("commonName", "Κοινή") + ": " : "") + d.engineName) + "</div></div>";
++      "<div class='draftVRow'>" + fMolDraftVerdictCtrl("gr", vGR, false) + "<div class='draftEngine" + clsGR + "'>" + fMulerItalicSecTert(fMolDraftEsc((d.engineName_sys ? fMolDraftT("commonName", "Κοινή") + ": " : "") + d.engineName)) + "</div></div>";
+     // Systematic Greek row (v54.31) when it differs — shares the GR verdict
+     // state (manual-only, like EN). Common stays first.
+-    if (d.engineName_sys) html += "<div class='draftVRow'>" + fMolDraftVerdictCtrl("gr", vGR, false) + "<div class='draftEngine" + clsGR + "'>" + fMolDraftEsc(fMolDraftT("systematicName", "Συστηματική") + ": " + d.engineName_sys) + "</div></div>";
++    if (d.engineName_sys) html += "<div class='draftVRow'>" + fMolDraftVerdictCtrl("gr", vGR, false) + "<div class='draftEngine" + clsGR + "'>" + fMulerItalicSecTert(fMolDraftEsc(fMolDraftT("systematicName", "Συστηματική") + ": " + d.engineName_sys)) + "</div></div>";
+     // EN prediction rows: school (Traditional) always; Systematic variant row
+     // (v54.24) when it differs — e.g. 4,4-bis(chloromethyl)heptane vs school
+     // 4,4-dichloromethylheptane. One shared EN verdict state per draft
+@@ -23,8 +23,8 @@
+         _syW = fMolDraftT("substSystematic", "Systematic");
+       } catch (eSW) {}
+       var _enLbl = d.engineEN_sys ? _scW + ": " : "";
+-      html += "<div class='draftVRow'>" + fMolDraftVerdictCtrl("en", vEN, !!d.enAutoValidated) + "<div class='draftEngineEN" + clsEN + "'>" + fMolDraftEsc(_enLbl + d.engineEN) + "</div></div>";
+-      if (d.engineEN_sys) html += "<div class='draftVRow'>" + fMolDraftVerdictCtrl("en", vEN, !!d.enAutoValidated) + "<div class='draftEngineEN" + clsEN + "'>" + fMolDraftEsc(_syW + ": " + d.engineEN_sys) + "</div></div>";
++      html += "<div class='draftVRow'>" + fMolDraftVerdictCtrl("en", vEN, !!d.enAutoValidated) + "<div class='draftEngineEN" + clsEN + "'>" + fMulerItalicSecTert(fMolDraftEsc(_enLbl + d.engineEN)) + "</div></div>";
++      if (d.engineEN_sys) html += "<div class='draftVRow'>" + fMolDraftVerdictCtrl("en", vEN, !!d.enAutoValidated) + "<div class='draftEngineEN" + clsEN + "'>" + fMulerItalicSecTert(fMolDraftEsc(_syW + ": " + d.engineEN_sys)) + "</div></div>";
+     }
+     if (typeof d.pubchem === "undefined") {
+       html += "<div class='draftOracleRow'>" + fMolDraftEsc(fMolDraftT("submitFetching", "Looking up PubChem…")) + "</div>";
+@@ -75,34 +75,10 @@
+         }
+       } catch (eOCD) {}
+       if (!iupac && !title) html += "<div class='draftOracleRow'>" + fMolDraftEsc(fMolDraftT("submitNoRecord", "No PubChem record — engine only.")) + "</div>";
+-      // v55 tiered 3D status: source-labeled row on success (local flagged
+-      // provisional), fetching note while pending, all-miss note only at end.
+-      try {
+-        if (d.sdf3D && d.sdf3DSource) {
+-          var _s3k = d.sdf3DSource === "pubchem" ? "draft3DPubchem" : (d.sdf3DSource === "remote" ? "draft3DRemote" : (d.sdf3DSource === "jsmol-unminimized" ? "draft3DUnmin" : "draft3DLocal"));
+-          var _s3f = d.sdf3DSource === "pubchem" ? "3D: PubChem" : (d.sdf3DSource === "remote" ? "3D: remote (JSmol)" : (d.sdf3DSource === "jsmol-unminimized" ? "3D: unminimized (local — needs review)" : "3D: provisional local conformation (geometry and convergence unverified)"));
+-          html += "<div class='draftOracleRow'>" + fMolDraftEsc(fMolDraftT(d.sdf3DStatus === "provisional" ? "draft3DProvisional" : _s3k, _s3f)) + "</div>";
+-          if (d.sdf3DStatus === "provisional") html += "<div class='draftOracleRow'><button type='button' class='viewerFullBtn draftMinBtn' onclick='fMolDraftManualMinimize()'>" + fMolDraftEsc(fMolDraftT(d.sdf3DSource === "jsmol-min" ? "draftMinMore" : "draftMinBtn", "Minimize 3D (local)").replace(/\+\d+/, "+" + MOLMIN_FURTHER_STEPS)) + "</button></div>";
+-        } else if (!d.sdfDone) {
+-          html += "<div class='draftOracleRow'>" + fMolDraftEsc(fMolDraftT("draft3DFetching", "Fetching 3D… (PubChem → remote → local)")) + "</div>";
+-        } else {
+-          html += "<div class='draftOracleRow'>" + fMolDraftEsc(fMolDraftT("submitNo3DAll", "No 3D model (PubChem/remote/local minimize) — 2D only.")) + " <button type='button' class='viewerFullBtn draftMinBtn' onclick='fMolDraftManualMinimize()'>" + fMolDraftEsc(fMolDraftT(d.sdf3DSource === "jsmol-min" ? "draftMinMore" : "draftMinBtn", "Minimize 3D (local)").replace(/\+\d+/, "+" + MOLMIN_FURTHER_STEPS)) + "</button></div>";
+-        }
+-      } catch (eS3) {}
++      try { if (typeof fMolDraftSDF3DStatusHTML === "function") html += fMolDraftSDF3DStatusHTML(d) || ""; } catch (eS3) {}
+     } else {
+       html += "<div class='draftOracleRow'>" + fMolDraftEsc(fMolDraftT("submitNoRecord", "No PubChem record — engine only.")) + "</div>";
+-      try {
+-        if (d.sdf3D && d.sdf3DSource) {
+-          var _s3k2 = d.sdf3DSource === "pubchem" ? "draft3DPubchem" : (d.sdf3DSource === "remote" ? "draft3DRemote" : (d.sdf3DSource === "jsmol-unminimized" ? "draft3DUnmin" : "draft3DLocal"));
+-          var _s3f2 = d.sdf3DSource === "pubchem" ? "3D: PubChem" : (d.sdf3DSource === "remote" ? "3D: remote (JSmol)" : (d.sdf3DSource === "jsmol-unminimized" ? "3D: unminimized (local — needs review)" : "3D: provisional local conformation (geometry and convergence unverified)"));
+-          html += "<div class='draftOracleRow'>" + fMolDraftEsc(fMolDraftT(d.sdf3DStatus === "provisional" ? "draft3DProvisional" : _s3k2, _s3f2)) + "</div>";
+-          if (d.sdf3DStatus === "provisional") html += "<div class='draftOracleRow'><button type='button' class='viewerFullBtn draftMinBtn' onclick='fMolDraftManualMinimize()'>" + fMolDraftEsc(fMolDraftT(d.sdf3DSource === "jsmol-min" ? "draftMinMore" : "draftMinBtn", "Minimize 3D (local)").replace(/\+\d+/, "+" + MOLMIN_FURTHER_STEPS)) + "</button></div>";
+-        } else if (!d.sdfDone) {
+-          html += "<div class='draftOracleRow'>" + fMolDraftEsc(fMolDraftT("draft3DFetching", "Fetching 3D… (PubChem → remote → local)")) + "</div>";
+-        } else {
+-          html += "<div class='draftOracleRow'>" + fMolDraftEsc(fMolDraftT("submitNo3DAll", "No 3D model (PubChem/remote/local minimize) — 2D only.")) + " <button type='button' class='viewerFullBtn draftMinBtn' onclick='fMolDraftManualMinimize()'>" + fMolDraftEsc(fMolDraftT(d.sdf3DSource === "jsmol-min" ? "draftMinMore" : "draftMinBtn", "Minimize 3D (local)").replace(/\+\d+/, "+" + MOLMIN_FURTHER_STEPS)) + "</button></div>";
+-        }
+-      } catch (eS32) {}
++      try { if (typeof fMolDraftSDF3DStatusHTML === "function") html += fMolDraftSDF3DStatusHTML(d) || ""; } catch (eS32) {}
+     }
+     html += "</div>";
+     na.innerHTML = html;
+--- local55:fMolDraftJiggleZ
++++ candidate56:fMolDraftJiggleZ
+@@ -25,11 +25,11 @@
+       var chk = fParseMolV2000(out) || null, chkH = 0;
+       if (chk && chk.atoms) for (var k = 0; k < chk.atoms.length; k++) { var ce = String(chk.atoms[k].el || ""); if (ce && ce !== "H" && ce !== "h") chkH++; }
+       if (!chk || (refH && chkH !== refH)) {
+-        try { console.log("[SDF-3D] tier local-min: jiggle failed self-verify — using un-jiggled input"); } catch (eLgV) {}
++        try { /* console.log("[SDF-3D] tier local-min: jiggle failed self-verify — using un-jiggled input"); */ } catch (eLgV) {}
+         return molText;
+       }
+     } catch (eV) { return molText; }
+-    try { console.log("[SDF-3D] tier local-min: z-jiggle ±" + A + " A on " + nA + " atoms"); } catch (eL) {}
++    try { /* console.log("[SDF-3D] tier local-min: z-jiggle ±" + A + " A on " + nA + " atoms"); */ } catch (eL) {}
+     return out;
+   } catch (e) { return molText; }
+ }
+--- local55:fMolDraftSet3D
++++ candidate56:fMolDraftSet3D
+@@ -2,7 +2,7 @@
+   if (!d || !fMolDraftValidSDF3D(sdf, d.expectHeavy || 0, d.molText)) return false;
+   d.sdf3D = sdf;
+   d.sdf3DSource = source;
+-  d.sdf3DStatus = source === 'pubchem' || source === 'remote' ? 'source-provided' : 'provisional';
++  d.sdf3DStatus = source === 'pubchem' || source === 'pubchem-jsmol' || source === 'pubchem-fetch' || source === 'remote' ? 'source-provided' : 'provisional';
+   d.sdf3DProvenance = fMolDraft3DProvenance(source, confirmation);
+   d._provisionalConfirmedSDF = confirmation ? sdf : null;
+   return true;
+--- local55:fMolDraftManualMinimize
++++ candidate56:fMolDraftManualMinimize
+@@ -33,3 +33,6 @@
+   fMolDraftToast(fMolDraftT('draftMinProvisionalDone', 'Provisional 3D preview; geometry and convergence are unverified.'));
+   fMolDraftRenderPreview(); fMolDraftSyncBar();
+ }
++// Every applet provider uses the same serialized draft-owned model writer
++// and exact graph read-back as local minimization. A stale provider cannot
++// read, replace or store a later drawing's model.
+--- local55:fMolDraftRemote3DFromJSmol
++++ candidate56:fMolDraftRemote3DFromJSmol
+@@ -1,9 +1,5 @@
+ function fMolDraftRemote3DFromJSmol(smiles, expectHeavy, job) {
+-  if (!smiles || !fMolDraft3DCurrent(job) || (typeof navigator !== 'undefined' && navigator.onLine === false)) return null;
+-  // Reject script delimiters; the MOL/SMILES input is chemical data.
+-  if (/[\r\n";]/.test(smiles)) return null;
++  if (!smiles || !fMolDraft3DCurrent(job) || /[\r\n";]/.test(smiles)) return null;
+   var quoted = String(smiles).replace(/\\/g, '\\\\');
+-  if (fMolDraft3DWrite(job, 'zap;', true) === null) return null;
+-  if (fMolDraft3DWrite(job, 'load "$' + quoted + '"', true) === null) return null;
+-  return fMolDraftReadBackSDF(expectHeavy, job);
++  return fMolDraftJSmolLoadAndReadBack('load "$' + quoted + '"', expectHeavy, job);
+ }
+--- local55:fMolDraftFetchSDF3DTiered
++++ candidate56:fMolDraftFetchSDF3DTiered
+@@ -1,19 +1,38 @@
+-async function fMolDraftFetchSDF3DTiered(smiles, molText, expectHeavy, isCurrent) {
++async function fMolDraftFetchSDF3DTiered(smiles, molText, expectHeavy, isCurrent, opts) {
+   var job = fMolDraft3DBegin(isCurrent);
+   var empty = { sdf:null, source:null };
+   if (!job) return empty;
+   var offline = typeof navigator !== 'undefined' && navigator.onLine === false;
+-  if (!offline) {
++  var o = opts || {}, cid = o.cid == null ? null : String(o.cid).trim();
++  if (cid && !/^\d+$/.test(cid)) cid = null;
++  var canonical = o.canonicalSmiles ? String(o.canonicalSmiles).trim() : null;
++  // Native test hook skips all network tiers, leaving bounded local work.
++  if (!offline && !window.MULER_SKIP_REMOTE3D) {
++    var pubchem = null;
++    if (cid) pubchem = fMolDraftPubChem3DFromJSmol(cid, expectHeavy, job, 'cid');
++    if (!fMolDraft3DCurrent(job)) return empty;
++    if (!pubchem && (canonical || smiles)) {
++      pubchem = fMolDraftPubChem3DFromJSmol(canonical || smiles, expectHeavy, job, 'smiles');
++    }
++    if (!fMolDraft3DCurrent(job)) return empty;
++    if (fMolDraftValidSDF3D(pubchem, expectHeavy, molText)) {
++      fMolDraft3DJob = null;
++      return { sdf:pubchem, source:'pubchem-jsmol' };
++    }
+     var sdf = null;
+     try { if (typeof fFetchSDF3D_PubChem === 'function') sdf = await fFetchSDF3D_PubChem(smiles); } catch (e) {}
+     if (!fMolDraft3DCurrent(job)) return empty;
+-    if (fMolDraftValidSDF3D(sdf, expectHeavy, molText)) { fMolDraft3DJob = null; return { sdf:sdf, source:'pubchem' }; }
++    if (fMolDraftValidSDF3D(sdf, expectHeavy, molText)) {
++      fMolDraft3DJob = null;
++      return { sdf:sdf, source:'pubchem-fetch' };
++    }
+     var remote = null;
+-    if (!window.MULER_SKIP_REMOTE3D) {
+-      try { remote = fMolDraftRemote3DFromJSmol(smiles, expectHeavy, job); } catch (eR) {}
++    try { remote = fMolDraftRemote3DFromJSmol(smiles, expectHeavy, job); } catch (eR) {}
++    if (!fMolDraft3DCurrent(job)) return empty;
++    if (fMolDraftValidSDF3D(remote, expectHeavy, molText)) {
++      fMolDraft3DJob = null;
++      return { sdf:remote, source:'remote' };
+     }
+-    if (!fMolDraft3DCurrent(job)) return empty;
+-    if (fMolDraftValidSDF3D(remote, expectHeavy, molText)) { fMolDraft3DJob = null; return { sdf:remote, source:'remote' }; }
+   }
+   var local = null;
+   try { local = await fMolDraftLocal3DFromMol(molText, expectHeavy, false, job); } catch (eL) {}
+--- local55:fMolDraftShow3D
++++ candidate56:fMolDraftShow3D
+@@ -13,12 +13,12 @@
+   var _issued = false;
+   try {
+     if (typeof fJSmolLoadInlineSDF === "function") {
+-      _issued = !!fJSmolLoadInlineSDF(jmolAppletNomeclature, sdf, "script spt/init-55.spt;");
++      _issued = !!fJSmolLoadInlineSDF(jmolAppletNomeclature, sdf, "script spt/init-56.spt;");
+     }
+   } catch (eJ) { _issued = false; }
+   if (!_issued) {
+     try { if (typeof fMulerNotePending3D === "function") fMulerNotePending3D(); } catch (eP3b) {}
+-    try { fMolDraftToast(fMolDraftT("submitNo3DAll", "No 3D model (PubChem/remote/local minimize) — 2D only.")); } catch (eT3) {}
++    try { fMolDraftToast(fMolDraftT("submitNo3DAll", "No 3D model (PubChem/Cactus/local minimize) — 2D only.")); } catch (eT3) {}
+     return;
+   }
+   try { if (typeof fSetMolVis3D === "function") fSetMolVis3D(); } catch (eV) {}
+--- local55:fMolDraftSubmit
++++ candidate56:fMolDraftSubmit
+@@ -216,7 +216,7 @@
+           try {
+             var _op = (oc && oc.name) || "", _oe = window.MulerDraft.engineEN || "";
+             var _ov = (typeof fMatchENvsOC === "function") ? fMatchENvsOC(_oe, _op) : "missing";
+-            console.log("[EN-CHECK-OC] draft: predicted=\"" + _oe + "\" openclatura=\"" + _op + "\" verdict=" + _ov);
++            // console.log("[EN-CHECK-OC] draft: predicted=\"" + _oe + "\" openclatura=\"" + _op + "\" verdict=" + _ov);
+           } catch (eOCl) {}
+           fMolDraftRenderPreview();
+         } catch (eOCr) {}
+@@ -225,15 +225,16 @@
+           if (window.MulerDraft !== submittingDraft || window.MulerDraft._submitId !== _mySid || window.MulerDraft._epoch !== _myEpoch || window.MulerDraft.smiles !== submittingSmiles) return;
+           window.MulerDraft.openclatura = null;
+           try { window.MulerDraft.openclaturaErr = true; } catch (eOCe2) {}
+-          try { console.warn("[OC] draft fetch failed", eOC); } catch (eL) {}
++          try { /* console.warn("[OC] draft fetch failed", eOC); */ } catch (eL) {}
+           fMolDraftRenderPreview();
+         } catch (eOCr2) {}
+       });
+     }
+   } catch (eOCf) {}
+-  // 4. 3D tiered (v55): PubChem SDF -> JSmol remote `$SMILES` -> local 2D-MOL + UFF
++  // 4. 3D tiered (v55): JSmol `:cid:`/`:smiles:` (PubChem) -> page PUG fetch
++  // (PubChem fallback) -> JSmol `$SMILES` (NCI Cactus) -> local 2D-MOL + UFF
+   // minimize (offline). Any tier success shows 3D and unblocks Accept with
+-  // provenance in d.sdf3DSource; only all-three-miss keeps the 2D-only note.
++  // provenance in d.sdf3DSource; only all-miss keeps the 2D-only note.
+   var _tier = { sdf: null, source: null };
+   try {
+     var _expH = 0;
+@@ -255,7 +256,10 @@
+       } catch (eIC) { return false; }
+     };
+     if (typeof fMolDraftFetchSDF3DTiered === "function") {
+-      _tier = await fMolDraftFetchSDF3DTiered(submittingSmiles, _molT, _expH, _isCur) || _tier;
++      var _cid = null, _canon = null;
++      try { _cid = (hit && hit.cid != null) ? String(hit.cid) : null; } catch (eCc) { _cid = null; }
++      try { _canon = (hit && hit.canonicalSmiles) ? String(hit.canonicalSmiles) : null; } catch (eCn) { _canon = null; }
++      _tier = await fMolDraftFetchSDF3DTiered(submittingSmiles, _molT, _expH, _isCur, { cid: _cid, canonicalSmiles: _canon }) || _tier;
+     } else if (typeof fFetchSDF3D_PubChem === "function") {
+       var _s0 = null;
+       try { _s0 = await fFetchSDF3D_PubChem(submittingSmiles); } catch (eS) { _s0 = null; }
+--- local55:fMolDraftShowFlat3D
++++ candidate56:fMolDraftShowFlat3D
+@@ -9,7 +9,7 @@
+       if (typeof fJSmolScriptWait === "function") { if (fJSmolScriptWait(jmolAppletNomeclature, "zap;") === null) return; }
+     } catch (eZ) {}
+     var ok = false;
+-    try { if (typeof fJSmolLoadInlineSDF === "function") ok = !!fJSmolLoadInlineSDF(jmolAppletNomeclature, d.molText, "script spt/init-55.spt;"); } catch (eL) { ok = false; }
++    try { if (typeof fJSmolLoadInlineSDF === "function") ok = !!fJSmolLoadInlineSDF(jmolAppletNomeclature, d.molText, "script spt/init-56.spt;"); } catch (eL) { ok = false; }
+     if (!ok) return;
+     try {
+       var b3 = document.getElementById("view3DBtn");
+@@ -21,7 +21,7 @@
+     try { if (typeof fSetMolVis3D === "function") fSetMolVis3D(); } catch (eVs) {}
+     try { if (typeof rotate3D === "function") rotate3D(); } catch (eR) {}
+     try { if (typeof fResizeViewers === "function") fResizeViewers(); } catch (eRz) {}
+-    try { console.log("[SDF-3D] flat drawing shown in 3D viewer — manual minimize available"); } catch (eLg) {}
++    try { /* console.log("[SDF-3D] flat drawing shown in 3D viewer — manual minimize available"); */ } catch (eLg) {}
+   } catch (eF) {}
+ }
+ 
+--- local55:fMolDraftDownloadSingle
++++ candidate56:fMolDraftDownloadSingle
+@@ -19,7 +19,7 @@
+       return !!fScenarioSaveBlobDownload(fMolDraftFileSlug(rec), new Blob([header], { type: "text/javascript" }));
+     }
+   } catch (eD) {
+-    try { console.warn("[draft] custom file download failed", eD); } catch (eL) {}
++    try { /* console.warn("[draft] custom file download failed", eD); */ } catch (eL) {}
+   }
+   return false;
+ }
+--- local55:fMolDraftAccept
++++ candidate56:fMolDraftAccept
+@@ -235,30 +235,30 @@
+       molE = d.molText;
+       molC = (typeof fStripHydrogensMol === "function") ? (fStripHydrogensMol(d.molText) || d.molText) : d.molText;
+       molS = _skel || molC;
+-      if (!_skel) { try { console.warn("[draft] skeletal fallback: drawn geometry"); } catch (eW1) {} }
++      if (!_skel) { try { /* console.warn("[draft] skeletal fallback: drawn geometry"); */ } catch (eW1) {} }
+     } else if (drawnVariant === "expanded" && isFork) {
+       // Edit-expanded fork: same full generation as New (linearize → top-up),
+       // never the hand geometry verbatim.
+       var _linE = (typeof fLinearizeMol === "function") ? fLinearizeMol(d.molText, _chainLive) : null;
+-      if (!_linE) { try { console.warn("[draft] linearizer failed, condensed = drawn geometry"); } catch (eW1b) {} }
++      if (!_linE) { try { /* console.warn("[draft] linearizer failed, condensed = drawn geometry"); */ } catch (eW1b) {} }
+       molC = _linE || d.molText;
+       if (typeof fStripHydrogensMol === "function") {
+         try { molC = (fStripHydrogensMol(molC) || molC); } catch (eStE) {}
+       }
+       molE = (typeof fGenExpandedMol === "function") ? (fGenExpandedMol(molC) || null) : null;
+-      if (!molE) { try { console.warn("[draft] expanded generation failed — mode disabled"); } catch (eW1c) {} }
++      if (!molE) { try { /* console.warn("[draft] expanded generation failed — mode disabled"); */ } catch (eW1c) {} }
+       molS = _skel || molC;
+-      if (!_skel) { try { console.warn("[draft] skeletal fallback: drawn geometry"); } catch (eW1d) {} }
++      if (!_skel) { try { /* console.warn("[draft] skeletal fallback: drawn geometry"); */ } catch (eW1d) {} }
+     } else if (drawnVariant === "skeletal" || drawnVariant === "condensedZigZag") {
+       // Skeletal is always the ladder zigzag (see above) — the drawn MOL here
+       // is layout-agnostic input, often already linearized by Beautify.
+       molS = _skel || d.molText;
+-      if (!_skel) { try { console.warn("[draft] skeletal fallback: drawn geometry"); } catch (eW2b) {} }
++      if (!_skel) { try { /* console.warn("[draft] skeletal fallback: drawn geometry"); */ } catch (eW2b) {} }
+       var _lin = (typeof fLinearizeMol === "function") ? fLinearizeMol(d.molText, _chainLive) : null;
+-      if (!_lin) { try { console.warn("[draft] linearizer failed, condensed = drawn geometry"); } catch (eW2) {} }
++      if (!_lin) { try { /* console.warn("[draft] linearizer failed, condensed = drawn geometry"); */ } catch (eW2) {} }
+       molC = _lin || d.molText;
+       molE = (typeof fGenExpandedMol === "function") ? (fGenExpandedMol(molC) || null) : null;
+-      if (!molE) { try { console.warn("[draft] expanded generation failed — mode disabled"); } catch (eW3) {} }
++      if (!molE) { try { /* console.warn("[draft] expanded generation failed — mode disabled"); */ } catch (eW3) {} }
+     } else {
+       // Condensed slot must stay heavy-only: the overlay adds implicit H
+       // itself, so any hand-drawn explicit H would double-render. Strip
+@@ -274,9 +274,9 @@
+         try { molC = isFork ? (fStripHydrogensMol(molC) || molC) : (fStripHydrogensMol(d.molText) || d.molText); } catch (eSt) {}
+       }
+       molE = (typeof fGenExpandedMol === "function") ? (fGenExpandedMol(molC) || null) : null;
+-      if (!molE) { try { console.warn("[draft] expanded generation failed — mode disabled"); } catch (eW4) {} }
++      if (!molE) { try { /* console.warn("[draft] expanded generation failed — mode disabled"); */ } catch (eW4) {} }
+       molS = _skel || molC;
+-      if (!_skel) { try { console.warn("[draft] skeletal fallback: drawn geometry"); } catch (eW5) {} }
++      if (!_skel) { try { /* console.warn("[draft] skeletal fallback: drawn geometry"); */ } catch (eW5) {} }
+     }
+   } catch (eDv) { molC = d.molText; molE = null; molS = d.molText; }
+   if (!molC) molC = d.molText;
+@@ -284,8 +284,8 @@
+   // One-line slot geometry receipt (Y-inclusive: straight vs zigzag layouts
+   // share x-projections, so x-only sums cannot tell them apart).
+   try {
+-    console.log("[draft] slots variant=" + drawnVariant + " skelSrc=" + (_skelSrc || "-") +
+-      " C:[" + _sigOf(molC) + "] E:[" + _sigOf(molE) + "] S:[" + _sigOf(molS) + "] draw:[" + _sigOf(d.molText) + "]");
++    // console.log("[draft] slots variant=" + drawnVariant + " skelSrc=" + (_skelSrc || "-") +
++      // " C:[" + _sigOf(molC) + "] E:[" + _sigOf(molE) + "] S:[" + _sigOf(molS) + "] draw:[" + _sigOf(d.molText) + "]");
+   } catch (eLg2) {}
+   // Stray-H guard (H32 class): verbatim slots keep hand geometry including
+   // hand errors — an H a full bond length off its parent would be stored
+@@ -301,7 +301,7 @@
+       var _sm = "", _sy = "";
+       try { _sm = fMolDraftT("draftStrayH", "Some H sit far from their atoms"); } catch (eSm) { _sm = "Stray H?"; }
+       try { _sy = fMolDraftT("draftStrayKeep", "Keep anyway"); } catch (eSy2) { _sy = "Keep anyway"; }
+-      try { console.warn("[draft] stray H: " + _strays.length + " over 1.5x H scale (" + _strays.slice(0, 4).map(function (s) { return "H" + s.h + "/C" + s.parent + "x" + s.ratio; }).join(", ") + ")"); } catch (eLw) {}
++      try { /* console.warn("[draft] stray H: " + _strays.length + " over 1.5x H scale (" + _strays.slice(0, 4).map(function (s) { return "H" + s.h + "/C" + s.parent + "x" + s.ratio; }).join(", ") + ")"); */ } catch (eLw) {}
+       if (typeof fScenarioConfirm === "function") {
+         try { fScenarioConfirm(_sm + " (" + _strays.length + ")", function () { try { if (window.MulerDraft !== d || d._epoch !== _myEpochA || d._submitId !== _mySidA) return; d._strayConfirmed = true; d.accepting = false; } catch (eFc) {} try { fMolDraftAccept(); } catch (eFa) {} }, _sy); } catch (eSc2) { try { d.accepting = false; } catch (eAb3) {} }
+         return;
+--- local55:fSelectMol
++++ candidate56:fSelectMol
+@@ -52,7 +52,7 @@
+   try {
+     fShowNameAnalysis();
+   } catch (eNA) {
+-    try { console.error("[COLD-BOOT] fShowNameAnalysis failed for " + selectedMol, eNA); } catch (eL) { /* console unavailable */ }
++    try { /* console.error("[COLD-BOOT] fShowNameAnalysis failed for " + selectedMol, eNA); */ } catch (eL) { /* console unavailable */ }
+   }
+ 
+   getMolData();
+--- local55:fDeselectMol
++++ candidate56:fDeselectMol
+@@ -1,6 +1,10 @@
+ function fDeselectMol() {
+   fMolDraft3DInvalidate();
+   fInitProps();
++  try { if (typeof fMulerQuizDisarm === "function") fMulerQuizDisarm(); } catch (eQD) {}
++  // Deselect clears the selection (fInitProps no longer resets the mode —
++  // sticky selection across molecule switches lives there).
++  try { nameAnalysisMode = "none"; } catch (eM) {}
+   fClearHighlights();
+ 
+   selectedMol = null;
+@@ -19,11 +23,11 @@
+   myMol2D = null;
+   if (jsmeNomeclatureApplet) jsmeNomeclatureApplet.reset();
+   if (jsmeNomeclatureAppletORGNL) jsmeNomeclatureAppletORGNL.reset();
+-  try { fUpdateSVG(); } catch (eU) { try { console.error("[COLD-BOOT] fUpdateSVG failed in fDeselectMol", eU); } catch (eL) {} }
++  try { fUpdateSVG(); } catch (eU) { try { /* console.error("[COLD-BOOT] fUpdateSVG failed in fDeselectMol", eU); */ } catch (eL) {} }
+ 
+   $("#molName").html("");
+   nameComponentsList = [];
+-  try { fShowNameAnalysis(); } catch (eNA2) { try { console.error("[COLD-BOOT] fShowNameAnalysis failed in fDeselectMol", eNA2); } catch (eL2) {} }
++  try { fShowNameAnalysis(); } catch (eNA2) { try { /* console.error("[COLD-BOOT] fShowNameAnalysis failed in fDeselectMol", eNA2); */ } catch (eL2) {} }
+   fUpdateDiagr2DButton();
+   fUpdateChainModeButton();
+   try { if (typeof fMolDraftSyncButtons === "function") fMolDraftSyncButtons(); } catch (eDs) {}
+--- local55:fLoadMol2D
++++ candidate56:fLoadMol2D
+@@ -90,19 +90,19 @@
+     fDetectMolType();
+     nameExamples[selectedMol].classification = fGetMoleculeClassification();
+   } catch (eAn) {
+-    try { console.error("[COLD-BOOT] analysis failed for " + selectedMol + " — naming cleared, not guessed", eAn); } catch (eL) { /* console unavailable */ }
++    try { /* console.error("[COLD-BOOT] analysis failed for " + selectedMol + " — naming cleared, not guessed", eAn); */ } catch (eL) { /* console unavailable */ }
+     try { nameComponentsList = []; currentMolName = ""; } catch (eC) { /* best-effort */ }
+   }
+   try {
+     fGuessName();
+   } catch (eGn) {
+-    try { console.error("[COLD-BOOT] fGuessName failed for " + selectedMol + " — naming cleared, not guessed", eGn); } catch (eL2) { /* console unavailable */ }
++    try { /* console.error("[COLD-BOOT] fGuessName failed for " + selectedMol + " — naming cleared, not guessed", eGn); */ } catch (eL2) { /* console unavailable */ }
+     try { nameComponentsList = []; currentMolName = ""; } catch (eC2) { /* best-effort */ }
+   }
+   try {
+     fUpdateSVG();
+   } catch (eSvg) {
+-    try { console.error("[COLD-BOOT] fUpdateSVG failed for " + selectedMol + " — overlay skipped, naming continues", eSvg); } catch (eL3) { /* console unavailable */ }
++    try { /* console.error("[COLD-BOOT] fUpdateSVG failed for " + selectedMol + " — overlay skipped, naming continues", eSvg); */ } catch (eL3) { /* console unavailable */ }
+   }
+   // Fresh pools were just built by fCalcMainChain — refresh the stepper UI.
+   try { if (typeof fRenderChainStepper === "function") fRenderChainStepper(); } catch (eStep) { /* stepper unavailable */ }
+--- local55:fCollectHighlightRectsNearText
++++ candidate56:fCollectHighlightRectsNearText
+@@ -6,3 +6,8 @@
+     owners.has(el.node.getAttribute("data-namelecule-atom")));
+ }
+ 
++// Circle twin of the rect collector above: highlight circles (JSME renders
++// atom highlights as circles where no label rect owns them) near removed
++// texts are dropped by the compaction too. Fill-restricted to highlight
++// colors (component green + selection cyan) so structural circles are never
++// touched.
+--- local55:fIsHighlightFillColor
++++ candidate56:fIsHighlightFillColor
+@@ -9,6 +9,39 @@
+   if (normalized.indexOf("216,238,220") !== -1 || normalized.indexOf("121,220,109") !== -1) {
+     return true;
+   }
++  // Selection cyan gets the same black-label contrast as component green.
++  try {
++    if (typeof fMulerSelectIsSelectionFill === "function" && fMulerSelectIsSelectionFill(fillValue)) {
++      return true;
++    }
++  } catch (eSel) {}
++  try {
++    if (typeof fMulerFillMatches === "function") {
++      var _cyan = "#7ddfff";
++      try { if (typeof MULER_SELECT_CYAN !== "undefined" && MULER_SELECT_CYAN) _cyan = MULER_SELECT_CYAN; } catch (eC) {}
++      if (fMulerFillMatches(_cyan, fillValue)) {
++        return true;
++      }
++      if (fMulerFillMatches("#7ddfff", fillValue)) {
++        return true;
++      }
++      if (fMulerFillMatches("#22d3ee", fillValue)) {
++        return true;
++      }
++    }
++  } catch (eFill) {}
++  if (normalized.indexOf("7ddfff") !== -1) {
++    return true;
++  }
++  if (normalized.indexOf("22d3ee") !== -1) {
++    return true;
++  }
++  if (normalized.indexOf("125,223,255") !== -1) {
++    return true;
++  }
++  if (normalized.indexOf("34,211,238") !== -1) {
++    return true;
++  }
+   return false;
+ }
+ 
+--- local55:fCompactFunctionalGroups2D
++++ candidate56:fCompactFunctionalGroups2D
+@@ -342,10 +342,22 @@
+   for (let i = 0; i < bondsToRemove.length; i++) {
+     fRemoveBondLinesByBondIndex(bondsToRemove[i], lineEls);
+   }
++  // Record the removed bonds for the selection line groups (positions of all
++  // later bonds shift by the deleted lines; see fMulerSelectLineGroups).
++  try {
++    if (typeof window !== "undefined") window.__mulerRemovedBondIdx = bondsToRemove.slice();
++  } catch (eRB) {}
+ 
+   const nearbyRectEls = fCollectHighlightRectsNearText(textElsToRemove);
+   for (let i = 0; i < nearbyRectEls.length; i++) {
+     rectElsToRemove.push(nearbyRectEls[i]);
++  }
++
++  const nearbyCircleEls = fCollectHighlightCirclesNearText(textElsToRemove);
++  for (let i = 0; i < nearbyCircleEls.length; i++) {
++    if (nearbyCircleEls[i]) {
++      nearbyCircleEls[i].remove();
++    }
+   }
+ 
+   for (let i = 0; i < textElsToRemove.length; i++) {
+@@ -372,13 +384,21 @@
+       replacements[i].rectEl.node.parentNode
+         ? replacements[i].rectEl
+         : null;
+-    fResizeCompactLabelRect(
++    var compactRectEl = fResizeCompactLabelRect(
+       rectEl,
+       newTextEl,
+       replacements[i].labelKey,
+       replacements[i].reverseLabel,
+       replacements[i].geometryHint,
+     );
++    // Tag the group backplate so selection can distinguish an anchor-only
++    // highlight from a whole-fragment highlight. The tag is geometry only;
++    // atom/rect order maps ignore it.
++    try {
++      if (compactRectEl && compactRectEl.node && replacements[i].anchorIdx >= 0) {
++        compactRectEl.node.setAttribute("data-muler-compact-rect", String(replacements[i].anchorIdx + 1));
++      }
++    } catch (eCR) {}
+     if (newTextEl && replacements[i].anchorIdx >= 0) {
+       const owner = String(replacements[i].anchorIdx + 1);
+       newTextEl.node.setAttribute("data-namelecule-atom", owner);
+--- local55:fRefreshLabelBackplates
++++ candidate56:fRefreshLabelBackplates
+@@ -3,12 +3,12 @@
+   if (!svg || !svg.getClientRects().length) return;
+   const metrics = window.NameleculeLabelMetrics;
+   if (!metrics) throw new Error("Label metrics service unavailable");
+-  for (const text of svg.querySelectorAll('text:not([id^="number"])')) {
++  for (const text of svg.querySelectorAll('text:not([id^="number"]):not([id^="mulerSelNum"])')) {
+     if (!text.hasAttribute("data-namelecule-atom")) throw new Error("Unowned 2D label");
+   }
+   const owners=new Set();
+   for (const text of svg.querySelectorAll('text[data-namelecule-role="label"]')) {
+-    if (text.hasAttribute('data-hidden-carbon-h')) continue;
++    if (text.hasAttribute('data-hidden-carbon-h') || text.hasAttribute('data-muler-hidden')) continue;
+     const owner = text.getAttribute('data-namelecule-atom');
+     const index=Number(owner)-1;
+     if (!Number.isInteger(index) || index<0 || index>=allAtomsTypeList.length || owners.has(owner))
+--- local55:fHideSkeletalSpCarbons
++++ candidate56:fHideSkeletalSpCarbons
+@@ -6,19 +6,26 @@
+   if (!svg) {
+     return;
+   }
++  // Hide (NOT remove): deleting these nodes shifts every order map built on
++  // the live DOM (atom text/rect maps assign slots in document order), so
++  // later atoms would resolve onto their neighbor's label. display:none keeps
++  // document order — and PNG export still omits them. Pick code skips
++  // data-muler-hidden nodes; the vertex fallback owns those carbons.
+   svg.querySelectorAll("text").forEach(function (label) {
+     if (label.textContent.trim() !== "C") {
+       return;
+     }
++    try { label.setAttribute("data-muler-hidden", "spC"); } catch (eM) {}
++    try { label.style.display = "none"; } catch (eD) {}
+     const backplate = label.previousElementSibling;
+     if (
+       backplate &&
+       backplate.localName === "rect" &&
+       backplate.hasAttribute("rx")
+     ) {
+-      backplate.remove();
++      try { backplate.setAttribute("data-muler-hidden", "spC"); } catch (eM2) {}
++      try { backplate.style.display = "none"; } catch (eD2) {}
+     }
+-    label.remove();
+   });
+ }
+ 
+--- local55:fFit2DSVG
++++ candidate56:fFit2DSVG
+@@ -7,8 +7,8 @@
+     const inverse = rootMatrix.inverse();
+     let left = Infinity, top = Infinity, right = -Infinity, bottom = -Infinity;
+     svg.querySelectorAll("line, text, path").forEach(function (el) {
+-      if (el.closest("defs") || (el.id || "").indexOf("number") === 0) return;
+-      if (el.hasAttribute('data-hidden-carbon-h')) return;
++      if (el.closest("defs") || (el.id || "").indexOf("number") === 0 || (el.id || "").indexOf("mulerSelNum") === 0) return;
++      if (el.hasAttribute('data-hidden-carbon-h') || el.hasAttribute('data-muler-hidden')) return;
+       const matrix = el.getCTM();
+       if (!matrix) return;
+       const box = el.getBBox();
+@@ -92,3 +92,11 @@
+ // lines already reach the atom centers; the label backplates mask those lines.
+ // Remove the paired labels/backplates, keeping the separate atom/bond highlights.
+ 
++var MULER_SELECT_SEQ_DY = 300;  // selection badge baseline below label bottom, SVG units
++
++// Selection-sequence badges (v56 1C order dimension): one per picked atom,
++// numbered by selection order, below the label (locants live above). White
++// text + cyan halo, tagged mulerSelNum* and skipped by highlight scraping
++// like the numbering badges. Painted per render from live state — toggle,
++// re-pick, exact-clear and mode switches renumber automatically.
++// Main-chain only: FG and free selections paint the highlight with no numbers.
+--- local55:fBuildMoleculeSVG
++++ candidate56:fBuildMoleculeSVG
+@@ -3,6 +3,15 @@
+   // Stage 1 precedes native label layout. Stage 2 is fFit2DSVG below, after
+   // functional labels are finalized. Numbering/highlights reuse stable atom IDs.
+   fApplySkeletalLayout();
++  // Selection state into the applet BEFORE the SVG string is read, so the
++  // render below already carries the merged component+selection colors.
++  try { if (typeof fMulerSelectPushState === "function") fMulerSelectPushState(); } catch (eSelPush) {}
++  // Fresh line layout per render: the compaction below records its removed
++  // bonds for the selection line groups (stale indices would shift picks).
++  try { if (typeof window !== "undefined") window.__mulerRemovedBondIdx = []; } catch (eRB2) {}
++  // Render epoch for the selection geometry cache (hover reads it at 60 Hz;
++  // zoom/repaint bumps it so cached hit-testing never goes stale).
++  try { if (typeof window !== "undefined") window.__mulerSelRenderSeq = ((typeof window.__mulerSelRenderSeq === "number") ? window.__mulerSelRenderSeq : 0) + 1; } catch (eSq) {}
+   compactNumberingLabelMap = {};
+   let mySVG = jsmeNomeclatureApplet.getMolecularAreaGraphicsString();
+   // Fix JSME highlight malformation BEFORE HTML parsing
+@@ -50,6 +59,9 @@
+   fRefreshLabelBackplates();
+   fFit2DSVG();
+   fValidate2DBondVisibility();
++  try { if (typeof fMulerSelectRepaint === "function") fMulerSelectRepaint(); } catch (eSel) { /* selection overlay is best-effort */ }
++  try { if (typeof fMulerSelectSeqBadges === "function") fMulerSelectSeqBadges(); } catch (eSeq) { /* sequence badges are best-effort */ }
++  try { if (typeof fMulerNumberAid === "function") fMulerNumberAid(); } catch (eAid) { /* numbering aid is best-effort */ }
+ }
+ 
+ // A font notification owns only 2D work. It must not replay JSmol scripts or
+--- local55:fRefreshFontDrawing2D
++++ candidate56:fRefreshFontDrawing2D
+@@ -29,5 +29,9 @@
+   });
+ }
+ 
+-let labelFontRefreshFrame = null;
+-let labelFontPageActive = true;
++// ── Numbering aid (v56 locant/bond phases) ───────────────────────────────────
++// Chain numbers as a position reference while a locant or bond quiz is armed
++// — only for molecules whose main chain is already solved. Branch name boxes
++// use the short wording and get no numbers; branch locant boxes do.
++// Numbers only (the aid never paints highlights), same number* ids,
++// repaint-driven lifecycle.
+--- local55:fLoadMol3D
++++ candidate56:fLoadMol3D
+@@ -12,7 +12,7 @@
+     if ((typeof Jmol === "undefined" || !Jmol) && !window.__mulerJSmolToasted) {
+       window.__mulerJSmolToasted = true;
+       try { if (typeof fScenarioToast === "function") fScenarioToast("3D unavailable (JSmol failed to load) — 2D continues to work."); } catch (eT) {}
+-      try { console.warn("[JSmol] library failed to load; 3D disabled for this session."); } catch (eC) {}
++      try { /* console.warn("[JSmol] library failed to load; 3D disabled for this session."); */ } catch (eC) {}
+     }
+   } catch (eW) { /* best-effort */ }
+ 
+@@ -31,7 +31,7 @@
+     try {
+       if (typeof fJSmolLoadInlineSDF === "function") {
+         fJSmolLoadInlineSDF(jmolAppletNomeclature, selectedExample.sdf3D,
+-          "script spt/init-55.spt;" + zoomInline + movetoInline);
++          "script spt/init-56.spt;" + zoomInline + movetoInline);
+       }
+     } catch (eInline) {}
+     try { if (typeof fSetMolVis3D === "function") fSetMolVis3D(); } catch (eV) {}
+@@ -61,7 +61,7 @@
+     "frank off;load " +
+       myMol3D +
+       "; select all; center selected;" +
+-      "script spt/init-55.spt;" + zoomCmd + movetoCmd,
++      "script spt/init-56.spt;" + zoomCmd + movetoCmd,
+   );
+   fSetMolVis3D();
+   // A fresh load satisfies any pending one-shot exit reload (e.g. molecule
+--- local55:fDrawNameBoxes
++++ candidate56:fDrawNameBoxes
+@@ -148,7 +148,7 @@
+     fDrawNameBoxes(ctx, nameBoxes, width, molHeight);
+     canvas.toBlob(function (blob) {
+       if (!blob) {
+-        console.error("2D PNG: toBlob returned null");
++        // console.error("2D PNG: toBlob returned null");
+         return;
+       }
+       let a = document.createElement("a");
+@@ -163,9 +163,9 @@
+     });
+   };
+   img.onerror = function () {
+-    console.error("[2D PNG] SVG failed to load. SVG content:");
+-    console.error(svgData.slice(0, 4000));
+-    console.error("[2D PNG] Debug flags:", svgDebugFlags);
++    // console.error("[2D PNG] SVG failed to load. SVG content:");
++    // console.error(svgData.slice(0, 4000));
++    // console.error("[2D PNG] Debug flags:", svgDebugFlags);
+   };
+ 
+   let svgBlob = new Blob([svgData], { type: "image/svg+xml;charset=utf-8" });
+--- local55:fShowNameAnalysis
++++ candidate56:fShowNameAnalysis
+@@ -51,6 +51,8 @@
+   // authoring aid; never stored in steps).
+   const toggleNameStyleEye = svgEyeState;
+   const eyeActiveClass = window.nameEyeEdit === true ? " active" : "";
++  // Explain-all overview toggle (live-only, like eye-edit).
++  const explainAllActiveClass = (typeof window !== "undefined" && window.nameExplainAll) ? " active" : "";
+ 
+   const nameSettingClass = nameSettingsFlag ? "open" : "";
+   const namesSettingsBtnActiveClass = nameSettingsFlag ? "active" : "";
+@@ -105,7 +107,7 @@
+   const _stepperHTML = (typeof fChainStepperHTML === "function") ? fChainStepperHTML() : "";
+   const _buttonsHTML = (() => {
+     const _tt = (k, gr) => { try { return (typeof fMulerT === "function") ? fMulerT(k) : gr; } catch (e) { return gr; } };
+-    return `<button id='narrateAnalysisToggle' class='narrateBtn${narrateActiveClass}' data-tooltip='${toggleTitle}'>${toggleIcon}</button><button id='readNameBtn' class='readNameBtn' data-tooltip='${_tt("readName", "Εκφώνηση ονόματος")}' >${svgAudioDesc}</button><button id='nameStyleBoxToggle' class='nameStyleBox ${boxActiveClass}' data-tooltip='${boxTooltip}'>${toggleNameStyleBox}</button><button id='nameStyleCrossToggle' class='nameStyleCross ${crossActiveClass}' data-tooltip='${crossTooltip}'>${toggleNameStyleCross}</button><button id='nameStyleEyeToggle' class='nameStyleEye${eyeActiveClass}' data-tooltip='${_tt("compVisibility", "Ορατότητα συνθετικών")}'>${toggleNameStyleEye}</button><button id='nameExpandBtn' class='nameStyleExpand' data-tooltip='${_tt("fullName", "Πλήρες όνομα")}' aria-label='${_tt("fullName", "Πλήρες όνομα")}' hidden>${svgNameExpand}</button>`;
++    return `<button id='narrateAnalysisToggle' class='narrateBtn${narrateActiveClass}' data-tooltip='${toggleTitle}'>${toggleIcon}</button><button id='readNameBtn' class='readNameBtn' data-tooltip='${_tt("readName", "Εκφώνηση ονόματος")}' >${svgAudioDesc}</button><button id='nameStyleBoxToggle' class='nameStyleBox ${boxActiveClass}' data-tooltip='${boxTooltip}'>${toggleNameStyleBox}</button><button id='nameStyleCrossToggle' class='nameStyleCross ${crossActiveClass}' data-tooltip='${crossTooltip}'>${toggleNameStyleCross}</button><button id='nameStyleEyeToggle' class='nameStyleEye${eyeActiveClass}' data-tooltip='${_tt("compVisibility", "Ορατότητα συνθετικών")}'>${toggleNameStyleEye}</button><button id='nameExplainAllBtn' class='nameExplainAll${explainAllActiveClass}' data-tooltip='${(typeof window !== "undefined" && window.nameExplainAll) ? _tt("explainSingle", "Μεμονωμένη εξήγηση") : _tt("explainAll", "Επισκόπηση")}' aria-label='${(typeof window !== "undefined" && window.nameExplainAll) ? _tt("explainSingle", "Μεμονωμένη εξήγηση") : _tt("explainAll", "Επισκόπηση")}'>${svgNameExplainAll}</button><button id='nameExpandBtn' class='nameStyleExpand' data-tooltip='${_tt("fullName", "Πλήρες όνομα")}' aria-label='${_tt("fullName", "Πλήρες όνομα")}' hidden>${svgNameExpand}</button>`;
+   })();
+   var _panelInner = "";
+   // One row per control set: buttons first, then naming radios, then stepper.
+@@ -528,13 +530,33 @@
+   // components are visible, restored on reveal (toggle, so both directions
+   // work; the presentation lock logic re-asserts afterwards).
+   try {
++    var _allBoxesFx3 = document.querySelectorAll(".nameCompContainer .nameCompBox");
+     var _visBoxes = document.querySelectorAll(".nameCompContainer .nameCompBox:not(.comp-hidden)");
+-    $("#nameAnalysisExplain").toggle(_visBoxes.length > 0);
++    var _tableOnFx3 = (typeof window !== "undefined" && !!window.nameExplainAll);
++    $("#nameAnalysisExplain").toggle((_tableOnFx3 && _allBoxesFx3.length > 0) || _visBoxes.length > 0); // table on: all-hidden still shows (dashed chips)
+   } catch (e) {
+     /* DOM unavailable */
+   }
+ 
+-  // Restore .selected on the previously-selected box after HTML rebuild
++  // Restore .selected on the previously-selected box after HTML rebuild.
++  // A shown position number ("-2-" here is not "-4-" there) never carries
++  // across molecules; component selections keep the sticky restore below.
++  // Same-molecule rebuilds are unaffected.
++  try {
++    var _rm = (typeof selectedMol !== "undefined" && selectedMol) ? String(selectedMol) : "";
++    var _prevRm = (typeof window !== "undefined") ? window.__mulerRestoreMol : null;
++    if (typeof window !== "undefined") window.__mulerRestoreMol = _rm;
++    if (_prevRm !== null && _prevRm !== _rm && nameAnalysisMode !== "none") {
++      var _showLoc = false;
++      try {
++        var _rBox = (typeof fMulerQuizBoxIdForMode === "function") ? fMulerQuizBoxIdForMode(nameAnalysisMode) : null;
++        _showLoc = (typeof fMulerQuizBoxShowsLocant === "function") ? fMulerQuizBoxShowsLocant(_rBox, null) : false;
++      } catch (eRP) { _showLoc = false; }
++      if (_showLoc) {
++        try { nameAnalysisMode = "none"; } catch (eRN) {}
++      }
++    }
++  } catch (eR) {}
+   if (nameAnalysisMode !== "none") {
+     const _modeToCompId = {
+       compNumber1: "comp0",
+@@ -572,6 +594,14 @@
+ 
+   fExplainNameComp();
+ 
++  // Sticky-quiz re-arm: sticky selection restored .selected above, but the
++  // molecule switch disarmed the quiz (PushState) — re-arm so condensed
++  // CHO/COOH clicks stay anchor-carbon-only instead of whole-fragment.
++  // No-op unless select is armed, target is clear, and the restored box is
++  // quiz-capable + visible. Safe on every rebuild (style/eye/stepper paths
++  // keep their target and skip here).
++  try { if (typeof fMulerQuizRearmSticky === "function") fMulerQuizRearmSticky(); } catch (eQR) {}
++
+   // Scenario rebuild hook (additive, guarded): this rebuild recreates
+   // #nameSettingsBtnDiv/#nameSettingsPanel + voice buttons without the
+   // presentation hides, so re-assert the current present step's naming
+@@ -587,6 +617,10 @@
+   // host height so Explain stays below the sheet (fFit is a no-op here).
+   try { if (window.nameExpanded) fNameExpandReserve(); } catch (eR) { /* best-effort */ }
+   try { if (window.nameExpanded) fNameExplainAnchor(); } catch (eA) { /* best-effort */ }
++  // Explain-all overview on: every rebuild path (molecule/variant/eye)
++  // funnels through here, so re-render the table from a fresh build. The
++  // single explain above already restored the live selection's paint.
++  try { if (typeof window !== "undefined" && window.nameExplainAll && typeof fNameExplainTableShow === "function") fNameExplainTableShow(); } catch (eEA) {}
+ }
+ 
+ // While open, viewport/column changes can alter the wrapped height:
+--- local55:fShowAnalysisNumbering
++++ candidate56:fShowAnalysisNumbering
+@@ -1,4 +1,6 @@
+ function fShowAnalysisNumbering(time, overrideAtoms, overrideAtoms3D) {
++  // Overview-table builds (v55.x) scrape explanations with paints off.
++  if (typeof window !== "undefined" && window.__mulerExplainQuiet) return;
+   if (fSequentialKetoneNumberingTarget() && !Array.isArray(overrideAtoms)) {
+     currNumberEl = 0;
+     document.querySelectorAll('#jsmeNomeclatureSVG text[id^="number"]').forEach(el => el.remove());
+--- local55:fExplainNameComp
++++ candidate56:fExplainNameComp
+@@ -1,4 +1,19 @@
+ function fExplainNameComp() {
++  // Selection mode owns the viewer: while it is armed, no name-component
++  // highlight or explanation is painted — including the classic repaint a 2D
++  // style switch runs (fShowNameAnalysis -> fExplainNameComp). The exact quiz
++  // verdict opts in for one call via __mulerQuizReward so the green reward is
++  // the only highlight the user ever sees while selecting.
++  try {
++    var _selOwnsViewer = (typeof fMulerSelectActive === "function") && fMulerSelectActive();
++    var _rewardPaint = (typeof window !== "undefined") && window.__mulerQuizReward === true;
++    // Explain-all builds scrape this function's explanation HTML with paints
++    // suppressed (__mulerExplainQuiet): the text must still be generated there,
++    // otherwise the table nests its own previous markup or repeats the quiz
++    // prompt in every cell.
++    var _quietExplainBuild = (typeof window !== "undefined") && window.__mulerExplainQuiet === true;
++    if (_selOwnsViewer && !_rewardPaint && !_quietExplainBuild) return;
++  } catch (eSelOwn) {}
+   let myText, myClass, nStyle, countSubs, myCountText, myFG0, myFG1, myHTML;
+   switch (nameAnalysisMode) {
+     case "none":
+@@ -32,8 +47,7 @@
+       if (branchGroup_compNumber1) {
+         myText = fHydrocarbonBranchExplanation(branchGroup_compNumber1, true);
+         numberingFlag = true;
+-        fHighlightFG(1);
+-        fHighlightFG3D(1);
++        if (!fPaintBranchHighlightAtoms(1, "compNumber1")) { fHighlightFG(1); fHighlightFG3D(1); }
+         fShowAnalysisNumbering(0);
+         $("#ruleTheoryContainer").show();
+         break;
+@@ -85,8 +99,14 @@
+           }
+         }
+       } else if (
+-        nameComponentsList[6] == "άν" ||
+-        nameComponentsList[6] == "αν"
++        (nameComponentsList[6] == "άν" ||
++        nameComponentsList[6] == "αν") &&
++        (function () {
++          try {
++            var _r1 = (typeof fMulerNumber1Resolved === "function") ? fMulerNumber1Resolved() : null;
++            return !!(_r1 && _r1.length);
++          } catch (eR1) { return true; }
++        })()
+       ) {
+         if (nameComponentsList[0].includes(",")) {
+           countSubs = (nameComponentsList[0].match(/,/g) || []).length;
+@@ -150,8 +170,7 @@
+       if (branchGroup_compSecondSub1) {
+         myText = fHydrocarbonBranchExplanation(branchGroup_compSecondSub1, false);
+         numberingFlag = false;
+-        fHighlightFG(1);
+-        fHighlightFG3D(1);
++        if (!fPaintBranchHighlightAtoms(1, "compSecondSub1")) { fHighlightFG(1); fHighlightFG3D(1); }
+         $("#ruleTheoryContainer").show();
+         break;
+       }
+@@ -159,23 +178,12 @@
+         functionalGroupsList.length === 1 &&
+         functionalGroupsList[0] === "ether"
+       ) {
+-        // IUPAC alkoxy prefix (e.g. μεθοξυ): highlight O + alkoxy fragment,
+-        // number the alkoxy chain only (systematic internal order, v54.39).
++        // IUPAC alkoxy prefix (e.g. μεθοξυ): highlight O + alkoxy fragment.
++        // Name box: no numbering (locants only).
+         myText = fTX(` Δηλώνει το όνομα της αλκοξυομάδας${fGetSecondaryGroupNounSuffix(1)}.`, ` Indicates the name of the alkoxy group${fGetSecondaryGroupNounSuffix(1)}.`);
+         fHighlightFG(1);
+         fHighlightFG3D(1);
+-        numberingFlag = true;
+-        var _alcC = null, _alcC3 = null;
+-        try { _alcC = fGetEtherAlkoxyChain(); } catch (eC1) { _alcC = null; }
+-        try { _alcC3 = fGetEtherAlkoxyChain3D(); } catch (eC3) { _alcC3 = null; }
+-        try {
+-          var _alcNm = (typeof nameComponentsList !== "undefined" && nameComponentsList) ? nameComponentsList[1] : null;
+-          var _alcOrd = (typeof fEtherAlkoxyNumbering === "function") ? fEtherAlkoxyNumbering(_alcC, _alcNm) : null;
+-          var _alcOrd3 = (typeof fEtherAlkoxyNumbering3D === "function") ? fEtherAlkoxyNumbering3D(_alcC3, _alcNm) : null;
+-          if (_alcOrd && _alcOrd.length) _alcC = _alcOrd;
+-          if (_alcOrd3 && _alcOrd3.length) _alcC3 = _alcOrd3;
+-        } catch (eAN) {}
+-        fShowAnalysisNumbering(0, _alcC, _alcC3);
++        numberingFlag = false;
+         $("#ruleTheoryContainer").show();
+         break;
+       }
+@@ -228,8 +236,7 @@
+       if (branchGroup_compNumber2) {
+         myText = fHydrocarbonBranchExplanation(branchGroup_compNumber2, true);
+         numberingFlag = true;
+-        fHighlightFG(2);
+-        fHighlightFG3D(2);
++        if (!fPaintBranchHighlightAtoms(2, "compNumber2")) { fHighlightFG(2); fHighlightFG3D(2); }
+         fShowAnalysisNumbering(0);
+         $("#ruleTheoryContainer").show();
+         break;
+@@ -250,8 +257,7 @@
+       if (branchGroup_compSecondSub2) {
+         myText = fHydrocarbonBranchExplanation(branchGroup_compSecondSub2, false);
+         numberingFlag = false;
+-        fHighlightFG(2);
+-        fHighlightFG3D(2);
++        if (!fPaintBranchHighlightAtoms(2, "compSecondSub2")) { fHighlightFG(2); fHighlightFG3D(2); }
+         $("#ruleTheoryContainer").show();
+         break;
+       }
+@@ -265,7 +271,12 @@
+     case "compBondPos":
+       nStyle = "";
+       myClass = "";
+-      if (fBranchedSaturatedKetonePosition()) {
++      if (fBranchedSaturatedKetonePosition() && (function () {
++        try {
++          var _r = (typeof fMulerBondPosResolved === "function") ? fMulerBondPosResolved() : null;
++          return !!(_r && _r.length);
++        } catch (eR) { return true; }
++      })()) {
+         myText = fTX(' Δηλώνει τη θέση της καρβονυλομάδας (>C=O).', ' Indicates the position of the carbonyl group (>C=O).');
+         ruleTableHighlight = 'r3-ketones';
+         fHighlightFG(); fHighlightFG3D();
+@@ -273,9 +284,49 @@
+         $('#ruleTheoryContainer').show();
+         break;
+       }
+-      if (fAlcoholOHNameComponent() === 'compBondPos') {
++      if (fAlcoholOHNameComponent() === 'compBondPos' && (function () {
++        try {
++          var _r2 = (typeof fMulerBondPosResolved === "function") ? fMulerBondPosResolved() : null;
++          return !!(_r2 && _r2.length);
++        } catch (eR2) { return true; }
++      })()) {
+         myText = fAlcoholOHPositionText();
+         ruleTableHighlight = "r3-alcohols";
++        fHighlightFG(); fHighlightFG3D();
++        numberingFlag = true; fShowAnalysisNumbering(0);
++        $("#ruleTheoryContainer").show();
++        break;
++      }
++      // Saturated single-FG locant (e.g. 2-πεντανόνη, 2-πεντανόλη in box comp4):
++      // the classic fell through to the multiple-bond text with nothing to
++      // paint. The box holds the FG position, so paint the group (reward +
++      // classic agree, quiz armed via the matching resolver). The locant may
++      // live in slots {0,4,7} (EN renders the slot-0/7 locant in comp4).
++      // A digit-led box that names no FG locant belongs to a bond: fall
++      // through to the multiple-bond handling below instead.
++      if (typeof functionalGroupsList !== "undefined" && functionalGroupsList &&
++          functionalGroupsList.length === 1 &&
++          (functionalGroupsList[0] === 'ketone' || functionalGroupsList[0] === 'alcohol') &&
++          (function () {
++            try {
++              if (typeof nameComponentsList === "undefined" || !nameComponentsList) return false;
++              var stripLoc = function (t) { return String(t == null ? "" : t).replace(/^[-\s]+/, "").replace(/[-\s]+$/, ""); };
++              return /^\d/.test(stripLoc(nameComponentsList[4])) || /^\d/.test(stripLoc(nameComponentsList[0])) || /^\d/.test(stripLoc(nameComponentsList[7]));
++            } catch (eS) { return false; }
++          })() &&
++          (function () {
++            try {
++              var _r = (typeof fMulerBondPosResolved === "function") ? fMulerBondPosResolved() : null;
++              return !!(_r && _r.length);
++            } catch (eR) { return true; }
++          })()) {
++        if (functionalGroupsList[0] === 'ketone') {
++          myText = fTX(' Δηλώνει τη θέση της καρβονυλομάδας (>C=O).', ' Indicates the position of the carbonyl group (>C=O).');
++          ruleTableHighlight = 'r3-ketones';
++        } else {
++          myText = fAlcoholOHPositionText();
++          ruleTableHighlight = "r3-alcohols";
++        }
+         fHighlightFG(); fHighlightFG3D();
+         numberingFlag = true; fShowAnalysisNumbering(0);
+         $("#ruleTheoryContainer").show();
+@@ -461,7 +512,13 @@
+       if (functionalGroupsList.length === 1 && functionalGroupsList[0] === 'ketone' &&
+           fIsAcyclicKetoneGraph(atomConnectivityList, allAtomsTypeList, bondList) &&
+           !fIsAcyclicSaturatedMonoketoneGraph(atomConnectivityList, allAtomsTypeList, bondList) &&
+-          nameComponentsList[8].length === 0) {
++          nameComponentsList[8].length === 0 &&
++          (function () {
++            try {
++              var _re = (typeof fMulerEndNumberResolved === "function") ? fMulerEndNumberResolved() : null;
++              return !!(_re && _re.length);
++            } catch (eRe) { return true; }
++          })()) {
+         myText = fTX(' Δηλώνει ', ' Indicates ') + (functionalGroupObj.ketone.O.length > 1 ? fTX('τις θέσεις των καρβονυλομάδων', 'the positions of the carbonyl groups') : fTX('τη θέση της καρβονυλομάδας', 'the position of the carbonyl group')) + ' (>C=O).';
+         ruleTableHighlight = 'r3-ketones';
+         fHighlightFG(); fHighlightFG3D();
+@@ -469,7 +526,13 @@
+         $('#ruleTheoryContainer').show();
+         break;
+       }
+-      if (fAlcoholOHNameComponent() === 'compEndNumber' || nameComponentsList[8].length === 0) {
++      if ((fAlcoholOHNameComponent() === 'compEndNumber' || nameComponentsList[8].length === 0) &&
++          (function () {
++            try {
++              var _re2 = (typeof fMulerEndNumberResolved === "function") ? fMulerEndNumberResolved() : null;
++              return !!(_re2 && _re2.length);
++            } catch (eRe2) { return true; }
++          })()) {
+         fHighlightFG();
+         fHighlightFG3D();
+         myText = fAlcoholOHNameComponent() === 'compEndNumber' ? fAlcoholOHPositionText()
+@@ -594,12 +657,13 @@
+       const ketoneSuffixLocants = functionalGroupsList.length === 1 && functionalGroupsList[0] === 'ketone' &&
+         fIsAcyclicKetoneGraph(atomConnectivityList, allAtomsTypeList, bondList) &&
+         multiBondsObj.CCd.length > 0 && multiBondsObj.CCt.length > 0;
+-      numberingFlag = fAlcoholOHNameComponent() === 'compSuffix' || ketoneSuffixLocants;
++      // Class box: no numbering even when it carries positions in text
++      // (locants only) — split or not, numbers live on locant boxes.
++      numberingFlag = false;
+       // Split suffix: the positions sentences live on the standalone
+       // locants box (compSuffixLocants mode) — the suffix keeps the class
+       // statement, the highlight, and no numbering.
+       const _splitLoc = fSplitSuffixLocantsActive();
+-      if (_splitLoc) numberingFlag = false;
+       if (!_splitLoc && ketoneSuffixLocants) myText += fTX(' Δηλώνει ', ' Indicates ') + (functionalGroupObj.ketone.O.length > 1 ? fTX('τις θέσεις των καρβονυλομάδων', 'the positions of the carbonyl groups') : fTX('τη θέση της καρβονυλομάδας', 'the position of the carbonyl group')) + ' (>C=O).';
+       if (!_splitLoc && fAlcoholOHNameComponent() === 'compSuffix') {
+         myText += fAlcoholOHPositionText();
+@@ -613,12 +677,12 @@
+           fHighlightFG3D();
+         }
+       }
+-      if (numberingFlag) fShowAnalysisNumbering(0);
+       $("#ruleTheoryContainer").show();
+       break;
+     case "commonAlkyl1":
+     case "commonAlkyl2": {
+-      // COMMON alkyl click: highlight that alkyl chain only (no O), number it.
++      // COMMON alkyl click: highlight that alkyl chain only (no O).
++      // Name box: no numbering (locants only).
+       nStyle = "";
+       myClass = "";
+       const _parts = fGetEtherCommonParts();
+@@ -644,18 +708,12 @@
+         // and C–H bonds explicitly (both ends in the chain), like the ester triad.
+         fColorFragmentBonds3D(_chain3D, true);
+       }
+-      numberingFlag = true;
+-      fShowAnalysisNumbering(
+-        0,
+-        _part ? _part.numberChain : null,
+-        _part ? _part.numberChain3D : null,
+-      );
++      numberingFlag = false;
+       break;
+     }
+     case "esterAlkyl": {
+-      // Ester alcohol-part click (e.g. μεθυλ): highlight O + alcohol chain, number it.
+-      // Numbering follows the alkyl's systematic internal numbering (v54.39):
+-      // attach atom first with its free-valence locant, then outward.
++      // Ester alcohol-part click (e.g. μεθυλ): highlight O + alcohol chain.
++      // Name box: no numbering (locants only).
+       nStyle = "";
+       myClass = "";
+       myText = fTX('Δηλώνει το αλκυλο-τμήμα του εστέρα (από την αλκοόλη).', 'It indicates the alkyl part of the ester (from the alcohol).');
+@@ -667,15 +725,7 @@
+         // Alkyl rule: alcohol-part C–C and C–H bonds go green explicitly.
+         fColorFragmentBonds3D(_alcChain3D, true);
+       }
+-      numberingFlag = true;
+-      var _alcNum = _alcChain, _alcNum3 = _alcChain3D;
+-      try {
+-        var _alcOrd = (typeof fEsterAlcoholNumbering === "function") ? fEsterAlcoholNumbering(_alcChain) : null;
+-        var _alcOrd3 = (typeof fEsterAlcoholNumbering3D === "function") ? fEsterAlcoholNumbering3D(_alcChain3D) : null;
+-        if (_alcOrd && _alcOrd.length) _alcNum = _alcOrd;
+-        if (_alcOrd3 && _alcOrd3.length) _alcNum3 = _alcOrd3;
+-      } catch (eANm) {}
+-      fShowAnalysisNumbering(0, _alcNum, _alcNum3);
++      numberingFlag = false;
+       break;
+     }
+     case "esterEster":
+@@ -692,7 +742,8 @@
+       // explicit alkyl guarantee; main-chain numbering bonds follow the
+       // numbering-bonds setting instead.
+       var _estFrag3D = fGetEsterGroupFragment3D() || [];
+-      if (typeof bondList3D !== "undefined" && _estFrag3D.length > 0) {
++      // Overview-table builds (v55.x) scrape explanations with paints off.
++      if ((typeof window === "undefined" || !window.__mulerExplainQuiet) && typeof bondList3D !== "undefined" && _estFrag3D.length > 0) {
+         for (var _eb = 0; _eb < bondList3D.length; _eb++) {
+           if (!bondList3D[_eb]) continue;
+           if (
+@@ -739,8 +790,7 @@
+         if (_pg) {
+           myText = fHydrocarbonBranchExplanation(_pg, _isLoc);
+           numberingFlag = _isLoc;
+-          fHighlightFG(2);
+-          fHighlightFG3D(2);
++          if (!fPaintBranchHighlightAtoms(2, (typeof nameAnalysisMode !== "undefined" ? nameAnalysisMode : ""))) { fHighlightFG(2); fHighlightFG3D(2); }
+           if (_isLoc) fShowAnalysisNumbering(0);
+           $("#ruleTheoryContainer").show();
+         } else if (_isLoc) {
+@@ -769,6 +819,9 @@
+     }
+   }
+   fShowRule(nameAnalysisMode);
++  // Display-only italic prefixes (IUPAC detached sec-/tert-); narration
++  // reads .text() (tags stripped) and the overview scrape reuses this HTML.
++  try { if (typeof fMulerItalicSecTert === "function") myText = fMulerItalicSecTert(myText); } catch (eI) {}
+   myHTML = `<div class='explainText ${myClass} ' style='${nStyle}'  >${myText}</div>`;
+   $("#nameAnalysisExplain").html(myHTML);
+   fFitNameComponents();
+@@ -776,5 +829,13 @@
+   try { if (window.nameExpanded) fNameExplainAnchor(); } catch (eA) { /* best-effort */ }
+ }
+ 
+-// ── fShowRule ─────────────────────────────────────────────────────────────
+-
++// ── Explain-all overview table (v55.x) ────────────────────────────────────
++// One row per visible name box (GR + EN + sys variants uniformly — rows are
++// scraped from the rendered boxes, so hidden comps are skipped like in
++// narration). Each mode runs through fExplainNameComp with paints suppressed
++// (quiet guards in the highlight/numbering/rule helpers); the panel HTML is
++// scraped per mode while globals + rule-panel visibility are restored, and
++// the synchronous loop never yields, so nothing flashes. Row clicks
++// delegate to the box click (same highlight/select/narration), then repaint
++// from cache — no rebuild per click.
++// QUIZ-FUTURE: blank the row bodies here for self-test mode.
+--- local55:fShowRule
++++ candidate56:fShowRule
+@@ -1,4 +1,6 @@
+ function fShowRule(theRule) {
++  // Overview-table builds (v55.x) scrape explanations with paints off.
++  if (typeof window !== "undefined" && window.__mulerExplainQuiet) return;
+   let ruleText, ruleTable, ruleTitle, myStyle, myClass, myHTML;
+   let alkylRows = null;
+   if (theRule === fAlcoholOHNameComponent()) {
+@@ -149,6 +151,9 @@
+   <div class='ruleTile ${myClass}' id='ruleTitle'> ${ruleTitle} </div>
+   <div id='ruleContainer' style='${myStyle}'><div class='ruleText' >${ruleText}</div><div class='ruleTable' >${ruleTable}</div></div>
+   </div>`;
++  // Display-only italic prefixes (IUPAC detached sec-/tert-, plus (n-) in
++  // tables): applied post-translation so RULE_GR2EN keys still match.
++  try { if (typeof fMulerItalicSecTert === "function") myHTML = fMulerItalicSecTert(myHTML, true); } catch (eI) {}
+ 
+   if (alkoxy && !alkoxyAsMain) {
+     // Keep the current chain/alkyl rule; add a separate, initially closed table.
+--- local55:fHighLightMainChain
++++ candidate56:fHighLightMainChain
+@@ -1,4 +1,6 @@
+ function fHighLightMainChain() {
++  // Overview-table builds (v55.x) scrape explanations with paints off.
++  if (typeof window !== "undefined" && window.__mulerExplainQuiet) return;
+   if (nameAnalysisMode == "none") {
+     return;
+   }
+--- local55:fHighLightMainChainBonds
++++ candidate56:fHighLightMainChainBonds
+@@ -1,4 +1,6 @@
+ function fHighLightMainChainBonds() {
++  // Overview-table builds (v55.x) scrape explanations with paints off.
++  if (typeof window !== "undefined" && window.__mulerExplainQuiet) return;
+   if (nameAnalysisMode == "none") {
+     return;
+   }
+--- local55:fApplyChainStep
++++ candidate56:fApplyChainStep
+@@ -4,6 +4,10 @@
+   var idx = (typeof mainChainPoolIdx === "number") ? mainChainPoolIdx : 0;
+   if (idx < 0) idx = 0;
+   if (idx > pool.length - 1) idx = pool.length - 1;
++  var branchQuiz = typeof window !== "undefined" && window.MulerQuizTarget &&
++    (fMulerSelectPurpose() === "branch" ||
++      (window.__mulerQuizReturnTo && fMulerBranchAtomsForMode(window.__mulerQuizReturnTo).length > 0));
++  if (branchQuiz) fMulerSelectClear();
+   mainChainPoolIdx = idx;
+   mainChainAtomsList = pool[idx].chain.slice();
+   // 3D by atom correspondence, not ordinal: the 2D (JSME) and 3D (SDF) pools
+@@ -64,6 +68,21 @@
+     if (typeof fUpdateSVG === "function") fUpdateSVG();
+     if (typeof fExplainNameComp === "function") fExplainNameComp();
+   } catch (eHl) { /* viewer unavailable */ }
++  if (branchQuiz) {
++    var quizMode = window.MulerQuizTarget;
++    var quizBox = fMulerQuizBoxIdForMode(quizMode);
++    if (quizMode && quizBox && document.getElementById(quizBox) &&
++        fNameAnalysisModeForBoxId(quizBox) === quizMode &&
++        fMulerQuizResolveTarget(quizMode).length &&
++        (window.__mulerQuizReturnTo
++          ? fMulerBranchAtomsForMode(window.__mulerQuizReturnTo).length
++          : fMulerQuizPurposeFor(quizMode) === "branch")) {
++      fMulerQuizPrompt();
++    } else {
++      fMulerQuizDisarm();
++    }
++    fMulerSelectRepaint();
++  }
+   fRenderChainStepper();
+   try {
+     if (typeof window.fScenarioOnPresentBrowse === "function") window.fScenarioOnPresentBrowse();
+--- local55:fHighlightAtomChain3D
++++ candidate56:fHighlightAtomChain3D
+@@ -1,4 +1,6 @@
+ function fHighlightAtomChain3D(chainAtoms3D, skipH, skipBonds, skipAtoms) {
++  // Overview-table builds (v55.x) scrape explanations with paints off.
++  if (typeof window !== "undefined" && window.__mulerExplainQuiet) return;
+   if (!Array.isArray(chainAtoms3D) || chainAtoms3D.length === 0) return;
+   let arg = "select";
+   for (let i = 0; i < chainAtoms3D.length; i++) {
+--- local55:fColorFragmentBonds3D
++++ candidate56:fColorFragmentBonds3D
+@@ -1,4 +1,6 @@
+ function fColorFragmentBonds3D(fragAtoms, includeH) {
++  // Overview-table builds (v55.x) scrape explanations with paints off.
++  if (typeof window !== "undefined" && window.__mulerExplainQuiet) return;
+   if (!Array.isArray(fragAtoms) || fragAtoms.length === 0) return;
+   if (typeof bondList3D === "undefined" || typeof Jmol === "undefined") return;
+   const wantH = !!includeH && typeof allAtomsTypeList3D !== "undefined";
+--- local55:fHighlightFG
++++ candidate56:fHighlightFG
+@@ -1,4 +1,6 @@
+ function fHighlightFG(FGno) {
++  // Overview-table builds (v55.x) scrape explanations with paints off.
++  if (typeof window !== "undefined" && window.__mulerExplainQuiet) return;
+   // Algorithmic: reads functionalGroupObj computed by fDetectMolType.
+   // No static nameExamples.functionalGroup* data used.
+   if (nameAnalysisMode == "none") {
+--- local55:fHighlightFG3D
++++ candidate56:fHighlightFG3D
+@@ -1,4 +1,6 @@
+ function fHighlightFG3D(FGno) {
++  // Overview-table builds (v55.x) scrape explanations with paints off.
++  if (typeof window !== "undefined" && window.__mulerExplainQuiet) return;
+   // Build atom list from computed functionalGroupObj3D (SDF 1-based indices).
+   // FGno undefined  → all FG atoms (for suffix / single-FG display)
+   // FGno 1 or 2     → atoms for the Nth functional group (for prefix position display)
+--- local55:fHighlightMultiBonds3D
++++ candidate56:fHighlightMultiBonds3D
+@@ -1,4 +1,6 @@
+ function fHighlightMultiBonds3D(bondCompPos) {
++  // Overview-table builds (v55.x) scrape explanations with paints off.
++  if (typeof window !== "undefined" && window.__mulerExplainQuiet) return;
+   // Uses SDF-derived *3D globals directly — no 2D-position-3D mapping needed.
+ 
+   if (multiBondListCC3D.length === 0) {
+--- local55:fHighlightSingleBondsCC3D
++++ candidate56:fHighlightSingleBondsCC3D
+@@ -1,4 +1,6 @@
+ function fHighlightSingleBondsCC3D(atomSetOrNull) {
++  // Overview-table builds (v55.x) scrape explanations with paints off.
++  if (typeof window !== "undefined" && window.__mulerExplainQuiet) return;
+   if (!bondList3D || bondList3D.length === 0) {
+     return;
+   }
+--- local55:fInitZoomObserver2D
++++ candidate56:fInitZoomObserver2D
+@@ -71,8 +71,8 @@
+           var _named = false;
+           try { _named = !!document.querySelector("#nameAnalysis .nameCompContainer .nameCompBox"); } catch (eNb) { /* best-effort */ }
+           if (!_named && !_presenting && typeof fSelectMol === "function") {
+-            try { console.warn("[COLD-BOOT] naming missing at 3D-ready; re-running full select for " + _sel); } catch (eW2) { /* best-effort */ }
+-            try { fSelectMol(); } catch (eFs) { try { console.error("[COLD-BOOT] resend reselect failed for " + _sel, eFs); } catch (eL) {} }
++            try { /* console.warn("[COLD-BOOT] naming missing at 3D-ready; re-running full select for " + _sel); */ } catch (eW2) { /* best-effort */ }
++            try { fSelectMol(); } catch (eFs) { try { /* console.error("[COLD-BOOT] resend reselect failed for " + _sel, eFs); */ } catch (eL) {} }
+           } else {
+             try { if (typeof fLoadMol3D === "function") fLoadMol3D(); } catch (eL) { /* best-effort */ }
+             try { if (typeof showAtomSymbols3D === "function") showAtomSymbols3D(); } catch (eA) { /* best-effort */ }

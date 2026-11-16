@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="el">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#254c50">
+  <title>Μοριακό παζλ · Namelecule</title>
+  <link rel="stylesheet" href="../css/namelecule-name-builder.css?v=builder-methods-20261112-r3">
+  <link rel="stylesheet" href="../css/namelecule-molecular-puzzle.css?v=puzzle-lesson-20261112-r1">
+  <script src="../js/namelecule-chemistry-client.js?v=puzzle-prototype-20261112-r1" defer></script>
+  <script src="../js/namelecule-molecular-puzzle-engine.js?v=puzzle-prototype-20261112-r1" defer></script>
+  <script src="../js/namelecule-molecular-puzzle.js?v=puzzle-lesson-20261112-r1" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#assembly-title">Πήγαινε στη σύνθεση της δομής</a>
+  <header class="site-header">
+    <a class="brand" href="../design/welcome-proposal.html" aria-label="Namelecule — Υποδοχή"><img src="../design/assets/namelecule-methane-v1.png" width="2172" height="724" alt="Namelecule"></a>
+    <a class="back-link" href="../design/welcome-proposal.html">Υποδοχή</a>
+  </header>
+  <main class="game puzzle-game" id="game">
+    <section class="intro" aria-labelledby="game-title">
+      <p class="eyebrow">ΠΑΙΧΝΙΔΙ ΟΝΟΜΑΤΟΛΟΓΙΑΣ</p>
+      <div class="puzzle-title">
+        <img class="puzzle-logo" src="assets/molecular-puzzle/molecular-puzzle-logo-flat-v7.png" width="2148" height="732" alt="" aria-hidden="true">
+        <h1 id="game-title">Μοριακό παζλ</h1>
+      </div>
+      <p class="objective">Διάβασε το όνομα. Διάλεξε τα κατάλληλα κομμάτια και σύνδεσέ τα για να σχηματίσεις τον συνεπτυγμένο τύπο του μορίου.</p>
+      <p class="intro-detail">Από το όνομα στη δομή, με ομάδες ατόμων και απλούς δεσμούς.</p>
+    </section>
+    <div id="game-status" class="game-status" role="status">Ετοιμάζουμε το όνομα και τα κομμάτια.</div>
+    <div class="puzzle-round-tools">
+      <label for="round-select">Μόριο για εξάσκηση</label>
+      <select id="round-select" disabled aria-label="Επίλεξε μόριο για εξάσκηση"></select>
+      <button id="retry-load" class="secondary" type="button" hidden>Δοκίμασε ξανά</button>
+    </div>
+    <section class="puzzle-name-card" aria-labelledby="target-label">
+      <p id="target-label">Το όνομα που θα γίνει δομή</p>
+      <p id="target-name" class="puzzle-target-name">Περιμένουμε το όνομα…</p>
+    </section>
+    <section class="panel puzzle-assembly-panel" aria-labelledby="assembly-title">
+      <div class="panel-header">
+        <h2 id="assembly-title" tabindex="-1">Η δομή που φτιάχνεις</h2>
+        <button id="fit-board" class="small-button" type="button" disabled>Προσαρμογή σχεδίου</button>
+      </div>
+      <div class="puzzle-assembly-content">
+        <div id="assembly-board" class="puzzle-board" tabindex="0" role="region" aria-label="Πλαίσιο σύνθεσης μοριακής δομής" aria-describedby="interaction-status">
+          <svg id="board-svg" class="puzzle-bonds" viewBox="0 0 720 360" preserveAspectRatio="none" role="group" aria-label="Δεσμοί της δομής"></svg>
+          <div id="board-nodes" class="puzzle-nodes"></div>
+          <p id="empty-board" class="puzzle-empty-board">Φέρε εδώ τα κομμάτια του μορίου</p>
+        </div>
+        <section class="panel bank-panel puzzle-bank" aria-labelledby="piece-bank-title">
+          <div class="panel-header"><h2 id="piece-bank-title">Τα διαθέσιμα κομμάτια</h2><span class="bank-note">Χρησιμοποίησε κάθε ομάδα όσες φορές χρειάζεται</span></div>
+          <div id="piece-bank" class="puzzle-piece-bank" role="group" aria-label="Ομάδες για προσθήκη στη δομή">
+            <button type="button" class="puzzle-piece" data-hydrogens="4" aria-label="Προσθήκη CH₄" disabled>CH<sub>4</sub></button>
+            <button type="button" class="puzzle-piece" data-hydrogens="3" aria-label="Προσθήκη CH₃" disabled>CH<sub>3</sub></button>
+            <button type="button" class="puzzle-piece" data-hydrogens="2" aria-label="Προσθήκη CH₂" disabled>CH<sub>2</sub></button>
+            <button type="button" class="puzzle-piece" data-hydrogens="1" aria-label="Προσθήκη CH" disabled>CH</button>
+            <button type="button" class="puzzle-piece" data-hydrogens="0" aria-label="Προσθήκη C" disabled>C</button>
+          </div>
+        </section>
+        <div class="puzzle-tools" role="group" aria-label="Εργαλεία σύνθεσης">
+          <button id="bond-tool" class="small-button puzzle-bond-tool" type="button" aria-pressed="false" disabled><span aria-hidden="true">—</span> Σύνδεσε δύο ομάδες</button>
+          <button id="undo-action" class="small-button" type="button" disabled>↶ Αναίρεση</button>
+        </div>
+        <div class="puzzle-selection-controls" role="group" aria-label="Μετακίνηση ή αφαίρεση επιλεγμένου κομματιού">
+          <span class="selected-tile">Επιλεγμένο: <strong id="selection-label">κανένα</strong></span>
+          <div class="puzzle-move-controls">
+            <button id="move-left" class="small-button" type="button" data-move="left" aria-label="Μετακίνηση αριστερά" disabled>←</button>
+            <button id="move-right" class="small-button" type="button" data-move="right" aria-label="Μετακίνηση δεξιά" disabled>→</button>
+            <button id="move-up" class="small-button" type="button" data-move="up" aria-label="Μετακίνηση πάνω" disabled>↑</button>
+            <button id="move-down" class="small-button" type="button" data-move="down" aria-label="Μετακίνηση κάτω" disabled>↓</button>
+          </div>
+          <button id="remove-selection" class="small-button" type="button" disabled>Αφαίρεση</button>
+        </div>
+        <p id="interaction-status" class="puzzle-interaction-status" role="status" aria-live="polite">Διάλεξε μια ομάδα και πρόσθεσέ τη στο πλαίσιο.</p>
+        <div class="check-row"><button id="check-answer" class="primary" type="button" disabled>Έλεγχος</button><button id="next-molecule" class="secondary" type="button" disabled>Άλλο μόριο</button></div>
+        <details id="instructions" class="helper puzzle-instructions" open>
+          <summary>Οδηγίες χειρισμού</summary>
+          <div class="helper-methods">
+            <span class="helper-method"><strong>Προσθήκη:</strong> Σύρε μια ομάδα στο πλαίσιο ή κάνε κλικ επάνω της.</span>
+            <span class="helper-method"><strong>Δεσμός:</strong> Πάτησε «Σύνδεσε δύο ομάδες» και διάλεξε τις δύο ομάδες που θέλεις να ενώσεις.</span>
+            <span class="helper-method"><strong>Μετακίνηση:</strong> Σύρε μια ομάδα στη θέση της ή επίλεξέ τη και χρησιμοποίησε τα κουμπιά με τα βέλη ή τα αντίστοιχα πλήκτρα.</span>
+            <span class="helper-method"><strong>Αφαίρεση:</strong> Σύρε μια ομάδα έξω από το πλαίσιο ή επίλεξε ομάδα ή δεσμό και πάτησε «Αφαίρεση» ή <kbd>Delete</kbd>. Η αφαίρεση μιας ομάδας αφαιρεί και τους δεσμούς της.</span>
+          </div>
+        </details>
+        <div id="feedback" class="feedback" role="status" hidden></div>
+      </div>
+    </section>
+    <noscript><p>Το παιχνίδι χρειάζεται JavaScript για να εμφανίσει το όνομα και να ελέγξει τη δομή.</p></noscript>
+  </main>
+  <footer class="site-footer">Namelecule · Μια εφαρμογή της πλατφόρμας MuLERMoCs</footer>
+</body>
+</html>

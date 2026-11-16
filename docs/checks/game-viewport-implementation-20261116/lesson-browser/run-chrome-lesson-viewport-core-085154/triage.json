@@ -1,0 +1,27 @@
+{
+  "recordedUTC": "2026-11-16T08:54:49.843775+00:00",
+  "role": "Developer browser triage, not independent review",
+  "manifestSHA256": "0489bc6110e5f8ae84d06b579c4631d2e2c82a274876f8e7089130493381f2bb",
+  "finding": "Narrow embedded Detective clue selected while molecule overlays mission name",
+  "reproduction": [
+    "v57 actual alkane lesson step4 → open checkpoint → Detective Basic",
+    "Resize actual CSS viewport390x700",
+    "Activate visible clue tab through trusted pointer",
+    "Name lies within viewport but elementFromPoint is intercepted; screenshot shows molecule pane despite selected clue tab"
+  ],
+  "measured": {
+    "checksTotal": 164,
+    "checksPassed": 163,
+    "correctAnswers": 0,
+    "javascriptErrors": 0,
+    "completedMatrixCases": 15
+  },
+  "rootCauseAttribution": "Root Developer independently traced Builder CSS selector #game.nl-game-viewport:not(.puzzle-game) also matching Detective; root owns causal source correction. This run measured obscuration, not cascade winner directly.",
+  "cleanup": {
+    "sourceUnchangedDuringRun": true,
+    "ownedBrowserExited": true,
+    "ownedServerClosed": true,
+    "ownedProfileRemoved": true
+  },
+  "remaining": "No gates/triples executed on this failed cut. Await corrected freeze and exclusive browser grant."
+}

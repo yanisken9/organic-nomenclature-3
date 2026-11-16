@@ -299,6 +299,7 @@
     if (responseRevealer) responseRevealer.stop();
   }
   function revealResponse(request) {
+    if (dialog && dialog.classList.contains("nl-vp-dialog")) return;
     if (responseRevealer) responseRevealer.reveal(request);
   }
   function destroyMount() {
@@ -495,6 +496,8 @@
     try {
       const spec = validateCheckpoint(context.spec);
       const adapter = types[spec.type];
+      const viewport = !!global.NameleculeGameViewport && spec.type === "alkane-game-choice-set";
+      dialog.classList.toggle("nl-vp-dialog", viewport);
       const optional = context.practice && supportsPractice(adapter) && isComplete(context.scenario, context.index);
       context.practice = !!optional;
       updateDialog(context);
@@ -502,6 +505,7 @@
       const restore = optional ? adapter.restorePractice : adapter.restore;
       const mount = optional ? adapter.mountPractice : adapter.mount;
       mounted = mount(mountHost, {
+        viewport,
         round: clone(spec.round), assetBase: "games/",
         initialState: states[context.index] ? clone(states[context.index]) : null,
         newPracticeLabel: text("practice", context),

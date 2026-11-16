@@ -1,0 +1,49 @@
+{
+  "recordedUTC": "2026-11-16T08:50:17.283Z",
+  "role": "Developer evidence",
+  "passed": true,
+  "groups": [
+    "All exported repair engine functions are source-identical to the recorded pre-change baseline",
+    "Authored rounds restore/evaluate identically for correct, incorrect, selected and forged completion states",
+    "Detective canonical load validation, native message receive, grading check, assignment and snapshot contracts are source-identical",
+    "Legacy repair/lesson detective paths stay opt-in; viewport messages require current identity and normalized context"
+  ],
+  "repairCases": 77,
+  "files": {
+    "games/name-repair.html": {
+      "before": "60c189989d967565b4085234b64d95e265486c3174e49bc36d03d4a17c26e6df",
+      "after": "c3619bacff7fcf33313adf2fcac523219765ad9df9c34ff87ec5bede41c0f985"
+    },
+    "games/molecular-detective.html": {
+      "before": "39e873abb0b28f4d87f444ee8b0750723d0963f774ac11b4b4faf4ed29b57035",
+      "after": "18192a9bb320e37e9754d362b50378f19ad1c2450c9bacf6971d60657c22437d"
+    },
+    "js/namelecule-game-repair.js": {
+      "before": "d210d836c373999d9d5912aa333d8326296f70bf9b17ac1a69737fbd7f7dcb72",
+      "after": "03a28ed4c5c75a4ed4c8a729807e890941c7ded978b5c7c9fee8526c797c343c"
+    },
+    "js/namelecule-molecular-detective.js": {
+      "before": "c373300edd8147ae673306efc424e215db2b76e1862d0c7546e364f3d76b13aa",
+      "after": "728a30781c664ee1f09ccbe17672f5b0981ed9171adc62eda9ee2ea8d40d6547"
+    },
+    "css/namelecule-games.css": {
+      "before": "53cfefd2a3dfd24f7aaac8f8a7394dfae6e87263103b2af58a184c40296bd9af",
+      "after": "666b64b604682c2d281349f3c10051c73bfbd03f794b111b111d25997c6be8dd"
+    },
+    "css/namelecule-repair-round.css": {
+      "before": "412678635b54693b542a1b70fcb104e623ea369e246219c98e70b1f053477031",
+      "after": "052b97e330cdb45f29823c38a31d5e54aa406b983d5cad16dff6ae4a9723450b"
+    },
+    "css/namelecule-molecular-detective.css": {
+      "before": "446e2345bc1924252e150c746eccaaff56a4d0dc76afa8060f008366fdf542ad",
+      "after": "2be8426b8aa398d41fda6945081c5640032a24a47e1950241a66e22ad72c3bad"
+    }
+  },
+  "limits": [
+    "Pure/source contracts only; browser layout, focus, zoom and actual native picking pending exclusive browser slot",
+    "No independent review in this worker"
+  ],
+  "coreChanged": false,
+  "commit": false,
+  "publication": false
+}

@@ -1,0 +1,28 @@
+{
+  "recordedUTC": "2026-11-16T06:02:27.872423+00:00",
+  "status": "Prepared only; browser slot HOLD; no launch",
+  "script": "docs/checks/four-game-integration-20261116/lesson-browser/replay-detective.py",
+  "modes": [
+    "detective",
+    "old3-repair",
+    "old3-builder",
+    "old3-puzzle"
+  ],
+  "usage": "NAMELECULE_FOUR_GAME_BROWSER_READY=frozen NAMELECULE_FOUR_GAME_FROZEN_MANIFEST=docs/checks/four-game-integration-20261116/verification-target.json NAMELECULE_FOUR_GAME_REPLAY_MODE=detective python3 docs/checks/four-game-integration-20261116/lesson-browser/replay-detective.py",
+  "syntax": "Both Python ASTs parse; no pycache created",
+  "grantGuard": "Executed with both env vars absent: refused at line15 before DEST/server/profile/browser creation",
+  "oracle": "actual verified loadCanonicalInput() then NameleculeMolecularDetectiveLesson.getSet(recipe, storedQCPseed, input,practice), read only; no fixedseed/solution/receipt injection",
+  "newProtocol": "Two nested frame bounds+each-document hit tests; actual nativeSVG geometry transformed using current CTM, trusted BiDi pointer, production Check",
+  "old3Protocol": "/___prior___/ documented in script as /__prior__/ aliases exact H/before composite/scenario and falls back current unchanged deps, prior UI creates raw partial or genuinely earned progress; separate fresh tabs avoid injected clearing",
+  "sha256": {
+    "legacy-solve-helpers.py": "37c06b6da15842426c6ad10d05de8cdd486a27ba25b524b7e0ed7c6c3a20b1fc",
+    "replay-detective.py": "dab7336038511c26dc1ac3f4da09df099e55de4019689041a1274ce480e91e9e"
+  },
+  "uncertainties": [
+    "Not executed under frozen app; UI and runtime assertions may need harness correction when actual state is observed.",
+    "Optional cross-game switch selectors and active parent aria-busy gate are based on current product source.",
+    "No visible lesson reset control was found; root owns current/reset-wins memory proof.",
+    "Old Repair swap move-right control availability depends on actual random generated round; canonical fixture inspected at run.",
+    "No exhaustive84triples or physical/mobile/conference/offline claim."
+  ]
+}

@@ -1,0 +1,20 @@
+/* Shared level controls; deliberately scoped for standalone and lesson hosts. */
+.nl-game-levels{box-sizing:border-box;max-width:1100px;margin:14px auto 20px;padding:16px;border:1px solid #b8d2c8;border-radius:18px;background:#f2f8f4;color:#254c50;font:inherit;text-align:left}
+.nl-game-levels *{box-sizing:border-box}
+.nl-game-levels [hidden]{display:none!important}
+.nl-game-levels__categories{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:15px}
+.nl-game-levels__category{flex:0 1 auto;min-width:0;max-width:100%;min-height:44px;padding:10px 14px;border:1px solid #a4c7b8;border-radius:11px;background:#fff;color:#254c50;font:inherit;font-size:.9rem;font-weight:700;line-height:1.45;overflow-wrap:anywhere;cursor:pointer}
+.nl-game-levels__category[aria-pressed="true"]{background:#254c50;border-color:#254c50;color:#fff}
+.nl-game-levels__heading{margin:0 0 10px;font-size:1rem;font-weight:750;line-height:1.4}
+.nl-game-levels__buttons{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;min-width:0}
+.nl-game-levels__button{display:flex;flex-direction:column;align-items:flex-start;gap:5px;min-width:0;min-height:116px;padding:13px 14px;border:2px solid #b4d0c4;border-radius:13px;background:#fff;color:#254c50;font:inherit;line-height:1.4;text-align:left;white-space:normal;overflow-wrap:anywhere;cursor:pointer;opacity:1}
+.nl-game-levels__button:hover:not(:disabled){border-color:#397f7d;background:#e8f4ed}
+.nl-game-levels__button[aria-pressed="true"]{border-color:#254c50;background:#dceee4;box-shadow:inset 0 0 0 1px #254c50}
+.nl-game-levels__button:disabled{color:#617775;background:#edf1ee;border-color:#d0dcd6;cursor:default;opacity:1}
+.nl-game-levels__name{font-size:.96rem;font-weight:800;line-height:1.4}
+.nl-game-levels__description,.nl-game-levels__count{font-size:.82rem;line-height:1.45}
+.nl-game-levels__count{margin-top:auto;color:#456762}
+.nl-game-levels__status{font-size:.8rem;font-weight:750;line-height:1.45}
+.nl-game-levels__note{margin:11px 0 0;font-size:.83rem;line-height:1.5;color:#456762;overflow-wrap:anywhere}
+.nl-game-levels button:focus-visible{outline:3px solid #a75930;outline-offset:3px}
+@media(max-width:600px){.nl-game-levels{padding:12px;margin:12px auto 16px}.nl-game-levels__buttons{grid-template-columns:1fr;gap:8px}.nl-game-levels__button{min-height:94px;padding:11px 13px;gap:3px}.nl-game-levels__count{margin-top:0}.nl-game-levels__categories{gap:7px;margin-bottom:12px}.nl-game-levels__category{font-size:.85rem;padding:10px 12px}.nl-game-levels__name{font-size:.94rem}}

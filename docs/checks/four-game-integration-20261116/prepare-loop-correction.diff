@@ -1,0 +1,35 @@
+--- before-P1/js/namelecule-game-choice-checkpoint.js
++++ js/namelecule-game-choice-checkpoint.js
+@@ -272,7 +272,11 @@
+       state.earned && (state.earned.game === "builder" || state.earned.game === "puzzle") && state.earned.evidence].filter(Boolean);
+     if (!canonical && graphEvidence.some(value => value.seed)) jobs.push(loadInput(signal));
+     const detectiveEvidence = [state.games.detective, state.earned && state.earned.game === "detective" && state.earned.evidence].filter(Boolean);
+-    if (detectiveEvidence.some(value => value.seed)) jobs.push(loadDetective(signal));
++    // Navigation retries after asynchronous preparation. Once inputs and both
++    // APIs are available, restoration above is synchronous: returning another
++    // Promise here would keep scenario navigation in an endless retry loop.
++    const detectiveReady = canonical && global.NameleculeMolecularDetectiveEngine && global.NameleculeMolecularDetectiveLesson;
++    if (!detectiveReady && detectiveEvidence.some(value => value.seed)) jobs.push(loadDetective(signal));
+     if (!jobs.length) return null;
+     return Promise.all(jobs).then(() => { cancelled(signal); return restore(recipe, state); });
+   }
+--- before-P1/mulermoc-nom-57.html
++++ mulermoc-nom-57.html
+@@ -370,7 +370,7 @@
+        <script src="js/MULERMOC_dimethyl_ether_data.js?v=54.1"></script> -->
+   <script src="js/ui-icons-57.js?v=namelecule-v57-20261115-r1"></script>
+   <script src="js/mulermoc-nom-core-57.js?v=namelecule-v57-20261115-r1"></script>
+-  <script src="js/mulermoc-nom-molview-57.js?v=alkane-pool-20261116-r1"></script>
++  <script src="js/mulermoc-nom-molview-57.js?v=four-games-hydration-20261116-r1"></script>
+   <script src="js/mulermoc-nom-teaching-57.js?v=namelecule-v57-20261115-r1"></script>
+   <script src="js/mulermoc-nom-note-57.js?v=namelecule-v57-20261115-r1"></script>
+   <script src="js/namelecule-game-repair.js?v=alkane-pool-20261116-r2"></script>
+@@ -380,7 +380,7 @@
+   <script src="js/namelecule-generated-repair-checkpoint.js?v=alkane-pool-20261116-r1"></script>
+   <script src="js/namelecule-name-builder-engine.js?v=name-builder-20261111-r1"></script>
+   <script src="js/namelecule-molecular-puzzle-engine.js?v=puzzle-lesson-20261112-r1"></script>
+-  <script src="js/namelecule-game-choice-checkpoint.js?v=four-games-20261116-r2"></script>
++  <script src="js/namelecule-game-choice-checkpoint.js?v=four-games-20261116-r3"></script>
+   <script src="js/mulermoc-nom-scenario-57.js?v=namelecule-v57-20261115-r1"></script>
+   <script src="js/mulermoc-nom-iupac-57.js?v=namelecule-v57-20261115-r1"></script>
+   <script src="js/mulermoc-nom-lang-57.js?v=namelecule-v57-20261115-r1"></script>

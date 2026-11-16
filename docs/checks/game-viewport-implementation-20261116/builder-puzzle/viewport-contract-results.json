@@ -1,0 +1,33 @@
+{
+  "role": "Developer read-only source-contract validation; no visual/browser claim",
+  "checks": 26,
+  "passed": 26,
+  "records": [
+    "builder validated same-attempt viewport accepted",
+    "builder rejects viewport channel mismatch",
+    "builder rejects viewport session mismatch",
+    "builder rejects viewport requestId mismatch",
+    "builder rejects viewport attemptId mismatch",
+    "builder rejects viewport moleculeId mismatch",
+    "builder rejects viewport width mismatch",
+    "builder rejects viewport height mismatch",
+    "builder rejects mixed/present-null context without legacy fallback",
+    "builder legacy viewport accepts only absent context",
+    "builder child viewport opt-in explicitly requires query on lesson",
+    "builder legacy resize and reveal retain opted-out branch",
+    "builder helper loads before controller and native entry unchanged",
+    "puzzle validated same-attempt viewport accepted",
+    "puzzle rejects viewport channel mismatch",
+    "puzzle rejects viewport session mismatch",
+    "puzzle rejects viewport requestId mismatch",
+    "puzzle rejects viewport attemptId mismatch",
+    "puzzle rejects viewport moleculeId mismatch",
+    "puzzle rejects viewport width mismatch",
+    "puzzle rejects viewport height mismatch",
+    "puzzle rejects mixed/present-null context without legacy fallback",
+    "puzzle legacy viewport accepts only absent context",
+    "puzzle child viewport opt-in explicitly requires query on lesson",
+    "puzzle legacy resize and reveal retain opted-out branch",
+    "puzzle helper loads before controller and native entry unchanged"
+  ]
+}

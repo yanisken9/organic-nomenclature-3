@@ -1,0 +1,15 @@
+{
+  "finding": "REV57-1",
+  "severity": "P2",
+  "oldFrozenSHA256": "d4f400e7c3d254c6151cb2ddd307771d043d223d9588b862073bedd1f70f3e72",
+  "newFrozenSHA256": "ae4e498361b994d55d2eafe8eb0a3b578c416ed770de0eb65d9dc74e9c800684",
+  "onlyRuntimeFunctionChanged": "fMulerSelectPush3D",
+  "testCommand": "python3 docs/checks/v57-sync-20261115/viewer/test-selection.py",
+  "testsPassed": 34,
+  "syntax": "PASS",
+  "rootBeforeProbe": "native-browser/run-bond-paint57-165246/bond-paint57.json",
+  "awaitingPrimaryNativeAfter": true,
+  "patchSHA256": "6f448e8a109c01845eb5c014787b3e36667cc9346f8db4ae22affc0b58835b48",
+  "coreChanged": false,
+  "stagedCommittedPushedPublished": false
+}

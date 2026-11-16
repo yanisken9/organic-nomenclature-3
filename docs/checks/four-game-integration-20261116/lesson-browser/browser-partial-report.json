@@ -1,0 +1,101 @@
+{
+  "recordedUTC": "2026-11-16T06:09:37.315146+00:00",
+  "status": "Stopped after second input modality reproduced unobserved Continue boundary; browser slot returned",
+  "runs": [
+    {
+      "path": "docs/checks/four-game-integration-20261116/lesson-browser/run-detective-060249/results.json",
+      "completed": false,
+      "mode": "detective",
+      "checks": 0,
+      "passed": 0,
+      "correctUIAttempts": 0,
+      "javascriptErrors": 0,
+      "sourceUnchanged": true,
+      "manifestSHA256": "7ec082d67efb81784a2e4c78f349d1004e23c986cb59ab5b2779ad500aeab7c6",
+      "ownedBrowserExited": true,
+      "ownedServerClosed": true,
+      "ownedProfileRemoved": null,
+      "failure": [
+        "PermissionError: [Errno 1] Operation not permitted"
+      ]
+    },
+    {
+      "path": "docs/checks/four-game-integration-20261116/lesson-browser/run-detective-060300/results.json",
+      "completed": false,
+      "mode": "detective",
+      "checks": 35,
+      "passed": 35,
+      "correctUIAttempts": 0,
+      "javascriptErrors": 0,
+      "sourceUnchanged": true,
+      "manifestSHA256": "7ec082d67efb81784a2e4c78f349d1004e23c986cb59ab5b2779ad500aeab7c6",
+      "ownedBrowserExited": true,
+      "ownedServerClosed": true,
+      "ownedProfileRemoved": true,
+      "failure": [
+        "TypeError: the JSON object must be str, bytes or bytearray, not NoneType"
+      ]
+    },
+    {
+      "path": "docs/checks/four-game-integration-20261116/lesson-browser/run-detective-060337/results.json",
+      "completed": false,
+      "mode": "detective",
+      "checks": 190,
+      "passed": 190,
+      "correctUIAttempts": 6,
+      "javascriptErrors": 0,
+      "sourceUnchanged": true,
+      "manifestSHA256": "7ec082d67efb81784a2e4c78f349d1004e23c986cb59ab5b2779ad500aeab7c6",
+      "ownedBrowserExited": true,
+      "ownedServerClosed": true,
+      "ownedProfileRemoved": true,
+      "failure": [
+        "socket.timeout: timed out"
+      ]
+    },
+    {
+      "path": "docs/checks/four-game-integration-20261116/lesson-browser/run-detective-required-060743/results.json",
+      "completed": false,
+      "mode": "detective-required",
+      "checks": 97,
+      "passed": 97,
+      "correctUIAttempts": 3,
+      "javascriptErrors": 0,
+      "sourceUnchanged": true,
+      "manifestSHA256": "908093208d0ca410c702650b51fc629fae7142d0d2afef50a74fe00a703f2c9c",
+      "ownedBrowserExited": true,
+      "ownedServerClosed": true,
+      "ownedProfileRemoved": true,
+      "failure": [
+        "socket.timeout: timed out"
+      ]
+    }
+  ],
+  "lastFailureClassification": "Fresh required-only profile reproduced timeout during trusted keyboard Enter on gate4Continue after earned reload; same Firefox internal WeakMap / RemoteAgent dispatch and script evaluation timeout, with crashreporter Glean permission panic. Pointer and keyboard Continue outcomes remain unobserved. No established product rootcause or fix; no unchanged full replay warranted.",
+  "completedActualCoverage": [
+    "Required Detective gate4 three distinct molecules genuinely solved",
+    "Each mission wrong-kind and H/C-H reject; applicable partial target rejected; clear works",
+    "Cold wrong-partial reload restores seed,mission,attempt/raw IDs exactly",
+    "390px partial resize retains native raw IDs",
+    "Gate4 earned reload revalidates original receipt",
+    "Optional Detective triple genuinely solved and exact required receipt retained",
+    "All three other-game optional adapters prepared and preserved earned receipt"
+  ],
+  "remaining": [
+    "Gate4 continue to step5 and sequence togate11",
+    "Gate11 three real answers/earned reload/narrow final navigation",
+    "Equivalent parentchain actual acceptance (memory verified independently in earlier test)",
+    "All three genuine archived old3 migration browser modes",
+    "No visible lesson reset control; source-level memory proof belongs to root"
+  ],
+  "harnessCorrections": [
+    {
+      "run": "run-detective-060300",
+      "classification": "Harness-only stale .lesson-explanation selector; actual frozen UI renders canonical explanation once in #feedback p. Corrected harness compares exact readonly mission.explanation. No product change."
+    }
+  ],
+  "currentHarnessSHA256": "7b747e4f1e3594448a7b50676fa2dac7908e5bbe588d155c06491c73d20115b6",
+  "noProductEdits": true,
+  "noPersonalFirefoxOrServer8013Touched": true,
+  "newShortRunCoverage": "97 passing checks/3genuine requiredcorrects, gate4 wrongkind/H/C-H/partial/clear/coldraw+earnedreload/mobile; gate11 andstep5 onward not reached."
+}

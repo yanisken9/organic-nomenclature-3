@@ -1,0 +1,188 @@
+BEFORE:
+   function labels(m) {
+      return m.atoms.map(function (v) {
+        return fIsHeavyEl2D(v.el) ? JSON.stringify([v.el, v.charge || 0,
+          v.massDifference || 0, v.isotope || 0]) : "H";
+      });
+    }
+    try {
+
+LOCAL:
+      allAtomsTypeList = labels(a); bondList = a.bonds;
+      allAtomsTypeList3D = labels(b); bondList3D = b.bonds;
+      return fBuildHeavyMap2D3D(false);
+    } finally {
+      allAtomsTypeList = saved[0]; bondList = saved[1];
+      allAtomsTypeList3D = saved[2]; bondList3D = saved[3];
+    }
+  }
+  // Compare all mapped internal distances, normalized by extent: headers,
+  // translation, rotation and uniform scale cannot turn a depict echo into
+  // a new layout. Built-in fixed points deliberately bypass this echo test.
+  function fMolDraftLayoutEcho(a, b, map) {
+    var pairs = [], extentA = 0, extentB = 0;
+    for (var i = 0; i < a.atoms.length; i++) {
+      if (map.arr[i] == null) continue;
+      for (var j = i + 1; j < a.atoms.length; j++) {
+        if (map.arr[j] == null) continue;
+        var x = a.atoms[i], y = a.atoms[j], u = b.atoms[map.arr[i]], v = b.atoms[map.arr[j]];
+        var da = Math.hypot(x.x - y.x, x.y - y.y), db = Math.hypot(u.x - v.x, u.y - v.y);
+        extentA = Math.max(extentA, da); extentB = Math.max(extentB, db);
+        pairs.push([da, db]);
+      }
+    }
+    if (!pairs.length) return true;
+    if (!(extentA > 1e-6) || !(extentB > 1e-6)) return extentA <= 1e-6 && extentB <= 1e-6;
+    return pairs.every(function (p) { return Math.abs(p[0] / extentA - p[1] / extentB) < 0.0002; });
+  }
+  function fMolDraftUseSkeletal(text, source) {
+    try {
+      if (!text) return false;
+      text = String(text).replace(/\[C\]/g, "C  ");
+      var a = fParseMolV2000(d.molText), b = fParseMolV2000(text);
+      // Supported transformation rules reject ambiguous query/stereo records;
+      // parser enforces finite coordinates and valid bond endpoints.
+      if (!fMolCanTransform2D(a, true) || !fMolCanTransform2D(b, true)) throw new Error("unsupported/invalid MOL");
+      var map = fMolDraftLayoutMap(a, b);
+      if (!map) throw new Error("heavy graph/charge/isotope mismatch");
+      var heavy = b.atoms.filter(function (v) { return fIsHeavyEl2D(v.el); });
+      if (heavy.length > 1 && b.bonds.some(function (bond) {
+        var x = b.atoms[bond[0] - 1], y = b.atoms[bond[1] - 1];
+        return fIsHeavyEl2D(x.el) && fIsHeavyEl2D(y.el) && Math.hypot(x.x - y.x, x.y - y.y) < 1e-6;
+      })) throw new Error("collapsed bond");
+      if (source !== "builtin" && fMolDraftLayoutEcho(a, b, map)) throw new Error("unchanged internal geometry");
+      _skel = text; _skelSrc = source;
+      try { console.log("[draft] skeletal: " + source + " ok " + _sigOf(text)); } catch (eL) {}
+      return true;
+    } catch (eV) {
+      try { console.warn("[draft] skeletal: " + source + " rejected (" + eV.message + ")"); } catch (eL) {}
+      return false;
+    }
+  }
+  // Canonical JSME display, then edit, then deterministic built-in. Every
+  // rung must pass the same exact graph/metadata/geometry gates before winning.
+  if (typeof jsmeNomeclatureApplet !== "undefined" && jsmeNomeclatureApplet) {
+    var displayDepiction = await fMolDraftDepictSmiles(jsmeNomeclatureApplet, depictSmiles, expectedHeavy);
+    if (!liveDraft()) return;
+    fMolDraftUseSkeletal(displayDepiction, "display");
+  }
+  if (!_skel && typeof jsmeEditDraftApplet !== "undefined" && jsmeEditDraftApplet) {
+    var editDepiction = await fMolDraftDepictSmiles(jsmeEditDraftApplet, depictSmiles, expectedHeavy);
+    if (!liveDraft()) return;
+    fMolDraftUseSkeletal(editDepiction, "edit");
+  }
+  if (!_skel && typeof fZigzagMol === "function") {
+    try { fMolDraftUseSkeletal(fZigzagMol(d.molText, _chainLive), "builtin"); }
+    catch (eZ) { try { console.warn("[draft] skeletal: builtin failed", eZ); } catch (eL0) {} }
+  }
+  if (!liveDraft()) return;
+
+UPSTREAM:
+      if (!cand) return null;
+      // Sandbox-applet echo guard: the preview sync above is [C]-annotated,
+      // so JSME rung outputs may echo "[C]" symbols. Normalize to bare "C"
+      // (same 3-char field width, geometry untouched) before validation and
+      // storage — the skeletal slot's display path never annotates, and core
+      // element-identity checks expect "C". Fail closed: if any "[C]"
+      // survives the replace, reject the rung (never store contaminated MOL).
+      try { cand = String(cand).replace(/\[C\]/g, "C  "); } catch (eBr) { return null; }
+      try { if (/\[C\]/.test(cand)) { try { /* console.warn("[draft] skeletal: " + src + " rejected ([C] echo survived strip)"); */ } catch (eBr2) {} return null; } } catch (eBr3) { return null; }
+      if (typeof fParseMolV2000 !== "function") { try { /* console.warn("[draft] skeletal: " + src + " skipped (no parser)"); */ } catch (eP0) {} return null; }
+      var _pa = fParseMolV2000(drawnMol), _pb = fParseMolV2000(cand);
+      var _ha = 0, _hb = 0, _qi, _zero = true;
+      if (_pa && _pb) {
+        for (_qi = 0; _qi < _pa.atoms.length; _qi++) { var _va = String(_pa.atoms[_qi].el || ""); if (_va && _va !== "H" && _va !== "h") _ha++; }
+        for (_qi = 0; _qi < _pb.atoms.length; _qi++) {
+          var _vb = String(_pb.atoms[_qi].el || "");
+          if (_vb && _vb !== "H" && _vb !== "h") _hb++;
+          if (Math.abs(_pb.atoms[_qi].x) > 1e-6 || Math.abs(_pb.atoms[_qi].y) > 1e-6) _zero = false;
+        }
+      }
+      if (!_ha || _ha !== _hb || _zero) {
+        try { /* console.warn("[draft] skeletal: " + src + " rejected (heavy " + _ha + " vs " + _hb + ", zeroCoords " + _zero + ")"); */ } catch (eRj) {}
+        return null;
+      }
+      try {
+        if (_sigOf(drawnMol) === _sigOf(cand)) { try { /* console.warn("[draft] skeletal: " + src + " unchanged geometry, discarding"); */ } catch (eUg2) {} return null; }
+      } catch (eSg3) { return null; }
+      try { /* console.log("[draft] skeletal: " + src + " accepted " + _sigOf(cand)); */ } catch (eA0) {}
+      return cand;
+    } catch (eA) { return null; }
+  };
+  try {
+    if (typeof fMolDraftDepictSmiles === "function") {
+      if (typeof jsmeNomeclatureApplet !== "undefined" && jsmeNomeclatureApplet) {
+        var _d1 = null;
+        try { _d1 = await fMolDraftDepictSmiles(jsmeNomeclatureApplet, _depictSmi, d.molText, _expectHeavy) || null; } catch (eD1) { _d1 = null; }
+        if (!window.MulerDraft || window.MulerDraft !== d || d._epoch !== _myEpochA || d._submitId !== _mySidA) { try { d.accepting = false; } catch (eAb1) {} return; } // Cancel during depict poll
+        try { /* console.log("[draft] skeletal: display rung(" + _depictSrc + ") " + (!_d1 ? "null" : (_d1 !== d.molText ? "won " + _sigOf(_d1) : "unchanged"))); */ } catch (eL2) {}
+        if (_d1 && _d1 !== d.molText) {
+          var _a1 = null;
+          try { _a1 = _acceptSkel(_d1, "display(" + _depictSrc + ")", d.molText) || null; } catch (eA1) { _a1 = null; }
+          if (_a1) { _skel = _a1; _skelSrc = "display"; }
+        }
+      }
+      if (!_skel && typeof jsmeEditDraftApplet !== "undefined" && jsmeEditDraftApplet) {
+        var _d2 = null;
+        try { _d2 = await fMolDraftDepictSmiles(jsmeEditDraftApplet, _depictSmi, d.molText, _expectHeavy) || null; } catch (eD2) { _d2 = null; }
+        if (!window.MulerDraft || window.MulerDraft !== d || d._epoch !== _myEpochA || d._submitId !== _mySidA) { try { d.accepting = false; } catch (eAb2) {} return; } // Cancel during depict poll
+        try { /* console.log("[draft] skeletal: edit rung(" + _depictSrc + ") " + (!_d2 ? "null" : (_d2 !== d.molText ? "won " + _sigOf(_d2) : "unchanged"))); */ } catch (eL3) {}
+        if (_d2 && _d2 !== d.molText) {
+          var _a2 = null;
+          try { _a2 = _acceptSkel(_d2, "edit(" + _depictSrc + ")", d.molText) || null; } catch (eA2) { _a2 = null; }
+          if (_a2) { _skel = _a2; _skelSrc = "edit"; }
+        }
+      }
+      if (!_skel) { try { /* console.warn("[draft] skeletal: JSME rungs missed, trying built-in"); */ } catch (eL4) {} }
+    } else {
+      try { /* console.warn("[draft] skeletal: depict helper missing"); */ } catch (eL5) {}
+    }
+    if (!_skel && typeof fZigzagMol === "function") {
+      var _zb = null;
+      try { _zb = fZigzagMol(d.molText, _chainLive) || null; } catch (eZ) { _zb = null; }
+      if (_zb) {
+        var _zbA = null;
+        try { _zbA = _acceptSkel(_zb, "builtin", d.molText) || null; } catch (eZa) { _zbA = null; }
+        if (_zbA) { _skel = _zbA; _skelSrc = "builtin"; }
+        else { try { /* console.warn("[draft] skeletal: built-in zigzag failed"); */ } catch (eL1) {} }
+      }
+      else { try { /* console.warn("[draft] skeletal: built-in zigzag failed"); */ } catch (eL1b) {} }
+    } else if (!_skel) {
+      try { /* console.warn("[draft] skeletal: builtin helper missing"); */ } catch (eL0b) {}
+    }
+  } catch (eSk) { _skel = null; }
+  try {
+    if (_skel && typeof fParseMolV2000 === "function") {
+      var _pa = fParseMolV2000(d.molText), _pb = fParseMolV2000(_skel);
+      var _ha = 0, _hb = 0, _qi, _zero = true;
+      if (_pa && _pb) {
+        for (_qi = 0; _qi < _pa.atoms.length; _qi++) { var _ta = String(_pa.atoms[_qi].el || ""); if (_ta !== "H" && _ta !== "h" && _ta) _ha++; }
+        for (_qi = 0; _qi < _pb.atoms.length; _qi++) {
+          var _tb = String(_pb.atoms[_qi].el || "");
+          if (_tb !== "H" && _tb !== "h" && _tb) _hb++;
+          if (Math.abs(_pb.atoms[_qi].x) > 1e-6 || Math.abs(_pb.atoms[_qi].y) > 1e-6) _zero = false;
+        }
+      }
+      if (!_ha || _ha !== _hb || _zero) {
+        try { /* console.warn("[draft] skeletal: validation failed (heavy " + _ha + " vs " + _hb + ", zeroCoords " + _zero + ", src " + _skelSrc + ")"); */ } catch (eLv) {}
+        _skel = null; _skelSrc = "";
+      } else {
+        // Coordinate-level change check: the string !== above catches
+        // formatting only — a depict echo with identical geometry must not
+        // pass as a fresh zigzag.
+        try {
+          if (_sigOf(d.molText) === _sigOf(_skel)) {
+            try { /* console.warn("[draft] skeletal: unchanged geometry (" + _skelSrc + "), discarding"); */ } catch (eUg) {}
+            _skel = null; _skelSrc = "";
+          }
+        } catch (eSg2) {}
+      }
+    }
+  } catch (eSv) { _skel = null; _skelSrc = ""; }
+  try { if (_skelSrc) { /* console.log("[draft] skeletal from " + _skelSrc); */ } } catch (eLg) {}
+
+AFTER:
+  var molC = null, molE = null, molS = null;
+  // Fork ⇒ full generation (New always + Edit-different): the result is a new
+  // molecule, so all three slots derive canonically and drawnVariant is
+  /

@@ -1,0 +1,51 @@
+{
+  "recordedUTC": "2026-11-16T06:48:27.366768+00:00",
+  "role": "Developer transcription of independent targeted Reviewer report",
+  "reviewer": "/root/four_game_independent_review",
+  "freshContextAtInitialReview": true,
+  "manifestSHA256": "1aeef0391e4fe93338e6773196adb6cb85f21f1854b9a399ec30e312f308aa75",
+  "verifiedSourceHashes": 16,
+  "verifiedBeforeHashes": 15,
+  "ownReadOnlyChecks": {
+    "actualAdapterProviderPinnedWorkerQCPBeforeAfter": 62,
+    "actualHydrationRealCatalogBundleStartupOrdersAndOwnership": 869,
+    "syntax": 4,
+    "viewerOutsideFunctionByteIdentity": true,
+    "threeHydrationBodiesIdentical": true,
+    "generatedHashURLOnlyDeltas": true,
+    "cores13AndIndexUnchanged": true
+  },
+  "findings": [
+    {
+      "id": "DEV-FOUR-P1",
+      "severity": "P1",
+      "origin": "Developer actual runtime",
+      "status": "Closed independently, with own causal/controller before-after checks and inspected post-fix Firefox/Chrome evidence",
+      "independentEvidence": "Both gates reproduce warm Promise before; fixed cold asynchronous preparation then synchronous null/target advance.",
+      "suppliedRuntime": "lesson-browser/run-detective-required-063759/results.json",
+      "runtimeAssertions": 202,
+      "correctUIAnswers": 6,
+      "runtimeRole": "Developer browser evidence inspected, not independently executed"
+    },
+    {
+      "id": "REV-FOUR-1",
+      "severity": "P3",
+      "status": "Closed independently at prior targeted23 check cutoff; corrected fields unchanged in final16"
+    }
+  ],
+  "newSourceFindings": [],
+  "runtimeAcceptance": "Developer final browser evidence inspected by independent Reviewer; bounded scope accepted with stated limitations",
+  "harnessAuditNote": "Exact executed Firefox archive SHA5e227d49 verified independently; current-driver delta and original metadata clarification preserved under lesson-browser/harness-snapshots.",
+  "independentBrowserExecution": false,
+  "reviewerWroteFiles": false,
+  "status": "Consolidated independent review complete; no unresolved actionable findings",
+  "legacyNormalization": "Reviewer independently restored genuine Repair partial six times with archived and current adapters; only untouched future choiceOrder varies in both. Active raw user progress invariant.",
+  "consolidatedEvidence": "lesson-browser/final-browser-results.json",
+  "remainingLimits": [
+    "Actual final browser earned migration was replayed for Repair only; Builder/Puzzle earned receipts independently checked in memory.",
+    "Optional/switch sequences passed earlier190-check prefix; not fully rerun after narrow final corrections.",
+    "Physical mobile/personal browser/conference/offline reliability unqualified.",
+    "Chrome records six cancelled Document requests."
+  ],
+  "desktopExport": "Developer completed and byte-verified after review; communication/checkpoints/alkanes-json-export-20261116-four-games.json"
+}

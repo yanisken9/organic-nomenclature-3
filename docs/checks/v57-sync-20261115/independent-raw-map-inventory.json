@@ -1,0 +1,64 @@
+{
+  "recordedUTC": "2026-11-15T17:00:59.972167+00:00",
+  "agent": "/root/v57_chemistry_preflight",
+  "role": "Independent read-only raw-source inventory; root transcription",
+  "actualFunctions": [
+    "fParseMolV2000",
+    "fMulerHeavyMapCached",
+    "fTranslateChain2D3D",
+    "fMulerSelectFullMap"
+  ],
+  "hashes": {
+    "viewer": "ae4e498361b994d55d2eafe8eb0a3b578c416ed770de0eb65d9dc74e9c800684",
+    "core": "c41b722db2fb3748f827d19ee1f05d7d8f680bb9f51c664305baa7d49c132c7e",
+    "data": "9387cd654b2ff3cfb058d9b97ddcca798ac13f47f769b532f9c122277ff8dd0a"
+  },
+  "SDFreadParsed": 141,
+  "forms": 422,
+  "accepted": {
+    "condensed": 83,
+    "expanded": 98,
+    "skeletal": 98,
+    "total": 279
+  },
+  "refused": {
+    "condensed": 58,
+    "expanded": 43,
+    "skeletal": 42,
+    "total": 143,
+    "molecules": 59
+  },
+  "overlappingReasons": [
+    {
+      "reason": "3D atomparity",
+      "forms": 75,
+      "example": "trimethyl_3_4_4_pentanone_2"
+    },
+    {
+      "reason": "3D bondstereo",
+      "forms": 45,
+      "example": "methyl_3_penten_2_dial"
+    },
+    {
+      "reason": "2D Mproperties/SUP",
+      "forms": 32,
+      "example": "methanoicacid condensed STY/SLB/SAL/SMT"
+    },
+    {
+      "reason": "literal[H]/strictgraph",
+      "forms": 1,
+      "example": "penten_3_yne_1 expanded"
+    }
+  ],
+  "additionalHeavyMetadataMismatch": 0,
+  "parseFailures": 0,
+  "acceptedFormsWithExplicit2DHAllMapped": 100,
+  "acceptedFormsWithExtraUnmapped3DH": 182,
+  "limits": [
+    "RAW source inventory, readygatecontrolledtrue; NOT browser/runtimecoveragecounts",
+    "JSME normalization mayremoveSUPproperties; requiresactualruntimeprobe",
+    "No guardrelaxation/generalstereocorrespondence claim; armedunmapped3Dpicksrejectandexplain2Dfallback",
+    "Methane3DSDFexists; missingmethaneskeletal remainsseparate"
+  ],
+  "writesByAgent": false
+}

@@ -1,0 +1,81 @@
+{
+  "changedPaths": [
+    "design/welcome-proposal.html",
+    "scenarios/alkanes-user-3.scenario.json"
+  ],
+  "hashes": {
+    "design/welcome-proposal.html": {
+      "beforeSHA256": "6dcaaf3d17f8afbee680b8215a9335b94b5dec57ce3563d6700f480813cd89a4",
+      "afterSHA256": "163b47464a90ba22602179121b212a4d6aa0f8f4c03ff10497d2dfb9a09d13f9"
+    },
+    "scenarios/alkanes-user-3.scenario.json": {
+      "beforeSHA256": "b9e2a61183385a8fee70d17f715c018b1bc261448821a4d286a7dd3322cce2b4",
+      "afterSHA256": "2f3832588e84e9a56e629b27df7de2d1fcf1bad1e0ec78e7fb0ce6b7bed81df5"
+    }
+  },
+  "scenarioSteps": 12,
+  "onlyChangedFields": [
+    ".steps[3].note",
+    ".steps[10].note"
+  ],
+  "allOtherScenarioBytesPreserved": true,
+  "unaffectedWelcomeRegionsByteIdentical": [
+    "card.one",
+    "card.three",
+    "header",
+    "representations",
+    "footer",
+    "dialog",
+    "script"
+  ],
+  "gameRoutes": [
+    "../games/name-repair.html?v=workshop-lesson-parity-20261110-r2",
+    "../games/name-builder.html?v=builder-outside-drop-20261112-r1",
+    "../games/molecular-puzzle.html?v=four-games-20261116-r1",
+    "../games/molecular-detective.html?v=four-games-20261116-r1"
+  ],
+  "images": [
+    {
+      "path": "design/assets/namelecule-methane-v1.png",
+      "width": 2172,
+      "height": 724,
+      "SHA256": "e8ffffb1bb6ebc9e6307f010c028f7d9e616be6c5793eba3955298e20e92ebd1"
+    },
+    {
+      "path": "games/assets/name-repair/workshop-logo-3d-v1.png",
+      "width": 1254,
+      "height": 1254,
+      "SHA256": "de919accdab0bd113f994e0d4f44f64fa346522e7dd6e8fd0ee27e4225403b45"
+    },
+    {
+      "path": "games/assets/name-builder/name-builder-logo-3d-blank-v1.png",
+      "width": 1254,
+      "height": 1254,
+      "SHA256": "9721dc62c33c80c3a4993de388ffe50a8b8d15c9a761963f7d31d9d5177e7b54"
+    },
+    {
+      "path": "games/assets/molecular-puzzle/molecular-puzzle-logo-flat-v7.png",
+      "width": 2148,
+      "height": 732,
+      "SHA256": "f495dccbe4cb9621fe8fba105dd5a000ed78b5f85da9a2b9eb8347378435457c"
+    },
+    {
+      "path": "games/assets/molecular-detective/molecular-detective-logo-molecule-v2.png",
+      "width": 1254,
+      "height": 1254,
+      "SHA256": "fcef858dcd74e3d8e65e3813f69ca8bed8e9b4ce9f1e2a779ae34eb7ad1fa2dd"
+    },
+    {
+      "path": "design/assets/ethanol-3d-jsmol.png",
+      "width": 1200,
+      "height": 1200,
+      "SHA256": "469e7623ff72e6191298656807fd98aab46557d4269c114360da445a459936da"
+    }
+  ],
+  "checks": "passed",
+  "limits": [
+    "Static checks do not establish rendered fit, keyboard behavior or actual game navigation.",
+    "Browser checks pending the shared browser slot; no browser was launched.",
+    "No Desktop export performed by this worker; parent owns the mapped backup/export."
+  ]
+}

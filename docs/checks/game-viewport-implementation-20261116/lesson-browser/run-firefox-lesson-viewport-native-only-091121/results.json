@@ -1,0 +1,703 @@
+{
+  "role": "Developer browser execution; not independent review",
+  "engine": "firefox",
+  "mode": "lesson-viewport-native-only",
+  "checks": [
+    {
+      "label": "HTTP serves exact frozen/native/source bytes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "all13 cores match session baseline before actual UI",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "all16 protected dependencies match baseline before actual UI",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "exact fixed new shared-JS cache bytes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "trusted visible input document.querySelector(\"#nlQuizOpen\")",
+      "passed": true,
+      "detail": {
+        "x": 1148,
+        "y": 349,
+        "hit": true,
+        "disabled": false,
+        "headerAction": false,
+        "headerBottom": 0,
+        "dialogBottom": 1000
+      }
+    },
+    {
+      "label": "trusted visible input document.querySelector(\".nl-game-choice-card:nth-child(2)\")",
+      "passed": true,
+      "detail": {
+        "x": 1038,
+        "y": 516,
+        "hit": true,
+        "disabled": false,
+        "headerAction": false,
+        "headerBottom": 308.5833282470703,
+        "dialogBottom": 765.4167022705078
+      }
+    },
+    {
+      "label": "native Main55 new common JS without Levels global",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "trusted visible input document.querySelector(\".nl-builder-frame\").contentDocument.querySelector(\"#bank-tiles [data-tile-id=\\\"tile-11abqpr-0\\\"]\")",
+      "passed": true,
+      "detail": {
+        "x": 802,
+        "y": 553,
+        "hit": true,
+        "disabled": false,
+        "headerAction": false,
+        "headerBottom": 121.83332824707031,
+        "dialogBottom": 988
+      }
+    },
+    {
+      "label": "trusted visible input document.querySelector(\".nl-builder-frame\").contentDocument.querySelector(\"#bank-tiles [data-tile-id=\\\"tile-11abqpr-1\\\"]\")",
+      "passed": true,
+      "detail": {
+        "x": 970,
+        "y": 500,
+        "hit": true,
+        "disabled": false,
+        "headerAction": false,
+        "headerBottom": 121.83332824707031,
+        "dialogBottom": 988
+      }
+    },
+    {
+      "label": "trusted visible input document.querySelector(\".nl-builder-frame\").contentDocument.querySelector(\"#bank-tiles [data-tile-id=\\\"tile-11abqpr-2\\\"]\")",
+      "passed": true,
+      "detail": {
+        "x": 1057,
+        "y": 500,
+        "hit": true,
+        "disabled": false,
+        "headerAction": false,
+        "headerBottom": 121.83332824707031,
+        "dialogBottom": 988
+      }
+    },
+    {
+      "label": "native55 new v1 genuine answer exact native composed name",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "trusted visible input document.querySelector(\".nl-builder-frame\").contentDocument.querySelector(\"#check-answer\")",
+      "passed": true,
+      "detail": {
+        "x": 831,
+        "y": 859,
+        "hit": true,
+        "disabled": false,
+        "headerAction": false,
+        "headerBottom": 121.83332824707031,
+        "dialogBottom": 988
+      }
+    },
+    {
+      "label": "trusted visible input document.querySelector(\"#nlQuizOpen\")",
+      "passed": true,
+      "detail": {
+        "x": 1148,
+        "y": 349,
+        "hit": true,
+        "disabled": false,
+        "headerAction": false,
+        "headerBottom": 0,
+        "dialogBottom": 1000
+      }
+    },
+    {
+      "label": "native55 new warm reload retains genuine v1 answer",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "actual generated native55 new no Levels dependency",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "trusted visible input document.querySelector(\"#nlQuizOpen\")",
+      "passed": true,
+      "detail": {
+        "x": 1148,
+        "y": 402,
+        "hit": true,
+        "disabled": false,
+        "headerAction": false,
+        "headerBottom": 0,
+        "dialogBottom": 1000
+      }
+    },
+    {
+      "label": "trusted visible input document.querySelector(\".nl-game-choice-card:nth-child(4)\")",
+      "passed": true,
+      "detail": {
+        "x": 1038,
+        "y": 672,
+        "hit": true,
+        "disabled": false,
+        "headerAction": false,
+        "headerBottom": 308.5833282470703,
+        "dialogBottom": 765.4167022705078
+      }
+    },
+    {
+      "label": "native Main56 new common JS without Levels global",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "trusted visible input native atoms1",
+      "passed": true,
+      "detail": {
+        "x": 350,
+        "y": 714,
+        "hit": true,
+        "target": 1,
+        "kind": "atoms"
+      }
+    },
+    {
+      "label": "genuine native raw selection atoms/1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "trusted visible input native atoms2",
+      "passed": true,
+      "detail": {
+        "x": 408,
+        "y": 714,
+        "hit": true,
+        "target": 2,
+        "kind": "atoms"
+      }
+    },
+    {
+      "label": "genuine native raw selection atoms/2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "trusted visible input native atoms3",
+      "passed": true,
+      "detail": {
+        "x": 466,
+        "y": 714,
+        "hit": true,
+        "target": 3,
+        "kind": "atoms"
+      }
+    },
+    {
+      "label": "genuine native raw selection atoms/3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "trusted visible input native atoms4",
+      "passed": true,
+      "detail": {
+        "x": 523,
+        "y": 714,
+        "hit": true,
+        "target": 4,
+        "kind": "atoms"
+      }
+    },
+    {
+      "label": "genuine native raw selection atoms/4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "trusted visible input native atoms5",
+      "passed": true,
+      "detail": {
+        "x": 581,
+        "y": 714,
+        "hit": true,
+        "target": 5,
+        "kind": "atoms"
+      }
+    },
+    {
+      "label": "genuine native raw selection atoms/5",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "trusted visible input document.querySelector(\".nl-detective-frame\").contentDocument.querySelector(\"#check-answer\")",
+      "passed": true,
+      "detail": {
+        "x": 820,
+        "y": 824,
+        "hit": true,
+        "disabled": false,
+        "headerAction": false,
+        "headerBottom": 121.83332824707031,
+        "dialogBottom": 988
+      }
+    },
+    {
+      "label": "trusted visible input document.querySelector(\"#nlQuizOpen\")",
+      "passed": true,
+      "detail": {
+        "x": 1148,
+        "y": 402,
+        "hit": true,
+        "disabled": false,
+        "headerAction": false,
+        "headerBottom": 0,
+        "dialogBottom": 1000
+      }
+    },
+    {
+      "label": "native56 new warm reload retains genuine v1 answer",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "actual generated native56 new no Levels dependency",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "native legacy Main56 omits viewport helper",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "enabled genuine UI document.querySelector(\"[data-level=\\\"1\\\"]\")",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "trusted visible input document.querySelector(\"[data-level=\\\"1\\\"]\")",
+      "passed": true,
+      "detail": {
+        "exists": true,
+        "visible": true,
+        "within": true,
+        "hit": true,
+        "localHit": "<button class=\"nl-game-levels__button\" type=\"button\" data-level=\"1\" aria-pressed=\"false\"><span class=\"nl-game-levels__name\">Επίπεδο 1 — Βασικό</span><span class=\"nl-game-levels__description\">Χωρίς αλκυλομάδες</span><span class=\"nl-game-levels__count\"",
+        "rootClass": "game nl-game-viewport nl-vp-level-selection builder-choosing",
+        "style": {
+          "display": "flex",
+          "visibility": "visible",
+          "gridRow": "auto",
+          "gridColumn": "auto"
+        },
+        "x": 295,
+        "y": 298,
+        "rect": {
+          "x": 73,
+          "y": 251,
+          "width": 444.66668701171875,
+          "height": 94,
+          "top": 251,
+          "bottom": 345,
+          "left": 73,
+          "right": 517.6666870117188
+        },
+        "disabled": false,
+        "text": "Επίπεδο 1 — ΒασικόΧωρίς αλκυλομάδες5 διαθέσιμα μόρια",
+        "clientHeight": 90,
+        "scrollHeight": 90,
+        "clientWidth": 441,
+        "scrollWidth": 441
+      }
+    }
+  ],
+  "correctUIAttempts": [
+    {
+      "game": "builder",
+      "moleculeId": "ethane",
+      "label": "native55 new v1 genuine answer",
+      "controlled": true
+    },
+    {
+      "game": "detective",
+      "moleculeId": "pentane",
+      "missionId": "pentane:comp5:parent-chain",
+      "family": "parent-chain",
+      "acceptedAlternatives": 1,
+      "label": "native56 new v1 genuine answer",
+      "controlled": true
+    }
+  ],
+  "sourceBefore": {
+    "css/namelecule-game-levels.css": "5295a13b7be25c83caee0d3054b33789ed480d8ea0c4065fe6bc8d6b53dc63fa",
+    "css/namelecule-game-viewport.css": "d30d883fc064e74907c541b7cbe273cbca6aad935fc4d816fcccd3f6307b269d",
+    "css/namelecule-games.css": "666b64b604682c2d281349f3c10051c73bfbd03f794b111b111d25997c6be8dd",
+    "css/namelecule-molecular-detective.css": "2be8426b8aa398d41fda6945081c5640032a24a47e1950241a66e22ad72c3bad",
+    "css/namelecule-molecular-puzzle.css": "561ea01bb2f06c618853f8b74124baa254d328284fe61fe5be73766959c20e08",
+    "css/namelecule-name-builder.css": "77e59a4a42ce0bbc188de029f9ef7b68891f1a71561ff9184962bdeba97c8cd5",
+    "css/namelecule-quiz-checkpoints.css": "63175dfe5fb57ae712eae3217a9432a3b4fd75effd86e8e877ff75b48b617cf4",
+    "css/namelecule-repair-round.css": "052b97e330cdb45f29823c38a31d5e54aa406b983d5cad16dff6ae4a9723450b",
+    "data/namelecule-alkanes-v1/manifest.json": "1ea6176be7a849f5e5d65a4230c6940e7f28147ad18ef4bafd80cefbe18fa9b2",
+    "design/welcome-proposal.html": "b7e49f70b0bd94bb34079be4e9ff8d274e47520353f6b6a905235924d5e7bf20",
+    "docs/checks/game-levels-alkanes-implementation-20261116/before/js/namelecule-game-choice-checkpoint.js": "6dcd208f209e293935e3f135fcd6edd5195b5b11f2534519d8ee4850583d0676",
+    "docs/checks/game-levels-alkanes-implementation-20261116/before/js/namelecule-game-repair.js": "35e859c839011fe4ee7ff3eef63f60f1525b380890c1f46e0ed96cb287062f10",
+    "docs/checks/game-levels-alkanes-implementation-20261116/before/js/namelecule-generated-repair-checkpoint.js": "2a0c77f352272a0cc8af6223e6f15d252f5d445a2dc9a1df5402452db8a22299",
+    "docs/checks/game-levels-alkanes-implementation-20261116/before/scenarios/alkanes-user-3.scenario.json": "f2409b58ac5cb92698815738a726bc1848b252b1f31ce472594832d356a98031",
+    "games/data/alkane-structures-v2.json": "2c4d9a95a77291f13c4a422644aefdae7f23448c2eed7b9d2ef4913da6de92b2",
+    "games/data/alkane-structures.json": "9778e30ea33f2f7cd4c8a472e46e90539856b861a54035a1d514c3246cccf724",
+    "games/molecular-detective-viewer.html": "8a4a3b2ad8afc52297035c126748b8fd1db1fc256539b2b8adc1323952bcae57",
+    "games/molecular-detective.html": "18192a9bb320e37e9754d362b50378f19ad1c2450c9bacf6971d60657c22437d",
+    "games/molecular-puzzle.html": "3ecca10d2709fee71a65238518b1c10a01edbb3994b3b4d2ce60e79aef339b48",
+    "games/name-builder-viewer.html": "c0282a64d20794058690cd96b84aacfa8d1ad8ba679564536603242e9f8f6d81",
+    "games/name-builder.html": "1094762820bd670d229d2e32b03280d83346ea7c155394e7d109f0549975efd6",
+    "games/name-repair.html": "c3619bacff7fcf33313adf2fcac523219765ad9df9c34ff87ec5bede41c0f985",
+    "js/MULERMOC_namelecule_alkanes_v1_data.js": "262c6561aaff7a88919cda715835e7f455d64756218aeb66e3e4949ba569a75c",
+    "js/chemistry-engines/3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306.js": "3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306",
+    "js/mulermoc-nom-core-42.js": "a7b95d7fd9eb8589c2f441205ddd3751bd6da9bf9834fa60d9a5b5d2d2aa2b83",
+    "js/mulermoc-nom-core-43.js": "93373c8ea49d6489350c4c7eee36d444b0f6ff5c13c500aa9662d4997575ac21",
+    "js/mulermoc-nom-core-44.js": "3bb8773be785992ec581d4cdd11a58a6bb5a833ed429ae07287839b436e523e1",
+    "js/mulermoc-nom-core-45.js": "dde5fb6350a0374e1ebda69e0870cbfce0bbed027b8219f33bc4de3c4cf9ae74",
+    "js/mulermoc-nom-core-48.js": "37dad911ed73af0768fc922186cb94e71df7df1144b2c1e75aee4c9202ce6c0d",
+    "js/mulermoc-nom-core-49.js": "ae85dd22b94292ed539ff2a858a1a6fe3672af90298662e5c6860fb411a65951",
+    "js/mulermoc-nom-core-50.js": "0f79b5af20b9c3b4504673876abc03b6c162af316c33dff55fd55e0c22a43fd9",
+    "js/mulermoc-nom-core-51.js": "096d617853646de0dfd67bcbde3e32252aebcb98e7525b05e6f7e71ccb48a5fc",
+    "js/mulermoc-nom-core-52.js": "d2138418ff630ab77e578b80ca8ba3a10cc1b877c3ab8c0e5c2735ffcd1f24a2",
+    "js/mulermoc-nom-core-54.js": "8f3e5f76d96322faf7cf9251f4cae3eca204fe2f82bf5754fdce6ffc4cd5d5a9",
+    "js/mulermoc-nom-core-55.js": "6cbdbd0ce60f5d66ff3e6925cdfd48e470764baa02b6263f325eff356df5e270",
+    "js/mulermoc-nom-core-56.js": "01e4b44578dc9ed6c8a484c5d38ee8a56e44ce2fc81ac6cf479a8333718ee8b5",
+    "js/mulermoc-nom-core-57.js": "c41b722db2fb3748f827d19ee1f05d7d8f680bb9f51c664305baa7d49c132c7e",
+    "js/mulermoc-nom-molview-55.js": "035e81d3d0ef1bc962a72a6092916f5078ac68a5a4e1ae75d471b5eba185c532",
+    "js/mulermoc-nom-molview-56.js": "b6ea87d2340cdeaaff10e79369a92657856474b53a24da1d90eb5818b53eeb06",
+    "js/mulermoc-nom-molview-57.js": "0f9096dd0f8197575362f489b570027991d48043cf658cab7f5618a494e76731",
+    "js/mulermoc-nom-scenario-57.js": "f06ad3c197d3cc7b543a7879d838b18ceb4b97116b9a1626462b45eb387290f1",
+    "js/namelecule-chemistry-client.js": "13f882de81ba00c2f5ced2adf4a9d97e2c66cf5ed7035bf344ea53dd7430db44",
+    "js/namelecule-chemistry-worker.js": "86b14771559761d1e6aa9f0120927b3303c58f090a39ab0c6274639f987b3c34",
+    "js/namelecule-game-choice-checkpoint.js": "8b315d12b6045667a381e8784f8018f8b767505aedf4a6b215f4d1e718c8c2bf",
+    "js/namelecule-game-levels.js": "63e83cfddb31be303e8f4e9f0b79066dc86eacf7ccc546d22a07f2359203708d",
+    "js/namelecule-game-repair.js": "03a28ed4c5c75a4ed4c8a729807e890941c7ded978b5c7c9fee8526c797c343c",
+    "js/namelecule-game-viewport.js": "f66565beac63ff52ef879c4de5f15050af67d4c3692bcbb989153022473b4d6f",
+    "js/namelecule-generated-repair-checkpoint.js": "02ad755ebf8a8b0e48455683b0ab355d60fc75e9b45518798197868f36491e4e",
+    "js/namelecule-molecular-detective-host.js": "42caa8ec6a3ab833661cfc16fb543fd2cc7e8b7b4b30e7b1cad941fd4a90b35f",
+    "js/namelecule-molecular-detective-lesson.js": "b6522b618d27f9d1ec88538444ec55e494863fe842152d2c1d468e49a3e93699",
+    "js/namelecule-molecular-detective.js": "728a30781c664ee1f09ccbe17672f5b0981ed9171adc62eda9ee2ea8d40d6547",
+    "js/namelecule-molecular-puzzle-engine.js": "6141bec0a6313dfd057ce1a6d057fe2a3cd1850f2b770f63929b4d312c0b55d1",
+    "js/namelecule-molecular-puzzle.js": "85353a8edf551dd8e7d525e9007fb796d898bd4d84d854ee4b16443fadf5d6b3",
+    "js/namelecule-name-builder-engine.js": "1c7e477325ae07b02d5218ef0833236f95eade7b6003a3aa07545f91b414f8a2",
+    "js/namelecule-name-builder-host.js": "9ab1aa1c92d05d058a26347e060cf3e114aa5eaaed0a61e9d75c7c77831c156e",
+    "js/namelecule-name-builder.js": "d8b94cbde0743712c99ce256246498029bf70a37c764c489b1c23dcf14bbd98b",
+    "js/namelecule-quiz-checkpoints.js": "b1c837b8ad99c05371598e0ca50c758cf0b0f570a6987e9077b96e52ed5821cd",
+    "js/namelecule-repair-generator.js": "118304488b6eaee651490785903080c419239df3f646988f79ae0e2548527611",
+    "mols/namelecule-alkanes-v1/dimethyl_2_2_butane_2D_Condensed.mol": "94538acc740ea7b1cd78cf791013d559b9328fc2377efec65d42c7356a77a50b",
+    "mols/namelecule-alkanes-v1/dimethyl_2_2_butane_2D_Expanded.mol": "2dc5056aeeb2c5af0ee6ce7ecf7b817bed1ec737fa5e722fcbd4ff5c5f37634a",
+    "mols/namelecule-alkanes-v1/dimethyl_2_2_butane_2D_Skeletal.mol": "4327d71af472076677ebefdf8e5d1e222d412920117751f7a25bc009c21394c1",
+    "mols/namelecule-alkanes-v1/dimethyl_2_2_butane_3D.sdf": "fb61c8caef702805e3ca7790851b4eec20ee3bca03ae40efa5801871245acec1",
+    "mols/namelecule-alkanes-v1/dimethyl_2_2_propane_2D_Condensed.mol": "d686779d0d0efce95835511dde0c5e49dcd34fb050dd1020457bd1eff961348d",
+    "mols/namelecule-alkanes-v1/dimethyl_2_2_propane_2D_Expanded.mol": "841e8f517ee8527d1cefcd82d3c38a2e2604c207baf8fcc5c7dd9dac4e5a42d4",
+    "mols/namelecule-alkanes-v1/dimethyl_2_2_propane_2D_Skeletal.mol": "8a533b0e9e9cfcd75a3f858f6e50836b9f378b46b63212102c44333eb837a598",
+    "mols/namelecule-alkanes-v1/dimethyl_2_2_propane_3D.sdf": "5f657bec0934b4c94a37f6316baf17602085814c353c955478a469f385156c69",
+    "mols/namelecule-alkanes-v1/ethyl_3_methyl_2_pentane_2D_Condensed.mol": "119df7799ffd06f3521a2b61d05581a5bda38f6eb4d6adde074ebd95ea8ecec8",
+    "mols/namelecule-alkanes-v1/ethyl_3_methyl_2_pentane_2D_Expanded.mol": "b397bc6f0e02e0b292205352639da14ae2da2db18cc059e482498ca3ee0c16b0",
+    "mols/namelecule-alkanes-v1/ethyl_3_methyl_2_pentane_2D_Skeletal.mol": "95def514ce901425d9b32ba644be5cdd3f4ff6c904e12d9df2f6510db2f4935f",
+    "mols/namelecule-alkanes-v1/ethyl_3_methyl_2_pentane_3D.sdf": "28a6792b1f1d91f464a30c420d7f366d802d5a2db78c4da222cc8105a635e3b7",
+    "mols/namelecule-alkanes-v1/ethyl_3_pentane_2D_Condensed.mol": "8c122f0aa63aec6ba80f53fbab145226f418bbebee194941eeb5c9b124795fcb",
+    "mols/namelecule-alkanes-v1/ethyl_3_pentane_2D_Expanded.mol": "fa021b0c49b489c7392f93effe2afc0b36af2b4fa50100aa53418f1e35b99555",
+    "mols/namelecule-alkanes-v1/ethyl_3_pentane_2D_Skeletal.mol": "7d3e6ea7fc94691d4efa9be4a534bdf347ee6510d66a0f8af83ad2e49817bdff",
+    "mols/namelecule-alkanes-v1/ethyl_3_pentane_3D.sdf": "2e1875d30031afbce94db5b8476c5f0f1732f672027234cd9de49fec13addcf9",
+    "mols/namelecule-alkanes-v1/methyl_2_butane_2D_Condensed.mol": "a1c2963f6c6eeaf17f68c3973145801b3f63e6bb52a4ecc917fa7abf9d058bfe",
+    "mols/namelecule-alkanes-v1/methyl_2_butane_2D_Expanded.mol": "ffd817974a5a8583b49452e8873211aed58f97bdebb32657e8666c5c79dc1164",
+    "mols/namelecule-alkanes-v1/methyl_2_butane_2D_Skeletal.mol": "87c9b0699e3a1979fc9c03a6a96d4f1edbc712d0385cd7251889f680c4aefdd0",
+    "mols/namelecule-alkanes-v1/methyl_2_butane_3D.sdf": "cdde755229b121edf4ab89822ed673c379fb6fec8f60ff07300753f27875878e",
+    "mols/namelecule-alkanes-v1/methyl_3_pentane_2D_Condensed.mol": "9f0ccd47450c2884eb21034ea4a71aede06577e05ea881c695ac4eb890a538f1",
+    "mols/namelecule-alkanes-v1/methyl_3_pentane_2D_Expanded.mol": "3ccbb969c3e5eaaaf3f471a195e6bf347be7add8e015bd2d074db3b519d57385",
+    "mols/namelecule-alkanes-v1/methyl_3_pentane_2D_Skeletal.mol": "0a71fd2c2f3cd7fe3d0bb245705f215eb592172041d680fb01ef98fbdee4da8a",
+    "mols/namelecule-alkanes-v1/methyl_3_pentane_3D.sdf": "788b4d0fa015e5ef81db80cb8c837ff1e3f62992541dd12621315410d8b54d11",
+    "mulermoc-nom-55.html": "2d57ac1b9beb503c2982cd4d43e42b9996c3dfb1a203033f9c14c100119e6c51",
+    "mulermoc-nom-56.html": "0cbccdd7984dc8a6fae66b4da338d957b13e7490b366a5aab27c207a4573b816",
+    "mulermoc-nom-57.html": "2e0c04fa16137e8c3dffd0737810430d6ae33e6a525dce6c5c1c2dda0f9415cb",
+    "scenarios/alkanes-user-3.scenario.json": "d5e85fca80cb1ddb04b9776e910fbe6ee642ea9ee2407acecebd5de585947e82"
+  },
+  "manifest": "/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/game-viewport-implementation-20261116/verification-target.json",
+  "manifestSHA256": "52c43a50100392ef764e950402d4ed774f6d80e236abc03b61be1faa94afb7bf",
+  "harnessSHA256": "20b88533158371434cc7a32a0cd098308d5d90e416fcc45d429d511d7f673305",
+  "recordedHelperSHA256": {
+    "replay-detective.py": "f729f078df558ce73fbb905c5d906681c5c295157c98267335e1e535b2f91eb4",
+    "replay-chrome.py": "2de8133925c280986a2a94405d8c6f83843f835154a6b195e99fa31852ebbe2b"
+  },
+  "limits": [
+    "Isolated headless browser CSS emulation; physical mobile, personal Firefox, conference and offline reliability unqualified.",
+    "Actual external JSmol/fonts/services remain dependencies; captured network failures are reported.",
+    "Canonical oracles are read-only; completion evidence comes from trusted production input and parent records.",
+    "Zoom100 is actual CSS viewport. 125/200 browser UI zoom is not inferred from viewport emulation and requires explicit separate evidence."
+  ],
+  "legacyHelperSHA256": "b12f48c002a4751a1333714df8acfa09cea13cd80c4bfd66f3a74bdfaee1c476",
+  "process": {
+    "ownedPID": 35900,
+    "profile": "/private/tmp/namelecule-viewport-lesson-firefox-gr6igatb",
+    "debugPort": 64073,
+    "serverPort": 64072,
+    "baseURL": "http://127.0.0.1:64072/"
+  },
+  "servedSHA256": {
+    "css/namelecule-game-levels.css": "5295a13b7be25c83caee0d3054b33789ed480d8ea0c4065fe6bc8d6b53dc63fa",
+    "css/namelecule-game-viewport.css": "d30d883fc064e74907c541b7cbe273cbca6aad935fc4d816fcccd3f6307b269d",
+    "css/namelecule-games.css": "666b64b604682c2d281349f3c10051c73bfbd03f794b111b111d25997c6be8dd",
+    "css/namelecule-molecular-detective.css": "2be8426b8aa398d41fda6945081c5640032a24a47e1950241a66e22ad72c3bad",
+    "css/namelecule-molecular-puzzle.css": "561ea01bb2f06c618853f8b74124baa254d328284fe61fe5be73766959c20e08",
+    "css/namelecule-name-builder.css": "77e59a4a42ce0bbc188de029f9ef7b68891f1a71561ff9184962bdeba97c8cd5",
+    "css/namelecule-quiz-checkpoints.css": "63175dfe5fb57ae712eae3217a9432a3b4fd75effd86e8e877ff75b48b617cf4",
+    "css/namelecule-repair-round.css": "052b97e330cdb45f29823c38a31d5e54aa406b983d5cad16dff6ae4a9723450b",
+    "data/namelecule-alkanes-v1/manifest.json": "1ea6176be7a849f5e5d65a4230c6940e7f28147ad18ef4bafd80cefbe18fa9b2",
+    "design/welcome-proposal.html": "b7e49f70b0bd94bb34079be4e9ff8d274e47520353f6b6a905235924d5e7bf20",
+    "docs/checks/game-levels-alkanes-implementation-20261116/before/js/namelecule-game-choice-checkpoint.js": "6dcd208f209e293935e3f135fcd6edd5195b5b11f2534519d8ee4850583d0676",
+    "docs/checks/game-levels-alkanes-implementation-20261116/before/js/namelecule-game-repair.js": "35e859c839011fe4ee7ff3eef63f60f1525b380890c1f46e0ed96cb287062f10",
+    "docs/checks/game-levels-alkanes-implementation-20261116/before/js/namelecule-generated-repair-checkpoint.js": "2a0c77f352272a0cc8af6223e6f15d252f5d445a2dc9a1df5402452db8a22299",
+    "docs/checks/game-levels-alkanes-implementation-20261116/before/scenarios/alkanes-user-3.scenario.json": "f2409b58ac5cb92698815738a726bc1848b252b1f31ce472594832d356a98031",
+    "games/data/alkane-structures-v2.json": "2c4d9a95a77291f13c4a422644aefdae7f23448c2eed7b9d2ef4913da6de92b2",
+    "games/data/alkane-structures.json": "9778e30ea33f2f7cd4c8a472e46e90539856b861a54035a1d514c3246cccf724",
+    "games/molecular-detective-viewer.html": "8a4a3b2ad8afc52297035c126748b8fd1db1fc256539b2b8adc1323952bcae57",
+    "games/molecular-detective.html": "18192a9bb320e37e9754d362b50378f19ad1c2450c9bacf6971d60657c22437d",
+    "games/molecular-puzzle.html": "3ecca10d2709fee71a65238518b1c10a01edbb3994b3b4d2ce60e79aef339b48",
+    "games/name-builder-viewer.html": "c0282a64d20794058690cd96b84aacfa8d1ad8ba679564536603242e9f8f6d81",
+    "games/name-builder.html": "1094762820bd670d229d2e32b03280d83346ea7c155394e7d109f0549975efd6",
+    "games/name-repair.html": "c3619bacff7fcf33313adf2fcac523219765ad9df9c34ff87ec5bede41c0f985",
+    "js/MULERMOC_namelecule_alkanes_v1_data.js": "262c6561aaff7a88919cda715835e7f455d64756218aeb66e3e4949ba569a75c",
+    "js/chemistry-engines/3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306.js": "3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306",
+    "js/mulermoc-nom-core-42.js": "a7b95d7fd9eb8589c2f441205ddd3751bd6da9bf9834fa60d9a5b5d2d2aa2b83",
+    "js/mulermoc-nom-core-43.js": "93373c8ea49d6489350c4c7eee36d444b0f6ff5c13c500aa9662d4997575ac21",
+    "js/mulermoc-nom-core-44.js": "3bb8773be785992ec581d4cdd11a58a6bb5a833ed429ae07287839b436e523e1",
+    "js/mulermoc-nom-core-45.js": "dde5fb6350a0374e1ebda69e0870cbfce0bbed027b8219f33bc4de3c4cf9ae74",
+    "js/mulermoc-nom-core-48.js": "37dad911ed73af0768fc922186cb94e71df7df1144b2c1e75aee4c9202ce6c0d",
+    "js/mulermoc-nom-core-49.js": "ae85dd22b94292ed539ff2a858a1a6fe3672af90298662e5c6860fb411a65951",
+    "js/mulermoc-nom-core-50.js": "0f79b5af20b9c3b4504673876abc03b6c162af316c33dff55fd55e0c22a43fd9",
+    "js/mulermoc-nom-core-51.js": "096d617853646de0dfd67bcbde3e32252aebcb98e7525b05e6f7e71ccb48a5fc",
+    "js/mulermoc-nom-core-52.js": "d2138418ff630ab77e578b80ca8ba3a10cc1b877c3ab8c0e5c2735ffcd1f24a2",
+    "js/mulermoc-nom-core-54.js": "8f3e5f76d96322faf7cf9251f4cae3eca204fe2f82bf5754fdce6ffc4cd5d5a9",
+    "js/mulermoc-nom-core-55.js": "6cbdbd0ce60f5d66ff3e6925cdfd48e470764baa02b6263f325eff356df5e270",
+    "js/mulermoc-nom-core-56.js": "01e4b44578dc9ed6c8a484c5d38ee8a56e44ce2fc81ac6cf479a8333718ee8b5",
+    "js/mulermoc-nom-core-57.js": "c41b722db2fb3748f827d19ee1f05d7d8f680bb9f51c664305baa7d49c132c7e",
+    "js/mulermoc-nom-molview-55.js": "035e81d3d0ef1bc962a72a6092916f5078ac68a5a4e1ae75d471b5eba185c532",
+    "js/mulermoc-nom-molview-56.js": "b6ea87d2340cdeaaff10e79369a92657856474b53a24da1d90eb5818b53eeb06",
+    "js/mulermoc-nom-molview-57.js": "0f9096dd0f8197575362f489b570027991d48043cf658cab7f5618a494e76731",
+    "js/mulermoc-nom-scenario-57.js": "f06ad3c197d3cc7b543a7879d838b18ceb4b97116b9a1626462b45eb387290f1",
+    "js/namelecule-chemistry-client.js": "13f882de81ba00c2f5ced2adf4a9d97e2c66cf5ed7035bf344ea53dd7430db44",
+    "js/namelecule-chemistry-worker.js": "86b14771559761d1e6aa9f0120927b3303c58f090a39ab0c6274639f987b3c34",
+    "js/namelecule-game-choice-checkpoint.js": "8b315d12b6045667a381e8784f8018f8b767505aedf4a6b215f4d1e718c8c2bf",
+    "js/namelecule-game-levels.js": "63e83cfddb31be303e8f4e9f0b79066dc86eacf7ccc546d22a07f2359203708d",
+    "js/namelecule-game-repair.js": "03a28ed4c5c75a4ed4c8a729807e890941c7ded978b5c7c9fee8526c797c343c",
+    "js/namelecule-game-viewport.js": "f66565beac63ff52ef879c4de5f15050af67d4c3692bcbb989153022473b4d6f",
+    "js/namelecule-generated-repair-checkpoint.js": "02ad755ebf8a8b0e48455683b0ab355d60fc75e9b45518798197868f36491e4e",
+    "js/namelecule-molecular-detective-host.js": "42caa8ec6a3ab833661cfc16fb543fd2cc7e8b7b4b30e7b1cad941fd4a90b35f",
+    "js/namelecule-molecular-detective-lesson.js": "b6522b618d27f9d1ec88538444ec55e494863fe842152d2c1d468e49a3e93699",
+    "js/namelecule-molecular-detective.js": "728a30781c664ee1f09ccbe17672f5b0981ed9171adc62eda9ee2ea8d40d6547",
+    "js/namelecule-molecular-puzzle-engine.js": "6141bec0a6313dfd057ce1a6d057fe2a3cd1850f2b770f63929b4d312c0b55d1",
+    "js/namelecule-molecular-puzzle.js": "85353a8edf551dd8e7d525e9007fb796d898bd4d84d854ee4b16443fadf5d6b3",
+    "js/namelecule-name-builder-engine.js": "1c7e477325ae07b02d5218ef0833236f95eade7b6003a3aa07545f91b414f8a2",
+    "js/namelecule-name-builder-host.js": "9ab1aa1c92d05d058a26347e060cf3e114aa5eaaed0a61e9d75c7c77831c156e",
+    "js/namelecule-name-builder.js": "d8b94cbde0743712c99ce256246498029bf70a37c764c489b1c23dcf14bbd98b",
+    "js/namelecule-quiz-checkpoints.js": "b1c837b8ad99c05371598e0ca50c758cf0b0f570a6987e9077b96e52ed5821cd",
+    "js/namelecule-repair-generator.js": "118304488b6eaee651490785903080c419239df3f646988f79ae0e2548527611",
+    "mols/namelecule-alkanes-v1/dimethyl_2_2_butane_2D_Condensed.mol": "94538acc740ea7b1cd78cf791013d559b9328fc2377efec65d42c7356a77a50b",
+    "mols/namelecule-alkanes-v1/dimethyl_2_2_butane_2D_Expanded.mol": "2dc5056aeeb2c5af0ee6ce7ecf7b817bed1ec737fa5e722fcbd4ff5c5f37634a",
+    "mols/namelecule-alkanes-v1/dimethyl_2_2_butane_2D_Skeletal.mol": "4327d71af472076677ebefdf8e5d1e222d412920117751f7a25bc009c21394c1",
+    "mols/namelecule-alkanes-v1/dimethyl_2_2_butane_3D.sdf": "fb61c8caef702805e3ca7790851b4eec20ee3bca03ae40efa5801871245acec1",
+    "mols/namelecule-alkanes-v1/dimethyl_2_2_propane_2D_Condensed.mol": "d686779d0d0efce95835511dde0c5e49dcd34fb050dd1020457bd1eff961348d",
+    "mols/namelecule-alkanes-v1/dimethyl_2_2_propane_2D_Expanded.mol": "841e8f517ee8527d1cefcd82d3c38a2e2604c207baf8fcc5c7dd9dac4e5a42d4",
+    "mols/namelecule-alkanes-v1/dimethyl_2_2_propane_2D_Skeletal.mol": "8a533b0e9e9cfcd75a3f858f6e50836b9f378b46b63212102c44333eb837a598",
+    "mols/namelecule-alkanes-v1/dimethyl_2_2_propane_3D.sdf": "5f657bec0934b4c94a37f6316baf17602085814c353c955478a469f385156c69",
+    "mols/namelecule-alkanes-v1/ethyl_3_methyl_2_pentane_2D_Condensed.mol": "119df7799ffd06f3521a2b61d05581a5bda38f6eb4d6adde074ebd95ea8ecec8",
+    "mols/namelecule-alkanes-v1/ethyl_3_methyl_2_pentane_2D_Expanded.mol": "b397bc6f0e02e0b292205352639da14ae2da2db18cc059e482498ca3ee0c16b0",
+    "mols/namelecule-alkanes-v1/ethyl_3_methyl_2_pentane_2D_Skeletal.mol": "95def514ce901425d9b32ba644be5cdd3f4ff6c904e12d9df2f6510db2f4935f",
+    "mols/namelecule-alkanes-v1/ethyl_3_methyl_2_pentane_3D.sdf": "28a6792b1f1d91f464a30c420d7f366d802d5a2db78c4da222cc8105a635e3b7",
+    "mols/namelecule-alkanes-v1/ethyl_3_pentane_2D_Condensed.mol": "8c122f0aa63aec6ba80f53fbab145226f418bbebee194941eeb5c9b124795fcb",
+    "mols/namelecule-alkanes-v1/ethyl_3_pentane_2D_Expanded.mol": "fa021b0c49b489c7392f93effe2afc0b36af2b4fa50100aa53418f1e35b99555",
+    "mols/namelecule-alkanes-v1/ethyl_3_pentane_2D_Skeletal.mol": "7d3e6ea7fc94691d4efa9be4a534bdf347ee6510d66a0f8af83ad2e49817bdff",
+    "mols/namelecule-alkanes-v1/ethyl_3_pentane_3D.sdf": "2e1875d30031afbce94db5b8476c5f0f1732f672027234cd9de49fec13addcf9",
+    "mols/namelecule-alkanes-v1/methyl_2_butane_2D_Condensed.mol": "a1c2963f6c6eeaf17f68c3973145801b3f63e6bb52a4ecc917fa7abf9d058bfe",
+    "mols/namelecule-alkanes-v1/methyl_2_butane_2D_Expanded.mol": "ffd817974a5a8583b49452e8873211aed58f97bdebb32657e8666c5c79dc1164",
+    "mols/namelecule-alkanes-v1/methyl_2_butane_2D_Skeletal.mol": "87c9b0699e3a1979fc9c03a6a96d4f1edbc712d0385cd7251889f680c4aefdd0",
+    "mols/namelecule-alkanes-v1/methyl_2_butane_3D.sdf": "cdde755229b121edf4ab89822ed673c379fb6fec8f60ff07300753f27875878e",
+    "mols/namelecule-alkanes-v1/methyl_3_pentane_2D_Condensed.mol": "9f0ccd47450c2884eb21034ea4a71aede06577e05ea881c695ac4eb890a538f1",
+    "mols/namelecule-alkanes-v1/methyl_3_pentane_2D_Expanded.mol": "3ccbb969c3e5eaaaf3f471a195e6bf347be7add8e015bd2d074db3b519d57385",
+    "mols/namelecule-alkanes-v1/methyl_3_pentane_2D_Skeletal.mol": "0a71fd2c2f3cd7fe3d0bb245705f215eb592172041d680fb01ef98fbdee4da8a",
+    "mols/namelecule-alkanes-v1/methyl_3_pentane_3D.sdf": "788b4d0fa015e5ef81db80cb8c837ff1e3f62992541dd12621315410d8b54d11",
+    "mulermoc-nom-55.html": "2d57ac1b9beb503c2982cd4d43e42b9996c3dfb1a203033f9c14c100119e6c51",
+    "mulermoc-nom-56.html": "0cbccdd7984dc8a6fae66b4da338d957b13e7490b366a5aab27c207a4573b816",
+    "mulermoc-nom-57.html": "2e0c04fa16137e8c3dffd0737810430d6ae33e6a525dce6c5c1c2dda0f9415cb",
+    "scenarios/alkanes-user-3.scenario.json": "d5e85fca80cb1ddb04b9776e910fbe6ee642ea9ee2407acecebd5de585947e82"
+  },
+  "coreBaseline": {
+    "js/mulermoc-nom-core-42.js": "a7b95d7fd9eb8589c2f441205ddd3751bd6da9bf9834fa60d9a5b5d2d2aa2b83",
+    "js/mulermoc-nom-core-43.js": "93373c8ea49d6489350c4c7eee36d444b0f6ff5c13c500aa9662d4997575ac21",
+    "js/mulermoc-nom-core-44.js": "3bb8773be785992ec581d4cdd11a58a6bb5a833ed429ae07287839b436e523e1",
+    "js/mulermoc-nom-core-45.js": "dde5fb6350a0374e1ebda69e0870cbfce0bbed027b8219f33bc4de3c4cf9ae74",
+    "js/mulermoc-nom-core-48.js": "37dad911ed73af0768fc922186cb94e71df7df1144b2c1e75aee4c9202ce6c0d",
+    "js/mulermoc-nom-core-49.js": "ae85dd22b94292ed539ff2a858a1a6fe3672af90298662e5c6860fb411a65951",
+    "js/mulermoc-nom-core-50.js": "0f79b5af20b9c3b4504673876abc03b6c162af316c33dff55fd55e0c22a43fd9",
+    "js/mulermoc-nom-core-51.js": "096d617853646de0dfd67bcbde3e32252aebcb98e7525b05e6f7e71ccb48a5fc",
+    "js/mulermoc-nom-core-52.js": "d2138418ff630ab77e578b80ca8ba3a10cc1b877c3ab8c0e5c2735ffcd1f24a2",
+    "js/mulermoc-nom-core-54.js": "8f3e5f76d96322faf7cf9251f4cae3eca204fe2f82bf5754fdce6ffc4cd5d5a9",
+    "js/mulermoc-nom-core-55.js": "6cbdbd0ce60f5d66ff3e6925cdfd48e470764baa02b6263f325eff356df5e270",
+    "js/mulermoc-nom-core-56.js": "01e4b44578dc9ed6c8a484c5d38ee8a56e44ce2fc81ac6cf479a8333718ee8b5",
+    "js/mulermoc-nom-core-57.js": "c41b722db2fb3748f827d19ee1f05d7d8f680bb9f51c664305baa7d49c132c7e"
+  },
+  "protectedBaseline": {
+    "js/namelecule-repair-generator.js": "118304488b6eaee651490785903080c419239df3f646988f79ae0e2548527611",
+    "js/namelecule-name-builder-engine.js": "1c7e477325ae07b02d5218ef0833236f95eade7b6003a3aa07545f91b414f8a2",
+    "js/namelecule-molecular-puzzle-engine.js": "6141bec0a6313dfd057ce1a6d057fe2a3cd1850f2b770f63929b4d312c0b55d1",
+    "games/data/alkane-structures.json": "9778e30ea33f2f7cd4c8a472e46e90539856b861a54035a1d514c3246cccf724",
+    "games/data/alkane-structures-v2.json": "2c4d9a95a77291f13c4a422644aefdae7f23448c2eed7b9d2ef4913da6de92b2",
+    "games/name-builder-viewer.html": "c0282a64d20794058690cd96b84aacfa8d1ad8ba679564536603242e9f8f6d81",
+    "games/molecular-detective-viewer.html": "8a4a3b2ad8afc52297035c126748b8fd1db1fc256539b2b8adc1323952bcae57",
+    "js/namelecule-name-builder-host.js": "9ab1aa1c92d05d058a26347e060cf3e114aa5eaaed0a61e9d75c7c77831c156e",
+    "js/namelecule-molecular-detective-host.js": "42caa8ec6a3ab833661cfc16fb543fd2cc7e8b7b4b30e7b1cad941fd4a90b35f",
+    "js/mulermoc-nom-molview-55.js": "035e81d3d0ef1bc962a72a6092916f5078ac68a5a4e1ae75d471b5eba185c532",
+    "js/mulermoc-nom-molview-56.js": "b6ea87d2340cdeaaff10e79369a92657856474b53a24da1d90eb5818b53eeb06",
+    "js/mulermoc-nom-molview-57.js": "0f9096dd0f8197575362f489b570027991d48043cf658cab7f5618a494e76731",
+    "mulermoc-nom-55.html": "2d57ac1b9beb503c2982cd4d43e42b9996c3dfb1a203033f9c14c100119e6c51",
+    "mulermoc-nom-56.html": "0cbccdd7984dc8a6fae66b4da338d957b13e7490b366a5aab27c207a4573b816",
+    "js/MULERMOC_namelecule_alkanes_v1_data.js": "262c6561aaff7a88919cda715835e7f455d64756218aeb66e3e4949ba569a75c",
+    "scenarios/alkanes-user-3.scenario.json": "d5e85fca80cb1ddb04b9776e910fbe6ee642ea9ee2407acecebd5de585947e82"
+  },
+  "scenarioHarnessSHA256": "701374ae52e78d1c0fbe22fac1b17511da75f7ae632befb065d284a1c90186b7",
+  "reuseHarnessSHA256": "b0cfa9f3d904c41be2fba30534e9451a82e2a26ffcefe585a2ab02461929c118",
+  "cacheAliases": {
+    "new": {
+      "js/namelecule-game-choice-checkpoint.js": "8b315d12b6045667a381e8784f8018f8b767505aedf4a6b215f4d1e718c8c2bf",
+      "js/namelecule-game-repair.js": "03a28ed4c5c75a4ed4c8a729807e890941c7ded978b5c7c9fee8526c797c343c",
+      "js/namelecule-generated-repair-checkpoint.js": "02ad755ebf8a8b0e48455683b0ab355d60fc75e9b45518798197868f36491e4e"
+    }
+  },
+  "cacheVariantSourceMap": {
+    "new": {
+      "js/namelecule-game-choice-checkpoint.js": "new",
+      "js/namelecule-game-repair.js": "new",
+      "js/namelecule-generated-repair-checkpoint.js": "new"
+    }
+  },
+  "httpErrors": [
+    {
+      "path": "/favicon.ico",
+      "code": 404
+    }
+  ],
+  "failure": "Traceback (most recent call last):\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/game-levels-alkanes-implementation-20261116/browser/replay-levels.py\", line 455, in main\n    else:legacy_migration()\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/game-viewport-implementation-20261116/lesson-browser/lesson-checks.py\", line 345, in legacy_migration\n    viewport(1280,720);legacy_native_smoke();bounded_builder_3d();captured_earned_fixture_switch();return\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/game-viewport-implementation-20261116/lesson-browser/lesson-checks.py\", line 294, in bounded_builder_3d\n    page('games/name-builder.html');wait('document.querySelectorAll(\"[data-level]\").length===3',100);select_level(1);game_ready('builder');info=builder_info();result={'moleculeId':info['native']['selectedMol'],'timeBoundSeconds':25,'kind':'actual STANDALONE Builder1 3D then Condensed; not embedded proof'}\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/game-levels-alkanes-implementation-20261116/browser/replay-levels.py\", line 100, in game_ready\n    elif game=='builder': wait('('+w+').document.getElementById(\"viewer-mask\").hidden&&!!('+w+').document.querySelector(\"#bank-tiles button\")',110)\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/four-game-integration-20261116/lesson-browser/replay-detective.py\", line 97, in wait\n    raise AssertionError('Timed out: '+expr)\nAssertionError: Timed out: (window).document.getElementById(\"viewer-mask\").hidden&&!!(window).document.querySelector(\"#bank-tiles button\")\n",
+  "failureState": {
+    "url": "http://127.0.0.1:64072/games/name-builder.html",
+    "body": "Πήγαινε στη σύνθεση του ονόματος\nΥποδοχή\nΧτίσε το όνομα\n\nΠαρατήρησε τη δομή. Διάλεξε τα κατάλληλα συνθετικά και βάλε τα στη σωστή σειρά.\n\nΕπίλεξε επίπεδο\nΕπιστροφή στο παιχνίδι\nΑλκάνια\nΆλλες διαθέσιμες ενώσεις — χωρίς επίπεδα ακόμη (133)\n\nΕπίλεξε επίπεδο\n\nΕπίπεδο 1 — Βασικό\nΧωρίς αλκυλομάδες\n5 διαθέσιμα μόρια\nΕπίπεδο 2 — Ενδιάμεσο\nΜία αλκυλομάδα\n4 διαθέσιμα μόρια\nΕπίπεδο 3 — Προχωρημένο\nΔύο ή περισσότερες αλκυλομάδες\n5 διαθέσιμα μόρια\n\nΕπίλεξε επίπεδο για αυτόματη ανάθεση μορίου.\n\nΔιάλεξε επίπεδο για αυτόματη ανάθεση μορίου.",
+    "messages": [],
+    "detective": null,
+    "nextMission": null
+  },
+  "javascriptErrors": [],
+  "events": [],
+  "sourceAfter": {
+    "css/namelecule-game-levels.css": "5295a13b7be25c83caee0d3054b33789ed480d8ea0c4065fe6bc8d6b53dc63fa",
+    "css/namelecule-game-viewport.css": "d30d883fc064e74907c541b7cbe273cbca6aad935fc4d816fcccd3f6307b269d",
+    "css/namelecule-games.css": "666b64b604682c2d281349f3c10051c73bfbd03f794b111b111d25997c6be8dd",
+    "css/namelecule-molecular-detective.css": "2be8426b8aa398d41fda6945081c5640032a24a47e1950241a66e22ad72c3bad",
+    "css/namelecule-molecular-puzzle.css": "561ea01bb2f06c618853f8b74124baa254d328284fe61fe5be73766959c20e08",
+    "css/namelecule-name-builder.css": "77e59a4a42ce0bbc188de029f9ef7b68891f1a71561ff9184962bdeba97c8cd5",
+    "css/namelecule-quiz-checkpoints.css": "63175dfe5fb57ae712eae3217a9432a3b4fd75effd86e8e877ff75b48b617cf4",
+    "css/namelecule-repair-round.css": "052b97e330cdb45f29823c38a31d5e54aa406b983d5cad16dff6ae4a9723450b",
+    "data/namelecule-alkanes-v1/manifest.json": "1ea6176be7a849f5e5d65a4230c6940e7f28147ad18ef4bafd80cefbe18fa9b2",
+    "design/welcome-proposal.html": "b7e49f70b0bd94bb34079be4e9ff8d274e47520353f6b6a905235924d5e7bf20",
+    "docs/checks/game-levels-alkanes-implementation-20261116/before/js/namelecule-game-choice-checkpoint.js": "6dcd208f209e293935e3f135fcd6edd5195b5b11f2534519d8ee4850583d0676",
+    "docs/checks/game-levels-alkanes-implementation-20261116/before/js/namelecule-game-repair.js": "35e859c839011fe4ee7ff3eef63f60f1525b380890c1f46e0ed96cb287062f10",
+    "docs/checks/game-levels-alkanes-implementation-20261116/before/js/namelecule-generated-repair-checkpoint.js": "2a0c77f352272a0cc8af6223e6f15d252f5d445a2dc9a1df5402452db8a22299",
+    "docs/checks/game-levels-alkanes-implementation-20261116/before/scenarios/alkanes-user-3.scenario.json": "f2409b58ac5cb92698815738a726bc1848b252b1f31ce472594832d356a98031",
+    "games/data/alkane-structures-v2.json": "2c4d9a95a77291f13c4a422644aefdae7f23448c2eed7b9d2ef4913da6de92b2",
+    "games/data/alkane-structures.json": "9778e30ea33f2f7cd4c8a472e46e90539856b861a54035a1d514c3246cccf724",
+    "games/molecular-detective-viewer.html": "8a4a3b2ad8afc52297035c126748b8fd1db1fc256539b2b8adc1323952bcae57",
+    "games/molecular-detective.html": "18192a9bb320e37e9754d362b50378f19ad1c2450c9bacf6971d60657c22437d",
+    "games/molecular-puzzle.html": "3ecca10d2709fee71a65238518b1c10a01edbb3994b3b4d2ce60e79aef339b48",
+    "games/name-builder-viewer.html": "c0282a64d20794058690cd96b84aacfa8d1ad8ba679564536603242e9f8f6d81",
+    "games/name-builder.html": "1094762820bd670d229d2e32b03280d83346ea7c155394e7d109f0549975efd6",
+    "games/name-repair.html": "c3619bacff7fcf33313adf2fcac523219765ad9df9c34ff87ec5bede41c0f985",
+    "js/MULERMOC_namelecule_alkanes_v1_data.js": "262c6561aaff7a88919cda715835e7f455d64756218aeb66e3e4949ba569a75c",
+    "js/chemistry-engines/3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306.js": "3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306",
+    "js/mulermoc-nom-core-42.js": "a7b95d7fd9eb8589c2f441205ddd3751bd6da9bf9834fa60d9a5b5d2d2aa2b83",
+    "js/mulermoc-nom-core-43.js": "93373c8ea49d6489350c4c7eee36d444b0f6ff5c13c500aa9662d4997575ac21",
+    "js/mulermoc-nom-core-44.js": "3bb8773be785992ec581d4cdd11a58a6bb5a833ed429ae07287839b436e523e1",
+    "js/mulermoc-nom-core-45.js": "dde5fb6350a0374e1ebda69e0870cbfce0bbed027b8219f33bc4de3c4cf9ae74",
+    "js/mulermoc-nom-core-48.js": "37dad911ed73af0768fc922186cb94e71df7df1144b2c1e75aee4c9202ce6c0d",
+    "js/mulermoc-nom-core-49.js": "ae85dd22b94292ed539ff2a858a1a6fe3672af90298662e5c6860fb411a65951",
+    "js/mulermoc-nom-core-50.js": "0f79b5af20b9c3b4504673876abc03b6c162af316c33dff55fd55e0c22a43fd9",
+    "js/mulermoc-nom-core-51.js": "096d617853646de0dfd67bcbde3e32252aebcb98e7525b05e6f7e71ccb48a5fc",
+    "js/mulermoc-nom-core-52.js": "d2138418ff630ab77e578b80ca8ba3a10cc1b877c3ab8c0e5c2735ffcd1f24a2",
+    "js/mulermoc-nom-core-54.js": "8f3e5f76d96322faf7cf9251f4cae3eca204fe2f82bf5754fdce6ffc4cd5d5a9",
+    "js/mulermoc-nom-core-55.js": "6cbdbd0ce60f5d66ff3e6925cdfd48e470764baa02b6263f325eff356df5e270",
+    "js/mulermoc-nom-core-56.js": "01e4b44578dc9ed6c8a484c5d38ee8a56e44ce2fc81ac6cf479a8333718ee8b5",
+    "js/mulermoc-nom-core-57.js": "c41b722db2fb3748f827d19ee1f05d7d8f680bb9f51c664305baa7d49c132c7e",
+    "js/mulermoc-nom-molview-55.js": "035e81d3d0ef1bc962a72a6092916f5078ac68a5a4e1ae75d471b5eba185c532",
+    "js/mulermoc-nom-molview-56.js": "b6ea87d2340cdeaaff10e79369a92657856474b53a24da1d90eb5818b53eeb06",
+    "js/mulermoc-nom-molview-57.js": "0f9096dd0f8197575362f489b570027991d48043cf658cab7f5618a494e76731",
+    "js/mulermoc-nom-scenario-57.js": "f06ad3c197d3cc7b543a7879d838b18ceb4b97116b9a1626462b45eb387290f1",
+    "js/namelecule-chemistry-client.js": "13f882de81ba00c2f5ced2adf4a9d97e2c66cf5ed7035bf344ea53dd7430db44",
+    "js/namelecule-chemistry-worker.js": "86b14771559761d1e6aa9f0120927b3303c58f090a39ab0c6274639f987b3c34",
+    "js/namelecule-game-choice-checkpoint.js": "8b315d12b6045667a381e8784f8018f8b767505aedf4a6b215f4d1e718c8c2bf",
+    "js/namelecule-game-levels.js": "63e83cfddb31be303e8f4e9f0b79066dc86eacf7ccc546d22a07f2359203708d",
+    "js/namelecule-game-repair.js": "03a28ed4c5c75a4ed4c8a729807e890941c7ded978b5c7c9fee8526c797c343c",
+    "js/namelecule-game-viewport.js": "f66565beac63ff52ef879c4de5f15050af67d4c3692bcbb989153022473b4d6f",
+    "js/namelecule-generated-repair-checkpoint.js": "02ad755ebf8a8b0e48455683b0ab355d60fc75e9b45518798197868f36491e4e",
+    "js/namelecule-molecular-detective-host.js": "42caa8ec6a3ab833661cfc16fb543fd2cc7e8b7b4b30e7b1cad941fd4a90b35f",
+    "js/namelecule-molecular-detective-lesson.js": "b6522b618d27f9d1ec88538444ec55e494863fe842152d2c1d468e49a3e93699",
+    "js/namelecule-molecular-detective.js": "728a30781c664ee1f09ccbe17672f5b0981ed9171adc62eda9ee2ea8d40d6547",
+    "js/namelecule-molecular-puzzle-engine.js": "6141bec0a6313dfd057ce1a6d057fe2a3cd1850f2b770f63929b4d312c0b55d1",
+    "js/namelecule-molecular-puzzle.js": "85353a8edf551dd8e7d525e9007fb796d898bd4d84d854ee4b16443fadf5d6b3",
+    "js/namelecule-name-builder-engine.js": "1c7e477325ae07b02d5218ef0833236f95eade7b6003a3aa07545f91b414f8a2",
+    "js/namelecule-name-builder-host.js": "9ab1aa1c92d05d058a26347e060cf3e114aa5eaaed0a61e9d75c7c77831c156e",
+    "js/namelecule-name-builder.js": "d8b94cbde0743712c99ce256246498029bf70a37c764c489b1c23dcf14bbd98b",
+    "js/namelecule-quiz-checkpoints.js": "b1c837b8ad99c05371598e0ca50c758cf0b0f570a6987e9077b96e52ed5821cd",
+    "js/namelecule-repair-generator.js": "118304488b6eaee651490785903080c419239df3f646988f79ae0e2548527611",
+    "mols/namelecule-alkanes-v1/dimethyl_2_2_butane_2D_Condensed.mol": "94538acc740ea7b1cd78cf791013d559b9328fc2377efec65d42c7356a77a50b",
+    "mols/namelecule-alkanes-v1/dimethyl_2_2_butane_2D_Expanded.mol": "2dc5056aeeb2c5af0ee6ce7ecf7b817bed1ec737fa5e722fcbd4ff5c5f37634a",
+    "mols/namelecule-alkanes-v1/dimethyl_2_2_butane_2D_Skeletal.mol": "4327d71af472076677ebefdf8e5d1e222d412920117751f7a25bc009c21394c1",
+    "mols/namelecule-alkanes-v1/dimethyl_2_2_butane_3D.sdf": "fb61c8caef702805e3ca7790851b4eec20ee3bca03ae40efa5801871245acec1",
+    "mols/namelecule-alkanes-v1/dimethyl_2_2_propane_2D_Condensed.mol": "d686779d0d0efce95835511dde0c5e49dcd34fb050dd1020457bd1eff961348d",
+    "mols/namelecule-alkanes-v1/dimethyl_2_2_propane_2D_Expanded.mol": "841e8f517ee8527d1cefcd82d3c38a2e2604c207baf8fcc5c7dd9dac4e5a42d4",
+    "mols/namelecule-alkanes-v1/dimethyl_2_2_propane_2D_Skeletal.mol": "8a533b0e9e9cfcd75a3f858f6e50836b9f378b46b63212102c44333eb837a598",
+    "mols/namelecule-alkanes-v1/dimethyl_2_2_propane_3D.sdf": "5f657bec0934b4c94a37f6316baf17602085814c353c955478a469f385156c69",
+    "mols/namelecule-alkanes-v1/ethyl_3_methyl_2_pentane_2D_Condensed.mol": "119df7799ffd06f3521a2b61d05581a5bda38f6eb4d6adde074ebd95ea8ecec8",
+    "mols/namelecule-alkanes-v1/ethyl_3_methyl_2_pentane_2D_Expanded.mol": "b397bc6f0e02e0b292205352639da14ae2da2db18cc059e482498ca3ee0c16b0",
+    "mols/namelecule-alkanes-v1/ethyl_3_methyl_2_pentane_2D_Skeletal.mol": "95def514ce901425d9b32ba644be5cdd3f4ff6c904e12d9df2f6510db2f4935f",
+    "mols/namelecule-alkanes-v1/ethyl_3_methyl_2_pentane_3D.sdf": "28a6792b1f1d91f464a30c420d7f366d802d5a2db78c4da222cc8105a635e3b7",
+    "mols/namelecule-alkanes-v1/ethyl_3_pentane_2D_Condensed.mol": "8c122f0aa63aec6ba80f53fbab145226f418bbebee194941eeb5c9b124795fcb",
+    "mols/namelecule-alkanes-v1/ethyl_3_pentane_2D_Expanded.mol": "fa021b0c49b489c7392f93effe2afc0b36af2b4fa50100aa53418f1e35b99555",
+    "mols/namelecule-alkanes-v1/ethyl_3_pentane_2D_Skeletal.mol": "7d3e6ea7fc94691d4efa9be4a534bdf347ee6510d66a0f8af83ad2e49817bdff",
+    "mols/namelecule-alkanes-v1/ethyl_3_pentane_3D.sdf": "2e1875d30031afbce94db5b8476c5f0f1732f672027234cd9de49fec13addcf9",
+    "mols/namelecule-alkanes-v1/methyl_2_butane_2D_Condensed.mol": "a1c2963f6c6eeaf17f68c3973145801b3f63e6bb52a4ecc917fa7abf9d058bfe",
+    "mols/namelecule-alkanes-v1/methyl_2_butane_2D_Expanded.mol": "ffd817974a5a8583b49452e8873211aed58f97bdebb32657e8666c5c79dc1164",
+    "mols/namelecule-alkanes-v1/methyl_2_butane_2D_Skeletal.mol": "87c9b0699e3a1979fc9c03a6a96d4f1edbc712d0385cd7251889f680c4aefdd0",
+    "mols/namelecule-alkanes-v1/methyl_2_butane_3D.sdf": "cdde755229b121edf4ab89822ed673c379fb6fec8f60ff07300753f27875878e",
+    "mols/namelecule-alkanes-v1/methyl_3_pentane_2D_Condensed.mol": "9f0ccd47450c2884eb21034ea4a71aede06577e05ea881c695ac4eb890a538f1",
+    "mols/namelecule-alkanes-v1/methyl_3_pentane_2D_Expanded.mol": "3ccbb969c3e5eaaaf3f471a195e6bf347be7add8e015bd2d074db3b519d57385",
+    "mols/namelecule-alkanes-v1/methyl_3_pentane_2D_Skeletal.mol": "0a71fd2c2f3cd7fe3d0bb245705f215eb592172041d680fb01ef98fbdee4da8a",
+    "mols/namelecule-alkanes-v1/methyl_3_pentane_3D.sdf": "788b4d0fa015e5ef81db80cb8c837ff1e3f62992541dd12621315410d8b54d11",
+    "mulermoc-nom-55.html": "2d57ac1b9beb503c2982cd4d43e42b9996c3dfb1a203033f9c14c100119e6c51",
+    "mulermoc-nom-56.html": "0cbccdd7984dc8a6fae66b4da338d957b13e7490b366a5aab27c207a4573b816",
+    "mulermoc-nom-57.html": "2e0c04fa16137e8c3dffd0737810430d6ae33e6a525dce6c5c1c2dda0f9415cb",
+    "scenarios/alkanes-user-3.scenario.json": "d5e85fca80cb1ddb04b9776e910fbe6ee642ea9ee2407acecebd5de585947e82"
+  },
+  "sourceUnchangedDuringRun": true,
+  "ownedBrowserExited": true,
+  "ownedServerClosed": true,
+  "ownedProfileRemoved": true,
+  "finishedUTC": "2026-11-16T09:13:26.594941+00:00"
+}

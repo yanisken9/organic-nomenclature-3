@@ -1,0 +1,8 @@
+{
+  "startedUTC": "2026-11-16T05:24:38.269606+00:00",
+  "role": "Developer owned headless Firefox export, not independent review",
+  "ownOnly": true,
+  "exitCode": 1,
+  "failure": "Traceback (most recent call last):\n  File \"/Users/yannisskendros/Desktop/\u0394\u03b9\u03c0\u03bb\u03c9\u03bc\u03b1\u03c4\u03b9\u03ba\u03b7\u0301 - \u039f\u03bd\u03bf\u03bc\u03b1\u03c4\u03bf\u03bb\u03bf\u03b3\u03b9\u0301\u03b1/organic-nomenclature-3/docs/checks/alkane-pool-implementation-20261116/detective/run-export.py\", line 87, in run\n    server = http.server.ThreadingHTTPServer((\"127.0.0.1\", 0), Handler)\n  File \"/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/socketserver.py\", line 452, in __init__\n    self.server_bind()\n  File \"/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/server.py\", line 138, in server_bind\n    socketserver.TCPServer.server_bind(self)\n  File \"/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/socketserver.py\", line 466, in server_bind\n    self.socket.bind(self.server_address)\nPermissionError: [Errno 1] Operation not permitted\n",
+  "finishedUTC": "2026-11-16T05:24:38.273158+00:00"
+}

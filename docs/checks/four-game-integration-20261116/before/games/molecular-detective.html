@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="el">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#254c50">
+  <title>Μοριακός ντεντέκτιβ · Namelecule</title>
+  <link rel="stylesheet" href="../css/namelecule-name-builder.css?v=builder-methods-20261112-r3">
+  <link rel="stylesheet" href="../css/namelecule-molecular-detective.css?v=detective-20261115-r1">
+  <script src="../js/namelecule-molecular-detective-engine.js?v=alkane-pool-20261116-r1" defer></script>
+  <script src="../js/namelecule-molecular-detective.js?v=alkane-pool-20261116-r1" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#mission-title">Πήγαινε στην αποστολή</a>
+  <header class="site-header">
+    <a class="brand" href="../design/welcome-proposal.html" aria-label="Namelecule — Υποδοχή"><img src="../design/assets/namelecule-methane-v1.png" width="2172" height="724" alt="Namelecule"></a>
+    <a class="back-link" href="../design/welcome-proposal.html">Υποδοχή</a>
+  </header>
+  <main class="game detective-game" id="game">
+    <section class="intro" aria-labelledby="game-title">
+      <p class="eyebrow">ΠΑΙΧΝΙΔΙ ΟΝΟΜΑΤΟΛΟΓΙΑΣ</p>
+      <div class="detective-title">
+        <img class="detective-logo" src="assets/molecular-detective/molecular-detective-logo-molecule-v2.png" width="1254" height="1254" alt="" aria-hidden="true">
+        <h1 id="game-title">Μοριακός ντεντέκτιβ</h1>
+      </div>
+      <p class="objective">Διάβασε το όνομα. Βρες στον ανεπτυγμένο τύπο όσα δηλώνει το επισημασμένο συνθετικό.</p>
+      <p class="intro-detail">Παρατήρησε τα στοιχεία και ακολούθησε την αποστολή.</p>
+    </section>
+    <p id="game-status" class="game-status" role="status" aria-live="polite">Ετοιμάζουμε την πρώτη αποστολή.</p>
+    <div class="detective-round-tools">
+      <label for="molecule-select">Μόριο για εξάσκηση</label>
+      <select id="molecule-select" disabled></select>
+      <label for="mission-select">Αποστολή</label>
+      <select id="mission-select" disabled></select>
+      <button id="retry-load" class="secondary" type="button" hidden>Δοκίμασε ξανά</button>
+    </div>
+    <div class="detective-workspace">
+      <section class="panel detective-clue" aria-labelledby="mission-title">
+        <div class="panel-header"><h2 id="mission-title" tabindex="-1">Το στοιχείο στο όνομα</h2><span id="selection-kind" class="detective-kind">Περιμένουμε το στοιχείο</span></div>
+        <div class="detective-clue-content">
+          <p id="mission-name" class="detective-name" aria-label="Το όνομα της ένωσης">Φορτώνουμε το όνομα…</p>
+          <p id="mission-prompt" class="detective-prompt">Σε λίγο θα εμφανιστεί η αποστολή σου.</p>
+        </div>
+      </section>
+      <section class="panel molecule-panel detective-molecule" aria-labelledby="molecule-title">
+        <div class="panel-header"><h2 id="molecule-title">Η δομή στο επίκεντρο</h2><div class="zoom-controls" role="group" aria-label="Μέγεθος μοριακού σχεδίου"><button id="zoom-out" class="icon-button" type="button" aria-label="Σμίκρυνση μορίου" disabled>−</button><button id="zoom-in" class="icon-button" type="button" aria-label="Μεγέθυνση μορίου" disabled>+</button></div></div>
+        <div class="viewer-wrap" id="viewer-wrap" aria-busy="true">
+          <iframe id="molecule-viewer" title="Ανεπτυγμένος τύπος — επίλεξε τα στοιχεία της αποστολής" sandbox="allow-scripts allow-same-origin" referrerpolicy="same-origin"></iframe>
+          <div class="viewer-mask" id="viewer-mask"><p id="viewer-message">Φορτώνουμε τον ανεπτυγμένο τύπο.</p></div>
+        </div>
+        <p class="detective-view-note">Ανεπτυγμένος τύπος</p>
+      </section>
+      <section class="panel detective-answer" aria-label="Έλεγχος επιλογής">
+        <div class="detective-answer-content">
+          <p class="detective-help">Πάτησε για επιλογή. Πάτησε ξανά για αφαίρεση.</p>
+          <p id="selection-status" class="detective-selection-status" role="status" aria-live="polite">Δεν έχεις επιλέξει ακόμη κάτι.</p>
+          <div class="check-row"><button id="check-answer" class="primary" type="button" disabled>Έλεγχος</button><button id="clear-selection" class="secondary" type="button" disabled>Καθαρισμός επιλογής</button></div>
+          <div id="feedback" class="feedback" role="status" aria-live="polite" hidden></div>
+          <button id="next-mission" class="primary detective-next" type="button" hidden>Επόμενη αποστολή <span aria-hidden="true">→</span></button>
+        </div>
+      </section>
+    </div>
+    <noscript><p>Το παιχνίδι χρειάζεται JavaScript για να εμφανίσει και να ελέγξει την αποστολή.</p></noscript>
+  </main>
+  <footer class="site-footer">Namelecule · Μια εφαρμογή της πλατφόρμας MuLERMoCs</footer>
+</body>
+</html>

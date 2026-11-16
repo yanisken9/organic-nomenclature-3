@@ -1,0 +1,31 @@
+{
+  "recordedUTC": "2026-11-15T16:50:59.039473+00:00",
+  "agent": "/root/v57_chemistry_preflight",
+  "role": "Independent read-only Chemistry Validator, root transcription of returned report",
+  "viewerSHA256": "d4f400e7c3d254c6151cb2ddd307771d043d223d9588b862073bedd1f70f3e72",
+  "coreSHA256": "c41b722db2fb3748f827d19ee1f05d7d8f680bb9f51c664305baa7d49c132c7e",
+  "ownInMemoryAssertions": 115,
+  "findings": [],
+  "closed": [
+    "CV57-1",
+    "CV57-2"
+  ],
+  "checks": [
+    "strict bond-order/cache/reorder/source gates",
+    "Reordered explicit atom/H/bond bijections",
+    "OH/CHO target H, free H, non-target parent policy",
+    "Contributor-safe mirror removal both directions and atom/bond exclusivity",
+    "Unmapped armed H blocks reward",
+    "Charge/isotope/radical guards, parity/stereo/query refuse unsupported",
+    "Load completion/parse/live/current epoch ownership gates",
+    "Invalid endpoint/index/order/wrong-applet callback rejection"
+  ],
+  "correctedHarnessOnly": "One initial malformed-payload fixture accidentally named valid reordered OH bond; corrected oracle passed. No product change.",
+  "limits": [
+    "Actual functions in memory; DOM/applet/readiness controlled doubles",
+    "No independent browser, paint, scenario, physical optimizer or conference qualification",
+    "Stable equivalent-H pairing is supported source correspondence, not experimental atom identity/general stereochemistry"
+  ],
+  "writesByAgent": false,
+  "developerEvidenceNotIndependentlyExecuted": true
+}

@@ -1,0 +1,63 @@
+{
+  "recordedUTC": "2026-11-16T07:20:55.660Z",
+  "role": "Developer supplied evidence",
+  "passed": true,
+  "groups": [
+    "audited 5/4/5 mapping, unsupported IDs and immutable API",
+    "invalid pools, duplicate IDs and levels fail explicitly",
+    "exact context identities normalize deterministically and reject unknown or mixed metadata",
+    "seeded single-round bags exhaust then refill without immediate repeats",
+    "invalid deck inputs, seeds and avoided IDs fail explicitly",
+    "full14 views preserve canonical bytes, per-record values and independent identities",
+    "object-form full analyses project without mutating or dropping the retained group",
+    "missing, mixed, duplicate or forged source inputs reject before projection",
+    "unchanged generator accepts all three views with distinct band-correct triples",
+    "controls are unselected initially, expose counts and remain caller-driven",
+    "new JavaScript has no HTML interpolation and CSS stays within the component"
+  ],
+  "pinnedSourceSHA256": "2c4d9a95a77291f13c4a422644aefdae7f23448c2eed7b9d2ef4913da6de92b2",
+  "pinnedEngineSHA256": "3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306",
+  "analyses": 14,
+  "views": [
+    {
+      "level": 1,
+      "molecules": 14,
+      "viewRevision": "bb48fe6cbb689c2bad82cc15d47f53e49f4f021894183c6b228f97bf6902292f:alkanes-levels-v1:level-1",
+      "sourceSHA256": "2c4d9a95a77291f13c4a422644aefdae7f23448c2eed7b9d2ef4913da6de92b2"
+    },
+    {
+      "level": 2,
+      "molecules": 9,
+      "viewRevision": "bb48fe6cbb689c2bad82cc15d47f53e49f4f021894183c6b228f97bf6902292f:alkanes-levels-v1:level-2",
+      "sourceSHA256": "2c4d9a95a77291f13c4a422644aefdae7f23448c2eed7b9d2ef4913da6de92b2"
+    },
+    {
+      "level": 3,
+      "molecules": 10,
+      "viewRevision": "bb48fe6cbb689c2bad82cc15d47f53e49f4f021894183c6b228f97bf6902292f:alkanes-levels-v1:level-3",
+      "sourceSHA256": "2c4d9a95a77291f13c4a422644aefdae7f23448c2eed7b9d2ef4913da6de92b2"
+    }
+  ],
+  "generator": {
+    "unchangedSHA256": "118304488b6eaee651490785903080c419239df3f646988f79ae0e2548527611",
+    "seedsPerLevel": 3,
+    "setsGenerated": 18,
+    "compatibleTriplesChecked": 9
+  },
+  "files": {
+    "js/namelecule-game-levels.js": "3be269c6cdecc2158184db5f82269b44403c86be59e37adf7aa5e8e7edb72df5",
+    "css/namelecule-game-levels.css": "ef6a92b3b4bc3bc4ac92665ce15007176ac4795242e439b1b9c089948ce8cdec",
+    "js/namelecule-generated-repair-checkpoint.js": "f9bfb7fe3f9d3bfc4f158bf6aae27efc564af71fdc2de294fde048996889b913"
+  },
+  "scope": "Only common policy/UI module; no unlock rules or cross-triple Workshop history",
+  "seedContract": "createDeck fallback seed 0 is deterministic for helpers/tests; standalone hosts must supply fresh crypto seeds for fresh normal assignments.",
+  "sourceContract": "sourceSHA256 in the projection is descriptor metadata. Caller must verify full source bytes and chemistry first; this module does not hash or chemically validate them.",
+  "limits": [
+    "No browser/layout/focus/keyboard checks; DOM double checks component contracts only",
+    "No independent review executed by this worker",
+    "No host integration, lesson replay, migration, gate aggregation or scenario export checks"
+  ],
+  "coreChanged": false,
+  "commit": false,
+  "publication": false
+}

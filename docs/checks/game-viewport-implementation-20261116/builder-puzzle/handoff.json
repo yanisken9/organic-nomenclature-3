@@ -1,0 +1,87 @@
+{
+  "recordedUTC": "2026-11-16T08:50:36.527948+00:00",
+  "role": "Developer implementation handoff; independent review belongs to parent",
+  "baseCommit": "168e3cec01f941a84d40bbe0dc07156e7baa35d0",
+  "approvedPlan": "docs/GAME-VIEWPORT-PLAN-20261116.md",
+  "files": {
+    "games/name-builder.html": {
+      "sha256": "1094762820bd670d229d2e32b03280d83346ea7c155394e7d109f0549975efd6",
+      "beforeSHA256": "2851339aa6205f8f1c74b4e6021d420b67b0872cd8160e517e3c5bc9e728cfe5",
+      "status": "previously untracked working-tree source, modified this task"
+    },
+    "games/molecular-puzzle.html": {
+      "sha256": "3ecca10d2709fee71a65238518b1c10a01edbb3994b3b4d2ce60e79aef339b48",
+      "beforeSHA256": "59adddec99da0e53ff8ace74307a11dd1a522a25a7f122e92fc3a8dc292517b7",
+      "status": "previously untracked working-tree source, modified this task"
+    },
+    "js/namelecule-name-builder.js": {
+      "sha256": "d8b94cbde0743712c99ce256246498029bf70a37c764c489b1c23dcf14bbd98b",
+      "beforeSHA256": "6e82be550bf116d64c9965b980e8ca30da1edc7fe4086046e1d36a6e51c1fb05",
+      "status": "previously untracked working-tree source, modified this task"
+    },
+    "js/namelecule-molecular-puzzle.js": {
+      "sha256": "85353a8edf551dd8e7d525e9007fb796d898bd4d84d854ee4b16443fadf5d6b3",
+      "beforeSHA256": "8e0d9743c2ab079c5751b4d65d09e7e29c569264694469167e969bff3c1aebc7",
+      "status": "previously untracked working-tree source, modified this task"
+    },
+    "css/namelecule-name-builder.css": {
+      "sha256": "54a735a2615ebccd8704c05480ca355e2147f20c5811c4aa849476c41efc70ff",
+      "beforeSHA256": "6d6a4cf6a30b21757b26ebf1ab7df82aff79034afe4207cfda349ec76b383fde",
+      "status": "previously untracked working-tree source, modified this task"
+    },
+    "css/namelecule-molecular-puzzle.css": {
+      "sha256": "561ea01bb2f06c618853f8b74124baa254d328284fe61fe5be73766959c20e08",
+      "beforeSHA256": "5bf5dc0660060a8a06e1698956e9a434382bcd60e119197b0d08e54f942a68ea",
+      "status": "previously untracked working-tree source, modified this task"
+    }
+  },
+  "behavior": [
+    "Opt-in shared viewport/compact levels; older lesson parents keep natural height/reveal and no requirement for helper global.",
+    "Validated viewport messages compare existing channel/session/request/attempt/molecule/context and dimensions.",
+    "Builder desktop work area plus explicit compact composition/bank/molecule/name/help/feedback views; raw answer state persists on view changes.",
+    "Builder names remain single-line; answer, bank, complete candidate and feedback use explicit pager navigation. Outside release still returns tile; Delete and move controls preserved.",
+    "Puzzle board port pages retain readable node labels, all32 allowed pieces and existing SVG/pointer coordinate surface. Explicit64px vertical overlap gives complete labels on adjacent pages.",
+    "Puzzle compact board/pieces/tools/name/help/feedback views and standalone next action reuse existing button; controlled child next remains hidden.",
+    "Source MOL/hosts/nativeviewer/core/chemistry engines/JSON/storage contracts unchanged."
+  ],
+  "checks": {
+    "controllerFixture": "runtime-results.json (54 passed, helper absent/legacy full14/controller regression; not browser)",
+    "viewportContract": "viewport-contract-results.json (26 passed, actual extracted validators/opt-in source contracts; not browser)",
+    "initialChrome": "browser-084405/results.json (248 passed, isolated standalone4sizes, wrong/correct feedback, Builder outside-drop/Delete/longnames/forms/zoom, Puzzle32 center-hit access; before final visibility/overlap corrections)",
+    "targetedFinalChrome": "browser-084938/results.json (76 passed, final Puzzle full32 node rectangles at390x700 and390x650; initial narrow chooser/help/name/feedback replace board; methane no needless pages/correct; Builder molecule-only inspection)",
+    "syntax": "node --check both controllers passed on final files",
+    "whitespace": "git diff --check completed (untracked source is compared to saved before baseline for actual task diff)"
+  },
+  "findingsResolved": [
+    {
+      "id": "BP-P2-001",
+      "issue": "Shared vertical page overlap24px could split44px node label across both pages.",
+      "resolution": "Root added optional overlap; Puzzle requests64. Final full-rectangle coverage32/32 at700 and650 verified."
+    },
+    {
+      "id": "BP-P2-002",
+      "issue": "Puzzle opted base display:flex outranked stage hide selectors; residual board obstructed initial narrow level3. Builder molecule inspection answer hide also weaker.",
+      "resolution": "Explicit stronger opted-in selectors; direct narrow chooser, help/name/feedback replacement and Builder molecule-only width verified."
+    }
+  ],
+  "testHarnessCorrections": [
+    "Initial server bind denied in sandbox; rerun with reviewed escalation and owned process cleanup.",
+    "First full-rectangle targeted run discovered actual chooser visibility issue; preserved failure evidence browser-084808.",
+    "Next targeted run passed full32 rectangles700, then failed coordinate test using border box; test oracle corrected to actual SVG content box; final targeted pass retained."
+  ],
+  "remainingForParent": [
+    "Actual v57 lesson embedding/parent external footer and lesson transitions",
+    "Firefox and true browser zoom125/200%",
+    "Large multiline feedback/help paging in actual lesson budgets",
+    "Puzzle node/bond drag, keyboard, full correct branched graph after resize",
+    "Builder3D representation and all levels under opted helper in browser (full14 chemistry restoration already covered by fixture)"
+  ],
+  "cleanup": {
+    "allOwnedBrowsersExited": true,
+    "allOwnedTemporaryProfilesRemoved": true,
+    "allOwnedLoopbackServersClosed": true,
+    "exclusiveBrowserSlotReleasedToRoot": true
+  },
+  "coreChanged": false,
+  "commitPushPublish": false
+}

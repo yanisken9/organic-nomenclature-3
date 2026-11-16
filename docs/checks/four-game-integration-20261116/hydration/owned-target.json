@@ -1,0 +1,67 @@
+{
+  "recordedUTC": "2026-11-16T06:34:07.869584+00:00",
+  "status": "Owned4productpathsFROZEN; combinedrootreview/browserpending",
+  "agent": "/root/four_game_detective_canonical_host",
+  "baseCommit": "168e3cec01f941a84d40bbe0dc07156e7baa35d0",
+  "approvedPlan": "docs/FOUR-GAME-HYDRATION-ADDENDUM-20261116.md",
+  "userApproval": "Ναι, διόρθωσε την κοινή αρχικοποίηση",
+  "exactOwnedProductPaths": [
+    "js/mulermoc-nom-molview-55.js",
+    "js/mulermoc-nom-molview-56.js",
+    "js/mulermoc-nom-molview-57.js",
+    "games/name-builder-viewer.html"
+  ],
+  "beforeSHA256": {
+    "js/mulermoc-nom-molview-55.js": "2dfde418f2444cbd61cc61ae20c1ef451d970e60d1408c66942c472878269c8d",
+    "js/mulermoc-nom-molview-56.js": "e484618054e26d9cdd871ea340a57f400dc7db1e816de1917a332fd1c5c5d47e",
+    "js/mulermoc-nom-molview-57.js": "f26f0aae522c0ea5a034e97d1f8f486a4f5bb1ef715e59276f80d0760dca0941",
+    "games/name-builder-viewer.html": "2977d5b5f9a611eee579843ebbe2e76e638e4bab5678325cdab1e17c80a77be1"
+  },
+  "sha256": {
+    "js/mulermoc-nom-molview-55.js": "035e81d3d0ef1bc962a72a6092916f5078ac68a5a4e1ae75d471b5eba185c532",
+    "js/mulermoc-nom-molview-56.js": "b6ea87d2340cdeaaff10e79369a92657856474b53a24da1d90eb5818b53eeb06",
+    "js/mulermoc-nom-molview-57.js": "0f9096dd0f8197575362f489b570027991d48043cf658cab7f5618a494e76731",
+    "games/name-builder-viewer.html": "c0282a64d20794058690cd96b84aacfa8d1ad8ba679564536603242e9f8f6d81"
+  },
+  "sourceIsolationChecks": [
+    {
+      "path": "js/mulermoc-nom-molview-55.js",
+      "onlyFInitDataChanged": true,
+      "outsideFunctionSHA256": "68335a212195fb55cc07ef293584fe51f9150f9d97f9afe807de53369328b1ef",
+      "newFunctionSHA256": "2c4d1941f5894a084c74051d84bf60b24c0590b833199ce60a654e4ba978dbbf"
+    },
+    {
+      "path": "js/mulermoc-nom-molview-56.js",
+      "onlyFInitDataChanged": true,
+      "outsideFunctionSHA256": "ab34d490ca4dadbf5c5fbdf874c34571dbc1f5b1e780a802c66e06050a7e3c66",
+      "newFunctionSHA256": "2c4d1941f5894a084c74051d84bf60b24c0590b833199ce60a654e4ba978dbbf"
+    },
+    {
+      "path": "js/mulermoc-nom-molview-57.js",
+      "onlyFInitDataChanged": true,
+      "outsideFunctionSHA256": "f5472da506827dce05cf8c5d2eb5a29ab2b04963aee2ed3fa030f4bb6d3b20b7",
+      "newFunctionSHA256": "2c4d1941f5894a084c74051d84bf60b24c0590b833199ce60a654e4ba978dbbf"
+    },
+    {
+      "path": "games/name-builder-viewer.html",
+      "onlyNative55HashURLChanged": true
+    }
+  ],
+  "sameFunctionAcross3Versions": true,
+  "verification": {
+    "beforeReproductionAssertions": 372,
+    "fixedMemoryAssertions": 1539,
+    "all3NativeNodeSyntax": true,
+    "builderGeneratedAndCheck": true,
+    "absoluteProtocolAndRunDeadlineTests": 3,
+    "all13CoreHashesMatchSessionBaseline": true
+  },
+  "limitations": [
+    "No browser run since approvedsourcefix; Chrome/Firefoxandactual3D/scenario/games/resizechecksrootownedafternewfreeze.",
+    "Nativehydrationactualbodiesexecuteagainstactualbasecatalogandcuratedbundle; fixtureonlycustomown-keymergeblock,nofullclassificationorappstartupexecution.",
+    "FirefoxContinuestallseparate; hydrationfixnotclaimedtocureit."
+  ],
+  "coreChanges": false,
+  "commit": false,
+  "publication": false
+}

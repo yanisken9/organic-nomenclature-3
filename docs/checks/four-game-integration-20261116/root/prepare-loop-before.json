@@ -1,0 +1,14 @@
+{
+  "role": "Developer bounded actual API reproduction, not browser",
+  "earnedRegraded": true,
+  "canonicalAndAPIsAlreadyReady": true,
+  "warmPrepareReturnsPromiseEachTime": [
+    true,
+    true,
+    true,
+    true,
+    true
+  ],
+  "sourceCause": "Scenario navigation retries after preparation; unconditional new Promise prevents synchronous ready boundary",
+  "fixed": false
+}

@@ -1,0 +1,92 @@
+{
+  "recordedUTC": "2026-11-15T06:50:16.486456+00:00",
+  "status": "Approved prototype implemented, verified and independently reviewed locally",
+  "approvedPlan": "../molecular-detective-plan-20261115/plan.json",
+  "runtimeFiles": {
+    "games/molecular-detective.html": "e1cb6fd8871cbd227fa5beebb35d8ff02f3b998b70b04254ab319478732ef902",
+    "css/namelecule-molecular-detective.css": "9d556692f54e19872b04c74705fa03a27c0d9f573734f92f550b719789147d52",
+    "js/namelecule-molecular-detective.js": "3b8dba409435fd0e07259d6e7da3e207e34feb9749a7ee035f7087a6b27abd43",
+    "js/namelecule-molecular-detective-engine.js": "020340742102bf2ec5810975fe45b64ba642c3aa409c11b3f0359fb3801b26d6",
+    "js/namelecule-molecular-detective-host.js": "177e7fc961d44b23c28b9650ef15deead4377f692fa866eadb96daac892608c0",
+    "games/molecular-detective-viewer.html": "87cc4788612c173ee266e11457e7cf265f3da06f1d93791e93655a8db98f38ae",
+    "tools/build-molecular-detective-host.py": "0beacd21731ef4111001264332f1e1be34c532b98a38eb45692712bd33efa3f2",
+    "design/molecular-detective-preview.html": "ffbf5a05a49a0db30dfc1d6dfb4288116e9f4759d48ecdf7417be1b26403ec04"
+  },
+  "reviewTarget": "review-target.json",
+  "reviewTargetSHA256": "5fd6fccc00c470802263d753f076c5e5d3104ed69eea5e408bc6c8c0527c78dc",
+  "behavior": {
+    "molecules": 17,
+    "missions": 41,
+    "acceptedAlternatives": 49,
+    "flow": "Highlighted+underlined native name constituent, expanded2D user selections, explicit Check, editable incorrect attempt, explanatory success and Next",
+    "grading": "Exact unordered raw atom or bond-ID sets, separately accepted equivalent parents/branches; literalOH/CHO/CO/COOH",
+    "standalone": true,
+    "lessonLookPreview": true,
+    "actualLessonWelcomeIntegration": false,
+    "storedExistingGameProgressChanged": false
+  },
+  "verification": {
+    "engineDeveloperAssertions": 641,
+    "hostControlledFixtures": 34,
+    "independentChemistryAssertions": 945,
+    "independentReviewer": "independent-review.json, no actionableP0-P3 findings;641/34Developer-authoredtests independentlyexecutedreadonly",
+    "browserBroad": {
+      "path": "browser/run-acceptance-064420/acceptance.json",
+      "passedChecks": 260,
+      "acceptedAlternativesEarnedViaGenuinePointers": 49,
+      "all17ActualNativeGraphs": true,
+      "JSExceptions": 0,
+      "cutoff": "Run stopped at computed-font quote serialization in test oracle; all260checks retained, no app edits. Final tail verifies normalized contract."
+    },
+    "browserTail": {
+      "path": "browser/run-acceptance-tail-064649/acceptance-tail.json",
+      "completed": true,
+      "passedChecks": 13,
+      "JSExceptions": 0,
+      "coverage": "Typography parity withactualPuzzle,390pxtouch/320resize/clear/OHsuccess/storage/reload/lessonlookscroll+framing"
+    },
+    "browserRetry": {
+      "path": "browser/run-retry-064754/retry.json",
+      "completed": true,
+      "passedChecks": 6,
+      "JSExceptions": 0,
+      "coverage": "Controlled firstchild404, actual boundedtimeout/Retry/newsession/nativegraph/realcorrectselection"
+    },
+    "browserMethod": "Molecule/mission select controls changed viaDOMevents; answer selections usegenuineWebDriver pointer/touch actions onvisibleglyph/bondinteriors, no directselectionsetter. Browser evidence is Developer execution, not independentbrowser.",
+    "failedHarnesses": [
+      "OuterSVG instead of firstg coordinate transform",
+      "Lexical nameAnalysisMode read as Windowproperty",
+      "Quoted/unquoted computed-font serialization",
+      "Firefox BiDi ignoreCache argument unsupported; ordinaryreload thenpassed"
+    ],
+    "localPreview": "local-preview.json,8HTTP/SHA exact and nativeCUA activeUIobserved",
+    "testCleanup": "cleanup.json"
+  },
+  "preservation": {
+    "protectedPaths": 678,
+    "protectedHashesMatch": true,
+    "all12CoreHashesMatchGameUnitBaseline": true,
+    "sharedViewerMOL_SDF_scenarioJSON_oldGames": "Unchanged",
+    "HEAD": "168e3cec01f941a84d40bbe0dc07156e7baa35d0",
+    "indexSHA256": "caafccaca7019b42993bc27ec3834bbc90178430d217bf0c92439e6346f845db",
+    "HEADAndIndexUnchanged": true
+  },
+  "coreRecord": "No core changes in Detective implementation. Earlier same work session professor sync added core56 and preserved11oldcores, reported separately.",
+  "limits": [
+    "Initial17molecule scope, not all141 or general arbitrary names/locants",
+    "Full keyboard molecular picking not implemented; standard controls keyboard/nativeEscape covered",
+    "HeadlessFirefox viewport emulation, not physicalmobile/Safari/screenreader qualification",
+    "Inherited hiddenJSmol lifecycle/externalfonts/vendor dependencies remain;2Dreadinessindependentof3D",
+    "Known earlierJSmol localnew3Dreadback issue remains outside scope",
+    "No offline/conference/nativeFirefoxrecurrence-prevention guarantee",
+    "Prototype has no durable Detective progress or actual lessonunlock integration"
+  ],
+  "delivery": {
+    "standalone": "http://127.0.0.1:8013/games/molecular-detective.html",
+    "lessonLook": "http://127.0.0.1:8013/design/molecular-detective-preview.html",
+    "visibility": "Local machine only; interactive preview retained",
+    "publication": false,
+    "commit": false,
+    "push": false
+  }
+}

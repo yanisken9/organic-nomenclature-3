@@ -1,0 +1,49 @@
+{
+  "role": "Developer browser execution; not independent review",
+  "checks": [],
+  "routes": [],
+  "scope": "Welcome four game links, contain logos, 1500/1200/901/900/390 widths, tab order, dialogs, actual game readiness and return links",
+  "sourceBefore": {
+    "css/namelecule-molecular-detective.css": "446e2345bc1924252e150c746eccaaff56a4d0dc76afa8060f008366fdf542ad",
+    "css/namelecule-quiz-checkpoints.css": "ac06e26a2ff6c96da53df339652d8e64036b566d7fdcfb0b51a9dc564818eb90",
+    "design/welcome-proposal.html": "163b47464a90ba22602179121b212a4d6aa0f8f4c03ff10497d2dfb9a09d13f9",
+    "games/molecular-detective-viewer.html": "b7258b3de582cb2ce5bdf41f6725ef5ae7631ac0b38bb2c3464b7f6ef8828167",
+    "games/molecular-detective.html": "8d0ccded705b2924c9367acf88ff3c3a0a657be16ecd7a17bb6b5456cfd0af7e",
+    "js/namelecule-game-choice-checkpoint.js": "35cba6aa48c81276fb713116d30eec2c462e7eaf0568aa9749137181e6bcdf46",
+    "js/namelecule-molecular-detective-engine.js": "862dea9451cb6b337df251b4779562e7a33e414a3226ac81b1857a60bd645686",
+    "js/namelecule-molecular-detective-host.js": "42caa8ec6a3ab833661cfc16fb543fd2cc7e8b7b4b30e7b1cad941fd4a90b35f",
+    "js/namelecule-molecular-detective-lesson.js": "88f0344afa9ac782522c41ba4cdf67acd6e2ba9da0cbe3769e90131f5704e1c5",
+    "js/namelecule-molecular-detective.js": "a786158ea0480d683ba85b09a47d3e897922029d82cd112974c9978663a33775",
+    "mulermoc-nom-57.html": "205da07010632a490c00117033f8aadabb226408b0315ffd660ac430afaecedd",
+    "scenarios/alkanes-user-3.scenario.json": "2f3832588e84e9a56e629b27df7de2d1fcf1bad1e0ec78e7fb0ce6b7bed81df5"
+  },
+  "manifest": "docs/checks/four-game-integration-20261116/verification-target.json",
+  "manifestSHA256": "7ec082d67efb81784a2e4c78f349d1004e23c986cb59ab5b2779ad500aeab7c6",
+  "harnessSHA256": "c55bd8c6db406189ce239335a7d2a67bd37719a166bb5f843fa829e9c5b590fd",
+  "limits": [
+    "Isolated headless Firefox with CSS viewport emulation; physical mobile/personal Firefox/conference/offline reliability unqualified.",
+    "Actual game answer replays belong to the parent integration suite.",
+    "JSmol j2s/fonts/remote services remain external dependencies."
+  ],
+  "failure": "Traceback (most recent call last):\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/four-game-integration-20261116/welcome-scenario/replay-welcome.py\", line 60, in <module>\n    server=http.server.ThreadingHTTPServer(('127.0.0.1',0),Handler);threading.Thread(target=server.serve_forever,daemon=True).start()\n  File \"/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/socketserver.py\", line 452, in __init__\n    self.server_bind()\n  File \"/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/server.py\", line 138, in server_bind\n    socketserver.TCPServer.server_bind(self)\n  File \"/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/socketserver.py\", line 466, in server_bind\n    self.socket.bind(self.server_address)\nPermissionError: [Errno 1] Operation not permitted\n",
+  "failureCaptureError": "NameError(\"name 'ev' is not defined\")",
+  "javascriptErrors": [],
+  "diagnostics": [],
+  "sourceAfter": {
+    "css/namelecule-molecular-detective.css": "446e2345bc1924252e150c746eccaaff56a4d0dc76afa8060f008366fdf542ad",
+    "css/namelecule-quiz-checkpoints.css": "ac06e26a2ff6c96da53df339652d8e64036b566d7fdcfb0b51a9dc564818eb90",
+    "design/welcome-proposal.html": "163b47464a90ba22602179121b212a4d6aa0f8f4c03ff10497d2dfb9a09d13f9",
+    "games/molecular-detective-viewer.html": "b7258b3de582cb2ce5bdf41f6725ef5ae7631ac0b38bb2c3464b7f6ef8828167",
+    "games/molecular-detective.html": "8d0ccded705b2924c9367acf88ff3c3a0a657be16ecd7a17bb6b5456cfd0af7e",
+    "js/namelecule-game-choice-checkpoint.js": "35cba6aa48c81276fb713116d30eec2c462e7eaf0568aa9749137181e6bcdf46",
+    "js/namelecule-molecular-detective-engine.js": "862dea9451cb6b337df251b4779562e7a33e414a3226ac81b1857a60bd645686",
+    "js/namelecule-molecular-detective-host.js": "42caa8ec6a3ab833661cfc16fb543fd2cc7e8b7b4b30e7b1cad941fd4a90b35f",
+    "js/namelecule-molecular-detective-lesson.js": "88f0344afa9ac782522c41ba4cdf67acd6e2ba9da0cbe3769e90131f5704e1c5",
+    "js/namelecule-molecular-detective.js": "a786158ea0480d683ba85b09a47d3e897922029d82cd112974c9978663a33775",
+    "mulermoc-nom-57.html": "205da07010632a490c00117033f8aadabb226408b0315ffd660ac430afaecedd",
+    "scenarios/alkanes-user-3.scenario.json": "2f3832588e84e9a56e629b27df7de2d1fcf1bad1e0ec78e7fb0ce6b7bed81df5"
+  },
+  "sourceUnchangedDuringRun": true,
+  "ownedBrowserExited": true,
+  "ownedServerClosed": true
+}

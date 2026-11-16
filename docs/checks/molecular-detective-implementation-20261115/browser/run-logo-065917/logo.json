@@ -1,0 +1,40 @@
+{
+  "completed": true,
+  "checks": [
+    {
+      "label": "New molecule logo loaded in actual standalone game",
+      "detail": {
+        "src": "http://127.0.0.1:55575/games/assets/molecular-detective/molecular-detective-logo-molecule-v2.png",
+        "loaded": true,
+        "width": 1254,
+        "height": 1254,
+        "displayWidth": 88,
+        "displayHeight": 88
+      }
+    },
+    {
+      "label": "Existing desktop logo size retained",
+      "detail": null
+    },
+    {
+      "label": "Lesson-look preview uses same new logo",
+      "detail": null
+    },
+    {
+      "label": "New logo mobile framing unchanged",
+      "detail": null
+    },
+    {
+      "label": "No captured JavaScript exceptions",
+      "detail": []
+    }
+  ],
+  "role": "Developer actual headless Firefox, viewport emulation; not independent browser review",
+  "limits": [
+    "No personal/GUI Firefox or physical device test",
+    "No offline/conference/uninterrupted-operation claim",
+    "External font/vendor dependencies retained"
+  ],
+  "javascriptErrors": [],
+  "diagnostics": []
+}

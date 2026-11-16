@@ -1,0 +1,273 @@
+BEFORE:
+therMiss' : 'submitNo3DAll', further ?
+      'Further round produced no valid result — kept the previous 3D structure.' : 'No graph-matched 3D model.'));
+    fMolDraftRenderPreview(); fMolDraftSyncBar();
+    return;
+  }
+
+LOCAL:
+  var source = result && result.sdf ? 'jsmol-min' : 'jsmol-unminimized';
+  // This is a preview, not consent to persist it. Accept asks once for the
+  // exact provisional conformation; there is no second save-OK dialog.
+  if (!fMolDraftSet3D(d, best, source, null)) return;
+  fMolDraft3DJob = null;
+  fMolDraftShow3D(best);
+  fMolDraftToast(fMolDraftT('draftMinProvisionalDone', 'Provisional 3D preview; geometry and convergence are unverified.'));
+  fMolDraftRenderPreview(); fMolDraftSyncBar();
+}
+function fMolDraftRemote3DFromJSmol(smiles, expectHeavy, job) {
+  if (!smiles || !fMolDraft3DCurrent(job) || (typeof navigator !== 'undefined' && navigator.onLine === false)) return null;
+  // Reject script delimiters; the MOL/SMILES input is chemical data.
+  if (/[\r\n";]/.test(smiles)) return null;
+  var quoted = String(smiles).replace(/\\/g, '\\\\');
+  if (fMolDraft3DWrite(job, 'zap;', true) === null) return null;
+  if (fMolDraft3DWrite(job, 'load "$' + quoted + '"', true) === null) return null;
+  return fMolDraftReadBackSDF(expectHeavy, job);
+}
+async function fMolDraftFetchSDF3DTiered(smiles, molText, expectHeavy, isCurrent) {
+  var job = fMolDraft3DBegin(isCurrent);
+  var empty = { sdf:null, source:null };
+  if (!job) return empty;
+  var offline = typeof navigator !== 'undefined' && navigator.onLine === false;
+  if (!offline) {
+    var sdf = null;
+    try { if (typeof fFetchSDF3D_PubChem === 'function') sdf = await fFetchSDF3D_PubChem(smiles); } catch (e) {}
+    if (!fMolDraft3DCurrent(job)) return empty;
+    if (fMolDraftValidSDF3D(sdf, expectHeavy, molText)) { fMolDraft3DJob = null; return { sdf:sdf, source:'pubchem' }; }
+    var remote = null;
+    if (!window.MULER_SKIP_REMOTE3D) {
+      try { remote = fMolDraftRemote3DFromJSmol(smiles, expectHeavy, job); } catch (eR) {}
+    }
+    if (!fMolDraft3DCurrent(job)) return empty;
+    if (fMolDraftValidSDF3D(remote, expectHeavy, molText)) { fMolDraft3DJob = null; return { sdf:remote, source:'remote' }; }
+  }
+  var local = null;
+  try { local = await fMolDraftLocal3DFromMol(molText, expectHeavy, false, job); } catch (eL) {}
+  if (!fMolDraft3DCurrent(job)) return empty;
+  fMolDraftMinWaitClose(job);
+  fMolDraft3DJob = null;
+  return local && fMolDraftValidSDF3D(local.sdf, expectHeavy, molText) ? { sdf:local.sdf, source:'jsmol-min' } : empty;
+
+UPSTREAM:
+  var _storeBest = function () {
+    try {
+      if (!window.MulerDraft || window.MulerDraft !== d || d._epoch !== _e || d._submitId !== _s || d.smiles !== _sm) return;
+      if (!_best) {
+        // Further-round miss = no valid result this round (with no gate,
+        // stillness banks — only an invalid read misses): keep the previous
+        // minimized geometry, never null it. Fresh-run miss keeps 2D-only.
+        try { fMolDraftToast(fMolDraftT(_further ? "draftMinFurtherMiss" : "submitNo3DAll", _further ? "Further round produced no valid result — kept the previous 3D structure." : "No 3D model (PubChem/Cactus/local minimize) — 2D only.")); } catch (eT) {}
+        try { fMolDraftRenderPreview(); } catch (eR0) {}
+        try { if (typeof fMolDraftSyncBar === "function") fMolDraftSyncBar(); } catch (eSy0) {}
+        return;
+      }
+      d.sdf3D = _best;
+      d.sdf3DSource = _bestSrc || "jsmol-unminimized";
+      try { if (typeof fMolDraftShow3D === "function") fMolDraftShow3D(_best); } catch (eS3) {}
+      if (!_bestLive) {
+        try { fMolDraftToast(fMolDraftT("draftMinDone", "3D minimized locally — review the model, then Accept.")); } catch (eTd) {}
+      } else {
+        try { fMolDraftToast(fMolDraftT("draftMinUnminDone", "Unoptimized 3D saved — review it, then Accept.")); } catch (eTd2) {}
+      }
+      try { fMolDraftRenderPreview(); } catch (eR2) {}
+      try { if (typeof fMolDraftSyncBar === "function") fMolDraftSyncBar(); } catch (eSy3) {}
+    } catch (eCb) {}
+  };
+  // No save dialog (removed v55.x): Accept itself is the author's explicit
+  // confirmation, and the preview row labels the provenance. Store directly.
+  try { _storeBest(); } catch (eDg) {}
+  } catch (eOuter) {}
+  })();
+}
+
+// Shared JSmol remote-load core: zap, then one blocking `load` command, then
+// `write MOL` read-back (fMolDraftReadBackSDF, v55.8+: sole live-model
+// serializer). Null on any gap (offline, unknown identifier, JSmol dead).
+// `loadCmd` is the full JSmol command WITHOUT trailing semicolon.
+function fMolDraftJSmolLoadAndReadBack(loadCmd, expectHeavy, isCurrent) {
+  try {
+    if (!loadCmd) return null;
+    if (typeof navigator !== "undefined" && navigator.onLine === false) return null;
+    if (typeof jmolAppletNomeclature === "undefined" || !jmolAppletNomeclature) return null;
+    if (typeof fJSmolLive === "function" && !fJSmolLive()) return null;
+    if (typeof fJSmolScriptWait !== "function" && typeof fJSmolScript !== "function") return null;
+    if (isCurrent && !isCurrent()) return null;
+    // zap first: a plain `load` can append frames, and stale frames corrupt
+    // the read-back battery below (v55.5 lesson from `load data`).
+    try {
+      if (typeof fJSmolScriptWait === "function") { if (fJSmolScriptWait(jmolAppletNomeclature, "zap;") === null) return null; }
+      else if (typeof fJSmolScript === "function") fJSmolScript(jmolAppletNomeclature, "zap;");
+      else return null;
+    } catch (eZ) {}
+    if (isCurrent && !isCurrent()) return null;
+    var r = null;
+    try {
+      if (typeof fJSmolScriptWait === "function") r = fJSmolScriptWait(jmolAppletNomeclature, loadCmd);
+      else r = fJSmolScript(jmolAppletNomeclature, loadCmd);
+    } catch (eL) { return null; }
+    if (r === null) return null; // wrapper fail-closed (JSmol not live)
+    if (isCurrent && !isCurrent()) return null;
+    try {
+      if (typeof fMolDraftReadBackSDF === "function") return fMolDraftReadBackSDF(expectHeavy) || null;
+    } catch (eRb) {}
+    return null;
+  } catch (eR) { return null; }
+}
+
+// Tier-1 PubChem 3D via JSmol `load :smiles:` / `load :cid:` (v55.x): JSmol
+// resolves `:` itself through its configured server proxy (CDN jsmol.php;
+// same proxy mechanism as the `$` tier below) — no page-side fetch, hence no
+// CORS wall. `:` is PubChem (strict lookup: 404-equivalent when no record /
+// no 3D conformer); this is the strict-conformer tier and stays first.
+// `by` is "cid" (digits only, preferred — no SMILES quoting, exact compound)
+// or "smiles" (default). scriptWait blocks until the model lands; the SDF
+// text is read back via `write MOL` (fMolDraftReadBackSDF, v55.8+).
+// Null on any gap (offline, PubChem miss, JSmol dead).
+function fMolDraftPubChem3DFromJSmol(query, expectHeavy, isCurrent, by) {
+  try {
+    if (!query) return null;
+    var cmd = null;
+    if (by === "cid") {
+      var cid = String(query).trim();
+      if (!/^\d+$/.test(cid)) return null;
+      cmd = 'load ":cid:' + cid + '"';
+    } else {
+      // Script-quote the SMILES (parens/slashes/backslashes are all legal in
+      // SMILES but special to the Jmol script parser).
+      var q = String(query).replace(/\\/g, "\\\\").replace(/"/g, "'");
+      if (!q) return null;
+      cmd = 'load ":smiles:' + q + '"';
+    }
+    if (typeof fMolDraftJSmolLoadAndReadBack === "function") return fMolDraftJSmolLoadAndReadBack(cmd, expectHeavy, isCurrent) || null;
+    return null;
+  } catch (eR) { return null; }
+}
+
+// Tier-2 remote 3D via JSmol `load $SMILES` (v55.1): `$` is NCI/CADD Cactus
+// (NOT PubChem) — it GENERATES 3D from SMILES, so novel drawings with no
+// PubChem record can still get a model here. JSmol resolves `$` itself
+// through its configured server proxy (CDN jsmol.php, and verified working
+// with local JSmol files too) — no page-side fetch, hence no CORS wall like
+// the retired direct Cactus fetch. scriptWait blocks until the remote model
+// lands; the SDF text is read back via `write MOL`
+// (fMolDraftReadBackSDF, v55.8+).
+// Null on any gap (offline, unknown SMILES, JSmol dead).
+function fMolDraftRemote3DFromJSmol(smiles, expectHeavy, isCurrent) {
+  try {
+    if (!smiles) return null;
+    // Script-quote the SMILES (parens/slashes/backslashes are all legal in
+    // SMILES but special to the Jmol script parser).
+    var q = String(smiles).replace(/\\/g, "\\\\").replace(/"/g, "'");
+    if (!q) return null;
+    if (typeof fMolDraftJSmolLoadAndReadBack === "function") return fMolDraftJSmolLoadAndReadBack('load "$' + q + '"', expectHeavy, isCurrent) || null;
+    return null;
+  } catch (eR) { return null; }
+}
+
+// Tiered resolver: returns {sdf, source} with source in
+// pubchem-jsmol|pubchem-fetch|remote|jsmol-min|null ("remote" = NCI/Cactus
+// `$SMILES`, NOT PubChem; bare "pubchem" is the pre-split legacy value and
+// still renders as generic "3D: PubChem").
+// Sequential, fail-soft; every tier validated (heavy count + non-flat).
+// Order: JSmol `:cid:`/`:smiles:` (PubChem, no page CORS) → page-side PUG
+// fetch (same PubChem data, covers applet-dead/proxy-blocked cases) → JSmol
+// `$SMILES` (Cactus, generates 3D even without a PubChem record) → local
+// minimize (offline). Guards (epoch/submitId/smiles) checked by the caller
+// after each await via the isCurrent callback. opts = {cid, canonicalSmiles}
+// (both optional; CID preferred for the `:cid:` form, canonical SMILES
+// preferred over drawing SMILES for `:smiles:`).
+async function fMolDraftFetchSDF3DTiered(smiles, molText, expectHeavy, isCurrent, opts) {
+  var offline = false;
+  try { offline = (typeof navigator !== "undefined" && navigator.onLine === false); } catch (eO) {}
+  var sdf = null;
+  var o = opts || {};
+  var cid = null, canon = null;
+  try { cid = o.cid != null ? String(o.cid).trim() : null; if (cid && !/^\d+$/.test(cid)) cid = null; } catch (eC0) { cid = null; }
+  try { canon = o.canonicalSmiles ? String(o.canonicalSmiles) : null; if (canon && !canon.trim()) canon = null; } catch (eC1) { canon = null; }
+  var smiForPubchem = canon || smiles;
+  var skipRemote = false;
+  try { skipRemote = !!(typeof window !== "undefined" && window.MULER_SKIP_REMOTE3D); } catch (eSk0) {}
+  // Console test hook (v55.2): `window.MULER_SKIP_REMOTE3D = true` skips all
+  // network tiers (JSmol `:`, page fetch, JSmol `$`) so tier 3 (local minimize)
+  // can be checked online. Vanishes on reload — nothing to revert.
+  if (!offline && !skipRemote) {
+    try {
+      // Tier 1: JSmol PubChem (`:`) — CID form first (exact compound, no SMILES
+      // quoting), then canonical SMILES, then drawing SMILES.
+      if (typeof fMolDraftPubChem3DFromJSmol === "function") {
+        var _pq = null;
+        if (cid) {
+          try { _pq = fMolDraftPubChem3DFromJSmol(cid, expectHeavy, isCurrent, "cid") || null; } catch (eP0) { _pq = null; }
+        }
+        if (!_pq && smiForPubchem && smiForPubchem !== cid) {
+          try { _pq = fMolDraftPubChem3DFromJSmol(smiForPubchem, expectHeavy, isCurrent, "smiles") || null; } catch (eP1) { _pq = null; }
+        }
+        if (_pq && (!isCurrent || isCurrent())) return { sdf: _pq, source: "pubchem-jsmol" };
+      }
+    } catch (eT1) { sdf = null; }
+  }
+  if (!offline && !skipRemote) {
+    try {
+      // Tier 1b: page-side PUG fetch — same PubChem `record_type=3d` data as
+      // tier 1, kept as fallback for applet-dead / proxy-blocked cases (and
+      // for headless verification where no applet exists).
+      if (typeof fFetchSDF3D_PubChem === "function") {
+        try { sdf = await fFetchSDF3D_PubChem(smiles); } catch (eP) { sdf = null; }
+      }
+      if (sdf && (!isCurrent || isCurrent())) {
+        if (typeof fMolDraftValidSDF3D === "function" && !fMolDraftValidSDF3D(sdf, expectHeavy)) sdf = null;
+        else return { sdf: sdf, source: "pubchem-fetch" };
+      } else sdf = null;
+      try { /* console.log("[SDF-3D] tier pubchem-fetch: " + (sdf ? sdf.length + " chars" : "miss")); */ } catch (eLgP) {}
+    } catch (eT1b) { sdf = null; }
+  }
+  if (!offline && !skipRemote) {
+    try {
+      // Tier 2: JSmol Cactus (`$`, NCI — generates 3D even with no PubChem
+      // record, so novel drawings can still get a model here).
+      var rem = null;
+      if (typeof fMolDraftRemote3DFromJSmol === "function") {
+        try { rem = fMolDraftRemote3DFromJSmol(smiles, expectHeavy, isCurrent) || null; } catch (eC) { rem = null; }
+      }
+      if (rem && (!isCurrent || isCurrent())) return { sdf: rem, source: "remote" };
+      try { /* console.log("[SDF-3D] tier cactus: " + (rem ? rem.length + " chars" : "miss")); */ } catch (eLgR) {}
+      sdf = null;
+    } catch (eT2) { sdf = null; }
+  }
+  try {
+    try {
+      if ((!isCurrent || isCurrent())) {
+        var _stMin = document.getElementById("molDraftStatus");
+        if (_stMin) _stMin.textContent = fMolDraftT("draftMinimizing", "Minimizing 3D… please wait.");
+        // NOTE: no minimize-STOP here — proven poison (v55.x): sending STOP
+        // to the idle applet breaks the following inline load. Cancellation
+        // halts the engine via the abort path instead.
+        // Flat 3D first: the viewer shows the honest starting point from
+        // second zero instead of sitting on the old state for ~10 s.
+        try { if (typeof fMolDraftShowFlat3D === "function") fMolDraftShowFlat3D(); } catch (eF3min) {}
+        // Blocking wait window, budgeted by system size (Cancel aborts via
+        // _submitId invalidation).
+        var _wsT = MOLMIN_WAIT_S;
+        try { if (typeof fMolDraftMinWaitSecs === "function") _wsT = fMolDraftMinWaitSecs(expectHeavy) || MOLMIN_WAIT_S; } catch (eWst) {}
+        try { if (typeof fMolDraftMinWaitShow === "function") fMolDraftMinWaitShow(fMolDraftMinWaitAbort, _wsT); } catch (eWmin) {}
+      }
+    } catch (eStMin) {}
+    if ((!isCurrent || isCurrent()) && typeof fMolDraftLocal3DFromMol === "function") {
+      var _lr = null;
+      try { _lr = await fMolDraftLocal3DFromMol(molText, expectHeavy) || null; } catch (eT3b) { _lr = null; }
+      try { if (typeof fMolDraftMinWaitClose === "function") fMolDraftMinWaitClose(); } catch (eWc) {}
+      var loc = (_lr && _lr.sdf) || null;
+      if (loc && (!isCurrent || isCurrent())) return { sdf: loc, source: "jsmol-min" };
+      try { /* console.log("[SDF-3D] tier local-min: " + (loc ? loc.length + " chars" : "miss")); */ } catch (eLgL) {}
+    }
+  } catch (eT3) { try { if (typeof fMolDraftMinWaitClose === "function") fMolDraftMinWaitClose(); } catch (eWc2) {} }
+  return { sdf: null, source: null };
+
+AFTER:
+}
+
+function fMolDraftShow3D(sdf) {
+  try {
+    var b3 = document.getElementById("view3DBtn");
+    if (b3 && !b3.classList.contains("active") && typeof fToggleViewer3D === "function") {
+      fToggleVi

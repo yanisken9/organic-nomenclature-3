@@ -1,0 +1,416 @@
+{
+  "completed": true,
+  "checks": [
+    {
+      "label": "Cold57 model ownership gate and native selection entry ready",
+      "detail": {
+        "m": {
+          "id": 2,
+          "source": "[\"ethanol\",\"mols/nomeclature-moc2/ethanol_3D.sdf\",null]",
+          "revision": 2,
+          "completed": true,
+          "parsed": {
+            "source": "[\"ethanol\",\"mols/nomeclature-moc2/ethanol_3D.sdf\",null]",
+            "text": "702\n  -OEChem-04102412063D\n\n  9  8  0     0  0  0  0  0  0999 V2000\n   -1.1712    0.2997    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.0463   -0.5665    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.2175    0.2668    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.0958   -1.2120    0.8819 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.0952   -1.1938   -0.8946 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.1050   -0.3720   -0.0177 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.2426    0.9307   -0.8704 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.2616    0.9052    0.8886 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.1291    0.8364    0.8099 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0  0  0  0\n  1  9  1  0  0  0  0\n  2  3  1  0  0  0  0\n  2  4  1  0  0  0  0\n  2  5  1  0  0  0  0\n  3  6  1  0  0  0  0\n  3  7  1  0  0  0  0\n  3  8  1  0  0  0  0\nM  END\n> <PUBCHEM_COMPOUND_CID>\n702\n\n> <PUBCHEM_CONFORMER_RMSD>\n0.4\n\n> <PUBCHEM_CONFORMER_DIVERSEORDER>\n1\n\n> <PUBCHEM_MMFF94_PARTIAL_CHARGES>\n3\n1 -0.68\n2 0.28\n9 0.4\n\n> <PUBCHEM_EFFECTIVE_ROTOR_COUNT>\n0\n\n> <PUBCHEM_PHARMACOPHORE_FEATURES>\n2\n1 1 acceptor\n1 1 donor\n\n> <PUBCHEM_HEAVY_ATOM_COUNT>\n3\n\n> <PUBCHEM_ATOM_DEF_STEREO_COUNT>\n0\n\n> <PUBCHEM_ATOM_UDEF_STEREO_COUNT>\n0\n\n> <PUBCHEM_BOND_DEF_STEREO_COUNT>\n0\n\n> <PUBCHEM_BOND_UDEF_STEREO_COUNT>\n0\n\n> <PUBCHEM_ISOTOPIC_ATOM_COUNT>\n0\n\n> <PUBCHEM_COMPONENT_COUNT>\n1\n\n> <PUBCHEM_CACTVS_TAUTO_COUNT>\n1\n\n> <PUBCHEM_CONFORMER_ID>\n000002BE00000001\n\n> <PUBCHEM_MMFF94_ENERGY>\n-1.3096\n\n> <PUBCHEM_FEATURE_SELFOVERLAP>\n10.148\n\n> <PUBCHEM_SHAPE_FINGERPRINT>\n139733 1 18410856563987595332\n21015797 1 18192151726869919494\n\n> <PUBCHEM_SHAPE_MULTIPOLES>\n55.87\n1.48\n0.75\n0.58\n0.08\n0.07\n0\n-0.26\n0\n-0.01\n0\n0.04\n0.01\n0\n\n> <PUBCHEM_SHAPE_SELFOVERLAP>\n84.621\n\n> <PUBCHEM_SHAPE_VOLUME>\n41.5\n\n> <PUBCHEM_COORDINATE_TYPE>\n2\n5\n10\n\n$$$$\n"
+          },
+          "liveValidated": true,
+          "picking": "set pickCallback \"__mulerPickCb_2\"; set picking atom; set bondPicking true;",
+          "pickCallback": "__mulerPickCb_2",
+          "keys": [
+            "id",
+            "source",
+            "mol",
+            "applet",
+            "revision",
+            "completed",
+            "parsed",
+            "liveValidated",
+            "picking",
+            "pickCallback"
+          ]
+        },
+        "parsed": [
+          "source",
+          "text"
+        ],
+        "ready": true,
+        "sel": {
+          "active": true,
+          "molKey": "ethanol|expanded",
+          "atoms2D": [],
+          "bonds2D": [],
+          "atoms3D": [],
+          "bonds3D": [],
+          "groups": [],
+          "molName": "ethanol",
+          "_contributors": {
+            "key": "ethanol|expanded:",
+            "a2": [],
+            "b2": [],
+            "a3": [],
+            "b3": [],
+            "snapshot": "[[],[],[],[]]"
+          }
+        },
+        "model": {
+          "canSkipLoad": true,
+          "isTainted": false,
+          "modelCount": 1,
+          "modelCountSelected": 1,
+          "modelIndex": 0,
+          "modelSetHasVibrationVectors": false,
+          "modelSetName": "702",
+          "modelSetProperties": {
+            "PATH_KEY": ".PATH",
+            "PATH_SEPARATOR": "/"
+          },
+          "models": [
+            {
+              "_ipt": 0,
+              "atomCount": 9,
+              "bondCount": 8,
+              "chainCount": 1,
+              "file": "http://127.0.0.1:51095/mols/nomeclature-moc2/ethanol_3D.sdf",
+              "file_model": "1.1",
+              "groupCount": 1,
+              "moleculeCount": 1,
+              "name": "702",
+              "num": 1,
+              "title": "702",
+              "vibrationVectors": false
+            }
+          ],
+          "modelsSelected": [
+            0
+          ]
+        }
+      }
+    },
+    {
+      "label": "Genuine3D O maps to2D O",
+      "detail": {
+        "a2": [
+          3
+        ],
+        "a3": [
+          1
+        ],
+        "b2": [],
+        "b3": [],
+        "target": null
+      }
+    },
+    {
+      "label": "Genuine3D O retoggle removes both",
+      "detail": null
+    },
+    {
+      "label": "Free OH hydrogen stays individual in both viewers",
+      "detail": {
+        "a2": [
+          9
+        ],
+        "a3": [
+          9
+        ],
+        "b2": [],
+        "b3": [],
+        "target": null
+      }
+    },
+    {
+      "label": "Genuine2D O maps to3D O",
+      "detail": null
+    },
+    {
+      "label": "3D deselection removes2D-origin membership",
+      "detail": null
+    },
+    {
+      "label": "Genuine projected C-C bond midpoint uses actual bond callback",
+      "detail": {
+        "a2": [],
+        "a3": [],
+        "b2": [
+          1
+        ],
+        "b3": [
+          3
+        ],
+        "target": null
+      }
+    },
+    {
+      "label": "Genuine3D bond retoggle clears both",
+      "detail": null
+    },
+    {
+      "label": "Single3D background click preserves selection",
+      "detail": null
+    },
+    {
+      "label": "Double3D background tap clears both",
+      "detail": null
+    },
+    {
+      "label": "Native OH mission explicitly targets O and H",
+      "detail": null
+    },
+    {
+      "label": "Partial3D OH selection stays armed",
+      "detail": null
+    },
+    {
+      "label": "Genuine3D explicit OH H completes native functional-group reward",
+      "detail": null
+    },
+    {
+      "label": "Secondary hetero-prefix has exact target: hydroxypropanoic_acid_2",
+      "detail": [
+        {
+          "id": 5,
+          "el": "O"
+        }
+      ]
+    },
+    {
+      "label": "Actual2D hetero-prefix picks earn native reward: hydroxypropanoic_acid_2",
+      "detail": null
+    },
+    {
+      "label": "Secondary hetero-prefix has exact target: aminobutanoic_acid_3",
+      "detail": [
+        {
+          "id": 9,
+          "el": "N"
+        }
+      ]
+    },
+    {
+      "label": "Actual2D hetero-prefix picks earn native reward: aminobutanoic_acid_3",
+      "detail": null
+    },
+    {
+      "label": "Secondary hetero-prefix has exact target: Oxopropanoic_acid",
+      "detail": [
+        {
+          "id": 1,
+          "el": "C"
+        },
+        {
+          "id": 2,
+          "el": "C"
+        },
+        {
+          "id": 3,
+          "el": "C"
+        },
+        {
+          "id": 5,
+          "el": "O"
+        }
+      ]
+    },
+    {
+      "label": "Actual2D hetero-prefix picks earn native reward: Oxopropanoic_acid",
+      "detail": null
+    },
+    {
+      "label": "Multiple3D H/C contributors share correct parent membership",
+      "detail": {
+        "a2": [
+          1
+        ],
+        "a3": [
+          1,
+          3,
+          4
+        ],
+        "b2": [],
+        "b3": [],
+        "target": "compCarbonsCount"
+      }
+    },
+    {
+      "label": "Removing one H contributor keeps other parent contributors",
+      "detail": {
+        "a2": [
+          1
+        ],
+        "a3": [
+          1,
+          4
+        ],
+        "b2": [],
+        "b3": [],
+        "target": "compCarbonsCount"
+      }
+    },
+    {
+      "label": "Removing C retains H-origin parent membership",
+      "detail": {
+        "a2": [
+          1
+        ],
+        "a3": [
+          4
+        ],
+        "b2": [],
+        "b3": [],
+        "target": "compCarbonsCount"
+      }
+    },
+    {
+      "label": "Removing last H clears parent without orphan",
+      "detail": null
+    },
+    {
+      "label": "Molecule change clears prior selection and contributions",
+      "detail": null
+    },
+    {
+      "label": "Old actual callback closure and load token cannot affect new molecule",
+      "detail": null
+    },
+    {
+      "label": "Real completed JSmol model cannot arm before delayed current parser acknowledgement",
+      "detail": null
+    },
+    {
+      "label": "Releasing exact delayed source opens ownership gate",
+      "detail": null
+    },
+    {
+      "label": "Current parsed SDF cannot arm against prior visible model before real load tail",
+      "detail": null
+    },
+    {
+      "label": "Real released load completion restores ready picking",
+      "detail": null
+    },
+    {
+      "label": "Unavailable3D file fails closed while2D remains usable",
+      "detail": {
+        "m": {
+          "id": 11,
+          "source": "[\"ethane\",\"mols/not-present-v57-safety.sdf\",null]",
+          "revision": 11,
+          "completed": false,
+          "parsed": null,
+          "liveValidated": false,
+          "picking": null,
+          "pickCallback": "__mulerPickCb_11",
+          "keys": [
+            "id",
+            "source",
+            "mol",
+            "applet",
+            "revision",
+            "completed",
+            "parsed",
+            "liveValidated",
+            "picking",
+            "pickCallback"
+          ]
+        },
+        "parsed": [
+          "source",
+          "text"
+        ],
+        "ready": false,
+        "sel": {
+          "active": true,
+          "molKey": "ethane|expanded",
+          "atoms2D": [],
+          "bonds2D": [],
+          "atoms3D": [],
+          "bonds3D": [],
+          "groups": [],
+          "molName": "ethane",
+          "_contributors": {
+            "key": "pentane|expanded:compCarbonsCount",
+            "a2": [],
+            "b2": [],
+            "a3": [],
+            "b3": [],
+            "snapshot": "[[],[],[],[]]"
+          }
+        },
+        "model": {
+          "canSkipLoad": true,
+          "isTainted": false,
+          "modelCount": 1,
+          "modelCountSelected": 0,
+          "modelIndex": 0,
+          "modelSetHasVibrationVectors": false,
+          "modelSetName": "zapped",
+          "models": [],
+          "modelsSelected": []
+        }
+      }
+    },
+    {
+      "label": "Failed3D transport preserves actual2D drawing",
+      "detail": null
+    },
+    {
+      "label": "Fresh correct source recovers after failed3D load",
+      "detail": null
+    },
+    {
+      "label": "Condensed mode reload passes live-model guard",
+      "detail": null
+    },
+    {
+      "label": "Skeletal mode reload passes live-model guard",
+      "detail": null
+    },
+    {
+      "label": "390px resize preserves selection and source ownership",
+      "detail": null
+    },
+    {
+      "label": "Draft entry prevents3D picking on transient draft",
+      "detail": null
+    },
+    {
+      "label": "DraftCancel restores model with inactive selection",
+      "detail": null
+    },
+    {
+      "label": "Actual lesson Present does not arm native selection quiz",
+      "detail": null
+    },
+    {
+      "label": "All17 frozen runtime hashes unchanged during native browser matrix",
+      "detail": null
+    }
+  ],
+  "role": "Developer actual isolated Firefox; not independent browser review",
+  "limits": [
+    "HeadlessFirefox/viewportemulation, not physicalmobile/Safari/conference/offline guarantee",
+    "Remoteunpinnedj2s/fonts/externalservices remain dependencies",
+    "Only task-owned headlessprofile, no personalFirefox operation"
+  ],
+  "frozenTarget": {
+    "mulermoc-nom-57.html": "7ac8f3df5af04c5933ff7bbba79d84abf77e80a69453d1b239d8367ad5644d16",
+    "js/jsme-nick-nomeclature-moc2-data_57.js": "9387cd654b2ff3cfb058d9b97ddcca798ac13f47f769b532f9c122277ff8dd0a",
+    "js/mulermoc-nom-core-57.js": "c41b722db2fb3748f827d19ee1f05d7d8f680bb9f51c664305baa7d49c132c7e",
+    "js/mulermoc-nom-molview-57.js": "ae4e498361b994d55d2eafe8eb0a3b578c416ed770de0eb65d9dc74e9c800684",
+    "js/mulermoc-nom-teaching-57.js": "9f2e513c70032fbdb2eed1b2d7e4b3d4ffa993e438d98236df38b7b2b5295574",
+    "js/mulermoc-nom-note-57.js": "e685355459afb7955fbe13e3b8e07c6283469b4d8acb98cfbcfa483c9f9be3ca",
+    "js/mulermoc-nom-scenario-57.js": "f06ad3c197d3cc7b543a7879d838b18ceb4b97116b9a1626462b45eb387290f1",
+    "js/mulermoc-nom-iupac-57.js": "cd16a31dbf83fe1ac6da77fe0a7dd52697d3a7f0dbb7f0008508a9bc5fffc5a7",
+    "js/mulermoc-nom-lang-57.js": "071cc85df6ce89e42e6b124806d0bd0f24b5aeb49dbaac2fe7955e7905802b34",
+    "js/mulermoc-nom-name-en-57.js": "092fcf2701c5d48dc93cbeee993153950846307588c39e75d195f9d96bb58c2d",
+    "js/ui-icons-57.js": "1cf84313e1b5103c3d8844f1a3e92f7588e2a6861f96fb7a1a3ba4de8fefccfc",
+    "css/jsme-nick-57.css": "fb85f29949e23808dcd3da58218a712a8e2ffa78371a6956df56f631e1b8261e",
+    "css/mulermoc-nom-scenario-57.css": "326f9d516a3839fa88223e6ce2976cf2d14aa925f8d7895da439fb1cba732a2c",
+    "css/namelecule-57.css": "042b0e93645dbc9fe5c9851bdd90a73b08f8c89fc4ef524302bd07ac7180e7a7",
+    "spt/init-57.spt": "d8ceb2f1cc5abf1fe8310da451ccf99b4f427f3a7441e7e19de11d542b2f9e48",
+    "design/welcome-proposal.html": "6dcaaf3d17f8afbee680b8215a9335b94b5dec57ce3563d6700f480813cd89a4",
+    "design/theory-library.html": "7830b545d473f140e566e56c50c11836dfc186366f88067cc0adfeb51e275e3d"
+  },
+  "javascriptErrors": [],
+  "diagnostics": []
+}

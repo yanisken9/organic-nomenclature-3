@@ -320,6 +320,8 @@
     const emphasizeObjective = options.emphasizeObjective === true;
     const condensedDiagram = options.diagramRepresentation === "condensed";
     const compactDiagramZoom = options.compactDiagramZoom === true;
+    // New hosts explicitly opt in; older Main/native hosts retain their layout.
+    const viewportEnabled = options.viewport === true && !!global.NameleculeGameViewport;
     const existing = mountedHosts.get(host);
     if (existing) existing.destroy();
     const root = host;
@@ -335,10 +337,14 @@
     let zoomPanel = null;
     let zoomImage = null;
     let listeners = [];
+    let viewport = null;
+    let pagers = [];
+    let viewportStage = "edit";
+    let viewportView = "answer";
     const ownedClass = !host.classList.contains("nl-repair-round");
     if (ownedClass) host.classList.add("nl-repair-round");
     const pageScroller = function () { return global.document.scrollingElement || global.document.documentElement; };
-    const pageReveal = standalone ? createResponseRevealer({
+    const pageReveal = standalone && !viewportEnabled ? createResponseRevealer({
       host: root, interruptTarget: global,
       active: function () { return !destroyed && !zoomPanel && root.isConnected; },
       viewport: function () { return { top: 12, bottom: global.document.documentElement.clientHeight - 12 }; },
@@ -358,7 +364,7 @@
       if (!destroyed && typeof options.onStateChange === "function") options.onStateChange(getState());
     }
     function revealResponse(reason, start, end) {
-      if (destroyed) return;
+      if (destroyed || viewportEnabled) return;
       const request = { reason: reason, start: start, end: end || start };
       if (pageReveal) pageReveal.reveal(request);
       else if (typeof options.onReveal === "function") options.onReveal(request);
@@ -386,6 +392,10 @@
     function destroy() {
       if (destroyed) return;
       if (pageReveal) pageReveal.destroy();
+      if (viewport) viewport.destroy();
+      pagers.forEach(function (pager) { pager.destroy(); }); pagers = [];
+      host.classList.remove("nl-repair-viewport", "nl-repair-sequential");
+      ["data-repair-stage", "data-repair-view", "data-repair-step"].forEach(function (name) { host.removeAttribute(name); });
       destroyed = true;
       renderId += 1;
       imageLoadId += 1;
@@ -404,7 +414,7 @@
         mountedHosts.delete(host);
       }
     }
-    const api = { destroy: destroy, getState: getState };
+    const api = { destroy: destroy, getState: getState, refresh: function () { if (viewport) viewport.refresh(); refreshPagers(); } };
     mountedHosts.set(host, api);
 
     function renderRound() {
@@ -467,21 +477,94 @@
         node("div", { class: "session-row" }, [refs.sessionStats].concat(standalone ? [button("Επιστροφή στα σετ", "quiet", options.requestRestart)] : []))
       ]);
       root.replaceChildren(screen);
+      if (viewportEnabled) configureViewport(screen, heading, diagram, repair);
       root.setAttribute("aria-busy", "false");
       loadDiagram(currentRender);
       updateControls();
       const title = heading.querySelector("h1");
       title.tabIndex = -1;
       title.focus({ preventScroll: true });
-      if (standalone) window.scrollTo({ top: 0, behavior: "instant" });
+      if (standalone && !viewportEnabled) window.scrollTo({ top: 0, behavior: "instant" });
       if (state().solved) showSuccess(evaluateRepair(data, state()), false);
       else if (state().submitted) {
         const result = evaluateRepair(data, state());
-        if (result.message) replaceChildren(refs.feedback, node("p", { text: result.message }));
+        if (result.message) { replaceChildren(refs.feedback, node("p", { text: result.message })); if (viewportEnabled) showViewportFeedback(false); }
       }
       if (data.kind === "replace" && state().selectedPartId && state().selectedPartId !== data.targetPartId) {
         refs.selectionStatus.textContent = data.feedback.wrongPart;
       }
+    }
+
+    function refreshPagers() {
+      if (destroyed) return;
+      pagers.forEach(function (pager) { pager.refresh(); });
+    }
+    function setViewportStage(stage, view) {
+      viewportStage = stage;
+      if (view) viewportView = view;
+      root.setAttribute("data-repair-stage", stage);
+      root.setAttribute("data-repair-view", viewportView);
+      if (refs.stageTabs) refs.stageTabs.querySelectorAll("[data-repair-view-button]").forEach(function (control) {
+        control.setAttribute("aria-pressed", String(stage === "edit" && control.dataset.repairViewButton === viewportView));
+      });
+      refreshPagers();
+      if (viewport) viewport.refresh();
+      publishSuccessActionsReady();
+    }
+    function showViewportFeedback(solved) {
+      if (!viewportEnabled) return;
+      refs.feedbackBack.hidden = solved;
+      refs.feedbackInspect.hidden = !solved;
+      refs.feedbackHeading.textContent = solved ? "Η επισκευή ολοκληρώθηκε" : "Παρατήρησε την εξήγηση";
+      setViewportStage("feedback");
+      refs.feedbackHeading.focus({ preventScroll: true });
+    }
+    function configureViewport(screen, heading, diagram, repair) {
+      root.classList.add("nl-repair-viewport");
+      const tabs = node("div", { class: "repair-stage-tabs", "aria-label": "Προβολή αποστολής" });
+      [ ["structure", "Δομή"], ["answer", "Επισκευή"] ].forEach(function (entry) {
+        const control = button(entry[1], "secondary repair-view-button", function () { setViewportStage("edit", entry[0]); });
+        control.dataset.repairViewButton = entry[0]; tabs.append(control);
+      });
+      tabs.append(button("Οδηγίες", "quiet", function () { setViewportStage("instructions"); refs.instructionsHeading.focus({ preventScroll: true }); }));
+      refs.stageTabs = tabs;
+      heading.after(tabs);
+      const partHeading = repair.querySelector(".step-heading"), partDescription = repair.querySelector(".step-description");
+      const partPage = node("div", { class: "repair-part-page" }, [partHeading, refs.parts, refs.orderControls]);
+      const choicePage = node("div", { class: "repair-choice-page" }, [
+        button("← Κομμάτια ονόματος", "quiet", function () { root.dataset.repairStep = "parts"; refreshPagers(); }), refs.choiceFieldset
+      ]);
+      repair.querySelector(".broken-name").after(partPage, choicePage);
+      partDescription.remove(); refs.selectionStatus.remove();
+      const instructions = node("section", { class: "repair-instructions-stage" }, [
+        node("div", { class: "repair-stage-heading" }, [refs.instructionsHeading = node("h2", { tabindex: "-1", text: "Πώς επισκευάζω το όνομα" }), button("Στην επισκευή", "secondary", function () { setViewportStage("edit", "answer"); })]),
+        refs.instructionsContent = node("div", { class: "repair-instructions-content" }, [
+          node("p", { text: round().objective }), screen.querySelector(".compact-steps"), partDescription,
+          node("p", { text: "Διάλεξε κομμάτι και αντικατάσταση ή μετακίνησε έναν κλάδο με τα βέλη. Η μεγέθυνση ανοίγει ολόκληρη τη δομή σε χωριστή προβολή." }), refs.selectionStatus, refs.checkHelper
+        ])
+      ]);
+      const feedbackStage = node("section", { class: "repair-feedback-stage" }, [
+        node("div", { class: "repair-stage-heading" }, [refs.feedbackHeading = node("h2", { tabindex: "-1", text: "Παρατήρησε την εξήγηση" }),
+          refs.feedbackBack = button("Επιστροφή στην προσπάθεια", "secondary", function () { setViewportStage("edit", "answer"); refs.checkButton.focus({ preventScroll: true }); }),
+          refs.feedbackInspect = button("Δες τη δομή", "secondary", function () { setViewportStage("edit", "structure"); })]),
+        refs.feedback, refs.next
+      ]);
+      screen.append(instructions, feedbackStage);
+      repair.querySelector(".repair-actions").append(button("Δες την εξήγηση", "quiet repair-feedback-open", function () { showViewportFeedback(state().solved); }));
+      refs.feedbackOpen = repair.querySelector(".repair-feedback-open"); refs.feedbackOpen.hidden = true;
+      // A solved structure remains inspectable, with a direct route back to its actions.
+      tabs.append(refs.feedbackReturn = button("Στην εξήγηση", "secondary", function () { showViewportFeedback(state().solved); }));
+      refs.feedbackReturn.hidden = true;
+      root.dataset.repairStep = round().kind === "replace" && state().selectedPartId === round().targetPartId ? "choices" : "parts";
+      setViewportStage("edit", "answer");
+      [ [refs.parts, "y", "Κομμάτια ονόματος"], [refs.choices, "y", "Αντικαταστάσεις"],
+        [repair.querySelector(".broken-name"), "x", "Όνομα για επισκευή"], [refs.candidateName, "x", "Η πρότασή σου"],
+        [refs.instructionsContent, "y", "Οδηγίες"], [refs.feedback, "y", "Εξήγηση επισκευής"] ].forEach(function (entry) {
+        pagers.push(global.NameleculeGameViewport.pager(entry[0], { axis: entry[1], label: entry[2], overlap: entry[0] === refs.parts || entry[0] === refs.choices ? 64 : undefined }));
+      });
+      viewport = global.NameleculeGameViewport.mount(root, { kind: "repair", document: standalone, onResize: function (size) {
+        root.classList.toggle("nl-repair-sequential", size.narrow || size.height < 430); refreshPagers();
+      } });
     }
 
     function loadDiagram(currentRender) {
@@ -592,11 +675,22 @@
       });
       refs.checkHelper.textContent = current.solved ? "Η επισκευή ολοκληρώθηκε. Συνέχισε όταν είσαι έτοιμος ή έτοιμη." : !diagramsReady() ? "Περιμένουμε να εμφανιστούν οι δομές πριν από τον έλεγχο." : data.kind === "order" ? "Επιλέγεις κλάδο, πατάς ένα βέλος και ελέγχεις τη νέα σειρά." : hasCandidate ? "Ο έλεγχος μετρά ως μία προσπάθεια. Μπορείς να δοκιμάσεις ξανά." : "Διάλεξε πρώτα το κομμάτι και έπειτα μια αντικατάσταση.";
       refs.sessionStats.textContent = "Προσπάθειες σε αυτή την " + (data.guided ? "πρόβα " : "αποστολή ") + current.attempts;
+      if (viewportEnabled) {
+        refs.feedbackOpen.hidden = !current.submitted;
+        refs.feedbackReturn.hidden = !current.submitted;
+        refreshPagers();
+      }
       if (restoreId) restoreFocus(restoreId);
-      const successActionsReady = nextButtons.length > 0 && diagramsReady() && current.solved;
-      if (!destroyed && successActionsReady !== lastSuccessActionsReady && typeof options.onSuccessActionsReady === "function") {
-        lastSuccessActionsReady = successActionsReady;
-        options.onSuccessActionsReady(successActionsReady);
+      publishSuccessActionsReady();
+    }
+
+    function publishSuccessActionsReady() {
+      const nextButtons = refs.next ? refs.next.querySelectorAll("button") : [];
+      const stageVisible = !viewportEnabled || viewportStage === "feedback" && Array.from(nextButtons).some(function (control) { return control.getClientRects().length > 0; });
+      const ready = nextButtons.length > 0 && diagramsReady() && state().solved && stageVisible;
+      if (!destroyed && ready !== lastSuccessActionsReady && typeof options.onSuccessActionsReady === "function") {
+        lastSuccessActionsReady = ready;
+        options.onSuccessActionsReady(ready);
       }
     }
 
@@ -617,14 +711,19 @@
       } else {
         refs.selectionStatus.textContent = "Ο κλάδος επιλέχθηκε. Μετακίνησέ τον με τα κουμπιά Αριστερά και Δεξιά.";
       }
-      updateControls(controlId("part-" + id));
+      if (viewportEnabled && round().kind === "replace") root.dataset.repairStep = id === round().targetPartId ? "choices" : "parts";
+      updateControls(viewportEnabled && id === round().targetPartId ? controlId("choice-" + current.choiceOrder[0]) : controlId("part-" + id));
       emitState();
+      if (viewportEnabled && round().kind === "replace" && id !== round().targetPartId) {
+        replaceChildren(refs.feedback, node("p", { text: round().feedback.wrongPart })); showViewportFeedback(false);
+      }
       if (round().kind === "order") revealResponse("order-controls", refs.selectionStatus, refs.orderControls);
       else if (id === round().targetPartId) revealResponse("replacement-options", refs.choiceFieldset);
       else revealResponse("selection-feedback", refs.selectionStatus);
     }
 
     function clearFeedback() {
+      if (viewportEnabled) setViewportStage("edit", "answer");
       refs.feedback.classList.remove("is-success");
       replaceChildren(refs.feedback);
     }
@@ -636,6 +735,7 @@
         node("span", { class: "success-name", text: round().correctName }),
         node("p", { class: "success-explanation", text: result.message })
       );
+      if (viewportEnabled) pagers.push(global.NameleculeGameViewport.pager(refs.feedback.querySelector(".success-name"), { axis: "x", label: "Σωστό όνομα" }));
       const next = button(options.continueLabel || "Συνεχίζω τη θεωρία", "primary", function () {
         if (!diagramsReady() || !state().solved) return;
         if (typeof options.onContinue === "function") options.onContinue(getState());
@@ -657,6 +757,7 @@
         }));
       }
       updateControls();
+      if (viewportEnabled) showViewportFeedback(true);
       if (fresh) {
         next.focus({ preventScroll: true });
         if (standalone) root.querySelector(".progress").replaceWith(options.progressList());
@@ -681,6 +782,7 @@
         replaceChildren(refs.feedback, node("p", { text: result.message }));
         updateControls(controlId("check-button"));
         emitState();
+        if (viewportEnabled) showViewportFeedback(false);
         revealResponse("check-feedback", refs.feedback);
       }
     }
@@ -688,7 +790,7 @@
     function showDiagramZoom() {
       if (destroyed || mainImageStatus !== "ready" || zoomPanel) return;
       if (pageReveal) pageReveal.stop();
-      const dialog = node(standalone ? "dialog" : "section", { class: "zoom-dialog", "aria-labelledby": controlId("zoom-title") });
+      const dialog = node(standalone && !viewportEnabled ? "dialog" : "section", { class: viewportEnabled ? "zoom-dialog repair-zoom-overlay" : "zoom-dialog", "aria-labelledby": controlId("zoom-title") });
       zoomPanel = dialog;
       const close = button("Κλείσιμο", "secondary", closeZoom);
       const image = node("img", { class: "zoom-image", alt: round().diagramAlt });
@@ -699,18 +801,34 @@
         replaceChildren(viewport, node("p", { role: "status", text: "Η εικόνα δεν εμφανίστηκε. Κλείσε τη μεγέθυνση και δοκίμασε ξανά." }));
       };
       image.src = assetBase + round().asset;
+      if (viewportEnabled) {
+        let scale = 1;
+        const zoomTools = node("div", { class: "repair-zoom-controls", role: "group", "aria-label": "Μέγεθος σχεδίου" });
+        [-1, 1].forEach(function (direction) { zoomTools.append(button(direction < 0 ? "−" : "+", "secondary", function () {
+          scale = Math.max(1, Math.min(4, scale + direction * .5)); image.style.width = (scale * 100) + "%"; image.style.height = (scale * 100) + "%"; image.style.maxWidth = "none";
+        }, { "aria-label": direction < 0 ? "Σμίκρυνση σχεδίου" : "Μεγέθυνση σχεδίου" })); });
+        refs.zoomTools = zoomTools;
+      }
       dialog.append(
         node("div", { class: "zoom-heading" }, [node("h2", { id: controlId("zoom-title"), text: "Η δομή σε αρχικό μέγεθος" }), close]),
         node("p", { text: "Αν η εικόνα δεν χωρά, μετακινήσου μέσα στο πλαίσιο με αφή ή τα πλήκτρα βέλους." }),
         viewport
       );
-      if (standalone) {
+      if (viewportEnabled) dialog.querySelector(".zoom-heading").insertBefore(refs.zoomTools, close);
+      if (standalone && !viewportEnabled) {
         listen(dialog, "close", function () { finishZoom(dialog); });
         document.body.append(dialog);
         dialog.showModal();
       } else {
-        dialog.setAttribute("role", "region");
+        dialog.setAttribute("role", viewportEnabled ? "dialog" : "region");
+        if (viewportEnabled) { dialog.setAttribute("aria-modal", "true"); root.querySelector(".round-screen").inert = true; }
         listen(dialog, "keydown", function (event) {
+          if (viewportEnabled && event.key === "Tab") {
+            const targets = Array.from(dialog.querySelectorAll("button, [tabindex=\"0\"]"));
+            const first = targets[0], last = targets[targets.length - 1];
+            if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+            else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+          }
           if (event.key !== "Escape") return;
           event.preventDefault();
           event.stopPropagation();
@@ -730,6 +848,7 @@
       replaceChildren(panel);
       panel.remove();
       zoomPanel = null;
+      if (viewportEnabled) root.querySelector(".round-screen").inert = false;
       refs.zoomButton.setAttribute("aria-expanded", "false");
       refs.zoomButton.disabled = mainImageStatus !== "ready";
       refs.zoomButton.focus({ preventScroll: true });
@@ -738,7 +857,7 @@
     function closeZoom() {
       if (!zoomPanel) return;
       // Native close is queued; restore controls only when that panel finishes.
-      if (standalone) zoomPanel.close();
+      if (standalone && !viewportEnabled) zoomPanel.close();
       else finishZoom(zoomPanel);
     }
 
@@ -760,9 +879,17 @@
   let roundIndex = 0;
   let states = [];
   let activeRound = null;
+  let pageViewport = null;
+  let pagePagers = [];
   let renderId = 0;
-  const enginePilot = new URLSearchParams(window.location.search).get("source") === "engine";
-  const pilotStorageKey = "namelecule-repair-engine-pilot-v1";
+  const entryParams = new URLSearchParams(window.location.search);
+  const enginePilot = entryParams.get("source") !== "authored";
+  const legacyPilotStorageKey = "namelecule-repair-engine-pilot-v1";
+  const enrichedPilotStorageKey = "namelecule-repair-engine-pool-v2";
+  const levelPilotStoragePrefix = "namelecule-repair-levels-v1-";
+  const levelPilotCurrentKey = levelPilotStoragePrefix + "current";
+  let pilotStorageKey = enrichedPilotStorageKey;
+  let levelControls = null;
   let pilot = null;
   let pilotPhase = "hub";
   let loadToken = 0;
@@ -784,8 +911,8 @@
     });
   }
 
-  function readPilotProgress() {
-    try { return JSON.parse(window.sessionStorage.getItem(pilotStorageKey)); }
+  function readPilotProgress(key = pilotStorageKey) {
+    try { return JSON.parse(window.sessionStorage.getItem(key)); }
     catch (_) { return null; }
   }
 
@@ -797,23 +924,51 @@
       seed: pilot.seed, difficulty: pilot.difficulty, phase: pilotPhase,
       setId: activeSet && activeSet.id, roundIndex: roundIndex, states: states
     };
-    try { window.sessionStorage.setItem(pilotStorageKey, JSON.stringify(record)); }
+    if (pilot.levelMode) {
+      if (!pilot.level) return;
+      Object.assign(record, { version: 2, policyVersion: global.NameleculeGameLevels.policyVersion, level: pilot.level,
+        sourceSHA256: pilot.view.sourceSHA256, viewRevision: pilot.view.viewRevision,
+        context: global.NameleculeGameLevels.makeContext({ source: "enriched", level: pilot.level, seed: pilot.seed }) });
+    }
+    try {
+      window.sessionStorage.setItem(pilotStorageKey, JSON.stringify(record));
+      if (pilot.levelMode) window.sessionStorage.setItem(levelPilotCurrentKey, String(pilot.level));
+    }
     catch (_) { pilot.storageAvailable = false; }
   }
 
   function generatePilotGame(seed) {
     pilot.seed = global.NameleculeRepairGenerator.normalizeSeed(seed);
-    game = validateGameData(global.NameleculeRepairGenerator.createGame(pilot.catalog, pilot.analyses, {
+    const input = pilot.levelMode ? global.NameleculeGameLevels.createGenerationInput({ catalog: pilot.catalog, analyses: pilot.analyses }, pilot.level) : pilot;
+    pilot.view = pilot.levelMode ? input : null;
+    game = validateGameData(global.NameleculeRepairGenerator.createGame(input.catalog, input.analyses, {
       seed: pilot.seed, difficulty: pilot.difficulty
     }));
+    if (pilot.levelMode) {
+      const setId = pilot.level === 1 ? "alkanes-unbranched" : "alkanes-branched";
+      game.sets = game.sets.filter(function (set) { return set.id === setId; });
+      const set = game.sets[0];
+      assert(set && set.rounds.every(function (entry) { return global.NameleculeGameLevels.levelFor(entry.moleculeId) === pilot.level; }), "Incompatible level assignment");
+      set.title = global.NameleculeGameLevels.label(pilot.level);
+    }
   }
 
   function restorePilotProgress(record) {
-    if (!record || record.version !== 1 || record.generatorVersion !== global.NameleculeRepairGenerator.version ||
+    if (!record || record.version !== (pilot.levelMode ? 2 : 1) || record.generatorVersion !== global.NameleculeRepairGenerator.version ||
         record.catalogRevision !== pilot.catalog.revision || record.engineSHA256 !== pilot.catalog.engineSHA256 ||
         !["basic", "challenge"].includes(record.difficulty) || typeof record.seed !== "string") return false;
+    if (!pilot.levelMode && Object.prototype.hasOwnProperty.call(record, "context")) return false;
     try { global.NameleculeRepairGenerator.normalizeSeed(record.seed); }
     catch (_) { return false; }
+    if (pilot.levelMode) {
+      if (record.policyVersion !== global.NameleculeGameLevels.policyVersion || ![1, 2, 3].includes(record.level) || record.difficulty !== "basic") return false;
+      let context;
+      try { context = global.NameleculeGameLevels.validateContext(record.context); } catch (_) { return false; }
+      if (context.source !== "enriched" || context.level !== record.level || context.seed !== record.seed) return false;
+      const view = global.NameleculeGameLevels.createGenerationInput({ catalog: pilot.catalog, analyses: pilot.analyses }, record.level);
+      if (record.sourceSHA256 !== view.sourceSHA256 || record.viewRevision !== view.viewRevision) return false;
+      pilot.level = record.level;
+    }
     pilot.difficulty = record.difficulty;
     generatePilotGame(record.seed);
     if (["hub", "picker"].includes(record.phase)) { pilotPhase = record.phase; return true; }
@@ -835,26 +990,75 @@
   async function preparePilot(signal) {
     if (!global.NameleculeChemistryClient) await loadPilotScript("../js/namelecule-chemistry-client.js?v=verified-engines-20261105-r1");
     if (!global.NameleculeRepairGenerator) await loadPilotScript("../js/namelecule-repair-generator.js?v=engine-pilot-20261105-r2");
-    const response = await fetch("./data/alkane-structures.json", { cache: "no-cache", signal: signal });
-    if (!response.ok) throw new Error("Alkane structures HTTP " + response.status);
-    const catalog = await response.json();
-    assert(catalog && catalog.schemaVersion === 1 && Array.isArray(catalog.molecules) && catalog.molecules.length === 8, "Invalid alkane structure catalog");
-    const analyses = [];
-    // Bound parallel work; each analysis gets a fresh, short-lived core instance.
-    for (let i = 0; i < catalog.molecules.length; i += 3) {
-      const batch = await Promise.all(catalog.molecules.slice(i, i + 3).map(function (molecule) {
-        return global.NameleculeChemistryClient.analyze(molecule, { signal: signal, engineSHA256: catalog.engineSHA256 });
-      }));
-      analyses.push.apply(analyses, batch);
-    }
+    if (!global.NameleculeGeneratedRepairCheckpoint) await loadPilotScript("../js/namelecule-generated-repair-checkpoint.js?v=game-viewport-20261116-r1");
+    const provider = global.NameleculeGeneratedRepairCheckpoint;
+    // v1 source identity belongs to the recorded standalone attempt (8 OR 14).
+    // A normal new entry opens the structural level picker with full14 input.
+    const requested = entryParams.get("catalog");
+    const requestedDescriptor = requested ? provider.catalogDescriptor(requested) : null;
+    const explicitOld = requestedDescriptor && ["legacy", "enriched"].includes(requestedDescriptor.id);
+    const oldKey = explicitOld && requestedDescriptor.id === "legacy" ? legacyPilotStorageKey : enrichedPilotStorageKey;
+    let descriptor = explicitOld ? requestedDescriptor : provider.catalogDescriptor("enriched");
+    let input = await provider.loadCanonicalInput(signal, descriptor);
     if (signal.aborted) throw new DOMException("Cancelled", "AbortError");
-    pilot = { catalog: catalog, analyses: analyses, seed: newSeed(), difficulty: "basic", storageAvailable: true };
-    const restored = restorePilotProgress(readPilotProgress());
-    if (!restored) {
-      activeSet = null; states = []; roundIndex = 0; pilotPhase = "hub";
-      pilot.difficulty = "basic";
-      generatePilotGame(newSeed());
+    pilot = { catalog: input.catalog, analyses: input.analyses, seed: newSeed(), difficulty: "basic", storageAvailable: true, levelMode: !explicitOld, level: null };
+    pilotStorageKey = oldKey;
+    if (explicitOld && restorePilotProgress(readPilotProgress(oldKey)) && ["round", "results"].includes(pilotPhase)) {
+      activeSet.title = "Προηγούμενη προσπάθεια · " + activeSet.title;
+      return;
     }
+    if (explicitOld) {
+      descriptor = provider.catalogDescriptor("enriched");
+      input = await provider.loadCanonicalInput(signal, descriptor);
+      if (signal.aborted) throw new DOMException("Cancelled", "AbortError");
+      pilot = { catalog: input.catalog, analyses: input.analyses, seed: newSeed(), difficulty: "basic", storageAvailable: true, levelMode: true, level: null };
+    }
+    if (!global.NameleculeGameLevels) throw new Error("Game levels module unavailable");
+    let current = null;
+    try { current = Number(window.sessionStorage.getItem(levelPilotCurrentKey)); } catch (_) { /* Storage is optional. */ }
+    if ([1, 2, 3].includes(current)) {
+      pilotStorageKey = levelPilotStoragePrefix + current;
+      const previous = readPilotProgress();
+      if (previous?.level === current && restorePilotProgress(previous) && ["round", "results"].includes(pilotPhase)) return;
+    }
+    activeSet = null; states = []; roundIndex = 0; pilotPhase = "hub"; pilot.level = null;
+    game = null;
+  }
+
+  function startLevel(level) {
+    if (!pilot?.levelMode || ![1, 2, 3].includes(level)) return;
+    pilot.level = level; pilot.difficulty = "basic";
+    pilotStorageKey = levelPilotStoragePrefix + level;
+    activeSet = null; states = []; roundIndex = 0;
+    const previous = readPilotProgress();
+    if (previous?.level === level && restorePilotProgress(previous) && ["round", "results"].includes(pilotPhase)) {
+      if (pilotPhase === "results") renderResults(); else renderRound();
+      return;
+    }
+    startSet(level === 1 ? "alkanes-unbranched" : "alkanes-branched");
+  }
+
+  function renderLevelPicker() {
+    pilotPhase = "picker"; renderId += 1;
+    const host = node("div");
+    const content = node("div", { class: "workshop-hub workshop-set-picker" }, [
+      node("section", { class: "workshop-hero" }, [
+        node("p", { class: "eyebrow", text: "ΣΥΝΕΡΓΕΙΟ ΟΝΟΜΑΤΩΝ" }),
+        node("h1", { text: "Αλκάνια · Διάλεξε επίπεδο" }),
+        node("p", { text: "Η εφαρμογή αναθέτει τρία διαφορετικά μόρια του επιπέδου. Κάθε όνομα έχει ένα λάθος· δίνεται αρχική καθοδήγηση." })
+      ]), host
+    ]);
+    [ ["legacy", legacyPilotStorageKey], ["enriched", enrichedPilotStorageKey] ].forEach(function (entry) {
+      const previous = readPilotProgress(entry[1]);
+      const descriptor = global.NameleculeGeneratedRepairCheckpoint.catalogDescriptor(entry[0]);
+      if (previous?.version === 1 && previous.generatorVersion === global.NameleculeRepairGenerator.version &&
+          previous.catalogRevision === descriptor.revision && previous.engineSHA256 === descriptor.engineSHA256 && ["round", "results"].includes(previous.phase)) {
+        content.append(node("p", { class: "pilot-entry" }, [node("a", { href: "name-repair.html?catalog=" + entry[0], text: "Προηγούμενη προσπάθεια (" + (entry[0] === "legacy" ? "8" : "14") + " μόρια)" })]));
+      }
+    });
+    replaceRoot(content);
+    levelControls = global.NameleculeGameLevels.mount(host, { availableIds: pilot.catalog.molecules.map(function (m) { return m.id; }),
+      selectedLevel: null, allowedLevels: [1, 2, 3], onSelect: function (choice) { if (choice.level) startLevel(choice.level); } });
   }
 
   function pilotSettings() {
@@ -869,15 +1073,23 @@
       document.getElementById("pilot-difficulty").focus();
     });
     return node("div", { class: "pilot-settings" }, [
-      node("label", { for: "pilot-difficulty", text: "Δυσκολία" }), select,
+      node("label", { for: "pilot-difficulty", text: "Καθοδήγηση" }), select,
       node("p", { text: "Στο Βασικό δίνεται μια αρχική κατεύθυνση. Στην Πρόκληση εντοπίζεις και τον κανόνα που χρειάζεται." }),
-      node("p", { class: "muted", text: "Σε κάθε νέα προσπάθεια επιλέγονται τυχαία επισκευές από τα οκτώ διαθέσιμα αλκάνια." })
+      node("p", { class: "muted", text: "Σε κάθε νέα προσπάθεια επιλέγονται τυχαία επισκευές από τα " + pilot.catalog.molecules.length + " διαθέσιμα αλκάνια." })
     ]);
   }
 
+  function redirectLegacyAttempt() {
+    if (!pilot || pilot.levelMode) return false;
+    location.assign(new URL("name-repair.html?pickSet=1", location.href).href);
+    return true;
+  }
+
   function startSet(setId) {
+    if (redirectLegacyAttempt(setId)) return;
     if (pilot) generatePilotGame(newSeed());
     activeSet = game.sets.find(function (entry) { return entry.id === setId; });
+    assert(activeSet, "No compatible level set");
     roundIndex = 0;
     states = activeSet.rounds.map(function (entry) {
       const initial = createRoundState(entry);
@@ -896,12 +1108,24 @@
   function focusHeading() {
     const heading = root.querySelector("h1");
     if (heading) { heading.tabIndex = -1; heading.focus({ preventScroll: true }); }
-    window.scrollTo({ top: 0, behavior: "instant" });
+    if (!global.NameleculeGameViewport) window.scrollTo({ top: 0, behavior: "instant" });
+  }
+
+  function clearPageViewport() {
+    if (pageViewport) { pageViewport.destroy(); pageViewport = null; }
+    pagePagers.forEach(function (pager) { pager.destroy(); }); pagePagers = [];
   }
 
   function replaceRoot(content) {
+    clearPageViewport();
     if (activeRound) { activeRound.destroy(); activeRound = null; }
+    if (levelControls) { levelControls.destroy(); levelControls = null; }
     root.replaceChildren(content);
+    if (global.NameleculeGameViewport) {
+      content.querySelectorAll(".result-name").forEach(function (name) { pagePagers.push(global.NameleculeGameViewport.pager(name, { axis: "x", label: "Ολοκληρωμένο όνομα" })); });
+      pagePagers.push(global.NameleculeGameViewport.pager(content, { axis: "y", label: "Επιλογή και αποτελέσματα Συνεργείου" }));
+      pageViewport = global.NameleculeGameViewport.mount(root, { kind: "repair-entry", onResize: function () { pagePagers.forEach(function (pager) { pager.refresh(); }); } });
+    }
     root.setAttribute("aria-busy", "false");
   }
 
@@ -927,7 +1151,20 @@
       }
       if (token !== loadToken) return;
       root.setAttribute("aria-busy", "false");
-      if (pilot && pilotPhase === "round") renderRound();
+      const requestedSet = entryParams.get("startSet");
+      const hasStartCommand = entryParams.has("startSet"), hasPickerCommand = entryParams.has("pickSet");
+      const pickerCommand = entryParams.get("pickSet");
+      if (hasStartCommand || hasPickerCommand) {
+        entryParams.delete("startSet"); entryParams.delete("pickSet");
+        const url = new URL(location.href); url.searchParams.delete("startSet"); url.searchParams.delete("pickSet");
+        history.replaceState(null, "", url.href);
+      }
+      if (pilot && hasPickerCommand && !hasStartCommand && pickerCommand === "1") {
+        activeSet = null; states = []; roundIndex = 0;
+        renderSetPicker(); focusHeading();
+      } else if (pilot && !pilot.levelMode && hasStartCommand && !hasPickerCommand && ["alkanes-unbranched", "alkanes-branched"].includes(requestedSet)) {
+        startSet(requestedSet);
+      } else if (pilot && pilotPhase === "round") renderRound();
       else if (pilot && pilotPhase === "results") renderResults();
       else if (pilot && pilotPhase === "picker") renderSetPicker();
       else renderWelcome();
@@ -940,12 +1177,13 @@
         node("h1", { text: "Ο πάγκος δεν άνοιξε ακόμη" }),
         node("p", { role: "status", text: "Δεν φορτώθηκαν οι αποστολές. Δοκίμασε ξανά ή επέστρεψε στην αρχική σελίδα από την Έξοδο." }),
         button("Δοκίμασε ξανά", "primary", loadGame),
-        node("a", { class: "secondary", href: "name-repair.html", text: "Άνοιξε τα αρχικά σετ" })
+        node("a", { class: "secondary", href: "name-repair.html?source=authored", text: "Άνοιξε τα αρχικά σετ" })
       ]));
     }
   }
 
   function renderWelcome() {
+    if (pilot?.levelMode) return renderLevelPicker();
     pilotPhase = "hub";
     renderId += 1;
     const hero = node("section", { class: "workshop-hero", "aria-label": "Καλώς ήρθες στο Συνεργείο ονομάτων" }, [
@@ -970,26 +1208,37 @@
       node("div", { class: "workshop-set-grid" }, [card])
     ]);
     const steps = [
-      ["Δες τη δομή", "Σύνδεσε τους άνθρακες και τους κλάδους με το όνομα."],
+      ["Δες τη δομή", "Σύνδεσε τα άτομα C και τις αλκυλομάδες με το όνομα."],
       ["Βρες τι χρειάζεται αλλαγή", "Διάλεξε κομμάτι και αντικατάσταση ή άλλαξε τη σειρά."],
       ["Έλεγξε και ξαναδοκίμασε", "Μετά τη σωστή επισκευή, δες γιατί το όνομα ταιριάζει στη δομή."]
     ];
     const welcome = node("div", { class: "workshop-hub" }, [
       hero,
       node("p", { class: "pilot-entry" }, [node("a", {
-        href: enginePilot ? "name-repair.html" : "name-repair.html?source=engine",
-        text: enginePilot ? "Δοκιμή ερωτήσεων από τη μηχανή · Αρχικά σετ" : "Δοκίμασε νέες ερωτήσεις από τη μηχανή →"
+        href: enginePilot ? "name-repair.html?source=authored" : "name-repair.html",
+        text: enginePilot ? "Άνοιξε τα αρχικά επιμελημένα σετ" : "Νέες ερωτήσεις από τη μηχανή →"
       })]),
       sets,
       node("section", { class: "intro-how", "aria-label": "Πώς παίζεται" }, steps.map(function (step, index) {
         return node("div", { class: "how-item" }, [node("span", { class: "how-number", "aria-hidden": "true", text: String(index + 1) }), node("div", {}, [node("h2", { text: step[0] }), node("p", { text: step[1] })])]);
       }))
     ]);
+    if (enginePilot && pilot.catalog.revision !== global.NameleculeGeneratedRepairCheckpoint.catalogDescriptor("legacy").revision) {
+      const old = readPilotProgress(legacyPilotStorageKey);
+      if (old && old.version === 1 && old.generatorVersion === global.NameleculeRepairGenerator.version &&
+          old.engineSHA256 === global.NameleculeGeneratedRepairCheckpoint.catalogDescriptor("legacy").engineSHA256 &&
+          old.catalogRevision === global.NameleculeGeneratedRepairCheckpoint.catalogDescriptor("legacy").revision &&
+          ["round", "results"].includes(old.phase)) {
+        welcome.append(node("p", { class: "pilot-entry" }, [node("a", { href: "name-repair.html?source=engine&catalog=legacy", text: "Συνέχισε την προηγούμενη εξάσκηση" })]));
+      }
+    }
     replaceRoot(welcome);
     savePilotProgress();
   }
 
   function renderSetPicker() {
+    if (pilot?.levelMode) return renderLevelPicker();
+    if (redirectLegacyAttempt()) return;
     pilotPhase = "picker";
     renderId += 1;
     const cards = game.sets.map(function (set) {
@@ -1033,12 +1282,14 @@
   function round() { return activeSet.rounds[roundIndex]; }
   function state() { return states[roundIndex]; }
   function renderRound() {
+    clearPageViewport();
     pilotPhase = "round";
     if (activeRound) activeRound.destroy();
+    if (levelControls) { levelControls.destroy(); levelControls = null; }
     const index = roundIndex;
     const presentation = presentationForRound(round(), { difficulty: pilot ? pilot.difficulty : "basic" });
     activeRound = createRoundView(root, Object.assign({}, presentation, {
-      initialState: state(), assetBase: "", progressList: progressList, setTitle: activeSet.title,
+      initialState: state(), assetBase: "", progressList: progressList, setTitle: activeSet.title, viewport: !!global.NameleculeGameViewport,
       requestRestart: requestRestart,
       continueLabel: index === activeSet.rounds.length - 1 ? "Δες τις επισκευές σου  →" : "Επόμενο κουίζ  →",
       onStateChange: function (current) { states[index] = current; savePilotProgress(); },
@@ -1056,7 +1307,7 @@
     if (!hasProgress) return restartGame();
     const dialog = node("dialog", { class: "confirm-dialog", "aria-labelledby": "restart-title" }, [
       node("h2", { id: "restart-title", text: "Επιστροφή στα σετ;" }),
-      node("p", { text: "Οι επισκευές και οι προσπάθειες αυτού του σετ θα μηδενιστούν." })
+      node("p", { text: pilot?.levelMode ? "Η πρόοδος σε αυτό το επίπεδο θα μείνει διαθέσιμη όταν το επιλέξεις ξανά." : "Οι επισκευές και οι προσπάθειες αυτού του σετ θα μηδενιστούν." })
     ]);
     const keep = button("Συνέχισε εδώ", "secondary", function () { dialog.close(); });
     const restart = button("Επιστροφή στα σετ", "primary", function () { dialog.close(); restartGame(); });
@@ -1068,6 +1319,8 @@
   }
 
   function restartGame() {
+    if (redirectLegacyAttempt()) return;
+    if (pilot?.levelMode) { try { window.sessionStorage.removeItem(levelPilotCurrentKey); } catch (_) { pilot.storageAvailable = false; } }
     roundIndex = 0;
     states = [];
     activeSet = null;
@@ -1105,7 +1358,7 @@
         }))
       ]),
       node("p", { class: "results-note", text: "Οι προσπάθειες ελέγχου περιλαμβάνουν τις επαναλήψεις κάθε κουίζ." }),
-      node("div", { class: "results-actions" }, [button("Επιστροφή στα σετ", "primary", restartGame), node("a", { class: "secondary", href: "../design/welcome-proposal.html", text: "Επιστροφή στην αρχική" })])
+      node("div", { class: "results-actions" }, [...(pilot?.levelMode ? [button("Νέα τριάδα στο ίδιο επίπεδο", "secondary", function () { startSet(pilot.level === 1 ? "alkanes-unbranched" : "alkanes-branched"); })] : []), button("Επιστροφή στα σετ", "primary", restartGame), node("a", { class: "secondary", href: "../design/welcome-proposal.html", text: "Επιστροφή στην αρχική" })])
     ]);
     replaceRoot(content);
     focusHeading();

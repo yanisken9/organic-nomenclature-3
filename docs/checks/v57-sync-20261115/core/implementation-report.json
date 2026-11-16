@@ -1,0 +1,354 @@
+{
+  "timestampUTC": "2026-11-15T16:40:47.456763+00:00",
+  "role": "NAMELECULE_DEVELOPER_V1_20261023",
+  "scope": "Candidatecore57only; rootownsinstallation/review/sessionnotes",
+  "candidate": "/private/tmp/namelecule-v57-sync-20261115-l4r9e5_s/candidate/js/mulermoc-nom-core-57.js",
+  "coreSHA256": "c41b722db2fb3748f827d19ee1f05d7d8f680bb9f51c664305baa7d49c132c7e",
+  "coreBytes": 257047,
+  "sourceLocal56": {
+    "path": "/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/js/mulermoc-nom-core-56.js",
+    "sha256": "01e4b44578dc9ed6c8a484c5d38ee8a56e44ce2fc81ac6cf479a8333718ee8b5"
+  },
+  "comparisonBaseHEAD": "168e3cec01f941a84d40bbe0dc07156e7baa35d0",
+  "upstreamBase": "e75a37baeda9017666628c9f2f3428ffdd3a2f1c",
+  "upstreamTarget": "b73d8b6330cfdb9d83c000a513be7052763aa083",
+  "upstreamCore57SHA256": "a8222f56c6dd2274b675040c8106e6fe489eb0a3f1d772221644a2bdc2b9dd55",
+  "composition": {
+    "onlyChangedFunctions": [
+      "fOrientChainPath",
+      "fOrientChainPath3D"
+    ],
+    "allOtherBytesIdenticalToLocal56": true,
+    "upstream2DConditionAndCommentImportedExactly": true,
+    "local3DMirrorAddition": true,
+    "cacheAPIAndStrictGuardsUntouched": true,
+    "upstream57EqualsTarget56": true
+  },
+  "actualCommands": [
+    {
+      "command": "python3 docs/checks/v57-sync-20261115/core/test-terminal-priority57.py --phase before",
+      "exitCode": 0
+    },
+    {
+      "command": "python3 docs/checks/v57-sync-20261115/core/test-terminal-priority57.py --phase after",
+      "exitCode": 0
+    },
+    {
+      "command": "python3 docs/checks/v57-sync-20261115/core/test-core57.py > docs/checks/v57-sync-20261115/core/general-command.log 2>&1",
+      "exitCode": 0,
+      "log": "general-command.log"
+    },
+    {
+      "command": "python3 docs/checks/v57-sync-20261115/core/test-naming57.py > docs/checks/v57-sync-20261115/core/naming-command.log 2>&1",
+      "exitCode": 0,
+      "log": "naming-command.log"
+    },
+    {
+      "command": "python3 docs/checks/v57-sync-20261115/core/test-preserved57.py > docs/checks/v57-sync-20261115/core/guards-command.log 2>&1",
+      "exitCode": 0,
+      "log": "guards-command.log"
+    },
+    {
+      "command": "python3 docs/checks/v57-sync-20261115/core/test-en57.py > docs/checks/v57-sync-20261115/core/english-command.log 2>&1",
+      "exitCode": 0,
+      "log": "english-command.log"
+    },
+    {
+      "command": "python3 docs/checks/v57-sync-20261115/core/test-upstream-chemistry57.py > docs/checks/v57-sync-20261115/core/upstream-command.log 2>&1",
+      "exitCode": 0,
+      "log": "upstream-command.log"
+    },
+    {
+      "command": "python3 docs/checks/v57-sync-20261115/core/test-strict-cache57.py",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "/private/tmp/namelecule-v57-sync-20261115-l4r9e5_s/candidate/js/mulermoc-nom-core-57.js"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "--",
+        "/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/v57-sync-20261115/core/before-core57.js",
+        "/private/tmp/namelecule-v57-sync-20261115-l4r9e5_s/candidate/js/mulermoc-nom-core-57.js"
+      ],
+      "exitCode": 1,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "testResults": {
+    "terminal-priority-before-results.json": {
+      "fixtures": 9,
+      "versions": [
+        "before",
+        "raw57",
+        "candidate"
+      ],
+      "assertions": 23,
+      "actualRuntime": "macOS JavaScriptCore; actual project functions; no browser/JSME",
+      "beforeName": "3-χλωροβουτανοδιικό οξύ",
+      "candidateName": "3-χλωροβουτανοδιικό οξύ",
+      "raw57Direct3DMalonicRemainsForced": true
+    },
+    "terminal-priority-after-results.json": {
+      "fixtures": 9,
+      "versions": [
+        "before",
+        "raw57",
+        "candidate"
+      ],
+      "assertions": 69,
+      "actualRuntime": "macOS JavaScriptCore; actual project functions; no browser/JSME",
+      "beforeName": "3-χλωροβουτανοδιικό οξύ",
+      "candidateName": "2-χλωροβουτανοδιικό οξύ",
+      "raw57Direct3DMalonicRemainsForced": true
+    },
+    "core57-results.json": {
+      "molecules": 141,
+      "namingParentRegressionCases": 842,
+      "namingParentDifferences": 0,
+      "coldInitCases": 842,
+      "exactMaps": 842,
+      "mapCases": 842,
+      "signatureMismatches": [],
+      "untranslatedMaps": [],
+      "generatorCases": 1263,
+      "generatorNamingDifferences": [],
+      "reorderedGraphMaps": 421,
+      "reorderedGraphMapFailures": [],
+      "invalidInputChecks": 6,
+      "chemicalOraclePermutationCases": 240,
+      "chemicalGuardCases": 15,
+      "mapBoundaryCases": 4,
+      "generatorBentSp": [
+        {
+          "key": "butanenitrile",
+          "mode": "skeletal",
+          "inputBentSp": [
+            {
+              "atom": 1,
+              "cosine": -0.5000089280931208
+            }
+          ],
+          "results": [
+            {
+              "kind": "expanded",
+              "name": "βουτανονιτρίλιο",
+              "heavyAtoms": 5,
+              "atoms": 12,
+              "sameName": true,
+              "bentSp": [
+                {
+                  "atom": 1,
+                  "cosine": -0.5000089280931208
+                }
+              ],
+              "newBentSp": [],
+              "signatureMatches": true
+            }
+          ]
+        }
+      ],
+      "generatorNewBentSp": [],
+      "terminalSpDirectionCases": 4,
+      "unsupportedGeneratorSources": []
+    },
+    "mol-properties57-results.json": {
+      "molecules": 141,
+      "roundtripCases": 422,
+      "generatorGraphFormulaChargeCases": 1684,
+      "unsupportedSources": [
+        {
+          "key": "penten_3_yne_1",
+          "mode": "expanded",
+          "reason": "unsupported literal element/query label"
+        }
+      ],
+      "deliberateFixtures": 13,
+      "namedNitroCases": 24,
+      "negativeButeneMap": true
+    },
+    "map-transitions57-results.json": {
+      "molecules": 141,
+      "exactPersistentTransitions": 1684,
+      "unsupportedRawLabelCases": [
+        {
+          "key": "penten_3_yne_1",
+          "mode": "expanded",
+          "cm": "algorithmic",
+          "reason": "raw literal [H] naming outside whitelist"
+        },
+        {
+          "key": "penten_3_yne_1",
+          "mode": "expanded",
+          "cm": "algorithmic",
+          "reason": "raw literal [H] naming outside whitelist"
+        },
+        {
+          "key": "penten_3_yne_1",
+          "mode": "expanded",
+          "cm": "data",
+          "reason": "raw literal [H] naming outside whitelist"
+        },
+        {
+          "key": "penten_3_yne_1",
+          "mode": "expanded",
+          "cm": "data",
+          "reason": "raw literal [H] naming outside whitelist"
+        }
+      ],
+      "sameSizeMutationRejected": true
+    },
+    "geometry-results.json": {
+      "forms": 422,
+      "molecules": 141,
+      "missing": [
+        {
+          "key": "methane",
+          "mode": "skeletal"
+        }
+      ],
+      "generated": 421,
+      "skipped": [
+        {
+          "key": "penten_3_yne_1",
+          "mode": "expanded",
+          "reason": "unsupported raw literal [H] label; no naming coercion"
+        }
+      ],
+      "failures": 0,
+      "expectedHeavyBondLength": 1.0
+    },
+    "en-results.json": {
+      "molecules": 141,
+      "rawSupportedForms": 421,
+      "cases": 842,
+      "variantAssemblies": 1684,
+      "differences": 0,
+      "keysChanged": [],
+      "mismatches": 0,
+      "rawExcluded": [
+        {
+          "key": "penten_3_yne_1",
+          "mode": "expanded",
+          "cm": "algorithmic",
+          "reason": "Error: [NOM-DECLINE] unsupported element [H]"
+        },
+        {
+          "key": "penten_3_yne_1",
+          "mode": "expanded",
+          "cm": "data",
+          "reason": "Error: [NOM-DECLINE] unsupported element [H]"
+        }
+      ]
+    },
+    "upstream-chemistry-results.json": {
+      "fixtures": 32,
+      "expectedNamed": 21,
+      "expectedDeclined": 11,
+      "mirrored3D": 21,
+      "matchingBoxAssemblies": 42,
+      "suffixFusionChecks": 7,
+      "failures": [],
+      "actualRuntime": "macOS JavaScriptCore actual project functions; raw hand-built tree fixtures, no JSME"
+    },
+    "strict-cache-results.json": {
+      "checks": 16,
+      "singleHeavyPrimer": true,
+      "source2MutationRebuilt": true,
+      "source3MutationRebuilt": true,
+      "bondOrderMismatchRejected": true,
+      "restoredAfterMismatch": true,
+      "coreSHA256": "c41b722db2fb3748f827d19ee1f05d7d8f680bb9f51c664305baa7d49c132c7e",
+      "timestampUTC": "2026-11-15T16:39:58.455920+00:00",
+      "actualRuntime": "macOS JavaScriptCore; actual core functions; no browser/JSME"
+    }
+  },
+  "naming": {},
+  "all12ExistingCoresPreserved": {
+    "js/mulermoc-nom-core-42.js": {
+      "before": "a7b95d7fd9eb8589c2f441205ddd3751bd6da9bf9834fa60d9a5b5d2d2aa2b83",
+      "now": "a7b95d7fd9eb8589c2f441205ddd3751bd6da9bf9834fa60d9a5b5d2d2aa2b83",
+      "unchanged": true
+    },
+    "js/mulermoc-nom-core-43.js": {
+      "before": "93373c8ea49d6489350c4c7eee36d444b0f6ff5c13c500aa9662d4997575ac21",
+      "now": "93373c8ea49d6489350c4c7eee36d444b0f6ff5c13c500aa9662d4997575ac21",
+      "unchanged": true
+    },
+    "js/mulermoc-nom-core-44.js": {
+      "before": "3bb8773be785992ec581d4cdd11a58a6bb5a833ed429ae07287839b436e523e1",
+      "now": "3bb8773be785992ec581d4cdd11a58a6bb5a833ed429ae07287839b436e523e1",
+      "unchanged": true
+    },
+    "js/mulermoc-nom-core-45.js": {
+      "before": "dde5fb6350a0374e1ebda69e0870cbfce0bbed027b8219f33bc4de3c4cf9ae74",
+      "now": "dde5fb6350a0374e1ebda69e0870cbfce0bbed027b8219f33bc4de3c4cf9ae74",
+      "unchanged": true
+    },
+    "js/mulermoc-nom-core-48.js": {
+      "before": "37dad911ed73af0768fc922186cb94e71df7df1144b2c1e75aee4c9202ce6c0d",
+      "now": "37dad911ed73af0768fc922186cb94e71df7df1144b2c1e75aee4c9202ce6c0d",
+      "unchanged": true
+    },
+    "js/mulermoc-nom-core-49.js": {
+      "before": "ae85dd22b94292ed539ff2a858a1a6fe3672af90298662e5c6860fb411a65951",
+      "now": "ae85dd22b94292ed539ff2a858a1a6fe3672af90298662e5c6860fb411a65951",
+      "unchanged": true
+    },
+    "js/mulermoc-nom-core-50.js": {
+      "before": "0f79b5af20b9c3b4504673876abc03b6c162af316c33dff55fd55e0c22a43fd9",
+      "now": "0f79b5af20b9c3b4504673876abc03b6c162af316c33dff55fd55e0c22a43fd9",
+      "unchanged": true
+    },
+    "js/mulermoc-nom-core-51.js": {
+      "before": "096d617853646de0dfd67bcbde3e32252aebcb98e7525b05e6f7e71ccb48a5fc",
+      "now": "096d617853646de0dfd67bcbde3e32252aebcb98e7525b05e6f7e71ccb48a5fc",
+      "unchanged": true
+    },
+    "js/mulermoc-nom-core-52.js": {
+      "before": "d2138418ff630ab77e578b80ca8ba3a10cc1b877c3ab8c0e5c2735ffcd1f24a2",
+      "now": "d2138418ff630ab77e578b80ca8ba3a10cc1b877c3ab8c0e5c2735ffcd1f24a2",
+      "unchanged": true
+    },
+    "js/mulermoc-nom-core-54.js": {
+      "before": "8f3e5f76d96322faf7cf9251f4cae3eca204fe2f82bf5754fdce6ffc4cd5d5a9",
+      "now": "8f3e5f76d96322faf7cf9251f4cae3eca204fe2f82bf5754fdce6ffc4cd5d5a9",
+      "unchanged": true
+    },
+    "js/mulermoc-nom-core-55.js": {
+      "before": "6cbdbd0ce60f5d66ff3e6925cdfd48e470764baa02b6263f325eff356df5e270",
+      "now": "6cbdbd0ce60f5d66ff3e6925cdfd48e470764baa02b6263f325eff356df5e270",
+      "unchanged": true
+    },
+    "js/mulermoc-nom-core-56.js": {
+      "before": "01e4b44578dc9ed6c8a484c5d38ee8a56e44ce2fc81ac6cf479a8333718ee8b5",
+      "now": "01e4b44578dc9ed6c8a484c5d38ee8a56e44ce2fc81ac6cf479a8333718ee8b5",
+      "unchanged": true
+    }
+  },
+  "preservedGuardEvidence": [
+    "preserved-corrections-results.json",
+    "causal-probes-results.json"
+  ],
+  "knownLimits": [
+    "No browser, JSME normalization or real JSmol execution by this worker. Developer JavaScriptCore actual-function evidence only; independent review remains root-owned.",
+    "422 available raw forms; one raw expanded penten_3_yne_1 has literal [H] outside naming whitelist: two naming/cold/map modes excluded, transform rejection explicitly checked. No source-label coercion.",
+    "Methane has no skeletal source form.",
+    "Existing butanenitrile skeletal bent input sp appears in source-preserving expanded generation, unchanged; generated new bent centers: zero.",
+    "No source MOL/SDF/data/EN/shared sessionnotes/realcore changed by worker; no commits, pushes or publication."
+  ],
+  "handoffStatus": "Coretargetfrozen; exactinstalledrootpathnotmodifiedbyworker",
+  "forwardableGreek": "Προετοιμάστηκε τοπικά το js/mulermoc-nom-core-57.js με αυτούσια τη νέα upstream απόφαση για ίδιες τερματικές χαρακτηριστικές ομάδες στο 2D και αντίστοιχη τοπική διόρθωση στο 3D. Το 3-χλωροβουτανοδιικό οξύ διορθώνεται σε 2-χλωροβουτανοδιικό οξύ, ενώ διατηρούνται η προτεραιότητα του οξέος και οι παλιές προστασίες. Πέρασαν έλεγχοι πραγματικών συναρτήσεων JavaScriptCore για 141 μόρια, ονόματα/αντιστοιχίσεις, metadata, γεννήτριες, ελληνικά/αγγλικά και cache. Δεν έγιναν από αυτόν τον worker έλεγχοι browser, εγκατάσταση στην κύρια εφαρμογή, commit ή δημοσίευση."
+}

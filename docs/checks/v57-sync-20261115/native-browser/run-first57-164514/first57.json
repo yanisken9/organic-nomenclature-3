@@ -1,0 +1,350 @@
+{
+  "completed": true,
+  "checks": [
+    {
+      "label": "Native57 model load/parsed/live ownership gate becomes ready",
+      "detail": {
+        "m": {
+          "id": 2,
+          "source": "[\"ethanol\",\"mols/nomeclature-moc2/ethanol_3D.sdf\",null]",
+          "revision": 2,
+          "completed": true,
+          "parsed": {
+            "source": "[\"ethanol\",\"mols/nomeclature-moc2/ethanol_3D.sdf\",null]",
+            "text": "702\n  -OEChem-04102412063D\n\n  9  8  0     0  0  0  0  0  0999 V2000\n   -1.1712    0.2997    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.0463   -0.5665    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.2175    0.2668    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.0958   -1.2120    0.8819 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.0952   -1.1938   -0.8946 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.1050   -0.3720   -0.0177 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.2426    0.9307   -0.8704 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.2616    0.9052    0.8886 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.1291    0.8364    0.8099 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0  0  0  0\n  1  9  1  0  0  0  0\n  2  3  1  0  0  0  0\n  2  4  1  0  0  0  0\n  2  5  1  0  0  0  0\n  3  6  1  0  0  0  0\n  3  7  1  0  0  0  0\n  3  8  1  0  0  0  0\nM  END\n> <PUBCHEM_COMPOUND_CID>\n702\n\n> <PUBCHEM_CONFORMER_RMSD>\n0.4\n\n> <PUBCHEM_CONFORMER_DIVERSEORDER>\n1\n\n> <PUBCHEM_MMFF94_PARTIAL_CHARGES>\n3\n1 -0.68\n2 0.28\n9 0.4\n\n> <PUBCHEM_EFFECTIVE_ROTOR_COUNT>\n0\n\n> <PUBCHEM_PHARMACOPHORE_FEATURES>\n2\n1 1 acceptor\n1 1 donor\n\n> <PUBCHEM_HEAVY_ATOM_COUNT>\n3\n\n> <PUBCHEM_ATOM_DEF_STEREO_COUNT>\n0\n\n> <PUBCHEM_ATOM_UDEF_STEREO_COUNT>\n0\n\n> <PUBCHEM_BOND_DEF_STEREO_COUNT>\n0\n\n> <PUBCHEM_BOND_UDEF_STEREO_COUNT>\n0\n\n> <PUBCHEM_ISOTOPIC_ATOM_COUNT>\n0\n\n> <PUBCHEM_COMPONENT_COUNT>\n1\n\n> <PUBCHEM_CACTVS_TAUTO_COUNT>\n1\n\n> <PUBCHEM_CONFORMER_ID>\n000002BE00000001\n\n> <PUBCHEM_MMFF94_ENERGY>\n-1.3096\n\n> <PUBCHEM_FEATURE_SELFOVERLAP>\n10.148\n\n> <PUBCHEM_SHAPE_FINGERPRINT>\n139733 1 18410856563987595332\n21015797 1 18192151726869919494\n\n> <PUBCHEM_SHAPE_MULTIPOLES>\n55.87\n1.48\n0.75\n0.58\n0.08\n0.07\n0\n-0.26\n0\n-0.01\n0\n0.04\n0.01\n0\n\n> <PUBCHEM_SHAPE_SELFOVERLAP>\n84.621\n\n> <PUBCHEM_SHAPE_VOLUME>\n41.5\n\n> <PUBCHEM_COORDINATE_TYPE>\n2\n5\n10\n\n$$$$\n"
+          },
+          "liveValidated": true,
+          "picking": "set picking OFF; set bondPicking false;",
+          "pickCallback": "__mulerPickCb_2",
+          "keys": [
+            "id",
+            "source",
+            "mol",
+            "applet",
+            "revision",
+            "completed",
+            "parsed",
+            "liveValidated",
+            "picking",
+            "pickCallback"
+          ]
+        },
+        "parsed": [
+          "source",
+          "text"
+        ],
+        "ready": true,
+        "sel": {
+          "active": false,
+          "molKey": "ethanol|expanded",
+          "atoms2D": [],
+          "bonds2D": [],
+          "atoms3D": [],
+          "bonds3D": [],
+          "groups": [],
+          "molName": "ethanol",
+          "_contributors": {
+            "key": "ethanol|expanded:",
+            "a2": [],
+            "b2": [],
+            "a3": [],
+            "b3": [],
+            "snapshot": "[[],[],[],[]]"
+          }
+        },
+        "model": {
+          "canSkipLoad": true,
+          "isTainted": false,
+          "modelCount": 1,
+          "modelCountSelected": 1,
+          "modelIndex": 0,
+          "modelSetHasVibrationVectors": false,
+          "modelSetName": "702",
+          "modelSetProperties": {
+            "PATH_KEY": ".PATH",
+            "PATH_SEPARATOR": "/"
+          },
+          "models": [
+            {
+              "_ipt": 0,
+              "atomCount": 9,
+              "bondCount": 8,
+              "chainCount": 1,
+              "file": "http://127.0.0.1:50334/mols/nomeclature-moc2/ethanol_3D.sdf",
+              "file_model": "1.1",
+              "groupCount": 1,
+              "moleculeCount": 1,
+              "name": "702",
+              "num": 1,
+              "title": "702",
+              "vibrationVectors": false
+            }
+          ],
+          "modelsSelected": [
+            0
+          ]
+        }
+      }
+    },
+    {
+      "label": "Genuine 3D oxygen click selects actual 2D oxygen3",
+      "detail": {
+        "m": {
+          "id": 2,
+          "source": "[\"ethanol\",\"mols/nomeclature-moc2/ethanol_3D.sdf\",null]",
+          "revision": 2,
+          "completed": true,
+          "parsed": {
+            "source": "[\"ethanol\",\"mols/nomeclature-moc2/ethanol_3D.sdf\",null]",
+            "text": "702\n  -OEChem-04102412063D\n\n  9  8  0     0  0  0  0  0  0999 V2000\n   -1.1712    0.2997    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.0463   -0.5665    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.2175    0.2668    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.0958   -1.2120    0.8819 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.0952   -1.1938   -0.8946 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.1050   -0.3720   -0.0177 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.2426    0.9307   -0.8704 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.2616    0.9052    0.8886 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.1291    0.8364    0.8099 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0  0  0  0\n  1  9  1  0  0  0  0\n  2  3  1  0  0  0  0\n  2  4  1  0  0  0  0\n  2  5  1  0  0  0  0\n  3  6  1  0  0  0  0\n  3  7  1  0  0  0  0\n  3  8  1  0  0  0  0\nM  END\n> <PUBCHEM_COMPOUND_CID>\n702\n\n> <PUBCHEM_CONFORMER_RMSD>\n0.4\n\n> <PUBCHEM_CONFORMER_DIVERSEORDER>\n1\n\n> <PUBCHEM_MMFF94_PARTIAL_CHARGES>\n3\n1 -0.68\n2 0.28\n9 0.4\n\n> <PUBCHEM_EFFECTIVE_ROTOR_COUNT>\n0\n\n> <PUBCHEM_PHARMACOPHORE_FEATURES>\n2\n1 1 acceptor\n1 1 donor\n\n> <PUBCHEM_HEAVY_ATOM_COUNT>\n3\n\n> <PUBCHEM_ATOM_DEF_STEREO_COUNT>\n0\n\n> <PUBCHEM_ATOM_UDEF_STEREO_COUNT>\n0\n\n> <PUBCHEM_BOND_DEF_STEREO_COUNT>\n0\n\n> <PUBCHEM_BOND_UDEF_STEREO_COUNT>\n0\n\n> <PUBCHEM_ISOTOPIC_ATOM_COUNT>\n0\n\n> <PUBCHEM_COMPONENT_COUNT>\n1\n\n> <PUBCHEM_CACTVS_TAUTO_COUNT>\n1\n\n> <PUBCHEM_CONFORMER_ID>\n000002BE00000001\n\n> <PUBCHEM_MMFF94_ENERGY>\n-1.3096\n\n> <PUBCHEM_FEATURE_SELFOVERLAP>\n10.148\n\n> <PUBCHEM_SHAPE_FINGERPRINT>\n139733 1 18410856563987595332\n21015797 1 18192151726869919494\n\n> <PUBCHEM_SHAPE_MULTIPOLES>\n55.87\n1.48\n0.75\n0.58\n0.08\n0.07\n0\n-0.26\n0\n-0.01\n0\n0.04\n0.01\n0\n\n> <PUBCHEM_SHAPE_SELFOVERLAP>\n84.621\n\n> <PUBCHEM_SHAPE_VOLUME>\n41.5\n\n> <PUBCHEM_COORDINATE_TYPE>\n2\n5\n10\n\n$$$$\n"
+          },
+          "liveValidated": true,
+          "picking": "set pickCallback \"__mulerPickCb_2\"; set picking atom; set bondPicking true;",
+          "pickCallback": "__mulerPickCb_2",
+          "keys": [
+            "id",
+            "source",
+            "mol",
+            "applet",
+            "revision",
+            "completed",
+            "parsed",
+            "liveValidated",
+            "picking",
+            "pickCallback"
+          ]
+        },
+        "parsed": [
+          "source",
+          "text"
+        ],
+        "ready": true,
+        "sel": {
+          "active": true,
+          "molKey": "ethanol|expanded",
+          "atoms2D": [
+            3
+          ],
+          "bonds2D": [],
+          "atoms3D": [
+            1
+          ],
+          "bonds3D": [],
+          "groups": [
+            {
+              "heavy": 3,
+              "members": [
+                3
+              ]
+            }
+          ],
+          "molName": "ethanol",
+          "_contributors": {
+            "key": "ethanol|expanded:",
+            "a2": [],
+            "b2": [],
+            "a3": [
+              1
+            ],
+            "b3": [],
+            "snapshot": "[[3],[],[1],[]]"
+          }
+        },
+        "model": {
+          "canSkipLoad": true,
+          "isTainted": false,
+          "modelCount": 1,
+          "modelCountSelected": 1,
+          "modelIndex": 0,
+          "modelSetHasVibrationVectors": false,
+          "modelSetName": "702",
+          "modelSetProperties": {
+            "PATH_KEY": ".PATH",
+            "PATH_SEPARATOR": "/"
+          },
+          "models": [
+            {
+              "_ipt": 0,
+              "atomCount": 9,
+              "bondCount": 8,
+              "chainCount": 1,
+              "file": "http://127.0.0.1:50334/mols/nomeclature-moc2/ethanol_3D.sdf",
+              "file_model": "1.1",
+              "groupCount": 1,
+              "moleculeCount": 1,
+              "name": "702",
+              "num": 1,
+              "title": "702",
+              "vibrationVectors": false
+            }
+          ],
+          "modelsSelected": [
+            0
+          ]
+        },
+        "callbacks": [
+          [
+            "jmolAppletNomeclature",
+            "selected: ({0})",
+            -1
+          ],
+          [
+            "jmolAppletNomeclature",
+            "O1 #1 -1.171 0.300 0.000",
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "label": "Genuine 3D re-click clears both selections",
+      "detail": null
+    }
+  ],
+  "role": "Developer actual isolated Firefox; not independent browser review",
+  "limits": [
+    "HeadlessFirefox/viewportemulation, not physicalmobile/Safari/conference/offline guarantee",
+    "Remoteunpinnedj2s/fonts/externalservices remain dependencies",
+    "Only task-owned headlessprofile, no personalFirefox operation"
+  ],
+  "point": {
+    "x": 752.5,
+    "y": 538.5,
+    "sX": 743,
+    "sY": 414,
+    "bufferWidth": 1236,
+    "bufferHeight": 674,
+    "gkeys": [
+      "isFullSceneAntialiasingEnabled",
+      "antialias2",
+      "newWindowWidth",
+      "newWindowHeight",
+      "newAntialiasing",
+      "windowWidth",
+      "windowHeight",
+      "antialiasThisFrame",
+      "antialiasEnabled",
+      "width",
+      "height"
+    ],
+    "rect": {
+      "x": 381,
+      "y": 331.5,
+      "width": 618,
+      "height": 337
+    }
+  },
+  "finalModel": {
+    "m": {
+      "id": 2,
+      "source": "[\"ethanol\",\"mols/nomeclature-moc2/ethanol_3D.sdf\",null]",
+      "revision": 2,
+      "completed": true,
+      "parsed": {
+        "source": "[\"ethanol\",\"mols/nomeclature-moc2/ethanol_3D.sdf\",null]",
+        "text": "702\n  -OEChem-04102412063D\n\n  9  8  0     0  0  0  0  0  0999 V2000\n   -1.1712    0.2997    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.0463   -0.5665    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.2175    0.2668    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.0958   -1.2120    0.8819 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.0952   -1.1938   -0.8946 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.1050   -0.3720   -0.0177 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.2426    0.9307   -0.8704 H   0  0  0  0  0  0  0  0  0  0  0  0\n    1.2616    0.9052    0.8886 H   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.1291    0.8364    0.8099 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0  0  0  0\n  1  9  1  0  0  0  0\n  2  3  1  0  0  0  0\n  2  4  1  0  0  0  0\n  2  5  1  0  0  0  0\n  3  6  1  0  0  0  0\n  3  7  1  0  0  0  0\n  3  8  1  0  0  0  0\nM  END\n> <PUBCHEM_COMPOUND_CID>\n702\n\n> <PUBCHEM_CONFORMER_RMSD>\n0.4\n\n> <PUBCHEM_CONFORMER_DIVERSEORDER>\n1\n\n> <PUBCHEM_MMFF94_PARTIAL_CHARGES>\n3\n1 -0.68\n2 0.28\n9 0.4\n\n> <PUBCHEM_EFFECTIVE_ROTOR_COUNT>\n0\n\n> <PUBCHEM_PHARMACOPHORE_FEATURES>\n2\n1 1 acceptor\n1 1 donor\n\n> <PUBCHEM_HEAVY_ATOM_COUNT>\n3\n\n> <PUBCHEM_ATOM_DEF_STEREO_COUNT>\n0\n\n> <PUBCHEM_ATOM_UDEF_STEREO_COUNT>\n0\n\n> <PUBCHEM_BOND_DEF_STEREO_COUNT>\n0\n\n> <PUBCHEM_BOND_UDEF_STEREO_COUNT>\n0\n\n> <PUBCHEM_ISOTOPIC_ATOM_COUNT>\n0\n\n> <PUBCHEM_COMPONENT_COUNT>\n1\n\n> <PUBCHEM_CACTVS_TAUTO_COUNT>\n1\n\n> <PUBCHEM_CONFORMER_ID>\n000002BE00000001\n\n> <PUBCHEM_MMFF94_ENERGY>\n-1.3096\n\n> <PUBCHEM_FEATURE_SELFOVERLAP>\n10.148\n\n> <PUBCHEM_SHAPE_FINGERPRINT>\n139733 1 18410856563987595332\n21015797 1 18192151726869919494\n\n> <PUBCHEM_SHAPE_MULTIPOLES>\n55.87\n1.48\n0.75\n0.58\n0.08\n0.07\n0\n-0.26\n0\n-0.01\n0\n0.04\n0.01\n0\n\n> <PUBCHEM_SHAPE_SELFOVERLAP>\n84.621\n\n> <PUBCHEM_SHAPE_VOLUME>\n41.5\n\n> <PUBCHEM_COORDINATE_TYPE>\n2\n5\n10\n\n$$$$\n"
+      },
+      "liveValidated": true,
+      "picking": "set pickCallback \"__mulerPickCb_2\"; set picking atom; set bondPicking true;",
+      "pickCallback": "__mulerPickCb_2",
+      "keys": [
+        "id",
+        "source",
+        "mol",
+        "applet",
+        "revision",
+        "completed",
+        "parsed",
+        "liveValidated",
+        "picking",
+        "pickCallback"
+      ]
+    },
+    "parsed": [
+      "source",
+      "text"
+    ],
+    "ready": true,
+    "sel": {
+      "active": true,
+      "molKey": "ethanol|expanded",
+      "atoms2D": [],
+      "bonds2D": [],
+      "atoms3D": [],
+      "bonds3D": [],
+      "groups": [
+        {
+          "heavy": 3,
+          "members": [
+            3
+          ]
+        }
+      ],
+      "molName": "ethanol",
+      "_contributors": {
+        "key": "ethanol|expanded:",
+        "a2": [],
+        "b2": [],
+        "a3": [],
+        "b3": [],
+        "snapshot": "[[],[],[],[]]"
+      }
+    },
+    "model": {
+      "canSkipLoad": true,
+      "isTainted": false,
+      "modelCount": 1,
+      "modelCountSelected": 1,
+      "modelIndex": 0,
+      "modelSetHasVibrationVectors": false,
+      "modelSetName": "702",
+      "modelSetProperties": {
+        "PATH_KEY": ".PATH",
+        "PATH_SEPARATOR": "/"
+      },
+      "models": [
+        {
+          "_ipt": 0,
+          "atomCount": 9,
+          "bondCount": 8,
+          "chainCount": 1,
+          "file": "http://127.0.0.1:50334/mols/nomeclature-moc2/ethanol_3D.sdf",
+          "file_model": "1.1",
+          "groupCount": 1,
+          "moleculeCount": 1,
+          "name": "702",
+          "num": 1,
+          "title": "702",
+          "vibrationVectors": false
+        }
+      ],
+      "modelsSelected": [
+        0
+      ]
+    },
+    "callbacks": [
+      [
+        "jmolAppletNomeclature",
+        "selected: ({0})",
+        -1
+      ],
+      [
+        "jmolAppletNomeclature",
+        "O1 #1 -1.171 0.300 0.000",
+        0
+      ],
+      [
+        "jmolAppletNomeclature",
+        "selected: ({0})",
+        -1
+      ],
+      [
+        "jmolAppletNomeclature",
+        "O1 #1 -1.171 0.300 0.000",
+        0
+      ]
+    ]
+  },
+  "javascriptErrors": [],
+  "diagnostics": []
+}

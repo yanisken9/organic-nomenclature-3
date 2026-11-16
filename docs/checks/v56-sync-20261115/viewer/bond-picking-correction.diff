@@ -1,0 +1,63 @@
+--- viewer56-before-5f86d5e8
++++ viewer56-after-bond-picking
+@@ -2310,24 +2310,34 @@
+         }
+       }
+     } catch (eC) {}
+-    // (anchors come from the per-render geometry cache above.)
+-    var best = null, bd = rAtom * rAtom;
++    // A visible label's actual glyph bounds own direct label clicks, even
++    // when a wide formula extends beyond the loose center radius. Keep that
++    // radius only as a fallback: it must not steal a visible bond interior.
++    var best = null, bd = Infinity, loose = null, ld = rAtom * rAtom;
+     for (var i = 0; i < anchors.length; i++) {
+-      if (!anchors[i] || anchors[i].atom == null || isNaN(anchors[i].atom)) continue;
+-      var dx = anchors[i].x - px, dy = anchors[i].y - py, d2 = dx * dx + dy * dy;
+-      if (d2 <= bd) { bd = d2; best = anchors[i].atom; }
+-    }
+-    if (best !== null && best !== undefined) {
+-      // Armed quiz: a non-target H resolves to its heavy atom (condensed-style
+-      // unit picking); target H stays distinct. See fMulerQuizHydrogenParent.
+-      var _ha = -1;
+-      try { if (typeof fMulerQuizHydrogenParent === "function") _ha = fMulerQuizHydrogenParent(best + 1); } catch (eH) { _ha = -1; }
+-      return { kind: "atom", atom: (_ha > 0 ? _ha : best + 1) };
+-    }
+-    if (!groups || !groups.length) return null;
++      var anchor = anchors[i];
++      if (!anchor || anchor.atom == null || isNaN(anchor.atom)) continue;
++      var dx = anchor.x - px, dy = anchor.y - py, d2 = dx * dx + dy * dy;
++      if (anchor.w > 0 && anchor.h > 0 &&
++          px >= anchor.x - anchor.w / 2 && px <= anchor.x + anchor.w / 2 &&
++          py >= anchor.y - anchor.h / 2 && py <= anchor.y + anchor.h / 2 && d2 <= bd) {
++        bd = d2; best = anchor.atom;
++      }
++      if (d2 <= ld) { ld = d2; loose = anchor.atom; }
++    }
++    function anchorPick(atom0) {
++      if (atom0 === null || atom0 === undefined) return null;
++      // Keep native armed-quiz H-to-parent behavior for both direct glyph
++      // hits and the loose fallback. Free and explicitly targeted H stay H.
++      var parent = -1;
++      try { if (typeof fMulerQuizHydrogenParent === "function") parent = fMulerQuizHydrogenParent(atom0 + 1); } catch (eH) { parent = -1; }
++      return { kind: "atom", atom: (parent > 0 ? parent : atom0 + 1) };
++    }
++    if (best !== null && best !== undefined) return anchorPick(best);
++    if (!groups || !groups.length) return anchorPick(loose);
+     if (!(med > 0)) {
+       try { med = (typeof fMulerSelectMedianBond === "function") ? fMulerSelectMedianBond(groups) : 0; } catch (eM2) { med = 0; }
+-      if (!(med > 0)) return null;
++      if (!(med > 0)) return anchorPick(loose);
+       rAtom = med * MULER_SELECT_ATOM_R;
+       rBond = med * MULER_SELECT_BOND_HW;
+     }
+@@ -2370,7 +2380,9 @@
+       if (typeof window !== "undefined" && window.MulerQuizTarget && _bPurp !== "bond") return { ignore: true };
+       return { kind: "bond", bond: groups[bb].bond + 1, pair: bpair };
+     }
+-    return null;
++    // No direct glyph, implicit vertex or bond corridor claimed the point.
++    // Preserve the forgiving native atom-center halo on empty surroundings.
++    return anchorPick(loose);
+   } catch (e) { return { ignore: true }; }
+ }
+ 

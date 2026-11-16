@@ -1,0 +1,17 @@
+{
+  "id": "DEV-FOUR-P1",
+  "severity": "P1",
+  "observed": "Actual Firefox trusted Continue entered non-yielding fScenarioGo(4) retry loop; no step5. Unload callbacks returned before >56k navigation retries.",
+  "cause": "Composite prepare returned fresh Promise for already-ready Detective evidence; scenarioGo retry called prepare again forever.",
+  "fix": "Return null for ready engine+lesson+canonical; load only missing dependencies.",
+  "source": "js/namelecule-game-choice-checkpoint.js",
+  "beforeEvidence": [
+    "root/prepare-loop-before.json",
+    "continue-diagnostic/stage-diagnostic-report.json"
+  ],
+  "afterMemoryEvidence": "root/adapter-results.json",
+  "actualPostFixBrowser": "pending",
+  "independentTargetedReview": "pending",
+  "notClaimed": "No personal Firefox-wide, conference or offline guarantee.",
+  "targetManifestSHA256": "1aeef0391e4fe93338e6773196adb6cb85f21f1854b9a399ec30e312f308aa75"
+}

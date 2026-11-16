@@ -1,0 +1,22 @@
+--- before/games/name-builder.html
++++ games/name-builder.html
+@@ -6,8 +6,10 @@
+   <meta name="theme-color" content="#254c50">
+   <title>Χτίσε το όνομα · Namelecule</title>
+   <link rel="stylesheet" href="../css/namelecule-name-builder.css?v=builder-methods-20261112-r3">
++  <link rel="stylesheet" href="../css/namelecule-game-levels.css?v=alkane-levels-20261116-r1">
++  <script src="../js/namelecule-game-levels.js?v=alkane-levels-20261116-r1" defer></script>
+   <script src="../js/namelecule-name-builder-engine.js?v=name-builder-20261111-r1" defer></script>
+-  <script src="../js/namelecule-name-builder.js?v=alkane-pool-20261116-r1" defer></script>
++  <script src="../js/namelecule-name-builder.js?v=alkane-levels-20261116-r1" defer></script>
+ </head>
+ <body>
+   <a class="skip-link" href="#answer-title">Πήγαινε στη σύνθεση του ονόματος</a>
+@@ -25,6 +27,7 @@
+       <p class="objective">Παρατήρησε τη δομή. Διάλεξε τα κατάλληλα συνθετικά και βάλε τα στη σωστή σειρά.</p>
+       <p class="intro-detail">Σύρε τα πλακίδια στο πλαίσιο ή πάτησέ τα για να τα προσθέσεις. Μερικά περισσεύουν.</p>
+     </section>
++    <div id="game-levels"></div>
+     <div id="game-status" class="game-status" role="status">Ετοιμάζουμε τη δομή και τα συνθετικά.</div>
+     <div class="workspace">
+       <section class="panel molecule-panel" aria-labelledby="molecule-title">

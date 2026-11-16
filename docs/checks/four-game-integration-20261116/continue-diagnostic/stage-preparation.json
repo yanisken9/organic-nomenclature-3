@@ -1,0 +1,21 @@
+{
+  "recordedUTC": "2026-11-16T06:19:42.009286+00:00",
+  "status": "Prepared only; avoids eager speech service initialization; Chrome owns slot, no Firefox launch",
+  "files": {
+    "stage-runner.py": "1adb9dda728e357a4f8034ee02d6a3c9862312f28a0218aa8c2df1f59f4aedaa",
+    "stage-wrappers.js": "956617624289cf0cc58c2b524b74e804251b859d3a5fc935981b41cb9ec30221",
+    "stage-observation.js": "75c472f64d26d4f248537e0ec004bc501e129302eb29e3c8ed2efd2907164df2",
+    "check-stage-observation.cjs": "8a7ee241c5c8340518a6ca5f8b718babdea8642e8db7ad52f53f16c2a63ba7ee"
+  },
+  "manifestSHA256": "908093208d0ca410c702650b51fc629fae7142d0d2afef50a74fe00a703f2c9c",
+  "frozen12FilesMatch": true,
+  "instrumentation": "Controlled runtime observation, not identical uninstrumented execution. Every setup original/descriptor/verification/APIobject read has before/after/throw beacons. Speech property inspected through descriptors without callinggetter; onlyconfigurable getterdescriptors hooked, unsupportedreported. Getteroriginalcalledonceperapplicationread withsame receiver and returns/throwsidenticalvalue; first successfulget lazilywrapscancel. Originalsetter/enumerable/configurable preserved. MainIFRAMEremove/fScenarioGo/nativeJmol andcapturepagehide retained. Telemetryerrorsswallowed.",
+  "verification": "Python AST, embeddedJSsyntax and16memorychecks passed; servicegettercalls during setup0; no browser claim",
+  "usage": "NAMELECULE_FOUR_GAME_CONTINUE_STAGE_DIAGNOSTIC=granted NAMELECULE_FOUR_GAME_FROZEN_MANIFEST=docs/checks/four-game-integration-20261116/verification-target.json python3 docs/checks/four-game-integration-20261116/continue-diagnostic/stage-runner.py",
+  "boundedScope": "One actual required3answer triple+earnedreload; beforeContinue install6provenobservations; no postblockedBiDicalls; stopgate4Continue; owncleanup. No source/preferences/security changes.",
+  "limits": [
+    "Getter hook requires configurable accessor on native window/prototype; otherwise proof fails beforeContinue without fallback service read.",
+    "Lazy cancel instrumentation and beacons add runtime work/timing; source remainsidentical but execution isinstrumented.",
+    "If a setup reflection/propertyread blocks, lastindependent beforemarker narrowsstage; missingafteralone doesnotestablish exactenginefault."
+  ]
+}

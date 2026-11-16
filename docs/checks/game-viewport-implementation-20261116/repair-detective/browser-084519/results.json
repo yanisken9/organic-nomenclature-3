@@ -1,0 +1,43 @@
+{
+  "role": "Developer isolated headless Chrome; not independent review",
+  "checks": [],
+  "measurements": [],
+  "limitations": [
+    "CSS viewport emulation; physical device/browser zoom not certified.",
+    "Native viewer/chemistry assets use actual sources; external fonts/JSmol may depend on network."
+  ],
+  "sourceSHA256": {
+    "games/name-repair.html": "c3619bacff7fcf33313adf2fcac523219765ad9df9c34ff87ec5bede41c0f985",
+    "games/molecular-detective.html": "18192a9bb320e37e9754d362b50378f19ad1c2450c9bacf6971d60657c22437d",
+    "js/namelecule-game-repair.js": "3ef3b8d43e500f2c8c4aaefc6476a2f70b32294d3658136473f4cbe5062affc9",
+    "js/namelecule-molecular-detective.js": "ac1054c8be8d7ef1ea475e158cc0eb8f4b5773a29ffc06a275805b38c265bbab",
+    "css/namelecule-games.css": "666b64b604682c2d281349f3c10051c73bfbd03f794b111b111d25997c6be8dd",
+    "css/namelecule-repair-round.css": "052b97e330cdb45f29823c38a31d5e54aa406b983d5cad16dff6ae4a9723450b",
+    "css/namelecule-molecular-detective.css": "2be8426b8aa398d41fda6945081c5640032a24a47e1950241a66e22ad72c3bad",
+    "js/namelecule-game-viewport.js": "fb753d04ac17ef270c78fbca69568917914eeea1eb4aca4d6a804b3924208617",
+    "css/namelecule-game-viewport.css": "d30d883fc064e74907c541b7cbe273cbca6aad935fc4d816fcccd3f6307b269d",
+    "js/namelecule-game-levels.js": "63e83cfddb31be303e8f4e9f0b79066dc86eacf7ccc546d22a07f2359203708d",
+    "css/namelecule-game-levels.css": "5295a13b7be25c83caee0d3054b33789ed480d8ea0c4065fe6bc8d6b53dc63fa"
+  },
+  "failure": "Traceback (most recent call last):\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/game-viewport-implementation-20261116/repair-detective/check-browser.py\", line 92, in <module>\n    server=http.server.ThreadingHTTPServer(('127.0.0.1',0),Handler);threading.Thread(target=server.serve_forever,daemon=True).start()\n  File \"/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/socketserver.py\", line 452, in __init__\n    self.server_bind()\n  File \"/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/server.py\", line 138, in server_bind\n    socketserver.TCPServer.server_bind(self)\n  File \"/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/socketserver.py\", line 466, in server_bind\n    self.socket.bind(self.server_address)\nPermissionError: [Errno 1] Operation not permitted\n",
+  "cleanup": {
+    "browserExited": true,
+    "profileRemoved": true,
+    "serverClosed": true
+  },
+  "sourceAfterSHA256": {
+    "games/name-repair.html": "c3619bacff7fcf33313adf2fcac523219765ad9df9c34ff87ec5bede41c0f985",
+    "games/molecular-detective.html": "18192a9bb320e37e9754d362b50378f19ad1c2450c9bacf6971d60657c22437d",
+    "js/namelecule-game-repair.js": "3ef3b8d43e500f2c8c4aaefc6476a2f70b32294d3658136473f4cbe5062affc9",
+    "js/namelecule-molecular-detective.js": "ac1054c8be8d7ef1ea475e158cc0eb8f4b5773a29ffc06a275805b38c265bbab",
+    "css/namelecule-games.css": "666b64b604682c2d281349f3c10051c73bfbd03f794b111b111d25997c6be8dd",
+    "css/namelecule-repair-round.css": "052b97e330cdb45f29823c38a31d5e54aa406b983d5cad16dff6ae4a9723450b",
+    "css/namelecule-molecular-detective.css": "2be8426b8aa398d41fda6945081c5640032a24a47e1950241a66e22ad72c3bad",
+    "js/namelecule-game-viewport.js": "fb753d04ac17ef270c78fbca69568917914eeea1eb4aca4d6a804b3924208617",
+    "css/namelecule-game-viewport.css": "d30d883fc064e74907c541b7cbe273cbca6aad935fc4d816fcccd3f6307b269d",
+    "js/namelecule-game-levels.js": "63e83cfddb31be303e8f4e9f0b79066dc86eacf7ccc546d22a07f2359203708d",
+    "css/namelecule-game-levels.css": "5295a13b7be25c83caee0d3054b33789ed480d8ea0c4065fe6bc8d6b53dc63fa"
+  },
+  "sourceUnchangedDuringBrowser": true,
+  "jsErrors": []
+}

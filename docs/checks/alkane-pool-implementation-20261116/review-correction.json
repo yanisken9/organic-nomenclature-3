@@ -1,0 +1,22 @@
+{
+  "recordedUTC": "2026-11-16T05:32:29.419557+00:00",
+  "finding": "REV-ALK-1",
+  "paths": {
+    "games/name-repair.html": {
+      "before": "b578b366edca00919505600f689434faddd9fb9c426c739c320b873a38da7ffb",
+      "after": "d2ccc1362aac8e884e311e4dbabc7a29fa0cbab10326b996d6ea0c4b426659c2"
+    },
+    "js/namelecule-game-repair.js": {
+      "before": "47b694df9ae2dbbfaa74276e855a9cd40aa086c6ccdcff58c5516560fba3e9c3",
+      "after": "35e859c839011fe4ee7ff3eef63f60f1525b380890c1f46e0ed96cb287062f10"
+    },
+    "mulermoc-nom-57.html": {
+      "before": "b40e005d0d2ec8e4d3828538e6e2515dbb46433cd8d1bf570be658bc183ee27a",
+      "after": "c5e50d4e5fee3462fe6d6ba867ed598a90eeee0a09f1cc0660a2f2df24aa5706"
+    }
+  },
+  "behavior": "Common legacy migration before resets/picker/save/fresh seed; only validated round/results restore legacy; consume mutually exclusive entry commands once; phase-limited resume link",
+  "developerRegression": "root/workshop-version-boundary-results.json",
+  "remaining": "Actual prior UI partial/completed migration flow and independent targeted verification",
+  "svgProvenanceNote": "SVG provenance records exact export-time Main57 HTML. The one changed source hash is this unrelated Workshop script cache URL; original HTML archived under review-before-corrections/mulermoc-nom-57.html. Renderer/core/bundle/geometry/style/asset hashes unchanged."
+}

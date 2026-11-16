@@ -1,0 +1,136 @@
+{
+  "completed": true,
+  "checks": [
+    {
+      "label": "Detective title matches approved font contract",
+      "detail": {
+        "family": "Roboto Condensed, sans-serif",
+        "size": "40px",
+        "weight": "700",
+        "line": "44.8px",
+        "spacing": "-1.6px",
+        "body": "system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif"
+      }
+    },
+    {
+      "label": "390px page has no horizontal overflow",
+      "detail": null
+    },
+    {
+      "label": "390px genuine touch selects atom",
+      "detail": null
+    },
+    {
+      "label": "320px resize preserves selection without horizontal overflow",
+      "detail": null
+    },
+    {
+      "label": "Genuine UI check correct",
+      "detail": {
+        "phase": "active",
+        "moleculeId": "ethanol",
+        "roundId": "detective-round-3",
+        "missionId": "ethanol:comp9:hydroxyl",
+        "bridgeMissionId": "ethanol:comp9:hydroxyl:5",
+        "missionIndex": 2,
+        "missionCount": 3,
+        "kind": "atoms",
+        "atoms": [
+          3,
+          9
+        ],
+        "bonds": [],
+        "selectionRevision": 11,
+        "correct": true,
+        "requestId": 11
+      }
+    },
+    {
+      "label": "Existing lesson progress storage left unchanged",
+      "detail": null
+    },
+    {
+      "label": "Actual reload returns working fresh mission",
+      "detail": null
+    },
+    {
+      "label": "Actual Puzzle and Detective typography matches",
+      "detail": {
+        "detective": {
+          "family": "Roboto Condensed, sans-serif",
+          "size": "40px",
+          "weight": "700",
+          "line": "44.8px",
+          "spacing": "-1.6px",
+          "body": "system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif"
+        },
+        "puzzle": {
+          "family": "Roboto Condensed, sans-serif",
+          "size": "40px",
+          "weight": "700",
+          "line": "44.8px",
+          "spacing": "-1.6px",
+          "body": "system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif"
+        }
+      }
+    },
+    {
+      "label": "Lesson-look preview opens functioning embedded game",
+      "detail": null
+    },
+    {
+      "label": "Lesson-look preview can scroll its content",
+      "detail": null
+    },
+    {
+      "label": "390px lesson-look framing fits width",
+      "detail": null
+    },
+    {
+      "label": "No captured JavaScript exceptions",
+      "detail": []
+    },
+    {
+      "label": "All eight runtime files unchanged during targeted continuation",
+      "detail": null
+    }
+  ],
+  "role": "Developer actual headless Firefox, viewport emulation; not independent browser review",
+  "limits": [
+    "No personal/GUI Firefox or physical device test",
+    "No offline/conference/uninterrupted-operation claim",
+    "External font/vendor dependencies retained"
+  ],
+  "runtimeAtStart": {
+    "games/molecular-detective.html": "e1cb6fd8871cbd227fa5beebb35d8ff02f3b998b70b04254ab319478732ef902",
+    "css/namelecule-molecular-detective.css": "9d556692f54e19872b04c74705fa03a27c0d9f573734f92f550b719789147d52",
+    "js/namelecule-molecular-detective.js": "3b8dba409435fd0e07259d6e7da3e207e34feb9749a7ee035f7087a6b27abd43",
+    "js/namelecule-molecular-detective-engine.js": "020340742102bf2ec5810975fe45b64ba642c3aa409c11b3f0359fb3801b26d6",
+    "js/namelecule-molecular-detective-host.js": "177e7fc961d44b23c28b9650ef15deead4377f692fa866eadb96daac892608c0",
+    "games/molecular-detective-viewer.html": "87cc4788612c173ee266e11457e7cf265f3da06f1d93791e93655a8db98f38ae",
+    "tools/build-molecular-detective-host.py": "0beacd21731ef4111001264332f1e1be34c532b98a38eb45692712bd33efa3f2",
+    "design/molecular-detective-preview.html": "ffbf5a05a49a0db30dfc1d6dfb4288116e9f4759d48ecdf7417be1b26403ec04"
+  },
+  "controlMethod": "Molecule/mission select value + change event; molecule answers use genuine WebDriver pointer actions at visible SVG anchors/bond interiors. No direct selection setter or fabricated target.",
+  "scope": "Targeted continuation after260 passed checks/49 genuine correct answers. Prior run stopped only on quoted versus unquoted computed-font serialization. Runtime unchanged; no repeat of already-passed broad matrix.",
+  "detectiveFont": {
+    "family": "Roboto Condensed, sans-serif",
+    "size": "40px",
+    "weight": "700",
+    "line": "44.8px",
+    "spacing": "-1.6px",
+    "body": "system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif"
+  },
+  "runtimeAtFinish": {
+    "games/molecular-detective.html": "e1cb6fd8871cbd227fa5beebb35d8ff02f3b998b70b04254ab319478732ef902",
+    "css/namelecule-molecular-detective.css": "9d556692f54e19872b04c74705fa03a27c0d9f573734f92f550b719789147d52",
+    "js/namelecule-molecular-detective.js": "3b8dba409435fd0e07259d6e7da3e207e34feb9749a7ee035f7087a6b27abd43",
+    "js/namelecule-molecular-detective-engine.js": "020340742102bf2ec5810975fe45b64ba642c3aa409c11b3f0359fb3801b26d6",
+    "js/namelecule-molecular-detective-host.js": "177e7fc961d44b23c28b9650ef15deead4377f692fa866eadb96daac892608c0",
+    "games/molecular-detective-viewer.html": "87cc4788612c173ee266e11457e7cf265f3da06f1d93791e93655a8db98f38ae",
+    "tools/build-molecular-detective-host.py": "0beacd21731ef4111001264332f1e1be34c532b98a38eb45692712bd33efa3f2",
+    "design/molecular-detective-preview.html": "ffbf5a05a49a0db30dfc1d6dfb4288116e9f4759d48ecdf7417be1b26403ec04"
+  },
+  "javascriptErrors": [],
+  "diagnostics": []
+}

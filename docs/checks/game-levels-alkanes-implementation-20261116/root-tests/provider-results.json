@@ -1,0 +1,37 @@
+{
+  "recordedUTC": "2026-11-16T07:43:03.204Z",
+  "role": "Developer evidence",
+  "passed": true,
+  "groups": [
+    "module registration and complete legacy v1 lifecycle work without levels global",
+    "before/current v1 generated rounds and valid partial/earned states are byte-identical",
+    "v2 exact recipes and round contexts reject mismatches without legacy fallback",
+    "v2 levels use distinct cache identities, correct effective sets and synchronous warm null",
+    "final footer reads dynamic aggregate label after state publication",
+    "source byte mismatch fails before analysis and allows a fresh retry",
+    "aborted cold preparation rejects promptly and late ignored-signal fetch cannot warm caches"
+  ],
+  "beforeProviderSHA256": "2a0c77f352272a0cc8af6223e6f15d252f5d445a2dc9a1df5402452db8a22299",
+  "files": {
+    "js/namelecule-game-levels.js": "3be269c6cdecc2158184db5f82269b44403c86be59e37adf7aa5e8e7edb72df5",
+    "css/namelecule-game-levels.css": "ef6a92b3b4bc3bc4ac92665ce15007176ac4795242e439b1b9c089948ce8cdec",
+    "js/namelecule-generated-repair-checkpoint.js": "9e05fb77c1f9d0dca9198fa62ddb72a9d1ae45ff3048826cd2d341b493f70001"
+  },
+  "beforeVsCurrent": {
+    "recipes": 2,
+    "seeds": 2,
+    "statesPerRecipeSeed": 2,
+    "exactRoundAndStateComparisons": 8,
+    "withoutLevelsGlobal": true
+  },
+  "sourceAndEngine": "Actual source8/source14 bytes, pinned worker analyses and unchanged generator/round validation; fetch is local-byte injected",
+  "adjustedTestContract": "REV-LEVELS-1: canonical-source-cold prepare is async; new required contexts against an already byte/engine-verified source now return synchronous null after reconstruction. Round/state comparisons unchanged.",
+  "limits": [
+    "No browser/layout/keyboard or actual rendered-footer execution",
+    "Dynamic label tested through actual provider callback/getter contract and a round UI stub",
+    "Parent aggregate receipts/migration/child message guards not exercised here"
+  ],
+  "coreChanged": false,
+  "commit": false,
+  "publication": false
+}

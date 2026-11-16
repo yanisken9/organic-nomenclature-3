@@ -1,0 +1,168 @@
+{
+  "recordedUTC": "2026-11-15T05:46:45.470291+00:00",
+  "scope": "Actual extracted classifier with real measured full559px-svg-unit glyphs, independent visible bond gap and explicit/implicit ownership variations; browser pointer validation remains with root.",
+  "runs": {
+    "initial5f86": {
+      "sha256": "5f86d5e80baee771fe7aa76767dd41258e354ae082033f3cc44d6572e1386a17",
+      "exitCode": 0,
+      "output": {
+        "cases": 10,
+        "passed": 4,
+        "results": [
+          {
+            "name": "actual measured raw midpoint is inside C1 glyph and correctly selects C1",
+            "pass": true
+          },
+          {
+            "name": "actual independently measured visible gap selects C-C bond",
+            "pass": false,
+            "error": "Error: expected {\"kind\":\"bond\",\"bond\":1,\"pair\":[1,2]}, got {\"kind\":\"atom\",\"atom\":2,\"vertex\":1}"
+          },
+          {
+            "name": "all observed visible samples avoid explicit-atom vertex halos",
+            "pass": false,
+            "error": "Error: expected {\"kind\":\"bond\",\"bond\":1,\"pair\":[1,2]}, got {\"kind\":\"atom\",\"atom\":2,\"vertex\":1}"
+          },
+          {
+            "name": "main-chain mission ignores actual visible gap without selecting endpoint",
+            "pass": false,
+            "error": "Error: expected {\"ignore\":true}, got {\"kind\":\"atom\",\"atom\":2,\"vertex\":1}"
+          },
+          {
+            "name": "bond mission retains native endpoint payload for visible gap",
+            "pass": false,
+            "error": "Error: expected {\"kind\":\"bond\",\"bond\":1,\"pair\":[1,2]}, got {\"kind\":\"atom\",\"atom\":2,\"vertex\":1}"
+          },
+          {
+            "name": "expanded explicit carbon vertex does not steal visible C-C interior",
+            "pass": false,
+            "error": "Error: expected {\"kind\":\"bond\",\"bond\":1,\"pair\":[1,2]}, got {\"kind\":\"atom\",\"atom\":2}"
+          },
+          {
+            "name": "labeled hetero vertex does not steal visible adjacent bond interior",
+            "pass": false,
+            "error": "Error: expected {\"kind\":\"bond\",\"bond\":1,\"pair\":[1,2]}, got {\"kind\":\"atom\",\"atom\":2}"
+          },
+          {
+            "name": "unlabeled skeletal endpoint retains native implicit-vertex selection",
+            "pass": true
+          },
+          {
+            "name": "skeletal vertex ownership excludes only explicitly labeled atom",
+            "pass": true
+          },
+          {
+            "name": "explicit expanded H retains native parent redirection",
+            "pass": true
+          }
+        ]
+      }
+    },
+    "before9a0d": {
+      "sha256": "9a0d9561a93401744ac3189a05edf3b67222c3b29bf7e50cd2152c06dbd6e53d",
+      "exitCode": 0,
+      "output": {
+        "cases": 10,
+        "passed": 4,
+        "results": [
+          {
+            "name": "actual measured raw midpoint is inside C1 glyph and correctly selects C1",
+            "pass": true
+          },
+          {
+            "name": "actual independently measured visible gap selects C-C bond",
+            "pass": false,
+            "error": "Error: expected {\"kind\":\"bond\",\"bond\":1,\"pair\":[1,2]}, got {\"kind\":\"atom\",\"atom\":2,\"vertex\":1}"
+          },
+          {
+            "name": "all observed visible samples avoid explicit-atom vertex halos",
+            "pass": false,
+            "error": "Error: expected {\"kind\":\"bond\",\"bond\":1,\"pair\":[1,2]}, got {\"kind\":\"atom\",\"atom\":2,\"vertex\":1}"
+          },
+          {
+            "name": "main-chain mission ignores actual visible gap without selecting endpoint",
+            "pass": false,
+            "error": "Error: expected {\"ignore\":true}, got {\"kind\":\"atom\",\"atom\":2,\"vertex\":1}"
+          },
+          {
+            "name": "bond mission retains native endpoint payload for visible gap",
+            "pass": false,
+            "error": "Error: expected {\"kind\":\"bond\",\"bond\":1,\"pair\":[1,2]}, got {\"kind\":\"atom\",\"atom\":2,\"vertex\":1}"
+          },
+          {
+            "name": "expanded explicit carbon vertex does not steal visible C-C interior",
+            "pass": false,
+            "error": "Error: expected {\"kind\":\"bond\",\"bond\":1,\"pair\":[1,2]}, got {\"kind\":\"atom\",\"atom\":2,\"vertex\":1}"
+          },
+          {
+            "name": "labeled hetero vertex does not steal visible adjacent bond interior",
+            "pass": false,
+            "error": "Error: expected {\"kind\":\"bond\",\"bond\":1,\"pair\":[1,2]}, got {\"kind\":\"atom\",\"atom\":2,\"vertex\":1}"
+          },
+          {
+            "name": "unlabeled skeletal endpoint retains native implicit-vertex selection",
+            "pass": true
+          },
+          {
+            "name": "skeletal vertex ownership excludes only explicitly labeled atom",
+            "pass": true
+          },
+          {
+            "name": "explicit expanded H retains native parent redirection",
+            "pass": true
+          }
+        ]
+      }
+    },
+    "after": {
+      "sha256": "2840d9282f6eb91124b22b6bef46df035f6c07320473e5bf2944e96e3372e8d3",
+      "exitCode": 0,
+      "output": {
+        "cases": 10,
+        "passed": 10,
+        "results": [
+          {
+            "name": "actual measured raw midpoint is inside C1 glyph and correctly selects C1",
+            "pass": true
+          },
+          {
+            "name": "actual independently measured visible gap selects C-C bond",
+            "pass": true
+          },
+          {
+            "name": "all observed visible samples avoid explicit-atom vertex halos",
+            "pass": true
+          },
+          {
+            "name": "main-chain mission ignores actual visible gap without selecting endpoint",
+            "pass": true
+          },
+          {
+            "name": "bond mission retains native endpoint payload for visible gap",
+            "pass": true
+          },
+          {
+            "name": "expanded explicit carbon vertex does not steal visible C-C interior",
+            "pass": true
+          },
+          {
+            "name": "labeled hetero vertex does not steal visible adjacent bond interior",
+            "pass": true
+          },
+          {
+            "name": "unlabeled skeletal endpoint retains native implicit-vertex selection",
+            "pass": true
+          },
+          {
+            "name": "skeletal vertex ownership excludes only explicitly labeled atom",
+            "pass": true
+          },
+          {
+            "name": "explicit expanded H retains native parent redirection",
+            "pass": true
+          }
+        ]
+      }
+    }
+  }
+}

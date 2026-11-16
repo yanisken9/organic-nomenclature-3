@@ -1,0 +1,45 @@
+from pathlib import Path
+source = Path(__file__).with_name('acceptance.py').read_text()
+exec(compile(source[:source.index("try:\n    call('script.addPreloadScript'")], 'detective-acceptance-helpers', 'exec'))
+out['scope'] = 'Targeted continuation after260 passed checks/49 genuine correct answers. Prior run stopped only on quoted versus unquoted computed-font serialization. Runtime unchanged; no repeat of already-passed broad matrix.'
+try:
+    navigate('games/molecular-detective.html');ready()
+    ev('document.fonts.ready.then(()=>true)')
+    font=read('(()=>{const s=getComputedStyle(document.querySelector("h1"));return{family:s.fontFamily,size:s.fontSize,weight:s.fontWeight,line:s.lineHeight,spacing:s.letterSpacing,body:getComputedStyle(document.body).fontFamily}})()')
+    out['detectiveFont']=font
+    check(font['family'].replace('"','')=='Roboto Condensed, sans-serif' and font['size']=='40px' and font['weight']=='700','Detective title matches approved font contract',font)
+    change_molecule('methyl_2_pentane');choose_family('parent-chain')
+    ev('window.scrollTo(0,0);true');shot('desktop-game')
+    call('browsingContext.setViewport',{'context':ctx,'viewport':{'width':390,'height':844},'devicePixelRatio':1});pause(250)
+    check(ev('document.documentElement.scrollWidth<=innerWidth+1'), '390px page has no horizontal overflow')
+    pick('atoms',2,touch=True)
+    check(selected('atoms')==[2], '390px genuine touch selects atom')
+    call('browsingContext.setViewport',{'context':ctx,'viewport':{'width':320,'height':740},'devicePixelRatio':1});pause(200)
+    check(selected('atoms')==[2] and ev('document.documentElement.scrollWidth<=innerWidth+1'), '320px resize preserves selection without horizontal overflow')
+    click('#clear-selection');wait(S+'.atoms.length===0');shot('mobile-controls')
+    ev('localStorage.setItem("namelecule:lesson-checkpoints:v1:2feede3e","detective-preservation-sentinel");true')
+    change_molecule('ethanol');choose_family('hydroxyl');pick('atoms',3,touch=True);pick('atoms',9,touch=True);check_result(True)
+    check(ev('localStorage.getItem("namelecule:lesson-checkpoints:v1:2feede3e")==="detective-preservation-sentinel"'),'Existing lesson progress storage left unchanged')
+    call('browsingContext.reload',{'context':ctx,'wait':'complete'});ready()
+    check(snapshot()['moleculeId']=='ethane' and not snapshot()['atoms'],'Actual reload returns working fresh mission')
+    call('browsingContext.setViewport',{'context':ctx,'viewport':{'width':1500,'height':1000},'devicePixelRatio':1})
+    navigate('games/molecular-puzzle.html');wait('!!document.querySelector(".puzzle-title h1")');ev('document.fonts.ready.then(()=>true)')
+    puzzle_font=read('(()=>{const s=getComputedStyle(document.querySelector("h1"));return{family:s.fontFamily,size:s.fontSize,weight:s.fontWeight,line:s.lineHeight,spacing:s.letterSpacing,body:getComputedStyle(document.body).fontFamily}})()')
+    check(font==puzzle_font,'Actual Puzzle and Detective typography matches',{'detective':font,'puzzle':puzzle_font})
+    navigate('design/molecular-detective-preview.html')
+    wait('document.querySelector(".preview-frame").contentWindow.NameleculeMolecularDetective?.snapshot().phase==="active"')
+    check(ev('document.querySelector(".preview-frame").contentDocument.body.classList.contains("detective-embedded")'),'Lesson-look preview opens functioning embedded game')
+    check(ev('document.querySelector(".preview-frame").contentDocument.documentElement.scrollHeight>document.querySelector(".preview-frame").clientHeight'),'Lesson-look preview can scroll its content')
+    shot('lesson-look')
+    call('browsingContext.setViewport',{'context':ctx,'viewport':{'width':390,'height':844},'devicePixelRatio':1});pause(200)
+    check(ev('document.documentElement.scrollWidth<=innerWidth+1&&document.querySelector(".preview-frame").contentDocument.documentElement.scrollWidth<=document.querySelector(".preview-frame").clientWidth+1'),'390px lesson-look framing fits width')
+    check(not js_errors,'No captured JavaScript exceptions',js_errors)
+    out['runtimeAtFinish']={p:hashlib.sha256((ROOT/p).read_bytes()).hexdigest() for p in paths}
+    check(out['runtimeAtFinish']==hashes,'All eight runtime files unchanged during targeted continuation')
+    out['completed']=True
+except Exception:
+    out['failure']=traceback.format_exc()
+    try:out['stateAtFailure']=snapshot();shot('failure')
+    except Exception:pass
+finally:finish('acceptance-tail')
+if not out['completed']:raise SystemExit(1)

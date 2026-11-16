@@ -1,0 +1,80 @@
+{
+  "recordedUTC": "2026-11-16T08:55:40.207725+00:00",
+  "role": "Implementation worker / Developer evidence; independent review owned by root",
+  "ownedFiles": {
+    "games/name-repair.html": "c3619bacff7fcf33313adf2fcac523219765ad9df9c34ff87ec5bede41c0f985",
+    "games/molecular-detective.html": "18192a9bb320e37e9754d362b50378f19ad1c2450c9bacf6971d60657c22437d",
+    "js/namelecule-game-repair.js": "03a28ed4c5c75a4ed4c8a729807e890941c7ded978b5c7c9fee8526c797c343c",
+    "js/namelecule-molecular-detective.js": "728a30781c664ee1f09ccbe17672f5b0981ed9171adc62eda9ee2ea8d40d6547",
+    "css/namelecule-games.css": "666b64b604682c2d281349f3c10051c73bfbd03f794b111b111d25997c6be8dd",
+    "css/namelecule-repair-round.css": "052b97e330cdb45f29823c38a31d5e54aa406b983d5cad16dff6ae4a9723450b",
+    "css/namelecule-molecular-detective.css": "2be8426b8aa398d41fda6945081c5640032a24a47e1950241a66e22ad72c3bad"
+  },
+  "behavior": [
+    "Strict viewport opt-in for common Repair renderer; legacy callers without options.viewport retain the natural flow and reveal contract.",
+    "Compact Repair uses parts/choices and structure/edit views, shared button paging, explicit feedback with same-state return, successful bottom actions, and stage-aware onSuccessActionsReady.",
+    "Repair fitted local overlay supports zoom, Esc, focus restore and focus trap; no native host/source molecule geometry changes.",
+    "Standalone Repair selection/results use button pages; scenario/storage identities unchanged.",
+    "Detective standalone opts in; lesson opts in only viewport=1. Controlled viewport commands validate source/origin/channel/session/current request/attempt/molecule/mission/context and numeric bounds. Natural height/reveal disabled only in opt-in mode.",
+    "Detective narrow clue and real native-picking views, complete name/prompt/feedback paging, feedback return, correct Next and visible Next focus preserved."
+  ],
+  "verification": {
+    "syntax": [
+      "node --check js/namelecule-game-repair.js",
+      "node --check js/namelecule-molecular-detective.js"
+    ],
+    "pureContracts": {
+      "path": "contract-results.json",
+      "repairCases": 77,
+      "result": "pass; exported repair engine functions source-identical; Detective canonical validation/native receive/grading/source protocols source-identical"
+    },
+    "initialBrowser": {
+      "path": "browser-085106/results.json",
+      "assertions": 68,
+      "status": "assertions passed, but later visual QA found clue overlaid by imported Builder CSS; not complete acceptance"
+    },
+    "targetedAfterRootDependencyFix": {
+      "path": "browser-085441/results.json",
+      "assertions": 41,
+      "result": "pass; all4CSSsizes, mobilelevelselector, truecluehit+moleculehidden, fullnativeframing, genuinepick/partialresize/correctNext/newmolecule, gracefulmissingengine",
+      "nativeRenderedFontMinimumAcrossSample": 18.35939315627995,
+      "nativeLabelsInSample": 20,
+      "sourceUnchangedDuringRun": true,
+      "jsExceptions": 0
+    },
+    "repairBrowser": {
+      "path": "browser-085106/results.json",
+      "result": "Repair4CSSsizes, mobile selection/structure, wrongpart-noattempt, wrongcheck-oneattempt, samechoice return, successful footer→inspect→footer, fittedzoom Esc+focus passed; later dependency correction changed only CSS imported by Detective/Builder, not Repair"
+    },
+    "cleanup": "Allowned browser processes exited, isolated profiles removed and HTTP servers closed for every completed/stopped run."
+  },
+  "finding": {
+    "id": "D-VIEW-01",
+    "severity": "P1",
+    "cause": "css/namelecule-name-builder.css #game.nl-game-viewport:not(.puzzle-game) also matches Detective because it imports this shared theme. The ID specificity wins over Detective root grid and narrow molecule hide.",
+    "observed": "At390x700 the clue and molecule have the same visible rect after clue-tab click; iframe overlays the full clue. The button appears selected but mission text is not visible.",
+    "evidence": [
+      "browser-085106/detective-390-clue.png",
+      "browser-085106/results.json measurement tag390-clue"
+    ],
+    "requiredCorrection": "Scope Builder viewport rules to the Builder or exclude Detective; recheck Detective all four layouts, actual clue visibility, correct next and native picking.",
+    "sourceEdits": "none while frozen reviewer target active",
+    "resolution": {
+      "owner": "root Developer",
+      "changedDependency": "css/namelecule-name-builder.css",
+      "behavior": "Scoped all39 generic Builder viewport selectors positively to data-nl-vp-kind=\"builder\". Detective grid and narrow clue/molecule visibility now use their own CSS.",
+      "verification": "browser-085441/results.json:41PASS, screenshot detective-390-clue visually inspected, actual clue hit and moleculehidden asserted, native picks/next reverified",
+      "sourceSHA256": "77e59a4a42ce0bbc188de029f9ef7b68891f1a71561ff9184962bdeba97c8cd5"
+    }
+  },
+  "remainingLimits": [
+    "No independent review executed by this worker. Root handles frozen-target review and full lesson checks.",
+    "Isolated headless Chrome CSS viewport emulation only; Firefox, physical user viewport, 125/200% browser zoom, all14molecules/all3levels/triples and embedded lesson receipts are not certified by this worker run.",
+    "Repair order interaction source preserved and controller syntax/engine cases checked; random UI sample was a replace task, not every authored/generated task.",
+    "Fonts/JSmol/native viewer assets remain dependencies. No conference/offline readiness claim.",
+    "Optional post-scope Builder smoke was not repeated in this worker; root owns that affected-dependency verification."
+  ],
+  "coreChanges": "No core/core-version file authored or edited by this worker.",
+  "commit": false,
+  "publication": false
+}

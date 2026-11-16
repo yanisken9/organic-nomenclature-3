@@ -1,0 +1,60 @@
+--- replay-detective-5e227d49bde30ce1d8dd246c28ab4df12d231150e13d74fc0b6fad3f72af646e.py
++++ current/replay-detective.py
+@@ -36,6 +36,8 @@
+ GAME = MODE.removeprefix('old3-') if MODE.startswith('old3-') else 'detective'
+ CONTINUE_INPUT = os.environ.get('NAMELECULE_FOUR_GAME_CONTINUE_INPUT','keyboard')
+ assert CONTINUE_INPUT in ['keyboard','pointer'], 'Unsupported Continue input mode'
++LEGACY_CASES=os.environ.get('NAMELECULE_FOUR_GAME_LEGACY_CASES','partial,earned').split(',')
++assert LEGACY_CASES and len(set(LEGACY_CASES))==len(LEGACY_CASES) and all(case in ['partial','earned'] for case in LEGACY_CASES), 'Unsupported old3 case selection'
+ PRIOR = HERE.parent/'before'
+ SOURCES = set(FROZEN) | {'mulermoc-nom-57.html','scenarios/alkanes-user-3.scenario.json',
+  'js/namelecule-game-choice-checkpoint.js','js/namelecule-molecular-detective-lesson.js',
+@@ -47,6 +49,10 @@
+  'js/mulermoc-nom-core-55.js','js/mulermoc-nom-core-56.js','js/mulermoc-nom-core-57.js',
+  'js/mulermoc-nom-molview-56.js','js/mulermoc-nom-teaching-56.js','js/mulermoc-nom-scenario-57.js',
+  'games/name-builder.html','games/molecular-puzzle.html','js/namelecule-name-builder.js','js/namelecule-molecular-puzzle.js'}
++HYDRATION_PACK=json.loads((ROOT/'data/namelecule-alkanes-v1/manifest.json').read_text())
++SOURCES.update({'js/MULERMOC_namelecule_alkanes_v1_data.js','data/namelecule-alkanes-v1/manifest.json',
++ 'js/jsme-nick-nomeclature-moc2-data_55.js','js/jsme-nick-nomeclature-moc2-data_56.js','js/jsme-nick-nomeclature-moc2-data_57.js'})
++for molecule in HYDRATION_PACK['molecules']: SOURCES.update(molecule['files'].values())
+ if MODE.startswith('old3-'):
+  for item in ['js/namelecule-game-choice-checkpoint.js','scenarios/alkanes-user-3.scenario.json']:
+   assert (PRIOR/item).is_file(), 'Exact archived prior composite/scenario required'
+@@ -59,10 +65,11 @@
+ OUT = {'role':'Developer browser execution; not independent review','mode':MODE,'continueInput':CONTINUE_INPUT,'checks':[],'correctUIAttempts':[],
+  'sourceBefore':hashes(),'manifest':str(MANIFEST),'manifestSHA256':sha(MANIFEST),'harnessSHA256':sha(Path(__file__)),
+  'helperSHA256':sha(HERE/'legacy-solve-helpers.py'),
+- 'scope':'Both actual Detective lesson gates, genuine raw native SVG picks and production Check; partial/earned reload, optional/switch flow, resize. Separate modes create genuine archived three-game partial/earned records before exact migration.',
++ 'scope':('Required Detective gates4/11 only: six genuine raw native SVG/Check answers, partial/earned reload, resize and Continue5/12; no optional/switch replay in this mode.' if MODE=='detective-required' else 'Archived '+GAME+' UI migration cases '+','.join(LEGACY_CASES) if MODE.startswith('old3-') else 'Detective required gates plus optional triple and other-game switches.'),
++ 'legacyCasesRequested':LEGACY_CASES if MODE.startswith('old3-') else [],
+  'limits':['Isolated headless Firefox CSS emulation; physical mobile/personal Firefox/conference/offline reliability unqualified.',
+  'JSmol j2s/fonts/services remain external dependencies. No exhaustive84 seeded triples.',
+- 'Checkpoint Continue uses trusted keyboard Enter after DOM focus preparation; pointer Continue remains unqualified after the retained Firefox RemoteAgent actor/timeout failure.',
++ 'Checkpoint Continue input requested: '+CONTINUE_INPUT+'. Its observed outcome is recorded by completed navigation checks; prior failed runs remain separate evidence.',
+  'Lesson reset has no observed visible control; current/reset-wins are primarily covered by root memory checks. No programmatic reset is performed by default.']}
+ MOLS = {m['id']:m['mol'] for m in json.loads((ROOT/'games/data/alkane-structures.json').read_text())['molecules']}
+ server = firefox = log = profile = None
+@@ -154,6 +161,14 @@
+  check((target in ds()[kind])==expected,'native raw ID '+('selected' if expected else 'blocked for wrong kind'),{'target':target,'actual':ds()[kind]})
+ def dsolve(label,index,practice=False,partial=False):
+  entry=oracle(index,practice);mission=entry['mission'];snapshot=entry['snapshot'];state=ds()
++ if 'native56Hydration' not in OUT:
++  native='document.querySelector(".nl-detective-frame").contentDocument.getElementById("molecule-viewer").contentWindow'
++  expression='({entries:Object.keys(nameExamples).length,expanded:Object.keys(nameExamples).filter(id=>!!nameExamples[id].structure2D_Expanded).length,customs:Object.fromEntries(Object.keys(window.nameExamplesCustom||{}).map(id=>[id,{condensed:!!nameExamples[id]?.structure2D_Condensed,expanded:!!nameExamples[id]?.structure2D_Expanded,skeletal:!!nameExamples[id]?.structure2D_Skeletal,file3D:nameExamples[id]?.file3D,sameOwner:nameExamples[id]===window.nameExamplesCustom[id]}]))})'
++  actual=read(native+'.eval('+json.dumps(expression)+')');OUT['native56Hydration']=actual
++  check(actual['entries']==147 and actual['expanded']==147 and len(actual['customs'])==6,label+' actual native56 all147 forms available')
++  for molecule in HYDRATION_PACK['molecules']:
++   record=actual['customs'][molecule['id']]
++   check(record['condensed'] and record['expanded'] and record['skeletal'] and record['sameOwner'] and record['file3D']==molecule['files']['sdf'],label+' native56 custom forms and exact SDF source '+molecule['id'])
+  check(state['moleculeId']==snapshot['moleculeId'] and state['missionId']==mission['id'],label+' canonical assigned mission')
+  check(not state['atoms'] and not state['bonds'],label+' new round selection empty')
+  check(frame_read('detective','getComputedStyle(document.getElementById("molecule-select")).display')=='none',label+' controlled molecule picker hidden')
+@@ -224,7 +239,7 @@
+  # Current/old normalized records are obtained through real lesson rendering.
+  # A fresh tab gives each case clean tab-scoped storage without deleting/injecting it.
+  global ctx
+- for case in ['partial','earned']:
++ for case in LEGACY_CASES:
+   if case=='earned':
+    prior_ctx=ctx;ctx=call('browsingContext.create',{'type':'tab'})['context'];call('browsingContext.close',{'context':prior_ctx});viewport(1500,1000)
+   lesson(True,3);open_gate();choose(GAME,3)

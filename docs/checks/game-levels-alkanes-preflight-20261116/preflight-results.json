@@ -1,0 +1,98 @@
+{
+  "recordedUTC": "2026-11-16T07:03:02.306375+00:00",
+  "status": "Read-only plan and feasibility investigation; implementation not approved",
+  "sourceRuntimeChanged": false,
+  "priorVerifiedSourceStable": true,
+  "coreChanged": false,
+  "levels": {
+    "1": {
+      "criterion": "0 alkyl groups outside eligible parent",
+      "ids": [
+        "methane",
+        "ethane",
+        "propane",
+        "butane",
+        "pentane"
+      ]
+    },
+    "2": {
+      "criterion": "1 alkyl group outside eligible parent",
+      "ids": [
+        "methyl_2_butane",
+        "methyl_2_pentane",
+        "methyl_3_pentane",
+        "ethyl_3_pentane"
+      ]
+    },
+    "3": {
+      "criterion": "2+ alkyl groups outside eligible parent",
+      "ids": [
+        "dimethyl_2_2_propane",
+        "dimethyl_2_2_butane",
+        "dimethyl_2_3_butane",
+        "ethyl_3_methyl_2_pentane",
+        "ethyl_3_dimethyl_2_5_hexane"
+      ]
+    }
+  },
+  "lessonCapacity": {
+    "step4": {
+      "level1": 5,
+      "level2": 0,
+      "level3": 0
+    },
+    "step11": {
+      "level1": 0,
+      "level2": 4,
+      "level3": 5
+    }
+  },
+  "existingStandalone": {
+    "repair": 14,
+    "builder": 147,
+    "puzzle": 14,
+    "detective": 27
+  },
+  "measuredDivergences": [
+    "Generated recipe validates exact7 legacy fields/version1/basic/catalog8; rejects enriched recipe currently.",
+    "Detective canonical helper and controlled-child allowlist accept8 only;6new IDs currently rejected.",
+    "Current RepairGenerator rejects band-only catalogs because both straight/branched sets require3.",
+    "Current caches/context do not distinguish selected structural level or source for lesson attempt.",
+    "Legacy branched attempt mixes one single+two multiple branch molecules.",
+    "Step12 still explicitly says8 and menuSubset8."
+  ],
+  "suppliedReadOnlyAgentEvidence": {
+    "standaloneExplorer": {
+      "agent": "/root/levels_standalone_preflight",
+      "pinnedAnalyses": 14,
+      "basicChallengeComparedSeeds": 100,
+      "finding": "Generation is identical between guidance modes except objective/reminder; not current structural levels."
+    },
+    "lessonExplorer": {
+      "agent": "/root/levels_lesson_preflight",
+      "transientGenerationFeasibilitySets": 150,
+      "rounds": 450,
+      "seedCountPerLevel": 50,
+      "allDistinctAndBandCorrect": true
+    },
+    "learningDesigner": {
+      "agent": "/root/levels_learning_preflight",
+      "advice": "Structural levels1atstep4,2/3atstep11; one mission per molecule and legacy progress preserved; difficulty not empirically measured."
+    },
+    "chemistryValidator": {
+      "agent": "/root/levels_chemistry_preflight",
+      "roleId": "NAMELECULE_CHEMISTRY_VALIDATOR_V1_20261023",
+      "graphsAndPinnedAnalyses": 14,
+      "detectiveMissions": 38,
+      "acceptedAlternatives": 77,
+      "gradingAssertions": 115,
+      "validation": "All 14 neutral acyclic CnH2n+2; correct maximum parents/branches and names. Level counts based on alkyl groups, not degree count or totalC.",
+      "limits": "No browser, actual3D or learner difficulty experiment. Six new canonical snapshots were tested only through in-memory extension; production helper remains8 until approved implementation."
+    }
+  },
+  "planReview": "Fresh independent plan review complete;3P2clarifications independently closed; actual implementation/browser review still future",
+  "browserExecutionThisUnit": false,
+  "commit": false,
+  "publication": false,
+  "finalPlanSHA256": "a01a2f550e0337bc0c7f8c1cdca5aa239a94f05ec1186b67669202f7a564e8aa"
+}

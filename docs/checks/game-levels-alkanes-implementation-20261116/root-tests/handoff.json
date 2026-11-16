@@ -1,0 +1,27 @@
+{
+  "recordedUTC": "2026-11-16T07:32:14.443Z",
+  "finalPassed": true,
+  "unresolvedRuntimeFindings": [],
+  "priorHarnessFailures": [
+    {
+      "file": "setup-failures.json",
+      "classification": "Harness setup",
+      "cause": "Missing injected ChemistryClient and archived private helper absent from old source."
+    },
+    {
+      "file": "fixture-failures.json",
+      "classification": "Harness fixture/API assumptions",
+      "cause": "Puzzle has a global-only export; Repair restore requires its normal per-round solved flag plus independently correct raw answer, unlike the other three regraders."
+    },
+    {
+      "file": "cold-fixture-failure.json",
+      "classification": "Unrealistic saved fixture",
+      "cause": "Fixture had an inactive completed attempt without its normally persisted winning receipt. Replaced with an actual warm Composite restore output before testing cold reload."
+    }
+  ],
+  "finalEvidence": "results.json",
+  "run": "node docs/checks/game-levels-alkanes-implementation-20261116/root-tests/check-composite.js",
+  "runtimeEditsByThisTask": false,
+  "memoryOnly": true,
+  "independentReview": false
+}

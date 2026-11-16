@@ -1,0 +1,23 @@
+{
+  "type": "Developer controlled memory proof, no browser execution",
+  "checks": 16,
+  "passed": 16,
+  "records": [
+    "3methodwrappers+speechgetterhook+2pagehide capture observers installed",
+    "setup inspects descriptors without initializing speech service or readingcancel",
+    "first application speech read calls originalgetter once with native receiver,returnsidenticalservice and lazilywrapscancel",
+    "subsequentget preserves receiver and invokesoriginalexactlyoncewithoutrewrappingcancel",
+    "getter exception identity ispreserved andloggedwithoutcancelcall",
+    "main iframe remove preserves receiver,args,return and before/after",
+    "noniframe remove invokes original exactlyonce without telemetry",
+    "main fScenarioGo preserves explicit receiver,args and return",
+    "native speech cancel preserves receiver,args,return",
+    "native Jmol script preserves receiver,applet,command and caps only loggedcommand",
+    "remove propagates same originalexception",
+    "fScenarioGo propagates same originalexception",
+    "speech propagates same originalexception",
+    "Jmol propagates same originalexception",
+    "telemetry exceptions never prevent/replace originalgetter,call orreturn",
+    "outer/nativepagehide capture records use main telemetry safely"
+  ]
+}

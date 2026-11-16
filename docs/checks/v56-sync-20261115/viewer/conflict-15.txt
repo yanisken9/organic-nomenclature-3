@@ -1,0 +1,20 @@
+BEFORE:
+ && initialZoomInline > 0)
+      ? "zoom " + initialZoomInline + ";"
+      : "";
+    try {
+      if (typeof fJSmolLoadInlineSDF === "function") {
+        fJSmolLoadInlineSDF(jmolAppletNomeclature, selectedExample.sdf3D,
+
+LOCAL:
+          "script spt/init-55.spt;" + zoomInline + movetoInline);
+
+UPSTREAM:
+          "script spt/init-3-56.spt;" + zoomInline + movetoInline);
+
+AFTER:
+      }
+    } catch (eInline) {}
+    try { if (typeof fSetMolVis3D === "function") fSetMolVis3D(); } catch (eV) {}
+    try {
+      if (typeof MuLERMoCScenario !== "undefined") MuLERMoCScenario.reload3

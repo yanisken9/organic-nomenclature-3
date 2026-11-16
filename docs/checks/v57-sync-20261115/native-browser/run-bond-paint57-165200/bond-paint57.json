@@ -1,0 +1,164 @@
+{
+  "completed": false,
+  "checks": [
+    {
+      "label": "Genuine disjoint3D bond picks retain exactly two IDs",
+      "detail": {
+        "a2": [],
+        "a3": [],
+        "b2": [
+          3,
+          4
+        ],
+        "b3": [
+          1,
+          5
+        ],
+        "target": null
+      }
+    }
+  ],
+  "role": "Developer actual isolated Firefox; not independent browser review",
+  "limits": [
+    "HeadlessFirefox/viewportemulation, not physicalmobile/Safari/conference/offline guarantee",
+    "Remoteunpinnedj2s/fonts/externalservices remain dependencies",
+    "Only task-owned headlessprofile, no personalFirefox operation"
+  ],
+  "cc": [
+    {
+      "id": 1,
+      "b": [
+        1,
+        2,
+        1
+      ]
+    },
+    {
+      "id": 2,
+      "b": [
+        1,
+        3,
+        1
+      ]
+    },
+    {
+      "id": 5,
+      "b": [
+        2,
+        4,
+        1
+      ]
+    }
+  ],
+  "paint": [
+    {
+      "id": 1,
+      "colix": 26,
+      "ends": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": 2,
+      "colix": 0,
+      "ends": [
+        1,
+        3
+      ]
+    },
+    {
+      "id": 3,
+      "colix": 0,
+      "ends": [
+        1,
+        5
+      ]
+    },
+    {
+      "id": 4,
+      "colix": 0,
+      "ends": [
+        1,
+        6
+      ]
+    },
+    {
+      "id": 5,
+      "colix": 26,
+      "ends": [
+        2,
+        4
+      ]
+    },
+    {
+      "id": 6,
+      "colix": 0,
+      "ends": [
+        2,
+        7
+      ]
+    },
+    {
+      "id": 7,
+      "colix": 0,
+      "ends": [
+        2,
+        8
+      ]
+    },
+    {
+      "id": 8,
+      "colix": 0,
+      "ends": [
+        3,
+        9
+      ]
+    },
+    {
+      "id": 9,
+      "colix": 0,
+      "ends": [
+        3,
+        10
+      ]
+    },
+    {
+      "id": 10,
+      "colix": 0,
+      "ends": [
+        3,
+        11
+      ]
+    },
+    {
+      "id": 11,
+      "colix": 0,
+      "ends": [
+        4,
+        12
+      ]
+    },
+    {
+      "id": 12,
+      "colix": 0,
+      "ends": [
+        4,
+        13
+      ]
+    },
+    {
+      "id": 13,
+      "colix": 0,
+      "ends": [
+        4,
+        14
+      ]
+    }
+  ],
+  "unselectedBridgeColored": false,
+  "expectedPhase": "before",
+  "failure": "Traceback (most recent call last):\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/v57-sync-20261115/native-browser/test-bond-paint57.py\", line 12, in <module>\n    check(out['unselectedBridgeColored']==(out['expectedPhase']=='before'),'Actual live bondInfo confirms '+out['expectedPhase']+' correction paint oracle',out['paint'])\n  File \"native57-support\", line 18, in check\nAssertionError: ('Actual live bondInfo confirms before correction paint oracle', [{'id': 1, 'colix': 26, 'ends': [1, 2]}, {'id': 2, 'colix': 0, 'ends': [1, 3]}, {'id': 3, 'colix': 0, 'ends': [1, 5]}, {'id': 4, 'colix': 0, 'ends': [1, 6]}, {'id': 5, 'colix': 26, 'ends': [2, 4]}, {'id': 6, 'colix': 0, 'ends': [2, 7]}, {'id': 7, 'colix': 0, 'ends': [2, 8]}, {'id': 8, 'colix': 0, 'ends': [3, 9]}, {'id': 9, 'colix': 0, 'ends': [3, 10]}, {'id': 10, 'colix': 0, 'ends': [3, 11]}, {'id': 11, 'colix': 0, 'ends': [4, 12]}, {'id': 12, 'colix': 0, 'ends': [4, 13]}, {'id': 13, 'colix': 0, 'ends': [4, 14]}])\n",
+  "javascriptErrors": [],
+  "diagnostics": []
+}

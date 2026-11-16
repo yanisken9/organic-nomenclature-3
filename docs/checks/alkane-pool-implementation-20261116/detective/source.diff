@@ -1,0 +1,238 @@
+--- before/js/namelecule-molecular-detective-engine.js
++++ js/namelecule-molecular-detective-engine.js
+@@ -1,19 +1,32 @@
+ (function (root) {
+   'use strict';
+ 
+-  // This first pool is deliberately bounded. Targets are derived from the live
++  // This pool is deliberately bounded. Targets are derived from the live
+   // expanded graph; these profiles validate its identity, never prescribe IDs.
+   var starterIds = Object.freeze([
+-    'ethane', 'butane', 'methyl_2_pentane', 'dimethyl_2_3_butane',
++    'methane', 'ethane', 'propane', 'butane', 'pentane',
++    'methyl_2_pentane', 'dimethyl_2_3_butane', 'ethyl_3_dimethyl_2_5_hexane',
++    'methyl_2_butane', 'methyl_3_pentane', 'ethyl_3_pentane',
++    'dimethyl_2_2_propane', 'dimethyl_2_2_butane', 'ethyl_3_methyl_2_pentane',
+     'ethene', 'butene_1', 'butene_2', 'butyne_1', 'butyne_2',
+     'butadiene_1_2', 'butadiene_1_3', 'ethanol', 'butanol_2',
+     'propanal', 'propanone', 'pentanone_3', 'methanoicacid'
+   ]);
+   var profiles = {
++    methane: profile('C', [], 1),
+     ethane: profile('CC', [[1, 2, 1]], 2),
++    propane: profile('CCC', [[1, 2, 1], [2, 3, 1]], 3),
+     butane: profile('CCCC', [[1, 2, 1], [2, 3, 1], [3, 4, 1]], 4),
++    pentane: profile('CCCCC', [[1, 2, 1], [2, 3, 1], [3, 4, 1], [4, 5, 1]], 5),
+     methyl_2_pentane: profile('CCCCCC', [[1, 2, 1], [2, 3, 1], [3, 4, 1], [4, 5, 1], [2, 6, 1]], 5, 1),
+     dimethyl_2_3_butane: profile('CCCCCC', [[1, 2, 1], [2, 3, 1], [3, 4, 1], [2, 5, 1], [3, 6, 1]], 4, 2),
++    ethyl_3_dimethyl_2_5_hexane: profile('CCCCCCCCCC', [[1, 2, 1], [2, 3, 1], [3, 4, 1], [4, 5, 1], [5, 6, 1], [2, 7, 1], [3, 8, 1], [8, 9, 1], [5, 10, 1]], 6, { methyl: 2, ethyl: 1 }),
++    methyl_2_butane: profile('CCCCC', [[1, 2, 1], [2, 3, 1], [3, 4, 1], [2, 5, 1]], 4, 1),
++    methyl_3_pentane: profile('CCCCCC', [[1, 2, 1], [2, 3, 1], [3, 4, 1], [4, 5, 1], [3, 6, 1]], 5, 1),
++    ethyl_3_pentane: profile('CCCCCCC', [[1, 2, 1], [2, 3, 1], [3, 4, 1], [4, 5, 1], [3, 6, 1], [6, 7, 1]], 5, { ethyl: 1 }),
++    dimethyl_2_2_propane: profile('CCCCC', [[1, 2, 1], [2, 3, 1], [2, 4, 1], [2, 5, 1]], 3, 2),
++    dimethyl_2_2_butane: profile('CCCCCC', [[1, 2, 1], [2, 3, 1], [3, 4, 1], [2, 5, 1], [2, 6, 1]], 4, 2),
++    ethyl_3_methyl_2_pentane: profile('CCCCCCCC', [[1, 2, 1], [2, 3, 1], [3, 4, 1], [4, 5, 1], [2, 6, 1], [3, 7, 1], [7, 8, 1]], 5, { ethyl: 1, methyl: 1 }),
+     ethene: profile('CC', [[1, 2, 2]], 2, 0, 2),
+     butene_1: profile('CCCC', [[1, 2, 2], [2, 3, 1], [3, 4, 1]], 4, 0, 2),
+     butene_2: profile('CCCC', [[1, 2, 1], [2, 3, 2], [3, 4, 1]], 4, 0, 2),
+@@ -33,7 +46,8 @@
+     var atoms = elements.split('').map(function (element, i) { return { id: i + 1, element: element }; });
+     var bonds = edges.map(function (edge, i) { return { id: i + 1, a: edge[0], b: edge[1], order: edge[2] }; });
+     return { signature: signature(atoms, bonds), parentLength: parentLength,
+-      branches: branches || 0, order: order || 1, group: group || null };
++      branches: typeof branches === 'number' ? { methyl: branches } : branches || {},
++      order: order || 1, group: group || null };
+   }
+ 
+   function error(code, message) {
+@@ -74,7 +88,7 @@
+ 
+   function inspect(snapshot) {
+     if (!snapshot || typeof snapshot !== 'object' || !Object.prototype.hasOwnProperty.call(profiles, snapshot.moleculeId)) {
+-      throw error('unsupported-molecule', 'Το μόριο δεν ανήκει στο αρχικό σύνολο των 17 μορίων.');
++      throw error('unsupported-molecule', 'Το μόριο δεν ανήκει στο διαθέσιμο σύνολο των 27 μορίων.');
+     }
+     if (typeof snapshot.correctName !== 'string' || !snapshot.correctName.trim() || snapshot.correctName.length > 300 ||
+         !Array.isArray(snapshot.pieces) || !snapshot.pieces.length || snapshot.pieces.length > 30 ||
+@@ -160,6 +174,34 @@
+       seen.add(key);
+       return true;
+     }).sort(function (a, b) { return a.join(',').localeCompare(b.join(',')); });
++  }
++
++  function carbonBranches(snapshot, graph, parent) {
++    var parentIds = new Set(parent), seen = new Set(), components = [];
++    snapshot.atoms.forEach(function (atom) {
++      if (atom.element !== 'C' || parentIds.has(atom.id) || seen.has(atom.id)) return;
++      var pending = [atom.id], ids = [], attachments = [];
++      while (pending.length) {
++        var id = pending.pop();
++        if (seen.has(id)) continue;
++        seen.add(id); ids.push(id);
++        graph.adj.get(id).forEach(function (next) {
++          if (graph.byId.get(next.id).element !== 'C') return;
++          if (parentIds.has(next.id)) attachments.push(parent.indexOf(next.id) + 1);
++          else if (!seen.has(next.id)) pending.push(next.id);
++        });
++      }
++      if (attachments.length !== 1) throw error('branch-attachment', 'Η διακλάδωση δεν έχει μία σύνδεση με την κύρια αλυσίδα.');
++      components.push({ ids: sorted(ids), locant: attachments[0] });
++    });
++    return components;
++  }
++
++  function compareVectors(left, right) {
++    for (var i = 0; i < Math.min(left.length, right.length); i++) {
++      if (left[i] !== right[i]) return left[i] - right[i];
++    }
++    return left.length - right.length;
+   }
+ 
+   function parentSets(snapshot, graph) {
+@@ -174,8 +216,20 @@
+     }
+     carbons.forEach(function (id) { walk([id]); });
+     if (max !== graph.profile.parentLength) throw error('parent-length', 'Δεν βρέθηκε η αναμενόμενη κύρια αλυσίδα.');
+-    // All longest carbon paths are valid in these two small branched alkanes.
+-    // Other pool members have an unbranched carbon skeleton, including their FG.
++    // Bounded neutral acyclic alkanes: longest chain, most substituents, then
++    // lowest locant vector. Keep every equivalent eligible atom set. Other
++    // approved series have unbranched carbon skeletons and retain their targets.
++    if (snapshot.series === 'alkanes') {
++      var candidates = paths.map(function (path) {
++        var components = carbonBranches(snapshot, graph, path);
++        return { path: path, count: components.length, locants: sorted(components.map(function (component) { return component.locant; })) };
++      });
++      var bestCount = Math.max.apply(null, candidates.map(function (candidate) { return candidate.count; }));
++      candidates = candidates.filter(function (candidate) { return candidate.count === bestCount; });
++      candidates.sort(function (a, b) { return compareVectors(a.locants, b.locants); });
++      paths = candidates.filter(function (candidate) { return compareVectors(candidate.locants, candidates[0].locants) === 0; })
++        .map(function (candidate) { return candidate.path; });
++    }
+     return uniqueSets(paths);
+   }
+ 
+@@ -210,16 +264,24 @@
+   function missions(snapshot) {
+     var graph = inspect(snapshot), chosen = graph.profile, parents = parentSets(snapshot, graph);
+     var carbonIds = snapshot.atoms.filter(function (atom) { return atom.element === 'C'; }).map(function (atom) { return atom.id; });
+-    var branches = uniqueSets(parents.map(function (parent) {
+-      return carbonIds.filter(function (id) { return parent.indexOf(id) < 0; });
+-    }));
+-    if (chosen.branches && branches.some(function (set) {
+-      return set.length !== chosen.branches || set.some(function (id) {
+-        return graph.adj.get(id).filter(function (next) { return graph.byId.get(next.id).element === 'C'; }).length !== 1;
++    var branchSizes = { methyl: 1, ethyl: 2 }, branchTargets = {};
++    var branchFamilies = Object.keys(chosen.branches).filter(function (family) { return chosen.branches[family] > 0; });
++    parents.forEach(function (parent) {
++      var components = carbonBranches(snapshot, graph, parent);
++      if (components.length !== branchFamilies.reduce(function (total, family) { return total + chosen.branches[family]; }, 0)) {
++        throw error('branch-target', 'Το πλήθος των διακλαδώσεων δεν συμφωνεί με το μόριο.');
++      }
++      branchFamilies.forEach(function (family) {
++        var matching = components.filter(function (component) { return component.ids.length === branchSizes[family]; });
++        if (!branchSizes[family] || matching.length !== chosen.branches[family]) {
++          throw error('branch-target', 'Οι διακλαδώσεις δεν είναι οι αναμενόμενες αλκυλομάδες.');
++        }
++        if (!branchTargets[family]) branchTargets[family] = [];
++        branchTargets[family].push(matching.reduce(function (ids, component) { return ids.concat(component.ids); }, []));
+       });
+-    })) throw error('branch-target', 'Οι διακλαδώσεις δεν είναι οι αναμενόμενες μεθυλομάδες.');
++    });
+     var groups = literalGroups(snapshot, graph), output = [], families = new Set();
+-    var roots = { μεθ: 1, αιθ: 2, προπ: 3, βουτ: 4, πεντ: 5 };
++    var roots = { μεθ: 1, αιθ: 2, προπ: 3, βουτ: 4, πεντ: 5, εξ: 6 };
+     function add(piece, kind, family, accepted, prompt, explanation) {
+       accepted = uniqueSets(accepted);
+       if (!accepted.length || families.has(family)) throw error('mission-target', 'Δεν βρέθηκε μοναδικός μη κενός στόχος για το συνθετικό.');
+@@ -228,7 +290,7 @@
+         kind: kind, family: family, prompt: prompt, explanation: explanation, accepted: accepted });
+     }
+     snapshot.pieces.forEach(function (piece) {
+-      var key = textKey(piece.text), rootMatch = /^(μεθ|αιθ|προπ|βουτ|πεντ)[αο]?$/.exec(key);
++      var key = textKey(piece.text), rootMatch = /^(μεθ|αιθ|προπ|βουτ|πεντ|εξ)[αο]?$/.exec(key);
+       if (piece.mode === 'compCarbonsCount' && rootMatch) {
+         if (roots[rootMatch[1]] !== chosen.parentLength) throw error('root-text', 'Το συνθετικό δεν συμφωνεί με το πλήθος ατόμων C της κύριας αλυσίδας.');
+         add(piece, 'atoms', 'parent-chain', parents,
+@@ -242,8 +304,8 @@
+         var targets = snapshot.bonds.filter(function (bond) {
+           return bond.order === order && graph.byId.get(bond.a).element === 'C' && graph.byId.get(bond.b).element === 'C';
+         }).map(function (bond) { return bond.id; });
+-        // Methanoic acid has no C-C edge: its -αν- is never an empty mission.
+-        if (!targets.length && order === 1 && chosen.group === 'carboxyl') return;
++        // Methane and methanoic acid have no C-C edge: never offer an empty task.
++        if (!targets.length && order === 1 && carbonIds.length === 1) return;
+         if ((key === 'διεν' && targets.length !== 2) || (key === 'εν' && targets.length !== 1)) {
+           throw error('bond-multiplier', 'Το συνθετικό δεν συμφωνεί με το πλήθος των πολλαπλών δεσμών.');
+         }
+@@ -253,11 +315,17 @@
+           'Το συνθετικό δηλώνει τους ' + label + ' δεσμούς μεταξύ ατόμων C. Επιλέγουμε τους ίδιους τους δεσμούς.');
+         return;
+       }
+-      if (/^comp(SecondSub[12]|BranchSub\d+)$/.test(piece.mode) && /^(μεθυλο|διμεθυλο)$/.test(key)) {
+-        if (chosen.branches !== (key === 'διμεθυλο' ? 2 : 1)) throw error('branch-text', 'Το συνθετικό δεν συμφωνεί με τις μεθυλομάδες του μορίου.');
+-        add(piece, 'atoms', 'branches', branches,
+-          'Επίλεξε τα άτομα C ' + (chosen.branches === 1 ? 'της μεθυλομάδας' : 'των δύο μεθυλομάδων') + ' που δηλώνει το τονισμένο συνθετικό.',
+-          'Κάθε μεθυλομάδα έχει ένα άτομο C έξω από την κύρια αλυσίδα. Τα άτομα H και το άτομο C της κύριας αλυσίδας δεν ανήκουν στην επιλογή.');
++      var branchMatch = /^(δι)?(μεθυλο|αιθυλο)$/.exec(key);
++      if (/^comp(SecondSub[12]|BranchSub\d+)$/.test(piece.mode) && branchMatch) {
++        var branchFamily = branchMatch[2] === 'μεθυλο' ? 'methyl' : 'ethyl';
++        var count = branchMatch[1] ? 2 : 1;
++        if (chosen.branches[branchFamily] !== count) throw error('branch-text', 'Το συνθετικό δεν συμφωνεί με τις αλκυλομάδες του μορίου.');
++        var groupWords = branchFamily === 'methyl' ? ['της μεθυλομάδας', 'των δύο μεθυλομάδων'] : ['της αιθυλομάδας', 'των δύο αιθυλομάδων'];
++        add(piece, 'atoms', branchFamily === 'methyl' ? 'branches' : 'ethyl-branches', branchTargets[branchFamily],
++          'Επίλεξε τα άτομα C ' + groupWords[count - 1] + ' που δηλώνει το τονισμένο συνθετικό.',
++          branchFamily === 'methyl' ?
++            'Κάθε μεθυλομάδα έχει ένα άτομο C έξω από την κύρια αλυσίδα. Τα άτομα H και το άτομο C της κύριας αλυσίδας δεν ανήκουν στην επιλογή.' :
++            'Κάθε αιθυλομάδα έχει δύο συνδεδεμένα άτομα C έξω από την κύρια αλυσίδα. Τα άτομα H και το άτομο C της κύριας αλυσίδας δεν ανήκουν στην επιλογή.');
+         return;
+       }
+       // Native alcohol suffixes may occupy slot 8 / compBondType2. Literal text
+@@ -273,8 +341,10 @@
+       }[family];
+       add(piece, 'atoms', family, groups[family], 'Επίλεξε όλα τα άτομα ' + words[0] + ' που δηλώνει το τονισμένο συνθετικό.', words[1]);
+     });
+-    var expected = 1 + (chosen.branches ? 1 : 0) + (chosen.group ? 1 : 0) + (carbonIds.length > 1 ? 1 : 0);
+-    if (output.length !== expected || !families.has('parent-chain') || (chosen.branches && !families.has('branches')) ||
++    var expected = 1 + branchFamilies.length + (chosen.group ? 1 : 0) + (carbonIds.length > 1 ? 1 : 0);
++    if (output.length !== expected || !families.has('parent-chain') || branchFamilies.some(function (family) {
++      return !families.has(family === 'methyl' ? 'branches' : 'ethyl-branches');
++    }) ||
+         (chosen.group && !families.has(chosen.group))) {
+       throw error('missing-mission', 'Δεν αναγνωρίστηκαν όλα τα αναμενόμενα συνθετικά του μορίου.');
+     }
+--- before/js/namelecule-molecular-detective.js
++++ js/namelecule-molecular-detective.js
+@@ -5,8 +5,8 @@
+   const channel = 'namelecule-molecular-detective-v1';
+   const $ = id => document.getElementById(id);
+   const ui = Object.fromEntries(['molecule-viewer', 'viewer-wrap', 'viewer-mask', 'viewer-message', 'game-status', 'molecule-select', 'mission-select', 'mission-name', 'mission-prompt', 'selection-kind', 'selection-status', 'check-answer', 'clear-selection', 'next-mission', 'zoom-in', 'zoom-out', 'retry-load', 'feedback'].map(id => [id, $(id)]));
+-  const labels = {ethane: 'Αιθάνιο', butane: 'Βουτάνιο', methyl_2_pentane: '2-μεθυλοπεντάνιο', dimethyl_2_3_butane: '2,3-διμεθυλοβουτάνιο', ethene: 'Αιθένιο', butene_1: '1-βουτένιο', butene_2: '2-βουτένιο', butyne_1: '1-βουτίνιο', butyne_2: '2-βουτίνιο', butadiene_1_2: '1,2-βουταδιένιο', butadiene_1_3: '1,3-βουταδιένιο', ethanol: 'Αιθανόλη', butanol_2: '2-βουτανόλη', propanal: 'Προπανάλη', propanone: 'Προπανόνη', pentanone_3: '3-πεντανόνη', methanoicacid: 'Μεθανικό οξύ'};
+-  const familyLabels = {'parent-chain': 'Κύρια αλυσίδα', 'single-bonds': 'Απλοί δεσμοί', 'double-bonds': 'Διπλοί δεσμοί', 'triple-bonds': 'Τριπλοί δεσμοί', branches: 'Διακλαδώσεις', hydroxyl: 'Υδροξύλιο', aldehyde: 'Αλδεϋδομάδα', carbonyl: 'Καρβονύλιο', carboxyl: 'Καρβοξύλιο'};
++  const labels = {methane: 'Μεθάνιο', ethane: 'Αιθάνιο', propane: 'Προπάνιο', butane: 'Βουτάνιο', pentane: 'Πεντάνιο', methyl_2_pentane: '2-μεθυλοπεντάνιο', dimethyl_2_3_butane: '2,3-διμεθυλοβουτάνιο', ethyl_3_dimethyl_2_5_hexane: '3-αιθυλο-2,5-διμεθυλοεξάνιο', methyl_2_butane: '2-μεθυλοβουτάνιο', methyl_3_pentane: '3-μεθυλοπεντάνιο', ethyl_3_pentane: '3-αιθυλοπεντάνιο', dimethyl_2_2_propane: '2,2-διμεθυλοπροπάνιο', dimethyl_2_2_butane: '2,2-διμεθυλοβουτάνιο', ethyl_3_methyl_2_pentane: '3-αιθυλο-2-μεθυλοπεντάνιο', ethene: 'Αιθένιο', butene_1: '1-βουτένιο', butene_2: '2-βουτένιο', butyne_1: '1-βουτίνιο', butyne_2: '2-βουτίνιο', butadiene_1_2: '1,2-βουταδιένιο', butadiene_1_3: '1,3-βουταδιένιο', ethanol: 'Αιθανόλη', butanol_2: '2-βουτανόλη', propanal: 'Προπανάλη', propanone: 'Προπανόνη', pentanone_3: '3-πεντανόνη', methanoicacid: 'Μεθανικό οξύ'};
++  const familyLabels = {'parent-chain': 'Κύρια αλυσίδα', 'single-bonds': 'Απλοί δεσμοί', 'double-bonds': 'Διπλοί δεσμοί', 'triple-bonds': 'Τριπλοί δεσμοί', branches: 'Μεθυλομάδες', 'ethyl-branches': 'Αιθυλομάδες', hydroxyl: 'Υδροξύλιο', aldehyde: 'Αλδεϋδομάδα', carbonyl: 'Καρβονύλιο', carboxyl: 'Καρβοξύλιο'};
+   const params = new URLSearchParams(location.search);
+   if (params.get('embedded') === '1') document.body.classList.add('detective-embedded');
+   const state = {phase: 'startup', session: '', requestId: 0, roundSerial: 0, missionSerial: 0, roundId: null, moleculeId: null, snapshot: null, missions: [], mission: null, bridgeMissionId: null, loadRequestId: 0, configureRequestId: 0, selectionRevision: -1, atoms: [], bonds: [], correct: false, stopped: false};
+@@ -199,7 +199,7 @@
+     status('Ετοιμάζουμε την πρώτη αποστολή.');
+     ui['retry-load'].hidden = true;
+     ui['molecule-select'].replaceChildren(...engine.starterIds.map(id => { const option = document.createElement('option'); option.value = id; option.textContent = labels[id] || id; return option; }));
+-    ui['molecule-viewer'].src = 'molecular-detective-viewer.html?session=' + state.session;
++    ui['molecule-viewer'].src = 'molecular-detective-viewer.html?v=alkane-pool-20261116-r1&session=' + state.session;
+     watch('Η προβολή του μορίου δεν ξεκίνησε. Δοκίμασε ξανά.', 45000);
+   }
+   function stop() {
+--- before/games/molecular-detective.html
++++ games/molecular-detective.html
+@@ -7,8 +7,8 @@
+   <title>Μοριακός ντεντέκτιβ · Namelecule</title>
+   <link rel="stylesheet" href="../css/namelecule-name-builder.css?v=builder-methods-20261112-r3">
+   <link rel="stylesheet" href="../css/namelecule-molecular-detective.css?v=detective-20261115-r1">
+-  <script src="../js/namelecule-molecular-detective-engine.js?v=detective-20261115-r1" defer></script>
+-  <script src="../js/namelecule-molecular-detective.js?v=detective-20261115-r1" defer></script>
++  <script src="../js/namelecule-molecular-detective-engine.js?v=alkane-pool-20261116-r1" defer></script>
++  <script src="../js/namelecule-molecular-detective.js?v=alkane-pool-20261116-r1" defer></script>
+ </head>
+ <body>
+   <a class="skip-link" href="#mission-title">Πήγαινε στην αποστολή</a>

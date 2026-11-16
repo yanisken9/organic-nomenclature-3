@@ -1,0 +1,57 @@
+{
+  "recordedUTC": "2026-11-16T04:45:50.752250+00:00",
+  "clientDate": "2026-11-16",
+  "lastActuallySynchronized": "b73d8b6330cfdb9d83c000a513be7052763aa083",
+  "lastCheckedBefore": "b73d8b6330cfdb9d83c000a513be7052763aa083",
+  "implementationThisTask": false,
+  "HEAD": {
+    "status": 200,
+    "url": "https://api.github.com/repos/nick-charistos/organic-nomenclature-3/commits/HEAD",
+    "sha256": "e10ff268c3d52cf41993b52564fe637f353975aa7822d5c49c7429d8a4bd3076",
+    "message": "v57: strict 3D paint + condensed/skeletal group completion\n\n3D paint is now strictly 2D-parity (atom picks paint atoms only,\nbond picks paint exactly the picked bonds, no auto cross-highlight).\nCondensed paint adds fully-selected fragment internals plus H/C-H\ncompletion; 3D atom picks in condensed delegate to the 2D fragment\nunit (anchor-only under main-chain carbon rule). Skeletal paint\nadds H/C-H plus whole-branch expansion. Quiz compare untouched.\nBrowser verification by owner.",
+    "date": "2026-11-15T21:32:52Z"
+  },
+  "currentHEAD": "a4f8aaa7dfcbd4328889b7d8b2d0d24bc6588f37",
+  "changelog": {
+    "status": 200,
+    "url": "https://raw.githubusercontent.com/nick-charistos/organic-nomenclature-3/HEAD/docs/CHANGELOG.md",
+    "sha256": "097b740c044d9969fb78b38c58253415b6ac02cb686f8eb00e70c331a72415da"
+  },
+  "history": {
+    "status": "ahead",
+    "aheadBy": 6,
+    "commits": [
+      {
+        "sha": "d90eedac47a85da8ea38418c5104ed8a9152679c",
+        "message": "itignore"
+      },
+      {
+        "sha": "1ffdb70dfd0fb6b32ec52f88edb900d5a6641d71",
+        "message": "v57: quiz progress tints, 3D sequence numbers, class-only verdict\n\n- Quiz progress: unsolved quiz-capable boxes get .quizTodo tint\n  (select mode only); solved boxes fall back to classic with full\n  highlight+numbering while armed (viewer-owns-viewer guard admits\n  solved modes). Per-molecule solved sets, cleared on select toggle.\n  Chain-first skips solved stashes.\n- 3D pick-sequence numbers (mulerSelSeq3D echoes, main-chain only,\n  auto-renumbered, cleared on disarm/empty/exact); 3D settings\n  toggles no longer resurrect classic numbering while armed.\n- Armed H picks fold onto the heavy parent (target hydroxyl /\n  aldehyde H stays atomic and selectable from 3D).\n- fMulerQuizVerdict is content-only (kind class + glyph + text);\n  mulerQuiz-hidden replaces inline display; creation default hidden.\n  Kind colors seeded to match rendered output (live hints #333).\n- node --check clean (node.exe v26.13.1); skew identical to v56.\n  Browser verification pending on the browser machine."
+      },
+      {
+        "sha": "46a9d309279da6eea3a0d32f6006e00f69f48bc9",
+        "message": "v57: headless 3D regression probe + changelog note\n\n- tools/muler-harness/probe-3d-pick.js: atom/bond/mirror/\n  double-tap/quiz-exact/model-unchanged coverage for 3D picking,\n  with model-load gate + settle polling for slow applets.\n  Browser run pending on a machine with working 3D."
+      },
+      {
+        "sha": "d94a17a38c10fba491fef9fcd955b02fcc54bfd5",
+        "message": "Merge branch 'main' of https://github.com/nick-charistos/organic-nomenclature-3"
+      },
+      {
+        "sha": "3a335b2b4ec021405e434d19a9dcdddccdcd1224",
+        "message": "v57: free-mode H\u2194H rank mirroring via live bond lists\n\nPicking a hydrogen in one viewer now highlights the matching\nhydrogen in the other (rank among the parent's H neighbors in\nbond-list order, both directions, expanded mode only). The\nconnectivity table has no H rows (bare 0), so all H neighbor\nlookups use bondList/bondList3D instead. Armed fold and\ntarget-H behavior unchanged. Browser verification by owner."
+      },
+      {
+        "sha": "a4f8aaa7dfcbd4328889b7d8b2d0d24bc6588f37",
+        "message": "v57: strict 3D paint + condensed/skeletal group completion\n\n3D paint is now strictly 2D-parity (atom picks paint atoms only,\nbond picks paint exactly the picked bonds, no auto cross-highlight).\nCondensed paint adds fully-selected fragment internals plus H/C-H\ncompletion; 3D atom picks in condensed delegate to the 2D fragment\nunit (anchor-only under main-chain carbon rule). Skeletal paint\nadds H/C-H plus whole-branch expansion. Quiz compare untouched.\nBrowser verification by owner."
+      }
+    ],
+    "paths": [
+      "css/jsme-nick-57.css",
+      "docs/CHANGELOG.md",
+      "docs/SESSION-NOTES.md",
+      "js/mulermoc-nom-molview-57.js",
+      "tools/muler-harness/probe-3d-pick.js"
+    ]
+  }
+}

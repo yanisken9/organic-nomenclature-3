@@ -353,3 +353,20 @@ p { margin-bottom: 1rem; }
   .workshop-title .workshop-logo { width: 88px; height: 88px; }
   .workshop-title h1 { font-size: 2.25rem; }
 }
+
+/* Standalone viewport shell; shared/native legacy hosts do not acquire this class. */
+body.nl-vp-document:has(#game-root) .header-inner { padding: 5px 18px; gap: 12px; }
+body.nl-vp-document:has(#game-root) .brand { width: 150px; }
+body.nl-vp-document:has(#game-root) .exit-link { padding: 5px 12px; }
+body.nl-vp-document:has(#game-root) .game-root { min-height: 0; padding: 8px 18px; }
+body.nl-vp-document:has(#game-root) .site-footer { display: none; }
+.game-root.nl-game-viewport:not(.nl-repair-round) { display: grid; grid-template-rows: minmax(0,1fr); }
+.game-root.nl-game-viewport:not(.nl-repair-round) > .nl-vp-pager { height: 100%; min-height: 0; }
+.game-root.nl-game-viewport .workshop-hub .workshop-hero { padding: 8px 0 14px; }
+.game-root.nl-game-viewport .workshop-hub .workshop-hero h1 { font-size: 28px; margin-bottom: 8px; }
+.game-root.nl-game-viewport .workshop-hub .workshop-hero p { font-size: 14px; }
+.game-root.nl-game-viewport .workshop-hub .workshop-sets { padding: 6px 0 12px; }
+.game-root.nl-game-viewport .workshop-hub .workshop-set-card { padding: 16px; }
+.game-root.nl-game-viewport .result-name { white-space: nowrap; overflow-wrap: normal; }
+.game-root.nl-game-viewport .result-item .nl-vp-pager-x { height: 30px; }
+.game-root.nl-game-viewport .result-item .nl-vp-pager-x.is-overflow { height: 70px; }

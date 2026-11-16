@@ -1,0 +1,161 @@
+{
+  "role": "Developer isolated headless Chrome; not independent review",
+  "checks": [
+    {
+      "label": "Visible production control [data-level=\"3\"]",
+      "passed": true,
+      "detail": {
+        "x": 824,
+        "y": 474.125,
+        "hit": true,
+        "disabled": false
+      }
+    },
+    {
+      "label": "repair before exceeds viewport",
+      "passed": true,
+      "detail": {
+        "scrollWidth": 1024,
+        "scrollHeight": 1010,
+        "scrollX": 0,
+        "scrollY": 0
+      }
+    }
+  ],
+  "measurements": [
+    {
+      "viewport": {
+        "width": 1024,
+        "height": 640
+      },
+      "root": {
+        "scrollWidth": 1024,
+        "scrollHeight": 1010,
+        "scrollX": 0,
+        "scrollY": 0
+      },
+      "items": {
+        ".round-heading": {
+          "x": 32,
+          "y": 201,
+          "width": 960,
+          "height": 137.3125,
+          "bottom": 338.3125,
+          "right": 992,
+          "visible": true,
+          "scrollWidth": 960,
+          "clientWidth": 960,
+          "scrollHeight": 137,
+          "clientHeight": 137,
+          "font": "16px"
+        },
+        ".diagram-stage": {
+          "x": 50,
+          "y": 499.3125,
+          "width": 392.40625,
+          "height": 284.671875,
+          "bottom": 783.984375,
+          "right": 442.40625,
+          "visible": true,
+          "scrollWidth": 392,
+          "clientWidth": 392,
+          "scrollHeight": 285,
+          "clientHeight": 285,
+          "font": "16px"
+        },
+        ".repair-card": {
+          "x": 482.40625,
+          "y": 401.3125,
+          "width": 509.59375,
+          "height": 338.421875,
+          "bottom": 739.734375,
+          "right": 992,
+          "visible": true,
+          "scrollWidth": 508,
+          "clientWidth": 508,
+          "scrollHeight": 336,
+          "clientHeight": 336,
+          "font": "16px"
+        },
+        ".repair-part-page": null,
+        ".repair-choice-page": null,
+        "[id$=\"check-button\"]": {
+          "x": 505.40625,
+          "y": 642.59375,
+          "width": 150,
+          "height": 47,
+          "bottom": 689.59375,
+          "right": 655.40625,
+          "visible": true,
+          "scrollWidth": 148,
+          "clientWidth": 148,
+          "scrollHeight": 45,
+          "clientHeight": 45,
+          "font": "14.08px"
+        },
+        ".repair-feedback-stage": null,
+        ".repair-zoom-overlay": null,
+        ".diagram-image": {
+          "x": 76.828125,
+          "y": 499.3125,
+          "width": 338.75,
+          "height": 284.671875,
+          "bottom": 783.984375,
+          "right": 415.578125,
+          "visible": true,
+          "scrollWidth": 339,
+          "clientWidth": 339,
+          "scrollHeight": 285,
+          "clientHeight": 285,
+          "font": "16px"
+        }
+      },
+      "pagers": [],
+      "game": "repair",
+      "tag": "exact22-before-1024x640"
+    }
+  ],
+  "limitations": [
+    "CSS viewport emulation; physical device/browser zoom not certified.",
+    "Native viewer/chemistry assets use actual sources; external fonts/JSmol may depend on network."
+  ],
+  "sourceSHA256": {
+    "games/name-repair.html": "c3619bacff7fcf33313adf2fcac523219765ad9df9c34ff87ec5bede41c0f985",
+    "games/molecular-detective.html": "18192a9bb320e37e9754d362b50378f19ad1c2450c9bacf6971d60657c22437d",
+    "js/namelecule-game-repair.js": "3ef3b8d43e500f2c8c4aaefc6476a2f70b32294d3658136473f4cbe5062affc9",
+    "js/namelecule-molecular-detective.js": "ac1054c8be8d7ef1ea475e158cc0eb8f4b5773a29ffc06a275805b38c265bbab",
+    "css/namelecule-games.css": "666b64b604682c2d281349f3c10051c73bfbd03f794b111b111d25997c6be8dd",
+    "css/namelecule-repair-round.css": "052b97e330cdb45f29823c38a31d5e54aa406b983d5cad16dff6ae4a9723450b",
+    "css/namelecule-molecular-detective.css": "2be8426b8aa398d41fda6945081c5640032a24a47e1950241a66e22ad72c3bad",
+    "js/namelecule-game-viewport.js": "fb753d04ac17ef270c78fbca69568917914eeea1eb4aca4d6a804b3924208617",
+    "css/namelecule-game-viewport.css": "d30d883fc064e74907c541b7cbe273cbca6aad935fc4d816fcccd3f6307b269d",
+    "js/namelecule-game-levels.js": "63e83cfddb31be303e8f4e9f0b79066dc86eacf7ccc546d22a07f2359203708d",
+    "css/namelecule-game-levels.css": "5295a13b7be25c83caee0d3054b33789ed480d8ea0c4065fe6bc8d6b53dc63fa"
+  },
+  "process": {
+    "pid": 31209,
+    "profile": "/private/tmp/namelecule-vp-repair-detective-4obxnscp",
+    "serverPort": 61225,
+    "debugPort": 61227
+  },
+  "cleanup": {
+    "browserExited": true,
+    "profileRemoved": true,
+    "serverClosed": true
+  },
+  "sourceAfterSHA256": {
+    "games/name-repair.html": "c3619bacff7fcf33313adf2fcac523219765ad9df9c34ff87ec5bede41c0f985",
+    "games/molecular-detective.html": "18192a9bb320e37e9754d362b50378f19ad1c2450c9bacf6971d60657c22437d",
+    "js/namelecule-game-repair.js": "3ef3b8d43e500f2c8c4aaefc6476a2f70b32294d3658136473f4cbe5062affc9",
+    "js/namelecule-molecular-detective.js": "ac1054c8be8d7ef1ea475e158cc0eb8f4b5773a29ffc06a275805b38c265bbab",
+    "css/namelecule-games.css": "666b64b604682c2d281349f3c10051c73bfbd03f794b111b111d25997c6be8dd",
+    "css/namelecule-repair-round.css": "052b97e330cdb45f29823c38a31d5e54aa406b983d5cad16dff6ae4a9723450b",
+    "css/namelecule-molecular-detective.css": "2be8426b8aa398d41fda6945081c5640032a24a47e1950241a66e22ad72c3bad",
+    "js/namelecule-game-viewport.js": "fb753d04ac17ef270c78fbca69568917914eeea1eb4aca4d6a804b3924208617",
+    "css/namelecule-game-viewport.css": "d30d883fc064e74907c541b7cbe273cbca6aad935fc4d816fcccd3f6307b269d",
+    "js/namelecule-game-levels.js": "63e83cfddb31be303e8f4e9f0b79066dc86eacf7ccc546d22a07f2359203708d",
+    "css/namelecule-game-levels.css": "5295a13b7be25c83caee0d3054b33789ed480d8ea0c4065fe6bc8d6b53dc63fa"
+  },
+  "sourceUnchangedDuringBrowser": true,
+  "jsErrors": []
+}

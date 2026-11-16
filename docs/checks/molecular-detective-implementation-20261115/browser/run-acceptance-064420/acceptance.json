@@ -1,0 +1,2430 @@
+{
+  "completed": false,
+  "checks": [
+    {
+      "label": "17 available molecule controls",
+      "detail": null
+    },
+    {
+      "label": "Genuine UI check incorrect",
+      "detail": {
+        "phase": "active",
+        "moleculeId": "ethane",
+        "roundId": "detective-round-1",
+        "missionId": "ethane:comp5:parent-chain",
+        "bridgeMissionId": "ethane:comp5:parent-chain:1",
+        "missionIndex": 0,
+        "missionCount": 2,
+        "kind": "atoms",
+        "atoms": [],
+        "bonds": [],
+        "selectionRevision": 1,
+        "correct": false,
+        "requestId": 2
+      }
+    },
+    {
+      "label": "Empty attempt handled without solution",
+      "detail": null
+    },
+    {
+      "label": "Hydrogen stays raw H, never redirected to C",
+      "detail": null
+    },
+    {
+      "label": "Wrong-kind bond click retains atom attempt",
+      "detail": null
+    },
+    {
+      "label": "Genuine UI check incorrect",
+      "detail": {
+        "phase": "active",
+        "moleculeId": "ethane",
+        "roundId": "detective-round-1",
+        "missionId": "ethane:comp5:parent-chain",
+        "bridgeMissionId": "ethane:comp5:parent-chain:1",
+        "missionIndex": 0,
+        "missionCount": 2,
+        "kind": "atoms",
+        "atoms": [
+          3
+        ],
+        "bonds": [],
+        "selectionRevision": 3,
+        "correct": false,
+        "requestId": 2
+      }
+    },
+    {
+      "label": "Incorrect attempt stays editable",
+      "detail": null
+    },
+    {
+      "label": "Click toggles selection off",
+      "detail": null
+    },
+    {
+      "label": "Zoom in/out preserves current attempt",
+      "detail": null
+    },
+    {
+      "label": "Native Escape clears with parent notification",
+      "detail": null
+    },
+    {
+      "label": "ethane actual native mission families",
+      "detail": null
+    },
+    {
+      "label": "ethane actual name serialized exactly",
+      "detail": null
+    },
+    {
+      "label": "ethane no automatic answer cues/numbering",
+      "detail": null
+    },
+    {
+      "label": "ethane/parent-chain actual DOM/graph targets match independent oracle",
+      "detail": null
+    },
+    {
+      "label": "ethane/parent-chain actual selected IDs",
+      "detail": [
+        1,
+        2
+      ]
+    },
+    {
+      "label": "Genuine UI check correct",
+      "detail": {
+        "phase": "active",
+        "moleculeId": "ethane",
+        "roundId": "detective-round-2",
+        "missionId": "ethane:comp5:parent-chain",
+        "bridgeMissionId": "ethane:comp5:parent-chain:3",
+        "missionIndex": 0,
+        "missionCount": 2,
+        "kind": "atoms",
+        "atoms": [
+          1,
+          2
+        ],
+        "bonds": [],
+        "selectionRevision": 14,
+        "correct": true,
+        "requestId": 7
+      }
+    },
+    {
+      "label": "Success exposes explicit next mission",
+      "detail": null
+    },
+    {
+      "label": "ethane/single-bonds actual DOM/graph targets match independent oracle",
+      "detail": null
+    },
+    {
+      "label": "ethane/single-bonds actual selected IDs",
+      "detail": [
+        1
+      ]
+    },
+    {
+      "label": "Genuine UI check correct",
+      "detail": {
+        "phase": "active",
+        "moleculeId": "ethane",
+        "roundId": "detective-round-2",
+        "missionId": "ethane:comp6:single-bonds",
+        "bridgeMissionId": "ethane:comp6:single-bonds:4",
+        "missionIndex": 1,
+        "missionCount": 2,
+        "kind": "bonds",
+        "atoms": [],
+        "bonds": [
+          1
+        ],
+        "selectionRevision": 16,
+        "correct": true,
+        "requestId": 8
+      }
+    },
+    {
+      "label": "Success exposes explicit next mission",
+      "detail": null
+    },
+    {
+      "label": "butane actual native mission families",
+      "detail": null
+    },
+    {
+      "label": "butane actual name serialized exactly",
+      "detail": null
+    },
+    {
+      "label": "butane no automatic answer cues/numbering",
+      "detail": null
+    },
+    {
+      "label": "butane/parent-chain actual DOM/graph targets match independent oracle",
+      "detail": null
+    },
+    {
+      "label": "butane/parent-chain actual selected IDs",
+      "detail": [
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "label": "Genuine UI check correct",
+      "detail": {
+        "phase": "active",
+        "moleculeId": "butane",
+        "roundId": "detective-round-3",
+        "missionId": "butane:comp5:parent-chain",
+        "bridgeMissionId": "butane:comp5:parent-chain:6",
+        "missionIndex": 0,
+        "missionCount": 2,
+        "kind": "atoms",
+        "atoms": [
+          2,
+          3,
+          4,
+          5
+        ],
+        "bonds": [],
+        "selectionRevision": 22,
+        "correct": true,
+        "requestId": 11
+      }
+    },
+    {
+      "label": "Success exposes explicit next mission",
+      "detail": null
+    },
+    {
+      "label": "butane/single-bonds actual DOM/graph targets match independent oracle",
+      "detail": null
+    },
+    {
+      "label": "butane/single-bonds actual selected IDs",
+      "detail": [
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "label": "Genuine UI check correct",
+      "detail": {
+        "phase": "active",
+        "moleculeId": "butane",
+        "roundId": "detective-round-3",
+        "missionId": "butane:comp6:single-bonds",
+        "bridgeMissionId": "butane:comp6:single-bonds:7",
+        "missionIndex": 1,
+        "missionCount": 2,
+        "kind": "bonds",
+        "atoms": [],
+        "bonds": [
+          2,
+          3,
+          4
+        ],
+        "selectionRevision": 26,
+        "correct": true,
+        "requestId": 12
+      }
+    },
+    {
+      "label": "Success exposes explicit next mission",
+      "detail": null
+    },
+    {
+      "label": "methyl_2_pentane actual native mission families",
+      "detail": null
+    },
+    {
+      "label": "methyl_2_pentane actual name serialized exactly",
+      "detail": null
+    },
+    {
+      "label": "methyl_2_pentane no automatic answer cues/numbering",
+      "detail": null
+    },
+    {
+      "label": "methyl_2_pentane/parent-chain actual DOM/graph targets match independent oracle",
+      "detail": null
+    },
+    {
+      "label": "methyl_2_pentane/parent-chain actual selected IDs",
+      "detail": [
+        1,
+        2,
+        3,
+        4,
+        6
+      ]
+    },
+    {
+      "label": "Genuine UI check correct",
+      "detail": {
+        "phase": "active",
+        "moleculeId": "methyl_2_pentane",
+        "roundId": "detective-round-4",
+        "missionId": "methyl_2_pentane:comp5:parent-chain",
+        "bridgeMissionId": "methyl_2_pentane:comp5:parent-chain:9",
+        "missionIndex": 1,
+        "missionCount": 3,
+        "kind": "atoms",
+        "atoms": [
+          1,
+          2,
+          3,
+          4,
+          6
+        ],
+        "bonds": [],
+        "selectionRevision": 33,
+        "correct": true,
+        "requestId": 15
+      }
+    },
+    {
+      "label": "Success exposes explicit next mission",
+      "detail": null
+    },
+    {
+      "label": "methyl_2_pentane/parent-chain actual selected IDs",
+      "detail": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "label": "Genuine UI check correct",
+      "detail": {
+        "phase": "active",
+        "moleculeId": "methyl_2_pentane",
+        "roundId": "detective-round-4",
+        "missionId": "methyl_2_pentane:comp5:parent-chain",
+        "bridgeMissionId": "methyl_2_pentane:comp5:parent-chain:9",
+        "missionIndex": 1,
+        "missionCount": 3,
+        "kind": "atoms",
+        "atoms": [
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "bonds": [],
+        "selectionRevision": 39,
+        "correct": true,
+        "requestId": 16
+      }
+    },
+    {
+      "label": "Success exposes explicit next mission",
+      "detail": null
+    },
+    {
+      "label": "methyl_2_pentane/branches actual DOM/graph targets match independent oracle",
+      "detail": null
+    },
+    {
+      "label": "methyl_2_pentane/branches actual selected IDs",
+      "detail": [
+        1
+      ]
+    },
+    {
+      "label": "Genuine UI check correct",
+      "detail": {
+        "phase": "active",
+        "moleculeId": "methyl_2_pentane",
+        "roundId": "detective-round-4",
+        "missionId": "methyl_2_pentane:comp1:branches",
+        "bridgeMissionId": "methyl_2_pentane:comp1:branches:10",
+        "missionIndex": 0,
+        "missionCount": 3,
+        "kind": "atoms",
+        "atoms": [
+          1
+        ],
+        "bonds": [],
+        "selectionRevision": 41,
+        "correct": true,
+        "requestId": 17
+      }
+    },
+    {
+      "label": "Success exposes explicit next mission",
+      "detail": null
+    },
+    {
+      "label": "methyl_2_pentane/branches actual selected IDs",
+      "detail": [
+        5
+      ]
+    },
+    {
+      "label": "Genuine UI check correct",
+      "detail": {
+        "phase": "active",
+        "moleculeId": "methyl_2_pentane",
+        "roundId": "detective-round-4",
+        "missionId": "methyl_2_pentane:comp1:branches",
+        "bridgeMissionId": "methyl_2_pentane:comp1:branches:10",
+        "missionIndex": 0,
+        "missionCount": 3,
+        "kind": "atoms",
+        "atoms": [
+          5
+        ],
+        "bonds": [],
+        "selectionRevision": 43,
+        "correct": true,
+        "requestId": 18
+      }
+    },
+    {
+      "label": "Success exposes explicit next mission",
+      "detail": null
+    },
+    {
+      "label": "methyl_2_pentane/single-bonds actual DOM/graph targets match independent oracle",
+      "detail": null
+    },
+    {
+      "label": "methyl_2_pentane/single-bonds actual selected IDs",
+      "detail": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "label": "Genuine UI check correct",
+      "detail": {
+        "phase": "active",
+        "moleculeId": "methyl_2_pentane",
+        "roundId": "detective-round-4",
+        "missionId": "methyl_2_pentane:comp6:single-bonds",
+        "bridgeMissionId": "methyl_2_pentane:comp6:single-bonds:11",
+        "missionIndex": 2,
+        "missionCount": 3,
+        "kind": "bonds",
+        "atoms": [],
+        "bonds": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "selectionRevision": 49,
+        "correct": true,
+        "requestId": 19
+      }
+    },
+    {
+      "label": "Success exposes explicit next mission",
+      "detail": null
+    },
+    {
+      "label": "dimethyl_2_3_butane actual native mission families",
+      "detail": null
+    },
+    {
+      "label": "dimethyl_2_3_butane actual name serialized exactly",
+      "detail": null
+    },
+    {
+      "label": "dimethyl_2_3_butane no automatic answer cues/numbering",
+      "detail": null
+    },
+    {
+      "label": "dimethyl_2_3_butane/parent-chain actual DOM/graph targets match independent oracle",
+      "detail": null
+    },
+    {
+      "label": "dimethyl_2_3_butane/parent-chain actual selected IDs",
+      "detail": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "label": "Genuine UI check correct",
+      "detail": {
+        "phase": "active",
+        "moleculeId": "dimethyl_2_3_butane",
+        "roundId": "detective-round-5",
+        "missionId": "dimethyl_2_3_butane:comp5:parent-chain",
+        "bridgeMissionId": "dimethyl_2_3_butane:comp5:parent-chain:13",
+        "missionIndex": 1,
+        "missionCount": 3,
+        "kind": "atoms",
+        "atoms": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "bonds": [],
+        "selectionRevision": 55,
+        "correct": true,
+        "requestId": 22
+      }
+    },
+    {
+      "label": "Success exposes explicit next mission",
+      "detail": null
+    },
+    {
+      "label": "dimethyl_2_3_butane/parent-chain actual selected IDs",
+      "detail": [
+        1,
+        2,
+        3,
+        6
+      ]
+    },
+    {
+      "label": "Genuine UI check correct",
+      "detail": {
+        "phase": "active",
+        "moleculeId": "dimethyl_2_3_butane",
+        "roundId": "detective-round-5",
+        "missionId": "dimethyl_2_3_butane:comp5:parent-chain",
+        "bridgeMissionId": "dimethyl_2_3_butane:comp5:parent-chain:13",
+        "missionIndex": 1,
+        "missionCount": 3,
+        "kind": "atoms",
+        "atoms": [
+          1,
+          2,
+          3,
+          6
+        ],
+        "bonds": [],
+        "selectionRevision": 60,
+        "correct": true,
+        "requestId": 23
+      }
+    },
+    {
+      "label": "Success exposes explicit next mission",
+      "detail": null
+    },
+    {
+      "label": "dimethyl_2_3_butane/parent-chain actual selected IDs",
+      "detail": [
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "label": "Genuine UI check correct",
+      "detail": {
+        "phase": "active",
+        "moleculeId": "dimethyl_2_3_butane",
+        "roundId": "detective-round-5",
+        "missionId": "dimethyl_2_3_butane:comp5:parent-chain",
+        "bridgeMissionId": "dimethyl_2_3_butane:comp5:parent-chain:13",
+        "missionIndex": 1,
+        "missionCount": 3,
+        "kind": "atoms",
+        "atoms": [
+          2,
+          3,
+          4,
+          5
+        ],
+        "bonds": [],
+        "selectionRevision": 65,
+        "correct": true,
+        "requestId": 24
+      }
+    },
+    {
+      "label": "Success exposes explicit next mission",
+      "detail": null
+    },
+    {
+      "label": "dimethyl_2_3_butane/parent-chain actual selected IDs",
+      "detail": [
+        2,
+        3,
+        5,
+        6
+      ]
+    },
+    {
+      "label": "Genuine UI check correct",
+      "detail": {
+        "phase": "active",
+        "moleculeId": "dimethyl_2_3_butane",
+        "roundId": "detective-round-5",
+        "missionId": "dimethyl_2_3_butane:comp5:parent-chain",
+        "bridgeMissionId": "dimethyl_2_3_butane:comp5:parent-chain:13",
+        "missionIndex": 1,
+        "missionCount": 3,
+        "kind": "atoms",
+        "atoms": [
+          2,
+          3,
+          5,
+          6
+        ],
+        "bonds": [],
+        "selectionRevision": 70,
+        "correct": true,
+        "requestId": 25
+      }
+    },
+    {
+      "label": "Success exposes explicit next mission",
+      "detail": null
+    },
+    {
+      "label": "dimethyl_2_3_butane/branches actual DOM/graph targets match independent oracle",
+      "detail": null
+    },
+    {
+      "label": "dimethyl_2_3_butane/branches actual selected IDs",
+      "detail": [
+        1,
+        4
+      ]
+    },
+    {
+      "label": "Genuine UI check correct",
+      "detail": {
+        "phase": "active",
+        "moleculeId": "dimethyl_2_3_butane",
+        "roundId": "detective-round-5",
+        "missionId": "dimethyl_2_3_butane:comp1:branches",
+        "bridgeMissionId": "dimethyl_2_3_butane:comp1:branches:14",
+        "missionIndex": 0,
+        "missionCount": 3,
+        "kind": "atoms",
+        "atoms": [
+          1,
+          4
+        ],
+        "bonds": [],
+        "selectionRevision": 73,
+        "correct": true,
+        "requestId": 26
+      }
+    },
+    {
+      "label": "Success exposes explicit next mission",
+      "detail": null
+    },
+    {
+      "label": "dimethyl_2_3_butane/branches actual selected IDs",
+      "detail": [
+        1,
+        6
+      ]
+    },
+    {
+      "label": "Genuine UI check correct",
+      "detail": {
+        "phase": "active",
+        "moleculeId": "dimethyl_2_3_butane",
+        "roundId": "detective-round-5",
+        "missionId": "dimethyl_2_3_butane:comp1:branches",
+        "bridgeMissionId": "dimethyl_2_3_butane:comp1:branches:14",
+        "missionIndex": 0,
+        "missionCount": 3,
+        "kind": "atoms",
+        "atoms": [
+          1,
+          6
+        ],
+        "bonds": [],
+        "selectionRevision": 76,
+        "correct": true,
+        "requestId": 27
+      }
+    },
+    {
+      "label": "Success exposes explicit next mission",
+      "detail": null
+    },
+    {
+      "label": "dimethyl_2_3_butane/branches actual selected IDs",
+      "detail": [
+        4,
+        5
+      ]
+    },
+    {
+      "label": "Genuine UI check correct",
+      "detail": {
+        "phase": "active",
+        "moleculeId": "dimethyl_2_3_butane",
+        "roundId": "detective-round-5",
+        "missionId": "dimethyl_2_3_butane:comp1:branches",
+        "bridgeMissionId": "dimethyl_2_3_butane:comp1:branches:14",
+        "missionIndex": 0,
+        "missionCount": 3,
+        "kind": "atoms",
+        "atoms": [
+          4,
+          5
+        ],
+        "bonds": [],
+        "selectionRevision": 79,
+        "correct": true,
+        "requestId": 28
+      }
+    },
+    {
+      "label": "Success exposes explicit next mission",
+      "detail": null
+    },
+    {
+      "label": "dimethyl_2_3_butane/branches actual selected IDs",
+      "detail": [
+        5,
+        6
+      ]
+    },
+    {
+      "label": "Genuine UI check correct",
+      "detail": {
+        "phase": "active",
+        "moleculeId": "dimethyl_2_3_butane",
+        "roundId": "detective-round-5",
+        "missionId": "dimethyl_2_3_butane:comp1:branches",
+        "bridgeMissionId": "dimethyl_2_3_butane:comp1:branches:14",
+        "missionIndex": 0,
+        "missionCount": 3,
+        "kind": "atoms",
+        "atoms": [
+          5,
+          6
+        ],
+        "bonds": [],
+        "selectionRevision": 82,
+        "correct": true,
+        "requestId": 29
+      }
+    },
+    {
+      "label": "Success exposes explicit next mission",
+      "detail": null
+    },
+    {
+      "label": "dimethyl_2_3_butane/single-bonds actual DOM/graph targets match independent oracle",
+      "detail": null
+    },
+    {
+      "label": "dimethyl_2_3_butane/single-bonds actual selected IDs",
+      "detail": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "label": "Genuine UI check correct",
+      "detail": {
+        "phase": "active",
+        "moleculeId": "dimethyl_2_3_butane",
+        "roundId": "detective-round-5",
+        "missionId": "dimethyl_2_3_butane:comp6:single-bonds",
+        "bridgeMissionId": "dimethyl_2_3_butane:comp6:single-bonds:15",
+        "missionIndex": 2,
+        "missionCount": 3,
+        "kind": "bonds",
+        "atoms": [],
+        "bonds": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "selectionRevision": 88,
+        "correct": true,
+        "requestId": 30
+      }
+    },
+    {
+      "label": "Success exposes explicit next mission",
+      "detail": null
+    },
+    {
+      "label": "ethene actual native mission families",
+      "detail": null
+    },
+    {
+      "label": "ethene actual name serialized exactly",
+      "detail": null
+    },
+    {
+      "label": "ethene no automatic answer cues/numbering",
+      "detail": null
+    },
+    {
+      "label": "ethene/parent-chain actual DOM/graph targets match independent oracle",
+      "detail": null
+    },
+    {
+      "label": "ethene/parent-chain actual selected IDs",
+      "detail": [
+        1,
+        2
+      ]
+    },
+    {
+      "label": "Genuine UI check correct",
+      "detail": {
+        "phase": "active",
+        "moleculeId": "ethene",
+        "roundId": "detective-round-6",
+        "missionId": "ethene:comp5:parent-chain",
+        "bridgeMissionId": "ethene:comp5:parent-chain:17",
+        "missionIndex": 0,
+        "missionCount": 2,
+        "kind": "atoms",
+        "atoms": [
+          1,
+          2
+        ],
+        "bonds": [],
+        "selectionRevision": 92,
+        "correct": true,
+        "requestId": 33
+      }
+    },
+    {
+      "label": "Success exposes explicit next mission",
+      "detail": null
+    },
+    {
+      "label": "ethene/double-bonds actual DOM/graph targets match independent oracle",
+      "detail": null
+    },
+    {
+      "label": "ethene/double-bonds actual selected IDs",
+      "detail": [
+        1
+      ]
+    },
+    {
+      "label": "Genuine UI check correct",
+      "detail": {
+        "phase": "active",
+        "moleculeId": "ethene",
+        "roundId": "detective-round-6",
+        "missionId": "ethene:comp6:double-bonds",
+        "bridgeMissionId": "ethene:comp6:double-bonds:18",
+        "missionIndex": 1,
+        "missionCount": 2,
+        "kind": "bonds",
+        "atoms": [],
+        "bonds": [
+          1
+        ],
+        "selectionRevision": 94,
+        "correct": true,
+        "requestId": 34
+      }
+    },
+    {
+      "label": "Success exposes explicit next mission",
+      "detail": null
+    },
+    {
+      "label": "butene_1 actual native mission families",
+      "detail": null
+    },
+    {
+      "label": "butene_1 actual name serialized exactly",
+      "detail": null
+    },
+    {
+      "label": "butene_1 no automatic answer cues/numbering",
+      "detail": null
+    },
+    {
+      "label": "butene_1/parent-chain actual DOM/graph targets match independent oracle",
+      "detail": null
+    },
+    {
+      "label": "butene_1/parent-chain actual selected IDs",
+      "detail": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "label": "Genuine UI check correct",
+      "detail": {
+        "phase": "active",
+        "moleculeId": "butene_1",
+        "roundId": "detective-round-7",
+        "missionId": "butene_1:comp5:parent-chain",
+        "bridgeMissionId": "butene_1:comp5:parent-chain:20",
+        "missionIndex": 0,
+        "missionCount": 2,
+        "kind": "atoms",
+        "atoms": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "bonds": [],
+        "selectionRevision": 100,
+        "correct": true,
+        "requestId": 37
+      }
+    },
+    {
+      "label": "Success exposes explicit next mission",
+      "detail": null
+    },
+    {
+      "label": "butene_1/double-bonds actual DOM/graph targets match independent oracle",
+      "detail": null
+    },
+    {
+      "label": "butene_1/double-bonds actual selected IDs",
+      "detail": [
+        3
+      ]
+    },
+    {
+      "label": "Genuine UI check correct",
+      "detail": {
+        "phase": "active",
+        "moleculeId": "butene_1",
+        "roundId": "detective-round-7",
+        "missionId": "butene_1:comp6:double-bonds",
+        "bridgeMissionId": "butene_1:comp6:double-bonds:21",
+        "missionIndex": 1,
+        "missionCount": 2,
+        "kind": "bonds",
+        "atoms": [],
+        "bonds": [
+          3
+        ],
+        "selectionRevision": 102,
+        "correct": true,
+        "requestId": 38
+      }
+    },
+    {
+      "label": "Success exposes explicit next mission",
+      "detail": null
+    },
+    {
+      "label": "butene_2 actual native mission families",
+      "detail": null
+    },
+    {
+      "label": "butene_2 actual name serialized exactly",
+      "detail": null
+    },
+    {
+      "label": "butene_2 no automatic answer cues/numbering",
+      "detail": null
+    },
+    {
+      "label": "butene_2/parent-chain actual DOM/graph targets match independent oracle",
+      "detail": null
+    },
+    {
+      "label": "butene_2/parent-chain actual selected IDs",
+      "detail": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "label": "Genuine UI check correct",
+      "detail": {
+        "phase": "active",
+        "moleculeId": "butene_2",
+        "roundId": "detective-round-8",
+        "missionId": "butene_2:comp5:parent-chain",
+        "bridgeMissionId": "butene_2:comp5:parent-chain:23",
+        "missionIndex": 0,
+        "missionCount": 2,
+        "kind": "atoms",
+        "atoms": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "bonds": [],
+        "selectionRevision": 108,
+        "correct": true,
+        "requestId": 41
+      }
+    },
+    {
+      "label": "Success exposes explicit next mission",
+      "detail": null
+    },
+    {
+      "label": "butene_2/double-bonds actual DOM/graph targets match independent oracle",
+      "detail": null
+    },
+    {
+      "label": "butene_2/double-bonds actual selected IDs",
+      "detail": [
+        2
+      ]
+    },
+    {
+      "label": "Genuine UI check correct",
+      "detail": {
+        "phase": "active",
+        "moleculeId": "butene_2",
+        "roundId": "detective-round-8",
+        "missionId": "butene_2:comp6:double-bonds",
+        "bridgeMissionId": "butene_2:comp6:double-bonds:24",
+        "missionIndex": 1,
+        "missionCount": 2,
+        "kind": "bonds",
+        "atoms": [],
+        "bonds": [
+          2
+        ],
+        "selectionRevision": 110,
+        "correct": true,
+        "requestId": 42
+      }
+    },
+    {
+      "label": "Success exposes explicit next mission",
+      "detail": null
+    },
+    {
+      "label": "butyne_1 actual native mission families",
+      "detail": null
+    },
+    {
+      "label": "butyne_1 actual name serialized exactly",
+      "detail": null
+    },
+    {
+      "label": "butyne_1 no automatic answer cues/numbering",
+      "detail": null
+    },
+    {
+      "label": "butyne_1/parent-chain actual DOM/graph targets match independent oracle",
+      "detail": null
+    },
+    {
+      "label": "butyne_1/parent-chain actual selected IDs",
+      "detail": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "label": "Genuine UI check correct",
+      "detail": {
+        "phase": "active",
+        "moleculeId": "butyne_1",
+        "roundId": "detective-round-9",
+        "missionId": "butyne_1:comp5:parent-chain",
+        "bridgeMissionId": "butyne_1:comp5:parent-chain:26",
+        "missionIndex": 0,
+        "missionCount": 2,
+        "kind": "atoms",
+        "atoms": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "bonds": [],
+        "selectionRevision": 116,
+        "correct": true,
+        "requestId": 45
+      }
+    },
+    {
+      "label": "Success exposes explicit next mission",
+      "detail": null
+    },
+    {
+      "label": "butyne_1/triple-bonds actual DOM/graph targets match independent oracle",
+      "detail": null
+    },
+    {
+      "label": "butyne_1/triple-bonds actual selected IDs",
+      "detail": [
+        3
+      ]
+    },
+    {
+      "label": "Genuine UI check correct",
+      "detail": {
+        "phase": "active",
+        "moleculeId": "butyne_1",
+        "roundId": "detective-round-9",
+        "missionId": "butyne_1:comp6:triple-bonds",
+        "bridgeMissionId": "butyne_1:comp6:triple-bonds:27",
+        "missionIndex": 1,
+        "missionCount": 2,
+        "kind": "bonds",
+        "atoms": [],
+        "bonds": [
+          3
+        ],
+        "selectionRevision": 118,
+        "correct": true,
+        "requestId": 46
+      }
+    },
+    {
+      "label": "Success exposes explicit next mission",
+      "detail": null
+    },
+    {
+      "label": "butyne_2 actual native mission families",
+      "detail": null
+    },
+    {
+      "label": "butyne_2 actual name serialized exactly",
+      "detail": null
+    },
+    {
+      "label": "butyne_2 no automatic answer cues/numbering",
+      "detail": null
+    },
+    {
+      "label": "butyne_2/parent-chain actual DOM/graph targets match independent oracle",
+      "detail": null
+    },
+    {
+      "label": "butyne_2/parent-chain actual selected IDs",
+      "detail": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "label": "Genuine UI check correct",
+      "detail": {
+        "phase": "active",
+        "moleculeId": "butyne_2",
+        "roundId": "detective-round-10",
+        "missionId": "butyne_2:comp5:parent-chain",
+        "bridgeMissionId": "butyne_2:comp5:parent-chain:29",
+        "missionIndex": 0,
+        "missionCount": 2,
+        "kind": "atoms",
+        "atoms": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "bonds": [],
+        "selectionRevision": 124,
+        "correct": true,
+        "requestId": 49
+      }
+    },
+    {
+      "label": "Success exposes explicit next mission",
+      "detail": null
+    },
+    {
+      "label": "butyne_2/triple-bonds actual DOM/graph targets match independent oracle",
+      "detail": null
+    },
+    {
+      "label": "butyne_2/triple-bonds actual selected IDs",
+      "detail": [
+        2
+      ]
+    },
+    {
+      "label": "Genuine UI check correct",
+      "detail": {
+        "phase": "active",
+        "moleculeId": "butyne_2",
+        "roundId": "detective-round-10",
+        "missionId": "butyne_2:comp6:triple-bonds",
+        "bridgeMissionId": "butyne_2:comp6:triple-bonds:30",
+        "missionIndex": 1,
+        "missionCount": 2,
+        "kind": "bonds",
+        "atoms": [],
+        "bonds": [
+          2
+        ],
+        "selectionRevision": 126,
+        "correct": true,
+        "requestId": 50
+      }
+    },
+    {
+      "label": "Success exposes explicit next mission",
+      "detail": null
+    },
+    {
+      "label": "butadiene_1_2 actual native mission families",
+      "detail": null
+    },
+    {
+      "label": "butadiene_1_2 actual name serialized exactly",
+      "detail": null
+    },
+    {
+      "label": "butadiene_1_2 no automatic answer cues/numbering",
+      "detail": null
+    },
+    {
+      "label": "butadiene_1_2/parent-chain actual DOM/graph targets match independent oracle",
+      "detail": null
+    },
+    {
+      "label": "butadiene_1_2/parent-chain actual selected IDs",
+      "detail": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "label": "Genuine UI check correct",
+      "detail": {
+        "phase": "active",
+        "moleculeId": "butadiene_1_2",
+        "roundId": "detective-round-11",
+        "missionId": "butadiene_1_2:comp5:parent-chain",
+        "bridgeMissionId": "butadiene_1_2:comp5:parent-chain:32",
+        "missionIndex": 0,
+        "missionCount": 2,
+        "kind": "atoms",
+        "atoms": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "bonds": [],
+        "selectionRevision": 132,
+        "correct": true,
+        "requestId": 53
+      }
+    },
+    {
+      "label": "Success exposes explicit next mission",
+      "detail": null
+    },
+    {
+      "label": "butadiene_1_2/double-bonds actual DOM/graph targets match independent oracle",
+      "detail": null
+    },
+    {
+      "label": "butadiene_1_2/double-bonds actual selected IDs",
+      "detail": [
+        1,
+        2
+      ]
+    },
+    {
+      "label": "Genuine UI check correct",
+      "detail": {
+        "phase": "active",
+        "moleculeId": "butadiene_1_2",
+        "roundId": "detective-round-11",
+        "missionId": "butadiene_1_2:comp6:double-bonds",
+        "bridgeMissionId": "butadiene_1_2:comp6:double-bonds:33",
+        "missionIndex": 1,
+        "missionCount": 2,
+        "kind": "bonds",
+        "atoms": [],
+        "bonds": [
+          1,
+          2
+        ],
+        "selectionRevision": 135,
+        "correct": true,
+        "requestId": 54
+      }
+    },
+    {
+      "label": "Success exposes explicit next mission",
+      "detail": null
+    },
+    {
+      "label": "butadiene_1_3 actual native mission families",
+      "detail": null
+    },
+    {
+      "label": "butadiene_1_3 actual name serialized exactly",
+      "detail": null
+    },
+    {
+      "label": "butadiene_1_3 no automatic answer cues/numbering",
+      "detail": null
+    },
+    {
+      "label": "butadiene_1_3/parent-chain actual DOM/graph targets match independent oracle",
+      "detail": null
+    },
+    {
+      "label": "butadiene_1_3/parent-chain actual selected IDs",
+      "detail": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "label": "Genuine UI check correct",
+      "detail": {
+        "phase": "active",
+        "moleculeId": "butadiene_1_3",
+        "roundId": "detective-round-12",
+        "missionId": "butadiene_1_3:comp5:parent-chain",
+        "bridgeMissionId": "butadiene_1_3:comp5:parent-chain:35",
+        "missionIndex": 0,
+        "missionCount": 2,
+        "kind": "atoms",
+        "atoms": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "bonds": [],
+        "selectionRevision": 141,
+        "correct": true,
+        "requestId": 57
+      }
+    },
+    {
+      "label": "Success exposes explicit next mission",
+      "detail": null
+    },
+    {
+      "label": "butadiene_1_3/double-bonds actual DOM/graph targets match independent oracle",
+      "detail": null
+    },
+    {
+      "label": "butadiene_1_3/double-bonds actual selected IDs",
+      "detail": [
+        1,
+        3
+      ]
+    },
+    {
+      "label": "Genuine UI check correct",
+      "detail": {
+        "phase": "active",
+        "moleculeId": "butadiene_1_3",
+        "roundId": "detective-round-12",
+        "missionId": "butadiene_1_3:comp6:double-bonds",
+        "bridgeMissionId": "butadiene_1_3:comp6:double-bonds:36",
+        "missionIndex": 1,
+        "missionCount": 2,
+        "kind": "bonds",
+        "atoms": [],
+        "bonds": [
+          1,
+          3
+        ],
+        "selectionRevision": 144,
+        "correct": true,
+        "requestId": 58
+      }
+    },
+    {
+      "label": "Success exposes explicit next mission",
+      "detail": null
+    },
+    {
+      "label": "ethanol actual native mission families",
+      "detail": null
+    },
+    {
+      "label": "ethanol actual name serialized exactly",
+      "detail": null
+    },
+    {
+      "label": "ethanol no automatic answer cues/numbering",
+      "detail": null
+    },
+    {
+      "label": "ethanol/parent-chain actual DOM/graph targets match independent oracle",
+      "detail": null
+    },
+    {
+      "label": "ethanol/parent-chain actual selected IDs",
+      "detail": [
+        1,
+        2
+      ]
+    },
+    {
+      "label": "Genuine UI check correct",
+      "detail": {
+        "phase": "active",
+        "moleculeId": "ethanol",
+        "roundId": "detective-round-13",
+        "missionId": "ethanol:comp5:parent-chain",
+        "bridgeMissionId": "ethanol:comp5:parent-chain:38",
+        "missionIndex": 0,
+        "missionCount": 3,
+        "kind": "atoms",
+        "atoms": [
+          1,
+          2
+        ],
+        "bonds": [],
+        "selectionRevision": 148,
+        "correct": true,
+        "requestId": 61
+      }
+    },
+    {
+      "label": "Success exposes explicit next mission",
+      "detail": null
+    },
+    {
+      "label": "ethanol/single-bonds actual DOM/graph targets match independent oracle",
+      "detail": null
+    },
+    {
+      "label": "ethanol/single-bonds actual selected IDs",
+      "detail": [
+        1
+      ]
+    },
+    {
+      "label": "Genuine UI check correct",
+      "detail": {
+        "phase": "active",
+        "moleculeId": "ethanol",
+        "roundId": "detective-round-13",
+        "missionId": "ethanol:comp6:single-bonds",
+        "bridgeMissionId": "ethanol:comp6:single-bonds:39",
+        "missionIndex": 1,
+        "missionCount": 3,
+        "kind": "bonds",
+        "atoms": [],
+        "bonds": [
+          1
+        ],
+        "selectionRevision": 150,
+        "correct": true,
+        "requestId": 62
+      }
+    },
+    {
+      "label": "Success exposes explicit next mission",
+      "detail": null
+    },
+    {
+      "label": "ethanol/hydroxyl actual DOM/graph targets match independent oracle",
+      "detail": null
+    },
+    {
+      "label": "ethanol/hydroxyl actual selected IDs",
+      "detail": [
+        3,
+        9
+      ]
+    },
+    {
+      "label": "Genuine UI check correct",
+      "detail": {
+        "phase": "active",
+        "moleculeId": "ethanol",
+        "roundId": "detective-round-13",
+        "missionId": "ethanol:comp9:hydroxyl",
+        "bridgeMissionId": "ethanol:comp9:hydroxyl:40",
+        "missionIndex": 2,
+        "missionCount": 3,
+        "kind": "atoms",
+        "atoms": [
+          3,
+          9
+        ],
+        "bonds": [],
+        "selectionRevision": 153,
+        "correct": true,
+        "requestId": 63
+      }
+    },
+    {
+      "label": "Success exposes explicit next mission",
+      "detail": null
+    },
+    {
+      "label": "butanol_2 actual native mission families",
+      "detail": null
+    },
+    {
+      "label": "butanol_2 actual name serialized exactly",
+      "detail": null
+    },
+    {
+      "label": "butanol_2 no automatic answer cues/numbering",
+      "detail": null
+    },
+    {
+      "label": "butanol_2/parent-chain actual DOM/graph targets match independent oracle",
+      "detail": null
+    },
+    {
+      "label": "butanol_2/parent-chain actual selected IDs",
+      "detail": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "label": "Genuine UI check correct",
+      "detail": {
+        "phase": "active",
+        "moleculeId": "butanol_2",
+        "roundId": "detective-round-14",
+        "missionId": "butanol_2:comp5:parent-chain",
+        "bridgeMissionId": "butanol_2:comp5:parent-chain:42",
+        "missionIndex": 0,
+        "missionCount": 3,
+        "kind": "atoms",
+        "atoms": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "bonds": [],
+        "selectionRevision": 159,
+        "correct": true,
+        "requestId": 66
+      }
+    },
+    {
+      "label": "Success exposes explicit next mission",
+      "detail": null
+    },
+    {
+      "label": "butanol_2/single-bonds actual DOM/graph targets match independent oracle",
+      "detail": null
+    },
+    {
+      "label": "butanol_2/single-bonds actual selected IDs",
+      "detail": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "label": "Genuine UI check correct",
+      "detail": {
+        "phase": "active",
+        "moleculeId": "butanol_2",
+        "roundId": "detective-round-14",
+        "missionId": "butanol_2:comp6:single-bonds",
+        "bridgeMissionId": "butanol_2:comp6:single-bonds:43",
+        "missionIndex": 1,
+        "missionCount": 3,
+        "kind": "bonds",
+        "atoms": [],
+        "bonds": [
+          1,
+          2,
+          3
+        ],
+        "selectionRevision": 163,
+        "correct": true,
+        "requestId": 67
+      }
+    },
+    {
+      "label": "Success exposes explicit next mission",
+      "detail": null
+    },
+    {
+      "label": "butanol_2/hydroxyl actual DOM/graph targets match independent oracle",
+      "detail": null
+    },
+    {
+      "label": "butanol_2/hydroxyl actual selected IDs",
+      "detail": [
+        5,
+        15
+      ]
+    },
+    {
+      "label": "Genuine UI check correct",
+      "detail": {
+        "phase": "active",
+        "moleculeId": "butanol_2",
+        "roundId": "detective-round-14",
+        "missionId": "butanol_2:comp9:hydroxyl",
+        "bridgeMissionId": "butanol_2:comp9:hydroxyl:44",
+        "missionIndex": 2,
+        "missionCount": 3,
+        "kind": "atoms",
+        "atoms": [
+          5,
+          15
+        ],
+        "bonds": [],
+        "selectionRevision": 166,
+        "correct": true,
+        "requestId": 68
+      }
+    },
+    {
+      "label": "Success exposes explicit next mission",
+      "detail": null
+    },
+    {
+      "label": "propanal actual native mission families",
+      "detail": null
+    },
+    {
+      "label": "propanal actual name serialized exactly",
+      "detail": null
+    },
+    {
+      "label": "propanal no automatic answer cues/numbering",
+      "detail": null
+    },
+    {
+      "label": "propanal/parent-chain actual DOM/graph targets match independent oracle",
+      "detail": null
+    },
+    {
+      "label": "propanal/parent-chain actual selected IDs",
+      "detail": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "label": "Genuine UI check correct",
+      "detail": {
+        "phase": "active",
+        "moleculeId": "propanal",
+        "roundId": "detective-round-15",
+        "missionId": "propanal:comp5:parent-chain",
+        "bridgeMissionId": "propanal:comp5:parent-chain:46",
+        "missionIndex": 0,
+        "missionCount": 3,
+        "kind": "atoms",
+        "atoms": [
+          1,
+          2,
+          3
+        ],
+        "bonds": [],
+        "selectionRevision": 171,
+        "correct": true,
+        "requestId": 71
+      }
+    },
+    {
+      "label": "Success exposes explicit next mission",
+      "detail": null
+    },
+    {
+      "label": "propanal/single-bonds actual DOM/graph targets match independent oracle",
+      "detail": null
+    },
+    {
+      "label": "propanal/single-bonds actual selected IDs",
+      "detail": [
+        1,
+        2
+      ]
+    },
+    {
+      "label": "Genuine UI check correct",
+      "detail": {
+        "phase": "active",
+        "moleculeId": "propanal",
+        "roundId": "detective-round-15",
+        "missionId": "propanal:comp6:single-bonds",
+        "bridgeMissionId": "propanal:comp6:single-bonds:47",
+        "missionIndex": 1,
+        "missionCount": 3,
+        "kind": "bonds",
+        "atoms": [],
+        "bonds": [
+          1,
+          2
+        ],
+        "selectionRevision": 174,
+        "correct": true,
+        "requestId": 72
+      }
+    },
+    {
+      "label": "Success exposes explicit next mission",
+      "detail": null
+    },
+    {
+      "label": "propanal/aldehyde actual DOM/graph targets match independent oracle",
+      "detail": null
+    },
+    {
+      "label": "propanal/aldehyde actual selected IDs",
+      "detail": [
+        3,
+        4,
+        10
+      ]
+    },
+    {
+      "label": "Genuine UI check correct",
+      "detail": {
+        "phase": "active",
+        "moleculeId": "propanal",
+        "roundId": "detective-round-15",
+        "missionId": "propanal:comp9:aldehyde",
+        "bridgeMissionId": "propanal:comp9:aldehyde:48",
+        "missionIndex": 2,
+        "missionCount": 3,
+        "kind": "atoms",
+        "atoms": [
+          3,
+          4,
+          10
+        ],
+        "bonds": [],
+        "selectionRevision": 178,
+        "correct": true,
+        "requestId": 73
+      }
+    },
+    {
+      "label": "Success exposes explicit next mission",
+      "detail": null
+    },
+    {
+      "label": "propanone actual native mission families",
+      "detail": null
+    },
+    {
+      "label": "propanone actual name serialized exactly",
+      "detail": null
+    },
+    {
+      "label": "propanone no automatic answer cues/numbering",
+      "detail": null
+    },
+    {
+      "label": "propanone/parent-chain actual DOM/graph targets match independent oracle",
+      "detail": null
+    },
+    {
+      "label": "propanone/parent-chain actual selected IDs",
+      "detail": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "label": "Genuine UI check correct",
+      "detail": {
+        "phase": "active",
+        "moleculeId": "propanone",
+        "roundId": "detective-round-16",
+        "missionId": "propanone:comp5:parent-chain",
+        "bridgeMissionId": "propanone:comp5:parent-chain:50",
+        "missionIndex": 0,
+        "missionCount": 3,
+        "kind": "atoms",
+        "atoms": [
+          1,
+          2,
+          3
+        ],
+        "bonds": [],
+        "selectionRevision": 183,
+        "correct": true,
+        "requestId": 76
+      }
+    },
+    {
+      "label": "Success exposes explicit next mission",
+      "detail": null
+    },
+    {
+      "label": "propanone/single-bonds actual DOM/graph targets match independent oracle",
+      "detail": null
+    },
+    {
+      "label": "propanone/single-bonds actual selected IDs",
+      "detail": [
+        1,
+        2
+      ]
+    },
+    {
+      "label": "Genuine UI check correct",
+      "detail": {
+        "phase": "active",
+        "moleculeId": "propanone",
+        "roundId": "detective-round-16",
+        "missionId": "propanone:comp6:single-bonds",
+        "bridgeMissionId": "propanone:comp6:single-bonds:51",
+        "missionIndex": 1,
+        "missionCount": 3,
+        "kind": "bonds",
+        "atoms": [],
+        "bonds": [
+          1,
+          2
+        ],
+        "selectionRevision": 186,
+        "correct": true,
+        "requestId": 77
+      }
+    },
+    {
+      "label": "Success exposes explicit next mission",
+      "detail": null
+    },
+    {
+      "label": "propanone/carbonyl actual DOM/graph targets match independent oracle",
+      "detail": null
+    },
+    {
+      "label": "propanone/carbonyl actual selected IDs",
+      "detail": [
+        2,
+        10
+      ]
+    },
+    {
+      "label": "Genuine UI check correct",
+      "detail": {
+        "phase": "active",
+        "moleculeId": "propanone",
+        "roundId": "detective-round-16",
+        "missionId": "propanone:comp9:carbonyl",
+        "bridgeMissionId": "propanone:comp9:carbonyl:52",
+        "missionIndex": 2,
+        "missionCount": 3,
+        "kind": "atoms",
+        "atoms": [
+          2,
+          10
+        ],
+        "bonds": [],
+        "selectionRevision": 189,
+        "correct": true,
+        "requestId": 78
+      }
+    },
+    {
+      "label": "Success exposes explicit next mission",
+      "detail": null
+    },
+    {
+      "label": "pentanone_3 actual native mission families",
+      "detail": null
+    },
+    {
+      "label": "pentanone_3 actual name serialized exactly",
+      "detail": null
+    },
+    {
+      "label": "pentanone_3 no automatic answer cues/numbering",
+      "detail": null
+    },
+    {
+      "label": "pentanone_3/parent-chain actual DOM/graph targets match independent oracle",
+      "detail": null
+    },
+    {
+      "label": "pentanone_3/parent-chain actual selected IDs",
+      "detail": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "label": "Genuine UI check correct",
+      "detail": {
+        "phase": "active",
+        "moleculeId": "pentanone_3",
+        "roundId": "detective-round-17",
+        "missionId": "pentanone_3:comp5:parent-chain",
+        "bridgeMissionId": "pentanone_3:comp5:parent-chain:54",
+        "missionIndex": 0,
+        "missionCount": 3,
+        "kind": "atoms",
+        "atoms": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "bonds": [],
+        "selectionRevision": 196,
+        "correct": true,
+        "requestId": 81
+      }
+    },
+    {
+      "label": "Success exposes explicit next mission",
+      "detail": null
+    },
+    {
+      "label": "pentanone_3/single-bonds actual DOM/graph targets match independent oracle",
+      "detail": null
+    },
+    {
+      "label": "pentanone_3/single-bonds actual selected IDs",
+      "detail": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "label": "Genuine UI check correct",
+      "detail": {
+        "phase": "active",
+        "moleculeId": "pentanone_3",
+        "roundId": "detective-round-17",
+        "missionId": "pentanone_3:comp6:single-bonds",
+        "bridgeMissionId": "pentanone_3:comp6:single-bonds:55",
+        "missionIndex": 1,
+        "missionCount": 3,
+        "kind": "bonds",
+        "atoms": [],
+        "bonds": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "selectionRevision": 201,
+        "correct": true,
+        "requestId": 82
+      }
+    },
+    {
+      "label": "Success exposes explicit next mission",
+      "detail": null
+    },
+    {
+      "label": "pentanone_3/carbonyl actual DOM/graph targets match independent oracle",
+      "detail": null
+    },
+    {
+      "label": "pentanone_3/carbonyl actual selected IDs",
+      "detail": [
+        3,
+        6
+      ]
+    },
+    {
+      "label": "Genuine UI check correct",
+      "detail": {
+        "phase": "active",
+        "moleculeId": "pentanone_3",
+        "roundId": "detective-round-17",
+        "missionId": "pentanone_3:comp9:carbonyl",
+        "bridgeMissionId": "pentanone_3:comp9:carbonyl:56",
+        "missionIndex": 2,
+        "missionCount": 3,
+        "kind": "atoms",
+        "atoms": [
+          3,
+          6
+        ],
+        "bonds": [],
+        "selectionRevision": 204,
+        "correct": true,
+        "requestId": 83
+      }
+    },
+    {
+      "label": "Success exposes explicit next mission",
+      "detail": null
+    },
+    {
+      "label": "methanoicacid actual native mission families",
+      "detail": null
+    },
+    {
+      "label": "methanoicacid actual name serialized exactly",
+      "detail": null
+    },
+    {
+      "label": "methanoicacid no automatic answer cues/numbering",
+      "detail": null
+    },
+    {
+      "label": "methanoicacid/parent-chain actual DOM/graph targets match independent oracle",
+      "detail": null
+    },
+    {
+      "label": "methanoicacid/parent-chain actual selected IDs",
+      "detail": [
+        1
+      ]
+    },
+    {
+      "label": "Genuine UI check correct",
+      "detail": {
+        "phase": "active",
+        "moleculeId": "methanoicacid",
+        "roundId": "detective-round-18",
+        "missionId": "methanoicacid:comp5:parent-chain",
+        "bridgeMissionId": "methanoicacid:comp5:parent-chain:58",
+        "missionIndex": 0,
+        "missionCount": 2,
+        "kind": "atoms",
+        "atoms": [
+          1
+        ],
+        "bonds": [],
+        "selectionRevision": 207,
+        "correct": true,
+        "requestId": 86
+      }
+    },
+    {
+      "label": "Success exposes explicit next mission",
+      "detail": null
+    },
+    {
+      "label": "methanoicacid/carboxyl actual DOM/graph targets match independent oracle",
+      "detail": null
+    },
+    {
+      "label": "methanoicacid/carboxyl actual selected IDs",
+      "detail": [
+        1,
+        2,
+        4,
+        5
+      ]
+    },
+    {
+      "label": "Genuine UI check correct",
+      "detail": {
+        "phase": "active",
+        "moleculeId": "methanoicacid",
+        "roundId": "detective-round-18",
+        "missionId": "methanoicacid:comp9:carboxyl",
+        "bridgeMissionId": "methanoicacid:comp9:carboxyl:59",
+        "missionIndex": 1,
+        "missionCount": 2,
+        "kind": "atoms",
+        "atoms": [
+          1,
+          2,
+          4,
+          5
+        ],
+        "bonds": [],
+        "selectionRevision": 212,
+        "correct": true,
+        "requestId": 87
+      }
+    },
+    {
+      "label": "Success exposes explicit next mission",
+      "detail": null
+    },
+    {
+      "label": "Genuine UI check incorrect",
+      "detail": {
+        "phase": "active",
+        "moleculeId": "butadiene_1_3",
+        "roundId": "detective-round-19",
+        "missionId": "butadiene_1_3:comp6:double-bonds",
+        "bridgeMissionId": "butadiene_1_3:comp6:double-bonds:61",
+        "missionIndex": 1,
+        "missionCount": 2,
+        "kind": "bonds",
+        "atoms": [],
+        "bonds": [
+          1,
+          2,
+          3
+        ],
+        "selectionRevision": 217,
+        "correct": false,
+        "requestId": 90
+      }
+    },
+    {
+      "label": "Diene endpoint-union false positive rejected without erasing choice",
+      "detail": null
+    },
+    {
+      "label": "Genuine UI check correct",
+      "detail": {
+        "phase": "active",
+        "moleculeId": "butadiene_1_3",
+        "roundId": "detective-round-19",
+        "missionId": "butadiene_1_3:comp6:double-bonds",
+        "bridgeMissionId": "butadiene_1_3:comp6:double-bonds:61",
+        "missionIndex": 1,
+        "missionCount": 2,
+        "kind": "bonds",
+        "atoms": [],
+        "bonds": [
+          1,
+          3
+        ],
+        "selectionRevision": 218,
+        "correct": true,
+        "requestId": 90
+      }
+    },
+    {
+      "label": "Next mission clears prior answer/result",
+      "detail": null
+    },
+    {
+      "label": "Genuine UI check incorrect",
+      "detail": {
+        "phase": "active",
+        "moleculeId": "propanone",
+        "roundId": "detective-round-21",
+        "missionId": "propanone:comp9:carbonyl",
+        "bridgeMissionId": "propanone:comp9:carbonyl:64",
+        "missionIndex": 2,
+        "missionCount": 3,
+        "kind": "atoms",
+        "atoms": [
+          1,
+          2,
+          3,
+          10
+        ],
+        "bonds": [],
+        "selectionRevision": 225,
+        "correct": false,
+        "requestId": 95
+      }
+    },
+    {
+      "label": "Genuine UI check correct",
+      "detail": {
+        "phase": "active",
+        "moleculeId": "propanone",
+        "roundId": "detective-round-21",
+        "missionId": "propanone:comp9:carbonyl",
+        "bridgeMissionId": "propanone:comp9:carbonyl:64",
+        "missionIndex": 2,
+        "missionCount": 3,
+        "kind": "atoms",
+        "atoms": [
+          2,
+          10
+        ],
+        "bonds": [],
+        "selectionRevision": 227,
+        "correct": true,
+        "requestId": 95
+      }
+    },
+    {
+      "label": "Genuine UI check incorrect",
+      "detail": {
+        "phase": "active",
+        "moleculeId": "methanoicacid",
+        "roundId": "detective-round-22",
+        "missionId": "methanoicacid:comp9:carboxyl",
+        "bridgeMissionId": "methanoicacid:comp9:carboxyl:66",
+        "missionIndex": 1,
+        "missionCount": 2,
+        "kind": "atoms",
+        "atoms": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "bonds": [],
+        "selectionRevision": 234,
+        "correct": false,
+        "requestId": 98
+      }
+    },
+    {
+      "label": "Genuine UI check correct",
+      "detail": {
+        "phase": "active",
+        "moleculeId": "methanoicacid",
+        "roundId": "detective-round-22",
+        "missionId": "methanoicacid:comp9:carboxyl",
+        "bridgeMissionId": "methanoicacid:comp9:carboxyl:66",
+        "missionIndex": 1,
+        "missionCount": 2,
+        "kind": "atoms",
+        "atoms": [
+          1,
+          2,
+          4,
+          5
+        ],
+        "bonds": [],
+        "selectionRevision": 235,
+        "correct": true,
+        "requestId": 98
+      }
+    },
+    {
+      "label": "Stale real selection receipt from old round ignored",
+      "detail": null
+    },
+    {
+      "label": "Wrong-source message ignored",
+      "detail": null
+    },
+    {
+      "label": "Rapid molecule changes settle only latest native round",
+      "detail": null
+    }
+  ],
+  "role": "Developer actual headless Firefox, viewport emulation; not independent browser review",
+  "limits": [
+    "No personal/GUI Firefox or physical device test",
+    "No offline/conference/uninterrupted-operation claim",
+    "External font/vendor dependencies retained"
+  ],
+  "runtimeAtStart": {
+    "games/molecular-detective.html": "e1cb6fd8871cbd227fa5beebb35d8ff02f3b998b70b04254ab319478732ef902",
+    "css/namelecule-molecular-detective.css": "9d556692f54e19872b04c74705fa03a27c0d9f573734f92f550b719789147d52",
+    "js/namelecule-molecular-detective.js": "3b8dba409435fd0e07259d6e7da3e207e34feb9749a7ee035f7087a6b27abd43",
+    "js/namelecule-molecular-detective-engine.js": "020340742102bf2ec5810975fe45b64ba642c3aa409c11b3f0359fb3801b26d6",
+    "js/namelecule-molecular-detective-host.js": "177e7fc961d44b23c28b9650ef15deead4377f692fa866eadb96daac892608c0",
+    "games/molecular-detective-viewer.html": "87cc4788612c173ee266e11457e7cf265f3da06f1d93791e93655a8db98f38ae",
+    "tools/build-molecular-detective-host.py": "0beacd21731ef4111001264332f1e1be34c532b98a38eb45692712bd33efa3f2",
+    "design/molecular-detective-preview.html": "ffbf5a05a49a0db30dfc1d6dfb4288116e9f4759d48ecdf7417be1b26403ec04"
+  },
+  "controlMethod": "Molecule/mission select value + change event; molecule answers use genuine WebDriver pointer actions at visible SVG anchors/bond interiors. No direct selection setter or fabricated target.",
+  "actualCorrectAnswers": 49,
+  "nativeGraphs": [
+    {
+      "id": "ethane",
+      "name": "αιθάνιο",
+      "families": [
+        "parent-chain",
+        "single-bonds"
+      ]
+    },
+    {
+      "id": "butane",
+      "name": "βουτάνιο",
+      "families": [
+        "parent-chain",
+        "single-bonds"
+      ]
+    },
+    {
+      "id": "methyl_2_pentane",
+      "name": "2-μεθυλοπεντάνιο",
+      "families": [
+        "branches",
+        "parent-chain",
+        "single-bonds"
+      ]
+    },
+    {
+      "id": "dimethyl_2_3_butane",
+      "name": "2,3-διμεθυλοβουτάνιο",
+      "families": [
+        "branches",
+        "parent-chain",
+        "single-bonds"
+      ]
+    },
+    {
+      "id": "ethene",
+      "name": "αιθένιο",
+      "families": [
+        "parent-chain",
+        "double-bonds"
+      ]
+    },
+    {
+      "id": "butene_1",
+      "name": "1-βουτένιο",
+      "families": [
+        "parent-chain",
+        "double-bonds"
+      ]
+    },
+    {
+      "id": "butene_2",
+      "name": "2-βουτένιο",
+      "families": [
+        "parent-chain",
+        "double-bonds"
+      ]
+    },
+    {
+      "id": "butyne_1",
+      "name": "1-βουτίνιο",
+      "families": [
+        "parent-chain",
+        "triple-bonds"
+      ]
+    },
+    {
+      "id": "butyne_2",
+      "name": "2-βουτίνιο",
+      "families": [
+        "parent-chain",
+        "triple-bonds"
+      ]
+    },
+    {
+      "id": "butadiene_1_2",
+      "name": "1,2-βουταδιένιο",
+      "families": [
+        "parent-chain",
+        "double-bonds"
+      ]
+    },
+    {
+      "id": "butadiene_1_3",
+      "name": "1,3-βουταδιένιο",
+      "families": [
+        "parent-chain",
+        "double-bonds"
+      ]
+    },
+    {
+      "id": "ethanol",
+      "name": "αιθανόλη",
+      "families": [
+        "parent-chain",
+        "single-bonds",
+        "hydroxyl"
+      ]
+    },
+    {
+      "id": "butanol_2",
+      "name": "2-βουτανόλη",
+      "families": [
+        "parent-chain",
+        "single-bonds",
+        "hydroxyl"
+      ]
+    },
+    {
+      "id": "propanal",
+      "name": "προπανάλη",
+      "families": [
+        "parent-chain",
+        "single-bonds",
+        "aldehyde"
+      ]
+    },
+    {
+      "id": "propanone",
+      "name": "προπανόνη",
+      "families": [
+        "parent-chain",
+        "single-bonds",
+        "carbonyl"
+      ]
+    },
+    {
+      "id": "pentanone_3",
+      "name": "3-πεντανόνη",
+      "families": [
+        "parent-chain",
+        "single-bonds",
+        "carbonyl"
+      ]
+    },
+    {
+      "id": "methanoicacid",
+      "name": "μεθανικό οξύ",
+      "families": [
+        "parent-chain",
+        "carboxyl"
+      ]
+    }
+  ],
+  "detectiveFont": {
+    "family": "Roboto Condensed, sans-serif",
+    "size": "40px",
+    "weight": "700",
+    "line": "44.8px",
+    "spacing": "-1.6px",
+    "body": "system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif"
+  },
+  "failure": "Traceback (most recent call last):\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/molecular-detective-implementation-20261115/browser/acceptance.py\", line 145, in <module>\n    check(font['family']=='\"Roboto Condensed\", sans-serif' and font['size']=='40px' and font['weight']=='700','Detective title matches approved font contract',font)\n  File \"detective-support\", line 16, in check\n    'ethanol': {'parent-chain': [[1,2]], 'single-bonds': [[1]], 'hydroxyl': [[3,9]]},\nAssertionError: ('Detective title matches approved font contract', {'family': 'Roboto Condensed, sans-serif', 'size': '40px', 'weight': '700', 'line': '44.8px', 'spacing': '-1.6px', 'body': 'system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif'})\n",
+  "stateAtFailure": {
+    "phase": "active",
+    "moleculeId": "butyne_2",
+    "roundId": "detective-round-26",
+    "missionId": "butyne_2:comp5:parent-chain",
+    "bridgeMissionId": "butyne_2:comp5:parent-chain:68",
+    "missionIndex": 0,
+    "missionCount": 2,
+    "kind": "atoms",
+    "atoms": [],
+    "bonds": [],
+    "selectionRevision": 238,
+    "correct": false,
+    "requestId": 104
+  },
+  "javascriptErrors": [],
+  "diagnostics": []
+}

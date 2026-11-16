@@ -1,0 +1,105 @@
+BEFORE:
+re finalized, before fitting the visible drawing.
+  fHideEsterSkeletalCarbonHydrogens();
+  fPrepareFixedCCAlkanePrototype();
+  $("#jsmeNomeclatureSVG").toggleClass(
+    "svgAtomsColorized",
+    svgAtomColors2DFlag,
+  );
+
+LOCAL:
+  fRefreshLabelBackplates();
+  fFit2DSVG();
+  fValidate2DBondVisibility();
+}
+
+// A font notification owns only 2D work. It must not replay JSmol scripts or
+// restart the user's progressive numbering animation.
+function fNumberingAnchor2D(atomNo) {
+  if (mode2D !== "skeletal") {
+    const label=fGetRenderedAtomTextMap(false,true)[atomNo-1];
+    if (!label) return null;
+    const compact=compactNumberingLabelMap[atomNo-1];
+    return {x:compact ? fGetCompactLabelNumberX(label,compact,0) : parseInt(label.attr("x")),
+      y:parseInt(label.attr("y"))};
+  }
+  const lines=molSvg.selectAll("line");let point=null;
+  for (let i=0;i<bondList.length;i++) {
+    const bond=bondList[i],line=lines[svgBondList[i]-1];if(!line)continue;
+    if (bond[0]===atomNo) return {x:parseInt(line.attr("x1")),y:parseInt(line.attr("y1"))};
+    if (bond[1]===atomNo) point={x:parseInt(line.attr("x2")),y:parseInt(line.attr("y2"))};
+  }
+  return point;
+}
+
+function fRefreshFontDrawing2D() {
+  const svg=document.querySelector("#jsmeNomeclatureSVG svg");
+  if (!svg) {fUpdateSVG();return;}
+  const chain=((Array.isArray(numberingAtomOverride) ? numberingAtomOverride : mainChainAtomsList) || [])
+    .filter(atomNo=>allAtomsTypeList[atomNo-1]==="C");
+  const anchors=chain.map(fNumberingAnchor2D);
+  const sources=Array.isArray(numbersSVGElements) ? numbersSVGElements.slice() : [];
+  const visible=[...svg.querySelectorAll('text[id^="number"]')].map(n=>n.cloneNode(true));
+  fUpdateSVG();
+  const fresh=document.querySelector("#jsmeNomeclatureSVG svg");
+  if (!fresh || !numberingFlag || !sources.length) return;
+  const next=chain.map(fNumberingAnchor2D);
+  // Update queued 2D positions while leaving the existing interval, progress,
+  // override chains and all 3D echoes untouched.
+  numbersSVGElements=sources.map((source,i)=>{
+    if (!source || !anchors[i] || !next[i]) return source;
+    const dx=next[i].x-anchors[i].x,dy=next[i].y-anchors[i].y;
+    return source.replace(/(\bx=['"])([^'"]+)(['"])/,(_m,a,v,b)=>a+(Number(v)+dx)+b)
+      .replace(/(\by=['"])([^'"]+)(['"])/,(_m,a,v,b)=>a+(Number(v)+dy)+b);
+  });
+  const group=molSvg.select("g");
+  visible.forEach(node=>{
+    const index=Number(node.id.slice(6)),before=anchors[index],after=next[index];
+    if (before && after) {
+      node.setAttribute("x",Number(node.getAttribute("x"))+after.x-before.x);
+      node.setAttribute("y",Number(node.getAttribute("y"))+after.y-before.y);
+      group.node.appendChild(node);
+    }
+  });
+
+UPSTREAM:
+  try { if (typeof fMulerSelectRepaint === "function") fMulerSelectRepaint(); } catch (eSel) { /* selection overlay is best-effort */ }
+  try { if (typeof fMulerSelectSeqBadges === "function") fMulerSelectSeqBadges(); } catch (eSeq) { /* sequence badges are best-effort */ }
+  try { if (typeof fMulerNumberAid === "function") fMulerNumberAid(); } catch (eAid) { /* numbering aid is best-effort */ }
+}
+
+// ── Numbering aid (v56 locant/bond phases) ───────────────────────────────────
+// Chain numbers as a position reference while a locant or bond quiz is armed
+// — only for molecules whose main chain is already solved. Branch name boxes
+// use the short wording and get no numbers; branch locant boxes do.
+// Numbers only (the aid never paints highlights), same number* ids,
+// repaint-driven lifecycle.
+function fMulerNumberAid() {
+  try {
+    if (typeof fMulerSelectPurpose !== "function") return;
+    var _ap = fMulerSelectPurpose();
+    if (_ap !== "loc" && _ap !== "bond" && _ap !== "branch") return;
+    if (_ap === "branch") {
+      try {
+        var _bt = (typeof window !== "undefined") ? window.MulerQuizTarget : "";
+        if ((typeof fMulerBranchTargetIsLocant !== "function") || !fMulerBranchTargetIsLocant(_bt)) return;
+      } catch (eB) { return; }
+    }
+    if (typeof fMulerSelectPresenting === "function" && fMulerSelectPresenting()) return;
+    if (typeof fMulerChainSolved !== "function" || !fMulerChainSolved()) return;
+    if (typeof molSvg === "undefined" || !molSvg) return;
+    var keep = false;
+    try { keep = numberingFlag; } catch (eK) { keep = false; }
+    try { numberingFlag = true; } catch (eS) { return; }
+    try { if (typeof fShowAnalysisNumbering === "function") fShowAnalysisNumbering(0); } catch (eN) {}
+    try { numberingFlag = keep; } catch (eR) {}
+  } catch (e) {}
+
+AFTER:
+}
+
+let labelFontRefreshFrame = null;
+let labelFontPageActive = true;
+function fCancelFontRefresh2D() {
+  if (labelFontRefreshFrame!==null) cancelAnimationFrame(labelFontRefreshFrame);
+  labelFontRefre

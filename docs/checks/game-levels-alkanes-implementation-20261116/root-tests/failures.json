@@ -1,0 +1,21 @@
+{
+  "recordedUTC": "2026-11-16T07:31:04.698Z",
+  "cuts": {
+    "js/namelecule-game-levels.js": "3be269c6cdecc2158184db5f82269b44403c86be59e37adf7aa5e8e7edb72df5",
+    "js/namelecule-generated-repair-checkpoint.js": "f9bfb7fe3f9d3bfc4f158bf6aae27efc564af71fdc2de294fde048996889b913",
+    "js/namelecule-game-choice-checkpoint.js": "3a073d0ca00e13f2f7bd148885c01536501029020fd0555e8e49a60ce1115e66",
+    "js/namelecule-molecular-detective-lesson.js": "67bc23b7343daeebafd16b33bb4a218678db7fd76eccaec10f693fa89f8c006b",
+    "js/namelecule-molecular-detective-engine.js": "b9f10b165313631c80c8c136a6364e9222414ea74e154a0c4adffb13032f1f95",
+    "js/namelecule-name-builder-engine.js": "1c7e477325ae07b02d5218ef0833236f95eade7b6003a3aa07545f91b414f8a2",
+    "js/namelecule-molecular-puzzle-engine.js": "6141bec0a6313dfd057ce1a6d057fe2a3cd1850f2b770f63929b4d312c0b55d1",
+    "js/namelecule-repair-generator.js": "118304488b6eaee651490785903080c419239df3f646988f79ae0e2548527611",
+    "scenarios/alkanes-user-3.scenario.json": "d5e85fca80cb1ddb04b9776e910fbe6ee642ea9ee2407acecebd5de585947e82"
+  },
+  "failures": [
+    {
+      "name": "cold preparation resolves to synchronous warm null, including cache-churn recovery",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\nfalse !== true\n\n    at /Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/game-levels-alkanes-implementation-20261116/root-tests/check-composite.js:104:168\n    at async test (/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/game-levels-alkanes-implementation-20261116/root-tests/check-composite.js:56:34)\n    at async /Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/game-levels-alkanes-implementation-20261116/root-tests/check-composite.js:102:1"
+    }
+  ]
+}

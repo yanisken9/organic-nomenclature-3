@@ -1,0 +1,37 @@
+{
+  "recordedUTC": "2026-11-15T16:14:55.452011+00:00",
+  "status": "Draft explanation of level criteria, not implemented or user-approved mapping",
+  "learningDesigner": "/root/game_level_names (readonly advice)",
+  "commonDimensions": [
+    "Chemical structure: branches, bondtypes, principal groups, equivalent eligible parents",
+    "Task: decisions and namepieces/distractors, not totalC alone",
+    "Question scope constrained to selectedlesson/category at everydifficulty",
+    "Existing forms,feedbackandbasicinteractionremainusable acrosslevels"
+  ],
+  "draftByGame": {
+    "Workshop": [
+      "Simple name and one clear fault",
+      "One branch/locant decision",
+      "More complexname/more decisions, still onefaultperround"
+    ],
+    "BuildName": [
+      "Straightchain name",
+      "Onebranchname",
+      "More branches/namepieces/distractors"
+    ],
+    "MolecularPuzzle": [
+      "Straightchain alkane",
+      "Onebranchalkane",
+      "Multiplebranchalkane"
+    ],
+    "MolecularDetective": [
+      "Chain/bond selection in simpleunbranchedmolecule",
+      "Locate namedregion in branchedmolecule",
+      "Distinguish relevantregion amongmultiplebranches/similarregions"
+    ]
+  },
+  "actualDataCaveat": "Need classify supported existingpool pergame; Puzzle current8alkanes, Detective current17; no assumedcoverage of alllevels/all141",
+  "futureFlow": "Game->Level->automaticallyrandomappropriateexistingmission; no manualmolecule/missiondropdowns",
+  "next": "Agree criteria/names, read-only map actualcontent and then concrete implementationplan forapproval",
+  "runtimeOrCoreChanges": false
+}

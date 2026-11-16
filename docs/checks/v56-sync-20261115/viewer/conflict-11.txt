@@ -1,0 +1,94 @@
+BEFORE:
+s.x = rectX - widthDelta;
+    }
+  } else if (forwardShift > 0) {
+    rectAttrs.x = rectX - forwardShift;
+  }
+  workingRectEl.attr(rectAttrs);
+  return workingRectEl;
+}
+
+function fCollectHighlightRectsNearText(textEls) {
+
+LOCAL:
+  // Ownership, never proximity: a neighboring CH3 must keep its own backplate.
+  const owners = new Set(textEls.filter(Boolean).map(el =>
+    el.node.getAttribute("data-namelecule-atom")).filter(Boolean));
+  return molSvg.selectAll("rect[data-namelecule-atom]").filter(el =>
+    owners.has(el.node.getAttribute("data-namelecule-atom")));
+
+UPSTREAM:
+  const collectedRects = [];
+  const seenRects = new Set();
+  const rectEls = molSvg.selectAll("rect");
+
+  for (let i = 0; i < textEls.length; i++) {
+    const textEl = textEls[i];
+    if (!textEl || !textEl.node || !textEl.node.getBBox) {
+      continue;
+    }
+
+    let textBBox;
+    try {
+      textBBox = textEl.node.getBBox();
+    } catch (e) {
+      continue;
+    }
+
+    const padX = Math.max(textBBox.width * 0.7, 160);
+    const padY = Math.max(textBBox.height * 0.6, 120);
+    const minX = textBBox.x - padX;
+    const maxX = textBBox.x + textBBox.width + padX;
+    const minY = textBBox.y - padY;
+    const maxY = textBBox.y + textBBox.height + padY;
+
+    for (let r = 0; r < rectEls.length; r++) {
+      const rectEl = rectEls[r];
+      if (!rectEl || !rectEl.node) {
+        continue;
+      }
+      // Index 0 is the white canvas background (same convention as the
+      // rectIdx = 1 skip in fGetRenderedAtomRectMap): it overlaps every
+      // removed text, so without this guard every compacted render deletes
+      // it and the rect map shifts one label to the right from then on.
+      if (r === 0) {
+        continue;
+      }
+      if (seenRects.has(rectEl.node)) {
+        continue;
+      }
+
+      const rectX = parseFloat(rectEl.attr("x"));
+      const rectY = parseFloat(rectEl.attr("y"));
+      const rectWidth = parseFloat(rectEl.attr("width"));
+      const rectHeight = parseFloat(rectEl.attr("height"));
+      if (
+        isNaN(rectX) ||
+        isNaN(rectY) ||
+        isNaN(rectWidth) ||
+        isNaN(rectHeight)
+      ) {
+        continue;
+      }
+
+      const rectMaxX = rectX + rectWidth;
+      const rectMaxY = rectY + rectHeight;
+      const overlaps =
+        rectMaxX >= minX && rectX <= maxX && rectMaxY >= minY && rectY <= maxY;
+      if (!overlaps) {
+        continue;
+      }
+
+      seenRects.add(rectEl.node);
+      collectedRects.push(rectEl);
+    }
+  }
+
+  return collectedRects;
+
+AFTER:
+}
+
+// Circle twin of the rect collector above: highlight circles (JSME renders
+// atom highlights as circles where no label rect owns them) near removed
+// texts are dropped by the compaction too. Fil

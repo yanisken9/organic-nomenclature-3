@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;600;700&display=swap");
+
+.detective-title { display: grid; justify-items: center; gap: 8px; margin: 6px 0 10px; }
+.detective-logo { display: block; width: 88px; height: 88px; object-fit: contain; }
+.detective-title h1 { min-width: 0; max-width: 100%; margin: 0; font-family: "Roboto Condensed", sans-serif; font-size: 40px; font-weight: 700; line-height: 1.12; letter-spacing: -.04em; overflow-wrap: anywhere; }
+.detective-game .intro { max-width: 100%; margin-bottom: 10px; }
+.detective-game .objective { max-width: 810px; margin: 12px auto 0; font-size: 24px; font-weight: 700; line-height: 1.45; }
+.detective-game .intro-detail { margin-top: 8px; font-size: 11.52px; font-weight: 400; line-height: 1.6; }
+.detective-round-tools { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin: 0 0 14px; font-size: .85rem; color: var(--muted); }
+.detective-round-tools label { font-weight: 700; }
+.detective-round-tools select { min-height: 44px; max-width: 100%; min-width: 0; padding: 8px 30px 8px 10px; font: inherit; color: var(--ink); border: 1px solid #b2cdc3; border-radius: 10px; background: white; }
+.detective-round-tools select:focus-visible { outline: 3px solid #bc7148; outline-offset: 3px; }
+.detective-workspace { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); grid-template-rows: auto 1fr; gap: 18px 22px; align-items: stretch; }
+.detective-molecule { grid-column: 1; grid-row: 1 / 3; }
+.detective-clue { grid-column: 2; grid-row: 1; }
+.detective-answer { grid-column: 2; grid-row: 2; }
+.detective-molecule .viewer-wrap { height: 370px; }
+.detective-kind { font-size: .78rem; line-height: 1.4; font-weight: 700; text-align: right; }
+.detective-clue-content, .detective-answer-content { padding: 21px; }
+.detective-name { margin: 2px 0 19px; font-size: clamp(23px, 2.5vw, 32px); font-weight: 750; line-height: 1.8; overflow-wrap: anywhere; }
+.detective-name .name-piece { border-radius: 5px; }
+.detective-name .clue-piece { color: #254c50; background: #dcefe7; box-shadow: 0 3px 0 #bc7148; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 6px; }
+.detective-prompt { margin: 0; font-size: 1.05rem; font-weight: 700; line-height: 1.6; }
+.detective-help { margin: 0 0 8px; font-size: .92rem; line-height: 1.5; }
+.detective-selection-status { margin: 0; min-height: 1.6em; color: var(--muted); font-size: .85rem; line-height: 1.5; }
+.detective-answer .check-row { margin-top: 14px; gap: 9px; }
+.detective-answer .primary, .detective-answer .secondary { min-width: 0; padding: 11px 17px; }
+.detective-next { margin-top: 14px; }
+.detective-view-note { padding: 12px 18px; margin: 0; color: var(--muted); border-top: 1px solid #e4ede7; text-align: center; font-size: .8rem; }
+.detective-game .feedback { margin-top: 14px; }
+.detective-game .feedback p { margin: 0; }
+.detective-game .viewer-mask[hidden] { display: none; }
+body.detective-embedded .site-header, body.detective-embedded .site-footer, body.detective-embedded .eyebrow { display: none; }
+body.detective-embedded .detective-game { max-width: 1180px; padding: 16px 22px 24px; }
+body.detective-embedded .game-status { min-height: 1.5em; padding-bottom: 8px; }
+
+@media (max-width: 850px) {
+  .detective-workspace { grid-template-columns: minmax(0, 1fr); grid-template-rows: auto auto auto; gap: 14px; }
+  .detective-clue { grid-column: 1; grid-row: 1; }
+  .detective-molecule { grid-column: 1; grid-row: 2; }
+  .detective-answer { grid-column: 1; grid-row: 3; }
+  .detective-molecule .viewer-wrap { height: 300px; }
+  .detective-clue-content { padding: 15px 18px; }
+  .detective-name { margin-bottom: 10px; font-size: 26px; }
+}
+@media (max-width: 760px) {
+  .detective-game .objective { font-size: 20px; }
+  .detective-game .intro-detail, .detective-game .game-status { font-size: 12px; }
+  .detective-title h1 { font-size: 28.8px; }
+  .detective-logo { width: 64px; height: 64px; }
+}
+@media (max-width: 430px) {
+  .detective-round-tools { gap: 7px; }
+  .detective-round-tools label { flex-basis: 100%; }
+  .detective-round-tools select { width: 100%; }
+  .detective-molecule .viewer-wrap { height: 270px; }
+  .detective-clue-content, .detective-answer-content { padding: 15px; }
+  .detective-name { font-size: 23px; }
+  .detective-kind { max-width: 110px; }
+  body.detective-embedded .detective-game { padding: 13px 12px 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .detective-game *, .detective-game *::before, .detective-game *::after { scroll-behavior: auto !important; transition: none !important; }
+}

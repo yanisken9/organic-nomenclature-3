@@ -1,0 +1,78 @@
+{
+  "role": "NAMELECULE_DEVELOPER_V1_20261023",
+  "scope": "Approved six-alkane pool enrichment; catalog generator/v2 catalog, Puzzle catalog loader, Builder child/cache references only",
+  "comparisonBase": "168e3cec01f941a84d40bbe0dc07156e7baa35d0",
+  "frozen": true,
+  "changedOrNewRuntimePaths": {
+    "tools/build-alkane-game-catalog.py": "cbbb91b52b0091064f7179677f65ce266946f80d2cd073ff2746fdf58ebe5c7f",
+    "games/data/alkane-structures-v2.json": "2c4d9a95a77291f13c4a422644aefdae7f23448c2eed7b9d2ef4913da6de92b2",
+    "js/namelecule-molecular-puzzle.js": "052dc73b1682e53ea83e92681f3b7ab758ceb6817790037ae71b93cd18c8b685",
+    "games/molecular-puzzle.html": "9d6d9960e3b6de55bad3a9e5342851e5632bd251e208877b271b794aa324452c",
+    "js/namelecule-name-builder.js": "6fcd1b1f57f0f6ecebbaa4faad10765dee76d5e9d78dcc8a60fd51ab3ecdd93b",
+    "games/name-builder.html": "cda58c9d3dd09f48042cd8353ad46dc61243e9c93c8b71d926c87585f65b66af"
+  },
+  "catalog": {
+    "sha256": "2c4d9a95a77291f13c4a422644aefdae7f23448c2eed7b9d2ef4913da6de92b2",
+    "revision": "bb48fe6cbb689c2bad82cc15d47f53e49f4f021894183c6b228f97bf6902292f",
+    "schemaVersion": 1,
+    "catalogVersion": 2,
+    "count": 14,
+    "engineSHA256": "3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306",
+    "source": {
+      "legacy": {
+        "file": "games/data/alkane-structures.json",
+        "sha256": "9778e30ea33f2f7cd4c8a472e46e90539856b861a54035a1d514c3246cccf724",
+        "revision": "275d537b19f3ef0791c97d8d78c127f541a0579038ef1e8d65dadde611845690"
+      },
+      "pack": {
+        "file": "data/namelecule-alkanes-v1/manifest.json",
+        "sha256": "1ea6176be7a849f5e5d65a4230c6940e7f28147ad18ef4bafd80cefbe18fa9b2",
+        "id": "namelecule-alkanes-v1"
+      }
+    }
+  },
+  "legacyCatalogUnchanged": true,
+  "puzzlePersistence": "Original standalone has no storage or receipts and keeps graph in its closure. New standalone starts v2; controlled existing lesson continues legacy8 with old snapshots, names and targets. Legacy partial and earned evidence restored/regraded in memory.",
+  "builderScope": "Standalone native inventory already data-driven. Child URL and controller cache bumped. Current controlled lesson whitelist/vocabulary contract stays old8.",
+  "checks": [
+    {
+      "command": "python3 tools/build-alkane-game-catalog.py --check",
+      "result": "PASS; eight legacy entries reproduce exact bytes"
+    },
+    {
+      "command": "python3 tools/build-alkane-game-catalog.py --catalog-v2 --check",
+      "result": "PASS; 14 entries reproduce pinned legacy plus frozen manifest sources"
+    },
+    {
+      "command": "python3 docs/checks/alkane-pool-implementation-20261116/catalog-games/verify-generator.py",
+      "result": "PASS; 8 checks, isolated temporary source tree; corrupt IDs, paths, hashes, MOL and engine rejected"
+    },
+    {
+      "command": "node docs/checks/alkane-pool-implementation-20261116/catalog-games/verify-catalog-games.cjs",
+      "result": "PASS; 316 Developer memory checks; details in memory-results.json"
+    },
+    {
+      "command": "node --check js/namelecule-molecular-puzzle.js",
+      "result": "PASS"
+    },
+    {
+      "command": "node --check js/namelecule-name-builder.js",
+      "result": "PASS"
+    },
+    {
+      "command": "compile(Path('tools/build-alkane-game-catalog.py').read_text(), filename, 'exec')",
+      "result": "PASS; no Python cache written"
+    }
+  ],
+  "coreFilesChanged": false,
+  "oldSourcesOrScenarioJSONChangedByThisWorker": false,
+  "gitStageCommitPushPublish": false,
+  "independentReview": "Not performed by this worker; root to supply consolidated independent Reviewer.",
+  "untested": [
+    "Real browser rendering, pointer drag, keyboard, viewport resize and framing",
+    "Native integrated Builder55/representation/3D behavior with generated host",
+    "Actual lesson browser navigation and persistent parent receipts; memory restore only verified here",
+    "Physical conference/browser/offline qualification"
+  ],
+  "handoff": "Stopped editing all six runtime/tool targets after final checks; root owns broader games/provider/SVG/host checks and review."
+}

@@ -1,0 +1,1037 @@
+--- before/mulermoc-nom-57.html
++++ mulermoc-nom-57.html
+@@ -363,20 +363,21 @@
+   </div>
+ 
+   <script src="js/jsme-nick-nomeclature-moc2-data_57.js?v=namelecule-v57-20261115-r1"></script>
++  <script src="js/MULERMOC_namelecule_alkanes_v1_data.js?v=262c6561aaff7a88919cda715835e7f455d64756218aeb66e3e4949ba569a75c"></script>
+   <!-- Accepted custom molecules (v54 Stage 2): save one MULERMOC_<name>_data.js
+        per molecule from Ρυθμίσεις → Προσαρμοσμένα μόρια. Drop collected
+        files next to the data file and register each one, e.g.:
+        <script src="js/MULERMOC_dimethyl_ether_data.js?v=54.1"></script> -->
+   <script src="js/ui-icons-57.js?v=namelecule-v57-20261115-r1"></script>
+   <script src="js/mulermoc-nom-core-57.js?v=namelecule-v57-20261115-r1"></script>
+-  <script src="js/mulermoc-nom-molview-57.js?v=namelecule-v57-20261115-r1"></script>
++  <script src="js/mulermoc-nom-molview-57.js?v=alkane-pool-20261116-r1"></script>
+   <script src="js/mulermoc-nom-teaching-57.js?v=namelecule-v57-20261115-r1"></script>
+   <script src="js/mulermoc-nom-note-57.js?v=namelecule-v57-20261115-r1"></script>
+-  <script src="js/namelecule-game-repair.js?v=choice-games-20261111-r1"></script>
++  <script src="js/namelecule-game-repair.js?v=alkane-pool-20261116-r2"></script>
+   <script src="js/namelecule-quiz-checkpoints.js?v=builder-workspace-20261112-r2"></script>
+   <script src="js/namelecule-chemistry-client.js?v=verified-engines-20261105-r1"></script>
+   <script src="js/namelecule-repair-generator.js?v=engine-pilot-20261105-r1"></script>
+-  <script src="js/namelecule-generated-repair-checkpoint.js?v=choice-games-20261111-r2"></script>
++  <script src="js/namelecule-generated-repair-checkpoint.js?v=alkane-pool-20261116-r1"></script>
+   <script src="js/namelecule-name-builder-engine.js?v=name-builder-20261111-r1"></script>
+   <script src="js/namelecule-molecular-puzzle-engine.js?v=puzzle-lesson-20261112-r1"></script>
+   <script src="js/namelecule-game-choice-checkpoint.js?v=puzzle-lesson-20261112-r1"></script>
+--- before/games/name-repair.html
++++ games/name-repair.html
+@@ -8,7 +8,7 @@
+   <meta name="description" content="Διάλεξε ένα σετ αποστολών στο Συνεργείο ονομάτων. Παρατήρησε τις δομές, επισκεύασε τα ονόματα και δες τις εξηγήσεις.">
+   <link rel="stylesheet" href="../css/namelecule-games.css?v=workshop-brand-20261105-r1">
+   <link rel="stylesheet" href="../css/namelecule-repair-round.css?v=workshop-lesson-parity-20261110-r1">
+-  <script src="../js/namelecule-game-repair.js?v=workshop-lesson-parity-20261110-r2" defer></script>
++  <script src="../js/namelecule-game-repair.js?v=alkane-pool-20261116-r2" defer></script>
+ </head>
+ <body>
+   <a class="skip-link" href="#game-root">Πήγαινε στο παιχνίδι</a>
+--- before/games/name-builder.html
++++ games/name-builder.html
+@@ -7,7 +7,7 @@
+   <title>Χτίσε το όνομα · Namelecule</title>
+   <link rel="stylesheet" href="../css/namelecule-name-builder.css?v=builder-methods-20261112-r3">
+   <script src="../js/namelecule-name-builder-engine.js?v=name-builder-20261111-r1" defer></script>
+-  <script src="../js/namelecule-name-builder.js?v=builder-outside-drop-20261112-r1" defer></script>
++  <script src="../js/namelecule-name-builder.js?v=alkane-pool-20261116-r1" defer></script>
+ </head>
+ <body>
+   <a class="skip-link" href="#answer-title">Πήγαινε στη σύνθεση του ονόματος</a>
+--- before/games/molecular-puzzle.html
++++ games/molecular-puzzle.html
+@@ -9,7 +9,7 @@
+   <link rel="stylesheet" href="../css/namelecule-molecular-puzzle.css?v=puzzle-lesson-20261112-r1">
+   <script src="../js/namelecule-chemistry-client.js?v=puzzle-prototype-20261112-r1" defer></script>
+   <script src="../js/namelecule-molecular-puzzle-engine.js?v=puzzle-prototype-20261112-r1" defer></script>
+-  <script src="../js/namelecule-molecular-puzzle.js?v=puzzle-lesson-20261112-r1" defer></script>
++  <script src="../js/namelecule-molecular-puzzle.js?v=alkane-pool-20261116-r1" defer></script>
+ </head>
+ <body>
+   <a class="skip-link" href="#assembly-title">Πήγαινε στη σύνθεση της δομής</a>
+--- before/games/molecular-detective.html
++++ games/molecular-detective.html
+@@ -7,8 +7,8 @@
+   <title>Μοριακός ντεντέκτιβ · Namelecule</title>
+   <link rel="stylesheet" href="../css/namelecule-name-builder.css?v=builder-methods-20261112-r3">
+   <link rel="stylesheet" href="../css/namelecule-molecular-detective.css?v=detective-20261115-r1">
+-  <script src="../js/namelecule-molecular-detective-engine.js?v=detective-20261115-r1" defer></script>
+-  <script src="../js/namelecule-molecular-detective.js?v=detective-20261115-r1" defer></script>
++  <script src="../js/namelecule-molecular-detective-engine.js?v=alkane-pool-20261116-r1" defer></script>
++  <script src="../js/namelecule-molecular-detective.js?v=alkane-pool-20261116-r1" defer></script>
+ </head>
+ <body>
+   <a class="skip-link" href="#mission-title">Πήγαινε στην αποστολή</a>
+--- before/games/name-builder-viewer.html
++++ games/name-builder-viewer.html
+@@ -78,7 +78,7 @@
+ 
+   <link rel="stylesheet" href="css/namelecule-55.css?v=namelecule-v55-20261110-r2" />
+   <link rel="stylesheet" href="css/namelecule-repair-round.css?v=optional-triples-20261110-r1" />
+-  <link rel="stylesheet" href="css/namelecule-quiz-checkpoints.css?v=choice-games-20261111-r1" />
++  <link rel="stylesheet" href="css/namelecule-quiz-checkpoints.css?v=game-header-text-parity-20261111-r1" />
+   <script src="js/namelecule-label-metrics.js?v=20261031-r1"></script>
+   <script src="js/vendor/jsme/namelecule-20261031-r1/jsme.nocache.js"></script>
+   <script src="js/vendor/jquery/jquery-4.0.0.min.js"></script>
+@@ -395,22 +395,24 @@
+   </div>
+ 
+   <script src="js/jsme-nick-nomeclature-moc2-data_55.js?v=namelecule-v55-20261110-r2"></script>
++  <script src="js/MULERMOC_namelecule_alkanes_v1_data.js?v=262c6561aaff7a88919cda715835e7f455d64756218aeb66e3e4949ba569a75c"></script>
+   <!-- Accepted custom molecules (v54 Stage 2): save one MULERMOC_<name>_data.js
+        per molecule from Ρυθμίσεις → Προσαρμοσμένα μόρια. Drop collected
+        files next to the data file and register each one, e.g.:
+        <script src="js/MULERMOC_dimethyl_ether_data.js?v=54.1"></script> -->
+   <script src="js/ui-icons-55.js?v=namelecule-v55-20261110-r2"></script>
+   <script src="js/mulermoc-nom-core-55.js?v=namelecule-v55-20261110-r2"></script>
+-  <script src="js/mulermoc-nom-molview-55.js?v=namelecule-v55-20261110-r2"></script>
++  <script src="js/mulermoc-nom-molview-55.js?v=2dfde418f2444cbd61cc61ae20c1ef451d970e60d1408c66942c472878269c8d"></script>
+   <script src="js/mulermoc-nom-teaching-55.js?v=namelecule-v55-20261110-r2"></script>
+   <script src="js/mulermoc-nom-note-55.js?v=namelecule-v55-20261110-r2"></script>
+   <script src="js/namelecule-game-repair.js?v=choice-games-20261111-r1"></script>
+-  <script src="js/namelecule-quiz-checkpoints.js?v=choice-games-20261111-r2"></script>
++  <script src="js/namelecule-quiz-checkpoints.js?v=builder-workspace-20261112-r2"></script>
+   <script src="js/namelecule-chemistry-client.js?v=verified-engines-20261105-r1"></script>
+   <script src="js/namelecule-repair-generator.js?v=engine-pilot-20261105-r1"></script>
+   <script src="js/namelecule-generated-repair-checkpoint.js?v=choice-games-20261111-r2"></script>
+   <script src="js/namelecule-name-builder-engine.js?v=name-builder-20261111-r1"></script>
+-  <script src="js/namelecule-game-choice-checkpoint.js?v=choice-games-20261111-r2"></script>
++  <script src="js/namelecule-molecular-puzzle-engine.js?v=puzzle-lesson-20261112-r1"></script>
++  <script src="js/namelecule-game-choice-checkpoint.js?v=puzzle-lesson-20261112-r1"></script>
+   <script src="js/mulermoc-nom-scenario-55.js?v=namelecule-v55-20261110-r2"></script>
+   <script src="js/mulermoc-nom-iupac-55.js?v=namelecule-v55-20261110-r2"></script>
+   <script src="js/mulermoc-nom-lang-55.js?v=namelecule-v55-20261110-r2"></script>
+--- before/games/molecular-detective-viewer.html
++++ games/molecular-detective-viewer.html
+@@ -401,13 +401,14 @@
+   </div>
+ 
+   <script src="js/jsme-nick-nomeclature-moc2-data_56.js?v=namelecule-v56-20261115-r1"></script>
++  <script src="js/MULERMOC_namelecule_alkanes_v1_data.js?v=262c6561aaff7a88919cda715835e7f455d64756218aeb66e3e4949ba569a75c"></script>
+   <!-- Accepted custom molecules (v54 Stage 2): save one MULERMOC_<name>_data.js
+        per molecule from Ρυθμίσεις → Προσαρμοσμένα μόρια. Drop collected
+        files next to the data file and register each one, e.g.:
+        <script src="js/MULERMOC_dimethyl_ether_data.js?v=54.1"></script> -->
+   <script src="js/ui-icons-56.js?v=namelecule-v56-20261115-r1"></script>
+   <script src="js/mulermoc-nom-core-56.js?v=namelecule-v56-20261115-r1"></script>
+-  <script src="js/mulermoc-nom-molview-56.js?v=namelecule-v56-20261115-r1"></script>
++  <script src="js/mulermoc-nom-molview-56.js?v=e484618054e26d9cdd871ea340a57f400dc7db1e816de1917a332fd1c5c5d47e"></script>
+   <script src="js/mulermoc-nom-teaching-56.js?v=namelecule-v56-20261115-r1"></script>
+   <script src="js/mulermoc-nom-note-56.js?v=namelecule-v56-20261115-r1"></script>
+   <script src="js/namelecule-game-repair.js?v=choice-games-20261111-r1"></script>
+--- before/js/namelecule-game-repair.js
++++ js/namelecule-game-repair.js
+@@ -761,8 +761,11 @@
+   let states = [];
+   let activeRound = null;
+   let renderId = 0;
+-  const enginePilot = new URLSearchParams(window.location.search).get("source") === "engine";
+-  const pilotStorageKey = "namelecule-repair-engine-pilot-v1";
++  const entryParams = new URLSearchParams(window.location.search);
++  const enginePilot = entryParams.get("source") !== "authored";
++  const legacyPilotStorageKey = "namelecule-repair-engine-pilot-v1";
++  const enrichedPilotStorageKey = "namelecule-repair-engine-pool-v2";
++  let pilotStorageKey = enrichedPilotStorageKey;
+   let pilot = null;
+   let pilotPhase = "hub";
+   let loadToken = 0;
+@@ -784,8 +787,8 @@
+     });
+   }
+ 
+-  function readPilotProgress() {
+-    try { return JSON.parse(window.sessionStorage.getItem(pilotStorageKey)); }
++  function readPilotProgress(key = pilotStorageKey) {
++    try { return JSON.parse(window.sessionStorage.getItem(key)); }
+     catch (_) { return null; }
+   }
+ 
+@@ -835,21 +838,33 @@
+   async function preparePilot(signal) {
+     if (!global.NameleculeChemistryClient) await loadPilotScript("../js/namelecule-chemistry-client.js?v=verified-engines-20261105-r1");
+     if (!global.NameleculeRepairGenerator) await loadPilotScript("../js/namelecule-repair-generator.js?v=engine-pilot-20261105-r2");
+-    const response = await fetch("./data/alkane-structures.json", { cache: "no-cache", signal: signal });
+-    if (!response.ok) throw new Error("Alkane structures HTTP " + response.status);
+-    const catalog = await response.json();
+-    assert(catalog && catalog.schemaVersion === 1 && Array.isArray(catalog.molecules) && catalog.molecules.length === 8, "Invalid alkane structure catalog");
+-    const analyses = [];
+-    // Bound parallel work; each analysis gets a fresh, short-lived core instance.
+-    for (let i = 0; i < catalog.molecules.length; i += 3) {
+-      const batch = await Promise.all(catalog.molecules.slice(i, i + 3).map(function (molecule) {
+-        return global.NameleculeChemistryClient.analyze(molecule, { signal: signal, engineSHA256: catalog.engineSHA256 });
+-      }));
+-      analyses.push.apply(analyses, batch);
+-    }
++    if (!global.NameleculeGeneratedRepairCheckpoint) await loadPilotScript("../js/namelecule-generated-repair-checkpoint.js?v=alkane-pool-20261116-r1");
++    const provider = global.NameleculeGeneratedRepairCheckpoint;
++    const legacy = provider.catalogDescriptor("legacy");
++    const previousLegacy = readPilotProgress(legacyPilotStorageKey);
++    const requested = entryParams.get("catalog");
++    // Old engine links retain valid recorded attempts. A new regular entry and
++    // every explicit new attempt use the separate enriched source/namespace.
++    const resumeLegacy = !requested && entryParams.get("source") === "engine" && previousLegacy &&
++      previousLegacy.version === 1 && previousLegacy.catalogRevision === legacy.revision &&
++      previousLegacy.engineSHA256 === legacy.engineSHA256;
++    let descriptor = provider.catalogDescriptor(requested || (resumeLegacy ? "legacy" : "enriched"));
++    const install = input => {
++      pilotStorageKey = descriptor.id === "legacy" ? legacyPilotStorageKey : enrichedPilotStorageKey;
++      pilot = { catalog: input.catalog, analyses: input.analyses, seed: newSeed(), difficulty: "basic", storageAvailable: true };
++      return restorePilotProgress(readPilotProgress());
++    };
++    let input = await provider.loadCanonicalInput(signal, descriptor);
+     if (signal.aborted) throw new DOMException("Cancelled", "AbortError");
+-    pilot = { catalog: catalog, analyses: analyses, seed: newSeed(), difficulty: "basic", storageAvailable: true };
+-    const restored = restorePilotProgress(readPilotProgress());
++    let restored = install(input);
++    if (descriptor.id === "legacy" && (!restored || !["round", "results"].includes(pilotPhase))) {
++      // Only an actual recorded round/results belongs to the legacy catalog.
++      // Missing, invalid or menu-only records must not create fresh legacy seeds.
++      descriptor = provider.catalogDescriptor("enriched");
++      input = await provider.loadCanonicalInput(signal, descriptor);
++      if (signal.aborted) throw new DOMException("Cancelled", "AbortError");
++      restored = install(input);
++    }
+     if (!restored) {
+       activeSet = null; states = []; roundIndex = 0; pilotPhase = "hub";
+       pilot.difficulty = "basic";
+@@ -871,11 +886,22 @@
+     return node("div", { class: "pilot-settings" }, [
+       node("label", { for: "pilot-difficulty", text: "Δυσκολία" }), select,
+       node("p", { text: "Στο Βασικό δίνεται μια αρχική κατεύθυνση. Στην Πρόκληση εντοπίζεις και τον κανόνα που χρειάζεται." }),
+-      node("p", { class: "muted", text: "Σε κάθε νέα προσπάθεια επιλέγονται τυχαία επισκευές από τα οκτώ διαθέσιμα αλκάνια." })
++      node("p", { class: "muted", text: "Σε κάθε νέα προσπάθεια επιλέγονται τυχαία επισκευές από τα " + pilot.catalog.molecules.length + " διαθέσιμα αλκάνια." })
+     ]);
+   }
+ 
++  function redirectLegacyAttempt(setId) {
++    if (!pilot || pilot.catalog.revision !== global.NameleculeGeneratedRepairCheckpoint.catalogDescriptor("legacy").revision) return false;
++    const target = new URL("name-repair.html", location.href);
++    target.searchParams.set("catalog", "enriched");
++    if (setId) target.searchParams.set("startSet", setId);
++    else target.searchParams.set("pickSet", "1");
++    location.assign(target.href);
++    return true;
++  }
++
+   function startSet(setId) {
++    if (redirectLegacyAttempt(setId)) return;
+     if (pilot) generatePilotGame(newSeed());
+     activeSet = game.sets.find(function (entry) { return entry.id === setId; });
+     roundIndex = 0;
+@@ -927,7 +953,20 @@
+       }
+       if (token !== loadToken) return;
+       root.setAttribute("aria-busy", "false");
+-      if (pilot && pilotPhase === "round") renderRound();
++      const requestedSet = entryParams.get("startSet");
++      const hasStartCommand = entryParams.has("startSet"), hasPickerCommand = entryParams.has("pickSet");
++      const pickerCommand = entryParams.get("pickSet");
++      if (hasStartCommand || hasPickerCommand) {
++        entryParams.delete("startSet"); entryParams.delete("pickSet");
++        const url = new URL(location.href); url.searchParams.delete("startSet"); url.searchParams.delete("pickSet");
++        history.replaceState(null, "", url.href);
++      }
++      if (pilot && hasPickerCommand && !hasStartCommand && pickerCommand === "1") {
++        activeSet = null; states = []; roundIndex = 0;
++        renderSetPicker(); focusHeading();
++      } else if (pilot && hasStartCommand && !hasPickerCommand && ["alkanes-unbranched", "alkanes-branched"].includes(requestedSet)) {
++        startSet(requestedSet);
++      } else if (pilot && pilotPhase === "round") renderRound();
+       else if (pilot && pilotPhase === "results") renderResults();
+       else if (pilot && pilotPhase === "picker") renderSetPicker();
+       else renderWelcome();
+@@ -940,7 +979,7 @@
+         node("h1", { text: "Ο πάγκος δεν άνοιξε ακόμη" }),
+         node("p", { role: "status", text: "Δεν φορτώθηκαν οι αποστολές. Δοκίμασε ξανά ή επέστρεψε στην αρχική σελίδα από την Έξοδο." }),
+         button("Δοκίμασε ξανά", "primary", loadGame),
+-        node("a", { class: "secondary", href: "name-repair.html", text: "Άνοιξε τα αρχικά σετ" })
++        node("a", { class: "secondary", href: "name-repair.html?source=authored", text: "Άνοιξε τα αρχικά σετ" })
+       ]));
+     }
+   }
+@@ -977,19 +1016,29 @@
+     const welcome = node("div", { class: "workshop-hub" }, [
+       hero,
+       node("p", { class: "pilot-entry" }, [node("a", {
+-        href: enginePilot ? "name-repair.html" : "name-repair.html?source=engine",
+-        text: enginePilot ? "Δοκιμή ερωτήσεων από τη μηχανή · Αρχικά σετ" : "Δοκίμασε νέες ερωτήσεις από τη μηχανή →"
++        href: enginePilot ? "name-repair.html?source=authored" : "name-repair.html",
++        text: enginePilot ? "Άνοιξε τα αρχικά επιμελημένα σετ" : "Νέες ερωτήσεις από τη μηχανή →"
+       })]),
+       sets,
+       node("section", { class: "intro-how", "aria-label": "Πώς παίζεται" }, steps.map(function (step, index) {
+         return node("div", { class: "how-item" }, [node("span", { class: "how-number", "aria-hidden": "true", text: String(index + 1) }), node("div", {}, [node("h2", { text: step[0] }), node("p", { text: step[1] })])]);
+       }))
+     ]);
++    if (enginePilot && pilot.catalog.revision !== global.NameleculeGeneratedRepairCheckpoint.catalogDescriptor("legacy").revision) {
++      const old = readPilotProgress(legacyPilotStorageKey);
++      if (old && old.version === 1 && old.generatorVersion === global.NameleculeRepairGenerator.version &&
++          old.engineSHA256 === global.NameleculeGeneratedRepairCheckpoint.catalogDescriptor("legacy").engineSHA256 &&
++          old.catalogRevision === global.NameleculeGeneratedRepairCheckpoint.catalogDescriptor("legacy").revision &&
++          ["round", "results"].includes(old.phase)) {
++        welcome.append(node("p", { class: "pilot-entry" }, [node("a", { href: "name-repair.html?source=engine&catalog=legacy", text: "Συνέχισε την προηγούμενη εξάσκηση" })]));
++      }
++    }
+     replaceRoot(welcome);
+     savePilotProgress();
+   }
+ 
+   function renderSetPicker() {
++    if (redirectLegacyAttempt()) return;
+     pilotPhase = "picker";
+     renderId += 1;
+     const cards = game.sets.map(function (set) {
+@@ -1068,6 +1117,7 @@
+   }
+ 
+   function restartGame() {
++    if (redirectLegacyAttempt()) return;
+     roundIndex = 0;
+     states = [];
+     activeSet = null;
+--- before/js/namelecule-generated-repair-checkpoint.js
++++ js/namelecule-generated-repair-checkpoint.js
+@@ -9,8 +9,38 @@
+   const prepared = new Map();
+   // Optional attempts must never evict the sets used to verify earned progress.
+   const practices = new Map();
+-  let source = null;
+-  let canonicalInput = null;
++  // A receipt always selects its own verified source version. The old eight
++  // remain immutable; fresh standalone attempts use the separate enriched pack.
++  const moduleURL = global.document && global.document.currentScript && global.document.currentScript.src;
++  const CATALOGS = Object.freeze({
++    legacy: Object.freeze({ id: "legacy", file: "games/data/alkane-structures.json", count: 8,
++      revision: REVISION, engineSHA256: ENGINE, sha256: CATALOG_SHA,
++      moleculeIds: Object.freeze(["methane", "ethane", "propane", "butane", "pentane", "methyl_2_pentane", "dimethyl_2_3_butane", "ethyl_3_dimethyl_2_5_hexane"]) }),
++    enriched: Object.freeze({ id: "enriched", file: "games/data/alkane-structures-v2.json", count: 14,
++      revision: "bb48fe6cbb689c2bad82cc15d47f53e49f4f021894183c6b228f97bf6902292f", engineSHA256: ENGINE, sha256: "2c4d9a95a77291f13c4a422644aefdae7f23448c2eed7b9d2ef4913da6de92b2", moleculeIds: Object.freeze(["methane", "ethane", "propane", "butane", "pentane", "methyl_2_pentane", "dimethyl_2_3_butane", "ethyl_3_dimethyl_2_5_hexane", "methyl_2_butane", "methyl_3_pentane", "ethyl_3_pentane", "dimethyl_2_2_propane", "dimethyl_2_2_butane", "ethyl_3_methyl_2_pentane"]) })
++  });
++  const sources = new Map();
++  const canonicalInputs = new Map();
++  function catalogDescriptor(reference) {
++    if (reference === undefined || reference === null) return CATALOGS.legacy;
++    const value = typeof reference === "object" ? reference.revision : reference;
++    const descriptor = Object.values(CATALOGS).find(entry => entry.id === value || entry.revision === value);
++    assert(descriptor, "Unsupported alkane catalog revision");
++    if (reference && typeof reference === "object") {
++      ["id", "file", "count", "revision", "engineSHA256", "sha256"].forEach(field => {
++        if (Object.prototype.hasOwnProperty.call(reference, field)) assert(reference[field] === descriptor[field], "Catalog descriptor mismatch");
++      });
++    }
++    return descriptor;
++  }
++  function catalogKey(descriptor) { return JSON.stringify([descriptor.revision, descriptor.engineSHA256, descriptor.sha256]); }
++  function sourceURL(descriptor) {
++    return moduleURL ? new URL("../" + descriptor.file, moduleURL).href : new URL(descriptor.file, global.document.baseURI).href;
++  }
++  async function sha256(bytes) {
++    const digest = await global.crypto.subtle.digest("SHA-256", bytes);
++    return Array.from(new Uint8Array(digest), byte => byte.toString(16).padStart(2, "0")).join("");
++  }
+   function assert(condition, message) { if (!condition) throw new Error(message); }
+   function cancelled() {
+     const error = new Error("Η προετοιμασία ακυρώθηκε.");
+@@ -18,6 +48,8 @@
+     return error;
+   }
+   function checkSignal(signal) { if (signal && signal.aborted) throw cancelled(); }
++  // Existing lesson recipes retain their exact legacy contract in this unit.
++  // Enriched catalogs are explicitly requested by standalone callers only.
+   function validate(recipe) {
+     assert(recipe && typeof recipe === "object" && !Array.isArray(recipe) &&
+       Object.keys(recipe).length === recipeKeys.length && recipeKeys.every(key => Object.prototype.hasOwnProperty.call(recipe, key)) &&
+@@ -79,27 +111,34 @@
+     return { version: VERSION, seed: freshSeed(seedValue(previous && previous.seed)),
+       currentRound: 0, states: [null, null, null], solved: false };
+   }
+-  async function loadSource(signal) {
+-    checkSignal(signal);
+-    if (source) return source;
++  async function loadSource(signal, descriptor) {
++    checkSignal(signal);
++    const cacheKey = catalogKey(descriptor);
++    if (sources.has(cacheKey)) return sources.get(cacheKey);
+     assert(global.NameleculeChemistryClient && global.NameleculeRepairGenerator &&
+       global.NameleculeRepairGenerator.version === "1.0.0", "Η μηχανή του Συνεργείου δεν είναι διαθέσιμη.");
+-    const response = await global.fetch(new URL("games/data/alkane-structures.json", global.document.baseURI).href,
++    const response = await global.fetch(sourceURL(descriptor),
+       { cache: "no-cache", signal });
+     assert(response.ok, "Οι δομές των αλκανίων δεν φορτώθηκαν.");
+     const bytes = await response.arrayBuffer();
+     checkSignal(signal);
+-    const digest = await global.crypto.subtle.digest("SHA-256", bytes);
+-    const actual = Array.from(new Uint8Array(digest), byte => byte.toString(16).padStart(2, "0")).join("");
+-    assert(actual === CATALOG_SHA, "Οι δομές του Συνεργείου άλλαξαν. Ανανέωσε το μάθημα.");
++    const actual = await sha256(bytes);
++    assert(actual === descriptor.sha256, "Οι δομές του Συνεργείου άλλαξαν. Ανανέωσε το μάθημα.");
+     const catalog = JSON.parse(new TextDecoder().decode(bytes));
+-    assert(catalog && catalog.schemaVersion === 1 && catalog.revision === REVISION && catalog.engineSHA256 === ENGINE &&
+-      Array.isArray(catalog.molecules) && catalog.molecules.length === 8, "Η έκδοση των δομών δεν συμφωνεί με το μάθημα.");
++    assert(catalog && catalog.schemaVersion === 1 && catalog.revision === descriptor.revision && catalog.engineSHA256 === descriptor.engineSHA256 &&
++      (descriptor.id === "legacy" ? catalog.catalogVersion === undefined : catalog.catalogVersion === 2) &&
++      Array.isArray(catalog.molecules) && catalog.molecules.length === descriptor.count &&
++      JSON.stringify(catalog.molecules.map(entry => entry && entry.id)) === JSON.stringify(descriptor.moleculeIds), "Η έκδοση των δομών δεν συμφωνεί με το μάθημα.");
++    for (const molecule of catalog.molecules) {
++      checkSignal(signal);
++      assert(molecule && typeof molecule.mol === "string" && typeof molecule.sourceSHA256 === "string" &&
++        await sha256(new TextEncoder().encode(molecule.mol)) === molecule.sourceSHA256, "Η πηγή του μορίου δεν επαληθεύτηκε.");
++    }
+     const analyses = [];
+     for (let index = 0; index < catalog.molecules.length; index += 3) {
+       checkSignal(signal);
+       const batch = await Promise.all(catalog.molecules.slice(index, index + 3).map(molecule =>
+-        global.NameleculeChemistryClient.analyze(molecule, { signal, engineSHA256: ENGINE })));
++        global.NameleculeChemistryClient.analyze(molecule, { signal, engineSHA256: descriptor.engineSHA256 })));
+       analyses.push.apply(analyses, batch);
+     }
+     checkSignal(signal);
+@@ -112,9 +151,10 @@
+     }
+     return value;
+   }
+-  async function loadCanonicalInput(signal) {
+-    checkSignal(signal);
+-    if (canonicalInput) return canonicalInput;
++  async function loadCanonicalInput(signal, reference) {
++    checkSignal(signal);
++    const descriptor = catalogDescriptor(reference), inputKey = catalogKey(descriptor);
++    if (canonicalInputs.has(inputKey)) return canonicalInputs.get(inputKey);
+     const controller = new AbortController();
+     let timedOut = false;
+     let rejectAbort;
+@@ -128,7 +168,7 @@
+     const timer = global.setTimeout(() => { timedOut = true; abort(); }, 45000);
+     try {
+       const loading = (async () => {
+-        const input = await loadSource(controller.signal);
++        const input = await loadSource(controller.signal, descriptor);
+         checkSignal(controller.signal);
+         // The pinned generator validates names, all twelve parts, vocabulary and
+         // the numbered parent/branch graph against each unchanged source MOL.
+@@ -139,8 +179,8 @@
+         // Commit caches only while this request is still live. A late response
+         // from a transport ignoring abort cannot populate either cache.
+         checkSignal(controller.signal);
+-        source = verified;
+-        canonicalInput = verified;
++        sources.set(inputKey, verified);
++        canonicalInputs.set(inputKey, verified);
+         return verified;
+       })();
+       return await Promise.race([loading, aborted]);
+@@ -163,7 +203,7 @@
+     if (signal) signal.addEventListener("abort", abort, { once: true });
+     const timer = global.setTimeout(abort, 45000);
+     try {
+-      const input = await loadCanonicalInput(controller.signal);
++      const input = await loadCanonicalInput(controller.signal, recipe.catalogRevision);
+       checkSignal(signal);
+       checkSignal(controller.signal);
+       const game = global.NameleculeRepairEngine.validateGameData(global.NameleculeRepairGenerator.createGame(input.catalog, input.analyses,
+@@ -313,8 +353,7 @@
+   }
+   function mount(host, options) { return mountSet(host, options, false); }
+   function mountPractice(host, options) { return mountSet(host, options, true); }
+-  assert(global.NameleculeQuizCheckpoints, "Checkpoint controller unavailable");
+   const adapter = Object.freeze({ validate, restore, prepare, mount, createPractice, restorePractice, mountPractice });
+-  global.NameleculeGeneratedRepairCheckpoint = Object.freeze({ adapter, loadCanonicalInput, freshSeed });
+-  global.NameleculeQuizCheckpoints.registerType("generated-name-repair-set", adapter);
++  global.NameleculeGeneratedRepairCheckpoint = Object.freeze({ adapter, loadCanonicalInput, catalogDescriptor, freshSeed });
++  if (global.NameleculeQuizCheckpoints) global.NameleculeQuizCheckpoints.registerType("generated-name-repair-set", adapter);
+ })(typeof window !== "undefined" ? window : globalThis);
+--- before/js/namelecule-name-builder.js
++++ js/namelecule-name-builder.js
+@@ -567,5 +567,5 @@
+     window.addEventListener('resize', scheduleSize);
+     postLesson('ready', {});
+   }
+-  frame.src = 'name-builder-viewer.html?session=' + encodeURIComponent(nonce);
++  frame.src = 'name-builder-viewer.html?v=alkane-pool-20261116-r1&session=' + encodeURIComponent(nonce);
+ })();
+--- before/js/namelecule-molecular-puzzle.js
++++ js/namelecule-molecular-puzzle.js
+@@ -10,6 +10,20 @@
+   const CHANNEL = 'namelecule-puzzle-lesson-v1';
+   const lesson = parent !== window && /^[A-Za-z0-9_-]{16,128}$/.test(lessonSession || '')
+     ? { current: null, lastRequest: 0, lastSnapshot: null, lastHeight: null, sizeFrame: null } : null;
++  const LEGACY_IDS = Object.freeze(['methane', 'ethane', 'propane', 'butane', 'pentane',
++    'methyl_2_pentane', 'dimethyl_2_3_butane', 'ethyl_3_dimethyl_2_5_hexane']);
++  const ENGINE_SHA = '3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306';
++  const LEGACY_CATALOG = Object.freeze({ version: 1, file: 'data/alkane-structures.json',
++    sha256: '9778e30ea33f2f7cd4c8a472e46e90539856b861a54035a1d514c3246cccf724',
++    revision: '275d537b19f3ef0791c97d8d78c127f541a0579038ef1e8d65dadde611845690', ids: LEGACY_IDS });
++  const CURRENT_CATALOG = Object.freeze({ version: 2, file: 'data/alkane-structures-v2.json',
++    sha256: '2c4d9a95a77291f13c4a422644aefdae7f23448c2eed7b9d2ef4913da6de92b2',
++    revision: 'bb48fe6cbb689c2bad82cc15d47f53e49f4f021894183c6b228f97bf6902292f',
++    ids: Object.freeze([...LEGACY_IDS, 'methyl_2_butane', 'methyl_3_pentane', 'ethyl_3_pentane',
++      'dimethyl_2_2_propane', 'dimethyl_2_2_butane', 'ethyl_3_methyl_2_pentane']) });
++  // Standalone state lives only in this page. Saved lesson attempts belong to
++  // the parent, whose unchanged recipes and receipts still pin the legacy pool.
++  const catalogDescriptor = lesson ? LEGACY_CATALOG : CURRENT_CATALOG;
+   document.body.classList.toggle('puzzle-embedded', embedded);
+   document.body.classList.toggle('puzzle-controlled', !!lesson);
+   function presentationType() {
+@@ -469,8 +483,8 @@
+   const media = matchMedia('(max-width:600px)');
+   function instructionsMode() { $('instructions').open = !media.matches; }
+   media.addEventListener('change', instructionsMode); instructionsMode();
+-  async function digest(text) {
+-    const bytes = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(text));
++  async function digest(value) {
++    const bytes = await crypto.subtle.digest('SHA-256', typeof value === 'string' ? new TextEncoder().encode(value) : value);
+     return Array.from(new Uint8Array(bytes), b => b.toString(16).padStart(2, '0')).join('');
+   }
+   async function load() {
+@@ -482,10 +496,17 @@
+     busy = true; controls(); $('retry-load').hidden = true; $('game-status').classList.remove('error');
+     $('game-status').textContent = 'Ετοιμάζουμε τα ονόματα και τα κομμάτια του παζλ.';
+     try {
+-      const response = await fetch(new URL('data/alkane-structures.json', location.href), { signal });
++      const response = await fetch(new URL(catalogDescriptor.file, location.href), { cache: 'no-cache', signal });
+       if (!response.ok) throw new Error('Δεν φορτώθηκαν τα δεδομένα των μορίων.');
+-      const data = await response.json();
+-      if (data.schemaVersion !== 1 || !Array.isArray(data.molecules) || data.molecules.length !== 8) throw new Error('Τα δεδομένα του παιχνιδιού δεν είναι συμβατά.');
++      const bytes = await response.arrayBuffer();
++      if (await digest(bytes) !== catalogDescriptor.sha256) throw new Error('Ο έλεγχος της έκδοσης των μορίων απέτυχε.');
++      const data = JSON.parse(new TextDecoder().decode(bytes));
++      if (data.schemaVersion !== 1 || (data.catalogVersion || 1) !== catalogDescriptor.version ||
++          data.revision !== catalogDescriptor.revision || data.engineSHA256 !== ENGINE_SHA ||
++          !Array.isArray(data.molecules) || data.molecules.length !== catalogDescriptor.ids.length ||
++          data.molecules.some((m, index) => !m || m.id !== catalogDescriptor.ids[index])) {
++        throw new Error('Τα δεδομένα του παιχνιδιού δεν είναι συμβατά.');
++      }
+       const ready = [];
+       for (const m of data.molecules) {
+         if (signal.aborted) throw new Error('Η φόρτωση ακυρώθηκε.');
+--- before/js/namelecule-molecular-detective.js
++++ js/namelecule-molecular-detective.js
+@@ -5,8 +5,8 @@
+   const channel = 'namelecule-molecular-detective-v1';
+   const $ = id => document.getElementById(id);
+   const ui = Object.fromEntries(['molecule-viewer', 'viewer-wrap', 'viewer-mask', 'viewer-message', 'game-status', 'molecule-select', 'mission-select', 'mission-name', 'mission-prompt', 'selection-kind', 'selection-status', 'check-answer', 'clear-selection', 'next-mission', 'zoom-in', 'zoom-out', 'retry-load', 'feedback'].map(id => [id, $(id)]));
+-  const labels = {ethane: 'Αιθάνιο', butane: 'Βουτάνιο', methyl_2_pentane: '2-μεθυλοπεντάνιο', dimethyl_2_3_butane: '2,3-διμεθυλοβουτάνιο', ethene: 'Αιθένιο', butene_1: '1-βουτένιο', butene_2: '2-βουτένιο', butyne_1: '1-βουτίνιο', butyne_2: '2-βουτίνιο', butadiene_1_2: '1,2-βουταδιένιο', butadiene_1_3: '1,3-βουταδιένιο', ethanol: 'Αιθανόλη', butanol_2: '2-βουτανόλη', propanal: 'Προπανάλη', propanone: 'Προπανόνη', pentanone_3: '3-πεντανόνη', methanoicacid: 'Μεθανικό οξύ'};
+-  const familyLabels = {'parent-chain': 'Κύρια αλυσίδα', 'single-bonds': 'Απλοί δεσμοί', 'double-bonds': 'Διπλοί δεσμοί', 'triple-bonds': 'Τριπλοί δεσμοί', branches: 'Διακλαδώσεις', hydroxyl: 'Υδροξύλιο', aldehyde: 'Αλδεϋδομάδα', carbonyl: 'Καρβονύλιο', carboxyl: 'Καρβοξύλιο'};
++  const labels = {methane: 'Μεθάνιο', ethane: 'Αιθάνιο', propane: 'Προπάνιο', butane: 'Βουτάνιο', pentane: 'Πεντάνιο', methyl_2_pentane: '2-μεθυλοπεντάνιο', dimethyl_2_3_butane: '2,3-διμεθυλοβουτάνιο', ethyl_3_dimethyl_2_5_hexane: '3-αιθυλο-2,5-διμεθυλοεξάνιο', methyl_2_butane: '2-μεθυλοβουτάνιο', methyl_3_pentane: '3-μεθυλοπεντάνιο', ethyl_3_pentane: '3-αιθυλοπεντάνιο', dimethyl_2_2_propane: '2,2-διμεθυλοπροπάνιο', dimethyl_2_2_butane: '2,2-διμεθυλοβουτάνιο', ethyl_3_methyl_2_pentane: '3-αιθυλο-2-μεθυλοπεντάνιο', ethene: 'Αιθένιο', butene_1: '1-βουτένιο', butene_2: '2-βουτένιο', butyne_1: '1-βουτίνιο', butyne_2: '2-βουτίνιο', butadiene_1_2: '1,2-βουταδιένιο', butadiene_1_3: '1,3-βουταδιένιο', ethanol: 'Αιθανόλη', butanol_2: '2-βουτανόλη', propanal: 'Προπανάλη', propanone: 'Προπανόνη', pentanone_3: '3-πεντανόνη', methanoicacid: 'Μεθανικό οξύ'};
++  const familyLabels = {'parent-chain': 'Κύρια αλυσίδα', 'single-bonds': 'Απλοί δεσμοί', 'double-bonds': 'Διπλοί δεσμοί', 'triple-bonds': 'Τριπλοί δεσμοί', branches: 'Μεθυλομάδες', 'ethyl-branches': 'Αιθυλομάδες', hydroxyl: 'Υδροξύλιο', aldehyde: 'Αλδεϋδομάδα', carbonyl: 'Καρβονύλιο', carboxyl: 'Καρβοξύλιο'};
+   const params = new URLSearchParams(location.search);
+   if (params.get('embedded') === '1') document.body.classList.add('detective-embedded');
+   const state = {phase: 'startup', session: '', requestId: 0, roundSerial: 0, missionSerial: 0, roundId: null, moleculeId: null, snapshot: null, missions: [], mission: null, bridgeMissionId: null, loadRequestId: 0, configureRequestId: 0, selectionRevision: -1, atoms: [], bonds: [], correct: false, stopped: false};
+@@ -199,7 +199,7 @@
+     status('Ετοιμάζουμε την πρώτη αποστολή.');
+     ui['retry-load'].hidden = true;
+     ui['molecule-select'].replaceChildren(...engine.starterIds.map(id => { const option = document.createElement('option'); option.value = id; option.textContent = labels[id] || id; return option; }));
+-    ui['molecule-viewer'].src = 'molecular-detective-viewer.html?session=' + state.session;
++    ui['molecule-viewer'].src = 'molecular-detective-viewer.html?v=alkane-pool-20261116-r1&session=' + state.session;
+     watch('Η προβολή του μορίου δεν ξεκίνησε. Δοκίμασε ξανά.', 45000);
+   }
+   function stop() {
+--- before/js/namelecule-molecular-detective-engine.js
++++ js/namelecule-molecular-detective-engine.js
+@@ -1,19 +1,32 @@
+ (function (root) {
+   'use strict';
+ 
+-  // This first pool is deliberately bounded. Targets are derived from the live
++  // This pool is deliberately bounded. Targets are derived from the live
+   // expanded graph; these profiles validate its identity, never prescribe IDs.
+   var starterIds = Object.freeze([
+-    'ethane', 'butane', 'methyl_2_pentane', 'dimethyl_2_3_butane',
++    'methane', 'ethane', 'propane', 'butane', 'pentane',
++    'methyl_2_pentane', 'dimethyl_2_3_butane', 'ethyl_3_dimethyl_2_5_hexane',
++    'methyl_2_butane', 'methyl_3_pentane', 'ethyl_3_pentane',
++    'dimethyl_2_2_propane', 'dimethyl_2_2_butane', 'ethyl_3_methyl_2_pentane',
+     'ethene', 'butene_1', 'butene_2', 'butyne_1', 'butyne_2',
+     'butadiene_1_2', 'butadiene_1_3', 'ethanol', 'butanol_2',
+     'propanal', 'propanone', 'pentanone_3', 'methanoicacid'
+   ]);
+   var profiles = {
++    methane: profile('C', [], 1),
+     ethane: profile('CC', [[1, 2, 1]], 2),
++    propane: profile('CCC', [[1, 2, 1], [2, 3, 1]], 3),
+     butane: profile('CCCC', [[1, 2, 1], [2, 3, 1], [3, 4, 1]], 4),
++    pentane: profile('CCCCC', [[1, 2, 1], [2, 3, 1], [3, 4, 1], [4, 5, 1]], 5),
+     methyl_2_pentane: profile('CCCCCC', [[1, 2, 1], [2, 3, 1], [3, 4, 1], [4, 5, 1], [2, 6, 1]], 5, 1),
+     dimethyl_2_3_butane: profile('CCCCCC', [[1, 2, 1], [2, 3, 1], [3, 4, 1], [2, 5, 1], [3, 6, 1]], 4, 2),
++    ethyl_3_dimethyl_2_5_hexane: profile('CCCCCCCCCC', [[1, 2, 1], [2, 3, 1], [3, 4, 1], [4, 5, 1], [5, 6, 1], [2, 7, 1], [3, 8, 1], [8, 9, 1], [5, 10, 1]], 6, { methyl: 2, ethyl: 1 }),
++    methyl_2_butane: profile('CCCCC', [[1, 2, 1], [2, 3, 1], [3, 4, 1], [2, 5, 1]], 4, 1),
++    methyl_3_pentane: profile('CCCCCC', [[1, 2, 1], [2, 3, 1], [3, 4, 1], [4, 5, 1], [3, 6, 1]], 5, 1),
++    ethyl_3_pentane: profile('CCCCCCC', [[1, 2, 1], [2, 3, 1], [3, 4, 1], [4, 5, 1], [3, 6, 1], [6, 7, 1]], 5, { ethyl: 1 }),
++    dimethyl_2_2_propane: profile('CCCCC', [[1, 2, 1], [2, 3, 1], [2, 4, 1], [2, 5, 1]], 3, 2),
++    dimethyl_2_2_butane: profile('CCCCCC', [[1, 2, 1], [2, 3, 1], [3, 4, 1], [2, 5, 1], [2, 6, 1]], 4, 2),
++    ethyl_3_methyl_2_pentane: profile('CCCCCCCC', [[1, 2, 1], [2, 3, 1], [3, 4, 1], [4, 5, 1], [2, 6, 1], [3, 7, 1], [7, 8, 1]], 5, { ethyl: 1, methyl: 1 }),
+     ethene: profile('CC', [[1, 2, 2]], 2, 0, 2),
+     butene_1: profile('CCCC', [[1, 2, 2], [2, 3, 1], [3, 4, 1]], 4, 0, 2),
+     butene_2: profile('CCCC', [[1, 2, 1], [2, 3, 2], [3, 4, 1]], 4, 0, 2),
+@@ -33,7 +46,8 @@
+     var atoms = elements.split('').map(function (element, i) { return { id: i + 1, element: element }; });
+     var bonds = edges.map(function (edge, i) { return { id: i + 1, a: edge[0], b: edge[1], order: edge[2] }; });
+     return { signature: signature(atoms, bonds), parentLength: parentLength,
+-      branches: branches || 0, order: order || 1, group: group || null };
++      branches: typeof branches === 'number' ? { methyl: branches } : branches || {},
++      order: order || 1, group: group || null };
+   }
+ 
+   function error(code, message) {
+@@ -74,7 +88,7 @@
+ 
+   function inspect(snapshot) {
+     if (!snapshot || typeof snapshot !== 'object' || !Object.prototype.hasOwnProperty.call(profiles, snapshot.moleculeId)) {
+-      throw error('unsupported-molecule', 'Το μόριο δεν ανήκει στο αρχικό σύνολο των 17 μορίων.');
++      throw error('unsupported-molecule', 'Το μόριο δεν ανήκει στο διαθέσιμο σύνολο των 27 μορίων.');
+     }
+     if (typeof snapshot.correctName !== 'string' || !snapshot.correctName.trim() || snapshot.correctName.length > 300 ||
+         !Array.isArray(snapshot.pieces) || !snapshot.pieces.length || snapshot.pieces.length > 30 ||
+@@ -160,6 +174,34 @@
+       seen.add(key);
+       return true;
+     }).sort(function (a, b) { return a.join(',').localeCompare(b.join(',')); });
++  }
++
++  function carbonBranches(snapshot, graph, parent) {
++    var parentIds = new Set(parent), seen = new Set(), components = [];
++    snapshot.atoms.forEach(function (atom) {
++      if (atom.element !== 'C' || parentIds.has(atom.id) || seen.has(atom.id)) return;
++      var pending = [atom.id], ids = [], attachments = [];
++      while (pending.length) {
++        var id = pending.pop();
++        if (seen.has(id)) continue;
++        seen.add(id); ids.push(id);
++        graph.adj.get(id).forEach(function (next) {
++          if (graph.byId.get(next.id).element !== 'C') return;
++          if (parentIds.has(next.id)) attachments.push(parent.indexOf(next.id) + 1);
++          else if (!seen.has(next.id)) pending.push(next.id);
++        });
++      }
++      if (attachments.length !== 1) throw error('branch-attachment', 'Η διακλάδωση δεν έχει μία σύνδεση με την κύρια αλυσίδα.');
++      components.push({ ids: sorted(ids), locant: attachments[0] });
++    });
++    return components;
++  }
++
++  function compareVectors(left, right) {
++    for (var i = 0; i < Math.min(left.length, right.length); i++) {
++      if (left[i] !== right[i]) return left[i] - right[i];
++    }
++    return left.length - right.length;
+   }
+ 
+   function parentSets(snapshot, graph) {
+@@ -174,8 +216,20 @@
+     }
+     carbons.forEach(function (id) { walk([id]); });
+     if (max !== graph.profile.parentLength) throw error('parent-length', 'Δεν βρέθηκε η αναμενόμενη κύρια αλυσίδα.');
+-    // All longest carbon paths are valid in these two small branched alkanes.
+-    // Other pool members have an unbranched carbon skeleton, including their FG.
++    // Bounded neutral acyclic alkanes: longest chain, most substituents, then
++    // lowest locant vector. Keep every equivalent eligible atom set. Other
++    // approved series have unbranched carbon skeletons and retain their targets.
++    if (snapshot.series === 'alkanes') {
++      var candidates = paths.map(function (path) {
++        var components = carbonBranches(snapshot, graph, path);
++        return { path: path, count: components.length, locants: sorted(components.map(function (component) { return component.locant; })) };
++      });
++      var bestCount = Math.max.apply(null, candidates.map(function (candidate) { return candidate.count; }));
++      candidates = candidates.filter(function (candidate) { return candidate.count === bestCount; });
++      candidates.sort(function (a, b) { return compareVectors(a.locants, b.locants); });
++      paths = candidates.filter(function (candidate) { return compareVectors(candidate.locants, candidates[0].locants) === 0; })
++        .map(function (candidate) { return candidate.path; });
++    }
+     return uniqueSets(paths);
+   }
+ 
+@@ -210,16 +264,24 @@
+   function missions(snapshot) {
+     var graph = inspect(snapshot), chosen = graph.profile, parents = parentSets(snapshot, graph);
+     var carbonIds = snapshot.atoms.filter(function (atom) { return atom.element === 'C'; }).map(function (atom) { return atom.id; });
+-    var branches = uniqueSets(parents.map(function (parent) {
+-      return carbonIds.filter(function (id) { return parent.indexOf(id) < 0; });
+-    }));
+-    if (chosen.branches && branches.some(function (set) {
+-      return set.length !== chosen.branches || set.some(function (id) {
+-        return graph.adj.get(id).filter(function (next) { return graph.byId.get(next.id).element === 'C'; }).length !== 1;
++    var branchSizes = { methyl: 1, ethyl: 2 }, branchTargets = {};
++    var branchFamilies = Object.keys(chosen.branches).filter(function (family) { return chosen.branches[family] > 0; });
++    parents.forEach(function (parent) {
++      var components = carbonBranches(snapshot, graph, parent);
++      if (components.length !== branchFamilies.reduce(function (total, family) { return total + chosen.branches[family]; }, 0)) {
++        throw error('branch-target', 'Το πλήθος των διακλαδώσεων δεν συμφωνεί με το μόριο.');
++      }
++      branchFamilies.forEach(function (family) {
++        var matching = components.filter(function (component) { return component.ids.length === branchSizes[family]; });
++        if (!branchSizes[family] || matching.length !== chosen.branches[family]) {
++          throw error('branch-target', 'Οι διακλαδώσεις δεν είναι οι αναμενόμενες αλκυλομάδες.');
++        }
++        if (!branchTargets[family]) branchTargets[family] = [];
++        branchTargets[family].push(matching.reduce(function (ids, component) { return ids.concat(component.ids); }, []));
+       });
+-    })) throw error('branch-target', 'Οι διακλαδώσεις δεν είναι οι αναμενόμενες μεθυλομάδες.');
++    });
+     var groups = literalGroups(snapshot, graph), output = [], families = new Set();
+-    var roots = { μεθ: 1, αιθ: 2, προπ: 3, βουτ: 4, πεντ: 5 };
++    var roots = { μεθ: 1, αιθ: 2, προπ: 3, βουτ: 4, πεντ: 5, εξ: 6 };
+     function add(piece, kind, family, accepted, prompt, explanation) {
+       accepted = uniqueSets(accepted);
+       if (!accepted.length || families.has(family)) throw error('mission-target', 'Δεν βρέθηκε μοναδικός μη κενός στόχος για το συνθετικό.');
+@@ -228,7 +290,7 @@
+         kind: kind, family: family, prompt: prompt, explanation: explanation, accepted: accepted });
+     }
+     snapshot.pieces.forEach(function (piece) {
+-      var key = textKey(piece.text), rootMatch = /^(μεθ|αιθ|προπ|βουτ|πεντ)[αο]?$/.exec(key);
++      var key = textKey(piece.text), rootMatch = /^(μεθ|αιθ|προπ|βουτ|πεντ|εξ)[αο]?$/.exec(key);
+       if (piece.mode === 'compCarbonsCount' && rootMatch) {
+         if (roots[rootMatch[1]] !== chosen.parentLength) throw error('root-text', 'Το συνθετικό δεν συμφωνεί με το πλήθος ατόμων C της κύριας αλυσίδας.');
+         add(piece, 'atoms', 'parent-chain', parents,
+@@ -242,8 +304,8 @@
+         var targets = snapshot.bonds.filter(function (bond) {
+           return bond.order === order && graph.byId.get(bond.a).element === 'C' && graph.byId.get(bond.b).element === 'C';
+         }).map(function (bond) { return bond.id; });
+-        // Methanoic acid has no C-C edge: its -αν- is never an empty mission.
+-        if (!targets.length && order === 1 && chosen.group === 'carboxyl') return;
++        // Methane and methanoic acid have no C-C edge: never offer an empty task.
++        if (!targets.length && order === 1 && carbonIds.length === 1) return;
+         if ((key === 'διεν' && targets.length !== 2) || (key === 'εν' && targets.length !== 1)) {
+           throw error('bond-multiplier', 'Το συνθετικό δεν συμφωνεί με το πλήθος των πολλαπλών δεσμών.');
+         }
+@@ -253,11 +315,17 @@
+           'Το συνθετικό δηλώνει τους ' + label + ' δεσμούς μεταξύ ατόμων C. Επιλέγουμε τους ίδιους τους δεσμούς.');
+         return;
+       }
+-      if (/^comp(SecondSub[12]|BranchSub\d+)$/.test(piece.mode) && /^(μεθυλο|διμεθυλο)$/.test(key)) {
+-        if (chosen.branches !== (key === 'διμεθυλο' ? 2 : 1)) throw error('branch-text', 'Το συνθετικό δεν συμφωνεί με τις μεθυλομάδες του μορίου.');
+-        add(piece, 'atoms', 'branches', branches,
+-          'Επίλεξε τα άτομα C ' + (chosen.branches === 1 ? 'της μεθυλομάδας' : 'των δύο μεθυλομάδων') + ' που δηλώνει το τονισμένο συνθετικό.',
+-          'Κάθε μεθυλομάδα έχει ένα άτομο C έξω από την κύρια αλυσίδα. Τα άτομα H και το άτομο C της κύριας αλυσίδας δεν ανήκουν στην επιλογή.');
++      var branchMatch = /^(δι)?(μεθυλο|αιθυλο)$/.exec(key);
++      if (/^comp(SecondSub[12]|BranchSub\d+)$/.test(piece.mode) && branchMatch) {
++        var branchFamily = branchMatch[2] === 'μεθυλο' ? 'methyl' : 'ethyl';
++        var count = branchMatch[1] ? 2 : 1;
++        if (chosen.branches[branchFamily] !== count) throw error('branch-text', 'Το συνθετικό δεν συμφωνεί με τις αλκυλομάδες του μορίου.');
++        var groupWords = branchFamily === 'methyl' ? ['της μεθυλομάδας', 'των δύο μεθυλομάδων'] : ['της αιθυλομάδας', 'των δύο αιθυλομάδων'];
++        add(piece, 'atoms', branchFamily === 'methyl' ? 'branches' : 'ethyl-branches', branchTargets[branchFamily],
++          'Επίλεξε τα άτομα C ' + groupWords[count - 1] + ' που δηλώνει το τονισμένο συνθετικό.',
++          branchFamily === 'methyl' ?
++            'Κάθε μεθυλομάδα έχει ένα άτομο C έξω από την κύρια αλυσίδα. Τα άτομα H και το άτομο C της κύριας αλυσίδας δεν ανήκουν στην επιλογή.' :
++            'Κάθε αιθυλομάδα έχει δύο συνδεδεμένα άτομα C έξω από την κύρια αλυσίδα. Τα άτομα H και το άτομο C της κύριας αλυσίδας δεν ανήκουν στην επιλογή.');
+         return;
+       }
+       // Native alcohol suffixes may occupy slot 8 / compBondType2. Literal text
+@@ -273,8 +341,10 @@
+       }[family];
+       add(piece, 'atoms', family, groups[family], 'Επίλεξε όλα τα άτομα ' + words[0] + ' που δηλώνει το τονισμένο συνθετικό.', words[1]);
+     });
+-    var expected = 1 + (chosen.branches ? 1 : 0) + (chosen.group ? 1 : 0) + (carbonIds.length > 1 ? 1 : 0);
+-    if (output.length !== expected || !families.has('parent-chain') || (chosen.branches && !families.has('branches')) ||
++    var expected = 1 + branchFamilies.length + (chosen.group ? 1 : 0) + (carbonIds.length > 1 ? 1 : 0);
++    if (output.length !== expected || !families.has('parent-chain') || branchFamilies.some(function (family) {
++      return !families.has(family === 'methyl' ? 'branches' : 'ethyl-branches');
++    }) ||
+         (chosen.group && !families.has(chosen.group))) {
+       throw error('missing-mission', 'Δεν αναγνωρίστηκαν όλα τα αναμενόμενα συνθετικά του μορίου.');
+     }
+--- before/tools/build-alkane-game-catalog.py
++++ tools/build-alkane-game-catalog.py
+@@ -1,9 +1,9 @@
+ #!/usr/bin/env python3
+-"""Reproduce the opt-in Workshop's structure-only alkane catalog.
++"""Reproduce the versioned, structure-only alkane game catalogs.
+ 
+-Reads only string literals from data54; it never evaluates JavaScript or stores
+-names, selected chains, components or correct answers. Run with --check to
+-verify that the checked-in JSON still matches its exact sources.
++Reads legacy data54 string literals and curated expanded MOL files; it never
++evaluates JavaScript or stores names, selected chains or answers. Run --check to
++verify the legacy catalog, or add --catalog-v2 for the curated 14-molecule pool.
+ """
+ from pathlib import Path
+ import argparse
+@@ -14,8 +14,15 @@
+ 
+ ROOT = Path(__file__).resolve().parents[1]
+ DATA = "js/jsme-nick-nomeclature-moc2-data_54.js"
+-ENGINE = "js/mulermoc-nom-core-54.js"
++ENGINE = "js/chemistry-engines/3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306.js"
+ OUTPUT = "games/data/alkane-structures.json"
++OUTPUT_V2 = "games/data/alkane-structures-v2.json"
++PACK = "data/namelecule-alkanes-v1/manifest.json"
++LEGACY_SHA = "9778e30ea33f2f7cd4c8a472e46e90539856b861a54035a1d514c3246cccf724"
++PACK_IDS = (
++    "methyl_2_butane", "methyl_3_pentane", "ethyl_3_pentane",
++    "dimethyl_2_2_propane", "dimethyl_2_2_butane", "ethyl_3_methyl_2_pentane",
++)
+ MOLECULE_IDS = (
+     "methane", "ethane", "propane", "butane", "pentane",
+     "methyl_2_pentane", "dimethyl_2_3_butane",
+@@ -45,6 +52,12 @@
+     return mol
+ 
+ 
++def serialize_catalog(catalog):
++    canonical = json.dumps(catalog, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
++    catalog["revision"] = sha256(canonical.encode("utf-8"))
++    return json.dumps(catalog, ensure_ascii=False, indent=2) + "\n"
++
++
+ def build_catalog():
+     source_bytes = (ROOT / DATA).read_bytes()
+     source = source_bytes.decode("utf-8")
+@@ -64,25 +77,72 @@
+         "source": {"file": DATA, "sha256": sha256(source_bytes)},
+         "molecules": molecules,
+     }
+-    canonical = json.dumps(catalog, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
+-    catalog["revision"] = sha256(canonical.encode("utf-8"))
+-    return json.dumps(catalog, ensure_ascii=False, indent=2) + "\n"
++    return serialize_catalog(catalog)
++
++
++def build_catalog_v2():
++    # Existing receipts identify the exact legacy bytes and engine. Import its
++    # eight entries intact rather than regenerating them from a newer library.
++    legacy_bytes = (ROOT / OUTPUT).read_bytes()
++    if sha256(legacy_bytes) != LEGACY_SHA or legacy_bytes.decode("utf-8") != build_catalog():
++        raise ValueError("The immutable legacy catalog no longer matches its pinned sources")
++    legacy = json.loads(legacy_bytes)
++    pack_bytes = (ROOT / PACK).read_bytes()
++    pack = json.loads(pack_bytes)
++    records = pack.get("molecules", [])
++    if (pack.get("schemaVersion") != 1 or pack.get("id") != "namelecule-alkanes-v1"
++            or not isinstance(records, list) or tuple(m.get("id") for m in records) != PACK_IDS):
++        raise ValueError("Unexpected curated alkane pack identity or molecule order")
++    molecules = legacy["molecules"].copy()
++    for record in records:
++        molecule_id = record["id"]
++        relative = record.get("files", {}).get("expanded")
++        expected_path = f"mols/namelecule-alkanes-v1/{molecule_id}_2D_Expanded.mol"
++        if relative != expected_path:
++            raise ValueError(f"Unexpected expanded MOL source for {molecule_id}")
++        mol_bytes = (ROOT / relative).read_bytes()
++        if sha256(mol_bytes) != record.get("sha256", {}).get("expanded"):
++            raise ValueError(f"Expanded MOL source hash differs for {molecule_id}")
++        mol = mol_bytes.decode("utf-8")
++        lines = mol.splitlines()
++        if len(lines) < 5 or "V2000" not in lines[3] or "M  END" not in lines:
++            raise ValueError(f"Invalid expanded source MOL for {molecule_id}")
++        molecules.append({
++            "id": molecule_id,
++            "mol": mol,
++            "asset": f"assets/name-repair/expanded-v2/{molecule_id}.svg",
++            "condensedAsset": f"assets/name-repair/condensed-v2/{molecule_id}.svg",
++            "diagramAlt": "Ανεπτυγμένος μοριακός τύπος με σύμβολα άνθρακα και υδρογόνου και απλούς δεσμούς.",
++            "sourceSHA256": sha256(mol_bytes),
++        })
++    return serialize_catalog({
++        "schemaVersion": 1,
++        "catalogVersion": 2,
++        "engineSHA256": legacy["engineSHA256"],
++        "source": {
++            "legacy": {"file": OUTPUT, "sha256": sha256(legacy_bytes), "revision": legacy["revision"]},
++            "pack": {"file": PACK, "sha256": sha256(pack_bytes), "id": pack["id"]},
++        },
++        "molecules": molecules,
++    })
+ 
+ 
+ def main():
+     parser = argparse.ArgumentParser(description=__doc__)
+     parser.add_argument("--check", action="store_true", help="Compare without writing")
+-    parser.add_argument("--output", type=Path, default=ROOT / OUTPUT)
++    parser.add_argument("--catalog-v2", action="store_true", help="Build/check the curated 14-molecule catalog")
++    parser.add_argument("--output", type=Path)
+     args = parser.parse_args()
+-    expected = build_catalog()
++    output = args.output or ROOT / (OUTPUT_V2 if args.catalog_v2 else OUTPUT)
++    expected = build_catalog_v2() if args.catalog_v2 else build_catalog()
+     if args.check:
+-        if not args.output.exists() or args.output.read_text(encoding="utf-8") != expected:
+-            raise SystemExit(f"Catalog differs from current sources: {args.output}")
+-        print("Catalog matches data54 and core54; eight structure-only entries.")
++        if not output.exists() or output.read_text(encoding="utf-8") != expected:
++            raise SystemExit(f"Catalog differs from current sources: {output}")
++        print("Catalog matches pinned sources; " + ("14" if args.catalog_v2 else "eight") + " structure-only entries.")
+     else:
+-        args.output.parent.mkdir(parents=True, exist_ok=True)
+-        args.output.write_text(expected, encoding="utf-8")
+-        print(f"Wrote {args.output}")
++        output.parent.mkdir(parents=True, exist_ok=True)
++        output.write_text(expected, encoding="utf-8")
++        print(f"Wrote {output}")
+ 
+ 
+ if __name__ == "__main__":
+--- before/tools/build-name-builder-host.py
++++ tools/build-name-builder-host.py
+@@ -9,6 +9,7 @@
+ SOURCE = ROOT / "mulermoc-nom-55.html"
+ DEST = ROOT / "games/name-builder-viewer.html"
+ INIT = ROOT / "spt/init-55.spt"
++ALKANE_DATA = ROOT / "js/MULERMOC_namelecule_alkanes_v1_data.js"
+ 
+ 
+ def generate():
+@@ -63,6 +64,15 @@
+ '''
+     assert source.count("<head>") == 1
+     source = source.replace("<head>", "<head>\n" + early, 1)
++    # Accepted customs merge after fInitData has initialized the base library.
++    # Load the same curated bundle as Main57 before the native viewer starts.
++    bundle_digest = hashlib.sha256(ALKANE_DATA.read_bytes()).hexdigest()
++    data_tag = '<script src="js/MULERMOC_namelecule_alkanes_v1_data.js?v=' + bundle_digest + '"></script>'
++    source, count = re.subn(
++        r'(<script src="js/jsme-nick-nomeclature-moc2-data_55\.js[^"\n]*"></script>)',
++        lambda match: match[1] + '\n  ' + data_tag, source, count=1,
++    )
++    assert count == 1, "Expected the Main55 base-data script"
+     # Model-relative SDF and init-script loads use the same repository base as
+     # the original page, including after JSmol has asynchronously started.
+     init_digest = hashlib.sha256(INIT.read_bytes()).hexdigest()
+@@ -87,6 +97,13 @@
+     source = source.replace("</head>", config + "</head>", 1)
+     source = source.replace("<title>Namelecule — Ονοματολογία Οργανικών Ενώσεων</title>",
+                             "<title>Namelecule — Προβολή μορίου</title>", 1)
++    # Content-bound viewer URL also refreshes shared display calibration.
++    viewer_digest = hashlib.sha256((ROOT / "js/mulermoc-nom-molview-55.js").read_bytes()).hexdigest()
++    source, viewer_count = re.subn(
++        r'(src="js/mulermoc-nom-molview-55\.js)(?:\?[^"\n]*)?"',
++        lambda match: match[1] + '?v=' + viewer_digest + '"', source, count=1,
++    )
++    assert viewer_count == 1, "Expected the native viewer script"
+     bridge = '<script src="js/namelecule-name-builder-host.js?v=prototype-20261111-r1"></script>\n'
+     source = source.replace("</body>", bridge + "</body>", 1)
+     digest = hashlib.sha256(original.encode("utf-8")).hexdigest()
+--- before/tools/build-molecular-detective-host.py
++++ tools/build-molecular-detective-host.py
+@@ -10,6 +10,7 @@
+ DEST = ROOT / "games/molecular-detective-viewer.html"
+ INIT = ROOT / "spt/init-56.spt"
+ BRIDGE = ROOT / "js/namelecule-molecular-detective-host.js"
++ALKANE_DATA = ROOT / "js/MULERMOC_namelecule_alkanes_v1_data.js"
+ 
+ 
+ def generate():
+@@ -61,6 +62,15 @@
+ '''
+     assert source.count("<head>") == 1
+     source = source.replace("<head>", "<head>\n" + early, 1)
++    # Keep original Main56/base data intact and merge accepted custom records
++    # through the native post-fInitData path, shared with Main57 and Builder55.
++    bundle_digest = hashlib.sha256(ALKANE_DATA.read_bytes()).hexdigest()
++    data_tag = '<script src="js/MULERMOC_namelecule_alkanes_v1_data.js?v=' + bundle_digest + '"></script>'
++    source, count = re.subn(
++        r'(<script src="js/jsme-nick-nomeclature-moc2-data_56\.js[^"\n]*"></script>)',
++        lambda match: match[1] + '\n  ' + data_tag, source, count=1,
++    )
++    assert count == 1, "Expected the Main56 base-data script"
+     init_digest = hashlib.sha256(INIT.read_bytes()).hexdigest()
+     init_command = 'script "spt/init-56.spt?v=' + init_digest + '";'
+     config = '''<script>
+@@ -79,6 +89,13 @@
+     source = source.replace("</head>", config + "</head>", 1)
+     source = source.replace("<title>Namelecule — Ονοματολογία Οργανικών Ενώσεων</title>",
+                             "<title>Namelecule — Μοριακός Ντετέκτιβ</title>", 1)
++    # Content-bound viewer URL also refreshes shared display calibration.
++    viewer_digest = hashlib.sha256((ROOT / "js/mulermoc-nom-molview-56.js").read_bytes()).hexdigest()
++    source, viewer_count = re.subn(
++        r'(src="js/mulermoc-nom-molview-56\.js)(?:\?[^"\n]*)?"',
++        lambda match: match[1] + '?v=' + viewer_digest + '"', source, count=1,
++    )
++    assert viewer_count == 1, "Expected the native viewer script"
+     bridge_digest = hashlib.sha256(BRIDGE.read_bytes()).hexdigest()
+     bridge = '<script src="js/namelecule-molecular-detective-host.js?v=' + bridge_digest + '"></script>\n'
+     assert source.count("</body>") == 1
+--- before/js/mulermoc-nom-molview-55.js
++++ js/mulermoc-nom-molview-55.js
+@@ -6896,6 +6896,17 @@
+ // Cache geometry only; the pixel size is recomputed for each visible viewport.
+ let uniform2DLibraryFrame = null;
+ function fPrepareFixedCCAlkanePrototype() {
++  // Registered, verified additions can opt into the same display calibration
++  // through data. Existing library paths keep their original behavior.
++  const registeredAlkaneScale = (() => {
++    try {
++      const entry = typeof nameExamples !== "undefined" && nameExamples[selectedMol];
++      return mode2D === "expanded" && entry?.displayPolicy === "namelecule-alkane-20261030" &&
++        allAtomsTypeList.length > 0 && allAtomsTypeList.every(type => type === "C" || type === "H") &&
++        bondList.every(bond => bond[2] === 1) &&
++        typeof fGetMoleculeClassification === "function" && fGetMoleculeClassification().seriesKey === "alkanes";
++    } catch (_) { return false; }
++  })();
+   const esterScale = ["ethanoic_methyl_ester", "propanoic_methyl_ester", "methyl_methanoate", "isopropyl_ethanoate", "sec_butyl_ethanoate", "butyl_propanoate", "tert_butyl_methanoate", "isobutyl_2_methylpropanoate", "isopropyl_2_3_dimethylbutanoate"].includes(selectedMol);
+   const carbonylScale = ["ethanal", "butanal", "propanal", "propynal", "pentanal", "methanal", "methyl_2_propanal", "dimethyl_2_3_butanal", "ethyl_2_methyl_3_pentanal", "ethyl_4_isopropyl_3_methyl_2_hexanal", "propenal", "methyl_2_propenal", "propanedial", "methyl_3_penten_2_dial", "ethyl_4_penten_4_yn_2_al", "isopropyl_2_buten_2_dial", "ethyl_2_methyl_3_hexen_2_yn_4_dial", "penten_1_one_3", "pentanone_2", "pentyn_4_one_2", "butanone", "propanone", "pentanone_3", "dimethyl_2_4_pentanone_3", "trimethyl_3_4_4_pentanone_2", "diethyl_4_5_dimethyl_2_6_heptanone_3", "penten_1_yn_4_one_3", "dimethyl_4_5_hexen_5_yn_1_one_3", "methyl_6_hepten_3_dione_2_5", "ethyl_3_methyl_4_octen_3_yn_5_dione_2_7", "isopropyl_4_dimethyl_3_6_octen_3_yn_7_dione_2_5", "methanoicacid", "propionicacid", "butanoic_acid", "propenoic_acid", "propanedioic_acid", "hydroxypropanoic_acid_2", "Oxopropanoic_acid", "aminobutanoic_acid_3", "pentanoic_acid", "oxobutanoic_acid", "dihydroxybutanedioic_acid_2_3", "methyl_2_propanoic_acid", "dimethyl_2_2_propanoic_acid", "ethyl_2_methyl_3_pentanoic_acid", "ethyl_3_isopropyl_2_dimethyl_4_5_hexanoic_acid", "methyl_2_propenoic_acid", "ethyl_2_methyl_3_penten_2_yn_4_oic_acid", "ethyl_3_isopropyl_2_dimethyl_4_5_hexadien_2_4_dioic_acid", "ethyl_2_isopropyl_3_dimethyl_6_6_hepten_2_yn_4_dioic_acid", "penten_2_yn_4_oic_acid", "hexen_2_yn_4_dioic_acid"].includes(selectedMol);
+   const etherScale = ["dimethylether", "ethyl_methyl_ether", "diethyl_ether",
+@@ -6903,7 +6914,7 @@
+     "ethyl_isopropyl_ether", "butyl_methyl_ether", "ethyl_sec_butyl_ether",
+     "isobutyl_isopropyl_ether", "tert_butyl_isopropyl_ether"].includes(selectedMol);
+   if (mode2D !== "expanded" ||
+-      (!etherScale && !carbonylScale && !esterScale && !["methane", "ethane", "propane", "butane", "pentane",
++      (!registeredAlkaneScale && !etherScale && !carbonylScale && !esterScale && !["methane", "ethane", "propane", "butane", "pentane",
+         "methyl_2_pentane", "dimethyl_2_3_butane", "ethyl_3_dimethyl_2_5_hexane",
+         "ethene", "propene", "butene_1", "butene_2", "methyl_2_propene",
+         "methyl_3_butene_1", "ethyl_3_dimethyl_2_5_hexene_2",
+--- before/js/mulermoc-nom-molview-56.js
++++ js/mulermoc-nom-molview-56.js
+@@ -10426,6 +10426,17 @@
+ // Cache geometry only; the pixel size is recomputed for each visible viewport.
+ let uniform2DLibraryFrame = null;
+ function fPrepareFixedCCAlkanePrototype() {
++  // Registered, verified additions can opt into the same display calibration
++  // through data. Existing library paths keep their original behavior.
++  const registeredAlkaneScale = (() => {
++    try {
++      const entry = typeof nameExamples !== "undefined" && nameExamples[selectedMol];
++      return mode2D === "expanded" && entry?.displayPolicy === "namelecule-alkane-20261030" &&
++        allAtomsTypeList.length > 0 && allAtomsTypeList.every(type => type === "C" || type === "H") &&
++        bondList.every(bond => bond[2] === 1) &&
++        typeof fGetMoleculeClassification === "function" && fGetMoleculeClassification().seriesKey === "alkanes";
++    } catch (_) { return false; }
++  })();
+   const esterScale = ["ethanoic_methyl_ester", "propanoic_methyl_ester", "methyl_methanoate", "isopropyl_ethanoate", "sec_butyl_ethanoate", "butyl_propanoate", "tert_butyl_methanoate", "isobutyl_2_methylpropanoate", "isopropyl_2_3_dimethylbutanoate"].includes(selectedMol);
+   const carbonylScale = ["ethanal", "butanal", "propanal", "propynal", "pentanal", "methanal", "methyl_2_propanal", "dimethyl_2_3_butanal", "ethyl_2_methyl_3_pentanal", "ethyl_4_isopropyl_3_methyl_2_hexanal", "propenal", "methyl_2_propenal", "propanedial", "methyl_3_penten_2_dial", "ethyl_4_penten_4_yn_2_al", "isopropyl_2_buten_2_dial", "ethyl_2_methyl_3_hexen_2_yn_4_dial", "penten_1_one_3", "pentanone_2", "pentyn_4_one_2", "butanone", "propanone", "pentanone_3", "dimethyl_2_4_pentanone_3", "trimethyl_3_4_4_pentanone_2", "diethyl_4_5_dimethyl_2_6_heptanone_3", "penten_1_yn_4_one_3", "dimethyl_4_5_hexen_5_yn_1_one_3", "methyl_6_hepten_3_dione_2_5", "ethyl_3_methyl_4_octen_3_yn_5_dione_2_7", "isopropyl_4_dimethyl_3_6_octen_3_yn_7_dione_2_5", "methanoicacid", "propionicacid", "butanoic_acid", "propenoic_acid", "propanedioic_acid", "hydroxypropanoic_acid_2", "Oxopropanoic_acid", "aminobutanoic_acid_3", "pentanoic_acid", "oxobutanoic_acid", "dihydroxybutanedioic_acid_2_3", "methyl_2_propanoic_acid", "dimethyl_2_2_propanoic_acid", "ethyl_2_methyl_3_pentanoic_acid", "ethyl_3_isopropyl_2_dimethyl_4_5_hexanoic_acid", "methyl_2_propenoic_acid", "ethyl_2_methyl_3_penten_2_yn_4_oic_acid", "ethyl_3_isopropyl_2_dimethyl_4_5_hexadien_2_4_dioic_acid", "ethyl_2_isopropyl_3_dimethyl_6_6_hepten_2_yn_4_dioic_acid", "penten_2_yn_4_oic_acid", "hexen_2_yn_4_dioic_acid"].includes(selectedMol);
+   const etherScale = ["dimethylether", "ethyl_methyl_ether", "diethyl_ether",
+@@ -10433,7 +10444,7 @@
+     "ethyl_isopropyl_ether", "butyl_methyl_ether", "ethyl_sec_butyl_ether",
+     "isobutyl_isopropyl_ether", "tert_butyl_isopropyl_ether"].includes(selectedMol);
+   if (mode2D !== "expanded" ||
+-      (!etherScale && !carbonylScale && !esterScale && !["methane", "ethane", "propane", "butane", "pentane",
++      (!registeredAlkaneScale && !etherScale && !carbonylScale && !esterScale && !["methane", "ethane", "propane", "butane", "pentane",
+         "methyl_2_pentane", "dimethyl_2_3_butane", "ethyl_3_dimethyl_2_5_hexane",
+         "ethene", "propene", "butene_1", "butene_2", "methyl_2_propene",
+         "methyl_3_butene_1", "ethyl_3_dimethyl_2_5_hexene_2",
+--- before/js/mulermoc-nom-molview-57.js
++++ js/mulermoc-nom-molview-57.js
+@@ -11067,6 +11067,17 @@
+ // Cache geometry only; the pixel size is recomputed for each visible viewport.
+ let uniform2DLibraryFrame = null;
+ function fPrepareFixedCCAlkanePrototype() {
++  // Registered, verified additions can opt into the same display calibration
++  // through data. Existing library paths keep their original behavior.
++  const registeredAlkaneScale = (() => {
++    try {
++      const entry = typeof nameExamples !== "undefined" && nameExamples[selectedMol];
++      return mode2D === "expanded" && entry?.displayPolicy === "namelecule-alkane-20261030" &&
++        allAtomsTypeList.length > 0 && allAtomsTypeList.every(type => type === "C" || type === "H") &&
++        bondList.every(bond => bond[2] === 1) &&
++        typeof fGetMoleculeClassification === "function" && fGetMoleculeClassification().seriesKey === "alkanes";
++    } catch (_) { return false; }
++  })();
+   const esterScale = ["ethanoic_methyl_ester", "propanoic_methyl_ester", "methyl_methanoate", "isopropyl_ethanoate", "sec_butyl_ethanoate", "butyl_propanoate", "tert_butyl_methanoate", "isobutyl_2_methylpropanoate", "isopropyl_2_3_dimethylbutanoate"].includes(selectedMol);
+   const carbonylScale = ["ethanal", "butanal", "propanal", "propynal", "pentanal", "methanal", "methyl_2_propanal", "dimethyl_2_3_butanal", "ethyl_2_methyl_3_pentanal", "ethyl_4_isopropyl_3_methyl_2_hexanal", "propenal", "methyl_2_propenal", "propanedial", "methyl_3_penten_2_dial", "ethyl_4_penten_4_yn_2_al", "isopropyl_2_buten_2_dial", "ethyl_2_methyl_3_hexen_2_yn_4_dial", "penten_1_one_3", "pentanone_2", "pentyn_4_one_2", "butanone", "propanone", "pentanone_3", "dimethyl_2_4_pentanone_3", "trimethyl_3_4_4_pentanone_2", "diethyl_4_5_dimethyl_2_6_heptanone_3", "penten_1_yn_4_one_3", "dimethyl_4_5_hexen_5_yn_1_one_3", "methyl_6_hepten_3_dione_2_5", "ethyl_3_methyl_4_octen_3_yn_5_dione_2_7", "isopropyl_4_dimethyl_3_6_octen_3_yn_7_dione_2_5", "methanoicacid", "propionicacid", "butanoic_acid", "propenoic_acid", "propanedioic_acid", "hydroxypropanoic_acid_2", "Oxopropanoic_acid", "aminobutanoic_acid_3", "pentanoic_acid", "oxobutanoic_acid", "dihydroxybutanedioic_acid_2_3", "methyl_2_propanoic_acid", "dimethyl_2_2_propanoic_acid", "ethyl_2_methyl_3_pentanoic_acid", "ethyl_3_isopropyl_2_dimethyl_4_5_hexanoic_acid", "methyl_2_propenoic_acid", "ethyl_2_methyl_3_penten_2_yn_4_oic_acid", "ethyl_3_isopropyl_2_dimethyl_4_5_hexadien_2_4_dioic_acid", "ethyl_2_isopropyl_3_dimethyl_6_6_hepten_2_yn_4_dioic_acid", "penten_2_yn_4_oic_acid", "hexen_2_yn_4_dioic_acid"].includes(selectedMol);
+   const etherScale = ["dimethylether", "ethyl_methyl_ether", "diethyl_ether",
+@@ -11074,7 +11085,7 @@
+     "ethyl_isopropyl_ether", "butyl_methyl_ether", "ethyl_sec_butyl_ether",
+     "isobutyl_isopropyl_ether", "tert_butyl_isopropyl_ether"].includes(selectedMol);
+   if (mode2D !== "expanded" ||
+-      (!etherScale && !carbonylScale && !esterScale && !["methane", "ethane", "propane", "butane", "pentane",
++      (!registeredAlkaneScale && !etherScale && !carbonylScale && !esterScale && !["methane", "ethane", "propane", "butane", "pentane",
+         "methyl_2_pentane", "dimethyl_2_3_butane", "ethyl_3_dimethyl_2_5_hexane",
+         "ethene", "propene", "butene_1", "butene_2", "methyl_2_propene",
+         "methyl_3_butene_1", "ethyl_3_dimethyl_2_5_hexene_2",

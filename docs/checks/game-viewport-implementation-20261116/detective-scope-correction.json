@@ -1,0 +1,14 @@
+{
+  "recordedUTC": "2026-11-16T08:53:35.889693+00:00",
+  "finding": "D-VIEW-01",
+  "severity": "P2",
+  "beforeManifest": "0489bc6110e5f8ae84d06b579c4631d2e2c82a274876f8e7089130493381f2bb",
+  "cause": "Shared imported Builder stylesheet selected every opted-in non-Puzzle game, overriding Detective grid and clue/molecule visibility.",
+  "fix": "Positive data-nl-vp-kind=builder scope for every appended Builder viewport selector; other game and legacy selectors unchanged.",
+  "path": "css/namelecule-name-builder.css",
+  "selectorsScoped": 39,
+  "beforeSHA256": "54a735a2615ebccd8704c05480ca355e2147f20c5811c4aa849476c41efc70ff",
+  "afterSHA256": "77e59a4a42ce0bbc188de029f9ef7b68891f1a71561ff9184962bdeba97c8cd5",
+  "safety": "Reviewer confirmed paused and parentbrowserworker confirmed stopped/cleaned before edit.",
+  "status": "correction implemented; targeted browser and independent verification pending"
+}

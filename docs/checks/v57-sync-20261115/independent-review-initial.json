@@ -1,0 +1,42 @@
+{
+  "recordedUTC": "2026-11-15T16:53:36.020784+00:00",
+  "agent": "/root/review_v57_sync",
+  "role": "Independent fresh-context read-only Reviewer; root transcription",
+  "target": "verification-target.json, initialviewerSHA d4f400e7c3d254c6151cb2ddd307771d043d223d9588b862073bedd1f70f3e72",
+  "findings": [
+    {
+      "id": "REV57-1",
+      "severity": "P2",
+      "path": "js/mulermoc-nom-molview-57.js",
+      "line": 2801,
+      "function": "fMulerSelectPush3D",
+      "observed": "Selected disjoint bonds paint an unselected bridge due endpoint-union iteration",
+      "impact": "3Dpaint disagrees with state/2D",
+      "introduced": "Inherited upstream57, new versuslocal56",
+      "independentEvidence": "Actual production function VM emits bridge color for bonds3D=[1,3] on4Cpath",
+      "requiredCorrection": "Paint exactbonds3D inbondchannel; preserveboth-endpolicyinatomchannel",
+      "status": "Correctionassigned aftercompletedconsolidatedreview"
+    }
+  ],
+  "independentChecks": {
+    "frozenHashes": 17,
+    "protectedSourcePaths": 688,
+    "oldCores": 12,
+    "targetJSCompile": 10,
+    "coreMemoryAssertions": 30
+  },
+  "noP0P1": true,
+  "suppliedNotIndependentlyExecuted": [
+    "Broad Developermatrices/runtime evidence",
+    "Chemistry262core+115viewer"
+  ],
+  "limits": [
+    "No browser/artifact generating checks byReviewer",
+    "Physicaldevice/conference/offline/optimizer notqualified",
+    "Preexisting JSmolnew3Dreadback55/56failclosed remains",
+    "Externalunpinj2sdependency"
+  ],
+  "writesByReviewer": false,
+  "stageCommitPushPublish": false,
+  "ownBrowserBeforeFindingReproduction": "native-browser/run-bond-paint57-165246/bond-paint57.json"
+}
