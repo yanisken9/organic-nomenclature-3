@@ -1,0 +1,48 @@
+{
+  "recordedUTC": "2026-11-16T07:35:05.943070+00:00",
+  "role": "Root transcription of independent Chemistry Validator actual implementation report",
+  "agent": "/root/levels_chemistry_preflight",
+  "roleId": "NAMELECULE_CHEMISTRY_VALIDATOR_V1_20261023",
+  "frozenSubset": {
+    "js/namelecule-game-levels.js": "3be269c6cdecc2158184db5f82269b44403c86be59e37adf7aa5e8e7edb72df5",
+    "js/namelecule-molecular-detective-engine.js": "b9f10b165313631c80c8c136a6364e9222414ea74e154a0c4adffb13032f1f95",
+    "js/namelecule-generated-repair-checkpoint.js": "f9bfb7fe3f9d3bfc4f158bf6aae27efc564af71fdc2de294fde048996889b913"
+  },
+  "ownAssertions": 3600,
+  "graphMapCanonicalGeneratorAssertions": 3413,
+  "actualProviderAssertions": 187,
+  "independentGraphs": 14,
+  "missions": 38,
+  "acceptedAlternatives": 77,
+  "projectedGeneratorSets": 90,
+  "actualProviderSets": 15,
+  "legacyBeforeAfterComparisons": 8,
+  "findings": [],
+  "coverage": [
+    "5/4/5 counts based on alkyl groups outside eligible parent",
+    "14/9/10 transient views and source separation",
+    "Canonical14 full name/source/pieces/indexed graph; legacy8 canonical/targets unchanged",
+    "38missions/77 independently enumerated valid graph targets",
+    "Single-componentfault/distincttriple/policy eligibility",
+    "Actualprovider badSHA rejection before analysis; legacy withoutlevelmodule"
+  ],
+  "limits": [
+    "No browser/visual/3D/studentdifficulty testing",
+    "ParentComposite/DetectiveLesson were outside frozen subset at this chemical cutoff",
+    "Filtering applied in final controllers belongs to consolidated review"
+  ],
+  "coreFilesUnchanged": 13,
+  "reviewerWroteFiles": false,
+  "runtimeEditedByValidator": false,
+  "targetedCacheFollowup": {
+    "providerSHA256": "9e05fb77c1f9d0dca9198fa62ddb72a9d1ae45ff3048826cd2d341b493f70001",
+    "ownAssertions": 72,
+    "beforeAfterSetComparisons": 10,
+    "optionalPreparations": 35,
+    "forcedRequiredGenerations": 33,
+    "findings": [],
+    "sourceVerificationBlockByteIdentical": true,
+    "scope": "Onlycachegenerationextraction;other2chemicaltargetsunchanged",
+    "browserExecution": false
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "recordedUTC": "2026-11-16T05:25:24.802469+00:00",
+  "role": "Developer execution and visual inspection; not independent review",
+  "comparisonBaseCommit": "168e3cec01f941a84d40bbe0dc07156e7baa35d0",
+  "approvedScope": "New native Main57 exporter plus six expanded/six condensed SVG and pool-v2-provenance; no other product changes in export subtask.",
+  "productFilesSHA256": {
+    "tools/export-alkane-pool-assets.py": "e39550de5baa2f5c11202fed98fcc9025e4334de9ee57b759ad6cd01ceccf7fb",
+    "games/assets/name-repair/pool-v2-provenance.json": "681c79f298735ab32fba1e791177069f70f9c4af82eb732dd79624f8aef541b8",
+    "games/assets/name-repair/expanded-v2/methyl_2_butane.svg": "7c1f11abf21797498bba03ae170311d380ec39adaa38def1b4c04960c843beda",
+    "games/assets/name-repair/condensed-v2/methyl_2_butane.svg": "d0d8c93a0c467ba097b2e7e1ae9c4da77b5ce159bc6fe1086417dd715d5af070",
+    "games/assets/name-repair/expanded-v2/methyl_3_pentane.svg": "87068b4f6e92efc571d36f2f5156e77bbc34376257354c60f162dc432784b5fd",
+    "games/assets/name-repair/condensed-v2/methyl_3_pentane.svg": "3a170a18240d9d09c9c71de53940ebdfff7d4c1fa1fedc86d310dd50d48e66bb",
+    "games/assets/name-repair/expanded-v2/ethyl_3_pentane.svg": "9b8d5ef9ee567193ed0b31e12054dc8ed7575de1229e1b84744b5a2db8f9ccbf",
+    "games/assets/name-repair/condensed-v2/ethyl_3_pentane.svg": "0029cfa3d181fb8cae8af8c96f1f6066862ecd789a8de3b171b5572a350d60fa",
+    "games/assets/name-repair/expanded-v2/dimethyl_2_2_propane.svg": "16c2cf1c1f2d185aaf1a3c6d16c94dffbf8efb26f9a7b83ad9ce0fbe5c2bd2b3",
+    "games/assets/name-repair/condensed-v2/dimethyl_2_2_propane.svg": "ab0fcaf42f547eae8d2054037a04dbda8372a1e38978db42a19386d96f7c55c8",
+    "games/assets/name-repair/expanded-v2/dimethyl_2_2_butane.svg": "33e181cb0b79568548974eccf6aee79dba3b85ba9971ccd39ca236978ea37c06",
+    "games/assets/name-repair/condensed-v2/dimethyl_2_2_butane.svg": "db362b1830b4b24cd92bbab97da89c44de11bb60e071e1707e9614c93c66751e",
+    "games/assets/name-repair/expanded-v2/ethyl_3_methyl_2_pentane.svg": "967d5cf0b7eede1db86e9f4ce68edff558124e043fc827fd1c426908ca6cf27a",
+    "games/assets/name-repair/condensed-v2/ethyl_3_methyl_2_pentane.svg": "a701a8dccbe2c7cc50e94e77b6c82262df9f0076cfbd5f9bb730c2473ce21c70"
+  },
+  "commands": [
+    {
+      "command": "python3 tools/export-alkane-pool-assets.py --help",
+      "result": "PASS; no browser started"
+    },
+    {
+      "command": "python3 tools/export-alkane-pool-assets.py --check-inputs",
+      "result": "PASS6molecules/12assets"
+    },
+    {
+      "command": "ast.parse+compile in memory for exporter and owned runner",
+      "result": "PASS; no pycache created"
+    },
+    {
+      "command": "python3 -B docs/checks/alkane-pool-implementation-20261116/detective/run-export.py --run",
+      "result": "PASS after sandbox loopback bind denied initialattempt; same approved command rerun with escalation",
+      "run": "docs/checks/alkane-pool-implementation-20261116/detective/export-run-20261116T052447Z",
+      "assets": 12,
+      "namesMatchMain": true,
+      "sourceMOLsMatchManifest": true,
+      "javascriptErrors": 0,
+      "galleryImagesLoaded": 12,
+      "galleryJavascriptErrors": 0,
+      "numbering": false,
+      "highlights": false
+    }
+  ],
+  "visualInspection": {
+    "artifact": "docs/checks/alkane-pool-implementation-20261116/detective/export-run-20261116T052447Z/gallery.png",
+    "method": "Viewed full1800px-wide actual Firefox gallery PNG through image viewer",
+    "observed": "All12 molecular drawings readable/complete/centered with margins; no clipped labels or drawing overlaps observed. Correct visible quaternary C in2,2cases; connected ethyl branch and methyl branch remain distinct. Inherited native grey H and black C styles preserved.",
+    "limits": "Developer visual assessment of exported images at desktop viewport; no physical/mobile/screenreader/offline/conference qualification."
+  },
+  "cleanup": {
+    "startedUTC": "2026-11-16T05:24:47.570661+00:00",
+    "role": "Developer owned headless Firefox export, not independent review",
+    "ownOnly": true,
+    "exportExitCode": 0,
+    "exitCode": 0,
+    "ownedBrowserExited": true,
+    "ownedServerClosed": true,
+    "ownedProfileRemoved": true,
+    "finishedUTC": "2026-11-16T05:24:50.027392+00:00"
+  },
+  "newEvidencePaths": [
+    "docs/checks/alkane-pool-implementation-20261116/detective/export-run-20261116T052438Z/run.json",
+    "docs/checks/alkane-pool-implementation-20261116/detective/export-run-20261116T052447Z/export.log",
+    "docs/checks/alkane-pool-implementation-20261116/detective/export-run-20261116T052447Z/firefox.log",
+    "docs/checks/alkane-pool-implementation-20261116/detective/export-run-20261116T052447Z/gallery.html",
+    "docs/checks/alkane-pool-implementation-20261116/detective/export-run-20261116T052447Z/gallery.json",
+    "docs/checks/alkane-pool-implementation-20261116/detective/export-run-20261116T052447Z/gallery.png",
+    "docs/checks/alkane-pool-implementation-20261116/detective/export-run-20261116T052447Z/process.json",
+    "docs/checks/alkane-pool-implementation-20261116/detective/export-run-20261116T052447Z/run.json",
+    "docs/checks/alkane-pool-implementation-20261116/detective/run-export.py"
+  ],
+  "coreChanged": false,
+  "commit": false,
+  "published": false,
+  "frozen": true,
+  "editingStopped": true
+}

@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;600;700&display=swap");
+
+.detective-title { display: grid; justify-items: center; gap: 8px; margin: 6px 0 10px; }
+.detective-logo { display: block; width: 88px; height: 88px; object-fit: contain; }
+.detective-title h1 { min-width: 0; max-width: 100%; margin: 0; font-family: "Roboto Condensed", sans-serif; font-size: 40px; font-weight: 700; line-height: 1.12; letter-spacing: -.04em; overflow-wrap: anywhere; }
+.detective-game .intro { max-width: 100%; margin-bottom: 10px; }
+.detective-game .objective { max-width: 810px; margin: 12px auto 0; font-size: 24px; font-weight: 700; line-height: 1.45; }
+.detective-game .intro-detail { margin-top: 8px; font-size: 11.52px; font-weight: 400; line-height: 1.6; }
+.detective-round-tools { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin: 0 0 14px; font-size: .85rem; color: var(--muted); }
+.detective-round-tools label { font-weight: 700; }
+.detective-round-tools select { min-height: 44px; max-width: 100%; min-width: 0; padding: 8px 30px 8px 10px; font: inherit; color: var(--ink); border: 1px solid #b2cdc3; border-radius: 10px; background: white; }
+.detective-round-tools select:focus-visible { outline: 3px solid #bc7148; outline-offset: 3px; }
+.detective-workspace { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); grid-template-rows: auto 1fr; gap: 18px 22px; align-items: stretch; }
+.detective-molecule { grid-column: 1; grid-row: 1 / 3; }
+.detective-clue { grid-column: 2; grid-row: 1; }
+.detective-answer { grid-column: 2; grid-row: 2; }
+.detective-molecule .viewer-wrap { height: 370px; }
+.detective-kind { font-size: .78rem; line-height: 1.4; font-weight: 700; text-align: right; }
+.detective-clue-content, .detective-answer-content { padding: 21px; }
+.detective-name { margin: 2px 0 19px; font-size: clamp(23px, 2.5vw, 32px); font-weight: 750; line-height: 1.8; overflow-wrap: anywhere; }
+.detective-name .name-piece { border-radius: 5px; }
+.detective-name .clue-piece { color: #254c50; background: #dcefe7; box-shadow: 0 3px 0 #bc7148; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 6px; }
+.detective-prompt { margin: 0; font-size: 1.05rem; font-weight: 700; line-height: 1.6; }
+.detective-help { margin: 0 0 8px; font-size: .92rem; line-height: 1.5; }
+.detective-selection-status { margin: 0; min-height: 1.6em; color: var(--muted); font-size: .85rem; line-height: 1.5; }
+.detective-answer .check-row { margin-top: 14px; gap: 9px; }
+.detective-answer .primary, .detective-answer .secondary { min-width: 0; padding: 11px 17px; }
+.detective-next { margin-top: 14px; }
+.detective-view-note { padding: 12px 18px; margin: 0; color: var(--muted); border-top: 1px solid #e4ede7; text-align: center; font-size: .8rem; }
+.detective-game .feedback { margin-top: 14px; }
+.detective-game .feedback p { margin: 0; }
+.detective-feedback-end { display: block; height: 1px; }
+.detective-game .viewer-mask[hidden] { display: none; }
+body.detective-embedded .site-header, body.detective-embedded .site-footer, body.detective-embedded .eyebrow { display: none; }
+body.detective-embedded .detective-game { max-width: 1180px; padding: 16px 22px 24px; }
+body.detective-embedded .game-status { min-height: 1.5em; padding-bottom: 8px; }
+body.detective-controlled .detective-round-tools label,
+body.detective-controlled .detective-round-tools select,
+body.detective-controlled #next-mission { display: none; }
+body.detective-controlled .detective-round-tools:has(#retry-load[hidden]) { display: none; }
+
+@media (max-width: 850px) {
+  .detective-workspace { grid-template-columns: minmax(0, 1fr); grid-template-rows: auto auto auto; gap: 14px; }
+  .detective-clue { grid-column: 1; grid-row: 1; }
+  .detective-molecule { grid-column: 1; grid-row: 2; }
+  .detective-answer { grid-column: 1; grid-row: 3; }
+  .detective-molecule .viewer-wrap { height: 300px; }
+  .detective-clue-content { padding: 15px 18px; }
+  .detective-name { margin-bottom: 10px; font-size: 26px; }
+}
+@media (max-width: 760px) {
+  .detective-game .objective { font-size: 20px; }
+  .detective-game .intro-detail, .detective-game .game-status { font-size: 12px; }
+  .detective-title h1 { font-size: 28.8px; }
+  .detective-logo { width: 64px; height: 64px; }
+}
+@media (max-width: 430px) {
+  .detective-round-tools { gap: 7px; }
+  .detective-round-tools label { flex-basis: 100%; }
+  .detective-round-tools select { width: 100%; }
+  .detective-molecule .viewer-wrap { height: 270px; }
+  .detective-clue-content, .detective-answer-content { padding: 15px; }
+  .detective-name { font-size: 23px; }
+  .detective-kind { max-width: 110px; }
+  body.detective-embedded .detective-game { padding: 13px 12px 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .detective-game *, .detective-game *::before, .detective-game *::after { scroll-behavior: auto !important; transition: none !important; }
+}
+
+/* New standalone pages and viewport=1 lesson hosts share this bounded stage. */
+body.nl-vp-document:has(.detective-viewport) .site-header { padding: 5px 18px; }
+body.nl-vp-document:has(.detective-viewport) .brand { width: 150px; }
+body.nl-vp-document:has(.detective-viewport) .back-link { padding: 6px 12px; font-size: 12px; }
+body.nl-vp-document:has(.detective-viewport) .site-footer { display: none; }
+.detective-game.detective-viewport, body.detective-embedded .detective-game.detective-viewport { display: grid; grid-template-rows: auto auto auto auto minmax(0, 1fr); gap: 6px; min-height: 0; padding: 8px 16px; overflow: hidden; }
+.detective-viewport .intro { margin: 0; }
+.detective-viewport .intro > .eyebrow, .detective-viewport .intro-detail { display: none; }
+.detective-viewport .detective-title { display: flex; justify-content: center; gap: 8px; margin: 0; }
+.detective-viewport .detective-logo { width: 32px; height: 32px; }
+.detective-viewport .detective-title h1 { font-size: 21px; line-height: 1.2; }
+.detective-viewport .objective, .lesson-mode .detective-viewport .objective { font-size: 14px; line-height: 1.35; margin: 3px 0 0; }
+.detective-viewport .game-status, body.detective-embedded .detective-viewport .game-status { font-size: 12px; line-height: 1.3; min-height: 0; margin: 0; padding: 0; }
+.detective-viewport .detective-round-tools { margin: 0; min-height: 0; }
+.detective-viewport #game-levels { width: 100%; }
+.detective-viewport .detective-workspace { min-height: 0; gap: 10px; grid-template-rows: minmax(0, 1fr) auto; }
+.detective-viewport .panel { border-radius: 15px; min-height: 0; }
+.detective-viewport .panel-header { min-height: 38px; padding: 5px 10px; gap: 6px; }
+.detective-viewport .panel-header h2 { font-size: 13px; }
+.detective-viewport .detective-kind { font-size: 11px; }
+.detective-viewport .detective-molecule { display: grid; grid-template-rows: auto minmax(0,1fr); }
+.detective-viewport .detective-molecule .viewer-wrap { min-height: 0; height: 100%; }
+.detective-viewport .detective-view-note { display: none; }
+.detective-viewport .detective-clue { display: grid; grid-template-rows: auto minmax(0,1fr); }
+.detective-viewport .detective-clue-content { display: grid; grid-template-rows: auto minmax(0,1fr); gap: 8px; padding: 10px; min-height: 0; }
+.detective-viewport .detective-clue-content > .nl-vp-pager-x { height: 47px; }
+.detective-viewport .detective-clue-content > .nl-vp-pager-x.is-overflow { height: 85px; }
+.detective-viewport .detective-name { margin: 0; padding: 3px 0 8px; font-size: 23px; line-height: 1.5; white-space: nowrap; overflow-wrap: normal; }
+.detective-viewport .detective-prompt { margin: 0; font-size: 16px; line-height: 1.5; padding: 3px; }
+.detective-viewport .detective-answer-content { padding: 9px 10px; }
+.detective-viewport .detective-help { font-size: 12px; margin-bottom: 4px; }
+.detective-viewport .detective-selection-status { font-size: 12px; min-height: 0; }
+.detective-viewport .check-row { margin-top: 6px; gap: 6px; }
+.detective-viewport .check-row button { min-height: 38px; padding: 6px 12px; font-size: 13px; }
+.detective-viewport .detective-stage-tabs { display: none; gap: 6px; min-width: 0; }
+.detective-viewport .detective-stage-tabs button { min-height: 36px; padding: 5px 10px; font-size: 12px; min-width: 0; }
+.detective-viewport .detective-stage-tabs [aria-pressed="true"] { color: white; background: var(--ink); }
+.detective-viewport .detective-feedback-stage { grid-row: 5; display: grid; grid-template-rows: auto minmax(0,1fr) auto; min-height: 0; gap: 8px; padding: 12px; background: white; border: 1px solid var(--line); border-radius: 15px; }
+.detective-viewport .detective-feedback-heading { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px; }
+.detective-viewport .detective-feedback-heading h2 { font-size: 17px; }
+.detective-viewport .detective-feedback-heading button { padding: 6px 10px; min-height: 36px; font-size: 12px; }
+.detective-viewport .detective-feedback-stage > .nl-vp-pager { min-height: 0; }
+.detective-viewport .feedback { margin: 0; font-size: 16px; }
+.detective-viewport .detective-next { margin: 0; justify-self: end; min-height: 40px; padding: 7px 15px; font-size: 14px; }
+.detective-viewport.detective-feedback-view .detective-workspace, .detective-viewport.detective-feedback-view .detective-stage-tabs { display: none; }
+.detective-viewport.nl-vp-level-selection .detective-workspace, .detective-viewport.nl-vp-level-selection .detective-stage-tabs { display: none; }
+.detective-viewport.nl-vp-narrow .detective-stage-tabs { display: flex; }
+.detective-viewport.nl-vp-narrow .detective-workspace { grid-template-columns: minmax(0,1fr); grid-template-rows: minmax(0,1fr) auto; }
+.detective-viewport.nl-vp-narrow .detective-molecule, .detective-viewport.nl-vp-narrow .detective-clue { grid-column: 1; grid-row: 1; }
+.detective-viewport.nl-vp-narrow .detective-answer { grid-column: 1; grid-row: 2; }
+.detective-viewport.nl-vp-narrow[data-detective-view="structure"] .detective-clue, .detective-viewport.nl-vp-narrow[data-detective-view="clue"] .detective-molecule { display: none; }
+@media (max-width: 550px) {
+  .detective-game.detective-viewport, body.detective-embedded .detective-game.detective-viewport { padding: 6px 9px; }
+  .detective-viewport .detective-title h1 { font-size: 18px; }
+  .detective-viewport .objective, .lesson-mode .detective-viewport .objective { font-size: 13px; }
+  .detective-viewport .detective-logo { width: 28px; height: 28px; }
+}

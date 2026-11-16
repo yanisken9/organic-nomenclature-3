@@ -1,0 +1,46 @@
+{
+  "recordedUTC": "2026-11-16T05:11:49.279548+00:00",
+  "role": "Independent read-only ChemistryValidator, root transcription",
+  "agent": "/root/detective_alkane_gate_chemistry",
+  "frozenHashes": {
+    "manifest": "1ea6176be7a849f5e5d65a4230c6940e7f28147ad18ef4bafd80cefbe18fa9b2",
+    "bundle": "262c6561aaff7a88919cda715835e7f455d64756218aeb66e3e4949ba569a75c",
+    "detectiveEngine": "f60c184b8e7750aece3ef6ce8870bddb05808978272b81d4b9184da2455ba1c5"
+  },
+  "ownAssertions": {
+    "actual24molecularForms": 894,
+    "bundle": 79,
+    "detective": 5536,
+    "2DgeometricIncidence": 3453
+  },
+  "findings": [],
+  "scope": [
+    "Valence/neutral/noisotope/CHsingleconnectedtrees/formulas/exactidentity",
+    "FullExpandedatom/bondincludingH→actual3DSDFbijection",
+    "ActualCID/provenance/downloadbodySHA; noindependentdownload",
+    "2Dbondlengths/parentzigzag120deg/quaternarygaps60deg/nooverlaps/crossings",
+    "27molecules69missions108sets;old17exact41missions;exhaustiveCsubsets42IDpermutations;noemptymethanebondtask"
+  ],
+  "measured3D": {
+    "CC_Angstrom": [
+      1.52199,
+      1.56111
+    ],
+    "CH_Angstrom": [
+      1.09296,
+      1.0995
+    ],
+    "tetrahedralAngleDegrees": [
+      104.975,
+      115.809
+    ],
+    "qualification": "Sanity metrics only, not energy/experimental geometry validation"
+  },
+  "limits": [
+    "No browserorfont/framingqualification",
+    "No independentPubChemdownloadrepeat",
+    "No141moleculegeneralcheck",
+    "FreshindependentReviewerrequiredafterfulllogicalunit"
+  ],
+  "filesWrittenByAgent": false
+}

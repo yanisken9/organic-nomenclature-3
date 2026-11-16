@@ -1,0 +1,89 @@
+{
+  "recordedUTC": "2026-11-16T05:37:54.498866+00:00",
+  "status": "Complete locally; independent review completed and REV-ALK-1 closed",
+  "scope": "Approved six known alkanes plus approved shared calibration55/56/57",
+  "frozenManifestSHA256": "fa6d2c813dc32cfda74cdabc11b24084cc4de5e08027af82acfb5ea6747a7c70",
+  "targetFiles": 67,
+  "newPaths": 48,
+  "changedExistingPaths": 19,
+  "frozenFilesMatch": true,
+  "poolBefore": 8,
+  "poolAfter": 14,
+  "activeLibraryBefore": 141,
+  "activeLibraryAfter": 147,
+  "allSixGenuinelySolvedInFourGames": true,
+  "operatingConditions": "One isolated headlessFirefox perrun; native1800x1400 surface, CSS1500x1000 and390px; task-owned loopback/profile; actualPubChemSDF models and nativeSVG picks",
+  "checks": {
+    "nativeData": 205,
+    "rasterCases": 318,
+    "nativeHosts": 24,
+    "alternateChains": {
+      "cases": 9,
+      "checks": 256
+    },
+    "SVGexports": 12,
+    "BuilderAcceptedNewMolecules": 6,
+    "PuzzleAcceptedNewMolecules": 6,
+    "WorkshopDetectiveProductionSubmissions": 36
+  },
+  "evidence": {
+    "data/browser-verification.json": "79178b55f434c757461df3e59d15dcc628e533851d51be3fe6d9820d68ae8c3c",
+    "data/alternate-chain-verification.json": "b4a6b5d8cbcbac2651ba0dbe107b78e30f19052a0bbf47fa14bf6a6447a6ef92",
+    "catalog-games/browser/browser-verification.json": "658b82fb319abb40c61f76d1e64bfbc38b6f16d147348fb13b7dbf7b4be9e1de",
+    "independent-chemistry.json": "0c2a5ffc1f02b6087e5803cd67382956c4fe922af52d0614cd281d589437f9cf",
+    "detective/export-report.json": "a25be302178893fc643ea57bb7a7599e5689939ba6d75a79694a18013da667e0",
+    "root/provider-results.json": "3f6e6b0764dbaccd20c3659a226c829d5a48489ab37a82a04483d84fbc843f45",
+    "root/calibration-gate-results.json": "45495002e080ff8ec1e5499d4b3b94cf404bfc066d39a8939925c09f150b9bee",
+    "root/workshop-version-boundary-results.json": "870a9bb6f517ea93085901cffb83abe0623af6a96ad6f57d40f00be7ddc50451",
+    "root/shared-calibration-source.json": "ce941900e4616142a279179723762485f1e1fb3f25319b391a088348b6cc8ab3",
+    "root/correction-isolation.json": "d3d273197d7312f0971cdb3e77c1f150d12edaf9d5b9e04b0590622568725bf6"
+  },
+  "review": {
+    "agent": "/root/alkane_pool_independent_review",
+    "freshContext": true,
+    "initialFinding": "REV-ALK-1 P2",
+    "fix": "Legacy replay retained, every newattempt migratesbefore saves/resets to14/separate namespace",
+    "ownSourceAndFunctionVerification": "84independent targetedassertions;no furtherfindings",
+    "actualMigrationEvidence": "catalog-games/browser/run-053427/results.json",
+    "sourceDefectClosed": true,
+    "independentBrowserExecution": false,
+    "finalReport": "review-final.json",
+    "finalEvidenceAcknowledged": true,
+    "unresolvedFindings": []
+  },
+  "preservation": {
+    "coreCount": 13,
+    "allCoreHashesUnchanged": true,
+    "HEAD": "168e3cec01f941a84d40bbe0dc07156e7baa35d0",
+    "indexSHA256": "caafccaca7019b42993bc27ec3834bbc90178430d217bf0c92439e6346f845db",
+    "legacyCatalogSHA256": "9778e30ea33f2f7cd4c8a472e46e90539856b861a54035a1d514c3246cccf724",
+    "alkaneScenarioSHA256": "b9e2a61183385a8fee70d17f715c018b1bc261448821a4d286a7dd3322cce2b4",
+    "priorRecoveryProtectedPathsChecked": 671
+  },
+  "coreChangeReportGR": "Δεν έγινε καμία αλλαγή σε core.js ή core-version αρχείο στη συνεδρία της 16/11/2026. Οι αλλαγές αφορούν δεδομένα, viewers και μηχανισμούς παιχνιδιών.",
+  "limitations": [
+    "No physicalmobile/personalFirefox/conference/offline qualification",
+    "ExternalJSmol/fonts/services dependencies remain",
+    "NativeFirefoxselectkeyboardautomationnotqualified; supported Nextcontrolused forPuzzle",
+    "SourceSDFgeometrysanitychecked, notenergy/experimentalcertification",
+    "ExplicitalternatechainUI1→2→1 only3fixtures×3formsdesktop; exhaustivegraphalternativesseparate",
+    "Retainedtestharnessfailures; eachfinalgameUIrun404only/favicon.ico, noappdependencyHTTPfailure",
+    "SVGprovenancerecordsexactexport-timeMain57HTML; archivedr1source preserved; currentonlyquizcacheURLr2differs"
+  ],
+  "remainingRoadmap": [
+    "Integrateall4gameswelcome+alkanelesson",
+    "Defineandimplement3levelsall4",
+    "Upgradeotherlessons",
+    "Perlessonmoleculeproposals"
+  ],
+  "upstream": {
+    "lastChecked": "a4f8aaa7dfcbd4328889b7d8b2d0d24bc6588f37",
+    "lastActuallySynchronized": "b73d8b6330cfdb9d83c000a513be7052763aa083",
+    "newChangesIntegratedInThisUnit": false
+  },
+  "commit": false,
+  "push": false,
+  "publication": false,
+  "scenarioExport": false,
+  "fullBackup": false
+}

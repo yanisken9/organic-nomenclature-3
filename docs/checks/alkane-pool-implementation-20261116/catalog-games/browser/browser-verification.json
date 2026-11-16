@@ -1,0 +1,621 @@
+{
+  "role": "Developer browser execution; not independent review",
+  "completedScope": "Actual six new molecules solved in each of Builder, Puzzle, Workshop and Detective; all available Detective mission families covered. Existing controlled lesson gate4 legacy partial reload and actual archived-prior Workshop record migration covered.",
+  "independentTestsClaimed": false,
+  "countsMustNotBeSummedAsIndependentTests": "204/212/621 are per-run Developer assertions including repeated trusted-input hit checks, not independent test cases. Correct production UI submissions are reported separately.",
+  "builderSixSegment": {
+    "results": "docs/checks/alkane-pool-implementation-20261116/catalog-games/browser/run-052545/results.json",
+    "resultsSHA256": "8cdd35400a87792a03bd1d0ba536330714581008f3202c212ddfda8d4719b0a7",
+    "checks": 204,
+    "checksAreDeveloperAssertionsNotIndependentTestCount": true,
+    "wholeRunCompleted": false,
+    "correctProductionUIAnswers": 6,
+    "answersByGame": {
+      "builder": 6
+    },
+    "catalogFixtureIdsByGame": {
+      "builder": [
+        "dimethyl_2_2_butane",
+        "dimethyl_2_2_propane",
+        "ethyl_3_methyl_2_pentane",
+        "ethyl_3_pentane",
+        "methyl_2_butane",
+        "methyl_3_pentane"
+      ]
+    },
+    "capturedJavaScriptExceptions": 0,
+    "beforeHTTPAfterSourceHashesEqual": true,
+    "frozenManifest": "docs/checks/alkane-pool-implementation-20261116/verification-target.json",
+    "frozenManifestSHA256": "b510d4c2831a9cc6fbe512d6cbc63470621d261b0d91e6dc8d829481454b3894",
+    "frozenProductFileCount": 67,
+    "sourceFileCount": 77,
+    "cleanup": {
+      "ownedBrowserExited": true,
+      "ownedServerClosed": true,
+      "ownedProfileRemoved": true
+    },
+    "process": {
+      "ownedPID": 6730,
+      "profile": "/private/tmp/namelecule-alkane-game-replay-kave7pa9",
+      "bidiPort": 50565,
+      "serverPort": 50564,
+      "baseURL": "http://127.0.0.1:50564/"
+    },
+    "failure": "Traceback (most recent call last):\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/alkane-pool-implementation-20261116/catalog-games/browser/replay-new-six.py\", line 196, in <module>\n    for record in NEW:puzzle_round(record)\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/alkane-pool-implementation-20261116/catalog-games/browser/replay-new-six.py\", line 127, in puzzle_round\n    select_puzzle(index)\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/alkane-pool-implementation-20261116/catalog-games/browser/replay-new-six.py\", line 121, in select_puzzle\n    click('#round-select');key('\\ue010') # End reaches a deterministic last option.\nTypeError: 'str' object is not callable\n"
+  },
+  "puzzleSixAndMandatoryLessonGate4": {
+    "results": "docs/checks/alkane-pool-implementation-20261116/catalog-games/browser/run-053000/results.json",
+    "resultsSHA256": "61e1a43c11d4fb7fe7524e29f11e69aaea99c6af3dba41e5c1d8c46ddbda8880",
+    "checks": 212,
+    "checksAreDeveloperAssertionsNotIndependentTestCount": true,
+    "wholeRunCompleted": true,
+    "correctProductionUIAnswers": 6,
+    "answersByGame": {
+      "puzzle": 6
+    },
+    "catalogFixtureIdsByGame": {
+      "puzzle": [
+        "dimethyl_2_2_butane",
+        "dimethyl_2_2_propane",
+        "ethyl_3_methyl_2_pentane",
+        "ethyl_3_pentane",
+        "methyl_2_butane",
+        "methyl_3_pentane"
+      ]
+    },
+    "capturedJavaScriptExceptions": 0,
+    "beforeHTTPAfterSourceHashesEqual": true,
+    "frozenManifest": "docs/checks/alkane-pool-implementation-20261116/verification-target.json",
+    "frozenManifestSHA256": "b510d4c2831a9cc6fbe512d6cbc63470621d261b0d91e6dc8d829481454b3894",
+    "frozenProductFileCount": 67,
+    "sourceFileCount": 77,
+    "cleanup": {
+      "ownedBrowserExited": true,
+      "ownedServerClosed": true,
+      "ownedProfileRemoved": true
+    },
+    "process": {
+      "ownedPID": 7701,
+      "profile": "/private/tmp/namelecule-alkane-game-replay-2uw_esdy",
+      "bidiPort": 51183,
+      "serverPort": 51182,
+      "baseURL": "http://127.0.0.1:51182/"
+    },
+    "failure": null
+  },
+  "correctedWorkshopAndDetective": {
+    "results": "docs/checks/alkane-pool-implementation-20261116/catalog-games/browser/run-053427/results.json",
+    "resultsSHA256": "81d1eaceb419818c5e319032a4484e36ca512649e5a799c0682b099c27e58fce",
+    "checks": 621,
+    "checksAreDeveloperAssertionsNotIndependentTestCount": true,
+    "wholeRunCompleted": true,
+    "correctProductionUIAnswers": 36,
+    "answersByGame": {
+      "repair-legacy": 1,
+      "repair": 16,
+      "detective": 19
+    },
+    "catalogFixtureIdsByGame": {
+      "detective": [
+        "dimethyl_2_2_butane",
+        "dimethyl_2_2_propane",
+        "ethyl_3_methyl_2_pentane",
+        "ethyl_3_pentane",
+        "methyl_2_butane",
+        "methyl_3_pentane"
+      ],
+      "repair-legacy": [
+        "methane"
+      ],
+      "repair": [
+        "butane",
+        "dimethyl_2_2_butane",
+        "dimethyl_2_2_propane",
+        "dimethyl_2_3_butane",
+        "ethane",
+        "ethyl_3_dimethyl_2_5_hexane",
+        "ethyl_3_methyl_2_pentane",
+        "ethyl_3_pentane",
+        "methyl_2_butane",
+        "methyl_2_pentane",
+        "methyl_3_pentane"
+      ]
+    },
+    "capturedJavaScriptExceptions": 0,
+    "beforeHTTPAfterSourceHashesEqual": true,
+    "frozenManifest": "docs/checks/alkane-pool-implementation-20261116/verification-target.json",
+    "frozenManifestSHA256": "fa6d2c813dc32cfda74cdabc11b24084cc4de5e08027af82acfb5ea6747a7c70",
+    "frozenProductFileCount": 67,
+    "sourceFileCount": 82,
+    "cleanup": {
+      "ownedBrowserExited": true,
+      "ownedServerClosed": true,
+      "ownedProfileRemoved": true
+    },
+    "process": {
+      "ownedPID": 8779,
+      "profile": "/private/tmp/namelecule-alkane-game-replay-pezpiqtv",
+      "bidiPort": 51525,
+      "serverPort": 51524,
+      "baseURL": "http://127.0.0.1:51524/"
+    },
+    "failure": null
+  },
+  "allCorrectProductionSubmissionsAcrossRetainedSuccessfulSegments": 48,
+  "newMoleculeCoverageByGame": {
+    "builder": [
+      "dimethyl_2_2_butane",
+      "dimethyl_2_2_propane",
+      "ethyl_3_methyl_2_pentane",
+      "ethyl_3_pentane",
+      "methyl_2_butane",
+      "methyl_3_pentane"
+    ],
+    "puzzle": [
+      "dimethyl_2_2_butane",
+      "dimethyl_2_2_propane",
+      "ethyl_3_methyl_2_pentane",
+      "ethyl_3_pentane",
+      "methyl_2_butane",
+      "methyl_3_pentane"
+    ],
+    "repair": [
+      "dimethyl_2_2_butane",
+      "dimethyl_2_2_propane",
+      "ethyl_3_methyl_2_pentane",
+      "ethyl_3_pentane",
+      "methyl_2_butane",
+      "methyl_3_pentane"
+    ],
+    "detective": [
+      "dimethyl_2_2_butane",
+      "dimethyl_2_2_propane",
+      "ethyl_3_methyl_2_pentane",
+      "ethyl_3_pentane",
+      "methyl_2_butane",
+      "methyl_3_pentane"
+    ]
+  },
+  "allSixNewCoveredInAllFourGames": true,
+  "freezeContinuity": {
+    "initialManifestSHA256": "b510d4c2831a9cc6fbe512d6cbc63470621d261b0d91e6dc8d829481454b3894",
+    "correctedManifestSHA256": "fa6d2c813dc32cfda74cdabc11b24084cc4de5e08027af82acfb5ea6747a7c70",
+    "correctedFiles": [
+      "js/namelecule-game-repair.js",
+      "games/name-repair.html",
+      "mulermoc-nom-57.html"
+    ],
+    "unchangedBuilderPuzzleEvidence": "Initial Builder/Puzzle product paths, data, native viewer and lesson recipe sources remain byte-identical; the second run verifies corrected Workshop source. Root owns independent target review and final source reconciliation."
+  },
+  "legacyGate4": {
+    "before": {
+      "nodes": [
+        {
+          "id": "piece-1",
+          "label": "CH₃",
+          "left": "50%",
+          "top": "50%"
+        }
+      ],
+      "bonds": 0,
+      "solved": false,
+      "feedback": ""
+    },
+    "after": {
+      "nodes": [
+        {
+          "id": "piece-1",
+          "label": "CH₃",
+          "left": "50%",
+          "top": "50%"
+        }
+      ],
+      "bonds": 0,
+      "solved": false,
+      "feedback": ""
+    },
+    "moleculeId": "butane"
+  },
+  "REV_ALK_1_P2_actualBrowserCoverage": {
+    "priorRecordCreation": "Actual archived before/Workshop HTML+JS through same-origin __prior__ alias; exact archived JS HTTP digest asserted. Trusted prior UI creates the partial record, no receipt injection.",
+    "cases": [
+      "Current explicit legacy resume keeps prior seed/round/state",
+      "Cancel Back to sets preserves partial bytes/version",
+      "Confirm Back to sets opens enriched picker, consumes pickSet once, preserves partial bytes immediately",
+      "Next set uses v2 while old partial remains",
+      "Three genuine legacy repairs reach results; explicit reload revalidates complete results",
+      "Completed results Back to sets opens enriched picker, consumes command once, preserves completed old bytes immediately",
+      "Next set is v2 and preserves completed old bytes",
+      "Direct explicit legacy startSet redirects to v2, consumes command once, preserves completed old bytes",
+      "Reload after consumed start command retains same new v2 seed and completed old record"
+    ],
+    "evidence": {
+      "recordCreatedBy": "Archived prior Workshop JS/HTML through same-origin server alias; genuine UI inputs, no receipt injection",
+      "partialBefore": {
+        "version": 1,
+        "generatorVersion": "1.0.0",
+        "catalogRevision": "275d537b19f3ef0791c97d8d78c127f541a0579038ef1e8d65dadde611845690",
+        "engineSHA256": "3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306",
+        "seed": "2436691347",
+        "difficulty": "basic",
+        "phase": "round",
+        "setId": "alkanes-unbranched",
+        "roundIndex": 0,
+        "states": [
+          {
+            "selectedPartId": "component-5",
+            "selectedValue": null,
+            "order": [],
+            "choiceOrder": [
+              0,
+              1,
+              2
+            ],
+            "attempts": 0,
+            "selectionMisses": 0,
+            "solved": false,
+            "submitted": false
+          },
+          {
+            "selectedPartId": null,
+            "selectedValue": null,
+            "order": [],
+            "choiceOrder": [
+              0,
+              1,
+              2
+            ],
+            "attempts": 0,
+            "selectionMisses": 0,
+            "solved": false,
+            "submitted": false
+          },
+          {
+            "selectedPartId": null,
+            "selectedValue": null,
+            "order": [],
+            "choiceOrder": [
+              0,
+              1,
+              2
+            ],
+            "attempts": 0,
+            "selectionMisses": 0,
+            "solved": false,
+            "submitted": false
+          }
+        ]
+      },
+      "partialAfter": {
+        "version": 1,
+        "generatorVersion": "1.0.0",
+        "catalogRevision": "275d537b19f3ef0791c97d8d78c127f541a0579038ef1e8d65dadde611845690",
+        "engineSHA256": "3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306",
+        "seed": "2436691347",
+        "difficulty": "basic",
+        "phase": "round",
+        "setId": "alkanes-unbranched",
+        "roundIndex": 0,
+        "states": [
+          {
+            "selectedPartId": "component-5",
+            "selectedValue": null,
+            "order": [],
+            "choiceOrder": [
+              0,
+              1,
+              2
+            ],
+            "attempts": 0,
+            "selectionMisses": 0,
+            "solved": false,
+            "submitted": false
+          },
+          {
+            "selectedPartId": null,
+            "selectedValue": null,
+            "order": [],
+            "choiceOrder": [
+              0,
+              1,
+              2
+            ],
+            "attempts": 0,
+            "selectionMisses": 0,
+            "solved": false,
+            "submitted": false
+          },
+          {
+            "selectedPartId": null,
+            "selectedValue": null,
+            "order": [],
+            "choiceOrder": [
+              0,
+              1,
+              2
+            ],
+            "attempts": 0,
+            "selectionMisses": 0,
+            "solved": false,
+            "submitted": false
+          }
+        ]
+      },
+      "completedBefore": {
+        "version": 1,
+        "generatorVersion": "1.0.0",
+        "catalogRevision": "275d537b19f3ef0791c97d8d78c127f541a0579038ef1e8d65dadde611845690",
+        "engineSHA256": "3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306",
+        "seed": "2436691347",
+        "difficulty": "basic",
+        "phase": "results",
+        "setId": "alkanes-unbranched",
+        "roundIndex": 2,
+        "states": [
+          {
+            "selectedPartId": "component-5",
+            "selectedValue": "μεθ",
+            "order": [],
+            "choiceOrder": [
+              0,
+              1,
+              2
+            ],
+            "attempts": 1,
+            "selectionMisses": 0,
+            "solved": true,
+            "submitted": true
+          },
+          {
+            "selectedPartId": "component-5",
+            "selectedValue": "βουτ",
+            "order": [],
+            "choiceOrder": [
+              0,
+              1,
+              2
+            ],
+            "attempts": 1,
+            "selectionMisses": 1,
+            "solved": true,
+            "submitted": true
+          },
+          {
+            "selectedPartId": "component-6",
+            "selectedValue": "άν",
+            "order": [],
+            "choiceOrder": [
+              0,
+              1,
+              2
+            ],
+            "attempts": 1,
+            "selectionMisses": 1,
+            "solved": true,
+            "submitted": true
+          }
+        ]
+      },
+      "completedAfter": {
+        "version": 1,
+        "generatorVersion": "1.0.0",
+        "catalogRevision": "275d537b19f3ef0791c97d8d78c127f541a0579038ef1e8d65dadde611845690",
+        "engineSHA256": "3f9382b45535ab101546fc70fe6c7264efcfe5ff4b6ea15deb9c4e80a38a5306",
+        "seed": "2436691347",
+        "difficulty": "basic",
+        "phase": "results",
+        "setId": "alkanes-unbranched",
+        "roundIndex": 2,
+        "states": [
+          {
+            "selectedPartId": "component-5",
+            "selectedValue": "μεθ",
+            "order": [],
+            "choiceOrder": [
+              0,
+              1,
+              2
+            ],
+            "attempts": 1,
+            "selectionMisses": 0,
+            "solved": true,
+            "submitted": true
+          },
+          {
+            "selectedPartId": "component-5",
+            "selectedValue": "βουτ",
+            "order": [],
+            "choiceOrder": [
+              0,
+              1,
+              2
+            ],
+            "attempts": 1,
+            "selectionMisses": 1,
+            "solved": true,
+            "submitted": true
+          },
+          {
+            "selectedPartId": "component-6",
+            "selectedValue": "άν",
+            "order": [],
+            "choiceOrder": [
+              0,
+              1,
+              2
+            ],
+            "attempts": 1,
+            "selectionMisses": 1,
+            "solved": true,
+            "submitted": true
+          }
+        ]
+      },
+      "v2DirectSeed": "2589586955",
+      "oldRecordSHA256": "32e2f1d5ceb97267e8647b0026022741b5e4ea31e8c2b4d12d53ea16712a9795"
+    }
+  },
+  "harnessFailuresRetained": [
+    {
+      "results": "docs/checks/alkane-pool-implementation-20261116/catalog-games/browser/run-052532/results.json",
+      "failure": "Traceback (most recent call last):\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/alkane-pool-implementation-20261116/catalog-games/browser/replay-new-six.py\", line 172, in <module>\n    server=http.server.ThreadingHTTPServer(('127.0.0.1',0),Handler);threading.Thread(target=server.serve_forever,daemon=True).start()\n  File \"/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/socketserver.py\", line 452, in __init__\n    self.server_bind()\n  File \"/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/server.py\", line 138, in server_bind\n    socketserver.TCPServer.server_bind(self)\n  File \"/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/socketserver.py\", line 466, in server_bind\n    self.socket.bind(self.server_address)\nPermissionError: [Errno 1] Operation not permitted\n",
+      "correctUIAnswersRetained": 0,
+      "runtimeSourceUnchanged": true,
+      "cleanup": {
+        "ownedBrowserExited": true,
+        "ownedServerClosed": true,
+        "ownedProfileRemoved": null
+      },
+      "selectDiagnostics": null,
+      "processCreated": false
+    },
+    {
+      "results": "docs/checks/alkane-pool-implementation-20261116/catalog-games/browser/run-052545/results.json",
+      "failure": "Traceback (most recent call last):\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/alkane-pool-implementation-20261116/catalog-games/browser/replay-new-six.py\", line 196, in <module>\n    for record in NEW:puzzle_round(record)\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/alkane-pool-implementation-20261116/catalog-games/browser/replay-new-six.py\", line 127, in puzzle_round\n    select_puzzle(index)\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/alkane-pool-implementation-20261116/catalog-games/browser/replay-new-six.py\", line 121, in select_puzzle\n    click('#round-select');key('\\ue010') # End reaches a deterministic last option.\nTypeError: 'str' object is not callable\n",
+      "correctUIAnswersRetained": 6,
+      "runtimeSourceUnchanged": true,
+      "cleanup": {
+        "ownedBrowserExited": true,
+        "ownedServerClosed": true,
+        "ownedProfileRemoved": true
+      },
+      "selectDiagnostics": null,
+      "processCreated": true
+    },
+    {
+      "results": "docs/checks/alkane-pool-implementation-20261116/catalog-games/browser/run-052705/results.json",
+      "failure": "Traceback (most recent call last):\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/alkane-pool-implementation-20261116/catalog-games/browser/replay-new-six.py\", line 199, in <module>\n    for record in NEW:puzzle_round(record)\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/alkane-pool-implementation-20261116/catalog-games/browser/replay-new-six.py\", line 127, in puzzle_round\n    select_puzzle(index)\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/alkane-pool-implementation-20261116/catalog-games/browser/replay-new-six.py\", line 124, in select_puzzle\n    wait('document.getElementById(\"round-select\").selectedIndex==='+str(index))\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/alkane-pool-implementation-20261116/catalog-games/browser/replay-new-six.py\", line 53, in wait\n    raise AssertionError('Timed out: '+expr)\nAssertionError: Timed out: document.getElementById(\"round-select\").selectedIndex===8\n",
+      "correctUIAnswersRetained": 0,
+      "runtimeSourceUnchanged": true,
+      "cleanup": {
+        "ownedBrowserExited": true,
+        "ownedServerClosed": true,
+        "ownedProfileRemoved": true
+      },
+      "selectDiagnostics": null,
+      "processCreated": true
+    },
+    {
+      "results": "docs/checks/alkane-pool-implementation-20261116/catalog-games/browser/run-052859/results.json",
+      "failure": "Traceback (most recent call last):\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/alkane-pool-implementation-20261116/catalog-games/browser/replay-new-six.py\", line 202, in <module>\n    for record in NEW:puzzle_round(record)\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/alkane-pool-implementation-20261116/catalog-games/browser/replay-new-six.py\", line 130, in puzzle_round\n    select_puzzle(index)\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/alkane-pool-implementation-20261116/catalog-games/browser/replay-new-six.py\", line 126, in select_puzzle\n    wait('document.getElementById(\"round-select\").selectedIndex==='+str(index),10)\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/alkane-pool-implementation-20261116/catalog-games/browser/replay-new-six.py\", line 53, in wait\n    raise AssertionError('Timed out: '+expr)\nAssertionError: Timed out: document.getElementById(\"round-select\").selectedIndex===8\n",
+      "correctUIAnswersRetained": 0,
+      "runtimeSourceUnchanged": true,
+      "cleanup": {
+        "ownedBrowserExited": true,
+        "ownedServerClosed": true,
+        "ownedProfileRemoved": true
+      },
+      "selectDiagnostics": [
+        {
+          "index": 0,
+          "target": "μεθάνιο",
+          "active": "round-select",
+          "events": [
+            {
+              "type": "keydown",
+              "key": "Escape",
+              "trusted": true,
+              "value": "0"
+            },
+            {
+              "type": "keydown",
+              "key": "Home",
+              "trusted": true,
+              "value": "0"
+            },
+            {
+              "type": "keydown",
+              "key": "ArrowDown",
+              "trusted": true,
+              "value": "0"
+            },
+            {
+              "type": "keydown",
+              "key": "ArrowDown",
+              "trusted": true,
+              "value": "0"
+            },
+            {
+              "type": "keydown",
+              "key": "ArrowDown",
+              "trusted": true,
+              "value": "0"
+            },
+            {
+              "type": "keydown",
+              "key": "ArrowDown",
+              "trusted": true,
+              "value": "0"
+            },
+            {
+              "type": "keydown",
+              "key": "ArrowDown",
+              "trusted": true,
+              "value": "0"
+            },
+            {
+              "type": "keydown",
+              "key": "ArrowDown",
+              "trusted": true,
+              "value": "0"
+            },
+            {
+              "type": "keydown",
+              "key": "ArrowDown",
+              "trusted": true,
+              "value": "0"
+            },
+            {
+              "type": "keydown",
+              "key": "ArrowDown",
+              "trusted": true,
+              "value": "0"
+            }
+          ]
+        }
+      ],
+      "processCreated": true
+    },
+    {
+      "results": "docs/checks/alkane-pool-implementation-20261116/catalog-games/browser/run-052936/results.json",
+      "failure": "Traceback (most recent call last):\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/alkane-pool-implementation-20261116/catalog-games/browser/replay-new-six.py\", line 204, in <module>\n    for record in NEW:puzzle_round(record)\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/alkane-pool-implementation-20261116/catalog-games/browser/replay-new-six.py\", line 132, in puzzle_round\n    select_puzzle(index)\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/alkane-pool-implementation-20261116/catalog-games/browser/replay-new-six.py\", line 128, in select_puzzle\n    wait('document.getElementById(\"round-select\").selectedIndex==='+str(position),5)\n  File \"/Users/yannisskendros/Desktop/Διπλωματική - Ονοματολογία/organic-nomenclature-3/docs/checks/alkane-pool-implementation-20261116/catalog-games/browser/replay-new-six.py\", line 53, in wait\n    raise AssertionError('Timed out: '+expr)\nAssertionError: Timed out: document.getElementById(\"round-select\").selectedIndex===1\n",
+      "correctUIAnswersRetained": 0,
+      "runtimeSourceUnchanged": true,
+      "cleanup": {
+        "ownedBrowserExited": true,
+        "ownedServerClosed": true,
+        "ownedProfileRemoved": true
+      },
+      "selectDiagnostics": [
+        {
+          "index": 0,
+          "target": "μεθάνιο",
+          "active": "round-select",
+          "hasFocus": true,
+          "events": [
+            {
+              "type": "keydown",
+              "key": "ArrowDown",
+              "trusted": true,
+              "prevented": false,
+              "value": "0"
+            }
+          ]
+        }
+      ],
+      "processCreated": true
+    }
+  ],
+  "limitations": [
+    "Initial sandbox loopback-bind denial occurred before Firefox/server creation; reruns used approved escalation.",
+    "First actual run completed all six Builder answers then failed on a harness key() name collision with the BiDi helper; corrected only the harness, retained the passed Builder segment.",
+    "Headless Firefox select popup and closed-control trusted key events did not change its selection in diagnostic runs. Native select interaction is unqualified; root-approved production Next control reached actual Puzzle fixtures.",
+    "Isolated Firefox used physical headless1800×1400 with CSS1500×1000 and bounded390×844 resize; no physical mobile/personal Firefox/conference/offline qualification.",
+    "Remote JSmol j2s/fonts/services remain external dependencies.",
+    "Browser execution is Developer evidence; separate-context Reviewer independently assesses product sources and supplied evidence."
+  ],
+  "runtimeFilesEditedByBrowserWork": false,
+  "coreFilesChangedByThisWorker": false,
+  "browserSlotReturned": true,
+  "personalFirefoxOrUser8013ServerTouched": false
+}

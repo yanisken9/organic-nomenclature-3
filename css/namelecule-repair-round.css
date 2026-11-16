@@ -193,3 +193,94 @@
 @media (prefers-reduced-motion: reduce) {
   .nl-repair-round *, .nl-repair-round *::before, .nl-repair-round *::after { scroll-behavior: auto !important; animation: none !important; transition: none !important; }
 }
+
+/* Explicit viewport contract, used only by new opt-in hosts. */
+.nl-repair-round.nl-repair-viewport { position: relative; height: var(--nl-vp-height); min-height: 0; overflow: hidden; line-height: 1.4; }
+.nl-repair-viewport .round-screen { display: grid; grid-template-rows: auto auto auto minmax(0, 1fr) auto; gap: 7px; height: 100%; min-height: 0; }
+.nl-repair-viewport .round-topbar, .nl-repair-viewport .round-heading, .nl-repair-viewport .session-row { margin: 0; }
+.nl-repair-viewport .round-heading h1 { font-size: 19px; margin: 0 0 3px; line-height: 1.2; }
+.nl-repair-viewport .round-heading .round-objective.is-emphasized, .nl-repair-viewport .round-heading p { font-size: 15px; line-height: 1.35; text-align: left; margin: 0; }
+.nl-repair-viewport .round-set-name { display: inline; font-size: 12px; }
+.nl-repair-viewport .workshop-logo-small { width: 28px; height: 28px; }
+.nl-repair-viewport .round-topbar .eyebrow { font-size: 10px; }
+.nl-repair-viewport .round-progress-counter { font-size: 14px; }
+.nl-repair-viewport .repair-stage-tabs { display: flex; gap: 6px; min-width: 0; align-items: center; }
+.nl-repair-viewport .repair-stage-tabs button { min-height: 34px; padding: 5px 10px; font-size: 12px; }
+.nl-repair-viewport .repair-view-button { display: none; }
+.nl-repair-viewport .bench { grid-row: 4; grid-template-columns: minmax(0, .95fr) minmax(0, 1.15fr); align-items: stretch; gap: 12px; min-height: 0; }
+.nl-repair-viewport .visual-side, .nl-repair-viewport .repair-side { display: flex; min-height: 0; }
+.nl-repair-viewport .diagram-card { width: 100%; display: grid; grid-template-rows: auto minmax(0, 1fr) auto; border-radius: 15px; min-height: 0; }
+.nl-repair-viewport .card-heading { padding: 6px 10px; gap: 4px; flex-wrap: nowrap; }
+.nl-repair-viewport .card-heading h2 { font-size: 12px; }
+.nl-repair-viewport .diagram-tools > span { display: none; }
+.nl-repair-viewport .diagram-tools .diagram-zoom-button { width: 36px; height: 36px; min-height: 36px; flex-basis: 36px; padding: 6px; }
+.nl-repair-viewport .diagram-figure { display: grid; grid-template-rows: minmax(0,1fr) auto; min-height: 0; padding: 8px; }
+.nl-repair-viewport .diagram-stage { height: 100%; min-height: 0; overflow: hidden; }
+.nl-repair-viewport .diagram-image { width: 100%; height: 100%; min-height: 0; max-height: 100%; object-fit: contain; }
+.nl-repair-viewport .diagram-figure figcaption { font-size: 11px; padding-top: 4px; }
+.nl-repair-viewport .image-status { padding: 0 8px; font-size: 12px; }
+.nl-repair-viewport .image-status:empty { display: none; }
+.nl-repair-viewport .repair-card { width: 100%; min-height: 0; display: flex; flex-direction: column; gap: 6px; padding: 10px; border-radius: 15px; }
+.nl-repair-viewport .repair-card > .section-label { font-size: 10px; margin: 0; }
+.nl-repair-viewport .repair-card > .nl-vp-pager-x { flex: 0 0 auto; height: 40px; }
+.nl-repair-viewport .broken-name { white-space: nowrap; overflow-wrap: normal; font-size: 16px; line-height: 1.5; padding: 5px 8px; margin: 0; }
+.nl-repair-viewport .repair-part-page, .nl-repair-viewport .repair-choice-page { display: flex; flex: 1 1 0; flex-direction: column; gap: 5px; min-height: 0; }
+.nl-repair-viewport .repair-part-page > .nl-vp-pager { flex: 1 1 0; min-height: 0; }
+.nl-repair-viewport .step-heading { font-size: 13px; margin: 0; }
+.nl-repair-viewport .name-parts, .nl-repair-viewport .choices { align-content: flex-start; margin: 0; padding: 3px; gap: 6px; }
+.nl-repair-viewport .part-button { min-height: 40px; padding: 7px 10px; font-size: 15px; }
+.nl-repair-viewport .choice-button { min-height: 40px; padding: 7px 10px; font-size: 14px; }
+.nl-repair-viewport .choice-fieldset { flex: 1 1 0; display: flex; flex-direction: column; min-height: 0; margin: 0; }
+.nl-repair-viewport .choice-fieldset > .nl-vp-pager { min-height: 0; flex: 1 1 0; }
+.nl-repair-viewport .choice-fieldset legend { font-size: 13px; margin: 0 0 5px; }
+.nl-repair-viewport .repair-choice-page > .quiet { align-self: flex-start; min-height: 29px; padding: 3px 7px; font-size: 12px; }
+.nl-repair-viewport .order-controls { margin: 0; flex: 0 0 auto; }
+.nl-repair-viewport .order-controls .secondary { min-height: 36px; padding: 5px 10px; }
+.nl-repair-viewport[data-repair-step="parts"] .repair-choice-page, .nl-repair-viewport[data-repair-step="choices"] .repair-part-page { display: none; }
+.nl-repair-viewport .candidate { flex: 0 0 auto; padding: 4px 8px; margin: 0; }
+.nl-repair-viewport .candidate-label { font-size: 10px; margin: 0; }
+.nl-repair-viewport .candidate .nl-vp-pager { height: 29px; }
+.nl-repair-viewport .candidate-name { font-size: 15px; white-space: nowrap; overflow-wrap: normal; line-height: 1.5; }
+.nl-repair-viewport .repair-actions { flex: 0 0 auto; gap: 5px; }
+.nl-repair-viewport .repair-actions .primary { min-height: 40px; padding: 7px 18px; min-width: 120px; }
+.nl-repair-viewport .repair-actions .quiet { min-height: 34px; font-size: 11px; padding: 4px 8px; }
+.nl-repair-viewport .session-row { grid-row: 5; font-size: 11px; min-height: 24px; }
+.nl-repair-viewport .session-row .quiet { min-height: 28px; padding: 3px 8px; }
+.nl-repair-viewport .repair-feedback-stage, .nl-repair-viewport .repair-instructions-stage { display: none; grid-row: 4; min-height: 0; border: 1px solid var(--line); border-radius: 15px; background: white; padding: 12px; gap: 8px; }
+.nl-repair-viewport .repair-stage-heading { display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: center; justify-content: space-between; }
+.nl-repair-viewport .repair-stage-heading h2 { margin: 0; font-size: 17px; }
+.nl-repair-viewport .repair-stage-heading button { min-height: 36px; padding: 5px 10px; font-size: 12px; }
+.nl-repair-viewport .repair-feedback-stage > .nl-vp-pager, .nl-repair-viewport .repair-instructions-stage > .nl-vp-pager { min-height: 0; }
+.nl-repair-viewport .feedback { margin: 0; padding: 12px; font-size: 15px; }
+.nl-repair-viewport .feedback p { margin: 0; }
+.nl-repair-viewport .success-title { font-size: 17px; }
+.nl-repair-viewport .success-name { white-space: nowrap; overflow-wrap: normal; font-size: 18px; overflow-x: auto; }
+.nl-repair-viewport .round-next { gap: 7px; margin: 0; flex-wrap: wrap; }
+.nl-repair-viewport .round-next button { width: auto; min-height: 39px; padding: 7px 12px; font-size: 13px; }
+.nl-repair-viewport .repair-instructions-content { padding: 3px; font-size: 15px; }
+.nl-repair-viewport .repair-instructions-content .compact-steps { display: grid; margin-bottom: 12px; font-size: 14px; }
+.nl-repair-viewport .repair-instructions-content p, .nl-repair-viewport .repair-instructions-content .part-selection-status, .nl-repair-viewport .repair-instructions-content .step-description, .nl-repair-viewport .repair-instructions-content .check-helper { font-size: 15px; margin: 0 0 12px; }
+.nl-repair-viewport[data-repair-stage="feedback"] .bench, .nl-repair-viewport[data-repair-stage="instructions"] .bench { display: none; }
+.nl-repair-viewport[data-repair-stage="feedback"] .repair-feedback-stage { display: grid; grid-template-rows: auto minmax(0,1fr) auto; }
+.nl-repair-viewport[data-repair-stage="instructions"] .repair-instructions-stage { display: grid; grid-template-rows: auto minmax(0,1fr); }
+.nl-repair-viewport.nl-repair-sequential .repair-view-button { display: inline-flex; }
+.nl-repair-viewport.nl-repair-sequential .bench { grid-template-columns: minmax(0, 1fr); }
+.nl-repair-viewport.nl-repair-sequential[data-repair-view="answer"] .visual-side, .nl-repair-viewport.nl-repair-sequential[data-repair-view="structure"] .repair-side { display: none; }
+.nl-repair-viewport .repair-stage-tabs [aria-pressed="true"] { background: var(--ink); color: white; }
+.nl-repair-viewport .repair-zoom-overlay { position: absolute; z-index: 20; inset: 0; width: 100%; height: 100%; max-height: 100%; margin: 0; display: grid; grid-template-rows: auto auto minmax(0, 1fr); gap: 8px; padding: 12px; }
+.nl-repair-viewport .repair-zoom-overlay p { margin: 0; }
+.nl-repair-viewport .repair-zoom-overlay .zoom-viewport { min-height: 0; max-height: none; padding: 10px; }
+.nl-repair-viewport .repair-zoom-overlay .zoom-image { width: 100%; height: 100%; max-width: 100%; object-fit: contain; }
+@media (max-width: 550px) {
+  .nl-repair-viewport .round-heading h1 { font-size: 16px; }
+  .nl-repair-viewport .round-heading .round-objective.is-emphasized { font-size: 14px; }
+  .nl-repair-viewport .round-game-label { font-size: 9px; }
+  .nl-repair-viewport .repair-stage-tabs { gap: 4px; }
+  .nl-repair-viewport .repair-stage-tabs button { padding: 5px 8px; }
+}
+.nl-repair-viewport .repair-card > .nl-vp-pager-x.is-overflow { height: 74px; }
+.nl-repair-viewport .candidate .nl-vp-pager-x.is-overflow { height: 67px; }
+.nl-repair-viewport .feedback .nl-vp-pager-x { height: 35px; }
+.nl-repair-viewport .feedback .nl-vp-pager-x.is-overflow { height: 73px; }
+.nl-repair-viewport .repair-zoom-controls { display: flex; gap: 6px; margin-left: auto; }
+.nl-repair-viewport .repair-zoom-controls button { min-height: 36px; min-width: 40px; padding: 5px 10px; }

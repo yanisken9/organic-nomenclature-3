@@ -4234,15 +4234,24 @@ function fCopyMolSmiles(btn) {
 function fInitData() {
   for (let prop in nameExamples) {
     const _m = (window.MOL2D && window.MOL2D[prop]) || {};
-    const my2D_Condensed = _m.condensed !== undefined ? _m.condensed : null;
-    const my2D_Expanded = _m.expanded !== undefined ? _m.expanded : null;
-    const my2D_Skeletal = _m.skeletal !== undefined ? _m.skeletal : null;
+    const _customs = window.nameExamplesCustom;
+    const _custom = _customs && Object.prototype.hasOwnProperty.call(_customs, prop) &&
+      nameExamples[prop] === _customs[prop] ? _customs[prop] : null;
+    // JSME startup and document-ready both hydrate the catalog. Read every
+    // registered custom source value before writing its shared record again.
+    const my2D_Condensed = _m.condensed !== undefined ? _m.condensed :
+      _custom && _custom.structure2D_Condensed !== undefined ? _custom.structure2D_Condensed : null;
+    const my2D_Expanded = _m.expanded !== undefined ? _m.expanded :
+      _custom && _custom.structure2D_Expanded !== undefined ? _custom.structure2D_Expanded : null;
+    const my2D_Skeletal = _m.skeletal !== undefined ? _m.skeletal :
+      _custom && _custom.structure2D_Skeletal !== undefined ? _custom.structure2D_Skeletal : null;
+    const my3D = _custom && Object.prototype.hasOwnProperty.call(_custom, "file3D") ?
+      _custom.file3D : "mols/nomeclature-moc2/" + prop + "_3D.sdf";
 
     nameExamples[prop].structure2D_Condensed = my2D_Condensed;
     nameExamples[prop].structure2D_Expanded = my2D_Expanded;
     nameExamples[prop].structure2D_Skeletal = my2D_Skeletal;
 
-    const my3D = "mols/nomeclature-moc2/" + prop + "_3D.sdf";
     nameExamples[prop].file3D = my3D;
   }
 }
@@ -6896,6 +6905,17 @@ function fHideEsterSkeletalCarbonHydrogens() {
 // Cache geometry only; the pixel size is recomputed for each visible viewport.
 let uniform2DLibraryFrame = null;
 function fPrepareFixedCCAlkanePrototype() {
+  // Registered, verified additions can opt into the same display calibration
+  // through data. Existing library paths keep their original behavior.
+  const registeredAlkaneScale = (() => {
+    try {
+      const entry = typeof nameExamples !== "undefined" && nameExamples[selectedMol];
+      return mode2D === "expanded" && entry?.displayPolicy === "namelecule-alkane-20261030" &&
+        allAtomsTypeList.length > 0 && allAtomsTypeList.every(type => type === "C" || type === "H") &&
+        bondList.every(bond => bond[2] === 1) &&
+        typeof fGetMoleculeClassification === "function" && fGetMoleculeClassification().seriesKey === "alkanes";
+    } catch (_) { return false; }
+  })();
   const esterScale = ["ethanoic_methyl_ester", "propanoic_methyl_ester", "methyl_methanoate", "isopropyl_ethanoate", "sec_butyl_ethanoate", "butyl_propanoate", "tert_butyl_methanoate", "isobutyl_2_methylpropanoate", "isopropyl_2_3_dimethylbutanoate"].includes(selectedMol);
   const carbonylScale = ["ethanal", "butanal", "propanal", "propynal", "pentanal", "methanal", "methyl_2_propanal", "dimethyl_2_3_butanal", "ethyl_2_methyl_3_pentanal", "ethyl_4_isopropyl_3_methyl_2_hexanal", "propenal", "methyl_2_propenal", "propanedial", "methyl_3_penten_2_dial", "ethyl_4_penten_4_yn_2_al", "isopropyl_2_buten_2_dial", "ethyl_2_methyl_3_hexen_2_yn_4_dial", "penten_1_one_3", "pentanone_2", "pentyn_4_one_2", "butanone", "propanone", "pentanone_3", "dimethyl_2_4_pentanone_3", "trimethyl_3_4_4_pentanone_2", "diethyl_4_5_dimethyl_2_6_heptanone_3", "penten_1_yn_4_one_3", "dimethyl_4_5_hexen_5_yn_1_one_3", "methyl_6_hepten_3_dione_2_5", "ethyl_3_methyl_4_octen_3_yn_5_dione_2_7", "isopropyl_4_dimethyl_3_6_octen_3_yn_7_dione_2_5", "methanoicacid", "propionicacid", "butanoic_acid", "propenoic_acid", "propanedioic_acid", "hydroxypropanoic_acid_2", "Oxopropanoic_acid", "aminobutanoic_acid_3", "pentanoic_acid", "oxobutanoic_acid", "dihydroxybutanedioic_acid_2_3", "methyl_2_propanoic_acid", "dimethyl_2_2_propanoic_acid", "ethyl_2_methyl_3_pentanoic_acid", "ethyl_3_isopropyl_2_dimethyl_4_5_hexanoic_acid", "methyl_2_propenoic_acid", "ethyl_2_methyl_3_penten_2_yn_4_oic_acid", "ethyl_3_isopropyl_2_dimethyl_4_5_hexadien_2_4_dioic_acid", "ethyl_2_isopropyl_3_dimethyl_6_6_hepten_2_yn_4_dioic_acid", "penten_2_yn_4_oic_acid", "hexen_2_yn_4_dioic_acid"].includes(selectedMol);
   const etherScale = ["dimethylether", "ethyl_methyl_ether", "diethyl_ether",
@@ -6903,7 +6923,7 @@ function fPrepareFixedCCAlkanePrototype() {
     "ethyl_isopropyl_ether", "butyl_methyl_ether", "ethyl_sec_butyl_ether",
     "isobutyl_isopropyl_ether", "tert_butyl_isopropyl_ether"].includes(selectedMol);
   if (mode2D !== "expanded" ||
-      (!etherScale && !carbonylScale && !esterScale && !["methane", "ethane", "propane", "butane", "pentane",
+      (!registeredAlkaneScale && !etherScale && !carbonylScale && !esterScale && !["methane", "ethane", "propane", "butane", "pentane",
         "methyl_2_pentane", "dimethyl_2_3_butane", "ethyl_3_dimethyl_2_5_hexane",
         "ethene", "propene", "butene_1", "butene_2", "methyl_2_propene",
         "methyl_3_butene_1", "ethyl_3_dimethyl_2_5_hexene_2",
