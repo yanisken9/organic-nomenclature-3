@@ -1,0 +1,1555 @@
+{
+  "role": "Developer release acceptance; not independent browser execution",
+  "phase": "report-final",
+  "startedUTC": "2026-11-16T09:57:52.973686+00:00",
+  "manifest": "docs/checks/save-publish-20261116-113102/final-report-target.json",
+  "manifestSHA256": "3b326da10d15ee953fa929545d420a8890083ee6e7d62bf3f0799d45ceb447b4",
+  "sourceBefore": {
+    "docs/checks/save-publish-20261116-113102/browser/public-results.json": "068d2ad33a64f85bed90a9193790ce3ec1ca93c69ab13008bb50dc64b5f91970",
+    "docs/checks/save-publish-20261116-113102/public-runtime-http.json": "5661f727c2c1e1bb0ad3f22a4b57f839a321a167a95ca9906c19a130be0e5ccb",
+    "docs/checks/save-publish-20261116-113102/release-review.json": "e62857cf9bb2e5607f234685f597cab58abcb73a557403a3c9c0deac46d8f1bb",
+    "docs/checks/save-publish-20261116-113102/runtime-pages-status.json": "c1b570b00ed74299d2f183a40f06b1d8a5cf16a31d8871e5ad5c7a379b761191",
+    "docs/professor-20261116/links.json": "5b274062e6cc1c13ef585459821acc5a670778ff1ec9fb6e1915e46dca4b0fa5",
+    "docs/professor-20261116/links.txt": "7ce70691c517a56b7b8930474d75cc330b6a6cd017b0a1eb6d2cf91b39b804be",
+    "docs/professor-20261116/plainlinks.txt": "7ce70691c517a56b7b8930474d75cc330b6a6cd017b0a1eb6d2cf91b39b804be",
+    "docs/professor-20261116/update.html": "d95114ed6fb5def83fdc7a5cc4b701227fbee7708b0f1ef8b9be423b2383d091",
+    "docs/professor-20261116/verified-facts.json": "f860fd2bda6c5dc6f634d0ebbcfe679c7d3adf800e2e1e445153686c4c1ad1cd"
+  },
+  "checks": [
+    {
+      "label": "all report repository link targets load under actual delivery prefix",
+      "passed": true,
+      "detail": [
+        {
+          "text": "δημοσιευμένη αναφορά της 12/11",
+          "relative": "docs/professor-20261112/update.html",
+          "status": 200,
+          "bytes": 19034,
+          "attempts": [
+            {
+              "attempt": 1,
+              "status": 200,
+              "bytes": 19034
+            }
+          ]
+        },
+        {
+          "text": "Υποδοχή Namelecule",
+          "relative": "design/welcome-proposal.html",
+          "status": 200,
+          "bytes": 16608,
+          "attempts": [
+            {
+              "attempt": 1,
+              "status": 200,
+              "bytes": 16608
+            }
+          ]
+        },
+        {
+          "text": "Μάθημα αλκανίων",
+          "relative": "mulermoc-nom-57.html",
+          "status": 200,
+          "bytes": 22006,
+          "attempts": [
+            {
+              "attempt": 1,
+              "status": 200,
+              "bytes": 22006
+            }
+          ]
+        },
+        {
+          "text": "Μοριακός ντεντέκτιβ",
+          "relative": "games/molecular-detective.html",
+          "status": 200,
+          "bytes": 5672,
+          "attempts": [
+            {
+              "attempt": 1,
+              "status": 200,
+              "bytes": 5672
+            }
+          ]
+        },
+        {
+          "text": "Μοριακό παζλ",
+          "relative": "games/molecular-puzzle.html",
+          "status": 200,
+          "bytes": 8634,
+          "attempts": [
+            {
+              "attempt": 1,
+              "status": 200,
+              "bytes": 8634
+            }
+          ]
+        },
+        {
+          "text": "Χτίσε το όνομα",
+          "relative": "games/name-builder.html",
+          "status": 200,
+          "bytes": 8195,
+          "attempts": [
+            {
+              "attempt": 1,
+              "status": 200,
+              "bytes": 8195
+            }
+          ]
+        },
+        {
+          "text": "Συνεργείο ονομάτων",
+          "relative": "games/name-repair.html",
+          "status": 200,
+          "bytes": 2807,
+          "attempts": [
+            {
+              "attempt": 1,
+              "status": 200,
+              "bytes": 2807
+            }
+          ]
+        },
+        {
+          "text": "Αναφορά v56",
+          "relative": "docs/V56-SYNC-20261115.md",
+          "status": 200,
+          "bytes": 9178,
+          "attempts": [
+            {
+              "attempt": 1,
+              "status": 200,
+              "bytes": 9178
+            }
+          ]
+        },
+        {
+          "text": "Αναφορά v57",
+          "relative": "docs/V57-SYNC-20261115.md",
+          "status": 200,
+          "bytes": 10012,
+          "attempts": [
+            {
+              "attempt": 1,
+              "status": 200,
+              "bytes": 10012
+            }
+          ]
+        },
+        {
+          "text": "Χημικός έλεγχος και εμπλουτισμός",
+          "relative": "docs/ALKANE-POOL-RESULTS-20261116.md",
+          "status": 200,
+          "bytes": 8091,
+          "attempts": [
+            {
+              "attempt": 1,
+              "status": 200,
+              "bytes": 8091
+            }
+          ]
+        },
+        {
+          "text": "Ενσωμάτωση και έλεγχοι",
+          "relative": "docs/FOUR-GAME-INTEGRATION-RESULTS-20261116.md",
+          "status": 200,
+          "bytes": 9936,
+          "attempts": [
+            {
+              "attempt": 1,
+              "status": 200,
+              "bytes": 9936
+            }
+          ]
+        },
+        {
+          "text": "Αναφορά επιπέδων και μετάπτωσης",
+          "relative": "docs/GAME-LEVELS-ALKANES-RESULTS-20261116.md",
+          "status": 200,
+          "bytes": 13314,
+          "attempts": [
+            {
+              "attempt": 1,
+              "status": 200,
+              "bytes": 13314
+            }
+          ]
+        },
+        {
+          "text": "Αναφορά διάταξης",
+          "relative": "docs/GAME-VIEWPORT-RESULTS-20261116.md",
+          "status": 200,
+          "bytes": 16802,
+          "attempts": [
+            {
+              "attempt": 1,
+              "status": 200,
+              "bytes": 16802
+            }
+          ]
+        },
+        {
+          "text": "Συγκεντρωτικά τεκμήρια browser",
+          "relative": "docs/checks/game-viewport-implementation-20261116/lesson-browser/acceptance-summary.json",
+          "status": 200,
+          "bytes": 12182,
+          "attempts": [
+            {
+              "attempt": 1,
+              "status": 200,
+              "bytes": 12182
+            }
+          ]
+        },
+        {
+          "text": "Τελικό ανεξάρτητο review διάταξης",
+          "relative": "docs/checks/game-viewport-implementation-20261116/review-final.json",
+          "status": 200,
+          "bytes": 2775,
+          "attempts": [
+            {
+              "attempt": 1,
+              "status": 200,
+              "bytes": 2775
+            }
+          ]
+        },
+        {
+          "text": "αρχείο τεκμηριωμένων στοιχείων",
+          "relative": "docs/professor-20261116/verified-facts.json",
+          "status": 200,
+          "bytes": 15310,
+          "attempts": [
+            {
+              "attempt": 1,
+              "status": 200,
+              "bytes": 15310
+            }
+          ]
+        },
+        {
+          "text": "Τρέχων έλεγχος upstream",
+          "relative": "docs/checks/save-publish-20261116-113102/upstream-audit.json",
+          "status": 200,
+          "bytes": 3046,
+          "attempts": [
+            {
+              "attempt": 1,
+              "status": 200,
+              "bytes": 3046
+            }
+          ]
+        },
+        {
+          "text": "Σύνδεσμοι για αντιγραφή",
+          "relative": "docs/professor-20261116/plainlinks.txt",
+          "status": 200,
+          "bytes": 1070,
+          "attempts": [
+            {
+              "attempt": 1,
+              "status": 200,
+              "bytes": 1070
+            }
+          ]
+        },
+        {
+          "text": "Σύνδεσμοι JSON",
+          "relative": "docs/professor-20261116/links.json",
+          "status": 200,
+          "bytes": 2369,
+          "attempts": [
+            {
+              "attempt": 1,
+              "status": 200,
+              "bytes": 2369
+            }
+          ]
+        },
+        {
+          "text": "Τεκμηριωμένα στοιχεία και SHA-256",
+          "relative": "docs/professor-20261116/verified-facts.json",
+          "status": 200,
+          "bytes": 15310,
+          "attempts": [
+            {
+              "attempt": 1,
+              "status": 200,
+              "bytes": 15310
+            }
+          ]
+        },
+        {
+          "text": "Παραδοτέα διάταξης και ακριβή αποτυπώματα",
+          "relative": "docs/checks/game-viewport-implementation-20261116/verification-target.json",
+          "status": 200,
+          "bytes": 8647,
+          "attempts": [
+            {
+              "attempt": 1,
+              "status": 200,
+              "bytes": 8647
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "report first/last section and width unclipped screen",
+      "passed": true,
+      "detail": {
+        "media": "screen",
+        "width": 1440,
+        "clientWidth": 1440,
+        "scrollWidth": 1440,
+        "scrollHeight": 3455,
+        "first": {
+          "x": 237,
+          "y": 108.46875,
+          "width": 966,
+          "height": 36.484375,
+          "top": 108.46875,
+          "right": 1203,
+          "bottom": 144.953125,
+          "left": 237
+        },
+        "last": {
+          "x": 237,
+          "y": 3356.015625,
+          "width": 966,
+          "height": 38.921875,
+          "top": 3356.015625,
+          "right": 1203,
+          "bottom": 3394.9375,
+          "left": 237
+        },
+        "headings": [
+          {
+            "text": "1. Νεότερη εφαρμογή και χημική βάση",
+            "rect": {
+              "x": 237,
+              "y": 716.765625,
+              "width": 966,
+              "height": 26.40625,
+              "top": 716.765625,
+              "right": 1203,
+              "bottom": 743.171875,
+              "left": 237
+            }
+          },
+          {
+            "text": "2. Τέσσερις δραστηριότητες σύνδεσης ονόματος και δομής",
+            "rect": {
+              "x": 237,
+              "y": 1039.859375,
+              "width": 966,
+              "height": 26.40625,
+              "top": 1039.859375,
+              "right": 1203,
+              "bottom": 1066.265625,
+              "left": 237
+            }
+          },
+          {
+            "text": "3. Κοινά επίπεδα και σαφής κανόνας συνέχειας",
+            "rect": {
+              "x": 237,
+              "y": 1482.421875,
+              "width": 966,
+              "height": 26.40625,
+              "top": 1482.421875,
+              "right": 1203,
+              "bottom": 1508.828125,
+              "left": 237
+            }
+          },
+          {
+            "text": "4. Χώρος παιχνιδιού και έλεγχος πραγματικών ροών",
+            "rect": {
+              "x": 237,
+              "y": 2063.671875,
+              "width": 966,
+              "height": 26.40625,
+              "top": 2063.671875,
+              "right": 1203,
+              "bottom": 2090.078125,
+              "left": 237
+            }
+          },
+          {
+            "text": "5. Ανεξάρτητος έλεγχος, core και upstream",
+            "rect": {
+              "x": 237,
+              "y": 2413.953125,
+              "width": 966,
+              "height": 26.40625,
+              "top": 2413.953125,
+              "right": 1203,
+              "bottom": 2440.359375,
+              "left": 237
+            }
+          },
+          {
+            "text": "6. Όρια και επόμενο βήμα",
+            "rect": {
+              "x": 237,
+              "y": 2912.171875,
+              "width": 966,
+              "height": 26.40625,
+              "top": 2912.171875,
+              "right": 1203,
+              "bottom": 2938.578125,
+              "left": 237
+            }
+          }
+        ],
+        "capture": {
+          "width": 1440,
+          "height": 3455
+        }
+      }
+    },
+    {
+      "label": "report first/last section and width unclipped print",
+      "passed": true,
+      "detail": {
+        "media": "print",
+        "width": 794,
+        "clientWidth": 794,
+        "scrollWidth": 794,
+        "scrollHeight": 2473,
+        "first": {
+          "x": 0,
+          "y": 36.59375,
+          "width": 794,
+          "height": 30.390625,
+          "top": 36.59375,
+          "right": 794,
+          "bottom": 66.984375,
+          "left": 0
+        },
+        "last": {
+          "x": 0,
+          "y": 2441.765625,
+          "width": 794,
+          "height": 31.59375,
+          "top": 2441.765625,
+          "right": 794,
+          "bottom": 2473.359375,
+          "left": 0
+        },
+        "headings": [
+          {
+            "text": "1. Νεότερη εφαρμογή και χημική βάση",
+            "rect": {
+              "x": 0,
+              "y": 483.921875,
+              "width": 794,
+              "height": 21.671875,
+              "top": 483.921875,
+              "right": 794,
+              "bottom": 505.59375,
+              "left": 0
+            }
+          },
+          {
+            "text": "2. Τέσσερις δραστηριότητες σύνδεσης ονόματος και δομής",
+            "rect": {
+              "x": 0,
+              "y": 719.796875,
+              "width": 794,
+              "height": 21.671875,
+              "top": 719.796875,
+              "right": 794,
+              "bottom": 741.46875,
+              "left": 0
+            }
+          },
+          {
+            "text": "3. Κοινά επίπεδα και σαφής κανόνας συνέχειας",
+            "rect": {
+              "x": 0,
+              "y": 1056.359375,
+              "width": 794,
+              "height": 21.671875,
+              "top": 1056.359375,
+              "right": 794,
+              "bottom": 1078.03125,
+              "left": 0
+            }
+          },
+          {
+            "text": "4. Χώρος παιχνιδιού και έλεγχος πραγματικών ροών",
+            "rect": {
+              "x": 0,
+              "y": 1491.921875,
+              "width": 794,
+              "height": 21.671875,
+              "top": 1491.921875,
+              "right": 794,
+              "bottom": 1513.59375,
+              "left": 0
+            }
+          },
+          {
+            "text": "5. Ανεξάρτητος έλεγχος, core και upstream",
+            "rect": {
+              "x": 0,
+              "y": 1746.515625,
+              "width": 794,
+              "height": 21.671875,
+              "top": 1746.515625,
+              "right": 794,
+              "bottom": 1768.1875,
+              "left": 0
+            }
+          },
+          {
+            "text": "6. Όρια και επόμενο βήμα",
+            "rect": {
+              "x": 0,
+              "y": 2124.484375,
+              "width": 794,
+              "height": 21.671875,
+              "top": 2124.484375,
+              "right": 794,
+              "bottom": 2146.15625,
+              "left": 0
+            }
+          }
+        ],
+        "capture": {
+          "width": 794,
+          "height": 2473
+        }
+      }
+    },
+    {
+      "label": "no captured application or unattributed JavaScript exceptions",
+      "passed": true,
+      "detail": {
+        "applicationOrUnattributedExceptions": [],
+        "externalTrackerExceptions": [],
+        "consoleEntries": [
+          {
+            "entry": {
+              "source": "network",
+              "level": "error",
+              "text": "Failed to load resource: the server responded with a status of 404 ()",
+              "timestamp": 1794823073960.809,
+              "url": "https://yanisken9.github.io/favicon.ico",
+              "networkRequestId": "39807.2"
+            }
+          }
+        ],
+        "networkFailures": []
+      }
+    }
+  ],
+  "correctUIAttempts": [],
+  "puzzlePointerDrag": {
+    "skipped": "Existing local full regression evidence reused; delivery run does not repeat drag matrix."
+  },
+  "limits": [
+    "Bounded delivery acceptance reuses prior full local chemistry/game/viewer regressions.",
+    "Headless100% CSS viewport only; actual3D, browser zoom125/200, physical mobile, offline and conference reliability unqualified.",
+    "Report print evidence is HTML print-media/A4-width screenshot; no PDF/pagination proof."
+  ],
+  "helperSHA256": {
+    "docs/checks/game-viewport-implementation-20261116/lesson-browser/replay-viewport.py": "20b88533158371434cc7a32a0cd098308d5d90e416fcc45d429d511d7f673305",
+    "docs/checks/game-viewport-implementation-20261116/lesson-browser/lesson-checks.py": "3894a2b9574d130f7427cf5a2bff1884c6ad8312fe4e1de6889fd7c751566ebc",
+    "docs/checks/game-levels-alkanes-implementation-20261116/browser/replay-levels.py": "b0cfa9f3d904c41be2fba30534e9451a82e2a26ffcefe585a2ab02461929c118"
+  },
+  "process": {
+    "ownedPID": 39794,
+    "profile": "/private/tmp/namelecule-release-20261116-report-final-frz7f0oh",
+    "debugPort": 49879,
+    "serverPort": null,
+    "baseURL": "https://yanisken9.github.io/organic-nomenclature-3/",
+    "serveRoot": "/private/tmp/namelecule-save-20261116-113102-ugalyus6/public"
+  },
+  "navigation": [
+    {
+      "url": "https://yanisken9.github.io/organic-nomenclature-3/docs/professor-20261116/update.html",
+      "ready": "complete",
+      "width": 1280,
+      "height": 720
+    }
+  ],
+  "reportLinks": [
+    {
+      "text": "δημοσιευμένη αναφορά της 12/11",
+      "href": "https://yanisken9.github.io/organic-nomenclature-3/docs/professor-20261112/update.html"
+    },
+    {
+      "text": "Υποδοχή Namelecule",
+      "href": "https://yanisken9.github.io/organic-nomenclature-3/design/welcome-proposal.html?v=release-20261116"
+    },
+    {
+      "text": "Μάθημα αλκανίων",
+      "href": "https://yanisken9.github.io/organic-nomenclature-3/mulermoc-nom-57.html?scenario=scenarios/alkanes-user-3.scenario.json&present=1&from=theory-library&v=release-20261116"
+    },
+    {
+      "text": "Μοριακός ντεντέκτιβ",
+      "href": "https://yanisken9.github.io/organic-nomenclature-3/games/molecular-detective.html?v=release-20261116"
+    },
+    {
+      "text": "Μοριακό παζλ",
+      "href": "https://yanisken9.github.io/organic-nomenclature-3/games/molecular-puzzle.html?v=release-20261116"
+    },
+    {
+      "text": "Χτίσε το όνομα",
+      "href": "https://yanisken9.github.io/organic-nomenclature-3/games/name-builder.html?v=release-20261116"
+    },
+    {
+      "text": "Συνεργείο ονομάτων",
+      "href": "https://yanisken9.github.io/organic-nomenclature-3/games/name-repair.html?v=release-20261116"
+    },
+    {
+      "text": "Αναφορά v56",
+      "href": "https://yanisken9.github.io/organic-nomenclature-3/docs/V56-SYNC-20261115.md"
+    },
+    {
+      "text": "Αναφορά v57",
+      "href": "https://yanisken9.github.io/organic-nomenclature-3/docs/V57-SYNC-20261115.md"
+    },
+    {
+      "text": "Χημικός έλεγχος και εμπλουτισμός",
+      "href": "https://yanisken9.github.io/organic-nomenclature-3/docs/ALKANE-POOL-RESULTS-20261116.md"
+    },
+    {
+      "text": "Ενσωμάτωση και έλεγχοι",
+      "href": "https://yanisken9.github.io/organic-nomenclature-3/docs/FOUR-GAME-INTEGRATION-RESULTS-20261116.md"
+    },
+    {
+      "text": "Αναφορά επιπέδων και μετάπτωσης",
+      "href": "https://yanisken9.github.io/organic-nomenclature-3/docs/GAME-LEVELS-ALKANES-RESULTS-20261116.md"
+    },
+    {
+      "text": "Αναφορά διάταξης",
+      "href": "https://yanisken9.github.io/organic-nomenclature-3/docs/GAME-VIEWPORT-RESULTS-20261116.md"
+    },
+    {
+      "text": "Συγκεντρωτικά τεκμήρια browser",
+      "href": "https://yanisken9.github.io/organic-nomenclature-3/docs/checks/game-viewport-implementation-20261116/lesson-browser/acceptance-summary.json"
+    },
+    {
+      "text": "Τελικό ανεξάρτητο review διάταξης",
+      "href": "https://yanisken9.github.io/organic-nomenclature-3/docs/checks/game-viewport-implementation-20261116/review-final.json"
+    },
+    {
+      "text": "αρχείο τεκμηριωμένων στοιχείων",
+      "href": "https://yanisken9.github.io/organic-nomenclature-3/docs/professor-20261116/verified-facts.json"
+    },
+    {
+      "text": "Τρέχων έλεγχος upstream",
+      "href": "https://yanisken9.github.io/organic-nomenclature-3/docs/checks/save-publish-20261116-113102/upstream-audit.json"
+    },
+    {
+      "text": "Σύνδεσμοι για αντιγραφή",
+      "href": "https://yanisken9.github.io/organic-nomenclature-3/docs/professor-20261116/plainlinks.txt"
+    },
+    {
+      "text": "Σύνδεσμοι JSON",
+      "href": "https://yanisken9.github.io/organic-nomenclature-3/docs/professor-20261116/links.json"
+    },
+    {
+      "text": "Τεκμηριωμένα στοιχεία και SHA-256",
+      "href": "https://yanisken9.github.io/organic-nomenclature-3/docs/professor-20261116/verified-facts.json"
+    },
+    {
+      "text": "Παραδοτέα διάταξης και ακριβή αποτυπώματα",
+      "href": "https://yanisken9.github.io/organic-nomenclature-3/docs/checks/game-viewport-implementation-20261116/verification-target.json"
+    }
+  ],
+  "reportVisual": [
+    {
+      "media": "screen",
+      "width": 1440,
+      "clientWidth": 1440,
+      "scrollWidth": 1440,
+      "scrollHeight": 3455,
+      "first": {
+        "x": 237,
+        "y": 108.46875,
+        "width": 966,
+        "height": 36.484375,
+        "top": 108.46875,
+        "right": 1203,
+        "bottom": 144.953125,
+        "left": 237
+      },
+      "last": {
+        "x": 237,
+        "y": 3356.015625,
+        "width": 966,
+        "height": 38.921875,
+        "top": 3356.015625,
+        "right": 1203,
+        "bottom": 3394.9375,
+        "left": 237
+      },
+      "headings": [
+        {
+          "text": "1. Νεότερη εφαρμογή και χημική βάση",
+          "rect": {
+            "x": 237,
+            "y": 716.765625,
+            "width": 966,
+            "height": 26.40625,
+            "top": 716.765625,
+            "right": 1203,
+            "bottom": 743.171875,
+            "left": 237
+          }
+        },
+        {
+          "text": "2. Τέσσερις δραστηριότητες σύνδεσης ονόματος και δομής",
+          "rect": {
+            "x": 237,
+            "y": 1039.859375,
+            "width": 966,
+            "height": 26.40625,
+            "top": 1039.859375,
+            "right": 1203,
+            "bottom": 1066.265625,
+            "left": 237
+          }
+        },
+        {
+          "text": "3. Κοινά επίπεδα και σαφής κανόνας συνέχειας",
+          "rect": {
+            "x": 237,
+            "y": 1482.421875,
+            "width": 966,
+            "height": 26.40625,
+            "top": 1482.421875,
+            "right": 1203,
+            "bottom": 1508.828125,
+            "left": 237
+          }
+        },
+        {
+          "text": "4. Χώρος παιχνιδιού και έλεγχος πραγματικών ροών",
+          "rect": {
+            "x": 237,
+            "y": 2063.671875,
+            "width": 966,
+            "height": 26.40625,
+            "top": 2063.671875,
+            "right": 1203,
+            "bottom": 2090.078125,
+            "left": 237
+          }
+        },
+        {
+          "text": "5. Ανεξάρτητος έλεγχος, core και upstream",
+          "rect": {
+            "x": 237,
+            "y": 2413.953125,
+            "width": 966,
+            "height": 26.40625,
+            "top": 2413.953125,
+            "right": 1203,
+            "bottom": 2440.359375,
+            "left": 237
+          }
+        },
+        {
+          "text": "6. Όρια και επόμενο βήμα",
+          "rect": {
+            "x": 237,
+            "y": 2912.171875,
+            "width": 966,
+            "height": 26.40625,
+            "top": 2912.171875,
+            "right": 1203,
+            "bottom": 2938.578125,
+            "left": 237
+          }
+        }
+      ],
+      "capture": {
+        "width": 1440,
+        "height": 3455
+      }
+    },
+    {
+      "media": "print",
+      "width": 794,
+      "clientWidth": 794,
+      "scrollWidth": 794,
+      "scrollHeight": 2473,
+      "first": {
+        "x": 0,
+        "y": 36.59375,
+        "width": 794,
+        "height": 30.390625,
+        "top": 36.59375,
+        "right": 794,
+        "bottom": 66.984375,
+        "left": 0
+      },
+      "last": {
+        "x": 0,
+        "y": 2441.765625,
+        "width": 794,
+        "height": 31.59375,
+        "top": 2441.765625,
+        "right": 794,
+        "bottom": 2473.359375,
+        "left": 0
+      },
+      "headings": [
+        {
+          "text": "1. Νεότερη εφαρμογή και χημική βάση",
+          "rect": {
+            "x": 0,
+            "y": 483.921875,
+            "width": 794,
+            "height": 21.671875,
+            "top": 483.921875,
+            "right": 794,
+            "bottom": 505.59375,
+            "left": 0
+          }
+        },
+        {
+          "text": "2. Τέσσερις δραστηριότητες σύνδεσης ονόματος και δομής",
+          "rect": {
+            "x": 0,
+            "y": 719.796875,
+            "width": 794,
+            "height": 21.671875,
+            "top": 719.796875,
+            "right": 794,
+            "bottom": 741.46875,
+            "left": 0
+          }
+        },
+        {
+          "text": "3. Κοινά επίπεδα και σαφής κανόνας συνέχειας",
+          "rect": {
+            "x": 0,
+            "y": 1056.359375,
+            "width": 794,
+            "height": 21.671875,
+            "top": 1056.359375,
+            "right": 794,
+            "bottom": 1078.03125,
+            "left": 0
+          }
+        },
+        {
+          "text": "4. Χώρος παιχνιδιού και έλεγχος πραγματικών ροών",
+          "rect": {
+            "x": 0,
+            "y": 1491.921875,
+            "width": 794,
+            "height": 21.671875,
+            "top": 1491.921875,
+            "right": 794,
+            "bottom": 1513.59375,
+            "left": 0
+          }
+        },
+        {
+          "text": "5. Ανεξάρτητος έλεγχος, core και upstream",
+          "rect": {
+            "x": 0,
+            "y": 1746.515625,
+            "width": 794,
+            "height": 21.671875,
+            "top": 1746.515625,
+            "right": 794,
+            "bottom": 1768.1875,
+            "left": 0
+          }
+        },
+        {
+          "text": "6. Όρια και επόμενο βήμα",
+          "rect": {
+            "x": 0,
+            "y": 2124.484375,
+            "width": 794,
+            "height": 21.671875,
+            "top": 2124.484375,
+            "right": 794,
+            "bottom": 2146.15625,
+            "left": 0
+          }
+        }
+      ],
+      "capture": {
+        "width": 794,
+        "height": 2473
+      }
+    }
+  ],
+  "completed": true,
+  "javascriptErrors": [],
+  "events": [
+    {
+      "method": "Runtime.executionContextCreated",
+      "params": {
+        "context": {
+          "id": 1,
+          "origin": "://",
+          "name": "",
+          "uniqueId": "-1613961507459298271.625616217665588190",
+          "auxData": {
+            "isDefault": true,
+            "type": "default",
+            "frameId": "9AC8F9A7C7E0F2AC1E17CF927705D0C2"
+          }
+        }
+      }
+    },
+    {
+      "method": "Page.frameResized",
+      "params": {}
+    },
+    {
+      "method": "Page.frameStartedNavigating",
+      "params": {
+        "frameId": "9AC8F9A7C7E0F2AC1E17CF927705D0C2",
+        "url": "https://yanisken9.github.io/organic-nomenclature-3/docs/professor-20261116/update.html",
+        "loaderId": "1BD31B7D7185FB64F6A02482B79548A3",
+        "navigationType": "differentDocument"
+      }
+    },
+    {
+      "method": "Page.frameStartedLoading",
+      "params": {
+        "frameId": "9AC8F9A7C7E0F2AC1E17CF927705D0C2"
+      }
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "params": {
+        "requestId": "1BD31B7D7185FB64F6A02482B79548A3",
+        "loaderId": "1BD31B7D7185FB64F6A02482B79548A3",
+        "documentURL": "https://yanisken9.github.io/organic-nomenclature-3/docs/professor-20261116/update.html",
+        "request": {
+          "url": "https://yanisken9.github.io/organic-nomenclature-3/docs/professor-20261116/update.html",
+          "method": "GET",
+          "headers": {
+            "Upgrade-Insecure-Requests": "1",
+            "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36",
+            "sec-ch-ua": "\"Not-A.Brand\";v=\"99\", \"Google Chrome\";v=\"157\", \"Chromium\";v=\"157\"",
+            "sec-ch-ua-mobile": "?0",
+            "sec-ch-ua-platform": "\"macOS\""
+          },
+          "mixedContentType": "none",
+          "initialPriority": "VeryHigh",
+          "referrerPolicy": "strict-origin-when-cross-origin",
+          "isSameSite": true
+        },
+        "timestamp": 19533.605339,
+        "wallTime": 1794823073.578943,
+        "initiator": {
+          "type": "other"
+        },
+        "redirectHasExtraInfo": false,
+        "type": "Document",
+        "frameId": "9AC8F9A7C7E0F2AC1E17CF927705D0C2",
+        "hasUserGesture": false
+      }
+    },
+    {
+      "method": "Network.requestWillBeSentExtraInfo",
+      "params": {
+        "requestId": "1BD31B7D7185FB64F6A02482B79548A3",
+        "associatedCookies": [],
+        "headers": {
+          ":authority": "yanisken9.github.io",
+          ":method": "GET",
+          ":path": "/organic-nomenclature-3/docs/professor-20261116/update.html",
+          ":scheme": "https",
+          "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/jxl,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+          "accept-encoding": "gzip, deflate, br, zstd",
+          "accept-language": "el-GR,el;q=0.9",
+          "priority": "u=0, i",
+          "sec-ch-ua": "\"Not-A.Brand\";v=\"99\", \"Google Chrome\";v=\"157\", \"Chromium\";v=\"157\"",
+          "sec-ch-ua-mobile": "?0",
+          "sec-ch-ua-platform": "\"macOS\"",
+          "sec-fetch-dest": "document",
+          "sec-fetch-mode": "navigate",
+          "sec-fetch-site": "none",
+          "sec-fetch-user": "?1",
+          "upgrade-insecure-requests": "1",
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+        },
+        "connectTiming": {
+          "requestTime": 19533.605711
+        },
+        "siteHasCookieInOtherPartition": false
+      }
+    },
+    {
+      "method": "Network.responseReceivedExtraInfo",
+      "params": {
+        "requestId": "1BD31B7D7185FB64F6A02482B79548A3",
+        "blockedCookies": [],
+        "headers": {
+          "accept-ranges": "bytes",
+          "access-control-allow-origin": "*",
+          "age": "0",
+          "cache-control": "max-age=600",
+          "content-encoding": "gzip",
+          "content-length": "7208",
+          "content-type": "text/html; charset=utf-8",
+          "date": "Mon, 16 Nov 2026 09:57:53 GMT",
+          "etag": "W/\"6afad2dd-4e83\"",
+          "expires": "Mon, 16 Nov 2026 10:07:53 GMT",
+          "last-modified": "Mon, 16 Nov 2026 09:54:37 GMT",
+          "server": "GitHub.com",
+          "strict-transport-security": "max-age=31556952",
+          "vary": "Accept-Encoding",
+          "via": "1.1 varnish",
+          "x-cache": "MISS",
+          "x-cache-hits": "0",
+          "x-fastly-request-id": "e220f5e45ca1e49b10b169237dc3cf63c642a57b",
+          "x-github-edge-region": "fra",
+          "x-github-request-id": "4308:306733:8968745:8A4C4C1:6AFAD3A0",
+          "x-proxy-cache": "MISS",
+          "x-served-by": "cache-sof1510025-SOF",
+          "x-timer": "S1794823074.634027,VS0,VE139"
+        },
+        "resourceIPAddressSpace": "Public",
+        "statusCode": 200,
+        "cookiePartitionKey": {
+          "topLevelSite": "https://yanisken9.github.io",
+          "hasCrossSiteAncestor": false
+        },
+        "cookiePartitionKeyOpaque": false,
+        "exemptedCookies": []
+      }
+    },
+    {
+      "method": "Network.responseReceived",
+      "params": {
+        "requestId": "1BD31B7D7185FB64F6A02482B79548A3",
+        "loaderId": "1BD31B7D7185FB64F6A02482B79548A3",
+        "timestamp": 19533.808812,
+        "type": "Document",
+        "response": {
+          "url": "https://yanisken9.github.io/organic-nomenclature-3/docs/professor-20261116/update.html",
+          "status": 200,
+          "statusText": "",
+          "headers": {
+            "accept-ranges": "bytes",
+            "access-control-allow-origin": "*",
+            "age": "0",
+            "cache-control": "max-age=600",
+            "content-encoding": "gzip",
+            "content-length": "7208",
+            "content-type": "text/html; charset=utf-8",
+            "date": "Mon, 16 Nov 2026 09:57:53 GMT",
+            "etag": "W/\"6afad2dd-4e83\"",
+            "expires": "Mon, 16 Nov 2026 10:07:53 GMT",
+            "last-modified": "Mon, 16 Nov 2026 09:54:37 GMT",
+            "server": "GitHub.com",
+            "strict-transport-security": "max-age=31556952",
+            "vary": "Accept-Encoding",
+            "via": "1.1 varnish",
+            "x-cache": "MISS",
+            "x-cache-hits": "0",
+            "x-fastly-request-id": "e220f5e45ca1e49b10b169237dc3cf63c642a57b",
+            "x-github-edge-region": "fra",
+            "x-github-request-id": "4308:306733:8968745:8A4C4C1:6AFAD3A0",
+            "x-proxy-cache": "MISS",
+            "x-served-by": "cache-sof1510025-SOF",
+            "x-timer": "S1794823074.634027,VS0,VE139"
+          },
+          "mimeType": "text/html",
+          "charset": "utf-8",
+          "connectionReused": false,
+          "connectionId": 236,
+          "remoteIPAddress": "[2606:50c0:8003::153]",
+          "remotePort": 443,
+          "fromDiskCache": false,
+          "fromServiceWorker": false,
+          "fromPrefetchCache": false,
+          "encodedDataLength": 410,
+          "timing": {
+            "requestTime": 19533.605711,
+            "proxyStart": -1,
+            "proxyEnd": -1,
+            "dnsStart": 0,
+            "dnsEnd": 9.013,
+            "connectStart": 9.076,
+            "connectEnd": 45.741,
+            "sslStart": 25.65,
+            "sslEnd": 45.736,
+            "workerStart": -1,
+            "workerReady": -1,
+            "workerFetchStart": -1,
+            "workerRespondWithSettled": -1,
+            "sendStart": 45.826,
+            "sendEnd": 45.906,
+            "pushStart": 0,
+            "pushEnd": 0,
+            "receiveHeadersStart": 201.446,
+            "receiveHeadersEnd": 201.672
+          },
+          "responseTime": 1794823073780.81,
+          "protocol": "h2",
+          "alternateProtocolUsage": "unspecifiedReason",
+          "securityState": "secure",
+          "securityDetails": {
+            "protocol": "TLS 1.3",
+            "keyExchange": "",
+            "keyExchangeGroup": "X25519MLKEM768",
+            "cipher": "AES_128_GCM",
+            "certificateId": 0,
+            "subjectName": "*.github.io",
+            "sanList": [
+              "*.github.com",
+              "*.github.io",
+              "*.githubusercontent.com",
+              "github.com",
+              "github.io",
+              "githubusercontent.com"
+            ],
+            "issuer": "YR1",
+            "validFrom": 1790811886,
+            "validTo": 1798587885,
+            "signedCertificateTimestampList": [
+              {
+                "status": "Verified",
+                "origin": "Embedded in certificate",
+                "logDescription": "DigiCert Wyvern2026h2",
+                "logId": "C2317E574519A345EE7F38DEB29041EBC7C2215A22BF7FD5B5AD769AD90E52CD",
+                "timestamp": 1790815396779,
+                "hashAlgorithm": "SHA-256",
+                "signatureAlgorithm": "ECDSA",
+                "signatureData": "3046022100C931DEB7EFB3659BA7E0BB1EE3FAE8A8E701539DD130484AA865986DE25C8D85022100B86E5F6DDB8B0BA88D8F4540D057F40EED08ED7E44A778428028B7635CA96CE9"
+              },
+              {
+                "status": "Verified",
+                "origin": "Embedded in certificate",
+                "logDescription": "Let's Encrypt Willow2027h1",
+                "logId": "A2810018734E176E1D47E09540F381BA546697CD63A84350716EB8094EDAF10D",
+                "timestamp": 1790815397654,
+                "hashAlgorithm": "SHA-256",
+                "signatureAlgorithm": "ECDSA",
+                "signatureData": "30460221008E30AC6AD69C42B415959E9EFD31F28606B11C29062F086277061943D1E19581022100B5A1ADCE9F4E098D4B37492F4F8E0914E4B942D99C688979807D6867C10913FE"
+              }
+            ],
+            "certificateTransparencyCompliance": "compliant",
+            "serverSignatureAlgorithm": 2052,
+            "encryptedClientHello": false
+          }
+        },
+        "hasExtraInfo": true,
+        "frameId": "9AC8F9A7C7E0F2AC1E17CF927705D0C2"
+      }
+    },
+    {
+      "method": "Runtime.executionContextsCleared",
+      "params": {}
+    },
+    {
+      "method": "Runtime.executionContextsCleared",
+      "params": {}
+    },
+    {
+      "method": "Page.frameNavigated",
+      "params": {
+        "frame": {
+          "id": "9AC8F9A7C7E0F2AC1E17CF927705D0C2",
+          "loaderId": "1BD31B7D7185FB64F6A02482B79548A3",
+          "url": "https://yanisken9.github.io/organic-nomenclature-3/docs/professor-20261116/update.html",
+          "domainAndRegistry": "yanisken9.github.io",
+          "securityOrigin": "https://yanisken9.github.io",
+          "securityOriginDetails": {
+            "isLocalhost": false
+          },
+          "mimeType": "text/html",
+          "adFrameStatus": {
+            "adFrameType": "none"
+          },
+          "secureContextType": "Secure",
+          "crossOriginIsolatedContextType": "NotIsolated",
+          "gatedAPIFeatures": []
+        },
+        "type": "Navigation"
+      }
+    },
+    {
+      "method": "Network.policyUpdated",
+      "params": {}
+    },
+    {
+      "method": "Network.dataReceived",
+      "params": {
+        "requestId": "1BD31B7D7185FB64F6A02482B79548A3",
+        "timestamp": 19533.813289,
+        "dataLength": 20099,
+        "encodedDataLength": 0
+      }
+    },
+    {
+      "method": "Runtime.executionContextCreated",
+      "params": {
+        "context": {
+          "id": 2,
+          "origin": "https://yanisken9.github.io",
+          "name": "",
+          "uniqueId": "6999760291629345100.-47643096192810340",
+          "auxData": {
+            "isDefault": true,
+            "type": "default",
+            "frameId": "9AC8F9A7C7E0F2AC1E17CF927705D0C2"
+          }
+        }
+      }
+    },
+    {
+      "method": "Network.loadingFinished",
+      "params": {
+        "requestId": "1BD31B7D7185FB64F6A02482B79548A3",
+        "timestamp": 19533.80961,
+        "encodedDataLength": 7627,
+        "encodedBodyLength": 7208
+      }
+    },
+    {
+      "method": "Page.domContentEventFired",
+      "params": {
+        "timestamp": 19533.816383
+      }
+    },
+    {
+      "method": "Page.loadEventFired",
+      "params": {
+        "timestamp": 19533.817149
+      }
+    },
+    {
+      "method": "Page.frameStoppedLoading",
+      "params": {
+        "frameId": "9AC8F9A7C7E0F2AC1E17CF927705D0C2"
+      }
+    },
+    {
+      "method": "Network.requestWillBeSent",
+      "params": {
+        "requestId": "39807.2",
+        "loaderId": "1BD31B7D7185FB64F6A02482B79548A3",
+        "documentURL": "https://yanisken9.github.io/organic-nomenclature-3/docs/professor-20261116/update.html",
+        "request": {
+          "url": "https://yanisken9.github.io/favicon.ico",
+          "method": "GET",
+          "headers": {
+            "sec-ch-ua-platform": "\"macOS\"",
+            "Referer": "https://yanisken9.github.io/organic-nomenclature-3/docs/professor-20261116/update.html",
+            "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36",
+            "sec-ch-ua": "\"Not-A.Brand\";v=\"99\", \"Google Chrome\";v=\"157\", \"Chromium\";v=\"157\"",
+            "sec-ch-ua-mobile": "?0"
+          },
+          "mixedContentType": "none",
+          "initialPriority": "High",
+          "referrerPolicy": "strict-origin-when-cross-origin",
+          "isSameSite": true
+        },
+        "timestamp": 19533.83617,
+        "wallTime": 1794823073.809795,
+        "initiator": {
+          "type": "other"
+        },
+        "redirectHasExtraInfo": false,
+        "type": "Other",
+        "frameId": "9AC8F9A7C7E0F2AC1E17CF927705D0C2",
+        "hasUserGesture": false
+      }
+    },
+    {
+      "method": "Network.requestWillBeSentExtraInfo",
+      "params": {
+        "requestId": "39807.2",
+        "associatedCookies": [],
+        "headers": {
+          ":authority": "yanisken9.github.io",
+          ":method": "GET",
+          ":path": "/favicon.ico",
+          ":scheme": "https",
+          "accept": "image/jxl,image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+          "accept-encoding": "gzip, deflate, br, zstd",
+          "accept-language": "el-GR,el;q=0.9",
+          "priority": "u=1, i",
+          "referer": "https://yanisken9.github.io/organic-nomenclature-3/docs/professor-20261116/update.html",
+          "sec-ch-ua": "\"Not-A.Brand\";v=\"99\", \"Google Chrome\";v=\"157\", \"Chromium\";v=\"157\"",
+          "sec-ch-ua-mobile": "?0",
+          "sec-ch-ua-platform": "\"macOS\"",
+          "sec-fetch-dest": "image",
+          "sec-fetch-mode": "no-cors",
+          "sec-fetch-site": "same-origin",
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+        },
+        "connectTiming": {
+          "requestTime": 19533.836534
+        },
+        "clientSecurityState": {
+          "initiatorIsSecureContext": true,
+          "initiatorIPAddressSpace": "Public",
+          "localNetworkAccessRequestPolicy": "PermissionBlock"
+        },
+        "siteHasCookieInOtherPartition": false
+      }
+    },
+    {
+      "method": "Network.responseReceivedExtraInfo",
+      "params": {
+        "requestId": "39807.2",
+        "blockedCookies": [],
+        "headers": {
+          "accept-ranges": "bytes",
+          "age": "0",
+          "content-encoding": "gzip",
+          "content-length": "5142",
+          "content-security-policy": "default-src 'none'; style-src 'unsafe-inline'; img-src data:; connect-src 'self'",
+          "content-type": "text/html; charset=utf-8",
+          "date": "Mon, 16 Nov 2026 09:57:53 GMT",
+          "etag": "W/\"6abd0db9-239b\"",
+          "server": "GitHub.com",
+          "vary": "Accept-Encoding",
+          "via": "1.1 varnish",
+          "x-cache": "MISS",
+          "x-cache-hits": "0",
+          "x-fastly-request-id": "7b6919a0a1b9b52dd2971187c795f74f43dd4399",
+          "x-github-edge-region": "fra",
+          "x-github-request-id": "F1A8:8F0F6:8BBFEA3:8CA421C:6AFAD3A0",
+          "x-served-by": "cache-sof1510025-SOF",
+          "x-timer": "S1794823074.819346,VS0,VE131"
+        },
+        "resourceIPAddressSpace": "Public",
+        "statusCode": 404,
+        "cookiePartitionKey": {
+          "topLevelSite": "https://yanisken9.github.io",
+          "hasCrossSiteAncestor": false
+        },
+        "cookiePartitionKeyOpaque": false,
+        "exemptedCookies": []
+      }
+    },
+    {
+      "method": "Network.responseReceived",
+      "params": {
+        "requestId": "39807.2",
+        "loaderId": "1BD31B7D7185FB64F6A02482B79548A3",
+        "timestamp": 19533.987154,
+        "type": "Other",
+        "response": {
+          "url": "https://yanisken9.github.io/favicon.ico",
+          "status": 404,
+          "statusText": "",
+          "headers": {
+            "x-fastly-request-id": "7b6919a0a1b9b52dd2971187c795f74f43dd4399",
+            "content-encoding": "gzip",
+            "etag": "W/\"6abd0db9-239b\"",
+            "age": "0",
+            "x-github-request-id": "F1A8:8F0F6:8BBFEA3:8CA421C:6AFAD3A0",
+            "x-cache": "MISS",
+            "date": "Mon, 16 Nov 2026 09:57:53 GMT",
+            "content-type": "text/html; charset=utf-8",
+            "x-served-by": "cache-sof1510025-SOF",
+            "x-cache-hits": "0",
+            "vary": "Accept-Encoding",
+            "content-security-policy": "default-src 'none'; style-src 'unsafe-inline'; img-src data:; connect-src 'self'",
+            "x-github-edge-region": "fra",
+            "x-timer": "S1794823074.819346,VS0,VE131",
+            "via": "1.1 varnish",
+            "accept-ranges": "bytes",
+            "content-length": "5142",
+            "server": "GitHub.com"
+          },
+          "mimeType": "text/html",
+          "charset": "utf-8",
+          "connectionReused": true,
+          "connectionId": 236,
+          "remoteIPAddress": "[2606:50c0:8003::153]",
+          "remotePort": 443,
+          "fromDiskCache": false,
+          "fromServiceWorker": false,
+          "fromPrefetchCache": false,
+          "encodedDataLength": 213,
+          "timing": {
+            "requestTime": 19533.836534,
+            "proxyStart": -1,
+            "proxyEnd": -1,
+            "dnsStart": -1,
+            "dnsEnd": -1,
+            "connectStart": -1,
+            "connectEnd": -1,
+            "sslStart": -1,
+            "sslEnd": -1,
+            "workerStart": -1,
+            "workerReady": -1,
+            "workerFetchStart": -1,
+            "workerRespondWithSettled": -1,
+            "sendStart": 0.14,
+            "sendEnd": 0.211,
+            "pushStart": 0,
+            "pushEnd": 0,
+            "receiveHeadersStart": 149.462,
+            "receiveHeadersEnd": 149.686
+          },
+          "responseTime": 1794823073959.63,
+          "protocol": "h2",
+          "alternateProtocolUsage": "unspecifiedReason",
+          "securityState": "secure",
+          "securityDetails": {
+            "protocol": "TLS 1.3",
+            "keyExchange": "",
+            "keyExchangeGroup": "X25519MLKEM768",
+            "cipher": "AES_128_GCM",
+            "certificateId": 0,
+            "subjectName": "*.github.io",
+            "sanList": [
+              "*.github.com",
+              "*.github.io",
+              "*.githubusercontent.com",
+              "github.com",
+              "github.io",
+              "githubusercontent.com"
+            ],
+            "issuer": "YR1",
+            "validFrom": 1790811886,
+            "validTo": 1798587885,
+            "signedCertificateTimestampList": [
+              {
+                "status": "Verified",
+                "origin": "Embedded in certificate",
+                "logDescription": "DigiCert Wyvern2026h2",
+                "logId": "C2317E574519A345EE7F38DEB29041EBC7C2215A22BF7FD5B5AD769AD90E52CD",
+                "timestamp": 1790815396779,
+                "hashAlgorithm": "SHA-256",
+                "signatureAlgorithm": "ECDSA",
+                "signatureData": "3046022100C931DEB7EFB3659BA7E0BB1EE3FAE8A8E701539DD130484AA865986DE25C8D85022100B86E5F6DDB8B0BA88D8F4540D057F40EED08ED7E44A778428028B7635CA96CE9"
+              },
+              {
+                "status": "Verified",
+                "origin": "Embedded in certificate",
+                "logDescription": "Let's Encrypt Willow2027h1",
+                "logId": "A2810018734E176E1D47E09540F381BA546697CD63A84350716EB8094EDAF10D",
+                "timestamp": 1790815397654,
+                "hashAlgorithm": "SHA-256",
+                "signatureAlgorithm": "ECDSA",
+                "signatureData": "30460221008E30AC6AD69C42B415959E9EFD31F28606B11C29062F086277061943D1E19581022100B5A1ADCE9F4E098D4B37492F4F8E0914E4B942D99C688979807D6867C10913FE"
+              }
+            ],
+            "certificateTransparencyCompliance": "compliant",
+            "serverSignatureAlgorithm": 2052,
+            "encryptedClientHello": false
+          }
+        },
+        "hasExtraInfo": true,
+        "frameId": "9AC8F9A7C7E0F2AC1E17CF927705D0C2"
+      }
+    },
+    {
+      "method": "Log.entryAdded",
+      "params": {
+        "entry": {
+          "source": "network",
+          "level": "error",
+          "text": "Failed to load resource: the server responded with a status of 404 ()",
+          "timestamp": 1794823073960.809,
+          "url": "https://yanisken9.github.io/favicon.ico",
+          "networkRequestId": "39807.2"
+        }
+      }
+    },
+    {
+      "method": "Network.dataReceived",
+      "params": {
+        "requestId": "39807.2",
+        "timestamp": 19533.987376,
+        "dataLength": 9115,
+        "encodedDataLength": 0
+      }
+    },
+    {
+      "method": "Network.dataReceived",
+      "params": {
+        "requestId": "39807.2",
+        "timestamp": 19533.987544,
+        "dataLength": 0,
+        "encodedDataLength": 5151
+      }
+    },
+    {
+      "method": "Network.loadingFinished",
+      "params": {
+        "requestId": "39807.2",
+        "timestamp": 19533.986777,
+        "encodedDataLength": 5364,
+        "encodedBodyLength": 5142
+      }
+    },
+    {
+      "method": "Page.frameResized",
+      "params": {}
+    },
+    {
+      "method": "Page.frameResized",
+      "params": {}
+    },
+    {
+      "method": "Page.frameResized",
+      "params": {}
+    },
+    {
+      "method": "Page.frameResized",
+      "params": {}
+    },
+    {
+      "method": "Page.frameResized",
+      "params": {}
+    },
+    {
+      "method": "Page.frameResized",
+      "params": {}
+    },
+    {
+      "method": "Page.frameResized",
+      "params": {}
+    }
+  ],
+  "classifiedLogs": {
+    "applicationOrUnattributedExceptions": [],
+    "externalTrackerExceptions": [],
+    "consoleEntries": [
+      {
+        "entry": {
+          "source": "network",
+          "level": "error",
+          "text": "Failed to load resource: the server responded with a status of 404 ()",
+          "timestamp": 1794823073960.809,
+          "url": "https://yanisken9.github.io/favicon.ico",
+          "networkRequestId": "39807.2"
+        }
+      }
+    ],
+    "networkFailures": []
+  },
+  "sourceAfter": {
+    "docs/checks/save-publish-20261116-113102/browser/public-results.json": "068d2ad33a64f85bed90a9193790ce3ec1ca93c69ab13008bb50dc64b5f91970",
+    "docs/checks/save-publish-20261116-113102/public-runtime-http.json": "5661f727c2c1e1bb0ad3f22a4b57f839a321a167a95ca9906c19a130be0e5ccb",
+    "docs/checks/save-publish-20261116-113102/release-review.json": "e62857cf9bb2e5607f234685f597cab58abcb73a557403a3c9c0deac46d8f1bb",
+    "docs/checks/save-publish-20261116-113102/runtime-pages-status.json": "c1b570b00ed74299d2f183a40f06b1d8a5cf16a31d8871e5ad5c7a379b761191",
+    "docs/professor-20261116/links.json": "5b274062e6cc1c13ef585459821acc5a670778ff1ec9fb6e1915e46dca4b0fa5",
+    "docs/professor-20261116/links.txt": "7ce70691c517a56b7b8930474d75cc330b6a6cd017b0a1eb6d2cf91b39b804be",
+    "docs/professor-20261116/plainlinks.txt": "7ce70691c517a56b7b8930474d75cc330b6a6cd017b0a1eb6d2cf91b39b804be",
+    "docs/professor-20261116/update.html": "d95114ed6fb5def83fdc7a5cc4b701227fbee7708b0f1ef8b9be423b2383d091",
+    "docs/professor-20261116/verified-facts.json": "f860fd2bda6c5dc6f634d0ebbcfe679c7d3adf800e2e1e445153686c4c1ad1cd"
+  },
+  "sourceUnchangedDuringRun": true,
+  "ownedBrowserExited": true,
+  "ownedServerClosed": true,
+  "ownedProfileRemoved": true,
+  "finishedUTC": "2026-11-16T09:58:01.289718+00:00"
+}

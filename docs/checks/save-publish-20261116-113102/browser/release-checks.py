@@ -1,11 +1,12 @@
 """Definitions only, extending proven current viewport/levels browser helpers."""
 import urllib.parse
+import urllib.error
 PREFIX='/organic-nomenclature-3/'
 OWNED_PREFIX='namelecule-release-20261116-'
 
 def release_args():
  p=argparse.ArgumentParser(description='Frozen candidate/public release acceptance')
- p.add_argument('--phase',choices=['candidate','public'],required=True)
+ p.add_argument('--phase',choices=['candidate','public','report-final'],required=True)
  p.add_argument('--manifest',type=Path,required=True)
  p.add_argument('--release-root',type=Path,required=True)
  p.add_argument('--base-url',default='https://yanisken9.github.io/organic-nomenclature-3/')
@@ -131,7 +132,15 @@ def report_qa():
  for item in links:
   url=urllib.parse.urlsplit(item['href'])
   if url.path.startswith(PREFIX):
-   relative=url.path[len(PREFIX):];response=urllib.request.urlopen(OUT['process']['baseURL']+relative,timeout=min(20,check_deadline()));targets.append({'text':item['text'],'relative':relative,'status':response.status,'bytes':len(response.read())})
+   relative=url.path[len(PREFIX):];attempts=[]
+   for attempt in range(3):
+    try:
+     response=urllib.request.urlopen(OUT['process']['baseURL']+relative,timeout=min(20,check_deadline()));size=len(response.read());attempts.append({'attempt':attempt+1,'status':response.status,'bytes':size});break
+    except urllib.error.HTTPError as error:
+     attempts.append({'attempt':attempt+1,'status':error.code});OUT.setdefault('reportHTTPAttempts',[]).append({'relative':relative,'attempt':attempt+1,'status':error.code})
+     if error.code not in [429,502,503,504] or attempt==2:raise
+     pause(.5*(attempt+1))
+   targets.append({'text':item['text'],'relative':relative,'status':response.status,'bytes':size,'attempts':attempts})
  check(targets and all(t['status']==200 and t['bytes']>0 for t in targets),'all report repository link targets load under actual delivery prefix',targets);OUT['reportLinks']=links
  views=[]
  for media,width,height in [('screen',1440,1000),('print',794,1123)]:
@@ -141,6 +150,7 @@ def report_qa():
  cdp('Emulation.setEmulatedMedia',{'media':'screen'});viewport(1280,720);OUT['reportVisual']=views
 
 def release_flow():
+ if ARGS.phase=='report-final':report_qa();return
  welcome_library();checkpoint_delivery(ARGS.phase=='candidate')
  for game,path in [('repair','games/name-repair.html'),('builder','games/name-builder.html'),('puzzle','games/molecular-puzzle.html'),('detective','games/molecular-detective.html')]:
   if ARGS.phase=='candidate' or game=='detective':standalone_start(game,path+'?v=release-20261116')

@@ -1,0 +1,91 @@
+{
+  "recordedUTC": "2026-11-16T10:00:15.939540+00:00",
+  "role": "Developer final public HTML report visual/link QA; not independent execution",
+  "completed": true,
+  "passed": true,
+  "finalReportBrowserPassed": true,
+  "finalReportVisualPassed": true,
+  "finalReportCommit": "c5346c540f4eb04f8e6e376f47789a3da15e19e8",
+  "actualURL": "https://yanisken9.github.io/organic-nomenclature-3/docs/professor-20261116/update.html",
+  "manifest": "docs/checks/save-publish-20261116-113102/final-report-target.json",
+  "manifestSHA256": "3b326da10d15ee953fa929545d420a8890083ee6e7d62bf3f0799d45ceb447b4",
+  "final9FilesUnchanged": true,
+  "separateRuntimeFiles": 95,
+  "separateRuntime95Unchanged": true,
+  "runResults": "docs/checks/save-publish-20261116-113102/browser/run-report-final-095752/results.json",
+  "runResultsSHA256": "30d201975d889efbe5ccbdead95846b91a7e438cf77fbf3c7d39f75448923abf",
+  "checks": 4,
+  "genuineCorrectUIAnswers": 0,
+  "applicationOrUnattributedJavaScriptExceptions": 0,
+  "externalTrackerExceptions": 0,
+  "HTTPRetriesDuringThisRun": [],
+  "rootHTTPReceipt": "docs/checks/save-publish-20261116-113102/public-final-http.json",
+  "visualQA": {
+    "inspectedBy": "Developer via view_image of actual final public full-page captures",
+    "screen": {
+      "path": "docs/checks/save-publish-20261116-113102/browser/run-report-final-095752/report-screen-full.png",
+      "sha256": "79c557abe0bd75d20f8abeee67e1822c9b6e003f9e6f0c91bc2789c73151a216",
+      "pixels": [
+        1440,
+        3455
+      ]
+    },
+    "printMedia": {
+      "path": "docs/checks/save-publish-20261116-113102/browser/run-report-final-095752/report-print-full.png",
+      "sha256": "be1bc6e89b7c3faa0d96491ae5842cf8d0111948c1e3c415100adb9a79db59a9",
+      "pixels": [
+        794,
+        2473
+      ]
+    },
+    "observed": "Final green delivery paragraph, title, six numbered sections, tables and footer are readable and unclipped in both actual public images. Runtime/snapshot references wrap inside available width. All repository report link targets returned200.",
+    "pdfCreated": false,
+    "actualPrintPaginationVerified": false
+  },
+  "cleanup": {
+    "sourceUnchangedDuringRun": true,
+    "ownedBrowserExited": true,
+    "ownedServerClosed": true,
+    "ownedProfileRemoved": true
+  },
+  "exactOwnedPIDAudit": {
+    "ownedPIDs": [
+      38215,
+      39459,
+      39794
+    ],
+    "exitCode": 1,
+    "stdout": "",
+    "stderr": "",
+    "allAbsent": true
+  },
+  "deliveryBrowserAggregate": {
+    "candidate": {
+      "checks": 224,
+      "genuineCorrectAnswers": 6,
+      "browserLocalSnapshotPaths": 95,
+      "summary": "docs/checks/save-publish-20261116-113102/browser/candidate-results.json"
+    },
+    "initialPublicRuntime": {
+      "checks": 70,
+      "genuineCorrectAnswers": 3,
+      "browserLocalSnapshotPaths": 95,
+      "summary": "docs/checks/save-publish-20261116-113102/browser/public-results.json"
+    },
+    "finalPublicReport": {
+      "checks": 4,
+      "genuineCorrectAnswers": 0,
+      "browserLocalSnapshotPaths": 9
+    },
+    "scopeClarification": "Browser before/after snapshots use manifest.files:95runtime in candidate/public,9finalreport. Manifest.releaseFiles is the larger111/135overlay verified separately by root HTTP/static evidence; it is not the browser sourceBefore map. Report link bytes and screenshots were separately checked in each browser run.",
+    "allThreeRunsCompletedSourceStableAndResourcesCleaned": true
+  },
+  "limits": [
+    "Final phase checks report only;95runtime bytes and earlier actual application acceptance remain separate evidence.",
+    "HTML print-media/A4-width screenshots are not PDF or verified pagination.",
+    "Actual3D/browserzoom125/200, physicalmobile, offline/conference reliability remain unqualified."
+  ],
+  "sourceOrCoreEditsByVerifier": false,
+  "commitOrPushByVerifier": false,
+  "ownedFileWritesFinishedAfterThisSummary": true
+}

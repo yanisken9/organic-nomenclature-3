@@ -1,0 +1,46 @@
+{
+  "reviewer": "/root/publication_review_20261116",
+  "role": "independent Reviewer; fresh context; behavioral readonly shared filesystem",
+  "recordedUTC": "2026-11-16T09:48:12.516413+00:00",
+  "publicBase": "72ea8c17d0fbe571e28d6f33ce1240f0f0646358",
+  "sourceHEAD": "168e3cec01f941a84d40bbe0dc07156e7baa35d0",
+  "targetSHA256": "ebc8cdd020facd0ba0763307010347696ab030c33240a073660af8611b343507",
+  "releasePaths": 135,
+  "runtimePaths": 95,
+  "candidateFiles": 4051,
+  "publicBaselineFiles": 3936,
+  "protectedFiles": 49,
+  "coreBaselineFiles": 13,
+  "findings": [
+    {
+      "id": "SAVE-01",
+      "severity": "P2",
+      "cause": "Only direct report evidence copied; linked evidence in six Markdown reports would404.",
+      "resolution": "24 explicit support paths added; two private operational export mappings replaced with checkpoint-only plain filenames. 26 actual Markdown links resolve; no outside allowlist changes.",
+      "independentlyClosed": true
+    }
+  ],
+  "ownChecks": [
+    "All release source/candidateSHA; all3936 publicbase Gitblob hashes;49protected/13cores/HEAD/index",
+    "Report20 source records match; report/entryHTML links including base URL",
+    "135target bounded evidence closure, all26releasedMarkdownlinksresolve",
+    "Inspected supplied desktop/printCSS PNG readability; no browser/PDF generated"
+  ],
+  "developerEvidence": [
+    "Candidate224checks/6controlledcorrect,111thenruntime95 unchanged; no app rerun needed docs-onlyclosure",
+    "Prior units scientific/source review; actual public verification and fullsave evidence separate"
+  ],
+  "openActionableFindings": [],
+  "fullSavePublicCompletionNotImplied": true,
+  "readyForAuthorizedPublicationSubjectToSaveGuard": true,
+  "backupSupplement": {
+    "ownActualChecks": [
+      "3archiveSHA;9182source+250recoveryZIP everyentrySHA/CRC/modes",
+      "2mirrors44fileseachSHA/launchermodes;Desktop9JSONequality",
+      "9432originalrestoredfilesSHA+9435unionmembership/no symlinks/alternates",
+      "9434snapshotGitblobSHA;4051publiccommitGitblobSHA;sourceHEAD/index"
+    ],
+    "cleanSlateRestorationExecution": "Developer; Reviewer inspected actual outputs read-only",
+    "newFindings": []
+  }
+}

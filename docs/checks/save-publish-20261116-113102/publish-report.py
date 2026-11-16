@@ -1,5 +1,6 @@
 """Publish only the frozen factual report and proof overlay, after runtime proof."""
 from pathlib import Path
+import time, urllib.error
 import sys,importlib.util,json,subprocess,datetime,urllib.request,urllib.parse,hashlib,concurrent.futures
 sys.dont_write_bytecode=True
 H=Path(__file__).resolve().parent
@@ -33,10 +34,19 @@ def verify():
  protected=s['publicProtected']
  hashes={**t['files'],**s['runtimeFiles'],**protected}
  def item(p):
-  request=urllib.request.Request(d.PUBLIC+urllib.parse.quote(p,safe='/')+'?final='+s['stamp'],headers={'Cache-Control':'no-cache','Accept-Encoding':'identity','User-Agent':'Namelecule-final-report-verification'})
-  with urllib.request.build_opener(d.NoRedirect).open(request,timeout=30)as r:
-   data=r.read((c/p).stat().st_size+1);v={'status':r.status,'sha256':hashlib.sha256(data).hexdigest(),'bytes':len(data),'expectedSHA256':hashes[p]};v['ok']=r.status==200 and v['sha256']==hashes[p]and len(data)==(c/p).stat().st_size;return p,v
- with concurrent.futures.ThreadPoolExecutor(max_workers=6)as pool:results=dict(pool.map(item,hashes))
- passed=all(v['ok']for v in results.values());o.write(H/'public-final-http.json',{'checkedUTC':datetime.datetime.now(datetime.timezone.utc).isoformat(),'commit':s['publicReportCommit'],'files':results,'allSHA256Verified':passed})
+  request=urllib.request.Request(d.PUBLIC+urllib.parse.quote(p,safe='/')+'?final='+s['stamp']+'-'+str(time.time_ns()),headers={'Cache-Control':'no-cache','Accept-Encoding':'identity','User-Agent':'Namelecule-final-report-verification'})
+  try:
+   with urllib.request.build_opener(d.NoRedirect).open(request,timeout=30)as r:
+    data=r.read((c/p).stat().st_size+1);v={'status':r.status,'sha256':hashlib.sha256(data).hexdigest(),'bytes':len(data),'expectedSHA256':hashes[p]};v['ok']=r.status==200 and v['sha256']==hashes[p]and len(data)==(c/p).stat().st_size;return p,v
+  except urllib.error.HTTPError as error:return p,{'status':error.code,'ok':False}
+  except (urllib.error.URLError,TimeoutError)as error:return p,{'error':type(error).__name__,'ok':False}
+ results={};attempts=[]
+ for attempt in range(3):
+  pending=[p for p in hashes if not results.get(p,{}).get('ok')]
+  with concurrent.futures.ThreadPoolExecutor(max_workers=4)as pool:results.update(dict(pool.map(item,pending)))
+  attempts.append({'attempt':attempt+1,'checked':len(pending),'failures':{p:v for p,v in results.items()if not v['ok']}})
+  if all(v['ok']for v in results.values()):break
+  if attempt<2:time.sleep(2*(attempt+1))
+ passed=all(v['ok']for v in results.values());o.write(H/'public-final-http.json',{'checkedUTC':datetime.datetime.now(datetime.timezone.utc).isoformat(),'commit':s['publicReportCommit'],'files':results,'allSHA256Verified':passed,'attempts':attempts})
  assert passed,'Final HTTP content differs';s.update(reportLiveVerified=True,finalPublicHTTPCount=len(results),reportVerifiedUTC=datetime.datetime.now(datetime.timezone.utc).isoformat());o.write(o.STATE,s);print('Final exact public files '+str(len(results)),flush=True)
 if __name__=='__main__':{'prepare':prepare,'push':push,'verify':verify}[sys.argv[1]]()

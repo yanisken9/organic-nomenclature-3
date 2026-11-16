@@ -14,5 +14,5 @@ ns.update(HERE=HERE,CODE_ROOT=CODE_ROOT,REUSED=REUSED,__file__=str(Path(__file__
 exec(compile((HERE/'release-checks.py').read_text(),str(HERE/'release-checks.py'),'exec'),ns)
 if __name__=='__main__':
  if '--prepare-check' in sys.argv:
-  print(json.dumps({'prepared':True,'browserLaunched':False,'entrypoint':str(Path(__file__).resolve()),'helpers':str(REUSED),'harnessSHA256':hashlib.sha256((HERE/'release-checks.py').read_bytes()).hexdigest(),'prefix':'/organic-nomenclature-3/','phases':['candidate','public'],'grant':'NAMELECULE_RELEASE_BROWSER_GRANT=frozen, release manifest, assembled root and exclusive root grant'}))
+  print(json.dumps({'prepared':True,'browserLaunched':False,'entrypoint':str(Path(__file__).resolve()),'helpers':str(REUSED),'harnessSHA256':hashlib.sha256((HERE/'release-checks.py').read_bytes()).hexdigest(),'prefix':'/organic-nomenclature-3/','phases':['candidate','public','report-final'],'grant':'NAMELECULE_RELEASE_BROWSER_GRANT=frozen, release manifest, assembled root and exclusive root grant'}))
  else:ns['release_main']()
