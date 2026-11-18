@@ -17,6 +17,7 @@
   let responseRevealer = null;
   let practiceContinue = null;
   let practiceNotice = null;
+  let adaptiveLayout = null, layoutProgress = null;
 
   function supportsPractice(adapter) {
     return ["createPractice", "restorePractice", "mountPractice"].every(key => typeof adapter[key] === "function");
@@ -290,6 +291,8 @@
       value.current >= 1 && value.current <= value.total);
   }
   function showProgress(value) {
+    layoutProgress = validProgress(value) ? { current: value.current, total: value.total } : null;
+    if (adaptiveLayout) adaptiveLayout.refresh();
     if (!progressCounter) return;
     const valid = validProgress(value);
     progressCounter.hidden = !valid;
@@ -303,6 +306,8 @@
     if (responseRevealer) responseRevealer.reveal(request);
   }
   function destroyMount() {
+    if (adaptiveLayout) adaptiveLayout.reset();
+    layoutProgress = null;
     stopResponseScroll();
     mountToken++;
     showProgress(null);
@@ -352,6 +357,32 @@
       if (dialog.open && event.target && event.target.tagName === "IMG") retryButton.hidden = false;
     }, true);
     dialog.append(header, mountHost, retryButton);
+    if (global.NameleculeGameViewport && typeof global.NameleculeGameViewport.adaptiveDialog === "function") {
+      adaptiveLayout = global.NameleculeGameViewport.adaptiveDialog(dialog, { host: mountHost,
+        reserveActions() {
+          // Measure the same existing action row without activating it. Reserve
+          // next/theory/practice space before Check, including wrapped rows.
+          if (!layoutProgress) return 0;
+          const row = node("div", "round-next nl-builder-actions nl-adaptive-reserve");
+          row.setAttribute("aria-hidden", "true"); row.inert = true;
+          const hostStyle = global.getComputedStyle(mountHost);
+          const width = mountHost.clientWidth - (parseFloat(hostStyle.paddingLeft) || 0) - (parseFloat(hostStyle.paddingRight) || 0);
+          row.style.cssText = "position:absolute;visibility:hidden;pointer-events:none;left:0;top:0;width:" + Math.max(80, width) + "px";
+          mountHost.append(row);
+          let height = 0;
+          // The intermediate required-level continuation can wrap earlier than
+          // the theory label. Reserve the largest real continuation envelope.
+          [text("continueLesson"), "Επόμενο υποχρεωτικό επίπεδο", "Next required level"].forEach(continuation => {
+            const labels = layoutProgress.current === layoutProgress.total ? [continuation, text("practice"), text("otherGame")] : [continuation];
+            row.replaceChildren();
+            labels.forEach((label, index) => { const item = node("button", "nl-quiz-button " + (index ? "secondary" : "primary"), label); item.type = "button"; row.append(item); });
+            const style = global.getComputedStyle(row);
+            height = Math.max(height, row.getBoundingClientRect().height + (parseFloat(style.marginTop) || 0) + 6);
+          });
+          row.remove(); return Math.ceil(height);
+        }
+      });
+    }
     responseRevealer = global.NameleculeRepairGame.createResponseRevealer({
       host: mountHost,
       active: () => !!(dialog && dialog.open),
@@ -456,6 +487,7 @@
       hideBack = !!target && global.document.activeElement === target;
     }
     back.hidden = hideBack;
+    if (adaptiveLayout) adaptiveLayout.refresh();
   }
   function newPractice(context, gameId) {
     const adapter = types[context.spec.type];
@@ -498,6 +530,7 @@
       const adapter = types[spec.type];
       const viewport = !!global.NameleculeGameViewport && spec.type === "alkane-game-choice-set";
       dialog.classList.toggle("nl-vp-dialog", viewport);
+      if (adaptiveLayout) adaptiveLayout.enable(viewport);
       const optional = context.practice && supportsPractice(adapter) && isComplete(context.scenario, context.index);
       context.practice = !!optional;
       updateDialog(context);

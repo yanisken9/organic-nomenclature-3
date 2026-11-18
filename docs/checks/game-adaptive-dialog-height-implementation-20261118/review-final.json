@@ -1,0 +1,82 @@
+{
+  "date": "2026-11-18",
+  "status": "ACCEPTED_WITH_DOCUMENTED_LIMITS",
+  "reviewer": "/root/adaptive_height_review",
+  "roleID": "NAMELECULE_REVIEWER_V1_20261023",
+  "freshContext": true,
+  "readOnly": true,
+  "baseHEAD": "168e3cec01f941a84d40bbe0dc07156e7baa35d0",
+  "target": "docs/checks/game-adaptive-dialog-height-implementation-20261118/runtime-target.json",
+  "runtimeTargetSHA256": "7209814fe005f4db6679fbf273be2ed0c27c7593854b473063dc6e44ca19e021",
+  "runtimePaths": [
+    "js/namelecule-game-viewport.js",
+    "css/namelecule-game-viewport.css",
+    "js/namelecule-quiz-checkpoints.js",
+    "js/namelecule-game-repair.js",
+    "js/namelecule-name-builder.js",
+    "js/namelecule-molecular-puzzle.js",
+    "js/namelecule-molecular-detective.js",
+    "js/namelecule-game-choice-checkpoint.js",
+    "js/namelecule-molecular-detective-lesson.js",
+    "games/name-builder.html",
+    "games/molecular-puzzle.html",
+    "games/molecular-detective.html",
+    "mulermoc-nom-57.html",
+    "games/molecular-detective-viewer.html"
+  ],
+  "findings": [
+    {
+      "id": "AH-R01",
+      "severity": "P2",
+      "status": "CLOSED",
+      "cause": "Changed Builder/Puzzle controller bytes retained old cache URLs.",
+      "resolution": "Full affected controller/host dependency closure uses adaptive-dialog-20261118-r3."
+    },
+    {
+      "id": "AH-R02",
+      "severity": "P2",
+      "status": "CLOSED",
+      "cause": "Retained hidden level-chooser source continued to apply old adaptive height.",
+      "resolution": "Suspend adaptive visuals for choosers, retain valid demand for return, reject hidden zero-width reports; actual chooser-open/return preserves state."
+    },
+    {
+      "id": "AH-R03",
+      "severity": "P2",
+      "status": "CLOSED",
+      "cause": "MutationObserver characterData Text targets lacked Element.closest.",
+      "resolution": "Resolve Element or parentElement before ancestry checks. Reviewer independently reproduced the before error and verified final shared checks."
+    }
+  ],
+  "independentVerification": [
+    "14 runtime, 29 protected and 13 core hashes matched.",
+    "Eight JS syntax checks and both viewer generator --check commands passed.",
+    "65 Builder/Puzzle and 15 Repair/Detective provider checks reexecuted in memory with report writes suppressed; shared contract 33/33.",
+    "308 artifact hashes verified; five candidate3 runs served exact frozen14.",
+    "Comparison links and eight PNG hashes/dimensions checked; representative tall/narrow/chooser/3D/isolated-order captures visually inspected.",
+    "All seven temporary profile paths independently absent. PID rechecking was denied by runtime permissions; PID cleanup is Developer-supplied evidence."
+  ],
+  "browserExecutionAttribution": "Developer /root/v58_browser_checks; Reviewer did not launch a browser or independently execute browser flows.",
+  "openNewFindings": [],
+  "existingFindings": [
+    {
+      "id": "PZ-PRE01",
+      "severity": "P3",
+      "status": "PRE_EXISTING_OUTSIDE_SCOPE",
+      "path": "js/namelecule-molecular-puzzle.js",
+      "line": 1058,
+      "impact": "Incorrect empty-board announcement on restoration, without loss of construction/progress."
+    }
+  ],
+  "limitations": [
+    "Correct states are genuine historical replays revalidated by current controllers, not newly completed triples.",
+    "Repair order coverage uses an isolated current-engine/name/asset-validated renderer without fresh assigned lesson grading.",
+    "The actual step11 level2 continuation at 800x900 was Next quiz, retaining level2 and counter2/3. The longer Next required level label is source/VM-supported but was not exercised as that actual browser continuation.",
+    "Headless Chrome evidence does not certify Firefox, physical touch, user warm-cache behavior, the conference machine, an offline fallback or uninterrupted operation.",
+    "One 20-atom 3D model was exercised; no universal 3D/molecule/game/level matrix was completed.",
+    "Canceled Document net::ERR_ABORTED requests remain recorded; no application JavaScript exceptions were observed in the supplied runs.",
+    "After explicit width/cap changes Detective height recomputed from 606 to 574px; both layouts preserved state and passed bounds. Fixed-width cold-restored 606px was stable at 0/2/7 seconds.",
+    "Existing P3 PZ-PRE01 remains outside scope: Puzzle announces an empty board after partial graph restoration while graph and progress remain preserved."
+  ],
+  "publicationAuthorizedByThisReview": false,
+  "reviewerWrites": false
+}

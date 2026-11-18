@@ -5,15 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#254c50">
   <title>Μοριακό παζλ · Namelecule</title>
-  <link rel="stylesheet" href="../css/namelecule-name-builder.css?v=game-viewport-20261116-r1">
-  <link rel="stylesheet" href="../css/namelecule-molecular-puzzle.css?v=game-viewport-20261116-r1">
+  <link rel="stylesheet" href="../css/namelecule-name-builder.css?v=adaptive-dialog-20261118-r3">
+  <link rel="stylesheet" href="../css/namelecule-molecular-puzzle.css?v=adaptive-dialog-20261118-r3">
   <link rel="stylesheet" href="../css/namelecule-game-levels.css?v=game-viewport-20261116-r1">
-  <link rel="stylesheet" href="../css/namelecule-game-viewport.css?v=game-viewport-20261116-r1">
-  <script src="../js/namelecule-game-viewport.js?v=game-viewport-20261116-r1" defer></script>
+  <link rel="stylesheet" href="../css/namelecule-game-viewport.css?v=adaptive-dialog-20261118-r3">
+  <script src="../js/namelecule-game-viewport.js?v=adaptive-dialog-20261118-r3" defer></script>
   <script src="../js/namelecule-game-levels.js?v=game-viewport-20261116-r1" defer></script>
   <script src="../js/namelecule-chemistry-client.js?v=puzzle-prototype-20261112-r1" defer></script>
   <script src="../js/namelecule-molecular-puzzle-engine.js?v=puzzle-prototype-20261112-r1" defer></script>
-  <script src="../js/namelecule-molecular-puzzle.js?v=game-viewport-20261116-r1" defer></script>
+  <script src="../js/namelecule-molecular-puzzle.js?v=adaptive-dialog-20261118-r3" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#assembly-title">Πήγαινε στη σύνθεση της δομής</a>
@@ -24,12 +24,12 @@
   <main class="game puzzle-game" id="game">
     <section class="intro" aria-labelledby="game-title">
       <p class="eyebrow">ΠΑΙΧΝΙΔΙ ΟΝΟΜΑΤΟΛΟΓΙΑΣ</p>
-      <div class="puzzle-title">
-        <img class="puzzle-logo" src="assets/molecular-puzzle/molecular-puzzle-logo-flat-v7.png" width="2148" height="732" alt="" aria-hidden="true">
-        <h1 id="game-title">Μοριακό παζλ</h1>
+      <div class="puzzle-title nl-game-identity">
+        <img class="puzzle-logo nl-game-logo" src="assets/molecular-puzzle/molecular-puzzle-logo-flat-v7.png" width="2148" height="732" alt="" aria-hidden="true">
+        <h1 id="game-title" class="nl-game-title">Μοριακό παζλ</h1>
       </div>
-      <p class="objective">Διάβασε το όνομα. Διάλεξε τα κατάλληλα κομμάτια και σύνδεσέ τα για να σχηματίσεις τον συνεπτυγμένο τύπο του μορίου.</p>
-      <p class="intro-detail">Από το όνομα στη δομή, με ομάδες ατόμων και απλούς δεσμούς.</p>
+      <p class="objective nl-game-mission"><span class="puzzle-full-mission">Διάβασε το όνομα. Διάλεξε τα κατάλληλα κομμάτια και σύνδεσέ τα για να σχηματίσεις τον συνεπτυγμένο τύπο του μορίου.</span><span class="puzzle-lesson-mission">Διάβασε το όνομα και σύνδεσε τα κατάλληλα κομμάτια για να φτιάξεις τον συνεπτυγμένο τύπο.</span></p>
+      <p class="intro-detail nl-game-prompt" id="construction-intro">Από το όνομα στη δομή, με ομάδες ατόμων και δεσμούς μεταξύ ατόμων C.</p>
     </section>
     <div id="game-levels"></div>
     <div id="game-status" class="game-status" role="status">Ετοιμάζουμε το όνομα και τα κομμάτια.</div>
@@ -38,19 +38,14 @@
     </div>
     <section class="puzzle-name-card" aria-labelledby="target-label">
       <p id="target-label">Το όνομα που θα γίνει δομή</p>
-      <p id="target-name" class="puzzle-target-name">Περιμένουμε το όνομα…</p>
+      <p id="target-name" class="puzzle-target-name nl-game-stimulus-name">Περιμένουμε το όνομα…</p>
     </section>
     <section class="panel puzzle-assembly-panel" aria-labelledby="assembly-title">
       <div class="panel-header">
         <h2 id="assembly-title" tabindex="-1">Η δομή που φτιάχνεις</h2>
-        <button id="fit-board" class="small-button" type="button" disabled>Προσαρμογή σχεδίου</button>
+        <button id="help-toggle" class="small-button" type="button" aria-expanded="false" aria-controls="puzzle-help-stage">Οδηγίες</button>
       </div>
       <div class="puzzle-assembly-content">
-        <div id="assembly-board" class="puzzle-board" tabindex="0" role="region" aria-label="Πλαίσιο σύνθεσης μοριακής δομής" aria-describedby="interaction-status">
-          <svg id="board-svg" class="puzzle-bonds" viewBox="0 0 720 360" preserveAspectRatio="none" role="group" aria-label="Δεσμοί της δομής"></svg>
-          <div id="board-nodes" class="puzzle-nodes"></div>
-          <p id="empty-board" class="puzzle-empty-board">Φέρε εδώ τα κομμάτια του μορίου</p>
-        </div>
         <section class="panel bank-panel puzzle-bank" aria-labelledby="piece-bank-title">
           <div class="panel-header"><h2 id="piece-bank-title">Τα διαθέσιμα κομμάτια</h2><span class="bank-note">Χρησιμοποίησε κάθε ομάδα όσες φορές χρειάζεται</span></div>
           <div id="piece-bank" class="puzzle-piece-bank" role="group" aria-label="Ομάδες για προσθήκη στη δομή">
@@ -61,29 +56,40 @@
             <button type="button" class="puzzle-piece" data-hydrogens="0" aria-label="Προσθήκη C" disabled>C</button>
           </div>
         </section>
-        <div class="puzzle-tools" role="group" aria-label="Εργαλεία σύνθεσης">
-          <button id="bond-tool" class="small-button puzzle-bond-tool" type="button" aria-pressed="false" disabled><span aria-hidden="true">—</span> Σύνδεσε δύο ομάδες</button>
-          <button id="undo-action" class="small-button" type="button" disabled>↶ Αναίρεση</button>
-        </div>
-        <div class="puzzle-selection-controls" role="group" aria-label="Μετακίνηση ή αφαίρεση επιλεγμένου κομματιού">
-          <span class="selected-tile">Επιλεγμένο: <strong id="selection-label">κανένα</strong></span>
-          <div class="puzzle-move-controls">
-            <button id="move-left" class="small-button" type="button" data-move="left" aria-label="Μετακίνηση αριστερά" disabled>←</button>
-            <button id="move-right" class="small-button" type="button" data-move="right" aria-label="Μετακίνηση δεξιά" disabled>→</button>
-            <button id="move-up" class="small-button" type="button" data-move="up" aria-label="Μετακίνηση πάνω" disabled>↑</button>
-            <button id="move-down" class="small-button" type="button" data-move="down" aria-label="Μετακίνηση κάτω" disabled>↓</button>
+        <div id="board-frame" class="puzzle-board-frame">
+          <div class="puzzle-board-toolbar" role="group" aria-label="Εργαλεία πλαισίου">
+            <button id="undo-action" class="small-button" type="button" aria-label="Αναίρεση τελευταίας αλλαγής" title="Αναίρεση τελευταίας αλλαγής" disabled><span aria-hidden="true">↶</span><span class="undo-action-label">Αναίρεση</span></button>
+            <button id="pan-tool" class="small-button" type="button" aria-label="Μετακίνηση όλης της κατασκευής" aria-pressed="false" title="Χεράκι: σύρε όλη την κατασκευή ή χρησιμοποίησε τα βέλη μέσα στο σχέδιο" disabled><svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 12V5a1.5 1.5 0 0 1 3 0v6-8a1.5 1.5 0 0 1 3 0v8-7a1.5 1.5 0 0 1 3 0v7-5a1.5 1.5 0 0 1 3 0v8c0 5-3 8-7 8-3 0-5-2-6-4l-3-5c-1-2 1-3 2-2l3 3"/></svg><span class="pan-tool-label">Μετακίνηση μορίου</span></button>
+            <button id="remove-selection" class="small-button" type="button" aria-label="Αφαίρεση επιλεγμένης ομάδας ή δεσμού" title="Αφαίρεση επιλεγμένης ομάδας ή δεσμού" disabled><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h18M9 6V3h6v3M5 6l1 15h12l1-15M10 10v7m4-7v7"/></svg><span class="remove-selection-label">Αφαίρεση</span></button>
+            <button id="cancel-pending-bond" class="small-button puzzle-cancel-pending" type="button" aria-label="Ακύρωση δεσμού" title="Ακύρωση δεσμού" hidden><span aria-hidden="true">×</span><span class="cancel-pending-label"> Ακύρωση δεσμού</span></button>
           </div>
-          <button id="remove-selection" class="small-button" type="button" disabled>Αφαίρεση</button>
+        <div id="assembly-board" class="puzzle-board" tabindex="0" role="region" aria-label="Πλαίσιο σύνθεσης μοριακής δομής" aria-describedby="interaction-status">
+          <svg id="board-svg" class="puzzle-bonds" viewBox="0 0 720 360" preserveAspectRatio="none" role="group" aria-label="Δεσμοί της δομής"></svg>
+          <div id="board-nodes" class="puzzle-nodes"></div>
+          <button id="pending-bond-end" class="puzzle-free-end" data-pending-end type="button" hidden aria-label="Ελεύθερο άκρο δεσμού"></button>
+          <div id="bond-picker" class="puzzle-bond-picker" role="group" aria-labelledby="bond-picker-label" hidden>
+            <strong id="bond-picker-label">Διάλεξε δεσμό</strong>
+            <div class="puzzle-order-options">
+              <button type="button" data-bond-order="1" aria-label="Απλός δεσμός">— <span>Απλός</span></button>
+              <button type="button" data-bond-order="2" aria-label="Διπλός δεσμός">═ <span>Διπλός</span></button>
+              <button type="button" data-bond-order="3" aria-label="Τριπλός δεσμός">≡ <span>Τριπλός</span></button>
+              <button id="close-bond-picker" type="button" aria-label="Κλείσιμο επιλογής δεσμού">×</button>
+            </div>
+          </div>
+          <p id="empty-board" class="puzzle-empty-board">Φέρε εδώ τα κομμάτια του μορίου</p>
         </div>
+        </div>
+        <span class="sr-only">Επιλεγμένο: <strong id="selection-label">κανένα</strong></span>
         <p id="interaction-status" class="puzzle-interaction-status" role="status" aria-live="polite">Διάλεξε μια ομάδα και πρόσθεσέ τη στο πλαίσιο.</p>
         <div class="check-row"><button id="check-answer" class="primary" type="button" disabled>Έλεγχος</button><button id="next-molecule" class="secondary" type="button" disabled>Άλλο μόριο</button></div>
         <details id="instructions" class="helper puzzle-instructions" open>
-          <summary>Οδηγίες χειρισμού</summary>
+          <summary>Χειρισμός της δομής</summary>
           <div class="helper-methods">
-            <span class="helper-method"><strong>Προσθήκη:</strong> Σύρε μια ομάδα στο πλαίσιο ή κάνε κλικ επάνω της.</span>
-            <span class="helper-method"><strong>Δεσμός:</strong> Πάτησε «Σύνδεσε δύο ομάδες» και διάλεξε τις δύο ομάδες που θέλεις να ενώσεις.</span>
-            <span class="helper-method"><strong>Μετακίνηση:</strong> Σύρε μια ομάδα στη θέση της ή επίλεξέ τη και χρησιμοποίησε τα κουμπιά με τα βέλη ή τα αντίστοιχα πλήκτρα.</span>
+            <span class="helper-method"><strong>Προσθήκη:</strong> Κάνε κλικ σε ένα από τα διαθέσιμα κομμάτια ή πάτησε <kbd>Enter</kbd>/<kbd>Διάστημα</kbd> για να προσθέσεις μια ασύνδετη ομάδα στο πλαίσιο. Μπορείς επίσης να τη σύρεις στη θέση που θέλεις.</span>
+            <span class="helper-method" id="construction-instructions"><strong>Δεσμός:</strong> Κάνε κλικ σε μια ομάδα του σχεδίου ή πάτησε <kbd>Enter</kbd>/<kbd>Διάστημα</kbd> και διάλεξε απλό, διπλό ή τριπλό δεσμό μεταξύ ατόμων C. Σύρε μια συμβατή ομάδα κοντά στο ελεύθερο άκρο και άφησέ τη όταν φωτιστεί πράσινο για να κουμπώσει εκεί. Με πληκτρολόγιο, μετακίνησε μια ήδη τοποθετημένη ομάδα κοντά στο ελεύθερο άκρο με τα πλήκτρα με τα βέλη και πάτησε <kbd>Enter</kbd> για να επιβεβαιώσεις τη σύνδεση. Σύρε το ελεύθερο άκρο ή χρησιμοποίησε τα πλήκτρα με τα βέλη για οριζόντια ή κατακόρυφη κατεύθυνση, όπου υπάρχει ελεύθερος χώρος.</span>
+            <span class="helper-method"><strong>Μετακίνηση:</strong> Σύρε μια ομάδα στη θέση της ή επίλεξέ τη και χρησιμοποίησε τα πλήκτρα με τα βέλη. Αν είναι ήδη συνδεδεμένη, μετακινείται μόνο σε θέσεις που κρατούν όλους τους δεσμούς της οριζόντιους ή κατακόρυφους, με σταθερές τις γειτονικές ομάδες. Για όλη την κατασκευή μαζί, ενεργοποίησε το χεράκι και σύρε μέσα στο σχέδιο ή χρησιμοποίησε τα πλήκτρα με τα βέλη. Πάτησε ξανά το χεράκι για να επιστρέψεις στα κομμάτια.</span>
             <span class="helper-method"><strong>Αφαίρεση:</strong> Σύρε μια ομάδα έξω από το πλαίσιο ή επίλεξε ομάδα ή δεσμό και πάτησε «Αφαίρεση» ή <kbd>Delete</kbd>. Η αφαίρεση μιας ομάδας αφαιρεί και τους δεσμούς της.</span>
+            <span class="helper-method"><strong>Αναίρεση:</strong> Πάτησε «Αναίρεση» για να επιστρέψεις στην προηγούμενη κατασκευή.</span>
           </div>
         </details>
         <div id="feedback" class="feedback" role="status" hidden></div>

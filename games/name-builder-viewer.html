@@ -10,7 +10,14 @@
     window.__mulerStepLang = 'gr';
     // A bounded failure response also works if a later native script fails.
     (function () {
-      var session = new URLSearchParams(location.search).get('session');
+      var params = new URLSearchParams(location.search);
+      var formulaPx = params.get('nlFormulaPx');
+      var pixels = Number(formulaPx);
+      if (parent !== window && /^[0-9]+(?:[.][0-9]+)?$/.test(formulaPx || '') &&
+          Number.isFinite(pixels) && pixels >= 20 && pixels <= 36) {
+        document.documentElement.setAttribute('data-namelecule-2d-font-size', String(pixels));
+      }
+      var session = params.get('session');
       if (parent === window || !/^[A-Za-z0-9_-]{16,128}$/.test(session || '')) return;
       window.__nameBuilderStartupTimer = setTimeout(function () {
         if (window.__nameBuilderStarted) return;
@@ -412,7 +419,7 @@
   <script src="js/namelecule-generated-repair-checkpoint.js?v=choice-games-20261111-r2"></script>
   <script src="js/namelecule-name-builder-engine.js?v=name-builder-20261111-r1"></script>
   <script src="js/namelecule-molecular-puzzle-engine.js?v=puzzle-lesson-20261112-r1"></script>
-  <script src="js/namelecule-game-choice-checkpoint.js?v=puzzle-lesson-20261112-r1"></script>
+  <script src="js/namelecule-game-choice-checkpoint.js?v=puzzle-manual-success-20261117-r4"></script>
   <script src="js/mulermoc-nom-scenario-55.js?v=namelecule-v55-20261110-r2"></script>
   <script src="js/mulermoc-nom-iupac-55.js?v=namelecule-v55-20261110-r2"></script>
   <script src="js/mulermoc-nom-lang-55.js?v=namelecule-v55-20261110-r2"></script>

@@ -1,0 +1,125 @@
+{
+  "completeLocally": true,
+  "approvedPlan": "../plan.json",
+  "finalTargetSHA256": "f370b09abdf847b1d12fc6c866577e8fd1276001e1da95a5896bc18c286b52c5",
+  "files": {
+    "js/namelecule-molecular-puzzle.js": "c9bb37a49ce658c4f7fa394c881719d580dda8ae2e601af481fd11775a6b4479",
+    "css/namelecule-molecular-puzzle.css": "4dcc449e27a3ca4101831cf70afd547eeca03ef7331862b00088710b592f8946",
+    "games/molecular-puzzle.html": "bd8e0629cb63e6a4ba97bec2ad8e89003e8118f6e1e9ff1a9e59c35c9eafaf54",
+    "js/namelecule-game-choice-checkpoint.js": "a2b8b11aadda1f671e29af7c5379b82ca13c262b8d5312d553c8e654665bb251",
+    "mulermoc-nom-54.html": "c806d2540975ac59345bdc3483ba59b42a21d5e31c0e257c7a3520c1ef300759",
+    "mulermoc-nom-55.html": "7b882d18bcde105f25b013fccb7209bec35abbe38e9ce8ef2f2679a5f368a86d",
+    "mulermoc-nom-56.html": "1d7933c37109cdd4255ea9ca4ae0eb7d730fc474f4fee5ad8c07f38e5c26ea93",
+    "mulermoc-nom-57.html": "192183aa5a98c44aaecf35e4058d7fc5b048ad65374044614cb7ffe183ddc040",
+    "games/name-builder-viewer.html": "18b0b12826dc37d70ede54a936f56fedb2367a6f49345c34521884ca8988eab1",
+    "games/molecular-detective-viewer.html": "494b0987313729667e8ca7e48badbeaf97290edbe5e87fee4ab9f0717e89115a",
+    "design/welcome-proposal.html": "c607ab13c5b7dc1d74aef68eb7d73c409e2121d56f167c8bdfaf1b5b2a12326b"
+  },
+  "behavior": [
+    "Placedpiececlick localorderchooser1/2/3, weightedavailablechoices",
+    "Oneowner-relative pendingfreeend;mouseorarroworientation;realparallelstrokeorder",
+    "Nearcompatiblebankorplacedpiecepreview;onreleaseatomicjoin;Undo/Delete/cancel",
+    "Optionalconstructionmetadata+exactnumericorderpersistence; parentindependentalkanegrade",
+    "Legacyparentcapabilityfallback, coherentr2loadersandgeneratedhosts"
+  ],
+  "coreAndEngineChanged": false,
+  "dataMOLScenariosChanged": false,
+  "developerPureChecks": {
+    "parent": 173,
+    "child": 206,
+    "kind": "VM/DOMdoubles, notbrowsergrade"
+  },
+  "browser": {
+    "summary": "browser/acceptance-summary.json",
+    "sha256": "ec609da6d906fa95790725ff57150bcf6998e81819614dac7fd4b4eb6816a597",
+    "artifactManifestSHA256": "00874b067d5acccacc428feedbf6eb8cd18da3634d9df6466aed1ed84f8de0e7",
+    "totals": {
+      "assertionsRecorded": 559,
+      "assertionsPassed": 558,
+      "assertionsFailed": 1,
+      "harnessStops": 2,
+      "environmentLaunchStops": 1,
+      "rootHoldInterruptions": 1,
+      "completedRuns": 1,
+      "genuineCorrectUIAnswers": 3,
+      "genuineIncorrectUIAnswers": 1,
+      "genuineCorrectMoleculeIDs": [
+        "butane",
+        "pentane",
+        "ethane"
+      ],
+      "fixtureGradeClaims": 0,
+      "warning": "Aggregate assertion total includes repeated checks across partial cuts; it is not a count of independent scenarios and does not mean all runs passed."
+    },
+    "acceptance": [
+      {
+        "group": "UI/menu/no required scroll",
+        "evidence": [
+          "run-chrome-core-144734/results.json:menuViews",
+          "run-chrome-parent-144903/results.json:menuViews"
+        ],
+        "verified": "Standalone and actual lesson1440×900,1024×640,390×700; full order menu and actual Check/board hit-tested; actual dialog fit/no scroll input. Floating picker may cover its owner; real Close works before reopening."
+      },
+      {
+        "group": "Trusted snap and visible orders",
+        "evidence": [
+          "run-chrome-core-144734/results.json:trustedSingleSnap,doubleStrokeGeometry,tripleStrokeGeometry"
+        ],
+        "verified": "BankCH3 single; placedCH2 double/CH triple; compatible preview before release; one/two/three strokes and multiple CSS-pixel spacing; one Undo removes new snapped node+edge."
+      },
+      {
+        "group": "Edit/capacity/access alternatives",
+        "evidence": [
+          "run-chrome-core-144734/results.json:checks,endpointOrientationDrag,endpointOrientationKeyboard,clickFallback"
+        ],
+        "verified": "CH3 offers single only; invalid target CH3double rejected without H mutation; far miss, Cancel, endpoint drag and trusted arrow orientation, click fallback double, trusted Delete+Undo; standalone tests used no Check."
+      },
+      {
+        "group": "Actual parent raw persistence and wrong answer",
+        "evidence": [
+          "run-chrome-parent-144903/results.json",
+          "run-chrome-parent-144903/actual-double-ungraded-record.json",
+          "run-chrome-parent-144903/actual-pending-ungraded-record.json"
+        ],
+        "verified": "Exact numeric orders2/3 cold restore; pending version1 separate from real bonds, owner/order/unit logicaldirection preserved across resize/coldrestore; explicit order2 answer submitted1/solvedfalse and gate remained locked."
+      },
+      {
+        "group": "BOND-REV-01 Escape correction",
+        "evidence": [
+          "run-chrome-tail-145343/results.json:escapeRegression"
+        ],
+        "verified": "Actual board Escape1 cancels pending and preserves graph/dialog; next board Escape exits; reopen preserves graph; node-focused Escape without construction exits; cached-parent fallback board Escape exits."
+      },
+      {
+        "group": "Genuine single triple/earned progress",
+        "evidence": [
+          "run-chrome-tail-145343/results.json:correctUIAttempts,genuineSingleTripleIDs",
+          "run-chrome-tail-145343/actual-earned-single-triple-record.json"
+        ],
+        "verified": "Actual UI butane,pentane,ethane correct distinct rounds independently parent-graded; unlock gate4; exact receipt coldrestore and Continue5. No restore fixture used to obtain grade."
+      },
+      {
+        "group": "Representative cached parent compatibility",
+        "evidence": [
+          "run-chrome-tail-145343/results.json:legacyRawState"
+        ],
+        "verified": "Archived exact preimplementation Main57+adapter only, current r2 child/dependencies, new sequential tab with fresh sessionStorage and no reset writes; actual order1partial edit/coldrestore no construction metadata and normal board Escape."
+      }
+    ],
+    "limitations": [
+      "100% headless CSS viewport; nativeOSfullscreen, actualbrowserzoom, physicaltouch/mobile, Firefox,3D,conference/offline readiness not qualified.",
+      "Actual pointercancel/lostcapture/outside-drag cancellation was not exercised; Cancel button, invalid drop, far miss and atomic Undo were exercised; static VM coverage is separately root/child evidence.",
+      "Local menu keyboard Enter traversal was not separately exercised; trusted endpoint arrows/Delete and genuine click fallback were exercised.",
+      "No preimplementation earned Puzzle fixture was browser-loaded; actual legacy-order1partial coldrestore and newly genuine earned triple coldrestore are distinct evidence. Root pure snapshot tests cover additional legacy shapes.",
+      "No full previous chooser330/four-game matrix repeated; unchanged viewportCSS/cores/assets protected, root owns eleven-file cache/generated checks.",
+      "No broad all-browser/all-cache reliability claim."
+    ]
+  },
+  "chemicalReview": "chemistry-postcheck.json",
+  "independentReview": "review-final.json",
+  "sourceHEADIndexAndProtectedPreserved": true,
+  "localGame": "http://127.0.0.1:8013/games/molecular-puzzle.html?v=puzzle-bond-stubs-20261116-r2",
+  "localLesson": "http://127.0.0.1:8013/mulermoc-nom-57.html?scenario=scenarios/alkanes-user-3.scenario.json&present=1&from=theory-library&v=puzzle-bond-stubs-20261116-r2#step=4",
+  "saveScope": "Source+datedbeforecopies+projectrecords only; no fullbackup/commit/push/publication/JSONexport requested",
+  "standalonePersistence": "Existing page-memory/per-levelslots retained; reload persistence independentlyverified inlesson, notclaimedstandalonefullreload"
+}

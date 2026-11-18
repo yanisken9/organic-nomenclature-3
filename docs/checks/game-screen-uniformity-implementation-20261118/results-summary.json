@@ -1,0 +1,79 @@
+{
+  "date": "2026-11-18",
+  "status": "COMPLETE_LOCALLY",
+  "version": 57,
+  "authorization": "Explicit user approval of the concrete18-file uniformity plan.",
+  "targetSHA256": "48ad8830bfbd6a245be311b28a71501442fa4e7d67291506957094fe9a7df523",
+  "targetFiles": [
+    "css/namelecule-game-viewport.css",
+    "css/namelecule-repair-round.css",
+    "css/namelecule-name-builder.css",
+    "css/namelecule-molecular-puzzle.css",
+    "css/namelecule-molecular-detective.css",
+    "js/namelecule-game-repair.js",
+    "games/name-builder.html",
+    "games/molecular-puzzle.html",
+    "games/molecular-detective.html",
+    "js/namelecule-game-choice-checkpoint.js",
+    "js/namelecule-molecular-detective-lesson.js",
+    "mulermoc-nom-57.html",
+    "games/molecular-detective-viewer.html",
+    "js/namelecule-name-builder.js",
+    "js/namelecule-molecular-detective.js",
+    "tools/build-name-builder-host.py",
+    "tools/build-molecular-detective-host.py",
+    "games/name-builder-viewer.html"
+  ],
+  "behavior": [
+    "Centered original game title and logo in each actual lesson game.",
+    "Common bold general mission typography and shared system-font family.",
+    "28px compound names and preferred formula symbols with complete-bounds safe fit.",
+    "Preserved authored JSON, grades, progress, required levels, gates and chemical input files.",
+    "Responsive parent and Puzzle editing layout preserve usable canvas and readable level selector."
+  ],
+  "evidence": {
+    "browser/summary.json": "c1ea6fdeb61fbb25d0d038417e5b9a09bc0b60ddab4165ca0890418f20c22ebc",
+    "browser/artifact-manifest.json": "0b131fd4d11b252b62cb33b40a444c27c2c01cee64a0418f9449b1e447e06799",
+    "comparison/manifest.json": "d3738742963ed19ffcf58c8d5c3f26fc7af6c7f5d99d81c27dfb41ad3cf11447"
+  },
+  "developerChecks": "developer-checks.json",
+  "independentReview": {
+    "path": "review-final.json",
+    "SHA256": "8d4cc97c0fbc50c10ca7a27b52bb79d09b62869ae4b7c874d85844592be9bb9b",
+    "verdict": "No unresolved new P0/P1/P2 findings in the reviewed scope; Developer may close with one pre-existing P3 recorded."
+  },
+  "browser": "Final candidate6 actual Chrome53/53 at1280x720 and390x700; targeted earlier interaction/short-window evidence separately qualified in browser/summary.json.",
+  "comparison": {
+    "path": "docs/checks/game-screen-uniformity-implementation-20261118/comparison/index.html",
+    "url": "http://127.0.0.1:8013/docs/checks/game-screen-uniformity-implementation-20261118/comparison/index.html?v=uniform-games-20261118-r4",
+    "beforeScreens": 8,
+    "afterScreens": 8,
+    "sameUntouchedPreflightRecord": true,
+    "staticScreenshots": true,
+    "afterCandidate": 6
+  },
+  "remainingFindings": [
+    "PZ-PRE01 pre-existing P3 empty-canvas announcement on partial Puzzle restore; visible construction retained; controller outside approved scope."
+  ],
+  "limitations": [
+    "Firefox and physical touch not validated.",
+    "No exhaustive compound/representation/level grading matrix or fresh full-gate triples.",
+    "No complete standalone browser replay or full presentation-navigation replay.",
+    "One actual 20-atom 3D model observed; no universal mapping, offline or conference-machine certification.",
+    "Native full-bounds framing can safely reduce the preferred 28px formula font; responsive display coordinates can change while graph semantics remain identical."
+  ],
+  "preservation": {
+    "protectedPaths": 26,
+    "activeCores": 13,
+    "molecularSVGInputs": 500,
+    "allUnchanged": true,
+    "HEADUnchanged": true,
+    "indexUnchanged": true
+  },
+  "coreReport": "No core.js or core-version changes in the entire18November session.",
+  "commit": null,
+  "pushed": false,
+  "published": false,
+  "JSONExport": false,
+  "nextStep": "User views actual-game comparison and local lesson. Any fix to the pre-existing Puzzle announcement needs its own concrete scope."
+}

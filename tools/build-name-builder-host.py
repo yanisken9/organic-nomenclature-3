@@ -9,6 +9,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "mulermoc-nom-55.html"
 DEST = ROOT / "games/name-builder-viewer.html"
 INIT = ROOT / "spt/init-55.spt"
+ALKANE_DATA = ROOT / "js/MULERMOC_namelecule_alkanes_v1_data.js"
 
 
 def generate():
@@ -28,7 +29,14 @@ def generate():
     window.__mulerStepLang = 'gr';
     // A bounded failure response also works if a later native script fails.
     (function () {
-      var session = new URLSearchParams(location.search).get('session');
+      var params = new URLSearchParams(location.search);
+      var formulaPx = params.get('nlFormulaPx');
+      var pixels = Number(formulaPx);
+      if (parent !== window && /^[0-9]+(?:[.][0-9]+)?$/.test(formulaPx || '') &&
+          Number.isFinite(pixels) && pixels >= 20 && pixels <= 36) {
+        document.documentElement.setAttribute('data-namelecule-2d-font-size', String(pixels));
+      }
+      var session = params.get('session');
       if (parent === window || !/^[A-Za-z0-9_-]{16,128}$/.test(session || '')) return;
       window.__nameBuilderStartupTimer = setTimeout(function () {
         if (window.__nameBuilderStarted) return;
@@ -63,6 +71,15 @@ def generate():
 '''
     assert source.count("<head>") == 1
     source = source.replace("<head>", "<head>\n" + early, 1)
+    # Accepted customs merge after fInitData has initialized the base library.
+    # Load the same curated bundle as Main57 before the native viewer starts.
+    bundle_digest = hashlib.sha256(ALKANE_DATA.read_bytes()).hexdigest()
+    data_tag = '<script src="js/MULERMOC_namelecule_alkanes_v1_data.js?v=' + bundle_digest + '"></script>'
+    source, count = re.subn(
+        r'(<script src="js/jsme-nick-nomeclature-moc2-data_55\.js[^"\n]*"></script>)',
+        lambda match: match[1] + '\n  ' + data_tag, source, count=1,
+    )
+    assert count == 1, "Expected the Main55 base-data script"
     # Model-relative SDF and init-script loads use the same repository base as
     # the original page, including after JSmol has asynchronously started.
     init_digest = hashlib.sha256(INIT.read_bytes()).hexdigest()
@@ -87,6 +104,13 @@ def generate():
     source = source.replace("</head>", config + "</head>", 1)
     source = source.replace("<title>Namelecule — Ονοματολογία Οργανικών Ενώσεων</title>",
                             "<title>Namelecule — Προβολή μορίου</title>", 1)
+    # Content-bound viewer URL also refreshes shared display calibration.
+    viewer_digest = hashlib.sha256((ROOT / "js/mulermoc-nom-molview-55.js").read_bytes()).hexdigest()
+    source, viewer_count = re.subn(
+        r'(src="js/mulermoc-nom-molview-55\.js)(?:\?[^"\n]*)?"',
+        lambda match: match[1] + '?v=' + viewer_digest + '"', source, count=1,
+    )
+    assert viewer_count == 1, "Expected the native viewer script"
     bridge = '<script src="js/namelecule-name-builder-host.js?v=prototype-20261111-r1"></script>\n'
     source = source.replace("</body>", bridge + "</body>", 1)
     digest = hashlib.sha256(original.encode("utf-8")).hexdigest()

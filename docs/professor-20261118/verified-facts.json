@@ -1,0 +1,332 @@
+{
+  "date": "2026-11-18",
+  "preparedUTC": "2026-11-18T14:21:58.027521+00:00",
+  "scope": "Professor report of completed local contributions since the published 2026-11-16 report. Source results and actual current hashes inspected; no report-author application/browser/chemistry rerun.",
+  "publicationStatus": "PENDING_SAVE_AND_PUBLICATION",
+  "delivery": {
+    "commit": null,
+    "pushVerified": false,
+    "publicHTTPVerified": false,
+    "fullSaveVerified": false,
+    "twoDatedFolders": "Pending coordinator evidence; two folders on one computer are not independent cloud backups."
+  },
+  "previousPublishedReport": "docs/professor-20261116/update.html",
+  "sourceHEADAtPreparation": "168e3cec01f941a84d40bbe0dc07156e7baa35d0",
+  "activeMainVersion": 57,
+  "v58RuntimeIntegrated": false,
+  "v58ReadinessStatus": "CHECKS_COMPLETE_NOT_READY_FOR_PROMOTION",
+  "v58ReadinessSource": "docs/checks/v58-readiness-20261118/results-summary.json",
+  "completedUnits": [
+    "game-choice-scale-20261116/implementation",
+    "puzzle-bond-stubs-20261116/implementation",
+    "professor-detective-v57-sync-20261117",
+    "puzzle-stub-clearance-20261117",
+    "puzzle-board-tools-20261117",
+    "puzzle-simple-flow-20261117",
+    "puzzle-success-manual-placement-20261117",
+    "alkane-game-cards-implementation-20261118",
+    "alkanes-library-card-four-quizzes-20261118",
+    "game-screen-uniformity-implementation-20261118",
+    "game-inline-results-implementation-20261118",
+    "game-adaptive-dialog-height-implementation-20261118"
+  ],
+  "latestLayoutSupersedesEarlierLayouts": true,
+  "adaptiveHeight": {
+    "viewportCSSpx": [
+      1181,
+      1093
+    ],
+    "initialSameQuestion": true,
+    "beforeAllFourPx": 1069,
+    "afterPx": {
+      "repair": 628,
+      "builder": 739,
+      "puzzle": 755,
+      "detective": 576
+    },
+    "runtimeTarget": "docs/checks/game-adaptive-dialog-height-implementation-20261118/runtime-target.json",
+    "runtimeTargetSHA256": "7209814fe005f4db6679fbf273be2ed0c27c7593854b473063dc6e44ca19e021",
+    "currentRuntimeFilesCompared": 14,
+    "mismatches": []
+  },
+  "upstream": {
+    "lastActuallySynchronized": "11d5886fd28e3242a7cbb9daa6206722628a6e0b",
+    "lastChecked": "a9e598f04610552234395bc4bb71d06b6f09edb2",
+    "historyAndChangelogRead": "Developer coordinator evidence; report author inspected saved upstream-review.json",
+    "decision": "User retains v57; later v58 work not integrated."
+  },
+  "core": {
+    "changedByReportedUnits": false,
+    "activeFilesCompared": 13,
+    "comparisonBaseline": "docs/checks/game-adaptive-dialog-height-implementation-20261118/baseline.json",
+    "comparisonMismatches": [],
+    "hashes": {
+      "js/mulermoc-nom-core-42.js": "a7b95d7fd9eb8589c2f441205ddd3751bd6da9bf9834fa60d9a5b5d2d2aa2b83",
+      "js/mulermoc-nom-core-43.js": "93373c8ea49d6489350c4c7eee36d444b0f6ff5c13c500aa9662d4997575ac21",
+      "js/mulermoc-nom-core-44.js": "3bb8773be785992ec581d4cdd11a58a6bb5a833ed429ae07287839b436e523e1",
+      "js/mulermoc-nom-core-45.js": "dde5fb6350a0374e1ebda69e0870cbfce0bbed027b8219f33bc4de3c4cf9ae74",
+      "js/mulermoc-nom-core-48.js": "37dad911ed73af0768fc922186cb94e71df7df1144b2c1e75aee4c9202ce6c0d",
+      "js/mulermoc-nom-core-49.js": "ae85dd22b94292ed539ff2a858a1a6fe3672af90298662e5c6860fb411a65951",
+      "js/mulermoc-nom-core-50.js": "0f79b5af20b9c3b4504673876abc03b6c162af316c33dff55fd55e0c22a43fd9",
+      "js/mulermoc-nom-core-51.js": "096d617853646de0dfd67bcbde3e32252aebcb98e7525b05e6f7e71ccb48a5fc",
+      "js/mulermoc-nom-core-52.js": "d2138418ff630ab77e578b80ca8ba3a10cc1b877c3ab8c0e5c2735ffcd1f24a2",
+      "js/mulermoc-nom-core-54.js": "8f3e5f76d96322faf7cf9251f4cae3eca204fe2f82bf5754fdce6ffc4cd5d5a9",
+      "js/mulermoc-nom-core-55.js": "6cbdbd0ce60f5d66ff3e6925cdfd48e470764baa02b6263f325eff356df5e270",
+      "js/mulermoc-nom-core-56.js": "01e4b44578dc9ed6c8a484c5d38ee8a56e44ce2fc81ac6cf479a8333718ee8b5",
+      "js/mulermoc-nom-core-57.js": "c41b722db2fb3748f827d19ee1f05d7d8f680bb9f51c664305baa7d49c132c7e"
+    },
+    "archivedUpstreamCore58": "Reference only; no runtime activation.",
+    "sincePublishedNov16Proof": {
+      "baseline": "communication/checkpoints/save-publish-20261116-state.json:coreBaseline",
+      "filesCompared": 13,
+      "mismatches": [],
+      "publicBaselineDate": "2026-11-16",
+      "note": "Checkpoint mapping inspected locally; not a public hyperlink."
+    }
+  },
+  "scenario": {
+    "path": "scenarios/alkanes-user-3.scenario.json",
+    "sha256": "d5e85fca80cb1ddb04b9776e910fbe6ee642ea9ee2407acecebd5de585947e82",
+    "bytes": 35104
+  },
+  "levelPolicy": {
+    "step4Required": [
+      1
+    ],
+    "step11Required": [
+      1,
+      2
+    ],
+    "optional": [
+      3
+    ],
+    "correctDifferentMoleculesPerRequiredLevel": 3,
+    "scope": "Same game, level and attempt; gate11 needs its own attempts.",
+    "alkanePoolMolecules": 14
+  },
+  "browserEvidence": {
+    "role": "Developer execution, inspected by independent Reviewer; no independent Reviewer browser execution.",
+    "latestSizesCSSpx": [
+      [
+        1181,
+        1093
+      ],
+      [
+        1024,
+        640
+      ],
+      [
+        390,
+        700
+      ]
+    ],
+    "adaptiveCorrectStates": "Historical genuine correct replays, revalidated by current controllers; no new adaptive triples.",
+    "earlierInlineUnit": "One fresh genuine Repair triple and actual Continue to step5.",
+    "actualStep11L2Next": "Next quiz; retained level2,counter2/3. Not actual Next required level coverage.",
+    "repairOrder": "Isolated current-engine/name/asset-validated renderer; no fresh assigned lesson grading.",
+    "threeD": "One actual20atom model; not universal coverage.",
+    "failedAndPartialRuns": "Retained separately; do not sum into one all-pass suite."
+  },
+  "independentReview": {
+    "latestReviewer": "/root/adaptive_height_review",
+    "latestStatus": "ACCEPTED_WITH_DOCUMENTED_LIMITS",
+    "latestNewOpenFindings": [],
+    "resolved": [
+      "AH-R01",
+      "AH-R02",
+      "AH-R03"
+    ],
+    "preExistingOpen": [
+      {
+        "id": "PZ-PRE01",
+        "severity": "P3",
+        "behavior": "Puzzle empty-board announcement after non-empty partial restore; graph and progress retained."
+      }
+    ]
+  },
+  "limitations": [
+    "Current Chrome evidence does not certify Firefox, physical touch, personal warm-cache behavior or conference machine.",
+    "No exhaustive molecule/representation/game/level matrix or universal3D qualification.",
+    "No Internet-independent fallback or uninterrupted reliability established.",
+    "External libraries/services remain; successful3D cuts use JSmol J2S CDN.",
+    "Canceled network requests remain recorded; no JavaScript exceptions observed in supplied latest runs.",
+    "No measured learning outcome."
+  ],
+  "sources": [
+    {
+      "path": "docs/checks/game-choice-scale-20261116/implementation/results-summary.json",
+      "sha256": "dbde82b915a58f16bffd3de56546e8110c0e749266282ee79eba6a14bda99589",
+      "bytes": 4331
+    },
+    {
+      "path": "docs/checks/game-choice-scale-20261116/implementation/review-final.json",
+      "sha256": "aa79d19c8004ddd11686b87ec8b27b2e35a33ad3c69be4104a6447b21604f82b",
+      "bytes": 1286
+    },
+    {
+      "path": "docs/checks/puzzle-bond-stubs-20261116/implementation/results-summary.json",
+      "sha256": "cadde7837814fdcec5310ae5718217d1ec2b65a741c6ef0a65c1a22998714e31",
+      "bytes": 7700
+    },
+    {
+      "path": "docs/checks/puzzle-bond-stubs-20261116/implementation/review-final.json",
+      "sha256": "f252aca89752ef0295e51b95780a361ba4faaa3d0f8b83c705af4049e22e1d4b",
+      "bytes": 2598
+    },
+    {
+      "path": "docs/checks/professor-detective-v57-sync-20261117/results-summary.json",
+      "sha256": "84fda887711537d897c8e46e2847507e0cc790773515f56a36237a67dcf2d68a",
+      "bytes": 4620
+    },
+    {
+      "path": "docs/checks/professor-detective-v57-sync-20261117/review-final.json",
+      "sha256": "a0aee39ced9d7a37984b7ceacc2d624cb0c65efcc71be67f7efcf608b51151cc",
+      "bytes": 3089
+    },
+    {
+      "path": "docs/checks/puzzle-stub-clearance-20261117/results-summary.json",
+      "sha256": "4d3b2387a746113164ed3c70f407eae8a4293f174e65d5a50410df58feeb8634",
+      "bytes": 4029
+    },
+    {
+      "path": "docs/checks/puzzle-stub-clearance-20261117/review-final.json",
+      "sha256": "8b01b0947dc054c2db131b7ff0a19a4f1783998609cfdb91fa6c0187be2a71c9",
+      "bytes": 1817
+    },
+    {
+      "path": "docs/checks/puzzle-board-tools-20261117/results-summary.json",
+      "sha256": "9b949d47c9be562d1e36f761e25eadae098ac291d5d5fb33d537c7f0ad1bc088",
+      "bytes": 7843
+    },
+    {
+      "path": "docs/checks/puzzle-board-tools-20261117/review-final.json",
+      "sha256": "f1e6d9fef7ba3b27b01f9a6394a9db00102e37c924860f7d75167c686cce2d7d",
+      "bytes": 3395
+    },
+    {
+      "path": "docs/checks/puzzle-simple-flow-20261117/results-summary.json",
+      "sha256": "02ff23756bb57274a8e6be105d339bbd759e888d9ba974133ea595cc3af3435b",
+      "bytes": 4335
+    },
+    {
+      "path": "docs/checks/puzzle-simple-flow-20261117/review-tracking.json",
+      "sha256": "359c629121888aa5b2bac49e7fec990f549ea4bdacfce978927cfa35acc49161",
+      "bytes": 3549
+    },
+    {
+      "path": "docs/checks/puzzle-success-manual-placement-20261117/results-summary.json",
+      "sha256": "73623171a9d86a5e511940a4dd5e9bc8d25beccc5836f3eef30e6bc795abb8c6",
+      "bytes": 4382
+    },
+    {
+      "path": "docs/checks/puzzle-success-manual-placement-20261117/review-tracking.json",
+      "sha256": "d4dba66576df41f5c1f14dc5561c1c5ae8717bcc293eb69200111775ee56bf0f",
+      "bytes": 4046
+    },
+    {
+      "path": "docs/checks/alkane-game-cards-implementation-20261118/results-summary.json",
+      "sha256": "d63df24e3e6505de96a8cfb78d0018d9630e1c7dd83c378d63fe08cf60ac3907",
+      "bytes": 4693
+    },
+    {
+      "path": "docs/checks/alkane-game-cards-implementation-20261118/review-final.json",
+      "sha256": "ee812c88371daae75b70d70ecb46cc06381586fec9207e77cb548262a5bb1d54",
+      "bytes": 1856
+    },
+    {
+      "path": "docs/checks/alkanes-library-card-four-quizzes-20261118/results-summary.json",
+      "sha256": "3bbd780963ecd45b417848bfceb6c8d32859dd3b15f048c02c1035c4342bdaab",
+      "bytes": 1895
+    },
+    {
+      "path": "docs/checks/game-screen-uniformity-implementation-20261118/results-summary.json",
+      "sha256": "30976daf8bcae6acb286c5960e6157978aff80d7bfcef39cbd85ad9f5f5e09d4",
+      "bytes": 3889
+    },
+    {
+      "path": "docs/checks/game-screen-uniformity-implementation-20261118/review-final.json",
+      "sha256": "8d4cc97c0fbc50c10ca7a27b52bb79d09b62869ae4b7c874d85844592be9bb9b",
+      "bytes": 3923
+    },
+    {
+      "path": "docs/checks/game-inline-results-implementation-20261118/results-summary.json",
+      "sha256": "885166b7dcf5834617a2754f6d1818400355a18cd20ae472b0bca76ebd8eb562",
+      "bytes": 8921
+    },
+    {
+      "path": "docs/checks/game-inline-results-implementation-20261118/review-final.json",
+      "sha256": "06173c1da13843a31c88210453be4c5a6aa0612490b31e6bd9b05c9e4b9218a6",
+      "bytes": 6460
+    },
+    {
+      "path": "docs/checks/game-adaptive-dialog-height-implementation-20261118/results-summary.json",
+      "sha256": "9130c80034915caaca273a90addec44a336a8a71b8c37b99c1e43a376c26875c",
+      "bytes": 14227
+    },
+    {
+      "path": "docs/checks/game-adaptive-dialog-height-implementation-20261118/review-final.json",
+      "sha256": "5fa2281d1239bb888ba337ee3d4751645654f9193898c4c7ae192ba03b90a376",
+      "bytes": 4537
+    },
+    {
+      "path": "docs/checks/game-adaptive-dialog-height-implementation-20261118/runtime-target.json",
+      "sha256": "7209814fe005f4db6679fbf273be2ed0c27c7593854b473063dc6e44ca19e021",
+      "bytes": 1950
+    },
+    {
+      "path": "docs/checks/game-adaptive-dialog-height-implementation-20261118/baseline.json",
+      "sha256": "dc29c572ec42a3a28150f1c475d052554f2ce69a9dd4fc97e180a1522ab1f1ec",
+      "bytes": 6824
+    },
+    {
+      "path": "docs/checks/game-adaptive-dialog-height-implementation-20261118/browser/summary.json",
+      "sha256": "0901e6e8bc7b2dad6743172d246d68748e2123d3746de6434852b47e593045f1",
+      "bytes": 15560
+    },
+    {
+      "path": "docs/checks/game-adaptive-dialog-height-implementation-20261118/comparison.html",
+      "sha256": "a7ef79eb0d2cde7cba493b8176273e347a4c1d1a3f3c7636cc066415d38cf224",
+      "bytes": 4375
+    },
+    {
+      "path": "docs/checks/game-adaptive-dialog-height-implementation-20261118/comparison.json",
+      "sha256": "545f676878aae6010b879423338b7810714d7cacccc426c22ebcf5eeb2d3d168",
+      "bytes": 3983
+    },
+    {
+      "path": "docs/checks/game-adaptive-dialog-height-implementation-20261118/upstream-review.json",
+      "sha256": "c8118b8da3ae50e0424c50bda34dcb31c63535747a47e79db018e21acb1f56f7",
+      "bytes": 7466
+    },
+    {
+      "path": "docs/checks/v58-readiness-20261118/results-summary.json",
+      "sha256": "2f7b57a1abc6ac7f48cdeaf680dc827c3c1443cd448255e17bea65801dc85351",
+      "bytes": 6439
+    },
+    {
+      "path": "docs/professor-20261116/verified-facts.json",
+      "sha256": "f860fd2bda6c5dc6f634d0ebbcfe679c7d3adf800e2e1e445153686c4c1ad1cd",
+      "bytes": 15310
+    },
+    {
+      "path": "scenarios/alkanes-user-3.scenario.json",
+      "sha256": "d5e85fca80cb1ddb04b9776e910fbe6ee642ea9ee2407acecebd5de585947e82",
+      "bytes": 35104
+    }
+  ],
+  "reportAuthorChecks": [
+    "Read AGENTS.md, README.md, current resume and relevant scenario plan.",
+    "Read requested source result summaries and existing professor16November report style.",
+    "Verified14current adaptive runtime paths and13current core paths against frozen manifest/baseline:zero mismatches.",
+    "Created only five professor-20261118 deliverables; no application changes, git mutations or publication.",
+    "Compared all13current core SHA-256 values with the2026-11-16 completed save coreBaseline:zero mismatches.",
+    "HTMLParser:balanced tags,unique IDs,all relative href targets exist.",
+    "Both JSON artifacts parse;links.txt and plainlinks.txt byte-identical;all source-record SHA-256 values match current bytes.",
+    "No middle dots in newly authored Greek prose and no private absolute user filesystem paths in report."
+  ],
+  "reportChecksPending": [
+    "Coordinator independent report review and visual inspection.",
+    "Full save/two-folder proof and actual publication/HTTP/browser verification.",
+    "Update delivery status only after actual evidence."
+  ]
+}

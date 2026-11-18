@@ -1,0 +1,84 @@
+{
+  "status": "COMPLETE_LOCAL",
+  "finishedUTC": "2026-11-17T07:03:10.901286+00:00",
+  "approvedRequest": "Initial pending bond in Molecular Puzzle avoids existing tiles; standalone and lesson",
+  "behavior": [
+    "Reuse endpoint projection for candidate CSS-space rays",
+    "Check complete visible stroke corridor and incoming tile footprint before commit",
+    "Choose deterministic clear initial direction; blocked refusal leaves construction and Undo intact",
+    "Manual/arrow/restore directions preserved; existing resize fitting preserved"
+  ],
+  "cause": "Old createPending pointed toward board center without examining tiles; actual before UI reproduced both mirrors",
+  "reviewTarget": "review-target.json",
+  "reviewTargetSHA256": "5b13867a354f57c31d39a173ad2a47035cf00b068825389915447f4ab4f0a51f",
+  "changedRuntimePaths": [
+    "js/namelecule-molecular-puzzle.js",
+    "games/molecular-puzzle.html",
+    "js/namelecule-game-choice-checkpoint.js",
+    "mulermoc-nom-54.html",
+    "mulermoc-nom-55.html",
+    "mulermoc-nom-56.html",
+    "mulermoc-nom-57.html",
+    "games/name-builder-viewer.html",
+    "games/molecular-detective-viewer.html",
+    "design/welcome-proposal.html"
+  ],
+  "developerChecks": {
+    "geometryVM": "memory-after.json:2861 assertions/119 fixtures",
+    "retainedVM": "retained-contract-results.json:206 passed",
+    "http": "http-results.json:10 exact HTTP200/SHA; cache closure passed",
+    "syntaxGenerators": "Both JS syntax and both generator --check passed; unchanged frozen source independently rechecked by Reviewer"
+  },
+  "browser": {
+    "summary": "after/summary.json",
+    "sha256": "0ca970715e22d9ec8a4d2e19b63be089906a50d1b905f7dde788bddd148f5192",
+    "artifactManifest": "after/manifest.json",
+    "artifactManifestSHA256": "892381ed810f96ac43ac0a02d328d3904f933f6a9d857083e6acf17aea076459",
+    "compare": {
+      "passed": 370,
+      "recorded": 370
+    },
+    "lessonPartial": {
+      "passed": 57,
+      "recorded": 58,
+      "classification": "Retained incorrect diagnostic expectation: exact positions after narrow resize. Existing framing refit confirmed unchanged before/current."
+    },
+    "lessonTargetedTail": {
+      "passed": 94,
+      "recorded": 94
+    },
+    "grading": "No browser Check/grade; actual lesson attempts0/unsubmitted/gate locked; standalone counter unobserved",
+    "cleanup": "All owned browser parents absent, servers/profiles removed; root8013 and personal Firefox untouched"
+  },
+  "independentReview": {
+    "file": "review-final.json",
+    "sha256": "8b01b0947dc054c2db131b7ff0a19a4f1783998609cfdb91fa6c0187be2a71c9",
+    "openFindings": []
+  },
+  "preservation": {
+    "coreChanges": false,
+    "coreFiles": 13,
+    "dataFiles": 577,
+    "additionalProtectedFiles": 8,
+    "HEAD": "168e3cec01f941a84d40bbe0dc07156e7baa35d0",
+    "indexSHA256": "caafccaca7019b42993bc27ec3834bbc90178430d217bf0c92439e6346f845db",
+    "sourceBeforeCopies": 10
+  },
+  "upstream": "Professor HEAD11d5886fd28e3242a7cbb9daa6206722628a6e0b rechecked unchanged in preflight; immutable changelog from completed synchronization reused; no new upstream change in this fix",
+  "limits": [
+    "Conservative finite72-direction search, not complete over every possible angle",
+    "Crowded/fully blocked tested in memory",
+    "Headless Chrome only at recorded sizes; no Firefox/physicaltouch/browserzoom/offline/conference qualification",
+    "No chemically authored changes; protected naming/MOL/SDF/3D files unchanged",
+    "No-write behavioral; no independently enforced read-only filesystem",
+    "No full four-game/earned-triple replay in this geometry-only unit",
+    "Previously restored or manually directed bonds are not automatically reoriented"
+  ],
+  "committed": false,
+  "pushed": false,
+  "published": false,
+  "scenarioExport": false,
+  "fullBackup": false,
+  "preview": "http://127.0.0.1:8013/games/molecular-puzzle.html?v=puzzle-stub-clearance-20261117-r1",
+  "nextStep": "User local inspection; commit/full-save/publication only when requested"
+}

@@ -1,4 +1,4 @@
-/* Isolated Main56 bridge. Native geometry, hit testing and selection painting
+/* Isolated local Main57 bridge. Native geometry, hit testing and selection painting
  * stay native; the parent alone owns missions, answers and grading. */
 (() => {
   'use strict';
@@ -42,6 +42,24 @@
     numberingFlag = false;
     narrateAnalysisFlag = false;
     rotateFlag = false;
+  }
+  function assertFreeSelection(active) {
+    if (window.MulerQuizTarget !== null || window.MulerSelectPurpose !== 'free' ||
+        nameAnalysisMode !== 'none' || document.querySelector('#nameAnalysis .nameCompBox.selected') ||
+        fMulerSelectState().active !== active)
+      throw new Error('Native free-selection lifecycle was not applied');
+  }
+  function resetFreeSelection(active) {
+    fixConvention();
+    // The native entry lifecycle also clears hidden selected name boxes.
+    // Clearing through the native API resets contributor/mirror bookkeeping;
+    // writing only the public arrays would retain stale v57 selection origins.
+    if (fMulerSelectState().active) fToggleAtomSelect();
+    fMulerSelectClear();
+    fToggleAtomSelect();
+    if (!active) fToggleAtomSelect();
+    fixConvention();
+    assertFreeSelection(active);
   }
   function serializeName() {
     const container = document.querySelector('#nameAnalysis .nameCompContainer');
@@ -89,6 +107,7 @@
   function getSnapshot() {
     if (!current?.ready || selectedMol !== current.moleculeId || mode2D !== 'expanded')
       throw new Error('Current expanded round is not ready');
+    assertFreeSelection(!!kind);
     const classification = nameExamples[selectedMol].classification;
     return {moleculeId: selectedMol, sourceMOL: nameExamples[selectedMol].structure2D_Expanded,
       ...serializeName(), ...actualGraph(),
@@ -186,6 +205,7 @@
           if (pickGeometryReady(graph)) {
             const classification = nameExamples[selectedMol].classification;
             if (!classification?.chemicalClass || !classification.seriesKey) throw new Error('Missing native classification');
+            assertFreeSelection(false);
             request.ready = true;
             request.snapshot = {moleculeId: selectedMol, sourceMOL: nameExamples[selectedMol].structure2D_Expanded,
               ...data, ...graph,
@@ -218,16 +238,12 @@
     try {
       quiet(() => {
         fixConvention();
-        const state = fMulerSelectState();
-        state.active = false;
-        fMulerSelectClear();
+        resetFreeSelection(false);
         selectedMol = request.moleculeId;
         mode2D = 'expanded';
         modeSuffix = '_2D_Expanded';
         fSelectMol();
-        fixConvention();
-        fMulerSelectClear();
-        fClearHighlights();
+        resetFreeSelection(false);
         fResizeViewers();
       });
       synchronize(request, ticket);
@@ -266,15 +282,11 @@
         missionId = data.missionId;
         selectionContext = request;
         quiet(() => {
-          fixConvention();
-          fMulerSelectClear();
-          const state = fMulerSelectState();
-          state.active = true;
-          state.molKey = fMulerSelectMolKey();
-          state.atoms2D = restored.atoms.slice();
-          state.bonds2D = restored.bonds.slice();
-          document.getElementById('jsmeNomeclatureSVG').classList.add('selecting');
+          resetFreeSelection(true);
+          for (const atom of restored.atoms) nativeToggle({kind: 'atom', atom});
+          for (const bond of restored.bonds) nativeToggle({kind: 'bond', bond});
           paintSelection();
+          assertFreeSelection(true);
         });
         const applied = selected();
         if (['atoms', 'bonds'].some(field => applied[field].join(',') !== restored[field].slice().sort((a, b) => a - b).join(',')))
@@ -325,7 +337,7 @@
     ++revision;
     stopped = true;
     root.dataset.molecularDetectiveVisible = 'false';
-    try { fMulerSelectState().active = false; } catch (failure) { /* unloading */ }
+    try { quiet(() => resetFreeSelection(false)); } catch (failure) { /* unloading */ }
     window.removeEventListener('message', receive);
     window.removeEventListener('resize', resized);
     document.removeEventListener('keydown', escaped);
@@ -347,6 +359,7 @@
       inventory = Object.keys(nameExamples).filter(id => !!nameExamples[id].structure2D_Expanded).map(id => ({id}));
       if (!inventory.length) throw new Error('Empty expanded inventory');
       fShowNameAnalysis();
+      resetFreeSelection(false);
       serializeName();
       nativeHeights = fViewerHeights2D3D;
       fViewerHeights2D3D = embeddedHeights;

@@ -4545,6 +4545,9 @@ function fScenarioFillStepPanel(step) {
     }
     if (showNoteOn(step)) {
       fScenarioRenderNote(p, step.note, step.noteFormat);
+      if (window.NameleculeGameChoicePresentation) {
+        window.NameleculeGameChoicePresentation.renderLessonNote(p, step);
+      }
     } else {
       p.textContent = "";
       try { p.classList.remove("note-html"); p.classList.remove("mu-note"); } catch (eNoNote) { /* no classList */ }

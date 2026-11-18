@@ -21,11 +21,19 @@
     pending: null, nextId: 0, retry: null, touch: null, suppressClickUntil: 0, attempts: 0, submitted: false };
   const Viewport = window.NameleculeGameViewport;
   const viewportEnabled = !!Viewport && (!lesson || new URLSearchParams(location.search).get('viewport') === '1');
+  const inlineResults = !!lesson && viewportEnabled;
   let viewportUI = null;
   const scrolling = { frame: null, moving: false };
   const representationButtons = Array.from(document.querySelectorAll('[data-representation]'));
   const startupTimer = setTimeout(() => fail('Η προβολή του μορίου άργησε να ξεκινήσει. Μπορείς να δοκιμάσεις ξανά.', () => location.reload()), 45000);
 
+  function nativeFormulaQuery() {
+    if (!lesson || !viewportEnabled) return '';
+    const value = getComputedStyle($('game')).getPropertyValue('--nl-game-formula-px').trim();
+    const pixels = Number(value);
+    return /^[0-9]+(?:[.][0-9]+)?$/.test(value) && Number.isFinite(pixels) && pixels >= 20 && pixels <= 36
+      ? '&nlFormulaPx=' + encodeURIComponent(pixels) : '';
+  }
   function snapshot() {
     return { answer: state.answer.slice(), selected: state.selected, attempts: state.attempts, submitted: state.submitted };
   }
@@ -154,7 +162,9 @@
     if (!lesson || state.stopped || event.origin !== location.origin || event.source !== parent) return;
     const data = event.data;
     if (data?.command === 'viewport') {
-      if (viewportEnabled && validViewportMessage(data)) viewportUI?.refresh();
+      if (viewportEnabled && validViewportMessage(data)) {
+        Viewport.acceptViewport($('game'), data); viewportUI?.refresh();
+      }
       return;
     }
     if (!data || data.channel !== lessonChannel || data.session !== lessonSession || data.command !== 'load' ||
@@ -181,12 +191,34 @@
       return current.context ? !!context && Levels.contextKey(context) === Levels.contextKey(current.context) : context === null;
     } catch (_) { return false; }
   }
+  function builderRegionEnvelope(round, bank, width, availableHeight, metrics) {
+    const compact = width < 850 || availableHeight < 440;
+    const columns = compact ? 3 : 4, rows = Math.ceil(bank.length / columns);
+    // Two complete natural tile rows are a usable bank. Longer banks retain
+    // their existing local pager, whose row is reserved before any selection.
+    const bankHeight = 28 + 12 + Math.min(2, rows) * metrics.tile + Math.max(0, Math.min(2, rows) - 1) * 5 + (rows > 2 ? 40 : 0);
+    const answerWidth = Math.max(80, compact ? width - 32 : (width - 44) * 1.1 / 2.9 - 16);
+    const allPiecesWidth = bank.reduce((total, tile) => total + tile.text.length * metrics.tileFont * .65 + 18, 0);
+    const answerHeight = 64 + (allPiecesWidth > answerWidth ? 40 : 0);
+    const controls = metrics.control * (compact && width < 600 ? 2 : 1);
+    const editor = 38 + 16 + answerHeight + controls + metrics.check + 24 + 2 + (compact ? 0 : bankHeight);
+    const bankView = 38 + 16 + answerHeight + bankHeight + 6 + 2;
+    // Include all representations up front, including a usable 3D surface and
+    // two rows of representation controls in the narrower result-side pane.
+    const extraNamePieces = Math.max(0, round.pieces.length - 3);
+    const diagram = 220 + Math.min(2, extraNamePieces) * 16 + (round.parentLength > 5 ? 12 : 0);
+    const molecule = 46 + diagram + 88 + 2;
+    const inlineResult = compact && width < 850 ? 118 + 7 : 0;
+    return Math.ceil(Math.max(editor + inlineResult, compact ? bankView : 0, molecule, 220));
+  }
   function createViewportUI() {
     const root = $('game'), pagers = [], buttons = new Map();
-    let mounted = null, feedbackName = null;
+    root.classList.toggle('nl-inline-results', inlineResults);
+    let mounted = null, feedbackName = null, inlineFitFrame = null;
     const nav = document.createElement('nav'); nav.className = 'builder-view-nav'; nav.setAttribute('aria-label', 'Προβολές άσκησης');
     const stages = [['editing', 'Σύνθεση'], ['bank', 'Συνθετικά'], ['molecule', 'Μόριο'], ['name', 'Όνομα'], ['help', 'Οδηγίες'], ['feedback', 'Σχόλιο']];
     stages.forEach(([key, label]) => {
+      if (inlineResults && key === 'feedback') return;
       const button = document.createElement('button'); button.type = 'button'; button.textContent = label;
       button.dataset.view = key; button.addEventListener('click', () => stage(key)); nav.append(button); buttons.set(key, button);
     });
@@ -196,36 +228,98 @@
     help.setAttribute('aria-label', 'Οδηγίες χειρισμού'); help.append($('answer-help')); $('answer-help').open = true;
     name.setAttribute('aria-label', 'Επιθεώρηση ονόματος'); name.append($('candidate'));
     feedback.setAttribute('aria-label', 'Ανατροφοδότηση'); feedback.append($('feedback'));
+    if (inlineResults) {
+      feedback.classList.add('nl-inline-result');
+      root.querySelector('.workspace').append(feedback);
+      feedback.hidden = true;
+    }
     const actions = document.createElement('div'); actions.className = 'builder-feedback-actions';
     const back = document.createElement('button'); back.type = 'button'; back.className = 'secondary'; back.textContent = 'Επιστροφή στη σύνθεση';
-    back.addEventListener('click', () => stage('editing')); actions.append(back); feedback.append(actions);
+    back.addEventListener('click', () => stage('editing')); actions.append(back);
+    if (!inlineResults) feedback.append(actions);
     const nextHome = $('next-molecule').parentNode;
     pagers.push(Viewport.pager($('answer-zone'), { axis: 'x', label: 'Συνθετικά του ονόματος' }));
     pagers.push(Viewport.pager($('bank-zone'), { axis: 'y', label: 'Διαθέσιμα συνθετικά' }));
     pagers.push(Viewport.pager($('candidate-name'), { axis: 'x', label: 'Πλήρες όνομα' }));
     pagers.push(Viewport.pager($('answer-help').querySelector('.helper-methods'), { axis: 'y', label: 'Οδηγίες' }));
     pagers.push(Viewport.pager($('feedback'), { axis: 'y', label: 'Ανατροφοδότηση' }));
-    function refresh() { pagers.forEach(pager => pager.refresh()); feedbackName?.refresh(); mounted?.refresh(); }
+    function fitInlineWorkspace() {
+      if (!inlineResults || !root.isConnected || !state.round || state.busy || state.failed || root.dataset.builderView !== 'editing' ||
+          root.classList.contains('builder-compact')) return;
+      const panel = root.querySelector('.answer-panel'), content = root.querySelector('.answer-content');
+      const panelStyle = getComputedStyle(panel), contentStyle = getComputedStyle(content);
+      const bankStyle = getComputedStyle($('bank-zone'));
+      const pixels = value => parseFloat(value) || 0;
+      const bottom = panel.getBoundingClientRect().bottom - pixels(panelStyle.borderBottomWidth) - pixels(contentStyle.paddingBottom);
+      const tiles = Array.from($('bank-tiles').querySelectorAll('.tile-button'));
+      const tileHeight = Math.max(44, ...tiles.map(tile => tile.getBoundingClientRect().height));
+      const bankHeight = $('bank-zone').clientHeight - pixels(bankStyle.paddingTop) - pixels(bankStyle.paddingBottom);
+      if ($('check-answer').getBoundingClientRect().bottom <= bottom + .5 && bankHeight + .5 >= tileHeight) return;
+      // Reuse the existing bank/molecule views when the actual editor cannot
+      // retain both a full bank row and Check. Keep this choice until resize:
+      // hiding the bank changes the measured fit and must not cause a loop.
+      root.classList.add('builder-compact', 'builder-height-compact');
+      pagers.forEach(pager => pager.refresh()); feedbackName?.refresh(); mounted?.refresh();
+    }
+    function refresh() {
+      pagers.forEach(pager => pager.refresh()); feedbackName?.refresh(); mounted?.refresh();
+      if (inlineResults && inlineFitFrame === null) inlineFitFrame = requestAnimationFrame(() => {
+        inlineFitFrame = null; fitInlineWorkspace();
+      });
+    }
+    function preferred() {
+      const current = lesson?.current;
+      if (!inlineResults || !current?.ready || !state.round || state.busy || state.failed || state.stopped) return null;
+      const natural = (element, floor) => {
+        const style = getComputedStyle(element), px = value => parseFloat(value) || 0;
+        const line = px(style.lineHeight) || px(style.fontSize) * 1.25;
+        return Math.max(floor, px(style.minHeight), line + px(style.paddingTop) + px(style.paddingBottom) + px(style.borderTopWidth) + px(style.borderBottomWidth));
+      };
+      const tile = $('bank-tiles').querySelector('.tile-button');
+      const metrics = { tile: tile ? natural(tile, 44) : 44, tileFont: tile ? parseFloat(getComputedStyle(tile).fontSize) || 16 : 16,
+        control: natural($('remove-tile'), 36), check: natural($('check-answer'), 40) };
+      const height = builderRegionEnvelope(state.round, state.bank, root.clientWidth, Viewport.availableHeight(root), metrics);
+      const key = ['builder', current.requestId, current.attemptId, current.moleculeId].join(':');
+      return Viewport.preferred(root, root.querySelector('.workspace'), height, key, { exclude: [help, name, feedback] });
+    }
     function stage(key) {
+      if (inlineResults && key === 'feedback') key = root.dataset.builderView || 'editing';
       if (key === 'feedback' && $('feedback').hidden) key = 'editing';
       root.dataset.builderView = key;
+      if (inlineResults) {
+        feedback.hidden = $('feedback').hidden;
+        root.classList.toggle('builder-inline-feedback', !feedback.hidden);
+      }
       buttons.forEach((button, view) => { button.setAttribute('aria-pressed', String(view === key)); button.hidden = view === 'feedback' && $('feedback').hidden; });
       if (key === 'feedback') actions.append($('next-molecule')); else nextHome.append($('next-molecule'));
       refresh();
     }
     root.addEventListener('nl-level-stage', event => { root.classList.toggle('builder-choosing', !!event.detail.expanded); refresh(); });
-    mounted = Viewport.mount(root, { kind: 'builder', onResize({ width, height }) {
-      root.classList.toggle('builder-compact', width < 850 || height < 440);
-      pagers.forEach(pager => pager.refresh());
+    mounted = Viewport.mount(root, { kind: 'builder', preferred, onDemand(detail) { postLesson('layout-demand', detail); }, onResize({ width, height, availableHeight }) {
+      root.classList.remove('builder-height-compact');
+      root.classList.toggle('builder-compact', width < 850 || (inlineResults ? availableHeight : height) < 440);
+      refresh();
     } });
     root.querySelector('.keyboard-note').textContent = 'Enter: προσθήκη · ← →: μετακίνηση · Delete: αφαίρεση. Για μεγάλα ονόματα χρησιμοποίησε τα κουμπιά σελίδας.';
     stage('editing');
-    return { stage, refresh, clearFeedbackName() { feedbackName?.destroy(); feedbackName = null; },
+    function clearFeedbackName() { feedbackName?.destroy(); feedbackName = null; }
+    return { stage, refresh, clearFeedbackName,
+      clearFeedback() {
+        clearFeedbackName();
+        if (inlineResults) { feedback.hidden = true; root.classList.remove('builder-inline-feedback'); refresh(); }
+      },
       feedback(correct) {
         const fullName = $('feedback').querySelector('.single-line-name');
         if (fullName) feedbackName = Viewport.pager(fullName, { axis: 'x', label: 'Σωστό όνομα' });
-        back.textContent = correct ? 'Επιθεώρηση σύνθεσης' : 'Επιστροφή στη σύνθεση'; stage('feedback');
-      }, destroy() { feedbackName?.destroy(); pagers.forEach(pager => pager.destroy()); mounted?.destroy(); } };
+        if (inlineResults) {
+          feedback.hidden = false; root.classList.add('builder-inline-feedback'); refresh();
+        } else {
+          back.textContent = correct ? 'Επιθεώρηση σύνθεσης' : 'Επιστροφή στη σύνθεση'; stage('feedback');
+        }
+      }, destroy() {
+        if (inlineFitFrame !== null) cancelAnimationFrame(inlineFitFrame);
+        feedbackName?.destroy(); pagers.forEach(pager => pager.destroy()); mounted?.destroy();
+      } };
   }
   function announce(text) { $('move-announcement').textContent = text; }
   function setStatus(text, error) { $('game-status').textContent = text; $('game-status').classList.toggle('error', !!error); }
@@ -350,7 +444,7 @@
     state.attempts = 0; state.submitted = false;
     if (controlled) controlled.ready = false;
     state.answer = []; state.selected = null; state.round = null; state.bank = [];
-    $('feedback').hidden = true; $('candidate').hidden = true; viewportUI?.stage('editing');
+    viewportUI?.clearFeedback(); $('feedback').hidden = true; $('candidate').hidden = true; viewportUI?.stage('editing');
     $('bank-tiles').replaceChildren(); $('answer-tiles').replaceChildren(); $('empty-answer').hidden = false;
     $('answer-zone').scrollLeft = 0; $('candidate-name').scrollLeft = 0;
     mask('Ετοιμάζουμε τη δομή και τα συνθετικά.'); setStatus('Ετοιμάζουμε το επόμενο μόριο.'); updateControls();
@@ -436,7 +530,10 @@
   function tileById(id) { return state.bank.find(tile => tile.id === id); }
   function answerTiles() { return state.answer.map(tileById); }
   function editable() { return !!state.round && !state.busy && !state.failed && !state.solved; }
-  function clearFeedback() { state.submitted = false; $('feedback').hidden = true; $('feedback').classList.remove('success'); }
+  function clearFeedback() {
+    state.submitted = false; $('feedback').hidden = true; $('feedback').classList.remove('success');
+    viewportUI?.clearFeedback();
+  }
   function focusTile(id, inAnswer) {
     const container = $(inAnswer ? 'answer-tiles' : 'bank-tiles');
     const button = Array.from(container.querySelectorAll('button')).find(item => item.dataset.tileId === id);
@@ -611,6 +708,7 @@
   function showFeedback(result) {
     viewportUI?.clearFeedbackName();
     $('feedback').replaceChildren(); $('feedback').hidden = false;
+    if (inlineResults) $('feedback').scrollTop = 0;
     $('feedback').classList.toggle('success', result.correct);
     if (result.correct) {
       state.solved = true; state.selected = null;
@@ -699,5 +797,5 @@
     postLesson('ready', {});
   }
   if (viewportEnabled) viewportUI = createViewportUI();
-  frame.src = 'name-builder-viewer.html?v=alkane-pool-20261116-r1&session=' + encodeURIComponent(nonce);
+  frame.src = 'name-builder-viewer.html?v=uniform-games-20261118-r2&session=' + encodeURIComponent(nonce) + nativeFormulaQuery();
 })();

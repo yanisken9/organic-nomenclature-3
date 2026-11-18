@@ -1,4 +1,4 @@
-/* Parent game state; the isolated native56 child owns molecular drawing/picking. */
+/* Parent game state; the isolated native57 child owns molecular drawing/picking. */
 (() => {
   'use strict';
   const engine = window.NameleculeMolecularDetectiveEngine;
@@ -12,12 +12,22 @@
   const lesson = parent !== window && /^[A-Za-z0-9_-]{16,128}$/.test(lessonSession || '')
     ? {current: null, lastId: 0, nativeReady: false, lastHeight: null, lastSnapshot: null, resizeFrame: null, observer: null} : null;
   const viewportEnabled = !!window.NameleculeGameViewport && (!lesson || params.get('viewport') === '1');
+  const inlineResults = !!lesson && viewportEnabled;
   let viewport = null;
   let feedbackPager = null;
   let cluePager = null;
   let namePager = null;
+  let promptPager = null;
   let feedbackView = false;
   let viewportResizeFrame = null;
+  let demandTextContext = null;
+  function nativeFormulaQuery() {
+    if (!lesson || !viewportEnabled) return '';
+    const value = getComputedStyle($('game')).getPropertyValue('--nl-game-formula-px').trim();
+    const pixels = Number(value);
+    return /^[0-9]+(?:[.][0-9]+)?$/.test(value) && Number.isFinite(pixels) && pixels >= 20 && pixels <= 36
+      ? '&nlFormulaPx=' + encodeURIComponent(pixels) : '';
+  }
   const lessonMolecules = ['methane', 'ethane', 'propane', 'butane', 'pentane', 'methyl_2_pentane', 'dimethyl_2_3_butane', 'ethyl_3_dimethyl_2_5_hexane'];
   if (params.get('embedded') === '1' || lesson) document.body.classList.add('detective-embedded');
   document.body.classList.toggle('detective-controlled', !!lesson);
@@ -181,6 +191,7 @@
         catch (_) { return; }
       } else if (Object.prototype.hasOwnProperty.call(data, 'context')) return;
       // The iframe's actual viewport is the sole size authority; the parent owns it.
+      window.NameleculeGameViewport.acceptViewport($('game'), data);
       viewport?.refresh(); refreshViewport();
       return;
     }
@@ -195,7 +206,12 @@
       if (typeof data.attemptId === 'string' && typeof data.moleculeId === 'string' && typeof data.missionId === 'string') postLesson('error', {message: error.message}, data);
     }
   }
-  function status(text, error = false) { ui['game-status'].textContent = text; ui['game-status'].classList.toggle('error', error); }
+  function status(text, error = false, repeatedInstruction = false) {
+    ui['game-status'].textContent = text;
+    ui['game-status'].classList.toggle('error', error);
+    ui['game-status'].classList.toggle('detective-ready-status', inlineResults && repeatedInstruction);
+    if (inlineResults) refreshViewport();
+  }
   function busy(message) {
     ui['viewer-mask'].hidden = false;
     ui['viewer-message'].textContent = message;
@@ -207,7 +223,9 @@
     for (const id of ['check-answer', 'zoom-in', 'zoom-out']) ui[id].disabled = !ready;
     ui['clear-selection'].disabled = !ready || !(state.atoms.length || state.bonds.length);
     ui['next-mission'].hidden = !!lesson || !ready || !state.correct;
-    if (viewportEnabled && $('detective-feedback-open')) $('detective-feedback-open').hidden = ui.feedback.hidden;
+    if (viewportEnabled && $('detective-feedback-open')) $('detective-feedback-open').hidden = inlineResults || ui.feedback.hidden;
+    syncMissionPrompt();
+    if (inlineResults) refreshViewport();
   }
   function watch(message, milliseconds = 30000) {
     clearTimeout(deadline);
@@ -223,6 +241,7 @@
     if (resetSubmitted) state.submitted = false;
     ui.feedback.hidden = true;
     ui.feedback.replaceChildren();
+    if (inlineResults) ui.feedback.scrollTop = 0;
     ui.feedback.classList.remove('success');
     if (viewportEnabled) setFeedbackView(false);
     updateControls();
@@ -362,7 +381,7 @@
       ui['viewer-mask'].hidden = true;
       ui['viewer-wrap'].setAttribute('aria-busy', 'false');
       ui['retry-load'].hidden = true;
-      status('Παρατήρησε το επισημασμένο συνθετικό και επίλεξε όσα ζητά η αποστολή.');
+      status('Παρατήρησε το επισημασμένο συνθετικό και επίλεξε όσα ζητά η αποστολή.', false, true);
       configured = true;
     }
     if (['configured', 'selection'].includes(data.type) && state.phase === 'active' && validSelection(data) && (data.selectionRevision > state.selectionRevision || (data.selectionRevision === state.selectionRevision && sameSelection(state.atoms, data.atoms) && sameSelection(state.bonds, data.bonds)))) {
@@ -400,6 +419,7 @@
     const end = document.createElement('span'); end.id = 'detective-feedback-end'; end.className = 'detective-feedback-end'; end.setAttribute('aria-hidden', 'true'); ui.feedback.append(end);
     ui.feedback.classList.toggle('success', result.correct);
     ui.feedback.hidden = false;
+    if (inlineResults) ui.feedback.scrollTop = 0;
     if (viewportEnabled) setFeedbackView(true);
     updateControls(); scheduleSize();
   }
@@ -426,7 +446,7 @@
     clearFeedback(); busy('Φορτώνουμε τον ανεπτυγμένο τύπο.');
     status('Ετοιμάζουμε την πρώτη αποστολή.');
     ui['retry-load'].hidden = true;
-    ui['molecule-viewer'].src = 'molecular-detective-viewer.html?v=four-games-20261116-r1&session=' + state.session;
+    ui['molecule-viewer'].src = 'molecular-detective-viewer.html?v=adaptive-dialog-20261118-r3&session=' + state.session + nativeFormulaQuery();
     watch('Η προβολή του μορίου δεν ξεκίνησε. Δοκίμασε ξανά.', 45000);
   }
   function stop() {
@@ -492,19 +512,67 @@
   }
   function refreshViewport() {
     if (!viewportEnabled || state.stopped) return;
-    feedbackPager?.refresh(); cluePager?.refresh(); namePager?.refresh();
+    promptPager?.refresh(); feedbackPager?.refresh(); namePager?.refresh(); cluePager?.refresh();
     if (viewportResizeFrame !== null) return;
     viewportResizeFrame = requestAnimationFrame(() => {
       viewportResizeFrame = null;
+      fitNarrowWorkspace();
+      if (inlineResults) viewport?.refresh();
       if (!state.stopped && state.phase === 'active' && !feedbackView) send('resize', {missionId: state.bridgeMissionId});
     });
   }
+  function fitNarrowWorkspace() {
+    if (!inlineResults || state.stopped) return;
+    const game = $('game'), workspace = game.querySelector('.detective-workspace');
+    if (!game.classList.contains('nl-vp-narrow') || game.getBoundingClientRect().width >= 760) {
+      game.classList.remove('detective-result-side-pager');
+      game.style.removeProperty('--nl-detective-pane-min-height');
+      game.style.removeProperty('--nl-detective-result-min-height');
+      return;
+    }
+    const pixels = value => parseFloat(value) || 0;
+    const chrome = element => {
+      const style = getComputedStyle(element);
+      return pixels(style.borderTopWidth) + pixels(style.borderBottomWidth);
+    };
+    const molecule = game.querySelector('.detective-molecule'), answer = game.querySelector('.detective-answer');
+    // The native SVG has a measured 150px CSS floor. Reserve its real header
+    // and the complete natural answer, rather than shrinking their grid rows.
+    const moleculeMinimum = molecule.querySelector('.panel-header').getBoundingClientRect().height + 150 + chrome(molecule);
+    const answerMinimum = answer.querySelector('.detective-answer-content').getBoundingClientRect().height + chrome(answer);
+    const paneMinimum = Math.ceil(Math.max(moleculeMinimum, answerMinimum));
+    game.style.setProperty('--nl-detective-pane-min-height', paneMinimum + 'px');
+    const style = getComputedStyle(ui.feedback);
+    const lines = [pixels(style.lineHeight), ...Array.from(ui.feedback.querySelectorAll('strong,p,.single-line-name'),
+      element => pixels(getComputedStyle(element).lineHeight))];
+    const contentMinimum = Math.max(...lines) + pixels(style.paddingTop) + pixels(style.paddingBottom) + chrome(ui.feedback);
+    const nav = feedbackPager.element.querySelector('.nl-vp-pager-nav');
+    const buttons = Array.from(nav.querySelectorAll('button'));
+    const buttonMinimum = Math.max(...buttons.map(button => pixels(getComputedStyle(button).minHeight)));
+    const countLine = pixels(getComputedStyle(nav.querySelector('span')).lineHeight);
+    const normalMinimum = Math.ceil(contentMinimum + 40);
+    const side = !ui.feedback.hidden && workspace.getBoundingClientRect().height < paneMinimum + normalMinimum + 4;
+    game.classList.toggle('detective-result-side-pager', side);
+    game.style.setProperty('--nl-detective-result-min-height', Math.ceil(side
+      ? Math.max(contentMinimum, buttonMinimum + countLine + 2) : normalMinimum) + 'px');
+    feedbackPager.refresh(); namePager?.refresh(); cluePager?.refresh();
+  }
+  function syncMissionPrompt() {
+    if (!inlineResults) return;
+    const region = promptPager?.element || ui['mission-prompt'];
+    const hidden = state.phase !== 'active' || !state.mission;
+    if (region.hidden === hidden) return;
+    region.hidden = hidden;
+    promptPager?.refresh(); viewport?.refresh(); refreshViewport();
+  }
   function setFeedbackView(enabled) {
     if (!viewportEnabled) return;
-    feedbackView = enabled;
-    $('game').classList.toggle('detective-feedback-view', enabled);
+    // Lesson feedback shares the current workspace; only standalone changes view.
+    feedbackView = enabled && !inlineResults;
+    $('game').classList.toggle('detective-feedback-view', feedbackView);
+    $('game').classList.toggle('detective-inline-feedback', enabled && inlineResults);
     if ($('detective-feedback-stage')) $('detective-feedback-stage').hidden = !enabled;
-    if (enabled) {
+    if (enabled && !inlineResults) {
       $('detective-feedback-title').textContent = state.correct ? 'Η υπόθεση λύθηκε' : 'Παρατήρησε την εξήγηση';
       $('detective-feedback-back').textContent = state.correct ? 'Δες την επιλογή σου' : 'Επιστροφή στην προσπάθεια';
       $('detective-feedback-title').focus({preventScroll: true});
@@ -513,10 +581,94 @@
   }
   function mountViewport() {
     if (viewport || !viewportEnabled) return;
-    viewport = window.NameleculeGameViewport.mount($('game'), {kind: 'detective', onResize: refreshViewport});
+    viewport = window.NameleculeGameViewport.mount($('game'), {kind: 'detective', onResize: refreshViewport,
+      preferred: inlineResults ? preferredViewport : null,
+      onDemand: inlineResults ? detail => postLesson('layout-demand', detail) : null});
+  }
+  function preferredViewport() {
+    const current = lesson?.current;
+    if (!inlineResults || state.stopped || state.phase !== 'active' || !current?.ready || !state.mission) return null;
+    const game = $('game'), workspace = game.querySelector('.detective-workspace');
+    const shared = window.NameleculeGameViewport, pixels = value => parseFloat(value) || 0;
+    const width = game.getBoundingClientRect().width;
+    if (!(width > 0)) return null;
+    const css = element => getComputedStyle(element);
+    const horizontal = style => pixels(style.paddingLeft) + pixels(style.paddingRight) + pixels(style.borderLeftWidth) + pixels(style.borderRightWidth);
+    const vertical = style => pixels(style.paddingTop) + pixels(style.paddingBottom) + pixels(style.borderTopWidth) + pixels(style.borderBottomWidth);
+    const line = style => pixels(style.lineHeight) || pixels(style.fontSize) * 1.5;
+    if (!demandTextContext) demandTextContext = document.createElement('canvas').getContext('2d');
+    const textWidth = (text, style) => {
+      if (!demandTextContext) return String(text).length * pixels(style.fontSize) * .6;
+      demandTextContext.font = style.fontStyle + ' ' + style.fontWeight + ' ' + style.fontSize + ' ' + style.fontFamily;
+      return demandTextContext.measureText(text).width;
+    };
+    const textHeight = (text, style, available) => {
+      const limit = Math.max(1, available - horizontal(style)), space = textWidth(' ', style);
+      let rows = 1, used = 0;
+      String(text).trim().split(/\s+/).forEach(word => {
+        const extent = textWidth(word, style);
+        if (used && used + space + extent > limit) { rows++; used = 0; }
+        rows += Math.max(0, Math.ceil(extent / limit) - 1);
+        used = (used ? used + space : 0) + Math.min(limit, extent);
+      });
+      return rows * line(style) + vertical(style);
+    };
+    const gameStyle = css(game), inner = Math.max(1, width - horizontal(gameStyle));
+    const narrow = width < 760 || shared.availableHeight(game) < 430;
+    const small = width < 760;
+    const workspaceGap = pixels(css(workspace).columnGap);
+    // Use the layout with feedback already present, before the first Check.
+    // At small widths the two panes share a row and the result is below it.
+    const moleculeWidth = small ? (inner - workspaceGap) / 2 : narrow ? (inner - workspaceGap) * 1.1 / 2 : (inner - 2 * workspaceGap) * .9 / 2.8;
+    const clueWidth = small ? moleculeWidth : narrow ? moleculeWidth : (inner - 2 * workspaceGap) / 2.8;
+    const answerWidth = small ? moleculeWidth : clueWidth;
+    const molecule = game.querySelector('.detective-molecule'), moleculeHeader = molecule.querySelector('.panel-header');
+    const headerStyle = css(moleculeHeader), headerTitle = moleculeHeader.querySelector('h2'), titleStyle = css(headerTitle);
+    const zoom = moleculeHeader.querySelector('.zoom-controls'), zoomStyle = css(zoom);
+    const zoomButtons = Array.from(zoom.querySelectorAll('button'));
+    const zoomWidth = zoomButtons.reduce((sum, button) => { const style = css(button); return sum + Math.max(pixels(style.minWidth), pixels(style.width)); }, Math.max(0, zoomButtons.length - 1) * pixels(zoomStyle.columnGap));
+    const headerHeight = Math.max(moleculeHeader.getBoundingClientRect().height, pixels(headerStyle.minHeight), vertical(headerStyle) + Math.max(34, textHeight(headerTitle.textContent, titleStyle, moleculeWidth - horizontal(css(molecule)) - horizontal(headerStyle) - zoomWidth - pixels(headerStyle.columnGap))));
+    // The isolated native SVG has a real 150px floor; this envelope never
+    // feeds the parent's allocation back into preferred molecular geometry.
+    const moleculeHeight = headerHeight + 150 + vertical(css(molecule));
+    const answer = game.querySelector('.detective-answer'), answerContent = answer.querySelector('.detective-answer-content'), answerStyle = css(answerContent);
+    const answerInner = Math.max(1, answerWidth - horizontal(css(answer)) - horizontal(answerStyle));
+    const help = answerContent.querySelector('.detective-help'), helpStyle = css(help), selectionStyle = css(ui['selection-status']);
+    const checkRow = answerContent.querySelector('.check-row'), rowStyle = css(checkRow), buttons = Array.from(checkRow.querySelectorAll('button'));
+    const buttonHeight = Math.max(...buttons.map(button => { const style = css(button); return Math.max(pixels(style.minHeight), line(style) + vertical(style)); }));
+    const buttonsWidth = buttons.reduce((sum, button) => { const style = css(button); return sum + textWidth(button.textContent, style) + horizontal(style); }, Math.max(0, buttons.length - 1) * pixels(rowStyle.columnGap));
+    const actionHeight = small || buttonsWidth > answerInner ? buttons.length * buttonHeight + Math.max(0, buttons.length - 1) * pixels(rowStyle.rowGap) : buttonHeight;
+    const selectionText = state.mission.kind === 'atoms' ? 'Επιλεγμένα άτομα: 999' : 'Επιλεγμένοι δεσμοί: 999';
+    const answerHeight = vertical(css(answer)) + Math.max(answerContent.getBoundingClientRect().height, vertical(answerStyle) + textHeight(help.textContent, helpStyle, answerInner) + pixels(helpStyle.marginBottom) + Math.max(textHeight('Δεν έχεις επιλέξει ακόμη κάτι.', selectionStyle, answerInner), textHeight(selectionText, selectionStyle, answerInner)) + pixels(rowStyle.marginTop) + actionHeight);
+    const clue = game.querySelector('.detective-clue'), clueHeader = clue.querySelector('.panel-header'), clueHeaderStyle = css(clueHeader);
+    const clueTitle = clueHeader.querySelector('h2'), clueContent = clue.querySelector('.detective-clue-content'), clueStyle = css(clueContent), nameStyle = css(ui['mission-name']);
+    const nameInner = Math.max(1, clueWidth - horizontal(css(clue)) - horizontal(clueStyle));
+    const nameHeight = line(nameStyle) + vertical(nameStyle) + (textWidth(ui['mission-name'].textContent, nameStyle) > nameInner ? 40 : 0);
+    const clueHeaderInner = Math.max(1, clueWidth - horizontal(css(clue)) - horizontal(clueHeaderStyle));
+    const kindStyle = css(ui['selection-kind']), kindWidth = Math.min(clueHeaderInner / 2, textWidth(ui['selection-kind'].textContent, kindStyle));
+    const clueHeaderHeight = Math.max(clueHeader.getBoundingClientRect().height, pixels(clueHeaderStyle.minHeight), vertical(clueHeaderStyle) + Math.max(textHeight(clueTitle.textContent, css(clueTitle), clueHeaderInner - kindWidth - pixels(clueHeaderStyle.columnGap)), textHeight(ui['selection-kind'].textContent, kindStyle, kindWidth)));
+    const clueHeight = vertical(css(clue)) + clueHeaderHeight + vertical(clueStyle) + nameHeight + 8;
+    const feedbackStyle = css(ui.feedback);
+    // One complete explanation line plus the existing local pager remains
+    // readable in the compact pane. Wide results can show two lines at once.
+    const resultHeight = Math.max(76, (small ? 1 : 2) * line(feedbackStyle) + vertical(feedbackStyle) + 40);
+    const paneHeight = Math.max(moleculeHeight, answerHeight, clueHeight);
+    const workspaceHeight = small ? paneHeight + resultHeight + pixels(css(workspace).rowGap) : Math.max(moleculeHeight, clueHeight + answerHeight + pixels(css(workspace).rowGap), resultHeight);
+    const statusStyle = css(ui['game-status']);
+    const normalStatus = Math.max(...[
+      'Σε αυτή την αποστολή επίλεξε άτομα, πατώντας στα σύμβολά τους.',
+      'Σε αυτή την αποστολή επίλεξε δεσμούς, πατώντας στις γραμμές τους.'
+    ].map(text => textHeight(text, statusStyle, inner)));
+    const actualStatus = statusStyle.position === 'absolute' || statusStyle.display === 'none' ? 0 : ui['game-status'].getBoundingClientRect().height;
+    // Ready status is visually hidden, but WRONG_KIND is an ordinary supported
+    // instruction. Reserve its row and gap before the first native selection.
+    const statusReserve = Math.max(0, normalStatus - actualStatus) + (actualStatus ? 0 : pixels(gameStyle.rowGap));
+    const key = JSON.stringify([current.requestId, current.attemptId, current.moleculeId, current.missionId]);
+    return shared.preferred(game, workspace, workspaceHeight + statusReserve, key);
   }
   function configureViewport() {
     const game = $('game'); game.classList.add('detective-viewport');
+    game.classList.toggle('nl-inline-results', inlineResults);
     const makeButton = (text, id, handler) => {
       const result = document.createElement('button'); result.type = 'button'; result.className = 'secondary'; result.textContent = text; result.id = id; result.addEventListener('click', handler); return result;
     };
@@ -525,19 +677,34 @@
     const title = document.createElement('h2'); title.id = 'detective-feedback-title'; title.tabIndex = -1;
     const back = makeButton('Επιστροφή στην προσπάθεια', 'detective-feedback-back', () => { setFeedbackView(false); ui['check-answer'].focus({preventScroll: true}); });
     heading.append(title, back);
-    stage.append(heading, ui.feedback, ui['next-mission']); game.append(stage);
+    if (!inlineResults) stage.append(heading);
+    stage.append(ui.feedback, ui['next-mission']);
+    if (inlineResults) {
+      stage.classList.add('nl-inline-result');
+      document.querySelector('.detective-workspace').append(stage);
+    } else game.append(stage);
     const views = document.createElement('div'); views.className = 'detective-stage-tabs';
     const showView = view => { game.dataset.detectiveView = view; for (const button of views.querySelectorAll('button')) button.setAttribute('aria-pressed', String(button.dataset.detectiveViewButton === view)); refreshViewport(); };
     const clueButton = makeButton('Στοιχείο στο όνομα', 'detective-show-clue', () => showView('clue')); clueButton.dataset.detectiveViewButton = 'clue';
     const moleculeButton = makeButton('Μόριο & επιλογή', 'detective-show-structure', () => showView('structure')); moleculeButton.dataset.detectiveViewButton = 'structure';
     views.append(clueButton, moleculeButton); document.querySelector('.detective-workspace').before(views);
     showView('structure');
-    ui['check-answer'].parentNode.append(makeButton('Εξήγηση', 'detective-feedback-open', () => setFeedbackView(true)));
-    $('detective-feedback-open').hidden = true;
+    if (!inlineResults) {
+      ui['check-answer'].parentNode.append(makeButton('Εξήγηση', 'detective-feedback-open', () => setFeedbackView(true)));
+      $('detective-feedback-open').hidden = true;
+    }
     const clue = document.querySelector('.detective-clue-content');
+    if (inlineResults) {
+      document.querySelector('.intro .nl-game-mission').after(ui['mission-prompt']);
+      promptPager = window.NameleculeGameViewport.pager(ui['mission-prompt'], {axis: 'y', label: 'Αποστολή'});
+      promptPager.element.classList.add('detective-prompt-pager');
+      promptPager.element.hidden = true;
+    }
     // Long names remain one line, with button paging. The highlighted piece is unchanged.
     namePager = window.NameleculeGameViewport.pager(ui['mission-name'], {axis: 'x', label: 'Πλήρες όνομα ένωσης'});
-    cluePager = window.NameleculeGameViewport.pager(ui['mission-prompt'], {axis: 'y', label: 'Αποστολή'});
+    // The inline name clue keeps its own controls; its mission prompt has one
+    // separate owner in the heading. Standalone retains the original prompt.
+    cluePager = window.NameleculeGameViewport.pager(inlineResults ? clue : ui['mission-prompt'], {axis: 'y', label: inlineResults ? 'Στοιχείο στο όνομα' : 'Αποστολή'});
     feedbackPager = window.NameleculeGameViewport.pager(ui.feedback, {axis: 'y', label: 'Εξήγηση αποστολής'});
     game.addEventListener('nl-level-stage', refreshViewport);
     mountViewport();

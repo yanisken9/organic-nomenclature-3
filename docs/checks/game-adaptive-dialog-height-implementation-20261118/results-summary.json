@@ -1,0 +1,282 @@
+{
+  "date": "2026-11-18",
+  "status": "COMPLETE_LOCAL",
+  "objective": "Adapt the height of all four lesson-game popups to actual content needs, reducing excessive empty space while retaining readable molecule/answer, Check results and continuation controls.",
+  "version": "v57",
+  "approval": "User replied yes to concrete14fileadaptiveheightplan on2026-11-18.",
+  "baseHEAD": "168e3cec01f941a84d40bbe0dc07156e7baa35d0",
+  "preExistingTrackedChanges": 102,
+  "beforeCopies": "docs/checks/game-adaptive-dialog-height-implementation-20261118/before",
+  "implementationDiff": "docs/checks/game-adaptive-dialog-height-implementation-20261118/implementation.diff",
+  "previousVerifiedTargetSHA256": "95d3d3f941d8be401f5f96963aff167a41c1dff568f2913441ffc39133d0836e",
+  "runtimeTarget": "docs/checks/game-adaptive-dialog-height-implementation-20261118/runtime-target.json",
+  "runtimeTargetSHA256": "7209814fe005f4db6679fbf273be2ed0c27c7593854b473063dc6e44ca19e021",
+  "changedRuntimePaths": [
+    "js/namelecule-game-viewport.js",
+    "css/namelecule-game-viewport.css",
+    "js/namelecule-quiz-checkpoints.js",
+    "js/namelecule-game-repair.js",
+    "js/namelecule-name-builder.js",
+    "js/namelecule-molecular-puzzle.js",
+    "js/namelecule-molecular-detective.js",
+    "js/namelecule-game-choice-checkpoint.js",
+    "js/namelecule-molecular-detective-lesson.js",
+    "games/name-builder.html",
+    "games/molecular-puzzle.html",
+    "games/molecular-detective.html",
+    "mulermoc-nom-57.html",
+    "games/molecular-detective-viewer.html"
+  ],
+  "behavior": [
+    "Shared independent preferred-content demand and a single parent height writer bounded by the actual available viewport. Allocated root/body/iframe height is not used as natural content demand.",
+    "Stable per-question demand at fixed width/cap, real prospective result/action reserves, safe chooser suspension/return and authenticated optional layout messages.",
+    "Four game-specific demand providers preserve useful drawing/construction space, natural controls and existing common readable type scale. Width, grading, stored progress and molecule data are unchanged.",
+    "Affected loader/controller cache URLs refreshed and generated Detective viewer rebuilt; standalone legacy behavior retained."
+  ],
+  "comparison": {
+    "html": "docs/checks/game-adaptive-dialog-height-implementation-20261118/comparison.html",
+    "htmlSHA256": "a7ef79eb0d2cde7cba493b8176273e347a4c1d1a3f3c7636cc066415d38cf224",
+    "provenance": "docs/checks/game-adaptive-dialog-height-implementation-20261118/comparison.json",
+    "provenanceSHA256": "545f676878aae6010b879423338b7810714d7cacccc426c22ebcf5eeb2d3d168",
+    "initialTallDialogHeights": {
+      "before": 1069,
+      "repair": 628,
+      "builder": 739,
+      "puzzle": 755,
+      "detective": 576
+    },
+    "sameActiveQuestionInput": true
+  },
+  "comparisonURL": "http://127.0.0.1:8013/docs/checks/game-adaptive-dialog-height-implementation-20261118/comparison.html?v=adaptive-dialog-20261118-r3",
+  "lessonURL": "http://127.0.0.1:8013/mulermoc-nom-57.html?scenario=scenarios/alkanes-user-3.scenario.json&present=1&from=theory-library&v=adaptive-dialog-20261118-r3",
+  "developerVerification": {
+    "syntaxJS": 8,
+    "viewerGeneratorChecks": 2,
+    "sharedContract": {
+      "passed": 33,
+      "recorded": 33
+    },
+    "builderPuzzleProviderChecks": 65,
+    "repairDetectiveProviderChecks": 15,
+    "browserSummary": "docs/checks/game-adaptive-dialog-height-implementation-20261118/browser/summary.json",
+    "browserSummarySHA256": "0901e6e8bc7b2dad6743172d246d68748e2123d3746de6434852b47e593045f1",
+    "artifactManifest": "docs/checks/game-adaptive-dialog-height-implementation-20261118/browser/artifact-manifest.json",
+    "artifactManifestSHA256": "21eeebfe2e6121b946878b6c99d6332c69f32b8a48cc0e0ab0bc590cf20274b1",
+    "reviewedArtifactCount": 308,
+    "runs": [
+      {
+        "run": "run-133926",
+        "results": "docs/checks/game-adaptive-dialog-height-implementation-20261118/browser/run-133926/results.json",
+        "SHA256": "8704e1b0054a335e9052aad3698acd6fd83122d1410dc862f87a9768c6b485c0",
+        "completed": false,
+        "passingChecks": 12,
+        "recordedChecks": 13,
+        "sourceStable": true,
+        "appJavascriptErrors": 0,
+        "networkFailures": [],
+        "qualification": "Candidate1 selector mismatch: Repair objective has .round-objective, not .nl-game-prompt. Raw failure preserved."
+      },
+      {
+        "run": "run-134008",
+        "results": "docs/checks/game-adaptive-dialog-height-implementation-20261118/browser/run-134008/results.json",
+        "SHA256": "55c91a46ad31f0de3e0dcd72c63a54d2db7ebcafa6021e70583279ffe47a2010",
+        "completed": true,
+        "passingChecks": 68,
+        "recordedChecks": 68,
+        "sourceStable": true,
+        "appJavascriptErrors": 0,
+        "networkFailures": [
+          {
+            "type": "Document",
+            "error": "net::ERR_ABORTED",
+            "canceled": true
+          }
+        ],
+        "qualification": "Candidate1 completed first four tall initial states;68/68. Providers unchanged in final; current3 captures independently used for comparison."
+      },
+      {
+        "run": "run-134757",
+        "results": "docs/checks/game-adaptive-dialog-height-implementation-20261118/browser/run-134757/results.json",
+        "SHA256": "feb9ae185afb29fb136e2616e172f158b0c04ad47f4b3260e5b55ca68b5e749b",
+        "completed": false,
+        "passingChecks": 31,
+        "recordedChecks": 32,
+        "sourceStable": true,
+        "appJavascriptErrors": 0,
+        "networkFailures": [],
+        "qualification": "Candidate3 genuine Repair wrongCheck/fixed-width stability; stopped on background Main57 scrollHeight wrongly used as modal overflow."
+      },
+      {
+        "run": "run-134929",
+        "results": "docs/checks/game-adaptive-dialog-height-implementation-20261118/browser/run-134929/results.json",
+        "SHA256": "4952f88e8d02a45ed482b342561e3c223b332788cf538ea2e15ccd17f8f36914",
+        "completed": false,
+        "passingChecks": 321,
+        "recordedChecks": 322,
+        "sourceStable": true,
+        "appJavascriptErrors": 0,
+        "networkFailures": [
+          {
+            "type": "Document",
+            "error": "net::ERR_ABORTED",
+            "canceled": true
+          }
+        ],
+        "qualification": "Candidate3 all4 actual wrong input/Check+tabs/pages/Undo and3sizes passed;321passing. Stopped when generic oracle required intentionally hidden solved Repair Check."
+      },
+      {
+        "run": "run-135128",
+        "results": "docs/checks/game-adaptive-dialog-height-implementation-20261118/browser/run-135128/results.json",
+        "SHA256": "f6c403fe0b80177dde6de1384e949ba911d3160dc659fbc0ca1763cb223088f7",
+        "completed": false,
+        "passingChecks": 267,
+        "recordedChecks": 268,
+        "sourceStable": true,
+        "appJavascriptErrors": 0,
+        "networkFailures": [
+          {
+            "type": "Document",
+            "error": "net::ERR_ABORTED",
+            "canceled": true
+          },
+          {
+            "type": "Document",
+            "error": "net::ERR_ABORTED",
+            "canceled": true
+          }
+        ],
+        "qualification": "Candidate3 all4 correct replay3sizes/back fullanswer/result/control/drawing passed;267passing. Raw equality assertion606\u2192574 after explicitwidth changes retained; approved contract permits recomputation. Detectivecoldrestore completed later."
+      },
+      {
+        "run": "run-135522",
+        "results": "docs/checks/game-adaptive-dialog-height-implementation-20261118/browser/run-135522/results.json",
+        "SHA256": "e10a359a4e72adca76dc9e3bbb76718336d9069b18f31adfe72c2cd350c0e6fb",
+        "completed": false,
+        "passingChecks": 207,
+        "recordedChecks": 207,
+        "sourceStable": true,
+        "appJavascriptErrors": 0,
+        "networkFailures": [
+          {
+            "type": "Document",
+            "error": "net::ERR_ABORTED",
+            "canceled": true
+          },
+          {
+            "type": "Document",
+            "error": "net::ERR_ABORTED",
+            "canceled": true
+          }
+        ],
+        "qualification": "Candidate3 completed Detectivecoldrestore/settling,longoptional/levelchooser/intermediateNext,representations/zoom/resize;207passing. Stopped after actual3D click due invalid unquoted diagnostic3d selector; real model visible in rawfailure.png."
+      },
+      {
+        "run": "run-135756",
+        "results": "docs/checks/game-adaptive-dialog-height-implementation-20261118/browser/run-135756/results.json",
+        "SHA256": "e9e23801ac5328bac9c8c6060e4f5a60c3ff26d3ca84b1545f7627f9de9f6f14",
+        "completed": true,
+        "passingChecks": 61,
+        "recordedChecks": 61,
+        "sourceStable": true,
+        "appJavascriptErrors": 0,
+        "networkFailures": [
+          {
+            "type": "Document",
+            "error": "net::ERR_ABORTED",
+            "canceled": true
+          },
+          {
+            "type": "Document",
+            "error": "net::ERR_ABORTED",
+            "canceled": true
+          },
+          {
+            "type": "Document",
+            "error": "net::ERR_ABORTED",
+            "canceled": true
+          }
+        ],
+        "qualification": "Candidate3 completed only remaining3Dreturn/partialcoldrestore,standalone and isolated validated order renderer;61/61."
+      }
+    ],
+    "doNotSumRuns": "Partial/harness failures retained; counts describe separate bounded scopes, not one combined all-pass suite.",
+    "qualifiedBrowserCoverage": [
+      "Four actual wrong input/Check paths with heightstable at unchangedwidth/cap and answer/result/nativecontrols inside actual ancestors at1181x1093,1024x640,390x700; localtabs/pages/Undo and genuineWrongKind.",
+      "Four exact historical genuine correct replay states revalidated by currentcontrollers; no freshcorrecttriples. All3 thirdRepair continuationbuttons fullycontained/hit at3sizes; coldrestore all4.",
+      "Long optionalPuzzleL3 actualname/error pages, completeboardtile and controls; realexpandedstep11levelchooser fullcap then adaptiveheight return; actual required BuilderL2 Next quiz at800x900 retainedL2,counter2/3 and narrowfollowup.",
+      "Current2DBuilder condensed/expanded/skeletal, inversezoom,3size fullnativeink, actual20atom methyl_2_pentane3Dcanvas and2Dreturn; exact genuinepartial coldrestore.",
+      "ActualstandaloneBuilderLevel1wrong preserves dedicatedlegacyfeedback; iframe roots without external .nl-vp-slot exercised in normalcurrentflows.",
+      "ActualallowedRepairL3 assignedreplace. Authorizedisolated capturedgenerated order fixture revalidated currentengine/name/asset; actualselect/move/namepages/Checkbounds3sizes, noCheckgrading/no assignedlessonquiz/no earnedreceipt changes."
+    ],
+    "cleanup": {
+      "path": "docs/checks/game-adaptive-dialog-height-implementation-20261118/browser/cleanup-verification.json",
+      "SHA256": "402a064ac9eca6aa21f0f16cb0c0bfbb7a65e6b26a41e32edd6dc903426ea4df",
+      "ownedProcesses": 7,
+      "allAbsent": true
+    }
+  },
+  "independentReview": {
+    "report": "docs/checks/game-adaptive-dialog-height-implementation-20261118/review-final.json",
+    "reviewer": "/root/adaptive_height_review",
+    "roleID": "NAMELECULE_REVIEWER_V1_20261023",
+    "status": "ACCEPTED_WITH_DOCUMENTED_LIMITS",
+    "closed": [
+      "AH-R01",
+      "AH-R02",
+      "AH-R03"
+    ],
+    "newOpenFindings": []
+  },
+  "finalIntegrity": {
+    "runtime": {
+      "count": 14,
+      "mismatches": []
+    },
+    "protected": {
+      "count": 29,
+      "mismatches": []
+    },
+    "cores": {
+      "count": 13,
+      "mismatches": []
+    },
+    "finalBrowserInputs": {
+      "count": 670,
+      "mismatches": []
+    },
+    "HEADUnchanged": true,
+    "indexUnchanged": true
+  },
+  "coreReport": {
+    "changed": false,
+    "filesChecked": 13,
+    "priorInlineBaselineAlsoUnchanged": true,
+    "scope": "No core changes during the entire 2026-11-18 session, including upstream integration; user keeps v57."
+  },
+  "upstream": {
+    "lastChecked": "a9e598f04610552234395bc4bb71d06b6f09edb2",
+    "previousChecked": "72699c21b345de756a870086c923ad476f6214fd",
+    "actuallySynchronized": "11d5886fd28e3242a7cbb9daa6206722628a6e0b",
+    "newCommits": 4,
+    "historyAndChangelogRead": true,
+    "integrationPerformed": false,
+    "reason": "New functional work is v58; user explicitly retains v57.",
+    "evidence": "docs/checks/game-adaptive-dialog-height-implementation-20261118/upstream-review.json"
+  },
+  "limitations": [
+    "Correct states are genuine historical replays revalidated by current controllers, not newly completed triples.",
+    "Repair order coverage uses an isolated current-engine/name/asset-validated renderer without fresh assigned lesson grading.",
+    "The actual step11 level2 continuation at 800x900 was Next quiz, retaining level2 and counter2/3. The longer Next required level label is source/VM-supported but was not exercised as that actual browser continuation.",
+    "Headless Chrome evidence does not certify Firefox, physical touch, user warm-cache behavior, the conference machine, an offline fallback or uninterrupted operation.",
+    "One 20-atom 3D model was exercised; no universal 3D/molecule/game/level matrix was completed.",
+    "Canceled Document net::ERR_ABORTED requests remain recorded; no application JavaScript exceptions were observed in the supplied runs.",
+    "After explicit width/cap changes Detective height recomputed from 606 to 574px; both layouts preserved state and passed bounds. Fixed-width cold-restored 606px was stable at 0/2/7 seconds.",
+    "Existing P3 PZ-PRE01 remains outside scope: Puzzle announces an empty board after partial graph restoration while graph and progress remain preserved."
+  ],
+  "commit": null,
+  "push": false,
+  "publication": false,
+  "desktopJSONExport": false,
+  "fullCheckpoint": false,
+  "nextStep": "User inspects the local before/after comparison. Firefox verification and any separate fix for the pre-existing Puzzle announcement require separately scoped follow-up; do not treat current Chrome evidence as universal reliability."
+}

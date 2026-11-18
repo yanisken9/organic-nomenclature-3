@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#254c50">
   <title>Χτίσε το όνομα · Namelecule</title>
-  <link rel="stylesheet" href="../css/namelecule-name-builder.css?v=game-viewport-20261116-r1">
+  <link rel="stylesheet" href="../css/namelecule-name-builder.css?v=adaptive-dialog-20261118-r3">
   <link rel="stylesheet" href="../css/namelecule-game-levels.css?v=game-viewport-20261116-r1">
-  <link rel="stylesheet" href="../css/namelecule-game-viewport.css?v=game-viewport-20261116-r1">
-  <script src="../js/namelecule-game-viewport.js?v=game-viewport-20261116-r1" defer></script>
+  <link rel="stylesheet" href="../css/namelecule-game-viewport.css?v=adaptive-dialog-20261118-r3">
+  <script src="../js/namelecule-game-viewport.js?v=adaptive-dialog-20261118-r3" defer></script>
   <script src="../js/namelecule-game-levels.js?v=game-viewport-20261116-r1" defer></script>
   <script src="../js/namelecule-name-builder-engine.js?v=name-builder-20261111-r1" defer></script>
-  <script src="../js/namelecule-name-builder.js?v=game-viewport-20261116-r1" defer></script>
+  <script src="../js/namelecule-name-builder.js?v=adaptive-dialog-20261118-r3" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#answer-title">Πήγαινε στη σύνθεση του ονόματος</a>
@@ -22,19 +22,19 @@
   <main class="game" id="game">
     <section class="intro" aria-labelledby="game-title">
       <p class="eyebrow">ΠΑΙΧΝΙΔΙ ΟΝΟΜΑΤΟΛΟΓΙΑΣ</p>
-      <div class="builder-title">
-        <img class="builder-logo" src="assets/name-builder/name-builder-logo-3d-blank-v1.png" width="128" height="128" alt="" aria-hidden="true">
-        <h1 id="game-title">Χτίσε το όνομα</h1>
+      <div class="builder-title nl-game-identity">
+        <img class="builder-logo nl-game-logo" src="assets/name-builder/name-builder-logo-3d-blank-v1.png" width="128" height="128" alt="" aria-hidden="true">
+        <h1 id="game-title" class="nl-game-title">Χτίσε το όνομα</h1>
       </div>
-      <p class="objective">Παρατήρησε τη δομή. Διάλεξε τα κατάλληλα συνθετικά και βάλε τα στη σωστή σειρά.</p>
-      <p class="intro-detail">Σύρε τα πλακίδια στο πλαίσιο ή πάτησέ τα για να τα προσθέσεις. Μερικά περισσεύουν.</p>
+      <p class="objective nl-game-mission">Παρατήρησε τη δομή. Διάλεξε τα κατάλληλα συνθετικά και βάλε τα στη σωστή σειρά.</p>
+      <p class="intro-detail nl-game-prompt">Σύρε τα πλακίδια στο πλαίσιο ή πάτησέ τα για να τα προσθέσεις. Μερικά περισσεύουν.</p>
     </section>
     <div id="game-levels"></div>
     <div id="game-status" class="game-status" role="status">Ετοιμάζουμε τη δομή και τα συνθετικά.</div>
     <div class="workspace">
       <section class="panel molecule-panel" aria-labelledby="molecule-title">
         <div class="panel-header"><h2 id="molecule-title">Το μόριο</h2><div class="zoom-controls" aria-label="Μέγεθος μοριακού σχεδίου"><button id="zoom-out" class="icon-button" type="button" aria-label="Σμίκρυνση μορίου" title="Σμίκρυνση" disabled>−</button><button id="zoom-in" class="icon-button" type="button" aria-label="Μεγέθυνση μορίου" title="Μεγέθυνση" disabled>+</button></div></div>
-        <div class="viewer-wrap" id="viewer-wrap" aria-busy="true">
+        <div class="viewer-wrap nl-game-stimulus-formula" id="viewer-wrap" aria-busy="true">
           <iframe id="molecule-viewer" title="Μοριακή δομή για την άσκηση" sandbox="allow-scripts allow-same-origin" referrerpolicy="same-origin"></iframe>
           <div class="viewer-mask" id="viewer-mask"><p id="viewer-message">Φορτώνουμε το μοριακό σχέδιο.</p><button id="retry-load" class="secondary" type="button" hidden>Δοκίμασε ξανά</button></div>
         </div>

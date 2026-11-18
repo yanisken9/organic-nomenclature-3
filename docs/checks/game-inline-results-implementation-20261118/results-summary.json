@@ -1,0 +1,107 @@
+{
+  "date": "2026-11-18",
+  "status": "COMPLETE_APPROVED_UNIT_LOCAL_ONLY",
+  "baseHEAD": "168e3cec01f941a84d40bbe0dc07156e7baa35d0",
+  "candidate": 9,
+  "runtimeTargetSHA256": "95d3d3f941d8be401f5f96963aff167a41c1dff568f2913441ffc39133d0836e",
+  "files": {
+    "js/namelecule-game-repair.js": "48d2d5c169723246f385613e5c8a6e39e24f582ad6705c9996f8369e391b50f9",
+    "js/namelecule-name-builder.js": "e76873b79bf2b6f1490ef8084e0004f018aa0477c53600d68498f89f20c14fd2",
+    "js/namelecule-molecular-puzzle.js": "69b249f1e77d1024d74bdad98762567827eadecd07c936ff756d2d1da2366fad",
+    "js/namelecule-molecular-detective.js": "3a3cb43af709db8325bab8518f7e85e5119790e98b4c84e9644d5f84da45c745",
+    "css/namelecule-repair-round.css": "ff9530d29f369c4d67768fbc20bd1fb8dd56f8dc2aaa69f17088c1bad2cbded6",
+    "css/namelecule-name-builder.css": "70d03ac52a27f56f7d38052f9921ac652404d367dc74c2fc1907749867cddabc",
+    "css/namelecule-molecular-puzzle.css": "024b949a6f086b240ae6c46c79fcaf058e372e067c3d45a8ad0bf9bab598219b",
+    "css/namelecule-molecular-detective.css": "2e504dd1f360cc1c9f86d7bc1f14e6a4caf597c5b528a205da67f165d7227557",
+    "games/name-builder.html": "ef26e4f0855032f9599ea01df6aaf5b0c9eb33d91d0799436e6bfa583ec00266",
+    "games/molecular-puzzle.html": "3ec8c1da500258b2022ea2b92b5602e02a4be39adfb99e56fbf7ec1851a19186",
+    "games/molecular-detective.html": "3d33b11ad36c8479cbf7bcc287ab1fb8b1b0497ddb67386215007a47e7c18dca",
+    "js/namelecule-game-choice-checkpoint.js": "33b1ef410fb31352730e7865752084f1e7e07c7e68f9b5080183149b7695a90f",
+    "js/namelecule-molecular-detective-lesson.js": "11287ed6a4ccd4da1259c7b4a948e370f3f01d65ed4c1b54cdfa07e8f823e515",
+    "mulermoc-nom-57.html": "61b9cb8eadbf316b6f68178eeb3002f75680554b3efa534d7fb9c46cf7f0d026",
+    "games/molecular-detective-viewer.html": "0ecc812eaa84a367dfb63facd56dc77d7cd4a6214a20b2e263d2c9abdd56f476",
+    "js/namelecule-game-viewport.js": "651523af3759c66358fc0b09dc77fca08ff76999f5506a7554d3e0f55f1902bd"
+  },
+  "behavior": [
+    "Four lesson-game secondary prompts centered/fullwidth,20px wide/16px narrow,normal400 and common font family below bold general mission.",
+    "Check results remain in current game editing pane beside/below answer; local pages preserve long text/name access.",
+    "Complete controls, meaningful native molecular drawing and full Repair choices in tested conditions; standalone/legacy behavior guarded."
+  ],
+  "verification": {
+    "integrity": "16target,26protected,13cores,HEAD/index match; both generators and7JS syntax passed.",
+    "browserSummary": "docs/checks/game-inline-results-implementation-20261118/browser/summary.json",
+    "browserSummarySHA256": "37e03d3b148deb0d49c38e993a02b3f9333424907ea72f9835b48adf895fcf5d",
+    "artifactManifestSHA256": "66a4572cdce3c907f4d08a0c6304823a7edd29f52db3167c377756ae12cfdcc6",
+    "finalReceipts": {
+      "criticalAndNoSlot": {
+        "path": "docs/checks/game-inline-results-implementation-20261118/browser/run-130044/results.json",
+        "checks": "148/148 recorded",
+        "qualification": "Run partial only because standalone initial Level1 selection was missing;no critical app failure."
+      },
+      "finalUnreachedTail": {
+        "path": "docs/checks/game-inline-results-implementation-20261118/browser/run-130632/results.json",
+        "checks": "44/44",
+        "completed": true
+      }
+    },
+    "crossRunQualification": [
+      "No sum of all historical checks is presented as one passing run. Failed candidates,driver errors and diagnostic-only runs remain immutable and individually classified below.",
+      "Outer frame containment in124020 did not prove a readable molecule. Root visual review exposed the sustained native clipping;124719 reproduced it and130044 verifies the final actual drawing.",
+      "Builder/Repair typography and grading captures are reused where functional rendering/grading source remains unchanged;final Detective/Puzzle correction uses fresh candidate9 captures. Cache-only URL changes are distinguished from rendering changes.",
+      "Exact captured genuine records are setup,revalidated by current controllers;no fabricated answer,selection,grade or earned receipt was injected. Replay state is not described as a new solve.",
+      "Puzzle prompt oracle accepts only the two exact pre-existing construction wording branches. Actual selected branch is recorded;no source wording was changed by QA."
+    ],
+    "coverage": [
+      "Fresh genuine wrong\u2192correct in all4:Builder/Puzzle/Detective in104201 and Repair in114428. Grading proof is retained;subsequent layout replays are explicitly not fresh grading.",
+      "Fresh genuine Repair3round triple in114428 earned gate4;real third-round Continue reached step5 and ordinary Next reached independently locked step11.",
+      "Wrong/solved chooser reentry in all4;wrong Builder and solved Repair cold restores;meaningful progress retained. Display x/y and untouched future Repair presentation shuffle are qualified separately.",
+      "Current uniform prompts:20px wide/16px narrow,400weight,centered;all4 actual font families identical. Existing stimulus names28 and Builder native preference28 preserved;safe molecular fitdown remains allowed.",
+      "Final Detective95d3d3f9 target:wrong/correct at390x700,1280x720,1024x640;all8C/H labels and visible molecular ink inside actual nativeviewport,frame/panel ancestors and fullCheck hit regions. Real WRONG_KIND click and clue/name return preserve selection and readable drawing.",
+      "Final exact long optional Puzzle wrong state:all3sizes;name and full feedback reachable through existing localpage controls;full actual tile,Undo/Check/result within ancestors;reentry preserved.",
+      "Repair full46px choice windows and every40px replacement through localpages;PartsBack/help;genuine third-round replay/all3sizes;responsive actualNext/header readiness. Historical branched L2 case3-\u03bc\u03b5\u03b8\u03c5\u03bb\u03bf\u03b2\u03bf\u03c5\u03c4\u03ac\u03bd\u03b9\u03bf is labeled historical access setup,not maximum-name coverage.",
+      "Fresh Builder initial firstCheck1280/390 in candidate7 and1024 in candidate8;current readiness guard fix has genuine input proof. Fresh BuilderL2 correction/all3sizes and reentry in124020;bank access uses actual compact tabs.",
+      "Nine final no-slot resize observations across Builder/Puzzle/Detective;one actual standalone Builder Level1 selection\u2192tile\u2192wrong Check retains legacy dedicated feedback. Other standalone guards are source/Reviewer coverage."
+    ],
+    "cleanup": {
+      "ownedLaunches": 14,
+      "allPIDsAbsentAndProfilesRemovedNow": true,
+      "evidence": "docs/checks/game-inline-results-implementation-20261118/browser/cleanup-verification.json"
+    },
+    "limits": [
+      "Bounded Chrome CSS viewports;no physicaltouch,Firefox/fullscreen or intended conference-machine certification.",
+      "No exhaustive compound/mode/level grading matrix;one fresh full triple,other genuine rounds and qualified replays only.",
+      "Repair order-round browser interaction and maximum-name/both-Xpager worstcase were not exercised;source/VM evidence is separate.",
+      "Standalone actual smoke is Builder only;no Internet-independent readiness or universal3D claim.",
+      "Adaptive popup height remains a separate user request with preflight evidence only."
+    ]
+  },
+  "independentReview": {
+    "path": "docs/checks/game-inline-results-implementation-20261118/review-final.json",
+    "SHA256": "06173c1da13843a31c88210453be4c5a6aa0612490b31e6bd9b05c9e4b9218a6",
+    "roleID": "NAMELECULE_REVIEWER_V1_20261023",
+    "verdict": "ACCEPTED_BOUNDED_SCOPE_NO_OPEN_P0_P1_P2"
+  },
+  "residualFindings": [
+    {
+      "id": "PZ-PRE01",
+      "severity": "P3",
+      "preExisting": true,
+      "path": "js/namelecule-molecular-puzzle.js:1029",
+      "behavior": "Empty-board announcement remains after partial graph restore at1134/1146; graph/progress retained.",
+      "disposition": "Outside approved UI wording scope; retained and disclosed."
+    }
+  ],
+  "coreReport": "No changes to any13 active core files during the entire2026-11-18 session relative to recorded baseline.",
+  "upstream": {
+    "checkedHEAD": "72699c21b345de756a870086c923ad476f6214fd",
+    "actuallySynchronized": "11d5886fd28e3242a7cbb9daa6206722628a6e0b",
+    "result": "Current upstream main and commit CHANGELOG diff reviewed; same checked HEAD; v58 deferred by user, keep57."
+  },
+  "commitPushPublishExport": false,
+  "newTask": {
+    "objective": "Adaptive four-game lesson popup height based on needs, stablewidth and question flow.",
+    "status": "CONCRETE_PLAN_AWAITING_USER_APPROVAL_NO_IMPLEMENTATION",
+    "preflight": "docs/checks/game-adaptive-dialog-height-preflight-20261118/preflight.json",
+    "reproduction": "Same untouched content:696px at1280x720 versus1069px at1181x1093, all4;373px allocated solely from taller viewport."
+  }
+}

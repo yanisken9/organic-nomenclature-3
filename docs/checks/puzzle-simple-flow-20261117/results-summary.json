@@ -1,0 +1,92 @@
+{
+  "date": "2026-11-17",
+  "status": "COMPLETE_LOCALLY_FOR_ACTIVE_V57",
+  "approval": "User explicitly approved the concrete11-path plan",
+  "baseHEAD": "168e3cec01f941a84d40bbe0dc07156e7baa35d0",
+  "targetSHA256": "15765a21c57592ba07ead050f5085749250cd7095b6117015495c288a3c9e095",
+  "runtimePaths": [
+    "js/namelecule-molecular-puzzle.js",
+    "css/namelecule-molecular-puzzle.css",
+    "games/molecular-puzzle.html",
+    "js/namelecule-game-choice-checkpoint.js",
+    "mulermoc-nom-54.html",
+    "mulermoc-nom-55.html",
+    "mulermoc-nom-56.html",
+    "mulermoc-nom-57.html",
+    "games/name-builder-viewer.html",
+    "games/molecular-detective-viewer.html",
+    "design/welcome-proposal.html"
+  ],
+  "behavior": [
+    "One persistent Instructions toggle, enlarged persistent target and visible main bank/board/actions",
+    "One local pointer/native-keyboard connection flow, no global connection mode or visible per-piece arrow buttons",
+    "Shared fixed-neighbor H/V validation/projection for preview/drop/keyboard/snap eligibility/final commit; bounds/spacing/corridors and old arbitrary-unit pending restoration",
+    "Undo/Hand/Remove/Check, graph/H/orders/grading, levels, progress and gate policies preserved"
+  ],
+  "developerVerification": {
+    "memory": {
+      "cases": 85,
+      "assertions": 1558,
+      "passed": true,
+      "freeze": "memory/corrections2/freeze.json",
+      "freezeSHA256": "03695d035f722e40f6df07ca73d8e407967ad45eb0f232d433c99bc5f57ff2c7"
+    },
+    "browser": {
+      "target": "candidate3",
+      "scopeChecks": {
+        "paging": 159,
+        "lesson": 161,
+        "gates": 402,
+        "legacy": 24,
+        "naturalNameOverflow320": 9
+      },
+      "allPassed": true,
+      "earlierCandidate1Smoke": 307,
+      "summary": "browser/summary.json",
+      "summarySHA256": "c0d4b9b918fb198560d185caa1e93d05bc8512a19ac623f9db8b27c9a942939d",
+      "artifactManifest": "browser/artifacts.json",
+      "artifactManifestSHA256": "531fa23dab3a8e78088dd76296c9b4f99f5595ab565d8e42f623e60be2dd125d",
+      "actualBeforeRCA": "Archivedc4a genuine bonded-leaf drag reproduced diagonal before the correction",
+      "conditions": "Owned headless Chrome,100%CSS,1440x900/1024x640/390x700;320px name-pager cut only",
+      "fallback56": "Diagnostic4/4 comparison reproduced lesson initialization failure in current AND archived-before56. No gate/child; noViewport fallback rendering unverified. This preexisting path was not changed or repaired."
+    },
+    "staticHTTP": "static-http.json; syntax bothJS,2generator--check,11HTTP200/SHA at8014; beforecopies and HEAD/index stable"
+  },
+  "independentReview": {
+    "reviewer": "/root/puzzle_simple_independent_review",
+    "freshContext": true,
+    "readOnly": true,
+    "tracking": "review-tracking.json",
+    "closed": [
+      "SIMPLE-REV-01",
+      "SIMPLE-REV-02"
+    ],
+    "openFindings": [],
+    "independentChecks": "Productionfunction fixtures,340sampled comparisons,hash/source/cascade/boundedness; no independent browser execution"
+  },
+  "preservation": {
+    "cores": 13,
+    "dataScenarios": 577,
+    "additionalProtected": 7,
+    "allUnchanged": true,
+    "coreChanges": false
+  },
+  "knownRecovery": "source-before/ exact11filecopies verified against baseline.json, prior completedc4a baseline retained",
+  "upstream": {
+    "lastChecked": "11d5886fd28e3242a7cbb9daa6206722628a6e0b",
+    "lastSynchronized": "11d5886fd28e3242a7cbb9daa6206722628a6e0b",
+    "result": "HEAD/history/changelog successfully checked at start; no new release"
+  },
+  "limits": [
+    "No Firefox/nativefullscreen/browserzoom/physicaltouch or intended conference-machine validation",
+    "No Internet-independent conference release certification; existing external Google Fonts dependency retained",
+    "Sampled geometric checks do not prove every continuous arrangement",
+    "v54-56 full lesson replay not established; v56 preexisting initialization issue reproduced before/current"
+  ],
+  "processes": "All15 owned Chrome/server/profile sets cleaned; root8013/user8014 and personalFirefox untouched",
+  "commit": false,
+  "push": false,
+  "publish": false,
+  "scenarioJSONExport": false,
+  "next": "User inspection in existing local preview; investigate older56 initialization separately only if that path is needed; save/publication upon user request"
+}

@@ -1,0 +1,70 @@
+{
+  "date": "2026-11-18",
+  "status": "COMPLETE_LOCALLY",
+  "authorization": "Explicitly approved five-file v57 plan",
+  "behavior": [
+    "Three approved short bullets at stops 4/11 and modal chooser",
+    "Four original functional 2x2 cards and logos retained",
+    "Greek prose uses conjunctions; list bullets retained",
+    "DOM-only known-note formatting with custom-content fallback",
+    "Progress status separate from instruction list"
+  ],
+  "runtimeFiles": {
+    "js/namelecule-game-choice-checkpoint.js": "eaa77e2cf75f2cfd05af0559c5f0b58942551cd7d17c6408fb198f44d59999da",
+    "js/mulermoc-nom-scenario-57.js": "b2209a1ccf695e6c688673fa0046bff3f9d04f5ed553b9c6edf90a486c990205",
+    "css/namelecule-game-viewport.css": "4d19814310966371d57c944ec72720b299ad7207dd5a01c6ee9f148829a46fc7",
+    "mulermoc-nom-57.html": "ca7f8f690bb93d9d6e22a84d50618f708c57926639053dfa4ef156b6eae44f9d",
+    "games/molecular-detective-viewer.html": "cf9025c9f40e14f6ae2d9b7d9e0cc0e7f9487d9f6ec6ee03f7246f6c5e9afa76"
+  },
+  "runtimeTargetSHA256": "f2a189f5158c20c2e3a7b238387d5912f4f7cde165025adfddd31618c171cb0b",
+  "checks": {
+    "syntaxJS": 2,
+    "reproducibleHostGenerators": 2,
+    "DeveloperDOMProbe": 27,
+    "ReviewerDOMChecks": 32,
+    "browser": "Coverage complete within recorded bounds, not four complete runs",
+    "protectedFilesUnchanged": 26,
+    "activeCoresUnchanged": 13,
+    "HEADAndIndexUnchanged": true
+  },
+  "browserCoverage": [
+    "Stops4/11:exact approved3LI,no prose middots,all12authored note strings unchanged;clear mobile screenshots after real Continue-as-is orientation-prompt dismissal.",
+    "Real chooser at1440x900,1280x720,390x700:4logos2x2,wide puzzle,3LI abovegrid,full card/child containment,dialog fits without scrolling,no horizontal overflow;empty status hidden,earned progress status visible.",
+    "Trusted Tab through4cards andEnter onDetective;all4games start/return once;chooser class restored and absent inplay.",
+    "One genuine Builder prefix tile;raw partial exactly restored after chooser reentry andcold reload;gate remains unsolved.",
+    "Exact historical genuine earned record currently revalidated;normalized scenario/signature content unchanged. Optional Other-game chooser preserves earned receipt;native practiceContinue reachesstep5;neighbor normalnote unchanged.",
+    "Normal navigation reaches independentlylocked gate11;level1+2required,3optional;openinglevels/chooser createsno receipt."
+  ],
+  "browserSummarySHA256": "dd2b4757be098f682fee204b70b069d8b482c018d108c9edd626c3340350fbe7",
+  "browserArtifactManifestSHA256": "31f333facaded8943201d5a15910f881bc47049600539161386287e4ad90908b",
+  "independentReview": "review-final.json",
+  "reviewRecordSHA256": "ee812c88371daae75b70d70ecb46cc06381586fec9207e77cb548262a5bb1d54",
+  "reviewFindings": [],
+  "preserved": [
+    "Authored JSON and normalized signature",
+    "Progress, gates, required levels and triples",
+    "54/55/56 and builder host",
+    "Chemical data and core"
+  ],
+  "rootVisualEvidence": "root-visual-check.json",
+  "upstream": {
+    "checkedHEAD": "72699c21b345de756a870086c923ad476f6214fd",
+    "actuallySynchronized": "11d5886fd28e3242a7cbb9daa6206722628a6e0b",
+    "changelog": "Previously read immutable CHANGELOG reused after HEAD recheck",
+    "decision": "Keep v57; no v58 integration"
+  },
+  "localURL": "http://127.0.0.1:8013/mulermoc-nom-57.html?scenario=scenarios/alkanes-user-3.scenario.json&present=1&from=theory-library&v=alkane-game-cards-20261118-r1#step=4",
+  "FirefoxOpen": "LaunchServices open -a Firefox accepted with exit 0; not observed Firefox QA",
+  "limits": [
+    "No full chemistry/game/level solve matrix or fresh gate11L1+L2 solve.",
+    "1920optional size not rerun;three requested sizes covered.",
+    "Headless Chrome CSS viewports;no physicaltouch,zoom/fullscreen,offline orconference-machine certification.",
+    "Detective/Main native loading depends on existing external libraries. Three canceled Document net::ERR_ABORTED events retained in partialrun063004;URLs not retained in that receipt,no JS exception or observed UI assertion failure.",
+    "Initial mobile note shots were covered by pre-existing orientation prompt;use run063359 clear replacements.",
+    "Raw role label inherited from visual harness says mockup;executed URL and tests are actual Main57 runtime.",
+    "Firefox not tested"
+  ],
+  "publication": "No commit, push, publication, full backup or JSON export",
+  "coreReport": "No active application core changed during this session; all 13 hashes exact",
+  "documentationToolError": "Initial final-record script rejected before execution due stdin UTF-8 encoding; rerun as ASCII code. No runtime impact."
+}

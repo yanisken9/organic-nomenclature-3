@@ -1,0 +1,63 @@
+{
+  "date": "2026-11-18",
+  "status": "COMPLETE_LOCALLY",
+  "request": "Only2approvedphrasesonalkanelibrarycardtoadvertise4availablequizgametypes",
+  "file": "design/theory-library.html",
+  "lines": [
+    29,
+    34
+  ],
+  "sourceSHA256": "80f88f0cb53fcca529e119f9afee975698cc1d66be55992e766ffea30208c975",
+  "baseHEAD": "168e3cec01f941a84d40bbe0dc07156e7baa35d0",
+  "verification": {
+    "exactTwoReplacements": true,
+    "allOtherHTMLBytesUnchanged": true,
+    "v57HrefUnchanged": true,
+    "gameTypes": 4,
+    "roundCount": 3,
+    "requiredLevels": {
+      "step4": [
+        1
+      ],
+      "step11": [
+        1,
+        2
+      ]
+    },
+    "http": "http-check.json",
+    "HTTPStatus": 200,
+    "servedSHA256Matches": true,
+    "otherBaselineFilesUnchanged": 932,
+    "activeCoreFilesUnchanged": 13
+  },
+  "independentReview": {
+    "agent": "/root/alkanes_card_four_quizzes_review",
+    "role": "NAMELECULE_REVIEWER_V1_20261023",
+    "freshContext": true,
+    "readOnly": true,
+    "target": "review-target.json",
+    "manifestSHA256": "2172d6a0d093ca8eaa255a147dc29c901d99b7cf2c1e69917d98ba8be72e283f",
+    "pathsVerified": 6,
+    "ownExactDiffReconstruction": true,
+    "own4Choices3RoundsLevelContractInspection": true,
+    "actionableFindings": [],
+    "HTTPIndependentlyExecuted": false
+  },
+  "limits": [
+    "Text-onlysourcechange; no browservisual/runtimeretestneeded orclaimed",
+    "BroaderpreexistingHEADdiffnotattributedtothisunit",
+    "InitialenvironmentGETdenialretained; authorizedexactHTTPreadpassed"
+  ],
+  "delivery": {
+    "local": true,
+    "coreChanged": false,
+    "JSONChanged": false,
+    "commit": false,
+    "push": false,
+    "published": false
+  },
+  "currentVersion": 57,
+  "userDecision": "Keep57main",
+  "next": "Userviewupdatedlibrary; no further58activationwork",
+  "frozenPlan": "plan.json preserves pre-reviewhandoffstatus; finalstatusrecordedhere"
+}

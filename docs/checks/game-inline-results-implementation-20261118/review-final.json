@@ -1,0 +1,115 @@
+{
+  "date": "2026-11-18",
+  "status": "ACCEPTED_BOUNDED_SCOPE_NO_OPEN_P0_P1_P2",
+  "reviewer": "/root/inline_results_review",
+  "ROLE_ID": "NAMELECULE_REVIEWER_V1_20261023",
+  "freshContext": true,
+  "readOnlyBehavior": true,
+  "baseHEAD": "168e3cec01f941a84d40bbe0dc07156e7baa35d0",
+  "targetCandidate": 9,
+  "runtimeTargetSHA256": "95d3d3f941d8be401f5f96963aff167a41c1dff568f2913441ffc39133d0836e",
+  "files": {
+    "js/namelecule-game-repair.js": "48d2d5c169723246f385613e5c8a6e39e24f582ad6705c9996f8369e391b50f9",
+    "js/namelecule-name-builder.js": "e76873b79bf2b6f1490ef8084e0004f018aa0477c53600d68498f89f20c14fd2",
+    "js/namelecule-molecular-puzzle.js": "69b249f1e77d1024d74bdad98762567827eadecd07c936ff756d2d1da2366fad",
+    "js/namelecule-molecular-detective.js": "3a3cb43af709db8325bab8518f7e85e5119790e98b4c84e9644d5f84da45c745",
+    "css/namelecule-repair-round.css": "ff9530d29f369c4d67768fbc20bd1fb8dd56f8dc2aaa69f17088c1bad2cbded6",
+    "css/namelecule-name-builder.css": "70d03ac52a27f56f7d38052f9921ac652404d367dc74c2fc1907749867cddabc",
+    "css/namelecule-molecular-puzzle.css": "024b949a6f086b240ae6c46c79fcaf058e372e067c3d45a8ad0bf9bab598219b",
+    "css/namelecule-molecular-detective.css": "2e504dd1f360cc1c9f86d7bc1f14e6a4caf597c5b528a205da67f165d7227557",
+    "games/name-builder.html": "ef26e4f0855032f9599ea01df6aaf5b0c9eb33d91d0799436e6bfa583ec00266",
+    "games/molecular-puzzle.html": "3ec8c1da500258b2022ea2b92b5602e02a4be39adfb99e56fbf7ec1851a19186",
+    "games/molecular-detective.html": "3d33b11ad36c8479cbf7bcc287ab1fb8b1b0497ddb67386215007a47e7c18dca",
+    "js/namelecule-game-choice-checkpoint.js": "33b1ef410fb31352730e7865752084f1e7e07c7e68f9b5080183149b7695a90f",
+    "js/namelecule-molecular-detective-lesson.js": "11287ed6a4ccd4da1259c7b4a948e370f3f01d65ed4c1b54cdfa07e8f823e515",
+    "mulermoc-nom-57.html": "61b9cb8eadbf316b6f68178eeb3002f75680554b3efa534d7fb9c46cf7f0d026",
+    "games/molecular-detective-viewer.html": "0ecc812eaa84a367dfb63facd56dc77d7cd4a6214a20b2e263d2c9abdd56f476",
+    "js/namelecule-game-viewport.js": "651523af3759c66358fc0b09dc77fca08ff76999f5506a7554d3e0f55f1902bd"
+  },
+  "findings": [
+    {
+      "id": "IR-01",
+      "severity": "P2",
+      "problem": "Builder short editor/Check clipping",
+      "status": "CLOSED_FOR_RECORDED_CASES",
+      "resolution": "Measured fit with existing compact views, including L2/reentry."
+    },
+    {
+      "id": "IR-02",
+      "severity": "P2",
+      "problem": "Repair choice/result/pager space and grid placement",
+      "status": "CLOSED_FOR_RECORDED_CASES",
+      "resolution": "Complete intrinsic choice/padding/navigation minima and explicit grid placement."
+    },
+    {
+      "id": "IR-03",
+      "severity": "P2",
+      "problem": "Pre-existing self-owned Repair height after resize",
+      "status": "CLOSED_FOR_RECORDED_CASES",
+      "resolution": "External ancestor height owner; actual486-to-566."
+    },
+    {
+      "id": "IR-04",
+      "severity": "P2",
+      "problem": "Fresh Builder firstCheck before feedback unreachable",
+      "status": "CLOSED_FOR_RECORDED_CASES",
+      "resolution": "Ready-editor fit before/after feedback; actual1024 firstCheck passed."
+    },
+    {
+      "id": "IR-05",
+      "severity": "P2",
+      "problem": "Detective native drawing and Check clipped on narrow screen",
+      "status": "CLOSED_FOR_RECORDED_CASES",
+      "resolution": "Flex root, native150floor/natural answer, two columns and bounded result;8C/H labels/ink/fullCheck at3sizes and WrongKind."
+    },
+    {
+      "id": "IR-06",
+      "severity": "P2",
+      "problem": "OptionalL3 Puzzle longname consumes result space",
+      "status": "CLOSED_FOR_RECORDED_CASES",
+      "resolution": "52px side name pager,28px name/112board/94result retained; fullname/result/tools/Check/reentry at3sizes."
+    }
+  ],
+  "residual": [
+    {
+      "id": "PZ-PRE01",
+      "severity": "P3",
+      "preExisting": true,
+      "path": "js/namelecule-molecular-puzzle.js:1029",
+      "behavior": "Empty-board announcement remains after partial graph restore at1134/1146; graph/progress retained.",
+      "disposition": "Outside approved UI wording scope; retained and disclosed."
+    }
+  ],
+  "independentChecks": [
+    "Exact diffs/hashes,HEAD/index,26protected and13cores.",
+    "Seven final JS syntax checks and both generated-host checks.",
+    "Actual-function memory VM for fit/readiness/resize/mission/status; Repair/Puzzle fixtures reexecuted read-only; candidate9 targeted47/47.",
+    "Final screenshots and native label/ink/fullCheck rectangles checked against clipping ancestors.",
+    "All449 browser artifact hashes verified."
+  ],
+  "browserExecutionAttribution": "Developer /root/v58_browser_checks; Reviewer independently inspected evidence, did not run browser.",
+  "browserSummarySHA256": "37e03d3b148deb0d49c38e993a02b3f9333424907ea72f9835b48adf895fcf5d",
+  "browserArtifactManifestSHA256": "66a4572cdce3c907f4d08a0c6304823a7edd29f52db3167c377756ae12cfdcc6",
+  "finalReceipts": {
+    "criticalAndNoSlot": {
+      "path": "docs/checks/game-inline-results-implementation-20261118/browser/run-130044/results.json",
+      "checks": "148/148 recorded",
+      "qualification": "Run partial only because standalone initial Level1 selection was missing;no critical app failure."
+    },
+    "finalUnreachedTail": {
+      "path": "docs/checks/game-inline-results-implementation-20261118/browser/run-130632/results.json",
+      "checks": "44/44",
+      "completed": true
+    }
+  },
+  "networkQualification": "Each final receipt retains one canceled Document ERR_ABORTED; no recorded JS exceptions. No network/offline certification.",
+  "limitations": [
+    "Bounded Chrome CSS viewports;no physicaltouch,Firefox/fullscreen or intended conference-machine certification.",
+    "No exhaustive compound/mode/level grading matrix;one fresh full triple,other genuine rounds and qualified replays only.",
+    "Repair order-round browser interaction and maximum-name/both-Xpager worstcase were not exercised;source/VM evidence is separate.",
+    "Standalone actual smoke is Builder only;no Internet-independent readiness or universal3D claim.",
+    "Adaptive popup height remains a separate user request with preflight evidence only."
+  ],
+  "newAdaptiveHeightRequest": "Separate preflight only; outside this acceptance.",
+  "filesystemIsolation": "Fresh context, behavioral read-only protocol and shared filesystem; no enforced read-only sandbox claim."
+}

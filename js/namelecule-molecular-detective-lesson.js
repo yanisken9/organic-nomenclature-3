@@ -179,7 +179,7 @@
       [start, end].forEach(marker => { marker.setAttribute("aria-hidden", "true"); });
       stage.append(frame, start, end); host.replaceChildren(heading, stage); host.setAttribute("aria-busy", "true");
       active = { requestId: ++requestId, index, entry, stage, start, end, loaded: false, sent: false, stateRevision: -1 };
-      frame.src = new URL("games/molecular-detective.html?lessonSession=" + session + "&embedded=1&v=game-viewport-20261116-r1" + (viewport ? "&viewport=1" : "") + "", global.document.baseURI).href;
+      frame.src = new URL("games/molecular-detective.html?lessonSession=" + session + "&embedded=1&v=adaptive-dialog-20261118-r3" + (viewport ? "&viewport=1" : "") + "", global.document.baseURI).href;
       if (viewport) viewportFrame = global.NameleculeGameViewport.fitFrame(frame, { stage, channel: CHANNEL, session,
         identity: () => active && ({ requestId: active.requestId, attemptId,
           moleculeId: active.entry.snapshot.moleculeId, missionId: active.entry.mission.id,
@@ -202,6 +202,7 @@
       }
       if (data.requestId !== context.requestId || data.attemptId !== attemptId || data.moleculeId !== context.entry.snapshot.moleculeId || data.missionId !== context.entry.mission.id) return;
       if (wireContext) { try { if (global.NameleculeGameLevels.contextKey(data.context) !== global.NameleculeGameLevels.contextKey(wireContext)) return; } catch (_) { return; } }
+      if (data.type === "layout-demand") { if (viewportFrame) viewportFrame.setDemand(data); return; }
       if (data.type === "error") { fail("Η αποστολή δεν μπόρεσε να επαληθευτεί. Η προσπάθεια διατηρήθηκε. Δοκίμασε ξανά."); return; }
       if (data.type === "exit") { if (typeof options.onClose === "function") options.onClose(); return; }
       if (data.type === "loaded" || data.type === "state") {

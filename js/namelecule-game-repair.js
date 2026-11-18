@@ -312,6 +312,22 @@
 
   let nextMountId = 0;
   const mountedHosts = new WeakMap();
+  const diagramFontMetrics = new Map();
+  function sourceDiagramMetrics(url) {
+    if (diagramFontMetrics.has(url)) return diagramFontMetrics.get(url);
+    const promise = global.fetch(url, { credentials: "same-origin" }).then(function (response) {
+      if (!response.ok) throw new Error("Diagram metrics unavailable");
+      return response.text();
+    }).then(function (source) {
+      const svg = new global.DOMParser().parseFromString(source, "image/svg+xml").documentElement;
+      const width = parseFloat(svg.getAttribute("width")), height = parseFloat(svg.getAttribute("height"));
+      const font = Number(svg.getAttribute("data-uniform-atom-font-pixels"));
+      if (svg.localName !== "svg" || ![width, height, font].every(Number.isFinite) || !(width > 0 && height > 0 && font > 0)) throw new Error("Unknown diagram scale");
+      return { width: width, height: height, font: font };
+    }).catch(function () { diagramFontMetrics.delete(url); return null; });
+    diagramFontMetrics.set(url, promise);
+    return promise;
+  }
 
   function createRoundView(host, options, standalone) {
     assert(host && typeof host.replaceChildren === "function", "A round host is required");
@@ -322,6 +338,7 @@
     const compactDiagramZoom = options.compactDiagramZoom === true;
     // New hosts explicitly opt in; older Main/native hosts retain their layout.
     const viewportEnabled = options.viewport === true && !!global.NameleculeGameViewport;
+    const lessonPresentation = viewportEnabled && !standalone && typeof host.closest === "function" && !!host.closest(".nl-vp-choice");
     const existing = mountedHosts.get(host);
     if (existing) existing.destroy();
     const root = host;
@@ -334,10 +351,13 @@
     let lastSuccessActionsReady = null;
     let renderId = 0;
     let imageLoadId = 0;
+    let imageMetrics = null;
+    let diagramObserver = null;
     let zoomPanel = null;
     let zoomImage = null;
     let listeners = [];
     let viewport = null;
+    let demandTextContext = null;
     let pagers = [];
     let viewportStage = "edit";
     let viewportView = "answer";
@@ -394,7 +414,8 @@
       if (pageReveal) pageReveal.destroy();
       if (viewport) viewport.destroy();
       pagers.forEach(function (pager) { pager.destroy(); }); pagers = [];
-      host.classList.remove("nl-repair-viewport", "nl-repair-sequential");
+      host.classList.remove("nl-repair-viewport", "nl-repair-sequential", "nl-lesson-game", "nl-inline-results", "repair-has-result", "repair-solved");
+      if (diagramObserver) diagramObserver.disconnect();
       ["data-repair-stage", "data-repair-view", "data-repair-step"].forEach(function (name) { host.removeAttribute(name); });
       destroyed = true;
       renderId += 1;
@@ -425,7 +446,7 @@
       const heading = node("div", { class: "round-heading" });
       if (data.guided) heading.append(node("span", { class: "guided-pill", text: "Πρώτα δοκιμάζουμε μαζί" }));
       if (standalone && options.setTitle) heading.append(node("p", { class: "round-set-name", text: "Αλκάνια · " + options.setTitle }));
-      heading.append(node("h1", { text: data.title }), node("p", {
+      heading.append(node(lessonPresentation ? "h2" : "h1", { class: lessonPresentation ? "nl-game-round-title" : "", text: data.title }), node("p", {
         class: emphasizeObjective ? "round-objective is-emphasized" : "round-objective", text: data.objective
       }));
       const steps = node("ol", { class: "compact-steps", "aria-label": "Βήματα αποστολής" }, ["Παρατήρησε τη δομή", "Επισκεύασε το όνομα", "Έλεγξε την επιλογή σου"].map(function (text, index) {
@@ -462,7 +483,7 @@
       refs.next = node("div", { class: "round-next" });
       const repair = node("section", { class: "repair-card", "aria-label": "Επισκευή ονόματος" }, [
         node("span", { class: "section-label", text: "ΟΝΟΜΑ ΠΟΥ ΧΡΕΙΑΖΕΤΑΙ ΕΠΙΣΚΕΥΗ" }),
-        node("div", { class: "broken-name", text: broken }),
+        node("div", { class: "broken-name" + (lessonPresentation ? " nl-game-stimulus-name" : ""), text: broken }),
         node("h2", { class: "step-heading", text: data.kind === "order" ? "1. Βάλε τους κλάδους στη σειρά" : "1. Ποιο κομμάτι θα αλλάξεις;" }),
         node("p", { class: "step-description", text: data.kind === "order" ? "Διάλεξε έναν κλάδο και μετακίνησέ τον με τα βέλη. Η κύρια αλυσίδα μένει στο τέλος." : "Πάτησε το κομμάτι που δεν ταιριάζει με τη δομή." }),
         refs.parts, refs.selectionStatus, refs.orderControls, refs.choiceFieldset, refs.candidate,
@@ -470,8 +491,14 @@
         refs.checkHelper, refs.feedback
       ]);
       refs.sessionStats = node("span");
+      const brand = lessonPresentation ? node("div", { class: "round-game-brand nl-game-identity" }, [
+        workshopLogo("workshop-logo-small nl-game-logo", assetBase), node("h1", { class: "nl-game-title", text: "Συνεργείο ονομάτων" })
+      ]) : node("p", { class: "eyebrow round-game-brand" }, [workshopLogo("workshop-logo-small", assetBase), node("span", { class: "round-game-label", text: "ΣΥΝΕΡΓΕΙΟ ΟΝΟΜΑΤΩΝ" })]);
+      const topbar = [brand];
+      if (lessonPresentation) topbar.push(node("p", { class: "nl-game-mission", text: "Παρατήρησε τη δομή. Εντόπισε το λάθος και επισκεύασε το όνομα." }));
+      if (standalone) topbar.push(options.progressList());
       const screen = node("div", { class: "round-screen" }, [
-        node("div", { class: "round-topbar" }, [node("p", { class: "eyebrow round-game-brand" }, [workshopLogo("workshop-logo-small", assetBase), node("span", { class: "round-game-label", text: "ΣΥΝΕΡΓΕΙΟ ΟΝΟΜΑΤΩΝ" })])].concat(standalone ? [options.progressList()] : [])),
+        node("div", { class: "round-topbar" }, topbar),
         heading, steps,
         node("div", { class: "bench" }, [node("div", { class: "visual-side" }, [diagram]), node("div", { class: "repair-side" }, [repair, refs.next])]),
         node("div", { class: "session-row" }, [refs.sessionStats].concat(standalone ? [button("Επιστροφή στα σετ", "quiet", options.requestRestart)] : []))
@@ -481,7 +508,7 @@
       root.setAttribute("aria-busy", "false");
       loadDiagram(currentRender);
       updateControls();
-      const title = heading.querySelector("h1");
+      const title = lessonPresentation ? root.querySelector(".nl-game-title") : heading.querySelector("h1");
       title.tabIndex = -1;
       title.focus({ preventScroll: true });
       if (standalone && !viewportEnabled) window.scrollTo({ top: 0, behavior: "instant" });
@@ -498,6 +525,59 @@
     function refreshPagers() {
       if (destroyed) return;
       pagers.forEach(function (pager) { pager.refresh(); });
+      refreshInlineEditorMinimum();
+      // Re-evaluate a nav row that disappeared once a complete item fitted.
+      if (lessonPresentation) {
+        pagers.forEach(function (pager) { pager.refresh(); });
+        refreshInlineEditorMinimum();
+      }
+    }
+    function refreshInlineEditorMinimum() {
+      if (!lessonPresentation || !refs.repairCard) return;
+      const repair = refs.repairCard;
+      const active = root.classList.contains("repair-has-result") && !root.classList.contains("repair-solved");
+      if (!active) {
+        repair.style.removeProperty("min-height");
+        [refs.partPage, refs.choicePage, refs.parts, refs.choices].forEach(function (element) { element.style.removeProperty("min-height"); });
+        [refs.parts, refs.choices].forEach(function (element) { element.parentElement.style.removeProperty("min-height"); });
+        return;
+      }
+      function number(value) { return parseFloat(value) || 0; }
+      function outerHeight(element) {
+        const style = global.getComputedStyle(element);
+        if (style.display === "none" || style.position === "absolute" || !element.getClientRects().length) return 0;
+        return element.getBoundingClientRect().height + number(style.marginTop) + number(style.marginBottom);
+      }
+      [refs.parts, refs.choices].forEach(function (content) {
+        if (!content.getClientRects().length) return;
+        const boxes = Array.from(content.querySelectorAll("button,.fixed-suffix")).filter(function (item) { return item.getClientRects().length; }).map(function (item) { return item.getBoundingClientRect(); });
+        const tallest = boxes.reduce(function (height, box) { return Math.max(height, box.height); }, 0);
+        const style = global.getComputedStyle(content);
+        const padding = number(style.paddingTop) + number(style.paddingBottom);
+        const extent = boxes.length ? Math.max.apply(null, boxes.map(function (box) { return box.bottom; })) - Math.min.apply(null, boxes.map(function (box) { return box.top; })) + padding : 0;
+        const singleRow = tallest + padding;
+        // The shared pager advances by at least 24px. Preserve enough overlap
+        // for a whole item when the content occupies more than a single row.
+        const minimum = Math.ceil(Math.max(singleRow, extent > singleRow + 2 ? tallest + 24 : 0));
+        content.style.minHeight = minimum + "px";
+        const wrapper = content.parentElement, nav = wrapper.querySelector(".nl-vp-pager-nav");
+        wrapper.style.minHeight = Math.ceil(minimum + (nav ? outerHeight(nav) : 0)) + "px";
+      });
+      const page = root.dataset.repairStep === "choices" ? refs.choicePage : refs.partPage;
+      function minimumFor(container) {
+        const style = global.getComputedStyle(container);
+        const children = Array.from(container.children).filter(function (child) { return outerHeight(child) > 0; });
+        return children.reduce(function (height, child) {
+          if (child === refs.choiceFieldset) {
+            const fieldStyle = global.getComputedStyle(child), legend = child.querySelector("legend");
+            return height + (legend ? outerHeight(legend) : 0) + number(refs.choices.parentElement.style.minHeight) + number(fieldStyle.paddingTop) + number(fieldStyle.paddingBottom);
+          }
+          if (child === page || child === refs.parts.parentElement) return height + number(child.style.minHeight);
+          return height + outerHeight(child);
+        }, number(style.paddingTop) + number(style.paddingBottom) + number(style.borderTopWidth) + number(style.borderBottomWidth)) + Math.max(0, children.length - 1) * number(style.rowGap);
+      }
+      page.style.minHeight = Math.ceil(minimumFor(page)) + "px";
+      repair.style.minHeight = Math.ceil(minimumFor(repair)) + "px";
     }
     function setViewportStage(stage, view) {
       viewportStage = stage;
@@ -513,14 +593,34 @@
     }
     function showViewportFeedback(solved) {
       if (!viewportEnabled) return;
-      refs.feedbackBack.hidden = solved;
-      refs.feedbackInspect.hidden = !solved;
+      refs.feedbackBack.hidden = lessonPresentation || solved;
+      refs.feedbackInspect.hidden = lessonPresentation || !solved;
       refs.feedbackHeading.textContent = solved ? "Η επισκευή ολοκληρώθηκε" : "Παρατήρησε την εξήγηση";
+      if (lessonPresentation) {
+        // A restored result belongs to the same attempt and selected view too.
+        refs.feedbackStage.hidden = false;
+        root.classList.add("repair-has-result");
+        root.classList.toggle("repair-solved", solved);
+        refs.feedback.scrollTop = 0;
+        refreshPagers();
+        if (viewport) viewport.refresh();
+        publishSuccessActionsReady();
+        return;
+      }
       setViewportStage("feedback");
       refs.feedbackHeading.focus({ preventScroll: true });
     }
     function configureViewport(screen, heading, diagram, repair) {
       root.classList.add("nl-repair-viewport");
+      if (lessonPresentation) {
+        root.classList.add("nl-lesson-game", "nl-inline-results");
+        diagram.classList.add("nl-game-stimulus-formula");
+        if (typeof global.ResizeObserver === "function") {
+          if (diagramObserver) diagramObserver.disconnect();
+          diagramObserver = new global.ResizeObserver(fitDiagramImage);
+          diagramObserver.observe(diagram.querySelector(".diagram-stage"));
+        }
+      }
       const tabs = node("div", { class: "repair-stage-tabs", "aria-label": "Προβολή αποστολής" });
       [ ["structure", "Δομή"], ["answer", "Επισκευή"] ].forEach(function (entry) {
         const control = button(entry[1], "secondary repair-view-button", function () { setViewportStage("edit", entry[0]); });
@@ -530,10 +630,11 @@
       refs.stageTabs = tabs;
       heading.after(tabs);
       const partHeading = repair.querySelector(".step-heading"), partDescription = repair.querySelector(".step-description");
-      const partPage = node("div", { class: "repair-part-page" }, [partHeading, refs.parts, refs.orderControls]);
-      const choicePage = node("div", { class: "repair-choice-page" }, [
-        button("← Κομμάτια ονόματος", "quiet", function () { root.dataset.repairStep = "parts"; refreshPagers(); }), refs.choiceFieldset
-      ]);
+      refs.repairCard = repair;
+      const partPage = refs.partPage = node("div", { class: "repair-part-page" }, [partHeading, refs.parts, refs.orderControls]);
+      const partsBack = button(lessonPresentation ? "← Κομμάτια" : "← Κομμάτια ονόματος", "quiet repair-parts-back", function () { root.dataset.repairStep = "parts"; refreshPagers(); }, { "aria-label": "Επιστροφή στα κομμάτια του ονόματος" });
+      const choicePage = refs.choicePage = node("div", { class: "repair-choice-page" }, lessonPresentation ? [refs.choiceFieldset] : [partsBack, refs.choiceFieldset]);
+      if (lessonPresentation) tabs.append(partsBack);
       repair.querySelector(".broken-name").after(partPage, choicePage);
       partDescription.remove(); refs.selectionStatus.remove();
       const instructions = node("section", { class: "repair-instructions-stage" }, [
@@ -543,13 +644,22 @@
           node("p", { text: "Διάλεξε κομμάτι και αντικατάσταση ή μετακίνησε έναν κλάδο με τα βέλη. Η μεγέθυνση ανοίγει ολόκληρη τη δομή σε χωριστή προβολή." }), refs.selectionStatus, refs.checkHelper
         ])
       ]);
-      const feedbackStage = node("section", { class: "repair-feedback-stage" }, [
+      const feedbackStage = refs.feedbackStage = node("section", { class: "repair-feedback-stage" }, [
         node("div", { class: "repair-stage-heading" }, [refs.feedbackHeading = node("h2", { tabindex: "-1", text: "Παρατήρησε την εξήγηση" }),
           refs.feedbackBack = button("Επιστροφή στην προσπάθεια", "secondary", function () { setViewportStage("edit", "answer"); refs.checkButton.focus({ preventScroll: true }); }),
           refs.feedbackInspect = button("Δες τη δομή", "secondary", function () { setViewportStage("edit", "structure"); })]),
         refs.feedback, refs.next
       ]);
-      screen.append(instructions, feedbackStage);
+      screen.append(instructions);
+      if (lessonPresentation) {
+        feedbackStage.classList.add("nl-inline-result");
+        feedbackStage.setAttribute("aria-label", "Αποτέλεσμα επισκευής");
+        feedbackStage.hidden = true;
+        screen.querySelector(".repair-side").append(feedbackStage);
+        const submission = node("div", { class: "repair-submission" }, [refs.candidate, repair.querySelector(".repair-actions")]);
+        repair.append(submission);
+        refs.feedbackBack.hidden = refs.feedbackInspect.hidden = true;
+      } else screen.append(feedbackStage);
       repair.querySelector(".repair-actions").append(button("Δες την εξήγηση", "quiet repair-feedback-open", function () { showViewportFeedback(state().solved); }));
       refs.feedbackOpen = repair.querySelector(".repair-feedback-open"); refs.feedbackOpen.hidden = true;
       // A solved structure remains inspectable, with a direct route back to its actions.
@@ -562,13 +672,120 @@
         [refs.instructionsContent, "y", "Οδηγίες"], [refs.feedback, "y", "Εξήγηση επισκευής"] ].forEach(function (entry) {
         pagers.push(global.NameleculeGameViewport.pager(entry[0], { axis: entry[1], label: entry[2], overlap: entry[0] === refs.parts || entry[0] === refs.choices ? 64 : undefined }));
       });
-      viewport = global.NameleculeGameViewport.mount(root, { kind: "repair", document: standalone, onResize: function (size) {
-        root.classList.toggle("nl-repair-sequential", size.narrow || size.height < 430); refreshPagers();
+      viewport = global.NameleculeGameViewport.mount(root, { kind: "repair", document: standalone,
+        preferred: lessonPresentation ? preferredViewport : null, onResize: function (size) {
+        const responsiveHeight = lessonPresentation ? size.availableHeight : size.height;
+        root.classList.toggle("nl-repair-sequential", size.width < 760 || responsiveHeight < 430); refreshPagers(); fitDiagramImage();
+        // Responsive structure/answer visibility also changes which actions
+        // are actually reachable, even when the solved state is unchanged.
+        if (lessonPresentation) publishSuccessActionsReady();
       } });
+    }
+
+    function preferredViewport() {
+      if (!lessonPresentation || destroyed || !diagramsReady() || !imageMetrics) return null;
+      const shared = global.NameleculeGameViewport, number = function (value) { return parseFloat(value) || 0; };
+      const width = root.getBoundingClientRect().width;
+      if (!(width > 0)) return null;
+      const sequential = width < 760 || shared.availableHeight(root) < 430;
+      const css = function (element) { return global.getComputedStyle(element); };
+      const vertical = function (style) { return number(style.paddingTop) + number(style.paddingBottom) + number(style.borderTopWidth) + number(style.borderBottomWidth); };
+      const horizontal = function (style) { return number(style.paddingLeft) + number(style.paddingRight) + number(style.borderLeftWidth) + number(style.borderRightWidth); };
+      const line = function (style) { return number(style.lineHeight) || number(style.fontSize) * 1.4; };
+      if (!demandTextContext) demandTextContext = document.createElement("canvas").getContext("2d");
+      function textWidth(value, style) {
+        if (!demandTextContext) return String(value).length * number(style.fontSize) * .6;
+        demandTextContext.font = style.fontStyle + " " + style.fontWeight + " " + style.fontSize + " " + style.fontFamily;
+        return demandTextContext.measureText(value).width;
+      }
+      function textHeight(value, style, available) {
+        const limit = Math.max(1, available - horizontal(style)), space = textWidth(" ", style);
+        let rows = 1, used = 0;
+        String(value).trim().split(/\s+/).forEach(function (word) {
+          const extent = textWidth(word, style);
+          if (used && used + space + extent > limit) { rows++; used = 0; }
+          rows += Math.max(0, Math.ceil(extent / limit) - 1);
+          used = (used ? used + space : 0) + Math.min(limit, extent);
+        });
+        return rows * line(style) + vertical(style);
+      }
+      function controlsHeight(container, available) {
+        const style = css(container), inner = Math.max(1, available - horizontal(style));
+        const items = Array.from(container.querySelectorAll("button,.fixed-suffix"));
+        let rows = 1, used = 0, tallest = 0;
+        items.forEach(function (item) {
+          const itemStyle = css(item), naturalWidth = textWidth(item.textContent, itemStyle) + horizontal(itemStyle) + (item.classList.contains("choice-button") ? 22 : 0);
+          const itemWidth = Math.min(inner, naturalWidth);
+          if (used && used + number(style.columnGap) + itemWidth > inner) { rows++; used = 0; }
+          used += (used ? number(style.columnGap) : 0) + itemWidth;
+          tallest = Math.max(tallest, number(itemStyle.minHeight), textHeight(item.textContent, itemStyle, itemWidth));
+        });
+        // A complete longest item plus the existing pager's 24px minimum
+        // advance keeps every row reachable without reserving all the choices.
+        return Math.ceil(tallest + vertical(style) + (rows > 1 ? 24 + 40 : 0));
+      }
+      const bench = root.querySelector(".bench"), benchStyle = css(bench), gap = number(benchStyle.columnGap);
+      const diagramWidth = sequential ? width : (width - gap) * .95 / 2.1;
+      const sideWidth = sequential ? width : (width - gap) * 1.15 / 2.1;
+      // Reserve the narrower editor used alongside a result from the outset.
+      const editorWidth = sequential ? sideWidth : (sideWidth - 7) * 1.1 / 2;
+      const repairStyle = css(refs.repairCard), editorInner = Math.max(1, editorWidth - Math.max(22, horizontal(repairStyle)));
+      const broken = refs.repairCard.querySelector(".broken-name"), brokenStyle = css(broken);
+      const brokenHeight = Math.max(52, line(brokenStyle) + vertical(brokenStyle)) + (textWidth(broken.textContent, brokenStyle) > editorInner - horizontal(brokenStyle) ? 40 : 0);
+      const headingStyle = css(refs.partPage.querySelector(".step-heading"));
+      const partHeight = textHeight(refs.partPage.querySelector(".step-heading").textContent, headingStyle, editorInner) + 5 + controlsHeight(refs.parts, editorInner);
+      const legend = refs.choiceFieldset.querySelector("legend"), legendStyle = css(legend);
+      const choiceHeight = round().kind === "replace" ? textHeight(legend.textContent, legendStyle, editorInner) + 5 + controlsHeight(refs.choices, editorInner) : 0;
+      const orderStyle = css(refs.orderControls), orderButtons = Array.from(refs.orderControls.querySelectorAll("button"));
+      const orderWidth = orderButtons.reduce(function (sum, item) { const style = css(item); return sum + textWidth(item.textContent, style) + horizontal(style); }, Math.max(0, orderButtons.length - 1) * number(orderStyle.columnGap));
+      const orderHeight = round().kind === "order" ? Math.max.apply(null, orderButtons.map(function (item) { const style = css(item); return Math.max(number(style.minHeight), line(style) + vertical(style)); })) * (orderWidth > editorInner ? orderButtons.length : 1) + 5 : 0;
+      const candidateStyle = css(refs.candidateName), candidateWidth = Math.max(1, editorInner - 97 - horizontal(css(refs.candidate)));
+      const initialCandidate = { selectedValue: null, order: round().kind === "order" ? round().movablePartIds : [] };
+      const candidateNames = [round().correctName, candidateName(round(), initialCandidate)].concat(round().kind === "replace" ? round().choices.map(function (choice) {
+        return round().parts.map(function (part) { return part.id === round().targetPartId ? choice.value : part.text; }).join("");
+      }) : []);
+      const candidateHeight = 29 + 14 + vertical(css(refs.candidate)) + (candidateNames.some(function (name) { return textWidth(name, candidateStyle) > candidateWidth; }) ? (sequential ? 23 : 40) : 0);
+      const editorHeight = Math.max(22, vertical(repairStyle)) + 14 + brokenHeight + Math.max(partHeight + orderHeight, choiceHeight) + Math.max(40, candidateHeight) + 4 * 6;
+      const feedbackStyle = css(refs.feedback), nextStyle = css(refs.next);
+      const actionLabels = [options.continueLabel || "Συνεχίζω τη θεωρία"];
+      if (typeof options.onNewPractice === "function") actionLabels.push(options.newPracticeLabel || "Άλλη τριάδα για εξάσκηση");
+      if (typeof options.onOtherGame === "function") actionLabels.push(options.otherGameLabel || "Άλλο παιχνίδι");
+      const resultWidth = Math.max(1, sequential ? sideWidth : (sideWidth - 7) * .9 / 2);
+      // Success can expose all continuation actions, even when the initial
+      // editor has none. Reserve one readable feedback line and its local nav.
+      const actionRows = actionLabels.reduce(function (height, label) {
+        const buttonStyle = css(refs.checkButton), lines = Math.max(1, Math.ceil(textWidth(label, buttonStyle) / Math.max(1, resultWidth - 40)));
+        return height + Math.max(39, lines * 18.2 + 16);
+      }, 0) + Math.max(0, actionLabels.length - 1) * Math.max(7, number(nextStyle.rowGap));
+      const resultHeight = Math.max(92, 16 + line(feedbackStyle) + vertical(feedbackStyle) + 40 + actionRows + 5);
+      const diagram = root.querySelector(".diagram-card"), diagramStyle = css(diagram), figure = diagram.querySelector(".diagram-figure"), figureStyle = css(figure);
+      const drawingWidth = Math.max(1, diagramWidth - horizontal(diagramStyle) - horizontal(figureStyle));
+      const formulaPx = number(css(root).getPropertyValue("--nl-game-formula-px")) || 28;
+      const drawingHeight = imageMetrics.height * Math.min(formulaPx / imageMetrics.font, drawingWidth / imageMetrics.width);
+      const cardHeader = diagram.querySelector(".card-heading"), headerStyle = css(cardHeader), caption = figure.querySelector("figcaption"), captionStyle = css(caption);
+      const diagramHeight = vertical(diagramStyle) + Math.max(50, vertical(headerStyle) + 36) + vertical(figureStyle) + drawingHeight + textHeight(caption.textContent, captionStyle, drawingWidth);
+      const workspaceHeight = Math.max(diagramHeight, sequential ? editorHeight + resultHeight + 7 : Math.max(editorHeight, resultHeight));
+      return shared.preferred(root, bench, workspaceHeight, "repair:" + prefix + round().id, { exclude: [root.querySelector(".repair-instructions-stage")] });
+    }
+
+    function fitDiagramImage() {
+      if (!lessonPresentation || !imageMetrics || !refs.image || !refs.image.naturalWidth || destroyed) return;
+      const stage = refs.image.parentElement;
+      const width = stage.clientWidth, height = stage.clientHeight;
+      const requested = Number(global.getComputedStyle(root).getPropertyValue("--nl-game-formula-px"));
+      if (!(width > 0 && height > 0 && requested >= 20 && requested <= 36)) return;
+      const preferredScale = requested / imageMetrics.font;
+      const scale = Math.min(preferredScale, width / imageMetrics.width, height / imageMetrics.height);
+      const targetWidth = imageMetrics.width * scale, targetHeight = imageMetrics.height * scale;
+      if (Math.abs(parseFloat(refs.image.style.width) - targetWidth) > .05 || !refs.image.style.width) refs.image.style.width = targetWidth + "px";
+      if (Math.abs(parseFloat(refs.image.style.height) - targetHeight) > .05 || !refs.image.style.height) refs.image.style.height = targetHeight + "px";
+      refs.image.dataset.preferredAtomFontPixels = String(requested);
+      refs.image.dataset.fittedAtomFontPixels = String(imageMetrics.font * scale);
     }
 
     function loadDiagram(currentRender) {
       mainImageStatus = "loading";
+      imageMetrics = null;
       refs.image.classList.remove("is-ready");
       replaceChildren(refs.imageStatus, node("p", { text: "Η δομή φορτώνεται. Οι επιλογές θα ανοίξουν μόλις εμφανιστεί." }));
       const loadId = ++imageLoadId;
@@ -577,6 +794,7 @@
         if (!refs.image.naturalWidth) return diagramFailure(currentRender);
         mainImageStatus = "ready";
         refs.image.classList.add("is-ready");
+        fitDiagramImage();
         replaceChildren(refs.imageStatus);
         updateControls();
       };
@@ -584,6 +802,12 @@
         if (!destroyed && loadId === imageLoadId) diagramFailure(currentRender);
       };
       refs.image.src = assetBase + round().asset;
+      if (lessonPresentation) sourceDiagramMetrics(refs.image.src).then(function (metrics) {
+        if (destroyed || currentRender !== renderId || loadId !== imageLoadId) return;
+        imageMetrics = metrics;
+        fitDiagramImage();
+        if (viewport) viewport.refresh();
+      });
       updateControls();
     }
 
@@ -676,8 +900,8 @@
       refs.checkHelper.textContent = current.solved ? "Η επισκευή ολοκληρώθηκε. Συνέχισε όταν είσαι έτοιμος ή έτοιμη." : !diagramsReady() ? "Περιμένουμε να εμφανιστούν οι δομές πριν από τον έλεγχο." : data.kind === "order" ? "Επιλέγεις κλάδο, πατάς ένα βέλος και ελέγχεις τη νέα σειρά." : hasCandidate ? "Ο έλεγχος μετρά ως μία προσπάθεια. Μπορείς να δοκιμάσεις ξανά." : "Διάλεξε πρώτα το κομμάτι και έπειτα μια αντικατάσταση.";
       refs.sessionStats.textContent = "Προσπάθειες σε αυτή την " + (data.guided ? "πρόβα " : "αποστολή ") + current.attempts;
       if (viewportEnabled) {
-        refs.feedbackOpen.hidden = !current.submitted;
-        refs.feedbackReturn.hidden = !current.submitted;
+        refs.feedbackOpen.hidden = lessonPresentation || !current.submitted;
+        refs.feedbackReturn.hidden = lessonPresentation || !current.submitted;
         refreshPagers();
       }
       if (restoreId) restoreFocus(restoreId);
@@ -686,7 +910,8 @@
 
     function publishSuccessActionsReady() {
       const nextButtons = refs.next ? refs.next.querySelectorAll("button") : [];
-      const stageVisible = !viewportEnabled || viewportStage === "feedback" && Array.from(nextButtons).some(function (control) { return control.getClientRects().length > 0; });
+      const actionsVisible = Array.from(nextButtons).some(function (control) { return !control.disabled && control.getClientRects().length > 0; });
+      const stageVisible = !viewportEnabled || (lessonPresentation ? viewportStage === "edit" : viewportStage === "feedback") && actionsVisible;
       const ready = nextButtons.length > 0 && diagramsReady() && state().solved && stageVisible;
       if (!destroyed && ready !== lastSuccessActionsReady && typeof options.onSuccessActionsReady === "function") {
         lastSuccessActionsReady = ready;
@@ -723,9 +948,17 @@
     }
 
     function clearFeedback() {
-      if (viewportEnabled) setViewportStage("edit", "answer");
+      if (lessonPresentation) {
+        refs.feedbackStage.hidden = true;
+        root.classList.remove("repair-has-result", "repair-solved");
+      } else if (viewportEnabled) setViewportStage("edit", "answer");
       refs.feedback.classList.remove("is-success");
       replaceChildren(refs.feedback);
+      if (lessonPresentation) {
+        refreshPagers();
+        if (viewport) viewport.refresh();
+        publishSuccessActionsReady();
+      }
     }
 
     function showSuccess(result, fresh) {

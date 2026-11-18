@@ -1,0 +1,102 @@
+{
+  "date": "2026-11-17",
+  "status": "COMPLETE_LOCALLY_WITH_RECORDED_LIMITATIONS",
+  "approvedRequest": [
+    "Remove Fit drawing",
+    "Successful Check keeps molecule,reward and continuation in main workspace",
+    "Bank activation creates detached tile; connection requires deliberate drag or explicit near-end keyboard confirmation"
+  ],
+  "finalTarget": {
+    "manifest": "review-target.json",
+    "sha256": "d24e20cfc1e75c25fafdfe874d93cd2ecfdf90b02c5c75daf74e1cb0f3de00ff",
+    "files": 11,
+    "baseHEAD": "168e3cec01f941a84d40bbe0dc07156e7baa35d0",
+    "cacheToken": "puzzle-manual-success-20261117-r4"
+  },
+  "behavior": [
+    "Same inline success in standalone and both alkane stops,including saved/cold solved restoration",
+    "No-room addition explains and preserves construction/history",
+    "Undo,Hand,H/V validation,graph/H/orders,grade,required-level policy and persisted schema preserved",
+    "Solved compact allocation reserves a full tile plus pager landing step; lesson continuation remains independently graded"
+  ],
+  "developerVerification": {
+    "memory": {
+      "cases": 29,
+      "assertions": 260,
+      "passed": true,
+      "freeze": "memory/freeze.json",
+      "sha256": "6aa32f7f29cfbe3b386a57ca9660b52de55bc96e4fbef7b2d9d7a1fdcde3319d"
+    },
+    "actualBrowser": {
+      "summary": "browser/summary.json",
+      "sha256": "243ab8c215038fe2b43de17eea012e93517f51c5873ff60968d7af97e27825c4",
+      "artifactManifest": "browser/artifact-manifest.json",
+      "manifestSHA256": "f8d34da95be584c4c97198f57f5085c0424a65fbdd32cfa405feb9198e2533f8",
+      "finalCandidate4": {
+        "gates": 1186,
+        "legacy": 28,
+        "passed": true
+      },
+      "qualifiedCandidate2SameFinalJS": {
+        "standalone": 294,
+        "lessonColdAndLayout": 297,
+        "nativeKeyboard": 32,
+        "note": "Passed oncandidate2 withsamefinalJS; subsequentCSS/cache delta verified byfinalC4first/thirdL2narrowchecks. Notallrerunfinal."
+      },
+      "genuineFlow": "gate4L1 -> normalnavigation -> gate11L1+L2 -> coldreceipts ->3optionalpractice -> Continue12",
+      "originalReproduction": "Actual archived bankautojoin/successswitch reproduced; allfailed/partialdiagnostics retained andclassified."
+    },
+    "static": "static-http.json: bothJSsyntax,2unchangedgenerators--check,11HTTP200/exactSHA8014 passed",
+    "finalPreservation": {
+      "cores": 13,
+      "moleculeCatalogScenarioFiles": 577,
+      "otherDependencies": 7,
+      "unchanged": true,
+      "HEADAndIndexUnchanged": true,
+      "exactRuntimeHashesRechecked": true
+    }
+  },
+  "independentReview": {
+    "agent": "/root/puzzle_manual_success_review",
+    "role": "NAMELECULE_REVIEWER_V1_20261023",
+    "freshContext": true,
+    "readOnly": true,
+    "record": "review-tracking.json",
+    "closed": [
+      "MANUAL-REV-01",
+      "MANUAL-REV-02",
+      "MANUAL-UI-01"
+    ],
+    "openIntroducedActionableFindings": [],
+    "note": "Independent source/productionfunction evidence; actualbrowserchecks areDeveloper evidence."
+  },
+  "upstream": {
+    "checkedSuccessfully": true,
+    "lastSynchronizedAndCurrentHEAD": "11d5886fd28e3242a7cbb9daa6206722628a6e0b",
+    "newCommitsOrEntries": false,
+    "record": "upstream-check.json"
+  },
+  "limits": [
+    "OwnedheadlessChrome; nopersonalFirefox/fullscreen/zoom/physicaltouch/conferencemachine/offlinevalidation",
+    "Preexistingnarrowresizepacking maycreate diagonalstrokes; productionfunction before/current comparisonidentical; notfixedinthisunit",
+    "Optional32blindaddscope stoppedafter7; nofreespaceinmeasuredarrangement, approvedatomicrefusal independentlyconfirmed; no32capacityclaim",
+    "Older56initializationlimitationnotrerun; no universalcompatibilityoruninterruptedreliabilityclaim"
+  ],
+  "preexistingResizeEvidence": "resize-packing-comparison.json",
+  "crowdedEvidence": "crowded-capacity-analysis.json",
+  "coreReport": "No changes to any of13applicationcores thissession; earlier archived upstreamcore58 remains inactive reference only.",
+  "delivery": {
+    "local": true,
+    "commit": false,
+    "push": false,
+    "published": false,
+    "fullBackup": false,
+    "scenarioJSONExport": false,
+    "personalFirefoxTouched": false,
+    "userPreviewsPreserved": [
+      8013,
+      8014
+    ]
+  },
+  "next": "User local inspection; save/report/publication or separatepreexistingresizefix onlywhenrequested."
+}

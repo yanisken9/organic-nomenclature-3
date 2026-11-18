@@ -20,7 +20,7 @@
     const promise = new Promise((resolve, reject) => {
       const script = global.document.createElement("script");
       const base = moduleURL || new URL("js/namelecule-game-choice-checkpoint.js", global.document.baseURI).href;
-      script.src = new URL(file + "?v=game-viewport-20261116-r1", base).href;
+      script.src = new URL(file + "?v=adaptive-dialog-20261118-r3", base).href;
       const timer = global.setTimeout(() => finish(new Error("Detective dependency timed out")), 45000);
       function finish(error) {
         global.clearTimeout(timer); script.onload = script.onerror = null;
@@ -204,16 +204,33 @@
     const edges = new Set();
     for (const value of bonds) {
       if (!value || typeof value.a !== "string" || typeof value.b !== "string" || value.a === value.b ||
-        !ids.has(value.a) || !ids.has(value.b) || value.order !== 1) return blank;
+        !ids.has(value.a) || !ids.has(value.b) || !Number.isInteger(value.order) || value.order < 1 || value.order > 3) return blank;
       const edge = JSON.stringify(value.a < value.b ? [value.a, value.b] : [value.b, value.a]);
       if (edges.has(edge)) return blank;
       edges.add(edge);
     }
     const graph = { nodes: nodes.map(value => ({ id: value.id, hydrogens: value.hydrogens, x: value.x, y: value.y })),
-      bonds: bonds.map(value => ({ a: value.a, b: value.b, order: 1 })) };
+      bonds: bonds.map(value => ({ a: value.a, b: value.b, order: value.order })) };
     const attempts = Number.isSafeInteger(raw.attempts) && raw.attempts >= 0 ? raw.attempts : 0;
     const submitted = raw.submitted === true && attempts > 0 && nodes.length > 0;
-    return { graph, attempts, submitted, solved: !!entry && submitted && puzzle.grade(graph, entry.target).correct === true };
+    const value = { graph, attempts, submitted, solved: !!entry && submitted && puzzle.grade(graph, entry.target).correct === true };
+    const construction = raw.construction;
+    const pending = construction && typeof construction === "object" && !Array.isArray(construction) && construction.version === 1 && construction.pendingBond;
+    // Construction aids are optional UI state, never extra atoms/bonds or proof
+    // of correctness. Invalid aids are dropped without erasing the candidate.
+    if (pending && typeof pending === "object" && !Array.isArray(pending) &&
+      typeof pending.owner === "string" && ids.has(pending.owner) &&
+      Number.isInteger(pending.order) && pending.order >= 1 && pending.order <= 3 &&
+      Number.isFinite(pending.dx) && Number.isFinite(pending.dy) &&
+      Math.abs(pending.dx) <= 1 && Math.abs(pending.dy) <= 1 &&
+      Math.abs(Math.hypot(pending.dx, pending.dy) - 1) <= 1e-6) {
+      const owner = graph.nodes.find(node => node.id === pending.owner);
+      const used = graph.bonds.reduce((sum, edge) => sum + (edge.a === pending.owner || edge.b === pending.owner ? edge.order : 0), 0);
+      if (owner.hydrogens + used + pending.order <= 4) {
+        value.construction = { version: 1, pendingBond: { owner: pending.owner, order: pending.order, dx: pending.dx, dy: pending.dy } };
+      }
+    }
+    return value;
   }
   function restorePuzzle(recipe, previous, practice) {
     const seed = previous && previous.version === VERSION && seedValue(previous.seed);
@@ -449,6 +466,47 @@
     return { label: "Διάλεξε παιχνίδι ονοματολογίας", instruction: two ? "Υποχρεωτικά τα επίπεδα 1 και 2, με τρία σωστά διαφορετικά μόρια στο καθένα. Το επίπεδο 3 είναι προαιρετικό." : "Υποχρεωτικό το επίπεδο 1, με τρία σωστά διαφορετικά μόρια.",
       open: "Διάλεξε παιχνίδι", done: "Η συνέχεια είναι διαθέσιμη.", revisit: "Επιστροφή στα παιχνίδια", practiceTitle: "Προαιρετική εξάσκηση στα ονόματα", practiceNote: "Το ξεκλείδωμα διατηρείται. Μπορείς να συνεχίσεις τη θεωρία." };
   }
+  // Presentation only: authored notes and their progress signatures stay intact.
+  function instructionRows(recipe) {
+    if (!recipe || recipe.version !== 2) return null;
+    if (recipe.setId === "alkanes-unbranched" && same(recipe.allowedLevels, [1]) && same(recipe.requiredLevels, [1])) return [
+      ["Υποχρεωτικό: ", "Επίπεδο 1 — Βασικό."],
+      ["3 σωστά διαφορετικά μόρια", " στο ίδιο παιχνίδι."],
+      ["Διάβασε τις εξηγήσεις", " και μετά συνέχισε τη θεωρία ή παίξε ξανά."]
+    ];
+    if (recipe.setId === "alkanes-branched" && same(recipe.allowedLevels, [1, 2, 3]) && same(recipe.requiredLevels, [1, 2])) return [
+      ["Επίπεδα 1 και 2: ", "υποχρεωτικά. Επίπεδο 3: προαιρετικό."],
+      ["3 σωστά διαφορετικά μόρια ανά επίπεδο", ", στο ίδιο παιχνίδι."],
+      ["Διάβασε τις εξηγήσεις", " και άλλαξε παιχνίδι στο επόμενο επίπεδο αν θέλεις."]
+    ];
+    return null;
+  }
+  function instructionList(recipe) {
+    const rows = instructionRows(recipe);
+    if (!rows) return null;
+    const list = node("ul", "nl-game-choice-instructions");
+    list.setAttribute("aria-label", "Σύντομες οδηγίες");
+    for (const [lead, detail] of rows) {
+      const item = node("li");
+      item.append(node("b", "", lead), global.document.createTextNode(detail));
+      list.append(item);
+    }
+    return list;
+  }
+  function renderLessonNote(host, step) {
+    if (!host || !step || step.noteFormat !== "html" || !step.checkpoint ||
+        step.checkpoint.type !== "alkane-game-choice-set" || step.checkpoint.version !== 1) return false;
+    const checkpoint = step.checkpoint;
+    const index = checkpoint.id === "alkanes-unbranched-workshop-v1" ? "3" :
+      checkpoint.id === "alkanes-branched-workshop-v1" ? "10" : null;
+    const expected = index && LEVEL_FIELDS[index];
+    if (!expected || step.note !== expected.note.value ||
+        checkpoint.round?.setId !== expected.checkpoint.value.round.setId) return false;
+    const list = instructionList(checkpoint.round);
+    if (!list) return false;
+    host.replaceChildren(list);
+    return true;
+  }
   function mountLevels(host, options, practice) {
     const recipe = validate(options.round);
     const viewport = options.viewport === true && !!global.NameleculeGameViewport;
@@ -461,9 +519,15 @@
     function publish() {
       state = restoreLevels(recipe, state, practice);
       if (selector) selector.set({ completedLevels: completed() });
-      if (status) status.textContent = state.legacyEarned && state.legacyEarned.attempt.progress.solved
-        ? "Η προηγούμενη προσπάθεια επαληθεύτηκε. Το ξεκλείδωμα διατηρείται."
-        : levelLabels(recipe, "gr").instruction + (completed().length ? " Ολοκληρωμένα επίπεδα " + completed().join(", ") + "." : "");
+      if (status) {
+        const legacy = state.legacyEarned && state.legacyEarned.attempt.progress.solved;
+        const progressText = legacy ? "Η προηγούμενη προσπάθεια επαληθεύτηκε. Το ξεκλείδωμα διατηρείται." :
+          completed().length ? "Ολοκληρωμένα επίπεδα " + completed().join(", ") + "." : "";
+        const concise = viewport && !state.selected && !!instructionRows(recipe);
+        status.textContent = concise ? progressText : legacy ? progressText :
+          levelLabels(recipe, "gr").instruction + (progressText ? " " + progressText : "");
+        status.hidden = concise && !progressText;
+      }
       if (!destroyed && options.onStateChange) options.onStateChange(clone(state));
     }
     function stop() {
@@ -479,6 +543,7 @@
     function choose() { state.selected = null; state.selectedLevel = null; publish(); render(); }
     function render() {
       if (destroyed) return; stop();
+      if (viewport) host.classList.toggle("nl-vp-game-selection", !state.selected);
       status = node("p", "nl-game-choice-note", levelLabels(recipe, "gr").instruction);
       status.setAttribute("role", "status");
       if (!state.selected) {
@@ -491,10 +556,12 @@
             publish(); render();
           });
           const img = node("img"); img.src = new URL("games/assets/" + image, global.document.baseURI).href; img.alt = ""; img.width = 56; img.height = 56;
-          if (game === "puzzle") img.style.cssText = "width:120px;height:64px;object-fit:contain";
-          const copy = node("div", "nl-game-choice-copy"); copy.append(node("strong", "", title), node("span", "", detail)); card.append(img, copy); grid.append(card);
+          if (game === "puzzle" && !viewport) img.style.cssText = "width:120px;height:64px;object-fit:contain";
+          const copy = node("div", "nl-game-choice-copy"); copy.append(node("strong", "", title), node("span", "", detail)); card.append(choiceLogo(img, game, viewport), copy); grid.append(card);
         }
-        host.replaceChildren(node("h2", "nl-game-choice-heading", "Με ποιο παιχνίδι θέλεις να εξασκηθείς;"), status, grid); publish(); return;
+        const instructions = viewport && instructionList(recipe);
+        host.replaceChildren(node("h2", "nl-game-choice-heading", "Με ποιο παιχνίδι θέλεις να εξασκηθείς;"),
+          ...(instructions ? [instructions] : []), status, grid); publish(); return;
       }
       const game = state.selected, activeToken = token;
       const levelHost = node("div"), gameHost = node("div", game === "repair" ? "nl-game-choice-repair" : "nl-builder-host");
@@ -548,7 +615,7 @@
       }); }
     }
     render();
-    return { destroy() { if (destroyed) return; stop(); destroyed = true; if (viewport) host.classList.remove("nl-vp-choice", "nl-vp-level-selection"); host.replaceChildren(); } };
+    return { destroy() { if (destroyed) return; stop(); destroyed = true; if (viewport) host.classList.remove("nl-vp-choice", "nl-vp-level-selection", "nl-vp-game-selection"); host.replaceChildren(); } };
   }
 
   function labels(_recipe, lang) {
@@ -569,6 +636,12 @@
   function button(text, className, action) {
     const value = node("button", className, text); value.type = "button"; value.addEventListener("click", action); return value;
   }
+  function choiceLogo(image, game, viewport) {
+    if (!viewport) return image;
+    const frame = node("span", "nl-vp-choice-logo" + (game === "puzzle" ? " nl-vp-choice-logo-wide" : ""));
+    frame.append(image);
+    return frame;
+  }
   function mountComposite(host, options, practice) {
     if (options.round.version === 2) return mountLevels(host, options, practice);
     const recipe = validate(options.round);
@@ -587,6 +660,7 @@
     function choose() {
       if (destroyed) return;
       stop(); state.selected = null; publish(); host.removeAttribute("aria-busy");
+      if (viewport) host.classList.add("nl-vp-game-selection");
       const title = node("h2", "nl-game-choice-heading", "Με ποιο παιχνίδι θέλεις να εξασκηθείς;");
       const note = node("p", "nl-game-choice-note", "Τρία διαφορετικά μόρια στο ίδιο παιχνίδι ανοίγουν τη συνέχεια. Η πρόοδός σου κρατιέται χωριστά για κάθε παιχνίδι.");
       const grid = node("div", "nl-game-choice-grid");
@@ -596,9 +670,9 @@
         ["detective", "Μοριακός ντεντέκτιβ", "Βρες στον ανεπτυγμένο τύπο όσα δηλώνει το συνθετικό.", "molecular-detective/molecular-detective-logo-molecule-v2.png"]].forEach(([game, label, detail, image]) => {
         const card = button("", "nl-game-choice-card", () => { state.selected = game; publish(); render(); });
         const img = node("img"); img.src = new URL("games/assets/" + image, global.document.baseURI).href; img.width = 40; img.height = 40; img.alt = ""; img.setAttribute("aria-hidden", "true");
-        if (game === "puzzle") { img.width = 120; img.height = 64; img.style.cssText = "width:120px;height:64px;object-fit:contain;flex-shrink:0"; }
+        if (game === "puzzle" && !viewport) { img.width = 120; img.height = 64; img.style.cssText = "width:120px;height:64px;object-fit:contain;flex-shrink:0"; }
         const copy = node("div", "nl-game-choice-copy"); copy.append(node("strong", "", label), node("span", "", detail));
-        card.append(img, copy); grid.append(card);
+        card.append(choiceLogo(img, game, viewport), copy); grid.append(card);
       });
       host.replaceChildren(title, note, grid);
     }
@@ -606,6 +680,7 @@
       if (destroyed) return;
       if (!state.selected) { choose(); return; }
       stop();
+      if (viewport) host.classList.remove("nl-vp-game-selection");
       const game = state.selected;
       const activeToken = token;
       const switcher = button("Άλλαξε παιχνίδι", "nl-quiz-button nl-game-choice-switch", choose);
@@ -631,7 +706,7 @@
         : (game === "detective" ? mountDetective : game === "puzzle" ? mountPuzzle : mountBuilder)(gameHost, settings, practice);
     }
     if (state.selected) render(); else choose();
-    return { destroy() { if (destroyed) return; stop(); destroyed = true; if (viewport) host.classList.remove("nl-vp-choice", "nl-vp-level-selection"); host.replaceChildren(); } };
+    return { destroy() { if (destroyed) return; stop(); destroyed = true; if (viewport) host.classList.remove("nl-vp-choice", "nl-vp-level-selection", "nl-vp-game-selection"); host.replaceChildren(); } };
   }
   function mountBuilder(host, options, practice) {
     const recipe = options.round;
@@ -688,7 +763,7 @@
       [startMarker, endMarker].forEach(marker => { marker.setAttribute("aria-hidden", "true"); marker.style.cssText = "position:absolute;width:1px;height:1px;pointer-events:none;left:0;top:0"; });
       stage.append(frame, startMarker, endMarker); host.replaceChildren(title, stage); host.setAttribute("aria-busy", "true");
       active = { requestId: ++requestId, index, entry, stage, startMarker, endMarker, loaded: false };
-      frame.src = new URL("games/name-builder.html?lessonSession=" + session + "&v=game-viewport-20261116-r1" + (viewport ? "&viewport=1" : "") + "", global.document.baseURI).href;
+      frame.src = new URL("games/name-builder.html?lessonSession=" + session + "&v=adaptive-dialog-20261118-r3" + (viewport ? "&viewport=1" : "") + "", global.document.baseURI).href;
       if (viewport) viewportFrame = global.NameleculeGameViewport.fitFrame(frame, { stage, channel: CHANNEL, session,
         identity: () => active && ({ requestId: active.requestId, attemptId, moleculeId: active.entry.round.moleculeId,
           ...(wireContext ? { context: wireContext } : {}) }) });
@@ -709,6 +784,7 @@
       }
       if (data.requestId !== context.requestId || data.attemptId !== attemptId || data.moleculeId !== context.entry.round.moleculeId) return;
       if (wireContext) { try { if (levels().contextKey(data.context) !== levels().contextKey(wireContext)) return; } catch (_) { return; } }
+      if (data.type === "layout-demand") { if (viewportFrame) viewportFrame.setDemand(data); return; }
       if (data.type === "error") { failure("Δεν ήταν δυνατή η ασφαλής προετοιμασία του μορίου. Δοκίμασε ξανά."); return; }
       if (data.type === "exit") { if (typeof options.onClose === "function") options.onClose(); return; }
       if (data.type === "scroll-interrupt") {
@@ -792,7 +868,7 @@
       // The child owns its logo/title; the same header is never rendered twice.
       stage.append(frame, startMarker, endMarker); host.replaceChildren(stage); host.setAttribute("aria-busy", "true");
       active = { requestId: ++requestId, index, entry, stage, startMarker, endMarker, loaded: false };
-      frame.src = new URL("games/molecular-puzzle.html?embedded=1&lessonSession=" + session + "&v=game-viewport-20261116-r1" + (viewport ? "&viewport=1" : "") + "", global.document.baseURI).href;
+      frame.src = new URL("games/molecular-puzzle.html?embedded=1&lessonSession=" + session + "&v=adaptive-dialog-20261118-r3" + (viewport ? "&viewport=1" : "") + "", global.document.baseURI).href;
       if (viewport) viewportFrame = global.NameleculeGameViewport.fitFrame(frame, { stage, channel: PUZZLE_CHANNEL, session,
         identity: () => active && ({ requestId: active.requestId, attemptId, moleculeId: active.entry.moleculeId,
           ...(wireContext ? { context: wireContext } : {}) }) });
@@ -806,13 +882,14 @@
       const context = active;
       if (data.type === "ready") {
         if (context.loaded) return;
-        frame.contentWindow.postMessage({ channel: PUZZLE_CHANNEL, session, command: "load", requestId: context.requestId, attemptId,
+        frame.contentWindow.postMessage({ channel: PUZZLE_CHANNEL, session, command: "load", constructionVersion: 1, requestId: context.requestId, attemptId,
           ...(wireContext ? { context: wireContext } : {}), moleculeId: context.entry.moleculeId, correctName: context.entry.name,
           initialState: puzzleSnapshot(context.entry, state.states[context.index]), explanation: context.entry.explanation }, global.location.origin);
         return;
       }
       if (data.requestId !== context.requestId || data.attemptId !== attemptId || data.moleculeId !== context.entry.moleculeId) return;
       if (wireContext) { try { if (levels().contextKey(data.context) !== levels().contextKey(wireContext)) return; } catch (_) { return; } }
+      if (data.type === "layout-demand") { if (viewportFrame) viewportFrame.setDemand(data); return; }
       if (data.type === "error") { failure("Δεν ήταν δυνατή η ασφαλής προετοιμασία του παζλ. Δοκίμασε ξανά."); return; }
       if (data.type === "exit") { if (typeof options.onClose === "function") options.onClose(); return; }
       if (data.type === "scroll-interrupt") {
@@ -908,6 +985,7 @@
     }
     return { states, practices };
   }
+  global.NameleculeGameChoicePresentation = Object.freeze({ renderLessonNote });
   global.NameleculeQuizCheckpoints.registerType("alkane-game-choice-set", Object.freeze({ validate, restore, prepare, mount: (host, options) => mountComposite(host, options, false),
     createPractice, restorePractice, mountPractice: (host, options) => mountComposite(host, options, true), otherGame, practiceGame, labels, migrateRecord }));
 })(typeof window !== "undefined" ? window : globalThis);

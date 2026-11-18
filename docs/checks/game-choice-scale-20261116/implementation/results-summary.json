@@ -1,0 +1,110 @@
+{
+  "completedLocally": true,
+  "approvedProposal": "Fourcentered2x2cards/logosabovebigtitlesanddescriptions, centeredquestion; userapprovedvisualprototype",
+  "targetSHA256": "6e96b1504b275f56c4cea00a02c2ccc0d4cc9c883d719dface0003ef6bf5d153",
+  "runtimeFiles": {
+    "css/namelecule-game-viewport.css": "834512c37ca4d33b93a82893bf233454b49997e6df13a0f0f3d81b496338d190",
+    "js/namelecule-game-choice-checkpoint.js": "2b0fbb8882e64c2b5f18155c5beaed107c3de4fdc88af6aacc95000c171bc2a9",
+    "mulermoc-nom-57.html": "65db5d6faf1686220310cc9afc3a52dbe5683c5da0f13f34d41126120b14af4b"
+  },
+  "rootCause": "Availablegridrowsgrew butfixed56pxlogos/17.28pxtitles/13.6pxdetails remainedsmall; Puzzleinline120x64 blockedconsistentCSS sizing",
+  "behavior": "Chooser-only stateclasscontrolsnewlayout. Bothv1/v2clearstateonentry/destroy; oldnonviewportDOMretained. Puzzlewideaspectkept. Main57twoassetsusegame-choice-cards-20261116-r1.",
+  "runs": [
+    {
+      "path": "docs/checks/game-choice-scale-20261116/implementation/browser/run-chrome-chooser-implementation-140754/results.json",
+      "sha256": "f0472ae3f71f02ac5ae63c2b33a974f20283ae9f7737e194b155037034063c20",
+      "recordedAssertions": 197,
+      "passedAssertions": 196,
+      "completed": false,
+      "sourceStable": true,
+      "ownedBrowserExited": true,
+      "ownedProfileRemoved": true,
+      "ownedServerClosed": true
+    },
+    {
+      "path": "docs/checks/game-choice-scale-20261116/implementation/browser/run-chrome-chooser-tail-141125/results.json",
+      "sha256": "14e4955d54dfefa585509121dfa068317cd556b922ea35d1caee46f6b45c3cc0",
+      "recordedAssertions": 90,
+      "passedAssertions": 90,
+      "completed": false,
+      "sourceStable": true,
+      "ownedBrowserExited": true,
+      "ownedProfileRemoved": true,
+      "ownedServerClosed": true
+    },
+    {
+      "path": "docs/checks/game-choice-scale-20261116/implementation/browser/run-chrome-chooser-earned-tail-141509/results.json",
+      "sha256": "8d28bd1429919b34325a7a35c5d6c3459e1a9ac654430e80c22645a94913550d",
+      "recordedAssertions": 44,
+      "passedAssertions": 44,
+      "completed": true,
+      "sourceStable": true,
+      "ownedBrowserExited": true,
+      "ownedProfileRemoved": true,
+      "ownedServerClosed": true
+    }
+  ],
+  "recordedAssertions": 331,
+  "passedAssertions": 330,
+  "genuineCorrectUIAnswers": 3,
+  "harnessStops": [
+    {
+      "run": 1,
+      "cause": "OverstrictbackgrounddocumentscrollTop0;dialog/cardpositionsnotafailure"
+    },
+    {
+      "run": 2,
+      "cause": "Newdocumentgenerationguardonhash-onlynavigation; notapplicationfailure"
+    }
+  ],
+  "acceptance": "Completedacrossboundedcuts, notthreefullypassingruns",
+  "viewportsCSS": [
+    [
+      1024,
+      640
+    ],
+    [
+      1280,
+      720
+    ],
+    [
+      1440,
+      900
+    ],
+    [
+      1920,
+      1080
+    ],
+    [
+      390,
+      700
+    ]
+  ],
+  "browser": "IsolatedChrome100%CSSviewports",
+  "flowEvidence": [
+    "Bothgate4/11completehittable4cards/text/logos",
+    "Keyboard/all4entries+return, chooserclassclearsduringgame",
+    "Close/reopen,Builderexactpartial+coldreload, genuineDtriple/earnedrestore/Continue5",
+    "Gate11required1+2/optional3, earnedpracticechooser1024/390",
+    "LegacyCSSfixture+independentv1/v2nonviewportDOMcompatibility"
+  ],
+  "fixture": "Latercutscontinueexactrawcapturedgenuinefirst-runrecord; no derivedgradesornewanswerclaim",
+  "review": "review-final.json",
+  "coreChanges": false,
+  "protected7Unchanged": true,
+  "sourceHEADIndexUnchanged": true,
+  "commit": false,
+  "publication": false,
+  "localLesson": "http://127.0.0.1:8013/mulermoc-nom-57.html?scenario=scenarios/alkanes-user-3.scenario.json&present=1&from=theory-library&v=game-choice-cards-20261116-r1#step=4",
+  "limits": [
+    "BrowserexecutionDeveloper, notReviewer",
+    "LegacyCSSfixture, notnewnative55/56replay",
+    "No nativeOSfullscreen/realzoom/physicalmobile/Firefox/offline/conferencequalification",
+    "No-writebehavioral, notenforcedfilesystemisolation"
+  ],
+  "browserAggregate": {
+    "path": "docs/checks/game-choice-scale-20261116/implementation/browser/acceptance-summary.json",
+    "sha256": "ba05ecd9d67d46e7b6a615d932f75adaa1433715473582f4df4db54fbfa4cba7",
+    "artifactManifestSHA256": "283b518b221d29e52545a13c3a5ab4cb777f6d490320a664652e0c416526e871"
+  }
+}

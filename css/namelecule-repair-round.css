@@ -203,6 +203,10 @@
 .nl-repair-viewport .round-set-name { display: inline; font-size: 12px; }
 .nl-repair-viewport .workshop-logo-small { width: 28px; height: 28px; }
 .nl-repair-viewport .round-topbar .eyebrow { font-size: 10px; }
+.nl-repair-viewport.nl-lesson-game .round-topbar { display: block; }
+.nl-repair-viewport.nl-lesson-game .round-game-brand { letter-spacing: normal; }
+.nl-repair-viewport.nl-lesson-game .nl-game-round-title { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.nl-vp-choice .nl-repair-viewport.nl-lesson-game .round-heading .round-objective { width: 100%; max-width: none; margin: 0; font-size: var(--nl-game-mission-size, 20px); font-weight: 400; text-align: center; line-height: 1.35; }
 .nl-repair-viewport .round-progress-counter { font-size: 14px; }
 .nl-repair-viewport .repair-stage-tabs { display: flex; gap: 6px; min-width: 0; align-items: center; }
 .nl-repair-viewport .repair-stage-tabs button { min-height: 34px; padding: 5px 10px; font-size: 12px; }
@@ -223,6 +227,7 @@
 .nl-repair-viewport .repair-card { width: 100%; min-height: 0; display: flex; flex-direction: column; gap: 6px; padding: 10px; border-radius: 15px; }
 .nl-repair-viewport .repair-card > .section-label { font-size: 10px; margin: 0; }
 .nl-repair-viewport .repair-card > .nl-vp-pager-x { flex: 0 0 auto; height: 40px; }
+.nl-repair-viewport.nl-lesson-game .repair-card > .nl-vp-pager-x { height: auto; min-height: 52px; max-height: 92px; }
 .nl-repair-viewport .broken-name { white-space: nowrap; overflow-wrap: normal; font-size: 16px; line-height: 1.5; padding: 5px 8px; margin: 0; }
 .nl-repair-viewport .repair-part-page, .nl-repair-viewport .repair-choice-page { display: flex; flex: 1 1 0; flex-direction: column; gap: 5px; min-height: 0; }
 .nl-repair-viewport .repair-part-page > .nl-vp-pager { flex: 1 1 0; min-height: 0; }
@@ -284,3 +289,49 @@
 .nl-repair-viewport .feedback .nl-vp-pager-x.is-overflow { height: 73px; }
 .nl-repair-viewport .repair-zoom-controls { display: flex; gap: 6px; margin-left: auto; }
 .nl-repair-viewport .repair-zoom-controls button { min-height: 36px; min-width: 40px; padding: 5px 10px; }
+
+/* Lesson results share the answer workspace; standalone keeps its result view. */
+.nl-repair-viewport.nl-inline-results .repair-side { flex-direction: column; gap: 7px; }
+.nl-repair-viewport.nl-inline-results .repair-card { flex: 1 1 0; }
+.nl-repair-viewport.nl-inline-results .repair-submission { display: flex; flex: 0 0 auto; align-items: center; justify-content: flex-end; gap: 7px; min-width: 0; }
+.nl-repair-viewport.nl-inline-results .repair-submission .candidate { flex: 1 1 0; min-width: 0; }
+.nl-repair-viewport.nl-inline-results .repair-submission .repair-actions { flex: 0 0 auto; }
+.nl-repair-viewport.nl-inline-results .repair-submission .primary { min-width: 90px; }
+.nl-repair-viewport.nl-inline-results .repair-feedback-stage.nl-inline-result { display: flex; flex: 1 1 0; flex-direction: column; padding: 7px; gap: 5px; min-height: 92px; overflow: hidden; }
+.nl-repair-viewport.nl-inline-results .nl-inline-result .repair-stage-heading { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.nl-repair-viewport.nl-inline-results .nl-inline-result .repair-stage-heading h2 { font-size: 14px; line-height: 1.25; }
+.nl-repair-viewport.nl-inline-results .nl-inline-result > .nl-vp-pager { flex: 1 1 0; min-height: 0; }
+.nl-repair-viewport.nl-inline-results .nl-inline-result .feedback { padding: 6px 8px; font-size: 14px; line-height: 1.4; }
+.nl-repair-viewport.nl-inline-results .nl-inline-result .round-next { flex: 0 0 auto; }
+.nl-repair-viewport.nl-inline-results .repair-feedback-open { display: none; }
+.nl-repair-viewport.nl-inline-results.repair-has-result .repair-card { padding: 6px; gap: 4px; }
+.nl-repair-viewport.nl-inline-results.repair-has-result:not(.repair-solved) .repair-card { flex: 1 0 0; }
+.nl-repair-viewport.nl-inline-results .repair-stage-tabs .repair-parts-back { margin-left: auto; }
+.nl-repair-viewport.nl-inline-results:not([data-repair-step="choices"]) .repair-stage-tabs .repair-parts-back,
+.nl-repair-viewport.nl-inline-results:not([data-repair-stage="edit"]) .repair-stage-tabs .repair-parts-back,
+.nl-repair-viewport.nl-inline-results[data-repair-view="structure"] .repair-stage-tabs .repair-parts-back,
+.nl-repair-viewport.nl-inline-results.repair-solved .repair-stage-tabs .repair-parts-back { display: none; }
+/* A stacked result has a finite height budget. Overflowing names keep their
+   full-size line while their existing buttons and page count share that line. */
+.nl-repair-viewport.nl-inline-results.nl-repair-sequential.repair-has-result:not(.repair-solved) .repair-card .nl-vp-pager-x.is-overflow { display: grid; grid-template-columns: minmax(0,1fr) 84px; grid-template-rows: minmax(0,1fr); height: 52px; min-height: 52px; max-height: 52px; }
+.nl-repair-viewport.nl-inline-results.nl-repair-sequential.repair-has-result:not(.repair-solved) .repair-card .nl-vp-pager-x.is-overflow > .nl-vp-pager-nav { display: grid; grid-template-columns: 40px 40px; grid-template-rows: 36px 16px; gap: 0 4px; min-height: 52px; padding: 0; }
+.nl-repair-viewport.nl-inline-results.nl-repair-sequential.repair-has-result:not(.repair-solved) .repair-card .nl-vp-pager-x.is-overflow > .nl-vp-pager-nav button { min-height: 36px; }
+.nl-repair-viewport.nl-inline-results.nl-repair-sequential.repair-has-result:not(.repair-solved) .repair-card .nl-vp-pager-x.is-overflow > .nl-vp-pager-nav button:first-child { grid-column: 1; grid-row: 1; }
+.nl-repair-viewport.nl-inline-results.nl-repair-sequential.repair-has-result:not(.repair-solved) .repair-card .nl-vp-pager-x.is-overflow > .nl-vp-pager-nav button:last-child { grid-column: 2; grid-row: 1; }
+.nl-repair-viewport.nl-inline-results.nl-repair-sequential.repair-has-result:not(.repair-solved) .repair-card .nl-vp-pager-x.is-overflow > .nl-vp-pager-nav span { grid-column: 1 / -1; grid-row: 2; text-align: center; }
+.nl-repair-viewport.nl-inline-results.nl-repair-sequential.repair-has-result:not(.repair-solved) .candidate:has(.nl-vp-pager-x.is-overflow) { padding-top: 0; padding-bottom: 0; }
+.nl-repair-viewport.nl-inline-results.repair-has-result .repair-card > .section-label,
+.nl-repair-viewport.nl-inline-results.repair-has-result .candidate-label { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.nl-repair-viewport.nl-inline-results.repair-has-result .repair-choice-page { gap: 3px; }
+.nl-repair-viewport.nl-inline-results.repair-has-result .repair-choice-page > .quiet { min-height: 24px; padding: 2px 6px; }
+.nl-repair-viewport.nl-inline-results.repair-solved .repair-part-page,
+.nl-repair-viewport.nl-inline-results.repair-solved .repair-choice-page,
+.nl-repair-viewport.nl-inline-results.repair-solved .repair-submission .repair-actions { display: none; }
+.nl-repair-viewport.nl-inline-results.repair-solved .repair-card { flex: 0 0 auto; }
+.nl-repair-viewport.nl-inline-results.repair-solved .repair-feedback-stage { flex: 1 1 0; }
+.nl-repair-viewport.nl-inline-results.repair-solved .success-name { font-size: 20px; }
+/* A wide, short workbench has horizontal room for the result. Dividing its
+   height instead starves the fieldset and lets its pager cover Check. */
+.nl-repair-viewport.nl-inline-results.repair-has-result:not(.nl-repair-sequential) .repair-side { display: grid; grid-template-columns: minmax(0,1.1fr) minmax(0,.9fr); grid-template-rows: minmax(0,1fr); align-items: stretch; }
+.nl-repair-viewport.nl-inline-results.repair-has-result:not(.nl-repair-sequential) .repair-card { min-width: 0; grid-column: 1; grid-row: 1; }
+.nl-repair-viewport.nl-inline-results.repair-has-result:not(.nl-repair-sequential) .repair-feedback-stage { min-width: 0; grid-column: 2; grid-row: 1; }

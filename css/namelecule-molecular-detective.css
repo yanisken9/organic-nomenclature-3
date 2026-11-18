@@ -76,10 +76,10 @@ body.nl-vp-document:has(.detective-viewport) .site-footer { display: none; }
 .detective-game.detective-viewport, body.detective-embedded .detective-game.detective-viewport { display: grid; grid-template-rows: auto auto auto auto minmax(0, 1fr); gap: 6px; min-height: 0; padding: 8px 16px; overflow: hidden; }
 .detective-viewport .intro { margin: 0; }
 .detective-viewport .intro > .eyebrow, .detective-viewport .intro-detail { display: none; }
-.detective-viewport .detective-title { display: flex; justify-content: center; gap: 8px; margin: 0; }
-.detective-viewport .detective-logo { width: 32px; height: 32px; }
-.detective-viewport .detective-title h1 { font-size: 21px; line-height: 1.2; }
-.detective-viewport .objective, .lesson-mode .detective-viewport .objective { font-size: 14px; line-height: 1.35; margin: 3px 0 0; }
+:where(html:not(.lesson-mode.nl-vp-document)) .detective-viewport .detective-title { display: flex; justify-content: center; gap: 8px; margin: 0; }
+:where(html:not(.lesson-mode.nl-vp-document)) .detective-viewport .detective-logo { width: 32px; height: 32px; }
+:where(html:not(.lesson-mode.nl-vp-document)) .detective-viewport .detective-title h1 { font-size: 21px; line-height: 1.2; }
+:where(html:not(.lesson-mode.nl-vp-document)) .detective-viewport .objective { font-size: 14px; line-height: 1.35; margin: 3px 0 0; }
 .detective-viewport .game-status, body.detective-embedded .detective-viewport .game-status { font-size: 12px; line-height: 1.3; min-height: 0; margin: 0; padding: 0; }
 .detective-viewport .detective-round-tools { margin: 0; min-height: 0; }
 .detective-viewport #game-levels { width: 100%; }
@@ -93,9 +93,9 @@ body.nl-vp-document:has(.detective-viewport) .site-footer { display: none; }
 .detective-viewport .detective-view-note { display: none; }
 .detective-viewport .detective-clue { display: grid; grid-template-rows: auto minmax(0,1fr); }
 .detective-viewport .detective-clue-content { display: grid; grid-template-rows: auto minmax(0,1fr); gap: 8px; padding: 10px; min-height: 0; }
-.detective-viewport .detective-clue-content > .nl-vp-pager-x { height: 47px; }
-.detective-viewport .detective-clue-content > .nl-vp-pager-x.is-overflow { height: 85px; }
-.detective-viewport .detective-name { margin: 0; padding: 3px 0 8px; font-size: 23px; line-height: 1.5; white-space: nowrap; overflow-wrap: normal; }
+.detective-viewport .detective-clue-content > .nl-vp-pager-x { height: var(--nl-detective-name-height, 47px); }
+.detective-viewport .detective-clue-content > .nl-vp-pager-x.is-overflow { height: var(--nl-detective-name-paged-height, 85px); }
+.detective-viewport .detective-name { margin: 0; padding: 3px 0 8px; font-size: var(--nl-game-name-size, 23px); line-height: 1.5; white-space: nowrap; overflow-wrap: normal; }
 .detective-viewport .detective-prompt { margin: 0; font-size: 16px; line-height: 1.5; padding: 3px; }
 .detective-viewport .detective-answer-content { padding: 9px 10px; }
 .detective-viewport .detective-help { font-size: 12px; margin-bottom: 4px; }
@@ -121,7 +121,74 @@ body.nl-vp-document:has(.detective-viewport) .site-footer { display: none; }
 .detective-viewport.nl-vp-narrow[data-detective-view="structure"] .detective-clue, .detective-viewport.nl-vp-narrow[data-detective-view="clue"] .detective-molecule { display: none; }
 @media (max-width: 550px) {
   .detective-game.detective-viewport, body.detective-embedded .detective-game.detective-viewport { padding: 6px 9px; }
-  .detective-viewport .detective-title h1 { font-size: 18px; }
-  .detective-viewport .objective, .lesson-mode .detective-viewport .objective { font-size: 13px; }
-  .detective-viewport .detective-logo { width: 28px; height: 28px; }
+  :where(html:not(.lesson-mode.nl-vp-document)) .detective-viewport .detective-title h1 { font-size: 18px; }
+  :where(html:not(.lesson-mode.nl-vp-document)) .detective-viewport .objective { font-size: 13px; }
+  :where(html:not(.lesson-mode.nl-vp-document)) .detective-viewport .detective-logo { width: 28px; height: 28px; }
+}
+
+/* The larger lesson clue retains its underline and optional paging row. */
+html.lesson-mode.nl-vp-document .detective-viewport {
+  --nl-detective-name-height: calc(var(--nl-game-name-size) * 1.5 + 11px);
+  --nl-detective-name-paged-height: calc(var(--nl-detective-name-height) + 40px);
+}
+
+/* Lesson feedback shares the clue/selection workspace. Standalone continues
+   to use its dedicated explanation view and return control. */
+.detective-viewport.nl-inline-results.detective-inline-feedback .detective-workspace{grid-template-columns:minmax(0,.9fr) minmax(0,1fr) minmax(0,.9fr);grid-template-rows:minmax(0,1fr) auto;gap:8px 10px}
+.detective-viewport.nl-inline-results.detective-inline-feedback .detective-molecule{grid-row:1/3}
+.detective-viewport.nl-inline-results .detective-clue>.nl-vp-pager{min-height:0}
+.detective-viewport.nl-inline-results .detective-clue-content{display:block;height:100%}
+.detective-viewport.nl-inline-results .detective-clue-content>.nl-vp-pager-x{margin-bottom:8px}
+.detective-viewport.nl-inline-results .detective-feedback-stage{grid-column:3;grid-row:1/3;grid-template-rows:minmax(0,1fr);padding:0;gap:0;border:0;background:transparent;overflow:hidden}
+.detective-viewport.nl-inline-results .detective-feedback-stage>.nl-vp-pager{height:100%;min-height:0}
+.detective-viewport.nl-inline-results .detective-feedback-stage .feedback{height:100%;padding:10px;font-size:.95rem;line-height:1.5}
+.detective-viewport.nl-inline-results.nl-vp-narrow.detective-inline-feedback .detective-workspace{grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(90px,1fr) auto minmax(76px,.8fr)}
+.detective-viewport.nl-inline-results.nl-vp-narrow.detective-inline-feedback .detective-molecule{grid-row:1}
+.detective-viewport.nl-inline-results.nl-vp-narrow .detective-feedback-stage{grid-column:1;grid-row:3}
+.detective-viewport.nl-inline-results.nl-vp-narrow.detective-inline-feedback .detective-answer-content{padding:6px 8px}
+.detective-viewport.nl-inline-results.nl-vp-narrow.detective-inline-feedback .detective-answer .check-row{margin-top:4px;flex-wrap:nowrap}
+.detective-viewport.nl-inline-results.nl-vp-narrow.detective-inline-feedback .detective-answer .check-row button{padding:5px 9px;min-height:36px}
+@media(min-width:760px){
+  .detective-viewport.nl-inline-results.nl-vp-narrow.detective-inline-feedback .detective-workspace{grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);grid-template-rows:minmax(0,1fr) auto}
+  .detective-viewport.nl-inline-results.nl-vp-narrow.detective-inline-feedback .detective-molecule,.detective-viewport.nl-inline-results.nl-vp-narrow.detective-inline-feedback .detective-clue{grid-column:1;grid-row:1}
+  .detective-viewport.nl-inline-results.nl-vp-narrow.detective-inline-feedback .detective-answer{grid-column:1;grid-row:2}
+  .detective-viewport.nl-inline-results.nl-vp-narrow.detective-inline-feedback .detective-feedback-stage{grid-column:2;grid-row:1/3}
+}
+
+/* The actual mission prompt shares the lesson heading, while its long form
+   remains accessible through the existing local vertical pager. */
+.detective-viewport.nl-inline-results .intro>.detective-prompt-pager { margin: 7px 0 0; width: 100%; max-width: none; max-height: calc(var(--nl-game-mission-size, 20px) * 4.05 + 40px); }
+.detective-viewport.nl-inline-results .intro .nl-game-prompt { display: block; width: 100%; max-width: none; max-height: calc(var(--nl-game-mission-size, 20px) * 4.05); margin: 0; padding: 0; font-size: var(--nl-game-mission-size, 20px); font-weight: 400; line-height: 1.35; text-align: center; }
+
+/* Hidden lesson tools/status must not leave explicit empty root grid rows. */
+#game.detective-viewport.nl-inline-results { display: flex; flex-direction: column; }
+#game.detective-viewport.nl-inline-results>.intro,
+#game.detective-viewport.nl-inline-results>.game-status,
+#game.detective-viewport.nl-inline-results>.detective-round-tools,
+#game.detective-viewport.nl-inline-results>.detective-stage-tabs { flex: none; }
+#game.detective-viewport.nl-inline-results>.detective-workspace { flex: 1; min-height: 0; }
+/* Only the exact repeated ready instruction leaves the visual budget. Its live
+   text stays accessible; startup, errors and WRONG_KIND retain their space. */
+#game.detective-viewport.nl-inline-results>.game-status.detective-ready-status { position: absolute; width: 1px; height: 1px; min-height: 0; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+@media(max-width:759px){
+  #game.detective-viewport.nl-inline-results { gap: 4px; }
+  #game.detective-viewport.nl-inline-results.nl-vp-narrow>.detective-workspace { grid-template-columns: minmax(0,1fr) minmax(0,1fr); grid-template-rows: minmax(var(--nl-detective-pane-min-height,192px),1fr); gap: 4px; }
+  #game.detective-viewport.nl-inline-results.nl-vp-narrow.detective-inline-feedback>.detective-workspace { grid-template-rows: minmax(var(--nl-detective-pane-min-height,192px),1fr) minmax(var(--nl-detective-result-min-height,89px),.5fr); }
+  #game.detective-viewport.nl-inline-results.nl-vp-narrow .detective-molecule,
+  #game.detective-viewport.nl-inline-results.nl-vp-narrow .detective-clue { grid-column: 1; grid-row: 1; }
+  #game.detective-viewport.nl-inline-results.nl-vp-narrow .detective-answer { grid-column: 2; grid-row: 1; }
+  #game.detective-viewport.nl-inline-results.nl-vp-narrow .detective-feedback-stage { grid-column: 1/-1; grid-row: 2; }
+  #game.detective-viewport.nl-inline-results.nl-vp-narrow .detective-molecule>.panel-header { padding: 3px 6px; gap: 4px; }
+  #game.detective-viewport.nl-inline-results.nl-vp-narrow .detective-molecule>.panel-header h2 { min-width: 0; }
+  #game.detective-viewport.nl-inline-results.nl-vp-narrow .detective-molecule .zoom-controls { flex: none; }
+  #game.detective-viewport.nl-inline-results.nl-vp-narrow .detective-molecule .viewer-wrap { min-height: 150px; }
+  #game.detective-viewport.nl-inline-results.nl-vp-narrow .detective-answer-content { padding: 6px 8px; }
+  #game.detective-viewport.nl-inline-results.nl-vp-narrow .detective-answer .check-row { flex-direction: column; flex-wrap: nowrap; align-items: stretch; gap: 4px; margin-top: 4px; }
+  #game.detective-viewport.nl-inline-results.nl-vp-narrow .detective-answer .check-row button { padding: 5px 9px; min-height: 36px; }
+  #game.detective-viewport.nl-inline-results.detective-result-side-pager .detective-feedback-stage>.nl-vp-pager { grid-template-columns: minmax(0,1fr) 88px; grid-template-rows: minmax(0,1fr); gap: 4px; }
+  #game.detective-viewport.nl-inline-results.detective-result-side-pager .detective-feedback-stage .feedback { grid-column: 1; grid-row: 1; }
+  #game.detective-viewport.nl-inline-results.detective-result-side-pager .detective-feedback-stage .nl-vp-pager-nav { grid-column: 2; grid-row: 1; display: grid; grid-template-columns: 40px 40px; grid-template-rows: auto auto; align-content: center; justify-content: center; gap: 2px 4px; min-height: 0; padding: 0; }
+  #game.detective-viewport.nl-inline-results.detective-result-side-pager .detective-feedback-stage .nl-vp-pager-nav>button:first-child { grid-column: 1; grid-row: 1; }
+  #game.detective-viewport.nl-inline-results.detective-result-side-pager .detective-feedback-stage .nl-vp-pager-nav>button:last-child { grid-column: 2; grid-row: 1; }
+  #game.detective-viewport.nl-inline-results.detective-result-side-pager .detective-feedback-stage .nl-vp-pager-nav>span { grid-column: 1/-1; grid-row: 2; text-align: center; }
 }
