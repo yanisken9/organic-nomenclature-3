@@ -1,0 +1,52 @@
+{
+  "date": "2026-11-18",
+  "status": "PRE_PUSH_ACCEPTED_PUBLIC_DELIVERY_PENDING",
+  "reviewer": "/root/save_release_review_20261118",
+  "roleID": "NAMELECULE_REVIEWER_V1_20261023",
+  "freshContext": true,
+  "readOnly": true,
+  "runtimeTargetSHA256": "b8d33c73880e8508f5c12aa8a56887a16e84a7eca9fcb1f4c820a32ebf5d696d",
+  "basePublic": "c5346c540f4eb04f8e6e376f47789a3da15e19e8",
+  "independentlyVerified": {
+    "runtimeHashes": 31,
+    "candidateReleaseHashes": 202,
+    "publicBaselineBlobs": 4055,
+    "candidateFileMembership": 4091,
+    "untargetedPublicUnchanged": 3889,
+    "coreHashes": 13,
+    "JSSyntax": 12,
+    "viewerGenerators": 2,
+    "overlayHTMLLocalLinkAndContentHashChecks": 33,
+    "deliveryAST": 4
+  },
+  "newActionableFindings": [],
+  "existingFindings": [
+    "P3 PZ-PRE01: unchanged Puzzle restore announcement, preserved construction/progress."
+  ],
+  "developerBrowserEvidence": {
+    "checks": 268,
+    "receipt": "docs/checks/save-publish-20261118-161851/browser/candidate-142400/results.json",
+    "sha256": "f57911eeeb4caf2acc21c173a2d8f43e04de8deb1dd3e4f5bdac6f4197f00241"
+  },
+  "pending": [
+    "Uploaded refs/current-commit Pages",
+    "Exact public HTTP and actual public smoke",
+    "Final report-status delta",
+    "Final metadata and mirror closure"
+  ],
+  "limitations": "Browser execution belongs to Developer. No fresh chemistry/Firefox/touch/warm-cache/offline/conference certification.",
+  "independentBackupClosure": {
+    "publicCommittedBlobs": 4091,
+    "checkpointStoredBlobs": 12022,
+    "sourceZIPFiles": 11765,
+    "recoveryZIPFiles": 255,
+    "archiveHashes": 3,
+    "mirrorFilesEach": 44,
+    "recoveredOriginals": 12020,
+    "oversizedDiagnosticBytes": 141859951,
+    "candidateBrowserArtifacts": 89,
+    "browserChecks": 268,
+    "coreFiles": 13,
+    "newActionableFindings": []
+  }
+}

@@ -2,13 +2,27 @@
   "date": "2026-11-18",
   "preparedUTC": "2026-11-18T14:21:58.027521+00:00",
   "scope": "Professor report of completed local contributions since the published 2026-11-16 report. Source results and actual current hashes inspected; no report-author application/browser/chemistry rerun.",
-  "publicationStatus": "PENDING_SAVE_AND_PUBLICATION",
+  "publicationStatus": "RUNTIME_LIVE_VERIFIED",
   "delivery": {
-    "commit": null,
-    "pushVerified": false,
-    "publicHTTPVerified": false,
-    "fullSaveVerified": false,
-    "twoDatedFolders": "Pending coordinator evidence; two folders on one computer are not independent cloud backups."
+    "runtimeCommit": "c84920a7524211d0c88af0dbe944d91657067a41",
+    "snapshotCommit": "52bb24eb4a1904ceaeaaccbe5159d81a41d7ba9a",
+    "sourceFiles": 11765,
+    "recoveryFiles": 255,
+    "folderNames": [
+      "2026-11-18-161851",
+      "Namelecule_18-11-2026"
+    ],
+    "publicHTTPFiles": 251,
+    "browserEvidence": "docs/checks/save-publish-20261118-161851/browser/public-results.json",
+    "metadataCutoffSeparate": true,
+    "checkpointLargeFilesLosslesslyEncoded": true,
+    "launcherReferencesOriginalProject": true,
+    "fullSaveVerified": true,
+    "pushVerified": true,
+    "publicHTTPVerified": true,
+    "checkpointPublication": "LOCAL_ONLY_PENDING_EXPLICIT_USER_APPROVAL",
+    "publicBrowserChecks": 203,
+    "publicBrowserNetworkLimit": "Four blocked Document requests and one canceled Document request; missing URL attribution for blocked requests; required native views passed, no claim of clean network or uninterrupted operation."
   },
   "previousPublishedReport": "docs/professor-20261116/update.html",
   "sourceHEADAtPreparation": "168e3cec01f941a84d40bbe0dc07156e7baa35d0",
@@ -82,7 +96,8 @@
       "mismatches": [],
       "publicBaselineDate": "2026-11-16",
       "note": "Checkpoint mapping inspected locally; not a public hyperlink."
-    }
+    },
+    "publicationPending": false
   },
   "scenario": {
     "path": "scenarios/alkanes-user-3.scenario.json",
@@ -322,11 +337,12 @@
     "Compared all13current core SHA-256 values with the2026-11-16 completed save coreBaseline:zero mismatches.",
     "HTMLParser:balanced tags,unique IDs,all relative href targets exist.",
     "Both JSON artifacts parse;links.txt and plainlinks.txt byte-identical;all source-record SHA-256 values match current bytes.",
-    "No middle dots in newly authored Greek prose and no private absolute user filesystem paths in report."
+    "No middle dots in newly authored Greek prose and no private absolute user filesystem paths in report.",
+    "Release coordinator completed candidate visual QA and independent release review; actual public runtime/browser and two mirror proofs recorded separately."
   ],
-  "reportChecksPending": [
-    "Coordinator independent report review and visual inspection.",
-    "Full save/two-folder proof and actual publication/HTTP/browser verification.",
-    "Update delivery status only after actual evidence."
+  "finalizedUTC": "2026-11-18T14:36:54.149935+00:00",
+  "scenarioExport": "Current source scenario and existing Desktop export are byte-identical, verified during full save; no lesson data edited by this save.",
+  "verificationOutsideThisFrozenReport": [
+    "The report is frozen after runtime publication and backup verification. Subsequent report delivery and final metadata closure are recorded in the dated delivery checkpoint; this file does not claim to contain its own future HTTP proof."
   ]
 }
